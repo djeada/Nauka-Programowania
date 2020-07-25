@@ -18,7 +18,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tr>
 <td>1</td>
 <td>Wypisz na konsole.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/1.%20Konsola/Zad1-Wypisz.py">Python</a></td>
 </tr>
 <tr>
 <td>2</td>
