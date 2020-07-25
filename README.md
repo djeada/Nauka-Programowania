@@ -96,7 +96,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 <tr>
 <td>7</td>
-<td>Pobierz 4 liczby i wypisz jest w kolejnośi rosnącej.</td>
+<td>Pobierz 4 liczby i wypisz je w kolejnośi rosnącej.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
