@@ -160,3 +160,104 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tbody>
 </table>
 
+<h1>Pętla - wprowadzenie</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Proś o podanie liczby, dopóki nie zostanie podana liczba spełniająca warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Wypisz liczby naturalne mniejsze od podanej liczby.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Wypisz liczbę pi podaną liczbę razy z dokładnością do i-tego miejsca po przecinku.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Wypisz sumę liczb naturalnych mniejszych od podanej liczby.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Wypisz liczby naturalne z przedziału spełniające dany warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Wypisz sumę wyrazów ciągu danego wzorem.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Wypisz podaną liczbę razy liczbę pi podniesioną do i-tej potęgi (zaczynając od 0) z dokładnością do i miejsc po przecinku.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Pętla - algorytmy matematyczne</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Pobierz i wypisz średnią z n liczb.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pobierz i podnieś a do b, bez użycia zewnętrznych bibliotek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Zaimplementuj mnożenie i dzielenia przy pomocy dodawania i odejmowania.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Oblicz silnię z podanej liczby.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pobierz dwie liczby i wyznacz ich NWW.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Pobierz dwie liczby i wyznacz ich NWD.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Oblicz pierwiastek z liczby, bez użycia zewnętrznych bibliotek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Wypisz czy pobrana liczba jest pierwsza, czy złożona.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
