@@ -208,6 +208,49 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tbody>
 </table>
 
+<h1>Pętla - wyznaczanie cyfr liczby</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>Oblicz ilu cyfrowa jest dana liczba.<a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Wypisz cyfry, z których składa się liczba.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Znajdź sumę cyfr liczby.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Wypisz cyfry liczby spełniające warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sprawdź czy liczba jest plaindromem.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Wypisz wszystkie liczby naturalne mniejsze od pobranej liczby, które spełniają warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
 <h1>Pętla - algorytmy matematyczne</h1>
 <table>
 <thead>
