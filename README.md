@@ -220,8 +220,8 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tbody>
 <tr>
 <td>1</td>
-<td></td>
-<td>Oblicz ilu cyfrowa jest dana liczba.<a href="">Python</a></td>
+<td>Oblicz ilu cyfrowa jest dana liczba.</td>
+<td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>2</td>
@@ -252,6 +252,13 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </table>
 
 <h1>Pętla - algorytmy matematyczne</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr><h1>Pętla - algorytmy matematyczne</h1>
 <table>
 <thead>
 <tr>
@@ -299,6 +306,83 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tr>
 <td>8</td>
 <td>Wypisz czy pobrana liczba jest pierwsza, czy złożona.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Pobierz i wypisz średnią z n liczb.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pobierz i podnieś a do b, bez użycia zewnętrznych bibliotek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Zaimplementuj mnożenie i dzielenia przy pomocy dodawania i odejmowania.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Oblicz silnię z podanej liczby.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pobierz dwie liczby i wyznacz ich NWW.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Pobierz dwie liczby i wyznacz ich NWD.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Oblicz pierwiastek z liczby, bez użycia zewnętrznych bibliotek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Wypisz czy pobrana liczba jest pierwsza, czy złożona.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Pętla - pętle zagnieżdżone</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Narysuj kwadrat o zadanym boku.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Narysuj trójkąt prostokątny, równoramienny o zadanym boku.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Narysuj trójkąt równoramienny o zadanym boku.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Wypisz n początkowych wierszy i kolumn tabliczki mnożenia.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
