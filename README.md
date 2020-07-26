@@ -258,13 +258,6 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <th>#</th>
 <th>Tytuł</th>
 <th>Python</th>
-</tr><h1>Pętla - algorytmy matematyczne</h1>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Tytuł</th>
-<th>Python</th>
 </tr>
 </thead>
 <tbody>
