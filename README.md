@@ -337,3 +337,61 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tbody>
 </table>
 
+<h1>Listy - wprowadzenie</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Pobierz n danych, zapisz w liście, wypisz.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pobierz n danych, zapisz w liście, wypisz elementy spełniające warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pobierz n danych, zapisz w liście, zmodyfikuj, wypisz.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Wczytaj pojedynczy ciąg oddzielonych przecinkami liczb, następnie zapisze je w liście oraz krotce, wypisz od końca.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Wczytaj n liczb do listy, następnie liczbę k i wypisz k-ty element.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Wczytaj n liczb do listy, następnie liczbę k i wypisz co k-ty element.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Wczytaj n liczb do listy, i wypisz elementy o indeksach spełniających warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Wczytaj n liczb do listy, usuń elementy spełniające warunek, wypisz./td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Wczytaj n liczb do listy, usuń elementy o indeksach spełniających warunek, wypisz.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
