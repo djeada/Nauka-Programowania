@@ -220,7 +220,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tbody>
 <tr>
 <td>1</td>
-<td>Oblicz ilu cyfrowa jest dana liczba.</td>
+<td>Oblicz ilucyfrowa jest dana liczba.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
