@@ -347,7 +347,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tbody>
 </table>
 
-<h1>Funkcje</h1>
+<h1>Funkcje - wprowadzenie</h1>
 <table>
 <thead>
 <tr>
@@ -678,7 +678,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tbody>
 </table>
 
-<h1>Sortowanie - Algorytmy</h1>
+<h1>Sortowanie - algorytmy</h1>
 <table>
 <thead>
 <tr>
@@ -716,7 +716,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tbody>
 </table>
 
-<h1>Sortowanie - Praktyka</h1>
+<h1>Sortowanie - praktyka</h1>
 <table>
 <thead>
 <tr>
@@ -738,7 +738,201 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 <tr>
 <td>3</td>
-<td>Posortuj Listę par (imię pracownika, zarobki) względem jednej z kategorii.</td>
+<td>Posortuj Listę par (np. imię pracownika i zarobki) względem jednej z kategorii.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Funkcje - wielomiany</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+  <td>Napisz funkcje, która zwróci wartość wielomianu w punkcie <i>x</i>, dla podanego punktu <i>x</i> oraz listy współczynników.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+  <td>Napisz funkcje, która zwróci iloczyn wielomianu przez skalar <i>b</i>, dla podanego <i>b</i> oraz listy współczynników.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Napisz funkcje, która zwróci sumę wielomianów dla dwóch list współczynników.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Napisz funkcje, która zwróci iloczyn wielomianów dla dwóch list współczynników.</td>
+<td><a href="">Python</a></td>
+</tr>
+ <tr>
+<td>5</td>
+<td>Napisz funkcje, która zwróci n-tą pochodną z wielomianu dla podanej listy współczynników.</td>
+<td><a href="">Python</a></td>
+</tr>
+ <tr>
+<td>6</td>
+<td>Napisz funkcje, która dla zadanego punktu <i>x_0</i> znajdzie miejsce zerowe wielomianu.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Funkcje - rekurencja</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Potęgowanie.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Silnia.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Liczba Fibonacciego.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Zwróć n-ty wyraz ciąg danego wzorem rekurencyjnym.</td>
+<td><a href="">Python</a></td>
+</tr>
+ <tr>
+<td>5</td>
+<td>Wyszukiwanie liniowe rekurencyjnie.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>System binarny</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Konwersja między systemami binarnym i dziesiętnym.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Konwersja gdy spełniony jest warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Operacje arytmetyczne.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Zbiory</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Konwersja między systemami binarnym i dziesiętnym.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Konwersja gdy spełniony jest warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Operacje arytmetyczne.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+
+<h1>Słowniki</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Konwersja między systemami binarnym i dziesiętnym.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Konwersja gdy spełniony jest warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Operacje arytmetyczne.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Operacje na plikach</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Konwersja między systemami binarnym i dziesiętnym.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Konwersja gdy spełniony jest warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Operacje arytmetyczne.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
