@@ -733,7 +733,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 <tr>
 <td>2</td>
-<td>Posortuj słowa w zdaniu<./td>
+<td>Posortuj słowa w zdaniu</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
@@ -853,35 +853,6 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tbody>
 </table>
 
-<h1>Zbiory</h1>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Tytuł</th>
-<th>Python</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Konwersja między systemami binarnym i dziesiętnym.</td>
-<td><a href="">Python</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>Konwersja gdy spełniony jest warunek.</td>
-<td><a href="">Python</a></td>
-</tr>
-<tr>
-<td>3</td>
-<td>Operacje arytmetyczne.</td>
-<td><a href="">Python</a></td>
-</tr>
-</tbody>
-</table>
-
-
 <h1>Słowniki</h1>
 <table>
 <thead>
@@ -894,17 +865,22 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tbody>
 <tr>
 <td>1</td>
-<td>Konwersja między systemami binarnym i dziesiętnym.</td>
+<td>Wypisz słownik gdzie kluczami są liczby, a wartościami ich kwadraty.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>2</td>
-<td>Konwersja gdy spełniony jest warunek.</td>
+<td>Histogram znaków w słowie.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>3</td>
-<td>Operacje arytmetyczne.</td>
+<td>Histogram wystąpień małych i dużych liter.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Histogram słów w tekście.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
@@ -922,17 +898,30 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tbody>
 <tr>
 <td>1</td>
-<td>Konwersja między systemami binarnym i dziesiętnym.</td>
+<td>Wypisz treść pliku tekstowego na konsolę.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>2</td>
-<td>Konwersja gdy spełniony jest warunek.</td>
+<td>Dodaj wiersz do pliku.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>3</td>
-<td>Operacje arytmetyczne.</td>
+<td>Wypisz nazwy plików znajdujące się w folderze.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Znajdź ścieżki wszystkich plików w systemie spełniających warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<td>5</td>
+<td>Usuń pliki spełniające warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<td>6</td>
+<td>Otwórz plik tekstowy i wyświetl podstawowe statystyki (średnia długość słowa, ilość słów itd.).</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
