@@ -344,6 +344,11 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Litera Z.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>7</td>
+<td>N pierwszych liczb pierwszych.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
