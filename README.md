@@ -205,6 +205,11 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Wypisz podaną liczbę razy liczbę pi podniesioną do i-tej potęgi (zaczynając od 0) z dokładnością do i miejsc po przecinku.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>8</td>
+  <td>Na farmie mamy <i>a</i> głów i <i>b</i>, znajdź liczbę kur oraz owieczek.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -959,8 +964,14 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Usuń pliki spełniające warunek.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
 <td>6</td>
 <td>Otwórz plik tekstowy i wyświetl podstawowe statystyki (średnia długość słowa, ilość słów itd.).</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Wczytaj listę domen z pliku i wypisz odpowiadające im adersy ip.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
