@@ -377,6 +377,11 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Napisz funkcje zamieniającą dwie wartości miejscami.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>5</td>
+<td>Napisz funkcje realizującą zaokrąglanie w dół ilorazu bez użycia '/' i '%'.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -599,6 +604,11 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>W oddzielnnych wierszach wypisz znaki znajdujące się na pozycjach będących liczbami pierwszymi.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>14</td>
+<td>Stwórz napis składający się z liczb od 1 do n.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -639,6 +649,25 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 </tbody>
 </table>
+
+<h1>Napisy - trudne</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Odległość Hamminga.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
 
 <h1>Listy 2D</h1>
 <table>
@@ -881,6 +910,11 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tr>
 <td>4</td>
 <td>Histogram słów w tekście.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Klucz to imię, wartość lista wypożyczonych książek</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
