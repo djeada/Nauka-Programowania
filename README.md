@@ -207,7 +207,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 <tr>
 <td>8</td>
-  <td>Na farmie mamy <i>a</i> głów i <i>b</i>, znajdź liczbę kur oraz owieczek.</td>
+  <td>Na farmie mamy <i>a</i> głów i <i>b</i> nóg, znajdź liczbę kur oraz owieczek.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
