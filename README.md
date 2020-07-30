@@ -334,6 +334,16 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Wypisz n początkowych wierszy i kolumn tabliczki mnożenia.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>5</td>
+<td>Litera X.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Litera Z.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -506,6 +516,11 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Wypisz różnice między dwoma listami.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>5</td>
+<td>Połącz posortowane listy w posortowaną listę.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -582,6 +597,148 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tr>
 <td>13</td>
 <td>W oddzielnnych wierszach wypisz znaki znajdujące się na pozycjach będących liczbami pierwszymi.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Napisy - anagramy i palindromy</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sprawdź czy słowo jest palindromem.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Wypisz wszystkie permutacje słowa.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sprawdź, czy słowa są swoimi anagramami.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Znajdź palindromy w zdaniu.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Znajdź anagramy w zdaniu.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Listy 2D</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+  <td>Stwórz tablicę <i>a</i> identycznych wierszy składających się z liczb od 0 do <i>b</i>.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Każdy element listy jest iloczynem współrzędnych.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dodawanie/odejmowanie macierzy.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Gra w statki.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Magiczny kwadrat.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Sortowanie - Algorytmy</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Bąbelkowe.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Wybieranie.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Wstawianie.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Scalanie.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Szybkie.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Sortowanie - Praktyka</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Posortuj znaki w słowie.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Posortuj słowa w zdaniu<./td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Posortuj Listę par (imię pracownika, zarobki) względem jednej z kategorii.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
