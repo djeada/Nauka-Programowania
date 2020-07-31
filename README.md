@@ -17,7 +17,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tbody>
 <tr>
 <td>1</td>
-<td>Wypisz na konsole.</td>
+<td>Wypisz na konsolę.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/1.%20Konsola/Zad1-Wypisz.py">Python</a></td>
 </tr>
 <tr>
@@ -369,27 +369,27 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tbody>
 <tr>
 <td>1</td>
-<td>Napisz funkcje zawsze zwracającą tą samą wartość.</td>
+<td>Napisz funkcję zawsze zwracającą tą samą wartość.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>2</td>
-<td>Napisz funkcje wykonującą operacje arytmetyczną.</td>
+<td>Napisz funkcję wykonującą operacje arytmetyczną.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>3</td>
-<td>Napisz funkcje sprawdzającą warunek.</td>
+<td>Napisz funkcję sprawdzającą warunek.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>4</td>
-<td>Napisz funkcje zamieniającą dwie wartości miejscami.</td>
+<td>Napisz funkcję zamieniającą dwie wartości miejscami.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>5</td>
-<td>Napisz funkcje realizującą zaokrąglanie w dół ilorazu bez użycia '/' i '%'.</td>
+<td>Napisz funkcję realizującą zaokrąglanie w dół ilorazu bez użycia '/' i '%'.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
@@ -776,32 +776,32 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tbody>
 <tr>
 <td>1</td>
-  <td>Napisz funkcje, która zwróci wartość wielomianu w punkcie <i>x</i>, dla podanego punktu <i>x</i> oraz listy współczynników.</td>
+  <td>Napisz funkcję, która zwróci wartość wielomianu w punkcie <i>x</i>, dla podanego punktu <i>x</i> oraz listy współczynników.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>2</td>
-  <td>Napisz funkcje, która zwróci iloczyn wielomianu przez skalar <i>b</i>, dla podanego <i>b</i> oraz listy współczynników.</td>
+  <td>Napisz funkcję, która zwróci iloczyn wielomianu przez skalar <i>b</i>, dla podanego <i>b</i> oraz listy współczynników.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>3</td>
-<td>Napisz funkcje, która zwróci sumę wielomianów dla dwóch list współczynników.</td>
+<td>Napisz funkcję, która zwróci sumę wielomianów dla dwóch list współczynników.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>4</td>
-<td>Napisz funkcje, która zwróci iloczyn wielomianów dla dwóch list współczynników.</td>
+<td>Napisz funkcję, która zwróci iloczyn wielomianów dla dwóch list współczynników.</td>
 <td><a href="">Python</a></td>
 </tr>
  <tr>
 <td>5</td>
-<td>Napisz funkcje, która zwróci n-tą pochodną z wielomianu dla podanej listy współczynników.</td>
+<td>Napisz funkcję, która zwróci n-tą pochodną z wielomianu dla podanej listy współczynników.</td>
 <td><a href="">Python</a></td>
 </tr>
  <tr>
 <td>6</td>
-<td>Napisz funkcje, która dla zadanego punktu <i>x_0</i> znajdzie miejsce zerowe wielomianu.</td>
+<td>Napisz funkcję, która dla zadanego punktu <i>x_0</i> znajdzie miejsce zerowe wielomianu.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
