@@ -606,7 +606,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 <tr>
 <td>12</td>
-<td>Sprawdź, czy hasło spełnia warunki.</td>
+<td>Usuń spacje ze zdania.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
@@ -657,6 +657,11 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Znajdź anagramy w zdaniu.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>6</td>
+<td>Sprawdź czy jakaś permutacja słowa jest palindromem.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -693,6 +698,16 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tr>
 <td>5</td>
 <td>Magiczny kwadrat.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Połącz pokrywające się przedziały w liście przedziałów.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Wypisz spiralnie.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
@@ -905,7 +920,12 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 <tr>
 <td>4</td>
-<td>Klucz to imię, wartość lista wypożyczonych książek</td>
+<td>Klucz to imię, wartość lista wypożyczonych książek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Wypisz słownik posortowany względem kluczy/wartości.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
@@ -933,25 +953,30 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 <tr>
 <td>3</td>
-<td>Wypisz nazwy plików znajdujące się w folderze.</td>
+<td>Plik z listą wpłat i wypłat z konta. Wypisz aktualny stan konta.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>4</td>
+<td>Wypisz nazwy plików znajdujące się w folderze.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
 <td>Znajdź ścieżki wszystkich plików w systemie spełniających warunek.</td>
 <td><a href="">Python</a></td>
 </tr>
-<td>5</td>
+<td>6</td>
 <td>Usuń pliki spełniające warunek.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
-<td>6</td>
+<td>7</td>
 <td>Otwórz plik tekstowy i wyświetl podstawowe statystyki (średnia długość słowa, ilość słów itd.).</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
-<td>7</td>
+<td>8</td>
 <td>Wczytaj listę domen z pliku i wypisz odpowiadające im adersy ip.</td>
 <td><a href="">Python</a></td>
 </tr>
@@ -980,16 +1005,21 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 <tr>
 <td>3</td>
-  <td>Zaprojektuj klasy <i>Wektor2D</i> oraz <i>Wektor3D</i>.</td>
+  <td>Znajdź współrzędne prostokąta powstałego z nałożenia się dwóch innych prostokątów.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>4</td>
-  <td>Zaprojektuj klasę <i>LiczbaZespolona</i>.</td>
+  <td>Zaprojektuj klasy <i>Wektor2D</i> oraz <i>Wektor3D</i>.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>5</td>
+  <td>Zaprojektuj klasę <i>LiczbaZespolona</i>.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
 <td>Zaprojektuj klasę <i>Macierz.</i></td>
 <td><a href="">Python</a></td>
 </tr>
@@ -1055,6 +1085,34 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tr>
 <td>1</td>
 <td>Odległość Hamminga.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Stos i kolejka</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+ <tr>
+<td>1</td>
+   <td>Napisz klasę stos zwracającą maksimum z ciągu liczb.</td>
+<td><a href="">Python</a></td>
+</tr>
+ <tr>
+<td>2</td>
+   <td>Sprawdź poprawność hasła.</td>
+<td><a href="">Python</a></td>
+</tr>
+ <tr>
+<td>3</td>
+   <td>Z ciągu znaków wypisz cyfry.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
