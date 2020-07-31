@@ -144,16 +144,21 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 <tr>
 <td>6</td>
-<td>Pobierz numer miesiąca oraz rok i podaj liczbę dni miesiąca.</td>
+<td>Sprawdź czy rok jest przestępny.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>7</td>
-<td>Pobierz datę i wypisz ile dni minęło od początku roku.</td>
+<td>Pobierz numer miesiąca oraz rok i podaj liczbę dni miesiąca.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
 <td>8</td>
+<td>Pobierz datę i wypisz ile dni minęło od początku roku.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>9</td>
 <td>Pobierz datę i wypisz dzień tygodnia.</td>
 <td><a href="">Python</a></td>
 </tr>
@@ -632,6 +637,11 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tr>
 <td>14</td>
 <td>Stwórz napis składający się z liczb od 1 do n.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Rozdziel słowa w zdaniu i zapisz je jako osobne elemnty listy.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
