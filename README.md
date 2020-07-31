@@ -1008,7 +1008,35 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tbody>
  <tr>
 <td>1</td>
-   <td>Zprojektuj klasę <i>Kształt</i> oraz klasy pochodne <i>Koło</i> oraz <i>Kwadrat</i>.</td>
+   <td>Zaprojektuj klasę <i>Kształt</i> oraz klasy pochodne <i>Koło</i> oraz <i>Kwadrat</i>.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Wyrażenia regularne</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+ <tr>
+<td>1</td>
+   <td>Sprawdź poprawność adresu email.</td>
+<td><a href="">Python</a></td>
+</tr>
+ <tr>
+<td>2</td>
+   <td>Sprawdź poprawność hasła.</td>
+<td><a href="">Python</a></td>
+</tr>
+ <tr>
+<td>3</td>
+   <td>Z ciągu zanków wypisz cyfry.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
