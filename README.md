@@ -50,6 +50,16 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Pola figur i objętości brył.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>8</td>
+<td>Znajdź cenę podłogi dla podanej długości, szerokości i ceny płytki.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Kalkulator kredytowy.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
