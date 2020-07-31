@@ -660,25 +660,6 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tbody>
 </table>
 
-<h1>Napisy - trudne</h1>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Tytuł</th>
-<th>Python</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Odległość Hamminga.</td>
-<td><a href="">Python</a></td>
-</tr>
-</tbody>
-</table>
-
-
 <h1>Listy 2D</h1>
 <table>
 <thead>
@@ -972,6 +953,80 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tr>
 <td>7</td>
 <td>Wczytaj listę domen z pliku i wypisz odpowiadające im adersy ip.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Klasy</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+ <tr>
+<td>1</td>
+   <td>Napisz klasę <i>Koło</i>. Konstruktor powinien przyjmować długość promienia. Metoda do wypisywania pola.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>2</td>
+  <td>Zaprojektuj klasę <i>Punkt</i> przechwywującą informację o współrzędnych <i>x</i> oraz <i>y</i>.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+  <td>Zaprojektuj klasy <i>Wektor2D</i> oraz <i>Wektor3D</i>.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+  <td>Zaprojektuj klasę <i>LiczbaZespolona</i>.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Zaprojektuj klasę <i>Macierz.</i></td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Dziedziczenie</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+ <tr>
+<td>1</td>
+   <td>Zprojektuj klasę <i>Kształt</i> oraz klasy pochodne <i>Koło</i> oraz <i>Kwadrat</i>.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Napisy - trudne</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Odległość Hamminga.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
