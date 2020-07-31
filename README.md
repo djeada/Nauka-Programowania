@@ -498,6 +498,21 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Wypisz liczbę mniejszą od największej i większą od wszystkich pozostałych.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>7</td>
+<td>Znajdź brakujący element w liście.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Znajdź element bez pary w liście.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Znajdź element dominujący.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -885,6 +900,16 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Operacje arytmetyczne.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>4</td>
+<td>Zlicz zera/jedynki w liczbie binarnej.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Znajdź najdłuższy ciąg zer w liczbie binarnej.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -1067,6 +1092,24 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
  <tr>
 <td>3</td>
    <td>Z ciągu znaków wypisz cyfry.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
+<h1>Listy - trudne</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Odległość Hamminga.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
