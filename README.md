@@ -1036,7 +1036,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
  <tr>
 <td>3</td>
-   <td>Z ciągu zanków wypisz cyfry.</td>
+   <td>Z ciągu znaków wypisz cyfry.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
