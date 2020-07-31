@@ -687,6 +687,11 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <td>Sprawdź czy jakaś permutacja słowa jest palindromem.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>7</td>
+<td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
