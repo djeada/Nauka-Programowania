@@ -564,7 +564,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 <tr>
 <td>5</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/5.Listy_dwie_listy/Zad5_Dwie_Listy.py">Python</a></td>
 </tr>
 </tbody>
 </table>
