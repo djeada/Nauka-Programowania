@@ -606,7 +606,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </tr>
 <tr>
 <td>6</td>
-<td>Wypisz poziomo i pionowo napis z literami <i>a</i> zmienionymi na znaki ?.</td>
+<td>Wypisz poziomo i pionowo napis z literami <i>a</i> zmienionymi na znaki zapytania.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
