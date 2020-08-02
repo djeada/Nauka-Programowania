@@ -6,6 +6,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 
 Spis Treści 
 =================
+
 <!--ts-->
 *[Interakcja z konsolą, wejście i wyjście](#Interakcja-z-konsolą,-wejście-i-wyjście)
 *[Instrukcje sterujące, warunki](#Instrukcje-sterujące,-warunki)
@@ -34,7 +35,9 @@ Spis Treści
 *[Listy - trudne](#Listy---trudne)
 *[Napisy - trudne](#Napisy---trudne)
 *[Stos i kolejka](#Stos-i-kolejka)
+
 <!--te-->
+
 <h1>Interakcja z konsolą, wejście i wyjście</h1>
 
 <table>
