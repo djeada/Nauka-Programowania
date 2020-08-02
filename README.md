@@ -3,7 +3,6 @@ Chcesz się nauczyć programować i nie wiesz jak zacząć? </br>
 Jeśli tak, to trafiłeś w dobre miejsce. </br>
 Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
 
-
 Spis Tresci
 =================
 
