@@ -679,12 +679,17 @@ Spis Tresci
 <tr>
 <td>14</td>
 <td>Stwórz napis składający się z liczb od 1 do n.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad14-Stworz-napis-skladajacy-sie-z-liczb-od-1-do-n.py">Python</a></td>
 </tr>
 <tr>
 <td>15</td>
 <td>Rozdziel słowa w zdaniu i zapisz je jako osobne elemnty listy.</td>
 <td><a href="">Python</a></td>
+</tr>
+ <tr>
+<td>16</td>
+<td>Odległość Hamminga.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad16-Odleglosc-Hamminga.py">Python</a></td>
 </tr>
 </tbody>
 </table>
