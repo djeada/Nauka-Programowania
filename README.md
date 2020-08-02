@@ -4,40 +4,41 @@ Jeśli tak, to trafiłeś w dobre miejsce. </br>
 Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
 
 
-Spis Treści 
+Spis Tresci
 =================
 
 <!--ts-->
-* [Interakcja z konsolą, wejście i wyjście](#Interakcja-z-konsolą,-wejście-i-wyjście)
-* [Instrukcje sterujące, warunki](#Instrukcje-sterujące,-warunki)
-* [Daty](#Daty)
-* [Pętla - wprowadzenie](#Pętla---wprowadzenie)
-* [Pętla - wyznaczanie cyfr liczby](#Pętla---wyznaczanie-cyfr-liczby)
-* [Pętla - algorytmy matematyczne](#Pętla---algorytmy-matematyczne)
-* [Pętla - pętle zagnieżdżone](#Pętla---pętle-zagnieżdżone)
-* [Funkcje - wprowadzenie](#Funkcje---wprowadzenie)
-* [Listy - wprowadzenie](#Listy---wprowadzenie)
-* [Listy - wyszukiwanie w liście](#Listy---wyszukiwanie-w-liście)
-* [Listy - dwie listy](#Listy---dwie-listy)
-* [Napisy - wprowadzenie](#Napisy---wprowadzenie)
-* [Napisy - anagramy i palindromy](#Napisy---anagramy-i-palindromy)
-* [Listy 2D](#Listy-2D)
-* [Sortowanie - algorytmy](#Sortowanie---algorytmy)
-* [Sortowanie - praktyka](#Sortowanie---praktyka)
-* [Funkcje - wielomiany](#Funkcje---wielomiany)
-* [Funkcje - rekurencja](#Funkcje---rekurencja)
-* [System binarny](#System-binarny)
-* [Słowniki](#Słowniki)
-* [Operacje na plikach](#Operacje-na-plikach)
-* [Klasy](#Klasy)
-* [Dziedziczenie](#Dziedziczenie)
-* [Wyrażenia regularne](#Wyrażenia-regularne)
-* [Listy - trudne](#Listy---trudne)
-* [Napisy - trudne](#Napisy---trudne)
-* [Stos i kolejka](#Stos-i-kolejka)
+	* [Interakcja z konsolą](#Interakcja-z-konsolą)
+	* [Instrukcje sterujące](#Instrukcje-sterujące)
+	* [Daty](#Daty)
+	* [Pętla - wprowadzenie](#Pętla---wprowadzenie)
+	* [Pętla - wyznaczanie cyfr liczby](#Pętla---wyznaczanie-cyfr-liczby)
+	* [Pętla - algorytmy matematyczne](#Pętla---algorytmy-matematyczne)
+	* [Pętla - pętle zagnieżdżone](#Pętla---pętle-zagnieżdżone)
+	* [Funkcje - wprowadzenie](#Funkcje---wprowadzenie)
+	* [Listy - wprowadzenie](#Listy---wprowadzenie)
+	* [Listy - wyszukiwanie w liście](#Listy---wyszukiwanie-w-liście)
+	* [Listy - dwie listy](#Listy---dwie-listy)
+	* [Napisy - wprowadzenie](#Napisy---wprowadzenie)
+	* [Napisy - anagramy i palindromy](#Napisy---anagramy-i-palindromy)
+	* [Listy 2D](#Listy-2D)
+	* [Sortowanie - algorytmy](#Sortowanie---algorytmy)
+	* [Sortowanie - praktyka](#Sortowanie---praktyka)
+	* [Funkcje - wielomiany](#Funkcje---wielomiany)
+	* [Funkcje - rekurencja](#Funkcje---rekurencja)
+	* [System binarny](#System-binarny)
+	* [Słowniki](#Słowniki)
+	* [Operacje na plikach](#Operacje-na-plikach)
+	* [Klasy](#Klasy)
+	* [Dziedziczenie](#Dziedziczenie)
+	* [Wyrażenia regularne](#Wyrażenia-regularne)
+	* [Listy - trudne](#Listy---trudne)
+	* [Napisy - trudne](#Napisy---trudne)
+	* [Stos i kolejka](#Stos-i-kolejka)
 
 <!--te-->
-<h1>Interakcja z konsolą, wejście i wyjście</h1>
+
+<h1>Interakcja z konsolą</h1>
 
 <table>
 <thead>
@@ -96,7 +97,7 @@ Spis Treści
 </tbody>
 </table>
 
-<h1>Instrukcje sterujące, warunki</h1>
+<h1>Instrukcje sterujące</h1>
 
 <table>
 <thead>
