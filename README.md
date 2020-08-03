@@ -297,7 +297,7 @@ Spis Tresci
 </tr>
 <tr>
 <td>5</td>
-<td>Sprawdź czy liczba jest plaindromem.</td>
+<td>Sprawdź czy liczba jest palindromem.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
