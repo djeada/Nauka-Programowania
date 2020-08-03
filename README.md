@@ -1055,7 +1055,7 @@ Spis Tresci
 </tr>
 <tr>
 <td>4</td>
-<td>Wypisz nazwy plików znajdujące się w folderze.</td>
+<td>Wypisz nazwy plików znajdujących się w folderze.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
