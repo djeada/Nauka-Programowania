@@ -146,6 +146,11 @@ Spis Tresci
 <td>Przedstaw w formie tabeli dowody praw logicznych.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>9</td>
+<td>Czy z podanych długosci bokow mozna zbudowac trojkat?</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -500,6 +505,11 @@ Spis Tresci
 <tr>
 <td>10</td>
 <td>Zmodyfikuj elementy spełniające warunek.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Czy punkty z podanej listy punktow moga stanowic wierzcholki trojkata?</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
