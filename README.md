@@ -1050,7 +1050,7 @@ Spis Tresci
 </tr>
 <tr>
 <td>3</td>
-<td>Plik z listą wpłat i wypłat z konta. Wypisz aktualny stan konta.</td>
+<td>Otrzymujesz plik z listą wpłat i wypłat z konta. Wypisz aktualny stan konta.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
@@ -1060,7 +1060,7 @@ Spis Tresci
 </tr>
 <tr>
 <td>5</td>
-<td>Znajdź ścieżki wszystkich plików w systemie spełniających warunek.</td>
+<td>Znajdź w systemie wszystkie pliki spelniajace warunek.</td>
 <td><a href="">Python</a></td>
 </tr>
 <td>6</td>
