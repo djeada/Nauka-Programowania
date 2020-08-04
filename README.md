@@ -50,12 +50,12 @@ Spis Tresci
 <tr>
 <td>1</td>
 <td>Wypisz na konsolę.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/1.%20Konsola/Zad1-Wypisz.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad1.py">Python</a></td>
 </tr>
 <tr>
 <td>2</td>
 <td>Wypisz pobrane dane w zmienionej kolejności.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad2.py">Python</a></td>
 </tr>
 <tr>
 <td>3</td>
@@ -245,7 +245,7 @@ Spis Tresci
 <tr>
 <td>5</td>
 <td>Wypisz liczby naturalne z przedziału spełniające dany warunek.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04.Petla_wprowadzenie/Zad5.py">Python</a></td>
 </tr>
 <tr>
 <td>6</td>
@@ -442,7 +442,7 @@ Spis Tresci
 <tr>
 <td>5</td>
 <td>Napisz funkcję realizującą zaokrąglanie w dół ilorazu bez użycia '/' i '%'.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
 </tr>
 </tbody>
 </table>
@@ -568,7 +568,7 @@ Spis Tresci
 <tr>
 <td>9</td>
 <td>Znajdź element dominujący.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wyszukiwanie_w_liscie/Zad9.py">Python</a></td>
 </tr>
 </tbody>
 </table>
@@ -595,18 +595,23 @@ Spis Tresci
 </tr>
 <tr>
 <td>3</td>
+<td> Masz dane dwie listy: wagi oraz wartosci. Znajdz srednia wazona wartosci.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad3.py">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
 <td>Znajdź część wspólną dwóch list.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
-<td>4</td>
+<td>5</td>
 <td>Wypisz różnice między dwoma listami.</td>
 <td><a href="">Python</a></td>
 </tr>
 <tr>
-<td>5</td>
+<td>6</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/5.Listy_dwie_listy/Zad5_Dwie_Listy.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad6.py">Python</a></td>
 </tr>
 </tbody>
 </table>
@@ -689,7 +694,7 @@ Spis Tresci
 <tr>
 <td>14</td>
 <td>Stwórz napis składający się z liczb od 1 do n.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad14-Stworz-napis-skladajacy-sie-z-liczb-od-1-do-n.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad14.py">Python</a></td>
 </tr>
 <tr>
 <td>15</td>
@@ -699,7 +704,7 @@ Spis Tresci
  <tr>
 <td>16</td>
 <td>Odległość Hamminga.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad16-Odleglosc-Hamminga.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad16.py">Python</a></td>
 </tr>
 </tbody>
 </table>
@@ -1056,7 +1061,7 @@ Spis Tresci
 <tr>
 <td>4</td>
 <td>Wypisz nazwy plików znajdujących się w folderze.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21.Operacje_na_plikach/Zad4.py">Python</a></td>
 </tr>
 <tr>
 <td>5</td>
@@ -1141,6 +1146,34 @@ Spis Tresci
 </tbody>
 </table>
 
+<h1>Stos i kolejka</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+ <tr>
+<td>1</td>
+   <td>Napisz klasę stos zwracającą maksimum z ciągu liczb.</td>
+<td><a href="">Python</a></td>
+</tr>
+ <tr>
+<td>2</td>
+   <td>Sprawdź poprawność hasła.</td>
+<td><a href="">Python</a></td>
+</tr>
+ <tr>
+<td>3</td>
+   <td>Z ciągu znaków wypisz cyfry.</td>
+<td><a href="">Python</a></td>
+</tr>
+</tbody>
+</table>
+
 <h1>Wyrażenia regularne</h1>
 <table>
 <thead>
@@ -1205,30 +1238,4 @@ Spis Tresci
 </tbody>
 </table>
 
-<h1>Stos i kolejka</h1>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Tytuł</th>
-<th>Python</th>
-</tr>
-</thead>
-<tbody>
- <tr>
-<td>1</td>
-   <td>Napisz klasę stos zwracającą maksimum z ciągu liczb.</td>
-<td><a href="">Python</a></td>
-</tr>
- <tr>
-<td>2</td>
-   <td>Sprawdź poprawność hasła.</td>
-<td><a href="">Python</a></td>
-</tr>
- <tr>
-<td>3</td>
-   <td>Z ciągu znaków wypisz cyfry.</td>
-<td><a href="">Python</a></td>
-</tr>
-</tbody>
-</table>
+
