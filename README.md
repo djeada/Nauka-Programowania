@@ -262,11 +262,6 @@ Spis Tresci
   <td>Na farmie mamy <i>a</i> głów i <i>b</i> nóg, znajdź liczbę kur oraz owieczek.</td>
 <td><a href="">Python</a></td>
 </tr>
-<tr>
-<td>9</td>
-  <td>Znajdź liczby podzielne przez <i>x</i> na przedziale [<i>a</i>, <i>b</i>].</td>
-<td><a href="">Python</a></td>
-</tr>
 </tbody>
 </table>
 
