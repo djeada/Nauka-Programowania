@@ -1070,7 +1070,7 @@ Spis Tresci
 </tr>
 <tr>
 <td>5</td>
-<td>Znajdź w systemie wszystkie pliki spelniajace warunek.</td>
+<td>Znajdź w systemie i zmodyfikuj wszystkie pliki spełniajace warunek.</td>
 <td><a href="">Python</a></td>
 </tr>
 <td>6</td>
