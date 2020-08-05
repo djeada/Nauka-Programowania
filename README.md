@@ -802,6 +802,11 @@ Spis Tresci
 <td>Wypisz spiralnie.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>8</td>
+<td>Znajdz klepsydre o najwiekszej sumie w macierzy.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
