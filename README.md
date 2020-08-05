@@ -865,7 +865,12 @@ Spis Tresci
 </tr>
 <tr>
 <td>3</td>
-<td>Posortuj Listę par (np. imię pracownika i zarobki) względem jednej z kategorii.</td>
+<td>Posortuj listę par (np. imię pracownika i zarobki) względem jednej z kategorii.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Posortuj napisy w liscie wzgledem dlugosci.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
@@ -1232,7 +1237,7 @@ Spis Tresci
 <tbody>
 <tr>
 <td>1</td>
-<td>Odległość Hamminga.</td>
+<td>Znajdz najdluzszy wspolny przedrostek.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
