@@ -804,7 +804,7 @@ Spis Tresci
 </tr>
 <tr>
 <td>8</td>
-<td>Znajdz klepsydre o najwiekszej sumie w macierzy.</td>
+<td>Znajdz w macierzy klepsydre o najwiekszej sumie.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
