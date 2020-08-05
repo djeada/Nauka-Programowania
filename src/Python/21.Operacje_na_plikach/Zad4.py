@@ -1,7 +1,7 @@
 import os
 
 '''
-Wypisz nazwy plików znajdujących się w folderze.
+Wypisz nazwy plikow znajdujacych sie w folderze.
 '''
 
 #Wersja 1
