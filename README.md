@@ -754,6 +754,11 @@ Spis Tresci
 <td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>8</td>
+<td>Znajdź wszystkie wyjątkowe palindromy jakie można utworzyć ze znaków w słowie.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
