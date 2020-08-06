@@ -1245,6 +1245,11 @@ Spis Tresci
 <td>Znajdz najdluzszy wspolny przedrostek.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>2</td>
+<td>Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzaly sie.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
