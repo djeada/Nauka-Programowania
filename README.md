@@ -4,7 +4,7 @@ Jeśli tak, to trafiłeś w dobre miejsce. </br>
 Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
 
 
-Spis Tresci
+Spis Treści
 =================
 
 <!--ts-->
@@ -1043,6 +1043,11 @@ Spis Tresci
 <tr>
 <td>5</td>
 <td>Wypisz słownik posortowany względem kluczy/wartości.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Wypisz te slowa ze zdania, w których wszystkie znaki występują tą samą liczbę razy.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
