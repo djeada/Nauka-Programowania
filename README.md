@@ -1260,6 +1260,11 @@ Spis Treści
 <td>Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzaly sie.</td>
 <td><a href="">Python</a></td>
 </tr>
+<tr>
+<td>3</td>
+<td>Znajdź najdłuższego wspólnego potomka dwóch napisów.</td>
+<td><a href="">Python</a></td>
+</tr>
 </tbody>
 </table>
 
