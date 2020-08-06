@@ -509,7 +509,12 @@ Spis Treści
 </tr>
 <tr>
 <td>11</td>
-<td>Czy punkty z podanej listy punktow moga stanowic wierzcholki trojkata?</td>
+<td>Czy punkty z podanej listy punktów mogą stanowić wierzchołki trójkąta?</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Policz mijające samochody.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
