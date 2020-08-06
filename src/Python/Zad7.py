@@ -1,5 +1,5 @@
 '''
-Dla woch slow, ile minimalnie znakow musimy usunac aby uzyskac anagramy.	
+Dla dwoch slow, ile minimalnie znakow musimy usunac aby uzyskac anagramy.	
 '''
 
 #Wersja 1
@@ -36,7 +36,7 @@ def minZnakowDoZmianyV1(slowoA, slowoB):
 
     return licznik
 
-#Testsy Poprawnosci
+#Testy Poprawnosci
 slowoA = 'grazyna'
 slowoB = 'razynax'
 assert(minZnakowDoZmianyV1(slowoA, slowoB) == 2)
