@@ -3,6 +3,11 @@ Chcesz się nauczyć programować i nie wiesz jak zacząć? </br>
 Jeśli tak, to trafiłeś w dobre miejsce. </br>
 Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
 
+<h1>Gdzie znaleźć materiały do nauki?</h1>
+<li>
+  <ul><a href="">Notatki Python</a></ul>  
+  <ul><a href="">Notatki C++</a></ul>  
+</li>
 
 Spis Treści
 =================
