@@ -514,7 +514,7 @@ Spis Treści
 </tr>
 <tr>
 <td>12</td>
-<td>Policz mijające samochody.</td>
+<td>Policz mijające sie samochody.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
