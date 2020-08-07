@@ -509,7 +509,12 @@ Spis Treści
 </tr>
 <tr>
 <td>11</td>
-<td>Czy punkty z podanej listy punktow moga stanowic wierzcholki trojkata?</td>
+<td>Czy punkty z podanej listy punktów mogą stanowić wierzchołki trójkąta?</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Policz mijające sie samochody.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
@@ -1258,6 +1263,11 @@ Spis Treści
 <tr>
 <td>2</td>
 <td>Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzaly sie.</td>
+<td><a href="">Python</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Znajdź najdłuższego wspólnego potomka dwóch napisów.</td>
 <td><a href="">Python</a></td>
 </tr>
 </tbody>
