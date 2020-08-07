@@ -4,10 +4,10 @@ Jeśli tak, to trafiłeś w dobre miejsce. </br>
 Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
 
 <h1>Gdzie znaleźć materiały do nauki?</h1>
-<li>
-  <ul><a href="">Notatki Python</a></ul>  
-  <ul><a href="">Notatki C++</a></ul>  
-</li>
+<ul>
+  <li><a href="">Notatki Python</a></li>  
+  <li><a href="">Notatki C++</a></li>  
+</ul>
 
 Spis Treści
 =================
