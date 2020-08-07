@@ -5,8 +5,8 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 
 <h1>Gdzie znaleźć materiały do nauki?</h1>
 <ul>
-  <li><a href="">Notatki Python</a></li>  
-  <li><a href="">Notatki C++</a></li>  
+  <li><a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python</a></li>  
+  <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++</a></li>  
 </ul>
 
 Spis Treści
