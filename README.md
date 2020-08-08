@@ -149,12 +149,12 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Przedstaw w formie tabeli dowody praw logicznych.</td>
-<td><a href="">Python</a></td>
+<td><a>Python</a></td>
 </tr>
 <tr>
 <td>9</td>
 <td>Czy z podanych długosci bokow mozna zbudowac trojkat?</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad9.py">Python</a></td>
 </tr>
 </tbody>
 </table>
