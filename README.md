@@ -90,12 +90,12 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Znajdź cenę podłogi dla podanej długości, szerokości i ceny płytki.</td>
-<td><a href="">Python</a></td>
+<td>Python</td>
 </tr>
 <tr>
 <td>9</td>
 <td>Kalkulator kredytowy.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad9.py">Python</a></td>
 </tr>
 </tbody>
 </table>
@@ -114,12 +114,12 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Porównaj pobraną wartość ze stałą.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad1.py">Python</a></td>
 </tr>
 <tr>
 <td>2</td>
 <td>Porównaj pobraną wartość z inną pobraną wartością.</td>
-<td><a href="">Python</a></td>
+<td><a>Python</a></td>
 </tr>
 <tr>
 <td>3</td>
