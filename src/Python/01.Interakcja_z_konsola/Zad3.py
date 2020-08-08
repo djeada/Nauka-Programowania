@@ -1,12 +1,15 @@
 '''
-Narysuj ksztalt. 
+Narysuj ksztalt.
+
 XX
 XX
 '''
+
 print("xx")
 print("xx")
 
 '''
+Trojkat.
 1
 22
 333
@@ -17,8 +20,12 @@ print("22")
 print("333") 
 
 '''
-Romb z jedynek 
-
+Romb z jedynek.
+  1
+ 111
+11111
+ 111
+  1
 '''
 
 print('  1')

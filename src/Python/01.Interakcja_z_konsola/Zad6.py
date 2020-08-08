@@ -1,34 +1,39 @@
 '''
-Napisz program, ktory wczyta wielkosc w kilogramach i wypisze ilu gramom odpowiada.
-kilograms = input("Wpisz kg:")
+Pobierz wielkosc w kilogramach i wypisz ilu gramom odpowiada.
 '''
+
 print("podaj kg")
-kilogramy = input()
+
+kilogramy = int(input())
 gramy = kilogramy * 1000
+
 print(kilogramy, "kg to " , gramy, "g") 
 
 '''
-Napisz program, ktory wczyta wielkosc w calach i wypisze ilu centymetrom odpowiada.
+Pobierz wielkosc w calach i wypisz ilu centymetrom odpowiada.
 '''
+
 print("podaj cale")
-cal = input()
+
+cal = int(input())
 cm = cal / 2.54
+
 print(cal, "cali to" , cm, "cm") 
  
 '''
-Napisz program, ktory wczyta ilosc sekund i przeliczy na godziny.
+Pobierz ilosc sekund i przelicz na godziny.
 '''
 
 '''
-Napisz program, ktory wczyta wielkosc w euro i wypisze ilu zlotowkom odpowiada. 
+Pobierz liczbe w euro i wypisz ilu zlotowkom odpowiada. 
 '''
 
 '''
-Napisz program, ktory wczyta miare kata w stopniach i wypisze ilu radianom odpowiada. 
+Pobierz miare kata w stopniach i wypisz ilu radianom odpowiada. 
 '''
 
 '''
- Napisz program, ktory wczyta temperature w stopniach Farenheita i wypisze ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
+Pobierz temperature w stopniach Farenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
 '''
 
 
