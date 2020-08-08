@@ -65,27 +65,27 @@ Spis Treści
 <tr>
 <td>3</td>
 <td>Narysuj kształt.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad3.py">Python</a></td>
 </tr>
 <tr>
 <td>4</td>
 <td>Wypisz wynik podstawowych operacji arytmetycznych dla dwóch liczb pobranych od użytkownika.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad4.py">Python</a></td>
 </tr>
 <tr>
 <td>5</td>
 <td>Oblicz wartość funkcji w zadanym punkcie.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad5.py">Python</a></td>
 </tr>
 <tr>
 <td>6</td>
 <td>Zamiana jednostek.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad6.py">Python</a></td>
 </tr>
 <tr>
 <td>7</td>
 <td>Pola figur i objętości brył.</td>
-<td><a href="">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad7.py">Python</a></td>
 </tr>
 <tr>
 <td>8</td>
