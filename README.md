@@ -520,7 +520,7 @@ Spis Treści
 <tr>
 <td>12</td>
 <td>Policz mijające sie samochody.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Listy_wprowadzenie/Zad12.py">Python</a></td>
 </tr>
 </tbody>
 </table>
@@ -611,7 +611,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td>Znajdź część wspólną dwóch list.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad4.py">Python</a></td>
 </tr>
 <tr>
 <td>5</td>
@@ -762,12 +762,12 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_i_palindromy/Zad7.py">Python</a></td>
 </tr>
 <tr>
 <td>8</td>
 <td>Znajdź wszystkie wyjątkowe palindromy jakie można utworzyć ze znaków w słowie.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_i_palindromy/Zad8.py">Python</a></td>
 </tr>
 </tbody>
 </table>
@@ -820,7 +820,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Znajdz w macierzy klepsydre o najwiekszej sumie.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy2D/Zad8.py">Python</a></td>
 </tr>
 </tbody>
 </table>
