@@ -1,8 +1,9 @@
-import random
 
 '''
-Znajdz element dominujący. Inaczej znadz lidera w liscie.
+Znajdz element dominujacy. Inaczej znajdz lidera w liscie.
 '''
+
+import random
 
 #Wersja 1
 #bez uzycia slownika
