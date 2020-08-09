@@ -47,7 +47,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -152,7 +152,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -255,7 +255,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -358,7 +358,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -451,7 +451,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -524,7 +524,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -617,7 +617,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -700,7 +700,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -763,7 +763,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -896,7 +896,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -999,7 +999,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1072,7 +1072,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1245,7 +1245,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1338,7 +1338,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1431,7 +1431,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1494,7 +1494,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1547,7 +1547,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1620,7 +1620,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1683,7 +1683,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1746,7 +1746,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1829,7 +1829,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -1921,7 +1921,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -2005,7 +2005,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -2040,7 +2040,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -2083,7 +2083,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -2126,7 +2126,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
@@ -2149,7 +2149,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th colspan="6">Python</th>
+<th colspan="7">Rozwiązania</th>
 </tr>
 </thead>
 <tbody>
