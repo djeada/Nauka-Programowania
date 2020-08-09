@@ -1301,7 +1301,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Sprawdź czy jakaś permutacja słowa jest palindromem.</td>
+<td>Sprawdź, czy istnieje permutacja danego słowa będąca palindromem.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
