@@ -39,7 +39,6 @@ Spis Treści
    * [Wyrażenia regularne](#Wyrażenia-regularne)
    * [Listy - trudne](#Listy---trudne)
    * [Napisy - trudne](#Napisy---trudne)
-   * [Stos i kolejka](#Stos-i-kolejka)<!--te-->
 
 <h1>Interakcja z konsolą</h1>
 
@@ -48,7 +47,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -153,7 +152,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -256,7 +255,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -359,7 +358,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -452,7 +451,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -525,7 +524,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -618,7 +617,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -701,7 +700,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -764,7 +763,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -897,7 +896,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1000,7 +999,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1073,7 +1072,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1246,7 +1245,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1339,7 +1338,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1432,7 +1431,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1495,7 +1494,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1548,7 +1547,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1621,7 +1620,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1684,7 +1683,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1747,7 +1746,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1830,7 +1829,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1922,7 +1921,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -2006,7 +2005,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -2041,7 +2040,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -2084,7 +2083,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -2127,7 +2126,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -2150,7 +2149,7 @@ Spis Treści
 <tr>
 <th>#</th>
 <th>Tytuł</th>
-<th>Python</th>
+<th colspan="6">Python</th>
 </tr>
 </thead>
 <tbody>
