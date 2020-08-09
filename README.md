@@ -1753,7 +1753,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Wypisz słownik gdzie kluczami są liczby, a wartościami ich kwadraty.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Slowniki/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21.Slowniki/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
