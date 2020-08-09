@@ -125,7 +125,13 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Znajdź cenę podłogi dla podanej długości, szerokości i ceny płytki.</td>
-<td>Python</td>
+<td><a>Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Go</a></td> 
+<td><a>Rust</a></td></tr>
 </tr>
 <tr>
 <td>9</td>
