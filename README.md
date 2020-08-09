@@ -1985,6 +1985,17 @@ Spis Treści
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Wypisz liczbę instancji klasy w programie.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -2001,6 +2012,17 @@ Spis Treści
 <tbody>
  <tr>
 <td>1</td>
+   <td>Wywolaj metode klasy bazowej w metodzie klasy potomnej nadipsujacej ta metode.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+  </tr>  
+ <tr>
+<td>2</td>
    <td>Zaprojektuj klasę <i>Kształt</i> oraz klasy pochodne <i>Koło</i> oraz <i>Kwadrat</i>.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -2008,7 +2030,8 @@ Spis Treści
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+  </tr>
 </tbody>
 </table>
 
