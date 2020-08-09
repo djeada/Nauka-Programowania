@@ -435,7 +435,7 @@ Spis Treści
 <tr>
 <td>8</td>
   <td>Na farmie mamy <i>a</i> głów i <i>b</i> nóg, znajdź liczbę kur oraz owieczek.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04.Petla_wprowadzenie/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -674,7 +674,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Litera Z.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07.Petla_zagniezdzone/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -933,7 +933,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td>Usuń duplikaty.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1079,7 +1079,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Odwróć napis.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_wprowadzenie/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1302,7 +1302,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Sprawdź, czy istnieje permutacja danego słowa będąca palindromem.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Napisy_anagramy_i_palindromy/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1395,7 +1395,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Połącz pokrywające się przedziały w liście przedziałów.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1690,7 +1690,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Konwersja między systemami binarnym i dziesiętnym.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.System_binarny/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1876,7 +1876,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Znajdź w systemie i zmodyfikuj wszystkie pliki spełniajace warunek.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Operacje_na_plikach/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1948,7 +1948,7 @@ Spis Treści
 <tr>
 <td>3</td>
   <td>Znajdź współrzędne prostokąta powstałego z nałożenia się dwóch innych prostokątów.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Klasy/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1989,7 +1989,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Wypisz liczbę instancji klasy w programie.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Klasy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2012,7 +2012,7 @@ Spis Treści
  <tr>
 <td>1</td>
    <td>Wywolaj metode klasy bazowej w metodzie klasy potomnej nadipsujacej ta metode.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Dziedziczenie/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
