@@ -747,7 +747,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Napisz funkcję realizującą zaokrąglanie w dół ilorazu bez użycia '/' i '%'.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -879,8 +879,8 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>12</td>
-<td>Policz mijające sie samochody.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Listy_wprowadzenie/Zad12.py">Python</a></td>
+<td>Policz mijające się samochody.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad12.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -983,7 +983,7 @@ Spis Treści
 <tr>
 <td>9</td>
 <td>Znajdź element dominujący.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wyszukiwanie_w_liscie/Zad9.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1026,7 +1026,7 @@ Spis Treści
 <tr>
 <td>3</td>
 <td> Masz dane dwie listy: wagi oraz wartosci. Znajdz srednia wazona wartosci.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad3.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1036,7 +1036,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td>Znajdź część wspólną dwóch list.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad4.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1056,7 +1056,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad6.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1209,7 +1209,7 @@ Spis Treści
 <tr>
 <td>14</td>
 <td>Stwórz napis składający się z liczb od 1 do n.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad14.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_wprowadzenie/Zad14.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1229,7 +1229,7 @@ Spis Treści
  <tr>
 <td>16</td>
 <td>Odległość Hamminga.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad16.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_wprowadzenie/Zad16.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1312,7 +1312,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_i_palindromy/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Napisy_anagramy_i_palindromy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1322,7 +1322,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Znajdź wszystkie wyjątkowe palindromy jakie można utworzyć ze znaków w słowie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_i_palindromy/Zad8.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Napisy_anagramy_i_palindromy/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1415,7 +1415,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Znajdz w macierzy klepsydre o najwiekszej sumie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy2D/Zad8.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1866,7 +1866,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td>Wypisz nazwy plików znajdujących się w folderze.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21.Operacje_na_plikach/Zad4.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Operacje_na_plikach/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
