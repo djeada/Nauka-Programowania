@@ -2154,7 +2154,7 @@ Spis Treści
 <tr>
 <td>3</td>
 <td>Znajdź najdłuższego wspólnego potomka dwóch napisów.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
