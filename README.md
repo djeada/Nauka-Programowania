@@ -219,7 +219,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Pobierz 4 liczby i wypisz je w kolejnośi rosnącej.</td>
+<td>Pobierz 4 liczby i wypisz je w kolejności rosnącej.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -239,7 +239,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
-<td>Czy z podanych długosci bokow mozna zbudowac trojkat?</td>
+<td>Czy z podanych długości boków można zbudować trójkąt?</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
