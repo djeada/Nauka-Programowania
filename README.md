@@ -707,7 +707,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Napisz funkcję zawsze zwracającą tą samą wartość.</td>
+<td>Napisz funkcję zwracającą zawsze tą samą wartość.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
