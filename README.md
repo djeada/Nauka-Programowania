@@ -942,6 +942,16 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
+<td>Usuń pierwsze wystapienie klucza w liscie.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad4.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>6</td>
 <td>Sprwadź, czy średnia elementów znajduje się w liście.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -951,7 +961,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>6</td>
+<td>7</td>
 <td>Wypisz liczbę mniejszą od największej i większą od wszystkich pozostałych.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -961,7 +971,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>7</td>
+<td>8</td>
 <td>Znajdź brakujący element w liście.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -971,7 +981,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>8</td>
+<td>9</td>
 <td>Znajdź element bez pary w liście.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -981,7 +991,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>9</td>
+<td>10</td>
 <td>Znajdź element dominujący.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
