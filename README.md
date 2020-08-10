@@ -1432,6 +1432,16 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
+<tr>
+<td>9</td>
+<td>Otrzymujesz dwie listy 1-wymiarowe. Stworz liste 2D z par odpowiadajacych sobie elementow obu list.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad8.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
 </tbody>
 </table>
 
