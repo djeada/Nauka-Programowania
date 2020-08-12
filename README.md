@@ -943,7 +943,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Usuń pierwsze wystapienie klucza w liscie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad4.py">Python</a></td>
+<td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -973,7 +973,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Znajdź brakujący element w liście.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2051,6 +2051,18 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td>
   </tr>
+  
+   <tr>
+<td>3</td>
+   <td>Polimorfizm</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Dziedziczenie/Zad3.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+  </tr>  
 </tbody>
 </table>
 
