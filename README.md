@@ -9,7 +9,6 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
   <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++</a></li>  
 </ul>
 
-Spis Treści
 =================
 
 <!--ts-->
@@ -1781,7 +1780,18 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
+<tr>
 <td>2</td>
+<td>Stwórz słownik, gdzie kluczami są elemnty jednej listy, a wartościami elementy drugiej listy.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
+<td>3</td>
 <td>Histogram znaków w słowie.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1791,7 +1801,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>3</td>
+<td>4</td>
 <td>Histogram wystąpień małych i dużych liter.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1811,7 +1821,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>4</td>
+<td>5</td>
 <td>Klucz to imię, wartość lista wypożyczonych książek.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1821,7 +1831,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>5</td>
+<td>6</td>
 <td>Wypisz słownik posortowany względem kluczy/wartości.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1831,8 +1841,8 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>6</td>
-<td>Wypisz te slowa ze zdania, w których wszystkie znaki występują tą samą liczbę razy.</td>
+<td>7</td>
+<td>Wypisz te słowa ze zdania, w których wszystkie znaki występują tą samą liczbę razy.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
