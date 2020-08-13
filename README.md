@@ -9,6 +9,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
   <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++</a></li>  
 </ul>
 
+Spis Treści
 =================
 
 <!--ts-->
