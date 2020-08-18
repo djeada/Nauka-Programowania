@@ -1550,14 +1550,26 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Posortuj napisy w liscie wzgledem dlugosci.</td>
+<td>Posortuj napisy w liście względem długości.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sortowanie listy obiektów.</td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
 </tbody>
 </table>
 
