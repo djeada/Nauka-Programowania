@@ -1874,16 +1874,6 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
-<td>8</td>
-<td>Zamień listę na słownik.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
 </tbody>
 </table>
 
@@ -2120,49 +2110,6 @@ Spis Treści
 </tbody>
 </table>
 
-<h1>Stos i kolejka</h1>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Tytuł</th>
-<th colspan="7">Rozwiązania</th>
-</tr>
-</thead>
-<tbody>
- <tr>
-<td>1</td>
-   <td>Napisz klasę stos zwracającą maksimum z ciągu liczb.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
- <tr>
-<td>2</td>
-   <td>Sprawdź poprawność hasła.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
- <tr>
-<td>3</td>
-   <td>Z ciągu znaków wypisz cyfry.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-</tbody>
-</table>
-
 <h1>Wyrażenia regularne</h1>
 <table>
 <thead>
@@ -2252,7 +2199,7 @@ Spis Treści
 <tr>
 <td>2</td>
 <td>Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzaly sie.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2262,7 +2209,18 @@ Spis Treści
 <tr>
 <td>3</td>
 <td>Znajdź najdłuższego wspólnego potomka dwóch napisów.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad2.py">Python</a></td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
+<tr>
+<td>4</td>
+<td>Usuń powtórzenia z napisu. Dany znak może pojawić się jedynie raz w całym napisie.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2272,7 +2230,6 @@ Spis Treści
   </tr>
 </tbody>
 </table>
-
 
 <h1>Bibliografia</h1>
 <ol>
