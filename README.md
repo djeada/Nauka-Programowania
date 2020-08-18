@@ -2199,7 +2199,7 @@ Spis Treści
 <tr>
 <td>2</td>
 <td>Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzaly sie.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2209,7 +2209,7 @@ Spis Treści
 <tr>
 <td>3</td>
 <td>Znajdź najdłuższego wspólnego potomka dwóch napisów.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad2.py">Python</a></td>
+<td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2219,17 +2219,6 @@ Spis Treści
   </tr>
 <tr>
 <td>4</td>
-<td>Usuń powtarzające się znaki z napisu. Dany znak może pojawić się jedynie raz w całym napisie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad4.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td>
-  </tr>
-<tr>
-<td>5</td>
 <td>Zmodyfikuj napis, dwa sąsiadujące znaki nie mogą się powtarzać.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
