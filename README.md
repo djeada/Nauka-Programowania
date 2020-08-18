@@ -2219,8 +2219,8 @@ Spis Treści
   </tr>
 <tr>
 <td>4</td>
-<td>Zmodyfikuj napis, dwa sąsiadujące znaki nie mogą się powtarzać.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad5.py">Python</a></td>
+<td>Usuń powtórzenia z napisu. Dany znak może pojawić się jedynie raz w całym napisie.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
