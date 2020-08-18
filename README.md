@@ -2133,7 +2133,7 @@ Spis Treści
  <tr>
 <td>2</td>
    <td>Sprawdź poprawność hasła.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Wyrazenia_regularne/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2152,8 +2152,8 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>4</td>
-   <td>Podziel zdanie na części względem znaków interpunkcyjnych.</td>
-<td><a >Python</a></td>
+<td>Podziel zdanie na części względem znaków interpunkcyjnych.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Wyrazenia_regularne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
