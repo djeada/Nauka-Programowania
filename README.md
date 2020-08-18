@@ -2110,49 +2110,6 @@ Spis Treści
 </tbody>
 </table>
 
-<h1>Stos i kolejka</h1>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Tytuł</th>
-<th colspan="7">Rozwiązania</th>
-</tr>
-</thead>
-<tbody>
- <tr>
-<td>1</td>
-   <td>Napisz klasę stos zwracającą maksimum z ciągu liczb.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
- <tr>
-<td>2</td>
-   <td>Sprawdź poprawność hasła.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
- <tr>
-<td>3</td>
-   <td>Z ciągu znaków wypisz cyfry.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-</tbody>
-</table>
-
 <h1>Wyrażenia regularne</h1>
 <table>
 <thead>
@@ -2284,7 +2241,6 @@ Spis Treści
   </tr>
 </tbody>
 </table>
-
 
 <h1>Bibliografia</h1>
 <ol>
