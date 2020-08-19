@@ -1456,134 +1456,6 @@ Spis Treści
 </tbody>
 </table>
 
-<h1>Sortowanie - algorytmy</h1>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Tytuł</th>
-<th colspan="7">Rozwiązania</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Bąbelkowe.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>2</td>
-<td>Wybieranie.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>3</td>
-<td>Wstawianie.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>4</td>
-<td>Scalanie.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>5</td>
-<td>Szybkie.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-</tbody>
-</table>
-
-<h1>Sortowanie - praktyka</h1>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Tytuł</th>
-<th colspan="7">Rozwiązania</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Posortuj znaki w słowie.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>2</td>
-<td>Posortuj słowa w zdaniu</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>3</td>
-<td>Posortuj listę par (np. imię pracownika i zarobki) względem jednej z kategorii.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>4</td>
-<td>Posortuj napisy w liście względem długości.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td>
-</tr>
-<tr>
-<td>5</td>
-<td>Sortowanie listy obiektów.</td>
-<td><a>Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td>
-  </tr>
-</tbody>
-</table>
-
 <h1>Funkcje - wielomiany</h1>
 <table>
 <thead>
@@ -2107,6 +1979,135 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td>
   </tr>  
+</tbody>
+</table>
+
+
+<h1>Sortowanie - algorytmy</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th colspan="7">Rozwiązania</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Bąbelkowe.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>2</td>
+<td>Wybieranie.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>3</td>
+<td>Wstawianie.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>4</td>
+<td>Scalanie.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>5</td>
+<td>Szybkie.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+</tbody>
+</table>
+
+<h1>Sortowanie - praktyka</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th colspan="7">Rozwiązania</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Posortuj znaki w słowie.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>2</td>
+<td>Posortuj słowa w zdaniu</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>3</td>
+<td>Posortuj listę par (np. imię pracownika i zarobki) względem jednej z kategorii.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>4</td>
+<td>Posortuj napisy w liście względem długości.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Posortuj tablice skladajaca sie jedynie z zer i jedynek.</td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
 </tbody>
 </table>
 
