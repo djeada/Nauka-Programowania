@@ -1025,6 +1025,16 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
+<td>Wypisz na przemian elementy pierwszej i drugiej listy.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad1.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>2</td>
 <td>Stwórz listę składającą się z sum odpoiwadających sobie elementów list składowych.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1034,7 +1044,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>2</td>
+<td>3</td>
 <td>Zrealizuj mnożenie sklarne oraz wektorowe dwóch wektorów reprezentowanych jako listy.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1044,7 +1054,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>3</td>
+<td>4</td>
 <td> Masz dane dwie listy: wagi oraz wartosci. Znajdz srednia wazona wartosci.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1054,7 +1064,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>4</td>
+<td>5</td>
 <td>Znajdź część wspólną dwóch list.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1064,7 +1074,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>5</td>
+<td>6</td>
 <td>Wypisz różnice między dwoma listami.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1074,7 +1084,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>6</td>
+<td>7</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
