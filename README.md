@@ -1000,6 +1000,16 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
+  <tr>
+<td>11</td>
+<td>Znajdz elementy w liscie, ktorych suma jest rowna liczbie.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad10.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
 </tbody>
 </table>
 
