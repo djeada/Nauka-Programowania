@@ -887,7 +887,19 @@ Spis Treści
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Rotacja w lewo/prawo.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad13.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
 </tbody>
 </table>
 
