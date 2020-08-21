@@ -18,9 +18,9 @@ Spis Treści
    * [Daty](#Daty)
    * [Pętla - wprowadzenie](#Pętla---wprowadzenie)
    * [Pętla - wyznaczanie cyfr liczby](#Pętla---wyznaczanie-cyfr-liczby)
+   * [Funkcje - wprowadzenie](#Funkcje---wprowadzenie)
    * [Pętla - algorytmy matematyczne](#Pętla---algorytmy-matematyczne)
    * [Pętla - pętle zagnieżdżone](#Pętla---pętle-zagnieżdżone)
-   * [Funkcje - wprowadzenie](#Funkcje---wprowadzenie)
    * [Listy - wprowadzenie](#Listy---wprowadzenie)
    * [Listy - wyszukiwanie w liście](#Listy---wyszukiwanie-w-liście)
    * [Listy - dwie listy](#Listy---dwie-listy)
@@ -518,6 +518,70 @@ Spis Treści
 </tbody>
 </table>
 
+
+<h1>Funkcje - wprowadzenie</h1>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tytuł</th>
+<th colspan="7">Rozwiązania</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Napisz funkcję zwracającą zawsze tą samą wartość.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>2</td>
+<td>Napisz funkcję wykonującą operacje arytmetyczną.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>3</td>
+<td>Napisz funkcję sprawdzającą warunek.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>4</td>
+<td>Napisz funkcję zamieniającą dwie wartości miejscami.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>5</td>
+<td>Napisz funkcję realizującą zaokrąglanie w dół ilorazu bez użycia '/' i '%'.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+</tbody>
+</table>
+
 <h1>Pętla - algorytmy matematyczne</h1>
 <table>
 <thead>
@@ -685,69 +749,6 @@ Spis Treści
 <td>7</td>
 <td>N pierwszych liczb pierwszych.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-</tbody>
-</table>
-
-<h1>Funkcje - wprowadzenie</h1>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Tytuł</th>
-<th colspan="7">Rozwiązania</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Napisz funkcję zwracającą zawsze tą samą wartość.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>2</td>
-<td>Napisz funkcję wykonującą operacje arytmetyczną.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>3</td>
-<td>Napisz funkcję sprawdzającą warunek.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>4</td>
-<td>Napisz funkcję zamieniającą dwie wartości miejscami.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>5</td>
-<td>Napisz funkcję realizującą zaokrąglanie w dół ilorazu bez użycia '/' i '%'.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2196,7 +2197,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Odległość Hamminga.</td>
+<td>Najdluzszy nieprzerwany ciag jedynek.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
