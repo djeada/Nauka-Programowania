@@ -1459,7 +1459,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Wypisz spiralnie.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
