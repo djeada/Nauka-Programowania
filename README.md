@@ -2130,10 +2130,21 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td>
 </tr>
+  <tr>
+<td>5</td>
+<td>Sortowanie listy obiektów.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Sortowanie_Praktyka/Zad5.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
 <tr>
 <td>6</td>
 <td>Tablica binarna.</td>
-<td><a>Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Sortowanie_Praktyka/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2144,7 +2155,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Tablica składająca się wyłącznie z 3 liczb.</td>
-<td><a>Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Sortowanie_Praktyka/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
