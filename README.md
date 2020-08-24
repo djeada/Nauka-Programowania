@@ -1639,7 +1639,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Konwersja między systemami binarnym i dziesiętnym.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.System_binarny/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17.System_binarny/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1702,7 +1702,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Wypisz słownik gdzie kluczami są liczby, a wartościami ich kwadraty.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21.Slowniki/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.Slowniki/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1753,7 +1753,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Klucz to imię, wartość lista wypożyczonych książek.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.Slowniki/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1826,7 +1826,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td>Wypisz nazwy plików znajdujących się w folderze.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Operacje_na_plikach/Zad4.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Operacje_na_plikach/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1836,7 +1836,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Znajdź w systemie i zmodyfikuj wszystkie pliki spełniajace warunek.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Operacje_na_plikach/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Operacje_na_plikach/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1908,7 +1908,7 @@ Spis Treści
 <tr>
 <td>3</td>
   <td>Znajdź współrzędne prostokąta powstałego z nałożenia się dwóch innych prostokątów.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Klasy/Zad3.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21.Klasy/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1949,7 +1949,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Wypisz liczbę instancji klasy w programie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Klasy/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21.Klasy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1982,7 +1982,7 @@ Spis Treści
  <tr>
 <td>1</td>
    <td>Wywolaj metode klasy bazowej w metodzie klasy potomnej nadipsujacej ta metode.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Dziedziczenie/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Dziedziczenie/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2005,7 +2005,7 @@ Spis Treści
    <tr>
 <td>3</td>
    <td>Polimorfizm</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Dziedziczenie/Zad3.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Dziedziczenie/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2233,7 +2233,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Najdluzszy nieprzerwany ciag jedynek.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Python/26.Listy_trudne">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
