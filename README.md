@@ -27,8 +27,6 @@ Spis Treści
    * [Napisy - wprowadzenie](#Napisy---wprowadzenie)
    * [Napisy - anagramy i palindromy](#Napisy---anagramy-i-palindromy)
    * [Listy 2D](#Listy-2D)
-   * [Sortowanie - algorytmy](#Sortowanie---algorytmy)
-   * [Sortowanie - praktyka](#Sortowanie---praktyka)
    * [Funkcje - wielomiany](#Funkcje---wielomiany)
    * [Funkcje - rekurencja](#Funkcje---rekurencja)
    * [System binarny](#System-binarny)
@@ -36,6 +34,8 @@ Spis Treści
    * [Operacje na plikach](#Operacje-na-plikach)
    * [Klasy](#Klasy)
    * [Dziedziczenie](#Dziedziczenie)
+   * [Sortowanie - algorytmy](#Sortowanie---algorytmy)
+   * [Sortowanie - praktyka](#Sortowanie---praktyka)
    * [Wyrażenia regularne](#Wyrażenia-regularne)
    * [Listy - trudne](#Listy---trudne)
    * [Napisy - trudne](#Napisy---trudne)
@@ -572,7 +572,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Napisz funkcję realizującą zaokrąglanie w dół ilorazu bez użycia '/' i '%'.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -625,7 +625,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td>Oblicz silnię z podanej liczby.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07.Petla_algorytmy_matematyczne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -738,7 +738,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Litera Z.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07.Petla_zagniezdzone/Zad6.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Petle_zagniezdzone/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1069,7 +1069,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td> Masz dane dwie listy: wagi oraz wartosci. Znajdz srednia wazona wartosci.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad3.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1079,7 +1079,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Znajdź część wspólną dwóch list.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad4.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1099,7 +1099,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad6.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2130,10 +2130,21 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td>
 </tr>
+  <tr>
+<td>5</td>
+<td>Sortowanie listy obiektów.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Sortowanie_Praktyka/Zad5.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
 <tr>
 <td>6</td>
 <td>Tablica binarna.</td>
-<td><a>Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Sortowanie_Praktyka/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2144,7 +2155,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Tablica składająca się wyłącznie z 3 liczb.</td>
-<td><a>Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Sortowanie_Praktyka/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
