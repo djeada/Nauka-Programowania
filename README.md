@@ -572,7 +572,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Napisz funkcję realizującą zaokrąglanie w dół ilorazu bez użycia '/' i '%'.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -625,7 +625,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td>Oblicz silnię z podanej liczby.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07.Petla_algorytmy_matematyczne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -738,7 +738,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Litera Z.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07.Petla_zagniezdzone/Zad6.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Petle_zagniezdzone/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1069,7 +1069,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td> Masz dane dwie listy: wagi oraz wartosci. Znajdz srednia wazona wartosci.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad3.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1079,7 +1079,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Znajdź część wspólną dwóch list.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad4.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1099,7 +1099,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad6.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
