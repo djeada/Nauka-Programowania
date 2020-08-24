@@ -1,55 +1,29 @@
 '''
-Wypisz spiralnie liste dwuwymiarowa.
+Otrzymujesz lipocze par liczb. Liczby w parze reprezentuja poczatek i koniecz przedzialu. Niektore przedzialy moga na siebie nachodzic. W takim przypadku polacz je ze soba i zwroc liste niepokrywajacych sie przedzialow.
 '''
 
 #Wersja 1
-def spiralaV1(macierz, x = 0, y = 0):
-
+def polaczPrzedzialyV1(lista):
+	lista = sorted(lista)
 	wynik = []
+	pocz, koniec = lista[0][0], lista[0][1]
 
-	if x == 0 and y == 0:
-		x, y = len(macierz[0]), len(macierz)  
 
-	k = 0
-	l = 0
+	for x in lista[1:]:
+		if koniec >= x[0]:
+			if koniec < x[1]:
+				koniec = x[1]
 
-	while k < y and l < x: 
+		else:
+			wynik.append((pocz,koniec))
+			pocz, koniec = x[0], x[1]
 
-		for i in range(l, x): 
-			wynik.append(macierz[k][i]) 
-
-		k += 1
-
-		for i in range(k, y) : 
-			wynik.append(macierz[i][x - 1]) 
-
-		x -= 1
-
-		if k < x: 
-
-			for i in range(x - 1, (l - 1), -1) : 
-				wynik.append(macierz[y - 1][i]) 
-
-			y -= 1
-
-		if l < y: 
-			
-			for i in range(y - 1, k - 1, -1) : 
-				wynik.append(macierz[i][l]) 
-
-			l += 1
-
-	return wynik
-
-#Testy Poprawnosci
-macierz = [ [ 1,  2,  3,  4, 5],
-            [16, 17, 18, 19, 6],
-            [15, 24, 25, 20, 7],
-            [14, 23, 22, 21, 8],
-            [13, 12, 11, 10, 9]]
-
-wynik = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
-	11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 
-	21, 22, 23, 24, 25]
+	wynik.append((pocz, koniec))
 	
-assert(spiralaV1(macierz) == wynik)
+	return wynik
+     
+#Testy Poprawnosci
+lista = [(23, 67), (23, 53), (45, 88), (77, 88), (10, 22), (11, 12), (42, 45)]
+wynik = [(10, 22), (23, 88)]
+
+assert(polaczPrzedzialyV1(lista) == wynik)

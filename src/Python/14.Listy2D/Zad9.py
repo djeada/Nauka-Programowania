@@ -1,16 +1,23 @@
 '''
-Otrzymujesz dwie listy 1-wymiarowe. Stworz liste 2D z par odpowiadajacych sobie elementow obu list.
-Zwroc -1 jesli listy sa roznej dlugosci.
+Znajdz w macierzy klepsydre o najwiekszej sumie.
 '''
 
+import random
+
 #Wersja 1
-def polaczParyV1(listaA, listaB):
-    if len(listaA) == len(listaB):
-        return -1
-
-    return [(a, b) for a, b in zip(listaA, listaB)]
-
+def maksKlepsydra(macierz):
+	maks = -float('Inf')
+	
+	for wiersz in range(len(macierz)):
+		assert(len(wiersz) == len(macierz))
+		for kolumna in wiersz:
+			 if not (wiersz == 0 or wiersz == len(macierz) - 1 or kolumna == 0 or kolumna == len(macierz) - 1):
+			 	maks = max(maks, (macierz[wiersz - 1][kolumna - 1] + macierz[wiersz - 1][kolumna]+ macierz[wiersz-1][kolumna + 1] + macierz[wiersz][kolumna] + macierz[wiersz + 1][kolumna - 1] + macierz[wiersz + 1][kolumna] + macierz[wiersz + 1][kolumna + 1]))
+           		
+	return maks
+     
 #Testy Poprawnosci
-listaA = [3, 2, 9]
-listaB = [1, 7, -2]
-wynik = [(3, 1), (2, 7), (9, -2)]
+N = 5
+macierz = [[random.randint(0, 100) for i in range(N)] for j in range(N)]
+print(macierz)
+print(maksKlepsydra(macierz))
