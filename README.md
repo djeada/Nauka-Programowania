@@ -2132,7 +2132,18 @@ Spis Treści
 </tr>
 <tr>
 <td>6</td>
-<td>Posortuj tablice skladajaca sie jedynie z zer i jedynek.</td>
+<td>Tablica binarna.</td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
+<tr>
+<td>7</td>
+<td>Tablica składająca się wyłącznie z 3 liczb.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
