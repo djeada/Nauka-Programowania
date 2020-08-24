@@ -1418,6 +1418,16 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
+<td>Otrzymujesz dwie listy 1-wymiarowe. Stworz liste 2D z par odpowiadajacych sobie elementow obu list.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad3.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>4</td>
 <td>Dodawanie/odejmowanie macierzy.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1427,7 +1437,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>4</td>
+<td>5</td>
 <td>Gra w statki.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1437,7 +1447,7 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>5</td>
+<td>6</td>
 <td>Magiczny kwadrat.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1447,18 +1457,8 @@ Spis Treści
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>6</td>
-<td>Połącz pokrywające się przedziały w liście przedziałów.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad6.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
 <td>7</td>
-<td>Wypisz spiralnie.</td>
+<td>Połącz pokrywające się przedziały w liście przedziałów.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1468,7 +1468,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
-<td>Znajdz w macierzy klepsydre o najwiekszej sumie.</td>
+<td>Wypisz spiralnie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1478,14 +1478,15 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
-<td>Otrzymujesz dwie listy 1-wymiarowe. Stworz liste 2D z par odpowiadajacych sobie elementow obu list.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad8.py">Python</a></td>
+<td>Znajdz w macierzy klepsydre o najwiekszej sumie.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Go</a></td> 
  <td><a>Rust</a></td></tr>
+
 </tbody>
 </table>
 
