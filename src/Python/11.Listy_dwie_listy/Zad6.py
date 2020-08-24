@@ -1,110 +1,33 @@
-import unittest
-import time
-import random
-
 '''
-Polacz posortowane listy w posortowana liste.
+Znajdź część wspólną dwóch list.
 '''
 
 #Wersja 1
-def polaczPosortowaneListyV1(listaA, listaB):
-	
-	if not listaA:
-		return list(listaB)
-	
-	if not listaB:
-		return list(listaA)
-	
-	listaC = []
-	
-	i = 0
-	j = 0
-	
-	while i < len(listaA) and j < len(listaB):
-		if listaA[i] < listaB[j]:
-			listaC.append(listaA[i])
-			i += 1
-		else:
-			listaC.append(listaB[j])
-			j += 1
-
-	for k in range(i, len(listaA)):
-		listaC.append(listaA[k])
-	
-	for k in range(j, len(listaB)):
-		listaC.append(listaB[k])	
-
-	return listaC
+def czescWspolnaV1(listaA, listaB):
+    wynik = []
+    for x in listaA:
+        if x in listaB:
+            wynik.append(x)
+    return wynik
 
 #Wersja 2
-def polaczPosortowaneListyV2(listaA, listaB):
-
-	if not listaA:
-		return list(listaB)
-	
-	if not listaB:
-		return list(listaA)
-
-	listaC = [] 
-	
-	if listaA[-1] > listaB[-1]:
-		listaA, listaB = listaB, listaA
-
-	it = iter(listaB)
-	elementListyB = it.__next__()
-	listaC = []
-	
-	for elementListyA in listaA:
-		try:
-			while listaB and elementListyB < elementListyA:
-				listaC.append(elementListyB)
-				elementListyB = it.__next__()
-		except StopIteration:
-			break
-		listaC.append(elementListyA)
-    
-	listaC.append(elementListyB)
-	listaC.extend(it)
-	
-	return listaC
-
-#Wersja 3
-def polaczPosortowaneListyV3(listaA, listaB):
-	if not listaA:
-		return list(listaB)
-	
-	if not listaB:
-		return list(listaA)
-    	
-	return sorted(listaA + listaB)
+#Z uzyciem zbiorow, tylko dla list z unikalnymi elementami!
+def czescWspolnaV2(listaA, listaB):
+    return set(listaA) - (set(listaA) - set(listaB))
 
 #Testy Poprawnosci
-a = [5, 7, 11]
-b = [1, 3, 8, 14]
-c = [1, 3, 5, 7, 8, 11, 14]
+listaA = [3, 6, 2, 7, 9]
+listaB = [4, 2, 3, 5, 6]
+wynik = [3, 6, 2]
 
-assert(polaczPosortowaneListyV1(a, b) == c)
-assert(polaczPosortowaneListyV2(a, b) == c)
-assert(polaczPosortowaneListyV3(a, b) == c)
+assert(sorted(czescWspolnaV1(listaA, listaB)) == sorted(wynik))
+assert(sorted(czescWspolnaV2(listaA, listaB)) == sorted(wynik))
 
-#Testy Predkosci
-def zmierzCzas(n, f):
+listaA = [61, 96, 25, 46, 84, 29, 48, 87, 53, 92, 71]
+listaB = [71, 9, 25, 96, 74, 39, 13, 84]
+wynik = [25, 71, 84, 96]
 
-	a = [random.random() for i in range(n)]
-	b = [random.random() for i in range(n)]
-
-	start = time.time()
-	f(a, b)
-	end = time.time()
-	
-	return end - start
-
-listaFunkcji = [polaczPosortowaneListyV1, polaczPosortowaneListyV2, polaczPosortowaneListyV3]
-
-for f in listaFunkcji:
-	print([zmierzCzas(10, f), zmierzCzas(10**3, f), zmierzCzas(10**6, f)])
-
-
-
+assert(sorted(czescWspolnaV1(listaA, listaB)) == sorted(wynik))
+assert(sorted(czescWspolnaV2(listaA, listaB)) == sorted(wynik))
 
 
