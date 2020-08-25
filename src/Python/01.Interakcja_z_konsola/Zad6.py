@@ -35,6 +35,13 @@ print(s, "sekund to" , h, "godzin")
 Pobierz liczbe w euro i wypisz ilu zlotowkom odpowiada. 
 '''
 
+print("podaj ilosc euro")
+
+euro = input()
+zloty = euro * 4,40
+
+print(euro, "euro to" , zloty, "zlotych")
+
 '''
 Pobierz miare kata w stopniach i wypisz ilu radianom odpowiada. 
 '''
