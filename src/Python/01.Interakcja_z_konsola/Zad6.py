@@ -24,6 +24,13 @@ print(cal, "cali to" , cm, "cm")
 Pobierz ilosc sekund i przelicz na godziny.
 '''
 
+print("podaj ilosc sekund")
+
+s = input()
+h = s / 3600
+
+print(s, "sekund to" , h, "godzin")
+
 '''
 Pobierz liczbe w euro i wypisz ilu zlotowkom odpowiada. 
 '''
