@@ -2275,8 +2275,8 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Znajdz najdluzszy wspolny przedrostek.</td>
-<td><a >Python</a></td>
+<td>Podmiana wszystkich wystapien slowa w zdaniu.</td>
+<td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2285,8 +2285,8 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzaly sie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad2.py">Python</a></td>
+<td>Podmiana wszystkich wystapien podnapisow w zdaniu.</td>
+<td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2295,7 +2295,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Znajdź najdłuższego wspólnego potomka dwóch napisów.</td>
+<td>Usun wszystkie wystapienia podnapisu ze zdania.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2306,6 +2306,48 @@ Spis Treści
   </tr>
 <tr>
 <td>4</td>
+<td>Sprawdz czy napisA stanowi poczatek napisuB.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad4.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
+<tr>
+<td>5</td>
+<td>Znajdz najdluzszy wspolny przedrostek.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>6</td>
+<td>Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzaly sie.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad2.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>7</td>
+<td>Znajdź najdłuższego wspólnego potomka dwóch napisów.</td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
+<tr>
+<td>8</td>
 <td>Usuń powtórzenia z napisu. Dany znak może pojawić się jedynie raz w całym napisie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/27.Napisy_trudne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
