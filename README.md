@@ -59,7 +59,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -69,7 +69,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -79,7 +79,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -89,7 +89,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -99,7 +99,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -109,7 +109,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -119,7 +119,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -140,7 +140,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -164,7 +164,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -174,7 +174,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -184,7 +184,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -194,7 +194,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -204,7 +204,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -214,7 +214,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -224,7 +224,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -234,7 +234,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
@@ -244,7 +244,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -267,7 +267,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -277,7 +277,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -287,7 +287,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -297,7 +297,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -307,7 +307,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -317,7 +317,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -327,7 +327,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -337,7 +337,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
@@ -347,7 +347,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -370,7 +370,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -380,7 +380,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -390,7 +390,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -400,7 +400,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -410,7 +410,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -420,7 +420,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -430,7 +430,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -440,7 +440,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -463,7 +463,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -473,7 +473,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -483,7 +483,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -493,7 +493,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -503,7 +503,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -513,7 +513,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -537,7 +537,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -547,7 +547,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -557,7 +557,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -567,7 +567,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -577,7 +577,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -600,7 +600,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -610,7 +610,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -620,7 +620,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -630,7 +630,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -640,7 +640,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -650,7 +650,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -660,7 +660,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -670,7 +670,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -693,7 +693,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -703,7 +703,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -713,7 +713,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -723,7 +723,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -733,7 +733,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -743,7 +743,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -753,7 +753,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -776,7 +776,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -786,7 +786,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -796,7 +796,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -806,7 +806,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -816,7 +816,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -826,7 +826,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -836,7 +836,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -846,7 +846,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
@@ -856,7 +856,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
@@ -866,7 +866,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>11</td>
@@ -876,7 +876,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>12</td>
@@ -886,7 +886,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
 </tr>
 <tr>
@@ -897,7 +897,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
 </tbody>
@@ -921,7 +921,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -931,7 +931,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -941,7 +941,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -951,7 +951,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -961,7 +961,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -971,7 +971,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -981,7 +981,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -991,7 +991,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
@@ -1001,7 +1001,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
@@ -1011,7 +1011,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
   <tr>
 <td>11</td>
@@ -1021,7 +1021,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -1044,7 +1044,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -1054,7 +1054,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -1064,7 +1064,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1074,7 +1074,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -1084,7 +1084,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -1094,7 +1094,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -1104,7 +1104,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -1127,7 +1127,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -1137,7 +1137,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -1147,7 +1147,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1157,7 +1157,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -1167,7 +1167,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -1177,7 +1177,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -1187,7 +1187,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -1197,7 +1197,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
@@ -1207,7 +1207,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
@@ -1217,7 +1217,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>11</td>
@@ -1227,7 +1227,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>12</td>
@@ -1237,7 +1237,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>13</td>
@@ -1247,7 +1247,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>14</td>
@@ -1257,7 +1257,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>15</td>
@@ -1267,7 +1267,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
 <td>16</td>
@@ -1277,7 +1277,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
  </tr>
  <tr>
@@ -1288,7 +1288,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -1311,7 +1311,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -1321,7 +1321,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -1331,7 +1331,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1341,7 +1341,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -1351,7 +1351,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -1361,7 +1361,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -1371,7 +1371,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -1381,7 +1381,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -1404,7 +1404,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -1414,7 +1414,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -1424,7 +1424,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1434,7 +1434,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -1444,7 +1444,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -1454,7 +1454,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -1464,7 +1464,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -1474,7 +1474,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
@@ -1484,7 +1484,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 
 </tbody>
@@ -1508,7 +1508,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -1518,7 +1518,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -1528,7 +1528,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1538,7 +1538,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
 <td>5</td>
@@ -1548,7 +1548,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
 <td>6</td>
@@ -1558,7 +1558,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -1581,7 +1581,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -1591,7 +1591,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -1601,7 +1601,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1611,7 +1611,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
 <td>5</td>
@@ -1621,7 +1621,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -1644,7 +1644,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -1654,7 +1654,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -1664,7 +1664,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1674,7 +1674,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -1684,7 +1684,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -1707,7 +1707,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <tr>
@@ -1718,7 +1718,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
 <td>3</td>
@@ -1728,7 +1728,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1738,7 +1738,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1748,7 +1748,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -1758,7 +1758,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -1768,7 +1768,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -1778,7 +1778,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -1801,7 +1801,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -1811,7 +1811,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -1821,7 +1821,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1831,7 +1831,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -1841,7 +1841,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <td>6</td>
 <td>Usuń pliki spełniające warunek.</td>
@@ -1850,7 +1850,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -1860,7 +1860,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
@@ -1870,7 +1870,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -1893,7 +1893,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -1903,7 +1903,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -1913,7 +1913,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -1923,7 +1923,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -1933,7 +1933,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
@@ -1943,7 +1943,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
 </tr>
 <tr>
@@ -1954,7 +1954,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
@@ -1964,7 +1964,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -1987,7 +1987,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>  
  <tr>
@@ -1998,7 +1998,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
   
@@ -2010,7 +2010,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>  
 </tbody>
@@ -2035,7 +2035,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -2045,7 +2045,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -2055,7 +2055,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -2065,7 +2065,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
@@ -2075,7 +2075,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -2098,7 +2098,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -2108,7 +2108,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -2118,7 +2118,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
@@ -2128,7 +2128,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
 </tr>
   <tr>
@@ -2139,7 +2139,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
 <tr>
@@ -2150,7 +2150,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
 <tr>
@@ -2161,7 +2161,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
 </tbody>
@@ -2185,7 +2185,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
 <td>2</td>
@@ -2195,7 +2195,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
 <td>3</td>
@@ -2205,7 +2205,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
 <td>4</td>
@@ -2215,7 +2215,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -2238,7 +2238,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
   <tr>
 <td>2</td>
@@ -2248,7 +2248,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
   <tr>
 <td>3</td>
@@ -2258,7 +2258,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
@@ -2281,7 +2281,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
@@ -2291,7 +2291,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
@@ -2301,7 +2301,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
 <tr>
@@ -2312,7 +2312,7 @@ Spis Treści
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
- <td><a>Go</a></td> 
+ <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
 </tbody>
