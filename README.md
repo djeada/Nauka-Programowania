@@ -2297,8 +2297,8 @@ Spis Treści
 <tr>
 <td>3</td>
 <td>Sprawdz czy napisA stanowi poczatek napisuB.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/27.Napisy_trudne/Zad3.cpp">Python</a></td>
- <td><a>Cpp</a></td> 
+<td><a>Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/27.Napisy_trudne/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
