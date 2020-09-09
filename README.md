@@ -2233,7 +2233,27 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Najdluzszy nieprzerwany ciag jedynek.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Python/26.Listy_trudne">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/26.Listy_trudne/Zad1.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+  <tr>
+<td>2</td>
+<td>Trojka o minimalnym iloczynie.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/26.Listy_trudne/Zad2.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Go</a></td> 
+ <td><a>Rust</a></td></tr>
+  <tr>
+<td>3</td>
+<td>Wspolny podciag o najwiekszej sumie.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/26.Listy_trudne/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
