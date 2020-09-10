@@ -1,35 +1,33 @@
-'''
-Znajdz wszystkie pliki tekstowe (rozszerzenie .txt) znajdujace sie w podanym folderze, badz w podfolderach. W znalezionych plikach podmien litery 'a' na litery 'x'.
-'''
-
 import os
 
-#Wersja 1
-szukanyNapis = 'a'
-napisDoPodmiany = 'x'
-rozszerzenie = '.txt'
-folder = os.getcwd()
+'''
+Wypisz nazwy plikow znajdujacych sie w folderze.
+'''
 
+#Wersja 1
 def plikiWFolderze(folder):
+	podFoldery = []
 	pliki = []
 	for item in os.listdir(folder):
 		sciezka = os.path.join(folder, item)
-		if not os.path.isdir(sciezka):
+		if os.path.isdir(sciezka):
+			podFoldery.append(sciezka)
+		else:
 			pliki.append(sciezka)
 
-	return pliki
+	return podFoldery, pliki
 
-def modyfikujPlik(plik, szukanyNapis, napisDoPodmiany):
-	with open(plik, 'r') as otwartyPlik:
-		dane = otwartyPlik.read()
+def sciezkaDoNazwy(sciezka):
+	return sciezka[sciezka.rfind(os.sep)+1:]
 
-	with open(plik, 'w') as otwartyPlik:
-		otwartyPlik.write(dane.replace(szukanyNapis, napisDoPodmiany))  
+podFoldery, pliki = plikiWFolderze(os.getcwd())
 
-def znajdzOrazModyfikuj(folder, rozszerzenie, szukanyNapis, napisDoPodmiany):
-	for plik in plikiWFolderze(folder):
-		if rozszerzenie in plik:
-			modyfikujPlik(plik, szukanyNapis, napisDoPodmiany)
-			
-znajdzOrazModyfikuj(folder, rozszerzenie, szukanyNapis, napisDoPodmiany)
+if podFoldery:
+	print('W folderze ' + sciezkaDoNazwy(os.getcwd()) + 'znajduja sie nastepujace podfoldery: ')
+	for folder in podFoldery:
+		print(folder)
 
+if pliki:
+	print('W folderze ' + sciezkaDoNazwy(os.getcwd()) + 'znajduja sie nastepujace pliki: ')
+	for plik in pliki:
+		print(sciezkaDoNazwy(plik))
