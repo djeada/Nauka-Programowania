@@ -1793,9 +1793,9 @@ Spis Treści
 </tr>
 </thead>
 <tbody>
-<tr>
+  <tr>
 <td>1</td>
-<td>Wypisz treść pliku tekstowego na konsolę.</td>
+<td>Sprawdź, czy ścieżka należy do pliku, czy folderu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1805,7 +1805,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Dodaj wiersz do pliku.</td>
+<td>Wypisz treść pliku tekstowego na konsolę.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1815,7 +1815,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Otrzymujesz plik z listą wpłat i wypłat z konta. Wypisz aktualny stan konta.</td>
+<td>Dodaj wiersz do pliku.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1825,8 +1825,8 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Wypisz nazwy plików znajdujących się w folderze.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Operacje_na_plikach/Zad4.py">Python</a></td>
+<td>Otrzymujesz plik z listą wpłat i wypłat z konta. Wypisz aktualny stan konta.</td>
+<td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1835,7 +1835,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Znajdź w systemie i zmodyfikuj wszystkie pliki spełniajace warunek.</td>
+<td>Wypisz nazwy plików znajdujących się w folderze.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Operacje_na_plikach/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1843,7 +1843,17 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
+<tr>
 <td>6</td>
+<td>Znajdź w systemie i zmodyfikuj wszystkie pliki spełniajace warunek.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Operacje_na_plikach/Zad6.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<td>7</td>
 <td>Usuń pliki spełniające warunek.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1853,7 +1863,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>7</td>
+<td>8</td>
 <td>Otwórz plik tekstowy i wyświetl podstawowe statystyki (średnia długość słowa, ilość słów itd.).</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1863,7 +1873,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>8</td>
+<td>9</td>
 <td>Wczytaj listę domen z pliku i wypisz odpowiadające im adersy ip.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
