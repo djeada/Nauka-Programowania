@@ -1796,7 +1796,7 @@ Spis Treści
   <tr>
 <td>1</td>
 <td>Sprawdź, czy ścieżka należy do pliku, czy folderu.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20.Operacje_na_plikach/Zad1.cpp">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1837,7 +1837,7 @@ Spis Treści
 <td>5</td>
 <td>Wypisz nazwy plików znajdujących się w folderze.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Operacje_na_plikach/Zad5.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20.Operacje_na_plikach/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
