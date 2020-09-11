@@ -1796,8 +1796,8 @@ Spis Treści
   <tr>
 <td>1</td>
 <td>Sprawdź, czy ścieżka należy do pliku, czy folderu.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20.Operacje_na_plikach/Zad1.cpp">Python</a></td>
- <td><a>Cpp</a></td> 
+<td><a >Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20.Operacje_na_plikach/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
