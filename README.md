@@ -957,7 +957,7 @@ Spis Treści
 <td>5</td>
 <td>Usuń klucz z listy.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10.Listy_wyszukiwanie_w_liscie/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -2016,7 +2016,7 @@ Spis Treści
 <td>3</td>
    <td>Polimorfizm</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Dziedziczenie/Zad3.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/22.Dziedziczenie/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
