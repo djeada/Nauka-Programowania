@@ -34,3 +34,5 @@ int main() {
     return 0;
 }
 
+//Compiled with g++ -std=c++17 Zad1.cpp -lstdc++fs -o exe
+
