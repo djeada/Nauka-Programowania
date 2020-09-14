@@ -770,259 +770,164 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Pobierz n danych, zapisz w liście, wypisz.</td>
+<td>Wczytaj i wypisz.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Pobierz n danych, zapisz w liście, wypisz elementy spełniające warunek.</td>
+<td>Wczytaj, zmodyfikuj i wypisz.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Pobierz n danych, zapisz w liście, zmodyfikuj, wypisz.</td>
+<td>Wszystkie wystąpieia klucza.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Wczytaj pojedynczy ciąg oddzielonych przecinkami liczb, następnie zapisze je w liście oraz krotce, wypisz od końca.</td>
+<td>Minimum oraz maksimum.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Wczytaj n liczb do listy, następnie liczbę k i wypisz k-ty element.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>6</td>
-<td>Wczytaj n liczb do listy, następnie liczbę k i wypisz co k-ty element.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>7</td>
-<td>Wczytaj n liczb do listy, i wypisz elementy o indeksach spełniających warunek.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>8</td>
-<td>Wczytaj n liczb do listy, usuń elementy spełniające warunek, wypisz.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>9</td>
-<td>Wczytaj n liczb do listy, usuń elementy o indeksach spełniających warunek, wypisz.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>10</td>
 <td>Zmodyfikuj elementy spełniające warunek.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
+<td>6</td>
+<td>Czy średnia elementów znajduje się w liście.</td>
+<td><a >Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 <tr>
-<td>11</td>
+<td>7</td>
+<td>Liczbę mniejsza od największej i większa od wszystkich pozostałych.</td>
+<td><a >Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
+<tr>
+<td>8</td>
+<td>Usuń klucz.</td>
+<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10.Listy_wyszukiwanie_w_liscie/Zad5.cpp">Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
+<td>9</td>
+<td>Usuń duplikaty.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad4.py">Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
+<tr>
+<td>10</td>
 <td>Czy punkty z podanej listy punktów mogą stanowić wierzchołki trójkąta?</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 <tr>
-<td>12</td>
+<td>11</td>
 <td>Policz mijające się samochody.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad12.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Rotacja w lewo/prawo.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad13.py">Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td>
 </tr>
 <tr>
 <td>13</td>
-<td>Rotacja w lewo/prawo.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad13.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
-  </tr>
-</tbody>
-</table>
-
-<h1>Listy - wyszukiwanie w liście</h1>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Tytuł</th>
-<th colspan="7">Rozwiązania</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Sprawdź, czy klucz znajduje się w liście.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>2</td>
-<td>Znajdź minimum/maksimum.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>3</td>
-<td>Znajdź wszystkie wystąpienia klucza.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>4</td>
-<td>Usuń duplikaty.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad4.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>5</td>
-<td>Usuń klucz z listy.</td>
-<td><a >Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10.Listy_wyszukiwanie_w_liscie/Zad5.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>6</td>
-<td>Sprwadź, czy średnia elementów znajduje się w liście.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>7</td>
-<td>Wypisz liczbę mniejszą od największej i większą od wszystkich pozostałych.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>8</td>
 <td>Znajdź brakujący element w liście.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad8.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 <tr>
-<td>9</td>
+<td>14</td>
 <td>Znajdź element bez pary w liście.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 <tr>
-<td>10</td>
+<td>15</td>
 <td>Znajdź element dominujący.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad9.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-  <tr>
-<td>11</td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
+<tr>
+<td>16</td>
 <td>Znajdz elementy w liscie, ktorych suma jest rowna liczbie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad10.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 </tbody>
 </table>
 
