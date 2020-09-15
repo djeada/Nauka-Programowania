@@ -1595,6 +1595,16 @@ Spis Treści
 <td>6</td>
 <td>Konwersja między dowolnymi systemami.</td>
 <td><a >Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17.System_binarny/Zad5.cpp">Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+  <tr>
+<td>7</td>
+<td>Zamiana sąsiadów.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17.System_binarny/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
