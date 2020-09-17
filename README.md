@@ -2145,7 +2145,7 @@ Spis Treści
  <tr>
 <td>3</td>
    <td>Z ciągu znaków wypisz cyfry.</td>
-<td><a >Python</a></td>
+<td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Wyrazenia_regularne/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
