@@ -1697,10 +1697,20 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Wypisz te słowa ze zdania, w których wszystkie znaki występują tą samą liczbę razy.</td>
+<td>Znajdź słowa, w których wszystkie znaki występują tą samą liczbę razy.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>8</td>
+<td>Znajdź powtarzające się znaki w zdaniu.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18.Slowniki/Zad8">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
