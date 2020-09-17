@@ -1697,10 +1697,20 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Wypisz te słowa ze zdania, w których wszystkie znaki występują tą samą liczbę razy.</td>
+<td>Znajdź słowa, w których wszystkie znaki występują tą samą liczbę razy.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>8</td>
+<td>Znajdź powtarzające się znaki w zdaniu.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18.Slowniki/Zad8">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1750,7 +1760,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Otrzymujesz plik z listą wpłat i wypłat z konta. Wypisz aktualny stan konta.</td>
+<td>Plik z listą wpłat i wypłat z konta.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1760,7 +1770,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Wypisz nazwy plików znajdujących się w folderze.</td>
+<td>Znajdź nazwy plików znajdujących się w folderze.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.Operacje_na_plikach/Zad5.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19.Operacje_na_plikach/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1770,7 +1780,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Znajdź w systemie i zmodyfikuj wszystkie pliki spełniajace warunek.</td>
+<td>Znajdź i zmodyfikuj pliki spełniajace warunek.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.Operacje_na_plikach/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1789,7 +1799,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
-<td>Otwórz plik tekstowy i wyświetl podstawowe statystyki (średnia długość słowa, ilość słów itd.).</td>
+<td>Statystyki dla pliku tekstowego.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1799,7 +1809,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
-<td>Wczytaj listę domen z pliku i wypisz odpowiadające im adersy ip.</td>
+<td>Plik z listą domen.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1822,7 +1832,7 @@ Spis Treści
 <tbody>
  <tr>
 <td>1</td>
-   <td>Napisz klasę <i>Koło</i>. Konstruktor powinien przyjmować długość promienia. Metoda do wypisywania pola.</td>
+   <td>Zaprojektuj klasę <i>Koło</i>.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1883,7 +1893,7 @@ Spis Treści
 </tr>
 <tr>
 <td>7</td>
-<td>Wypisz liczbę instancji klasy w programie.</td>
+<td>Znajdź liczbę instancji klasy w programie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Klasy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1916,7 +1926,7 @@ Spis Treści
 <tbody>
  <tr>
 <td>1</td>
-   <td>Wywolaj metode klasy bazowej w metodzie klasy potomnej nadipsujacej ta metode.</td>
+   <td>Wywołaj metodę klasy bazowej w klasie potomnej.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21.Dziedziczenie/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
