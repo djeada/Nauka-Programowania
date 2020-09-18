@@ -809,7 +809,7 @@ Spis Treści
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
 <td>6</td>
-<td>Czy średnia elementów znajduje się w liście.</td>
+<td>Czy średnia elementów znajduje się w liście?</td>
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
@@ -848,7 +848,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
-<td>Czy punkty z podanej listy punktów mogą stanowić wierzchołki trójkąta?</td>
+<td>Czy punkty mogą stanowić wierzchołki trójkąta?</td>
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
@@ -858,7 +858,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <tr>
 <td>11</td>
-<td>Policz mijające się samochody.</td>
+<td>Mijające się samochody.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad12.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
@@ -880,7 +880,7 @@ Spis Treści
 </tr>
 <tr>
 <td>13</td>
-<td>Znajdź brakujący element w liście.</td>
+<td>Brakujący element w liście.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad8.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
@@ -890,7 +890,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <tr>
 <td>14</td>
-<td>Znajdź element bez pary w liście.</td>
+<td>Element bez pary w liście.</td>
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
@@ -900,7 +900,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <tr>
 <td>15</td>
-<td>Znajdź element dominujący.</td>
+<td>Element dominujący.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad9.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
@@ -910,7 +910,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <tr>
 <td>16</td>
-<td>Znajdz elementy w liscie, ktorych suma jest rowna liczbie.</td>
+<td>Elementy w liście, których suma jest równa liczbie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad10.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
@@ -943,7 +943,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Stwórz listę składającą się z sum odpoiwadających sobie elementów list składowych.</td>
+<td>Lista składającą się z sum odpowiadających sobie elementów podanych list.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -953,7 +953,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Zrealizuj mnożenie sklarne oraz wektorowe dwóch wektorów reprezentowanych jako listy.</td>
+<td>Mnożenie sklarne oraz wektorowe dwóch wektorów.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -963,7 +963,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td> Masz dane dwie listy: wagi oraz wartosci. Znajdz srednia wazona wartosci.</td>
+<td>Średnia ważona wartości.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -973,7 +973,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Znajdź część wspólną dwóch list.</td>
+<td>Część wspólna dwóch list.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -983,7 +983,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Wypisz różnice między dwoma listami.</td>
+<td>Różnica między dwoma listami.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1026,7 +1026,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Wypisz ile razy występuje dany znak w napisie.</td>
+<td>Ile razy występuje dany znak w napisie?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1066,7 +1066,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Wypisz poziomo i pionowo napis z literami <i>a</i> zmienionymi na znaki zapytania.</td>
+<td>Zamień litery <i>a</i> na znaki zapytania.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1096,7 +1096,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
-<td>Wczytaj oddzielone przecinkami informacje o pracowniku, wypisz różne dane w oddzielnych wierszach.</td>
+<td>Wczytaj i rozdziel informacje o pracowniku.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1116,7 +1116,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>11</td>
-<td>Znajdź średnią długość słów w zdaniu.</td>
+<td>Średnia długość słów w zdaniu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1136,7 +1136,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>13</td>
-<td>W oddzielnnych wierszach wypisz znaki znajdujące się na pozycjach będących liczbami pierwszymi.</td>
+<td>Znaki znajdujące się na pozycjach będących liczbami pierwszymi.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1146,7 +1146,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>14</td>
-<td>Stwórz napis składający się z liczb od 1 do n.</td>
+<td>Napis składający się z liczb od 1 do n.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_wprowadzenie/Zad14.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1156,7 +1156,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>15</td>
-<td>Rozdziel słowa w zdaniu i zapisz je jako osobne elemnty listy.</td>
+<td>Słowa ze zdania jako osobne elemnty listy.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1200,7 +1200,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Sprawdź czy słowo jest palindromem.</td>
+<td>Czy słowo jest palindromem?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1210,7 +1210,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Wypisz wszystkie permutacje słowa.</td>
+<td>Wszystkie permutacje słowa.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1220,7 +1220,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Sprawdź, czy słowa są swoimi anagramami.</td>
+<td>Czy słowa są swoimi anagramami?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1230,7 +1230,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Znajdź palindromy w zdaniu.</td>
+<td>Wszystkie palindromy w zdaniu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1250,7 +1250,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Sprawdź, czy istnieje permutacja danego słowa będąca palindromem.</td>
+<td>Czy istnieje permutacja danego słowa będąca palindromem?</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Napisy_anagramy_i_palindromy/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1260,7 +1260,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy.</td>
+<td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy?</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Napisy_anagramy_i_palindromy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1270,7 +1270,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
-<td>Znajdź wszystkie wyjątkowe palindromy jakie można utworzyć ze znaków w słowie.</td>
+<td>Wyjątkowe palindromy.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Napisy_anagramy_i_palindromy/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1293,7 +1293,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-  <td>Stwórz tablicę <i>a</i> identycznych wierszy składających się z liczb od 0 do <i>b</i>.</td>
+  <td>Tablica <i>a</i> identycznych wierszy składających się z liczb od 0 do <i>b</i>.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1303,7 +1303,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Każdy element listy jest iloczynem współrzędnych.</td>
+<td>Każdy element jest iloczynem współrzędnych.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1313,7 +1313,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Otrzymujesz dwie listy 1-wymiarowe. Stworz liste 2D z par odpowiadajacych sobie elementow obu list.</td>
+<td>Tablica 2D z par odpowiadajacych sobie elementow otrzymanych list.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1353,7 +1353,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Połącz pokrywające się przedziały w liście przedziałów.</td>
+<td>Pokrywające się przedziały w liście przedziałów.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1373,7 +1373,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
-<td>Znajdz w macierzy klepsydre o najwiekszej sumie.</td>
+<td>Klepsydra o największej sumie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1381,7 +1381,6 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-
 </tbody>
 </table>
 
@@ -1500,7 +1499,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Zwróć n-ty wyraz ciąg danego wzorem rekurencyjnym.</td>
+<td>N-ty wyraz ciąg danego wzorem rekurencyjnym.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
