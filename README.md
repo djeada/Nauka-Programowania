@@ -830,7 +830,7 @@ Spis Treści
 <td>8</td>
 <td>Usuń klucz.</td>
 <td><a >Python</a></td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10.Listy_wyszukiwanie_w_liscie/Zad5.cpp">Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09.Listy_wprowadzenie/Zad8.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>Javascript</a></td>  
 <td><a>Bash</a></td> 
@@ -838,7 +838,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <td>9</td>
 <td>Usuń duplikaty.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad4.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad9.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>Javascript</a></td>  
@@ -858,7 +858,7 @@ Spis Treści
 <tr>
 <td>11</td>
 <td>Mijające się samochody.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad12.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad11.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>Javascript</a></td>  
@@ -869,7 +869,7 @@ Spis Treści
 <tr>
 <td>12</td>
 <td>Rotacja w lewo/prawo.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad13.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad12.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>Javascript</a></td>  
@@ -880,7 +880,7 @@ Spis Treści
 <tr>
 <td>13</td>
 <td>Brakujący element w liście.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad8.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad13.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>Javascript</a></td>  
@@ -900,7 +900,7 @@ Spis Treści
 <tr>
 <td>15</td>
 <td>Element dominujący.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad9.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad15.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>Javascript</a></td>  
@@ -910,7 +910,7 @@ Spis Treści
 <tr>
 <td>16</td>
 <td>Elementy w liście, których suma jest równa liczbie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_wyszukiwanie_w_liscie/Zad10.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad16.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>Javascript</a></td>  
@@ -933,7 +933,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Wypisz na przemian elementy pierwszej i drugiej listy.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -963,7 +963,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td>Średnia ważona wartości.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad4.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -973,7 +973,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Część wspólna dwóch list.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -993,7 +993,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Listy_dwie_listy/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1016,7 +1016,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Odwróć napis.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_wprowadzenie/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1146,7 +1146,7 @@ Spis Treści
 <tr>
 <td>14</td>
 <td>Napis składający się z liczb od 1 do n.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_wprowadzenie/Zad14.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad14.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1166,7 +1166,7 @@ Spis Treści
  <tr>
 <td>16</td>
 <td>Odległość Hamminga.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_wprowadzenie/Zad16.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad16.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1177,7 +1177,7 @@ Spis Treści
  <tr>
 <td>17</td>
 <td>Zamień listę na napis.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_wprowadzenie/Zad17.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad17.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1189,7 +1189,7 @@ Spis Treści
 <td>Odwroc napisy w zdaniu.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_wprowadzenie/Zad18">Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/11.Napisy_wprowadzenie/Zad18">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1260,7 +1260,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Czy istnieje permutacja danego słowa będąca palindromem?</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Napisy_anagramy_i_palindromy/Zad6.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_i_palindromy/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1270,7 +1270,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy?</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Napisy_anagramy_i_palindromy/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_i_palindromy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1280,7 +1280,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Wyjątkowe palindromy.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Napisy_anagramy_i_palindromy/Zad8.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_i_palindromy/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1323,7 +1323,7 @@ Spis Treści
 <tr>
 <td>3</td>
 <td>Tablica 2D z par odpowiadajacych sobie elementow otrzymanych list.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad3.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy2D/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1363,7 +1363,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Pokrywające się przedziały w liście przedziałów.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy2D/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1373,7 +1373,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Wypisz spiralnie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad8.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy2D/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1383,7 +1383,7 @@ Spis Treści
 <tr>
 <td>9</td>
 <td>Klepsydra o największej sumie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14.Listy2D/Zad9.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy2D/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1542,7 +1542,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Konwersja między systemami binarnym i dziesiętnym.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17.System_binarny/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1602,7 +1602,7 @@ Spis Treści
   <tr>
 <td>7</td>
 <td>Zamiana sąsiadów.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17.System_binarny/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1625,7 +1625,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Wypisz słownik gdzie kluczami są liczby, a wartościami ich kwadraty.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18.Slowniki/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17.Slowniki/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1676,7 +1676,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Klucz to imię, wartość lista wypożyczonych książek.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18.Slowniki/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17.Slowniki/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1708,7 +1708,7 @@ Spis Treści
 <td>Znajdź powtarzające się znaki w zdaniu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18.Slowniki/Zad8">Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17.Slowniki/Zad8">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1730,7 +1730,7 @@ Spis Treści
 <td>1</td>
 <td>Sprawdź, czy ścieżka należy do pliku, czy folderu.</td>
 <td><a >Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19.Operacje_na_plikach/Zad1.cpp">Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18.Operacje_na_plikach/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -1769,8 +1769,8 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Znajdź nazwy plików znajdujących się w folderze.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.Operacje_na_plikach/Zad5.py">Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19.Operacje_na_plikach/Zad5.cpp">Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18.Operacje_na_plikach/Zad5.py">Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18.Operacje_na_plikach/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -1779,7 +1779,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Znajdź i zmodyfikuj pliki spełniajace warunek.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.Operacje_na_plikach/Zad6.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18.Operacje_na_plikach/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1851,7 +1851,7 @@ Spis Treści
 <tr>
 <td>3</td>
   <td>Znajdź współrzędne prostokąta powstałego z nałożenia się dwóch innych prostokątów.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Klasy/Zad3.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.Klasy/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1892,7 +1892,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Znajdź liczbę instancji klasy w programie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Klasy/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.Klasy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1925,7 +1925,7 @@ Spis Treści
  <tr>
 <td>1</td>
    <td>Wywołaj metodę klasy bazowej w klasie potomnej.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21.Dziedziczenie/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Dziedziczenie/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1948,8 +1948,8 @@ Spis Treści
    <tr>
 <td>3</td>
    <td>Polimorfizm</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21.Dziedziczenie/Zad3.py">Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/21.Dziedziczenie/Zad3.cpp">Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Dziedziczenie/Zad3.py">Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20.Dziedziczenie/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -2077,7 +2077,7 @@ Spis Treści
   <tr>
 <td>5</td>
 <td>Sortowanie listy obiektów.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Sortowanie_Praktyka/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Sortowanie_Praktyka/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2088,7 +2088,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Tablica binarna.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Sortowanie_Praktyka/Zad6.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Sortowanie_Praktyka/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2099,7 +2099,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Tablica składająca się wyłącznie z 3 liczb.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Sortowanie_Praktyka/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Sortowanie_Praktyka/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2133,7 +2133,7 @@ Spis Treści
  <tr>
 <td>2</td>
    <td>Sprawdź poprawność hasła.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Wyrazenia_regularne/Zad2.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2145,7 +2145,7 @@ Spis Treści
    <td>Czy napis składa się wyłącznie z cyfr?</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/24.Wyrazenia_regularne/Zad3">Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/23.Wyrazenia_regularne/Zad3">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -2153,7 +2153,7 @@ Spis Treści
  <tr>
 <td>4</td>
    <td>Z ciągu znaków wypisz cyfry.</td>
-<td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Wyrazenia_regularne/Zad4.py">Python</a></td>
+<td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2163,7 +2163,7 @@ Spis Treści
  <tr>
 <td>5</td>
 <td>Podziel zdanie na części względem znaków interpunkcyjnych.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Wyrazenia_regularne/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2186,7 +2186,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Najdluzszy nieprzerwany ciag jedynek.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Listy_trudne/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2196,7 +2196,7 @@ Spis Treści
   <tr>
 <td>2</td>
 <td>Trojka o minimalnym iloczynie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Listy_trudne/Zad2.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2206,7 +2206,7 @@ Spis Treści
   <tr>
 <td>3</td>
 <td>Wspolny podciag o najwiekszej sumie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Listy_trudne/Zad3.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2216,7 +2216,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td>Zior potegowy.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Listy_trudne/Zad4.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2240,7 +2240,7 @@ Spis Treści
 <td>1</td>
 <td>Podmiana wszystkich wystapien slowa w zdaniu.</td>
 <td><a>Python</a></td>
- <td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/26.Napisy_trudne/Zad1.cpp">Cpp</a></td> 
+ <td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -2250,7 +2250,7 @@ Spis Treści
 <td>2</td>
 <td>Usun wszystkie wystapienia podnapisu ze zdania.</td>
 <td><a>Python</a></td>
- <td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/26.Napisy_trudne/Zad2.cpp">Cpp</a></td> 
+ <td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -2261,7 +2261,7 @@ Spis Treści
 <td>3</td>
 <td>Sprawdz czy napisA stanowi poczatek napisuB.</td>
 <td><a>Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/26.Napisy_trudne/Zad3.cpp">Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -2281,7 +2281,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzaly sie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/26.Napisy_trudne/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Napisy_trudne/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2302,7 +2302,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Usuń powtórzenia z napisu. Dany znak może pojawić się jedynie raz w całym napisie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/26.Napisy_trudne/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Napisy_trudne/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
