@@ -508,7 +508,6 @@ Spis Treści
 </tbody>
 </table>
 
-
 <h1>Funkcje - wprowadzenie</h1>
 <table>
 <thead>
@@ -1179,6 +1178,16 @@ Spis Treści
 <td>17</td>
 <td>Zamień listę na napis.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_wprowadzenie/Zad17.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>17</td>
+<td>Odwroc napisy w zdaniu.</td>
+<td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
