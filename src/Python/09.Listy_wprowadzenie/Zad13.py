@@ -1,41 +1,15 @@
 '''
-Przesun elementy listy w danym kierunku (lewo, badz prawo).
-Dla przesuwania w prawo pierwszy element trafia na miejsce drugiego, drugi trzeciego, a ostatni na miejsce pierwszego.
-
-Wejscie:
-
-- Lista n-elementowa.
-- Kierunek rotacji.
-- Liczba przescuniec.
-
-Wyjscie:
-
-- Zmodyfikowana lista wejsciowa.
+Znajdz brakujacy element w liscie.
+Ciag arytmetyczny.
 '''
 
 #Wersja 1
-#Zlozonosc czasowa O(n)
-#Zlozonosc pamieciowa O(n)
-def rotacjaV1(lista, kierunek, liczba):
-    
-    if kierunek == 'prawo':
-    	liczba *= -1
-    
-    return lista[liczba:] + lista[:liczba]
+def znajdzBrakujacyElement(lista):
+    return sum(range(lista[0], lista[-1]+1)) - sum(lista)
 
-#Testy Poprawnosci
-lista = [5, 27, 6, 2, 1, 10, 8]
-kierunek = 'lewo'
-liczba = 2
-wynik = [6, 2, 1, 10, 8, 5, 27]
+#Testy poprawnosci
+lista = [2, 4, 8, 10, 14]
+wynik = 12
 
-assert(rotacjaV1(lista, kierunek, liczba) == wynik)
-
-lista = [9, 9, 42, 47, 5, 6, 19, 7]
-kierunek = 'prawo'
-liczba = 3
-wynik = [6, 19, 7, 9, 9, 42, 47, 5]
-
-assert(rotacjaV1(lista, kierunek, liczba) == wynik)
-
+assert(znajdzBrakujacyElement(lista) == wynik)
 
