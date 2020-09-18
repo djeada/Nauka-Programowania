@@ -1185,11 +1185,11 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>17</td>
+<td>18</td>
 <td>Odwroc napisy w zdaniu.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_wprowadzenie/Zad18">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
