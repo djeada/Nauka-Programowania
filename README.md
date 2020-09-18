@@ -2140,10 +2140,20 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
- <tr>
+   <tr>
 <td>3</td>
+   <td>Czy napis składa się wyłącznie z cyfr?</td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/24.Wyrazenia_regularne/Zad3">Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>4</td>
    <td>Z ciągu znaków wypisz cyfry.</td>
-<td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Wyrazenia_regularne/Zad3.py">Python</a></td>
+<td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Wyrazenia_regularne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2151,9 +2161,9 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
-<td>4</td>
+<td>5</td>
 <td>Podziel zdanie na części względem znaków interpunkcyjnych.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Wyrazenia_regularne/Zad4.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Wyrazenia_regularne/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
