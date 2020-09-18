@@ -63,7 +63,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Wypisz pobrane dane w zmienionej kolejności.</td>
+<td>Zamiana kolejności.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -83,7 +83,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Wypisz wynik podstawowych operacji arytmetycznych dla dwóch liczb pobranych od użytkownika.</td>
+<td>Operacje arytmetyczne.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -93,7 +93,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Oblicz wartość funkcji w zadanym punkcie.</td>
+<td>Wartość funkcji w punkcie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -113,7 +113,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Pola figur i objętości brył.</td>
+<td>Pola figur.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -123,7 +123,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
-<td>Znajdź cenę podłogi dla podanej długości, szerokości i ceny płytki.</td>
+<td>Cena podłogi.</td>
 <td><a>Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
@@ -158,7 +158,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Porównaj pobraną wartość ze stałą.</td>
+<td>Porównanie ze stałą.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -168,7 +168,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Porównaj pobraną wartość z inną pobraną wartością.</td>
+<td>Porównanie ze zmienną.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -178,7 +178,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Sprawdź, czy pobrana liczba jest ujemna, dodatnia, lub czy jest zerem.</td>
+<td>Znak liczby.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -188,7 +188,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Znajdź maksimum/minimum z dwóch liczb.</td>
+<td>Max/min dwóch liczb.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -198,7 +198,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Znajdź maksimum/minimum z trzech liczb.</td>
+<td>Max/min trzech liczb.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -208,7 +208,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Znajdź liczbę środkową z trzech liczb.</td>
+<td>Liczba środkowa.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -218,7 +218,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Pobierz 4 liczby i wypisz je w kolejności rosnącej.</td>
+<td>Cztery liczby w kolejności rosnącej.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -228,7 +228,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
-<td>Przedstaw w formie tabeli dowody praw logicznych.</td>
+<td>Dowody praw logicznych.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -238,7 +238,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>9</td>
-<td>Czy z podanych długości boków można zbudować trójkąt?</td>
+<td>Warunek trójkąta.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -261,7 +261,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Sprawdź, czy liczba jest poprawnym numerem tygodnia/miesiąca.</td>
+<td>Czy liczba jest numerem tygodnia/miesiąca?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -271,7 +271,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Pobierz rok urodzenia oraz teraźniejzą datę i poinformuj czy osoba jest pełnoletnia.</td>
+<td>Czy osoba jest pełnoletnia?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -281,7 +281,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Sprawdź, czy rok jest przestępny.</td>
+<td>Rok przestępny.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -291,7 +291,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Wypisz dzień tygodnia odpowiadający danej liczbie.</td>
+<td>Dzień tygodnia odpowiadający danej liczbie.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -301,7 +301,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Sprawdź poprawność daty, dla podanego dnia, miesiąca i roku.</td>
+<td>Poprawność daty.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -311,7 +311,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Sprawdź czy rok jest przestępny.</td>
+<td>Ile dni ma miesiąc?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -321,7 +321,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Pobierz numer miesiąca oraz rok i podaj liczbę dni miesiąca.</td>
+<td>Ile dni minęło od początku roku?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -331,17 +331,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
-<td>Pobierz datę i wypisz ile dni minęło od początku roku.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>9</td>
-<td>Pobierz datę i wypisz dzień tygodnia.</td>
+<td>Jaki mamy dzień tygodnia?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
