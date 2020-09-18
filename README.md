@@ -354,7 +354,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Proś o podanie liczby, dopóki nie zostanie podana liczba spełniająca warunek.</td>
+<td>Warunek kończący pętle.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -364,7 +364,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Wypisz liczby naturalne mniejsze od podanej liczby.</td>
+<td>Liczby mniejsze od podanej liczby.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -374,7 +374,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Wypisz liczbę pi podaną liczbę razy z dokładnością do i-tego miejsca po przecinku.</td>
+<td>Liczba pi.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -384,7 +384,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Wypisz sumę liczb naturalnych mniejszych od podanej liczby.</td>
+<td>Suma liczb mniejszych od liczby.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -394,7 +394,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Wypisz liczby naturalne z przedziału spełniające dany warunek.</td>
+<td>Liczby z przedziału.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04.Petla_wprowadzenie/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -404,7 +404,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Wypisz sumę wyrazów ciągu danego wzorem.</td>
+<td>Suma wyrazów ciągu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -414,7 +414,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Wypisz podaną liczbę razy liczbę pi podniesioną do i-tej potęgi (zaczynając od 0) z dokładnością do i miejsc po przecinku.</td>
+<td>Liczba pi podenisiona do potęgi.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -424,7 +424,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
-  <td>Na farmie mamy <i>a</i> głów i <i>b</i> nóg, znajdź liczbę kur oraz owieczek.</td>
+  <td>Znajdź liczbę kur oraz owieczek.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04.Petla_wprowadzenie/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -447,7 +447,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Oblicz ilucyfrowa jest dana liczba.</td>
+<td>Ile cyfr ma liczba?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -457,7 +457,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Wypisz cyfry, z których składa się liczba.</td>
+<td>Cyfry, z których składa się liczba.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -467,7 +467,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Znajdź sumę cyfr liczby.</td>
+<td>Suma cyfr liczby.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -477,7 +477,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Wypisz cyfry liczby spełniające warunek.</td>
+<td>Cyfry liczby spełniające warunek.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -487,7 +487,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Sprawdź czy liczba jest palindromem.</td>
+<td>Czy liczba jest palindromem?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -497,7 +497,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Wypisz wszystkie liczby naturalne mniejsze od pobranej liczby, które spełniają warunek.</td>
+<td>Wszystkie liczby spełniające warunek.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -521,7 +521,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Napisz funkcję zwracającą zawsze tą samą wartość.</td>
+<td>Zwróć stałą.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -531,7 +531,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Napisz funkcję wykonującą operacje arytmetyczną.</td>
+<td>Operacja arytmetyczna.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -541,7 +541,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Napisz funkcję sprawdzającą warunek.</td>
+<td>Sprawdź warunek.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -551,7 +551,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Napisz funkcję zamieniającą dwie wartości miejscami.</td>
+<td>Zamień wartości miejscami.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -561,7 +561,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Napisz funkcję realizującą zaokrąglanie w dół ilorazu bez użycia '/' i '%'.</td>
+<td>Zaokrąglanie w dół.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -584,7 +584,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Pobierz i wypisz średnią z n liczb.</td>
+<td>Srednia z n liczb.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -594,7 +594,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Pobierz i podnieś a do b, bez użycia zewnętrznych bibliotek.</td>
+<td>Podnieś a do b.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -604,7 +604,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Zaimplementuj mnożenie i dzielenia przy pomocy dodawania i odejmowania.</td>
+<td>Mnożenie i dzielenia.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -614,7 +614,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Oblicz silnię z podanej liczby.</td>
+<td>Silnia.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07.Petla_algorytmy_matematyczne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -624,7 +624,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Pobierz dwie liczby i wyznacz ich NWW.</td>
+<td>NWW.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -634,7 +634,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Pobierz dwie liczby i wyznacz ich NWD.</td>
+<td>NWD.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -644,7 +644,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Oblicz pierwiastek z liczby, bez użycia zewnętrznych bibliotek.</td>
+<td>Pierwiastek metodą Newtona.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -654,7 +654,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
-<td>Wypisz czy pobrana liczba jest pierwsza, czy złożona.</td>
+<td>Naiwny test pierwszości.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -677,7 +677,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Narysuj kwadrat o zadanym boku.</td>
+<td>Kwadrat.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -687,7 +687,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Narysuj trójkąt prostokątny, równoramienny o zadanym boku.</td>
+<td>Trójkąt.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -697,7 +697,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Narysuj trójkąt równoramienny o zadanym boku.</td>
+<td>Odwrócony trójkąt.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -707,7 +707,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Wypisz n początkowych wierszy i kolumn tabliczki mnożenia.</td>
+<td>Tabliczka mnożenia.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
