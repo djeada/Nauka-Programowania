@@ -1,5 +1,3 @@
-# Nauka-programowania
-
 <div align="center">
 <a href="https://github.com/djeada/Nauka-programowania/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/djeada/Nauka-programowania"></a>
 <a href="https://github.com/djeada/Nauka-programowania/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/djeada/Nauka-programowania"></a>
@@ -7,6 +5,7 @@
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 </div>
 
+# Nauka-programowania
 Chcesz się nauczyć programować i nie wiesz jak zacząć? </br>
 Jeśli tak, to trafiłeś w dobre miejsce. </br>
 Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
