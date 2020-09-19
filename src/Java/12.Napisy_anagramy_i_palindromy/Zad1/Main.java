@@ -11,14 +11,14 @@ Sprawdz czy slowo jest palindromem.
 
 public class Main {
 
-	   public static boolean czyPalindromV1(String str) {
+	   public static boolean czyPalindromV1(String slowo) {
 
 	        int lewo = -1;
-	        int prawo = str.length();
+	        int prawo = slowo.length();
 
 	        while (prawo-- > lewo++) {
 
-	            if (str.charAt(lewo) != str.charAt(prawo))
+	            if (slowo.charAt(lewo) != slowo.charAt(prawo))
 	                return false;
 
 	        }
@@ -27,8 +27,8 @@ public class Main {
 	    }
 
 
-	    public static boolean czyPalindromV2(String str) {
-	        return str.equals(new StringBuilder(str).reverse().toString());
+	    public static boolean czyPalindromV2(String slowo) {
+	        return slowo.equals(new StringBuilder(slowo).reverse().toString());
 	    }
 
     public static void main(String[] args) {
