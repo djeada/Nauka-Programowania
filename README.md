@@ -3,6 +3,11 @@
 <a href="https://github.com/djeada/Nauka-programowania/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/djeada/Nauka-programowania"></a>
 <a href="https://github.com/djeada/Nauka-programowania/blob/master/LICENSE.txt"><img alt="GitHub license" src="https://img.shields.io/github/license/djeada/Nauka-programowania"></a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+<a href=""><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
+![version](https://img.shields.io/badge/version-0.1--beta-brightgreen)
+![beta](https://img.shields.io/badge/-beta-orange)
+
+  
 </div>
 
 # Nauka-programowania
