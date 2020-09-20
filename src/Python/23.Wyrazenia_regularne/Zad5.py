@@ -1,17 +1,16 @@
 '''
-Podziel zdanie na czesci wzgledem znakow interpunkcyjnych.
-Jesli wynikiem podzialu jest pusty napis, pomin.
+Z ciagu znakow wypisz cyfry.
 '''
 
 import re
 
 #Wersja 1
-def podzielZdanieV1(zdanie):
-	return [x for x in re.split(r'[,.!?]', zdanie) if x]
+def tylkoCyfryV1(slowo):
+	return re.sub('[^\d]', '', slowo)
 
 #Testy Poprawnosci
-zdanie = 'hej, pan slimak! tak to ja. chodzcie juz zaspiewam wam.'
-wynik = ['hej',' pan slimak', ' tak to ja', ' chodzcie juz zaspiewam wam']
+slowo = 'numer 32.19 wyzej niz 31.17'
+wynik = '32193117'
 
-assert(podzielZdanieV1(zdanie) == wynik)
+assert(tylkoCyfryV1(slowo) == wynik)
 
