@@ -29,7 +29,6 @@ Spis Treści
    * [Pętla - algorytmy matematyczne](#Pętla---algorytmy-matematyczne)
    * [Pętla - pętle zagnieżdżone](#Pętla---pętle-zagnieżdżone)
    * [Listy - wprowadzenie](#Listy---wprowadzenie)
-   * [Listy - wyszukiwanie w liście](#Listy---wyszukiwanie-w-liście)
    * [Listy - dwie listy](#Listy---dwie-listy)
    * [Napisy - wprowadzenie](#Napisy---wprowadzenie)
    * [Napisy - anagramy i palindromy](#Napisy---anagramy-i-palindromy)
@@ -2315,17 +2314,18 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
-<tr>
+  <tr>
 <td>4</td>
-<td>Najdłuższy wspólny przedrostek.</td>
-<td><a >Python</a></td>
+<td>Usuń powtórzenia z napisu.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Napisy_trudne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/25.Napisy_trudne/Zad4">Java</a></td> 
+ <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
+ <td><a>Rust</a></td>
+  </tr>
+  <tr>
 <td>5</td>
 <td>Znaki stojące obok siebie nie mogą się powtarzać.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Napisy_trudne/Zad5.py">Python</a></td>
@@ -2337,6 +2337,17 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
+<td>Najdłuższy wspólny przedrostek.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/25.Napisy_trudne/Zad6">Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+
+<tr>
+<td>7</td>
 <td>Najdłuższy wspólny potomek.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
@@ -2346,17 +2357,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
-<tr>
-<td>7</td>
-<td>Usuń powtórzenia z napisu.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Napisy_trudne/Zad7.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
-  </tr>
+
 </tbody>
 </table>
 
