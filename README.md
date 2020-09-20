@@ -590,7 +590,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Srednia z n liczb.</td>
+<td>Średnia z n liczb.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -786,10 +786,10 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Wszystkie wystąpieia klucza.</td>
+<td>Pierwsze wystąpieia klucza.</td>
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09.Listy_wprowadzenie/Zad3">Java</a></td> 
 <td><a>Javascript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -799,7 +799,7 @@ Spis Treści
 <td>Minimum oraz maksimum.</td>
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09.Listy_wprowadzenie/Zad4">Java</a></td> 
 <td><a>Javascript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -847,7 +847,7 @@ Spis Treści
 <td>Usuń duplikaty.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad9.py">Python</a></td>
 <td><a>Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09.Listy_wprowadzenie/Zad9">Java</a></td> 
 <td><a>Javascript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -1135,7 +1135,7 @@ Spis Treści
 <td>Usuń spacje ze zdania.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/11.Napisy_wprowadzenie/Zad12">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1219,7 +1219,7 @@ Spis Treści
 <td>Czy słowo jest palindromem?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_i_palindromy/Zad1">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1229,7 +1229,7 @@ Spis Treści
 <td>Wszystkie permutacje słowa.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_i_palindromy/Zad2">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1239,7 +1239,7 @@ Spis Treści
 <td>Czy słowa są swoimi anagramami?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_i_palindromy/Zad3">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1662,7 +1662,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Histogram wystąpień małych i dużych liter.</td>
+<td>Histogram wystąpień małych/dużych liter.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1692,10 +1692,10 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Wypisz słownik posortowany względem kluczy/wartości.</td>
+<td>Sortowanie względem kluczy/wartości.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17.Slowniki/Zad6">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1712,10 +1712,40 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
-<td>Znajdź powtarzające się znaki w zdaniu.</td>
+<td>Powtarzające się znaki.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17.Slowniki/Zad8">Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>9</td>
+<td>Najczęściej występujący znak w zdaniu.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17.Slowniki/Zad9">Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>10</td>
+<td>Usuń ze słownika./td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17.Slowniki/Zad10">Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>11</td>
+<td>Czy slowniki są identyczne?</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17.Slowniki/Zad11">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -2075,7 +2105,7 @@ Spis Treści
 <td>Posortuj napisy w liście względem długości.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/22.Sortowanie_Praktyka/Zad4">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -2147,30 +2177,40 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-   <tr>
+<tr>
 <td>3</td>
-   <td>Czy napis składa się wyłącznie z cyfr?</td>
+<td>Czy napis składa się wyłącznie z cyfr?</td>
 <td><a>Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/23.Wyrazenia_regularne/Zad3">Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/23.Wyrazenia_regularne/Zad3">Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
  <tr>
 <td>4</td>
-   <td>Z ciągu znaków wypisz cyfry.</td>
-<td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad4.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
- <tr>
+<td>Czy słowo należy do zdania?</td>
+<td><a>Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/23.Wyrazenia_regularne/Zad4">Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
+<tr>
 <td>5</td>
+<td>Z ciągu znaków wypisz cyfry.</td>
+<td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad5.py">Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
+ <tr>
+<td>6</td>
 <td>Podziel zdanie na części względem znaków interpunkcyjnych.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -2280,7 +2320,7 @@ Spis Treści
 <td>Znajdz najdluzszy wspolny przedrostek.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/25.Napisy_trudne/Zad4">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
