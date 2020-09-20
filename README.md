@@ -915,7 +915,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <tr>
 <td>16</td>
-<td>Elementy w liście, których suma jest równa liczbie.</td>
+<td>Pary, których suma jest równa liczbie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad16.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
@@ -1630,7 +1630,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Wypisz słownik gdzie kluczami są liczby, a wartościami ich kwadraty.</td>
+<td>Kluczami są liczby, a wartościami ich kwadraty.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17.Slowniki/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1641,7 +1641,7 @@ Spis Treści
 <tr>
 <tr>
 <td>2</td>
-<td>Stwórz słownik, gdzie kluczami są elemnty jednej listy, a wartościami elementy drugiej listy.</td>
+<td>Kluczami są elemnty jednej listy, a wartościami elementy drugiej listy.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
