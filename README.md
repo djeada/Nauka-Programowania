@@ -2209,7 +2209,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
  <tr>
 <td>6</td>
-<td>Podziel zdanie na części względem znaków interpunkcyjnych.</td>
+<td>Podziel względem znaków interpunkcyjnych.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2285,7 +2285,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Podmiana wszystkich wystapien slowa w zdaniu.</td>
+<td>Podmiana wszystkich wystąpień słowa.</td>
 <td><a>Python</a></td>
  <td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2295,7 +2295,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Usun wszystkie wystapienia podnapisu ze zdania.</td>
+<td>Usuń wszystkie wystąpienia podnapisu.</td>
 <td><a>Python</a></td>
  <td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2306,7 +2306,7 @@ Spis Treści
   </tr>
 <tr>
 <td>3</td>
-<td>Sprawdz czy napisA stanowi poczatek napisuB.</td>
+<td>Czy napis A stanowi początek napisu B?</td>
 <td><a>Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2317,7 +2317,7 @@ Spis Treści
   </tr>
 <tr>
 <td>4</td>
-<td>Znajdz najdluzszy wspolny przedrostek.</td>
+<td>Najdłuższy wspólny przedrostek.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/25.Napisy_trudne/Zad4">Java</a></td> 
@@ -2327,7 +2327,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzaly sie.</td>
+<td>Znaki stojące obok siebie nie mogą się powtarzać.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Napisy_trudne/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2337,7 +2337,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Znajdź najdłuższego wspólnego potomka dwóch napisów.</td>
+<td>Najdłuższy wspólny potomek.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2348,7 +2348,7 @@ Spis Treści
   </tr>
 <tr>
 <td>7</td>
-<td>Usuń powtórzenia z napisu. Dany znak może pojawić się jedynie raz w całym napisie.</td>
+<td>Usuń powtórzenia z napisu.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Napisy_trudne/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
