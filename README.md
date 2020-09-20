@@ -1732,7 +1732,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
-<td>Usuń ze słownika./td>
+<td>Usuń ze słownika.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17.Slowniki/Zad10">Java</a></td> 
