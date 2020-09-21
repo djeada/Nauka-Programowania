@@ -1615,6 +1615,46 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
+  <tr>
+<td>8</td>
+<td>Zaokrąglij do następnej potęgi dwójki.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad8.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+  <tr>
+<td>9</td>
+<td>Zamiana sąsiadów.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad9.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+  <tr>
+<td>10</td>
+<td>Wielokść liter.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad10.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+  <tr>
+<td>11</td>
+<td>Czy liczba jest palindromem?</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad11.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
 </tbody>
 </table>
 
@@ -2143,6 +2183,17 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
+<tr>
+<td>7</td>
+<td>Tablica cykliczna.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Sortowanie_Praktyka/Zad8.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td>
+  </tr>
 </tbody>
 </table>
 
@@ -2269,6 +2320,26 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
+<tr>
+<td>5</td>
+  <td><i>M</i> posortowanych list.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad5.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>6</td>
+<td>Woda.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad6.py">Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 </tbody>
 </table>
 
@@ -2345,7 +2416,6 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-
 <tr>
 <td>7</td>
 <td>Najdłuższy wspólny potomek.</td>
