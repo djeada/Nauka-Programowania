@@ -2259,8 +2259,48 @@ Spis Treści
 <td><a>Rust</a></td></tr>
  <tr>
 <td>6</td>
+<td>Wiersze kończące się napisem.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad7.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>7</td>
 <td>Podziel względem znaków interpunkcyjnych.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad8.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>8</td>
+<td>Cyfry będące częscią słów.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad9.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>9</td>
+<td>Usuń część wiersza.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad6.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>10</td>
+   <td>Podmień napisy z listy <i>A</i> na napisy z listy <i>B</i>.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad10.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
