@@ -61,7 +61,7 @@ Spis Treści
 <td>1</td>
 <td>Wypisz na konsolę.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad1.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -71,7 +71,7 @@ Spis Treści
 <td>2</td>
 <td>Zamiana kolejności.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad2.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -81,7 +81,7 @@ Spis Treści
 <td>3</td>
 <td>Narysuj kształt.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad3.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -91,7 +91,7 @@ Spis Treści
 <td>4</td>
 <td>Operacje arytmetyczne.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad4.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -591,7 +591,7 @@ Spis Treści
 <td>2</td>
 <td>Podnieś a do b.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -631,7 +631,7 @@ Spis Treści
 <td>6</td>
 <td>NWD.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -1656,6 +1656,26 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
+ <tr>
+<td>12</td>
+<td>Policz ustawione bity.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad12.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>13</td>
+<td>Znajdź min z dwóch liczb.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad13.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
 </tbody>
 </table>
 
@@ -2375,6 +2395,26 @@ Spis Treści
 <td>6</td>
 <td>Woda.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad6.py">Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
+  <tr>
+<td>8</td>
+<td>Sznurek</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad8.py">Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>Javascript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
+    <tr>
+<td>9</td>
+<td>Najdluzszy naprzemienny podciag.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad9.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>Javascript</a></td>  
