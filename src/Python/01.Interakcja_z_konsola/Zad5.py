@@ -1,5 +1,5 @@
 '''
-Wyznaczy wartosc funkcji y = 3x + 10 w zadanym punkcie.
+Wyznacz wartosc funkcji y = 3x + 10 w zadanym punkcie.
 '''
 print('podaj x')
 x = int(input())
