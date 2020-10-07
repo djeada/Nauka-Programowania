@@ -64,7 +64,7 @@ Spis Treści
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -74,7 +74,7 @@ Spis Treści
  <td><a href="href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -84,7 +84,7 @@ Spis Treści
  <td><a href="href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -94,7 +94,7 @@ Spis Treści
  <td><a href="href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -104,7 +104,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
