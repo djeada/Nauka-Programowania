@@ -297,7 +297,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Poprawność daty.</td>
+<td>Ile dni ma miesiąc?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -307,7 +307,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Ile dni ma miesiąc?</td>
+<td>Poprawność daty.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
