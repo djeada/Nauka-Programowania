@@ -2195,7 +2195,7 @@ Spis Treści
   </tr>
 <tr>
 <td>7</td>
-<td>Tablica składająca się wyłącznie z 3 liczb.</td>
+<td>Tablica składająca się wyłącznie z zer, jedynek i dwójek.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Sortowanie_Praktyka/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
