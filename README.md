@@ -1485,7 +1485,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Potęgowanie.</td>
+  <td>Liczby naturalne mniejsze od <b>N</b>.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1495,7 +1495,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Silnia.</td>
+  <td>Suma liczba naturalnych mniejszych od <b>N</b>.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1526,6 +1526,26 @@ Spis Treści
  <tr>
 <td>5</td>
 <td>Wyszukiwanie liniowe rekurencyjnie.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>6</td>
+<td>Słowa elfickie.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>8</td>
+<td>Gra w kapsle.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1905,6 +1925,16 @@ Spis Treści
 <tr>
 <td>9</td>
 <td>Plik z listą domen.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>10</td>
+<td>Skopiuj wszystkie pliki csv do jednego folderu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
