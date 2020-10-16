@@ -410,7 +410,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Liczba pi podenisiona do potęgi.</td>
+<td>Liczba pi podeniesiona do potęgi.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
