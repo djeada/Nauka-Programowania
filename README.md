@@ -1678,7 +1678,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>10</td>
-<td>Wielokść liter.</td>
+<td>Wielkość liter.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad10.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
