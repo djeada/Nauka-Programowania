@@ -1,24 +1,27 @@
 /*
-Liczby naturalne mniejsze od N.	
+Liczby naturalne mniejsze rowne N.	
 */
 
 #include <iostream>
+#include <cassert>
 
 using namespace std;
 
-void liczbyNaturalneMniejszeOdN(int N) { 
-	
-	if (N < 0)
-		return;
+string mniejszeLiczbyV1(int n) {
+		
+	if (n < 0)
+		return "";
 
-	cout << N << endl;
-	liczbyNaturalneMniejszeOdN(N-1);
+	if (n == 0)
+		return to_string(n);
+
+	return to_string(n) + ", " + mniejszeLiczbyV1(n-1);
 }
 
 int main() {
-	int N = 10;
-	
-	liczbyNaturalneMniejszeOdN(N);
+	int n = 10;
+	string wynik = "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0";
+	cout << mniejszeLiczbyV1(n);
 	
     return 0;
 }
