@@ -1503,9 +1503,9 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
+ <tr>
 <td>3</td>
-<td>Liczba Fibonacciego.</td>
+<td>Potęgowanie</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1515,6 +1515,26 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
+<td>Silnia.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>5</td>
+<td>Liczba Fibonacciego.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>6</td>
 <td>N-ty wyraz ciąg danego wzorem rekurencyjnym.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1524,7 +1544,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
-<td>5</td>
+<td>7</td>
 <td>Wyszukiwanie liniowe rekurencyjnie.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1534,7 +1554,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
-<td>6</td>
+<td>8</td>
 <td>Słowa elfickie.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1544,7 +1564,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
  <tr>
-<td>8</td>
+<td>9</td>
 <td>Gra w kapsle.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
