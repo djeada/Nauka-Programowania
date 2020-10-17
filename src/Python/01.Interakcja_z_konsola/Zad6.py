@@ -26,7 +26,7 @@ Pobierz ilosc sekund i przelicz na godziny.
 
 print("podaj ilosc sekund")
 
-s = input()
+s = int(input())
 h = s / 3600
 
 print(s, "sekund to" , h, "godzin")
@@ -45,9 +45,23 @@ print(euro, "euro to" , zloty, "zlotych")
 '''
 Pobierz miare kata w stopniach i wypisz ilu radianom odpowiada. 
 '''
+print("podaj ilosc katow") 
+
+kat = int(input())
+rad = kat * 0.0174532
+
+print(kat, "kat to" , rad, "radow")
 
 '''
 Pobierz temperature w stopniach Farenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
 '''
+
+print("podaj ilosc Farenheit") 
+
+F = int(input())
+C = (F -32) * 5 / 9
+K = C - 273
+
+print(F, "Farenheitow to" , C, "C" , "i" ,K ,"K")
 
 
