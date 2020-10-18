@@ -137,7 +137,6 @@ Spis Treści
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
-</tr>
 <tr>
 <td>9</td>
 <td>Kalkulator kredytowy.</td>
