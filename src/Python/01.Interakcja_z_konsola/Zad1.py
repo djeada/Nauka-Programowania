@@ -1,11 +1,13 @@
-'''
-Wypisz na konsole swoje inicjaly.
-'''
+if __name__ == '__main__':
 
-print('A.D.')
+	'''
+	Wypisz na konsole swoje inicjaly.
+	'''
 
-'''
-Wypisz na konsole "witaj swiecie"
-'''
+	print('A.D.')
 
-print('Witaj swiecie')
+	'''
+	Wypisz na konsole "witaj swiecie"
+	'''
+
+	print('Witaj swiecie')
