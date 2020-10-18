@@ -823,7 +823,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Liczbę mniejsza od największej i większa od wszystkich pozostałych.</td>
+<td>Liczba mniejsza od największej i większa od wszystkich pozostałych.</td>
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
