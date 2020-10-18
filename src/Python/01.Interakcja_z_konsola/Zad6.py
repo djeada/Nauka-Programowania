@@ -40,7 +40,7 @@ if __name__ == '__main__':
 	print("podaj liczbe w euro")
 
 	euro = input()
-	zloty = euro * 4,40
+	zloty = euro * 4.40
 
 	print(euro, "euro to " , zloty, "zlotych")
 
