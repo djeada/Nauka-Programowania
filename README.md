@@ -1440,7 +1440,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-  <td>Napisz funkcję, która zwróci wartość wielomianu w punkcie <i>x</i>, dla podanego punktu <i>x</i> oraz listy współczynników.</td>
+  <td>Wartość wielomianu w punkcie.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1450,7 +1450,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-  <td>Napisz funkcję, która zwróci iloczyn wielomianu przez skalar <i>b</i>, dla podanego <i>b</i> oraz listy współczynników.</td>
+  <td>Iloczyn wielomianu przez skalar.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1460,7 +1460,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Napisz funkcję, która zwróci sumę wielomianów dla dwóch list współczynników.</td>
+<td>Suma wielomianów.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1470,7 +1470,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Napisz funkcję, która zwróci iloczyn wielomianów dla dwóch list współczynników.</td>
+<td>Mnożenie wielomianów.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1480,7 +1480,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>5</td>
-<td>Napisz funkcję, która zwróci n-tą pochodną z wielomianu dla podanej listy współczynników.</td>
+<td>N-ta pochodna wielomianu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1490,7 +1490,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>6</td>
-<td>Napisz funkcję, która dla zadanego punktu <i>x_0</i> znajdzie miejsce zerowe wielomianu.</td>
+<td>Miejsce zerowe wielomianu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
