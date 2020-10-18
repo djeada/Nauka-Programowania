@@ -1,11 +1,13 @@
-'''
-Wypisz na konsole najpierw druga potem pierwsza pobrana dana.
-'''
+if __name__ == '__main__':
 
-x = input()
-y = input() 
-print(y)
-print(x)
+	'''
+	Wypisz na konsole najpierw druga potem pierwsza pobrana dana.
+	'''
+
+	x = input()
+	y = input() 
+	print(y)
+	print(x)
 
 
 

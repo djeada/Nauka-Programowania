@@ -1,16 +1,23 @@
-'''
-Otrzymujesz cene oraz wymiary pojedynczej plytki. Oblicz ile bedzie wynosila cena
-za podloge o podanych wymiarach. Podloga jest prostokatem, a plytka kwadratem
-'''
+if __name__ == '__main__':
 
-print("podaj: cene plytki, dlugosc boku plytki i wymiary podlogi")
+	'''
+	Otrzymujesz cene oraz wymiary pojedynczej plytki. Oblicz ile bedzie wynosila cena
+	za podloge o podanych wymiarach. Podloga jest prostokatem, a plytka kwadratem
+	'''
 
-cena = int(input())
-a = int(input())
-b = int(input())
-c = int(input()) 
+	print("podaj: cene plytki, dlugosc boku plytki i wymiary podlogi")
 
-_b = b + a - b % a 
-_c = c + a - c % a
+	cena = int(input())
+	bokPlytki = int(input())
+	szerokoscPodlogi = int(input())
+	dlugoscPodlogi = int(input()) 
 
-print( "jesli cena to" , cena , "a bok plytki to" , a , "a wymiary pokoju to" , b , c , "to calkowita cena wynosi" , cena * (_b * _c) / (a *a))
+	szerokoscKonieczna = szerokoscPodlogi + bokPlytki - szerokoscPodlogi % bokPlytki
+	dlugoscKonieczna = dlugoscPodlogi + bokPlytki - dlugoscPodlogi % bokPlytki
+	
+	polePlytki = bokPlytki**2
+	polePodlogi = szerokoscKonieczna*dlugoscKonieczna
+	
+	calkowityKoszt = cena * polePodlogi // polePlytki
+
+	print( "Dla plytki o dlugosci boku " , bokPlytki , "i ceny ", cena , " calkowity koszt wylozenia podlogi o wymiarach " , szerokoscPodlogi , "x", dlugoscPodlogi , " wynosi " , calkowityKoszt)

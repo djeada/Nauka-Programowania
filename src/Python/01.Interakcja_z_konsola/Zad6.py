@@ -1,67 +1,70 @@
-'''
-Pobierz wielkosc w kilogramach i wypisz ilu gramom odpowiada.
-'''
+if __name__ == '__main__':
 
-print("podaj kg")
+	'''
+	Pobierz wielkosc w kilogramach i wypisz ilu gramom odpowiada.
+	'''
 
-kilogramy = int(input())
-gramy = kilogramy * 1000
+	print("podaj kg")
 
-print(kilogramy, "kg to " , gramy, "g") 
+	kilogramy = int(input())
+	gramy = kilogramy * 1000
 
-'''
-Pobierz wielkosc w calach i wypisz ilu centymetrom odpowiada.
-'''
+	print(kilogramy, "kg to " , gramy, "g") 
 
-print("podaj cale")
+	'''
+	Pobierz wielkosc w calach i wypisz ilu centymetrom odpowiada.
+	'''
 
-cal = int(input())
-cm = cal / 2.54
+	print("podaj cale")
 
-print(cal, "cali to" , cm, "cm") 
- 
-'''
-Pobierz ilosc sekund i przelicz na godziny.
-'''
+	cal = int(input())
+	cm = cal / 2.54
 
-print("podaj ilosc sekund")
+	print(cal, "cali to" , cm, "cm") 
+	 
+	'''
+	Pobierz ilosc sekund i przelicz na godziny.
+	'''
 
-s = int(input())
-h = s / 3600
+	print("podaj ilosc sekund")
 
-print(s, "sekund to" , h, "godzin")
+	s = int(input())
+	h = s / 3600
 
-'''
-Pobierz liczbe w euro i wypisz ilu zlotowkom odpowiada. 
-'''
+	print(s, "sekund to " , h, "godzin")
 
-print("podaj ilosc euro")
+	'''
+	Pobierz liczbe w euro i wypisz ilu zlotowkom odpowiada. 
+	'''
 
-euro = input()
-zloty = euro * 4,40
+	print("podaj liczbe w euro")
 
-print(euro, "euro to" , zloty, "zlotych")
+	euro = input()
+	zloty = euro * 4,40
 
-'''
-Pobierz miare kata w stopniach i wypisz ilu radianom odpowiada. 
-'''
-print("podaj ilosc katow") 
+	print(euro, "euro to " , zloty, "zlotych")
 
-kat = int(input())
-rad = kat * 0.0174532
+	'''
+	Pobierz miare kata w stopniach i wypisz ilu radianom odpowiada. 
+	'''
+	
+	print("podaj miare kata w stopniach") 
 
-print(kat, "kat to" , rad, "radow")
+	kat = int(input())
+	rad = kat * 0.0174532
 
-'''
-Pobierz temperature w stopniach Farenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
-'''
+	print(kat, " stopni to " , rad, "radianow")
 
-print("podaj ilosc Farenheit") 
+	'''
+	Pobierz temperature w stopniach Farenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
+	'''
 
-F = int(input())
-C = (F -32) * 5 / 9
-K = C - 273
+	print("podaj temperature w Farenheitach") 
 
-print(F, "Farenheitow to" , C, "C" , "i" ,K ,"K")
+	F = int(input())
+	C = (F -32) * 5 / 9
+	K = C - 273
+
+	print(F, "Farenheitow to " , C, "C" , " i " ,K ,"K")
 
 
