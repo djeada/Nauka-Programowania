@@ -419,7 +419,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
-  <td>Znajdź liczbę kur oraz owieczek.</td>
+  <td>Kury i owieczki.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04.Petla_wprowadzenie/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -892,7 +892,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <tr>
 <td>11</td>
-<td>Mijające się samochody.</td>
+<td>Samochody.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad11.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
