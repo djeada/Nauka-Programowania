@@ -543,9 +543,9 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
+  <tr>
 <td>4</td>
-<td>Zamień wartości miejscami.</td>
+<td>Maks i min.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -555,8 +555,38 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
+<td>Zamień wartości miejscami.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>6</td>
+<td>Cyfry liczby.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad6.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>7</td>
+<td>Hasło.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad7.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>8</td>
 <td>Zaokrąglanie w dół.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad5.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
