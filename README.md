@@ -130,7 +130,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Cena podłogi.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad8.py>Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad8.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>Javascript</a></td>  
