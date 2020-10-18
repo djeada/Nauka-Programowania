@@ -1247,7 +1247,7 @@ Spis Treści
 <td>Czy słowo jest palindromem?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_i_palindromy/Zad1">Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_palindromy/Zad1">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1257,7 +1257,7 @@ Spis Treści
 <td>Wszystkie permutacje słowa.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_i_palindromy/Zad2">Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_palindromy/Zad2">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1267,7 +1267,7 @@ Spis Treści
 <td>Czy słowa są swoimi anagramami?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a  href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_i_palindromy/Zad3">Java</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_palindromy/Zad3">Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1295,7 +1295,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Czy istnieje permutacja danego słowa będąca palindromem?</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_i_palindromy/Zad6.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_palindromy/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1305,7 +1305,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy?</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_i_palindromy/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_palindromy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1315,7 +1315,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Wyjątkowe palindromy.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_i_palindromy/Zad8.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_palindromy/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1358,7 +1358,7 @@ Spis Treści
 <tr>
 <td>3</td>
 <td>Tablica 2D z par odpowiadajacych sobie elementow otrzymanych list.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy2D/Zad3.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1398,7 +1398,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Pokrywające się przedziały w liście przedziałów.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy2D/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1408,7 +1408,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Wypisz spiralnie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy2D/Zad8.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -1418,7 +1418,7 @@ Spis Treści
 <tr>
 <td>9</td>
 <td>Klepsydra o największej sumie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy2D/Zad9.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
