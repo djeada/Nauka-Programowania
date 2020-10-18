@@ -618,7 +618,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Podnieś a do b.</td>
+  <td>Podnieś <b>a</b> do <b>b</b>.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2304,7 +2304,7 @@ Spis Treści
  <td><a>Rust</a></td>
   </tr>
 <tr>
-<td>7</td>
+<td>8</td>
 <td>Tablica cykliczna.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Sortowanie_Praktyka/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
@@ -2369,7 +2369,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Z ciągu znaków wypisz cyfry.</td>
+<td>Odfiltruj cyfry z tekstu.</td>
 <td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad5.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
@@ -2399,7 +2399,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>8</td>
-<td>Cyfry będące częscią słów.</td>
+<td>Cyfry będące częścią słów.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2419,7 +2419,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>10</td>
-   <td>Podmień napisy z listy <i>A</i> na napisy z listy <i>B</i>.</td>
+   <td>Podmień napisy z listy <b>A</b> na napisy z listy <b>B</b>.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad10.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2442,7 +2442,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Najdluzszy nieprzerwany ciag jedynek.</td>
+<td>Najdłuższy nieprzerwany ciąg jedynek.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2452,7 +2452,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>2</td>
-<td>Trojka o minimalnym iloczynie.</td>
+<td>Trójka o minimalnym iloczynie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2462,7 +2462,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>3</td>
-<td>Wspolny podciag o najwiekszej sumie.</td>
+<td>Wspólny podciąg o największej sumie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2472,7 +2472,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Zior potegowy.</td>
+<td>Zbiór potęgowy.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2482,7 +2482,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-  <td><i>M</i> posortowanych list.</td>
+  <td><b>M</b> posortowanych list.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2556,7 +2556,7 @@ Spis Treści
   </tr>
 <tr>
 <td>3</td>
-<td>Czy napis A stanowi początek napisu B?</td>
+  <td>Czy napis <b>A</b> stanowi początek napisu <b>B</b>?</td>
 <td><a>Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
