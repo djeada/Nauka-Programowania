@@ -130,7 +130,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Cena podłogi.</td>
-<td><a>Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad8.py>Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>Javascript</a></td>  
@@ -175,7 +175,7 @@ Spis Treści
 <tr>
 <td>2</td>
 <td>Porównanie ze zmienną.</td>
-<td><a>Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -185,7 +185,7 @@ Spis Treści
 <tr>
 <td>3</td>
 <td>Znak liczby.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -195,7 +195,7 @@ Spis Treści
 <tr>
 <td>4</td>
 <td>Maks/min dwóch liczb.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
@@ -712,8 +712,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Litera 
-  .</td>
+<td>Litera X</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -723,7 +722,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Litera Z.</td>
+<td>Litera Z</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Petle_zagniezdzone/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
