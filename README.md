@@ -1585,7 +1585,7 @@ Spis Treści
 <td>8</td>
 <td>Słowa elfickie.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
@@ -1595,7 +1595,7 @@ Spis Treści
 <td>9</td>
 <td>Gra w kapsle.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad9.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
  <td><a>Bash</a></td> 
