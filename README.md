@@ -1046,6 +1046,17 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
+<tr>
+<td>9</td>
+<td>Znajdz mediane dwoch posortowanych list.</td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+
 </tbody>
 </table>
 
