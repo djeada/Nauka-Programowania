@@ -995,9 +995,9 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
+ <tr>
 <td>2</td>
-<td>Lista składającą się z sum odpowiadających sobie elementów podanych list.</td>
+<td>Połączenie list.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1007,7 +1007,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Mnożenie sklarne oraz wektorowe dwóch wektorów.</td>
+<td>Suma list.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1017,6 +1017,16 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
+<td>Mnożenie sklarne oraz wektorowe dwóch wektorów.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>Javascript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>5</td>
 <td>Średnia ważona wartości.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1026,7 +1036,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>5</td>
+<td>6</td>
 <td>Część wspólna dwóch list.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1036,7 +1046,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>6</td>
+<td>7</td>
 <td>Różnica między dwoma listami.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1046,7 +1056,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>7</td>
+<td>8</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1057,7 +1067,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   
 <tr>
-<td>8</td>
+<td>9</td>
 <td>Usun z pierwszej listy czesc wspolna obu list.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1067,7 +1077,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>9</td>
+<td>10</td>
 <td>Znajdz mediane dwoch posortowanych list.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
