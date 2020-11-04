@@ -218,7 +218,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -228,22 +228,21 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>8</td>
 <td>Warunek trójkąta.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad9.py">Python</a></td>
+<td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
-
 <h1>Daty</h1>
 <table>
 <thead>
@@ -261,7 +260,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -271,7 +270,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -281,7 +280,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -291,7 +290,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -301,7 +300,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -311,7 +310,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -331,7 +330,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
@@ -354,7 +353,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -364,7 +363,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -374,7 +373,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -384,7 +383,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -394,7 +393,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -404,7 +403,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -414,7 +413,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -424,7 +423,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
@@ -447,7 +446,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -457,7 +456,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -467,7 +466,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -477,7 +476,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -487,7 +486,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
@@ -497,7 +496,7 @@ Spis Treści
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>Javascript</a></td>  
- <td><a>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 </tbody>
