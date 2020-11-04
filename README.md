@@ -2156,7 +2156,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>7</td>
+<td>8</td>
 <td>Posortuj listę obiektów.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
