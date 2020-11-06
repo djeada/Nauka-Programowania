@@ -1,6 +1,6 @@
 '''
 Policz mijajace sie samochody.
-Otrzymujesz liste skladajca sie z ciagu liter A i B. Litery A reprezentuja samochod jadacy na wschod, a litery B jadacy na zachod. 
+Otrzymujesz liste skladajaca sie z ciagu liter A i B. Litery A reprezentuja samochod jadacy na wschod, a litery B jadacy na zachod. 
 '''
 
 #Wersja 1
