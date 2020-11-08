@@ -986,7 +986,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Wypisz na przemian elementy pierwszej i drugiej listy.</td>
+<td>Wypisz na przemian.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
