@@ -1016,7 +1016,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Mnożenie sklarne oraz wektorowe dwóch wektorów.</td>
+<td>Mnożenie sklarne oraz wektorowe.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
