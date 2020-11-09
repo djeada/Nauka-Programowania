@@ -1067,7 +1067,7 @@ Spis Treści
   
 <tr>
 <td>9</td>
-<td>Usun z pierwszej listy czesc wspolna obu list.</td>
+<td>Usuń z pierwszej listy część wspólną obu list.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1077,7 +1077,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
-<td>Znajdz mediane dwoch posortowanych list.</td>
+<td>Znajdź medianę dwóch posortowanych list.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1111,7 +1111,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-<td>Ile razy występuje dany znak w napisie?</td>
+<td>Policz wystąpienia znaku.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1161,7 +1161,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Zamień znaki na odpowiadające im numery w tabeli ASCII</td>
+<td>Zamień znaki na numery ASCII.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1191,7 +1191,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
-<td>Wypisz najdłuższe/najkrótsze słowo w zdaniu.</td>
+<td>Znajdź najdłuższe/najkrótsze słowo w zdaniu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1272,7 +1272,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>18</td>
-<td>Odwroc napisy w zdaniu.</td>
+<td>Odwróć napisy w zdaniu.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/11.Napisy_wprowadzenie/Zad18">Java</a></td> 
