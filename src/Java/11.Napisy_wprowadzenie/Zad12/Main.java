@@ -17,7 +17,7 @@ public class Main {
     	
     	assert usunSpacjeV1(zdanie).equals(wynik);
     	
-    	zdanie = "";
+    	zdanie = "d";
     	wynik = "d";
     	
     	assert usunSpacjeV1(zdanie).equals(wynik);
