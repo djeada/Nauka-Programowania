@@ -63,7 +63,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad1.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -73,7 +73,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad2.py">Python</a></td>
  <td><a href="href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -83,7 +83,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad3.py">Python</a></td>
  <td><a href="href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -93,7 +93,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad4.py">Python</a></td>
  <td><a href="href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -103,7 +103,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -113,7 +113,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -123,7 +123,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -133,7 +133,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad8.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad8.sh">Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -143,7 +143,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -167,7 +167,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -177,7 +177,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -187,7 +187,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -197,7 +197,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -207,7 +207,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -217,7 +217,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -227,7 +227,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -237,7 +237,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02.Instrukcje_sterujace/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -259,7 +259,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -269,7 +269,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -279,7 +279,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -289,7 +289,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -299,7 +299,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -309,7 +309,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -319,7 +319,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -329,7 +329,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -352,7 +352,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -362,7 +362,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -372,7 +372,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -382,7 +382,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -392,7 +392,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04.Petla_wprowadzenie/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -402,7 +402,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -412,7 +412,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -422,7 +422,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04.Petla_wprowadzenie/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -445,7 +445,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -455,7 +455,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -465,7 +465,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -475,7 +475,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -485,7 +485,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -495,7 +495,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -518,7 +518,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -528,7 +528,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -538,7 +538,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -548,7 +548,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -558,7 +558,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -568,7 +568,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -578,7 +578,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -588,7 +588,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -611,7 +611,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -621,7 +621,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -631,7 +631,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -641,7 +641,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07.Petla_algorytmy_matematyczne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -651,7 +651,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -661,7 +661,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -671,7 +671,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -681,7 +681,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -704,7 +704,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -714,7 +714,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -724,7 +724,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -734,7 +734,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -744,7 +744,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -754,7 +754,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Petle_zagniezdzone/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -764,7 +764,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -774,7 +774,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -797,7 +797,7 @@ Spis Treści
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -807,7 +807,7 @@ Spis Treści
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -817,7 +817,7 @@ Spis Treści
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09.Listy_wprowadzenie/Zad3">Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -827,7 +827,7 @@ Spis Treści
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09.Listy_wprowadzenie/Zad4">Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -837,7 +837,7 @@ Spis Treści
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -846,7 +846,7 @@ Spis Treści
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -856,7 +856,7 @@ Spis Treści
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -866,7 +866,7 @@ Spis Treści
 <td><a >Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09.Listy_wprowadzenie/Zad8.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -875,7 +875,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad9.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09.Listy_wprowadzenie/Zad9">Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -885,7 +885,7 @@ Spis Treści
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -895,7 +895,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad11.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
@@ -906,7 +906,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad12.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
@@ -917,7 +917,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad13.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -927,7 +927,7 @@ Spis Treści
 <td><a >Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -937,7 +937,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad15.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -947,7 +947,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09.Listy_wprowadzenie/Zad16.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -957,7 +957,7 @@ Spis Treści
 <td><a>Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -967,7 +967,7 @@ Spis Treści
 <td><a>Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -990,7 +990,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1000,7 +1000,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1010,7 +1010,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1020,7 +1020,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1030,7 +1030,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1040,7 +1040,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1050,7 +1050,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1060,7 +1060,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10.Listy_dwie_listy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1071,7 +1071,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1081,7 +1081,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1105,7 +1105,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1115,7 +1115,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1125,7 +1125,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1135,7 +1135,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1145,7 +1145,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1155,7 +1155,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1165,7 +1165,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1175,7 +1175,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1185,7 +1185,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1195,7 +1195,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1205,7 +1205,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1215,7 +1215,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/11.Napisy_wprowadzenie/Zad12">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1225,7 +1225,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1235,7 +1235,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad14.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1245,7 +1245,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1255,7 +1255,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad16.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -1266,7 +1266,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11.Napisy_wprowadzenie/Zad17.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1276,7 +1276,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/11.Napisy_wprowadzenie/Zad18">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1299,7 +1299,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_palindromy/Zad1">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1309,7 +1309,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_palindromy/Zad2">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1319,7 +1319,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a  href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_palindromy/Zad3">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1329,7 +1329,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1339,7 +1339,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1349,7 +1349,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_palindromy/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1359,7 +1359,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_palindromy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1369,7 +1369,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_palindromy/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1392,7 +1392,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1402,7 +1402,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1412,7 +1412,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1422,7 +1422,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1432,7 +1432,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1442,7 +1442,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1452,7 +1452,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1462,7 +1462,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1472,7 +1472,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1495,7 +1495,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1505,7 +1505,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1515,7 +1515,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1525,7 +1525,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1535,7 +1535,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1545,7 +1545,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1568,7 +1568,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1578,7 +1578,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1588,7 +1588,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1598,7 +1598,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1608,7 +1608,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1618,7 +1618,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1628,7 +1628,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1638,7 +1638,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1648,7 +1648,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad9.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1671,7 +1671,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1681,7 +1681,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1691,7 +1691,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1701,7 +1701,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1711,7 +1711,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1721,7 +1721,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16.System_binarny/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1731,7 +1731,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1741,7 +1741,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1751,7 +1751,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1761,7 +1761,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad10.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1771,7 +1771,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad11.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1781,7 +1781,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad12.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1791,7 +1791,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16.System_binarny/Zad13.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1801,7 +1801,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1811,7 +1811,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1834,7 +1834,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17.Slowniki/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1845,7 +1845,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -1855,7 +1855,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1865,7 +1865,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1875,7 +1875,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1885,7 +1885,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17.Slowniki/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1895,7 +1895,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17.Slowniki/Zad6">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1905,7 +1905,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1915,7 +1915,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17.Slowniki/Zad8">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1925,7 +1925,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17.Slowniki/Zad9">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1935,7 +1935,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17.Slowniki/Zad10">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1945,7 +1945,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17.Slowniki/Zad11">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1968,7 +1968,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18.Operacje_na_plikach/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1978,7 +1978,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1988,7 +1988,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -1998,7 +1998,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2008,7 +2008,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18.Operacje_na_plikach/Zad5.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18.Operacje_na_plikach/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2018,7 +2018,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18.Operacje_na_plikach/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2027,7 +2027,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2037,7 +2037,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2047,7 +2047,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2057,7 +2057,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2067,7 +2067,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2090,7 +2090,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2100,7 +2100,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2110,7 +2110,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.Klasy/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2120,7 +2120,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2130,7 +2130,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2140,7 +2140,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2151,7 +2151,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19.Klasy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2161,7 +2161,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2184,7 +2184,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Dziedziczenie/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2195,7 +2195,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2206,7 +2206,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20.Dziedziczenie/Zad3.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20.Dziedziczenie/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2217,7 +2217,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20.Dziedziczenie/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2228,7 +2228,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20.Dziedziczenie/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2253,7 +2253,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2263,7 +2263,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2273,7 +2273,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2283,7 +2283,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2293,7 +2293,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2316,7 +2316,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2326,7 +2326,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2336,7 +2336,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2346,7 +2346,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/22.Sortowanie_Praktyka/Zad4">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2357,7 +2357,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Sortowanie_Praktyka/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2368,7 +2368,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Sortowanie_Praktyka/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2379,7 +2379,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Sortowanie_Praktyka/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2390,7 +2390,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22.Sortowanie_Praktyka/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2414,7 +2414,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2424,7 +2424,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2434,7 +2434,7 @@ Spis Treści
 <td><a>Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/23.Wyrazenia_regularne/Zad3">Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -2444,7 +2444,7 @@ Spis Treści
 <td><a>Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/23.Wyrazenia_regularne/Zad4">Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -2454,7 +2454,7 @@ Spis Treści
 <td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad5.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -2464,7 +2464,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2474,7 +2474,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2484,7 +2484,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2494,7 +2494,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2504,7 +2504,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23.Wyrazenia_regularne/Zad10.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2527,7 +2527,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2537,7 +2537,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad2.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2547,7 +2547,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2557,7 +2557,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2567,7 +2567,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2577,7 +2577,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad6.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -2587,7 +2587,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad8.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -2597,7 +2597,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad9.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
-<td><a>Javascript</a></td>  
+<td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
@@ -2620,7 +2620,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2630,7 +2630,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a href = "https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2641,7 +2641,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2652,7 +2652,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Napisy_trudne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
@@ -2663,7 +2663,7 @@ Spis Treści
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25.Napisy_trudne/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2673,7 +2673,7 @@ Spis Treści
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/25.Napisy_trudne/Zad6">Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
@@ -2683,7 +2683,7 @@ Spis Treści
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
- <td><a>Javascript</a></td>  
+ <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
