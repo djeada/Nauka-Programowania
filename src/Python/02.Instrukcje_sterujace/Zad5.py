@@ -7,13 +7,23 @@ a = int(input())
 b = int(input())
 c = int(input())
 
-if a>b>c:
-	print(a,b,c)
-	print("1 liczba jest najwieksza, 2 mniejsza i 3 najmniejsza")
+if a>=b and a>=c:
+	if b>=c :
+		print(c,b,a)
+	else:
+		print(b,c,a)
+
+elif  c>=b and c>=a:
+	if a>=b :
+		print(b,a,c)
+	else:
+		print(a,b,c)
 
 else:
-	print(c,b,a)
-	print("liczby sa odwrotnie rosnace")
+	if a>=c :
+		print(c,a,b)
+	else:
+		print(a,c,b)
 	
 	 
 
