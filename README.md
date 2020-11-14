@@ -1345,7 +1345,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Czy istnieje permutacja danego słowa będąca palindromem?</td>
+<td>Permutacja danego słowa będąca palindromem.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_palindromy/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
