@@ -1,9 +1,9 @@
-if __name__ == '__main__':
+'''
+Otrzymujesz cene oraz wymiary pojedynczej plytki. Oblicz ile bedzie wynosila cena
+za podloge o podanych wymiarach. Podloga jest prostokatem, a plytka kwadratem
+'''
 
-	'''
-	Otrzymujesz cene oraz wymiary pojedynczej plytki. Oblicz ile bedzie wynosila cena
-	za podloge o podanych wymiarach. Podloga jest prostokatem, a plytka kwadratem
-	'''
+if __name__ == '__main__':
 
 	print("podaj: cene plytki, dlugosc boku plytki i wymiary podlogi")
 

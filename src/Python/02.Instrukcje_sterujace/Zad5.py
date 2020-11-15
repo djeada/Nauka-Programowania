@@ -1,29 +1,32 @@
 '''
 Dla pobranych trzech liczb, wypisz je w kolejnosci rosnacej.
 '''
-print("podaj trzy liczby") 
 
-a = int(input())
-b = int(input())
-c = int(input())
+if __name__ == '__main__':
 
-if a>=b and a>=c:
-	if b>=c :
-		print(c,b,a)
+	print("podaj trzy liczby") 
+
+	a = int(input())
+	b = int(input())
+	c = int(input())
+
+	if a>=b and a>=c:
+		if b>=c :
+			print(c,b,a)
+		else:
+			print(b,c,a)
+
+	elif  c>=b and c>=a:
+		if a>=b :
+			print(b,a,c)
+		else:
+			print(a,b,c)
+
 	else:
-		print(b,c,a)
-
-elif  c>=b and c>=a:
-	if a>=b :
-		print(b,a,c)
-	else:
-		print(a,b,c)
-
-else:
-	if a>=c :
-		print(c,a,b)
-	else:
-		print(a,c,b)
+		if a>=c :
+			print(c,a,b)
+		else:
+			print(a,c,b)
 	
 	 
 

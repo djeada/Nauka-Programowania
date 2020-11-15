@@ -1,12 +1,14 @@
 '''
 Dla dwoch pobranych liczb, sprawdz czy pobrane liczby sa identyczne.
 '''
-print("podaj dwie liczby")
 
-a = int(input())
-b = int(input())
+if __name__ == '__main__':
+	print("podaj dwie liczby")
 
-if a == b :
-	print("liczby sa jednakowe")
-else: 
-	print("liczby sa rozne")
+	a = int(input())
+	b = int(input())
+
+	if a == b :
+		print("liczby sa jednakowe")
+	else: 
+		print("liczby sa rozne")
