@@ -1,22 +1,23 @@
-
 '''
 Otrzymujesz roczna stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc
 udzielonego kredytu. Oblicz miesieczna rate oraz calkowity koszt kredytu.
 ''' 
 
-print("podaj stope procentowa, liczbe lat oraz wysokosc udzielonego kredytu")
+if __name__ == '__main__':
 
-stopa = float(input())
-lata = int(input())
-kredyt = int(input())
+	print("podaj stope procentowa, liczbe lat na splacenie kredytu  oraz wysokosc udzielonego kredytu")
 
-r = stopa / 12 * 0.01
-n = lata * 12
+	stopa = float(input())
+	lata = int(input())
+	kredyt = int(input())
 
-rata = kredyt * r * (1 + r)**n / ((1 + r) ** n - 1)
+	r = stopa / 12 * 0.01
+	n = lata * 12
 
-c_koszt = rata * n 
+	rata = kredyt * r * (1 + r)**n / ((1 + r) ** n - 1)
 
-print("rata mieieczna to {:0.2f}".format(rata)) 
+	c_koszt = rata * n 
 
-print("calkowity koszt to {:0.2f}".format(c_koszt))
+	print("rata mieieczna to {:0.2f}".format(rata)) 
+
+	print("calkowity koszt to {:0.2f}".format(c_koszt))
