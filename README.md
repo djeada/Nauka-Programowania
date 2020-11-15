@@ -204,7 +204,7 @@ Spis Treści
 <tr>
 <td>5</td>
 <td>Sortowanie trzech liczb.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
@@ -214,7 +214,7 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Sortowanie czterech liczb.</td>
-<td><a >Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
@@ -224,7 +224,7 @@ Spis Treści
 <tr>
 <td>7</td>
 <td>Dowody praw logicznych.</td>
-<td><a>Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
@@ -234,7 +234,7 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Warunek trójkąta.</td>
-<td><a>Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02.Instrukcje_sterujace/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
@@ -256,7 +256,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Czy liczba jest numerem tygodnia/miesiąca?</td>
-<td><a >Python</a></td>
+<td><a herf="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/03.Daty/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
@@ -380,7 +380,7 @@ Spis Treści
 <td>4</td>
 <td>Suma liczb mniejszych od liczby.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04.Petla_wprowadzenie/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad4.sh">Bash</a></td> 
@@ -390,7 +390,7 @@ Spis Treści
 <td>5</td>
 <td>Liczby z przedziału.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04.Petla_wprowadzenie/Zad5.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04.Petla_wprowadzenie/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad5.sh">Bash</a></td> 
@@ -400,7 +400,7 @@ Spis Treści
 <td>6</td>
 <td>Suma wyrazów ciągu.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04.Petla_wprowadzenie/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad6.sh">Bash</a></td> 
@@ -410,7 +410,7 @@ Spis Treści
 <td>7</td>
   <td>Liczba <i>Pi</i> podniesiona do potęgi.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04.Petla_wprowadzenie/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad7.sh">Bash</a></td> 
@@ -420,7 +420,7 @@ Spis Treści
 <td>8</td>
   <td>Kury i owieczki.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04.Petla_wprowadzenie/Zad8.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04.Petla_wprowadzenie/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad8.sh">Bash</a></td> 
