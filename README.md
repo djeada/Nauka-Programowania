@@ -243,6 +243,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 </tbody>
 </table>
+
 <h1>Daty</h1>
 <table>
 <thead>
@@ -256,7 +257,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Czy liczba jest numerem tygodnia/miesiąca?</td>
-<td><a herf="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad1.sh">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
