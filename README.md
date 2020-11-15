@@ -257,7 +257,7 @@ Spis Treści
 <tr>
 <td>1</td>
 <td>Czy liczba jest numerem tygodnia/miesiąca?</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03.Daty/Zad1.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/03.Daty/Zad1.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
