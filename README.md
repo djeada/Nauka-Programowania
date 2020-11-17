@@ -32,7 +32,7 @@ Spis Treści
    * [Listy - dwie listy](#Listy---dwie-listy)
    * [Napisy - wprowadzenie](#Napisy---wprowadzenie)
    * [Napisy - anagramy i palindromy](#Napisy---anagramy-i-palindromy)
-   * [Listy 2D](#Listy-2D)
+   * [Listy 2d](#Listy-2d)
    * [Funkcje - wielomiany](#Funkcje---wielomiany)
    * [Funkcje - rekurencja](#Funkcje---rekurencja)
    * [System binarny](#System-binarny)
@@ -1377,7 +1377,7 @@ Spis Treści
 </tbody>
 </table>
 
-<h1>Listy 2D</h1>
+<h1>Listy 2d</h1>
 <table>
 <thead>
 <tr>
