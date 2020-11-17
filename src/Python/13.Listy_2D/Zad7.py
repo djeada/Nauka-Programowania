@@ -1,5 +1,7 @@
 '''
-Otrzymujesz lipocze par liczb. Liczby w parze reprezentuja poczatek i koniecz przedzialu. Niektore przedzialy moga na siebie nachodzic. W takim przypadku polacz je ze soba i zwroc liste niepokrywajacych sie przedzialow.
+Otrzymujesz liste par liczb. Liczby w parze reprezentuja poczatek i koniec przedzialu. 
+Niektore przedzialy moga na siebie nachodzic. 
+W takim przypadku polacz je ze soba i zwroc liste niepokrywajacych sie przedzialow.
 '''
 
 #Wersja 1
