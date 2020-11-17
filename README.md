@@ -1389,7 +1389,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-  <td>Tablica <i>a</i> identycznych wierszy składających się z liczb od 0 do <i>b</i>.</td>
+  <td>Macierz <i>a</i> identycznych wierszy składających się z liczb od 0 do <i>b</i>.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1409,7 +1409,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Tablica 2D z par odpowiadajacych sobie elementow otrzymanych list.</td>
+<td>Macierz z par odpowiadających sobie elementów dwóch list.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1429,16 +1429,6 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Gra w statki.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>6</td>
 <td>Magiczny kwadrat.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1448,7 +1438,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>7</td>
+<td>6</td>
 <td>Pokrywające się przedziały w liście przedziałów.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1458,7 +1448,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>8</td>
+<td>7</td>
 <td>Wypisz spiralnie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1468,9 +1458,19 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>9</td>
+<td>8</td>
 <td>Klepsydra o największej sumie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad9.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>9</td>
+<td>Gra w statki.</td>
+<td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
