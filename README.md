@@ -1447,8 +1447,18 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
+ <tr>
 <td>7</td>
+<td>Wyzeruj macierz.</td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>8</td>
 <td>Wypisz spiralnie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1458,7 +1468,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>8</td>
+<td>9</td>
 <td>Klepsydra o największej sumie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13.Listy_2D/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1468,17 +1478,17 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
   <tr>
-<td>9</td>
+<td>10</td>
 <td>Obróć o 90 stopni.</td>
 <td><a>Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13.Listy_2D/Zad9.cpp">Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13.Listy_2D/Zad10.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>10</td>
+<td>11</td>
 <td>Gra w statki.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
