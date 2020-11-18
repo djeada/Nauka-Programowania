@@ -1214,7 +1214,7 @@ Spis Treści
 <td>12</td>
 <td>Usuń spacje ze zdania.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11.Napisy_wprowadzenie/Zad12.cpp">Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/11.Napisy_wprowadzenie/Zad12">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1318,8 +1318,8 @@ Spis Treści
 <td>3</td>
 <td>Czy słowa są swoimi anagramami?</td>
 <td><a >Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Cpp/12.Napisy_anagramy_palindromy/Zad3>Cpp</a></td> 
- <td><a  href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_palindromy/Zad3">Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Cpp/12.Napisy_anagramy_palindromy/Zad3">Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_palindromy/Zad3">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1451,7 +1451,7 @@ Spis Treści
 <td>7</td>
 <td>Wyzeruj macierz.</td>
 <td><a>Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13.Listy_2D/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
