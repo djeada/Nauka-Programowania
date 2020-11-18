@@ -1318,7 +1318,7 @@ Spis Treści
 <td>3</td>
 <td>Czy słowa są swoimi anagramami?</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Cpp/12.Napisy_anagramy_palindromy/Zad3>Cpp</a></td> 
  <td><a  href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12.Napisy_anagramy_palindromy/Zad3">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2680,16 +2680,26 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Najdłuższy wspólny przedrostek.</td>
+<td>Czy napisy są swoimi rotacjami?</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/25.Napisy_trudne/Zad6">Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25.Napisy_trudne/Zad6.cpp">Cpp</a></td> 
+ <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
+<td>Najdłuższy wspólny przedrostek.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/25.Napisy_trudne/Zad7">Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>8</td>
 <td>Najdłuższy wspólny potomek.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
