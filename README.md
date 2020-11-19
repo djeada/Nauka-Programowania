@@ -2554,9 +2554,9 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>2</td>
-<td>Trójka o minimalnym iloczynie.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad2.py">Python</a></td>
- <td><a>Cpp</a></td> 
+<td>Przesuń zera.</td>
+<td><a>Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24.Listy_trudne/Zad2.py">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2564,7 +2564,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>3</td>
-<td>Wspólny podciąg o największej sumie.</td>
+<td>Trójka o minimalnym iloczynie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2572,9 +2572,9 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
+  <tr>
 <td>4</td>
-<td>Zbiór potęgowy.</td>
+<td>Wspólny podciąg o największej sumie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad4.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2584,7 +2584,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-  <td><b>M</b> posortowanych list.</td>
+<td>Zbiór potęgowy.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad5.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2594,8 +2594,18 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Woda.</td>
+  <td><b>M</b> posortowanych list.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad6.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>7</td>
+<td>Woda.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24.Listy_trudne/Zad7.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
@@ -2698,8 +2708,18 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
+  <tr>
 <td>7</td>
+<td>Znajdź powtórzenia.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>8</td>
 <td>Najdłuższy wspólny przedrostek.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -2709,7 +2729,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>8</td>
+<td>9</td>
 <td>Najdłuższy wspólny potomek.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
