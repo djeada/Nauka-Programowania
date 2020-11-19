@@ -12,7 +12,7 @@ def znajdzParyV1(lista, liczba):
 
 	for i in range(len(lista) - 1):
 
-		for j in range(1, len(lista)):
+		for j in range(i + 1, len(lista)):
 
 			if i != j and lista[i] + lista[j] == liczba:
 				wynik.append((lista[i], lista[j]))
