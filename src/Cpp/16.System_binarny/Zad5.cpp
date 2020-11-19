@@ -1,13 +1,13 @@
-/*
-Konwersja miedzy dowolnymi systemami liczbowymi.
-*/
-
 #include <iostream>
 #include <algorithm>
 #include <cassert>
 #include <cmath>
 
 using namespace std;
+
+/*
+Konwersja miedzy dowolnymi systemami liczbowymi.
+*/
 
 int naDec(string liczba, int podstawa) {
     int wartoscDec = 0;
@@ -24,7 +24,7 @@ int naDec(string liczba, int podstawa) {
     return wartoscDec;
 }
 
-void convertBase(string& liczba, int podstawa, int nowaPodstawa) {
+void zmianaPodstawy(string& liczba, int podstawa, int nowaPodstawa) {
     
     if (podstawa > (10 + 'Z' - 'A') )
         return;
@@ -51,7 +51,7 @@ void convertBase(string& liczba, int podstawa, int nowaPodstawa) {
 int main() {
 	string liczba = "4301";
 	string wynik = "1003031";
-    convertBase(liczba, 10, 4);
+    zmianaPodstawy(liczba, 10, 4);
 
 	assert(liczba == wynik);
 	
