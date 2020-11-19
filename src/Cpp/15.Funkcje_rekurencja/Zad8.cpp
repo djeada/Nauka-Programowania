@@ -1,44 +1,37 @@
-#include <iostream>
 #include <cassert>
-#include <algorithm>
+#include <vector>
 
 using namespace std;
 
 /*
-Napisz funkcje, ktora sprawdzi czy otrzymane slowo jest elfickie. 
-Elfickie slowo to takie, w ktorym co najmniej raz wystepuje kazda 
-z liter slowa elf.
+Wieza Hanoi.
 */
 
-bool czyElfickieSlowoV1(string slowo, string elf = "elf", int i = 0) {
+void hanoiWew(int n, char a, char b, char c, vector<pair<char,char>>& wynik) {
 
-	if (i >= slowo.size())
-		return false;
-		
-	auto litera = slowo[i];
-
-	if (elf.find(litera) != string::npos) {
-			elf.erase(remove(elf.begin(), elf.end(), litera), elf.end());
-	 		if (elf.empty())
-	 			return true;
+	if (n == 1) {
+		wynik.emplace_back(a, b);
+		return;
 	}
-	
-	return czyElfickieSlowoV1(slowo, elf, i + 1);
+
+	hanoiWew(n - 1, a, c, b, wynik);
+	wynik.emplace_back(a, b);
+	hanoiWew(n - 1, c, b, a, wynik);
 }
 
-int main () {
-
-	string slowo = "reflektor";
-	bool wynik = true;
-	
-	assert(czyElfickieSlowoV1(slowo) == wynik);
-	
-	slowo = "elzbieta";
-	wynik = false;
-	
-	assert(czyElfickieSlowoV1(slowo) == wynik);
-	
-	return 0;
+vector<pair<char,char>> hanoi(int n) { 
+	vector<pair<char,char>> wynik;
+	hanoiWew(n, 'A', 'B', 'C', wynik);
+	return wynik;
 }
 
+int main() {
+	int n = 3;
+	vector<pair<char, char>> wynik = { {'A', 'B'}, {'A', 'C'}, {'B', 'C'}, 
+		{'A', 'B'}, {'C', 'A'}, {'C', 'B'}, {'A', 'B'}};
+	
+	assert(hanoi(n) == wynik);
+		
+    return 0;
+}
 
