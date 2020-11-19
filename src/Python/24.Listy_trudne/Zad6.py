@@ -1,35 +1,56 @@
 '''
-Ile wody znajduje sie miedzy slupkami?
-Lista reprezentuje wysokosci slupkow.
+Polacz m posortowanych list.
+Elementy sa unikalne.
 '''
 
-#Zlozonosc czasowa O(n)
-#Zlozonosc obliczeniowa O(n)
-#Znajdz najwyzsze graniczne slupki
-#Ilosc wody rowna sie mniejszemu z dwoch granicznych slupkow minus wysokosci aktualnego
-def ileWodyV1(slupki):
+import heapq
 
-	n = len(slupki)
-	woda = 0
+class Node(object):
+	def __init__(self, val: int, i: int, index: int):
+		self.val = val
+		self.i = i
+		self.index = index
 
-	lewy = [float('-inf')]
+	def __lt__(self, other):
+		return self.val < other.val
 
-	for i in range(n):
-		lewy.append(max(lewy[i], slupki[i]))
+#Zlozonosc czasowa: O(nlogm)
+#Zalozenie pop/push O(logm)
+def polaczListyV1(lista):
+
+	M = len(lista)
+
+	heap = [Node(lista[i][0], i, 0) for i in range(M) if len(lista[i]) >= 1]
+	heapq.heapify(heap)
+	wynik = []
+
+	while len(heap) > 0:
+
+		min = heapq.heappop(heap)
+		wynik.append(min.val)
+		
+		if min.index + 1 < len(lista[min.i]):
+			min.index += 1;
+			min.val = lista[min.i][min.index];
+			heapq.heappush(heap, min);
 	
-	prawy = float('-inf')
-
-	for i in range(n - 1, -1, -1):
-		prawy = max(prawy, slupki[i])
-
-		if min(lewy[i], prawy) > slupki[i]:
-			woda += min(lewy[i], prawy) - slupki[i]
-
-	return woda
+	return wynik
+	
+#Zlozonosc czasowa: O(n^2)
+def polaczListyV2(lista):
+	return sorted([x for y in lista for x in y])
 
 if __name__ == '__main__':
 
-	slupki = [3, 0, 1, 0, 2]
-	wynik = 5
+	lista = [[ -6, 23, 29, 33],
+		[ 6, 22, 35, 71 ],
+		[ 5, 19, 21, 37 ],
+		[ -12, -7, -3, 28 ]]
 
-	assert(ileWodyV1(slupki) == wynik)
+	wynik = [-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71]
+
+	print(polaczListyV1(lista))
+
+	assert(polaczListyV1(lista) == wynik)
+	assert(polaczListyV2(lista) == wynik)
+
