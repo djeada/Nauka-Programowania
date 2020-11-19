@@ -1,19 +1,28 @@
-def findMinV1(x, y):
-    return y ^ ((x ^ y) & -(1 if (x < y) else 0))
+#Znajdz min/maks dwoch liczb bez uzycia instrukcji warunkowej.
 
-def findMinV2(x, y):
-    return y + ((x - y) & ((x - y) >> 31))
+def znak(n):
+	return (n >> 31) & 0x01
 
-def findMaxV1(x, y):
-    return x ^ ((x ^ y) & -(1 if (x < y) else 0))
+# a >= b : znakA = 1, znakB = 0;
+# a < b : znakA = 0, znakB = 1;
+def maks2(a, b):
+	znakB = znak(a-b)
+	znakA = znakB ^ 1
+	return znakA*a + znakB*b
 
-def findMaxV2(x, y):
-    return x - ((x - y) & ((x - y) >> 31))
+def min2(a, b):
+	znakB = znak(a-b)
+	znakA = znakB ^ 1
+	return znakB*a + znakA*b
 
 if __name__ == '__main__':
 
-    x, y = 2, 4
+	a = 10
+	b = 8
 
-    print(f"min({x}, {y}) is", findMinV1(x, y))
-    print(f"max({x}, {y}) is", findMaxV1(x, y))
+	wynik = a
+	assert(maks2(a,b) == wynik)
+
+	wynik = b
+	assert(min2(a,b) == wynik)
 

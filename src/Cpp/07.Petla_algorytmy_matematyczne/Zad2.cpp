@@ -3,12 +3,12 @@
 
 using namespace std;
 
-int doPotegi(int a, int b) {
-	
-	if (b == 0) 
-		return 1;
-	else 
-		return a * doPotegi(a, b - 1);
+int potega(int a, int b) {
+	int wynik = 1;
+	for (int i = 0; i < b; i++)
+		wynik *= a;
+
+	return wynik;
 }
 
 int main () {
@@ -17,7 +17,7 @@ int main () {
 	int b = 3;
 	int wynik = 8;
 
-	assert (doPotegi(a, b) == wynik);
+	assert (potega(a, b) == wynik);
 
 	return 0;
 }
