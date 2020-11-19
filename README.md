@@ -1605,9 +1605,9 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>3</td>
-<td>Potęgowanie</td>
+<td>Potęga.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1617,7 +1617,7 @@ Spis Treści
 <td>4</td>
 <td>Silnia.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1627,7 +1627,7 @@ Spis Treści
 <td>5</td>
 <td>Liczba Fibonacciego.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1635,9 +1635,9 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>N-ty wyraz ciąg danego wzorem rekurencyjnym.</td>
+  <td><b>N</b>-ty wyraz ciągu danego wzorem rekurencyjnym.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1653,9 +1653,9 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
- <tr>
+   <tr>
 <td>8</td>
-<td>Słowa elfickie.</td>
+<td>Wieża Hanoi.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1665,9 +1665,19 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>9</td>
-<td>Gra w kapsle.</td>
+<td>Słowa elfickie.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad9.cpp">Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>10</td>
+<td>Gra w kapsle.</td>
+<td><a >Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15.Funkcje_rekurencja/Zad10.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
