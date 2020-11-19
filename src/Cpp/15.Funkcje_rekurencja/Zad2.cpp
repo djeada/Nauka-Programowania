@@ -1,8 +1,8 @@
+#include <cassert>
+
 /*
 Suma liczb naturalnych mniejszych od N.
 */
-
-#include <cassert>
 
 int sumaV1(int N) { 
 	

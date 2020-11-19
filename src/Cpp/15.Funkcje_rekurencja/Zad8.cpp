@@ -2,13 +2,13 @@
 #include <cassert>
 #include <algorithm>
 
+using namespace std;
+
 /*
 Napisz funkcje, ktora sprawdzi czy otrzymane slowo jest elfickie. 
 Elfickie slowo to takie, w ktorym co najmniej raz wystepuje kazda 
 z liter slowa elf.
 */
-
-using namespace std;
 
 bool czyElfickieSlowoV1(string slowo, string elf = "elf", int i = 0) {
 
