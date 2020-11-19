@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cassert>
 
+using namespace std;
+
 /*
 Gracz A oraz gracz B graja w kapsle.
 Na poczatku gry otrzymuja pewna liczbe kapsli.
@@ -10,8 +12,6 @@ Gre rozpoczyna gracz A.
 Znajdz liczbe mozliwych kombinacji wybrania liczby kapsli w danej turze
 prowadzaca do zwyciestwa kazdego z graczy.
 */
-
-using namespace std;
 
 void oblicz(int n, int& wynikA, int& wynikB, string s = "AB") {
 

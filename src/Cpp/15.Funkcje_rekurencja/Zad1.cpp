@@ -1,11 +1,11 @@
-/*
-Liczby naturalne mniejsze rowne N.	
-*/
-
 #include <iostream>
 #include <cassert>
 
 using namespace std;
+
+/*
+Liczby naturalne mniejsze rowne N.	
+*/
 
 string mniejszeLiczbyV1(int n) {
 		
