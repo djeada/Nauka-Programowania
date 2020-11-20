@@ -2,8 +2,10 @@
 
 using namespace std;
 
+//Narysuj ksztalt.
+
 int main(){
-	/*Narysuj ksztalt.
+	/*
 	Kwadrat.
 	XX
 	XX
