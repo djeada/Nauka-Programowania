@@ -16,4 +16,4 @@ if __name__ == '__main__':
 	else:
 		print(a)
 		print(b)
-		print("druga liczba nie jest wieksza od pierwszej) 
+		print("druga liczba nie jest wieksza od pierwszej") 
