@@ -91,7 +91,7 @@ Spis Treści
 <td>4</td>
 <td>Operacje arytmetyczne.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad4.py">Python</a></td>
- <td><a href="href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad4.cpp">Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad4.sh">Bash</a></td> 
@@ -101,7 +101,7 @@ Spis Treści
 <td>5</td>
 <td>Wartość funkcji w punkcie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad5.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad5.sh">Bash</a></td> 
@@ -111,7 +111,7 @@ Spis Treści
 <td>6</td>
 <td>Zamiana jednostek.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad6.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad6.sh">Bash</a></td> 
@@ -121,7 +121,7 @@ Spis Treści
 <td>7</td>
 <td>Pola figur.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad7.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad7.sh">Bash</a></td> 
@@ -131,7 +131,7 @@ Spis Treści
 <td>8</td>
 <td>Cena podłogi.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad8.py">Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad8.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad8.sh">Bash</a></td> 
@@ -141,7 +141,7 @@ Spis Treści
 <td>9</td>
 <td>Kalkulator kredytowy.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01.Interakcja_z_konsola/Zad9.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01.Interakcja_z_konsola/Zad9.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
