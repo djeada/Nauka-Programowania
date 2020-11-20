@@ -3,6 +3,9 @@
 
 using namespace std;
 
+//Napisz funkcje, ktora dla otrzymanych dwoch liczb 
+//przy pomocy petli obliczy ile wynosi a podniesione do b.
+
 int potega(int a, int b) {
 	int wynik = 1;
 	for (int i = 0; i < b; i++)
