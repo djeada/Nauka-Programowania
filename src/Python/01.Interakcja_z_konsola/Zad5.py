@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
 	x = int(input())
 
-	print('sin(3*x)*cos(2*X) + e**x**2 + log(x**3 + 2*x**2 - x  -3')
+	print('sin(3*x)*cos(2*X) + e**x**2 + log(x**3 + 2*x**2 - x - 3)')
 	print(math.sin(3*x)*math.cos(2*x)+math.exp(x**2)+math.log(x**3+2*x**2-x-3))
 
 
