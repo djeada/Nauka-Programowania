@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Dla pobranej od uzytkownika liczby, zwroc liczbe cyfr pobranje liczby.
+#Dla pobranej liczby, powinna zostac zwrocona suma cyfr tej liczby.
 
 main() {
 	
