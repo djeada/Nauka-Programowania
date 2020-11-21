@@ -46,7 +46,7 @@ wieksza() {
     fi
 }
 
-czyWiekszaJestMniejszaOdPierwszejKwad() {
+czyWiekszaNizKwad() {
 	wieksza $1 $2
   	wieksza=$?
 
@@ -71,7 +71,7 @@ main() {
 	wynik=$(czyObieNieparzyste $a $b)
     echo "Obie liczby nieparzyste: $wynik"
 
-	wynik=$(czyWiekszaJestMniejszaOdPierwszejKwad $a $b)
+	wynik=$(czyWiekszaNizKwad $a $b)
     echo "Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu $wynik"
 }
 
