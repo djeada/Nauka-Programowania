@@ -19,9 +19,9 @@ main() {
 	done
 	
 	if [[ $odwrocona -eq $a ]]; then
-		echo "podana cyfra jest palindromem"
+		echo "podana liczba jest palindromem"
 	else
-		echo "podana cyfra nie jest palindromem"
+		echo "podana liczba nie jest palindromem"
 	fi
 }
 
