@@ -16,7 +16,7 @@ czyWieksza() {
 
 #b) czy suma liczb jest mneijsza niz 10
 
-czySumaMniejszaOd10() {
+czySumaMniejsza() {
 	suma=$(($1 + $2))
 
 	if [[ $suma -lt 10 ]] ; then
@@ -65,7 +65,7 @@ main() {
 	wynik=$(czyWieksza $a $b)
     echo "Pierwsza liczba jest wieksza od drugiej: $wynik"
 
-	wynik=$(czySumaMniejszaOd10 $a $b)
+	wynik=$(czySumaMniejsza $a $b)
     echo "Suma liczb jest mniejsza od 10: $wynik"
 
 	wynik=$(czyObieNieparzyste $a $b)
