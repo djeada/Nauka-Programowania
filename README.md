@@ -66,7 +66,7 @@ Spis Treści
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01.Interakcja_z_konsola/Zad1.rs">Rust</a></td></tr>
 <tr>
 <td>2</td>
 <td>Zamiana kolejności.</td>
@@ -76,7 +76,7 @@ Spis Treści
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01.Interakcja_z_konsola/Zad2.rs">Rust</a></td></tr>
 <tr>
 <td>3</td>
 <td>Narysuj kształt.</td>
