@@ -1346,7 +1346,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Permutacja danego słowa będąca palindromem.</td>
+<td>Permutacja będąca palindromem.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_palindromy/Zad6.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1356,7 +1356,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>7</td>
-<td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy?</td>
+<td>Ile znaków musimy usunąć aby uzyskać anagramy?</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12.Napisy_anagramy_palindromy/Zad7.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
