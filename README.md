@@ -351,7 +351,7 @@ Spis Treści
 <td>1</td>
 <td>Warunek kończący pętle.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04.Petla_wprowadzenie/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad1.sh">Bash</a></td> 
@@ -361,7 +361,7 @@ Spis Treści
 <td>2</td>
 <td>Liczby mniejsze od podanej liczby.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04.Petla_wprowadzenie/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad2.sh">Bash</a></td> 
@@ -371,7 +371,7 @@ Spis Treści
 <td>3</td>
   <td>Liczba <i>Pi</i>.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04.Petla_wprowadzenie/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04.Petla_wprowadzenie/Zad3.sh">Bash</a></td> 
@@ -444,7 +444,7 @@ Spis Treści
 <td>1</td>
 <td>Ile cyfr ma liczba?</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05.Petla_wyznaczanie_cyfr_liczby/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad1.sh">Bash</a></td> 
@@ -454,7 +454,7 @@ Spis Treści
 <td>2</td>
 <td>Cyfry, z których składa się liczba.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05.Petla_wyznaczanie_cyfr_liczby/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad2.sh">Bash</a></td> 
@@ -464,7 +464,7 @@ Spis Treści
 <td>3</td>
 <td>Suma cyfr liczby.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05.Petla_wyznaczanie_cyfr_liczby/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad3.sh">Bash</a></td> 
@@ -474,7 +474,7 @@ Spis Treści
 <td>4</td>
 <td>Cyfry liczby spełniające warunek.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05.Petla_wyznaczanie_cyfr_liczby/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad4.sh">Bash</a></td> 
@@ -484,7 +484,7 @@ Spis Treści
 <td>5</td>
 <td>Czy liczba jest palindromem?</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05.Petla_wyznaczanie_cyfr_liczby/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad5.sh">Bash</a></td> 
@@ -494,7 +494,7 @@ Spis Treści
 <td>6</td>
 <td>Wszystkie liczby spełniające warunek.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05.Petla_wyznaczanie_cyfr_liczby/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05.Petla_wyznaczanie_cyfr_liczby/Zad6.sh">Bash</a></td> 
@@ -517,7 +517,7 @@ Spis Treści
 <td>1</td>
 <td>Zwróć stałą.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06.Funkcje_wprowadzenie/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06.Funkcje_wprowadzenie/Zad1.sh">Bash</a></td> 
@@ -527,7 +527,7 @@ Spis Treści
 <td>2</td>
 <td>Operacja arytmetyczna.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06.Funkcje_wprowadzenie/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06.Funkcje_wprowadzenie/Zad2.sh">Bash</a></td> 
@@ -537,7 +537,7 @@ Spis Treści
 <td>3</td>
 <td>Sprawdź warunek.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06.Funkcje_wprowadzenie/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06.Funkcje_wprowadzenie/Zad3.sh">Bash</a></td> 
@@ -547,7 +547,7 @@ Spis Treści
 <td>4</td>
 <td>Maks i min.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06.Funkcje_wprowadzenie/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06.Funkcje_wprowadzenie/Zad4.sh">Bash</a></td> 
@@ -557,7 +557,7 @@ Spis Treści
 <td>5</td>
 <td>Zamień wartości miejscami.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06.Funkcje_wprowadzenie/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06.Funkcje_wprowadzenie/Zad5.sh">Bash</a></td> 
@@ -567,7 +567,7 @@ Spis Treści
 <td>6</td>
 <td>Cyfry liczby.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad6.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06.Funkcje_wprowadzenie/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06.Funkcje_wprowadzenie/Zad6.sh">Bash</a></td> 
@@ -577,7 +577,7 @@ Spis Treści
 <td>7</td>
 <td>Hasło.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad7.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06.Funkcje_wprowadzenie/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06.Funkcje_wprowadzenie/Zad7.sh">Bash</a></td> 
@@ -587,7 +587,7 @@ Spis Treści
 <td>8</td>
 <td>Zaokrąglanie w dół.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06.Funkcje_wprowadzenie/Zad8.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06.Funkcje_wprowadzenie/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06.Funkcje_wprowadzenie/Zad8.sh">Bash</a></td> 
@@ -610,7 +610,7 @@ Spis Treści
 <td>1</td>
 <td>Średnia z n liczb.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -630,7 +630,7 @@ Spis Treści
 <td>3</td>
 <td>Mnożenie i dzielenia.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -640,7 +640,7 @@ Spis Treści
 <td>4</td>
 <td>Silnia.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07.Petla_algorytmy_matematyczne/Zad4.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -660,7 +660,7 @@ Spis Treści
 <td>6</td>
 <td>NWW.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -670,7 +670,7 @@ Spis Treści
 <td>7</td>
 <td>Pierwiastek metodą Newtona.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -680,7 +680,7 @@ Spis Treści
 <td>8</td>
 <td>Naiwny test pierwszości.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07.Petla_algorytmy_matematyczne/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -703,7 +703,7 @@ Spis Treści
 <td>1</td>
 <td>Kwadrat.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08.Petle_zagniezdzone/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -713,7 +713,7 @@ Spis Treści
 <td>2</td>
 <td>Trójkąt.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08.Petle_zagniezdzone/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -723,7 +723,7 @@ Spis Treści
 <td>3</td>
 <td>Odwrócony trójkąt.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08.Petle_zagniezdzone/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -733,7 +733,7 @@ Spis Treści
 <td>4</td>
 <td>Tabliczka mnożenia.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08.Petle_zagniezdzone/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -743,7 +743,7 @@ Spis Treści
 <td>5</td>
 <td>Litera X.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08.Petle_zagniezdzone/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -753,7 +753,7 @@ Spis Treści
 <td>6</td>
 <td>Litera Z.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08.Petle_zagniezdzone/Zad6.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08.Petle_zagniezdzone/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -763,7 +763,7 @@ Spis Treści
 <td>7</td>
 <td>Choinka.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08.Petle_zagniezdzone/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -773,7 +773,7 @@ Spis Treści
 <td>8</td>
 <td>N pierwszych liczb pierwszych.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08.Petle_zagniezdzone/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
