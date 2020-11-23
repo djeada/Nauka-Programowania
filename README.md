@@ -86,7 +86,7 @@ Spis Treści
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01.Interakcja_z_konsola/Zad3.rs">Rust</a></td></tr>
 <tr>
 <td>4</td>
 <td>Operacje arytmetyczne.</td>
@@ -96,7 +96,7 @@ Spis Treści
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01.Interakcja_z_konsola/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01.Interakcja_z_konsola/Zad4.rs">Rust</a></td></tr>
 <tr>
 <td>5</td>
 <td>Wartość funkcji w punkcie.</td>
