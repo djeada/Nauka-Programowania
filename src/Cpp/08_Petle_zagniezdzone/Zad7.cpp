@@ -3,7 +3,7 @@
 using namespace std;
 
 //Napisz funkcje, ktora dla otrzymanej liczby
-//wyświetli N trójkątów. Trójkąty powinny być 
+//wyswietli N trojkatow. Trojkaty powinny byc 
 //ustawione w kolumnie, jeden na drugim. Wysokosc 
 //pierwszego trojkata to 1, a dla kazdego nastepnego 
 //rowna jest wysokosci poprzedniego powiekszonej o 1.
