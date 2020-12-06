@@ -1595,7 +1595,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-  <td>Suma liczba naturalnych mniejszych od <b>N</b>.</td>
+  <td>Suma liczb naturalnych mniejszych od <b>N</b>.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
