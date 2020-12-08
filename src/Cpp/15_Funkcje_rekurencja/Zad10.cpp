@@ -46,17 +46,20 @@ int main () {
 	int wynikB = 0;
 
 	oblicz(1, wynikA, wynikB);
-	
+	assert(wynikA == 1);
+	assert(wynikB == 0);
 
 	wynikA = 0;
 	wynikB = 0;
 	oblicz(3, wynikA, wynikB);
-	
+	assert(wynikA == 0);
+	assert(wynikB == 2);
 	
 	wynikA = 0;
 	wynikB = 0;
 	oblicz(10, wynikA, wynikB);
-	
+	assert(wynikA == 33);
+	assert(wynikB == 27);
 	
 	return 0;
 }
