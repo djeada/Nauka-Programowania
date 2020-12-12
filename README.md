@@ -2549,6 +2549,25 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
+   <tr>
+<td>11</td>
+   <td>Wiersze zaczynające się i kończące napisem.</td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+  <td>12</td>
+   <td>Nazwa pliku ze ścieżki.</td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
 </tbody>
 </table>
 
