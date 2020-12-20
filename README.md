@@ -1738,7 +1738,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Zlicz zera/jedynki w liczbie binarnej.</td>
+<td>Zera/jedynki w liczbie binarnej.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1748,7 +1748,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Znajdź najdłuższy ciąg zer w liczbie binarnej.</td>
+<td>Najdłuższy ciąg zer w liczbie binarnej.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1778,7 +1778,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>8</td>
-<td>Zaokrąglij do następnej potęgi dwójki.</td>
+<td>Następna potęga dwójki.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1828,7 +1828,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>13</td>
-<td>Znajdź min z dwóch liczb.</td>
+<td>Znajdź minimum z dwóch liczb.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad13.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
