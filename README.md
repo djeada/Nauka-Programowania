@@ -1892,7 +1892,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Histogram wystąpień małych/dużych liter.</td>
+<td>Histogram wystąpień małych i wielkich liter.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2353,7 +2353,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Posortuj napisy w liście względem długości.</td>
+<td>Posortuj względem długości napisy w liście.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/22_Sortowanie_Praktyka/Zad4">Java</a></td> 
