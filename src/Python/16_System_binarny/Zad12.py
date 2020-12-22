@@ -1,21 +1,28 @@
-def policzUstawioneBity(liczba):
-    suma = 0
-    while liczba > 0:
-        if liczba & 1:
-            suma += 1
-        liczba >>= 1
-    return suma
+#Znajdz min/maks dwoch liczb bez uzycia instrukcji warunkowej.
 
-def przygotujTablice():
-    return [policzUstawioneBity(x) for x in range(256)]
+def znak(n):
+	return (n >> 31) & 0x01
 
-#Zlozonosc czasowa O(1)
-#Zlozonosc pamieciowa O(1)
-def ustawioneBity(tablica, n):
-    return tablica[n & 0xff] + tablica[(n >> 8) & 0xff] + tablica[(n >> 16) & 0xff] + tablica[(n >> 24) & 0xff];
+# a >= b : znakA = 1, znakB = 0;
+# a < b : znakA = 0, znakB = 1;
+def maks2(a, b):
+	znakB = znak(a-b)
+	znakA = znakB ^ 1
+	return znakA*a + znakB*b
+
+def min2(a, b):
+	znakB = znak(a-b)
+	znakA = znakB ^ 1
+	return znakB*a + znakA*b
 
 if __name__ == '__main__':
 
-    tablica = przygotujTablice()
+	a = 10
+	b = 8
 
-    print(ustawioneBity(tablica, -1))
+	wynik = a
+	assert(maks2(a,b) == wynik)
+
+	wynik = b
+	assert(min2(a,b) == wynik)
+
