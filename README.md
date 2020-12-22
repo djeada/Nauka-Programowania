@@ -756,7 +756,7 @@ Spis Treści
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad6.sh">>Bash</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
   <tr>
@@ -1861,7 +1861,27 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
   </tr>
+  <tr>
 <td>3</td>
+<td>Klucz to imię, wartość lista wypożyczonych książek.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad3.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+  <tr>
+<td>4</td>
+<td>Usuń ze słownika.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad4">Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<td>5</td>
 <td>Histogram znaków w słowie.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1871,7 +1891,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>4</td>
+<td>6</td>
 <td>Histogram wystąpień małych/dużych liter.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1881,7 +1901,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>4</td>
+<td>7</td>
 <td>Histogram słów w tekście.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -1890,39 +1910,9 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
-<td>5</td>
-<td>Klucz to imię, wartość lista wypożyczonych książek.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad5.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>6</td>
-<td>Sortowanie względem kluczy/wartości.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17_Slowniki/Zad6">Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>7</td>
-<td>Znajdź słowa, w których wszystkie znaki występują tą samą liczbę razy.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
+ <tr>
 <td>8</td>
-<td>Powtarzające się znaki.</td>
+<td>Najczęściej występujący znak w zdaniu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad8">Java</a></td> 
@@ -1932,7 +1922,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>9</td>
-<td>Najczęściej występujący znak w zdaniu.</td>
+<td>Powtarzające się znaki.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad9">Java</a></td> 
@@ -1942,20 +1932,30 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
-<td>Usuń ze słownika.</td>
+<td>Znajdź słowa, w których wszystkie znaki występują tą samą liczbę razy.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad10">Java</a></td> 
+ <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
 <td>11</td>
+<td>Sortowanie względem kluczy/wartości.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17_Slowniki/Zad11">Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>12</td>
 <td>Czy slowniki są identyczne?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad11">Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad12">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
