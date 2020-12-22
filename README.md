@@ -1748,14 +1748,14 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Najdłuższy ciąg zer w liczbie binarnej.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td>Min/maks z dwóch liczb.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad5.py">Python</a></td>
+<td><a>Cpp</a></td> 
+<td><a>Java</a></td> 
+<td><a>JavaScript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
 <td>Konwersja między dowolnymi systemami.</td>
@@ -1818,8 +1818,8 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>12</td>
-<td>Znajdź minimum z dwóch liczb.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad12.py">Python</a></td>
+<td>Najdłuższy ciąg zer w liczbie binarnej.</td>
+<td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
