@@ -1788,7 +1788,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>9</td>
-<td>Zamiana sąsiadów.</td>
+<td>Zamiana wielkości liter.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
