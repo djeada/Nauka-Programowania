@@ -1932,7 +1932,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
-<td>Znajdź słowa, w których wszystkie znaki występują tą samą liczbę razy.</td>
+<td>Słowa, w których znaki występują tą samą liczbę razy.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
