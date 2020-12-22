@@ -1,50 +1,54 @@
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 /*
-Sprawdz czy slowniki sa identyczne.
+Posortuj slownik.
 */
 
 public class Main {
-	  		  
-	   public static <A, B> boolean czyIdentyczneV1(Map<String, int[]> slownikA, Map<String, int[]> slownikB) {
 
-        if (slownikA.size() != slownikB.size())
-           return false;
+	public static List<String>  sortujWzgledemKluczyV1(Map<String, Integer> slownik) {
 
-        return slownikA.entrySet().stream()
-                .allMatch(e -> Arrays.equals(e.getValue(), slownikB.get(e.getKey())));
+		List<String> lista = new ArrayList<String>();
+
+		for (String key: slownik.keySet())
+			lista.add(key);
+		
+		Collections.sort(lista);
+		
+		return lista;
+    }
+
+	public static List<Integer>  sortujWzgledemWartosciV1(Map<String, Integer> slownik) {
+
+		List<Integer> lista = new ArrayList<Integer>();
+
+		for (String key: slownik.keySet())
+			lista.add(slownik.get(key));
+		
+		Collections.sort(lista);
+		
+		return lista;
     }
 	    
     public static void main(String[] args) {
-    	Map<String, int[]> slownikA = new HashMap<String, int[]>() {{
-	        put("a", new int[] {2, 3, 5});
-    		put("b", new int[] {-3, 7, 1});
-		    put("c", new int[] {-8, -4, 3});
-		    put("x", new int[] {11, 2, 7});
-		}};
-				
-		Map<String, int[]> slownikB = new HashMap<String, int[]>() {{
-	        put("a", new int[] {2, 3, 5});
-    		put("b", new int[] {3, 7, 1});
-		    put("c", new int[] {-8, -4, 3});
-		    put("x", new int[] {11, 2, 7});
+    	Map<String, Integer> slownik = new HashMap<String, Integer>() {{
+	        put("c", 3);
+    		put("x", 5);
+		    put("a", -2);
+		    put("b", 4);
 		}};
 		
-		Map<String, int[]> slownikC = new HashMap<String, int[]>() {{
-	        put("a", new int[] {2, 3, 5});
-    		put("b", new int[] {-3, 7, 1});
-		    put("c", new int[] {-8, -4, 3});
-		    put("x", new int[] {11, 2, 7});
-		}};
-		    		    		
-		assert !czyIdentyczneV1(slownikA, slownikB);
-		assert czyIdentyczneV1(slownikA, slownikC);
-		assert !czyIdentyczneV1(slownikC, slownikB);
+		List<String> wynikKlucze = Arrays.asList("a", "b", "c", "x");
+		List<Integer> wynikWartosci = Arrays.asList(-2, 3, 4, 5);
+
+		assert sortujWzgledemKluczyV1(slownik).equals(wynikKlucze);
+		assert sortujWzgledemWartosciV1(slownik).equals(wynikWartosci);
 
     }
 
 }
-
