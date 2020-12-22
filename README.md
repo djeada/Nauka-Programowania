@@ -1798,7 +1798,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>10</td>
-<td>Wielkość liter.</td>
+    <td>Zamień <b>A</b> w <b>B</b>.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad10.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
