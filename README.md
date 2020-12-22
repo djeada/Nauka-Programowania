@@ -1952,7 +1952,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>12</td>
-<td>Czy slowniki są identyczne?</td>
+<td>Czy słowniki są identyczne?</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad12">Java</a></td> 
@@ -2064,7 +2064,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
-<td>Skopiuj wszystkie pliki csv do jednego folderu.</td>
+<td>Przesuń wszystkie pliki csv do jednego folderu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
