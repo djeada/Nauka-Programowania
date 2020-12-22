@@ -1738,7 +1738,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>4</td>
-<td>Zlicz zera/jedynki w liczbie binarnej.</td>
+<td>Zera/jedynki w liczbie binarnej.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1748,7 +1748,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-<td>Znajdź najdłuższy ciąg zer w liczbie binarnej.</td>
+<td>Najdłuższy ciąg zer w liczbie binarnej.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1778,7 +1778,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>8</td>
-<td>Zaokrąglij do następnej potęgi dwójki.</td>
+<td>Następna potęga dwójki.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad8.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1788,7 +1788,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>9</td>
-<td>Zamiana sąsiadów.</td>
+<td>Zamiana wielkości liter.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad9.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1798,7 +1798,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>10</td>
-<td>Wielkość liter.</td>
+    <td>Zamień <b>A</b> w <b>B</b>.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad10.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1828,7 +1828,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>13</td>
-<td>Znajdź min z dwóch liczb.</td>
+<td>Znajdź minimum z dwóch liczb.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad13.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2543,6 +2543,25 @@ Spis Treści
 <td>10</td>
    <td>Podmień napisy z listy <b>A</b> na napisy z listy <b>B</b>.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23_Wyrazenia_regularne/Zad10.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+   <tr>
+<td>11</td>
+   <td>Wiersze zaczynające się i kończące napisem.</td>
+<td><a>Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+  <td>12</td>
+   <td>Nazwa pliku ze ścieżki.</td>
+<td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
