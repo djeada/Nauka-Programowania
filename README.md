@@ -1882,7 +1882,7 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <td>5</td>
-<td>Histogram znaków w słowie.</td>
+<td>Lista pracowników.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1892,7 +1892,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>6</td>
-<td>Histogram wystąpień małych i wielkich liter.</td>
+<td>Histogram znaków w słowie.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -1912,7 +1912,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>8</td>
-<td>Najczęściej występujący znak w zdaniu.</td>
+<td>Najczęściej występująca litera w zdaniu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad8">Java</a></td> 
@@ -1932,7 +1932,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>10</td>
-<td>Słowa, w których znaki występują tą samą liczbę razy.</td>
+<td>Anagramy w tekście.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
