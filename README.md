@@ -2015,7 +2015,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
   <tr>
 <td>5</td>
-<td>Plik z listą domen.</td>
+<td>Plik z listą adresów ip.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2353,7 +2353,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-<td>Posortuj listę par (np. imię pracownika i zarobki) względem jednej z kategorii.</td>
+<td>Posortuj listę par względem jednej z kategorii.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
