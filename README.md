@@ -1983,39 +1983,9 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
+    <tr>
 <td>2</td>
-<td>Wypisz treść pliku tekstowego na konsolę.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>3</td>
-<td>Dodaj wiersz do pliku.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>4</td>
-<td>Plik z listą wpłat i wypłat z konta.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>5</td>
-<td>Znajdź nazwy plików znajdujących się w folderze.</td>
+<td>Znajdź w folderze wszystkie pliki z danym rozszerzeniem.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad5.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2023,18 +1993,19 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
-<td>6</td>
-<td>Znajdź i zmodyfikuj pliki spełniajace warunek.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad6.py">Python</a></td>
- <td><a>Cpp</a></td> 
+  <tr>
+<td>3</td>
+<td>Znajdź ścieżkę pliku o danej nazwie.</td>
+<td><a >Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<td>7</td>
-<td>Usuń pliki spełniające warunek.</td>
+<tr>
+<td>4</td>
+<td>Wczytaj i wypisz treść pliku.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2042,18 +2013,8 @@ Spis Treści
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-<tr>
-<td>8</td>
-<td>Statystyki dla pliku tekstowego.</td>
-<td><a >Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>9</td>
+  <tr>
+<td>5</td>
 <td>Plik z listą domen.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
@@ -2063,8 +2024,8 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
-<td>10</td>
-<td>Przesuń wszystkie pliki csv do jednego folderu.</td>
+<td>6</td>
+<td>Statystyki dla pliku tekstowego.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2073,8 +2034,57 @@ Spis Treści
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <tr>
+<td>7</td>
+<td>Dodaj wiersz do pliku.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>8</td>
+<td>Znajdź i zmodyfikuj pliki spełniajace warunek.</td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad6.py">Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<td>9</td>
+<td>Usuń pliki spełniające warunek.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
+<td>10</td>
+<td>Skopiuj piliki.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+ <tr>
 <td>11</td>
-<td>Podmien tresci.</td>
+<td>Podmień treści.</td>
+<td><a >Python</a></td>
+ <td><a>Cpp</a></td> 
+ <td><a>Java</a></td> 
+ <td><a>JavaScript</a></td>  
+ <td><a>Bash</a></td> 
+ <td><a>Haskell</a></td> 
+ <td><a>Rust</a></td></tr>
+<tr>
+<td>12</td>
+<td>Przesuń wszystkie pliki csv do jednego folderu.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
