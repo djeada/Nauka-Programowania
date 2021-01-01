@@ -1078,7 +1078,7 @@ Spis Treści
   
 <tr>
 <td>9</td>
-<td>Usuń z pierwszej listy część wspólną obu list.</td>
+<td>Usuń część wspólną obu list.</td>
 <td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
