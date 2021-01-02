@@ -1,31 +1,32 @@
 
 '''
-Znajdz element dominujacy. Inaczej znajdz lidera w liscie.
+Dla otrzymanej listy liczb naturalnych, znajdz elemnt 
+dominujacy. Element dominujacy to element, ktorego liczba 
+wystapien w liscie jest wieksza niz polowa dlugosci listy. 
+Jesli lista nie ma elementu dominujacego, zwroc -1.
 '''
-
-import random
 
 #Wersja 1
 #bez uzycia slownika
-def znajdzLideraV1(lista):
-	if not lista:
-		return False
+def elementDominujacyV1(lista):
 
-	listaPomocniczna = [0]*(max(lista) + 1)
-	for x in lista:
-		assert(type(x) == int)
-		listaPomocniczna[x] += 1
-		if listaPomocniczna[x] > len(lista)//2:
-			return x
-	return False
+	for i in range (len(lista)//2 + 1):
+		licznik = 1
+		for j in range(i + 1, len(lista)):
+			if lista[j] == lista[i]:
+				licznik += 1
+
+		if licznik > len(lista)//2:
+			return lista[i]
+
+	return -1
 
 #Wersja 2
 #z uzyciem slownika
-def znajdzLideraV2(lista):
-	if not lista:
-		return False
+def elementDominujacyV2(lista):
 
 	histo = {}
+
 	for x in lista:
 		assert(type(x) == int)
 		
@@ -37,19 +38,18 @@ def znajdzLideraV2(lista):
 		if histo[x] > len(lista)//2:
 			return x
 			
-	return False
-	
-#Testy Poprawnosci
-lista = [3, 5, 3, 3, 2]
-assert(znajdzLideraV1(lista) == 3)
-assert(znajdzLideraV2(lista) == 3)
+	return -1
 
-lista = [0, 0, 2, 1, 9]
-assert(not znajdzLideraV1(lista))
-assert(not znajdzLideraV2(lista))
+if __name__ == '__main__':
+	#Testy Poprawnosci
+	lista = [4, 7, 4, 4, 2]
+	wynik = 4
+	assert(elementDominujacyV1(lista) == wynik)
+	assert(elementDominujacyV2(lista) == wynik)
 
-lista = []
-assert(not znajdzLideraV1(lista))
-assert(not znajdzLideraV2(lista))
+	lista = [0, 0, 2, 1, 9]
+	wynik = -1
+	assert(elementDominujacyV1(lista) == wynik)
+	assert(elementDominujacyV2(lista) == wynik)
 
 
