@@ -806,7 +806,7 @@ Spis Treści
 <td>1</td>
 <td>Wczytaj i wypisz.</td>
 <td><a >Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad1.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -816,7 +816,7 @@ Spis Treści
 <td>2</td>
 <td>Wczytaj, zmodyfikuj i wypisz.</td>
 <td><a >Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad2.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -826,7 +826,7 @@ Spis Treści
 <td>3</td>
 <td>Pierwsze wystąpieia klucza.</td>
 <td><a >Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad3.cpp">Cpp</a></td> 
 <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad3">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -836,7 +836,7 @@ Spis Treści
 <td>4</td>
 <td>Minimum oraz maksimum.</td>
 <td><a >Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad4.cpp">Cpp</a></td> 
 <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad4">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -846,16 +846,18 @@ Spis Treści
 <td>5</td>
 <td>Zmodyfikuj elementy spełniające warunek.</td>
 <td><a >Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad5.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+  </tr>
+<tr>
 <td>6</td>
 <td>Czy średnia elementów znajduje się w liście?</td>
 <td><a >Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad6.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -865,7 +867,7 @@ Spis Treści
 <td>7</td>
 <td>Liczba mniejsza od największej i większa od wszystkich pozostałych.</td>
 <td><a >Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad7.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -894,7 +896,7 @@ Spis Treści
 <td>10</td>
 <td>Czy punkty mogą stanowić wierzchołki trójkąta?</td>
 <td><a >Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad10.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -904,7 +906,7 @@ Spis Treści
 <td>11</td>
 <td>Samochody.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad11.py">Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad11.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -915,7 +917,7 @@ Spis Treści
 <td>12</td>
 <td>Rotacja w lewo/prawo.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad12.py">Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad12.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -926,7 +928,7 @@ Spis Treści
 <td>13</td>
 <td>Brakujący element w liście.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad13.py">Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad13.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -936,7 +938,7 @@ Spis Treści
 <td>14</td>
 <td>Element bez pary w liście.</td>
 <td><a >Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad14.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -946,7 +948,7 @@ Spis Treści
 <td>15</td>
 <td>Element dominujący.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad15.py">Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad15.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -956,7 +958,7 @@ Spis Treści
 <td>16</td>
 <td>Pary, których suma jest równa liczbie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad16.py">Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad16.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -966,7 +968,7 @@ Spis Treści
 <td>17</td>
 <td>Suma dwóch.</td>
 <td><a>Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad17.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -976,7 +978,7 @@ Spis Treści
 <td>18</td>
 <td>Lista posortowane została przesunięta.</td>
 <td><a>Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad18.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -999,7 +1001,7 @@ Spis Treści
 <td>1</td>
 <td>Wypisz na przemian.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad1.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1009,7 +1011,7 @@ Spis Treści
 <td>2</td>
 <td>Połączenie list.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1019,7 +1021,7 @@ Spis Treści
 <td>3</td>
 <td>Suma list.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1029,7 +1031,7 @@ Spis Treści
 <td>4</td>
 <td>Mnożenie sklarne oraz wektorowe.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1039,7 +1041,7 @@ Spis Treści
 <td>5</td>
 <td>Średnia ważona wartości.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad4.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1049,7 +1051,7 @@ Spis Treści
 <td>6</td>
 <td>Część wspólna dwóch list.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad5.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1059,7 +1061,7 @@ Spis Treści
 <td>7</td>
 <td>Różnica między dwoma listami.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1069,18 +1071,17 @@ Spis Treści
 <td>8</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad7.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
-  
 <tr>
 <td>9</td>
 <td>Usuń część wspólną obu list.</td>
 <td><a>Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad9.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1090,7 +1091,7 @@ Spis Treści
 <td>10</td>
 <td>Znajdź medianę dwóch posortowanych list.</td>
 <td><a>Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad10.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
