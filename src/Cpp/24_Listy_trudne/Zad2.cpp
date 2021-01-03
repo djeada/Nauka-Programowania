@@ -31,15 +31,19 @@ void zeraV1(vector<int>& lista) {
 	}
 }
 
-int main() {
+//Testy Poprawnosci
+void test1() {
+	vector<int> lista {0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0};
+	vector<int> wynik {1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0};
 
-	//Testy Poprawnosci
-    vector<int> lista {0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0};
-    vector<int> wynik {1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0};
-	
 	zeraV1(lista);
 	assert(lista == wynik);
+}
 
-    return 0;
+int main() {
+
+	test1();
+
+	return 0;
 }
 
