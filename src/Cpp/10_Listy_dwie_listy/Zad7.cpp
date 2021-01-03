@@ -27,8 +27,6 @@ vector<int> roznicaV1(vector<int>& listaA, vector<int>& listaB) {
 	return wynik;
 }
 
-#include <iostream>
-
 //Zlozonosc obliczeniowa O(nlogn)
 //Zlozonosc pamieciowa O(n)
 vector<int> roznicaV2(vector<int>& listaA, vector<int>& listaB) {
@@ -58,4 +56,3 @@ int main() {
 
 	return 0;
 }
-
