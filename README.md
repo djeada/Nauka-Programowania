@@ -2278,7 +2278,7 @@ Spis Treści
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad1.rs">Rust</a></td></tr>
 <tr>
 <td>2</td>
 <td>Wybieranie.</td>
@@ -2288,7 +2288,7 @@ Spis Treści
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad2.rs">Rust</a></td></tr>
 <tr>
 <td>3</td>
 <td>Wstawianie.</td>
@@ -2298,7 +2298,7 @@ Spis Treści
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad3.rs">Rust</a></td></tr>
 <tr>
 <td>4</td>
 <td>Scalanie.</td>
@@ -2308,7 +2308,7 @@ Spis Treści
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad4.rs">Rust</a></td></tr>
 <tr>
 <td>5</td>
 <td>Szybkie.</td>
@@ -2318,7 +2318,7 @@ Spis Treści
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad5.rs">Rust</a></td></tr>
 </tbody>
 </table>
 
