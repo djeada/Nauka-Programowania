@@ -27,18 +27,26 @@ void usunSpacjeV2(string& slowo) {
 	slowo.erase(remove(slowo.begin(), slowo.end(), ' '), slowo.end());
 }
 
-int main() {
-    string zdanie = "lezy jezy na wierzy";
-    string wynik = "lezyjezynawierzy";
+void test1() {
+	string zdanie = "lezy jezy na wierzy";
+	string wynik = "lezyjezynawierzy";
 
 	usunSpacjeV1(zdanie);	
 	assert(zdanie == wynik);
-	
-	zdanie = "lezy jezy na wierzy";
-	
+}
+
+void test2() {
+	string zdanie = "lezy jezy na wierzy";
+	string wynik = "lezyjezynawierzy";
+
 	usunSpacjeV2(zdanie);
 	assert(zdanie == wynik);
-    
+}
+
+int main() {
+	test1();
+	test2();
+
 	return 0;
 }
 
