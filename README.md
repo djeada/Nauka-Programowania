@@ -1853,7 +1853,7 @@ Spis Treści
 <tr>
 <tr>
 <td>2</td>
-<td>Kluczami są elemnty jednej listy, a wartościami elementy drugiej listy.</td>
+<td>Lista kluczy i lista wartości.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
