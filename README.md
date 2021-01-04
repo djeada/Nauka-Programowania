@@ -1253,7 +1253,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>15</td>
-<td>Słowa ze zdania jako osobne elemnty listy.</td>
+<td>Słowa ze zdania jako osobne elementy listy.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
