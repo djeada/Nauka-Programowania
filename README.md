@@ -2118,7 +2118,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
-  <td>Zaprojektuj klasę <i>Punkt</i> przechwywującą informację o współrzędnych <i>x</i> oraz <i>y</i>.</td>
+  <td>Zaprojektuj klasę <i>Punkt</i>.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2128,7 +2128,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>3</td>
-  <td>Znajdź współrzędne prostokąta powstałego z nałożenia się dwóch innych prostokątów.</td>
+  <td>Prostokąt powstały z nałożenia się dwóch prostokątów.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad3.py">Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
