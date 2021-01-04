@@ -1,7 +1,6 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
 #include <cassert>
+#include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -22,13 +21,31 @@ void odwrocNapisV1(string& slowo) {
 	}
 }
 
-int main() {
-    string napis = "adam";
-    string wynik = "mada";
+//Zlozonosc Czasowa O(n)
+//Zlozonosc Pamieciowa O(1)
+void odwrocNapisV2(string& slowo) {
+    reverse(slowo.begin(), slowo.end());
+}
 
-	odwrocNapisV1(napis);	
+void test1() {
+	string napis = "adam";
+	string wynik = "mada";
+
+	odwrocNapisV1(napis);
 	assert(napis == wynik);
-    
+}
+
+void test2() {
+	string napis = "adam";
+	string wynik = "mada";
+
+	odwrocNapisV2(napis);
+	assert(napis == wynik);
+}
+
+int main() {
+	test1();	
+	test2();
 	return 0;
 }
 
