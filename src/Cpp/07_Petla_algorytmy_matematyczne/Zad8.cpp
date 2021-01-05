@@ -7,7 +7,7 @@ using namespace std;
 //Napisz funkcje, ktora dla otrzymanej liczby sprawdzi
 //czy jest ona liczba pierwsza.
 
-int czyPierwsza(int n) {
+bool czyPierwsza(int n) {
 
 	if (!(n % 2) && n != 2)
 		return false;
