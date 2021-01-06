@@ -2,12 +2,14 @@
 #include <string>
 #include <algorithm>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
 //Otrzymujesz napis reprezuntajacy zdanie.
 //Podziel zdanie na slowa skladowe. 
 //Znaki interpunkcyjne nie sa liczone jako slowa.
+
 
 void wyczysc(string& napis){
 	auto it = napis.begin();
@@ -20,8 +22,7 @@ void wyczysc(string& napis){
 	}
 }
 
-vector<string> slowaV1(string& napis) {
-	vector<string> wynik;
+void slowaV1(string& napis) {
 	int pocz = 0; 
 	int konc = 0;
 	while ((konc = napis.find(' ', pocz)) != string::npos) {
@@ -29,7 +30,7 @@ vector<string> slowaV1(string& napis) {
 			auto slowo = napis.substr(pocz, konc - pocz);
 			wyczysc(slowo);
 			if (!slowo.empty())
-				wynik.push_back(slowo);
+				cout << slowo << endl;
 		}
 		pocz = konc + 1;
 	}
@@ -37,31 +38,14 @@ vector<string> slowaV1(string& napis) {
 		auto slowo = napis.substr(pocz);
 		wyczysc(slowo);
 		if (!slowo.empty())
-			wynik.push_back(slowo);
+			cout << slowo << endl;
 
 	}
-
-	return wynik;
 }
-
-void test1() {
-	string napis = "We think in generalities, but we live in details";
-	vector<string> wynik({"We", "think", "in", "generalities", "but", 
-				"we", "live", "in", "details"});
-	assert(slowaV1(napis) == wynik);
-}
-
-void test2() {
-	string napis = "";
-	vector<string> wynik;
-	assert(slowaV1(napis) == wynik);
-}
-
 
 int main() {
-	test1();
-	test2();
+	string napis = "We think in generalities, but we live in details";
+	slowaV1(napis);
 	return 0;
 }
-
 
