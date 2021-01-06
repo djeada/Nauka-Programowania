@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <string>
 #include <cassert>
 
 using namespace std;
@@ -11,6 +9,8 @@ Dwa napisy są anagramami jesli jeden z nich można zbudować
 poprzez przestawienie znakow w drugim.
 */
 
+//Zlozonosc czasowa O(n)
+//Zlozonosc pamieciowa O(1)
 bool anagram(string s1, string s2) {
 
 	int N = s1.length();
@@ -34,16 +34,21 @@ bool anagram(string s1, string s2) {
 	return true;
 }
 
-int main() {
-    string s1 = "adam";
+void test1() {
+	string s1 = "adam";
 	string s2 = "mada";
-	string s3 = "dame";
-
 	assert(anagram(s1, s2));
-	assert(!anagram(s1, s3));
-    
-	return 0;
 }
 
-//g++ -std=c++14 Zad3.cpp -o exe
+void test2() {
+	string s1 = "adam";
+	string sw = "dame";
+	assert(!anagram(s1, sw));
+}
+
+int main() {
+	test1();
+	test2();
+	return 0;
+}
 
