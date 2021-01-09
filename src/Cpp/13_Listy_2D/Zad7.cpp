@@ -1,4 +1,3 @@
-#include <iostream>
 #include <cassert>
 #include <vector>
 
@@ -38,19 +37,24 @@ void wyzerujV1(vector<vector<int>>& macierz) {
 	}
 }
 
-int main() {
+void test1() {
 
-	vector<vector<int>> macierz { { 1, 2, 3 },
-                                { 4, 0, 6 },
-								{ 7, 8, 9} };
-	
+	vector<vector<int>> macierz { { 1, 2, 3 }, 
+				{ 4, 0, 6 }, 
+				{ 7, 8, 9} };
+
 	vector<vector<int>> wynik { { 1, 0, 3 },
-                                { 0, 0, 0 },
-								{ 7, 0, 9} };
+				{ 0, 0, 0 },
+				{ 7, 0, 9} };
 
 	wyzerujV1(macierz);
 
 	assert(macierz == wynik);
 
+}
+
+int main() {
+
+	test1();
 	return 0;	 	
 }
