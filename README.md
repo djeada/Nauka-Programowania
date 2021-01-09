@@ -1100,7 +1100,6 @@ Spis Treści
 
 </tbody>
 </table>
-
 <h1>Napisy - wprowadzenie</h1>
 <table>
 <thead>
@@ -1115,7 +1114,7 @@ Spis Treści
 <td>1</td>
 <td>Odwróć napis.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad1.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1125,7 +1124,7 @@ Spis Treści
 <td>2</td>
 <td>Policz wystąpienia znaku.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1135,7 +1134,7 @@ Spis Treści
 <td>3</td>
 <td>Z ilu słów składa się zdanie?</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1145,7 +1144,7 @@ Spis Treści
 <td>4</td>
 <td>Zamień wszystkie małe litery na wielkie.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1155,7 +1154,7 @@ Spis Treści
 <td>5</td>
 <td>Wypisz poziomo i pionowo co k-ty znak napisu.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1165,7 +1164,7 @@ Spis Treści
 <td>6</td>
 <td>Zamień litery <i>a</i> na znaki zapytania.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1175,7 +1174,7 @@ Spis Treści
 <td>7</td>
 <td>Zamień znaki na numery ASCII.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1185,7 +1184,7 @@ Spis Treści
 <td>8</td>
 <td>Wypisz pionowo słowa, z których składa się zdanie.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1195,7 +1194,7 @@ Spis Treści
 <td>9</td>
 <td>Wczytaj i rozdziel informacje o pracowniku.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad9.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1205,7 +1204,7 @@ Spis Treści
 <td>10</td>
 <td>Znajdź najdłuższe/najkrótsze słowo w zdaniu.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad10.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1215,7 +1214,7 @@ Spis Treści
 <td>11</td>
 <td>Średnia długość słów w zdaniu.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad11.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1235,7 +1234,7 @@ Spis Treści
 <td>13</td>
 <td>Znaki znajdujące się na pozycjach będących liczbami pierwszymi.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Napisy_wprowadzenie/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1245,7 +1244,7 @@ Spis Treści
 <td>14</td>
 <td>Napis składający się z liczb od 1 do n.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad14.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad14.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1255,7 +1254,7 @@ Spis Treści
 <td>15</td>
 <td>Słowa ze zdania jako osobne elementy listy.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad15.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1265,7 +1264,7 @@ Spis Treści
 <td>16</td>
 <td>Odległość Hamminga.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad16.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad16.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1276,7 +1275,7 @@ Spis Treści
 <td>17</td>
 <td>Zamień listę na napis.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad17.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad17.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1286,7 +1285,7 @@ Spis Treści
 <td>18</td>
 <td>Odwróć napisy w zdaniu.</td>
 <td><a>Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad18.cpp">Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/11_Napisy_wprowadzenie/Zad18">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1309,7 +1308,7 @@ Spis Treści
 <td>1</td>
 <td>Czy słowo jest palindromem?</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad1.cpp">Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12_Napisy_anagramy_palindromy/Zad1">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1319,7 +1318,7 @@ Spis Treści
 <td>2</td>
 <td>Wszystkie permutacje słowa.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad2.cpp">Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12_Napisy_anagramy_palindromy/Zad2">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1339,7 +1338,7 @@ Spis Treści
 <td>4</td>
 <td>Wszystkie palindromy w zdaniu.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1349,7 +1348,7 @@ Spis Treści
 <td>5</td>
 <td>Znajdź anagramy w zdaniu.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1359,7 +1358,7 @@ Spis Treści
 <td>6</td>
 <td>Permutacja będąca palindromem.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad6.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1369,7 +1368,7 @@ Spis Treści
 <td>7</td>
 <td>Ile znaków musimy usunąć aby uzyskać anagramy?</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad7.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1379,7 +1378,7 @@ Spis Treści
 <td>8</td>
 <td>Wyjątkowe palindromy.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad8.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1402,7 +1401,7 @@ Spis Treści
 <td>1</td>
   <td>Macierz <i>a</i> identycznych wierszy składających się z liczb od 0 do <i>b</i>.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1412,7 +1411,7 @@ Spis Treści
 <td>2</td>
 <td>Każdy element jest iloczynem współrzędnych.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1422,7 +1421,7 @@ Spis Treści
 <td>3</td>
 <td>Macierz z par odpowiadających sobie elementów dwóch list.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad3.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1432,7 +1431,7 @@ Spis Treści
 <td>4</td>
 <td>Dodawanie/odejmowanie macierzy.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1442,7 +1441,7 @@ Spis Treści
 <td>5</td>
 <td>Magiczny kwadrat.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1451,8 +1450,8 @@ Spis Treści
 <tr>
 <td>6</td>
 <td>Pokrywające się przedziały.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad7.py">Python</a></td>
- <td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad6.py">Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1472,7 +1471,7 @@ Spis Treści
 <td>8</td>
 <td>Wypisz spiralnie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad8.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1482,7 +1481,7 @@ Spis Treści
 <td>9</td>
 <td>Klepsydra o największej sumie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad9.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad9.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
