@@ -1572,7 +1572,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>6</td>
-<td>Miejsce zerowe wielomianu.</td>
+<td>Miejsce zerowe funkcji kwadratowej.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2170,16 +2170,6 @@ Spis Treści
 <td>7</td>
 <td>Znajdź liczbę instancji klasy w programie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad7.py">Python</a></td>
- <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
-<tr>
-<td>8</td>
-<td>Posortuj listę obiektów.</td>
-<td><a>Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
