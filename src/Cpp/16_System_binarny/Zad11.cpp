@@ -1,12 +1,10 @@
-#include <iostream>
 #include <cassert>
 #include <bitset>
 
 using namespace std;
 
-/*
-Konwersja miedzy dowolnymi systemami liczbowymi.
-*/
+
+//Czy liczba jest palindromem?
 
 const int liczbaBitow = 8;
 
@@ -20,15 +18,21 @@ bool czyPalindromV1(int liczba) {
 	return true;
 }
 
-int main() {
+void test1() {
 	int liczba = 231;
-	
 	assert(czyPalindromV1(liczba));
-	
-	liczba = 17;
-	
+}
+
+void test2() {
+	int liczba = 17;
 	assert(!czyPalindromV1(liczba));
-	
-    return 0;
+}
+
+int main() {
+
+	test1();
+	test2();
+
+	return 0;
 }
 

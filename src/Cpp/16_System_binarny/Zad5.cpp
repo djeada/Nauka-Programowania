@@ -1,60 +1,48 @@
-#include <iostream>
-#include <algorithm>
 #include <cassert>
-#include <cmath>
 
 using namespace std;
 
-/*
-Konwersja miedzy dowolnymi systemami liczbowymi.
-*/
+//Znajdz min/maks dwoch liczb bez uzycia instrukcji warunkowej.
 
-int naDec(string liczba, int podstawa) {
-    int wartoscDec = 0;
-    
-    for(int i = liczba.size() - 1; i >=0 ; i--) {
- 
-        if(liczba[i] >= 'A' && liczba[i] < 'Z')
-            wartoscDec += (liczba[i] - 'A' + 10)*pow(podstawa, (liczba.size() - 1 - i));
- 
-        else
-            wartoscDec += (liczba[i] - '0')*pow(podstawa, (liczba.size() - 1 - i));
-    }
-    
-    return wartoscDec;
+int znak(int n) {
+	return (n >> 31) & 0x01;
 }
 
-void zmianaPodstawy(string& liczba, int podstawa, int nowaPodstawa) {
-    
-    if (podstawa > (10 + 'Z' - 'A') )
-        return;
-    
-    int wartoscDec = naDec(liczba, podstawa);
-    liczba = "";
-    podstawa = nowaPodstawa;
-    
-    while (wartoscDec > 0) {
-        int reszta = wartoscDec % podstawa;
-        wartoscDec /= podstawa;
-        
-        char nowyZnak = '0' + reszta;
-        
-        if(nowyZnak > '9')
-  			nowyZnak = 'A' + (nowyZnak - '9') - 1;
-        
-        liczba += nowyZnak;
-    }
+// a >= b : znakA = 1, znakB = 0;
+// a < b : znakA = 0, znakB = 1;
+int maks(int a, int b) {
+	int znakB = znak(a-b);
+	int znakA = znakB ^ 1;
+	return znakA*a + znakB*b;
+}
 
-    reverse(liczba.begin(), liczba.end());
+int min(int a, int b) {
+	int znakB = znak(a-b);
+	int znakA = znakB ^ 1;
+	return znakB*a + znakA*b;
+}
+
+void test1() {
+	int a = 10;
+	int b = 8;
+	int wynik = a;
+
+	assert(maks(a,b) == wynik);
+}
+
+void test2() {
+	int a = 10;
+	int b = 8;
+	int wynik = b;
+
+	assert(min(a,b) == wynik);
 }
 
 int main() {
-	string liczba = "4301";
-	string wynik = "1003031";
-    zmianaPodstawy(liczba, 10, 4);
 
-	assert(liczba == wynik);
-	
-    return 0;
+	test1();
+	test2();
+
+	return 0;
 }
 
