@@ -2147,7 +2147,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
 <tr>
 <td>5</td>
-  <td>Zaprojektuj klasę <i>LiczbaZespolona</i>.</td>
+  <td>Zaprojektuj klasę <i>Zespolona</i>.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2213,7 +2213,7 @@ Spis Treści
   </tr>
    <tr>
 <td>3</td>
-   <td>Polimorfizm</td>
+   <td>Polimorfizm.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20_Dziedziczenie/Zad3.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2224,7 +2224,7 @@ Spis Treści
   </tr> 
     <tr>
 <td>4</td>
-   <td>Dziedziczenie wielopoziomowe</td>
+   <td>Dziedziczenie wielopoziomowe.</td>
 <td><a>Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2235,7 +2235,7 @@ Spis Treści
   </tr>
   <tr>
 <td>5</td>
-   <td>Dziedziczenie wielokrotne</td>
+   <td>Dziedziczenie wielokrotne.</td>
 <td><a>Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2623,7 +2623,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
   <tr>
 <td>8</td>
-<td>Sznurek</td>
+<td>Sznurek.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad8.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
