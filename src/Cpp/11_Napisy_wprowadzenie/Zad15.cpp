@@ -1,23 +1,13 @@
 #include <cassert>
 #include <string>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
 //Otrzymujesz napis reprezentajacy zdanie. 
 //Zwroc liste skladajaca sie ze slow zdania. 
 //Znaki interpunkcyjne nie sa liczone jako slowa. 
-
-
-bool palindrom(string& slowo) {
-	int N = slowo.length() - 1;
-	for (int i = 0; i <= N/2; i++) {
-		if (slowo[i] != slowo[N - i])
-			return false;
-	}
-
-	return true;
-}
 void wyczysc(string& napis){
 	auto it = napis.begin();
 
