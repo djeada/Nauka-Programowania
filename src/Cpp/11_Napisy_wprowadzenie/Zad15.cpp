@@ -56,7 +56,6 @@ void test2() {
 	assert(slowaV1(napis) == wynik);
 }
 
-
 int main() {
 	test1();
 	test2();
