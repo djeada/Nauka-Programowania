@@ -1710,7 +1710,7 @@ Spis Treści
 <td>1</td>
 <td>Konwersja między systemami binarnym i dziesiętnym.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad1.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1720,7 +1720,7 @@ Spis Treści
 <td>2</td>
 <td>Konwersja gdy spełniony jest warunek.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1730,7 +1730,7 @@ Spis Treści
 <td>3</td>
 <td>Operacje arytmetyczne.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1740,7 +1740,7 @@ Spis Treści
 <td>4</td>
 <td>Zera/jedynki w liczbie binarnej.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad4.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1750,7 +1750,7 @@ Spis Treści
 <td>5</td>
 <td>Min/maks z dwóch liczb.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad5.py">Python</a></td>
-<td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad5.cpp">Cpp</a></td> 
 <td><a>Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
@@ -1760,7 +1760,7 @@ Spis Treści
 <td>6</td>
 <td>Konwersja między dowolnymi systemami.</td>
 <td><a >Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad5.cpp">Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1770,7 +1770,7 @@ Spis Treści
 <td>7</td>
 <td>Zamiana sąsiadów.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad7.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1780,7 +1780,7 @@ Spis Treści
 <td>8</td>
 <td>Następna potęga dwójki.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad8.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1790,7 +1790,7 @@ Spis Treści
 <td>9</td>
 <td>Zamiana wielkości liter.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad9.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad9.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1800,7 +1800,7 @@ Spis Treści
 <td>10</td>
     <td>Zamień <b>A</b> w <b>B</b>.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad10.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad10.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1810,7 +1810,7 @@ Spis Treści
 <td>11</td>
 <td>Czy liczba jest palindromem?</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad11.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad11.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1820,7 +1820,7 @@ Spis Treści
 <td>12</td>
 <td>Najdłuższy ciąg zer w liczbie binarnej.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad12.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1843,7 +1843,7 @@ Spis Treści
 <td>1</td>
 <td>Kluczami są liczby, a wartościami ich kwadraty.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad1.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1854,7 +1854,7 @@ Spis Treści
 <td>2</td>
 <td>Lista kluczy i lista wartości.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1865,7 +1865,7 @@ Spis Treści
 <td>3</td>
 <td>Klucz to imię, wartość lista wypożyczonych książek.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad3.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1875,7 +1875,7 @@ Spis Treści
 <td>4</td>
 <td>Usuń ze słownika.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad4.cpp">Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad4">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1884,7 +1884,7 @@ Spis Treści
 <td>5</td>
 <td>Lista pracowników.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1894,7 +1894,7 @@ Spis Treści
 <td>6</td>
 <td>Histogram znaków w słowie.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1904,7 +1904,7 @@ Spis Treści
 <td>7</td>
 <td>Histogram słów w tekście.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1914,7 +1914,7 @@ Spis Treści
 <td>8</td>
 <td>Najczęściej występująca litera w zdaniu.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad8.cpp">Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad8">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1924,7 +1924,7 @@ Spis Treści
 <td>9</td>
 <td>Powtarzające się znaki.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad9.cpp">Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad9">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1934,7 +1934,7 @@ Spis Treści
 <td>10</td>
 <td>Anagramy w tekście.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad10.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1944,7 +1944,7 @@ Spis Treści
 <td>11</td>
 <td>Sortowanie względem kluczy/wartości.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad11.cpp">Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17_Slowniki/Zad11">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1954,7 +1954,7 @@ Spis Treści
 <td>12</td>
 <td>Czy słowniki są identyczne?</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad12.cpp">Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad12">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
