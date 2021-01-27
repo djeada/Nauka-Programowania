@@ -2064,7 +2064,7 @@ Spis Treści
  <td><a>Rust</a></td></tr>
  <tr>
 <td>10</td>
-<td>Skopiuj piliki.</td>
+<td>Skopiuj pliki.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
  <td><a>Java</a></td> 
