@@ -6,9 +6,9 @@
 using namespace std;
 
 //Otrzymujesz dwa slowniki skladajace się z par napisow i list liczb. 
-//Listy sa nieuporzadkowane. Sprawdz czy slowniki skladaja się z tych samych par. 
+//Listy sa nieuporzadkowane. Sprawdz czy slowniki skladaja sie z tych samych par. 
 //Dwie listy uznajemy za identyczne jesli zawieraja te same elementy, przy czym 
-//kolejnosc elementow może byc zmieniona.
+//kolejnosc elementow moze byc zmieniona.
 
 bool wektoryRowne(vector<int> v1, vector<int> v2) {
 	sort(v1.begin(), v1.end());

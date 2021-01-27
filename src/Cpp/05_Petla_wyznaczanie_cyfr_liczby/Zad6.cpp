@@ -68,7 +68,7 @@ int main() {
 	//e) mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr
 	cout << "mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr" << endl;
 
-	for (int i=0; i<a; i++) { 
+	for (int i = 0; i < a; i++) { 
 		int pom = i;
 		bool flaga = true;
 		while (pom > 0) {

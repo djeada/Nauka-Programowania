@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 //Napisz funkcje, ktora dla otrzymanej liczby n,
 //poprosi uzytkownika o podanie n liczb i zwroci
 //ich srednia arytmetyczna
@@ -12,8 +10,8 @@ float srednia(int n) {
 	int x;
 
 	for (int i = 0; i < n; i++) {
-		cout << "Podaj liczbe: " << endl;
-		cin >> x;
+		std::cout << "Podaj liczbe: " << std::endl;
+		std::cin >> x;
 		suma += x;
 	}
 
@@ -22,13 +20,13 @@ float srednia(int n) {
 
 int main () {
 
-	cout << "Podaj liczbe n: " << endl;
+	std::cout << "Podaj liczbe n: " << std::endl;
 	int n;
-	cin >> n;
+	std::cin >> n;
 	
 	float wynik = srednia(n);
 
-	cout << "Srednia z podanych liczb to " << wynik << endl;
+	std::cout << "Srednia z podanych liczb to " << wynik << std::endl;
 
 	return 0;
 }

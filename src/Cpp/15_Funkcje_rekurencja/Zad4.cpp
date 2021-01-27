@@ -12,12 +12,16 @@ int silniaV1(int n) {
 	return n * silniaV1(n-1);
 }
 
-int main() {
+void test1() {
 	int n = 3;
 	int wynik = 6;
 	
 	assert(silniaV1(n) == wynik);
-	
-    return 0;
+}
+
+int main() {
+	test1();
+
+	return 0;
 }
 

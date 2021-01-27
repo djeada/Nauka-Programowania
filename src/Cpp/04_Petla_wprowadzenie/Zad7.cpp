@@ -18,4 +18,6 @@ int main() {
 		wynik *= 3.14;
 
 	cout << wynik << endl;
+
+	return 0;
 }

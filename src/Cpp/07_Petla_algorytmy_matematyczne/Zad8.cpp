@@ -1,8 +1,5 @@
-#include <iostream>
 #include <cassert>
 #include <cmath>
-
-using namespace std;
 
 //Napisz funkcje, ktora dla otrzymanej liczby sprawdzi
 //czy jest ona liczba pierwsza.
