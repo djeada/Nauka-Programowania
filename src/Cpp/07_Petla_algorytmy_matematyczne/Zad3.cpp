@@ -1,7 +1,4 @@
-#include <iostream>
 #include <cassert>
-
-using namespace std;
 
 //Napisz funkcje, ktora dla otrzymanych dwoch liczb, 
 //przy pomocy dodawania badz odejmowania oraz petli zrealizuje:
@@ -26,20 +23,26 @@ int dzielenie(int a, int b) {
 	return wynik;
 }
 
-
-int main () {
-
+void test1() {
 	int a = 2;
 	int b = 3;
 
 	int wynik = 6;
 	assert(mnozenie(a, b) == wynik);
+}
 
-	a = 30;
-	b = 6;
+void test2() {
+	int a = 30;
+	int b = 6;
 
-	wynik = 5;
+	int wynik = 5;
 	assert(dzielenie(a, b) == wynik);
+}
+
+int main () {
+
+	test1();
+	test2();	
 
 	return 0;
 }

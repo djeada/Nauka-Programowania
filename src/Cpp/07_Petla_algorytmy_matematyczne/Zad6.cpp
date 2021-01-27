@@ -1,7 +1,4 @@
-#include <iostream>
 #include <cassert>
-
-using namespace std;
 
 //Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci
 //ich najmniejsza wspolna wielokrotnosc.
@@ -26,14 +23,18 @@ int nww(int a, int b) {
 	return a * b / nwd(a, b);
 }
 
-int main () {
-
+void test1() {
 	int a = 14;
 	int b = 21;
 	int wynik = 42;
 
 	assert(nww(a, b) == wynik);
+}
+
+int main () {
 	
+	test1();
+
 	return 0;
 }
 

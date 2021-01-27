@@ -1,7 +1,4 @@
-#include <iostream>
 #include <cassert>
-
-using namespace std;
 
 //Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci
 //ich najwiekszy wspolny dzielnik.
@@ -30,14 +27,26 @@ int nwdV2(int a, int b) {
 	return a;
 }
 
-int main () {
-
+void test1() {
 	int a = 14;
 	int b = 21;
 	int wynik = 7;
 
 	assert(nwdV1(a, b) == wynik);
+}
+
+void test2() {
+	int a = 14;
+	int b = 21;
+	int wynik = 7;
+
 	assert(nwdV2(a, b) == wynik);
+}
+
+int main () {
+
+	test1();
+	test2();
 	
 	return 0;
 }

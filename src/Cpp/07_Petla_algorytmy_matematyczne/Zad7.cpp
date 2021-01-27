@@ -1,7 +1,5 @@
-#include <iostream>
 #include <cassert>
-
-using namespace std;
+#include <cmath>
 
 //Napisz funkcje, ktora dla otrzymanej liczby
 //zwroci jej pierwiastek.
@@ -19,13 +17,17 @@ float pierwiastek(int a) {
 
 }
 
-int main () {
-
+void test1() {
 	int a = 16;
 	int wynik = 4;
 
 	assert(abs(pierwiastek(a) - wynik) <= dokladnosc);
+}
+
+int main () {
 	
+	test1();
+
 	return 0;
 }
 

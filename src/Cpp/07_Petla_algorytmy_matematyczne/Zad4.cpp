@@ -1,7 +1,4 @@
-#include <iostream>
 #include <cassert>
-
-using namespace std;
 
 //Napisz funkcje, ktora przy pomocy petli obliczy silnie
 //z otrzymanej liczby.
@@ -18,11 +15,22 @@ int silnia(int a) {
 	return wynik;
 }
 
-int main () {
-
+void test1() {
 	int a = 4;
 	int wynik = 24;
 	assert(silnia(a) == wynik);
+}
+
+void test2() {
+	int a = -5;
+	int wynik = 1;
+	assert(silnia(a) == wynik);
+}
+
+int main () {
+
+	test1();
+	test2();
 
 	return 0;
 }

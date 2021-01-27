@@ -12,12 +12,17 @@ int sumaV1(int N) {
 	return N + sumaV1(N - 1);
 }
 
-int main() {
+void test1() {
 	int N = 10;
 	int wynik = 55;
 	
 	assert(sumaV1(N) == wynik);
-	
-    return 0;
+}
+
+int main() {
+
+	test1();
+
+	return 0;
 }
 

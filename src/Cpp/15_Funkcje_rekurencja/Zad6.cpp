@@ -15,12 +15,17 @@ int ciagV1(int n) {
 	return 1 + ciagV1(n-1)*2;
 }
 
-int main() {
+void test1() {
 	int n = 5;
 	int wynik = 31;
 
 	assert(ciagV1(n) == wynik);
+}
+
+int main() {
 	
-    return 0;
+	test1();
+
+	return 0;
 }
 

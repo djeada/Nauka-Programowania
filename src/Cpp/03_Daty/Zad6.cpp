@@ -7,7 +7,7 @@ int main() {
 	//Dla pobranych trzech liczb, sprawdz czy reprezentuja one poprawna date. 
 	//Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem.
 	
-	   cout << "Podaj dzien, miesiac i rok: " << endl;
+	cout << "Podaj dzien, miesiac i rok: " << endl;
 	int dzien;
 	cin >> dzien;
 	int miesiac;
@@ -32,27 +32,27 @@ int main() {
 
 		else if (miesiac == 2) {
 			if (rok % 4 == 0 ) {
-        		if (rok % 100 == 0 ) {
-            		if (rok % 400 == 0  && dzien >= 1 && dzien <= 29)
+        				if (rok % 100 == 0 ) {
+            				if (rok % 400 == 0  && dzien >= 1 && dzien <= 29)
 						cout << "Podana data jest poprawna" << endl;
 					else if (dzien >= 1 && dzien <= 28 )
 						cout << "Podana data jest poprawna" << endl;
 					else	
 						cout << "Podano niepoprawna date" << endl;
 				}
-         		else if (dzien >= 1 && dzien <= 29 )
+         				else if (dzien >= 1 && dzien <= 29 )
 					cout << "Podana data jest poprawna" << endl;
 				else
 					cout << "Podano niepoprawna date" << endl;
 			}
-     		else if (dzien >= 1 && dzien <= 28 )
-					cout << "Podana data jest poprawna" << endl;
+     			else if (dzien >= 1 && dzien <= 28 )
+				cout << "Podana data jest poprawna" << endl;
 		}
 	
 		else  
 			cout << "Podano niepoprawna date" << endl;
   	}
-    else  
+	else  
 		cout << "Podano niepoprawna date" << endl;
 
 	return 0;

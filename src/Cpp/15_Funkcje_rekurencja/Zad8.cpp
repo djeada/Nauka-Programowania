@@ -1,13 +1,10 @@
 #include <cassert>
 #include <vector>
+#include <utility>
 
-using namespace std;
+//Wieza Hanoi.
 
-/*
-Wieza Hanoi.
-*/
-
-void hanoiWew(int n, char a, char b, char c, vector<pair<char,char>>& wynik) {
+void hanoiWew(int n, char a, char b, char c, std::vector<std::pair<char,char>>& wynik) {
 
 	if (n == 1) {
 		wynik.emplace_back(a, b);
@@ -19,19 +16,24 @@ void hanoiWew(int n, char a, char b, char c, vector<pair<char,char>>& wynik) {
 	hanoiWew(n - 1, c, b, a, wynik);
 }
 
-vector<pair<char,char>> hanoi(int n) { 
-	vector<pair<char,char>> wynik;
+std::vector<std::pair<char,char>> hanoi(int n) { 
+	std::vector<std::pair<char,char>> wynik;
 	hanoiWew(n, 'A', 'B', 'C', wynik);
 	return wynik;
 }
 
-int main() {
+void test1() {
 	int n = 3;
-	vector<pair<char, char>> wynik = { {'A', 'B'}, {'A', 'C'}, {'B', 'C'}, 
+	std::vector<std::pair<char, char>> wynik = { {'A', 'B'}, {'A', 'C'}, {'B', 'C'}, 
 		{'A', 'B'}, {'C', 'A'}, {'C', 'B'}, {'A', 'B'}};
 	
 	assert(hanoi(n) == wynik);
+}
+
+int main() {
+
+	test1();
 		
-    return 0;
+	return 0;
 }
 

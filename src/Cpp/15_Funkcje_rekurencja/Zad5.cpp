@@ -1,8 +1,6 @@
 #include <cassert>
-#include <iostream>
-/*
-Liczba Fibonacciego.	
-*/
+
+//Liczba Fibonacciego.
 
 int fibonnaciV1(int n) { 
 	
@@ -28,13 +26,18 @@ int fibonnaciV2(int n) {
 	return pom[n];
 }
 
-int main() {
+void test1() {
 	int n = 7;
 	int wynik = 13;
 
 	assert(fibonnaciV1(n) == wynik);
 	assert(fibonnaciV2(n) == wynik);
-	
-    return 0;
+}
+
+int main() {
+
+	test1();
+
+	return 0;
 }
 

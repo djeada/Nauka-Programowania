@@ -12,13 +12,18 @@ int potegaV1(int a, int b) {
 	return a * potegaV1(a, b-1);
 }
 
-int main() {
+void test1() {
 	int a = 3;
 	int b = 2;
 	int wynik = 9;
 	
 	assert(potegaV1(a, b) == wynik);
-	
-    return 0;
+}
+
+int main() {
+
+	test1();
+
+	return 0;
 }
 
