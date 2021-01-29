@@ -349,7 +349,7 @@ Spis Treści
 <tbody>
 <tr>
 <td>1</td>
-<td>Warunek kończący pętle.</td>
+<td>Warunek kończący pętlę.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04_Petla_wprowadzenie/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
@@ -2633,7 +2633,7 @@ Spis Treści
 <td><a>Rust</a></td></tr>
     <tr>
 <td>9</td>
-<td>Najdluzszy naprzemienny podciag.</td>
+<td>Najdłuższy naprzemienny podciąg.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad9.py">Python</a></td>
 <td><a>Cpp</a></td> 
 <td><a>Java</a></td> 
