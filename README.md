@@ -2206,7 +2206,7 @@ Rozwiązania
   </tr>  
  <tr>
 <td>2</td>
-   <td>Zaprojektuj klasę <i>Kształt</i> oraz klasy pochodne <i>Koło</i> oraz <i>Kwadrat</i>.</td>
+   <td>Zaprojektuj klasę bazową oraz klasy pochodne.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
