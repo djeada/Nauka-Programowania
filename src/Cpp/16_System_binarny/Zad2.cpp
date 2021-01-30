@@ -1,25 +1,23 @@
-#include <iostream>
 #include <cassert>
 #include <string>
-
-using namespace std;
+#include <cmath>
 
 //Otrzymujesz liczbe, zamien ja na jej binarny odpowiednik jesli:
 
 //a) jest liczba parzysta.
-string naBin(int liczba) {
+std::string naBin(int liczba) {
 	
-	string bin;
+	std::string bin;
 
 	while (liczba > 0) {
-		bin.insert(0, to_string(liczba % 2));
+		bin.insert(0, std::to_string(liczba % 2));
 		liczba /= 2;
 	}
 	
 	return bin;
 }
 
-string zamienLiczbeParzysta(int liczba) {
+std::string zamienLiczbeParzysta(int liczba) {
 	if (liczba % 2 == 0)
 		return naBin(liczba);
 
@@ -35,7 +33,7 @@ bool czyPierwsza(int n) {
 	if (n % 2 == 0 && n != 2)
 		return false;
 	
-	for (int i = 3; i <= sqrt((double)n); i += 2) {
+	for (int i = 3; i <= std::sqrt((double)n); i += 2) {
 		if ( n % i == 0)
 			return false;
 	}
@@ -43,7 +41,7 @@ bool czyPierwsza(int n) {
 	return true;
 }
 
-string zamienLiczbePierwsza(int liczba) {
+std::string zamienLiczbePierwsza(int liczba) {
 	if (czyPierwsza(liczba))
 		return naBin(liczba);
 
@@ -52,28 +50,28 @@ string zamienLiczbePierwsza(int liczba) {
 
 void test1() {
 	int liczba = 3;
-	string wynik;
+	std::string wynik;
 
 	assert(zamienLiczbeParzysta(liczba) == wynik);
 }
 
 void test2() {
 	int liczba = 124;
-	string wynik = "1111100";
+	std::string wynik = "1111100";
 
 	assert(zamienLiczbeParzysta(liczba) == wynik);
 }
 
 void test3() {
 	int liczba = 124;
-	string wynik;
+	std::string wynik;
 
 	assert(zamienLiczbePierwsza(liczba) == wynik);
 }
 
 void test4() {
 	int liczba = 3;
-	string wynik = "11";
+	std::string wynik = "11";
 
 	assert(zamienLiczbePierwsza(liczba) == wynik);
 }

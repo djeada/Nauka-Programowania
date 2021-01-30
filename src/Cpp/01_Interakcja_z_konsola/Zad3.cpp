@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 //Narysuj ksztalt.
 
 int main(){
@@ -11,8 +9,8 @@ int main(){
 	XX
 	*/
 
-	cout << "xx" << endl;
-	cout << "xx" << endl << endl;
+	std::cout << "xx" << std::endl;
+	std::cout << "xx" << std::endl << std::endl;
 
 	/*Trojkat.
 	1
@@ -20,9 +18,9 @@ int main(){
 	333
 	*/
 	
-	cout << "1" << endl;
-	cout << "22" << endl;
-	cout << "333" << endl << endl;
+	std::cout << "1" << std::endl;
+	std::cout << "22" << std::endl;
+	std::cout << "333" << std::endl << std::endl;
 	
 	/*Romb z jedynek.
 	  1
@@ -32,11 +30,11 @@ int main(){
  	 1
  	*/
   	
-  	cout << "  1" << endl;
-  	cout << " 111" << endl;
-  	cout << "11111" << endl;
-  	cout << " 111" << endl;
-  	cout << "  1" << endl;	
+  	std::cout << "  1" << std::endl;
+  	std::cout << " 111" << std::endl;
+  	std::cout << "11111" << std::endl;
+  	std::cout << " 111" << std::endl;
+  	std::cout << "  1" << std::endl;	
   	
 	return 0;
 }

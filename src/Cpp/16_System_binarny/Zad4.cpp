@@ -1,22 +1,22 @@
 #include <cassert>
 #include <vector>
-#include <math.h>
-using namespace std;
+#include <cmath>
 
 //Policz z ilu zer i jedynek sklada sie otrzymana liczba.
 
 int policzUstawioneBity(int liczba) {
-    int suma = 0;
-    while (liczba > 0) {
-        if (liczba & 1)
-            suma++;
-        liczba >>= 1;
+	int suma = 0;
+
+	while (liczba > 0) {
+		if (liczba & 1)
+			suma++;
+		liczba >>= 1;
 	}
 
-    return suma;
+	return suma;
 }
 
-void przygotujTablice(vector<int>& tablica) {
+void przygotujTablice(std::vector<int>& tablica) {
 
 	tablica.clear();
 
@@ -28,36 +28,36 @@ int liczbaBitow(int liczba) {
 	return (int)log2(liczba) + 1; 
 }
 
-int zera(int liczba, vector<int>& tablica) {
+int zera(int liczba, std::vector<int>& tablica) {
 	return liczbaBitow(liczba) - tablica[liczba & 0xff] + tablica[(liczba >> 8) & 0xff] + tablica[(liczba >> 16) & 0xff] + tablica[(liczba >> 24) & 0xff];
 }
 
-int jedynki(int liczba, vector<int>& tablica) {
+int jedynki(int liczba, std::vector<int>& tablica) {
 	return tablica[liczba & 0xff] + tablica[(liczba >> 8) & 0xff] + tablica[(liczba >> 16) & 0xff] + tablica[(liczba >> 24) & 0xff];
 }
 
-void test1(vector<int>& tablica) {
+void test1(std::vector<int>& tablica) {
 	int liczba = 10;
 	int wynik = 2;
 
 	assert(jedynki(liczba, tablica) == wynik);
 }
 
-void test2(vector<int>& tablica) {
+void test2(std::vector<int>& tablica) {
 	int liczba = 7;
 	int wynik = 3;
 
 	assert(jedynki(liczba, tablica) == wynik);
 }
 
-void test3(vector<int>& tablica) {
+void test3(std::vector<int>& tablica) {
 	int liczba = 10;
 	int wynik = 2;
 
 	assert(zera(liczba, tablica) == wynik);
 }
 
-void test4(vector<int>& tablica) {
+void test4(std::vector<int>& tablica) {
 	int liczba = 7;
 	int wynik = 0;
 
@@ -66,7 +66,7 @@ void test4(vector<int>& tablica) {
 
 int main() {
 
-	vector<int> tablica;
+	std::vector<int> tablica;
 	przygotujTablice(tablica);
 	
 	test1(tablica);

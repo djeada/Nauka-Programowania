@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 	
 	/*
@@ -10,9 +8,9 @@ int main() {
 
 	int a, b;
 	
-	cin >> a >> b;
+	std::cin >> a >> b;
 	
-	cout << b << endl << a;
+	std::cout << b << std::endl << a << std::endl;
 	
 	return 0;
 }

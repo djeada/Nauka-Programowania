@@ -1,7 +1,5 @@
 #include <cassert>
 
-using namespace std;
-
 //Znajdz potege dwojki wieksza badz rowna otrzymanej liczbie. 
 //Inaczej: zaaokraglij liczbe do nastepnej potegi dwojki. 
 //Dla otrzymanej liczby ujemnej zwroc 0.
@@ -15,7 +13,7 @@ int nastepnaPotegaDwojkiV1(int liczba) {
 
 	liczba--;
 
-	while (liczba & liczba - 1)
+	while (liczba & (liczba - 1))
 		liczba &= liczba - 1;
 		
 	return liczba << 1;

@@ -1,17 +1,15 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 
 
 	//Wypisz pobrana od uzytkownika liczbe, jesli jest wieksza od 5.
 	
-	cout << "podaj liczbe:" << endl;
+	std::cout << "podaj liczbe:" << std::endl;
 	int x;
-	cin >> x; 
+	std::cin >> x; 
 	if (x > 5)
-		cout << x << endl;
+		std::cout << x << std::endl;
 		
 	return 0;
 }

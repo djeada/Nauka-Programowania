@@ -1,9 +1,8 @@
 #include <cassert>
 #include <algorithm>
 
-using namespace std;
+//Znajdz dlugosc najdluzszego ciagu zer w liczbie binarnej.
 
-// Znajdz dlugosc najdluzszego ciagu zer w liczbie binarnej.
 int najdluzszyCiagZer(int liczba) {
 	if (liczba == 0)
 		return 1; 
@@ -15,13 +14,13 @@ int najdluzszyCiagZer(int liczba) {
 		int reszta = liczba % 2; 
 		liczba /= 2; 
 		if (reszta == 1) { 
-			wynik = max(wynik, pom); 
+			wynik = std::max(wynik, pom); 
 			pom = 0; 
 		}
 		else
 			pom++; 
 	} 
-	return max(wynik, pom); 
+	return std::max(wynik, pom); 
 }
 
 void test1() {

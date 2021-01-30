@@ -1,8 +1,6 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
-
 int main() {
 
 	/*
@@ -10,16 +8,17 @@ int main() {
 	za podloge o podanych wymiarach. Podloga jest prostokatem, a plytka kwadratem
 	*/
 
-	cout << "podaj: cene plytki, dlugosc boku plytki i wymiary podlogi" << endl;
+	std::cout << "podaj: cene plytki, dlugosc boku plytki i wymiary podlogi" << std::endl;
 
 	int cena;
-	cin >> cena;
 	int bokPlytki;
-	cin >> bokPlytki;
 	int szerokoscPodlogi;
-	cin >> szerokoscPodlogi; 
 	int dlugoscPodlogi;
-	cin >> dlugoscPodlogi; 
+
+	std::cin >> cena;
+	std::cin >> bokPlytki;
+	std::cin >> szerokoscPodlogi;
+	std::cin >> dlugoscPodlogi; 
 
 	int szerokoscKonieczna = szerokoscPodlogi + bokPlytki - szerokoscPodlogi % bokPlytki;
 	int dlugoscKonieczna = dlugoscPodlogi + bokPlytki - dlugoscPodlogi % bokPlytki;
@@ -29,9 +28,9 @@ int main() {
 	
 	float calkowityKoszt = cena * (float)polePodlogi / polePlytki;
 
-	cout <<  "Dla plytki o dlugosci boku " << bokPlytki << "i ceny " << cena << 
+	std::cout <<  "Dla plytki o dlugosci boku " << bokPlytki << "i ceny " << cena << 
 		" calkowity koszt wylozenia podlogi o wymiarach " << szerokoscPodlogi << 
-		"x" << dlugoscPodlogi << " wynosi " << calkowityKoszt << endl;
+		"x" << dlugoscPodlogi << " wynosi " << calkowityKoszt << std::endl;
 
 	return 0;
 }

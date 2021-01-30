@@ -1,21 +1,20 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-
 
 	//Dla dwoch pobranych liczb, sprawdz czy pobrane liczby sa identyczne.
 	
-	cout << "podaj dwie liczby:" << endl;
+	std::cout << "podaj dwie liczby:" << std::endl;
 	int a;
-	cin >> a;
 	int b;
-	cin >> b; 
+
+	std::cin >> a;
+	std::cin >> b;
+ 
 	if (a == b)
-		cout << "liczby sa jednakowe" << endl;
+		std::cout << "liczby sa jednakowe" << std::endl;
 	else
-		cout << "liczby sa rozne" << endl;
+		std::cout << "liczby sa rozne" << std::endl;
 	return 0;
 }
 

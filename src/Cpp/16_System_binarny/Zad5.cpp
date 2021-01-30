@@ -1,7 +1,5 @@
 #include <cassert>
 
-using namespace std;
-
 //Znajdz min/maks dwoch liczb bez uzycia instrukcji warunkowej.
 
 int znak(int n) {

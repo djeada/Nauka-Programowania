@@ -9,7 +9,7 @@ using namespace std;
 //sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek. 
 //Baza danych powinna umozliwiac:
 //a) dodanie wypozyczonej ksiazki do danego czytelnika;
-void dodajKsiazke(unordered_map<string, vector<string>>& lista, const string& uzytkownik, const string& ksiazka) {
+void dodajKsiazke(std::unordered_map<std::string, std::vector<std::string>>& lista, const std::string& uzytkownik, const std::string& ksiazka) {
 	if (lista.count(uzytkownik)) {	
 
 		if (find(lista[uzytkownik].begin(), lista[uzytkownik].end(), ksiazka) == lista[uzytkownik].end())
@@ -21,13 +21,13 @@ void dodajKsiazke(unordered_map<string, vector<string>>& lista, const string& uz
 	}
 
 	else {
-		vector<string> ksiazki {ksiazka};
+		std::vector<std::string> ksiazki {ksiazka};
 		lista[uzytkownik] = ksiazki;
 	}
 }
 
 //b) usuniecie wypozyczonej ksiazki z listy odpowiadajacej czytelnikowi;
-void usunKsiazke(unordered_map<string, vector<string>>& lista, const string& uzytkownik, const string& ksiazka) {
+void usunKsiazke(std::unordered_map<std::string, std::vector<std::string>>& lista, const std::string& uzytkownik, const std::string& ksiazka) {
 	
 	if (!lista.count(uzytkownik)) {	
 		cout << "Podany uzytkownik nie znajduje sie w liscie." << endl;
@@ -43,7 +43,7 @@ void usunKsiazke(unordered_map<string, vector<string>>& lista, const string& uzy
 
 //c) wyswietlenie aktualnej listy ksiazek dla konkretnego czytelnika oraz 
 //dla wszystkich czytelnikow;
-void wyswietlKsiazki(unordered_map<string, vector<string>>& lista, const string& uzytkownik) {
+void wyswietlKsiazki(std::unordered_map<std::string, std::vector<std::string>>& lista, const std::string& uzytkownik) {
 
 	if (!lista.count(uzytkownik)) {	
 		cout << "Podany uzytkownik nie znajduje sie w liscie." << endl;
@@ -57,7 +57,7 @@ void wyswietlKsiazki(unordered_map<string, vector<string>>& lista, const string&
 
 }
 
-void wyswietlWszystkieKsiazki(unordered_map<string, vector<string>>& lista) {
+void wyswietlWszystkieKsiazki(std::unordered_map<std::string, std::vector<std::string>>& lista) {
 	
 	for (auto it = lista.begin(); it != lista.end(); it++) {
 		wyswietlKsiazki(lista, it->first);
@@ -67,7 +67,7 @@ void wyswietlWszystkieKsiazki(unordered_map<string, vector<string>>& lista) {
 
 int main() {
 
-	unordered_map<string, vector<string>> lista;
+	std::unordered_map<std::string, std::vector<std::string>> lista;
 
 	dodajKsiazke(lista, "Pan T", "Duma i uprzedzenie – Jane Austen");
 	dodajKsiazke(lista, "Pan T", "Zabić drozdad – Harper Lee");

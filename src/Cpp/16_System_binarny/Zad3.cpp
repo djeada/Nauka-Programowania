@@ -1,8 +1,6 @@
 #include <cassert>
 #include <functional>
 
-using namespace std;
-
 //Otrzymujesz dwie liczby. Uzywając jedynie operatorow bitowych zaimplementuj:
 
 //a) dodawanie.

@@ -1,7 +1,5 @@
 #include <cassert>
 
-using namespace std;
-
 //Zamien miejscami sasiadujace bity.
 int zamienSasiadow(int liczba) {
 	int parzyste = liczba & 0xAAAAAAAA;

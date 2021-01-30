@@ -1,31 +1,29 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 
 	//Pobierz podstawe i wysokosc trojkata i wypisz pole. 
 
-	cout << "podaj podstawe i wysokosc trojkata:" << endl;
+	std::cout << "podaj podstawe i wysokosc trojkata:" << std::endl;
 
 	float a;
-	cin >> a;
+	std::cin >> a;
 	float h;
-	cin >> h;
+	std::cin >> h;
 
-	cout << "pole trojkata o podstawie " << a << " i wysokosci " 
-		<< h << " jest rowne " << a*h/2 << endl;
+	std::cout << "pole trojkata o podstawie " << a << " i wysokosci " 
+		<< h << " jest rowne " << a*h/2 << std::endl;
 
 	//Pobierz dlogosci bokow prostokata i wypisz pole.
 
-	cout << "podaj dlugosci bokow prostokata:" << endl;
+	std::cout << "podaj dlugosci bokow prostokata:" << std::endl;
 
-	cin >> a;
+	std::cin >> a;
 	float b;
-	cin >> b;
+	std::cin >> b;
 
-	cout << "pole prostokata o bokach " << a << " i " << b 
-		<< " jest rowne " << a*b << endl;
+	std::cout << "pole prostokata o bokach " << a << " i " << b 
+		<< " jest rowne " << a*b << std::endl;
 
 	return 0;
 }
