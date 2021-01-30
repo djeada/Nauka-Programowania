@@ -16,7 +16,11 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
   <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++</a></li>  
 </ul>
 
-Spis Treści
+# Zadania
+Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-programowania/blob/master/Zadania.pdf">linkiem</a>.
+Zbiór będzie poszerzany i aktualizowany.
+
+Rozwiazania
 =================
 
 <!--ts-->
@@ -1986,8 +1990,8 @@ Spis Treści
     <tr>
 <td>2</td>
 <td>Znajdź w folderze wszystkie pliki z danym rozszerzeniem.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad5.py">Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad5.cpp">Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad2.py">Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -1997,7 +2001,7 @@ Spis Treści
 <td>3</td>
 <td>Znajdź ścieżkę pliku o danej nazwie.</td>
 <td><a >Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad1.cpp">Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad3.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2007,7 +2011,7 @@ Spis Treści
 <td>4</td>
 <td>Wczytaj i wypisz treść pliku.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad4.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2017,7 +2021,7 @@ Spis Treści
 <td>5</td>
 <td>Plik z listą adresów ip.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad5.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2027,7 +2031,7 @@ Spis Treści
 <td>6</td>
 <td>Statystyki dla pliku tekstowego.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad6.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2037,7 +2041,7 @@ Spis Treści
 <td>7</td>
 <td>Dodaj wiersz do pliku.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2046,8 +2050,8 @@ Spis Treści
 <tr>
 <td>8</td>
 <td>Znajdź i zmodyfikuj pliki spełniajace warunek.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad6.py">Python</a></td>
- <td><a>Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad8.py">Python</a></td>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad8.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2056,7 +2060,7 @@ Spis Treści
 <td>9</td>
 <td>Usuń pliki spełniające warunek.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad9.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2066,7 +2070,7 @@ Spis Treści
 <td>10</td>
 <td>Skopiuj pliki.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad10.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2076,7 +2080,7 @@ Spis Treści
 <td>11</td>
 <td>Podmień treści.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad11.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2086,7 +2090,7 @@ Spis Treści
 <td>12</td>
 <td>Przesuń wszystkie pliki csv do jednego folderu.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad12.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2109,7 +2113,7 @@ Spis Treści
 <td>1</td>
    <td>Zaprojektuj klasę <i>Koło</i>.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Cpp/19_Klasy/Kolo">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2119,7 +2123,7 @@ Spis Treści
 <td>2</td>
   <td>Zaprojektuj klasę <i>Punkt</i>.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Cpp/19_Klasy/Punkt">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2129,7 +2133,7 @@ Spis Treści
 <td>3</td>
   <td>Prostokąt powstały z nałożenia się dwóch prostokątów.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad3.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Cpp/19_Klasy/Prostokat">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2149,7 +2153,7 @@ Spis Treści
 <td>5</td>
   <td>Zaprojektuj klasę <i>Zespolona</i>.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Cpp/19_Klasy/Zespolona">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2159,7 +2163,7 @@ Spis Treści
 <td>6</td>
 <td>Zaprojektuj klasę <i>Macierz.</i></td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Cpp/19_Klasy/Macierz">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2170,7 +2174,7 @@ Spis Treści
 <td>7</td>
 <td>Znajdź liczbę instancji klasy w programie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad7.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19_Klasy/Zad7.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2193,7 +2197,7 @@ Spis Treści
 <td>1</td>
    <td>Wywołaj metodę klasy bazowej w klasie potomnej.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20_Dziedziczenie/Zad1.py">Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad1.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
@@ -2204,7 +2208,7 @@ Spis Treści
 <td>2</td>
    <td>Zaprojektuj klasę <i>Kształt</i> oraz klasy pochodne <i>Koło</i> oraz <i>Kwadrat</i>.</td>
 <td><a >Python</a></td>
- <td><a>Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad2.cpp">Cpp</a></td> 
  <td><a>Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
