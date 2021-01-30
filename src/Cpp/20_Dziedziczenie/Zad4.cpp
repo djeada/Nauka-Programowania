@@ -1,25 +1,21 @@
-/*
-Napisz klase Czlowiek, klase pochodna Student oraz klase pochodna klasy pochodnej StudentFizyki.
-Czlowiek powinien przechowywac informacje o imieniu, nazwisku, miejscu urodzenia i zawodzie.
-Student powinien dodac pola numer albumu oraz kierunek studiow.
-Student fizyki powinien dodac pola srednia z laboratoriow oraz srednia z wykladow.
-*/
-
-#include <iostream>
+#include <string>
 #include <cassert>
 
-using namespace std;
+//Napisz klase Czlowiek, klase pochodna Student oraz klase pochodna klasy pochodnej StudentFizyki.
+//Czlowiek powinien przechowywac informacje o imieniu, nazwisku, miejscu urodzenia i zawodzie.
+//Student powinien dodac pola numer albumu oraz kierunek studiow.
+//Student fizyki powinien dodac pola srednia z laboratoriow oraz srednia z wykladow.
 
 class Czlowiek {
 
     public:
-        string imie;
-        string nazwisko;
-        string miejsceUrodzenia;
-        string zawod;
+        std::string imie;
+        std::string nazwisko;
+        std::string miejsceUrodzenia;
+        std::string zawod;
     
     public:
-        Czlowiek(string imie, string nazwisko, string miejsceUrodzenia, string zawod) :
+        Czlowiek(std::string imie, std::string nazwisko, std::string miejsceUrodzenia, std::string zawod) :
             imie(imie),
             nazwisko(nazwisko),
             miejsceUrodzenia(miejsceUrodzenia),
@@ -28,43 +24,41 @@ class Czlowiek {
 
             }
 
-		string getImie() {
+		std::string getImie() {
 			return imie;
 		}
 
-		string getNazwisko() {
+		std::string getNazwisko() {
 			return nazwisko;
 		}        
 
-		string getMiejsceUrodzenia() {
+		std::string getMiejsceUrodzenia() {
 			return miejsceUrodzenia;
 		}
 
-		string getZawod() {
+		std::string getZawod() {
 			return zawod;
 		}
 };
 
 class Student : public Czlowiek {
 
-        protected:
-            int numerAlbumu;
-            string kierunekStudiow;
+	protected:
+		int numerAlbumu;
+		std::string kierunekStudiow;
 
-        public:
-            Student(string imie, string nazwisko, string miejsceUrodzenia, int numerAlbumu, string kierunekStudiow) :
-                numerAlbumu(numerAlbumu),
-                kierunekStudiow(kierunekStudiow),
-                Czlowiek(imie, nazwisko, miejsceUrodzenia, "Student")
-                {
-
-                }
+	public:
+		Student(std::string imie, std::string nazwisko, std::string miejsceUrodzenia, int numerAlbumu, std::string kierunekStudiow) :
+			Czlowiek(imie, nazwisko, miejsceUrodzenia, "Student"),                
+			numerAlbumu(numerAlbumu),
+			kierunekStudiow(kierunekStudiow) {
+		}
 
 		int getNumerAlbumu() {
 			return numerAlbumu;
 		}
 
-		string getKierunekStudiow() {
+		std::string getKierunekStudiow() {
 			return kierunekStudiow;
 		}        
 };
@@ -76,12 +70,10 @@ class StudentFizyki : public Student {
 		double sredniaWyklady;
 
 	public:
-		 StudentFizyki(string imie, string nazwisko, string miejsceUrodzenia, int numerAlbumu, double sredniaLaboratoria, double sredniaWyklady) :
+		 StudentFizyki(std::string imie, std::string nazwisko, std::string miejsceUrodzenia, int numerAlbumu, double sredniaLaboratoria, double sredniaWyklady) :
+			Student(imie, nazwisko, miejsceUrodzenia, numerAlbumu, "Fizyka"),			
 			sredniaLaboratoria(sredniaLaboratoria),
-			sredniaWyklady(sredniaWyklady),
-			Student(imie, nazwisko, miejsceUrodzenia, numerAlbumu, "Fizyka")
-			{
-
+			sredniaWyklady(sredniaWyklady) {
 			}
 		
 		double getSredniaLaboratoria() {
@@ -93,14 +85,13 @@ class StudentFizyki : public Student {
 		}
 };
 
-void Test1()
-{
-	const string imie = "Jan";
-	const string nazwisko = "Kowalski";
-	const string miejsceUrodzenia = "Warszawa";
-	const string zawod = "Profesor";
+void test1() {
+	const std::string imie = "Jan";
+	const std::string nazwisko = "Kowalski";
+	const std::string miejsceUrodzenia = "Warszawa";
+	const std::string zawod = "Profesor";
 
-    Czlowiek czlowiek(imie, nazwisko, miejsceUrodzenia, zawod);
+	Czlowiek czlowiek(imie, nazwisko, miejsceUrodzenia, zawod);
 
 	assert(czlowiek.getImie() == imie);
 	assert(czlowiek.getNazwisko() == nazwisko);
@@ -108,16 +99,15 @@ void Test1()
 	assert(czlowiek.getZawod() == zawod);
 }
 
-void Test2()
-{
-	const string imie = "Jan";
-	const string nazwisko = "Kowalski";
-	const string miejsceUrodzenia = "Warszawa";
-	const string zawod = "Student";
+void test2() {
+	const std::string imie = "Jan";
+	const std::string nazwisko = "Kowalski";
+	const std::string miejsceUrodzenia = "Warszawa";
+	const std::string zawod = "Student";
 	const int numerAlbumu = 271932;
-	const string kierunekStudiow = "Fizyka";	
+	const std::string kierunekStudiow = "Fizyka";	
 
-    Student student(imie, nazwisko, miejsceUrodzenia, numerAlbumu, kierunekStudiow);
+	Student student(imie, nazwisko, miejsceUrodzenia, numerAlbumu, kierunekStudiow);
 
 	assert(student.getImie() == imie);
 	assert(student.getNazwisko() == nazwisko);
@@ -127,18 +117,17 @@ void Test2()
 	assert(student.getKierunekStudiow() == kierunekStudiow);
 }
 
-void Test3()
-{
-	const string imie = "Jan";
-	const string nazwisko = "Kowalski";
-	const string miejsceUrodzenia = "Warszawa";
-	const string zawod = "Student";
+void test3() {
+	const std::string imie = "Jan";
+	const std::string nazwisko = "Kowalski";
+	const std::string miejsceUrodzenia = "Warszawa";
+	const std::string zawod = "Student";
 	const int numerAlbumu = 271932;
-	const string kierunekStudiow = "Fizyka";	
+	const std::string kierunekStudiow = "Fizyka";	
 	const double sredniaLaboratoria = 3.82;
 	const double sredniaWyklady = 4.56;
 
-    StudentFizyki student(imie, nazwisko, miejsceUrodzenia, numerAlbumu, sredniaLaboratoria, sredniaWyklady);
+	StudentFizyki student(imie, nazwisko, miejsceUrodzenia, numerAlbumu, sredniaLaboratoria, sredniaWyklady);
 
 	assert(student.getImie() == imie);
 	assert(student.getNazwisko() == nazwisko);
@@ -152,9 +141,9 @@ void Test3()
 
 int main() {
 
-    Test1();
-	Test2();
-	Test3();
+	test1();
+	test2();
+	test3();
 
-    return 0;
+	return 0;
 }

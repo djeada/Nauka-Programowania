@@ -1,42 +1,41 @@
-/*
-Stworz klasy Pies oraz Kot dziedziczace po klasie Zwierz. 
-Kazda z klas powinna miec wlasna implementacje metody odglos(), wypisujacej dowolny tekst na konsole.
-Przy iteracji po liscie skladajacej sie z obiektow wszystkich trzech klas i wywolywaniu na kazdym z osobna metody odlgos() na konsoli powinnien pojawic sie tekst wlasciwy dla danego zwierzaka.
-*/
 #include <iostream>
 #include <cassert>
+#include <vector>
 
-using namespace std;
+//Stworz klasy Pies oraz Kot dziedziczace po klasie Zwierz. 
+//Kazda z klas powinna miec wlasna implementacje metody odglos(), 
+//wypisujacej dowolny tekst na konsole. Przy iteracji po liscie 
+//skladajacej sie z obiektow wszystkich trzech klas i wywolywaniu 
+//na kazdym z osobna metody odlgos() na konsoli powinnien pojawic 
+//sie tekst wlasciwy dla danego zwierzaka.
 
 class Zwierz {
 	public:
-		virtual void odglos() {
-			cout << "Jestem zwierzem" << endl;
+		virtual void odglos() const {
+			std::cout << "Jestem zwierzem" << std::endl;
 		}
 };
 
 class Pies : public Zwierz {
 	public:
-		void odglos() override {
-			cout << "Hau" << endl;
+		void odglos() const override {
+			std::cout << "Hau" << std::endl;
 		}
 };
 
 class Kot : public Zwierz {
 	public:
-		void odglos() override {
-			cout << "Miau" << endl;
+		void odglos() const override {
+			std::cout << "Miau" << std::endl;
 		}
 };
 
 int main() {
 
-	Zwierz* zwierzaki[] = {new Zwierz(), new Pies(), new Kot()};
-	
-	for (auto zwierz : zwierzaki)
-		zwierz->odglos();
+	std::vector<Zwierz> zwierzaki{Zwierz(), Pies(), Kot()};
 
-    return 0;
+	for (const auto& zwierz : zwierzaki)
+		zwierz.odglos();
+
+	return 0;
 }
-
-//g++ -std=c++14 Zad3.cpp -o exe
