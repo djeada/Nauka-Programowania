@@ -4,11 +4,9 @@
 
 #define naLiczbe(c) (c-'0')
 
-using namespace std;
-
 //Otrzymujesz liczbe, zamien ja na:
 //a) jej odpowiednik w systemie binarnym.
-int naDec(string liczba) {
+int naDec(std::string liczba) {
 	int dec = 0;
    	int n = liczba.size();
 	for (int i = 0; i < n; i++)
@@ -18,12 +16,12 @@ int naDec(string liczba) {
 }
 
 //b) jej odpowiednik w systemie dziesiętnym.
-string naBin(int liczba) {
+std::string naBin(int liczba) {
 	
-	string bin;
+	std::string bin;
 
 	while (liczba > 0) {
-		bin.insert(0, to_string(liczba % 2));
+		bin.insert(0, std::to_string(liczba % 2));
 		liczba /= 2;
 	}
 	
@@ -31,14 +29,14 @@ string naBin(int liczba) {
 }
 
 void test1() {
-	string liczba = "0011";
+	std::string liczba = "0011";
 	int wynik = 3;
 
 	assert(naDec(liczba) == wynik);
 }
 
 void test2() {
-	string liczba = "1111100";
+	std::string liczba = "1111100";
 	int wynik = 124;
 
 	assert(naDec(liczba) == wynik);
@@ -46,14 +44,14 @@ void test2() {
 
 void test3() {
 	int liczba = 124;
-	string wynik = "1111100";
+	std::string wynik = "1111100";
 
 	assert(naBin(liczba) == wynik);
 }
 
 void test4() {
 	int liczba = 3;
-	string wynik = "11";
+	std::string wynik = "11";
 
 	assert(naBin(liczba) == wynik);
 }

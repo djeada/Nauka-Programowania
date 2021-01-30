@@ -1,12 +1,10 @@
 #include <cassert>
 #include <string>
 
-using namespace std;
-
 // Przy uzyciu operatorow bitowych:
 //a) Zamien wielkie litery na male.
-string wielkieNaMale(string slowo) {
-	string wynik = "";
+std::string wielkieNaMale(std::string slowo) {
+	std::string wynik = "";
 	
 	for (const int& litera : slowo)
 		wynik += (char)(litera | (int)' ');
@@ -16,8 +14,8 @@ string wielkieNaMale(string slowo) {
 
 
 //b) Zamien male litery na wielkie.
-string maleNaWielkie(string slowo) {
-	string wynik = "";
+std::string maleNaWielkie(std::string slowo) {
+	std::string wynik = "";
 
 	for (const int& litera : slowo)
 		wynik += (char)(litera & (int)'_');
@@ -26,9 +24,9 @@ string maleNaWielkie(string slowo) {
 }
 
 //c) Zamien male litery na wielkie i wielkie na male.
-string odwrocWielkoscLiter(string slowo) {
+std::string odwrocWielkoscLiter(std::string slowo) {
 
-	string wynik = "";
+	std::string wynik = "";
 
 	for (const int& litera : slowo) {
 
@@ -46,26 +44,25 @@ string odwrocWielkoscLiter(string slowo) {
 }
 
 void test1() {
-	string slowo = "KURCZAKU";
-	string wynik = "kurczaku";
+	std::string slowo = "KURCZAKU";
+	std::string wynik = "kurczaku";
 
 	assert(wielkieNaMale(slowo) == wynik);
 }
 
 void test2() {
-	string slowo = "piesek";
-	string wynik = "PIESEK";
+	std::string slowo = "piesek";
+	std::string wynik = "PIESEK";
 
 	assert(maleNaWielkie(slowo) == wynik);
 }
 
 void test3() {
-	string slowo = "wszedl Kotek na PloteK i mrUga";
-	string wynik = "WSZEDL kOTEK NA pLOTEk I MRuGA";
+	std::string slowo = "wszedl Kotek na PloteK i mrUga";
+	std::string wynik = "WSZEDL kOTEK NA pLOTEk I MRuGA";
 
 	assert(odwrocWielkoscLiter(slowo) == wynik);
 }
-
 
 int main() {
 

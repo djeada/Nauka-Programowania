@@ -2,13 +2,12 @@
 #include <unordered_map>
 #include <cmath>
 
-using namespace std;
-
 //Otrzymujesz liczbe naturalna. Zbuduj slownik skladajacy sie
 //z kluczy bedacych kolejnymi liczbami naturalnymi mniejszymi 
 //od otrzymanej liczby oraz wartosci bedacych kwadratami swoich kluczy.
-unordered_map<int, int> budujSlownik(int liczba) {
-	unordered_map<int, int> slownik;
+
+std::unordered_map<int, int> budujSlownik(int liczba) {
+	std::unordered_map<int, int> slownik;
 
 	for (int i = 1; i < liczba; i++)
 		slownik[i] = pow(i, 2);
@@ -18,14 +17,14 @@ unordered_map<int, int> budujSlownik(int liczba) {
 
 void test1() {
 	int liczba = 5;
-	unordered_map<int, int> wynik {{1, 1}, {2, 4}, {3, 9}, {4, 16}};
+	std::unordered_map<int, int> wynik {{1, 1}, {2, 4}, {3, 9}, {4, 16}};
 
 	assert(budujSlownik(liczba) == wynik);
 }
 
 void test2() {
 	int liczba = -1;
-	unordered_map<int, int> wynik;
+	std::unordered_map<int, int> wynik;
 
 	assert(budujSlownik(liczba) == wynik);
 }

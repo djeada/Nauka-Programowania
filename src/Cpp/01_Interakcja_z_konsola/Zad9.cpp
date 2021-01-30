@@ -1,33 +1,32 @@
 #include <iostream>
 #include <cmath>
-#include<iomanip>
-
-using namespace std;
+#include <iomanip>
 
 int main() {
 
 	//Otrzymujesz roczna stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc
 	//udzielonego kredytu. Oblicz miesieczna rate oraz calkowity koszt kredytu. 
 
-	cout << "podaj stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc udzielonego kredytu" << endl;
+	std::cout << "Podaj: stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc 
+			udzielonego kredytu" << std::endl;
 
 	float stopa;
-	cin >> stopa;
 	int lata;
-	cin >> lata;
-	int kredyt; 
-	cin >> kredyt;
+	int kredyt;
+
+	std::cin >> stopa;
+	std::cin >> lata;
+	std::cin >> kredyt;
 
 	float r = stopa / 12 * 0.01;
 	int n = lata * 12;
 
 	float rata = kredyt * r * pow((1 + r), n) / (pow((1 + r), n) - 1);
+	float calkKosz = rata * n;
 
-	float c_koszt = rata * n;
-
-	cout << fixed << setprecision(2);
-	cout << "rata mieieczna to " << rata << endl;
-	cout << "calkowity koszt to " << c_koszt << endl;
+	std::cout << std::fixed << std::setprecision(2);
+	std::cout << "rata mieieczna to " << rata << std::endl;
+	std::cout << "calkowity koszt to " << calkKosz << std::endl;
 
 	return 0;
 }

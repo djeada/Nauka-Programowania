@@ -1,20 +1,18 @@
 #include <iostream>
 
-using namespace std;
-
 int main(){
 
 	/*
 	Wypisz na konsole swoje inicjaly.
 	*/
 	
-	cout << "A.D." <<endl;
+	std::cout << "A.D." << std::endl;
 	
 	/*
 	Wypisz na konsole "witaj swiecie"
 	*/
 
-	cout << "Witaj swiecie" <<endl;
+	std::cout << "Witaj swiecie" << std::endl;
 		
 	return 0;
 }

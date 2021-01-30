@@ -3,10 +3,8 @@
 #include <cmath>
 #include <string>
 
-using namespace std;
-
 //Konwersja miedzy dowolnymi systemami liczbowymi.
-int naDec(string liczba, int podstawa) {
+int naDec(std::string liczba, int podstawa) {
     int wartoscDec = 0;
     
     for(int i = liczba.size() - 1; i >=0 ; i--) {
@@ -21,7 +19,7 @@ int naDec(string liczba, int podstawa) {
     return wartoscDec;
 }
 
-void zmianaPodstawy(string& liczba, int podstawa, int nowaPodstawa) {
+void zmianaPodstawy(std::string& liczba, int podstawa, int nowaPodstawa) {
     
     if (podstawa > (10 + 'Z' - 'A') )
         return;
@@ -46,16 +44,16 @@ void zmianaPodstawy(string& liczba, int podstawa, int nowaPodstawa) {
 }
 
 void test1() {
-	string liczba = "4301";
-	string wynik = "1003031";
+	std::string liczba = "4301";
+	std::string wynik = "1003031";
 	zmianaPodstawy(liczba, 10, 4);
 
 	assert(liczba == wynik);
 }
 
 int main() {
-	
+
 	test1();
-    return 0;
+	return 0;
 }
 

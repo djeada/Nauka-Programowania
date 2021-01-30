@@ -1,25 +1,25 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 
 	//Pobierz od uzytkownika trzy dlugosci bokow i sprawdz, 
 	//czy mozna z nich zbudowac trojkat.
 	
-	cout << "podaj trzy liczby:" << endl;
+	std::cout << "podaj trzy liczby:" << std::endl;
+
 	int a;
-	cin >> a;
 	int b;
-	cin >> b;
 	int c;
-	cin >> c; 
+
+	std::cin >> a;
+	std::cin >> b;
+	std::cin >> c; 
 
 	if (a + b > c && b + c > a && a + c > b)
-		cout << "z podanych bokow mozna zbudowac trojkat" << endl;
+		std::cout << "z podanych bokow mozna zbudowac trojkat" << std::endl;
  
 	else
-		cout << "z podanych bokow nie mozna zbudowac trojkata" << endl; 
+		std::cout << "z podanych bokow nie mozna zbudowac trojkata" << std::endl; 
 
 	return 0;
 }

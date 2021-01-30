@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 int main() {
 	//Pros uzytkownika o podanie liczby, dopoki 
@@ -8,8 +7,8 @@ int main() {
 	int a = 0;
 
 	while (a != 7) {
-		cout << "Podaj liczbe: " << endl;
-		cin >> a;
+		std::cout << "Podaj liczbe: " << std::endl;
+		std::cin >> a;
 	}
 
 	return 0;

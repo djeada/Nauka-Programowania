@@ -1,37 +1,37 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 
 	//Dla pobranych trzech liczb, wypisz je w kolejnosci rosnacej.
 	
-	cout << "podaj trzy liczby:" << endl;
+	std::cout << "podaj trzy liczby:" << std::endl;
+	
 	int a;
-	cin >> a;
 	int b;
-	cin >> b;
 	int c;
-	cin >> c; 
+
+	std::cin >> a;
+	std::cin >> b;
+	std::cin >> c; 
 
 	if (a >= b && a >= c) {
 		if (b >= c)
-			cout << c << b << a << endl;
+			std::cout << c << b << a << std::endl;
 		else
-			cout << b << c << a << endl;
+			std::cout << b << c << a << std::endl;
 	}
 
 	else if (c >= b && c >= a) {
 		if (a >= b)
-			cout << b << a << c << endl;
+			std::cout << b << a << c << std::endl;
 		else
-			cout << a << b << c << endl;
+			std::cout << a << b << c << std::endl;
 	}
 	else{
 		if (a >= c)
-			cout << c << a << b << endl;
+			std::cout << c << a << b << std::endl;
 		else
-			cout << a << c << b << endl;
+			std::cout << a << c << b << std::endl;
 	}
 	return 0;
 }

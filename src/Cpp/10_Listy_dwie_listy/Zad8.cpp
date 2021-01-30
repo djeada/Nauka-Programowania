@@ -1,16 +1,13 @@
 #include <vector>
 #include <cassert>
 #include <algorithm>
-#include <unordered_set>
-
-using namespace std;
 
 //Otrzymujesz dwie posortowane listy. 
 //Polacz je w posortowana liste.
 
 //Zlozonosc obliczeniowa O(n)
 //Zlozonosc pamieciowa O(n)
-vector<int> polaczV1(vector<int>& listaA, vector<int>& listaB) {
+std::vector<int> polaczV1(std::vector<int>& listaA, std::vector<int>& listaB) {
 
 	if (listaA.empty())
 		return listaB;
@@ -18,10 +15,10 @@ vector<int> polaczV1(vector<int>& listaA, vector<int>& listaB) {
 	if (listaB.empty())
 		return listaA;
 	
-	vector<int> wynik;
+	std::vector<int> wynik;
 	
-	int i = 0;
-	int j = 0;
+	unsigned int i = 0;
+	unsigned int j = 0;
 	
 	while (i < listaA.size() && j < listaB.size()) {
 		if (listaA[i] < listaB[j]) {
@@ -34,10 +31,10 @@ vector<int> polaczV1(vector<int>& listaA, vector<int>& listaB) {
 		}
 	}
 
-	for (int k = i; k < listaA.size(); k++)
+	for (unsigned int k = i; k < listaA.size(); k++)
 		wynik.push_back(listaA[k]);
 	
-	for (int k = j; k < listaB.size(); k++)
+	for (unsigned int k = j; k < listaB.size(); k++)
 		wynik.push_back(listaB[k]);	
 
 	return wynik;
@@ -45,10 +42,10 @@ vector<int> polaczV1(vector<int>& listaA, vector<int>& listaB) {
 
 int main() {
 
-	vector<int> listaA({5, 7, 11});
-	vector<int> listaB({1, 3, 8, 14});
+	std::vector<int> listaA({5, 7, 11});
+	std::vector<int> listaB({1, 3, 8, 14});
 
-	vector<int> wynik({1, 3, 5, 7, 8, 11, 14});
+	std::vector<int> wynik({1, 3, 5, 7, 8, 11, 14});
 	assert(polaczV1(listaA, listaB) == wynik);
 
 	return 0;

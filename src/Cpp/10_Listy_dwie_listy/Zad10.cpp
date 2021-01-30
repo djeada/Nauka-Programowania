@@ -1,24 +1,20 @@
 #include <vector>
 #include <cassert>
 #include <algorithm>
-#include <unordered_set>
-
-using namespace std;
 
 //Otrzymujesz dwie posortowane listy rownej 
 //dlugosci. Znajdz ich mediane.
 
-
 //Zlozonosc obliczeniowa O(m + n)
 //Zlozonosc pamieciowa O(1)
-double mediana(vector<int>& listaA, vector<int>& listaB) { 
-	int i = 0;
-	int j = 0; 
-	int n = listaA.size();
-	int m = listaB.size();
+double mediana(std::vector<int>& listaA, std::vector<int>& listaB) { 
+	unsigned int i = 0;
+	unsigned int j = 0; 
+	unsigned int n = listaA.size();
+	unsigned int m = listaB.size();
 	double m1 = -1, m2 = -1; 
 
-	for (int licznik = 0; licznik <= (n + m)/2; licznik++) { 
+	for (unsigned int licznik = 0; licznik <= (n + m)/2; licznik++) { 
 		if ((m + n) % 2 == 0) 
 			m2 = m1; 
 		
@@ -41,8 +37,8 @@ double mediana(vector<int>& listaA, vector<int>& listaB) {
 
 int main() {
 
-	vector<int> listaA({2, 4, 7});
-	vector<int> listaB({3, 5, 9});
+	std::vector<int> listaA({2, 4, 7});
+	std::vector<int> listaB({3, 5, 9});
 
 	double wynik = 4.5;
 	assert(mediana(listaA, listaB) == wynik);

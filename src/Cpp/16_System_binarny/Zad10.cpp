@@ -1,7 +1,5 @@
 #include <cassert>
 
-using namespace std;
-
 //Policz ile bitow nalezy odwrocic, 
 //aby zamien liczbe A w liczbe B.
 

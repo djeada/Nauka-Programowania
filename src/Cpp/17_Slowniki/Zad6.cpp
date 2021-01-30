@@ -2,12 +2,10 @@
 #include <unordered_map>
 #include <string>
 
-using namespace std;
-
 // Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym napisie.
 
-unordered_map<char, int> budujSlownik(const string& slowo) {
-	unordered_map<char, int> slownik;
+std::unordered_map<char, int> budujSlownik(const std::string& slowo) {
+	std::unordered_map<char, int> slownik;
 
 	for (const auto& znak : slowo)
 		slownik[znak]++;
@@ -16,15 +14,15 @@ unordered_map<char, int> budujSlownik(const string& slowo) {
 }
 
 void test1() {
-	string slowo = "klasa";
-	unordered_map<char, int> wynik {{'k', 1}, {'l', 1}, {'a', 2}, {'s', 1}};
+	std::string slowo = "klasa";
+	std::unordered_map<char, int> wynik {{'k', 1}, {'l', 1}, {'a', 2}, {'s', 1}};
 
 	assert(budujSlownik(slowo) == wynik);
 }
 
 void test2() {
-	string slowo = "robot";
-	unordered_map<char, int> wynik {{'r', 1}, {'o', 2}, {'b', 1}, {'t', 1}};
+	std::string slowo = "robot";
+	std::unordered_map<char, int> wynik {{'r', 1}, {'o', 2}, {'b', 1}, {'t', 1}};
 
 	assert(budujSlownik(slowo) == wynik);
 }

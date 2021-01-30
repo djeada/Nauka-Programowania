@@ -4,38 +4,36 @@
 #include <utility>
 #include <algorithm>
 
-using namespace std;
-
 //Otrzymujesz dwie listy. Zbuduj slownik skladajacy się z kluczy będacych 
 //elementami pierwszej listy i wartosciami będacymi elementami drugiej listy. 
 //Jesli listy sa roznej dlugosci zwroc pusty slownik.
 
-bool porownujKlucze(const pair<string, int>& a, const pair<string, int>& b) { 
+bool porownujKlucze(const std::pair<std::string, int>& a, const std::pair<std::string, int>& b) { 
 	return a.first < b.first; 
 } 
 
-vector<pair<string, int>> sortujWzgledemKluczy(const unordered_map<string, int>& slownik) { 
+std::vector<std::pair<std::string, int>> sortujWzgledemKluczy(const std::unordered_map<std::string, int>& slownik) { 
 
-	vector<pair<string, int>> wynik;
+	std::vector<std::pair<std::string, int>> wynik;
 
 	for (const auto& it : slownik)
-		wynik.push_back(pair<string, int>(it.first, it.second));
+		wynik.push_back(std::pair<std::string, int>(it.first, it.second));
 
 	sort(wynik.begin(), wynik.end(), porownujKlucze); 
 
 	return wynik;
 }
 
-bool porownujWartosci(const pair<string, int>& a, const pair<string, int>& b) { 
+bool porownujWartosci(const std::pair<std::string, int>& a, const std::pair<std::string, int>& b) { 
 	return a.second < b.second; 
 }
   
-vector<pair<string, int>> sortujWzgledemWartosci(const unordered_map<string, int>& slownik) { 
+std::vector<std::pair<std::string, int>> sortujWzgledemWartosci(const std::unordered_map<std::string, int>& slownik) { 
 
-	vector<pair<string, int>> wynik;
+	std::vector<std::pair<std::string, int>> wynik;
 
 	for (const auto& it : slownik)
-		wynik.push_back(pair<string, int>(it.first, it.second));
+		wynik.push_back(std::pair<std::string, int>(it.first, it.second));
 
 	sort(wynik.begin(), wynik.end(), porownujWartosci); 
 
@@ -43,16 +41,15 @@ vector<pair<string, int>> sortujWzgledemWartosci(const unordered_map<string, int
 }
 
 void test1() {
-
-	unordered_map<string, int> slownik {{"c", 3}, {"x", 5}, {"a", -2}, {"b", 4}};
-	vector<pair<string, int>> wynik {{"a", -2}, {"c", 3}, {"b", 4}, {"x", 5}};
+	std::unordered_map<std::string, int> slownik {{"c", 3}, {"x", 5}, {"a", -2}, {"b", 4}};
+	std::vector<std::pair<std::string, int>> wynik {{"a", -2}, {"c", 3}, {"b", 4}, {"x", 5}};
 
 	assert(sortujWzgledemWartosci(slownik) == wynik);
 }
 
 void test2() {
-	unordered_map<string, int> slownik {{"c", 3}, {"x", 5}, {"a", -2}, {"b", 4}};
-	vector<pair<string, int>> wynik {{"a", -2}, {"b", 4}, {"c", 3}, {"x", 5}};
+	std::unordered_map<std::string, int> slownik {{"c", 3}, {"x", 5}, {"a", -2}, {"b", 4}};
+	std::vector<std::pair<std::string, int>> wynik {{"a", -2}, {"b", 4}, {"c", 3}, {"x", 5}};
 
 	assert(sortujWzgledemKluczy(slownik) == wynik);
 }

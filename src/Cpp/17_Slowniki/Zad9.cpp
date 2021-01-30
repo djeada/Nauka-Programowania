@@ -4,12 +4,10 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std;
-
 //Otrzymujesz napis. Znajdz w otrzymanym napisie wszystkie znaki powtarzajace sie wiecej niz raz.
 
-unordered_map<char, int> budujSlownik(const string& slowo) {
-	unordered_map<char, int> slownik;
+std::unordered_map<char, int> budujSlownik(const std::string& slowo) {
+	std::unordered_map<char, int> slownik;
 
 	for (const auto& znak : slowo)
 		slownik[znak]++;
@@ -17,10 +15,10 @@ unordered_map<char, int> budujSlownik(const string& slowo) {
 	return slownik;
 }
 
-vector<char> znaki(const string& slowo) {
+std::vector<char> znaki(const std::string& slowo) {
 
-	unordered_map<char, int> slownik = budujSlownik(slowo);
-	vector<char> wynik;
+	std::unordered_map<char, int> slownik = budujSlownik(slowo);
+	std::vector<char> wynik;
 
 	for (auto it = slownik.begin(); it != slownik.end(); it++) {
 		if (it->second > 1)
@@ -30,23 +28,22 @@ vector<char> znaki(const string& slowo) {
 	return wynik;
 }
 
-bool wektoryRowne(vector<char> v1, vector<char> v2) {
+bool wektoryRowne(std::vector<char> v1, std::vector<char> v2) {
     sort(v1.begin(), v1.end());
     sort(v2.begin(), v2.end());
     return v1 == v2;
 }
 
-
 void test1() {
-	string slowo = "podwodny";
-	vector<char> wynik {'o', 'd'};
+	std::string slowo = "podwodny";
+	std::vector<char> wynik {'o', 'd'};
 
 	assert(wektoryRowne(znaki(slowo), wynik));
 }
 
 void test2() {
-	string slowo = "jedzie pociag z daleka";
-	vector<char> wynik {'e', 'a', 'i', 'd', 'z', ' '};
+	std::string slowo = "jedzie pociag z daleka";
+	std::vector<char> wynik {'e', 'a', 'i', 'd', 'z', ' '};
 
 	assert(wektoryRowne(znaki(slowo), wynik));
 }

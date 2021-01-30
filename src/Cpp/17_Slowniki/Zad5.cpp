@@ -4,20 +4,18 @@
 #include <vector>
 #include <string>
 
-using namespace std;
-
 //Otrzymujesz liste par. Pierwszym elementem pary jest napis reprezentujacy imie i nazwikso 
 //pracownika, drugim zysk z transakcji jaka dany pracownik przeprowadzil. Znajdz pracownika, 
 //ktory przyniosl firmie najwiecej zysku.
 
-void wypelnijSlownik(const vector<pair<string, int>>& lista, unordered_map<string, int>& slownik) {
+void wypelnijSlownik(const std::vector<std::pair<std::string, int>>& lista, std::unordered_map<std::string, int>& slownik) {
 
 	for (const auto& rekord : lista)
 		slownik[rekord.first] += rekord.second;
 }
 
-string znajdzMaxZysk(unordered_map<string, int>& slownik) {
-	string najlepszyPracownik;
+std::string znajdzMaxZysk(std::unordered_map<std::string, int>& slownik) {
+	std::string najlepszyPracownik;
 	int maxZysk = -1;
 
 	for (auto it = slownik.begin(); it != slownik.end(); it++) {
@@ -30,12 +28,12 @@ string znajdzMaxZysk(unordered_map<string, int>& slownik) {
 	return najlepszyPracownik;
 }
 
-string pracownik(vector<pair<string, int>>& lista) {
+std::string pracownik(std::vector<std::pair<std::string, int>>& lista) {
 
 	if (lista.empty())
 		return "";
 
-	unordered_map<string, int> slownik;
+	std::unordered_map<std::string, int> slownik;
 	wypelnijSlownik(lista, slownik);
 
 	return znajdzMaxZysk(slownik);
@@ -43,17 +41,17 @@ string pracownik(vector<pair<string, int>>& lista) {
 
 void test1() {
 
-	vector<pair<string, int>> lista {{"Barnaba Barabash", 120}, {"Jon Snow", 100}, {"Kira Summer", 300}, 
+	std::vector<std::pair<std::string, int>> lista {{"Barnaba Barabash", 120}, {"Jon Snow", 100}, {"Kira Summer", 300}, 
 					{"Barnaba Barabash", 200}, {"Bob Marley", 110}};
 
-	string wynik = "Barnaba Barabash";
+	std::string wynik = "Barnaba Barabash";
 
 	assert(pracownik(lista) == wynik);
 }
 
 void test2() {
-	vector<pair<string, int>> lista;
-	string wynik;
+	std::vector<std::pair<std::string, int>> lista;
+	std::string wynik;
 
 	assert(pracownik(lista) == wynik);
 }
