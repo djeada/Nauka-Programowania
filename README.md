@@ -17,10 +17,10 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 </ul>
 
 # Zadania
-Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-programowania/blob/master/Zadania.pdf">linkiem</a>.
+Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-programowania/blob/master/Zadania.pdf">linkiem</a>. </br>
 Zbiór będzie poszerzany i aktualizowany.
 
-Rozwiazania
+Rozwiązania
 =================
 
 <!--ts-->
