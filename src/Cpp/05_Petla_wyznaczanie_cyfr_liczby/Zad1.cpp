@@ -1,13 +1,12 @@
 #include <iostream>
-using namespace std;
 
 int main() {
 	//Dla pobranej od uzytkownika liczby, 
 	//zwroc liczbe cyfr pobranje liczby.
 
-	cout << "Podaj liczbe" << endl;
+	std::cout << "Podaj liczbe" << std::endl;
 	int a;
-	cin >> a;
+	std::cin >> a;
 
 	int licznik = 0;
 	
@@ -16,7 +15,7 @@ int main() {
 		licznik++;
 	}
 
-	cout << "Podana cyfra sklada sie z " << licznik << " cyfr." << endl;
+	std::cout << "Podana cyfra sklada sie z " << licznik << " cyfr." << std::endl;
 
 	return 0;
 }

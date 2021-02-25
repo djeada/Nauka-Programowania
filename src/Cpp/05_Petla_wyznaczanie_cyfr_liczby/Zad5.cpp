@@ -1,13 +1,12 @@
 #include <iostream>
-using namespace std;
 
 int main() {
 
 	//Dla pobranej liczby, sprawdz czy jest palindromem.
 	
-	cout << "Podaj liczbe" << endl;
+	std::cout << "Podaj liczbe" << std::endl;
 	int a;
-	cin >> a;
+	std::cin >> a;
 	
 	int odwrocona = 0;
 	int pom = a;
@@ -19,9 +18,9 @@ int main() {
 	}
 
 	if (odwrocona == a)
-		cout << "podana liczba jest palindromem" << endl;
+		std::cout << "podana liczba jest palindromem" << std::endl;
 	else
-		cout << "podana liczba nie jest palindromem" << endl;
+		std::cout << "podana liczba nie jest palindromem" << std::endl;
 
 	return 0;
 }

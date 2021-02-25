@@ -2,22 +2,20 @@
 #include <numbers>
 #include <iomanip>
 
-using namespace std;
-
 int main() {
 
 	//Dla pobranej liczby, wyswietl liczbe Pi tyle razy 
 	//ile wynosi pobrana liczba, z dokladnoscia do tylu 
-	//miejsc po przecinku ile wynosi pobrana liczba.
+	//miejsc po przescinku ile wynosi pobrana liczba.
 	
-	cout << "Podaj liczbe: " << endl;
+	std::cout << "Podaj liczbe: " << std::endl;
 	int n;
-	cin >> n;
+	std::cin >> n;
 
-	cout << fixed << setprecision(n);
+	std::cout << std::fixed << std::setprecision(n);
 
 	for (int i = 0; i < n; i++)
-		cout << numbers::pi << " ";
+		std::cout << std::numbers::pi << " ";
 
 	return 0;
 }

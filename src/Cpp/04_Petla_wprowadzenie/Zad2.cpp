@@ -1,17 +1,18 @@
 #include <iostream>
-using namespace std;
 
 int main() {
 
 	//Dla pobranej liczby, powinny zostac wyswietlone 
 	//wszystkie liczby naturalne mniejsze od podanej liczby.
 
-	cout << "Podaj liczbe" << endl;
+	std::cout << "Podaj liczbe" << std::endl;
 	int a;
-	cin >> a;
+	std::cin >> a;
 	
 	for (int i = 1; i < a; i++)
-		cout << i << " ";
+		std::cout << i << " ";
+	
+	std::cout << std::endl;
 
 	return 0;
 }

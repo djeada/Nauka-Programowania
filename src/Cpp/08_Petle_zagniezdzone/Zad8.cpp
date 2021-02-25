@@ -2,8 +2,6 @@
 #include <cassert>
 #include <cmath>
 
-using namespace std;
-
 int czyPierwsza(int n) {
 
 	if (!(n % 2) && n != 2)
@@ -20,7 +18,7 @@ int czyPierwsza(int n) {
 void liczbyPierwszeV1(int n) {
 	for (int i = 2; i <= n; i++) {
 		if (czyPierwsza(i))
-			cout << i << " ";
+			std::cout << i << " ";
 	}
 }
 
@@ -44,15 +42,17 @@ void  liczbyPierwszeV2(int liczba)  {
 
 	for (int i = 2; i <= liczba; i++) {
 		if (pierwsze[i] == 0)
-			cout << i << " ";
+			std::cout << i << " ";
 	}
 }
 
 int main () {
 
 	int a = 15;
+
 	liczbyPierwszeV1(a);
-	cout << endl;
+
+	std::cout << std::endl;
 	liczbyPierwszeV2(a);
 	
 	return 0;

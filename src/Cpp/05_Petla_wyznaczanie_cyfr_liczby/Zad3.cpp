@@ -1,16 +1,14 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 
 	//Dla pobranej liczby, wyswietl liczbe Pi tyle razy 
 	//ile wynosi pobrana liczba, z dokladnoscia do tylu 
 	//miejsc po przecinku ile wynosi pobrana liczba.
 	
-	cout << "Podaj liczbe" << endl;
+	std::cout << "Podaj liczbe" << std::endl;
 	int a;
-	cin >> a;
+	std::cin >> a;
 	
 	int suma = 0;
 
@@ -19,7 +17,7 @@ int main() {
 		a = a / 10; 
 	}
 
-	cout << "Suma cyfr podanej liczby wynosi " << suma << endl;
+	std::cout << "Suma cyfr podanej liczby wynosi " << suma << std::endl;
 
 	return 0;
 }

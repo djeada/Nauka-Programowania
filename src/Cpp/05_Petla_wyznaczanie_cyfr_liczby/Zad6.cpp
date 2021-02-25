@@ -1,17 +1,16 @@
 #include <iostream>
-using namespace std;
 
 int main() {
 
 	//Dla pobranej liczby n, wyswietl sume n 
 	//pierwszych wyrazow ciagu danego wzorem:
-	cout << "Podaj liczbe: " << endl;
+	std::cout << "Podaj liczbe: " << std::endl;
 	int a;
-	cin >> a;
+	std::cin >> a;
 
 	//a) mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10
 
-	cout << "mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: " << endl;
+	std::cout << "mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: " << std::endl;
 	for (int i = 0; i < a; i++) { 
 		int pom = i;
 		int suma = 0;
@@ -22,19 +21,19 @@ int main() {
 		}
 
 		if (suma == 10)
-			cout << i << endl;
+			std::cout << i << std::endl;
 	}
 
 	//b) dwucyfrowe mniejsze od pobranej liczby
 
-	cout << "dwucyfrowe mniejsze od pobranej liczby: " << endl;
+	std::cout << "dwucyfrowe mniejsze od pobranej liczby: " << std::endl;
 	for (int i = 10; i < 100 && i < a; i++) { 
-		cout << i << endl;
+		std::cout << i << std::endl;
 	}
 
 	
 	//c) trzycyfrowe ktorych suma cyfr jest	rowna pobranej liczbie
-	cout << "trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie" << endl;
+	std::cout << "trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie" << std::endl;
 	for (int i = 100; i < 1000; i++) { 
 		int pom = i;
 		int suma = 0;
@@ -45,11 +44,11 @@ int main() {
 		}
 
 		if (suma == a)
-			cout <<  i << endl;
+			std::cout <<  i << std::endl;
 	}
 
 	//d) trzycyfrowe podzielne przez sume cyfr pobranej liczby
-	cout <<  "trzycyfrowe podzielne przez sume cyfr pobranej liczby" << endl;
+	std::cout <<  "trzycyfrowe podzielne przez sume cyfr pobranej liczby" << std::endl;
 
 	int pom = a;
 	int suma = 0;
@@ -62,11 +61,11 @@ int main() {
 	for (int i=100; i<1000; i++) { 
 
 		if (i % suma == 0)
-			cout << i << endl;
+			std::cout << i << std::endl;
 	}
 
 	//e) mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr
-	cout << "mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr" << endl;
+	std::cout << "mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr" << std::endl;
 
 	for (int i = 0; i < a; i++) { 
 		int pom = i;
@@ -81,7 +80,7 @@ int main() {
 		}
 
 		if (flaga)
-			cout <<  i << endl;
+			std::cout <<  i << std::endl;
 	}
 
 	return 0;

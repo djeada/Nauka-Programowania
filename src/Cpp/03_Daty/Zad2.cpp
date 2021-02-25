@@ -1,53 +1,55 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 
 	//Czy osoba jest pelnoletnia?
 	
-	cout << "Podaj trzy liczby reprezentujace dzien, miesiac i rok urodzenia osoby:" << endl;
-	int dzien;
-	cin >> dzien;
-	int miesiac;
-	cin >> miesiac;
-	int rok;
-	cin >> rok; 
+	std::cout << "Podaj trzy liczby reprezentujace dzien, miesiac i rok urodzenia osoby:" << std::endl;
 
-	cout << "Podaj trzy liczby reprezentujace dzisiejsza date:" << endl;
+	int dzien;
+	int miesiac;
+	int rok;
+
+	std::cin >> dzien;
+	std::cin >> miesiac;
+	std::cin >> rok; 
+
+	std::cout << "Podaj trzy liczby reprezentujace dzisiejsza date:" << std::endl;
+	
 	int dzienAktualny;
-	cin >> dzienAktualny;
 	int miesiacAktualny;
-	cin >> miesiacAktualny;
 	int rokAktualny;
-	cin >> rokAktualny;
+
+	std::cin >> dzienAktualny;
+	std::cin >> miesiacAktualny;
+	std::cin >> rokAktualny;
 
 	int roznicaLata = rokAktualny - rok;
 	int roznicaMiesiace = miesiacAktualny - miesiac;
 	int roznicaDni = dzienAktualny - dzien;
 
 	if (roznicaLata > 18)
-		cout << "osoba jest pelnoletnia" << endl;
+		std::cout << "osoba jest pelnoletnia" << std::endl;
 
 	else if (roznicaLata == 18) {
 
 		if (roznicaMiesiace > 0)
-			cout << "osoba jest pelnoletnia" << endl;
+			std::cout << "osoba jest pelnoletnia" << std::endl;
 		
 		else if (roznicaMiesiace == 0) {
 
 			if (roznicaDni >= 0)
-				cout << "osoba jest pelnoletnia" << endl;
+				std::cout << "osoba jest pelnoletnia" << std::endl;
 			
 			else
-				cout << "osoba nie jest pelnoletnia" << endl;
+				std::cout << "osoba nie jest pelnoletnia" << std::endl;
 		}
 		else
-			cout << "osoba nie jest pelnoletnia"<< endl;
+			std::cout << "osoba nie jest pelnoletnia"<< std::endl;
 	}
 		
 	else
-		cout << "osoba nie jest pelnoletnia"<< endl;
+		std::cout << "osoba nie jest pelnoletnia"<< std::endl;
 
 	return 0;
 }

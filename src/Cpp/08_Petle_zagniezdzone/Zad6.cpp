@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 //Napisz funkcje, ktora dla otrzymanej liczby
 //wypisze litere Z, o wysokosci rownej 
 //otrzymanej liczbie.
@@ -11,13 +9,13 @@ void literaX(int n) {
 	for (int y = 0; y < n; y++) {
 		for (int x = 0; x < n; x++) {
  			if (y == 0 || y == n - 1) 
-				cout << "*";  
+				std::cout << "*";  
 			else if (x == n - y - 1)
-				cout << "*";  			
+				std::cout << "*";  			
 			else
-				cout << " ";
+				std::cout << " ";
 		}
-		cout << endl;
+		std::cout << std::endl;
 	}
 }
 

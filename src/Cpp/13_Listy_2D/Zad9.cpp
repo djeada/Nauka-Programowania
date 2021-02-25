@@ -2,8 +2,6 @@
 #include <vector>
 #include <limits>
 
-using namespace std;
-
 //Otrzymujesz liste 2d. Znajdz w niej klepsydre o najwiekszej sumie. 
 //Klepsydra sklada sie z dokladnie 7 elementow. Trzy pierwsze elementy 
 //są kolejnymi elementami dowolnego wiersza listy 2d. Nastepny element 
@@ -11,7 +9,7 @@ using namespace std;
 //jednym wierszu nizej. Trzy nastepne znajduja sie w tych samych
 //kolumnach co trzy pierwsze i dokladnie dwie wiersze nizej.
 
-int klepsydraV1(vector<vector<int>>& macierz) {
+int klepsydraV1(std::vector<std::vector<int>>& macierz) {
 	int wynik = __WINT_MIN__;
 
 	int N = macierz.size();
@@ -19,7 +17,7 @@ int klepsydraV1(vector<vector<int>>& macierz) {
 	for (int wiersz = 0; wiersz < N; wiersz++) {
 		for (int kolumna = 0; kolumna < N; kolumna++) {
 			 if (!(wiersz == 0 || wiersz == N - 1 || kolumna == 0 || kolumna == N - 1))
-			 	wynik = max(wynik, (macierz[wiersz - 1][kolumna - 1] +
+			 	wynik = std::max(wynik, (macierz[wiersz - 1][kolumna - 1] +
 						macierz[wiersz - 1][kolumna] + 
 						macierz[wiersz-1][kolumna + 1] + 
 						macierz[wiersz][kolumna] + 
@@ -33,7 +31,7 @@ int klepsydraV1(vector<vector<int>>& macierz) {
 }
 
 int test1() {
-	vector<vector<int>> macierz { {10, 99, 28, 21, 78}, {35, 78, 31, 56, 24}, 
+	std::vector<std::vector<int>> macierz { {10, 99, 28, 21, 78}, {35, 78, 31, 56, 24}, 
 				{7, 18, 2, 50, 87}, {59, 67, 9, 82, 53}, 
 				{23, 26, 76, 62, 36}};
 

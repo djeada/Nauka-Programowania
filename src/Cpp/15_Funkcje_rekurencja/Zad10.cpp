@@ -1,8 +1,6 @@
 #include <string>
 #include <cassert>
 
-using namespace std;
-
 /*
 Gracz A oraz gracz B graja w kapsle.
 Na poczatku gry otrzymuja pewna liczbe kapsli.
