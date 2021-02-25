@@ -1,25 +1,24 @@
 #include <iostream>
-using namespace std;
 
 int main() {
 
 	//Dla pobranej liczby, powinny zostac zwrocone cyfry 
 	//liczby spelniajce nastepujacy warunek:
 	
-	cout << "Podaj liczbe: " << endl;
+	std::cout << "Podaj liczbe: " << std::endl;
 	int a;
-	cin >> a;
+	std::cin >> a;
 
 	//a) Liczby parzyste;
 
 	int pom = a;
-	cout << "Cyfry liczby badace liczbami parzystymi: " << endl;
+	std::cout << "Cyfry liczby badace liczbami parzystymi: " << std::endl;
 
 	while (pom > 0) {
 		int cyfra = pom % 10;
 		
 		if (cyfra % 2 == 0)
-			cout << cyfra << endl;
+			std::cout << cyfra << std::endl;
 		
 		pom /= 10;  
 	}
@@ -27,13 +26,13 @@ int main() {
 	//b) Mniejsze niz 5;
 
 	pom = a;
-	cout << "Cyfry liczby mniejsze niz 5: " << endl;
+	std::cout << "Cyfry liczby mniejsze niz 5: " << std::endl;
 
 	while (pom > 0) {
 		int cyfra = pom % 10;
 		
 		if (cyfra < 5)
-			cout << cyfra << endl;
+			std::cout << cyfra << std::endl;
 		
 		pom /= 10;  
 	}
@@ -41,13 +40,13 @@ int main() {
 	//c) Rozne od 0;
 
 	pom = a;
-	cout << "Cyfry liczby rozne od 0: " << endl;
+	std::cout << "Cyfry liczby rozne od 0: " << std::endl;
 
 	while (pom > 0) {
 		int cyfra = pom % 10;
 		
 		if (cyfra != 0)
-			cout << cyfra  << endl;
+			std::cout << cyfra  << std::endl;
 		
 		pom /= 10;  
 	}

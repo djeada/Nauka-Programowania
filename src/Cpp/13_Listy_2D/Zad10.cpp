@@ -1,16 +1,11 @@
-#include <iostream>
 #include <cassert>
 #include <vector>
 
-using namespace std;
+//Otrzymujesz liste 2d. Obroc otrzymana liste o 90 stopni. 
+//Tzn. zamien miejscami ostatnia kolumne, z ostatnim wierszem, 
+//przedostatnią kolumnę z przedostatnim wierszem itd.
 
-/*
-Otrzymujesz liste 2d. Obroc otrzymana liste o 90 stopni. 
-Tzn. zamien miejscami ostatnia kolumne, z ostatnim wierszem, 
-przedostatnią kolumnę z przedostatnim wierszem itd.
-*/
-
-void obroc(vector<vector<int>>& macierz) {
+void obroc(std::vector<std::vector<int>>& macierz) {
 
 	int N = macierz.size();
 
@@ -34,19 +29,17 @@ void obroc(vector<vector<int>>& macierz) {
 	}
 }
 
-int main() {
-
-	vector<vector<int>> macierz { { 1, 2, 3 },
-                                { 4, 5, 6 },
-								{ 7, 8, 9} };
-	
-	vector<vector<int>> wynik { { 7, 4, 1 },
-                                { 8, 5, 2 },
-								{ 9, 6, 3} };
+void test1() {
+	std::vector<std::vector<int>> macierz { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9} };
+	std::vector<std::vector<int>> wynik { { 7, 4, 1 }, { 8, 5, 2 }, { 9, 6, 3} };
 
 	obroc(macierz);
-
 	assert(macierz == wynik);
+}
+
+int main() {
+
+	test1();
 
 	return 0;	 	
 }

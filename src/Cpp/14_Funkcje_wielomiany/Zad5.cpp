@@ -1,16 +1,14 @@
 #include <vector>
 #include <cassert>
 
-using namespace std;
-
 //Otrzymujesz liste n wspolczynnikow wielomianu postaci 
 //a_nx^n + a_(n-1)x^(n-1) + ... + a_0 oraz liczbe k. 
 //Oblicz wartosc wspolczynnikow wielomianu bedacego k-ta 
 //pochodna otrzymanego wielomianu.
-vector<int> pochodna(vector<int>& lista, int k) {
+std::vector<int> pochodna(std::vector<int>& lista, int k) {
 
-	vector<int> wynik;
-	vector<int> kopia(lista);	
+	std::vector<int> wynik;
+	std::vector<int> kopia(lista);	
 	
 	for (int j = 0; j < k; j++) {
 		wynik.clear();
@@ -24,16 +22,16 @@ vector<int> pochodna(vector<int>& lista, int k) {
 }
 
 void test1() {
-	vector<int> lista {4, -3, 2};
+	std::vector<int> lista {4, -3, 2};
 	int k = 1;
-	vector<int> wynik {8, -3};
+	std::vector<int> wynik {8, -3};
 	assert(pochodna(lista, k) == wynik);
 }
 
 void test2() {
-	vector<int> lista {13, -6, 0, -1, -1};
+	std::vector<int> lista {13, -6, 0, -1, -1};
 	int k = 2;
-	vector<int> wynik {156, -36, 0};
+	std::vector<int> wynik {156, -36, 0};
 	assert(pochodna(lista, k) == wynik);
 }
 

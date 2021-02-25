@@ -1,13 +1,12 @@
 #include <iostream>
-using namespace std;
 
 int main() {
 
 	//Dla pobranych dwoch liczb, powinny zostac wyswietlone:
 	
-	cout << "Podaj dwie liczby: " << endl;
+	std::cout << "Podaj dwie liczby: " << std::endl;
 	int a, b;
-	cin >> a >> b;
+	std::cin >> a >> b;
 
 	if (b < a) {
 		int pom=a;
@@ -18,16 +17,16 @@ int main() {
 	//wszystkie liczby naturalne większe od mniejszej pobranej 
 	//liczby i jednoczesnie mniejsze od wiekszej pobranej liczby.  
 	for (int i = a + 1; i < b; i++)
-		cout << i << " ";
+		std::cout << i << " ";
 
-	cout << endl;
+	std::cout << std::endl;
 
 	//wszystkie liczby naturalne podzielne przez 3 
 	//wieksze od mniejszej pobranej liczby i jednoczesnie 
 	//mniejsze od wiekszej pobranej liczby.
 	for (int i = a + 1; i < b; i++) {
 		if (i % 3 == 0)
-			cout << i << " ";
+			std::cout << i << " ";
 	}
 
 	return 0;

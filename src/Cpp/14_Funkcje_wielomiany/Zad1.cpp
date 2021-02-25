@@ -2,12 +2,10 @@
 #include <cassert>
 #include <cmath>
 
-using namespace std;
-
 //Otrzymujesz liste n wspolczynnikow wielomianu postaci 
 //a_nx^n + a_(n-1)x^(n-1) + ... + a_0 oraz liczbe x. 
 //Znajdz wartosc wielomianu w punkcie.
-int wartoscWielomianu(vector<int>& lista, int x) {
+int wartoscWielomianu(std::vector<int>& lista, int x) {
 
 	int n = lista.size();
 	int wynik = 0;
@@ -19,7 +17,7 @@ int wartoscWielomianu(vector<int>& lista, int x) {
 }
 
 void test1() {
-	vector<int> lista {3, 2, 1};
+	std::vector<int> lista {3, 2, 1};
 	int x = 1;
 	int wynik = 6;
 	assert(wartoscWielomianu(lista,x) == wynik);

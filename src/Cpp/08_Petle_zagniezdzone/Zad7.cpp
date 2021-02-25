@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 //Napisz funkcje, ktora dla otrzymanej liczby
 //wyswietli N trojkatow. Trojkaty powinny byc 
 //ustawione w kolumnie, jeden na drugim. Wysokosc 
@@ -12,8 +10,8 @@ void trojkat(int a) {
 
 	for (int y = 0; y < a; y++) {
 		for (int x = 0; x <= y; x++)
-			cout << "*";
-		cout << endl;
+			std::cout << "*";
+		std::cout << std::endl;
 	}
 }
 

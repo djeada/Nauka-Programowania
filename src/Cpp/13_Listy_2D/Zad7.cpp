@@ -1,15 +1,11 @@
 #include <cassert>
 #include <vector>
 
-using namespace std;
+//Otrzymujesz liste 2d. Jesli element macierzy jest 
+//rowny zero, zamien wszystkie elementy w tej samej 
+//kolumnie i tym samym wierszu na zera.
 
-/*
-Otrzymujesz liste 2d. Jesli element macierzy jest 
-rowny zero, zamien wszystkie elementy w tej samej 
-kolumnie i tym samym wierszu na zera.
-*/
-
-void wyzerujV1(vector<vector<int>>& macierz) {
+void wyzerujV1(std::vector<std::vector<int>>& macierz) {
 
 	if (macierz.empty())
 		return;
@@ -39,11 +35,11 @@ void wyzerujV1(vector<vector<int>>& macierz) {
 
 void test1() {
 
-	vector<vector<int>> macierz { { 1, 2, 3 }, 
+	std::vector<std::vector<int>> macierz { { 1, 2, 3 }, 
 				{ 4, 0, 6 }, 
 				{ 7, 8, 9} };
 
-	vector<vector<int>> wynik { { 1, 0, 3 },
+	std::vector<std::vector<int>> wynik { { 1, 0, 3 },
 				{ 0, 0, 0 },
 				{ 7, 0, 9} };
 

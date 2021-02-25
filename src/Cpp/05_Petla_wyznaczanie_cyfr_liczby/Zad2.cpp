@@ -1,17 +1,16 @@
 #include <iostream>
-using namespace std;
 
 int main() {
 
 	//Dla pobranej liczby, powinny zostac zwrocone 
 	//cyfry pobranej liczby poczynajac od cyfry jednosci.
 
-	cout << "Podaj liczbe" << endl;
+	std::cout << "Podaj liczbe" << std::endl;
 	int a;
-	cin >> a;
+	std::cin >> a;
 	
 	while (a > 0) {
-		cout << a % 10 << endl;
+		std::cout << a % 10 << std::endl;
 		a = a / 10; 
 	}
 

@@ -1,17 +1,17 @@
 #include <iostream>
-using namespace std;
 
 int main() {
+	
 	//Na farmie mamy a glow i b nog, znajdz liczbe kur oraz owieczek.
 	
-	cout << "Podaj dwie liczby: " << endl;
-	int g, n;
-	cin >> g >> n;
+	std::cout << "Podaj dwie liczby: " << std::endl;
+	int glowy, nogi;
+	std::cin >> glowy >> nogi;
 	
- 	for (int i = 0; i < g; i++) {
-		int o = g - i;
-		if (2*i + 4*o == n) {
-			cout << i << " " << o << endl;
+ 	for (int i = 0; i < glowy; i++) {
+		int owce = glowy - i;
+		if (2*i + 4*owce == nogi) {
+			std::cout << i << " " << owce << std::endl;
 			break;
 		}
 	}

@@ -2,13 +2,11 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std;
-
 //Otrzymujesz liste 2d. Zbierz spiralnie elementy
 //otrzymanej listy i zapisz je w zwyklej liscie.
 
-vector<int> spiralaV1(vector<vector<int>>& macierz) {
-	vector<int> wynik;
+std::vector<int> spiralaV1(std::vector<std::vector<int>>& macierz) {
+	std::vector<int> wynik;
 
 	int x = macierz[0].size(); 
 	int y = macierz.size();
@@ -46,13 +44,13 @@ vector<int> spiralaV1(vector<vector<int>>& macierz) {
 }
 
 void test1() {
-	vector<vector<int>> macierz { {1,  2,  3,  4, 5}, 
+	std::vector<std::vector<int>> macierz { {1,  2,  3,  4, 5}, 
 				{16, 17, 18, 19, 6}, 
 				{15, 24, 25, 20, 7}, 
 				{14, 23, 22, 21, 8}, 
 				{13, 12, 11, 10, 9}};
 
-	vector<int> wynik {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 
+	std::vector<int> wynik {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 
 			12, 13, 14, 15, 16, 17, 18, 19, 20, 
 			21, 22, 23, 24, 25};
 
@@ -60,11 +58,11 @@ void test1() {
 }
 
 void test2() {
-	vector<vector<int>> macierz { {1, 2, 3}, 
+	std::vector<std::vector<int>> macierz { {1, 2, 3}, 
 				{4, 5, 6}, 
 				{7, 8, 9}};
 
-	vector<int> wynik {1, 2, 3, 6, 9, 8, 7, 4, 5};
+	std::vector<int> wynik {1, 2, 3, 6, 9, 8, 7, 4, 5};
 
 	assert(spiralaV1(macierz) == wynik);
 }

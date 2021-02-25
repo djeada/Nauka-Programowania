@@ -1,26 +1,23 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 
-
-	//Czy liczba jest numerem tygodnia/miesiąca?
+	//Czy liczba jest numerem tygodnia/miesiaca?
 	
-	cout << "podaj liczbe:" << endl;
+	std::cout << "Podaj liczbe:" << std::endl;
 	int a;
-	cin >> a; 
+	std::cin >> a; 
 
 	if (a >= 1 && a <= 7)
-		cout << "Liczba jest poprawnym numerem tygodnia" << endl;
+		std::cout << "Liczba jest poprawnym numerem tygodnia" << std::endl;
 
 	else
-		cout << "Liczba nie jest poprawnym numerem tygodnia" << endl;
+		std::cout << "Liczba nie jest poprawnym numerem tygodnia" << std::endl;
 
 	if (a >= 1 && a <= 12)
-		cout << "Liczba jest poprawnym numerem miesiaca" << endl;
+		std::cout << "Liczba jest poprawnym numerem miesiaca" << std::endl;
 	else
-		cout << "Liczba nie jest poprawnym numerem miesiaca" << endl;
+		std::cout << "Liczba nie jest poprawnym numerem miesiaca" << std::endl;
 	
 	return 0;
 }

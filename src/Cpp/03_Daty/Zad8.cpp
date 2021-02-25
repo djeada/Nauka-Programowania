@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 
 	/*Niech data bedzie dana w formacie DD/MM/CCYY :
@@ -17,17 +15,17 @@ int main() {
 	Dzien = (A + B + C + DD) mod 7
 	*/
 	
-  	cout << "Podaj dzien:" << endl;
+  	std::cout << "Podaj dzien:" << std::endl;
 	int DD;
-	cin >> DD;
+	std::cin >> DD;
 	
-	cout << "Podaj miesiac:" << endl;
+	std::cout << "Podaj miesiac:" << std::endl;
 	int MM;
-	cin >> MM;
+	std::cin >> MM;
 
-	cout << "Podaj rok:" << endl;
+	std::cout << "Podaj rok:" << std::endl;
 	int rok;
-	cin >> rok;
+	std::cin >> rok;
 
 	int CC = rok/100;
 	int YY = rok % 100;
@@ -40,35 +38,35 @@ int main() {
 
 	switch (wynik) {
 		case 1:
-			cout << "pierwszym dniem tygodnia jest poniedzialek" << endl;
+			std::cout << "pierwszym dniem tygodnia jest poniedzialek" << std::endl;
 			break;		
 
 		case 2:
-			cout << "drugim dniem tygodnia jest wtorek" << endl;
+			std::cout << "drugim dniem tygodnia jest wtorek" << std::endl;
 			break;		        
 
 		case 3:
-			cout << "trzecim dniem tygodnia jest sroda" << endl;
+			std::cout << "trzecim dniem tygodnia jest sroda" << std::endl;
 			break;
 
 		case 4:
-			cout << "czwartym dniem tygodnia jest czwartek" << endl;
+			std::cout << "czwartym dniem tygodnia jest czwartek" << std::endl;
 	     		break;
 
 		case 5:
-			cout << "piatym dniem tygodnia jest piatek" << endl;
+			std::cout << "piatym dniem tygodnia jest piatek" << std::endl;
 			break;	
 
 		case 6:
-			cout << "szostym dniem tygodnia jest sobota" << endl;
+			std::cout << "szostym dniem tygodnia jest sobota" << std::endl;
 			break;		
 
 		case 7:
-			cout << "siodmym dniem tygodnia jest niedziela" << endl;
+			std::cout << "siodmym dniem tygodnia jest niedziela" << std::endl;
 			break;
 		
 		default: 
-			cout << "bledne dane" << endl;
+			std::cout << "bledne dane" << std::endl;
 	
 	}
 
