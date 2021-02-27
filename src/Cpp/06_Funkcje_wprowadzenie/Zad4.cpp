@@ -1,7 +1,5 @@
 #include <cmath>
-#include <iostream>
-
-using namespace std;
+#include <cassert>
 
 //Napisz funkcje, ktora:
 
@@ -27,24 +25,50 @@ int maks3(int a, int b, int c) {
 	return maksAB > c ? maksAB : c;
 }
 
+
+void test1() {
+	int a = 7;
+	int b = 5;
+	int wynik = a;
+
+	assert(maks2(a, b) == wynik);
+	assert(maks2(b, a) == wynik);
+}
+
+void test2() {
+	int a = 7;
+	int b = 5;
+	int wynik = b;
+
+	assert(min2(a, b) == wynik);
+	assert(min2(b, a) == wynik);
+}
+
+void test3() {
+	int a = 7;
+	int b = 5;
+	int c = 11;
+	int wynik = c;
+
+	assert(maks3(a, b, c) == wynik);
+	assert(maks3(b, a, c) == wynik);
+}
+
+void test4() {
+	int a = 7;
+	int b = 5;
+	int c = 11;
+	int wynik = b;
+
+	assert(min3(a, b, c) == wynik);
+	assert(min3(b, a, c) == wynik);
+}
+
 int main() {
-	cout << "Podaj dwie liczby: " << endl;
-	int a;
-	cin >> a;
-	int b;
-	cin >> b;
-
-	cout << "mniejsza liczba to: " << min2(a, b) << endl;
-	cout << "wieksza liczba to: " << maks2(a, b) << endl;
-
-	cout << "Podaj trzy liczby: " << endl;
-	cin >> a;
-	cin >> b;
-	int c;
-	cin >> c;
-
-	cout << "najmniejsza liczba to: " << min3(a, b, c) << endl;
-	cout << "najwieksza liczba to " << maks3(a, b, c) << endl;
+	test1();
+	test2();
+	test3();
+	test4();
 
 	return 0;
 }

@@ -1,8 +1,6 @@
 #include <cmath>
 #include <iostream>
 
-using namespace std;
-
 //Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora 
 //dla otrzymanych dwoch liczb ustali czy:
 
@@ -33,20 +31,21 @@ bool czyWiekszaNizKwad(int a, int b) {
 }
 
 int main() {
-	cout << "Podaj dwie liczby: " << endl;
+	std::cout << "Podaj dwie liczby: " << std::endl;
 	int a;
-	cin >> a;
 	int b;
-	cin >> b;
 
-	cout << "Pierwsza liczba jest wieksza od drugiej: " << boolalpha << czyWieksza(a,b) << endl;
+	std::cin >> a;
+	std::cin >> b;
 
-	cout << "Suma liczb jest mniejsza od 10: " << boolalpha << czySumaMniejsza(a, b) << endl;
+	std::cout << "Pierwsza liczba jest wieksza od drugiej: " << std::boolalpha << czyWieksza(a,b) << std::endl;
 
-	cout << "Obie liczby nieparzyste: " << boolalpha << czyObieNieparzyste(a,b) << endl;
+	std::cout << "Suma liczb jest mniejsza od 10: " << std::boolalpha << czySumaMniejsza(a, b) << std::endl;
 
-	cout << "Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu " 
-		<< boolalpha << czyWiekszaNizKwad(a,b) << endl;
+	std::cout << "Obie liczby nieparzyste: " << std::boolalpha << czyObieNieparzyste(a,b) << std::endl;
+
+	std::cout << "Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu " 
+		<< std::boolalpha << czyWiekszaNizKwad(a,b) << std::endl;
 
 	return 0;
 }

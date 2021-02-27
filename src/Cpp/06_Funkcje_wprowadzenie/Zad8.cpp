@@ -1,8 +1,5 @@
-#include <iostream>
 #include <limits>
-
-using namespace std;
-
+#include <cassert>
 //Napisz funkcje realizujaca zaokraglanie ilorazu bez uzycia '/' i '%'.
 
 int podziel(int a, int b) {
@@ -11,7 +8,7 @@ int podziel(int a, int b) {
 	int licznik = 0;
 
 	if (b == 0)
-		return numeric_limits<int>::signaling_NaN();
+		return std::numeric_limits<int>::signaling_NaN();
 	
 	if (a == 0)
 		return 0;
@@ -45,14 +42,29 @@ int podziel(int a, int b) {
 	return licznik*znak;
 }
 
-int main() {
-	cout << "Podaj dwie liczby: " << endl;
-	int a;
-	cin >> a;
-	int b;
-	cin >> b;
+void test1() {
 
-	cout << "iloraz pierwszej przez druga to: " <<  podziel(a,b) << endl;
+	int a = 15;
+	int b = 5;
+	int wynik = 3;
+
+	assert(podziel(a,b) == wynik);
+}
+
+
+void test2() {
+
+	int a = 8;
+	int b = -4;
+	int wynik = -2;
+
+	assert(podziel(a,b) == wynik);
+}
+
+int main() {
+	
+	test1();
+	test2();
 
 	return 0;
 }

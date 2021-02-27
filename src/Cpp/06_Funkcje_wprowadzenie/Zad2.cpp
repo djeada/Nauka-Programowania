@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 //Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora 
 //dla otrzymanych dwoch liczb zwroci: 
 
@@ -27,16 +25,16 @@ int reszta(int a, int b) {
 }
 
 int main() {
-	cout << "Podaj dwie liczby: " << endl;
+	std::cout << "Podaj dwie liczby: " << std::endl;
 	int a;
-	cin >> a;
+	std::cin >> a;
 	int b;
-	cin >> b;
+	std::cin >> b;
 
-	cout << "suma liczb to: " << suma(a,b) << endl;
-	cout << "roznice drugiej i pierwszej to: " << roznica(a,b) << endl;
-	cout << "iloczyn liczb to: " << iloczyn(a,b) << endl;
-	cout << "reszte z dzielenia pierwszej przez druga to: " << reszta(a,b) << endl;
+	std::cout << "suma liczb to: " << suma(a,b) << std::endl;
+	std::cout << "roznice drugiej i pierwszej to: " << roznica(a,b) << std::endl;
+	std::cout << "iloczyn liczb to: " << iloczyn(a,b) << std::endl;
+	std::cout << "reszte z dzielenia pierwszej przez druga to: " << reszta(a,b) << std::endl;
 
 	return 0;
 }

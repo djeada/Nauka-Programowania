@@ -1,7 +1,5 @@
 #include <cmath>
-#include <iostream>
-
-using namespace std;
+#include <cassert>
 
 //Napisz funkcje, ktora dla otrzymanej liczby zwroci sume cyfr tej liczby.
 
@@ -16,12 +14,23 @@ int sumaCyfr(int a) {
 	return suma;
 }
 
-int main() {
-	cout << "Podaj liczbe: " << endl;
-	int a;
-	cin >> a;
+void test1() {
+	int a = 312423;
+	int wynik = 15;
 	
-	cout << "Suma cyfr liczby to: " << sumaCyfr(a) << endl;
+	assert(sumaCyfr(a) == wynik);
+}
+
+void test2() {
+	int a = 5;
+	int wynik = 5;
+	
+	assert(sumaCyfr(a) == wynik);
+}
+
+int main() {
+	test1();
+	test2();
 
 	return 0;
 }

@@ -2,38 +2,60 @@
 #include <algorithm>
 #include <cassert>
 
-//Otrzymujesz liste liczb, skladajaca sie wylacznie z zer i jedynek. 
-//Posortuj liste.
+//Otrzymuejsz cyklicznie posortowaną liste oraz klucz. 
+//Znajdz indeks pierwszego wystapienia klucza w liscie. 
+//Jesli klucz nie wystepuje w liscie zwroc -1.
 
-void sortuj (std::vector<int>& lista)
+int znajdzKlucz(std::vector<int>& lista, int klucz)
 {
-	unsigned int zera = std::count(lista.begin(), lista.end(), 0);
+	int lewo = 0;
+	int prawo = lista.size() - 1;
 
-    for (unsigned int i = 0; i < zera; i++)
-        lista[i] = 0;
+	while (lewo <= prawo) {
 
-    for (unsigned int i = zera; i < lista.size(); i++)
-        lista[i] = 1;
+		auto sr = (lewo + prawo) / 2;
+
+		if (klucz == lista[sr])
+			return sr;
+
+		if (lista[sr] <= lista[prawo]) {
+			
+			if (lista[sr] < klucz && klucz <= lista[prawo])
+				lewo = sr + 1;
+			
+			else
+				prawo = sr - 1;
+		}
+
+		else {
+			
+			if (lista[lewo] <= klucz && klucz < lista[sr])
+				prawo = sr - 1;
+			
+			else
+				lewo = sr + 1;
+		}	
+	}
+	
+	return -1;
 }
 
 void test1() 
 {
-	std::vector<int> lista {1, 0, 0, 1, 1, 1, 0};
-	std::vector<int> wynik {0, 0, 0, 1, 1, 1, 1};
+	std::vector<int> lista {27, 31, 32, 3, 5, 9, 10, 15};
+	int klucz = 31;
+	int wynik = 1;
 
-	sortuj(lista);
-
-	assert(lista == wynik);
+	assert(znajdzKlucz(lista, klucz) == wynik);
 }
 
 void test2() 
 {
-	std::vector<int> lista {1, 1, 1, 1, 1, 1};
-	std::vector<int> wynik {1, 1, 1, 1, 1, 1};
+	std::vector<int> lista {4, 7, 12, 32, 51, 90, 100, 1, 2};
+	int klucz = -5;
+	int wynik = -1;
 
-	sortuj(lista);
-
-	assert(lista == wynik);
+	assert(znajdzKlucz(lista, klucz) == wynik);
 }
 
 int main() {
