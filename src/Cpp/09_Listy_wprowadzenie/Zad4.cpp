@@ -3,14 +3,12 @@
 #include <limits>
 #include <algorithm>
 
-using namespace std;
-
 //Otrzymujesz liste. Znajdz najwiekszy 
 //i najmniejszy element tej listy.
-int maksV1(vector<int>& lista) {
+int maksV1(std::vector<int>& lista) {
 
 	if (lista.empty())
-		return numeric_limits<int>::min();
+		return std::numeric_limits<int>::min();
 	
 	int maks = lista.front();
 
@@ -22,10 +20,10 @@ int maksV1(vector<int>& lista) {
 	return maks;
 }
 
-int minV1(vector<int>& lista) {
+int minV1(std::vector<int>& lista) {
 
 	if (lista.empty())
-		return numeric_limits<int>::max();
+		return std::numeric_limits<int>::max();
 	
 	int min = lista.front();
 
@@ -37,18 +35,24 @@ int minV1(vector<int>& lista) {
 	return min;
 }
 
+void test1() {
+	std::vector<int> lista {3, 5, -7, 4, 9, -11, 2};
+ 	
+    	assert(maksV1(lista) == *std::max_element(lista.begin(), lista.end()));
+    	assert(minV1(lista) == *std::min_element(lista.begin(), lista.end()));
+}
+
+void test2() {
+	std::vector<int> lista {3, -2, 4, 29, -3, -40, 8, 5, -7, -1};
+ 	
+ 	assert(maksV1(lista) == *std::max_element(lista.begin(), lista.end()));
+    	assert(minV1(lista) == *std::min_element(lista.begin(), lista.end()));
+}
 
 int main() {
 
-    	vector<int> lista({3, 5, -7, 4, 9, -11, 2});
- 	
-    	assert(maksV1(lista) == *max_element(lista.begin(), lista.end()));
-    	assert(minV1(lista) == *min_element(lista.begin(), lista.end()));
-    	
-	lista = {3, -2, 4, 29, -3, -40, 8, 5, -7, -1};
-
-  	assert(maksV1(lista) == *max_element(lista.begin(), lista.end()));
-    	assert(minV1(lista) == *min_element(lista.begin(), lista.end()));
+    	test1();
+	test2();
     	    	
 	return 0;
 }

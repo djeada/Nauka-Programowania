@@ -2,8 +2,6 @@
 #include <cassert>
 #include <cmath>
 
-using namespace std;
-
 //Otrzymujesz dokladnie 6 liczb. Otrzymane liczby stanowia 
 //odpowienio wspolrzedne xA, yA, xB, yB, xC, yC. Sprawdz
 //czy punkty A, B oraz C moga stanowic wierzcholki trojkata.
@@ -15,7 +13,7 @@ int odleglosc(int x1, int y1, int x2, int y2) {
 	return sqrt(sumaKwadratow);
 }
 
-bool czyTrojkatV1(vector<int>& wsplX, vector<int>& wsplY) {
+bool czyTrojkatV1(std::vector<int>& wsplX, std::vector<int>& wsplY) {
 
 	assert(wsplX.size() == wsplY.size() && wsplX.size() == 3);
 
@@ -27,7 +25,7 @@ bool czyTrojkatV1(vector<int>& wsplX, vector<int>& wsplY) {
 		&& (odlegloscAC + odlegloscBC) > odlegloscAB;
 }
 
-bool czyTrojkatV2(vector<int>& wsplX, vector<int>& wsplY) {
+bool czyTrojkatV2(std::vector<int>& wsplX, std::vector<int>& wsplY) {
 
 	assert(wsplX.size() == wsplY.size() && wsplX.size() == 3);
 
@@ -37,16 +35,24 @@ bool czyTrojkatV2(vector<int>& wsplX, vector<int>& wsplY) {
 	return a != 0;
 }
 
-int main() {
-    	vector<int> wsplX({-2, 7, 8});
-    	vector<int> wsplY({4, 5, -8});
+void test1() {
+	std::vector<int> wsplX {-2, 7, 8};
+    	std::vector<int> wsplY {4, 5, -8};
 	assert(czyTrojkatV1(wsplX, wsplY));
 	assert(czyTrojkatV2(wsplX, wsplY));
+}
 
-	wsplX = {0, 2, 5};
-    	wsplY = {0, -2, -5};
+void test2() {
+	std::vector<int> wsplX {0, 2, 5};
+    	std::vector<int> wsplY {0, -2, -5};
+	assert(!czyTrojkatV1(wsplX, wsplY));
 	assert(!czyTrojkatV2(wsplX, wsplY));
-	assert(!czyTrojkatV2(wsplX, wsplY));
+}
+
+int main() {
+    	
+	test1();
+	test2();
 
 	return 0;
 }

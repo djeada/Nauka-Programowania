@@ -1,13 +1,11 @@
 #include <vector>
 #include <cassert>
 
-using namespace std;
-
 //Otrzymujesz liste liczb. Sprwadz czy srednia elementow 
 //znajduje się w liscie. Dla sredniej nie bedacej liczba
 //calkowita, zaokraglij wynik w dol.
 
-int policzSrednia(vector<int>& lista) {
+int policzSrednia(std::vector<int>& lista) {
 	
 	int suma = 0;
 	
@@ -17,7 +15,7 @@ int policzSrednia(vector<int>& lista) {
 	return suma/lista.size();
 }
 
-bool czySredniaWLiscie(vector<int>& lista) {
+bool czySredniaWLiscie(std::vector<int>& lista) {
 
 	int srednia = policzSrednia(lista);
 	
@@ -29,13 +27,20 @@ bool czySredniaWLiscie(vector<int>& lista) {
 	return false;
 }
 
+void test1() {
+	std::vector<int> lista {3, 5, -7, 4, 9, -11, 2};    	
+    	assert(!czySredniaWLiscie(lista));
+}
+
+void test2() {
+	std::vector<int> lista {1, 2, 3};    	
+    	assert(czySredniaWLiscie(lista));
+}
+
 int main() {
 
-    	vector<int> lista({3, 5, -7, 4, 9, -11, 2});    	
-    	assert(!czySredniaWLiscie(lista));
-    	
-    	lista = {1, 2, 3};
-        	assert(czySredniaWLiscie(lista));
+    	test1();
+	test2();
     	
 	return 0;
 }

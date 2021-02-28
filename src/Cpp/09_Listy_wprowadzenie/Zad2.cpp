@@ -1,31 +1,29 @@
 #include <vector>
 #include <iostream>
 
-using namespace std;
-
 //Dla liczby N, wczytaj N liczb do listy, a nastepnie:
-void wczytaj(vector<int>& lista, int n) {
+void wczytaj(std::vector<int>& lista, int n) {
 	for (int i = 0; i < n; i++) {
 		int liczba;
-		cin >> liczba;
+		std::cin >> liczba;
 		lista.push_back(liczba);
 	}
 }
 
 //a)dodaj do kazdego elementu 1;
-void zwieksz(vector<int>& lista) {
+void zwieksz(std::vector<int>& lista) {
 	for (auto& liczba : lista)
 		liczba += 1;
 }
 
 //b)pomnoz kazdy element przez jego indeks;
-void pomnoz(vector<int>& lista) {
-	for (int i = 0; i < lista.size(); i++)
+void pomnoz(std::vector<int>& lista) {
+	for (unsigned int i = 0; i < lista.size(); i++)
 		lista[i] *= i;
 }
 
 //c)zastap wszystkie elementy wartoscia pierwszego elementu listy.
-void zastap(vector<int>& lista) {
+void zastap(std::vector<int>& lista) {
 	if (lista.empty())
 		return;
 
@@ -35,22 +33,22 @@ void zastap(vector<int>& lista) {
 
 //Dla każdego podpunktu wypisz zmodyfikowaną listę. Elementy listy powinny 
 //być oddzielone przecinkami i wypisane w jednym wierszu.
-void wypiszOdKonca(vector<int>& lista) {
+void wypiszOdKonca(std::vector<int>& lista) {
 	for (auto liczba : lista)
-		cout << liczba << ", ";
-	cout << endl;
+		std::cout << liczba << ", ";
+	std::cout << std::endl;
 }
 
 int main() {
 
-	vector<int> lista;
+	std::vector<int> lista;
 	int n;
 	
-	cout << "podaj liczbe n: ";
-	cin >> n;
+	std::cout << "podaj liczbe n: ";
+	std::cin >> n;
 	wczytaj(lista, n);	
 
-	vector<int> kopia(lista);
+	std::vector<int> kopia(lista);
 	zwieksz(kopia);
 	wypiszOdKonca(kopia);	
 

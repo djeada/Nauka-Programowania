@@ -1,41 +1,39 @@
 #include <vector>
 #include <iostream>
 
-using namespace std;
-
 //Dla liczby N, wczytaj N liczb do listy, a nastepnie:
-void wczytaj(vector<int>& lista, int n) {
+void wczytaj(std::vector<int>& lista, int n) {
 	for (int i = 0; i < n; i++) {
 		int liczba;
-		cin >> liczba;
+		std::cin >> liczba;
 		lista.push_back(liczba);
 	}
 }
 
 //a) wypisz liste od poczatku do konca. Elementy listy powinny 
 //znajdowac sie w osobnych wierszach.
-void wypiszOdPoczatku(vector<int>& lista) {
+void wypiszOdPoczatku(std::vector<int>& lista) {
 	for (auto liczba : lista)
-		cout << liczba << endl;
+		std::cout << liczba << std::endl;
 }
 
 //b) wypisz liste od konca. Elementy listy powinny byc oddzielone 
 //przecinkami i wypisane w jednym wierszu.
-void wypiszOdKonca(vector<int>& lista) {
+void wypiszOdKonca(std::vector<int>& lista) {
 	auto it = cend(lista);
     	while (it != cbegin(lista))
-        		cout << *(--it) << ", ";
+        		std::cout << *(--it) << ", ";
 
-	cout << endl;
+	std::cout << std::endl;
 }
 
 int main() {
 
-	vector<int> lista;
+	std::vector<int> lista;
 	int n;
 	
-	cout << "podaj liczbe n: ";
-	cin >> n;
+	std::cout << "podaj liczbe n: ";
+	std::cin >> n;
 	wczytaj(lista, n);	
 	wypiszOdPoczatku(lista);
 	wypiszOdKonca(lista);

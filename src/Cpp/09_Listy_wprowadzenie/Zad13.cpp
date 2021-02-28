@@ -3,19 +3,17 @@
 #include <algorithm>
 #include <numeric>
 
-using namespace std;
-
 //Dla otrzymanej listy, skladajacej się z nieuporzadkowanych 
 //kolejnych (za wyjatkiem jednego) wyrazow ciagu arytmetycznego, 
 //znajdz brakujacy element.
 
-int sumaCiaguArt(vector<int>& lista) {
+int sumaCiaguArt(std::vector<int>& lista) {
 	int min = *min_element(lista.begin(), lista.end());
 	int maks = *max_element(lista.begin(), lista.end());
 	return (lista.size() + 1)*(min + maks)/2;
 }
 
-int znajdzBrakujacyElement(vector<int>& lista) {
+int znajdzBrakujacyElement(std::vector<int>& lista) {
 
 	int sumaListy = accumulate(lista.begin(), lista.end(), 0);
 	int sumaPrzedzialu = sumaCiaguArt(lista);
@@ -23,14 +21,22 @@ int znajdzBrakujacyElement(vector<int>& lista) {
 	return sumaPrzedzialu - sumaListy;
 }
 
-int main() {
-    	vector<int> lista({6, 8, 4, 10, 14, 2});
+void test1() {
+	std::vector<int> lista {6, 8, 4, 10, 14, 2};
 	int wynik = 12;
 	assert(znajdzBrakujacyElement(lista) == wynik);
+}
 
-	lista = {1, 2, 4, 5, 6};
-	wynik = 3;
+void test2() {
+	std::vector<int> lista {1, 2, 4, 5, 6};
+	int wynik = 3;
 	assert(znajdzBrakujacyElement(lista) == wynik);
+}
+
+int main() {
+    	
+	test1();
+	test2();
 
 	return 0;
 }
