@@ -1,8 +1,6 @@
 #include <vector>
 #include <cassert>
 
-using namespace std;
-
 //Dla otrzymanych dwoch list zwroc liste powstala poprzez:
 //a) dostawienie drugiej listy na koniec pierwszej listy;
 std::vector<int> dostaw(std::vector<int>& listaA, std::vector<int>& listaB) {
@@ -26,16 +24,26 @@ std::vector<int> podmien(std::vector<int>& listaA, std::vector<int>& listaB) {
 	return wynik;
 }
 
+void test1() {
+	std::vector<int> listaA {-2, 8, 3, 6};
+	std::vector<int> listaB {7, 5, 0};
+
+	std::vector<int> wynik {-2, 8, 3, 6, 7, 5, 0};
+	assert(dostaw(listaA, listaB) == wynik);
+}
+
+void test2() {
+	std::vector<int> listaA {-2, 8, 3, 6};
+	std::vector<int> listaB {7, 5, 0};
+
+	std::vector<int> wynik {7, 8, 0, 6};
+	assert(podmien(listaA, listaB) == wynik);
+}
+
 int main() {
 
-	std::vector<int> listaA({-2, 8, 3, 6});
-	std::vector<int> listaB({7, 5, 0});
-
-	std::vector<int> wynik({-2, 8, 3, 6, 7, 5, 0});
-	assert(dostaw(listaA, listaB) == wynik);
-	
-	wynik = {7, 8, 0, 6};
-	assert(podmien(listaA, listaB) == wynik);
+	test1();
+	test2();
 
 	return 0;
 }

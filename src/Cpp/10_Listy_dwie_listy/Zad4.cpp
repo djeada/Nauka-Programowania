@@ -29,16 +29,26 @@ std::vector<int> mnozenieWektorowe(std::vector<int>& listaA, std::vector<int>& l
 	return wynik;
 }
 
-int main() {
-
-	std::vector<int> listaA({3, -5, 4});
-	std::vector<int> listaB({2, 6, 5});
+void test1() {
+	std::vector<int> listaA {3, -5, 4};
+	std::vector<int> listaB {2, 6, 5};
 
 	int iloczynSkalar = -4;
 	assert(mnozenieSkalarne(listaA, listaB) == iloczynSkalar);
+}
+
+void test2() {
+	std::vector<int> listaA {3, -5, 4};
+	std::vector<int> listaB {2, 6, 5};
 
 	std::vector<int> iloczynWekt({-49, -7, 28});
 	assert(mnozenieWektorowe(listaA, listaB) == iloczynWekt);
+}
 
+int main() {
+
+	test1();
+	test2();
+	
 	return 0;
 }

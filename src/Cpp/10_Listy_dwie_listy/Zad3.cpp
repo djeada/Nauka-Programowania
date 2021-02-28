@@ -20,13 +20,18 @@ std::vector<int> suma(std::vector<int>& listaA, std::vector<int>& listaB) {
 	return wynik;
 }
 
+void test1() {
+	std::vector<int> listaA {3, 1, 2, 5};
+	std::vector<int> listaB {2, 8, 6, 5};
+
+	std::vector<int> wynik {5, 9, 8, 10};
+	assert(suma(listaA, listaB) == wynik);
+
+}
+
 int main() {
 
-	std::vector<int> listaA({3, 1, 2, 5});
-	std::vector<int> listaB({2, 8, 6, 5});
-
-	std::vector<int> wynik({5, 9, 8, 10});
-	assert(suma(listaA, listaB) == wynik);
+	test1();
 
 	return 0;
 }

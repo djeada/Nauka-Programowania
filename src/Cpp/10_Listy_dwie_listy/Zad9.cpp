@@ -19,16 +19,19 @@ void usunCzescWspolnaV1(std::vector<int>& listaA, std::vector<int>& listaB) {
 	}
 }
 
-
-int main() {
-
-	std::vector<int> listaA({3, 6, 2, 7, 9});
-	std::vector<int> listaB({4, 2, 3, 5, 6});
-	std::vector<int> wynik({7, 9});
+void test1() {
+	std::vector<int> listaA {3, 6, 2, 7, 9};
+	std::vector<int> listaB {4, 2, 3, 5, 6};
+	std::vector<int> wynik {7, 9};
 	
 	usunCzescWspolnaV1(listaA, listaB);
 
 	assert(listaA == wynik);
+}
+
+int main() {
+
+	test1();
 
 	return 0;
 }

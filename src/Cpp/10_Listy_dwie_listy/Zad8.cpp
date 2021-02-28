@@ -40,13 +40,17 @@ std::vector<int> polaczV1(std::vector<int>& listaA, std::vector<int>& listaB) {
 	return wynik;
 }
 
+void test1() {
+	std::vector<int> listaA {5, 7, 11};
+	std::vector<int> listaB {1, 3, 8, 14};
+
+	std::vector<int> wynik {1, 3, 5, 7, 8, 11, 14};
+	assert(polaczV1(listaA, listaB) == wynik);
+}
+
 int main() {
 
-	std::vector<int> listaA({5, 7, 11});
-	std::vector<int> listaB({1, 3, 8, 14});
-
-	std::vector<int> wynik({1, 3, 5, 7, 8, 11, 14});
-	assert(polaczV1(listaA, listaB) == wynik);
+	test1();
 
 	return 0;
 }

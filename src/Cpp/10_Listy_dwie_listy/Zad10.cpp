@@ -34,14 +34,17 @@ double mediana(std::vector<int>& listaA, std::vector<int>& listaB) {
 	return (m1 + m2)/2.00; 
 } 
 
-
-int main() {
-
+void test1() {
 	std::vector<int> listaA({2, 4, 7});
 	std::vector<int> listaB({3, 5, 9});
 
 	double wynik = 4.5;
 	assert(mediana(listaA, listaB) == wynik);
+}
+
+int main() {
+
+	test1();
 
 	return 0;
 }
