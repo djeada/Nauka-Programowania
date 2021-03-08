@@ -2,16 +2,12 @@
 #include <string>
 #include <algorithm>
 
-using namespace std;
-
-/*
-Dla otrzymanego napisu oraz znaku, 
-znajdz liczbe wystapien znaku w napisie.
-*/
+//Dla otrzymanego napisu oraz znaku, 
+//znajdz liczbe wystapien znaku w napisie.
 
 //Zlozonosc Czasowa O(n)
 //Zlozonosc Pamieciowa O(1)
-int policzZnakV1(const string& slowo, const char& znak) {
+int policzZnakV1(const std::string& slowo, const char& znak) {
 
 	int licznik = 0;
 
@@ -24,7 +20,7 @@ int policzZnakV1(const string& slowo, const char& znak) {
 }
 
 void test1() {
-	string napis = "adam";
+	std::string napis = "adam";
 	char znak = 'a';
 	int wynik = 2;
 

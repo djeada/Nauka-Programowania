@@ -3,29 +3,27 @@
 #include <algorithm>
 #include <vector>
 
-using namespace std;
-
 //Otrzymujesz liste liczb. 
 //Zamien liste na napis.
 
-string liczby(const vector<int>& lista) {
-	string wynik = "";
+std::string liczby(const std::vector<int>& lista) {
+	std::string wynik = "";
 	
 	for (auto liczba : lista)
-		wynik += to_string(liczba);
+		wynik += std::to_string(liczba);
 
 	return wynik;
 }
 
 void test1() {
-	vector<int> lista({2, 4, 7});
-	string wynik = "247";
+	std::vector<int> lista({2, 4, 7});
+	std::string wynik = "247";
 	assert(liczby(lista) == wynik);
 }
 
 void test2() {
-	vector<int> lista;
-	string wynik = "";
+	std::vector<int> lista;
+	std::string wynik = "";
 	assert(liczby(lista) == wynik);
 }
 

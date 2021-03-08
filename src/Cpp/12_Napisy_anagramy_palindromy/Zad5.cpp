@@ -3,20 +3,18 @@
 #include <algorithm>
 #include <cassert>
 
-using namespace std;
-
 //Otrzymujesz napis reprezentujacy zdanie oraz slowo. 
 //Znajdz wszystkie anagramy otrzymanego slowa w zdaniu. 
 //Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
 
-void naMale(string& slowo) {
-    transform(slowo.begin(), slowo.end(), slowo.begin(), ::tolower); 
+void naMale(std::string& slowo) {
+	transform(slowo.begin(), slowo.end(), slowo.begin(), ::tolower); 
 }
 
-bool anagram(string s1, string s2) {
+bool anagram(std::string s1, std::string s2) {
 
-	int N = s1.length();
-	int M = s2.length();
+	unsigned int N = s1.length();
+	unsigned int M = s2.length();
 
 	if(N != M) return false;
 
@@ -36,7 +34,7 @@ bool anagram(string s1, string s2) {
 	return true;
 }
 
-void wyczysc(string& napis){
+void wyczysc(std::string& napis){
 	auto it = napis.begin();
 
 	while (it != napis.end()) {
@@ -47,11 +45,11 @@ void wyczysc(string& napis){
 	}
 }
 
-vector<string> anagramyV1(const string& zdanie, const string& napis) {
-	vector<string> wynik;
-	int pocz = 0; 
-	int konc = 0;
-	while ((konc = zdanie.find(' ', pocz)) != string::npos) {
+std::vector<std::string> anagramyV1(const std::string& zdanie, const std::string& napis) {
+	std::vector<std::string> wynik;
+	unsigned int pocz = 0; 
+	unsigned int konc = 0;
+	while ((konc = zdanie.find(' ', pocz)) != std::string::npos) {
 		if (konc != pocz) {
 			auto slowo = zdanie.substr(pocz, konc - pocz);
 			wyczysc(slowo);
@@ -74,9 +72,9 @@ vector<string> anagramyV1(const string& zdanie, const string& napis) {
 }
 
 void test1() {
-	string zdanie = "Za jego nikczemne uczynki, spotakla go wysoce sroga kara.";
-	string slowo = "arak";
-	vector<string> wynik({"kara"});
+	std::string zdanie = "Za jego nikczemne uczynki, spotakla go wysoce sroga kara.";
+	std::string slowo = "arak";
+	std::vector<std::string> wynik({"kara"});
 	assert(anagramyV1(zdanie, slowo) == wynik);
 }
 

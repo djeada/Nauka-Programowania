@@ -2,16 +2,12 @@
 #include <string>
 #include <algorithm>
 
-using namespace std;
-
-/*
-Policz z ilu slow sklada sie zdanie. 
-Znaki interpunkcyjne nie sa liczone jako slowa.
-*/
+//Policz z ilu slow sklada sie zdanie. 
+//Znaki interpunkcyjne nie sa liczone jako slowa.
 
 //Zlozonosc Czasowa O(n)
 //Zlozonosc Pamieciowa O(1)
-int policzSlowaV1(string& slowo) {
+int policzSlowaV1(std::string& slowo) {
 
 	bool spacja = true;
 	int licznik = 0;
@@ -29,7 +25,7 @@ int policzSlowaV1(string& slowo) {
 }
 
 void test1() {
-	string napis = "Ile to   ma :  slow w swoim zdaniu na   koniec?";
+	std::string napis = "Ile to   ma :  slow w swoim zdaniu na   koniec?";
 	int wynik = 9;
 
 	assert(policzSlowaV1(napis) == wynik);

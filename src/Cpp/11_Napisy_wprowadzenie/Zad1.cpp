@@ -2,15 +2,11 @@
 #include <string>
 #include <algorithm>
 
-using namespace std;
-
-/*
-Odwroc napis.
-*/
+//Odwroc napis.
 
 //Zlozonosc Czasowa O(n)
 //Zlozonosc Pamieciowa O(1)
-void odwrocNapisV1(string& slowo) {
+void odwrocNapisV1(std::string& slowo) {
 
 	int j = slowo.length() - 1;
 
@@ -23,21 +19,21 @@ void odwrocNapisV1(string& slowo) {
 
 //Zlozonosc Czasowa O(n)
 //Zlozonosc Pamieciowa O(1)
-void odwrocNapisV2(string& slowo) {
+void odwrocNapisV2(std::string& slowo) {
     reverse(slowo.begin(), slowo.end());
 }
 
 void test1() {
-	string napis = "adam";
-	string wynik = "mada";
+	std::string napis = "adam";
+	std::string wynik = "mada";
 
 	odwrocNapisV1(napis);
 	assert(napis == wynik);
 }
 
 void test2() {
-	string napis = "adam";
-	string wynik = "mada";
+	std::string napis = "adam";
+	std::string wynik = "mada";
 
 	odwrocNapisV2(napis);
 	assert(napis == wynik);

@@ -3,15 +3,13 @@
 #include <cassert>
 #include <unordered_map>
 
-using namespace std;
-
 //Dla dwoch slow, ile minimalnie znakow musimy usunac 
 //aby uzyskac anagramy. Zwroc -1 dla slow, o roznych 
 //dlugosciach.
 
 
-unordered_map<char, int> histogram(const string& slowo) {
-    unordered_map<char, int> histo;
+std::unordered_map<char, int> histogram(const std::string& slowo) {
+    std::unordered_map<char, int> histo;
     
     for (auto znak : slowo)
         histo[znak]++;
@@ -19,12 +17,12 @@ unordered_map<char, int> histogram(const string& slowo) {
     return histo;
 }
 
-int liczbaZnakowV1(const string& slowoA, const string& slowoB) {
+int liczbaZnakowV1(const std::string& slowoA, const std::string& slowoB) {
 	if (slowoA.size() != slowoB.size())
 		return -1;
 
-	unordered_map<char, int> histoSlowaA = histogram(slowoA);
-	unordered_map<char, int> histoSlowaB = histogram(slowoB);
+	std::unordered_map<char, int> histoSlowaA = histogram(slowoA);
+	std::unordered_map<char, int> histoSlowaB = histogram(slowoB);
 	int licznik = 0;
 
 	for (auto para : histoSlowaA) {
@@ -45,31 +43,33 @@ int liczbaZnakowV1(const string& slowoA, const string& slowoB) {
 }
 
 void test1() {
-	string slowoA = "grazyna";
-	string slowoB = "razynax";
+	std::string slowoA = "grazyna";
+	std::string slowoB = "razynax";
 	int wynik = 2;
 	assert(liczbaZnakowV1(slowoA, slowoB) == wynik); 
 }
 
 void test2() {
-	string slowoA = "pan cytryna";
-	string slowoB = "pan pomarancza";
+	std::string slowoA = "pan cytryna";
+	std::string slowoB = "pan pomarancza";
 	int wynik = -1;
 	assert(liczbaZnakowV1(slowoA, slowoB) == wynik); 
 }
 
 void test3() {
-	string slowoA = "20ejdy0978oa";
-	string slowoB = "akv81w39j1ob";
+	std::string slowoA = "20ejdy0978oa";
+	std::string slowoB = "akv81w39j1ob";
 	int wynik = 12;
 	assert(liczbaZnakowV1(slowoA, slowoB) == wynik); 
 
 }
 
 int main() {
+
 	test1();
 	test2();
 	test3();
+
 	return 0;
 }
 

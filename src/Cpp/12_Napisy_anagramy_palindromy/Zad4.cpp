@@ -3,17 +3,15 @@
 #include <algorithm>
 #include <cassert>
 
-using namespace std;
-
 //Otrzymujesz napis reprezentujacy zdanie. 
 //Znajdz wszystkie palindromy w zdaniu.
 //Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
 
-void naMale(string& slowo) {
+void naMale(std::string& slowo) {
     transform(slowo.begin(), slowo.end(), slowo.begin(), ::tolower); 
 }
 
-bool palindrom(string& slowo) {
+bool palindrom(std::string& slowo) {
 	int N = slowo.length() - 1;
 	for (int i = 0; i <= N/2; i++) {
 		if (slowo[i] != slowo[N - i])
@@ -23,7 +21,7 @@ bool palindrom(string& slowo) {
 	return true;
 }
 
-void wyczysc(string& napis){
+void wyczysc(std::string& napis){
 	auto it = napis.begin();
 
 	while (it != napis.end()) {
@@ -34,11 +32,11 @@ void wyczysc(string& napis){
 	}
 }
 
-vector<string> palindromyV1(string& napis) {
-	vector<string> wynik;
-	int pocz = 0; 
-	int konc = 0;
-	while ((konc = napis.find(' ', pocz)) != string::npos) {
+std::vector<std::string> palindromyV1(std::string& napis) {
+	std::vector<std::string> wynik;
+	unsigned int pocz = 0; 
+	unsigned int konc = 0;
+	while ((konc = napis.find(' ', pocz)) != std::string::npos) {
 		if (konc != pocz) {
 			auto slowo = napis.substr(pocz, konc - pocz);
 			wyczysc(slowo);
@@ -61,8 +59,8 @@ vector<string> palindromyV1(string& napis) {
 }
 
 void test1() {
-	string napis = "Tata zbaral kajak na wycieczke i uderzyl sie w oko";
-	vector<string> wynik({"kajak", "i", "w", "oko"});
+	std::string napis = "Tata zbaral kajak na wycieczke i uderzyl sie w oko";
+	std::vector<std::string> wynik({"kajak", "i", "w", "oko"});
 	assert(palindromyV1(napis) == wynik);
 }
 

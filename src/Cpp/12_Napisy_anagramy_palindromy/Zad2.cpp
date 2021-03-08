@@ -3,49 +3,51 @@
 #include <algorithm>
 #include <cassert>
 
-using namespace std;
+//Znajdz wszystkie permutacje slowa.
 
-/*
-Znajdz wszystkie permutacje slowa.
-*/
-
-void permutacja (string& slowoWej, string& slowoWyj, vector<string>& wynik) {
+void permutacja (std::string& slowoWej, std::string& slowoWyj, std::vector<std::string>& wynik) {
 	if (slowoWej.empty()) {
 		wynik.push_back(slowoWyj);
 		return;
 	}
 
-	for (int i = 0; i < slowoWej.length(); ++i) {
-		string noweSlowoWej = slowoWej;
-		string noweSlowoWyj = slowoWyj;
+	for (unsigned int i = 0; i < slowoWej.length(); ++i) {
+		std::string noweSlowoWej = slowoWej;
+		std::string noweSlowoWyj = slowoWyj;
 		noweSlowoWej .erase(i,1);
 		noweSlowoWyj += slowoWej.at(i);
 		permutacja (noweSlowoWej, noweSlowoWyj, wynik);
 	}
 }
 
-vector<string> permutacje(string& slowoWej) {
+std::vector<std::string> permutacje(std::string& slowoWej) {
 	
-	vector<string> wynik;
+	std::vector<std::string> wynik;
 
-	string slowoWyj;  
+	std::string slowoWyj;  
 	permutacja(slowoWej, slowoWyj, wynik);
 	
 	return wynik;
 }
 
-int main() {
-    string slowo = "Dora";
+void test1() {
+	std::string slowo = "Dora";
 
-    vector<string> listaPermutacji = permutacje(slowo);
-	
-	vector<string> wynik {"Droa", "Daor", "aDor", "aroD", "aDro", "aorD", "raDo", "roDa", "rDoa", "raoD", "aoDr", "arDo", 
-    			"oraD", "oaDr", "orDa", "rDao", "oDar", "roaD", "oarD", "oDra", "Dora", "Daro", "Doar", "Drao"};
+	std::vector<std::string> listaPermutacji = permutacje(slowo);
+
+	std::vector<std::string> wynik {"Droa", "Daor", "aDor", "aroD", "aDro", "aorD", "raDo", "roDa", "rDoa", "raoD", "aoDr", "arDo", 
+	"oraD", "oaDr", "orDa", "rDao", "oDar", "roaD", "oarD", "oDra", "Dora", "Daro", "Doar", "Drao"};
 
 	sort(listaPermutacji.begin(), listaPermutacji.end());
 	sort(wynik.begin(), wynik.end());
 	assert(listaPermutacji == wynik); 
+}
 
-    return 0;
+
+int main() {
+
+	test1();
+
+	return 0;
 }
 

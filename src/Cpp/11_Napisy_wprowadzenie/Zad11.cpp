@@ -2,13 +2,11 @@
 #include <string>
 #include <algorithm>
 
-using namespace std;
-
 //Otrzymujesz napis reprezuntajacy zdanie. 
 //Znajdz srednia dlugosc slow w zdaniu. 
 //Znaki interpunkcyjne nie sa liczone jako slowa. 
 
-void wyczysc(string& napis){
+void wyczysc(std::string& napis){
 	auto it = napis.begin();
 
 	while (it != napis.end()) {
@@ -19,12 +17,12 @@ void wyczysc(string& napis){
 	}
 }
 
-int srednia(const string& napis) {
-	int calk_dlugosc = 0;
-	int n = 0;
-	int pocz = 0; 
-	int konc = 0;
-	while ((konc = napis.find(' ', pocz)) != string::npos) {
+int srednia(const std::string& napis) {
+	unsigned int calk_dlugosc = 0;
+	unsigned int n = 0;
+	unsigned int pocz = 0; 
+	unsigned int konc = 0;
+	while ((konc = napis.find(' ', pocz)) != std::string::npos) {
 		if (konc != pocz) {
 			auto slowo = napis.substr(pocz, konc - pocz);
 			wyczysc(slowo);
@@ -48,13 +46,13 @@ int srednia(const string& napis) {
 }
 
 void test1() {
-	string napis = "Kaczka lubi wiosne.";
+	std::string napis = "Kaczka lubi wiosne.";
 	int wynik = 5;
 	assert(srednia(napis) == wynik);
 }
 
 void test2() {
-	string napis = "Kaczka lubi wiosne.";
+	std::string napis = "Kaczka lubi wiosne.";
 	int wynik = 5;
 	assert(srednia(napis) == wynik);
 }

@@ -1,15 +1,10 @@
-#include <iostream>
-#include <vector>
+#include <string>
 #include <algorithm>
 #include <cassert>
 
-using namespace std;
+//Sprawdz czy slowo jest palindromem.
 
-/*
-Sprawdz czy slowo jest palindromem.
-*/
-
-bool palindrom(string& slowo) {
+bool palindrom(std::string& slowo) {
 	int N = slowo.length() - 1;
 	for (int i = 0; i <= N/2; i++) {
 		if (slowo[i] != slowo[N - i])
@@ -19,13 +14,21 @@ bool palindrom(string& slowo) {
 	return true;
 }
 
-int main() {
-    string slowo = "kajak";
+void test1() {
+ 	std::string slowo = "kajak";
 	assert(palindrom(slowo)); 
-	
-	slowo = "Pan";
-	assert(!palindrom(slowo)); 
+}
 
-    return 0;
+void test2() {
+	std::string slowo = "Pan";
+	assert(!palindrom(slowo)); 
+}
+
+int main() {
+
+	test1();
+	test2();
+
+	return 0;
 }
 

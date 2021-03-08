@@ -1,18 +1,13 @@
-#include <iostream>
-#include <vector>
+#include <string>
 #include <algorithm>
 #include <cassert>
 
-using namespace std;
-
-/*
-Usun spacje ze zdania.
-*/
+//Usun spacje ze zdania.
 
 //Zlozonosc Czasowa O(n)
 //Zlozonosc Pamieciowa O(n)
-void usunSpacjeV1(string& slowo) {
-	string pom;
+void usunSpacjeV1(std::string& slowo) {
+	std::string pom;
 
 	for (const auto& znak : slowo) {
 		if (znak != ' ')
@@ -23,21 +18,21 @@ void usunSpacjeV1(string& slowo) {
 }
 
 //Zlozonosc Czasowa O(n)
-void usunSpacjeV2(string& slowo) {
+void usunSpacjeV2(std::string& slowo) {
 	slowo.erase(remove(slowo.begin(), slowo.end(), ' '), slowo.end());
 }
 
 void test1() {
-	string zdanie = "lezy jezy na wierzy";
-	string wynik = "lezyjezynawierzy";
+	std::string zdanie = "lezy jezy na wierzy";
+	std::string wynik = "lezyjezynawierzy";
 
 	usunSpacjeV1(zdanie);	
 	assert(zdanie == wynik);
 }
 
 void test2() {
-	string zdanie = "lezy jezy na wierzy";
-	string wynik = "lezyjezynawierzy";
+	std::string zdanie = "lezy jezy na wierzy";
+	std::string wynik = "lezyjezynawierzy";
 
 	usunSpacjeV2(zdanie);
 	assert(zdanie == wynik);

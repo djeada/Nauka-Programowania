@@ -1,17 +1,13 @@
-#include <iostream>
+#include <string>
 #include <vector>
 #include <algorithm>
 #include <cassert>
 
-using namespace std;
-
-/*
-Odwroc napis.
-*/
+//Odwroc napisy w zdaniu.
 
 //Zlozonosc Czasowa O(n)
 //Zlozonosc Pamieciowa O(1)
-void odwrocNapis(string& slowo, int pocz, int koniec) {
+void odwrocNapis(std::string& slowo, int pocz, int koniec) {
 
 	int j = koniec;
 
@@ -24,13 +20,13 @@ void odwrocNapis(string& slowo, int pocz, int koniec) {
 
 //Zlozonosc Czasowa O(n)
 //Zlozonosc Pamieciowa O(1)
-void odwrocNapisy(string& zdanie) {
+void odwrocNapisy(std::string& zdanie) {
 
-	int N = zdanie.length():
-	int pocz = 0;
-	int koniec;
+	unsigned int N = zdanie.length();
+	unsigned int pocz = 0;
+	unsigned int koniec;
 
-	for (int i = 0; i < N; i++) {
+	for (unsigned int i = 0; i < N; i++) {
 		if (zdanie[i] == ' ' || zdanie[i] == '\0') {
 			koniec = i - 1 ;
 			odwrocNapis(zdanie, pocz, koniec);
@@ -39,13 +35,18 @@ void odwrocNapisy(string& zdanie) {
 	}
 }
 
-int main() {
-    string napis = "Cameron Diaz";
-    string wynik = "noremaC zaiD";
+void test1() {
+	std::string napis = "Cameron Diaz";
+	std::string wynik = "noremaC zaiD";
 
-	odwrocNapisV1(napis);	
+	odwrocNapisy(napis);	
 	assert(napis == wynik);
-    
+}
+
+int main() {
+	
+	test1();
+
 	return 0;
 }
 

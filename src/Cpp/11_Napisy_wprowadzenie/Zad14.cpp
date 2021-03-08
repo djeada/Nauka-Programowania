@@ -2,29 +2,27 @@
 #include <string>
 #include <algorithm>
 
-using namespace std;
-
 //Otrzymujesz liczbę n. Zwroc napis skladajacy 
 //sie z liczb naturalnych od 1 do n.
 
-string liczby(int n) {
-	string wynik = "";
+std::string liczby(int n) {
+	std::string wynik = "";
 	
 	for (int i = 1; i <= n; i++)
-		wynik += to_string(i);
+		wynik += std::to_string(i);
 
 	return wynik;
 }
 
 void test1() {
 	int n = 5;
-	string wynik = "12345";
+	std::string wynik = "12345";
 	assert(liczby(n) == wynik);
 }
 
 void test2() {
 	int n = -1;
-	string wynik = "";
+	std::string wynik = "";
 	assert(liczby(n) == wynik);
 }
 

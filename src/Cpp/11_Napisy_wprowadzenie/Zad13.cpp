@@ -3,10 +3,9 @@
 #include <vector>
 #include <cmath>
 
-using namespace std;
-
 //Otrzymujesz zdanie. Znajdz znaki znajdujace 
 //sie na pozycjach bedacych liczbami pierwszymi.
+
 bool czyPierwsza(int n) {
 
 	if (!(n % 2) && n != 2)
@@ -20,11 +19,11 @@ bool czyPierwsza(int n) {
 	return true;
 }
 
-vector<char> znaki(const string& napis) {
+std::vector<char> znaki(const std::string& napis) {
 	
-	vector<char> znaki;
+	std::vector<char> znaki;
 
-	for (int i = 0; i < napis.size(); i++) {
+	for (unsigned int i = 0; i < napis.size(); i++) {
 		if (czyPierwsza(i))
 			znaki.push_back(napis[i]);
 	}
@@ -33,8 +32,8 @@ vector<char> znaki(const string& napis) {
 }
 
 void test1() {
-	string napis = "Kaczka lubi wiosne.";
-	vector<char> wynik({'a','c','z','a', 'l',' ','i','e'});
+	std::string napis = "Kaczka lubi wiosne.";
+	std::vector<char> wynik {'a','c','z','a', 'l',' ','i','e'};
 	assert(znaki(napis) == wynik);
 }
 

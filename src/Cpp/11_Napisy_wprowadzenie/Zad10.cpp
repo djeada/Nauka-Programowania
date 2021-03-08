@@ -3,15 +3,13 @@
 #include <algorithm>
 #include <vector>
 
-using namespace std;
-
 //Otrzymujesz napis reprezuntajacy zdanie. 
 //Znajdz najdluzsze oraz najkrotsze slowo w zdaniu. 
 //Jesli wiecej niz jedno slowo ma ekstremalna dlugosc, 
 //zwroc te, ktore wystepuje w zdaniu jako pierwsze. 
 //Znaki interpunkcyjne nie sa liczone jako slowa. 
 
-void wyczysc(string& napis){
+void wyczysc(std::string& napis){
 	auto it = napis.begin();
 
 	while (it != napis.end()) {
@@ -22,12 +20,12 @@ void wyczysc(string& napis){
 	}
 }
 
-string najdluzsze(string& napis) {
-	string wynik;
-	int dlugosc = 0;
-	int pocz = 0; 
-	int konc = 0;
-	while ((konc = napis.find(' ', pocz)) != string::npos) {
+std::string najdluzsze(std::string& napis) {
+	std::string wynik;
+	unsigned int dlugosc = 0;
+	unsigned int pocz = 0; 
+	unsigned int konc = 0;
+	while ((konc = napis.find(' ', pocz)) != std::string::npos) {
 		if (konc != pocz) {
 			auto slowo = napis.substr(pocz, konc - pocz);
 			wyczysc(slowo);
@@ -52,12 +50,12 @@ string najdluzsze(string& napis) {
 	return wynik;
 }
 
-string najkrotsze(string& napis) {
-	string wynik;
-	int dlugosc = napis.size();
-	int pocz = 0; 
-	int konc = 0;
-	while ((konc = napis.find(' ', pocz)) != string::npos) {
+std::string najkrotsze(std::string& napis) {
+	std::string wynik;
+	unsigned int dlugosc = napis.size();
+	unsigned int pocz = 0; 
+	unsigned int konc = 0;
+	while ((konc = napis.find(' ', pocz)) != std::string::npos) {
 		if (konc != pocz) {
 			auto slowo = napis.substr(pocz, konc - pocz);
 			wyczysc(slowo);
@@ -83,17 +81,16 @@ string najkrotsze(string& napis) {
 }
 
 void test1() {
-	string napis = "Kaczka lubi wiosne.";
-	string wynik = "Kaczka";
+	std::string napis = "Kaczka lubi wiosne.";
+	std::string wynik = "Kaczka";
 	assert(najdluzsze(napis) == wynik);
 }
 
 void test2() {
-	string napis = "Kaczka lubi wiosne.";
-	string wynik = "lubi";
+	std::string napis = "Kaczka lubi wiosne.";
+	std::string wynik = "lubi";
 	assert(najkrotsze(napis) == wynik);
 }
-
 
 int main() {
 	test1();

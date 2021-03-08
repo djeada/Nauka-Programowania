@@ -2,16 +2,12 @@
 #include <string>
 #include <algorithm>
 
-using namespace std;
-
-/*
-Otrzymujesz napis. Zamien wszystkie 
-male litery na wielkie.
-*/
+//Otrzymujesz napis. Zamien wszystkie 
+//male litery na wielkie.
 
 //Zlozonosc Czasowa O(n)
 //Zlozonosc Pamieciowa O(1)
-void naWielkieV1(string& slowo) {
+void naWielkieV1(std::string& slowo) {
 
 	for (auto& znak : slowo) {
 		if (znak >= 97 && znak <= 122)
@@ -21,7 +17,7 @@ void naWielkieV1(string& slowo) {
 
 //Zlozonosc Czasowa O(n)
 //Zlozonosc Pamieciowa O(1)
-void naWielkieV2(string& slowo) {
+void naWielkieV2(std::string& slowo) {
 
 	for (auto& znak : slowo) {
 		if (islower(znak))
@@ -31,29 +27,29 @@ void naWielkieV2(string& slowo) {
 
 //Zlozonosc Czasowa O(n)
 //Zlozonosc Pamieciowa O(1)
-void naWielkieV3(string& slowo) {
+void naWielkieV3(std::string& slowo) {
     transform(slowo.begin(), slowo.end(), slowo.begin(), ::toupper); 
 }
 
 void test1() {
-	string napis = "pacZka!";
-	string wynik = "PACZKA!";
+	std::string napis = "pacZka!";
+	std::string wynik = "PACZKA!";
 	
 	naWielkieV1(napis);
 	assert(napis == wynik);
 }
 
 void test2() {
-	string napis = "pacZka!";
-	string wynik = "PACZKA!";
+	std::string napis = "pacZka!";
+	std::string wynik = "PACZKA!";
 	
 	naWielkieV2(napis);
 	assert(napis == wynik);
 }
 
 void test3() {
-	string napis = "pacZka!";
-	string wynik = "PACZKA!";
+	std::string napis = "pacZka!";
+	std::string wynik = "PACZKA!";
 	
 	naWielkieV3(napis);
 	assert(napis == wynik);
