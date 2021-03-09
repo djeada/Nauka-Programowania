@@ -1,37 +1,32 @@
-/*
-Znajdz i zamien wszystkie wystapienia slowa w zdaniu na inne podane slowo.
-*/
-
-#include <iostream>
 #include <string>
 #include <cassert>
 
-using namespace std;
+//Znajdz i zamien wszystkie wystapienia slowa w zdaniu na inne podane slowo.
 
-string zamienWszystkoV1(string zdanie, string napisA, string napisB) {
+std::string zamienWszystkoV1(std::string zdanie, std::string napisA, std::string napisB) {
 
-    auto k = zdanie.find(napisA);
+	auto k = zdanie.find(napisA);
 
-    while (k != string::npos) {
-        zdanie.replace(k, napisA.size(), napisB);
-        k = zdanie.find(napisA, k  + napisB.size());
-    }
-    
-    return zdanie;
+	while (k != std::string::npos) {
+		zdanie.replace(k, napisA.size(), napisB);
+		k = zdanie.find(napisA, k  + napisB.size());
+	}
+
+	return zdanie;
 }
 
 int main() {
 
 	//Testy Poprawnosci
-    string zdanie = "Lezy jezy na wiezy";
-	string napisA = "zy";
-    string napisB = "rzy";
-	string wynik = "Lerzy jerzy na wierzy";
-	
-	
+	std::string zdanie = "Lezy jezy na wiezy";
+	std::string napisA = "zy";
+	std::string napisB = "rzy";
+	std::string wynik = "Lerzy jerzy na wierzy";
+
+
 	assert(zamienWszystkoV1(zdanie, napisA, napisB) == wynik);
 
-    return 0;
+	return 0;
 }
 
 //Compiled with g++ -std=c++17 Zad1.cpp -lstdc++fs -o exe
