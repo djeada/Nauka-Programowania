@@ -1,7 +1,6 @@
-var Main = /** @class */ (function () {
-    function Main() {
-    }
-    Main.main = function (args) {
+var Main = /** @class */ (function() {
+    function Main() {}
+    Main.main = function(args) {
         console.info("A.D.\n");
         console.info("Witaj swiecie\n");
     };
