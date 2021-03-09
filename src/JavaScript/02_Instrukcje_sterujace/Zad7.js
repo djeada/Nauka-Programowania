@@ -1,0 +1,48 @@
+var Main = /** @class */ (function() {
+    function Main() {}
+    Main.main = function(args) {
+        console.info("Prawo wylacznego srodka");
+        var p = false;
+        console.info("dla p majacego wartosc logiczna ", p);
+        console.info(" wyrazenie p v ~p ma wartosc logiczna ", p || !p);
+        p = true;
+        console.info("dla p majacego wartosc logiczna ", p);
+        console.info("wyrazenie p v ~p ma wartosc logiczna", p || !p);
+        p = false;
+        console.info("Zasada niesprzecznosci");
+        console.info("dla p majacego wartosc logiczna ", p);
+        console.info("wyrazenie ~(p Ʌ ~p) ma wartosc logiczna ", !(p && !p));
+        p = true;
+        console.info("dla p majacego wartosc logiczna ", p);
+        console.info("wyrazenie ~(p Ʌ ~p) ma wartosc logiczna ", !(p && !p));
+        p = false;
+        var q = false;
+        console.info("Przemiennosc koniunkcji");
+        console.info("dla p majacego wartosc logiczna ", p);
+        console.info("oraz q majacego wartosc logiczna ", q);
+        console.info("wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ", ((p && q) == (q && p)));
+        p = true;
+        q = false;
+        console.info("dla p majacego wartosc logiczna ", p);
+        console.info("oraz q majacego wartosc logiczna ", q);
+        console.info("wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ", ((p && q) == (q && p)));
+        p = false;
+        q = true;
+        console.info("dla p majacego wartosc logiczna ", p);
+        console.info("oraz q majacego wartosc logiczna ", q);
+        console.info("wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ", ((p && q) == (q && p)));
+        p = true;
+        q = true;
+        console.info("dla p majacego wartosc logiczna ", p);
+        console.info("oraz q majacego wartosc logiczna ", q);
+        console.info("wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ", ((p && q) == (q && p)));
+        p = false;
+        q = false;
+        console.info("dla p majacego wartosc logiczna ", p);
+        console.info("oraz q majacego wartosc logiczna ", q);
+        console.info("wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ", ((p && q) == (q && p)));
+    };
+    return Main;
+}());
+Main["__class"] = "Main";
+Main.main(null);
