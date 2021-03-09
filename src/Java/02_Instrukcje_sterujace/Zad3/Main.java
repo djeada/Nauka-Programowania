@@ -14,7 +14,7 @@ public class Main
 
 		if (a < 0)
 		{
-			System.out.print("libczba jest ujemna");
+			System.out.print("liczba jest ujemna");
 			System.out.print("\n");
 		}
 		else if (a > 0)
