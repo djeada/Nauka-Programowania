@@ -20,7 +20,7 @@ public class Main
 			suma += a;
 		}
 		System.out.printf("%.2f", suma);
-		System.out.printf("%.2f", "\n");
+		System.out.printf("\n");
 
 		//a_n = (n^2+5)/n
 		suma = 0F;
@@ -30,7 +30,7 @@ public class Main
 			suma += a;
 		}
 		System.out.printf("%.2f", suma);
-		System.out.printf("%.2f", "\n");
+		System.out.printf("\n");
 
 		//a_n = n + 2^n
 		suma = 0F;
@@ -41,7 +41,7 @@ public class Main
 		}
 
 		System.out.printf("%.2f", suma);
-		System.out.printf("%.2f", "\n");
+		System.out.printf("\n");
 
 	}
 
