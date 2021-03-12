@@ -14,14 +14,14 @@ public class Main
 		n = Integer.parseInt(System.console().readLine());
 
 
-		int wynik = 1;
+		float wynik = 1.00;
 		for (int i = 0; i < n; i++)
 		{
 			wynik *= 3.14;
 		}
 
 		System.out.printf("%.2f", wynik);
-		System.out.printf("%.2f", "\n");
+		System.out.printf("\n");
 
 	}
 
