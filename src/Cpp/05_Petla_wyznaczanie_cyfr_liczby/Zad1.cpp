@@ -1,21 +1,22 @@
 #include <iostream>
 
-int main() {
-	//Dla pobranej od uzytkownika liczby, 
-	//zwroc liczbe cyfr pobranje liczby.
+int main()
+{
+    //Dla pobranej od uzytkownika liczby,
+    //zwroc liczbe cyfr pobranje liczby.
 
-	std::cout << "Podaj liczbe" << std::endl;
-	int a;
-	std::cin >> a;
+    std::cout << "Podaj liczbe" << std::endl;
+    int a;
+    std::cin >> a;
 
-	int licznik = 0;
-	
-	while (a > 0) {
-		a = a / 10; 
-		licznik++;
-	}
+    int licznik = 0;
 
-	std::cout << "Podana cyfra sklada sie z " << licznik << " cyfr." << std::endl;
+    while (a > 0) {
+        a = a / 10;
+        licznik++;
+    }
 
-	return 0;
+    std::cout << "Podana cyfra sklada sie z " << licznik << " cyfr." << std::endl;
+
+    return 0;
 }

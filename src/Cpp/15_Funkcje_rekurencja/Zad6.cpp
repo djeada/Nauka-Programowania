@@ -7,25 +7,27 @@ wzorem rekurencyjnym.
 2) a(n) = 1 + a(n-1)*2
 */
 
-int ciagV1(int n) { 
-	
-	if (n == 1) 
-		return 1;
-	
-	return 1 + ciagV1(n-1)*2;
+int ciagV1(int n)
+{
+
+    if (n == 1)
+        return 1;
+
+    return 1 + ciagV1(n - 1) * 2;
 }
 
-void test1() {
-	int n = 5;
-	int wynik = 31;
+void test1()
+{
+    int n = 5;
+    int wynik = 31;
 
-	assert(ciagV1(n) == wynik);
+    assert(ciagV1(n) == wynik);
 }
 
-int main() {
-	
-	test1();
+int main()
+{
 
-	return 0;
+    test1();
+
+    return 0;
 }
-

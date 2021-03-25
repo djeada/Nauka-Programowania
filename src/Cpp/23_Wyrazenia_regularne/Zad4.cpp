@@ -1,32 +1,33 @@
-#include <string>
 #include <cassert>
-#include <regex> 
+#include <regex>
+#include <string>
 
 //Otrzymujesz dwa napisy. Sprawdz czy drugi wystepuje w pierwszym.
 
 bool nalezyDoZdania(std::string& zdanie, std::string& napis)
 {
-	return regex_search(zdanie, std::regex(napis));
+    return regex_search(zdanie, std::regex(napis));
 }
 
-void test1() 
+void test1()
 {
-	std::string zdanie = "Mozart gra na skrzypcach";
-	std::string napis = "skrzyp";
-	assert(nalezyDoZdania(zdanie, napis));
+    std::string zdanie = "Mozart gra na skrzypcach";
+    std::string napis = "skrzyp";
+    assert(nalezyDoZdania(zdanie, napis));
 }
 
-void test2() 
+void test2()
 {
-	std::string zdanie = "Lezy jerzy na wiezy";
-	std::string napis = "nan";
-	assert(!nalezyDoZdania(zdanie, napis));
+    std::string zdanie = "Lezy jerzy na wiezy";
+    std::string napis = "nan";
+    assert(!nalezyDoZdania(zdanie, napis));
 }
 
-int main() {
+int main()
+{
 
-	test1();
-	test2();
+    test1();
+    test2();
 
-	return 0;
+    return 0;
 }

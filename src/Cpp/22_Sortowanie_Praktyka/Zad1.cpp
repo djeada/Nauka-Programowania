@@ -1,27 +1,28 @@
-#include <string>
 #include <algorithm>
 #include <cassert>
+#include <string>
 
 //g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad1.cpp
 
-void sortuj (std::string& napis)
+void sortuj(std::string& napis)
 {
     std::sort(napis.begin(), napis.end());
 }
 
-void test1() 
+void test1()
 {
-	std::string napis = "bcda";
-	std::string wynik = "abcd";
+    std::string napis = "bcda";
+    std::string wynik = "abcd";
 
-	sortuj(napis);
+    sortuj(napis);
 
-	assert(napis == wynik);
+    assert(napis == wynik);
 }
 
-int main() {
+int main()
+{
 
-	test1();
+    test1();
 
-	return 0;
+    return 0;
 }

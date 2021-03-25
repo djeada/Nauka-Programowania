@@ -1,26 +1,27 @@
 #include <iostream>
 
-int main() {
+int main()
+{
 
-	//Dla pobranej liczby, sprawdz czy jest palindromem.
-	
-	std::cout << "Podaj liczbe" << std::endl;
-	int a;
-	std::cin >> a;
-	
-	int odwrocona = 0;
-	int pom = a;
+    //Dla pobranej liczby, sprawdz czy jest palindromem.
 
-	while (pom > 0) {
-		int cyfra = pom % 10;
-		odwrocona= (odwrocona*10 + cyfra);
-		pom /= 10; 
-	}
+    std::cout << "Podaj liczbe" << std::endl;
+    int a;
+    std::cin >> a;
 
-	if (odwrocona == a)
-		std::cout << "podana liczba jest palindromem" << std::endl;
-	else
-		std::cout << "podana liczba nie jest palindromem" << std::endl;
+    int odwrocona = 0;
+    int pom = a;
 
-	return 0;
+    while (pom > 0) {
+        int cyfra = pom % 10;
+        odwrocona = (odwrocona * 10 + cyfra);
+        pom /= 10;
+    }
+
+    if (odwrocona == a)
+        std::cout << "podana liczba jest palindromem" << std::endl;
+    else
+        std::cout << "podana liczba nie jest palindromem" << std::endl;
+
+    return 0;
 }

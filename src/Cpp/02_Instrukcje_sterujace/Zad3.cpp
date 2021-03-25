@@ -1,21 +1,21 @@
 #include <iostream>
 
-int main() {
+int main()
+{
 
-	//Dla pobranej liczby, sprawdz czy liczba jest ujemna, dodatnia, czy jest zerem.
-	
-	std::cout << "podaj liczbe:" << std::endl;
+    //Dla pobranej liczby, sprawdz czy liczba jest ujemna, dodatnia, czy jest zerem.
 
-	int a;
-	std::cin >> a;
+    std::cout << "podaj liczbe:" << std::endl;
 
-	if (a < 0)
-		std::cout << "libczba jest ujemna" << std::endl;
-	else if (a > 0)
-		std::cout << "liczba jest dodatnia" << std::endl;
-	else
-		std::cout << "liczba jest zerem" << std::endl;
+    int a;
+    std::cin >> a;
 
-	return 0;
+    if (a < 0)
+        std::cout << "libczba jest ujemna" << std::endl;
+    else if (a > 0)
+        std::cout << "liczba jest dodatnia" << std::endl;
+    else
+        std::cout << "liczba jest zerem" << std::endl;
+
+    return 0;
 }
-

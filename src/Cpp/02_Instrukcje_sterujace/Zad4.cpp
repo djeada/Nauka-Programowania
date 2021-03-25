@@ -1,31 +1,30 @@
 #include <iostream>
 
-int main() {
+int main()
+{
 
-	//Dla dwoch pobranych liczb, wypisz najpierw wieksza potem mniejsza.
-	
-	std::cout << "podaj dwie liczby:" << std::endl;
-	
-	int a;
-	int b;
+    //Dla dwoch pobranych liczb, wypisz najpierw wieksza potem mniejsza.
 
-	std::cin >> a;
-	std::cin >> b; 
+    std::cout << "podaj dwie liczby:" << std::endl;
 
-	if (a > b) {
-		std::cout << a << std::endl;
-		std::cout << b << std::endl;
-		std::cout << "pierwsza liczba jest wieksza od drugiej" << std::endl;
+    int a;
+    int b;
 
-	}
-		
-	else {
-		std::cout << b << std::endl;
-		std::cout << a << std::endl;
-		std::cout << "pierwsza liczba nie jest wieksza od drugiej" << std::endl;
+    std::cin >> a;
+    std::cin >> b;
 
-	}	
-	
-	return 0;
+    if (a > b) {
+        std::cout << a << std::endl;
+        std::cout << b << std::endl;
+        std::cout << "pierwsza liczba jest wieksza od drugiej" << std::endl;
+
+    }
+
+    else {
+        std::cout << b << std::endl;
+        std::cout << a << std::endl;
+        std::cout << "pierwsza liczba nie jest wieksza od drugiej" << std::endl;
+    }
+
+    return 0;
 }
-

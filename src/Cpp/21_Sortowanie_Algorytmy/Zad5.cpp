@@ -1,6 +1,6 @@
-#include <vector>
 #include <cassert>
 #include <functional>
+#include <vector>
 
 //g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad4.cpp
 int rozdziel(std::vector<int>& lista, int indeksPocz, int indeksKonc)
@@ -14,38 +14,39 @@ int rozdziel(std::vector<int>& lista, int indeksPocz, int indeksKonc)
         }
     }
 
-    std::swap(lista[i+1], lista[indeksKonc]);
+    std::swap(lista[i + 1], lista[indeksKonc]);
 
-    return i+1;
+    return i + 1;
 }
 
-void sortuj (std::vector<int> &lista)
+void sortuj(std::vector<int>& lista)
 {
-	std::function<void(std::vector<int>&, int, int)> _sortuj;
-	_sortuj = [&_sortuj] (std::vector<int>& lista, int p, int r) {
-		if (p < r) {
-			int q = rozdziel(lista, p, r);
+    std::function<void(std::vector<int>&, int, int)> _sortuj;
+    _sortuj = [&_sortuj](std::vector<int>& lista, int p, int r) {
+        if (p < r) {
+            int q = rozdziel(lista, p, r);
             _sortuj(lista, p, q - 1);
             _sortuj(lista, q + 1, r);
-		}
-	};
+        }
+    };
 
-	_sortuj(lista, 0, lista.size() - 1);
+    _sortuj(lista, 0, lista.size() - 1);
 }
 
-void test1() 
+void test1()
 {
-	std::vector<int> lista({4, 2, 5, 3, 1});
-	std::vector<int> wynik({1, 2, 3, 4, 5});
+    std::vector<int> lista({ 4, 2, 5, 3, 1 });
+    std::vector<int> wynik({ 1, 2, 3, 4, 5 });
 
-	sortuj(lista);
+    sortuj(lista);
 
-	assert(lista == wynik);
+    assert(lista == wynik);
 }
 
-int main() {
+int main()
+{
 
-	test1();
+    test1();
 
-	return 0;
+    return 0;
 }

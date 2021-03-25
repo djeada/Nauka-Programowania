@@ -1,23 +1,24 @@
+#include <iomanip>
 #include <iostream>
 #include <numbers>
-#include <iomanip>
 
-int main() {
+int main()
+{
 
-	//Dla pobranej liczby, wyswietl liczbe Pi tyle razy 
-	//ile wynosi pobrana liczba, z dokladnoscia do tylu 
-	//miejsc po przescinku ile wynosi pobrana liczba.
-	
-	std::cout << "Podaj liczbe: " << std::endl;
-	int n;
-	std::cin >> n;
+    //Dla pobranej liczby, wyswietl liczbe Pi tyle razy
+    //ile wynosi pobrana liczba, z dokladnoscia do tylu
+    //miejsc po przescinku ile wynosi pobrana liczba.
 
-	std::cout << std::fixed << std::setprecision(n);
+    std::cout << "Podaj liczbe: " << std::endl;
+    int n;
+    std::cin >> n;
 
-	for (int i = 0; i < n; i++)
-		std::cout << std::numbers::pi << " ";
+    std::cout << std::fixed << std::setprecision(n);
 
-	return 0;
+    for (int i = 0; i < n; i++)
+        std::cout << std::numbers::pi << " ";
+
+    return 0;
 }
 
 //g++-10 -Wall -Wextra -std=c++20 Zad3.cpp -o exe

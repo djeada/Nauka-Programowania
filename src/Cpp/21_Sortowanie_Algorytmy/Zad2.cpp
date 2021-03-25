@@ -1,9 +1,9 @@
-#include <vector>
 #include <cassert>
+#include <vector>
 
 //g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad2.cpp
 
-void sortuj (std::vector<int> &lista)
+void sortuj(std::vector<int>& lista)
 {
     auto it = lista.begin();
 
@@ -22,19 +22,20 @@ void sortuj (std::vector<int> &lista)
     }
 }
 
-void test1() 
+void test1()
 {
-	std::vector<int> lista({4, 2, 5, 3, 1});
-	std::vector<int> wynik({1, 2, 3, 4, 5});
+    std::vector<int> lista({ 4, 2, 5, 3, 1 });
+    std::vector<int> wynik({ 1, 2, 3, 4, 5 });
 
-	sortuj(lista);
+    sortuj(lista);
 
-	assert(lista == wynik);
+    assert(lista == wynik);
 }
 
-int main() {
+int main()
+{
 
-	test1();
+    test1();
 
-	return 0;
+    return 0;
 }
