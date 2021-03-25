@@ -16,7 +16,7 @@ int main()
         licznik++;
     }
 
-    std::cout << "Podana cyfra sklada sie z " << licznik << " cyfr." << std::endl;
+    std::cout << "Podana liczba sklada sie z " << licznik << " cyfr." << std::endl;
 
     return 0;
 }

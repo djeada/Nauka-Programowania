@@ -19,7 +19,7 @@ public class Main
 			licznik++;
 		}
 
-		System.out.print("Podana cyfra sklada sie z " + licznik + " cyfr.\n");
+		System.out.print("Podana liczba sklada sie z " + licznik + " cyfr.\n");
 
 	}
 
