@@ -46,20 +46,18 @@ public class Main
 
 		System.out.print("Pierwsza liczba jest wieksza od drugiej: ");
 		System.out.printf("%b", czyWieksza(a, b));
-		System.out.printf("%b", "\n");
+		System.out.printf("\n");
 
-		System.out.printf("%b", "Suma liczb jest mniejsza od 10: ");
+		System.out.printf("Suma liczb jest mniejsza od 10: ");
 		System.out.printf("%b", czySumaMniejsza(a, b));
-		System.out.printf("%b", "\n");
+		System.out.printf("\n");
 
-		System.out.printf("%b", "Obie liczby nieparzyste: ");
+		System.out.printf("Obie liczby nieparzyste: ");
 		System.out.printf("%b", czyObieNieparzyste(a, b));
-		System.out.printf("%b", "\n");
+		System.out.printf("\n");
 
-		System.out.printf("%b", "Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu ");
+		System.out.printf("Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu ");
 		System.out.printf("%b", czyWiekszaNizKwad(a, b));
-		System.out.printf("%b", "\n");
-
+		System.out.printf("\n");
 	}
-
 }
