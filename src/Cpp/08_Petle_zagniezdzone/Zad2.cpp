@@ -1,25 +1,24 @@
 #include <iostream>
 
-//Napisz funkcje, ktora dla otrzymanej liczby 
-//wypisze trojkat prostokatny rownoboczny o 
+//Napisz funkcje, ktora dla otrzymanej liczby
+//wypisze trojkat prostokatny rownoboczny o
 //wysokosci rownej otrzymanej liczbie.
 
-void trojkat(int a) {
+void trojkat(int a)
+{
 
-	for (int y = 0; y < a; y++) {
-		for (int x = 0; x <= y; x++)
-			std::cout << "x";
-		std::cout << std::endl;
-	}
-
+    for (int y = 0; y < a; y++) {
+        for (int x = 0; x <= y; x++)
+            std::cout << "x";
+        std::cout << std::endl;
+    }
 }
 
-int main () {
+int main()
+{
 
-	int a = 5;
-	trojkat(a);
-	
-	return 0;
+    int a = 5;
+    trojkat(a);
+
+    return 0;
 }
-
-
