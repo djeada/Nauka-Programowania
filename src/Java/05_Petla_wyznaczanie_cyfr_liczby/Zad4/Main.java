@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla pobranej liczby, powinny zostac zwrocone cyfry 
 		//liczby spelniajce nastepujacy warunek:
@@ -18,12 +15,10 @@ public class Main
 		System.out.print("Cyfry liczby badace liczbami parzystymi: ");
 		System.out.print("\n");
 
-		while (pom > 0)
-		{
+		while (pom > 0) {
 			int cyfra = pom % 10;
 
-			if (cyfra % 2 == 0)
-			{
+			if (cyfra % 2 == 0) {
 				System.out.print(cyfra);
 				System.out.print("\n");
 			}
@@ -37,12 +32,10 @@ public class Main
 		System.out.print("Cyfry liczby mniejsze niz 5: ");
 		System.out.print("\n");
 
-		while (pom > 0)
-		{
+		while (pom > 0) {
 			int cyfra = pom % 10;
 
-			if (cyfra < 5)
-			{
+			if (cyfra<5) {
 				System.out.print(cyfra);
 				System.out.print("\n");
 			}
@@ -56,12 +49,10 @@ public class Main
 		System.out.print("Cyfry liczby rozne od 0: ");
 		System.out.print("\n");
 
-		while (pom > 0)
-		{
+		while (pom > 0) {
 			int cyfra = pom % 10;
 
-			if (cyfra != 0)
-			{
+			if (cyfra != 0) {
 				System.out.print(cyfra);
 				System.out.print("\n");
 			}

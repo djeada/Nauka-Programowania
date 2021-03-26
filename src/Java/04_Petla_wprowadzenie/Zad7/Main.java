@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla pobranej liczby, wyswietl liczbe Pi podniesiona 
 		//do potegi rownej pobranej liczbie. Wynik powinien byc
@@ -13,10 +10,8 @@ public class Main
 		int n;
 		n = Integer.parseInt(System.console().readLine());
 
-
 		float wynik = 1.00;
-		for (int i = 0; i < n; i++)
-		{
+		for (int i = 0; i<n; i++) {
 			wynik *= 3.14;
 		}
 

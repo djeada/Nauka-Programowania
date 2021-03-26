@@ -1,52 +1,38 @@
-
-
-public class Main
-{
+public class Main {
 	//Napisz funkcje realizujaca zaokraglanie ilorazu bez uzycia '/' i '%'.
 
-	public static int podziel(int a, int b)
-	{
+	public static int podziel(int a, int b) {
 
 		int znak = 1;
 		int licznik = 0;
 
-		if (b == 0)
-		{
-			return numeric_limits<Integer>.signaling_NaN();
+		if (b == 0) {
+			return numeric_limits<Integer> .signaling_NaN();
 		}
 
-		if (a == 0)
-		{
+		if (a == 0) {
 			return 0;
 		}
 
-		if (a < 0)
-		{
+		if (a<0) {
 			znak = -1;
 			a = -a;
 		}
 
-		if (b < 0)
-		{
+		if (b<0) {
 			znak *= -1;
 			b = -b;
 		}
 
-		if (znak == 1)
-		{
+		if (znak == 1) {
 			licznik = 0;
-			while (a >= b)
-			{
+			while (a >= b) {
 				a -= b;
 				licznik += 1;
 			}
-		}
-
-		else
-		{
+		} else {
 			licznik = 1;
-			while (a > b)
-			{
+			while (a > b) {
 				a -= b;
 				licznik += 1;
 			}
@@ -55,8 +41,7 @@ public class Main
 		return licznik * znak;
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		System.out.print("Podaj dwie liczby: ");
 		System.out.print("\n");
 		int a;

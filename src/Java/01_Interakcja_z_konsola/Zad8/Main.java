@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		/*
 		Otrzymujesz cene oraz wymiary pojedynczej plytki. Oblicz ile bedzie wynosila cena
@@ -25,10 +22,10 @@ public class Main
 		int szerokoscKonieczna = szerokoscPodlogi + bokPlytki - szerokoscPodlogi % bokPlytki;
 		int dlugoscKonieczna = dlugoscPodlogi + bokPlytki - dlugoscPodlogi % bokPlytki;
 
-		int polePlytki = Math.pow(bokPlytki,2);
+		int polePlytki = Math.pow(bokPlytki, 2);
 		int polePodlogi = szerokoscKonieczna * dlugoscKonieczna;
 
-		float calkowityKoszt = cena * (float)polePodlogi / polePlytki;
+		float calkowityKoszt = cena * (float) polePodlogi / polePlytki;
 
 		System.out.print("Dla plytki o dlugosci boku " + bokPlytki + "i ceny " + cena);
 		System.out.print(" calkowity koszt wylozenia podlogi o wymiarach " + szerokoscPodlogi);

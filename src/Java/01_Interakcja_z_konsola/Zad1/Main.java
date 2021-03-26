@@ -1,7 +1,5 @@
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		/*
 		Wypisz na konsole swoje inicjaly.
@@ -16,6 +14,5 @@ public class Main
 		System.out.print("Witaj swiecie\n");
 
 	}
-
 
 }

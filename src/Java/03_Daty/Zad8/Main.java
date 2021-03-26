@@ -1,19 +1,16 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		/*Niech data bedzie dana w formacie DD/MM/CCYY :
 		DD - dzien
 		MM - miesiac
 		CC - stulecie
 		YY - rok 
-	
+
 		A = CC/4 - 2*CC - 1 
 		B = 5*YY/4
 		C = 26*(MM + 1)/10
-	
+
 		Dzien = (A + B + C + DD) mod 7
 		*/
 
@@ -41,8 +38,7 @@ public class Main
 
 		int wynik = (A + B + C + DD) % 7;
 
-		switch (wynik)
-		{
+		switch (wynik) {
 			case 1:
 				System.out.print("pierwszym dniem tygodnia jest poniedzialek");
 				System.out.print("\n");
@@ -61,7 +57,7 @@ public class Main
 			case 4:
 				System.out.print("czwartym dniem tygodnia jest czwartek");
 				System.out.print("\n");
-					 break;
+				break;
 
 			case 5:
 				System.out.print("piatym dniem tygodnia jest piatek");
@@ -85,6 +81,5 @@ public class Main
 		}
 
 	}
-
 
 }

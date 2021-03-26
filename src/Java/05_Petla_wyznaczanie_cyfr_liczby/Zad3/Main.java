@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla pobranej liczby, wyswietl liczbe Pi tyle razy 
 		//ile wynosi pobrana liczba, z dokladnoscia do tylu 
@@ -15,8 +12,7 @@ public class Main
 
 		int suma = 0;
 
-		while (a > 0)
-		{
+		while (a > 0) {
 			suma += (a % 10);
 			a = a / 10;
 		}

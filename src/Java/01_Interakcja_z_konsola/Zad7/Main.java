@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 		//Pobierz podstawe i wysokosc trojkata i wypisz pole. 
 
 		System.out.print("podaj podstawe i wysokosc trojkata: \n");

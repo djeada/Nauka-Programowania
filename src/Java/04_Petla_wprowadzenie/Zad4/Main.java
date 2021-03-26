@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla pobranej liczby, powinna zostac wyswietlona suma 
 		//wszystkich liczb naturalnych mniejszych od pobranej liczby.
@@ -14,8 +11,7 @@ public class Main
 
 		int suma = 0;
 
-		for (int i = 1; i < n; i++)
-		{
+		for (int i = 1; i<n; i++) {
 			suma += i;
 		}
 

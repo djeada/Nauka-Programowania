@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla pobranych trzech liczb, wypisz je w kolejnosci rosnacej.
 
@@ -17,52 +14,37 @@ public class Main
 		b = Integer.parseInt(System.console().readLine());
 		c = Integer.parseInt(System.console().readLine());
 
-		if (a >= b && a >= c)
-		{
-			if (b >= c)
-			{
+		if (a >= b && a >= c) {
+			if (b >= c) {
 				System.out.print(c + "\n");
 				System.out.print(b + "\n");
 				System.out.print(a + "\n");
 				System.out.print("\n");
-			}
-			else
-			{
+			} else {
 				System.out.print(b + "\n");
 				System.out.print(c + "\n");
 				System.out.print(a + "\n");
 				System.out.print("\n");
 			}
-		}
-
-		else if (c >= b && c >= a)
-		{
-			if (a >= b)
-			{
+		} else if (c >= b && c >= a) {
+			if (a >= b) {
 				System.out.print(b + "\n");
 				System.out.print(a + "\n");
 				System.out.print(c + "\n");
 				System.out.print("\n");
-			}
-			else
-			{
+			} else {
 				System.out.print(a + "\n");
 				System.out.print(b + "\n");
 				System.out.print(c + "\n");
 				System.out.print("\n");
 			}
-		}
-		else
-		{
-			if (a >= c)
-			{
+		} else {
+			if (a >= c) {
 				System.out.print(c + "\n");
 				System.out.print(a + "\n");
 				System.out.print(b + "\n");
 				System.out.print("\n");
-			}
-			else
-			{
+			} else {
 				System.out.print(a + "\n");
 				System.out.print(c + "\n");
 				System.out.print(b + "\n");
@@ -70,6 +52,5 @@ public class Main
 			}
 		}
 	}
-
 
 }

@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla dwoch pobranych liczb, sprawdz czy pobrane liczby sa identyczne.
 
@@ -14,17 +11,13 @@ public class Main
 		a = Integer.parseInt(System.console().readLine());
 		b = Integer.parseInt(System.console().readLine());
 
-		if (a == b)
-		{
+		if (a == b) {
 			System.out.print("liczby sa jednakowe");
 			System.out.print("\n");
-		}
-		else
-		{
+		} else {
 			System.out.print("liczby sa rozne");
 			System.out.print("\n");
 		}
 	}
-
 
 }

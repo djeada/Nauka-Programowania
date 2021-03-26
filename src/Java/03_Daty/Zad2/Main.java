@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Czy osoba jest pelnoletnia?
 
@@ -32,50 +29,32 @@ public class Main
 		int roznicaMiesiace = miesiacAktualny - miesiac;
 		int roznicaDni = dzienAktualny - dzien;
 
-		if (roznicaLata > 18)
-		{
+		if (roznicaLata > 18) {
 			System.out.print("osoba jest pelnoletnia");
 			System.out.print("\n");
-		}
+		} else if (roznicaLata == 18) {
 
-		else if (roznicaLata == 18)
-		{
-
-			if (roznicaMiesiace > 0)
-			{
+			if (roznicaMiesiace > 0) {
 				System.out.print("osoba jest pelnoletnia");
 				System.out.print("\n");
-			}
+			} else if (roznicaMiesiace == 0) {
 
-			else if (roznicaMiesiace == 0)
-			{
-
-				if (roznicaDni >= 0)
-				{
+				if (roznicaDni >= 0) {
 					System.out.print("osoba jest pelnoletnia");
 					System.out.print("\n");
-				}
-
-				else
-				{
+				} else {
 					System.out.print("osoba nie jest pelnoletnia");
 					System.out.print("\n");
 				}
-			}
-			else
-			{
+			} else {
 				System.out.print("osoba nie jest pelnoletnia");
 				System.out.print("\n");
 			}
-		}
-
-		else
-		{
+		} else {
 			System.out.print("osoba nie jest pelnoletnia");
 			System.out.print("\n");
 		}
 
 	}
-
 
 }

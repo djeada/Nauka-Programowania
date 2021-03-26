@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla pobranych czterech liczb, znajdz najwieksza liczbe. 
 
@@ -27,6 +24,5 @@ public class Main
 		System.out.print("\n");
 
 	}
-
 
 }

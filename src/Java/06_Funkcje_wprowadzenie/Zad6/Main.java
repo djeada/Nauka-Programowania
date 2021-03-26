@@ -1,14 +1,10 @@
-
-public class Main
-{
+public class Main {
 	//Napisz funkcje, ktora dla otrzymanej liczby zwroci sume cyfr tej liczby.
 
-	public static int sumaCyfr(int a)
-	{
+	public static int sumaCyfr(int a) {
 		int suma = 0;
 
-		while (a > 0)
-		{
+		while (a > 0) {
 			suma += (a % 10);
 			a /= 10;
 		}
@@ -16,8 +12,7 @@ public class Main
 		return suma;
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		System.out.print("Podaj liczbe: ");
 		System.out.print("\n");
 		int a;

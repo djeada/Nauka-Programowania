@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Wyznacz wartosc funkcji y = 3x + 10 w zadanym punkcie.
 
@@ -45,7 +42,7 @@ public class Main
 
 		System.out.print("y = x**3 + 2x**2 - 20");
 		System.out.print("\n");
-		System.out.print(Math.pow(x,3) + 2 * Math.pow(x,2) - 20);
+		System.out.print(Math.pow(x, 3) + 2 * Math.pow(x, 2) - 20);
 		System.out.print("\n");
 
 		//Pobierz wspolczynniki a, b, c, d, m, n oraz punkt x i wyznacz wartosc funkcji y = a*x^m + b*x^n + c - a w zadanym punkcie.
@@ -84,7 +81,7 @@ public class Main
 
 		System.out.print("a*x**m + b*x**n + c - a");
 		System.out.print("\n");
-		System.out.print(a * Math.pow(x,m) + b * Math.pow(x,n) + c - a);
+		System.out.print(a * Math.pow(x, m) + b * Math.pow(x, n) + c - a);
 		System.out.print("\n");
 
 		//Wyznacz wartosc funkcji y = sin3x*cos2x + e^x^2 + log(x^3+2x^2-x-3) w zadanym punkcie.
@@ -96,7 +93,7 @@ public class Main
 
 		System.out.print("sin(3*x)*cos(2*X) + e**x**2 + log(x**3 + 2*x**2 - x - 3)");
 		System.out.print("\n");
-		System.out.print(Math.sin(3 * x) * Math.cos(2 * x) + Math.exp(Math.pow(x,2)) + Math.log(Math.pow(x,3) + 2 * Math.pow(x,2) - x - 3));
+		System.out.print(Math.sin(3 * x) * Math.cos(2 * x) + Math.exp(Math.pow(x, 2)) + Math.log(Math.pow(x, 3) + 2 * Math.pow(x, 2) - x - 3));
 		System.out.print("\n");
 
 	}

@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Wypisz pobrana od uzytkownika liczbe, jesli jest wieksza od 5.
 
@@ -11,13 +8,11 @@ public class Main
 		int x;
 		x = Integer.parseInt(System.console().readLine());
 
-		if (x > 5)
-		{
+		if (x > 5) {
 			System.out.print(x);
 			System.out.print("\n");
 		}
 
 	}
-
 
 }

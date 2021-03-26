@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Pobierz wielkosc w kilogramach i wypisz ilu gramom odpowiada.
 

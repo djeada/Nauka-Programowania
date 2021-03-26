@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla dwoch pobranych liczb, wypisz najpierw wieksza potem mniejsza.
 
@@ -15,16 +12,12 @@ public class Main
 		a = Integer.parseInt(System.console().readLine());
 		b = Integer.parseInt(System.console().readLine());
 
-		if (a > b)
-		{
+		if (a > b) {
 			System.out.print(a + "\n");
 			System.out.print(b + "\n");
 			System.out.print("pierwsza liczba jest wieksza od drugiej\n");
 
-		}
-
-		else
-		{
+		} else {
 			System.out.print(b + "\n");
 			System.out.print(a + "\n");
 			System.out.print("pierwsza liczba nie jest wieksza od drugiej\n");
@@ -32,6 +25,5 @@ public class Main
 		}
 
 	}
-
 
 }

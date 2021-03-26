@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		/*
 		Wypisz na konsole najpierw druga potem pierwsza pobrana dana.

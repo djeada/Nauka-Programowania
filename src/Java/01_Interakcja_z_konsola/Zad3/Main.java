@@ -1,10 +1,7 @@
-
-public class Main
-{
+public class Main {
 	//Narysuj ksztalt.
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		/*
 		Kwadrat.
 		XX
@@ -39,16 +36,16 @@ public class Main
 		  1
 		 */
 
-		  System.out.print("  1");
-		  System.out.print("\n");
-		  System.out.print(" 111");
-		  System.out.print("\n");
-		  System.out.print("11111");
-		  System.out.print("\n");
-		  System.out.print(" 111");
-		  System.out.print("\n");
-		  System.out.print("  1");
-		  System.out.print("\n");
+		System.out.print("  1");
+		System.out.print("\n");
+		System.out.print(" 111");
+		System.out.print("\n");
+		System.out.print("11111");
+		System.out.print("\n");
+		System.out.print(" 111");
+		System.out.print("\n");
+		System.out.print("  1");
+		System.out.print("\n");
 
 	}
 

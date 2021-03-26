@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla pobranej liczby, powinny zostac wyswietlone 
 		//wszystkie liczby naturalne mniejsze od podanej liczby.
@@ -12,8 +9,7 @@ public class Main
 		int a;
 		a = Integer.parseInt(System.console().readLine());
 
-		for (int i = 1; i < a; i++)
-		{
+		for (int i = 1; i<a; i++) {
 			System.out.print(i);
 			System.out.print(" ");
 		}

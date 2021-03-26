@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla pobranej liczby, wyswietl liczbe dni miesiaca odpowiadajacemu danej liczbie.
 
@@ -12,8 +9,7 @@ public class Main
 		int numer;
 		numer = Integer.parseInt(System.console().readLine());
 
-		switch (numer)
-		{
+		switch (numer) {
 			case 1:
 				System.out.print("Styczen ma 31 dni");
 				System.out.print("\n");
@@ -81,6 +77,5 @@ public class Main
 		}
 
 	}
-
 
 }

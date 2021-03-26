@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla pobranych dwoch liczb, powinny zostac wyswietlone:
 
@@ -13,8 +10,7 @@ public class Main
 		a = Integer.parseInt(System.console().readLine());
 		b = Integer.parseInt(System.console().readLine());
 
-		if (b < a)
-		{
+		if (b<a) {
 			int pom = a;
 			a = b;
 			b = pom;
@@ -22,8 +18,7 @@ public class Main
 
 		//wszystkie liczby naturalne większe od mniejszej pobranej 
 		//liczby i jednoczesnie mniejsze od wiekszej pobranej liczby.  
-		for (int i = a + 1; i < b; i++)
-		{
+		for (int i = a + 1; i<b; i++) {
 			System.out.print(i);
 			System.out.print(" ");
 		}
@@ -33,10 +28,8 @@ public class Main
 		//wszystkie liczby naturalne podzielne przez 3 
 		//wieksze od mniejszej pobranej liczby i jednoczesnie 
 		//mniejsze od wiekszej pobranej liczby.
-		for (int i = a + 1; i < b; i++)
-		{
-			if (i % 3 == 0)
-			{
+		for (int i = a + 1; i<b; i++) {
+			if (i % 3 == 0) {
 				System.out.print(i);
 				System.out.print(" ");
 			}

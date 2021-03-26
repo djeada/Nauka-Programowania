@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 		//Dla pobranej od uzytkownika liczby, 
 		//zwroc liczbe cyfr pobranje liczby.
 
@@ -13,8 +10,7 @@ public class Main
 
 		int licznik = 0;
 
-		while (a > 0)
-		{
+		while (a > 0) {
 			a = a / 10;
 			licznik++;
 		}

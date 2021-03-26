@@ -1,8 +1,5 @@
-
-public class Main
-{
-	public static void main(String[] args)
-	{
+public class Main {
+	public static void main(String[] args) {
 
 		//Dla pobranej liczby, wyswietl liczbe Pi tyle razy 
 		//ile wynosi pobrana liczba, z dokladnoscia do tylu 
@@ -13,9 +10,7 @@ public class Main
 		int n;
 		n = Integer.parseInt(System.console().readLine());
 
-
-		for (int i = 0; i < n; i++)
-		{
+		for (int i = 0; i<n; i++) {
 			System.out.printf("%f", std::numbers.pi);
 			System.out.printf("%f", " ");
 		}
