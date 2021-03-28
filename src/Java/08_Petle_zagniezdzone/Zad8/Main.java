@@ -1,5 +1,5 @@
 public class Main {
-	public static bool czyPierwsza(int n) {
+	public static boolean czyPierwsza(int n) {
 
 		if ((n % 2) == 0 && n != 2) {
 			return false;
@@ -16,7 +16,7 @@ public class Main {
 
 	public static void liczbyPierwszeV1(int n) {
 		for (int i = 2; i<= n; i++) {
-			if (czyPierwsza(i) != 0) {
+			if (czyPierwsza(i)) {
 				System.out.print(i);
 				System.out.print(" ");
 			}
