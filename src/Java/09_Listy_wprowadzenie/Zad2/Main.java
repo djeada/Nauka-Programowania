@@ -1,12 +1,14 @@
-public class GlobalMembers
+import java.util.*;
+
+public class Main
 {
 	//Dla liczby N, wczytaj N liczb do listy, a nastepnie:
 	public static void wczytaj(ArrayList<Integer> lista, int n)
 	{
 		for (int i = 0; i < n; i++)
 		{
-			int liczba;
-			liczba = Integer.parseInt(ConsoleInput.readToWhiteSpace(true));
+			Scanner s = new Scanner(System.in);
+			int liczba = Integer.parseInt(s.nextLine());
 			lista.add(liczba);
 		}
 	}
@@ -23,8 +25,6 @@ public class GlobalMembers
 	//b)pomnoz kazdy element przez jego indeks;
 	public static void pomnoz(ArrayList<Integer> lista)
 	{
-	//C++ TO JAVA CONVERTER WARNING: Unsigned integer types have no direct equivalent in Java:
-	//ORIGINAL LINE: for (unsigned int i = 0; i < lista.size(); i++)
 		for (int i = 0; i < lista.size(); i++)
 		{
 			lista.set(i, lista.get(i) * i);
@@ -39,9 +39,9 @@ public class GlobalMembers
 			return;
 		}
 
-		for (var liczba : lista)
-		{
-			liczba = lista.get(0);
+		for (int i = 1; i < lista.size(); i++)
+		{ 
+			lista.set(i, lista.get(0));
 		}
 	}
 
@@ -64,7 +64,8 @@ public class GlobalMembers
 		int n;
 
 		System.out.print("podaj liczbe n: ");
-		n = Integer.parseInt(ConsoleInput.readToWhiteSpace(true));
+		Scanner s = new Scanner(System.in);
+		n = Integer.parseInt(s.nextLine());
 		wczytaj(lista, n);
 
 		ArrayList<Integer> kopia = new ArrayList<Integer>(lista);

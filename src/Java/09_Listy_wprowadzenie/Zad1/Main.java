@@ -1,13 +1,14 @@
+import java.util.*;
 
-public class GlobalMembers
+public class Main
 {
 	//Dla liczby N, wczytaj N liczb do listy, a nastepnie:
 	public static void wczytaj(ArrayList<Integer> lista, int n)
 	{
 		for (int i = 0; i < n; i++)
 		{
-			int liczba;
-			liczba = Integer.parseInt(ConsoleInput.readToWhiteSpace(true));
+			Scanner s = new Scanner(System.in);
+			int liczba = Integer.parseInt(s.nextLine());
 			lista.add(liczba);
 		}
 	}
@@ -27,11 +28,11 @@ public class GlobalMembers
 	//przecinkami i wypisane w jednym wierszu.
 	public static void wypiszOdKonca(ArrayList<Integer> lista)
 	{
-		var it = cend(lista);
-		while (it != cbegin(lista))
+		for (int i = lista.size() - 1; i >= 0; i--)
 		{
-			System.out.print((--it));
-			System.out.print(", ");
+			System.out.print(lista.get(i));
+			if (i != 0)
+				System.out.print(", ");
 		}
 
 		System.out.print("\n");
@@ -44,7 +45,8 @@ public class GlobalMembers
 		int n;
 
 		System.out.print("podaj liczbe n: ");
-		n = Integer.parseInt(ConsoleInput.readToWhiteSpace(true));
+		Scanner s = new Scanner(System.in);
+		n = Integer.parseInt(s.nextLine());
 		wczytaj(lista, n);
 		wypiszOdPoczatku(lista);
 		wypiszOdKonca(lista);

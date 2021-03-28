@@ -1,4 +1,4 @@
-public class GlobalMembers
+public class Main
 {
 	//Dla otrzymanej listy, skladajacej się z nieuporzadkowanych
 	//kolejnych (za wyjatkiem jednego) wyrazow ciagu arytmetycznego,

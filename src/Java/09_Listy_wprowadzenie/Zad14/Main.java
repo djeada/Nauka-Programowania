@@ -1,4 +1,4 @@
-public class GlobalMembers
+public class Main
 {
 	//Dla otrzymanej listy skladajacej sie z nieparzystej
 	//liczby elementow znajdz element bez pary. Przez pary
