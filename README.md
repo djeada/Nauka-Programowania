@@ -615,7 +615,7 @@ Rozwiązania
 <td>Średnia z n liczb.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad1.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad1">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -625,7 +625,7 @@ Rozwiązania
   <td>Podnieś <b>a</b> do <b>b</b>.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad2.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad2">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -635,7 +635,7 @@ Rozwiązania
 <td>Mnożenie i dzielenia.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad3.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad3">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -645,7 +645,7 @@ Rozwiązania
 <td>Silnia.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07_Petla_algorytmy_matematyczne/Zad4.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad4.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad4">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -655,7 +655,7 @@ Rozwiązania
 <td>NWD.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad5.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad5">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -665,7 +665,7 @@ Rozwiązania
 <td>NWW.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad6.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad6">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -675,7 +675,7 @@ Rozwiązania
 <td>Pierwiastek metodą Newtona.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad7.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad7">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -685,7 +685,7 @@ Rozwiązania
 <td>Naiwny test pierwszości.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad8.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad8">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -708,7 +708,7 @@ Rozwiązania
 <td>Kwadrat.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad1.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad1">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -718,7 +718,7 @@ Rozwiązania
 <td>Trójkąt.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad2.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad2">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -728,7 +728,7 @@ Rozwiązania
 <td>Odwrócony trójkąt.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad3.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad3">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -738,7 +738,7 @@ Rozwiązania
 <td>Tabliczka mnożenia.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad4.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad4">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -748,7 +748,7 @@ Rozwiązania
 <td>Litera X.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad5.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad5">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -758,7 +758,7 @@ Rozwiązania
 <td>Litera Z.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad6.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad6.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad6">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -768,7 +768,7 @@ Rozwiązania
 <td>Choinka.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad7.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad7">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -778,7 +778,7 @@ Rozwiązania
 <td>N pierwszych liczb pierwszych.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad8.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad8">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -811,7 +811,7 @@ Rozwiązania
 <td>Wczytaj i wypisz.</td>
 <td><a >Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad1.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad1">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -821,7 +821,7 @@ Rozwiązania
 <td>Wczytaj, zmodyfikuj i wypisz.</td>
 <td><a >Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad2.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad2">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -851,7 +851,7 @@ Rozwiązania
 <td>Zmodyfikuj elementy spełniające warunek.</td>
 <td><a >Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad5.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad5">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -862,7 +862,7 @@ Rozwiązania
 <td>Czy średnia elementów znajduje się w liście?</td>
 <td><a >Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad6.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad6">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -872,7 +872,7 @@ Rozwiązania
 <td>Liczba mniejsza od największej i większa od wszystkich pozostałych.</td>
 <td><a >Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad7.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad7">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -882,7 +882,7 @@ Rozwiązania
 <td>Usuń klucz.</td>
 <td><a >Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad8.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad8">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -901,7 +901,7 @@ Rozwiązania
 <td>Czy punkty mogą stanowić wierzchołki trójkąta?</td>
 <td><a >Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad10.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad10">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -911,7 +911,7 @@ Rozwiązania
 <td>Samochody.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad11.py">Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad11.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad11">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -922,7 +922,7 @@ Rozwiązania
 <td>Rotacja w lewo/prawo.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad12.py">Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad12.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad12">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -933,7 +933,7 @@ Rozwiązania
 <td>Brakujący element w liście.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad13.py">Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad13.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad13">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -943,7 +943,7 @@ Rozwiązania
 <td>Element bez pary w liście.</td>
 <td><a >Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad14.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad14">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -953,7 +953,7 @@ Rozwiązania
 <td>Element dominujący.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad15.py">Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad15.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad15">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -963,7 +963,7 @@ Rozwiązania
 <td>Pary, których suma jest równa liczbie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad16.py">Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad16.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad16">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -973,7 +973,7 @@ Rozwiązania
 <td>Suma dwóch.</td>
 <td><a>Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad17.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad17">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -983,7 +983,7 @@ Rozwiązania
 <td>Lista posortowane została przesunięta.</td>
 <td><a>Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad18.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad18">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -1006,7 +1006,7 @@ Rozwiązania
 <td>Wypisz na przemian.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad1.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad1.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad1">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1016,7 +1016,7 @@ Rozwiązania
 <td>Połączenie list.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad2.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad2">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1026,7 +1026,7 @@ Rozwiązania
 <td>Suma list.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad3.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad3">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1036,7 +1036,7 @@ Rozwiązania
 <td>Mnożenie sklarne oraz wektorowe.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad4.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad4">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1046,7 +1046,7 @@ Rozwiązania
 <td>Średnia ważona wartości.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad4.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad5.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad5">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1056,7 +1056,7 @@ Rozwiązania
 <td>Część wspólna dwóch list.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad5.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad6.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad6">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1066,7 +1066,7 @@ Rozwiązania
 <td>Różnica między dwoma listami.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad7.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad7">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1074,9 +1074,9 @@ Rozwiązania
 <tr>
 <td>8</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad7.py">Python</a></td>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad8.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad8.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad8">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1086,7 +1086,7 @@ Rozwiązania
 <td>Usuń część wspólną obu list.</td>
 <td><a>Python</a></td>
  <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad9.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad9">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1096,7 +1096,7 @@ Rozwiązania
 <td>Znajdź medianę dwóch posortowanych list.</td>
 <td><a>Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad10.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad10">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1119,7 +1119,7 @@ Rozwiązania
 <td>Odwróć napis.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad1.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad1.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad1">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1129,7 +1129,7 @@ Rozwiązania
 <td>Policz wystąpienia znaku.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad2.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad2">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1139,7 +1139,7 @@ Rozwiązania
 <td>Z ilu słów składa się zdanie?</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad3.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad3">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1149,7 +1149,7 @@ Rozwiązania
 <td>Zamień wszystkie małe litery na wielkie.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad4.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad4">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1159,7 +1159,7 @@ Rozwiązania
 <td>Wypisz poziomo i pionowo co k-ty znak napisu.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad5.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad5">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1169,7 +1169,7 @@ Rozwiązania
 <td>Zamień litery <i>a</i> na znaki zapytania.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad6.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad6">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1179,7 +1179,7 @@ Rozwiązania
 <td>Zamień znaki na numery ASCII.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad7.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad7">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1189,7 +1189,7 @@ Rozwiązania
 <td>Wypisz pionowo słowa, z których składa się zdanie.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad8.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad8">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1199,7 +1199,7 @@ Rozwiązania
 <td>Wczytaj i rozdziel informacje o pracowniku.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad9.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad9">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1209,7 +1209,7 @@ Rozwiązania
 <td>Znajdź najdłuższe/najkrótsze słowo w zdaniu.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad10.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad10">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1219,7 +1219,7 @@ Rozwiązania
 <td>Średnia długość słów w zdaniu.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad11.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad11">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1239,7 +1239,7 @@ Rozwiązania
 <td>Znaki znajdujące się na pozycjach będących liczbami pierwszymi.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Napisy_wprowadzenie/Zad1.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad13">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1249,7 +1249,7 @@ Rozwiązania
 <td>Napis składający się z liczb od 1 do n.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad14.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad14.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad14">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1259,7 +1259,7 @@ Rozwiązania
 <td>Słowa ze zdania jako osobne elementy listy.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad15.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad15">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1269,7 +1269,7 @@ Rozwiązania
 <td>Odległość Hamminga.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad16.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad16.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad16">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1280,7 +1280,7 @@ Rozwiązania
 <td>Zamień listę na napis.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad17.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad17.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad17">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
