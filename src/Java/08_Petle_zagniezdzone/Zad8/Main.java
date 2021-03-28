@@ -1,5 +1,5 @@
 public class Main {
-	public static int czyPierwsza(int n) {
+	public static bool czyPierwsza(int n) {
 
 		if ((n % 2) == 0 && n != 2) {
 			return false;
