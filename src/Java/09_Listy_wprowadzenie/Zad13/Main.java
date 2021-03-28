@@ -1,3 +1,5 @@
+package test;
+import java.util.*;
 public class Main
 {
 	//Dla otrzymanej listy, skladajacej się z nieuporzadkowanych
@@ -6,18 +8,23 @@ public class Main
 
 	public static int sumaCiaguArt(ArrayList<Integer> lista)
 	{
-		int min = *min_element(lista.iterator(), lista.end());
-		int maks = *max_element(lista.iterator(), lista.end());
+		int min = Collections.min(lista);
+		int maks =Collections.max(lista);
 		return (lista.size() + 1) * (min + maks) / 2;
 	}
 
 	public static int znajdzBrakujacyElement(ArrayList<Integer> lista)
 	{
 
-		int sumaListy = accumulate(lista.iterator(), lista.end(), 0);
+		int suma = 0;
+
+		for (var liczba: lista) {
+			suma += liczba;
+		}
+		
 		int sumaPrzedzialu = sumaCiaguArt(lista);
 
-		return sumaPrzedzialu - sumaListy;
+		return sumaPrzedzialu - suma;
 	}
 
 	public static void test1()
