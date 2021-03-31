@@ -1,4 +1,3 @@
-
 public class Main
 {
 	//Napisz funkcje, ktora przy pomocy petli obliczy silnie

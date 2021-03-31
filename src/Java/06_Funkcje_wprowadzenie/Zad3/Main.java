@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	//Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora 
 	//dla otrzymanych dwoch liczb ustali czy:
@@ -29,12 +31,13 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		System.out.print("Podaj dwie liczby: ");
-		System.out.print("\n");
-		int a;
-		a = Integer.parseInt(System.console().readLine());
-		int b;
-		b = Integer.parseInt(System.console().readLine());
+		
+		System.out.print("Podaj dwie liczby: \n");
+		
+		Scanner s = new Scanner(System.in);
+
+		int a = Integer.parseInt(s.nextLine());
+		int b = Integer.parseInt(s.nextLine());
 
 		System.out.print("Pierwsza liczba jest wieksza od drugiej: ");
 		System.out.printf("%b", czyWieksza(a, b));
@@ -48,7 +51,7 @@ public class Main {
 		System.out.printf("%b", czyObieNieparzyste(a, b));
 		System.out.printf("\n");
 
-		System.out.printf("Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu ");
+		System.out.printf("Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu: ");
 		System.out.printf("%b", czyWiekszaNizKwad(a, b));
 		System.out.printf("\n");
 	}

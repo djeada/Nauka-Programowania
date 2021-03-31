@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
@@ -11,11 +13,13 @@ public class Main {
 		int c;
 		int d;
 
-		a = Integer.parseInt(System.console().readLine());
-		b = Integer.parseInt(System.console().readLine());
-		c = Integer.parseInt(System.console().readLine());
-		d = Integer.parseInt(System.console().readLine());
+		Scanner s = new Scanner(System.in);
 
+		a = Integer.parseInt(s.nextLine());
+		b = Integer.parseInt(s.nextLine());
+		c = Integer.parseInt(s.nextLine());
+		d = Integer.parseInt(s.nextLine());
+		
 		int maksAB = a > b ? a : b;
 		int maksCD = c > d ? c : d;
 		int maks = maksAB > maksCD ? maksAB : maksCD;

@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	//Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora 
 	//dla otrzymanych dwoch liczb zwroci: 
@@ -23,12 +25,13 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		System.out.print("Podaj dwie liczby: ");
-		System.out.print("\n");
-		int a;
-		a = Integer.parseInt(System.console().readLine());
-		int b;
-		b = Integer.parseInt(System.console().readLine());
+		
+		System.out.print("Podaj dwie liczby: \n");
+		
+		Scanner s = new Scanner(System.in);
+
+		int a = Integer.parseInt(s.nextLine());
+		int b = Integer.parseInt(s.nextLine());
 
 		System.out.print("suma liczb to: " + suma(a, b) + "\n");
 		System.out.print("roznice drugiej i pierwszej to: " + roznica(a, b) + "\n");

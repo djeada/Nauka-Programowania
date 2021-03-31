@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
@@ -5,12 +7,11 @@ public class Main {
 		//do potegi rownej pobranej liczbie. Wynik powinien byc
 		//zaokraglony do dwoch miejsc po przecinku.
 
-		System.out.print("Podaj liczbe: ");
-		System.out.print("\n");
-		int n;
-		n = Integer.parseInt(System.console().readLine());
+		System.out.print("Podaj liczbe: \n");
+		Scanner s = new Scanner(System.in);
+		int n = Integer.parseInt(s.nextLine());
 
-		float wynik = 1.00;
+		float wynik = (float) 1.0;
 		for (int i = 0; i<n; i++) {
 			wynik *= 3.14;
 		}

@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	//Napisz funkcje, ktora:
 
@@ -24,33 +26,24 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		System.out.print("Podaj dwie liczby: ");
-		System.out.print("\n");
-		int a;
-		a = Integer.parseInt(System.console().readLine());
-		int b;
-		b = Integer.parseInt(System.console().readLine());
+		
+		System.out.print("Podaj dwie liczby: \n");
+		
+		Scanner s = new Scanner(System.in);
 
-		System.out.print("mniejsza liczba to: ");
-		System.out.print(min2(a, b));
-		System.out.print("\n");
-		System.out.print("wieksza liczba to: ");
-		System.out.print(maks2(a, b));
-		System.out.print("\n");
+		int a = Integer.parseInt(s.nextLine());
+		int b = Integer.parseInt(s.nextLine());
 
-		System.out.print("Podaj trzy liczby: ");
-		System.out.print("\n");
-		a = Integer.parseInt(System.console().readLine());
-		b = Integer.parseInt(System.console().readLine());
-		int c;
-		c = Integer.parseInt(System.console().readLine());
+		System.out.print("mniejsza liczba to: " + min2(a, b) + "\n");
+		System.out.print("wieksza liczba to: " + maks2(a, b) + "\n");
 
-		System.out.print("najmniejsza liczba to: ");
-		System.out.print(min3(a, b, c));
-		System.out.print("\n");
-		System.out.print("najwieksza liczba to ");
-		System.out.print(maks3(a, b, c));
-		System.out.print("\n");
+		System.out.print("Podaj trzy liczby: \n");
+		a = Integer.parseInt(s.nextLine());
+		b = Integer.parseInt(s.nextLine());
+		int c = Integer.parseInt(s.nextLine());
+
+		System.out.print("najmniejsza liczba to: " + min3(a, b, c) + "\n");
+		System.out.print("najwieksza liczba to " + maks3(a, b, c) + "\n");
 
 	}
 

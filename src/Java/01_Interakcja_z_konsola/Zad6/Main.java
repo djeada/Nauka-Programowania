@@ -1,20 +1,22 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
 		//Pobierz wielkosc w kilogramach i wypisz ilu gramom odpowiada.
 
-		System.out.print("podaj wielkosc w kilogramach:");
-		System.out.print("\n");
+		System.out.print("podaj wielkosc w kilogramach:\n");
 
 		int kilogramy;
-		kilogramy = Integer.parseInt(System.console().readLine());
+		Scanner s = new Scanner(System.in);
+
+		kilogramy = Integer.parseInt(s.nextLine());
 		int gramy = kilogramy * 1000;
 
 		System.out.print(kilogramy);
 		System.out.print(" kg to ");
 		System.out.print(gramy);
-		System.out.print(" g.");
-		System.out.print("\n");
+		System.out.print(" g.\n");
 
 		//Pobierz wielkosc w calach i wypisz ilu centymetrom odpowiada.
 
@@ -22,38 +24,34 @@ public class Main {
 		System.out.print("\n");
 
 		float cal;
-		cal = Float.parseFloat(System.console().readLine());
-		float cm = cal / 2.54;
+		cal = Float.parseFloat(s.nextLine());
+		float cm = (float) (cal / 2.54);
 
 		System.out.print(cal);
 		System.out.print(" cal to ");
 		System.out.print(cm);
-		System.out.print(" cm.");
-		System.out.print("\n");
+		System.out.print(" cm.\n");
 
 		//Pobierz ilosc sekund i przelicz na godziny.
 
-		System.out.print("podaj ilosc sekund:");
-		System.out.print("\n");
+		System.out.print("podaj ilosc sekund:\n");
 
 		float sekundy;
-		sekundy = Float.parseFloat(System.console().readLine());
+		sekundy = Float.parseFloat(s.nextLine());
 		float godziny = sekundy / 3600;
 
 		System.out.print(sekundy);
 		System.out.print(" sekund to ");
 		System.out.print(godziny);
-		System.out.print(" godzin");
-		System.out.print("\n");
+		System.out.print(" godzin\n");
 
 		//Pobierz liczbe w euro i wypisz ilu zlotowkom odpowiada. 
 
-		System.out.print("podaj liczbe w euro:");
-		System.out.print("\n");
+		System.out.print("podaj liczbe w euro:\n");
 
 		float euro;
-		euro = Float.parseFloat(System.console().readLine());
-		float zloty = euro * 4.40;
+		euro = Float.parseFloat(s.nextLine());
+		float zloty = (float) (euro * 4.40);
 
 		System.out.print(euro);
 		System.out.print(" euro to ");
@@ -63,27 +61,24 @@ public class Main {
 
 		//Pobierz miare kata w stopniach i wypisz ilu radianom odpowiada. 
 
-		System.out.print("podaj miare kata w stopniach:");
-		System.out.print("\n");
+		System.out.print("podaj miare kata w stopniach:\n");
 
 		float katStopnie;
-		katStopnie = Float.parseFloat(System.console().readLine());
-		float katRad = katStopnie * 0.0174532;
+		katStopnie = Float.parseFloat(s.nextLine());
+		float katRad = (float) (katStopnie * 0.0174532);
 
 		System.out.print(katStopnie);
 		System.out.print(" stopni to ");
 		System.out.print(katRad);
-		System.out.print(" radianow.");
-		System.out.print("\n");
+		System.out.print(" radianow.\n");
 
 		//Pobierz temperature w stopniach Farenheita i wypisz 
 		//ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
 
-		System.out.print("podaj temperature w Farenheitach:");
-		System.out.print("\n");
+		System.out.print("podaj temperature w Farenheitach:\n");
 
 		float tempF;
-		tempF = Float.parseFloat(System.console().readLine());
+		tempF = Float.parseFloat(s.nextLine());
 		float tempC = (tempF - 32) * 5 / 9;
 		float tempK = tempC - 273;
 
@@ -92,8 +87,7 @@ public class Main {
 		System.out.print(tempC);
 		System.out.print(" C i ");
 		System.out.print(tempK);
-		System.out.print(" K");
-		System.out.print("\n");
+		System.out.print(" K\n");
 
 	}
 

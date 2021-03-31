@@ -13,14 +13,13 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		System.out.print("Podaj liczbe: ");
-		System.out.print("\n");
-		int a;
-		a = Integer.parseInt(System.console().readLine());
+		System.out.print("Podaj liczbe: \n");
+		
+		Scanner s = new Scanner(System.in);
 
-		System.out.print("Suma cyfr liczby to: ");
-		System.out.print(sumaCyfr(a));
-		System.out.print("\n");
+		int a = Integer.parseInt(s.nextLine());
+
+		System.out.print("Suma cyfr liczby to: " + sumaCyfr(a) + "\n");
 
 	}
 

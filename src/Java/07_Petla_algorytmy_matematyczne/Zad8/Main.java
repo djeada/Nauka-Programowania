@@ -1,4 +1,3 @@
-
 public class Main
 {
 	//Napisz funkcje, ktora dla otrzymanej liczby sprawdzi
@@ -54,7 +53,4 @@ public class Main
 		test3();
 
 	}
-
-
-
 }

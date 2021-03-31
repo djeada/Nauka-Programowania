@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
@@ -13,21 +15,17 @@ public class Main {
 
 		Dzien = (A + B + C + DD) mod 7
 		*/
+		
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Podaj dzien:\n");
+		int DD = Integer.parseInt(s.nextLine());
 
-		System.out.print("Podaj dzien:");
-		System.out.print("\n");
-		int DD;
-		DD = Integer.parseInt(System.console().readLine());
+		System.out.print("Podaj miesiac:\n");
+		int MM = Integer.parseInt(s.nextLine());;
 
-		System.out.print("Podaj miesiac:");
-		System.out.print("\n");
-		int MM;
-		MM = Integer.parseInt(System.console().readLine());
-
-		System.out.print("Podaj rok:");
-		System.out.print("\n");
-		int rok;
-		rok = Integer.parseInt(System.console().readLine());
+		System.out.print("Podaj rok:\n");
+		int rok = Integer.parseInt(s.nextLine());;
 
 		int CC = rok / 100;
 		int YY = rok % 100;
@@ -40,46 +38,36 @@ public class Main {
 
 		switch (wynik) {
 			case 1:
-				System.out.print("pierwszym dniem tygodnia jest poniedzialek");
-				System.out.print("\n");
+				System.out.print("pierwszym dniem tygodnia jest poniedzialek\n");
 				break;
 
 			case 2:
-				System.out.print("drugim dniem tygodnia jest wtorek");
-				System.out.print("\n");
+				System.out.print("drugim dniem tygodnia jest wtorek\n");
 				break;
 
 			case 3:
-				System.out.print("trzecim dniem tygodnia jest sroda");
-				System.out.print("\n");
+				System.out.print("trzecim dniem tygodnia jest sroda\n");
 				break;
 
 			case 4:
-				System.out.print("czwartym dniem tygodnia jest czwartek");
-				System.out.print("\n");
+				System.out.print("czwartym dniem tygodnia jest czwartek\n");
 				break;
 
 			case 5:
-				System.out.print("piatym dniem tygodnia jest piatek");
-				System.out.print("\n");
+				System.out.print("piatym dniem tygodnia jest piatek\n");
 				break;
 
 			case 6:
-				System.out.print("szostym dniem tygodnia jest sobota");
-				System.out.print("\n");
+				System.out.print("szostym dniem tygodnia jest sobota\n");
 				break;
 
 			case 7:
-				System.out.print("siodmym dniem tygodnia jest niedziela");
-				System.out.print("\n");
+				System.out.print("siodmym dniem tygodnia jest niedziela\n");
 				break;
 
 			default:
-				System.out.print("bledne dane");
-				System.out.print("\n");
+				System.out.print("bledne dane\n");
 
 		}
-
 	}
-
 }

@@ -1,4 +1,3 @@
-
 public class Main
 {
 	//Napisz funkcje, ktora dla otrzymanych dwoch liczb, 

@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
@@ -8,8 +10,10 @@ public class Main {
 		int a;
 		int b;
 
-		a = Integer.parseInt(System.console().readLine());
-		b = Integer.parseInt(System.console().readLine());
+		Scanner s = new Scanner(System.in);
+
+		a = Integer.parseInt(s.nextLine());
+		b = Integer.parseInt(s.nextLine());
 
 		System.out.print(b);
 		System.out.print("\n");

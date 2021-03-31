@@ -1,14 +1,19 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
 		//Dla pobranych dwoch liczb, powinny zostac wyswietlone:
 
-		System.out.print("Podaj dwie liczby: ");
-		System.out.print("\n");
+		System.out.print("Podaj dwie liczby: \n");
+		
 		int a;
 		int b;
-		a = Integer.parseInt(System.console().readLine());
-		b = Integer.parseInt(System.console().readLine());
+		
+		Scanner s = new Scanner(System.in);
+
+		a = Integer.parseInt(s.nextLine());
+		b = Integer.parseInt(s.nextLine());
 
 		if (b<a) {
 			int pom = a;
@@ -34,7 +39,5 @@ public class Main {
 				System.out.print(" ");
 			}
 		}
-
 	}
-
 }

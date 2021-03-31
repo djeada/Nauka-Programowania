@@ -1,69 +1,55 @@
-public class GlobalMembers
-{
+import java.util.*;
+public class Main {
 	//Znajdz takie pary elementow w liscie, ktorych suma jest rowna liczbie.
 	//Element nie moze byc w parze sam ze soba.
 
-	public static ArrayList<tangible.Pair<Integer, Integer>> znajdzParyV1(ArrayList<Integer> lista, int suma)
-	{
+	private static class Pair<T1, T2 > {
+		public T1 first;
+		public T2 second;
 
-		ArrayList<tangible.Pair<Integer, Integer>> wynik = new ArrayList<tangible.Pair<Integer, Integer>>();
+		public Pair(T1 firstValue, T2 secondValue) {
+			first = firstValue;
+			second = secondValue;
+		}
+		
+		@Override public boolean equals(Object o) {
+		    return (o instanceof Pair) && (this.first == ((Pair) o).first) && (this.second == ((Pair) o).second);
+		}
+	}
 
-	//C++ TO JAVA CONVERTER WARNING: Unsigned integer types have no direct equivalent in Java:
-	//ORIGINAL LINE: for (unsigned int i = 0; i < lista.size(); i++)
-		for (int i = 0; i < lista.size(); i++)
-		{
-	//C++ TO JAVA CONVERTER WARNING: Unsigned integer types have no direct equivalent in Java:
-	//ORIGINAL LINE: for (unsigned int j = i + 1; j < lista.size(); j++)
-			for (int j = i + 1; j < lista.size(); j++)
-			{
-				if (lista.get(i) + lista.get(j) == suma)
-				{
-					wynik.emplace_back(lista.get(i), lista.get(j));
+	public static ArrayList<Pair<Integer, Integer>> znajdzParyV1(ArrayList<Integer> lista, int suma) {
+
+		ArrayList<Pair<Integer, Integer>> wynik = new ArrayList<Pair<Integer, Integer>> ();
+
+		for (int i = 0; i<lista.size(); i++) {
+			for (int j = i + 1; j<lista.size(); j++) {
+				if (lista.get(i) + lista.get(j) == suma) {
+					Pair<Integer, Integer> para = new Pair<Integer, Integer> (lista.get(i), lista.get(j));
+					wynik.add(para);
 				}
 			}
 		}
+		
 
-		return new ArrayList<tangible.Pair<Integer, Integer>>(wynik);
+		return new ArrayList<Pair<Integer, Integer>> (wynik);
 	}
 
-	public static void test1()
-	{
-		ArrayList<Integer> lista = new ArrayList<Integer>(Arrays.asList(0, 4, 5, 6, 2, 9, 2, 3));
-		ArrayList<tangible.Pair<Integer, Integer>> wynik = new ArrayList<tangible.Pair<Integer, Integer>>(Arrays.asList({0, 5}, {2, 3}, {2, 3}));
+	public static void test1() {
+		ArrayList<Integer> lista = new ArrayList<Integer> (Arrays.asList(0, 4, 5, 6, 2, 9, 2, 3));
+		ArrayList<Pair<Integer, Integer>> wynik = new ArrayList<Pair<Integer, Integer>> ();
+		wynik.add(new Pair<Integer, Integer> (0, 5));
+		wynik.add(new Pair<Integer, Integer> (2, 3));
+		wynik.add(new Pair<Integer, Integer> (2, 3));
+
 		int suma = 5;
 
-		assert znajdzParyV1(lista, suma) == wynik;
+		assert wynik.equals(znajdzParyV1(lista, suma));
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
 		test1();
 
 	}
 
-}
-
-public final class Pair<T1, T2>
-{
-	public T1 first;
-	public T2 second;
-
-	public Pair()
-	{
-		first = null;
-		second = null;
-	}
-
-	public Pair(T1 firstValue, T2 secondValue)
-	{
-		first = firstValue;
-		second = secondValue;
-	}
-
-	public Pair(Pair<T1, T2> pairToCopy)
-	{
-		first = pairToCopy.first;
-		second = pairToCopy.second;
-	}
 }

@@ -1,12 +1,13 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
 		//Dla pobranej liczby, sprawdz czy jest palindromem.
 
-		System.out.print("Podaj liczbe");
-		System.out.print("\n");
-		int a;
-		a = Integer.parseInt(System.console().readLine());
+		System.out.print("Podaj liczbe\n");
+		Scanner s = new Scanner(System.in);
+		int a = Integer.parseInt(s.nextLine());
 
 		int odwrocona = 0;
 		int pom = a;
@@ -18,11 +19,9 @@ public class Main {
 		}
 
 		if (odwrocona == a) {
-			System.out.print("podana liczba jest palindromem");
-			System.out.print("\n");
+			System.out.print("podana liczba jest palindromem\n");
 		} else {
-			System.out.print("podana liczba nie jest palindromem");
-			System.out.print("\n");
+			System.out.print("podana liczba nie jest palindromem\n");
 		}
 
 	}

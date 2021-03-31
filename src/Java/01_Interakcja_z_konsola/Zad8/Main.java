@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
@@ -14,20 +16,21 @@ public class Main {
 		int szerokoscPodlogi;
 		int dlugoscPodlogi;
 
-		cena = Integer.parseInt(System.console().readLine());
-		bokPlytki = Integer.parseInt(System.console().readLine());
-		szerokoscPodlogi = Integer.parseInt(System.console().readLine());
-		dlugoscPodlogi = Integer.parseInt(System.console().readLine());
+		Scanner s = new Scanner(System.in);
+		cena = Integer.parseInt(s.nextLine());
+		bokPlytki = Integer.parseInt(s.nextLine());
+		szerokoscPodlogi = Integer.parseInt(s.nextLine());
+		dlugoscPodlogi = Integer.parseInt(s.nextLine());
 
 		int szerokoscKonieczna = szerokoscPodlogi + bokPlytki - szerokoscPodlogi % bokPlytki;
 		int dlugoscKonieczna = dlugoscPodlogi + bokPlytki - dlugoscPodlogi % bokPlytki;
 
-		int polePlytki = Math.pow(bokPlytki, 2);
+		int polePlytki = (int) Math.pow(bokPlytki, 2);
 		int polePodlogi = szerokoscKonieczna * dlugoscKonieczna;
 
 		float calkowityKoszt = cena * (float) polePodlogi / polePlytki;
 
-		System.out.print("Dla plytki o dlugosci boku " + bokPlytki + "i ceny " + cena);
+		System.out.print("Dla plytki o dlugosci boku " + bokPlytki + " i ceny " + cena);
 		System.out.print(" calkowity koszt wylozenia podlogi o wymiarach " + szerokoscPodlogi);
 		System.out.print("x" + dlugoscPodlogi + " wynosi " + calkowityKoszt + "\n");
 

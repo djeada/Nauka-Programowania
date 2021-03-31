@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
@@ -5,10 +7,9 @@ public class Main {
 		//ile wynosi pobrana liczba, z dokladnoscia do tylu 
 		//miejsc po przecinku ile wynosi pobrana liczba.
 
-		System.out.print("Podaj liczbe");
-		System.out.print("\n");
-		int a;
-		a = Integer.parseInt(System.console().readLine());
+		System.out.print("Podaj liczbe\n");
+		Scanner s = new Scanner(System.in);
+		int a = Integer.parseInt(s.nextLine());
 
 		int suma = 0;
 

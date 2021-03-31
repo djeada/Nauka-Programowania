@@ -1,17 +1,17 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
 		//Dla pobranej liczby n, wyswietl sume n 
 		//pierwszych wyrazow ciagu danego wzorem:
-		System.out.print("Podaj liczbe: ");
-		System.out.print("\n");
-		int a;
-		a = Integer.parseInt(System.console().readLine());
+		System.out.print("Podaj liczbe\n");
+		Scanner s = new Scanner(System.in);
+		int a = Integer.parseInt(s.nextLine());
 
 		//a) mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10
 
-		System.out.print("mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: ");
-		System.out.print("\n");
+		System.out.print("mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: \n");
 		for (int i = 0; i<a; i++) {
 			int pom = i;
 			int suma = 0;
@@ -29,16 +29,14 @@ public class Main {
 
 		//b) dwucyfrowe mniejsze od pobranej liczby
 
-		System.out.print("dwucyfrowe mniejsze od pobranej liczby: ");
-		System.out.print("\n");
+		System.out.print("dwucyfrowe mniejsze od pobranej liczby: \n");
 		for (int i = 10; i<100 && i<a; i++) {
 			System.out.print(i);
 			System.out.print("\n");
 		}
 
 		//c) trzycyfrowe ktorych suma cyfr jest	rowna pobranej liczbie
-		System.out.print("trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie");
-		System.out.print("\n");
+		System.out.print("trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie\n");
 		for (int i = 100; i<1000; i++) {
 			int pom = i;
 			int suma = 0;
@@ -55,8 +53,7 @@ public class Main {
 		}
 
 		//d) trzycyfrowe podzielne przez sume cyfr pobranej liczby
-		System.out.print("trzycyfrowe podzielne przez sume cyfr pobranej liczby");
-		System.out.print("\n");
+		System.out.print("trzycyfrowe podzielne przez sume cyfr pobranej liczby\n");
 
 		int pom = a;
 		int suma = 0;
@@ -75,11 +72,10 @@ public class Main {
 		}
 
 		//e) mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr
-		System.out.print("mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr");
-		System.out.print("\n");
+		System.out.print("mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr\n");
 
 		for (int i = 0; i<a; i++) {
-			int pom = i;
+			pom = i;
 			boolean flaga = true;
 			while (pom > 0) {
 				int cyfra = pom % 10;
@@ -95,7 +91,5 @@ public class Main {
 				System.out.print("\n");
 			}
 		}
-
 	}
-
 }

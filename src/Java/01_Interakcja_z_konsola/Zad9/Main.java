@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
@@ -10,15 +12,17 @@ public class Main {
 		float stopa;
 		int lata;
 		int kredyt;
+		
+		Scanner s = new Scanner(System.in);
+		
+		stopa = Float.parseFloat(s.nextLine());
+		lata = Integer.parseInt(s.nextLine());
+		kredyt = Integer.parseInt(s.nextLine());
 
-		stopa = Float.parseFloat(System.console().readLine());
-		lata = Integer.parseInt(System.console().readLine());
-		kredyt = Integer.parseInt(System.console().readLine());
-
-		float r = stopa / 12 * 0.01;
+		float r = (float) (stopa / 12 * 0.01);
 		int n = lata * 12;
 
-		float rata = kredyt * r * Math.pow((1 + r), n) / (Math.pow((1 + r), n) - 1);
+		float rata = (float) (kredyt * r * Math.pow((1 + r), n) / (Math.pow((1 + r), n) - 1));
 		float calkKosz = rata * n;
 
 		System.out.printf("rata mieieczna to ");

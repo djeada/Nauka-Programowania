@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
@@ -5,16 +7,13 @@ public class Main {
 		//ile wynosi pobrana liczba, z dokladnoscia do tylu 
 		//miejsc po przescinku ile wynosi pobrana liczba.
 
-		System.out.print("Podaj liczbe: ");
-		System.out.print("\n");
-		int n;
-		n = Integer.parseInt(System.console().readLine());
+		System.out.print("Podaj liczbe: \n");
+		Scanner s = new Scanner(System.in);
+		int n = Integer.parseInt(s.nextLine());
 
 		for (int i = 0; i<n; i++) {
-			System.out.printf("%f", std::numbers.pi);
+			System.out.printf("%f", 3.14);
 			System.out.printf("%f", " ");
 		}
-
 	}
-
 }

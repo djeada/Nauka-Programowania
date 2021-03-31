@@ -8,10 +8,8 @@ public class Main {
 		XX
 		*/
 
-		System.out.print("xx");
-		System.out.print("\n");
-		System.out.print("xx");
-		System.out.print("\n");
+		System.out.print("xx\n");
+		System.out.print("xx\n");
 		System.out.print("\n");
 
 		/*Trojkat.
@@ -20,12 +18,9 @@ public class Main {
 		333
 		*/
 
-		System.out.print("1");
-		System.out.print("\n");
-		System.out.print("22");
-		System.out.print("\n");
-		System.out.print("333");
-		System.out.print("\n");
+		System.out.print("1\n");
+		System.out.print("22\n");
+		System.out.print("333\n");
 		System.out.print("\n");
 
 		/*Romb z jedynek.
@@ -36,16 +31,11 @@ public class Main {
 		  1
 		 */
 
-		System.out.print("  1");
-		System.out.print("\n");
-		System.out.print(" 111");
-		System.out.print("\n");
-		System.out.print("11111");
-		System.out.print("\n");
-		System.out.print(" 111");
-		System.out.print("\n");
-		System.out.print("  1");
-		System.out.print("\n");
+		System.out.print("  1\n");
+		System.out.print(" 111\n");
+		System.out.print("11111\n");
+		System.out.print(" 111\n");
+		System.out.print("  1\n");
 
 	}
 

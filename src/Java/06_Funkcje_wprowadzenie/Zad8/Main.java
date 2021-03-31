@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	//Napisz funkcje realizujaca zaokraglanie ilorazu bez uzycia '/' i '%'.
 
@@ -7,7 +9,7 @@ public class Main {
 		int licznik = 0;
 
 		if (b == 0) {
-			return numeric_limits<Integer> .signaling_NaN();
+			return (int) Float.NaN;
 		}
 
 		if (a == 0) {
@@ -42,17 +44,15 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		System.out.print("Podaj dwie liczby: ");
-		System.out.print("\n");
-		int a;
-		a = Integer.parseInt(System.console().readLine());
-		int b;
-		b = Integer.parseInt(System.console().readLine());
+		
+		System.out.print("Podaj dwie liczby: \n");
+		
+		Scanner s = new Scanner(System.in);
 
-		System.out.print("iloraz pierwszej przez druga to: ");
-		System.out.print(podziel(a, b));
-		System.out.print("\n");
+		int a = Integer.parseInt(s.nextLine());
+		int b = Integer.parseInt(s.nextLine());
+
+		System.out.print("iloraz pierwszej przez druga to: " + podziel(a, b) + "\n");
 
 	}
-
 }

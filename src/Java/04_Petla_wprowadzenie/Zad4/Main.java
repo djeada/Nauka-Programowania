@@ -1,13 +1,14 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
 		//Dla pobranej liczby, powinna zostac wyswietlona suma 
 		//wszystkich liczb naturalnych mniejszych od pobranej liczby.
 
-		System.out.print("Podaj liczbe: ");
-		System.out.print("\n");
-		int n;
-		n = Integer.parseInt(System.console().readLine());
+		System.out.print("Podaj liczbe: \n");
+		Scanner s = new Scanner(System.in);
+		int n = Integer.parseInt(s.nextLine());
 
 		int suma = 0;
 
@@ -15,9 +16,7 @@ public class Main {
 			suma += i;
 		}
 
-		System.out.print(suma);
-		System.out.print("\n");
+		System.out.print(suma + "\n");
 
 	}
-
 }

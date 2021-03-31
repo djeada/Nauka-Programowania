@@ -1,12 +1,14 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 		//Dla pobranej od uzytkownika liczby, 
 		//zwroc liczbe cyfr pobranje liczby.
 
-		System.out.print("Podaj liczbe");
-		System.out.print("\n");
-		int a;
-		a = Integer.parseInt(System.console().readLine());
+		System.out.print("Podaj liczbe\n");
+
+		Scanner s = new Scanner(System.in);
+		int a = Integer.parseInt(s.nextLine());
 
 		int licznik = 0;
 

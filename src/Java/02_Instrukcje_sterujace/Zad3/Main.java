@@ -1,23 +1,21 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
 		//Dla pobranej liczby, sprawdz czy liczba jest ujemna, dodatnia, czy jest zerem.
 
-		System.out.print("podaj liczbe:");
-		System.out.print("\n");
+		System.out.print("podaj liczbe:\n");
 
-		int a;
-		a = Integer.parseInt(System.console().readLine());
+		Scanner s = new Scanner(System.in);
+		int a = Integer.parseInt(s.nextLine());
 
 		if (a<0) {
-			System.out.print("liczba jest ujemna");
-			System.out.print("\n");
+			System.out.print("liczba jest ujemna\n");
 		} else if (a > 0) {
-			System.out.print("liczba jest dodatnia");
-			System.out.print("\n");
+			System.out.print("liczba jest dodatnia\n");
 		} else {
-			System.out.print("liczba jest zerem");
-			System.out.print("\n");
+			System.out.print("liczba jest zerem\n");
 		}
 
 	}

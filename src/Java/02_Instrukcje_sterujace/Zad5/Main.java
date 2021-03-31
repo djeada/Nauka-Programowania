@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 
@@ -9,10 +11,11 @@ public class Main {
 		int a;
 		int b;
 		int c;
+		Scanner s = new Scanner(System.in);
 
-		a = Integer.parseInt(System.console().readLine());
-		b = Integer.parseInt(System.console().readLine());
-		c = Integer.parseInt(System.console().readLine());
+		a = Integer.parseInt(s.nextLine());
+		b = Integer.parseInt(s.nextLine());
+		c = Integer.parseInt(s.nextLine());
 
 		if (a >= b && a >= c) {
 			if (b >= c) {
