@@ -1,5 +1,5 @@
-package test;
 import java.util.*;
+
 public class Main
 {
 	//Dla otrzymanej listy, skladajacej się z nieuporzadkowanych
@@ -43,10 +43,7 @@ public class Main
 
 	public static void main(String[] args)
 	{
-
 		test1();
 		test2();
-
 	}
-
 }
