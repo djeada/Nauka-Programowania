@@ -1,4 +1,6 @@
-public class GlobalMembers
+import java.util.*;
+
+public class Main
 {
 	//Dla otrzymanych dwoch list zwroc liste powstala poprzez:
 	//a) dostawienie drugiej listy na koniec pierwszej listy;
@@ -34,7 +36,7 @@ public class GlobalMembers
 		ArrayList<Integer> listaB = new ArrayList<Integer>(Arrays.asList(7, 5, 0));
 
 		ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(-2, 8, 3, 6, 7, 5, 0));
-		assert dostaw(listaA, listaB) == wynik;
+		assert wynik.equals(dostaw(listaA, listaB));
 	}
 
 	public static void test2()
@@ -43,7 +45,7 @@ public class GlobalMembers
 		ArrayList<Integer> listaB = new ArrayList<Integer>(Arrays.asList(7, 5, 0));
 
 		ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(7, 8, 0, 6));
-		assert podmien(listaA, listaB) == wynik;
+		assert wynik.equals(podmien(listaA, listaB));
 	}
 
 	public static void main(String[] args)

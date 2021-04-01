@@ -1,4 +1,6 @@
-public class GlobalMembers
+import java.util.*;
+
+public class Main
 {
 	//Otrzymujesz dwie listy liczb reprezentujacych
 	//wspolrzedne dwoch wektorow. Zrealizuj:
@@ -47,7 +49,7 @@ public class GlobalMembers
 		ArrayList<Integer> listaB = new ArrayList<Integer>(Arrays.asList(2, 6, 5));
 
 		ArrayList<Integer> iloczynWekt = new ArrayList<Integer>(Arrays.asList(-49, -7, 28));
-		assert mnozenieWektorowe(listaA, listaB) == iloczynWekt;
+		assert iloczynWekt.equals(mnozenieWektorowe(listaA, listaB));
 	}
 
 	public static void main(String[] args)
@@ -57,5 +59,4 @@ public class GlobalMembers
 		test2();
 
 	}
-
 }

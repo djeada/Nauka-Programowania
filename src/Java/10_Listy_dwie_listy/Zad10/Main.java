@@ -1,4 +1,6 @@
-public class GlobalMembers
+import java.util.*;
+
+public class Main
 {
 	//Otrzymujesz dwie posortowane listy rownej
 	//dlugosci. Znajdz ich mediane.

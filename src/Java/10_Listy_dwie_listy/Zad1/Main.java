@@ -1,4 +1,6 @@
-public class GlobalMembers
+import java.util.*;
+
+public class Main
 {
 	//Dla otrzymanych dwoch list wypisz na przemian elemnty pierwszej
 	//i drugiej listy. Jesli listy nie sa rownej dlugosci, po wyczerpaniu

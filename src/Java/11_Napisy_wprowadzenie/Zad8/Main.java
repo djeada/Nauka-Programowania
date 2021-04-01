@@ -1,18 +1,12 @@
-public class GlobalMembers {
+public class Main {
 	//Otrzymujesz napis reprezuntajacy zdanie.
 	//Podziel zdanie na slowa skladowe.
 	//Znaki interpunkcyjne nie sa liczone jako slowa.
 
-	public static void wyczysc(String napis) {
-		var it = napis.iterator();
+	public static String wyczysc(String napis) {
+		napis = napis.trim();
 
-		while (it != napis.end()) {
-			if (ispunct( * it)) {
-				napis = napis.substring(0, it);
-			} else {
-				it++;
-			}
-		}
+		return napis.replaceAll("\\p{Punct}", "");
 	}
 
 	public static void slowaV1(String napis) {
@@ -21,8 +15,8 @@ public class GlobalMembers {
 		while ((konc = napis.indexOf(' ', pocz)) != -1) {
 			if (konc != pocz) {
 				var slowo = napis.substring(pocz, konc);
-				wyczysc(slowo);
-				if (!slowo.empty()) {
+				slowo = wyczysc(slowo);
+				if (!slowo.isEmpty()) {
 					System.out.print(slowo);
 					System.out.print("\n");
 				}
@@ -31,8 +25,8 @@ public class GlobalMembers {
 		}
 		if (konc != pocz) {
 			var slowo = napis.substring(pocz);
-			wyczysc(slowo);
-			if (!slowo.empty()) {
+			slowo = wyczysc(slowo);
+			if (!slowo.isEmpty()) {
 				System.out.print(slowo);
 				System.out.print("\n");
 			}

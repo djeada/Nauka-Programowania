@@ -1,4 +1,6 @@
-public class GlobalMembers {
+import java.util.*;
+
+public class Main {
 	//Dla otrzymanego napisu oraz znaku,
 	//znajdz liczbe wystapien znaku w napisie.
 
@@ -8,7 +10,7 @@ public class GlobalMembers {
 
 		int licznik = 0;
 
-		for (var x: slowo) {
+		for (char x: slowo.toCharArray()) {
 			if (x == znak) {
 				licznik++;
 			}

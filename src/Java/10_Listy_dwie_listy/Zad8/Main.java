@@ -1,4 +1,6 @@
-public class GlobalMembers
+import java.util.*;
+
+public class Main
 {
 	//Otrzymujesz dwie posortowane listy.
 	//Polacz je w posortowana liste.
@@ -56,7 +58,7 @@ public class GlobalMembers
 		ArrayList<Integer> listaB = new ArrayList<Integer>(Arrays.asList(1, 3, 8, 14));
 
 		ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(1, 3, 5, 7, 8, 11, 14));
-		assert polaczV1(listaA, listaB) == wynik;
+		assert wynik.equals(polaczV1(listaA, listaB));
 	}
 
 	public static void main(String[] args)

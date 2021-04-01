@@ -1,4 +1,6 @@
-public class GlobalMembers {
+import java.util.*;
+
+public class Main {
 	//Policz z ilu slow sklada sie zdanie.
 	//Znaki interpunkcyjne nie sa liczone jako slowa.
 
@@ -9,7 +11,7 @@ public class GlobalMembers {
 		boolean spacja = true;
 		int licznik = 0;
 
-		for (var znak: slowo) {
+		for (var znak: slowo.toCharArray()) {
 			if (Character.isWhitespace(znak)) {
 				spacja = true;
 			} else if (Character.isLetter(znak) && spacja) {

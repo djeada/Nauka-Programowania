@@ -1,4 +1,4 @@
-public class GlobalMembers {
+public class Main {
 	//Otrzymujesz napis reprezuntajacy zdanie.
 	//Znajdz srednia dlugosc slow w zdaniu.
 	//Znaki interpunkcyjne nie sa liczone jako slowa.

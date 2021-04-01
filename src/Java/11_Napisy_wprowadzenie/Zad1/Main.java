@@ -1,7 +1,9 @@
-public class GlobalMembers {
+import java.util.*;
+
+public class Main {
 	//Odwroc napis.
 
-	public static void odwrocNapisV1(String slowo) {
+	public static String odwrocNapisV1(String slowo) {
 
 		char[] in = slowo.toCharArray();
 		int begin = 0;
@@ -15,24 +17,22 @@ public class GlobalMembers {
 		return new String( in );
 	}
 
-	public static void odwrocNapisV2(String slowo) {
-		return new StringBuilder(slowo).reverse().toString().
+	public static String odwrocNapisV2(String slowo) {
+		return new StringBuilder(slowo).reverse().toString();
 	}
 
 	public static void test1() {
 		String napis = "adam";
 		String wynik = "mada";
 
-		odwrocNapisV1(napis);
-		assert napis.equals(wynik);
+		assert odwrocNapisV1(napis).equals(wynik);
 	}
 
 	public static void test2() {
 		String napis = "adam";
 		String wynik = "mada";
 
-		odwrocNapisV2(napis);
-		assert napis.equals(wynik);
+		assert odwrocNapisV2(napis).equals(wynik);
 	}
 
 	public static void main(String[] args) {

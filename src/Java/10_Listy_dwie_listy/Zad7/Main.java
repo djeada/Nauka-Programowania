@@ -1,4 +1,6 @@
-public class GlobalMembers
+import java.util.*;
+
+public class Main
 {
 	//Otrzymujesz dwie listy. Znajdz elementy
 	//ktore nie sa czescia wspolna obu list.
@@ -12,7 +14,7 @@ public class GlobalMembers
 
 		for (var liczba : listaA)
 		{
-			if (find(listaB.iterator(), listaB.end(), liczba) == listaB.end())
+			if (!listaB.contains(liczba))
 			{
 				wynik.add(liczba);
 			}
@@ -20,25 +22,11 @@ public class GlobalMembers
 
 		for (var liczba : listaB)
 		{
-			if (find(listaA.iterator(), listaA.end(), liczba) == listaA.end())
+			if (!listaA.contains(liczba))
 			{
 				wynik.add(liczba);
 			}
 		}
-
-		return new ArrayList<Integer>(wynik);
-	}
-
-	//Zlozonosc obliczeniowa O(nlogn)
-	//Zlozonosc pamieciowa O(n)
-	public static ArrayList<Integer> roznicaV2(ArrayList<Integer> listaA, ArrayList<Integer> listaB)
-	{
-
-		ArrayList<Integer> wynik = new ArrayList<Integer>();
-		Collections.sort(listaA);
-		Collections.sort(listaB);
-		set_difference(listaA.iterator(), listaA.end(), listaB.iterator(), listaB.end(), inserter(wynik, wynik.iterator()));
-		set_difference(listaB.iterator(), listaB.end(), listaA.iterator(), listaA.end(), inserter(wynik, wynik.iterator()));
 
 		return new ArrayList<Integer>(wynik);
 	}
@@ -47,7 +35,7 @@ public class GlobalMembers
 	{
 		Collections.sort(v1);
 		Collections.sort(v2);
-		return v1 == v2;
+		return v1.equals(v2);
 	}
 
 	public static void test1()
@@ -55,22 +43,15 @@ public class GlobalMembers
 		ArrayList<Integer> listaA = new ArrayList<Integer>(Arrays.asList(9, 2, 5, 4));
 		ArrayList<Integer> listaB = new ArrayList<Integer>(Arrays.asList(4, 2, 1));
 		ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(9, 5, 1));
+
 		assert wektoryRowne(roznicaV1(listaA, listaB), new ArrayList<Integer>(wynik));
 	}
 
-	public static void test2()
-	{
-		ArrayList<Integer> listaA = new ArrayList<Integer>(Arrays.asList(9, 2, 5, 4));
-		ArrayList<Integer> listaB = new ArrayList<Integer>(Arrays.asList(4, 2, 1));
-		ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(9, 5, 1));
-		assert wektoryRowne(roznicaV2(listaA, listaB), new ArrayList<Integer>(wynik));
-	}
 
 	public static void main(String[] args)
 	{
 
 		test1();
-		test2();
 
 	}
 

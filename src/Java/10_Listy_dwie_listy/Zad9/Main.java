@@ -1,25 +1,25 @@
-public class GlobalMembers
+import java.util.*;
+
+public class Main
 {
 	//Otrzymujesz dwie listy. Usun z pierwszej listy te
 	//elementy, ktore wystepuja rowniez w drugiej liscie.
 
 	//Zlozonosc obliczeniowa O(n^2)
 	//Zlozonosc pamieciowa O(n)
-	public static void usunCzescWspolnaV1(ArrayList<Integer> listaA, ArrayList<Integer> listaB)
+	public static ArrayList<Integer> usunCzescWspolnaV1(ArrayList<Integer> listaA, ArrayList<Integer> listaB)
 	{
 
-		var it = listaA.iterator();
-
-		while (it.hasNext())
+		for (int i = 0; i < listaA.size(); i++)
 		{
-			if (find(listaB.iterator(), listaB.end(), it.next()) != listaB.end())
+			if (listaB.contains(listaA.get(i)))
 			{
-				it.copyFrom(listaA.erase(it));
-			}
-			else
-			{
+				listaA.remove(i);
+				i--;
 			}
 		}
+		
+		return listaA;
 	}
 
 	public static void test1()
@@ -28,9 +28,7 @@ public class GlobalMembers
 		ArrayList<Integer> listaB = new ArrayList<Integer>(Arrays.asList(4, 2, 3, 5, 6));
 		ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(7, 9));
 
-		usunCzescWspolnaV1(listaA, listaB);
-
-		assert listaA == wynik;
+		assert wynik.equals(usunCzescWspolnaV1(listaA, listaB));
 	}
 
 	public static void main(String[] args)

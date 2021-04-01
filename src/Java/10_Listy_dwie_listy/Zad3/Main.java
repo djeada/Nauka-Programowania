@@ -1,4 +1,6 @@
-public class GlobalMembers
+import java.util.*;
+
+public class Main
 {
 	//Dla otrzymanych dwoch list, zwroc liste, ktorej
 	//elemnty sa suma odpowiadajacych sobie elementow
@@ -30,7 +32,7 @@ public class GlobalMembers
 		ArrayList<Integer> listaB = new ArrayList<Integer>(Arrays.asList(2, 8, 6, 5));
 
 		ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(5, 9, 8, 10));
-		assert suma(listaA, listaB) == wynik;
+		assert wynik.equals(suma(listaA, listaB));
 	}
 
 	public static void main(String[] args)

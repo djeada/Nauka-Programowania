@@ -1,4 +1,6 @@
-public class GlobalMembers {
+import java.util.*;
+
+public class Main {
 	//Otrzymujesz napis oraz liczbe k.
 	//a) wypisz poziomo co k-ty znak. Znaki powinny byc oddzielone spacjami.
 	public static void wypiszPoziomo(final String napis, int k) {
@@ -27,4 +29,3 @@ public class GlobalMembers {
 
 	}
 
-}
