@@ -2,7 +2,7 @@ import java.util.*;
 public class Main {
 	//Otrzymujesz liste skladajaca sie z ciagu liter A i B.
 	//Litery A reprezentuja samochod jadacy na wschod, a
-	//litery B jadacy na zachid.  Samochody jadace w przeciwna
+	//litery B jadacy na zachod.  Samochody jadace w przeciwna
 	//stronw mijaja sie. Policz mijajace sie samochody.
 
 	public static int policzSamochodyV1(ArrayList<Character> lista) {
