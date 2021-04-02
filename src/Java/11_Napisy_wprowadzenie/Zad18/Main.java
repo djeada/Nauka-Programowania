@@ -1,8 +1,8 @@
 /*
- Odwroc wszystkie napisy w zdaniu.
- Znaki powinny zostac zamienione miejscami dla kazdego napisu z osobna.
- Napisy oddzielone sa spacjami, nie zmieniaj ich kolejnosci.
- */
+Odwroc wszystkie napisy w zdaniu.
+Znaki powinny zostac zamienione miejscami dla kazdego napisu z osobna.
+Napisy oddzielone sa spacjami, nie zmieniaj ich kolejnosci.
+*/
 
 import java.util.stream.Collectors;
 import java.util.regex.Pattern;
@@ -25,7 +25,7 @@ public class Main {
 			odwrocony.append(reverseWord).append(" ");
 		}
 
-		return odwrocony.toString();
+		return odwrocony.toString().trim();
 	}
 
 	public static String odwrocNapisyV2(String napis) {
@@ -38,7 +38,7 @@ public class Main {
 
 		String napis = "Cameron Diaz";
 		String wynik = "noremaC zaiD";
-
+		
 		assert odwrocNapisyV1(napis).equals(wynik);
 		assert odwrocNapisyV2(napis).equals(wynik);
 

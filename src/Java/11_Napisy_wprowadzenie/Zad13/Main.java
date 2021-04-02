@@ -1,4 +1,6 @@
-public class GlobalMembers {
+import java.util.*;
+
+public class Main {
 	//Otrzymujesz zdanie. Znajdz znaki znajdujace
 	//sie na pozycjach bedacych liczbami pierwszymi.
 
@@ -33,7 +35,7 @@ public class GlobalMembers {
 	public static void test1() {
 		String napis = "Kaczka lubi wiosne.";
 		ArrayList<Character> wynik = new ArrayList<Character> (Arrays.asList('a', 'c', 'z', 'a', 'l', ' ', 'i', 'e'));
-		assert znaki(napis) == wynik;
+		assert wynik.equals(znaki(napis));
 	}
 
 	public static void main(String[] args) {

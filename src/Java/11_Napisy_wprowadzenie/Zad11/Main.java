@@ -1,18 +1,14 @@
+import java.util.*;
+
 public class Main {
 	//Otrzymujesz napis reprezuntajacy zdanie.
 	//Znajdz srednia dlugosc slow w zdaniu.
 	//Znaki interpunkcyjne nie sa liczone jako slowa.
 
-	public static void wyczysc(String napis) {
-		var it = napis.iterator();
+	public static String wyczysc(String napis) {
+		napis = napis.trim();
 
-		while (it != napis.end()) {
-			if (ispunct( * it)) {
-				napis = napis.substring(0, it);
-			} else {
-				it++;
-			}
-		}
+		return napis.replaceAll("\\p{Punct}", "");
 	}
 
 	public static int srednia(final String napis) {
@@ -23,20 +19,20 @@ public class Main {
 		while ((konc = napis.indexOf(' ', pocz)) != -1) {
 			if (konc != pocz) {
 				var slowo = napis.substring(pocz, konc);
-				wyczysc(slowo);
-				if (!slowo.empty()) {
+				slowo = wyczysc(slowo);
+				if (!slowo.isEmpty()) {
 					n++;
-					calk_dlugosc += slowo.size();
+					calk_dlugosc += slowo.length();
 				}
 			}
 			pocz = konc + 1;
 		}
 		if (konc != pocz) {
 			var slowo = napis.substring(pocz);
-			wyczysc(slowo);
-			if (!slowo.empty()) {
+			slowo = wyczysc(slowo);
+			if (!slowo.isEmpty()) {
 				n++;
-				calk_dlugosc += slowo.size();
+				calk_dlugosc += slowo.length();
 			}
 		}
 

@@ -1,4 +1,4 @@
-public class GlobalMembers {
+public class Main {
 	//Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej
 	//dlugosci, zdefiniowana jako liczba pozycji na ktorych napisy maja rozne
 	//znaki.

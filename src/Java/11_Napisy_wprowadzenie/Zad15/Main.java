@@ -1,19 +1,13 @@
 import java.util.*;
 
-public class GlobalMembers {
+public class Main {
 	//Otrzymujesz napis reprezentajacy zdanie.
 	//Zwroc liste skladajaca sie ze slow zdania.
 	//Znaki interpunkcyjne nie sa liczone jako slowa.
-	public static void wyczysc(String napis) {
-		var it = napis.iterator();
+	public static String wyczysc(String napis) {
+		napis = napis.trim();
 
-		while (it != napis.end()) {
-			if (ispunct( * it)) {
-				napis = napis.substring(0, it);
-			} else {
-				it++;
-			}
-		}
+		return napis.replaceAll("\\p{Punct}", "");
 	}
 
 	public static ArrayList<String> slowaV1(String napis) {
@@ -23,8 +17,8 @@ public class GlobalMembers {
 		while ((konc = napis.indexOf(' ', pocz)) != -1) {
 			if (konc != pocz) {
 				var slowo = napis.substring(pocz, konc);
-				wyczysc(slowo);
-				if (!slowo.empty()) {
+				slowo = wyczysc(slowo);
+				if (!slowo.isEmpty()) {
 					wynik.add(slowo);
 				}
 			}
@@ -32,8 +26,8 @@ public class GlobalMembers {
 		}
 		if (konc != pocz) {
 			var slowo = napis.substring(pocz);
-			wyczysc(slowo);
-			if (!slowo.empty()) {
+			slowo = wyczysc(slowo);
+			if (!slowo.isEmpty()) {
 				wynik.add(slowo);
 			}
 		}
@@ -44,13 +38,14 @@ public class GlobalMembers {
 	public static void test1() {
 		String napis = "We think in generalities, but we live in details";
 		ArrayList<String> wynik = new ArrayList<String> (Arrays.asList("We", "think", "in", "generalities", "but", "we", "live", "in", "details"));
-		assert slowaV1(napis) == wynik;
+
+		assert wynik.equals(slowaV1(napis));
 	}
 
 	public static void test2() {
 		String napis = "";
 		ArrayList<String> wynik = new ArrayList<String> ();
-		assert slowaV1(napis) == wynik;
+		assert wynik.equals(slowaV1(napis));
 	}
 
 	public static void main(String[] args) {

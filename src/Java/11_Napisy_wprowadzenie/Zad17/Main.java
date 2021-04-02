@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class GlobalMembers {
+public class Main {
 	//Otrzymujesz liste liczb.
 	//Zamien liste na napis.
 
