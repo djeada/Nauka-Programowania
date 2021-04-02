@@ -28,4 +28,4 @@ public class Main {
 		wypiszPionowo(napis, k);
 
 	}
-
+}
