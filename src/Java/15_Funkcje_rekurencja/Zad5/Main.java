@@ -1,31 +1,24 @@
-public class Main
-{
+public class Main {
 	//Liczba Fibonacciego.
 
-	public static int fibonnaciV1(int n)
-	{
+	public static int fibonnaciV1(int n) {
 
-		if (n == 0 || n == 1)
-		{
+		if (n == 0 || n == 1) {
 			return n;
 		}
 
 		return fibonnaciV1(n - 1) + fibonnaciV1(n - 2);
 	}
 
-	
-	public static int[] fibonnaciV2_pom = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	public static int[] fibonnaciV2_pom = new int[256];
 
-	public static int fibonnaciV2(int n)
-	{
+	public static int fibonnaciV2(int n) {
 
-		if (fibonnaciV2_pom[n] != 0)
-		{
+		if (fibonnaciV2_pom[n] != 0) {
 			return fibonnaciV2_pom[n];
 		}
 
-		if (n == 0 || n == 1)
-		{
+		if (n == 0 || n == 1) {
 			fibonnaciV2_pom[n] = n;
 			return fibonnaciV2_pom[n];
 		}
@@ -35,8 +28,7 @@ public class Main
 		return fibonnaciV2_pom[n];
 	}
 
-	public static void test1()
-	{
+	public static void test1() {
 		int n = 7;
 		int wynik = 13;
 
@@ -44,8 +36,7 @@ public class Main
 		assert fibonnaciV2(n) == wynik;
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
 		test1();
 
