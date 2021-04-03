@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Map.Entry;
 
 public class Main
 {
@@ -9,10 +10,14 @@ public class Main
 	public static HashMap<Character, Integer> histogram(final String slowo)
 	{
 		HashMap<Character, Integer> histo = new HashMap<Character, Integer>();
-
-		for (var znak : slowo)
+		
+		for (var znak : slowo.toCharArray())
 		{
-			histo.get(znak)++;
+			if (histo.containsKey(znak))
+			histo.put(znak, histo.get(znak) + 1);
+			else
+				histo.put(znak, 1);
+
 		}
 
 		return new HashMap<Character, Integer>(histo);
@@ -28,28 +33,30 @@ public class Main
 		HashMap<Character, Integer> histoSlowaA = histogram(slowoA);
 		HashMap<Character, Integer> histoSlowaB = histogram(slowoB);
 		int licznik = 0;
-
-		for (var para : histoSlowaA)
-		{
-			if (histoSlowaB.count(para.first) == 0)
+		
+		for (Entry<Character, Integer> para : histoSlowaA.entrySet()) {
+		    Character klucz = para.getKey();
+		    int wartosc = para.getValue();
+			if (!histoSlowaB.containsKey(klucz))
 			{
 				licznik++;
 			}
 			else
 			{
-				licznik += para.second - histoSlowaB.get(para.first);
+				licznik += wartosc - histoSlowaB.get(klucz);
 			}
 		}
 
-		for (var para : histoSlowaB)
-		{
-			if (histoSlowaA.count(para.first) == 0)
+		for (Entry<Character, Integer> para : histoSlowaB.entrySet()) {
+		    Character klucz = para.getKey();
+		    int wartosc = para.getValue();
+			if (!histoSlowaA.containsKey(klucz))
 			{
 				licznik++;
 			}
 			else
 			{
-				licznik += para.second - histoSlowaA.get(para.first);
+				licznik += wartosc - histoSlowaA.get(klucz);
 			}
 		}
 
