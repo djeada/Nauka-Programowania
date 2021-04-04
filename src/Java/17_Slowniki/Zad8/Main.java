@@ -1,76 +1,69 @@
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
 
-/*
-Najczesciej wystepujacy znak.
-Ignoruj spacje.
-*/
-
 public class Main {
-	
-    public static Character najczesciejWystepujacyZnakV1(String slowo) {
 
-        Map<Character, Integer> counter = new HashMap<>();
-        
-        for (Character ch : slowo.toCharArray()) {
+	/*
+	Najczesciej wystepujacy znak.
+	Ignoruj spacje.
+	*/
+	public static Character najczesciejWystepujacyZnakV1(String slowo) {
 
-            if (!Character.isWhitespace(ch)) {
-                Integer n = counter.get(ch);
-               
-                if (n == null) 
-                    counter.put(ch, 1);
-               
-                else
-                    counter.put(ch, ++n);
-            }
-        }
+		Map<Character, Integer> counter = new HashMap<>();
 
-        int liczbaWystapien = Collections.max(counter.values());
+		for (Character ch: slowo.toCharArray()) {
 
-        char znak = Character.MIN_VALUE;
-        for (Entry<Character, Integer> entry : counter.entrySet())
-            if (entry.getValue() == liczbaWystapien)
-                znak = entry.getKey();
+			if (!Character.isWhitespace(ch)) {
+				Integer n = counter.get(ch);
 
-        return znak;
-    }
+				if (n == null)
+					counter.put(ch, 1);
 
-    public static Character najczesciejWystepujacyZnakV2(String slowo) {
+				else
+					counter.put(ch, ++n);
+			}
+		}
 
-        int liczbaWystapien = -1;
-        char znak = Character.MIN_VALUE;
+		int liczbaWystapien = Collections.max(counter.values());
 
-        int[] kodyASCII = new int[256];
+		char znak = Character.MIN_VALUE;
+		for (Entry<Character, Integer> entry: counter.entrySet())
+			if (entry.getValue() == liczbaWystapien)
+				znak = entry.getKey();
 
-        for (Character ch : slowo.toCharArray()) {
-            
-        	if (!Character.isWhitespace(ch)) {
+		return znak;
+	}
 
-                int code = (int) ch;
-                kodyASCII[code]++;
-                if (kodyASCII[code] > liczbaWystapien) {
-                    liczbaWystapien = kodyASCII[code];
-                    znak = ch;
-                }
-            }
+	public static Character najczesciejWystepujacyZnakV2(String slowo) {
 
-        }
+		int liczbaWystapien = -1;
+		char znak = Character.MIN_VALUE;
 
-        return znak;
-    }
+		int[] kodyASCII = new int[256];
 
-    public static void main(String[] args) {
-    	
-    	String slowo = "konstantynopolitanczykowianeczka";
-    	Character wynik = 'n';
-    	    	
-    	assert najczesciejWystepujacyZnakV1(slowo).equals(wynik);
-    	assert najczesciejWystepujacyZnakV2(slowo).equals(wynik);
-    	
+		for (Character ch: slowo.toCharArray()) {
 
-    }
+			if (!Character.isWhitespace(ch)) {
 
+				int code = (int) ch;
+				kodyASCII[code]++;
+				if (kodyASCII[code] > liczbaWystapien) {
+					liczbaWystapien = kodyASCII[code];
+					znak = ch;
+				}
+			}
+
+		}
+
+		return znak;
+	}
+
+	public static void main(String[] args) {
+
+		String slowo = "konstantynopolitanczykowianeczka";
+		Character wynik = 'n';
+
+		assert najczesciejWystepujacyZnakV1(slowo).equals(wynik);
+		assert najczesciejWystepujacyZnakV2(slowo).equals(wynik);
+	}
 }

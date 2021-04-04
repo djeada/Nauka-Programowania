@@ -1,101 +1,73 @@
 import java.util.*;
 
-
-
-package <missing>;
-
-public class GlobalMembers
-{
+public class Main {
 	//Zbuduj prosta baze danych dla biblioteki oparta o slownik w ktorym kluczami
 	//sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek.
 	//Baza danych powinna umozliwiac:
 	//a) dodanie wypozyczonej ksiazki do danego czytelnika;
-	public static void dodajKsiazke(HashMap<String, ArrayList<String>> lista, final String uzytkownik, final String ksiazka)
-	{
-		if (lista.count(uzytkownik))
-		{
+	public static void dodajKsiazke(HashMap<String, ArrayList<String>> lista, final String uzytkownik, final String ksiazka) {
+		if (lista.containsKey(uzytkownik)) {
+			ArrayList<String> ksiazki = lista.get(uzytkownik);
 
-			if (find(lista.get(uzytkownik).iterator(), lista.get(uzytkownik).end(), ksiazka) == lista.get(uzytkownik).end())
-			{
-				lista.get(uzytkownik).add(ksiazka);
+			if (!ksiazki.contains(ksiazka)) {
+				ksiazki.add(ksiazka);
+				lista.put(uzytkownik, ksiazki);
+			} else {
+				System.out.println("Uzytkownik juz wypozyczyl ta ksiazke.");
 			}
-
-			else
-			{
-				System.out.print("Uzytkownik juz wypozyczyl ta ksiazke.");
-				System.out.print("\n");
-			}
-		}
-
-		else
-		{
-			ArrayList<String> ksiazki = new ArrayList<String>(Arrays.asList(ksiazka));
+		} else {
+			ArrayList<String> ksiazki = new ArrayList<String> (Arrays.asList(ksiazka));
 			lista.put(uzytkownik, ksiazki);
 		}
 	}
 
 	//b) usuniecie wypozyczonej ksiazki z listy odpowiadajacej czytelnikowi;
-	public static void usunKsiazke(HashMap<String, ArrayList<String>> lista, final String uzytkownik, final String ksiazka)
-	{
+	public static void usunKsiazke(HashMap<String, ArrayList<String>> lista, final String uzytkownik, final String ksiazka) {
 
-		if (!lista.count(uzytkownik))
-		{
-			System.out.print("Podany uzytkownik nie znajduje sie w liscie.");
-			System.out.print("\n");
+		if (!lista.containsKey(uzytkownik)) {
+			System.out.println("Podany uzytkownik nie znajduje sie w liscie.");
 			return;
 		}
 
-		if (find(lista.get(uzytkownik).iterator(), lista.get(uzytkownik).end(), ksiazka) != lista.get(uzytkownik).end())
-		{
-//C++ TO JAVA CONVERTER TODO TASK: There is no direct equivalent to the STL vector 'erase' method in Java:
-			lista.get(uzytkownik).erase(remove(lista.get(uzytkownik).iterator(), lista.get(uzytkownik).end(), ksiazka), lista.get(uzytkownik).end());
-		}
+		ArrayList<String> ksiazki = lista.get(uzytkownik);
 
-		else
-		{
-			System.out.print("Uzytkownik nie wypozyczyl tej ksiazki.");
-			System.out.print("\n");
+		if (ksiazki.contains(ksiazka)) {
+			while (ksiazki.remove(ksiazka)) {}
+			lista.put(uzytkownik, ksiazki);
+		} else {
+			System.out.println("Uzytkownik nie wypozyczyl tej ksiazki.");
 		}
 	}
 
 	//c) wyswietlenie aktualnej listy ksiazek dla konkretnego czytelnika oraz
 	//dla wszystkich czytelnikow;
-	public static void wyswietlKsiazki(HashMap<String, ArrayList<String>> lista, final String uzytkownik)
-	{
+	public static void wyswietlKsiazki(HashMap<String, ArrayList<String>> lista, final String uzytkownik) {
 
-		if (!lista.count(uzytkownik))
-		{
-			System.out.print("Podany uzytkownik nie znajduje sie w liscie.");
-			System.out.print("\n");
+		if (!lista.containsKey(uzytkownik)) {
+			System.out.println("Podany uzytkownik nie znajduje sie w liscie.");
 			return;
 		}
 
 		System.out.print("Uzytkownik ");
 		System.out.print(uzytkownik);
-		System.out.print(" wypozyczyl nastepujace ksiazki: ");
-		System.out.print("\n");
+		System.out.println(" wypozyczyl nastepujace ksiazki: ");
 
-		for (var ksiazka : lista.get(uzytkownik))
-		{
-			System.out.print(ksiazka);
+		for (var ksiazka: lista.get(uzytkownik)) {
+			System.out.println(ksiazka);
+		}
+	}
+
+	public static void wyswietlWszystkieKsiazki(HashMap<String, ArrayList<String>> lista) {
+
+		for (String klucz: lista.keySet()) {
+			wyswietlKsiazki(lista, klucz);
 			System.out.print("\n");
 		}
 	}
 
-	public static void wyswietlWszystkieKsiazki(HashMap<String, ArrayList<String>> lista)
-	{
+	public static void main(String[] args) {
 
-		for (var it = lista.iterator(); it != lista.end(); it++)
-		{
-			wyswietlKsiazki(lista, it.first);
-			System.out.print("\n");
-		}
-	}
-
-	public static void main(String[] args)
-	{
-
-		HashMap<String, ArrayList<String>> lista = new HashMap<String, ArrayList<String>>();
+		HashMap<String, ArrayList<String>> lista = new HashMap<String, ArrayList<String>> ();
 
 		dodajKsiazke(lista, "Pan T", "Duma i uprzedzenie – Jane Austen");
 		dodajKsiazke(lista, "Pan T", "Zabić drozdad – Harper Lee");
@@ -117,5 +89,4 @@ public class GlobalMembers
 		wyswietlWszystkieKsiazki(lista);
 
 	}
-
 }

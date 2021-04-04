@@ -1,16 +1,13 @@
-public class Main
-{
+public class Main {
 	//Policz ile bitow nalezy odwrocic,
 	//aby zamien liczbe A w liczbe B.
 
-	public static int bityDoZmiany(int liczbaA, int liczbaB)
-	{
+	public static int bityDoZmiany(int liczbaA, int liczbaB) {
 
 		int n = liczbaA ^ liczbaB;
 
 		int licznik = 0;
-		while (n != 0)
-		{
+		while (n != 0) {
 			n &= (n - 1);
 			licznik++;
 		}
@@ -18,8 +15,7 @@ public class Main
 		return licznik;
 	}
 
-	public static void test1()
-	{
+	public static void test1() {
 		int liczbaA = 34;
 		int liczbaB = 73;
 		int wynik = 5;
@@ -27,8 +23,7 @@ public class Main
 		assert bityDoZmiany(liczbaA, liczbaB) == wynik;
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
 		test1();
 

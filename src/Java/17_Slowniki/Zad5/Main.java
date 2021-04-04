@@ -1,113 +1,85 @@
 import java.util.*;
 
-
-
-package <missing>;
-
-public class GlobalMembers
-{
+public class Main {
 	//Otrzymujesz liste par. Pierwszym elementem pary jest napis reprezentujacy imie i nazwikso
 	//pracownika, drugim zysk z transakcji jaka dany pracownik przeprowadzil. Znajdz pracownika,
 	//ktory przyniosl firmie najwiecej zysku.
+	private static class Pair<T1, T2 > {
+		public T1 first;
+		public T2 second;
 
-	public static void wypelnijSlownik(final ArrayList<tangible.Pair<String, Integer>> lista, HashMap<String, Integer> slownik)
-	{
+		public Pair(T1 firstValue, T2 secondValue) {
+			first = firstValue;
+			second = secondValue;
+		}
 
-		for (var rekord : lista)
-		{
-			slownik.put(rekord.first, slownik.put(rekord.first) + rekord.second);
+		@Override public boolean equals(Object o) {
+			return (o instanceof Pair) && (this.first == ((Pair) o).first) && (this.second == ((Pair) o).second);
+		}
+	}
+	public static void wypelnijSlownik(final ArrayList<Pair<String, Integer>> lista, HashMap<String, Integer> slownik) {
+
+		for (var rekord: lista) {
+			if (slownik.containsKey(rekord.first))
+				slownik.put(rekord.first, slownik.get(rekord.first) + rekord.second);
+			else
+				slownik.put(rekord.first, rekord.second);
+
 		}
 	}
 
-	public static String znajdzMaxZysk(HashMap<String, Integer> slownik)
-	{
-		String najlepszyPracownik;
+	public static String znajdzMaxZysk(HashMap<String, Integer> slownik) {
+		String najlepszyPracownik = "";
 		int maxZysk = -1;
 
-		for (var it = slownik.iterator(); it != slownik.end(); it++)
-		{
-			if (it.second > maxZysk)
-			{
-				najlepszyPracownik = it.first;
-				maxZysk = it.second;
+		for (Map.Entry<String, Integer> entry: slownik.entrySet()) {
+			if (entry.getValue() > maxZysk) {
+				najlepszyPracownik = entry.getKey();
+				maxZysk = entry.getValue();
 			}
 		}
 
 		return najlepszyPracownik;
 	}
 
-	public static String pracownik(ArrayList<tangible.Pair<String, Integer>> lista)
-	{
+	public static String pracownik(ArrayList<Pair<String, Integer>> lista) {
 
-		if (lista.isEmpty())
-		{
+		if (lista.isEmpty()) {
 			return "";
 		}
 
-		HashMap<String, Integer> slownik = new HashMap<String, Integer>();
+		HashMap<String, Integer> slownik = new HashMap<String, Integer> ();
 		wypelnijSlownik(lista, slownik);
 
 		return znajdzMaxZysk(slownik);
 	}
 
-	public static void test1()
-	{
+	public static void test1() {
 
-		ArrayList<tangible.Pair<String, Integer>> lista = new ArrayList<tangible.Pair<String, Integer>>(Arrays.asList({"Barnaba Barabash", 120}, {"Jon Snow", 100}, {"Kira Summer", 300}, {"Barnaba Barabash", 200}, {"Bob Marley", 110}));
+		ArrayList<Pair<String, Integer>> lista = new ArrayList<Pair<String, Integer>> (Arrays.asList(
+			new Pair<String, Integer> ("Barnaba Barabash", 120),
+			new Pair<String, Integer> ("Jon Snow", 100),
+			new Pair<String, Integer> ("Kira Summer", 300),
+			new Pair<String, Integer> ("Barnaba Barabash", 200),
+			new Pair<String, Integer> ("Bob Marley", 110)));
 
 		String wynik = "Barnaba Barabash";
 
 		assert wynik.equals(pracownik(lista));
 	}
 
-	public static void test2()
-	{
-		ArrayList<tangible.Pair<String, Integer>> lista = new ArrayList<tangible.Pair<String, Integer>>();
-		String wynik;
+	public static void test2() {
+		ArrayList<Pair<String, Integer>> lista = new ArrayList<Pair<String, Integer>> ();
+		String wynik = "";
 
 		assert wynik.equals(pracownik(lista));
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
 		test1();
 		test2();
 
 	}
 
-}
-
-//Helper class added by C++ to Java Converter:
-
-package tangible;
-
-//----------------------------------------------------------------------------------------
-//	Copyright © 2006 - 2021 Tangible Software Solutions, Inc.
-//	This class can be used by anyone provided that the copyright notice remains intact.
-//
-//	This class replaces the C++ std::pair type.
-//----------------------------------------------------------------------------------------
-public final class Pair<T1, T2>
-{
-	public T1 first;
-	public T2 second;
-
-	public Pair()
-	{
-		first = null;
-		second = null;
-	}
-
-	public Pair(T1 firstValue, T2 secondValue)
-	{
-		first = firstValue;
-		second = secondValue;
-	}
-
-	public Pair(Pair<T1, T2> pairToCopy)
-	{
-		first = pairToCopy.first;
-		second = pairToCopy.second;
-	}
 }
