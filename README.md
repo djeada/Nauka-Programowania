@@ -1343,7 +1343,7 @@ Rozwiązania
 <td>Wszystkie palindromy w zdaniu.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad4.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12_Napisy_anagramy_palindromy/Zad4">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1353,7 +1353,7 @@ Rozwiązania
 <td>Znajdź anagramy w zdaniu.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad5.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12_Napisy_anagramy_palindromy/Zad5">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1363,7 +1363,7 @@ Rozwiązania
 <td>Permutacja będąca palindromem.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad6.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad6.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12_Napisy_anagramy_palindromy/Zad6">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1373,7 +1373,7 @@ Rozwiązania
 <td>Ile znaków musimy usunąć aby uzyskać anagramy?</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad7.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad7.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12_Napisy_anagramy_palindromy/Zad7">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1383,7 +1383,7 @@ Rozwiązania
 <td>Wyjątkowe palindromy.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad8.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad8.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/12_Napisy_anagramy_palindromy/Zad8">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1406,7 +1406,7 @@ Rozwiązania
   <td>Macierz <i>a</i> identycznych wierszy składających się z liczb od 0 do <i>b</i>.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad1.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad1">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1416,7 +1416,7 @@ Rozwiązania
 <td>Każdy element jest iloczynem współrzędnych.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad2.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad2">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1436,7 +1436,7 @@ Rozwiązania
 <td>Dodawanie/odejmowanie macierzy.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad4.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad4">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1446,7 +1446,7 @@ Rozwiązania
 <td>Magiczny kwadrat.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad5.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad5">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1466,7 +1466,7 @@ Rozwiązania
 <td>Wyzeruj macierz.</td>
 <td><a>Python</a></td>
  <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad7.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad7">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1476,7 +1476,7 @@ Rozwiązania
 <td>Wypisz spiralnie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad8.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad8.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad8">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1486,7 +1486,7 @@ Rozwiązania
 <td>Klepsydra o największej sumie.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad9.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad9.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad9">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1496,7 +1496,7 @@ Rozwiązania
 <td>Obróć o 90 stopni.</td>
 <td><a>Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad10.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad10">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1529,7 +1529,7 @@ Rozwiązania
   <td>Wartość wielomianu w punkcie.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad1.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/14_Funkcje_wielomiany/Zad1">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1539,7 +1539,7 @@ Rozwiązania
   <td>Iloczyn wielomianu przez skalar.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad2.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/14_Funkcje_wielomiany/Zad2">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1549,7 +1549,7 @@ Rozwiązania
 <td>Suma wielomianów.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad3.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/14_Funkcje_wielomiany/Zad3">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1559,7 +1559,7 @@ Rozwiązania
 <td>Mnożenie wielomianów.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad4.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/14_Funkcje_wielomiany/Zad4">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1569,7 +1569,7 @@ Rozwiązania
 <td>N-ta pochodna wielomianu.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad5.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/14_Funkcje_wielomiany/Zad5">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1579,7 +1579,7 @@ Rozwiązania
 <td>Miejsce zerowe funkcji kwadratowej.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad6.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/14_Funkcje_wielomiany/Zad6">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1602,7 +1602,7 @@ Rozwiązania
   <td>Liczby naturalne mniejsze od <b>N</b>.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad1.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/15_Funkcje_rekurencja/Zad1">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1612,7 +1612,7 @@ Rozwiązania
   <td>Suma liczb naturalnych mniejszych od <b>N</b>.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad2.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/15_Funkcje_rekurencja/Zad2">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1622,7 +1622,7 @@ Rozwiązania
 <td>Potęga.</td>
 <td><a >Python</a></td>
  <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad3.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/15_Funkcje_rekurencja/Zad3">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1632,7 +1632,7 @@ Rozwiązania
 <td>Silnia.</td>
 <td><a >Python</a></td>
  <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad4.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/15_Funkcje_rekurencja/Zad4">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1641,8 +1641,8 @@ Rozwiązania
 <td>5</td>
 <td>Liczba Fibonacciego.</td>
 <td><a >Python</a></td>
- <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad5.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad5.cpp">Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/15_Funkcje_rekurencja/Zad5">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1651,8 +1651,8 @@ Rozwiązania
 <td>6</td>
   <td><b>N</b>-ty wyraz ciągu danego wzorem rekurencyjnym.</td>
 <td><a >Python</a></td>
- <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad6.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad6.cpp">Cpp</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/15_Funkcje_rekurencja/Zad6">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1662,7 +1662,7 @@ Rozwiązania
 <td>Wyszukiwanie liniowe rekurencyjnie.</td>
 <td><a >Python</a></td>
  <td><a>Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/15_Funkcje_rekurencja/Zad7">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1672,7 +1672,7 @@ Rozwiązania
 <td>Wieża Hanoi.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad8.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/15_Funkcje_rekurencja/Zad8">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1682,7 +1682,7 @@ Rozwiązania
 <td>Słowa elfickie.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad9.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/15_Funkcje_rekurencja/Zad9">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1692,7 +1692,7 @@ Rozwiązania
 <td>Gra w kapsle.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad10.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/15_Funkcje_rekurencja/Zad10">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1715,7 +1715,7 @@ Rozwiązania
 <td>Konwersja między systemami binarnym i dziesiętnym.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad1.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad1.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad1">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1725,7 +1725,7 @@ Rozwiązania
 <td>Konwersja gdy spełniony jest warunek.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad2.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad2">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1735,7 +1735,7 @@ Rozwiązania
 <td>Operacje arytmetyczne.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad3.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad3">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1745,7 +1745,7 @@ Rozwiązania
 <td>Zera/jedynki w liczbie binarnej.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad4.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad4.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad4">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1755,7 +1755,7 @@ Rozwiązania
 <td>Min/maks z dwóch liczb.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad5.py">Python</a></td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad5.cpp">Cpp</a></td> 
-<td><a>Java</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad5">Java</a></td> 
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
@@ -1765,7 +1765,7 @@ Rozwiązania
 <td>Konwersja między dowolnymi systemami.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad6.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad6">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1775,7 +1775,7 @@ Rozwiązania
 <td>Zamiana sąsiadów.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad7.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad7.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad7">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1785,7 +1785,7 @@ Rozwiązania
 <td>Następna potęga dwójki.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad8.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad8.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad8">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1795,7 +1795,7 @@ Rozwiązania
 <td>Zamiana wielkości liter.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad9.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad9.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad9">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1805,7 +1805,7 @@ Rozwiązania
     <td>Zamień <b>A</b> w <b>B</b>.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad10.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad10.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad10">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1815,7 +1815,7 @@ Rozwiązania
 <td>Czy liczba jest palindromem?</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad11.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad11.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad11">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1825,7 +1825,7 @@ Rozwiązania
 <td>Najdłuższy ciąg zer w liczbie binarnej.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad12.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/16_System_binarny/Zad12">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1848,7 +1848,7 @@ Rozwiązania
 <td>Kluczami są liczby, a wartościami ich kwadraty.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad1.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad1.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17_Slowniki/Zad1">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1859,7 +1859,7 @@ Rozwiązania
 <td>Lista kluczy i lista wartości.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad2.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17_Slowniki/Zad2">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1870,7 +1870,7 @@ Rozwiązania
 <td>Klucz to imię, wartość lista wypożyczonych książek.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad3.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad3.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17_Slowniki/Zad3">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1889,7 +1889,7 @@ Rozwiązania
 <td>Lista pracowników.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad5.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17_Slowniki/Zad5">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1899,7 +1899,7 @@ Rozwiązania
 <td>Histogram znaków w słowie.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad6.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17_Slowniki/Zad6">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1909,7 +1909,7 @@ Rozwiązania
 <td>Histogram słów w tekście.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad7.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17_Slowniki/Zad7">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
@@ -1939,7 +1939,7 @@ Rozwiązania
 <td>Anagramy w tekście.</td>
 <td><a >Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad10.cpp">Cpp</a></td> 
- <td><a>Java</a></td> 
+ <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/17_Slowniki/Zad10">Java</a></td> 
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
