@@ -1,110 +1,73 @@
 import java.util.*;
+import java.util.Map.Entry;
+import java.io.*;
 
-
-
-package <missing>;
-
-public class GlobalMembers
-{
+public class Main {
 	//Otrzymujesz napis reprezentujacy scieżke pliku tekstowego. Oblicz:
-	public static void wyczysc(String napis)
-	{
-		var it = napis.iterator();
-
-		while (it != napis.end())
-		{
-			if (ispunct(*it))
-			{
-				napis = napis.substring(0, it);
-			}
-			else
-			{
-				it++;
-			}
-		}
+	public static String wyczysc(String napis) {
+		napis = napis.trim();
+		return napis.replaceAll("\\p{Punct}", "");
 	}
 
-	public static void naMale(String slowo)
-	{
-		transform(slowo.iterator(), slowo.end(), slowo.iterator(), tolower);
-	}
-
-	public static ArrayList<String> rozdzielSlowa(String napis)
-	{
-		ArrayList<String> wynik = new ArrayList<String>();
+	public static ArrayList<String> rozdzielSlowa(String napis) {
+		ArrayList<String> wynik = new ArrayList<String> ();
 		int pocz = 0;
 		int konc = 0;
-		while ((konc = napis.indexOf(' ', pocz)) != -1)
-		{
-			if (konc != pocz)
-			{
+		while ((konc = napis.indexOf(' ', pocz)) != -1) {
+			if (konc != pocz) {
 				var slowo = napis.substring(pocz, konc);
-				wyczysc(slowo);
-				naMale(slowo);
-				if (!slowo.empty())
-				{
+				slowo = wyczysc(slowo);
+				slowo = slowo.toLowerCase();
+				if (!slowo.isEmpty()) {
 					wynik.add(slowo);
 				}
 			}
 			pocz = konc + 1;
 		}
-		if (konc != pocz)
-		{
+		if (konc != pocz) {
 			var slowo = napis.substring(pocz);
-			wyczysc(slowo);
-			naMale(slowo);
-			if (!slowo.empty())
-			{
+			slowo = wyczysc(slowo);
+			slowo = slowo.toLowerCase();
+			if (!slowo.isEmpty()) {
 				wynik.add(slowo);
 			}
 		}
 
-		return new ArrayList<String>(wynik);
+		return new ArrayList<String> (wynik);
 	}
 
-	public static ArrayList<String> wczytajPlik(final String sciezka)
-	{
+	public static ArrayList<String> wczytajPlik(final String sciezka) {
+		File plik = new File(sciezka);
+		ArrayList<String> tresc = new ArrayList<String> ();
 
-		ArrayList<String> tresc = new ArrayList<String>();
-		try
-		{
-			String wiersz;
-			std::ifstream plik = new std::ifstream(sciezka);
-			plik.exceptions(std::ifstream.eofbit | std::ifstream.failbit | std::ifstream.badbit);
+		if (plik.exists()) {
+			try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(plik), "UTF-8"))) {
+				String wiersz = null;
+				while ((wiersz = br.readLine()) != null) {
+					tresc.add(wiersz);
 
-			while (plik != null)
-			{
-				getline(plik, wiersz);
-				tresc.add(wiersz);
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-
-			plik.close();
+		} else {
+			System.out.println("Plik nie istnieje.");
 		}
 
-		catch (RuntimeException e)
-		{
-			System.out.print("Error : ");
-			System.out.print(e.getMessage());
-			System.out.print("\n");
-		}
-
-		return new ArrayList<String>(tresc);
+		return tresc;
 	}
 
 	//Liczbe wierszy pliku.
-	public static int liczbaWierszy(ArrayList<String> trescPliku)
-	{
+	public static int liczbaWierszy(ArrayList<String> trescPliku) {
 		return trescPliku.size();
 	}
 
 	//Liczbe slow w pliku. Slowa oddzielone sa spacjami i nie moga skladac
 	//sie wylacznie ze znakow nie bedacych literami.
-	public static int liczbaSlow(ArrayList<String> trescPliku)
-	{
+	public static int liczbaSlow(ArrayList<String> trescPliku) {
 		int wynik = 0;
 
-		for (String wiersz : trescPliku)
-		{
+		for (String wiersz: trescPliku) {
 			wynik += rozdzielSlowa(wiersz).size();
 		}
 
@@ -112,81 +75,58 @@ public class GlobalMembers
 	}
 
 	//srednia dlugosc wiersza.
-	public static double sredniaDlugoscWiersza(ArrayList<String> trescPliku)
-	{
+	public static double sredniaDlugoscWiersza(ArrayList<String> trescPliku) {
 
 		int calkDlugosc = 0;
 
-		for (String wiersz : trescPliku)
-		{
+		for (String wiersz: trescPliku) {
 			calkDlugosc += wiersz.length();
 		}
 
-		return calkDlugosc / (double)trescPliku.size();
+		return calkDlugosc / (double) trescPliku.size();
 	}
 
 	//srednia liczbe slow na wiersz.
-	public static double sredniaLiczbaSlow(ArrayList<String> trescPliku)
-	{
-		return liczbaSlow(trescPliku) / (double)liczbaWierszy(trescPliku);
+	public static double sredniaLiczbaSlow(ArrayList<String> trescPliku) {
+		return liczbaSlow(trescPliku) / (double) liczbaWierszy(trescPliku);
 	}
 
 	//Czestosc wystepowania każdego ze slow w pliku.
-	public static String wektorNaString(ArrayList<String> wektor)
-	{
-		String s;
-		for (var piece : wektor)
-		{
-			s += piece;
-		}
-		return s;
-	}
-
-	public static HashMap<String, Integer> histogramSlow(String trescPliku)
-	{
-		HashMap<String, Integer> slownik = new HashMap<String, Integer>();
+	public static HashMap<String, Integer> histogramSlow(String trescPliku) {
+		HashMap<String, Integer> slownik = new HashMap<String, Integer> ();
 
 		ArrayList<String> slowa = rozdzielSlowa(trescPliku);
 
-		for (var slowo : slowa)
-		{
-			slownik.get(slowo)++;
+		for (var slowo: slowa) {
+			if (slownik.containsKey(slowo))
+				slownik.put(slowo, slownik.get(slowo) + 1);
+			else
+				slownik.put(slowo, 1);
+
 		}
 
-		return new HashMap<String, Integer>(slownik);
+		return new HashMap<String, Integer> (slownik);
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
 		String sciezka = "folder/test.txt";
 		var trescPliku = wczytajPlik(sciezka);
 
 		System.out.print("Liczba wierszy: ");
-		System.out.print(liczbaWierszy(trescPliku));
-		System.out.print("\n");
+		System.out.println(liczbaWierszy(trescPliku));
 		System.out.print("Liczba slow: ");
-		System.out.print(liczbaSlow(trescPliku));
-		System.out.print("\n");
+		System.out.println(liczbaSlow(trescPliku));
 		System.out.print("Srednia dlugosc wiersza: ");
-		System.out.print(sredniaDlugoscWiersza(trescPliku));
-		System.out.print("\n");
+		System.out.println(sredniaDlugoscWiersza(trescPliku));
 		System.out.print("Srednia liczba slow na wiersz: ");
-		System.out.print(sredniaLiczbaSlow(trescPliku));
-		System.out.print("\n");
-		System.out.print("Histogram slow: ");
-		System.out.print("\n");
+		System.out.println(sredniaLiczbaSlow(trescPliku));
+		System.out.println("Histogram slow: ");
 
-		var tekst = wektorNaString(trescPliku);
+		var tekst = Arrays.deepToString(trescPliku.toArray());
 
-		for (var it : histogramSlow(tekst))
-		{
-			System.out.print(it.first);
-			System.out.print(" : ");
-			System.out.print(it.second);
-			System.out.print("\n");
+		for (Entry<String, Integer> para: histogramSlow(tekst).entrySet()) {
+			System.out.println(para.getKey() + " : " + para.getValue());
 		}
-
 	}
-
 }

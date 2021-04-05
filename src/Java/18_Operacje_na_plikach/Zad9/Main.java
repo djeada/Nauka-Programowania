@@ -1,37 +1,33 @@
-//C++ TO JAVA CONVERTER TODO TASK: There is no Java equivalent to C++ namespace aliases:
-//namespace filesys = std::experimental::filesystem;
+import java.io.*;
 
-package <missing>;
-
-public class GlobalMembers
-{
+public class Main {
 	//Otrzymujesz napis reprezentujacy sciezke folderu.
 	//Usun wszystkie pliki o rozmiarach wiekszych niż 10kB
 	//znajdujacych sie w folderze oraz podfolderach.
 
-	public static int rozmiarPliku(final String sciezka)
-	{
-		return filesys.file_size(filesys.path(sciezka));
+	public static long rozmiarPliku(final String sciezka) {
+		File plik = new File(sciezka);
+		return plik.length();
 	}
 
-	public static void usunPliki(final String sciezka)
-	{
+	public static void usunPliki(final String sciezka) {
+		File folder = new File(sciezka);
 
-		for (var plik : filesys.directory_iterator(sciezka))
-		{
-			if (rozmiarPliku(plik.path()) > 10000)
-			{
-				filesys.remove(filesys.path(plik.path()));
+		for (File plik: folder.listFiles()) {
+
+			if (rozmiarPliku(plik.getAbsolutePath()) > 10000) {
+
+				if (!plik.delete()) {
+					System.out.println("Usuniecie pliku nie powiodlo sie.");
+				}
 			}
 		}
+
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
-		final String sciezka = "folder/";
+		final String sciezka = System.getProperty("user.dir") + System.getProperty("file.separator") + "folder";
 		usunPliki(sciezka);
-
 	}
-
 }

@@ -1,63 +1,31 @@
-//C++ TO JAVA CONVERTER TODO TASK: There is no Java equivalent to C++ namespace aliases:
-//namespace filesys = std::experimental::filesystem;
+import java.io.*;
 
-package <missing>;
-
-public class GlobalMembers
-{
+public class Main {
 	//Otrzymujesz dwa napisy reprezentujace sciezki folderow.
 	//Przenies wszystkie pliki .csv z pierwszego folderu (oraz jego podfolderow) do drugiego folderu.
 
-	public static String nazwaPliku(final String sciezka)
-	{
-		return filesys.path(sciezka).filename();
+	public static String nazwaPliku(final String sciezka) {
+		File plik = new File(sciezka);
+		return plik.getName();
 	}
 
-	public static void przeniesPlik(final String sciezka, final String sciezkaDocelowa)
-	{
+	public static void przeniesPliki(final String sciezka, final String sciezkaDocelowa) {
 
-		try
-		{
-			filesys.copy_file(sciezka, sciezkaDocelowa + filesys.path.preferred_separator + nazwaPliku(sciezka), filesys.copy_options.overwrite_existing);
-			filesys.remove(sciezka);
-		}
-		catch (filesys.filesystem_error e)
-		{
-			System.out.print(e.what());
-			System.out.print("\n");
-		}
-	}
+		File folder = new File(sciezka);
 
-	public static String znajdzRozszerzenie(String sciezka)
-	{
-
-		filesys.path obiekt = new filesys.path(sciezka);
-
-		if (obiekt.has_extension())
-		{
-			return obiekt.extension().string();
-		}
-
-		return "";
-	}
-
-	public static void przeniesPliki(final String sciezka, final String sciezkaDocelowa)
-	{
-
-		for (var plik : filesys.directory_iterator(sciezka))
-		{
-			if (znajdzRozszerzenie(plik.path()).equals(".csv"))
-			{
-				przeniesPlik(plik.path(), sciezkaDocelowa);
+		for (File plik: folder.listFiles()) {
+			var nazwa = plik.getName();
+			if (nazwa.endsWith(".csv")) {
+				plik.renameTo(new File(sciezkaDocelowa + System.getProperty("file.separator") + ".csv"));
 			}
 		}
+
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
-		final String sciezkaA = "folder/";
-		final String sciezkaB = "folder2/";
+		final String sciezkaA = System.getProperty("user.dir") + System.getProperty("file.separator") + "folder";
+		final String sciezkaB = System.getProperty("user.dir") + System.getProperty("file.separator") + "folder2";
 		przeniesPliki(sciezkaA, sciezkaB);
 
 	}

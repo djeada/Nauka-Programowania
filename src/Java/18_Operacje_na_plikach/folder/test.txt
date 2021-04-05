@@ -1,0 +1,2 @@
+Hej 
+[Hej ,  This is an example of a simple ASCII text file stored on a Web server. Note that it has a file, extension of ".txt"., , Although such files may contains some basic layout formatting, such as paragraphs, there is no, support for the text to have attributes, such as bolding., , Text files can contain Hypertext Mark-up codes but these will not be interpreted by the , browser. For example, if the following characters <strong>hello</strong> were typed into an, "html" file then the word "hello" would be shown in bold.]

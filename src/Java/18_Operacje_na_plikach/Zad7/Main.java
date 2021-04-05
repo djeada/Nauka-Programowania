@@ -1,10 +1,8 @@
 import java.util.*;
+import java.io.*;
+import java.nio.file.*;
 
-
-
-package <missing>;
-
-public class GlobalMembers
+public class Main
 {
 	//Otrzymujesz dwa napisy. Pierwszy reprezentuje sciezke pliku tekstowego.
 	//Drugi wiersz tekstu. Dodaj wiersz na poczatku pliku.
@@ -12,57 +10,36 @@ public class GlobalMembers
 	public static ArrayList<String> wczytajPlik(final String sciezka)
 	{
 
-		ArrayList<String> tresc = new ArrayList<String>();
-		try
-		{
-			String wiersz;
-			std::ifstream plik = new std::ifstream(sciezka);
-			plik.exceptions(std::ifstream.eofbit | std::ifstream.failbit | std::ifstream.badbit);
+		File plik = new File(sciezka);
+		ArrayList<String> tresc = new ArrayList<String> ();
 
-			while (plik != null)
-			{
-				getline(plik, wiersz);
-				tresc.add(wiersz);
+		if (plik.exists()) {
+			try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(plik), "UTF-8"))) {
+				String wiersz = null;
+				while ((wiersz = br.readLine()) != null) {
+					tresc.add(wiersz);
+
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-
-			plik.close();
+		} else {
+			System.out.println("Plik nie istnieje.");
 		}
 
-		catch (RuntimeException e)
-		{
-			System.out.print("Error : ");
-			System.out.print(e.getMessage());
-			System.out.print("\n");
-		}
-
-		return new ArrayList<String>(tresc);
+		return tresc;
 	}
 
 	public static void zapiszNaPoczatku(final String sciezka, final String dane)
 	{
 
 		var trescPliku = wczytajPlik(sciezka);
-
-		try
-		{
-			String wiersz;
-			std::ofstream plik = new std::ofstream(sciezka);
-			plik.exceptions(std::ifstream.eofbit | std::ifstream.failbit | std::ifstream.badbit);
-
-			plik << dane;
-			for (var wiersz : trescPliku)
-			{
-				plik << wiersz + "\n";
-			}
-
-			plik.close();
-		}
-
-		catch (RuntimeException e)
-		{
-			System.out.print("Error: ");
-			System.out.print(e.getMessage());
-			System.out.print("\n");
+		var tekst = dane + Arrays.deepToString(trescPliku.toArray());
+		
+		try {
+			Files.write( Paths.get(sciezka), tekst.getBytes());
+		} catch (IOException e) {
+			System.out.println("Blad zapisu do pliku.");
 		}
 	}
 

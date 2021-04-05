@@ -1,149 +1,110 @@
 import java.util.*;
+import java.io.*;
+import java.nio.file.*;
 
-//C++ TO JAVA CONVERTER TODO TASK: There is no Java equivalent to C++ namespace aliases:
-//namespace filesys = std::experimental::filesystem;
-
-package <missing>;
-
-public class GlobalMembers
-{
+public class Main {
 	//Otrzymujesz napis reprezentujacy sciezkę folderu.
 	//Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych
 	//się w folderze oraz podfolderach.
 
-	public static String znajdzRozszerzenie(String sciezka)
-	{
+	public static ArrayList<String> plikiWFolderze(final String sciezka, final String rozszerzenie) {
 
-		filesys.path obiekt = new filesys.path(sciezka);
+		ArrayList<String> pliki = new ArrayList<String> ();
 
-		if (obiekt.has_extension())
-		{
-			return obiekt.extension().string();
-		}
+		File folder = new File(sciezka);
 
-		return "";
-	}
-
-	public static ArrayList<String> plikiWFolderze(final String sciezka, final String rozszerzenie)
-	{
-
-		ArrayList<String> pliki = new ArrayList<String>();
-
-		for (var plik : filesys.directory_iterator(sciezka))
-		{
-			if (rozszerzenie.equals(znajdzRozszerzenie(plik.path())))
-			{
-				pliki.add(filesys.path(plik.path()));
+		for (File plik: folder.listFiles()) {
+			var nazwa = plik.getName();
+			if (nazwa.endsWith(rozszerzenie)) {
+				pliki.add(plik.getAbsolutePath());
 			}
 		}
-
-		return new ArrayList<String>(pliki);
+		return pliki;
 	}
 
-	public static void dodajInicjaly(final String sciezkaFolderu, final String dane)
-	{
+	public static ArrayList<String> wczytajPlik(final String sciezka) {
+		File plik = new File(sciezka);
+		ArrayList<String> tresc = new ArrayList<String> ();
 
-	var _dodajInicjaly = (String sciezka, String dane) ->
-	{
-		std::ofstream plik = new std::ofstream();
-		plik.open(sciezka, std::ios.out | std::ios.app);
-		if (plik.fail())
-		{
-			throw std::ios_base.failure(std::strerror(errno));
+		if (plik.exists()) {
+			try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(plik), "UTF-8"))) {
+				String wiersz = null;
+				while ((wiersz = br.readLine()) != null) {
+					tresc.add(wiersz);
+
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+			System.out.println("Plik nie istnieje." + sciezka);
 		}
 
-		plik.exceptions(plik.exceptions() | std::ios.failbit | std::ifstream.badbit);
-		plik << dane << std::endl;
-		System.out.print(dane);
-		System.out.print("\n");
-	};
+		return tresc;
+	}
+
+	public static void dodajInicjaly(final String sciezkaFolderu, final String dane) {
 
 		var sciezki = plikiWFolderze(sciezkaFolderu, ".txt");
 
-		for (var sciezka : sciezki)
-		{
-			_dodajInicjaly(sciezka, dane);
+		for (var sciezka: sciezki) {
+			var trescPliku = wczytajPlik(sciezka);
+			var tekst = Arrays.deepToString(trescPliku.toArray()) + dane;
+
+			try {
+				Files.write(Paths.get(sciezka), tekst.getBytes());
+			} catch (IOException e) {
+				System.out.println("Blad zapisu do pliku.");
+			}
 		}
 	}
 
 	//Usun srodkowy wiersz z kazdego pliku csv znajdujacego się w folderze
 	//oraz podfolderach.
-	public static ArrayList<String> wczytajPlik(final String sciezka)
-	{
 
-		ArrayList<String> tresc = new ArrayList<String>();
-		try
-		{
-			String wiersz;
-			std::ifstream plik = new std::ifstream(sciezka);
-			plik.exceptions(std::ifstream.eofbit | std::ifstream.failbit | std::ifstream.badbit);
-
-			while (plik != null)
-			{
-				getline(plik, wiersz);
-				tresc.add(wiersz);
-			}
-
-			plik.close();
+	public static void zapiszDoPilku(final String sciezka, final String dane) {
+		try {
+			Files.write(Paths.get(sciezka), dane.getBytes());
+		} catch (IOException e) {
+			System.out.println("Blad zapisu do pliku.");
 		}
-
-		catch (RuntimeException e)
-		{
-			System.out.print("Error : ");
-			System.out.print(e.getMessage());
-			System.out.print("\n");
-		}
-
-		return new ArrayList<String>(tresc);
 	}
 
-	public static void usunSrodkowy(final String sciezkaFolderu)
-	{
-
-	var _usunSrodkowy = (String sciezka) ->
-	{
-		var trescPliku = wczytajPlik(sciezka);
-
-		try
-		{
-			String wiersz;
-			std::ofstream plik = new std::ofstream(sciezka);
-			plik.exceptions(std::ifstream.eofbit | std::ifstream.failbit | std::ifstream.badbit);
-
-			trescPliku.remove(trescPliku.size() / 2);
-
-			for (var wiersz : trescPliku)
-			{
-				plik << wiersz + "\n";
-			}
-
-			plik.close();
-		}
-
-		catch (RuntimeException e)
-		{
-			System.out.print("Error: ");
-			System.out.print(e.getMessage());
-			System.out.print("\n");
-		}
-	};
+	public static void usunSrodkowy(final String sciezkaFolderu) {
 
 		var sciezki = plikiWFolderze(sciezkaFolderu, ".csv");
 
-		for (var sciezka : sciezki)
-		{
-			_usunSrodkowy(sciezka);
+		for (var sciezka: sciezki) {
+
+			File plik = new File(sciezka);
+			ArrayList<String> tresc = new ArrayList<String> ();
+
+			if (plik.exists()) {
+				try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(plik), "UTF-8"))) {
+					String wiersz = null;
+					while ((wiersz = br.readLine()) != null) {
+						tresc.add(wiersz);
+					}
+
+					if (tresc.size() / 2 - 1 > 0) {
+						tresc.remove(tresc.size() / 2 - 1);
+						zapiszDoPilku(sciezka, Arrays.deepToString(tresc.toArray()));
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			} else {
+				System.out.println("Plik nie istnieje." + sciezka);
+			}
+
 		}
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
-		String sciezka = new String(filesys.current_path()) + filesys.path.preferred_separator + "folder/";
+		String sciezka = System.getProperty("user.dir") + System.getProperty("file.separator") + "folder";
 		String dane = "A.D.";
 		dodajInicjaly(sciezka, dane);
 		usunSrodkowy(sciezka);
-
 	}
-
 }

@@ -1,48 +1,71 @@
-//C++ TO JAVA CONVERTER TODO TASK: There is no Java equivalent to C++ namespace aliases:
-//namespace filesys = std::experimental::filesystem;
+import java.io.*;
+import java.nio.file.*;
 
-package <missing>;
+public class Main {
 
-public class GlobalMembers
-{
-	//Otrzymujesz dwa napisy. Pierwszy reprezentuje sciezke pliku tekstowego.
-	//Drugi wiersz tekstu. Dodaj wiersz na poczatku pliku.
+	public static String rozszerzenie(String fileName) {
+		char ch;
+		int len;
+		if (fileName == null ||
+			(len = fileName.length()) == 0 ||
+			(ch = fileName.charAt(len - 1)) == '/' || ch == '\\' ||
+			ch == '.')
+			return "";
+		int dotInd = fileName.lastIndexOf('.'),
+			sepInd = Math.max(fileName.lastIndexOf('/'), fileName.lastIndexOf('\\'));
+		if (dotInd<= sepInd)
+			return "";
+		else
+			return fileName.substring(dotInd + 1).toLowerCase();
+	}
 
-	public static void skopiujPlik(final String sciezka, final String sciezkaDocelowa)
-	{
+	public static String nazwaPliku(final String sciezka) {
+		File plik = new File(sciezka);
+		return plik.getName();
+	}
 
-		try
-		{
-			filesys.copy_file(sciezka, sciezkaDocelowa, filesys.copy_options.overwrite_existing);
-		}
-		catch (filesys.filesystem_error e)
-		{
-			System.out.print(e.what());
-			System.out.print("\n");
+	public static void skopiujPlik(final String sciezka, final String sciezkaDocelowa) {
+		var zrodlo = (new File(sciezka)).toPath();
+		var cel = (new File(sciezkaDocelowa)).toPath();
+
+		System.out.println(zrodlo);
+		System.out.println(cel);
+		try {
+			Files.copy(zrodlo, cel);
+
+		} catch (IOException e) {
+			System.out.println("Blad przy kopiowaniu.");
 		}
 	}
 
-	public static void zamienPliki(final String sciezkaA, final String sciezkaB)
-	{
+	public static void zamienPliki(final String sciezkaA, final String sciezkaB) {
 
-		String tempSciezka = sciezkaB;
+		File tempPlik;
+		try {
+			tempPlik = File.createTempFile("temp", "." + rozszerzenie(sciezkaA));
+			String tempSciezka = tempPlik.getAbsolutePath();
+			tempPlik.delete();
 
-		while (filesys.exists(tempSciezka))
-		{
-			tempSciezka = new String(filesys.path(tempSciezka).parent_path()) + filesys.path.preferred_separator + "x" + new String(filesys.path(tempSciezka).filename());
+			skopiujPlik(sciezkaA, tempSciezka);
+			(new File(sciezkaA)).delete();
+
+			skopiujPlik(sciezkaB, sciezkaA);
+			(new File(sciezkaB)).delete();
+
+			skopiujPlik(tempSciezka, sciezkaB);
+			(new File(tempSciezka)).delete();
+
+		} catch (IOException e) {
+			System.out.println("Blad przy tworzeniu pliku tymczasowego.");
+
 		}
 
-		skopiujPlik(sciezkaA, tempSciezka);
-		skopiujPlik(sciezkaB, sciezkaA);
-		skopiujPlik(tempSciezka, sciezkaB);
-		filesys.remove(tempSciezka);
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
-		final String sciezkaA = "folder/test.txt";
-		final String sciezkaB = "folder2/test2.txt";
+		final String sciezkaA = System.getProperty("user.dir") + System.getProperty("file.separator") + "folder/test.txt";
+		final String sciezkaB = System.getProperty("user.dir") + System.getProperty("file.separator") + "folder2/test.txt";
 		zamienPliki(sciezkaA, sciezkaB);
 
 	}
