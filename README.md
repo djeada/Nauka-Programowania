@@ -67,7 +67,7 @@ Rozwiązania
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01_Interakcja_z_konsola/Zad1.py">Python</a></td>
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01_Interakcja_z_konsola/Zad1.cpp">Cpp</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/01_Interakcja_z_konsola/Zad1">Java</a></td> 
- <td><a>JavaScript</a></td>  
+ <td><a>JavaScript</a></td>   
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad1.rs">Rust</a></td></tr>
