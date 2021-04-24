@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <cassert>
-#include <iostream>
 #include <vector>
 
 //Znajdz wszystkie permutacje slowa.
