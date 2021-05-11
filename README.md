@@ -110,6 +110,7 @@ Rozwiązania
  <td><a>Haskell</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad4.rs">Rust</a></td>
 <td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Wartość funkcji w punkcie.</td>
@@ -181,6 +182,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -193,7 +195,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02_Instrukcje_sterujace/Zad1.sh">Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Porównanie ze zmienną.</td>
@@ -203,7 +207,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02_Instrukcje_sterujace/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Znak liczby.</td>
@@ -213,7 +219,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02_Instrukcje_sterujace/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Maks/min dwóch liczb.</td>
@@ -223,7 +231,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02_Instrukcje_sterujace/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Sortowanie trzech liczb.</td>
@@ -233,7 +243,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02_Instrukcje_sterujace/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Maks czterech liczb.</td>
@@ -243,7 +255,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02_Instrukcje_sterujace/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Dowody praw logicznych.</td>
@@ -253,7 +267,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02_Instrukcje_sterujace/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Warunek trójkąta.</td>
@@ -263,7 +279,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02_Instrukcje_sterujace/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -274,6 +292,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -286,7 +305,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03_Daty/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Czy osoba jest pełnoletnia?</td>
@@ -296,7 +317,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03_Daty/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Rok przestępny.</td>
@@ -306,7 +329,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03_Daty/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Dzień tygodnia odpowiadający danej liczbie.</td>
@@ -316,7 +341,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03_Daty/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Ile dni ma miesiąc?</td>
@@ -326,7 +353,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03_Daty/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Poprawność daty.</td>
@@ -336,7 +365,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03_Daty/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Ile dni minęło od początku roku?</td>
@@ -346,7 +377,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Jaki mamy dzień tygodnia?</td>
@@ -356,7 +389,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03_Daty/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -367,6 +402,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -379,7 +415,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04_Petla_wprowadzenie/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Liczby mniejsze od podanej liczby.</td>
@@ -389,7 +427,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04_Petla_wprowadzenie/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
   <td>Liczba <i>Pi</i>.</td>
@@ -399,7 +439,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04_Petla_wprowadzenie/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Suma liczb mniejszych od liczby.</td>
@@ -409,7 +451,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04_Petla_wprowadzenie/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Liczby z przedziału.</td>
@@ -419,7 +463,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04_Petla_wprowadzenie/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Suma wyrazów ciągu.</td>
@@ -429,7 +475,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04_Petla_wprowadzenie/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
   <td>Liczba <i>Pi</i> podniesiona do potęgi.</td>
@@ -439,7 +487,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04_Petla_wprowadzenie/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
   <td>Kury i owieczki.</td>
@@ -449,7 +499,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04_Petla_wprowadzenie/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -460,6 +512,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -472,7 +525,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05_Petla_wyznaczanie_cyfr_liczby/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Cyfry, z których składa się liczba.</td>
@@ -482,7 +537,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05_Petla_wyznaczanie_cyfr_liczby/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Suma cyfr liczby.</td>
@@ -492,7 +549,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05_Petla_wyznaczanie_cyfr_liczby/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Cyfry liczby spełniające warunek.</td>
@@ -502,7 +561,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05_Petla_wyznaczanie_cyfr_liczby/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Czy liczba jest palindromem?</td>
@@ -512,7 +573,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05_Petla_wyznaczanie_cyfr_liczby/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Wszystkie liczby spełniające warunek.</td>
@@ -522,7 +585,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05_Petla_wyznaczanie_cyfr_liczby/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -533,6 +598,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -545,7 +611,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06_Funkcje_wprowadzenie/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Operacja arytmetyczna.</td>
@@ -555,7 +623,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06_Funkcje_wprowadzenie/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Sprawdź warunek.</td>
@@ -565,7 +635,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06_Funkcje_wprowadzenie/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>4</td>
 <td>Maks i min.</td>
@@ -575,7 +647,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06_Funkcje_wprowadzenie/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Zamień wartości miejscami.</td>
@@ -585,7 +659,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06_Funkcje_wprowadzenie/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Cyfry liczby.</td>
@@ -595,7 +671,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06_Funkcje_wprowadzenie/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Hasło.</td>
@@ -605,7 +683,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06_Funkcje_wprowadzenie/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Zaokrąglanie w dół.</td>
@@ -615,7 +695,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06_Funkcje_wprowadzenie/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -626,6 +708,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -638,7 +721,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
   <td>Podnieś <b>a</b> do <b>b</b>.</td>
@@ -648,7 +733,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Mnożenie i dzielenia.</td>
@@ -658,7 +745,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Silnia.</td>
@@ -668,7 +757,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>NWD.</td>
@@ -678,7 +769,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>NWW.</td>
@@ -688,7 +781,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Pierwiastek metodą Newtona.</td>
@@ -698,7 +793,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Naiwny test pierwszości.</td>
@@ -708,7 +805,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -719,6 +818,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -731,7 +831,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad1.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Trójkąt.</td>
@@ -741,7 +843,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Odwrócony trójkąt.</td>
@@ -751,7 +855,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Tabliczka mnożenia.</td>
@@ -761,7 +867,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Litera X.</td>
@@ -771,7 +879,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Litera Z.</td>
@@ -781,7 +891,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>7</td>
 <td>Choinka.</td>
@@ -791,7 +903,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>N pierwszych liczb pierwszych.</td>
@@ -801,7 +915,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>9</td>
 <td>Trójkąt Pascala.</td>
@@ -811,7 +927,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -822,6 +940,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -834,7 +953,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Wczytaj, zmodyfikuj i wypisz.</td>
@@ -844,7 +965,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Pierwsze wystąpieia klucza.</td>
@@ -854,7 +977,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Minimum oraz maksimum.</td>
@@ -864,7 +989,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Zmodyfikuj elementy spełniające warunek.</td>
@@ -885,7 +1012,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Liczba mniejsza od największej i większa od wszystkich pozostałych.</td>
@@ -895,7 +1024,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Usuń klucz.</td>
@@ -905,7 +1036,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <td>9</td>
 <td>Usuń duplikaty.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad9.py">Python</a></td>
@@ -914,7 +1047,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>10</td>
 <td>Czy punkty mogą stanowić wierzchołki trójkąta?</td>
@@ -924,7 +1059,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>11</td>
 <td>Samochody.</td>
@@ -956,7 +1093,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>14</td>
 <td>Element bez pary w liście.</td>
@@ -966,7 +1105,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>15</td>
 <td>Element dominujący.</td>
@@ -976,7 +1117,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>16</td>
 <td>Pary, których suma jest równa liczbie.</td>
@@ -986,7 +1129,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>17</td>
 <td>Suma dwóch.</td>
@@ -996,7 +1141,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>18</td>
 <td>Lista posortowane została przesunięta.</td>
@@ -1006,7 +1153,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -1017,6 +1166,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -1029,7 +1179,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>2</td>
 <td>Połączenie list.</td>
@@ -1039,7 +1191,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Suma list.</td>
@@ -1049,7 +1203,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Mnożenie sklarne oraz wektorowe.</td>
@@ -1059,7 +1215,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Średnia ważona wartości.</td>
@@ -1069,7 +1227,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Część wspólna dwóch list.</td>
@@ -1079,7 +1239,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Różnica między dwoma listami.</td>
@@ -1089,7 +1251,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Połącz posortowane listy w posortowaną listę.</td>
@@ -1099,7 +1263,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>9</td>
 <td>Usuń część wspólną obu list.</td>
@@ -1109,7 +1275,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>10</td>
 <td>Znajdź medianę dwóch posortowanych list.</td>
@@ -1119,7 +1287,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 
 </tbody>
 </table>
@@ -1130,6 +1300,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -1142,7 +1313,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Policz wystąpienia znaku.</td>
@@ -1152,7 +1325,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Z ilu słów składa się zdanie?</td>
@@ -1162,7 +1337,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Zamień wszystkie małe litery na wielkie.</td>
@@ -1172,7 +1349,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Wypisz poziomo i pionowo co k-ty znak napisu.</td>
@@ -1182,7 +1361,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Zamień litery <i>a</i> na znaki zapytania.</td>
@@ -1192,7 +1373,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Zamień znaki na numery ASCII.</td>
@@ -1202,7 +1385,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Wypisz pionowo słowa, z których składa się zdanie.</td>
@@ -1212,7 +1397,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>9</td>
 <td>Wczytaj i rozdziel informacje o pracowniku.</td>
@@ -1222,7 +1409,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>10</td>
 <td>Znajdź najdłuższe/najkrótsze słowo w zdaniu.</td>
@@ -1232,7 +1421,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>11</td>
 <td>Średnia długość słów w zdaniu.</td>
@@ -1242,7 +1433,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>12</td>
 <td>Usuń spacje ze zdania.</td>
@@ -1252,7 +1445,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>13</td>
 <td>Znaki znajdujące się na pozycjach będących liczbami pierwszymi.</td>
@@ -1262,7 +1457,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>14</td>
 <td>Napis składający się z liczb od 1 do n.</td>
@@ -1272,7 +1469,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>15</td>
 <td>Słowa ze zdania jako osobne elementy listy.</td>
@@ -1282,7 +1481,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>16</td>
 <td>Odległość Hamminga.</td>
@@ -1303,7 +1504,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>18</td>
 <td>Odwróć napisy w zdaniu.</td>
@@ -1313,7 +1516,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -1324,6 +1529,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -1336,7 +1542,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Wszystkie permutacje słowa.</td>
@@ -1346,7 +1554,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Czy słowa są swoimi anagramami?</td>
@@ -1356,7 +1566,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Wszystkie palindromy w zdaniu.</td>
@@ -1366,7 +1578,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Znajdź anagramy w zdaniu.</td>
@@ -1376,7 +1590,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Permutacja będąca palindromem.</td>
@@ -1386,7 +1602,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Ile znaków musimy usunąć aby uzyskać anagramy?</td>
@@ -1396,7 +1614,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Wyjątkowe palindromy.</td>
@@ -1406,7 +1626,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -1417,6 +1639,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -1429,7 +1652,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Każdy element jest iloczynem współrzędnych.</td>
@@ -1439,7 +1664,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Macierz z par odpowiadających sobie elementów dwóch list.</td>
@@ -1449,7 +1676,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Dodawanie/odejmowanie macierzy.</td>
@@ -1459,7 +1688,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Magiczny kwadrat.</td>
@@ -1469,7 +1700,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Pokrywające się przedziały.</td>
@@ -1479,7 +1712,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>7</td>
 <td>Wyzeruj macierz.</td>
@@ -1489,7 +1724,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Wypisz spiralnie.</td>
@@ -1499,7 +1736,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>9</td>
 <td>Klepsydra o największej sumie.</td>
@@ -1509,7 +1748,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>10</td>
 <td>Obróć o 90 stopni.</td>
@@ -1519,7 +1760,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>11</td>
 <td>Gra w statki.</td>
@@ -1529,7 +1772,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -1540,6 +1785,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -1552,7 +1798,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
   <td>Iloczyn wielomianu przez skalar.</td>
@@ -1562,7 +1810,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Suma wielomianów.</td>
@@ -1572,7 +1822,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Mnożenie wielomianów.</td>
@@ -1582,7 +1834,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>5</td>
 <td>N-ta pochodna wielomianu.</td>
@@ -1592,7 +1846,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>6</td>
 <td>Miejsce zerowe funkcji kwadratowej.</td>
@@ -1602,7 +1858,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -1613,6 +1871,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -1625,7 +1884,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
   <td>Suma liczb naturalnych mniejszych od <b>N</b>.</td>
@@ -1635,7 +1896,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>3</td>
 <td>Potęga.</td>
@@ -1645,7 +1908,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Silnia.</td>
@@ -1655,7 +1920,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Liczba Fibonacciego.</td>
@@ -1665,7 +1932,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
   <td><b>N</b>-ty wyraz ciągu danego wzorem rekurencyjnym.</td>
@@ -1675,7 +1944,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>7</td>
 <td>Wyszukiwanie liniowe rekurencyjnie.</td>
@@ -1685,7 +1956,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
    <tr>
 <td>8</td>
 <td>Wieża Hanoi.</td>
@@ -1695,7 +1968,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>9</td>
 <td>Słowa elfickie.</td>
@@ -1705,7 +1980,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>10</td>
 <td>Gra w kapsle.</td>
@@ -1715,7 +1992,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -1726,6 +2005,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -1738,7 +2018,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Konwersja gdy spełniony jest warunek.</td>
@@ -1748,7 +2030,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Operacje arytmetyczne.</td>
@@ -1758,7 +2042,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Zera/jedynki w liczbie binarnej.</td>
@@ -1768,7 +2054,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Min/maks z dwóch liczb.</td>
@@ -1778,7 +2066,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Konwersja między dowolnymi systemami.</td>
@@ -1788,7 +2078,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>7</td>
 <td>Zamiana sąsiadów.</td>
@@ -1798,7 +2090,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>8</td>
 <td>Następna potęga dwójki.</td>
@@ -1808,7 +2102,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>9</td>
 <td>Zamiana wielkości liter.</td>
@@ -1818,7 +2114,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>10</td>
     <td>Zamień <b>A</b> w <b>B</b>.</td>
@@ -1828,7 +2126,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>11</td>
 <td>Czy liczba jest palindromem?</td>
@@ -1838,7 +2138,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>12</td>
 <td>Najdłuższy ciąg zer w liczbie binarnej.</td>
@@ -1848,7 +2150,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -1859,6 +2163,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -1871,7 +2176,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <tr>
 <td>2</td>
@@ -1893,7 +2200,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>4</td>
 <td>Usuń ze słownika.</td>
@@ -1903,7 +2212,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <td>5</td>
 <td>Lista pracowników.</td>
 <td><a >Python</a></td>
@@ -1912,7 +2223,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Histogram znaków w słowie.</td>
@@ -1922,7 +2235,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Histogram słów w tekście.</td>
@@ -1932,7 +2247,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>8</td>
 <td>Najczęściej występująca litera w zdaniu.</td>
@@ -1942,7 +2259,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>9</td>
 <td>Powtarzające się znaki.</td>
@@ -1952,7 +2271,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>10</td>
 <td>Anagramy w tekście.</td>
@@ -1962,7 +2283,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>11</td>
 <td>Sortowanie względem kluczy/wartości.</td>
@@ -1972,7 +2295,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>12</td>
 <td>Czy słowniki są identyczne?</td>
@@ -1982,7 +2307,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -1993,6 +2320,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -2005,7 +2333,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
     <tr>
 <td>2</td>
 <td>Znajdź w folderze wszystkie pliki z danym rozszerzeniem.</td>
@@ -2015,7 +2345,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>3</td>
 <td>Znajdź ścieżkę pliku o danej nazwie.</td>
@@ -2025,7 +2357,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Wczytaj i wypisz treść pliku.</td>
@@ -2035,7 +2369,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>5</td>
 <td>Plik z listą adresów ip.</td>
@@ -2045,7 +2381,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Statystyki dla pliku tekstowego.</td>
@@ -2055,7 +2393,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Dodaj wiersz do pliku.</td>
@@ -2065,7 +2405,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Znajdź i zmodyfikuj pliki spełniajace warunek.</td>
@@ -2075,7 +2417,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <td>9</td>
 <td>Usuń pliki spełniające warunek.</td>
 <td><a >Python</a></td>
@@ -2084,7 +2428,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>10</td>
 <td>Skopiuj pliki.</td>
@@ -2094,7 +2440,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>11</td>
 <td>Podmień treści.</td>
@@ -2104,7 +2452,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>12</td>
 <td>Przesuń wszystkie pliki csv do jednego folderu.</td>
@@ -2114,7 +2464,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -2125,6 +2477,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -2137,7 +2490,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
   <td>Zaprojektuj klasę <i>Punkt</i>.</td>
@@ -2147,7 +2502,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
   <td>Prostokąt powstały z nałożenia się dwóch prostokątów.</td>
@@ -2157,7 +2514,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
   <td>Zaprojektuj klasy <i>Wektor2D</i> oraz <i>Wektor3D</i>.</td>
@@ -2167,7 +2526,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
   <td>Zaprojektuj klasę <i>Zespolona</i>.</td>
@@ -2177,7 +2538,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Zaprojektuj klasę <i>Macierz.</i></td>
@@ -2198,7 +2561,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -2209,6 +2574,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -2278,6 +2644,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -2341,6 +2708,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -2353,7 +2721,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Posortuj słowa w zdaniu</td>
@@ -2363,7 +2733,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Posortuj listę par względem jednej z kategorii.</td>
@@ -2373,7 +2745,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Posortuj względem długości napisy w liście.</td>
@@ -2439,6 +2813,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -2451,7 +2826,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>2</td>
    <td>Sprawdź poprawność hasła.</td>
@@ -2461,7 +2838,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Czy napis składa się wyłącznie z cyfr?</td>
@@ -2471,7 +2850,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>4</td>
 <td>Czy słowo należy do zdania?</td>
@@ -2481,7 +2862,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Odfiltruj cyfry z tekstu.</td>
@@ -2491,7 +2874,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>6</td>
 <td>Wiersze kończące się napisem.</td>
@@ -2501,7 +2886,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>7</td>
 <td>Podziel względem znaków interpunkcyjnych.</td>
@@ -2511,7 +2898,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>8</td>
 <td>Cyfry będące częścią słów.</td>
@@ -2521,7 +2910,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>9</td>
 <td>Usuń część wiersza.</td>
@@ -2531,7 +2922,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
  <tr>
 <td>10</td>
    <td>Podmień napisy z listy <b>A</b> na napisy z listy <b>B</b>.</td>
@@ -2541,7 +2934,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <td>11</td>
    <td>Nazwa pliku ze ścieżki.</td>
 <td><a>Python</a></td>
@@ -2550,7 +2945,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -2561,6 +2958,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -2573,7 +2971,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>2</td>
 <td>Przesuń zera.</td>
@@ -2583,7 +2983,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>3</td>
 <td>Trójka o minimalnym iloczynie.</td>
@@ -2593,7 +2995,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>4</td>
 <td>Wspólny podciąg o największej sumie.</td>
@@ -2603,7 +3007,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Zbiór potęgowy.</td>
@@ -2613,7 +3019,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
   <td><b>M</b> posortowanych list.</td>
@@ -2623,7 +3031,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Woda.</td>
@@ -2633,7 +3043,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>8</td>
 <td>Sznurek.</td>
@@ -2643,7 +3055,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
     <tr>
 <td>9</td>
 <td>Najdłuższy naprzemienny podciąg.</td>
@@ -2653,7 +3067,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -2664,6 +3080,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
@@ -2676,7 +3093,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Usuń wszystkie wystąpienia podnapisu.</td>
@@ -2719,7 +3138,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Czy napisy są swoimi rotacjami?</td>
@@ -2729,7 +3150,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>7</td>
 <td>Znajdź powtórzenia.</td>
@@ -2739,7 +3162,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Najdłuższy wspólny przedrostek.</td>
@@ -2749,7 +3174,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>9</td>
 <td>Najdłuższy wspólny potomek.</td>
