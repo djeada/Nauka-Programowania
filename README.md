@@ -72,8 +72,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>   
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad1.sh">Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad1.rs">Rust</a></td></tr>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad1.rs">Rust</a></td>
 <td>★☆☆</td>
+  </tr>
 <tr>
 <td>2</td>
 <td>Zamiana kolejności.</td>
@@ -83,8 +84,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad2.rs">Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad2.rs">Rust</a></td>
 <td>★☆☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Narysuj kształt.</td>
@@ -105,7 +107,7 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad4.rs">Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad4.rs">Rust</a></td>
 <td>★☆☆</td>
 <tr>
 <td>5</td>
@@ -118,6 +120,7 @@ Rozwiązania
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
 <td>★☆☆</td>
+  </tr>
 <tr>
 <td>6</td>
 <td>Zamiana jednostek.</td>
@@ -127,18 +130,21 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+ <td><a>Rust</a></td>
 <td>★☆☆</td>
+</tr>
 <tr>
 <td>7</td>
 <td>Pola figur.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01_Interakcja_z_konsola/Zad7.py">Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01_Interakcja_z_konsola/Zad7.cpp">Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/01_Interakcja_z_konsola/Zad7">Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad7.sh">Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01_Interakcja_z_konsola/Zad7.cpp">Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/01_Interakcja_z_konsola/Zad7">Java</a></td> 
+<td><a>JavaScript</a></td>  
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad7.sh">Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Cena podłogi.</td>
@@ -148,8 +154,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad8.sh">Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
 <td>★☆☆</td>
+</tr>
 <tr>
 <td>9</td>
 <td>Kalkulator kredytowy.</td>
@@ -159,8 +166,9 @@ Rozwiązania
 <td><a>JavaScript</a></td>  
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
-<td><a>Rust</a></td></tr>
+<td><a>Rust</a></td>
 <td>★☆☆</td>
+</tr>
 </tbody>
 </table>
 
