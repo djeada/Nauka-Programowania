@@ -59,6 +59,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
+<th>Poziom trudności</th>
 </tr>
 </thead>
 <tbody>
@@ -66,12 +67,13 @@ Rozwiązania
 <td>1</td>
 <td>Wypisz na konsolę.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01_Interakcja_z_konsola/Zad1.py">Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01_Interakcja_z_konsola/Zad1.cpp">Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/01_Interakcja_z_konsola/Zad1">Java</a></td> 
- <td><a>JavaScript</a></td>   
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad1.sh">Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad1.rs">Rust</a></td></tr>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01_Interakcja_z_konsola/Zad1.cpp">Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/01_Interakcja_z_konsola/Zad1">Java</a></td> 
+<td><a>JavaScript</a></td>   
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad1.sh">Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad1.rs">Rust</a></td></tr>
+<td>★☆☆</td>
 <tr>
 <td>2</td>
 <td>Zamiana kolejności.</td>
@@ -82,6 +84,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad2.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad2.rs">Rust</a></td></tr>
+<td>★☆☆</td>
 <tr>
 <td>3</td>
 <td>Narysuj kształt.</td>
@@ -92,6 +95,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad3.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad3.rs">Rust</a></td></tr>
+<td>★☆☆</td>
 <tr>
 <td>4</td>
 <td>Operacje arytmetyczne.</td>
@@ -102,6 +106,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/01_Interakcja_z_konsola/Zad4.rs">Rust</a></td></tr>
+<td>★☆☆</td>
 <tr>
 <td>5</td>
 <td>Wartość funkcji w punkcie.</td>
@@ -112,6 +117,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
+<td>★☆☆</td>
 <tr>
 <td>6</td>
 <td>Zamiana jednostek.</td>
@@ -122,6 +128,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td></tr>
+<td>★☆☆</td>
 <tr>
 <td>7</td>
 <td>Pola figur.</td>
@@ -142,16 +149,18 @@ Rozwiązania
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/01_Interakcja_z_konsola/Zad8.sh">Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td></tr>
+<td>★☆☆</td>
 <tr>
 <td>9</td>
 <td>Kalkulator kredytowy.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01_Interakcja_z_konsola/Zad9.py">Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01_Interakcja_z_konsola/Zad9.cpp">Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/01_Interakcja_z_konsola/Zad9">Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a>Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01_Interakcja_z_konsola/Zad9.cpp">Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/01_Interakcja_z_konsola/Zad9">Java</a></td> 
+<td><a>JavaScript</a></td>  
+<td><a>Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
+<td>★☆☆</td>
 </tbody>
 </table>
 
@@ -170,12 +179,12 @@ Rozwiązania
 <td>1</td>
 <td>Porównanie ze stałą.</td>
 <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/02_Instrukcje_sterujace/Zad1.py">Python</a></td>
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/02_Instrukcje_sterujace/Zad1.cpp">Cpp</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/02_Instrukcje_sterujace/Zad1">Java</a></td> 
- <td><a>JavaScript</a></td>  
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02_Instrukcje_sterujace/Zad1.sh">Bash</a></td> 
- <td><a>Haskell</a></td> 
- <td><a>Rust</a></td></tr>
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/02_Instrukcje_sterujace/Zad1.cpp">Cpp</a></td> 
+<td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/02_Instrukcje_sterujace/Zad1">Java</a></td> 
+<td><a>JavaScript</a></td>  
+<td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/02_Instrukcje_sterujace/Zad1.sh">Bash</a></td> 
+<td><a>Haskell</a></td> 
+<td><a>Rust</a></td></tr>
 <tr>
 <td>2</td>
 <td>Porównanie ze zmienną.</td>
