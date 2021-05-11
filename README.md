@@ -59,7 +59,7 @@ Rozwiązania
 <th>#</th>
 <th>Tytuł</th>
 <th colspan="7">Rozwiązania</th>
-<th>Poziom trudności</th>
+<th>Poziom</th>
 </tr>
 </thead>
 <tbody>
