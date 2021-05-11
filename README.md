@@ -366,7 +366,7 @@ Rozwiązania
  <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03_Daty/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>7</td>
@@ -378,7 +378,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>8</td>
@@ -390,7 +390,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/03_Daty/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 </tbody>
 </table>
@@ -500,7 +500,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/04_Petla_wprowadzenie/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 </tbody>
 </table>
@@ -574,7 +574,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/05_Petla_wyznaczanie_cyfr_liczby/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>6</td>
@@ -684,7 +684,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06_Funkcje_wprowadzenie/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>8</td>
@@ -696,7 +696,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/06_Funkcje_wprowadzenie/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 </tbody>
 </table>
@@ -794,7 +794,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>8</td>
@@ -806,7 +806,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/07_Petla_algorytmy_matematyczne/Zad8.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 </tbody>
 </table>
@@ -868,7 +868,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad4.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>5</td>
@@ -880,7 +880,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad5.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>6</td>
@@ -892,7 +892,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad6.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
   <tr>
 <td>7</td>
@@ -904,7 +904,7 @@ Rozwiązania
  <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/08_Petle_zagniezdzone/Zad7.sh">Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>8</td>
@@ -916,7 +916,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>9</td>
@@ -1002,7 +1002,8 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-  </tr>
+<td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Czy średnia elementów znajduje się w liście?</td>
@@ -1060,7 +1061,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>11</td>
@@ -1072,6 +1073,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>12</td>
@@ -1083,6 +1085,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>13</td>
@@ -1094,7 +1097,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>14</td>
@@ -1106,7 +1109,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>15</td>
@@ -1118,7 +1121,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>16</td>
@@ -1130,7 +1133,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>17</td>
@@ -1142,7 +1145,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>18</td>
@@ -1154,7 +1157,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 </tbody>
 </table>
@@ -1264,7 +1267,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>9</td>
@@ -1276,7 +1279,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>10</td>
@@ -1288,7 +1291,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 
 </tbody>
@@ -1493,8 +1496,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
- </tr>
+<td><a>Rust</a></td>
+<td>★★☆</td>
+</tr>
  <tr>
 <td>17</td>
 <td>Zamień listę na napis.</td>
@@ -1505,7 +1509,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>18</td>
@@ -1517,7 +1521,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 </tbody>
 </table>
@@ -1555,7 +1559,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>3</td>
@@ -1579,7 +1583,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>5</td>
@@ -1591,7 +1595,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>6</td>
@@ -1603,7 +1607,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>7</td>
@@ -1615,7 +1619,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 <tr>
 <td>8</td>
@@ -1627,7 +1631,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 </tbody>
 </table>
@@ -1701,7 +1705,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>6</td>
@@ -1713,7 +1717,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
  <tr>
 <td>7</td>
@@ -1725,7 +1729,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>8</td>
@@ -1737,7 +1741,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>9</td>
@@ -1749,7 +1753,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
   <tr>
 <td>10</td>
@@ -1761,7 +1765,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>11</td>
@@ -1773,7 +1777,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 </tbody>
 </table>
@@ -1835,7 +1839,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
  <tr>
 <td>5</td>
@@ -1847,7 +1851,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
  <tr>
 <td>6</td>
@@ -1859,7 +1863,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 </tbody>
 </table>
@@ -1957,7 +1961,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
    <tr>
 <td>8</td>
@@ -1969,7 +1973,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
  <tr>
 <td>9</td>
@@ -1981,7 +1985,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
  <tr>
 <td>10</td>
@@ -1993,7 +1997,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 </tbody>
 </table>
@@ -2067,7 +2071,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>6</td>
@@ -2079,7 +2083,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
   <tr>
 <td>7</td>
@@ -2115,7 +2119,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
   <tr>
 <td>10</td>
@@ -2127,7 +2131,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
   <tr>
 <td>11</td>
@@ -2139,7 +2143,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
  <tr>
 <td>12</td>
@@ -2151,7 +2155,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 </tbody>
 </table>
@@ -2189,8 +2193,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
-  </tr>
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>
   <tr>
 <td>3</td>
 <td>Klucz to imię, wartość lista wypożyczonych książek.</td>
@@ -2284,7 +2289,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>11</td>
@@ -2308,7 +2313,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 </tbody>
 </table>
@@ -2346,7 +2351,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
   <tr>
 <td>3</td>
@@ -2358,7 +2363,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>4</td>
@@ -2394,7 +2399,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>7</td>
@@ -2418,7 +2423,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <td>9</td>
 <td>Usuń pliki spełniające warunek.</td>
@@ -2429,7 +2434,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
  <tr>
 <td>10</td>
@@ -2453,7 +2458,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>12</td>
@@ -2465,7 +2470,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 </tbody>
 </table>
@@ -2491,7 +2496,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>2</td>
@@ -2503,7 +2508,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>3</td>
@@ -2515,7 +2520,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>4</td>
@@ -2527,7 +2532,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>5</td>
@@ -2539,7 +2544,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>6</td>
@@ -2550,7 +2555,8 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
+<td><a>Rust</a></td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>7</td>
@@ -2587,8 +2593,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
-  </tr>  
+<td><a>Rust</a></td>
+<td>★☆☆</td>
+</tr>  
  <tr>
 <td>2</td>
    <td>Zaprojektuj klasę bazową oraz klasy pochodne.</td>
@@ -2598,8 +2605,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
-  </tr>
+<td><a>Rust</a></td>
+<td>★★☆</td>
+</tr>
    <tr>
 <td>3</td>
    <td>Polimorfizm.</td>
@@ -2609,8 +2617,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
-  </tr> 
+<td><a>Rust</a></td>
+<td>★★☆</td>
+</tr>
     <tr>
 <td>4</td>
    <td>Dziedziczenie wielopoziomowe.</td>
@@ -2620,8 +2629,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
-  </tr>
+<td><a>Rust</a></td>
+<td>★★☆</td>
+</tr>
   <tr>
 <td>5</td>
    <td>Dziedziczenie wielokrotne.</td>
@@ -2631,8 +2641,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a>Rust</a></td>
-  </tr>  
+<td><a>Rust</a></td>
+<td>★★☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -2657,7 +2668,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad1.rs">Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad1.rs">Rust</a></td>
+  <td>★☆☆</td>
+</tr>
 <tr>
 <td>2</td>
 <td>Wybieranie.</td>
@@ -2667,7 +2680,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad2.rs">Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad2.rs">Rust</a></td>
+    <td>★★☆</td>
+</tr>
 <tr>
 <td>3</td>
 <td>Wstawianie.</td>
@@ -2677,7 +2692,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad3.rs">Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad3.rs">Rust</a></td>
+    <td>★★☆</td>
+</tr>
 <tr>
 <td>4</td>
 <td>Scalanie.</td>
@@ -2687,7 +2704,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad4.rs">Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad4.rs">Rust</a></td>
+    <td>★★☆</td>
+</tr>
 <tr>
 <td>5</td>
 <td>Szybkie.</td>
@@ -2697,7 +2716,9 @@ Rozwiązania
  <td><a>JavaScript</a></td>  
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
- <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad5.rs">Rust</a></td></tr>
+ <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Rust/21_Sortowanie_Algorytmy/Zad5.rs">Rust</a></td>
+    <td>★★☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -2734,7 +2755,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>3</td>
@@ -2758,6 +2779,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
+    <td>★☆☆</td>
 </tr>
   <tr>
 <td>5</td>
@@ -2769,7 +2791,8 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-  </tr>
+  <td>★☆☆</td>
+</tr>
 <tr>
 <td>6</td>
 <td>Tablica binarna.</td>
@@ -2780,6 +2803,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
+ <td>★★☆</td>
   </tr>
 <tr>
 <td>7</td>
@@ -2791,7 +2815,8 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-  </tr>
+   <td>★★☆</td>
+</tr>
 <tr>
 <td>8</td>
 <td>Tablica cykliczna.</td>
@@ -2802,7 +2827,8 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-  </tr>
+  <td>★★☆</td>
+</tr>
 </tbody>
 </table>
 
@@ -2827,7 +2853,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
  <tr>
 <td>2</td>
@@ -2839,7 +2865,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>3</td>
@@ -2911,7 +2937,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
  <tr>
 <td>9</td>
@@ -2923,7 +2949,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
  <tr>
 <td>10</td>
@@ -2935,7 +2961,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
   <td>11</td>
    <td>Nazwa pliku ze ścieżki.</td>
@@ -2946,7 +2972,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 </tbody>
 </table>
@@ -2972,7 +2998,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
   <tr>
 <td>2</td>
@@ -2984,7 +3010,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
   <tr>
 <td>3</td>
@@ -2996,7 +3022,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
   <tr>
 <td>4</td>
@@ -3008,7 +3034,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 <tr>
 <td>5</td>
@@ -3032,7 +3058,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 <tr>
 <td>7</td>
@@ -3044,7 +3070,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
   <tr>
 <td>8</td>
@@ -3056,7 +3082,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
     <tr>
 <td>9</td>
@@ -3068,7 +3094,7 @@ Rozwiązania
 <td><a>Bash</a></td> 
 <td><a>Haskell</a></td> 
 <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 </tbody>
 </table>
@@ -3094,7 +3120,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★☆</td>
 </tr>
 <tr>
 <td>2</td>
@@ -3106,7 +3132,8 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-  </tr>
+  <td>★★☆</td>
+</tr>
 <tr>
 <td>3</td>
   <td>Czy napis <b>A</b> stanowi początek napisu <b>B</b>?</td>
@@ -3117,7 +3144,8 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-  </tr>
+  <td>★★☆</td>
+</tr>
   <tr>
 <td>4</td>
 <td>Usuń powtórzenia z napisu.</td>
@@ -3128,7 +3156,8 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-  </tr>
+  <td>★★★</td>
+</tr>
   <tr>
 <td>5</td>
 <td>Znaki stojące obok siebie nie mogą się powtarzać.</td>
@@ -3139,7 +3168,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 <tr>
 <td>6</td>
@@ -3151,7 +3180,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
   <tr>
 <td>7</td>
@@ -3163,7 +3192,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 <tr>
 <td>8</td>
@@ -3175,7 +3204,7 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-<td>★☆☆</td>
+<td>★★★</td>
 </tr>
 <tr>
 <td>9</td>
@@ -3187,7 +3216,8 @@ Rozwiązania
  <td><a>Bash</a></td> 
  <td><a>Haskell</a></td> 
  <td><a>Rust</a></td>
-  </tr>
+  <td>★★★</td>
+</tr>
 
 </tbody>
 </table>
