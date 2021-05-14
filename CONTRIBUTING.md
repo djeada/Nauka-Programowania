@@ -1,6 +1,6 @@
 Jeśli chcesz poprawić istniejące rozwiązanie, dodać test lub rozwiązanie alternatywne:
 
-1. Utwórz kopię "Fork" tego repozytorium na swoim koncie na stronie <a href="github.com">github.com</a>.
+1. Utwórz kopię "Fork" tego repozytorium na swoim koncie na stronie <a href="https://github.com">github.com</a>.
 2. Sklonuj ten projekt na swój komputer.
 
 ```bash
@@ -21,4 +21,4 @@ git add changed_file
 git commit -m "your commit message"
 git push origin <your-new-branch-name>
 ```
-Zaloguj się na stronę <a href="github.com">github.com</a> i stwórz pull-request w swojej kopii repozytorium.
+Zaloguj się na stronę <a href="https://github.com">github.com</a> i stwórz pull-request w swojej kopii repozytorium.
