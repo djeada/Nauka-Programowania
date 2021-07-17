@@ -4,26 +4,26 @@
 
 sumaCyfr() {
 
-	a=$1
+    a=$1
     suma=0
-	
-	while [ $a -gt 0 ] 
-	do
-		suma=$(($suma + $a % 10))
-		a=$(( $a / 10 )) 
-	done
-	
-	return $suma
+    
+    while [ $a -gt 0 ] 
+    do
+        suma=$(($suma + $a % 10))
+        a=$(( $a / 10 )) 
+    done
+    
+    return $suma
 }
 
 main() {
     echo "Podaj liczbe: "
-	read a
+    read a
 
-	sumaCyfr $a
-	wynik=$?
+    sumaCyfr $a
+    wynik=$?
 
-	echo "Suma cyfr twojej liczby: $wynik"
+    echo "Suma cyfr twojej liczby: $wynik"
 
 }
 

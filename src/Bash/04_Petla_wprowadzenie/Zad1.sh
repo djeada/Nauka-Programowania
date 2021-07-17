@@ -6,10 +6,10 @@ main() {
     
     a=0
 
-	while [ $a -ne 7 ]; do
-    	echo "Podaj liczbe:"
-	  	read a
-	done
+    while [ $a -ne 7 ]; do
+        echo "Podaj liczbe:"
+          read a
+    done
 
 }
 

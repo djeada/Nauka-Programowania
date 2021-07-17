@@ -4,13 +4,13 @@
 
 main() {
     
-	echo "Podaj liczbe:"
-  	read a
+    echo "Podaj liczbe:"
+      read a
 
-	while [ $a -gt 0 ]; do
-		a=$(($a-1))
-		echo $a
-	done
+    while [ $a -gt 0 ]; do
+        a=$(($a-1))
+        echo $a
+    done
 
 }
 

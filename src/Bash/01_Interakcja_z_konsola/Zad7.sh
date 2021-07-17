@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 main() {
-	    
-	#Pobierz podstawe i wysokosc trojkata i wypisz pole. 
+        
+    #Pobierz podstawe i wysokosc trojkata i wypisz pole. 
 
     echo "Podaj podstawe i wysokosc trojkata: "
     read a
@@ -16,8 +16,8 @@ main() {
     read a
     read b
 
-    echo "Pole prostokata o bokach $a i $b jest rowne $(($a*$b))"	
-    	       
+    echo "Pole prostokata o bokach $a i $b jest rowne $(($a*$b))"    
+               
 }
 
 main "$@"

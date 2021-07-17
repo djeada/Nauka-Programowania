@@ -4,10 +4,10 @@
 #nazwy i hasla oraz zwracac otrzymane dane.
 
 inicjalizacjaDanych() {
-	echo "podaj nazwe oraz haslo do zapamietania"
-	read nazwaTemp
-	read hasloTemp
-	eval "$1=$nazwaTemp $2=$hasloTemp"
+    echo "podaj nazwe oraz haslo do zapamietania"
+    read nazwaTemp
+    read hasloTemp
+    eval "$1=$nazwaTemp $2=$hasloTemp"
 }
 
 #Druga powinna otrzymywac dane od pierwszej i ponownie prosic o
@@ -15,29 +15,29 @@ inicjalizacjaDanych() {
 #podanymi za pierwszym razem.
 
 czyDanePoprawne() {
-	
-	staraNazwa=$1
-	stareHaslo=$2
-	
-	nowaNazwa=""
-	noweHaslo=""
+    
+    staraNazwa=$1
+    stareHaslo=$2
+    
+    nowaNazwa=""
+    noweHaslo=""
 
 
-	while [[ $nowaNazwa != $staraNazwa ]] || [[ $noweHaslo != $stareHaslo ]]
-	do
-		echo "Aby zalogowac sie do systemu: podaj nazwe oraz haslo"
-		read nowaNazwa
-		read noweHaslo
-	done
+    while [[ $nowaNazwa != $staraNazwa ]] || [[ $noweHaslo != $stareHaslo ]]
+    do
+        echo "Aby zalogowac sie do systemu: podaj nazwe oraz haslo"
+        read nowaNazwa
+        read noweHaslo
+    done
 
-	echo "Logowanie do systemu przebieglo pomyslnie"
+    echo "Logowanie do systemu przebieglo pomyslnie"
 }
 
 main() {
-  	nazwa=""
-	haslo=""
-	inicjalizacjaDanych nazwa haslo
-	czyDanePoprawne $nazwa $haslo
+      nazwa=""
+    haslo=""
+    inicjalizacjaDanych nazwa haslo
+    czyDanePoprawne $nazwa $haslo
 }
 
 main "$@"

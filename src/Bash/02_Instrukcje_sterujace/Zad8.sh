@@ -6,16 +6,16 @@ main() {
 
     echo "Podaj trzy dlugosci bokow: "
 
-	read a
-	read b
-	read c
+    read a
+    read b
+    read c
 
-	if [[ $(($a + $b)) > $c ]] && [[ $(($a + $c)) > $b ]] && [[ $(($b + $c)) > $a ]]; then
-		echo "Z podanych dlugosci bokow mozna zbudowac trojkat"
+    if [[ $(($a + $b)) > $c ]] && [[ $(($a + $c)) > $b ]] && [[ $(($b + $c)) > $a ]]; then
+        echo "Z podanych dlugosci bokow mozna zbudowac trojkat"
 
-	else
-		echo "Z podanych dlugosci bokow nie mozna zbudowac trojkata"
-	fi
+    else
+        echo "Z podanych dlugosci bokow nie mozna zbudowac trojkata"
+    fi
 }
 
 main "$@"

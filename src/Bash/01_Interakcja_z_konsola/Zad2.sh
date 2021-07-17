@@ -4,11 +4,11 @@
    
 main() {
     echo "Wpisz dwie liczby."
-	read a
-	read b
-	echo "Liczby w odwrotnej kolejnosci to: "
-	echo "${b}"
-	echo "${a}"
+    read a
+    read b
+    echo "Liczby w odwrotnej kolejnosci to: "
+    echo "${b}"
+    echo "${a}"
 }
 
 main "$@"

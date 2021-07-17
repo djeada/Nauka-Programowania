@@ -6,20 +6,20 @@
 
 trojkat() {
 
-	a=$1
+    a=$1
 
-	for (( i=0; i<$a; i++ )); do
-		for (( j=0; j<=$i; j++ )); do
-			echo -n "x"
-		done
-		echo ""
-	done
+    for (( i=0; i<$a; i++ )); do
+        for (( j=0; j<=$i; j++ )); do
+            echo -n "x"
+        done
+        echo ""
+    done
 
 }
 
 main() {
 
-	trojkat 5	
+    trojkat 5    
 
 }
 

@@ -7,7 +7,7 @@
 
 czyWieksza() {
 
-	if [[ $1 -gt $2 ]] ; then
+    if [[ $1 -gt $2 ]] ; then
         echo true
     else
         echo false
@@ -17,9 +17,9 @@ czyWieksza() {
 #b) czy suma liczb jest mneijsza niz 10
 
 czySumaMniejsza() {
-	suma=$(($1 + $2))
+    suma=$(($1 + $2))
 
-	if [[ $suma -lt 10 ]] ; then
+    if [[ $suma -lt 10 ]] ; then
         echo true
     else
         echo false
@@ -29,7 +29,7 @@ czySumaMniejsza() {
 #c) czy obie sa nieparzyste
 
 czyObieNieparzyste() {
-	if [[ $(($1 % 2)) -eq 1 ]] && [[ $(($2 % 2)) -eq 1 ]]; then
+    if [[ $(($1 % 2)) -eq 1 ]] && [[ $(($2 % 2)) -eq 1 ]]; then
         echo true
     else
         echo false
@@ -39,7 +39,7 @@ czyObieNieparzyste() {
 #d) czy wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu
 
 wieksza() {
-	if [[ $1 > $2 ]]; then
+    if [[ $1 > $2 ]]; then
         return $1
     else
         return $2
@@ -47,10 +47,10 @@ wieksza() {
 }
 
 czyWiekszaNizKwad() {
-	wieksza $1 $2
-  	wieksza=$?
+    wieksza $1 $2
+      wieksza=$?
 
-	if [[ $wieksza -lt $(($1**2)) ]]; then
+    if [[ $wieksza -lt $(($1**2)) ]]; then
         echo true
     else
         echo false
@@ -59,19 +59,19 @@ czyWiekszaNizKwad() {
 
 main() {
     echo "Podaj dwie liczby: "
-	read a
-	read b
+    read a
+    read b
 
-	wynik=$(czyWieksza $a $b)
+    wynik=$(czyWieksza $a $b)
     echo "Pierwsza liczba jest wieksza od drugiej: $wynik"
 
-	wynik=$(czySumaMniejsza $a $b)
+    wynik=$(czySumaMniejsza $a $b)
     echo "Suma liczb jest mniejsza od 10: $wynik"
 
-	wynik=$(czyObieNieparzyste $a $b)
+    wynik=$(czyObieNieparzyste $a $b)
     echo "Obie liczby nieparzyste: $wynik"
 
-	wynik=$(czyWiekszaNizKwad $a $b)
+    wynik=$(czyWiekszaNizKwad $a $b)
     echo "Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu $wynik"
 }
 

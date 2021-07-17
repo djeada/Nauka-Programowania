@@ -6,23 +6,23 @@ source ../assert.sh
 #przy pomocy petli obliczy ile wynosi a podniesione do b.
 
 potega() {
-	
-	a=$1
-	b=$2
-	wynik=1
-	
-	for (( i=0; i<$b; i++ )); do 
-		wynik=$(($wynik * $a))
-	done
+    
+    a=$1
+    b=$2
+    wynik=1
+    
+    for (( i=0; i<$b; i++ )); do 
+        wynik=$(($wynik * $a))
+    done
 
-	echo $wynik
+    echo $wynik
 }
 
 main() {
-	a=2
-	b=3
-	wynik=8
-	assert "$wynik -eq $(potega $a $b)" $LINENO
+    a=2
+    b=3
+    wynik=8
+    assert "$wynik -eq $(potega $a $b)" $LINENO
 }
 
 main "$@"

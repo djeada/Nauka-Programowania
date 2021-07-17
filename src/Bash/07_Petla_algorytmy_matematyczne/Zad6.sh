@@ -6,37 +6,37 @@ source ../assert.sh
 #ich najmniejsza wspolna wielokrotnosc.
 
 nwd() {
-	
-	a=$1
-	b=$2
-	
-	while [ $b -ne $(($a % $b)) ]; do
-        		c=$b
-        		b=$(($a % $b))
-		a=$c
-		
-		if (( $b == 0 )); then
-        			break;
-    		fi
-    	done
+    
+    a=$1
+    b=$2
+    
+    while [ $b -ne $(($a % $b)) ]; do
+                c=$b
+                b=$(($a % $b))
+        a=$c
+        
+        if (( $b == 0 )); then
+                    break;
+            fi
+        done
 
-	echo $a
+    echo $a
 }
 
 nww() {
-	echo $(($a * $b / $(nwd $a $b)))
+    echo $(($a * $b / $(nwd $a $b)))
 }
 
 #Testy
 test1() {
-	a=14
-	b=21
-	wynik=42
-	assert "$wynik -eq $(nww $a $b)" $LINENO
+    a=14
+    b=21
+    wynik=42
+    assert "$wynik -eq $(nww $a $b)" $LINENO
 }
 
 main() {
-	test1
+    test1
 
 }
 

@@ -8,30 +8,30 @@
 
 trojkat() {
 
-	a=$1
+    a=$1
 
-	for (( i=0; i<$a; i++ )); do
-		for (( j=0; j<=$i; j++ )); do
-			echo -n "x"
-		done
-		echo ""
-	done
+    for (( i=0; i<$a; i++ )); do
+        for (( j=0; j<=$i; j++ )); do
+            echo -n "x"
+        done
+        echo ""
+    done
 
 }
 
 choinka() {
 
-	n=$1
+    n=$1
 
-	for (( i=1; i<=$n; i++ )); do
-		trojkat $i
-	done
+    for (( i=1; i<=$n; i++ )); do
+        trojkat $i
+    done
 
 }
 
 main() {
 
-	choinka 5	
+    choinka 5    
 
 }
 

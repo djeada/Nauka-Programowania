@@ -4,10 +4,10 @@
 
 main() {
     
-	echo "Podaj liczbe:"
-  	read a
+    echo "Podaj liczbe:"
+      read a
 
-	echo "scale=$a; 4*a(1)" | bc -l
+    echo "scale=$a; 4*a(1)" | bc -l
 }
 
 main "$@"

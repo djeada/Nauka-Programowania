@@ -5,31 +5,31 @@
 #a) liczbe 3
 
 funkcja1() {
-	return 3
+    return 3
 }
 
 #b) napis "Tak"
 
 funkcja2() {
-	echo "Tak"
+    echo "Tak"
 }
 
 #c) wartosc logiczna prawda
 
 funkcja3() {
-	echo true
+    echo true
 }
 
 main() {
     funkcja1
-  	wynik=$?
+      wynik=$?
     echo $wynik
 
-	wynik=$(funkcja2)
-	echo $wynik
+    wynik=$(funkcja2)
+    echo $wynik
 
-	wynik=$(funkcja3)
-	echo $wynik
+    wynik=$(funkcja3)
+    echo $wynik
 }
 
 main "$@"
