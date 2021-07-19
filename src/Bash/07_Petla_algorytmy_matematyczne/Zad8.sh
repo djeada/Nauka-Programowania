@@ -6,7 +6,7 @@ source ../assert.sh
 #sprawdzi czy jest ona liczba pierwsza.
 
 czyPierwsza() {
-    
+
     a=$1
 
     if [[ $a -eq 2 ]] || [[ $a -eq 3 ]]; then

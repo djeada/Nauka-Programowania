@@ -14,18 +14,18 @@ main() {
             echo $b
             echo $c
         else
-             echo $a
+            echo $a
             echo $c
             echo $b
         fi
-    
+
     elif [[ $b -ls $a && $b -ls $c ]]; then
         if [[ $a -ls $c ]]; then
             echo $b
             echo $a
             echo $c
         else
-             echo $b
+            echo $b
             echo $c
             echo $a
         fi
@@ -35,7 +35,7 @@ main() {
             echo $a
             echo $b
         else
-             echo $c
+            echo $c
             echo $b
             echo $a
         fi

@@ -3,7 +3,7 @@
 #Znajdz maksimum z czterech liczb.
 
 main() {
-    
+
     echo "Podaj cztery liczby."
     read a
     read b

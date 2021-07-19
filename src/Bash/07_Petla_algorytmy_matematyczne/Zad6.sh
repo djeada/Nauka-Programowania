@@ -6,19 +6,19 @@ source ../assert.sh
 #ich najmniejsza wspolna wielokrotnosc.
 
 nwd() {
-    
+
     a=$1
     b=$2
-    
+
     while [ $b -ne $(($a % $b)) ]; do
-                c=$b
-                b=$(($a % $b))
+        c=$b
+        b=$(($a % $b))
         a=$c
-        
+
         if (( $b == 0 )); then
-                    break;
-            fi
-        done
+            break;
+        fi
+    done
 
     echo $a
 }

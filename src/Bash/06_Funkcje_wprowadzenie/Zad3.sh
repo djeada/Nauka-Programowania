@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora 
+#Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora
 #dla otrzymanych dwoch liczb ustali czy:
 
 #a) pierwsza liczba jest wieksza od drugiej
@@ -48,7 +48,7 @@ wieksza() {
 
 czyWiekszaNizKwad() {
     wieksza $1 $2
-      wieksza=$?
+    wieksza=$?
 
     if [[ $wieksza -lt $(($1**2)) ]]; then
         echo true

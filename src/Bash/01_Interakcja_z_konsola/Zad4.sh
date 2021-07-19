@@ -3,7 +3,7 @@
 #Wypisz wynik podstawowych operacji arytmetycznych dla dwoch liczb pobranych od uzytkownika.
 
 main() {
-    
+
     echo "Podaj dwie liczby."
     read a
     read b

@@ -22,7 +22,7 @@ funkcja3() {
 
 main() {
     funkcja1
-      wynik=$?
+    wynik=$?
     echo $wynik
 
     wynik=$(funkcja2)

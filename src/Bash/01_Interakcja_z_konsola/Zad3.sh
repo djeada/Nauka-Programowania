@@ -28,7 +28,7 @@ main() {
     echo " 111"
     echo "11111"
     echo " 111"
-    echo "  1" 
+    echo "  1"
 
 }
 

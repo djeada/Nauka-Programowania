@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #Napisz funkcje, ktora dla otrzymanej liczby N
-#wypisze N pierwszych wierszy i kolumn 
+#wypisze N pierwszych wierszy i kolumn
 #tabliczki mnozenia.
 
 tabliczkaMnozenia() {
@@ -19,7 +19,7 @@ tabliczkaMnozenia() {
 
 main() {
 
-    tabliczkaMnozenia 5    
+    tabliczkaMnozenia 5
 
 }
 

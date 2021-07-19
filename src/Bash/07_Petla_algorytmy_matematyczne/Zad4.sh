@@ -2,15 +2,15 @@
 
 source ../assert.sh
 
-#Napisz funkcje, ktora przy pomocy petli obliczy silnie, 
+#Napisz funkcje, ktora przy pomocy petli obliczy silnie,
 #z otrzymanej liczby.
 
 silnia() {
-    
+
     a=$1
     wynik=1
-    
-    while [ $a -gt 0 ]; do 
+
+    while [ $a -gt 0 ]; do
         wynik=$(($wynik * $a))
         a=$(($a - 1))
     done

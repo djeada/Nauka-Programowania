@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 main() {
-        
+
     #Otrzymujesz cene oraz wymiary pojedynczej plytki. Oblicz ile bedzie wynosila cena
     #za podloge o podanych wymiarach. Podloga jest prostokatem, a plytka kwadratem
 
@@ -15,10 +15,10 @@ main() {
 
     szerokoscKonieczna=$(($szerokoscPodlogi + $bokPlytki - $szerokoscPodlogi % $bokPlytki))
     dlugoscKonieczna=$(($dlugoscPodlogi + $bokPlytki - $dlugoscPodlogi % $bokPlytki))
-    
+
     polePlytki=$(($bokPlytki*$bokPlytki))
     polePodlogi=$(($szerokoscKonieczna*$dlugoscKonieczna))
-    
+
     calkowityKoszt=$(($cena * $polePodlogi / $polePlytki))
 
 

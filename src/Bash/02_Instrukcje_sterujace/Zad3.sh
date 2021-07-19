@@ -9,7 +9,7 @@ main() {
     if [[ $x -gt 0 ]]; then
         echo "libczba jest dodatnia"
     elif [[ $x -lt 0 ]]; then
-        echo "libczba jest ujemna"  
+        echo "libczba jest ujemna"
     else
         echo "libczba jest zerem"
     fi

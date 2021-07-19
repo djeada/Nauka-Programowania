@@ -6,13 +6,13 @@ sumaCyfr() {
 
     a=$1
     suma=0
-    
-    while [ $a -gt 0 ] 
+
+    while [ $a -gt 0 ]
     do
         suma=$(($suma + $a % 10))
-        a=$(( $a / 10 )) 
+        a=$(( $a / 10 ))
     done
-    
+
     return $suma
 }
 

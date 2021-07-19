@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-#Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora 
-#dla otrzymanych dwoch liczb zwroci: 
+#Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora
+#dla otrzymanych dwoch liczb zwroci:
 
 #a) ich sume
 
@@ -37,15 +37,15 @@ main() {
     echo "suma liczb to $wynik"
 
     roznica $a $b
-      wynik=$?
+    wynik=$?
     echo "iloczyn liczb to $wynik"
 
     iloczyn $a $b
-      wynik=$?
+    wynik=$?
     echo "suma liczb to $wynik"
 
     reszta $a $b
-      wynik=$?
+    wynik=$?
     echo "reszte z dzielenia pierwszej przez druga to $wynik"
 }
 

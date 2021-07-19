@@ -11,8 +11,8 @@ main() {
         echo $x
         echo $y
     else
-      echo $y
-      echo $x
+        echo $y
+        echo $x
     fi
 }
 

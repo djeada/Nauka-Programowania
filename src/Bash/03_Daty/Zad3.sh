@@ -3,10 +3,10 @@
 #Czy rok jes przestepny?
 
 main() {
-    
+
     echo "Podaj rok:"
     read rok
-    
+
     if [[ $(($rok % 4)) -eq 0 ]]; then
         if [[ $(($rok % 100)) -eq 0 ]]; then
             if [[ $(($rok % 400)) -eq 0 ]]; then
@@ -14,12 +14,12 @@ main() {
             else
                 echo "rok nie jest przestepny"
             fi
-         else
+        else
             echo "rok jest przestepny"
         fi
-     else
+    else
         echo "rok nie jest przestepny"
-      fi
+    fi
 }
 
 main "$@"

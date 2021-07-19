@@ -2,16 +2,16 @@
 
 source ../assert.sh
 
-#Napisz funkcje, ktora dla otrzymanych dwoch liczb 
+#Napisz funkcje, ktora dla otrzymanych dwoch liczb
 #przy pomocy petli obliczy ile wynosi a podniesione do b.
 
 potega() {
-    
+
     a=$1
     b=$2
     wynik=1
-    
-    for (( i=0; i<$b; i++ )); do 
+
+    for (( i=0; i<$b; i++ )); do
         wynik=$(($wynik * $a))
     done
 

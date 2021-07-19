@@ -3,7 +3,7 @@
 #Czy osoba jest pelnoletnia?
 
 main() {
-    
+
     echo "Podaj trzy liczby reprezentujace dzien, miesiac i rok urodzenia osoby:"
     read dzien
     read miesiac
@@ -22,7 +22,7 @@ main() {
 
     if [[ $roznicaLata -gt 18 ]]; then
         echo "osoba jest pelnoletnia"
-    
+
     elif [[ $roznicaLata -eq 18 ]]; then
         if [[ $roznicaMiesiace -gt 0 ]]; then
             echo "osoba jest pelnoletnia"

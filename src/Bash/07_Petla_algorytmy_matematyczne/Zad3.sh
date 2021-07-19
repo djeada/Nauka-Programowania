@@ -2,17 +2,17 @@
 
 source ../assert.sh
 
-#Napisz funkcje, ktora dla otrzymanych dwoch liczb, 
+#Napisz funkcje, ktora dla otrzymanych dwoch liczb,
 #przy pomocy dodawania badz odejmowania oraz petli zrealizuje:
 
 #a) mnozenie;
 mnozenie() {
-    
+
     a=$1
     b=$2
     wynik=0
-    
-    for (( i=0; i<$b; i++ )); do 
+
+    for (( i=0; i<$b; i++ )); do
         wynik=$(($wynik + $a))
     done
 
@@ -24,8 +24,8 @@ dzielenie() {
     a=$1
     b=$2
     wynik=0
-    
-    while [ $a -ge $b ]; do 
+
+    while [ $a -ge $b ]; do
         a=$(($a - $b))
         wynik=$(($wynik + 1))
     done

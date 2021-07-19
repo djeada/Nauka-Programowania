@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-#Napisz funkcje, ktora dla otrzymanej liczby 
-#wypisze trojkat prostokatny rownoboczny o 
+#Napisz funkcje, ktora dla otrzymanej liczby
+#wypisze trojkat prostokatny rownoboczny o
 #wysokosci rownej otrzymanej liczbie.
 
 trojkat() {
@@ -19,7 +19,7 @@ trojkat() {
 
 main() {
 
-    trojkat 5    
+    trojkat 5
 
 }
 

@@ -3,7 +3,7 @@
 #Dowody praw logicznych
 
 main() {
-    
+
     #Prawo wylacznego srodka
     echo "Prawo wylacznego srodka"
     p=false

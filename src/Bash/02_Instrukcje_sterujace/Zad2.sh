@@ -10,7 +10,7 @@ main() {
     if [[ $x -eq $y ]]; then
         echo "liczby sa jednakowe"
     else
-      echo "liczby sa rozne"
+        echo "liczby sa rozne"
     fi
 }
 

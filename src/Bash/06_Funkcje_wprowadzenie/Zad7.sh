@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Napisz dwie funkcje. Pierwsza powinna porsic uzytkownika o podanie 
+#Napisz dwie funkcje. Pierwsza powinna porsic uzytkownika o podanie
 #nazwy i hasla oraz zwracac otrzymane dane.
 
 inicjalizacjaDanych() {
@@ -15,10 +15,10 @@ inicjalizacjaDanych() {
 #podanymi za pierwszym razem.
 
 czyDanePoprawne() {
-    
+
     staraNazwa=$1
     stareHaslo=$2
-    
+
     nowaNazwa=""
     noweHaslo=""
 
@@ -34,7 +34,7 @@ czyDanePoprawne() {
 }
 
 main() {
-      nazwa=""
+    nazwa=""
     haslo=""
     inicjalizacjaDanych nazwa haslo
     czyDanePoprawne $nazwa $haslo

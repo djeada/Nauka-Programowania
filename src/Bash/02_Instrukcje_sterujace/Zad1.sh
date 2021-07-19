@@ -1,7 +1,7 @@
 #!/bin/bash
 
 main() {
-    #Napisz program, ktory wczyta liczbe i wypisze ja jesli jest wieksza od 5. 
+    #Napisz program, ktory wczyta liczbe i wypisze ja jesli jest wieksza od 5.
 
     echo "Podaj liczbe"
     read x

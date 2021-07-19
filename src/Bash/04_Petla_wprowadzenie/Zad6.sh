@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 main() {
-        
+
     echo "Podaj liczbe:"
-      read n
+    read n
 
     #Dla pobranej liczby n wyswietl n pierwszych wyrazow ciagu danego wzorem n/(n+1)
 

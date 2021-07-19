@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Napisz funkcje, ktora dla otrzymanej liczby 
+#Napisz funkcje, ktora dla otrzymanej liczby
 #wypisze kwadrat o boku rownym otrzymanej liczbie.
 
 
@@ -18,10 +18,10 @@ kwadrat() {
 }
 
 main() {
-        
+
     kwadrat 5
 
-    
+
 }
 
 main "$@"

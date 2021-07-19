@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #Napisz funkcje, ktora dla otrzymanej liczby
-#wypisze litere Z, o wysokosci rownej 
+#wypisze litere Z, o wysokosci rownej
 #otrzymanej liczbie.
 
 literaZ() {
@@ -10,9 +10,9 @@ literaZ() {
 
     for (( i=0; i<$a; i++ )); do
         for (( j=0; j<$a; j++ )); do
-            if [ $i -eq 0 ] || [ $i -eq $(($a - 1)) ]; then    
+            if [ $i -eq 0 ] || [ $i -eq $(($a - 1)) ]; then
                 echo -n "*"
-            elif [ $j -eq $(($a - $i - 1)) ]; then    
+            elif [ $j -eq $(($a - $i - 1)) ]; then
                 echo -n "*"
             else
                 echo -n " "
@@ -25,7 +25,7 @@ literaZ() {
 
 main() {
 
-    literaZ 5    
+    literaZ 5
 
 }
 

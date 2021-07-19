@@ -3,24 +3,24 @@
 #DD - dzien
 #MM - miesiac
 #CC - stulecie
-#YY - rok 
+#YY - rok
 
-#A = CC/4 - 2*CC - 1 
+#A = CC/4 - 2*CC - 1
 #B = 5*YY/4
 #C = 26*(MM + 1)/10
 
 #Dzien = (A + B + C + DD) mod 7
 
 main() {
-    
+
     echo "Podaj dzien:"
-        read DD
-    
+    read DD
+
     echo "Podaj miesiac:"
-        read MM
+    read MM
 
     echo "Podaj rok:"
-        read rok
+    read rok
 
     CC=$(($rok/100))
     YY=$(($rok % 100))
@@ -35,7 +35,7 @@ main() {
 
     if [[ $wynik -eq 1 ]]; then
         echo "poniedzialek"
-    
+
     elif [[ $wynik -eq 2 ]]; then
         echo "wtorek"
 
@@ -53,7 +53,7 @@ main() {
 
     elif [[ $wynik -eq 7 ]]; then
         echo "niedziela"
-    
+
     else
         echo "bledne dane"
 

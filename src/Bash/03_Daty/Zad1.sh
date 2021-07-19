@@ -3,7 +3,7 @@
 #Czy liczba jest numerem tygodnia/miesiąca?
 
 main() {
-    
+
     echo "Podaj liczbe:"
     read a
 
