@@ -3002,8 +3002,8 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Przesuń zera.</td>
-            <td><a>Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24_Listy_trudne/Zad2.py">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad2.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24_Listy_trudne/Zad2.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
