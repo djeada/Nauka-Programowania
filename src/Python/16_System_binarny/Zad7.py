@@ -13,7 +13,7 @@ dodajemy za pomoca OR
 """
 
 
-def zamienSasiadow(liczba):
+def zamien_sasiadow(liczba):
     parzyste = liczba & 0xAAAAAAAA
     nieparzyste = liczba & 0x55555555
 
@@ -28,4 +28,4 @@ if __name__ == "__main__":
     liczba = 9131
     wynik = 4951
 
-    assert zamienSasiadow(liczba) == wynik
+    assert zamien_sasiadow(liczba) == wynik

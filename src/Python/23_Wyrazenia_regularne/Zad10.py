@@ -5,10 +5,10 @@ Otrzymujesz dwie listy rownej dlugosci. Elementy pierwszej listy stanowia slowa,
 import re
 
 # Wersja 1
-def zamienAnaBV1(tekst, listaA, listaB):
+def zamien_ana_bv1(tekst, lista_a, lista_b):
 
-    for napisA, napisB in zip(listaA, listaB):
-        tekst = re.sub(r"\b{0}\b".format(napisA), napisB, tekst)
+    for napis_a, napisB in zip(lista_a, lista_b):
+        tekst = re.sub(r"\b{0}\b".format(napis_a), napisB, tekst)
 
     return tekst
 
@@ -25,8 +25,8 @@ if __name__ == "__main__":
 	Warmth his law design say are person. 
 	Pronounce suspected in belonging conveying ye repulsive.
 """
-    listaA = ["or", "be", "he"]
-    listaB = ["and", "off", "she"]
+    lista_a = ["or", "be", "he"]
+    lista_b = ["and", "off", "she"]
 
     wynik = """Whole every miles as tiled at seven and. 
 	Wished she entire esteem mr oh by.
@@ -38,4 +38,4 @@ if __name__ == "__main__":
 	Pronounce suspected in belonging conveying ye repulsive.
 """
 
-    assert zamienAnaBV1(tekst, listaA, listaB) == wynik
+    assert zamien_ana_bv1(tekst, lista_a, lista_b) == wynik

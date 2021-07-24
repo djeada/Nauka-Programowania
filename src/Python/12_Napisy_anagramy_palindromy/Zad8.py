@@ -7,7 +7,7 @@ Pojedynczy znak jest rowniez uznawany za wyjatkowy palindrom.
 """
 
 # Wersja 1
-def znajdzWyjatkowePalindromyV1(slowo):
+def znajdz_wyjatkowe_palindromy_v1(slowo):
     wynik = []
 
     for i in range(len(slowo)):
@@ -34,8 +34,8 @@ def znajdzWyjatkowePalindromyV1(slowo):
 # Testy Poprawnosci
 slowo = "xxxx"
 wynik = ["x", "xxxx", "x", "xxx", "x", "xx", "x"]
-assert sorted(znajdzWyjatkowePalindromyV1(slowo)) == sorted(wynik)
+assert sorted(znajdz_wyjatkowe_palindromy_v1(slowo)) == sorted(wynik)
 
 slowo = ""
 wynik = []
-assert sorted(znajdzWyjatkowePalindromyV1(slowo)) == sorted(wynik)
+assert sorted(znajdz_wyjatkowe_palindromy_v1(slowo)) == sorted(wynik)

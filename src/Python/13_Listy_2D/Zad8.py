@@ -3,7 +3,7 @@ Wypisz spiralnie liste dwuwymiarowa.
 """
 
 # Wersja 1
-def spiralaV1(macierz, x=0, y=0):
+def spirala_v1(macierz, x=0, y=0):
 
     wynik = []
 
@@ -79,4 +79,4 @@ wynik = [
     25,
 ]
 
-assert spiralaV1(macierz) == wynik
+assert spirala_v1(macierz) == wynik

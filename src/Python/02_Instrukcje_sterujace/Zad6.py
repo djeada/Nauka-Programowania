@@ -9,10 +9,10 @@ if __name__ == "__main__":
     c = int(input())
     d = int(input())
 
-    maksAB = a if a > b else b
+    maks_ab = a if a > b else b
 
-    maksCD = c if c > d else d
+    maks_cd = c if c > d else d
 
-    maks = maksAB if maksAB > maksCD else maksCD
+    maks = maks_ab if maks_ab > maks_cd else maks_cd
 
     print(maks)

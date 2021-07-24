@@ -1,7 +1,7 @@
 # Wersja 1
 # Zlozonosc czasowa O(n)
 # Zlozonosc pamieciowa O(1)
-def sortujBinarnaTabliceV1(tablica):
+def sortuj_binarna_tablice_v1(tablica):
 
     zera = tablica.count(0)
 
@@ -18,4 +18,4 @@ def sortujBinarnaTabliceV1(tablica):
 tablica = [0, 0, 1, 0, 1, 1, 0, 1, 0, 0]
 wynik = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
 
-assert sortujBinarnaTabliceV1(tablica) == wynik
+assert sortuj_binarna_tablice_v1(tablica) == wynik

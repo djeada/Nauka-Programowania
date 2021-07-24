@@ -50,10 +50,10 @@ if __name__ == "__main__":
 
     print("podaj miare kata w stopniach:")
 
-    katStopnie = int(input())
-    katRad = katStopnie * 0.0174532
+    kat_stopnie = int(input())
+    kat_rad = kat_stopnie * 0.0174532
 
-    print(katStopnie, " stopni to ", katRad, " radianow")
+    print(kat_stopnie, " stopni to ", kat_rad, " radianow")
 
     """
 	Pobierz temperature w stopniach Farenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
@@ -61,8 +61,8 @@ if __name__ == "__main__":
 
     print("podaj temperature w Farenheitach:")
 
-    tempF = int(input())
-    tempC = (tempF - 32) * 5 / 9
-    tempK = tempC - 273
+    temp_f = int(input())
+    temp_c = (temp_f - 32) * 5 / 9
+    temp_k = temp_c - 273
 
-    print(tempF, " F to ", tempC, " C", " i ", tempK, " K")
+    print(temp_f, " F to ", temp_c, " C", " i ", temp_k, " K")

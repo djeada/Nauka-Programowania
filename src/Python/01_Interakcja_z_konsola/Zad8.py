@@ -8,27 +8,29 @@ if __name__ == "__main__":
     print("podaj: cene plytki, dlugosc boku plytki i wymiary podlogi")
 
     cena = int(input())
-    bokPlytki = int(input())
-    szerokoscPodlogi = int(input())
-    dlugoscPodlogi = int(input())
+    bok_plytki = int(input())
+    szerokosc_podlogi = int(input())
+    dlugosc_podlogi = int(input())
 
-    szerokoscKonieczna = szerokoscPodlogi + bokPlytki - szerokoscPodlogi % bokPlytki
-    dlugoscKonieczna = dlugoscPodlogi + bokPlytki - dlugoscPodlogi % bokPlytki
+    szerokosc_konieczna = (
+        szerokosc_podlogi + bok_plytki - szerokosc_podlogi % bok_plytki
+    )
+    dlugosc_konieczna = dlugosc_podlogi + bok_plytki - dlugosc_podlogi % bok_plytki
 
-    polePlytki = bokPlytki ** 2
-    polePodlogi = szerokoscKonieczna * dlugoscKonieczna
+    pole_plytki = bok_plytki ** 2
+    pole_podlogi = szerokosc_konieczna * dlugosc_konieczna
 
-    calkowityKoszt = cena * polePodlogi // polePlytki
+    calkowity_koszt = cena * pole_podlogi // pole_plytki
 
     print(
         "Dla plytki o dlugosci boku ",
-        bokPlytki,
+        bok_plytki,
         "i ceny ",
         cena,
         " calkowity koszt wylozenia podlogi o wymiarach ",
-        szerokoscPodlogi,
+        szerokosc_podlogi,
         "x",
-        dlugoscPodlogi,
+        dlugosc_podlogi,
         " wynosi ",
-        calkowityKoszt,
+        calkowity_koszt,
     )

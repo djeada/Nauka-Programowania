@@ -3,32 +3,32 @@ Miara odmiennosci dwoch napisow o takiej samej dlugosci, zdefiniowana jako liczb
 """
 
 # Wersja 1
-def odlegloscHammingaV1(napisA, napisB):
-    if len(napisA) != len(napisB):
+def odleglosc_hamminga_v1(napis_a, napis_b):
+    if len(napis_a) != len(napis_b):
         return -1
 
     wynik = 0
 
-    for i in range(len(napisA)):
-        if napisA[i] != napisB[i]:
+    for i in range(len(napis_a)):
+        if napis_a[i] != napis_b[i]:
             wynik += 1
 
     return wynik
 
 
 # Wersja 2
-def odlegloscHammingaV2(napisA, napisB):
-    if len(napisA) != len(napisB):
+def odleglosc_hamminga_v2(napis_a, napis_b):
+    if len(napis_a) != len(napis_b):
         return -1
-    return sum(znakA != znakB for znakA, znakB in zip(napisA, napisB))
+    return sum(znakA != znakB for znakA, znakB in zip(napis_a, napis_b))
 
 
 # Testy Poprawnosci
-assert odlegloscHammingaV1("adam", "axam") == 1
-assert odlegloscHammingaV2("adam", "axam") == 1
+assert odleglosc_hamminga_v1("adam", "axam") == 1
+assert odleglosc_hamminga_v2("adam", "axam") == 1
 
-assert odlegloscHammingaV1("xxbab", "bbabb") == 4
-assert odlegloscHammingaV2("xxbab", "bbabb") == 4
+assert odleglosc_hamminga_v1("xxbab", "bbabb") == 4
+assert odleglosc_hamminga_v2("xxbab", "bbabb") == 4
 
-assert odlegloscHammingaV1("ror", "rorr") == -1
-assert odlegloscHammingaV2("ror", "rorr") == -1
+assert odleglosc_hamminga_v1("ror", "rorr") == -1
+assert odleglosc_hamminga_v2("ror", "rorr") == -1

@@ -3,7 +3,7 @@ Zamien liste na napis.
 """
 
 # Wersja 1
-def zamienListeNaNapisV1(lista):
+def zamien_liste_na_napis_v1(lista):
     return "".join(str(x) for x in lista)
 
 
@@ -11,9 +11,9 @@ def zamienListeNaNapisV1(lista):
 lista = [2, 3, 10]
 napis = "2310"
 
-assert zamienListeNaNapisV1(lista) == napis
+assert zamien_liste_na_napis_v1(lista) == napis
 
 lista = ["ab", "hu", "czo"]
 napis = "abhuczo"
 
-assert zamienListeNaNapisV1(lista) == napis
+assert zamien_liste_na_napis_v1(lista) == napis

@@ -3,22 +3,22 @@ Ile bitow nalezy odwrocic by zmienic A w B?
 """
 
 
-def bityDoZmianyV1(liczbaA, liczbaB):
+def bity_do_zmiany_v1(liczba_a, liczba_b):
 
-    n = liczbaA ^ liczbaB
+    n = liczba_a ^ liczba_b
 
-    licznikJedynek = 0
+    licznik_jedynek = 0
     while n:
         n &= n - 1
-        licznikJedynek += 1
+        licznik_jedynek += 1
 
-    return licznikJedynek
+    return licznik_jedynek
 
 
 if __name__ == "__main__":
 
-    liczbaA = 34
-    liczbaB = 73
+    liczba_a = 34
+    liczba_b = 73
     wynik = 5
 
-    assert bityDoZmianyV1(liczbaA, liczbaB) == wynik
+    assert bity_do_zmiany_v1(liczba_a, liczba_b) == wynik

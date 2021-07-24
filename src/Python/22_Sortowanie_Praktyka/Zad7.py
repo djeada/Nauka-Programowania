@@ -5,7 +5,7 @@ Otrzymujesz tablice skladajaca sie wylacznie z zer, jedynek i dwojek (cyfry: 0, 
 # Wersja 1
 # Zlozonosc czasowa O(n)
 # Zlozonosc pamieciowa O(1)
-def sortujV1(lista):
+def sortuj_v1(lista):
     start, srodek = 0, 0
     koniec = len(lista) - 1
     piwot = 1
@@ -33,14 +33,14 @@ def sortujV1(lista):
 lista = [0, 2, 2, 0, 1, 1, 2, 2, 1, 1]
 wynik = [0, 0, 1, 1, 1, 1, 2, 2, 2, 2]
 
-assert sortujV1(lista) == wynik
+assert sortuj_v1(lista) == wynik
 
 lista = [1, 1, 1, 1, 2, 1, 1, 1]
 wynik = [1, 1, 1, 1, 1, 1, 1, 2]
 
-assert sortujV1(lista) == wynik
+assert sortuj_v1(lista) == wynik
 
 lista = [2, 0, 0, 1, 1, 1, 1, 1]
 wynik = [0, 0, 1, 1, 1, 1, 1, 2]
 
-assert sortujV1(lista) == wynik
+assert sortuj_v1(lista) == wynik

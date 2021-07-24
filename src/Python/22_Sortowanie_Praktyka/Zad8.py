@@ -5,7 +5,7 @@ jesli tablica nie zawiera klucza zwroc -1
 """
 
 
-def znajdzKluczV1(lista, klucz):
+def znajdz_klucz_v1(lista, klucz):
 
     lewo = 0
     prawo = len(lista) - 1
@@ -42,10 +42,10 @@ if __name__ == "__main__":
     klucz = 31
     wynik = 1
 
-    assert znajdzKluczV1(lista, klucz) == wynik
+    assert znajdz_klucz_v1(lista, klucz) == wynik
 
     lista = [4, 7, 12, 32, 51, 90, 100, 1, 2]
     klucz = -5
     wynik = -1
 
-    assert znajdzKluczV1(lista, klucz) == wynik
+    assert znajdz_klucz_v1(lista, klucz) == wynik

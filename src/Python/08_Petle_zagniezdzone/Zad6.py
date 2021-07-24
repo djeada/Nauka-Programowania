@@ -10,7 +10,7 @@ Przyklad dla wysokosci 5:
 """
 
 # Wersja 1
-def wypiszZV1(wysokosc):
+def wypisz_zv1(wysokosc):
     for j in range(wysokosc):
         for i in range(wysokosc):
             if j == 0 or j == wysokosc - 1:
@@ -23,4 +23,4 @@ def wypiszZV1(wysokosc):
 
 
 for i in range(1, 6):
-    wypiszZV1(i)
+    wypisz_zv1(i)

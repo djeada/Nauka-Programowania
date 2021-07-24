@@ -3,38 +3,38 @@ Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzal
 """
 
 # Wersja 1
-def usunPowtarzajacychSieSasiadowV1(napis):
-    nowyNapis = ""
-    ostatniUsunietyZnak = ""
+def usun_powtarzajacych_sie_sasiadow_v1(napis):
+    nowy_napis = ""
+    ostatni_usuniety_znak = ""
 
     for i in range(len(napis) - 1):
         if not napis[i] == napis[i + 1]:
-            nowyNapis += napis[i]
-            ostatniUsunietyZnak = napis[i]
+            nowy_napis += napis[i]
+            ostatni_usuniety_znak = napis[i]
 
-    if len(napis) and napis[-1] != ostatniUsunietyZnak:
-        nowyNapis += napis[-1]
+    if len(napis) and napis[-1] != ostatni_usuniety_znak:
+        nowy_napis += napis[-1]
 
-    return nowyNapis
+    return nowy_napis
 
 
 # Testy Poprawnosci
 napis = "AAAAAAAAAABBBBBBBBA"
 wynik = "ABA"
-assert usunPowtarzajacychSieSasiadowV1(napis) == wynik
+assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
 napis = "XXXYYASFBY"
 wynik = "XYASFBY"
-assert usunPowtarzajacychSieSasiadowV1(napis) == wynik
+assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
 napis = "CCCCCCCCCCCCCCCCCCCCCCCCCCCC"
 wynik = "C"
-assert usunPowtarzajacychSieSasiadowV1(napis) == wynik
+assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
 napis = ""
 wynik = ""
-assert usunPowtarzajacychSieSasiadowV1(napis) == wynik
+assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
 napis = "AAABB"
 wynik = "AB"
-assert usunPowtarzajacychSieSasiadowV1(napis) == wynik
+assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik

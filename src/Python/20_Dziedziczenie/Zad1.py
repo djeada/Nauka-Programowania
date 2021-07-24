@@ -20,5 +20,5 @@ class DzieckoB(Rodzic):
 
 
 rodzic = Rodzic()
-dzieckoA = DzieckoA()
-dzieckoB = DzieckoB()
+dziecko_a = DzieckoA()
+dziecko_b = DzieckoB()

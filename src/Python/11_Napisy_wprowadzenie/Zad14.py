@@ -3,12 +3,12 @@ Stworz napis skladajacy sie z liczb od 1 do n.
 """
 
 # Wersja 1
-def liczbyDoNV1(n):
+def liczby_do_nv1(n):
     return "".join([str(i) for i in range(1, n + 1)])
 
 
 # Wersja 2
-def liczbyDoNV2(n):
+def liczby_do_nv2(n):
 
     wynik = ""
 
@@ -19,8 +19,8 @@ def liczbyDoNV2(n):
 
 
 # Testy Poprawnosci
-assert liczbyDoNV1(3) == "123"
-assert liczbyDoNV2(3) == "123"
+assert liczby_do_nv1(3) == "123"
+assert liczby_do_nv2(3) == "123"
 
-assert liczbyDoNV1(-1) == ""
-assert liczbyDoNV2(-1) == ""
+assert liczby_do_nv1(-1) == ""
+assert liczby_do_nv2(-1) == ""

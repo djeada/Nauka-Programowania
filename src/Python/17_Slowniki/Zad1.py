@@ -3,7 +3,7 @@ Wypisz słownik gdzie kluczami są liczby, a wartościami ich kwadraty.
 """
 
 # Wersja 1
-def zbudujSlownikV1(lista):
+def zbuduj_slownik_v1(lista):
 
     slownik = {}
 
@@ -14,7 +14,7 @@ def zbudujSlownikV1(lista):
 
 
 # Wersja 2
-def zbudujSlownikV2(lista):
+def zbuduj_slownik_v2(lista):
     return {x: x ** 2 for x in lista}
 
 
@@ -22,5 +22,5 @@ def zbudujSlownikV2(lista):
 lista = [3, 9, 2, -7, 1]
 wynik = {3: 9, 9: 81, 2: 4, -7: 49, 1: 1}
 
-assert zbudujSlownikV1(lista) == wynik
-assert zbudujSlownikV2(lista) == wynik
+assert zbuduj_slownik_v1(lista) == wynik
+assert zbuduj_slownik_v2(lista) == wynik

@@ -5,13 +5,13 @@ Znajdz wszystkie pliki tekstowe (rozszerzenie .txt) znajdujace sie w podanym fol
 import os
 
 # Wersja 1
-szukanyNapis = "a"
-napisDoPodmiany = "x"
+szukany_napis = "a"
+napis_do_podmiany = "x"
 rozszerzenie = ".txt"
 folder = os.getcwd()
 
 
-def plikiWFolderze(folder):
+def pliki_w_folderze(folder):
     pliki = []
     for item in os.listdir(folder):
         sciezka = os.path.join(folder, item)
@@ -21,18 +21,18 @@ def plikiWFolderze(folder):
     return pliki
 
 
-def modyfikujPlik(plik, szukanyNapis, napisDoPodmiany):
+def modyfikuj_plik(plik, szukany_napis, napis_do_podmiany):
     with open(plik, "r") as otwartyPlik:
         dane = otwartyPlik.read()
 
     with open(plik, "w") as otwartyPlik:
-        otwartyPlik.write(dane.replace(szukanyNapis, napisDoPodmiany))
+        otwartyPlik.write(dane.replace(szukany_napis, napis_do_podmiany))
 
 
-def znajdzOrazModyfikuj(folder, rozszerzenie, szukanyNapis, napisDoPodmiany):
-    for plik in plikiWFolderze(folder):
+def znajdz_oraz_modyfikuj(folder, rozszerzenie, szukany_napis, napis_do_podmiany):
+    for plik in pliki_w_folderze(folder):
         if rozszerzenie in plik:
-            modyfikujPlik(plik, szukanyNapis, napisDoPodmiany)
+            modyfikuj_plik(plik, szukany_napis, napis_do_podmiany)
 
 
-znajdzOrazModyfikuj(folder, rozszerzenie, szukanyNapis, napisDoPodmiany)
+znajdz_oraz_modyfikuj(folder, rozszerzenie, szukany_napis, napis_do_podmiany)

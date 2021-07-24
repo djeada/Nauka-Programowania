@@ -7,7 +7,7 @@ Jesli lista nie ma elementu dominujacego, zwroc -1.
 
 # Wersja 1
 # bez uzycia slownika
-def elementDominujacyV1(lista):
+def element_dominujacy_v1(lista):
 
     for i in range(len(lista) // 2 + 1):
         licznik = 1
@@ -23,7 +23,7 @@ def elementDominujacyV1(lista):
 
 # Wersja 2
 # z uzyciem slownika
-def elementDominujacyV2(lista):
+def element_dominujacy_v2(lista):
 
     histo = {}
 
@@ -45,10 +45,10 @@ if __name__ == "__main__":
     # Testy Poprawnosci
     lista = [4, 7, 4, 4, 2]
     wynik = 4
-    assert elementDominujacyV1(lista) == wynik
-    assert elementDominujacyV2(lista) == wynik
+    assert element_dominujacy_v1(lista) == wynik
+    assert element_dominujacy_v2(lista) == wynik
 
     lista = [0, 0, 2, 1, 9]
     wynik = -1
-    assert elementDominujacyV1(lista) == wynik
-    assert elementDominujacyV2(lista) == wynik
+    assert element_dominujacy_v1(lista) == wynik
+    assert element_dominujacy_v2(lista) == wynik

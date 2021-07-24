@@ -4,7 +4,7 @@ Otrzymujesz liste skladajaca sie z ciagu liter A i B. Litery A reprezentuja samo
 """
 
 # Wersja 1
-def policzSamochodyV1(lista):
+def policz_samochody_v1(lista):
 
     licznik = 0
     for i in range(len(lista)):
@@ -22,7 +22,7 @@ def policzSamochodyV1(lista):
 
 
 # Wersja 2
-def policzSamochodyV2(lista):
+def policz_samochody_v2(lista):
     licznik = 0
     pom = 0
 
@@ -40,11 +40,11 @@ def policzSamochodyV2(lista):
 lista = ["A", "B", "A", "B", "B"]
 wynik = 5
 
-assert policzSamochodyV1(lista) == wynik
-assert policzSamochodyV2(lista) == wynik
+assert policz_samochody_v1(lista) == wynik
+assert policz_samochody_v2(lista) == wynik
 
 lista = ["A", "A", "A", "B", "B", "A", "B", "A", "B", "A", "A", "A"]
 wynik = 15
 
-assert policzSamochodyV1(lista) == wynik
-assert policzSamochodyV2(lista) == wynik
+assert policz_samochody_v1(lista) == wynik
+assert policz_samochody_v2(lista) == wynik

@@ -3,7 +3,7 @@ Sprawdz czy binarna reprezentacja liczby jest palindromem.
 """
 
 
-def czyPalindromV1(liczba):
+def czy_palindrom_v1(liczba):
 
     odwrocona = 0
 
@@ -19,8 +19,8 @@ if __name__ == "__main__":
 
     liczba = 0b11011
 
-    assert czyPalindromV1(liczba)
+    assert czy_palindrom_v1(liczba)
 
     liczba = 0b1001101
 
-    assert not czyPalindromV1(liczba)
+    assert not czy_palindrom_v1(liczba)

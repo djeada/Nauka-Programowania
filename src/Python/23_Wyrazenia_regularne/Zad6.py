@@ -6,7 +6,7 @@ Jesli wynikiem podzialu jest pusty napis, pomin.
 import re
 
 # Wersja 1
-def podzielZdanieV1(zdanie):
+def podziel_zdanie_v1(zdanie):
     return [x for x in re.split(r"[,.!?]", zdanie) if x]
 
 
@@ -14,4 +14,4 @@ def podzielZdanieV1(zdanie):
 zdanie = "hej, pan slimak! tak to ja. chodzcie juz zaspiewam wam."
 wynik = ["hej", " pan slimak", " tak to ja", " chodzcie juz zaspiewam wam"]
 
-assert podzielZdanieV1(zdanie) == wynik
+assert podziel_zdanie_v1(zdanie) == wynik

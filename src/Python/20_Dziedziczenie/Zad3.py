@@ -11,10 +11,10 @@ class Zwierz:
     def __repr__(self):
         return "nazwa : %s  dzwiek : %s" % (self.nazwa, self.dzwiek)
 
-    def getDzwiek(self):
+    def get_dzwiek(self):
         return self.dzwiek
 
-    def getTyp(self):
+    def get_typ(self):
         print("Zwierz")
 
 
@@ -26,17 +26,17 @@ class Pies(Zwierz):
     def __repr__(self):
         return "nazwa : %s  dzwiek : %s  dom : %s" % (self.nazwa, self.dzwiek, self.dom)
 
-    def getTyp(self):
+    def get_typ(self):
         print("Pies")
 
-    def wydajOdglosy(self):
+    def wydaj_odglosy(self):
         print(self.dzwiek)
         print(self.dzwiek)
 
 
 class JakiZwierz(object):
-    def getTyp(self, objType):
-        objType.getTyp()
+    def get_typ(self, obj_type):
+        obj_type.get_typ()
 
 
 a = Zwierz("tajemny zwierz", "xxx")
@@ -45,6 +45,6 @@ c = JakiZwierz()
 
 print(a)
 print(b)
-b.wydajOdglosy()
-c.getTyp(a)
-c.getTyp(b)
+b.wydaj_odglosy()
+c.get_typ(a)
+c.get_typ(b)

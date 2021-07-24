@@ -8,15 +8,15 @@ def znak(n):
 # a >= b : znakA = 1, znakB = 0;
 # a < b : znakA = 0, znakB = 1;
 def maks2(a, b):
-    znakB = znak(a - b)
-    znakA = znakB ^ 1
-    return znakA * a + znakB * b
+    znak_b = znak(a - b)
+    znak_a = znak_b ^ 1
+    return znak_a * a + znak_b * b
 
 
 def min2(a, b):
-    znakB = znak(a - b)
-    znakA = znakB ^ 1
-    return znakB * a + znakA * b
+    znak_b = znak(a - b)
+    znak_a = znak_b ^ 1
+    return znak_b * a + znak_a * b
 
 
 if __name__ == "__main__":

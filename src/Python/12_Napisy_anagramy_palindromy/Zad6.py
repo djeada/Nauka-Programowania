@@ -3,7 +3,7 @@ Sprawdz czy istnieje permutacja danego slowa bedaca palindromem.
 """
 
 # Wersja 1
-def znajdzPermutacje(napis, start, koniec, wynik=[]):
+def znajdz_permutacje(napis, start, koniec, wynik=[]):
 
     if start >= koniec:
         if "".join(napis) not in wynik:
@@ -14,14 +14,14 @@ def znajdzPermutacje(napis, start, koniec, wynik=[]):
         for i in range(start, koniec):
             napis[start], napis[i] = napis[i], napis[start]
 
-            znajdzPermutacje(napis, start + 1, koniec, wynik)
+            znajdz_permutacje(napis, start + 1, koniec, wynik)
 
             napis[start], napis[i] = napis[i], napis[start]
 
         return wynik
 
 
-def czyPalindrom(slowo):
+def czy_palindrom(slowo):
     for i in range(len(slowo) // 2):
         if slowo[i] != slowo[-i - 1]:
             return False
@@ -29,14 +29,14 @@ def czyPalindrom(slowo):
     return True
 
 
-def czyIstniejePermutacjaBedacaPalindromemV1(slowo):
+def czy_istnieje_permutacja_bedaca_palindromem_v1(slowo):
 
-    permutacje = znajdzPermutacje(list(slowo), 0, len(slowo))
+    permutacje = znajdz_permutacje(list(slowo), 0, len(slowo))
 
     wynik = []
 
     for p in permutacje:
-        if czyPalindrom(p):
+        if czy_palindrom(p):
             wynik.append(p)
 
     return wynik
@@ -46,4 +46,4 @@ def czyIstniejePermutacjaBedacaPalindromemV1(slowo):
 slowo = "adamm"
 wynik = ["madam", "amdma"]
 
-assert sorted(czyIstniejePermutacjaBedacaPalindromemV1(slowo)) == sorted(wynik)
+assert sorted(czy_istnieje_permutacja_bedaca_palindromem_v1(slowo)) == sorted(wynik)

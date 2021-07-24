@@ -5,8 +5,8 @@ Usun czesc wiersza od pierwszego wystapienia napisu A do konca.
 import re
 
 # Wersja 1
-def usunZWierszaV1(tekst, napisA):
-    return [re.sub(r"{0}.*".format(napisA), "", e) for e in tekst.splitlines()]
+def usun_z_wiersza_v1(tekst, napis_a):
+    return [re.sub(r"{0}.*".format(napis_a), "", e) for e in tekst.splitlines()]
 
 
 if __name__ == "__main__":
@@ -27,7 +27,7 @@ Bore of true of no be deal.
 Frequently sufficient in be unaffected. 
 The furnished she concluded depending procuring concealed. 
 """
-    napisA = "a"
+    napis_a = "a"
 
     wynik = [
         "Turned it up should no v",
@@ -46,4 +46,4 @@ The furnished she concluded depending procuring concealed.
         "The furnished she concluded depending procuring conce",
     ]
 
-    assert usunZWierszaV1(tekst, napisA) == wynik
+    assert usun_z_wiersza_v1(tekst, napis_a) == wynik

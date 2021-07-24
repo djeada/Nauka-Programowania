@@ -5,29 +5,29 @@ Wypisz nazwy plikow znajdujacych sie w folderze.
 """
 
 # Wersja 1
-def plikiWFolderze(folder):
-    podFoldery = []
+def pliki_w_folderze(folder):
+    pod_foldery = []
     pliki = []
     for item in os.listdir(folder):
         sciezka = os.path.join(folder, item)
         if os.path.isdir(sciezka):
-            podFoldery.append(sciezka)
+            pod_foldery.append(sciezka)
         else:
             pliki.append(sciezka)
 
-    return podFoldery, pliki
+    return pod_foldery, pliki
 
 
-def sciezkaDoNazwy(sciezka):
+def sciezka_do_nazwy(sciezka):
     return sciezka[sciezka.rfind(os.sep) + 1 :]
 
 
-podFoldery, pliki = plikiWFolderze(os.getcwd())
+podFoldery, pliki = pliki_w_folderze(os.getcwd())
 
 if podFoldery:
     print(
         "W folderze "
-        + sciezkaDoNazwy(os.getcwd())
+        + sciezka_do_nazwy(os.getcwd())
         + "znajduja sie nastepujace podfoldery: "
     )
     for folder in podFoldery:
@@ -35,7 +35,9 @@ if podFoldery:
 
 if pliki:
     print(
-        "W folderze " + sciezkaDoNazwy(os.getcwd()) + "znajduja sie nastepujace pliki: "
+        "W folderze "
+        + sciezka_do_nazwy(os.getcwd())
+        + "znajduja sie nastepujace pliki: "
     )
     for plik in pliki:
-        print(sciezkaDoNazwy(plik))
+        print(sciezka_do_nazwy(plik))

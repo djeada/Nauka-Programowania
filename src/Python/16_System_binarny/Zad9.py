@@ -6,7 +6,7 @@ c) Zamien male litery na wielkie i wielkie na male.
 """
 
 
-def wielkieNaMale(slowo):
+def wielkie_na_male(slowo):
     wynik = ""
 
     for litera in slowo:
@@ -15,7 +15,7 @@ def wielkieNaMale(slowo):
     return wynik
 
 
-def maleNaWielkie(slowo):
+def male_na_wielkie(slowo):
     wynik = ""
 
     for litera in slowo:
@@ -24,7 +24,7 @@ def maleNaWielkie(slowo):
     return wynik
 
 
-def odwrocWielkoscLiter(slowo):
+def odwroc_wielkosc_liter(slowo):
 
     wynik = ""
 
@@ -46,13 +46,13 @@ if __name__ == "__main__":
     slowo = "KURCZAKU"
     wynik = "kurczaku"
 
-    assert wielkieNaMale(slowo) == wynik
+    assert wielkie_na_male(slowo) == wynik
 
     slowo = "piesek"
     wynik = "PIESEK"
 
-    assert maleNaWielkie(slowo) == wynik
+    assert male_na_wielkie(slowo) == wynik
 
     slowo = "wszedl Kotek na PloteK i mrUga"
 
-    print(odwrocWielkoscLiter(slowo))
+    print(odwroc_wielkosc_liter(slowo))

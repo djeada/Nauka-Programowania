@@ -3,32 +3,32 @@ Usuń powtórzenia z napisu. Dany znak może pojawić się jedynie raz w całym 
 """
 
 # Wersja 1
-def usunPowtorzeniaV1(napis):
-    nowyNapis = ""
+def usun_powtorzenia_v1(napis):
+    nowy_napis = ""
     for znak in napis:
-        if znak not in nowyNapis:
-            nowyNapis += znak
+        if znak not in nowy_napis:
+            nowy_napis += znak
 
-    return nowyNapis
+    return nowy_napis
 
 
 # Testy Poprawnosci
 napis = "AAAAAAAAAABBBBBBBBA"
 wynik = "AB"
-assert usunPowtorzeniaV1(napis) == wynik
+assert usun_powtorzenia_v1(napis) == wynik
 
 napis = "XXXYYASFBY"
 wynik = "XYASFB"
-assert usunPowtorzeniaV1(napis) == wynik
+assert usun_powtorzenia_v1(napis) == wynik
 
 napis = "CCCCCCCCCCCCCCCCCCCCCCCCCCCC"
 wynik = "C"
-assert usunPowtorzeniaV1(napis) == wynik
+assert usun_powtorzenia_v1(napis) == wynik
 
 napis = ""
 wynik = ""
-assert usunPowtorzeniaV1(napis) == wynik
+assert usun_powtorzenia_v1(napis) == wynik
 
 napis = "AAABBAABBABABABA"
 wynik = "AB"
-assert usunPowtorzeniaV1(napis) == wynik
+assert usun_powtorzenia_v1(napis) == wynik

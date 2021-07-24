@@ -1,4 +1,4 @@
-def policzUstawioneBity(liczba):
+def policz_ustawione_bity(liczba):
     suma = 0
     while liczba > 0:
         if liczba & 1:
@@ -7,13 +7,13 @@ def policzUstawioneBity(liczba):
     return suma
 
 
-def przygotujTablice():
-    return [policzUstawioneBity(x) for x in range(256)]
+def przygotuj_tablice():
+    return [policz_ustawione_bity(x) for x in range(256)]
 
 
 # Zlozonosc czasowa O(1)
 # Zlozonosc pamieciowa O(1)
-def ustawioneBity(tablica, n):
+def ustawione_bity(tablica, n):
     return (
         tablica[n & 0xFF]
         + tablica[(n >> 8) & 0xFF]
@@ -24,6 +24,6 @@ def ustawioneBity(tablica, n):
 
 if __name__ == "__main__":
 
-    tablica = przygotujTablice()
+    tablica = przygotuj_tablice()
 
-    print(ustawioneBity(tablica, -1))
+    print(ustawione_bity(tablica, -1))

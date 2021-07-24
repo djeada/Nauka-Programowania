@@ -4,12 +4,12 @@ Posortuj liste obiektow wzgledem jednego z atrybutow.
 
 
 class Miasto:
-    def __init__(self, nazwa, liczbaMieszkancow):
+    def __init__(self, nazwa, liczba_mieszkancow):
         self.nazwa = nazwa
-        self.liczbaMieszkancow = liczbaMieszkancow
+        self.liczba_mieszkancow = liczba_mieszkancow
 
     def __repr__(self):
-        return self.nazwa + " : " + str(self.liczbaMieszkancow)
+        return self.nazwa + " : " + str(self.liczba_mieszkancow)
 
 
 miasta = [

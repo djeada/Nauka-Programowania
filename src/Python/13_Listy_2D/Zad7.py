@@ -5,7 +5,7 @@ W takim przypadku polacz je ze soba i zwroc liste niepokrywajacych sie przedzial
 """
 
 # Wersja 1
-def polaczPrzedzialyV1(lista):
+def polacz_przedzialy_v1(lista):
     lista = sorted(lista)
     wynik = []
     pocz, koniec = lista[0][0], lista[0][1]
@@ -28,4 +28,4 @@ def polaczPrzedzialyV1(lista):
 lista = [(23, 67), (23, 53), (45, 88), (77, 88), (10, 22), (11, 12), (42, 45)]
 wynik = [(10, 22), (23, 88)]
 
-assert polaczPrzedzialyV1(lista) == wynik
+assert polacz_przedzialy_v1(lista) == wynik

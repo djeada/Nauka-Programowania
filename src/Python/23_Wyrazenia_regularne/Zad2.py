@@ -11,7 +11,7 @@ Sprawdz czy haslo spelnia nastepujace warunki:
 import re
 
 # Wersja 1
-def sprawdzPoprawnoscV1(haslo):
+def sprawdz_poprawnosc_v1(haslo):
     if re.search("[a-z]", haslo) and re.search("[A-Z]", haslo):
         if re.search("[0-9]", haslo) and re.search("[!$#@_]", haslo):
             return len(haslo) >= 8 and len(haslo) <= 15
@@ -24,4 +24,4 @@ hasla = ["123456", "HulaKula123!", "$$KAsiORA302$$", "proste_haslo123", "22tajnE
 wyniki = [False, True, True, False, True]
 
 for haslo, wynik in zip(hasla, wyniki):
-    assert sprawdzPoprawnoscV1(haslo) == wynik
+    assert sprawdz_poprawnosc_v1(haslo) == wynik

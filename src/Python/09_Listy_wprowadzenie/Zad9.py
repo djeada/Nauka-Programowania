@@ -3,7 +3,7 @@ Usun duplikaty z listy.
 """
 
 # Wersja 1
-def usunDuplikatyV1(lista):
+def usun_duplikaty_v1(lista):
     pom = []
 
     for x in lista:
@@ -14,12 +14,12 @@ def usunDuplikatyV1(lista):
 
 
 # Wersja 2
-def usunDuplikatyV2(lista):
+def usun_duplikaty_v2(lista):
     return list(set(lista))
 
 
 # Wersja 3
-def usunDuplikatyV3(lista):
+def usun_duplikaty_v3(lista):
     wynik = lista
 
     [wynik.remove(x) for x in wynik if wynik.count(x) > 1]
@@ -31,6 +31,6 @@ def usunDuplikatyV3(lista):
 lista = [3, 5, 3, 3, 2]
 wynik = [3, 5, 2]
 
-assert sorted(usunDuplikatyV1(lista)) == sorted(wynik)
-assert sorted(usunDuplikatyV2(lista)) == sorted(wynik)
-assert sorted(usunDuplikatyV3(lista)) == sorted(wynik)
+assert sorted(usun_duplikaty_v1(lista)) == sorted(wynik)
+assert sorted(usun_duplikaty_v2(lista)) == sorted(wynik)
+assert sorted(usun_duplikaty_v3(lista)) == sorted(wynik)

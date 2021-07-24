@@ -5,29 +5,29 @@ Wynik: jedna lista skladajaca sie z elementow obu otrzymanych list.
 """
 
 # Wersja 1
-def polaczListyV1(listA, listaB):
+def polacz_listy_v1(list_a, lista_b):
 
-    if len(listA) != len(listaB):
+    if len(list_a) != len(lista_b):
         return False
 
     wynik = []
 
-    for i in range(len(listaA)):
-        wynik.append(listaA[i])
-        wynik.append(listaB[i])
+    for i in range(len(lista_a)):
+        wynik.append(lista_a[i])
+        wynik.append(lista_b[i])
 
     return wynik
 
 
 # Wersja 2
-def polaczListyV2(listA, listaB):
+def polacz_listy_v2(list_a, lista_b):
 
-    if len(listA) != len(listaB):
+    if len(list_a) != len(lista_b):
         return False
 
     wynik = []
 
-    for a, b in zip(listaA, listaB):
+    for a, b in zip(lista_a, lista_b):
         wynik.append(a)
         wynik.append(b)
 
@@ -35,9 +35,9 @@ def polaczListyV2(listA, listaB):
 
 
 # Testy Poprawnosci
-listaA = ["a", "c", "e"]
-listaB = ["b", "d", "f"]
+lista_a = ["a", "c", "e"]
+lista_b = ["b", "d", "f"]
 wynik = ["a", "b", "c", "d", "e", "f"]
 
-assert polaczListyV1(listaA, listaB) == wynik
-assert polaczListyV2(listaA, listaB) == wynik
+assert polacz_listy_v1(lista_a, lista_b) == wynik
+assert polacz_listy_v2(lista_a, lista_b) == wynik
