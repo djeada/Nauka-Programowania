@@ -7,23 +7,23 @@ Podciagi nie musza byc takie same.
 # Wersja 1
 # Zlozonosc czasowa O(n)
 # Zlozonosc pamieciowa O(n)
-def znajdzPodciagV1(listaA, listaB):
+def znajdz_podciag_v1(lista_a, lista_b):
 
-    if len(listaA) != len(listaB):
-        return False
+    if len(lista_a) != len(lista_b):
+        raise ValueError("Listy musza byc rownej dlugosci.")
 
     histo = {}
 
     histo[0] = -1
 
-    wynik, sumaA, sumaB = 0, 0, 0
+    wynik, suma_a, suma_b = 0, 0, 0
 
-    for i in range(len(listaA)):
+    for i in range(len(lista_a)):
 
-        sumaA += listaA[i]
-        sumaB += listaB[i]
+        suma_a += lista_a[i]
+        suma_b += lista_b[i]
 
-        roznica = sumaA - sumaB
+        roznica = suma_a - suma_b
 
         if roznica not in histo:
             histo[roznica] = i
@@ -34,11 +34,30 @@ def znajdzPodciagV1(listaA, listaB):
     return wynik
 
 
-if __name__ == "__main__":
-
-    # Testy poprawnosci
-    listaA = [0, 0, 1, 1, 1, 1]
-    listaB = [0, 1, 1, 0, 1, 0]
+# Testy Poprawnosci
+def test_1():
+    lista_a = [0, 0, 1, 1, 1, 1]
+    lista_b = [0, 1, 1, 0, 1, 0]
     wynik = 5
 
-    print(znajdzPodciagV1(listaA, listaB))
+    assert znajdz_podciag_v1(lista_a, lista_b) == wynik
+
+
+def test_2():
+    lista_a = [0, 0, 1, 1]
+    lista_b = [0, 1, 1, 0, 1, 0]
+
+    try:
+        znajdz_podciag_v1(lista_a, lista_b)()
+        assert False
+    except ValueError:
+        assert True
+
+
+def main():
+    test_1()
+    test_2()
+
+
+if __name__ == "__main__":
+    main()

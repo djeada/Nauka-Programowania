@@ -1,25 +1,50 @@
 """
-Znajdz zbior potegowy danego zbioru.
+Otrzymujesz liste liczb. Znajdz jej zbior potegowy, czyli zbior wszystkich jej
+podzbiorow.
 """
 
 # Zlozonosc O(n.2^n)
-def zbiorPotegowy(lista):
+def zbior_potegowy(lista):
     # wymaga sortowania O(nlogn)
     lista.sort()
 
     N = int(pow(2, len(lista)))
-    zbiorPotegowy = set()
+    zbior_potegowy = set()
 
     for i in range(N):
         subset = [lista[j] for j in range(len(lista)) if i & (1 << j)]
-        zbiorPotegowy.add(tuple(subset))
+        zbior_potegowy.add(tuple(subset))
 
-    return zbiorPotegowy
+    return zbior_potegowy
 
 
-if __name__ == "__main__":
-
+# Testy Poprawnosci
+def test_1():
     lista = [1, 2, 1]
     wynik = {(1, 2), (1,), (2,), (1, 1, 2), (), (1, 1)}
 
-    assert sorted(zbiorPotegowy(lista)) == sorted(wynik)
+    assert sorted(zbior_potegowy(lista)) == sorted(wynik)
+
+
+def test_2():
+    lista = [5, 3]
+    wynik = {(), (3,), (3, 5), (5,)}
+
+    assert sorted(zbior_potegowy(lista)) == sorted(wynik)
+
+
+def test_3():
+    lista = []
+    wynik = {()}
+
+    assert zbior_potegowy(lista) == wynik
+
+
+def main():
+    test_1()
+    test_2()
+    test_3()
+
+
+if __name__ == "__main__":
+    main()

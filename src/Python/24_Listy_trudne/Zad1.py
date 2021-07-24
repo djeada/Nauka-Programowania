@@ -5,42 +5,57 @@ Zachowanie dla otrzymanej tablicy skladajacej sie z samych zer jest nieokreslone
 
 # Wersja 1
 # Zlozonosc czasowa O(n)
-# Zlozonosc obliczeniowa O(1)
-def znajdzZeroDoPodmianyV1(lista):
-    licznikJedynek = 0
-    indeksZera = -1
+# Zlozonosc pamieciowa O(1)
+def znajdz_zero_do_podmiany_v1(lista):
+    licznik_jedynek = 0
+    indeks_zera = -1
 
-    licznikZer = 0
-    poprzedniIndeksZera = -1
+    licznik_zer = 0
+    poprzedni_indeks_zera = -1
 
     for i in range(len(lista)):
 
         if lista[i] == 1:
-            licznikZer += 1
+            licznik_zer += 1
 
         else:
-            licznikZer = i - poprzedniIndeksZera
-            poprzedniIndeksZera = i
+            licznik_zer = i - poprzedni_indeks_zera
+            poprzedni_indeks_zera = i
 
-        if licznikZer > licznikJedynek:
-            licznikJedynek = licznikZer
-            indeksZera = poprzedniIndeksZera
+        if licznik_zer > licznik_jedynek:
+            licznik_jedynek = licznik_zer
+            indeks_zera = poprzedni_indeks_zera
 
-    return indeksZera
+    return indeks_zera
 
 
 # Testy Poprawnosci
-lista = [0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
-wynik = 7
+def test_1():
+    lista = [0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
+    wynik = 7
 
-assert znajdzZeroDoPodmianyV1(lista) == wynik
+    assert znajdz_zero_do_podmiany_v1(lista) == wynik
 
-lista = [1, 1, 1, 1, 1, 1, 1, 1]
-wynik = -1
 
-assert znajdzZeroDoPodmianyV1(lista) == wynik
+def test_2():
+    lista = [1, 1, 1, 1, 1, 1, 1, 1]
+    wynik = -1
 
-lista = [1, 0, 1, 1, 1, 1, 1, 1]
-wynik = 1
+    assert znajdz_zero_do_podmiany_v1(lista) == wynik
 
-assert znajdzZeroDoPodmianyV1(lista) == wynik
+
+def test_3():
+    lista = [1, 0, 1, 1, 1, 1, 1, 1]
+    wynik = 1
+
+    assert znajdz_zero_do_podmiany_v1(lista) == wynik
+
+
+def main():
+    test_1()
+    test_2()
+    test_3()
+
+
+if __name__ == "__main__":
+    main()
