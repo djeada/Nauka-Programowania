@@ -1173,7 +1173,7 @@ Rozwiązania
         </tr>
     </thead>
     <tbody>
-        <tr>
+    <tr>
             <td>1</td>
             <td>Wypisz na przemian.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad1.py">Python</a></td>
@@ -1293,9 +1293,9 @@ Rozwiązania
             <td><a>Rust</a></td>
             <td>★★☆</td>
         </tr>
-
     </tbody>
 </table>
+
 <h1>Napisy - wprowadzenie</h1>
 <table>
     <thead>
