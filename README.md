@@ -3141,7 +3141,7 @@ Rozwiązania
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
+            <td><aListy - trudne>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
         </tr>
@@ -3217,7 +3217,6 @@ Rozwiązania
             <td><a>Rust</a></td>
             <td>★★★</td>
         </tr>
-
     </tbody>
 </table>
 
