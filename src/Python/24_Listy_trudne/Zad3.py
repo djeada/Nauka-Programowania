@@ -3,7 +3,7 @@ Znajdz najmniejszy iloczyn dla trojek z listy.
 """
 
 # Wersja 1
-# Zlozonosc czasowa O(n^3)
+# Zlozonosc czasowa O(nlogn)
 # Zlozonosc pamieciowa O(1)
 def min_iloczyn_v1(lista):
 
