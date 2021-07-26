@@ -10,7 +10,7 @@ def min_iloczyn_v1(lista):
     n = len(lista)
 
     if n <= 2:
-        return False
+        raise ValueError("Listy musza byc rownej dlugosci.")
 
     lista.sort()
 
@@ -25,7 +25,7 @@ def min_iloczyn_v2(lista):
     n = len(lista)
 
     if n <= 2:
-        return False
+        raise ValueError("Listy musza byc rownej dlugosci.")
 
     maks_lewo, maks_prawo, min_lewo, min_prawo = [0] * n, [0] * n, [0] * n, [0] * n
 
@@ -43,8 +43,11 @@ def min_iloczyn_v2(lista):
     maksimum = float("-inf")
 
     for i in reversed(range(n)):
-        min_prawo[i], maks_prawo[i] = minimum, maksimum
-        minimum, maksimum = min(minimum, lista[i]), max(maksimum, lista[i])
+        min_prawo[i] = minimum
+        maks_prawo[i] = maksimum
+
+        minimum = min(minimum, lista[i])
+        maksimum = max(maksimum, lista[i])
 
     wynik = float("inf")
 
@@ -66,6 +69,11 @@ def min_iloczyn_v2(lista):
 # Zlozonosc czasowa O(n)
 # Zlozonosc pamieciowa O(1)
 def min_iloczyn_v3(lista):
+
+    n = len(lista)
+
+    if n <= 2:
+        raise ValueError("Listy musza byc rownej dlugosci.")
 
     min1, min2, min3, maks1, maks2 = lista[0], lista[0], lista[0], lista[0], lista[0]
 

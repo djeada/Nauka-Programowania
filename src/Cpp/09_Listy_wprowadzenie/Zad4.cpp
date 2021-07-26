@@ -3,61 +3,56 @@
 #include <limits>
 #include <vector>
 
-//Otrzymujesz liste. Znajdz najwiekszy
-//i najmniejszy element tej listy.
-int maksV1(std::vector<int>& lista)
-{
+// Otrzymujesz liste. Znajdz najwiekszy
+// i najmniejszy element tej listy.
+int maksV1(std::vector<int> &lista) {
 
-    if (lista.empty())
-        return std::numeric_limits<int>::min();
+  if (lista.empty())
+    return std::numeric_limits<int>::min();
 
-    int maks = lista.front();
+  int maks = lista.front();
 
-    for (auto liczba : lista) {
-        if (liczba > maks)
-            maks = liczba;
-    }
+  for (auto liczba : lista) {
+    if (liczba > maks)
+      maks = liczba;
+  }
 
-    return maks;
+  return maks;
 }
 
-int minV1(std::vector<int>& lista)
-{
+int minV1(std::vector<int> &lista) {
 
-    if (lista.empty())
-        return std::numeric_limits<int>::max();
+  if (lista.empty())
+    return std::numeric_limits<int>::max();
 
-    int min = lista.front();
+  int min = lista.front();
 
-    for (auto liczba : lista) {
-        if (liczba < min)
-            min = liczba;
-    }
+  for (auto liczba : lista) {
+    if (liczba < min)
+      min = liczba;
+  }
 
-    return min;
+  return min;
 }
 
-void test1()
-{
-    std::vector<int> lista{ 3, 5, -7, 4, 9, -11, 2 };
+void test1() {
+  std::vector<int> lista{3, 5, -7, 4, 9, -11, 2};
 
-    assert(maksV1(lista) == *std::max_element(lista.begin(), lista.end()));
-    assert(minV1(lista) == *std::min_element(lista.begin(), lista.end()));
+  assert(maksV1(lista) == *std::max_element(lista.begin(), lista.end()));
+  assert(minV1(lista) == *std::min_element(lista.begin(), lista.end()));
 }
 
-void test2()
-{
-    std::vector<int> lista{ 3, -2, 4, 29, -3, -40, 8, 5, -7, -1 };
+void test2() {
+  std::vector<int> lista{3, -2, 4, 29, -3, -40, 8, 5, -7, -1};
 
-    assert(maksV1(lista) == *std::max_element(lista.begin(), lista.end()));
-    assert(minV1(lista) == *std::min_element(lista.begin(), lista.end()));
+  assert(maksV1(lista) == *std::max_element(lista.begin(), lista.end()));
+  assert(minV1(lista) == *std::min_element(lista.begin(), lista.end()));
 }
 
-int main()
-{
+int main() {
 
-    test1();
-    test2();
+  test1();
+  test2();
 
-    return 0;
+  return 0;
 }

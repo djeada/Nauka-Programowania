@@ -2,8 +2,8 @@
 
 int main() {
 
-	Kolo kolo(3);
-	std::cout << kolo;
+  Kolo kolo(3);
+  std::cout << kolo;
 
-	return 0;
+  return 0;
 }

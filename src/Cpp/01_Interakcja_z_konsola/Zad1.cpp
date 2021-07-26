@@ -1,19 +1,18 @@
 #include <iostream>
 
-int main()
-{
+int main() {
 
-    /*
-	Wypisz na konsole swoje inicjaly.
-	*/
+  /*
+      Wypisz na konsole swoje inicjaly.
+      */
 
-    std::cout << "A.D." << std::endl;
+  std::cout << "A.D." << std::endl;
 
-    /*
-	Wypisz na konsole "witaj swiecie"
-	*/
+  /*
+      Wypisz na konsole "witaj swiecie"
+      */
 
-    std::cout << "Witaj swiecie" << std::endl;
+  std::cout << "Witaj swiecie" << std::endl;
 
-    return 0;
+  return 0;
 }

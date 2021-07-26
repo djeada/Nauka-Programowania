@@ -1,5 +1,6 @@
 /*
-Sprawdz czy slowoA rozpoczyna sie od slowaB. Zignoruj roznice miedzy malymi i wielkimi literami.
+Sprawdz czy slowoA rozpoczyna sie od slowaB. Zignoruj roznice miedzy malymi i
+wielkimi literami.
 */
 
 #include <algorithm>
@@ -9,27 +10,25 @@ Sprawdz czy slowoA rozpoczyna sie od slowaB. Zignoruj roznice miedzy malymi i wi
 
 using namespace std;
 
-bool rozpoczynaSieV1(string slowoA, string slowoB)
-{
-    transform(slowoA.begin(), slowoA.end(), slowoA.begin(), ::tolower);
-    transform(slowoB.begin(), slowoB.end(), slowoB.begin(), ::tolower);
+bool rozpoczynaSieV1(string slowoA, string slowoB) {
+  transform(slowoA.begin(), slowoA.end(), slowoA.begin(), ::tolower);
+  transform(slowoB.begin(), slowoB.end(), slowoB.begin(), ::tolower);
 
-    return !slowoA.find(slowoB);
+  return !slowoA.find(slowoB);
 }
 
-int main()
-{
+int main() {
 
-    //Testy Poprawnosci
-    string slowoA = "Dinozaur jest zly";
-    string slowoB = "Dino";
+  // Testy Poprawnosci
+  string slowoA = "Dinozaur jest zly";
+  string slowoB = "Dino";
 
-    assert(rozpoczynaSieV1(slowoA, slowoB) == true);
+  assert(rozpoczynaSieV1(slowoA, slowoB) == true);
 
-    slowoA = "Dinozaur jest zly";
-    slowoB = "Pies";
+  slowoA = "Dinozaur jest zly";
+  slowoB = "Pies";
 
-    assert(rozpoczynaSieV1(slowoA, slowoB) == false);
+  assert(rozpoczynaSieV1(slowoA, slowoB) == false);
 
-    return 0;
+  return 0;
 }

@@ -8,27 +8,25 @@ Znajdz i usun wszystkie wystapienia slowa w zdaniu.
 
 using namespace std;
 
-string usunWszystkieV1(string zdanie, const string slowo)
-{
-    auto k = zdanie.find(slowo);
+string usunWszystkieV1(string zdanie, const string slowo) {
+  auto k = zdanie.find(slowo);
 
-    while (k != string::npos) {
-        zdanie.erase(k, slowo.length());
-        k = zdanie.find(slowo);
-    }
+  while (k != string::npos) {
+    zdanie.erase(k, slowo.length());
+    k = zdanie.find(slowo);
+  }
 
-    return zdanie;
+  return zdanie;
 }
 
-int main()
-{
+int main() {
 
-    //Testy Poprawnosci
-    string zdanie = "Lezy jezy na wiezy";
-    string slowo = "zy";
-    string wynik = "Le je na wie";
+  // Testy Poprawnosci
+  string zdanie = "Lezy jezy na wiezy";
+  string slowo = "zy";
+  string wynik = "Le je na wie";
 
-    assert(usunWszystkieV1(zdanie, slowo) == wynik);
+  assert(usunWszystkieV1(zdanie, slowo) == wynik);
 
-    return 0;
+  return 0;
 }

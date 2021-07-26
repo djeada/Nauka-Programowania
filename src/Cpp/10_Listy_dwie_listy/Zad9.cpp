@@ -2,39 +2,36 @@
 #include <cassert>
 #include <vector>
 
-//Otrzymujesz dwie listy. Usun z pierwszej listy te
-//elementy, ktore wystepuja rowniez w drugiej liscie.
+// Otrzymujesz dwie listy. Usun z pierwszej listy te
+// elementy, ktore wystepuja rowniez w drugiej liscie.
 
-//Zlozonosc obliczeniowa O(n^2)
-//Zlozonosc pamieciowa O(n)
-void usunCzescWspolnaV1(std::vector<int>& listaA, std::vector<int>& listaB)
-{
+// Zlozonosc obliczeniowa O(n^2)
+// Zlozonosc pamieciowa O(n)
+void usunCzescWspolnaV1(std::vector<int> &listaA, std::vector<int> &listaB) {
 
-    auto it = listaA.begin();
+  auto it = listaA.begin();
 
-    while (it != listaA.end()) {
-        if (find(listaB.begin(), listaB.end(), *it) != listaB.end())
-            it = listaA.erase(it);
-        else
-            it++;
-    }
+  while (it != listaA.end()) {
+    if (find(listaB.begin(), listaB.end(), *it) != listaB.end())
+      it = listaA.erase(it);
+    else
+      it++;
+  }
 }
 
-void test1()
-{
-    std::vector<int> listaA{ 3, 6, 2, 7, 9 };
-    std::vector<int> listaB{ 4, 2, 3, 5, 6 };
-    std::vector<int> wynik{ 7, 9 };
+void test1() {
+  std::vector<int> listaA{3, 6, 2, 7, 9};
+  std::vector<int> listaB{4, 2, 3, 5, 6};
+  std::vector<int> wynik{7, 9};
 
-    usunCzescWspolnaV1(listaA, listaB);
+  usunCzescWspolnaV1(listaA, listaB);
 
-    assert(listaA == wynik);
+  assert(listaA == wynik);
 }
 
-int main()
-{
+int main() {
 
-    test1();
+  test1();
 
-    return 0;
+  return 0;
 }

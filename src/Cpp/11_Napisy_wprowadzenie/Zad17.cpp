@@ -3,36 +3,32 @@
 #include <string>
 #include <vector>
 
-//Otrzymujesz liste liczb.
-//Zamien liste na napis.
+// Otrzymujesz liste liczb.
+// Zamien liste na napis.
 
-std::string liczby(const std::vector<int>& lista)
-{
-    std::string wynik = "";
+std::string liczby(const std::vector<int> &lista) {
+  std::string wynik = "";
 
-    for (auto liczba : lista)
-        wynik += std::to_string(liczba);
+  for (auto liczba : lista)
+    wynik += std::to_string(liczba);
 
-    return wynik;
+  return wynik;
 }
 
-void test1()
-{
-    std::vector<int> lista({ 2, 4, 7 });
-    std::string wynik = "247";
-    assert(liczby(lista) == wynik);
+void test1() {
+  std::vector<int> lista({2, 4, 7});
+  std::string wynik = "247";
+  assert(liczby(lista) == wynik);
 }
 
-void test2()
-{
-    std::vector<int> lista;
-    std::string wynik = "";
-    assert(liczby(lista) == wynik);
+void test2() {
+  std::vector<int> lista;
+  std::string wynik = "";
+  assert(liczby(lista) == wynik);
 }
 
-int main()
-{
-    test1();
-    test2();
-    return 0;
+int main() {
+  test1();
+  test2();
+  return 0;
 }

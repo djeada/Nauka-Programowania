@@ -1,27 +1,26 @@
 #include <iostream>
 
-int main()
-{
+int main() {
 
-    //Dla pobranych czterech liczb, znajdz najwieksza liczbe.
+  // Dla pobranych czterech liczb, znajdz najwieksza liczbe.
 
-    std::cout << "podaj cztery liczby:" << std::endl;
+  std::cout << "podaj cztery liczby:" << std::endl;
 
-    int a;
-    int b;
-    int c;
-    int d;
+  int a;
+  int b;
+  int c;
+  int d;
 
-    std::cin >> a;
-    std::cin >> b;
-    std::cin >> c;
-    std::cin >> d;
+  std::cin >> a;
+  std::cin >> b;
+  std::cin >> c;
+  std::cin >> d;
 
-    int maksAB = a > b ? a : b;
-    int maksCD = c > d ? c : d;
-    int maks = maksAB > maksCD ? maksAB : maksCD;
+  int maksAB = a > b ? a : b;
+  int maksCD = c > d ? c : d;
+  int maks = maksAB > maksCD ? maksAB : maksCD;
 
-    std::cout << maks << std::endl;
+  std::cout << maks << std::endl;
 
-    return 0;
+  return 0;
 }

@@ -1,18 +1,16 @@
 #include <iostream>
 
-int main()
-{
+int main() {
 
-    /*
-	Wypisz na konsole najpierw druga potem pierwsza pobrana dana.
-	*/
+  /*
+      Wypisz na konsole najpierw druga potem pierwsza pobrana dana.
+      */
 
-    int a, b;
+  int a, b;
 
-    std::cin >> a >> b;
+  std::cin >> a >> b;
 
-    std::cout << b << std::endl
-              << a << std::endl;
+  std::cout << b << std::endl << a << std::endl;
 
-    return 0;
+  return 0;
 }

@@ -1,24 +1,23 @@
 #include <iomanip>
 #include <iostream>
 
-int main()
-{
+int main() {
 
-    //Dla pobranej liczby, wyswietl liczbe Pi podniesiona
-    //do potegi rownej pobranej liczbie. Wynik powinien byc
-    //zaokraglony do dwoch miejsc po przecinku.
+  // Dla pobranej liczby, wyswietl liczbe Pi podniesiona
+  // do potegi rownej pobranej liczbie. Wynik powinien byc
+  // zaokraglony do dwoch miejsc po przecinku.
 
-    std::cout << "Podaj liczbe: " << std::endl;
-    int n;
-    std::cin >> n;
+  std::cout << "Podaj liczbe: " << std::endl;
+  int n;
+  std::cin >> n;
 
-    std::cout << std::fixed << std::setprecision(2);
+  std::cout << std::fixed << std::setprecision(2);
 
-    int wynik = 1;
-    for (int i = 0; i < n; i++)
-        wynik *= 3.14;
+  int wynik = 1;
+  for (int i = 0; i < n; i++)
+    wynik *= 3.14;
 
-    std::cout << wynik << std::endl;
+  std::cout << wynik << std::endl;
 
-    return 0;
+  return 0;
 }
