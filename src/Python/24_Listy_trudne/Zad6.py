@@ -7,13 +7,13 @@ import heapq
 
 
 class Node(object):
-    def __init__(self, val: int, i: int, index: int):
-        self.val = val
+    def __init__(self, wartosc: int, i: int, indeks: int):
+        self.wartosc = wartosc
         self.i = i
-        self.index = index
+        self.indeks = indeks
 
-    def __lt__(self, other):
-        return self.val < other.val
+    def __lt__(self, inny):
+        return self.wartosc < inny.wartosc
 
 
 # Zlozonosc czasowa: O(nlogm)
@@ -22,19 +22,19 @@ def polacz_listy_v1(lista):
 
     M = len(lista)
 
-    heap = [Node(lista[i][0], i, 0) for i in range(M) if len(lista[i]) >= 1]
-    heapq.heapify(heap)
+    sterta = [Node(lista[i][0], i, 0) for i in range(M) if len(lista[i]) >= 1]
+    heapq.heapify(sterta)
     wynik = []
 
     while len(heap) > 0:
 
-        min = heapq.heappop(heap)
-        wynik.append(min.val)
+        min = heapq.heappop(sterta)
+        wynik.append(min.wartosc)
 
-        if min.index + 1 < len(lista[min.i]):
-            min.index += 1
-            min.val = lista[min.i][min.index]
-            heapq.heappush(heap, min)
+        if min.indeks + 1 < len(lista[min.i]):
+            min.indeks += 1
+            min.wartosc = lista[min.i][min.indeks]
+            heapq.heappush(sterta, min)
 
     return wynik
 
