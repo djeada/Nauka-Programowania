@@ -2991,7 +2991,7 @@ Rozwiązania
             <td>1</td>
             <td>Najdłuższy nieprzerwany ciąg jedynek.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad1.py">Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24_Listy_trudne/Zad1.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3015,7 +3015,7 @@ Rozwiązania
             <td>3</td>
             <td>Trójka o minimalnym iloczynie.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad3.py">Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24_Listy_trudne/Zad3.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3027,7 +3027,7 @@ Rozwiązania
             <td>4</td>
             <td>Wspólny podciąg o największej sumie.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad4.py">Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24_Listy_trudne/Zad4.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3039,7 +3039,7 @@ Rozwiązania
             <td>5</td>
             <td>Zbiór potęgowy.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad5.py">Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24_Listy_trudne/Zad5.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3051,7 +3051,7 @@ Rozwiązania
             <td>6</td>
             <td><b>M</b> posortowanych list.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad6.py">Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24_Listy_trudne/Zad6.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3063,7 +3063,7 @@ Rozwiązania
             <td>7</td>
             <td>Woda.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad7.py">Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24_Listy_trudne/Zad7.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3075,7 +3075,7 @@ Rozwiązania
             <td>8</td>
             <td>Sznurek.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad8.py">Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24_Listy_trudne/Zad8.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3087,7 +3087,7 @@ Rozwiązania
             <td>9</td>
             <td>Najdłuższy naprzemienny podciąg.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/24_Listy_trudne/Zad9.py">Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/24_Listy_trudne/Zad9.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
