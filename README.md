@@ -1652,7 +1652,7 @@ Rozwiązania
             <td>Macierz <i>a</i> identycznych wierszy składających się z liczb od 0 do <i>b</i>.</td>
             <td><a>Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad1.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad1">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad1">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1664,7 +1664,7 @@ Rozwiązania
             <td>Każdy element jest iloczynem współrzędnych.</td>
             <td><a>Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad2.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad2">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad2">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1688,7 +1688,7 @@ Rozwiązania
             <td>Dodawanie/odejmowanie macierzy.</td>
             <td><a>Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad4.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad4">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad4">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1700,7 +1700,7 @@ Rozwiązania
             <td>Magiczny kwadrat.</td>
             <td><a>Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad5.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad5">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad5">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1712,7 +1712,7 @@ Rozwiązania
             <td>Pokrywające się przedziały.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad6.cpp">Cpp</a></td>
-            <td><a>Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad6">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1724,7 +1724,7 @@ Rozwiązania
             <td>Wyzeruj macierz.</td>
             <td><a>Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad7.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad7">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad7">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1736,7 +1736,7 @@ Rozwiązania
             <td>Wypisz spiralnie.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad8.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad8">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad8">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1748,7 +1748,7 @@ Rozwiązania
             <td>Klepsydra o największej sumie.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad9.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad9">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad9">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1760,7 +1760,7 @@ Rozwiązania
             <td>Obróć o 90 stopni.</td>
             <td><a>Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad10.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2Dy/Zad10">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad10">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
