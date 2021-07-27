@@ -3045,7 +3045,7 @@ Rozwiązania
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
-            <td>★☆☆</td>
+            <td>★★☆</td>
         </tr>
         <tr>
             <td>6</td>
