@@ -1676,7 +1676,7 @@ Rozwiązania
             <td>Macierz z par odpowiadających sobie elementów dwóch list.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad3.cpp">Cpp</a></td>
-            <td><a>Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad3">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
