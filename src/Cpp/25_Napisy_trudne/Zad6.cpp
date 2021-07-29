@@ -1,36 +1,40 @@
 #include <algorithm>
 #include <cassert>
-#include <iostream>
 #include <string>
 
-using namespace std;
-
 /*
-Czy slowo A jest rotacja slowa B?
+Otrzymujesz dwa napisy. Sprawdz czy napisy sa swoimi rotacjami.
 */
 
-bool czyRotacjaV1(string &s1, string &s2) {
-  int N = s1.length();
-  int M = s2.length();
+bool czyRotacjaV1(std::string &s1, std::string &s2) {
 
-  if (N != M)
+  if (s1.length() != s2.length())
     return false;
 
-  string pom = s1 + s1;
-  return (pom.find(s2) != string::npos);
+  std::string pom = s1 + s1;
+
+  return (pom.find(s2) != std::string::npos);
+}
+
+// Testy Poprawnosci
+void test1() {
+  std::string slowoA = "malpka";
+  std::string slowoB = "kamapl";
+
+  assert(!czyRotacjaV1(slowoA, slowoB));
+}
+
+void test2() {
+  std::string slowoA = "malpka";
+  std::string slowoB = "pkamal";
+
+  assert(czyRotacjaV1(slowoA, slowoB));
 }
 
 int main() {
 
-  // Testy Poprawnosci
-  string slowoA = "malpka";
-  string slowoB = "pkamal";
-
-  assert(czyRotacjaV1(slowoA, slowoB));
-
-  slowoB = "kamapl";
-
-  assert(!czyRotacjaV1(slowoA, slowoB));
+  test1();
+  test2();
 
   return 0;
 }

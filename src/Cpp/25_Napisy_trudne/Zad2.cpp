@@ -1,14 +1,12 @@
-/*
-Znajdz i usun wszystkie wystapienia slowa w zdaniu.
-*/
-
 #include <cassert>
-#include <iostream>
 #include <string>
 
-using namespace std;
+/*
+Dla otrzymanych dwoch napisow, znajdz i usun w pierwszym z nich wystapienia
+drugiego.
+*/
 
-string usunWszystkieV1(string zdanie, const string slowo) {
+std::string usunWszystkieV1(std::string zdanie, const std::string &slowo) {
   auto k = zdanie.find(slowo);
 
   while (k != string::npos) {
@@ -19,14 +17,18 @@ string usunWszystkieV1(string zdanie, const string slowo) {
   return zdanie;
 }
 
-int main() {
-
-  // Testy Poprawnosci
-  string zdanie = "Lezy jezy na wiezy";
-  string slowo = "zy";
-  string wynik = "Le je na wie";
+// Testy Poprawnosci
+void test1() {
+  std::string zdanie = "Lezy jezy na wiezy";
+  std::string slowo = "zy";
+  std::string wynik = "Le je na wie";
 
   assert(usunWszystkieV1(zdanie, slowo) == wynik);
+}
+
+int main() {
+
+  test1();
 
   return 0;
 }

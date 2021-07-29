@@ -1,34 +1,37 @@
-/*
-Sprawdz czy slowoA rozpoczyna sie od slowaB. Zignoruj roznice miedzy malymi i
-wielkimi literami.
-*/
-
 #include <algorithm>
 #include <cassert>
-#include <iostream>
 #include <string>
 
-using namespace std;
+/*
+Dla otrzymanych dwoch napisow, sprawdz czy drugi stanowi poczatek pierwszego.
+*/
 
-bool rozpoczynaSieV1(string slowoA, string slowoB) {
+bool jednakowyPoczatekV1(string slowoA, string slowoB) {
   transform(slowoA.begin(), slowoA.end(), slowoA.begin(), ::tolower);
   transform(slowoB.begin(), slowoB.end(), slowoB.begin(), ::tolower);
 
   return !slowoA.find(slowoB);
 }
 
+// Testy Poprawnosci
+void test1() {
+  std::string slowoA = "Dinozaur jest zly";
+  std::string slowoB = "Dino";
+
+  assert(jednakowyPoczatekV1(slowoA, slowoB));
+}
+
+void test2() {
+  std::string slowoA = "Dinozaur jest zly";
+  std::string slowoB = "Pies";
+
+  assert(!jednakowyPoczatekV1(slowoA, slowoB));
+}
+
 int main() {
 
-  // Testy Poprawnosci
-  string slowoA = "Dinozaur jest zly";
-  string slowoB = "Dino";
-
-  assert(rozpoczynaSieV1(slowoA, slowoB) == true);
-
-  slowoA = "Dinozaur jest zly";
-  slowoB = "Pies";
-
-  assert(rozpoczynaSieV1(slowoA, slowoB) == false);
+  test1();
+  test2();
 
   return 0;
 }

@@ -1,15 +1,12 @@
 #include <algorithm>
 #include <cassert>
-#include <iostream>
 #include <string>
-
-using namespace std;
 
 /*
 Znajdz najdluzsze powtorzenie w napisie.
 */
 
-string nwp(string &slowoA, string &slowoB) {
+std::string nwp(std::string &slowoA, std::string &slowoB) {
 
   int N = slowoA.length() < slowoB.length() ? slowoA.length() : slowoB.length();
 
@@ -21,17 +18,17 @@ string nwp(string &slowoA, string &slowoB) {
   return slowoA.substr(0, N);
 }
 
-string najdluzszePowtorzenieV1(string &slowo) {
+std::string najdluzszePowtorzenieV1(std::string &slowo) {
 
-  string maks;
+  std::string maks;
 
   int N = slowo.length();
 
   for (int i = 0; i < N; i++) {
     for (int j = i + 1; j < N; j++) {
-      string slowoA = slowo.substr(i, N);
-      string slowoB = slowo.substr(j, N);
-      string podslowo = nwp(slowoA, slowoB);
+      std::string slowoA = slowo.substr(i, N);
+      std::string slowoB = slowo.substr(j, N);
+      std::string podslowo = nwp(slowoA, slowoB);
 
       if (podslowo.length() > maks.length())
         maks = podslowo;
@@ -41,13 +38,33 @@ string najdluzszePowtorzenieV1(string &slowo) {
   return maks;
 }
 
-int main() {
-
-  // Testy Poprawnosci
-  string slowo = "98432934021742343230";
-  string wynik = "432";
+// Testy Poprawnosci
+void test1() {
+  std::string slowo = "98432934021742343230";
+  std::string wynik = "432";
 
   assert(najdluzszePowtorzenieV1(slowo) == wynik);
+}
+
+void test2() {
+  std::string slowo = "abcdef";
+  std::string wynik;
+
+  assert(najdluzszePowtorzenieV1(slowo) == wynik);
+}
+
+void test3() {
+  std::string slowo = "Arnold i Arnold";
+  std::string wynik = "Arnold";
+
+  assert(najdluzszePowtorzenieV1(slowo) == wynik);
+}
+
+int main() {
+
+  test1();
+  test2();
+  test3();
 
   return 0;
 }

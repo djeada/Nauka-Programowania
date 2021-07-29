@@ -1,7 +1,11 @@
 #include <cassert>
 #include <string>
 
-// Znajdz i zamien wszystkie wystapienia slowa w zdaniu na inne podane slowo.
+/*
+Otrzymujesz trzy napisy. Pierwszy napis reprezentuje zdanie. Drugi reprezentuje
+slowo A wystepujace w zdaniu. Trzeci reprezentuje slowo B, na ktore ma zostac
+zamienione slowo A. Podmien w zdaniu wszystkie wystapienia slowa A na slowo B.
+*/
 
 std::string zamienWszystkoV1(std::string zdanie, std::string napisA,
                              std::string napisB) {
@@ -16,15 +20,19 @@ std::string zamienWszystkoV1(std::string zdanie, std::string napisA,
   return zdanie;
 }
 
-int main() {
-
-  // Testy Poprawnosci
+// Testy Poprawnosci
+void test1() {
   std::string zdanie = "Lezy jezy na wiezy";
   std::string napisA = "zy";
   std::string napisB = "rzy";
   std::string wynik = "Lerzy jerzy na wierzy";
 
   assert(zamienWszystkoV1(zdanie, napisA, napisB) == wynik);
+}
+
+int main() {
+
+  test1();
 
   return 0;
 }
