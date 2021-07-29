@@ -3112,7 +3112,7 @@ Rozwiązania
         <tr>
             <td>1</td>
             <td>Podmiana wszystkich wystąpień słowa.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25_Napisy_trudne/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25_Napisy_trudne/Zad1.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
@@ -3124,7 +3124,7 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Usuń wszystkie wystąpienia podnapisu.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25_Napisy_trudne/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25_Napisy_trudne/Zad2.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
@@ -3136,7 +3136,7 @@ Rozwiązania
         <tr>
             <td>3</td>
             <td>Czy napis <b>A</b> stanowi początek napisu <b>B</b>?</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25_Napisy_trudne/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25_Napisy_trudne/Zad3.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
@@ -3149,7 +3149,7 @@ Rozwiązania
             <td>4</td>
             <td>Usuń powtórzenia z napisu.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25_Napisy_trudne/Zad4.py">Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25_Napisy_trudne/Zad4.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3161,7 +3161,7 @@ Rozwiązania
             <td>5</td>
             <td>Znaki stojące obok siebie nie mogą się powtarzać.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25_Napisy_trudne/Zad5.py">Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25_Napisy_trudne/Zad5.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3172,7 +3172,7 @@ Rozwiązania
         <tr>
             <td>6</td>
             <td>Czy napisy są swoimi rotacjami?</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25_Napisy_trudne/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25_Napisy_trudne/Zad6.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
@@ -3184,8 +3184,8 @@ Rozwiązania
         <tr>
             <td>7</td>
             <td>Znajdź powtórzenia.</td>
-            <td><a>Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25_Napisy_trudne/Zad7.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25_Napisy_trudne/Zad7.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3196,8 +3196,8 @@ Rozwiązania
         <tr>
             <td>8</td>
             <td>Najdłuższy wspólny przedrostek.</td>
-            <td><a>Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25_Napisy_trudne/Zad8.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25_Napisy_trudne/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/25_Napisy_trudne/Zad7">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
@@ -3208,8 +3208,8 @@ Rozwiązania
         <tr>
             <td>9</td>
             <td>Najdłuższy wspólny potomek.</td>
-            <td><a>Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/25_Napisy_trudne/Zad9.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/25_Napisy_trudne/Zad9.cpp">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
