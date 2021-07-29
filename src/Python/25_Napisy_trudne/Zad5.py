@@ -1,5 +1,6 @@
 """
-Zmodyfikuj napis w taki sposob, by zadne znaki stojace obok siebie nie powtarzaly sie.
+Otrzymujesz napis. Jesli znaki stojace obok siebie powtarzaja sie,
+zachowaj pierwsze wystapienie znaku i usun powtorzenia.
 """
 
 # Wersja 1
@@ -19,22 +20,43 @@ def usun_powtarzajacych_sie_sasiadow_v1(napis):
 
 
 # Testy Poprawnosci
-napis = "AAAAAAAAAABBBBBBBBA"
-wynik = "ABA"
-assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
+def test_1():
+    napis = "AAAAAAAAAABBBBBBBBA"
+    wynik = "ABA"
+    assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
-napis = "XXXYYASFBY"
-wynik = "XYASFBY"
-assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
-napis = "CCCCCCCCCCCCCCCCCCCCCCCCCCCC"
-wynik = "C"
-assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
+def test_2():
+    napis = "XXXYYASFBY"
+    wynik = "XYASFBY"
+    assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
-napis = ""
-wynik = ""
-assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
-napis = "AAABB"
-wynik = "AB"
-assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
+def test_3():
+    napis = "CCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+    wynik = "C"
+    assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
+
+
+def test_4():
+    napis = ""
+    wynik = ""
+    assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
+
+
+def test_5():
+    napis = "AAABB"
+    wynik = "AB"
+    assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
+
+
+def main():
+    test_1()
+    test_2()
+    test_3()
+    test_4()
+    test_5()
+
+
+if __name__ == "__main__":
+    main()
