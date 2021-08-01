@@ -1043,7 +1043,7 @@ Rozwiązania
         <td>9</td>
         <td>Usuń duplikaty.</td>
         <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad9.py">Python</a></td>
-        <td><a>Cpp</a></td>
+        <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad9.cpp">Cpp</a></td>
         <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad9">Java</a></td>
         <td><a>JavaScript</a></td>
         <td><a>Bash</a></td>
