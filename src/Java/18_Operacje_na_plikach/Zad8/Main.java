@@ -3,9 +3,9 @@ import java.io.*;
 import java.nio.file.*;
 
 public class Main {
-	//Otrzymujesz napis reprezentujacy sciezkę folderu.
+	//Otrzymujesz napis reprezentujacy sciezke folderu.
 	//Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych
-	//się w folderze oraz podfolderach.
+	//sie w folderze oraz podfolderach.
 
 	public static ArrayList<String> plikiWFolderze(final String sciezka, final String rozszerzenie) {
 
@@ -59,7 +59,7 @@ public class Main {
 		}
 	}
 
-	//Usun srodkowy wiersz z kazdego pliku csv znajdujacego się w folderze
+	//Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie w folderze
 	//oraz podfolderach.
 
 	public static void zapiszDoPilku(final String sciezka, final String dane) {

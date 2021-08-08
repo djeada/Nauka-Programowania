@@ -4,7 +4,7 @@
 
 // Otrzymujesz liste 2d. Znajdz w niej klepsydre o najwiekszej sumie.
 // Klepsydra sklada sie z dokladnie 7 elementow. Trzy pierwsze elementy
-// są kolejnymi elementami dowolnego wiersza listy 2d. Nastepny element
+// sa kolejnymi elementami dowolnego wiersza listy 2d. Nastepny element
 // znajduje sie w tej samej kolumnie co drugi element i w dokladnie
 // jednym wierszu nizej. Trzy nastepne znajduja sie w tych samych
 // kolumnach co trzy pierwsze i dokladnie dwie wiersze nizej.

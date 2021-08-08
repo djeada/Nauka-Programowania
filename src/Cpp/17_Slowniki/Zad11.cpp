@@ -4,8 +4,8 @@
 #include <utility>
 #include <vector>
 
-// Otrzymujesz dwie listy. Zbuduj slownik skladajacy się z kluczy będacych
-// elementami pierwszej listy i wartosciami będacymi elementami drugiej listy.
+// Otrzymujesz dwie listy. Zbuduj slownik skladajacy sie z kluczy bedacych
+// elementami pierwszej listy i wartosciami bedacymi elementami drugiej listy.
 // Jesli listy sa roznej dlugosci zwroc pusty slownik.
 
 bool porownujKlucze(const std::pair<std::string, int> &a,

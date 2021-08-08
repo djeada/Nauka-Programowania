@@ -10,7 +10,7 @@
 
 namespace filesys = std::experimental::filesystem;
 
-// Otrzymujesz napis reprezentujący nazwe pliku.
+// Otrzymujesz napis reprezentujacy nazwe pliku.
 // Przeszukaj caly system i zapisz w liscie wszystkie sciezki plikow o danej
 // nazwie.
 

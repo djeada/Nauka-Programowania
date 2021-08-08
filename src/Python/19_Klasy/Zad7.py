@@ -1,5 +1,5 @@
 """
-Wypisz liczbę instancji klasy w programie.
+Wypisz liczbe instancji klasy w programie.
 """
 
 # Wersja 1

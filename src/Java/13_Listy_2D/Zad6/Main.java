@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Main {
-	//Otrzymujesz listę par liczb. Liczby w parze reprezentuja poczatek i
+	//Otrzymujesz liste par liczb. Liczby w parze reprezentuja poczatek i
 	//koniec przedzialu. Niektore przedzialy moga na siebie nachodzic. W takim
 	//przypadku polacz je ze soba i zwroc liste niepokrywajacych sie przedzialow.
 	private static class Pair<T1, T2 > {

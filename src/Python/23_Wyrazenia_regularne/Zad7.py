@@ -21,7 +21,7 @@ if __name__ == "__main__":
     tekst = """Folgujmy paniom nie sobie, ma rada;
 Milujmy wiernie nie jest w nich przysada.
 Godnosci trzeba nie za nic tu cnota,
-Milosci pragną nie pragna tu zlota."""
+Milosci pragna nie pragna tu zlota."""
 
     napis_a = "Mi"
     napis_b = "da"
@@ -29,7 +29,7 @@ Milosci pragną nie pragna tu zlota."""
     wynik = [
         "Folgujmy paniom nie sobie, ma rada;",
         "Milujmy wiernie nie jest w nich przysada.",
-        "Milosci pragną nie pragna tu zlota.",
+        "Milosci pragna nie pragna tu zlota.",
     ]
 
     assert zaczyna_sie_lub_konczy_v1(tekst, napis_a, napis_b) == wynik

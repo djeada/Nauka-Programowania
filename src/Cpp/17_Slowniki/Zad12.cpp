@@ -3,7 +3,7 @@
 #include <unordered_map>
 #include <vector>
 
-// Otrzymujesz dwa slowniki skladajace się z par napisow i list liczb.
+// Otrzymujesz dwa slowniki skladajace sie z par napisow i list liczb.
 // Listy sa nieuporzadkowane. Sprawdz czy slowniki skladaja sie z tych samych
 // par. Dwie listy uznajemy za identyczne jesli zawieraja te same elementy, przy
 // czym kolejnosc elementow moze byc zmieniona.

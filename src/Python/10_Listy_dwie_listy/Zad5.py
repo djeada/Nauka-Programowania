@@ -1,5 +1,5 @@
 """
-Znajdź część wspólną dwóch list.
+Znajdz czesc wspolna dwoch list.
 """
 
 # Wersja 1

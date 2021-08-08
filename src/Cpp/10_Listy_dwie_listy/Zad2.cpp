@@ -13,8 +13,8 @@ std::vector<int> dostaw(std::vector<int> &listaA, std::vector<int> &listaB) {
   return wynik;
 }
 
-// wstawienie elemntów o indeksach parzystych z drugiej
-// listy na odpowiadające im indeksy pierwszej listy.
+// wstawienie elemntow o indeksach parzystych z drugiej
+// listy na odpowiadajace im indeksy pierwszej listy.
 std::vector<int> podmien(std::vector<int> &listaA, std::vector<int> &listaB) {
   std::vector<int> wynik(listaA);
 

@@ -4,7 +4,7 @@
 #include <vector>
 
 // Otrzymujez napis i dwie listy napisow. Podmien w pierwszym napisie, napisy z
-// pierwszej listy na odpowiadające im napisy z drugiej listy.
+// pierwszej listy na odpowiadajace im napisy z drugiej listy.
 
 void podmien(std::string &napis, std::vector<std::string> &listaA,
              std::vector<std::string> &listaB) {

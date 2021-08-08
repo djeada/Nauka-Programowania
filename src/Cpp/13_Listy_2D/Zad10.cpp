@@ -3,7 +3,7 @@
 
 // Otrzymujesz liste 2d. Obroc otrzymana liste o 90 stopni.
 // Tzn. zamien miejscami ostatnia kolumne, z ostatnim wierszem,
-// przedostatnią kolumnę z przedostatnim wierszem itd.
+// przedostatnia kolumne z przedostatnim wierszem itd.
 
 void obroc(std::vector<std::vector<int>> &macierz) {
 

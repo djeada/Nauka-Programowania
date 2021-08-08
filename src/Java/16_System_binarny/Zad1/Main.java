@@ -12,7 +12,7 @@ public class Main {
 		return dec;
 	}
 
-	//b) jej odpowiednik w systemie dziesiętnym.
+	//b) jej odpowiednik w systemie dziesietnym.
 	public static String naBin(int liczba) {
 
 		String bin = "";

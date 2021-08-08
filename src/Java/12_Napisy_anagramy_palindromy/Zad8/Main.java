@@ -5,7 +5,7 @@ public class Main {
 	//w slowie (bez zmiany kolejnosci).
 	//Wyjatkowy palindrom spelnia jeden z dwoch warunkow:
 	//1. Wszystkie znaki sa identyczne, np. "xxx".
-	//2. Wszystkie znaki poza srodkowym znakiem są identyczne, np. "ccdcc".
+	//2. Wszystkie znaki poza srodkowym znakiem sa identyczne, np. "ccdcc".
 	//Pojedynczy znak jest rowniez uznawany za wyjatkowy palindrom.
 	//Nie uwzgledniaj duplikatow w liscie.
 

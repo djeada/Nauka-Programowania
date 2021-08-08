@@ -6,7 +6,7 @@
 #include <unordered_map>
 #include <vector>
 
-// Otrzymujesz napis reprezentujacy scieżke pliku tekstowego. Oblicz:
+// Otrzymujesz napis reprezentujacy sciezke pliku tekstowego. Oblicz:
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
 
@@ -103,7 +103,7 @@ double sredniaLiczbaSlow(std::vector<std::string> &trescPliku) {
   return liczbaSlow(trescPliku) / (double)liczbaWierszy(trescPliku);
 }
 
-// Czestosc wystepowania każdego ze slow w pliku.
+// Czestosc wystepowania kazdego ze slow w pliku.
 std::string wektorNaString(std::vector<std::string> &wektor) {
   std::string s;
   for (const auto &piece : wektor)

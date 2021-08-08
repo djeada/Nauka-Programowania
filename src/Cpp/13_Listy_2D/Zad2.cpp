@@ -3,7 +3,7 @@
 #include <vector>
 
 // Dla otrzymanej liczby, stworz macierz kwadratowa skladajaca
-// się z liczby kolumn i wierszy rownej otrzymanej liczbie
+// sie z liczby kolumn i wierszy rownej otrzymanej liczbie
 // ktorej kazdy element jest iloczynem jego wspolrzednych.
 
 std::vector<std::vector<int>> macierz(int n) {

@@ -1,7 +1,7 @@
 import random
 
 """
-Napisz funkcję realizującą zaokrąglanie ilorazu bez użycia '/' i '%'.
+Napisz funkcje realizujaca zaokraglanie ilorazu bez uzycia '/' i '%'.
 """
 
 # Wersja 1

@@ -14,7 +14,7 @@ int main() {
     b = pom;
   }
 
-  // wszystkie liczby naturalne większe od mniejszej pobranej
+  // wszystkie liczby naturalne wieksze od mniejszej pobranej
   // liczby i jednoczesnie mniejsze od wiekszej pobranej liczby.
   for (int i = a + 1; i < b; i++)
     std::cout << i << " ";

@@ -31,8 +31,8 @@ void zastap(std::vector<int> &lista) {
     liczba = lista[0];
 }
 
-// Dla każdego podpunktu wypisz zmodyfikowaną listę. Elementy listy powinny
-// być oddzielone przecinkami i wypisane w jednym wierszu.
+// Dla kazdego podpunktu wypisz zmodyfikowana liste. Elementy listy powinny
+// byc oddzielone przecinkami i wypisane w jednym wierszu.
 void wypiszOdKonca(std::vector<int> &lista) {
   for (auto liczba : lista)
     std::cout << liczba << ", ";

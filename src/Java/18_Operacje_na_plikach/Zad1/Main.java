@@ -2,7 +2,7 @@ import java.io.File;
 
 public class Main {
 	//Otrzymujesz napis reprentujcy sciezke.
-	//Sprawdz, czy sciezka należy do pliku czy folderu.
+	//Sprawdz, czy sciezka nalezy do pliku czy folderu.
 
 	public static boolean czyPlik(String sciezka) {
 		File plik = new File(sciezka);

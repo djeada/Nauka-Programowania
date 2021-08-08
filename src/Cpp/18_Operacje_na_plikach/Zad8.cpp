@@ -7,9 +7,9 @@
 
 namespace filesys = std::experimental::filesystem;
 
-// Otrzymujesz napis reprezentujacy sciezkę folderu.
+// Otrzymujesz napis reprezentujacy sciezke folderu.
 // Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych
-// się w folderze oraz podfolderach.
+// sie w folderze oraz podfolderach.
 
 std::string znajdzRozszerzenie(std::string sciezka) {
 
@@ -55,7 +55,7 @@ void dodajInicjaly(const std::string &sciezkaFolderu, const std::string &dane) {
     _dodajInicjaly(sciezka, dane);
 }
 
-// Usun srodkowy wiersz z kazdego pliku csv znajdujacego się w folderze
+// Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie w folderze
 // oraz podfolderach.
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
 

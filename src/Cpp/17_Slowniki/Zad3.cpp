@@ -80,9 +80,9 @@ int main() {
   std::unordered_map<std::string, std::vector<std::string>> lista;
 
   dodajKsiazke(lista, "Pan T", "Duma i uprzedzenie – Jane Austen");
-  dodajKsiazke(lista, "Pan T", "Zabić drozdad – Harper Lee");
+  dodajKsiazke(lista, "Pan T", "Zabic drozdad – Harper Lee");
   dodajKsiazke(lista, "Pan T", "Biblia");
-  dodajKsiazke(lista, "Pan T", "Buszujący w zbożu – JD Salinger");
+  dodajKsiazke(lista, "Pan T", "Buszujacy w zbozu – JD Salinger");
   dodajKsiazke(lista, "Pan T", "Rok 1984 – George Orwell");
   dodajKsiazke(lista, "Pan T", "Wedy");
 
@@ -93,7 +93,7 @@ int main() {
   wyswietlWszystkieKsiazki(lista);
 
   usunKsiazke(lista, "Elzbieta", "Hobbit – JRR Tolkien");
-  usunKsiazke(lista, "Pan T", "Zabić drozdad – Harper Lee");
+  usunKsiazke(lista, "Pan T", "Zabic drozdad – Harper Lee");
   usunKsiazke(lista, "Pan T", "Rok 1984 – George Orwell");
 
   wyswietlWszystkieKsiazki(lista);

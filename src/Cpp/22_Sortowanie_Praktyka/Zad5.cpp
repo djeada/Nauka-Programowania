@@ -3,8 +3,8 @@
 #include <string>
 #include <vector>
 
-// Klasia Miasto składa się z dwóch pól: nazwa (napis) oraz liczba_mieszkańców
-// (liczba). Posortuj listę obiektów klasy Miasto względem jednego z pól.
+// Klasia Miasto składa sie z dwoch pol: nazwa (napis) oraz liczba_mieszkancow
+// (liczba). Posortuj liste obiektow klasy Miasto wzgledem jednego z pol.
 
 class Miasto {
   std::string nazwa;

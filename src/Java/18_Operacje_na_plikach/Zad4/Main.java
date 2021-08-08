@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class Main {
-	//Otrzymujesz napis reprezentujący sciezke pliku tekstowego.
+	//Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
 	//Wczytaj i wypisz tresc pliku.
 
 	public static void wypiszPlik(final String sciezka) {

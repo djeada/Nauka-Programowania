@@ -15,8 +15,8 @@ fn test_1() {
 }
 
 fn test_2() {
-	let napis: String = "éDedCBcbAàa".to_owned();
-	let wynik = "ABCDabcdeàé".to_owned();
+	let napis: String = "eDedCBcbAaa".to_owned();
+	let wynik = "ABCDabcdeae".to_owned();
 	assert_eq!(sort_v1(napis), wynik);
 }
 

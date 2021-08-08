@@ -2,7 +2,7 @@ public class Main {
 	//Otrzymujesz liczbe, zamien ja na jej binarny odpowiednik jesli:
 
 	//a) jest liczba parzysta.
-	//Otrzymujesz dwie liczby. Uzywając jedynie operatorow bitowych zaimplementuj:
+	//Otrzymujesz dwie liczby. Uzywajac jedynie operatorow bitowych zaimplementuj:
 
 	//a) dodawanie.
 	private static int suma(int a, int b) {

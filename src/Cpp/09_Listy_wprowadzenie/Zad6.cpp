@@ -2,7 +2,7 @@
 #include <vector>
 
 // Otrzymujesz liste liczb. Sprwadz czy srednia elementow
-// znajduje się w liscie. Dla sredniej nie bedacej liczba
+// znajduje sie w liscie. Dla sredniej nie bedacej liczba
 // calkowita, zaokraglij wynik w dol.
 
 int policzSrednia(std::vector<int> &lista) {

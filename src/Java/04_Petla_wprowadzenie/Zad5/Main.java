@@ -21,7 +21,7 @@ public class Main {
 			b = pom;
 		}
 
-		//wszystkie liczby naturalne większe od mniejszej pobranej 
+		//wszystkie liczby naturalne wieksze od mniejszej pobranej 
 		//liczby i jednoczesnie mniejsze od wiekszej pobranej liczby.  
 		for (int i = a + 1; i<b; i++) {
 			System.out.print(i);

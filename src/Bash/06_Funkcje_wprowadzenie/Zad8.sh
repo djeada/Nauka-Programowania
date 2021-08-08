@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #Napisz funkcje realizujaca zaokraglanie ilorazu
-#bez użycia '/' i '%'.
+#bez uzycia '/' i '%'.
 
 podziel() {
     a=$1

@@ -5,7 +5,7 @@
 namespace filesys = std::experimental::filesystem;
 
 // Otrzymujesz napis reprentujcy sciezke.
-// Sprawdz, czy sciezka należy do pliku czy folderu.
+// Sprawdz, czy sciezka nalezy do pliku czy folderu.
 
 bool czyPlik(std::string sciezka) {
   try {

@@ -3,7 +3,7 @@
 #include <unordered_map>
 
 // Otrzymujesz slownik par napisow i liczb oraz pojedyncza liczbe.
-// Usuń ze slownika pary, dla ktorcyh liczba w parze jest rowna otrzymanej
+// Usun ze slownika pary, dla ktorcyh liczba w parze jest rowna otrzymanej
 // liczbie.
 
 void usun(std::unordered_map<std::string, int> &slownik, int liczba) {

@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main
 {
-	//Dla otrzymanej listy, skladajacej się z nieuporzadkowanych
+	//Dla otrzymanej listy, skladajacej sie z nieuporzadkowanych
 	//kolejnych (za wyjatkiem jednego) wyrazow ciagu arytmetycznego,
 	//znajdz brakujacy element.
 

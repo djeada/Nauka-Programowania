@@ -45,8 +45,8 @@ public class Main
 		}
 	}
 
-	//Dla każdego podpunktu wypisz zmodyfikowaną listę. Elementy listy powinny
-	//być oddzielone przecinkami i wypisane w jednym wierszu.
+	//Dla kazdego podpunktu wypisz zmodyfikowana liste. Elementy listy powinny
+	//byc oddzielone przecinkami i wypisane w jednym wierszu.
 	public static void wypiszOdKonca(ArrayList<Integer> lista)
 	{
 		for (var liczba : lista)

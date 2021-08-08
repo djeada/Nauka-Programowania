@@ -5,7 +5,7 @@
 #include <vector>
 
 // Otrzymujesz dwa napisy. Znajdz wiersze w pierwszym napisie konczace
-// sie drugim napisem. Wiersz może byc zakonczony dowolnym znakiem
+// sie drugim napisem. Wiersz moze byc zakonczony dowolnym znakiem
 // interpunkcyjnym.
 
 std::vector<std::string> rozdziel(const std::string &napis) {

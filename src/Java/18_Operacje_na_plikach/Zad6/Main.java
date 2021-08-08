@@ -3,7 +3,7 @@ import java.util.Map.Entry;
 import java.io.*;
 
 public class Main {
-	//Otrzymujesz napis reprezentujacy scieżke pliku tekstowego. Oblicz:
+	//Otrzymujesz napis reprezentujacy sciezke pliku tekstowego. Oblicz:
 	public static String wyczysc(String napis) {
 		napis = napis.trim();
 		return napis.replaceAll("\\p{Punct}", "");
@@ -91,7 +91,7 @@ public class Main {
 		return liczbaSlow(trescPliku) / (double) liczbaWierszy(trescPliku);
 	}
 
-	//Czestosc wystepowania każdego ze slow w pliku.
+	//Czestosc wystepowania kazdego ze slow w pliku.
 	public static HashMap<String, Integer> histogramSlow(String trescPliku) {
 		HashMap<String, Integer> slownik = new HashMap<String, Integer> ();
 

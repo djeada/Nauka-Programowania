@@ -1,7 +1,7 @@
 #include <cassert>
 #include <functional>
 
-// Otrzymujesz dwie liczby. Uzywając jedynie operatorow bitowych zaimplementuj:
+// Otrzymujesz dwie liczby. Uzywajac jedynie operatorow bitowych zaimplementuj:
 
 // a) dodawanie.
 int suma(int a, int b) {

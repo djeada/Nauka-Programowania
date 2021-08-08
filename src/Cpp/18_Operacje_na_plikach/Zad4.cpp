@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdexcept>
 
-// Otrzymujesz napis reprezentujący sciezke pliku tekstowego.
+// Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
 // Wczytaj i wypisz tresc pliku.
 
 void wypiszPlik(const std::string &sciezka) {

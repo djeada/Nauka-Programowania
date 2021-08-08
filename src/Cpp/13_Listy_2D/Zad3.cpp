@@ -3,7 +3,7 @@
 #include <vector>
 
 // Dla otrzymanych dwoch list, stworz dwu-kolumnowa macierz,
-// ktorej pierwsza kolumna sklada się z elementow pierwszej
+// ktorej pierwsza kolumna sklada sie z elementow pierwszej
 // listy, a druga drugiej. Jesli otrzymane listy nie sa rownej
 // dlugosci zwroc pusta macierz.
 

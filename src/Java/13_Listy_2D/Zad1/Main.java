@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class Main {
-	//Otrzymjesz dwie liczby, a oraz b. Stwórz macierz a
-	//identycznych wierszy składających się z liczb od 0 do b.
+	//Otrzymjesz dwie liczby, a oraz b. Stworz macierz a
+	//identycznych wierszy składajacych sie z liczb od 0 do b.
 
 	public static ArrayList<ArrayList<Integer>> macierz(int a, int b) {
 

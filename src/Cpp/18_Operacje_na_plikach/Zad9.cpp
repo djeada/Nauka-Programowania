@@ -4,7 +4,7 @@
 namespace filesys = std::experimental::filesystem;
 
 // Otrzymujesz napis reprezentujacy sciezke folderu.
-// Usun wszystkie pliki o rozmiarach wiekszych niż 10kB
+// Usun wszystkie pliki o rozmiarach wiekszych niz 10kB
 // znajdujacych sie w folderze oraz podfolderach.
 
 int rozmiarPliku(const std::string &sciezka) {

@@ -3,7 +3,7 @@
 #include <vector>
 
 // Dla otrzymanej listy oraz liczby X, znajdz indeksy pierwszej
-// pary elementów listy, ktorych suma jest rowna liczbie X.
+// pary elementow listy, ktorych suma jest rowna liczbie X.
 // Jesli w liscie nie ma takiej pary, zwroc pare (-1, -1)
 
 std::pair<int, int> sumaDwochV1(std::vector<int> &lista, int liczba) {

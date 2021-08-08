@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Czy liczba jest numerem tygodnia/miesiąca?
+#Czy liczba jest numerem tygodnia/miesiaca?
 
 main() {
 

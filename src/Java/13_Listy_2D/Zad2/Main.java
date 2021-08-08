@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
 	//Dla otrzymanej liczby, stworz macierz kwadratowa skladajaca
-	//się z liczby kolumn i wierszy rownej otrzymanej liczbie
+	//sie z liczby kolumn i wierszy rownej otrzymanej liczbie
 	//ktorej kazdy element jest iloczynem jego wspolrzednych.
 
 	public static ArrayList<ArrayList<Integer>> macierz(int n) {

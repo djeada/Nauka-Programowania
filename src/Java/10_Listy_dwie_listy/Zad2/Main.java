@@ -17,8 +17,8 @@ public class Main
 		return new ArrayList<Integer>(wynik);
 	}
 
-	//wstawienie elemntów o indeksach parzystych z drugiej
-	//listy na odpowiadające im indeksy pierwszej listy.
+	//wstawienie elemntow o indeksach parzystych z drugiej
+	//listy na odpowiadajace im indeksy pierwszej listy.
 	public static ArrayList<Integer> podmien(ArrayList<Integer> listaA, ArrayList<Integer> listaB)
 	{
 		ArrayList<Integer> wynik = new ArrayList<Integer>(listaA);

@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
 	//Otrzymujesz liste liczb, kierunek przesuniec (1 odpowiada przesunieciu
-	//w prawo, a 0 w lewo) oraz liczbę miejsc o jaka maja zostac przesuniete
+	//w prawo, a 0 w lewo) oraz liczbe miejsc o jaka maja zostac przesuniete
 	//elementy. Przykladowo dla przesuwania w prawo pierwszy element trafia
 	//na miejsce drugiego, drugi trzeciego, a ostatni na miejsce pierwszego.
 	//Przesun elementy listy w danym kierunku.

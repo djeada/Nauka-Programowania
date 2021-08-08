@@ -2,7 +2,7 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymuejsz cyklicznie posortowaną liste oraz klucz.
+// Otrzymuejsz cyklicznie posortowana liste oraz klucz.
 // Znajdz indeks pierwszego wystapienia klucza w liscie.
 // Jesli klucz nie wystepuje w liscie zwroc -1.
 

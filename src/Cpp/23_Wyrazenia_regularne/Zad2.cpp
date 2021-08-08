@@ -3,10 +3,10 @@
 #include <string>
 #include <vector>
 
-// Otrzymujesz napis reprezentujacy haslo. Sprawdz czy haslo spelnia nastepujące
+// Otrzymujesz napis reprezentujacy haslo. Sprawdz czy haslo spelnia nastepujace
 // warunki:
 // 1. Przynajmniej jedna mala litera [a-z].
-// 2. Przynajmniej jedna duża litera [A-Z].
+// 2. Przynajmniej jedna duza litera [A-Z].
 // 3. Przynajmniej jedna cyfra [0-9]
 // 4. Prynajmniej jeden znak specjalny [! # $ % & ' * + - / = ? ^ _ ` { | } ~].
 // 5. Minimalna dlugosc: 8.

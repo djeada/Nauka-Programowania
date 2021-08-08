@@ -2,8 +2,8 @@
 #include <unordered_map>
 #include <vector>
 
-// Otrzymujesz dwie listy. Zbuduj slownik skladajacy się z kluczy będacych
-// elementami pierwszej listy i wartosciami będacymi elementami drugiej listy.
+// Otrzymujesz dwie listy. Zbuduj slownik skladajacy sie z kluczy bedacych
+// elementami pierwszej listy i wartosciami bedacymi elementami drugiej listy.
 // Jesli listy sa roznej dlugosci zwroc pusty slownik.
 std::unordered_map<int, int> budujSlownik(std::vector<int> &listaA,
                                           std::vector<int> &listaB) {

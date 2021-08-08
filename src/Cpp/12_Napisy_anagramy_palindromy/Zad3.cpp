@@ -2,8 +2,8 @@
 #include <string>
 
 /*
-Dla podanych dwóch napisów sprawdź czy są swoimi anagramami.
-Dwa napisy są anagramami jesli jeden z nich można zbudować
+Dla podanych dwoch napisow sprawdz czy sa swoimi anagramami.
+Dwa napisy sa anagramami jesli jeden z nich mozna zbudowac
 poprzez przestawienie znakow w drugim.
 */
 

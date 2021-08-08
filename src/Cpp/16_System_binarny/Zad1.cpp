@@ -15,7 +15,7 @@ int naDec(std::string liczba) {
   return dec;
 }
 
-// b) jej odpowiednik w systemie dziesiętnym.
+// b) jej odpowiednik w systemie dziesietnym.
 std::string naBin(int liczba) {
 
   std::string bin;

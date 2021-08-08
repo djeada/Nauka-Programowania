@@ -1,5 +1,5 @@
 public class Main {
-	//Otrzymujesz liczbę n. Zwroc napis skladajacy
+	//Otrzymujesz liczbe n. Zwroc napis skladajacy
 	//sie z liczb naturalnych od 1 do n.
 
 	public static String liczby(int n) {
