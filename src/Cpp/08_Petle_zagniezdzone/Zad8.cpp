@@ -7,7 +7,7 @@ int czyPierwsza(int n) {
   if (!(n % 2) && n != 2)
     return false;
 
-  for (int i = 3; i <= sqrt((double)n); i += 2) {
+  for (int i = 3; i <= sqrt(n); i += 2) {
     if (!(n % i))
       return false;
   }
