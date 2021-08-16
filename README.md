@@ -2527,7 +2527,7 @@ Rozwiązania
             <td>4</td>
             <td>Zaprojektuj klasy <i>Wektor2D</i> oraz <i>Wektor3D</i>.</td>
             <td><a>Python</a></td>
-            <td><a>Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Cpp/19_Klasy/Wektor">Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
