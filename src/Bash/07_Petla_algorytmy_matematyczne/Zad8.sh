@@ -19,18 +19,16 @@ czyPierwsza() {
         return
     fi
 
-    i=5
-    w=2
+    i=3
 
     while [[ $((i * i)) -le $a ]]; do
 
         if [[ $(($a % i)) -eq 0 ]]; then
             echo false
             return
-        fi
+         fi
 
-        i=$((i + w))
-        w=$((6 - w))
+        i=$((i + 2))
     done
 
     echo true
