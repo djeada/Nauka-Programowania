@@ -5,6 +5,7 @@ Ile wersji rozwiązań.
 Wersja języka.
 Kompilacja.
 Styl formatowania.
+Testy za pomoca assert, no reliance on external libraries or frameworks.
 
 <h1>C++</h1>
 
