@@ -2,6 +2,12 @@
 #include <vector>
 
 // Dla liczby N, wczytaj N liczb do listy, a nastepnie:
+// a) dodaj do kazdego elementu 1;
+// b) pomnoz kazdy element przez jego indeks;
+// c) zastap wszystkie elementy wartoscia pierwszego elementu listy.
+// Dla kazdego podpunktu wypisz zmodyfikowana liste. Elementy listy powinny
+// byc oddzielone przecinkami i wypisane w jednym wierszu.
+
 void wczytaj(std::vector<int> &lista, int n) {
   for (int i = 0; i < n; i++) {
     int liczba;
@@ -10,19 +16,16 @@ void wczytaj(std::vector<int> &lista, int n) {
   }
 }
 
-// a)dodaj do kazdego elementu 1;
 void zwieksz(std::vector<int> &lista) {
   for (auto &liczba : lista)
     liczba += 1;
 }
 
-// b)pomnoz kazdy element przez jego indeks;
 void pomnoz(std::vector<int> &lista) {
   for (unsigned int i = 0; i < lista.size(); i++)
     lista[i] *= i;
 }
 
-// c)zastap wszystkie elementy wartoscia pierwszego elementu listy.
 void zastap(std::vector<int> &lista) {
   if (lista.empty())
     return;
@@ -31,9 +34,7 @@ void zastap(std::vector<int> &lista) {
     liczba = lista[0];
 }
 
-// Dla kazdego podpunktu wypisz zmodyfikowana liste. Elementy listy powinny
-// byc oddzielone przecinkami i wypisane w jednym wierszu.
-void wypiszOdKonca(std::vector<int> &lista) {
+void wypisz(std::vector<int> &lista) {
   for (auto liczba : lista)
     std::cout << liczba << ", ";
   std::cout << std::endl;
@@ -50,15 +51,15 @@ int main() {
 
   std::vector<int> kopia(lista);
   zwieksz(kopia);
-  wypiszOdKonca(kopia);
+  wypisz(kopia);
 
   kopia = lista;
   pomnoz(kopia);
-  wypiszOdKonca(kopia);
+  wypisz(kopia);
 
   kopia = lista;
   zastap(kopia);
-  wypiszOdKonca(kopia);
+  wypisz(kopia);
 
   return 0;
 }
