@@ -2,6 +2,11 @@
 #include <vector>
 
 // Dla liczby N, wczytaj N liczb do listy, a nastepnie:
+// a) wypisz liste od poczatku do konca. Elementy listy powinny
+// znajdowac sie w osobnych wierszach.
+// b) wypisz liste od konca. Elementy listy powinny byc oddzielone
+// przecinkami i wypisane w jednym wierszu.
+
 void wczytaj(std::vector<int> &lista, int n) {
   for (int i = 0; i < n; i++) {
     int liczba;
@@ -10,15 +15,11 @@ void wczytaj(std::vector<int> &lista, int n) {
   }
 }
 
-// a) wypisz liste od poczatku do konca. Elementy listy powinny
-// znajdowac sie w osobnych wierszach.
 void wypiszOdPoczatku(std::vector<int> &lista) {
   for (auto liczba : lista)
     std::cout << liczba << std::endl;
 }
 
-// b) wypisz liste od konca. Elementy listy powinny byc oddzielone
-// przecinkami i wypisane w jednym wierszu.
 void wypiszOdKonca(std::vector<int> &lista) {
   auto it = cend(lista);
   while (it != cbegin(lista))
@@ -32,10 +33,14 @@ int main() {
   std::vector<int> lista;
   int n;
 
-  std::cout << "podaj liczbe n: ";
+  std::cout << "podaj liczbe n: " << std::endl;
   std::cin >> n;
   wczytaj(lista, n);
+      
+  std::cout << std::endl << "liczby w kolejnosci wczytania:" << std::endl;
   wypiszOdPoczatku(lista);
+  
+  std::cout << std::endl <<"liczby wypisane od konca:" << std::endl;
   wypiszOdKonca(lista);
 
   return 0;
