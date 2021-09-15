@@ -9,6 +9,11 @@ czyPierwsza() {
 
     a=$1
 
+    if [[ $a -lt 2 ]]; then
+        echo false
+        return
+    fi
+
     if [[ $a -eq 2 ]] || [[ $a -eq 3 ]]; then
         echo true
         return
