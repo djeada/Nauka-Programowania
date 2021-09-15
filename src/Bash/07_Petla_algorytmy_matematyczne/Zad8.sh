@@ -31,7 +31,7 @@ czyPierwsza() {
         if [[ $(($a % i)) -eq 0 ]]; then
             echo false
             return
-         fi
+        fi
 
         i=$((i + 2))
     done
