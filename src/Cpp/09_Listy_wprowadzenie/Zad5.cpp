@@ -9,7 +9,7 @@
 // c)Podnies do kwadratu wszystkie elementy mniejsze niz 10.
 // d)Wstaw sume wszystkich elementow otrzymanej listy na indeksy bedace liczbami
 // pierwszymi.
-// e)Zamien kazdy element na iloczyn wszystkich elementow list poza nim samym.
+// e)Zamien kazdy element na iloczyn wszystkich elementow listy poza nim samym.
 
 void zwieksz(std::vector<int> &lista) {
 
