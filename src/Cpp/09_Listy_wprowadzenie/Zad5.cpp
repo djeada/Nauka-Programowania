@@ -4,8 +4,13 @@
 #include <vector>
 
 // Otrzymujesz liste liczb, wykonaj nastepujace polecenia:
-
 // a)Zwieksz o 1 wszystkie elementy stojace na parzystych indeksach.
+// b)Wyzeruj wszystkie wielokrotnosci liczby 3.
+// c)Podnies do kwadratu wszystkie elementy mniejsze niz 10.
+// d)Wstaw sume wszystkich elementow otrzymanej listy na indeksy bedace liczbami
+// pierwszymi.
+// e)Zamien kazdy element na iloczyn wszystkich elementow list poza nim samym.
+
 void zwieksz(std::vector<int> &lista) {
 
   for (unsigned int i = 0; i < lista.size(); i++) {
@@ -14,7 +19,6 @@ void zwieksz(std::vector<int> &lista) {
   }
 }
 
-// b)Wyzeruj wszystkie wielokrotnosci liczby 3.
 void wyzeruj(std::vector<int> &lista) {
 
   for (auto &liczba : lista) {
@@ -23,7 +27,6 @@ void wyzeruj(std::vector<int> &lista) {
   }
 }
 
-// c)Podnies do kwadratu wszystkie elementy mniejsze niz 10.
 void kwadrat(std::vector<int> &lista) {
 
   for (auto &liczba : lista) {
@@ -32,8 +35,6 @@ void kwadrat(std::vector<int> &lista) {
   }
 }
 
-// d)Wstaw sume wszystkich elementow otrzymanej listy na indeksy bedace liczbami
-// pierwszymi.
 int czyPierwsza(int n) {
 
   if ((!(n % 2) && n != 2) || n < 1)
@@ -55,8 +56,6 @@ void suma(std::vector<int> &lista) {
       lista[i] = suma;
   }
 }
-
-// e)Zamien kazdy element na iloczyn wszystkich elementow list poza nim samym.
 
 void zamien(std::vector<int> &lista) {
 
