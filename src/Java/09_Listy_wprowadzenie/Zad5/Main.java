@@ -1,9 +1,14 @@
 import java.util.*;
 
-public class Main {
-	//Otrzymujesz liste liczb, wykonaj nastepujace polecenia:
+//Otrzymujesz liste liczb, wykonaj nastepujace polecenia:
+//a)Zwieksz o 1 wszystkie elementy stojace na parzystych indeksach.
+//b)Wyzeruj wszystkie wielokrotnosci liczby 3.
+//c)Podnies do kwadratu wszystkie elementy mniejsze niz 10.
+//d)Wstaw sume wszystkich elementow otrzymanej listy na indeksy bedace liczbami pierwszymi.
+//e)Zamien kazdy element na iloczyn wszystkich elementow listy poza nim samym.
 
-	//a)Zwieksz o 1 wszystkie elementy stojace na parzystych indeksach.
+public class Main {
+
 	public static ArrayList<Integer> zwieksz(ArrayList<Integer> lista) {
 		for (int i = 0; i<lista.size(); i++) {
 			if (i % 2 == 0) {
@@ -13,7 +18,6 @@ public class Main {
 		return lista;
 	}
 
-	//b)Wyzeruj wszystkie wielokrotnosci liczby 3.
 	public static ArrayList<Integer> wyzeruj(ArrayList<Integer> lista) {
 
 		for (int i = 0; i<lista.size(); i++) {
@@ -24,7 +28,6 @@ public class Main {
 		return lista;
 	}
 
-	//c)Podnies do kwadratu wszystkie elementy mniejsze niz 10.
 	public static ArrayList<Integer> kwadrat(ArrayList<Integer> lista) {
 
 		for (int i = 0; i<lista.size(); i++) {
@@ -37,7 +40,6 @@ public class Main {
 		return lista;
 	}
 
-	//d)Wstaw sume wszystkich elementow otrzymanej listy na indeksy bedace liczbami pierwszymi.
 	public static boolean czyPierwsza(int n) {
 
 		if ((n % 2 == 0 && n != 2) || n<1) {
@@ -66,8 +68,6 @@ public class Main {
 
 		return lista;
 	}
-
-	//e)Zamien kazdy element na iloczyn wszystkich elementow list poza nim samym.
 
 	public static ArrayList<Integer> zamien(ArrayList<Integer> lista) {
 
