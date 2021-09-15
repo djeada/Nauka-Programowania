@@ -6,6 +6,7 @@
 // Dla otrzymanej listy znajdz liczbe mniejsza
 // od najwiekszej liczby z listy i jednoczesnie
 // wieksza od wszystkich pozostalych.
+
 double wieksza(std::vector<int> &lista) {
 
   if (lista.empty())
