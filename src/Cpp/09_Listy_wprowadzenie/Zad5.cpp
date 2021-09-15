@@ -93,12 +93,20 @@ void test2() {
 
 void test3() {
   std::vector<int> lista{3, 5, -7, 4, 9, -11, 2};
+  std::vector<int> wynik{9, 25, 49, 16, 81, 121, 4};
+  kwadrat(lista);
+  assert(lista == wynik);
+}
+
+
+void test4() {
+  std::vector<int> lista{3, 5, -7, 4, 9, -11, 2};
   std::vector<int> wynik{3, 5, 5, 5, 9, 5, 2};
   suma(lista);
   assert(lista == wynik);
 }
 
-void test4() {
+void test5() {
   std::vector<int> lista{3, 5, -7, 4, 9, -11, 2};
   std::vector<int> wynik{27720, 16632, -11880, 20790, 9240, -7560, 41580};
   zamien(lista);
@@ -111,6 +119,7 @@ int main() {
   test2();
   test3();
   test4();
-
+  test5();
+  
   return 0;
 }
