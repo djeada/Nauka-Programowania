@@ -10,7 +10,7 @@ main() {
 
     echo "Pole trojkata o podstawie $a i wysokosci $h jest rowne $(($a*$h/2))"
 
-    #Pobierz dlogosci bokow prostokata i wypisz pole.
+    #Pobierz dlugosci bokow prostokata i wypisz pole.
 
     echo "Podaj dlugosci bokow prostokata: "
     read a
