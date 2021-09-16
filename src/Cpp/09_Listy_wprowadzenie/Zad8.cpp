@@ -45,9 +45,9 @@ void test1() {
 }
 
 void test2() {
-  std::vector<int> lista{6, 7, 2, 1, 8};
-  std::vector<int> wynik{6, 7, 1, 8};
-  int klucz = 2;
+  std::vector<int> lista{1, 1, 1, 1};
+  std::vector<int> wynik;
+  int klucz = 1;
 
   usunWszystkieWystapieniaV2(lista, klucz);
 
