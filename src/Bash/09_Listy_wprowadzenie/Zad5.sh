@@ -11,7 +11,7 @@ source ../assert.sh
 # e)Zamien kazdy element na iloczyn wszystkich elementow listy poza nim samym.
 
 zwieksz() {
-    n=$(( ${#lista[@]}))
+    local n=$(( ${#lista[@]}))
 
     for (( i=0; i<n; i++ ))
     do
@@ -23,7 +23,7 @@ zwieksz() {
 }
 
 wyzeruj() {
-    n=$(( ${#lista[@]}))
+    local n=$(( ${#lista[@]}))
 
     for (( i=0; i<n; i++ ))
     do
@@ -35,7 +35,7 @@ wyzeruj() {
 }
 
 kwadrat(){
-    n=$(( ${#lista[@]}))
+    local n=$(( ${#lista[@]}))
 
     for (( i=0; i<n; i++ ))
     do
@@ -49,7 +49,7 @@ kwadrat(){
 
 czy_pierwsza() {
 
-    a=$1
+    local a=$1
 
     if [[ $a -lt 2 ]]; then
         echo false
@@ -83,8 +83,8 @@ czy_pierwsza() {
 }
 
 suma(){
-    suma_elementow=$(IFS=+; echo "$((${lista[*]}))")
-    n=$(( ${#lista[@]}))
+    local suma_elementow=$(IFS=+; echo "$((${lista[*]}))")
+    local n=$(( ${#lista[@]}))
 
     for (( i=0; i<n; i++ ))
     do
@@ -96,7 +96,7 @@ suma(){
 
 zamien() {
     declare -a iloczyny
-    n=$(( ${#lista[@]}))
+    local n=$(( ${#lista[@]}))
 
     for (( i=0; i<n; i++ ))
     do

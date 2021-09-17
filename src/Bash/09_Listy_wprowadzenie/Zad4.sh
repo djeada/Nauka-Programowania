@@ -6,7 +6,7 @@ source ../assert.sh
 # i najmniejszy element tej listy.
 
 maks_v1() {
-    maks=${lista[0]}
+    local maks=${lista[0]}
     for elem in "${lista[@]}" ; do
         ((elem > maks)) && maks=$elem
     done
@@ -14,7 +14,7 @@ maks_v1() {
 }
 
 min_v1() {
-    min=${lista[0]}
+    local min=${lista[0]}
     for elem in "${lista[@]}" ; do
         ((elem < min)) && min=$elem
     done

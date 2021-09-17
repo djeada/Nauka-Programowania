@@ -26,7 +26,7 @@ wypisz_od_poczatku() {
 
 wypisz_od_konca() {
 
-    n=$(( ${#lista[@]} -1 ))
+    local n=$(( ${#lista[@]} -1 ))
 
     for (( i=n; i>=0; i-- ))
     do

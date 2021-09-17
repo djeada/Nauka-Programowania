@@ -19,7 +19,7 @@ wczytaj() {
 
 zwieksz() {
 
-    n=$(( ${#lista[@]}))
+    local n=$(( ${#lista[@]}))
 
     for (( i=0; i<n; i++ ))
     do
@@ -29,7 +29,7 @@ zwieksz() {
 
 pomnoz() {
 
-    n=$(( ${#lista[@]}))
+    local n=$(( ${#lista[@]}))
 
     for (( i=0; i<n; i++ ))
     do
@@ -39,7 +39,7 @@ pomnoz() {
 
 zastap() {
 
-    n=$(( ${#lista[@]}))
+    local n=$(( ${#lista[@]}))
 
     for (( i=1; i<n; i++ ))
     do
@@ -61,7 +61,7 @@ main() {
 
     echo "podaj $n liczb:"
     wczytaj $n
-    kopia=("${lista[@]}")
+    local kopia=("${lista[@]}")
 
     echo -e "\nliczby powiekszone o 1:"
     zwieksz

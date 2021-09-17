@@ -7,7 +7,7 @@ source ../assert.sh
 
 znajdz_klucz_v1() {
 
-    n=$(( ${#lista[@]}))
+    local n=$(( ${#lista[@]}))
 
     for (( i=0; i<n; i++ ))
     do

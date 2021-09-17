@@ -2,18 +2,19 @@
 
 source ../assert.sh
 
-# Otrzymujesz liste oraz klucz. Znajdz indeks odpowiadajacy pierwszemu
-# wystapieniu klucza w liscie. Jesli klucz nie wysteþuje w liscie, zwroc -1.
+# Otrzymujesz liste liczb. Sprwadz czy srednia elementow
+# znajduje sie w liscie. Dla sredniej nie bedacej liczba
+# calkowita, zaokraglij wynik w dol.
 
 srednia() {
-    suma=$(IFS=+; echo "$((${lista[*]}))")
-    n=$(( ${#lista[@]}))
+    local suma=$(IFS=+; echo "$((${lista[*]}))")
+    local n=$(( ${#lista[@]}))
     echo $((suma/n))
 }
 
 czy_srednia_w_liscie() {
 
-    srednia_wartosc=$(srednia)
+    local srednia_wartosc=$(srednia)
     for elem in "${lista[@]}"; do
         if [ $elem -eq $srednia_wartosc ]; then
             echo true
