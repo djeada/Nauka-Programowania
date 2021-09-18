@@ -2,8 +2,10 @@
 #include <cassert>
 #include <vector>
 
-// Znajdz takie pary elementow w liscie, ktorych suma jest rowna liczbie.
-// Element nie moze byc w parze sam ze soba.
+/*
+Dla otrzymanej listy oraz liczby x, znajdz wszystkie pary liczb 
+z listy, ktorych suma jest rowna x.
+*/
 
 std::vector<std::pair<int, int>> znajdzParyV1(std::vector<int> &lista,
                                               int suma) {
