@@ -8,7 +8,7 @@ source ../assert.sh
 
 srednia() {
     local suma=$(IFS=+; echo "$((${lista[*]}))")
-    local n=$(( ${#lista[@]}))
+    local n=${#lista[@]}
     echo $((suma/n))
 }
 

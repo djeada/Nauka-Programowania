@@ -16,23 +16,50 @@ assert () {
     fi
 }
 
+check_integer() {
+
+    if [[ "$1" =~ ^-?[0-9]+$ ]]; then
+        echo 1
+        return
+    fi
+
+    echo 0
+
+}
+
 assertEqual () {
     local lineno=$3
 
-    if [ $1 -ne $2 ]; then
-        echo "Assertion failed:  \"$1\""
-        echo "File \"$0\", line $lineno"
-        exit $E_ASSERT_FAILED
+    if [ $(check_integer "$1") -eq 1 ] && [ $(check_integer "$2") -eq 1 ]; then
+        if [ "$1" -ne "$2" ]; then
+            echo "Assertion failed:  \"$1\""
+            echo "File \"$0\", line $lineno"
+            exit $E_ASSERT_FAILED
+        fi
+    else
+        if [[ "$1" != "$2" ]]; then
+            echo "Assertion failed:  \"$1\""
+            echo "File \"$0\", line $lineno"
+            exit $E_ASSERT_FAILED
+        fi
     fi
 }
 
 assertNotEqual () {
     local lineno=$3
 
-    if [ $1 -eq $2 ]; then
-        echo "Assertion failed:  \"$1\""
-        echo "File \"$0\", line $lineno"
-        exit $E_ASSERT_FAILED
+    if [ $(check_integer "$1") -eq 1 ] && [ $(check_integer "$2") -eq 1 ]; then
+        if [ "$1" -eq "$2" ]; then
+            echo "Assertion failed:  \"$1\""
+            echo "File \"$0\", line $lineno"
+            exit $E_ASSERT_FAILED
+        fi
+    else
+        if [[ "$1" == "$2" ]]; then
+            echo "Assertion failed:  \"$1\""
+            echo "File \"$0\", line $lineno"
+            exit $E_ASSERT_FAILED
+        fi
     fi
 }
 
@@ -50,7 +77,7 @@ assertArrayEqual() {
     #check element for element
     for (( i=0; i<n; i++ ))
     do
-        assertEqual ${array_a[$i]} ${array_b[$i]} $lineno
+        assertEqual "${array_a[$i]}" "${array_b[$i]}" $lineno
     done
 
 }

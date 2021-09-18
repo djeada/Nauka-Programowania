@@ -7,7 +7,7 @@ source ../assert.sh
 # wieksza od wszystkich pozostalych.
 
 wieksza() {
-    local n=$(( ${#lista[@]}))
+    local n=${#lista[@]}
 
     if [ $n -eq 0 ]; then
         echo "0.00"
@@ -19,8 +19,8 @@ wieksza() {
         return
     fi
 
-    local maks=$((1<<63))
-    local maks2=$((1<<63))
+    local maks="$((1<<63))"
+    local maks2="$((1<<63))"
 
     for liczba in "${lista[@]}" ; do
 
