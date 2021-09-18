@@ -738,7 +738,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>3</td>
-            <td>Mnożenie i dzielenia.</td>
+            <td>Mnożenie i dzielenie.</td>
             <td><a>Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad3">Java</a></td>
@@ -951,7 +951,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad1">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad1.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad1.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -963,7 +963,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad2.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad2.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -975,7 +975,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad3">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad3.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad3.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -987,7 +987,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad4">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad4.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad4.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -999,7 +999,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad5">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad5.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad5.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -1011,7 +1011,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad6">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad6.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad6.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -1023,7 +1023,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad7">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad7.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad7.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -1035,7 +1035,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad8">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad8.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad8.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -1047,7 +1047,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad9">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad9.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad9.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -1059,7 +1059,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad10">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad10.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad10.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -1071,7 +1071,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad11.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad11">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad11.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad11.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -1083,7 +1083,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad12.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad12">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad12.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad12.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -1095,7 +1095,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad13.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad13">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad13.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad13.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -1107,7 +1107,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad14.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad14">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad14.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad14.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -1119,7 +1119,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad15.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad15">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad15.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad15.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -1131,7 +1131,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad16.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad16">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad16.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad16.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -1143,7 +1143,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad17.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad17">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad17.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad17.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -1155,7 +1155,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad18.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad18">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad18.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad18.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
