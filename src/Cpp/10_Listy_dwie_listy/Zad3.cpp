@@ -2,7 +2,7 @@
 #include <vector>
 
 /*
-Dla otrzymanych dwoch list, zwroc liste, ktorej elementy są suma odpowiadajacych 
+Dla otrzymanych dwoch list, zwroc liste, ktorej elementy sa suma odpowiadajacych 
 sobie elementow otrzymanych list.  Jesli listy nie sa rownej dlugosci, zaloz ze 
 brakujace elementy krotszej listy sa rowne 0.
 */
@@ -30,9 +30,27 @@ void test1() {
   assert(suma(listaA, listaB) == wynik);
 }
 
+void test2() {
+  std::vector<int> listaA{3, 1, 2, 5};
+  std::vector<int> listaB{2, 8};
+
+  std::vector<int> wynik{5, 9, 2, 5};
+  assert(suma(listaA, listaB) == wynik);
+}
+
+void test3() {
+  std::vector<int> listaA{3, 1};
+  std::vector<int> listaB{2, 8, 6, 5};
+
+  std::vector<int> wynik{5, 9, 6, 4};
+  assert(suma(listaA, listaB) == wynik);
+}
+
 int main() {
 
   test1();
+  test2();
+  test3();
 
   return 0;
 }
