@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
 
-// Dla otrzymanych dwoch list wypisz na przemian elemnty pierwszej
-// i drugiej listy. Jesli listy nie sa rownej dlugosci, po wyczerpaniu
-// elementow krotszej listy, wypisuj tylko elementy dluzszej listy.
+/*
+Dla otrzymanych dwóch list wypisz na przemian elementy pierwszej i drugiej listy. 
+Jesli listy nie sa rownej dlugosci, po wyczerpaniu elementow krotszej listy, 
+wypisuj tylko elementy dluzszej listy.
+*/
 
 void wypisz(std::vector<int> &listaA, std::vector<int> &listaB) {
 
