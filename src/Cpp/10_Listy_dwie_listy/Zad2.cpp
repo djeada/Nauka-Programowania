@@ -1,8 +1,12 @@
 #include <cassert>
 #include <vector>
 
-// Dla otrzymanych dwoch list zwroc liste powstala poprzez:
-// a) dostawienie drugiej listy na koniec pierwszej listy;
+/*
+Dla otrzymanych dwoch list zwroc liste powstala poprzez:
+a) dostawienie drugiej listy na koniec pierwszej listy;
+b) wstawienie elementow o indeksach parzystych z drugiej listy na odpowiadajace im indeksy pierwszej listy.
+*/
+
 std::vector<int> dostaw(std::vector<int> &listaA, std::vector<int> &listaB) {
 
   std::vector<int> wynik(listaA);
@@ -13,8 +17,6 @@ std::vector<int> dostaw(std::vector<int> &listaA, std::vector<int> &listaB) {
   return wynik;
 }
 
-// wstawienie elemntow o indeksach parzystych z drugiej
-// listy na odpowiadajace im indeksy pierwszej listy.
 std::vector<int> podmien(std::vector<int> &listaA, std::vector<int> &listaB) {
   std::vector<int> wynik(listaA);
 
