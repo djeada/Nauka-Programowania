@@ -1,9 +1,12 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz dwie listy liczb reprezentujacych
-// wspolrzedne dwoch wektorow. Zrealizuj:
-// a) mnozenie sklarne.
+/*
+Otrzymujesz dwie listy liczb reprezentujacych wspolrzedne dwoch wektorow. Zaimplementuj:
+a) mnozenie sklarne.
+b) mnozenie wektorowe (zdefiniowane jedynie dla wektorow 3-wymiarowej przestrzeni euklidesowej).
+*/
+
 int mnozenieSkalarne(std::vector<int> &listaA, std::vector<int> &listaB) {
 
   assert(listaA.size() == listaB.size());
@@ -16,7 +19,6 @@ int mnozenieSkalarne(std::vector<int> &listaA, std::vector<int> &listaB) {
   return wynik;
 }
 
-// b) mnozenie wektorowe.
 std::vector<int> mnozenieWektorowe(std::vector<int> &listaA,
                                    std::vector<int> &listaB) {
 
