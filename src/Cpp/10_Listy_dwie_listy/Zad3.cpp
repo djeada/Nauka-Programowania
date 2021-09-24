@@ -1,9 +1,11 @@
 #include <cassert>
 #include <vector>
 
-// Dla otrzymanych dwoch list, zwroc liste, ktorej
-// elemnty sa suma odpowiadajacych sobie elementow
-// otrzymanych list.
+/*
+Dla otrzymanych dwoch list, zwroc liste, ktorej elementy są suma odpowiadajacych 
+sobie elementow otrzymanych list.  Jesli listy nie sa rownej dlugosci, zaloz ze 
+brakujace elementy krotszej listy sa rowne 0.
+*/
 
 std::vector<int> suma(std::vector<int> &listaA, std::vector<int> &listaB) {
 
