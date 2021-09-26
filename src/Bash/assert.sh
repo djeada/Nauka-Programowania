@@ -82,6 +82,19 @@ assertArrayEqual() {
 
 }
 
+assertSetsEqual() {
+    local -n array_1=$1
+    local -n array_2=$2
+    local lineno=$3
+
+    IFS=$'\n' array_1=($(sort <<<"${array_1[*]}")); unset IFS
+    IFS=$'\n' array_2=($(sort <<<"${array_2[*]}")); unset IFS
+
+    assertArrayEqual array_1 array_2 $lineno
+
+}
+
+
 assertTrue () {
     local lineno=$2
 
