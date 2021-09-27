@@ -28,12 +28,12 @@ polacz_v1() {
             j=$((j+1))
         fi
     done
+
     while [ $i -lt $n ]
     do
         wynik+=("${lista_a[$i]}")
         i=$((i+1))
     done
-
 
     while [ $j -lt $m ]
     do
