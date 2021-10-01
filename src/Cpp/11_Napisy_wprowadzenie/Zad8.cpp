@@ -3,9 +3,11 @@
 #include <iostream>
 #include <vector>
 
-// Otrzymujesz napis reprezuntajacy zdanie.
-// Podziel zdanie na slowa skladowe.
-// Znaki interpunkcyjne nie sa liczone jako slowa.
+/*
+Otrzymujesz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe.
+Wypisz pionowo slowa, z ktorych sklada sie zdanie.
+Znaki interpunkcyjne nie sa liczone jako slowa.
+*/
 
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
@@ -18,7 +20,7 @@ void wyczysc(std::string &napis) {
   }
 }
 
-void slowaV1(std::string &napis) {
+void wypiszSlowa(std::string &napis) {
   unsigned int pocz = 0;
   unsigned int konc = 0;
   while ((konc = napis.find(' ', pocz)) != std::string::npos) {
@@ -39,7 +41,7 @@ void slowaV1(std::string &napis) {
 }
 
 int main() {
-  std::string napis = "We think in generalities, but we live in details";
-  slowaV1(napis);
+  std::string napis = "We think in generalities, but we live in details.";
+  wypiszSlowa(napis);
   return 0;
 }
