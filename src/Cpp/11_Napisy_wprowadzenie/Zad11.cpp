@@ -2,9 +2,11 @@
 #include <cassert>
 #include <string>
 
-// Otrzymujesz napis reprezuntajacy zdanie.
-// Znajdz srednia dlugosc slow w zdaniu.
-// Znaki interpunkcyjne nie sa liczone jako slowa.
+/*
+Otrzymujesz napis reprezuntajacy zdanie.
+Znajdz srednia dlugosc slow w zdaniu.
+Znaki interpunkcyjne nie sa liczone jako slowa.
+*/
 
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
@@ -52,8 +54,8 @@ void test1() {
 }
 
 void test2() {
-  std::string napis = "Kaczka lubi wiosne.";
-  int wynik = 5;
+  std::string napis = "Ile to   ma :  slow w swoim zdaniu na   koniec?";
+  int wynik = 3;
   assert(srednia(napis) == wynik);
 }
 
