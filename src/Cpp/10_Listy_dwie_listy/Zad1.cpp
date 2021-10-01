@@ -2,7 +2,7 @@
 #include <vector>
 
 /*
-Dla otrzymanych dwóch list wypisz na przemian elementy pierwszej i drugiej listy. 
+Dla otrzymanych dwoch list wypisz na przemian elementy pierwszej i drugiej listy. 
 Jesli listy nie sa rownej dlugosci, po wyczerpaniu elementow krotszej listy, 
 wypisuj tylko elementy dluzszej listy.
 */

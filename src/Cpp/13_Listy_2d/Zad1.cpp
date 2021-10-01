@@ -2,7 +2,7 @@
 #include <vector>
 
 // Otrzymjesz dwie liczby, a oraz b. Stworz macierz a
-// identycznych wierszy składajacych sie z liczb od 0 do b.
+// identycznych wierszy skladajacych sie z liczb od 0 do b.
 
 std::vector<std::vector<int>> macierz(int a, int b) {
 

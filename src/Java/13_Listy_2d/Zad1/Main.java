@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
 	//Otrzymjesz dwie liczby, a oraz b. Stworz macierz a
-	//identycznych wierszy składajacych sie z liczb od 0 do b.
+	//identycznych wierszy skladajacych sie z liczb od 0 do b.
 
 	public static ArrayList<ArrayList<Integer>> macierz(int a, int b) {
 

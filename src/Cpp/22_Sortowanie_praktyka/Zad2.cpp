@@ -4,8 +4,8 @@
 #include <vector>
 
 // Otrzymujesz napis reprezentujacy zdanie.
-// Podziel zdanie na słowa skladowe.
-// Nastepnie posortuj słowa alfabetycznie i
+// Podziel zdanie na slowa skladowe.
+// Nastepnie posortuj slowa alfabetycznie i
 // zapisz je w liscie. Znaki interpunkcyjne
 // nie sa liczone jako slowa.
 

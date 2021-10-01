@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-// Klasia Miasto składa sie z dwoch pol: nazwa (napis) oraz liczba_mieszkancow
+// Klasia Miasto sklada sie z dwoch pol: nazwa (napis) oraz liczba_mieszkancow
 // (liczba). Posortuj liste obiektow klasy Miasto wzgledem jednego z pol.
 
 class Miasto {

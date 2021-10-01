@@ -1,5 +1,5 @@
 """
-Wypisz słownik gdzie kluczami sa liczby, a wartosciami ich kwadraty.
+Wypisz slownik gdzie kluczami sa liczby, a wartosciami ich kwadraty.
 """
 
 # Wersja 1
