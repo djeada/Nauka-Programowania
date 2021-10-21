@@ -3,9 +3,12 @@
 #include <string>
 #include <vector>
 
-// Otrzymujesz napis reprezentajacy zdanie.
-// Zwroc liste skladajaca sie ze slow zdania.
-// Znaki interpunkcyjne nie sa liczone jako slowa.
+/* 
+Otrzymujesz napis reprezentajacy zdanie.
+Zwroc liste skladajaca sie ze slow zdania.
+Znaki interpunkcyjne nie sa liczone jako slowa.
+*/
+
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
 
