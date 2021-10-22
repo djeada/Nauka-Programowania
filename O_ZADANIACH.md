@@ -17,7 +17,11 @@ Python 3.8+
 
 <h1>Java</h1>
     
+JDK 17.0.1
+
 <h1>JavaScript</h1>
+
+NodeJS
 
 <h1>Haskell</h1>
 
