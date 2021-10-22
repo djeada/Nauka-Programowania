@@ -9,7 +9,11 @@ Testy za pomoca assert, no reliance on external libraries or frameworks.
 
 <h1>C++</h1>
 
+g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad1.cpp
+
 <h1>Python</h1>
+
+Python 3.8+
 
 <h1>Java</h1>
     
