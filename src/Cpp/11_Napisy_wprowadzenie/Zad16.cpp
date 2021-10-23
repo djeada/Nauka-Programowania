@@ -2,9 +2,11 @@
 #include <cassert>
 #include <string>
 
-// Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej
-// dlugosci, zdefiniowana jako liczba pozycji na ktorych napisy maja rozne
-// znaki.
+/*
+Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej
+dlugosci, zdefiniowana jako liczba pozycji na ktorych napisy maja rozne
+znaki.
+*/
 
 int odlegloscHammingaV1(const std::string &napisA, const std::string &napisB) {
   if (napisA.size() != napisB.size())
@@ -28,9 +30,9 @@ void test1() {
 }
 
 void test2() {
-  std::string napisA = "xxbab";
-  std::string napisB = "bbabb";
-  int wynik = 4;
+  std::string napisA = "test_string";
+  std::string napisB = "test_string_2";
+  int wynik = -1;
   assert(odlegloscHammingaV1(napisA, napisB) == wynik);
 }
 
