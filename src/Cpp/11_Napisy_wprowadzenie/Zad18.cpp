@@ -3,7 +3,9 @@
 #include <string>
 #include <vector>
 
-// Odwroc napisy w zdaniu.
+/*
+Odwroc napisy w zdaniu.
+*/
 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)
@@ -18,7 +20,7 @@ void odwrocNapis(std::string &slowo, int pocz, int koniec) {
   }
 }
 
-// Zlozonosc Czasowa O(n)
+// Zlozonosc Czasowa O(n^2)
 // Zlozonosc Pamieciowa O(1)
 void odwrocNapisy(std::string &zdanie) {
 

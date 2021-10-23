@@ -1,9 +1,11 @@
 #include <iostream>
 
-int main() {
+/*
+Dla pobranej liczby, sprawdz czy liczba jest ujemna, dodatnia, czy jest
+zerem.
+*/
 
-  // Dla pobranej liczby, sprawdz czy liczba jest ujemna, dodatnia, czy jest
-  // zerem.
+int main() {
 
   std::cout << "podaj liczbe:" << std::endl;
 

@@ -1,10 +1,10 @@
 #include <iostream>
 
-int main() {
+/*
+Wypisz na konsole najpierw druga potem pierwsza pobrana dana.
+*/
 
-  /*
-      Wypisz na konsole najpierw druga potem pierwsza pobrana dana.
-      */
+int main() {
 
   int a, b;
 

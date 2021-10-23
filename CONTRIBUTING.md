@@ -4,8 +4,9 @@ Jeśli chcesz poprawić istniejące rozwiązanie, dodać test lub rozwiązanie a
 
 1. Nowe rozwiązanie do zadania, które jeszcze nie zostało roziwązane.
 2. Dodanie alternatywnej wersji do rozwiązania już istniejącego, która redukuje złożoność czasową lub pamięciową.
-3. Dodanie alternatywnej wersji do rozwiązania już istniejącego, która nie redukuje złożoności czasowej ani pamięciowej, ale zwiększa czytelność kodu. 
-4. Poprawnie błędu składni, literówki lub błędów logicznych w rozwiązaniach już istniejącyh.
+3. Dodanie alternatywnej wersji do rozwiązania już istniejącego, która nie redukuje złożoności czasowej ani pamięciowej, ale zwiększa czytelność kodu.
+4. Dodanie alternatywnej wersji do rozwiązania już istniejącego, która nie redukuje złożoności czasowej ani pamięciowej, ale używa nowszej wersji składni.
+5. Poprawnie błędu składni, literówki lub błędów logicznych w rozwiązaniach już istniejącyh.
 
 <h2>Instrukcja techniczna</h2>
 
