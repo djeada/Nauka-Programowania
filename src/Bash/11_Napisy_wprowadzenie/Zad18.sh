@@ -8,7 +8,6 @@ wypisz_slowa() {
 
     local zdanie="$1"
 
-
     zdanie=$(echo "$zdanie" | sed -r 's/[.,:;!?]+/ /g')
 
     read -ra lista_slow <<<"$zdanie"
@@ -47,6 +46,4 @@ main() {
     test2
 }
 
-
 main "$@"
-
