@@ -6,7 +6,7 @@ source ../assert.sh
 
 odwroc_napis_v1() {
 
-    local napis=$1
+    local napis="$1"
     local n=${#napis}
 
     for((i=$n-1;i>=0;i--)); do
