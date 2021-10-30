@@ -1,23 +1,23 @@
 """
+Wypisz pobraną od użytkownika liczbę, jeśli:
 
-Wypisz pobrana od uzytkownika liczbe, jesli:
-a) jest poprawnym numerem tygodnia.
-b) jest poprawnym numerem miesiaca.
-
+a) Liczba jest poprawnym numerem dnia tygodnia.
+b) Liczba jest poprawnym numerem miesiąca.
 """
 
-print("podaj numer dnia tygodnia i numer miesiaca")
+if __name__ == "__main__":
 
-a = int(input())
-b = int(input())
+    print("Podaj liczbe:")
 
-if a >= 1 and a <= 7:
+    a = int(input())
+    b = int(input())
 
-    print("liczba dni jest poprawna")
-else:
-    print("liczba dni jest nie poprawna")
+    if a >= 1 and a <= 7:
+        print("Liczba jest poprawnym numerem tygodnia.")
+    else:
+        print("Liczba nie jest poprawnym numerem tygodnia.")
 
-if b >= 1 and b <= 12:
-    print("liczba miesiecy jest poprawna")
-else:
-    print("liczba miesiecy jest nie poprawna")
+    if b >= 1 and b <= 12:
+        print("Liczba jest poprawnym numerem miesiaca.")
+    else:
+        print("Liczba nie jest poprawnym numerem miesiaca.")

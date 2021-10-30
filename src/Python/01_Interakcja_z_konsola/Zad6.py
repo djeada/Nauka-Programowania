@@ -1,8 +1,15 @@
-if __name__ == "__main__":
+"""
+Zamień jednostki:
 
-    """
-    Pobierz wielkosc w kilogramach i wypisz ilu gramom odpowiada.
-    """
+a) Pobierz wielkość w kilogramach i wypisz ilu gramom odpowiada.
+b) Pobierz wielkość w calach i wypisz ilu centymetrom odpowiada.
+c) Pobierz liczbę sekund i przelicz na godziny.
+d) Pobierz liczbę w euro i wypisz ilu złotówkom odpowiada. 
+e) Pobierz miarę kąta w stopniach i wypisz ilu radianom odpowiada.
+f) Pobierz temperaturę w stopniach Farenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
+"""
+
+if __name__ == "__main__":
 
     print("podaj wielkosc w kilogramach:")
 
@@ -11,20 +18,12 @@ if __name__ == "__main__":
 
     print(kilogramy, " kg to ", gramy, " g")
 
-    """
-	Pobierz wielkosc w calach i wypisz ilu centymetrom odpowiada.
-	"""
-
     print("podaj wielkosc w calach:")
 
     cal = int(input())
     cm = cal / 2.54
 
     print(cal, " cali to", cm, " cm")
-
-    """
-	Pobierz ilosc sekund i przelicz na godziny.
-	"""
 
     print("podaj ilosc sekund:")
 
@@ -33,10 +32,6 @@ if __name__ == "__main__":
 
     print(sekundy, " sekund to ", godziny, " godzin")
 
-    """
-	Pobierz liczbe w euro i wypisz ilu zlotowkom odpowiada. 
-	"""
-
     print("podaj liczbe w euro:")
 
     euro = input()
@@ -44,20 +39,12 @@ if __name__ == "__main__":
 
     print(euro, " euro to ", zloty, " zlotych")
 
-    """
-	Pobierz miare kata w stopniach i wypisz ilu radianom odpowiada. 
-	"""
-
     print("podaj miare kata w stopniach:")
 
     kat_stopnie = int(input())
     kat_rad = kat_stopnie * 0.0174532
 
     print(kat_stopnie, " stopni to ", kat_rad, " radianow")
-
-    """
-	Pobierz temperature w stopniach Farenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
-	"""
 
     print("podaj temperature w Farenheitach:")
 

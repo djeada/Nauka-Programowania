@@ -1,8 +1,16 @@
-# Dowody praw logicznych
+'''
+Pokaż za pomocą operacji logicznych:
+
+a) Prawo wyłączonego środka.
+b) Prawo niesprzeczności.
+c) Przemienność koniunkcji.
+d) Przemienność alternatywy.
+e) Pierwsze prawo de Morgana.
+f) Drugie prawo de Morgana.
+'''
 
 if __name__ == "__main__":
 
-    # Prawo wylacznego srodka
     print("Prawo wylacznego srodka")
     p = False
     print(
@@ -19,7 +27,6 @@ if __name__ == "__main__":
         p or not p,
     )
 
-    # Zasada niesprzecznosci
     print("\nZasada niesprzecznosci")
     p = False
     print(
@@ -36,7 +43,6 @@ if __name__ == "__main__":
         not (p and not p),
     )
 
-    # Przemiennosc koniunkcji
     print("\nPrzemiennosc koniunkcji")
     p = False
     q = False
@@ -79,7 +85,6 @@ if __name__ == "__main__":
         (p and q) == (q and p),
     )
 
-    # Przemiennosc alternatywy
     print("\nPrzemiennosc alternatywy")
     p = False
     q = False
@@ -122,7 +127,6 @@ if __name__ == "__main__":
         (p or q) == (q or p),
     )
 
-    # Pierwsze prawo de Morgana
     print("\nPierwsze prawo de Morgana")
     p = False
     q = False
@@ -165,7 +169,6 @@ if __name__ == "__main__":
         (not (p and q)) == (not q or not p),
     )
 
-    # Drugie prawo de Morgana
     print("\nDrugie prawo de Morgana")
     p = False
     q = False
