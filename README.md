@@ -519,7 +519,7 @@ Rozwiązania
         <tr>
             <td>1</td>
             <td>Ile cyfr ma liczba?</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/05_Petla_wyznaczanie_cyfr_liczby/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05_Petla_wyznaczanie_cyfr_liczby/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/05_Petla_wyznaczanie_cyfr_liczby/Zad1">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/05_Petla_wyznaczanie_cyfr_liczby/Zad1.js">JavaScript</a></td>
@@ -531,7 +531,7 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Cyfry, z których składa się liczba.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/05_Petla_wyznaczanie_cyfr_liczby/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05_Petla_wyznaczanie_cyfr_liczby/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/05_Petla_wyznaczanie_cyfr_liczby/Zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/05_Petla_wyznaczanie_cyfr_liczby/Zad2.js">JavaScript</a></td>
@@ -543,7 +543,7 @@ Rozwiązania
         <tr>
             <td>3</td>
             <td>Suma cyfr liczby.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/05_Petla_wyznaczanie_cyfr_liczby/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05_Petla_wyznaczanie_cyfr_liczby/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/05_Petla_wyznaczanie_cyfr_liczby/Zad3">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/05_Petla_wyznaczanie_cyfr_liczby/Zad3.js">JavaScript</a></td>
@@ -555,7 +555,7 @@ Rozwiązania
         <tr>
             <td>4</td>
             <td>Cyfry liczby spełniające warunek.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/05_Petla_wyznaczanie_cyfr_liczby/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05_Petla_wyznaczanie_cyfr_liczby/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/05_Petla_wyznaczanie_cyfr_liczby/Zad4">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/05_Petla_wyznaczanie_cyfr_liczby/Zad4.js">JavaScript</a></td>
@@ -567,7 +567,7 @@ Rozwiązania
         <tr>
             <td>5</td>
             <td>Czy liczba jest palindromem?</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/05_Petla_wyznaczanie_cyfr_liczby/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05_Petla_wyznaczanie_cyfr_liczby/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/05_Petla_wyznaczanie_cyfr_liczby/Zad5">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/05_Petla_wyznaczanie_cyfr_liczby/Zad5.js">JavaScript</a></td>
@@ -579,7 +579,7 @@ Rozwiązania
         <tr>
             <td>6</td>
             <td>Wszystkie liczby spełniające warunek.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/05_Petla_wyznaczanie_cyfr_liczby/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/05_Petla_wyznaczanie_cyfr_liczby/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/05_Petla_wyznaczanie_cyfr_liczby/Zad6">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/05_Petla_wyznaczanie_cyfr_liczby/Zad6.js">JavaScript</a></td>
@@ -605,7 +605,7 @@ Rozwiązania
         <tr>
             <td>1</td>
             <td>Zwróć stałą.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06_Funkcje_wprowadzenie/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06_Funkcje_wprowadzenie/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/06_Funkcje_wprowadzenie/Zad1">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/06_Funkcje_wprowadzenie/Zad1.js">JavaScript</a></td>
@@ -617,7 +617,7 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Operacja arytmetyczna.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06_Funkcje_wprowadzenie/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06_Funkcje_wprowadzenie/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/06_Funkcje_wprowadzenie/Zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/06_Funkcje_wprowadzenie/Zad2.js">JavaScript</a></td>
@@ -629,7 +629,7 @@ Rozwiązania
         <tr>
             <td>3</td>
             <td>Sprawdź warunek.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06_Funkcje_wprowadzenie/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06_Funkcje_wprowadzenie/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/06_Funkcje_wprowadzenie/Zad3">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/06_Funkcje_wprowadzenie/Zad3.js">JavaScript</a></td>
@@ -641,7 +641,7 @@ Rozwiązania
         <tr>
             <td>4</td>
             <td>Maks i min.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06_Funkcje_wprowadzenie/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06_Funkcje_wprowadzenie/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/06_Funkcje_wprowadzenie/Zad4">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/06_Funkcje_wprowadzenie/Zad4.js">JavaScript</a></td>
@@ -653,7 +653,7 @@ Rozwiązania
         <tr>
             <td>5</td>
             <td>Zamień wartości miejscami.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/06_Funkcje_wprowadzenie/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/06_Funkcje_wprowadzenie/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/06_Funkcje_wprowadzenie/Zad5">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/06_Funkcje_wprowadzenie/Zad5.js">JavaScript</a></td>
@@ -715,7 +715,7 @@ Rozwiązania
         <tr>
             <td>1</td>
             <td>Średnia z n liczb.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07_Petla_algorytmy_matematyczne/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad1">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/07_Petla_algorytmy_matematyczne/Zad1.js">JavaScript</a></td>
@@ -727,7 +727,7 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Podnieś <b>a</b> do <b>b</b>.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07_Petla_algorytmy_matematyczne/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/07_Petla_algorytmy_matematyczne/Zad2.js">JavaScript</a></td>
@@ -739,7 +739,7 @@ Rozwiązania
         <tr>
             <td>3</td>
             <td>Mnożenie i dzielenie.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07_Petla_algorytmy_matematyczne/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad3">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/07_Petla_algorytmy_matematyczne/Zad3.js">JavaScript</a></td>
@@ -763,7 +763,7 @@ Rozwiązania
         <tr>
             <td>5</td>
             <td>NWD.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07_Petla_algorytmy_matematyczne/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad5">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/07_Petla_algorytmy_matematyczne/Zad5.js">JavaScript</a></td>
@@ -775,7 +775,7 @@ Rozwiązania
         <tr>
             <td>6</td>
             <td>NWW.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07_Petla_algorytmy_matematyczne/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad6">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/07_Petla_algorytmy_matematyczne/Zad6.js">JavaScript</a></td>
@@ -787,7 +787,7 @@ Rozwiązania
         <tr>
             <td>7</td>
             <td>Pierwiastek metodą Newtona.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07_Petla_algorytmy_matematyczne/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad7">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/07_Petla_algorytmy_matematyczne/Zad7.js">JavaScript</a></td>
@@ -799,7 +799,7 @@ Rozwiązania
         <tr>
             <td>8</td>
             <td>Naiwny test pierwszości.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07_Petla_algorytmy_matematyczne/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/07_Petla_algorytmy_matematyczne/Zad8">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/07_Petla_algorytmy_matematyczne/Zad8.js">JavaScript</a></td>
@@ -825,7 +825,7 @@ Rozwiązania
         <tr>
             <td>1</td>
             <td>Kwadrat.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad1">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/08_Petle_zagniezdzone/Zad1.js">JavaScript</a></td>
@@ -837,7 +837,7 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Trójkąt.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/08_Petle_zagniezdzone/Zad2.js">JavaScript</a></td>
@@ -849,7 +849,7 @@ Rozwiązania
         <tr>
             <td>3</td>
             <td>Odwrócony trójkąt.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad3">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/08_Petle_zagniezdzone/Zad3.js">JavaScript</a></td>
@@ -861,7 +861,7 @@ Rozwiązania
         <tr>
             <td>4</td>
             <td>Tabliczka mnożenia.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad4">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/08_Petle_zagniezdzone/Zad4.js">JavaScript</a></td>
@@ -873,7 +873,7 @@ Rozwiązania
         <tr>
             <td>5</td>
             <td>Litera X.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad5">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/08_Petle_zagniezdzone/Zad5.js">JavaScript</a></td>
@@ -897,7 +897,7 @@ Rozwiązania
         <tr>
             <td>7</td>
             <td>Choinka.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad7">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/08_Petle_zagniezdzone/Zad7.js">JavaScript</a></td>
@@ -909,7 +909,7 @@ Rozwiązania
         <tr>
             <td>8</td>
             <td>N pierwszych liczb pierwszych.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad8">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/08_Petle_zagniezdzone/Zad8.js">JavaScript</a></td>
@@ -921,7 +921,7 @@ Rozwiązania
         <tr>
             <td>9</td>
             <td>Trójkąt Pascala.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/08_Petle_zagniezdzone/Zad9">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/08_Petle_zagniezdzone/Zad9.js">JavaScript</a></td>
@@ -1189,7 +1189,7 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Połączenie list.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/10_Listy_dwie_listy/Zad2.js">JavaScript</a></td>
@@ -1201,7 +1201,7 @@ Rozwiązania
         <tr>
             <td>3</td>
             <td>Suma list.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad3">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/10_Listy_dwie_listy/Zad3.js">JavaScript</a></td>
@@ -1213,7 +1213,7 @@ Rozwiązania
         <tr>
             <td>4</td>
             <td>Mnożenie sklarne oraz wektorowe.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad4">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/10_Listy_dwie_listy/Zad4.js">JavaScript</a></td>
@@ -1225,7 +1225,7 @@ Rozwiązania
         <tr>
             <td>5</td>
             <td>Średnia ważona wartości.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad4.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad5">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/10_Listy_dwie_listy/Zad5.js">JavaScript</a></td>
@@ -1237,7 +1237,7 @@ Rozwiązania
         <tr>
             <td>6</td>
             <td>Część wspólna dwóch list.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad5.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad6">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/10_Listy_dwie_listy/Zad6.js">JavaScript</a></td>
@@ -1249,7 +1249,7 @@ Rozwiązania
         <tr>
             <td>7</td>
             <td>Różnica między dwoma listami.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad7">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/10_Listy_dwie_listy/Zad7.js">JavaScript</a></td>
@@ -1273,7 +1273,7 @@ Rozwiązania
         <tr>
             <td>9</td>
             <td>Usuń część wspólną obu list.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad9">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/10_Listy_dwie_listy/Zad9.js">JavaScript</a></td>
@@ -1285,7 +1285,7 @@ Rozwiązania
         <tr>
             <td>10</td>
             <td>Znajdź medianę dwóch posortowanych list.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad10.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/10_Listy_dwie_listy/Zad10">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/10_Listy_dwie_listy/Zad10.js">JavaScript</a></td>
@@ -1323,7 +1323,7 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Policz wystąpienia znaku.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad2">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1335,7 +1335,7 @@ Rozwiązania
         <tr>
             <td>3</td>
             <td>Z ilu słów składa się zdanie?</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad3">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1347,7 +1347,7 @@ Rozwiązania
         <tr>
             <td>4</td>
             <td>Zamień wszystkie małe litery na wielkie.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad4">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1359,7 +1359,7 @@ Rozwiązania
         <tr>
             <td>5</td>
             <td>Wypisz poziomo i pionowo co k-ty znak napisu.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad5">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1371,7 +1371,7 @@ Rozwiązania
         <tr>
             <td>6</td>
             <td>Zamień litery <i>a</i> na znaki zapytania.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad6">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1383,7 +1383,7 @@ Rozwiązania
         <tr>
             <td>7</td>
             <td>Zamień znaki na numery ASCII.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad7">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1395,7 +1395,7 @@ Rozwiązania
         <tr>
             <td>8</td>
             <td>Wypisz pionowo słowa, z których składa się zdanie.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad8">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1407,7 +1407,7 @@ Rozwiązania
         <tr>
             <td>9</td>
             <td>Wczytaj i rozdziel informacje o pracowniku.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad91.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad9">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1419,7 +1419,7 @@ Rozwiązania
         <tr>
             <td>10</td>
             <td>Znajdź najdłuższe/najkrótsze słowo w zdaniu.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad10.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad10">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1431,7 +1431,7 @@ Rozwiązania
         <tr>
             <td>11</td>
             <td>Średnia długość słów w zdaniu.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad11.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad11.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad11">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1455,7 +1455,7 @@ Rozwiązania
         <tr>
             <td>13</td>
             <td>Znaki znajdujące się na pozycjach będących liczbami pierwszymi.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad13.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Napisy_wprowadzenie/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad13">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1479,7 +1479,7 @@ Rozwiązania
         <tr>
             <td>15</td>
             <td>Słowa ze zdania jako osobne elementy listy.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad15.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad15.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad15">Java</a></td>
             <td><a>JavaScript</a></td>
@@ -1515,7 +1515,7 @@ Rozwiązania
         <tr>
             <td>18</td>
             <td>Odwróć napisy w zdaniu.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad18.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad18.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/11_Napisy_wprowadzenie/Zad18">Java</a></td>
             <td><a>JavaScript</a></td>
