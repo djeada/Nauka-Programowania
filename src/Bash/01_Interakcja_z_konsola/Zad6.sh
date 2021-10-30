@@ -1,30 +1,29 @@
 #!/usr/bin/env bash
 
-main() {
+#Zamień jednostki:
+#a) Pobierz wielkość w kilogramach i wypisz ilu gramom odpowiada.
+#b) Pobierz wielkość w calach i wypisz ilu centymetrom odpowiada.
+#c) Pobierz liczbę sekund i przelicz na godziny.
+#d) Pobierz liczbę w euro i wypisz ilu złotówkom odpowiada. 
+#e) Pobierz miarę kąta w stopniach i wypisz ilu radianom odpowiada.
+#f) Pobierz temperaturę w stopniach Fahrenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
 
-    #Pobierz wielkosc w kilogramach i wypisz ilu gramom odpowiada.
+main() {
 
     echo "Podaj liczbe kg: "
     read kg
 
     echo "$kg kg to  $(($kg * 1000)) g"
 
-    #Pobierz wielkosc w calach i wypisz ilu centymetrom odpowiada.
-
     echo "Podaj liczbe cali: "
     read cal
 
     echo "$cal cali to  $(bc -l <<< $cal/2.54) cm"
 
-
-    #Pobierz ilosc sekund i przelicz na godziny.
-
     echo "Podaj liczbe sekund: "
     read s
 
     echo "$s s to  $(($kg / 3600)) h"
-
-    #podaj miare kata w stopniach
 
     echo "Podaj liczbe euro: "
     read stopnie
@@ -32,9 +31,7 @@ main() {
 
     echo "$stopnie stopni to $rad radianow"
 
-    #Pobierz temperature w stopniach Farenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada.
-
-    echo "Podaj temperature w Farenheitach "
+    echo "Podaj temperature w Fahrenheitach "
     read F
 
     C=$((($F - 32) * 5 / 9))
