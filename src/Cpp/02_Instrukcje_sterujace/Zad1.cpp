@@ -1,8 +1,10 @@
 #include <iostream>
 
-int main() {
+/*
+Wypisz pobraną od użytkownika liczbę, jeśli jest ona większa niż 5.
+*/
 
-  // Wypisz pobrana od uzytkownika liczbe, jesli jest wieksza od 5.
+int main() {
 
   std::cout << "podaj liczbe:" << std::endl;
   int x;

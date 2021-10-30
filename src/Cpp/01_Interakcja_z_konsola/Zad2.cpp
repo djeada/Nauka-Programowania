@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Wypisz na konsole najpierw druga potem pierwsza pobrana dana.
+Dla pobranych od użytkownika liczb, wypisz najpierw pierwszą, a następnie drugą liczbę.
 */
 
 int main() {

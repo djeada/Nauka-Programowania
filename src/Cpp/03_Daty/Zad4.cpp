@@ -1,8 +1,12 @@
 #include <iostream>
 
-int main() {
+/*
+Dla pobranej liczby, wypisz dzień tygodnia odpowiadający tej liczbie. 
+Jeśli otrzymano liczbę niedodatnią, bądź dodatnią większą niż 7, 
+wypisz komuniat informujący użytkownika, że liczba jest niepoprawna.
+*/
 
-  // Dla pobranej liczby, wypisz dzien tygodnia odpowiadajcy tej liczbie.
+int main() {
 
   std::cout << "Podaj numer dnia tygodnia:" << std::endl;
 
@@ -11,35 +15,35 @@ int main() {
 
   switch (dzien) {
   case 1:
-    std::cout << "pierwszym dniem tygodnia jest poniedzialek" << std::endl;
+    std::cout << "Pierwszym dniem tygodnia jest poniedzialek." << std::endl;
     break;
 
   case 2:
-    std::cout << "drugim dniem tygodnia jest wtorek" << std::endl;
+    std::cout << "Drugim dniem tygodnia jest wtorek." << std::endl;
     break;
 
   case 3:
-    std::cout << "trzecim dniem tygodnia jest sroda" << std::endl;
+    std::cout << "Trzecim dniem tygodnia jest sroda." << std::endl;
     break;
 
   case 4:
-    std::cout << "czwartym dniem tygodnia jest czwartek" << std::endl;
+    std::cout << "Czwartym dniem tygodnia jest czwartek." << std::endl;
     break;
 
   case 5:
-    std::cout << "piatym dniem tygodnia jest piatek" << std::endl;
+    std::cout << "Piatym dniem tygodnia jest piatek." << std::endl;
     break;
 
   case 6:
-    std::cout << "szostym dniem tygodnia jest sobota" << std::endl;
+    std::cout << "Szostym dniem tygodnia jest sobota." << std::endl;
     break;
 
   case 7:
-    std::cout << "siodmym dniem tygodnia jest niedziela" << std::endl;
+    std::cout << "Siodmym dniem tygodnia jest niedziela." << std::endl;
     break;
 
   default:
-    std::cout << "podano niepoprawna liczbe" << std::endl;
+    std::cout << "Podano niepoprawna liczbe." << std::endl;
   }
 
   return 0;

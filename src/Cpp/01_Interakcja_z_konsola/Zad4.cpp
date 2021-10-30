@@ -2,8 +2,14 @@
 #include <iostream>
 
 /*
-Wypisz wynik podstawowych operacji arytmetycznych
-dla dwoch liczb pobranych od uzytkownika.
+Wypisz wynik następujących operacji arytmetycznych dla dwóch liczb pobranych od użytkownika:
+
+a) Suma liczb.
+b) Różnica pierwszej i drugiej liczby.
+c) Iloczyn liczb.
+d) Iloraz pierwszej liczby przez drugą.
+e) Reszta z dzielenia pierwszej liczby przez drugą.
+f) Pierwsza liczba podniesiona do potęgi równej drugiej liczbie.
 */
 
 int main() {

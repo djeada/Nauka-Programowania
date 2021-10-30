@@ -1,8 +1,10 @@
 #include <iostream>
 
-int main() {
+/*
+Dla pobranych trzech liczb, wypisz liczby w kolejności rosnącej.
+*/
 
-  // Dla pobranych trzech liczb, wypisz je w kolejnosci rosnacej.
+int main() {
 
   std::cout << "podaj trzy liczby:" << std::endl;
 

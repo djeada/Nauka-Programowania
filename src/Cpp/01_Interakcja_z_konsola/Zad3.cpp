@@ -1,34 +1,33 @@
 #include <iostream>
 
-// Narysuj ksztalt.
+/*
+Wypisz ciągi znaków na standardowe wyjście. Pamiętaj o spacjach i przejściach do nowej linii.
+
+Kwadrat.
+xx
+xx
+
+Trójkąt.
+1
+22
+333
+
+Romb z jedynek.
+  1
+ 111
+11111
+ 111
+  1
+*/
 
 int main() {
-  /*
-      Kwadrat.
-      XX
-      XX
-      */
 
   std::cout << "xx" << std::endl;
   std::cout << "xx" << std::endl << std::endl;
 
-  /*Trojkat.
-      1
-      22
-      333
-      */
-
   std::cout << "1" << std::endl;
   std::cout << "22" << std::endl;
   std::cout << "333" << std::endl << std::endl;
-
-  /*Romb z jedynek.
-        1
-       111
-      11111
-       111
-       1
-      */
 
   std::cout << "  1" << std::endl;
   std::cout << " 111" << std::endl;

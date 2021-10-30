@@ -1,9 +1,10 @@
 #include <iostream>
 
-int main() {
+/*
+Pobierz od użytkownika trzy długości boków i sprawdź, czy można z nich zbudować trójkąt.
+*/
 
-  // Pobierz od uzytkownika trzy dlugosci bokow i sprawdz,
-  // czy mozna z nich zbudowac trojkat.
+int main() {
 
   std::cout << "podaj trzy liczby:" << std::endl;
 

@@ -1,8 +1,17 @@
 #include <iostream>
 
-int main() {
+/*
+Zamień jednostki:
 
-  // Pobierz wielkosc w kilogramach i wypisz ilu gramom odpowiada.
+a) Pobierz wielkość w kilogramach i wypisz ilu gramom odpowiada.
+b) Pobierz wielkość w calach i wypisz ilu centymetrom odpowiada.
+c) Pobierz liczbę sekund i przelicz na godziny.
+d) Pobierz liczbę w euro i wypisz ilu złotówkom odpowiada. 
+e) Pobierz miarę kąta w stopniach i wypisz ilu radianom odpowiada.
+f) Pobierz temperaturę w stopniach Farenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
+*/
+
+int main() {
 
   std::cout << "podaj wielkosc w kilogramach:" << std::endl;
 
@@ -12,8 +21,6 @@ int main() {
 
   std::cout << kilogramy << " kg to " << gramy << " g." << std::endl;
 
-  // Pobierz wielkosc w calach i wypisz ilu centymetrom odpowiada.
-
   std::cout << "podaj wielkosc w calach:" << std::endl;
 
   float cal;
@@ -21,8 +28,6 @@ int main() {
   float cm = cal / 2.54;
 
   std::cout << cal << " cal to " << cm << " cm." << std::endl;
-
-  // Pobierz ilosc sekund i przelicz na godziny.
 
   std::cout << "podaj ilosc sekund:" << std::endl;
 
@@ -32,8 +37,6 @@ int main() {
 
   std::cout << sekundy << " sekund to " << godziny << " godzin" << std::endl;
 
-  // Pobierz liczbe w euro i wypisz ilu zlotowkom odpowiada.
-
   std::cout << "podaj liczbe w euro:" << std::endl;
 
   float euro;
@@ -41,8 +44,6 @@ int main() {
   float zloty = euro * 4.40;
 
   std::cout << euro << " euro to " << zloty << " zlotych" << std::endl;
-
-  // Pobierz miare kata w stopniach i wypisz ilu radianom odpowiada.
 
   std::cout << "podaj miare kata w stopniach:" << std::endl;
 
@@ -52,9 +53,6 @@ int main() {
 
   std::cout << katStopnie << " stopni to " << katRad << " radianow."
             << std::endl;
-
-  // Pobierz temperature w stopniach Farenheita i wypisz
-  // ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada.
 
   std::cout << "podaj temperature w Farenheitach:" << std::endl;
 

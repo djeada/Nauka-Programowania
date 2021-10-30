@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Dla dwoch pobranych liczb, sprawdz czy pobrane liczby sa identyczne.
+Dla dwóch pobranych od użytkownika liczb, sprawdź czy liczby są identyczne.
 */
 
 int main() {

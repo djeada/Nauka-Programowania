@@ -1,19 +1,25 @@
 #include <iostream>
 
+/*
+Dla trzech pobranych liczb reprezentujących datę, 
+wypisz odpowiadający im dzień tygodnia. 
+Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem. 
+
+Wzor Gaussa:
+Niech data bedzie dana w formacie DD/MM/CCYY :
+    DD - dzien
+    MM - miesiac
+    CC - stulecie
+    YY - rok
+
+    A = CC/4 - 2*CC - 1
+    B = 5*YY/4
+    C = 26*(MM + 1)/10
+
+    Dzien = (A + B + C + DD) mod 7
+*/
+
 int main() {
-
-  /*Niech data bedzie dana w formacie DD/MM/CCYY :
-      DD - dzien
-      MM - miesiac
-      CC - stulecie
-      YY - rok
-
-      A = CC/4 - 2*CC - 1
-      B = 5*YY/4
-      C = 26*(MM + 1)/10
-
-      Dzien = (A + B + C + DD) mod 7
-      */
 
   std::cout << "Podaj dzien:" << std::endl;
   int DD;
@@ -38,35 +44,35 @@ int main() {
 
   switch (wynik) {
   case 1:
-    std::cout << "pierwszym dniem tygodnia jest poniedzialek" << std::endl;
+    std::cout << "Pierwszym dniem tygodnia jest poniedzialek." << std::endl;
     break;
 
   case 2:
-    std::cout << "drugim dniem tygodnia jest wtorek" << std::endl;
+    std::cout << "Drugim dniem tygodnia jest wtorek." << std::endl;
     break;
 
   case 3:
-    std::cout << "trzecim dniem tygodnia jest sroda" << std::endl;
+    std::cout << "Trzecim dniem tygodnia jest sroda." << std::endl;
     break;
 
   case 4:
-    std::cout << "czwartym dniem tygodnia jest czwartek" << std::endl;
+    std::cout << "Czwartym dniem tygodnia jest czwartek." << std::endl;
     break;
 
   case 5:
-    std::cout << "piatym dniem tygodnia jest piatek" << std::endl;
+    std::cout << "Piatym dniem tygodnia jest piatek." << std::endl;
     break;
 
   case 6:
-    std::cout << "szostym dniem tygodnia jest sobota" << std::endl;
+    std::cout << "Szostym dniem tygodnia jest sobota." << std::endl;
     break;
 
   case 7:
-    std::cout << "siodmym dniem tygodnia jest niedziela" << std::endl;
+    std::cout << "Siodmym dniem tygodnia jest niedziela." << std::endl;
     break;
 
   default:
-    std::cout << "bledne dane" << std::endl;
+    std::cout << "Podano bledne dane." << std::endl;
   }
 
   return 0;

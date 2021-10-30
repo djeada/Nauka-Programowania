@@ -1,8 +1,10 @@
 #include <iostream>
 
-int main() {
+/*
+Dla pobranych czterech liczb, znajdz najwieksza liczbe.
+*/
 
-  // Dla pobranych czterech liczb, znajdz najwieksza liczbe.
+int main() {
 
   std::cout << "podaj cztery liczby:" << std::endl;
 

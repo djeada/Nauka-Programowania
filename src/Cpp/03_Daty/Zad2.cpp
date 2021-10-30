@@ -1,20 +1,24 @@
 #include <iostream>
 
-int main() {
+/*
+Dla pobranych sześciu liczb: dnia urodzenia osoby, miesiąca urodzenia osoby, 
+roku urodzenia osoby oraz aktualnego dnia, aktualnego miesiąca i aktualnego 
+roku, sprawdź czy dana osoba jest pełnoletnia.
+*/
 
-  // Czy osoba jest pelnoletnia?
+int main() {
 
   std::cout << "Podaj trzy liczby reprezentujace dzien, miesiac i rok "
                "urodzenia osoby:"
             << std::endl;
 
-  int dzien;
-  int miesiac;
-  int rok;
+  int dzienUrodzenia;
+  int miesiacUrodzenia;
+  int rokUrodzenia;
 
-  std::cin >> dzien;
-  std::cin >> miesiac;
-  std::cin >> rok;
+  std::cin >> dzienUrodzenia;
+  std::cin >> miesiacUrodzenia;
+  std::cin >> rokUrodzenia;
 
   std::cout << "Podaj trzy liczby reprezentujace dzisiejsza date:" << std::endl;
 
@@ -26,31 +30,31 @@ int main() {
   std::cin >> miesiacAktualny;
   std::cin >> rokAktualny;
 
-  int roznicaLata = rokAktualny - rok;
-  int roznicaMiesiace = miesiacAktualny - miesiac;
-  int roznicaDni = dzienAktualny - dzien;
+  int roznicaLat = rokAktualny - rokUrodzenia;
+  int roznicaMiesiecy = miesiacAktualny - miesiacUrodzenia;
+  int roznicaDni = dzienAktualny - dzienUrodzenia;
 
-  if (roznicaLata > 18)
-    std::cout << "osoba jest pelnoletnia" << std::endl;
+  if (roznicaLat > 18)
+    std::cout << "Osoba jest pelnoletnia." << std::endl;
 
-  else if (roznicaLata == 18) {
+  else if (roznicaLat == 18) {
 
-    if (roznicaMiesiace > 0)
-      std::cout << "osoba jest pelnoletnia" << std::endl;
+    if (roznicaMiesiecy > 0)
+      std::cout << "Osoba jest pelnoletnia." << std::endl;
 
-    else if (roznicaMiesiace == 0) {
+    else if (roznicaMiesiecy == 0) {
 
       if (roznicaDni >= 0)
-        std::cout << "osoba jest pelnoletnia" << std::endl;
+        std::cout << "Osoba jest pelnoletnia." << std::endl;
 
       else
-        std::cout << "osoba nie jest pelnoletnia" << std::endl;
+        std::cout << "Osoba nie jest pelnoletnia." << std::endl;
     } else
-      std::cout << "osoba nie jest pelnoletnia" << std::endl;
+      std::cout << "Osoba nie jest pelnoletnia." << std::endl;
   }
 
   else
-    std::cout << "osoba nie jest pelnoletnia" << std::endl;
+    std::cout << "Osoba nie jest pelnoletnia." << std::endl;
 
   return 0;
 }

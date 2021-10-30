@@ -1,8 +1,10 @@
 #include <iostream>
 
-int main() {
+/*
+Dla dwoch pobranych liczb, wypisz najpierw wieksza potem mniejsza.
+*/
 
-  // Dla dwoch pobranych liczb, wypisz najpierw wieksza potem mniejsza.
+int main() {
 
   std::cout << "podaj dwie liczby:" << std::endl;
 

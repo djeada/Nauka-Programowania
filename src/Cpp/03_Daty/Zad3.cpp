@@ -1,29 +1,20 @@
 #include <iostream>
 
-int main() {
+/*
+Dla pobranej liczby reprezentującej rok, sprawdź czy rok jest przestępny.
+*/
 
-  // Czy rok jest przestepny?
+int main() {
 
   std::cout << "Podaj rok:" << endl;
 
   int rok;
   std::cin >> rok;
 
-  if (rok % 4 == 0) {
-
-    if (rok % 100 == 0) {
-      if (rok % 400 == 0)
-        std::cout << "rok jest przestepny" << std::endl;
-      else
-        std::cout << "rok nie jest przestepny" << endl;
-    }
-
-    else
-      std::cout << "rok jest przestepny" << endl;
-  }
-
+  if (rok % 4 == 0 && rok % 100 != 0 || rok % 400 == 0)
+    std::cout << "Rok jest przestępny." << endl;
   else
-    std::cout << "rok nie jest przestepny" << endl;
+    std::cout << "Rok nie jest przestępny." << endl;
 
   return 0;
 }
