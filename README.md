@@ -311,7 +311,7 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Czy osoba jest pełnoletnia?</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/03_Daty/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/03_Daty/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/03_Daty/Zad2/Main.java">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/03_Daty/Zad2.js">JavaScript</a></td>
@@ -323,7 +323,7 @@ Rozwiązania
         <tr>
             <td>3</td>
             <td>Rok przestępny.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/03_Daty/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/03_Daty/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/03_Daty/Zad3/Main.java">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/03_Daty/Zad3.js">JavaScript</a></td>
@@ -335,7 +335,7 @@ Rozwiązania
         <tr>
             <td>4</td>
             <td>Dzień tygodnia odpowiadający danej liczbie.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/03_Daty/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/03_Daty/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/03_Daty/Zad4/Main.java">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/03_Daty/Zad4.js">JavaScript</a></td>
@@ -347,7 +347,7 @@ Rozwiązania
         <tr>
             <td>5</td>
             <td>Ile dni ma miesiąc?</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/03_Daty/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/03_Daty/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/03_Daty/Zad5/Main.java">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/03_Daty/Zad5.js">JavaScript</a></td>
@@ -359,7 +359,7 @@ Rozwiązania
         <tr>
             <td>6</td>
             <td>Poprawność daty.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/03_Daty/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/03_Daty/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/03_Daty/Zad6/Main.java">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/03_Daty/Zad6.js">JavaScript</a></td>
@@ -371,7 +371,7 @@ Rozwiązania
         <tr>
             <td>7</td>
             <td>Ile dni minęło od początku roku?</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/03_Daty/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/03_Daty/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/03_Daty/Zad7/Main.java">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/03_Daty/Zad7.js">JavaScript</a></td>
@@ -383,7 +383,7 @@ Rozwiązania
         <tr>
             <td>8</td>
             <td>Jaki mamy dzień tygodnia?</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/03_Daty/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/03_Daty/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/03_Daty/Zad8/Main.java">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/03_Daty/Zad8.js">JavaScript</a></td>
@@ -409,7 +409,7 @@ Rozwiązania
         <tr>
             <td>1</td>
             <td>Warunek kończący pętlę.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04_Petla_wprowadzenie/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04_Petla_wprowadzenie/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/04_Petla_wprowadzenie/Zad1">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/04_Petla_wprowadzenie/Zad1.js">JavaScript</a></td>
@@ -421,7 +421,7 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Liczby mniejsze od podanej liczby.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04_Petla_wprowadzenie/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04_Petla_wprowadzenie/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/04_Petla_wprowadzenie/Zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/04_Petla_wprowadzenie/Zad2.js">JavaScript</a></td>
@@ -433,7 +433,7 @@ Rozwiązania
         <tr>
             <td>3</td>
             <td>Liczba <i>Pi</i>.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04_Petla_wprowadzenie/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04_Petla_wprowadzenie/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/04_Petla_wprowadzenie/Zad3">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/04_Petla_wprowadzenie/Zad3.js">JavaScript</a></td>
@@ -445,7 +445,7 @@ Rozwiązania
         <tr>
             <td>4</td>
             <td>Suma liczb mniejszych od liczby.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04_Petla_wprowadzenie/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04_Petla_wprowadzenie/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/04_Petla_wprowadzenie/Zad4">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/04_Petla_wprowadzenie/Zad4.js">JavaScript</a></td>
@@ -469,7 +469,7 @@ Rozwiązania
         <tr>
             <td>6</td>
             <td>Suma wyrazów ciągu.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04_Petla_wprowadzenie/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04_Petla_wprowadzenie/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/04_Petla_wprowadzenie/Zad6">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/04_Petla_wprowadzenie/Zad6.js">JavaScript</a></td>
@@ -481,7 +481,7 @@ Rozwiązania
         <tr>
             <td>7</td>
             <td>Liczba <i>Pi</i> podniesiona do potęgi.</td>
-            <td><a>Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04_Petla_wprowadzenie/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04_Petla_wprowadzenie/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/04_Petla_wprowadzenie/Zad7">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/04_Petla_wprowadzenie/Zad7.js">JavaScript</a></td>
