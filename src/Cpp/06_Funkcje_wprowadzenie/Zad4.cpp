@@ -1,69 +1,73 @@
 #include <cassert>
 #include <cmath>
 
-// Napisz funkcje, ktora:
+/*
+Napisz funkcję, która:
 
-// a) dla podanych dwoch liczb, zwroci mniejsza
-int min2(int a, int b) { return a < b ? a : b; }
+a) Dla otrzymanych dwóch liczb, zwraca mniejszą.
+b) Dla otrzymanych dwóch liczb, zwróci większą.
+c) Dla otrzymanych trzech liczb, zwraca najmniejszą.
+d) Dla otrzymanych trzech liczb, zwraca największą.
+*/
 
-// b) dla podanych dwoch liczb, zwroci wieksza
-int maks2(int a, int b) { return a > b ? a : b; }
+int min2(int pierwszaLiczba, int drugaLiczba) { return pierwszaLiczba < drugaLiczba ? pierwszaLiczba : drugaLiczba; }
 
-// c) dla podanych trzech liczb, zwroci najmniejsza
-int min3(int a, int b, int c) {
-  int minAB = a < b ? a : b;
-  return minAB < c ? minAB : c;
+int maks2(int pierwszaLiczba, int drugaLiczba) { return pierwszaLiczba > drugaLiczba ? pierwszaLiczba : drugaLiczba; }
+
+int min3(int pierwszaLiczba, int drugaLiczba, int trzeciaLiczba) {
+  int minAB = pierwszaLiczba < drugaLiczba ? pierwszaLiczba : drugaLiczba;
+  return minAB < trzeciaLiczba ? minAB : trzeciaLiczba;
 }
 
-// d) dla podanych trzech liczb, zwroci najwieksza
-int maks3(int a, int b, int c) {
-  int maksAB = a > b ? a : b;
-  return maksAB > c ? maksAB : c;
+int maks3(int pierwszaLiczba, int drugaLiczba, int trzeciaLiczba) {
+  int maksAB = pierwszaLiczba > drugaLiczba ? pierwszaLiczba : drugaLiczba;
+  return maksAB > trzeciaLiczba ? maksAB : trzeciaLiczba;
 }
 
-void test1() {
-  int a = 7;
-  int b = 5;
-  int wynik = a;
+void testMaks2() {
+  int pierwszaLiczba = 7;
+  int drugaLiczba = 5;
+  int wynik = pierwszaLiczba;
 
-  assert(maks2(a, b) == wynik);
-  assert(maks2(b, a) == wynik);
+  assert(maks2(pierwszaLiczba, drugaLiczba) == wynik);
+  assert(maks2(drugaLiczba, pierwszaLiczba) == wynik);
 }
 
-void test2() {
-  int a = 7;
-  int b = 5;
-  int wynik = b;
+void testMin2() {
+  int pierwszaLiczba = 7;
+  int drugaLiczba = 5;
+  int wynik = drugaLiczba;
 
-  assert(min2(a, b) == wynik);
-  assert(min2(b, a) == wynik);
+  assert(min2(pierwszaLiczba, drugaLiczba) == wynik);
+  assert(min2(drugaLiczba, pierwszaLiczba) == wynik);
 }
 
-void test3() {
-  int a = 7;
-  int b = 5;
-  int c = 11;
-  int wynik = c;
+void testMaks3() {
+  int pierwszaLiczba = 7;
+  int drugaLiczba = 5;
+  int trzeciaLiczba = 11;
+  int wynik = trzeciaLiczba;
 
-  assert(maks3(a, b, c) == wynik);
-  assert(maks3(b, a, c) == wynik);
+  assert(maks3(pierwszaLiczba, drugaLiczba, trzeciaLiczba) == wynik);
+  assert(maks3(drugaLiczba, pierwszaLiczba, trzeciaLiczba) == wynik);
 }
 
-void test4() {
-  int a = 7;
-  int b = 5;
-  int c = 11;
-  int wynik = b;
+void testMin3() {
+  int pierwszaLiczba = 7;
+  int drugaLiczba = 5;
+  int trzeciaLiczba = 11;
+  int wynik = drugaLiczba;
 
-  assert(min3(a, b, c) == wynik);
-  assert(min3(b, a, c) == wynik);
+  assert(min3(pierwszaLiczba, drugaLiczba, trzeciaLiczba) == wynik);
+  assert(min3(drugaLiczba, pierwszaLiczba, trzeciaLiczba) == wynik);
 }
 
 int main() {
-  test1();
-  test2();
-  test3();
-  test4();
+
+  testMaks2();
+  testMin2();
+  testMaks3();
+  testMin3();
 
   return 0;
 }

@@ -1,17 +1,18 @@
 #include <iostream>
 #include <string>
 
-// Napisz dwie funkcje. Pierwsza powinna porsic uzytkownika o podanie
-// nazwy i hasla oraz zwracac otrzymane dane.
+/*
+Napisz dwie funkcje. Pierwsza powinna prosić użytkownika o podanie nazwy oraz hasła 
+oraz zwracać otrzymane dane. Druga powinna otrzymywać dane od pierwszej i ponownie 
+prosić o podanie nazwy oraz hasła. Prośba o podanie danych powinna zostać umieszczona 
+w pętli. Warunkiem zakończenia pętli jest podanie przez użytkownika danych identycznych 
+z tymi przekazanymi przez pierwszą funkcję.
+*/
 
 void inicjalizacjaDanych(std::string &nazwa, std::string &haslo) {
   std::cout << "podaj nazwe oraz haslo do zapamietania" << std::endl;
   std::cin >> nazwa >> haslo;
 }
-
-// Druga powinna otrzymywac dane od pierwszej i ponownie prosic o
-// podanie nazwy oraz hasla, dopoki dane nie beda identyczne z tymi
-// podanymi za pierwszym razem.
 
 void czyDanePoprawne(std::string &nazwa, std::string &haslo) {
 

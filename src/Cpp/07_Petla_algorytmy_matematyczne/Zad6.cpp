@@ -1,7 +1,9 @@
 #include <cassert>
 
-// Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci
-// ich najmniejsza wspolna wielokrotnosc.
+/*
+Napisz funkcję, która dla otrzymanych dwóch liczb 
+zwróci ich najmniejszą wspólną wielokrotność.
+*/
 
 int nwd(int a, int b) {
 
@@ -21,17 +23,15 @@ int nwd(int a, int b) {
 
 int nww(int a, int b) { return a * b / nwd(a, b); }
 
-void test1() {
-  int a = 14;
-  int b = 21;
-  int wynik = 42;
-
-  assert(nww(a, b) == wynik);
+void testNww(){
+  assert(nww(12, 15) == 60);
+  assert(nww(12, 16) == 48);
+  assert(nww(12, 18) == 36);
 }
 
 int main() {
 
-  test1();
-
+  testNww();
+  
   return 0;
 }

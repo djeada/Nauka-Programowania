@@ -2,35 +2,46 @@
 #include <iomanip>
 #include <iostream>
 
+/*
+Dla pobranej liczby n, wypisz sumę n pierwszych wyrazów ciągu danego wzorem:
+
+a) a_n = n/(n + 1)
+b) a_n = (n^2 + 5)/n
+c) a_n = n + 2^n
+
+Wynik powinien być zaokrąglony do najbliższej liczby naturalnej.
+*/
+
 int main() {
 
-  // Dla pobranej liczby n, wyswietl sume n
-  // pierwszych wyrazow ciagu danego wzorem:
   std::cout << "Podaj liczbe: " << std::endl;
   int n;
   std::cin >> n;
 
   std::cout << std::fixed << std::setprecision(2);
 
-  // a_n = n/(n+1)
+  std::cout << "Suma n pierwszych wyrazow ciagu danego wzorem a_n = n/(n + 1) wynosi:" << std::endl;
+
   float suma = 0;
-  for (float i = 1; i <= n; i++) {
+  for (unsigned int i = 1; i <= n; i++) {
     float a = i / (i + 1);
     suma += a;
   }
   std::cout << suma << std::endl;
 
-  // a_n = (n^2+5)/n
+  std::cout << "Suma n pierwszych wyrazow ciagu danego wzorem a_n = (n^2 + 5)/n wynosi:" << std::endl;
+  
   suma = 0;
-  for (float i = 1; i <= n; i++) {
+  for (unsigned int i = 1; i <= n; i++) {
     float a = (pow(i, 2) + 5) / i;
     suma += a;
   }
   std::cout << suma << std::endl;
 
-  // a_n = n + 2^n
+  std::cout << "Suma n pierwszych wyrazow ciagu danego wzorem a_n = n + 2^n wynosi:" << std::endl;
+
   suma = 0;
-  for (int i = 1; i <= n; i++) {
+  for (unsigned int i = 1; i <= n; i++) {
     int a = i + pow(2, i);
     suma += a;
   }

@@ -1,8 +1,15 @@
 #include <iostream>
 
-int main() {
+/*
+Dla pobranych dwóch liczb, powinny zostać wypisane:
 
-  // Dla pobranych dwoch liczb, powinny zostac wyswietlone:
+a) Wszystkie liczby naturalne większe od mniejszej pobranej liczby 
+i jednocześnie mniejsze od większej pobranej liczby. 
+b) Wszystkie liczby naturalne podzielne przez 3 większe od mniejszej 
+pobranej liczby i jednocześnie mniejsze od większej pobranej liczby.
+*/
+
+int main() {
 
   std::cout << "Podaj dwie liczby: " << std::endl;
   int a, b;
@@ -14,16 +21,15 @@ int main() {
     b = pom;
   }
 
-  // wszystkie liczby naturalne wieksze od mniejszej pobranej
-  // liczby i jednoczesnie mniejsze od wiekszej pobranej liczby.
+  std::cout << "Liczby naturalne większe od mniejszej pobranej liczby i jednocześnie mniejsze od większej pobranej liczby: " << std::endl;
+
   for (int i = a + 1; i < b; i++)
     std::cout << i << " ";
 
   std::cout << std::endl;
 
-  // wszystkie liczby naturalne podzielne przez 3
-  // wieksze od mniejszej pobranej liczby i jednoczesnie
-  // mniejsze od wiekszej pobranej liczby.
+  std::cout << "Liczby naturalne podzielne przez 3 większe od mniejszej pobranej liczby i jednocześnie mniejsze od większej pobranej liczby: " << std::endl;
+
   for (int i = a + 1; i < b; i++) {
     if (i % 3 == 0)
       std::cout << i << " ";

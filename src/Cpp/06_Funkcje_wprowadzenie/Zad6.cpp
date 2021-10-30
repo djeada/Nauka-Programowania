@@ -1,36 +1,30 @@
 #include <cassert>
 #include <cmath>
 
-// Napisz funkcje, ktora dla otrzymanej liczby zwroci sume cyfr tej liczby.
+/*
+Napisz funkcję, która dla otrzymanej liczby zwróci sumę cyfr tej liczby.
+*/
 
-int sumaCyfr(int a) {
+int sumaCyfr(int liczba) {
   int suma = 0;
 
-  while (a > 0) {
-    suma += (a % 10);
-    a /= 10;
+  while (liczba > 0) {
+    suma += (liczba % 10);
+    liczba /= 10;
   }
 
   return suma;
 }
 
-void test1() {
-  int a = 312423;
-  int wynik = 15;
-
-  assert(sumaCyfr(a) == wynik);
-}
-
-void test2() {
-  int a = 5;
-  int wynik = 5;
-
-  assert(sumaCyfr(a) == wynik);
+void testSumaCyfr(){
+  assert(sumaCyfr(123) == 6);
+  assert(sumaCyfr(0) == 0);
+  assert(sumaCyfr(1) == 1);
 }
 
 int main() {
-  test1();
-  test2();
+  
+  testSumaCyfr();
 
   return 0;
 }

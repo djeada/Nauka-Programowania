@@ -1,20 +1,20 @@
 #include <iostream>
 
+/*
+Dla pobranej liczby, powinna zostać wypisana suma cyfr tej liczby.
+*/
+
 int main() {
 
-  // Dla pobranej liczby, wyswietl liczbe Pi tyle razy
-  // ile wynosi pobrana liczba, z dokladnoscia do tylu
-  // miejsc po przecinku ile wynosi pobrana liczba.
-
   std::cout << "Podaj liczbe" << std::endl;
-  int a;
-  std::cin >> a;
+  int liczba;
+  std::cin >> liczba;
 
   int suma = 0;
 
-  while (a > 0) {
-    suma += (a % 10);
-    a = a / 10;
+  while (liczba > 0) {
+    suma += (liczba % 10);
+    liczba = liczba / 10;
   }
 
   std::cout << "Suma cyfr podanej liczby wynosi " << suma << std::endl;

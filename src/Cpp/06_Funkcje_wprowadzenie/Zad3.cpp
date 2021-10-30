@@ -1,47 +1,58 @@
 #include <cmath>
-#include <iostream>
+#include <cassert>
 
-// Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora
-// dla otrzymanych dwoch liczb ustali czy:
+/*
+Pobierz dwie liczby od użytkownika. Napisz funkcję, która dla otrzymanych 
+dwóch liczb odpowie na następujące pytanie:
 
-// a) pierwsza liczba jest wieksza od drugiej
-bool czyWieksza(int a, int b) { return a > b; }
+a) Czy pierwsza liczba jest większa od drugiej liczby?
+b) Czy suma liczb jest mniejsza niż 10?
+c) Czy obie liczby są nieparzyste?
+d) Czy większa liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu?
+*/
 
-// b) czy suma liczb jest mneijsza niz 10
-bool czySumaMniejsza(int a, int b) {
-  int suma = a + b;
+bool pierwszaWieksza(int pierwszaLiczba, int drugaLiczba) { return pierwszaLiczba > drugaLiczba; }
+
+bool sumaMniejsza10(int pierwszaLiczba, int drugaLiczba) {
+  int suma = pierwszaLiczba + drugaLiczba;
   return suma < 10;
 }
 
-// c) czy obie sa nieparzyste
-bool czyObieNieparzyste(int a, int b) { return a % 2 == 1 && b % 2 == 1; }
+bool obieNieparzyste(int pierwszaLiczba, int drugaLiczba) { return pierwszaLiczba % 2 == 1 && drugaLiczba % 2 == 1; }
 
-// d) czy wieksza liczba jest mniejsza
-// od pierwszej podniesionej do kwadratu
-int wieksza(int a, int b) { return a > b ? a : b; }
+int wieksza(int pierwszaLiczba, int drugaLiczba) { return pierwszaLiczba > drugaLiczba ? pierwszaLiczba : drugaLiczba; }
 
-bool czyWiekszaNizKwad(int a, int b) { return wieksza(a, b) < pow(a, 2); }
+bool wiekszaMniejszaPierwszaKwadrat(int pierwszaLiczba, int drugaLiczba) { return wieksza(pierwszaLiczba, drugaLiczba) < pow(pierwszaLiczba, 2); }
+
+void testPierwszaWieksza()  {
+  assert(!pierwszaWieksza(1, 2));
+  assert(pierwszaWieksza(2, 1));
+}
+
+void testSumaMniejsza10() {
+  assert(!sumaMniejsza10(1, 2));
+  assert(sumaMniejsza10(1, 9));
+  assert(sumaMniejsza10(9, 1));
+}
+
+void testObieNieparzyste() {
+  assert(!obieNieparzyste(1, 2));
+  assert(obieNieparzyste(1, 1));
+  assert(obieNieparzyste(2, 2));
+}
+
+void testWiekszaMniejszaPierwszaKwadrat() {
+  assert(!wiekszaMniejszaPierwszaKwadrat(1, 2));
+  assert(wiekszaMniejszaPierwszaKwadrat(2, 1));
+  assert(wiekszaMniejszaPierwszaKwadrat(2, 2));
+}
 
 int main() {
-  std::cout << "Podaj dwie liczby: " << std::endl;
-  int a;
-  int b;
 
-  std::cin >> a;
-  std::cin >> b;
-
-  std::cout << "Pierwsza liczba jest wieksza od drugiej: " << std::boolalpha
-            << czyWieksza(a, b) << std::endl;
-
-  std::cout << "Suma liczb jest mniejsza od 10: " << std::boolalpha
-            << czySumaMniejsza(a, b) << std::endl;
-
-  std::cout << "Obie liczby nieparzyste: " << std::boolalpha
-            << czyObieNieparzyste(a, b) << std::endl;
-
-  std::cout
-      << "Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu "
-      << std::boolalpha << czyWiekszaNizKwad(a, b) << std::endl;
+  testPierwszaWieksza();
+  testSumaMniejsza10();
+  testObieNieparzyste();
+  testWiekszaMniejszaPierwszaKwadrat();
 
   return 0;
 }

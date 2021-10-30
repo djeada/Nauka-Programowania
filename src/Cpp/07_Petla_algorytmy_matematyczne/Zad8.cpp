@@ -1,10 +1,11 @@
 #include <cassert>
 #include <cmath>
 
-// Napisz funkcje, ktora dla otrzymanej liczby sprawdzi
-// czy jest ona liczba pierwsza.
+/*
+Napisz funkcję, która dla otrzymanej liczby sprawdzi czy jest ona liczbą pierwszą.
+*/
 
-bool czyPierwsza(int n) {
+bool pierwsza(int n) {
 
   if (n <= 1)
     return false;
@@ -20,26 +21,20 @@ bool czyPierwsza(int n) {
   return true;
 }
 
-void test1() {
-  int a = 15;
-  assert(!czyPierwsza(a));
-}
-
-void test2() {
-  int a = 7;
-  assert(czyPierwsza(a));
-}
-
-void test3() {
-  int a = -15;
-  assert(!czyPierwsza(a));
+void testPierwsza() {
+  assert(pierwsza(2));
+  assert(pierwsza(3));
+  assert(pierwsza(5));
+  assert(pierwsza(7));
+  assert(pierwsza(11));
+  assert(!pierwsza(14));
+  assert(!pierwsza(15));
+  assert(!pierwsza(16));
 }
 
 int main() {
 
-  test1();
-  test2();
-  test3();
+  testPierwsza();
 
   return 0;
 }

@@ -1,8 +1,10 @@
 #include <iostream>
 
-int main() {
+/*
+Na farmie mamy a głów i b nóg, znajdź liczbę kur oraz liczbę owieczek.
+*/
 
-  // Na farmie mamy a glow i b nog, znajdz liczbe kur oraz owieczek.
+int main() {
 
   std::cout << "Podaj dwie liczby: " << std::endl;
   int glowy, nogi;

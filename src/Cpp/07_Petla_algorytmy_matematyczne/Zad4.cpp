@@ -1,36 +1,34 @@
 #include <cassert>
 
-// Napisz funkcje, ktora przy pomocy petli obliczy silnie
-// z otrzymanej liczby.
+/*
+Napisz funkcję, która przy pomocy pętli obliczy silnię 
+otrzymanej liczby.
+*/
 
-int silnia(int a) {
+int silnia(int liczba) {
 
   int wynik = 1;
 
-  while (a > 0) {
-    wynik *= a;
-    a--;
+  while (liczba > 0) {
+    wynik *= liczba;
+    liczba--;
   }
 
   return wynik;
 }
 
-void test1() {
-  int a = 4;
-  int wynik = 24;
-  assert(silnia(a) == wynik);
-}
-
-void test2() {
-  int a = -5;
-  int wynik = 1;
-  assert(silnia(a) == wynik);
+void testSilnia() {
+  assert(silnia(0) == 1);
+  assert(silnia(1) == 1);
+  assert(silnia(2) == 2);
+  assert(silnia(3) == 6);
+  assert(silnia(4) == 24);
+  assert(silnia(5) == 120);
 }
 
 int main() {
 
-  test1();
-  test2();
+  testSilnia();
 
   return 0;
 }

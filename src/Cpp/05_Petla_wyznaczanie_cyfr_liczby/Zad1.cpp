@@ -1,17 +1,19 @@
 #include <iostream>
 
+/*
+Dla pobranej od użytkownika, wypisz liczbę cyfr pobranej liczby.
+*/
+
 int main() {
-  // Dla pobranej od uzytkownika liczby,
-  // zwroc liczbe cyfr pobranje liczby.
 
   std::cout << "Podaj liczbe" << std::endl;
-  int a;
-  std::cin >> a;
+  int liczba;
+  std::cin >> liczba;
 
   int licznik = 0;
 
-  while (a > 0) {
-    a = a / 10;
+  while (liczba > 0) {
+    liczba = liczba / 10;
     licznik++;
   }
 

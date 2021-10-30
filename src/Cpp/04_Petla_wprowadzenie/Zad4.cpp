@@ -1,9 +1,11 @@
 #include <iostream>
 
-int main() {
+/*
+Dla pobranej liczby, powinna zostać wypisana suma 
+wszystkich liczb naturalnych mniejszych od pobranej liczby.
+*/
 
-  // Dla pobranej liczby, powinna zostac wyswietlona suma
-  // wszystkich liczb naturalnych mniejszych od pobranej liczby.
+int main() {
 
   std::cout << "Podaj liczbe: " << std::endl;
   int n;

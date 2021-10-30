@@ -1,8 +1,10 @@
 #include <iostream>
 
+/*
+Proś użytkownika o podanie liczby, dopóki nie zostanie podana liczba 7.
+*/
+
 int main() {
-  // Pros uzytkownika o podanie liczby, dopoki
-  // nie zostanie podana liczba 7.
 
   int a = 0;
 

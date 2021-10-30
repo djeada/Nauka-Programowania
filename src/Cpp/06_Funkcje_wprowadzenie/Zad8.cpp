@@ -1,40 +1,44 @@
 #include <cassert>
 #include <limits>
-// Napisz funkcje realizujaca zaokraglanie ilorazu bez uzycia '/' i '%'.
 
-int podziel(int a, int b) {
+/*
+Napisz funkcję realizującą zaokrąglanie ilorazu bez 
+użycia operatorów  '/' i '%'.
+*/
+
+int podziel(int dzielna, int dzielnik) {
 
   int znak = 1;
   int licznik = 0;
 
-  if (b == 0)
+  if (dzielnik == 0)
     return std::numeric_limits<int>::signaling_NaN();
 
-  if (a == 0)
+  if (dzielna == 0)
     return 0;
 
-  if (a < 0) {
+  if (dzielna < 0) {
     znak = -1;
-    a = -a;
+    dzielna = -dzielna;
   }
 
-  if (b < 0) {
+  if (dzielnik < 0) {
     znak *= -1;
-    b = -b;
+    dzielnik = -dzielnik;
   }
 
   if (znak == 1) {
     licznik = 0;
-    while (a >= b) {
-      a -= b;
+    while (dzielna >= dzielnik) {
+      dzielna -= dzielnik;
       licznik += 1;
     }
   }
 
   else {
     licznik = 1;
-    while (a > b) {
-      a -= b;
+    while (dzielna > dzielnik) {
+      dzielna -= dzielnik;
       licznik += 1;
     }
   }
@@ -42,28 +46,20 @@ int podziel(int a, int b) {
   return licznik * znak;
 }
 
-void test1() {
-
-  int a = 15;
-  int b = 5;
-  int wynik = 3;
-
-  assert(podziel(a, b) == wynik);
-}
-
-void test2() {
-
-  int a = 8;
-  int b = -4;
-  int wynik = -2;
-
-  assert(podziel(a, b) == wynik);
+void testPodziel() {
+  assert(podziel(0, 1) == 0);
+  assert(podziel(1, 1) == 1);
+  assert(podziel(25, 5) == 5);
+  assert(podziel(25, -5) == -5);
+  assert(podziel(-25, 5) == -5);
+  assert(podziel(-25, -5) == 5);
+  assert(podziel(25, 0) == std::numeric_limits<int>::signaling_NaN());
+  assert(podziel(0, 0) == std::numeric_limits<int>::signaling_NaN());
 }
 
 int main() {
 
-  test1();
-  test2();
+  testPodziel();
 
   return 0;
 }

@@ -1,48 +1,74 @@
 #include <cassert>
 
-// Napisz funkcje, ktora dla otrzymanych dwoch liczb,
-// przy pomocy dodawania badz odejmowania oraz petli zrealizuje:
+/*
+Napisz funkcję, która dla otrzymanych dwóch liczb, przy pomocy 
+dodawania bądź odejmowania oraz pętli obliczy:
 
-// a) mnozenie;
-int mnozenie(int a, int b) {
+a) Iloczyn otrzymanych liczb.
+b) Iloraz pierwszej liczby przez drugą liczbę.
+*/
+
+int iloczyn(int mnozna, int mnoznik) {
+
+  int znak = 1;
+
+    if (mnozna < 0) {
+      znak = -1;
+        mnozna = -mnozna;
+}
+    if (mnoznik < 0) {
+      znak = -1;
+        mnoznik = -mnoznik;
+}
   int wynik = 0;
-  for (int i = 0; i < b; i++)
-    wynik += a;
+  for (int i = 0; i < mnoznik; i++)
+    wynik += mnozna;
 
-  return wynik;
+  return wynik * znak;
 }
 
-// b) dzielenie
-int dzielenie(int a, int b) {
+int iloraz(int dzielna, int dzielnik) {
+  int znak = 1;
+
+  if (dzielna < 0) {
+      znak = -1;
+      dzielna = -dzielna;
+  }
+
+  if (dzielnik < 0){
+      znak *= -1;
+      dzielnik = -dzielnik;
+  }
+
   int wynik = 0;
-  while (a >= b) {
-    a -= b;
+  while (dzielna >= dzielnik) {
+    dzielna -= dzielnik;
     wynik++;
   }
 
-  return wynik;
+  return wynik * znak;
 }
 
-void test1() {
-  int a = 2;
-  int b = 3;
-
-  int wynik = 6;
-  assert(mnozenie(a, b) == wynik);
+void testIloczyn() {
+  assert(iloczyn(2, 3) == 6);
+  assert(iloczyn(3, 2) == 6);
+  assert(iloczyn(-2, 3) == -6);
+  assert(iloczyn(3, -2) == -6);
+  assert(iloczyn(-2, -3) == 6);
 }
 
-void test2() {
-  int a = 30;
-  int b = 6;
-
-  int wynik = 5;
-  assert(dzielenie(a, b) == wynik);
+void testIloraz() {
+  assert(iloraz(6, 3) == 2);
+  assert(iloraz(3, 6) == 0.5);
+  assert(iloraz(6, -3) == -2);
+  assert(iloraz(-3, 6) == -0);
+  assert(iloraz(-6, -3) == 2);
 }
 
 int main() {
 
-  test1();
-  test2();
+  testIloczyn();
+  testIloraz();
 
   return 0;
 }

@@ -1,7 +1,9 @@
 #include <cassert>
 
-// Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci
-// ich najwiekszy wspolny dzielnik.
+/*
+Napisz funkcję, która dla otrzymanych dwóch liczb zwróci 
+ich największy wspólny dzielnik.
+*/
 
 int nwdV1(int a, int b) {
 
@@ -27,26 +29,24 @@ int nwdV2(int a, int b) {
   return a;
 }
 
-void test1() {
-  int a = 14;
-  int b = 21;
-  int wynik = 7;
-
-  assert(nwdV1(a, b) == wynik);
+void testNwd1() {
+  assert(nwdV1(12, 15) == 3);
+  assert(nwdV1(15, 12) == 3);
+  assert(nwdV1(15, 0) == 15);
+  assert(nwdV1(0, 15) == 15);
 }
 
-void test2() {
-  int a = 14;
-  int b = 21;
-  int wynik = 7;
-
-  assert(nwdV2(a, b) == wynik);
+void testNwd2() {
+  assert(nwdV2(12, 15) == 3);
+  assert(nwdV2(15, 12) == 3);
+  assert(nwdV2(15, 0) == 15);
+  assert(nwdV2(0, 15) == 15);
 }
 
 int main() {
 
-  test1();
-  test2();
+  testNwd1();
+  testNwd2();
 
   return 0;
 }

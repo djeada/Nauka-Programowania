@@ -1,9 +1,11 @@
 #include <iostream>
 
-int main() {
+/*
+Dla pobranej liczby, powinny zostać wypisane wszystkie 
+liczby naturalne mniejsze od podanej liczby.
+*/
 
-  // Dla pobranej liczby, powinny zostac wyswietlone
-  // wszystkie liczby naturalne mniejsze od podanej liczby.
+int main() {
 
   std::cout << "Podaj liczbe" << std::endl;
   int a;

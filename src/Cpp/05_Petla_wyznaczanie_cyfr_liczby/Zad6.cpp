@@ -1,63 +1,64 @@
 #include <iostream>
 
+/*
+Dla pobranej od użytkownika liczby, wypisz wszystkie liczby naturalne:
+a) Mniejsze od pobranej liczby, których suma cyfr jest równa 10.
+b) Dwucyfrowe, większe od pobranej liczby.
+c) Trzycyfrowe, których suma cyfr jest równa pobranej liczbie.
+d) Trzycyfrowe podzielne przez sumę cyfr pobranej liczby.
+e) Mniejsze od pobranej liczby, składające się wyłącznie z parzystych cyfr.
+*/
+
 int main() {
 
-  // Dla pobranej liczby n, wyswietl sume n
-  // pierwszych wyrazow ciagu danego wzorem:
   std::cout << "Podaj liczbe: " << std::endl;
-  int a;
-  std::cin >> a;
-
-  // a) mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10
+  int liczba;
+  std::cin >> liczba;
 
   std::cout << "mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: "
             << std::endl;
-  for (int i = 0; i < a; i++) {
-    int pom = i;
+  for (int i = 0; i < liczba; i++) {
+    int liczbaPomocnicza = i;
     int suma = 0;
 
-    while (pom > 0) {
-      suma += (pom % 10);
-      pom /= 10;
+    while (liczbaPomocnicza > 0) {
+      suma += (liczbaPomocnicza % 10);
+      liczbaPomocnicza /= 10;
     }
 
     if (suma == 10)
       std::cout << i << std::endl;
   }
 
-  // b) dwucyfrowe mniejsze od pobranej liczby
-
   std::cout << "dwucyfrowe mniejsze od pobranej liczby: " << std::endl;
-  for (int i = 10; i < 100 && i < a; i++) {
+  for (int i = 10; i < 100 && i < liczba; i++) {
     std::cout << i << std::endl;
   }
 
-  // c) trzycyfrowe ktorych suma cyfr jest	rowna pobranej liczbie
   std::cout << "trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie"
             << std::endl;
   for (int i = 100; i < 1000; i++) {
-    int pom = i;
+    int liczbaPomocnicza = i;
     int suma = 0;
 
-    while (pom > 0) {
-      suma += (pom % 10);
-      pom /= 10;
+    while (liczbaPomocnicza > 0) {
+      suma += (liczbaPomocnicza % 10);
+      liczbaPomocnicza /= 10;
     }
 
-    if (suma == a)
+    if (suma == liczba)
       std::cout << i << std::endl;
   }
 
-  // d) trzycyfrowe podzielne przez sume cyfr pobranej liczby
   std::cout << "trzycyfrowe podzielne przez sume cyfr pobranej liczby"
             << std::endl;
 
-  int pom = a;
+  int liczbaPomocnicza = liczba;
   int suma = 0;
 
-  while (pom > 0) {
-    suma += (pom % 10);
-    pom /= 10;
+  while (liczbaPomocnicza > 0) {
+    suma += (liczbaPomocnicza % 10);
+    liczbaPomocnicza /= 10;
   }
 
   for (int i = 100; i < 1000; i++) {
@@ -66,21 +67,20 @@ int main() {
       std::cout << i << std::endl;
   }
 
-  // e) mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr
   std::cout << "mniejsze od pobranej liczby, skladajace sie wylacznie z "
                "parzystych cyfr"
             << std::endl;
 
-  for (int i = 0; i < a; i++) {
-    int pom = i;
+  for (int i = 0; i < liczba; i++) {
+    int liczbaPomocnicza = i;
     bool flaga = true;
-    while (pom > 0) {
-      int cyfra = pom % 10;
+    while (liczbaPomocnicza > 0) {
+      int cyfra = liczbaPomocnicza % 10;
       if (cyfra % 2 == 1) {
         flaga = false;
         break;
       }
-      pom /= 10;
+      liczbaPomocnicza /= 10;
     }
 
     if (flaga)

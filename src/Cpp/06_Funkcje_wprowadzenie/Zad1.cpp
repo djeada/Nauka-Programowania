@@ -1,28 +1,37 @@
 #include <cassert>
 #include <string>
 
-// Napisz funkcje ktora zwroci
-// a) liczbe 3
+/*
+Napisz funkcję, która zwróci:
 
-int funkcja1() { return 3; }
+a) Liczbę 3.
+b) Napis “Tak”.
+c) Wartość logiczną Prawda.
+*/
 
-// b) napis "Tak"
-std::string funkcja2() { return "Tak"; }
+int zwroc3() { return 3; }
 
-// c) wartosc logiczna prawda
-bool funkcja3() { return true; }
+std::string zwrocTak() { return "Tak"; }
 
-void test1() { assert(funkcja1() == 3); }
+bool zwrocTrue() { return true; }
 
-void test2() { assert(funkcja2() == "Tak"); }
+void testZwroc3() {
+  assert(zwroc3() == 3);
+}
 
-void test3() { assert(funkcja3()); }
+void testZwrocTak() {
+  assert(zwrocTak() == "Tak");
+}
+
+void testZwrocTrue() {
+  assert(zwrocTrue());
+}
 
 int main() {
 
-  test1();
-  test2();
-  test3();
-
+  testZwroc3();
+  testZwrocTak();
+  testZwrocTrue();
+  
   return 0;
 }

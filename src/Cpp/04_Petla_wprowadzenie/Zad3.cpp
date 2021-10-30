@@ -2,11 +2,13 @@
 #include <iostream>
 #include <numbers>
 
-int main() {
+/*
+Dla pobranej liczby, wypisz liczbę Pi tyle razy 
+ile wynosi pobrana liczba, z dokładnością do tylu 
+miejsc po przecinku ile wynosi pobrana liczba.
+*/
 
-  // Dla pobranej liczby, wyswietl liczbe Pi tyle razy
-  // ile wynosi pobrana liczba, z dokladnoscia do tylu
-  // miejsc po przescinku ile wynosi pobrana liczba.
+int main() {
 
   std::cout << "Podaj liczbe: " << std::endl;
   int n;

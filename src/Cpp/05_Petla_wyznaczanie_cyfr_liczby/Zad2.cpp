@@ -1,17 +1,19 @@
 #include <iostream>
 
+/*
+Dla pobranej liczby, powinny zostać wypisane cyfry 
+pobranej liczby zaczynając od cyfry jedności.
+*/
+
 int main() {
 
-  // Dla pobranej liczby, powinny zostac zwrocone
-  // cyfry pobranej liczby poczynajac od cyfry jednosci.
-
   std::cout << "Podaj liczbe" << std::endl;
-  int a;
-  std::cin >> a;
+  int liczba;
+  std::cin >> liczba;
 
-  while (a > 0) {
-    std::cout << a % 10 << std::endl;
-    a = a / 10;
+  while (liczba > 0) {
+    std::cout << liczba % 10 << std::endl;
+    liczba = liczba / 10;
   }
 
   return 0;

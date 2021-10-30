@@ -1,11 +1,13 @@
 #include <iomanip>
 #include <iostream>
 
-int main() {
+/*
+Dla pobranej liczby, wyświetl liczbę Pi podniesioną do 
+potęgi równej pobranej liczbie. Wynik powinien być 
+zaokrąglony do dwóch miejsc po przecinku.
+*/
 
-  // Dla pobranej liczby, wyswietl liczbe Pi podniesiona
-  // do potegi rownej pobranej liczbie. Wynik powinien byc
-  // zaokraglony do dwoch miejsc po przecinku.
+int main() {
 
   std::cout << "Podaj liczbe: " << std::endl;
   int n;
@@ -14,7 +16,7 @@ int main() {
   std::cout << std::fixed << std::setprecision(2);
 
   int wynik = 1;
-  for (int i = 0; i < n; i++)
+  for (unsigned int i = 0; i < n; i++)
     wynik *= 3.14;
 
   std::cout << wynik << std::endl;

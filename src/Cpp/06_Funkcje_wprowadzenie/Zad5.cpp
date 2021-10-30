@@ -1,23 +1,28 @@
-#include <cmath>
-#include <iostream>
+#include <cassert>
 
-// Napisz funkcje, ktora zamieni wartosci miejscami.
+/*
+Napisz funkcję, która dla otrzymanych dwóch liczb pierwszaLiczba oraz drugaLiczba zamieni wartości miejscami. 
+Po wykonaniu funkcji zmienna pierwszaLiczba, powinna przechowywać dawną wartość zmiennej drugaLiczba, pierwszaLiczba 
+zmienna drugaLiczba powinna przechowywać dawną wartość zmiennej pierwszaLiczba.
+*/
 
-void swap(int &a, int &b) {
-  int c = a;
-  a = b;
-  b = c;
+void swap(int &pierwszaLiczba, int &drugaLiczba) {
+  int c = pierwszaLiczba;
+  pierwszaLiczba = drugaLiczba;
+  drugaLiczba = c;
+}
+
+void testSwap() {
+  int pierwszaLiczba = 1;
+  int drugaLiczba = 2;
+  swap(pierwszaLiczba, drugaLiczba);
+  assert(pierwszaLiczba == 2);
+  assert(drugaLiczba == 1);
 }
 
 int main() {
-  std::cout << "Podaj dwie liczby: " << std::endl;
-  int a;
-  std::cin >> a;
-  int b;
-  std::cin >> b;
 
-  swap(a, b);
-  std::cout << "Liczby zamienione miejscami to: " << a << " " << b << std::endl;
-
+  testSwap();
+  
   return 0;
 }
