@@ -8,7 +8,7 @@ b) Pobierz wielkość w calach i wypisz ilu centymetrom odpowiada.
 c) Pobierz liczbę sekund i przelicz na godziny.
 d) Pobierz liczbę w euro i wypisz ilu złotówkom odpowiada. 
 e) Pobierz miarę kąta w stopniach i wypisz ilu radianom odpowiada.
-f) Pobierz temperaturę w stopniach Farenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
+f) Pobierz temperaturę w stopniach Fahrenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
 */
 
 int main() {
