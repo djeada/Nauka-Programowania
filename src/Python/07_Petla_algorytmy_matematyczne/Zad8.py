@@ -1,7 +1,7 @@
-import random
+import math
 
 """
-Napisz funkcję realizującą zaokrąglanie ilorazu bez użycia operatorów  '/' i '%'.
+Napisz funkcję, która dla otrzymanej liczby sprawdzi czy jest ona liczbą pierwszą.
 """
 
 def podziel(a, b):
@@ -44,8 +44,8 @@ def test_podziel():
     assert podziel(-25, 5) == -5
     assert podziel(-25, -5) == 5
     assert podziel(0, 5) == 0
-    assert podziel(0, 0) == float("nan")
+    assert math.isnan(podziel(0, 0))
 
-if _name__ == "__main__":
+if __name__ == "__main__":
 
     test_podziel()

@@ -1,28 +1,22 @@
 """
-Oblicz silnie z podanej liczby.	
+Napisz funkcję, która przy pomocy pętli obliczy silnię 
+otrzymanej liczby.
 """
 
-# Wersja 1
-def silnia_v1(liczba):
+def silnia(n):
     wynik = 1
-
-    for i in range(liczba):
-        wynik *= i + 1
-
+    for i in range(1, n+1):
+        wynik *= i
     return wynik
 
+def test_silnia():
+    assert silnia(0) == 1
+    assert silnia(1) == 1
+    assert silnia(2) == 2
+    assert silnia(3) == 6
+    assert silnia(4) == 24
+    assert silnia(5) == 120
 
-# Wersja 2
-def silnia_v2(liczba):
-    if liczba <= 0:
-        return 1
+if __name__ == "__main__":
 
-    return liczba * silnia_v2(liczba - 1)
-
-
-# Testy Poprawnosci
-liczba = 3
-wynik = 6
-
-assert silnia_v1(liczba) == wynik
-assert silnia_v2(liczba) == wynik
+    test_silnia()

@@ -1,13 +1,18 @@
 """
-Na farmie mamy a glow i b nog, znajdz liczbe kur oraz owieczek.
+Na farmie mamy a głów i b nóg, znajdź liczbę kur oraz liczbę owieczek.
 """
 
-# Wersja 1
-a = 40
-b = 100
+if __name__ == "__main__":
 
-for i in range(a):
-    owieczki = a - i
-    if 2 * i + 4 * owieczki == b:
-        print("Na farmie mamy: ", i, "kur oraz ", owieczki, " owieczek.")
-        break
+    glowy = int(input("Podaj liczbę głów: "))
+    nogi = int(input("Podaj liczbę nóg: "))
+
+    kury = 0
+    owieczki = 0
+
+    for i in range(glowy):
+        owieczki = glowy - i
+        if 2 * i + 4 * owieczki == nogi:
+            print("Liczba kur: ", i)
+            print("Liczba owieczek: ", owieczki)
+            break
