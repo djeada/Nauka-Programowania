@@ -1,0 +1,141 @@
+#include <iostream>
+
+/*
+Pokaż za pomocą operacji logicznych:
+
+a) Prawo wyłączonego środka.
+b) Prawo niesprzeczności.
+c) Przemienność koniunkcji.
+d) Przemienność alternatywy.
+e) Pierwsze prawo de Morgana.
+f) Drugie prawo de Morgana.
+*/
+
+int main() {
+
+  std::cout << "Prawo wylacznego srodka" << std::endl;
+  bool p = false;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " wyrazenie p v ~p ma wartosc logiczna " << std::boolalpha
+            << (p || !p) << std::endl;
+  p = true;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " wyrazenie p v ~p ma wartosc logiczna " << std::boolalpha
+            << (p || !p) << std::endl;
+
+  std::cout << "\nZasada niesprzecznosci" << std::endl;
+  p = false;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " wyrazenie ~(p Ʌ ~p) ma wartosc logiczna " << std::boolalpha
+            << !(p && !p) << std::endl;
+  p = true;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " wyrazenie ~(p Ʌ ~p) ma wartosc logiczna " << std::boolalpha
+            << !(p && !p) << std::endl;
+
+  std::cout << "\nPrzemiennosc koniunkcji" << std::endl;
+  p = false;
+  bool q = false;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna "
+            << std::boolalpha << ((p && q) == (q && p)) << std::endl;
+  p = true;
+  q = false;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna "
+            << std::boolalpha << ((p && q) == (q && p)) << std::endl;
+  p = false;
+  q = true;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna "
+            << std::boolalpha << ((p && q) == (q && p)) << std::endl;
+  p = true;
+  q = true;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna "
+            << std::boolalpha << ((p && q) == (q && p)) << std::endl;
+
+  std::cout << "\nPrzemiennosc alternatywy" << std::endl;
+  p = false;
+  q = false;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie (p v q) < = > (q v p) ma wartosc logiczna "
+            << std::boolalpha << ((p || q) == (q || p)) << std::endl;
+  p = true;
+  q = false;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie (p v q) < = > (q v p) ma wartosc logiczna "
+            << std::boolalpha << ((p || q) == (q || p)) << std::endl;
+  p = false;
+  q = true;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie (p v q) < = > (q v p) ma wartosc logiczna "
+            << std::boolalpha << ((p || q) == (q || p)) << std::endl;
+  p = true;
+  q = true;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie (p v q) < = > (q v p) ma wartosc logiczna "
+            << std::boolalpha << ((p || q) == (q || p)) << std::endl;
+
+  std::cout << "\nPierwsze prawo de Morgana" << std::endl;
+  p = false;
+  q = false;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna "
+            << std::boolalpha << (!(p && q) == (!q || !p)) << std::endl;
+  p = true;
+  q = false;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << "wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna "
+            << std::boolalpha << (!(p && q) == (!q || !p)) << std::endl;
+  p = false;
+  q = true;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna "
+            << std::boolalpha << (!(p && q) == (!q || !p)) << std::endl;
+  p = true;
+  q = true;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna "
+            << std::boolalpha << (!(p && q) == (!q || !p)) << std::endl;
+
+  std::cout << "\nDrugie prawo de Morgana" << std::endl;
+  p = false;
+  q = false;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna "
+            << std::boolalpha << (!(p || q) == (!q && !p)) << std::endl;
+  p = true;
+  q = false;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna "
+            << std::boolalpha << (!(p || q) == (!q && !p)) << std::endl;
+  p = false;
+  q = true;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna "
+            << std::boolalpha << (!(p || q) == (!q && !p)) << std::endl;
+  p = true;
+  q = true;
+  std::cout << "dla p majacego wartosc logiczna " << p
+            << " oraz q majacego wartosc logiczna " << q
+            << " wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna "
+            << std::boolalpha << (!(p || q) == (!q && !p)) << std::endl;
+
+  return 0;
+}
