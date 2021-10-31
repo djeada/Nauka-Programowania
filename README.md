@@ -1126,7 +1126,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>16</td>
-            <td>Pary, których suma jest równa liczbie.</td>
+            <td>Suma dwóch.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad16.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad16.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad16">Java</a></td>
@@ -1138,7 +1138,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>17</td>
-            <td>Suma dwóch.</td>
+            <td>Pary, których suma jest równa liczbie.</td>
             <td><a>Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad17.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/09_Listy_wprowadzenie/Zad17">Java</a></td>
