@@ -4,8 +4,8 @@
 #include <vector>
 
 /*
-Otrzymujesz listę. Znajdź największy i najmniejszy
-element tej listy. Zwróć znalezione wartości.
+Otrzymujesz liste. Znajdz najwiekszy i najmniejszy
+element tej listy. Zwroc znalezione wartosci.
 */
 
 int maksV1(std::vector<int> &lista) {

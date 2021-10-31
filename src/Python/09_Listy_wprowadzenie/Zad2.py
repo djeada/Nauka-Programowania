@@ -1,12 +1,12 @@
 """
-Dla liczby N, wczytaj N liczb do listy, a następnie:
+Dla liczby N, wczytaj N liczb do listy, a nastepnie:
 
-a) Dodaj 1 do każdego elementu.
-b) Pomnóż każdy element przez jego indeks.
-c) Zastąp wszystkie elementy wartością pierwszego elementu listy.
+a) Dodaj 1 do kazdego elementu.
+b) Pomnoz kazdy element przez jego indeks.
+c) Zastap wszystkie elementy wartoscia pierwszego elementu listy.
 
-Dla każdego podpunktu wypisz zmodyfikowaną listę. Elementy listy 
-powinny być oddzielone przecinkami i wypisane w jednym wierszu.
+Dla kazdego podpunktu wypisz zmodyfikowana liste. Elementy listy 
+powinny byc oddzielone przecinkami i wypisane w jednym wierszu.
 """
 
 

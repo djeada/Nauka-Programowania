@@ -1,12 +1,12 @@
 #include <iostream>
 
 /*
-Dla pobranej od użytkownika liczby, wypisz wszystkie liczby naturalne:
-a) Mniejsze od pobranej liczby, których suma cyfr jest równa 10.
-b) Dwucyfrowe, większe od pobranej liczby.
-c) Trzycyfrowe, których suma cyfr jest równa pobranej liczbie.
-d) Trzycyfrowe podzielne przez sumę cyfr pobranej liczby.
-e) Mniejsze od pobranej liczby, składające się wyłącznie z parzystych cyfr.
+Dla pobranej od uzytkownika liczby, wypisz wszystkie liczby naturalne:
+a) Mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10.
+b) Dwucyfrowe, wieksze od pobranej liczby.
+c) Trzycyfrowe, ktorych suma cyfr jest rowna pobranej liczbie.
+d) Trzycyfrowe podzielne przez sume cyfr pobranej liczby.
+e) Mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr.
 */
 
 int main() {

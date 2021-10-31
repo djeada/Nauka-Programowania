@@ -1,7 +1,7 @@
 import math
 
 """
-Napisz funkcję, która dla otrzymanej liczby sprawdzi czy jest ona liczbą pierwszą.
+Napisz funkcje, ktora dla otrzymanej liczby sprawdzi czy jest ona liczba pierwsza.
 """
 
 

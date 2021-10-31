@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Dla pobranej od użytkownika, wypisz liczbę cyfr pobranej liczby.
+Dla pobranej od uzytkownika, wypisz liczbe cyfr pobranej liczby.
 */
 
 int main() {

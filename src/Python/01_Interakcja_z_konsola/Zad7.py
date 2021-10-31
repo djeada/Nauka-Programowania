@@ -1,12 +1,12 @@
 """
-Oblicz pola figur i objętości brył:
+Oblicz pola figur i objetosci bryl:
 
-a) Pobierz długości podstawy i wysokości trójkąta i wypisz pole. 
-b) Pobierz długości boków prostokąta i wypisz pole. 
-c) Pobierz długości przekątnych rombu i wypisz pole. 
-d) Pobierz promień kuli i wypisz objętość.
-e) Pobierz promień podstawy i wysokość stożka i wypisz objętość.
-f) Pobierz długość, szerokość i wysokość graniastosłupa i wypisz objętość.
+a) Pobierz dlugosci podstawy i wysokosci trojkata i wypisz pole. 
+b) Pobierz dlugosci bokow prostokata i wypisz pole. 
+c) Pobierz dlugosci przekatnych rombu i wypisz pole. 
+d) Pobierz promien kuli i wypisz objetosc.
+e) Pobierz promien podstawy i wysokosc stozka i wypisz objetosc.
+f) Pobierz dlugosc, szerokosc i wysokosc graniastoslupa i wypisz objetosc.
 """
 
 if __name__ == "__main__":

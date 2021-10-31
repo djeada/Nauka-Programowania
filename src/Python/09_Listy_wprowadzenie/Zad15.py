@@ -1,8 +1,8 @@
 """
-Dla otrzymanej listy liczb naturalnych, znajdź element dominujący. 
-Element dominujący to element, którego liczba wystąpień w liście 
-jest większa niż połowa długości listy. Jeśli lista nie ma 
-elementu dominującego, zwróć -1.
+Dla otrzymanej listy liczb naturalnych, znajdz element dominujacy. 
+Element dominujacy to element, ktorego liczba wystapien w liscie 
+jest wieksza niz polowa dlugosci listy. Jesli lista nie ma 
+elementu dominujacego, zwroc -1.
 """
 
 

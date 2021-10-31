@@ -1,6 +1,6 @@
 """
-Otrzymujesz dwie listy liczb całkowitych. Znajdź elementy, 
-które nie są częścią wspólną obu list.
+Otrzymujesz dwie listy liczb calkowitych. Znajdz elementy, 
+ktore nie sa czescia wspolna obu list.
 """
 
 

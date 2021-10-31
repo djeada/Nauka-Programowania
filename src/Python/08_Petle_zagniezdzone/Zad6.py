@@ -1,6 +1,6 @@
 """
-Napisz funkcję, która dla otrzymanej liczby wypisze 
-literę Z, o wysokości równej otrzymanej liczbie.
+Napisz funkcje, ktora dla otrzymanej liczby wypisze 
+litere Z, o wysokosci rownej otrzymanej liczbie.
 """
 
 
@@ -16,7 +16,7 @@ def litera_z(wysokosc):
 
 if __name__ == "__main__":
 
-    print("Podaj wysokość litery Z: ")
+    print("Podaj wysokosc litery Z: ")
     wysokosc = int(input())
 
     litera_z(wysokosc)

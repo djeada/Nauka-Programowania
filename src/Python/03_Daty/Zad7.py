@@ -1,11 +1,11 @@
 """
-Dla trzech pobranych liczb reprezentujących datę, wypisz ile dni minęło od początku roku. 
-Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem.
+Dla trzech pobranych liczb reprezentujacych date, wypisz ile dni minelo od poczatku roku. 
+Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem.
 """
 
 if __name__ == "__main__":
 
-    print("Podaj datę:")
+    print("Podaj date:")
     dzien = int(input())
     miesiac = int(input())
     rok = int(input())
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     elif miesiac == 12:
         liczba_dni = 334 + dzien
     else:
-        print("Niepoprawny miesiąc")
+        print("Niepoprawny miesiac")
 
     if rok % 4 == 0 and rok % 100 != 0 or rok % 400 == 0:
         if miesiac > 2:

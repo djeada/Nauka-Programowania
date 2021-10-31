@@ -1,5 +1,5 @@
 """
-Otrzymujesz napis. Zamień litery a na znaki zapytania.
+Otrzymujesz napis. Zamien litery a na znaki zapytania.
 """
 
 

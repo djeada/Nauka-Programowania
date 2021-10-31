@@ -1,5 +1,5 @@
 """
-Wypisz dowolny ciąg znaków na standardowe wyjście.
+Wypisz dowolny ciag znakow na standardowe wyjscie.
 """
 
 if __name__ == "__main__":

@@ -1,11 +1,11 @@
 """
-Wypisz ciągi znaków na standardowe wyjście. Pamiętaj o spacjach i przejściach do nowej linii.
+Wypisz ciagi znakow na standardowe wyjscie. Pamietaj o spacjach i przejsciach do nowej linii.
 
 Kwadrat.
 xx
 xx
 
-Trójkąt.
+Trojkat.
 1
 22
 333

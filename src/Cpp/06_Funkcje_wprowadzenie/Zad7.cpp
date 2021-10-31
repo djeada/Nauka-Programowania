@@ -2,11 +2,11 @@
 #include <string>
 
 /*
-Napisz dwie funkcje. Pierwsza powinna prosić użytkownika o podanie nazwy oraz
-hasła oraz zwracać otrzymane dane. Druga powinna otrzymywać dane od pierwszej i
-ponownie prosić o podanie nazwy oraz hasła. Prośba o podanie danych powinna
-zostać umieszczona w pętli. Warunkiem zakończenia pętli jest podanie przez
-użytkownika danych identycznych z tymi przekazanymi przez pierwszą funkcję.
+Napisz dwie funkcje. Pierwsza powinna prosic uzytkownika o podanie nazwy oraz
+hasla oraz zwracac otrzymane dane. Druga powinna otrzymywac dane od pierwszej i
+ponownie prosic o podanie nazwy oraz hasla. Prosba o podanie danych powinna
+zostac umieszczona w petli. Warunkiem zakonczenia petli jest podanie przez
+uzytkownika danych identycznych z tymi przekazanymi przez pierwsza funkcje.
 */
 
 void inicjalizacjaDanych(std::string &nazwa, std::string &haslo) {

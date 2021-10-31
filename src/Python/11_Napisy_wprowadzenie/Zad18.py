@@ -1,8 +1,8 @@
 import string
 
 """
-Otrzymujesz napis reprezentujący zdanie. Zamień słowa zdania, na te 
-same napisy zapisane wspak. Znaki interpunkcyjne nie są liczone jako słowa. 
+Otrzymujesz napis reprezentujacy zdanie. Zamien slowa zdania, na te 
+same napisy zapisane wspak. Znaki interpunkcyjne nie sa liczone jako slowa. 
 """
 
 

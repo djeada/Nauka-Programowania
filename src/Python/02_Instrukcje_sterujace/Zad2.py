@@ -1,5 +1,5 @@
 """
-Dla dwóch pobranych od użytkownika liczb, sprawdź czy liczby są identyczne.
+Dla dwoch pobranych od uzytkownika liczb, sprawdz czy liczby sa identyczne.
 """
 
 if __name__ == "__main__":

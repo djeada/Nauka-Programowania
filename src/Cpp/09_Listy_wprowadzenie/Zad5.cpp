@@ -4,12 +4,12 @@
 #include <vector>
 
 /*
-Otrzymujesz listę liczb, wykonaj następujące polecenia:
-a) Zwiększ o 1 wszystkie elementy o parzystych indeksach.
-b) Wyzeruj wszystkie wielokrotności liczby 3.
-c) Podnieś do kwadratu wszystkie elementy mniejsze niż 10.
-d) Wstaw sumę wszystkich elementów otrzymanej listy na indeksy będące liczbami
-pierwszymi. e) Zamień każdy element na iloczyn wszystkich elementów listy poza
+Otrzymujesz liste liczb, wykonaj nastepujace polecenia:
+a) Zwieksz o 1 wszystkie elementy o parzystych indeksach.
+b) Wyzeruj wszystkie wielokrotnosci liczby 3.
+c) Podnies do kwadratu wszystkie elementy mniejsze niz 10.
+d) Wstaw sume wszystkich elementow otrzymanej listy na indeksy bedace liczbami
+pierwszymi. e) Zamien kazdy element na iloczyn wszystkich elementow listy poza
 nim samym.
 */
 

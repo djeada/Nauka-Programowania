@@ -1,11 +1,11 @@
 """
-Dla pobranej liczby, powinna zostać wypisana suma 
+Dla pobranej liczby, powinna zostac wypisana suma 
 wszystkich liczb naturalnych mniejszych od pobranej liczby.
 """
 
 if __name__ == "__main__":
 
-    print("Podaj liczbę: ")
+    print("Podaj liczbe: ")
     liczba = int(input())
 
     suma = 0

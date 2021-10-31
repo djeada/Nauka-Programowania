@@ -1,11 +1,11 @@
 """
-Na farmie mamy a głów i b nóg, znajdź liczbę kur oraz liczbę owieczek.
+Na farmie mamy a glow i b nog, znajdz liczbe kur oraz liczbe owieczek.
 """
 
 if __name__ == "__main__":
 
-    glowy = int(input("Podaj liczbę głów: "))
-    nogi = int(input("Podaj liczbę nóg: "))
+    glowy = int(input("Podaj liczbe glow: "))
+    nogi = int(input("Podaj liczbe nog: "))
 
     kury = 0
     owieczki = 0

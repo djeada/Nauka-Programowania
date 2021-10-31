@@ -1,12 +1,12 @@
 #include <iostream>
 
 /*
-Pokaż za pomocą operacji logicznych:
+Pokaz za pomoca operacji logicznych:
 
-a) Prawo wyłączonego środka.
-b) Prawo niesprzeczności.
-c) Przemienność koniunkcji.
-d) Przemienność alternatywy.
+a) Prawo wylaczonego srodka.
+b) Prawo niesprzecznosci.
+c) Przemiennosc koniunkcji.
+d) Przemiennosc alternatywy.
 e) Pierwsze prawo de Morgana.
 f) Drugie prawo de Morgana.
 */

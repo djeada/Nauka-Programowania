@@ -1,7 +1,7 @@
 import math
 
 """
-Napisz funkcję, która dla otrzymanej liczby N, 
+Napisz funkcje, ktora dla otrzymanej liczby N, 
 wypisze N pierwszych liczb pierwszych.
 """
 

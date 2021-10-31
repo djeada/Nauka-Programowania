@@ -2,8 +2,8 @@
 #include <cmath>
 
 /*
-Napisz funkcję, która dla otrzymanych dwóch liczb przy
-pomocy pętli obliczy ile wynosi a podniesione do b.
+Napisz funkcje, ktora dla otrzymanych dwoch liczb przy
+pomocy petli obliczy ile wynosi a podniesione do b.
 */
 
 double potega(int podstawa, int wykladnik) {

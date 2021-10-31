@@ -1,5 +1,5 @@
 """
-Pobierz od użytkownika trzy długości boków i sprawdź, czy można z nich zbudować trójkąt.
+Pobierz od uzytkownika trzy dlugosci bokow i sprawdz, czy mozna z nich zbudowac trojkat.
 """
 
 if __name__ == "__main__":

@@ -4,9 +4,9 @@
 #include <vector>
 
 /*
-Otrzymujesz napis reprezentujący zdanie. Podziel zdanie na słowa składowe.
-Wypisz pionowo słowa, z których składa się zdanie. Znaki interpunkcyjne
-nie są liczone jako słowa.
+Otrzymujesz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe.
+Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne
+nie sa liczone jako slowa.
 */
 
 void wyczysc(std::string &napis) {

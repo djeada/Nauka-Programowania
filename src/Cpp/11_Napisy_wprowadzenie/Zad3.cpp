@@ -3,8 +3,8 @@
 #include <string>
 
 /*
-Policz z ilu słów składa się zdanie. Znaki interpunkcyjne nie są liczone jako
-słowa.
+Policz z ilu slow sklada sie zdanie. Znaki interpunkcyjne nie sa liczone jako
+slowa.
 */
 
 // Zlozonosc Czasowa O(n)

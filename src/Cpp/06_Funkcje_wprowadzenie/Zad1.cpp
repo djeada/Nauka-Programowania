@@ -2,11 +2,11 @@
 #include <string>
 
 /*
-Napisz funkcję, która zwróci:
+Napisz funkcje, ktora zwroci:
 
-a) Liczbę 3.
+a) Liczbe 3.
 b) Napis “Tak”.
-c) Wartość logiczną Prawda.
+c) Wartosc logiczna Prawda.
 */
 
 int zwroc3() { return 3; }

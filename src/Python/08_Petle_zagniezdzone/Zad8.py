@@ -1,8 +1,8 @@
 from math import pow
 
 """
-Napisz funkcję, która dla otrzymanej liczby wypisze 
-trójkąt Pascala o wysokości równej otrzymanej liczbie.
+Napisz funkcje, ktora dla otrzymanej liczby wypisze 
+trojkat Pascala o wysokosci rownej otrzymanej liczbie.
 """
 
 
@@ -16,6 +16,6 @@ def trojkat_pascala(wysokosc):
 
 if __name__ == "__main__":
 
-    print("Podaj wysokość trojkata Pascala: ")
+    print("Podaj wysokosc trojkata Pascala: ")
     wysokosc = int(input())
     trojkat_pascala(wysokosc)

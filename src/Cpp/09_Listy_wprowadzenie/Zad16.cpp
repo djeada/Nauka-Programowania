@@ -3,9 +3,9 @@
 #include <vector>
 
 /*
-Dla otrzymanej listy oraz liczby x, znajdź indeksy pierwszej pary
-elementów listy, których suma jest równa liczbie x. Jeśli w liście
-nie ma takiej pary, zwróć parę (-1, -1).
+Dla otrzymanej listy oraz liczby x, znajdz indeksy pierwszej pary
+elementow listy, ktorych suma jest rowna liczbie x. Jesli w liscie
+nie ma takiej pary, zwroc pare (-1, -1).
 */
 
 std::vector<std::pair<int, int>> znajdzParyV1(std::vector<int> &lista,

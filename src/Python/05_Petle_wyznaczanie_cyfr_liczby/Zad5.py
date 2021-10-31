@@ -1,12 +1,12 @@
 """
-Dla pobranej liczby, sprawdź czy jest ona palindromem. 
-To znaczy, sprawdź czy liczba nie zmienia się po zapisaniu 
-jej cyfr w odwrotnej kolejności.
+Dla pobranej liczby, sprawdz czy jest ona palindromem. 
+To znaczy, sprawdz czy liczba nie zmienia sie po zapisaniu 
+jej cyfr w odwrotnej kolejnosci.
 """
 
 if __name__ == "__main__":
 
-    print("Podaj liczbę: ")
+    print("Podaj liczbe: ")
     liczba = int(input())
 
     liczba_pomocnicza = liczba

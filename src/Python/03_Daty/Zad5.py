@@ -1,11 +1,11 @@
 """
-Dla pobrannej liczby, wypisz liczbę dni miesiąca odpowiadającemu danej liczbie. 
-Jeśli otrzymano niepoprawny numer miesiąca poinformuj o tym użytkownika.
+Dla pobrannej liczby, wypisz liczbe dni miesiaca odpowiadajacemu danej liczbie. 
+Jesli otrzymano niepoprawny numer miesiaca poinformuj o tym uzytkownika.
 """
 
 if __name__ == "__main__":
 
-    print("Podaj numer miesiąca:")
+    print("Podaj numer miesiaca:")
     miesiac = int(input())
 
     if miesiac == 1:
@@ -33,4 +33,4 @@ if __name__ == "__main__":
     elif miesiac == 12:
         print("Grudzien ma 31 dni.")
     else:
-        print("Niepoprawny numer miesiąca.")
+        print("Niepoprawny numer miesiaca.")

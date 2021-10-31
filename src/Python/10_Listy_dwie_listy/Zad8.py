@@ -1,5 +1,5 @@
 """
-Otrzymujesz dwie posortowane listy. Połącz je w posortowaną listę.
+Otrzymujesz dwie posortowane listy. Polacz je w posortowana liste.
 """
 
 

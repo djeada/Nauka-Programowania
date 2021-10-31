@@ -1,9 +1,9 @@
 """
-Napisz funkcję, która dla otrzymanych dwóch liczb, przy pomocy 
-dodawania bądź odejmowania oraz pętli obliczy:
+Napisz funkcje, ktora dla otrzymanych dwoch liczb, przy pomocy 
+dodawania badz odejmowania oraz petli obliczy:
 
 a) Iloczyn otrzymanych liczb.
-b) Iloraz pierwszej liczby przez drugą liczbę.
+b) Iloraz pierwszej liczby przez druga liczbe.
 """
 
 

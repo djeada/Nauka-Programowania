@@ -1,5 +1,5 @@
 """
-Otrzymujesz listę liczb. Zamień listę na napis.
+Otrzymujesz liste liczb. Zamien liste na napis.
 """
 
 

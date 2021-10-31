@@ -1,8 +1,8 @@
 """
-Napisz funkcję, która dla otrzymanej liczby N, wypisze N trójkątów. 
-Trójkąty powinny być ustawione w kolumnie, jeden na drugim. Wysokość 
-pierwszego trójkąta to 1, a każdego następnego równa jest wysokości 
-poprzedniego powiększonej o 1.
+Napisz funkcje, ktora dla otrzymanej liczby N, wypisze N trojkatow. 
+Trojkaty powinny byc ustawione w kolumnie, jeden na drugim. Wysokosc 
+pierwszego trojkata to 1, a kazdego nastepnego rowna jest wysokosci 
+poprzedniego powiekszonej o 1.
 """
 
 
@@ -20,7 +20,7 @@ def choinka(wysoksoc):
 
 if __name__ == "__main__":
 
-    print("Podaj wysokość choinki: ")
+    print("Podaj wysokosc choinki: ")
     wysokosc = int(input())
 
     choinka(wysokosc)

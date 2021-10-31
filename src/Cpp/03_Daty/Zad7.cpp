@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Dla trzech pobranych liczb reprezentujących datę, wypisz ile dni minęło od
-początku roku. Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem.
+Dla trzech pobranych liczb reprezentujacych date, wypisz ile dni minelo od
+poczatku roku. Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem.
 */
 
 int main() {

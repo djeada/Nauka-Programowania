@@ -3,11 +3,11 @@
 #include <vector>
 
 /*
-Otrzymujesz listę liczb, kierunek przesunięć (1 odpowiada przesunięciu
-w prawo, a 0 w lewo) oraz liczbę miejsc o jaką mają zostać przesunięte
-elementy listy. Przykładowo dla przesuwania w prawo pierwszy element
+Otrzymujesz liste liczb, kierunek przesuniec (1 odpowiada przesunieciu
+w prawo, a 0 w lewo) oraz liczbe miejsc o jaka maja zostac przesuniete
+elementy listy. Przykladowo dla przesuwania w prawo pierwszy element
 trafia na miejsce drugiego, drugi trzeciego, a ostatni na miejsce pierwszego.
-Przesuń elementy listy w podanym kierunku.
+Przesun elementy listy w podanym kierunku.
 */
 
 // Zlozonosc czasowa O(n)

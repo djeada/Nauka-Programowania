@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-#Zamień jednostki:
-#a) Pobierz wielkość w kilogramach i wypisz ilu gramom odpowiada.
-#b) Pobierz wielkość w calach i wypisz ilu centymetrom odpowiada.
-#c) Pobierz liczbę sekund i przelicz na godziny.
-#d) Pobierz liczbę w euro i wypisz ilu złotówkom odpowiada. 
-#e) Pobierz miarę kąta w stopniach i wypisz ilu radianom odpowiada.
-#f) Pobierz temperaturę w stopniach Fahrenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
+#Zamien jednostki:
+#a) Pobierz wielkosc w kilogramach i wypisz ilu gramom odpowiada.
+#b) Pobierz wielkosc w calach i wypisz ilu centymetrom odpowiada.
+#c) Pobierz liczbe sekund i przelicz na godziny.
+#d) Pobierz liczbe w euro i wypisz ilu zlotowkom odpowiada. 
+#e) Pobierz miare kata w stopniach i wypisz ilu radianom odpowiada.
+#f) Pobierz temperature w stopniach Fahrenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
 
 main() {
 

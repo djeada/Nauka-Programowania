@@ -3,8 +3,8 @@
 #include <vector>
 
 /*
-Dla otrzymanej listy znajdź indeks najmniejszego elementu. Lista jest
-posortowana rosnąco,  ale została przesunięta. Przykładowo dla przesunięcie w
+Dla otrzymanej listy znajdz indeks najmniejszego elementu. Lista jest
+posortowana rosnaco,  ale zostala przesunieta. Przykladowo dla przesuniecie w
 prawo o 1, ostatni element trafia na pierwsze miejsce, a przedostatni na
 ostatnie miejsce itd.
 */

@@ -1,7 +1,7 @@
 """
-Dla trzech pobranych liczb reprezentujących datę, 
-wypisz odpowiadający im dzień tygodnia. 
-Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem. 
+Dla trzech pobranych liczb reprezentujacych date, 
+wypisz odpowiadajacy im dzien tygodnia. 
+Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem. 
 
 Wzor Gaussa:
 Niech data bedzie dana w formacie DD/MM/CCYY :
@@ -19,7 +19,7 @@ Niech data bedzie dana w formacie DD/MM/CCYY :
 
 if __name__ == "__main__":
 
-    print("Podaj datę: ")
+    print("Podaj date: ")
     dzien = int(input())
     miesiac = int(input())
     rok = int(input())
@@ -31,18 +31,18 @@ if __name__ == "__main__":
     dzien_tygodnia = (A + B + C + dzien) % 7
 
     if dzien_tygodnia == 1:
-        print("Poniedziałek")
+        print("Poniedzialek")
     elif dzien_tygodnia == 2:
         print("Wtorek")
     elif dzien_tygodnia == 3:
-        print("Środa")
+        print("Sroda")
     elif dzien_tygodnia == 4:
         print("Czwartek")
     elif dzien_tygodnia == 5:
-        print("Piątek")
+        print("Piatek")
     elif dzien_tygodnia == 6:
         print("Sobota")
     elif dzien_tygodnia == 7:
         print("Niedziela")
     else:
-        print("Błędne dane.")
+        print("Bledne dane.")

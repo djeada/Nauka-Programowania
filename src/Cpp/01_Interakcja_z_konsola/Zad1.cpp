@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Wypisz dowolny ciąg znaków na standardowe wyjście.
+Wypisz dowolny ciag znakow na standardowe wyjscie.
 */
 
 int main() {

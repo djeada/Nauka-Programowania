@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Na farmie mamy a głów i b nóg, znajdź liczbę kur oraz liczbę owieczek.
+Na farmie mamy a glow i b nog, znajdz liczbe kur oraz liczbe owieczek.
 */
 
 int main() {

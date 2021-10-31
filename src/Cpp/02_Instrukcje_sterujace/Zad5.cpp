@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Dla pobranych trzech liczb, wypisz liczby w kolejności rosnącej.
+Dla pobranych trzech liczb, wypisz liczby w kolejnosci rosnacej.
 */
 
 int main() {

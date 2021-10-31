@@ -2,9 +2,9 @@
 #include <vector>
 
 /*
-Otrzymujesz listę liczb naturalnych. Sprawdź czy średnia elementów
-listy znajduje się w liście. Dla średniej nie będącej liczbą całkowitą,
-zaokrąglij wynik w dół.
+Otrzymujesz liste liczb naturalnych. Sprawdz czy srednia elementow
+listy znajduje sie w liscie. Dla sredniej nie bedacej liczba calkowita,
+zaokraglij wynik w dol.
 */
 
 int policzSrednia(std::vector<int> &lista) {

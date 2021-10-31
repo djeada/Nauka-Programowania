@@ -2,14 +2,14 @@
 #include <string>
 
 /*
-Pobierz dwie liczby od użytkownika. Napisz funkcję, która dla otrzymanych dwóch
-liczb zwróci:
+Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora dla otrzymanych dwoch
+liczb zwroci:
 
-a) Ich sumę.
-b) Różnicę drugiej i pierwszej.
+a) Ich sume.
+b) Roznice drugiej i pierwszej.
 c) Ich iloczyn.
-d) Iloraz pierwszej przez drugą.
-e) Resztę z dzielenia pierwszej przez drugą.
+d) Iloraz pierwszej przez druga.
+e) Reszte z dzielenia pierwszej przez druga.
 */
 
 int suma(int pierwszaLiczba, int drugaLiczba) {

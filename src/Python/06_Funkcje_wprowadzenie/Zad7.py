@@ -1,15 +1,15 @@
 """
-Napisz dwie funkcje. Pierwsza powinna prosić użytkownika o podanie nazwy oraz hasła 
-oraz zwracać otrzymane dane. Druga powinna otrzymywać dane od pierwszej i ponownie 
-prosić o podanie nazwy oraz hasła. Prośba o podanie danych powinna zostać umieszczona 
-w pętli. Warunkiem zakończenia pętli jest podanie przez użytkownika danych identycznych 
-z tymi przekazanymi przez pierwszą funkcję.
+Napisz dwie funkcje. Pierwsza powinna prosic uzytkownika o podanie nazwy oraz hasla 
+oraz zwracac otrzymane dane. Druga powinna otrzymywac dane od pierwszej i ponownie 
+prosic o podanie nazwy oraz hasla. Prosba o podanie danych powinna zostac umieszczona 
+w petli. Warunkiem zakonczenia petli jest podanie przez uzytkownika danych identycznych 
+z tymi przekazanymi przez pierwsza funkcje.
 """
 
 
 def inicjalizacja_danych():
-    nazwa = input("Podaj nazwę: ")
-    haslo = input("Podaj hasło: ")
+    nazwa = input("Podaj nazwe: ")
+    haslo = input("Podaj haslo: ")
     return nazwa, haslo
 
 
@@ -19,10 +19,10 @@ def sprawdzenie_danych(nazwa, haslo):
     haslo2 = None
 
     while not (nazwa == nazwa2 and haslo == haslo2):
-        nazwa2 = input("Podaj nazwę: ")
-        haslo2 = input("Podaj hasło: ")
+        nazwa2 = input("Podaj nazwe: ")
+        haslo2 = input("Podaj haslo: ")
 
-    print("Dane są identyczne")
+    print("Dane sa identyczne")
 
 
 if __name__ == "__main__":

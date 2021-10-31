@@ -2,9 +2,9 @@
 #include <vector>
 
 /*
-Otrzymujesz listę oraz klucz. Znajdź indeks odpowiadający
-pierwszemu wystąpieniu klucza w liście. Jeśli klucz nie
-wystęþuje w liście, zwróć -1.
+Otrzymujesz liste oraz klucz. Znajdz indeks odpowiadajacy
+pierwszemu wystapieniu klucza w liscie. Jesli klucz nie
+wysteþuje w liscie, zwroc -1.
 */
 
 int znajdzKluczV1(std::vector<int> &lista, int klucz) {

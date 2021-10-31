@@ -1,11 +1,11 @@
 #include <iostream>
 
 /*
-Dla pobranej liczby, powinne zostać wypisane cyfry liczb, które są:
+Dla pobranej liczby, powinne zostac wypisane cyfry liczb, ktore sa:
 
 a) Liczbami parzystymi.
-b) Mniejsze niż 5.
-c) Różne od 0.
+b) Mniejsze niz 5.
+c) Rozne od 0.
 */
 
 int main() {

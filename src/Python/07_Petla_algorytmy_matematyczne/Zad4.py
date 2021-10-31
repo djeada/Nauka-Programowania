@@ -1,5 +1,5 @@
 """
-Napisz funkcję, która przy pomocy pętli obliczy silnię 
+Napisz funkcje, ktora przy pomocy petli obliczy silnie 
 otrzymanej liczby.
 """
 

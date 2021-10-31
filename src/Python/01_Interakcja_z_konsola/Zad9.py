@@ -1,7 +1,7 @@
 """
-Otrzymujesz roczną stopę procentową, liczbę lat na spłacenie kredytu 
-oraz wysokość udzielonego kredytu. Oblicz miesięczną ratę oraz 
-całkowity koszt kredytu.
+Otrzymujesz roczna stope procentowa, liczbe lat na splacenie kredytu 
+oraz wysokosc udzielonego kredytu. Oblicz miesieczna rate oraz 
+calkowity koszt kredytu.
 """
 
 if __name__ == "__main__":

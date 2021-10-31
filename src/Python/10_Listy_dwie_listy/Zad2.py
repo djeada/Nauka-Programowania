@@ -1,9 +1,9 @@
 """
-Dla otrzymanych dwóch list zwróć listę powstałą poprzez:
+Dla otrzymanych dwoch list zwroc liste powstala poprzez:
 
 a) Dostawienie drugiej listy na koniec pierwszej listy.
-b) Wstawienie elementów o indeksach parzystych z drugiej 
-listy na odpowiadające im indeksy pierwszej listy.
+b) Wstawienie elementow o indeksach parzystych z drugiej 
+listy na odpowiadajace im indeksy pierwszej listy.
 """
 
 

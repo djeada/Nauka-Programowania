@@ -2,8 +2,8 @@
 #include <cmath>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby sprawdzi czy jest ona liczbą
-pierwszą.
+Napisz funkcje, ktora dla otrzymanej liczby sprawdzi czy jest ona liczba
+pierwsza.
 */
 
 bool pierwsza(int n) {

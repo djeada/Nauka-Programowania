@@ -1,6 +1,6 @@
 """
-Dla otrzymanej listy liczb całkowitych oraz liczby x, 
-znajdź wszystkie pary liczb z listy, których suma jest równa x.
+Dla otrzymanej listy liczb calkowitych oraz liczby x, 
+znajdz wszystkie pary liczb z listy, ktorych suma jest rowna x.
 """
 
 

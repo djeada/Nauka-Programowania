@@ -1,5 +1,5 @@
 """
-Otrzymujesz napis. Zamień wszystkie małe litery na wielkie.
+Otrzymujesz napis. Zamien wszystkie male litery na wielkie.
 """
 
 

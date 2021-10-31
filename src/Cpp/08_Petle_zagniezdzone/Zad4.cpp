@@ -1,9 +1,9 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby N,
+Napisz funkcje, ktora dla otrzymanej liczby N,
 wypisze N pierwszych wierszy i kolumn tabliczki
-mnożenia.
+mnozenia.
 */
 
 void tabliczkaMnozenia(int n) {

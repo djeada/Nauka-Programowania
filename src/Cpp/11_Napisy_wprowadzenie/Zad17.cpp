@@ -4,7 +4,7 @@
 #include <vector>
 
 /*
-Otrzymujesz listę liczb. Zamień listę na napis.
+Otrzymujesz liste liczb. Zamien liste na napis.
 */
 
 std::string liczby(const std::vector<int> &lista) {

@@ -2,15 +2,15 @@
 #include <iostream>
 
 /*
-Wypisz wynik następujących operacji arytmetycznych dla dwóch liczb pobranych od
-użytkownika:
+Wypisz wynik nastepujacych operacji arytmetycznych dla dwoch liczb pobranych od
+uzytkownika:
 
 a) Suma liczb.
-b) Różnica pierwszej i drugiej liczby.
+b) Roznica pierwszej i drugiej liczby.
 c) Iloczyn liczb.
-d) Iloraz pierwszej liczby przez drugą.
-e) Reszta z dzielenia pierwszej liczby przez drugą.
-f) Pierwsza liczba podniesiona do potęgi równej drugiej liczbie.
+d) Iloraz pierwszej liczby przez druga.
+e) Reszta z dzielenia pierwszej liczby przez druga.
+f) Pierwsza liczba podniesiona do potegi rownej drugiej liczbie.
 */
 
 int main() {

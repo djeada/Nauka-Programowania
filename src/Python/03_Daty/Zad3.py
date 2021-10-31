@@ -1,5 +1,5 @@
 """
-Dla pobranej liczby reprezentującej rok, sprawdź czy rok jest przestępny.
+Dla pobranej liczby reprezentujacej rok, sprawdz czy rok jest przestepny.
 """
 
 if __name__ == "__main__":
@@ -8,6 +8,6 @@ if __name__ == "__main__":
     rok = int(input())
 
     if rok % 4 == 0 and rok % 100 != 0 or rok % 400 == 0:
-        print("Rok jest przestępny.")
+        print("Rok jest przestepny.")
     else:
-        print("Rok nie jest przestępny.")
+        print("Rok nie jest przestepny.")

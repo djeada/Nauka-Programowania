@@ -1,12 +1,12 @@
 """
-Dla pobranej liczby, wypisz dzień tygodnia odpowiadający tej liczbie. 
-Jeśli otrzymano liczbę niedodatnią, bądź dodatnią większą niż 7, 
-wypisz komuniat informujący użytkownika, że liczba jest niepoprawna.
+Dla pobranej liczby, wypisz dzien tygodnia odpowiadajacy tej liczbie. 
+Jesli otrzymano liczbe niedodatnia, badz dodatnia wieksza niz 7, 
+wypisz komuniat informujacy uzytkownika, ze liczba jest niepoprawna.
 """
 
 if __name__ == "__main__":
 
-    print("Podaj liczbę:")
+    print("Podaj liczbe:")
     liczba = int(input())
 
     if liczba < 0 or liczba > 7:

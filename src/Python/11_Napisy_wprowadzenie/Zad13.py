@@ -1,6 +1,6 @@
 """
-Otrzymujesz napis. Znajdź znaki znajdujące się na 
-pozycjach będących liczbami pierwszymi.
+Otrzymujesz napis. Znajdz znaki znajdujace sie na 
+pozycjach bedacych liczbami pierwszymi.
 """
 
 

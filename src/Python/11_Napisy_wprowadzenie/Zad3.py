@@ -1,7 +1,7 @@
 import string
 
 """
-Policz z ilu słów składa się zdanie. Znaki interpunkcyjne nie są liczone jako słowa.
+Policz z ilu slow sklada sie zdanie. Znaki interpunkcyjne nie sa liczone jako slowa.
 """
 
 
@@ -15,7 +15,7 @@ def liczba_slow_w_zdaniu(zdanie):
 
 def test_liczba_slow_w_zdaniu():
     assert liczba_slow_w_zdaniu("Ala ma kota.") == 3
-    assert liczba_slow_w_zdaniu("Ala ma kota, a kot ma Alę.") == 7
+    assert liczba_slow_w_zdaniu("Ala ma kota, a kot ma Ale.") == 7
 
 
 if __name__ == "__main__":

@@ -1,10 +1,10 @@
 """
-Dla pobranych dwóch liczb, powinny zostać wypisane:
+Dla pobranych dwoch liczb, powinny zostac wypisane:
 
-a) Wszystkie liczby naturalne większe od mniejszej pobranej liczby 
-i jednocześnie mniejsze od większej pobranej liczby. 
-b) Wszystkie liczby naturalne podzielne przez 3 większe od mniejszej 
-pobranej liczby i jednocześnie mniejsze od większej pobranej liczby.
+a) Wszystkie liczby naturalne wieksze od mniejszej pobranej liczby 
+i jednoczesnie mniejsze od wiekszej pobranej liczby. 
+b) Wszystkie liczby naturalne podzielne przez 3 wieksze od mniejszej 
+pobranej liczby i jednoczesnie mniejsze od wiekszej pobranej liczby.
 """
 
 if __name__ == "__main__":
@@ -14,7 +14,7 @@ if __name__ == "__main__":
     druga_liczba = int(input())
 
     print(
-        "Liczby naturalne większe od mniejszej pobranej liczby i jednocześnie mniejsze od większej pobranej liczby:"
+        "Liczby naturalne wieksze od mniejszej pobranej liczby i jednoczesnie mniejsze od wiekszej pobranej liczby:"
     )
     if pierwsza_liczba > druga_liczba:
         for i in range(druga_liczba, pierwsza_liczba + 1):
@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     print("\n")
     print(
-        "Liczby naturalne podzielne przez 3 większe od mniejszej pobranej liczby i jednocześnie mniejsze od większej pobranej liczby:"
+        "Liczby naturalne podzielne przez 3 wieksze od mniejszej pobranej liczby i jednoczesnie mniejsze od wiekszej pobranej liczby:"
     )
 
     if pierwsza_liczba > druga_liczba:

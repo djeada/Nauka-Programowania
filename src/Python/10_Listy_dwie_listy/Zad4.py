@@ -1,6 +1,6 @@
 """
-Otrzymujesz dwie listy liczb całkowitych reprezentujące dwa wektory. 
-Zaimplementuj mnożenie wektorowe (zdefiniowane jedynie dla wektorów 
+Otrzymujesz dwie listy liczb calkowitych reprezentujace dwa wektory. 
+Zaimplementuj mnozenie wektorowe (zdefiniowane jedynie dla wektorow 
 3-wymiarowej przestrzeni euklidesowej).
 """
 
@@ -9,12 +9,12 @@ def iloczyn_wektorowy(lista_a, lista_b):
 
     if len(lista_a) != len(lista_b):
         print(
-            "Nie można obliczyć iloczynu wektorowego, ponieważ listy nie mają takiej samej długości"
+            "Nie mozna obliczyc iloczynu wektorowego, poniewaz listy nie maja takiej samej dlugosci"
         )
         return
     if len(lista_a) != 3:
         print(
-            "Nie można obliczyć iloczynu wektorowego, ponieważ listy nie są 3-wymiarowe"
+            "Nie mozna obliczyc iloczynu wektorowego, poniewaz listy nie sa 3-wymiarowe"
         )
         return
 

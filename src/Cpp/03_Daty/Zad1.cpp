@@ -1,10 +1,10 @@
 #include <iostream>
 
 /*
-Wypisz pobraną od użytkownika liczbę, jeśli:
+Wypisz pobrana od uzytkownika liczbe, jesli:
 
 a) Liczba jest poprawnym numerem dnia tygodnia.
-b) Liczba jest poprawnym numerem miesiąca.
+b) Liczba jest poprawnym numerem miesiaca.
 */
 
 int main() {

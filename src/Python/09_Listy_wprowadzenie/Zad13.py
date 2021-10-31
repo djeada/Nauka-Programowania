@@ -1,7 +1,7 @@
 """
-Dla otrzymanej listy, składającej się z nieuporządkowanych 
-kolejnych (za wyjątkiem jednego) wyrazów ciągu arytmetycznego, 
-znajdź brakujący element.
+Dla otrzymanej listy, skladajacej sie z nieuporzadkowanych 
+kolejnych (za wyjatkiem jednego) wyrazow ciagu arytmetycznego, 
+znajdz brakujacy element.
 """
 
 

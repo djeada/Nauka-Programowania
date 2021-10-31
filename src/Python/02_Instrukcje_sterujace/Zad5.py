@@ -1,5 +1,5 @@
 """
-Dla pobranych trzech liczb, wypisz liczby w kolejności rosnącej.
+Dla pobranych trzech liczb, wypisz liczby w kolejnosci rosnacej.
 """
 
 if __name__ == "__main__":

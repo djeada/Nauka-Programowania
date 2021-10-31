@@ -1,13 +1,13 @@
 import string
 
 """
-Otrzymujesz napis reprezentujący zdanie. Znajdź: 
-a) Najdłuższe słowo w zdaniu.
-b) Najkrótsze słowo w zdaniu. 
+Otrzymujesz napis reprezentujacy zdanie. Znajdz: 
+a) Najdluzsze slowo w zdaniu.
+b) Najkrotsze slowo w zdaniu. 
 
-Jeśli więcej niż jedno słowo ma ekstremalną długość, zwróć to 
-słowo spośród nich, które występuje w zdaniu jako pierwsze. 
-Znaki interpunkcyjne nie są liczone jako słowa.  
+Jesli wiecej niz jedno slowo ma ekstremalna dlugosc, zwroc to 
+slowo sposrod nich, ktore wystepuje w zdaniu jako pierwsze. 
+Znaki interpunkcyjne nie sa liczone jako slowa.  
 """
 
 

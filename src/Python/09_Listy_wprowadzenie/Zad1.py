@@ -1,9 +1,9 @@
 """
-Dla liczby N, wczytaj N liczb do listy, a następnie:
+Dla liczby N, wczytaj N liczb do listy, a nastepnie:
 
-a) Wypisz listę od początku do końca. Elementy listy 
-powinny znajdować się w osobnych wierszach.
-b) Wypisz listę od końca. Elementy listy powinny być 
+a) Wypisz liste od poczatku do konca. Elementy listy 
+powinny znajdowac sie w osobnych wierszach.
+b) Wypisz liste od konca. Elementy listy powinny byc 
 oddzielone przecinkami i wypisane w jednym wierszu.
 """
 

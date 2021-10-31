@@ -1,8 +1,8 @@
 """
-Dla otrzymanych dwóch list, zwróć listę, której elementy są 
-sumą odpowiadających sobie elementów otrzymanych list. Jeśli 
-listy nie są równej długości, załóż że brakujące elementy 
-krótszej listy są równe 0.
+Dla otrzymanych dwoch list, zwroc liste, ktorej elementy sa 
+suma odpowiadajacych sobie elementow otrzymanych list. Jesli 
+listy nie sa rownej dlugosci, zaloz ze brakujace elementy 
+krotszej listy sa rowne 0.
 """
 
 

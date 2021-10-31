@@ -2,7 +2,7 @@
 #include <cmath>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby zwróci jej pierwiastek.
+Napisz funkcje, ktora dla otrzymanej liczby zwroci jej pierwiastek.
 */
 
 const float dokladnosc = 0.0001;

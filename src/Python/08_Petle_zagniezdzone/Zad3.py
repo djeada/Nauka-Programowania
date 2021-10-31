@@ -1,6 +1,6 @@
 """
-Napisz funkcję, która dla otrzymanej liczby wypisze zaczynając 
-od podstawy trójkąt prostokątny równoboczny o wysokości równej 
+Napisz funkcje, ktora dla otrzymanej liczby wypisze zaczynajac 
+od podstawy trojkat prostokatny rownoboczny o wysokosci rownej 
 otrzymanej liczbie.
 """
 
@@ -14,7 +14,7 @@ def trojkat(wysokosc):
 
 if __name__ == "__main__":
 
-    print("Podaj wysokość trojkata: ")
+    print("Podaj wysokosc trojkata: ")
     wysokosc = int(input())
 
     trojkat(wysokosc)

@@ -1,10 +1,10 @@
 #include <cassert>
 
 /*
-Napisz funkcję, która dla otrzymanych dwóch liczb pierwszaLiczba oraz
-drugaLiczba zamieni wartości miejscami. Po wykonaniu funkcji zmienna
-pierwszaLiczba, powinna przechowywać dawną wartość zmiennej drugaLiczba,
-pierwszaLiczba zmienna drugaLiczba powinna przechowywać dawną wartość zmiennej
+Napisz funkcje, ktora dla otrzymanych dwoch liczb pierwszaLiczba oraz
+drugaLiczba zamieni wartosci miejscami. Po wykonaniu funkcji zmienna
+pierwszaLiczba, powinna przechowywac dawna wartosc zmiennej drugaLiczba,
+pierwszaLiczba zmienna drugaLiczba powinna przechowywac dawna wartosc zmiennej
 pierwszaLiczba.
 */
 

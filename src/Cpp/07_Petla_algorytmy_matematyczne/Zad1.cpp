@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby n, poprosi użytkownika
-o podanie n liczb i zwróci ich średnią arytmetyczną.
+Napisz funkcje, ktora dla otrzymanej liczby n, poprosi uzytkownika
+o podanie n liczb i zwroci ich srednia arytmetyczna.
 */
 
 float srednia(int n) {

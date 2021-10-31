@@ -1,7 +1,7 @@
 """
-Napisz funkcję, która dla otrzymanych dwóch liczb a oraz b zamieni wartości miejscami. 
-Po wykonaniu funkcji zmienna a, powinna przechowywać dawną wartość zmiennej b, a 
-zmienna b powinna przechowywać dawną wartość zmiennej a.
+Napisz funkcje, ktora dla otrzymanych dwoch liczb a oraz b zamieni wartosci miejscami. 
+Po wykonaniu funkcji zmienna a, powinna przechowywac dawna wartosc zmiennej b, a 
+zmienna b powinna przechowywac dawna wartosc zmiennej a.
 """
 
 

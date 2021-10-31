@@ -3,9 +3,9 @@
 #include <vector>
 
 /*
-Otrzymujesz dokładnie 6 liczb. Otrzymane liczby stanowią odpowiednio
-współrzędne xA, yA, xB, yB, xC, yC. Sprawdź czy punkty A, B oraz C
-mogą stanowić wierzchołki trójkąta.
+Otrzymujesz dokladnie 6 liczb. Otrzymane liczby stanowia odpowiednio
+wspolrzedne xA, yA, xB, yB, xC, yC. Sprawdz czy punkty A, B oraz C
+moga stanowic wierzcholki trojkata.
 */
 
 int odleglosc(int x1, int y1, int x2, int y2) {

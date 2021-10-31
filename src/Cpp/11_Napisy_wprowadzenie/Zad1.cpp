@@ -3,7 +3,7 @@
 #include <string>
 
 /*
-Zamień otrzymany napis, na otrzymany napis zapisany wspak.
+Zamien otrzymany napis, na otrzymany napis zapisany wspak.
 */
 
 // Zlozonosc Czasowa O(n)

@@ -1,6 +1,6 @@
 """
-Otrzymujesz dwie listy liczb całkowitych. Usuń z pierwszej 
-listy te elementy, które występują również w drugiej liście.
+Otrzymujesz dwie listy liczb calkowitych. Usun z pierwszej 
+listy te elementy, ktore wystepuja rowniez w drugiej liscie.
 """
 
 

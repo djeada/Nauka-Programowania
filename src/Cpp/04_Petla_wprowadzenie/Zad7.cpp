@@ -2,9 +2,9 @@
 #include <iostream>
 
 /*
-Dla pobranej liczby, wyświetl liczbę Pi podniesioną do
-potęgi równej pobranej liczbie. Wynik powinien być
-zaokrąglony do dwóch miejsc po przecinku.
+Dla pobranej liczby, wyswietl liczbe Pi podniesiona do
+potegi rownej pobranej liczbie. Wynik powinien byc
+zaokraglony do dwoch miejsc po przecinku.
 */
 
 int main() {

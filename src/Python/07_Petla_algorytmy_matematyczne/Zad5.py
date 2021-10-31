@@ -1,6 +1,6 @@
 """
-Napisz funkcję, która dla otrzymanych dwóch liczb zwróci 
-ich największy wspólny dzielnik.
+Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci 
+ich najwiekszy wspolny dzielnik.
 """
 
 

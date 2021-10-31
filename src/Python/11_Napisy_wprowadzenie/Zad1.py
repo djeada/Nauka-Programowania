@@ -1,5 +1,5 @@
 """
-Zamień otrzymany napis, na otrzymany napis zapisany wspak.
+Zamien otrzymany napis, na otrzymany napis zapisany wspak.
 """
 
 

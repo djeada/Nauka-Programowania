@@ -3,8 +3,8 @@
 #include <vector>
 
 /*
-Dla otrzymanej listy oraz klucza, usuń pierwsze
-wystąpienie klucza w liście.
+Dla otrzymanej listy oraz klucza, usun pierwsze
+wystapienie klucza w liscie.
 */
 
 void usunPierwszeWystapienieV1(std::vector<int> &lista, int klucz) {

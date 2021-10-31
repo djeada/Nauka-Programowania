@@ -1,6 +1,6 @@
 """
-Otrzymujesz liczbę naturalną n. Zwróć napis składający 
-się z liczb naturalnych od 1 do n.
+Otrzymujesz liczbe naturalna n. Zwroc napis skladajacy 
+sie z liczb naturalnych od 1 do n.
 """
 
 

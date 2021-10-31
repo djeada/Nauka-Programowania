@@ -2,13 +2,13 @@
 #include <cmath>
 
 /*
-Pobierz dwie liczby od użytkownika. Napisz funkcję, która dla otrzymanych
-dwóch liczb odpowie na następujące pytanie:
+Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora dla otrzymanych
+dwoch liczb odpowie na nastepujace pytanie:
 
-a) Czy pierwsza liczba jest większa od drugiej liczby?
-b) Czy suma liczb jest mniejsza niż 10?
-c) Czy obie liczby są nieparzyste?
-d) Czy większa liczba jest mniejsza od pierwszej liczby podniesionej do
+a) Czy pierwsza liczba jest wieksza od drugiej liczby?
+b) Czy suma liczb jest mniejsza niz 10?
+c) Czy obie liczby sa nieparzyste?
+d) Czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do
 kwadratu?
 */
 

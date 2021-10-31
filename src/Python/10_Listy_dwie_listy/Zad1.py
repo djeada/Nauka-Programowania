@@ -1,7 +1,7 @@
 """
-Dla otrzymanych dwóch list wypisuj na przemian elementy pierwszej 
-i drugiej listy. Jeśli listy nie są równej długości po wyczerpaniu 
-elementów krótszej listy, wypisuj tylko elementy dłuższej listy.
+Dla otrzymanych dwoch list wypisuj na przemian elementy pierwszej 
+i drugiej listy. Jesli listy nie sa rownej dlugosci po wyczerpaniu 
+elementow krotszej listy, wypisuj tylko elementy dluzszej listy.
 """
 
 

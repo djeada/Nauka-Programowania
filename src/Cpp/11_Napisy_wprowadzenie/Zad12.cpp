@@ -3,7 +3,7 @@
 #include <string>
 
 /*
-Otrzymujesz napis reprezentujący zdanie. Usuń spacje ze zdania.
+Otrzymujesz napis reprezentujacy zdanie. Usun spacje ze zdania.
 */
 
 // Zlozonosc Czasowa O(n)

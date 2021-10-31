@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Dla pobranej liczby, powinny zostać wypisane wszystkie
+Dla pobranej liczby, powinny zostac wypisane wszystkie
 liczby naturalne mniejsze od podanej liczby.
 */
 

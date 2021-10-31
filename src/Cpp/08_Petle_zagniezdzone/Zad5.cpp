@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby wypisze literę X,
-o wysokości równej otrzymanej liczbie.
+Napisz funkcje, ktora dla otrzymanej liczby wypisze litere X,
+o wysokosci rownej otrzymanej liczbie.
 */
 
 void literaX(int wysokosc) {

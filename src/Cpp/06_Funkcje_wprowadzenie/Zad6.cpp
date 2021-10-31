@@ -2,7 +2,7 @@
 #include <cmath>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby zwróci sumę cyfr tej liczby.
+Napisz funkcje, ktora dla otrzymanej liczby zwroci sume cyfr tej liczby.
 */
 
 int sumaCyfr(int liczba) {

@@ -1,10 +1,10 @@
 """
-Dla pobranej liczby, powinna zostać wypisana suma cyfr tej liczby.
+Dla pobranej liczby, powinna zostac wypisana suma cyfr tej liczby.
 """
 
 if __name__ == "__main__":
 
-    liczba = int(input("Podaj liczbę: "))
+    liczba = int(input("Podaj liczbe: "))
 
     suma = 0
     while liczba > 0:

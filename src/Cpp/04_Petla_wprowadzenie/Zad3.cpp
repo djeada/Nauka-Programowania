@@ -3,8 +3,8 @@
 #include <numbers>
 
 /*
-Dla pobranej liczby, wypisz liczbę Pi tyle razy
-ile wynosi pobrana liczba, z dokładnością do tylu
+Dla pobranej liczby, wypisz liczbe Pi tyle razy
+ile wynosi pobrana liczba, z dokladnoscia do tylu
 miejsc po przecinku ile wynosi pobrana liczba.
 */
 

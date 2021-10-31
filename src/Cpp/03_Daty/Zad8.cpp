@@ -1,9 +1,9 @@
 #include <iostream>
 
 /*
-Dla trzech pobranych liczb reprezentujących datę,
-wypisz odpowiadający im dzień tygodnia.
-Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem.
+Dla trzech pobranych liczb reprezentujacych date,
+wypisz odpowiadajacy im dzien tygodnia.
+Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem.
 
 Wzor Gaussa:
 Niech data bedzie dana w formacie DD/MM/CCYY :

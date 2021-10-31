@@ -3,7 +3,7 @@
 #include <string>
 
 /*
-Otrzymujesz napis. Zamień litery a na znaki zapytania.
+Otrzymujesz napis. Zamien litery a na znaki zapytania.
 */
 
 void zamienV1(std::string &napis) {

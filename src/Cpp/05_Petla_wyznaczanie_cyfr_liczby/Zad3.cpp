@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Dla pobranej liczby, powinna zostać wypisana suma cyfr tej liczby.
+Dla pobranej liczby, powinna zostac wypisana suma cyfr tej liczby.
 */
 
 int main() {

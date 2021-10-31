@@ -1,6 +1,6 @@
 """
-Napisz funkcję, która dla otrzymanej liczby wypisze kwadrat 
-o boku równym otrzymanej liczbie.
+Napisz funkcje, ktora dla otrzymanej liczby wypisze kwadrat 
+o boku rownym otrzymanej liczbie.
 """
 
 

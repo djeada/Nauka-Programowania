@@ -1,6 +1,6 @@
 """
-Napisz funkcję, która dla otrzymanych dwóch liczb 
-zwróci ich najmniejszą wspólną wielokrotność.
+Napisz funkcje, ktora dla otrzymanych dwoch liczb 
+zwroci ich najmniejsza wspolna wielokrotnosc.
 """
 
 

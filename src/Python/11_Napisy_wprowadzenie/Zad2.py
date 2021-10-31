@@ -1,5 +1,5 @@
 """
-Dla otrzymanego napisu: oraz znaku, znajdź liczbę wystąpień znaku w napisie.
+Dla otrzymanego napisu: oraz znaku, znajdz liczbe wystapien znaku w napisie.
 """
 
 

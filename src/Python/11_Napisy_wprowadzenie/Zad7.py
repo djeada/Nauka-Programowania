@@ -1,7 +1,7 @@
 """
-Otrzymujesz napis. Zamień wszystkie znaki napisu na odpowiadające 
-im numery w tablicy ASCII. Podmień otrzymany napis na napis 
-składający się z otrzymanych numerów oddzielonych przecinkami.
+Otrzymujesz napis. Zamien wszystkie znaki napisu na odpowiadajace 
+im numery w tablicy ASCII. Podmien otrzymany napis na napis 
+skladajacy sie z otrzymanych numerow oddzielonych przecinkami.
 """
 
 

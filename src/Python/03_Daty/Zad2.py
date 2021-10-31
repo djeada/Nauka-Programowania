@@ -1,12 +1,12 @@
 """
-Dla pobranych sześciu liczb: dnia urodzenia osoby, miesiąca urodzenia osoby, 
-roku urodzenia osoby oraz aktualnego dnia, aktualnego miesiąca i aktualnego 
-roku, sprawdź czy dana osoba jest pełnoletnia.
+Dla pobranych szesciu liczb: dnia urodzenia osoby, miesiaca urodzenia osoby, 
+roku urodzenia osoby oraz aktualnego dnia, aktualnego miesiaca i aktualnego 
+roku, sprawdz czy dana osoba jest pelnoletnia.
 """
 
 if __name__ == "__main__":
 
-    print("Podaj datę urodzenia osoby (dzien, miesiac, rok):")
+    print("Podaj date urodzenia osoby (dzien, miesiac, rok):")
     dzien_urodzenia = int(input())
     miesiac_urodzenia = int(input())
     rok_urodzenia = int(input())
@@ -21,21 +21,21 @@ if __name__ == "__main__":
     roznica_dni = aktualny_dzien - dzien_urodzenia
 
     if roznica_lat > 18:
-        print("Osoba jest pełnoletnia.")
+        print("Osoba jest pelnoletnia.")
 
     elif roznica_lat == 18:
 
         if roznica_miesiecy > 0:
-            print("Osoba jest pełnoletnia.")
+            print("Osoba jest pelnoletnia.")
 
         elif roznica_miesiecy == 0:
 
             if roznica_dni >= 0:
-                print("Osoba jest pełnoletnia.")
+                print("Osoba jest pelnoletnia.")
 
             else:
-                print("Osoba nie jest pełnoletnia.")
+                print("Osoba nie jest pelnoletnia.")
         else:
-            print("Osoba nie jest pełnoletnia.")
+            print("Osoba nie jest pelnoletnia.")
     else:
-        print("Osoba nie jest pełnoletnia.")
+        print("Osoba nie jest pelnoletnia.")

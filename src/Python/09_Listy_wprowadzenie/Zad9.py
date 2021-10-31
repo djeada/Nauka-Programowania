@@ -1,9 +1,9 @@
 import math
 
 """
-Otrzymujesz listę liczb naturalnych. Usuń z niej 
-wszystkie duplikaty. Tylko pierwsze wystąpienie danej 
-liczby powinno zostać zachowane.
+Otrzymujesz liste liczb naturalnych. Usun z niej 
+wszystkie duplikaty. Tylko pierwsze wystapienie danej 
+liczby powinno zostac zachowane.
 """
 
 def usun_duplikaty_v1(lista):

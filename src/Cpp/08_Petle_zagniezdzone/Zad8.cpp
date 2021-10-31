@@ -2,8 +2,8 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby wypisze
-trójkąt Pascala o wysokości równej otrzymanej liczbie.
+Napisz funkcje, ktora dla otrzymanej liczby wypisze
+trojkat Pascala o wysokosci rownej otrzymanej liczbie.
 */
 
 void trojkatPascala(int wysokosc) {

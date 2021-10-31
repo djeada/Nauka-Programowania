@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Dla pobrannej liczby, wypisz liczbę dni miesiąca odpowiadającemu danej liczbie.
-Jeśli otrzymano niepoprawny numer miesiąca poinformuj o tym użytkownika.
+Dla pobrannej liczby, wypisz liczbe dni miesiaca odpowiadajacemu danej liczbie.
+Jesli otrzymano niepoprawny numer miesiaca poinformuj o tym uzytkownika.
 */
 
 int main() {

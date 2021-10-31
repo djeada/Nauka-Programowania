@@ -1,12 +1,12 @@
 #include <iostream>
 
 /*
-Dla pobranych dwóch liczb, powinny zostać wypisane:
+Dla pobranych dwoch liczb, powinny zostac wypisane:
 
-a) Wszystkie liczby naturalne większe od mniejszej pobranej liczby
-i jednocześnie mniejsze od większej pobranej liczby.
-b) Wszystkie liczby naturalne podzielne przez 3 większe od mniejszej
-pobranej liczby i jednocześnie mniejsze od większej pobranej liczby.
+a) Wszystkie liczby naturalne wieksze od mniejszej pobranej liczby
+i jednoczesnie mniejsze od wiekszej pobranej liczby.
+b) Wszystkie liczby naturalne podzielne przez 3 wieksze od mniejszej
+pobranej liczby i jednoczesnie mniejsze od wiekszej pobranej liczby.
 */
 
 int main() {
@@ -21,8 +21,8 @@ int main() {
     b = pom;
   }
 
-  std::cout << "Liczby naturalne większe od mniejszej pobranej liczby i "
-               "jednocześnie mniejsze od większej pobranej liczby: "
+  std::cout << "Liczby naturalne wieksze od mniejszej pobranej liczby i "
+               "jednoczesnie mniejsze od wiekszej pobranej liczby: "
             << std::endl;
 
   for (int i = a + 1; i < b; i++)
@@ -31,8 +31,8 @@ int main() {
   std::cout << std::endl;
 
   std::cout
-      << "Liczby naturalne podzielne przez 3 większe od mniejszej pobranej "
-         "liczby i jednocześnie mniejsze od większej pobranej liczby: "
+      << "Liczby naturalne podzielne przez 3 wieksze od mniejszej pobranej "
+         "liczby i jednoczesnie mniejsze od wiekszej pobranej liczby: "
       << std::endl;
 
   for (int i = a + 1; i < b; i++) {

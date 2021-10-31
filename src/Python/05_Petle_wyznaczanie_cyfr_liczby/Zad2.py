@@ -1,11 +1,11 @@
 """
-Dla pobranej liczby, powinny zostać wypisane 
-cyfry pobranej liczby zaczynając od cyfry jedności.
+Dla pobranej liczby, powinny zostac wypisane 
+cyfry pobranej liczby zaczynajac od cyfry jednosci.
 """
 
 if __name__ == "__main__":
 
-    print("Podaj liczbę: ")
+    print("Podaj liczbe: ")
     liczba = int(input())
 
     while liczba > 0:

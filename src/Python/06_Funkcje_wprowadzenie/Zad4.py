@@ -1,10 +1,10 @@
 """
-Napisz funkcję, która:
+Napisz funkcje, ktora:
 
-a) Dla otrzymanych dwóch liczb, zwraca mniejszą.
-b) Dla otrzymanych dwóch liczb, zwróci większą.
-c) Dla otrzymanych trzech liczb, zwraca najmniejszą.
-d) Dla otrzymanych trzech liczb, zwraca największą.
+a) Dla otrzymanych dwoch liczb, zwraca mniejsza.
+b) Dla otrzymanych dwoch liczb, zwroci wieksza.
+c) Dla otrzymanych trzech liczb, zwraca najmniejsza.
+d) Dla otrzymanych trzech liczb, zwraca najwieksza.
 """
 
 

@@ -4,8 +4,8 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie listy liczb całkowitych. Znajdź elementy występujące
-zarówno w pierwszej jak i w drugiej liście.
+Otrzymujesz dwie listy liczb calkowitych. Znajdz elementy wystepujace
+zarowno w pierwszej jak i w drugiej liscie.
 */
 
 // Zlozonosc obliczeniowa O(n^2)

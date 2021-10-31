@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby wypisze
-literę Z, o wysokości równej otrzymanej liczbie.
+Napisz funkcje, ktora dla otrzymanej liczby wypisze
+litere Z, o wysokosci rownej otrzymanej liczbie.
 */
 
 void literaZ(int wysokosc) {

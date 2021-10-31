@@ -1,10 +1,10 @@
 """
-Dla pobranej od użytkownika, wypisz liczbę cyfr pobranej liczby.
+Dla pobranej od uzytkownika, wypisz liczbe cyfr pobranej liczby.
 """
 
 if __name__ == "__main__":
 
-    print("Podaj liczbę: ")
+    print("Podaj liczbe: ")
     liczba = int(input())
 
     cyfry = 0

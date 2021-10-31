@@ -1,13 +1,13 @@
 import math
 
 """
-Wyznacz wartość funkcji w punkcie:
+Wyznacz wartosc funkcji w punkcie:
 
-a) Otrzymujesz współrzędną x. Wyznacz wartość funkcji y = 3x + 10 w zadanym punkcie.
-b) Pobierz współczynniki a, b oraz punkt x. Wyznacz wartość funkcji y = ax + b w zadanym punkcie.
-c) Otrzymujesz współrzędną x. Wyznacz wartość funkcji y = x3 + 22 - 20 w zadanym punkcie.
-d) Pobierz współczynniki a, b, c, d, m, n oraz punkt x. Wyznacz wartość funkcji y = a*xm + b*xn + c - a w zadanym punkcie.
-e) Otrzymujesz współrzędną x. Wyznacz wartość funkcji y = sin3x*cos2x + ex2 + log(x3+2x2-x-3) w zadanym punkcie.
+a) Otrzymujesz wspolrzedna x. Wyznacz wartosc funkcji y = 3x + 10 w zadanym punkcie.
+b) Pobierz wspolczynniki a, b oraz punkt x. Wyznacz wartosc funkcji y = ax + b w zadanym punkcie.
+c) Otrzymujesz wspolrzedna x. Wyznacz wartosc funkcji y = x3 + 22 - 20 w zadanym punkcie.
+d) Pobierz wspolczynniki a, b, c, d, m, n oraz punkt x. Wyznacz wartosc funkcji y = a*xm + b*xn + c - a w zadanym punkcie.
+e) Otrzymujesz wspolrzedna x. Wyznacz wartosc funkcji y = sin3x*cos2x + ex2 + log(x3+2x2-x-3) w zadanym punkcie.
 """
 
 if __name__ == "__main__":

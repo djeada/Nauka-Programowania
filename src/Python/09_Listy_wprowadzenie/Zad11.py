@@ -1,8 +1,8 @@
 """
-Otrzymujesz listę składającą się wyłącznie z liter A i B. 
-Litera A reprezentuje samochód jadący na wschód, a litera B 
-jadący na zachód. Samochody jadące w przeciwną stronę mijają się. 
-Policz mijające się samochody.
+Otrzymujesz liste skladajaca sie wylacznie z liter A i B. 
+Litera A reprezentuje samochod jadacy na wschod, a litera B 
+jadacy na zachod. Samochody jadace w przeciwna strone mijaja sie. 
+Policz mijajace sie samochody.
 """
 
 

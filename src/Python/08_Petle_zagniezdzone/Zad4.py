@@ -1,7 +1,7 @@
 """
-Napisz funkcję, która dla otrzymanej liczby N, 
+Napisz funkcje, ktora dla otrzymanej liczby N, 
 wypisze N pierwszych wierszy i kolumn tabliczki 
-mnożenia.
+mnozenia.
 """
 
 
@@ -14,7 +14,7 @@ def tabliczka_mnozenia(n):
 
 if __name__ == "__main__":
 
-    print("Podaj liczbę: ")
+    print("Podaj liczbe: ")
     n = int(input())
 
     tabliczka_mnozenia(n)

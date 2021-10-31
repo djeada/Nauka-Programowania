@@ -3,8 +3,8 @@
 #include <string>
 
 /*
-Otrzymujesz dwa napisy o równej długości. Oblicz odległość
-Hamminga między dwoma otrzymanymi napisami.
+Otrzymujesz dwa napisy o rownej dlugosci. Oblicz odleglosc
+Hamminga miedzy dwoma otrzymanymi napisami.
 */
 
 int odlegloscHammingaV1(const std::string &napisA, const std::string &napisB) {

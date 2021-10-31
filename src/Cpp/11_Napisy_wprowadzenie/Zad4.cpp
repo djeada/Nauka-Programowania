@@ -3,7 +3,7 @@
 #include <string>
 
 /*
-Otrzymujesz napis. Zamień wszystkie małe litery na wielkie.
+Otrzymujesz napis. Zamien wszystkie male litery na wielkie.
 */
 
 // Zlozonosc Czasowa O(n)

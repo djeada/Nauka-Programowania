@@ -1,14 +1,14 @@
 """
-Dla pobranej liczby, wyświetl liczbę Pi podniesioną do 
-potęgi równej pobranej liczbie. Wynik powinien być 
-zaokrąglony do dwóch miejsc po przecinku.
+Dla pobranej liczby, wyswietl liczbe Pi podniesiona do 
+potegi rownej pobranej liczbie. Wynik powinien byc 
+zaokraglony do dwoch miejsc po przecinku.
 """
 
 from math import pi
 
 if __name__ == "__main__":
 
-    print("Podaj liczbę: ")
+    print("Podaj liczbe: ")
     liczba = int(input())
 
     wynik = 1

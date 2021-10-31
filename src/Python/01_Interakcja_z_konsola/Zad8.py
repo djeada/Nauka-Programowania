@@ -1,7 +1,7 @@
 """
-Otrzymujesz cenę i wymiary płytki oraz wymiary podłogi. 
-Oblicz ile będzie wynosiła cena podłogi o podanych wymiarach.
-W zadaniu przyjmujemy, że podłoga jest prostokątem, a płytka kwadratem.
+Otrzymujesz cene i wymiary plytki oraz wymiary podlogi. 
+Oblicz ile bedzie wynosila cena podlogi o podanych wymiarach.
+W zadaniu przyjmujemy, ze podloga jest prostokatem, a plytka kwadratem.
 """
 
 if __name__ == "__main__":

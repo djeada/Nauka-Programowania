@@ -1,9 +1,9 @@
 #include <iostream>
 
 /*
-Dla pobranych sześciu liczb: dnia urodzenia osoby, miesiąca urodzenia osoby,
-roku urodzenia osoby oraz aktualnego dnia, aktualnego miesiąca i aktualnego
-roku, sprawdź czy dana osoba jest pełnoletnia.
+Dla pobranych szesciu liczb: dnia urodzenia osoby, miesiaca urodzenia osoby,
+roku urodzenia osoby oraz aktualnego dnia, aktualnego miesiaca i aktualnego
+roku, sprawdz czy dana osoba jest pelnoletnia.
 */
 
 int main() {

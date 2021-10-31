@@ -1,7 +1,7 @@
 """
-Dla otrzymanej listy liczb naturalnych znajdź 
-średnią arytmetyczną największej i drugiej największej 
-liczby w liście.
+Dla otrzymanej listy liczb naturalnych znajdz 
+srednia arytmetyczna najwiekszej i drugiej najwiekszej 
+liczby w liscie.
 """
 
 

@@ -4,7 +4,7 @@
 
 /*
 Otrzymujesz dwie listy liczb zmiennoprzecinkowych, pierwsza
-reprezentuje wagi, a druga wartości. Oblicz średnią ważoną wartości.
+reprezentuje wagi, a druga wartosci. Oblicz srednia wazona wartosci.
 */
 
 double sredniaWazona(std::vector<double> &wagi, std::vector<double> &wartosci) {

@@ -2,8 +2,8 @@
 #include <limits>
 
 /*
-Napisz funkcję realizującą zaokrąglanie ilorazu bez
-użycia operatorów  '/' i '%'.
+Napisz funkcje realizujaca zaokraglanie ilorazu bez
+uzycia operatorow  '/' i '%'.
 */
 
 int podziel(int dzielna, int dzielnik) {

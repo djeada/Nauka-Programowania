@@ -1,18 +1,18 @@
 """
-Dla pobranej od użytkownika liczby, wypisz wszystkie liczby naturalne:
+Dla pobranej od uzytkownika liczby, wypisz wszystkie liczby naturalne:
 
-a) Mniejsze od pobranej liczby, których suma cyfr jest równa 10.
-b) Dwucyfrowe, większe od pobranej liczby.
-c) Trzycyfrowe, których suma cyfr jest równa pobranej liczbie.
-d) Trzycyfrowe podzielne przez sumę cyfr pobranej liczby.
-e) Mniejsze od pobranej liczby, składające się wyłącznie z parzystych cyfr.
+a) Mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10.
+b) Dwucyfrowe, wieksze od pobranej liczby.
+c) Trzycyfrowe, ktorych suma cyfr jest rowna pobranej liczbie.
+d) Trzycyfrowe podzielne przez sume cyfr pobranej liczby.
+e) Mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr.
 """
 
 if __name__ == "__main__":
-    print("Podaj liczbę: ")
+    print("Podaj liczbe: ")
     liczba = int(input())
 
-    print("Liczby mniejsze od pobranej liczby, których suma cyfr jest równa 10: ")
+    print("Liczby mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: ")
 
     for i in range(1, liczba):
         suma = 0
@@ -21,12 +21,12 @@ if __name__ == "__main__":
         if suma == 10:
             print(i)
 
-    print("Liczby dwucyfrowe, większe od pobranej liczby: ")
+    print("Liczby dwucyfrowe, wieksze od pobranej liczby: ")
 
     for i in range(liczba + 1, 100):
         print(i)
 
-    print("Liczby trzycyfrowe, których suma cyfr jest równa pobranej liczbie: ")
+    print("Liczby trzycyfrowe, ktorych suma cyfr jest rowna pobranej liczbie: ")
 
     for i in range(100, 1000):
         suma = 0
@@ -37,7 +37,7 @@ if __name__ == "__main__":
         if suma == liczba:
             print(i)
 
-    print("Liczby trzycyfrowe podzielne przez sumę cyfr pobranej liczby: ")
+    print("Liczby trzycyfrowe podzielne przez sume cyfr pobranej liczby: ")
 
     suma = 0
     kopia = liczba
@@ -50,7 +50,7 @@ if __name__ == "__main__":
             print(i)
 
     print(
-        "Liczby mniejsze od pobranej liczby, składające się wyłącznie z parzystych cyfr: "
+        "Liczby mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr: "
     )
 
     for i in range(1, liczba):

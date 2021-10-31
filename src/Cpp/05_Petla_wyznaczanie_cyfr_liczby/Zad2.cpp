@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Dla pobranej liczby, powinny zostać wypisane cyfry
-pobranej liczby zaczynając od cyfry jedności.
+Dla pobranej liczby, powinny zostac wypisane cyfry
+pobranej liczby zaczynajac od cyfry jednosci.
 */
 
 int main() {

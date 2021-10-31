@@ -3,13 +3,13 @@
 #include <iostream>
 
 /*
-Dla pobranej liczby n, wypisz sumę n pierwszych wyrazów ciągu danego wzorem:
+Dla pobranej liczby n, wypisz sume n pierwszych wyrazow ciagu danego wzorem:
 
 a) a_n = n/(n + 1)
 b) a_n = (n^2 + 5)/n
 c) a_n = n + 2^n
 
-Wynik powinien być zaokrąglony do najbliższej liczby naturalnej.
+Wynik powinien byc zaokraglony do najblizszej liczby naturalnej.
 */
 
 int main() {

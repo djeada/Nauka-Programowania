@@ -1,6 +1,6 @@
 """
-Napisz funkcję, która dla otrzymanej liczby wypisze 
-trójkąt prostokątny równoboczny o wysokości równej 
+Napisz funkcje, ktora dla otrzymanej liczby wypisze 
+trojkat prostokatny rownoboczny o wysokosci rownej 
 otrzymanej liczbie.
 """
 
@@ -14,5 +14,5 @@ def trojkat(wysokosc):
 
 if __name__ == "__main__":
 
-    wysokosc = int(input("Podaj wysokość trójkąta: "))
+    wysokosc = int(input("Podaj wysokosc trojkata: "))
     trojkat(wysokosc)

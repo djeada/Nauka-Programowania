@@ -1,6 +1,6 @@
 """
-Otrzymujesz dwie posortowane listy liczb całkowitych równej długości. 
-Znajdź ich medianę.
+Otrzymujesz dwie posortowane listy liczb calkowitych rownej dlugosci. 
+Znajdz ich mediane.
 """
 
 

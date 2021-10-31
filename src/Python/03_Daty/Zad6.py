@@ -1,6 +1,6 @@
 """
-Dla pobranych trzech liczb, sprawdź czy reprezentują one poprawną datę. 
-Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem. 
+Dla pobranych trzech liczb, sprawdz czy reprezentuja one poprawna date. 
+Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem. 
 """
 
 if __name__ == "__main__":
@@ -17,6 +17,6 @@ if __name__ == "__main__":
             else:
                 print("Rok jest niepoprawny.")
         else:
-            print("Miesiąc jest niepoprawny.")
+            print("Miesiac jest niepoprawny.")
     else:
-        print("Dzień jest niepoprawny.")
+        print("Dzien jest niepoprawny.")

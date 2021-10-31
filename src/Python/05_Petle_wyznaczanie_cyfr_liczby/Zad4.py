@@ -1,14 +1,14 @@
 """
-Dla pobranej liczby, powinne zostać wypisane cyfry liczb, które są:
+Dla pobranej liczby, powinne zostac wypisane cyfry liczb, ktore sa:
 
 a) Liczbami parzystymi.
-b) Mniejsze niż 5.
-c) Różne od 0.
+b) Mniejsze niz 5.
+c) Rozne od 0.
 """
 
 if __name__ == "__main__":
 
-    print("Podaj liczbę: ")
+    print("Podaj liczbe: ")
     liczba = int(input())
 
     print("Parzyst cyfry: ")
@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
         kopia //= 10
 
-    print("Cyfry mniejsze niż 5: ")
+    print("Cyfry mniejsze niz 5: ")
     kopia = liczba
     while kopia > 0:
         cyfra = kopia % 10
@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
         kopia //= 10
 
-    print("Cyfry różne od 0: ")
+    print("Cyfry rozne od 0: ")
     kopia = liczba
     while kopia > 0:
         cyfra = kopia % 10
