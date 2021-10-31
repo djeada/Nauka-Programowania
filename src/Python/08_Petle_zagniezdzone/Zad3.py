@@ -4,11 +4,13 @@ od podstawy trójkąt prostokątny równoboczny o wysokości równej
 otrzymanej liczbie.
 """
 
+
 def trojkat(wysokosc):
     for i in range(wysokosc):
-        for j in range(wysokosc-i):
+        for j in range(wysokosc - i):
             print("*", end=" ")
         print()
+
 
 if __name__ == "__main__":
 

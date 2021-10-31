@@ -20,4 +20,3 @@ if __name__ == "__main__":
             print("Miesiąc jest niepoprawny.")
     else:
         print("Dzień jest niepoprawny.")
-

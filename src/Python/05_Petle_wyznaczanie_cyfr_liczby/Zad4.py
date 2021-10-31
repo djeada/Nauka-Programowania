@@ -28,7 +28,7 @@ if __name__ == "__main__":
             print(cyfra)
 
         kopia //= 10
-    
+
     print("Cyfry różne od 0: ")
     kopia = liczba
     while kopia > 0:

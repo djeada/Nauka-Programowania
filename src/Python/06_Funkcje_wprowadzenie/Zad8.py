@@ -4,6 +4,7 @@ import random
 Napisz funkcję realizującą zaokrąglanie ilorazu bez użycia operatorów  '/' i '%'.
 """
 
+
 def podziel(a, b):
 
     znak = 1
@@ -45,6 +46,7 @@ def test_podziel():
     assert podziel(-25, -5) == 5
     assert podziel(0, 5) == 0
     assert podziel(0, 0) == float("nan")
+
 
 if _name__ == "__main__":
 

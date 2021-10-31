@@ -6,23 +6,26 @@ w pętli. Warunkiem zakończenia pętli jest podanie przez użytkownika danych i
 z tymi przekazanymi przez pierwszą funkcję.
 """
 
+
 def inicjalizacja_danych():
     nazwa = input("Podaj nazwę: ")
     haslo = input("Podaj hasło: ")
     return nazwa, haslo
+
 
 def sprawdzenie_danych(nazwa, haslo):
 
     nazwa2 = None
     haslo2 = None
 
-    while not(nazwa == nazwa2 and haslo == haslo2):
+    while not (nazwa == nazwa2 and haslo == haslo2):
         nazwa2 = input("Podaj nazwę: ")
         haslo2 = input("Podaj hasło: ")
 
     print("Dane są identyczne")
 
+
 if __name__ == "__main__":
-    
+
     nazwa, haslo = inicjalizacja_danych()
     sprawdzenie_danych(nazwa, haslo)

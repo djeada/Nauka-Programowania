@@ -1,4 +1,4 @@
-'''
+"""
 Wypisz ciągi znaków na standardowe wyjście. Pamiętaj o spacjach i przejściach do nowej linii.
 
 Kwadrat.
@@ -16,7 +16,7 @@ Romb z jedynek.
 11111
  111
   1
-'''
+"""
 
 if __name__ == "__main__":
 

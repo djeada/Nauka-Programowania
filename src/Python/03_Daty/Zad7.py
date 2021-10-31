@@ -38,10 +38,9 @@ if __name__ == "__main__":
         liczba_dni = 334 + dzien
     else:
         print("Niepoprawny miesiąc")
-    
+
     if rok % 4 == 0 and rok % 100 != 0 or rok % 400 == 0:
-      if miesiac > 2:
-        liczba_dni += 1
-  
+        if miesiac > 2:
+            liczba_dni += 1
+
     print(f"Od poczatku roku uplynelo: {liczba_dni}")
-    

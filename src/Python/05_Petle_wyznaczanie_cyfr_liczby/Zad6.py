@@ -36,7 +36,7 @@ if __name__ == "__main__":
             kopia //= 10
         if suma == liczba:
             print(i)
-    
+
     print("Liczby trzycyfrowe podzielne przez sumę cyfr pobranej liczby: ")
 
     suma = 0
@@ -48,8 +48,10 @@ if __name__ == "__main__":
     for i in range(100, 1000):
         if i % suma == 0:
             print(i)
-    
-    print("Liczby mniejsze od pobranej liczby, składające się wyłącznie z parzystych cyfr: ")
+
+    print(
+        "Liczby mniejsze od pobranej liczby, składające się wyłącznie z parzystych cyfr: "
+    )
 
     for i in range(1, liczba):
         flaga = True

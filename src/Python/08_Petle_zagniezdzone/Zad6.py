@@ -3,6 +3,7 @@ Napisz funkcję, która dla otrzymanej liczby wypisze
 literę Z, o wysokości równej otrzymanej liczbie.
 """
 
+
 def litera_z(wysokosc):
     for i in range(wysokosc):
         for j in range(wysokosc):
@@ -14,8 +15,8 @@ def litera_z(wysokosc):
 
 
 if __name__ == "__main__":
-    
+
     print("Podaj wysokość litery Z: ")
     wysokosc = int(input())
-    
+
     litera_z(wysokosc)

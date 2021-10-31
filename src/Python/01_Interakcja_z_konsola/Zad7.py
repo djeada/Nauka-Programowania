@@ -26,19 +26,35 @@ if __name__ == "__main__":
     print("podaj dlugosc przekatnych rombu:")
     a = int(input())
     b = int(input())
-    print("pole rombu o przekatnych ", a, " i ", b, " jest rowne ", a * b/2)
+    print("pole rombu o przekatnych ", a, " i ", b, " jest rowne ", a * b / 2)
 
     print("podaj promien kuli:")
     r = int(input())
-    print("objetosc kuli o promieniu ", r, " jest rowna ", 4/3 * 3.14 * r**3)
+    print("objetosc kuli o promieniu ", r, " jest rowna ", 4 / 3 * 3.14 * r ** 3)
 
     print("podaj promien podstawy i wysokosc stozka:")
     r = int(input())
     h = int(input())
-    print("objetosc stozka o podstawie ", r, " i wysokosci ", h, " jest rowna ", 1/3 * 3.14 * r**2 * h)
+    print(
+        "objetosc stozka o podstawie ",
+        r,
+        " i wysokosci ",
+        h,
+        " jest rowna ",
+        1 / 3 * 3.14 * r ** 2 * h,
+    )
 
     print("podaj dlugosc, szerokosc i wysokosc graniastoslupa:")
     a = int(input())
     b = int(input())
     h = int(input())
-    print("objetosc graniastoslupa o dlugosci ", a, " i szerokosci ", b, " i wysokosci ", h, " jest rowna ", a * b * h)
+    print(
+        "objetosc graniastoslupa o dlugosci ",
+        a,
+        " i szerokosci ",
+        b,
+        " i wysokosci ",
+        h,
+        " jest rowna ",
+        a * b * h,
+    )

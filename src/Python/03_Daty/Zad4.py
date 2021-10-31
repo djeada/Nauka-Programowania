@@ -1,8 +1,8 @@
-'''
+"""
 Dla pobranej liczby, wypisz dzień tygodnia odpowiadający tej liczbie. 
 Jeśli otrzymano liczbę niedodatnią, bądź dodatnią większą niż 7, 
 wypisz komuniat informujący użytkownika, że liczba jest niepoprawna.
-'''
+"""
 
 if __name__ == "__main__":
 
@@ -25,4 +25,3 @@ if __name__ == "__main__":
         print("Szostym dniem tygodnia jest sobota.")
     elif liczba == 7:
         print("Siodmym dniem tygodnia jest niedziela.")
-    

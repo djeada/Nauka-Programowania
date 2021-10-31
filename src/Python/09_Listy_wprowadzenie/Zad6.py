@@ -4,8 +4,9 @@ listy znajduje się w liście. Dla średniej nie będącej liczbą całkowitą,
 zaokrąglij wynik w dół.
 """
 
+
 def czy_srednia_w_liscie(lista):
-    
+
     if not lista:
         return False
 
@@ -16,6 +17,7 @@ def czy_srednia_w_liscie(lista):
     else:
         return round(srednia, 0) in lista
 
+
 def test_czy_srednia_w_liscie_dla_pustej_listy():
     assert not czy_srednia_w_liscie([])
     assert czy_srednia_w_liscie([1, 2, 3])
@@ -23,5 +25,5 @@ def test_czy_srednia_w_liscie_dla_pustej_listy():
 
 
 if __name__ == "__main__":
-    
+
     test_czy_srednia_w_liscie_dla_pustej_listy()

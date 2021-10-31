@@ -11,5 +11,5 @@ if __name__ == "__main__":
     while liczba > 0:
         cyfry += 1
         liczba //= 10
-    
+
     print("Liczba cyfr: ", cyfry)

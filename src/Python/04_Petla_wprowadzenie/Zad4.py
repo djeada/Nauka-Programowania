@@ -11,5 +11,5 @@ if __name__ == "__main__":
     suma = 0
     for i in range(1, liczba):
         suma += i
-    
+
     print("Suma wszystkich liczb mniejszych od podanej liczby wynosi: ", suma)

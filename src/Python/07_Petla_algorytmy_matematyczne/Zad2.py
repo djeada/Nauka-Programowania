@@ -3,11 +3,13 @@ Napisz funkcję, która dla otrzymanych dwóch liczb przy
 pomocy pętli obliczy ile wynosi a podniesione do b.
 """
 
+
 def potega(podstawa, wykladnik):
     wynik = 1
     for i in range(wykladnik):
         wynik *= podstawa
     return wynik
+
 
 def test_potega():
     assert potega(2, 3) == 8

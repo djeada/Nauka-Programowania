@@ -11,4 +11,3 @@ if __name__ == "__main__":
         print("Rok jest przestępny.")
     else:
         print("Rok nie jest przestępny.")
-    

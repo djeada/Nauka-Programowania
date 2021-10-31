@@ -4,6 +4,7 @@ import math
 Napisz funkcję, która dla otrzymanej liczby sprawdzi czy jest ona liczbą pierwszą.
 """
 
+
 def podziel(a, b):
 
     znak = 1
@@ -45,6 +46,7 @@ def test_podziel():
     assert podziel(-25, -5) == 5
     assert podziel(0, 5) == 0
     assert math.isnan(podziel(0, 0))
+
 
 if __name__ == "__main__":
 

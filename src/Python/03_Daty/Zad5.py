@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     print("Podaj numer miesiąca:")
     miesiac = int(input())
-    
+
     if miesiac == 1:
         print("Styczen ma 31 dni.")
     elif miesiac == 2:

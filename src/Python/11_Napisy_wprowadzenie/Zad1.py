@@ -2,8 +2,10 @@
 Zamień otrzymany napis, na otrzymany napis zapisany wspak.
 """
 
+
 def odwroc_v1(napis):
     return napis[::-1]
+
 
 def odwroc_v2(napis):
     nowy_napis = ""
@@ -20,6 +22,7 @@ def test_odwroc_v1():
     assert odwroc_v1("ala") == "ala"
     assert odwroc_v1("kot") == "tko"
 
+
 def test_odwroc_v2():
     assert odwroc_v2("ala ma kota") == "kota ma ala"
     assert odwroc_v2("") == ""
@@ -28,6 +31,6 @@ def test_odwroc_v2():
 
 
 if __name__ == "__main__":
-    
+
     test_odwroc_v1()
     test_odwroc_v2()

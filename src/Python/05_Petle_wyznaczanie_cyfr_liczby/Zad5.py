@@ -15,9 +15,8 @@ if __name__ == "__main__":
     while liczba_pomocnicza > 0:
         odwrocona = odwrocona * 10 + liczba_pomocnicza % 10
         liczba_pomocnicza //= 10
-    
+
     if liczba == odwrocona:
         print("Liczba jest palindromem.")
     else:
         print("Liczba nie jest palindromem.")
-

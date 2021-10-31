@@ -3,6 +3,7 @@ Otrzymujesz dwa napisy o równej długości. Oblicz odległość
 Hamminga między dwoma otrzymanymi napisami.
 """
 
+
 def odleglosc_hamminga(napis_a, napis_b):
     if len(napis_a) != len(napis_b):
         return -1
@@ -13,13 +14,15 @@ def odleglosc_hamminga(napis_a, napis_b):
             licznik += 1
     return licznik
 
+
 def test_odleglosc_hamminga():
 
-    assert odleglosc_hamminga('abc', 'abc') == 0
-    assert odleglosc_hamminga('abc', 'abd') == 1
-    assert odleglosc_hamminga('abc', 'abcd') == -1
-    assert odleglosc_hamminga('xxx', 'abc') == 3
+    assert odleglosc_hamminga("abc", "abc") == 0
+    assert odleglosc_hamminga("abc", "abd") == 1
+    assert odleglosc_hamminga("abc", "abcd") == -1
+    assert odleglosc_hamminga("xxx", "abc") == 3
+
 
 if __name__ == "__main__":
-    
+
     test_odleglosc_hamminga()

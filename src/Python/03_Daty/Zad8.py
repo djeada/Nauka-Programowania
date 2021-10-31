@@ -46,5 +46,3 @@ if __name__ == "__main__":
         print("Niedziela")
     else:
         print("Błędne dane.")
-
-    

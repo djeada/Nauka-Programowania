@@ -1,4 +1,4 @@
-'''
+"""
 Pokaż za pomocą operacji logicznych:
 
 a) Prawo wyłączonego środka.
@@ -7,7 +7,7 @@ c) Przemienność koniunkcji.
 d) Przemienność alternatywy.
 e) Pierwsze prawo de Morgana.
 f) Drugie prawo de Morgana.
-'''
+"""
 
 if __name__ == "__main__":
 

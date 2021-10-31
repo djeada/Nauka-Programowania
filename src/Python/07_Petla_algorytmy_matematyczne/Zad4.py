@@ -3,11 +3,13 @@ Napisz funkcję, która przy pomocy pętli obliczy silnię
 otrzymanej liczby.
 """
 
+
 def silnia(n):
     wynik = 1
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         wynik *= i
     return wynik
+
 
 def test_silnia():
     assert silnia(0) == 1
@@ -16,6 +18,7 @@ def test_silnia():
     assert silnia(3) == 6
     assert silnia(4) == 24
     assert silnia(5) == 120
+
 
 if __name__ == "__main__":
 

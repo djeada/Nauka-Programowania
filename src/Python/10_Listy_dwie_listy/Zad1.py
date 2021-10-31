@@ -10,15 +10,16 @@ def wypisz_na_przemian(lista_a, lista_b):
     min_dlugosc = min(len(lista_a), len(lista_b))
 
     for i in range(min_dlugosc):
-        print(f'{lista_a[i]}, {lista_b[i]}', end=", ")
-    
+        print(f"{lista_a[i]}, {lista_b[i]}", end=", ")
+
     for i in range(min_dlugosc, len(lista_a)):
-        print(f'{lista_a[i]}, 0', end=", ")
-    
+        print(f"{lista_a[i]}, 0", end=", ")
+
     for i in range(min_dlugosc, len(lista_b)):
-        print(f'0, {lista_b[i]}', end=", ")
+        print(f"0, {lista_b[i]}", end=", ")
 
     print()
+
 
 if __name__ == "__main__":
 
