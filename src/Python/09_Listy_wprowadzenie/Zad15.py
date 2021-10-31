@@ -1,54 +1,23 @@
 """
-Dla otrzymanej listy liczb naturalnych, znajdz elemnt 
-dominujacy. Element dominujacy to element, ktorego liczba 
-wystapien w liscie jest wieksza niz polowa dlugosci listy. 
-Jesli lista nie ma elementu dominujacego, zwroc -1.
+Dla otrzymanej listy liczb naturalnych, znajdź element dominujący. 
+Element dominujący to element, którego liczba wystąpień w liście 
+jest większa niż połowa długości listy. Jeśli lista nie ma 
+elementu dominującego, zwróć -1.
 """
 
-# Wersja 1
-# bez uzycia slownika
-def element_dominujacy_v1(lista):
-
-    for i in range(len(lista) // 2 + 1):
-        licznik = 1
-        for j in range(i + 1, len(lista)):
-            if lista[j] == lista[i]:
-                licznik += 1
-
-        if licznik > len(lista) // 2:
-            return lista[i]
+def element_dominujacy(lista):
+    for element in lista:
+        if lista.count(element) > len(lista) / 2:
+            return element
 
     return -1
 
-
-# Wersja 2
-# z uzyciem slownika
-def element_dominujacy_v2(lista):
-
-    histo = {}
-
-    for x in lista:
-        assert type(x) == int
-
-        if x in histo:
-            histo[x] += 1
-        else:
-            histo[x] = 1
-
-        if histo[x] > len(lista) // 2:
-            return x
-
-    return -1
-
+def test_element_dominujacy():
+    assert element_dominujacy([]) == -1
+    assert element_dominujacy([1]) == 1
+    assert element_dominujacy([4, 7, 4, 4, 2]) == 4
+    assert element_dominujacy([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == -1
 
 if __name__ == "__main__":
-    # Testy Poprawnosci
-    lista = [4, 7, 4, 4, 2]
-    wynik = 4
-    assert element_dominujacy_v1(lista) == wynik
-    assert element_dominujacy_v2(lista) == wynik
-
-    lista = [0, 0, 2, 1, 9]
-    wynik = -1
-    assert element_dominujacy_v1(lista) == wynik
-    assert element_dominujacy_v2(lista) == wynik
+    
+    test_element_dominujacy()

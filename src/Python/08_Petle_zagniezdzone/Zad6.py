@@ -1,26 +1,21 @@
 """
-Wypisz za pomoca petli, litere Z zbudowana z literek 'x'.
-
-Przyklad dla wysokosci 5:
-*****
-   * 
-  *  
- *   
-*****
+Napisz funkcję, która dla otrzymanej liczby wypisze 
+literę Z, o wysokości równej otrzymanej liczbie.
 """
 
-# Wersja 1
-def wypisz_zv1(wysokosc):
-    for j in range(wysokosc):
-        for i in range(wysokosc):
-            if j == 0 or j == wysokosc - 1:
-                print("*", end="")
-            elif i == wysokosc - j - 1:
-                print("*", end="")
+def litera_z(wysokosc):
+    for i in range(wysokosc):
+        for j in range(wysokosc):
+            if i == 0 or i == wysokosc - 1 or j == wysokosc - i - 1:
+                print("Z", end="")
             else:
                 print(" ", end="")
-        print("")
+        print()
 
 
-for i in range(1, 6):
-    wypisz_zv1(i)
+if __name__ == "__main__":
+    
+    print("Podaj wysokość litery Z: ")
+    wysokosc = int(input())
+    
+    litera_z(wysokosc)

@@ -1,36 +1,28 @@
+import math
+
 """
-Usun duplikaty z listy.
+Otrzymujesz listę liczb naturalnych. Usuń z niej 
+wszystkie duplikaty. Tylko pierwsze wystąpienie danej 
+liczby powinno zostać zachowane.
 """
 
-# Wersja 1
 def usun_duplikaty_v1(lista):
-    pom = []
+    lista_nowa = []
+    for i in lista:
+        if i not in lista_nowa:
+            lista_nowa.append(i)
+    return lista_nowa
 
-    for x in lista:
-        if x not in pom:
-            pom.append(x)
-
-    return pom
-
-
-# Wersja 2
 def usun_duplikaty_v2(lista):
     return list(set(lista))
 
+def test_usun_duplikaty_v1():
+    assert usun_duplikaty_v1([]) == []
+    assert usun_duplikaty_v1([1,1,1, 1, 1]) == [1]
+    assert usun_duplikaty_v1([3, 5, 3, 3, 2) == [3, 5, 2]
+    
 
-# Wersja 3
-def usun_duplikaty_v3(lista):
-    wynik = lista
+if __name__ == "__main__":
 
-    [wynik.remove(x) for x in wynik if wynik.count(x) > 1]
-
-    return wynik
-
-
-# Testy Poprawnosci
-lista = [3, 5, 3, 3, 2]
-wynik = [3, 5, 2]
-
-assert sorted(usun_duplikaty_v1(lista)) == sorted(wynik)
-assert sorted(usun_duplikaty_v2(lista)) == sorted(wynik)
-assert sorted(usun_duplikaty_v3(lista)) == sorted(wynik)
+    test_usun_duplikaty_v1()
+    
