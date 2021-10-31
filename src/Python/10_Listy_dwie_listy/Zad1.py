@@ -1,43 +1,37 @@
 """
-Wypisz na przemian elemnty pierwszej i drugiej listy. 
-Warunek: listy majac byc rownej dlugosci.
-Wynik: jedna lista skladajaca sie z elementow obu otrzymanych list.
+Dla otrzymanych dwóch list wypisuj na przemian elementy pierwszej 
+i drugiej listy. Jeśli listy nie są równej długości po wyczerpaniu 
+elementów krótszej listy, wypisuj tylko elementy dłuższej listy.
 """
 
-# Wersja 1
-def polacz_listy_v1(list_a, lista_b):
 
-    if len(list_a) != len(lista_b):
-        return False
+def wypisz_na_przemian(lista_a, lista_b):
 
-    wynik = []
+    min_dlugosc = min(len(lista_a), len(lista_b))
 
-    for i in range(len(lista_a)):
-        wynik.append(lista_a[i])
-        wynik.append(lista_b[i])
+    for i in range(min_dlugosc):
+        print(f'{lista_a[i]}, {lista_b[i]}', end=", ")
+    
+    for i in range(min_dlugosc, len(lista_a)):
+        print(f'{lista_a[i]}, 0', end=", ")
+    
+    for i in range(min_dlugosc, len(lista_b)):
+        print(f'0, {lista_b[i]}', end=", ")
 
-    return wynik
+    print()
 
+if __name__ == "__main__":
 
-# Wersja 2
-def polacz_listy_v2(list_a, lista_b):
+    print("Podaj dlugosc pierwszej listy")
+    dlugosc_a = int(input())
 
-    if len(list_a) != len(lista_b):
-        return False
+    print(f"Podaj {dlugosc_a} elementow:")
+    lista_a = [int(input()) for i in range(dlugosc_a)]
 
-    wynik = []
+    print("Podaj dlugosc drugiej listy")
+    dlugosc_b = int(input())
 
-    for a, b in zip(lista_a, lista_b):
-        wynik.append(a)
-        wynik.append(b)
+    print(f"Podaj {dlugosc_b} elementow:")
+    lista_b = [int(input()) for i in range(dlugosc_b)]
 
-    return wynik
-
-
-# Testy Poprawnosci
-lista_a = ["a", "c", "e"]
-lista_b = ["b", "d", "f"]
-wynik = ["a", "b", "c", "d", "e", "f"]
-
-assert polacz_listy_v1(lista_a, lista_b) == wynik
-assert polacz_listy_v2(lista_a, lista_b) == wynik
+    wypisz_na_przemian(lista_a, lista_b)

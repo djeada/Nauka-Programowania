@@ -1,19 +1,16 @@
 """
-Zamien liste na napis.
+Otrzymujesz listę liczb. Zamień listę na napis.
 """
 
-# Wersja 1
-def zamien_liste_na_napis_v1(lista):
-    return "".join(str(x) for x in lista)
+def znamien_na_napis(lista):
+    napis = ''
+    for liczba in lista:
+        napis += str(liczba)
+    return napis
 
+def test_znamien_na_napis():
+    assert znamien_na_napis([1, 2, 3, 4, 5]) == '12345'
 
-# Testy Poprawnosci
-lista = [2, 3, 10]
-napis = "2310"
-
-assert zamien_liste_na_napis_v1(lista) == napis
-
-lista = ["ab", "hu", "czo"]
-napis = "abhuczo"
-
-assert zamien_liste_na_napis_v1(lista) == napis
+if __name__ == "__main__":
+    
+    test_znamien_na_napis()

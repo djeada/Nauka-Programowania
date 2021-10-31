@@ -1,33 +1,22 @@
 """
-Znajdz czesc wspolna dwoch list.
+Otrzymujesz dwie listy liczb zmiennoprzecinkowych, pierwsza 
+reprezentuje wagi, a druga wartości. Oblicz średnią ważoną wartości.
 """
 
-# Wersja 1
-def czesc_wspolna_v1(lista_a, lista_b):
-    wynik = []
-    for x in lista_a:
-        if x in lista_b:
-            wynik.append(x)
-    return wynik
+def srednia_wazona(wartosci, wagi):
 
+    if len(wartosci) != len(wagi):
+        raise ValueError("Listy roznej dlugosci")
 
-# Wersja 2
-# Z uzyciem zbiorow, tylko dla list z unikalnymi elementami!
-def czesc_wspolna_v2(lista_a, lista_b):
-    return set(lista_a) - (set(lista_a) - set(lista_b))
+    suma =0 
+    for waga, wartosc in zip(wagi, wartosci):
+        suma += waga * wartosc
 
+    return suma / sum(wartosci)
 
-# Testy Poprawnosci
-lista_a = [3, 6, 2, 7, 9]
-lista_b = [4, 2, 3, 5, 6]
-wynik = [3, 6, 2]
+def test_srednia_wazona():
+    assert srednia_wazona([1, 2, 3], [1, 1, 1]) == 1
+    assert srednia_wazona([0, -23, -5, 2, -3, 4, 9], [1, 2, 3, 4, 5, 6, 7]) == -1.1875
 
-assert sorted(czesc_wspolna_v1(lista_a, lista_b)) == sorted(wynik)
-assert sorted(czesc_wspolna_v2(lista_a, lista_b)) == sorted(wynik)
-
-lista_a = [61, 96, 25, 46, 84, 29, 48, 87, 53, 92, 71]
-lista_b = [71, 9, 25, 96, 74, 39, 13, 84]
-wynik = [25, 71, 84, 96]
-
-assert sorted(czesc_wspolna_v1(lista_a, lista_b)) == sorted(wynik)
-assert sorted(czesc_wspolna_v2(lista_a, lista_b)) == sorted(wynik)
+if __name__ == "__main__":
+    test_srednia_wazona()

@@ -1,29 +1,33 @@
 """
-Odwroc napis.
+Zamień otrzymany napis, na otrzymany napis zapisany wspak.
 """
 
-# Wersja 1
-def odwroc_napis_v1(napis):
+def odwroc_v1(napis):
     return napis[::-1]
 
-
-# Wersja 2
-def odwroc_napis_v2(napis):
-    if len(napis) <= 1:
-        return napis
-
-    return odwroc_napis_v2(napis[1:]) + napis[0]
-
-
-# Wersja 3
-def odwroc_napis_v3(napis):
-    return "".join(reversed(napis))
+def odwroc_v2(napis):
+    nowy_napis = ""
+    i = len(napis) - 1
+    while i >= 0:
+        nowy_napis += napis[i]
+        i -= 1
+    return nowy_napis
 
 
-# Testy Poprawnosci
-napis = "abc"
-wynik = "cba"
+def test_odwroc_v1():
+    assert odwroc_v1("ala ma kota") == "kota ma ala"
+    assert odwroc_v1("") == ""
+    assert odwroc_v1("ala") == "ala"
+    assert odwroc_v1("kot") == "tko"
 
-assert odwroc_napis_v1(napis) == wynik
-assert odwroc_napis_v2(napis) == wynik
-assert odwroc_napis_v3(napis) == wynik
+def test_odwroc_v2():
+    assert odwroc_v2("ala ma kota") == "kota ma ala"
+    assert odwroc_v2("") == ""
+    assert odwroc_v2("ala") == "ala"
+    assert odwroc_v2("kot") == "tko"
+
+
+if __name__ == "__main__":
+    
+    test_odwroc_v1()
+    test_odwroc_v2()
