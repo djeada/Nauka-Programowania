@@ -2,8 +2,9 @@
 #include <cassert>
 #include <string>
 
-// Otrzymujesz napis. Zamien wszystkie
-// male litery na wielkie.
+/*
+Otrzymujesz napis. Zamień wszystkie małe litery na wielkie.
+*/
 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)

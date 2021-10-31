@@ -3,8 +3,9 @@
 #include <string>
 #include <vector>
 
-// Otrzymujesz liste liczb.
-// Zamien liste na napis.
+/*
+Otrzymujesz listę liczb. Zamień listę na napis.
+*/
 
 std::string liczby(const std::vector<int> &lista) {
   std::string wynik = "";

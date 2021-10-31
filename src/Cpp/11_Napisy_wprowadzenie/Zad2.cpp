@@ -2,8 +2,9 @@
 #include <cassert>
 #include <string>
 
-// Dla otrzymanego napisu oraz znaku,
-// znajdz liczbe wystapien znaku w napisie.
+/*
+Dla otrzymanego napisu: oraz znaku, znajdź liczbę wystąpień znaku w napisie.
+*/
 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)

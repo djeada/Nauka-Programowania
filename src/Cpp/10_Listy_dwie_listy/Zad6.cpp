@@ -3,8 +3,10 @@
 #include <unordered_set>
 #include <vector>
 
-// Otrzymujesz dwie listy. Znajdz elementy wystepujace
-// zarowno w pierwszej jak i w drugiej liscie.
+/*
+Otrzymujesz dwie listy liczb całkowitych. Znajdź elementy występujące 
+zarówno w pierwszej jak i w drugiej liście.
+*/
 
 // Zlozonosc obliczeniowa O(n^2)
 // Zlozonosc pamieciowa O(n)
@@ -49,7 +51,7 @@ void test1() {
 }
 
 void test2() {
-  td::vector<int> listaA{3, 6, 2, 7, 9};
+  std::vector<int> listaA{3, 6, 2, 7, 9};
   std::vector<int> listaB{4, 2, 3, 5, 6};
   std::vector<int> wynik{3, 6, 2};
   assert(wektoryRowne(czescWspolnaV2(listaA, listaB), wynik));

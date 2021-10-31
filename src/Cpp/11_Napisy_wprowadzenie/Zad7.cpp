@@ -2,9 +2,11 @@
 #include <cassert>
 #include <string>
 
-// Otrzymujesz napis. Zamien wszystkie znaki napisu
-// na odpowiadajace im numery w tablicy ASCII. Podmien
-// otrzymany napis na uzyskane numery oddzielone przecinkami.
+/*
+Otrzymujesz napis. Zamień wszystkie znaki napisu na odpowiadające 
+im numery w tablicy ASCII. Podmień otrzymany napis na napis 
+składający się z otrzymanych numerów oddzielonych przecinkami.
+*/
 
 void zamienV1(std::string &napis) {
 

@@ -3,12 +3,14 @@
 #include <string>
 #include <vector>
 
-// Otrzymujesz zdanie. Znajdz znaki znajdujace
-// sie na pozycjach bedacych liczbami pierwszymi.
+/*
+Otrzymujesz napis. Znajdź znaki znajdujące się na 
+pozycjach będących liczbami pierwszymi.
+*/
 
 bool czyPierwsza(int n) {
 
-  if (!(n % 2) && n != 2)
+  if (!(n % 2) && n < 2)
     return false;
 
   for (int i = 3; i <= sqrt((double)n); i += 2) {
@@ -33,7 +35,7 @@ std::vector<char> znaki(const std::string &napis) {
 
 void test1() {
   std::string napis = "Kaczka lubi wiosne.";
-  std::vector<char> wynik{'a', 'c', 'z', 'a', 'l', ' ', 'i', 'e'};
+  std::vector<char> wynik{'c', 'z', 'a', 'l', ' ', 'i', 'e'};
   assert(znaki(napis) == wynik);
 }
 

@@ -2,22 +2,10 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie listy liczb reprezentujacych wspolrzedne dwoch wektorow. Zaimplementuj:
-a) mnozenie sklarne.
-b) mnozenie wektorowe (zdefiniowane jedynie dla wektorow 3-wymiarowej przestrzeni euklidesowej).
+Otrzymujesz dwie listy liczb całkowitych reprezentujące dwa wektory. 
+Zaimplementuj mnożenie wektorowe (zdefiniowane jedynie dla wektorów 
+3-wymiarowej przestrzeni euklidesowej).
 */
-
-int mnozenieSkalarne(std::vector<int> &listaA, std::vector<int> &listaB) {
-
-  assert(listaA.size() == listaB.size());
-
-  int wynik = 0;
-
-  for (unsigned int i = 0; i < listaA.size(); i++)
-    wynik += listaA[i] * listaB[i];
-
-  return wynik;
-}
 
 std::vector<int> mnozenieWektorowe(std::vector<int> &listaA,
                                    std::vector<int> &listaB) {
@@ -32,15 +20,7 @@ std::vector<int> mnozenieWektorowe(std::vector<int> &listaA,
   return wynik;
 }
 
-void test1() {
-  std::vector<int> listaA{3, -5, 4};
-  std::vector<int> listaB{2, 6, 5};
-
-  int iloczynSkalar = -4;
-  assert(mnozenieSkalarne(listaA, listaB) == iloczynSkalar);
-}
-
-void test2() {
+void testMnozenieWektorowe() {
   std::vector<int> listaA{3, -5, 4};
   std::vector<int> listaB{2, 6, 5};
 
@@ -50,8 +30,7 @@ void test2() {
 
 int main() {
 
-  test1();
-  test2();
+  testMnozenieWektorowe();
 
   return 0;
 }

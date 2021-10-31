@@ -2,8 +2,11 @@
 #include <numeric>
 #include <vector>
 
-// Otrzymujesz dwie listy: wagi oraz wartosci.
-// Znajdz srednia wazona wartosci.
+/*
+Otrzymujesz dwie listy liczb zmiennoprzecinkowych, pierwsza 
+reprezentuje wagi, a druga wartości. Oblicz średnią ważoną wartości.
+*/
+
 double sredniaWazona(std::vector<double> &wagi, std::vector<double> &wartosci) {
 
   assert(wagi.size() == wartosci.size());

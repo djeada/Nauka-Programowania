@@ -3,9 +3,9 @@
 #include <string>
 
 /*
-Otrzymujesz napis reprezuntajacy zdanie.
-Znajdz srednia dlugosc slow w zdaniu.
-Znaki interpunkcyjne nie sa liczone jako slowa.
+Otrzymujesz napis reprezentujący zdanie. 
+Oblicz średnią długość słów w zdaniu. 
+Znaki interpunkcyjne nie są liczone jako słowa. 
 */
 
 void wyczysc(std::string &napis) {

@@ -2,7 +2,9 @@
 #include <cassert>
 #include <string>
 
-// Usun spacje ze zdania.
+/*
+Otrzymujesz napis reprezentujący zdanie. Usuń spacje ze zdania.
+*/
 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(n)

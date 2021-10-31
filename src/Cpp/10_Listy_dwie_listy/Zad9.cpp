@@ -2,8 +2,10 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz dwie listy. Usun z pierwszej listy te
-// elementy, ktore wystepuja rowniez w drugiej liscie.
+/*
+Otrzymujesz dwie listy liczb całkowitych. Usuń z pierwszej 
+listy te elementy, które występują również w drugiej liście.
+*/
 
 // Zlozonosc obliczeniowa O(n^2)
 // Zlozonosc pamieciowa O(n)

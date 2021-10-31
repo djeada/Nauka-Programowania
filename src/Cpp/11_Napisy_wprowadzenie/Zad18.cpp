@@ -4,7 +4,8 @@
 #include <vector>
 
 /*
-Odwroc napisy w zdaniu.
+Otrzymujesz napis reprezentujący zdanie. Zamień słowa zdania, na te 
+same napisy zapisane wspak. Znaki interpunkcyjne nie są liczone jako słowa. 
 */
 
 // Zlozonosc Czasowa O(n)

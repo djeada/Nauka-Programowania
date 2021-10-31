@@ -1,7 +1,11 @@
 #include <iostream>
 
-// Otrzymujesz napis oraz liczbe k.
-// a) wypisz poziomo co k-ty znak. Znaki powinny byc oddzielone spacjami.
+/*
+Otrzymujesz napis oraz liczbę k. 
+a) Wypisz poziomo co k-ty znak. Znaki powinny być oddzielone spacjami.
+b) Wypisz pionowo co k-ty znak. Znaki powinny być oddzielone enterami.
+*/
+
 void wypiszPoziomo(const std::string &napis, int k) {
 
   for (unsigned int i = 0; i < napis.size(); i += k)
@@ -10,7 +14,6 @@ void wypiszPoziomo(const std::string &napis, int k) {
   std::cout << std::endl;
 }
 
-// b) wypisz pionowo co k-ty znak. Znaki powinny byc oddzielone enterami.
 void wypiszPionowo(const std::string &napis, int k) {
 
   for (unsigned int i = 0; i < napis.size(); i += k)

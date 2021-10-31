@@ -2,8 +2,10 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz dwie posortowane listy rownej
-// dlugosci. Znajdz ich mediane.
+/*
+Otrzymujesz dwie posortowane listy liczb całkowitych równej długości. 
+Znajdź ich medianę.
+*/
 
 // Zlozonosc obliczeniowa O(m + n)
 // Zlozonosc pamieciowa O(1)

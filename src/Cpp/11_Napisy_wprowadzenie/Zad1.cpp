@@ -2,7 +2,9 @@
 #include <cassert>
 #include <string>
 
-// Odwroc napis.
+/*
+Zamień otrzymany napis, na otrzymany napis zapisany wspak.
+*/
 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)

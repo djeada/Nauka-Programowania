@@ -2,8 +2,9 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz dwie posortowane listy.
-// Polacz je w posortowana liste.
+/*
+Otrzymujesz dwie posortowane listy. Połącz je w posortowaną listę.
+*/
 
 // Zlozonosc obliczeniowa O(n)
 // Zlozonosc pamieciowa O(n)

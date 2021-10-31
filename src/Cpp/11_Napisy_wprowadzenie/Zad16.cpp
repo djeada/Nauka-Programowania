@@ -3,9 +3,8 @@
 #include <string>
 
 /*
-Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej
-dlugosci, zdefiniowana jako liczba pozycji na ktorych napisy maja rozne
-znaki.
+Otrzymujesz dwa napisy o równej długości. Oblicz odległość 
+Hamminga między dwoma otrzymanymi napisami.
 */
 
 int odlegloscHammingaV1(const std::string &napisA, const std::string &napisB) {

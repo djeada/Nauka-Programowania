@@ -2,8 +2,10 @@
 #include <cassert>
 #include <string>
 
-// Otrzymujesz liczbe n. Zwroc napis skladajacy
-// sie z liczb naturalnych od 1 do n.
+/*
+Otrzymujesz liczbę naturalną n. Zwróć napis składający 
+się z liczb naturalnych od 1 do n.
+*/
 
 std::string liczby(int n) {
   std::string wynik = "";

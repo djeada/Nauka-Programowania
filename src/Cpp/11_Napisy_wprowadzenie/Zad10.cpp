@@ -3,11 +3,15 @@
 #include <string>
 #include <vector>
 
-// Otrzymujesz napis reprezuntajacy zdanie.
-// Znajdz najdluzsze oraz najkrotsze slowo w zdaniu.
-// Jesli wiecej niz jedno slowo ma ekstremalna dlugosc,
-// zwroc te, ktore wystepuje w zdaniu jako pierwsze.
-// Znaki interpunkcyjne nie sa liczone jako slowa.
+/*
+Otrzymujesz napis reprezentujący zdanie. Znajdź: 
+a) Najdłuższe słowo w zdaniu.
+b) Najkrótsze słowo w zdaniu. 
+
+Jeśli więcej niż jedno słowo ma ekstremalną długość, zwróć to 
+słowo spośród nich, które występuje w zdaniu jako pierwsze. 
+Znaki interpunkcyjne nie są liczone jako słowa. 
+*/
 
 void wyczysc(std::string &napis) {
   auto it = napis.begin();

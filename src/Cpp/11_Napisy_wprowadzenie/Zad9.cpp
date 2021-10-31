@@ -3,10 +3,11 @@
 #include <sstream>
 #include <vector>
 
-// Otrzymujesz rekord z bazy danych reprezentujacy dane pracownika.
-// Sa to kolejno: imie, nazwisko, miejsce urodzenia, stanowisko i zarobki.
-// Informacje rozdzielone sa srednikami. Zapisz je w osobnych zmiennych
-// i wypisz wraz z komunikatem.
+/*
+Otrzymujesz rekord z bazy danych reprezentujący dane pracownika. Są to kolejno: 
+imię, nazwisko, miejsce urodzenia, stanowisko i zarobki. Informacje rozdzielone 
+są średnikami. Zapisz je w osobnych zmiennych i wypisz wraz z komunikatem.
+*/
 
 std::vector<std::string> dane(std::string &napis) {
 

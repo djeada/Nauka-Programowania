@@ -3,8 +3,10 @@
 #include <unordered_set>
 #include <vector>
 
-// Otrzymujesz dwie listy. Znajdz elementy
-// ktore nie sa czescia wspolna obu list.
+/*
+Otrzymujesz dwie listy liczb całkowitych. Znajdź elementy, 
+które nie są częścią wspólną obu list.
+*/
 
 // Zlozonosc obliczeniowa O(n^2)
 // Zlozonosc pamieciowa O(n)

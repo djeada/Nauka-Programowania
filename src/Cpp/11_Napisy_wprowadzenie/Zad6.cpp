@@ -2,7 +2,10 @@
 #include <cassert>
 #include <string>
 
-// Otrzymujesz napis. Zamien litery a na znaki zapytania.
+/*
+Otrzymujesz napis. Zamień litery a na znaki zapytania.
+*/
+
 void zamienV1(std::string &napis) {
 
   for (auto &znak : napis) {

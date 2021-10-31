@@ -2,8 +2,9 @@
 #include <cassert>
 #include <string>
 
-// Policz z ilu slow sklada sie zdanie.
-// Znaki interpunkcyjne nie sa liczone jako slowa.
+/*
+Policz z ilu słów składa się zdanie. Znaki interpunkcyjne nie są liczone jako słowa.
+*/
 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)
