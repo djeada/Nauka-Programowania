@@ -4,9 +4,9 @@
 #include <vector>
 
 /*
-Dla otrzymanej listy liczb naturalnych, znajdź element dominujący. 
-Element dominujący to element, którego liczba wystąpień w liście 
-jest większa niż połowa długości listy. Jeśli lista nie ma 
+Dla otrzymanej listy liczb naturalnych, znajdź element dominujący.
+Element dominujący to element, którego liczba wystąpień w liście
+jest większa niż połowa długości listy. Jeśli lista nie ma
 elementu dominującego, zwróć -1.
 */
 

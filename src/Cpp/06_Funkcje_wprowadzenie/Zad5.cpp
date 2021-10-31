@@ -1,9 +1,11 @@
 #include <cassert>
 
 /*
-Napisz funkcję, która dla otrzymanych dwóch liczb pierwszaLiczba oraz drugaLiczba zamieni wartości miejscami. 
-Po wykonaniu funkcji zmienna pierwszaLiczba, powinna przechowywać dawną wartość zmiennej drugaLiczba, pierwszaLiczba 
-zmienna drugaLiczba powinna przechowywać dawną wartość zmiennej pierwszaLiczba.
+Napisz funkcję, która dla otrzymanych dwóch liczb pierwszaLiczba oraz
+drugaLiczba zamieni wartości miejscami. Po wykonaniu funkcji zmienna
+pierwszaLiczba, powinna przechowywać dawną wartość zmiennej drugaLiczba,
+pierwszaLiczba zmienna drugaLiczba powinna przechowywać dawną wartość zmiennej
+pierwszaLiczba.
 */
 
 void swap(int &pierwszaLiczba, int &drugaLiczba) {
@@ -23,6 +25,6 @@ void testSwap() {
 int main() {
 
   testSwap();
-  
+
   return 0;
 }

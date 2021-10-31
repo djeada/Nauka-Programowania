@@ -4,8 +4,8 @@
 #include <vector>
 
 /*
-Dla otrzymanej listy, składającej się z nieuporządkowanych 
-kolejnych (za wyjątkiem jednego) wyrazów ciągu arytmetycznego, 
+Dla otrzymanej listy, składającej się z nieuporządkowanych
+kolejnych (za wyjątkiem jednego) wyrazów ciągu arytmetycznego,
 znajdź brakujący element.
 */
 

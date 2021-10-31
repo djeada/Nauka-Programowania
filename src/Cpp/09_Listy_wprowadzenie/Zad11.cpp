@@ -2,9 +2,9 @@
 #include <vector>
 
 /*
-Otrzymujesz listę składającą się wyłącznie z liter A i B. 
-Litera A reprezentuje samochód jadący na wschód, a litera B 
-jadący na zachód. Samochody jadące w przeciwną stronę mijają się. 
+Otrzymujesz listę składającą się wyłącznie z liter A i B.
+Litera A reprezentuje samochód jadący na wschód, a litera B
+jadący na zachód. Samochody jadące w przeciwną stronę mijają się.
 Policz mijające się samochody.
 */
 

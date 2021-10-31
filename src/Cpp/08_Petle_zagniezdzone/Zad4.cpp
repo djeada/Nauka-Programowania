@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby N, 
-wypisze N pierwszych wierszy i kolumn tabliczki 
+Napisz funkcję, która dla otrzymanej liczby N,
+wypisze N pierwszych wierszy i kolumn tabliczki
 mnożenia.
 */
 
@@ -13,7 +13,6 @@ void tabliczkaMnozenia(int n) {
       std::cout << y * x << " ";
     std::cout << std::endl;
   }
-
 }
 
 int main() {

@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby n, poprosi użytkownika 
+Napisz funkcję, która dla otrzymanej liczby n, poprosi użytkownika
 o podanie n liczb i zwróci ich średnią arytmetyczną.
 */
 

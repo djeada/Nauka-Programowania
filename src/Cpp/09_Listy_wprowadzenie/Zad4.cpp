@@ -4,7 +4,7 @@
 #include <vector>
 
 /*
-Otrzymujesz listę. Znajdź największy i najmniejszy 
+Otrzymujesz listę. Znajdź największy i najmniejszy
 element tej listy. Zwróć znalezione wartości.
 */
 

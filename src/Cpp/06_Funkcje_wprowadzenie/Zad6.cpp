@@ -16,14 +16,14 @@ int sumaCyfr(int liczba) {
   return suma;
 }
 
-void testSumaCyfr(){
+void testSumaCyfr() {
   assert(sumaCyfr(123) == 6);
   assert(sumaCyfr(0) == 0);
   assert(sumaCyfr(1) == 1);
 }
 
 int main() {
-  
+
   testSumaCyfr();
 
   return 0;

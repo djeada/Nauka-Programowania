@@ -3,7 +3,7 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie posortowane listy liczb całkowitych równej długości. 
+Otrzymujesz dwie posortowane listy liczb całkowitych równej długości.
 Znajdź ich medianę.
 */
 

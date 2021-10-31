@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Dla pobranej liczby, sprawdź czy jest ona palindromem. 
-To znaczy, sprawdź czy liczba nie zmienia się po zapisaniu 
+Dla pobranej liczby, sprawdź czy jest ona palindromem.
+To znaczy, sprawdź czy liczba nie zmienia się po zapisaniu
 jej cyfr w odwrotnej kolejności.
 */
 

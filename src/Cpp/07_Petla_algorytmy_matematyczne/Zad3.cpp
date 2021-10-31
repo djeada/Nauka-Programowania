@@ -1,7 +1,7 @@
 #include <cassert>
 
 /*
-Napisz funkcję, która dla otrzymanych dwóch liczb, przy pomocy 
+Napisz funkcję, która dla otrzymanych dwóch liczb, przy pomocy
 dodawania bądź odejmowania oraz pętli obliczy:
 
 a) Iloczyn otrzymanych liczb.
@@ -12,14 +12,14 @@ int iloczyn(int mnozna, int mnoznik) {
 
   int znak = 1;
 
-    if (mnozna < 0) {
-      znak = -1;
-        mnozna = -mnozna;
-}
-    if (mnoznik < 0) {
-      znak = -1;
-        mnoznik = -mnoznik;
-}
+  if (mnozna < 0) {
+    znak = -1;
+    mnozna = -mnozna;
+  }
+  if (mnoznik < 0) {
+    znak = -1;
+    mnoznik = -mnoznik;
+  }
   int wynik = 0;
   for (int i = 0; i < mnoznik; i++)
     wynik += mnozna;
@@ -31,13 +31,13 @@ int iloraz(int dzielna, int dzielnik) {
   int znak = 1;
 
   if (dzielna < 0) {
-      znak = -1;
-      dzielna = -dzielna;
+    znak = -1;
+    dzielna = -dzielna;
   }
 
-  if (dzielnik < 0){
-      znak *= -1;
-      dzielnik = -dzielnik;
+  if (dzielnik < 0) {
+    znak *= -1;
+    dzielnik = -dzielnik;
   }
 
   int wynik = 0;

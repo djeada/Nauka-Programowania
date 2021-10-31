@@ -3,7 +3,7 @@
 #include <vector>
 
 /*
-Dla otrzymanej listy oraz klucza, usuń pierwsze 
+Dla otrzymanej listy oraz klucza, usuń pierwsze
 wystąpienie klucza w liście.
 */
 

@@ -4,8 +4,8 @@
 #include <vector>
 
 /*
-Otrzymujesz listę liczb naturalnych. Usuń z niej 
-wszystkie duplikaty. Tylko pierwsze wystąpienie danej 
+Otrzymujesz listę liczb naturalnych. Usuń z niej
+wszystkie duplikaty. Tylko pierwsze wystąpienie danej
 liczby powinno zostać zachowane.
 */
 

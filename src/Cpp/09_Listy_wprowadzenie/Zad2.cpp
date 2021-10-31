@@ -8,7 +8,7 @@ a) Dodaj 1 do każdego elementu.
 b) Pomnóż każdy element przez jego indeks.
 c) Zastąp wszystkie elementy wartością pierwszego elementu listy.
 
-Dla każdego podpunktu wypisz zmodyfikowaną listę. Elementy listy 
+Dla każdego podpunktu wypisz zmodyfikowaną listę. Elementy listy
 powinny być oddzielone przecinkami i wypisane w jednym wierszu.
 */
 

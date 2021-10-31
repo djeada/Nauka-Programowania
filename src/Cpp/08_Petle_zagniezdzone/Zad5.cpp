@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby wypisze literę X, 
+Napisz funkcję, która dla otrzymanej liczby wypisze literę X,
 o wysokości równej otrzymanej liczbie.
 */
 

@@ -2,7 +2,7 @@
 #include <iostream>
 
 /*
-Otrzymujesz cenę i wymiary płytki oraz wymiary podłogi. 
+Otrzymujesz cenę i wymiary płytki oraz wymiary podłogi.
 Oblicz ile będzie wynosiła cena podłogi o podanych wymiarach.
 W zadaniu przyjmujemy, że podłoga jest prostokątem, a płytka kwadratem.
 */

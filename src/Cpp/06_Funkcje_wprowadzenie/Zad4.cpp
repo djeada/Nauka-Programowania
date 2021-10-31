@@ -10,9 +10,13 @@ c) Dla otrzymanych trzech liczb, zwraca najmniejszą.
 d) Dla otrzymanych trzech liczb, zwraca największą.
 */
 
-int min2(int pierwszaLiczba, int drugaLiczba) { return pierwszaLiczba < drugaLiczba ? pierwszaLiczba : drugaLiczba; }
+int min2(int pierwszaLiczba, int drugaLiczba) {
+  return pierwszaLiczba < drugaLiczba ? pierwszaLiczba : drugaLiczba;
+}
 
-int maks2(int pierwszaLiczba, int drugaLiczba) { return pierwszaLiczba > drugaLiczba ? pierwszaLiczba : drugaLiczba; }
+int maks2(int pierwszaLiczba, int drugaLiczba) {
+  return pierwszaLiczba > drugaLiczba ? pierwszaLiczba : drugaLiczba;
+}
 
 int min3(int pierwszaLiczba, int drugaLiczba, int trzeciaLiczba) {
   int minAB = pierwszaLiczba < drugaLiczba ? pierwszaLiczba : drugaLiczba;

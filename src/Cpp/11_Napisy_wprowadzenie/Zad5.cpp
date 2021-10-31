@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Otrzymujesz napis oraz liczbę k. 
+Otrzymujesz napis oraz liczbę k.
 a) Wypisz poziomo co k-ty znak. Znaki powinny być oddzielone spacjami.
 b) Wypisz pionowo co k-ty znak. Znaki powinny być oddzielone enterami.
 */

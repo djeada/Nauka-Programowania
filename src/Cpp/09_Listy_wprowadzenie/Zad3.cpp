@@ -2,8 +2,8 @@
 #include <vector>
 
 /*
-Otrzymujesz listę oraz klucz. Znajdź indeks odpowiadający 
-pierwszemu wystąpieniu klucza w liście. Jeśli klucz nie 
+Otrzymujesz listę oraz klucz. Znajdź indeks odpowiadający
+pierwszemu wystąpieniu klucza w liście. Jeśli klucz nie
 wystęþuje w liście, zwróć -1.
 */
 

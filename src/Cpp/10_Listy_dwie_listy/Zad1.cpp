@@ -2,8 +2,8 @@
 #include <vector>
 
 /*
-Dla otrzymanych dwóch list wypisuj na przemian elementy pierwszej 
-i drugiej listy. Jeśli listy nie są równej długości po wyczerpaniu 
+Dla otrzymanych dwóch list wypisuj na przemian elementy pierwszej
+i drugiej listy. Jeśli listy nie są równej długości po wyczerpaniu
 elementów krótszej listy, wypisuj tylko elementy dłuższej listy.
 */
 

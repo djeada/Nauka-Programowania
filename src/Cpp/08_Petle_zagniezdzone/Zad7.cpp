@@ -1,9 +1,9 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby N, wypisze N trójkątów. 
-Trójkąty powinny być ustawione w kolumnie, jeden na drugim. Wysokość 
-pierwszego trójkąta to 1, a każdego następnego równa jest wysokości 
+Napisz funkcję, która dla otrzymanej liczby N, wypisze N trójkątów.
+Trójkąty powinny być ustawione w kolumnie, jeden na drugim. Wysokość
+pierwszego trójkąta to 1, a każdego następnego równa jest wysokości
 poprzedniego powiększonej o 1.
 */
 

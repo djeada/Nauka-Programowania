@@ -3,7 +3,7 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie listy liczb zmiennoprzecinkowych, pierwsza 
+Otrzymujesz dwie listy liczb zmiennoprzecinkowych, pierwsza
 reprezentuje wagi, a druga wartości. Oblicz średnią ważoną wartości.
 */
 

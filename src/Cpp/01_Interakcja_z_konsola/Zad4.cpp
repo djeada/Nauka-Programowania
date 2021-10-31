@@ -2,7 +2,8 @@
 #include <iostream>
 
 /*
-Wypisz wynik następujących operacji arytmetycznych dla dwóch liczb pobranych od użytkownika:
+Wypisz wynik następujących operacji arytmetycznych dla dwóch liczb pobranych od
+użytkownika:
 
 a) Suma liczb.
 b) Różnica pierwszej i drugiej liczby.

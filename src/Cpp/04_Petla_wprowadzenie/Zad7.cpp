@@ -2,8 +2,8 @@
 #include <iostream>
 
 /*
-Dla pobranej liczby, wyświetl liczbę Pi podniesioną do 
-potęgi równej pobranej liczbie. Wynik powinien być 
+Dla pobranej liczby, wyświetl liczbę Pi podniesioną do
+potęgi równej pobranej liczbie. Wynik powinien być
 zaokrąglony do dwóch miejsc po przecinku.
 */
 

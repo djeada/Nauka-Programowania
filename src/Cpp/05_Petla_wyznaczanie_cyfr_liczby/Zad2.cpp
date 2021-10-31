@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Dla pobranej liczby, powinny zostać wypisane cyfry 
+Dla pobranej liczby, powinny zostać wypisane cyfry
 pobranej liczby zaczynając od cyfry jedności.
 */
 

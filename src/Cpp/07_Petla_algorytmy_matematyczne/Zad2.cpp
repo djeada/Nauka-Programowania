@@ -2,7 +2,7 @@
 #include <cmath>
 
 /*
-Napisz funkcję, która dla otrzymanych dwóch liczb przy 
+Napisz funkcję, która dla otrzymanych dwóch liczb przy
 pomocy pętli obliczy ile wynosi a podniesione do b.
 */
 
@@ -25,6 +25,6 @@ void testPotega() {
 int main() {
 
   testPotega();
-  
+
   return 0;
 }

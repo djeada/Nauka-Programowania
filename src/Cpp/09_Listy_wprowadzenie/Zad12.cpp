@@ -3,17 +3,16 @@
 #include <vector>
 
 /*
-Otrzymujesz listę liczb, kierunek przesunięć (1 odpowiada przesunięciu 
+Otrzymujesz listę liczb, kierunek przesunięć (1 odpowiada przesunięciu
 w prawo, a 0 w lewo) oraz liczbę miejsc o jaką mają zostać przesunięte
-elementy listy. Przykładowo dla przesuwania w prawo pierwszy element 
-trafia na miejsce drugiego, drugi trzeciego, a ostatni na miejsce pierwszego. 
+elementy listy. Przykładowo dla przesuwania w prawo pierwszy element
+trafia na miejsce drugiego, drugi trzeciego, a ostatni na miejsce pierwszego.
 Przesuń elementy listy w podanym kierunku.
 */
 
 // Zlozonosc czasowa O(n)
 // Zlozonosc pamieciowa O(n)
-void rotacja(std::vector<int> &lista, const std::string &kierunek,
-               int liczba) {
+void rotacja(std::vector<int> &lista, const std::string &kierunek, int liczba) {
 
   if (kierunek == "prawo") {
     for (int i = 0; i < liczba; i++) {

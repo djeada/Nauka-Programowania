@@ -2,7 +2,7 @@
 #include <limits>
 
 /*
-Napisz funkcję realizującą zaokrąglanie ilorazu bez 
+Napisz funkcję realizującą zaokrąglanie ilorazu bez
 użycia operatorów  '/' i '%'.
 */
 

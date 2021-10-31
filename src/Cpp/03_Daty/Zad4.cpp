@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Dla pobranej liczby, wypisz dzień tygodnia odpowiadający tej liczbie. 
-Jeśli otrzymano liczbę niedodatnią, bądź dodatnią większą niż 7, 
+Dla pobranej liczby, wypisz dzień tygodnia odpowiadający tej liczbie.
+Jeśli otrzymano liczbę niedodatnią, bądź dodatnią większą niż 7,
 wypisz komuniat informujący użytkownika, że liczba jest niepoprawna.
 */
 

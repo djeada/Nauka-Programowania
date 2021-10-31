@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby wypisze kwadrat 
+Napisz funkcję, która dla otrzymanej liczby wypisze kwadrat
 o boku równym otrzymanej liczbie.
 */
 

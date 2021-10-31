@@ -2,8 +2,8 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie listy liczb całkowitych reprezentujące dwa wektory. 
-Zaimplementuj mnożenie wektorowe (zdefiniowane jedynie dla wektorów 
+Otrzymujesz dwie listy liczb całkowitych reprezentujące dwa wektory.
+Zaimplementuj mnożenie wektorowe (zdefiniowane jedynie dla wektorów
 3-wymiarowej przestrzeni euklidesowej).
 */
 

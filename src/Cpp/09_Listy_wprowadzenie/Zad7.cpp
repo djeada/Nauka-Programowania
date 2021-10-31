@@ -4,8 +4,8 @@
 #include <vector>
 
 /*
-Dla otrzymanej listy liczb naturalnych znajdź 
-średnią arytmetyczną największej i drugiej największej 
+Dla otrzymanej listy liczb naturalnych znajdź
+średnią arytmetyczną największej i drugiej największej
 liczby w liście.
 */
 
@@ -40,8 +40,8 @@ void test_srednia_dwoch_najwiekszych() {
   assert(sredniaDwochNajwiekszych({1}) == 0.00);
   assert(sredniaDwochNajwiekszych({1, 2}) == 1.50);
   assert(sredniaDwochNajwiekszych({3, 5, -7, 4, 9, -11, 2}) == 7.00);
-  assert(sredniaDwochNajwiekszych({3, -2, 4, 9, -3, -40, 8, 5, -7, 4, 9, -11, 2}) == 6.50);
-
+  assert(sredniaDwochNajwiekszych(
+             {3, -2, 4, 9, -3, -40, 8, 5, -7, 4, 9, -11, 2}) == 6.50);
 }
 
 int main() {

@@ -4,7 +4,7 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie listy liczb całkowitych. Znajdź elementy występujące 
+Otrzymujesz dwie listy liczb całkowitych. Znajdź elementy występujące
 zarówno w pierwszej jak i w drugiej liście.
 */
 

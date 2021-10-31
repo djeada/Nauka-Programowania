@@ -4,9 +4,9 @@
 /*
 Dla liczby N, wczytaj N liczb do listy, a następnie:
 
-a) Wypisz listę od początku do końca. Elementy listy 
+a) Wypisz listę od początku do końca. Elementy listy
 powinny znajdować się w osobnych wierszach.
-b) Wypisz listę od końca. Elementy listy powinny być 
+b) Wypisz listę od końca. Elementy listy powinny być
 oddzielone przecinkami i wypisane w jednym wierszu.
 */
 
@@ -39,11 +39,11 @@ int main() {
   std::cout << "podaj liczbe n: " << std::endl;
   std::cin >> n;
   wczytaj(lista, n);
-      
+
   std::cout << std::endl << "liczby w kolejnosci wczytania:" << std::endl;
   wypiszOdPoczatku(lista);
-  
-  std::cout << std::endl <<"liczby wypisane od konca:" << std::endl;
+
+  std::cout << std::endl << "liczby wypisane od konca:" << std::endl;
   wypiszOdKonca(lista);
 
   return 0;

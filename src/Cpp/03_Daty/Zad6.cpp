@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Dla pobranych trzech liczb, sprawdź czy reprezentują one poprawną datę. 
-Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem. 
+Dla pobranych trzech liczb, sprawdź czy reprezentują one poprawną datę.
+Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem.
 */
 
 int main() {

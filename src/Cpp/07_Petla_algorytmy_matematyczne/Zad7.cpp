@@ -18,14 +18,14 @@ float pierwiastek(int liczba) {
 }
 
 void testPierwiastek() {
-    assert(abs(pierwiastek(1) - 1) < dokladnosc);
-    assert(abs(pierwiastek(9) - 3) < dokladnosc);
-    assert(abs(pierwiastek(16) - 4) < dokladnosc);
+  assert(abs(pierwiastek(1) - 1) < dokladnosc);
+  assert(abs(pierwiastek(9) - 3) < dokladnosc);
+  assert(abs(pierwiastek(16) - 4) < dokladnosc);
 }
 
 int main() {
 
   testPierwiastek();
-  
+
   return 0;
 }

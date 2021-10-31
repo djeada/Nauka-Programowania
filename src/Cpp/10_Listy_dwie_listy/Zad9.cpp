@@ -3,7 +3,7 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie listy liczb całkowitych. Usuń z pierwszej 
+Otrzymujesz dwie listy liczb całkowitych. Usuń z pierwszej
 listy te elementy, które występują również w drugiej liście.
 */
 

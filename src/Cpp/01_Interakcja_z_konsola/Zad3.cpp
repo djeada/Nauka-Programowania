@@ -1,7 +1,8 @@
 #include <iostream>
 
 /*
-Wypisz ciągi znaków na standardowe wyjście. Pamiętaj o spacjach i przejściach do nowej linii.
+Wypisz ciągi znaków na standardowe wyjście. Pamiętaj o spacjach i przejściach do
+nowej linii.
 
 Kwadrat.
 xx

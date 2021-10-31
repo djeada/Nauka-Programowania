@@ -8,8 +8,9 @@ Otrzymujesz listę liczb, wykonaj następujące polecenia:
 a) Zwiększ o 1 wszystkie elementy o parzystych indeksach.
 b) Wyzeruj wszystkie wielokrotności liczby 3.
 c) Podnieś do kwadratu wszystkie elementy mniejsze niż 10.
-d) Wstaw sumę wszystkich elementów otrzymanej listy na indeksy będące liczbami pierwszymi.
-e) Zamień każdy element na iloczyn wszystkich elementów listy poza nim samym.
+d) Wstaw sumę wszystkich elementów otrzymanej listy na indeksy będące liczbami
+pierwszymi. e) Zamień każdy element na iloczyn wszystkich elementów listy poza
+nim samym.
 */
 
 void zwieksz(std::vector<int> &lista) {
@@ -99,7 +100,6 @@ void test3() {
   assert(lista == wynik);
 }
 
-
 void test4() {
   std::vector<int> lista{3, 5, -7, 4, 9, -11, 2};
   std::vector<int> wynik{3, 5, 5, 5, 9, 5, 2};
@@ -121,6 +121,6 @@ int main() {
   test3();
   test4();
   test5();
-  
+
   return 0;
 }

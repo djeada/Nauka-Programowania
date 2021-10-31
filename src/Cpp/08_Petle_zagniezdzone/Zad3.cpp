@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby wypisze zaczynając 
-od podstawy trójkąt prostokątny równoboczny o wysokości równej 
+Napisz funkcję, która dla otrzymanej liczby wypisze zaczynając
+od podstawy trójkąt prostokątny równoboczny o wysokości równej
 otrzymanej liczbie.
 */
 

@@ -1,7 +1,7 @@
 #include <cassert>
 
 /*
-Napisz funkcję, która przy pomocy pętli obliczy silnię 
+Napisz funkcję, która przy pomocy pętli obliczy silnię
 otrzymanej liczby.
 */
 

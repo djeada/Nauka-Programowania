@@ -3,7 +3,7 @@
 #include <string>
 
 /*
-Otrzymujesz dwa napisy o równej długości. Oblicz odległość 
+Otrzymujesz dwa napisy o równej długości. Oblicz odległość
 Hamminga między dwoma otrzymanymi napisami.
 */
 

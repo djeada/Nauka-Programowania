@@ -3,8 +3,8 @@
 #include <iostream>
 
 /*
-Otrzymujesz roczną stopę procentową, liczbę lat na spłacenie kredytu 
-oraz wysokość udzielonego kredytu. Oblicz miesięczną ratę oraz 
+Otrzymujesz roczną stopę procentową, liczbę lat na spłacenie kredytu
+oraz wysokość udzielonego kredytu. Oblicz miesięczną ratę oraz
 całkowity koszt kredytu.
 */
 
@@ -14,7 +14,7 @@ int main() {
       << "Podaj: stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc 
       udzielonego kredytu " << std::endl;
 
-  float stopa;
+      float stopa;
   int lata;
   int wysokoscKredytu;
 

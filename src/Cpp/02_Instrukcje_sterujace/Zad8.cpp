@@ -1,7 +1,8 @@
 #include <iostream>
 
 /*
-Pobierz od użytkownika trzy długości boków i sprawdź, czy można z nich zbudować trójkąt.
+Pobierz od użytkownika trzy długości boków i sprawdź, czy można z nich zbudować
+trójkąt.
 */
 
 int main() {

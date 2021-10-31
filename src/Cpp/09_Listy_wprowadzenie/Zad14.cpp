@@ -4,9 +4,9 @@
 #include <vector>
 
 /*
-Dla otrzymanej listy składającej się z nieparzystej liczby 
-elementów znajdź element bez pary. Przez pary elementów rozumiemy 
-tutaj elementy o równej wartości. 
+Dla otrzymanej listy składającej się z nieparzystej liczby
+elementów znajdź element bez pary. Przez pary elementów rozumiemy
+tutaj elementy o równej wartości.
 */
 
 // Zlozonosc czasowa O(n)

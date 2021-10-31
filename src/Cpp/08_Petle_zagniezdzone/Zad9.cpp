@@ -1,10 +1,10 @@
 #include <cassert>
 #include <cmath>
-#include <vector>
 #include <iostream>
+#include <vector>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby N, 
+Napisz funkcję, która dla otrzymanej liczby N,
 wypisze N pierwszych liczb pierwszych.
 */
 
@@ -28,7 +28,7 @@ void liczbyPierwszeV1(int n) {
   }
 }
 
-void sitoEratostenesa( std::vector<int>& pierwsze, int liczba) {
+void sitoEratostenesa(std::vector<int> &pierwsze, int liczba) {
   for (int p = 2; p <= liczba; p++) {
     if (pierwsze[p] == -1)
       continue;

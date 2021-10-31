@@ -1,8 +1,8 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 /*
-Napisz funkcję, która dla otrzymanej liczby wypisze 
+Napisz funkcję, która dla otrzymanej liczby wypisze
 trójkąt Pascala o wysokości równej otrzymanej liczbie.
 */
 
@@ -14,7 +14,6 @@ void trojkatPascala(int wysokosc) {
     }
     std::cout << std::endl;
   }
-
 }
 
 int main() {

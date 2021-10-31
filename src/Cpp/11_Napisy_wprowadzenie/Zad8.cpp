@@ -4,8 +4,8 @@
 #include <vector>
 
 /*
-Otrzymujesz napis reprezentujący zdanie. Podziel zdanie na słowa składowe. 
-Wypisz pionowo słowa, z których składa się zdanie. Znaki interpunkcyjne 
+Otrzymujesz napis reprezentujący zdanie. Podziel zdanie na słowa składowe.
+Wypisz pionowo słowa, z których składa się zdanie. Znaki interpunkcyjne
 nie są liczone jako słowa.
 */
 

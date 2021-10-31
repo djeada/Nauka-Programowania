@@ -3,7 +3,7 @@
 #include <string>
 
 /*
-Otrzymujesz liczbę naturalną n. Zwróć napis składający 
+Otrzymujesz liczbę naturalną n. Zwróć napis składający
 się z liczb naturalnych od 1 do n.
 */
 

@@ -20,7 +20,9 @@ int main() {
 
   std::cout << std::fixed << std::setprecision(2);
 
-  std::cout << "Suma n pierwszych wyrazow ciagu danego wzorem a_n = n/(n + 1) wynosi:" << std::endl;
+  std::cout
+      << "Suma n pierwszych wyrazow ciagu danego wzorem a_n = n/(n + 1) wynosi:"
+      << std::endl;
 
   float suma = 0;
   for (unsigned int i = 1; i <= n; i++) {
@@ -29,8 +31,10 @@ int main() {
   }
   std::cout << suma << std::endl;
 
-  std::cout << "Suma n pierwszych wyrazow ciagu danego wzorem a_n = (n^2 + 5)/n wynosi:" << std::endl;
-  
+  std::cout << "Suma n pierwszych wyrazow ciagu danego wzorem a_n = (n^2 + "
+               "5)/n wynosi:"
+            << std::endl;
+
   suma = 0;
   for (unsigned int i = 1; i <= n; i++) {
     float a = (pow(i, 2) + 5) / i;
@@ -38,7 +42,9 @@ int main() {
   }
   std::cout << suma << std::endl;
 
-  std::cout << "Suma n pierwszych wyrazow ciagu danego wzorem a_n = n + 2^n wynosi:" << std::endl;
+  std::cout
+      << "Suma n pierwszych wyrazow ciagu danego wzorem a_n = n + 2^n wynosi:"
+      << std::endl;
 
   suma = 0;
   for (unsigned int i = 1; i <= n; i++) {

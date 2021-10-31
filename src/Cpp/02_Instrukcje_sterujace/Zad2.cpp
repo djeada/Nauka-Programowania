@@ -17,6 +17,6 @@ int main() {
     std::cout << "liczby sa jednakowe" << std::endl;
   else
     std::cout << "liczby sa rozne" << std::endl;
-  
+
   return 0;
 }

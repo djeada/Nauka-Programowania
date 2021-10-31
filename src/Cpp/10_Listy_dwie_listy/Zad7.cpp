@@ -4,7 +4,7 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie listy liczb całkowitych. Znajdź elementy, 
+Otrzymujesz dwie listy liczb całkowitych. Znajdź elementy,
 które nie są częścią wspólną obu list.
 */
 

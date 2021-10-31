@@ -1,7 +1,7 @@
 #include <cassert>
 
 /*
-Napisz funkcję, która dla otrzymanych dwóch liczb zwróci 
+Napisz funkcję, która dla otrzymanych dwóch liczb zwróci
 ich największy wspólny dzielnik.
 */
 

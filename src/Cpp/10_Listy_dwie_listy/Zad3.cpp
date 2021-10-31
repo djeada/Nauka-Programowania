@@ -2,9 +2,9 @@
 #include <vector>
 
 /*
-Dla otrzymanych dwóch list, zwróć listę, której elementy są 
-sumą odpowiadających sobie elementów otrzymanych list. Jeśli 
-listy nie są równej długości, załóż że brakujące elementy 
+Dla otrzymanych dwóch list, zwróć listę, której elementy są
+sumą odpowiadających sobie elementów otrzymanych list. Jeśli
+listy nie są równej długości, załóż że brakujące elementy
 krótszej listy są równe 0.
 */
 

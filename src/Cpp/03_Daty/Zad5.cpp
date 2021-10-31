@@ -1,7 +1,7 @@
 #include <iostream>
 
 /*
-Dla pobrannej liczby, wypisz liczbę dni miesiąca odpowiadającemu danej liczbie. 
+Dla pobrannej liczby, wypisz liczbę dni miesiąca odpowiadającemu danej liczbie.
 Jeśli otrzymano niepoprawny numer miesiąca poinformuj o tym użytkownika.
 */
 

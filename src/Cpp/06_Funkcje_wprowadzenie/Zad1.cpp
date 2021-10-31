@@ -15,23 +15,17 @@ std::string zwrocTak() { return "Tak"; }
 
 bool zwrocTrue() { return true; }
 
-void testZwroc3() {
-  assert(zwroc3() == 3);
-}
+void testZwroc3() { assert(zwroc3() == 3); }
 
-void testZwrocTak() {
-  assert(zwrocTak() == "Tak");
-}
+void testZwrocTak() { assert(zwrocTak() == "Tak"); }
 
-void testZwrocTrue() {
-  assert(zwrocTrue());
-}
+void testZwrocTrue() { assert(zwrocTrue()); }
 
 int main() {
 
   testZwroc3();
   testZwrocTak();
   testZwrocTrue();
-  
+
   return 0;
 }

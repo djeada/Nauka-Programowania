@@ -4,8 +4,8 @@
 #include <vector>
 
 /*
-Otrzymujesz napis reprezentujący zdanie. Zwróć listę składającą się ze 
-słów zdania. Znaki interpunkcyjne nie są liczone jako słowa. 
+Otrzymujesz napis reprezentujący zdanie. Zwróć listę składającą się ze
+słów zdania. Znaki interpunkcyjne nie są liczone jako słowa.
 */
 
 void wyczysc(std::string &napis) {

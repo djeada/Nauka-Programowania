@@ -2,8 +2,8 @@
 #include <vector>
 
 /*
-Otrzymujesz listę liczb naturalnych. Sprawdź czy średnia elementów 
-listy znajduje się w liście. Dla średniej nie będącej liczbą całkowitą, 
+Otrzymujesz listę liczb naturalnych. Sprawdź czy średnia elementów
+listy znajduje się w liście. Dla średniej nie będącej liczbą całkowitą,
 zaokrąglij wynik w dół.
 */
 

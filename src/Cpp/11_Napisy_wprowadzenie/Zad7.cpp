@@ -3,8 +3,8 @@
 #include <string>
 
 /*
-Otrzymujesz napis. Zamień wszystkie znaki napisu na odpowiadające 
-im numery w tablicy ASCII. Podmień otrzymany napis na napis 
+Otrzymujesz napis. Zamień wszystkie znaki napisu na odpowiadające
+im numery w tablicy ASCII. Podmień otrzymany napis na napis
 składający się z otrzymanych numerów oddzielonych przecinkami.
 */
 

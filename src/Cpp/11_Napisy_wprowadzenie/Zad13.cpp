@@ -4,7 +4,7 @@
 #include <vector>
 
 /*
-Otrzymujesz napis. Znajdź znaki znajdujące się na 
+Otrzymujesz napis. Znajdź znaki znajdujące się na
 pozycjach będących liczbami pierwszymi.
 */
 

@@ -1,10 +1,10 @@
+#include <cassert>
 #include <cstring>
 #include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
 #include <vector>
-#include <cassert>
 
 namespace filesys = std::experimental::filesystem;
 
@@ -117,13 +117,13 @@ void test1() {
 
   filesys::path sciezka{"temp_dir"};
   filesys::create_directories(sciezka);
-  
+
   std::string plikTxt = "temp.txt";
 
   std::ofstream ofs(sciezka / plikTxt);
   ofs << "przykladowy tekst\n";
   ofs.close();
-  
+
   std::string dane = "A.D.";
   dodajInicjaly(sciezka, dane);
 
@@ -134,10 +134,9 @@ void test1() {
   filesys::remove_all(sciezka);
 }
 
-
 int main() {
 
-    test1();
+  test1();
 
-    return 0;
+  return 0;
 }

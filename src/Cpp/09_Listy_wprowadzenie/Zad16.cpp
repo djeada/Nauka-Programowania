@@ -3,8 +3,8 @@
 #include <vector>
 
 /*
-Dla otrzymanej listy oraz liczby x, znajdź indeksy pierwszej pary 
-elementów listy, których suma jest równa liczbie x. Jeśli w liście 
+Dla otrzymanej listy oraz liczby x, znajdź indeksy pierwszej pary
+elementów listy, których suma jest równa liczbie x. Jeśli w liście
 nie ma takiej pary, zwróć parę (-1, -1).
 */
 

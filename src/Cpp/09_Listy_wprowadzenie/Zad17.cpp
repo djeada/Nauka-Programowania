@@ -3,7 +3,7 @@
 #include <vector>
 
 /*
-Dla otrzymanej listy liczb całkowitych oraz liczby x, 
+Dla otrzymanej listy liczb całkowitych oraz liczby x,
 znajdź wszystkie pary liczb z listy, których suma jest równa x.
 */
 
