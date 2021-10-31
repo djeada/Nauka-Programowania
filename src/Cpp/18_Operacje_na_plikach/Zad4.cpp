@@ -1,9 +1,14 @@
+#include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
 
-// Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
-// Wczytaj i wypisz tresc pliku.
+namespace filesys = std::experimental::filesystem;
+
+/*
+Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
+Wczytaj i wypisz tresc pliku.
+*/
 
 void wypiszPlik(const std::string &sciezka) {
   try {
@@ -28,7 +33,14 @@ void wypiszPlik(const std::string &sciezka) {
 int main() {
 
   const std::string sciezka = "test.txt";
+
+  std::ofstream ofs(sciezka);
+  ofs << "przykladowy tekst.\n";
+  ofs.close();
+
   wypiszPlik(sciezka);
+
+  filesys::remove(sciezka);
 
   return 0;
 }

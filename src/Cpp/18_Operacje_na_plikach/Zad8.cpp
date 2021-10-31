@@ -4,12 +4,17 @@
 #include <iostream>
 #include <stdexcept>
 #include <vector>
+#include <cassert>
 
 namespace filesys = std::experimental::filesystem;
 
-// Otrzymujesz napis reprezentujacy sciezke folderu.
-// Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych
-// sie w folderze oraz podfolderach.
+/*
+Otrzymujesz napis reprezentujacy sciezke folderu.
+a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych sie
+w folderze oraz podfolderach.
+b) Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie w folderze oraz
+podfolderach.
+*/
 
 std::string znajdzRozszerzenie(std::string sciezka) {
 
@@ -46,7 +51,6 @@ void dodajInicjaly(const std::string &sciezkaFolderu, const std::string &dane) {
     plik.exceptions(plik.exceptions() | std::ios::failbit |
                     std::ifstream::badbit);
     plik << dane << std::endl;
-    std::cout << dane << std::endl;
   };
 
   auto sciezki = plikiWFolderze(sciezkaFolderu, ".txt");
@@ -55,8 +59,6 @@ void dodajInicjaly(const std::string &sciezkaFolderu, const std::string &dane) {
     _dodajInicjaly(sciezka, dane);
 }
 
-// Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie w folderze
-// oraz podfolderach.
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
 
   std::vector<std::string> tresc;
@@ -111,13 +113,31 @@ void usunSrodkowy(const std::string &sciezkaFolderu) {
     _usunSrodkowy(sciezka);
 }
 
-int main() {
+void test1() {
 
-  std::string sciezka = std::string(filesys::current_path()) +
-                        filesys::path::preferred_separator + "folder/";
+  filesys::path sciezka{"temp_dir"};
+  filesys::create_directories(sciezka);
+  
+  std::string plikTxt = "temp.txt";
+
+  std::ofstream ofs(sciezka / plikTxt);
+  ofs << "przykladowy tekst\n";
+  ofs.close();
+  
   std::string dane = "A.D.";
   dodajInicjaly(sciezka, dane);
-  usunSrodkowy(sciezka);
 
-  return 0;
+  std::vector<std::string> wynik = {"przykladowy tekst", "A.D."};
+
+  assert(wczytajPlik((sciezka / plikTxt).string()) == wynik);
+
+  filesys::remove_all(sciezka);
+}
+
+
+int main() {
+
+    test1();
+
+    return 0;
 }

@@ -1,13 +1,16 @@
 #include <cassert>
 #include <experimental/filesystem>
+#include <fstream>
 #include <string>
 #include <vector>
 
 namespace filesys = std::experimental::filesystem;
 
-// Otrzymujesz dwa napisy. Pierwszy reprezentuje sciezke folderu.
-// Drugi rozszerzenie plikow. Znajdz w folderze wszystkie pliki z
-// danym rozszerzeniem. Nazwy znalezionych plikow zapisz w liscie.
+/*
+Otrzymujesz dwa napisy. Pierwszy reprezentuje sciezke folderu.
+Drugi rozszerzenie szukanych plikow. Znajdz w folderze wszystkie pliki z
+danym rozszerzeniem. Nazwy znalezionych plikow zapisz w liscie.
+*/
 
 std::string znajdzRozszerzenie(std::string sciezka) {
 
@@ -33,10 +36,22 @@ std::vector<std::string> plikiWFolderze(const std::string &sciezka,
 }
 
 void test1() {
-  std::string sciezka = "/home/adam/Documents";
+
+  filesys::path sciezka{"temp_dir"};
+  filesys::create_directories(sciezka);
+
+  std::vector<std::string> nazwyPlikow{"lista.txt", "test.txt"};
+
+  for (const auto nazwa : nazwyPlikow) {
+    std::ofstream ofs(sciezka / nazwa);
+    ofs << "przykladowy tekst.\n";
+    ofs.close();
+  }
+
   std::string rozszerzenie = ".txt";
-  std::vector<std::string> wynik{"lista.txt", "test.txt"};
-  assert(plikiWFolderze(sciezka, rozszerzenie) == wynik);
+  assert(plikiWFolderze(sciezka.string(), rozszerzenie) == nazwyPlikow);
+
+  filesys::remove_all(sciezka);
 }
 
 int main() {

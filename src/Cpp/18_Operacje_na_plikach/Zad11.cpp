@@ -5,8 +5,10 @@
 
 namespace filesys = std::experimental::filesystem;
 
-// Otrzymujesz dwa napisy. Pierwszy reprezentuje sciezke pliku tekstowego.
-// Drugi wiersz tekstu. Dodaj wiersz na poczatku pliku.
+/*
+Otrzymujesz dwa napisy. Pierwszy reprezentuje sciezke pliku tekstowego.
+Drugi wiersz tekstu. Dodaj wiersz na poczatku pliku.
+*/
 
 void skopiujPlik(const std::string &sciezka,
                  const std::string &sciezkaDocelowa) {

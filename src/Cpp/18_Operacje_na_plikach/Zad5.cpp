@@ -1,13 +1,18 @@
 #include <algorithm>
+#include <cassert>
+#include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
-#include <vector>
 
-// Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
-// Kazdy wiersz pliku reprezentuja adres ip. Posortuj adresy ip i zapisz je w
-// liscie.
+namespace filesys = std::experimental::filesystem;
+
+/*
+Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
+Kazdy wiersz pliku reprezentuja adres ip. Posortuj adresy ip i zapisz je w
+liscie.
+*/
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
 
@@ -80,11 +85,33 @@ void sortujAdresyIp(std::vector<std::string> &ip) {
   });
 }
 
+void test1() {
+  filesys::path sciezka{"temp.txt"};
+
+  std::ofstream ofs(sciezka);
+  ofs << "123.4.245.23\n";
+  ofs << "104.244.253.29\n";
+  ofs << "1.198.3.93\n";
+  ofs << "32.183.93.40\n";
+  ofs << "104.30.244.2\n";
+  ofs << "104.244.4.1\n";
+  ofs.close();
+
+  auto adresyIp = wczytajPlik(sciezka);
+  sortujAdresyIp(adresyIp);
+
+  std::vector<std::string> posortowaneAdresy = {
+      "1.198.3.93",  "32.183.93.40",   "104.30.244.2",
+      "104.244.4.1", "104.244.253.29", "123.4.245.23"};
+
+  assert(adresyIp == posortowaneAdresy);
+
+  filesys::remove(sciezka);
+}
+
 int main() {
 
-  const std::string sciezka = "folder/adresy_ip.txt";
-  auto ip = wczytajPlik(sciezka);
-  sortujAdresyIp(ip);
+  test1();
 
   return 0;
 }

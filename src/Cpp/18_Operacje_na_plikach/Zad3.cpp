@@ -1,18 +1,19 @@
+#include <algorithm>
 #include <cassert>
 #include <cstdlib>
 #include <experimental/filesystem>
+#include <fstream>
 #include <iostream>
 #include <pwd.h>
-#include <string>
 #include <sys/types.h>
 #include <unistd.h>
-#include <vector>
 
 namespace filesys = std::experimental::filesystem;
 
-// Otrzymujesz napis reprezentujacy nazwe pliku.
-// Przeszukaj caly system i zapisz w liscie wszystkie sciezki plikow o danej
-// nazwie.
+/*
+Otrzymujesz napis reprezentujacy nazwe pliku. Przeszukaj caly system i
+zapisz w liscie wszystkie sciezki plikow o danej nazwie.
+*/
 
 std::string katalogDomowy() {
 
@@ -33,7 +34,6 @@ std::string katalogDomowy() {
 
 std::vector<std::string> plikiWFolderze(const std::string &sciezkaFolderu,
                                         const std::string &szukanyPlik) {
-  std::cout << sciezkaFolderu << std::endl;
 
   std::vector<std::string> listaSciezek;
   try {
@@ -54,11 +54,41 @@ std::vector<std::string> sciezkiWSystemie(const std::string &szukanyPlik) {
   return plikiWFolderze(katalogDomowy(), szukanyPlik);
 }
 
+void test1() {
+
+  const std::string szukanyPlik = "test.txt";
+
+  // stworz dwa foldery
+  filesys::path sciezka{"temp_dir"};
+  filesys::create_directories(sciezka);
+  filesys::create_directories(sciezka / sciezka);
+
+  std::vector<std::string> nazwyPlikow{"lista.txt", szukanyPlik};
+
+  // umiesc dwa tymczaowe pliki w utworzonych folderach
+  for (const auto nazwa : nazwyPlikow) {
+    std::ofstream ofs(sciezka / nazwa);
+    std::ofstream ofs2(sciezka / sciezka / nazwa);
+    ofs << "przykladowy tekst.\n";
+    ofs2 << "przykladowy tekst.\n";
+    ofs.close();
+    ofs2.close();
+  }
+
+  auto wynik = sciezkiWSystemie(szukanyPlik);
+
+  // sprawdz czy tymczasowe pliku znajduja sie w liscie znalezionych plikow
+  assert(std::count(wynik.begin(), wynik.end(),
+                    filesys::canonical(sciezka / szukanyPlik)));
+  assert(std::count(wynik.begin(), wynik.end(),
+                    filesys::canonical(sciezka / sciezka / szukanyPlik)));
+
+  filesys::remove_all(sciezka);
+}
+
 int main() {
 
-  const std::string nazwaPliku = "test.txt";
-  for (auto &sciezka : sciezkiWSystemie(nazwaPliku))
-    std::cout << sciezka << std::endl;
+  test1();
 
   return 0;
 }

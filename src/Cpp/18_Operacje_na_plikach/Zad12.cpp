@@ -5,9 +5,11 @@
 
 namespace filesys = std::experimental::filesystem;
 
-// Otrzymujesz dwa napisy reprezentujace sciezki folderow.
-// Przenies wszystkie pliki .csv z pierwszego folderu (oraz jego podfolderow) do
-// drugiego folderu.
+/*
+Otrzymujesz dwa napisy reprezentujace sciezki folderow.
+Przenies wszystkie pliki csv z pierwszego folderu (oraz jego podfolderow) do
+drugiego folderu.
+*/
 
 std::string nazwaPliku(const std::string &sciezka) {
   return filesys::path(sciezka).filename();

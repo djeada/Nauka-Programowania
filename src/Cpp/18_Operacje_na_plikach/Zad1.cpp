@@ -1,11 +1,14 @@
 #include <cassert>
 #include <experimental/filesystem>
+#include <fstream>
 #include <iostream>
 
 namespace filesys = std::experimental::filesystem;
 
-// Otrzymujesz napis reprentujcy sciezke.
-// Sprawdz, czy sciezka nalezy do pliku czy folderu.
+/*
+Otrzymujesz napis reprentujcy sciezke.
+Sprawdz, czy sciezka nalezy do pliku czy folderu.
+*/
 
 bool czyPlik(std::string sciezka) {
   try {
@@ -36,16 +39,27 @@ bool czyFolder(std::string sciezka) {
 }
 
 void test1() {
-  std::string sciezkaPliku = "/home/Nauka-programowania/Zad1.cpp";
-  assert(czyPlik(sciezkaPliku));
-  assert(!czyFolder(sciezkaPliku));
+  filesys::path sciezkaPliku{"temp.txt"};
+
+  std::ofstream ofs(sciezkaPliku);
+  ofs << "przykladowy tekst.\n";
+  ofs.close();
+
+  assert(czyPlik(sciezkaPliku.string()));
+  assert(!czyFolder(sciezkaPliku.string()));
+
+  filesys::remove(sciezkaPliku);
 }
 
 void test2() {
-  std::string sciezkaFolderu = "/home/adam/Documents/Programming";
 
-  assert(!czyPlik(sciezkaFolderu));
-  assert(czyFolder(sciezkaFolderu));
+  filesys::path sciezkaFolderu{"temp_dir"};
+  filesys::create_directories(sciezkaFolderu);
+
+  assert(!czyPlik(sciezkaFolderu.string()));
+  assert(czyFolder(sciezkaFolderu.string()));
+
+  filesys::remove(sciezkaFolderu);
 }
 
 int main() {

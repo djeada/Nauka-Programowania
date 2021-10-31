@@ -1,9 +1,16 @@
+#include <cassert>
+#include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
 #include <vector>
-// Otrzymujesz dwa napisy. Pierwszy reprezentuje sciezke pliku tekstowego.
-// Drugi wiersz tekstu. Dodaj wiersz na poczatku pliku.
+
+namespace filesys = std::experimental::filesystem;
+
+/*
+Otrzymujesz dwa napisy. Pierwszy reprezentuje sciezke pliku tekstowego.
+Drugi wiersz tekstu. Dodaj wiersz na poczatku pliku.
+*/
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
 
@@ -51,10 +58,23 @@ void zapiszNaPoczatku(const std::string &sciezka, const std::string &dane) {
   }
 }
 
+void test1() {
+  filesys::path sciezka{"temp.txt"};
+
+  std::ofstream ofs(sciezka);
+  ofs << "przykladowy tekst\n";
+  ofs.close();
+
+  zapiszNaPoczatku(sciezka, "Hej \n");
+  std::vector<std::string> wynik = {"Hej ", "przykladowy tekst"};
+
+  assert(wczytajPlik(sciezka) == wynik);
+
+  filesys::remove(sciezka);
+}
+
 int main() {
 
-  const std::string sciezka = "folder/test.txt";
-  zapiszNaPoczatku(sciezka, "Hej \n");
-
+  test1();
   return 0;
 }

@@ -4,8 +4,10 @@
 
 namespace filesys = std::experimental::filesystem;
 
-// Otrzymujesz dwa napisy reprezentujace sciezki folderow.
-// Skopiuj wszystkie pliki .png z pierwszego folderu do drugiego.
+/*
+Otrzymujesz dwa napisy reprezentujace sciezki folderow.
+Skopiuj wszystkie pliki .png z pierwszego folderu do drugiego.
+*/
 
 std::string nazwaPliku(const std::string &sciezka) {
   return filesys::path(sciezka).filename();
