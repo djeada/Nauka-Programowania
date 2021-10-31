@@ -3,8 +3,11 @@
 #include <unordered_set>
 #include <vector>
 
-// Otrzymujesz liste liczb. Usun z niej wszystkie duplikaty.
-// Tylko pierwsze wystapienie danej wartosci powinno zostac zachowane.
+/*
+Otrzymujesz listę liczb naturalnych. Usuń z niej 
+wszystkie duplikaty. Tylko pierwsze wystąpienie danej 
+liczby powinno zostać zachowane.
+*/
 
 // Zlozonosc czasowa O(nlogn)
 void usunDuplikatyV1(std::vector<int> &lista) {

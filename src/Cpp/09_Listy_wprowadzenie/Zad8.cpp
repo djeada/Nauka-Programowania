@@ -2,8 +2,10 @@
 #include <cassert>
 #include <vector>
 
-// Usun wszystkie wystapienia klucza z listy.
-// Kolejnosc elementow w liscie powinna zostac zachowana.
+/*
+Dla otrzymanej listy oraz klucza, usuń pierwsze 
+wystąpienie klucza w liście.
+*/
 
 void usunPierwszeWystapienieV1(std::vector<int> &lista, int klucz) {
   std::vector<int>::iterator it = lista.begin();

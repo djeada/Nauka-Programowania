@@ -2,9 +2,10 @@
 #include <cassert>
 #include <vector>
 
-// Dla otrzymanej listy oraz liczby X, znajdz indeksy pierwszej
-// pary elementow listy, ktorych suma jest rowna liczbie X.
-// Jesli w liscie nie ma takiej pary, zwroc pare (-1, -1)
+/*
+Dla otrzymanej listy liczb całkowitych oraz liczby x, 
+znajdź wszystkie pary liczb z listy, których suma jest równa x.
+*/
 
 std::pair<int, int> sumaDwochV1(std::vector<int> &lista, int liczba) {
   int n = lista.size();

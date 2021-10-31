@@ -1,13 +1,15 @@
 #include <iostream>
 
-// Napisz funkcje, ktora dla otrzymanej liczby
-// wypisze zaczyajac od podstawy trojkat prostokatny
-// rownoboczny o wysokosci rownej otrzymanej liczbie.
+/*
+Napisz funkcję, która dla otrzymanej liczby wypisze zaczynając 
+od podstawy trójkąt prostokątny równoboczny o wysokości równej 
+otrzymanej liczbie.
+*/
 
-void trojkat(int a) {
+void trojkat(int wysokosc) {
 
-  for (int y = 0; y < a; y++) {
-    for (int x = 0; x < a - y; x++)
+  for (int y = 0; y < wysokosc; y++) {
+    for (int x = 0; x < wysokosc - y; x++)
       std::cout << "x";
     std::cout << std::endl;
   }
@@ -15,8 +17,11 @@ void trojkat(int a) {
 
 int main() {
 
-  int a = 5;
-  trojkat(a);
+  std::cout << "Podaj wysokosc trojkata:" << std::endl;
+  int wysokosc;
+  std::cin >> wysokosc;
+
+  trojkat(wysokosc);
 
   return 0;
 }

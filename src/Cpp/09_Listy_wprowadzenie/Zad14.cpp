@@ -3,9 +3,11 @@
 #include <numeric>
 #include <vector>
 
-// Dla otrzymanej listy skladajacej sie z nieparzystej
-// liczby elementow znajdz element bez pary. Przez pary
-// elementow rozumiemy tutaj elementy o rownej wartosci.
+/*
+Dla otrzymanej listy składającej się z nieparzystej liczby 
+elementów znajdź element bez pary. Przez pary elementów rozumiemy 
+tutaj elementy o równej wartości. 
+*/
 
 // Zlozonosc czasowa O(n)
 // Zlozonosc pamieciowa O(n)

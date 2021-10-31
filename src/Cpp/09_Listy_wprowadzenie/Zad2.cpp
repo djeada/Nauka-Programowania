@@ -1,12 +1,16 @@
 #include <iostream>
 #include <vector>
 
-// Dla liczby N, wczytaj N liczb do listy, a nastepnie:
-// a) dodaj do kazdego elementu 1;
-// b) pomnoz kazdy element przez jego indeks;
-// c) zastap wszystkie elementy wartoscia pierwszego elementu listy.
-// Dla kazdego podpunktu wypisz zmodyfikowana liste. Elementy listy powinny
-// byc oddzielone przecinkami i wypisane w jednym wierszu.
+/*
+Dla liczby N, wczytaj N liczb do listy, a następnie:
+
+a) Dodaj 1 do każdego elementu.
+b) Pomnóż każdy element przez jego indeks.
+c) Zastąp wszystkie elementy wartością pierwszego elementu listy.
+
+Dla każdego podpunktu wypisz zmodyfikowaną listę. Elementy listy 
+powinny być oddzielone przecinkami i wypisane w jednym wierszu.
+*/
 
 void wczytaj(std::vector<int> &lista, int n) {
   for (int i = 0; i < n; i++) {

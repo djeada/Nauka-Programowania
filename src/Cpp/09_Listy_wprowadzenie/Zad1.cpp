@@ -1,11 +1,14 @@
 #include <iostream>
 #include <vector>
 
-// Dla liczby N, wczytaj N liczb do listy, a nastepnie:
-// a) wypisz liste od poczatku do konca. Elementy listy powinny
-// znajdowac sie w osobnych wierszach.
-// b) wypisz liste od konca. Elementy listy powinny byc oddzielone
-// przecinkami i wypisane w jednym wierszu.
+/*
+Dla liczby N, wczytaj N liczb do listy, a następnie:
+
+a) Wypisz listę od początku do końca. Elementy listy 
+powinny znajdować się w osobnych wierszach.
+b) Wypisz listę od końca. Elementy listy powinny być 
+oddzielone przecinkami i wypisane w jednym wierszu.
+*/
 
 void wczytaj(std::vector<int> &lista, int n) {
   for (int i = 0; i < n; i++) {

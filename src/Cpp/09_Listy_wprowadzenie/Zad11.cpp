@@ -1,10 +1,12 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz liste skladajaca sie wylacznie z liter A i B.
-// Litera A reprezentuje samochod jadacy na wschod, a
-// litera B jadacy na zachod.  Samochody jadace w przeciwna
-// strony mijaja sie. Policz mijajace sie samochody.
+/*
+Otrzymujesz listę składającą się wyłącznie z liter A i B. 
+Litera A reprezentuje samochód jadący na wschód, a litera B 
+jadący na zachód. Samochody jadące w przeciwną stronę mijają się. 
+Policz mijające się samochody.
+*/
 
 int policzSamochodyV1(std::vector<char> &lista) {
 

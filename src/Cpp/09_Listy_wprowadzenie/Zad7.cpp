@@ -3,11 +3,13 @@
 #include <limits>
 #include <vector>
 
-// Dla otrzymanej listy znajdz liczbe mniejsza
-// od najwiekszej liczby z listy i jednoczesnie
-// wieksza od wszystkich pozostalych.
+/*
+Dla otrzymanej listy liczb naturalnych znajdź 
+średnią arytmetyczną największej i drugiej największej 
+liczby w liście.
+*/
 
-double wieksza(std::vector<int> &lista) {
+double sredniaDwochNajwiekszych(std::vector<int> &lista) {
 
   if (lista.empty())
     return 0.00;
@@ -32,13 +34,19 @@ double wieksza(std::vector<int> &lista) {
   return (maks + maks2) / 2.00;
 }
 
+void test_srednia_dwoch_najwiekszych() {
+
+  assert(sredniaDwochNajwiekszych({}) == 0.00);
+  assert(sredniaDwochNajwiekszych({1}) == 0.00);
+  assert(sredniaDwochNajwiekszych({1, 2}) == 1.50);
+  assert(sredniaDwochNajwiekszych({3, 5, -7, 4, 9, -11, 2}) == 7.00);
+  assert(sredniaDwochNajwiekszych({3, -2, 4, 9, -3, -40, 8, 5, -7, 4, 9, -11, 2}) == 6.50);
+
+}
+
 int main() {
 
-  std::vector<int> lista({3, 5, -7, 4, 9, -11, 2});
-  std::cout << wieksza(lista) << std::endl;
-
-  lista = {3, -2, 4, 9, -3, -40, 8, 5, -7, -1};
-  std::cout << wieksza(lista) << std::endl;
+  test_srednia_dwoch_najwiekszych();
 
   return 0;
 }

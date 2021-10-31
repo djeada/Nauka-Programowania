@@ -3,8 +3,11 @@
 #include <limits>
 #include <vector>
 
-// Otrzymujesz liste. Znajdz najwiekszy
-// i najmniejszy element tej listy.
+/*
+Otrzymujesz listę. Znajdź największy i najmniejszy 
+element tej listy. Zwróć znalezione wartości.
+*/
+
 int maksV1(std::vector<int> &lista) {
 
   if (lista.empty())

@@ -2,9 +2,11 @@
 #include <cmath>
 #include <vector>
 
-// Otrzymujesz dokladnie 6 liczb. Otrzymane liczby stanowia
-// odpowienio wspolrzedne xA, yA, xB, yB, xC, yC. Sprawdz
-// czy punkty A, B oraz C moga stanowic wierzcholki trojkata.
+/*
+Otrzymujesz dokładnie 6 liczb. Otrzymane liczby stanowią odpowiednio 
+współrzędne xA, yA, xB, yB, xC, yC. Sprawdź czy punkty A, B oraz C 
+mogą stanowić wierzchołki trójkąta. 
+*/
 
 int odleglosc(int x1, int y1, int x2, int y2) {
   int roznicaX = x1 - x2;

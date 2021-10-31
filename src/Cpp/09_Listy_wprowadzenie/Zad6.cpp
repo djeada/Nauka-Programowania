@@ -1,9 +1,11 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz liste liczb. Sprwadz czy srednia elementow
-// znajduje sie w liscie. Dla sredniej nie bedacej liczba
-// calkowita, zaokraglij wynik w dol.
+/*
+Otrzymujesz listę liczb naturalnych. Sprawdź czy średnia elementów 
+listy znajduje się w liście. Dla średniej nie będącej liczbą całkowitą, 
+zaokrąglij wynik w dół.
+*/
 
 int policzSrednia(std::vector<int> &lista) {
 
