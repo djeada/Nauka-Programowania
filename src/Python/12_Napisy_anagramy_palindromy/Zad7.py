@@ -1,53 +1,32 @@
 """
-Dla dwoch slow, ile minimalnie znakow musimy usunac aby uzyskac anagramy.
-Zwroc -1 dla slow, o roznych dlugosciach.	
+Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy.
+Zwróć -1 dla słów o różnych długościach.
 """
 
-# Wersja 1
-def buduj_histogram_znakow(slowo):
-    histo = {}
 
-    for znak in slowo:
-        if znak in histo:
-            histo[znak] += 1
-        else:
-            histo[znak] = 0
-
-    return histo
-
-
-def min_znakow_do_zmiany_v1(slowo_a, slowo_b):
-    if len(slowo_a) != len(slowo_b):
+def liczba_znakow(napis_a, napis_b):
+    """
+    Funkcja zwraca liczbę znaków, które musimy usunąć aby uzyskać anagramy. 
+    """
+    if len(napis_a) != len(napis_b):
         return -1
 
-    histo_slowa_a = buduj_histogram_znakow(slowo_a)
-    histo_slowa_b = buduj_histogram_znakow(slowo_b)
-    licznik = 0
+    pom = [0] * 256
 
-    for klucz, wartosc in histo_slowa_a.items():
-        if klucz not in histo_slowa_b.keys():
-            licznik += 1
-        else:
-            licznik += wartosc - histo_slowa_b[klucz]
+    for znak in napis_a:
+        pom[ord(znak) - ord('a')] += 1
+        
+    for znak in napis_b:
+        pom[ord(znak) - ord('a')] -= 1
 
-    for klucz, wartosc in histo_slowa_b.items():
-        if klucz not in histo_slowa_a.keys():
-            licznik += 1
-        else:
-            licznik += wartosc - histo_slowa_a[klucz]
-
-    return licznik
+    return sum(map(abs, pom))
 
 
-# Testy Poprawnosci
-slowo_a = "grazyna"
-slowo_b = "razynax"
-assert min_znakow_do_zmiany_v1(slowo_a, slowo_b) == 2
+def test_liczba_znakow():
+    assert liczba_znakow("grazyna", "razynax") == 2
+    assert liczba_znakow("pan cytryna", "pan pomarancza") == -1
+    assert liczba_znakow("20ejdy0978oa", "akv81w39j1ob") == 14
 
-slowo_a = "pancytryna"
-slowo_b = "panpomarancza"
-assert min_znakow_do_zmiany_v1(slowo_a, slowo_b) == -1
-
-slowo_a = "20ejdy0978oa"
-slowo_b = "akv81w39j1o7"
-assert min_znakow_do_zmiany_v1(slowo_a, slowo_b) == 10
+if __name__ == "__main__":
+    
+    test_liczba_znakow()

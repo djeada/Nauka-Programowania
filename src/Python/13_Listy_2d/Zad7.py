@@ -1,31 +1,26 @@
 """
-Otrzymujesz liste par liczb. Liczby w parze reprezentuja poczatek i koniec przedzialu. 
-Niektore przedzialy moga na siebie nachodzic. 
-W takim przypadku polacz je ze soba i zwroc liste niepokrywajacych sie przedzialow.
+Otrzymujesz listę list liczb naturalnych reprezentującą macierz. 
+Jeśli element macierzy jest równy zero, zamień wszystkie elementy 
+w tej samej kolumnie i tym samym wierszu na zera.
 """
 
-# Wersja 1
-def polacz_przedzialy_v1(lista):
-    lista = sorted(lista)
-    wynik = []
-    pocz, koniec = lista[0][0], lista[0][1]
+def wyzeruj_macierz(macierz):
+    """
+    Funkcja zamienia wszystkie elementy w kolumnach i wierszach na zera 
+    jesli jeden z elementów jest równy zero.
+    """
+    for i in range(len(macierz)):
+        for j in range(len(macierz[i])):
+            if macierz[i][j] == 0:
+                for k in range(len(macierz)):
+                    macierz[i][k] = 0
+                    macierz[k][j] = 0
+    return macierz
 
-    for x in lista[1:]:
-        if koniec >= x[0]:
-            if koniec < x[1]:
-                koniec = x[1]
+def test_wyzeruj_macierz():
+    assert wyzeruj_macierz([[1, 2, 3], [4, 0, 6], [7, 8, 9]]) == [[1, 0, 3], [0, 0, 0], [7, 0, 9]]
+    assert wyzeruj_macierz([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) == [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-        else:
-            wynik.append((pocz, koniec))
-            pocz, koniec = x[0], x[1]
-
-    wynik.append((pocz, koniec))
-
-    return wynik
-
-
-# Testy Poprawnosci
-lista = [(23, 67), (23, 53), (45, 88), (77, 88), (10, 22), (11, 12), (42, 45)]
-wynik = [(10, 22), (23, 88)]
-
-assert polacz_przedzialy_v1(lista) == wynik
+if __name__ == "__main__":
+    
+    test_wyzeruj_macierz()

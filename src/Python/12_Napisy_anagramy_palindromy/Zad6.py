@@ -1,49 +1,35 @@
 """
-Sprawdz czy istnieje permutacja danego slowa bedaca palindromem.
+Znajdź permutacje danego słowa będące palindromami.
 """
 
-# Wersja 1
-def znajdz_permutacje(napis, start, koniec, wynik=[]):
-
-    if start >= koniec:
-        if "".join(napis) not in wynik:
-            wynik.append("".join(napis))
-
+def permutacje(napis):
+    """
+    Funkcja zwraca listę wszystkich permutacji danego napisu. 
+    """
+    if len(napis) == 1:
+        return [napis]
     else:
+        permutacje = []
+        for i in range(len(napis)):
+            for permutacja in permutacje(napis[:i] + napis[i+1:]):
+                permutacje.append(napis[i] + permutacja)
+        return permutacje
 
-        for i in range(start, koniec):
-            napis[start], napis[i] = napis[i], napis[start]
+def czy_palindrom(napis):
+    """
+    Funkcja sprawdza czy dany napis jest palindromem. 
+    """
+    return napis == napis[::-1]
 
-            znajdz_permutacje(napis, start + 1, koniec, wynik)
+def permutacje_palindromiczne(napis):
+    """
+    Funkcja zwraca listę wszystkich permutacji danego napisu, które są palindromami. 
+    """
+    return [permutacja for permutacja in permutacje(napis) if czy_palindrom(permutacja)]
 
-            napis[start], napis[i] = napis[i], napis[start]
-
-        return wynik
-
-
-def czy_palindrom(slowo):
-    for i in range(len(slowo) // 2):
-        if slowo[i] != slowo[-i - 1]:
-            return False
-
-    return True
-
-
-def czy_istnieje_permutacja_bedaca_palindromem_v1(slowo):
-
-    permutacje = znajdz_permutacje(list(slowo), 0, len(slowo))
-
-    wynik = []
-
-    for p in permutacje:
-        if czy_palindrom(p):
-            wynik.append(p)
-
-    return wynik
+def test_permutacje_palindromiczne():
+    assert sorted(permutacje_palindromiczne("adamm")) == sorted(["madam", "amdma"])
 
 
-# testy poprawnosci
-slowo = "adamm"
-wynik = ["madam", "amdma"]
-
-assert sorted(czy_istnieje_permutacja_bedaca_palindromem_v1(slowo)) == sorted(wynik)
+if __name__ == "__main__":
+    test_permutacje_palindromiczne()

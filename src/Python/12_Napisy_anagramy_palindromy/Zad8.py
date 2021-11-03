@@ -1,41 +1,57 @@
 """
-Znajdz wszystkie wyjatkowe palindromy jakie mozna utworzyc ze znakow w slowie (bez zmiany kolejnosci).		
-Wyjatkowy palindrom spelnia jeden z dwoch warunkow:
-1. Wszystkie znaki sa identyczne, np. xxx
-2. Wszystkie znaki poza srodkowym znakiem sa identyczne, np. ccdcc.
-Pojedynczy znak jest rowniez uznawany za wyjatkowy palindrom.
+Znajdź wszystkie wyjątkowe palindromy jakie można utworzyć ze znaków w słowie 
+(bez zmiany kolejności występowania). Nie uwzględniaj duplikatów w liście.
+
+Wyjątkowy palindrom musi spełniać jeden z dwóch warunków:
+1. Wszystkie znaki są identyczne, np. “xxx”.
+2. Wszystkie znaki poza środkowym znakiem są identyczne, np. “ccdcc”.
+
+Pojedynczy znak jest również uznawany za wyjątkowy palindrom.
 """
 
-# Wersja 1
-def znajdz_wyjatkowe_palindromy_v1(slowo):
-    wynik = []
+def wyjatkowy_palindrom(napis):
+    """
+    Funkcja sprawdza czy podany napis jest wyjątkowym palindromem. 
+    """
+    if not napis:
+        return True
 
-    for i in range(len(slowo)):
-        wynik.append(slowo[i])
+    napis = napis.lower()
+    if len(napis) == 1:
+        return True
 
-        j = i + 1
-        while j < len(slowo) and slowo[i] == slowo[j]:
-            j += 1
+    if napis[0] == napis[-1]:
+        return wyjatkowy_palindrom(napis[1:-1])
+    
+    return False
 
-        if j > i + 1:
-            wynik.append(slowo[i:j])
-
-        if j + 1 < len(slowo) and slowo[i] == slowo[j + 1]:
-            k = j + 1
-            while k > i and slowo[i] == slowo[k]:
-                k -= 1
-
-            if i + 1 == k:
-                wynik.append(slowo[i : i + 2 * (j - i) + 1])
+def wyjatkowe_palindromy(napis):
+    """
+    Funkcja zwraca wszystkie wyjątkowe palindromy, które można utworzyć z podnapisów danego napisu. 
+    """
+    if len(napis) == 1:
+        return {napis}
+    
+    wynik = set()
+    for i in range(len(napis)):
+          for j in range(i + 1, len(napis) + 1):
+                podnapis = napis[i:j]
+                if wyjatkowy_palindrom(podnapis):
+                    wynik.add(podnapis)
 
     return wynik
 
+def test_wyjatkowy_palindrom():
+    assert wyjatkowy_palindrom("xxx")
+    assert wyjatkowy_palindrom("ccdcc")
+    assert not wyjatkowy_palindrom("abc")
 
-# Testy Poprawnosci
-slowo = "xxxx"
-wynik = ["x", "xxxx", "x", "xxx", "x", "xx", "x"]
-assert sorted(znajdz_wyjatkowe_palindromy_v1(slowo)) == sorted(wynik)
+def test_wyjatkowe_palindromy():
+    assert wyjatkowe_palindromy("xxxx") == {'x', 'xx', "xxx", 'xxxx'}
+    assert wyjatkowe_palindromy("ccdcc") == {'cc', 'd', 'ccdcc', 'c', 'cdc'}
+    assert wyjatkowe_palindromy("abc") == {"a", "b", "c"}
+    assert wyjatkowe_palindromy("") == {}
 
-slowo = ""
-wynik = []
-assert sorted(znajdz_wyjatkowe_palindromy_v1(slowo)) == sorted(wynik)
+if __name__ == "__main__":
+    test_wyjatkowy_palindrom()
+    test_wyjatkowe_palindromy()
