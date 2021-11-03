@@ -2,10 +2,15 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz liste 2d. Zbierz spiralnie elementy
-// otrzymanej listy i zapisz je w zwyklej liscie.
+/*
+Otrzymujesz listę list liczb naturalnych. Zbierz spiralnie 
+elementy otrzymanej macierzy i zapisz je w liście.
+*/
 
 std::vector<int> spiralaV1(std::vector<std::vector<int>> &macierz) {
+  /**
+   *
+   */
   std::vector<int> wynik;
 
   int x = macierz[0].size();

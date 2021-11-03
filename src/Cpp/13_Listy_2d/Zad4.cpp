@@ -1,12 +1,18 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz dwie macierze o tych samych wymiarach, zwroc macierz bedaca:
+/*
+Otrzymujesz dwie macierze o tych samych wymiarach, zwróć macierz będącą:
 
-// a) wynikiem dodawania otrzymanych macierzy;
+a) Wynikiem dodawania otrzymanych macierzy.
+b) Wynikiem odejmowania pierwszej macierzy od drugiej.
+*/
+
 bool wymiaryRowne(std::vector<std::vector<int>> macierzA,
                   std::vector<std::vector<int>> macierzB) {
-
+  /**
+   *
+   */
   if (macierzA.size() != macierzB.size())
     return false;
 
@@ -20,7 +26,9 @@ bool wymiaryRowne(std::vector<std::vector<int>> macierzA,
 
 std::vector<std::vector<int>> dodaj(std::vector<std::vector<int>> macierzA,
                                     std::vector<std::vector<int>> macierzB) {
-
+  /**
+   * 
+   */
   std::vector<std::vector<int>> wynik;
 
   if (!wymiaryRowne(macierzA, macierzB))
@@ -36,10 +44,11 @@ std::vector<std::vector<int>> dodaj(std::vector<std::vector<int>> macierzA,
   return wynik;
 }
 
-// b) odejmowania pierwszej macierzy od drugiej.
 std::vector<std::vector<int>> odejmij(std::vector<std::vector<int>> macierzA,
                                       std::vector<std::vector<int>> macierzB) {
-
+  /**
+   * 
+   */
   std::vector<std::vector<int>> wynik;
 
   if (!wymiaryRowne(macierzA, macierzB))

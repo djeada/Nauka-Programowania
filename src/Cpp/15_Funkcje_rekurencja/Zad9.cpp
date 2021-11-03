@@ -3,39 +3,61 @@
 #include <string>
 
 /*
-Napisz funkcje, ktora sprawdzi czy otrzymane slowo jest elfickie.
-Elfickie slowo to takie, w ktorym co najmniej raz wystepuje kazda
-z liter slowa elf.
+Otrzymuejsz napi. Sprawdź przy pomocy rekurencji czy otrzymane słowo 
+jest słowem elfickim. Przez słowo elfickie rozumiemy taki napis, w 
+którym co najmniej raz występuje każda z liter słowa elf.
 */
 
-bool czyElfickieSlowoV1(std::string slowo, std::string elf = "elf", int i = 0) {
 
-  if (i >= slowo.size())
+int znajdz(std::string slowo, char znak, unsigned int pozycja=0)
+{
+   /**
+   * Funkcja zwraca indeks pierwszego wystapienia litera w slowie.
+   */
+    if (pozycja >= slowo.size())
+      return -1;
+    
+    if (slowo[pozycja] == znak)
+      return pozycja;
+    
+    return znajdz(slowo, znak, pozycja + 1);
+}
+
+
+bool czySlowoElfickie(std::string slowo, std::string elf = "elf") {
+  /**
+   * Funkcja sprawdza czy wszystkie litery slowa elf wystepuja w napisie.
+   */
+  
+  if (elf.empty())
+    return true;
+  
+  if (slowo.empty())
+    return false;
+  
+  auto pozycja = znajdz(slowo, elf[0]);
+
+  if (pozycja == -1)
     return false;
 
-  auto litera = slowo[i];
+  // usun znak na pozycji pozycja z napisu slowo
+  slowo.erase(pozycja, 1);
 
-  if (elf.find(litera) != std::string::npos) {
-    elf.erase(remove(elf.begin(), elf.end(), litera), elf.end());
-    if (elf.empty())
-      return true;
-  }
-
-  return czyElfickieSlowoV1(slowo, elf, i + 1);
+  return czySlowoElfickie(slowo, elf.substr(1));
 }
 
 void test1() {
   std::string slowo = "reflektor";
   bool wynik = true;
 
-  assert(czyElfickieSlowoV1(slowo) == wynik);
+  assert(czySlowoElfickie(slowo) == wynik);
 }
 
 void test2() {
   std::string slowo = "elzbieta";
   bool wynik = false;
 
-  assert(czyElfickieSlowoV1(slowo) == wynik);
+  assert(czySlowoElfickie(slowo) == wynik);
 }
 
 int main() {

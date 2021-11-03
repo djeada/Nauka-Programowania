@@ -2,72 +2,57 @@
 #include <string>
 
 /*
-Gracz A oraz gracz B graja w kapsle.
-Na poczatku gry otrzymuja pewna liczbe kapsli.
-W kazdej turze grac moze z puli kapsli zabrac 1, 2 badz 4 kapsle.
-Gracz, ktory zabral ostatni kapsel wygyrwa.
-Gre rozpoczyna gracz A.
-Znajdz liczbe mozliwych kombinacji wybrania liczby kapsli w danej turze
-prowadzaca do zwyciestwa kazdego z graczy.
+Rozważ grę, w której w każdym ruchu gracz może zdobyć 3, 5 lub 10 punktów. 
+Dla otrzymanej liczby N, reprezentującej całkowitą liczbę punktów, 
+oblicz na ile sposobów gracz może wygrać grę.
 */
 
-void oblicz(int n, int &wynikA, int &wynikB, std::string s = "AB") {
+void gra(int n) {
+  /**
+   * Funkcja zwraca liczbę sposobów na wygraną w grze.
+   */
+  if (n < std::min(3, std::min(5, 10))) {
+    return 0;
 
-  if (n <= 0)
-    return;
+  std::vector<std::vector<int>> listaWynikow;
 
-  if (n == 1 || n == 2 || n == 4) {
 
-    if (s[0] == 'A')
-      wynikA++;
+  auto _gra = [&](int n, std::vector<int> wynik) {
+    
+    if (n < 0) 
+      return 0;
 
-    else
-      wynikB++;
+    if (n == 0) {
+      std::sort(wynik.begin(), wynik.end());
+      
+      if (std::find(listaWynikow.begin(), listaWynikow.end(), wynik) == listaWynikow.end()) {
+        listaWynikow.push_back(wynik);
+        return 1;
+      }
+      return 0;
+    }
 
-    return;
-  }
+    return _gra(n - 3, wynik) + _gra(n - 5, wynik) + _gra(n - 10, wynik);
 
-  else {
-    auto temp = s[0];
-    s[0] = s[1];
-    s[1] = temp;
+  };
 
-    oblicz(n - 1, wynikA, wynikB, s);
-    oblicz(n - 2, wynikA, wynikB, s);
-    oblicz(n - 4, wynikA, wynikB, s);
-  }
+  return _gra(n, std::vector<int>());
+
+}
+ 
 }
 
-void test1() {
-  int wynikA = 0;
-  int wynikB = 0;
+void testGra() {
 
-  oblicz(1, wynikA, wynikB);
-  assert(wynikA == 1);
-  assert(wynikB == 0);
+  assert (gra(0) == 0);
+  assert (gra(10) == 2);
+  assert (gra(20) == 4);
+  assert (gra(50) == 14);
+
 }
-
-void test2() {
-  int wynikA = 0;
-  int wynikB = 0;
-  oblicz(3, wynikA, wynikB);
-  assert(wynikA == 0);
-  assert(wynikB == 2);
-}
-
-void test3() {
-  int wynikA = 0;
-  int wynikB = 0;
-  oblicz(10, wynikA, wynikB);
-  assert(wynikA == 33);
-  assert(wynikB == 27);
-}
-
 int main() {
 
-  test1();
-  test2();
-  test3();
+  testGra();
 
   return 0;
 }

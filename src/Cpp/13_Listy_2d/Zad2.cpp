@@ -2,12 +2,16 @@
 #include <utility>
 #include <vector>
 
-// Dla otrzymanej liczby, stworz macierz kwadratowa skladajaca
-// sie z liczby kolumn i wierszy rownej otrzymanej liczbie
-// ktorej kazdy element jest iloczynem jego wspolrzednych.
+/*
+Dla otrzymanej liczby, stwórz macierz kwadratową składającą się 
+z liczby kolumn i wierszy równej otrzymanej liczbie, której każdy 
+element jest iloczynem jego współrzędnych.
+*/
 
 std::vector<std::vector<int>> macierz(int n) {
-
+  /**
+   *
+   */
   std::vector<std::vector<int>> macierz;
   macierz.reserve(n);
 

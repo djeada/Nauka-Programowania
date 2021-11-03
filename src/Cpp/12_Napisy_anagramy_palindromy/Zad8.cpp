@@ -2,20 +2,24 @@
 #include <cassert>
 #include <string>
 #include <vector>
+#include <set>
 
-// Znajdz wszystkie wyjatkowe palindromy jakie mozna utworzyc ze znakow
-// w slowie (bez zmiany kolejnosci).
-// Wyjatkowy palindrom spelnia jeden z dwoch warunkow:
-// 1. Wszystkie znaki sa identyczne, np. “xxx”.
-// 2. Wszystkie znaki poza srodkowym znakiem sa identyczne, np. “ccdcc”.
-// Pojedynczy znak jest rowniez uznawany za wyjatkowy palindrom.
-// Nie uwzgledniaj duplikatow w liscie.
+/*
+Znajdź wszystkie wyjątkowe palindromy jakie można utworzyć ze znaków w słowie 
+(bez zmiany kolejności występowania). Nie uwzględniaj duplikatów w liście.
 
-std::vector<std::string> wyjatkowePalindromy(const std::string &slowo) {
-  std::vector<std::string> wynik;
+Wyjątkowy palindrom musi spełniać jeden z dwóch warunków:
+1. Wszystkie znaki są identyczne, np. “xxx”.
+2. Wszystkie znaki poza środkowym znakiem są identyczne, np. “ccdcc”.
+
+Pojedynczy znak jest również uznawany za wyjątkowy palindrom.
+*/
+
+std::set<std::string> wyjatkowePalindromy(const std::string slowo) {
+  std::set<std::string> wynik;
 
   for (unsigned int i = 0; i < slowo.size(); i++) {
-    wynik.push_back(std::string(1, slowo[i]));
+    wynik.insert(std::string(1, slowo[i]));
 
     unsigned int j = i + 1;
     unsigned int k = 0;
@@ -23,7 +27,7 @@ std::vector<std::string> wyjatkowePalindromy(const std::string &slowo) {
       j++;
 
     if (j > i + 1)
-      wynik.push_back(slowo.substr(i, i - j));
+      wynik.insert(slowo.substr(i, i - j));
 
     if (j + 1 < slowo.size() && slowo[i] == slowo[j + 1])
       k = j + 1;
@@ -32,32 +36,22 @@ std::vector<std::string> wyjatkowePalindromy(const std::string &slowo) {
       k--;
 
     if (i + 1 == k)
-      wynik.push_back(slowo.substr(i, 2 * (j - i) + 1));
+      wynik.insert(slowo.substr(i, 2 * (j - i) + 1));
   }
 
   return wynik;
 }
 
-bool wektoryRowne(std::vector<std::string> v1, std::vector<std::string> v2) {
-  sort(v1.begin(), v1.end());
-  sort(v2.begin(), v2.end());
-  return v1 == v2;
-}
-
-void test1() {
-  std::string slowo = "xxxx";
-  std::vector<std::string> wynik{"x", "xxxx", "x", "xxx", "x", "xx", "x"};
-  assert(wektoryRowne(wyjatkowePalindromy(slowo), wynik));
-}
-
-void test2() {
-  std::string slowo;
-  std::vector<std::string> wynik;
-  assert(wektoryRowne(wyjatkowePalindromy(slowo), wynik));
+void testWyjatkowePalindromy(){
+  assert(wyjatkowePalindromy("xxx") == std::set<std::string>{"x", "xx", "xxx", "xxxx"});
+  assert(wyjatkowePalindromy("ccdcc") == std::set<std::string>{"cc", "d", "ccdcc", "c", "cdc"});
+  assert(wyjatkowePalindromy("abc") == std::set<std::string>{"a", "b", "c"});
+  assert(wyjatkowePalindromy("") == std::set<std::string>());
 }
 
 int main() {
-  test1();
-  test2();
+
+  testWyjatkowePalindromy();
+
   return 0;
 }

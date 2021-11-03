@@ -3,25 +3,32 @@
 #include <utility>
 #include <vector>
 
-// Otrzymujesz liste wspolczynnikow a, b, c rownania
-// kwadratowego ax^2 + bx + c.
-// Znajdz rzeczywiste miejsca zerowe rownania kwadratowego.
-std::pair<double, double> pierwiastki(std::vector<int> &lista) {
+/*
+Otrzymujesz listę współczynników równania kwadratowego ax^2 + bx + c. 
+Znajdź rzeczywiste miejsca zerowe równania kwadratowego.
+*/
 
-  assert(lista.size() == 3);
+std::pair<double, double> pierwiastki(std::vector<int> &wspolczynniki) {
+  /**
+   * Funkcja zwraca listę miejsc zerowych równania kwadratowego.
+   */
+  
+  if (wspolczynniki.size() != 3) {
+    throw std::invalid_argument("Podano nieprawidlowe wspolczynniki.");
+  }
 
   std::pair<double, double> wynik;
 
-  int delta = lista[1] * lista[1] - 4 * lista[0] * lista[2];
+  int delta = wspolczynniki[1] * wspolczynniki[1] - 4 * wspolczynniki[0] * wspolczynniki[2];
 
   if (delta > 0) {
-    wynik.first = (-lista[1] + sqrt(delta)) / (2 * lista[0]);
-    wynik.second = (-lista[1] - sqrt(delta)) / (2 * lista[0]);
+    wynik.first = (-wspolczynniki[1] + sqrt(delta)) / (2 * wspolczynniki[0]);
+    wynik.second = (-wspolczynniki[1] - sqrt(delta)) / (2 * wspolczynniki[0]);
   }
 
   else if (delta == 0) {
-    wynik.first = -lista[1] / (2 * lista[0]);
-    wynik.second = -lista[1] / (2 * lista[0]);
+    wynik.first = -wspolczynniki[1] / (2 * wspolczynniki[0]);
+    wynik.second = -wspolczynniki[1] / (2 * wspolczynniki[0]);
   }
 
   return wynik;

@@ -1,12 +1,16 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz liste 2d. Jesli element macierzy jest
-// rowny zero, zamien wszystkie elementy w tej samej
-// kolumnie i tym samym wierszu na zera.
+/*
+Otrzymujesz listę list liczb naturalnych reprezentującą macierz. 
+Jeśli element macierzy jest równy zero, zamień wszystkie elementy 
+w tej samej kolumnie i tym samym wierszu na zera.
+*/
 
 void wyzerujV1(std::vector<std::vector<int>> &macierz) {
-
+  /**
+   *
+   */
   if (macierz.empty())
     return;
 

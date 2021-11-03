@@ -1,11 +1,14 @@
 #include <cassert>
 
 /*
-Silnia.
+Otrzymujesz liczbę N. Przy użyciu rekurencji
+ oblicz silnię z otrzymanej liczby.
 */
 
 int silniaV1(int n) {
-
+  /**
+   *
+   */
   if (n == 0 || n == 1)
     return 1;
 

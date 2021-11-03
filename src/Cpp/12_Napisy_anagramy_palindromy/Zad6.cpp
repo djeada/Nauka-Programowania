@@ -3,7 +3,9 @@
 #include <string>
 #include <vector>
 
-// Znajdz wszystkie permutacje slowa bedace palindromami.
+/*
+Znajdź permutacje danego słowa będące palindromami.
+*/
 
 bool palindrom(std::string &slowo) {
   int N = slowo.length() - 1;

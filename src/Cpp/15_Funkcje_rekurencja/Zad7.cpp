@@ -1,9 +1,10 @@
 #include <cassert>
 
 /*
-Otrzymujesz liczbę N. Oblicz wartość N-tego wyrazu ciągu danego wzorem rekurencyjnym:
-a_1 = 1
-a_n = 1 + 2a_(n-1)
+Otrzymujesz listę liczb naturalnych oraz klucz.
+Przy użyciu rekurencji znajdź indeks odpowiadający 
+pierwszemu wystąpieniu klucza w liście. Jeśli 
+klucz nie wystęþuje w liście, zwróć -1.
 */
 
 int ciagV1(int n) {

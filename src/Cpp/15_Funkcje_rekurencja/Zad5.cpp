@@ -1,9 +1,14 @@
 #include <cassert>
 
-// Liczba Fibonacciego.
+/*
+Otrzymujesz liczbę N. Przy użyciu rekurencji 
+oblicz wartość N-tego wyrazu ciągu Fibonacciego.
+*/
 
 int fibonnaciV1(int n) {
-
+  /**
+   *
+   */
   if (n == 0 || n == 1)
     return n;
 

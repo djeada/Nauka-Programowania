@@ -2,25 +2,40 @@
 #include <cmath>
 #include <vector>
 
-// Otrzymujesz dwie listy n wspolczynnikow wielomianu postaci
-// a_nx^n + a_(n-1)x^(n-1) + ... + a_. Oblicz wartosc wspolczynnikow
-// wielomianu bedacego suma otrzymanych wielomianow.
-std::vector<int> suma(std::vector<int> &listaA, std::vector<int> &listaB) {
+/*
+Otrzymujesz dwie listy n współczynników wielomianu postaci a_nx^n + a_(n-1)x^(n-1) + ... + a_0.
+Oblicz współczynniki wielomianu będącego sumą otrzymanych wielomianów.
+*/
 
-  assert(listaA.size() == listaB.size());
+std::vector<int> sumaWielomianow(std::vector<int> &wielomianA, std::vector<int> &wielomianB) {
+  /**
+   * Funkcja sumuje dwie listy wielomianów.
+   */
+  
   std::vector<int> wynik;
 
-  for (unsigned int i = 0; i < listaA.size(); i++)
-    wynik.push_back(listaA[i] + listaB[i]);
+  int min = wielomianA.size() < wielomianB.size() ? wielomianA.size() : wielomianB.size();
+
+  for (int i = 0; i < min; i++) {
+    wynik.push_back(wielomianA[i] + wielomianB[i]);
+  }
+
+  for (int i = min; i < wielomianA.size(); i++) {
+    wynik.push_back(wielomianA[i]);
+  }
+
+  for (int i = min; i < wielomianB.size(); i++) {
+    wynik.push_back(wielomianB[i]);
+  }
 
   return wynik;
 }
 
 void test1() {
-  std::vector<int> listaA{3, 2, 1};
-  std::vector<int> listaB{8, 9, 2};
+  std::vector<int> wielomianA{3, 2, 1};
+  std::vector<int> wielomianB{8, 9, 2};
   std::vector<int> wynik{11, 11, 3};
-  assert(suma(listaA, listaB) == wynik);
+  assert(sumaWielomianow(wielomianA, wielomianB) == wynik);
 }
 
 int main() {

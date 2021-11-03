@@ -2,7 +2,10 @@
 #include <cassert>
 #include <string>
 
-// Sprawdz czy slowo jest palindromem.
+/*
+Sprawdź czy słowo jest palindromem. Palindrom to słowo brzmiące tak samo 
+czytane od lewej do prawej i od prawej do lewej.
+*/
 
 bool palindrom(std::string &slowo) {
   int N = slowo.length() - 1;

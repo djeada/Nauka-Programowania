@@ -2,14 +2,17 @@
 #include <utility>
 #include <vector>
 
-// Dla otrzymanych dwoch list, stworz dwu-kolumnowa macierz,
-// ktorej pierwsza kolumna sklada sie z elementow pierwszej
-// listy, a druga drugiej. Jesli otrzymane listy nie sa rownej
-// dlugosci zwroc pusta macierz.
+/*
+Dla otrzymanych dwóch list, stwórz dwukolumnową macierz, której pierwsza 
+kolumna składa się z elementów pierwszej listy, a druga kolumna elementów 
+drugiej listy. Jeśli otrzymane listy nie są równej długości zwróć pustą macierz.
+*/
 
 std::vector<std::pair<int, int>> macierz(std::vector<int> listaA,
                                          std::vector<int> listaB) {
-
+  /**
+   *
+   */
   std::vector<std::pair<int, int>> macierz;
 
   if (listaA.size() != listaB.size())

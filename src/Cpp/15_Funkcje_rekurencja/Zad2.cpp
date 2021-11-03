@@ -1,11 +1,14 @@
 #include <cassert>
 
 /*
-Suma liczb naturalnych mniejszych od N.
+Otrzymujesz liczbę N. Przy użyciu rekurencji oblicz 
+sumę liczb naturalnych mniejszych od N.
 */
 
 int sumaV1(int N) {
-
+  /**
+   * Funkcja zwraca wielomian bedacy wynikiem mnozenia otrzymanego wielomianu przez liczbę x.
+   */
   if (N <= 0)
     return 0;
 

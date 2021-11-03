@@ -2,24 +2,33 @@
 #include <iostream>
 
 /*
-Liczby naturalne mniejsze rowne N.
+Otrzymujesz liczbę N. Przy użyciu rekurencji zbuduj napis składający 
+się z liczb naturalnych mniejszych od N oddzielonych przecinkami.
 */
 
-std::string mniejszeLiczbyV1(int n) {
-
-  if (n < 0)
+std::string mniejszeLiczby(int n) {
+  /**
+   *
+   */
+  if (n <= 0)
     return "";
 
-  if (n == 0)
+  if (n == 1)
     return std::to_string(n);
 
   return std::to_string(n) + ", " + mniejszeLiczbyV1(n - 1);
 }
 
+void testMniejszeLiczby() {
+
+  assert(mniejszeLiczby(0) == "");
+  assert(mniejszeLiczby(10) == "10, 9, 8, 7, 6, 5, 4, 3, 2, 1");
+
+}
+
 int main() {
-  int n = 10;
-  std::string wynik = "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0";
-  std::cout << mniejszeLiczbyV1(n) << std::endl;
+  
+  testMniejszeLiczby();
 
   return 0;
 }

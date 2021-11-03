@@ -2,22 +2,34 @@
 #include <utility>
 #include <vector>
 
-// Wieza Hanoi.
-
-void hanoiWew(int n, char a, char b, char c,
-              std::vector<std::pair<char, char>> &wynik) {
-
-  if (n == 1) {
-    wynik.emplace_back(a, b);
-    return;
-  }
-
-  hanoiWew(n - 1, a, c, b, wynik);
-  wynik.emplace_back(a, b);
-  hanoiWew(n - 1, c, b, a, wynik);
-}
+/*
+N krążków o różnych średnicach ułożone jest na jednym z trzech słupków 
+(A, B lub C). Na spodzie znajduje się krążek o największej średnicy. 
+Każdy następny krążek jest mniejszy od poprzedniego. Znajdź sposób na 
+przełożenie wszystkich krążków na inny słupek. Pamiętaj, że nie wolno 
+kłaść krążka o większej średnicy na krążek o mniejszej średnicy, ani 
+przekładać kilku krążków jednocześnie. 
+*/
 
 std::vector<std::pair<char, char>> hanoi(int n) {
+  /**
+   *
+   */
+  auto hanoiWew = [&](int n, char a, char b, char c,
+                      std::vector<std::pair<char, char>> &wynik) {
+    /**
+     *
+    */
+    if (n == 1) {
+      wynik.emplace_back(a, b);
+      return;
+    }
+
+    hanoiWew(n - 1, a, c, b, wynik);
+    wynik.emplace_back(a, b);
+    hanoiWew(n - 1, c, b, a, wynik);
+  };
+
   std::vector<std::pair<char, char>> wynik;
   hanoiWew(n, 'A', 'B', 'C', wynik);
   return wynik;

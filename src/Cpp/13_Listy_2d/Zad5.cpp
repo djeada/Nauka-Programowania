@@ -2,13 +2,14 @@
 #include <utility>
 #include <vector>
 
-// Otrzymujesz macierz kwadratowa. Sprawdz, czy macierz jest kwadratem
-// magicznym. Kwadrat magiczny sklada sie z nie powtarzajacych sie dodatnich
-// liczb naturalnych. Suma elementow w kazdym wierszu, w kazdej kolumnie oraz na
-// kazdej przekatnej jest taka sama.
+/*
+Otrzymujesz macierz kwadratową. Sprawdź, czy macierz jest kwadratem magicznym. 
+*/
 
 bool macierzKwadratowa(const std::vector<std::vector<int>> &macierz) {
-
+  /**
+   *
+   */
   unsigned int n = macierz.size();
 
   for (unsigned int i = 0; i < n; i++) {
@@ -20,23 +21,25 @@ bool macierzKwadratowa(const std::vector<std::vector<int>> &macierz) {
 }
 
 std::pair<int, int> przekatne(const std::vector<std::vector<int>> &macierz) {
-  int sumaPrzekatnej1 = 0;
-  int sumaPrzekatnej2 = 0;
+  /**
+   *
+   */
   unsigned int n = macierz.size();
+  int sumaPrzekatnej1 = 0, sumaPrzekatnej2 = 0;
 
   for (unsigned int i = 0; i < n; i++) {
-    for (unsigned int j = 0; j < n; j++) {
-      if (i == j)
-        sumaPrzekatnej1 += macierz[i][j];
-      if (i + j == (n - 1))
-        sumaPrzekatnej2 += macierz[i][j];
-    }
+    sumaPrzekatnej1 += macierz[i][i];
+    sumaPrzekatnej2 += macierz[i][n - i - 1];
   }
 
-  return std::pair<int, int>(sumaPrzekatnej1, sumaPrzekatnej2);
+  return std::make_pair(sumaPrzekatnej1, sumaPrzekatnej2);
 }
 
+
 std::vector<int> wiersze(const std::vector<std::vector<int>> &macierz) {
+  /**
+   *
+   */
   std::vector<int> wynik;
 
   for (auto wiersz : macierz) {
@@ -52,6 +55,9 @@ std::vector<int> wiersze(const std::vector<std::vector<int>> &macierz) {
 }
 
 std::vector<int> kolumny(const std::vector<std::vector<int>> &macierz) {
+  /**
+   *
+   */
   std::vector<int> wynik;
 
   for (unsigned int i = 0; i < macierz.size(); i++) {
@@ -67,7 +73,9 @@ std::vector<int> kolumny(const std::vector<std::vector<int>> &macierz) {
 }
 
 bool magicznyKwadrat(const std::vector<std::vector<int>> &macierz) {
-
+  /**
+   *
+   */
   if (!macierzKwadratowa(macierz))
     return false;
 

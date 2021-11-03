@@ -1,19 +1,24 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz liste 2d. Obroc otrzymana liste o 90 stopni.
-// Tzn. zamien miejscami ostatnia kolumne, z ostatnim wierszem,
-// przedostatnia kolumne z przedostatnim wierszem itd.
+/*
+Otrzymujesz listę list liczb naturalnych. Obróć otrzymaną listę o 90 stopni. 
+Tzn. zamień miejscami ostatnią kolumnę z ostatnim wierszem, przedostatnią 
+kolumnę z przedostatnim wierszem itd.
+*/
 
 void obroc(std::vector<std::vector<int>> &macierz) {
+  /**
+   * Funkcja obraca macierz o 90 stopni
+   */
 
   int N = macierz.size();
 
   for (int i = 0; i < N / 2; i++) {
-    int first = i + 1;
-    int last = N - 1 - i;
+    int pierwszy = i + 1;
+    int ostatni = N - 1 - i;
 
-    for (int j = first; j < last; j++) {
+    for (int j = pierwszy; j < ostatni; j++) {
       int pom = macierz[i][j];
       macierz[i][j] = macierz[N - 1 - j][i];
       macierz[N - 1 - j][i] = macierz[N - 1 - i][N - 1 - j];
@@ -29,7 +34,7 @@ void obroc(std::vector<std::vector<int>> &macierz) {
   }
 }
 
-void test1() {
+void testObroc() {
   std::vector<std::vector<int>> macierz{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
   std::vector<std::vector<int>> wynik{{7, 4, 1}, {8, 5, 2}, {9, 6, 3}};
 
@@ -39,7 +44,7 @@ void test1() {
 
 int main() {
 
-  test1();
+  testObroc();
 
   return 0;
 }

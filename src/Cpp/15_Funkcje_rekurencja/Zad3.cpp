@@ -1,11 +1,14 @@
 #include <cassert>
 
 /*
-Potega.
+Otrzymuje dwie liczby a i b. Przy użyciu rekurencji 
+oblicz ile wynosi a podniesione do b.
 */
 
 int potegaV1(int a, int b) {
-
+  /**
+   *
+   */
   if (b == 0)
     return 1;
 

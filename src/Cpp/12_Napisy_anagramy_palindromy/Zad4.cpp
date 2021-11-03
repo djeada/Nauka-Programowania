@@ -3,9 +3,10 @@
 #include <string>
 #include <vector>
 
-// Otrzymujesz napis reprezentujacy zdanie.
-// Znajdz wszystkie palindromy w zdaniu.
-// Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
+/*
+Otrzymujesz napis reprezentujący zdanie. Znajdź wszystkie palindromy 
+w zdaniu. Różnice między wielkimi i małymi literami powinny być zignorowane.
+*/
 
 void naMale(std::string &slowo) {
   transform(slowo.begin(), slowo.end(), slowo.begin(), ::tolower);

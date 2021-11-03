@@ -1,20 +1,24 @@
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz liste n wspolczynnikow wielomianu postaci
-// a_nx^n + a_(n-1)x^(n-1) + ... + a_0 oraz liczbe k.
-// Oblicz wartosc wspolczynnikow wielomianu bedacego k-ta
-// pochodna otrzymanego wielomianu.
-std::vector<int> pochodna(std::vector<int> &lista, int k) {
+/*
+Otrzymujesz listę n współczynników wielomianu postaci anxn+an-1xn-1+...+a0 
+oraz liczbę k. Oblicz współczynniki wielomianu będącego k-tą pochodną 
+otrzymanego wielomianu.
+*/
 
+std::vector<int> pochodna(std::vector<int> &wielomian, int k) {
+  /**
+   * Funkcja oblicza k-tą pochodną wielomianu.
+   */
   std::vector<int> wynik;
-  std::vector<int> kopia(lista);
+  std::vector<int> kopia(wielomian);
 
-  for (int j = 0; j < k; j++) {
+  for (int i = 0; i < k; i++) {
     wynik.clear();
     int n = kopia.size();
-    for (int i = 0; i < n - 1; i++)
-      wynik.push_back(kopia[i] * (n - i - 1));
+    for (int j = 0; j < n - 1; j++)
+      wynik.push_back(kopia[j] * (n - j - 1));
     kopia = wynik;
   }
 
@@ -22,17 +26,17 @@ std::vector<int> pochodna(std::vector<int> &lista, int k) {
 }
 
 void test1() {
-  std::vector<int> lista{4, -3, 2};
+  std::vector<int> wielomian{4, -3, 2};
   int k = 1;
   std::vector<int> wynik{8, -3};
-  assert(pochodna(lista, k) == wynik);
+  assert(pochodna(wielomian, k) == wynik);
 }
 
 void test2() {
-  std::vector<int> lista{13, -6, 0, -1, -1};
+  std::vector<int> wielomian{13, -6, 0, -1, -1};
   int k = 2;
   std::vector<int> wynik{156, -36, 0};
-  assert(pochodna(lista, k) == wynik);
+  assert(pochodna(wielomian, k) == wynik);
 }
 
 int main() {
