@@ -1,24 +1,44 @@
 #include <cassert>
 
-// Znajdz min/maks dwoch liczb bez uzycia instrukcji warunkowej.
+/*
+Otrzymujesz dwie liczby naturalne. 
 
-int znak(int n) { return (n >> 31) & 0x01; }
+a) Zwróć mniejszą liczbę. Zabronione jest użycie instrukcji 
+warunkowej i zewnętrznych bibliotek.
+b) Zwróć większą liczbę. Zabronione jest użycie instrukcji 
+warunkowej i zewnętrznych bibliotek.
+*/
 
-// a >= b : znakA = 1, znakB = 0;
-// a < b : znakA = 0, znakB = 1;
+int znak(int n) { 
+  /*
+  * Funkcja zwraca znak liczby n.
+  */
+ return (n >> 31) & 0x01; 
+}
+
 int maks(int a, int b) {
+  /*
+  * Funkcja zwraca maksimum dwóch liczb.
+  * dla a >= b: znak_a = 1, znak_b = 0;
+  * dla a < b: znak_a = 0, znak_b = 1;
+  */
   int znakB = znak(a - b);
   int znakA = znakB ^ 1;
   return znakA * a + znakB * b;
 }
 
 int min(int a, int b) {
+  /*
+  * Funkcja zwraca minimum dwóch liczb.
+  * dla a >= b: znak_a = 0, znak_b = 1;
+  * dla a < b: znak_a = 1, znak_b = 0;
+  */
   int znakB = znak(a - b);
   int znakA = znakB ^ 1;
   return znakB * a + znakA * b;
 }
 
-void test1() {
+void testMaks() {
   int a = 10;
   int b = 8;
   int wynik = a;
@@ -26,7 +46,7 @@ void test1() {
   assert(maks(a, b) == wynik);
 }
 
-void test2() {
+void testMin() {
   int a = 10;
   int b = 8;
   int wynik = b;
@@ -36,8 +56,8 @@ void test2() {
 
 int main() {
 
-  test1();
-  test2();
+  testMaks();
+  testMin();
 
   return 0;
 }

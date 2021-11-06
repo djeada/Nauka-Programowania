@@ -1,9 +1,16 @@
 #include <algorithm>
 #include <cassert>
 
-// Znajdz dlugosc najdluzszego ciagu zer w liczbie binarnej.
+/*
+Otrzymujesz dziesiętną reprezentację liczby naturalnej. 
+Oblicz długość najdłuższego ciągu zer w jej binarnej reprezentacji.
+*/
 
 int najdluzszyCiagZer(int liczba) {
+  /*
+  * Funkcja zwraca długość najdłuższego ciągu zer w dziesiętnej
+  * reprezentacji liczby binarnej.
+  */
   if (liczba == 0)
     return 1;
 
@@ -22,18 +29,9 @@ int najdluzszyCiagZer(int liczba) {
   return std::max(wynik, pom);
 }
 
-void test1() {
-  int liczba = 111;
-  int wynik = 1;
-
-  assert(najdluzszyCiagZer(liczba) == wynik);
-}
-
-void test2() {
-  int liczba = 8219;
-  int wynik = 8;
-
-  assert(najdluzszyCiagZer(liczba) == wynik);
+void testNajdluzszyCiagZer() {
+  assert(najdluzszyCiagZer(111) == 1);
+  assert(najdluzszyCiagZer(8219) == 8);
 }
 
 int main() {

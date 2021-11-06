@@ -3,35 +3,47 @@
 #include <cmath>
 #include <string>
 
-// Konwersja miedzy dowolnymi systemami liczbowymi.
-int naDec(std::string liczba, int podstawa) {
-  int wartoscDec = 0;
+/*
+Otrzymujesz liczbę naturalną, podstawę systemu liczbowego w którym 
+zapisana jest otrzymana liczba oraz podstawę systemu na który ma 
+zostać dokonana konwersja. Zwróć reprezentację otrzymanej liczby 
+w nowym systemie.
+*/
+
+int naDziesietny(std::string liczba, int staraPodstawa) {
+  /*
+  * Funkcja zamienia liczbę z reprezentacji w systemie stara_podstawa na reprezentację w systemie dziesiętnym.
+  */
+ 
+  int reprezentacjaDziesietna = 0;
 
   for (int i = liczba.size() - 1; i >= 0; i--) {
 
     if (liczba[i] >= 'A' && liczba[i] < 'Z')
-      wartoscDec +=
-          (liczba[i] - 'A' + 10) * pow(podstawa, (liczba.size() - 1 - i));
+      reprezentacjaDziesietna +=
+          (liczba[i] - 'A' + 10) * pow(staraPodstawa, (liczba.size() - 1 - i));
 
     else
-      wartoscDec += (liczba[i] - '0') * pow(podstawa, (liczba.size() - 1 - i));
+      reprezentacjaDziesietna += (liczba[i] - '0') * pow(staraPodstawa, (liczba.size() - 1 - i));
   }
 
-  return wartoscDec;
+  return reprezentacjaDziesietna;
 }
 
-void zmianaPodstawy(std::string &liczba, int podstawa, int nowaPodstawa) {
+void zmianaPodstawy(std::string &liczba, int staraPodstawa, int nowaPodstawa) {
+  /*
+  * Funkcja zamienia liczbę z reprezentacji w systemie stara_podstawa na reprezentację w systemie dziesiętnym.
+  */
+  if (staraPodstawa > (10 + 'Z' - 'A'))
+    throw std::invalid_argument("Podstawa systemu nie moze byc wieksza niz 36");
 
-  if (podstawa > (10 + 'Z' - 'A'))
-    return;
-
-  int wartoscDec = naDec(liczba, podstawa);
+  int reprezentacjaDziesietna = naDziesietny(liczba, staraPodstawa);
   liczba = "";
   podstawa = nowaPodstawa;
 
-  while (wartoscDec > 0) {
-    int reszta = wartoscDec % podstawa;
-    wartoscDec /= podstawa;
+  while (reprezentacjaDziesietna > 0) {
+    int reszta = reprezentacjaDziesietna % podstawa;
+    reprezentacjaDziesietna /= podstawa;
 
     char nowyZnak = '0' + reszta;
 
@@ -44,7 +56,7 @@ void zmianaPodstawy(std::string &liczba, int podstawa, int nowaPodstawa) {
   reverse(liczba.begin(), liczba.end());
 }
 
-void test1() {
+void testZmianaPodstawy() {
   std::string liczba = "4301";
   std::string wynik = "1003031";
   zmianaPodstawy(liczba, 10, 4);
@@ -54,6 +66,7 @@ void test1() {
 
 int main() {
 
-  test1();
+  testZmianaPodstawy();
+  
   return 0;
 }

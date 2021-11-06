@@ -1,10 +1,20 @@
 #include <cassert>
 #include <functional>
 
-// Otrzymujesz dwie liczby. Uzywajac jedynie operatorow bitowych zaimplementuj:
+/*
+Otrzymujesz dwie liczby naturalne. Używając jedynie operatorów 
+bitowych zaimplementuj:
 
-// a) dodawanie.
+a) Dodawanie.
+b) Odejmowanie.
+c) Mnożenie
+d) Dzielenie.
+*/
+
 int suma(int a, int b) {
+  /*
+  * Funkcja dodaje dwie liczby naturalne.
+  */
 
   while (b != 0) {
     int pom = a & b;
@@ -15,8 +25,10 @@ int suma(int a, int b) {
   return a;
 }
 
-// b) odejmowanie.
 int roznica(int a, int b) {
+  /*
+  * Funkcja odejmuje dwie liczby naturalne.
+  */
 
   while (b != 0) {
     int pom = (~a) & b;
@@ -27,8 +39,10 @@ int roznica(int a, int b) {
   return a;
 }
 
-// c) mnozenie.
 int iloczyn(int a, int b) {
+  /*
+  * Funkcja mnoży dwie liczby naturalne.
+  */
 
   int znak = (a < 0 && b >= 0) || (b < 0 && a >= 0) ? -1 : 1;
 
@@ -50,11 +64,17 @@ int iloczyn(int a, int b) {
   return znak * pom;
 }
 
-// d) dzielenie.
 int iloraz(int a, int b) {
+  /*
+  * Funkcja zwraca iloraz a przez b, gdzie a i b są liczbami naturalnymi.
+  */
+
   std::function<int(int, int, int, int *)> wew_iloczyn;
   wew_iloczyn = [&wew_iloczyn](int dzielna, int dzielnik, int org_b,
                                int *reszta) -> int {
+    /*
+    * Funkcja wewnętrzna funkcji iloraz.
+    */
     int wynik = 1;
 
     if (dzielna == dzielnik) {

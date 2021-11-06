@@ -2,11 +2,18 @@
 #include <cmath>
 #include <string>
 
-// Otrzymujesz liczbe, zamien ja na jej binarny odpowiednik jesli:
+/*
+Otrzymujesz liczbę naturalną. Zwróć binarną 
+reprezentację otrzymanej liczby jeśli:
 
-// a) jest liczba parzysta.
-std::string naBin(int liczba) {
+a) Otrzymana liczba jest liczbą parzystą.
+b) Otrzymana liczba jest liczbą pierwszą.
+*/
 
+std::string naBinarny(int liczba) {
+  /*
+  * Funkcja zamienia liczbę dziesiętną na binarną.
+  */
   std::string bin;
 
   while (liczba > 0) {
@@ -18,15 +25,19 @@ std::string naBin(int liczba) {
 }
 
 std::string zamienLiczbeParzysta(int liczba) {
+  /*
+  * Funkcja zamienia liczbę parzystą na liczbę binarną.
+  */
   if (liczba % 2 == 0)
-    return naBin(liczba);
+    return naBinarny(liczba);
 
   return "";
 }
 
-// b) jest liczba pierwsza.
 bool czyPierwsza(int n) {
-
+  /*
+  *  Funkcja sprawdza czy liczba jest pierwsza.
+  */
   if (n <= 1)
     return false;
 
@@ -42,8 +53,11 @@ bool czyPierwsza(int n) {
 }
 
 std::string zamienLiczbePierwsza(int liczba) {
+  /*
+  * Funkcja zamienia liczbę pierwszą na liczbę binarną.
+  */
   if (czyPierwsza(liczba))
-    return naBin(liczba);
+    return naBinarny(liczba);
 
   return "";
 }

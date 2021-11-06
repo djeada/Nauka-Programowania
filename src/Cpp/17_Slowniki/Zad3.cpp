@@ -2,14 +2,23 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
+#include <cassert>
 
 using namespace std;
 
-// Zbuduj prosta baze danych dla biblioteki oparta o slownik w ktorym kluczami
-// sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek.
-// Baza danych powinna umozliwiac:
-// a) dodanie wypozyczonej ksiazki do danego czytelnika;
+/*
+Zbuduj prostą bazę danych dla biblioteki opartą o słownik w którym kluczami są 
+imiona czytelników, a wartościami listy wypożyczonych książek. 
+Baza danych powinna umożliwiać:
+a) Dodanie wypożyczonej książki do danego czytelnika.
+b) Zwrócenie wypożyczonej książki przez czytelnika.
+c) Wypisanie aktualnej listy wypożyczonych książek dla danego czytelnika.
+*/
+
 void dodajKsiazke(
+  /*
+  * Funkcja dodaje ksiazke do listy ksiazek wypozyczonych przez czytelnika w bazie danych.
+  */
     std::unordered_map<std::string, std::vector<std::string>> &lista,
     const std::string &uzytkownik, const std::string &ksiazka) {
   if (lista.count(uzytkownik)) {
@@ -28,10 +37,12 @@ void dodajKsiazke(
   }
 }
 
-// b) usuniecie wypozyczonej ksiazki z listy odpowiadajacej czytelnikowi;
 void usunKsiazke(
     std::unordered_map<std::string, std::vector<std::string>> &lista,
     const std::string &uzytkownik, const std::string &ksiazka) {
+  /*
+  * Funkcja usuwa ksiazke z listy ksiazek wypozyczonych przez czytelnika w bazie danych.
+  */
 
   if (!lista.count(uzytkownik)) {
     cout << "Podany uzytkownik nie znajduje sie w liscie." << endl;
@@ -48,9 +59,10 @@ void usunKsiazke(
     cout << "Uzytkownik nie wypozyczyl tej ksiazki." << endl;
 }
 
-// c) wyswietlenie aktualnej listy ksiazek dla konkretnego czytelnika oraz
-// dla wszystkich czytelnikow;
 void wyswietlKsiazki(
+  /*
+  * Funkcja wypisuje liste wypozyczonych ksiazek dla danego czytelnika.
+  */
     std::unordered_map<std::string, std::vector<std::string>> &lista,
     const std::string &uzytkownik) {
 
@@ -67,6 +79,9 @@ void wyswietlKsiazki(
 }
 
 void wyswietlWszystkieKsiazki(
+  /*
+  * Funkcja wypisuje liste wszystkich wypozyczonych ksiazek.
+  */
     std::unordered_map<std::string, std::vector<std::string>> &lista) {
 
   for (auto it = lista.begin(); it != lista.end(); it++) {
@@ -75,28 +90,37 @@ void wyswietlWszystkieKsiazki(
   }
 }
 
-int main() {
+void testDodajKsiazke() {
 
   std::unordered_map<std::string, std::vector<std::string>> lista;
 
-  dodajKsiazke(lista, "Pan T", "Duma i uprzedzenie – Jane Austen");
-  dodajKsiazke(lista, "Pan T", "Zabic drozdad – Harper Lee");
-  dodajKsiazke(lista, "Pan T", "Biblia");
-  dodajKsiazke(lista, "Pan T", "Buszujacy w zbozu – JD Salinger");
-  dodajKsiazke(lista, "Pan T", "Rok 1984 – George Orwell");
-  dodajKsiazke(lista, "Pan T", "Wedy");
+  dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
+  assert(lista["Jan Kowalski"].size() == 1);
+  assert(lista["Jan Kowalski"][0] == "W pustyni i w puszczy");
+  dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
+  assert(lista["Jan Kowalski"].size() == 1);
+  assert(lista["Jan Kowalski"][0] == "W pustyni i w puszczy");
+  dodajKsiazke(lista, "Jan Kowalski", "Władca Pierścieni");
+  assert(lista["Jan Kowalski"].size() == 2);
+  assert(lista["Jan Kowalski"][1] == "Władca Pierścieni");
+}
 
-  dodajKsiazke(lista, "Elzbieta", "Wielkie nadzieje – Charles Dickens");
-  dodajKsiazke(lista, "Elzbieta", "Hobbit – JRR Tolkien");
-  dodajKsiazke(lista, "Elzbieta", "Harry Potter – JK Rowling");
+void testUsunKsiazke() {
 
-  wyswietlWszystkieKsiazki(lista);
+  std::unordered_map<std::string, std::vector<std::string>> lista {{"Jan Kowalski", {"W pustyni i w puszczy", "Władca Pierścieni"}}, {"Janina Kowalska", {"W pustyni i w puszczy"}}};
 
-  usunKsiazke(lista, "Elzbieta", "Hobbit – JRR Tolkien");
-  usunKsiazke(lista, "Pan T", "Zabic drozdad – Harper Lee");
-  usunKsiazke(lista, "Pan T", "Rok 1984 – George Orwell");
+  usunKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
+  assert(lista["Jan Kowalski"].size() == 1);
+  assert(lista["Jan Kowalski"][0] == "Władca Pierścieni");
+  usunKsiazke(lista, "Jan Kowalski", "Władca Pierścieni");
+  assert(lista["Jan Kowalski"].size() == 0);
 
-  wyswietlWszystkieKsiazki(lista);
+}
+
+int main() {
+
+  testDodajKsiazke();
+  testUsunKsiazke();
 
   return 0;
 }

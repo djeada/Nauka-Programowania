@@ -1,9 +1,17 @@
 #include <cassert>
 #include <string>
 
-// Przy uzyciu operatorow bitowych:
-// a) Zamien wielkie litery na male.
+/*
+Otrzymujesz napis. Przy użyciu operatorów bitowych:
+a) Zamień wielkie litery na małe litery.
+b) Zamień małe litery na wielkie litery.
+c) Zamień małe litery na wielkie litery i wielkie litery na małe litery.
+*/
+
 std::string wielkieNaMale(std::string slowo) {
+  /*
+  * Funkcja zamienia wielkie litery na male litery.
+  */
   std::string wynik = "";
 
   for (const int &litera : slowo)
@@ -12,8 +20,10 @@ std::string wielkieNaMale(std::string slowo) {
   return wynik;
 }
 
-// b) Zamien male litery na wielkie.
 std::string maleNaWielkie(std::string slowo) {
+  /*
+  * Funkcja zamienia male litery na wielkie litery.
+  */
   std::string wynik = "";
 
   for (const int &litera : slowo)
@@ -22,9 +32,10 @@ std::string maleNaWielkie(std::string slowo) {
   return wynik;
 }
 
-// c) Zamien male litery na wielkie i wielkie na male.
 std::string odwrocWielkoscLiter(std::string slowo) {
-
+  /*
+  * Funkcja zamienia male litery na wielkie litery i wielkie litery na male litery.
+  */
   std::string wynik = "";
 
   for (const int &litera : slowo) {
@@ -42,21 +53,21 @@ std::string odwrocWielkoscLiter(std::string slowo) {
   return wynik;
 }
 
-void test1() {
+void testWielkieNaMale() {
   std::string slowo = "KURCZAKU";
   std::string wynik = "kurczaku";
 
   assert(wielkieNaMale(slowo) == wynik);
 }
 
-void test2() {
+void testMaleNaWielkie() {
   std::string slowo = "piesek";
   std::string wynik = "PIESEK";
 
   assert(maleNaWielkie(slowo) == wynik);
 }
 
-void test3() {
+void testOdwrocWielkoscLiter() {
   std::string slowo = "wszedl Kotek na PloteK i mrUga";
   std::string wynik = "WSZEDL kOTEK NA pLOTEk I MRuGA";
 
@@ -65,9 +76,9 @@ void test3() {
 
 int main() {
 
-  test1();
-  test2();
-  test3();
+  testWielkieNaMale();
+  testMaleNaWielkie();
+  testOdwrocWielkoscLiter();
 
   return 0;
 }

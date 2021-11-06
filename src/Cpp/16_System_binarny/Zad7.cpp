@@ -1,7 +1,15 @@
 #include <cassert>
 
-// Zamien miejscami sasiadujace bity.
+/*
+Otrzymujesz dziesiętną reprezentację liczby naturalnej. 
+Zamień miejscami sąsiadujące bity w zapisie binarnym 
+otrzymanej liczbie. Zwróć dziesiętną reprezentację wyniku.
+*/
+
 int zamienSasiadow(int liczba) {
+  /*
+  * Funkcja zamienia sasiadujace bity w binarnym zapisie liczby.
+  */
   int parzyste = liczba & 0xAAAAAAAA;
   int nieparzyste = liczba & 0x55555555;
 

@@ -1,12 +1,17 @@
 #include <bitset>
 #include <cassert>
 
-// Czy liczba jest palindromem?
+/*
+Otrzymujesz dziesiętną reprezentację liczby naturalnej. 
+Sprawdź czy binarna reprezentacja otrzymanej liczby jest palindromem.
+*/
 
 const int liczbaBitow = 8;
 
-bool czyPalindromV1(int liczba) {
-
+bool czyPalindrom(int liczba) {
+  /*
+  * Funkcja sprawdza czy podana liczba jest palindromem.
+  */
   std::bitset<liczbaBitow> bity = liczba;
 
   for (int i = 0; i < liczbaBitow / 2 - 1; i++) {
@@ -17,20 +22,13 @@ bool czyPalindromV1(int liczba) {
   return true;
 }
 
-void test1() {
-  int liczba = 231;
-  assert(czyPalindromV1(liczba));
-}
-
-void test2() {
-  int liczba = 17;
-  assert(!czyPalindromV1(liczba));
+void testCzyPalindrom() {
+  assert(czyPalindrom(231));
+  assert(!czyPalindrom(17));
 }
 
 int main() {
 
-  test1();
-  test2();
-
+  testCzyPalindrom();
   return 0;
 }

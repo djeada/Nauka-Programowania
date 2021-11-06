@@ -4,18 +4,26 @@
 #include <utility>
 #include <vector>
 
-// Otrzymujesz liste par. Pierwszym elementem pary jest napis reprezentujacy
-// imie i nazwikso pracownika, drugim zysk z transakcji jaka dany pracownik
-// przeprowadzil. Znajdz pracownika, ktory przyniosl firmie najwiecej zysku.
+/*
+Otrzymujesz listę par. Pierwszym elementem pary jest napis reprezentujący 
+imię i nazwisko pracownika, drugim zysk z transakcji jaką dany pracownik 
+przeprowadził. Znajdź pracownika, który przyniósł firmie najwięcej zysku.
+*/
 
 void wypelnijSlownik(const std::vector<std::pair<std::string, int>> &lista,
                      std::unordered_map<std::string, int> &slownik) {
+  /*
+  * Funkcja wypełnia slownik. W slowniku kluczem jest imie i nazwisko pracownika, a wartością zysk.
+  */
 
   for (const auto &rekord : lista)
     slownik[rekord.first] += rekord.second;
 }
 
 std::string znajdzMaxZysk(std::unordered_map<std::string, int> &slownik) {
+  /*
+  * Funkcja zwraca imie i nazwisko pracownika, który przyniosł najwięcej zysku.
+  */
   std::string najlepszyPracownik;
   int maxZysk = -1;
 
@@ -30,6 +38,9 @@ std::string znajdzMaxZysk(std::unordered_map<std::string, int> &slownik) {
 }
 
 std::string pracownik(std::vector<std::pair<std::string, int>> &lista) {
+  /*
+  * Funkcja jest wrapper'em do funkcji znajdzMaxZysk.
+  */
 
   if (lista.empty())
     return "";

@@ -9,11 +9,11 @@
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz napis reprezentujacy sciezke folderu.
-a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych sie
+Otrzymujesz napis reprezentujący ścieżkę folderu.
+a) Dodaj swoje inicjały na końcu wszystkich plików tekstowych 
+znajdujących się w folderze oraz podfolderach.
+b) Usuń środkowy wiersz z każdego pliku csv znajdującego się 
 w folderze oraz podfolderach.
-b) Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie w folderze oraz
-podfolderach.
 */
 
 std::string znajdzRozszerzenie(std::string sciezka) {
@@ -113,30 +113,61 @@ void usunSrodkowy(const std::string &sciezkaFolderu) {
     _usunSrodkowy(sciezka);
 }
 
-void test1() {
+void testDodajInicjaly() {
 
+  // stworz folder temp_dir
   filesys::path sciezka{"temp_dir"};
   filesys::create_directories(sciezka);
 
+  // stworz pliki txt
   std::string plikTxt = "temp.txt";
 
   std::ofstream ofs(sciezka / plikTxt);
   ofs << "przykladowy tekst\n";
   ofs.close();
 
+  // dodaj inicjaly
   std::string dane = "A.D.";
   dodajInicjaly(sciezka, dane);
 
+  // sprawdz czy plik zostal zmodyfikowany
   std::vector<std::string> wynik = {"przykladowy tekst", "A.D."};
-
   assert(wczytajPlik((sciezka / plikTxt).string()) == wynik);
 
+  // usun folder temp_dir
+  filesys::remove_all(sciezka);
+}
+
+void testUsunSrodkowy() {
+
+  // stworz folder temp_dir
+  filesys::path sciezka{"temp_dir"};
+  filesys::create_directories(sciezka);
+
+  // stworz plik temp.csv
+  std::string plikCsv = "temp.csv";
+  std::ofstream ofs(sciezka / plikCsv);
+  ofs << "test1; test2; test3\n";
+  ofs << "test4; test5; test6\n";
+  ofs << "test7; test8; test9\n";
+  ofs.close();
+
+  // usun srodkowy wiersz z pliku
+  usunSrodkowy(sciezka);
+
+  // sprawdz czy plik zostal zmieniony
+  std::vector<std::string> wynik = {"test1; test2; test3\n",
+                                    "test7; test8; test9\n"};
+  assert(wczytajPlik((sciezka / plikCsv).string()) == wynik);
+
+  // usun folder temp_dir
   filesys::remove_all(sciezka);
 }
 
 int main() {
 
-  test1();
+  testDodajInicjaly();
+  testUsunSrodkowy();
 
   return 0;
 }

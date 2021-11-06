@@ -6,8 +6,8 @@
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
-Wczytaj i wypisz tresc pliku.
+Otrzymujesz napis reprezentujący ścieżkę pliku tekstowego. 
+Wczytaj i wypisz treść pliku.
 */
 
 void wypiszPlik(const std::string &sciezka) {

@@ -9,9 +9,9 @@
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
-Kazdy wiersz pliku reprezentuja adres ip. Posortuj adresy ip i zapisz je w
-liscie.
+Otrzymujesz napis reprezentujący ścieżkę pliku tekstowego. 
+Każdy wiersz pliku reprezentuje adres ip. Posortuj adresy ip 
+i zapisz je w liście.
 */
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {

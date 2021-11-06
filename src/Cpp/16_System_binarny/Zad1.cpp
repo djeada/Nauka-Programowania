@@ -2,11 +2,17 @@
 #include <cmath>
 #include <string>
 
-#define naLiczbe(c) (c - '0')
+/*
+a) Otrzymujesz dziesiętną reprezentację liczby naturalnej, zwróć jej binarną reprezentację.
+b) Otrzymujesz binarną reprezentację liczby naturalnej, zwróć jej dziesiętną reprezentację.
+*/
 
-// Otrzymujesz liczbe, zamien ja na:
-// a) jej odpowiednik w systemie binarnym.
-int naDec(std::string liczba) {
+int naDziesietny(std::string liczba) {
+  /*
+  * Funkcja zamienia liczbę binarną na dziesiętną.
+  */
+  auto naLiczbe = [](char c) { return c - '0'; };
+  
   int dec = 0;
   int n = liczba.size();
   for (int i = 0; i < n; i++)
@@ -15,9 +21,10 @@ int naDec(std::string liczba) {
   return dec;
 }
 
-// b) jej odpowiednik w systemie dziesietnym.
-std::string naBin(int liczba) {
-
+std::string naBinarny(int liczba) {
+  /*
+  * Funkcja zamienia liczbę dziesiętną na binarną.
+  */
   std::string bin;
 
   while (liczba > 0) {
@@ -32,28 +39,28 @@ void test1() {
   std::string liczba = "0011";
   int wynik = 3;
 
-  assert(naDec(liczba) == wynik);
+  assert(naDziesietny(liczba) == wynik);
 }
 
 void test2() {
   std::string liczba = "1111100";
   int wynik = 124;
 
-  assert(naDec(liczba) == wynik);
+  assert(naDziesietny(liczba) == wynik);
 }
 
 void test3() {
   int liczba = 124;
   std::string wynik = "1111100";
 
-  assert(naBin(liczba) == wynik);
+  assert(naBinarny(liczba) == wynik);
 }
 
 void test4() {
   int liczba = 3;
   std::string wynik = "11";
 
-  assert(naBin(liczba) == wynik);
+  assert(naBinarny(liczba) == wynik);
 }
 
 int main() {

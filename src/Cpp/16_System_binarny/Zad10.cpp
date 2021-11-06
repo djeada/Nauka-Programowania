@@ -1,10 +1,14 @@
 #include <cassert>
 
-// Policz ile bitow nalezy odwrocic,
-// aby zamien liczbe A w liczbe B.
+/*
+Otrzymujesz dwie liczby naturalne. Oblicz ile bitów 
+należy odwrócić, aby zamienić liczbę A w liczbę B.  
+*/
 
 int bityDoZmiany(int liczbaA, int liczbaB) {
-
+  /*
+  * Funkcja zwraca ilość bitów do zmiany liczby A w liczbę B.
+  */
   int n = liczbaA ^ liczbaB;
 
   int licznik = 0;
@@ -16,7 +20,7 @@ int bityDoZmiany(int liczbaA, int liczbaB) {
   return licznik;
 }
 
-void test1() {
+void testBityDoZmiany() {
   int liczbaA = 34;
   int liczbaB = 73;
   int wynik = 5;
@@ -26,7 +30,7 @@ void test1() {
 
 int main() {
 
-  test1();
+  testBityDoZmiany();
 
   return 0;
 }

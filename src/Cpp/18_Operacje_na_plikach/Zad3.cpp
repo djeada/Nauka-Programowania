@@ -11,8 +11,8 @@
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz napis reprezentujacy nazwe pliku. Przeszukaj caly system i
-zapisz w liscie wszystkie sciezki plikow o danej nazwie.
+Otrzymujesz napis reprezentujący nazwę pliku. Przeszukaj cały 
+system i zapisz w liście wszystkie ścieżki plików o danej nazwie.
 */
 
 std::string katalogDomowy() {

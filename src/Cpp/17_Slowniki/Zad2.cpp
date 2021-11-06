@@ -2,11 +2,18 @@
 #include <unordered_map>
 #include <vector>
 
-// Otrzymujesz dwie listy. Zbuduj slownik skladajacy sie z kluczy bedacych
-// elementami pierwszej listy i wartosciami bedacymi elementami drugiej listy.
-// Jesli listy sa roznej dlugosci zwroc pusty slownik.
+/*
+Otrzymujesz dwie listy liczb całkowitych. Zbuduj słownik składający się z 
+kluczy będących elementami pierwszej listy i wartościami będącymi elementami 
+drugiej listy. Jeśli listy są różnej długości zwróć pusty słownik.
+*/
+
 std::unordered_map<int, int> budujSlownik(std::vector<int> &listaA,
                                           std::vector<int> &listaB) {
+  /*
+  * Funkcja tworzy słownik zawierający klucze będące elementami 
+  * pierwszej listy i wartości będące elementami drugiej listy.
+  */
   std::unordered_map<int, int> slownik;
 
   if (listaA.size() != listaB.size())

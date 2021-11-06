@@ -2,13 +2,13 @@
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <cassert>
 
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz dwa napisy reprezentujace sciezki folderow.
-Przenies wszystkie pliki csv z pierwszego folderu (oraz jego podfolderow) do
-drugiego folderu.
+Otrzymujesz dwa napisy reprezentujące ścieżki folderów. Przenieś wszystkie pliki 
+csv z pierwszego folderu (oraz wszystkich jego podfolderów) do drugiego folderu.
 */
 
 std::string nazwaPliku(const std::string &sciezka) {
@@ -48,11 +48,42 @@ void przeniesPliki(const std::string &sciezka,
   }
 }
 
+void testPrzeniesPliki() {
+
+  // stworz foldery test1 i test2
+  filesys::create_directory("test1");
+  filesys::create_directory("test2");
+
+  // stworz pliki test1/plik1.csv i test1/plik2.csv
+
+  std::string sciezka1 = "test1/plik1.csv";
+  std::string sciezka2 = "test1/plik2.csv";
+
+  std::ofstream plik1(sciezka1);
+  plik1 << "test1; test2" << std::endl;
+  plik1.close();
+
+  std::ofstream plik2(sciezka2);
+  plik2 << "test3; test4" << std::endl;
+  plik2.close();
+
+  // przenies pliki z test1 do test2
+  przeniesPliki("test1", "test2");
+
+  // sprawdz czy pliki zostaly przeniesione
+  assert(filesys::exists("test2/plik1.csv"));
+  assert(filesys::exists("test2/plik2.csv"));
+  assert(!filesys::exists("test1/plik1.csv"));
+  assert(!filesys::exists("test1/plik2.csv"));
+
+  // usun foldery test1 i test2
+  filesys::remove_all("test1");
+  filesys::remove_all("test2");
+}
+
 int main() {
 
-  const std::string sciezkaA = "folder/";
-  const std::string sciezkaB = "folder2/";
-  przeniesPliki(sciezkaA, sciezkaB);
+  testPrzeniesPliki();
 
   return 0;
 }

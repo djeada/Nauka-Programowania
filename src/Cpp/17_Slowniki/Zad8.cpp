@@ -2,11 +2,16 @@
 #include <string>
 #include <unordered_map>
 
-// Otrzymujesz napis reprezentujacy zdanie. Znajdz najczesciej wystepujaca
-// litere w zdaniu. Jesli wiecej niz jedna litera wystepuje ta sama liczbe
-// razy, zwroc litere wczesniej pojawiajaca sie w zdaniu.
+/*
+Otrzymujesz napis reprezentujący zdanie. Znajdź najczęściej występującą literę 
+w zdaniu. Jeśli więcej niż jedna litera występuje tą samą liczbę razy, zwróć 
+literę najwcześniej pojawiającą się w zdaniu.
+*/
 
 std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
+  /*
+  * Tworzymy slownik, ktory bedzie przechowywal informacje o ilosci wystapien liter w slowie.
+  */
   std::unordered_map<char, int> slownik;
 
   for (const auto &znak : slowo)
@@ -17,6 +22,9 @@ std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
 }
 
 char litera(const std::string &slowo) {
+  /*
+  * Zwraca najczęściej występującą literę w napisie.
+  */
   std::unordered_map<char, int> histogram = budujSlownik(slowo);
 
   int max = -1;

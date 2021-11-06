@@ -4,10 +4,15 @@
 #include <unordered_map>
 #include <vector>
 
-// Otrzymujesz napis. Znajdz w otrzymanym napisie wszystkie znaki powtarzajace
-// sie wiecej niz raz.
+/*
+Otrzymujesz napis. Znajdź w otrzymanym napisie wszystkie znaki 
+powtarzające się więcej niż raz.
+*/
 
 std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
+  /*
+  * Tworzy slownik, ktory bedzie przechowywal wszystkie znaki z napisu oraz czestotliwosci ich wystepowania.
+  */
   std::unordered_map<char, int> slownik;
 
   for (const auto &znak : slowo)
@@ -17,6 +22,9 @@ std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
 }
 
 std::vector<char> znaki(const std::string &slowo) {
+  /*
+  * Zwraca wektor znaków, które występują w napisie więcej niż raz.
+  */
 
   std::unordered_map<char, int> slownik = budujSlownik(slowo);
   std::vector<char> wynik;
@@ -30,6 +38,9 @@ std::vector<char> znaki(const std::string &slowo) {
 }
 
 bool wektoryRowne(std::vector<char> v1, std::vector<char> v2) {
+  /*
+  * Funkcja porównuje wektory. Funkcja zwraca true, jesli oba wektory składają się z takich samych elementów.
+  */
   sort(v1.begin(), v1.end());
   sort(v2.begin(), v2.end());
   return v1 == v2;
