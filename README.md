@@ -1651,9 +1651,9 @@ Rozwiązania
         <tr>
             <td>1</td>
             <td>Macierz <i>a</i> identycznych wierszy składających się z liczb od 0 do <i>b</i>.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad1.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad1.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad1">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad1.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad1.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2d/Zad1">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1663,9 +1663,9 @@ Rozwiązania
         <tr>
             <td>2</td>
             <td>Każdy element jest iloczynem współrzędnych.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad2.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad2.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad2">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad2.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad2.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2d/Zad2">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1675,9 +1675,9 @@ Rozwiązania
         <tr>
             <td>3</td>
             <td>Macierz z par odpowiadających sobie elementów dwóch list.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad3.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad3.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad3">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad3.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad3.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2d/Zad3">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1687,9 +1687,9 @@ Rozwiązania
         <tr>
             <td>4</td>
             <td>Dodawanie/odejmowanie macierzy.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad4.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad4.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad4">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad4.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad4.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2d/Zad4">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1699,9 +1699,9 @@ Rozwiązania
         <tr>
             <td>5</td>
             <td>Magiczny kwadrat.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad5.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad5.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad5">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad5.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad5.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2d/Zad5">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1711,9 +1711,9 @@ Rozwiązania
         <tr>
             <td>6</td>
             <td>Pokrywające się przedziały.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad6.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad6.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad6">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad6.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad6.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2d/Zad6">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1723,9 +1723,9 @@ Rozwiązania
         <tr>
             <td>7</td>
             <td>Wyzeruj macierz.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad7.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad7.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad7">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad7.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad7.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2d/Zad7">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1735,9 +1735,9 @@ Rozwiązania
         <tr>
             <td>8</td>
             <td>Wypisz spiralnie.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad8.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad8.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad8">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad8.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad8.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2d/Zad8">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1747,9 +1747,9 @@ Rozwiązania
         <tr>
             <td>9</td>
             <td>Klepsydra o największej sumie.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad9.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad9.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad9">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad9.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad9.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2d/Zad9">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1759,9 +1759,9 @@ Rozwiązania
         <tr>
             <td>10</td>
             <td>Obróć o 90 stopni.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad10.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2D/Zad10.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2D/Zad10">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad10.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad10.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/tree/master/src/Java/13_Listy_2d/Zad10">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -1771,7 +1771,7 @@ Rozwiązania
         <tr>
             <td>11</td>
             <td>Gra w statki.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2D/Zad11.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad11.py">Python</a></td>
             <td><a>Cpp</a></td>
             <td><a>Java</a></td>
             <td><a>JavaScript</a></td>
@@ -2525,7 +2525,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>4</td>
-            <td>Zaprojektuj klasy <i>Wektor2D</i> oraz <i>Wektor3D</i>.</td>
+            <td>Zaprojektuj klasy <i>Wektor2d</i> oraz <i>Wektor3D</i>.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19_Klasy/Zad4.cpp">Cpp</a></td>
             <td><a>Java</a></td>
