@@ -24,7 +24,26 @@ check_integer() {
     fi
 
     echo 0
+}
 
+check_float() {
+
+    if [[ "$1" =~ ^-?[0-9]+\.[0-9]+$ ]]; then
+        echo 1
+        return
+    fi
+
+    echo 0
+}
+
+check_alphanumeric() {
+
+    if [[ "$1" =~ ^[a-zA-Z0-9]+$ ]]; then
+        echo 1
+        return
+    fi
+
+    echo 0
 }
 
 assertEqual () {
@@ -94,6 +113,16 @@ assertSetsEqual() {
 
 }
 
+assertSetsNotEqual() {
+    local -n array_1=$1
+    local -n array_2=$2
+    local lineno=$3
+
+    IFS=$'\n' array_1=($(sort <<<"${array_1[*]}")); unset IFS
+    IFS=$'\n' array_2=($(sort <<<"${array_2[*]}")); unset IFS
+
+    assertNotEqual array_1 array_2 $lineno
+}
 
 assertTrue () {
     local lineno=$2
@@ -113,4 +142,38 @@ assertFalse () {
         echo "File \"$0\", line $lineno"
         exit $E_ASSERT_FAILED
     fi
+}
+
+assert_array_contains() {
+    local -n array_a=$1
+    local element="$2"
+    local lineno=$3
+
+    for (( i=0; i<${#array_a[@]}; i++ ))
+    do
+        if [ "${array_a[$i]}" = "$element" ]; then
+            return
+        fi
+    done
+
+    echo "Assertion failed:  \"$element\""
+    echo "File \"$0\", line $lineno"
+    exit $E_ASSERT_FAILED
+}
+
+assert_array_not_contains() {
+    local -n array_a=$1
+    local element="$2"
+    local lineno=$3
+
+    for (( i=0; i<${#array_a[@]}; i++ ))
+    do
+        if [ "${array_a[$i]}" = "$element" ]; then
+            echo "Assertion failed:  \"$element\""
+            echo "File \"$0\", line $lineno"
+            exit $E_ASSERT_FAILED
+        fi
+    done
+
+    return
 }
