@@ -5,16 +5,16 @@
 #include <vector>
 
 /*
-Otrzymujesz tekst w postaci napisu. Znajdź wszystkie słowa, w których te same 
-znaki występują tą samą liczbę razy. Inaczej, znajdź wszystkie anagramy w 
-tekście. Zignoruj różnice między małymi i wielkimi literami. Pamiętaj, słowa 
-składają się wyłącznie z liter.
+Otrzymujesz tekst w postaci napisu. Znajdz wszystkie slowa, w ktorych te same
+znaki wystepuja ta sama liczbe razy. Inaczej, znajdz wszystkie anagramy w
+tekscie. Zignoruj roznice miedzy malymi i wielkimi literami. Pamietaj, slowa
+skladaja sie wylacznie z liter.
 */
 
 void wyczysc(std::string &napis) {
   /*
-  * Usuwa z napisu wszystkie znaki nie będące literami.
-  */
+   * Usuwa z napisu wszystkie znaki nie bedace literami.
+   */
   auto it = napis.begin();
 
   while (it != napis.end()) {
@@ -27,15 +27,15 @@ void wyczysc(std::string &napis) {
 
 void naMale(std::string &slowo) {
   /*
-  * Zamienia wszystkie wielkie litery na małe litery.
-  */
+   * Zamienia wszystkie wielkie litery na male litery.
+   */
   transform(slowo.begin(), slowo.end(), slowo.begin(), ::tolower);
 }
 
 std::vector<std::string> rozdzielSlowa(const std::string &napis) {
   /*
-  * Funkcja rozdziela napis na poszczególne słowa.
-  */
+   * Funkcja rozdziela napis na poszczegolne slowa.
+   */
   std::vector<std::string> wynik;
   int pocz = 0;
   int konc = 0;
@@ -62,8 +62,8 @@ std::vector<std::string> rozdzielSlowa(const std::string &napis) {
 
 std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
   /*
-  * Funkcja zwraca slownik zawierajacy litery z slowa oraz ich iloscia.
-  */
+   * Funkcja zwraca slownik zawierajacy litery z slowa oraz ich iloscia.
+   */
   std::unordered_map<char, int> slownik;
 
   for (const auto &znak : slowo)
@@ -74,8 +74,8 @@ std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
 
 std::vector<std::vector<std::string>> znajdzAnagramy(const std::string &tekst) {
   /*
-  * Funkcja zwraca wektor wszystkich anagramów w tekście.
-  */
+   * Funkcja zwraca wektor wszystkich anagramow w tekscie.
+   */
 
   auto slowa = rozdzielSlowa(tekst);
 

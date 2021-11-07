@@ -1,8 +1,8 @@
 #include <cassert>
 
 /*
-Otrzymujesz liczbę N. Przy użyciu rekurencji
- oblicz silnię z otrzymanej liczby.
+Otrzymujesz liczbe N. Przy uzyciu rekurencji
+ oblicz silnie z otrzymanej liczby.
 */
 
 int silniaV1(int n) {

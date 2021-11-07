@@ -3,14 +3,13 @@
 #include <vector>
 
 /*
-Otrzymujesz listę n współczynników wielomianu postaci: a_nx^n + a_(n-1)x^(n-1) + ... + a_0
-oraz liczbę naturalną x. Znajdź wartość wielomianu w zadanym punkcie.
+Otrzymujesz liste n wspolczynnikow wielomianu postaci: a_nx^n + a_(n-1)x^(n-1) +
+... + a_0 oraz liczbe naturalna x. Znajdz wartosc wielomianu w zadanym punkcie.
 */
-
 
 int wartoscWielomianu(std::vector<int> &wielomian, int x) {
   /**
-   * Funkcja zwraca wartość wielomianu w punkcie x.
+   * Funkcja zwraca wartosc wielomianu w punkcie x.
    */
   int n = wielomian.size();
   int wynik = 0;

@@ -4,17 +4,18 @@
 #include <string>
 
 /*
-Otrzymujesz liczbę naturalną, podstawę systemu liczbowego w którym 
-zapisana jest otrzymana liczba oraz podstawę systemu na który ma 
-zostać dokonana konwersja. Zwróć reprezentację otrzymanej liczby 
+Otrzymujesz liczbe naturalna, podstawe systemu liczbowego w ktorym
+zapisana jest otrzymana liczba oraz podstawe systemu na ktory ma
+zostac dokonana konwersja. Zwroc reprezentacje otrzymanej liczby
 w nowym systemie.
 */
 
 int naDziesietny(std::string liczba, int staraPodstawa) {
   /*
-  * Funkcja zamienia liczbę z reprezentacji w systemie stara_podstawa na reprezentację w systemie dziesiętnym.
-  */
- 
+   * Funkcja zamienia liczbe z reprezentacji w systemie stara_podstawa na
+   * reprezentacje w systemie dziesietnym.
+   */
+
   int reprezentacjaDziesietna = 0;
 
   for (int i = liczba.size() - 1; i >= 0; i--) {
@@ -24,7 +25,8 @@ int naDziesietny(std::string liczba, int staraPodstawa) {
           (liczba[i] - 'A' + 10) * pow(staraPodstawa, (liczba.size() - 1 - i));
 
     else
-      reprezentacjaDziesietna += (liczba[i] - '0') * pow(staraPodstawa, (liczba.size() - 1 - i));
+      reprezentacjaDziesietna +=
+          (liczba[i] - '0') * pow(staraPodstawa, (liczba.size() - 1 - i));
   }
 
   return reprezentacjaDziesietna;
@@ -32,8 +34,9 @@ int naDziesietny(std::string liczba, int staraPodstawa) {
 
 void zmianaPodstawy(std::string &liczba, int staraPodstawa, int nowaPodstawa) {
   /*
-  * Funkcja zamienia liczbę z reprezentacji w systemie stara_podstawa na reprezentację w systemie dziesiętnym.
-  */
+   * Funkcja zamienia liczbe z reprezentacji w systemie stara_podstawa na
+   * reprezentacje w systemie dziesietnym.
+   */
   if (staraPodstawa > (10 + 'Z' - 'A'))
     throw std::invalid_argument("Podstawa systemu nie moze byc wieksza niz 36");
 
@@ -67,6 +70,6 @@ void testZmianaPodstawy() {
 int main() {
 
   testZmianaPodstawy();
-  
+
   return 0;
 }

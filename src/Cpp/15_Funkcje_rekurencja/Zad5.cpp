@@ -1,8 +1,8 @@
 #include <cassert>
 
 /*
-Otrzymujesz liczbę N. Przy użyciu rekurencji 
-oblicz wartość N-tego wyrazu ciągu Fibonacciego.
+Otrzymujesz liczbe N. Przy uzyciu rekurencji
+oblicz wartosc N-tego wyrazu ciagu Fibonacciego.
 */
 
 int fibonnaciV1(int n) {

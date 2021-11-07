@@ -1,9 +1,10 @@
 """
-Otrzymujesz dwie macierze o tych samych wymiarach, zwróć macierz będącą:
+Otrzymujesz dwie macierze o tych samych wymiarach, zwroc macierz bedaca:
 
 a) Wynikiem dodawania otrzymanych macierzy.
 b) Wynikiem odejmowania pierwszej macierzy od drugiej.
 """
+
 
 def suma_macierzy(macierz_a, macierz_b):
     """	
@@ -11,7 +12,7 @@ def suma_macierzy(macierz_a, macierz_b):
     """
 
     if len(macierz_a) != len(macierz_b):
-        raise ValueError("Macierze mają różne wymiary!")
+        raise ValueError("Macierze maja rozne wymiary!")
     macierz_c = []
     for i in range(len(macierz_a)):
         macierz_c.append([])
@@ -24,15 +25,16 @@ def roznica_macierzy(macierz_a, macierz_b):
     """
     Funkcja odejmuje macierz_a od macierz_b i zwraca wynik.
     """
-    
+
     if len(macierz_a) != len(macierz_b):
-        raise ValueError("Macierze mają różne wymiary!")
+        raise ValueError("Macierze maja rozne wymiary!")
     macierz_c = []
     for i in range(len(macierz_a)):
         macierz_c.append([])
         for j in range(len(macierz_a[i])):
             macierz_c[i].append(macierz_a[i][j] - macierz_b[i][j])
     return macierz_c
+
 
 def test_suma_macierzy():
     macierz_a = [[1, 2], [3, 4]]
@@ -47,5 +49,6 @@ def test_roznica_macierzy():
     macierz_c = [[-4, -4], [-4, -4]]
     assert roznica_macierzy(macierz_a, macierz_b) == macierz_c
 
+
 if __name__ == "__main__":
-    test_roznica_macierzy()    
+    test_roznica_macierzy()

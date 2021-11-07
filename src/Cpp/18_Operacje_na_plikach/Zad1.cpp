@@ -6,9 +6,9 @@
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz napis reprezentujący ścieżkę. 
-a) Sprawdź, czy jest to ścieżka pliku.
-b) Sprawdź, czy jest to ścieżka folderu.
+Otrzymujesz napis reprezentujacy sciezke.
+a) Sprawdz, czy jest to sciezka pliku.
+b) Sprawdz, czy jest to sciezka folderu.
 */
 
 bool czyPlik(std::string sciezka) {

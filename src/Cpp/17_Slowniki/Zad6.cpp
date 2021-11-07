@@ -3,14 +3,15 @@
 #include <unordered_map>
 
 /*
-Otrzymujesz napis. Znajdź częstość występowania znaków w otrzymanym 
-napisie. Inaczej, zwróć histogram znaków w otrzymanym napisie.
+Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym
+napisie. Inaczej, zwroc histogram znakow w otrzymanym napisie.
 */
 
 std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
   /*
-  * Funkcja zwraca słownik zawierający wszystkie litery w napisie oraz częstość ich występowania.
-  */
+   * Funkcja zwraca slownik zawierajacy wszystkie litery w napisie oraz czestosc
+   * ich wystepowania.
+   */
   std::unordered_map<char, int> slownik;
 
   for (const auto &znak : slowo)

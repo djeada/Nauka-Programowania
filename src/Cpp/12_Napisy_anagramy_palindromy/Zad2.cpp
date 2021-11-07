@@ -4,7 +4,7 @@
 #include <vector>
 
 /*
-Dla otrzymanego napisu, znajdź jego wszystkie permutacje.
+Dla otrzymanego napisu, znajdz jego wszystkie permutacje.
 */
 
 void permutacja(std::string &slowoWej, std::string &slowoWyj,

@@ -2,24 +2,22 @@
 #include <vector>
 
 /*
-Napisz program, realizujący grę w statki. 
+Napisz program, realizujacy gre w statki.
 
-Stwórz macierz składającą się z 10 wierszy i 10 kolumn. Wylosuj położenia statków 
-i zapisz je w macierzy. Masz do dyspozycji następujące statki: 
-a) 1 statek o długości równej 4 polom, 
-b) 2 statki o długości równej 3 polom, 
-c) 3 statki o długości równej 2 polom, 
-d) 5 statków o długości równej 1 polu. 
-Na danym polu może znajdować się tylko jeden statek.
+Stworz macierz skladajaca sie z 10 wierszy i 10 kolumn. Wylosuj polozenia
+statkow i zapisz je w macierzy. Masz do dyspozycji nastepujace statki: a) 1
+statek o dlugosci rownej 4 polom, b) 2 statki o dlugosci rownej 3 polom, c) 3
+statki o dlugosci rownej 2 polom, d) 5 statkow o dlugosci rownej 1 polu. Na
+danym polu moze znajdowac sie tylko jeden statek.
 
-Wypisz na standardowe wyjście planszę składającą się z 10x10 kropek i poproś 
-użytkownika o podanie współrzędnych. Jeśli na podanych przez użytkownika znajduje 
-się statek, zamień na planszy kropkę na literę o. W przeciwnym razie zamień 
-kropkę na literę x.
+Wypisz na standardowe wyjscie plansze skladajaca sie z 10x10 kropek i popros
+uzytkownika o podanie wspolrzednych. Jesli na podanych przez uzytkownika
+znajduje sie statek, zamien na planszy kropke na litere o. W przeciwnym razie
+zamien kropke na litere x.
 
-Powtarzaj krok 2 dopóki wszystkie pozycje statków nie zostaną odkryte przez 
-użytkownika lub dopóki na planszy nie znajdzie się 10 literek x. W obu 
-przypadkach zakończ grę i poinformuj użytkownika o wyniku.
+Powtarzaj krok 2 dopoki wszystkie pozycje statkow nie zostana odkryte przez
+uzytkownika lub dopoki na planszy nie znajdzie sie 10 literek x. W obu
+przypadkach zakoncz gre i poinformuj uzytkownika o wyniku.
 */
 
 void obroc(std::vector<std::vector<int>> &macierz) {

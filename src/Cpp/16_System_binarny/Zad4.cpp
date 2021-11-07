@@ -3,16 +3,16 @@
 #include <vector>
 
 /*
-Otrzymujesz dziesiętną reprezentację liczby naturalnej. 
+Otrzymujesz dziesietna reprezentacje liczby naturalnej.
 
-a) Oblicz z ilu zer składa się binarna reprezentacja otrzymanej liczby.
-b) Oblicz z ilu jedynek składa się binarna reprezentacja otrzymanej liczby.
+a) Oblicz z ilu zer sklada sie binarna reprezentacja otrzymanej liczby.
+b) Oblicz z ilu jedynek sklada sie binarna reprezentacja otrzymanej liczby.
 */
 
 int policzUstawioneBity(int liczba) {
   /*
-  * Funkcja zwraca ilosc ustawionych bitow w liczbie.
-  */
+   * Funkcja zwraca ilosc ustawionych bitow w liczbie.
+   */
   int suma = 0;
 
   while (liczba > 0) {
@@ -26,25 +26,26 @@ int policzUstawioneBity(int liczba) {
 
 void przygotujTablice(std::vector<int> &tablica) {
   /*
-  * Funkcja wypelnia tablice zawierajaca ilosc ustawionych bitow dla kazdej liczby w zakresie 0-255.
-  */
+   * Funkcja wypelnia tablice zawierajaca ilosc ustawionych bitow dla kazdej
+   * liczby w zakresie 0-255.
+   */
   tablica.clear();
 
   for (int i = 0; i < 256; i++)
     tablica.push_back(policzUstawioneBity(i));
 }
 
-int liczbaBitow(int liczba) { 
+int liczbaBitow(int liczba) {
   /*
-  * Funkcja zwraca ilosc bitow w liczbie.
-  */
+   * Funkcja zwraca ilosc bitow w liczbie.
+   */
   return (int)log2(liczba) + 1;
 }
 
 int zera(int liczba, std::vector<int> &tablica) {
   /*
-  * Funkcja zwraca ilosc zer w binarnej reprezentacji liczby.
-  */
+   * Funkcja zwraca ilosc zer w binarnej reprezentacji liczby.
+   */
   return liczbaBitow(liczba) - tablica[liczba & 0xff] +
          tablica[(liczba >> 8) & 0xff] + tablica[(liczba >> 16) & 0xff] +
          tablica[(liczba >> 24) & 0xff];
@@ -52,8 +53,8 @@ int zera(int liczba, std::vector<int> &tablica) {
 
 int jedynki(int liczba, std::vector<int> &tablica) {
   /*
-  * Funkcja zwraca ilosc jedynek w binarnej reprezentacji liczby.
-  */
+   * Funkcja zwraca ilosc jedynek w binarnej reprezentacji liczby.
+   */
   return tablica[liczba & 0xff] + tablica[(liczba >> 8) & 0xff] +
          tablica[(liczba >> 16) & 0xff] + tablica[(liczba >> 24) & 0xff];
 }

@@ -7,10 +7,10 @@
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz dwa napisy. Pierwszy napis reprezentuje ścieżkę folderu. 
-Drugi napis reprezentuje rozszerzenie szukanych plików. Znajdź w 
-folderze wszystkie pliki z danym rozszerzeniem. Nazwy znalezionych 
-plików zapisz w liście.
+Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke folderu.
+Drugi napis reprezentuje rozszerzenie szukanych plikow. Znajdz w
+folderze wszystkie pliki z danym rozszerzeniem. Nazwy znalezionych
+plikow zapisz w liscie.
 */
 
 std::string znajdzRozszerzenie(std::string sciezka) {

@@ -1,12 +1,13 @@
 """
-Dla podanych dwóch napisów sprawdź czy są swoimi anagramami. 
-Dwa napisy są anagramami jeśli jeden z nich można zbudować 
-poprzez przestawienie znaków w drugim.
+Dla podanych dwoch napisow sprawdz czy sa swoimi anagramami. 
+Dwa napisy sa anagramami jesli jeden z nich mozna zbudowac 
+poprzez przestawienie znakow w drugim.
 """
+
 
 def anagramy(napis_a, napis_b):
     """
-    Funkcja sprawdza czy dane napisy są anagramami.
+    Funkcja sprawdza czy dane napisy sa anagramami.
     """
     if len(napis_a) != len(napis_b):
         return False
@@ -17,10 +18,12 @@ def anagramy(napis_a, napis_b):
 
     return True
 
+
 def test_anagramy():
-    assert anagramy('kajak', 'kajak')
-    assert not anagramy('kajak', 'kjakk')
-    assert anagramy('adam', 'mada')
+    assert anagramy("kajak", "kajak")
+    assert not anagramy("kajak", "kjakk")
+    assert anagramy("adam", "mada")
+
 
 if __name__ == "__main__":
     test_anagramy()

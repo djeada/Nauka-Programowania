@@ -4,8 +4,8 @@
 #include <vector>
 
 /*
-Otrzymujesz napis reprezentujący zdanie. Znajdź wszystkie palindromy 
-w zdaniu. Różnice między wielkimi i małymi literami powinny być zignorowane.
+Otrzymujesz napis reprezentujacy zdanie. Znajdz wszystkie palindromy
+w zdaniu. Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
 */
 
 void naMale(std::string &slowo) {

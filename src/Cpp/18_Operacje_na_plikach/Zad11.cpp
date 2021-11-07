@@ -1,14 +1,14 @@
+#include <cassert>
 #include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
-#include <cassert>
 
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz dwa napisy reprezentujące ścieżki plików. 
-Podmień treści obu plików.
+Otrzymujesz dwa napisy reprezentujace sciezki plikow.
+Podmien tresci obu plikow.
 */
 
 td::vector<std::string> wczytajPlik(const std::string &sciezka) {
@@ -63,15 +63,15 @@ void zamienPliki(const std::string &sciezkaA, const std::string &sciezkaB) {
 
 void testZamienPliki() {
 
-  //stworz folder test
+  // stworz folder test
   std::string sciezkaTest = "test";
   filesys::create_directory(sciezkaTest);
 
-  //stworz pliki
-  std::string sciezkaA = sciezkaTest + filesys::path::preferred_separator +
-                         "plikA.txt";
-  std::string sciezkaB = sciezkaTest + filesys::path::preferred_separator +
-                          "plikB.txt";
+  // stworz pliki
+  std::string sciezkaA =
+      sciezkaTest + filesys::path::preferred_separator + "plikA.txt";
+  std::string sciezkaB =
+      sciezkaTest + filesys::path::preferred_separator + "plikB.txt";
 
   std::string tekstA = "Ala ma kota";
   std::string tekstB = "Kot ma Ale";
@@ -89,11 +89,9 @@ void testZamienPliki() {
   assert(wczytajPlik(sciezkaA)[0] == tekstB);
   assert(wczytajPlik(sciezkaB)[0] == tekstA);
 
-  //usun folder test
+  // usun folder test
   filesys::remove_all(sciezkaTest);
-
 }
-
 
 int main() {
 

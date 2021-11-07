@@ -3,16 +3,16 @@
 #include <unordered_map>
 
 /*
-Otrzymujesz słownik par napisów i liczb całkowitych oraz pojedynczą 
-liczbę całkowitą. Usuń ze słownika pary, dla których wartość równa 
+Otrzymujesz slownik par napisow i liczb calkowitych oraz pojedyncza
+liczbe calkowita. Usun ze slownika pary, dla ktorych wartosc rowna
 jest otrzymanej liczbie.
 */
 
 void usun(std::unordered_map<std::string, int> &slownik, int liczba) {
   /*
-  * Funkcja usuwa ze słownika pary, dla których wartość równa jest 
-  * otrzymanej liczbie.
-  */
+   * Funkcja usuwa ze slownika pary, dla ktorych wartosc rowna jest
+   * otrzymanej liczbie.
+   */
   auto it = slownik.begin();
 
   while (it != slownik.end()) {

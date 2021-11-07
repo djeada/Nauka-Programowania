@@ -2,16 +2,16 @@
 #include <string>
 
 /*
-Otrzymujesz napis. Przy użyciu operatorów bitowych:
-a) Zamień wielkie litery na małe litery.
-b) Zamień małe litery na wielkie litery.
-c) Zamień małe litery na wielkie litery i wielkie litery na małe litery.
+Otrzymujesz napis. Przy uzyciu operatorow bitowych:
+a) Zamien wielkie litery na male litery.
+b) Zamien male litery na wielkie litery.
+c) Zamien male litery na wielkie litery i wielkie litery na male litery.
 */
 
 std::string wielkieNaMale(std::string slowo) {
   /*
-  * Funkcja zamienia wielkie litery na male litery.
-  */
+   * Funkcja zamienia wielkie litery na male litery.
+   */
   std::string wynik = "";
 
   for (const int &litera : slowo)
@@ -22,8 +22,8 @@ std::string wielkieNaMale(std::string slowo) {
 
 std::string maleNaWielkie(std::string slowo) {
   /*
-  * Funkcja zamienia male litery na wielkie litery.
-  */
+   * Funkcja zamienia male litery na wielkie litery.
+   */
   std::string wynik = "";
 
   for (const int &litera : slowo)
@@ -34,8 +34,9 @@ std::string maleNaWielkie(std::string slowo) {
 
 std::string odwrocWielkoscLiter(std::string slowo) {
   /*
-  * Funkcja zamienia male litery na wielkie litery i wielkie litery na male litery.
-  */
+   * Funkcja zamienia male litery na wielkie litery i wielkie litery na male
+   * litery.
+   */
   std::string wynik = "";
 
   for (const int &litera : slowo) {

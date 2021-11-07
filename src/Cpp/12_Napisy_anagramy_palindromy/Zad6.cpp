@@ -4,7 +4,7 @@
 #include <vector>
 
 /*
-Znajdź permutacje danego słowa będące palindromami.
+Znajdz permutacje danego slowa bedace palindromami.
 */
 
 bool palindrom(std::string &slowo) {

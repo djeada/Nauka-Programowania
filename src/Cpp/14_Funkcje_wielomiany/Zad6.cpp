@@ -4,22 +4,23 @@
 #include <vector>
 
 /*
-Otrzymujesz listę współczynników równania kwadratowego ax^2 + bx + c. 
-Znajdź rzeczywiste miejsca zerowe równania kwadratowego.
+Otrzymujesz liste wspolczynnikow rownania kwadratowego ax^2 + bx + c.
+Znajdz rzeczywiste miejsca zerowe rownania kwadratowego.
 */
 
 std::pair<double, double> pierwiastki(std::vector<int> &wspolczynniki) {
   /**
-   * Funkcja zwraca listę miejsc zerowych równania kwadratowego.
+   * Funkcja zwraca liste miejsc zerowych rownania kwadratowego.
    */
-  
+
   if (wspolczynniki.size() != 3) {
     throw std::invalid_argument("Podano nieprawidlowe wspolczynniki.");
   }
 
   std::pair<double, double> wynik;
 
-  int delta = wspolczynniki[1] * wspolczynniki[1] - 4 * wspolczynniki[0] * wspolczynniki[2];
+  int delta = wspolczynniki[1] * wspolczynniki[1] -
+              4 * wspolczynniki[0] * wspolczynniki[2];
 
   if (delta > 0) {
     wynik.first = (-wspolczynniki[1] + sqrt(delta)) / (2 * wspolczynniki[0]);

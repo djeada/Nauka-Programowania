@@ -3,38 +3,35 @@
 #include <string>
 
 /*
-Otrzymuejsz napi. Sprawdź przy pomocy rekurencji czy otrzymane słowo 
-jest słowem elfickim. Przez słowo elfickie rozumiemy taki napis, w 
-którym co najmniej raz występuje każda z liter słowa elf.
+Otrzymuejsz napi. Sprawdz przy pomocy rekurencji czy otrzymane slowo
+jest slowem elfickim. Przez slowo elfickie rozumiemy taki napis, w
+ktorym co najmniej raz wystepuje kazda z liter slowa elf.
 */
 
-
-int znajdz(std::string slowo, char znak, unsigned int pozycja=0)
-{
-   /**
+int znajdz(std::string slowo, char znak, unsigned int pozycja = 0) {
+  /**
    * Funkcja zwraca indeks pierwszego wystapienia litera w slowie.
    */
-    if (pozycja >= slowo.size())
-      return -1;
-    
-    if (slowo[pozycja] == znak)
-      return pozycja;
-    
-    return znajdz(slowo, znak, pozycja + 1);
-}
+  if (pozycja >= slowo.size())
+    return -1;
 
+  if (slowo[pozycja] == znak)
+    return pozycja;
+
+  return znajdz(slowo, znak, pozycja + 1);
+}
 
 bool czySlowoElfickie(std::string slowo, std::string elf = "elf") {
   /**
    * Funkcja sprawdza czy wszystkie litery slowa elf wystepuja w napisie.
    */
-  
+
   if (elf.empty())
     return true;
-  
+
   if (slowo.empty())
     return false;
-  
+
   auto pozycja = znajdz(slowo, elf[0]);
 
   if (pozycja == -1)

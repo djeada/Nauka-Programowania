@@ -2,19 +2,19 @@
 #include <functional>
 
 /*
-Otrzymujesz dwie liczby naturalne. Używając jedynie operatorów 
+Otrzymujesz dwie liczby naturalne. Uzywajac jedynie operatorow
 bitowych zaimplementuj:
 
 a) Dodawanie.
 b) Odejmowanie.
-c) Mnożenie
+c) Mnozenie
 d) Dzielenie.
 */
 
 int suma(int a, int b) {
   /*
-  * Funkcja dodaje dwie liczby naturalne.
-  */
+   * Funkcja dodaje dwie liczby naturalne.
+   */
 
   while (b != 0) {
     int pom = a & b;
@@ -27,8 +27,8 @@ int suma(int a, int b) {
 
 int roznica(int a, int b) {
   /*
-  * Funkcja odejmuje dwie liczby naturalne.
-  */
+   * Funkcja odejmuje dwie liczby naturalne.
+   */
 
   while (b != 0) {
     int pom = (~a) & b;
@@ -41,8 +41,8 @@ int roznica(int a, int b) {
 
 int iloczyn(int a, int b) {
   /*
-  * Funkcja mnoży dwie liczby naturalne.
-  */
+   * Funkcja mnozy dwie liczby naturalne.
+   */
 
   int znak = (a < 0 && b >= 0) || (b < 0 && a >= 0) ? -1 : 1;
 
@@ -66,15 +66,15 @@ int iloczyn(int a, int b) {
 
 int iloraz(int a, int b) {
   /*
-  * Funkcja zwraca iloraz a przez b, gdzie a i b są liczbami naturalnymi.
-  */
+   * Funkcja zwraca iloraz a przez b, gdzie a i b sa liczbami naturalnymi.
+   */
 
   std::function<int(int, int, int, int *)> wew_iloczyn;
   wew_iloczyn = [&wew_iloczyn](int dzielna, int dzielnik, int org_b,
                                int *reszta) -> int {
     /*
-    * Funkcja wewnętrzna funkcji iloraz.
-    */
+     * Funkcja wewnetrzna funkcji iloraz.
+     */
     int wynik = 1;
 
     if (dzielna == dzielnik) {

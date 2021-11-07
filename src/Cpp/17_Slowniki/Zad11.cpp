@@ -5,24 +5,24 @@
 #include <vector>
 
 /*
-Otrzymujesz słownik składający się z par napisów i liczb całkowitych. 
-a) Wypisz pary posortowane względem napisów.
-b) Wypisz pary posortowane względem liczb.
+Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych.
+a) Wypisz pary posortowane wzgledem napisow.
+b) Wypisz pary posortowane wzgledem liczb.
 */
 
 bool porownujKlucze(const std::pair<std::string, int> &a,
                     const std::pair<std::string, int> &b) {
   /*
-  * Funkcja porównująca parę napisów.
-  */
+   * Funkcja porownujaca pare napisow.
+   */
   return a.first < b.first;
 }
 
 std::vector<std::pair<std::string, int>>
 sortujWzgledemKluczy(const std::unordered_map<std::string, int> &slownik) {
   /*
-  * Funkcja sortuje słownik względem kluczy.
-  */
+   * Funkcja sortuje slownik wzgledem kluczy.
+   */
 
   std::vector<std::pair<std::string, int>> wynik;
 
@@ -37,16 +37,16 @@ sortujWzgledemKluczy(const std::unordered_map<std::string, int> &slownik) {
 bool porownujWartosci(const std::pair<std::string, int> &a,
                       const std::pair<std::string, int> &b) {
   /*
-  * Funkcja porównuje wartości.
-  */
+   * Funkcja porownuje wartosci.
+   */
   return a.second < b.second;
 }
 
 std::vector<std::pair<std::string, int>>
 sortujWzgledemWartosci(const std::unordered_map<std::string, int> &slownik) {
   /*
-  * Funkcja sortuje słownik względem wartości.
-  */
+   * Funkcja sortuje slownik wzgledem wartosci.
+   */
 
   std::vector<std::pair<std::string, int>> wynik;
 

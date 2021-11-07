@@ -2,15 +2,15 @@
 #include <cassert>
 
 /*
-Otrzymujesz dziesiętną reprezentację liczby naturalnej. 
-Oblicz długość najdłuższego ciągu zer w jej binarnej reprezentacji.
+Otrzymujesz dziesietna reprezentacje liczby naturalnej.
+Oblicz dlugosc najdluzszego ciagu zer w jej binarnej reprezentacji.
 */
 
 int najdluzszyCiagZer(int liczba) {
   /*
-  * Funkcja zwraca długość najdłuższego ciągu zer w dziesiętnej
-  * reprezentacji liczby binarnej.
-  */
+   * Funkcja zwraca dlugosc najdluzszego ciagu zer w dziesietnej
+   * reprezentacji liczby binarnej.
+   */
   if (liczba == 0)
     return 1;
 

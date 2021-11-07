@@ -1,7 +1,7 @@
 #include <cassert>
 
 /*
-Otrzymuje dwie liczby a i b. Przy użyciu rekurencji 
+Otrzymuje dwie liczby a i b. Przy uzyciu rekurencji
 oblicz ile wynosi a podniesione do b.
 */
 

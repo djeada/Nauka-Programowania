@@ -3,7 +3,7 @@
 #include <vector>
 
 /*
-Otrzymujesz macierz kwadratową. Sprawdź, czy macierz jest kwadratem magicznym. 
+Otrzymujesz macierz kwadratowa. Sprawdz, czy macierz jest kwadratem magicznym.
 */
 
 bool macierzKwadratowa(const std::vector<std::vector<int>> &macierz) {
@@ -34,7 +34,6 @@ std::pair<int, int> przekatne(const std::vector<std::vector<int>> &macierz) {
 
   return std::make_pair(sumaPrzekatnej1, sumaPrzekatnej2);
 }
-
 
 std::vector<int> wiersze(const std::vector<std::vector<int>> &macierz) {
   /**

@@ -3,12 +3,12 @@
 #include <vector>
 
 /*
-N krążków o różnych średnicach ułożone jest na jednym z trzech słupków 
-(A, B lub C). Na spodzie znajduje się krążek o największej średnicy. 
-Każdy następny krążek jest mniejszy od poprzedniego. Znajdź sposób na 
-przełożenie wszystkich krążków na inny słupek. Pamiętaj, że nie wolno 
-kłaść krążka o większej średnicy na krążek o mniejszej średnicy, ani 
-przekładać kilku krążków jednocześnie. 
+N krazkow o roznych srednicach ulozone jest na jednym z trzech slupkow
+(A, B lub C). Na spodzie znajduje sie krazek o najwiekszej srednicy.
+Kazdy nastepny krazek jest mniejszy od poprzedniego. Znajdz sposob na
+przelozenie wszystkich krazkow na inny slupek. Pamietaj, ze nie wolno
+klasc krazka o wiekszej srednicy na krazek o mniejszej srednicy, ani
+przekladac kilku krazkow jednoczesnie.
 */
 
 std::vector<std::pair<char, char>> hanoi(int n) {
@@ -19,7 +19,7 @@ std::vector<std::pair<char, char>> hanoi(int n) {
                       std::vector<std::pair<char, char>> &wynik) {
     /**
      *
-    */
+     */
     if (n == 1) {
       wynik.emplace_back(a, b);
       return;

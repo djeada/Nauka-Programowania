@@ -1,10 +1,10 @@
 #include <cassert>
 
 /*
-Otrzymujesz listę liczb naturalnych oraz klucz.
-Przy użyciu rekurencji znajdź indeks odpowiadający 
-pierwszemu wystąpieniu klucza w liście. Jeśli 
-klucz nie wystęþuje w liście, zwróć -1.
+Otrzymujesz liste liczb naturalnych oraz klucz.
+Przy uzyciu rekurencji znajdz indeks odpowiadajacy
+pierwszemu wystapieniu klucza w liscie. Jesli
+klucz nie wysteþuje w liscie, zwroc -1.
 */
 
 int ciagV1(int n) {

@@ -3,13 +3,16 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie listy n współczynników wielomianu postaci a_nx^n + a_(n-1)x^(n-1) + ... + a_0. 
-Oblicz współczynniki wielomianu będącego iloczynem otrzymanych wielomianów.
+Otrzymujesz dwie listy n wspolczynnikow wielomianu postaci a_nx^n +
+a_(n-1)x^(n-1) + ... + a_0. Oblicz wspolczynniki wielomianu bedacego iloczynem
+otrzymanych wielomianow.
 */
 
-std::vector<int> iloczyn(std::vector<int> &wielomianA, std::vector<int> &wielomianB) {
+std::vector<int> iloczyn(std::vector<int> &wielomianA,
+                         std::vector<int> &wielomianB) {
   /**
-   * Funkcja zwraca współczynniki wielomianu będącego iloczynem wielomianów a i b.
+   * Funkcja zwraca wspolczynniki wielomianu bedacego iloczynem wielomianow a i
+   * b.
    */
   std::vector<int> wynik(wielomianA.size() + wielomianB.size() - 1, 0);
 

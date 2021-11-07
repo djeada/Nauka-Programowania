@@ -2,14 +2,14 @@
 #include <vector>
 
 /*
-Otrzymujesz listę n współczynników wielomianu postaci anxn+an-1xn-1+...+a0 
-oraz liczbę k. Oblicz współczynniki wielomianu będącego k-tą pochodną 
+Otrzymujesz liste n wspolczynnikow wielomianu postaci anxn+an-1xn-1+...+a0
+oraz liczbe k. Oblicz wspolczynniki wielomianu bedacego k-ta pochodna
 otrzymanego wielomianu.
 */
 
 std::vector<int> pochodna(std::vector<int> &wielomian, int k) {
   /**
-   * Funkcja oblicza k-tą pochodną wielomianu.
+   * Funkcja oblicza k-ta pochodna wielomianu.
    */
   std::vector<int> wynik;
   std::vector<int> kopia(wielomian);

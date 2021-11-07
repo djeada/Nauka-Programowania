@@ -3,16 +3,17 @@
 #include <string>
 
 /*
-a) Otrzymujesz dziesiętną reprezentację liczby naturalnej, zwróć jej binarną reprezentację.
-b) Otrzymujesz binarną reprezentację liczby naturalnej, zwróć jej dziesiętną reprezentację.
+a) Otrzymujesz dziesietna reprezentacje liczby naturalnej, zwroc jej binarna
+reprezentacje. b) Otrzymujesz binarna reprezentacje liczby naturalnej, zwroc jej
+dziesietna reprezentacje.
 */
 
 int naDziesietny(std::string liczba) {
   /*
-  * Funkcja zamienia liczbę binarną na dziesiętną.
-  */
+   * Funkcja zamienia liczbe binarna na dziesietna.
+   */
   auto naLiczbe = [](char c) { return c - '0'; };
-  
+
   int dec = 0;
   int n = liczba.size();
   for (int i = 0; i < n; i++)
@@ -23,8 +24,8 @@ int naDziesietny(std::string liczba) {
 
 std::string naBinarny(int liczba) {
   /*
-  * Funkcja zamienia liczbę dziesiętną na binarną.
-  */
+   * Funkcja zamienia liczbe dziesietna na binarna.
+   */
   std::string bin;
 
   while (liczba > 0) {

@@ -1,27 +1,27 @@
 #include <cassert>
 
 /*
-Otrzymujesz dwie liczby naturalne. 
+Otrzymujesz dwie liczby naturalne.
 
-a) Zwróć mniejszą liczbę. Zabronione jest użycie instrukcji 
-warunkowej i zewnętrznych bibliotek.
-b) Zwróć większą liczbę. Zabronione jest użycie instrukcji 
-warunkowej i zewnętrznych bibliotek.
+a) Zwroc mniejsza liczbe. Zabronione jest uzycie instrukcji
+warunkowej i zewnetrznych bibliotek.
+b) Zwroc wieksza liczbe. Zabronione jest uzycie instrukcji
+warunkowej i zewnetrznych bibliotek.
 */
 
-int znak(int n) { 
+int znak(int n) {
   /*
-  * Funkcja zwraca znak liczby n.
-  */
- return (n >> 31) & 0x01; 
+   * Funkcja zwraca znak liczby n.
+   */
+  return (n >> 31) & 0x01;
 }
 
 int maks(int a, int b) {
   /*
-  * Funkcja zwraca maksimum dwóch liczb.
-  * dla a >= b: znak_a = 1, znak_b = 0;
-  * dla a < b: znak_a = 0, znak_b = 1;
-  */
+   * Funkcja zwraca maksimum dwoch liczb.
+   * dla a >= b: znak_a = 1, znak_b = 0;
+   * dla a < b: znak_a = 0, znak_b = 1;
+   */
   int znakB = znak(a - b);
   int znakA = znakB ^ 1;
   return znakA * a + znakB * b;
@@ -29,10 +29,10 @@ int maks(int a, int b) {
 
 int min(int a, int b) {
   /*
-  * Funkcja zwraca minimum dwóch liczb.
-  * dla a >= b: znak_a = 0, znak_b = 1;
-  * dla a < b: znak_a = 1, znak_b = 0;
-  */
+   * Funkcja zwraca minimum dwoch liczb.
+   * dla a >= b: znak_a = 0, znak_b = 1;
+   * dla a < b: znak_a = 1, znak_b = 0;
+   */
   int znakB = znak(a - b);
   int znakA = znakB ^ 1;
   return znakB * a + znakA * b;

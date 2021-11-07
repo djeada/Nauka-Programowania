@@ -1,12 +1,13 @@
 """
-Rozważ grę, w której w każdym ruchu gracz może zdobyć 3, 5 lub 10 punktów. 
-Dla otrzymanej liczby N, reprezentującej całkowitą liczbę punktów, 
-oblicz na ile sposobów gracz może wygrać grę.
+Rozwaz gre, w ktorej w kazdym ruchu gracz moze zdobyc 3, 5 lub 10 punktow. 
+Dla otrzymanej liczby N, reprezentujacej calkowita liczbe punktow, 
+oblicz na ile sposobow gracz moze wygrac gre.
 """
+
 
 def gra(n):
     """
-    Funkcja zwraca liczbę sposobów na wygraną w grze.
+    Funkcja zwraca liczbe sposobow na wygrana w grze.
     """
 
     if n < min(3, 5, 10):
@@ -16,7 +17,7 @@ def gra(n):
 
     def _gra(n, wynik=[]):
         """
-        Wewnętrzna funkcja rekurencyjna.
+        Wewnetrzna funkcja rekurencyjna.
         """
 
         if n < 0:
@@ -27,10 +28,15 @@ def gra(n):
                 lista_wynikow.append(wynik)
                 return 1
             return 0
-        
-        return _gra(n-3, wynik + [3]) + _gra(n-5, wynik + [5]) + _gra(n-10,wynik + [10])
+
+        return (
+            _gra(n - 3, wynik + [3])
+            + _gra(n - 5, wynik + [5])
+            + _gra(n - 10, wynik + [10])
+        )
 
     return _gra(n)
+
 
 def test_gra():
 
@@ -39,6 +45,7 @@ def test_gra():
     assert gra(50) == 14
     assert gra(1) == 0
 
+
 if __name__ == "__main__":
-    
+
     test_gra()

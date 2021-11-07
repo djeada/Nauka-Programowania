@@ -1,16 +1,17 @@
 #include <cassert>
 
 /*
-Otrzymujesz dziesiętną reprezentację liczby naturalnej. Znajdź potęgę 
-dwójki większą bądź równą otrzymanej liczbie. Inaczej: zaokrąglij liczbę 
-do następnej potęgi dwójki.
+Otrzymujesz dziesietna reprezentacje liczby naturalnej. Znajdz potege
+dwojki wieksza badz rowna otrzymanej liczbie. Inaczej: zaokraglij liczbe
+do nastepnej potegi dwojki.
 */
 
 int nastepnaPotegaDwojkiV1(int liczba) {
   /*
-  * Funkcja zwraca następną potęgę dwójki większą bądź równą liczbie.
-  * Zasada działania opiera się na zmniejszaniu liczby, aż liczba będzie podzielna przez 2.
-  */
+   * Funkcja zwraca nastepna potege dwojki wieksza badz rowna liczbie.
+   * Zasada dzialania opiera sie na zmniejszaniu liczby, az liczba bedzie
+   * podzielna przez 2.
+   */
   if (liczba <= 0)
     return 0;
 
@@ -27,10 +28,10 @@ int nastepnaPotegaDwojkiV1(int liczba) {
 
 int nastepnaPotegaDwojkiV2(int liczba) {
   /*
-  * Funkcja zwraca następną potęgę dwójki większą bądź równą liczbie.
-  * Zasada działania opiera się na obliczeniu następnych potęg dwójki, 
-  * aż otrzymamy liczbę większą lub równą podanej liczbie.
-  */
+   * Funkcja zwraca nastepna potege dwojki wieksza badz rowna liczbie.
+   * Zasada dzialania opiera sie na obliczeniu nastepnych poteg dwojki,
+   * az otrzymamy liczbe wieksza lub rowna podanej liczbie.
+   */
   if (liczba <= 0)
     return 0;
 

@@ -3,9 +3,9 @@
 #include <vector>
 
 /*
-Dla otrzymanych dwóch list, stwórz dwukolumnową macierz, której pierwsza 
-kolumna składa się z elementów pierwszej listy, a druga kolumna elementów 
-drugiej listy. Jeśli otrzymane listy nie są równej długości zwróć pustą macierz.
+Dla otrzymanych dwoch list, stworz dwukolumnowa macierz, ktorej pierwsza
+kolumna sklada sie z elementow pierwszej listy, a druga kolumna elementow
+drugiej listy. Jesli otrzymane listy nie sa rownej dlugosci zwroc pusta macierz.
 */
 
 std::vector<std::pair<int, int>> macierz(std::vector<int> listaA,

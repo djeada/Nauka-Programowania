@@ -9,10 +9,10 @@
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz napis reprezentujący ścieżkę folderu.
-a) Dodaj swoje inicjały na końcu wszystkich plików tekstowych 
-znajdujących się w folderze oraz podfolderach.
-b) Usuń środkowy wiersz z każdego pliku csv znajdującego się 
+Otrzymujesz napis reprezentujacy sciezke folderu.
+a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych
+znajdujacych sie w folderze oraz podfolderach.
+b) Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie
 w folderze oraz podfolderach.
 */
 

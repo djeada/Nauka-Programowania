@@ -3,17 +3,17 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie listy liczb całkowitych. Zbuduj słownik składający się z 
-kluczy będących elementami pierwszej listy i wartościami będącymi elementami 
-drugiej listy. Jeśli listy są różnej długości zwróć pusty słownik.
+Otrzymujesz dwie listy liczb calkowitych. Zbuduj slownik skladajacy sie z
+kluczy bedacych elementami pierwszej listy i wartosciami bedacymi elementami
+drugiej listy. Jesli listy sa roznej dlugosci zwroc pusty slownik.
 */
 
 std::unordered_map<int, int> budujSlownik(std::vector<int> &listaA,
                                           std::vector<int> &listaB) {
   /*
-  * Funkcja tworzy słownik zawierający klucze będące elementami 
-  * pierwszej listy i wartości będące elementami drugiej listy.
-  */
+   * Funkcja tworzy slownik zawierajacy klucze bedace elementami
+   * pierwszej listy i wartosci bedace elementami drugiej listy.
+   */
   std::unordered_map<int, int> slownik;
 
   if (listaA.size() != listaB.size())

@@ -3,18 +3,18 @@
 #include <unordered_map>
 
 /*
-Otrzymujesz liczbę naturalną. Zbuduj słownik składający się 
-z kluczy będących kolejnymi liczbami naturalnymi mniejszymi 
-od otrzymanej liczby oraz wartości będących kwadratami 
-odpowiadających im kluczy.
+Otrzymujesz liczbe naturalna. Zbuduj slownik skladajacy sie
+z kluczy bedacych kolejnymi liczbami naturalnymi mniejszymi
+od otrzymanej liczby oraz wartosci bedacych kwadratami
+odpowiadajacych im kluczy.
 */
 
 std::unordered_map<int, int> budujSlownik(int liczba) {
   /*
-  * Funkcja tworzy słownik zawierający klucze będące kolejnymi 
-  * liczbami naturalnymi mniejszymi od podanej liczby n 
-  * oraz wartości będącymi kwadratami kluczy.
-  */
+   * Funkcja tworzy slownik zawierajacy klucze bedace kolejnymi
+   * liczbami naturalnymi mniejszymi od podanej liczby n
+   * oraz wartosci bedacymi kwadratami kluczy.
+   */
   std::unordered_map<int, int> slownik;
 
   for (int i = 1; i < liczba; i++)

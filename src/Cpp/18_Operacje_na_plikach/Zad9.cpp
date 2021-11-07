@@ -1,14 +1,14 @@
-#include <experimental/filesystem>
-#include <string>
 #include <cassert>
+#include <experimental/filesystem>
 #include <fstream>
+#include <string>
 
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz napis reprezentujący ścieżkę folderu. Usuń 
-wszystkie pliki o rozmiarach większych niż 10 kB znajdujące 
-się w podanym folderze oraz jego podfolderach.
+Otrzymujesz napis reprezentujacy sciezke folderu. Usun
+wszystkie pliki o rozmiarach wiekszych niz 10 kB znajdujace
+sie w podanym folderze oraz jego podfolderach.
 */
 
 int rozmiarPliku(const std::string &sciezka) {
@@ -25,7 +25,7 @@ void usunPliki(const std::string &sciezka) {
 
 void testUsunPliki() {
 
-  // stwórz folder testowy
+  // stworz folder testowy
   std::string sciezka = "test";
   filesys::create_directory(filesys::path(sciezka));
 

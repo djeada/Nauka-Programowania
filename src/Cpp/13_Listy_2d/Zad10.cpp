@@ -2,9 +2,9 @@
 #include <vector>
 
 /*
-Otrzymujesz listę list liczb naturalnych. Obróć otrzymaną listę o 90 stopni. 
-Tzn. zamień miejscami ostatnią kolumnę z ostatnim wierszem, przedostatnią 
-kolumnę z przedostatnim wierszem itd.
+Otrzymujesz liste list liczb naturalnych. Obroc otrzymana liste o 90 stopni.
+Tzn. zamien miejscami ostatnia kolumne z ostatnim wierszem, przedostatnia
+kolumne z przedostatnim wierszem itd.
 */
 
 void obroc(std::vector<std::vector<int>> &macierz) {

@@ -2,8 +2,8 @@
 #include <vector>
 
 /*
-Otrzymujesz listę list liczb naturalnych reprezentującą macierz. 
-Jeśli element macierzy jest równy zero, zamień wszystkie elementy 
+Otrzymujesz liste list liczb naturalnych reprezentujaca macierz.
+Jesli element macierzy jest rowny zero, zamien wszystkie elementy
 w tej samej kolumnie i tym samym wierszu na zera.
 */
 

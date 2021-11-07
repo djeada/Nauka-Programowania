@@ -4,16 +4,17 @@
 #include <vector>
 
 /*
-Otrzymujesz dwa słowniki składające się z par napisów i list liczb całkowitych. 
-Listy są nieuporządkowane. Sprawdź czy słowniki składają się z tych samych par. 
-Dwie listy uznajemy za identyczne jeśli zawierają te same elementy, przy 
-czym kolejność elementów może być zmieniona.
+Otrzymujesz dwa slowniki skladajace sie z par napisow i list liczb calkowitych.
+Listy sa nieuporzadkowane. Sprawdz czy slowniki skladaja sie z tych samych par.
+Dwie listy uznajemy za identyczne jesli zawieraja te same elementy, przy
+czym kolejnosc elementow moze byc zmieniona.
 */
 
 bool wektoryRowne(std::vector<int> v1, std::vector<int> v2) {
   /*
-  * Funkcja porównuje wektory. Funkcja zwraca true, jesli oba wektory składają się z takich samych elementów.
-  */
+   * Funkcja porownuje wektory. Funkcja zwraca true, jesli oba wektory skladaja
+   * sie z takich samych elementow.
+   */
   sort(v1.begin(), v1.end());
   sort(v2.begin(), v2.end());
   return v1 == v2;
@@ -22,8 +23,8 @@ bool wektoryRowne(std::vector<int> v1, std::vector<int> v2) {
 bool identyczne(std::unordered_map<std::string, std::vector<int>> &slownikA,
                 std::unordered_map<std::string, std::vector<int>> &slownikB) {
   /*
-  * Funkcja sprawdza czy dwa słowniki mają takie same elementy.
-  */
+   * Funkcja sprawdza czy dwa slowniki maja takie same elementy.
+   */
   if (slownikA.size() != slownikB.size())
     return false;
 

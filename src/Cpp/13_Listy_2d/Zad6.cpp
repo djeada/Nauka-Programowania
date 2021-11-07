@@ -4,9 +4,9 @@
 #include <vector>
 
 /*
-Otrzymujesz listę par liczb. Liczby w parze reprezentują początek i koniec przedziału. 
-Niektóre przedziały mogą na siebie nachodzić. W takim przypadku połącz je ze sobą 
-i zwróć listę niepokrywających się przedziałów.
+Otrzymujesz liste par liczb. Liczby w parze reprezentuja poczatek i koniec
+przedzialu. Niektore przedzialy moga na siebie nachodzic. W takim przypadku
+polacz je ze soba i zwroc liste niepokrywajacych sie przedzialow.
 */
 
 std::vector<std::pair<int, int>>

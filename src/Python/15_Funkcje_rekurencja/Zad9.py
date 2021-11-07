@@ -1,8 +1,9 @@
 """
-Otrzymuejsz napis. Sprawdź przy pomocy rekurencji czy otrzymane słowo 
-jest słowem elfickim. Przez słowo elfickie rozumiemy taki napis, w 
-którym co najmniej raz występuje każda z liter słowa elf.
+Otrzymuejsz napis. Sprawdz przy pomocy rekurencji czy otrzymane slowo 
+jest slowem elfickim. Przez slowo elfickie rozumiemy taki napis, w 
+ktorym co najmniej raz wystepuje kazda z liter slowa elf.
 """
+
 
 def znajdz(slowo, litera, pozycja=0):
     """
@@ -12,10 +13,10 @@ def znajdz(slowo, litera, pozycja=0):
         return -1
     if slowo[pozycja] == litera:
         return pozycja
-    return znajdz(slowo, litera, pozycja+1)
-    
+    return znajdz(slowo, litera, pozycja + 1)
 
-def czy_slowo_elfickie(napis, elf='elf'):
+
+def czy_slowo_elfickie(napis, elf="elf"):
     """
     Funkcja sprawdza czy wszystkie litery slowa elf wystepuja w napisie.
     """
@@ -30,14 +31,14 @@ def czy_slowo_elfickie(napis, elf='elf'):
 
     if pozycja == -1:
         return False
-    
-    return czy_slowo_elfickie(napis[:pozycja] + napis[pozycja+1:], elf[1:])
+
+    return czy_slowo_elfickie(napis[:pozycja] + napis[pozycja + 1 :], elf[1:])
 
 
 def test_czy_slowo_elfickie():
-    assert czy_slowo_elfickie('elf')
-    assert czy_slowo_elfickie('reflektor')
-    assert not czy_slowo_elfickie('elzbieta')
+    assert czy_slowo_elfickie("elf")
+    assert czy_slowo_elfickie("reflektor")
+    assert not czy_slowo_elfickie("elzbieta")
 
 
 if __name__ == "__main__":

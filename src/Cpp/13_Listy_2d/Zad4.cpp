@@ -2,7 +2,7 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie macierze o tych samych wymiarach, zwróć macierz będącą:
+Otrzymujesz dwie macierze o tych samych wymiarach, zwroc macierz bedaca:
 
 a) Wynikiem dodawania otrzymanych macierzy.
 b) Wynikiem odejmowania pierwszej macierzy od drugiej.
@@ -27,7 +27,7 @@ bool wymiaryRowne(std::vector<std::vector<int>> macierzA,
 std::vector<std::vector<int>> dodaj(std::vector<std::vector<int>> macierzA,
                                     std::vector<std::vector<int>> macierzB) {
   /**
-   * 
+   *
    */
   std::vector<std::vector<int>> wynik;
 
@@ -47,7 +47,7 @@ std::vector<std::vector<int>> dodaj(std::vector<std::vector<int>> macierzA,
 std::vector<std::vector<int>> odejmij(std::vector<std::vector<int>> macierzA,
                                       std::vector<std::vector<int>> macierzB) {
   /**
-   * 
+   *
    */
   std::vector<std::vector<int>> wynik;
 

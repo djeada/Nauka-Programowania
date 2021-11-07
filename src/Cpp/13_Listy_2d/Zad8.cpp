@@ -3,8 +3,8 @@
 #include <vector>
 
 /*
-Otrzymujesz listę list liczb naturalnych. Zbierz spiralnie 
-elementy otrzymanej macierzy i zapisz je w liście.
+Otrzymujesz liste list liczb naturalnych. Zbierz spiralnie
+elementy otrzymanej macierzy i zapisz je w liscie.
 */
 
 std::vector<int> spiralaV1(std::vector<std::vector<int>> &macierz) {

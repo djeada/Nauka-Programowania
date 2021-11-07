@@ -1,30 +1,37 @@
 import string
 
 """
-Otrzymujesz napis reprezentujący zdanie. Znajdź wszystkie palindromy 
-w zdaniu. Różnice między wielkimi i małymi literami powinny być zignorowane.
+Otrzymujesz napis reprezentujacy zdanie. Znajdz wszystkie palindromy 
+w zdaniu. Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
 """
+
 
 def podziel_zdanie_na_slowa(zdanie):
     """
-    Funkcja rozdziela zdanie na słowa. 
+    Funkcja rozdziela zdanie na slowa. 
     """
-    return zdanie.translate(str.maketrans('', '', string.punctuation)).split()
+    return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
+
 
 def czy_palindrom(slowo):
     """
-    Funkcja sprawdza czy podane słowo jest palindromem. 
+    Funkcja sprawdza czy podane slowo jest palindromem. 
     """
     return slowo == slowo[::-1]
 
+
 def palindromy_w_zdaniu(zdanie):
     """
-    Funkcja zwraca listę palindromów w podanym zdaniu. 
+    Funkcja zwraca liste palindromow w podanym zdaniu. 
     """
     return [slowo for slowo in podziel_zdanie_na_slowa(zdanie) if czy_palindrom(slowo)]
 
+
 def test_palindromy_w_zdaniu():
-    assert sorted(palindromy_w_zdaniu('Tata zbaral kajak na wycieczke i uderzyl sie w oko')) == sorted(["kajak", "i", "w", "oko"])
+    assert sorted(
+        palindromy_w_zdaniu("Tata zbaral kajak na wycieczke i uderzyl sie w oko")
+    ) == sorted(["kajak", "i", "w", "oko"])
+
 
 if __name__ == "__main__":
-    test_palindromy_w_zdaniu()    
+    test_palindromy_w_zdaniu()

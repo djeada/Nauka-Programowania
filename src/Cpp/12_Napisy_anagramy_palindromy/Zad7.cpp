@@ -4,26 +4,26 @@
 #include <unordered_map>
 
 /*
-Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy.
-Zwróć -1 dla słów o różnych długościach.
+Dla dwoch slow, ile minimalnie znakow musimy usunac aby uzyskac anagramy.
+Zwroc -1 dla slow o roznych dlugosciach.
 */
 
 int liczbaZnakow(const std::string &slowoA, const std::string &slowoB) {
 
-    std::vector<int> pom(256, 0);
-    
-    for (auto znak : slowoA)
-        pom[znak - 'a']++;
-     
-    for (auto znak : slowoB)
-        pom[znak - 'a']--;
-     
-    long wynik = 0;
-    
-    for(auto liczba : pom)
-        wynik +=abs(liczba);
+  std::vector<int> pom(256, 0);
 
-    return wynik;
+  for (auto znak : slowoA)
+    pom[znak - 'a']++;
+
+  for (auto znak : slowoB)
+    pom[znak - 'a']--;
+
+  long wynik = 0;
+
+  for (auto liczba : pom)
+    wynik += abs(liczba);
+
+  return wynik;
 }
 
 void test1() {

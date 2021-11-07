@@ -8,9 +8,9 @@
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz dwa napisy. Pierwszy napis reprezentuje ścieżkę 
-pliku tekstowego. Drugi napis reprezentuje wiersz tekstu. 
-Dostaw otrzymany wiersz tekstu na początek pliku tekstowego.
+Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke
+pliku tekstowego. Drugi napis reprezentuje wiersz tekstu.
+Dostaw otrzymany wiersz tekstu na poczatek pliku tekstowego.
 */
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {

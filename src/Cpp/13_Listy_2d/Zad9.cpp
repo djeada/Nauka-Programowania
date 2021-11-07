@@ -3,11 +3,12 @@
 #include <vector>
 
 /*
-Otrzymujesz listę list liczb naturalnych. Znajdź w macierzy klepsydrę o największej sumie. 
-Klepsydra składa się z dokładnie 7 elementów. Trzy pierwsze elementy są kolejnymi 
-elementami dowolnego wiersza macierzy. Następny element znajduje się w tej samej
-kolumnie co drugi element i w dokładnie jednym wierszu niżej. Trzy następne znajdują się 
-w tych samych kolumnach co trzy pierwsze i dokładnie dwa wiersze niżej.
+Otrzymujesz liste list liczb naturalnych. Znajdz w macierzy klepsydre o
+najwiekszej sumie. Klepsydra sklada sie z dokladnie 7 elementow. Trzy pierwsze
+elementy sa kolejnymi elementami dowolnego wiersza macierzy. Nastepny element
+znajduje sie w tej samej kolumnie co drugi element i w dokladnie jednym wierszu
+nizej. Trzy nastepne znajduja sie w tych samych kolumnach co trzy pierwsze i
+dokladnie dwa wiersze nizej.
 */
 
 int klepsydraV1(std::vector<std::vector<int>> &macierz) {

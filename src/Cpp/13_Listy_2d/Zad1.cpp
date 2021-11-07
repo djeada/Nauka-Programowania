@@ -2,8 +2,8 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie liczby, a oraz b. Stwórz macierz a identycznych 
-wierszy składających się z liczb od 0 do b.
+Otrzymujesz dwie liczby, a oraz b. Stworz macierz a identycznych
+wierszy skladajacych sie z liczb od 0 do b.
 */
 
 std::vector<std::vector<int>> macierz(int a, int b) {

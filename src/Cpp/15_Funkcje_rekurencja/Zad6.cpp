@@ -1,9 +1,8 @@
 #include <cassert>
 
 /*
-Otrzymujesz liczbę N. Oblicz wartość N-tego wyrazu ciągu danego wzorem rekurencyjnym:
-a_1 = 1
-a_n = 1 + 2a_(n-1)
+Otrzymujesz liczbe N. Oblicz wartosc N-tego wyrazu ciagu danego wzorem
+rekurencyjnym: a_1 = 1 a_n = 1 + 2a_(n-1)
 */
 
 int ciagV1(int n) {

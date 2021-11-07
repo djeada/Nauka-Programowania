@@ -4,9 +4,9 @@
 #include <vector>
 
 /*
-Otrzymujesz napis reprezentujący zdanie oraz słowo. Znajdź wszystkie 
-anagramy  otrzymanego słowa w zdaniu. Różnice między wielkimi i małymi 
-literami powinny być zignorowane.
+Otrzymujesz napis reprezentujacy zdanie oraz slowo. Znajdz wszystkie
+anagramy  otrzymanego slowa w zdaniu. Roznice miedzy wielkimi i malymi
+literami powinny byc zignorowane.
 */
 
 void naMale(std::string &slowo) {

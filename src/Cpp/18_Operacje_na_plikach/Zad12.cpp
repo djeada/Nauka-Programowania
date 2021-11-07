@@ -1,14 +1,14 @@
+#include <cassert>
 #include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
-#include <cassert>
 
 namespace filesys = std::experimental::filesystem;
 
 /*
-Otrzymujesz dwa napisy reprezentujące ścieżki folderów. Przenieś wszystkie pliki 
-csv z pierwszego folderu (oraz wszystkich jego podfolderów) do drugiego folderu.
+Otrzymujesz dwa napisy reprezentujace sciezki folderow. Przenies wszystkie pliki
+csv z pierwszego folderu (oraz wszystkich jego podfolderow) do drugiego folderu.
 */
 
 std::string nazwaPliku(const std::string &sciezka) {

@@ -5,15 +5,15 @@
 #include <vector>
 
 /*
-Otrzymujesz tekst w postaci napisu. Znajdź częstość występowania każdego 
-ze słów w tekście. Zignoruj różnice między małymi i wielkimi literami. 
-Pamiętaj, słowa składają się wyłącznie z liter.
+Otrzymujesz tekst w postaci napisu. Znajdz czestosc wystepowania kazdego
+ze slow w tekscie. Zignoruj roznice miedzy malymi i wielkimi literami.
+Pamietaj, slowa skladaja sie wylacznie z liter.
 */
 
 void wyczysc(std::string &napis) {
   /*
-  * Usuwa z napisu wszystkie znaki nie będące literami.
-  */
+   * Usuwa z napisu wszystkie znaki nie bedace literami.
+   */
   auto it = napis.begin();
 
   while (it != napis.end()) {
@@ -26,15 +26,15 @@ void wyczysc(std::string &napis) {
 
 void naMale(std::string &slowo) {
   /*
-  * Zamienia wszystkie wielkie litery na małe litery.
-  */
+   * Zamienia wszystkie wielkie litery na male litery.
+   */
   transform(slowo.begin(), slowo.end(), slowo.begin(), ::tolower);
 }
 
 std::vector<std::string> rozdzielSlowa(const std::string &napis) {
   /*
-  * Rozdziela napis na poszczególne słowa.
-  */
+   * Rozdziela napis na poszczegolne slowa.
+   */
   std::vector<std::string> wynik;
   int pocz = 0;
   int konc = 0;
@@ -61,8 +61,9 @@ std::vector<std::string> rozdzielSlowa(const std::string &napis) {
 
 std::unordered_map<std::string, int> budujSlownik(const std::string &tekst) {
   /*
-  * Buduje słownik zawierający wszystkie słowa z tekstu oraz częstotliwość ich występowania.
-  */
+   * Buduje slownik zawierajacy wszystkie slowa z tekstu oraz czestotliwosc ich
+   * wystepowania.
+   */
   std::unordered_map<std::string, int> slownik;
 
   std::vector<std::string> slowa = rozdzielSlowa(tekst);

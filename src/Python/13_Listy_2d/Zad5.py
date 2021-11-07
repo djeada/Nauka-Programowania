@@ -1,6 +1,7 @@
 """
-Otrzymujesz macierz kwadratową. Sprawdź, czy macierz jest kwadratem magicznym. 
+Otrzymujesz macierz kwadratowa. Sprawdz, czy macierz jest kwadratem magicznym. 
 """
+
 
 def czy_kwadrat_magiczny(macierz):
     # sprawdzenie, czy macierz jest kwadratem
@@ -9,11 +10,11 @@ def czy_kwadrat_magiczny(macierz):
 
     # sprawdz czy suma elementow w kazdym wierszu jest taka sama
     suma_wiersz = sum(macierz[0])
-    
+
     for wiersz in macierz:
         if suma_wiersz != sum(wiersz):
             return False
-    
+
     # sprawdz czy suma elementow w kazdej kolumnie jest taka sama i rowna sumie elementow w kazdym wierszu
     for kolumna in range(len(macierz[0])):
         suma_kolumna = 0
@@ -21,7 +22,6 @@ def czy_kwadrat_magiczny(macierz):
             suma_kolumna += wiersz[kolumna]
         if suma_kolumna != suma_wiersz:
             return False
-    
 
     # sprawdz czy suma elementow na obu przekatnych jest taka sama i rowna sumie elementow w kazdym wierszu
     suma_przekatna = 0
@@ -29,10 +29,10 @@ def czy_kwadrat_magiczny(macierz):
         suma_przekatna += macierz[i][i]
     if suma_przekatna != suma_wiersz:
         return False
-    
+
     suma_przekatna = 0
     for i in range(len(macierz)):
-        suma_przekatna += macierz[i][len(macierz)-1-i]    
+        suma_przekatna += macierz[i][len(macierz) - 1 - i]
     if suma_przekatna != suma_wiersz:
         return False
 
@@ -40,12 +40,12 @@ def czy_kwadrat_magiczny(macierz):
 
 
 def test_czy_kwadrat_magiczny():
-    
+
     assert czy_kwadrat_magiczny([[4, 9, 2], [3, 5, 7], [8, 1, 6]])
     assert not czy_kwadrat_magiczny([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
     assert czy_kwadrat_magiczny([[2, 7, 6], [9, 5, 1], [4, 3, 8]])
 
 
 if __name__ == "__main__":
-    
+
     test_czy_kwadrat_magiczny()

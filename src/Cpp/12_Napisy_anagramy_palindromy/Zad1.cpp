@@ -3,7 +3,7 @@
 #include <string>
 
 /*
-Sprawdź czy słowo jest palindromem. Palindrom to słowo brzmiące tak samo 
+Sprawdz czy slowo jest palindromem. Palindrom to slowo brzmiace tak samo
 czytane od lewej do prawej i od prawej do lewej.
 */
 

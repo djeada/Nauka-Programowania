@@ -3,18 +3,21 @@
 #include <vector>
 
 /*
-Otrzymujesz dwie listy n współczynników wielomianu postaci a_nx^n + a_(n-1)x^(n-1) + ... + a_0.
-Oblicz współczynniki wielomianu będącego sumą otrzymanych wielomianów.
+Otrzymujesz dwie listy n wspolczynnikow wielomianu postaci a_nx^n +
+a_(n-1)x^(n-1) + ... + a_0. Oblicz wspolczynniki wielomianu bedacego suma
+otrzymanych wielomianow.
 */
 
-std::vector<int> sumaWielomianow(std::vector<int> &wielomianA, std::vector<int> &wielomianB) {
+std::vector<int> sumaWielomianow(std::vector<int> &wielomianA,
+                                 std::vector<int> &wielomianB) {
   /**
-   * Funkcja sumuje dwie listy wielomianów.
+   * Funkcja sumuje dwie listy wielomianow.
    */
-  
+
   std::vector<int> wynik;
 
-  int min = wielomianA.size() < wielomianB.size() ? wielomianA.size() : wielomianB.size();
+  int min = wielomianA.size() < wielomianB.size() ? wielomianA.size()
+                                                  : wielomianB.size();
 
   for (int i = 0; i < min; i++) {
     wynik.push_back(wielomianA[i] + wielomianB[i]);

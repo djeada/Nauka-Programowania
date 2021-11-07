@@ -3,14 +3,15 @@
 #include <vector>
 
 /*
-Otrzymujesz listę n współczynników wielomianu postaci a_nx^n + a_(n-1)x^(n-1) + ... + a_0
-oraz liczbę x. Oblicz współczynniki wielomianu będącego wynikiem 
-przemnożenia otrzymanego wielomianu przez liczbę x.
+Otrzymujesz liste n wspolczynnikow wielomianu postaci a_nx^n + a_(n-1)x^(n-1) +
+... + a_0 oraz liczbe x. Oblicz wspolczynniki wielomianu bedacego wynikiem
+przemnozenia otrzymanego wielomianu przez liczbe x.
 */
 
 std::vector<int> iloczyn(std::vector<int> &wielomian, int x) {
   /**
-   * Funkcja zwraca wielomian bedacy wynikiem mnozenia otrzymanego wielomianu przez liczbę x.
+   * Funkcja zwraca wielomian bedacy wynikiem mnozenia otrzymanego wielomianu
+   * przez liczbe x.
    */
   std::vector<int> wynik;
 

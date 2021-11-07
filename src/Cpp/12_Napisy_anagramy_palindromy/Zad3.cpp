@@ -2,9 +2,9 @@
 #include <string>
 
 /*
-Dla podanych dwóch napisów sprawdź czy są swoimi anagramami. 
-Dwa napisy są anagramami jeśli jeden z nich można zbudować 
-poprzez przestawienie znaków w drugim.
+Dla podanych dwoch napisow sprawdz czy sa swoimi anagramami.
+Dwa napisy sa anagramami jesli jeden z nich mozna zbudowac
+poprzez przestawienie znakow w drugim.
 */
 
 // Zlozonosc czasowa O(n)

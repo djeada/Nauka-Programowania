@@ -2,8 +2,8 @@
 #include <iostream>
 
 /*
-Otrzymujesz liczbę N. Przy użyciu rekurencji zbuduj napis składający 
-się z liczb naturalnych mniejszych od N oddzielonych przecinkami.
+Otrzymujesz liczbe N. Przy uzyciu rekurencji zbuduj napis skladajacy
+sie z liczb naturalnych mniejszych od N oddzielonych przecinkami.
 */
 
 std::string mniejszeLiczby(int n) {
@@ -23,11 +23,10 @@ void testMniejszeLiczby() {
 
   assert(mniejszeLiczby(0) == "");
   assert(mniejszeLiczby(10) == "10, 9, 8, 7, 6, 5, 4, 3, 2, 1");
-
 }
 
 int main() {
-  
+
   testMniejszeLiczby();
 
   return 0;
