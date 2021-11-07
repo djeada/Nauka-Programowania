@@ -1,11 +1,15 @@
 """
-znajdz potege 2 wieksza badz rowna liczbie. inaczej: zaaokraglij liczbe do nastepnej potegi 2.
-dla podanej liczby ujemnej zwroc 0.
+Otrzymujesz dziesietna reprezentacje liczby naturalnej. Znajdz potege 
+dwojki wieksza badz rowna otrzymanej liczbie. Inaczej: zaokraglij liczbe 
+do nastepnej potegi dwojki.
 """
 
 
-# zmniejszaj az x bedzie poprzednia potega dwojki
 def nastepna_potega_dwojki_v1(liczba):
+    """
+    Funkcja zwraca nastepna potege dwojki wieksza badz rowna liczbie.
+    Zasada dzialania opiera sie na zmniejszaniu liczby, az liczba bedzie podzielna przez 2.
+    """
 
     if liczba <= 0:
         return 0
@@ -21,8 +25,12 @@ def nastepna_potega_dwojki_v1(liczba):
     return liczba << 1
 
 
-# compute power of two greater than or equal to n
 def nastepna_potega_dwojki_v2(liczba):
+    """
+    Funkcja zwraca nastepna potege dwojki wieksza badz rowna liczbie.
+    Zasada dzialania opiera sie na obliczeniu nastepnych poteg dwojki, 
+    az otrzymamy liczbe wieksza lub rowna podanej liczbie.
+    """
 
     if liczba <= 0:
         return 0
@@ -36,22 +44,19 @@ def nastepna_potega_dwojki_v2(liczba):
     return potega
 
 
+def test_nastepna_potega_dwojki_v1():
+    assert nastepna_potega_dwojki_v1(111) == 128
+    assert nastepna_potega_dwojki_v1(-30) == 0
+    assert nastepna_potega_dwojki_v1(1) == 2
+
+
+def test_nastepna_potega_dwojki_v2():
+
+    assert nastepna_potega_dwojki_v2(111) == 128
+    assert nastepna_potega_dwojki_v2(-30) == 0
+    assert nastepna_potega_dwojki_v2(1) == 2
+
+
 if __name__ == "__main__":
-
-    liczba = 111
-    wynik = 128
-
-    assert nastepna_potega_dwojki_v1(liczba) == wynik
-    assert nastepna_potega_dwojki_v2(liczba) == wynik
-
-    liczba = -30
-    wynik = 0
-
-    assert nastepna_potega_dwojki_v1(liczba) == wynik
-    assert nastepna_potega_dwojki_v2(liczba) == wynik
-
-    liczba = 1
-    wynik = 2
-
-    assert nastepna_potega_dwojki_v1(liczba) == wynik
-    assert nastepna_potega_dwojki_v2(liczba) == wynik
+    test_nastepna_potega_dwojki_v1()
+    test_nastepna_potega_dwojki_v2()

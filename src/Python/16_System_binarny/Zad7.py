@@ -1,19 +1,14 @@
 """
-Zamien miejscami sasiadujace bity.
-
-1010
-0101
-
-Maska 0xAAAAAAAA ma wszystkie parzyste bity ustawione
-Maska 0x55555555 ma wszystkie nieparzyste bity ustawione
-
-robiac AND zerujemy te ktore nie sa ustawione w pierwotnej liczbie
-nastepnie przesuwamy w lewo prawo
-dodajemy za pomoca OR
+Otrzymujesz dziesietna reprezentacje liczby naturalnej. 
+Zamien miejscami sasiadujace bity w zapisie binarnym 
+otrzymanej liczbie. Zwroc dziesietna reprezentacje wyniku.
 """
 
 
 def zamien_sasiadow(liczba):
+    """
+    Funkcja zamienia sasiadujace bity w binarnym zapisie liczby.
+    """
     parzyste = liczba & 0xAAAAAAAA
     nieparzyste = liczba & 0x55555555
 
@@ -23,9 +18,9 @@ def zamien_sasiadow(liczba):
     return parzyste | nieparzyste
 
 
+def test_zamien_sasiadow():
+    assert zamien_sasiadow(9131) == 4951
+
+
 if __name__ == "__main__":
-
-    liczba = 9131
-    wynik = 4951
-
-    assert zamien_sasiadow(liczba) == wynik
+    test_zamien_sasiadow()

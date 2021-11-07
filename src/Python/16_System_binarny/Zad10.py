@@ -1,9 +1,13 @@
 """
-Ile bitow nalezy odwrocic by zmienic A w B?
+Otrzymujesz dwie liczby naturalne. Oblicz ile bitow 
+nalezy odwrocic, aby zamienic liczbe A w liczbe B.  
 """
 
 
-def bity_do_zmiany_v1(liczba_a, liczba_b):
+def bity_do_zmiany(liczba_a, liczba_b):
+    """
+    Funkcja zwraca ilosc bitow do zmiany liczby A w liczbe B.
+    """
 
     n = liczba_a ^ liczba_b
 
@@ -15,10 +19,12 @@ def bity_do_zmiany_v1(liczba_a, liczba_b):
     return licznik_jedynek
 
 
+def test_bity_do_zmiany():
+    assert bity_do_zmiany(0, 0) == 0
+    assert bity_do_zmiany(1, 2) == 31
+    assert bity_do_zmiany(34, 73) == 5
+
+
 if __name__ == "__main__":
 
-    liczba_a = 34
-    liczba_b = 73
-    wynik = 5
-
-    assert bity_do_zmiany_v1(liczba_a, liczba_b) == wynik
+    test_bity_do_zmiany()

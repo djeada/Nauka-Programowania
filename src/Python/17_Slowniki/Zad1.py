@@ -1,26 +1,29 @@
 """
-Wypisz slownik gdzie kluczami sa liczby, a wartosciami ich kwadraty.
+Otrzymujesz liczbe naturalna. Zbuduj slownik skladajacy sie 
+z kluczy bedacych kolejnymi liczbami naturalnymi mniejszymi 
+od otrzymanej liczby oraz wartosci bedacych kwadratami 
+odpowiadajacych im kluczy.
 """
 
-# Wersja 1
-def zbuduj_slownik_v1(lista):
+
+def stworz_slownik(n):
+    """
+    Funkcja tworzy slownik zawierajacy klucze bedace kolejnymi 
+    liczbami naturalnymi mniejszymi od podanej liczby n 
+    oraz wartosci bedacymi kwadratami kluczy.
+    """
 
     slownik = {}
-
-    for x in lista:
-        slownik[x] = x ** 2
-
+    for i in range(n):
+        slownik[i] = i ** 2
     return slownik
 
 
-# Wersja 2
-def zbuduj_slownik_v2(lista):
-    return {x: x ** 2 for x in lista}
+def test_stworz_slownik():
+    assert stworz_slownik(5) == {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+    assert stworz_slownik(0) == {}
 
 
-# Testy poprawnosci
-lista = [3, 9, 2, -7, 1]
-wynik = {3: 9, 9: 81, 2: 4, -7: 49, 1: 1}
+if __name__ == "__main__":
 
-assert zbuduj_slownik_v1(lista) == wynik
-assert zbuduj_slownik_v2(lista) == wynik
+    test_stworz_slownik()

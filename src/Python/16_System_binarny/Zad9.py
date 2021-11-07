@@ -1,12 +1,15 @@
 """
-Uzywajac operacji bitowych:
-a) Zamien wielkie litery na male.
-b) Zamien male litery na wielkie.
-c) Zamien male litery na wielkie i wielkie na male.
+Otrzymujesz napis. Przy uzyciu operatorow bitowych:
+a) Zamien wielkie litery na male litery.
+b) Zamien male litery na wielkie litery.
+c) Zamien male litery na wielkie litery i wielkie litery na male litery.
 """
 
 
 def wielkie_na_male(slowo):
+    """
+    Funkcja zamienia wielkie litery na male litery.
+    """
     wynik = ""
 
     for litera in slowo:
@@ -16,6 +19,9 @@ def wielkie_na_male(slowo):
 
 
 def male_na_wielkie(slowo):
+    """
+    Funkcja zamienia male litery na wielkie litery.
+    """
     wynik = ""
 
     for litera in slowo:
@@ -25,7 +31,9 @@ def male_na_wielkie(slowo):
 
 
 def odwroc_wielkosc_liter(slowo):
-
+    """
+    Funkcja zamienia male litery na wielkie litery i wielkie litery na male litery.
+    """
     wynik = ""
 
     for litera in slowo:
@@ -41,18 +49,23 @@ def odwroc_wielkosc_liter(slowo):
     return wynik
 
 
+def test_wielkie_na_male():
+    assert wielkie_na_male("KURCZAKU") == "kurczaku"
+
+
+def test_male_na_wielkie():
+    assert male_na_wielkie("piesek") == "PIESEK"
+
+
+def test_odwroc_wielkosc_liter():
+    assert (
+        odwroc_wielkosc_liter("wszedl Kotek na PloteK i mrUga")
+        == "WSZEDL kOTEK NA pLOTEk I MRuGA"
+    )
+
+
 if __name__ == "__main__":
 
-    slowo = "KURCZAKU"
-    wynik = "kurczaku"
-
-    assert wielkie_na_male(slowo) == wynik
-
-    slowo = "piesek"
-    wynik = "PIESEK"
-
-    assert male_na_wielkie(slowo) == wynik
-
-    slowo = "wszedl Kotek na PloteK i mrUga"
-
-    print(odwroc_wielkosc_liter(slowo))
+    test_wielkie_na_male()
+    test_male_na_wielkie()
+    test_odwroc_wielkosc_liter()

@@ -1,42 +1,65 @@
 """
-Wypisz slownik posortowany wzgledem kluczy.	
-"""
-
-# Wersja 1
-def sortuj_slownik_wzgledem_kluczy_v1(slownik):
-    return {k: v for k, v in sorted(slownik.items(), key=lambda x: x[0])}
-
-
-# Wersja 2
-def sortuj_slownik_wzgledem_kluczy_v2(slownik):
-    lista = sorted(slownik.items(), key=lambda x: x[0])
-    return {x[0]: x[1] for x in lista}
-
-
-# Testy poprawnosci
-slownik = {"c": 5, "g": 9, "e": 4, "a": 2, "b": -1}
-wynik = {"a": 2, "b": -1, "c": 5, "e": 4, "g": 9}
-
-assert sortuj_slownik_wzgledem_kluczy_v1(slownik) == wynik
-assert sortuj_slownik_wzgledem_kluczy_v2(slownik) == wynik
-
-"""
-Wypisz slownik posortowany wzgledem wartosci.	
+Zbuduj prosta baze danych dla biblioteki oparta o slownik w ktorym kluczami sa 
+imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek. 
+Baza danych powinna umozliwiac:
+a) Dodanie wypozyczonej ksiazki do danego czytelnika.
+b) Zwrocenie wypozyczonej ksiazki przez czytelnika.
+c) Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
 """
 
 
-def sortuj_slownik_wzgledem_wartosci_v1(slownik):
-    return {k: v for k, v in sorted(slownik.items(), key=lambda x: x[1])}
+def dodaj_ksiazke_do_czytelnika(baza_danych, czytelnik, ksiazka):
+    """
+    Funkcja dodaje ksiazke do listy ksiazek wypozyczonych przez czytelnika w bazie danych.
+    """
+    if czytelnik in baza_danych:
+        baza_danych[czytelnik].add(ksiazka)
+    else:
+        baza_danych[czytelnik] = {ksiazka}
+
+    return baza_danych
 
 
-def sortuj_slownik_wzgledem_wartosci_v2(slownik):
-    lista = sorted(slownik.items(), key=lambda x: x[1])
-    return {x[0]: x[1] for x in lista}
+def zwroc_ksiazke_czytelnika(baza_danych, czytelnik, ksiazka):
+    """
+    Funkcja usuwa ksiazke z listy ksiazek wypozyczonych przez czytelnika w bazie danych.
+    """
+    if czytelnik in baza_danych:
+        baza_danych[czytelnik].remove(ksiazka)
+
+    return baza_danych
 
 
-# Testy poprawnosci
-slownik = {3: 5, "hej": 9, "e": 4, "xxx": 2, 1: -1}
-wynik = {1: -1, "xxx": 2, "e": 4, 3: 5, "hej": 9}
+def wypisz_liste_wypozyczonych_ksiazek(baza_danych, czytelnik):
+    """	
+    Funkcja wypisuje liste wypozyczonych ksiazek dla danego czytelnika.
+    """
+    if czytelnik in baza_danych:
+        print(f"Czytelnik {czytelnik} wypozyczyl nastepujace ksiazki:")
+        for ksiazka in baza_danych[czytelnik]:
+            print(ksiazka)
+    else:
+        print("Nie ma takiego czytelnika w bazie danych")
 
-assert sortuj_slownik_wzgledem_wartosci_v1(slownik) == wynik
-assert sortuj_slownik_wzgledem_wartosci_v2(slownik) == wynik
+
+def test_dodaj_ksiazke_do_czytelnika():
+    assert dodaj_ksiazke_do_czytelnika(
+        {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Jan", "Ksiazka3"
+    ) == {"Jan": {"Ksiazka1", "Ksiazka2", "Ksiazka3"}}
+    assert dodaj_ksiazke_do_czytelnika(
+        {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Adam", "Ksiazka3"
+    ) == {"Jan": {"Ksiazka1", "Ksiazka2"}, "Adam": {"Ksiazka3"}}
+    assert dodaj_ksiazke_do_czytelnika(
+        {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Jan", "Ksiazka1"
+    ) == {"Jan": {"Ksiazka1", "Ksiazka2"}}
+
+
+def test_zwroc_ksiazke_czytelnika():
+    assert zwroc_ksiazke_czytelnika(
+        {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Jan", "Ksiazka1"
+    ) == {"Jan": {"Ksiazka2"}}
+
+
+if __name__ == "__main__":
+    test_dodaj_ksiazke_do_czytelnika()
+    test_zwroc_ksiazke_czytelnika()

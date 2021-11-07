@@ -1,9 +1,13 @@
 """
-Sprawdz czy binarna reprezentacja liczby jest palindromem.
+Otrzymujesz dziesietna reprezentacje liczby naturalnej. 
+Sprawdz czy binarna reprezentacja otrzymanej liczby jest palindromem.
 """
 
 
-def czy_palindrom_v1(liczba):
+def czy_palindrom(liczba):
+    """
+    Funkcja sprawdza czy podana liczba jest palindromem.
+    """
 
     odwrocona = 0
 
@@ -15,12 +19,14 @@ def czy_palindrom_v1(liczba):
     return odwrocona == liczba
 
 
+def test_czy_palindrom():
+
+    assert czy_palindrom(0)
+    assert czy_palindrom(27)
+    assert not czy_palindrom(2)
+    assert not czy_palindrom(77)
+
+
 if __name__ == "__main__":
 
-    liczba = 0b11011
-
-    assert czy_palindrom_v1(liczba)
-
-    liczba = 0b1001101
-
-    assert not czy_palindrom_v1(liczba)
+    test_czy_palindrom()
