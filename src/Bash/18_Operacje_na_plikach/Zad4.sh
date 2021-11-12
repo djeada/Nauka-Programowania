@@ -2,7 +2,7 @@
 
 source ../assert.sh
 
-# Otrzymujesz napis reprezentujący ścieżkę pliku tekstowego. 
+# Otrzymujesz napis reprezentujący ścieżkę pliku tekstowego.
 # Wczytaj i wypisz treść pliku.
 
 wypisz_plik() {
@@ -11,7 +11,7 @@ wypisz_plik() {
 }
 
 main() {
-    
+
     # stworz folder testowy
     mkdir 'test'
 

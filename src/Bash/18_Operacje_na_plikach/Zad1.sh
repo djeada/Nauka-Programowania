@@ -2,7 +2,7 @@
 
 source ../assert.sh
 
-# Otrzymujesz napis reprezentujący ścieżkę. 
+# Otrzymujesz napis reprezentujący ścieżkę.
 # a) Sprawdź, czy jest to ścieżka pliku.
 # b) Sprawdź, czy jest to ścieżka folderu.
 
@@ -23,7 +23,7 @@ czy_sciezka_folderu() {
 }
 
 test_czy_sciezka_pliku() {
-    
+
     # stworz folder testowy
     mkdir 'test'
 
@@ -39,7 +39,7 @@ test_czy_sciezka_pliku() {
 }
 
 test_czy_sciezka_folderu() {
-    
+
     # stworz folder testowy
     mkdir 'test'
 

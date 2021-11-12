@@ -2,14 +2,14 @@
 
 source ../assert.sh
 
-# Otrzymujesz napis reprezentujący nazwę pliku. Przeszukaj cały 
+# Otrzymujesz napis reprezentujący nazwę pliku. Przeszukaj cały
 # system i zapisz w liście wszystkie ścieżki plików o danej nazwie.
 
 znajdz_pliki_o_nazwie() {
     local nazwa=$1
     local lista=()
     local sciezka
-    for sciezka in $(find . -type f); do
+    for sciezka in $(find ~ -type f); do
         if [[ $sciezka == *"$nazwa"* ]]; then
             lista+=("$sciezka")
         fi
@@ -31,14 +31,12 @@ test_znajdz_pliki_o_nazwie() {
     local sciezka_pliku_1=$(pwd)/test/test1/test.txt
     local sciezka_pliku_2=$(pwd)/test/test2/test.txt
 
-    # znajdz pliki z rozszerzeniem .txt
-    IFS=":"
-    read -a wynik <<< $(znajdz_pliki_o_nazwie 'test.txt')
-    IFS=" "
+    # znajdz pliki o nazwie test.txt
+    IFS=' ' read -r -a wynik <<< $(znajdz_pliki_o_nazwie 'test.txt')
 
     # sprawdz czy znaleziono wszystkie pliki
-    assert_array_contains wynik "$sciezka_pliku_1"
-    assert_array_contains wynik "$sciezka_pliku_2"
+    assert_array_contains wynik "$sciezka_pliku_1" $LINENO
+    assert_array_contains wynik "$sciezka_pliku_2" $LINENO
 
     # usun folder testowy
     rm -rf 'test'

@@ -2,20 +2,18 @@
 
 source ../assert.sh
 
-# Otrzymujesz dwa napisy. Pierwszy napis reprezentuje ścieżkę folderu. 
-# Drugi napis reprezentuje rozszerzenie szukanych plików. Znajdź w 
-# folderze wszystkie pliki z danym rozszerzeniem. Nazwy znalezionych 
+# Otrzymujesz dwa napisy. Pierwszy napis reprezentuje ścieżkę folderu.
+# Drugi napis reprezentuje rozszerzenie szukanych plików. Znajdź w
+# folderze wszystkie pliki z danym rozszerzeniem. Nazwy znalezionych
 # plików zapisz w liście.
 
 znajdz_pliki_z_rozszerzeniem() {
     local folder="$1"
     local rozszerzenie="$2"
     local pliki=()
-    for plik in "$folder"/*; do
-        if [[ -f "$plik" ]]; then
-            if [[ "$plik" == *"$rozszerzenie" ]]; then
-                pliki+=("$plik")
-            fi
+    for plik in $(find $folder -maxdepth 10 -type f); do
+        if [[ "$plik" == *"$rozszerzenie" ]]; then
+            pliki+=("$plik")
         fi
     done
     echo "${pliki[@]}"
@@ -34,14 +32,13 @@ test_znajdz_pliki_z_rozszerzeniem() {
     touch 'test/test2/test2.txt'
 
     # znajdz pliki z rozszerzeniem .txt
-    IFS="$oldIFS"
-    read -a wynik <<< ( $(znajdz_pliki_z_rozszerzeniem 'test' 'txt') )
-    
+    IFS=' ' read -r -a wynik <<< $(znajdz_pliki_z_rozszerzeniem 'test' 'txt')
+
     # sprawdz czy znaleziono wszystkie pliki
-    assert_array_contains wynik 'test/test1/test1.txt'
-    assert_array_contains wynik 'test/test1/test2.txt'
-    assert_array_contains wynik 'test/test2/test1.txt'
-    assert_array_contains wynik 'test/test2/test2.txt'
+    assert_array_contains wynik 'test/test1/test1.txt' $LINENO
+    assert_array_contains wynik 'test/test1/test2.txt' $LINENO
+    assert_array_contains wynik 'test/test2/test1.txt' $LINENO
+    assert_array_contains wynik 'test/test2/test2.txt' $LINENO
 
     # usun folder testowy
     rm -rf 'test'

@@ -4,7 +4,7 @@ source ../assert.sh
 
 # Otrzymujesz napis reprezentujący ścieżkę pliku tekstowego. Oblicz:
 # a) Liczbę wierszy pliku.
-# b) Liczbę słów w pliku. Słowa oddzielone są spacjami i mogą składać 
+# b) Liczbę słów w pliku. Słowa oddzielone są spacjami i mogą składać
 # się wyłącznie ze znaków będących literami.
 # c) Średnią długość wiersza.
 # d) Średnią liczbę słów na wiersz.
@@ -16,70 +16,71 @@ wczytaj_plik() {
     while read -r wiersz; do
         lista+=("$wiersz")
     done < "$plik"
-    echo "${lista[@]}"
+    printf '%s\n' "${lista[@]}"
 }
 
 liczba_wierszy() {
-    echo "${#lista[@]}"
+    local plik="$1"
+    wc -l < $plik
 }
 
 podziel_zdanie_na_slowa() {
-    zdanie="$1"
-    echo "$zdanie" | tr -s ' ' '\n'
-}
 
-na_male() {
-    for (( i=0; i<${#slowa[@]}; i++ ));
-    do
-        slowa[$i]=$( echo "${slowa[$i]}" | awk '{print tolower($0)}')
-    done 
+    local zdanie="$1"
+    local lista=()
+
+    #zdanie=$(echo "$zdanie" | sed -r 's/[''".,:;!?\\@-\<\>\/]+/ /g' | tr -s ' ')
+    #IFS=' ' read -ra lista_slow <<<"$zdanie"
+    zdanie=$(echo "$zdanie" | sed -r 's/[''".,:;!?\\@\<\>\/]+/ /g' | tr -s ' ')
+    zdanie=$(echo "$zdanie" | sed -r 's/[-]+//g') 
+    lista_slow=($zdanie)
+    for slowo in "${lista_slow[@]}"; do
+        # sparawdz czy napis jest alfanumeryczny
+        # i zawiera co najmniej jedna litere
+        if [[ "$slowo" =~ ^[[:alnum:]]*$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
+            lista+=("$slowo")
+        fi
+    done
+
+    printf '%s\n' "${lista[@]}"
 }
 
 liczba_slow() {
+    local plik="$1"
+    tresc=($(wczytaj_plik $plik))
     local licznik=0
-    for wiersz in "${lista[@]}"; do
-        IFS='~' 
-        read -r -a slowa <<<=($(podziel_zdanie_na_slowa "$wiersz"))
-        IFS=' '
+    for wiersz in "${tresc[@]}"; do
+        slowa=($(podziel_zdanie_na_slowa "$wiersz"))
         licznik=$((licznik+${#slowa[@]}))
     done
     echo "$licznik"
 }
 
 srednia_dlugosc_wiersza() {
-    local suma=0
-    for wiersz in "${lista[@]}"; do
-        suma=$((suma+${#wiersz}))
-    done
-    echo "scale=2; $suma / ${#lista[@]}" | bc
+    local plik="$1"
+    local suma_dlugosci_wierszy=$(awk '{print length}' $plik | awk '{s+=$1} END {print s}')
+    echo "scale=2; $suma_dlugosci_wierszy / $(liczba_wierszy $plik)" | bc
 }
 
 srednia_liczba_slow_na_wiersz() {
-    local suma=0
-    for wiersz in "${lista[@]}"; do
-        IFS='~' 
-        read -r -a slowa <<<=($(podziel_zdanie_na_slowa "$wiersz"))
-        IFS=' '
-        suma=$((suma+${#slowa[@]}))
-    done
-    echo "scale=2; $suma / ${#lista[@]}" | bc
+    local plik="$1"
+    echo "scale=2; $(liczba_slow $plik) / $(liczba_wierszy $plik)" | bc
 }
 
 czestosc_slow() {
-    local slowa=()
-    for wiersz in "${lista[@]}"; do
-        IFS='~' 
-        read -r -a slowa <<<=($(podziel_zdanie_na_slowa "$wiersz"))
-        IFS=' '
-        for slowo in "${slowa[@]}"; do
-            if [[ ! " ${slowa[@]} " =~ " $slowo " ]]; then
-                slowa+=("$slowo")
-            fi
-        done
+    local plik="$1"
+    tresc=($(wczytaj_plik $plik))
+    local histogram=()
+
+    for wiersz in "${tresc[@]}"; do
+        
+        slowa=($(podziel_zdanie_na_slowa "$wiersz"))
+        histogram+=(${slowa[@]})
     done
-    for slowo in "${slowa[@]}"; do
-        echo "$slowo"
-    done | sort | uniq -c | sort -nr    
+
+    for slowo in "${histogram[@]}"; do
+        echo "$slowo" | awk '{print tolower($0)}'
+    done | sort | uniq -c | awk '{print $2, $1}'
 }
 
 test_statystyki() {
@@ -88,28 +89,27 @@ test_statystyki() {
     mkdir -p 'test'
 
     # stworz plik testowy
-    touch 'test/test.txt'
+    local plik='test/test.txt'
+    touch $plik
 
     # wypelnij plik testowy
     echo -e 'Hej \nThis is an example of a simple ASCII text file stored on a Web server. Note that it has a file\nextension of \".txt\".\n\nAlthough such files may contains some basic layout formatting, such as paragraphs, there is no\nsupport for the text to have attributes, such as bolding.\n\nText files can contain Hypertext Mark-up codes but these will not be interpreted by the \nbrowser. For example, if the following characters <strong>hello</strong> were typed into an\n"html" file then the word "hello" would be shown in bold.' > 'test/test.txt'
 
-    # wczytaj plik testowy
-    wczytaj_plik 'test/test.txt'
-
     # sprawdz liczbe wierszy
-    assertEquals "$(liczba_wierszy)" "4"
+    assertEqual "$(liczba_wierszy $plik)" "10" $LINENO
 
     # sprawdz liczbe slow
-    assertEquals "$(liczba_slow)" "42"
+    assertEqual "$(liczba_slow $plik)" "90" $LINENO
 
     # sprawdz srednia dlugosc wiersza
-    assertEquals "$(srednia_dlugosc_wiersza)" "42.00"
+    assertEqual "$(srednia_dlugosc_wiersza $plik)" "50.70" $LINENO
 
     # sprawdz srednia liczbe slow na wiersz
-    assertEquals "$(srednia_liczba_slow_na_wiersz)" "7.00"
+    assertEqual "$(srednia_liczba_slow_na_wiersz $plik)" "9.00" $LINENO
 
-    # sprawdz czestosc slow
-    assertEquals "$(czestosc_slow)" 'hello 1 this 1 is 1 an 1 example 1 of 1 a 1 simple 1 ascii 1 text 1 file 1 stored 1 on 1 a 1 web 1 server 1 note 1 that 1 it 1 has 1 a 1 file 1 extension 1 of 1 \".txt\" 1 although 1 such 1 files 1 may 1 contain 1 some 1 basic 1 layout 1 formatting 1 such 1 as 1 paragraphs 1 there 1 is 1 no 1 support 1 for 1 the 1 text 1 to 1 have 1 attributes 1 such 1 as 1 bolding 1 text 1 files 1 can 1 contain 1 Hypertext 1 Mark-up 1 codes 1 but 1 these 1 will 1 not 1 be 1 interpreted 1 by 1 the 1 browser 1 for 1 example 1 if 1 the 1 following 1 characters 1 <strong>hello</strong> 1 were 1 typed 1 into 1 an 1 \""html\" 1 file 1 then 1 the 1 word 1 \"hello\" 1 would 1 be 1 shown 1 in 1 bold 1'
+    local histogram=$(czestosc_slow $plik)
+    local oczekiwane=('bold 1' 'in 1' 'shown 1' 'word 1' 'then 1' 'html 1' 'simple 1' 'basic 1' 'contains 1' 'layout 1' 'were 1' 'may 1' 'such 3' 'file 3' 'extension 1' 'files 2' 'it 1' 'hypertext 1' 'hello 2' 'note 1' 'web 1' 'ascii 1' 'is 2' 'an 2' 'example 2' 'hej 1' 'following 1' 'this 1' 'of 2' 'txt 1' 'although 1' 'text 3' 'stored 1' 'that 1' 'by 1' 'on 1' 'formatting 1' 'support 1' 'browser 1' 'typed 1' 'a 3' 'server 1' 'would 1' 'contain 1' 'as 2' 'markup 1' 'characters 1' 'there 1' 'for 2' 'the 4' 'to 1' 'have 1' 'these 1' 'will 1' 'paragraphs 1' 'attributes 1' 'bolding 1' 'can 1' 'has 1' 'codes 1' 'if 1' 'some 1' 'no 1' 'but 1' 'not 1' 'be 2' 'interpreted 1' 'strong 2' 'into 1')
+    assertSetsEqual histogram oczekiwane $LINENO
 
     # usun folder testowy
     rm -rf 'test'

@@ -2,7 +2,7 @@ E_ASSERT_FAILED=99
 E_PARAM_ERR=98
 
 
-assert () {
+assert() {
     if [ -z "$2" ]; then
         return $E_PARAM_ERR
     fi
@@ -90,7 +90,6 @@ assertArrayEqual() {
     #check length equal
     n=$(( ${#array_a[@]}))
     m=$(( ${#array_b[@]}))
-
     assertEqual $n $m $lineno
 
     #check element for element
@@ -99,29 +98,6 @@ assertArrayEqual() {
         assertEqual "${array_a[$i]}" "${array_b[$i]}" $lineno
     done
 
-}
-
-assertSetsEqual() {
-    local -n array_1=$1
-    local -n array_2=$2
-    local lineno=$3
-
-    IFS=$'\n' array_1=($(sort <<<"${array_1[*]}")); unset IFS
-    IFS=$'\n' array_2=($(sort <<<"${array_2[*]}")); unset IFS
-
-    assertArrayEqual array_1 array_2 $lineno
-
-}
-
-assertSetsNotEqual() {
-    local -n array_1=$1
-    local -n array_2=$2
-    local lineno=$3
-
-    IFS=$'\n' array_1=($(sort <<<"${array_1[*]}")); unset IFS
-    IFS=$'\n' array_2=($(sort <<<"${array_2[*]}")); unset IFS
-
-    assertNotEqual array_1 array_2 $lineno
 }
 
 assertTrue () {
@@ -145,13 +121,13 @@ assertFalse () {
 }
 
 assert_array_contains() {
-    local -n array_a=$1
+    local -n array=$1
     local element="$2"
     local lineno=$3
 
-    for (( i=0; i<${#array_a[@]}; i++ ))
+    for (( i=0; i<${#array[@]}; i++ ))
     do
-        if [ "${array_a[$i]}" = "$element" ]; then
+        if [ "${array[$i]}" = "$element" ]; then
             return
         fi
     done
@@ -177,3 +153,28 @@ assert_array_not_contains() {
 
     return
 }
+
+assertSetsEqual() {
+    local -n array_1=$1
+    local -n array_2=$2
+    local lineno=$3
+
+    IFS=$'\n' array_1=($(sort <<<"${array_1[*]}")); unset IFS
+    IFS=$'\n' array_2=($(sort <<<"${array_2[*]}")); unset IFS
+
+    assertArrayEqual array_1 array_2 $lineno
+
+}
+
+assertSetsNotEqual() {
+    local -n array_1=$1
+    local -n array_2=$2
+    local lineno=$3
+
+    IFS=$'\n' array_1=($(sort <<<"${array_1[*]}")); unset IFS
+    IFS=$'\n' array_2=($(sort <<<"${array_2[*]}")); unset IFS
+
+    assertNotEqual array_1 array_2 $lineno
+}
+
+
