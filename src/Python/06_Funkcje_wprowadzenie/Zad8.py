@@ -6,7 +6,9 @@ Napisz funkcje realizujaca zaokraglanie ilorazu bez uzycia operatorow  '/' i '%'
 
 
 def podziel(a, b):
-
+    '''
+    Funkcja zwraca iloraz a przez b.
+    '''
     znak = 1
 
     if b == 0:
@@ -48,6 +50,5 @@ def test_podziel():
     assert podziel(0, 0) == float("nan")
 
 
-if _name__ == "__main__":
-
+if __name__ == "__main__":
     test_podziel()

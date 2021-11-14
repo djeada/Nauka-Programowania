@@ -10,22 +10,37 @@ e) Reszte z dzielenia pierwszej przez druga.
 
 
 def suma(pierwsza_liczba, druga_liczba):
+    '''
+    Funkcja zwraca sume dwoch liczb.
+    '''
     return pierwsza_liczba + druga_liczba
 
 
 def roznica(pierwsza_liczba, druga_liczba):
+    '''
+    Funkcja zwraca roznice dwoch liczb.
+    '''
     return pierwsza_liczba - druga_liczba
 
 
 def iloczyn(pierwsza_liczba, druga_liczba):
+    '''
+    Funkcja zwraca iloczyn dwoch liczb.
+    '''
     return pierwsza_liczba * druga_liczba
 
 
 def iloraz(pierwsza_liczba, druga_liczba):
+    '''
+    Funkcja zwraca iloraz dwoch liczb.
+    '''
     return pierwsza_liczba / druga_liczba
 
 
 def reszta(pierwsza_liczba, druga_liczba):
+    '''
+    Funkcja zwraca reszte z dzielenia pierwszej przez druga.
+    '''
     return pierwsza_liczba % druga_liczba
 
 

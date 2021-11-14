@@ -10,18 +10,30 @@ d) Czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu
 
 
 def pierwsza_wieksza(pierwsza_liczba, druga_liczba):
+    '''
+    Funkcja sprawdza czy pierwsza liczba jest wieksza od drugiej liczby.
+    '''
     return pierwsza_liczba > druga_liczba
 
 
 def suma_mniejsza_10(pierwsza_liczba, druga_liczba):
+    '''
+    Funkcja sprawdza czy suma liczb jest mniejsza niz 10.
+    '''
     return pierwsza_liczba + druga_liczba < 10
 
 
 def obie_nieparzyste(pierwsza_liczba, druga_liczba):
+    '''
+    Funkcja sprawdza czy obie liczby sa nieparzyste.
+    '''
     return pierwsza_liczba % 2 != 0 and druga_liczba % 2 != 0
 
 
 def wieksza_mniejsza_pierwsza_kwadrat(pierwsza_liczba, druga_liczba):
+    '''
+    Funkcja sprawdza czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu.
+    '''
     return max(pierwsza_liczba, druga_liczba) < pierwsza_liczba ** 2
 
 

@@ -6,6 +6,9 @@ zmienna b powinna przechowywac dawna wartosc zmiennej a.
 
 
 def swap(pierwsza_liczba, druga_liczba):
+    '''
+    Funkcja zamienia wartosci miejscami.
+    '''
     return druga_liczba, pierwsza_liczba
 
 

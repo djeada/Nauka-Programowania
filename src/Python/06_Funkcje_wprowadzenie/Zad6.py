@@ -4,6 +4,9 @@ Napisz funkcje, ktora dla otrzymanej liczby zwroci sume cyfr tej liczby.
 
 
 def suma_cyfr(liczba):
+    '''
+    Funkcja zwraca sume cyfr podanej liczby.
+    '''
     suma = 0
     while liczba > 0:
         suma += liczba % 10

@@ -9,6 +9,9 @@ d) Dla otrzymanych trzech liczb, zwraca najwieksza.
 
 
 def min_2(a, b):
+    '''
+    Funkcja zwraca mniejsza z dwoch liczb.
+    '''
     if a < b:
         return a
     else:
@@ -16,6 +19,9 @@ def min_2(a, b):
 
 
 def maks_2(a, b):
+    '''
+    Funkcja zwraca wieksza z dwoch liczb.
+    '''
     if a > b:
         return a
     else:
@@ -23,6 +29,9 @@ def maks_2(a, b):
 
 
 def min_3(a, b, c):
+    '''
+    Funkcja zwraca najmniejsza z trzech liczb.
+    '''
     if a < b and a < c:
         return a
     elif b < a and b < c:
@@ -32,6 +41,9 @@ def min_3(a, b, c):
 
 
 def maks_3(a, b, c):
+    '''
+    Funkcja zwraca najwieksza z trzech liczb.
+    '''
     if a > b and a > c:
         return a
     elif b > a and b > c:

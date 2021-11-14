@@ -8,13 +8,19 @@ z tymi przekazanymi przez pierwsza funkcje.
 
 
 def inicjalizacja_danych():
+    '''
+    Funkcja inicjalizujaca dane.
+    '''
     nazwa = input("Podaj nazwe: ")
     haslo = input("Podaj haslo: ")
     return nazwa, haslo
 
 
 def sprawdzenie_danych(nazwa, haslo):
-
+    '''
+    Funkcja sprawdza czy dane, ktore zostaly podane przez 
+    uzytkownika sa identyczne z danymi przekazanymi do funkcji.
+    '''
     nazwa2 = None
     haslo2 = None
 

@@ -8,14 +8,23 @@ c) Wartosc logiczna Prawda.
 
 
 def zwroc_3():
+    '''
+    Funkcja zwraca liczbe 3.
+    '''
     return 3
 
 
 def zwroc_tak():
+    '''
+    Funkcja zwraca napis "Tak".
+    '''
     return "Tak"
 
 
 def zwroc_prawda():
+    '''
+    Funkcja zwraca wartosc logiczna Prawda.
+    '''
     return True
 
 
