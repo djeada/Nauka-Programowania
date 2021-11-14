@@ -7,11 +7,11 @@ main() {
     read x
 
     if [[ $x -gt 0 ]]; then
-        echo "libczba jest dodatnia"
+        echo "Liczba jest dodatnia."
     elif [[ $x -lt 0 ]]; then
-        echo "libczba jest ujemna"
+        echo "Liczba jest ujemna."
     else
-        echo "libczba jest zerem"
+        echo "Liczba jest zerem."
     fi
 }
 
