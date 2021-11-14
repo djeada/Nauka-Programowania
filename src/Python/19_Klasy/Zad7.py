@@ -1,22 +1,22 @@
 """
-Wypisz liczbe instancji klasy w programie.
+Stworz klase Klasa. Klasa powinna zawierac funkcje statyczna zwracajaca 
+aktualna liczbe instancji klasy w programie. Stworz kilka obiektow klasy 
+i przetestuj dzialanie funkcji.
 """
 
-# Wersja 1
 class Klasa:
     liczba_instancji = 0
 
     def __init__(self):
         Klasa.liczba_instancji += 1
 
-    def wyswietl():
-        print("Aktualna liczba instancji: ", Klasa.liczba_instancji)
+    def __del__(self):
+        Klasa.liczba_instancji -= 1
 
-    wyswietl = staticmethod(wyswietl)
-
-
-# Testy poprawnosci
-N = 5
-[Klasa() for i in range(N)]
-
-assert Klasa.liczba_instancji == N
+if __name__ == "__main__":
+    a = Klasa()
+    b = Klasa()
+    print(Klasa.liczba_instancji)
+    del a
+    del b
+    print(Klasa.liczba_instancji)

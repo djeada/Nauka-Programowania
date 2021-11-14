@@ -1,14 +1,45 @@
 """
-Otrzymujesz liste wspolrzednych wierzcholkow dwoch prostokatow.
-Znajdz wspolrzedne prostokata powstalego z nalozenia sie dwoch innych prostokatpw.
+Napisz klase Prostokat reprezentujaca prostokat w ukladzie kartezjanskim. 
+Prostokat okreslony jest przez wspolrzedne jego czterech wierzcholkow. 
+Boki prostokata sa prostopadle do osi ukladu wspolrzednych. 
+Klasa powinna zawierac funkcje statyczna zwracajaca pole prostokata 
+powstalego z nalozenia sie dwoch prostokatow. Jesli dwa prostokaty 
+nie pokrywaja sie, funkcja powinna zwracac 0.
 """
 
+class Prostokat:
+    def __init__(self, lewo, gora, prawo, dol):
+        self.lewo = lewo
+        self.gora = gora
+        self.prawo = prawo
+        self.dol = dol
+    
+    def pole(self):
+        return (self.prawo - self.lewo) * (self.dol - self.gora)
+    
+    @staticmethod
+    def pole_czesci_wspolnej(p1, p2):
+        if p1.lewo > p2.prawo or p1.prawo < p2.lewo or p1.gora < p2.dol or p1.dol > p2.gora:
+            return 0
+        
+        pole_x = max(0, min(p1.prawo, p2.prawo) - max(p1.lewo, p2.lewo));
+        pole_y = max(0, min(p1.gora, p2.gora) - max(p1.dol, p2.dol));
 
-def prostokat():
-    def __init__(self, lista_wspolrzednych_wierzcholkow):
-        self.listaWspolrzednychWierzcholkow = lista_wspolrzednych_wierzcholkow
+        return pole_x * pole_y;
 
-    def wypisz(self):
-        print("Wierzcholki prostokata: ")
-        for punkt in listaWspolrzednychWierzcholkow:
-            print(punkt)
+
+def test_pole_czesci_wspolnej_pozytwne():
+    prostokat_a = Prostokat(2, 7, 5, 2)
+    prostokat_b = Prostokat(3, 9, 6, 4)
+    wynik = 6
+    assert Prostokat.pole_czesci_wspolnej(prostokat_a, prostokat_b) == wynik
+
+def test_pole_czesci_wspolnej_negatywne():
+    prostokat_a = Prostokat(1, 1, -1, -1)
+    prostokat_b = Prostokat(2, 2, 1, 1)
+    wynik = 0
+    assert Prostokat.pole_czesci_wspolnej(prostokat_b, prostokat_a) == wynik
+
+if __name__ == "__main__":
+    test_pole_czesci_wspolnej_pozytwne()
+    test_pole_czesci_wspolnej_negatywne()

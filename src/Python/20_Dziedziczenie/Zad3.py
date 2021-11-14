@@ -1,50 +1,34 @@
 """
-Polimorfizm.
+Zaprojektuj klase Zwierz oraz klasy pochodne Pies oraz Kot. 
+Obie klasy potomne powinny nadpisywac metode odglos() klasy 
+zdefiniowana w klasie bazowej. Nastepnie w programie 
+testujacym napisane klasy, nalezy w jednej liscie zebrac 
+obiekty wszystkich trzech klas. Nalezy przy pomocy petli 
+przejsc przez wszystkie elementy listy i dla kazdego z nich 
+wywolac funkcje odglos().
 """
 
 
 class Zwierz:
-    def __init__(self, nazwa, dzwiek):
-        self.nazwa = nazwa
-        self.dzwiek = dzwiek
+    def __init__(self, imie):
+        self.imie = imie
 
-    def __repr__(self):
-        return "nazwa : %s  dzwiek : %s" % (self.nazwa, self.dzwiek)
+    def odglos(self):
+        print("Odglos zwierzecia")
 
-    def get_dzwiek(self):
-        return self.dzwiek
-
-    def get_typ(self):
-        print("Zwierz")
-
+    def __str__(self):
+        return self.imie
 
 class Pies(Zwierz):
-    def __init__(self, nazwa, dzwiek, dom):
-        self.dom = dom
-        super(Pies, self).__init__(nazwa, dzwiek)
+    def odglos(self):
+        print("Hau hau")
 
-    def __repr__(self):
-        return "nazwa : %s  dzwiek : %s  dom : %s" % (self.nazwa, self.dzwiek, self.dom)
+class Kot(Zwierz):
+    def odglos(self):
+        print("Miau miau")
 
-    def get_typ(self):
-        print("Pies")
-
-    def wydaj_odglosy(self):
-        print(self.dzwiek)
-        print(self.dzwiek)
-
-
-class JakiZwierz(object):
-    def get_typ(self, obj_type):
-        obj_type.get_typ()
-
-
-a = Zwierz("tajemny zwierz", "xxx")
-b = Pies("Burek", "Hau", "sklep")
-c = JakiZwierz()
-
-print(a)
-print(b)
-b.wydaj_odglosy()
-c.get_typ(a)
-c.get_typ(b)
+if __name__ == "__main__":
+    zwierzeta = [Zwierz("Zwierz"), Pies("Piesek"), Kot("Kotek")]
+    for zwierze in zwierzeta:
+        print(f'{zwierze} wydaje odglos:')
+        zwierze.odglos()
