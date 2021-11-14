@@ -2,13 +2,13 @@
 
 source ../assert.sh
 
-# Otrzymujesz napis reprezentujący ścieżkę pliku tekstowego. Oblicz:
-# a) Liczbę wierszy pliku.
-# b) Liczbę słów w pliku. Słowa oddzielone są spacjami i mogą składać
-# się wyłącznie ze znaków będących literami.
-# c) Średnią długość wiersza.
-# d) Średnią liczbę słów na wiersz.
-# e) Częstość występowania każdego ze słów w pliku.
+# Otrzymujesz napis reprezentujacy sciezke pliku tekstowego. Oblicz:
+# a) Liczbe wierszy pliku.
+# b) Liczbe slow w pliku. Slowa oddzielone sa spacjami i moga skladac
+# sie wylacznie ze znakow bedacych literami.
+# c) Srednia dlugosc wiersza.
+# d) Srednia liczbe slow na wiersz.
+# e) Czestosc wystepowania kazdego ze slow w pliku.
 
 wczytaj_plik() {
     local plik="$1"

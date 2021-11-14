@@ -2,9 +2,9 @@
 
 source ../assert.sh
 
-# Otrzymujesz napis reprezentujący ścieżkę.
-# a) Sprawdź, czy jest to ścieżka pliku.
-# b) Sprawdź, czy jest to ścieżka folderu.
+# Otrzymujesz napis reprezentujacy sciezke.
+# a) Sprawdz, czy jest to sciezka pliku.
+# b) Sprawdz, czy jest to sciezka folderu.
 
 czy_sciezka_pliku() {
     if [ -f "$1" ]; then

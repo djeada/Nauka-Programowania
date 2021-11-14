@@ -2,10 +2,10 @@
 
 source ../assert.sh
 
-# Otrzymujesz dwa napisy. Pierwszy napis reprezentuje ścieżkę folderu.
-# Drugi napis reprezentuje rozszerzenie szukanych plików. Znajdź w
+# Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke folderu.
+# Drugi napis reprezentuje rozszerzenie szukanych plikow. Znajdz w
 # folderze wszystkie pliki z danym rozszerzeniem. Nazwy znalezionych
-# plików zapisz w liście.
+# plikow zapisz w liscie.
 
 znajdz_pliki_z_rozszerzeniem() {
     local folder="$1"

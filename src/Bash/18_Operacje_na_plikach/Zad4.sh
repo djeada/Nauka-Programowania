@@ -2,8 +2,8 @@
 
 source ../assert.sh
 
-# Otrzymujesz napis reprezentujący ścieżkę pliku tekstowego.
-# Wczytaj i wypisz treść pliku.
+# Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
+# Wczytaj i wypisz tresc pliku.
 
 wypisz_plik() {
     local plik="$1"
@@ -15,13 +15,13 @@ main() {
     # stworz folder testowy
     mkdir 'test'
 
-    # stworz plik testowy z treścią test
+    # stworz plik testowy z trescia test
     echo 'test' > 'test/test.txt'
 
-    # wypisz treść pliku testowego
+    # wypisz tresc pliku testowego
     wypisz_plik 'test/test.txt'
 
-    # usuń folder testowy
+    # usun folder testowy
     rm -rf 'test'
 }
 

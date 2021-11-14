@@ -2,8 +2,8 @@
 
 source ../assert.sh
 
-# Otrzymujesz napis reprezentujący nazwę pliku. Przeszukaj cały
-# system i zapisz w liście wszystkie ścieżki plików o danej nazwie.
+# Otrzymujesz napis reprezentujacy nazwe pliku. Przeszukaj caly
+# system i zapisz w liscie wszystkie sciezki plikow o danej nazwie.
 
 znajdz_pliki_o_nazwie() {
     local nazwa=$1
