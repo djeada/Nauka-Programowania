@@ -1,6 +1,5 @@
 /*
-Dla pobranych od uzytkownika liczb, wypisz najpierw pierwsza, a nastepnie druga
-liczbe.
+Dla dwoch pobranych od uzytkownika liczb, sprawdz czy liczby sa identyczne.
 */
 
 use ::std::*;
@@ -11,6 +10,11 @@ fn main() {
 	let mut wiersz = String::new();
 	std::io::stdin().read_line(&mut wiersz).unwrap();
 	let liczby: Vec<i32> = wiersz.trim().split(' ').map(|x| x.parse::<i32>().unwrap()).collect();
-	println!("{} {}", liczby[0], liczby[1]);
+
+	if liczby[0] == liczby[1] {
+		println!("Liczby sa identyczne.");
+	} else {
+		println!("Liczby nie sa identyczne.");
+	}
 	
 }
