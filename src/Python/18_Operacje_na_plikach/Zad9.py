@@ -8,7 +8,8 @@ import pathlib
 
 def usun_pliki(sciezka):
     """
-    Funkcja usuwa pliki o rozmiarze wiekszym niz 10kB znajdujace sie w podanym folderze oraz jego podfolderach.
+    Funkcja usuwa pliki o rozmiarze wiekszym niz 10kB znajdujace sie 
+    w podanym folderze oraz jego podfolderach.
     """
     for sciezka_do_pliku in sciezka.iterdir():
         if sciezka_do_pliku.is_file():
