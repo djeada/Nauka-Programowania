@@ -1,35 +1,21 @@
 """
-Znajdz wiersze zaczynajace sie od napisu A lub konczace sie napisem B. 
-Wiersz moze byc zakonczony dowolnym znakiem interpunktcyjnym.
+Otrzymujesz napis. Podziel go wzgledem znakow interpunkcyjnych i 
+zapisz w liscie. Usun spacje wystepujace na poczatku lub koncu 
+otrzymanych napisow.
 """
 
 import re
 
-# Wersja 1
-def zaczyna_sie_lub_konczy_v1(tekst, napis_a, napis_b):
-    return [
-        e
-        for e in tekst.splitlines()
-        if re.search(r"^{0}".format(napis_a), e, flags=re.M)
-        or re.search(r"{0}[!?.,;]$".format(napis_b), e, flags=re.M)
-    ]
+
+def podziel_zdanie(zdanie):
+    return [elem for elem in re.split(r"[,.!?]", zdanie) if elem]
 
 
-if __name__ == "__main__":
+def test_podziel_zdanie():
+    zdanie = "hej, pan slimak! tak to ja. chodzcie to zaspiewam wam."
+    oczekiwane = ["hej", " pan slimak", " tak to ja", " chodzcie to zaspiewam wam"]
+    assert podziel_zdanie(zdanie) == oczekiwane
 
-    # Testy Poprawnosci
-    tekst = """Folgujmy paniom nie sobie, ma rada;
-Milujmy wiernie nie jest w nich przysada.
-Godnosci trzeba nie za nic tu cnota,
-Milosci pragna nie pragna tu zlota."""
 
-    napis_a = "Mi"
-    napis_b = "da"
-
-    wynik = [
-        "Folgujmy paniom nie sobie, ma rada;",
-        "Milujmy wiernie nie jest w nich przysada.",
-        "Milosci pragna nie pragna tu zlota.",
-    ]
-
-    assert zaczyna_sie_lub_konczy_v1(tekst, napis_a, napis_b) == wynik
+if __name__ == '__main__':
+    test_podziel_zdanie()

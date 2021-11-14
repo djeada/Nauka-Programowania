@@ -1,27 +1,48 @@
 """
-Sprawdz czy haslo spelnia nastepujace warunki:
-1. Przynajmniej jedna mala litera [a-z]
-2. przynajmniej jedna duza litera [A-Z]
-3. Przynajmniej jedna cyfra [0-9]
-4. Prynajmniej jeden znak specjalny [!$#@_]
-5. Minimalna dlugosc: 8
-6. Maksymalna dlugosc: 15
+Otrzymujesz napis reprezentujacy haslo. Sprawdz czy 
+haslo spelnia nastepujace warunki:
+1. Haslo musi zawierac przynajmniej jedna mala litere [a-z].
+2. Haslo musi zawierac przynajmniej jedna duza litere [A-Z].
+3. Haslo musi zawierac przynajmniej jedna cyfre [0-9].
+4. Haslo musi zawierac przynajmniej jeden znak specjalny 
+[! # $ % & ' * + - / = ? ^ _ ` { | } ~].
+5. Minimalna dlugosc hasla to 8 znakow.
+6. Maksymalna dlugosc hasla to 20 znakow.
 """
 
 import re
 
-# Wersja 1
-def sprawdz_poprawnosc_v1(haslo):
-    if re.search("[a-z]", haslo) and re.search("[A-Z]", haslo):
-        if re.search("[0-9]", haslo) and re.search("[!$#@_]", haslo):
-            return len(haslo) >= 8 and len(haslo) <= 15
 
-    return False
+def czy_haslo_poprawne(haslo):
+    """
+    Sprawdza czy haslo jest poprawne.
+    """
+    if len(haslo) < 8 or len(haslo) > 20:
+        return False
+    if re.search(r'[a-z]', haslo) is None:
+        return False
+    if re.search(r'[A-Z]', haslo) is None:
+        return False
+    if re.search(r'[0-9]', haslo) is None:
+        return False
+    if re.search(r'[! # $ % & \' * + - / = ? ^ _ ` { | } ~]', haslo) is None:
+        return False
+    return True
 
 
-# Testy Poprawnosci
-hasla = ["123456", "HulaKula123!", "$$KAsiORA302$$", "proste_haslo123", "22tajnE!"]
-wyniki = [False, True, True, False, True]
+def test_czy_haslo_poprawne():
+    assert not czy_haslo_poprawne('Ab1!')
+    assert not czy_haslo_poprawne('haslo')
+    assert not czy_haslo_poprawne('HASLO')
+    assert not czy_haslo_poprawne('HASLO123!@#')
+    assert not czy_haslo_poprawne('12345678')
+    assert not czy_haslo_poprawne('proste_haslo')
+    assert czy_haslo_poprawne('Haslo123')
+    assert czy_haslo_poprawne('Haslo123!')
+    assert czy_haslo_poprawne('Haslo123!#')
+    assert czy_haslo_poprawne('Haslo123!#$')
+    assert czy_haslo_poprawne('Haslo123!#$%&*')
 
-for haslo, wynik in zip(hasla, wyniki):
-    assert sprawdz_poprawnosc_v1(haslo) == wynik
+
+if __name__ == '__main__':
+    test_czy_haslo_poprawne

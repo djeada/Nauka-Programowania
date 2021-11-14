@@ -1,17 +1,21 @@
 """
-Usun czesc wiersza od pierwszego wystapienia napisu A do konca.
+Otrzymujesz dwa napisy. Pierwszy napis reprezentuje tekst, a drugi zakazane slowo. 
+Jesli w danym wierszu tekstu wystepuje zakazane slowo, to usun czesc wiersza 
+od wystapienia zakazanego slowa do konca. Zwroc zmodyfikowany tekst.
 """
 
 import re
 
-# Wersja 1
-def usun_z_wiersza_v1(tekst, napis_a):
-    return [re.sub(r"{0}.*".format(napis_a), "", e) for e in tekst.splitlines()]
+
+def usun_z_wiersza(tekst, zakazane_slowo):
+    '''
+    Funkcja usuwa z tekstu czesci wierszy zawierajace zakazane slowo, 
+    od wystapienia zakazanego slowa do konca.
+    '''
+    return [re.sub(r"{0}.*".format(zakazane_slowo), "", e) for e in tekst.splitlines()]
 
 
-if __name__ == "__main__":
-
-    # Testy Poprawnosci
+def test_usun_z_wiersza():
     tekst = """Turned it up should no valley cousin he. 
 Speaking numerous ask did horrible packages set.
 Ashamed herself has distant can studied mrs. 
@@ -29,7 +33,7 @@ The furnished she concluded depending procuring concealed.
 """
     napis_a = "a"
 
-    wynik = [
+    oczekiwane = [
         "Turned it up should no v",
         "Spe",
         "Ash",
@@ -46,4 +50,8 @@ The furnished she concluded depending procuring concealed.
         "The furnished she concluded depending procuring conce",
     ]
 
-    assert usun_z_wiersza_v1(tekst, napis_a) == wynik
+    assert usun_z_wiersza(tekst, napis_a) == oczekiwane
+
+
+if __name__ == "__main__":
+    test_usun_z_wiersza()

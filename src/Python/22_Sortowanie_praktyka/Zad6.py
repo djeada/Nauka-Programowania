@@ -1,21 +1,31 @@
-# Wersja 1
+"""
+Otrzymujesz liste liczb, skladajaca sie wylacznie z zer i jedynek. Posortuj liste.
+"""
+
+
 # Zlozonosc czasowa O(n)
 # Zlozonosc pamieciowa O(1)
-def sortuj_binarna_tablice_v1(tablica):
-
-    zera = tablica.count(0)
+def sortuj_tablice_binarna(lista):
+    '''
+    Funkcja sortuje liste binarna.
+    '''
+    zera = lista.count(0)
 
     for i in range(zera):
-        tablica[i] = 0
+        lista[i] = 0
 
-    for i in range(zera, len(tablica)):
-        tablica[i] = 1
+    for i in range(zera, len(lista)):
+        lista[i] = 1
 
-    return tablica
+    return lista
 
 
-# Testy Poprawnosci
-tablica = [0, 0, 1, 0, 1, 1, 0, 1, 0, 0]
-wynik = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+def test_sortuj_binarna_tablice_v1():
+    tablica = [0, 0, 1, 0, 1, 1, 0, 1, 0, 0]
+    oczekiwane = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1]
 
-assert sortuj_binarna_tablice_v1(tablica) == wynik
+    assert sortuj_tablice_binarna(tablica) == oczekiwane
+
+
+if __name__ == '__main__':
+    test_sortuj_binarna_tablice_v1()

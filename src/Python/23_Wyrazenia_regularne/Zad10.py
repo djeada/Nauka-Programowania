@@ -1,21 +1,23 @@
 """
-Otrzymujesz dwie listy rownej dlugosci. Elementy pierwszej listy stanowia slowa, ktore nalezy podmienic na odpowiadajace im slowa z drugiej listy.
+Otrzymujesz napis i dwie listy napisow. Podmien w pierwszym napisie, 
+napisy z pierwszej listy na odpowiadajace im napisy z drugiej listy.
 """
 
 import re
 
-# Wersja 1
-def zamien_ana_bv1(tekst, lista_a, lista_b):
 
-    for napis_a, napisB in zip(lista_a, lista_b):
-        tekst = re.sub(r"\b{0}\b".format(napis_a), napisB, tekst)
+def zamien_a_na_b(tekst, lista_a, lista_b):
+    """
+	Funkcja zamienia w tekscie napisy z listy_a na napisy z listy_b.
+	"""
+
+    for napis_a, napis_b in zip(lista_a, lista_b):
+        tekst = re.sub(r"\b{0}\b".format(napis_a), napis_b, tekst)
 
     return tekst
 
 
-if __name__ == "__main__":
-
-    # Testy Poprawnosci
+def test_zamien_a_na_b():
     tekst = """Whole every miles as tiled at seven or. 
 	Wished he entire esteem mr oh by.
 	He prevent request by if in pleased. 
@@ -28,7 +30,7 @@ if __name__ == "__main__":
     lista_a = ["or", "be", "he"]
     lista_b = ["and", "off", "she"]
 
-    wynik = """Whole every miles as tiled at seven and. 
+    oczekiwane = """Whole every miles as tiled at seven and. 
 	Wished she entire esteem mr oh by.
 	He prevent request by if in pleased. 
 	Picture too and concern has was comfort. 
@@ -38,4 +40,8 @@ if __name__ == "__main__":
 	Pronounce suspected in belonging conveying ye repulsive.
 """
 
-    assert zamien_ana_bv1(tekst, lista_a, lista_b) == wynik
+    assert zamien_a_na_b(tekst, lista_a, lista_b) == oczekiwane
+
+
+if __name__ == "__main__":
+    test_zamien_a_na_b()

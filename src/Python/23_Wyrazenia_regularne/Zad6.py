@@ -1,17 +1,42 @@
 """
-Podziel zdanie na czesci wzgledem znakow interpunkcyjnych.
-Jesli wynikiem podzialu jest pusty napis, pomin.
+Otrzymujesz dwa napisy. Znajdz wiersze w pierwszym napisie 
+konczace sie drugim napisem. Wiersz moze byc zakonczony 
+dowolnym znakiem interpunkcyjnym.
 """
 
 import re
 
-# Wersja 1
-def podziel_zdanie_v1(zdanie):
-    return [x for x in re.split(r"[,.!?]", zdanie) if x]
+
+def zaczyna_sie_lub_konczy(tekst, napis_a, napis_b):
+    """
+    Funkcja zwraca True jesli tekst zaczyna sie lub konczy napis_a
+    lub napis_b.
+    """
+    return [
+        wiersz
+        for wiersz in tekst.splitlines()
+        if re.search(r"^{0}".format(napis_a), wiersz, flags=re.M)
+           or re.search(r"{0}[!?.,;]$".format(napis_b), wiersz, flags=re.M)
+    ]
 
 
-# Testy Poprawnosci
-zdanie = "hej, pan slimak! tak to ja. chodzcie juz zaspiewam wam."
-wynik = ["hej", " pan slimak", " tak to ja", " chodzcie juz zaspiewam wam"]
+def test_zaczyna_sie_lub_konczy():
+    tekst = """Folgujmy paniom nie sobie, ma rada;
+Milujmy wiernie nie jest w nich przysada.
+Godnosci trzeba nie za nic tu cnota,
+Milosci pragna nie pragna tu zlota."""
 
-assert podziel_zdanie_v1(zdanie) == wynik
+    napis_a = "Mi"
+    napis_b = "da"
+
+    oczekiwane = [
+        "Folgujmy paniom nie sobie, ma rada;",
+        "Milujmy wiernie nie jest w nich przysada.",
+        "Milosci pragna nie pragna tu zlota.",
+    ]
+
+    assert zaczyna_sie_lub_konczy(tekst, napis_a, napis_b) == oczekiwane
+
+
+if __name__ == "__main__":
+    test_zaczyna_sie_lub_konczy()
