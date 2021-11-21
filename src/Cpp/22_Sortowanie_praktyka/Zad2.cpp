@@ -1,13 +1,14 @@
+/*
+Otrzymujesz napis reprezentujacy zdanie. Podziel zdanie na slowa. 
+Posortuj slowa alfabetycznie i zapisz je w liscie. Pamietaj, znaki 
+interpunkcyjne nie sa liczone jako slowa.
+*/
+
 #include <algorithm>
 #include <cassert>
 #include <string>
 #include <vector>
 
-// Otrzymujesz napis reprezentujacy zdanie.
-// Podziel zdanie na slowa skladowe.
-// Nastepnie posortuj slowa alfabetycznie i
-// zapisz je w liscie. Znaki interpunkcyjne
-// nie sa liczone jako slowa.
 
 void wyczysc(std::string &napis) {
   auto it = napis.begin();

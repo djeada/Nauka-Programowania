@@ -1,12 +1,15 @@
+/*
+Otrzymujesz dwa napisy. Pierwszy napis reprezentuje tekst, a drugi zakazane slowo. 
+Jesli w danym wierszu tekstu wystepuje zakazane slowo, to usun czesc wiersza 
+od wystapienia zakazanego slowa do konca. Zwroc zmodyfikowany tekst.
+*/
+
 #include <cassert>
 #include <regex>
 #include <sstream>
 #include <string>
 #include <vector>
 
-// Otrzymujesz dwa napisy. Pierwszy napis reprezentuje tekst, a drugi zakazane
-// slowo. Jesli w danym wierszu tekstu wystepuje zakazane slowo, to usun czesc
-// wiersza od wystapienia zakazanego slowa do konca.
 
 std::string wektorNaString(std::vector<std::string> &lista) {
   std::ostringstream oss;

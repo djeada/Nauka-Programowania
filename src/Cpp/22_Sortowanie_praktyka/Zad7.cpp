@@ -1,9 +1,11 @@
+/*
+Otrzymujesz liste liczb, skladajaca sie wylacznie z zer, jedynek i dwojek. Posortuj liste.
+*/
+
 #include <algorithm>
 #include <cassert>
 #include <vector>
 
-// Otrzymujesz liste liczb, skladajaca sie wylacznie z zer,
-// jedynek i dwojek. Posortuj liste.
 
 void sortuj(std::vector<int> &lista) {
   unsigned int zera = std::count(lista.begin(), lista.end(), 0);

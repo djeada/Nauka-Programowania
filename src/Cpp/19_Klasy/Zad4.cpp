@@ -1,3 +1,22 @@
+/*
+Napisz klasy Wektor2D oraz Wektor3D reprezentujace odpowiednio 
+wektory w przestrzeni dwuwymiarowej i trzywymiarowej. W sklad 
+klas powinny wchodzic funkcje:
+a) Konstruktor pobierajacy dwie (trzy) liczby jako argumenty. Liczby reprezentuja 
+wspolrzedne wektora. Domyslne wartosci dla wszystkich argumentow wynosza 0.
+b) Funkcje zwracajace wynik podstawowych operacji arytmetycznych (dodawanie, 
+odejmowanie) oraz iloczyn wektorowy i skalarny. Jesli jest to mozliwe nalezy 
+przeciazyc operatory: +, -, *.
+c) Funkcja wypisujaca informacje o wektorze na standardowe wyjscie.
+d) Funkcje umozliwiajace porownanie dwoch obiektow klasy Wektor2D(Wektor3D). Jesli 
+jest to mozliwe nalezy przeciazyc operatory ==, !=.
+e) Funkcja modul, zwracajaca modul wektora.
+
+Napisz program testujacy twoja klase. Stworz wektory: A(-3, -3, -3) oraz B(5, 5, 5). 
+Wypisz na standardowe wyjscie informacje o utworzonych wektorach oraz sume wektorow, 
+roznice pierwszego i drugiego oraz ich iloczyn wektorowy.
+*/
+
 #include <cmath>
 #include <iostream>
 

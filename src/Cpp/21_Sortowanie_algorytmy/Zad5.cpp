@@ -1,8 +1,12 @@
+/*
+Zaimplementuj sortowanie szybkie.
+*/
+
 #include <cassert>
 #include <functional>
 #include <vector>
 
-// g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad4.cpp
+
 int rozdziel(std::vector<int> &lista, int indeksPocz, int indeksKonc) {
   int wartosc = lista[indeksKonc];
   int i = indeksPocz - 1;
@@ -46,3 +50,5 @@ int main() {
 
   return 0;
 }
+
+// Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad5.cpp

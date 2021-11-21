@@ -1,12 +1,15 @@
+/*
+Otrzymujesz dwa napisy. Znajdz wiersze w pierwszym napisie 
+konczace sie drugim napisem. Wiersz moze byc zakonczony 
+dowolnym znakiem interpunkcyjnym.
+*/
+
 #include <cassert>
 #include <regex>
 #include <sstream>
 #include <string>
 #include <vector>
 
-// Otrzymujesz dwa napisy. Znajdz wiersze w pierwszym napisie konczace
-// sie drugim napisem. Wiersz moze byc zakonczony dowolnym znakiem
-// interpunkcyjnym.
 
 std::vector<std::string> rozdziel(const std::string &napis) {
   std::vector<std::string> wynik;

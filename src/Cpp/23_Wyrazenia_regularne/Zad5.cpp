@@ -1,8 +1,11 @@
+/*
+Otrzymujesz napis. Zwroc napis skladajacy sie z cyfr wystepujacych w otrzymanym napisie.
+*/
+
 #include <cassert>
 #include <regex>
 #include <string>
 
-// Otrzymujesz napis. Odfiltruj z niego cyfry.
 
 std::string odfiltrujCyfry(std::string &napis) {
   return std::regex_replace(napis, std::regex("[^0-9]*"), "");

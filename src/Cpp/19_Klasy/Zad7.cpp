@@ -1,3 +1,9 @@
+/*
+Stworz klase Klasa. Klasa powinna zawierac funkcje statyczna zwracajaca 
+aktualna liczbe instancji klasy w programie. Stworz kilka obiektow klasy 
+i przetestuj dzialanie funkcji.
+*/
+
 #include <cassert>
 #include <iostream>
 #include <vector>

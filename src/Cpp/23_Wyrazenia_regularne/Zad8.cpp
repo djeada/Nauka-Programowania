@@ -1,11 +1,14 @@
+/*
+Otrzymujesz napis reprezentujacy zdanie. Zapisz w liscie cyfry 
+bedace czescia slow. Cyfry odseparowane od liter spacjami pomin.
+*/
+
 #include <cassert>
 #include <regex>
 #include <sstream>
 #include <string>
 #include <vector>
 
-// Otrzymujesz napis reprezentujacy zdanie. Zapisz w liscie cyfry bedace
-// czescia slow. Cyfry odseparowane od liter spacjami pomin.
 
 std::vector<std::string> cyfry(const std::string &napis) {
   std::string slowo;

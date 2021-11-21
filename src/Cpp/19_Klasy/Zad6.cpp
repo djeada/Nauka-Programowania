@@ -1,3 +1,19 @@
+/*
+Napisz klase Zespolona reprezentujaca liczbe zespolona. W sklad klasy powinny wchodzic funkcje:
+a) Konstruktor pobierajacy dwie liczby jako argumenty. Pierwsza liczba reprezentuje czesc 
+rzeczywista, a druga czesc urojona liczby zespolonej. Domyslne wartosci dla obu argumentow to 0.
+b) Funkcje zwracajace wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnozenie, 
+dzielenie). Jesli jest to mozliwe nalezy przeciazyc operatory: +, -, *, /.
+c) Funkcja wypisujaca informacje o liczbie zespolonej na standardowe wyjscie.
+d) Funkcje umozliwiajace porownanie dwoch obiektow klasy Zespolona. Jesli jest to mozliwe nalezy 
+przeciazyc operatory ==, !=.
+e) Funkcja modul, zwracajaca modul liczby zespolonej. 
+
+Napisz program testujacy twoja klase. Stworz liczby zespolone: A(9, 12) i B(-3, -3). Wypisz na 
+standardowe wyjscie informacje o utworzonych liczbach zespolonych oraz ich sume, roznice pierwszej 
+i drugiej, iloraz pierwszej przez druga oraz iloczyn liczb zespolonych.
+*/
+
 #include <cmath>
 #include <iostream>
 

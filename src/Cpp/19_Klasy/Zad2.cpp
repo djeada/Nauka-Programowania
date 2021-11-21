@@ -1,3 +1,16 @@
+/*
+Napisz klase Punkt reprezentujaca punkt w ukladzie kartezjanskim. W sklad klasy powinny wchodzic funkcje:
+a) Konstruktor pobierajacy dwie liczby jako argumenty. Pierwsza liczba reprezentuje wspolrzedna x, a druga 
+wspolrzedna y. Domyslne wartosci dla obu argumentow wynosza 0.
+b) Funkcja statyczna odleglosc, zwracajaca odleglosc miedzy dwoma punktami (obiektami klasy Punkt).
+c) Funkcja wypisujaca informacje o punkcie na standardowe wyjscie.
+d) Funkcje umozliwiajace porownanie dwoch obiektow klasy Punkt. Jesli jest to mozliwe nalezy przeciazyc 
+operatory ==, !=.
+
+Napisz program testujacy twoja klase. Stworz punkty: A(5, 5) oraz B(-3, -3). Wypisz na standardowe wyjscie 
+informacje o utworzonych punktach oraz odleglosc miedzy nimi.
+*/
+
 #include <cmath>
 #include <iostream>
 

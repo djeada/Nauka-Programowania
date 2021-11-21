@@ -1,17 +1,21 @@
+/*
+Otrzymujesz liste par napisow i liczb. Posortuj pary w liscie wzgledem:
+a) Liczb.
+b) Dlugosci napisow.
+*/
+
 #include <algorithm>
 #include <cassert>
 #include <string>
 #include <utility>
 #include <vector>
 
-// Otrzymujesz liste par napisow i liczb. Posortuj pary w liscie wzgledem:
-// a) wartosci liczb;
+
 void sortujWartosci(std::vector<std::pair<std::string, int>> &lista) {
   std::sort(lista.begin(), lista.end(),
             [](auto rhs, auto lhs) { return rhs.second < lhs.second; });
 }
 
-// b) dlugosci napisow;
 void sortujDlugosci(std::vector<std::pair<std::string, int>> &lista) {
   std::sort(lista.begin(), lista.end(), [](auto rhs, auto lhs) {
     return rhs.first.size() < lhs.first.size();

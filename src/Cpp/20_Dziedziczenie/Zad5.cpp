@@ -1,9 +1,15 @@
+/*
+Napisz klase Ptak, dziedziczaca po klasach Zwierz oraz ObiektLatajacy. 
+a) W sklad klasy Zwierz powinny wchodzic funkcje wypisujace na standardowe 
+wyjscie komunikaty odpowiadajace ich nazwom. Funkcje powinny miec 
+nastepujace nazwy: jedz(), spij(), wydaj_dzwiek(). 
+b) W sklad klasy ObiektLatajacy powinny wchodzic funkcje wypisujace na 
+standardowe wyjscie komunikaty odpowiadajace ich nazwom. Funkcje powinny 
+miec nastepujace nazwy: lec(), wyladuj().
+*/
+
 #include <iostream>
 
-// Napisz klase Ptak, dziedziczaca po klasach Zwierz oraz ObiektLatajacy.
-// Zwierz powinien miec dostepne publiczne metody: "jedz()", "spij()",
-// "wydajDzwiek()". ObiektLatajacy powinien miec dostepne publiczne metody:
-// "lec()", "wyladuj()".
 
 class Zwierz {
 

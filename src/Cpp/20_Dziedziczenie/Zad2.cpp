@@ -1,9 +1,11 @@
+/*
+Zaprojektuj klase Ksztalt oraz klasy pochodne Kolo i Kwadrat.
+*/
+
 #include <cassert>
 #include <cmath>
 #include <numbers>
 #include <stdexcept>
-
-// Zaprojektuj klase Ksztalt oraz klasy pochodne Kolo oraz Kwadrat.
 
 class Ksztalt {
 public:

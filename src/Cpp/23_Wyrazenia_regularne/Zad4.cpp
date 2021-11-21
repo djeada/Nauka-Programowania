@@ -1,8 +1,11 @@
+/*
+Otrzymujesz dwa napisy. Sprawdz czy drugi napis wystepuje w pierwszym napisie.
+*/
+
 #include <cassert>
 #include <regex>
 #include <string>
 
-// Otrzymujesz dwa napisy. Sprawdz czy drugi wystepuje w pierwszym.
 
 bool nalezyDoZdania(std::string &zdanie, std::string &napis) {
   return regex_search(zdanie, std::regex(napis));

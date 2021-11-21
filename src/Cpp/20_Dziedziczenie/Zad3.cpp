@@ -1,13 +1,16 @@
+/*
+Zaprojektuj klase Zwierz oraz klasy pochodne Pies oraz Kot. 
+Obie klasy potomne powinny nadpisywac metode odglos() klasy 
+zdefiniowana w klasie bazowej. Nastepnie w programie 
+testujacym napisane klasy, nalezy w jednej liscie zebrac 
+obiekty wszystkich trzech klas. Nalezy przy pomocy petli 
+przejsc przez wszystkie elementy listy i dla kazdego z nich 
+wywolac funkcje odglos().
+*/
+
 #include <cassert>
 #include <iostream>
 #include <vector>
-
-// Stworz klasy Pies oraz Kot dziedziczace po klasie Zwierz.
-// Kazda z klas powinna miec wlasna implementacje metody odglos(),
-// wypisujacej dowolny tekst na konsole. Przy iteracji po liscie
-// skladajacej sie z obiektow wszystkich trzech klas i wywolywaniu
-// na kazdym z osobna metody odlgos() na konsoli powinnien pojawic
-// sie tekst wlasciwy dla danego zwierzaka.
 
 class Zwierz {
 public:

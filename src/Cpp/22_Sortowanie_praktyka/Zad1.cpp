@@ -1,8 +1,11 @@
+/*
+Dla otrzymanego napisu, posortuj alfabetycznie jego znaki.
+*/
+
 #include <algorithm>
 #include <cassert>
 #include <string>
 
-// g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad1.cpp
 
 void sortuj(std::string &napis) { std::sort(napis.begin(), napis.end()); }
 

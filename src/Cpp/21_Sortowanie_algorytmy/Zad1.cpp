@@ -1,7 +1,9 @@
+/*
+Zaimplementuj sortowanie babelkowe.
+*/
+
 #include <cassert>
 #include <vector>
-
-// g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad1.cpp
 
 void swap(int *a, int *b) {
   int temp = *a;
@@ -33,3 +35,5 @@ int main() {
 
   return 0;
 }
+
+// Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad1.cpp

@@ -1,3 +1,12 @@
+/*
+Napisz klase Prostokat reprezentujaca prostokat w ukladzie kartezjanskim. 
+Prostokat okreslony jest przez wspolrzedne jego czterech wierzcholkow. 
+Boki prostokata sa prostopadle do osi ukladu wspolrzednych. 
+Klasa powinna zawierac funkcje statyczna zwracajaca pole prostokata 
+powstalego z nalozenia sie dwoch prostokatow. Jesli dwa prostokaty 
+nie pokrywaja sie, funkcja powinna zwracac 0.
+*/
+
 #include <cassert>
 #include <cmath>
 

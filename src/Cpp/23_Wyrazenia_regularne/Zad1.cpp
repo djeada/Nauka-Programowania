@@ -1,23 +1,25 @@
+/*
+Otrzymujesz napis reprezentujacy adres email. Sprawdz jego poprawnosc.
+Pamietaj, ze kazdy adres email sklada sie z identyfikatora uzytkownika, 
+znaku @ oraz nazwy domenowej.
+
+Identyfikator uzytkownika sklada sie jedynie z:
+a) Malych (a-z) i wielkich (A-Z) liter.
+b) Cyfr (0-9).
+c) Znakow  ! # $ % & ' * + - / = ? ^ _ ` { | } ~.
+d) Kropki . pod warunkiem, ze nie jest pierwszym badz ostatnim znakiem i nie wystepuje dwukrotnie po sobie.
+
+Nazwa domenowa sklada sie jedynie z:
+a) Malych (a-z) i wielkich (A-Z) liter.
+b) Cyfr (0-9).
+c) Kropki . oraz myslnika - pod warunkiem, ze nie sa pierwszym badz ostatnim znakiem i nie wystepuja dwukrotnie po sobie.
+*/
+
 #include <cassert>
 #include <regex>
 #include <string>
 #include <vector>
 
-// Otrzymujesz napis reprezentujacy adres email. Sprawdz jego poprawnosc.
-// Pamietaj, ze kazdy adres email sklada sie z identyfikatora uzytkownika, znaku
-// @ oraz nazwy domenowej.
-
-// Identyfikator uzytkownika sklada sie jedynie z:
-// Malych (a-z) i wielkich (A-Z) liter.
-// Cyfr (0-9).
-// Znakow  ! # $ % & ' * + - / = ? ^ _ ` { | } ~.
-// Kropki . pod warunkiem, ze nie jest pierwszym badz ostatnim znakiem. Dwie
-// kropki nie moga stac obok siebie.
-
-// Nazwa domenowa sklada sie jedynie z:
-// Malych (a-z) i wielkich (A-Z) liter.
-// Kropki . pod warunkiem, ze nie jest pierwszym badz ostatnim znakiem. Dwie
-// kropki nie moga stac obok siebie.
 
 bool poprawnyIdentyfikator(std::string &napis) {
   std::regex wzorzec("^[^.][a-zA-Z0-9!#$%&'*+-/"
@@ -35,6 +37,7 @@ bool poprawnyEmail(std::string &napis) {
   if (std::count(napis.begin(), napis.end(), '@') != 1)
     return false;
 
+  // zam
   if (regex_replace(napis, std::regex("\\.(?=\\.)"), "x") != napis)
     return false;
 

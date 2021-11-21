@@ -1,8 +1,11 @@
+/*
+Otrzymujesz napis. Sprawdz, czy napis sklada sie wylacznie z cyfr.
+*/
+
 #include <cassert>
 #include <regex>
 #include <string>
 
-// Otrzymujesz napis. Sprawdz, czy napis sklada sie wylacznie z cyfr.
 
 bool jedynieCyfry(std::string &napis) {
   std::regex wzorzec("[0-9]+");

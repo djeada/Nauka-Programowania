@@ -1,3 +1,18 @@
+/*
+Napisz klase Macierz reprezentujaca macierz. W sklad klasy powinny wchodzic funkcje:
+a) Konstruktor pobierajacy liste list liczb calkowitych. Pobrana lista reprezentuje macierz. 
+Domyslna wartosc argumentu to pusta lista.
+b) Funkcje zwracajace wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnozenie) 
+oraz odwracanie macierzy. Jesli jest to mozliwe nalezy przeciazyc operatory: +, -, *.
+c) Funkcja wypisujaca informacje o macierzy na standardowe wyjscie.
+d) Funkcje umozliwiajace porownanie dwoch obiektow klasy Macierz. Jesli jest to mozliwe nalezy 
+przeciazyc operatory ==, !=.
+
+Napisz program testujacy twoja klase. Stworz macierze: A([[1, 3], [4, 2]]) i B([[5, 0], [1, 3]]). 
+Wypisz na standardowe wyjscie informacje o utworzonych macierzach oraz ich sume, roznice pierwszej 
+i drugiej oraz iloczyn macierzy. 
+*/
+
 #include <iostream>
 #include <vector>
 

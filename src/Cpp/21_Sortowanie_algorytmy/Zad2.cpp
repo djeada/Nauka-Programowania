@@ -1,7 +1,10 @@
+/*
+Zaimplementuj sortowanie przez wybieranie.
+*/
+
 #include <cassert>
 #include <vector>
 
-// g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad2.cpp
 
 void sortuj(std::vector<int> &lista) {
   auto it = lista.begin();
@@ -36,3 +39,5 @@ int main() {
 
   return 0;
 }
+
+// Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad2.cpp

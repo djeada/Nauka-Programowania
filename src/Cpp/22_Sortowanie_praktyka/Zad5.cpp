@@ -1,10 +1,14 @@
+/*
+Klasa Miasto sklada sie z dwoch pol: nazwa (napis) oraz liczba_mieszkancow (liczba naturalna). 
+a) Posortuj liste obiektow klasy Miasto wzgledem pola nazwa.
+b) Posortuj liste obiektow klasy Miasto wzgledem pola liczba_mieszkancow.
+*/
+
 #include <algorithm>
 #include <cassert>
 #include <string>
 #include <vector>
 
-// Klasia Miasto sklada sie z dwoch pol: nazwa (napis) oraz liczba_mieszkancow
-// (liczba). Posortuj liste obiektow klasy Miasto wzgledem jednego z pol.
 
 class Miasto {
   std::string nazwa;

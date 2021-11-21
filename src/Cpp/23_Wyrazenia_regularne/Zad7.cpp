@@ -1,11 +1,14 @@
+/*
+Otrzymujesz napis. Podziel go wzgledem znakow interpunkcyjnych i 
+zapisz w liscie. Usun spacje wystepujace na poczatku lub koncu 
+otrzymanych napisow.
+*/
+
 #include <cassert>
 #include <regex>
 #include <string>
 #include <vector>
 
-// Otrzymujesz napis. Podziel go na czesci wzgledem znakow interpunkcyjnych
-// i zapisz je w liscie. Usun spacje wystepujace na poczatku lub koncu
-// otrzymanych napisow.
 
 std::string przytnijLewo(const std::string &napis) {
   return std::regex_replace(napis, std::regex("^\\s+"), std::string(""));

@@ -1,9 +1,13 @@
+/*
+Zaimplementuj sortowanie przez scalanie.
+*/
+
 #include <cassert>
 #include <functional>
 #include <vector>
 
-// g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad4.cpp
-void merge(std::vector<int> &lista, unsigned int p, unsigned int q,
+
+void scalaj(std::vector<int> &lista, unsigned int p, unsigned int q,
            unsigned int r) {
   unsigned int rozmiarLewy = q - p + 1;
   unsigned int rozmiarPrawy = r - q;
@@ -51,7 +55,7 @@ void sortuj(std::vector<int> &lista) {
       int q = (p + r) / 2;
       _sortuj(lista, p, q);
       _sortuj(lista, q + 1, r);
-      merge(lista, p, q, r);
+      scalaj(lista, p, q, r);
     }
   };
 
@@ -73,3 +77,5 @@ int main() {
 
   return 0;
 }
+
+// Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad4.cpp

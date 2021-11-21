@@ -1,16 +1,20 @@
+/*
+Otrzymujesz napis reprezentujacy haslo. Sprawdz czy 
+haslo spelnia nastepujace warunki:
+1. Haslo musi zawierac przynajmniej jedna mala litere [a-z].
+2. Haslo musi zawierac przynajmniej jedna duza litere [A-Z].
+3. Haslo musi zawierac przynajmniej jedna cyfre [0-9].
+4. Haslo musi zawierac przynajmniej jeden znak specjalny 
+[! # $ % & ' * + - / = ? ^ _ ` { | } ~].
+5. Minimalna dlugosc hasla to 8 znakow.
+6. Maksymalna dlugosc hasla to 20 znakow.
+*/
+
 #include <cassert>
 #include <regex>
 #include <string>
 #include <vector>
 
-// Otrzymujesz napis reprezentujacy haslo. Sprawdz czy haslo spelnia nastepujace
-// warunki:
-// 1. Przynajmniej jedna mala litera [a-z].
-// 2. Przynajmniej jedna duza litera [A-Z].
-// 3. Przynajmniej jedna cyfra [0-9]
-// 4. Prynajmniej jeden znak specjalny [! # $ % & ' * + - / = ? ^ _ ` { | } ~].
-// 5. Minimalna dlugosc: 8.
-// 6. Maksymalna dlugosc: 20.
 
 bool poprawneHaslo(std::string &haslo) {
   if (regex_search(haslo, std::regex("[a-z]")) &&

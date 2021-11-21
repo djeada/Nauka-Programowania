@@ -1,9 +1,12 @@
+/*
+Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj nazwe pliku ze sciezki.
+Zwroc sama nazwe pliku, bez rozszerzen.
+*/
+
 #include <cassert>
 #include <regex>
 #include <string>
 
-// Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj nazwe pliku ze
-// sciezki.
 
 std::string nazwaPliku(std::string &sciezka) {
   const std::regex wzorzec("(.*[\\\\/]+)?([^\\.]*)(.*)?");

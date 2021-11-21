@@ -1,7 +1,10 @@
+/*
+Zaimplementuj sortowanie przez wstawianie.
+*/
+
 #include <cassert>
 #include <vector>
 
-// g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad2.cpp
 
 void sortuj(std::vector<int> &lista) {
   for (unsigned int i = 1; i < lista.size(); i++) {
@@ -32,3 +35,5 @@ int main() {
 
   return 0;
 }
+
+// Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad3.cpp

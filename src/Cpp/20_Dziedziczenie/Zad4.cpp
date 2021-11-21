@@ -1,11 +1,13 @@
+/*
+Napisz klase Czlowiek, klase pochodna Student oraz klase pochodna klasy pochodnej StudentFizyki.
+a) Czlowiek powinien przechowywac informacje o imieniu, nazwisku, miejscu urodzenia i zawodzie.
+b) Student powinien dodac pola numer albumu oraz kierunek studiow.
+c) StudentFizykii powinien dodac pola srednia z laboratoriow oraz srednia z wykladow.
+*/
+
 #include <cassert>
 #include <string>
 
-// Napisz klase Czlowiek, klase pochodna Student oraz klase pochodna klasy
-// pochodnej StudentFizyki. Czlowiek powinien przechowywac informacje o imieniu,
-// nazwisku, miejscu urodzenia i zawodzie. Student powinien dodac pola numer
-// albumu oraz kierunek studiow. Student fizyki powinien dodac pola srednia z
-// laboratoriow oraz srednia z wykladow.
 
 class Czlowiek {
 
