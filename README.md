@@ -2740,7 +2740,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/22_Sortowanie_praktyka/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/22_Sortowanie_praktyka/Zad1">Java</a></td>
             <td><a>JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad1">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad1.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -2752,7 +2752,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/22_Sortowanie_praktyka/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/22_Sortowanie_praktyka/Zad2">Java</a></td>
             <td><a>JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad2">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad2.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -2764,7 +2764,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/22_Sortowanie_praktyka/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/22_Sortowanie_praktyka/Zad3">Java</a></td>
             <td><a>JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad3">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad3.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -2776,7 +2776,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/22_Sortowanie_praktyka/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/22_Sortowanie_praktyka/Zad4">Java</a></td>
             <td><a>JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad4">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad4.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -2786,7 +2786,7 @@ Rozwiązania
             <td>Sortowanie listy obiektów.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/22_Sortowanie_praktyka/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/22_Sortowanie_praktyka/Zad5.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/22_Sortowanie_praktyka/Zad5">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/22_Sortowanie_praktyka/Zad5.sh">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
@@ -2800,7 +2800,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/22_Sortowanie_praktyka/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/22_Sortowanie_praktyka/Zad6">Java</a></td>
             <td><a>JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad6">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad6.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -2812,7 +2812,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/22_Sortowanie_praktyka/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/22_Sortowanie_praktyka/Zad7">Java</a></td>
             <td><a>JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad7">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad7.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -2824,7 +2824,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/22_Sortowanie_praktyka/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/22_Sortowanie_praktyka/Zad8">Java</a></td>
             <td><a>JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad8">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/22_Sortowanie_praktyka/Zad8.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
