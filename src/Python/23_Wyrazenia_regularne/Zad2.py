@@ -37,7 +37,7 @@ def test_czy_haslo_poprawne():
     assert not czy_haslo_poprawne('HASLO123!@#')
     assert not czy_haslo_poprawne('12345678')
     assert not czy_haslo_poprawne('proste_haslo')
-    assert czy_haslo_poprawne('Haslo123')
+    assert not czy_haslo_poprawne('Haslo123')
     assert czy_haslo_poprawne('Haslo123!')
     assert czy_haslo_poprawne('Haslo123!#')
     assert czy_haslo_poprawne('Haslo123!#$')
