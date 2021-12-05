@@ -45,4 +45,4 @@ def test_czy_haslo_poprawne():
 
 
 if __name__ == '__main__':
-    test_czy_haslo_poprawne
+    test_czy_haslo_poprawne()
