@@ -65,7 +65,7 @@ Rozwiązania
     <tbody>
         <tr>
             <td>1</td>
-            <td>Wypisz na konsolę.</td>
+            <td>Wypisz na standardowe wyjście.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01_Interakcja_z_konsola/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01_Interakcja_z_konsola/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/01_Interakcja_z_konsola/Zad1">Java</a></td>
@@ -137,7 +137,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>7</td>
-            <td>Pola figur.</td>
+            <td>Pola figur i objętości brył.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/01_Interakcja_z_konsola/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/01_Interakcja_z_konsola/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/01_Interakcja_z_konsola/Zad7">Java</a></td>
@@ -298,7 +298,7 @@ Rozwiązania
     <tbody>
         <tr>
             <td>1</td>
-            <td>Czy liczba jest numerem tygodnia/miesiąca?</td>
+            <td>Czy liczba jest poprawnym numerem?</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/03_Daty/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/03_Daty/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/03_Daty/Zad1/Main.java">Java</a></td>
@@ -492,7 +492,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>8</td>
-            <td>Kury i owieczki.</td>
+            <td>Znajdź liczbę kur oraz owieczek.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/04_Petla_wprowadzenie/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/04_Petla_wprowadzenie/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/04_Petla_wprowadzenie/Zad8">Java</a></td>
@@ -714,7 +714,7 @@ Rozwiązania
     <tbody>
         <tr>
             <td>1</td>
-            <td>Średnia z n liczb.</td>
+            <td>Średnia z <i>n</i> liczb.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/07_Petla_algorytmy_matematyczne/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/07_Petla_algorytmy_matematyczne/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/07_Petla_algorytmy_matematyczne/Zad1">Java</a></td>
@@ -872,7 +872,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>5</td>
-            <td>Litera X.</td>
+            <td>Litera <i>X</i>.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/08_Petle_zagniezdzone/Zad5">Java</a></td>
@@ -884,7 +884,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>6</td>
-            <td>Litera Z.</td>
+            <td>Litera <i>Z</i>.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/08_Petle_zagniezdzone/Zad6">Java</a></td>
@@ -908,7 +908,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>8</td>
-            <td>N pierwszych liczb pierwszych.</td>
+            <td>Trójkąt Pascala.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/08_Petle_zagniezdzone/Zad8">Java</a></td>
@@ -920,7 +920,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>9</td>
-            <td>Trójkąt Pascala.</td>
+            <td><i>N</i> pierwszych liczb pierwszych.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/08_Petle_zagniezdzone/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/08_Petle_zagniezdzone/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/08_Petle_zagniezdzone/Zad9">Java</a></td>
@@ -970,7 +970,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>3</td>
-            <td>Pierwsze wystąpieia klucza.</td>
+            <td>Pierwsze wystąpienie klucza.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/09_Listy_wprowadzenie/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/09_Listy_wprowadzenie/Zad3">Java</a></td>
@@ -1212,7 +1212,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>4</td>
-            <td>Mnożenie sklarne oraz wektorowe.</td>
+            <td>Mnożenie wektorowe.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/10_Listy_dwie_listy/Zad4">Java</a></td>
@@ -1272,7 +1272,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>9</td>
-            <td>Usuń część wspólną obu list.</td>
+            <td>Usuń z pierwszej listy część wspólną obu list.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/10_Listy_dwie_listy/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/10_Listy_dwie_listy/Zad9">Java</a></td>
@@ -1358,7 +1358,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>5</td>
-            <td>Wypisz poziomo i pionowo co k-ty znak napisu.</td>
+            <td>Wypisz poziomo i pionowo co <i>k</i>-ty znak napisu.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad5">Java</a></td>
@@ -1466,7 +1466,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>14</td>
-            <td>Napis składający się z liczb od 1 do n.</td>
+            <td>Napis składający się z liczb od 1 do <i>n</i>.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad14.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad14.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad14">Java</a></td>
@@ -1612,7 +1612,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>7</td>
-            <td>Ile znaków musimy usunąć aby uzyskać anagramy?</td>
+            <td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy?</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/12_Napisy_anagramy_palindromy/Zad7">Java</a></td>
@@ -1710,7 +1710,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>6</td>
-            <td>Pokrywające się przedziały.</td>
+            <td>Pokrywające się przedziały w liście przedziałów.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad6">Java</a></td>
