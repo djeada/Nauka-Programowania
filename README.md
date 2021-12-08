@@ -1,26 +1,55 @@
 <div align="center">
-
-    <a href="https://github.com/djeada/Nauka-programowania/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/djeada/Nauka-programowania"></a>
-    <a href="https://github.com/djeada/Nauka-programowania/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/djeada/Nauka-programowania"></a>
-    <a href="https://github.com/djeada/Nauka-programowania/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/djeada/Nauka-programowania"></a>
-    <a href=""><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
+  
+<a href="https://github.com/djeada/Nauka-programowania/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/djeada/Nauka-programowania"></a>
+<a href="https://github.com/djeada/Nauka-programowania/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/djeada/Nauka-programowania"></a>
+<a href="https://github.com/djeada/Nauka-programowania/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/djeada/Nauka-programowania"></a>
+<a href=""><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
 </div>
 
-# Nauka-programowania Chcesz się nauczyć programować i nie wiesz jak zacząć? </br>
+# Nauka-programowania
+Chcesz się nauczyć programować i nie wiesz jak zacząć? </br>
 Jeśli tak, to trafiłeś w dobre miejsce. </br>
 Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
 
 <h1>Gdzie znaleźć materiały do nauki?</h1>
 <ul>
-    <li><a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python</a></li>
-    <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++</a></li>
+  <li><a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python</a></li>  
+  <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++</a></li>  
 </ul>
 
-# Zadania Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-programowania/blob/master/Zadania.pdf">linkiem</a>. </br>
-Zbiór będzie poszerzany i aktualizowany. Rozwiązania =================
+# Zadania
+Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-programowania/blob/master/Zadania.pdf">linkiem</a>. </br>
+Zbiór będzie poszerzany i aktualizowany.
+
+Rozwiązania
+=================
 
 <!--ts-->
-* [Interakcja z konsolą](#Interakcja-z-konsolą) * [Instrukcje sterujące](#Instrukcje-sterujące) * [Daty](#Daty) * [Pętla - wprowadzenie](#Pętla---wprowadzenie) * [Pętla - wyznaczanie cyfr liczby](#Pętla---wyznaczanie-cyfr-liczby) * [Funkcje - wprowadzenie](#Funkcje---wprowadzenie) * [Pętla - algorytmy matematyczne](#Pętla---algorytmy-matematyczne) * [Pętla - pętle zagnieżdżone](#Pętla---pętle-zagnieżdżone) * [Listy - wprowadzenie](#Listy---wprowadzenie) * [Listy - dwie listy](#Listy---dwie-listy) * [Napisy - wprowadzenie](#Napisy---wprowadzenie) * [Napisy - anagramy i palindromy](#Napisy---anagramy-i-palindromy) * [Listy 2d](#Listy-2d) * [Funkcje - wielomiany](#Funkcje---wielomiany) * [Funkcje - rekurencja](#Funkcje---rekurencja) * [System binarny](#System-binarny) * [Słowniki](#Słowniki) * [Operacje na plikach](#Operacje-na-plikach) * [Klasy](#Klasy) * [Dziedziczenie](#Dziedziczenie) * [Sortowanie - algorytmy](#Sortowanie---algorytmy) * [Sortowanie - praktyka](#Sortowanie---praktyka) * [Wyrażenia regularne](#Wyrażenia-regularne) * [Listy - trudne](#Listy---trudne) * [Napisy - trudne](#Napisy---trudne)
+   * [Interakcja z konsolą](#Interakcja-z-konsolą)
+   * [Instrukcje sterujące](#Instrukcje-sterujące)
+   * [Daty](#Daty)
+   * [Pętla - wprowadzenie](#Pętla---wprowadzenie)
+   * [Pętla - wyznaczanie cyfr liczby](#Pętla---wyznaczanie-cyfr-liczby)
+   * [Funkcje - wprowadzenie](#Funkcje---wprowadzenie)
+   * [Pętla - algorytmy matematyczne](#Pętla---algorytmy-matematyczne)
+   * [Pętla - pętle zagnieżdżone](#Pętla---pętle-zagnieżdżone)
+   * [Listy - wprowadzenie](#Listy---wprowadzenie)
+   * [Listy - dwie listy](#Listy---dwie-listy)
+   * [Napisy - wprowadzenie](#Napisy---wprowadzenie)
+   * [Napisy - anagramy i palindromy](#Napisy---anagramy-i-palindromy)
+   * [Listy 2d](#Listy-2d)
+   * [Funkcje - wielomiany](#Funkcje---wielomiany)
+   * [Funkcje - rekurencja](#Funkcje---rekurencja)
+   * [System binarny](#System-binarny)
+   * [Słowniki](#Słowniki)
+   * [Operacje na plikach](#Operacje-na-plikach)
+   * [Klasy](#Klasy)
+   * [Dziedziczenie](#Dziedziczenie)
+   * [Sortowanie - algorytmy](#Sortowanie---algorytmy)
+   * [Sortowanie - praktyka](#Sortowanie---praktyka)
+   * [Wyrażenia regularne](#Wyrażenia-regularne)
+   * [Listy - trudne](#Listy---trudne)
+   * [Napisy - trudne](#Napisy---trudne)
 
 <h1>Interakcja z konsolą</h1>
 
