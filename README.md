@@ -1,55 +1,26 @@
 <div align="center">
-  
-<a href="https://github.com/djeada/Nauka-programowania/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/djeada/Nauka-programowania"></a>
-<a href="https://github.com/djeada/Nauka-programowania/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/djeada/Nauka-programowania"></a>
-<a href="https://github.com/djeada/Nauka-programowania/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/djeada/Nauka-programowania"></a>
-<a href=""><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
+
+    <a href="https://github.com/djeada/Nauka-programowania/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/djeada/Nauka-programowania"></a>
+    <a href="https://github.com/djeada/Nauka-programowania/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/djeada/Nauka-programowania"></a>
+    <a href="https://github.com/djeada/Nauka-programowania/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/djeada/Nauka-programowania"></a>
+    <a href=""><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
 </div>
 
-# Nauka-programowania
-Chcesz się nauczyć programować i nie wiesz jak zacząć? </br>
+# Nauka-programowania Chcesz się nauczyć programować i nie wiesz jak zacząć? </br>
 Jeśli tak, to trafiłeś w dobre miejsce. </br>
 Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
 
 <h1>Gdzie znaleźć materiały do nauki?</h1>
 <ul>
-  <li><a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python</a></li>  
-  <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++</a></li>  
+    <li><a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python</a></li>
+    <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++</a></li>
 </ul>
 
-# Zadania
-Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-programowania/blob/master/Zadania.pdf">linkiem</a>. </br>
-Zbiór będzie poszerzany i aktualizowany.
-
-Rozwiązania
-=================
+# Zadania Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-programowania/blob/master/Zadania.pdf">linkiem</a>. </br>
+Zbiór będzie poszerzany i aktualizowany. Rozwiązania =================
 
 <!--ts-->
-   * [Interakcja z konsolą](#Interakcja-z-konsolą)
-   * [Instrukcje sterujące](#Instrukcje-sterujące)
-   * [Daty](#Daty)
-   * [Pętla - wprowadzenie](#Pętla---wprowadzenie)
-   * [Pętla - wyznaczanie cyfr liczby](#Pętla---wyznaczanie-cyfr-liczby)
-   * [Funkcje - wprowadzenie](#Funkcje---wprowadzenie)
-   * [Pętla - algorytmy matematyczne](#Pętla---algorytmy-matematyczne)
-   * [Pętla - pętle zagnieżdżone](#Pętla---pętle-zagnieżdżone)
-   * [Listy - wprowadzenie](#Listy---wprowadzenie)
-   * [Listy - dwie listy](#Listy---dwie-listy)
-   * [Napisy - wprowadzenie](#Napisy---wprowadzenie)
-   * [Napisy - anagramy i palindromy](#Napisy---anagramy-i-palindromy)
-   * [Listy 2d](#Listy-2d)
-   * [Funkcje - wielomiany](#Funkcje---wielomiany)
-   * [Funkcje - rekurencja](#Funkcje---rekurencja)
-   * [System binarny](#System-binarny)
-   * [Słowniki](#Słowniki)
-   * [Operacje na plikach](#Operacje-na-plikach)
-   * [Klasy](#Klasy)
-   * [Dziedziczenie](#Dziedziczenie)
-   * [Sortowanie - algorytmy](#Sortowanie---algorytmy)
-   * [Sortowanie - praktyka](#Sortowanie---praktyka)
-   * [Wyrażenia regularne](#Wyrażenia-regularne)
-   * [Listy - trudne](#Listy---trudne)
-   * [Napisy - trudne](#Napisy---trudne)
+* [Interakcja z konsolą](#Interakcja-z-konsolą) * [Instrukcje sterujące](#Instrukcje-sterujące) * [Daty](#Daty) * [Pętla - wprowadzenie](#Pętla---wprowadzenie) * [Pętla - wyznaczanie cyfr liczby](#Pętla---wyznaczanie-cyfr-liczby) * [Funkcje - wprowadzenie](#Funkcje---wprowadzenie) * [Pętla - algorytmy matematyczne](#Pętla---algorytmy-matematyczne) * [Pętla - pętle zagnieżdżone](#Pętla---pętle-zagnieżdżone) * [Listy - wprowadzenie](#Listy---wprowadzenie) * [Listy - dwie listy](#Listy---dwie-listy) * [Napisy - wprowadzenie](#Napisy---wprowadzenie) * [Napisy - anagramy i palindromy](#Napisy---anagramy-i-palindromy) * [Listy 2d](#Listy-2d) * [Funkcje - wielomiany](#Funkcje---wielomiany) * [Funkcje - rekurencja](#Funkcje---rekurencja) * [System binarny](#System-binarny) * [Słowniki](#Słowniki) * [Operacje na plikach](#Operacje-na-plikach) * [Klasy](#Klasy) * [Dziedziczenie](#Dziedziczenie) * [Sortowanie - algorytmy](#Sortowanie---algorytmy) * [Sortowanie - praktyka](#Sortowanie---praktyka) * [Wyrażenia regularne](#Wyrażenia-regularne) * [Listy - trudne](#Listy---trudne) * [Napisy - trudne](#Napisy---trudne)
 
 <h1>Interakcja z konsolą</h1>
 
@@ -1023,7 +994,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/09_Listy_wprowadzenie/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/09_Listy_wprowadzenie/Zad7">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/09_Listy_wprowadzenie/Zad7.js">JavaScript</a></td>
-            <td><a  href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad7.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/09_Listy_wprowadzenie/Zad7.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -1174,7 +1145,7 @@ Rozwiązania
         </tr>
     </thead>
     <tbody>
-    <tr>
+        <tr>
             <td>1</td>
             <td>Wypisz na przemian.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/10_Listy_dwie_listy/Zad1.py">Python</a></td>
@@ -1882,7 +1853,7 @@ Rozwiązania
     <tbody>
         <tr>
             <td>1</td>
-            <td>Liczby naturalne mniejsze od <b>N</b>.</td>
+            <td>Liczby naturalne mniejsze od <i>N</i>.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad1">Java</a></td>
@@ -1894,7 +1865,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>2</td>
-            <td>Suma liczb naturalnych mniejszych od <b>N</b>.</td>
+            <td>Suma liczb naturalnych mniejszych od <i>N</i>.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad2">Java</a></td>
@@ -1906,7 +1877,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>3</td>
-            <td>Potęga.</td>
+            <td>Potęgowanie.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad3">Java</a></td>
@@ -1942,7 +1913,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>6</td>
-            <td><b>N</b>-ty wyraz ciągu danego wzorem rekurencyjnym.</td>
+            <td><i>N</i>-ty wyraz ciągu danego wzorem rekurencyjnym.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad6">Java</a></td>
@@ -2112,7 +2083,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>9</td>
-            <td>Zamiana wielkości liter.</td>
+            <td>Zmiana wielkości liter.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad9">Java</a></td>
@@ -2124,7 +2095,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>10</td>
-            <td>Zamień <b>A</b> w <b>B</b>.</td>
+            <td>Zamień <i>A</b> w <b>B</i>.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad10.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad10">Java</a></td>
@@ -2185,42 +2156,42 @@ Rozwiązania
             <td>★☆☆</td>
         </tr>
         <tr>
-            <tr>
-                <td>2</td>
-                <td>Lista kluczy i lista wartości.</td>
-                <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad2.py">Python</a></td>
-                <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad2.cpp">Cpp</a></td>
-                <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad2">Java</a></td>
-                <td><a>JavaScript</a></td>
-                <td><a>Bash</a></td>
-                <td><a>Haskell</a></td>
-                <td><a>Rust</a></td>
-                <td>★☆☆</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Klucz to imię, wartość lista wypożyczonych książek.</td>
-                <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad3.py">Python</a></td>
-                <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad3.cpp">Cpp</a></td>
-                <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad3">Java</a></td>
-                <td><a>JavaScript</a></td>
-                <td><a>Bash</a></td>
-                <td><a>Haskell</a></td>
-                <td><a>Rust</a></td>
-                <td>★☆☆</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Usuń ze słownika.</td>
-                <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad4.py">Python</a></td>
-                <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad4.cpp">Cpp</a></td>
-                <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad4">Java</a></td>
-                <td><a>JavaScript</a></td>
-                <td><a>Bash</a></td>
-                <td><a>Haskell</a></td>
-                <td><a>Rust</a></td>
-                <td>★☆☆</td>
-            </tr>
+            <td>2</td>
+            <td>Kluczami są elementy jednej listy, a wartościami elementy drugiej listy.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad2.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad2.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad2">Java</a></td>
+            <td><a>JavaScript</a></td>
+            <td><a>Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★☆☆</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Klucz to imię, wartość lista wypożyczonych książek.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad3.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad3.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad3">Java</a></td>
+            <td><a>JavaScript</a></td>
+            <td><a>Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★☆☆</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Usuń ze słownika.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad4.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad4.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad4">Java</a></td>
+            <td><a>JavaScript</a></td>
+            <td><a>Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★☆☆</td>
+        </tr>
+        <tr>
             <td>5</td>
             <td>Lista pracowników.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad5.py">Python</a></td>
@@ -2332,7 +2303,7 @@ Rozwiązania
     <tbody>
         <tr>
             <td>1</td>
-            <td>Sprawdź, czy ścieżka należy do pliku, czy folderu.</td>
+            <td>Sprawdź, czy ścieżka należy do pliku/folderu.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad1">Java</a></td>
@@ -2416,7 +2387,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>8</td>
-            <td>Znajdź i zmodyfikuj pliki spełniajace warunek.</td>
+            <td>Znajdź i zmodyfikuj pliki spełniające warunek.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad8">Java</a></td>
@@ -2426,16 +2397,17 @@ Rozwiązania
             <td><a>Rust</a></td>
             <td>★★☆</td>
         </tr>
-        <td>9</td>
-        <td>Usuń pliki spełniające warunek.</td>
-        <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad9.py">Python</a></td>
-        <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad9.cpp">Cpp</a></td>
-        <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad9">Java</a></td>
-        <td><a>JavaScript</a></td>
-        <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad9.sh">Bash</a></td>
-        <td><a>Haskell</a></td>
-        <td><a>Rust</a></td>
-        <td>★★☆</td>
+        <tr>
+            <td>9</td>
+            <td>Usuń pliki spełniające warunek.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad9.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad9.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad9">Java</a></td>
+            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad9.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★★☆</td>
         </tr>
         <tr>
             <td>10</td>
@@ -2599,7 +2571,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>2</td>
-            <td>Zaprojektuj klasę bazową oraz klasy pochodne.</td>
+            <td>Zaprojektuj klasę bazową <i>Kształt</i> oraz klasy potomne <i>Koło</i> i <i>Kwadrat</i>.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20_Dziedziczenie/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/20_Dziedziczenie/Zad2">Java</a></td>
@@ -2661,7 +2633,7 @@ Rozwiązania
     <tbody>
         <tr>
             <td>1</td>
-            <td>Bąbelkowe.</td>
+            <td>Sortowanie bąbelkowe.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21_Sortowanie_algorytmy/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/21_Sortowanie_algorytmy/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/21_Sortowanie_algorytmy/Zad1">Java</a></td>
@@ -2673,7 +2645,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>2</td>
-            <td>Wybieranie.</td>
+            <td>Sortowanie przez wybieranie.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21_Sortowanie_algorytmy/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/21_Sortowanie_algorytmy/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/21_Sortowanie_algorytmy/Zad2">Java</a></td>
@@ -2685,7 +2657,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>3</td>
-            <td>Wstawianie.</td>
+            <td>Sortowanie przez wstawianie.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21_Sortowanie_algorytmy/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/21_Sortowanie_algorytmy/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/21_Sortowanie_algorytmy/Zad3">Java</a></td>
@@ -2697,7 +2669,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>4</td>
-            <td>Scalanie.</td>
+            <td>Sortowanie przez scalanie.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21_Sortowanie_algorytmy/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/21_Sortowanie_algorytmy/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/21_Sortowanie_algorytmy/Zad4">Java</a></td>
@@ -2709,7 +2681,7 @@ Rozwiązania
         </tr>
         <tr>
             <td>5</td>
-            <td>Szybkie.</td>
+            <td>Sortowanie szybkie.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/21_Sortowanie_algorytmy/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/21_Sortowanie_algorytmy/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/21_Sortowanie_algorytmy/Zad5">Java</a></td>
@@ -2946,14 +2918,14 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/23_Wyrazenia_regularne/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/23_Wyrazenia_regularne/Zad9">Java</a></td>
             <td><a>JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/23_Wyrazenia_regularne/Zad9.sh">Bash</a></td> 
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/23_Wyrazenia_regularne/Zad9.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
             <td>10</td>
-            <td>Podmień napisy z listy <b>A</b> na napisy z listy <b>B</b>.</td>
+            <td>Podmień napisy z listy <i>A</i> na napisy z listy <i>B</i>.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23_Wyrazenia_regularne/Zad10.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/23_Wyrazenia_regularne/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/23_Wyrazenia_regularne/Zad10">Java</a></td>
@@ -2963,16 +2935,17 @@ Rozwiązania
             <td><a>Rust</a></td>
             <td>★★☆</td>
         </tr>
-        <td>11</td>
-        <td>Nazwa pliku ze ścieżki.</td>
-        <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23_Wyrazenia_regularne/Zad11.py">Python</a></td>
-        <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/23_Wyrazenia_regularne/Zad11.cpp">Cpp</a></td>
-        <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/23_Wyrazenia_regularne/Zad11">Java</a></td>
-        <td><a>JavaScript</a></td>
-        <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/23_Wyrazenia_regularne/Zad11.sh">Bash</a></td>
-        <td><a>Haskell</a></td>
-        <td><a>Rust</a></td>
-        <td>★★☆</td>
+        <tr>
+            <td>11</td>
+            <td>Nazwa pliku ze ścieżki.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/23_Wyrazenia_regularne/Zad11.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/23_Wyrazenia_regularne/Zad11.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/23_Wyrazenia_regularne/Zad11">Java</a></td>
+            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/23_Wyrazenia_regularne/Zad11.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★★☆</td>
         </tr>
     </tbody>
 </table>
@@ -3142,7 +3115,9 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/25_Napisy_trudne/Zad3">Java</a></td>
             <td><a>JavaScript</a></td>
             <td><a>Bash</a></td>
-            <td><aListy - trudne>Haskell</a></td>
+            <td>
+                <aListy - trudne>Haskell</a>
+            </td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
         </tr>
