@@ -2,8 +2,8 @@
 
 source ../assert.sh
 
-# Otrzymujesz napis i dwie listy napisow. Podmien w pierwszym napisie, 
-# napisy z pierwszej listy na odpowiadajace im napisy z drugiej listy.
+# Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj nazwe pliku ze sciezki.
+# Zwroc sama nazwe pliku, bez rozszerzen.
 
 nazwa_pliku(){
     local sciezka="$1"
