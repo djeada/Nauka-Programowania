@@ -7,6 +7,8 @@ Kompilacja.
 Styl formatowania.
 Testy za pomoca assert, no reliance on external libraries or frameworks.
 
+DEPENDECIES FOR BASH AND JS
+
 <h1>C++</h1>
 
 g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad1.cpp
