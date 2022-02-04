@@ -1,4 +1,5 @@
-/*
+#!/usr/bin/env bash
+
 #Niech data bedzie dana w formacie DD/MM/CCYY :
 #DD - dzien
 #MM - miesiac
