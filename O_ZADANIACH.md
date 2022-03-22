@@ -23,7 +23,7 @@ g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o plik_wykonwyalny.out sci
 
 #### Styl formatowania
 
-Do formatowania kodu zostało użyte narzędzie `clang-format`.
+Do formatowania kodu zostało użyte narzędzie <a href="https://github.com/llvm-mirror/clang">`clang-format`</a>.
 
     clang-format -i -style=file sciezka_do_zadania.cpp
 
@@ -43,7 +43,7 @@ Skrypty języka Python nie były kompilowane. Do uruchomienia skryptów użyto n
 
 #### Styl formatowania
 
-Do formatowania kodu zostało użyte narzędzie `black`.
+Do formatowania kodu zostało użyte narzędzie <a href="https://github.com/psf/black">`black`</a>.
 
     black sciezka_do_zadania.py
 
@@ -111,7 +111,7 @@ Do kompilacji wykorzystano kompilator rustc z następującymi flagami:
 
 #### Styl formatowania
 
-Do formatowania kodu zostało użyte narzędzie rustfmt.
+Do formatowania kodu zostało użyte narzędzie <a href="https://github.com/rust-lang/rustfmt">`rustfmt`</a>.
 
     rustfmt --write-mode=overwrite sciezka_do_zadania.rs
 
