@@ -11,15 +11,17 @@ Chcesz się nauczyć programować i nie wiesz jak zacząć? </br>
 Jeśli tak, to trafiłeś w dobre miejsce. </br>
 Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
 
-<h1>Gdzie znaleźć materiały do nauki?</h1>
+<h1>Gdzie mogę znaleźć materiały do nauki?</h1>
 <ul>
-  <li><a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python</a></li>  
-  <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++</a></li>  
+  <li><a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python.</a></li>  
+  <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++.</a></li>  
 </ul>
 
-# Zadania
-Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-programowania/blob/master/Zadania.pdf">linkiem</a>. </br>
-Zbiór będzie poszerzany i aktualizowany.
+# Zbiór zadań
+
+* Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-programowania/blob/master/Zadania.pdf">linkiem</a>. </br>
+* Zbiór będzie poszerzany i aktualizowany.
+* Więcej informacji na temat zadań znajdziesz na <a href="https://github.com/djeada/Nauka-programowania/blob/master/O_ZADANIACH.md">tej stronie</a>.
 
 Rozwiązania
 =================
