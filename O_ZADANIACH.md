@@ -77,7 +77,7 @@ Rozwiązania zostały przetestowane w środowisku NodeJS 12.16.1.
 
 #### Zależności od bibliotek zewnętrznych
 
-Do komunikacji z konsolą użyto biblioteki `readline`.
+Do komunikacji z konsolą użyto biblioteki <a href="https://github.com/maleck13/readline">`readline`</a>.
 
 ### Haskell
 
