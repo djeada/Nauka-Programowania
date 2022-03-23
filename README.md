@@ -11,10 +11,10 @@ Chcesz się nauczyć programować i nie wiesz jak zacząć? </br>
 Jeśli tak, to trafiłeś w dobre miejsce. </br>
 Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
 
-<h1>Gdzie mogę znaleźć materiały do nauki?</h1>
+## Gdzie mogę znaleźć materiały do nauki?
 <ul>
-  <li><a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python.</a></li>  
-  <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++.</a></li>  
+  <li><a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python.</a>  
+  <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++.</a>  
 </ul>
 
 # Zbiór zadań
@@ -53,7 +53,7 @@ Rozwiązania
    1. [Listy - trudne](#Listy---trudne)
    1. [Napisy - trudne](#Napisy---trudne)
 
-<h1>Interakcja z konsolą</h1>
+## Interakcja z konsolą
 
 <table>
     <thead>
@@ -176,7 +176,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Instrukcje sterujące</h1>
+## Instrukcje sterujące
 
 <table>
     <thead>
@@ -287,7 +287,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Daty</h1>
+## Daty
 <table>
     <thead>
         <tr>
@@ -397,7 +397,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Pętla - wprowadzenie</h1>
+## Pętla - wprowadzenie
 <table>
     <thead>
         <tr>
@@ -507,7 +507,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Pętla - wyznaczanie cyfr liczby</h1>
+## Pętla - wyznaczanie cyfr liczby
 <table>
     <thead>
         <tr>
@@ -593,7 +593,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Funkcje - wprowadzenie</h1>
+## Funkcje - wprowadzenie
 <table>
     <thead>
         <tr>
@@ -703,7 +703,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Pętla - algorytmy matematyczne</h1>
+## Pętla - algorytmy matematyczne
 <table>
     <thead>
         <tr>
@@ -813,7 +813,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Pętla - pętle zagnieżdżone</h1>
+## Pętla - pętle zagnieżdżone
 <table>
     <thead>
         <tr>
@@ -935,7 +935,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Listy - wprowadzenie</h1>
+## Listy - wprowadzenie
 <table>
     <thead>
         <tr>
@@ -1165,7 +1165,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Listy - dwie listy</h1>
+## Listy - dwie listy
 <table>
     <thead>
         <tr>
@@ -1299,7 +1299,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Napisy - wprowadzenie</h1>
+## Napisy - wprowadzenie
 <table>
     <thead>
         <tr>
@@ -1529,7 +1529,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Napisy - anagramy i palindromy</h1>
+## Napisy - anagramy i palindromy
 <table>
     <thead>
         <tr>
@@ -1639,7 +1639,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Listy 2d</h1>
+## Listy 2d
 <table>
     <thead>
         <tr>
@@ -1785,7 +1785,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Funkcje - wielomiany</h1>
+## Funkcje - wielomiany
 <table>
     <thead>
         <tr>
@@ -1871,7 +1871,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Funkcje - rekurencja</h1>
+## Funkcje - rekurencja
 <table>
     <thead>
         <tr>
@@ -2005,7 +2005,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>System binarny</h1>
+## System binarny
 <table>
     <thead>
         <tr>
@@ -2163,7 +2163,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Słowniki</h1>
+## Słowniki
 <table>
     <thead>
         <tr>
@@ -2321,7 +2321,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Operacje na plikach</h1>
+## Operacje na plikach
 <table>
     <thead>
         <tr>
@@ -2479,7 +2479,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Klasy</h1>
+## Klasy
 <table>
     <thead>
         <tr>
@@ -2577,7 +2577,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Dziedziczenie</h1>
+## Dziedziczenie
 <table>
     <thead>
         <tr>
@@ -2651,7 +2651,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Sortowanie - algorytmy</h1>
+## Sortowanie - algorytmy
 <table>
     <thead>
         <tr>
@@ -2725,7 +2725,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Sortowanie - praktyka</h1>
+## Sortowanie - praktyka
 <table>
     <thead>
         <tr>
@@ -2835,7 +2835,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Wyrażenia regularne</h1>
+## Wyrażenia regularne
 <table>
     <thead>
         <tr>
@@ -2981,7 +2981,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Listy - trudne</h1>
+## Listy - trudne
 <table>
     <thead>
         <tr>
@@ -3103,7 +3103,7 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Napisy - trudne</h1>
+## Napisy - trudne
 <table>
     <thead>
         <tr>
@@ -3227,13 +3227,12 @@ Rozwiązania
     </tbody>
 </table>
 
-<h1>Bibliografia</h1>
-<ol>
-    <li>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. "<i>Introduction to Algorithms, 3rd Edition (The MIT Press)</i>"</li>
-    <li>Steven Halim "<i>Competitive Programming 3</i>" </li>
-    <li>Narasimha Karumanchi "<i>Data Structures and Algorithms Made Easy: Data Structures and Algorithmic Puzzles</i>" </li>
-    <li>Brian Kernighan, Dennis Ritchie "<i>The C Programming Language</i>" </li>
-    <li>Steven Skiena, Miguel Revilla "<i>Programming Challenges: The Programming Contest Training Manual</i>" </li>
-    <li>Antti Laaksonen "<i>  Guide to Competitive Programming: Learning and Improving Algorithms Through Contests (Undergraduate Topics in Computer Science) </i>" </li>
-    <li>Nite Nimajneb "<i>The Hitchhiker’s Guide to the Programming Contests</i>" </li>
-</ol>
+## Bibliografia
+
+* Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. "<i>Introduction to Algorithms, 3rd Edition (The MIT Press)</i>"
+* Steven Halim "<i>Competitive Programming 3</i>" 
+* Narasimha Karumanchi "<i>Data Structures and Algorithms Made Easy: Data Structures and Algorithmic Puzzles</i>" 
+* Brian Kernighan, Dennis Ritchie "<i>The C Programming Language</i>" 
+* Steven Skiena, Miguel Revilla "<i>Programming Challenges: The Programming Contest Training Manual</i>" 
+* Antti Laaksonen "<i>  Guide to Competitive Programming: Learning and Improving Algorithms Through Contests (Undergraduate Topics in Computer Science) </i>" 
+* Nite Nimajneb "<i>The Hitchhiker’s Guide to the Programming Contests</i>" 
