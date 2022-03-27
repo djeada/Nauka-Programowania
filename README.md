@@ -53,6 +53,8 @@ Rozwiązania
    1. [Listy - trudne](#Listy---trudne)
    1. [Napisy - trudne](#Napisy---trudne)
 
+<!--te-->
+
 ## Interakcja z konsolą
 
 <table>
