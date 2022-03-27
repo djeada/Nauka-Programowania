@@ -13,13 +13,13 @@ Przykłady zostały przetestowane w następujących wersjach języków:
 
 ### C++
 
-Większość przykładów wykorzystuje standard C++11. Część zadań została rozwiązana przy użyciu składni wprowadzonej w wersjach C++17 i C++20.
+Większość przykładów wykorzystuje standard `C++11`. Jedynie nieznaczna część zadań została rozwiązana przy użyciu składni wprowadzonej w wersjach `C++17` i `C++20`.
 
 #### Komenda kompilacji
 
-Do kompilacji wykorzystano kompilator GCC z następującymi flagami:
+Do kompilacji wykorzystano kompilator `GCC` z następującymi flagami:
 
-g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o plik_wykonwyalny.out sciezka_do_zadania.cpp
+    g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o plik_wykonwyalny.out sciezka_do_zadania.cpp
 
 #### Styl formatowania
 
@@ -33,7 +33,7 @@ Brak.
 
 ### Python
 
-Wszystkie przykłady zostały przetestowane w wersji 3.8. 
+Wszystkie przykłady zostały przetestowane w wersji `3.8`. 
 
 #### Komenda kompilacji
 
@@ -53,17 +53,17 @@ Brak.
 
 ### Java
     
-Wszystkie przykłady zostały przetestowane w wersji Java SE 17.
+Wszystkie przykłady zostały przetestowane w wersji `Java SE 17`.
 
 #### Komenda kompilacji
 
-Do kompilacji wykorzystano kompilator javac z następującymi flagami:
+Do kompilacji wykorzystano kompilator `javac` z następującymi flagami:
 
     javac -d . sciezka_do_zadania.java
 
 #### Styl formatowania
 
-Do formatowania kodu zostało użyte narzędzie google-java-format.
+Do formatowania kodu zostało użyte narzędzie `google-java-format`.
 
     java -jar google-java-format-1.7-all-deps.jar sciezka_do_zadania.java
 
@@ -73,7 +73,7 @@ Brak.
 
 ### JavaScript
 
-Rozwiązania zostały przetestowane w środowisku NodeJS 12.16.1.
+Rozwiązania zostały przetestowane w środowisku `NodeJS 12.16.1`.
 
 #### Zależności od bibliotek zewnętrznych
 
@@ -81,17 +81,17 @@ Do komunikacji z konsolą użyto biblioteki <a href="https://github.com/maleck13
 
 ### Haskell
 
-Wszystkie przykłady zostały przetestowane w wersji Haskell 8.4.
+Wszystkie przykłady zostały przetestowane w wersji `Haskell 8.4`.
 
 #### Komenda kompilacji
 
-Do kompilacji wykorzystano kompilator ghc z następującymi flagami:
+Do kompilacji wykorzystano kompilator `ghc` z następującymi flagami:
     
         ghc -O2 -Wall -o sciezka_do_zadania sciezka_do_zadania.hs
 
 #### Styl formatowania
 
-Do formatowania kodu zostało użyte narzędzie ormolu.
+Do formatowania kodu zostało użyte narzędzie `ormolu`.
 
     ormolu --mode inplace sciezka_do_zadania.hs
 
@@ -101,11 +101,11 @@ Brak.
 
 ### Rust
 
-Wszystkie przykłady zostały przetestowane w wersji Rust 1.42.0.
+Wszystkie przykłady zostały przetestowane w wersji `Rust 1.42.0`.
 
 #### Komenda kompilacji
 
-Do kompilacji wykorzystano kompilator rustc z następującymi flagami:
+Do kompilacji wykorzystano kompilator `rustc` z następującymi flagami:
 
     rustc -O --emit=asm --target=x86_64-unknown-linux-gnu -o sciezka_do_zadania sciezka_do_zadania.rs
 
