@@ -33,7 +33,7 @@ var Main = /** @class */ (function () {
         var oczekiwane = true;
         var wynik = Main.czySlowoElfickie(slowo);
         if (wynik !== oczekiwane) {
-            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
+            throw new Error(`Assertion error line 36: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
         }
     }
     Main.test2 = function () {
@@ -41,7 +41,7 @@ var Main = /** @class */ (function () {
         var oczekiwane = false;
         var wynik = Main.czySlowoElfickie(slowo);
         if (wynik !== oczekiwane) {
-            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
+            throw new Error(`Assertion error line 43: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
         }
     }
     Main.main = function (args) {

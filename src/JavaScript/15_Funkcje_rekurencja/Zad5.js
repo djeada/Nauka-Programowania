@@ -17,7 +17,7 @@ var Main = /** @class */ (function () {
         var oczekiwane = 5;
         var wynik = Main.fibonacci(n);
         if (wynik !== oczekiwane) {
-            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
+            throw new Error(`Assertion error line 20: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
         }
     }
     Main.main = function (args) {

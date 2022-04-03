@@ -52,7 +52,7 @@ var Main = /** @class */ (function () {
         var oczekiwane = 2;
         var wynik = Main.mozliweWygrane(n);
         if (wynik !== oczekiwane) {
-            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
+            throw new Error(`Assertion error line 55: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
         }
     }
     Main.test2 = function () {
@@ -60,7 +60,7 @@ var Main = /** @class */ (function () {
         var oczekiwane = 4;
         var wynik = Main.mozliweWygrane(n);
         if (wynik !== oczekiwane) {
-            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
+            throw new Error(`Assertion error line 63: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
         }
     }
     Main.main = function (args) {

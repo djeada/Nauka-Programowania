@@ -17,7 +17,7 @@ var Main = /** @class */ (function () {
         var oczekiwane = 31;
         var wynik = Main.wartoscWyrazu(n);
         if (wynik !== oczekiwane) {
-            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
+            throw new Error(`Assertion error line 20: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
         }
     }
     Main.main = function (args) {

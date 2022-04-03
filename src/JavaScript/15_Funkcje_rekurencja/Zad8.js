@@ -45,11 +45,11 @@ var Main = /** @class */ (function () {
         ];
         var wynik = Main.hanoi(n);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane.length + ", " + "obliczone: " + wynik.length);
+            throw new Error(`Assertion error line 48: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
             if (wynik[i].first !== oczekiwane[i].first || wynik[i].second !== oczekiwane[i].second) {
-                throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane[i] + ", " + "obliczone: " + wynik[i]);
+                throw new Error(`Assertion error line 52: oczekiwane: ${oczekiwane[i].first}, ${oczekiwane[i].second}, obliczone: ${wynik[i].first}, ${wynik[i].second}`);
             }
         }
     };

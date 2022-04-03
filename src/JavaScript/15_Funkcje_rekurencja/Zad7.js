@@ -23,7 +23,7 @@ var Main = /** @class */ (function () {
         var oczekiwane = 4;
         var wynik = Main.znajdzIndeks(lista, klucz);
         if (wynik !== oczekiwane) {
-            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
+            throw new Error(`Assertion error line 26: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
         }
     }
     Main.main = function (args) {

@@ -2,6 +2,7 @@
 Otrzymujesz liczbe N. Przy uzyciu rekurencji zbuduj napis skladajacy
 sie z liczb naturalnych mniejszych od N oddzielonych przecinkami.
 */
+ 
 
 var Main = /** @class */ (function () { 
     function Main() { }
@@ -21,7 +22,7 @@ var Main = /** @class */ (function () {
         var oczekiwane = "1,2,3,4,5";
         var wynik = Main.zbudujNapis(n);
         if (wynik !== oczekiwane) {
-            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
+            throw new Error(`Assertion error line 25: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
         }
     }
     Main.main = function (args) {
