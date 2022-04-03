@@ -19,8 +19,9 @@ var Main = /** @class */ (function () {
     Main.test1 = function () {
         var n = 5;
         var oczekiwane = "1,2,3,4,5";
-        if (Main.zbudujNapis(n) !== oczekiwane) {
-            throw new Error("Assertion error line 24: assert zbudujNapis(n).equals(wynik);");
+        var wynik = Main.zbudujNapis(n);
+        if (wynik !== oczekiwane) {
+            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
         }
     }
     Main.main = function (args) {

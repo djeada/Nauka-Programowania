@@ -30,16 +30,18 @@ var Main = /** @class */ (function () {
     }
     Main.test1 = function () {
         var slowo = "reflektor";
-        var wynik = true;
-        if (Main.czySlowoElfickie(slowo) !== wynik) {
-            throw new Error("Assertion error line 24: assert zbudujNapis(n).equals(wynik);");
+        var oczekiwane = true;
+        var wynik = Main.czySlowoElfickie(slowo);
+        if (wynik !== oczekiwane) {
+            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
         }
     }
     Main.test2 = function () {
         var slowo = "elzbieta";
-        var wynik = false;
-        if (Main.czySlowoElfickie(slowo) !== wynik) {
-            throw new Error("Assertion error line 24: assert zbudujNapis(n).equals(wynik);");
+        var oczekiwane = false;
+        var wynik = Main.czySlowoElfickie(slowo);
+        if (wynik !== oczekiwane) {
+            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
         }
     }
     Main.main = function (args) {

@@ -21,8 +21,9 @@ var Main = /** @class */ (function () {
         var lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         var klucz = 5;
         var oczekiwane = 4;
-        if (Main.znajdzIndeks(lista, klucz) !== oczekiwane) {
-            throw new Error("Assertion error line 24: assert zbudujNapis(n).equals(wynik);");
+        var wynik = Main.znajdzIndeks(lista, klucz);
+        if (wynik !== oczekiwane) {
+            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
         }
     }
     Main.main = function (args) {

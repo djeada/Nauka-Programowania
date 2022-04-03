@@ -16,8 +16,9 @@ var Main = /** @class */ (function () {
         var a = 2;
         var b = 3;
         var oczekiwane = 8;
-        if (Main.potega(a, b) !== oczekiwane) {
-            throw new Error("Assertion error line 24: assert zbudujNapis(n).equals(wynik);");
+        var wynik = Main.potega(a, b);
+        if (wynik !== oczekiwane) {
+            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
         }
     }
     Main.main = function (args) {

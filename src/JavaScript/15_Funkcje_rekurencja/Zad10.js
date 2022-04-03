@@ -4,28 +4,20 @@ Dla otrzymanej liczby N, reprezentujacej calkowita liczbe punktow,
 oblicz na ile sposobow gracz moze wygrac gre.
 */
 
+class ArraySet extends Set {
+    add(arr) {
+      super.add(arr.toString());
+    }
+    has(arr) {
+      return super.has(arr.toString());
+    }
+  }
+
 var Main = /** @class */ (function () {
     function Main() {
     }
-    Main.czyTablicaNalezyDoTablicy = function (macierz, tablica) {
-        for (var i = 0; i < macierz.length; i++) {
-            if (macierz[i].length == tablica.length) {
-                for (var j = 0; j < macierz[i].length; j++) {
-                    if (macierz[i][j] != tablica[j]) {
-                        break;
-                    }
-                    if (j == macierz[i].length - 1) {
-
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
-    }
-
     Main.mozliweWygrane = function (n) {
-        var wynik = [];
+        var wynik = new ArraySet();
         var mozliweWygraneWew = function (tablica) {
 
           var suma = 0;
@@ -36,10 +28,8 @@ var Main = /** @class */ (function () {
               return;
           
           if (suma === n) {
-            sorted = tablica.sort(function (a, b) { return a - b; });                                               
-            if (!Main.czyTablicaNalezyDoTablicy(wynik, sorted)) {         
-              wynik.push(sorted.slice(0));
-            }
+            sorted = tablica.sort(function (a, b) { return a - b; });                                       
+            wynik.add(sorted.slice(0));
             return;
           }
           tablica.push(3);
@@ -53,22 +43,24 @@ var Main = /** @class */ (function () {
           tablica.pop();
       }
         mozliweWygraneWew([]);
-        return wynik.length;
+        return wynik.size;
 
     }
 
     Main.test1 = function () {
         var n = 10;
         var oczekiwane = 2;
-        if (Main.mozliweWygrane(n) !== oczekiwane) {
-            throw new Error("Assertion error line 24: assert zbudujNapis(n).equals(wynik);");
+        var wynik = Main.mozliweWygrane(n);
+        if (wynik !== oczekiwane) {
+            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
         }
     }
     Main.test2 = function () {
         var n = 20;
         var oczekiwane = 4;
-        if (Main.mozliweWygrane(n) !== oczekiwane) {
-            throw new Error("Assertion error line 24: assert zbudujNapis(n).equals(wynik);");
+        var wynik = Main.mozliweWygrane(n);
+        if (wynik !== oczekiwane) {
+            throw new Error("Assertion error line " + (__LINE__ - 1) + ": " + "oczekiwane: " + oczekiwane + ", " + "obliczone: " + wynik);
         }
     }
     Main.main = function (args) {
