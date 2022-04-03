@@ -30,11 +30,11 @@ var Main = /** @class */ (function () {
         var oczekiwane = [-1];
         var wynik = Main.miejscaZerowe(wspolczynniki);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert miejscaZerowe(wspolczynniki).length.equals(wynik.length);");
+            throw new Error(`Assertion error line 33: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
             if (wynik[i] !== oczekiwane[i]) {
-                throw new Error("Assertion error line 30: assert miejscaZerowe(wspolczynniki)[i].equals(wynik[i]);");
+                throw new Error(`Assertion error line 37: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
             }
         }
     }

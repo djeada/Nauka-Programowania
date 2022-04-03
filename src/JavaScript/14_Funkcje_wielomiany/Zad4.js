@@ -25,11 +25,11 @@ var Main = /** @class */ (function () {
         var oczekiwane = [5, 10, 30, 26, 52, 24];
         var wynik = Main.iloczyn(wielomianA, wielomianB);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert iloczyn(wielomianA, wielomianB).length.equals(wynik.length);");
+            throw new Error(`Assertion error line 28: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
             if (wynik[i] !== oczekiwane[i]) {
-                throw new Error("Assertion error line 30: assert iloczyn(wielomianA, wielomianB)[i].equals(wynik[i]);");
+                throw new Error(`Assertion error line 32: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
             }
         }
     }

@@ -19,11 +19,11 @@ var Main = /** @class */ (function () {
         var oczekiwane = [4, 4, 4];
         var wynik = Main.dodajWielomiany(wielomian1, wielomian2);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert dodajWielomiany(wielomian1, wielomian2).length.equals(wynik.length);");
+            throw new Error(`Assertion error line 22: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
             if (wynik[i] !== oczekiwane[i]) {
-                throw new Error("Assertion error line 30: assert dodajWielomiany(wielomian1, wielomian2)[i].equals(wynik[i]);");
+                throw new Error(`Assertion error line 26: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
             }
         }
     }

@@ -17,7 +17,7 @@ var Main = /** @class */ (function () {
         var x = 1;
         var wynik = 6;
         if (Main.wartoscWielomianu(wielomian, x) !== wynik) {
-            throw new Error("Assertion error line 24: assert wartoscWielomianu(wielomian, x).equals(wynik);");
+            throw new Error(`Assertion error line 22: oczekiwane: ${wynik}, obliczone: ${Main.wartoscWielomianu(wielomian, x)}`);
         }
     }
     Main.main = function (args) {

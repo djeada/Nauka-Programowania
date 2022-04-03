@@ -19,11 +19,11 @@ var Main = /** @class */ (function () {
         var oczekiwane = [6, 4, 2];
         var wynik = Main.przemnozWielomian(wielomian, x);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert przemnozWielomian(wielomian, x).length.equals(wynik.length);");
+            throw new Error(`Assertion error line 22: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
             if (wynik[i] !== oczekiwane[i]) {
-                throw new Error("Assertion error line 30: assert przemnozWielomian(wielomian, x)[i].equals(wynik[i]);");
+                throw new Error(`Assertion error line 26: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
             }
         }
     }

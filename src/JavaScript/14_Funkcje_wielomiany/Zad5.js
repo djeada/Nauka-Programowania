@@ -25,11 +25,11 @@ var Main = /** @class */ (function () {
         var oczekiwane = [8, -3];
         var wynik = Main.pochodnaWielomianu(wielomian, k);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert pochodnaWielomianu(wielomian, k).length.equals(wynik.length);");
+            throw new Error(`Assertion error line 28: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
             if (wynik[i] !== oczekiwane[i]) {
-                throw new Error("Assertion error line 30: assert pochodnaWielomianu(wielomian, k)[i].equals(wynik[i]);");
+                throw new Error(`Assertion error line 32: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
             }
         }
     };
@@ -39,11 +39,11 @@ var Main = /** @class */ (function () {
         var oczekiwane = [156, -36, 0];
         var wynik = Main.pochodnaWielomianu(wielomian, k);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert pochodnaWielomianu(wielomian, k).length.equals(wynik.length);");
+            throw new Error(`Assertion error line 42: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
             if (wynik[i] !== oczekiwane[i]) {
-                throw new Error("Assertion error line 30: assert pochodnaWielomianu(wielomian, k)[i].equals(wynik[i]);");
+                throw new Error(`Assertion error line 46: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
             }
         }
     }
