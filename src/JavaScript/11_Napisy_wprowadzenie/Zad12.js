@@ -3,17 +3,27 @@ var Main = (function() {
     Main.usunSpacjeV1 = function(zdanie) {
         return zdanie.replace(new RegExp("\\s", 'g'), "");
     };
-    Main.main = function(args) {
+    Main.test1 = function(args) {
         var zdanie = "lezy jezy na wierzy";
-        var wynik = "lezyjezynawierzy";
-        if (!(Main.usunSpacjeV1(zdanie) === wynik)) {
-            throw new Error("Assertion error line 9: assert usunSpacjeV1(zdanie).equals(wynik);");
-        };
+        var oczekiwane = "lezyjezynawierzy";
+        var wynik = Main.usunSpacjeV1(zdanie);
+
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
+    };
+    Main.test2 = function(args) {
         zdanie = "d";
-        wynik = "d";
-        if (!(Main.usunSpacjeV1(zdanie) === wynik)) {
-            throw new Error("Assertion error line 12: assert usunSpacjeV1(zdanie).equals(wynik);");
-        };
+        oczekiwane = "d";
+        wynik = Main.usunSpacjeV1(zdanie);
+
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
+    };
+    Main.main = function(args) {
+        Main.test1();
+        Main.test2();
     };
     return Main;
 }());

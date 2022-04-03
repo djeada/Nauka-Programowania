@@ -24,12 +24,15 @@ var Main = /** @class */ (function () {
         var oczekiwane = [[1, 4], [2, 5], [3, 6]];
         var wynik = Main.stworzMacierz(listaA, listaB);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert stworzMacierz(listaA, listaB).length.equals(wynik.length);");
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i].length !== oczekiwane[i].length) {
+                throw new Error(`Assertion error line 29: ${wynik[i].length} != ${oczekiwane[i].length}`);
+            }
             for (var j = 0; j < wynik[i].length; j++) {
                 if (wynik[i][j] !== oczekiwane[i][j]) {
-                    throw new Error("Assertion error line 30: assert stworzMacierz(listaA, listaB)[i][j].equals(wynik[i][j]);");
+                    throw new Error(`Assertion error line 29: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
                 }
             }
         }

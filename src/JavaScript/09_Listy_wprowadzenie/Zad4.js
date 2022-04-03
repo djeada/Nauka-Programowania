@@ -20,28 +20,42 @@ var Main = /** @class */ (function() {
 
     Main.test1 = function() {
         var tablica = [3, 5, -7, 4, 9, -11, 2];
-        var wynik = 9;
-        if (!(Main.znajdzMaksV1(tablica) === wynik)) {
-            throw new Error("Assertion error line 23: assert znajdzMaksV1(tablica) == wynik;");
-        };
-        if (!(Main.znajdzMaksV2(tablica) === wynik)) {
-            throw new Error("Assertion error line 24: assert znajdzMaksV2(tablica) == wynik;");
-        };
+        var oczekiwane = 9;
+        var wynik = Main.znajdzMaksV1(tablica);
+        if (!(oczekiwane === wynik)) {
+            throw new Error(`Assertion error line 26: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
 
     Main.test2 = function() {
         var tablica = [3, -2, 4, 29, -3, -40, 8, 5, -7, -1];
-        var wynik = 29;
-        if (!(Main.znajdzMaksV1(tablica) === wynik)) {
-            throw new Error("Assertion error line 30: assert znajdzMaksV1(tablica) == wynik;");
-        };
-        if (!(Main.znajdzMaksV2(tablica) === wynik)) {
-            throw new Error("Assertion error line 31: assert znajdzMaksV2(tablica) == wynik;");
-        };
+        var oczekiwane = 29;
+        var wynik = Main.znajdzMaksV1(tablica);
+        if (!(oczekiwane === wynik)) {
+            throw new Error(`Assertion error line 35: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
+    };
+    Main.test3 = function() {
+        var tablica = [3, 5, -7, 4, 9, -11, 2];
+        var oczekiwane = 9;
+        var wynik = Main.znajdzMaksV2(tablica);
+        if (!(oczekiwane === wynik)) {
+            throw new Error(`Assertion error line 43: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
+    };
+    Main.test4 = function() {
+        var tablica = [3, -2, 4, 29, -3, -40, 8, 5, -7, -1];
+        var oczekiwane = 29;
+        var wynik = Main.znajdzMaksV2(tablica);
+        if (!(oczekiwane === wynik)) {
+            throw new Error(`Assertion error line 51: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();
         Main.test2();
+        Main.test3();
+        Main.test4();
     };
     return Main;
 }());

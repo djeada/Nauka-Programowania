@@ -27,12 +27,13 @@ var Main = (function() {
         return (m1 + m2) / 2.0;
     };
     Main.test1 = function() {
-        var listaA = ([2, 4, 7].slice(0));
-        var listaB = ([3, 5, 9].slice(0));
-        var wynik = 4.5;
-        if (!(Main.mediana(listaA, listaB) === wynik)) {
-            throw new Error("Assertion error line 31: assert mediana(listaA, listaB) == wynik;");
-        };
+        var listaA = [2, 4, 7]
+        var listaB = [3, 5, 9]
+        var oczekiwane = 4.5;
+        var wynik = Main.mediana(listaA, listaB);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 29: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

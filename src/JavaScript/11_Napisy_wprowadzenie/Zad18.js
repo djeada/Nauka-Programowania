@@ -14,13 +14,16 @@ var Main = (function() {
 
         return slowa.join(" ").trim();
     };
-    Main.main = function(args) {
+    Main.test1 = function() {
         var napis = "Cameron Diaz";
-        var wynik = "noremaC zaiD";
-
-        if (!(Main.odwrocNapisyV1(napis) === wynik)) {
-            throw new Error("Assertion error line 21: assert odwrocNapisyV1(napis).equals(wynik);");
-        };
+        var oczekiwane = "noremaC zaiD";
+        var wynik = Main.odwrocNapisyV1(napis);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
+    };
+    Main.main = function(args) {
+        Main.test1();
     };
     return Main;
 }());

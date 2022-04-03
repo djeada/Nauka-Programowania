@@ -23,28 +23,46 @@ var Main = /** @class */ (function() {
         return a !== 0;
     };
     Main.test1 = function() {
-        var wsplX = ([-2, 7, 8].slice(0));
-        var wsplY = ([4, 5, -8].slice(0));
-        if (!(Main.czyTrojkatV1(wsplX, wsplY))) {
-            throw new Error("Assertion error line 26: assert czyTrojkatV1(wsplX, wsplY);");
-        };
-        if (!(Main.czyTrojkatV2(wsplX, wsplY))) {
-            throw new Error("Assertion error line 27: assert czyTrojkatV2(wsplX, wsplY);");
-        };
+        var wsplX = [-2, 7, 8]
+        var wsplY = [4, 5, -8]
+        var oczekiwane = true
+        var wynik = Main.czyTrojkatV1(wsplX, wsplY)
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 31: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.test2 = function() {
-        var wsplX = ([0, 2, 5].slice(0));
-        var wsplY = ([0, -2, -5].slice(0));
-        if (!(!Main.czyTrojkatV1(wsplX, wsplY))) {
-            throw new Error("Assertion error line 33: assert !czyTrojkatV1(wsplX, wsplY);");
-        };
-        if (!(!Main.czyTrojkatV2(wsplX, wsplY))) {
-            throw new Error("Assertion error line 34: assert !czyTrojkatV2(wsplX, wsplY);");
-        };
+        var wsplX = [0, 2, 5]
+        var wsplY = [0, -2, -5]
+        var oczekiwane = false
+        var wynik = Main.czyTrojkatV1(wsplX, wsplY)
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 40: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
+    };
+    Main.test3 = function() {
+        var wsplX = [-2, 7, 8]
+        var wsplY = [4, 5, -8]
+        var oczekiwane = true
+        var wynik = Main.czyTrojkatV2(wsplX, wsplY)
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 49: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
+    };
+    Main.test4 = function() {
+        var wsplX = [0, 2, 5]
+        var wsplY = [0, -2, -5]
+        var oczekiwane = false
+        var wynik = Main.czyTrojkatV2(wsplX, wsplY)
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 58: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();
         Main.test2();
+        Main.test3();
+        Main.test4();
     };
     return Main;
 }());

@@ -11,28 +11,20 @@ var Main = (function() {
         }
         return listaA;
     };
-    Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i])
-                return false;
-        }
-        return true;
-    };
     Main.test1 = function() {
-        var listaA = ([3, 6, 2, 7, 9].slice(0));
-        var listaB = ([4, 2, 3, 5, 6].slice(0));
-        var wynik = ([7, 9].slice(0));
+        var listaA = [3, 6, 2, 7, 9]
+        var listaB = [4, 2, 3, 5, 6]
+        var oczekiwane = [7, 9]
+        var wynik = Main.usunCzescWspolnaV1(listaA, listaB);
 
-        if (!Main.listyRowne(wynik, Main.usunCzescWspolnaV1(listaA, listaB))) {
-            throw new Error("Assertion error;");
-        };
-
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 33: ${wynik[i]} != ${oczekiwane[i]}`);
+            }
+        }
     };
     Main.main = function(args) {
         Main.test1();

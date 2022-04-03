@@ -21,18 +21,20 @@ var Main = (function() {
     Main.test1 = function() {
         var napisA = "xxbab";
         var napisB = "bbabb";
-        var wynik = 4;
-        if (!(Main.odlegloscHammingaV1(napisA, napisB) === wynik)) {
-            throw new Error("Assertion error line 19: assert odlegloscHammingaV1(napisA, napisB) == wynik;");
-        };
+        var oczekiwane = 4;
+        var wynik = Main.odlegloscHammingaV1(napisA, napisB);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 29: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
         var napisA = "xxbab";
         var napisB = "bbabb";
-        var wynik = 4;
-        if (!(Main.odlegloscHammingaV1(napisA, napisB) === wynik)) {
-            throw new Error("Assertion error line 26: assert odlegloscHammingaV1(napisA, napisB) == wynik;");
-        };
+        var oczekiwane = 4;
+        var wynik = Main.odlegloscHammingaV1(napisA, napisB);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 29: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

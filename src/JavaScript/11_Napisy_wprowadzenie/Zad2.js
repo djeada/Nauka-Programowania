@@ -20,10 +20,11 @@ var Main = (function() {
     Main.test1 = function() {
         var napis = "adam";
         var znak = 'a';
-        var wynik = 2;
-        if (!(Main.policzZnakV1(napis, znak) === wynik)) {
-            throw new Error("Assertion error line 22: assert policzZnakV1(napis, znak) == wynik;");
-        };
+        var oczekiwane = 2;
+        var wynik = Main.policzZnakV1(napis, znak);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

@@ -33,16 +33,15 @@ var Main = /** @class */ (function () {
     Main.test1 = function () {
         var zdanie = "Tata zbaral kajak na wycieczke i uderzyl sie w oko.";
         var oczekiwane = ["kajak", "i", "w", "oko"];
-        var words = Main.rozdzielNaSlowa(zdanie);
-        var palindromy = Main.palindromy(zdanie);
-        if (oczekiwane.length !== palindromy.length) {
-            throw new Error("Assertion error line 24: assert anagramy(napis1, napis2);");
+        var wynik = Main.palindromy(zdanie);
+        if (oczekiwane.length != wynik.length) {
+            throw new Error(`Assertion error line 24: ${oczekiwane.length} != ${wynik.length}`);
         }
         oczekiwane.sort();
-        palindromy.sort();
+        wynik.sort();
         for (var i = 0; i < oczekiwane.length; i++) {
-            if (oczekiwane[i] !== palindromy[i]) {
-                throw new Error("Assertion error line 24: assert anagramy(napis1, napis2);");
+            if (oczekiwane[i] != wynik[i]) {
+                throw new Error(`Assertion error line 24: ${oczekiwane[i]} != ${wynik[i]}`);
             }
         }
     };

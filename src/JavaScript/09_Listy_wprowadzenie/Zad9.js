@@ -26,36 +26,35 @@ var Main = /** @class */ (function() {
         }
         return wynik;
     };
-    Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i])
-                return false;
+    Main.test1 = function(args) {
+        var lista = [2, 1, 2, 2, 3, 3]
+        var oczekiwane = [2, 1, 3]
+        var wynik = Main.usunDuplikatyV1(lista);
+        if (oczekiwane.length !== wynik.length) {
+            throw new Error(`Assertion error line 34: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
         }
-        return true;
+        for (var i = 0; i < oczekiwane.length; i++) {
+            if (oczekiwane[i] !== wynik[i]) {
+                throw new Error(`Assertion error line 38: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
+            }
+        }
+    };
+    Main.test2 = function(args) {
+        var lista = [2, 1, 2, 2, 3, 3]
+        var oczekiwane = [2, 1, 3]
+        var wynik = Main.usunDuplikatyV2(lista);
+        if (oczekiwane.length !== wynik.length) {
+            throw new Error(`Assertion error line 47: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
+        }
+        for (var i = 0; i < oczekiwane.length; i++) {
+            if (oczekiwane[i] !== wynik[i]) {
+                throw new Error(`Assertion error line 51: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
+            }
+        }
     };
     Main.main = function(args) {
-        var lista = ([2, 1, 2, 2, 3, 3].slice(0));
-        var wynik = ([2, 1, 3].slice(0));
-
-        if (!Main.listyRowne(Main.usunDuplikatyV1(lista), wynik)) {
-            throw new Error("Assertion error;");
-        };
-
-    };
-    Main.main = function(args) {
-        var lista = ([2, 1, 2, 2, 3, 3].slice(0));
-        var wynik = ([2, 1, 3].slice(0));
-
-        if (!Main.listyRowne(Main.usunDuplikatyV2(lista), wynik)) {
-            throw new Error("Assertion error;");
-        };
-
+        Main.test1();
+        Main.test2();
     };
     return Main;
 }());

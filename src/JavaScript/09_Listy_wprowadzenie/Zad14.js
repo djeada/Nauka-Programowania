@@ -16,7 +16,6 @@ var Main = /** @class */ (function() {
                         }
                     })(pom);
                 } else {
-
                     (pom.push(liczba) > 0);
                 }
             }
@@ -36,18 +35,20 @@ var Main = /** @class */ (function() {
         return wynik;
     };
     Main.test1 = function() {
-        var lista = ([1, 3, 1, 7, 3, 1, 1].slice(0));
-        var wynik = 7;
-        if (!(Main.elementBezParyV1(lista) === wynik)) {
-            throw new Error("Assertion error line 31: assert elementBezParyV1(lista) == wynik;");
-        };
+        var lista = [1, 3, 1, 7, 3, 1, 1]
+        var oczekiwane = 7;
+        var wynik = Main.elementBezParyV1(lista);
+        if (oczekiwane !== wynik) {
+            throw new Error(`Assertion error line 42: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.test2 = function() {
-        var lista = ([1, 3, 1, 7, 3, 1, 1].slice(0));
-        var wynik = 7;
-        if (!(Main.elementBezParyV2(lista) === wynik)) {
-            throw new Error("Assertion error line 37: assert elementBezParyV2(lista) == wynik;");
-        };
+        var lista = [1, 3, 1, 7, 3, 1, 1]
+        var oczekiwane = 7;
+        var wynik = Main.elementBezParyV2(lista);
+        if (oczekiwane !== wynik) {
+            throw new Error(`Assertion error line 50: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }   
     };
     Main.main = function(args) {
         Main.test1();

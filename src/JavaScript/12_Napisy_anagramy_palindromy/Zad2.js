@@ -19,16 +19,16 @@ var Main = /** @class */ (function () {
     }
     Main.test1 = function () {
         var napis = "adam";
-        var wynik = ["adam", "adma", "amad", "amda", "dama", "dama", "madam", "madam", "mada", "mada"];
-        var wynik2 = Main.permutacje(napis);
-        if (!(wynik.length === wynik2.length)) {
-            throw new Error("Assertion error line 24: assert wynik.length === wynik2.length;");
-        };
+        var oczekiwane = ["adam", "adma", "amad", "amda", "dama", "dama", "madam", "madam", "mada", "mada"];
+        var wynik = Main.permutacje(napis);
+        if (!(wynik.length === oczekiwane.length)) {
+            throw new Error(`Assertion error line 24: ${wynik.length} === ${oczekiwane.length}`);
+        }
         for (var i = 0; i < wynik.length; i++) {
-            if (!(wynik[i] === wynik2[i])) {
-                throw new Error("Assertion error line 24: assert wynik[i].equals(wynik2[i]);");
-            };
-        };
+            if (!(wynik[i] === oczekiwane[i])) {
+                throw new Error(`Assertion error line 24: ${wynik[i]} === ${oczekiwane[i]}`);
+            }
+        }
     }
     Main.main = function (args) {
         Main.test1();

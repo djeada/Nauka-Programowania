@@ -16,32 +16,21 @@ var Main = /** @class */ (function() {
                 }
             }
         }
-        return (wynik.slice(0));
-    };
-    Main.wektoryRowne = function(v1, v2) {
-        v1.sort();
-        v2.sort();
-        return (function(a1, a2) {
-            if (a1 == null && a2 == null)
-                return true;
-            if (a1 == null || a2 == null)
-                return false;
-            if (a1.length != a2.length)
-                return false;
-            for (var i = 0; i < a1.length; i++) {
-                if (a1[i] != a2[i])
-                    return false;
-            }
-            return true;
-        })(v1, v2);
+        return wynik;
     };
     Main.test1 = function() {
-        var listaA = ([9, 2, 5, 4].slice(0));
-        var listaB = ([4, 2, 1].slice(0));
-        var wynik = ([9, 5, 1].slice(0));
-        if (!(Main.wektoryRowne(Main.roznicaV1(listaA, listaB), (wynik.slice(0))))) {
-            throw new Error("Assertion error line 33: assert wektoryRowne(roznicaV1(listaA, listaB), new ArrayList<Integer>(wynik));");
-        };
+        var listaA = [9, 2, 5, 4]
+        var listaB = [4, 2, 1]
+        var oczekiwane = [9, 5, 1]
+        var wynik = Main.roznicaV1(listaA, listaB);
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 33: ${wynik[i]} != ${oczekiwane[i]}`);
+            }
+        }
     };
     Main.main = function(args) {
         Main.test1();

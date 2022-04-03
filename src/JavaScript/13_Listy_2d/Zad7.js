@@ -32,13 +32,16 @@ var Main = /** @class */ (function () {
         var macierz = [[1, 2, 3], [4, 0, 6], [7, 8, 9]];
         var oczekiwane = [[1, 0, 3], [0, 0, 0], [7, 0, 9]];
         var wynik = Main.zamienNaZero(macierz);
-        if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert zamienNaZero(macierz).length.equals(wynik.length);");
+        if (wynik.length != oczekiwane.length) {
+            throw new Error(`Assertion error line 24: ${wynik.length} != ${oczekiwane.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i].length != oczekiwane[i].length) {
+                throw new Error(`Assertion error line 24: ${wynik[i].length} != ${oczekiwane[i].length}`);
+            }
             for (var j = 0; j < wynik[i].length; j++) {
-                if (wynik[i][j] !== oczekiwane[i][j]) {
-                    throw new Error("Assertion error line 30: assert zamienNaZero(macierz)[i][j].equals(wynik[i][j]);");
+                if (wynik[i][j] != oczekiwane[i][j]) {
+                    throw new Error(`Assertion error line 24: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
                 }
             }
         }

@@ -52,28 +52,42 @@ var Main = /** @class */ (function() {
         return licznik;
     };
     Main.test1 = function() {
-        var lista = (['A', 'B', 'A', 'B', 'B'].slice(0));
-        var wynik = 5;
-        if (!(Main.policzSamochodyV1(lista) === wynik)) {
-            throw new Error("Assertion error line 41: assert policzSamochodyV1(lista) == wynik;");
-        };
-        if (!(Main.policzSamochodyV2(lista) === wynik)) {
-            throw new Error("Assertion error line 42: assert policzSamochodyV2(lista) == wynik;");
-        };
+        var lista = ['A', 'B', 'A', 'B', 'B']
+        var oczekiwane = 5;
+        var wynik = Main.policzSamochodyV1(lista);
+        if (!(wynik == oczekiwane)) {
+            throw new Error(`Assertion error line 59: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
-        var lista = (['A', 'A', 'A', 'B', 'B', 'A', 'B', 'A', 'B', 'A', 'A', 'A'].slice(0));
-        var wynik = 15;
-        if (!(Main.policzSamochodyV1(lista) === wynik)) {
-            throw new Error("Assertion error line 48: assert policzSamochodyV1(lista) == wynik;");
-        };
-        if (!(Main.policzSamochodyV2(lista) === wynik)) {
-            throw new Error("Assertion error line 49: assert policzSamochodyV2(lista) == wynik;");
-        };
+        var lista = ['A', 'A', 'A', 'B', 'B', 'A', 'B', 'A', 'B', 'A', 'A', 'A']
+        var oczekiwane = 15;
+        var wynik = Main.policzSamochodyV1(lista);
+        if (!(wynik == oczekiwane)) {
+            throw new Error(`Assertion error line 67: ${wynik} != ${oczekiwane}`);
+        }
+    };
+    Main.test3 = function() {
+        var lista = ['A', 'B', 'A', 'B', 'B']
+        var oczekiwane = 5;
+        var wynik = Main.policzSamochodyV2(lista);
+        if (!(wynik == oczekiwane)) {
+            throw new Error(`Assertion error line 75: ${wynik} != ${oczekiwane}`);
+        }
+    };
+    Main.test4 = function() {
+        var lista = ['A', 'A', 'A', 'B', 'B', 'A', 'B', 'A', 'B', 'A', 'A', 'A']
+        var oczekiwane = 15;
+        var wynik = Main.policzSamochodyV2(lista);
+        if (!(wynik == oczekiwane)) {
+            throw new Error(`Assertion error line 83: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();
         Main.test2();
+        Main.test3();
+        Main.test4();
     };
     return Main;
 }());

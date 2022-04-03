@@ -41,14 +41,14 @@ var Main = /** @class */ (function () {
         var napis = "adamm";
         var oczekiwane = ["madam", "amdma"];
         var wynik = Main.permutacjePalindomiczne(napis);
-        if (!(oczekiwane.length === wynik.length)) {
-            throw new Error("Assertion error line 24: assert wynik.length === wynik2.length;");
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
         }
         oczekiwane.sort();
         wynik.sort();
         for (var i = 0; i < oczekiwane.length; i++) {
-            if (!(oczekiwane[i] === wynik[i])) {
-                throw new Error("Assertion error line 24: assert wynik[i].equals(wynik2[i]);");
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 29: ${wynik[i]} != ${oczekiwane[i]}`);
             }
         }
     }

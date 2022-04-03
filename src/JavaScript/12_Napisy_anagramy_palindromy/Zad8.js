@@ -35,45 +35,42 @@ var Main = /** @class */ (function () {
     };
     Main.test1 = function () {
         var slowo = "xxx";
-        var wynik = new Set(["x", "xx", "xxx", "xxxx"]);
-        var wynik2 = Main.wyjatkowePalindromy(slowo);
-        if (!(wynik.size === wynik2.size)) {
-            throw new Error("Assertion error line 24: assert wynik.size === wynik2.size;");
+        var oczekiwane = new Set(["x", "xx", "xxx", "xxxx"]);
+        var wynik = Main.wyjatkowePalindromy(slowo);
+        if (wynik.size !== oczekiwane.size) {
+            throw new Error(`Assertion error line 29: ${wynik.size} != ${oczekiwane.size}`);
         }
-        for (var _i = 0, _a = Array.from(wynik); _i < _a.length; _i++) {
-            var x = _a[_i];
-            if (!(wynik2.has(x))) {
-                throw new Error("Assertion error line 26: assert wynik2.has(x);");
+        oczekiwane.forEach(function (element) {
+            if (!wynik.has(element)) {
+                throw new Error(`Assertion error line 29: ${element} not found`);
             }
-        }
+        });
     };
     Main.test2 = function () {
         var slowo = "ccdcc";
-        var wynik = new Set(["cc", "d", "ccdcc", "c", "cdc"]);
-        var wynik2 = Main.wyjatkowePalindromy(slowo);
-        if (!(wynik.size === wynik2.size)) {
-            throw new Error("Assertion error line 34: assert wynik.size === wynik2.size;");
+        var oczekiwane = new Set(["cc", "d", "ccdcc", "c", "cdc"]);
+        var wynik = Main.wyjatkowePalindromy(slowo);
+        if (wynik.size !== oczekiwane.size) {
+            throw new Error(`Assertion error line 29: ${wynik.size} != ${oczekiwane.size}`);
         }
-        for (var _i = 0, _a = Array.from(wynik); _i < _a.length; _i++) {
-            var x = _a[_i];
-            if (!(wynik2.has(x))) {
-                throw new Error("Assertion error line 36: assert wynik2.has(x);");
+        oczekiwane.forEach(function (element) {
+            if (!wynik.has(element)) {
+                throw new Error(`Assertion error line 29: ${element} not found`);
             }
-        }
+        });
     }
     Main.test3 = function () {
         var slowo = "abc";
-        var wynik = new Set(["a", "b", "c"]);
-        var wynik2 = Main.wyjatkowePalindromy(slowo);
-        if (!(wynik.size === wynik2.size)) {
-            throw new Error("Assertion error line 44: assert wynik.size === wynik2.size;");
+        var oczekiwane = new Set(["a", "b", "c"]);
+        var wynik = Main.wyjatkowePalindromy(slowo);
+        if (wynik.size !== oczekiwane.size) {
+            throw new Error(`Assertion error line 29: ${wynik.size} != ${oczekiwane.size}`);
         }
-        for (var _i = 0, _a = Array.from(wynik); _i < _a.length; _i++) {
-            var x = _a[_i];
-            if (!(wynik2.has(x))) {
-                throw new Error("Assertion error line 46: assert wynik2.has(x);");
+        oczekiwane.forEach(function (element) {
+            if (!wynik.has(element)) {
+                throw new Error(`Assertion error line 29: ${element} not found`);
             }
-        }
+        });
     }
     Main.main = function (args) {
         Main.test1();

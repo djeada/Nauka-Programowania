@@ -30,16 +30,20 @@ var Main = /** @class */ (function () {
     Main.test1 = function () {
         var napis1 = "adam";
         var napis2 = "mada";
-        if (!(Main.anagramy(napis1, napis2))) {
-            throw new Error("Assertion error line 24: assert anagramy(napis1, napis2);");
-        };
+        var oczekiwane = true;
+        var wynik = Main.anagramy(napis1, napis2);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.test2 = function () {
         var napis1 = "adam";
         var napis2 = "ada";
-        if (Main.anagramy(napis1, napis2)) {
-            throw new Error("Assertion error line 30: assert !anagramy(napis1, napis2);");
-        };
+        var oczekiwane = false;
+        var wynik = Main.anagramy(napis1, napis2);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.main = function (args) {
         Main.test1();

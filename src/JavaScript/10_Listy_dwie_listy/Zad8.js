@@ -31,29 +31,23 @@ var Main = /** @class */ (function() {
                 (wynik.push(listaB[k]) > 0);
             };
         }
-        return (wynik.slice(0));
-    };
-    Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i])
-                return false;
-        }
-        return true;
+        return wynik;
     };
     Main.test1 = function() {
-        var listaA = ([5, 7, 11].slice(0));
-        var listaB = ([1, 3, 8, 14].slice(0));
-        var wynik = ([1, 3, 5, 7, 8, 11, 14].slice(0));
+        var listaA = [5, 7, 11]
+        var listaB = [1, 3, 8, 14]
+        var oczekiwane = [1, 3, 5, 7, 8, 11, 14]
+        var wynik = Main.polaczV1(listaA, listaB);
 
-        if (!Main.listyRowne(wynik, Main.polaczV1(listaA, listaB))) {
-            throw new Error("Assertion error;");
-        };
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 29: ${wynik[i]} != ${oczekiwane[i]}`);
+            }
+        }
+        
     };
     Main.main = function(args) {
         Main.test1();

@@ -17,11 +17,11 @@ var Main = (function() {
     };
     Main.test1 = function() {
         var napis = "Ile to   ma :  slow w swoim zdaniu na   koniec?";
-        var wynik = 9;
-
-        if (!(Main.policzSlowaV1(napis) === wynik)) {
-            throw new Error("Assertion error line 25: assert policzSlowaV1(napis) == wynik;");
-        };
+        var oczekiwane = 9;
+        var wynik = Main.policzSlowaV1(napis);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

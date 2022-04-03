@@ -23,18 +23,20 @@ var Main = /** @class */ (function() {
     Main.test1 = function() {
         var a = 14;
         var b = 21;
-        var wynik = 7;
-        if (!(Main.nwdV1(a, b) === wynik)) {
-            throw new Error("Assertion error line 26: assert nwdV1(a, b) == wynik;");
-        };
+        var oczekiwane = 7;
+        var wynik = Main.nwdV1(a, b);
+        if (!(oczekiwane === wynik)) {
+            throw new Error(`Assertion error line 29: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.test2 = function() {
         var a = 14;
         var b = 21;
-        var wynik = 7;
-        if (!(Main.nwdV2(a, b) === wynik)) {
-            throw new Error("Assertion error line 33: assert nwdV2(a, b) == wynik;");
-        };
+        var oczekiwane = 7;
+        var wynik = Main.nwdV2(a, b);
+        if (!(oczekiwane === wynik)) {
+            throw new Error(`Assertion error line 38: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

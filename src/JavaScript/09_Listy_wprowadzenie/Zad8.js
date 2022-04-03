@@ -26,36 +26,34 @@ var Main = /** @class */ (function() {
         })(lista, [klucz]);
         return lista;
     };
-    Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i])
-                return false;
-        }
-        return true;
-    };
 
     Main.test1 = function() {
-        var lista = ([6, 7, 2, 1, 8].slice(0));
-        var wynik = ([6, 7, 1, 8].slice(0));
+        var lista = [6, 7, 2, 1, 8]
         var klucz = 2;
-        if (!Main.listyRowne(wynik, Main.usunWszystkieWystapieniaV1(lista, klucz))) {
-            throw new Error("Assertion error;");
-        };
-
+        var oczekiwane = [6, 7, 1, 8]
+        var wynik = Main.usunWszystkieWystapieniaV1(lista, klucz);
+        if (oczekiwane.length !== wynik.length) {
+            throw new Error(`Assertion error line 37: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
+        }
+        for (var i = 0; i < oczekiwane.length; i++) {
+            if (oczekiwane[i] !== wynik[i]) {
+                throw new Error(`Assertion error line 40: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
+            }
+        }
     };
     Main.test2 = function() {
-        var lista = ([6, 7, 2, 1, 8].slice(0));
-        var wynik = ([6, 7, 1, 8].slice(0));
+        var lista = [6, 7, 2, 1, 8]
         var klucz = 2;
-        if (!Main.listyRowne(wynik, Main.usunWszystkieWystapieniaV2(lista, klucz))) {
-            throw new Error("Assertion error;");
-        };
+        var oczekiwane = [6, 7, 1, 8]
+        var wynik = Main.usunWszystkieWystapieniaV2(lista, klucz);
+        if (oczekiwane.length !== wynik.length) {
+            throw new Error(`Assertion error line 50: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
+        }
+        for (var i = 0; i < oczekiwane.length; i++) {
+            if (oczekiwane[i] !== wynik[i]) {
+                throw new Error(`Assertion error line 54: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
+            }
+        }
     };
     Main.main = function(args) {
         Main.test1();

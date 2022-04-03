@@ -72,14 +72,18 @@ var Main = /** @class */ (function () {
     };
     Main.test1 = function () {
         var a = [[2, 7, 6], [9, 5, 1], [4, 3, 8]];
-        if (!Main.czyKwadratMagiczny(a)) {
-            throw new Error("Assertion error linde 24: assert czyKwadratMagiczny(a);");
+        var oczekiwane = true;
+        var wynik = Main.czyKwadratMagiczny(a);
+        if (wynik !== oczekiwane) {
+            raiseError("Assertion error line 24: assert wynik.equals(oczekiwane);");
         }
     }
     Main.test2 = function () {
         var a = [[1, 2], [-2, 0]];
-        if (Main.czyKwadratMagiczny(a)) {
-            throw new Error("Assertion error line 30: assert !czyKwadratMagiczny(a);");
+        var oczekiwane = false;
+        var wynik = Main.czyKwadratMagiczny(a);
+        if (wynik !== oczekiwane) {
+            raiseError("Assertion error line 24: assert wynik.equals(oczekiwane);");
         }
     }
     Main.main = function (args) {

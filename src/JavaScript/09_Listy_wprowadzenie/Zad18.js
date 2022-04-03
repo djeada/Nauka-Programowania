@@ -12,25 +12,28 @@ var Main = /** @class */ (function() {
         return 0;
     };
     Main.test1 = function() {
-        var lista = ([7, 8, -1, 4, 5].slice(0));
-        var wynik = 2;
-        if (!(Main.indeksMin(lista) === wynik)) {
-            throw new Error("Assertion error line 15: assert indeksMin(lista) == wynik;");
-        };
+        var lista = [7, 8, -1, 4, 5]
+        var oczekiwane = 2;
+        var wynik = Main.indeksMin(lista);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 19: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
-        var lista = ([2, 3, 4, 5, 6].slice(0));
-        var wynik = 0;
-        if (!(Main.indeksMin(lista) === wynik)) {
-            throw new Error("Assertion error line 21: assert indeksMin(lista) == wynik;");
-        };
+        var lista = [2, 3, 4, 5, 6]
+        var oczekiwane = 0;
+        var wynik = Main.indeksMin(lista);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 27: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.test3 = function() {
-        var lista = ([8, 9, 10, 11, 1].slice(0));
-        var wynik = 4;
-        if (!(Main.indeksMin(lista) === wynik)) {
-            throw new Error("Assertion error line 27: assert indeksMin(lista) == wynik;");
-        };
+        var lista = [8, 9, 10, 11, 1]
+        var oczekiwane = 4;
+        var wynik = Main.indeksMin(lista);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 35: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

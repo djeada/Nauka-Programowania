@@ -18,21 +18,27 @@ var Main = /** @class */ (function() {
     };
     Main.test1 = function() {
         var a = 15;
-        if (!(!Main.czyPierwsza(a))) {
-            throw new Error("Assertion error line 19: assert !czyPierwsza(a);");
-        };
+        var oczekiwane = false;
+        var wynik = Main.czyPierwsza(a);
+        if (wynik) {
+            throw new Error(`Assertion error line 24: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.test2 = function() {
         var a = 7;
-        if (!(Main.czyPierwsza(a))) {
-            throw new Error("Assertion error line 24: assert czyPierwsza(a);");
-        };
+        var oczekiwane = true;
+        var wynik = Main.czyPierwsza(a);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 32: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.test3 = function() {
         var a = -15;
-        if (!(!Main.czyPierwsza(a))) {
-            throw new Error("Assertion error line 29: assert !czyPierwsza(a);");
-        };
+        var oczekiwane = false; 
+        var wynik = Main.czyPierwsza(a);
+        if (wynik) {
+            throw new Error(`Assertion error line 24: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

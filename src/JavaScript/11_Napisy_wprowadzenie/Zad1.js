@@ -14,17 +14,19 @@ var Main = /** @class */ (function() {
     };
     Main.test1 = function() {
         var napis = "adam";
-        var wynik = "mada";
-        if (!(Main.odwrocNapisV1(napis) === wynik)) {
-            throw new Error("Assertion error line 24: assert odwrocNapisV1(napis).equals(wynik);");
-        };
+        var oczekiwane = "mada";
+        var wynik = Main.odwrocNapisV1(napis);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
         var napis = "adam";
-        var wynik = "mada";
-        if (!(Main.odwrocNapisV2(napis) === wynik)) {
-            throw new Error("Assertion error line 30: assert odwrocNapisV2(napis).equals(wynik);");
-        };
+        var oczekiwane = "mada";
+        var wynik = Main.odwrocNapisV2(napis);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 30: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

@@ -20,36 +20,23 @@ var Main = /** @class */ (function() {
         }
         return (wynik.slice(0));
     };
-    Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i])
-                return false;
-        }
-        return true;
-    };
     Main.test1 = function() {
-        var listaA = ([-2, 8, 3, 6].slice(0));
-        var listaB = ([7, 5, 0].slice(0));
-        var wynik = ([-2, 8, 3, 6, 7, 5, 0].slice(0));
-
-        if (!Main.listyRowne(wynik, Main.dostaw(listaA, listaB))) {
-            throw new Error("Assertion error;");
-        };
+        var listaA = [-2, 8, 3, 6]
+        var listaB = [7, 5, 0]
+        var oczekiwane = [-2, 8, 3, 6, 7, 5, 0]
+        var wynik = Main.dostaw(listaA, listaB);
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
+        }
     };
     Main.test2 = function() {
-        var listaA = ([-2, 8, 3, 6].slice(0));
-        var listaB = ([7, 5, 0].slice(0));
-        var wynik = ([7, 8, 0, 6].slice(0));
-
-        if (!Main.listyRowne(wynik, Main.podmien(listaA, listaB))) {
-            throw new Error("Assertion error;");
-        };
+        var listaA = [-2, 8, 3, 6]
+        var listaB = [7, 5, 0]
+        var oczekiwane = [7, 8, 0, 6]
+        var wynik = Main.podmien(listaA, listaB);
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 38: ${wynik.length} != ${oczekiwane.length}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

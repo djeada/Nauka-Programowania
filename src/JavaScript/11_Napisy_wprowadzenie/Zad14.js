@@ -11,17 +11,19 @@ var Main = (function() {
     };
     Main.test1 = function() {
         var n = 5;
-        var wynik = "12345";
-        if (!(wynik === Main.liczby(n))) {
-            throw new Error("Assertion error line 13: assert wynik.equals(liczby(n));");
-        };
+        var oczekiwane = "12345";
+        var wynik = Main.liczby(n);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 24: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
         var n = -1;
-        var wynik = "";
-        if (!(wynik === Main.liczby(n))) {
-            throw new Error("Assertion error line 19: assert wynik.equals(liczby(n));");
-        };
+        var oczekiwane = "";
+        var wynik = Main.liczby(n);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 24: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

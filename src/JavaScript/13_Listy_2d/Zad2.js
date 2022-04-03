@@ -21,12 +21,15 @@ var Main = /** @class */ (function () {
         var oczekiwane = [[0, 0, 0], [0, 1, 2], [0, 2, 4]];
         var wynik = Main.stworzMacierz(a);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert stworzMacierz(a).length.equals(wynik.length);");
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i].length !== oczekiwane[i].length) {
+                throw new Error(`Assertion error line 29: ${wynik[i].length} != ${oczekiwane[i].length}`);
+            }
             for (var j = 0; j < wynik[i].length; j++) {
                 if (wynik[i][j] !== oczekiwane[i][j]) {
-                    throw new Error("Assertion error line 30: assert stworzMacierz(a)[i][j].equals(wynik[i][j]);");
+                    throw new Error(`Assertion error line 29: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
                 }
             }
         }

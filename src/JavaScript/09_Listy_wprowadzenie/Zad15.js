@@ -20,101 +20,73 @@ var Main = /** @class */ (function() {
         return -1;
     };
     Main.elementDominujacyV2 = function(lista) {
-        var histo = ({});
-        for (var i = 0; i < lista.length; i++) {
-            var liczba = lista[i]; {
-                if ((function(m, k) {
-                        if (m.entries == null)
-                            m.entries = [];
-                        for (var i = 0; i < m.entries.length; i++)
-                            if (m.entries[i].key == null && k == null || m.entries[i].key.equals != null && m.entries[i].key.equals(k) || m.entries[i].key === k) {
-                                return true;
-                            } return false;
-                    })(histo, liczba))
-                    (function(m, k, v) {
-                        if (m.entries == null)
-                            m.entries = [];
-                        for (var i = 0; i < m.entries.length; i++)
-                            if (m.entries[i].key == null && k == null || m.entries[i].key.equals != null && m.entries[i].key.equals(k) || m.entries[i].key === k) {
-                                m.entries[i].value = v;
-                                return;
-                            } m.entries.push({
-                            key: k,
-                            value: v,
-                            getKey: function() {
-                                return this.key;
-                            },
-                            getValue: function() {
-                                return this.value;
-                            }
-                        });
-                    })(histo, liczba, (function(m, k) {
-                        if (m.entries == null)
-                            m.entries = [];
-                        for (var i = 0; i < m.entries.length; i++)
-                            if (m.entries[i].key == null && k == null || m.entries[i].key.equals != null && m.entries[i].key.equals(k) || m.entries[i].key === k) {
-                                return m.entries[i].value;
-                            } return null;
-                    })(histo, liczba) + 1);
-                else
-                    (function(m, k, v) {
-                        if (m.entries == null)
-                            m.entries = [];
-                        for (var i = 0; i < m.entries.length; i++)
-                            if (m.entries[i].key == null && k == null || m.entries[i].key.equals != null && m.entries[i].key.equals(k) || m.entries[i].key === k) {
-                                m.entries[i].value = v;
-                                return;
-                            } m.entries.push({
-                            key: k,
-                            value: v,
-                            getKey: function() {
-                                return this.key;
-                            },
-                            getValue: function() {
-                                return this.value;
-                            }
-                        });
-                    })(histo, liczba, 1);
-            }
-        } {
-            var tablica = (function(m) {
-                if (m.entries == null)
-                    m.entries = [];
-                return m.entries;
-            })(histo);
-            for (var i = 0; i < tablica.length; i++) {
-                var para = tablica[i]; {
-                    if (para.getValue() > (lista.length / 2)) {
-                        return para.getKey();
-                    }
+        // uzyj mapy do zliczania elementow
+        var n = lista.length;
+        var histogram = {};
+        for (var i = 0; i < n; i++) {
+            {
+                if (histogram[lista[i]] == null) {
+                    histogram[lista[i]] = 1;
+                } else {
+                    histogram[lista[i]]++;
                 }
-            }
+            };
         }
+        // znajdz najczesciej wystepujacy element
+        var maks = 0;
+        var element = -1;
+        for (var klucz in histogram) {
+            {
+                if (histogram[klucz] > maks) {
+                    maks = histogram[klucz];
+                    element = klucz;
+                }
+            };
+        }
+        // sprawdz czy element wystpuje co najmniej n/2 razy
+        if (maks > (n / 2)) {
+            return parseInt(element);
+        }
+
         return -1;
     };
     Main.test1 = function() {
-        var lista = ([4, 7, 4, 4, 2].slice(0));
-        var wynik = 4;
-        if (!(Main.elementDominujacyV1(lista) === wynik)) {
-            throw new Error("Assertion error line 43: assert elementDominujacyV1(lista) == wynik;");
-        };
-        if (!(Main.elementDominujacyV2(lista) === wynik)) {
-            throw new Error("Assertion error line 44: assert elementDominujacyV2(lista) == wynik;");
-        };
+        var lista = [4, 7, 4, 4, 2]
+        var oczekiwane = 4;
+        var wynik = Main.elementDominujacyV1(lista);
+        if (oczekiwane !== wynik) {
+            throw new Error(`Assertion error line 58: ${oczekiwane} !== ${wynik}`);
+        }
     };
     Main.test2 = function() {
-        var lista = ([1, 2, 4, 5, 6].slice(0));
-        var wynik = -1;
-        if (!(Main.elementDominujacyV1(lista) === wynik)) {
-            throw new Error("Assertion error line 50: assert elementDominujacyV1(lista) == wynik;");
-        };
-        if (!(Main.elementDominujacyV2(lista) === wynik)) {
-            throw new Error("Assertion error line 51: assert elementDominujacyV2(lista) == wynik;");
-        };
+        var lista = [1, 2, 4, 5, 6]
+        var oczekiwane = -1;
+        var wynik = Main.elementDominujacyV1(lista);
+        if (oczekiwane !== wynik) {
+            throw new Error(`Assertion error line 66: ${oczekiwane} !== ${wynik}`);
+        }
+    };
+    Main.test3 = function() {
+        var lista = [4, 7, 4, 4, 2]
+        var oczekiwane = 4;
+        var wynik = Main.elementDominujacyV2(lista);
+        if (oczekiwane !== wynik) {
+            throw new Error(`Assertion error line 74: ${oczekiwane} !== ${wynik}`);
+        }
+    };
+    Main.test4 = function() {
+        var lista = [1, 2, 4, 5, 6]
+        var oczekiwane = -1;
+        var wynik = Main.elementDominujacyV2(lista);
+        if (oczekiwane !== wynik) {
+            throw new Error(`Assertion error line 82: ${oczekiwane} !== ${wynik}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();
         Main.test2();
+        Main.test3();
+        Main.test4();
     };
     return Main;
 }());

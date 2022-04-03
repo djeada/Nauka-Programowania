@@ -77,47 +77,57 @@ var Main = /** @class */ (function() {
         }
         return iloczyny;
     };
-    Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i])
-                return false;
-        }
-        return true;
-    };
-
     Main.test1 = function() {
-        var lista = ([3, 5, -7, 4, 9, -11, 2].slice(0));
-        var wynik = ([4, 5, -6, 4, 10, -11, 3].slice(0));
-        if (!Main.listyRowne(wynik, Main.zwieksz(lista))) {
-            throw new Error("Assertion error: assert wynik.equals(zwieksz(lista));");
-        };
+        var lista = [3, 5, -7, 4, 9, -11, 2]
+        var oczekiwane = [4, 5, -6, 4, 10, -11, 3]
+        var wynik = Main.zwieksz(lista)
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 85: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 89: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
+            }
+        }
     };
     Main.test2 = function() {
-        var lista = ([3, 5, -7, 4, 9, -11, 2].slice(0));
-        var wynik = ([0, 5, -7, 4, 0, -11, 2].slice(0));
-        if (!Main.listyRowne(wynik, Main.wyzeruj(lista))) {
-            throw new Error("Assertion error: assert wynik.equals(wyzeruj(lista));");
-        };
+        var lista = [3, 5, -7, 4, 9, -11, 2]
+        var oczekiwane = [0, 5, -7, 4, 0, -11, 2]
+        var wynik = Main.wyzeruj(lista)
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 98: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 102: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
+            }
+        }
     };
     Main.test3 = function() {
-        var lista = ([3, 5, -7, 4, 9, -11, 2].slice(0));
-        var wynik = ([3, 5, 5, 5, 9, 5, 2].slice(0));
-        if (!Main.listyRowne(wynik, Main.suma(lista))) {
-            throw new Error("Assertion error: assert wynik.equals(suma(lista));");
-        };
+        var lista = [3, 5, -7, 4, 9, -11, 2]
+        var oczekiwane = [3, 5, 5, 5, 9, 5, 2]
+        var wynik = Main.suma(lista)
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 111: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 115: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
+            }
+        }
     };
     Main.test4 = function() {
-        var lista = ([3, 5, -7, 4, 9, -11, 2].slice(0));
-        var wynik = ([27720, 16632, -11880, 20790, 9240, -7560, 41580].slice(0));
-        if (!Main.listyRowne(wynik, Main.zamien(lista))) {
-            throw new Error("Assertion error: assert wynik.equals(zamien(lista));");
-        };
+        var lista = [3, 5, -7, 4, 9, -11, 2]
+        var oczekiwane = [27720, 16632, -11880, 20790, 9240, -7560, 41580]
+        var wynik = Main.zamien(lista)
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 124: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 128: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
+            }
+        }
     };
     Main.main = function(args) {
         Main.test1();

@@ -20,10 +20,11 @@ var Main = /** @class */ (function() {
     Main.test1 = function() {
         var a = 14;
         var b = 21;
-        var wynik = 42;
-        if (!(Main.nww(a, b) === wynik)) {
-            throw new Error("Assertion error line 23: assert nww(a, b) == wynik;");
-        };
+        var oczekiwane = 42;
+        var wynik = Main.nww(a, b);
+        if (!(oczekiwane === wynik)) {
+            throw new Error(`Assertion error line 29: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

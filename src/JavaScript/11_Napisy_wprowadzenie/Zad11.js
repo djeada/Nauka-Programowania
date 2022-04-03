@@ -34,17 +34,19 @@ var Main = (function() {
     };
     Main.test1 = function() {
         var napis = "Kaczka lubi wiosne.";
-        var wynik = 5;
-        if (!(Main.srednia(napis) === wynik)) {
-            throw new Error("Assertion error line 37: assert srednia(napis) == wynik;");
-        };
+        var oczekiwane = 5;
+        var wynik = Main.srednia(napis);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
         var napis = "Kaczka lubi wiosne.";
-        var wynik = 5;
-        if (!(Main.srednia(napis) === wynik)) {
-            throw new Error("Assertion error line 43: assert srednia(napis) == wynik;");
-        };
+        var oczekiwane = 5;
+        var wynik = Main.srednia(napis);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

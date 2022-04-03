@@ -31,41 +31,29 @@ var Main = (function() {
     };
     Main.test1 = function() {
         var napis = "We think in generalities, but we live in details";
-        var wynik = (["We", "think", "in", "generalities", "but", "we", "live", "in", "details"].slice(0));
-        if (!((function(a1, a2) {
-                if (a1 == null && a2 == null)
-                    return true;
-                if (a1 == null || a2 == null)
-                    return false;
-                if (a1.length != a2.length)
-                    return false;
-                for (var i = 0; i < a1.length; i++) {
-                    if (a1[i] != a2[i])
-                        return false;
-                }
-                return true;
-            })(wynik, Main.slowaV1(napis)))) {
-            throw new Error("Assertion error line 34: assert wynik.equals(slowaV1(napis));");
-        };
+        var oczekiwane = (["We", "think", "in", "generalities", "but", "we", "live", "in", "details"].slice(0));
+        var wynik = Main.slowaV1(napis);
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 31: ${wynik[i]} != ${oczekiwane[i]}`);
+            }
+        }
     };
     Main.test2 = function() {
         var napis = "";
-        var wynik = ([]);
-        if (!((function(a1, a2) {
-                if (a1 == null && a2 == null)
-                    return true;
-                if (a1 == null || a2 == null)
-                    return false;
-                if (a1.length != a2.length)
-                    return false;
-                for (var i = 0; i < a1.length; i++) {
-                    if (a1[i] != a2[i])
-                        return false;
-                }
-                return true;
-            })(wynik, Main.slowaV1(napis)))) {
-            throw new Error("Assertion error line 40: assert wynik.equals(slowaV1(napis));");
-        };
+        var oczekiwane = ([]);
+        var wynik = Main.slowaV1(napis);
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 39: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 41: ${wynik[i]} != ${oczekiwane[i]}`);
+            }
+        }
     };
     Main.main = function(args) {
         Main.test1();

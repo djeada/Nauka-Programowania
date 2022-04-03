@@ -24,9 +24,10 @@ var Main = /** @class */ (function () {
     }
     Main.test1 = function () {
         var macierz = [[10, 99, 28, 21, 78], [35, 78, 31, 56, 24], [7, 18, 2, 50, 87], [59, 67, 9, 82, 53], [23, 26, 76, 62, 36]];
-        var wynik = 395;
-        if (Main.klepsydraNajwiekszaSuma(macierz) !== wynik) {
-            throw new Error("Assertion error line 24: assert klepsydraNajwiekszaSuma(macierz) == wynik;");
+        var oczekiwane = 395;
+        var wynik = Main.klepsydraNajwiekszaSuma(macierz);
+        if (wynik != oczekiwane) {
+            throw new Error(`Assertion error line 24: ${wynik} != ${oczekiwane}`);
         }
     }
     Main.main = function (args) {

@@ -23,43 +23,36 @@ var Main = /** @class */ (function() {
         (wynik.push(listaA[2] * listaB[0] - listaA[0] * listaB[2]) > 0);
 
         (wynik.push(listaA[0] * listaB[1] - listaA[1] * listaB[0]) > 0);
-        return (wynik.slice(0));
-    };
-    Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i])
-                return false;
-        }
-        return true;
+        return wynik;
     };
     Main.test1 = function() {
-        var listaA = ([3, -5, 4].slice(0));
-        var listaB = ([2, 6, 5].slice(0));
-        var iloczynSkalar = -4;
-        if (!(Main.mnozenieSkalarne(listaA, listaB) === iloczynSkalar)) {
-            throw new Error("Assertion error line 24: assert mnozenieSkalarne(listaA, listaB) == iloczynSkalar;");
-        };
+        var listaA = [3, -5, 4]
+        var listaB = [2, 6, 5]
+        var oczekiwane = -4;
+        var wynik = Main.mnozenieSkalarne(listaA, listaB);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 34: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
-        var listaA = ([3, -5, 4].slice(0));
-        var listaB = ([2, 6, 5].slice(0));
-        var iloczynWekt = ([-49, -7, 28].slice(0));
-
-        if (!Main.listyRowne(iloczynWekt, Main.mnozenieWektorowe(listaA, listaB))) {
-        throw new Error("Assertion error;");
+        var listaA = [3, -5, 4]
+        var listaB = [2, 6, 5]
+        var oczekiwane = [-49, -7, 28]
+        var wynik = Main.mnozenieWektorowe(listaA, listaB);
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 43: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 46: ${wynik[i]} != ${oczekiwane[i]}`);
+            }
+        }
     };
-
-}; Main.main = function(args) {
-    Main.test1();
-    Main.test2();
-};
-return Main;
+    Main.main = function(args) {
+        Main.test1();
+        Main.test2();
+    };
+    return Main;
 }());
 Main["__class"] = "Main";
 Main.main(null);

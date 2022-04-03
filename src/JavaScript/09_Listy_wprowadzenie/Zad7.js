@@ -7,8 +7,8 @@ var Main = /** @class */ (function() {
         if (lista.length === 1) {
             return lista[0] - 1;
         }
-        var maks = -2147483648;
-        var maks2 = -2147483648;
+        var maks = Number.MIN_VALUE;
+        var maks2 = Number.MIN_VALUE;
         for (var i = 0; i < lista.length; i++) {
             var liczba = lista[i]; {
                 if (liczba > maks) {

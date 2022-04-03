@@ -47,15 +47,15 @@ var Main = /** @class */ (function () {
         var zdanie = "Za jego nikczemne uczynki, spotakla go wysoce sroga kara."
         var slowo = "arak";
         var oczekiwane = ["kara"];
-        var anagramy = Main.anagramy(zdanie, slowo);
-        if (oczekiwane.length !== anagramy.length) {
-            throw new Error("Assertion error line 24: assert anagramy(napis1, napis2);");
+        var wynik = Main.anagramy(zdanie, slowo);
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
         }
         oczekiwane.sort();
-        anagramy.sort();
+        wynik.sort();
         for (var i = 0; i < oczekiwane.length; i++) {
-            if (oczekiwane[i] !== anagramy[i]) {
-                throw new Error("Assertion error line 24: assert anagramy(napis1, napis2);");
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 29: ${wynik[i]} != ${oczekiwane[i]}`);
             }
         }
     };

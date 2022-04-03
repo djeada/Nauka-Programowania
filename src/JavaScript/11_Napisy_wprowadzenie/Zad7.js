@@ -16,18 +16,19 @@ var Main = (function() {
     };
     Main.test1 = function() {
         var napis = "pacZka!";
-        var wynik = "112, 97, 99, 90, 107, 97, 33";
-
-        if (!(Main.zamienV1(napis) === wynik)) {
-            throw new Error("Assertion error;");
-        };
+        var oczekiwane = "112, 97, 99, 90, 107, 97, 33";
+        var wynik = Main.zamienV1(napis);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
         var napis = "";
-        var wynik = "";
-        if (!(Main.zamienV1(napis) === wynik)) {
-            throw new Error("Assertion error;");
-        };
+        var oczekiwane = "";
+        var wynik = Main.zamienV1(napis);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

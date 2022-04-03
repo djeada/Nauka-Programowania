@@ -27,30 +27,34 @@ var Main = /** @class */ (function () {
     Main.test1 = function () {
         var slowoA = "adam";
         var slowoB = "mada";
+        var oczekiwane = 0;
         var wynik = Main.liczbaZnakow(slowoA, slowoB);
-        if (wynik !== 0) {
-            throw new Error("Assertion error line 24: assert wynik === 0;");
-        };
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 29: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.test2 = function () {
         var slowoA = "adam";
         var slowoB = "ada";
+        var oczekiwane = -1;
         var wynik = Main.liczbaZnakow(slowoA, slowoB);
-        if (wynik !== -1) {
-            throw new Error("Assertion error line 30: assert wynik === -1;");
-        };
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 29: ${wynik} === ${oczekiwane}`);
+        }
     };
       Main.test3 = function () {
         var slowoA = "20ejdy0978oa";
         var slowoB = "akv81w39j1ob";
+        var oczekiwane = 14;
         var wynik = Main.liczbaZnakow(slowoA, slowoB);
-        if (wynik !== 14) {
-            throw new Error("Assertion error line 67: assert wynik === 14;");
-        };
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 29: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.main = function (args) {
         Main.test1();
         Main.test2();
+        Main.test3();
     };
     return Main;
 }());

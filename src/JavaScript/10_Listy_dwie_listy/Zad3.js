@@ -15,27 +15,19 @@ var Main = /** @class */ (function() {
         }
         return (wynik.slice(0));
     };
-    Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i])
-                return false;
-        }
-        return true;
-    };
     Main.test1 = function() {
-        var listaA = ([3, 1, 2, 5].slice(0));
-        var listaB = ([2, 8, 6, 5].slice(0));
-        var wynik = ([5, 9, 8, 10].slice(0));
-
-        if (!Main.listyRowne(wynik, Main.suma(listaA, listaB))) {
-            throw new Error("Assertion error;");
-        };
+        var listaA = [3, 1, 2, 5]
+        var listaB = [2, 8, 6, 5]
+        var oczekiwane = [5, 9, 8, 10]
+        var wynik = Main.suma(listaA, listaB);
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 24: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i] !== oczekiwane[i]) {
+                throw new Error(`Assertion error line 28: ${wynik[i]} != ${oczekiwane[i]}`);
+            }
+        }
     };
     Main.main = function(args) {
         Main.test1();

@@ -49,15 +49,18 @@ var Main = /** @class */ (function () {
         var lista = [new Pair(23, 67), new Pair(23, 53), new Pair(45, 88), new Pair(77, 88), new Pair(10, 22), new Pair(11, 12), new Pair(42, 45)];
         var oczekiwane = [new Pair(10, 22), new Pair(23, 88)];
         var wynik = Main.polaczPrzedzialy(lista);
-        if (oczekiwane.length != wynik.length)
-        throw new Error("Assertion error line 24: assert oczekiwane.length.equals(wynik.length);");
-        for (var i = 0; i < oczekiwane.length; i++) {
-            if (oczekiwane[i].first != wynik[i].first)
-            throw new Error("Assertion error line 30: assert oczekiwane[i].first.equals(wynik[i].first);");
-            if (oczekiwane[i].second != wynik[i].second)
-            throw new Error("Assertion error line 30: assert oczekiwane[i].second.equals(wynik[i].second);");
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
         }
-    }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i].first !== oczekiwane[i].first) {
+                throw new Error(`Assertion error line 29: ${wynik[i].first} != ${oczekiwane[i].first}`);
+            }
+            if (wynik[i].second !== oczekiwane[i].second) {
+                throw new Error(`Assertion error line 29: ${wynik[i].second} != ${oczekiwane[i].second}`);
+            }
+        }
+    };
     Main.main = function (args) {
         Main.test1();
     }

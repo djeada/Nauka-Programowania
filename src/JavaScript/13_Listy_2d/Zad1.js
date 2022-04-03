@@ -17,16 +17,18 @@ var Main = /** @class */ (function () {
     };
     Main.test1 = function () {
         var a = 2;
-        var b = 3;
         var oczekiwane = [[0, 1, 2, 3], [0, 1, 2, 3]];
         var wynik = Main.stworzMacierz(a);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert stworzMacierz(a, b).length.equals(wynik.length);");
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i].length !== oczekiwane[i].length) {
+                throw new Error(`Assertion error line 29: ${wynik[i].length} != ${oczekiwane[i].length}`);
+            }
             for (var j = 0; j < wynik[i].length; j++) {
                 if (wynik[i][j] !== oczekiwane[i][j]) {
-                    throw new Error("Assertion error line 30: assert stworzMacierz(a, b)[i][j].equals(wynik[i][j]);");
+                    throw new Error(`Assertion error line 29: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
                 }
             }
         }

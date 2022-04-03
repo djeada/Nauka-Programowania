@@ -1,49 +1,43 @@
+
+var Pair = /** @class */ (function () {
+    function Pair(a, b) {
+        this.first = a;
+        this.second = b;
+    }
+    return Pair;
+}());
+
 var Main = (function() {
     function Main() {}
     Main.znajdzParyV1 = function(lista, suma) {
-        var wynik = ([]);
+        var oczekiwane = ([]);
         for (var i = 0; i < lista.length; i++) {
             {
                 for (var j = i + 1; j < lista.length; j++) {
                     {
                         if (lista[i] + lista[j] === suma) {
-                            var para = (new Main.Pair(lista[i], lista[j]));
-                            (wynik.push(para) > 0);
+                            oczekiwane.push(new Pair(lista[i], lista[j]));
                         }
                     };
                 }
             };
         }
-        return (wynik.slice(0));
+        return oczekiwane;
     };
  
-    Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (!a1[i].equals(a2[i]))
-                return false;
-        }
-        return true;
-    };
     Main.test1 = function() {
-        var lista = ([0, 4, 5, 6, 2, 9, 2, 3].slice(0));
-        var wynik = ([]);
-
-        (wynik.push(new Main.Pair(0, 5)) > 0);
-
-        (wynik.push(new Main.Pair(2, 3)) > 0);
-
-        (wynik.push(new Main.Pair(2, 3)) > 0);
+        var lista = [0, 4, 5, 6, 2, 9, 2, 3]
         var suma = 5;
-
-        if (!Main.listyRowne(wynik, Main.znajdzParyV1(lista, suma))) {
-            throw new Error("Assertion error;");
-        };
+        var oczekiwane = [new Pair(0, 5), new Pair(2, 3), new Pair(2, 3)]
+        var wynik = Main.znajdzParyV1(lista, suma);
+        if (!(wynik.length == oczekiwane.length)) {
+            throw new Error(`Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (!(wynik[i].first == oczekiwane[i].first && wynik[i].second == oczekiwane[i].second)) {
+                throw new Error(`Assertion error line 38: ${wynik[i].first} != ${oczekiwane[i].first} || ${wynik[i].second} != ${oczekiwane[i].second}`);
+            }
+        }
     };
     Main.main = function(args) {
         Main.test1();
@@ -51,25 +45,4 @@ var Main = (function() {
     return Main;
 }());
 Main["__class"] = "Main";
-(function(Main) {
-    var Pair = (function() {
-        function Pair(firstValue, secondValue) {
-            if (this.first === undefined) {
-                this.first = null;
-            }
-            if (this.second === undefined) {
-                this.second = null;
-            }
-            this.first = firstValue;
-            this.second = secondValue;
-        }
-
-        Pair.prototype.equals = function(o) {
-            return (o != null && o instanceof Main.Pair) && (this.first === o.first) && (this.second === o.second);
-        };
-        return Pair;
-    }());
-    Main.Pair = Pair;
-    Pair["__class"] = "Main.Pair";
-})(Main || (Main = {}));
 Main.main(null);

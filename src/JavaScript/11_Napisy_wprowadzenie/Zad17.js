@@ -2,8 +2,8 @@ var Main = (function() {
     function Main() {}
     Main.liczby = function(lista) {
         var wynik = "";
-        for (var index8291 = 0; index8291 < lista.length; index8291++) {
-            var liczba = lista[index8291]; {
+        for (var i = 0; i < lista.length; i++) {
+            var liczba = lista[i]; {
                 wynik += String(liczba).toString();
             }
         }
@@ -11,17 +11,19 @@ var Main = (function() {
     };
     Main.test1 = function() {
         var lista = ([2, 4, 7].slice(0));
-        var wynik = "247";
-        if (!(wynik === Main.liczby(lista))) {
-            throw new Error("Assertion error line 16: assert wynik.equals(liczby(lista));");
-        };
+        var oczekiwane = "247";
+        var wynik = Main.liczby(lista);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 29: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
         var lista = ([]);
-        var wynik = "";
-        if (!(wynik === Main.liczby(lista))) {
-            throw new Error("Assertion error line 22: assert wynik.equals(liczby(lista));");
-        };
+        var oczekiwane = "";
+        var wynik = Main.liczby(lista);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 29: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

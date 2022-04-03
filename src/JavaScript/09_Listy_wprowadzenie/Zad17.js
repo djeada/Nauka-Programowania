@@ -1,3 +1,11 @@
+var Pair = /** @class */ (function () {
+    function Pair(a, b) {
+        this.first = a;
+        this.second = b;
+    }
+    return Pair;
+}());
+
 var Main = (function () {
     function Main() {
     }
@@ -8,46 +16,31 @@ var Main = (function () {
                 for (var j = i + 1; j < n; j++) {
                     {
                         if ( lista[j] +  lista[i] === liczba) {
-                            return (new Main.Pair(i, j));
+                            return (new Pair(i, j));
                         }
-                    }
-                    ;
+                    };
                 }
-            }
-            ;
+            };
         }
-        return (new Main.Pair(-1, -1));
-    };
-  Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (!a1[i].equals(a2[i]))
-                return false;
-        }
-        return true;
+        return (new Pair(-1, -1));
     };
     Main.test1 = function () {
-        var lista = ( [1, 3, 4, 5, 2].slice(0));
+        var lista = [1, 3, 4, 5, 2]
         var liczba = 5;
-        var wynik = (new Main.Pair(0, 2));
-        if (!Main.listyRowne(Main.sumaDwochV1(lista, liczba), wynik)) {
-            throw new Error("Assertion error;");
+        var oczekiwane = new Pair(0, 2)
+       var wynik = Main.sumaDwochV1(lista, liczba);
+        if (!(wynik.first == oczekiwane.first && wynik.second == oczekiwane.second)) {
+            throw new Error(`Assertion error line 34: ${wynik.first} != ${oczekiwane.first} || ${wynik.second} != ${oczekiwane.second}`);
         }
-        ;
     };
     Main.test2 = function () {
-        var lista = ( [2, -6, 10, 21, 8].slice(0));
+        var lista = [2, -6, 10, 21, 8]
         var liczba = 7;
-        var wynik = (new Main.Pair(-1, -1));
-        if (!Main.listyRowne(Main.sumaDwochV1(lista, liczba), wynik)) {
-            throw new Error("Assertion error;");
+        var oczekiwane = new Pair(-1, -1)
+        var wynik = Main.sumaDwochV1(lista, liczba);
+        if (!(wynik.first == oczekiwane.first && wynik.second == oczekiwane.second)) {
+            throw new Error(`Assertion error line 34: ${wynik.first} != ${oczekiwane.first} || ${wynik.second} != ${oczekiwane.second}`);
         }
-        ;
     };
     Main.main = function (args) {
         Main.test1();
@@ -56,24 +49,4 @@ var Main = (function () {
     return Main;
 }());
 Main["__class"] = "Main";
-(function (Main) {
-    var Pair = (function () {
-        function Pair(firstValue, secondValue) {
-            if (this.first === undefined) {
-                this.first = null;
-            }
-            if (this.second === undefined) {
-                this.second = null;
-            }
-            this.first = firstValue;
-            this.second = secondValue;
-        }
-        Pair.prototype.equals = function (o) {
-            return (o != null && o instanceof Main.Pair) && (this.first === o.first) && (this.second === o.second);
-        };
-        return Pair;
-    }());
-    Main.Pair = Pair;
-    Pair["__class"] = "Main.Pair";
-})(Main || (Main = {}));
 Main.main(null);

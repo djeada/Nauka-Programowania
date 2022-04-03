@@ -12,17 +12,19 @@ var Main = /** @class */ (function() {
     };
     Main.test1 = function() {
         var a = 4;
-        var wynik = 24;
-        if (!(Main.silnia(a) === wynik)) {
-            throw new Error("Assertion error line 14: assert silnia(a) == wynik;");
-        };
+        var oczekiwane = 24;
+        var wynik = Main.silnia(a);
+        if (!(oczekiwane === wynik)) {
+            throw new Error(`Assertion error line 33: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.test2 = function() {
         var a = -5;
         var wynik = 1;
-        if (!(Main.silnia(a) === wynik)) {
-            throw new Error("Assertion error line 20: assert silnia(a) == wynik;");
-        };
+        var oczekiwane = Main.silnia(a);
+        if (!(oczekiwane === wynik)) {
+            throw new Error(`Assertion error line 33: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

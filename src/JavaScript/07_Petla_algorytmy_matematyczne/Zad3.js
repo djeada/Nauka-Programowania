@@ -22,18 +22,20 @@ var Main = /** @class */ (function() {
     Main.test1 = function() {
         var a = 2;
         var b = 3;
-        var wynik = 6;
-        if (!(Main.mnozenie(a, b) === wynik)) {
-            throw new Error("Assertion error line 23: assert mnozenie(a, b) == wynik;");
+        var oczekiwne = 6;
+        var wynik = Main.mnozenie(a, b);
+        if (!(oczekiwne === wynik)) {
+            throw new Error(`Assertion error line 28: oczekiwane: ${oczekiwne}, obliczone: ${wynik}`);
         };
     };
     Main.test2 = function() {
         var a = 30;
         var b = 6;
         var wynik = 5;
-        if (!(Main.dzielenie(a, b) === wynik)) {
-            throw new Error("Assertion error line 30: assert dzielenie(a, b) == wynik;");
-        };
+        var oczekiwne = Main.dzielenie(a, b);
+        if (!(oczekiwne === wynik)) {
+            throw new Error(`Assertion error line 37: oczekiwane: ${oczekiwne}, obliczone: ${wynik}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

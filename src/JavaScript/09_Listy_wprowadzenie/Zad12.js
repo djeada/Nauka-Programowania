@@ -22,37 +22,36 @@ var Main = /** @class */ (function() {
         }
         return lista;
     };
-    Main.listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i])
-                return false;
-        }
-        return true;
-    };
+
     Main.test1 = function() {
-        var lista = ([5, 27, 6, 2, 1, 10, 8].slice(0));
-        var wynik = ([6, 2, 1, 10, 8, 5, 27].slice(0));
+        var lista = [5, 27, 6, 2, 1, 10, 8]
         var kierunek = "lewo";
         var liczba = 2;
-        if (!Main.listyRowne(Main.rotacjaV1(lista, kierunek, liczba), wynik)) {
-            throw new Error("Assertion error;");
-        };
+        var oczekiwane = [6, 2, 1, 10, 8, 5, 27]
+        var wynik = Main.rotacjaV1(lista, kierunek, liczba);
+        if (!(wynik.length == oczekiwane.length)) {
+            throw new Error(`Assertion error line 59: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (!(wynik[i] == oczekiwane[i])) {
+                throw new Error(`Assertion error line 59: ${wynik[i]} != ${oczekiwane[i]}`);
+            }
+        }
     };
     Main.test2 = function() {
-        var lista = ([9, 9, 42, 47, 5, 6, 19, 7].slice(0));
-        var wynik = ([6, 19, 7, 9, 9, 42, 47, 5].slice(0));
-        var kierunek = "prawo";
+        var lista = [9, 9, 42, 47, 5, 6, 19, 7]
         var liczba = 3;
-        if (!Main.listyRowne(Main.rotacjaV1(lista, kierunek, liczba), wynik)) {
-            throw new Error("Assertion error;");
-        };
-
+        var kierunek = "prawo";
+        var oczekiwane = [6, 19, 7, 9, 9, 42, 47, 5]
+        var wynik = Main.rotacjaV1(lista, kierunek, liczba);
+        if (!(wynik.length == oczekiwane.length)) {
+            throw new Error(`Assertion error line 69: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (!(wynik[i] == oczekiwane[i])) {
+                throw new Error(`Assertion error line 69: ${wynik[i]} != ${oczekiwane[i]}`);
+            }
+        }
     };
     Main.main = function(args) {
         Main.test1();

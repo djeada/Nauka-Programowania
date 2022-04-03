@@ -17,18 +17,20 @@ var Main = /** @class */ (function() {
         return sumaPrzedzialu - suma;
     };
     Main.test1 = function() {
-        var lista = ([6, 8, 4, 10, 14, 2].slice(0));
-        var wynik = 12;
-        if (!(Main.znajdzBrakujacyElement(lista) === wynik)) {
-            throw new Error("Assertion error line 23: assert znajdzBrakujacyElement(lista) == wynik;");
-        };
+        var lista = [6, 8, 4, 10, 14, 2]
+        var oczekiwane = 12;
+        var wynik = Main.znajdzBrakujacyElement(lista);
+        if (!(wynik == oczekiwane)) {
+            throw new Error(`Assertion error line 89: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
-        var lista = ([1, 2, 4, 5, 6].slice(0));
-        var wynik = 3;
-        if (!(Main.znajdzBrakujacyElement(lista) === wynik)) {
-            throw new Error("Assertion error line 29: assert znajdzBrakujacyElement(lista) == wynik;");
-        };
+        var lista = [1, 2, 4, 5, 6]
+        var oczekiwane = 3;
+        var wynik = Main.znajdzBrakujacyElement(lista);
+        if (!(wynik == oczekiwane)) {
+            throw new Error(`Assertion error line 99: ${wynik} != ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

@@ -6,53 +6,64 @@ b) Wynikiem odejmowania pierwszej macierzy od drugiej.
 
 var Main = /** @class */ (function () { 
     function Main() { }
-    Main.dodajWektory = function (wektorA, wektorB) {
+    Main.dodajMacierze = function (macierzA, macierzB) {
         var wynik = [];
-        if (wektorA.length !== wektorB.length) {
-            return wynik;
-        }
-        for (var i = 0; i < wektorA.length; i++) {
-            wynik[i] = wektorA[i] + wektorB[i];
+        for (var i = 0; i < macierzA.length; i++) {
+            wynik[i] = [];
+            for (var j = 0; j < macierzA[i].length; j++) {
+                wynik[i][j] = macierzA[i][j] + macierzB[i][j];
+            }
         }
         return wynik;
     }
-    Main.odejmijWektory = function (wektorA, wektorB) {
+    Main.odejmijMacierze = function (macierzA, macierzB) {
         var wynik = [];
-        if (wektorA.length !== wektorB.length) {
-            return wynik;
-        }
-        for (var i = 0; i < wektorA.length; i++) {
-            wynik[i] = wektorA[i] - wektorB[i];
+        for (var i = 0; i < macierzA.length; i++) {
+            wynik[i] = [];
+            for (var j = 0; j < macierzA[i].length; j++) {
+                wynik[i][j] = macierzA[i][j] - macierzB[i][j];
+            }
         }
         return wynik;
     }
     Main.test1 = function () {
-        var wektorA = [1, 2, 3];
-        var wektorB = [4, 5, 6];
-        var wynik = [5, 7, 9];
-        if (Main.dodajWektory(wektorA, wektorB).length !== wynik.length) {
-            throw new Error("Assertion error line 24: assert dodajWektory(wektorA, wektorB).length.equals(wynik.length);");
-        }
-        for (var i = 0; i < wynik.length; i++) {
-            if (Main.dodajWektory(wektorA, wektorB)[i] !== wynik[i]) {
-                throw new Error("Assertion error line 30: assert dodajWektory(wektorA, wektorB)[i].equals(wynik[i]);");
-            }
-        }
-    }
-    Main.test2 = function () {
-        var wektorA = [1, 2, 3];
-        var wektorB = [4, 5, 6];
-        var oczekiwane = [-3, -3, -3];
-        var wynik = Main.odejmijWektory(wektorA, wektorB);
+        var macierzA = [[1, 2, 3], [4, 5, 6]];
+        var macierzB = [[7, 8, 9], [10, 11, 12]];
+        var oczekiwane = [[8, 10, 12], [14, 16, 18]];
+        var wynik = Main.dodajMacierze(macierzA, macierzB);
         if (wynik.length !== oczekiwane.length) {
-            throw new Error("Assertion error line 24: assert odejmijWektory(wektorA, wektorB).length.equals(wynik.length);");
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
         }
         for (var i = 0; i < wynik.length; i++) {
-            if (wynik[i] !== oczekiwane[i]) {
-                throw new Error("Assertion error line 30: assert odejmijWektory(wektorA, wektorB)[i].equals(wynik[i]);");
+            if (wynik[i].length !== oczekiwane[i].length) {
+                throw new Error(`Assertion error line 29: ${wynik[i].length} != ${oczekiwane[i].length}`);
+            }
+            for (var j = 0; j < wynik[i].length; j++) {
+                if (wynik[i][j] !== oczekiwane[i][j]) {
+                    throw new Error(`Assertion error line 29: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
+                }
             }
         }
-    }
+    };
+    Main.test2 = function () {
+        var macierzA = [[1, 2, 3], [4, 5, 6]];
+        var macierzB = [[7, 8, 9], [10, 11, 12]];
+        var oczekiwane = [[-6, -6, -6], [-6, -6, -6]];
+        var wynik = Main.odejmijMacierze(macierzA, macierzB);
+        if (wynik.length !== oczekiwane.length) {
+            throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
+        }
+        for (var i = 0; i < wynik.length; i++) {
+            if (wynik[i].length !== oczekiwane[i].length) {
+                throw new Error(`Assertion error line 29: ${wynik[i].length} != ${oczekiwane[i].length}`);
+            }
+            for (var j = 0; j < wynik[i].length; j++) {
+                if (wynik[i][j] !== oczekiwane[i][j]) {
+                    throw new Error(`Assertion error line 29: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
+                }
+            }
+        }
+    };
     Main.main = function (args) {
         Main.test1();
         Main.test2();

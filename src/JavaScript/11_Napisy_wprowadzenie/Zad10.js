@@ -62,17 +62,19 @@ var Main = (function() {
     };
     Main.test1 = function() {
         var napis = "Kaczka lubi wiosne.";
-        var wynik = "Kaczka";
-        if (!(wynik === Main.najdluzsze(napis))) {
-            throw new Error("Assertion error line 64: assert wynik.equals(najdluzsze(napis));");
-        };
+        var oczekiwane = "Kaczka";
+        var wynik = Main.najdluzsze(napis);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
         var napis = "Kaczka lubi wiosne.";
-        var wynik = "lubi";
-        if (!(wynik === Main.najkrotsze(napis))) {
-            throw new Error("Assertion error line 70: assert wynik.equals(najkrotsze(napis));");
-        };
+        var oczekiwane = "lubi";
+        var wynik = Main.najkrotsze(napis);
+        if (wynik !== oczekiwane) {
+            throw new Error(`Assertion error line 30: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();

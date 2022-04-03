@@ -22,17 +22,19 @@ var Main = (function() {
     };
     Main.test1 = function() {
         var napis = "pacZka!";
-        var wynik = "p?cZk?!";
-        if (!(Main.zamienV1(napis) === wynik)) {
-            throw new Error("Assertion error line 27: assert zamienV1(napis).equals(wynik);");
-        };
+        var oczekiwane = "p?cZk?!";
+        var wynik = Main.zamienV1(napis);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.test2 = function() {
         var napis = "pacZka!";
-        var wynik = "p?cZk?!";
-        if (!(Main.zamienV2(napis) === wynik)) {
-            throw new Error("Assertion error line 33: assert zamienV2(napis).equals(wynik);");
-        };
+        var oczekiwane = "p?cZk?!";
+        var wynik = Main.zamienV2(napis);
+        if (!(wynik === oczekiwane)) {
+            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
+        }
     };
     Main.main = function(args) {
         Main.test1();
