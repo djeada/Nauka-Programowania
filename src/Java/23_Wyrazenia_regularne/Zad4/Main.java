@@ -2,7 +2,7 @@
 import java.util.regex.Pattern;
 
 /*
-Czy podnapis nalezy do napisu.
+Otrzymujesz dwa napisy. Sprawdz czy drugi napis wystepuje w pierwszym napisie.
 */
 
 public class Main {
@@ -15,19 +15,26 @@ public class Main {
 	    return napis.indexOf(podnapis) != -1; 
 	}
 
+	public static void test1() {
+		String napis = "Mozart gra na skrzypcach";
+    	String podnapis = "skrzyp";
+		boolean oczekiwane = true;
+		boolean wynik = czyNalezyV1(napis, podnapis);
+		assert wynik == oczekiwane;
+	}
+
+	public static void test2() {
+		String napis = "Lezy jerzy na wiezy";
+    	String podnapis = "nan";
+		boolean oczekiwane = true;
+		boolean wynik = czyNalezyV1(napis, podnapis);
+		assert wynik == oczekiwane;
+	}
+
     public static void main(String[] args) {
     	
-    	String napis = "Mozart gra na skrzypcach";
-    	String podnapis = "skrzyp";
-    	
-    	assert  czyNalezyV1(napis, podnapis);
-    	assert  czyNalezyV2(napis, podnapis);
-
-    	napis = "Lezy jerzy na wiezy";
-    	podnapis = "nan";
-    	
-    	assert  !czyNalezyV1(napis, podnapis);
-    	assert  !czyNalezyV2(napis, podnapis);
+    	test1();
+		test2();
     	
     }
 

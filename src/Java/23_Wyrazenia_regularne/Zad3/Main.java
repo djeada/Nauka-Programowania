@@ -1,6 +1,6 @@
 /*
- Sprawdz czy napis sklada sie wylacznie z cyfr.
- */
+Otrzymujesz napis. Sprawdz, czy napis sklada sie wylacznie z cyfr. 
+*/
 
 
 public class Main {
@@ -25,19 +25,74 @@ public class Main {
                 .anyMatch(n -> !Character.isDigit(n));
     }
 
+    public static void test1() {
+
+        final String napis = "12345";
+        final boolean oczekiwane = true;
+
+        final boolean wynik = tylkoCyfryV1(napis);
+
+        assert wynik == oczekiwane;
+    }
+
+    public static void test2() {
+
+        final String napis = "12345a";
+        final boolean oczekiwane = false;
+
+        final boolean wynik = tylkoCyfryV1(napis);
+
+        assert wynik == oczekiwane;
+    }
+
+    public static void test3() {
+
+        final String napis = "12345";
+        final boolean oczekiwane = true;
+
+        final boolean wynik = tylkoCyfryV2(napis);
+
+        assert wynik == oczekiwane;
+    }
+
+    public static void test4() {
+
+        final String napis = "12345a";
+        final boolean oczekiwane = false;
+
+        final boolean wynik = tylkoCyfryV2(napis);
+
+        assert wynik == oczekiwane;
+    }
+
+    public static void test5() {
+
+        final String napis = "12345";
+        final boolean oczekiwane = true;
+
+        final boolean wynik = tylkoCyfryV3(napis);
+
+        assert wynik == oczekiwane;
+    }
+
+    public static void test6() {
+
+        final String napis = "12345a";
+        final boolean oczekiwane = false;
+
+        final boolean wynik = tylkoCyfryV3(napis);
+
+        assert wynik == oczekiwane;
+    }
+    
     public static void main(String[] args) {
     	
-    	String napis = "111342";
-    	
-    	assert tylkoCyfryV1(napis);
-    	assert tylkoCyfryV2(napis);
-    	assert tylkoCyfryV3(napis);
-    	
-    	napis = "1adf2";
-    	
-    	assert !tylkoCyfryV1(napis);
-    	assert !tylkoCyfryV2(napis);
-    	assert !tylkoCyfryV3(napis);
+    	test1();
+    	test2();
+    	test3();
+    	test4();
+    	test5();
+    	test6();
 
     }
 

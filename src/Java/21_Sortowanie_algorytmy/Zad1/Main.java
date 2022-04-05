@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class GlobalMembers {
+public class Main {
   public static void sortuj(ArrayList < Integer > lista) {
 
     for (int i = 0; i < lista.size(); i++) {

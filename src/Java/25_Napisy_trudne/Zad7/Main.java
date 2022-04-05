@@ -1,40 +1,53 @@
+import java.util.*;
+
 /*
-Najdluzszy wspolny przedrostek.
+Znajdz najdluzsze powtorzenie w napisie.
 */
 
 public class Main {
-	  
-	public static String najdluzszyWspolnyPrzedrostekV1(String[] napisy) {
+  public static String najdluzszePowtorzenie(String napis) {
+    String wynik = "";
+    String wynik_tmp = "";
 
-			if (napisy.length == 0)
-				return null;
-		
-	        if (napisy.length != 1) {
-	        	
-		        int firstLen = napisy[0].length();
-		        
-		        for (int prefixLen = 0; prefixLen < firstLen; prefixLen++) {
-	
-		            char ch = napisy[0].charAt(prefixLen);
-		            
-		            for (String napis : napisy)
-		            	if (prefixLen >= napis.length() || napis.charAt(prefixLen) != ch)
-		                    return napis.substring(0, prefixLen);
-		        }
-	        }
-
-	        return napisy[0];
-	    }
-
-
-    public static void main(String[] args) {
-    	
-    	String[] napisy = {"abc", "abcadlo", "abcde", "abcr", "abcdolen", "abcdef"};
-    	String wynik = "abc";
-    	    	
-    	assert najdluzszyWspolnyPrzedrostekV1(napisy).equals(wynik);
-
-    	
+    for (int i = 0; i < napis.length(); i++) {
+      wynik_tmp = "";
+      for (int j = i; j < napis.length(); j++) {
+        wynik_tmp += napis.charAt(j);
+        if (wynik_tmp.length() > wynik.length()) {
+          wynik = wynik_tmp;
+        }
+      }
     }
+
+    return wynik;
+  }
+
+  public static void test1() {
+    String slowo = "98432934021742343230";
+    String wynik = "432";
+
+    assert(najdluzszePowtorzenie(slowo).equals(wynik));
+  }
+
+  public static void test2() {
+    String slowo = "abcdef";
+    String wynik;
+
+    assert(najdluzszePowtorzenie(slowo).equals(wynik));
+  }
+
+  public static void test3() {
+    String slowo = "Arnold i Arnold";
+    String wynik = "Arnold";
+
+    assert(najdluzszePowtorzenie(slowo).equals(wynik));
+  }
+
+  public static void main(String[] args) {
+
+    test1();
+    test2();
+    test3();
+  }
 
 }

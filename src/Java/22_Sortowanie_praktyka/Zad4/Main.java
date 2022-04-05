@@ -1,53 +1,34 @@
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 /*
-Posortuj tablice napisow wzgledem dlugosci.
+Otrzymujesz liste napisow. Posortuj wzgledem dlugosci napisy w liscie.
 */
 
 public class Main {
 
-	public static void sortujWzgledemDlugosciV1(String[] napisy) {
+  public static void sortujWzgledemDlugosci(ArrayList<String> lista) {
+    Collections.sort(lista, new Comparator<String>() {
+      @Override
+      public int compare(final String o1, final String o2) {
+        return o1.length() - o2.length();
+      }
+    });
+  }
 
-		Arrays.sort(napisy, (String s1, String s2) -
-			> (-1) * Integer.compare(s1.length(), s2.length()));
-	}
+  public static void test1() {
+    ArrayList<String> lista = new ArrayList<String>(Arrays.asList("abcd", "ab", "a", "abc"));
+    ArrayList<String> oczekiwane = new ArrayList<String>(Arrays.asList("a", "ab", "abc", "abcd"));
 
-	public static void sortujWzgledemDlugosciV2(String[] napisy) {
+    sortujWzgledemDlugosci(lista);
 
-		Arrays.sort(napisy, Comparator.comparingInt(String::length).reversed());
+    assert lista.equals(oczekiwane);
 
-	}
+  }
 
-	public static String[] sortujWzgledemDlugosciV3(String[] napisy) {
+  public static void main(String[] args) {
 
-		return Arrays.stream(napisy)
-			.sorted(Comparator.comparingInt(String::length).reversed())
-			.toArray(String[]::new);
-	}
+    test1();
 
-	public static void main(String[] args) {
-
-		String[] napisy = new String[] {
-			"Lezy", "jerzy", "na", "wiezyczce"
-		};
-		String[] wynik = new String[] {
-			"wiezyczce", "jerzy", "Lezy", "na"
-		};
-
-		sortujWzgledemDlugosciV1(napisy);
-		assert Arrays.equals(napisy, wynik);
-
-		napisy = new String[] {
-			"Lezy", "jerzy", "na", "wiezyczce"
-		};
-		sortujWzgledemDlugosciV2(napisy);
-		assert Arrays.equals(napisy, wynik);
-
-		napisy = new String[] {
-			"Lezy", "jerzy", "na", "wiezyczce"
-		};
-		assert Arrays.equals(sortujWzgledemDlugosciV3(napisy), wynik);
-	}
+  }
 
 }
