@@ -1318,7 +1318,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad1">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad1.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad1.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1330,7 +1330,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad2">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad2.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad2.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1342,7 +1342,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad3">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djea/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad3.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad3.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1354,7 +1354,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad4">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Napisy_wprowadzenie/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad4.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad4.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1366,7 +1366,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad5">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad5.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad5.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1378,7 +1378,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad6">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad6.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad6.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1390,7 +1390,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad7">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad7.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad7.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1402,7 +1402,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad8">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djea/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad8.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad8.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1414,7 +1414,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad9">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad9.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad9.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1426,7 +1426,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad10.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad10">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad10.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad10.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1438,7 +1438,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad11.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad11.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad11">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad11.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad11.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1450,7 +1450,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad12.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad12.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad12">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad12.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad12.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1462,7 +1462,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad13.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Napisy_wprowadzenie/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad13">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad13.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad13.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1474,7 +1474,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad14.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad14.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad14">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad14.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad14.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1486,7 +1486,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad15.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad15.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad15">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad15.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad15.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1498,7 +1498,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad16.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad16.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad16">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad16.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad16.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1510,7 +1510,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad17.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad17.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad17">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad17.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad17.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1522,7 +1522,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/11_Napisy_wprowadzenie/Zad18.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/11_Napisy_wprowadzenie/Zad18.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/11_Napisy_wprowadzenie/Zad18">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/11_Napisy_wprowadzenie/Zad18.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/11_Napisy_wprowadzenie/Zad18.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1548,7 +1548,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/12_Napisy_anagramy_palindromy/Zad1">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/12_Napisy_anagramy_palindromy/Zad1.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/12_Napisy_anagramy_palindromy/Zad1.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1560,7 +1560,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/12_Napisy_anagramy_palindromy/Zad2">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/12_Napisy_anagramy_palindromy/Zad2.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/12_Napisy_anagramy_palindromy/Zad2.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1572,7 +1572,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/12_Napisy_anagramy_palindromy/Zad3">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/12_Napisy_anagramy_palindromy/Zad3.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/12_Napisy_anagramy_palindromy/Zad3.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1584,7 +1584,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/12_Napisy_anagramy_palindromy/Zad4">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/12_Napisy_anagramy_palindromy/Zad4.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/12_Napisy_anagramy_palindromy/Zad4.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1596,7 +1596,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/12_Napisy_anagramy_palindromy/Zad5">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/12_Napisy_anagramy_palindromy/Zad5.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/12_Napisy_anagramy_palindromy/Zad5.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1608,7 +1608,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/12_Napisy_anagramy_palindromy/Zad6">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/12_Napisy_anagramy_palindromy/Zad6.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/12_Napisy_anagramy_palindromy/Zad6.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1620,7 +1620,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/12_Napisy_anagramy_palindromy/Zad7">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/12_Napisy_anagramy_palindromy/Zad7.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/12_Napisy_anagramy_palindromy/Zad7.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1632,7 +1632,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/12_Napisy_anagramy_palindromy/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/12_Napisy_anagramy_palindromy/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/12_Napisy_anagramy_palindromy/Zad8">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/12_Napisy_anagramy_palindromy/Zad8.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/12_Napisy_anagramy_palindromy/Zad8.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1658,7 +1658,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad1">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/13_Listy_2d/Zad1.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1670,7 +1670,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad2">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/13_Listy_2d/Zad2.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1682,7 +1682,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad3">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/13_Listy_2d/Zad3.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1694,7 +1694,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad4">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/13_Listy_2d/Zad4.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1706,7 +1706,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad5">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/13_Listy_2d/Zad5.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1718,7 +1718,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad6">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/13_Listy_2d/Zad6.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1730,7 +1730,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad7">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/13_Listy_2d/Zad7.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1742,7 +1742,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad8">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/13_Listy_2d/Zad8.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1754,7 +1754,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad9">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/13_Listy_2d/Zad9.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1766,7 +1766,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/13_Listy_2d/Zad10.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/13_Listy_2d/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/13_Listy_2d/Zad10">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/13_Listy_2d/Zad10.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1804,7 +1804,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14_Funkcje_wielomiany/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/14_Funkcje_wielomiany/Zad1">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/14_Funkcje_wielomiany/Zad1.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1816,7 +1816,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14_Funkcje_wielomiany/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/14_Funkcje_wielomiany/Zad2">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/14_Funkcje_wielomiany/Zad2.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1828,7 +1828,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14_Funkcje_wielomiany/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/14_Funkcje_wielomiany/Zad3">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/14_Funkcje_wielomiany/Zad3.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1840,7 +1840,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14_Funkcje_wielomiany/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/14_Funkcje_wielomiany/Zad4">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/14_Funkcje_wielomiany/Zad4.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1852,7 +1852,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14_Funkcje_wielomiany/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/14_Funkcje_wielomiany/Zad5">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/dje/Nauka-programowania/blob/master/src/JavaScript/14_Funkcje_wielomiany/Zad5.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1864,7 +1864,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/14_Funkcje_wielomiany/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/14_Funkcje_wielomiany/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/14_Funkcje_wielomiany/Zad6">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/14_Funkcje_wielomiany/Zad6.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1890,7 +1890,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad1">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/15_Funkcje_rekurencja/Zad1.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1902,7 +1902,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad2">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/15_Funkcje_rekurencja/Zad2.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1914,7 +1914,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad3">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/15_Funkcje_rekurencja/Zad3.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1926,7 +1926,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad4">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/15_Funkcje_rekurencja/Zad4.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1938,7 +1938,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad5">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/15_Funkcje_rekurencja/Zad5.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1950,7 +1950,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad6">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/15_Funkcje_rekurencja/Zad6.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1962,7 +1962,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad7.py">Python</a></td>
             <td><a>Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad7">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/15_Funkcje_rekurencja/Zad7.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1974,7 +1974,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad8">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/15_Funkcje_rekurencja/Zad8.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1986,7 +1986,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad9">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/15_Funkcje_rekurencja/Zad9.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -1998,7 +1998,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/15_Funkcje_rekurencja/Zad10.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/15_Funkcje_rekurencja/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/15_Funkcje_rekurencja/Zad10">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/15_Funkcje_rekurencja/Zad10.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2024,7 +2024,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad1">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad1.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2036,7 +2036,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad2">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad2.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2048,7 +2048,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad3">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad3.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2060,7 +2060,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad4">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad4.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2072,7 +2072,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad5">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad5.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2084,7 +2084,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad6">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad6.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2096,7 +2096,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad7">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad7.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2108,7 +2108,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad8">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/dje/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad8.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2120,7 +2120,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad9">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad9.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2132,7 +2132,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad10.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad10">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad10.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2144,7 +2144,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad11.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad11.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad11">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad11.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2156,7 +2156,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/16_System_binarny/Zad12.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/16_System_binarny/Zad12.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/16_System_binarny/Zad12">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/16_System_binarny/Zad12.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2182,7 +2182,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad1">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad1.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2194,7 +2194,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad2">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad2.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2206,7 +2206,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad3">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad3.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2218,7 +2218,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad4">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad4.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2230,7 +2230,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad5">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad5.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2242,7 +2242,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad6">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad6.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2254,7 +2254,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad7">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad7.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2266,7 +2266,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad8">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad8.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2278,7 +2278,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad9">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad9.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2290,7 +2290,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad10.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad10">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad10.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2302,7 +2302,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad11.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad11.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad11">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad11.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2314,7 +2314,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/17_Slowniki/Zad12.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/17_Slowniki/Zad12.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/17_Slowniki/Zad12">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/17_Slowniki/Zad12.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2340,7 +2340,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad1">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad1.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad1.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2352,7 +2352,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad2">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad2.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad2.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2364,7 +2364,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad3">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad3.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad3.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2376,7 +2376,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad4">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad4.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad4.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2388,7 +2388,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad5">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad5.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad5.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2400,7 +2400,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad6">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad6.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad6.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2412,7 +2412,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad7">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad7.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad7.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2424,7 +2424,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad8.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad8">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad8.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad8.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2436,7 +2436,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad9.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad9">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad9.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad9.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2448,7 +2448,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad10.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad10">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad10.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad10.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2460,7 +2460,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad11.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad11.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad11">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad11.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad11.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2472,7 +2472,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/18_Operacje_na_plikach/Zad12.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/18_Operacje_na_plikach/Zad12.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/18_Operacje_na_plikach/Zad12">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/18_Operacje_na_plikach/Zad12.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Bash/18_Operacje_na_plikach/Zad12.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2498,7 +2498,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19_Klasy/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/19_Klasy/Zad1">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/19_Klasy/Zad1.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2510,7 +2510,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19_Klasy/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/19_Klasy/Zad2">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/19_Klasy/Zad2.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2522,7 +2522,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19_Klasy/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/19_Klasy/Zad3">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/19_Klasy/Zad3.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2534,7 +2534,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19_Klasy/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/19_Klasy/Zad4">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/19_Klasy/Zad4.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2546,7 +2546,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19_Klasy/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/19_Klasy/Zad5">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/19_Klasy/Zad5.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2558,7 +2558,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad6.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19_Klasy/Zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/19_Klasy/Zad6">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/19_Klasy/Zad6.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2570,7 +2570,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/19_Klasy/Zad7.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/19_Klasy/Zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/19_Klasy/Zad7">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/19_Klasy/Zad7.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2596,7 +2596,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20_Dziedziczenie/Zad1.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/20_Dziedziczenie/Zad1">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/20_Dziedziczenie/Zad1.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2608,7 +2608,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20_Dziedziczenie/Zad2.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/20_Dziedziczenie/Zad2">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/20_Dziedziczenie/Zad2.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2620,7 +2620,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20_Dziedziczenie/Zad3.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/20_Dziedziczenie/Zad3">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/20_Dziedziczenie/Zad3.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2632,7 +2632,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20_Dziedziczenie/Zad4.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/20_Dziedziczenie/Zad4">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/20_Dziedziczenie/Zad4.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2644,7 +2644,7 @@ Rozwiązania
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Python/20_Dziedziczenie/Zad5.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Cpp/20_Dziedziczenie/Zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/Java/20_Dziedziczenie/Zad5">Java</a></td>
-            <td><a>JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/JavaScript/20_Dziedziczenie/Zad5.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
