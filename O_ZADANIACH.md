@@ -75,6 +75,12 @@ Brak.
 
 Rozwiązania zostały przetestowane w środowisku `NodeJS 12.16.1`.
 
+#### Styl formatowania
+
+Do formatowania kodu zostało użyte narzędzie `js-beautify`.
+
+    js-beautify -r sciezka_do_zadania.js
+
 #### Zależności od bibliotek zewnętrznych
 
 Do komunikacji z konsolą użyto biblioteki <a href="https://github.com/maleck13/readline">`readline`</a>.
@@ -87,7 +93,7 @@ Wszystkie przykłady zostały przetestowane w wersji `Haskell 8.4`.
 
 Do kompilacji wykorzystano kompilator `ghc` z następującymi flagami:
     
-        ghc -O2 -Wall -o sciezka_do_zadania sciezka_do_zadania.hs
+    ghc -O2 -Wall -o sciezka_do_zadania sciezka_do_zadania.hs
 
 #### Styl formatowania
 
