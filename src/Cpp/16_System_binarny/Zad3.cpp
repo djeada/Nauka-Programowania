@@ -69,8 +69,8 @@ int iloraz(int a, int b) {
    * Funkcja zwraca iloraz a przez b, gdzie a i b sa liczbami naturalnymi.
    */
 
-  std::function<int(int, int, int, int *)> wew_iloczyn;
-  wew_iloczyn = [&wew_iloczyn](int dzielna, int dzielnik, int org_b,
+  std::function<int(int, int, int, int *)> wew_iloraz;
+  wew_iloraz = [&wew_iloraz](int dzielna, int dzielnik, int org_b,
                                int *reszta) -> int {
     /*
      * Funkcja wewnetrzna funkcji iloraz.
@@ -97,7 +97,7 @@ int iloraz(int a, int b) {
       wynik >>= 1;
     }
 
-    wynik = wynik + wew_iloczyn(dzielna - dzielnik, org_b, org_b, reszta);
+    wynik = wynik + wew_iloraz(dzielna - dzielnik, org_b, org_b, reszta);
 
     return wynik;
   };
@@ -112,7 +112,7 @@ int iloraz(int a, int b) {
 
   int reszta = 0;
 
-  return znak * wew_iloczyn(a, b, b, &reszta);
+  return znak * wew_iloraz(a, b, b, &reszta);
 }
 
 void test1() {

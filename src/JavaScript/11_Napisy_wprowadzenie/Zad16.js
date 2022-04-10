@@ -1,6 +1,4 @@
-var Main = (function() {
-    function Main() {}
-    Main.odlegloscHammingaV1 = function(napisA, napisB) {
+    odlegloscHammingaV1 = function(napisA, napisB) {
         if (napisA.length !== napisB.length) {
             return -1;
         }
@@ -18,29 +16,27 @@ var Main = (function() {
         }
         return wynik;
     };
-    Main.test1 = function() {
+    test1 = function() {
         var napisA = "xxbab";
         var napisB = "bbabb";
         var oczekiwane = 4;
-        var wynik = Main.odlegloscHammingaV1(napisA, napisB);
+        var wynik = odlegloscHammingaV1(napisA, napisB);
         if (!(wynik === oczekiwane)) {
             throw new Error(`Assertion error line 29: ${wynik} === ${oczekiwane}`);
         }
     };
-    Main.test2 = function() {
+    test2 = function() {
         var napisA = "xxbab";
         var napisB = "bbabb";
         var oczekiwane = 4;
-        var wynik = Main.odlegloscHammingaV1(napisA, napisB);
+        var wynik = odlegloscHammingaV1(napisA, napisB);
         if (!(wynik === oczekiwane)) {
             throw new Error(`Assertion error line 29: ${wynik} === ${oczekiwane}`);
         }
     };
-    Main.main = function(args) {
-        Main.test1();
-        Main.test2();
+    main = function(args) {
+        test1();
+        test2();
     };
-    return Main;
-}());
-Main["__class"] = "Main";
-Main.main(null);
+
+    main(null);

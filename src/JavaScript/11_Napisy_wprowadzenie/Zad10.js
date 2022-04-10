@@ -1,10 +1,8 @@
-var Main = (function() {
-    function Main() {}
-    Main.wyczysc = function(napis) {
+    wyczysc = function(napis) {
         napis = napis.trim();
         return napis.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, "");
     };
-    Main.najdluzsze = function(napis) {
+    najdluzsze = function(napis) {
         var wynik = null;
         var dlugosc = 0;
         var pocz = 0;
@@ -13,7 +11,7 @@ var Main = (function() {
             {
                 if (konc !== pocz) {
                     var slowo = napis.substring(pocz, konc);
-                    slowo = Main.wyczysc(slowo);
+                    slowo = wyczysc(slowo);
                     if (slowo.length > dlugosc) {
                         wynik = slowo;
                         dlugosc = slowo.length;
@@ -24,7 +22,7 @@ var Main = (function() {
         };
         if (konc !== pocz) {
             var slowo = napis.substring(pocz);
-            slowo = Main.wyczysc(slowo);
+            slowo = wyczysc(slowo);
             if (slowo.length > dlugosc) {
                 wynik = slowo;
                 dlugosc = slowo.length;
@@ -32,7 +30,7 @@ var Main = (function() {
         }
         return wynik;
     };
-    Main.najkrotsze = function(napis) {
+    najkrotsze = function(napis) {
         var wynik = null;
         var dlugosc = napis.length;
         var pocz = 0;
@@ -41,7 +39,7 @@ var Main = (function() {
             {
                 if (konc !== pocz) {
                     var slowo = napis.substring(pocz, konc);
-                    slowo = Main.wyczysc(slowo);
+                    slowo = wyczysc(slowo);
                     if (slowo.length < dlugosc) {
                         wynik = slowo;
                         dlugosc = slowo.length;
@@ -52,7 +50,7 @@ var Main = (function() {
         };
         if (konc !== pocz) {
             var slowo = napis.substring(pocz);
-            slowo = Main.wyczysc(slowo);
+            slowo = wyczysc(slowo);
             if (slowo.length < dlugosc) {
                 wynik = slowo;
                 dlugosc = slowo.length;
@@ -60,27 +58,25 @@ var Main = (function() {
         }
         return wynik;
     };
-    Main.test1 = function() {
+    test1 = function() {
         var napis = "Kaczka lubi wiosne.";
         var oczekiwane = "Kaczka";
-        var wynik = Main.najdluzsze(napis);
+        var wynik = najdluzsze(napis);
         if (wynik !== oczekiwane) {
             throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
         }
     };
-    Main.test2 = function() {
+    test2 = function() {
         var napis = "Kaczka lubi wiosne.";
         var oczekiwane = "lubi";
-        var wynik = Main.najkrotsze(napis);
+        var wynik = najkrotsze(napis);
         if (wynik !== oczekiwane) {
             throw new Error(`Assertion error line 30: ${wynik} === ${oczekiwane}`);
         }
     };
-    Main.main = function(args) {
-        Main.test1();
-        Main.test2();
+    main = function(args) {
+        test1();
+        test2();
     };
-    return Main;
-}());
-Main["__class"] = "Main";
-Main.main(null);
+
+    main(null);

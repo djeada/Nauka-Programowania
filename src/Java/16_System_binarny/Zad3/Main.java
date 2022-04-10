@@ -55,7 +55,7 @@ public class Main {
 	}
 
 	//d) dzielenie.
-	private static int wew_iloczyn(int dzielna, int dzielnik, int org_b, int reszta) {
+	private static int wew_iloraz(int dzielna, int dzielnik, int org_b, int reszta) {
 		int wynik = 1;
 
 		if (dzielna == dzielnik) {
@@ -76,7 +76,7 @@ public class Main {
 			wynik >>= 1;
 		}
 
-		wynik = wynik + wew_iloczyn(dzielna - dzielnik, org_b, org_b, reszta);
+		wynik = wynik + wew_iloraz(dzielna - dzielnik, org_b, org_b, reszta);
 
 		return wynik;
 	};
@@ -94,7 +94,7 @@ public class Main {
 
 		int reszta = 0;
 
-		return znak * wew_iloczyn(a, b, b, reszta);
+		return znak * wew_iloraz(a, b, b, reszta);
 	}
 
 	private static void test1() {

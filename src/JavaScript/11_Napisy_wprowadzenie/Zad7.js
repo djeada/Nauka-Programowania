@@ -1,6 +1,4 @@
-var Main = (function() {
-    function Main() {}
-    Main.zamienV1 = function(napis) {
+    zamienV1 = function(napis) {
         if (napis.length === 0) {
             return "";
         }
@@ -14,27 +12,25 @@ var Main = (function() {
         }
         return wynik.substring(0, wynik.length - 2);
     };
-    Main.test1 = function() {
+    test1 = function() {
         var napis = "pacZka!";
         var oczekiwane = "112, 97, 99, 90, 107, 97, 33";
-        var wynik = Main.zamienV1(napis);
+        var wynik = zamienV1(napis);
         if (!(wynik === oczekiwane)) {
             throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
         }
     };
-    Main.test2 = function() {
+    test2 = function() {
         var napis = "";
         var oczekiwane = "";
-        var wynik = Main.zamienV1(napis);
+        var wynik = zamienV1(napis);
         if (!(wynik === oczekiwane)) {
             throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
         }
     };
-    Main.main = function(args) {
-        Main.test1();
-        Main.test2();
+    main = function(args) {
+        test1();
+        test2();
     };
-    return Main;
-}());
-Main["__class"] = "Main";
-Main.main(null);
+
+    main(null);

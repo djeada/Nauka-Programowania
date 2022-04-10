@@ -1,85 +1,68 @@
 import java.util.*;
 
+/*
+Otrzymujesz dziesietna reprezentacje liczby naturalnej.
+
+a) Oblicz z ilu zer sklada sie binarna reprezentacja otrzymanej liczby.
+b) Oblicz z ilu jedynek sklada sie binarna reprezentacja otrzymanej liczby.
+*/
+
 public class Main {
-	//Policz z ilu zer i jedynek sklada sie otrzymana liczba.
 
-	public static int policzUstawioneBity(int liczba) {
-		int suma = 0;
-
-		while (liczba > 0) {
-			if ((liczba & 1) != 0) {
-				suma++;
+	public static int zera(int n) {
+		int licznik = 0;
+		while (n > 0) {
+			if (n % 2 == 0) {
+				licznik++;
 			}
-			liczba >>= 1;
+			n /= 2;
 		}
-
-		return suma;
+		return licznik;
 	}
 
-	public static void przygotujTablice(ArrayList<Integer> tablica) {
-
-		tablica.clear();
-
-		for (int i = 0; i<256; i++) {
-			tablica.add(policzUstawioneBity(i));
+	public static int jedynki(int n) {
+		int licznik = 0;
+		while (n > 0) {
+			if (n % 2 == 1) {
+				licznik++;
+			}
+			n /= 2;
 		}
-	}
-	public static int log2(int N) {
-		int result = (int)(Math.log(N) / Math.log(2));
-
-		return result;
+		return licznik;
 	}
 
-	public static int liczbaBitow(int liczba) {
-		return log2(liczba) + 1;
+	public static void test1() {
+		int a = -2;
+		int oczekiwane = 0;
+		int wynik = zera(a);
+		assert (wynik == oczekiwane);
 	}
 
-	public static int zera(int liczba, ArrayList<Integer> tablica) {
-		return liczbaBitow(liczba) - tablica.get(liczba & 0xff) + tablica.get((liczba >> 8) & 0xff) + tablica.get((liczba >> 16) & 0xff) + tablica.get((liczba >> 24) & 0xff);
+	public static void test2() {
+		int a = 3;
+		int oczekiwane = 2;
+		int wynik = jedynki(a);
+		assert (wynik == oczekiwane);
 	}
 
-	public static int jedynki(int liczba, ArrayList<Integer> tablica) {
-
-		return tablica.get(liczba & 0xff) + tablica.get((liczba >> 8) & 0xff) + tablica.get((liczba >> 16) & 0xff) + tablica.get((liczba >> 24) & 0xff);
+	public static void test3() {
+		int a = 3;
+		int oczekiwane = 0;
+		int wynik = zera(a);
+		assert (wynik == oczekiwane);
 	}
 
-	public static void test1(ArrayList<Integer> tablica) {
-		int liczba = 10;
-		int wynik = 2;
-
-		assert jedynki(liczba, tablica) == wynik;
-	}
-
-	public static void test2(ArrayList<Integer> tablica) {
-		int liczba = 7;
-		int wynik = 3;
-
-		assert jedynki(liczba, tablica) == wynik;
-	}
-
-	public static void test3(ArrayList<Integer> tablica) {
-		int liczba = 10;
-		int wynik = 2;
-
-		assert zera(liczba, tablica) == wynik;
-	}
-
-	public static void test4(ArrayList<Integer> tablica) {
-		int liczba = 7;
-		int wynik = 0;
-
-		assert zera(liczba, tablica) == wynik;
+	public static void test4() {
+		int a = 7;
+		int oczekiwane = 3;
+		int wynik = jedynki(a);
+		assert (wynik == oczekiwane);
 	}
 
 	public static void main(String[] args) {
-
-		ArrayList<Integer> tablica = new ArrayList<Integer> ();
-		przygotujTablice(tablica);
-
-		test1(tablica);
-		test2(tablica);
-		test3(tablica);
-		test4(tablica);
-
+		test1();
+		test2();
+		test3();
+		test4();
 	}
 }

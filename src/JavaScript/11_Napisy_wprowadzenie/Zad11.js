@@ -1,10 +1,8 @@
-var Main = (function() {
-    function Main() {}
-    Main.wyczysc = function(napis) {
+    wyczysc = function(napis) {
         napis = napis.trim();
         return napis.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, "");
     };
-    Main.srednia = function(napis) {
+    srednia = function(napis) {
         var calk_dlugosc = 0;
         var n = 0;
         var pocz = 0;
@@ -13,7 +11,7 @@ var Main = (function() {
             {
                 if (konc !== pocz) {
                     var slowo = napis.substring(pocz, konc);
-                    slowo = Main.wyczysc(slowo);
+                    slowo = wyczysc(slowo);
                     if (!(slowo.length === 0)) {
                         n++;
                         calk_dlugosc += slowo.length;
@@ -24,7 +22,7 @@ var Main = (function() {
         };
         if (konc !== pocz) {
             var slowo = napis.substring(pocz);
-            slowo = Main.wyczysc(slowo);
+            slowo = wyczysc(slowo);
             if (!(slowo.length === 0)) {
                 n++;
                 calk_dlugosc += slowo.length;
@@ -32,27 +30,25 @@ var Main = (function() {
         }
         return (calk_dlugosc / n | 0);
     };
-    Main.test1 = function() {
+    test1 = function() {
         var napis = "Kaczka lubi wiosne.";
         var oczekiwane = 5;
-        var wynik = Main.srednia(napis);
+        var wynik = srednia(napis);
         if (wynik !== oczekiwane) {
             throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
         }
     };
-    Main.test2 = function() {
+    test2 = function() {
         var napis = "Kaczka lubi wiosne.";
         var oczekiwane = 5;
-        var wynik = Main.srednia(napis);
+        var wynik = srednia(napis);
         if (wynik !== oczekiwane) {
             throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
         }
     };
-    Main.main = function(args) {
-        Main.test1();
-        Main.test2();
+    main = function(args) {
+        test1();
+        test2();
     };
-    return Main;
-}());
-Main["__class"] = "Main";
-Main.main(null);
+
+    main(null);

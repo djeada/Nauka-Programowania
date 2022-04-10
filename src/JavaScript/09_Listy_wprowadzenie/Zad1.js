@@ -1,6 +1,4 @@
-var Main = (function() {
-    function Main() {}
-    Main.wczytaj = function(lista, n) {
+    wczytaj = function(lista, n) {
         console.info("podaj " + n + " liczb:");
         var rl = require('readline-sync');
         for (var i = 0; i < n; i++) {
@@ -10,30 +8,25 @@ var Main = (function() {
             };
         }
     };
-    Main.wypiszOdPoczatku = function(lista) {
+    wypiszOdPoczatku = function(lista) {
         for (var i = 0; i < lista.length; i++) {
-
             console.info(lista[i]);
-
         }
     };
-    Main.wypiszOdKonca = function(lista) {
+    wypiszOdKonca = function(lista) {
         for (var i = lista.length - 1; i >= 0; i--) {
             {
                 process.stdout.write(lista[i] + ", ");
-
             };
         }
         console.info("\n");
     };
-    Main.main = function(args) {
+    main = function(args) {
         var lista = ([]);
         var n = require('readline-sync').question('podaj liczbe:');
-        Main.wczytaj(lista, n);
-        Main.wypiszOdPoczatku(lista);
-        Main.wypiszOdKonca(lista);
+        wczytaj(lista, n);
+        wypiszOdPoczatku(lista);
+        wypiszOdKonca(lista);
     };
-    return Main;
-}());
-Main["__class"] = "Main";
-Main.main(null);
+
+    main(null);

@@ -1,6 +1,4 @@
-var Main = (function() {
-    function Main() {}
-    Main.wypiszDane = function(napis) {
+    wypiszDane = function(napis) {
         var wynik = (napis.split(";").slice(0).slice(0));
         if (!(wynik.length === 5)) {
             throw new Error("Assertion error line 4: assert wynik.size() == 5;");
@@ -11,11 +9,9 @@ var Main = (function() {
         console.info("Zawod: " + wynik[3]);
         console.info("Zarobki: " + wynik[4]);
     };
-    Main.main = function(args) {
+    main = function(args) {
         var napis = "Jan; Kowalski; Warszawa; Programista; 1000";
-        Main.wypiszDane(napis);
+        wypiszDane(napis);
     };
-    return Main;
-}());
-Main["__class"] = "Main";
-Main.main(null);
+
+    main(null);

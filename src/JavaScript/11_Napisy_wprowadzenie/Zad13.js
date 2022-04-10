@@ -1,6 +1,4 @@
-var Main = (function() {
-    function Main() {}
-    Main.czyPierwsza = function(n) {
+    czyPierwsza = function(n) {
         if ((n % 2) === 0 && n !== 2) {
             return false;
         }
@@ -13,18 +11,18 @@ var Main = (function() {
         }
         return true;
     };
-    Main.znaki = function(napis) {
+    znaki = function(napis) {
         var znaki = ([]);
         for (var i = 0; i < napis.length; i++) {
             {
-                if (Main.czyPierwsza(i)) {
+                if (czyPierwsza(i)) {
                     (znaki.push(napis.charAt(i)) > 0);
                 }
             };
         }
         return (znaki.slice(0));
     };
-    Main.listyRowne = function(a1, a2) {
+    listyRowne = function(a1, a2) {
         if (a1 == null && a2 == null)
             return true;
         if (a1 == null || a2 == null)
@@ -37,19 +35,15 @@ var Main = (function() {
         }
         return true;
     };
-    Main.test1 = function() {
+    test1 = function() {
         var napis = "Kaczka lubi wiosne.";
         var wynik = (['a', 'c', 'z', 'a', 'l', ' ', 'i', 'e'].slice(0));
-
-        if (!Main.listyRowne(wynik, Main.znaki(napis))) {
+        if (!listyRowne(wynik, znaki(napis))) {
             throw new Error("Assertion error;");
         };
+    };
+    main = function(args) {
+        test1();
+    };
 
-    };
-    Main.main = function(args) {
-        Main.test1();
-    };
-    return Main;
-}());
-Main["__class"] = "Main";
-Main.main(null);
+    main(null);

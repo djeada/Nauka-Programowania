@@ -1,6 +1,4 @@
-var Main = (function() {
-    function Main() {}
-    Main.wczytaj = function(lista, n) {
+    wczytaj = function(lista, n) {
         console.info("podaj " + n + " liczb:");
         var rl = require('readline-sync');
         for (var i = 0; i < n; i++) {
@@ -10,21 +8,17 @@ var Main = (function() {
             };
         }
     };
-    Main.zwieksz = function(lista) {
+    zwieksz = function(lista) {
         for (var i = 0; i < lista.length; i++) {
-
             (lista[i] = eval(lista[i]) + 1);
-
         }
     };
-    Main.pomnoz = function(lista) {
+    pomnoz = function(lista) {
         for (var i = 0; i < lista.length; i++) {
-
             (lista[i] = lista[i] * i);
-
         }
     };
-    Main.zastap = function(lista) {
+    zastap = function(lista) {
         if ((lista.length == 0)) {
             return;
         }
@@ -34,27 +28,25 @@ var Main = (function() {
             };
         }
     };
-    Main.wypisz = function(lista) {
+    wypisz = function(lista) {
         for (var i = 0; i < lista.length; i++) {
             process.stdout.write(lista[i] + ", ");
         }
         process.stdout.write("\n");
     };
-    Main.main = function(args) {
+    main = function(args) {
         var lista = ([]);
         var n = require('readline-sync').question('podaj liczbe:');
-        Main.wczytaj(lista, n);
+        wczytaj(lista, n);
         var kopia = (lista.slice(0));
-        Main.zwieksz(kopia);
-        Main.wypisz(kopia);
+        zwieksz(kopia);
+        wypisz(kopia);
         kopia = (lista.slice(0));
-        Main.pomnoz(kopia);
-        Main.wypisz(kopia);
+        pomnoz(kopia);
+        wypisz(kopia);
         kopia = (lista.slice(0));
-        Main.zastap(kopia);
-        Main.wypisz(kopia);
+        zastap(kopia);
+        wypisz(kopia);
     };
-    return Main;
-}());
-Main["__class"] = "Main";
-Main.main(null);
+
+    main(null);

@@ -1,6 +1,4 @@
-var Main = (function() {
-    function Main() {}
-    Main.usunCzescWspolnaV1 = function(listaA, listaB) {
+    usunCzescWspolnaV1 = function(listaA, listaB) {
         for (var i = 0; i < listaA.length; i++) {
             {
                 if ((listaB.indexOf((listaA[i])) >= 0)) {
@@ -11,12 +9,11 @@ var Main = (function() {
         }
         return listaA;
     };
-    Main.test1 = function() {
+    test1 = function() {
         var listaA = [3, 6, 2, 7, 9]
         var listaB = [4, 2, 3, 5, 6]
         var oczekiwane = [7, 9]
-        var wynik = Main.usunCzescWspolnaV1(listaA, listaB);
-
+        var wynik = usunCzescWspolnaV1(listaA, listaB);
         if (wynik.length !== oczekiwane.length) {
             throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
         }
@@ -26,10 +23,8 @@ var Main = (function() {
             }
         }
     };
-    Main.main = function(args) {
-        Main.test1();
+    main = function(args) {
+        test1();
     };
-    return Main;
-}());
-Main["__class"] = "Main";
-Main.main(null);
+
+    main(null);

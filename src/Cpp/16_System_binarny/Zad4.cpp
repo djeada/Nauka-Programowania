@@ -9,93 +9,62 @@ a) Oblicz z ilu zer sklada sie binarna reprezentacja otrzymanej liczby.
 b) Oblicz z ilu jedynek sklada sie binarna reprezentacja otrzymanej liczby.
 */
 
-int policzUstawioneBity(int liczba) {
-  /*
-   * Funkcja zwraca ilosc ustawionych bitow w liczbie.
-   */
-  int suma = 0;
-
-  while (liczba > 0) {
-    if (liczba & 1)
-      suma++;
-    liczba >>= 1;
-  }
-
-  return suma;
+int zera(int n) {
+    int licznik = 0;
+    while (n > 0) {
+        if (n % 2 == 0) {
+            licznik++;
+        }
+        n /= 2;
+    }
+    return licznik;
 }
 
-void przygotujTablice(std::vector<int> &tablica) {
-  /*
-   * Funkcja wypelnia tablice zawierajaca ilosc ustawionych bitow dla kazdej
-   * liczby w zakresie 0-255.
-   */
-  tablica.clear();
-
-  for (int i = 0; i < 256; i++)
-    tablica.push_back(policzUstawioneBity(i));
+int jedynki(int n) {
+    int licznik = 0;
+    while (n > 0) {
+        if (n % 2 == 1) {
+            licznik++;
+        }
+        n /= 2;
+    }
+    return licznik;
 }
 
-int liczbaBitow(int liczba) {
-  /*
-   * Funkcja zwraca ilosc bitow w liczbie.
-   */
-  return (int)log2(liczba) + 1;
+void test1() {
+    int a = -2;
+    int oczekiwane = 0;
+    int wynik = zera(a);
+    assert(wynik == oczekiwane);
 }
 
-int zera(int liczba, std::vector<int> &tablica) {
-  /*
-   * Funkcja zwraca ilosc zer w binarnej reprezentacji liczby.
-   */
-  return liczbaBitow(liczba) - tablica[liczba & 0xff] +
-         tablica[(liczba >> 8) & 0xff] + tablica[(liczba >> 16) & 0xff] +
-         tablica[(liczba >> 24) & 0xff];
+void test2() {
+    int a = 3;
+    int oczekiwane = 2;
+    int wynik = jedynki(a);
+    assert(wynik == oczekiwane);
 }
 
-int jedynki(int liczba, std::vector<int> &tablica) {
-  /*
-   * Funkcja zwraca ilosc jedynek w binarnej reprezentacji liczby.
-   */
-  return tablica[liczba & 0xff] + tablica[(liczba >> 8) & 0xff] +
-         tablica[(liczba >> 16) & 0xff] + tablica[(liczba >> 24) & 0xff];
+void test3() {
+    int a = 3;
+    int oczekiwane = 0;
+    int wynik = zera(a);
+    assert(wynik == oczekiwane);
 }
 
-void test1(std::vector<int> &tablica) {
-  int liczba = 10;
-  int wynik = 2;
-
-  assert(jedynki(liczba, tablica) == wynik);
-}
-
-void test2(std::vector<int> &tablica) {
-  int liczba = 7;
-  int wynik = 3;
-
-  assert(jedynki(liczba, tablica) == wynik);
-}
-
-void test3(std::vector<int> &tablica) {
-  int liczba = 10;
-  int wynik = 2;
-
-  assert(zera(liczba, tablica) == wynik);
-}
-
-void test4(std::vector<int> &tablica) {
-  int liczba = 7;
-  int wynik = 0;
-
-  assert(zera(liczba, tablica) == wynik);
+void test4() {
+    int a = 7;
+    int oczekiwane = 3;
+    int wynik = jedynki(a);
+    assert(wynik == oczekiwane);
 }
 
 int main() {
 
-  std::vector<int> tablica;
-  przygotujTablice(tablica);
-
-  test1(tablica);
-  test2(tablica);
-  test3(tablica);
-  test4(tablica);
+  test1();
+  test2();
+  test3();
+  test4();
 
   return 0;
 }

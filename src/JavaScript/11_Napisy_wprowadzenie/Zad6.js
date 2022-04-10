@@ -1,6 +1,4 @@
-var Main = (function() {
-    function Main() {}
-    Main.zamienV1 = function(napis) {
+    zamienV1 = function(napis) {
         var wynik = ""; {
             var tablica = (napis).split('');
             for (var i = 0; i < tablica.length; i++) {
@@ -17,30 +15,28 @@ var Main = (function() {
         }
         return wynik;
     };
-    Main.zamienV2 = function(napis) {
+    zamienV2 = function(napis) {
         return napis.replace(new RegExp("a", 'g'), "?");
     };
-    Main.test1 = function() {
+    test1 = function() {
         var napis = "pacZka!";
         var oczekiwane = "p?cZk?!";
-        var wynik = Main.zamienV1(napis);
+        var wynik = zamienV1(napis);
         if (!(wynik === oczekiwane)) {
             throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
         }
     };
-    Main.test2 = function() {
+    test2 = function() {
         var napis = "pacZka!";
         var oczekiwane = "p?cZk?!";
-        var wynik = Main.zamienV2(napis);
+        var wynik = zamienV2(napis);
         if (!(wynik === oczekiwane)) {
             throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
         }
     };
-    Main.main = function(args) {
-        Main.test1();
-        Main.test2();
+    main = function(args) {
+        test1();
+        test2();
     };
-    return Main;
-}());
-Main["__class"] = "Main";
-Main.main(null);
+
+    main(null);

@@ -65,20 +65,16 @@ def iloraz(a, b):
     a = abs(a)
     b = abs(b)
 
-    reszta = 0
-
-    def wew_iloczyn(dzielna, dzielnik, org_b):
+    def wew_iloraz(dzielna, dzielnik, org_b):
         """
         Funkcja wewnetrzna funkcji iloraz.
         """
         wynik = 1
 
         if dzielna == dzielnik:
-            reszta = 0
             return 1
 
         elif dzielna < dzielnik:
-            reszta = dzielna
             return 0
 
         while dzielnik <= dzielna:
@@ -89,11 +85,11 @@ def iloraz(a, b):
             dzielnik >>= 1
             wynik >>= 1
 
-        wynik += wew_iloczyn(dzielna - dzielnik, org_b, org_b)
+        wynik += wew_iloraz(dzielna - dzielnik, org_b, org_b)
 
         return wynik
 
-    return znak * wew_iloczyn(a, b, b)
+    return znak * wew_iloraz(a, b, b)
 
 
 def test_suma():
