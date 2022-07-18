@@ -1,4 +1,5 @@
-Interakcja z konsolą
+## Interakcja z konsolą
+
 Zad 1. (★☆☆)
 
 Tytuł: Wypisz na standardowe wyjście.
@@ -225,7 +226,8 @@ Przykład:
 
 Dla pobranych liczb: 3.5 (stopa procentowa), 8 (liczba lat) oraz 12000 (wysokość kredytu), powinny zostać wypisane liczby 143.5 (miesięczna rata) oraz 13776 (koszt kredytu).
 
-Instrukcje sterujące
+## Instrukcje sterujące
+
 Zad 1. (★☆☆)
 
 Tytuł: Porównanie ze stałą.
@@ -374,8 +376,8 @@ Przykład:
 
 Dla pobranych liczb: 1, 2 oraz 3, powinna zostać wypisana informacja o niemożliwości zbudowania trójkąta z podanych boków.
 
+## Daty
 
-Daty
 Zad 1. (★☆☆)
 
 Tytuł: Czy liczba jest poprawnym numerem?	
@@ -507,7 +509,8 @@ Przykład:
 
 Dla pobranych liczb: 9, 10 oraz 2020, powinien zostać zwrócony napis “Czwartek”.
 
-Pętla — wprowadzenie
+## Pętla — wprowadzenie
+
 Zad 1. (★☆☆)
 
 Tytuł: Warunek kończący pętle.
@@ -626,8 +629,8 @@ Przykład:
 
 Dla pobranych liczb: 40 i 100, powinny zostać wypisane liczby 30 i 10.
 
+## Pętla — wyznaczanie cyfr liczby
 
-Pętla — wyznaczanie cyfr liczby
 Zad 1. (★☆☆)
 
 Tytuł: Ile cyfr ma liczba?
@@ -728,7 +731,8 @@ Dla pobranej liczby: 27, powinna zostać wypisana liczba: 999.
 Dla pobranej liczby: 9999999999999, powinny zostać wypisane liczby: 234, 351, 468, 585, 702, 819, 936.
 Dla pobranej liczby: 5, powinny zostać wypisane liczby: 2 i 4.
 
-Funkcje — wprowadzenie
+## Funkcje — wprowadzenie
+
 Zad 1. (★☆☆)
 
 Tytuł: Zwróć stałą.
@@ -869,8 +873,8 @@ Przykład:
 
 Dla otrzymanych liczb: 7 oraz 2, powinna zostać zwrócona liczba 3.
 
+## Pętla — algorytmy matematyczne
 
-Pętla — algorytmy matematyczne
 Zad 1. (★☆☆)
 
 Tytuł: Średnia z n liczb.
@@ -989,9 +993,8 @@ Przykład:
 
 Dla otrzymanych liczb: 7 oraz 2, powinna zostać zwrócona liczba 3.
 
+## Pętla — pętle zagnieżdżone
 
-
-Pętla — pętle zagnieżdżone
 Zad 1. (★☆☆)
 
 Tytuł: Kwadrat.
@@ -1154,9 +1157,8 @@ Przykład:
 
 Dla otrzymanej liczby 5 powinny zostać wypisane: 2, 3, 5, 7, 11.
 
+## Listy — wprowadzenie
 
-
-Listy — wprowadzenie
 Zad 1. (★☆☆)
 
 Tytuł: Wczytaj i wypisz.
@@ -1427,7 +1429,8 @@ Przykład:
 
 Dla otrzymanej listy: [7, 8, -1, 4, 5], powinna zostać zwrócona liczba 2.
 
-Listy — dwie listy
+## Listy — dwie listy
+
 Zad 1. (★☆☆)
 
 Tytuł: Wypisz na przemian.
@@ -1570,8 +1573,8 @@ Przykład:
 
 Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinno zostać zwrócone: 4.5.
 
+## Napisy — wprowadzenie
 
-Napisy — wprowadzenie
 Zad 1. (★☆☆)
 
 Tytuł: Odwróć napis.
@@ -1841,7 +1844,8 @@ Przykład:
 
 Dla otrzymanego napisu: "Cameron Diaz", powinien zostać zwrócony napis: "noremaC zaiD".
 
-Napisy — anagramy i palindromy
+## Napisy — anagramy i palindromy
+
 Zad 1. (★☆☆)
 
 Tytuł: Czy słowo jest palindromem?
@@ -1960,7 +1964,8 @@ Przykład:
 
 Dla otrzymanego napisu: “xxxx”, powinna zostać zwrócona lista: [“x”, “xx”, 'xxx', 'xxxx'].
 
-Listy 2D
+## Listy 2D
+
 Zad 1. (★☆☆)
 
 Tytuł: Macierz a identycznych wierszy składających się z liczb od 0 do b.
@@ -2027,7 +2032,7 @@ Tytuł: Magiczny kwadrat.
 
 Treść: Otrzymujesz macierz kwadratową. Sprawdź, czy macierz jest kwadratem magicznym. 
 
-Podpowiedź: Kwadrat magiczny składa się z powtarzających` się dodatnich liczb naturalnych. Suma elementów w każdym wierszu, w każdej kolumnie oraz na każdej przekątnej jest taka sama.
+Podpowiedź: Kwadrat magiczny składa się z powtarzających się dodatnich liczb naturalnych. Suma elementów w każdym wierszu, w każdej kolumnie oraz na każdej przekątnej jest taka sama.
 
 Dane wejściowe: Lista list liczb naturalnych.
 
@@ -2134,9 +2139,8 @@ Wypisz na standardowe wyjście planszę składającą się z 10x10 kropek i popr
 
 Powtarzaj krok 2, dopóki wszystkie pozycje statków nie zostaną odkryte przez użytkownika lub dopóki na planszy nie znajdzie się 10 literek x. W obu przypadkach zakończ grę i poinformuj użytkownika o wyniku.
 
+## Funkcje — wielomiany
 
-
-Funkcje — wielomiany
 Zad 1. (★☆☆)
 
 Tytuł: Wartość wielomianu w punkcie.
@@ -2221,9 +2225,8 @@ Przykład:
 
 Dla otrzymanej listy: [1, 2, 1], powinna zostać zwrócona lista: [-1, -1].
 
+## Funkcje — rekurencja
 
-
-Funkcje — rekurencja
 Zad 1. (★☆☆)
 
 Tytuł: Liczby naturalne mniejsze od N.
@@ -2370,7 +2373,8 @@ Dane wyjściowe: Liczba naturalna.
 Przykład:
 Dla otrzymanej liczby: 20, powinna zostać zwrócona liczba: 4.
 
-System binarny
+## System binarny
+
 Zad 1. (★☆☆)
 
 Tytuł: Konwersja między systemami binarnym i dziesiętnym.
@@ -2568,8 +2572,8 @@ Przykład:
 
 Dla otrzymanej liczby: 14, powinna zostać zwrócona liczba: 1.
 
+## Słowniki
 
-Słowniki
 Zad 1. (★☆☆)
 
 Tytuł: Kluczami są liczby, a wartościami ich kwadraty.
@@ -2760,8 +2764,8 @@ Dla otrzymanych słowników:
 {“a”: [7, 4, 6], “c”: [2, 3, 1], “x”: [-2, 11, 9]}, 
 powinna zostać zwrócona wartość logiczna: Prawda.
 
+## Operacje na plikach
 
-Operacje na plikach
 Zad 1. (★☆☆)
 
 Tytuł: Sprawdź, czy ścieżka należy do pliku/folderu.
@@ -2900,8 +2904,8 @@ Dane wejściowe: Dwa napisy.
 
 Dane wyjściowe: Brak.
 
+## Klasy
 
-Klasy
 Zad 1. (★★☆)
 
 Tytuł: Zaprojektuj klasę Koło.
@@ -2982,7 +2986,8 @@ Dane wejściowe: Brak.
 
 Dane wyjściowe: Liczba naturalna.
 
-Dziedziczenie
+## Dziedziczenie
+
 Zad 1.   (★☆☆)
 
 Tytuł: Wywołaj metodę klasy bazowej w klasie potomnej.
@@ -3026,7 +3031,8 @@ W skład klasy ObiektLatajacy powinny wchodzić funkcje wypisujące na standardo
 
 Napisz program testujący twoją klasę.
 
-Sortowanie — Algorytmy
+## Sortowanie — Algorytmy
+
 Zad 1.  (★☆☆)
 
 Tytuł: Sortowanie bąbelkowe.
@@ -3116,9 +3122,8 @@ Przykład:
 
 Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
 
+## Sortowanie — praktyka
 
-
-Sortowanie — praktyka
 Zad 1.  (★☆☆)
 
 Tytuł: Posortuj znaki w słowie.
@@ -3223,8 +3228,8 @@ Przykład:
 
 Dla otrzymanej listy: [1, 0, 1, 2, 2, 0, 1], powinna zostać zwrócona lista: [0, 0, 1, 1, 1, 2, 2].
 
+## Wyrażenia regularne
 
-Wyrażenia regularne
 Zad 1.  (★★☆)
 
 Tytuł: Sprawdź poprawność adresu e-mail.
@@ -3454,7 +3459,8 @@ Przykład:
 
 Dla otrzymanego napisu: “C:\\my-long\\path_directory\\file.html”, powinien zostać zwrócony napis: “file.html”.
 
-Listy — trudne
+## Listy — trudne
+
 Zad 1.  (★★☆)
 
 Tytuł: Najdłuższy nieprzerwany ciąg jedynek.
@@ -3599,8 +3605,8 @@ Przykład:
 
 Dla otrzymanej listy: [1, -2, 6, 4, -3, 2, -4, -3], powinna zostać zwrócona lista: [4, -3, 2, -4].
 
+## Napisy — trudne
 
-Napisy — trudne
 Zad 1. (★★☆)
 
 Tytuł: Podmiana wszystkich wystąpień słowa.  
