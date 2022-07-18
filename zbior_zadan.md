@@ -1,6 +1,6 @@
 ## Interakcja z konsolą
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Wypisz na standardowe wyjście.
 
@@ -14,7 +14,7 @@ Przykład:
 
 Przykładowo mogą zostać wypisane twoje inicjały lub napis „Witaj świecie!”.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Zamiana kolejności.
 
@@ -28,7 +28,7 @@ Przykład:
 
 Dla pobranych liczb: -7 oraz 4, powinny zostać wypisane liczby: 4 i -7.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Narysuj kształt.
 
@@ -63,7 +63,7 @@ Dane wejściowe: Brak.
 
 Dane wyjściowe: Komunikat.
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Operacje arytmetyczne.
 
@@ -89,7 +89,7 @@ Dla pobranych liczb: 9 oraz 3, powinna zostać wypisana liczba: 3.
 Dla pobranych liczb: 8 oraz 4, powinna zostać wypisana liczba: 0.
 Dla pobranych liczb: 2 oraz 2, powinna zostać wypisana liczba: 4.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Wartość funkcji w punkcie.
 
@@ -126,7 +126,7 @@ Dla pobranych liczb: 1, 1, 1, 1, 1 i 1 powinna zostać wypisana liczba: 2.
 Dla pobranej liczby: 2, powinna zostać wypisana liczba: 57.179.
 
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: Zamiana jednostek.
 
@@ -160,7 +160,7 @@ Dla pobranej liczby: 120, powinna zostać wypisana liczba:  2.094.
 Dla pobranej liczby: 100, powinny zostać wypisane liczby: 37.777 i -235.222.
 
 
-Zad 7. (★☆☆)
+### Zad 7. (★☆☆)
 
 Tytuł: Pola figur i objętości brył.
 
@@ -196,7 +196,7 @@ Dla pobranej liczby: 2, powinna zostać wypisana liczba: 33.493.
 Dla pobranych liczb: 3 i 2, powinna zostać wypisana liczba: 18.84.
 Dla pobranych liczb: 2, 2 i 2 powinna zostać wypisana liczba: 8.
 
-Zad 8. (★☆☆)
+### Zad 8. (★☆☆)
 
 Tytuł: Cena podłogi.	
 
@@ -210,7 +210,7 @@ Dane wyjściowe: Liczba naturalna.
 
 Dla pobranych liczb: 2 (cena płytki), 3x3 (wymiary płytki) oraz 20x40 (wymiary podłogi), powinna zostać wypisana liczba: 196.
 
-Zad 9. (★☆☆)
+### Zad 9. (★☆☆)
 
 Tytuł: Kalkulator kredytowy.	
 
@@ -228,7 +228,7 @@ Dla pobranych liczb: 3.5 (stopa procentowa), 8 (liczba lat) oraz 12000 (wysokoś
 
 ## Instrukcje sterujące
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Porównanie ze stałą.
 
@@ -242,7 +242,7 @@ Przykład:
 
 Dla pobranej liczby: 10, powinna zostać wypisana liczba: 10.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Porównanie ze zmienną.
 
@@ -256,7 +256,7 @@ Przykład:
 
 Dla pobranych liczb: -7 oraz 4, powinna zostać wypisana informacja, że liczby są różne.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Znak liczby.
 
@@ -270,7 +270,7 @@ Przykład:
 
 Dla pobranej liczby: 2, powinna zostać wypisana informacja, że liczba jest dodatnia.
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Maks/min dwóch liczb.
 
@@ -284,7 +284,7 @@ Przykład:
 
 Dla pobranych liczb: 1 oraz 4, powinny zostać wypisane liczby: 4 i 1.
 
-Zad 5. (★★☆)
+### Zad 5. (★★☆)
 
 Tytuł: Sortowanie trzech liczb.
 
@@ -298,7 +298,7 @@ Przykład:
 
 Dla pobranych liczb: 2, 1 oraz 4, powinny zostać wypisane liczby: 1, 2 i 4.
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: Maks z czterech liczb.
 
@@ -312,7 +312,7 @@ Przykład:
 
 Dla pobranych liczb: 2, 5, 1 oraz 4, powinny zostać wypisane liczby: 5, 4, 2 i 1.
 
-Zad 7. (★☆☆)
+### Zad 7. (★☆☆)
 
 Tytuł: Dowody praw logicznych.
 
@@ -360,7 +360,7 @@ Dla p mającego wartość logiczną: True  oraz q mającego wartość logiczną:
 Dla p mającego wartość logiczną: False  oraz q mającego wartość logiczną: True  wyrażenie ~(p v q) < = > (~p Ʌ ~q) ma wartość logiczną: True.
 Dla p mającego wartość logiczną: True  oraz q mającego wartość logiczna: True  wyrażenie ~(p v q) < = > (~p Ʌ ~q) ma wartość logiczną: True.
 
-Zad 8. (★☆☆)
+### Zad 8. (★☆☆)
 
 Tytuł: Warunek trójkąta.
 
@@ -378,7 +378,7 @@ Dla pobranych liczb: 1, 2 oraz 3, powinna zostać wypisana informacja o niemożl
 
 ## Daty
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Czy liczba jest poprawnym numerem?	
 
@@ -396,7 +396,7 @@ Przykład:
 Dla pobranej liczby: 10, nie powinna być wypisana żadna liczba.
 Dla pobranej liczby: 5, powinna zostać wypisana liczba: 5.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Czy osoba jest pełnoletnia?
 
@@ -410,7 +410,7 @@ Przykład:
 
 Dla pobranych liczb: 5, 12, 1999 oraz 20, 11, 2020, powinna zostać informacja o pełnoletności osoby.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Rok przestępny.	
 
@@ -426,7 +426,7 @@ Przykład:
 
 Dla pobranej liczby: 2100, powinna zostać wypisana informacja, że rok nie jest przestępny.
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Dzień tygodnia odpowiadający danej liczbie.	
 
@@ -440,7 +440,7 @@ Przykład:
 
 Dla pobranej liczby: 2, powinien zostać zwrócony napis “Wtorek”.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Ile dni ma miesiąc?
 
@@ -454,7 +454,7 @@ Przykład:
 
 Dla pobranej liczby: 1, powinna zostać zwrócona liczba 31.
 
-Zad 6. (★★☆)
+### Zad 6. (★★☆)
 
 Tytuł: Poprawność daty.	
 
@@ -470,7 +470,7 @@ Przykład:
 
 Dla pobranych liczb: 2, 1 oraz 4, powinna zostać wypisana informacja o poprawności daty.
 
-Zad 7. (★★☆)
+### Zad 7. (★★☆)
 
 Tytuł: Ile dni minęło od początku roku?	
 
@@ -482,7 +482,7 @@ Dane wyjściowe: Liczba naturalna.
 
 Przykład: Dla pobranych liczb: 14, 2 oraz 1482, powinna zostać zwrócona liczba 45. 
 
-Zad 8. (★★☆)
+### Zad 8. (★★☆)
 
 Tytuł: Jaki mamy dzień tygodnia?	
 
@@ -511,7 +511,7 @@ Dla pobranych liczb: 9, 10 oraz 2020, powinien zostać zwrócony napis “Czwart
 
 ## Pętla — wprowadzenie
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Warunek kończący pętle.
 
@@ -521,7 +521,7 @@ Dane wejściowe: Liczba naturalna.
 
 Dane wyjściowe: Komunikat.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Liczby mniejsze od podanej liczby.
 
@@ -535,7 +535,7 @@ Przykład:
 
 Dla pobranej liczby: 3, powinny zostać wypisane liczby: 2, 1.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Liczba pi.
 
@@ -551,7 +551,7 @@ Dla pobranej liczby: 2, powinno zostać wypisane:
 3,14 
 3,14.
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Suma liczb mniejszych od liczby.	
 
@@ -565,7 +565,7 @@ Przykład:
 
 Dla pobranej liczby: 5, powinna zostać wypisana liczba: 10.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Liczby z przedziału.
 
@@ -582,7 +582,7 @@ Przykład:
 
 Dla pobranych liczb: 9 i 5 powinny zostać wypisane liczby 6, 7 i 8.
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: Suma wyrazów ciągu.
 
@@ -602,7 +602,7 @@ Przykład:
 
 Dla pobranej liczby: 2, w podpunkcie a) powinna zosać wypisana liczba: 1.
 
-Zad 7. (★☆☆)
+### Zad 7. (★☆☆)
 
 Tytuł: Liczba Pi podniesiona do potęgi.
 
@@ -615,7 +615,7 @@ Dane wyjściowe: Liczba naturalna.
 
 Przykład: Dla pobranej liczby: 1, powinna zostać wypisana liczba: 3,14.
 
-Zad 8. (★★☆)
+### Zad 8. (★★☆)
 
 Tytuł: Znajdź liczbę kur oraz owieczek.
 
@@ -631,7 +631,7 @@ Dla pobranych liczb: 40 i 100, powinny zostać wypisane liczby 30 i 10.
 
 ## Pętla — wyznaczanie cyfr liczby
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Ile cyfr ma liczba?
 
@@ -645,7 +645,7 @@ Przykład:
 
 Dla pobranej liczby: 342, powinna zostać wypisana liczba: 3.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Cyfry, z których składa się liczba.
 
@@ -659,7 +659,7 @@ Przykład:
 
 Dla pobranej liczby: 8214, powinny zostać wypisane cyfry 4, 1, 2 i 8.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Suma cyfr liczby.
 
@@ -674,7 +674,7 @@ Przykład:
 Dla pobranej liczby: 129, powinna zostać wypisana liczba: 3.
 
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Cyfry liczby spełniające warunek.
 
@@ -694,7 +694,7 @@ Dla pobranej liczby: 932, powinna zostać wypisana liczba: 2.
 Dla pobranej liczby: 101, powinny zostać wypisane liczby: 1, 0 i 1.
 Dla pobranej liczby: 650, powinny zostać wypisane liczby: 6 i 5.
 
-Zad 5. (★★☆)
+### Zad 5. (★★☆)
 
 Tytuł: Czy liczba jest palindromem?
 
@@ -708,7 +708,7 @@ Przykład:
 
 Dla pobranej liczby: 13231, powinna zostać wypisana informacja o tym, że liczba jest palindromem.
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: Wszystkie liczby spełniające warunek.
 
@@ -733,7 +733,7 @@ Dla pobranej liczby: 5, powinny zostać wypisane liczby: 2 i 4.
 
 ## Funkcje — wprowadzenie
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Zwróć stałą.
 
@@ -750,7 +750,7 @@ Liczba 3.
 Napis “Tak”.
 Wartość logiczna Prawda.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Operacja arytmetyczna.
 
@@ -774,7 +774,7 @@ Dla pobranych liczb: 4 i 5, powinna zostać zwrócona liczba 20.
 Dla pobranych liczb: 9 i 3, powinna zostać zwrócona liczba 3.
 Dla pobranych liczb: 7 i 7, powinna zostać zwrócona liczba 0.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Sprawdź warunek.
 
@@ -796,7 +796,7 @@ Dla pobranych liczb: 3 i 2, powinna zostać zwrócona wartość logiczna: Prawda
 Dla pobranych liczb: 3 i 2, powinna zostać zwrócona wartość logiczna: Fałsz.
 Dla pobranych liczb: 3 i 2, powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Maks i min.
 
@@ -821,7 +821,7 @@ Dla otrzymanych liczb: 3 oraz 1, powinna zostać zwrócona liczba 3.
 Dla otrzymanych liczb: 3, 2 oraz 1, powinna zostać zwrócona liczba 1.
 Dla otrzymanych liczb: 3, 2 oraz 1, powinna zostać zwrócona liczba 3.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Zamień wartości miejscami.
 
@@ -835,7 +835,7 @@ Przykład:
 
 Dla otrzymanych liczb: 8 i 5, powinny zostać zwrócone liczby 5 i 8.
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: Cyfry liczby.
 
@@ -849,7 +849,7 @@ Przykład:
 
 Dla pobranej liczby: 13231, powinna zostać zwrócona liczba 10.
 
-Zad 7. (★★☆)
+### Zad 7. (★★☆)
 
 Tytuł: Hasło.
 
@@ -859,7 +859,7 @@ Dane wejściowe: Dwa napisy.
 
 Dane wyjściowe: Komunikat.
 
-Zad 8. (★★☆)
+### Zad 8. (★★☆)
 
 Tytuł: Zaokrąglanie w dół.
 
@@ -875,7 +875,7 @@ Dla otrzymanych liczb: 7 oraz 2, powinna zostać zwrócona liczba 3.
 
 ## Pętla — algorytmy matematyczne
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Średnia z n liczb.
 
@@ -890,7 +890,7 @@ Przykład:
 Dla pobranych liczb: 2, 4 i 6, powinna zostać zwrócona liczba 4.
 
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Podnieś a do b.	
 
@@ -904,7 +904,7 @@ Przykład:
 
 Dla pobranych liczb: 3 i 5, powinna zostać zwrócona liczba 243.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Mnożenie i dzielenie.
 
@@ -922,7 +922,7 @@ Przykład:
 Dla pobranych liczb: 3 i 2, powinna zostać zwrócona liczba 6.
 Dla pobranych liczb: 10 i 5, powinna zostać zwrócona liczba 2.
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Silnia.
 
@@ -936,7 +936,7 @@ Przykład:
 
 Dla otrzymanej liczby 3 powinna zostać zwrócona liczba 6.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: NWD.
 
@@ -950,7 +950,7 @@ Przykład:
 
 Dla otrzymanych liczb: 60 i 45, powinna zostać zwrócona liczba 15.
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: NWW.
 
@@ -964,7 +964,7 @@ Przykład:
 
 Dla otrzymanych liczb: 7 i 9, powinna zostać zwrócona liczba 63.
 
-Zad 7. (★★☆)
+### Zad 7. (★★☆)
 
 Tytuł: Pierwiastek metodą Newtona.
 
@@ -979,7 +979,7 @@ Przykład:
 Dla otrzymanej liczby 16 powinna zostać zwrócona liczba 4.
 
 
-Zad 8. (★★☆)
+### Zad 8. (★★☆)
 
 Tytuł: Naiwny test pierwszości.
 
@@ -995,7 +995,7 @@ Dla otrzymanych liczb: 7 oraz 2, powinna zostać zwrócona liczba 3.
 
 ## Pętla — pętle zagnieżdżone
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Kwadrat.
 
@@ -1011,7 +1011,7 @@ Dla otrzymanej liczby 2 powinno zostać wypisane:
 **
 **
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Trójkąt.
 
@@ -1028,7 +1028,7 @@ Dla otrzymanej liczby 3 powinno zostać wypisane:
 **
 ***
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Odwrócony trójkąt.
 
@@ -1046,7 +1046,7 @@ Dla otrzymanej liczby 4 powinno zostać wypisane:
 **
 *
 
-Zad 4. (★★☆)
+### Zad 4. (★★☆)
 
 Tytuł: Tabliczka mnożenia.
 
@@ -1064,7 +1064,7 @@ Dla otrzymanej liczby 3 powinno zostać wypisane:
 2 4 6
 3 6 9
 
-Zad 5. (★★☆)
+### Zad 5. (★★☆)
 
 Tytuł: Litera X.
 
@@ -1083,7 +1083,7 @@ Dla otrzymanej liczby 4 powinno zostać wypisane:
  * *
 *   *
 
-Zad 6. (★★☆)
+### Zad 6. (★★☆)
 
 Tytuł: Litera Z.
 
@@ -1103,7 +1103,7 @@ Dla otrzymanej liczby 5 powinno zostać wypisane:
   *
 *****
 
-Zad 7. (★★☆)
+### Zad 7. (★★☆)
 
 Tytuł: Choinka.
 
@@ -1126,7 +1126,7 @@ Dla otrzymanej liczby 3 powinno zostać wypisane:
 
 
 
-Zad 8. (★★☆)
+### Zad 8. (★★☆)
 
 Tytuł: Trójkąt Pascala.
 
@@ -1143,7 +1143,7 @@ Dla otrzymanej liczby 3 powinno zostać wypisane:
 **
 ***
 
-Zad 9. (★★☆)
+### Zad 9. (★★☆)
 
 Tytuł: N pierwszych liczb pierwszych.
 
@@ -1159,7 +1159,7 @@ Dla otrzymanej liczby 5 powinny zostać wypisane: 2, 3, 5, 7, 11.
 
 ## Listy — wprowadzenie
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Wczytaj i wypisz.
 
@@ -1176,7 +1176,7 @@ Przykład:
 
 Dla N równego 3 oraz pobranych liczb: 8, 12, 7, w drugim podpunkcie powinno zostać wypisane: 7, 12, 8.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Wczytaj, zmodyfikuj i wypisz.
 
@@ -1197,7 +1197,7 @@ Przykład:
 Dla N równego 3 oraz pobranych liczb: 3, 9, 7, w pierwszym podpunkcie powinno zostać wypisana: 4, 10, 8.
 
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Pierwsze wystąpienie klucza.
 
@@ -1211,7 +1211,7 @@ Przykład:
 
 Dla otrzymanej listy: [2, 9, -1, 3, 8] oraz klucza -1 powinno zostać zwrócone 2. 
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Minimum oraz maksimum.
 
@@ -1225,7 +1225,7 @@ Przykład:
 
 Dla otrzymanej listy: [4, -7, 8, 5, 6, -9, 10, 2, -8], powinny zostać zwrócone liczby 10 oraz -9.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Zmodyfikuj elementy spełniające warunek.
 
@@ -1245,7 +1245,7 @@ Przykład:
 
 Dla otrzymanej listy: [3, 7, 2, 5, 8], powinna zostać zwrócona lista: [4, 3, 9].
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: Czy średnia elementów znajduje się w liście?
 
@@ -1259,7 +1259,7 @@ Przykład:
 
 Dla otrzymanej listy: [5, 3, 7, 2, 5, 8], powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 7. (★☆☆)
+### Zad 7. (★☆☆)
 
 Tytuł: Liczba mniejsza od największej i większa od wszystkich pozostałych.
 
@@ -1273,7 +1273,7 @@ Przykład:
 
 Dla otrzymanej listy: [9, 2, 3, 2, 1, 7], powinna zostać zwrócona liczba: 8.0.
 
-Zad 8. (★☆☆)
+### Zad 8. (★☆☆)
 
 Tytuł: Usuń klucz.
 
@@ -1288,7 +1288,7 @@ Przykład:
 Dla otrzymanej listy: [6, 2, 1, 4, 27] oraz 4, powinna zostać zwrócona lista: [6, 2, 1, 27].
 
 
-Zad 9. (★☆☆)
+### Zad 9. (★☆☆)
 
 Tytuł: Usuń duplikaty.
 
@@ -1303,7 +1303,7 @@ Przykład:
 Dla otrzymanej listy: [3, 2, 1, 3, 2, 2], powinna zostać zwrócona lista: [3, 2, 1].
 
 
-Zad 10. (★★☆)
+### Zad 10. (★★☆)
 
 Tytuł: Czy punkty mogą stanowić wierzchołki trójkąta?
 
@@ -1317,7 +1317,7 @@ Przykład:
 
 Dla otrzymanej listy: [-3, -2, -3, 1, -3, 0], powinna zostać zwrócona wartość logiczna: Fałsz.
 
-Zad 11. (★★☆)
+### Zad 11. (★★☆)
 
 Tytuł: Samochody.
 
@@ -1331,7 +1331,7 @@ Przykład:
 
 Dla otrzymanej listy: 'A', 'B', 'A', 'B', 'B', powinna zostać zwrócona liczba 5.
 
-Zad 12. (★★☆)
+### Zad 12. (★★☆)
 
 Tytuł: Rotacja w lewo/prawo.
 
@@ -1345,7 +1345,7 @@ Przykład:
 
 Dla otrzymanej listy: [5, 27, 6, 2, 1, 10, 8] oraz liczb 0 i 2, powinna zostać zwrócona lista: [6, 2, 1, 10, 8, 5, 27].
 
-Zad 13. (★★☆)
+### Zad 13. (★★☆)
 
 Tytuł: Brakujący element w liście.
 
@@ -1359,7 +1359,7 @@ Przykład:
 
 Dla otrzymanej listy: [5, 2, 1, 3] powinna zostać zwrócona liczba: 4.
 
-Zad 14. (★★☆)
+### Zad 14. (★★☆)
 
 Tytuł: Element bez pary w liście.
 
@@ -1373,7 +1373,7 @@ Przykład:
 
 Dla otrzymanej listy: [1, 3, 1,  7, 3, 1, 1] powinna zostać zwrócona liczba: 7.
 
-Zad 15. (★★☆)
+### Zad 15. (★★☆)
 
 Tytuł: Element dominujący.
 
@@ -1387,7 +1387,7 @@ Przykład:
 
 Dla otrzymanej listy: [4, 7, 4, 4, 2] powinna zostać zwrócona liczba: 4.
 
-Zad 16. (★★☆)
+### Zad 16. (★★☆)
 
 Tytuł: Suma dwóch.
 
@@ -1401,7 +1401,7 @@ Przykład:
 
 Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, powinna zostać zwrócona para: (0, 2).
 
-Zad 17. (★★☆)
+### Zad 17. (★★☆)
 
 Tytuł: Pary, których suma jest równa liczbie.
 
@@ -1415,7 +1415,7 @@ Przykład:
 
 Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5, powinna zostać zwrócona lista: [(1, 4), (2, 3)].
 
-Zad 18. (★★☆)
+### Zad 18. (★★☆)
 
 Tytuł: Lista posortowana została przesunięta.
 
@@ -1431,7 +1431,7 @@ Dla otrzymanej listy: [7, 8, -1, 4, 5], powinna zostać zwrócona liczba 2.
 
 ## Listy — dwie listy
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Wypisz na przemian.
 
@@ -1445,7 +1445,7 @@ Przykład:
 
 Dla otrzymanych list [5, 3, 7, 2] oraz [1 -2, 3], powinno zostać wypisane: 5, 1, 3, -2, 7, 3, 2.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Połączenie list.
 
@@ -1462,7 +1462,7 @@ Przykład:
 
 Dla otrzymanych list [-2, 8, 3, 6] oraz [7, 5, 0], w drugim podpunkcie powinna zostać zwrócona lista: [7, 8, 0, 6].
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Suma list.
 
@@ -1476,7 +1476,7 @@ Przykład:
 
 Dla otrzymanych list [3, 1, 2, 5] oraz [2, 8, 6, 5] powinna zostać zwrócona lista: [5, 9, 8, 10].
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Mnożenie wektorowe.	
 
@@ -1488,7 +1488,7 @@ Dane wyjściowe: Liczba naturalna.
 
 Przykład: Dla otrzymanych list [1, 2] oraz [3, 1], powinno zostać zwrócone: 5. 
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Średnia ważona wartości.
 
@@ -1502,7 +1502,7 @@ Przykład:
 
 Dla otrzymanych list [2.0, 5.0, 0.0, 2.0, 1.0] oraz [0.2, 0.4, 0.1, 0.2, 0.1] powinno zostać zwrócone: 0.29. 
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: Część wspólna dwóch list.
 
@@ -1516,7 +1516,7 @@ Przykład:
 
 Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostać zwrócona lista: [2, 4].
 
-Zad 7. (★☆☆)
+### Zad 7. (★☆☆)
 
 Tytuł: Różnica między dwoma listami.
 
@@ -1530,7 +1530,7 @@ Przykład:
 
 Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostać zwrócona lista: [9, 5, 1].
 
-Zad 8. (★★☆)
+### Zad 8. (★★☆)
 
 Tytuł: Połącz posortowane listy w posortowaną listę.
 
@@ -1544,7 +1544,7 @@ Przykład:
 
 Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinna zostać zwrócona lista: [2, 3, 4, 7, 9].
 
-Zad 9. (★★☆)
+### Zad 9. (★★☆)
 
 Tytuł: Usuń z pierwszej listy część wspólną obu list.
 
@@ -1559,7 +1559,7 @@ Przykład:
 Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostać zwrócona lista: [9, 5].
 
 
-Zad 10. (★★☆)
+### Zad 10. (★★☆)
 
 Tytuł: Znajdź medianę dwóch posortowanych list.
 
@@ -1575,7 +1575,7 @@ Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinno zostać zwrócone: 4.5.
 
 ## Napisy — wprowadzenie
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Odwróć napis.
 
@@ -1589,7 +1589,7 @@ Przykład:
 
 Dla otrzymanego napisu: “barszcz”, powinien zostać zwrócony napis: “zczsrab”.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Policz wystąpienia znaku.
 
@@ -1603,7 +1603,7 @@ Przykład:
 
 Dla otrzymanego napisu: “klamra” oraz znaku ‘a’, powinno zostać zwrócone: 2.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Z ilu słów składa się zdanie?
 
@@ -1618,7 +1618,7 @@ Przykład:
 Dla otrzymanego napisu: “gram na pianinie.”, powinno zostać zwrócone: 3.
 
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Zamień wszystkie małe litery na wielkie.
 
@@ -1632,7 +1632,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Rumcajs”, powinien zostać zwrócony napis: “RUMCAJS”.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Wypisz poziomo i pionowo co k-ty znak napisu.
 
@@ -1650,7 +1650,7 @@ Dla otrzymanego napisu: “Grzechotnik” oraz liczby 3,  powinien zostać zwró
 
 
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: Zamień litery a na znaki zapytania.
 
@@ -1665,7 +1665,7 @@ Przykład:
 Dla otrzymanego napisu: “Latarnik”,  powinien zostać zwrócony napis: “L?t?rnik”.
 
 
-Zad 7. (★☆☆)
+### Zad 7. (★☆☆)
 
 Tytuł: Zamień znaki na numery ASCII.
 
@@ -1679,7 +1679,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Robot”, powinien zostać zwrócony napis: “82, 111, 98, 111, 116”.
 
-Zad 8. (★☆☆)
+### Zad 8. (★☆☆)
 
 Tytuł: Wypisz pionowo słowa, z których składa się zdanie.
 
@@ -1693,7 +1693,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Ala ma kota”, powinno zostać wypisane: “Ala”, “ma”, “kota”.
 
-Zad 9. (★☆☆)
+### Zad 9. (★☆☆)
 
 Tytuł: Wczytaj i rozdziel informacje o pracowniku.
 
@@ -1710,7 +1710,7 @@ Dla otrzymanego napisu:
 powinna zostać zwrócona lista: 
 [“Imię: Jan”, “Nazwisko: Kowalski”, “Miejsce urodzenia: Warszawa”, “Zawód: Programista”, “Zarobki: 1000”].
 
-Zad 10. (★☆☆)
+### Zad 10. (★☆☆)
 
 Tytuł: Znajdź najdłuższe/najkrótsze słowo w zdaniu.
 
@@ -1731,7 +1731,7 @@ Przykład:
 Dla otrzymanego napisu: “Kaczka lubi wiosne.”, powinien zostać zwrócony napis:  “Kaczka”.
 Dla otrzymanego napisu: “Kaczka lubi wiosne.”, powinien zostać zwrócony napis:  “lubi”.
 
-Zad 11. (★☆☆)
+### Zad 11. (★☆☆)
 
 Tytuł: Średnia długość słów w zdaniu.
 
@@ -1745,7 +1745,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Zepsuty rower.”, powinna zostać zwrócona liczba: 6.
 
-Zad 12. (★☆☆)
+### Zad 12. (★☆☆)
 
 Tytuł: Usuń spacje ze zdania.
 
@@ -1758,7 +1758,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Ala ma kota”, powinien zostać zwrócony napis: “Alamakota”.
 
-Zad 13. (★☆☆)
+### Zad 13. (★☆☆)
 
 Tytuł: Znaki znajdujące się na pozycjach będących liczbami pierwszymi.
 
@@ -1772,7 +1772,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Słoń”, powinna zostać zwrócona lista: [‘o’, ‘ń’].
 
-Zad 14. (★☆☆)
+### Zad 14. (★☆☆)
 
 Tytuł: Napis składający się z liczb od 1 do n.
 
@@ -1786,7 +1786,7 @@ Przykład:
 
 Dla otrzymanej liczby n równej 3 powinien zostać zwrócony napis: “123”.
 
-Zad 15. (★☆☆)
+### Zad 15. (★☆☆)
 
 Tytuł: Słowa ze zdania jako osobne elementy listy.
 
@@ -1800,7 +1800,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Ala ma kota”, powinna zostać zwrócona lista: [“Ala”, “ma”, “kota”].
 
-Zad 16. (★★☆)
+### Zad 16. (★★☆)
 
 Tytuł: Odległość Hamminga.
 
@@ -1816,7 +1816,7 @@ Przykład:
 
 Dla otrzymanych napisów: “adam” i “axam”, powinna zostać zwrócona liczba: 1.
 
-Zad 17. (★☆☆)
+### Zad 17. (★☆☆)
 
 Tytuł: Zamień listę na napis.
 
@@ -1830,7 +1830,7 @@ Przykład:
 
 Dla otrzymanej listy: [2, 4, 7], powinien zostać zwrócony napis: “247”.
 
-Zad 18. (★★☆)
+### Zad 18. (★★☆)
 
 Tytuł: Odwróć napisy w zdaniu.
 
@@ -1846,7 +1846,7 @@ Dla otrzymanego napisu: "Cameron Diaz", powinien zostać zwrócony napis: "norem
 
 ## Napisy — anagramy i palindromy
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Czy słowo jest palindromem?
 
@@ -1860,7 +1860,7 @@ Przykład:
 
 Dla otrzymanego napisu: “kajak”, powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 2. (★★☆)
+### Zad 2. (★★☆)
 
 Tytuł: Wszystkie permutacje słowa.	
 
@@ -1874,7 +1874,7 @@ Przykład:
 
 Dla otrzymanego napisu: “abc”, powinna zostać zwrócona lista: [“abc”, “bac”, “cab”, “acb”, “bca”, “cba”].
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Czy słowa są swoimi anagramami?
 
@@ -1888,7 +1888,7 @@ Przykład:
 
 Dla otrzymanego napisu: “ula” oraz “lua”, powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 4. (★★☆)
+### Zad 4. (★★☆)
 
 Tytuł: Wszystkie palindromy w zdaniu.
 
@@ -1902,7 +1902,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Tata zabral kajak na wycieczke i uderzyl sie w oko”, powinna zostać zwrócona lista: ["kajak", "i", "w", "oko"].
 
-Zad 5. (★★☆)
+### Zad 5. (★★☆)
 
 Tytuł: Znajdź anagramy w zdaniu.
 
@@ -1916,7 +1916,7 @@ Przykład:
 
 Dla otrzymanych napisów: “Sroga kara.” oraz “arak”, powinna zostać zwrócona lista: [“kara”].
 
-Zad 6. (★★☆)
+### Zad 6. (★★☆)
 
 Tytuł: Permutacje danego słowa będące palindromami.
 
@@ -1930,7 +1930,7 @@ Przykład:
 
 Dla otrzymanego napisu: “adamm”, powinna zostać zwrócona lista: [“madam”, “amdma”].
 
-Zad 7. (★★★)
+### Zad 7. (★★★)
 
 Tytuł: Dla dwóch słów, ile minimalnie znaków musimy usunąć, aby uzyskać anagramy?
 
@@ -1944,7 +1944,7 @@ Przykład:
 
 Dla otrzymanych napisów:  “grazyna” oraz  “razynax”, powinna zostać zwrócona liczba: 2.
 
-Zad 8. (★★★)
+### Zad 8. (★★★)
 
 Tytuł: Wyjątkowe palindromy.	
 
@@ -1966,7 +1966,7 @@ Dla otrzymanego napisu: “xxxx”, powinna zostać zwrócona lista: [“x”, �
 
 ## Listy 2D
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Macierz a identycznych wierszy składających się z liczb od 0 do b.
 
@@ -1980,7 +1980,7 @@ Przykład:
 
 Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona macierz: [[0, 1, 2], [0, 1, 2], [0, 1, 2]].
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Każdy element jest iloczynem współrzędnych.
 
@@ -1994,7 +1994,7 @@ Przykład:
 
 Dla otrzymanej liczby 3 powinna zostać zwrócona macierz: [[0, 0, 0], [0, 1, 2], [0, 2, 4]].
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Macierz z par odpowiadających sobie elementów dwóch list.
 
@@ -2008,7 +2008,7 @@ Przykład:
 
 Dla otrzymanych dwóch list: [3, 5, 2] oraz [2, 8, 1], powinna zostać zwrócona macierz: [[3, 2], [5, 8], [2, 1]].
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Dodawanie/odejmowanie macierzy.
 
@@ -2026,7 +2026,7 @@ Przykład:
 Dla otrzymanych dwóch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinna zostać zwrócona macierz: [[6, -1], [-1, 7]].
 Dla otrzymanych dwóch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinna zostać zwrócona macierz: [[-4, 5], [-3, -7]].
 
-Zad 5. (★★☆)
+### Zad 5. (★★☆)
 
 Tytuł: Magiczny kwadrat.
 
@@ -2042,7 +2042,7 @@ Przykład:
 
 Dla otrzymanej macierzy: [[6, 7, 2], [1, 5, 9], [8, 3, 4]], powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 6. (★★☆)
+### Zad 6. (★★☆)
 
 Tytuł: Pokrywające się przedziały w liście przedziałów.
 
@@ -2056,7 +2056,7 @@ Przykład:
 
 Dla otrzymanej macierzy: [[23, 67], [23, 53], [45, 88], [77, 88], [10, 22], [11, 12], [42, 45]], powinna zostać zwrócona macierz: [[10, 22], [23, 88]].
 
-Zad 7. (★★☆)
+### Zad 7. (★★☆)
 
 Tytuł: Wyzeruj macierz.
 
@@ -2070,7 +2070,7 @@ Przykład:
 
 Dla otrzymanej macierzy: [[1,2,3], [4,0,6], [7,8,9]], powinna zostać zwrócona macierz: [[1,0,3], [0,0,0], [7,0,9]].
 
-Zad 8. (★★☆)
+### Zad 8. (★★☆)
 
 Tytuł: Wypisz spiralnie.
 
@@ -2084,7 +2084,7 @@ Przykład:
 
 Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostać zwrócona lista: [1, 2, 3, 6, 9, 8, 7, 4, 5].
 
-Zad 9. (★★☆)
+### Zad 9. (★★☆)
 
 Tytuł: Klepsydra o największej sumie.
 
@@ -2108,7 +2108,7 @@ Przykład:
 
 Dla otrzymanej macierzy: [[ 7 4 2 0], [ 4 8 10 8], [ 3 6 7 6], [ 3 9 19 14]], powinna zostać zwrócona liczba: 75.
 
-Zad 10. (★★☆)
+### Zad 10. (★★☆)
 
 Tytuł: Obróć o 90 stopni.
 
@@ -2122,7 +2122,7 @@ Przykład:
 
 Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostać zwrócona macierz: [[7,4,1], [8,5,2], [9,6,3]].
 
-Zad 11. (★★★)
+### Zad 11. (★★★)
 
 Tytuł: Gra w statki.
 
@@ -2141,7 +2141,7 @@ Powtarzaj krok 2, dopóki wszystkie pozycje statków nie zostaną odkryte przez 
 
 ## Funkcje — wielomiany
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Wartość wielomianu w punkcie.
 
@@ -2155,7 +2155,7 @@ Przykład:
 
 Dla otrzymanej listy oraz liczby: [3, 2, 1] i 1, powinna zostać zwrócona liczba: 6.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Iloczyn wielomianu przez skalar.	
 
@@ -2169,7 +2169,7 @@ Przykład:
 
 Dla otrzymanej listy oraz liczby: [4, -3, 2] i -2, powinna zostać zwrócona lista: [-8, 6, -4].
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Suma wielomianów.	
 
@@ -2183,7 +2183,7 @@ Przykład:
 
 Dla otrzymanych dwóch list: [3, 5, 2] oraz [2, -8, 1], powinna zostać zwrócona lista: [5, -3, 3].
 
-Zad 4. (★★☆)
+### Zad 4. (★★☆)
 
 Tytuł: Mnożenie wielomianów.	
 
@@ -2197,7 +2197,7 @@ Przykład:
 
 Dla otrzymanych dwóch list: [5, 0, 10, 6] oraz [1, 2, 4], powinna zostać zwrócona lista: [5, 10, 30, 26, 52, 24].
 
-Zad 5.  (★★☆)
+### Zad 5.  (★★☆)
 
 Tytuł: N-ta pochodna wielomianu.	
 
@@ -2211,7 +2211,7 @@ Przykład:
 
 Dla otrzymanej listy oraz liczby: [4, -3, 2] i 1, powinna zostać zwrócona lista: [8, -3].
 
-Zad 6. (★★☆)
+### Zad 6. (★★☆)
 
 Tytuł: Miejsce zerowe równania kwadratowego.
 
@@ -2227,7 +2227,7 @@ Dla otrzymanej listy: [1, 2, 1], powinna zostać zwrócona lista: [-1, -1].
 
 ## Funkcje — rekurencja
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Liczby naturalne mniejsze od N.
 
@@ -2241,7 +2241,7 @@ Przykład:
 
 Dla otrzymanej liczby: 10, powinien zostać zwrócony napis: "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0".
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Suma liczb naturalnych mniejszych od N.
 
@@ -2255,7 +2255,7 @@ Przykład:
 
 Dla otrzymanej liczby: 10, powinna zostać zwrócona liczba: 55.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Potęga.
 
@@ -2269,7 +2269,7 @@ Przykład:
 
 Dla otrzymanych liczb: 2 i 3, powinna zostać zwrócona liczba: 8.
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Silnia.
 
@@ -2283,7 +2283,7 @@ Przykład:
 
 Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 6.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Liczba Fibonacciego.
 
@@ -2302,7 +2302,7 @@ Przykład:
 
 Dla otrzymanej liczby: 7, powinna zostać zwrócona liczba: 13.
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: N-ty wyraz ciągu danego wzorem rekurencyjnym.
 
@@ -2319,7 +2319,7 @@ Przykład:
 
 Dla otrzymanej liczby: 5, powinna zostać zwrócona liczba: 31.
 
-Zad 7. (★★☆)
+### Zad 7. (★★☆)
 
 Tytuł: Wyszukiwanie liniowe rekurencyjnie.
 
@@ -2333,7 +2333,7 @@ Przykład:
 
 Dla otrzymanej listy oraz liczby: [1, 2, 2] i 2, powinna zostać zwrócona liczba: 1.
 
-Zad 8. (★★☆)
+### Zad 8. (★★☆)
 
 Tytuł: Wieża Hanoi.	
 
@@ -2347,7 +2347,7 @@ Przykład:
 
 Dla otrzymanej listy: [1, 2, 1], powinna zostać zwrócona lista: [('A', 'B'), ('A', 'C'), ('B', 'C'), ('A', 'B'), ('C', 'A'), ('C', 'B'), ('A', 'B')]
 
-Zad 9. (★★☆)
+### Zad 9. (★★☆)
 
 Tytuł: Słowa elfickie.	
 
@@ -2360,7 +2360,7 @@ Dane wyjściowe: Wartość logiczna.
 Przykład:
 Dla otrzymanego napisu: „reflektor”, powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 10. (★★☆)
+### Zad 10. (★★☆)
 
 Tytuł: Gra.	
 
@@ -2375,7 +2375,7 @@ Dla otrzymanej liczby: 20, powinna zostać zwrócona liczba: 4.
 
 ## System binarny
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Konwersja między systemami binarnym i dziesiętnym.
 
@@ -2393,7 +2393,7 @@ Przykład:
 Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 11.
 Dla otrzymanej liczby: 101, powinna zostać zwrócona liczba: 5.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Konwersja, gdy spełniony jest warunek.
 
@@ -2411,7 +2411,7 @@ Przykład:
 Dla otrzymanej liczby: 7, nie powinna zostać zwrócona żadna liczba.
 Dla otrzymanej liczby: 7, powinna zostać zwrócona liczba: 111.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Operacje arytmetyczne.
 
@@ -2433,7 +2433,7 @@ Dla otrzymanych liczb: 7 i 5, powinna zostać zwrócona liczba: 2.
 Dla otrzymanych liczb: 4 i 4, powinna zostać zwrócona liczba: 16.
 Dla otrzymanych liczb: 9 i 3, powinna zostać zwrócona liczba: 3.
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Zera/jedynki w liczbie binarnej.
 
@@ -2451,7 +2451,7 @@ Przykład:
 Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 0.
 Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 2.
 
-Zad 5. (★★☆)
+### Zad 5. (★★☆)
 
 Tytuł: Min/maks z dwóch liczb.
 
@@ -2469,7 +2469,7 @@ Przykład:
 Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona liczba: 2.
 Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona liczba: 3.
 
-Zad 6. (★★☆)
+### Zad 6. (★★☆)
 
 Tytuł: Konwersja między dowolnymi systemami.
 
@@ -2483,7 +2483,7 @@ Przykład:
 
 Dla otrzymanych liczb: 4301, 10 i 4  powinna zostać zwrócona liczba: 1003031.
 
-Zad 7. (★☆☆)
+### Zad 7. (★☆☆)
 
 Tytuł: Zamiana sąsiadów.
 
@@ -2497,7 +2497,7 @@ Przykład:
 
 Dla otrzymanej liczby: 9131, powinna zostać zwrócona liczba: 4951.
 
-Zad 8. (★☆☆)
+### Zad 8. (★☆☆)
 
 Tytuł: Następna potęga dwójki.
 
@@ -2511,7 +2511,7 @@ Przykład:
 
 Dla otrzymanej liczby: 111, powinna zostać zwrócona liczba: 128.
 
-Zad 9. (★★☆)
+### Zad 9. (★★☆)
 
 Tytuł: Zmiana wielkości liter.
 
@@ -2530,7 +2530,7 @@ Dla otrzymanego napisu: “Test”, powinien zostać zwrócony napis: “test”
 Dla otrzymanego napisu: “Test”, powinien zostać zwrócony napis: “TEST”.
 Dla otrzymanego napisu: “Test”, powinien zostać zwrócony napis: “tEST”.
 
-Zad 10. (★★☆)
+### Zad 10. (★★☆)
 
 Tytuł: Zamień A w B.
 
@@ -2544,7 +2544,7 @@ Przykład:
 
 Dla otrzymanych liczb: 34 i 73, powinna zostać zwrócona liczba: 5.
 
-Zad 11. (★★☆)
+### Zad 11. (★★☆)
 
 Tytuł: Czy liczba jest palindromem?
 
@@ -2558,7 +2558,7 @@ Przykład:
 
 Dla otrzymanej liczby: 26, powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 12. (★★★)
+### Zad 12. (★★★)
 
 Tytuł: Najdłuższy ciąg zer w liczbie binarnej.	
 
@@ -2574,7 +2574,7 @@ Dla otrzymanej liczby: 14, powinna zostać zwrócona liczba: 1.
 
 ## Słowniki
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Kluczami są liczby, a wartościami ich kwadraty.
 
@@ -2588,7 +2588,7 @@ Przykład:
 
 Dla otrzymanej liczby 5 powinien zostać zwrócony słownik: {1: 1, 2: 4, 3: 9, 4: 16}.
 
-Zad 2. (★☆☆)
+### Zad 2. (★☆☆)
 
 Tytuł: Kluczami są elementy jednej listy, a wartościami elementy drugiej listy.
 
@@ -2602,7 +2602,7 @@ Przykład:
 
 Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], powinien zostać zwrócony słownik: {3: 1, 5: 2, 8: -1}.
 
-Zad 3. (★☆☆)
+### Zad 3. (★☆☆)
 
 Tytuł: Klucz to imię, wartość lista wypożyczonych książek.
 
@@ -2612,7 +2612,7 @@ Zwrócenie wypożyczonej książki przez czytelnika.
 Wypisanie aktualnej listy wypożyczonych książek dla danego czytelnika.
 
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Usuń ze słownika.
 
@@ -2626,7 +2626,7 @@ Przykład:
 
 Dla otrzymanego słownika oraz liczby: {“aaa”: 5, “abc”: 1, “xxx”: 5, “cba” : 3} i 5, powinien zostać zwrócony słownik: {“abc”: 1, “cba” : 3}.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Lista pracowników.
 
@@ -2648,7 +2648,7 @@ Dla otrzymanej listy:
 
  powinien zostać zwrócony napis:  “Barnaba Barabash”.
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: Histogram znaków w słowie.
 
@@ -2662,7 +2662,7 @@ Przykład:
 
 Dla otrzymanego napisu: “klasa”, powinien zostać zwrócony słownik: {“k”: 1, “l”: 1, “a”: 2, “s”: 1}.
 
-Zad 7. (★☆☆)
+### Zad 7. (★☆☆)
 
 Tytuł: Histogram słów w tekście.
 
@@ -2682,7 +2682,7 @@ powinien zostać zwrócony słownik:
 
 {“here“: 1, “a“: 12, “tricksy“: 4, “corpus“: 5, “will“: 6, “exist“: 1, “very“: 2, “strange“: 1, “sometimes“: 1, “cryptic“: 1, “dumbfound“: 1, “you“: 2, “maybe“: 1, “perhaps“: 1, “bit“: 1, “in“: 1, “particular“: 1, “since“: 1, “my“: 1, “not“: 1, “match“: 1, “the“: 2, “pattern“: 1, “expect“: 1, "from": 2, "it": 2, "nor": 1, "look": 1, "like": 1, "fish,": 1, "boat": 1, "sunflower": 1, "or": 3, "handsome": 1, "kitten": 1, "surprise": 1, "user": 1, "named": 1, "ami": 1, "tavory;": 1, "this": 1, "be": 1, "fun": 1, "to": 1, "follow": 1, "year": 1, "month": 1, "minute": 1, "now": 1}.
 
-Zad 8. (★☆☆)
+### Zad 8. (★☆☆)
 
 Tytuł: Najczęściej występująca litera w zdaniu.
 
@@ -2696,7 +2696,7 @@ Przykład:
 
 Dla otrzymanego napisu: “lezy jerzy na wiezy”, powinna zostać zwrócona litera: ‘e’.
 
-Zad 9. (★☆☆)
+### Zad 9. (★☆☆)
 
 Tytuł: Powtarzające się znaki.
 
@@ -2710,7 +2710,7 @@ Przykład:
 
 Dla otrzymanego napisu: “podwodny”, powinna zostać zwrócona lista: [‘o’, ‘d’].
 
-Zad 10. (★★☆)
+### Zad 10. (★★☆)
 
 Tytuł: Anagramy w tekście.
 
@@ -2730,7 +2730,7 @@ powinna zostać zwrócona lista:
 
 [[“absurd”, “brudas”], [“tyran”, “narty”], [“bandzior”, “zbrodnia”], [“burza”, “arbuz”], [“galeria”, “alergia”]].
 
-Zad 11. (★☆☆)
+### Zad 11. (★☆☆)
 
 Tytuł: Sortowanie względem kluczy/wartości.
 
@@ -2747,7 +2747,7 @@ Przykład:
 Dla otrzymanego słownika: {“c”: 3, “x”: 5, “a”: -2, “b”: 4}, powinien zostać zwrócony słownik: [(“a”, -2), (“b”, 4), (“c”, 3), (“x”, 5)].
 Dla otrzymanego słownika: {“c”: 3, “x”: 5, “a”: -2, “b”: 4}, powinien zostać zwrócony słownik: [(“a”, -2), (“c”, 3), (“b”, 4), (“x”, 5)].
 
-Zad 12. (★★☆)
+### Zad 12. (★★☆)
 
 Tytuł: Czy słowniki są identyczne?
 
@@ -2766,7 +2766,7 @@ powinna zostać zwrócona wartość logiczna: Prawda.
 
 ## Operacje na plikach
 
-Zad 1. (★☆☆)
+### Zad 1. (★☆☆)
 
 Tytuł: Sprawdź, czy ścieżka należy do pliku/folderu.
 
@@ -2778,7 +2778,7 @@ Dane wejściowe: Napis.
 
 Dane wyjściowe: Wartość logiczna.
 
-Zad 2. (★★☆)
+### Zad 2. (★★☆)
 
 Tytuł: Znajdź w folderze wszystkie pliki z danym rozszerzeniem.
 
@@ -2788,7 +2788,7 @@ Dane wejściowe: Dwa napisy.
 
 Dane wyjściowe: Lista napisów.
 
-Zad 3. (★★☆)
+### Zad 3. (★★☆)
 
 Tytuł: Znajdź ścieżkę pliku o danej nazwie.
 
@@ -2798,7 +2798,7 @@ Dane wejściowe: Napis.
 
 Dane wyjściowe: Lista napisów.
 
-Zad 4. (★☆☆)
+### Zad 4. (★☆☆)
 
 Tytuł: Wczytaj i wypisz treść pliku.
 
@@ -2808,7 +2808,7 @@ Dane wejściowe: Napis.
 
 Dane wyjściowe: Napis.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Plik z listą adresów IP.
 
@@ -2818,7 +2818,7 @@ Dane wejściowe: Napis.
 
 Dane wyjściowe: Lista napisów.
 
-Zad 6. (★★☆)
+### Zad 6. (★★☆)
 
 Tytuł: Statystyki dla pliku tekstowego.
 
@@ -2839,7 +2839,7 @@ Liczba zmiennoprzecinkowa.
 Liczba zmiennoprzecinkowa.
 Słownik par: napis, liczba naturalna.
 
-Zad 7. (★☆☆)
+### Zad 7. (★☆☆)
 
 Tytuł: Dodaj wiersz do pliku.
 
@@ -2850,7 +2850,7 @@ Dane wejściowe: Dwa napisy.
 Dane wyjściowe: Brak.
 
 
-Zad 8. (★★☆)
+### Zad 8. (★★☆)
 
 Tytuł: Znajdź i zmodyfikuj pliki spełniające warunek.
 
@@ -2863,7 +2863,7 @@ Dane wejściowe: Napis.
 
 Dane wyjściowe: Brak.
 
-Zad 9. (★★☆)
+### Zad 9. (★★☆)
 
 Tytuł: Usuń pliki spełniające warunek.
 
@@ -2873,7 +2873,7 @@ Dane wejściowe: Napis.
 
 Dane wyjściowe: Brak.
 
-Zad 10. (★☆☆)
+### Zad 10. (★☆☆)
 
 Tytuł: Skopiuj pliki.
 
@@ -2883,7 +2883,7 @@ Dane wejściowe: Dwa napisy.
 
 Dane wyjściowe: Brak.
 
-Zad 11.  (★★☆)
+### Zad 11.  (★★☆)
 
 Tytuł: Podmień treści.
 
@@ -2894,7 +2894,7 @@ Dane wejściowe: Dwa napisy.
 Dane wyjściowe: Brak.
 
 
-Zad 12. (★★☆)
+### Zad 12. (★★☆)
 
 Tytuł: Przesuń wszystkie pliki CSV do jednego folderu.
 
@@ -2906,7 +2906,7 @@ Dane wyjściowe: Brak.
 
 ## Klasy
 
-Zad 1. (★★☆)
+### Zad 1. (★★☆)
 
 Tytuł: Zaprojektuj klasę Koło.
 
@@ -2918,7 +2918,7 @@ Funkcja wypisująca informacje o kole na standardowe wyjście.
 
 Napisz program testujący twoją klasę. Stwórz koło o promieniu równym 3 i użyj funkcji wypisującej informacje o kole.
 
-Zad 2. (★★☆)
+### Zad 2. (★★☆)
 
 Tytuł: Zaprojektuj klasę Punkt.
 
@@ -2930,7 +2930,7 @@ Funkcje umożliwiające porównanie dwóch obiektów klasy Punkt. Jeśli jest to
 
 Napisz program testujący twoją klasę. Stwórz punkty: A (5, 5) oraz B (-3, -3). Wypisz na standardowe wyjście informacje o utworzonych punktach oraz odległość między nimi.
 
-Zad 3. (★★☆)
+### Zad 3. (★★☆)
 
 Tytuł: Prostokąt powstały z nałożenia się dwóch prostokątów.
 
@@ -2938,7 +2938,7 @@ Treść: Napisz klasę Prostokąt reprezentującą prostokąt w układzie kartez
 
 Napisz program testujący twoją klasę. Stwórz prostokąty: A (3, 6, 9, 4) oraz B (2, 5, 7, 2). Wypisz na standardowe wyjście informacje o utworzonych prostokątach. Sprawdź, czy pole części wspólnej równe jest 6.
 
-Zad 4.  (★★☆)
+### Zad 4.  (★★☆)
 
 Tytuł: Zaprojektuj klasy Wektor2D oraz Wektor3D.
 
@@ -2951,7 +2951,7 @@ Funkcja moduł, zwracająca moduł wektora.
 
 Napisz program testujący twoją klasę. Stwórz wektory: A (-3, -3, -3) oraz B (5, 5, 5). Wypisz na standardowe wyjście informacje o utworzonych wektorach oraz sumę wektorów, różnice pierwszego i drugiego oraz ich iloczyn wektorowy.
 
-Zad 5.  (★★☆)
+### Zad 5.  (★★☆)
 
 Tytuł: Zaprojektuj klasę Macierz.
 
@@ -2963,7 +2963,7 @@ Funkcje umożliwiające porównanie dwóch obiektów klasy Macierz. Jeśli jest 
 
 Napisz program testujący twoją klasę. Stwórz macierze: A ([[1, 3], [4, 2]]) i B ([[5, 0], [1, 3]]). Wypisz na standardowe wyjście informacje o utworzonych macierzach oraz ich sumę, różnicę pierwszej i drugiej oraz iloczyn macierzy. 
 
-Zad 6. (★★☆)
+### Zad 6. (★★☆)
 
 Tytuł: Zaprojektuj klasę Zespolona.
 
@@ -2976,7 +2976,7 @@ Funkcja moduł, zwracająca moduł liczby zespolonej.
 
 Napisz program testujący twoją klasę. Stwórz liczby zespolone: A (9, 12) i B (-3, -3). Wypisz na standardowe wyjście informacje o utworzonych liczbach zespolonych oraz ich sumę, różnicę pierwszej i drugiej, iloraz pierwszej przez drugą oraz iloczyn liczb zespolonych.
 
-Zad 7.  (★☆☆)
+### Zad 7.  (★☆☆)
 
 Tytuł: Znajdź liczbę instancji klasy w programie.
 
@@ -2988,7 +2988,7 @@ Dane wyjściowe: Liczba naturalna.
 
 ## Dziedziczenie
 
-Zad 1.   (★☆☆)
+### Zad 1.   (★☆☆)
 
 Tytuł: Wywołaj metodę klasy bazowej w klasie potomnej.
 
@@ -2996,7 +2996,7 @@ Treść: Dla dowolnych dwóch klas, dla których jedna jest klasą bazową, a dr
 
 Napisz program testujący twoje klasy.
 
-Zad 2.  (★★☆)
+### Zad 2.  (★★☆)
 
 Tytuł: Zaprojektuj klasę Kształt oraz klasy potomne Koło i Kwadrat.
 
@@ -3004,13 +3004,13 @@ Treść: Zaprojektuj klasę Kształt oraz klasy potomne Koło i Kwadrat.
 
 Napisz program testujący twoje klasy.
 
-Zad 3.  (★★☆)
+### Zad 3.  (★★☆)
 
 Tytuł: Polimorfizm. 
 
 Treść: Zaprojektuj klasę Zwierz oraz klasy pochodne Pies , oraz Kot. Obie klasy potomne powinny nadpisywać metodę odglos() klasy zdefiniowaną w klasie bazowej. Następnie w programie testującym napisane klasy, należy w jednej liście zebrać obiekty wszystkich trzech klas. Należy przy pomocy pętli przejść przez wszystkie elementy listy i dla każdego z nich wywołać funkcję odglos().
 
-Zad 4.  (★★☆)
+### Zad 4.  (★★☆)
 
 Tytuł: Dziedziczenie wielopoziomowe.
 
@@ -3021,7 +3021,7 @@ StudentFizykii powinien dodać pola średnia z laboratoriów oraz średnia z wyk
 
 Napisz program testujący twoje klasy.
 
-Zad 5.  (★★☆)
+### Zad 5.  (★★☆)
 
 Tytuł: Dziedziczenie wielokrotne. 
 
@@ -3033,7 +3033,7 @@ Napisz program testujący twoją klasę.
 
 ## Sortowanie — Algorytmy
 
-Zad 1.  (★☆☆)
+### Zad 1.  (★☆☆)
 
 Tytuł: Sortowanie bąbelkowe.
 
@@ -3050,7 +3050,7 @@ Przykład:
 
 Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
 
-Zad 2.  (★★☆)
+### Zad 2.  (★★☆)
 
 Tytuł: Sortowanie przez wybieranie.
 
@@ -3066,7 +3066,7 @@ Przykład:
 
 Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
 
-Zad 3.  (★★☆)
+### Zad 3.  (★★☆)
  
 Tytuł: Sortowanie przez wstawianie.
 
@@ -3085,7 +3085,7 @@ Przykład:
 
 Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
 
-Zad 4.  (★★☆)
+### Zad 4.  (★★☆)
 
 Tytuł: Sortowanie przez scalanie.
 
@@ -3103,7 +3103,7 @@ Przykład:
 
 Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
 
-Zad 5.  (★★☆)
+### Zad 5.  (★★☆)
 
 Tytuł: Sortowanie szybkie.
 
@@ -3124,7 +3124,7 @@ Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 
 
 ## Sortowanie — praktyka
 
-Zad 1.  (★☆☆)
+### Zad 1.  (★☆☆)
 
 Tytuł: Posortuj znaki w słowie.
 
@@ -3138,7 +3138,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Ala ma kota”, powinien zostać zwrócony napis: “Aaaaklmot”.
 
-Zad 2.  (★★☆)
+### Zad 2.  (★★☆)
 
 Tytuł: Posortuj słowa w zdaniu.
 
@@ -3152,7 +3152,7 @@ Przykład:
 
 Dla otrzymanego napisu: "Lemur wygina smialo cialo", powinna zostać zwrócona lista: ["Lemur", "cialo", "smialo", "wygina"].
 
-Zad 3.  (★☆☆)
+### Zad 3.  (★☆☆)
 
 Tytuł: Posortuj listę par względem jednej z kategorii.
 
@@ -3170,7 +3170,7 @@ Przykład:
 Dla otrzymanej listy: [(“ab”, 3), (“bca”, 1), (“c”, 2)], powinna zostać zwrócona lista: [(“bca”, 1), (“c”, 2), (“ab”, 3)].
 Dla otrzymanej listy: [(“ab”, 3), (“bca”, 1), (“c”, 2)], powinna zostać zwrócona lista: [(“c”, 2), (“ab”, 3), (“bca”, 1)].
 
-Zad 4.  (★☆☆)
+### Zad 4.  (★☆☆)
 
 Tytuł: Posortuj względem długości napisy w liście.
 
@@ -3184,7 +3184,7 @@ Przykład:
 
 Dla otrzymanej listy: ["abcd", "ab", "a", "abc"], powinna zostać zwrócona lista: ["a", "ab", "abc", "abcd"].
 
-Zad 5.  (★☆☆)
+### Zad 5.  (★☆☆)
 
 Tytuł: Sortowanie listy obiektów.
 
@@ -3200,7 +3200,7 @@ Przykład:
 Dla otrzymanej listy: [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)], powinna zostać zwrócona lista: [Miasto("Berlin", 3800000), Miasto("New York", 8400000), Miasto("Paris", 2150000)].
 Dla otrzymanej listy: [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)], powinna zostać zwrócona lista: [Miasto("Berlin", 3800000), Miasto("Paris", 2150000), Miasto("New York", 8400000)].
 
-Zad 6.  (★★☆)
+### Zad 6.  (★★☆)
 
 Tytuł: Tablica binarna.	
 
@@ -3214,7 +3214,7 @@ Przykład:
 
 Dla otrzymanej listy: [1, 0, 1, 0, 1, 1], powinna zostać zwrócona lista: [0, 0, 1, 1, 1, 1].
 
-Zad 7.  (★★☆)
+### Zad 7.  (★★☆)
 
 Tytuł: Tablica składająca się wyłącznie z zer, jedynek i dwójek.
 
@@ -3230,7 +3230,7 @@ Dla otrzymanej listy: [1, 0, 1, 2, 2, 0, 1], powinna zostać zwrócona lista: [0
 
 ## Wyrażenia regularne
 
-Zad 1.  (★★☆)
+### Zad 1.  (★★☆)
 
 Tytuł: Sprawdź poprawność adresu e-mail.
 
@@ -3256,7 +3256,7 @@ Przykład:
 
 Dla otrzymanego napisu: “adam@gmail.com”, powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 2.  (★★☆)
+### Zad 2.  (★★☆)
 
 Tytuł: Sprawdź poprawność hasła.
 
@@ -3277,7 +3277,7 @@ Przykład:
 
 Dla otrzymanego napisu: “abc1234”, powinna zostać zwrócona wartość logiczna: Fałsz.
 
-Zad 3.  (★☆☆)
+### Zad 3.  (★☆☆)
 
 Tytuł: Czy napis składa się wyłącznie z cyfr?
 
@@ -3291,7 +3291,7 @@ Przykład:
 
 Dla otrzymanego napisu: “1234”, powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 4.  (★☆☆)
+### Zad 4.  (★☆☆)
 
 Tytuł: Czy słowo należy do zdania?
 
@@ -3305,7 +3305,7 @@ Przykład:
 
 Dla otrzymanych napisów: “Siala baba mak.” oraz “babcia”, powinna zostać zwrócona wartość logiczna: Fałsz.
 
-Zad 5. (★☆☆)
+### Zad 5. (★☆☆)
 
 Tytuł: Odfiltruj cyfry z tekstu.
 
@@ -3319,7 +3319,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Terminator2001”, powinien zostać zwrócony napis: “2001”.
 
-Zad 6. (★☆☆)
+### Zad 6. (★☆☆)
 
 Tytuł: Wiersze kończące się napisem.
 
@@ -3339,7 +3339,7 @@ Milosci pragna nie pragna tu zlota.”
 oraz “da”, 
 powinna zostać zwrócona lista: [“Folgujmy paniom nie sobie, ma rada;”, “Milujmy wiernie nie jest w nich przysada.”]
 
-Zad 7. (★☆☆)
+### Zad 7. (★☆☆)
 
 Tytuł: Podziel względem znaków interpunkcyjnych.
 
@@ -3353,7 +3353,7 @@ Przykład:
 
 Dla otrzymanego napisu: “Ani nie poszedl do kina, ani nie wybral sie do teatru.”, powinna zostać zwrócona lista: [“Ani nie poszedl do kina”, “ani nie wybral sie do teatru”].
 
-Zad 8. (★★☆)
+### Zad 8. (★★☆)
 
 Tytuł: Cyfry będące częścią słów.
 
@@ -3367,7 +3367,7 @@ Przykład:
 
 Dla otrzymanego napisu: “jerzy29 i an37a s3uc8ali91 lekcji 22 2 jezyka polki3go”, powinna zostać zwrócona lista: [“29”, “37”, “3891”, “3”].
 
-Zad 9. (★★☆)
+### Zad 9. (★★☆)
 
 Tytuł: Usuń część wiersza. 
 
@@ -3412,7 +3412,7 @@ Bore of true of no be de
 Frequently sufficient in be un
 The furnished she concluded depending procuring conce”.
 
-Zad 10.  (★★☆)
+### Zad 10.  (★★☆)
 
 Tytuł: Podmień napisy z listy A na napisy z listy B.
 
@@ -3425,7 +3425,8 @@ Dane wyjściowe: Napis.
 Przykład:
 
 Dla otrzymanych danych:
-“'Every mile was tilted at seven or. 
+
+	“'Every mile was tilted at seven or. 
 	Wished her entire esteem mr oh by.
 	He prevents requests by if in pleased. 
 	Picture too and concerned was comforting. 
@@ -3434,7 +3435,7 @@ Dla otrzymanych danych:
 	Warmth his law design says he is a person. 
 	Pronunciation suspected in belonging conveying ye repulsive.”
 
-	oraz ['or', 'be', 'he'] i ['and', 'off', 'she'], powinniśmy otrzymać:
+oraz ['or', 'be', 'he'] i ['and', 'off', 'she'], powinniśmy otrzymać:
 
 	“Every mile was tilted at seven and. 
 	Wished her entire esteem mr oh by.
@@ -3445,7 +3446,7 @@ Dla otrzymanych danych:
 	Warmth his law design says she is a person. 
 	Pronunciation suspected in belonging conveying ye repulsive.”
 
-Zad 11.  (★★☆)
+### Zad 11.  (★★☆)
 
 Tytuł: Nazwa pliku ze ścieżki.
 
@@ -3461,7 +3462,7 @@ Dla otrzymanego napisu: “C:\\my-long\\path_directory\\file.html”, powinien z
 
 ## Listy — trudne
 
-Zad 1.  (★★☆)
+### Zad 1.  (★★☆)
 
 Tytuł: Najdłuższy nieprzerwany ciąg jedynek.
 
@@ -3475,7 +3476,7 @@ Przykład:
 
 Dla otrzymanej listy:  [0, 0, 1, 0, 1, 1, 1, 0, 1, 1], powinna zostać zwrócona liczba: 7.
 
-Zad 2. (★★☆)
+### Zad 2. (★★☆)
 
 Tytuł: Przesuń zera. 
 
@@ -3489,7 +3490,7 @@ Przykład:
 
 Dla otrzymanej listy: [0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0], powinna zostać zwrócona lista: [1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0]. 
 
-Zad 3.  (★★☆)
+### Zad 3.  (★★☆)
 
 Tytuł: Trójka o minimalnym iloczynie.	
 
@@ -3503,7 +3504,7 @@ Przykład:
 
 Dla otrzymanej listy: [3, -1, -3, 2, 9, 4], powinna zostać zwrócona liczba: -108.
 
-Zad 4.  (★★★)
+### Zad 4.  (★★★)
 
 Tytuł: Wspólny podciąg o największej sumie.	
 
@@ -3519,7 +3520,7 @@ Dla otrzymanych list: [0, 0, 1, 1, 1, 1] i [0, 1, 1, 0, 1, 0], powinna zostać z
 
 Wyjaśnienia: Suma elementów obu list na pozycjach od 0 do 4 jest równa 3.
 
-Zad 5.
+### Zad 5.
 
 Tytuł: Zbiór potęgowy.	 (★★★)
 
@@ -3533,7 +3534,7 @@ Przykład:
 
 Dla otrzymanej listy: [1, 2, 1], powinna zostać zwrócona lista: [(), (1,), (2,), (1, 2), (1, 1), (1, 1, 2)].
 
-Zad 6. (★★★)
+### Zad 6. (★★★)
 
 Tytuł: M posortowanych list.
 
@@ -3553,7 +3554,7 @@ Dla otrzymanej listy:
 
 powinna zostać zwrócona lista: [-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71].
 
-Zad 7. (★★★)
+### Zad 7. (★★★)
 
 Tytuł: Woda.
 
@@ -3571,7 +3572,7 @@ o                               o
 o      o          =>         o x x x o
 o_o_o                       o x o x o
 
-Zad 8.  (★★★)
+### Zad 8.  (★★★)
 
 Tytuł: Sznurek. 
 
@@ -3585,7 +3586,7 @@ Przykład:
 
 Dla otrzymanej listy: [1, 5, 8, 9, 10, 17, 17, 20] oraz 4, powinna zostać zwrócona liczba: 10.
 
-Zad 9. (★★★)
+### Zad 9. (★★★)
 
 Tytuł: Najdłuższy naprzemienny podciąg.  (★★★)
 
@@ -3607,7 +3608,7 @@ Dla otrzymanej listy: [1, -2, 6, 4, -3, 2, -4, -3], powinna zostać zwrócona li
 
 ## Napisy — trudne
 
-Zad 1. (★★☆)
+### Zad 1. (★★☆)
 
 Tytuł: Podmiana wszystkich wystąpień słowa.  
 
@@ -3621,7 +3622,7 @@ Przykład:
 
 Dla otrzymanych napisów: “Lezy jezy na wiezy”, “zy” oraz “rzy”, powinien zostać zwrócony napis: “Lerzy jerzy na wierzy”.
 
-Zad 2.  (★★☆)
+### Zad 2.  (★★☆)
 
 Tytuł: Usuń wszystkie wystąpienia podnapisu. 
 
@@ -3635,7 +3636,7 @@ Przykład:
 
 Dla otrzymanych napisów: “Lezy jezy na wiezy” oraz “zy”, powinien zostać zwrócony napis: “Le je na wie”.
 
-Zad 3.  (★★☆)
+### Zad 3.  (★★☆)
 
 Tytuł: Czy napis A stanowi początek napisu B? 
 
@@ -3649,7 +3650,7 @@ Przykład:
 
 Dla otrzymanych napisów: “Dinozaur jest zly” oraz “Dino”, powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 4. (★★★)
+### Zad 4. (★★★)
 
 Tytuł: Usuń powtórzenia z napisu.
 
@@ -3663,7 +3664,7 @@ Przykład:
 
 Dla otrzymanego napisu: “AAAAAAAAAABBBBBBBBA”, powinien zostać zwrócony napis: “AB”.
 
-Zad 5. (★★★)
+### Zad 5. (★★★)
 
 Tytuł: Znaki stojące obok siebie nie mogą się powtarzać.
 
@@ -3677,7 +3678,7 @@ Przykład:
 
 Dla otrzymanego napisu: “AAAAAAAAAABBBBBBBBA”, powinien zostać zwrócony napis: “ABA”.
 
-Zad 6. (★★★)
+### Zad 6. (★★★)
 
 Tytuł: Czy napisy są swoimi rotacjami?
 
@@ -3691,7 +3692,7 @@ Przykład:
 
 Dla otrzymanych napisów: “malpka” oraz “pkamal”, powinna zostać zwrócona wartość logiczna: Prawda.
 
-Zad 7. (★★★)
+### Zad 7. (★★★)
 
 Tytuł: Znajdź powtórzenia.
 
@@ -3705,7 +3706,7 @@ Przykład:
 
 Dla otrzymanego napisu: “pythonpython”, powinien zostać zwrócony napis: “python”.
 
-Zad 8. (★★★)
+### Zad 8. (★★★)
 
 Tytuł: Najdłuższy wspólny przedrostek.
 
@@ -3719,7 +3720,7 @@ Przykład:
 
 Dla otrzymanej listy: [“Remolada”, “Remux”, “Remmy”], powinien zostać zwrócony napis: “Rem”.
 
-Zad 9. (★★★)
+### Zad 9. (★★★)
 
 Tytuł: Najdłuższy wspólny podnapis.
 
