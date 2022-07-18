@@ -19,7 +19,7 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 
 # Zbiór zadań
 
-* Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-programowania/blob/master/Zadania.pdf">linkiem</a>. </br>
+* Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-Programowania/blob/master/zbior_zadan.md">linkiem</a>. </br>
 * Zbiór będzie poszerzany i aktualizowany.
 * Więcej informacji na temat zadań znajdziesz na <a href="https://github.com/djeada/Nauka-programowania/blob/master/O_ZADANIACH.md">tej stronie</a>.
 
