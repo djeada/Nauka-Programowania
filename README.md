@@ -3355,7 +3355,7 @@ Brak.
     </tbody>
 </table>
 
-## Bibliografia
+## Literatura
 
 * Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. "<i>Introduction to Algorithms, 3rd Edition (The MIT Press)</i>"
 * Steven Halim "<i>Competitive Programming 3</i>" 
