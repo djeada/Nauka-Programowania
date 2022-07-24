@@ -2676,11 +2676,11 @@ Przykład:
 
 Dla otrzymanego napisu:
 
- “Here, a tricksy corpus will exist; a very strange, a sometimes cryptic corpus will dumbfound you maybe, perhaps a bit; in particular since my tricksy corpus will not match the pattern you expect from it; nor will it look like a fish, a boat, a sunflower, or a very handsome kitten. The tricksy corpus will surprise a user named Ami Tavory; this tricksy corpus will be fun to follow a year or a month or a minute from now.”,
+> Here, a tricksy corpus will exist; a very strange, a sometimes cryptic corpus will dumbfound you maybe, perhaps a bit; in particular since my tricksy corpus will not match the pattern you expect from it; nor will it look like a fish, a boat, a sunflower, or a very handsome kitten. The tricksy corpus will surprise a user named Ami Tavory; this tricksy corpus will be fun to follow a year or a month or a minute from now.
 
 powinien zostać zwrócony słownik:
 
-{“here“: 1, “a“: 12, “tricksy“: 4, “corpus“: 5, “will“: 6, “exist“: 1, “very“: 2, “strange“: 1, “sometimes“: 1, “cryptic“: 1, “dumbfound“: 1, “you“: 2, “maybe“: 1, “perhaps“: 1, “bit“: 1, “in“: 1, “particular“: 1, “since“: 1, “my“: 1, “not“: 1, “match“: 1, “the“: 2, “pattern“: 1, “expect“: 1, "from": 2, "it": 2, "nor": 1, "look": 1, "like": 1, "fish,": 1, "boat": 1, "sunflower": 1, "or": 3, "handsome": 1, "kitten": 1, "surprise": 1, "user": 1, "named": 1, "ami": 1, "tavory;": 1, "this": 1, "be": 1, "fun": 1, "to": 1, "follow": 1, "year": 1, "month": 1, "minute": 1, "now": 1}.
+> {“here“: 1, “a“: 12, “tricksy“: 4, “corpus“: 5, “will“: 6, “exist“: 1, “very“: 2, “strange“: 1, “sometimes“: 1, “cryptic“: 1, “dumbfound“: 1, “you“: 2, “maybe“: 1, “perhaps“: 1, “bit“: 1, “in“: 1, “particular“: 1, “since“: 1, “my“: 1, “not“: 1, “match“: 1, “the“: 2, “pattern“: 1, “expect“: 1, "from": 2, "it": 2, "nor": 1, "look": 1, "like": 1, "fish,": 1, "boat": 1, "sunflower": 1, "or": 3, "handsome": 1, "kitten": 1, "surprise": 1, "user": 1, "named": 1, "ami": 1, "tavory;": 1, "this": 1, "be": 1, "fun": 1, "to": 1, "follow": 1, "year": 1, "month": 1, "minute": 1, "now": 1}
 
 ### Zad 8. (★☆☆)
 
@@ -2944,7 +2944,7 @@ Tytuł: Zaprojektuj klasy Wektor2D oraz Wektor3D.
 
 Treść: Napisz klasy Wektor2D oraz Wektor3D reprezentujące odpowiednio wektory w przestrzeni dwuwymiarowej i trzywymiarowej. W skład klas powinny wchodzić funkcje:
 Konstruktor pobierający dwie (trzy) liczby jako argumenty. Liczby reprezentują współrzędne wektora. Domyślne wartości dla wszystkich argumentów wynoszą 0.
-Funkcje zwracające wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie) oraz iloczyn wektorowy  i skalarny. Jeśli jest to możliwe, należy przeciążyć operatory: +, -, *.
+Funkcje zwracające wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie) oraz iloczyn wektorowy  i skalarny. Jeśli jest to możliwe, należy przeciążyć operatory: ```+, -, *```.
 Funkcja wypisująca informacje o wektorze na standardowe wyjście.
 Funkcje umożliwiające porównanie dwóch obiektów klasy Wektor2D (Wektor3D). Jeśli jest to możliwe, należy przeciążyć operatory ==, !=.
 Funkcja moduł, zwracająca moduł wektora.
@@ -2957,7 +2957,7 @@ Tytuł: Zaprojektuj klasę Macierz.
 
 Treść: Napisz klasę Macierz reprezentującą macierz. W skład klasy powinny wchodzić funkcje:
 Konstruktor pobierający listę list liczb całkowitych. Pobrana lista reprezentuje macierz. Domyślna wartość argumentu to pusta lista.
-Funkcje zwracające wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnożenie) oraz odwracanie macierzy. Jeśli jest to możliwe, należy przeciążyć operatory: +, -, *.
+Funkcje zwracające wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnożenie) oraz odwracanie macierzy. Jeśli jest to możliwe, należy przeciążyć operatory: ```+, -, *```.
 Funkcja wypisująca informacje o macierzy na standardowe wyjście.
 Funkcje umożliwiające porównanie dwóch obiektów klasy Macierz. Jeśli jest to możliwe, należy przeciążyć operatory ==, !=.
 
@@ -2969,7 +2969,7 @@ Tytuł: Zaprojektuj klasę Zespolona.
 
 Treść: Napisz klasę Zespolona reprezentującą liczbę zespoloną. W skład klasy powinny wchodzić funkcje:
 Konstruktor pobierający dwie liczby jako argumenty. Pierwsza liczba reprezentuje część rzeczywistą, a druga część urojoną liczby zespolonej. Domyślne wartości dla obu argumentów to 0.
-Funkcje zwracające wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnożenie, dzielenie). Jeśli jest to możliwe, należy przeciążyć operatory: +, -, *, /.
+Funkcje zwracające wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnożenie, dzielenie). Jeśli jest to możliwe, należy przeciążyć operatory: ```+, -, *, /```.
 Funkcja wypisująca informacje o liczbie zespolonej na standardowe wyjście.
 Funkcje umożliwiające porównanie dwóch obiektów klasy Zespolona. Jeśli jest to możliwe, należy przeciążyć operatory ==, !=.
 Funkcja moduł, zwracająca moduł liczby zespolonej. 
@@ -3240,13 +3240,13 @@ Pamiętaj, że każdy adres e-mail składa się z identyfikatora użytkownika, z
 Identyfikator użytkownika składa się jedynie z:
 Małych (a-z) i wielkich (A-Z) liter.
 Cyfr (0-9).
-Znaków  ! # $ % & ' * + — / = ? ^ _ ` { | } ~.
-Kropki . pod warunkiem, że nie jest pierwszym bądź ostatnim znakiem i nie występuje dwukrotnie po sobie.
+Znaków  ```! # $ % & ' * + — / = ? ^ _ ` { | } ~```.
+Kropki `.` pod warunkiem, że nie jest pierwszym bądź ostatnim znakiem i nie występuje dwukrotnie po sobie.
 
 Nazwa domenowa składa się jedynie z:
 Małych (a-z) i wielkich (A-Z) liter.
 Cyfr (0-9).
-Kropki . oraz myślnika — pod warunkiem, że nie są pierwszym bądź ostatnim znakiem i nie występują dwukrotnie po sobie.
+Kropki `.` oraz myślnika — pod warunkiem, że nie są pierwszym bądź ostatnim znakiem i nie występują dwukrotnie po sobie.
 
 Dane wejściowe: Napis.
 
@@ -3332,11 +3332,16 @@ Dane wyjściowe: Lista napisów.
 Przykład:
 
 Dla otrzymanych napisów:
-“Folgujmy paniom nie sobie, ma rada;
+
+> Folgujmy paniom nie sobie, ma rada;
 Milujmy wiernie nie jest w nich przysada.
 Godnosci trzeba nie za nic tu cnota,
-Milosci pragna nie pragna tu zlota.”
-oraz “da”, 
+Milosci pragna nie pragna tu zlota.
+
+oraz 
+
+> da 
+
 powinna zostać zwrócona lista: [“Folgujmy paniom nie sobie, ma rada;”, “Milujmy wiernie nie jest w nich przysada.”]
 
 ### Zad 7. (★☆☆)
@@ -3380,7 +3385,7 @@ Dane wyjściowe: Napis.
 Przykład:
 Dla otrzymanych napisów:
 
-“Turned it up should no valley cousin he. 
+> Turned it up should no valley cousin he. 
 Speaking numerous ask did horrible packages set.
 Ashamed herself has distant can studied mrs. 
 Led therefore its middleton perpetual fulfilled provision frankness.
@@ -3393,11 +3398,10 @@ Luckily cheered colonel me do we attacks on highest enabled.
 Tried law yet style child. 
 Bore of true of no be deal. 
 Frequently sufficient in be unaffected. 
-The furnished she concluded depending procuring concealed.”
-
+The furnished she concluded depending procuring concealed.
 
 oraz napisu “a”, powinien zostać zwrócony napis:
-“Turned it up should no v
+> Turned it up should no v
 Spe
 Ash
 Led therefore its middleton perpetu
@@ -3410,7 +3414,7 @@ Luckily cheered colonel me do we
 Tried l
 Bore of true of no be de
 Frequently sufficient in be un
-The furnished she concluded depending procuring conce”.
+The furnished she concluded depending procuring conce.
 
 ### Zad 10.  (★★☆)
 
@@ -3426,25 +3430,25 @@ Przykład:
 
 Dla otrzymanych danych:
 
-	“'Every mile was tilted at seven or. 
-	Wished her entire esteem mr oh by.
-	He prevents requests by if in pleased. 
-	Picture too and concerned was comforting. 
-	Ten difficult resembled eagerness nor. 
-	Same park bore on be. 
-	Warmth his law design says he is a person. 
-	Pronunciation suspected in belonging conveying ye repulsive.”
+> 'Every mile was tilted at seven or. 
+Wished her entire esteem mr oh by.
+He prevents requests by if in pleased. 
+Picture too and concerned was comforting. 
+Ten difficult resembled eagerness nor. 
+Same park bore on be. 
+Warmth his law design says he is a person. 
+Pronunciation suspected in belonging conveying ye repulsive.
 
 oraz ['or', 'be', 'he'] i ['and', 'off', 'she'], powinniśmy otrzymać:
 
-	“Every mile was tilted at seven and. 
-	Wished her entire esteem mr oh by.
-	She prevents requests by if in pleased. 
-	Picture too and concerned was comforting. 
-	Ten difficult resembled eagerness nor. 
-	Same park bore on and off. 
-	Warmth his law design says she is a person. 
-	Pronunciation suspected in belonging conveying ye repulsive.”
+> Every mile was tilted at seven and. 
+Wished her entire esteem mr oh by.
+She prevents requests by if in pleased. 
+Picture too and concerned was comforting. 
+Ten difficult resembled eagerness nor. 
+Same park bore on and off. 
+Warmth his law design says she is a person. 
+Pronunciation suspected in belonging conveying ye repulsive.
 
 ### Zad 11.  (★★☆)
 
