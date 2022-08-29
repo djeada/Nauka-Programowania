@@ -28,7 +28,7 @@ Zadania podzielone są tematycznie, a kolejne rozdziały uporządkowane są wzgl
 
 * Pierwsze 8 rozdziałów ma na celu przećwiczenie najbardziej elementarnych koncepcji jak zmienna, warunek oraz pętla. Rozwiązania powinny być przez rozwiązującego sprawdzone manualnie poprzez komunikacje z programem za pomocą konsoli. Dane wpisywane są z klawiatury, a wynik wyświetlany jest na ekranie.
 * Rozdziały 9-17 zawierają zadania wymagające zrozumienia koncepcji z pierwszych 8 rozdziałów oraz poszerzające je o zagadnienia struktur danych, rekurencji oraz binarnej reprezentacji liczb. Rozwiązujący powinien samodzielnie przygotować automatyczne testy dla swojego rozwiązania wraz z uwzględnieniem wszystkich warunków brzegowych.
-* W rozdziały 18-25 poruszone są bardziej zaawansowane tematy. Ćwiczona jest praca z plikami, algorytmy sortowania oraz podstawy programowania obiektowego.
+* W rozdziałach 18-25 poruszone są bardziej zaawansowane tematy. Ćwiczona jest praca z plikami, algorytmy sortowania oraz podstawy programowania obiektowego.
 
 Przykładowe rozwiązania należy traktować jako wskazówki. W szczególności w dalszych rozdziałach dane zadanie może być rozwiązane na wiele sposobów. Część przykładowych rozwiązań może zawierać więcej niż jeden wariant rozwiązania. Alternatywne rozwiązania różnią się złożonością czasową, bądź pamięciową lub użyciem funkcji języka.
 
