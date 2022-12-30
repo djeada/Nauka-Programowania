@@ -7,15 +7,14 @@
 </div>
 
 # Nauka-programowania
-Chcesz się nauczyć programować i nie wiesz jak zacząć? </br>
-Jeśli tak, to trafiłeś w dobre miejsce. </br>
-Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne do zrozumienia w nauce programowania. </br>
+Jeśli chcesz nauczyć się programować, ale nie wiesz od czego zacząć, to trafiłeś we właściwe miejsce. Nasz projekt zawiera zestaw zadań, które przeprowadzą Cię przez wszystkie potrzebne do zrozumienia koncepcje programowania.
 
-## Gdzie mogę znaleźć materiały do nauki?
-<ul>
-  <li><a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python.</a>  
-  <li><a href="https://github.com/djeada/C-and-Cpp">Notatki C++.</a>  
-</ul>
+## Gdzie mogę znaleźć dodatkowe materiały do nauki?
+
+Materiały dodatkowe, takie jak notatki z Python i C++, są dostępne na naszych osobnych repozytoriach na GitHubie:
+
+* <a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python.</a>  
+* <a href="https://github.com/djeada/C-and-Cpp">Notatki C++.</a> 
 
 # Zbiór zadań
 
@@ -24,131 +23,45 @@ Zadania zebrane tutaj przeprowadzą cię przez wszystkie zagadnienia konieczne d
 * Więcej informacji na temat zadań znajdziesz na <a href="https://github.com/djeada/Nauka-programowania/blob/master/O_ZADANIACH.md">tej stronie</a>.
 
 ## O zadaniach
-Zadania podzielone są tematycznie, a kolejne rozdziały uporządkowane są względem stopnia zaawansowania. Treści zadań zostały przygotowane w taki sposób, by każdy nawet najbardziej oporny uczeń był w stanie przećwiczyć wszystkie podstawowe koncepcje programowania. W odróżnieniu od wielu innych kursów, które starają się jak najszybciej przejść do bardziej zaawansowanych mechanizmów programowania, zadania te kładą nacisk przede wszystkim na podstawy.
+Zadania są podzielone tematycznie i uporządkowane według stopnia zaawansowania. Przygotowaliśmy je tak, by każdy, nawet początkujący uczeń, mógł przećwiczyć podstawowe koncepcje programowania. W przeciwieństwie do wielu innych kursów, które szybko przechodzą do bardziej zaawansowanych mechanizmów, nasze zadania skupiają się głównie na podstawach.
 
-* Pierwsze 8 rozdziałów ma na celu przećwiczenie najbardziej elementarnych koncepcji jak zmienna, warunek oraz pętla. Rozwiązania powinny być przez rozwiązującego sprawdzone manualnie poprzez komunikacje z programem za pomocą konsoli. Dane wpisywane są z klawiatury, a wynik wyświetlany jest na ekranie.
-* Rozdziały 9-17 zawierają zadania wymagające zrozumienia koncepcji z pierwszych 8 rozdziałów oraz poszerzające je o zagadnienia struktur danych, rekurencji oraz binarnej reprezentacji liczb. Rozwiązujący powinien samodzielnie przygotować automatyczne testy dla swojego rozwiązania wraz z uwzględnieniem wszystkich skrajnych przypadków.
-* W rozdziałach 18-25 poruszone są bardziej zaawansowane tematy. Ćwiczona jest praca z plikami, algorytmy sortowania oraz podstawy programowania obiektowego.
+* Pierwsze 8 rozdziałów poświęcone są najbardziej podstawowym koncepcjom, takim jak zmienna, warunek i pętla. Rozwiązania powinny być sprawdzane ręcznie poprzez komunikację z programem za pomocą konsoli. Dane wpisywane są z klawiatury, a wynik wyświetlany na ekranie.
+* W rozdziałach 9-17 znajdują się zadania wymagające zrozumienia koncepcji z pierwszych 8 rozdziałów oraz rozszerzające je o zagadnienia takie jak struktury danych, rekurencja i binarna reprezentacja liczb. Osoba rozwiązująca zadania powinna przygotować automatyczne testy dla swojego rozwiązania, uwzględniając wszystkie skrajne przypadki.
+* W rozdziałach 18-25 poruszone są bardziej zaawansowane tematy, takie jak praca z plikami, algorytmy sortowania i obsługa błędów. Zadania te wymagają już bardziej zaawansowanej wiedzy i umiejętności, a także znajomości narzędzi takich jak debugowanie i profilowanie kodu. Zadania te wymagają już dużej samodzielności i umiejętności samodzielnego poszukiwania informacji oraz rozwiązywania problemów.
 
-Przykładowe rozwiązania należy traktować jako wskazówki. W szczególności w dalszych rozdziałach dane zadanie może być rozwiązane na wiele sposobów. Część przykładowych rozwiązań może zawierać więcej niż jeden wariant rozwiązania. Alternatywne rozwiązania różnią się złożonością czasową, bądź pamięciową lub użyciem funkcji języka.
+Przykładowe rozwiązania powinny być traktowane jako wskazówki, a nie jako jedyne słuszne sposoby rozwiązania zadania. W szczególności w dalszych rozdziałach, dane zadanie może mieć wiele różnych sposobów rozwiązania. Część przykładowych rozwiązań może zawierać nawet więcej niż jeden wariant rozwiązania. Alternatywne rozwiązania mogą różnić się między sobą pod względem złożoności czasowej, pamięciowej lub użycia funkcji języka.
+
+Pamiętaj, że nauka programowania to długi proces, ale z naszym zbiorem zadań i dodatkowymi materiałami, powinieneś być w stanie zbudować solidne podstawy i cieszyć się rozwijającą się karierą w branży IT.
+
+Jeśli masz jakieś pytania lub potrzebujesz dodatkowej pomocy, nie wahaj się skontaktować z nami. Chętnie Ci pomożemy.
 
 ## Wspierane wersje języków
 
-Przykłady zostały przetestowane w następujących wersjach języków:
+Przykłady zostały przetestowane i dostosowane do następujących wersji języków:
 
 ### C++
 
-Większość przykładów wykorzystuje standard `C++11`. Jedynie nieznaczna część zadań została rozwiązana przy użyciu składni wprowadzonej w wersjach `C++17` i `C++20`.
-
-#### Komenda kompilacji
-
-Do kompilacji wykorzystano kompilator `GCC` z następującymi flagami:
-
-    g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o plik_wykonwyalny.out sciezka_do_zadania.cpp
-
-#### Styl formatowania
-
-Do formatowania kodu zostało użyte narzędzie <a href="https://github.com/llvm-mirror/clang">`clang-format`</a>.
-
-    clang-format -i -style=file sciezka_do_zadania.cpp
-
-#### Zależności od bibliotek zewnętrznych
-
-Brak.
+Większość przykładów wykorzystuje standard `C++11`. Niektóre zadania rozwiązane zostały przy użyciu składni wprowadzonej w wersjach `C++17` i `C++20`. Aby skompilować przykłady, należy użyć kompilatora `GCC` z flagami: `g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o plik_wykonwyalny.out sciezka_do_zadania.cpp`. Do formatowania kodu należy użyć narzędzia `clang-format` z flagami: `clang-format -i -style=file sciezka_do_zadania.cpp`. Przykłady nie używają bibliotek zewnętrznych.
 
 ### Python
 
-Wszystkie przykłady zostały przetestowane w wersji `3.8`. 
-
-#### Komenda kompilacji
-
-Skrypty języka Python nie były kompilowane. Do uruchomienia skryptów użyto następującej komendy:
-
-    python3 sciezka_do_zadania.py
-
-#### Styl formatowania
-
-Do formatowania kodu zostało użyte narzędzie <a href="https://github.com/psf/black">`black`</a>.
-
-    black sciezka_do_zadania.py
-
-#### Zależności od bibliotek zewnętrznych
-
-Brak.
+Wszystkie przykłady zostały przetestowane i dostosowane do wersji `3.8`. Skrypty języka Python nie wymagają kompilacji - aby uruchomić skrypt, należy użyć komendy `python sciezka_do_zadania.py`. Do formatowania kodu należy użyć narzędzia `black` bez flag: `black sciezka_do_zadania.py`. Przykłady nie używają bibliotek zewnętrznych.
 
 ### Java
     
-Wszystkie przykłady zostały przetestowane w wersji `Java SE 17`.
-
-#### Komenda kompilacji
-
-Do kompilacji wykorzystano kompilator `javac` z następującymi flagami:
-
-    javac -d . sciezka_do_zadania.java
-
-#### Styl formatowania
-
-Do formatowania kodu zostało użyte narzędzie `google-java-format`.
-
-    java -jar google-java-format-1.7-all-deps.jar sciezka_do_zadania.java
-
-#### Zależności od bibliotek zewnętrznych
-
-Brak.
+Przykłady zostały przetestowane i dostosowane do wersji `Java SE 17`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `javac` z flagami: `javac -d . sciezka_do_zadania.java`. Do formatowania kodu należy użyć narzędzia `google-java-format` z flagami: `java -jar google-java-format-1.7-all-deps.jar sciezka_do_zadania.java`. Przykłady nie używają bibliotek zewnętrznych.
 
 ### JavaScript
 
-Rozwiązania zostały przetestowane w środowisku `NodeJS 12.16.1`.
-
-#### Styl formatowania
-
-Do formatowania kodu zostało użyte narzędzie `js-beautify`.
-
-    js-beautify -r sciezka_do_zadania.js
-
-#### Zależności od bibliotek zewnętrznych
-
-Do komunikacji z konsolą użyto biblioteki <a href="https://github.com/maleck13/readline">`readline`</a>.
+Rozwiązania zostały przetestowane i dostosowane do środowiska `NodeJS 12.16.1`. Do formatowania kodu należy użyć narzędzia `js-beautify` z flagami: `js-beautify -r sciezka_do_zadania.js`. Przykłady wymagają zainstalowania biblioteki `readline` do komunikacji z konsolą.
 
 ### Haskell
 
-Wszystkie przykłady zostały przetestowane w wersji `Haskell 8.4`.
-
-#### Komenda kompilacji
-
-Do kompilacji wykorzystano kompilator `ghc` z następującymi flagami:
-    
-    ghc -O2 -Wall -o sciezka_do_zadania sciezka_do_zadania.hs
-
-#### Styl formatowania
-
-Do formatowania kodu zostało użyte narzędzie `ormolu`.
-
-    ormolu --mode inplace sciezka_do_zadania.hs
-
-#### Zależności od bibliotek zewnętrznych
-
-Brak.
+Przykłady zostały przetestowane i dostosowane do wersji `GHC 8.10.2`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `ghc` z flagami: `ghc -O2 -threaded -rtsopts -eventlog sciezka_do_zadania.hs -o plik_wykonywalny`. Do formatowania kodu należy użyć narzędzia `ormolu` z flagami: `ormolu --mode inplace sciezka_do_zadania.hs`. Przykłady nie używają bibliotek zewnętrznych.
 
 ### Rust
 
-Wszystkie przykłady zostały przetestowane w wersji `Rust 1.42.0`.
-
-#### Komenda kompilacji
-
-Do kompilacji wykorzystano kompilator `rustc` z następującymi flagami:
-
-    rustc -O --emit=asm --target=x86_64-unknown-linux-gnu -o sciezka_do_zadania sciezka_do_zadania.rs
-
-#### Styl formatowania
-
-Do formatowania kodu zostało użyte narzędzie <a href="https://github.com/rust-lang/rustfmt">`rustfmt`</a>.
-
-    rustfmt --write-mode=overwrite sciezka_do_zadania.rs
-
-#### Zależności od bibliotek zewnętrznych
-
-Brak.
+Przykłady zostały przetestowane i dostosowane do wersji `1.42.0`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `rustc` z flagami: `rustc -O --emit=asm --target=x86_64-unknown-linux-gnu -o sciezka_do_zadania sciezka_do_zadania.rs`. Do formatowania kodu należy użyć narzędzia `rustfmt` z flagami: `rustfmt --write-mode=overwrite sciezka_do_zadania.rs`. Przykłady nie używają bibliotek zewnętrznych.
 
 ## Rozwiązania
 
