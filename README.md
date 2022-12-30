@@ -53,7 +53,7 @@ Przykłady zostały przetestowane i dostosowane do wersji `Java SE 17`. Aby skom
 
 ### JavaScript
 
-Rozwiązania zostały przetestowane i dostosowane do środowiska `NodeJS 12.16.1`. Do formatowania kodu należy użyć narzędzia `js-beautify` z flagami: `js-beautify -r sciezka_do_zadania.js`. Przykłady wymagają zainstalowania biblioteki `readline` do komunikacji z konsolą.
+Rozwiązania zostały przetestowane i dostosowane do środowiska `NodeJS 12.16.1`. Skrypty języka JavaScript nie wymagają kompilacji - aby uruchomić skrypt, należy użyć komendy `node sciezka_do_zadania.js`.Do formatowania kodu należy użyć narzędzia `js-beautify` z flagami: `js-beautify -r sciezka_do_zadania.js`. Przykłady wymagają zainstalowania biblioteki `readline` do komunikacji z konsolą.
 
 ### Haskell
 
@@ -61,7 +61,7 @@ Przykłady zostały przetestowane i dostosowane do wersji `GHC 8.10.2`. Aby skom
 
 ### Rust
 
-Przykłady zostały przetestowane i dostosowane do wersji `1.42.0`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `rustc` z flagami: `rustc -O --emit=asm --target=x86_64-unknown-linux-gnu -o sciezka_do_zadania sciezka_do_zadania.rs`. Do formatowania kodu należy użyć narzędzia `rustfmt` z flagami: `rustfmt --write-mode=overwrite sciezka_do_zadania.rs`. Przykłady nie używają bibliotek zewnętrznych.
+Przykłady zostały przetestowane i dostosowane do wersji `1.42.0`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `rustc` bez flag: `rustc sciezka_do_zadania.rs`. Do formatowania kodu należy użyć narzędzia `rustfmt` z flagami: `rustfmt --write-mode=overwrite sciezka_do_zadania.rs`. Przykłady nie używają bibliotek zewnętrznych.
 
 ## Rozwiązania
 
