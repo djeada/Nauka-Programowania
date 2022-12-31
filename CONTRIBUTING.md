@@ -37,57 +37,60 @@ git push origin nazwa-galezi
 
 Oto przykładowy szablon dla plików z rozwiązaniami:
 
-    '''
-    # Nazwa zadania
 
-    ## Tresc
+```python
+'''
+# Nazwa zadania
 
-    [Tutaj opisz problem i jego wymagania, np. wejście, wyjście i oczekiwane działanie.]
+## Tresc
 
-    ## Wejście:
-    [Tutaj opisz format wejścia danych, np. lista liczb, ciąg znaków itp.]
+[Tutaj opisz problem i jego wymagania, np. wejście, wyjście i oczekiwane działanie.]
 
-    ## Wyjście:
-    [Tutaj opisz format wyjścia danych, np. liczba, ciąg znaków itp.]
+## Wejście:
+[Tutaj opisz format wejścia danych, np. lista liczb, ciąg znaków itp.]
 
-    ## Objaśnienie wyjścia:
-    [Tutaj opisz, co oznaczają poszczególne elementy wyjścia.]
+## Wyjście:
+[Tutaj opisz format wyjścia danych, np. liczba, ciąg znaków itp.]
 
-    ---
+## Objaśnienie wyjścia:
+[Tutaj opisz, co oznaczają poszczególne elementy wyjścia.]
 
-    ## Opis rozwiązania 1:
-    [Tutaj opisz, jak działa Twoje rozwiązanie.]
+---
 
-    ### Złożoność czasowa: O(X)
-    ### Złożoność pamięciowa: O(X)
+## Opis rozwiązania 1:
+[Tutaj opisz, jak działa Twoje rozwiązanie.]
 
-    ## Opis rozwiązania 2:
-    [Tutaj opisz, jak działa drugie rozwiązanie (jeśli istnieje).]
+### Złożoność czasowa: O(X)
+### Złożoność pamięciowa: O(X)
 
-    ### Złożoność czasowa: O(X)
-    ### Złożoność pamięciowa: O(X)
+## Opis rozwiązania 2:
+[Tutaj opisz, jak działa drugie rozwiązanie (jeśli istnieje).]
 
-    '''
+### Złożoność czasowa: O(X)
+### Złożoność pamięciowa: O(X)
 
-    ## Implementacja rozwiązania 1:
+'''
 
-    def nazwa_rozwiazania_1(parametry):
-        pass
+## Implementacja rozwiązania 1:
 
-    ## Implementacja rozwiązania 2:
+def nazwa_rozwiazania_1(parametry):
+    pass
 
-    def nazwa_rozwiazania_2(parametry):
-        pass
+## Implementacja rozwiązania 2:
 
-    ## Testy
+def nazwa_rozwiazania_2(parametry):
+    pass
 
-    # Test 1
-    dane_wejsciowe = [1,2,3]
-    oczekiwany_wynik = 'wynik'
-    wynik = nazwa_rozwiazania_1(dane_wejsciowe)
-    assert wynik == oczekiwany_wynik
-    # Test 2
-    dane_wejsciowe = [1,2,3]
-    oczekiwany_wynik = 'wynik'
-    wynik = nazwa_rozwiazania_2(dane_wejsciowe)
-    assert wynik == oczekiwany_wynik
+## Testy
+
+# Test 1
+dane_wejsciowe = [1,2,3]
+oczekiwany_wynik = 'wynik'
+wynik = nazwa_rozwiazania_1(dane_wejsciowe)
+assert wynik == oczekiwany_wynik
+# Test 2
+dane_wejsciowe = [1,2,3]
+oczekiwany_wynik = 'wynik'
+wynik = nazwa_rozwiazania_2(dane_wejsciowe)
+assert wynik == oczekiwany_wynik
+```
