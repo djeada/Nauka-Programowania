@@ -20,7 +20,7 @@ Materiały dodatkowe, takie jak notatki z Python i C++, są dostępne na naszych
 
 * Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-Programowania/blob/master/zbior_zadan.md">linkiem</a>. </br>
 * Zbiór będzie poszerzany i aktualizowany.
-* Więcej informacji na temat zadań znajdziesz na <a href="https://github.com/djeada/Nauka-programowania/blob/master/O_ZADANIACH.md">tej stronie</a>.
+* Więcej informacji na temat tego jak dodać własne rozwiązania, znajdziesz na <a href="https://github.com/djeada/Nauka-Programowania/blob/master/CONTRIBUTING.md">tej stronie</a>.
 
 ## O zadaniach
 Zadania są podzielone tematycznie i uporządkowane według stopnia zaawansowania. Przygotowaliśmy je tak, by każdy, nawet początkujący uczeń, mógł przećwiczyć podstawowe koncepcje programowania. W przeciwieństwie do wielu innych kursów, które szybko przechodzą do bardziej zaawansowanych mechanizmów, nasze zadania skupiają się głównie na podstawach.
