@@ -37,20 +37,23 @@ Treść zadania: Napisz program, który wypisze na standardowe wyjście ciągi z
 Przykłady:
 
 Kwadrat:
-xx
-xx
+
+    xx
+    xx
 
 Trójkąt:
-1
-22
-333
+
+    1
+    22
+    333
 
 Romb z jedynek:
-1
-111
-11111
-111
-1
+
+    1
+    111
+    11111
+    111
+    1
 
 Dane wejściowe: Brak.
 
