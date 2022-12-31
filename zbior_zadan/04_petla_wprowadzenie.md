@@ -79,11 +79,11 @@ Tytuł: Suma elementów ciągu.
 
 Treść: Dla otrzymanej liczby naturalnej n, wypisz sumę n pierwszych elementów ciągu danego wzorem:
 
-$$a[n] = n^2 + n + 1$$
+$$a_n = n^2 + n + 1$$
 
-$$a[n] = n^2 + 5n$$
+$$a_n = n^2 + 5n$$
 
-$$a[n] = n + 2n$$
+$$a_n = n + 2n$$
 
 Wynik powinien zostać zaokrąglony do najbliższej liczby naturalnej.
 
