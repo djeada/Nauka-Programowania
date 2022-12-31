@@ -193,23 +193,23 @@ Dla otrzymanej listy: [5, 27, 6, 2, 1, 10, 8] oraz liczb 0 i 2, powinna zostać 
 
 ### Zad 13. (★★☆)
 
-Tytuł: Brakujący element w liście.
+Tytuł: Znalezienie brakującego elementu w liście.
 
-Treść: Dla otrzymanej listy, składającej się z nieuporządkowanych kolejnych (z wyjątkiem jednego) wyrazów ciągu arytmetycznego, znajdź brakujący element.
+Treść: Dla dostarczonej listy, składającej się z nieuporządkowanych kolejnych (oprócz jednego) elementów ciągu arytmetycznego, znajdź brakujący element.
 
-Dane wejściowe: Lista liczb naturalnych.
+Dane wejściowe: Lista zawierająca liczby naturalne.
 
 Dane wyjściowe: Liczba naturalna.
 
 Przykład:
 
-Dla otrzymanej listy: [5, 2, 1, 3] powinna zostać zwrócona liczba: 4.
+Dla otrzymanej listy: [5, 2, 1, 3] zostanie zwrócona liczba: 4.
 
 ### Zad 14. (★★☆)
 
-Tytuł: Element bez pary w liście.
+Tytuł: Znalezienie elementu bez pary w liście liczb całkowitych.
 
-Treść: Dla otrzymanej listy: liczb całkowitych, składającej się z nieparzystej liczby elementów, znajdź element bez pary. Przez pary elementów rozumiemy tutaj elementy o równej wartości.
+Treść: Dla otrzymanej listy liczb całkowitych, składającej się z nieparzystej liczby elementów, znajdź element, który nie ma pary o tej samej wartości.
 
 Dane wejściowe: Lista liczb całkowitych.
 
@@ -217,13 +217,13 @@ Dane wyjściowe: Liczba całkowita.
 
 Przykład:
 
-Dla otrzymanej listy: [1, 3, 1,  7, 3, 1, 1] powinna zostać zwrócona liczba: 7.
+Dla otrzymanej listy: [1, 3, 1, 7, 3, 1, 1] zostanie zwrócona liczba: 7.
 
 ### Zad 15. (★★☆)
 
-Tytuł: Element dominujący.
+Tytuł: Znalezienie elementu dominującego w liście liczb naturalnych.
 
-Treść: Dla otrzymanej listy: liczb naturalnych, znajdź element dominujący. Element dominujący to element, którego liczba wystąpień w liście jest większa niż połowa długości listy. Jeśli lista nie ma elementu dominującego, zwróć -1.
+Treść: Dla dostarczonej listy liczb naturalnych, znajdź element, który występuje w niej więcej niż połowa jej długości. Jeśli taki element nie istnieje, zwróć -1.
 
 Dane wejściowe: Lista liczb naturalnych.
 
@@ -231,13 +231,13 @@ Dane wyjściowe: Liczba naturalna.
 
 Przykład:
 
-Dla otrzymanej listy: [4, 7, 4, 4, 2] powinna zostać zwrócona liczba: 4.
+Dla otrzymanej listy: [4, 7, 4, 4, 2] zostanie zwrócona liczba: 4.
 
 ### Zad 16. (★★☆)
 
-Tytuł: Suma dwóch.
+Tytuł: Znalezienie indeksów pierwszej pary elementów listy o sumie równej podanej liczbie.
 
-Treść: Dla otrzymanej listy: liczb całkowitych oraz liczby x, znajdź indeksy pierwszej pary elementów listy, których suma jest równa liczbie x. Jeśli w liście nie ma takiej pary, zwróć parę (-1, -1).
+Treść: Dla otrzymanej listy liczb całkowitych oraz liczby x, znajdź indeksy pierwszej pary elementów listy, których suma jest równa x. Jeśli taka para nie istnieje, zwróć parę (-1, -1).
 
 Dane wejściowe: Lista liczb całkowitych oraz liczba całkowita.
 
@@ -245,13 +245,13 @@ Dane wyjściowe: Para liczb całkowitych.
 
 Przykład:
 
-Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, powinna zostać zwrócona para: (0, 2).
+Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostaną zwrócone indeksy pierwszej pary elementów o sumie równej 5: (0, 2).
 
 ### Zad 17. (★★☆)
 
-Tytuł: Pary, których suma jest równa liczbie.
+Tytuł: Znalezienie wszystkich par elementów listy o sumie równej podanej liczbie.
 
-Treść: Dla otrzymanej listy: liczb całkowitych oraz liczby x, znajdź wszystkie pary liczb z listy, których suma jest równa x.
+Treść: Dla otrzymanej listy liczb całkowitych oraz liczby x, znajdź wszystkie pary elementów listy, których suma jest równa x.
 
 Dane wejściowe: Lista liczb całkowitych oraz liczba całkowita.
 
@@ -259,18 +259,18 @@ Dane wyjściowe: Lista par liczb całkowitych.
 
 Przykład:
 
-Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5, powinna zostać zwrócona lista: [(1, 4), (2, 3)].
+Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5, zostaną zwrócone wszystkie pary elementów o sumie równej 5: [(1, 4), (2, 3)].
 
 ### Zad 18. (★★☆)
 
-Tytuł: Lista posortowana została przesunięta.
+Tytuł: Znalezienie indeksu najmniejszego elementu w posortowanej i przesuniętej w prawo liście.
 
-Treść: Dla otrzymanej listy: liczb całkowitych znajdź indeks najmniejszego elementu. Lista jest posortowana rosnąco, ale została przesunięta. Przykładowo dla przesunięcia w prawo o 1, ostatni element trafia na pierwsze miejsce, a przedostatni na ostatnie miejsce itd.
+Treść: Dla otrzymanej listy liczb całkowitych, znajdź indeks najmniejszego elementu. Lista jest posortowana rosnąco, ale została przesunięta w prawo o określoną liczbę miejsc. Przykładowo dla przesunięcia w prawo o 1, ostatni element trafia na pierwsze miejsce, a przedostatni na ostatnie miejsce itd.
 
-Dane wejściowe: Lista liczb całkowitych oraz liczba naturalna.
+Dane wejściowe: Lista liczb całkowitych oraz liczba naturalna określająca przesunięcie w prawo.
 
 Dane wyjściowe: Liczba całkowita.
 
 Przykład:
 
-Dla otrzymanej listy: [7, 8, -1, 4, 5], powinna zostać zwrócona liczba 2.
+Dla otrzymanej listy: [7, 8, -1, 4, 5] zostanie zwrócona liczba: 2.
