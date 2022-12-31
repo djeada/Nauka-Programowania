@@ -90,7 +90,17 @@ Dane wyjściowe: Lista liczb całkowitych.
 
 Przykład:
 
-a) Dla otrzymanej listy [3, 7, 2, 5, 8] powinna zostać zwrócona lista [4, 3, 9].
+Dla otrzymanej listy [5, 7, 9, 4, 2]:
+
+a) Wynik: [5, 8, 9, 5, 2]
+
+b) Wynik: [5, 0, 0, 5, 2]
+
+c) Wynik: [25, 0, 0, 25, 4]
+
+d) Wynik: [37, 0, 0, 25, 4]
+
+e) Wynik: [2592, 0, 0, 36, 1080]
 
 ### Zad 6. (★☆☆)
 
