@@ -18,7 +18,7 @@ Materiały dodatkowe, takie jak notatki z Python i C++, są dostępne na naszych
 
 # Zbiór zadań
 
-* Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-Programowania/blob/master/zbior_zadan.md">linkiem</a>. </br>
+* Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-Programowania/tree/master/zbior_zadan">linkiem</a>. </br>
 * Zbiór będzie poszerzany i aktualizowany.
 * Więcej informacji na temat tego jak dodać własne rozwiązania, znajdziesz na <a href="https://github.com/djeada/Nauka-Programowania/blob/master/CONTRIBUTING.md">tej stronie</a>.
 
