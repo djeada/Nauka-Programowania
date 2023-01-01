@@ -2,12 +2,13 @@
 
 ### Zad 1. (★☆☆)
 
-Tytuł: Konwersja między systemami binarnym i dziesiętnym.
+Tytuł: Konwersja pomiędzy systemami binarnym i dziesiętnym.
 
-Treść: 
+Treść:
 
-Otrzymujesz dziesiętną reprezentację liczby naturalnej, zwróć jej binarną reprezentację.
-Otrzymujesz binarną reprezentację liczby naturalnej, zwróć jej dziesiętną reprezentację.
+a) Otrzymujesz reprezentację dziesiętną liczby naturalnej, zwróć jej reprezentację binarną.
+
+b) Otrzymujesz reprezentację binarną liczby naturalnej, zwróć jej reprezentację dziesiętną.
 
 Dane wejściowe: Liczba naturalna w obu podpunktach.
 
@@ -15,17 +16,19 @@ Dane wyjściowe: Liczba naturalna w obu podpunktach.
 
 Przykład:
 
-Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 11.
-Dla otrzymanej liczby: 101, powinna zostać zwrócona liczba: 5.
+a) Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 11.
+
+b) Dla otrzymanej liczby: 101, powinna zostać zwrócona liczba: 5.
 
 ### Zad 2. (★☆☆)
 
-Tytuł: Konwersja, gdy spełniony jest warunek.
+Tytuł:  Konwersja warunkowa.
 
-Treść: Otrzymujesz liczbę naturalną. Zwróć binarną reprezentację otrzymanej liczby, jeśli:
+Treść: Otrzymujesz liczbę naturalną. Zwróć reprezentację binarną otrzymanej liczby, jeśli:
 
-Otrzymana liczba jest liczbą parzystą.
-Otrzymana liczba jest liczbą pierwszą.
+a) Otrzymana liczba jest liczbą parzystą.
+
+b) Otrzymana liczba jest liczbą pierwszą.
 
 Dane wejściowe: Liczba naturalna w obu podpunktach.
 
@@ -33,8 +36,9 @@ Dane wyjściowe: Liczba naturalna w obu podpunktach.
 
 Przykład:
 
-Dla otrzymanej liczby: 7, nie powinna zostać zwrócona żadna liczba.
-Dla otrzymanej liczby: 7, powinna zostać zwrócona liczba: 111.
+a) Dla otrzymanej liczby: 7, nie powinna zostać zwrócona żadna liczba.
+
+b) Dla otrzymanej liczby: 7, powinna zostać zwrócona liczba: 111.
 
 ### Zad 3. (★☆☆)
 
@@ -42,10 +46,13 @@ Tytuł: Operacje arytmetyczne.
 
 Treść: Otrzymujesz dwie liczby naturalne. Używając jedynie operatorów bitowych, zaimplementuj:
 
-Dodawanie.
-Odejmowanie.
-Mnożenie
-Dzielenie.
+a) Dodawanie.
+
+b) Odejmowanie.
+
+c) Mnożenie.
+
+d) Dzielenie.
 
 Dane wejściowe: Dwie liczby naturalne w każdym podpunkcie.
 
@@ -53,19 +60,23 @@ Dane wyjściowe: Liczba naturalna w każdym podpunkcie.
 
 Przykład:
 
-Dla otrzymanych liczb: 2 i 3, powinna zostać zwrócona liczba: 5.
-Dla otrzymanych liczb: 7 i 5, powinna zostać zwrócona liczba: 2.
-Dla otrzymanych liczb: 4 i 4, powinna zostać zwrócona liczba: 16.
-Dla otrzymanych liczb: 9 i 3, powinna zostać zwrócona liczba: 3.
+a) Dla otrzymanych liczb: 2 i 3, powinna zostać zwrócona liczba: 5.
+
+b) Dla otrzymanych liczb: 7 i 5, powinna zostać zwrócona liczba: 2.
+
+c) Dla otrzymanych liczb: 4 i 4, powinna zostać zwrócona liczba: 16.
+
+d) Dla otrzymanych liczb: 9 i 3, powinna zostać zwrócona liczba: 3.
 
 ### Zad 4. (★☆☆)
 
-Tytuł: Zera/jedynki w liczbie binarnej.
+Tytuł: Liczba zer i jedynek w reprezentacji binarnej.
 
-Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. 
+Treść: Otrzymujesz reprezentację dziesiętną liczby naturalnej.
 
-Oblicz z ilu zer składa się binarna reprezentacja otrzymanej liczby.
-Oblicz z ilu jedynek składa się binarna reprezentacja otrzymanej liczby.
+a) Oblicz, ile zer zawiera binarna reprezentacja otrzymanej liczby.
+
+b) Oblicz, ile jedynek zawiera binarna reprezentacja otrzymanej liczby.
 
 Dane wejściowe: Liczba naturalna w obu podpunktach.
 
@@ -73,17 +84,19 @@ Dane wyjściowe: Liczba naturalna w obu podpunktach.
 
 Przykład:
 
-Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 0.
-Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 2.
+a) Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 0.
+ 
+b) Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 2.
 
 ### Zad 5. (★★☆)
 
-Tytuł: Min/maks z dwóch liczb.
+Tytuł: Wybieranie minimum i maksimum.
 
-Treść: Otrzymujesz dwie liczby naturalne. 
+Treść: Otrzymujesz dwie liczby naturalne.
 
-Zwróć mniejszą liczbę. Zabronione jest użycie instrukcji warunkowej i zewnętrznych bibliotek.
-Zwróć większą liczbę. Zabronione jest użycie instrukcji warunkowej i zewnętrznych bibliotek.
+a) Zwróć mniejszą z nich. Zabronione jest użycie instrukcji warunkowej oraz zewnętrznych bibliotek.
+
+b) Zwróć większą z nich. Zabronione jest użycie instrukcji warunkowej oraz zewnętrznych bibliotek.
 
 Dane wejściowe: Dwie liczby naturalne w obu podpunktach.
 
@@ -91,14 +104,15 @@ Dane wyjściowe: Liczba naturalna w obu podpunktach.
 
 Przykład:
 
-Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona liczba: 2.
-Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona liczba: 3.
+a) Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona liczba: 2.
+
+b) Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona liczba: 3.
 
 ### Zad 6. (★★☆)
 
-Tytuł: Konwersja między dowolnymi systemami.
+Tytuł:  Konwersja między dowolnymi systemami liczbowymi.
 
-Treść: Otrzymujesz liczbę naturalną, podstawę systemu liczbowego, w którym zapisana jest otrzymana liczba oraz podstawę systemu, na który ma zostać dokonana konwersja. Zwróć reprezentację otrzymanej liczby w nowym systemie.
+Treść: Otrzymujesz liczbę naturalną, podstawę systemu liczbowego, w którym zapisana jest ta liczba, oraz podstawę systemu, na który ma zostać dokonana konwersja. Zwróć reprezentację otrzymanej liczby w nowym systemie.
 
 Dane wejściowe: Trzy liczby naturalne.
 
@@ -106,13 +120,13 @@ Dane wyjściowe: Liczba naturalna.
 
 Przykład:
 
-Dla otrzymanych liczb: 4301, 10 i 4  powinna zostać zwrócona liczba: 1003031.
+Dla otrzymanych liczb: 4301, 10 i 4 powinna zostać zwrócona liczba: 1003031.
 
 ### Zad 7. (★☆☆)
 
-Tytuł: Zamiana sąsiadów.
+Tytuł: Odwrócenie sąsiadujących bitów.
 
-Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. Zamień miejscami sąsiadujące bity w zapisie binarnym otrzymanej liczbie. Zwróć dziesiętną reprezentację wyniku.
+Treść: Otrzymujesz reprezentację dziesiętną liczby naturalnej. Zmień miejscami sąsiadujące bity w zapisie binarnym tej liczby i zwróć dziesiętną reprezentację wyniku.
 
 Dane wejściowe: Liczba naturalna.
 
@@ -124,9 +138,9 @@ Dla otrzymanej liczby: 9131, powinna zostać zwrócona liczba: 4951.
 
 ### Zad 8. (★☆☆)
 
-Tytuł: Następna potęga dwójki.
+Tytuł: Najbliższa potęga dwójki.
 
-Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. Znajdź potęgę dwójki większą bądź równą otrzymanej liczbie. Inaczej: zaokrąglij liczbę do następnej potęgi dwójki.
+Treść: Otrzymujesz reprezentację dziesiętną liczby naturalnej. Znajdź potęgę dwójki większą bądź równą tej liczbie. Inaczej: zaokrąglij liczbę do najbliższej potęgi dwójki.
 
 Dane wejściowe: Liczba naturalna.
 
@@ -140,9 +154,12 @@ Dla otrzymanej liczby: 111, powinna zostać zwrócona liczba: 128.
 
 Tytuł: Zmiana wielkości liter.
 
-Treść: Otrzymujesz napis. Przy użyciu operatorów bitowych:
+Treść: Otrzymujesz napis. Zaimplementuj następujące operacje przy użyciu operatorów bitowych:
+
 a) Zamień wielkie litery na małe litery.
+
 b) Zamień małe litery na wielkie litery.
+
 c) Zamień małe litery na wielkie litery i wielkie litery na małe litery.
 
 Dane wejściowe: Napis.
@@ -151,15 +168,17 @@ Dane wyjściowe: Napis.
 
 Przykład:
 
-Dla otrzymanego napisu: “Test”, powinien zostać zwrócony napis: “test”.
-Dla otrzymanego napisu: “Test”, powinien zostać zwrócony napis: “TEST”.
-Dla otrzymanego napisu: “Test”, powinien zostać zwrócony napis: “tEST”.
+a) Dla otrzymanego napisu: "Test", powinien zostać zwrócony napis: "test".
+
+b) Dla otrzymanego napisu: "Test", powinien zostać zwrócony napis: "TEST".
+
+c) Dla otrzymanego napisu: "Test", powinien zostać zwrócony napis: "tEST".
 
 ### Zad 10. (★★☆)
 
-Tytuł: Zamień A w B.
+Tytuł: Zamień A na B.
 
-Treść: Otrzymujesz dwie liczby naturalne. Oblicz ile bitów należy odwrócić, aby zamienić liczbę A w liczbę B.  
+Treść: Otrzymujesz dwie liczby naturalne. Oblicz, ile bitów należy odwrócić, aby zamienić liczbę A na liczbę B.
 
 Dane wejściowe: Dwie liczby naturalne.
 
@@ -167,13 +186,13 @@ Dane wyjściowe: Liczba naturalna.
 
 Przykład:
 
-Dla otrzymanych liczb: 34 i 73, powinna zostać zwrócona liczba: 5.
+Dla otrzymanych liczb 34 i 73, powinna zostać zwrócona liczba 5.
 
 ### Zad 11. (★★☆)
 
 Tytuł: Czy liczba jest palindromem?
 
-Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. Sprawdź, czy binarna reprezentacja otrzymanej liczby jest palindromem.
+Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. Sprawdź, czy reprezentacja binarna otrzymanej liczby jest palindromem.
 
 Dane wejściowe: Liczba naturalna.
 
@@ -181,13 +200,13 @@ Dane wyjściowe: Wartość logiczna.
 
 Przykład:
 
-Dla otrzymanej liczby: 26, powinna zostać zwrócona wartość logiczna: Prawda.
+Dla otrzymanej liczby 26, powinna zostać zwrócona wartość logiczna: Prawda.
 
 ### Zad 12. (★★★)
 
-Tytuł: Najdłuższy ciąg zer w liczbie binarnej.	
+Tytuł: Najdłuższy ciąg zer w liczbie binarnej.
 
-Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. Oblicz długość najdłuższego ciągu zer w jej binarnej reprezentacji.
+Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. Oblicz długość najdłuższego ciągu zer w jej reprezentacji binarnej.
 
 Dane wejściowe: Liczba naturalna.
 
@@ -195,4 +214,4 @@ Dane wyjściowe: Liczba naturalna.
 
 Przykład:
 
-Dla otrzymanej liczby: 14, powinna zostać zwrócona liczba: 1.
+Dla otrzymanej liczby 14, powinna zostać zwrócona liczba 1.
