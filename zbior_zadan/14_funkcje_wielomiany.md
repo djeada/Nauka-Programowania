@@ -4,7 +4,7 @@
 
 Tytuł: Obliczenie wartości wielomianu w punkcie.
 
-Treść: Otrzymujesz listę n współczynników wielomianu w postaci anxn + an-1xn-1 + ... + a0 oraz liczbę naturalną x. Znajdź wartość wielomianu w podanym punkcie.
+Treść: Otrzymujesz listę n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbę naturalną x. Znajdź wartość wielomianu w podanym punkcie.
 
 Dane wejściowe: Lista liczb naturalnych i liczba naturalna.
 
@@ -18,7 +18,7 @@ Dla listy współczynników [3, 2, 1] i liczby x = 1, zostanie zwrócona liczba 
 
 Tytuł: Obliczenie iloczynu wielomianu przez skalar.
 
-Treść: Otrzymujesz listę n współczynników wielomianu w postaci anxn + an-1xn-1 + ... + a0 oraz liczbę x. Oblicz współczynniki wielomianu, który jest wynikiem pomnożenia otrzymanego wielomianu przez liczbę x.
+Treść: Otrzymujesz listę n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbę x. Oblicz współczynniki wielomianu, który jest wynikiem pomnożenia otrzymanego wielomianu przez liczbę x.
 
 Dane wejściowe: Lista liczb naturalnych i liczba naturalna.
 
@@ -32,7 +32,7 @@ Dla listy współczynników [4, -3, 2] i liczby x = -2, zostanie zwrócona lista
 
 Tytuł: Obliczenie sumy wielomianów.
 
-Treść: Otrzymujesz dwie listy n współczynników wielomianu w postaci anxn + an-1xn-1 + ... + a0. Oblicz współczynniki wielomianu będącego sumą otrzymanych wielomianów.
+Treść: Otrzymujesz dwie listy n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz współczynniki wielomianu będącego sumą otrzymanych wielomianów.
 
 Dane wejściowe: Dwie listy liczb naturalnych.
 
@@ -46,7 +46,7 @@ Dla otrzymanych dwóch list [3, 5, 2] oraz [2, -8, 1], zostanie zwrócona lista 
 
 Tytuł: Mnożenie wielomianów.
 
-Treść: Otrzymujesz dwie listy n współczynników wielomianu w postaci anxn + an-1xn-1 + ... + a0. Oblicz współczynniki wielomianu będącego iloczynem otrzymanych wielomianów.
+Treść: Otrzymujesz dwie listy n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz współczynniki wielomianu będącego iloczynem otrzymanych wielomianów.
 
 Dane wejściowe: Dwie listy liczb naturalnych.
 
@@ -60,7 +60,7 @@ Dla otrzymanych dwóch list: [5, 0, 10, 6] oraz [1, 2, 4], zostanie zwrócona li
 
 Tytuł: Obliczenie n-tej pochodnej wielomianu.
 
-Treść: Otrzymujesz listę n współczynników wielomianu w postaci anxn + an-1xn-1 + ... + a0 oraz liczbę naturalną k. Oblicz współczynniki wielomianu będącego k-tą pochodną otrzymanego wielomianu.
+Treść: Otrzymujesz listę n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbę naturalną k. Oblicz współczynniki wielomianu będącego k-tą pochodną otrzymanego wielomianu.
 
 Dane wejściowe: Lista liczb naturalnych i liczba naturalna.
 
@@ -74,7 +74,7 @@ Dla otrzymanej listy współczynników [4, -3, 2] i liczby k = 1, zostanie zwró
 
 Tytuł: Obliczenie miejsc zerowych równania kwadratowego.
 
-Treść: Otrzymujesz listę współczynników równania kwadratowego ax^2 + bx + c. Znajdź rzeczywiste miejsca zerowe równania kwadratowego.
+Treść: Otrzymujesz listę współczynników równania kwadratowego $ax^2 + bx + c$. Znajdź rzeczywiste miejsca zerowe równania kwadratowego.
 
 Dane wejściowe: Lista liczb naturalnych.
 
