@@ -2,11 +2,11 @@
 
 ### Zad 1. (★☆☆)
 
-Tytuł: Macierz a identycznych wierszy składających się z liczb od 0 do b.
+Tytuł: Macierz z identycznymi wierszami, składającymi się z liczb od 0 do b.
 
-Treść: Otrzymujesz dwie liczby, a oraz b. Stwórz macierz a identycznych wierszy składających się z liczb od 0 do b.
+Treść: Otrzymujesz dwie liczby naturalne, a i b. Stwórz macierz, składającą się z a identycznych wierszy, które składają się z liczb od 0 do b.
 
-Dane wejściowe: Dwie liczby naturalne.
+Dane wejściowe: Dwie liczby naturalne, a i b.
 
 Dane wyjściowe: Lista list liczb naturalnych.
 
@@ -16,11 +16,11 @@ Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona macierz: [[0, 1, 2], [0,
 
 ### Zad 2. (★☆☆)
 
-Tytuł: Każdy element jest iloczynem współrzędnych.
+Tytuł: Macierz kwadratowa, z elementami będącymi iloczynem współrzędnych.
 
-Treść: Dla otrzymanej liczby, stwórz macierz kwadratową składającą się z liczby kolumn i wierszy równej otrzymanej liczbie, której każdy element jest iloczynem jego współrzędnych.
+Treść: Dla otrzymanej liczby naturalnej n, stwórz macierz kwadratową o rozmiarze n x n, której każdy element jest iloczynem jego współrzędnych.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejściowe: Liczba naturalna n.
 
 Dane wyjściowe: Lista list liczb naturalnych.
 
@@ -30,41 +30,45 @@ Dla otrzymanej liczby 3 powinna zostać zwrócona macierz: [[0, 0, 0], [0, 1, 2]
 
 ### Zad 3. (★☆☆)
 
-Tytuł: Macierz z par odpowiadających sobie elementów dwóch list.
+Tytuł: Macierz z parami elementów odpowiadających sobie z dwóch list.
 
-Treść: Dla otrzymanych dwóch list, stwórz dwukolumnową macierz, której pierwsza kolumna składa się z elementów pierwszej listy, a druga kolumna elementów drugiej listy. Jeśli otrzymane listy nie są równej długości, zwróć pustą macierz.
+Treść: Dla otrzymanych dwóch list, stwórz dwukolumnową macierz, której pierwsza kolumna składa się z elementów pierwszej listy, a druga kolumna z elementów drugiej listy. Jeśli otrzymane listy nie są równej długości, zwróć pustą macierz.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejściowe: Dwie listy.
 
-Dane wyjściowe: Lista list liczb naturalnych. 
+Dane wyjściowe: Lista list liczb naturalnych lub pusta macierz (w przypadku nierównych długości list).
 
 Przykład:
 
-Dla otrzymanych dwóch list: [3, 5, 2] oraz [2, 8, 1], powinna zostać zwrócona macierz: [[3, 2], [5, 8], [2, 1]].
+Dla otrzymanych dwóch list: [3, 5, 2] oraz [2, 8, 1], powinna zostać zwrócona macierz: [[3, 2], [5, 8], [2, 1]
 
 ### Zad 4. (★☆☆)
 
-Tytuł: Dodawanie/odejmowanie macierzy.
+Tytuł: Dodawanie i odejmowanie macierzy.
 
-Treść: Otrzymujesz dwie macierze o tych samych wymiarach, zwróć macierz będącą:
+Treść: Otrzymujesz dwie macierze o tych samych wymiarach. Zwróć dwie macierze będące:
 
-Wynikiem dodawania otrzymanych macierzy.
-Wynikiem odejmowania pierwszej macierzy od drugiej.
+a) wynikiem dodawania otrzymanych macierzy
+
+b) wynikiem odejmowania drugiej macierzy od pierwszej.
 
 Dane wejściowe: Dwie listy list liczb naturalnych.
 
-Dane wyjściowe: Lista list liczb naturalnych.
+Dane wyjściowe: Dwie listy list liczb naturalnych.
 
 Przykład:
 
-Dla otrzymanych dwóch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinna zostać zwrócona macierz: [[6, -1], [-1, 7]].
-Dla otrzymanych dwóch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinna zostać zwrócona macierz: [[-4, 5], [-3, -7]].
+Dla otrzymanych dwóch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinny zostać zwrócone następujące macierze:
+
+a) [[6, -1], [-1, 7]] - wynik dodawania
+
+b) [[-4, 5], [-3, -7]] - wynik odejmowania drugiej macierzy od pierwszej.
 
 ### Zad 5. (★★☆)
 
-Tytuł: Magiczny kwadrat.
+Tytuł: Sprawdzanie czy macierz jest "magiczna".
 
-Treść: Otrzymujesz macierz kwadratową. Sprawdź, czy macierz jest kwadratem magicznym. 
+Treść: Otrzymujesz macierz kwadratową. Sprawdź, czy jest ona kwadratem magicznym.
 
 Podpowiedź: Kwadrat magiczny składa się z powtarzających się dodatnich liczb naturalnych. Suma elementów w każdym wierszu, w każdej kolumnie oraz na każdej przekątnej jest taka sama.
 
@@ -78,9 +82,9 @@ Dla otrzymanej macierzy: [[6, 7, 2], [1, 5, 9], [8, 3, 4]], powinna zostać zwr�
 
 ### Zad 6. (★★☆)
 
-Tytuł: Pokrywające się przedziały w liście przedziałów.
+Tytuł: Scalanie przedziałów w liście przedziałów.
 
-Treść: Otrzymujesz listę par liczb. Liczby w parze reprezentują początek i koniec przedziału. Niektóre przedziały mogą na siebie nachodzić. W takim przypadku połącz je ze sobą i zwróć listę niepokrywających się przedziałów.
+Treść: Otrzymujesz listę par liczb. Każda para reprezentuje początek i koniec przedziału. Niektóre przedziały mogą się nachodzić. W takim przypadku połącz je ze sobą i zwróć listę przedziałów, które się nie pokrywają.
 
 Dane wejściowe: Lista list liczb naturalnych.
 
@@ -88,13 +92,13 @@ Dane wyjściowe: Lista list liczb naturalnych.
 
 Przykład:
 
-Dla otrzymanej macierzy: [[23, 67], [23, 53], [45, 88], [77, 88], [10, 22], [11, 12], [42, 45]], powinna zostać zwrócona macierz: [[10, 22], [23, 88]].
+Dla otrzymanej listy: [[23, 67], [23, 53], [45, 88], [77, 88], [10, 22], [11, 12], [42, 45]], powinna zostać zwrócona lista: [[10, 22], [23, 88]].
 
 ### Zad 7. (★★☆)
 
-Tytuł: Wyzeruj macierz.
+Tytuł: Zerowanie macierzy.
 
-Treść: Otrzymujesz listę list liczb naturalnych reprezentującą macierz. Jeśli element macierzy jest równy zero, zamień wszystkie elementy w tej samej kolumnie i tym samym wierszu na zera.
+Treść: Otrzymujesz listę list liczb naturalnych reprezentującą macierz. Jeśli element macierzy jest równy zero, zamień wszystkie elementy tej samej kolumny i wiersza na zera.
 
 Dane wejściowe: Lista list liczb naturalnych.
 
@@ -106,9 +110,9 @@ Dla otrzymanej macierzy: [[1,2,3], [4,0,6], [7,8,9]], powinna zostać zwrócona 
 
 ### Zad 8. (★★☆)
 
-Tytuł: Wypisz spiralnie.
+Tytuł: Wypisanie elementów macierzy spiralnie.
 
-Treść: Otrzymujesz listę list liczb naturalnych. Zbierz spiralnie elementy otrzymanej macierzy i zapisz je w liście.
+Treść: Otrzymujesz listę list liczb naturalnych. Zbierz elementy otrzymanej macierzy spiralnie i zapisz je w liście.
 
 Dane wejściowe: Lista list liczb naturalnych.
 
@@ -122,17 +126,19 @@ Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostać zwrócona 
 
 Tytuł: Klepsydra o największej sumie.
 
-Treść: Otrzymujesz listę list liczb naturalnych. Znajdź w macierzy klepsydrę o największej sumie. Klepsydra składa się z dokładnie 7 elementów. Trzy pierwsze elementy są kolejnymi elementami dowolnego wiersza macierzy. Następny element znajduje się w tej samej kolumnie co drugi element i w dokładnie jednym wierszu niżej. Trzy następne znajdują się w tych samych kolumnach co trzy pierwsze i dokładnie dwa wiersze niżej.
+Treść: Otrzymasz listę list liczb naturalnych. Znajdź w macierzy klepsydrę o największej sumie. Klepsydra składa się dokładnie z 7 elementów. Pierwsze trzy elementy są kolejnymi elementami dowolnego wiersza macierzy. Czwarty element znajduje się w tej samej kolumnie co drugi element i o jeden wiersz niżej. Ostatnie trzy elementy znajdują się w tych samych kolumnach co trzy pierwsze i o dwa wiersze niżej.
 
 Podpowiedź: Następująca macierz:
-1 2 3
-4 5 6
-7 8 9
+
+      1 2 3
+      4 5 6
+      7 8 9
 
 ma tylko jedną klepsydrę:
-1 2 3
-   5
-7 8 9
+
+      1 2 3
+        5
+      7 8 9
 
 Dane wejściowe: Lista list liczb naturalnych.
 
@@ -140,17 +146,17 @@ Dane wyjściowe: Liczba naturalna.
 
 Przykład:
 
-Dla otrzymanej macierzy: [[ 7 4 2 0], [ 4 8 10 8], [ 3 6 7 6], [ 3 9 19 14]], powinna zostać zwrócona liczba: 75.
+Dla otrzymanej macierzy: [[7, 4, 2, 0], [4, 8, 10, 8], [3, 6, 7, 6], [3, 9, 19, 14]], powinna zostać zwrócona liczba: 75.
 
 ### Zad 10. (★★☆)
 
-Tytuł: Obróć o 90 stopni.
+Tytuł: Obróć macierz o 90 stopni.
 
-Treść: Otrzymujesz listę list liczb naturalnych. Obróć otrzymaną listę o 90 stopni. Tzn. zamień miejscami ostatnią kolumnę z ostatnim wierszem, przedostatnią kolumnę z przedostatnim wierszem itd.
+Treść: Otrzymujesz macierz składającą się z liczb naturalnych. Obróć ją o 90 stopni. Tzn. zamień miejscami ostatnią kolumnę z ostatnim wierszem, przedostatnią kolumnę z przedostatnim wierszem itd.
 
-Dane wejściowe: Lista list liczb naturalnych.
+Dane wejściowe: Macierz składająca się z liczb naturalnych.
 
-Dane wyjściowe: Lista list liczb naturalnych.
+Dane wyjściowe: Macierz składająca się z liczb naturalnych.
 
 Przykład:
 
@@ -158,17 +164,19 @@ Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostać zwrócona 
 
 ### Zad 11. (★★★)
 
-Tytuł: Gra w statki.
+Tytuł: Gra w statki
 
-Treść: Napisz program, realizujący grę w statki. 
+Treść: Napisz program implementujący grę w statki.
 
-Stwórz macierz składającą się z 10 wierszy i 10 kolumn. Wylosuj położenia statków i zapisz je w macierzy. Masz do dyspozycji następujące statki: 
-1 statek o długości równej 4 polom, 
-2 statki o długości równej 3 polom, 
-3 statki o długości równej 2 polom, 
-5 statków o długości równej 1 polu. 
-Na danym polu może znajdować się tylko jeden statek.
+Stwórz macierz o wymiarach 10x10. Wylosuj położenia statków i zapisz je w macierzy. Do dyspozycji masz następujące statki:
 
-Wypisz na standardowe wyjście planszę składającą się z 10x10 kropek i poproś użytkownika o podanie współrzędnych. Jeśli na podanych przez użytkownika znajduje się statek, zamień na planszy kropkę na literę o. W przeciwnym razie, zamień kropkę na literę x.
+* 1 statek o długości 4
+* 2 statki o długości 3
+* 3 statki o długości 2
+* 5 statków o długości 1
 
-Powtarzaj krok 2, dopóki wszystkie pozycje statków nie zostaną odkryte przez użytkownika lub dopóki na planszy nie znajdzie się 10 literek x. W obu przypadkach zakończ grę i poinformuj użytkownika o wyniku.
+Każde pole może zawierać tylko jeden statek.
+
+Wypisz na standardowe wyjście planszę złożoną z 10x10 kropek i poproś użytkownika o podanie współrzędnych. Jeśli na podanych przez użytkownika współrzędnych znajduje się statek, zamień kropkę na literę o na planszy. W przeciwnym razie, zamień kropkę na literę x.
+
+Powtarzaj krok 2, aż wszystkie pozycje statków zostaną odkryte przez użytkownika lub aż na planszy pojawi się 10 liter x. W obu przypadkach zakończ grę i poinformuj użytkownika o wyniku.
