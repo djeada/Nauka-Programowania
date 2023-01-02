@@ -80,6 +80,8 @@ d) Liczba zmiennoprzecinkowa reprezentująca średnią liczbę słów na wiersz.
 
 e) Słownik par: napis (słowo), liczba naturalna (częstotliwość występowania słowa). 
 
+Przykład:
+
 Dla otrzymanego napisu: "C:\Users\Username\Documents\text_file.txt" powinno zostać zwrócone:
 
 a) Liczba naturalna reprezentująca liczbę wierszy, np. 6
