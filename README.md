@@ -9,6 +9,8 @@
 # Nauka-programowania
 Jeśli chcesz nauczyć się programować, ale nie wiesz od czego zacząć, to trafiłeś we właściwe miejsce. Nasz projekt zawiera zestaw zadań, które przeprowadzą Cię przez wszystkie potrzebne do zrozumienia koncepcje programowania.
 
+![nauka_programowania](https://user-images.githubusercontent.com/37275728/213447455-79d06e8e-0fe6-4cb3-8c77-7d4470ced7f1.png)
+
 ## Gdzie mogę znaleźć dodatkowe materiały do nauki?
 
 Materiały dodatkowe, takie jak notatki z Python i C++, są dostępne na naszych osobnych repozytoriach na GitHubie:
