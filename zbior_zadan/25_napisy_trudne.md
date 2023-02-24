@@ -3,9 +3,9 @@
 
 ### Zad 1. (★★☆)
 
-Tytuł: Podmiana wszystkich wystąpień słowa.  
+Tytuł: Podmiana słowa w zdaniu.
 
-Treść: Otrzymujesz trzy napisy. Pierwszy napis reprezentuje zdanie. Drugi reprezentuje słowo A występujące w otrzymanym zdaniu. Trzeci reprezentuje słowo B, na które ma zostać zamienione słowo A. Podmień w zdaniu wszystkie wystąpienia słowa A na słowo B.
+Treść: Masz trzy napisy: zdanie, słowo A i słowo B. Twoim zadaniem jest zamiana wszystkich wystąpień słowa A na słowo B w zdaniu.
 
 Dane wejściowe: Trzy napisy.
 
@@ -13,13 +13,13 @@ Dane wyjściowe: Napis.
 
 Przykład:
 
-Dla otrzymanych napisów: “Lezy jezy na wiezy”, “zy” oraz “rzy”, powinien zostać zwrócony napis: “Lerzy jerzy na wierzy”.
+Dla napisów: “Lezy jezy na wiezy”, “zy” oraz “rzy”, zwrócony napis powinien brzmieć: “Lerzy jerzy na wierzy”.
 
 ### Zad 2.  (★★☆)
 
-Tytuł: Usuń wszystkie wystąpienia podnapisu. 
+Tytuł: Usuń podnapis.
 
-Treść: Dla otrzymanych dwóch napisów, znajdź i usuń w pierwszym z nich wszystkie wystąpienia drugiego napisu.
+Treść: Dostajesz dwa napisy. Twoim zadaniem jest wyszukanie i usunięcie wszystkich wystąpień drugiego napisu w pierwszym napisie.
 
 Dane wejściowe: Dwa napisy.
 
@@ -27,13 +27,13 @@ Dane wyjściowe: Napis.
 
 Przykład:
 
-Dla otrzymanych napisów: “Lezy jezy na wiezy” oraz “zy”, powinien zostać zwrócony napis: “Le je na wie”.
+Dla napisów: “Lezy jezy na wiezy” oraz “zy”, zwrócony napis powinien brzmieć: “Le je na wie”.
 
 ### Zad 3.  (★★☆)
 
-Tytuł: Czy napis A stanowi początek napisu B? 
+Tytuł: Czy napis A jest początkiem napisu B?
 
-Treść: Dla otrzymanych dwóch napisów sprawdź, czy drugi stanowi początek pierwszego.
+Treść: Dostajesz dwa napisy. Twoim zadaniem jest sprawdzenie, czy drugi napis zaczyna się od pierwszego napisu.
 
 Dane wejściowe: Dwa napisy.
 
@@ -41,13 +41,13 @@ Dane wyjściowe: Wartość logiczna.
 
 Przykład:
 
-Dla otrzymanych napisów: “Dinozaur jest zly” oraz “Dino”, powinna zostać zwrócona wartość logiczna: Prawda.
+Dla napisów: “Dinozaur jest zly” oraz “Dino”, zwrócona wartość powinna być: Prawda.
 
 ### Zad 4. (★★★)
 
-Tytuł: Usuń powtórzenia z napisu.
+Tytuł: Usuń powtórzenia znaków.
 
-Treść: Otrzymujesz napis. Usuń powtórzenia z napisu. Dany znak może pojawić się jedynie raz w całym napisie.
+Treść: Otrzymujesz napis. Twoim zadaniem jest usunięcie powtórzeń każdego znaku w napisie. Każdy znak może wystąpić tylko raz.
 
 Dane wejściowe: Napis.
 
@@ -55,13 +55,13 @@ Dane wyjściowe: Napis.
 
 Przykład:
 
-Dla otrzymanego napisu: “AAAAAAAAAABBBBBBBBA”, powinien zostać zwrócony napis: “AB”.
+Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrócony napis powinien brzmieć: “AB”.
 
 ### Zad 5. (★★★)
 
-Tytuł: Znaki stojące obok siebie nie mogą się powtarzać.
+Tytuł: Usuń powtórzenia stojących obok siebie znaków.
 
-Treść: Otrzymujesz napis. Jeśli znaki stojące obok siebie powtarzają się, zachowaj pierwsze wystąpienie znaku i usuń powtórzenia.
+Treść: Otrzymujesz napis. Twoim zadaniem jest usunięcie powtórzeń stojących obok siebie znaków i zachowanie tylko pierwszego wystąpienia każdego znaku.
 
 Dane wejściowe: Napis.
 
@@ -69,13 +69,13 @@ Dane wyjściowe: Napis.
 
 Przykład:
 
-Dla otrzymanego napisu: “AAAAAAAAAABBBBBBBBA”, powinien zostać zwrócony napis: “ABA”.
+Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrócony napis powinien brzmieć: “ABA”.
 
 ### Zad 6. (★★★)
 
-Tytuł: Czy napisy są swoimi rotacjami?
+Tytuł: Rotacje napisów.
 
-Treść: Otrzymujesz dwa napisy. Sprawdź, czy napisy są swoimi rotacjami.
+Treść: Dostajesz dwa napisy. Sprawdź, czy jeden z nich jest rotacją drugiego.
 
 Dane wejściowe: Dwa napisy.
 
@@ -83,13 +83,13 @@ Dane wyjściowe: Wartość logiczna.
 
 Przykład:
 
-Dla otrzymanych napisów: “malpka” oraz “pkamal”, powinna zostać zwrócona wartość logiczna: Prawda.
+Dla napisów "malpka" i "pkamal" powinno zostać zwrócone "Prawda".
 
 ### Zad 7. (★★★)
 
-Tytuł: Znajdź powtórzenia.
+Tytuł: Powtarzające się podnapisy.
 
-Treść: Otrzymujesz napis. Znajdź powtarzające się podnapisy w napisie.
+Treść: Dostajesz napis. Znajdź wszystkie powtarzające się podnapisy w tym napisie.
 
 Dane wejściowe: Napis.
 
@@ -97,13 +97,13 @@ Dane wyjściowe: Lista napisów.
 
 Przykład:
 
-Dla otrzymanego napisu: “pythonpython”, powinien zostać zwrócony napis: “python”.
+Dla napisu "pythonpython" powinna zostać zwrócona lista zawierająca napis "python".
 
 ### Zad 8. (★★★)
 
 Tytuł: Najdłuższy wspólny przedrostek.
 
-Treść: Otrzymujesz listę napisów. Znajdź najdłuższy wspólny przedrostek dla wszystkich napisów z listy.
+Treść: Dostajesz listę napisów. Znajdź najdłuższy wspólny przedrostek dla wszystkich napisów na liście.
 
 Dane wejściowe: Lista napisów.
 
@@ -111,13 +111,13 @@ Dane wyjściowe: Napis.
 
 Przykład:
 
-Dla otrzymanej listy: [“Remolada”, “Remux”, “Remmy”], powinien zostać zwrócony napis: “Rem”.
+Dla listy ["Remolada", "Remux", "Remmy"] powinien zostać zwrócony napis "Rem".
 
 ### Zad 9. (★★★)
 
 Tytuł: Najdłuższy wspólny podnapis.
 
-Treść: Otrzymujesz dwa napisy. Znajdź ich najdłuższy wspólny podnapis.
+Treść: Dostajesz dwa napisy. Znajdź najdłuższy wspólny podnapis tych dwóch napisów.
 
 Dane wejściowe: Dwa napisy.
 
@@ -125,4 +125,4 @@ Dane wyjściowe: Napis.
 
 Przykład:
 
-Dla otrzymanych napisów: “ijkabcdl” oraz “xxxxabcd”, powinien zostać zwrócony napis: “abcd”.
+Dla napisów "ijkabcdl" i "xxxxabcd" powinien zostać zwrócony napis "abcd".
