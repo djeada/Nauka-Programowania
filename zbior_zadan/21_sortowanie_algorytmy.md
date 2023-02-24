@@ -4,87 +4,79 @@
 
 Tytuł: Sortowanie bąbelkowe.
 
-Treść: Dla otrzymanej listy liczb całkowitych zaimplementuj sortowanie bąbelkowe:
-Dokonuj kolejno porównania dla sąsiadujących liczb z listy.
-Zamień miejscami porównywane liczby, jeśli pierwsza jest większa od drugiej.
-Operację powtarzaj, aż po przejściu przez całą listę nie wykonasz żadnej zamiany.
+Treść: Napisz program sortujący listę liczb całkowitych metodą sortowania bąbelkowego. Porównaj sąsiednie liczby z listy i zamień je miejscami, jeśli pierwsza jest większa od drugiej. Powtarzaj operację, aż przejdziesz przez całą listę bez dokonywania zmian.
 
 Dane wejściowe: Lista liczb całkowitych.
 
-Dane wyjściowe: Lista liczb całkowitych.
+Dane wyjściowe: Posortowana lista liczb całkowitych.
 
-Przykład: 
+Przykład:
 
-Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
+Dla listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
 
 ### Zad 2.  (★★☆)
 
 Tytuł: Sortowanie przez wybieranie.
 
-Treść: Dla otrzymanej listy liczb całkowitych zaimplementuj sortowanie przez wybieranie:
-Znajdź największy element w liście i zapisz go zmiennej maks.
-Zainicjalizuj zmienną i liczbą 0.
-Znajdź indeks najmniejszego elementu listy spośród elementów o indeksach od i do końca listy.
-Zamień miejscami element o indeksie i, ze znalezionym najmniejszym elementem.
-Zwiększ i o 1.
-Powtarzaj operacje z punktów 2-4, aż znaleziony najmniejszy element będzie równy zmiennej maks.
+Treść: Napisz program sortujący listę liczb całkowitych metodą sortowania przez wybieranie. Znajdź największy element w liście i zapisz go do zmiennej. Następnie znajdź najmniejszy element w pozostałej części listy i zamień go z pierwszym elementem nieposortowanej części. Powtarzaj operację, aż lista będzie posortowana.
 
-Przykład: 
+Dane wejściowe: Lista liczb całkowitych.
 
-Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
+Dane wyjściowe: Posortowana lista liczb całkowitych.
+
+Przykład:
+
+Dla listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
 
 ### Zad 3.  (★★☆)
  
 Tytuł: Sortowanie przez wstawianie.
 
-Treść: Dla otrzymanej listy liczb całkowitych zaimplementuj sortowanie przez wstawianie:
-Stwórz nową listę i zainicjalizuj ją dowolnym elementem z listy sortowanej.
-Dostawiaj kolejno elementy sortowanej listy do nowej listy. Przy czym porównuj dostawiany element kolejno z elementami nowej listy, aż znajdziesz liczbę równą, bądź większą od dostawianej liczby. 
-Wstaw liczbę na miejsce poprzedzające elementy równy, bądź większy od dostawianej liczby. 
-W przypadku dotarcia na koniec posortowanej listy, dostaw liczbę na koniec listy.
-Powtarzaj operacje z punktów 2-4, aż przejdziesz przez wszystkie elementy sortowanej listy.
+Treść: Napisz program sortujący listę liczb całkowitych metodą sortowania przez wstawianie. Stwórz nową, pustą listę i dodaj do niej pierwszy element listy wejściowej. Dla każdego kolejnego elementu znajdź odpowiednie miejsce w posortowanej już części listy i wstaw go tam.
 
-Dane wejściowe: Lista.
+Dane wejściowe: Lista liczb całkowitych.
 
-Dane wyjściowe: Lista.
+Dane wyjściowe: Posortowana lista liczb całkowitych.
 
-Przykład: 
+Przykład:
 
-Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
+Dla listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
 
 ### Zad 4.  (★★☆)
 
 Tytuł: Sortowanie przez scalanie.
 
-Treść: Dla otrzymanej listy liczb całkowitych zaimplementuj sortowanie przez scalanie:
-Podziel listę na n jednoelementowych list, gdzie n to długość sortowanej listy.
-Łącz kolejno dwie sąsiednie listy w jedną listę składającą się z elementów obu list.
-Przy łączeniu list ustawiaj w wynikowej liście elementy łączonych list w porządku rosnącym.
-Powtarzaj operacje z punktów 2-3, aż otrzymasz pojedynczą listę.
+Treść: Dla danej listy liczb całkowitych zaimplementuj algorytm sortowania przez scalanie.
 
-Dane wejściowe: Lista.
+1. Jeśli długość listy jest mniejsza niż 2, zwróć listę.
+2. Podziel listę na dwie równe (lub prawie równe) części.
+3. Wywołaj rekurencyjnie sortowanie przez scalanie dla obu części listy.
+4. Scal obie posortowane części listy w jedną posortowaną listę.
 
-Dane wyjściowe: Lista.
+Dane wejściowe: Lista liczb całkowitych.
 
-Przykład: 
+Dane wyjściowe: Posortowana lista liczb całkowitych.
 
-Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
+Przykład:
+
+Dla danej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
 
 ### Zad 5.  (★★☆)
 
 Tytuł: Sortowanie szybkie.
 
-Treść: Dla otrzymanej listy liczb całkowitych zaimplementuj sortowanie szybkie:
-Wybierz jeden element listy. Wybrany element jest elementem rozdzielającym.
-Podziel listę na dwie części. Do pierwszej przenieś wszystkie elementy mniejsze od elementu rozdzielającego, a do drugiej wszystkie pozostałe.
-Dla każdej z otrzymanych list powtórz operacje z punktów 1-2.
-Powtarzaj operacje 1-3, aż otrzymasz  n jednoelementowych list, gdzie n to długość pierwotnej listy.
-Połącz wszystkie jednoelementowe listy w jedną posortowaną listę.
+Treść: Dla danej listy liczb całkowitych zaimplementuj algorytm sortowania szybkiego.
 
-Dane wejściowe: Lista.
+1. Jeśli długość listy jest mniejsza niż 2, zwróć listę.
+2. Wybierz element rozdzielający, nazywany pivotem.
+3. Podziel listę na trzy części: elementy mniejsze od pivota, pivot oraz elementy większe od pivota.
+4. Wywołaj rekurencyjnie sortowanie szybkie dla części z elementami mniejszymi od pivota i większymi od pivota.
+5. Scal posortowane części listy w jedną posortowaną listę.
 
-Dane wyjściowe: Lista.
+Dane wejściowe: Lista liczb całkowitych.
 
-Przykład: 
+Dane wyjściowe: Posortowana lista liczb całkowitych.
 
-Dla otrzymanej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
+Przykład:
+
+Dla danej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
