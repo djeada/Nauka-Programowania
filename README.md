@@ -9,7 +9,7 @@
 # Nauka-programowania
 Jeśli chcesz nauczyć się programować, ale nie wiesz od czego zacząć, to trafiłeś we właściwe miejsce. Ten projekt oferuje zbiór zadań, które przeprowadzą Cię przez wszystkie koncepcje potrzebne do zrozumienia w programowaniu.
 
-![nauka_programowania](https://user-images.githubusercontent.com/37275728/213447455-79d06e8e-0fe6-4cb3-8c77-7d4470ced7f1.png)
+![laptop_with_snake_Seed-7632331_Steps-50_Guidance-7 5](https://user-images.githubusercontent.com/37275728/221419671-2d82a012-509d-4331-866c-af8eeb2b84a9.png)
 
 ## Gdzie mogę znaleźć dodatkowe materiały do nauki?
 
