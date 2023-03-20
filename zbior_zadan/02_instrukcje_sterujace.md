@@ -74,15 +74,15 @@ Dla pobranych liczb: 2, 1 oraz 4, powinny zostać wypisane liczby: 1, 2 i 4.
 
 Tytuł: Maks z czterech liczb.
 
-Treść: Dla czterech pobranych liczb naturalnych, wypisz je w kolejności malejącej.
+Treść: Dla czterech pobranych liczb naturalnych, wypisz największą z nich.
 
 Dane wejściowe: Cztery liczby naturalne.
 
-Dane wyjściowe: Cztery liczby naturalne.
+Dane wyjściowe: Liczba naturalna.
 
 Przykład:
 
-Dla pobranych liczb: 2, 5, 1 i 4, powinny zostać wypisane liczby: 5, 4, 2 i 1.
+Dla pobranych liczb: 2, 5, 1 i 4, powinna zostać wypisana liczba: 5.
 
 ### Zad 7. (★☆☆)
 
