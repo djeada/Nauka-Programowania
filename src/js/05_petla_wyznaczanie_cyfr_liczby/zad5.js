@@ -1,23 +1,32 @@
-   main = function(args) {
-       var a = require('readline-sync').question('podaj liczbe:');
-       var odwrocona = 0;
-       var pom = a;
-       while ((pom > 0)) {
-           {
-               var cyfra = pom % 10;
-               odwrocona = (odwrocona * 10 + cyfra);
-               pom = (function(n) {
-                   return n < 0 ? Math.ceil(n) : Math.floor(n);
-               })(pom / 10);
-           }
-       };
-       if (odwrocona === a) {
-           console.info("podana liczba jest palindromem");
-           console.info("\n");
-       } else {
-           console.info("podana liczba nie jest palindromem");
-           console.info("\n");
-       }
-   };
+/*
+Czy liczba jest palindromem?
 
-   main(null);
+Treść: Dla otrzymanej liczby naturalnej sprawdź, czy jest ona palindromem, tj. czy nie zmienia się po zapisaniu cyfr w odwrotnej kolejności.
+
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Komunikat.
+
+Przykład:
+
+Dla otrzymanej liczby 13231, powinna zostać wypisana informacja o tym, że liczba jest palindromem.
+*/
+
+// Pobieranie danych od użytkownika
+const liczba = parseInt(prompt("Podaj liczbę:"));
+
+// Pętla
+let palindrom = true;
+for (let i = liczba, j = 0; i > 0; i = Math.floor(i / 10), j++) {
+    if (Math.floor(liczba / 10 ** j) % 10 !== i % 10) {
+        palindrom = false;
+        break;
+    }
+}
+
+// Wypisanie wyniku
+if (palindrom) {
+    console.log("Liczba jest palindromem.");
+} else {
+    console.log("Liczba nie jest palindromem.");
+}

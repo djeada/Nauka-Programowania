@@ -1,55 +1,39 @@
-   elementBezParyV1 = function(lista) {
-       var pom = ([]);
-       var _loop_1 = function(i) {
-           var liczba = lista[i]; {
-               if ((pom.indexOf((liczba)) >= 0)) {
-                   (function(a) {
-                       var index = a.indexOf(liczba);
-                       if (index >= 0) {
-                           a.splice(index, 1);
-                           return true;
-                       } else {
-                           return false;
-                       }
-                   })(pom);
-               } else {
-                   (pom.push(liczba) > 0);
-               }
-           }
-       };
-       for (var i = 0; i < lista.length; i++) {
-           _loop_1(i);
-       }
-       return pom[0];
-   };
-   elementBezParyV2 = function(lista) {
-       var wynik = 0;
-       for (var i = 0; i < lista.length; i++) {
-           var liczba = lista[i]; {
-               wynik ^= liczba;
-           }
-       }
-       return wynik;
-   };
-   test1 = function() {
-       var lista = [1, 3, 1, 7, 3, 1, 1]
-       var oczekiwane = 7;
-       var wynik = elementBezParyV1(lista);
-       if (oczekiwane !== wynik) {
-           throw new Error(`Assertion error line 42: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   test2 = function() {
-       var lista = [1, 3, 1, 7, 3, 1, 1]
-       var oczekiwane = 7;
-       var wynik = elementBezParyV2(lista);
-       if (oczekiwane !== wynik) {
-           throw new Error(`Assertion error line 50: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   main = function(args) {
-       test1();
-       test2();
-   };
+/*
 
-   main(null);
+Tytuł: Znalezienie elementu bez pary w liście liczb całkowitych.
+
+Treść: Dla otrzymanej listy liczb całkowitych, składającej się z nieparzystej liczby elementów, znajdź element, który nie ma pary o tej samej wartości.
+
+Dane wejściowe: Lista liczb całkowitych.
+
+Dane wyjściowe: Liczba całkowita.
+
+Przykład:
+
+Dla otrzymanej listy: [1, 3, 1, 7, 3, 1, 1] zostanie zwrócona liczba: 7.
+*/
+
+// Funkcja znajdująca element bez pary w liście liczb całkowitych
+function znajdzElementBezPary(lista) {
+    let bezPary = 0;
+    for (let liczba of lista) {
+        bezPary ^= liczba;
+    }
+    return bezPary;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testZnajdzElementBezPary() {
+    assert(znajdzElementBezPary([1, 3, 1, 7, 3, 1, 1]) === 7);
+    assert(znajdzElementBezPary([4, 4, 2, 2, 1]) === 1);
+    assert(znajdzElementBezPary([9, 1, 1, 8, 9, 8]) === 0);
+    assert(znajdzElementBezPary([3, 3, 6, 6, 5, 7, 7]) === 5);
+}
+
+testZnajdzElementBezPary();

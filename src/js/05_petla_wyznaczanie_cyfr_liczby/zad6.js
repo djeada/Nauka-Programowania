@@ -1,98 +1,88 @@
-   main = function(args) {
-       var a = require('readline-sync').question('podaj liczbe:');
-       a = 3;
-       console.info("mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: ");
-       console.info("\n");
-       for (var i = 0; i < a; i++) {
-           {
-               var pom_1 = i;
-               var suma_1 = 0;
-               while ((pom_1 > 0)) {
-                   {
-                       suma_1 += (pom_1 % 10);
-                       pom_1 = (function(n) {
-                           return n < 0 ? Math.ceil(n) : Math.floor(n);
-                       })(pom_1 / 10);
-                   }
-               };
-               if (suma_1 === 10) {
-                   console.info(i);
-                   console.info("\n");
-               }
-           };
-       }
-       console.info("dwucyfrowe mniejsze od pobranej liczby: ");
-       console.info("\n");
-       for (var i = 10; i < 100 && i < a; i++) {
-           {
-               console.info(i);
-               console.info("\n");
-           };
-       }
-       console.info("trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie");
-       console.info("\n");
-       for (var i = 100; i < 1000; i++) {
-           {
-               var pom_2 = i;
-               var suma_2 = 0;
-               while ((pom_2 > 0)) {
-                   {
-                       suma_2 += (pom_2 % 10);
-                       pom_2 = (function(n) {
-                           return n < 0 ? Math.ceil(n) : Math.floor(n);
-                       })(pom_2 / 10);
-                   }
-               };
-               if (suma_2 === a) {
-                   console.info(i);
-                   console.info("\n");
-               }
-           };
-       }
-       console.info("trzycyfrowe podzielne przez sume cyfr pobranej liczby");
-       console.info("\n");
-       var pom = a;
-       var suma = 0;
-       while ((pom > 0)) {
-           {
-               suma += (pom % 10);
-               pom = (function(n) {
-                   return n < 0 ? Math.ceil(n) : Math.floor(n);
-               })(pom / 10);
-           }
-       };
-       for (var i = 100; i < 1000; i++) {
-           {
-               if (i % suma === 0) {
-                   console.info(i);
-                   console.info("\n");
-               }
-           };
-       }
-       console.info("mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr");
-       console.info("\n");
-       for (var i = 0; i < a; i++) {
-           {
-               pom = i;
-               var flaga = true;
-               while ((pom > 0)) {
-                   {
-                       var cyfra = pom % 10;
-                       if (cyfra % 2 === 1) {
-                           flaga = false;
-                           break;
-                       }
-                       pom = (function(n) {
-                           return n < 0 ? Math.ceil(n) : Math.floor(n);
-                       })(pom / 10);
-                   }
-               };
-               if (flaga) {
-                   console.info(i);
-                   console.info("\n");
-               }
-           };
-       }
-   };
+/*
+Tytuł: Liczby spełniające określone warunki.
 
-   main(null);
+Treść: Dla pobranej liczby naturalnej wypisz:
+
+a) wszystkie liczby naturalne mniejsze od pobranej, których suma cyfr jest równa 10,
+
+b) wszystkie liczby naturalne dwucyfrowe większe od pobranej,
+
+c) wszystkie liczby naturalne trzycyfrowe, których suma cyfr jest równa pobranej liczbie,
+
+d) wszystkie liczby naturalne trzycyfrowe podzielne przez sumę cyfr pobranej liczby,
+
+e) wszystkie liczby naturalne mniejsze od pobranej, składające się wyłącznie z parzystych cyfr.
+
+Dane wejściowe: Liczba naturalna dla wszystkich podpunktów.
+
+Dane wyjściowe: Kilka liczb naturalnych.
+
+Przykłady
+
+Dla pobranej liczby: 95:
+
+a) wszystkie liczby naturalne mniejsze od pobranej, których suma cyfr jest równa 10: brak
+
+b) wszystkie liczby naturalne dwucyfrowe większe od pobranej: 96, 97, 98, 99
+
+c) wszystkie liczby naturalne trzycyfrowe, których suma cyfr jest równa pobranej liczbie: brak
+
+d) wszystkie liczby naturalne trzycyfrowe podzielne przez sumę cyfr pobranej liczby: brak
+
+e) wszystkie liczby naturalne mniejsze od pobranej, składające się wyłącznie z parzystych cyfr: 2, 4
+*/
+
+// Pobieranie danych od użytkownika
+const liczba = parseInt(prompt("Podaj liczbę:"));
+
+// a) Pętla dla liczb mniejszych od pobranej, których suma cyfr jest równa 10
+for (let i = liczba - 1; i > 0; i--) {
+    let sumaCyfr = 0;
+    for (let j = i; j > 0; j = Math.floor(j / 10)) {
+        sumaCyfr += j % 10;
+    }
+    if (sumaCyfr == 10) {
+        console.log(i);
+    }
+}
+
+// b) Pętla dla liczb dwucyfrowych większych od pobranej
+for (let i = liczba + 1; i < 100; i++) {
+    console.log(i);
+}
+
+// c) Pętla dla liczb trzycyfrowych, których suma cyfr jest równa pobranej liczbie
+for (let i = 100; i < 1000; i++) {
+    let sumaCyfr = 0;
+    for (let j = i; j > 0; j = Math.floor(j / 10)) {
+        sumaCyfr += j % 10;
+    }
+    if (sumaCyfr == liczba) {
+        console.log(i);
+    }
+}
+
+// d) Pętla dla liczb trzycyfrowych podzielnych przez sumę cyfr pobranej liczby
+for (let i = 100; i < 1000; i++) {
+    let sumaCyfr = 0;
+    for (let j = i; j > 0; j = Math.floor(j / 10)) {
+        sumaCyfr += j % 10;
+    }
+    if (i % sumaCyfr == 0) {
+        console.log(i);
+    }
+}
+
+// e) Pętla dla liczb mniejszych od pobranej, składające się wyłącznie z parzystych cyfr
+for (let i = liczba - 1; i > 0; i--) {
+    let parzysta = true;
+    for (let j = i; j > 0; j = Math.floor(j / 10)) {
+        if (j % 2 != 0) {
+            parzysta = false;
+            break;
+        }
+    }
+    if (parzysta) {
+        console.log(i);
+    }
+}

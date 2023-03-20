@@ -1,98 +1,51 @@
-   main = function(args) {
-       var a = require('readline-sync').question('podaj liczbe:');
-       a = 3;
-       console.info("mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: ");
-       console.info("\n");
-       for (var i = 0; i < a; i++) {
-           {
-               var pom_1 = i;
-               var suma_1 = 0;
-               while ((pom_1 > 0)) {
-                   {
-                       suma_1 += (pom_1 % 10);
-                       pom_1 = (function(n) {
-                           return n < 0 ? Math.ceil(n) : Math.floor(n);
-                       })(pom_1 / 10);
-                   }
-               };
-               if (suma_1 === 10) {
-                   console.info(i);
-                   console.info("\n");
-               }
-           };
-       }
-       console.info("dwucyfrowe mniejsze od pobranej liczby: ");
-       console.info("\n");
-       for (var i = 10; i < 100 && i < a; i++) {
-           {
-               console.info(i);
-               console.info("\n");
-           };
-       }
-       console.info("trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie");
-       console.info("\n");
-       for (var i = 100; i < 1000; i++) {
-           {
-               var pom_2 = i;
-               var suma_2 = 0;
-               while ((pom_2 > 0)) {
-                   {
-                       suma_2 += (pom_2 % 10);
-                       pom_2 = (function(n) {
-                           return n < 0 ? Math.ceil(n) : Math.floor(n);
-                       })(pom_2 / 10);
-                   }
-               };
-               if (suma_2 === a) {
-                   console.info(i);
-                   console.info("\n");
-               }
-           };
-       }
-       console.info("trzycyfrowe podzielne przez sume cyfr pobranej liczby");
-       console.info("\n");
-       var pom = a;
-       var suma = 0;
-       while ((pom > 0)) {
-           {
-               suma += (pom % 10);
-               pom = (function(n) {
-                   return n < 0 ? Math.ceil(n) : Math.floor(n);
-               })(pom / 10);
-           }
-       };
-       for (var i = 100; i < 1000; i++) {
-           {
-               if (i % suma === 0) {
-                   console.info(i);
-                   console.info("\n");
-               }
-           };
-       }
-       console.info("mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr");
-       console.info("\n");
-       for (var i = 0; i < a; i++) {
-           {
-               pom = i;
-               var flaga = true;
-               while ((pom > 0)) {
-                   {
-                       var cyfra = pom % 10;
-                       if (cyfra % 2 === 1) {
-                           flaga = false;
-                           break;
-                       }
-                       pom = (function(n) {
-                           return n < 0 ? Math.ceil(n) : Math.floor(n);
-                       })(pom / 10);
-                   }
-               };
-               if (flaga) {
-                   console.info(i);
-                   console.info("\n");
-               }
-           };
-       }
-   };
+/*
+Tytuł: NWW.
 
-   main(null);
+Treść: Napisz funkcję, która dla otrzymanych dwóch liczb naturalnych zwróci ich najmniejszą wspólną wielokrotność.
+
+Dane wejściowe: dwie liczby naturalne
+
+Dane wyjściowe: liczba naturalna
+
+Przykład:
+
+Dla otrzymanych liczb 7 i 9, funkcja powinna zwrócić liczbę 63.
+*/
+
+// Funkcja zwracająca NWW
+function zwracajNWW(liczba_a, liczba_b) {
+    var nww = 1;
+    var i = 1;
+    while (nww == 1) {
+        if (i % liczba_a == 0 && i % liczba_b == 0) {
+            nww = i;
+        }
+        i++;
+    }
+    return nww;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testNWW() {
+    assert(zwracajNWW(2, 3) == 6);
+    assert(zwracajNWW(3, 2) == 6);
+    assert(zwracajNWW(4, 4) == 4);
+    assert(zwracajNWW(5, 3) == 15);
+    assert(zwracajNWW(6, 0) == 0);
+    assert(zwracajNWW(7, 1) == 7);
+    assert(zwracajNWW(0, 2) == 0);
+}
+
+// Funkcja uruchamiająca testy
+function main() {
+    testNWW();
+}
+
+// Uruchomienie testów
+main();

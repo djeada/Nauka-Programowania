@@ -1,40 +1,48 @@
-    mediana = function(listaA, listaB) {
-        var i = 0;
-        var j = 0;
-        var n = listaA.length;
-        var m = listaB.length;
-        var m1 = -1;
-        var m2 = -1;
-        for (var licznik = 0; licznik <= ((n + m) / 2 | 0); licznik++) {
-            {
-                if ((m + n) % 2 === 0) {
-                    m2 = m1;
-                }
-                if (i !== n && j !== m) {
-                    m1 = (listaA[i] > listaB[j]) ? listaB[j++] : listaA[i++];
-                } else if (i < n) {
-                    m1 = listaA[i++];
-                } else {
-                    m1 = listaB[j++];
-                }
-            };
-        }
-        if ((m + n) % 2 === 1) {
-            return m1;
-        }
-        return (m1 + m2) / 2.0;
-    };
-    test1 = function() {
-        var listaA = [2, 4, 7]
-        var listaB = [3, 5, 9]
-        var oczekiwane = 4.5;
-        var wynik = mediana(listaA, listaB);
-        if (wynik !== oczekiwane) {
-            throw new Error(`Assertion error line 29: ${wynik} != ${oczekiwane}`);
-        }
-    };
-    main = function(args) {
-        test1();
-    };
+/*
+Tytuł: Znajdź medianę dwóch posortowanych list.
 
-    main(null);
+Treść: Otrzymujesz dwie posortowane listy liczb całkowitych równej długości. Znajdź ich medianę.
+
+Dane wejściowe: Dwie listy liczb całkowitych o równej długości.
+
+Dane wyjściowe: Liczba zmiennoprzecinkowa.
+
+Przykład:
+
+Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinno zostać zwrócone: 4.5.
+*/
+
+// Funkcja zwracająca medianę dwóch posortowanych list
+function znajdzMediane(lista1, lista2) {
+    let wynik = [];
+    let maxLength = Math.max(lista1.length, lista2.length);
+
+    for (let i = 0; i < maxLength; i++) {
+        let element1 = lista1[i] || 0;
+        let element2 = lista2[i] || 0;
+        if (element1 !== element2) {
+            wynik.push(element1);
+            wynik.push(element2);
+        }
+    }
+
+    return wynik;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+
+function testZnajdzMediane() {
+    assert(znajdzMediane([2, 4, 7], [3, 5, 9]) === 4.5);
+    assert(znajdzMediane([2, 4, 7], [3, 5, 9, 2]) === 4.5);
+    assert(znajdzMediane([2, 4, 7], [3, 5, 9, 2, 4]) === 4.5);
+    assert(znajdzMediane([2, 4, 7], [3, 5, 9, 2, 4, 7]) === 4.5);
+}
+
+
+testZnajdzMediane();

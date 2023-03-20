@@ -1,13 +1,25 @@
-   main = function(args) {
-       var a = require('readline-sync').question('podaj liczbe:');
-       var licznik = 0;
-       while ((a > 0)) {
-           {
-               a = (a / 10 | 0);
-               licznik++;
-           }
-       };
-       console.info("Podana liczba sklada sie z " + licznik + " cyfr.\n");
-   };
+/*
+Tytuł: Liczba cyfr.
 
-   main(null);
+Treść: Dla otrzymanej od użytkownika liczby naturalnej wypisz liczbę cyfr, z których się składa.
+
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+
+Dla otrzymanej liczby 342, powinna zostać wypisana liczba 3.
+*/
+
+// Pobieranie danych od użytkownika
+const liczba = parseInt(prompt("Podaj liczbę:"));
+
+// Pętla
+let cyfry = 0;
+for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
+    cyfry++;
+}
+
+// Wypisanie wyniku
+console.log(cyfry);

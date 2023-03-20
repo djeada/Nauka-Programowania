@@ -1,31 +1,41 @@
-   funkcja1 = function() {
-       return 3;
-   };
-   funkcja2 = function() {
-       return "Tak";
-   };
-   funkcja3 = function() {
-       return true;
-   };
-   test1 = function() {
-       if (!(funkcja1() === 3)) {
-           throw new Error("Assertion error line 15: assert funkcja1() == 3;");
-       };
-   };
-   test2 = function() {
-       if (!(funkcja2() === ("Tak"))) {
-           throw new Error("Assertion error line 19: assert funkcja2().equals('Tak');");
-       };
-   };
-   test3 = function() {
-       if (!(funkcja3())) {
-           throw new Error("Assertion error line 23: assert funkcja3();");
-       };
-   };
-   main = function(args) {
-       test1();
-       test2();
-       test3();
-   };
+/*
+Tytuł: Zwróć stałą.
 
-   main(null);
+Treść: Napisz funkcję, która zwróci:
+
+a) Liczbę 3.
+
+b) Napis "Tak".
+
+c) Wartość logiczną Prawda.
+
+Dane wejściowe: Brak.
+
+Dane wyjściowe:
+
+a) Liczba 3.
+
+b) Napis "Tak".
+
+c) Wartość logiczna Prawda.
+*/
+
+// Funkcja zwracająca liczbę 3
+function zwracajLiczbe() {
+    return 3;
+}
+
+// Funkcja zwracająca napis "Tak"
+function zwracajNapis() {
+    return "Tak";
+}
+
+// Funkcja zwracająca wartość logiczną Prawda
+function zwracajWartoscLogiczna() {
+    return true;
+}
+
+// Wypisanie wyników
+console.log(`a) ${zwracajLiczbe()}`);
+console.log(`b) ${zwracajNapis()}`);
+console.log(`c) ${zwracajWartoscLogiczna()}`);

@@ -1,47 +1,47 @@
-   main = function(args) {
-       console.info("Podaj dzien, miesiac i rok:");
-       var rl = require('readline-sync');
-       console.info(" ");
-       var dzien = rl.question('');
-       var miesiac = rl.question('');
-       var rok = rl.question('');
-       if (rok >= 1) {
-           if (miesiac === 1 || miesiac === 3 || miesiac === 5 || miesiac === 7 || miesiac === 8 || miesiac === 10 || miesiac === 12) {
-               if (dzien >= 1 && dzien <= 31) {
-                   console.info("Podana data jest poprawna");
-               } else {
-                   console.info("Podano niepoprawna date");
-               }
-           } else if (miesiac === 4 || miesiac === 6 || miesiac === 9 || miesiac === 11) {
-               if (dzien >= 1 && dzien <= 30) {
-                   console.info("Podana data jest poprawna");
-               } else {
-                   console.info("Podano niepoprawna date");
-               }
-           } else if (miesiac === 2) {
-               if (rok % 4 === 0) {
-                   if (rok % 100 === 0) {
-                       if (rok % 400 === 0 && dzien >= 1 && dzien <= 29) {
-                           console.info("Podana data jest poprawna");
-                       } else if (dzien >= 1 && dzien <= 28) {
-                           console.info("Podana data jest poprawna");
-                       } else {
-                           console.info("Podano niepoprawna date");
-                       }
-                   } else if (dzien >= 1 && dzien <= 29) {
-                       console.info("Podana data jest poprawna");
-                   } else {
-                       console.info("Podano niepoprawna date");
-                   }
-               } else if (dzien >= 1 && dzien <= 28) {
-                   console.info("Podana data jest poprawna");
-               }
-           } else {
-               console.info("Podano niepoprawna date");
-           }
-       } else {
-           console.info("Podano niepoprawna date");
-       }
-   };
+/*
+Tytuł: Poprawność daty.	
 
-   main(null);
+Treść: Napisz program, który dla pobranych trzech liczb naturalnych sprawdzi, czy reprezentują one poprawną datę. Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem.
+
+Podpowiedź: Wszystkie liczby nie mogą być mniejsze od 1. Druga liczba nie może być większa niż 12 itd.
+
+Dane wejściowe: Trzy liczby naturalne.
+
+Dane wyjściowe: Komunikat o poprawności lub niepoprawności daty.
+
+Przykład:
+
+Dla pobranych liczb 2, 1 i 4, program powinien wypisać informację o poprawności daty.
+*/
+
+// Pobieranie danych od użytkownika
+const dzien = parseInt(prompt("Podaj dzień:"));
+const miesiac = parseInt(prompt("Podaj miesiąc:"));
+const rok = parseInt(prompt("Podaj rok:"));
+
+// Sprawdzenie, czy liczby są poprawne
+if (dzien > 0 && miesiac > 0 && rok > 0) {
+    // Sprawdzenie, czy miesiąc jest poprawny
+    if (miesiac < 13) {
+        // Sprawdzenie, czy rok jest przestępny
+        if (rok % 4 === 0 && rok % 100 !== 0 || rok % 400 === 0) {
+            // Sprawdzenie, czy dzień jest poprawny
+            if (dzien < 30 || (dzien === 30 && miesiac !== 2) || (dzien === 29 && miesiac === 2)) {
+                console.log("Data jest poprawna");
+            } else {
+                console.log("Data jest niepoprawna");
+            }
+        } else {
+            // Sprawdzenie, czy dzień jest poprawny
+            if (dzien < 29 || (dzien === 29 && miesiac !== 2) || (dzien === 28 && miesiac === 2)) {
+                console.log("Data jest poprawna");
+            } else {
+                console.log("Data jest niepoprawna");
+            }
+        }
+    } else {
+        console.log("Data jest niepoprawna");
+    }
+} else {
+    console.log("Data jest niepoprawna");
+}

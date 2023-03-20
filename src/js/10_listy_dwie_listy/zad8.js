@@ -1,53 +1,48 @@
-   polaczV1 = function(listaA, listaB) {
-       if ((listaA.length == 0)) {
-           return listaB;
-       }
-       if ((listaB.length == 0)) {
-           return listaA;
-       }
-       var wynik = ([]);
-       var i = 0;
-       var j = 0;
-       while ((i < listaA.length && j < listaB.length)) {
-           {
-               if (listaA[i] < listaB[j]) {
-                   (wynik.push(listaA[i]) > 0);
-                   i++;
-               } else {
-                   (wynik.push(listaB[j]) > 0);
-                   j++;
-               }
-           }
-       };
-       for (var k = i; k < listaA.length; k++) {
-           {
-               (wynik.push(listaA[k]) > 0);
-           };
-       }
-       for (var k = j; k < listaB.length; k++) {
-           {
-               (wynik.push(listaB[k]) > 0);
-           };
-       }
-       return wynik;
-   };
-   test1 = function() {
-       var listaA = [5, 7, 11]
-       var listaB = [1, 3, 8, 14]
-       var oczekiwane = [1, 3, 5, 7, 8, 11, 14]
-       var wynik = polaczV1(listaA, listaB);
-       if (wynik.length !== oczekiwane.length) {
-           throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
-       }
-       for (var i = 0; i < wynik.length; i++) {
-           if (wynik[i] !== oczekiwane[i]) {
-               throw new Error(`Assertion error line 29: ${wynik[i]} != ${oczekiwane[i]}`);
-           }
-       }
+/*
 
-   };
-   main = function(args) {
-       test1();
-   };
+Tytuł: Połącz posortowane listy w posortowaną listę.
 
-   main(null);
+Treść: Dla otrzymanych dwóch posortowanych list, połącz je w jedną posortowaną listę.
+
+Dane wejściowe: Dwie listy liczb całkowitych.
+
+Dane wyjściowe: Lista liczb całkowitych.
+
+Przykład:
+
+Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinna zostać zwrócona lista: [2, 3, 4, 7, 9].
+ */
+
+// Funkcja zwracająca listę elementów, które nie są częścią wspólną obu list
+function polaczPosortowaneListy(lista1, lista2) {
+    let wynik = [];
+    let maxLength = Math.max(lista1.length, lista2.length);
+
+    for (let i = 0; i < maxLength; i++) {
+        let element1 = lista1[i] || 0;
+        let element2 = lista2[i] || 0;
+        if (element1 !== element2) {
+            wynik.push(element1);
+            wynik.push(element2);
+        }
+    }
+
+    return wynik;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+
+function testPolaczPosortowaneListy() {
+    assert(polaczPosortowaneListy([2, 4, 7], [3, 5, 9]).toString() === [2, 3, 4, 7, 9].toString());
+    assert(polaczPosortowaneListy([2, 4, 7], [3, 5, 9, 2]).toString() === [2, 3, 4, 7, 9].toString());
+    assert(polaczPosortowaneListy([2, 4, 7], [3, 5, 9, 2, 4]).toString() === [2, 3, 4, 7, 9].toString());
+    assert(polaczPosortowaneListy([2, 4, 7], [3, 5, 9, 2, 4, 7]).toString() === [2, 3, 4, 7, 9].toString());
+}
+
+testPolaczPosortowaneListy();

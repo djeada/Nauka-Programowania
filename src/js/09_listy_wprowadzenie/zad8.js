@@ -1,58 +1,46 @@
-   usunWszystkieWystapieniaV1 = function(lista, klucz) {
-       for (var i = 0; i < lista.length; i++) {
-           {
-               if (lista[i] === klucz) {
-                   lista.splice(i--, 1)[0];
-               }
-           };
-       }
-       return lista;
-   };
-   usunWszystkieWystapieniaV2 = function(lista, klucz) {
-       (function(a, r) {
-           var b = false;
-           for (var i = 0; i < r.length; i++) {
-               var ndx = a.indexOf(r[i]);
-               if (ndx >= 0) {
-                   a.splice(ndx, 1);
-                   b = true;
-               }
-           }
-           return b;
-       })(lista, [klucz]);
-       return lista;
-   };
-   test1 = function() {
-       var lista = [6, 7, 2, 1, 8]
-       var klucz = 2;
-       var oczekiwane = [6, 7, 1, 8]
-       var wynik = usunWszystkieWystapieniaV1(lista, klucz);
-       if (oczekiwane.length !== wynik.length) {
-           throw new Error(`Assertion error line 37: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
-       }
-       for (var i = 0; i < oczekiwane.length; i++) {
-           if (oczekiwane[i] !== wynik[i]) {
-               throw new Error(`Assertion error line 40: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
-           }
-       }
-   };
-   test2 = function() {
-       var lista = [6, 7, 2, 1, 8]
-       var klucz = 2;
-       var oczekiwane = [6, 7, 1, 8]
-       var wynik = usunWszystkieWystapieniaV2(lista, klucz);
-       if (oczekiwane.length !== wynik.length) {
-           throw new Error(`Assertion error line 50: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
-       }
-       for (var i = 0; i < oczekiwane.length; i++) {
-           if (oczekiwane[i] !== wynik[i]) {
-               throw new Error(`Assertion error line 54: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
-           }
-       }
-   };
-   main = function(args) {
-       test1();
-       test2();
-   };
+/*
+Tytuł: Usuń klucz.
 
-   main(null);
+Treść: Dla otrzymanej listy: liczb całkowitych oraz klucza, usuń pierwsze wystąpienie klucza w liście.
+
+Dane wejściowe: Lista liczb całkowitych i liczba całkowita.
+
+Dane wyjściowe: Lista liczb całkowitych.
+
+Przykład:
+
+Dla otrzymanej listy: [6, 2, 1, 4, 27] oraz 4, powinna zostać zwrócona lista: [6, 2, 1, 27].
+
+*/
+
+function usunKlucz(lista, klucz) {
+    let wynik = [];
+    let czyZnaleziono = false;
+    for (let i = 0; i < lista.length; i++) {
+        if (lista[i] === klucz && !czyZnaleziono) {
+            czyZnaleziono = true;
+        } else {
+            wynik.push(lista[i]);
+        }
+    }
+    return wynik;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testUsunKlucz() {
+    assert(usunKlucz([6, 2, 1, 4, 27], 4).toString() === [6, 2, 1, 27].toString());
+    assert(usunKlucz([6, 2, 1, 4, 27], 6).toString() === [2, 1, 4, 27].toString());
+    assert(usunKlucz([6, 2, 1, 4, 27], 27).toString() === [6, 2, 1, 4].toString());
+}
+
+function main() {
+    testUsunKlucz();
+}
+
+main();

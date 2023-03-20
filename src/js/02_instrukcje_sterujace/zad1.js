@@ -1,9 +1,21 @@
-   main = function(args) {
-       var rl = require('readline-sync');
-       var x = rl.question('podaj liczbe:');
-       if (x > 5) {
-           console.info(x);
-       }
-   };
+/*
+Tytuł: Porównanie ze stałą.
 
-   main(null);
+Treść: Pobierz od użytkownika liczbę naturalną. Jeśli ta liczba jest większa niż 5, wypisz ją.
+
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Liczba naturalna lub brak danych wyjściowych.
+
+Przykład:
+
+Dla pobranej liczby: 10, powinna zostać wypisana liczba: 10.
+*/
+
+// Pobieranie danych od użytkownika
+const liczba = parseInt(prompt("Podaj liczbę:"));
+
+// Porównanie ze stałą
+if (liczba > 5) {
+    console.log(liczba);
+}

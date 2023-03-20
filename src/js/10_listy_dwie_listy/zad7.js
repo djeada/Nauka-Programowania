@@ -1,37 +1,48 @@
-   roznicaV1 = function(listaA, listaB) {
-       var wynik = ([]);
-       for (var i = 0; i < listaA.length; i++) {
-           var liczba = listaA[i]; {
-               if (!(listaB.indexOf((liczba)) >= 0)) {
-                   (wynik.push(liczba) > 0);
-               }
-           }
-       }
-       for (var i = 0; i < listaB.length; i++) {
-           var liczba = listaB[i]; {
-               if (!(listaA.indexOf((liczba)) >= 0)) {
-                   (wynik.push(liczba) > 0);
-               }
-           }
-       }
-       return wynik;
-   };
-   test1 = function() {
-       var listaA = [9, 2, 5, 4]
-       var listaB = [4, 2, 1]
-       var oczekiwane = [9, 5, 1]
-       var wynik = roznicaV1(listaA, listaB);
-       if (wynik.length !== oczekiwane.length) {
-           throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
-       }
-       for (var i = 0; i < wynik.length; i++) {
-           if (wynik[i] !== oczekiwane[i]) {
-               throw new Error(`Assertion error line 33: ${wynik[i]} != ${oczekiwane[i]}`);
-           }
-       }
-   };
-   main = function(args) {
-       test1();
-   };
+/*
 
-   main(null);
+Tytuł: Różnica między dwoma listami.
+
+Treść: Dla otrzymanych dwóch list liczb całkowitych, znajdź elementy, które nie są częścią wspólną obu list.
+
+Dane wejściowe: Dwie listy liczb całkowitych.
+
+Dane wyjściowe: Lista liczb całkowitych.
+
+Przykład:
+
+Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostać zwrócona lista: [9, 5, 1].
+*/
+
+// Funkcja zwracająca listę elementów, które nie są częścią wspólną obu list
+function znajdzRoznice(lista1, lista2) {
+    let wynik = [];
+    let maxLength = Math.max(lista1.length, lista2.length);
+
+    for (let i = 0; i < maxLength; i++) {
+        let element1 = lista1[i] || 0;
+        let element2 = lista2[i] || 0;
+        if (element1 !== element2) {
+            wynik.push(element1);
+            wynik.push(element2);
+        }
+    }
+
+    return wynik;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+
+function testZnajdzRoznice() {
+    assert(znajdzRoznice([9, 2, 5, 4], [4, 2, 1]).toString() === [9, 5, 1].toString());
+    assert(znajdzRoznice([9, 2, 5, 4], [4, 2, 1, 9]).toString() === [5, 1].toString());
+    assert(znajdzRoznice([9, 2, 5, 4], [4, 2, 1, 9, 5]).toString() === [1].toString());
+    assert(znajdzRoznice([9, 2, 5, 4], [4, 2, 1, 9, 5, 2]).toString() === [1].toString());
+}
+
+testZnajdzRoznice();

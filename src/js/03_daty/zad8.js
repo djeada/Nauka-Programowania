@@ -1,39 +1,57 @@
-   main = function(args) {
-       var rl = require('readline-sync');
-       var DD = rl.question('Podaj dzien:\n');
-       var MM = rl.question('Podaj miesiac:\n');
-       var rok = rl.question('Podaj rok:\n');
-       var CC = (rok / 100 | 0);
-       var YY = rok % 100;
-       var A = ((CC / 4 | 0)) - 2 * CC - 1;
-       var B = (5 * YY / 4 | 0);
-       var C = (26 * (MM + 1) / 10 | 0);
-       var wynik = (A + B + C + DD) % 7;
-       switch ((wynik)) {
-           case 1:
-               console.info("pierwszym dniem tygodnia jest poniedzialek");
-               break;
-           case 2:
-               console.info("drugim dniem tygodnia jest wtorek");
-               break;
-           case 3:
-               console.info("trzecim dniem tygodnia jest sroda");
-               break;
-           case 4:
-               console.info("czwartym dniem tygodnia jest czwartek");
-               break;
-           case 5:
-               console.info("piatym dniem tygodnia jest piatek");
-               break;
-           case 6:
-               console.info("szostym dniem tygodnia jest sobota");
-               break;
-           case 7:
-               console.info("siodmym dniem tygodnia jest niedziela");
-               break;
-           default:
-               console.info("bledne dane");
-       }
-   };
+/*
+Tytuł: Jaki mamy dzień tygodnia?	
 
-   main(null);
+Treść: Napisz program, który dla trzech pobranych liczb naturalnych (reprezentujących datę) będzie wypisywał odpowiadający im dzień tygodnia. Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem.
+
+Podpowiedź: Można użyć wzoru Gaussa:
+Niech data będzie dana w formacie DD/MM/CCYY :
+
+* DD - dzień
+* MM - miesiąc
+* CC - stulecie
+* YY - rok
+
+$$A = CC/4 - 2CC - 1$$
+
+$$B = 5YY/4$$
+
+$$C = 26*(MM + 1)/10$$
+
+$$Dzien = (A + B + C + DD) mod 7$$
+
+Dane wejściowe: Trzy liczby naturalne.
+
+Dane wyjściowe: Komunikat o dniu tygodnia.
+
+Przykład:
+
+Dla pobranych liczb 9, 10 i 2020, program powinien zwrócić napis "Czwartek".
+*/
+
+// Pobieranie danych od użytkownika
+const dzien = parseInt(prompt("Podaj dzień:"));
+const miesiac = parseInt(prompt("Podaj miesiąc:"));
+const rok = parseInt(prompt("Podaj rok:"));
+
+
+const A = rok; // 4 - 2 * rok - 1
+const B = 5 * rok; // 4
+const C = 26 * (miesiac + 1); // 10
+
+const dzien_tygodnia = (A + B + C + dzien) % 7;
+
+if (dzien_tygodnia === 0) {
+    console.log("Niedziela");
+} else if (dzien_tygodnia === 1) {
+    console.log("Poniedziałek");
+} else if (dzien_tygodnia === 2) {
+    console.log("Wtorek");
+} else if (dzien_tygodnia === 3) {
+    console.log("Środa");
+} else if (dzien_tygodnia === 4) {
+    console.log("Czwartek");
+} else if (dzien_tygodnia === 5) {
+    console.log("Piątek");
+} else {
+    console.log("Sobota");
+}

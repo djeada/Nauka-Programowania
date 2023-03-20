@@ -1,42 +1,41 @@
-   indeksMin = function(lista) {
-       var n = lista.length;
-       for (var i = 0; i < n - 1; i++) {
-           {
-               if (lista[i] > lista[i + 1]) {
-                   return i + 1;
-               }
-           };
-       }
-       return 0;
-   };
-   test1 = function() {
-       var lista = [7, 8, -1, 4, 5]
-       var oczekiwane = 2;
-       var wynik = indeksMin(lista);
-       if (wynik !== oczekiwane) {
-           throw new Error(`Assertion error line 19: ${wynik} != ${oczekiwane}`);
-       }
-   };
-   test2 = function() {
-       var lista = [2, 3, 4, 5, 6]
-       var oczekiwane = 0;
-       var wynik = indeksMin(lista);
-       if (wynik !== oczekiwane) {
-           throw new Error(`Assertion error line 27: ${wynik} != ${oczekiwane}`);
-       }
-   };
-   test3 = function() {
-       var lista = [8, 9, 10, 11, 1]
-       var oczekiwane = 4;
-       var wynik = indeksMin(lista);
-       if (wynik !== oczekiwane) {
-           throw new Error(`Assertion error line 35: ${wynik} != ${oczekiwane}`);
-       }
-   };
-   main = function(args) {
-       test1();
-       test2();
-       test3();
-   };
+/*
+Tytuł: Znalezienie indeksu najmniejszego elementu w posortowanej i przesuniętej w prawo liście.
 
-   main(null);
+Treść: Dla otrzymanej listy liczb całkowitych, znajdź indeks najmniejszego elementu. Lista jest posortowana rosnąco, ale została przesunięta w prawo o określoną liczbę miejsc. Przykładowo dla przesunięcia w prawo o 1, ostatni element trafia na pierwsze miejsce, a przedostatni na ostatnie miejsce itd.
+
+Dane wejściowe: Lista liczb całkowitych oraz liczba naturalna określająca przesunięcie w prawo.
+
+Dane wyjściowe: Liczba całkowita.
+
+Przykład:
+
+Dla otrzymanej listy: [7, 8, -1, 4, 5] zostanie zwrócona liczba: 2.
+*/
+
+// Funkcja znajdująca indeks najmniejszego elementu w posortowanej i przesuniętej w prawo liście
+function znajdzIndeksNajmniejszegoElementu(lista) {
+    let indeksNajmniejszego = 0;
+
+    for (let i = 1; i < lista.length; i++) {
+        if (lista[i] < lista[indeksNajmniejszego]) {
+            indeksNajmniejszego = i;
+        }
+    }
+
+    return indeksNajmniejszego;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testZnajdzIndeksNajmniejszegoElementu() {
+    assert(znajdzIndeksNajmniejszegoElementu([7, 8, -1, 4, 5]) === 2);
+    assert(znajdzIndeksNajmniejszegoElementu([4, 5, 7, 8, -1]) === 4);
+    assert(znajdzIndeksNajmniejszegoElementu([-1, 4, 5, 7, 8]) === 0);
+}
+
+testZnajdzIndeksNajmniejszegoElementu();

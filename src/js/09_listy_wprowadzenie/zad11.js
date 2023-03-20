@@ -1,91 +1,46 @@
-   policzSamochodyV1 = function(lista) {
-       var licznik = 0;
-       for (var i = 0; i < lista.length; i++) {
-           {
-               if ((function(c) {
-                       return c.charCodeAt == null ? c : c.charCodeAt(0);
-                   })(lista[i]) == 'A'.charCodeAt(0)) {
-                   for (var j = i + 1; j < lista.length; j++) {
-                       {
-                           if ((function(c) {
-                                   return c.charCodeAt == null ? c : c.charCodeAt(0);
-                               })(lista[j]) == 'B'.charCodeAt(0)) {
-                               licznik++;
-                           }
-                       };
-                   }
-               } else if ((function(c) {
-                       return c.charCodeAt == null ? c : c.charCodeAt(0);
-                   })(lista[i]) == 'B'.charCodeAt(0)) {
-                   for (var j = i - 1; j > -1; j--) {
-                       {
-                           if ((function(c) {
-                                   return c.charCodeAt == null ? c : c.charCodeAt(0);
-                               })(lista[j]) == 'A'.charCodeAt(0)) {
-                               licznik++;
-                           }
-                       };
-                   }
-               }
-           };
-       }
-       return (licznik / 2 | 0);
-   };
-   policzSamochodyV2 = function(lista) {
-       var licznik = 0;
-       var pom = 0;
-       for (var index8217 = 0; index8217 < lista.length; index8217++) {
-           var x = lista[index8217]; {
-               if ((function(c) {
-                       return c.charCodeAt == null ? c : c.charCodeAt(0);
-                   })(x) == 'A'.charCodeAt(0)) {
-                   pom++;
-               } else if ((function(c) {
-                       return c.charCodeAt == null ? c : c.charCodeAt(0);
-                   })(x) == 'B'.charCodeAt(0)) {
-                   licznik += pom;
-               }
-           }
-       }
-       return licznik;
-   };
-   test1 = function() {
-       var lista = ['A', 'B', 'A', 'B', 'B']
-       var oczekiwane = 5;
-       var wynik = policzSamochodyV1(lista);
-       if (!(wynik == oczekiwane)) {
-           throw new Error(`Assertion error line 59: ${wynik} != ${oczekiwane}`);
-       }
-   };
-   test2 = function() {
-       var lista = ['A', 'A', 'A', 'B', 'B', 'A', 'B', 'A', 'B', 'A', 'A', 'A']
-       var oczekiwane = 15;
-       var wynik = policzSamochodyV1(lista);
-       if (!(wynik == oczekiwane)) {
-           throw new Error(`Assertion error line 67: ${wynik} != ${oczekiwane}`);
-       }
-   };
-   test3 = function() {
-       var lista = ['A', 'B', 'A', 'B', 'B']
-       var oczekiwane = 5;
-       var wynik = policzSamochodyV2(lista);
-       if (!(wynik == oczekiwane)) {
-           throw new Error(`Assertion error line 75: ${wynik} != ${oczekiwane}`);
-       }
-   };
-   test4 = function() {
-       var lista = ['A', 'A', 'A', 'B', 'B', 'A', 'B', 'A', 'B', 'A', 'A', 'A']
-       var oczekiwane = 15;
-       var wynik = policzSamochodyV2(lista);
-       if (!(wynik == oczekiwane)) {
-           throw new Error(`Assertion error line 83: ${wynik} != ${oczekiwane}`);
-       }
-   };
-   main = function(args) {
-       test1();
-       test2();
-       test3();
-       test4();
-   };
+/*
+Tytuł: Samochody jadące w przeciwnych kierunkach.
 
-   main(null);
+Treść: Otrzymujesz listę złożoną wyłącznie z liter 'A' i 'B', które odpowiadają samochodom jadącym odpowiednio na wschód ('A') i zachód ('B'). Policz, ile razy samochody jadące w przeciwnych kierunkach mijają się.
+
+Dane wejściowe: Lista znaków odpowiadających samochodom jadącym na wschód ('A') i zachód ('B').
+
+Dane wyjściowe: Liczba naturalna oznaczająca liczbę mijających się samochodów.
+
+Przykład:
+
+Dla otrzymanej listy ['A', 'B', 'A', 'B', 'B'] powinna zostać zwrócona liczba 5.
+*/
+
+// Funkcja licząca ile razy samochody mijają się na drodze
+function liczbaMijajacychSieSamochodow(listaSamochodow) {
+    var samochodyA = 0;
+    var liczbaMijajacych = 0;
+
+    for (var i = 0; i < listaSamochodow.length; i++) {
+        if (listaSamochodow[i] === 'A') {
+            samochodyA++;
+        } else if (listaSamochodow[i] === 'B') {
+            liczbaMijajacych += samochodyA;
+        }
+    }
+
+    return liczbaMijajacych;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testLiczbaMijajacychSieSamochodow() {
+    assert(liczbaMijajacychSieSamochodow(['A', 'B', 'A', 'B', 'B']) === 5);
+    assert(liczbaMijajacychSieSamochodow(['A', 'A', 'A', 'B', 'B']) === 6);
+    assert(liczbaMijajacychSieSamochodow(['A', 'B', 'A', 'A', 'B']) === 4);
+    assert(liczbaMijajacychSieSamochodow(['B', 'B', 'A', 'A', 'A']) === 0);
+    assert(liczbaMijajacychSieSamochodow(['A', 'A', 'A', 'A', 'A']) === 0);
+}
+
+testLiczbaMijajacychSieSamochodow();

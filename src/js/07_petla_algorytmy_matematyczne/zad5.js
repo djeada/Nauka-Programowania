@@ -1,44 +1,49 @@
-   nwdV1 = function(a, b) {
-       if (b === 0) {
-           return a;
-       }
-       return nwdV1(b, a % b);
-   };
-   nwdV2 = function(a, b) {
-       var c;
-       while ((b !== a % b)) {
-           {
-               c = b;
-               b = a % b;
-               a = c;
-               if (b === 0) {
-                   break;
-               }
-           }
-       };
-       return a;
-   };
-   test1 = function() {
-       var a = 14;
-       var b = 21;
-       var oczekiwane = 7;
-       var wynik = nwdV1(a, b);
-       if (!(oczekiwane === wynik)) {
-           throw new Error(`Assertion error line 29: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   test2 = function() {
-       var a = 14;
-       var b = 21;
-       var oczekiwane = 7;
-       var wynik = nwdV2(a, b);
-       if (!(oczekiwane === wynik)) {
-           throw new Error(`Assertion error line 38: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   main = function(args) {
-       test1();
-       test2();
-   };
+/*
+Tytuł: NWD.
 
-   main(null);
+Treść: Napisz funkcję, która dla otrzymanych dwóch liczb naturalnych zwróci ich największy wspólny dzielnik.
+
+Dane wejściowe: dwie liczby naturalne
+
+Dane wyjściowe: liczba naturalna
+
+Przykład:
+
+Dla otrzymanych liczb 60 i 45, funkcja powinna zwrócić liczbę 15.
+*/
+
+// Funkcja zwracająca NWD
+function zwracajNWD(liczba_a, liczba_b) {
+    var dzielnik = 1;
+    for (var i = 1; i <= liczba_a; i++) {
+        if (liczba_a % i == 0 && liczba_b % i == 0) {
+            dzielnik = i;
+        }
+    }
+    return dzielnik;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testNWD() {
+    assert(zwracajNWD(2, 3) == 1);
+    assert(zwracajNWD(3, 2) == 1);
+    assert(zwracajNWD(4, 4) == 4);
+    assert(zwracajNWD(5, 3) == 1);
+    assert(zwracajNWD(6, 0) == 6);
+    assert(zwracajNWD(7, 1) == 1);
+    assert(zwracajNWD(0, 2) == 2);
+}
+
+// Funkcja uruchamiająca testy
+function main() {
+    testNWD();
+}
+
+// Uruchomienie testów
+main();

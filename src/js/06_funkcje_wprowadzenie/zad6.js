@@ -1,20 +1,29 @@
-   sumaCyfr = function(a) {
-       var suma = 0;
-       while ((a > 0)) {
-           {
-               suma += (a % 10);
-               a = (function(n) {
-                   return n < 0 ? Math.ceil(n) : Math.floor(n);
-               })(a / 10);
-           }
-       };
-       return suma;
-   };
-   main = function(args) {
-       var a = require('readline-sync').question('podaj liczbe:');
-       console.info("Suma cyfr liczby to: ");
-       console.info(sumaCyfr(a));
-       console.info("\n");
-   };
+/*
+Tytuł: Cyfry liczby
 
-   main(null);
+Treść: Napisz funkcję, która dla otrzymanej liczby obliczy sumę jej cyfr.
+
+Dane wejściowe: liczba naturalna
+
+Dane wyjściowe: liczba naturalna
+
+Przykład:
+
+Dla pobranej liczby 13231, funkcja powinna zwrócić liczbę 10.
+*/
+
+// Funkcja zwracająca sumę cyfr liczby
+function sumaCyfrLiczby(liczba) {
+    var suma = 0;
+    var liczba = liczba.toString();
+    for (var i = 0; i < liczba.length; i++) {
+        suma += parseInt(liczba[i]);
+    }
+    return suma;
+}
+
+// Pobieranie danych od użytkownika
+var liczba = parseInt(prompt("Podaj liczbę:"));
+
+// Wypisanie wyniku
+console.log(sumaCyfrLiczby(liczba));

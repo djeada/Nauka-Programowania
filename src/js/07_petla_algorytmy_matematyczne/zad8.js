@@ -1,47 +1,55 @@
-   czyPierwsza = function(n) {
-       if (n <= 1) {
-           return false;
-       }
-       if (n % 2 === 0 && n !== 2) {
-           return false;
-       }
-       for (var i = 3; i <= Math.sqrt(n); i += 2) {
-           {
-               if (n % i === 0) {
-                   return false;
-               }
-           };
-       }
-       return true;
-   };
-   test1 = function() {
-       var a = 15;
-       var oczekiwane = false;
-       var wynik = czyPierwsza(a);
-       if (wynik) {
-           throw new Error(`Assertion error line 24: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   test2 = function() {
-       var a = 7;
-       var oczekiwane = true;
-       var wynik = czyPierwsza(a);
-       if (!(wynik === oczekiwane)) {
-           throw new Error(`Assertion error line 32: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   test3 = function() {
-       var a = -15;
-       var oczekiwane = false;
-       var wynik = czyPierwsza(a);
-       if (wynik) {
-           throw new Error(`Assertion error line 24: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   main = function(args) {
-       test1();
-       test2();
-       test3();
-   };
+/*
 
-   main(null);
+Tytuł: Naiwny test pierwszości
+
+Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej sprawdzi, czy jest ona liczbą pierwszą.
+
+Dane wejściowe: liczba naturalna
+
+Dane wyjściowe: wartość logiczna
+
+Przykład:
+
+Dla otrzymanej liczby 7, funkcja powinna zwrócić wartość logiczną prawda. Dla otrzymanej liczby 2, funkcja powinna zwrócić wartość logiczną prawda.
+*/
+
+// Funkcja zwracająca wartość logiczną, czy liczba jest pierwsza
+function czyPierwsza(liczba) {
+    if (liczba < 2) {
+        return false;
+    }
+    for (var i = 2; i < liczba; i++) {
+        if (liczba % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testCzyPierwsza() {
+    assert(czyPierwsza(2) == true);
+    assert(czyPierwsza(3) == true);
+    assert(czyPierwsza(4) == false);
+    assert(czyPierwsza(7) == true);
+    assert(czyPierwsza(9) == false);
+    assert(czyPierwsza(11) == true);
+    assert(czyPierwsza(13) == true);
+    assert(czyPierwsza(14) == false);
+    assert(czyPierwsza(16) == false);
+    assert(czyPierwsza(19) == true);
+}
+
+// Funkcja uruchamiająca testy
+function main() {
+    testCzyPierwsza();
+}
+
+// Uruchomienie testów
+main();

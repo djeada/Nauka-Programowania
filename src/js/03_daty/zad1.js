@@ -1,20 +1,22 @@
-   main = function(args) {
-       var rl = require('readline-sync');
-       var a = rl.question('podaj liczbe:');
-       if (a >= 1 && a <= 7) {
-           console.info("Liczba jest poprawnym numerem tygodnia");
-           console.info("\n");
-       } else {
-           console.info("Liczba nie jest poprawnym numerem tygodnia");
-           console.info("\n");
-       }
-       if (a >= 1 && a <= 12) {
-           console.info("Liczba jest poprawnym numerem miesiaca");
-           console.info("\n");
-       } else {
-           console.info("Liczba nie jest poprawnym numerem miesiaca");
-           console.info("\n");
-       }
-   };
+/*
+Tytuł: Czy liczba jest poprawnym numerem dnia tygodnia lub miesiąca?
 
-   main(null);
+Treść: Wypisz pobraną od użytkownika liczbę naturalną, jeśli jest ona poprawnym numerem dnia tygodnia lub miesiąca.
+
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+
+* Dla pobranej liczby: 10, powinna zostać wypisana liczba: 10.
+* Dla pobranej liczby: 15, nie powinna być wypisana żadna liczba.
+*/
+
+// Pobieranie danych od użytkownika
+const liczba = parseInt(prompt("Podaj liczbę:"));
+
+// Porównanie ze stałą
+if (liczba >= 1 && liczba <= 12) {
+    console.log(liczba);
+}

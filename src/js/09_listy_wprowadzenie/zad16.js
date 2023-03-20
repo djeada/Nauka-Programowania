@@ -1,42 +1,43 @@
-var Pair = /** @class */ (function() {
-    function Pair(a, b) {
-        this.first = a;
-        this.second = b;
-    }
-    return Pair;
-}());
-znajdzParyV1 = function(lista, suma) {
-    var oczekiwane = ([]);
-    for (var i = 0; i < lista.length; i++) {
-        {
-            for (var j = i + 1; j < lista.length; j++) {
-                {
-                    if (lista[i] + lista[j] === suma) {
-                        oczekiwane.push(new Pair(lista[i], lista[j]));
-                    }
-                };
-            }
-        };
-    }
-    return oczekiwane;
-};
+/*
+Tytuł: Znalezienie indeksów pierwszej pary elementów listy o sumie równej podanej liczbie.
 
-test1 = function() {
-    var lista = [0, 4, 5, 6, 2, 9, 2, 3]
-    var suma = 5;
-    var oczekiwane = [new Pair(0, 5), new Pair(2, 3), new Pair(2, 3)]
-    var wynik = znajdzParyV1(lista, suma);
-    if (!(wynik.length == oczekiwane.length)) {
-        throw new Error(`Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (!(wynik[i].first == oczekiwane[i].first && wynik[i].second == oczekiwane[i].second)) {
-            throw new Error(`Assertion error line 38: ${wynik[i].first} != ${oczekiwane[i].first} || ${wynik[i].second} != ${oczekiwane[i].second}`);
+Treść: Dla otrzymanej listy liczb całkowitych oraz liczby x, znajdź indeksy pierwszej pary elementów listy, których suma jest równa x. Jeśli taka para nie istnieje, zwróć parę (-1, -1).
+
+Dane wejściowe: Lista liczb całkowitych oraz liczba całkowita.
+
+Dane wyjściowe: Para liczb całkowitych.
+
+Przykład:
+
+Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostaną zwrócone indeksy pierwszej pary elementów o sumie równej 5: (0, 2).
+*/
+
+// Funkcja znajdująca indeksy pierwszej pary elementów o sumie równej podanej liczbie
+function znajdzPareSumujacaDo(lista, x) {
+    const mapaIndeksow = new Map();
+
+    for (let i = 0; i < lista.length; i++) {
+        const komplement = x - lista[i];
+        if (mapaIndeksow.has(komplement)) {
+            return [mapaIndeksow.get(komplement), i];
         }
+        mapaIndeksow.set(lista[i], i);
     }
-};
-main = function(args) {
-    test1();
-};
 
-main(null);
+    return [-1, -1];
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testZnajdzPareSumujacaDo() {
+    assert(JSON.stringify(znajdzPareSumujacaDo([1, 3, 4, 5, 2], 5)) === JSON.stringify([0, 2]));
+    assert(JSON.stringify(znajdzPareSumujacaDo([2, 5, 9, 4, 7], 12)) === JSON.stringify([1, 4]));
+    assert(JSON.stringify(znajdzPareSumujacaDo([2, 5, 9, 4, 7], 20)) === JSON.stringify([-1, -1]));
+}
+
+testZnajdzPareSumujacaDo();

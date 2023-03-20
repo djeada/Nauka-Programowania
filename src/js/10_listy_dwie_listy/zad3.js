@@ -1,34 +1,43 @@
-   suma = function(listaA, listaB) {
-       var wynik = (listaA.slice(0));
-       var n = wynik.length < listaB.length ? wynik.length : listaB.length;
-       for (var i = 0; i < n; i++) {
-           {
-               wynik[i] = wynik[i] + listaB[i];
-           };
-       }
-       for (var i = n; i < listaB.length; i++) {
-           {
-               wynik.push(listaB[i]);
-           };
-       }
-       return (wynik.slice(0));
-   };
-   test1 = function() {
-       var listaA = [3, 1, 2, 5]
-       var listaB = [2, 8, 6, 5]
-       var oczekiwane = [5, 9, 8, 10]
-       var wynik = suma(listaA, listaB);
-       if (wynik.length !== oczekiwane.length) {
-           throw new Error(`Assertion error line 24: ${wynik.length} != ${oczekiwane.length}`);
-       }
-       for (var i = 0; i < wynik.length; i++) {
-           if (wynik[i] !== oczekiwane[i]) {
-               throw new Error(`Assertion error line 28: ${wynik[i]} != ${oczekiwane[i]}`);
-           }
-       }
-   };
-   main = function(args) {
-       test1();
-   };
+/*
+Tytuł: Suma elementów dwóch list.
 
-   main(null);
+Treść: Dla otrzymanych dwóch list, zwróć listę, której elementy są sumą odpowiadających sobie elementów obu list. Jeśli listy nie są tej samej długości, załóż, że brakujące elementy krótszej listy są równe 0.
+
+Dane wejściowe: Dwie listy.
+
+Dane wyjściowe: Lista.
+
+Przykład:
+
+Dla otrzymanych list [3, 1, 2, 5] oraz [2, 8, 6, 5], zostanie zwrócona lista: [5, 9, 8, 10].
+*/
+
+// Funkcja zwracająca listę, której elementy są sumą odpowiadających sobie elementów obu list
+function sumaElementowList(lista1, lista2) {
+    let wynik = [];
+    let maxLength = Math.max(lista1.length, lista2.length);
+
+    for (let i = 0; i < maxLength; i++) {
+        let element1 = lista1[i] || 0;
+        let element2 = lista2[i] || 0;
+        wynik.push(element1 + element2);
+    }
+
+    return wynik;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testSumaElementowList() {
+    assert(sumaElementowList([3, 1, 2, 5], [2, 8, 6, 5]).toString() === [5, 9, 8, 10].toString());
+    assert(sumaElementowList([3, 1, 2, 5], [2, 8, 6]).toString() === [5, 9, 8, 5].toString());
+    assert(sumaElementowList([3, 1, 2], [2, 8, 6, 5]).toString() === [5, 9, 8, 5].toString());
+    assert(sumaElementowList([3, 1, 2, 5], [2, 8, 6, 5, 1]).toString() === [5, 9, 8, 10, 1].toString());
+}
+
+testSumaElementowList();

@@ -1,46 +1,57 @@
-var Pair = /** @class */ (function() {
-    function Pair(a, b) {
-        this.first = a;
-        this.second = b;
-    }
-    return Pair;
-}());
-sumaDwochV1 = function(lista, liczba) {
-    var n = lista.length;
-    for (var i = 0; i < n; i++) {
-        {
-            for (var j = i + 1; j < n; j++) {
-                {
-                    if (lista[j] + lista[i] === liczba) {
-                        return (new Pair(i, j));
-                    }
-                };
-            }
-        };
-    }
-    return (new Pair(-1, -1));
-};
-test1 = function() {
-    var lista = [1, 3, 4, 5, 2]
-    var liczba = 5;
-    var oczekiwane = new Pair(0, 2)
-    var wynik = sumaDwochV1(lista, liczba);
-    if (!(wynik.first == oczekiwane.first && wynik.second == oczekiwane.second)) {
-        throw new Error(`Assertion error line 34: ${wynik.first} != ${oczekiwane.first} || ${wynik.second} != ${oczekiwane.second}`);
-    }
-};
-test2 = function() {
-    var lista = [2, -6, 10, 21, 8]
-    var liczba = 7;
-    var oczekiwane = new Pair(-1, -1)
-    var wynik = sumaDwochV1(lista, liczba);
-    if (!(wynik.first == oczekiwane.first && wynik.second == oczekiwane.second)) {
-        throw new Error(`Assertion error line 34: ${wynik.first} != ${oczekiwane.first} || ${wynik.second} != ${oczekiwane.second}`);
-    }
-};
-main = function(args) {
-    test1();
-    test2();
-};
+/*
 
-main(null);
+Tytuł: Znalezienie wszystkich par elementów listy o sumie równej podanej liczbie.
+
+Treść: Dla otrzymanej listy liczb całkowitych oraz liczby x, znajdź wszystkie pary elementów listy, których suma jest równa x.
+
+Dane wejściowe: Lista liczb całkowitych oraz liczba całkowita.
+
+Dane wyjściowe: Lista par liczb całkowitych.
+
+Przykład:
+
+Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5, zostaną zwrócone wszystkie pary elementów o sumie równej 5: [(1, 4), (2, 3)].
+*/
+
+// Funkcja znajdująca wszystkie pary elementów o sumie równej podanej liczbie
+function znajdzWszystkieParySumujaceDo(lista, x) {
+    const mapaIndeksow = new Map();
+    const pary = [];
+
+    for (let i = 0; i < lista.length; i++) {
+        const komplement = x - lista[i];
+        if (mapaIndeksow.has(komplement)) {
+            pary.push([komplement, lista[i]]);
+        }
+        mapaIndeksow.set(lista[i], i);
+    }
+
+    return pary;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testZnajdzWszystkieParySumujaceDo() {
+    assert(
+        JSON.stringify(znajdzWszystkieParySumujaceDo([1, 2, 4, 3, 7], 5)) ===
+        JSON.stringify([
+            [1, 4],
+            [2, 3],
+        ])
+    );
+    assert(
+        JSON.stringify(znajdzWszystkieParySumujaceDo([2, 5, 9, 4, 7], 12)) ===
+        JSON.stringify([
+            [5, 7],
+            [9, 3],
+        ])
+    );
+    assert(JSON.stringify(znajdzWszystkieParySumujaceDo([2, 5, 9, 4, 7], 20)) === JSON.stringify([]));
+}
+
+testZnajdzWszystkieParySumujaceDo();

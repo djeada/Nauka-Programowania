@@ -1,60 +1,55 @@
-   czyPierwsza = function(n) {
-       if (n % 2 === 0 && n !== 2) {
-           return false;
-       }
-       for (var i = 3; i <= Math.sqrt(n); i += 2) {
-           {
-               if ((n % i) === 0) {
-                   return false;
-               }
-           };
-       }
-       return true;
-   };
-   liczbyPierwszeV1 = function(n) {
-       for (var i = 2; i <= n; i++) {
-           {
-               if (czyPierwsza(i)) {
-                   console.info(i);
-               }
-           };
-       }
-   };
-   sitoEratostenesa = function(pierwsze, liczba) {
-       for (var p = 2; p <= liczba; p++) {
-           {
-               if (pierwsze[p] === -1) {
-                   continue;
-               }
-               var n = 2;
-               for (var i = p * n; i <= liczba; n++, i = p * n) {
-                   {
-                       pierwsze[i] = -1;
-                   };
-               }
-           };
-       }
-   };
-   liczbyPierwszeV2 = function(liczba) {
-       var pierwsze = (function(s) {
-           var a = [];
-           while (s-- > 0)
-               a.push(0);
-           return a;
-       })(liczba + 1);
-       sitoEratostenesa(pierwsze, liczba);
-       for (var i = 2; i <= liczba; i++) {
-           {
-               if (pierwsze[i] === 0) {
-                   console.info(i);
-               }
-           };
-       }
-   };
-   main = function(args) {
-       var a = 15;
-       liczbyPierwszeV1(a);
-       liczbyPierwszeV2(a);
-   };
+/*
 
-   main(null);
+Tytuł: Trójkąt Pascala.
+
+Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze trójkąt Pascala o wysokości równej tej liczbie.
+
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Komunikat.
+
+Przykład:
+
+Dla otrzymanej liczby 3 powinno zostać wypisane:
+
+  1
+  11
+  121
+
+*/
+
+// Funkcja wypisująca trójkąt Pascala o wysokości równej liczbie
+function rysujTrojkatPascala(wysokosc) {
+    var trojkat = [];
+
+    for (var i = 0; i < wysokosc; i++) {
+        trojkat[i] = new Array(i + 1);
+
+        for (var j = 0; j <= i; j++) {
+            if (j == 0 || j == i) {
+                trojkat[i][j] = 1;
+            } else {
+                trojkat[i][j] = trojkat[i - 1][j - 1] + trojkat[i - 1][j];
+            }
+        }
+    }
+
+    for (var i = 0; i < wysokosc; i++) {
+        var wiersz = "";
+        for (var j = 0; j <= i; j++) {
+            wiersz += trojkat[i][j] + " ";
+        }
+        console.log(wiersz);
+    }
+}
+
+
+// Testy
+console.log('Rysuj trójkąt Pascala o wysokości 2');
+rysujTrojkatPascala(2);
+
+console.log('\nRysuj trójkąt Pascala o wysokości 3');
+rysujTrojkatPascala(3);
+
+console.log('\nRysuj trójkąt Pascala o wysokości 4');
+rysujTrojkatPascala(4);

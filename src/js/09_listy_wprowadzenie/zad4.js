@@ -1,57 +1,53 @@
-   znajdzMaksV1 = function(tablica) {
-       var maks = tablica[0];
-       for (var i = 0; i < tablica.length; i++) {
-           var elem = tablica[i];
-           if (elem > maks)
-               maks = elem;
-       }
-       return maks;
-   };
-   znajdzMaksV2 = function(tablica) {
-       var maks = tablica[0];
-       for (var i = 0; i < tablica.length; i++) {
-           var elem = tablica[i];
-           maks = Math.max(maks, elem);
-       }
-       return maks;
-   };
-   test1 = function() {
-       var tablica = [3, 5, -7, 4, 9, -11, 2];
-       var oczekiwane = 9;
-       var wynik = znajdzMaksV1(tablica);
-       if (!(oczekiwane === wynik)) {
-           throw new Error(`Assertion error line 26: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   test2 = function() {
-       var tablica = [3, -2, 4, 29, -3, -40, 8, 5, -7, -1];
-       var oczekiwane = 29;
-       var wynik = znajdzMaksV1(tablica);
-       if (!(oczekiwane === wynik)) {
-           throw new Error(`Assertion error line 35: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   test3 = function() {
-       var tablica = [3, 5, -7, 4, 9, -11, 2];
-       var oczekiwane = 9;
-       var wynik = znajdzMaksV2(tablica);
-       if (!(oczekiwane === wynik)) {
-           throw new Error(`Assertion error line 43: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   test4 = function() {
-       var tablica = [3, -2, 4, 29, -3, -40, 8, 5, -7, -1];
-       var oczekiwane = 29;
-       var wynik = znajdzMaksV2(tablica);
-       if (!(oczekiwane === wynik)) {
-           throw new Error(`Assertion error line 51: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   main = function(args) {
-       test1();
-       test2();
-       test3();
-       test4();
-   };
+/*
+Tytuł: Minimum oraz maksimum.
 
-   main(null);
+Treść: Otrzymujesz listę liczb całkowitych. Znajdź największy i najmniejszy element tej listy i zwróć je jako dwie osobne liczby całkowite.
+
+Dane wejściowe: Lista liczb całkowitych.
+
+Dane wyjściowe: Dwie liczby całkowite oznaczające największy i najmniejszy element z listy.
+
+Przykład:
+
+Dla otrzymanej listy [4, -7, 8, 5, 6, -9, 10, 2, -8] powinny zostać zwrócone liczby 10 oraz -9.
+*/
+
+// Funkcja zwracająca największy i najmniejszy element listy
+function znajdzMinMax(lista) {
+    var min = lista[0];
+    var max = lista[0];
+
+    for (var i = 1; i < lista.length; i++) {
+        if (lista[i] < min) {
+            min = lista[i];
+        }
+        if (lista[i] > max) {
+            max = lista[i];
+        }
+    }
+
+    return [min, max];
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testujZnajdzMinMax() {
+    var test1 = [4, -7, 8, 5, 6, -9, 10, 2, -8];
+    var wynik1 = [-9, 10];
+    assert(JSON.stringify(znajdzMinMax(test1)) === JSON.stringify(wynik1));
+
+    var test2 = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+    var wynik2 = [1, 1];
+    assert(JSON.stringify(znajdzMinMax(test2)) === JSON.stringify(wynik2));
+
+    var test3 = [10, -10, 100, -100, 1000, -1000];
+    var wynik3 = [-1000, 1000];
+    assert(JSON.stringify(znajdzMinMax(test3)) === JSON.stringify(wynik3));
+}
+
+testujZnajdzMinMax();

@@ -1,13 +1,25 @@
-   main = function(args) {
-       var n = require('readline-sync').question('podaj liczbe:');
-       var suma = 0;
-       for (var i = 1; i < n; i++) {
-           {
-               suma += i;
-           };
-       }
-       console.info(suma);
-       console.info("\n");
-   };
+/*
+Tytuł: Suma liczb mniejszych od podanej.
 
-   main(null);
+Treść: Dla otrzymanej liczby naturalnej wypisz sumę wszystkich liczb naturalnych mniejszych od niej.
+
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Liczba.
+
+Przykład:
+
+Dla otrzymanej liczby 5, powinna zostać wypisana liczba 10.
+*/
+
+// Pobieranie danych od użytkownika
+const liczba = parseInt(prompt("Podaj liczbę:"));
+
+// Pętla
+let suma = 0;
+for (let i = liczba - 1; i > 0; i--) {
+    suma += i;
+}
+
+// Wypisanie wyniku
+console.log(suma);

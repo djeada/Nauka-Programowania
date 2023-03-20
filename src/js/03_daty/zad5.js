@@ -1,45 +1,30 @@
-   main = function(args) {
-       var numer = require('readline-sync').question('Podaj numer miesiaca:');
-       switch ((numer)) {
-           case 1:
-               console.info("Styczen ma 31 dni");
-               break;
-           case 2:
-               console.info("Luty ma 28 lub 29 dni");
-               break;
-           case 3:
-               console.info("Marzec ma 31 dni");
-               break;
-           case 4:
-               console.info("Kwiecien ma 30 dni");
-               break;
-           case 5:
-               console.info("Maj ma 31 dni");
-               break;
-           case 6:
-               console.info("Czerwiec ma 30 dni");
-               break;
-           case 7:
-               console.info("Lipiec ma 31 dni");
-               break;
-           case 8:
-               console.info("Sierpien ma 31 dni");
-               break;
-           case 9:
-               console.info("Wrzesien ma 30 dni");
-               break;
-           case 10:
-               console.info("Pazdziernik ma 31 dni");
-               break;
-           case 11:
-               console.info("Listopad ma 30 dni");
-               break;
-           case 12:
-               console.info("Grudzien ma 31 dni");
-               break;
-           default:
-               console.info("Podano niepoprawny numer miesiaca");
-       }
-   };
+/*
+Tytuł: Ile dni ma miesiąc?
 
-   main(null);
+Treść: Napisz program, który dla pobranej liczby naturalnej będzie wypisywał liczbę dni w miesiącu odpowiadającemu tej liczbie. Jeśli pobrana liczba nie jest poprawnym numerem miesiąca, program powinien poinformować o tym użytkownika.
+
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+
+Dla pobranej liczby 1, program powinien zwrócić liczbę 31.
+*/
+
+// Pobieranie danych od użytkownika
+const miesiac = parseInt(prompt("Podaj miesiąc:"));
+
+// Sprawdzenie, czy liczba jest poprawna
+if (miesiac > 0 && miesiac < 13) {
+    // Sprawdzenie, który miesiąc odpowiada liczbie
+    if (miesiac === 1 || miesiac === 3 || miesiac === 5 || miesiac === 7 || miesiac === 8 || miesiac === 10 || miesiac === 12) {
+        console.log("Miesiąc ma 31 dni");
+    } else if (miesiac === 4 || miesiac === 6 || miesiac === 9 || miesiac === 11) {
+        console.log("Miesiąc ma 30 dni");
+    } else {
+        console.log("Miesiąc ma 28 dni");
+    }
+} else {
+    console.log("Liczba jest niepoprawna");
+}

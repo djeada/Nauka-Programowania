@@ -1,36 +1,59 @@
-   czyWieksza = function(a, b) {
-       return a > b;
-   };
-   czySumaMniejsza = function(a, b) {
-       var suma = a + b;
-       return suma < 10;
-   };
-   czyObieNieparzyste = function(a, b) {
-       return a % 2 === 1 && b % 2 === 1;
-   };
-   wieksza = function(a, b) {
-       return a > b ? a : b;
-   };
-   czyWiekszaNizKwad = function(a, b) {
-       return wieksza(a, b) < Math.pow(a, 2);
-   };
-   main = function(args) {
-       console.info("Podaj dwie liczby: ");
-       var rl = require('readline-sync');
-       var a = rl.question('');
-       var b = rl.question('');
-       console.info("Pierwsza liczba jest wieksza od drugiej: ");
-       console.info(czyWieksza(a, b));
-       console.info("\n");
-       console.info("Suma liczb jest mniejsza od 10: ");
-       console.info(czySumaMniejsza(a, b));
-       console.info("\n");
-       console.info("Obie liczby nieparzyste: ");
-       console.info(czyObieNieparzyste(a, b));
-       console.info("\n");
-       console.info("Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu ");
-       console.info(czyWiekszaNizKwad(a, b));
-       console.info("\n");
-   };
+/*
+Tytuł:  Sprawdź warunek
 
-   main(null);
+Napisz funkcję, która sprawdzi następujące warunki dla otrzymanych dwóch liczb:
+
+a) Czy pierwsza liczba jest większa od drugiej liczby?
+
+b) Czy suma liczb jest mniejsza niż 10?
+
+c) Czy obie liczby są nieparzyste?
+
+d) Czy większa liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu?
+
+Dane wejściowe: dwie liczby naturalne
+
+Dane wyjściowe: cztery wartości logiczne, odpowiadające na każde z pytań
+
+Przykład:
+
+Dla pobranych liczb 3 i 2, funkcja powinna zwrócić następujące wartości logiczne:
+
+a) Prawda
+
+b) Prawda
+
+c) Fałsz
+
+d) Prawda
+*/
+
+// Funkcja sprawdzająca czy pierwsza liczba jest większa od drugiej
+function czyPierwszaWiekszaOdDrugiej(liczba_a, liczba_b) {
+    return liczba_a > liczba_b;
+}
+
+// Funkcja sprawdzająca czy suma liczb jest mniejsza niż 10
+function czySumaMniejszaOd10(liczba_a, liczba_b) {
+    return liczba_a + liczba_b < 10;
+}
+
+// Funkcja sprawdzająca czy obie liczby są nieparzyste
+function czyObieNieparzyste(liczba_a, liczba_b) {
+    return liczba_a % 2 !== 0 && liczba_b % 2 !== 0;
+}
+
+// Funkcja sprawdzająca czy większa liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu
+function czyWiekszaMniejszaOdPierwszejDoKwadratu(liczba_a, liczba_b) {
+    return Math.max(liczba_a, liczba_b) < Math.pow(liczba_a, 2);
+}
+
+// Pobieranie danych od użytkownika
+var liczba_a = parseInt(prompt('Podaj pierwszą liczbę:'));
+var liczba_b = parseInt(prompt('Podaj drugą liczbę:'));
+
+// Wyświetlanie wyników
+console.log('Czy pierwsza liczba jest większa od drugiej liczby? ' + czyPierwszaWiekszaOdDrugiej(liczba_a, liczba_b));
+console.log('Czy suma liczb jest mniejsza niż 10? ' + czySumaMniejszaOd10(liczba_a, liczba_b));
+console.log('Czy obie liczby są nieparzyste? ' + czyObieNieparzyste(liczba_a, liczba_b));
+console.log('Czy większa liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu? ' + czyWiekszaMniejszaOdPierwszejDoKwadratu(liczba_a, liczba_b));

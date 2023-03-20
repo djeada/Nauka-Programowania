@@ -1,30 +1,47 @@
-   czescWspolnaV1 = function(listaA, listaB) {
-       var wynik = ([]);
-       for (var i = 0; i < listaA.length; i++) {
-           var liczba = listaA[i]; {
-               if ((listaB.indexOf((liczba)) >= 0)) {
-                   (wynik.push(liczba) > 0);
-               }
-           }
-       }
-       return (wynik.slice(0));
-   };
-   test1 = function() {
-       var listaA = [3, 6, 2, 7, 9]
-       var listaB = [4, 2, 3, 5, 6]
-       var oczekiwane = [3, 6, 2]
-       var wynik = czescWspolnaV1(listaA, listaB);
-       if (wynik.length !== oczekiwane.length) {
-           throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
-       }
-       for (var i = 0; i < wynik.length; i++) {
-           if (wynik[i] !== oczekiwane[i]) {
-               throw new Error(`Assertion error line 33: ${wynik[i]} != ${oczekiwane[i]}`);
-           }
-       }
-   };
-   main = function(args) {
-       test1();
-   };
+/*
 
-   main(null);
+Tytuł: Znalezienie elementów wspólnych dwóch list.
+
+Treść: Otrzymujesz dwie listy liczb całkowitych. Znajdź elementy występujące zarówno w pierwszej, jak i w drugiej liście.
+
+Dane wejściowe: Dwie listy liczb całkowitych.
+
+Dane wyjściowe: Lista liczb całkowitych.
+
+Przykład:
+
+Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] zostanie zwrócona lista: [2, 4].
+
+*/
+
+// Funkcja zwracająca listę elementów występujących zarówno w pierwszej, jak i w drugiej liście
+function znajdzElementyWspolne(lista1, lista2) {
+    let wynik = [];
+    let maxLength = Math.max(lista1.length, lista2.length);
+
+    for (let i = 0; i < maxLength; i++) {
+        let element1 = lista1[i] || 0;
+        let element2 = lista2[i] || 0;
+        if (element1 === element2) {
+            wynik.push(element1);
+        }
+    }
+
+    return wynik;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}
+
+function testZnajdzElementyWspolne() {
+    assert(znajdzElementyWspolne([9, 2, 5, 4], [4, 2, 1]).toString() === [2, 4].toString());
+    assert(znajdzElementyWspolne([9, 2, 5, 4], [4, 2, 1, 9]).toString() === [2, 4, 9].toString());
+    assert(znajdzElementyWspolne([9, 2, 5, 4], [4, 2, 1, 9, 5]).toString() === [2, 4, 5, 9].toString());
+    assert(znajdzElementyWspolne([9, 2, 5, 4], [4, 2, 1, 9, 5, 2]).toString() === [2, 4, 5, 9].toString());
+}
+
+testZnajdzElementyWspolne();

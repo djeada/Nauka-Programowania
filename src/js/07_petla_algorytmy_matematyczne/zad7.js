@@ -1,31 +1,30 @@
-   nwd = function(a, b) {
-       var c;
-       while ((b !== a % b)) {
-           {
-               c = b;
-               b = a % b;
-               a = c;
-               if (b === 0) {
-                   break;
-               }
-           }
-       };
-       return a;
-   };
-   nww = function(a, b) {
-       return (a * b / nwd(a, b) | 0);
-   };
-   test1 = function() {
-       var a = 14;
-       var b = 21;
-       var oczekiwane = 42;
-       var wynik = nww(a, b);
-       if (!(oczekiwane === wynik)) {
-           throw new Error(`Assertion error line 29: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-       }
-   };
-   main = function(args) {
-       test1();
-   };
+/*
 
-   main(null);
+Tytuł: Pierwiastek metodą Newtona
+
+Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej zwróci jej pierwiastek.
+
+Dane wejściowe: liczba naturalna
+
+Dane wyjściowe: liczba naturalna
+
+Przykład:
+
+Dla otrzymanej liczby 16, funkcja powinna zwrócić liczbę 4.
+*/
+
+// Funkcja zwracająca pierwiastek z liczby
+function pierwiastekLiczby(liczba) {
+    var pierwiastek = liczba;
+    while (pierwiastek * pierwiastek > liczba) {
+        pierwiastek = (pierwiastek + liczba / pierwiastek) / 2;
+    }
+    return pierwiastek;
+}
+
+// Testy
+function assert(condition, message) {
+    if (!condition) {
+        throw new Error(message || "Assertion failed");
+    }
+}

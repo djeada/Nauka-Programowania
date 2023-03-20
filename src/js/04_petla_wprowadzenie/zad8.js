@@ -1,17 +1,25 @@
-   main = function(args) {
-       console.info("Podaj dwie liczby: ");
-       var rl = require('readline-sync');
-       var glowy = rl.question('');
-       var nogi = rl.question('');
-       for (var i = 0; i < glowy; i++) {
-           {
-               var owce = glowy - i;
-               if (2 * i + 4 * owce === nogi) {
-                   console.info(i + " " + owce + "\n");
-                   break;
-               }
-           };
-       }
-   };
+/*
+Tytuł: Liczba kur i owiec na farmie.
 
-   main(null);
+Treść: Na farmie jest a głów i b nóg. Znajdź liczbę kur i liczbę owiec.
+
+Dane wejściowe: Dwie liczby naturalne.
+
+Dane wyjściowe: Dwie liczby naturalne.
+
+Przykład:
+
+Dla otrzymanych liczb 40 i 100, powinny zostać wypisane liczby 30 i 10.
+*/
+
+// Pobieranie danych od użytkownika
+const a = parseInt(prompt("Podaj liczbę głów:"));
+const b = parseInt(prompt("Podaj liczbę nóg:"));
+
+// Pętla
+for (let i = 0; i <= a; i++) {
+    if (i * 2 + (a - i) * 4 === b) {
+        console.log(i);
+        console.log(a - i);
+    }
+}
