@@ -146,9 +146,9 @@ Przykład:
 
 Dla otrzymanej liczby 3 powinno zostać wypisane:
 
-    *
-    **
-    ***
+      1
+      11
+      121
 
 ### Zad 9. (★★☆)
 
