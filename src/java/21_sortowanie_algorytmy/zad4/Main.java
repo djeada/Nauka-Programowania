@@ -2,14 +2,14 @@ import java.util.*;
 
 public class Main {
 
-  public static ArrayList < Integer > sortuj(ArrayList < Integer > lista) {
+  public static ArrayList<Integer> sortuj(ArrayList<Integer> lista) {
     if (lista.size() <= 1) {
       return lista;
     }
-    ArrayList < Integer > posortowana = new ArrayList < Integer > ();
+    ArrayList<Integer> posortowana = new ArrayList<Integer>();
 
-    ArrayList < Integer > lewaLista = new ArrayList < Integer > ();
-    ArrayList < Integer > prawaLista = new ArrayList < Integer > ();
+    ArrayList<Integer> lewaLista = new ArrayList<Integer>();
+    ArrayList<Integer> prawaLista = new ArrayList<Integer>();
     int middle = lista.size() / 2;
 
     for (int i = 0; i < lista.size(); i++) {
@@ -26,8 +26,9 @@ public class Main {
     return posortowana;
   }
 
-  public static ArrayList < Integer > polacz(ArrayList < Integer > lewaLista, ArrayList < Integer > prawaLista) {
-    ArrayList < Integer > polaczonaLista = new ArrayList < Integer > ();
+  public static ArrayList<Integer> polacz(
+      ArrayList<Integer> lewaLista, ArrayList<Integer> prawaLista) {
+    ArrayList<Integer> polaczonaLista = new ArrayList<Integer>();
     while (lewaLista.size() > 0 || prawaLista.size() > 0) {
       if (lewaLista.size() > 0 && prawaLista.size() > 0) {
         if (lewaLista.get(0) < prawaLista.get(0)) {
@@ -49,8 +50,8 @@ public class Main {
   }
 
   public static void test1() {
-    ArrayList < Integer > lista = new ArrayList < Integer > (Arrays.asList(4, 2, 5, 3, 1));
-    ArrayList < Integer > wynik = new ArrayList < Integer > (Arrays.asList(1, 2, 3, 4, 5));
+    ArrayList<Integer> lista = new ArrayList<Integer>(Arrays.asList(4, 2, 5, 3, 1));
+    ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
 
     lista = sortuj(lista);
     assert lista == wynik;
@@ -59,7 +60,5 @@ public class Main {
   public static void main(String[] args) {
 
     test1();
-
   }
-
 }

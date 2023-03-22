@@ -35,7 +35,12 @@ public class Main {
     protected int numerAlbumu;
     protected String kierunekStudiow = "";
 
-    public Student(String imie, String nazwisko, String miejsceUrodzenia, int numerAlbumu, String kierunekStudiow) {
+    public Student(
+        String imie,
+        String nazwisko,
+        String miejsceUrodzenia,
+        int numerAlbumu,
+        String kierunekStudiow) {
       super(imie, nazwisko, miejsceUrodzenia, "Student");
       this.numerAlbumu = numerAlbumu;
       this.kierunekStudiow = kierunekStudiow;
@@ -55,7 +60,13 @@ public class Main {
     private double sredniaLaboratoria;
     private double sredniaWyklady;
 
-    public StudentFizyki(String imie, String nazwisko, String miejsceUrodzenia, int numerAlbumu, double sredniaLaboratoria, double sredniaWyklady) {
+    public StudentFizyki(
+        String imie,
+        String nazwisko,
+        String miejsceUrodzenia,
+        int numerAlbumu,
+        double sredniaLaboratoria,
+        double sredniaWyklady) {
       super(imie, nazwisko, miejsceUrodzenia, numerAlbumu, "Fizyka");
       this.sredniaLaboratoria = sredniaLaboratoria;
       this.sredniaWyklady = sredniaWyklady;
@@ -112,7 +123,9 @@ public class Main {
     final double sredniaLaboratoria = 3.82;
     final double sredniaWyklady = 4.56;
 
-    StudentFizyki student = new StudentFizyki(imie, nazwisko, miejsceUrodzenia, numerAlbumu, sredniaLaboratoria, sredniaWyklady);
+    StudentFizyki student =
+        new StudentFizyki(
+            imie, nazwisko, miejsceUrodzenia, numerAlbumu, sredniaLaboratoria, sredniaWyklady);
 
     assert imie.equals(student.getImie());
     assert nazwisko.equals(student.getNazwisko());
@@ -129,6 +142,5 @@ public class Main {
     test1();
     test2();
     test3();
-
   }
 }

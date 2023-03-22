@@ -1,5 +1,5 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Klasa implements Closeable {
   private static int licznik = 0;
@@ -24,7 +24,7 @@ public class Klasa implements Closeable {
 
   public static void test1() {
     int n = 5;
-    ArrayList < Klasa > lista = new ArrayList < Klasa > (n);
+    ArrayList<Klasa> lista = new ArrayList<Klasa>(n);
     assert Klasa.liczbaInstancji() == n;
   }
 
@@ -36,7 +36,5 @@ public class Klasa implements Closeable {
 
     test1();
     test2();
-
   }
-
 }

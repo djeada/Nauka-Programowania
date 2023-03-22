@@ -26,21 +26,21 @@ public class Main {
     String slowo = "98432934021742343230";
     String wynik = "432";
 
-    assert(najdluzszePowtorzenie(slowo).equals(wynik));
+    assert (najdluzszePowtorzenie(slowo).equals(wynik));
   }
 
   public static void test2() {
     String slowo = "abcdef";
     String wynik;
 
-    assert(najdluzszePowtorzenie(slowo).equals(wynik));
+    assert (najdluzszePowtorzenie(slowo).equals(wynik));
   }
 
   public static void test3() {
     String slowo = "Arnold i Arnold";
     String wynik = "Arnold";
 
-    assert(najdluzszePowtorzenie(slowo).equals(wynik));
+    assert (najdluzszePowtorzenie(slowo).equals(wynik));
   }
 
   public static void main(String[] args) {
@@ -49,5 +49,4 @@ public class Main {
     test2();
     test3();
   }
-
 }

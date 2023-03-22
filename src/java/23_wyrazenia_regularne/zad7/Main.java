@@ -1,13 +1,13 @@
 import java.util.*;
 
 /*
-Otrzymujesz napis. Podziel go wzgledem znakow interpunkcyjnych i 
-zapisz w liscie. Usun spacje wystepujace na poczatku lub koncu 
+Otrzymujesz napis. Podziel go wzgledem znakow interpunkcyjnych i
+zapisz w liscie. Usun spacje wystepujace na poczatku lub koncu
 otrzymanych napisow.
 */
 
 public class Main {
-  public static  ArrayList<String> podzielNapisV1(String napis) {
+  public static ArrayList<String> podzielNapisV1(String napis) {
     String[] tablica = napis.split("\\p{Punct}+");
     List<String> lista = new ArrayList<String>();
     for (String slowo : tablica) {
@@ -38,6 +38,5 @@ public class Main {
   public static void main(String[] args) {
 
     test1();
-
   }
 }

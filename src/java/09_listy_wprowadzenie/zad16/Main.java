@@ -1,55 +1,56 @@
 import java.util.*;
+
 public class Main {
-	//Znajdz takie pary elementow w liscie, ktorych suma jest rowna liczbie.
-	//Element nie moze byc w parze sam ze soba.
+  // Znajdz takie pary elementow w liscie, ktorych suma jest rowna liczbie.
+  // Element nie moze byc w parze sam ze soba.
 
-	private static class Pair<T1, T2 > {
-		public T1 first;
-		public T2 second;
+  private static class Pair<T1, T2> {
+    public T1 first;
+    public T2 second;
 
-		public Pair(T1 firstValue, T2 secondValue) {
-			first = firstValue;
-			second = secondValue;
-		}
-		
-		@Override public boolean equals(Object o) {
-		    return (o instanceof Pair) && (this.first == ((Pair) o).first) && (this.second == ((Pair) o).second);
-		}
-	}
+    public Pair(T1 firstValue, T2 secondValue) {
+      first = firstValue;
+      second = secondValue;
+    }
 
-	public static ArrayList<Pair<Integer, Integer>> znajdzParyV1(ArrayList<Integer> lista, int suma) {
+    @Override
+    public boolean equals(Object o) {
+      return (o instanceof Pair)
+          && (this.first == ((Pair) o).first)
+          && (this.second == ((Pair) o).second);
+    }
+  }
 
-		ArrayList<Pair<Integer, Integer>> wynik = new ArrayList<Pair<Integer, Integer>> ();
+  public static ArrayList<Pair<Integer, Integer>> znajdzParyV1(ArrayList<Integer> lista, int suma) {
 
-		for (int i = 0; i<lista.size(); i++) {
-			for (int j = i + 1; j<lista.size(); j++) {
-				if (lista.get(i) + lista.get(j) == suma) {
-					Pair<Integer, Integer> para = new Pair<Integer, Integer> (lista.get(i), lista.get(j));
-					wynik.add(para);
-				}
-			}
-		}
-		
+    ArrayList<Pair<Integer, Integer>> wynik = new ArrayList<Pair<Integer, Integer>>();
 
-		return new ArrayList<Pair<Integer, Integer>> (wynik);
-	}
+    for (int i = 0; i < lista.size(); i++) {
+      for (int j = i + 1; j < lista.size(); j++) {
+        if (lista.get(i) + lista.get(j) == suma) {
+          Pair<Integer, Integer> para = new Pair<Integer, Integer>(lista.get(i), lista.get(j));
+          wynik.add(para);
+        }
+      }
+    }
 
-	public static void test1() {
-		ArrayList<Integer> lista = new ArrayList<Integer> (Arrays.asList(0, 4, 5, 6, 2, 9, 2, 3));
-		ArrayList<Pair<Integer, Integer>> wynik = new ArrayList<Pair<Integer, Integer>> ();
-		wynik.add(new Pair<Integer, Integer> (0, 5));
-		wynik.add(new Pair<Integer, Integer> (2, 3));
-		wynik.add(new Pair<Integer, Integer> (2, 3));
+    return new ArrayList<Pair<Integer, Integer>>(wynik);
+  }
 
-		int suma = 5;
+  public static void test1() {
+    ArrayList<Integer> lista = new ArrayList<Integer>(Arrays.asList(0, 4, 5, 6, 2, 9, 2, 3));
+    ArrayList<Pair<Integer, Integer>> wynik = new ArrayList<Pair<Integer, Integer>>();
+    wynik.add(new Pair<Integer, Integer>(0, 5));
+    wynik.add(new Pair<Integer, Integer>(2, 3));
+    wynik.add(new Pair<Integer, Integer>(2, 3));
 
-		assert wynik.equals(znajdzParyV1(lista, suma));
-	}
+    int suma = 5;
 
-	public static void main(String[] args) {
+    assert wynik.equals(znajdzParyV1(lista, suma));
+  }
 
-		test1();
+  public static void main(String[] args) {
 
-	}
-
+    test1();
+  }
 }

@@ -11,22 +11,20 @@ zarobic jak najwiecej na sprzedazy.
 */
 
 public class Main {
-  
+
   public static int podzielSznurekV1(List<Integer> ceny, int n) {
     if (ceny.size() < n)
-      throw new IllegalArgumentException("Dlugosc sznurka do sprzedazy nie moze byc "
-                                         + "wieksza od liczby elementow listy ceny.");
+      throw new IllegalArgumentException(
+          "Dlugosc sznurka do sprzedazy nie moze byc " + "wieksza od liczby elementow listy ceny.");
 
-    if (n == 0)
-      return 0;
+    if (n == 0) return 0;
 
     int maks = 0;
 
     for (int i = 0; i < n; i++) {
       int cena = ceny.get(i) + podzielSznurekV1(ceny, n - i - 1);
 
-      if (cena > maks)
-        maks = cena;
+      if (cena > maks) maks = cena;
     }
 
     return maks;
@@ -34,8 +32,8 @@ public class Main {
 
   public static int podzielSznurekV2(List<Integer> ceny, int n) {
     if (ceny.size() < n)
-      throw new IllegalArgumentException("Dlugosc sznurka do sprzedazy nie moze byc "
-                                         + "wieksza od liczby elementow listy ceny.");
+      throw new IllegalArgumentException(
+          "Dlugosc sznurka do sprzedazy nie moze byc " + "wieksza od liczby elementow listy ceny.");
 
     List<Integer> pom = new ArrayList<>(n + 1);
 
@@ -52,8 +50,8 @@ public class Main {
     int n = 4;
     int wynik = 10;
 
-    assert(podzielSznurekV1(lista, n) == wynik);
-    assert(podzielSznurekV2(lista, n) == wynik);
+    assert (podzielSznurekV1(lista, n) == wynik);
+    assert (podzielSznurekV2(lista, n) == wynik);
   }
 
   public static void test2() {
@@ -63,9 +61,9 @@ public class Main {
     for (int funkcja : Arrays.asList(podzielSznurekV1, podzielSznurekV2)) {
       try {
         funkcja(lista, n);
-        assert(false);
+        assert (false);
       } catch (Exception e) {
-        assert(true);
+        assert (true);
       }
     }
   }
@@ -75,8 +73,8 @@ public class Main {
     int n = 1;
     int wynik = 5;
 
-    assert(podzielSznurekV1(lista, n) == wynik);
-    assert(podzielSznurekV2(lista, n) == wynik);
+    assert (podzielSznurekV1(lista, n) == wynik);
+    assert (podzielSznurekV2(lista, n) == wynik);
   }
 
   public static void main(String[] args) {
@@ -84,6 +82,5 @@ public class Main {
     test1();
     test2();
     test3();
-
   }
 }

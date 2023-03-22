@@ -14,7 +14,6 @@ public class Main {
     public void lec();
 
     public void laduj();
-
   }
 
   private static class Zwierz implements ZwierzInterfejs {
@@ -85,12 +84,10 @@ public class Main {
 
     public final void spij() {
       zwierz.spij();
-
     }
 
     public final void wydajDzwiek() {
       zwierz.wydajDzwiek();
-
     }
 
     public final void lec() {
@@ -100,7 +97,6 @@ public class Main {
     public final void laduj() {
       obiektLatajacy.laduj();
     }
-
   }
 
   public static void main(String[] args) {
@@ -111,6 +107,5 @@ public class Main {
     koliber.laduj();
     koliber.wydajDzwiek();
     koliber.spij();
-
   }
 }

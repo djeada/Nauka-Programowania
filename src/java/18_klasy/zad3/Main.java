@@ -29,8 +29,13 @@ public class Prostokat {
   }
 
   public final double poleCzesciWspolnej(Prostokat innyProstokat) {
-    double poleX = Math.max(0.00, Math.min(prawo, innyProstokat.getPrawo()) - Math.max(lewo, innyProstokat.getLewo()));
-    double poleY = Math.max(0.00, Math.min(gora, innyProstokat.getGora()) - Math.max(dol, innyProstokat.getDol()));
+    double poleX =
+        Math.max(
+            0.00,
+            Math.min(prawo, innyProstokat.getPrawo()) - Math.max(lewo, innyProstokat.getLewo()));
+    double poleY =
+        Math.max(
+            0.00, Math.min(gora, innyProstokat.getGora()) - Math.max(dol, innyProstokat.getDol()));
     return poleX * poleY;
   }
 
@@ -54,6 +59,5 @@ public class Prostokat {
 
     test1();
     test2();
-
   }
 }

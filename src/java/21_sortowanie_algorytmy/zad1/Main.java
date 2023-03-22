@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Main {
-  public static void sortuj(ArrayList < Integer > lista) {
+  public static void sortuj(ArrayList<Integer> lista) {
 
     for (int i = 0; i < lista.size(); i++) {
       for (int j = i + 1; j < lista.size(); j++) {
@@ -15,8 +15,8 @@ public class Main {
   }
 
   public static void test1() {
-    ArrayList < Integer > lista = new ArrayList < Integer > (Arrays.asList(4, 2, 5, 3, 1));
-    ArrayList < Integer > wynik = new ArrayList < Integer > (Arrays.asList(1, 2, 3, 4, 5));
+    ArrayList<Integer> lista = new ArrayList<Integer>(Arrays.asList(4, 2, 5, 3, 1));
+    ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
 
     sortuj(lista);
     assert lista == wynik;
@@ -25,6 +25,5 @@ public class Main {
   public static void main(String[] args) {
 
     test1();
-
   }
 }

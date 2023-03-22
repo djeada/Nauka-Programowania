@@ -19,12 +19,11 @@ public class Main {
     String slowoB = "pies";
     String wynik = "Ala ma piesa, pies ma Ale";
 
-    assert(podmienNapis(napis, slowoA, slowoB).equals(wynik));
+    assert (podmienNapis(napis, slowoA, slowoB).equals(wynik));
   }
 
   public static void main(String[] args) {
 
     test1();
-
   }
 }

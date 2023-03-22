@@ -33,6 +33,5 @@ public class Main {
 
     DzieckoB dzieckoB = new DzieckoB();
     dzieckoB.info();
-
   }
 }

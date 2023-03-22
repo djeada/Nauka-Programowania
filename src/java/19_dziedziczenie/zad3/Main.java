@@ -29,12 +29,11 @@ public class Main {
 
   public static void main(String[] args) {
 
-    ArrayList < Zwierz > zwierzaki = new ArrayList < Zwierz > (Arrays.asList(new Zwierz(), new Pies(), new Kot()));
+    ArrayList<Zwierz> zwierzaki =
+        new ArrayList<Zwierz>(Arrays.asList(new Zwierz(), new Pies(), new Kot()));
 
-    for (var zwierz: zwierzaki) {
+    for (var zwierz : zwierzaki) {
       zwierz.odglos();
     }
-
   }
-
 }

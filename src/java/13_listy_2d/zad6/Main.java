@@ -1,68 +1,81 @@
 import java.util.*;
 
 public class Main {
-	//Otrzymujesz liste par liczb. Liczby w parze reprezentuja poczatek i
-	//koniec przedzialu. Niektore przedzialy moga na siebie nachodzic. W takim
-	//przypadku polacz je ze soba i zwroc liste niepokrywajacych sie przedzialow.
-	private static class Pair<T1, T2 > {
-		public T1 first;
-		public T2 second;
+  // Otrzymujesz liste par liczb. Liczby w parze reprezentuja poczatek i
+  // koniec przedzialu. Niektore przedzialy moga na siebie nachodzic. W takim
+  // przypadku polacz je ze soba i zwroc liste niepokrywajacych sie przedzialow.
+  private static class Pair<T1, T2> {
+    public T1 first;
+    public T2 second;
 
-		public Pair(T1 firstValue, T2 secondValue) {
-			first = firstValue;
-			second = secondValue;
-		}
+    public Pair(T1 firstValue, T2 secondValue) {
+      first = firstValue;
+      second = secondValue;
+    }
 
-		@Override public boolean equals(Object o) {
-			return (o instanceof Pair) && (this.first == ((Pair) o).first) && (this.second == ((Pair) o).second);
-		}
-	}
-	public static ArrayList<Pair<Integer, Integer>> polaczPrzedzialyV1(ArrayList<Pair<Integer, Integer>> lista) {
+    @Override
+    public boolean equals(Object o) {
+      return (o instanceof Pair)
+          && (this.first == ((Pair) o).first)
+          && (this.second == ((Pair) o).second);
+    }
+  }
 
-		Collections.sort(lista, new Comparator<Pair<Integer, Integer>> () {
-			public int compare(Pair<Integer, Integer> p1, Pair<Integer, Integer> p2) {
-				return p1.second.compareTo(p2.first);
-			}
-		});
+  public static ArrayList<Pair<Integer, Integer>> polaczPrzedzialyV1(
+      ArrayList<Pair<Integer, Integer>> lista) {
 
-		int pocz = lista.get(0).first;
-		int koniec = lista.get(0).second;
-		lista.remove(0);
+    Collections.sort(
+        lista,
+        new Comparator<Pair<Integer, Integer>>() {
+          public int compare(Pair<Integer, Integer> p1, Pair<Integer, Integer> p2) {
+            return p1.second.compareTo(p2.first);
+          }
+        });
 
-		ArrayList<Pair<Integer, Integer>> wynik = new ArrayList<Pair<Integer, Integer>> ();
+    int pocz = lista.get(0).first;
+    int koniec = lista.get(0).second;
+    lista.remove(0);
 
-		for (var para: lista) {
+    ArrayList<Pair<Integer, Integer>> wynik = new ArrayList<Pair<Integer, Integer>>();
 
-			if (koniec >= para.first) {
-				if (koniec<para.second) {
-					koniec = para.second;
-				}
-			} else {
+    for (var para : lista) {
 
-				wynik.add(new Pair<Integer, Integer> (pocz, koniec));
-				pocz = para.first;
-				koniec = para.second;
-			}
-		}
+      if (koniec >= para.first) {
+        if (koniec < para.second) {
+          koniec = para.second;
+        }
+      } else {
 
-		wynik.add(new Pair<Integer, Integer> (pocz, koniec));
+        wynik.add(new Pair<Integer, Integer>(pocz, koniec));
+        pocz = para.first;
+        koniec = para.second;
+      }
+    }
 
-		return wynik;
-	}
+    wynik.add(new Pair<Integer, Integer>(pocz, koniec));
 
-	public static void test1() {
-		ArrayList<Pair<Integer, Integer>> lista = new ArrayList<Pair<Integer, Integer>> (Arrays.asList(
-			new Pair<Integer, Integer> (23, 67), new Pair<Integer, Integer> (23, 53), new Pair<Integer, Integer> (45, 88),
-			new Pair<Integer, Integer> (10, 22), new Pair<Integer, Integer> (11, 42), new Pair<Integer, Integer> (42, 45)));
+    return wynik;
+  }
 
-		ArrayList<Pair<Integer, Integer>> wynik = new ArrayList<Pair<Integer, Integer>> (Arrays.asList(
-			new Pair<Integer, Integer> (10, 22), new Pair<Integer, Integer> (23, 88)));
+  public static void test1() {
+    ArrayList<Pair<Integer, Integer>> lista =
+        new ArrayList<Pair<Integer, Integer>>(
+            Arrays.asList(
+                new Pair<Integer, Integer>(23, 67),
+                new Pair<Integer, Integer>(23, 53),
+                new Pair<Integer, Integer>(45, 88),
+                new Pair<Integer, Integer>(10, 22),
+                new Pair<Integer, Integer>(11, 42),
+                new Pair<Integer, Integer>(42, 45)));
 
-		assert wynik.equals(polaczPrzedzialyV1(lista));
-	}
+    ArrayList<Pair<Integer, Integer>> wynik =
+        new ArrayList<Pair<Integer, Integer>>(
+            Arrays.asList(new Pair<Integer, Integer>(10, 22), new Pair<Integer, Integer>(23, 88)));
 
-	public static void main(String[] args) {
-		test1();
-	}
+    assert wynik.equals(polaczPrzedzialyV1(lista));
+  }
 
+  public static void main(String[] args) {
+    test1();
+  }
 }

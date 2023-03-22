@@ -15,25 +15,16 @@ public class Main {
 
       int sr = (lewo + prawo) / 2;
 
-      if (klucz == lista.get(sr))
-        return sr;
+      if (klucz == lista.get(sr)) return sr;
 
       if (lista.get(sr) <= lista.get(prawo)) {
 
-        if (lista.get(sr) < klucz && klucz <= lista.get(prawo))
-          lewo = sr + 1;
+        if (lista.get(sr) < klucz && klucz <= lista.get(prawo)) lewo = sr + 1;
+        else prawo = sr - 1;
+      } else {
 
-        else
-          prawo = sr - 1;
-      }
-
-      else {
-
-        if (lista.get(lewo) <= klucz && klucz < lista.get(sr))
-          prawo = sr - 1;
-
-        else
-          lewo = sr + 1;
+        if (lista.get(lewo) <= klucz && klucz < lista.get(sr)) prawo = sr - 1;
+        else lewo = sr + 1;
       }
     }
 
@@ -60,6 +51,5 @@ public class Main {
 
     test1();
     test2();
-
   }
 }

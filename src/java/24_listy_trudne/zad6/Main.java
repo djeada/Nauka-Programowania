@@ -27,8 +27,7 @@ public class Main {
     ArrayList<Integer> wynik = new ArrayList<Integer>();
     PriorityQueue<Wezel> kolejka = new PriorityQueue<Wezel>();
 
-    for (int i = 0; i < lista.size(); i++)
-      kolejka.add(new Wezel(lista.get(i).get(0), i, 0));
+    for (int i = 0; i < lista.size(); i++) kolejka.add(new Wezel(lista.get(i).get(0), i, 0));
 
     while (!kolejka.isEmpty()) {
       Wezel min = kolejka.poll();
@@ -51,9 +50,11 @@ public class Main {
     lista.add(new ArrayList<Integer>(Arrays.asList(5, 19, 21, 37)));
     lista.add(new ArrayList<Integer>(Arrays.asList(-12, -7, -3, 28)));
 
-    ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71));
+    ArrayList<Integer> wynik =
+        new ArrayList<Integer>(
+            Arrays.asList(-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71));
 
-    assert(polaczListyV1(lista).equals(wynik));
+    assert (polaczListyV1(lista).equals(wynik));
   }
 
   public static void test2() {
@@ -63,14 +64,14 @@ public class Main {
 
     ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6));
 
-    assert(polaczListyV1(lista).equals(wynik));
+    assert (polaczListyV1(lista).equals(wynik));
   }
 
   public static void test3() {
     ArrayList<ArrayList<Integer>> lista = new ArrayList<ArrayList<Integer>>();
     ArrayList<Integer> wynik = new ArrayList<Integer>();
 
-    assert(polaczListyV1(lista).equals(wynik));
+    assert (polaczListyV1(lista).equals(wynik));
   }
 
   public static void main(String[] args) {
@@ -78,6 +79,5 @@ public class Main {
     test1();
     test2();
     test3();
-
   }
 }

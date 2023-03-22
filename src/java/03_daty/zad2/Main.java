@@ -1,54 +1,54 @@
 import java.util.*;
 
 public class Main {
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 
-		//Czy osoba jest pelnoletnia?
+    // Czy osoba jest pelnoletnia?
 
-		System.out.print("Podaj trzy liczby reprezentujace dzien, miesiac i rok urodzenia osoby:\n");
+    System.out.print("Podaj trzy liczby reprezentujace dzien, miesiac i rok urodzenia osoby:\n");
 
-		int dzien;
-		int miesiac;
-		int rok;
-		
-		Scanner s = new Scanner(System.in);
+    int dzien;
+    int miesiac;
+    int rok;
 
-		dzien = Integer.parseInt(s.nextLine());
-		miesiac = Integer.parseInt(s.nextLine());
-		rok = Integer.parseInt(s.nextLine());
+    Scanner s = new Scanner(System.in);
 
-		System.out.print("Podaj trzy liczby reprezentujace dzisiejsza date:\n");
+    dzien = Integer.parseInt(s.nextLine());
+    miesiac = Integer.parseInt(s.nextLine());
+    rok = Integer.parseInt(s.nextLine());
 
-		int dzienAktualny;
-		int miesiacAktualny;
-		int rokAktualny;
+    System.out.print("Podaj trzy liczby reprezentujace dzisiejsza date:\n");
 
-		dzienAktualny = Integer.parseInt(s.nextLine());
-		miesiacAktualny = Integer.parseInt(s.nextLine());
-		rokAktualny = Integer.parseInt(s.nextLine());
-		
-		int roznicaLata = rokAktualny - rok;
-		int roznicaMiesiace = miesiacAktualny - miesiac;
-		int roznicaDni = dzienAktualny - dzien;
+    int dzienAktualny;
+    int miesiacAktualny;
+    int rokAktualny;
 
-		if (roznicaLata > 18) {
-			System.out.print("osoba jest pelnoletnia\n");
-		} else if (roznicaLata == 18) {
+    dzienAktualny = Integer.parseInt(s.nextLine());
+    miesiacAktualny = Integer.parseInt(s.nextLine());
+    rokAktualny = Integer.parseInt(s.nextLine());
 
-			if (roznicaMiesiace > 0) {
-				System.out.print("osoba jest pelnoletnia\n");
-			} else if (roznicaMiesiace == 0) {
+    int roznicaLata = rokAktualny - rok;
+    int roznicaMiesiace = miesiacAktualny - miesiac;
+    int roznicaDni = dzienAktualny - dzien;
 
-				if (roznicaDni >= 0) {
-					System.out.print("osoba jest pelnoletnia\n");
-				} else {
-					System.out.print("osoba nie jest pelnoletnia\n");
-				}
-			} else {
-				System.out.print("osoba nie jest pelnoletnia\n");
-			}
-		} else {
-			System.out.print("osoba nie jest pelnoletnia\n");
-		}
-	}
+    if (roznicaLata > 18) {
+      System.out.print("osoba jest pelnoletnia\n");
+    } else if (roznicaLata == 18) {
+
+      if (roznicaMiesiace > 0) {
+        System.out.print("osoba jest pelnoletnia\n");
+      } else if (roznicaMiesiace == 0) {
+
+        if (roznicaDni >= 0) {
+          System.out.print("osoba jest pelnoletnia\n");
+        } else {
+          System.out.print("osoba nie jest pelnoletnia\n");
+        }
+      } else {
+        System.out.print("osoba nie jest pelnoletnia\n");
+      }
+    } else {
+      System.out.print("osoba nie jest pelnoletnia\n");
+    }
+  }
 }

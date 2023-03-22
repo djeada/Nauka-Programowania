@@ -4,6 +4,7 @@ public class Main {
 
   private static interface Ksztalt {
     double obwod();
+
     double pole();
   }
 
@@ -63,7 +64,5 @@ public class Main {
 
     test1();
     test2();
-
   }
-
 }

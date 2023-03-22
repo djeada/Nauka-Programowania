@@ -1,14 +1,14 @@
 import java.text.MessageFormat;
 
 public class Punkt {
-	
+
   private double x;
   private double y;
 
   public Punkt(double _x) {
     this(_x, 0);
   }
-  
+
   public Punkt() {
     this(0, 0);
   }
@@ -67,7 +67,5 @@ public class Punkt {
     System.out.print(" wynosi: ");
     System.out.print(punktA.odleglosc(punktB));
     System.out.print("\n");
-
   }
-
 }

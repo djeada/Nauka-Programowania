@@ -16,14 +16,13 @@ public class Main {
     final String napis = "bcda";
     final String oczekwiane = "abcd";
 
-    final String wynik = sortujSlowoV1(napis); 
+    final String wynik = sortujSlowoV1(napis);
 
-    assert wynik.equals(oczekwiane);   
+    assert wynik.equals(oczekwiane);
   }
 
   public static void main(String[] args) {
 
     test1();
-
   }
 }

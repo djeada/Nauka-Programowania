@@ -1,7 +1,7 @@
 import java.util.*;
 
 /*
-Otrzymujesz napis reprezentujacy zdanie. Zapisz w liscie cyfry 
+Otrzymujesz napis reprezentujacy zdanie. Zapisz w liscie cyfry
 bedace czescia slow. Cyfry odseparowane od liter spacjami pomin.
 */
 
@@ -30,6 +30,5 @@ public class Main {
   public static void main(String[] args) {
 
     test1();
-
   }
 }

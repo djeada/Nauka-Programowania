@@ -47,7 +47,7 @@ public class Main {
 
     int oczekiwane = 7;
     int wynik = indeksZera(lista);
-    assert(wynik == oczekiwane);
+    assert (wynik == oczekiwane);
   }
 
   public static void test2() {
@@ -62,7 +62,7 @@ public class Main {
 
     int oczekiwane = -1;
     int wynik = indeksZera(lista);
-    assert(wynik == oczekiwane);
+    assert (wynik == oczekiwane);
   }
 
   public static void test3() {
@@ -77,7 +77,7 @@ public class Main {
 
     int oczekiwane = 1;
     int wynik = indeksZera(lista);
-    assert(wynik == oczekiwane);
+    assert (wynik == oczekiwane);
   }
 
   public static void main(String[] args) {
@@ -85,6 +85,5 @@ public class Main {
     test1();
     test2();
     test3();
-
   }
 }

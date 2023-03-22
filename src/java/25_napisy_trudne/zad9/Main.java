@@ -29,7 +29,7 @@ public class Main {
     String napis2 = "xyzabcd";
     String wynik = "abcd";
 
-    assert(najdluzszyPodnapis(napis1, napis2).equals(wynik));
+    assert (najdluzszyPodnapis(napis1, napis2).equals(wynik));
   }
 
   public static void test2() {
@@ -37,7 +37,7 @@ public class Main {
     String napis2 = "hhaall";
     String wynik = "hhaall";
 
-    assert(najdluzszyPodnapis(napis1, napis2).equals(wynik));
+    assert (najdluzszyPodnapis(napis1, napis2).equals(wynik));
   }
 
   public static void test3() {
@@ -45,7 +45,7 @@ public class Main {
     String napis2;
     String wynik;
 
-    assert(najdluzszyPodnapis(napis1, napis2).equals(wynik));
+    assert (najdluzszyPodnapis(napis1, napis2).equals(wynik));
   }
 
   public static void main(String[] args) {

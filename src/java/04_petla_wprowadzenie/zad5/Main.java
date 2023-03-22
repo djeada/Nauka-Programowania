@@ -1,43 +1,43 @@
 import java.util.*;
 
 public class Main {
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 
-		//Dla pobranych dwoch liczb, powinny zostac wyswietlone:
+    // Dla pobranych dwoch liczb, powinny zostac wyswietlone:
 
-		System.out.print("Podaj dwie liczby: \n");
-		
-		int a;
-		int b;
-		
-		Scanner s = new Scanner(System.in);
+    System.out.print("Podaj dwie liczby: \n");
 
-		a = Integer.parseInt(s.nextLine());
-		b = Integer.parseInt(s.nextLine());
+    int a;
+    int b;
 
-		if (b<a) {
-			int pom = a;
-			a = b;
-			b = pom;
-		}
+    Scanner s = new Scanner(System.in);
 
-		//wszystkie liczby naturalne wieksze od mniejszej pobranej 
-		//liczby i jednoczesnie mniejsze od wiekszej pobranej liczby.  
-		for (int i = a + 1; i<b; i++) {
-			System.out.print(i);
-			System.out.print(" ");
-		}
+    a = Integer.parseInt(s.nextLine());
+    b = Integer.parseInt(s.nextLine());
 
-		System.out.print("\n");
+    if (b < a) {
+      int pom = a;
+      a = b;
+      b = pom;
+    }
 
-		//wszystkie liczby naturalne podzielne przez 3 
-		//wieksze od mniejszej pobranej liczby i jednoczesnie 
-		//mniejsze od wiekszej pobranej liczby.
-		for (int i = a + 1; i<b; i++) {
-			if (i % 3 == 0) {
-				System.out.print(i);
-				System.out.print(" ");
-			}
-		}
-	}
+    // wszystkie liczby naturalne wieksze od mniejszej pobranej
+    // liczby i jednoczesnie mniejsze od wiekszej pobranej liczby.
+    for (int i = a + 1; i < b; i++) {
+      System.out.print(i);
+      System.out.print(" ");
+    }
+
+    System.out.print("\n");
+
+    // wszystkie liczby naturalne podzielne przez 3
+    // wieksze od mniejszej pobranej liczby i jednoczesnie
+    // mniejsze od wiekszej pobranej liczby.
+    for (int i = a + 1; i < b; i++) {
+      if (i % 3 == 0) {
+        System.out.print(i);
+        System.out.print(" ");
+      }
+    }
+  }
 }

@@ -1,99 +1,94 @@
 /*
-Otrzymujesz napis. Sprawdz, czy napis sklada sie wylacznie z cyfr. 
+Otrzymujesz napis. Sprawdz, czy napis sklada sie wylacznie z cyfr.
 */
-
 
 public class Main {
 
-   public static boolean tylkoCyfryV1(String slowo) {
+  public static boolean tylkoCyfryV1(String slowo) {
 
- 	  for (char ch : slowo.toCharArray()) {
-            if (!Character.isDigit(ch))
-                return false;
-        }
-        
-        return true;
+    for (char ch : slowo.toCharArray()) {
+      if (!Character.isDigit(ch)) return false;
     }
 
-    public static boolean tylkoCyfryV2(String slowo) {
-        return slowo.matches("[0-9]+");
-    }
+    return true;
+  }
 
-    public static boolean tylkoCyfryV3(String slowo) {
+  public static boolean tylkoCyfryV2(String slowo) {
+    return slowo.matches("[0-9]+");
+  }
 
-        return !slowo.chars()
-                .anyMatch(n -> !Character.isDigit(n));
-    }
+  public static boolean tylkoCyfryV3(String slowo) {
 
-    public static void test1() {
+    return !slowo.chars().anyMatch(n -> !Character.isDigit(n));
+  }
 
-        final String napis = "12345";
-        final boolean oczekiwane = true;
+  public static void test1() {
 
-        final boolean wynik = tylkoCyfryV1(napis);
+    final String napis = "12345";
+    final boolean oczekiwane = true;
 
-        assert wynik == oczekiwane;
-    }
+    final boolean wynik = tylkoCyfryV1(napis);
 
-    public static void test2() {
+    assert wynik == oczekiwane;
+  }
 
-        final String napis = "12345a";
-        final boolean oczekiwane = false;
+  public static void test2() {
 
-        final boolean wynik = tylkoCyfryV1(napis);
+    final String napis = "12345a";
+    final boolean oczekiwane = false;
 
-        assert wynik == oczekiwane;
-    }
+    final boolean wynik = tylkoCyfryV1(napis);
 
-    public static void test3() {
+    assert wynik == oczekiwane;
+  }
 
-        final String napis = "12345";
-        final boolean oczekiwane = true;
+  public static void test3() {
 
-        final boolean wynik = tylkoCyfryV2(napis);
+    final String napis = "12345";
+    final boolean oczekiwane = true;
 
-        assert wynik == oczekiwane;
-    }
+    final boolean wynik = tylkoCyfryV2(napis);
 
-    public static void test4() {
+    assert wynik == oczekiwane;
+  }
 
-        final String napis = "12345a";
-        final boolean oczekiwane = false;
+  public static void test4() {
 
-        final boolean wynik = tylkoCyfryV2(napis);
+    final String napis = "12345a";
+    final boolean oczekiwane = false;
 
-        assert wynik == oczekiwane;
-    }
+    final boolean wynik = tylkoCyfryV2(napis);
 
-    public static void test5() {
+    assert wynik == oczekiwane;
+  }
 
-        final String napis = "12345";
-        final boolean oczekiwane = true;
+  public static void test5() {
 
-        final boolean wynik = tylkoCyfryV3(napis);
+    final String napis = "12345";
+    final boolean oczekiwane = true;
 
-        assert wynik == oczekiwane;
-    }
+    final boolean wynik = tylkoCyfryV3(napis);
 
-    public static void test6() {
+    assert wynik == oczekiwane;
+  }
 
-        final String napis = "12345a";
-        final boolean oczekiwane = false;
+  public static void test6() {
 
-        final boolean wynik = tylkoCyfryV3(napis);
+    final String napis = "12345a";
+    final boolean oczekiwane = false;
 
-        assert wynik == oczekiwane;
-    }
-    
-    public static void main(String[] args) {
-    	
-    	test1();
-    	test2();
-    	test3();
-    	test4();
-    	test5();
-    	test6();
+    final boolean wynik = tylkoCyfryV3(napis);
 
-    }
+    assert wynik == oczekiwane;
+  }
 
+  public static void main(String[] args) {
+
+    test1();
+    test2();
+    test3();
+    test4();
+    test5();
+    test6();
+  }
 }

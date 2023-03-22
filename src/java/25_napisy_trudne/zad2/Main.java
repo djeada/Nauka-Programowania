@@ -23,7 +23,7 @@ public class Main {
     String napis2 = "zy";
     String wynik = "Le je na wie";
 
-    assert(usunWystapienia(napis1, napis2).equals(wynik));
+    assert (usunWystapienia(napis1, napis2).equals(wynik));
   }
 
   public static void main(String[] args) {

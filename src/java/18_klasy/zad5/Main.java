@@ -62,7 +62,6 @@ public class Zespolona {
     } else {
       return MessageFormat.format("{0} - j{1}", Re, Math.abs(Im));
     }
-
   }
 
   public static void main(String[] args) {
@@ -94,6 +93,5 @@ public class Zespolona {
 
     System.out.print(z3.Modul());
     System.out.print("\n");
-
   }
 }

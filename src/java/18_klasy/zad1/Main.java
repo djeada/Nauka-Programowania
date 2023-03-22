@@ -1,7 +1,7 @@
 import java.text.MessageFormat;
 
 public class Kolo {
-	
+
   public Kolo() {
     this(1);
   }
@@ -39,8 +39,9 @@ public class Kolo {
   @Override
   public String toString() {
 
-    return MessageFormat.format("Promien = {0}.\nSrednica = {1}.\nPole = {2}.\nObwod = {3}.", this.promien, this.srednica(), this.pole(), this.obwod());
-
+    return MessageFormat.format(
+        "Promien = {0}.\nSrednica = {1}.\nPole = {2}.\nObwod = {3}.",
+        this.promien, this.srednica(), this.pole(), this.obwod());
   }
 
   private double promien;
@@ -49,6 +50,5 @@ public class Kolo {
 
     Kolo kolo = new Kolo(3);
     System.out.print(kolo);
-
   }
 }

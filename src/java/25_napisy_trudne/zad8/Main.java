@@ -27,21 +27,21 @@ public class Main {
     List<String> napisy = Arrays.asList("abcdefgh", "abcefgh", "abcd");
     String wynik = "abc";
 
-    assert(najdluzszyPrzedrostek(napisy).equals(wynik));
+    assert (najdluzszyPrzedrostek(napisy).equals(wynik));
   }
 
   public static void test2() {
     List<String> napisy = Arrays.asList("flower", "flow", "flight", "flix");
     String wynik = "fl";
 
-    assert(najdluzszyPrzedrostek(napisy).equals(wynik));
+    assert (najdluzszyPrzedrostek(napisy).equals(wynik));
   }
 
   public static void test3() {
     List<String> napisy = Arrays.asList("student", "studio", "stress", "lol");
     String wynik;
 
-    assert(najdluzszyPrzedrostek(napisy).equals(wynik));
+    assert (najdluzszyPrzedrostek(napisy).equals(wynik));
   }
 
   public static void main(String[] args) {
@@ -50,5 +50,4 @@ public class Main {
     test2();
     test3();
   }
-  
 }

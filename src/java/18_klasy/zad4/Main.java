@@ -113,6 +113,5 @@ public class Wektor {
     System.out.print(roznica);
     System.out.print("\niloczyn wektorowy: ");
     System.out.print(iloczynWek);
-
   }
 }

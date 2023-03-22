@@ -2,7 +2,7 @@ import java.util.*;
 
 /*
 Otrzymujesz napis reprezentujacy adres email. Sprawdz jego poprawnosc.
-Pamietaj, ze kazdy adres email sklada sie z identyfikatora uzytkownika, 
+Pamietaj, ze kazdy adres email sklada sie z identyfikatora uzytkownika,
 znaku @ oraz nazwy domenowej.
 Identyfikator uzytkownika sklada sie jedynie z:
 a) Malych (a-z) i wielkich (A-Z) liter.
@@ -27,8 +27,7 @@ public class Main {
   }
 
   public static boolean poprawnyEmail(String napis) {
-    if (napis.indexOf('@') != 1)
-      return false;
+    if (napis.indexOf('@') != 1) return false;
 
     napis = napis.replaceAll("\\.(?=\\.)", "x");
 
@@ -37,43 +36,52 @@ public class Main {
     String identyfikator = napis.substring(0, malpa);
     String nazwaDomenowa = napis.substring(++malpa, napis.length());
 
-    return poprawnyIdentyfikator(identyfikator) &&
-           poprawnaNazwaDomenowa(nazwaDomenowa);
+    return poprawnyIdentyfikator(identyfikator) && poprawnaNazwaDomenowa(nazwaDomenowa);
   }
 
   public static void test1() {
     String[] poprawneAdresy = {
-          "email@example.com",           "firstname.lastname@example.com",
-      "email@subdomain.example.com", "firstname+lastname@example.com",
-      "email@123.123.123.123",       "1234567890@example.com",
-      "email@example-one.com",       "_______@example.com",
-      "email@example.name",          "email@example.museum",
-      "email@example.co.jp",         "firstname-lastname@example.com"
+      "email@example.com",
+      "firstname.lastname@example.com",
+      "email@subdomain.example.com",
+      "firstname+lastname@example.com",
+      "email@123.123.123.123",
+      "1234567890@example.com",
+      "email@example-one.com",
+      "_______@example.com",
+      "email@example.name",
+      "email@example.museum",
+      "email@example.co.jp",
+      "firstname-lastname@example.com"
     };
 
-    for (String adresEmail : poprawneAdresy)
-      assert(poprawnyEmail(adresEmail));
-
+    for (String adresEmail : poprawneAdresy) assert (poprawnyEmail(adresEmail));
   }
 
   public static void test2() {
     String[] niepoprawneAdresy = {
-         "plainaddress",           "#@%^%#$@#$@#.com",
-      "@example.com",           "Joe Smith <email@example.com>",
-      "email.example.com",      "email@example@example.com",
-      ".email@example.com",     "email..email@example.com",
-      "あいうえお@example.com", "email@example.com (Joe Smith)",
-      "email@example",          "email@-example.com",
-      "email@example..com",     "Abc..123@example.com"};
+      "plainaddress",
+      "#@%^%#$@#$@#.com",
+      "@example.com",
+      "Joe Smith <email@example.com>",
+      "email.example.com",
+      "email@example@example.com",
+      ".email@example.com",
+      "email..email@example.com",
+      "あいうえお@example.com",
+      "email@example.com (Joe Smith)",
+      "email@example",
+      "email@-example.com",
+      "email@example..com",
+      "Abc..123@example.com"
+    };
 
-    for (String adresEmail : niepoprawneAdresy)
-      assert(!poprawnyEmail(adresEmail));
+    for (String adresEmail : niepoprawneAdresy) assert (!poprawnyEmail(adresEmail));
   }
 
   public static void main(String[] args) {
 
     test1();
     test2();
-
   }
 }

@@ -1,13 +1,13 @@
 import java.util.*;
 
 /*
-Otrzymujesz dwa napisy. Pierwszy napis reprezentuje tekst, a drugi zakazane slowo. 
-Jesli w danym wierszu tekstu wystepuje zakazane slowo, to usun czesc wiersza 
+Otrzymujesz dwa napisy. Pierwszy napis reprezentuje tekst, a drugi zakazane slowo.
+Jesli w danym wierszu tekstu wystepuje zakazane slowo, to usun czesc wiersza
 od wystapienia zakazanego slowa do konca. Zwroc zmodyfikowany tekst.
 */
 
 public class Main {
-  
+
   public static String wczyscTekstV1(String tekst, String napis) {
     String wynik = "";
     String wzorzec = napis + "(.*)";
@@ -38,7 +38,7 @@ public class Main {
             + "sufficient in be un\nThe furnished she concluded depending procuring "
             + "conce\n";
 
-    assert(wczyscTekstV1(tekst, napis) == wynik);
+    assert (wczyscTekstV1(tekst, napis) == wynik);
   }
 
   public static void main(String[] args) {
@@ -48,6 +48,5 @@ public class Main {
   public static void main(String[] args) {
 
     test1();
-
   }
 }

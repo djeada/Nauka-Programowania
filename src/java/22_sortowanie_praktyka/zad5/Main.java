@@ -1,7 +1,7 @@
 import java.util.*;
 
 /*
-Klasa Miasto sklada sie z dwoch pol: nazwa (napis) oraz liczba_mieszkancow (liczba naturalna). 
+Klasa Miasto sklada sie z dwoch pol: nazwa (napis) oraz liczba_mieszkancow (liczba naturalna).
 a) Posortuj liste obiektow klasy Miasto wzgledem pola nazwa.
 b) Posortuj liste obiektow klasy Miasto wzgledem pola liczba_mieszkancow.
 */
@@ -38,30 +38,40 @@ public class Main {
   }
 
   public static void sortujWzgledemNazwy(ArrayList<Miasto> lista) {
-    Collections.sort(lista, new Comparator<Miasto>() {
-      @Override
-      public int compare(final Miasto o1, final Miasto o2) {
-        return o1.nazwa.compareTo(o2.nazwa);
-      }
-    });
+    Collections.sort(
+        lista,
+        new Comparator<Miasto>() {
+          @Override
+          public int compare(final Miasto o1, final Miasto o2) {
+            return o1.nazwa.compareTo(o2.nazwa);
+          }
+        });
   }
 
   public static void sortujWzgledemLiczbyMieszkancow(ArrayList<Miasto> lista) {
-    Collections.sort(lista, new Comparator<Miasto>() {
-      @Override
-      public int compare(final Miasto o1, final Miasto o2) {
-        return o1.liczba_mieszkancow - o2.liczba_mieszkancow;
-      }
-    });
+    Collections.sort(
+        lista,
+        new Comparator<Miasto>() {
+          @Override
+          public int compare(final Miasto o1, final Miasto o2) {
+            return o1.liczba_mieszkancow - o2.liczba_mieszkancow;
+          }
+        });
   }
 
   public static void test1() {
-    ArrayList<Miasto> miasta = new ArrayList<Miasto>(Arrays.asList(new Miasto("New York", 8400000),
-                                                                    new Miasto("Paris", 2150000),
-                                                                    new Miasto("Berlin", 3800000)));
-    ArrayList<Miasto> oczekiwane = new ArrayList<Miasto>(Arrays.asList(new Miasto("Berlin", 3800000),
-                                                                   new Miasto("New York", 8400000),
-                                                                   new Miasto("Paris", 2150000)));
+    ArrayList<Miasto> miasta =
+        new ArrayList<Miasto>(
+            Arrays.asList(
+                new Miasto("New York", 8400000),
+                new Miasto("Paris", 2150000),
+                new Miasto("Berlin", 3800000)));
+    ArrayList<Miasto> oczekiwane =
+        new ArrayList<Miasto>(
+            Arrays.asList(
+                new Miasto("Berlin", 3800000),
+                new Miasto("New York", 8400000),
+                new Miasto("Paris", 2150000)));
 
     sortujWzgledemNazwy(miasta);
 
@@ -69,13 +79,19 @@ public class Main {
   }
 
   public static void test2() {
-    ArrayList<Miasto> miasta = new ArrayList<Miasto>(Arrays.asList(new Miasto("New York", 8400000),
-                                                                    new Miasto("Paris", 2150000),
-                                                                    new Miasto("Berlin", 3800000)));
+    ArrayList<Miasto> miasta =
+        new ArrayList<Miasto>(
+            Arrays.asList(
+                new Miasto("New York", 8400000),
+                new Miasto("Paris", 2150000),
+                new Miasto("Berlin", 3800000)));
 
-    ArrayList<Miasto> oczekiwane = new ArrayList<Miasto>(Arrays.asList(new Miasto("Paris", 2150000),
-                                                                   new Miasto("Berlin", 3800000),
-                                                                   new Miasto("New York", 8400000)));
+    ArrayList<Miasto> oczekiwane =
+        new ArrayList<Miasto>(
+            Arrays.asList(
+                new Miasto("Paris", 2150000),
+                new Miasto("Berlin", 3800000),
+                new Miasto("New York", 8400000)));
     sortujWzgledemLiczbyMieszkancow(miasta);
 
     assert miasta.equals(oczekiwane);
@@ -85,7 +101,5 @@ public class Main {
 
     test1();
     test2();
-
   }
 }
-

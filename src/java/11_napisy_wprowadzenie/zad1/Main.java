@@ -1,43 +1,44 @@
 import java.util.*;
 
 public class Main {
-	//Odwroc napis.
+  // Odwroc napis.
 
-	public static String odwrocNapisV1(String slowo) {
+  public static String odwrocNapisV1(String slowo) {
 
-		char[] in = slowo.toCharArray();
-		int begin = 0;
-		int end = in .length - 1;
-		char temp;
-		while (end > begin) {
-			temp = in [begin]; in [begin] = in [end]; in [end] = temp;
-			end--;
-			begin++;
-		}
-		return new String( in );
-	}
+    char[] in = slowo.toCharArray();
+    int begin = 0;
+    int end = in.length - 1;
+    char temp;
+    while (end > begin) {
+      temp = in[begin];
+      in[begin] = in[end];
+      in[end] = temp;
+      end--;
+      begin++;
+    }
+    return new String(in);
+  }
 
-	public static String odwrocNapisV2(String slowo) {
-		return new StringBuilder(slowo).reverse().toString();
-	}
+  public static String odwrocNapisV2(String slowo) {
+    return new StringBuilder(slowo).reverse().toString();
+  }
 
-	public static void test1() {
-		String napis = "adam";
-		String wynik = "mada";
+  public static void test1() {
+    String napis = "adam";
+    String wynik = "mada";
 
-		assert odwrocNapisV1(napis).equals(wynik);
-	}
+    assert odwrocNapisV1(napis).equals(wynik);
+  }
 
-	public static void test2() {
-		String napis = "adam";
-		String wynik = "mada";
+  public static void test2() {
+    String napis = "adam";
+    String wynik = "mada";
 
-		assert odwrocNapisV2(napis).equals(wynik);
-	}
+    assert odwrocNapisV2(napis).equals(wynik);
+  }
 
-	public static void main(String[] args) {
-		test1();
-		test2();
-	}
-
+  public static void main(String[] args) {
+    test1();
+    test2();
+  }
 }

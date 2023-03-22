@@ -15,8 +15,7 @@ public class Main {
     ArrayList<Integer> lewy = new ArrayList<Integer>();
     lewy.add(Integer.MIN_VALUE);
 
-    for (int i = 0; i < n; i++)
-      lewy.add(Math.max(lewy.get(i), slupki.get(i)));
+    for (int i = 0; i < n; i++) lewy.add(Math.max(lewy.get(i), slupki.get(i)));
 
     int prawy = Integer.MIN_VALUE;
 
@@ -39,7 +38,7 @@ public class Main {
     lista.add(2);
     int wynik = 5;
 
-    assert(ileWodyV1(lista) == wynik);
+    assert (ileWodyV1(lista) == wynik);
   }
 
   public static void test2() {
@@ -52,7 +51,7 @@ public class Main {
     lista.add(2);
     int wynik = 15;
 
-    assert(ileWodyV1(lista) == wynik);
+    assert (ileWodyV1(lista) == wynik);
   }
 
   public static void test3() {
@@ -61,7 +60,7 @@ public class Main {
     lista.add(1);
     int wynik = 0;
 
-    assert(ileWodyV1(lista) == wynik);
+    assert (ileWodyV1(lista) == wynik);
   }
 
   public static void main(String[] args) {
@@ -69,6 +68,5 @@ public class Main {
     test1();
     test2();
     test3();
-
   }
 }

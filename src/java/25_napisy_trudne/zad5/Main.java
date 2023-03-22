@@ -25,35 +25,35 @@ public class Main {
     String napis = "AAAAAAAAAABBBBBBBBA";
     String wynik = "ABA";
 
-    assert(usunPowtorzeniaV1(napis).equals(wynik));
+    assert (usunPowtorzeniaV1(napis).equals(wynik));
   }
 
   public static void test2() {
     String napis = "XXXYYASFBY";
     String wynik = "XYASFBY";
 
-    assert(usunPowtorzeniaV1(napis).equals(wynik));
+    assert (usunPowtorzeniaV1(napis).equals(wynik));
   }
 
   public static void test3() {
     String napis = "CCCCCCCCCCCCCCCCCCCCCCCCCCCC";
     String wynik = "C";
 
-    assert(usunPowtorzeniaV1(napis).equals(wynik));
+    assert (usunPowtorzeniaV1(napis).equals(wynik));
   }
 
   public static void test4() {
     String napis = "AAABB";
     String wynik = "AB";
 
-    assert(usunPowtorzeniaV1(napis).equals(wynik));
+    assert (usunPowtorzeniaV1(napis).equals(wynik));
   }
 
   public static void test5() {
     String napis = "";
     String wynik = "";
 
-    assert(usunPowtorzeniaV1(napis).equals(wynik));
+    assert (usunPowtorzeniaV1(napis).equals(wynik));
   }
 
   public static void main(String[] args) {
@@ -63,7 +63,5 @@ public class Main {
     test3();
     test4();
     test5();
-
   }
 }
-

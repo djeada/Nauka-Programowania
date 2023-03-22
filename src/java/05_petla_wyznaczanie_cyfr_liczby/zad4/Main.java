@@ -1,60 +1,58 @@
 import java.util.*;
 
 public class Main {
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 
-		//Dla pobranej liczby, powinny zostac zwrocone cyfry 
-		//liczby spelniajce nastepujacy warunek:
-		
-		System.out.print("Podaj liczbe\n");
-		Scanner s = new Scanner(System.in);
-		int a = Integer.parseInt(s.nextLine());
+    // Dla pobranej liczby, powinny zostac zwrocone cyfry
+    // liczby spelniajce nastepujacy warunek:
 
-		//a) Liczby parzyste;
+    System.out.print("Podaj liczbe\n");
+    Scanner s = new Scanner(System.in);
+    int a = Integer.parseInt(s.nextLine());
 
-		int pom = a;
-		System.out.print("Cyfry liczby badace liczbami parzystymi: \n");
+    // a) Liczby parzyste;
 
-		while (pom > 0) {
-			int cyfra = pom % 10;
+    int pom = a;
+    System.out.print("Cyfry liczby badace liczbami parzystymi: \n");
 
-			if (cyfra % 2 == 0) {
-				System.out.print(cyfra + "\n");
-			}
+    while (pom > 0) {
+      int cyfra = pom % 10;
 
-			pom /= 10;
-		}
+      if (cyfra % 2 == 0) {
+        System.out.print(cyfra + "\n");
+      }
 
-		//b) Mniejsze niz 5;
+      pom /= 10;
+    }
 
-		pom = a;
-		System.out.print("Cyfry liczby mniejsze niz 5: \n");
+    // b) Mniejsze niz 5;
 
-		while (pom > 0) {
-			int cyfra = pom % 10;
+    pom = a;
+    System.out.print("Cyfry liczby mniejsze niz 5: \n");
 
-			if (cyfra<5) {
-				System.out.print(cyfra + "\n");
-			}
+    while (pom > 0) {
+      int cyfra = pom % 10;
 
-			pom /= 10;
-		}
+      if (cyfra < 5) {
+        System.out.print(cyfra + "\n");
+      }
 
-		//c) Rozne od 0;
+      pom /= 10;
+    }
 
-		pom = a;
-		System.out.print("Cyfry liczby rozne od 0: \n");
+    // c) Rozne od 0;
 
-		while (pom > 0) {
-			int cyfra = pom % 10;
+    pom = a;
+    System.out.print("Cyfry liczby rozne od 0: \n");
 
-			if (cyfra != 0) {
-				System.out.print(cyfra + "\n");
-			}
+    while (pom > 0) {
+      int cyfra = pom % 10;
 
-			pom /= 10;
-		}
+      if (cyfra != 0) {
+        System.out.print(cyfra + "\n");
+      }
 
-	}
-
+      pom /= 10;
+    }
+  }
 }
