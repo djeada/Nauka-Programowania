@@ -25,15 +25,15 @@ Materiały dodatkowe, takie jak notatki z Python i C++, są dostępne na naszych
 * Więcej informacji na temat tego jak dodać własne rozwiązania, znajdziesz na <a href="https://github.com/djeada/Nauka-Programowania/blob/master/CONTRIBUTING.md">tej stronie</a>.
 
 ## O zadaniach
-Zadania są podzielone tematycznie i uporządkowane według stopnia zaawansowania. Przygotowaliśmy je tak, by każdy, nawet początkujący uczeń, mógł przećwiczyć podstawowe koncepcje programowania. W przeciwieństwie do wielu innych kursów, które szybko przechodzą do bardziej zaawansowanych mechanizmów, nasze zadania skupiają się głównie na podstawach.
+Zadania zostały podzielone tematycznie i uporządkowane według stopnia zaawansowania. Przygotowaliśmy je w taki sposób, aby każdy - nawet początkujący uczeń - mógł przećwiczyć podstawowe koncepcje programowania. W odróżnieniu od wielu innych kursów, które szybko przechodzą do bardziej zaawansowanych mechanizmów, nasze zadania koncentrują się głównie na podstawach.
 
-* Pierwsze 8 rozdziałów poświęcone są najbardziej podstawowym koncepcjom, takim jak zmienna, warunek i pętla. Rozwiązania powinny być sprawdzane ręcznie poprzez komunikację z programem za pomocą konsoli. Dane wpisywane są z klawiatury, a wynik wyświetlany na ekranie.
+* Pierwsze 8 rozdziałów jest poświęcone najbardziej podstawowym koncepcjom, takim jak zmienne, warunki i pętle. Rozwiązania powinny być sprawdzane ręcznie poprzez komunikację z programem za pomocą konsoli. Dane wpisywane są z klawiatury, a wynik wyświetlany na ekranie.
 * W rozdziałach 9-17 znajdują się zadania wymagające zrozumienia koncepcji z pierwszych 8 rozdziałów oraz rozszerzające je o zagadnienia takie jak struktury danych, rekurencja i binarna reprezentacja liczb. Osoba rozwiązująca zadania powinna przygotować automatyczne testy dla swojego rozwiązania, uwzględniając wszystkie skrajne przypadki.
-* W rozdziałach 18-25 poruszone są bardziej zaawansowane tematy, takie jak praca z plikami, algorytmy sortowania i obsługa błędów. Zadania te wymagają już bardziej zaawansowanej wiedzy i umiejętności, a także znajomości narzędzi takich jak debugowanie i profilowanie kodu. Zadania te wymagają już dużej samodzielności i umiejętności samodzielnego poszukiwania informacji oraz rozwiązywania problemów.
+* W rozdziałach 18-25 poruszane są bardziej zaawansowane tematy, takie jak praca z plikami, algorytmy sortowania i obsługa błędów. Zadania te wymagają już większej zaawansowanej wiedzy i umiejętności, a także znajomości narzędzi takich jak debugowanie i profilowanie kodu. Zadania te wymagają dużej samodzielności i umiejętności samodzielnego poszukiwania informacji oraz rozwiązywania problemów.
 
 Przykładowe rozwiązania powinny być traktowane jako wskazówki, a nie jako jedyne słuszne sposoby rozwiązania zadania. W szczególności w dalszych rozdziałach, dane zadanie może mieć wiele różnych sposobów rozwiązania. Część przykładowych rozwiązań może zawierać nawet więcej niż jeden wariant rozwiązania. Alternatywne rozwiązania mogą różnić się między sobą pod względem złożoności czasowej, pamięciowej lub użycia funkcji języka.
 
-Pamiętaj, że nauka programowania to długi proces, ale z naszym zbiorem zadań i dodatkowymi materiałami, powinieneś być w stanie zbudować solidne podstawy i cieszyć się rozwijającą się karierą w branży IT.
+Należy pamiętać, że nauka programowania to długi proces, ale dzięki naszemu zbiorowi zadań oraz dodatkowym materiałom, powinieneś być w stanie wypracować solidne podstawy i rozwijać swoje umiejętności, które pozwolą Ci na osiągnięcie sukcesu w sektorze IT.
 
 Jeśli masz jakieś pytania lub potrzebujesz dodatkowej pomocy, nie wahaj się skontaktować z nami. Chętnie Ci pomożemy.
 
