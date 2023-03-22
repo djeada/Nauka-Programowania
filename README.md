@@ -59,7 +59,7 @@ Rozwiązania zostały przetestowane i dostosowane do środowiska `NodeJS 19.8.1`
 
 ### Haskell
 
-Przykłady zostały przetestowane i dostosowane do wersji `GHC 8.10.2`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `ghc` z flagami: `ghc -O2 -threaded -rtsopts -eventlog sciezka_do_zadania.hs -o plik_wykonywalny`. Do formatowania kodu należy użyć narzędzia `ormolu` z flagami:
+Przykłady zostały przetestowane i dostosowane do wersji `GHC 8.10.2`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `ghc` z flagami: `ghc -o plik_wykonwyalny.out sciezka_do_zadania.hs`. Do formatowania kodu należy użyć narzędzia `ormolu` z flagami:
 `ormolu --mode inplace sciezka_do_zadania.hs`. Przykłady nie używają bibliotek zewnętrznych.
 
 ### Rust
