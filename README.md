@@ -70,7 +70,7 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
 
 <!--ts-->
    1. [Interakcja z konsolą](#Interakcja-z-konsolą)
-   1. [Instrukcje sterujące](#Instrukcje-sterujące)
+   1. [Instrukcja warunkowa](#Instrukcja-warunkowa)
    1. [Daty](#Daty)
    1. [Pętla - wprowadzenie](#Pętla---wprowadzenie)
    1. [Pętla - wyznaczanie cyfr liczby](#Pętla---wyznaczanie-cyfr-liczby)
@@ -220,7 +220,7 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
     </tbody>
 </table>
 
-## Instrukcje sterujące
+## Instrukcja warunkowa
 
 <table>
     <thead>
@@ -235,97 +235,97 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>1</td>
             <td>Porównanie ze stałą.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcje_sterujace/zad1.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcje_sterujace/zad1.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcje_sterujace/zad1">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcje_sterujace/zad1.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcje_sterujace/zad1.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcje_sterujace/zad1.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcje_sterujace/zad1.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcja_warunkowa/zad1.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcja_warunkowa/zad1.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcja_warunkowa/zad1">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcja_warunkowa/zad1.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcja_warunkowa/zad1.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcja_warunkowa/zad1.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcja_warunkowa/zad1.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
             <td>2</td>
             <td>Porównanie ze zmienną.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcje_sterujace/zad2.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcje_sterujace/zad2.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcje_sterujace/zad2">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcje_sterujace/zad2.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcje_sterujace/zad2.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcje_sterujace/zad2.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcje_sterujace/zad2.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcja_warunkowa/zad2.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcja_warunkowa/zad2.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcja_warunkowa/zad2">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcja_warunkowa/zad2.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcja_warunkowa/zad2.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcja_warunkowa/zad2.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcja_warunkowa/zad2.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
             <td>3</td>
             <td>Znak liczby.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcje_sterujace/zad3.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcje_sterujace/zad3.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcje_sterujace/zad3">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcje_sterujace/zad3.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcje_sterujace/zad3.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcje_sterujace/zad3.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcje_sterujace/zad3.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcja_warunkowa/zad3.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcja_warunkowa/zad3.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcja_warunkowa/zad3">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcja_warunkowa/zad3.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcja_warunkowa/zad3.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcja_warunkowa/zad3.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcja_warunkowa/zad3.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
             <td>4</td>
             <td>Maks/min dwóch liczb.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcje_sterujace/zad4.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcje_sterujace/zad4.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcje_sterujace/zad4">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcje_sterujace/zad4.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcje_sterujace/zad4.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcje_sterujace/zad4.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcje_sterujace/zad4.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcja_warunkowa/zad4.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcja_warunkowa/zad4.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcja_warunkowa/zad4">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcja_warunkowa/zad4.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcja_warunkowa/zad4.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcja_warunkowa/zad4.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcja_warunkowa/zad4.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
             <td>5</td>
             <td>Sortowanie trzech liczb.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcje_sterujace/zad5.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcje_sterujace/zad5.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcje_sterujace/zad5">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcje_sterujace/zad5.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcje_sterujace/zad5.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcje_sterujace/zad5.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcje_sterujace/zad5.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcja_warunkowa/zad5.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcja_warunkowa/zad5.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcja_warunkowa/zad5">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcja_warunkowa/zad5.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcja_warunkowa/zad5.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcja_warunkowa/zad5.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcja_warunkowa/zad5.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
             <td>6</td>
             <td>Maks czterech liczb.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcje_sterujace/zad6.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcje_sterujace/zad6.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcje_sterujace/zad6">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcje_sterujace/zad6.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcje_sterujace/zad6.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcje_sterujace/zad6.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcje_sterujace/zad6.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcja_warunkowa/zad6.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcja_warunkowa/zad6.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcja_warunkowa/zad6">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcja_warunkowa/zad6.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcja_warunkowa/zad6.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcja_warunkowa/zad6.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcja_warunkowa/zad6.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
             <td>7</td>
             <td>Dowody praw logicznych.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcje_sterujace/zad7.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcje_sterujace/zad7.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcje_sterujace/zad7">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcje_sterujace/zad7.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcje_sterujace/zad7.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcje_sterujace/zad7.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcje_sterujace/zad7.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcja_warunkowa/zad7.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcja_warunkowa/zad7.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcja_warunkowa/zad7">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcja_warunkowa/zad7.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcja_warunkowa/zad7.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcja_warunkowa/zad7.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcja_warunkowa/zad7.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
             <td>8</td>
             <td>Warunek trójkąta.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcje_sterujace/zad8.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcje_sterujace/zad8.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcje_sterujace/zad8">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcje_sterujace/zad8.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcje_sterujace/zad8.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcje_sterujace/zad8.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcje_sterujace/zad8.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/02_instrukcja_warunkowa/zad8.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/02_instrukcja_warunkowa/zad8.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/02_instrukcja_warunkowa/zad8">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/02_instrukcja_warunkowa/zad8.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/02_instrukcja_warunkowa/zad8.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/02_instrukcja_warunkowa/zad8.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/02_instrukcja_warunkowa/zad8.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
     </tbody>
