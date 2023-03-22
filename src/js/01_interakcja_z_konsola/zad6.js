@@ -37,7 +37,6 @@ e) Dla pobranej liczby: 120, powinna zostać wypisana liczba:  2.094.
 f) Dla pobranej liczby: 100, powinny zostać wypisane liczby: 37.777 i -235.222.
 */
 
-
 // a) Pobierz wielkość w kilogramach i wypisz, ile gramów odpowiada.
 const kg = parseInt(prompt("Podaj liczbę w kilogramach:"));
 console.log(kg * 1000);
@@ -60,5 +59,5 @@ console.log(deg * 0.0174533);
 
 // f) Pobierz temperaturę w stopniach Fahrenheita i wypisz ile stopni Celsjusza oraz ile stopni Kelvina odpowiada.
 const temp = parseInt(prompt("Podaj liczbę w stopniach Fahrenheita:"));
-console.log((temp - 32) * 5 / 9);
-console.log((temp - 32) * 5 / 9 + 273.15);
+console.log(((temp - 32) * 5) / 9);
+console.log(((temp - 32) * 5) / 9 + 273.15);

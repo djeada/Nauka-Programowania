@@ -18,8 +18,8 @@ const b = parseInt(prompt("Podaj liczbę nóg:"));
 
 // Pętla
 for (let i = 0; i <= a; i++) {
-    if (i * 2 + (a - i) * 4 === b) {
-        console.log(i);
-        console.log(a - i);
-    }
+  if (i * 2 + (a - i) * 4 === b) {
+    console.log(i);
+    console.log(a - i);
+  }
 }

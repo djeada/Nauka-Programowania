@@ -1,87 +1,102 @@
 /*
-Otrzymujesz dwie macierze o tych samych wymiarach, zwroc macierz bedaca:
-a) Wynikiem dodawania otrzymanych macierzy.
-b) Wynikiem odejmowania pierwszej macierzy od drugiej.
+Tytuł: Dodawanie i odejmowanie macierzy.
+
+Treść: Otrzymujesz dwie macierze o tych samych wymiarach. Zwróć dwie macierze będące:
+
+a) wynikiem dodawania otrzymanych macierzy
+
+b) wynikiem odejmowania drugiej macierzy od pierwszej.
+
+Dane wejściowe: Dwie listy list liczb naturalnych.
+
+Dane wyjściowe: Dwie listy list liczb naturalnych.
+
+Przykład:
+
+Dla otrzymanych dwóch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinny zostać zwrócone następujące macierze:
+
+a) [[6, -1], [-1, 7]] - wynik dodawania
+
+b) [[-4, 5], [-3, -7]] - wynik odejmowania drugiej macierzy od pierwszej.
 */
-dodajMacierze = function(macierzA, macierzB) {
-    var wynik = [];
-    for (var i = 0; i < macierzA.length; i++) {
-        wynik[i] = [];
-        for (var j = 0; j < macierzA[i].length; j++) {
-            wynik[i][j] = macierzA[i][j] + macierzB[i][j];
-        }
+function dodajMacierze(macierzA, macierzB) {
+  const wynik = [];
+  for (let i = 0; i < macierzA.length; i++) {
+    const wiersz = [];
+    for (let j = 0; j < macierzA[i].length; j++) {
+      wiersz.push(macierzA[i][j] + macierzB[i][j]);
     }
-    return wynik;
-}
-odejmijMacierze = function(macierzA, macierzB) {
-    var wynik = [];
-    for (var i = 0; i < macierzA.length; i++) {
-        wynik[i] = [];
-        for (var j = 0; j < macierzA[i].length; j++) {
-            wynik[i][j] = macierzA[i][j] - macierzB[i][j];
-        }
-    }
-    return wynik;
-}
-test1 = function() {
-    var macierzA = [
-        [1, 2, 3],
-        [4, 5, 6]
-    ];
-    var macierzB = [
-        [7, 8, 9],
-        [10, 11, 12]
-    ];
-    var oczekiwane = [
-        [8, 10, 12],
-        [14, 16, 18]
-    ];
-    var wynik = dodajMacierze(macierzA, macierzB);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i].length !== oczekiwane[i].length) {
-            throw new Error(`Assertion error line 29: ${wynik[i].length} != ${oczekiwane[i].length}`);
-        }
-        for (var j = 0; j < wynik[i].length; j++) {
-            if (wynik[i][j] !== oczekiwane[i][j]) {
-                throw new Error(`Assertion error line 29: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
-            }
-        }
-    }
-};
-test2 = function() {
-    var macierzA = [
-        [1, 2, 3],
-        [4, 5, 6]
-    ];
-    var macierzB = [
-        [7, 8, 9],
-        [10, 11, 12]
-    ];
-    var oczekiwane = [
-        [-6, -6, -6],
-        [-6, -6, -6]
-    ];
-    var wynik = odejmijMacierze(macierzA, macierzB);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i].length !== oczekiwane[i].length) {
-            throw new Error(`Assertion error line 29: ${wynik[i].length} != ${oczekiwane[i].length}`);
-        }
-        for (var j = 0; j < wynik[i].length; j++) {
-            if (wynik[i][j] !== oczekiwane[i][j]) {
-                throw new Error(`Assertion error line 29: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
-            }
-        }
-    }
-};
-main = function(args) {
-    test1();
-    test2();
+    wynik.push(wiersz);
+  }
+  return wynik;
 }
 
-main(null);
+function odejmijMacierze(macierzA, macierzB) {
+  const wynik = [];
+  for (let i = 0; i < macierzA.length; i++) {
+    const wiersz = [];
+    for (let j = 0; j < macierzA[i].length; j++) {
+      wiersz.push(macierzA[i][j] - macierzB[i][j]);
+    }
+    wynik.push(wiersz);
+  }
+  return wynik;
+}
+
+// test
+function testDodajMacierze() {
+  const macierzA = [
+    [1, 2],
+    [-2, 0],
+  ];
+  const macierzB = [
+    [5, -3],
+    [1, 7],
+  ];
+  const wynikDodawania = [
+    [6, -1],
+    [-1, 7],
+  ];
+  const dodawanie = dodajMacierze(macierzA, macierzB);
+  for (let i = 0; i < dodawanie.length; i++) {
+    for (let j = 0; j < dodawanie[i].length; j++) {
+      assert(
+        dodawanie[i][j] === wynikDodawania[i][j],
+        `Element macierzy o indeksie (${i}, ${j}) nie jest taki sam jak w oczekiwanej macierzy. Oczekiwano: ${wynikDodawania[i][j]}, otrzymano: ${dodawanie[i][j]}.`
+      );
+    }
+  }
+}
+
+function testOdejmijMacierze() {
+  const macierzA = [
+    [1, 2],
+    [-2, 0],
+  ];
+  const macierzB = [
+    [5, -3],
+    [1, 7],
+  ];
+  const wynikOdejmowania = [
+    [-4, 5],
+    [-3, -7],
+  ];
+  const odejmowanie = odejmijMacierze(macierzA, macierzB);
+  for (let i = 0; i < odejmowanie.length; i++) {
+    for (let j = 0; j < odejmowanie[i].length; j++) {
+      assert(
+        odejmowanie[i][j] === wynikOdejmowania[i][j],
+        "Element macierzy o indeksie (${i}, ${j}) nie jest taki sam jak w oczekiwanej macierzy. Oczekiwano: ${wynikOdejmowania[i][j]}, otrzymano: ${odejmowanie[i][j]}."
+      );
+    }
+  }
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Wystąpił błąd");
+  }
+}
+
+testDodajMacierze();
+testOdejmijMacierze();

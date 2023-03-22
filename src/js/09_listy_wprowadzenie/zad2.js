@@ -22,57 +22,56 @@ Dla N równego 3 oraz pobranych liczb 3, 9, 7 w pierwszym podpunkcie powinno zos
 
 // Funkcja wczytująca N liczb całkowitych do listy
 function wczytajNliczbDoListy(N) {
-    var lista = [];
-    for (var i = 0; i < N; i++) {
-        lista.push(parseInt(prompt('Podaj liczbę:')));
-    }
-    return lista;
+  var lista = [];
+  for (var i = 0; i < N; i++) {
+    lista.push(parseInt(prompt("Podaj liczbę:")));
+  }
+  return lista;
 }
 
 // Funkcja dodająca 1 do każdego elementu listy
 function dodajJedynkeDoListy(lista) {
-    for (var i = 0; i < lista.length; i++) {
-        lista[i] += 1;
-    }
-    return lista;
+  for (var i = 0; i < lista.length; i++) {
+    lista[i] += 1;
+  }
+  return lista;
 }
-
 
 // Funkcja mnożąca każdy element przez jego indeks w liście
 function pomnozElementyListy(lista) {
-    for (var i = 0; i < lista.length; i++) {
-        lista[i] *= i;
-    }
-    return lista;
+  for (var i = 0; i < lista.length; i++) {
+    lista[i] *= i;
+  }
+  return lista;
 }
 
 // Funkcja zastępująca wszystkie elementy wartością pierwszego elementu listy
 function zastapElementyListy(lista) {
-    for (var i = 1; i < lista.length; i++) {
-        lista[i] = lista[0];
-    }
-    return lista;
+  for (var i = 1; i < lista.length; i++) {
+    lista[i] = lista[0];
+  }
+  return lista;
 }
 
 // Funkcja wypisująca listę z elementami oddzielonymi przecinkami
 function wypiszListe(lista) {
-    for (var i = 0; i < lista.length; i++) {
-        if (i === lista.length - 1) {
-            console.log(lista[i]);
-        } else {
-            console.log(lista[i] + ', ');
-        }
+  for (var i = 0; i < lista.length; i++) {
+    if (i === lista.length - 1) {
+      console.log(lista[i]);
+    } else {
+      console.log(lista[i] + ", ");
     }
+  }
 }
 
 // Testy
 var lista = wczytajNliczbDoListy(3);
 
-console.log('Dodaj 1 do każdego elementu listy');
+console.log("Dodaj 1 do każdego elementu listy");
 wypiszListe(dodajJedynkeDoListy(lista));
 
-console.log('\nPomnóż każdy element przez jego indeks w liście');
+console.log("\nPomnóż każdy element przez jego indeks w liście");
 wypiszListe(pomnozElementyListy(lista));
 
-console.log('\nZastąp wszystkie elementy wartością pierwszego elementu listy');
+console.log("\nZastąp wszystkie elementy wartością pierwszego elementu listy");
 wypiszListe(zastapElementyListy(lista));

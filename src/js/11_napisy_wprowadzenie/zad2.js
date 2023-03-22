@@ -1,31 +1,42 @@
-    policzZnakV1 = function(slowo, znak) {
-        var licznik = 0; {
-            var tablica = (slowo).split('');
-            for (var i = 0; i < tablica.length; i++) {
-                var x = tablica[i]; {
-                    if ((function(c) {
-                            return c.charCodeAt == null ? c : c.charCodeAt(0);
-                        })(x) == (function(c) {
-                            return c.charCodeAt == null ? c : c.charCodeAt(0);
-                        })(znak)) {
-                        licznik++;
-                    }
-                }
-            }
-        }
-        return licznik;
-    };
-    test1 = function() {
-        var napis = "adam";
-        var znak = 'a';
-        var oczekiwane = 2;
-        var wynik = policzZnakV1(napis, znak);
-        if (!(wynik === oczekiwane)) {
-            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
-        }
-    };
-    main = function(args) {
-        test1();
-    };
+/*
+Tytuł: Policz wystąpienia znaku.
 
-    main(null);
+Treść: Dla podanego napisu i znaku, znajdź liczbę wystąpień tego znaku w napisie.
+
+Dane wejściowe: Napis oraz znak.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+
+Dla otrzymanego napisu: "klamra" oraz znaku 'a', powinno zostać zwrócone: 2.
+*/
+function policzWystapieniaZnaku(napis, znak) {
+  let licznik = 0;
+  for (let i = 0; i < napis.length; i++) {
+    if (napis[i] === znak) {
+      licznik++;
+    }
+  }
+  return licznik;
+}
+
+// Testy
+
+function test() {
+  let input1 = "klamra";
+  let input2 = "a";
+  let expectedOutput = 2;
+  let output = policzWystapieniaZnaku(input1, input2);
+
+  assert(output === expectedOutput, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

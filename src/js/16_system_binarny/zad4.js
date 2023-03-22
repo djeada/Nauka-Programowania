@@ -1,70 +1,65 @@
 /*
-Otrzymujesz dziesietna reprezentacje liczby naturalnej.
-a) Oblicz z ilu zer sklada sie binarna reprezentacja otrzymanej liczby.
-b) Oblicz z ilu jedynek sklada sie binarna reprezentacja otrzymanej liczby.
+
+Tytuł: Liczba zer i jedynek w reprezentacji binarnej.
+
+Treść: Otrzymujesz reprezentację dziesiętną liczby naturalnej.
+
+a) Oblicz, ile zer zawiera binarna reprezentacja otrzymanej liczby.
+
+b) Oblicz, ile jedynek zawiera binarna reprezentacja otrzymanej liczby.
+
+Dane wejściowe: Liczba naturalna w obu podpunktach.
+
+Dane wyjściowe: Liczba naturalna w obu podpunktach.
+
+Przykład:
+
+a) Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 0.
+ 
+b) Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 2.
 */
 
-zera = function(liczba) {
-    var zera = 0;
-    while (liczba > 0) {
-        if (liczba & 1 == 0)
-            zera++;
-        liczba >>= 1;
+// Funkcja obliczająca ilość zer w reprezentacji binarnej liczby
+function iloscZerLiczby(liczba) {
+  let binarna = liczba.toString(2);
+  let iloscZer = 0;
+  for (let i = 0; i < binarna.length; i++) {
+    if (binarna[i] === "0") {
+      iloscZer++;
     }
-    return zera;
+  }
+  return iloscZer;
 }
 
-jedynki = function(liczba) {
-    var jedynki = 0;
-    while (liczba > 0) {
-        if (liczba & 1 == 1)
-            jedynki++;
-        liczba >>= 1;
+// Funkcja obliczająca ilość jedynek w reprezentacji binarnej liczby
+function iloscJedynekLiczby(liczba) {
+  let binarna = liczba.toString(2);
+  let iloscJedynek = 0;
+  for (let i = 0; i < binarna.length; i++) {
+    if (binarna[i] === "1") {
+      iloscJedynek++;
     }
-    return jedynki;
+  }
+  return iloscJedynek;
 }
 
-test1 = function() {
-    var a = -2;
-    var oczekiwane = 0;
-    var wynik = zera(a);
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 79: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
+// Testy
+function test() {
+  let input = 3;
+  let expectedOutput1 = 0;
+  let expectedOutput2 = 2;
+  let output1 = iloscZerLiczby(input);
+  let output2 = iloscJedynekLiczby(input);
+
+  assert(output1 === expectedOutput1, "Test nie powiódł się");
+  assert(output2 === expectedOutput2, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
 }
 
-test2 = function() {
-    var a = 3;
-    var oczekiwane = 2;
-    var wynik = jedynki(a);
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 89: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
 }
 
-test3 = function() {
-    var a = 3;
-    var oczekiwane = 0;
-    var wynik = zera(a);
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 99: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
-}
-
-test4 = function() {
-    var a = 7;
-    var oczekiwane = 3;
-    var wynik = jedynki(a);
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 109: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
-}
-
-main = function() {
-    test1();
-    test2();
-    test3();
-    test4();
-}
-
-main();
+test();

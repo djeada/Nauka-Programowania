@@ -17,22 +17,22 @@ const dzien_tygodnia = parseInt(prompt("Podaj dzień tygodnia:"));
 
 // Sprawdzenie, czy liczba jest poprawna
 if (dzien_tygodnia > 0 && dzien_tygodnia < 8) {
-    // Sprawdzenie, który dzień tygodnia odpowiada liczbie
-    if (dzien_tygodnia === 1) {
-        console.log("Poniedziałek");
-    } else if (dzien_tygodnia === 2) {
-        console.log("Wtorek");
-    } else if (dzien_tygodnia === 3) {
-        console.log("Środa");
-    } else if (dzien_tygodnia === 4) {
-        console.log("Czwartek");
-    } else if (dzien_tygodnia === 5) {
-        console.log("Piątek");
-    } else if (dzien_tygodnia === 6) {
-        console.log("Sobota");
-    } else {
-        console.log("Niedziela");
-    }
+  // Sprawdzenie, który dzień tygodnia odpowiada liczbie
+  if (dzien_tygodnia === 1) {
+    console.log("Poniedziałek");
+  } else if (dzien_tygodnia === 2) {
+    console.log("Wtorek");
+  } else if (dzien_tygodnia === 3) {
+    console.log("Środa");
+  } else if (dzien_tygodnia === 4) {
+    console.log("Czwartek");
+  } else if (dzien_tygodnia === 5) {
+    console.log("Piątek");
+  } else if (dzien_tygodnia === 6) {
+    console.log("Sobota");
+  } else {
+    console.log("Niedziela");
+  }
 } else {
-    console.log("Liczba jest niepoprawna");
+  console.log("Liczba jest niepoprawna");
 }

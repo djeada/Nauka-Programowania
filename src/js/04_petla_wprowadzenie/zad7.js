@@ -16,7 +16,7 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 // Pętla
 let wynik = Math.PI;
 for (let i = 1; i < liczba; i++) {
-    wynik *= Math.PI;
+  wynik *= Math.PI;
 }
 
 // Wypisanie wyniku

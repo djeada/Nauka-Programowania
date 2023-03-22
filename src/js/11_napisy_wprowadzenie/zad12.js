@@ -1,25 +1,44 @@
-    usunSpacjeV1 = function(zdanie) {
-        return zdanie.replace(new RegExp("\\s", 'g'), "");
-    };
-    test1 = function(args) {
-        var zdanie = "lezy jezy na wierzy";
-        var oczekiwane = "lezyjezynawierzy";
-        var wynik = usunSpacjeV1(zdanie);
-        if (!(wynik === oczekiwane)) {
-            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
-        }
-    };
-    test2 = function(args) {
-        zdanie = "d";
-        oczekiwane = "d";
-        wynik = usunSpacjeV1(zdanie);
-        if (!(wynik === oczekiwane)) {
-            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
-        }
-    };
-    main = function(args) {
-        test1();
-        test2();
-    };
+/*
+Tytuł: Usuń spacje ze zdania.
 
-    main(null);
+Treść: Otrzymasz napis reprezentujący zdanie. Usuń spacje ze zdania.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Napis.
+
+Przykład:
+
+Dla otrzymanego napisu: "Ala ma kota", powinien zostać zwrócony napis: "Alamakota".
+*/
+
+function usunSpacje(napis) {
+  return napis.replace(/\s+/g, "");
+}
+
+// Test
+
+function test() {
+  let input = "Ala ma kota";
+  let expectedOutput = "Alamakota";
+  let output = usunSpacje(input);
+
+  assert(
+    output === expectedOutput,
+    "Test nie powiódł się dla " +
+      input +
+      ". Otrzymany wynik to " +
+      output +
+      ", a oczekiwany wynik to " +
+      expectedOutput
+  );
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

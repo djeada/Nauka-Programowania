@@ -13,15 +13,21 @@ Dla pobranych liczb: 3.5 (roczna stopa procentowa), 8 (liczba lat) oraz 12000 (w
 */
 
 // Pobieranie danych od użytkownika
-const roczna_stopa_procentowa = parseFloat(prompt("Podaj roczną stopę procentową:"));
+const roczna_stopa_procentowa = parseFloat(
+  prompt("Podaj roczną stopę procentową:")
+);
 const liczba_lat = parseInt(prompt("Podaj liczbę lat na spłacenie kredytu:"));
-const wysokosc_kredytu = parseInt(prompt("Podaj wysokość udzielonego kredytu:"));
+const wysokosc_kredytu = parseInt(
+  prompt("Podaj wysokość udzielonego kredytu:")
+);
 
 // Obliczanie miesięcznej raty
-const miesieczna_rata = (wysokosc_kredytu * (roczna_stopa_procentowa / 100)) / 12;
+const miesieczna_rata =
+  (wysokosc_kredytu * (roczna_stopa_procentowa / 100)) / 12;
 
 // Obliczanie całkowitego kosztu kredytu
 const calkowity_koszt_kredytu = miesieczna_rata * liczba_lat * 12;
 
 // Wypisanie wyniku
-console.log(miesieczna_rata);
+console.log(miesieczna_rata.toFixed(2));
+console.log(calkowity_koszt_kredytu.toFixed(2));

@@ -1,38 +1,38 @@
 /*
-Sprawdz czy slowo jest palindromem. Palindrom to slowo brzmiace tak samo
-czytane od lewej do prawej i od prawej do lewej.
+
+Tytuł: Sprawdzenie, czy słowo jest palindromem.
+
+Treść: Napisz program, który sprawdzi, czy słowo jest palindromem. Palindromem jest słowo, które brzmi tak samo czytane od lewej do prawej i od prawej do lewej.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Wartość logiczna.
+
+Przykład:
+
+Dla otrzymanego napisu: “kajak”, powinna zostać zwrócona wartość logiczna: Prawda.
 */
 
-odwrocNapisV1 = function(slowo) {
-    var rozdziel = slowo.split("");
-    var odwroc = rozdziel.reverse();
-    return odwroc.join("");
-}
-odwrocNapisV2 = function(slowo) {
-    if (slowo === "")
-        return "";
-    else
-        return odwrocNapisV2(slowo.substring(1)) + slowo.charAt(0);
-}
-test1 = function() {
-    var napis = "adam";
-    var oczekiwane = "mada";
-    var wynik = odwrocNapisV1(napis);
-    if (!(wynik === oczekiwane)) {
-        throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
-    }
-}
-test2 = function() {
-    var napis = "adam";
-    var oczekiwane = "mada";
-    var wynik = odwrocNapisV2(napis);
-    if (!(wynik === oczekiwane)) {
-        throw new Error(`Assertion error line 30: ${wynik} === ${oczekiwane}`);
-    }
-}
-main = function(args) {
-    test1();
-    test2();
+function czyPalindrom(napis) {
+  let napisOdwrocony = napis.split("").reverse().join("");
+  return napis === napisOdwrocony;
 }
 
-main(null);
+// Test
+
+function test() {
+  let input = "kajak";
+  let expectedOutput = true;
+  let output = czyPalindrom(input);
+
+  assert(output === expectedOutput, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

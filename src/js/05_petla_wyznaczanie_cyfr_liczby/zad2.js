@@ -17,5 +17,5 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 
 // Pętla
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
-    console.log(i % 10);
+  console.log(i % 10);
 }

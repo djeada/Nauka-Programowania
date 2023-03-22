@@ -14,28 +14,28 @@ Dla otrzymanej listy: [7, 8, -1, 4, 5] zostanie zwrócona liczba: 2.
 
 // Funkcja znajdująca indeks najmniejszego elementu w posortowanej i przesuniętej w prawo liście
 function znajdzIndeksNajmniejszegoElementu(lista) {
-    let indeksNajmniejszego = 0;
+  let indeksNajmniejszego = 0;
 
-    for (let i = 1; i < lista.length; i++) {
-        if (lista[i] < lista[indeksNajmniejszego]) {
-            indeksNajmniejszego = i;
-        }
+  for (let i = 1; i < lista.length; i++) {
+    if (lista[i] < lista[indeksNajmniejszego]) {
+      indeksNajmniejszego = i;
     }
+  }
 
-    return indeksNajmniejszego;
+  return indeksNajmniejszego;
 }
 
 // Testy
 function assert(condition, message) {
-    if (!condition) {
-        throw new Error(message || "Assertion failed");
-    }
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
 function testZnajdzIndeksNajmniejszegoElementu() {
-    assert(znajdzIndeksNajmniejszegoElementu([7, 8, -1, 4, 5]) === 2);
-    assert(znajdzIndeksNajmniejszegoElementu([4, 5, 7, 8, -1]) === 4);
-    assert(znajdzIndeksNajmniejszegoElementu([-1, 4, 5, 7, 8]) === 0);
+  assert(znajdzIndeksNajmniejszegoElementu([7, 8, -1, 4, 5]) === 2);
+  assert(znajdzIndeksNajmniejszegoElementu([4, 5, 7, 8, -1]) === 4);
+  assert(znajdzIndeksNajmniejszegoElementu([-1, 4, 5, 7, 8]) === 0);
 }
 
 testZnajdzIndeksNajmniejszegoElementu();

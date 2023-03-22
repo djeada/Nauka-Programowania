@@ -1,51 +1,57 @@
 /*
-Otrzymujesz liste n wspolczynnikow wielomianu postaci anxn+an-1xn-1+...+a0
-oraz liczbe k. Oblicz wspolczynniki wielomianu bedacego k-ta pochodna
-otrzymanego wielomianu.
-*/
-pochodnaWielomianu = function(wspolczynniki, k) {
-    var wynik = [];
-    var kopia = wspolczynniki.slice();
-    for (var i = 0; i < k; i++) {
-        wynik = [];
-        var n = kopia.length;
-        for (var j = 0; j < n - 1; j++)
-            wynik.push(kopia[j] * (n - j - 1));
-        kopia = wynik;
+
+Tytuł: Obliczenie n-tej pochodnej wielomianu.
+
+Treść: Otrzymujesz listę n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbę naturalną k. Oblicz współczynniki wielomianu będącego k-tą pochodną otrzymanego wielomianu.
+
+Dane wejściowe: Lista liczb naturalnych i liczba naturalna.
+
+Dane wyjściowe: Lista liczb naturalnych.
+
+Przykład:
+
+Dla otrzymanej listy współczynników [4, -3, 2] i liczby k = 1, zostanie zwrócona lista [8, -3].*/
+
+function pochodnaWielomianu(wspolczynniki, k) {
+  for (let i = 0; i < k; i++) {
+    for (let j = wspolczynniki.length - 1; j > 0; j--) {
+      wspolczynniki[j - 1] = wspolczynniki[j] * j;
     }
-    return wynik;
-}
-test1 = function() {
-    var wielomian = [4, -3, 2];
-    var k = 1;
-    var oczekiwane = [8, -3];
-    var wynik = pochodnaWielomianu(wielomian, k);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 28: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i] !== oczekiwane[i]) {
-            throw new Error(`Assertion error line 32: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
-        }
-    }
-};
-test2 = function() {
-    var wielomian = [13, -6, 0, -1, -1];
-    var k = 2;
-    var oczekiwane = [156, -36, 0];
-    var wynik = pochodnaWielomianu(wielomian, k);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 42: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i] !== oczekiwane[i]) {
-            throw new Error(`Assertion error line 46: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
-        }
-    }
-}
-main = function(args) {
-    test1();
-    test2();
+    wspolczynniki.pop();
+  }
+  return wspolczynniki;
 }
 
-main(null);
+function assert(warunek, komunikat) {
+  if (!warunek) {
+    throw komunikat || "Wystąpił błąd";
+  }
+}
+
+// Testy
+function testPochodnaWielomianu() {
+  let wspolczynniki;
+  let k;
+  let wynik;
+
+  wspolczynniki = [4, -3, 2];
+  k = 1;
+  wynik = pochodnaWielomianu(wspolczynniki, k);
+  assert(JSON.stringify(wynik) === JSON.stringify([8, -3]), "Test 1 nieudany");
+
+  wspolczynniki = [6, -5, 4, -3];
+  k = 2;
+  wynik = pochodnaWielomianu(wspolczynniki, k);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([36, -20, 4]),
+    "Test 2 nieudany"
+  );
+
+  wspolczynniki = [1, 2, 3, 4];
+  k = 3;
+  wynik = pochodnaWielomianu(wspolczynniki, k);
+  assert(JSON.stringify(wynik) === JSON.stringify([24]), "Test 3 nieudany");
+}
+
+testPochodnaWielomianu();
+console.log("Wszystkie testy zakończone sukcesem");

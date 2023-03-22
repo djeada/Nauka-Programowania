@@ -1,49 +1,62 @@
-    czyPierwsza = function(n) {
-        if ((n % 2) === 0 && n !== 2) {
-            return false;
-        }
-        for (var i = 3; i <= Math.sqrt(n); i += 2) {
-            {
-                if ((n % i) === 0) {
-                    return false;
-                }
-            };
-        }
-        return true;
-    };
-    znaki = function(napis) {
-        var znaki = ([]);
-        for (var i = 0; i < napis.length; i++) {
-            {
-                if (czyPierwsza(i)) {
-                    (znaki.push(napis.charAt(i)) > 0);
-                }
-            };
-        }
-        return (znaki.slice(0));
-    };
-    listyRowne = function(a1, a2) {
-        if (a1 == null && a2 == null)
-            return true;
-        if (a1 == null || a2 == null)
-            return false;
-        if (a1.length != a2.length)
-            return false;
-        for (var i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i])
-                return false;
-        }
-        return true;
-    };
-    test1 = function() {
-        var napis = "Kaczka lubi wiosne.";
-        var wynik = (['a', 'c', 'z', 'a', 'l', ' ', 'i', 'e'].slice(0));
-        if (!listyRowne(wynik, znaki(napis))) {
-            throw new Error("Assertion error;");
-        };
-    };
-    main = function(args) {
-        test1();
-    };
+/*
+Tytuł: Znaki znajdujące się na pozycjach będących liczbami pierwszymi.
 
-    main(null);
+Treść: Otrzymasz napis. Znajdź znaki znajdujące się na pozycjach będących liczbami pierwszymi.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Lista znaków.
+
+Przykład:
+
+Dla otrzymanego napisu: "Słoń", powinna zostać zwrócona lista: ['o', 'ń'].
+*/
+
+function czyLiczbaPierwsza(n) {
+  if (n < 2) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function znakiNaPozycjachPierwszych(napis) {
+  let wynik = [];
+  for (let i = 0; i < napis.length; i++) {
+    if (czyLiczbaPierwsza(i)) {
+      wynik.push(napis[i]);
+    }
+  }
+  return wynik;
+}
+
+// Test
+
+function test() {
+  let input = "Słoń";
+  let expectedOutput = ["o", "ń"];
+  let output = znakiNaPozycjachPierwszych(input);
+
+  assert(
+    JSON.stringify(output) === JSON.stringify(expectedOutput),
+    "Test nie powiódł się dla " +
+      input +
+      ". Otrzymany wynik to " +
+      output +
+      ", a oczekiwany wynik to " +
+      expectedOutput
+  );
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

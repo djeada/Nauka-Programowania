@@ -1,33 +1,34 @@
-   odwrocNapisV1 = function(slowo) {
-       var rozdziel = slowo.split("");
-       var odwroc = rozdziel.reverse();
-       return odwroc.join("");
-   };
-   odwrocNapisV2 = function(slowo) {
-       if (slowo === "")
-           return "";
-       else
-           return odwrocNapisV2(slowo.substring(1)) + slowo.charAt(0);
-   };
-   test1 = function() {
-       var napis = "adam";
-       var oczekiwane = "mada";
-       var wynik = odwrocNapisV1(napis);
-       if (!(wynik === oczekiwane)) {
-           throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
-       }
-   };
-   test2 = function() {
-       var napis = "adam";
-       var oczekiwane = "mada";
-       var wynik = odwrocNapisV2(napis);
-       if (!(wynik === oczekiwane)) {
-           throw new Error(`Assertion error line 30: ${wynik} === ${oczekiwane}`);
-       }
-   };
-   main = function(args) {
-       test1();
-       test2();
-   };
+/*
+Tytuł: Odwróć napis.
 
-   main(null);
+Treść: Zmień otrzymany napis, tak aby zapisany był on od tyłu.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Napis.
+
+Przykład:
+
+Dla otrzymanego napisu: "barszcz", powinien zostać zwrócony napis: "zczsrab".
+*/
+
+function odwrocNapis(napis) {
+  return napis.split("").reverse().join("");
+}
+
+function test() {
+  let input = "barszcz";
+  let expectedOutput = "zczsrab";
+  let output = odwrocNapis(input);
+
+  assert(output === expectedOutput, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

@@ -15,28 +15,27 @@ Dla otrzymanych list [1, 2, 3] oraz [3, 1, 2], powinno zostać zwrócone: 5.
 
 // Funkcja mnożąca wektory
 function mnozWektory(lista1, lista2) {
-    let wynik = 0;
-    for (let i = 0; i < 3; i++) {
-        wynik += lista1[i] * lista2[i];
-    }
-    return wynik;
+  let wynik = 0;
+  for (let i = 0; i < 3; i++) {
+    wynik += lista1[i] * lista2[i];
+  }
+  return wynik;
 }
 
 // Testy
 function assert(condition, message) {
-    if (!condition) {
-        throw new Error(message || "Assertion failed");
-    }
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
 function testMnozWektory() {
-    assert(mnozWektory([1, 2, 3], [3, 1, 2]) === 5);
-    assert(mnozWektory([1, 2, 3], [3, 1, 2, 5]) === 5);
+  assert(mnozWektory([1, 2, 3], [3, 1, 2]) === 5);
+  assert(mnozWektory([1, 2, 3], [3, 1, 2, 5]) === 5);
 }
 
 function main() {
-    testMnozWektory();
-
+  testMnozWektory();
 }
 
 main();

@@ -1,37 +1,65 @@
 /*
-Otrzymujesz dwie listy n wspolczynnikow wielomianu postaci a_nx^n +
-a_(n-1)x^(n-1) + ... + a_0. Oblicz wspolczynniki wielomianu bedacego iloczynem
-otrzymanych wielomianow.
+Tytuł: Mnożenie wielomianów.
+
+Treść: Otrzymujesz dwie listy n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz współczynniki wielomianu będącego iloczynem otrzymanych wielomianów.
+
+Dane wejściowe: Dwie listy liczb naturalnych.
+
+Dane wyjściowe: Lista liczb naturalnych.
+
+Przykład:
+
+Dla otrzymanych dwóch list: [5, 0, 10, 6] oraz [1, 2, 4], zostanie zwrócona lista: [5, 10, 30, 26, 52, 24].
 */
-iloczyn = function(wspolczynniki1, wspolczynniki2) {
-    var wynik = [];
-    for (var i = 0; i < wspolczynniki1.length; i++) {
-        for (var j = 0; j < wspolczynniki2.length; j++) {
-            if (i + j >= wynik.length) {
-                wynik[i + j] = 0;
-            }
-            wynik[i + j] += wspolczynniki1[i] * wspolczynniki2[j];
-        }
+
+function mnozenieWielomianow(wielomian1, wielomian2) {
+  const wynik = new Array(wielomian1.length + wielomian2.length - 1).fill(0);
+
+  for (let i = 0; i < wielomian1.length; i++) {
+    for (let j = 0; j < wielomian2.length; j++) {
+      wynik[i + j] += wielomian1[i] * wielomian2[j];
     }
-    return wynik;
-}
-test1 = function() {
-    var wielomianA = [5, 0, 10, 6];
-    var wielomianB = [1, 2, 4];
-    var oczekiwane = [5, 10, 30, 26, 52, 24];
-    var wynik = iloczyn(wielomianA, wielomianB);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 28: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i] !== oczekiwane[i]) {
-            throw new Error(`Assertion error line 32: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
-        }
-    }
-}
-main = function(args) {
-    test1();
+  }
+
+  return wynik;
 }
 
-main(null);
-//# sourceMappingURL=Zad4.js.m
+function assert(warunek, komunikat) {
+  if (!warunek) {
+    throw komunikat || "Wystąpił błąd";
+  }
+}
+
+// Testy
+function testMnozenieWielomianow() {
+  let wielomian1;
+  let wielomian2;
+  let wynik;
+
+  wielomian1 = [5, 0, 10, 6];
+  wielomian2 = [1, 2, 4];
+  wynik = mnozenieWielomianow(wielomian1, wielomian2);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([5, 10, 30, 26, 52, 24]),
+    "Test 1 nieudany"
+  );
+
+  wielomian1 = [1, 2];
+  wielomian2 = [2, 1];
+  wynik = mnozenieWielomianow(wielomian1, wielomian2);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([2, 5, 2]),
+    "Test 2 nieudany"
+  );
+
+  wielomian1 = [1, 1];
+  wielomian2 = [1, 1];
+  wynik = mnozenieWielomianow(wielomian1, wielomian2);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([1, 2, 1]),
+    "Test 3 nieudany"
+  );
+}
+
+testMnozenieWielomianow();
+console.log("Wszystkie testy zakończone sukcesem");

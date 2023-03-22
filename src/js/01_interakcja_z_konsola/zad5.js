@@ -36,32 +36,34 @@ d) Jeśli pobierzesz liczby 1, 1, 1, 1, 1 i 1, program powinien wypisać liczbę
  
 e) Jeśli otrzymasz współrzędną $x = 2$, program powinien wypisać liczbę 57.179.
 */
-
-
 // a) Otrzymujesz współrzędną $x$. Wyznacz wartość funkcji $y = 3x + 10$ w tym punkcie.
-var x = parseInt(prompt("Podaj współrzędną x:"));
-console.log(3 * x + 10);
+const x1 = parseInt(prompt("Podaj współrzędną x:"));
+console.log(3 * x1 + 10);
 
 // b) Pobierz współczynniki $a$, $b$ oraz punkt $x$. Wyznacz wartość funkcji $y = ax + b$ w tym punkcie.
-var a = parseInt(prompt("Podaj współczynnik a:"));
-var b = parseInt(prompt("Podaj współczynnik b:"));
-var x = parseInt(prompt("Podaj współrzędną x:"));
-console.log(a * x + b);
+const a2 = parseInt(prompt("Podaj współczynnik a:"));
+const b2 = parseInt(prompt("Podaj współczynnik b:"));
+const x2 = parseInt(prompt("Podaj współrzędną x:"));
+console.log(a2 * x2 + b2);
 
 // c) Otrzymujesz współrzędną $x$. Wyznacz wartość funkcji $y = x^3 + 22 - 20$ w tym punkcie.
-var x = parseInt(prompt("Podaj współrzędną x:"));
-console.log(x ** 3 + 22 - 20);
+const x3 = parseInt(prompt("Podaj współrzędną x:"));
+console.log(x3 ** 3 + 2);
 
-// d) Pobierz współczynniki $a$, $b$, $c$, $d$, $m$, $n$ oraz punkt $x$. Wyznacz wartość funkcji $y = ax^m + bx^n + c - a$ w tym punkcie.
-var a = parseInt(prompt("Podaj współczynnik a:"));
-var b = parseInt(prompt("Podaj współczynnik b:"));
-var c = parseInt(prompt("Podaj współczynnik c:"));
-var d = parseInt(prompt("Podaj współczynnik d:"));
-var m = parseInt(prompt("Podaj współczynnik m:"));
-var n = parseInt(prompt("Podaj współczynnik n:"));
-var x = parseInt(prompt("Podaj współrzędną x:"));
-console.log(a * x ** m + b * x ** n + c - d);
+// d) Pobierz współczynniki $a$, $b$, $c$, $d$, $m$, $n$ oraz punkt $x$. Wyznacz wartość funkcji $y = ax^m + bx^n + c - d$ w tym punkcie.
+const a4 = parseInt(prompt("Podaj współczynnik a:"));
+const b4 = parseInt(prompt("Podaj współczynnik b:"));
+const c4 = parseInt(prompt("Podaj współczynnik c:"));
+const d4 = parseInt(prompt("Podaj współczynnik d:"));
+const m4 = parseInt(prompt("Podaj współczynnik m:"));
+const n4 = parseInt(prompt("Podaj współczynnik n:"));
+const x4 = parseInt(prompt("Podaj współrzędną x:"));
+console.log(a4 * x4 ** m4 + b4 * x4 ** n4 + c4 - d4);
 
 // e) Otrzymujesz współrzędną $x$. Wyznacz wartość funkcji $y = sin^3(x) \cdot cos^2(x) + e^(x^2) + log(x^3 + 2x^2 - x - 3)$ w tym punkcie.
-var x = parseInt(prompt("Podaj współrzędną x:"));
-console.log(Math.sin(x) ** 3 * Math.cos(x) ** 2 + Math.E ** (x ** 2) + Math.log(x ** 3 + 2 * x ** 2 - x - 3));
+const x5 = parseInt(prompt("Podaj współrzędną x:"));
+console.log(
+  Math.sin(x5) ** 3 * Math.cos(x5) ** 2 +
+    Math.E ** (x5 ** 2) +
+    Math.log(x5 ** 3 + 2 * x5 ** 2 - x5 - 3)
+);

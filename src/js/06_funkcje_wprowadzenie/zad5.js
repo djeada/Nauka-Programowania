@@ -14,12 +14,12 @@ Dla otrzymanych liczb: 8 i 5, powinny zostać zwrócone liczby 5 i 8.
 
 // Funkcja zamieniająca wartości zmiennych
 function zamienWartosciMiejscami(liczba_a, liczba_b) {
-    let a = liczba_a;
-    let b = liczba_b;
-    let c = a;
-    a = b;
-    b = c;
-    return [a, b];
+  let a = liczba_a;
+  let b = liczba_b;
+  let c = a;
+  a = b;
+  b = c;
+  return [a, b];
 }
 
 // Pobieranie danych od użytkownika

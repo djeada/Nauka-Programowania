@@ -1,31 +1,57 @@
 /*
-Otrzymujesz liste n wspolczynnikow wielomianu postaci a_nx^n + a_(n-1)x^(n-1) +
-... + a_0 oraz liczbe x. Oblicz wspolczynniki wielomianu bedacego wynikiem
-przemnozenia otrzymanego wielomianu przez liczbe x.
+
+Tytuł: Obliczenie iloczynu wielomianu przez skalar.
+
+Treść: Otrzymujesz listę n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbę x. Oblicz współczynniki wielomianu, który jest wynikiem pomnożenia otrzymanego wielomianu przez liczbę x.
+
+Dane wejściowe: Lista liczb naturalnych i liczba naturalna.
+
+Dane wyjściowe: Lista liczb naturalnych.
+
+Przykład:
+
+Dla listy współczynników [4, -3, 2] i liczby x = -2, zostanie zwrócona lista [-8, 6, -4].
 */
-przemnozWielomian = function(wspolczynniki, x) {
-    var wynik = [];
-    for (var i = 0; i < wspolczynniki.length; i++) {
-        wynik[i] = wspolczynniki[i] * x;
-    }
-    return wynik;
-}
-test1 = function() {
-    var wielomian = [3, 2, 1];
-    var x = 2;
-    var oczekiwane = [6, 4, 2];
-    var wynik = przemnozWielomian(wielomian, x);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 22: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i] !== oczekiwane[i]) {
-            throw new Error(`Assertion error line 26: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
-        }
-    }
-}
-main = function(args) {
-    test1();
+function mnozenieWielomianuPrzezSkalar(wspolczynniki, skalar) {
+  return wspolczynniki.map((wspolczynnik) => wspolczynnik * skalar);
 }
 
-main(null);
+function assert(warunek, komunikat) {
+  if (!warunek) {
+    throw komunikat || "Wystąpił błąd";
+  }
+}
+
+// Testy
+function testMnozenieWielomianuPrzezSkalar() {
+  let wielomian;
+  let skalar;
+  let wynik;
+
+  wielomian = [4, -3, 2];
+  skalar = -2;
+  wynik = mnozenieWielomianuPrzezSkalar(wielomian, skalar);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([-8, 6, -4]),
+    "Test 1 nieudany"
+  );
+
+  wielomian = [5, 0, -1];
+  skalar = 3;
+  wynik = mnozenieWielomianuPrzezSkalar(wielomian, skalar);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([15, 0, -3]),
+    "Test 2 nieudany"
+  );
+
+  wielomian = [0, 0, 0];
+  skalar = 5;
+  wynik = mnozenieWielomianuPrzezSkalar(wielomian, skalar);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([0, 0, 0]),
+    "Test 3 nieudany"
+  );
+}
+
+testMnozenieWielomianuPrzezSkalar();
+console.log("Wszystkie testy zakończone sukcesem");

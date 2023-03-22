@@ -17,5 +17,5 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 
 // Pętla
 for (let i = liczba - 1; i > 0; i--) {
-    console.log(i);
+  console.log(i);
 }

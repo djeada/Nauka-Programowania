@@ -14,69 +14,81 @@ i drugiej, iloraz pierwszej przez druga oraz iloczyn liczb zespolonych.
 */
 
 class Zespolona {
-    constructor(rzeczywista, urojona) {
-        this.rzeczywista = rzeczywista || 0;
-        this.urojona = urojona || 0;
-    }
+  constructor(rzeczywista, urojona) {
+    this.rzeczywista = rzeczywista || 0;
+    this.urojona = urojona || 0;
+  }
 
-    static dodaj(p1, p2) {
-        return new Zespolona(p1.rzeczywista + p2.rzeczywista, p1.urojona + p2.urojona);
-    }
+  static dodaj(p1, p2) {
+    return new Zespolona(
+      p1.rzeczywista + p2.rzeczywista,
+      p1.urojona + p2.urojona
+    );
+  }
 
-    static odejmij(p1, p2) {
-        return new Zespolona(p1.rzeczywista - p2.rzeczywista, p1.urojona - p2.urojona);
-    }
+  static odejmij(p1, p2) {
+    return new Zespolona(
+      p1.rzeczywista - p2.rzeczywista,
+      p1.urojona - p2.urojona
+    );
+  }
 
-    static mnoz(p1, p2) {
-        return new Zespolona(p1.rzeczywista * p2.rzeczywista - p1.urojona * p2.urojona, p1.rzeczywista * p2.urojona + p1.urojona * p2.rzeczywista);
-    }
+  static mnoz(p1, p2) {
+    return new Zespolona(
+      p1.rzeczywista * p2.rzeczywista - p1.urojona * p2.urojona,
+      p1.rzeczywista * p2.urojona + p1.urojona * p2.rzeczywista
+    );
+  }
 
-    static dziel(p1, p2) {
-        return new Zespolona((p1.rzeczywista * p2.rzeczywista + p1.urojona * p2.urojona) / (Math.pow(p2.rzeczywista, 2) + Math.pow(p2.urojona, 2)), (p1.urojona * p2.rzeczywista - p1.rzeczywista * p2.urojona) / (Math.pow(p2.rzeczywista, 2) + Math.pow(p2.urojona, 2)));
-    }
+  static dziel(p1, p2) {
+    return new Zespolona(
+      (p1.rzeczywista * p2.rzeczywista + p1.urojona * p2.urojona) /
+        (Math.pow(p2.rzeczywista, 2) + Math.pow(p2.urojona, 2)),
+      (p1.urojona * p2.rzeczywista - p1.rzeczywista * p2.urojona) /
+        (Math.pow(p2.rzeczywista, 2) + Math.pow(p2.urojona, 2))
+    );
+  }
 
-    toString() {
-        return `Liczba zespolona o wspolrzednych (${this.rzeczywista}, ${this.urojona})`;
-    }
+  toString() {
+    return `Liczba zespolona o wspolrzednych (${this.rzeczywista}, ${this.urojona})`;
+  }
 
-    wypisz() {
-        console.log(this.toString());
-    }
+  wypisz() {
+    console.log(this.toString());
+  }
 
-    equals(p2) {
-        return this.rzeczywista === p2.rzeczywista && this.urojona === p2.urojona;
-    }
+  equals(p2) {
+    return this.rzeczywista === p2.rzeczywista && this.urojona === p2.urojona;
+  }
 
-    notEquals(p2) {
-        return !this.equals(p2);
-    }
+  notEquals(p2) {
+    return !this.equals(p2);
+  }
 
-    modul() {
-        return Math.sqrt(Math.pow(this.rzeczywista, 2) + Math.pow(this.urojona, 2));
-    }
+  modul() {
+    return Math.sqrt(Math.pow(this.rzeczywista, 2) + Math.pow(this.urojona, 2));
+  }
 }
 
+main = function () {
+  let A = new Zespolona(9, 12);
+  let B = new Zespolona(-3, -3);
 
-main = function() {
+  console.log(`Liczba zespolona A: ${A.toString()}`);
+  console.log(`Liczba zespolona B: ${B.toString()}`);
 
-    let A = new Zespolona(9, 12);
-    let B = new Zespolona(-3, -3);
+  let C = Zespolona.dodaj(A, B);
+  let D = Zespolona.odejmij(A, B);
+  let E = Zespolona.mnoz(A, B);
+  let F = Zespolona.dziel(A, B);
 
-    console.log((`Liczba zespolona A: ${A.toString()}`));
-    console.log((`Liczba zespolona B: ${B.toString()}`));
+  console.log(`Suma A + B: ${C.toString()}`);
+  console.log(`Roznica A - B: ${D.toString()}`);
+  console.log(`Iloczyn A * B: ${E.toString()}`);
+  console.log(`Iloczyn A / B: ${F.toString()}`);
 
-    let C = Zespolona.dodaj(A, B);
-    let D = Zespolona.odejmij(A, B);
-    let E = Zespolona.mnoz(A, B);
-    let F = Zespolona.dziel(A, B);
-
-    console.log((`Suma A + B: ${C.toString()}`));
-    console.log((`Roznica A - B: ${D.toString()}`));
-    console.log((`Iloczyn A * B: ${E.toString()}`));
-    console.log((`Iloczyn A / B: ${F.toString()}`));
-
-    console.log(`Modul liczby zespolonej A: ${A.modul()}`);
-    console.log(`Modul liczby zespolonej B: ${B.modul()}`);
-}
+  console.log(`Modul liczby zespolonej A: ${A.modul()}`);
+  console.log(`Modul liczby zespolonej B: ${B.modul()}`);
+};
 
 main();

@@ -1,66 +1,58 @@
 /*
-Rozwaz gre, w ktorej w kazdym ruchu gracz moze zdobyc 3, 5 lub 10 punktow.
-Dla otrzymanej liczby N, reprezentujacej calkowita liczbe punktow,
-oblicz na ile sposobow gracz moze wygrac gre.
+Tytuł: Gra.	
+
+Treść: W grze, w każdym ruchu gracz może zdobyć 3, 5 lub 10 punktów. Oblicz przy użyciu rekurencji, ile sposobów istnieje, aby gracz wygrał grę, gdy ma do dyspozycji N punktów.
+
+Dane wejściowe: Liczba naturalna N.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+Dla N = 20, powinna zostać zwrócona liczba: 4.
+
 */
-class ArraySet extends Set {
-    add(arr) {
-        super.add(arr.toString());
-    }
-    has(arr) {
-        return super.has(arr.toString());
-    }
-}
-mozliweWygrane = function(n) {
-    var wynik = new ArraySet();
-    var mozliweWygraneWew = function(tablica) {
-        var suma = 0;
-        for (var i = 0; i < tablica.length; i++) {
-            suma += tablica[i];
-        }
-        if (suma > n)
-            return;
 
-        if (suma === n) {
-            sorted = tablica.sort(function(a, b) {
-                return a - b;
-            });
-            wynik.add(sorted.slice(0));
-            return;
-        }
-        tablica.push(3);
-        mozliweWygraneWew(tablica.slice(0));
-        tablica.pop();
-        tablica.push(5);
-        mozliweWygraneWew(tablica.slice(0));
-        tablica.pop();
-        tablica.push(10);
-        mozliweWygraneWew(tablica.slice(0));
-        tablica.pop();
-    }
-    mozliweWygraneWew([]);
-    return wynik.size;
-}
-test1 = function() {
-    var n = 10;
-    var oczekiwane = 2;
-    var wynik = mozliweWygrane(n);
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 55: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
-}
-test2 = function() {
-    var n = 20;
-    var oczekiwane = 4;
-    var wynik = mozliweWygrane(n);
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 63: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
-}
-main = function(args) {
-    test1();
-    test2();
+function liczbaSposobowWygranej(n) {
+  if (n === 0) {
+    return 1;
+  }
+  if (n < 0) {
+    return 0;
+  }
+  return (
+    liczbaSposobowWygranej(n - 3) +
+    liczbaSposobowWygranej(n - 5) +
+    liczbaSposobowWygranej(n - 10)
+  );
 }
 
+function assert(warunek, komunikat) {
+  if (!warunek) {
+    throw komunikat || "Wystąpił błąd";
+  }
+}
 
-main()
+// Testy
+function testLiczbaSposobowWygranej() {
+  let n;
+  let wynik;
+
+  n = 6;
+  wynik = liczbaSposobowWygranej(n);
+  assert(wynik === 2, "Test 1 nieudany");
+
+  n = 10;
+  wynik = liczbaSposobowWygranej(n);
+  assert(wynik === 2, "Test 2 nieudany");
+
+  n = 20;
+  wynik = liczbaSposobowWygranej(n);
+  assert(wynik === 4, "Test 3 nieudany");
+
+  n = 25;
+  wynik = liczbaSposobowWygranej(n);
+  assert(wynik === 5, "Test 4 nieudany");
+}
+
+testLiczbaSposobowWygranej();
+console.log("Wszystkie testy zakończone sukcesem");

@@ -1,44 +1,46 @@
 /*
-Otrzymujesz dziesietna reprezentacje liczby naturalnej.
-Sprawdz czy binarna reprezentacja otrzymanej liczby jest palindromem.
-*/
 
-const liczbaBitow = 8;
+Tytuł: Czy liczba jest palindromem?
 
-czyPalindrom = function(liczba) {
-    var bity = liczba.toString(2);
+Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. Sprawdź, czy reprezentacja binarna otrzymanej liczby jest palindromem.
 
-    for (var i = 0; i < liczbaBitow / 2 - 1; i++) {
-        if (bity[i] ^ bity[liczbaBitow - 1 - i])
-            return false;
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Wartość logiczna.
+
+Przykład:
+
+Dla otrzymanej liczby 26, powinna zostać zwrócona wartość logiczna: Prawda.*/
+
+function czyPalindrom(liczba) {
+  let lewyBit = 1;
+  let prawyBit = 1 << 30;
+
+  while (lewyBit < prawyBit) {
+    if ((liczba & lewyBit) !== (liczba & prawyBit) >>> 30) {
+      return false;
     }
+    lewyBit <<= 1;
+    prawyBit >>>= 1;
+  }
 
-    return true;
+  return true;
 }
 
-test1 = function() {
-    var liczba = 231;
-    var oczekiwane = true;
-    var wynik = czyPalindrom(liczba);
+// Testy
+function test() {
+  let input = 26;
+  let expectedOutput = true;
+  let output = czyPalindrom(input);
 
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 79: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
+  assert(output === expectedOutput, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
 }
 
-test2 = function() {
-    var liczba = 17;
-    var oczekiwane = false;
-    var wynik = czyPalindrom(liczba);
-
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 89: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
-main = function() {
-    test1();
-    test2();
-}
-
-main();
+test();

@@ -20,49 +20,58 @@ W podpunkcie b) powinna zostać zwrócona lista: [4, 2, 6, 3].
 */
 
 function polaczListy(lista1, lista2) {
-    var wynik = [];
-    for (var i = 0; i < lista1.length; i++) {
-        wynik.push(lista1[i]);
-    }
-    for (var i = 0; i < lista2.length; i++) {
-        wynik.push(lista2[i]);
-    }
-    return wynik;
+  var wynik = [];
+  for (var i = 0; i < lista1.length; i++) {
+    wynik.push(lista1[i]);
+  }
+  for (var j = 0; j < lista2.length; j++) {
+    wynik.push(lista2[j]);
+  }
+  return wynik;
 }
 
 function polaczListy2(lista1, lista2) {
-    var wynik = [];
-    for (var i = 0; i < lista1.length; i++) {
-        if (i % 2 === 0) {
-            wynik.push(lista2[i]);
-        } else {
-            wynik.push(lista1[i]);
-        }
+  var wynik = [];
+  for (var i = 0; i < lista1.length || i < lista2.length; i++) {
+    if (i % 2 === 0 && lista2[i] !== undefined) {
+      wynik.push(lista2[i]);
+    } else if (lista1[i] !== undefined) {
+      wynik.push(lista1[i]);
     }
-    return wynik;
+  }
+  return wynik;
 }
-
 
 // Testy
 function assert(condition, message) {
-    if (!condition) {
-        throw new Error(message || "Assertion failed");
-    }
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
 function testPolaczListy() {
-    assert(polaczListy([1, 2, 3], [4, 5, 6]).toString() === [1, 2, 3, 4, 5, 6].toString());
-    assert(polaczListy([1, 2, 3], [4, 5, 6, 7, 8]).toString() === [1, 2, 3, 4, 5, 6, 7, 8].toString());
+  assert(
+    polaczListy([1, 2, 3], [4, 5, 6]).toString() ===
+      [1, 2, 3, 4, 5, 6].toString()
+  );
+  assert(
+    polaczListy([1, 2, 3], [4, 5, 6, 7, 8]).toString() ===
+      [1, 2, 3, 4, 5, 6, 7, 8].toString()
+  );
 }
 
 function testPolaczListy2() {
-    assert(polaczListy2([1, 2, 3], [4, 5, 6]).toString() === [4, 2, 6].toString());
-    assert(polaczListy2([1, 2, 3], [4, 5, 6, 7, 8]).toString() === [4, 2, 6].toString());
+  assert(
+    polaczListy2([1, 2, 3], [4, 5, 6]).toString() === [4, 2, 6].toString()
+  );
+  assert(
+    polaczListy2([1, 2, 3], [4, 5, 6, 7, 8]).toString() === [4, 2, 6].toString()
+  );
 }
 
 function main() {
-    testPolaczListy();
-    testPolaczListy2();
+  testPolaczListy();
+  testPolaczListy2();
 }
 
 main();

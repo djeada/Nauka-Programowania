@@ -1,42 +1,53 @@
-    odlegloscHammingaV1 = function(napisA, napisB) {
-        if (napisA.length !== napisB.length) {
-            return -1;
-        }
-        var wynik = 0;
-        for (var i = 0; i < napisA.length; i++) {
-            {
-                if ((function(c) {
-                        return c.charCodeAt == null ? c : c.charCodeAt(0);
-                    })(napisA.charAt(i)) != (function(c) {
-                        return c.charCodeAt == null ? c : c.charCodeAt(0);
-                    })(napisB.charAt(i))) {
-                    wynik++;
-                }
-            };
-        }
-        return wynik;
-    };
-    test1 = function() {
-        var napisA = "xxbab";
-        var napisB = "bbabb";
-        var oczekiwane = 4;
-        var wynik = odlegloscHammingaV1(napisA, napisB);
-        if (!(wynik === oczekiwane)) {
-            throw new Error(`Assertion error line 29: ${wynik} === ${oczekiwane}`);
-        }
-    };
-    test2 = function() {
-        var napisA = "xxbab";
-        var napisB = "bbabb";
-        var oczekiwane = 4;
-        var wynik = odlegloscHammingaV1(napisA, napisB);
-        if (!(wynik === oczekiwane)) {
-            throw new Error(`Assertion error line 29: ${wynik} === ${oczekiwane}`);
-        }
-    };
-    main = function(args) {
-        test1();
-        test2();
-    };
+/*
+Tytuł: Odległość Hamminga.
 
-    main(null);
+Treść: Otrzymujesz dwa napisy o równej długości. Oblicz odległość Hamminga między dwoma otrzymanymi napisami. Odległość Hamminga to miara odmienności dwóch napisów o takiej samej długości, zdefiniowana jako liczba pozycji, na których napisy mają różne znaki.
+
+Dane wejściowe: Dwa napisy.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+
+Dla otrzymanych napisów: “adam” i “axam”, powinna zostać zwrócona liczba: 1.
+*/
+
+function odlegloscHamminga(napis1, napis2) {
+  let odleglosc = 0;
+  for (let i = 0; i < napis1.length; i++) {
+    if (napis1[i] !== napis2[i]) {
+      odleglosc++;
+    }
+  }
+  return odleglosc;
+}
+
+// Test
+
+function test() {
+  let input1 = "adam";
+  let input2 = "axam";
+  let expectedOutput = 1;
+  let output = odlegloscHamminga(input1, input2);
+
+  assert(
+    output === expectedOutput,
+    'Test nie powiódł się dla "' +
+      input1 +
+      '" i "' +
+      input2 +
+      '". Otrzymany wynik to ' +
+      output +
+      ", a oczekiwany wynik to " +
+      expectedOutput
+  );
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

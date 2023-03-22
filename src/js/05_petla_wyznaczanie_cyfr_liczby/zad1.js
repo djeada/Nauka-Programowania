@@ -18,7 +18,7 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 // Pętla
 let cyfry = 0;
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
-    cyfry++;
+  cyfry++;
 }
 
 // Wypisanie wyniku

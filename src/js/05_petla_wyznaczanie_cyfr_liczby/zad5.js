@@ -18,15 +18,15 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 // Pętla
 let palindrom = true;
 for (let i = liczba, j = 0; i > 0; i = Math.floor(i / 10), j++) {
-    if (Math.floor(liczba / 10 ** j) % 10 !== i % 10) {
-        palindrom = false;
-        break;
-    }
+  if (Math.floor(liczba / 10 ** j) % 10 !== i % 10) {
+    palindrom = false;
+    break;
+  }
 }
 
 // Wypisanie wyniku
 if (palindrom) {
-    console.log("Liczba jest palindromem.");
+  console.log("Liczba jest palindromem.");
 } else {
-    console.log("Liczba nie jest palindromem.");
+  console.log("Liczba nie jest palindromem.");
 }

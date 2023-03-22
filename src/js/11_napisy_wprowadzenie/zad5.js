@@ -1,23 +1,62 @@
-   wypiszPoziomo = function(napis, k) {
-       for (var i = 0; i < napis.length; i += k) {
-           {
-               process.stdout.write(napis.charAt(i) + ", ");
-           };
-       }
-       console.info("\n");
-   };
-   wypiszPionowo = function(napis, k) {
-       for (var i = 0; i < napis.length; i += k) {
-           {
-               console.info(napis.charAt(i));
-           };
-       }
-   };
-   main = function(args) {
-       var napis = "hej dzieci jesli chcecie zobaczyc smerfow las";
-       var k = 3;
-       wypiszPoziomo(napis, k);
-       wypiszPionowo(napis, k);
-   };
+/*
+Tytuł: Wypisz co k-ty znak napisu poziomo i pionowo.
 
-   main(null);
+Treść: Otrzymasz napis oraz liczbę k.
+
+a) Wypisz co k-ty znak napisu poziomo, rozdzielając znaki spacjami.
+
+b) Wypisz co k-ty znak napisu pionowo, rozdzielając znaki enterami.
+
+Dane wejściowe: Napis oraz liczba.
+
+Dane wyjściowe: Napis.
+
+Przykład:
+
+a) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostać zwrócony napis: "z h n".
+
+b) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostać zwrócony napis:
+    
+    z
+    h
+    n
+*/
+
+function coKtyPoziomo(napis, k) {
+  let wynik = "";
+  for (let i = k - 1; i < napis.length; i += k) {
+    wynik += napis[i] + " ";
+  }
+  return wynik.trim();
+}
+
+function coKtyPionowo(napis, k) {
+  let wynik = "";
+  for (let i = k - 1; i < napis.length; i += k) {
+    wynik += napis[i] + "\n";
+  }
+  return wynik.trim();
+}
+
+// Testy
+
+function test() {
+  let input1 = "Grzechotnik";
+  let input2 = 3;
+  let expectedOutput1 = "z h n";
+  let expectedOutput2 = "z\nh\nn";
+  let output1 = coKtyPoziomo(input1, input2);
+  let output2 = coKtyPionowo(input1, input2);
+
+  assert(output1 === expectedOutput1, "Test nie powiódł się");
+  assert(output2 === expectedOutput2, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

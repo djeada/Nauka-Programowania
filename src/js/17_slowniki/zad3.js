@@ -7,99 +7,90 @@ b) Zwrocenie wypozyczonej ksiazki przez czytelnika.
 c) Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
 */
 
-dodajKsiazke = function(lista, uzytkownik, ksiazka) {
-    if (lista[uzytkownik] !== undefined) {
+dodajKsiazke = function (lista, uzytkownik, ksiazka) {
+  if (lista[uzytkownik] !== undefined) {
+    if (lista[uzytkownik].indexOf(ksiazka) == -1)
+      lista[uzytkownik].push(ksiazka);
+    else console.log("Uzytkownik juz wypozyczyl ta ksiazke.");
+  } else {
+    var ksiazki = [ksiazka];
+    lista[uzytkownik] = ksiazki;
+  }
+};
 
-        if (lista[uzytkownik].indexOf(ksiazka) == -1)
-            lista[uzytkownik].push(ksiazka);
+usunKsiazke = function (lista, uzytkownik, ksiazka) {
+  if (lista[uzytkownik] === undefined) {
+    console.log("Podany uzytkownik nie znajduje sie w liscie.");
+    return;
+  }
 
-        else
-            console.log("Uzytkownik juz wypozyczyl ta ksiazke.");
-    } else {
-        var ksiazki = [ksiazka];
-        lista[uzytkownik] = ksiazki;
-    }
-}
+  if (lista[uzytkownik].indexOf(ksiazka) != -1)
+    lista[uzytkownik].splice(lista[uzytkownik].indexOf(ksiazka), 1);
+  else console.log("Uzytkownik nie wypozyczyl tej ksiazki.");
+};
 
-usunKsiazke = function(lista, uzytkownik, ksiazka) {
-    if (lista[uzytkownik] === undefined) {
-        console.log("Podany uzytkownik nie znajduje sie w liscie.");
-        return;
-    }
+wyswietlKsiazki = function (lista, uzytkownik) {
+  if (lista[uzytkownik] === undefined) {
+    console.log("Podany uzytkownik nie znajduje sie w liscie.");
+    return;
+  }
 
-    if (lista[uzytkownik].indexOf(ksiazka) != -1)
-        lista[uzytkownik].splice(lista[uzytkownik].indexOf(ksiazka), 1);
+  console.log("Uzytkownik " + uzytkownik + " wypozyczyl nastepujace ksiazki: ");
 
-    else
-        console.log("Uzytkownik nie wypozyczyl tej ksiazki.");
-}
+  for (var ksiazka of lista[uzytkownik]) console.log(ksiazka);
+};
 
-wyswietlKsiazki = function(lista, uzytkownik) {
-    if (lista[uzytkownik] === undefined) {
-        console.log("Podany uzytkownik nie znajduje sie w liscie.");
-        return;
-    }
+wyswietlWszystkieKsiazki = function (lista) {
+  for (var it = lista.begin(); it != lista.end(); it++) {
+    wyswietlKsiazki(lista, it.key);
+    console.log();
+  }
+};
 
-    console.log("Uzytkownik " + uzytkownik + " wypozyczyl nastepujace ksiazki: ");
+testDodajKsiazke = function () {
+  var lista = {};
 
-    for (var ksiazka of lista[uzytkownik])
-        console.log(ksiazka);
-}
+  dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
+  oczekiwane = 1;
+  wynik = lista["Jan Kowalski"].length;
+  if (wynik != oczekiwane)
+    throw new Error(`Assertion error line 164: ${wynik} != ${oczekiwane}`);
 
+  dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
+  oczekiwane = 1;
+  wynik = lista["Jan Kowalski"].length;
 
-wyswietlWszystkieKsiazki = function(lista) {
-    for (var it = lista.begin(); it != lista.end(); it++) {
-        wyswietlKsiazki(lista, it.key);
-        console.log();
-    }
-}
+  if (wynik != oczekiwane)
+    throw new Error(`Assertion error line 169: ${wynik} != ${oczekiwane}`);
 
-testDodajKsiazke = function() {
-    var lista = {}
+  dodajKsiazke(lista, "Jan Kowalski", "Wladca Pierscieni");
+  oczekiwane = 2;
+  wynik = lista["Jan Kowalski"].length;
+  if (wynik != oczekiwane)
+    throw new Error(`Assertion error line 174: ${wynik} != ${oczekiwane}`);
+};
 
-    dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
-    oczekiwane = 1
-    wynik = lista["Jan Kowalski"].length
-    if (wynik != oczekiwane)
-        throw new Error(`Assertion error line 164: ${wynik} != ${oczekiwane}`);
+testUsunKsiazke = function () {
+  var lista = {};
 
-    dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
-    oczekiwane = 1
-    wynik = lista["Jan Kowalski"].length
+  dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
+  dodajKsiazke(lista, "Jan Kowalski", "Wladca Pierscieni");
+  usunKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
+  oczekiwane = 1;
+  wynik = lista["Jan Kowalski"].length;
+  if (wynik != oczekiwane)
+    throw new Error(`Assertion error line 184: ${wynik} != ${oczekiwane}`);
 
-    if (wynik != oczekiwane)
-        throw new Error(`Assertion error line 169: ${wynik} != ${oczekiwane}`);
+  usunKsiazke(lista, "Jan Kowalski", "Wladca Pierscieni");
+  oczekiwane = 0;
+  wynik = lista["Jan Kowalski"].length;
+  if (wynik != oczekiwane)
+    throw new Error(`Assertion error line 189: ${wynik} != ${oczekiwane}`);
+};
 
-    dodajKsiazke(lista, "Jan Kowalski", "Wladca Pierscieni");
-    oczekiwane = 2
-    wynik = lista["Jan Kowalski"].length
-    if (wynik != oczekiwane)
-        throw new Error(`Assertion error line 174: ${wynik} != ${oczekiwane}`);
-}
-
-
-testUsunKsiazke = function() {
-    var lista = {}
-
-    dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
-    dodajKsiazke(lista, "Jan Kowalski", "Wladca Pierscieni");
-    usunKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
-    oczekiwane = 1
-    wynik = lista["Jan Kowalski"].length
-    if (wynik != oczekiwane)
-        throw new Error(`Assertion error line 184: ${wynik} != ${oczekiwane}`);
-
-    usunKsiazke(lista, "Jan Kowalski", "Wladca Pierscieni");
-    oczekiwane = 0
-    wynik = lista["Jan Kowalski"].length
-    if (wynik != oczekiwane)
-        throw new Error(`Assertion error line 189: ${wynik} != ${oczekiwane}`);
-}
-
-
-main = function() {
-    testDodajKsiazke();
-    testUsunKsiazke();
-}
+main = function () {
+  testDodajKsiazke();
+  testUsunKsiazke();
+};
 
 main();

@@ -14,33 +14,33 @@ Dla otrzymanej listy ['A', 'B', 'A', 'B', 'B'] powinna zostać zwrócona liczba 
 
 // Funkcja licząca ile razy samochody mijają się na drodze
 function liczbaMijajacychSieSamochodow(listaSamochodow) {
-    var samochodyA = 0;
-    var liczbaMijajacych = 0;
+  var samochodyA = 0;
+  var liczbaMijajacych = 0;
 
-    for (var i = 0; i < listaSamochodow.length; i++) {
-        if (listaSamochodow[i] === 'A') {
-            samochodyA++;
-        } else if (listaSamochodow[i] === 'B') {
-            liczbaMijajacych += samochodyA;
-        }
+  for (var i = 0; i < listaSamochodow.length; i++) {
+    if (listaSamochodow[i] === "A") {
+      samochodyA++;
+    } else if (listaSamochodow[i] === "B") {
+      liczbaMijajacych += samochodyA;
     }
+  }
 
-    return liczbaMijajacych;
+  return liczbaMijajacych;
 }
 
 // Testy
 function assert(condition, message) {
-    if (!condition) {
-        throw new Error(message || "Assertion failed");
-    }
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
 function testLiczbaMijajacychSieSamochodow() {
-    assert(liczbaMijajacychSieSamochodow(['A', 'B', 'A', 'B', 'B']) === 5);
-    assert(liczbaMijajacychSieSamochodow(['A', 'A', 'A', 'B', 'B']) === 6);
-    assert(liczbaMijajacychSieSamochodow(['A', 'B', 'A', 'A', 'B']) === 4);
-    assert(liczbaMijajacychSieSamochodow(['B', 'B', 'A', 'A', 'A']) === 0);
-    assert(liczbaMijajacychSieSamochodow(['A', 'A', 'A', 'A', 'A']) === 0);
+  assert(liczbaMijajacychSieSamochodow(["A", "B", "A", "B", "B"]) === 5);
+  assert(liczbaMijajacychSieSamochodow(["A", "A", "A", "B", "B"]) === 6);
+  assert(liczbaMijajacychSieSamochodow(["A", "B", "A", "A", "B"]) === 4);
+  assert(liczbaMijajacychSieSamochodow(["B", "B", "A", "A", "A"]) === 0);
+  assert(liczbaMijajacychSieSamochodow(["A", "A", "A", "A", "A"]) === 0);
 }
 
 testLiczbaMijajacychSieSamochodow();

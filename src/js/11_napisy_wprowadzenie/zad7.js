@@ -1,36 +1,43 @@
-    zamienV1 = function(napis) {
-        if (napis.length === 0) {
-            return "";
-        }
-        var wynik = ""; {
-            var tablica = (napis).split('');
-            for (var i = 0; i < tablica.length; i++) {
-                var numer = tablica[i]; {
-                    wynik += numer.charCodeAt(0) + ", ";
-                }
-            }
-        }
-        return wynik.substring(0, wynik.length - 2);
-    };
-    test1 = function() {
-        var napis = "pacZka!";
-        var oczekiwane = "112, 97, 99, 90, 107, 97, 33";
-        var wynik = zamienV1(napis);
-        if (!(wynik === oczekiwane)) {
-            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
-        }
-    };
-    test2 = function() {
-        var napis = "";
-        var oczekiwane = "";
-        var wynik = zamienV1(napis);
-        if (!(wynik === oczekiwane)) {
-            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
-        }
-    };
-    main = function(args) {
-        test1();
-        test2();
-    };
+/*
+Tytuł: Zamień znaki na kody ASCII.
 
-    main(null);
+Treść: Otrzymasz napis. Zmień wszystkie znaki w napisie na odpowiadające im numery w tablicy ASCII. Zastąp otrzymany napis napisem składającym się z otrzymanych numerów, oddzielonych przecinkami.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Napis.
+
+Przykład:
+
+Dla otrzymanego napisu: "Robot", powinien zostać zwrócony napis: "82, 111, 98, 111, 116".
+*/
+
+function zamienNaKodyASCII(napis) {
+  let wynik = "";
+  for (let i = 0; i < napis.length; i++) {
+    wynik += napis.charCodeAt(i);
+    if (i !== napis.length - 1) {
+      wynik += ", ";
+    }
+  }
+  return wynik;
+}
+
+// Testy
+
+function test() {
+  let input = "Robot";
+  let expectedOutput = "82, 111, 98, 111, 116";
+  let output = zamienNaKodyASCII(input);
+
+  assert(output === expectedOutput, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

@@ -17,9 +17,9 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 
 // Porównanie ze stałą
 if (liczba > 0) {
-    console.log("Liczba jest dodatnia");
+  console.log("Liczba jest dodatnia");
 } else if (liczba < 0) {
-    console.log("Liczba jest ujemna");
+  console.log("Liczba jest ujemna");
 } else {
-    console.log("Liczba jest zerem");
+  console.log("Liczba jest zerem");
 }

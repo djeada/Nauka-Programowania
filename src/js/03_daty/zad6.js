@@ -21,27 +21,35 @@ const rok = parseInt(prompt("Podaj rok:"));
 
 // Sprawdzenie, czy liczby są poprawne
 if (dzien > 0 && miesiac > 0 && rok > 0) {
-    // Sprawdzenie, czy miesiąc jest poprawny
-    if (miesiac < 13) {
-        // Sprawdzenie, czy rok jest przestępny
-        if (rok % 4 === 0 && rok % 100 !== 0 || rok % 400 === 0) {
-            // Sprawdzenie, czy dzień jest poprawny
-            if (dzien < 30 || (dzien === 30 && miesiac !== 2) || (dzien === 29 && miesiac === 2)) {
-                console.log("Data jest poprawna");
-            } else {
-                console.log("Data jest niepoprawna");
-            }
-        } else {
-            // Sprawdzenie, czy dzień jest poprawny
-            if (dzien < 29 || (dzien === 29 && miesiac !== 2) || (dzien === 28 && miesiac === 2)) {
-                console.log("Data jest poprawna");
-            } else {
-                console.log("Data jest niepoprawna");
-            }
-        }
-    } else {
+  // Sprawdzenie, czy miesiąc jest poprawny
+  if (miesiac < 13) {
+    // Sprawdzenie, czy rok jest przestępny
+    if ((rok % 4 === 0 && rok % 100 !== 0) || rok % 400 === 0) {
+      // Sprawdzenie, czy dzień jest poprawny
+      if (
+        dzien < 30 ||
+        (dzien === 30 && miesiac !== 2) ||
+        (dzien === 29 && miesiac === 2)
+      ) {
+        console.log("Data jest poprawna");
+      } else {
         console.log("Data jest niepoprawna");
+      }
+    } else {
+      // Sprawdzenie, czy dzień jest poprawny
+      if (
+        dzien < 29 ||
+        (dzien === 29 && miesiac !== 2) ||
+        (dzien === 28 && miesiac === 2)
+      ) {
+        console.log("Data jest poprawna");
+      } else {
+        console.log("Data jest niepoprawna");
+      }
     }
-} else {
+  } else {
     console.log("Data jest niepoprawna");
+  }
+} else {
+  console.log("Data jest niepoprawna");
 }

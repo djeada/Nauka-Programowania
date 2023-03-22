@@ -1,85 +1,108 @@
 /*
-Otrzymujesz napis. Przy uzyciu operatorow bitowych:
-a) Zamien wielkie litery na male litery.
-b) Zamien male litery na wielkie litery.
-c) Zamien male litery na wielkie litery i wielkie litery na male litery.
+
+Tytuł: Zmiana wielkości liter.
+
+Treść: Otrzymujesz napis. Zaimplementuj następujące operacje przy użyciu operatorów bitowych:
+
+a) Zamień wielkie litery na małe litery.
+
+b) Zamień małe litery na wielkie litery.
+
+c) Zamień małe litery na wielkie litery i wielkie litery na małe litery.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Napis.
+
+Przykład:
+
+a) Dla otrzymanego napisu: "Test", powinien zostać zwrócony napis: "test".
+
+b) Dla otrzymanego napisu: "Test", powinien zostać zwrócony napis: "TEST".
+
+c) Dla otrzymanego napisu: "Test", powinien zostać zwrócony napis: "tEST".
 */
 
-wielkieNaMale = function(slowo) {
-    var wynik = "";
-
-    for (const litera of slowo)
-        wynik += String.fromCharCode(litera.charCodeAt() | ' '.charCodeAt());
-
-    return wynik;
-}
-
-
-maleNaWielkie = function(slowo) {
-    var wynik = "";
-
-    for (const litera of slowo)
-        wynik += String.fromCharCode(litera.charCodeAt() & '_'.charCodeAt());
-
-    return wynik;
-}
-
-
-odwrocWielkoscLiter = function(slowo) {
-    var wynik = "";
-
-    for (const litera of slowo) {
-
-        if (litera >= 'a' && litera <= 'z')
-            wynik += String.fromCharCode(litera.charCodeAt() ^ ' '.charCodeAt());
-
-        else if (litera >= 'A' && litera <= 'Z')
-            wynik += String.fromCharCode(litera.charCodeAt() ^ ' '.charCodeAt());
-
-        else
-            wynik += litera;
+function zamienNaMaleLitery(napis) {
+  let wynik = "";
+  for (let i = 0; i < napis.length; i++) {
+    const kod = napis.charCodeAt(i);
+    if (kod >= 65 && kod <= 90) {
+      wynik += String.fromCharCode(kod + 32);
+    } else {
+      wynik += napis[i];
     }
-
-    return wynik;
+  }
+  return wynik;
 }
 
-
-test1 = function() {
-    var slowo = "KURCZAKU";
-    var oczekiwane = "kurczaku";
-    var wynik = wielkieNaMale(slowo);
-    if (oczekiwane !== wynik) {
-        throw new Error(`Assertion error line 25: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+function zamienNaWielkieLitery(napis) {
+  let wynik = "";
+  for (let i = 0; i < napis.length; i++) {
+    const kod = napis.charCodeAt(i);
+    if (kod >= 97 && kod <= 122) {
+      wynik += String.fromCharCode(kod - 32);
+    } else {
+      wynik += napis[i];
     }
+  }
+  return wynik;
 }
 
-
-test2 = function() {
-    var slowo = "piesek";
-    var oczekiwane = "PIESEK";
-    var wynik = maleNaWielkie(slowo);
-
-    if (oczekiwane !== wynik) {
-        throw new Error(`Assertion error line 35: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+function zamienLitery(napis) {
+  let wynik = "";
+  for (let i = 0; i < napis.length; i++) {
+    const kod = napis.charCodeAt(i);
+    if (kod >= 65 && kod <= 90) {
+      wynik += String.fromCharCode(kod + 32);
+    } else if (kod >= 97 && kod <= 122) {
+      wynik += String.fromCharCode(kod - 32);
+    } else {
+      wynik += napis[i];
     }
+  }
+  return wynik;
 }
 
+// Testy
 
-test3 = function() {
-    var slowo = "wszedl Kotek na PloteK i mrUga";
-    var oczekiwane = "WSZEDL kOTEK NA pLOTEk I MRuGA";
-    var wynik = odwrocWielkoscLiter(slowo);
+function testZamienNaMaleLitery() {
+  const input = "TeST nAPIsu";
+  const expectedOutput = "test napisu";
+  const output = zamienNaMaleLitery(input);
 
-    if (oczekiwane !== wynik) {
-        throw new Error(`Assertion error line 45: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
+  assert(output === expectedOutput, `Test nie powiódł się dla ${input}`);
+  console.log("Test przeszedł pomyślnie");
 }
 
+function testZamienNaWielkieLitery() {
+  const input = "TeST nAPIsu";
+  const expectedOutput = "TEST NAPISU";
+  const output = zamienNaWielkieLitery(input);
 
-main = function() {
-    test1();
-    test2();
-    test3();
+  assert(output === expectedOutput, `Test nie powiódł się dla ${input}`);
+  console.log("Test przeszedł pomyślnie");
+}
+
+function testZamienLitery() {
+  const input = "TeST nAPIsu";
+  const expectedOutput = "tEst NapIsU";
+  const output = zamienLitery(input);
+
+  assert(output === expectedOutput, `Test nie powiódł się dla ${input}`);
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
+}
+
+function main() {
+  testZamienNaMaleLitery();
+  testZamienNaWielkieLitery();
+  testZamienLitery();
 }
 
 main();

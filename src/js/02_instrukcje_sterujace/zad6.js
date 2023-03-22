@@ -21,7 +21,7 @@ const liczba_d = parseInt(prompt("Podaj czwartą liczbę:"));
 // Znalezienie maksimum przy pomocy instrukcji warunkowej
 const maks_ab = liczba_a > liczba_b ? liczba_a : liczba_b;
 const maks_cd = liczba_c > liczba_d ? liczba_c : liczba_d;
-const maks = maks_ab > maks_cd ? maks_ab : maks_cd
+const maks = maks_ab > maks_cd ? maks_ab : maks_cd;
 
 // Wypisanie wyniku
 console.log(maks);

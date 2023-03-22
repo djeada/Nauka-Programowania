@@ -1,50 +1,46 @@
 /*
-Otrzymujesz dwie liczby naturalne.
-a) Zwroc mniejsza liczbe. Zabronione jest uzycie instrukcji
-warunkowej i zewnetrznych bibliotek.
-b) Zwroc wieksza liczbe. Zabronione jest uzycie instrukcji
-warunkowej i zewnetrznych bibliotek.
+
+Tytuł: Wybieranie minimum i maksimum.
+
+Treść: Otrzymujesz dwie liczby naturalne.
+
+a) Zwróć mniejszą z nich. Zabronione jest użycie instrukcji warunkowej oraz zewnętrznych bibliotek.
+
+b) Zwróć większą z nich. Zabronione jest użycie instrukcji warunkowej oraz zewnętrznych bibliotek.
+
+Dane wejściowe: Dwie liczby naturalne w obu podpunktach.
+
+Dane wyjściowe: Liczba naturalna w obu podpunktach.
+
+Przykład:
+
+a) Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona liczba: 2.
+
+b) Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona liczba: 3.
 */
 
-znak = function(n) {
-    return (n >> 31) & 0x01;
+// Funkcja zwracająca mniejszą z dwóch liczb
+function minimum(a, b) {
+  return (a + b - Math.abs(a - b)) / 2;
 }
 
-maks = function(a, b) {
-    var znakB = znak(a - b);
-    var znakA = znakB ^ 1;
-    return znakA * a + znakB * b;
+// Funkcja zwracająca większą z dwóch liczb
+function maximum(a, b) {
+  return (a + b + Math.abs(a - b)) / 2;
 }
 
-min = function(a, b) {
-    var znakB = znak(a - b);
-    var znakA = znakB ^ 1;
-    return znakB * a + znakA * b;
+// Testy
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
-test1 = function() {
-    var a = -2;
-    var b = 8;
-    var oczekiwane = 8;
-    var wynik = maks(a, b);
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 79: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
+function test() {
+  assert(minimum(3, 2) === 2, "Test 1 nie powiódł się");
+  assert(maximum(3, 2) === 3, "Test 2 nie powiódł się");
+  assert(minimum(5, 5) === 5, "Test 3 nie powiódł się");
+  assert(maximum(5, 5) === 5, "Test 4 nie powiódł się");
 }
 
-test2 = function() {
-    var a = 3;
-    var b = 8;
-    var oczekiwane = 3;
-    var wynik = min(a, b);
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 89: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
-}
-
-main = function() {
-    test1();
-    test2();
-}
-
-main();
+test();

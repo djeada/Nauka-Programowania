@@ -34,27 +34,27 @@ e) Resztę z dzielenia: 3
 
 // Funkcja zwracająca sumę
 function zwracajSuma(liczba_a, liczba_b) {
-    return liczba_a + liczba_b;
+  return liczba_a + liczba_b;
 }
 
 // Funkcja zwracająca różnicę
 function zwracajRoznica(liczba_a, liczba_b) {
-    return liczba_b - liczba_a;
+  return liczba_b - liczba_a;
 }
 
 // Funkcja zwracająca iloczyn
 function zwracajIloczyn(liczba_a, liczba_b) {
-    return liczba_a * liczba_b;
+  return liczba_a * liczba_b;
 }
 
 // Funkcja zwracająca iloraz
 function zwracajIloraz(liczba_a, liczba_b) {
-    return liczba_a / liczba_b;
+  return liczba_a / liczba_b;
 }
 
 // Funkcja zwracająca resztę z dzielenia
 function zwracajReszteZDzielenia(liczba_a, liczba_b) {
-    return liczba_a % liczba_b;
+  return liczba_a % liczba_b;
 }
 
 // Pobieranie danych od użytkownika
@@ -66,4 +66,6 @@ console.log("Suma: " + zwracajSuma(liczba_a, liczba_b));
 console.log("Różnica: " + zwracajRoznica(liczba_a, liczba_b));
 console.log("Iloczyn: " + zwracajIloczyn(liczba_a, liczba_b));
 console.log("Iloraz: " + zwracajIloraz(liczba_a, liczba_b));
-console.log("Reszta z dzielenia: " + zwracajReszteZDzielenia(liczba_a, liczba_b));
+console.log(
+  "Reszta z dzielenia: " + zwracajReszteZDzielenia(liczba_a, liczba_b)
+);

@@ -18,8 +18,8 @@ Dla pobranej liczby 2100, program powinien wypisać informację, że rok nie jes
 const rok = parseInt(prompt("Podaj rok:"));
 
 // Sprawdzenie, czy rok jest przestępny
-if (rok % 4 === 0 && rok % 100 !== 0 || rok % 400 === 0) {
-    console.log("Rok jest przestępny");
+if ((rok % 4 === 0 && rok % 100 !== 0) || rok % 400 === 0) {
+  console.log("Rok jest przestępny");
 } else {
-    console.log("Rok nie jest przestępny");
+  console.log("Rok nie jest przestępny");
 }

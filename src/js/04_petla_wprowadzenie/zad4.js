@@ -18,7 +18,7 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 // Pętla
 let suma = 0;
 for (let i = liczba - 1; i > 0; i--) {
-    suma += i;
+  suma += i;
 }
 
 // Wypisanie wyniku

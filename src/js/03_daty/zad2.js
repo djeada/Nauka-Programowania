@@ -22,19 +22,19 @@ const rok_obecny = parseInt(prompt("Podaj aktualny rok:"));
 
 // Warunek pełnoletności
 if (rok_obecny - rok_urodzenia > 18) {
-    console.log("Osoba jest pełnoletnia.");
+  console.log("Osoba jest pełnoletnia.");
 } else if (rok_obecny - rok_urodzenia == 18) {
-    if (miesiac_obecny > miesiac_urodzenia) {
-        console.log("Osoba jest pełnoletnia.");
-    } else if (miesiac_obecny == miesiac_urodzenia) {
-        if (dzien_obecny >= dzien_urodzenia) {
-            console.log("Osoba jest pełnoletnia.");
-        } else {
-            console.log("Osoba nie jest pełnoletnia.");
-        }
+  if (miesiac_obecny > miesiac_urodzenia) {
+    console.log("Osoba jest pełnoletnia.");
+  } else if (miesiac_obecny == miesiac_urodzenia) {
+    if (dzien_obecny >= dzien_urodzenia) {
+      console.log("Osoba jest pełnoletnia.");
     } else {
-        console.log("Osoba nie jest pełnoletnia.");
+      console.log("Osoba nie jest pełnoletnia.");
     }
-} else {
+  } else {
     console.log("Osoba nie jest pełnoletnia.");
+  }
+} else {
+  console.log("Osoba nie jest pełnoletnia.");
 }

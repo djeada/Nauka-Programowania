@@ -14,30 +14,42 @@ Dla otrzymanych list [3, 1, 2, 5] oraz [2, 8, 6, 5], zostanie zwrócona lista: [
 
 // Funkcja zwracająca listę, której elementy są sumą odpowiadających sobie elementów obu list
 function sumaElementowList(lista1, lista2) {
-    let wynik = [];
-    let maxLength = Math.max(lista1.length, lista2.length);
+  let wynik = [];
+  let maxLength = Math.max(lista1.length, lista2.length);
 
-    for (let i = 0; i < maxLength; i++) {
-        let element1 = lista1[i] || 0;
-        let element2 = lista2[i] || 0;
-        wynik.push(element1 + element2);
-    }
+  for (let i = 0; i < maxLength; i++) {
+    let element1 = lista1[i] || 0;
+    let element2 = lista2[i] || 0;
+    wynik.push(element1 + element2);
+  }
 
-    return wynik;
+  return wynik;
 }
 
 // Testy
 function assert(condition, message) {
-    if (!condition) {
-        throw new Error(message || "Assertion failed");
-    }
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
 function testSumaElementowList() {
-    assert(sumaElementowList([3, 1, 2, 5], [2, 8, 6, 5]).toString() === [5, 9, 8, 10].toString());
-    assert(sumaElementowList([3, 1, 2, 5], [2, 8, 6]).toString() === [5, 9, 8, 5].toString());
-    assert(sumaElementowList([3, 1, 2], [2, 8, 6, 5]).toString() === [5, 9, 8, 5].toString());
-    assert(sumaElementowList([3, 1, 2, 5], [2, 8, 6, 5, 1]).toString() === [5, 9, 8, 10, 1].toString());
+  assert(
+    sumaElementowList([3, 1, 2, 5], [2, 8, 6, 5]).toString() ===
+      [5, 9, 8, 10].toString()
+  );
+  assert(
+    sumaElementowList([3, 1, 2, 5], [2, 8, 6]).toString() ===
+      [5, 9, 8, 5].toString()
+  );
+  assert(
+    sumaElementowList([3, 1, 2], [2, 8, 6, 5]).toString() ===
+      [5, 9, 8, 5].toString()
+  );
+  assert(
+    sumaElementowList([3, 1, 2, 5], [2, 8, 6, 5, 1]).toString() ===
+      [5, 9, 8, 10, 1].toString()
+  );
 }
 
 testSumaElementowList();

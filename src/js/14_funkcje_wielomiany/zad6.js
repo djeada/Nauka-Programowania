@@ -1,39 +1,61 @@
 /*
-Otrzymujesz liste wspolczynnikow rownania kwadratowego ax^2 + bx + c.
-Znajdz rzeczywiste miejsca zerowe rownania kwadratowego.
+
+Tytuł: Obliczenie miejsc zerowych równania kwadratowego.
+
+Treść: Otrzymujesz listę współczynników równania kwadratowego $ax^2 + bx + c$. Znajdź rzeczywiste miejsca zerowe równania kwadratowego.
+
+Dane wejściowe: Lista liczb naturalnych.
+
+Dane wyjściowe: Lista liczb zmiennoprzecinkowych.
+
+Przykład:
+
+Dla otrzymanej listy współczynników: [1, 2, 1], zostanie zwrócona lista: [-1, -1].
 */
-miejscaZerowe = function(wspolczynniki) {
-    var a = wspolczynniki[0];
-    var b = wspolczynniki[1];
-    var c = wspolczynniki[2];
-    var delta = Math.pow(b, 2) - 4 * a * c;
-    var wynik = [];
-    if (delta < 0) {
-        return wynik;
-    } else if (delta === 0) {
-        wynik[0] = -b / (2 * a);
-        return wynik;
-    } else {
-        wynik[0] = (-b - Math.sqrt(delta)) / (2 * a);
-        wynik[1] = (-b + Math.sqrt(delta)) / (2 * a);
-        return wynik;
-    }
-}
-test1 = function() {
-    var wspolczynniki = [1, 2, 1];
-    var oczekiwane = [-1];
-    var wynik = miejscaZerowe(wspolczynniki);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 33: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i] !== oczekiwane[i]) {
-            throw new Error(`Assertion error line 37: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
-        }
-    }
-}
-main = function(args) {
-    test1();
+
+function miejscaZeroweRownaniaKwadratowego(wspolczynniki) {
+  const [a, b, c] = wspolczynniki;
+  const delta = b * b - 4 * a * c;
+
+  if (delta > 0) {
+    return [
+      (-b - Math.sqrt(delta)) / (2 * a),
+      (-b + Math.sqrt(delta)) / (2 * a),
+    ];
+  } else if (delta === 0) {
+    return [-b / (2 * a)];
+  } else {
+    return [];
+  }
 }
 
-main(null);
+function assert(warunek, komunikat) {
+  if (!warunek) {
+    throw komunikat || "Wystąpił błąd";
+  }
+}
+
+// Testy
+function testMiejscaZeroweRownaniaKwadratowego() {
+  let wspolczynniki;
+  let wynik;
+
+  wspolczynniki = [1, 2, 1];
+  wynik = miejscaZeroweRownaniaKwadratowego(wspolczynniki);
+  assert(JSON.stringify(wynik) === JSON.stringify([-1]), "Test 1 nieudany");
+
+  wspolczynniki = [1, -3, 2];
+  wynik = miejscaZeroweRownaniaKwadratowego(wspolczynniki);
+  assert(JSON.stringify(wynik) === JSON.stringify([1, 2]), "Test 2 nieudany");
+
+  wspolczynniki = [1, 0, -1];
+  wynik = miejscaZeroweRownaniaKwadratowego(wspolczynniki);
+  assert(JSON.stringify(wynik) === JSON.stringify([-1, 1]), "Test 3 nieudany");
+
+  wspolczynniki = [1, 0, 1];
+  wynik = miejscaZeroweRownaniaKwadratowego(wspolczynniki);
+  assert(JSON.stringify(wynik) === JSON.stringify([]), "Test 4 nieudany");
+}
+
+testMiejscaZeroweRownaniaKwadratowego();
+console.log("Wszystkie testy zakończone sukcesem");

@@ -13,5 +13,5 @@ let liczba = parseInt(prompt("Podaj liczbę:"));
 
 // Warunek kończący pętle
 while (liczba !== 7) {
-    liczba = parseInt(prompt("Podaj liczbę:"));
+  liczba = parseInt(prompt("Podaj liczbę:"));
 }

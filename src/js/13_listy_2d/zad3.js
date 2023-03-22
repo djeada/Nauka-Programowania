@@ -1,45 +1,56 @@
 /*
-Dla otrzymanych dwoch list, stworz dwukolumnowa macierz, ktorej pierwsza
-kolumna sklada sie z elementow pierwszej listy, a druga kolumna elementow
-drugiej listy. Jesli otrzymane listy nie sa rownej dlugosci zwroc pusta macierz.
+Tytuł: Macierz z parami elementów odpowiadających sobie z dwóch list.
+
+Treść: Dla otrzymanych dwóch list, stwórz dwukolumnową macierz, której pierwsza kolumna składa się z elementów pierwszej listy, a druga kolumna z elementów drugiej listy. Jeśli otrzymane listy nie są równej długości, zwróć pustą macierz.
+
+Dane wejściowe: Dwie listy.
+
+Dane wyjściowe: Lista list liczb naturalnych lub pusta macierz (w przypadku nierównych długości list).
+
+Przykład:
+
+Dla otrzymanych dwóch list: [3, 5, 2] oraz [2, 8, 1], powinna zostać zwrócona macierz: [[3, 2], [5, 8], [2, 1]
 */
-stworzMacierz = function(listaA, listaB) {
-    var macierz = [];
-    if (listaA.length !== listaB.length) {
-        return macierz;
-    }
-    for (var i = 0; i < listaA.length; i++) {
-        macierz[i] = [];
-        macierz[i][0] = listaA[i];
-        macierz[i][1] = listaB[i];
-    }
+
+function utworzMacierzZList(listA, listB) {
+  const macierz = [];
+  if (listA.length !== listB.length) {
     return macierz;
-}
-test1 = function() {
-    var listaA = [1, 2, 3];
-    var listaB = [4, 5, 6];
-    var oczekiwane = [
-        [1, 4],
-        [2, 5],
-        [3, 6]
-    ];
-    var wynik = stworzMacierz(listaA, listaB);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i].length !== oczekiwane[i].length) {
-            throw new Error(`Assertion error line 29: ${wynik[i].length} != ${oczekiwane[i].length}`);
-        }
-        for (var j = 0; j < wynik[i].length; j++) {
-            if (wynik[i][j] !== oczekiwane[i][j]) {
-                throw new Error(`Assertion error line 29: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
-            }
-        }
-    }
-}
-main = function(args) {
-    test1();
+  }
+  for (let i = 0; i < listA.length; i++) {
+    macierz.push([listA[i], listB[i]]);
+  }
+  return macierz;
 }
 
-main(null);
+// test
+function test() {
+  const oczekiwana = [
+    [3, 2],
+    [5, 8],
+    [2, 1],
+  ];
+  const wynik = utworzMacierzZList([3, 5, 2], [2, 8, 1]);
+  assert(
+    wynik.length === oczekiwana.length,
+    `Długości macierzy nie są równe. Oczekiwano: ${oczekiwana.length}, otrzymano: ${wynik.length}.`
+  );
+  for (let i = 0; i < wynik.length; i++) {
+    assert(
+      wynik[i].length === oczekiwana[i].length,
+      `Długości kolumn nie są równe. Oczekiwano: ${oczekiwana[i].length}, otrzymano: ${wynik[i].length}.`
+    );
+    for (let j = 0; j < wynik[i].length; j++) {
+      assert(
+        wynik[i][j] === oczekiwana[i][j],
+        `Element macierzy o indeksie (${i}, ${j}) nie jest taki sam jak w oczekiwanej macierzy. Oczekiwano: ${oczekiwana[i][j]}, otrzymano: ${wynik[i][j]}.`
+      );
+    }
+  }
+}
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+test();

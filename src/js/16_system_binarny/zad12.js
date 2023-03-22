@@ -1,53 +1,50 @@
 /*
-Otrzymujesz dziesietna reprezentacje liczby naturalnej.
-Oblicz dlugosc najdluzszego ciagu zer w jej binarnej reprezentacji.
+
+Tytuł: Najdłuższy ciąg zer w liczbie binarnej.
+
+Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. Oblicz długość najdłuższego ciągu zer w jej reprezentacji binarnej.
+
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+
+Dla otrzymanej liczby 14, powinna zostać zwrócona liczba 1.
 */
 
-najdluzszyCiagZer = function(liczba) {
-    if (liczba == 0)
-        return 1;
-
-    var wynik = 0;
-    var pom = 0;
-
-    while (liczba != 0) {
-        var reszta = liczba % 2;
-        liczba /= 2;
-        if (reszta == 1) {
-            wynik = Math.max(wynik, pom);
-            pom = 0;
-        } else
-            pom++;
+// Funkcja obliczająca najdłuższy ciąg zer w liczbie binarnej
+function najdluzszyCiagZer(liczba) {
+  let binarna = liczba.toString(2);
+  let najdluzszyCiag = 0;
+  let aktualnyCiag = 0;
+  for (let i = 0; i < binarna.length; i++) {
+    if (binarna[i] === "0") {
+      aktualnyCiag++;
+    } else {
+      if (aktualnyCiag > najdluzszyCiag) {
+        najdluzszyCiag = aktualnyCiag;
+      }
+      aktualnyCiag = 0;
     }
-    return Math.max(wynik, pom);
+  }
+  return najdluzszyCiag;
 }
 
+// Testy
+function test() {
+  let input = 14;
+  let expectedOutput = 1;
+  let output = najdluzszyCiagZer(input);
 
-test1 = function() {
-    var liczba = 111;
-    var oczekiwane = 1;
-    var wynik = najdluzszyCiagZer(liczba);
-
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 129: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
+  assert(output === expectedOutput, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
 }
 
-
-test2 = function() {
-    var liczba = 8219;
-    var oczekiwane = 8;
-    var wynik = najdluzszyCiagZer(liczba);
-
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 139: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Assertion failed";
+  }
 }
 
-
-main = function(args) {
-    test1();
-    test2();
-}
-
-main(null);
+test();

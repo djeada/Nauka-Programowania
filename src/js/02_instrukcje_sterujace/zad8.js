@@ -19,7 +19,7 @@ const bok_c = parseInt(prompt("Podaj długość boku c:"));
 
 // Warunek trójkąta
 if (bok_a + bok_b > bok_c && bok_a + bok_c > bok_b && bok_b + bok_c > bok_a) {
-    console.log("Można zbudować trójkąt z podanych boków.");
+  console.log("Można zbudować trójkąt z podanych boków.");
 } else {
-    console.log("Nie można zbudować trójkąta z podanych boków.");
+  console.log("Nie można zbudować trójkąta z podanych boków.");
 }

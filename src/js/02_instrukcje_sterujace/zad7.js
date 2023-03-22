@@ -73,85 +73,133 @@ var q = false;
 console.info("Przemiennosc koniunkcji");
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ", ((p && q) == (q && p)));
+console.info(
+  "wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
+  (p && q) == (q && p)
+);
 p = true;
 q = false;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ", ((p && q) == (q && p)));
+console.info(
+  "wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
+  (p && q) == (q && p)
+);
 p = false;
 q = true;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ", ((p && q) == (q && p)));
+console.info(
+  "wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
+  (p && q) == (q && p)
+);
 p = true;
 q = true;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ", ((p && q) == (q && p)));
+console.info(
+  "wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
+  (p && q) == (q && p)
+);
 p = false;
 q = false;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ", ((p && q) == (q && p)));
+console.info(
+  "wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
+  (p && q) == (q && p)
+);
 
 console.info("Przemiennosc alternatywy");
 p = false;
 q = false;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ", ((p || q) == (q || p)));
+console.info(
+  "wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
+  (p || q) == (q || p)
+);
 p = true;
 q = false;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ", ((p || q) == (q || p)));
+console.info(
+  "wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
+  (p || q) == (q || p)
+);
 p = false;
 q = true;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ", ((p || q) == (q || p)));
+console.info(
+  "wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
+  (p || q) == (q || p)
+);
 p = true;
 q = true;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ", ((p || q) == (q || p)));
+console.info(
+  "wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
+  (p || q) == (q || p)
+);
 
 console.info("Pierwsze prawo de Morgana");
 p = false;
 q = false;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ", ((!(p && q)) == (!p || !q)));
+console.info(
+  "wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ",
+  !(p && q) == (!p || !q)
+);
 p = true;
 q = false;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ", ((!(p && q)) == (!p || !q)));
+console.info(
+  "wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ",
+  !(p && q) == (!p || !q)
+);
 p = false;
 q = true;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ", ((!(p && q)) == (!p || !q)));
+console.info(
+  "wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ",
+  !(p && q) == (!p || !q)
+);
 p = true;
 q = true;
 console.info("dla p majacego wartosc logiczna ", p);
 
 console.info("Drugie prawo de Morgana");
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ", ((!(p || q)) == (!p && !q)));
+console.info(
+  "wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
+  !(p || q) == (!p && !q)
+);
 p = true;
 q = false;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ", ((!(p || q)) == (!p && !q)));
+console.info(
+  "wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
+  !(p || q) == (!p && !q)
+);
 p = false;
 q = true;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ", ((!(p || q)) == (!p && !q)));
+console.info(
+  "wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
+  !(p || q) == (!p && !q)
+);
 p = true;
 q = true;
 console.info("dla p majacego wartosc logiczna ", p);
 console.info("oraz q majacego wartosc logiczna ", q);
-console.info("wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ", ((!(p || q)) == (!p && !q)));
+console.info(
+  "wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
+  !(p || q) == (!p && !q)
+);

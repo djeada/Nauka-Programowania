@@ -1,58 +1,79 @@
 /*
-Otrzymujesz liste list liczb naturalnych reprezentujaca macierz.
-Jesli element macierzy jest rowny zero, zamien wszystkie elementy
-w tej samej kolumnie i tym samym wierszu na zera.
+Tytuł: Zerowanie macierzy.
+
+Treść: Otrzymujesz listę list liczb naturalnych reprezentującą macierz. Jeśli element macierzy jest równy zero, zamień wszystkie elementy tej samej kolumny i wiersza na zera.
+
+Dane wejściowe: Lista list liczb naturalnych.
+
+Dane wyjściowe: Lista list liczb naturalnych.
+
+Przykład:
+
+Dla otrzymanej macierzy: [[1,2,3], [4,0,6], [7,8,9]], powinna zostać zwrócona macierz: [[1,0,3], [0,0,0], [7,0,9]].
 */
-zamienNaZero = function(macierz) {
-    var M = macierz.length;
-    var N = macierz[0].length;
-    var wiersze = new Array(M);
-    var kolumny = new Array(N);
-    for (var i = 0; i < M; i++) {
-        wiersze[i] = 0;
-        for (var j = 0; j < N; j++) {
-            if (macierz[i][j] == 0) {
-                wiersze[i] = 1;
-                kolumny[j] = 1;
-            }
-        }
+
+function zerujMacierz(macierz) {
+  const m = macierz.length;
+  const n = macierz[0].length;
+  const wierszeDoZerowania = new Set(); // przechowuje numery wierszy, które trzeba wyzerować
+  const kolumnyDoZerowania = new Set(); // przechowuje numery kolumn, które trzeba wyzerować
+
+  // znajdujemy numery wierszy i kolumn, które trzeba wyzerować
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      if (macierz[i][j] === 0) {
+        wierszeDoZerowania.add(i);
+        kolumnyDoZerowania.add(j);
+      }
     }
-    for (var i = 0; i < M; i++) {
-        for (var j = 0; j < N; j++) {
-            if (wiersze[i] == 1 || kolumny[j] == 1)
-                macierz[i][j] = 0;
-        }
+  }
+
+  // wyzerowujemy wiersze i kolumny
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      if (wierszeDoZerowania.has(i) || kolumnyDoZerowania.has(j)) {
+        macierz[i][j] = 0;
+      }
     }
-    return macierz;
-}
-test1 = function() {
-    var macierz = [
-        [1, 2, 3],
-        [4, 0, 6],
-        [7, 8, 9]
-    ];
-    var oczekiwane = [
-        [1, 0, 3],
-        [0, 0, 0],
-        [7, 0, 9]
-    ];
-    var wynik = zamienNaZero(macierz);
-    if (wynik.length != oczekiwane.length) {
-        throw new Error(`Assertion error line 24: ${wynik.length} != ${oczekiwane.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i].length != oczekiwane[i].length) {
-            throw new Error(`Assertion error line 24: ${wynik[i].length} != ${oczekiwane[i].length}`);
-        }
-        for (var j = 0; j < wynik[i].length; j++) {
-            if (wynik[i][j] != oczekiwane[i][j]) {
-                throw new Error(`Assertion error line 24: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
-            }
-        }
-    }
-}
-main = function(args) {
-    test1();
+  }
+
+  return macierz;
 }
 
-main(null);
+// test
+function test() {
+  const macierz1 = [
+    [1, 2, 3],
+    [4, 0, 6],
+    [7, 8, 9],
+  ];
+  const wynik1 = [
+    [1, 0, 3],
+    [0, 0, 0],
+    [7, 0, 9],
+  ];
+  const macierz2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 0],
+  ];
+  const wynik2 = [
+    [1, 2, 0],
+    [4, 5, 0],
+    [0, 0, 0],
+  ];
+  assert(
+    JSON.stringify(zerujMacierz(macierz1)) === JSON.stringify(wynik1),
+    `Niepoprawny wynik dla macierzy ${macierz1}.`
+  );
+  assert(
+    JSON.stringify(zerujMacierz(macierz2)) === JSON.stringify(wynik2),
+    `Niepoprawny wynik dla macierzy ${macierz2}.`
+  );
+}
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+test();

@@ -20,5 +20,5 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 
 // Pętla
 for (let i = 0; i < liczba; i++) {
-    console.log(Math.PI.toFixed(liczba));
+  console.log(Math.PI.toFixed(liczba));
 }

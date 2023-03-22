@@ -1,26 +1,36 @@
 /*
-Otrzymujesz liczbe N. Przy uzyciu rekurencji zbuduj napis skladajacy
-sie z liczb naturalnych mniejszych od N oddzielonych przecinkami.
+Tytuł: Liczby naturalne mniejsze od N.
+
+Treść: Otrzymujesz liczbę N. Przy użyciu rekurencji stwórz napis składający się z liczb naturalnych mniejszych od N oddzielonych przecinkami.
+
+Dane wejściowe: Liczba naturalna N.
+
+Dane wyjściowe: Napis.
+
+Przykład:
+
+Dla N = 10, powinien zostać zwrócony napis: "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0".
 */
-zbudujNapis = function(n) {
-    if (n === 0) {
-        return "";
-    }
-    if (n === 1) {
-        return "1";
-    }
-    return zbudujNapis(n - 1) + "," + n;
-}
-test1 = function() {
-    var n = 5;
-    var oczekiwane = "1,2,3,4,5";
-    var wynik = zbudujNapis(n);
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 25: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
-    }
-}
-main = function(args) {
-    test1();
+
+function liczbyMniejszeOdN(n) {
+  if (n === 0) {
+    return "0";
+  }
+  return n + ", " + liczbyMniejszeOdN(n - 1);
 }
 
-main(null);
+function assert(warunek, komunikat) {
+  if (!warunek) {
+    throw komunikat || "Wystąpił błąd";
+  }
+}
+
+// Testy
+
+function test() {
+  const n = 10;
+  const wynik = "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0";
+  assert(liczbyMniejszeOdN(n) === wynik, `Niepoprawny wynik dla liczby ${n}.`);
+}
+
+test();

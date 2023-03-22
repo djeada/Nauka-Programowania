@@ -15,29 +15,39 @@ Dla otrzymanych list [2.0, 5.0, 0.0, 2.0, 1.0] oraz [0.2, 0.4, 0.1, 0.2, 0.1] zo
 */
 
 function obliczSredniaWazona(wagi, wartosci) {
-    var sumaWartosci = 0;
-    var sumaWag = 0;
-    for (var i = 0; i < wagi.length; i++) {
-        sumaWartosci += wagi[i] * wartosci[i];
-        sumaWag += wagi[i];
-    }
-    return sumaWartosci / sumaWag;
+  var sumaWartosci = 0;
+  var sumaWag = 0;
+  for (var i = 0; i < wagi.length; i++) {
+    sumaWartosci += wagi[i] * wartosci[i];
+    sumaWag += wagi[i];
+  }
+  return sumaWartosci / sumaWag;
 }
 
 // Testy
 function assert(condition, message) {
-    if (!condition) {
-        throw new Error(message || "Assertion failed");
-    }
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
 function testObliczSredniaWazona() {
-    assert(obliczSredniaWazona([2.0, 5.0, 0.0, 2.0, 1.0], [0.2, 0.4, 0.1, 0.2, 0.1]).toFixed(2) === "0.29");
-    assert(obliczSredniaWazona([2.0, 5.0, 0.0, 2.0, 1.0], [0.2, 0.4, 0.1, 0.2, 0.1]).toFixed(2) === "0.29");
+  assert(
+    obliczSredniaWazona(
+      [2.0, 5.0, 0.0, 2.0, 1.0],
+      [0.2, 0.4, 0.1, 0.2, 0.1]
+    ).toFixed(2) === "0.29"
+  );
+  assert(
+    obliczSredniaWazona(
+      [2.0, 5.0, 0.0, 2.0, 1.0],
+      [0.2, 0.4, 0.1, 0.2, 0.1]
+    ).toFixed(2) === "0.29"
+  );
 }
 
 function main() {
-    testObliczSredniaWazona();
+  testObliczSredniaWazona();
 }
 
 main();

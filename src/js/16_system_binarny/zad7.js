@@ -1,32 +1,51 @@
 /*
-Otrzymujesz dziesietna reprezentacje liczby naturalnej.
-Zamien miejscami sasiadujace bity w zapisie binarnym
-otrzymanej liczbie. Zwroc dziesietna reprezentacje wyniku.
+
+Tytuł: Odwrócenie sąsiadujących bitów.
+
+Treść: Otrzymujesz reprezentację dziesiętną liczby naturalnej. Zmień miejscami sąsiadujące bity w zapisie binarnym tej liczby i zwróć dziesiętną reprezentację wyniku.
+
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+
+Dla otrzymanej liczby: 9131, powinna zostać zwrócona liczba: 4951.
+
 */
 
-zamienMiejscami = function(liczba) {
-    var parzyste = liczba & 0xAAAAAAAA;
-    var nieparzyste = liczba & 0x55555555;
+function odwrocSasiadujaceBity(liczba) {
+  let binary = (liczba >>> 0).toString(2); // konwersja na system binarny
+  let n = binary.length;
+  let wynik = "";
 
-    parzyste >>= 1;
-    nieparzyste <<= 1;
-
-    return parzyste | nieparzyste;
-}
-
-
-test1 = function() {
-    var liczba = 9131;
-    var oczekiwane = 4951;
-    var wynik = zamienMiejscami(liczba);
-
-    if (wynik !== oczekiwane) {
-        throw new Error(`Assertion error line 25: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`);
+  for (let i = 0; i < n; i += 2) {
+    // zamiana sąsiadujących bitów
+    if (i == n - 1) {
+      // dodanie ostatniego bitu, jeśli długość binarna jest nieparzysta
+      wynik += binary[i];
+    } else {
+      wynik += binary[i + 1] + binary[i];
     }
+  }
+
+  return parseInt(wynik, 2); // konwersja na system dziesiętny
 }
 
-main = function(args) {
-    test1();
+// test
+function test() {
+  let input = 9131;
+  let expectedOutput = 4951;
+  let output = odwrocSasiadujaceBity(input);
+
+  assert(output === expectedOutput, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
 }
 
-main(null);
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

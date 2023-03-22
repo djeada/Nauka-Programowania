@@ -17,14 +17,27 @@ const miesiac = parseInt(prompt("Podaj miesiąc:"));
 
 // Sprawdzenie, czy liczba jest poprawna
 if (miesiac > 0 && miesiac < 13) {
-    // Sprawdzenie, który miesiąc odpowiada liczbie
-    if (miesiac === 1 || miesiac === 3 || miesiac === 5 || miesiac === 7 || miesiac === 8 || miesiac === 10 || miesiac === 12) {
-        console.log("Miesiąc ma 31 dni");
-    } else if (miesiac === 4 || miesiac === 6 || miesiac === 9 || miesiac === 11) {
-        console.log("Miesiąc ma 30 dni");
-    } else {
-        console.log("Miesiąc ma 28 dni");
-    }
+  // Sprawdzenie, który miesiąc odpowiada liczbie
+  if (
+    miesiac === 1 ||
+    miesiac === 3 ||
+    miesiac === 5 ||
+    miesiac === 7 ||
+    miesiac === 8 ||
+    miesiac === 10 ||
+    miesiac === 12
+  ) {
+    console.log("Miesiąc ma 31 dni");
+  } else if (
+    miesiac === 4 ||
+    miesiac === 6 ||
+    miesiac === 9 ||
+    miesiac === 11
+  ) {
+    console.log("Miesiąc ma 30 dni");
+  } else {
+    console.log("Miesiąc ma 28 dni");
+  }
 } else {
-    console.log("Liczba jest niepoprawna");
+  console.log("Liczba jest niepoprawna");
 }

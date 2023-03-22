@@ -1,26 +1,43 @@
-    policzSlowaV1 = function(slowo) {
-        var spacja = true;
-        var licznik = 0;
-        for (const znak of slowo) {
-            if (znak === " ") {
-                spacja = true;
-            } else if (znak.toLowerCase() != znak.toUpperCase() && spacja) {
-                licznik += 1;
-                spacja = false;
-            }
-        }
-        return licznik;
-    };
-    test1 = function() {
-        var napis = "Ile to   ma :  slow w swoim zdaniu na   koniec?";
-        var oczekiwane = 9;
-        var wynik = policzSlowaV1(napis);
-        if (!(wynik === oczekiwane)) {
-            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
-        }
-    };
-    main = function(args) {
-        test1();
-    };
+/*
+Tytuł: Z ilu słów składa się zdanie?
 
-    main(null);
+Treść: Zlicz, ile słów składa się z podanego zdania. Znaki interpunkcyjne nie są brane pod uwagę jako słowa.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+
+Dla otrzymanego napisu: "gram na pianinie.", powinno zostać zwrócone: 3.
+*/
+function policzSlowa(zdanie) {
+  let slowa = zdanie.split(" ");
+  let liczbaSlow = 0;
+  for (let i = 0; i < slowa.length; i++) {
+    let slowo = slowa[i].replace(/[.,/#!$%&;:{}=\-_`~()]/g, "");
+    if (slowo.length > 0) {
+      liczbaSlow++;
+    }
+  }
+  return liczbaSlow;
+}
+
+// Testy
+
+function test() {
+  let input = "gram na pianinie.";
+  let expectedOutput = 3;
+  let output = policzSlowa(input);
+
+  assert(output === expectedOutput, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

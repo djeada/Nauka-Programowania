@@ -26,12 +26,12 @@ const max = Math.max(liczba_a, liczba_b);
 
 // Pętla
 for (let i = min + 1; i < max; i++) {
-    console.log(i);
+  console.log(i);
 }
 
 // Pętla
 for (let i = min + 1; i < max; i++) {
-    if (i % 3 === 0) {
-        console.log(i);
-    }
+  if (i % 3 === 0) {
+    console.log(i);
+  }
 }

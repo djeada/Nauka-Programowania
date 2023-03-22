@@ -1,42 +1,57 @@
 /*
-Dla otrzymanej liczby, stworz macierz kwadratowa skladajaca sie
-z liczby kolumn i wierszy rownej otrzymanej liczbie, ktorej kazdy
-element jest iloczynem jego wspolrzednych.
+Tytuł: Macierz kwadratowa, z elementami będącymi iloczynem współrzędnych.
+
+Treść: Dla otrzymanej liczby naturalnej n, stwórz macierz kwadratową o rozmiarze n x n, której każdy element jest iloczynem jego współrzędnych.
+
+Dane wejściowe: Liczba naturalna n.
+
+Dane wyjściowe: Lista list liczb naturalnych.
+
+Przykład:
+
+Dla otrzymanej liczby 3 powinna zostać zwrócona macierz: [[0, 0, 0], [0, 1, 2], [0, 2, 4]].
 */
-stworzMacierz = function(a) {
-    var macierz = [];
-    for (var i = 0; i < a; i++) {
-        macierz[i] = [];
-        for (var j = 0; j < a; j++) {
-            macierz[i][j] = i * j;
-        }
+
+function utworzMacierzKwadratowa(n) {
+  const macierz = [];
+  for (let i = 0; i < n; i++) {
+    const wiersz = [];
+    for (let j = 0; j < n; j++) {
+      wiersz.push(i * j);
     }
-    return macierz;
-}
-test1 = function() {
-    var a = 3;
-    var oczekiwane = [
-        [0, 0, 0],
-        [0, 1, 2],
-        [0, 2, 4]
-    ];
-    var wynik = stworzMacierz(a);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i].length !== oczekiwane[i].length) {
-            throw new Error(`Assertion error line 29: ${wynik[i].length} != ${oczekiwane[i].length}`);
-        }
-        for (var j = 0; j < wynik[i].length; j++) {
-            if (wynik[i][j] !== oczekiwane[i][j]) {
-                throw new Error(`Assertion error line 29: ${wynik[i][j]} != ${oczekiwane[i][j]}`);
-            }
-        }
-    }
-}
-main = function(args) {
-    test1();
+    macierz.push(wiersz);
+  }
+  return macierz;
 }
 
-main(null);
+// test
+function test() {
+  const oczekiwana = [
+    [0, 0, 0],
+    [0, 1, 2],
+    [0, 2, 4],
+  ];
+  const wynik = utworzMacierzKwadratowa(3);
+  assert(
+    wynik.length === oczekiwana.length,
+    `Długości macierzy nie są równe. Oczekiwano: ${oczekiwana.length}, otrzymano: ${wynik.length}.`
+  );
+  for (let i = 0; i < wynik.length; i++) {
+    assert(
+      wynik[i].length === oczekiwana[i].length,
+      `Długości wierszy nie są równe. Oczekiwano: ${oczekiwana[i].length}, otrzymano: ${wynik[i].length}.`
+    );
+    for (let j = 0; j < wynik[i].length; j++) {
+      assert(
+        wynik[i][j] === oczekiwana[i][j],
+        `Element macierzy o indeksie (${i}, ${j}) nie jest taki sam jak w oczekiwanej macierzy. Oczekiwano: ${oczekiwana[i][j]}, otrzymano: ${wynik[i][j]}.`
+      );
+    }
+  }
+}
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+test();

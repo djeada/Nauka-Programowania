@@ -33,7 +33,6 @@ const dzien = parseInt(prompt("Podaj dzień:"));
 const miesiac = parseInt(prompt("Podaj miesiąc:"));
 const rok = parseInt(prompt("Podaj rok:"));
 
-
 const A = rok; // 4 - 2 * rok - 1
 const B = 5 * rok; // 4
 const C = 26 * (miesiac + 1); // 10
@@ -41,17 +40,17 @@ const C = 26 * (miesiac + 1); // 10
 const dzien_tygodnia = (A + B + C + dzien) % 7;
 
 if (dzien_tygodnia === 0) {
-    console.log("Niedziela");
+  console.log("Niedziela");
 } else if (dzien_tygodnia === 1) {
-    console.log("Poniedziałek");
+  console.log("Poniedziałek");
 } else if (dzien_tygodnia === 2) {
-    console.log("Wtorek");
+  console.log("Wtorek");
 } else if (dzien_tygodnia === 3) {
-    console.log("Środa");
+  console.log("Środa");
 } else if (dzien_tygodnia === 4) {
-    console.log("Czwartek");
+  console.log("Czwartek");
 } else if (dzien_tygodnia === 5) {
-    console.log("Piątek");
+  console.log("Piątek");
 } else {
-    console.log("Sobota");
+  console.log("Sobota");
 }

@@ -1,17 +1,64 @@
-    wypiszDane = function(napis) {
-        var wynik = (napis.split(";").slice(0).slice(0));
-        if (!(wynik.length === 5)) {
-            throw new Error("Assertion error line 4: assert wynik.size() == 5;");
-        };
-        console.info("Imie: " + wynik[0]);
-        console.info("Nazwisko: " + wynik[1]);
-        console.info("Miejsce urodzenia: " + wynik[2]);
-        console.info("Zawod: " + wynik[3]);
-        console.info("Zarobki: " + wynik[4]);
-    };
-    main = function(args) {
-        var napis = "Jan; Kowalski; Warszawa; Programista; 1000";
-        wypiszDane(napis);
-    };
+/*
+Tytuł: Wczytaj i rozdziel informacje o pracowniku.
 
-    main(null);
+Treść: Otrzymasz rekord z bazy danych reprezentujący dane pracownika. Są to kolejno: imię, nazwisko, miejsce urodzenia, stanowisko i zarobki. Informacje są rozdzielone średnikami. Zapisz je w osobnych zmiennych i wypisz je razem z odpowiednimi komunikatami.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Lista napisów.
+
+Przykład:
+
+Dla otrzymanego napisu:
+"Jan; Kowalski; Warszawa; Programista; 1000;",
+
+powinna zostać zwrócona lista:
+["Imię: Jan", "Nazwisko: Kowalski", "Miejsce urodzenia: Warszawa", "Zawód: Programista", "Zarobki: 1000"].
+*/
+
+function rozdzielRekord(rekord) {
+  let dane = rekord.split(";");
+  let imie = dane[0].trim();
+  let nazwisko = dane[1].trim();
+  let miejsceUrodzenia = dane[2].trim();
+  let zawod = dane[3].trim();
+  let zarobki = dane[4].trim();
+
+  let lista = [
+    "Imię: " + imie,
+    "Nazwisko: " + nazwisko,
+    "Miejsce urodzenia: " + miejsceUrodzenia,
+    "Zawód: " + zawod,
+    "Zarobki: " + zarobki,
+  ];
+  return lista;
+}
+
+// Test
+
+function test() {
+  let input = "Jan; Kowalski; Warszawa; Programista; 1000;";
+  let expectedOutput = [
+    "Imię: Jan",
+    "Nazwisko: Kowalski",
+    "Miejsce urodzenia: Warszawa",
+    "Zawód: Programista",
+    "Zarobki: 1000",
+  ];
+  let output = rozdzielRekord(input);
+
+  assert(
+    output.length === expectedOutput.length &&
+      output.every((element, index) => element === expectedOutput[index]),
+    "Test nie powiódł się"
+  );
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

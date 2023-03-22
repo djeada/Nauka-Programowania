@@ -22,17 +22,17 @@ c) Wartość logiczna Prawda.
 
 // Funkcja zwracająca liczbę 3
 function zwracajLiczbe() {
-    return 3;
+  return 3;
 }
 
 // Funkcja zwracająca napis "Tak"
 function zwracajNapis() {
-    return "Tak";
+  return "Tak";
 }
 
 // Funkcja zwracająca wartość logiczną Prawda
 function zwracajWartoscLogiczna() {
-    return true;
+  return true;
 }
 
 // Wypisanie wyników

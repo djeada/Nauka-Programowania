@@ -17,5 +17,5 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 
 // Porównanie ze stałą
 if (liczba > 5) {
-    console.log(liczba);
+  console.log(liczba);
 }

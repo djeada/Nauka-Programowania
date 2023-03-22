@@ -8,27 +8,29 @@ Napisz program testujacy twoja klase. Stworz kolo o promieniu rownym 3 i uzyj fu
 */
 
 class Kolo {
-    constructor(promien) {
-        this.promien = promien || 1;
-    }
+  constructor(promien) {
+    this.promien = promien || 1;
+  }
 
-    obwod() {
-        return 2 * Math.PI * this.promien;
-    }
+  obwod() {
+    return 2 * Math.PI * this.promien;
+  }
 
-    pole() {
-        return Math.PI * this.promien * this.promien;
-    }
+  pole() {
+    return Math.PI * this.promien * this.promien;
+  }
 
-    wypisz() {
-        console.log(`Obwod kola o promieniu ${this.promien} wynosi ${this.obwod()}`);
-        console.log(`Pole kola o promieniu ${this.promien} wynosi ${this.pole()}`);
-    }
+  wypisz() {
+    console.log(
+      `Obwod kola o promieniu ${this.promien} wynosi ${this.obwod()}`
+    );
+    console.log(`Pole kola o promieniu ${this.promien} wynosi ${this.pole()}`);
+  }
 }
 
-main = function() {
-    let kolo = new Kolo(3);
-    kolo.wypisz();
-}
+main = function () {
+  let kolo = new Kolo(3);
+  kolo.wypisz();
+};
 
 main();

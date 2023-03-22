@@ -1,54 +1,51 @@
-    wyczysc = function(napis) {
-        napis = napis.trim();
-        return napis.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, "");
-    };
-    srednia = function(napis) {
-        var calk_dlugosc = 0;
-        var n = 0;
-        var pocz = 0;
-        var konc = 0;
-        while (((konc = napis.indexOf(' ', pocz)) !== -1)) {
-            {
-                if (konc !== pocz) {
-                    var slowo = napis.substring(pocz, konc);
-                    slowo = wyczysc(slowo);
-                    if (!(slowo.length === 0)) {
-                        n++;
-                        calk_dlugosc += slowo.length;
-                    }
-                }
-                pocz = konc + 1;
-            }
-        };
-        if (konc !== pocz) {
-            var slowo = napis.substring(pocz);
-            slowo = wyczysc(slowo);
-            if (!(slowo.length === 0)) {
-                n++;
-                calk_dlugosc += slowo.length;
-            }
-        }
-        return (calk_dlugosc / n | 0);
-    };
-    test1 = function() {
-        var napis = "Kaczka lubi wiosne.";
-        var oczekiwane = 5;
-        var wynik = srednia(napis);
-        if (wynik !== oczekiwane) {
-            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
-        }
-    };
-    test2 = function() {
-        var napis = "Kaczka lubi wiosne.";
-        var oczekiwane = 5;
-        var wynik = srednia(napis);
-        if (wynik !== oczekiwane) {
-            throw new Error(`Assertion error line 24: ${wynik} === ${oczekiwane}`);
-        }
-    };
-    main = function(args) {
-        test1();
-        test2();
-    };
+/*
 
-    main(null);
+Tytuł: Średnia długość słów w zdaniu.
+
+Treść: Otrzymasz napis reprezentujący zdanie. Oblicz średnią długość słów w zdaniu. Znaki interpunkcyjne nie są uwzględniane jako słowa.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+
+Dla otrzymanego napisu: "Zepsuty rower.", powinna zostać zwrócona liczba: 6.
+*/
+
+function sredniaDlugoscSlow(napis) {
+  let slowa = napis.split(/[^\w]+/);
+  let sumaDlugosciSlow = 0;
+  for (let i = 0; i < slowa.length; i++) {
+    sumaDlugosciSlow += slowa[i].length;
+  }
+  let sredniaDlugosc = sumaDlugosciSlow / slowa.length;
+  return Math.round(sredniaDlugosc);
+}
+
+// Test
+
+function test() {
+  let input = "Zepsuty rower.";
+  let expectedOutput = 6;
+  let output = sredniaDlugoscSlow(input);
+
+  assert(
+    output === expectedOutput,
+    "Test nie powiódł się dla " +
+      input +
+      ". Otrzymany wynik to " +
+      output +
+      ", a oczekiwany wynik to " +
+      expectedOutput
+  );
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

@@ -14,30 +14,39 @@ Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostaną zwrócone indeksy 
 
 // Funkcja znajdująca indeksy pierwszej pary elementów o sumie równej podanej liczbie
 function znajdzPareSumujacaDo(lista, x) {
-    const mapaIndeksow = new Map();
+  const mapaIndeksow = new Map();
 
-    for (let i = 0; i < lista.length; i++) {
-        const komplement = x - lista[i];
-        if (mapaIndeksow.has(komplement)) {
-            return [mapaIndeksow.get(komplement), i];
-        }
-        mapaIndeksow.set(lista[i], i);
+  for (let i = 0; i < lista.length; i++) {
+    const komplement = x - lista[i];
+    if (mapaIndeksow.has(komplement)) {
+      return [mapaIndeksow.get(komplement), i];
     }
+    mapaIndeksow.set(lista[i], i);
+  }
 
-    return [-1, -1];
+  return [-1, -1];
 }
 
 // Testy
 function assert(condition, message) {
-    if (!condition) {
-        throw new Error(message || "Assertion failed");
-    }
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
 function testZnajdzPareSumujacaDo() {
-    assert(JSON.stringify(znajdzPareSumujacaDo([1, 3, 4, 5, 2], 5)) === JSON.stringify([0, 2]));
-    assert(JSON.stringify(znajdzPareSumujacaDo([2, 5, 9, 4, 7], 12)) === JSON.stringify([1, 4]));
-    assert(JSON.stringify(znajdzPareSumujacaDo([2, 5, 9, 4, 7], 20)) === JSON.stringify([-1, -1]));
+  assert(
+    JSON.stringify(znajdzPareSumujacaDo([1, 3, 4, 5, 2], 5)) ===
+      JSON.stringify([0, 2])
+  );
+  assert(
+    JSON.stringify(znajdzPareSumujacaDo([2, 5, 9, 4, 7], 12)) ===
+      JSON.stringify([1, 4])
+  );
+  assert(
+    JSON.stringify(znajdzPareSumujacaDo([2, 5, 9, 4, 7], 20)) ===
+      JSON.stringify([-1, -1])
+  );
 }
 
 testZnajdzPareSumujacaDo();

@@ -27,21 +27,21 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 
 // a) Pętla dla liczb parzystych
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
-    if (i % 2 == 0) {
-        console.log(i % 10);
-    }
+  if (i % 2 == 0) {
+    console.log(i % 10);
+  }
 }
 
 // b) Pętla dla liczb mniejszych od 5
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
-    if (i % 10 < 5) {
-        console.log(i % 10);
-    }
+  if (i % 10 < 5) {
+    console.log(i % 10);
+  }
 }
 
 // c) Pętla dla liczb różnych od 0
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
-    if (i % 10 != 0) {
-        console.log(i % 10);
-    }
+  if (i % 10 != 0) {
+    console.log(i % 10);
+  }
 }

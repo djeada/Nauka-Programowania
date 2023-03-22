@@ -9,38 +9,37 @@ wywolac funkcje odglos().
 */
 
 class Zwierz {
-    constructor(imie) {
-        this.imie = imie;
-    }
+  constructor(imie) {
+    this.imie = imie;
+  }
 
-    odglos() {
-        console.log(`Odglos zwierzecia ${this.imie}`);
-    }
+  odglos() {
+    console.log(`Odglos zwierzecia ${this.imie}`);
+  }
 }
 
 class Pies extends Zwierz {
-    odglos() {
-        console.log(`Hau hau!`);
-    }
+  odglos() {
+    console.log(`Hau hau!`);
+  }
 }
 
 class Kot extends Zwierz {
-    odglos() {
-        console.log(`Miau miau!`);
-    }
+  odglos() {
+    console.log(`Miau miau!`);
+  }
 }
 
+main = function () {
+  let zwierz1 = new Zwierz("Zwierz");
+  let zwierz2 = new Pies("Burek");
+  let zwierz3 = new Kot("Mruczek");
 
-main = function() {
-    let zwierz1 = new Zwierz('Zwierz');
-    let zwierz2 = new Pies('Burek');
-    let zwierz3 = new Kot('Mruczek');
+  let zwierzaki = [zwierz1, zwierz2, zwierz3];
 
-    let zwierzaki = [zwierz1, zwierz2, zwierz3];
-
-    for (let i = 0; i < zwierzaki.length; i++) {
-        zwierzaki[i].odglos();
-    }
-}
+  for (let i = 0; i < zwierzaki.length; i++) {
+    zwierzaki[i].odglos();
+  }
+};
 
 main();

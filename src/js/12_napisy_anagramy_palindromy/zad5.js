@@ -1,62 +1,67 @@
 /*
-Otrzymujesz napis reprezentujacy zdanie oraz slowo. Znajdz wszystkie
-anagramy  otrzymanego slowa w zdaniu. Roznice miedzy wielkimi i malymi
-literami powinny byc zignorowane.
+
+Tytuł: Znalezienie anagramów słowa w zdaniu.
+
+Treść: Napisz program, który otrzymuje napis reprezentujący zdanie oraz słowo. Twoim zadaniem jest znalezienie wszystkich anagramów otrzymanego słowa w zdaniu. Różnice między wielkimi i małymi literami powinny być zignorowane.
+
+Dane wejściowe: Dwa napisy.
+
+Dane wyjściowe: Lista napisów.
+
+Przykład:
+
+Dla otrzymanych napisów: “Sroga kara.” oraz “arak”, powinna zostać zwrócona lista: [“kara”].
 */
-czyAnagram = function(napis1, napis2) {
-    if (napis1.length !== napis2.length)
-        return false;
-    var tab1 = zamienNaTab(napis1);
-    var tab2 = zamienNaTab(napis2);
-    for (var i = 0; i < tab1.length; i++) {
-        var index = tab2.indexOf(tab1[i]);
-        if (index === -1)
-            return false;
-        tab2.splice(index, 1);
-    }
-    return true;
-}
-zamienNaTab = function(napis) {
-    var tab = [];
-    for (var i = 0; i < napis.length; i++) {
-        tab.push(napis[i]);
-    }
-    return tab;
-}
-rozdzielNaSlowa = function(napis) {
-    var words = napis.split(/[\s,]+/);
-    for (var i = 0; i < words.length; i++) {
-        words[i] = words[i].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-    }
-    return words;
-}
-anagramy = function(napis, slowo) {
-    var words = rozdzielNaSlowa(napis);
-    var anagramy = [];
-    for (var i = 0; i < words.length; i++) {
-        if (czyAnagram(words[i], slowo))
-            anagramy.push(words[i]);
-    }
-    return anagramy;
-}
-test1 = function() {
-    var zdanie = "Za jego nikczemne uczynki, spotakla go wysoce sroga kara."
-    var slowo = "arak";
-    var oczekiwane = ["kara"];
-    var wynik = anagramy(zdanie, slowo);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
-    }
-    oczekiwane.sort();
-    wynik.sort();
-    for (var i = 0; i < oczekiwane.length; i++) {
-        if (wynik[i] !== oczekiwane[i]) {
-            throw new Error(`Assertion error line 29: ${wynik[i]} != ${oczekiwane[i]}`);
-        }
-    }
-};
-main = function(args) {
-    test1();
+
+function czyAnagramy(napis1, napis2) {
+  if (napis1.length !== napis2.length) {
+    return false;
+  }
+
+  const posortowanyNapis1 = napis1.split("").sort().join("").toLowerCase();
+  const posortowanyNapis2 = napis2.split("").sort().join("").toLowerCase();
+
+  return posortowanyNapis1 === posortowanyNapis2;
 }
 
-main(null);
+function znajdzAnagramy(zdanie, slowo) {
+  const slowa = zdanie.split(" ");
+  const anagramy = [];
+
+  for (const slowoZdania of slowa) {
+    if (czyAnagramy(slowoZdania, slowo)) {
+      anagramy.push(slowoZdania);
+    }
+  }
+
+  return anagramy;
+}
+
+// Test
+
+function test() {
+  const inputZdanie = "Sroga kara.";
+  const inputSlowo = "arak";
+  const expectedOutput = ["kara"];
+  const output = znajdzAnagramy(inputZdanie, inputSlowo);
+
+  assert(
+    JSON.stringify(output) === JSON.stringify(expectedOutput),
+    'Test nie powiódł się dla "' +
+      inputZdanie +
+      '" i "' +
+      inputSlowo +
+      '". Otrzymany wynik to ' +
+      JSON.stringify(output) +
+      ", a oczekiwany wynik to " +
+      JSON.stringify(expectedOutput)
+  );
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+test();

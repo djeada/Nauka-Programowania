@@ -32,114 +32,137 @@ d) Wynik: [37, 0, 0, 25, 4]
 
 e) Wynik: [2592, 0, 0, 36, 1080]
 */
-
 // a) Zwiększ o 1 wszystkie elementy o parzystych indeksach (indeksy zaczynają się od 0).
 function zwiekszElementyOParzystychIndeksach(lista) {
-    return lista.map((element, indeks) => {
-        if (indeks % 2 === 0) {
-            return element + 1;
-        }
-        return element;
-    });
+  return lista.map((element, indeks) => {
+    if (indeks % 2 === 0) {
+      return element + 1;
+    }
+    return element;
+  });
 }
-
 
 // b) Wyzeruj wszystkie elementy będące wielokrotnościami liczby 3.
 function wyzerujWielokrotnosciLiczby3(lista) {
-    return lista.map((element) => {
-        if (element % 3 === 0) {
-            return 0;
-        }
-        return element;
-    });
+  return lista.map((element) => {
+    if (element % 3 === 0) {
+      return 0;
+    }
+    return element;
+  });
 }
 
 // c) Podnieś do kwadratu wszystkie elementy mniejsze niż 10.
 function podniesDoKwadratuMniejszeNiz10(lista) {
-    return lista.map((element) => {
-        if (element < 10) {
-            return element * element;
-        }
-        return element;
-    });
+  return lista.map((element) => {
+    if (element < 10) {
+      return element * element;
+    }
+    return element;
+  });
 }
 
 // d) Wstaw sumę wszystkich elementów otrzymanej listy na indeksy będące liczbami pierwszymi.
 function wstawSumaNaIndeksyPierwsze(lista) {
-    return lista.map((element, indeks) => {
-        if (czyLiczbaJestPierwsza(indeks)) {
-            return sumaListy(lista);
-        }
-        return element;
-    });
+  return lista.map((element, indeks) => {
+    if (czyLiczbaJestPierwsza(indeks)) {
+      return sumaListy(lista);
+    }
+    return element;
+  });
 }
 
 // e) Zamień każdy element na iloczyn wszystkich elementów listy poza nim samym.
 function zamienNaIloczynPozaNimSamym(lista) {
-    return lista.map((element) => {
-        return iloczynListyBezElementu(lista, element);
-    });
+  return lista.map((element) => {
+    return iloczynListyBezElementu(lista, element);
+  });
 }
 
 // Funkcje pomocnicze
 function sumaListy(lista) {
-    return lista.reduce((suma, element) => suma + element, 0);
+  return lista.reduce((suma, element) => suma + element, 0);
 }
 
 function iloczynListyBezElementu(lista, element) {
-    return lista.reduce((iloczyn, elementListy) => {
-        if (elementListy !== element) {
-            return iloczyn * elementListy;
-        }
-        return iloczyn;
-    }, 1);
+  return lista.reduce((iloczyn, elementListy) => {
+    if (elementListy !== element) {
+      return iloczyn * elementListy;
+    }
+    return iloczyn;
+  }, 1);
 }
 
 function czyLiczbaJestPierwsza(liczba) {
-    if (liczba < 2) {
-        return false;
+  if (liczba < 2) {
+    return false;
+  }
+  for (let i = 2; i < liczba; i++) {
+    if (liczba % i === 0) {
+      return false;
     }
-    for (let i = 2; i < liczba; i++) {
-        if (liczba % i === 0) {
-            return false;
-        }
-    }
-    return true;
+  }
+  return true;
 }
 
 // Testy
 function assert(condition, message) {
-    if (!condition) {
-        throw new Error(message || "Assertion failed");
-    }
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
 function testZwiekszElementyOParzystychIndeksach() {
-    const lista = [5, 7, 9, 4, 2];
-    const wynik = [6, 7, 10, 4, 3];
-    assert(JSON.stringify(zwiekszElementyOParzystychIndeksach(lista)) === JSON.stringify(wynik), "Zwiększanie elementów o parzystych indeksach nie działa.");
+  const lista = [5, 7, 9, 4, 2];
+  const wynik = [6, 7, 10, 4, 3];
+  assert(
+    JSON.stringify(zwiekszElementyOParzystychIndeksach(lista)) ===
+      JSON.stringify(wynik),
+    "Zwiększanie elementów o parzystych indeksach nie działa."
+  );
 }
 
 function testWyzerujWielokrotnosciLiczby3() {
-    const lista = [5, 7, 9, 4, 2];
-    const wynik = [5, 7, 0, 4, 2];
-    assert(JSON.stringify(wyzerujWielokrotnosciLiczby3(lista)) === JSON.stringify(wynik), "Wyzerowywanie wielokrotności liczby 3 nie działa.");
+  const lista = [5, 7, 9, 4, 2];
+  const wynik = [5, 7, 0, 4, 2];
+  assert(
+    JSON.stringify(wyzerujWielokrotnosciLiczby3(lista)) ===
+      JSON.stringify(wynik),
+    "Wyzerowywanie wielokrotności liczby 3 nie działa."
+  );
 }
 
 function testPodniesDoKwadratuMniejszeNiz10() {
-    const lista = [5, 7, 9, 4, 2];
-    const wynik = [25, 7, 9, 16, 4];
-    assert(JSON.stringify(podniesDoKwadratuMniejszeNiz10(lista)) === JSON.stringify(wynik), "Podnoszenie do kwadratu elementów mniejszych niż 10 nie działa.");
+  const lista = [5, 7, 9, 4, 2];
+  const wynik = [25, 7, 81, 16, 4];
+  assert(
+    JSON.stringify(podniesDoKwadratuMniejszeNiz10(lista)) ===
+      JSON.stringify(wynik),
+    "Podnoszenie do kwadratu elementów mniejszych niż 10 nie działa."
+  );
 }
 
 function testWstawSumaNaIndeksyPierwsze() {
-    const lista = [5, 7, 9, 4, 2];
-    const wynik = [37, 7, 9, 25, 4];
-    assert(JSON.stringify(wstawSumaNaIndeksyPierwsze(lista)) === JSON.stringify(wynik), "Wstawianie sumy na indeksy pierwsze nie działa.");
+  const lista = [5, 7, 9, 4, 2];
+  const wynik = [29, 7, 9, 29, 2];
+  assert(
+    JSON.stringify(wstawSumaNaIndeksyPierwsze(lista)) === JSON.stringify(wynik),
+    "Wstawianie sumy na indeksy pierwsze nie działa."
+  );
 }
 
 function testZamienNaIloczynPozaNimSamym() {
-    const lista = [5, 7, 9, 4, 2];
-    const wynik = [2592, 0, 0, 36, 1080];
-    assert(JSON.stringify(zamienNaIloczynPozaNimSamym(lista)) === JSON.stringify(wynik), "Zamiana na iloczyn poza nim samym nie działa.");
+  const lista = [5, 7, 9, 4, 2];
+  const wynik = [504, 360, 280, 567, 945];
+  assert(
+    JSON.stringify(zamienNaIloczynPozaNimSamym(lista)) ===
+      JSON.stringify(wynik),
+    "Zamiana na iloczyn poza nim samym nie działa."
+  );
 }
+
+testZwiekszElementyOParzystychIndeksach();
+testWyzerujWielokrotnosciLiczby3();
+testPodniesDoKwadratuMniejszeNiz10();
+testWstawSumaNaIndeksyPierwsze();
+testZamienNaIloczynPozaNimSamym();

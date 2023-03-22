@@ -1,40 +1,71 @@
 /*
-Otrzymujesz liste list liczb naturalnych. Znajdz w macierzy klepsydre o
-najwiekszej sumie. Klepsydra sklada sie z dokladnie 7 elementow. Trzy pierwsze
-elementy sa kolejnymi elementami dowolnego wiersza macierzy. Nastepny element
-znajduje sie w tej samej kolumnie co drugi element i w dokladnie jednym wierszu
-nizej. Trzy nastepne znajduja sie w tych samych kolumnach co trzy pierwsze i
-dokladnie dwa wiersze nizej.
+Tytuł: Klepsydra o największej sumie.
+
+Treść: Otrzymasz listę list liczb naturalnych. Znajdź w macierzy klepsydrę o największej sumie. Klepsydra składa się dokładnie z 7 elementów. Pierwsze trzy elementy są kolejnymi elementami dowolnego wiersza macierzy. Czwarty element znajduje się w tej samej kolumnie co drugi element i o jeden wiersz niżej. Ostatnie trzy elementy znajdują się w tych samych kolumnach co trzy pierwsze i o dwa wiersze niżej.
+
+Podpowiedź: Następująca macierz:
+
+      1 2 3
+      4 5 6
+      7 8 9
+
+ma tylko jedną klepsydrę:
+
+      1 2 3
+        5
+      7 8 9
+
+Dane wejściowe: Lista list liczb naturalnych.
+
+Dane wyjściowe: Liczba naturalna.
+
+Przykład:
+
+Dla otrzymanej macierzy: [[7, 4, 2, 0], [4, 8, 10, 8], [3, 6, 7, 6], [3, 9, 19, 14]], powinna zostać zwrócona liczba: 75.
+
 */
-klepsydraNajwiekszaSuma = function(macierz) {
-    var wynik = Number.MIN_SAFE_INTEGER;
-    var N = macierz.length;
-    for (var wiersz = 0; wiersz < N; wiersz++) {
-        for (var kolumna = 0; kolumna < N; kolumna++) {
-            if (!(wiersz == 0 || wiersz == N - 1 || kolumna == 0 || kolumna == N - 1)) {
-                var suma = macierz[wiersz - 1][kolumna - 1] + macierz[wiersz - 1][kolumna] + macierz[wiersz - 1][kolumna + 1] + macierz[wiersz][kolumna] + macierz[wiersz + 1][kolumna - 1] + macierz[wiersz + 1][kolumna] + macierz[wiersz + 1][kolumna + 1];
-                wynik = Math.max(wynik, suma);
-            }
-        }
+
+function najwiekszaSumaKlepsydry(macierz) {
+  const n = macierz.length;
+  let najwiekszaSuma = 0;
+
+  for (let i = 0; i <= n - 3; i++) {
+    for (let j = 0; j <= n - 3; j++) {
+      const suma =
+        macierz[i][j] +
+        macierz[i][j + 1] +
+        macierz[i][j + 2] +
+        macierz[i + 1][j + 1] +
+        macierz[i + 2][j] +
+        macierz[i + 2][j + 1] +
+        macierz[i + 2][j + 2];
+
+      if (suma > najwiekszaSuma) {
+        najwiekszaSuma = suma;
+      }
     }
-    return wynik;
-}
-test1 = function() {
-    var macierz = [
-        [10, 99, 28, 21, 78],
-        [35, 78, 31, 56, 24],
-        [7, 18, 2, 50, 87],
-        [59, 67, 9, 82, 53],
-        [23, 26, 76, 62, 36]
-    ];
-    var oczekiwane = 395;
-    var wynik = klepsydraNajwiekszaSuma(macierz);
-    if (wynik != oczekiwane) {
-        throw new Error(`Assertion error line 24: ${wynik} != ${oczekiwane}`);
-    }
-}
-main = function(args) {
-    test1();
+  }
+
+  return najwiekszaSuma;
 }
 
-main(null);
+// test
+function test() {
+  const macierz = [
+    [7, 4, 2, 0],
+    [4, 8, 10, 8],
+    [3, 6, 7, 6],
+    [3, 9, 19, 14],
+  ];
+  const wynik = 75;
+  assert(
+    najwiekszaSumaKlepsydry(macierz) === wynik,
+    `Niepoprawny wynik dla macierzy ${macierz}.`
+  );
+}
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+test();

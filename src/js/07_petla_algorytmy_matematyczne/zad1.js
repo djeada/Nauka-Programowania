@@ -13,17 +13,17 @@ Dla pobranych liczb 2, 4 i 6, funkcja powinna zwrócić liczbę 4.
 */
 
 // Funkcja zwracająca średnią arytmetyczną n liczb
-function sredniaArytmetycznaNLiczb(liczba) {
-    var suma = 0;
-    for (var i = 0; i < liczba; i++) {
-        var liczba = parseInt(prompt("Podaj liczbę:"));
-        suma += liczba;
-    }
-    return suma / liczba;
+function sredniaArytmetycznaNLiczb(n) {
+  var suma = 0;
+  for (var i = 0; i < n; i++) {
+    var liczba = parseInt(prompt("Podaj liczbę:"));
+    suma += liczba;
+  }
+  return suma / n;
 }
 
 // Pobieranie danych od użytkownika
-var liczba = parseInt(prompt("Podaj liczbę:"));
+var n = parseInt(prompt("Podaj liczbę liczb:"));
 
 // Wypisanie wyniku
-console.log(sredniaArytmetycznaNLiczb(liczba));
+console.log(sredniaArytmetycznaNLiczb(n));

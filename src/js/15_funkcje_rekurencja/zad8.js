@@ -1,56 +1,75 @@
 /*
-N krazkow o roznych srednicach ulozone jest na jednym z trzech slupkow
-(A, B lub C). Na spodzie znajduje sie krazek o najwiekszej srednicy.
-Kazdy nastepny krazek jest mniejszy od poprzedniego. Znajdz sposob na
-przelozenie wszystkich krazkow na inny slupek. Pamietaj, ze nie wolno
-klasc krazka o wiekszej srednicy na krazek o mniejszej srednicy, ani
-przekladac kilku krazkow jednoczesnie.
+
+Tytuł: Wieża Hanoi.
+
+Treść: N krążków o różnych średnicach ułożonych jest na jednym z trzech słupków (A, B lub C). Na dole znajduje się krążek o największej średnicy. Każdy następny jest mniejszy od poprzedniego. Znajdź sposób na przełożenie wszystkich krążków na inny słupek. Pamiętaj, że nie wolno kłaść krążka o większej średnicy na krążek o mniejszej średnicy, ani przekładać kilku krążków jednocześnie.
+
+Dane wejściowe: Liczba naturalna N.
+
+Dane wyjściowe: Lista par znaków.
+
+Przykład:
+
+Dla N = 3, powinna zostać zwrócona lista: [('A', 'B'), ('A', 'C'), ('B', 'C'), ('A', 'B'), ('C', 'A'), ('C', 'B'), ('A', 'B')]
 */
-var Pair = /** @class */ (function() {
-    function Pair(a, b) {
-        this.first = a;
-        this.second = b;
-    }
-    return Pair;
-}());
-hanoi = function(n) {
-    var hanoiWew = function(n, a, b, c, wynik) {
-        if (n == 1) {
-            wynik.push(new Pair(a, b));
-            return;
-        }
-        hanoiWew(n - 1, a, c, b, wynik);
-        wynik.push(new Pair(a, b));
-        hanoiWew(n - 1, c, b, a, wynik);
-    };
-    var wynik = new Array();
-    hanoiWew(n, 'A', 'B', 'C', wynik);
-    return wynik;
-};
-test1 = function() {
-    var n = 3;
-    var oczekiwane = [
-        new Pair('A', 'B'),
-        new Pair('A', 'C'),
-        new Pair('B', 'C'),
-        new Pair('A', 'B'),
-        new Pair('C', 'A'),
-        new Pair('C', 'B'),
-        new Pair('A', 'B')
-    ];
-    var wynik = hanoi(n);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 48: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i].first !== oczekiwane[i].first || wynik[i].second !== oczekiwane[i].second) {
-            throw new Error(`Assertion error line 52: oczekiwane: ${oczekiwane[i].first}, ${oczekiwane[i].second}, obliczone: ${wynik[i].first}, ${wynik[i].second}`);
-        }
-    }
-};
-main = function(args) {
-    test1();
-};
 
+function wiezaHanoi(n, zrodlo = "A", cel = "B", pomocniczy = "C") {
+  if (n === 1) {
+    return [[zrodlo, cel]];
+  } else {
+    const ruchy1 = wiezaHanoi(n - 1, zrodlo, pomocniczy, cel);
+    const ruchy2 = wiezaHanoi(1, zrodlo, cel, pomocniczy);
+    const ruchy3 = wiezaHanoi(n - 1, pomocniczy, cel, zrodlo);
+    return ruchy1.concat(ruchy2, ruchy3);
+  }
+}
 
-main()
+function assert(warunek, komunikat) {
+  if (!warunek) {
+    throw komunikat || "Wystąpił błąd";
+  }
+}
+
+// Testy
+function testWiezaHanoi() {
+  let n;
+  let wynik;
+
+  n = 1;
+  wynik = wiezaHanoi(n);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([["A", "B"]]),
+    "Test 1 nieudany"
+  );
+
+  n = 2;
+  wynik = wiezaHanoi(n);
+  assert(
+    JSON.stringify(wynik) ===
+      JSON.stringify([
+        ["A", "C"],
+        ["A", "B"],
+        ["C", "B"],
+      ]),
+    "Test 2 nieudany"
+  );
+
+  n = 3;
+  wynik = wiezaHanoi(n);
+  assert(
+    JSON.stringify(wynik) ===
+      JSON.stringify([
+        ["A", "B"],
+        ["A", "C"],
+        ["B", "C"],
+        ["A", "B"],
+        ["C", "A"],
+        ["C", "B"],
+        ["A", "B"],
+      ]),
+    "Test 3 nieudany"
+  );
+}
+
+testWiezaHanoi();
+console.log("Wszystkie testy zakończone sukcesem");

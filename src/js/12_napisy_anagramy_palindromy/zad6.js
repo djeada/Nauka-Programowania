@@ -1,55 +1,76 @@
 /*
-Znajdz permutacje danego slowa bedace palindromami.
+Tytuł: Permutacje słowa, które są palindromami.
+
+Treść: Napisz program, który znajdzie permutacje danego słowa, które są palindromami.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Lista napisów.
+
+Przykład:
+
+Dla otrzymanego napisu: “taco”, powinna zostać zwrócona lista: ["taco", "toca"].
 */
-permutacje = function(napis) {
-    if (napis.length === 1)
-        return [napis];
-    var permutacje = [];
-    for (var i = 0; i < napis.length; i++) {
-        var znak = napis.charAt(i);
-        var reszta = permutacje(napis.substring(0, i) + napis.substring(i + 1));
-        for (var j = 0; j < reszta.length; j++) {
-            permutacje.push(znak + reszta[j]);
-        }
+
+function permutacje(napis) {
+  if (napis.length === 1) {
+    return [napis];
+  }
+
+  const wynik = [];
+  for (let i = 0; i < napis.length; i++) {
+    const pierwszyZnak = napis[i];
+    const resztaNapisu = napis.slice(0, i) + napis.slice(i + 1);
+    const permutacjeReszty = permutacje(resztaNapisu);
+
+    for (const perm of permutacjeReszty) {
+      wynik.push(pierwszyZnak + perm);
     }
-    return permutacje;
-}
-czyPalindrom = function(napis) {
-    var odwroc = odwrocNapis(napis);
-    return (odwroc === napis);
-}
-odwrocNapis = function(napis) {
-    if (napis.length === 1)
-        return napis;
-    return odwrocNapis(napis.substring(1)) + napis.charAt(0);
-}
-permutacjePalindomiczne = function(napis) {
-    var permutacje = permutacje(napis);
-    var wynik = new Set();
-    for (var i = 0; i < permutacje.length; i++) {
-        if (czyPalindrom(permutacje[i])) {
-            wynik.add(permutacje[i]);
-        }
-    }
-    return Array.from(wynik);
-}
-test1 = function() {
-    var napis = "adamm";
-    var oczekiwane = ["madam", "amdma"];
-    var wynik = permutacjePalindomiczne(napis);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 29: ${wynik.length} != ${oczekiwane.length}`);
-    }
-    oczekiwane.sort();
-    wynik.sort();
-    for (var i = 0; i < oczekiwane.length; i++) {
-        if (wynik[i] !== oczekiwane[i]) {
-            throw new Error(`Assertion error line 29: ${wynik[i]} != ${oczekiwane[i]}`);
-        }
-    }
-}
-main = function(args) {
-    test1();
+  }
+
+  return wynik;
 }
 
-main(null);
+function jestPalindromem(napis) {
+  const odwroconyNapis = napis.split("").reverse().join("");
+  return napis.toLowerCase() === odwroconyNapis.toLowerCase();
+}
+
+function permutacjePalindromy(napis) {
+  const wszystkiePermutacje = permutacje(napis);
+  const wynik = [];
+
+  for (const perm of wszystkiePermutacje) {
+    if (jestPalindromem(perm)) {
+      wynik.push(perm);
+    }
+  }
+
+  return wynik;
+}
+
+// Test
+
+function test() {
+  const input = "taco";
+  const expectedOutput = ["taco", "toca"];
+  const output = permutacjePalindromy(input);
+
+  assert(
+    JSON.stringify(output) === JSON.stringify(expectedOutput),
+    'Test nie powiódł się dla "' +
+      input +
+      '". Otrzymany wynik to ' +
+      JSON.stringify(output) +
+      ", a oczekiwany wynik to " +
+      JSON.stringify(expectedOutput)
+  );
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+test();

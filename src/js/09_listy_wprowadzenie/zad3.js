@@ -12,40 +12,37 @@ Przykład:
 Dla otrzymanej listy [2, 9, -1, 3, 8] oraz klucza -1 powinno zostać zwrócone 2.
 */
 
-
 function pierwszeWystapienieKlucza(lista, klucz) {
-    for (let i = 0; i < lista.length; i++) {
-        if (lista[i] === klucz) {
-            return i;
-        }
+  for (let i = 0; i < lista.length; i++) {
+    if (lista[i] === klucz) {
+      return i;
     }
-    return -1;
+  }
+  return -1;
 }
-
 
 // Testy
 function assert(condition, message) {
-    if (!condition) {
-        throw new Error(message || "Assertion failed");
-    }
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
 }
 
 function testPierwszeWystapienieKlucza_pozytywne() {
-    assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], -1) === 2);
-    assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 9) === 1);
-    assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 2) === 0);
-
+  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], -1) === 2);
+  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 9) === 1);
+  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 2) === 0);
 }
 
 function testPierwszeWystapienieKlucza_negatywne() {
-    assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 0) === -1);
-    assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 10) === -1);
-    assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 100) === -1);
+  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 0) === -1);
+  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 10) === -1);
+  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 100) === -1);
 }
 
 function main() {
-    testPierwszeWystapienieKlucza_pozytywne();
-    testPierwszeWystapienieKlucza_negatywne();
+  testPierwszeWystapienieKlucza_pozytywne();
+  testPierwszeWystapienieKlucza_negatywne();
 }
 
 main();

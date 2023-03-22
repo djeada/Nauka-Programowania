@@ -1,31 +1,36 @@
-    liczby = function(lista) {
-        var wynik = "";
-        for (var i = 0; i < lista.length; i++) {
-            var liczba = lista[i]; {
-                wynik += String(liczba).toString();
-            }
-        }
-        return wynik;
-    };
-    test1 = function() {
-        var lista = ([2, 4, 7].slice(0));
-        var oczekiwane = "247";
-        var wynik = liczby(lista);
-        if (wynik !== oczekiwane) {
-            throw new Error(`Assertion error line 29: ${wynik} != ${oczekiwane}`);
-        }
-    };
-    test2 = function() {
-        var lista = ([]);
-        var oczekiwane = "";
-        var wynik = liczby(lista);
-        if (wynik !== oczekiwane) {
-            throw new Error(`Assertion error line 29: ${wynik} != ${oczekiwane}`);
-        }
-    };
-    main = function(args) {
-        test1();
-        test2();
-    };
+/*
+Tytuł: Konwersja listy na napis
 
-    main(null);
+Treść: Otrzymujesz listę liczb naturalnych. Zamie listę na napis.
+
+Dane wejściowe: Lista liczb naturalnych.
+
+Dane wyjściowe: Napis.
+
+Przykład:
+
+Dla otrzymanej listy: [2, 4, 7], powinien zostać zwrócony napis: “247”.
+*/
+
+function listaNaNapis(lista) {
+  return lista.join("");
+}
+
+// Testy
+
+function test() {
+  let input = [2, 4, 7];
+  let expectedOutput = "247";
+  let output = listaNaNapis(input);
+
+  assert(output === expectedOutput, "Test nie powiódł się");
+  console.log("Test przeszedł pomyślnie");
+}
+
+function assert(condition, message) {
+  if (!condition) {
+    throw message || "Wystąpił błąd";
+  }
+}
+
+test();

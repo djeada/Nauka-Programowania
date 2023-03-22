@@ -28,7 +28,7 @@ const liczba = parseInt(prompt("Podaj liczbę:"));
 // Pętla $$a_n = n^2 + n + 1$$
 let suma = 0;
 for (let i = 1; i <= liczba; i++) {
-    suma += i ** 2 + i + 1;
+  suma += i ** 2 + i + 1;
 }
 
 // Wypisanie wyniku
@@ -37,7 +37,7 @@ console.log(`a) ${suma}`);
 // Pętla $$a_n = n^2 + 5n$$
 suma = 0;
 for (let i = 1; i <= liczba; i++) {
-    suma += i ** 2 + 5 * i;
+  suma += i ** 2 + 5 * i;
 }
 
 // Wypisanie wyniku
@@ -46,7 +46,7 @@ console.log(`b) ${suma}`);
 // Pętla $$a_n = n + 2n$$
 suma = 0;
 for (let i = 1; i <= liczba; i++) {
-    suma += i + 2 * i;
+  suma += i + 2 * i;
 }
 
 // Wypisanie wyniku

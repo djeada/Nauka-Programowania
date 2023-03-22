@@ -1,31 +1,66 @@
 /*
-Otrzymujesz dwie listy n wspolczynnikow wielomianu postaci a_nx^n +
-a_(n-1)x^(n-1) + ... + a_0. Oblicz wspolczynniki wielomianu bedacego suma
-otrzymanych wielomianow.
+Tytuł: Obliczenie sumy wielomianów.
+
+Treść: Otrzymujesz dwie listy n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz współczynniki wielomianu będącego sumą otrzymanych wielomianów.
+
+Dane wejściowe: Dwie listy liczb naturalnych.
+
+Dane wyjściowe: Lista liczb naturalnych.
+
+Przykład:
+
+Dla otrzymanych dwóch list [3, 5, 2] oraz [2, -8, 1], zostanie zwrócona lista [5, -3, 3].
 */
-dodajWielomiany = function(wspolczynniki1, wspolczynniki2) {
-    var wynik = [];
-    for (var i = 0; i < wspolczynniki1.length; i++) {
-        wynik[i] = wspolczynniki1[i] + wspolczynniki2[i];
-    }
-    return wynik;
-}
-test1 = function() {
-    var wielomian1 = [3, 2, 1];
-    var wielomian2 = [1, 2, 3];
-    var oczekiwane = [4, 4, 4];
-    var wynik = dodajWielomiany(wielomian1, wielomian2);
-    if (wynik.length !== oczekiwane.length) {
-        throw new Error(`Assertion error line 22: oczekiwane: ${oczekiwane.length}, obliczone: ${wynik.length}`);
-    }
-    for (var i = 0; i < wynik.length; i++) {
-        if (wynik[i] !== oczekiwane[i]) {
-            throw new Error(`Assertion error line 26: oczekiwane: ${oczekiwane[i]}, obliczone: ${wynik[i]}`);
-        }
-    }
-}
-main = function(args) {
-    test1();
+
+function dodawanieWielomianow(wielomian1, wielomian2) {
+  const dlugosc = Math.max(wielomian1.length, wielomian2.length);
+  const wynik = [];
+
+  for (let i = 0; i < dlugosc; i++) {
+    const wspolczynnik1 = wielomian1[i] || 0;
+    const wspolczynnik2 = wielomian2[i] || 0;
+    wynik.push(wspolczynnik1 + wspolczynnik2);
+  }
+
+  return wynik;
 }
 
-main(null);
+function assert(warunek, komunikat) {
+  if (!warunek) {
+    throw komunikat || "Wystąpił błąd";
+  }
+}
+
+// Testy
+function testDodawanieWielomianow() {
+  let wielomian1;
+  let wielomian2;
+  let wynik;
+
+  wielomian1 = [3, 5, 2];
+  wielomian2 = [2, -8, 1];
+  wynik = dodawanieWielomianow(wielomian1, wielomian2);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([5, -3, 3]),
+    "Test 1 nieudany"
+  );
+
+  wielomian1 = [1, 0, 3];
+  wielomian2 = [2, 2, 2];
+  wynik = dodawanieWielomianow(wielomian1, wielomian2);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([3, 2, 5]),
+    "Test 2 nieudany"
+  );
+
+  wielomian1 = [0, 0, 0];
+  wielomian2 = [1, 1, 1];
+  wynik = dodawanieWielomianow(wielomian1, wielomian2);
+  assert(
+    JSON.stringify(wynik) === JSON.stringify([1, 1, 1]),
+    "Test 3 nieudany"
+  );
+}
+
+testDodawanieWielomianow();
+console.log("Wszystkie testy zakończone sukcesem");
