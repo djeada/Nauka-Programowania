@@ -2379,11 +2379,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>1</td>
             <td>Sprawdź, czy ścieżka należy do pliku/folderu.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad1.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad1.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad1">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad1.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad1.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad1.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad1.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad1">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad1.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad1.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -2391,11 +2391,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>2</td>
             <td>Znajdź w folderze wszystkie pliki z danym rozszerzeniem.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad2.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad2.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad2">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad2.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad2.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad2.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad2.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad2">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad2.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad2.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -2403,11 +2403,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>3</td>
             <td>Znajdź ścieżkę pliku o danej nazwie.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad2.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad3.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad3">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad3.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad3.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad2.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad3.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad3">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad3.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad3.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -2415,11 +2415,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>4</td>
             <td>Wczytaj i wypisz treść pliku.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad4.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad4.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad4">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad4.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad4.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad4.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad4.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad4">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad4.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad4.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -2427,11 +2427,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>5</td>
             <td>Plik z listą adresów ip.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad5.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad5.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad5">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad5.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad5.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad5.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad5.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad5">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad5.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad5.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -2439,11 +2439,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>6</td>
             <td>Statystyki dla pliku tekstowego.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad6.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad6.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad6">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad6.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad6.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad6.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad6.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad6">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad6.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad6.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -2451,11 +2451,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>7</td>
             <td>Dodaj wiersz do pliku.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad7.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad7.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad7">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad7.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad7.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad7.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad7.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad7">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad7.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad7.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -2463,11 +2463,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>8</td>
             <td>Znajdź i zmodyfikuj pliki spełniające warunek.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad8.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad8.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad8">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad8.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad8.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad8.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad8.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad8">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad8.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad8.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -2475,11 +2475,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>9</td>
             <td>Usuń pliki spełniające warunek.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad9.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad9.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad9">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad9.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad9.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad9.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad9.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad9">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad9.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad9.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -2487,11 +2487,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>10</td>
             <td>Skopiuj pliki.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad10.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad10.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad10">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad10.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad10.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad10.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad10.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad10">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad10.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad10.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★☆☆</td>
@@ -2499,11 +2499,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>11</td>
             <td>Podmień treści.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad11.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad11.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad11">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad11.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad11.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad11.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad11.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad11">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad11.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad11.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -2511,11 +2511,11 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>12</td>
             <td>Przesuń wszystkie pliki csv do jednego folderu.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_operacje_na_plikach/zad12.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_operacje_na_plikach/zad12.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_operacje_na_plikach/zad12">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_operacje_na_plikach/zad12.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/18_operacje_na_plikach/zad12.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad12.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad12.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad12">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad12.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad12.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
@@ -2537,10 +2537,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>1</td>
             <td>Zaprojektuj klasę *Koło*.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_klasy/zad1.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_klasy/zad1.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_klasy/zad1">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_klasy/zad1.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_klasy/zad1.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_klasy/zad1.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_klasy/zad1">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_klasy/zad1.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2549,10 +2549,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>2</td>
             <td>Zaprojektuj klasę *Punkt*.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_klasy/zad2.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_klasy/zad2.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_klasy/zad2">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_klasy/zad2.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_klasy/zad2.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_klasy/zad2.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_klasy/zad2">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_klasy/zad2.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2561,10 +2561,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>3</td>
             <td>Prostokąt powstały z nałożenia się dwóch prostokątów.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_klasy/zad3.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_klasy/zad3.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_klasy/zad3">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_klasy/zad3.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_klasy/zad3.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_klasy/zad3.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_klasy/zad3">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_klasy/zad3.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2573,10 +2573,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>4</td>
             <td>Zaprojektuj klasy *Wektor2d* oraz *Wektor3D*.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_klasy/zad4.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_klasy/zad4.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_klasy/zad4">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_klasy/zad4.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_klasy/zad4.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_klasy/zad4.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_klasy/zad4">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_klasy/zad4.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2585,10 +2585,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>5</td>
             <td>Zaprojektuj klasę *Zespolona*.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_klasy/zad5.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_klasy/zad5.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_klasy/zad5">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_klasy/zad5.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_klasy/zad5.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_klasy/zad5.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_klasy/zad5">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_klasy/zad5.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2597,10 +2597,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>6</td>
             <td>Zaprojektuj klasę *Macierz.*</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_klasy/zad6.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_klasy/zad6.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_klasy/zad6">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_klasy/zad6.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_klasy/zad6.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_klasy/zad6.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_klasy/zad6">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_klasy/zad6.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2609,10 +2609,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>7</td>
             <td>Znajdź liczbę instancji klasy w programie.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_klasy/zad7.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_klasy/zad7.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_klasy/zad7">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_klasy/zad7.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/18_klasy/zad7.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/18_klasy/zad7.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/18_klasy/zad7">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/18_klasy/zad7.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2635,10 +2635,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>1</td>
             <td>Wywołaj metodę klasy bazowej w klasie potomnej.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_dziedziczenie/zad1.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_dziedziczenie/zad1.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_dziedziczenie/zad1">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_dziedziczenie/zad1.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_dziedziczenie/zad1.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_dziedziczenie/zad1.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_dziedziczenie/zad1">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_dziedziczenie/zad1.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2647,10 +2647,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>2</td>
             <td>Zaprojektuj klasę bazową *Kształt* oraz klasy potomne *Koło* i *Kwadrat*.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_dziedziczenie/zad2.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_dziedziczenie/zad2.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_dziedziczenie/zad2">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_dziedziczenie/zad2.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_dziedziczenie/zad2.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_dziedziczenie/zad2.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_dziedziczenie/zad2">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_dziedziczenie/zad2.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2659,10 +2659,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>3</td>
             <td>Polimorfizm.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_dziedziczenie/zad3.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_dziedziczenie/zad3.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_dziedziczenie/zad3">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_dziedziczenie/zad3.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_dziedziczenie/zad3.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_dziedziczenie/zad3.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_dziedziczenie/zad3">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_dziedziczenie/zad3.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2671,10 +2671,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>4</td>
             <td>Dziedziczenie wielopoziomowe.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_dziedziczenie/zad4.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_dziedziczenie/zad4.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_dziedziczenie/zad4">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_dziedziczenie/zad4.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_dziedziczenie/zad4.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_dziedziczenie/zad4.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_dziedziczenie/zad4">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_dziedziczenie/zad4.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
@@ -2683,10 +2683,10 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
         <tr>
             <td>5</td>
             <td>Dziedziczenie wielokrotne.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_dziedziczenie/zad5.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_dziedziczenie/zad5.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_dziedziczenie/zad5">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_dziedziczenie/zad5.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/19_dziedziczenie/zad5.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/19_dziedziczenie/zad5.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_dziedziczenie/zad5">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_dziedziczenie/zad5.js">JavaScript</a></td>
             <td><a>Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
