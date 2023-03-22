@@ -1,66 +1,45 @@
 /*
-Otrzymujesz slownik par napisow i liczb calkowitych oraz pojedyncza
-liczbe calkowita. Usun ze slownika pary, dla ktorych wartosc rowna
-jest otrzymanej liczbie.
+
+Tytuł: Usuwanie z słownika.
+
+Treść: Otrzymujesz słownik par napisów i liczb całkowitych oraz pojedynczą liczbę całkowitą. Usuń z słownika pary, dla których wartość jest równa otrzymanej liczbie.
+
+Dane wejściowe: Słownik par napisów i liczb całkowitych oraz liczba całkowita.
+
+Dane wyjściowe: Słownik par napisów i liczb całkowitych.
+
+Przykład:
+
+Dla słownika i liczby: {“aaa”: 5, “abc”: 1, “xxx”: 5, “cba” : 3} i 5, słownik powinien wyglądać następująco: {“abc”: 1, “cba” : 3}.
+
 */
 
-usun = function (slownik, liczba) {
-  for (var klucz in slownik) {
-    if (slownik[klucz] === liczba) {
-      delete slownik[klucz];
+function usunZeSlownika(slownik, liczba) {
+  for (let key in slownik) {
+    if (slownik[key] === liczba) {
+      delete slownik[key];
     }
   }
   return slownik;
-};
+}
 
-test1 = function () {
-  var slownik = {
-    aaa: 5,
-    abc: 1,
-    xxx: 5,
-    cba: 3,
-  };
-  var liczba = 5;
+function testUsunZeSlownika() {
+  const slownik1 = { aaa: 5, abc: 1, xxx: 5, cba: 3 };
+  const wynik1 = usunZeSlownika(slownik1, 5);
+  assert(wynik1["abc"] === 1, "Test 1 nie powiódł się");
+  assert(wynik1["cba"] === 3, "Test 2 nie powiódł się");
+  assert(Object.keys(wynik1).length === 2, "Test 3 nie powiódł się");
 
-  var oczekiwane = {
-    abc: 1,
-    cba: 3,
-  };
+  const slownik2 = { a: 10, b: 20, c: 30 };
+  const wynik2 = usunZeSlownika(slownik2, 15);
+  assert(Object.keys(wynik2).length === 3, "Test 4 nie powiódł się");
+}
 
-  var wynik = usun(slownik, liczba);
-
-  if (slownik !== wynik) {
-    throw new Error(
-      `Assertion error line 79: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`
-    );
+// test
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Asercja nie powiodła się");
   }
-};
+}
 
-test2 = function () {
-  var slownik = {
-    slownik: 3,
-    word: 3,
-    lll: 3,
-    mmn: 1,
-  };
-  var liczba = 3;
-
-  var oczekiwane = {
-    mmn: 1,
-  };
-
-  var wynik = usun(slownik, liczba);
-
-  if (slownik !== wynik) {
-    throw new Error(
-      `Assertion error line 79: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`
-    );
-  }
-};
-
-main = function () {
-  test1();
-  test2();
-};
-
-main();
+testUsunZeSlownika();

@@ -1,12 +1,21 @@
 /*
-Otrzymujesz napis reprezentujacy sciezke folderu. Usun
-wszystkie pliki o rozmiarach wiekszych niz 10 kB znajdujace
-sie w podanym folderze oraz jego podfolderach.
+Tytuł: Usuń pliki spełniające warunek.
+
+Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do folderu. Usuń wszystkie pliki o rozmiarze większym niż 10 kB znajdujące się w podanym folderze i jego podfolderach.
+
+Dane wejściowe: Napis reprezentujący ścieżkę do folderu.
+
+Dane wyjściowe: Brak.
 */
 const fs = require("fs").promises;
 const path = require("path");
+const assert = (condition, message) => {
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
+};
 
-usunPliki = async (sciezka, rozmiar) => {
+const usunPliki = async (sciezka, rozmiar) => {
   const pliki = await fs.readdir(sciezka);
   const plikiTxt = pliki.filter((plik) => plik.endsWith(".txt"));
   for (let i = 0; i < plikiTxt.length; i++) {
@@ -19,7 +28,7 @@ usunPliki = async (sciezka, rozmiar) => {
   }
 };
 
-test1 = async () => {
+const test1 = async () => {
   const sciezkaFolderu = "temp_dir";
   const sciezkikiPlikow = ["lista.txt", "test.txt"];
   const tekst = "przykladowy tekst.\n";
@@ -34,16 +43,14 @@ test1 = async () => {
   await usunPliki(sciezkaFolderu, 10 * 1024);
 
   const daneFolderu = await fs.readdir(sciezkaFolderu);
-  if (daneFolderu.length !== 0) {
-    throw new Error(`Assertion error line 180: ${daneFolderu.length} != 0`);
-  }
+  assert(daneFolderu.length === 0, `Błąd asercji: ${daneFolderu.length} != 0`);
 
   await fs.rmdir(sciezkaFolderu, {
     recursive: true,
   });
 };
 
-main = async () => {
+const main = async () => {
   await test1();
 };
 

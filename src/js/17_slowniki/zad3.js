@@ -1,96 +1,68 @@
 /*
-Zbuduj prosta baze danych dla biblioteki oparta o slownik w ktorym kluczami sa
-imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek.
-Baza danych powinna umozliwiac:
-a) Dodanie wypozyczonej ksiazki do danego czytelnika.
-b) Zwrocenie wypozyczonej ksiazki przez czytelnika.
-c) Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
+
+Tytuł: Klucz to imię, wartość lista wypożyczonych książek.
+
+Treść: Zbuduj prostą bazę danych dla biblioteki opartą o słownik, w którym kluczami są imiona czytelników, a wartościami listy wypożyczonych książek. Baza danych powinna umożliwiać:
+
+1. Dodanie wypożyczonej książki do danego czytelnika.
+2. Zwrócenie wypożyczonej książki przez czytelnika.
+3. Wypisanie aktualnej listy wypożyczonych książek dla danego czytelnika.
+
 */
 
-dodajKsiazke = function (lista, uzytkownik, ksiazka) {
-  if (lista[uzytkownik] !== undefined) {
-    if (lista[uzytkownik].indexOf(ksiazka) == -1)
-      lista[uzytkownik].push(ksiazka);
-    else console.log("Uzytkownik juz wypozyczyl ta ksiazke.");
+const bazaDanych = {};
+
+function dodajKsiazke(imie, tytul) {
+  if (!bazaDanych[imie]) {
+    bazaDanych[imie] = [tytul];
   } else {
-    var ksiazki = [ksiazka];
-    lista[uzytkownik] = ksiazki;
+    bazaDanych[imie].push(tytul);
   }
-};
+}
 
-usunKsiazke = function (lista, uzytkownik, ksiazka) {
-  if (lista[uzytkownik] === undefined) {
-    console.log("Podany uzytkownik nie znajduje sie w liscie.");
+function zwrocKsiazke(imie, tytul) {
+  if (!bazaDanych[imie]) {
     return;
   }
+  const indeks = bazaDanych[imie].indexOf(tytul);
+  if (indeks !== -1) {
+    bazaDanych[imie].splice(indeks, 1);
+  }
+}
 
-  if (lista[uzytkownik].indexOf(ksiazka) != -1)
-    lista[uzytkownik].splice(lista[uzytkownik].indexOf(ksiazka), 1);
-  else console.log("Uzytkownik nie wypozyczyl tej ksiazki.");
-};
-
-wyswietlKsiazki = function (lista, uzytkownik) {
-  if (lista[uzytkownik] === undefined) {
-    console.log("Podany uzytkownik nie znajduje sie w liscie.");
+function wypiszKsiazki(imie) {
+  if (!bazaDanych[imie]) {
+    console.log("Brak wypożyczonych książek dla czytelnika o imieniu " + imie);
     return;
   }
+  console.log(
+    "Wypożyczone książki dla czytelnika " +
+      imie +
+      ": " +
+      bazaDanych[imie].join(", ")
+  );
+}
 
-  console.log("Uzytkownik " + uzytkownik + " wypozyczyl nastepujace ksiazki: ");
+function testBazaDanych() {
+  dodajKsiazke("Adam", "Pan Tadeusz");
+  dodajKsiazke("Adam", "Lalka");
+  dodajKsiazke("Ewa", "Zbrodnia i kara");
+  assert(bazaDanych["Adam"].length === 2, "Test 1 nie powiódł się");
+  assert(bazaDanych["Ewa"].length === 1, "Test 2 nie powiódł się");
 
-  for (var ksiazka of lista[uzytkownik]) console.log(ksiazka);
-};
+  zwrocKsiazke("Adam", "Pan Tadeusz");
+  assert(bazaDanych["Adam"].length === 1, "Test 3 nie powiódł się");
 
-wyswietlWszystkieKsiazki = function (lista) {
-  for (var it = lista.begin(); it != lista.end(); it++) {
-    wyswietlKsiazki(lista, it.key);
-    console.log();
+  wypiszKsiazki("Adam");
+  wypiszKsiazki("Ewa");
+  wypiszKsiazki("Ola");
+}
+
+// test
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Asercja nie powiodła się");
   }
-};
+}
 
-testDodajKsiazke = function () {
-  var lista = {};
-
-  dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
-  oczekiwane = 1;
-  wynik = lista["Jan Kowalski"].length;
-  if (wynik != oczekiwane)
-    throw new Error(`Assertion error line 164: ${wynik} != ${oczekiwane}`);
-
-  dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
-  oczekiwane = 1;
-  wynik = lista["Jan Kowalski"].length;
-
-  if (wynik != oczekiwane)
-    throw new Error(`Assertion error line 169: ${wynik} != ${oczekiwane}`);
-
-  dodajKsiazke(lista, "Jan Kowalski", "Wladca Pierscieni");
-  oczekiwane = 2;
-  wynik = lista["Jan Kowalski"].length;
-  if (wynik != oczekiwane)
-    throw new Error(`Assertion error line 174: ${wynik} != ${oczekiwane}`);
-};
-
-testUsunKsiazke = function () {
-  var lista = {};
-
-  dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
-  dodajKsiazke(lista, "Jan Kowalski", "Wladca Pierscieni");
-  usunKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
-  oczekiwane = 1;
-  wynik = lista["Jan Kowalski"].length;
-  if (wynik != oczekiwane)
-    throw new Error(`Assertion error line 184: ${wynik} != ${oczekiwane}`);
-
-  usunKsiazke(lista, "Jan Kowalski", "Wladca Pierscieni");
-  oczekiwane = 0;
-  wynik = lista["Jan Kowalski"].length;
-  if (wynik != oczekiwane)
-    throw new Error(`Assertion error line 189: ${wynik} != ${oczekiwane}`);
-};
-
-main = function () {
-  testDodajKsiazke();
-  testUsunKsiazke();
-};
-
-main();
+testBazaDanych();

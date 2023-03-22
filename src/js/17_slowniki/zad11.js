@@ -1,125 +1,71 @@
 /*
-Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych.
-a) Wypisz pary posortowane wzgledem napisow.
-b) Wypisz pary posortowane wzgledem liczb.
+
+Tytuł: Sortowanie względem kluczy/wartości
+
+Otrzymujesz słownik składający się z par napisów i liczb całkowitych. Twoim zadaniem jest wypisanie par posortowanych względem napisów oraz względem liczb.
+
+Dane wejściowe: Słownik par: napis, liczba całkowita.
+
+Dane wyjściowe: Lista par.
+
+Przykład:
+
+Dla otrzymanego słownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostać zwrócony słownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)].
+Dla otrzymanego słownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostać zwrócony słownik: [("a", -2), ("c", 3), ("b", 4), ("x", 5)].
+
+
 */
-var Pair = /** @class */ (function () {
-  function Pair(a, b) {
-    this.first = a;
-    this.second = b;
-  }
-  return Pair;
-})();
 
-sortujWzgledemNapisow = function (slownik) {
-  var wynik = [];
-  for (const key in slownik) {
-    wynik.push(new Pair(key, slownik[key]));
-  }
-
-  wynik.sort(function (a, b) {
-    if (a.first < b.first) {
-      return -1;
-    }
-    if (a.first > b.first) {
-      return 1;
-    }
-    return 0;
-  });
+function sortujSlownikPoKluczach(slownik) {
+  const posortowaneKlucze = Object.keys(slownik).sort();
+  const wynik = posortowaneKlucze.map((klucz) => [klucz, slownik[klucz]]);
   return wynik;
-};
-
-sortujWzgledemWartosci = function (slownik) {
-  var wynik = [];
-  for (const key in slownik) {
-    wynik.push(new Pair(key, slownik[key]));
-  }
-
-  wynik.sort(function (a, b) {
-    if (a.second < b.second) {
-      return -1;
-    }
-    if (a.second > b.second) {
-      return 1;
-    }
-    return 0;
-  });
+}
+function sortujSlownikPoWartosciach(slownik) {
+  const posortowaneKlucze = Object.keys(slownik).sort(
+    (a, b) => slownik[a] - slownik[b]
+  );
+  const wynik = posortowaneKlucze.map((klucz) => [klucz, slownik[klucz]]);
   return wynik;
-};
-
-test1 = function () {
-  var slownik = {
-    c: 3,
-    x: 5,
-    a: -2,
-    b: 4,
-  };
-  var oczekiwane = [
-    new Pair("a", -2),
-    new Pair("c", 3),
-    new Pair("b", 4),
-    new Pair("x", 5),
+}
+function testSortujSlownikPoKluczach() {
+  const slownik = { c: 3, x: 5, a: -2, b: 4 };
+  const wynik = sortujSlownikPoKluczach(slownik);
+  const poprawnyWynik = [
+    ["a", -2],
+    ["b", 4],
+    ["c", 3],
+    ["x", 5],
   ];
-  var wynik = sortujWzgledemWartosci(slownik);
-
-  if (!(wynik.length == oczekiwane.length)) {
-    throw new Error(
-      `Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`
-    );
+  assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
+  for (let i = 0; i < wynik.length; i++) {
+    assert(wynik[i][0] === poprawnyWynik[i][0], "Test nie powiódł się");
+    assert(wynik[i][1] === poprawnyWynik[i][1], "Test nie powiódł się");
   }
+}
 
-  for (var i = 0; i < wynik.length; i++) {
-    if (
-      !(
-        wynik[i].first == oczekiwane[i].first &&
-        wynik[i].second == oczekiwane[i].second
-      )
-    ) {
-      throw new Error(
-        `Assertion error line 38: ${wynik[i].first} != ${oczekiwane[i].first} || ${wynik[i].second} != ${oczekiwane[i].second}`
-      );
-    }
-  }
-};
-
-test2 = function () {
-  var slownik = {
-    c: 3,
-    x: 5,
-    a: -2,
-    b: 4,
-  };
-  var oczekiwane = [
-    new Pair("a", -2),
-    new Pair("b", 4),
-    new Pair("c", 3),
-    new Pair("x", 5),
+function testSortujSlownikPoWartosciach() {
+  const slownik = { c: 3, x: 5, a: -2, b: 4 };
+  const wynik = sortujSlownikPoWartosciach(slownik);
+  const poprawnyWynik = [
+    ["a", -2],
+    ["c", 3],
+    ["b", 4],
+    ["x", 5],
   ];
-  var wynik = sortujWzgledemNapisow(slownik);
-
-  if (!(wynik.length == oczekiwane.length)) {
-    throw new Error(
-      `Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`
-    );
+  assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
+  for (let i = 0; i < wynik.length; i++) {
+    assert(wynik[i][0] === poprawnyWynik[i][0], "Test nie powiódł się");
+    assert(wynik[i][1] === poprawnyWynik[i][1], "Test nie powiódł się");
   }
+}
 
-  for (var i = 0; i < wynik.length; i++) {
-    if (
-      !(
-        wynik[i].first == oczekiwane[i].first &&
-        wynik[i].second == oczekiwane[i].second
-      )
-    ) {
-      throw new Error(
-        `Assertion error line 38: ${wynik[i].first} != ${oczekiwane[i].first} || ${wynik[i].second} != ${oczekiwane[i].second}`
-      );
-    }
+// test
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Asercja nie powiodła się");
   }
-};
+}
 
-main = function () {
-  test1();
-  test2();
-};
-
-main();
+testSortujSlownikPoKluczach();
+testSortujSlownikPoWartosciach();

@@ -1,64 +1,42 @@
 /*
-Otrzymujesz liczbe naturalna. Zbuduj slownik skladajacy sie
-z kluczy bedacych kolejnymi liczbami naturalnymi mniejszymi
-od otrzymanej liczby oraz wartosci bedacych kwadratami
-odpowiadajacych im kluczy.
+Tytuł: Słownik z kluczami będącymi liczbami naturalnymi i wartościami ich kwadratami.
+
+Treść: Dostajesz liczbę naturalną. Stwórz słownik, w którym kluczami będą kolejne liczby naturalne mniejsze od otrzymanej liczby, a wartościami będą ich kwadraty.
+
+Dane wejściowe: Liczba naturalna.
+
+Dane wyjściowe: Słownik z kluczami i wartościami będącymi liczbami naturalnymi.
+
+Przykład:
+
+Dla liczby 5, słownik powinien wyglądać następująco: {1: 1, 2: 4, 3: 9, 4: 16}.
 */
 
-budujSlownik = function (n) {
-  var slownik = {};
-  for (var i = 1; i <= n; i++) {
+function stworzSlownikKwadratow(n) {
+  const slownik = {};
+  for (let i = 1; i < n; i++) {
     slownik[i] = i * i;
   }
   return slownik;
-};
+}
 
-test1 = function () {
-  var liczba = 5;
-  var oczekiwane = {
-    1: 1,
-    2: 4,
-    3: 9,
-    4: 16,
-  };
-  var wynik = budujSlownik(liczba);
-  if (oczekiwane.length !== wynik.length) {
-    throw new Error(
-      `Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`
-    );
+function testSlownikKwadratow() {
+  const slownik1 = stworzSlownikKwadratow(5);
+  assert(slownik1[1] === 1, "Test 1 nie powiódł się");
+  assert(slownik1[2] === 4, "Test 2 nie powiódł się");
+  assert(slownik1[3] === 9, "Test 3 nie powiódł się");
+  assert(slownik1[4] === 16, "Test 4 nie powiódł się");
+
+  const slownik2 = stworzSlownikKwadratow(10);
+  assert(slownik2[6] === 36, "Test 5 nie powiódł się");
+  assert(slownik2[9] === 81, "Test 6 nie powiódł się");
+}
+
+// test
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Asercja nie powiodła się");
   }
+}
 
-  for (const key in oczekiwane) {
-    if (oczekiwane[key] !== wynik[key]) {
-      throw new Error(
-        `Assertion error line 34: ${wynik[key]} != ${oczekiwane[key]}`
-      );
-    }
-  }
-};
-
-test2 = function () {
-  var liczba = -1;
-  var oczekiwane = {};
-  var wynik = budujSlownik(liczba);
-  if (oczekiwane.length !== wynik.length) {
-    throw new Error(
-      `Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`
-    );
-  }
-
-  for (const key in oczekiwane) {
-    if (oczekiwane[key] !== wynik[key]) {
-      throw new Error(
-        `Assertion error line 34: ${wynik[key]} != ${oczekiwane[key]}`
-      );
-    }
-  }
-};
-
-main = function () {
-  test1();
-  test2();
-};
-
-main();
+testSlownikKwadratow();

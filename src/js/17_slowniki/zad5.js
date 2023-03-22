@@ -1,101 +1,69 @@
 /*
-Otrzymujesz liste par. Pierwszym elementem pary jest napis reprezentujacy
-imie i nazwisko pracownika, drugim zysk z transakcji jaka dany pracownik
-przeprowadzil. Znajdz pracownika, ktory przyniosl firmie najwiecej zysku.
-*/
+Tytuł: Lista pracowników z największymi zyskami.
 
-wypelnijSlownik = function (lista, slownik) {
-  for (var rekord of lista) {
-    if (slownik[rekord.first] === undefined) {
-      slownik[rekord.first] = rekord.second;
-    } else {
-      slownik[rekord.first] += rekord.second;
+Treść: Otrzymujesz listę par. Pierwszym elementem pary jest napis reprezentujący imię i nazwisko pracownika, drugim zysk z transakcji, jaką dany pracownik przeprowadził. Znajdź pracownika, który przyniósł firmie najwięcej zysku.
+
+Dane wejściowe: Lista par napisów i liczb naturalnych.
+
+Dane wyjściowe: Napis.
+
+Przykład:
+
+Dla otrzymanej listy:
+
+[["Barnaba Barabash", 120],
+["Jon Snow", 100],
+["Kira Summer", 300],
+["Barnaba Barabash", 200],
+["Bob Marley", 110]]
+
+zostanie zwrócony napis: “Barnaba Barabash”.
+
+
+*/ function najwiekszyZysk(lista) {
+  const pracownicy = {};
+  let najlepszyPracownik = "";
+  let najlepszyZysk = -Infinity;
+  for (let i = 0; i < lista.length; i++) {
+    const [pracownik, zysk] = lista[i];
+    if (!pracownicy[pracownik]) {
+      pracownicy[pracownik] = 0;
+    }
+    pracownicy[pracownik] += zysk;
+    if (pracownicy[pracownik] > najlepszyZysk) {
+      najlepszyZysk = pracownicy[pracownik];
+      najlepszyPracownik = pracownik;
     }
   }
-};
-
-znajdzMaxZysk = function (slownik) {
-  var najlepszyPracownik;
-  var maxZysk = -1;
-
-  for (var it in slownik) {
-    if (slownik[it] > maxZysk) {
-      najlepszyPracownik = it;
-      maxZysk = slownik[it];
-    }
-  }
-
   return najlepszyPracownik;
-};
+}
 
-pracownik = function (lista) {
-  if (lista.length === 0) return "";
-
-  var slownik = {};
-  wypelnijSlownik(lista, slownik);
-
-  return znajdzMaxZysk(slownik);
-};
-
-test1 = function () {
-  var lista = [
-    {
-      first: "Jan",
-      second: 10,
-    },
-    {
-      first: "Piotr",
-      second: 20,
-    },
-    {
-      first: "Piotr",
-      second: 30,
-    },
-    {
-      first: "Piotr",
-      second: 40,
-    },
+function testNajwiekszyZysk() {
+  const lista1 = [
+    ["Barnaba Barabash", 120],
+    ["Jon Snow", 100],
+    ["Kira Summer", 300],
+    ["Barnaba Barabash", 200],
+    ["Bob Marley", 110],
   ];
-  var oczekiwane = "Piotr";
-  var wynik = pracownik(lista);
-  if (oczekiwane !== wynik) {
-    throw new Error(
-      `Assertion error line 79: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`
-    );
-  }
-};
+  const wynik1 = najwiekszyZysk(lista1);
+  assert(wynik1 === "Barnaba Barabash", "Test 1 nie powiódł się");
 
-test2 = function () {
-  var lista = [
-    {
-      first: "Jan",
-      second: 10,
-    },
-    {
-      first: "Piotr",
-      second: 20,
-    },
-    {
-      first: "Piotr",
-      second: 30,
-    },
-    {
-      first: "Piotr",
-      second: 40,
-    },
+  const lista2 = [
+    ["Anna Nowak", 200],
+    ["Piotr Kowalski", 50],
+    ["Anna Nowak", 300],
+    ["Jan Kowalski", 100],
   ];
-  var oczekiwane = "Piotr";
-  var wynik = pracownik(lista);
-  if (oczekiwane !== wynik) {
-    throw new Error(
-      `Assertion error line 79: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`
-    );
+  const wynik2 = najwiekszyZysk(lista2);
+  assert(wynik2 === "Anna Nowak", "Test 2 nie powiódł się");
+}
+
+// test
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Asercja nie powiodła się");
   }
-};
+}
 
-main = function () {
-  test1();
-  test2();
-};
-
-main();
+testNajwiekszyZysk();

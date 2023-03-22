@@ -1,21 +1,27 @@
 /*
-Otrzymujesz napis reprezentujacy sciezke folderu.
-a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych
-znajdujacych sie w folderze oraz podfolderach.
-b) Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie
-w folderze oraz podfolderach.
+Tytuł: Znajdź i zmodyfikuj pliki spełniające warunek.
+
+Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do folderu.
+
+a) Dodaj swoje inicjały na końcu wszystkich plików tekstowych znajdujących się w podanym folderze i jego podfolderach.
+
+b) Usuń środkowy wiersz z każdego pliku CSV znajdującego się w podanym folderze i jego podfolderach.
+
+Dane wejściowe: Napis reprezentujący ścieżkę do folderu.
+
+Dane wyjściowe: Brak.
 */
 
 const fs = require("fs").promises;
 const path = require("path");
 
-wczytajPlik = async (sciezka) => {
+const wczytajPlik = async (sciezka) => {
   const tekst = await fs.readFile(sciezka, "utf8");
-  wiersze = tekst.split("\n");
+  const wiersze = tekst.split("\n");
   return wiersze;
 };
 
-dodajInicjaly = async (sciezka, inicjaly) => {
+const dodajInicjaly = async (sciezka, inicjaly) => {
   const pliki = await fs.readdir(sciezka);
   const plikiTxt = pliki.filter((plik) => plik.endsWith(".txt"));
   for (let i = 0; i < plikiTxt.length; i++) {
@@ -27,7 +33,7 @@ dodajInicjaly = async (sciezka, inicjaly) => {
   }
 };
 
-usunSrodkowyWiersz = async (sciezka) => {
+const usunSrodkowyWiersz = async (sciezka) => {
   const pliki = await fs.readdir(sciezka);
   const plikiCsv = pliki.filter((plik) => plik.endsWith(".csv"));
   for (let i = 0; i < plikiCsv.length; i++) {
@@ -44,12 +50,18 @@ usunSrodkowyWiersz = async (sciezka) => {
   }
 };
 
-test1 = async () => {
+const assert = (condition, message) => {
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
+};
+
+const test1 = async () => {
   const sciezkaFolderu = "temp_dir";
   const sciezkikiPlikow = ["lista.txt", "test.txt"];
   const tekst = "przykladowy tekst.";
 
-  // await fs.mkdir(sciezkaFolderu);
+  await fs.mkdir(sciezkaFolderu);
 
   for (const plik of sciezkikiPlikow) {
     const sciezkaPliku = path.join(sciezkaFolderu, plik);
@@ -63,18 +75,16 @@ test1 = async () => {
   for (const plik of sciezkikiPlikow) {
     const sciezkaPliku = path.join(sciezkaFolderu, plik);
     const wynik = await wczytajPlik(sciezkaPliku);
-    if (wynik.length !== oczekiwane.length) {
-      throw new Error(
-        `Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`
-      );
-    }
+    assert(
+      wynik.length === oczekiwane.length,
+      `Błąd asercji: ${wynik.length} != ${oczekiwane.length}`
+    );
 
     for (let i = 0; i < wynik.length; i++) {
-      if (wynik[i] !== oczekiwane[i]) {
-        throw new Error(
-          `Assertion error line 34: ${wynik[i]} != ${oczekiwane[i]}`
-        );
-      }
+      assert(
+        wynik[i] === oczekiwane[i],
+        `Błąd asercji: ${wynik[i]} != ${oczekiwane[i]}`
+      );
     }
   }
 
@@ -83,7 +93,7 @@ test1 = async () => {
   });
 };
 
-test2 = async () => {
+const test2 = async () => {
   const sciezkaFolderu = "temp_dir";
   const sciezkikiPlikow = ["lista.csv", "test.csv"];
   const tekst = "test1; test2; test3\ntest4; test5; test6\ntest7; test8; test9";
@@ -101,19 +111,16 @@ test2 = async () => {
   for (const plik of sciezkikiPlikow) {
     const sciezkaPliku = path.join(sciezkaFolderu, plik);
     const wynik = await wczytajPlik(sciezkaPliku);
-
-    if (wynik.length !== oczekiwane.length) {
-      throw new Error(
-        `Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`
-      );
-    }
+    assert(
+      wynik.length === oczekiwane.length,
+      `Błąd asercji: ${wynik.length} != ${oczekiwane.length}`
+    );
 
     for (let i = 0; i < wynik.length; i++) {
-      if (wynik[i] !== oczekiwane[i]) {
-        throw new Error(
-          `Assertion error line 34: ${wynik[i]} != ${oczekiwane[i]}`
-        );
-      }
+      assert(
+        wynik[i] === oczekiwane[i],
+        `Błąd asercji: ${wynik[i]} != ${oczekiwane[i]}`
+      );
     }
   }
 
@@ -122,7 +129,7 @@ test2 = async () => {
   });
 };
 
-main = async () => {
+const main = async () => {
   await test1();
   await test2();
 };

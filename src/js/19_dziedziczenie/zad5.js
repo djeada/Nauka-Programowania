@@ -1,11 +1,8 @@
 /*
-Napisz klase Ptak, dziedziczaca po klasach Zwierz oraz ObiektLatajacy. 
-a) W sklad klasy Zwierz powinny wchodzic funkcje wypisujace na standardowe 
-wyjscie komunikaty odpowiadajace ich nazwom. Funkcje powinny miec 
-nastepujace nazwy: jedz(), spij(), wydaj_dzwiek(). 
-b) W sklad klasy ObiektLatajacy powinny wchodzic funkcje wypisujace na 
-standardowe wyjscie komunikaty odpowiadajace ich nazwom. Funkcje powinny 
-miec nastepujace nazwy: lec(), wyladuj().
+
+Tytuł: Dziedziczenie wielokrotne
+
+Treść: Napisz klasę Ptak, dziedziczącą po klasach Zwierz i ObiektLatający. W skład klasy Zwierz powinny wchodzić funkcje o nazwach 'jedz()', 'spij()', 'wydaj_dźwięk()', które wypisują odpowiednie komunikaty na standardowe wyjście. W skład klasy ObiektLatający powinny wchodzić funkcje o nazwach 'leć()', 'wyląduj()', które wypisują odpowiednie komunikaty na standardowe wyjście. Napisz program testujący tę klasę.
 */
 
 const Zwierz = (superclass) =>
@@ -49,7 +46,7 @@ class MixinBuilder {
 const mix = (superclass) => new MixinBuilder(superclass);
 class Ptak extends mix(PtakBaza).with(Zwierz, ObiektLatajacy) {}
 
-main = function () {
+const main = function () {
   let ptak = new Ptak("Dziobak");
   ptak.jedz();
   ptak.spij();

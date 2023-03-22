@@ -1,66 +1,57 @@
 /*
-Otrzymujesz napis reprezentujacy zdanie. Znajdz najczesciej wystepujaca litere
-w zdaniu. Jesli wiecej niz jedna litera wystepuje ta sama liczbe razy, zwroc
-litere najwczesniej pojawiajaca sie w zdaniu.
+
+
+Tytuł: Najczęściej występująca litera w zdaniu
+
+Treść: Otrzymujesz napis reprezentujący zdanie. Twoim zadaniem jest znalezienie najczęściej występującej litery w zdaniu. Jeśli więcej niż jedna litera występuje tę samą liczbę razy, należy zwrócić literę najwcześniej pojawiającą się w zdaniu.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Znak.
+
+Przykład:
+
+Dla otrzymanego napisu: "lezy jerzy na wiezy"
+
+Powinna zostać zwrócona litera: 'e'
 */
 
-budujSlownik = function (napis) {
-  histogram = {};
-  for (const znak of napis) {
-    if (!znak.match(/[a-z]/i)) continue;
-    if (histogram[znak] === undefined) {
-      histogram[znak] = 1;
-    } else {
-      histogram[znak]++;
+function najczestszaLitera(zdanie) {
+  const litery = {};
+  let maxCzestosc = 0;
+  let najczestszaLitera = "";
+  for (let i = 0; i < zdanie.length; i++) {
+    const litera = zdanie[i];
+    if (litera === " ") {
+      continue;
+    }
+    if (!litery[litera]) {
+      litery[litera] = 0;
+    }
+    litery[litera]++;
+    if (litery[litera] > maxCzestosc) {
+      maxCzestosc = litery[litera];
+      najczestszaLitera = litera;
     }
   }
-  return histogram;
-};
+  return najczestszaLitera;
+}
 
-najczesciejWystepujacaLitera = function (napis) {
-  histogram = budujSlownik(napis);
-  wynik = undefined;
-  max = 0;
-  for (const znak in histogram) {
-    if (histogram[znak] > max) {
-      max = histogram[znak];
-      wynik = znak;
-    }
+function testNajczestszaLitera() {
+  const zdanie1 = "lezy jerzy na wiezy";
+  const wynik1 = najczestszaLitera(zdanie1);
+  assert(wynik1 === "e", "Test 1 nie powiódł się");
+
+  const zdanie2 = "Ala ma kota";
+  const wynik2 = najczestszaLitera(zdanie2);
+  assert(wynik2 === "a", "Test 2 nie powiódł się");
+}
+
+// test
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Asercja nie powiodła się");
   }
-  return wynik;
-};
+}
 
-test1 = function () {
-  napis = "lezy jerzy na wiezy";
-  oczekiwane = "e";
-  wynik = najczesciejWystepujacaLitera(napis);
-
-  if (oczekiwane !== wynik) {
-    throw new Error(
-      `Assertion error line 79: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`
-    );
-  }
-};
-
-test2 = function () {
-  napis =
-    "The most intelligent people disguise the fact that they " +
-    "are intelligent. Wise men do not wear name tags., " +
-    "The more people talk about their own skills, the more " +
-    "desperate they are--their work should speak for itself.";
-  oczekiwane = "e";
-  wynik = najczesciejWystepujacaLitera(napis);
-
-  if (oczekiwane !== wynik) {
-    throw new Error(
-      `Assertion error line 79: oczekiwane: ${oczekiwane}, obliczone: ${wynik}`
-    );
-  }
-};
-
-main = function () {
-  test1();
-  test2();
-};
-
-main();
+testNajczestszaLitera();

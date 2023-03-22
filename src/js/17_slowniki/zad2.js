@@ -1,70 +1,50 @@
 /*
-Otrzymujesz dwie listy liczb calkowitych. Zbuduj slownik skladajacy sie z
-kluczy bedacych elementami pierwszej listy i wartosciami bedacymi elementami
-drugiej listy. Jesli listy sa roznej dlugosci zwroc pusty slownik.
+
+Tytuł: Słownik z kluczami będącymi elementami jednej listy i wartościami elementami drugiej listy.
+
+Treść: Dostajesz dwie listy liczb całkowitych. Stwórz słownik, w którym kluczami będą elementy pierwszej listy, a wartościami elementy drugiej listy. Jeśli listy są różnej długości, zwróć pusty słownik.
+
+Dane wejściowe: Dwie listy liczb całkowitych.
+
+Dane wyjściowe: Słownik z kluczami i wartościami będącymi liczbami całkowitymi.
+
+Przykład:
+
+Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], słownik powinien wyglądać następująco: {3: 1, 5: 2, 8: -1}.
+
 */
 
-zbudujSlownik = function (listaA, listaB) {
-  var slownik = {};
-  if (listaA.length !== listaB.length) {
+function stworzSlownik(list1, list2) {
+  const slownik = {};
+  const dlugosc1 = list1.length;
+  const dlugosc2 = list2.length;
+  if (dlugosc1 !== dlugosc2) {
     return slownik;
   }
-  for (var i = 0; i < listaA.length; i++) {
-    slownik[listaA[i]] = listaB[i];
+  for (let i = 0; i < dlugosc1; i++) {
+    slownik[list1[i]] = list2[i];
   }
   return slownik;
-};
+}
 
-test1 = function () {
-  var listaA = [3, 5, 8];
-  var listaB = [1, 2, -1];
-  var oczekiwane = {
-    3: 1,
-    5: 2,
-    8: -1,
-  };
-  var wynik = zbudujSlownik(listaA, listaB);
-  if (oczekiwane.length !== wynik.length) {
-    throw new Error(
-      `Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`
-    );
+function testSlownik() {
+  const slownik1 = stworzSlownik([3, 5, 8], [1, 2, -1]);
+  assert(slownik1[3] === 1, "Test 1 nie powiódł się");
+  assert(slownik1[5] === 2, "Test 2 nie powiódł się");
+  assert(slownik1[8] === -1, "Test 3 nie powiódł się");
+
+  const slownik2 = stworzSlownik([1, 2, 3, 4], [10, 20, 30]);
+  assert(Object.keys(slownik2).length === 0, "Test 4 nie powiódł się");
+
+  const slownik3 = stworzSlownik([], []);
+  assert(Object.keys(slownik3).length === 0, "Test 5 nie powiódł się");
+}
+
+// test
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Asercja nie powiodła się");
   }
+}
 
-  for (const key in oczekiwane) {
-    if (oczekiwane[key] !== wynik[key]) {
-      throw new Error(
-        `Assertion error line 34: ${wynik[key]} != ${oczekiwane[key]}`
-      );
-    }
-  }
-};
-
-test2 = function () {
-  var listaA = [0, 1];
-  var listaB = [1, 0];
-  var oczekiwane = {
-    0: 1,
-    1: 0,
-  };
-  var wynik = zbudujSlownik(listaA, listaB);
-  if (oczekiwane.length !== wynik.length) {
-    throw new Error(
-      `Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`
-    );
-  }
-
-  for (const key in oczekiwane) {
-    if (oczekiwane[key] !== wynik[key]) {
-      throw new Error(
-        `Assertion error line 34: ${wynik[key]} != ${oczekiwane[key]}`
-      );
-    }
-  }
-};
-
-main = function () {
-  test1();
-  test2();
-};
-
-main();
+testSlownik();

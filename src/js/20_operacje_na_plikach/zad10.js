@@ -1,12 +1,18 @@
 /*
-Otrzymujesz dwa napisy reprezentujace sciezki folderow.
-Skopiuj wszystkie pliki .png z pierwszego folderu do drugiego folderu.
+Tytuł: Skopiuj pliki.
+
+Treść zadania: Otrzymujesz dwa napisy reprezentujące ścieżki do folderów. Skopiuj wszystkie pliki PNG z pierwszego folderu do drugiego folderu.
+
+Dane wejściowe: Dwa napisy reprezentujące ścieżki do folderów.
+
+Dane wyjściowe: Brak.
+
 */
 
 const fs = require("fs").promises;
 const path = require("path");
 
-skopiujPliki = async (zrodlo, cel, rozszerzenie) => {
+const skopiujPliki = async (zrodlo, cel, rozszerzenie) => {
   const dane = await fs.readdir(zrodlo);
   for (const danePliku of dane) {
     const sciezkaPliku = path.join(zrodlo, danePliku);
@@ -17,8 +23,12 @@ skopiujPliki = async (zrodlo, cel, rozszerzenie) => {
     }
   }
 };
-
-test1 = async () => {
+const assert = (condition, message) => {
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
+};
+const test1 = async () => {
   const sciezka1 = "test1";
   const sciezka2 = "test2";
   const sciezkiPlikow = ["plik1.png", "plik2.png"];
@@ -36,16 +46,16 @@ test1 = async () => {
 
   for (const plik of sciezkiPlikow) {
     const sciezkaPliku = path.join(sciezka2, plik);
-    oczekiwane = true;
+    const oczekiwane = true;
+    let wynik = false;
+
     try {
       await fs.access(sciezkaPliku);
       wynik = true;
     } catch (err) {
-      wynik = false;
+      console.log(err);
     }
-    if (wynik !== oczekiwane) {
-      throw new Error(`Assertion error line 180: ${wynik} != ${oczekiwane}`);
-    }
+    assert(wynik === oczekiwane, `Błąd asercji: ${sciezkaPliku} nie istnieje`);
   }
 
   await fs.rmdir(sciezka1, {
@@ -56,7 +66,7 @@ test1 = async () => {
   });
 };
 
-main = async () => {
+const main = async () => {
   await test1();
 };
 

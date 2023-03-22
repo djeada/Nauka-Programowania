@@ -1,8 +1,7 @@
 /*
-Napisz klase Czlowiek, klase pochodna Student oraz klase pochodna klasy pochodnej StudentFizyki.
-a) Czlowiek powinien przechowywac informacje o imieniu, nazwisku, miejscu urodzenia i zawodzie.
-b) Student powinien dodac pola numer albumu oraz kierunek studiow.
-c) StudentFizykii powinien dodac pola srednia z laboratoriow oraz srednia z wykladow.
+Tytuł: Dziedziczenie wielopoziomowe
+
+Treść: Napisz klasę Człowiek oraz klasy pochodne Student i StudentFizyki. Człowiek powinien zawierać informacje o imieniu, nazwisku, miejscu urodzenia i zawodzie. Student powinien dodawać pola numeru albumu oraz kierunku studiów. StudentFizyki powinien dodawać pola średniej z laboratoriów oraz średniej z wykładów. Napisz program testujący te klasy.
 */
 
 class Czlowiek {
@@ -53,7 +52,7 @@ class StudentFizyki extends Student {
   }
 }
 
-main = function () {
+const main = function () {
   let czlowiek = new Czlowiek("Jan", "Kowalski", "Warszawa", "programista");
   let student = new Student(
     "Jan",

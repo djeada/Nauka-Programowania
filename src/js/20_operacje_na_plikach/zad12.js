@@ -1,12 +1,17 @@
 /*
-Otrzymujesz dwa napisy reprezentujace sciezki folderow. Przenies wszystkie pliki
-csv z pierwszego folderu (oraz wszystkich jego podfolderow) do drugiego folderu.
+Tytuł: Przesuń wszystkie pliki CSV do jednego folderu.
+
+Treść zadania: Otrzymujesz dwa napisy reprezentujące ścieżki do folderów. Przenieś wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderów) do drugiego folderu.
+
+Dane wejściowe: Dwa napisy reprezentujące ścieżki do folderów.
+
+Dane wyjściowe: Brak.
 */
 
 const fs = require("fs").promises;
 const path = require("path");
 
-przeniesPliki = async (zrodlo, cel, rozszerzenie) => {
+const przeniesPliki = async (zrodlo, cel, rozszerzenie) => {
   const dane = await fs.readdir(zrodlo);
   const pliki = dane.filter((plik) => plik.endsWith(rozszerzenie));
   for (const plik of pliki) {
@@ -16,8 +21,12 @@ przeniesPliki = async (zrodlo, cel, rozszerzenie) => {
     await fs.unlink(sciezkaPliku);
   }
 };
-
-test1 = async () => {
+const assert = (condition, message) => {
+  if (!condition) {
+    throw new Error(message || "Assertion failed");
+  }
+};
+const test1 = async () => {
   const folder1 = "temp_dir1";
   const folder2 = "temp_dir2";
 
@@ -27,7 +36,7 @@ test1 = async () => {
   const sciezkaPliku1 = path.join(folder1, "plik1.csv");
   const sciezkaPliku2 = path.join(folder1, "plik2.csv");
 
-  sciezki = [sciezkaPliku1, sciezkaPliku2];
+  const sciezki = [sciezkaPliku1, sciezkaPliku2];
 
   for (const sciezkaPliku of sciezki) {
     await fs.writeFile(sciezkaPliku, "test1; test2");
@@ -42,17 +51,13 @@ test1 = async () => {
 
   for (const nowaSciezkaPliku of noweSciezki) {
     const stat = await fs.lstat(nowaSciezkaPliku);
-    if (!stat.isFile()) {
-      throw new Error(
-        `Assertion error line 32: ${nowaSciezkaPliku} does not exist`
-      );
-    }
+    assert(stat.isFile(), `Błąd asercji: ${nowaSciezkaPliku} nie istnieje`);
   }
 
   for (const sciezkaPliku of sciezki) {
     try {
       await fs.access(sciezkaPliku);
-      throw new Error(`Assertion error line 38: ${sciezkaPliku} exists`);
+      throw new Error(`Błąd asercji: ${sciezkaPliku} istnieje`);
     } catch (err) {
       if (err.code !== "ENOENT") {
         throw err;
@@ -68,7 +73,7 @@ test1 = async () => {
   });
 };
 
-main = async () => {
+const main = async () => {
   await test1();
 };
 

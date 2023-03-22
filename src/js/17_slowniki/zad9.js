@@ -1,80 +1,59 @@
 /*
-Otrzymujesz napis. Znajdz w otrzymanym napisie wszystkie znaki
-powtarzajace sie wiecej niz raz.
+
+
+Tytuł: Powtarzające się znaki
+
+Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrócenie wszystkich znaków, które występują co najmniej 2 razy w ciągu.
+
+Dane wejściowe: Napis.
+
+Dane wyjściowe: Napis.
+
+Przykład:
+
+Dla otrzymanego napisu: "aaabbbccc"
+
+Powinien zostać zwrócony napis: "abc"
 */
 
-budujSlownik = function (napis) {
-  histogram = {};
-  for (const znak of napis) {
-    if (histogram[znak] === undefined) {
-      histogram[znak] = 1;
+function powtarzajaceSieZnaki(napis) {
+  const znaki = {};
+  let powtarzajaceSie = "";
+  for (let i = 0; i < napis.length; i++) {
+    const znak = napis[i];
+    if (!znaki[znak]) {
+      znaki[znak] = 1;
     } else {
-      histogram[znak]++;
+      znaki[znak]++;
     }
   }
-  return histogram;
-};
-
-znakiPowtarzajaceSieWiecejNizRaz = function (napis) {
-  histogram = budujSlownik(napis);
-  wynik = [];
-  for (const znak in histogram) {
-    if (histogram[znak] > 1) {
-      wynik.push(znak);
+  for (const znak in znaki) {
+    if (znaki[znak] >= 2) {
+      powtarzajaceSie += znak;
     }
   }
-  return wynik;
-};
+  return powtarzajaceSie;
+}
 
-test1 = function () {
-  var slowo = "podwodny";
-  var oczekiwane = ["o", "d"];
-  var wynik = znakiPowtarzajaceSieWiecejNizRaz(slowo);
-  if (!(wynik.length == oczekiwane.length)) {
-    throw new Error(
-      `Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`
-    );
-  }
-  for (var i = 0; i < wynik.length; i++) {
-    if (
-      !(
-        wynik[i].first == oczekiwane[i].first &&
-        wynik[i].second == oczekiwane[i].second
-      )
-    ) {
-      throw new Error(
-        `Assertion error line 38: ${wynik[i].first} != ${oczekiwane[i].first} || ${wynik[i].second} != ${oczekiwane[i].second}`
-      );
-    }
-  }
-};
+function testPowtarzajaceSieZnaki() {
+  const napis1 = "aaabbbccc";
+  const wynik1 = powtarzajaceSieZnaki(napis1);
+  assert(wynik1 === "abc", "Test 1 nie powiódł się");
 
-test2 = function () {
-  var slowo = "jedzie pociag z daleka";
-  var oczekiwane = ["e", "a", "i", "d", "z", " "];
-  var wynik = znakiPowtarzajaceSieWiecejNizRaz(slowo);
-  if (!(wynik.length == oczekiwane.length)) {
-    throw new Error(
-      `Assertion error line 34: ${wynik.length} != ${oczekiwane.length}`
-    );
-  }
-  for (var i = 0; i < wynik.length; i++) {
-    if (
-      !(
-        wynik[i].first == oczekiwane[i].first &&
-        wynik[i].second == oczekiwane[i].second
-      )
-    ) {
-      throw new Error(
-        `Assertion error line 38: ${wynik[i].first} != ${oczekiwane[i].first} || ${wynik[i].second} != ${oczekiwane[i].second}`
-      );
-    }
-  }
-};
+  const napis2 = "abcd";
+  const wynik2 = powtarzajaceSieZnaki(napis2);
+  assert(wynik2 === "", "Test 2 nie powiódł się");
 
-main = function () {
-  test1();
-  test2();
-};
+  const napis3 = "Ala ma kota, a kot ma Ale.";
+  const wynik3 = powtarzajaceSieZnaki(napis3);
+  assert(wynik3 === "aekmt", "Test 3 nie powiódł się");
+}
 
-main();
+// test
+function assert(condition, message) {
+  if (!condition) {
+    throw new Error(message || "Asercja nie powiodła się");
+  }
+}
+
+testPowtarzajaceSieZnaki();
