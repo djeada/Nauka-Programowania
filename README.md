@@ -55,15 +55,16 @@ Przykłady zostały przetestowane i dostosowane do wersji `Java SE 17`. Aby skom
 
 ### JavaScript
 
-Rozwiązania zostały przetestowane i dostosowane do środowiska `NodeJS 12.16.1`. Skrypty języka JavaScript nie wymagają kompilacji - aby uruchomić skrypt, należy użyć komendy `node sciezka_do_zadania.js`.Do formatowania kodu należy użyć narzędzia `js-beautify` z flagami: `js-beautify -r sciezka_do_zadania.js`. Przykłady wymagają zainstalowania biblioteki `readline` do komunikacji z konsolą.
+Rozwiązania zostały przetestowane i dostosowane do środowiska `NodeJS 19.8.1`. Skrypty języka JavaScript nie wymagają kompilacji - aby uruchomić skrypt, należy użyć komendy `node sciezka_do_zadania.js`. Do formatowania kodu należy użyć narzędzia `eslint` z konfiguracją: `.eslintrc.json` oraz flagami: `eslint --fix sciezka_do_zadania.js`. Przykłady nie używają bibliotek zewnętrznych.
 
 ### Haskell
 
-Przykłady zostały przetestowane i dostosowane do wersji `GHC 8.10.2`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `ghc` z flagami: `ghc -O2 -threaded -rtsopts -eventlog sciezka_do_zadania.hs -o plik_wykonywalny`. Do formatowania kodu należy użyć narzędzia `ormolu` z flagami: `ormolu --mode inplace sciezka_do_zadania.hs`. Przykłady nie używają bibliotek zewnętrznych.
+Przykłady zostały przetestowane i dostosowane do wersji `GHC 8.10.2`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `ghc` z flagami: `ghc -O2 -threaded -rtsopts -eventlog sciezka_do_zadania.hs -o plik_wykonywalny`. Do formatowania kodu należy użyć narzędzia `ormolu` z flagami:
+`ormolu --mode inplace sciezka_do_zadania.hs`. Przykłady nie używają bibliotek zewnętrznych.
 
 ### Rust
 
-Przykłady zostały przetestowane i dostosowane do wersji `1.42.0`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `rustc` bez flag: `rustc sciezka_do_zadania.rs`. Do formatowania kodu należy użyć narzędzia `rustfmt` z flagami: `rustfmt --write-mode=overwrite sciezka_do_zadania.rs`. Przykłady nie używają bibliotek zewnętrznych.
+Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `rustc` bez flag: `rustc sciezka_do_zadania.rs`. Do formatowania kodu należy użyć narzędzia `rustfmt` z flagami: `rustfmt --write-mode=overwrite sciezka_do_zadania.rs`. Przykłady nie używają bibliotek zewnętrznych.
 
 ## Rozwiązania
 
