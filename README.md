@@ -86,9 +86,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
    1. [Funkcje - rekurencja](#Funkcje---rekurencja)
    1. [System binarny](#System-binarny)
    1. [Słowniki](#Słowniki)
-   1. [Operacje na plikach](#Operacje-na-plikach)
    1. [Klasy](#Klasy)
    1. [Dziedziczenie](#Dziedziczenie)
+   1. [Operacje na plikach](#Operacje-na-plikach)
    1. [Sortowanie - algorytmy](#Sortowanie---algorytmy)
    1. [Sortowanie - praktyka](#Sortowanie---praktyka)
    1. [Wyrażenia regularne](#Wyrażenia-regularne)
@@ -2365,164 +2365,6 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
     </tbody>
 </table>
 
-## Operacje na plikach
-<table>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Tytuł</th>
-            <th colspan="7">Rozwiązania</th>
-            <th>Poziom</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Sprawdź, czy ścieżka należy do pliku/folderu.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad1.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad1.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad1">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad1.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad1.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★☆☆</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Znajdź w folderze wszystkie pliki z danym rozszerzeniem.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad2.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad2.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad2">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad2.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad2.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★★☆</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Znajdź ścieżkę pliku o danej nazwie.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad2.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad3.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad3">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad3.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad3.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★★☆</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Wczytaj i wypisz treść pliku.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad4.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad4.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad4">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad4.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad4.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★☆☆</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Plik z listą adresów ip.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad5.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad5.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad5">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad5.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad5.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★☆☆</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Statystyki dla pliku tekstowego.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad6.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad6.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad6">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad6.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad6.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★★☆</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>Dodaj wiersz do pliku.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad7.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad7.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad7">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad7.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad7.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★☆☆</td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>Znajdź i zmodyfikuj pliki spełniające warunek.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad8.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad8.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad8">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad8.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad8.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★★☆</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>Usuń pliki spełniające warunek.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad9.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad9.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad9">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad9.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad9.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★★☆</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>Skopiuj pliki.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad10.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad10.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad10">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad10.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad10.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★☆☆</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>Podmień treści.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad11.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad11.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad11">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad11.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad11.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★★☆</td>
-        </tr>
-        <tr>
-            <td>12</td>
-            <td>Przesuń wszystkie pliki csv do jednego folderu.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad12.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad12.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad12">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad12.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad12.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
-            <td>★★☆</td>
-        </tr>
-    </tbody>
-</table>
-
 ## Klasy
 <table>
     <thead>
@@ -2688,6 +2530,164 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/19_dziedziczenie/zad5">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/19_dziedziczenie/zad5.js">JavaScript</a></td>
             <td><a>Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★★☆</td>
+        </tr>
+    </tbody>
+</table>
+
+## Operacje na plikach
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Tytuł</th>
+            <th colspan="7">Rozwiązania</th>
+            <th>Poziom</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Sprawdź, czy ścieżka należy do pliku/folderu.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad1.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad1.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad1">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad1.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad1.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★☆☆</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Znajdź w folderze wszystkie pliki z danym rozszerzeniem.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad2.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad2.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad2">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad2.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad2.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★★☆</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Znajdź ścieżkę pliku o danej nazwie.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad2.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad3.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad3">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad3.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad3.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★★☆</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Wczytaj i wypisz treść pliku.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad4.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad4.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad4">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad4.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad4.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★☆☆</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Plik z listą adresów ip.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad5.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad5.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad5">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad5.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad5.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★☆☆</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Statystyki dla pliku tekstowego.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad6.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad6.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad6">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad6.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad6.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★★☆</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Dodaj wiersz do pliku.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad7.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad7.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad7">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad7.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad7.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★☆☆</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Znajdź i zmodyfikuj pliki spełniające warunek.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad8.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad8.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad8">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad8.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad8.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★★☆</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Usuń pliki spełniające warunek.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad9.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad9.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad9">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad9.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad9.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★★☆</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Skopiuj pliki.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad10.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad10.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad10">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad10.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad10.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★☆☆</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Podmień treści.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad11.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad11.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad11">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad11.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad11.sh">Bash</a></td>
+            <td><a>Haskell</a></td>
+            <td><a>Rust</a></td>
+            <td>★★☆</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Przesuń wszystkie pliki csv do jednego folderu.</td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/20_operacje_na_plikach/zad12.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/20_operacje_na_plikach/zad12.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/20_operacje_na_plikach/zad12">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/20_operacje_na_plikach/zad12.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/20_operacje_na_plikach/zad12.sh">Bash</a></td>
             <td><a>Haskell</a></td>
             <td><a>Rust</a></td>
             <td>★★☆</td>
