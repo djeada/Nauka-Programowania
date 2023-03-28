@@ -1362,8 +1362,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad1">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad1.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad1.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad1.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad1.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1374,8 +1374,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad2.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad2.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad2.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad2.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1386,8 +1386,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad3">Java</a></td>
             <td><a href="https://github.com/djea/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad3.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad3.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad3.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad3.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1398,8 +1398,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad4">Java</a></td>
             <td><a href="https://github.com/djeada/Napisy_wprowadzenie/blob/master/src/js/11_napisy_wprowadzenie/zad4.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad4.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad4.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad4.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1410,8 +1410,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad5">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad5.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad5.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad5.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad5.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1422,8 +1422,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad6">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad6.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad6.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad6.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad6.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1434,8 +1434,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad7">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad7.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad7.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad7.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad7.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1446,8 +1446,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad8">Java</a></td>
             <td><a href="https://github.com/djea/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad8.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad8.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad8.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad8.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1458,8 +1458,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad9">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad9.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad9.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad9.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad9.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1470,8 +1470,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad10">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad10.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad10.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad10.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad10.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1482,8 +1482,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad11">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad11.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad11.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad11.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad11.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1494,8 +1494,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad12">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad12.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad12.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad12.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad12.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1506,8 +1506,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad13">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad13.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad13.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad13.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad13.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1518,8 +1518,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad14">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad14.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad14.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad14.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad14.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1530,8 +1530,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad15">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad15.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad15.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad15.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad15.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1542,8 +1542,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad16">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad16.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad16.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad16.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad16.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1554,8 +1554,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad17">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad17.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad17.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad17.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad17.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1566,8 +1566,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/11_napisy_wprowadzenie/zad18">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/11_napisy_wprowadzenie/zad18.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/11_napisy_wprowadzenie/zad18.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/11_napisy_wprowadzenie/zad18.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/11_napisy_wprowadzenie/zad18.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
     </tbody>
@@ -1592,8 +1592,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad1">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad1.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad1.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad1.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad1.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1604,8 +1604,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad2.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad2.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad2.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad2.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1616,8 +1616,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad3">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad3.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad3.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad3.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad3.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1628,8 +1628,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad4">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad4.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad4.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad4.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad4.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1640,8 +1640,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad5">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad5.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad5.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad5.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad5.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1652,8 +1652,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad6">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad6.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad6.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad6.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad6.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1664,8 +1664,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad7">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad7.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad7.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad7.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad7.rs">Rust</a></td>
             <td>★★★</td>
         </tr>
         <tr>
@@ -1676,8 +1676,8 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad8">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad8.js">JavaScript</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad8.sh">Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad8.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad8.rs">Rust</a></td>
             <td>★★★</td>
         </tr>
     </tbody>
@@ -1701,9 +1701,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad1">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad1.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad1.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad1.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad1.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1713,9 +1713,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad2.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad2.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad2.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad2.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1725,9 +1725,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad3">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad3.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad3.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad3.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad3.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1737,9 +1737,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad4">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad4.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad4.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad4.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad4.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1749,9 +1749,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad5">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad5.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad5.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad5.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad5.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1761,9 +1761,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad6">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad6.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad6.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad6.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad6.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1773,9 +1773,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad7.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad7">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad7.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad7.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad7.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad7.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1785,9 +1785,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad8.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad8">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad8.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad8.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad8.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad8.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1797,9 +1797,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad9.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad9">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad9.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad9.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad9.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad9.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1809,21 +1809,21 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad10.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad10">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad10.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad10.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad10.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad10.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
             <td>11</td>
             <td>Gra w statki.</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/13_listy_2d/zad11.py">Python</a></td>
-            <td><a>Cpp</a></td>
-            <td><a>Java</a></td>
-            <td><a>JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/13_listy_2d/zad11.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/13_listy_2d/zad11">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/13_listy_2d/zad11.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/13_listy_2d/zad11.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/13_listy_2d/zad11.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/13_listy_2d/zad11.rs">Rust</a></td>
             <td>★★★</td>
         </tr>
     </tbody>
@@ -1847,9 +1847,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/14_funkcje_wielomiany/zad1.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/14_funkcje_wielomiany/zad1">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/14_funkcje_wielomiany/zad1.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/14_funkcje_wielomiany/zad1.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/14_funkcje_wielomiany/zad1.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/14_funkcje_wielomiany/zad1.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1859,9 +1859,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/14_funkcje_wielomiany/zad2.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/14_funkcje_wielomiany/zad2">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/14_funkcje_wielomiany/zad2.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/14_funkcje_wielomiany/zad2.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/14_funkcje_wielomiany/zad2.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/14_funkcje_wielomiany/zad2.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1871,9 +1871,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/14_funkcje_wielomiany/zad3.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/14_funkcje_wielomiany/zad3">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/14_funkcje_wielomiany/zad3.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/14_funkcje_wielomiany/zad3.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/14_funkcje_wielomiany/zad3.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/14_funkcje_wielomiany/zad3.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
@@ -1883,9 +1883,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/14_funkcje_wielomiany/zad4.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/14_funkcje_wielomiany/zad4">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/14_funkcje_wielomiany/zad4.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/14_funkcje_wielomiany/zad4.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/14_funkcje_wielomiany/zad4.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/14_funkcje_wielomiany/zad4.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1895,9 +1895,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/14_funkcje_wielomiany/zad5.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/14_funkcje_wielomiany/zad5">Java</a></td>
             <td><a href="https://github.com/dje/Nauka-programowania/blob/master/src/js/14_funkcje_wielomiany/zad5.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/14_funkcje_wielomiany/zad5.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/14_funkcje_wielomiany/zad5.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/14_funkcje_wielomiany/zad5.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
@@ -1907,9 +1907,9 @@ Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilo
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/14_funkcje_wielomiany/zad6.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/14_funkcje_wielomiany/zad6">Java</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/14_funkcje_wielomiany/zad6.js">JavaScript</a></td>
-            <td><a>Bash</a></td>
-            <td><a>Haskell</a></td>
-            <td><a>Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/14_funkcje_wielomiany/zad6.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/14_funkcje_wielomiany/zad6.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/14_funkcje_wielomiany/zad6.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
     </tbody>
