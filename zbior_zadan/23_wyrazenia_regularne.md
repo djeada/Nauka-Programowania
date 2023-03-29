@@ -118,7 +118,7 @@ powinna zostać zwrócona lista: [“Folgujmy paniom nie sobie, ma rada;”, “
 
 ### Zad 7. (★☆☆)
 
-ytuł: Podziel tekst względem znaków interpunkcyjnych.
+Tytuł: Podziel tekst względem znaków interpunkcyjnych.
 
 Treść: Dostajesz napis. Podziel go względem znaków interpunkcyjnych i zapisz w liście. Usuń spacje występujące na początku lub końcu otrzymanych napisów.
 
