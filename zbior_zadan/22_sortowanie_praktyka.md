@@ -101,3 +101,17 @@ Dane wyjściowe: Posortowana lista liczb naturalnych.
 
 Przykład:
 Dla listy: [1, 0, 1, 2, 2, 0, 1], powinna zostać zwrócona lista: [0, 0, 1, 1, 1, 2, 2].
+
+### Zad 8.  (★★☆)
+
+Tytuł: Wyszukiwanie indeksu klucza w cyklicznie posortowanej liście.
+
+Treść: Otrzymujesz cyklicznie posortowaną listę oraz klucz. Znajdź indeks pierwszego wystąpienia klucza w liście. Jeśli klucz nie występuje w liście, zwróć -1.
+
+Dane wejściowe: Cyklicznie posortowana lista, klucz.
+
+Dane wyjściowe: Indeks pierwszego wystąpienia klucza lub -1.
+
+Przykład:
+
+Dla cyklicznie posortowanej listy [3, 4, 5, 6, 1, 2] i klucza 4, powinno zostać zwrócone 2.
