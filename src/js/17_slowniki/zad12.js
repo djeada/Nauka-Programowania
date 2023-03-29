@@ -57,13 +57,26 @@ function assert(condition, message) {
 }
 
 function testCzySlownikiSaIdentyczne() {
-  const slownik1 = { a: [1, 2, 3], b: [4, 5] };
-  const slownik2 = { a: [3, 2, 1], b: [5, 4] };
+  const slownik1 = {
+    a: [1, 2, 3],
+    b: [4, 5],
+  };
+  const slownik2 = {
+    a: [3, 2, 1],
+    b: [5, 4],
+  };
   const wynik1 = czySlownikiSaIdentyczne(slownik1, slownik2);
   assert(wynik1 === true, "Błąd testu 1");
 
-  const slownik3 = { a: [1, 2, 3], b: [4, 5] };
-  const slownik4 = { a: [3, 2, 1], b: [5, 4], c: [6, 7] };
+  const slownik3 = {
+    a: [1, 2, 3],
+    b: [4, 5],
+  };
+  const slownik4 = {
+    a: [3, 2, 1],
+    b: [5, 4],
+    c: [6, 7],
+  };
   const wynik2 = czySlownikiSaIdentyczne(slownik3, slownik4);
   assert(wynik2 === false, "Błąd testu 2");
 }

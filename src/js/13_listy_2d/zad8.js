@@ -77,6 +77,7 @@ function test() {
     `Niepoprawny wynik dla macierzy ${macierz2}.`
   );
 }
+
 function assert(condition, message) {
   if (!condition) {
     throw message || "Wystąpił błąd";

@@ -57,7 +57,9 @@ const testZnajdzPliki = async () => {
     );
   }
 
-  await fs.rmdir(sciezkaFolderu, { recursive: true });
+  await fs.rmdir(sciezkaFolderu, {
+    recursive: true,
+  });
 };
 
 const main = async () => {

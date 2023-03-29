@@ -70,6 +70,7 @@ function test() {
     `Macierz ${macierz2} jest kwadratem magicznym, a nie powinna być.`
   );
 }
+
 function assert(condition, message) {
   if (!condition) {
     throw message || "Wystąpił błąd";

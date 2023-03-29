@@ -81,6 +81,7 @@ function test() {
     `Niepoprawny wynik dla przedziałów ${przedzialy3}.`
   );
 }
+
 function assert(condition, message) {
   if (!condition) {
     throw message || "Wystąpił błąd";

@@ -24,13 +24,22 @@ function usunZeSlownika(slownik, liczba) {
 }
 
 function testUsunZeSlownika() {
-  const slownik1 = { aaa: 5, abc: 1, xxx: 5, cba: 3 };
+  const slownik1 = {
+    aaa: 5,
+    abc: 1,
+    xxx: 5,
+    cba: 3,
+  };
   const wynik1 = usunZeSlownika(slownik1, 5);
   assert(wynik1["abc"] === 1, "Test 1 nie powiódł się");
   assert(wynik1["cba"] === 3, "Test 2 nie powiódł się");
   assert(Object.keys(wynik1).length === 2, "Test 3 nie powiódł się");
 
-  const slownik2 = { a: 10, b: 20, c: 30 };
+  const slownik2 = {
+    a: 10,
+    b: 20,
+    c: 30,
+  };
   const wynik2 = usunZeSlownika(slownik2, 15);
   assert(Object.keys(wynik2).length === 3, "Test 4 nie powiódł się");
 }

@@ -21,6 +21,7 @@ function sortujSlownikPoKluczach(slownik) {
   const wynik = posortowaneKlucze.map((klucz) => [klucz, slownik[klucz]]);
   return wynik;
 }
+
 function sortujSlownikPoWartosciach(slownik) {
   const posortowaneKlucze = Object.keys(slownik).sort(
     (a, b) => slownik[a] - slownik[b]
@@ -28,8 +29,14 @@ function sortujSlownikPoWartosciach(slownik) {
   const wynik = posortowaneKlucze.map((klucz) => [klucz, slownik[klucz]]);
   return wynik;
 }
+
 function testSortujSlownikPoKluczach() {
-  const slownik = { c: 3, x: 5, a: -2, b: 4 };
+  const slownik = {
+    c: 3,
+    x: 5,
+    a: -2,
+    b: 4,
+  };
   const wynik = sortujSlownikPoKluczach(slownik);
   const poprawnyWynik = [
     ["a", -2],
@@ -45,7 +52,12 @@ function testSortujSlownikPoKluczach() {
 }
 
 function testSortujSlownikPoWartosciach() {
-  const slownik = { c: 3, x: 5, a: -2, b: 4 };
+  const slownik = {
+    c: 3,
+    x: 5,
+    a: -2,
+    b: 4,
+  };
   const wynik = sortujSlownikPoWartosciach(slownik);
   const poprawnyWynik = [
     ["a", -2],

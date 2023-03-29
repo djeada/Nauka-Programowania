@@ -57,7 +57,9 @@ const testZnajdzSciezki = async () => {
     `Błąd testu znajdzSciezki: ${wynik} nie zawiera ${oczekiwane[0]}`
   );
 
-  await fs.rmdir(sciezkaFolderu, { recursive: true });
+  await fs.rmdir(sciezkaFolderu, {
+    recursive: true,
+  });
 };
 
 const main = async () => {

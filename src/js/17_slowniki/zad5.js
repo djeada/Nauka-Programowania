@@ -20,7 +20,8 @@ Dla otrzymanej listy:
 zostanie zwrócony napis: “Barnaba Barabash”.
 
 
-*/ function najwiekszyZysk(lista) {
+*/
+function najwiekszyZysk(lista) {
   const pracownicy = {};
   let najlepszyPracownik = "";
   let najlepszyZysk = -Infinity;
