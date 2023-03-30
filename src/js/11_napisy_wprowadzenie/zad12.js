@@ -23,7 +23,7 @@ function test() {
   let expectedOutput = "Alamakota";
   let output = usunSpacje(input);
 
-  assert(
+  console.assert(
     output === expectedOutput,
     "Test nie powiódł się dla " +
       input +
@@ -33,12 +33,6 @@ function test() {
       expectedOutput
   );
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

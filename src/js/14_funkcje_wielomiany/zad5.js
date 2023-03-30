@@ -22,12 +22,6 @@ function pochodnaWielomianu(wspolczynniki, k) {
   return wspolczynniki;
 }
 
-function assert(warunek, komunikat) {
-  if (!warunek) {
-    throw komunikat || "Wystąpił błąd";
-  }
-}
-
 // Testy
 function testPochodnaWielomianu() {
   let wspolczynniki;
@@ -37,12 +31,15 @@ function testPochodnaWielomianu() {
   wspolczynniki = [4, -3, 2];
   k = 1;
   wynik = pochodnaWielomianu(wspolczynniki, k);
-  assert(JSON.stringify(wynik) === JSON.stringify([8, -3]), "Test 1 nieudany");
+  console.assert(
+    JSON.stringify(wynik) === JSON.stringify([8, -3]),
+    "Test 1 nieudany"
+  );
 
   wspolczynniki = [6, -5, 4, -3];
   k = 2;
   wynik = pochodnaWielomianu(wspolczynniki, k);
-  assert(
+  console.assert(
     JSON.stringify(wynik) === JSON.stringify([36, -20, 4]),
     "Test 2 nieudany"
   );
@@ -50,7 +47,10 @@ function testPochodnaWielomianu() {
   wspolczynniki = [1, 2, 3, 4];
   k = 3;
   wynik = pochodnaWielomianu(wspolczynniki, k);
-  assert(JSON.stringify(wynik) === JSON.stringify([24]), "Test 3 nieudany");
+  console.assert(
+    JSON.stringify(wynik) === JSON.stringify([24]),
+    "Test 3 nieudany"
+  );
 }
 
 testPochodnaWielomianu();

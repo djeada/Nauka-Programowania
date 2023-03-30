@@ -29,18 +29,13 @@ function czyTrojkat(punkty) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testCzyTrojkat() {
-  assert(czyTrojkat([-3, -2, -3, 1, -3, 0]) === false);
-  assert(czyTrojkat([0, 0, 3, 0, 0, 4]) === true);
-  assert(czyTrojkat([0, 0, 0, 0, 0, 0]) === false);
-  assert(czyTrojkat([1, 2, 2, 2, 3, 2]) === false);
-  assert(czyTrojkat([0, 0, 5, 0, 0, 5]) === true);
+  console.assert(czyTrojkat([-3, -2, -3, 1, -3, 0]) === false);
+  console.assert(czyTrojkat([0, 0, 3, 0, 0, 4]) === true);
+  console.assert(czyTrojkat([0, 0, 0, 0, 0, 0]) === false);
+  console.assert(czyTrojkat([1, 2, 2, 2, 3, 2]) === false);
+  console.assert(czyTrojkat([0, 0, 5, 0, 0, 5]) === true);
 }
 
 testCzyTrojkat();

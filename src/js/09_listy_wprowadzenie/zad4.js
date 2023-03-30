@@ -30,24 +30,25 @@ function znajdzMinMax(lista) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testujZnajdzMinMax() {
   var test1 = [4, -7, 8, 5, 6, -9, 10, 2, -8];
   var wynik1 = [-9, 10];
-  assert(JSON.stringify(znajdzMinMax(test1)) === JSON.stringify(wynik1));
+  console.assert(
+    JSON.stringify(znajdzMinMax(test1)) === JSON.stringify(wynik1)
+  );
 
   var test2 = [1, 1, 1, 1, 1, 1, 1, 1, 1];
   var wynik2 = [1, 1];
-  assert(JSON.stringify(znajdzMinMax(test2)) === JSON.stringify(wynik2));
+  console.assert(
+    JSON.stringify(znajdzMinMax(test2)) === JSON.stringify(wynik2)
+  );
 
   var test3 = [10, -10, 100, -100, 1000, -1000];
   var wynik3 = [-1000, 1000];
-  assert(JSON.stringify(znajdzMinMax(test3)) === JSON.stringify(wynik3));
+  console.assert(
+    JSON.stringify(znajdzMinMax(test3)) === JSON.stringify(wynik3)
+  );
 }
 
 testujZnajdzMinMax();

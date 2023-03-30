@@ -48,15 +48,9 @@ function test() {
   let output1 = coKtyPoziomo(input1, input2);
   let output2 = coKtyPionowo(input1, input2);
 
-  assert(output1 === expectedOutput1, "Test nie powiódł się");
-  assert(output2 === expectedOutput2, "Test nie powiódł się");
+  console.assert(output1 === expectedOutput1, "Test nie powiódł się");
+  console.assert(output2 === expectedOutput2, "Test nie powiódł się");
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

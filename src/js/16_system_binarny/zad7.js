@@ -38,14 +38,8 @@ function test() {
   let expectedOutput = 4951;
   let output = odwrocSasiadujaceBity(input);
 
-  assert(output === expectedOutput, "Test nie powiódł się");
+  console.assert(output === expectedOutput, "Test nie powiódł się");
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

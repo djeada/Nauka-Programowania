@@ -68,19 +68,14 @@ function test() {
     [10, 11, 12],
   ];
   const wynik2 = [1, 2, 3, 6, 9, 12, 11, 10, 7, 4, 5, 8];
-  assert(
+  console.assert(
     JSON.stringify(spiralnie(macierz1)) === JSON.stringify(wynik1),
     `Niepoprawny wynik dla macierzy ${macierz1}.`
   );
-  assert(
+  console.assert(
     JSON.stringify(spiralnie(macierz2)) === JSON.stringify(wynik2),
     `Niepoprawny wynik dla macierzy ${macierz2}.`
   );
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
-}
 test();

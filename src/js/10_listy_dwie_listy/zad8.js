@@ -31,26 +31,21 @@ function polaczPosortowaneListy(lista1, lista2) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testPolaczPosortowaneListy() {
-  assert(
+  console.assert(
     polaczPosortowaneListy([2, 4, 7], [3, 5, 9]).toString() ===
       [2, 3, 4, 7, 9].toString()
   );
-  assert(
+  console.assert(
     polaczPosortowaneListy([2, 4, 7], [3, 5, 9, 2]).toString() ===
       [2, 3, 4, 7, 9].toString()
   );
-  assert(
+  console.assert(
     polaczPosortowaneListy([2, 4, 7], [3, 5, 9, 2, 4]).toString() ===
       [2, 3, 4, 7, 9].toString()
   );
-  assert(
+  console.assert(
     polaczPosortowaneListy([2, 4, 7], [3, 5, 9, 2, 4, 7]).toString() ===
       [2, 3, 4, 7, 9].toString()
   );

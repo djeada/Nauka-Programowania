@@ -23,11 +23,7 @@ const skopiujPliki = async (zrodlo, cel, rozszerzenie) => {
     }
   }
 };
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
+
 const test1 = async () => {
   const sciezka1 = "test1";
   const sciezka2 = "test2";
@@ -55,7 +51,10 @@ const test1 = async () => {
     } catch (err) {
       console.log(err);
     }
-    assert(wynik === oczekiwane, `Błąd asercji: ${sciezkaPliku} nie istnieje`);
+    console.assert(
+      wynik === oczekiwane,
+      `Błąd asercji: ${sciezkaPliku} nie istnieje`
+    );
   }
 
   await fs.rmdir(sciezka1, {

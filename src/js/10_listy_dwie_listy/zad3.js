@@ -27,26 +27,21 @@ function sumaElementowList(lista1, lista2) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testSumaElementowList() {
-  assert(
+  console.assert(
     sumaElementowList([3, 1, 2, 5], [2, 8, 6, 5]).toString() ===
       [5, 9, 8, 10].toString()
   );
-  assert(
+  console.assert(
     sumaElementowList([3, 1, 2, 5], [2, 8, 6]).toString() ===
       [5, 9, 8, 5].toString()
   );
-  assert(
+  console.assert(
     sumaElementowList([3, 1, 2], [2, 8, 6, 5]).toString() ===
       [5, 9, 8, 5].toString()
   );
-  assert(
+  console.assert(
     sumaElementowList([3, 1, 2, 5], [2, 8, 6, 5, 1]).toString() ===
       [5, 9, 8, 10, 1].toString()
   );

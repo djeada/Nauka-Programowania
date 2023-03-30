@@ -39,7 +39,7 @@ function test() {
   const expectedOutput = ["kajak", "i", "w", "oko"];
   const output = wyszukajPalindromy(input);
 
-  assert(
+  console.assert(
     JSON.stringify(output) === JSON.stringify(expectedOutput),
     'Test nie powiódł się dla "' +
       input +
@@ -51,9 +51,4 @@ function test() {
   console.log("Test przeszedł pomyślnie");
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
-}
 test();

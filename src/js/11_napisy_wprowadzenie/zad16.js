@@ -30,7 +30,7 @@ function test() {
   let expectedOutput = 1;
   let output = odlegloscHamminga(input1, input2);
 
-  assert(
+  console.assert(
     output === expectedOutput,
     'Test nie powiódł się dla "' +
       input1 +
@@ -42,12 +42,6 @@ function test() {
       expectedOutput
   );
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

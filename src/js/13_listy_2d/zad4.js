@@ -60,7 +60,7 @@ function testDodajMacierze() {
   const dodawanie = dodajMacierze(macierzA, macierzB);
   for (let i = 0; i < dodawanie.length; i++) {
     for (let j = 0; j < dodawanie[i].length; j++) {
-      assert(
+      console.assert(
         dodawanie[i][j] === wynikDodawania[i][j],
         `Element macierzy o indeksie (${i}, ${j}) nie jest taki sam jak w oczekiwanej macierzy. Oczekiwano: ${wynikDodawania[i][j]}, otrzymano: ${dodawanie[i][j]}.`
       );
@@ -84,17 +84,11 @@ function testOdejmijMacierze() {
   const odejmowanie = odejmijMacierze(macierzA, macierzB);
   for (let i = 0; i < odejmowanie.length; i++) {
     for (let j = 0; j < odejmowanie[i].length; j++) {
-      assert(
+      console.assert(
         odejmowanie[i][j] === wynikOdejmowania[i][j],
         "Element macierzy o indeksie (${i}, ${j}) nie jest taki sam jak w oczekiwanej macierzy. Oczekiwano: ${wynikOdejmowania[i][j]}, otrzymano: ${odejmowanie[i][j]}."
       );
     }
-  }
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Wystąpił błąd");
   }
 }
 

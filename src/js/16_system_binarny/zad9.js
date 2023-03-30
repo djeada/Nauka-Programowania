@@ -71,7 +71,10 @@ function testZamienNaMaleLitery() {
   const expectedOutput = "test napisu";
   const output = zamienNaMaleLitery(input);
 
-  assert(output === expectedOutput, `Test nie powiódł się dla ${input}`);
+  console.assert(
+    output === expectedOutput,
+    `Test nie powiódł się dla ${input}`
+  );
   console.log("Test przeszedł pomyślnie");
 }
 
@@ -80,7 +83,10 @@ function testZamienNaWielkieLitery() {
   const expectedOutput = "TEST NAPISU";
   const output = zamienNaWielkieLitery(input);
 
-  assert(output === expectedOutput, `Test nie powiódł się dla ${input}`);
+  console.assert(
+    output === expectedOutput,
+    `Test nie powiódł się dla ${input}`
+  );
   console.log("Test przeszedł pomyślnie");
 }
 
@@ -89,14 +95,11 @@ function testZamienLitery() {
   const expectedOutput = "tEst NapIsU";
   const output = zamienLitery(input);
 
-  assert(output === expectedOutput, `Test nie powiódł się dla ${input}`);
+  console.assert(
+    output === expectedOutput,
+    `Test nie powiódł się dla ${input}`
+  );
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
 }
 
 function main() {

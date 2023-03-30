@@ -28,17 +28,11 @@ const sznurek = (lista, n) => {
   return max;
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const lista1 = [1, 5, 8, 9, 10, 17, 17, 20];
 const wynik1 = 10;
 const lista2 = [3, 5, 8, 9, 10, 17, 17, 20];
 const wynik2 = 22;
 
-assert(sznurek(lista1, 4) === wynik1, "Test 1 nieudany");
-assert(sznurek(lista2, 8) === wynik2, "Test 2 nieudany");
+console.assert(sznurek(lista1, 4) === wynik1, "Test 1 nieudany");
+console.assert(sznurek(lista2, 8) === wynik2, "Test 2 nieudany");

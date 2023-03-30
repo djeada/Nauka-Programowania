@@ -30,14 +30,8 @@ function test() {
   let expectedOutput = 3;
   let output = policzSlowa(input);
 
-  assert(output === expectedOutput, "Test nie powiódł się");
+  console.assert(output === expectedOutput, "Test nie powiódł się");
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

@@ -22,12 +22,6 @@ function czyElfickie(slowo, elf = "elf", idx = 0) {
   return czyElfickie(slowo.slice(pozycja + 1), elf, idx + 1);
 }
 
-function assert(warunek, komunikat) {
-  if (!warunek) {
-    throw komunikat || "Wystąpił błąd";
-  }
-}
-
 // Testy
 function testCzyElfickie() {
   let slowo;
@@ -35,19 +29,19 @@ function testCzyElfickie() {
 
   slowo = "reflektor";
   wynik = czyElfickie(slowo);
-  assert(wynik === true, "Test 1 nieudany");
+  console.assert(wynik === true, "Test 1 nieudany");
 
   slowo = "elefant";
   wynik = czyElfickie(slowo);
-  assert(wynik === false, "Test 2 nieudany");
+  console.assert(wynik === false, "Test 2 nieudany");
 
   slowo = "efektywnelekcje";
   wynik = czyElfickie(slowo);
-  assert(wynik === true, "Test 3 nieudany");
+  console.assert(wynik === true, "Test 3 nieudany");
 
   slowo = "wiolinistka";
   wynik = czyElfickie(slowo);
-  assert(wynik === false, "Test 4 nieudany");
+  console.assert(wynik === false, "Test 4 nieudany");
 }
 
 testCzyElfickie();

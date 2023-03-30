@@ -50,12 +50,6 @@ const usunSrodkowyWiersz = async (sciezka) => {
   }
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 const test1 = async () => {
   const sciezkaFolderu = "temp_dir";
   const sciezkikiPlikow = ["lista.txt", "test.txt"];
@@ -75,13 +69,13 @@ const test1 = async () => {
   for (const plik of sciezkikiPlikow) {
     const sciezkaPliku = path.join(sciezkaFolderu, plik);
     const wynik = await wczytajPlik(sciezkaPliku);
-    assert(
+    console.assert(
       wynik.length === oczekiwane.length,
       `Błąd asercji: ${wynik.length} != ${oczekiwane.length}`
     );
 
     for (let i = 0; i < wynik.length; i++) {
-      assert(
+      console.assert(
         wynik[i] === oczekiwane[i],
         `Błąd asercji: ${wynik[i]} != ${oczekiwane[i]}`
       );
@@ -111,13 +105,13 @@ const test2 = async () => {
   for (const plik of sciezkikiPlikow) {
     const sciezkaPliku = path.join(sciezkaFolderu, plik);
     const wynik = await wczytajPlik(sciezkaPliku);
-    assert(
+    console.assert(
       wynik.length === oczekiwane.length,
       `Błąd asercji: ${wynik.length} != ${oczekiwane.length}`
     );
 
     for (let i = 0; i < wynik.length; i++) {
-      assert(
+      console.assert(
         wynik[i] === oczekiwane[i],
         `Błąd asercji: ${wynik[i]} != ${oczekiwane[i]}`
       );

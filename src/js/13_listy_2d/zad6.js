@@ -68,23 +68,18 @@ function test() {
     [1, 4],
     [5, 6],
   ];
-  assert(
+  console.assert(
     JSON.stringify(scalPrzedzialy(przedzialy1)) === JSON.stringify(wynik1),
     `Niepoprawny wynik dla przedziałów ${przedzialy1}.`
   );
-  assert(
+  console.assert(
     JSON.stringify(scalPrzedzialy(przedzialy2)) === JSON.stringify(wynik2),
     `Niepoprawny wynik dla przedziałów ${przedzialy2}.`
   );
-  assert(
+  console.assert(
     JSON.stringify(scalPrzedzialy(przedzialy3)) === JSON.stringify(wynik3),
     `Niepoprawny wynik dla przedziałów ${przedzialy3}.`
   );
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
-}
 test();

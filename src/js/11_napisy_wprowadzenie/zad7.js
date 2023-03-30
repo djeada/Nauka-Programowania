@@ -30,14 +30,8 @@ function test() {
   let expectedOutput = "82, 111, 98, 111, 116";
   let output = zamienNaKodyASCII(input);
 
-  assert(output === expectedOutput, "Test nie powiódł się");
+  console.assert(output === expectedOutput, "Test nie powiódł się");
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

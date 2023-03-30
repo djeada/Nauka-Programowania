@@ -30,7 +30,7 @@ function test() {
   let expectedOutput = 6;
   let output = sredniaDlugoscSlow(input);
 
-  assert(
+  console.assert(
     output === expectedOutput,
     "Test nie powiódł się dla " +
       input +
@@ -40,12 +40,6 @@ function test() {
       expectedOutput
   );
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

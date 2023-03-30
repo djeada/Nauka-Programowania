@@ -16,12 +16,6 @@ function mnozenieWielomianuPrzezSkalar(wspolczynniki, skalar) {
   return wspolczynniki.map((wspolczynnik) => wspolczynnik * skalar);
 }
 
-function assert(warunek, komunikat) {
-  if (!warunek) {
-    throw komunikat || "Wystąpił błąd";
-  }
-}
-
 // Testy
 function testMnozenieWielomianuPrzezSkalar() {
   let wielomian;
@@ -31,7 +25,7 @@ function testMnozenieWielomianuPrzezSkalar() {
   wielomian = [4, -3, 2];
   skalar = -2;
   wynik = mnozenieWielomianuPrzezSkalar(wielomian, skalar);
-  assert(
+  console.assert(
     JSON.stringify(wynik) === JSON.stringify([-8, 6, -4]),
     "Test 1 nieudany"
   );
@@ -39,7 +33,7 @@ function testMnozenieWielomianuPrzezSkalar() {
   wielomian = [5, 0, -1];
   skalar = 3;
   wynik = mnozenieWielomianuPrzezSkalar(wielomian, skalar);
-  assert(
+  console.assert(
     JSON.stringify(wynik) === JSON.stringify([15, 0, -3]),
     "Test 2 nieudany"
   );
@@ -47,7 +41,7 @@ function testMnozenieWielomianuPrzezSkalar() {
   wielomian = [0, 0, 0];
   skalar = 5;
   wynik = mnozenieWielomianuPrzezSkalar(wielomian, skalar);
-  assert(
+  console.assert(
     JSON.stringify(wynik) === JSON.stringify([0, 0, 0]),
     "Test 3 nieudany"
   );

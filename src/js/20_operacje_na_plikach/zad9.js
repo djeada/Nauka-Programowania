@@ -9,11 +9,6 @@ Dane wyjściowe: Brak.
 */
 const fs = require("fs").promises;
 const path = require("path");
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
 
 const usunPliki = async (sciezka, rozmiar) => {
   const pliki = await fs.readdir(sciezka);
@@ -43,7 +38,10 @@ const test1 = async () => {
   await usunPliki(sciezkaFolderu, 10 * 1024);
 
   const daneFolderu = await fs.readdir(sciezkaFolderu);
-  assert(daneFolderu.length === 0, `Błąd asercji: ${daneFolderu.length} != 0`);
+  console.assert(
+    daneFolderu.length === 0,
+    `Błąd asercji: ${daneFolderu.length} != 0`
+  );
 
   await fs.rmdir(sciezkaFolderu, {
     recursive: true,

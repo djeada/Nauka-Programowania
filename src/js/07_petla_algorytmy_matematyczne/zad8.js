@@ -27,23 +27,18 @@ function czyPierwsza(liczba) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testCzyPierwsza() {
-  assert(czyPierwsza(2) == true);
-  assert(czyPierwsza(3) == true);
-  assert(czyPierwsza(4) == false);
-  assert(czyPierwsza(7) == true);
-  assert(czyPierwsza(9) == false);
-  assert(czyPierwsza(11) == true);
-  assert(czyPierwsza(13) == true);
-  assert(czyPierwsza(14) == false);
-  assert(czyPierwsza(16) == false);
-  assert(czyPierwsza(19) == true);
+  console.assert(czyPierwsza(2) == true);
+  console.assert(czyPierwsza(3) == true);
+  console.assert(czyPierwsza(4) == false);
+  console.assert(czyPierwsza(7) == true);
+  console.assert(czyPierwsza(9) == false);
+  console.assert(czyPierwsza(11) == true);
+  console.assert(czyPierwsza(13) == true);
+  console.assert(czyPierwsza(14) == false);
+  console.assert(czyPierwsza(16) == false);
+  console.assert(czyPierwsza(19) == true);
 }
 
 // Funkcja uruchamiająca testy

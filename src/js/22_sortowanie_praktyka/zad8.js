@@ -43,12 +43,6 @@ const szukaj = (lista, klucz) => {
   return -1;
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const lista1 = [3, 4, 5, 6, 1, 2];
 const klucz1 = 4;
@@ -58,5 +52,5 @@ const lista2 = [4, 5, 6, 7, 8, 9, 1, 2, 3];
 const klucz2 = 6;
 const wynik2 = 2;
 
-assert(szukaj(lista1, klucz1) === wynik1, "Test 1 nieudany");
-assert(szukaj(lista2, klucz2) === wynik2, "Test 2 nieudany");
+console.assert(szukaj(lista1, klucz1) === wynik1, "Test 1 nieudany");
+console.assert(szukaj(lista2, klucz2) === wynik2, "Test 2 nieudany");

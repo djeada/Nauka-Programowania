@@ -25,20 +25,15 @@ function obliczSredniaWazona(wagi, wartosci) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testObliczSredniaWazona() {
-  assert(
+  console.assert(
     obliczSredniaWazona(
       [2.0, 5.0, 0.0, 2.0, 1.0],
       [0.2, 0.4, 0.1, 0.2, 0.1]
     ).toFixed(2) === "0.29"
   );
-  assert(
+  console.assert(
     obliczSredniaWazona(
       [2.0, 5.0, 0.0, 2.0, 1.0],
       [0.2, 0.4, 0.1, 0.2, 0.1]

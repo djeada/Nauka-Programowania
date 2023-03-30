@@ -40,18 +40,11 @@ function najczestszaLitera(zdanie) {
 function testNajczestszaLitera() {
   const zdanie1 = "lezy jerzy na wiezy";
   const wynik1 = najczestszaLitera(zdanie1);
-  assert(wynik1 === "e", "Test 1 nie powiódł się");
+  console.assert(wynik1 === "e", "Test 1 nie powiódł się");
 
   const zdanie2 = "Ala ma kota";
   const wynik2 = najczestszaLitera(zdanie2);
-  assert(wynik2 === "a", "Test 2 nie powiódł się");
-}
-
-// test
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Asercja nie powiodła się");
-  }
+  console.assert(wynik2 === "a", "Test 2 nie powiódł się");
 }
 
 testNajczestszaLitera();

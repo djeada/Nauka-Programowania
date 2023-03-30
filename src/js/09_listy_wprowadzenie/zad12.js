@@ -27,19 +27,14 @@ function rotacjaListy(lista, kierunek, przesuniecie) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testRotacjaListy() {
   const lista1 = [5, 27, 6, 2, 1, 10, 8];
-  assert(
+  console.assert(
     JSON.stringify(rotacjaListy(lista1, 0, 2)) ===
       JSON.stringify([6, 2, 1, 10, 8, 5, 27])
   );
-  assert(
+  console.assert(
     JSON.stringify(rotacjaListy(lista1, 1, 2)) ===
       JSON.stringify([10, 8, 5, 27, 6, 2, 1])
   );

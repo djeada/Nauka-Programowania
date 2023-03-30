@@ -28,12 +28,6 @@ function zbiorPotegowy(lista) {
   return Array.from(zbiorPotegowy, JSON.parse);
 }
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const lista1 = [1, 2, 1];
 const wynik1 = [[], [1], [2], [1, 2], [1, 1], [1, 1, 2]];
@@ -65,11 +59,11 @@ const sortedExpected1 = wynik1.sort(sortSubsets);
 const sortedResult2 = zbiorPotegowy(lista2).sort(sortSubsets);
 const sortedExpected2 = wynik2.sort(sortSubsets);
 
-assert(
+console.assert(
   JSON.stringify(sortedResult1) === JSON.stringify(sortedExpected1),
   "Test 1 nieudany"
 );
-assert(
+console.assert(
   JSON.stringify(sortedResult2) === JSON.stringify(sortedExpected2),
   "Test 2 nieudany"
 );

@@ -29,14 +29,8 @@ function test() {
   let expectedOutput = 2;
   let output = policzWystapieniaZnaku(input1, input2);
 
-  assert(output === expectedOutput, "Test nie powiódł się");
+  console.assert(output === expectedOutput, "Test nie powiódł się");
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

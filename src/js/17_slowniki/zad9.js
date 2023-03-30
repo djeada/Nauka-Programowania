@@ -38,22 +38,15 @@ function powtarzajaceSieZnaki(napis) {
 function testPowtarzajaceSieZnaki() {
   const napis1 = "aaabbbccc";
   const wynik1 = powtarzajaceSieZnaki(napis1);
-  assert(wynik1 === "abc", "Test 1 nie powiódł się");
+  console.assert(wynik1 === "abc", "Test 1 nie powiódł się");
 
   const napis2 = "abcd";
   const wynik2 = powtarzajaceSieZnaki(napis2);
-  assert(wynik2 === "", "Test 2 nie powiódł się");
+  console.assert(wynik2 === "", "Test 2 nie powiódł się");
 
   const napis3 = "Ala ma kota, a kot ma Ale.";
   const wynik3 = powtarzajaceSieZnaki(napis3);
-  assert(wynik3 === "aekmt", "Test 3 nie powiódł się");
-}
-
-// test
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Asercja nie powiodła się");
-  }
+  console.assert(wynik3 === "aekmt", "Test 3 nie powiódł się");
 }
 
 testPowtarzajaceSieZnaki();

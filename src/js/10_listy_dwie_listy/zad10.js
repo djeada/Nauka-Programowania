@@ -30,17 +30,12 @@ function znajdzMediane(lista1, lista2) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testZnajdzMediane() {
-  assert(znajdzMediane([2, 4, 7], [3, 5, 9]) === 4.5);
-  assert(znajdzMediane([2, 4, 7], [3, 5, 9, 2]) === 4.5);
-  assert(znajdzMediane([2, 4, 7], [3, 5, 9, 2, 4]) === 4.5);
-  assert(znajdzMediane([2, 4, 7], [3, 5, 9, 2, 4, 7]) === 4.5);
+  console.assert(znajdzMediane([2, 4, 7], [3, 5, 9]) === 4.5);
+  console.assert(znajdzMediane([2, 4, 7], [3, 5, 9, 2]) === 4.5);
+  console.assert(znajdzMediane([2, 4, 7], [3, 5, 9, 2, 4]) === 4.5);
+  console.assert(znajdzMediane([2, 4, 7], [3, 5, 9, 2, 4, 7]) === 4.5);
 }
 
 testZnajdzMediane();

@@ -44,30 +44,25 @@ function zwracajIlorazLiczb(liczba_a, liczba_b) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testIloczyn() {
-  assert(zwracajIloczynLiczb(2, 3) == 6);
-  assert(zwracajIloczynLiczb(3, 2) == 6);
-  assert(zwracajIloczynLiczb(4, 4) == 16);
-  assert(zwracajIloczynLiczb(5, 3) == 15);
-  assert(zwracajIloczynLiczb(6, 0) == 0);
-  assert(zwracajIloczynLiczb(7, 1) == 7);
-  assert(zwracajIloczynLiczb(0, 2) == 0);
+  console.assert(zwracajIloczynLiczb(2, 3) == 6);
+  console.assert(zwracajIloczynLiczb(3, 2) == 6);
+  console.assert(zwracajIloczynLiczb(4, 4) == 16);
+  console.assert(zwracajIloczynLiczb(5, 3) == 15);
+  console.assert(zwracajIloczynLiczb(6, 0) == 0);
+  console.assert(zwracajIloczynLiczb(7, 1) == 7);
+  console.assert(zwracajIloczynLiczb(0, 2) == 0);
 }
 
 function testIloraz() {
-  assert(zwracajIlorazLiczb(2, 3) == 0);
-  assert(zwracajIlorazLiczb(3, 2) == 1);
-  assert(zwracajIlorazLiczb(4, 4) == 1);
-  assert(zwracajIlorazLiczb(5, 3) == 1);
-  assert(Number.isNaN(zwracajIlorazLiczb(6, 0)));
-  assert(zwracajIlorazLiczb(7, 1) == 7);
-  assert(zwracajIlorazLiczb(0, 2) == 0);
+  console.assert(zwracajIlorazLiczb(2, 3) == 0);
+  console.assert(zwracajIlorazLiczb(3, 2) == 1);
+  console.assert(zwracajIlorazLiczb(4, 4) == 1);
+  console.assert(zwracajIlorazLiczb(5, 3) == 1);
+  console.assert(Number.isNaN(zwracajIlorazLiczb(6, 0)));
+  console.assert(zwracajIlorazLiczb(7, 1) == 7);
+  console.assert(zwracajIlorazLiczb(0, 2) == 0);
 }
 
 // Funkcja uruchamiająca testy

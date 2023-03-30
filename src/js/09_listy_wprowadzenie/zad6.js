@@ -27,22 +27,17 @@ function czySredniaWLiscie(lista) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testCzySredniaWLiscie_pozytywne() {
-  assert(czySredniaWLiscie([6, 2, 1, 4, 27]) === true);
-  assert(czySredniaWLiscie([2, 2, 2, 2, 2]) === true);
-  assert(czySredniaWLiscie([1, 2, 3, 4, 5]) === true);
+  console.assert(czySredniaWLiscie([6, 2, 1, 4, 27]) === true);
+  console.assert(czySredniaWLiscie([2, 2, 2, 2, 2]) === true);
+  console.assert(czySredniaWLiscie([1, 2, 3, 4, 5]) === true);
 }
 
 function testCzySredniaWLiscie_negatywne() {
-  assert(czySredniaWLiscie([6, 2, 1, 27]) === false);
-  assert(czySredniaWLiscie([2, 2, 2, 2]) === false);
-  assert(czySredniaWLiscie([1, 2, 3, 4]) === false);
+  console.assert(czySredniaWLiscie([6, 2, 1, 27]) === false);
+  console.assert(czySredniaWLiscie([2, 2, 2, 2]) === false);
+  console.assert(czySredniaWLiscie([1, 2, 3, 4]) === false);
 }
 
 function main() {

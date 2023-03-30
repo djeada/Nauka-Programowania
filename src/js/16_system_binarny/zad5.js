@@ -29,18 +29,11 @@ function maximum(a, b) {
   return (a + b + Math.abs(a - b)) / 2;
 }
 
-// Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
-
 function test() {
-  assert(minimum(3, 2) === 2, "Test 1 nie powiódł się");
-  assert(maximum(3, 2) === 3, "Test 2 nie powiódł się");
-  assert(minimum(5, 5) === 5, "Test 3 nie powiódł się");
-  assert(maximum(5, 5) === 5, "Test 4 nie powiódł się");
+  console.assert(minimum(3, 2) === 2, "Test 1 nie powiódł się");
+  console.assert(maximum(3, 2) === 3, "Test 2 nie powiódł się");
+  console.assert(minimum(5, 5) === 5, "Test 3 nie powiódł się");
+  console.assert(maximum(5, 5) === 5, "Test 4 nie powiódł się");
 }
 
 test();

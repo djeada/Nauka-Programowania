@@ -30,28 +30,23 @@ function znajdzWszystkieParySumujaceDo(lista, x) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testZnajdzWszystkieParySumujaceDo() {
-  assert(
+  console.assert(
     JSON.stringify(znajdzWszystkieParySumujaceDo([1, 2, 4, 3, 7], 5)) ===
       JSON.stringify([
         [1, 4],
         [2, 3],
       ])
   );
-  assert(
+  console.assert(
     JSON.stringify(znajdzWszystkieParySumujaceDo([2, 5, 9, 4, 7], 12)) ===
       JSON.stringify([
         [5, 7],
         [9, 3],
       ])
   );
-  assert(
+  console.assert(
     JSON.stringify(znajdzWszystkieParySumujaceDo([2, 5, 9, 4, 7], 20)) ===
       JSON.stringify([])
   );

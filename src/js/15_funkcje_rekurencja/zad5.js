@@ -28,24 +28,18 @@ function fib(n) {
   return fib(n - 1) + fib(n - 2);
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message);
-  }
-}
-
 function test() {
-  assert(fib(0) === 0, "Test 1 failed");
-  assert(fib(1) === 1, "Test 2 failed");
-  assert(fib(2) === 1, "Test 3 failed");
-  assert(fib(3) === 2, "Test 4 failed");
-  assert(fib(4) === 3, "Test 5 failed");
-  assert(fib(5) === 5, "Test 6 failed");
-  assert(fib(6) === 8, "Test 7 failed");
-  assert(fib(7) === 13, "Test 8 failed");
-  assert(fib(8) === 21, "Test 9 failed");
-  assert(fib(9) === 34, "Test 10 failed");
-  assert(fib(10) === 55, "Test 11 failed");
+  console.assert(fib(0) === 0, "Test 1 failed");
+  console.assert(fib(1) === 1, "Test 2 failed");
+  console.assert(fib(2) === 1, "Test 3 failed");
+  console.assert(fib(3) === 2, "Test 4 failed");
+  console.assert(fib(4) === 3, "Test 5 failed");
+  console.assert(fib(5) === 5, "Test 6 failed");
+  console.assert(fib(6) === 8, "Test 7 failed");
+  console.assert(fib(7) === 13, "Test 8 failed");
+  console.assert(fib(8) === 21, "Test 9 failed");
+  console.assert(fib(9) === 34, "Test 10 failed");
+  console.assert(fib(10) === 55, "Test 11 failed");
 }
 
 test();

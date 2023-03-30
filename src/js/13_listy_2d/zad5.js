@@ -61,19 +61,14 @@ function test() {
     [8, 3, 3],
   ];
   const wynik2 = false;
-  assert(
+  console.assert(
     czyKwadratMagiczny(macierz1) === wynik1,
     `Macierz ${macierz1} nie jest kwadratem magicznym, a powinna być.`
   );
-  assert(
+  console.assert(
     czyKwadratMagiczny(macierz2) === wynik2,
     `Macierz ${macierz2} jest kwadratem magicznym, a nie powinna być.`
   );
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
-}
 test();

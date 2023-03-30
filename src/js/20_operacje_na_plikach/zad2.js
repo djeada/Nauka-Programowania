@@ -11,12 +11,6 @@ Dane wyjściowe: Lista napisów
 const fs = require("fs").promises;
 const path = require("path");
 
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
-
 const znajdzPliki = async (sciezka, rozszerzenie) => {
   const pliki = [];
   const dane = await fs.readdir(sciezka);
@@ -45,13 +39,13 @@ const testZnajdzPliki = async () => {
   const oczekiwane = sciezkiPlikow;
   const wynik = await znajdzPliki(sciezkaFolderu, ".txt");
 
-  assert(
+  console.assert(
     wynik.length === oczekiwane.length,
     `Błąd testu znajdzPliki: ${wynik.length} !== ${oczekiwane.length}`
   );
 
   for (const nazwaPliku of oczekiwane) {
-    assert(
+    console.assert(
       wynik.includes(nazwaPliku),
       `Błąd testu znajdzPliki: ${wynik} nie zawiera ${nazwaPliku}`
     );

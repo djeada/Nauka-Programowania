@@ -106,16 +106,11 @@ function czyLiczbaJestPierwsza(liczba) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testZwiekszElementyOParzystychIndeksach() {
   const lista = [5, 7, 9, 4, 2];
   const wynik = [6, 7, 10, 4, 3];
-  assert(
+  console.assert(
     JSON.stringify(zwiekszElementyOParzystychIndeksach(lista)) ===
       JSON.stringify(wynik),
     "Zwiększanie elementów o parzystych indeksach nie działa."
@@ -125,7 +120,7 @@ function testZwiekszElementyOParzystychIndeksach() {
 function testWyzerujWielokrotnosciLiczby3() {
   const lista = [5, 7, 9, 4, 2];
   const wynik = [5, 7, 0, 4, 2];
-  assert(
+  console.assert(
     JSON.stringify(wyzerujWielokrotnosciLiczby3(lista)) ===
       JSON.stringify(wynik),
     "Wyzerowywanie wielokrotności liczby 3 nie działa."
@@ -135,7 +130,7 @@ function testWyzerujWielokrotnosciLiczby3() {
 function testPodniesDoKwadratuMniejszeNiz10() {
   const lista = [5, 7, 9, 4, 2];
   const wynik = [25, 7, 81, 16, 4];
-  assert(
+  console.assert(
     JSON.stringify(podniesDoKwadratuMniejszeNiz10(lista)) ===
       JSON.stringify(wynik),
     "Podnoszenie do kwadratu elementów mniejszych niż 10 nie działa."
@@ -145,7 +140,7 @@ function testPodniesDoKwadratuMniejszeNiz10() {
 function testWstawSumaNaIndeksyPierwsze() {
   const lista = [5, 7, 9, 4, 2];
   const wynik = [29, 7, 9, 29, 2];
-  assert(
+  console.assert(
     JSON.stringify(wstawSumaNaIndeksyPierwsze(lista)) === JSON.stringify(wynik),
     "Wstawianie sumy na indeksy pierwsze nie działa."
   );
@@ -154,7 +149,7 @@ function testWstawSumaNaIndeksyPierwsze() {
 function testZamienNaIloczynPozaNimSamym() {
   const lista = [5, 7, 9, 4, 2];
   const wynik = [504, 360, 280, 567, 945];
-  assert(
+  console.assert(
     JSON.stringify(zamienNaIloczynPozaNimSamym(lista)) ===
       JSON.stringify(wynik),
     "Zamiana na iloczyn poza nim samym nie działa."

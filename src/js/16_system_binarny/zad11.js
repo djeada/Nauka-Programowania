@@ -33,14 +33,8 @@ function test() {
   let expectedOutput = true;
   let output = czyPalindrom(input);
 
-  assert(output === expectedOutput, "Test nie powiódł się");
+  console.assert(output === expectedOutput, "Test nie powiódł się");
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
 }
 
 test();

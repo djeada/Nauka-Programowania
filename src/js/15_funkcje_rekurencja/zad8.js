@@ -24,12 +24,6 @@ function wiezaHanoi(n, zrodlo = "A", cel = "B", pomocniczy = "C") {
   }
 }
 
-function assert(warunek, komunikat) {
-  if (!warunek) {
-    throw komunikat || "Wystąpił błąd";
-  }
-}
-
 // Testy
 function testWiezaHanoi() {
   let n;
@@ -37,14 +31,14 @@ function testWiezaHanoi() {
 
   n = 1;
   wynik = wiezaHanoi(n);
-  assert(
+  console.assert(
     JSON.stringify(wynik) === JSON.stringify([["A", "B"]]),
     "Test 1 nieudany"
   );
 
   n = 2;
   wynik = wiezaHanoi(n);
-  assert(
+  console.assert(
     JSON.stringify(wynik) ===
       JSON.stringify([
         ["A", "C"],
@@ -56,7 +50,7 @@ function testWiezaHanoi() {
 
   n = 3;
   wynik = wiezaHanoi(n);
-  assert(
+  console.assert(
     JSON.stringify(wynik) ===
       JSON.stringify([
         ["A", "B"],

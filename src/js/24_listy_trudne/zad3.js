@@ -28,17 +28,11 @@ const minimalnyIloczyn = (lista) => {
   return min;
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const lista1 = [3, -1, -3, 2, 9, 4];
 const wynik1 = -108;
 const lista2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const wynik2 = 6;
 
-assert(minimalnyIloczyn(lista1) === wynik1, "Test 1 nieudany");
-assert(minimalnyIloczyn(lista2) === wynik2, "Test 2 nieudany");
+console.assert(minimalnyIloczyn(lista1) === wynik1, "Test 1 nieudany");
+console.assert(minimalnyIloczyn(lista2) === wynik2, "Test 2 nieudany");

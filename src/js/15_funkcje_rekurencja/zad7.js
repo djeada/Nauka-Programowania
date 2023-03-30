@@ -27,24 +27,24 @@ function wyszukiwanieLinioweRekurencyjnie(lista, klucz) {
   return wynik + 1;
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message);
-  }
-}
-
 function test() {
-  assert(wyszukiwanieLinioweRekurencyjnie([1, 2, 2], 2) === 1, "Test 1 failed");
-  assert(
+  console.assert(
+    wyszukiwanieLinioweRekurencyjnie([1, 2, 2], 2) === 1,
+    "Test 1 failed"
+  );
+  console.assert(
     wyszukiwanieLinioweRekurencyjnie([1, 2, 2], 3) === -1,
     "Test 2 failed"
   );
-  assert(wyszukiwanieLinioweRekurencyjnie([1, 2, 2], 1) === 0, "Test 3 failed");
-  assert(
+  console.assert(
+    wyszukiwanieLinioweRekurencyjnie([1, 2, 2], 1) === 0,
+    "Test 3 failed"
+  );
+  console.assert(
     wyszukiwanieLinioweRekurencyjnie([1, 2, 2], 4) === -1,
     "Test 4 failed"
   );
-  assert(
+  console.assert(
     wyszukiwanieLinioweRekurencyjnie([1, 2, 2], 0) === -1,
     "Test 5 failed"
   );

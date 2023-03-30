@@ -61,7 +61,7 @@ function test() {
   const expectedOutput = ["x", "xx", "xxx", "xxxx"];
   const output = wyjatkowePalindromy(input);
 
-  assert(
+  console.assert(
     JSON.stringify(output) === JSON.stringify(expectedOutput),
     'Test nie powiódł się dla "' +
       input +
@@ -73,9 +73,4 @@ function test() {
   console.log("Test przeszedł pomyślnie");
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
-}
 test();

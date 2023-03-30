@@ -28,12 +28,6 @@ const sortowanieBabelkowe = (lista) => {
   return lista;
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const lista1 = [6, 2, 1, 4, 27];
 const wynik1 = [1, 2, 4, 6, 27];
@@ -42,15 +36,15 @@ const wynik2 = [1, 2, 3, 4, 5];
 const lista3 = [-3, 0, 15, -7, 23];
 const wynik3 = [-7, -3, 0, 15, 23];
 
-assert(
+console.assert(
   JSON.stringify(sortowanieBabelkowe(lista1)) === JSON.stringify(wynik1),
   "Test 1 nieudany"
 );
-assert(
+console.assert(
   JSON.stringify(sortowanieBabelkowe(lista2)) === JSON.stringify(wynik2),
   "Test 2 nieudany"
 );
-assert(
+console.assert(
   JSON.stringify(sortowanieBabelkowe(lista3)) === JSON.stringify(wynik3),
   "Test 3 nieudany"
 );

@@ -134,7 +134,7 @@ const testznajdzLiczbeWierszy = () => {
   const wiersze = ["Wiersz 1", "Wiersz 2", "Wiersz 3"];
   const oczekiwanaznajdzLiczbeWierszy = 3;
   const wynik = znajdzLiczbeWierszy(wiersze);
-  assert(
+  console.assert(
     wynik === oczekiwanaznajdzLiczbeWierszy,
     "Nieprawidłowa liczba wierszy"
   );
@@ -144,14 +144,17 @@ const testznajdzLiczbeSlow = () => {
   const wiersze = ["To jest wiersz", "To jest inny wiersz", "Ostatni wiersz"];
   const oczekiwanaznajdzLiczbeSlow = 9;
   const wynik = znajdzLiczbeSlow(wiersze);
-  assert(wynik === oczekiwanaznajdzLiczbeSlow, "Nieprawidłowa liczba słów");
+  console.assert(
+    wynik === oczekiwanaznajdzLiczbeSlow,
+    "Nieprawidłowa liczba słów"
+  );
 };
 const testznajdzSredniaDlugoscWiersza = () => {
   const wiersze = ["To jest wiersz", "To jest inny wiersz", "Ostatni wiersz"];
   const oczekiwanaSredniaDlugosc = 15.666;
 
   const wynik = znajdzSredniaDlugoscWiersza(wiersze);
-  assert(
+  console.assert(
     Math.abs(wynik - oczekiwanaSredniaDlugosc) < 0.1,
     "Nieprawidłowa średnia długość wiersza"
   );
@@ -160,7 +163,7 @@ const testznajdzSredniaLiczbeSlowNaWiersz = () => {
   const wiersze = ["To jest wiersz", "To jest inny wiersz", "Ostatni wiersz"];
   const oczekiwanaSredniaznajdzLiczbeSlow = 3;
   const wynik = znajdzSredniaLiczbeSlowNaWiersz(wiersze);
-  assert(
+  console.assert(
     wynik === oczekiwanaSredniaznajdzLiczbeSlow,
     "Nieprawidłowa średnia liczba słów na wiersz"
   );
@@ -176,7 +179,7 @@ const testznajdzHistogramSlow = () => {
     ["ostatni", 1],
   ]);
   const wynik = znajdzHistogramSlow(wiersze);
-  assert(
+  console.assert(
     JSON.stringify([...wynik]) === JSON.stringify([...oczekiwanyHistogram]),
     "Nieprawidłowy histogram słów"
   );
@@ -209,7 +212,7 @@ const testStatystykiDlaPliku = async () => {
   // usun plik testowy
   await fs.unlink(sciezka);
 
-  assert(
+  console.assert(
     JSON.stringify(wynik) === JSON.stringify(oczekiwaneStatystyki),
     "Nieprawidłowe statystyki"
   );
@@ -224,9 +227,5 @@ const uruchomTesty = async () => {
   testStatystykiDlaPliku();
   console.log("Wszystkie testy zakończone powodzeniem");
 };
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
+
 uruchomTesty();

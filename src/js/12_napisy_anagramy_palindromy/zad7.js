@@ -47,7 +47,7 @@ function test() {
   const expectedOutput = 2;
   const output = minUsunieciaDoAnagramow(input1, input2);
 
-  assert(
+  console.assert(
     output === expectedOutput,
     'Test nie powiódł się dla "' +
       input1 +
@@ -61,9 +61,4 @@ function test() {
   console.log("Test przeszedł pomyślnie");
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
-}
 test();

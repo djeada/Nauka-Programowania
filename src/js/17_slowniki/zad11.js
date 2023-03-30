@@ -44,10 +44,10 @@ function testSortujSlownikPoKluczach() {
     ["c", 3],
     ["x", 5],
   ];
-  assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
+  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
   for (let i = 0; i < wynik.length; i++) {
-    assert(wynik[i][0] === poprawnyWynik[i][0], "Test nie powiódł się");
-    assert(wynik[i][1] === poprawnyWynik[i][1], "Test nie powiódł się");
+    console.assert(wynik[i][0] === poprawnyWynik[i][0], "Test nie powiódł się");
+    console.assert(wynik[i][1] === poprawnyWynik[i][1], "Test nie powiódł się");
   }
 }
 
@@ -65,17 +65,10 @@ function testSortujSlownikPoWartosciach() {
     ["b", 4],
     ["x", 5],
   ];
-  assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
+  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
   for (let i = 0; i < wynik.length; i++) {
-    assert(wynik[i][0] === poprawnyWynik[i][0], "Test nie powiódł się");
-    assert(wynik[i][1] === poprawnyWynik[i][1], "Test nie powiódł się");
-  }
-}
-
-// test
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Asercja nie powiodła się");
+    console.assert(wynik[i][0] === poprawnyWynik[i][0], "Test nie powiódł się");
+    console.assert(wynik[i][1] === poprawnyWynik[i][1], "Test nie powiódł się");
   }
 }
 

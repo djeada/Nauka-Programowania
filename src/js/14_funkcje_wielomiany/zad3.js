@@ -25,12 +25,6 @@ function dodawanieWielomianow(wielomian1, wielomian2) {
   return wynik;
 }
 
-function assert(warunek, komunikat) {
-  if (!warunek) {
-    throw komunikat || "Wystąpił błąd";
-  }
-}
-
 // Testy
 function testDodawanieWielomianow() {
   let wielomian1;
@@ -40,7 +34,7 @@ function testDodawanieWielomianow() {
   wielomian1 = [3, 5, 2];
   wielomian2 = [2, -8, 1];
   wynik = dodawanieWielomianow(wielomian1, wielomian2);
-  assert(
+  console.assert(
     JSON.stringify(wynik) === JSON.stringify([5, -3, 3]),
     "Test 1 nieudany"
   );
@@ -48,7 +42,7 @@ function testDodawanieWielomianow() {
   wielomian1 = [1, 0, 3];
   wielomian2 = [2, 2, 2];
   wynik = dodawanieWielomianow(wielomian1, wielomian2);
-  assert(
+  console.assert(
     JSON.stringify(wynik) === JSON.stringify([3, 2, 5]),
     "Test 2 nieudany"
   );
@@ -56,7 +50,7 @@ function testDodawanieWielomianow() {
   wielomian1 = [0, 0, 0];
   wielomian2 = [1, 1, 1];
   wynik = dodawanieWielomianow(wielomian1, wielomian2);
-  assert(
+  console.assert(
     JSON.stringify(wynik) === JSON.stringify([1, 1, 1]),
     "Test 3 nieudany"
   );

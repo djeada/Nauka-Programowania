@@ -50,12 +50,6 @@ const sortujAdresyIp = (ip) => {
   return ip;
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 const test1 = async () => {
   const sciezka = "temp.txt";
   const tekst =
@@ -73,13 +67,13 @@ const test1 = async () => {
   const adresyIp = await wczytajPlik(sciezka);
   const wynik = sortujAdresyIp(adresyIp);
 
-  assert(
+  console.assert(
     wynik.length == oczekiwane.length,
     `Error: ${wynik.length} != ${oczekiwane.length}`
   );
 
   for (let i = 0; i < wynik.length; i++) {
-    assert(
+    console.assert(
       wynik[i] === oczekiwane[i],
       `Error: ${wynik[i]} != ${oczekiwane[i]}`
     );

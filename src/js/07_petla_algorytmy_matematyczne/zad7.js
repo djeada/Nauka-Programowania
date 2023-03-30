@@ -24,18 +24,18 @@ function pierwiastekLiczby(liczba) {
 
 // Testy
 function testPierwiastekLiczby() {
-  assert(pierwiastekLiczby(4) === 2, "Niepoprawny pierwiastek z liczby 4");
-  assert(pierwiastekLiczby(9) === 3, "Niepoprawny pierwiastek z liczby 9");
-  assert(
+  console.assert(
+    pierwiastekLiczby(4) === 2,
+    "Niepoprawny pierwiastek z liczby 4"
+  );
+  console.assert(
+    pierwiastekLiczby(9) === 3,
+    "Niepoprawny pierwiastek z liczby 9"
+  );
+  console.assert(
     Math.abs(pierwiastekLiczby(2) - 1.41421356) < 0.0001,
     "Niepoprawny pierwiastek z liczby 2"
   );
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
 }
 
 testPierwiastekLiczby();

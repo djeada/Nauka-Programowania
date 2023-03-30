@@ -25,17 +25,12 @@ function znajdzBrakujacyElement(lista) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testZnajdzBrakujacyElement() {
-  assert(znajdzBrakujacyElement([5, 2, 1, 3]) === 4);
-  assert(znajdzBrakujacyElement([1, 3, 4, 5, 6]) === 2);
-  assert(znajdzBrakujacyElement([1, 2, 4]) === 3);
-  assert(znajdzBrakujacyElement([3, 5, 6, 7, 8]) === 4);
+  console.assert(znajdzBrakujacyElement([5, 2, 1, 3]) === 4);
+  console.assert(znajdzBrakujacyElement([1, 3, 4, 5, 6]) === 2);
+  console.assert(znajdzBrakujacyElement([1, 2, 4]) === 3);
+  console.assert(znajdzBrakujacyElement([3, 5, 6, 7, 8]) === 4);
 }
 
 testZnajdzBrakujacyElement();

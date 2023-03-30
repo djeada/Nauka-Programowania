@@ -22,12 +22,6 @@ const dostawWierszNaPoczatek = async (sciezka, wiersz) => {
   await fs.writeFile(sciezka, nowyTekst);
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 const test1 = async () => {
   const sciezka = "temp.txt";
   const tekst = "przykladowy tekst";
@@ -38,13 +32,13 @@ const test1 = async () => {
   const oczekiwane = ["Hej", "przykladowy tekst"];
   const wynik = await wczytajPlik(sciezka);
 
-  assert(
+  console.assert(
     wynik.length === oczekiwane.length,
     `Błąd asercji: ${wynik.length} != ${oczekiwane.length}`
   );
 
   for (let i = 0; i < wynik.length; i++) {
-    assert(
+    console.assert(
       wynik[i] === oczekiwane[i],
       `Błąd asercji: ${wynik[i]} != ${oczekiwane[i]}`
     );

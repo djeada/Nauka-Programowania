@@ -45,19 +45,12 @@ function testAnagramyWTekscie() {
     ["burza", "arbuz"],
     ["galeria", "alergia"],
   ];
-  assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
+  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
   for (const anagram of wynik) {
     const poprawnyAnagram = poprawnyWynik.find(
       (pa) => pa.length === anagram.length && pa.includes(anagram[0])
     );
-    assert(poprawnyAnagram, "Test nie powiódł się");
-  }
-}
-
-// test
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Asercja nie powiodła się");
+    console.assert(poprawnyAnagram, "Test nie powiódł się");
   }
 }
 

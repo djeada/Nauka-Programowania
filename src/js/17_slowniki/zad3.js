@@ -47,22 +47,15 @@ function testBazaDanych() {
   dodajKsiazke("Adam", "Pan Tadeusz");
   dodajKsiazke("Adam", "Lalka");
   dodajKsiazke("Ewa", "Zbrodnia i kara");
-  assert(bazaDanych["Adam"].length === 2, "Test 1 nie powiódł się");
-  assert(bazaDanych["Ewa"].length === 1, "Test 2 nie powiódł się");
+  console.assert(bazaDanych["Adam"].length === 2, "Test 1 nie powiódł się");
+  console.assert(bazaDanych["Ewa"].length === 1, "Test 2 nie powiódł się");
 
   zwrocKsiazke("Adam", "Pan Tadeusz");
-  assert(bazaDanych["Adam"].length === 1, "Test 3 nie powiódł się");
+  console.assert(bazaDanych["Adam"].length === 1, "Test 3 nie powiódł się");
 
   wypiszKsiazki("Adam");
   wypiszKsiazki("Ewa");
   wypiszKsiazki("Ola");
-}
-
-// test
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Asercja nie powiodła się");
-  }
 }
 
 testBazaDanych();

@@ -29,18 +29,23 @@ function liczbaMijajacychSieSamochodow(listaSamochodow) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testLiczbaMijajacychSieSamochodow() {
-  assert(liczbaMijajacychSieSamochodow(["A", "B", "A", "B", "B"]) === 5);
-  assert(liczbaMijajacychSieSamochodow(["A", "A", "A", "B", "B"]) === 6);
-  assert(liczbaMijajacychSieSamochodow(["A", "B", "A", "A", "B"]) === 4);
-  assert(liczbaMijajacychSieSamochodow(["B", "B", "A", "A", "A"]) === 0);
-  assert(liczbaMijajacychSieSamochodow(["A", "A", "A", "A", "A"]) === 0);
+  console.assert(
+    liczbaMijajacychSieSamochodow(["A", "B", "A", "B", "B"]) === 5
+  );
+  console.assert(
+    liczbaMijajacychSieSamochodow(["A", "A", "A", "B", "B"]) === 6
+  );
+  console.assert(
+    liczbaMijajacychSieSamochodow(["A", "B", "A", "A", "B"]) === 4
+  );
+  console.assert(
+    liczbaMijajacychSieSamochodow(["B", "B", "A", "A", "A"]) === 0
+  );
+  console.assert(
+    liczbaMijajacychSieSamochodow(["A", "A", "A", "A", "A"]) === 0
+  );
 }
 
 testLiczbaMijajacychSieSamochodow();

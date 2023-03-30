@@ -23,17 +23,12 @@ function znajdzElementBezPary(lista) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testZnajdzElementBezPary() {
-  assert(znajdzElementBezPary([1, 3, 1, 7, 3, 1, 1]) === 7);
-  assert(znajdzElementBezPary([4, 4, 2, 2, 1]) === 1);
-  assert(znajdzElementBezPary([9, 1, 1, 8, 9, 8]) === 0);
-  assert(znajdzElementBezPary([3, 3, 6, 6, 5, 7, 7]) === 5);
+  console.assert(znajdzElementBezPary([1, 3, 1, 7, 3, 1, 1]) === 7);
+  console.assert(znajdzElementBezPary([4, 4, 2, 2, 1]) === 1);
+  console.assert(znajdzElementBezPary([9, 1, 1, 8, 9, 8]) === 0);
+  console.assert(znajdzElementBezPary([3, 3, 6, 6, 5, 7, 7]) === 5);
 }
 
 testZnajdzElementBezPary();

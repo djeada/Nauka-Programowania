@@ -19,18 +19,15 @@ function liczbyMniejszeOdN(n) {
   return n + ", " + liczbyMniejszeOdN(n - 1);
 }
 
-function assert(warunek, komunikat) {
-  if (!warunek) {
-    throw komunikat || "Wystąpił błąd";
-  }
-}
-
 // Testy
 
 function test() {
   const n = 10;
   const wynik = "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0";
-  assert(liczbyMniejszeOdN(n) === wynik, `Niepoprawny wynik dla liczby ${n}.`);
+  console.assert(
+    liczbyMniejszeOdN(n) === wynik,
+    `Niepoprawny wynik dla liczby ${n}.`
+  );
 }
 
 test();

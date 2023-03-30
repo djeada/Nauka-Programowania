@@ -27,20 +27,15 @@ function usunKlucz(lista, klucz) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testUsunKlucz() {
-  assert(
+  console.assert(
     usunKlucz([6, 2, 1, 4, 27], 4).toString() === [6, 2, 1, 27].toString()
   );
-  assert(
+  console.assert(
     usunKlucz([6, 2, 1, 4, 27], 6).toString() === [2, 1, 4, 27].toString()
   );
-  assert(
+  console.assert(
     usunKlucz([6, 2, 1, 4, 27], 27).toString() === [6, 2, 1, 4].toString()
   );
 }

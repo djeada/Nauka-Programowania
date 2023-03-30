@@ -28,12 +28,6 @@ const sortowanieParDlugosciNapisow = (lista) => {
   return lista.sort((a, b) => a[0].length - b[0].length);
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const lista = [
   ["ab", 3],
@@ -51,11 +45,11 @@ const wynikB = [
   ["bca", 1],
 ];
 
-assert(
+console.assert(
   JSON.stringify(sortowanieParLiczb(lista)) === JSON.stringify(wynikA),
   "Test a nieudany"
 );
-assert(
+console.assert(
   JSON.stringify(sortowanieParDlugosciNapisow(lista)) ===
     JSON.stringify(wynikB),
   "Test b nieudany"

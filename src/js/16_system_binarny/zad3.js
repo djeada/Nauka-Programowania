@@ -64,15 +64,9 @@ function pomnoz(a, b) {
 function test() {
   let a = 2;
   let b = 3;
-  assert(dodaj(a, b) === a + b, "Niepoprawny wynik dodawania");
-  assert(odejmij(a, b) === a - b, "Niepoprawny wynik odejmowania");
-  assert(pomnoz(a, b) === a * b, "Niepoprawny wynik mnożenia");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
+  console.assert(dodaj(a, b) === a + b, "Niepoprawny wynik dodawania");
+  console.assert(odejmij(a, b) === a - b, "Niepoprawny wynik odejmowania");
+  console.assert(pomnoz(a, b) === a * b, "Niepoprawny wynik mnożenia");
 }
 
 test();

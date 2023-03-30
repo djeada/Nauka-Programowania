@@ -11,12 +11,6 @@ Dane wyjściowe: Lista napisów
 const fs = require("fs").promises;
 const path = require("path");
 
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
-
 const znajdzSciezki = async (nazwaPliku) => {
   const sciezki = [];
   const sciezka = process.env.HOME;
@@ -47,12 +41,12 @@ const testZnajdzSciezki = async () => {
   const oczekiwane = [path.join(process.env.HOME, sciezkaFolderu, nazwaPliku)];
   const wynik = await znajdzSciezki(nazwaPliku);
 
-  assert(
+  console.assert(
     wynik.length === oczekiwane.length,
     `Błąd testu znajdzSciezki: ${wynik.length} !== ${oczekiwane.length}`
   );
 
-  assert(
+  console.assert(
     wynik.includes(oczekiwane[0]),
     `Błąd testu znajdzSciezki: ${wynik} nie zawiera ${oczekiwane[0]}`
   );

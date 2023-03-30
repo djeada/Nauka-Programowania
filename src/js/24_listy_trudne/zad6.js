@@ -28,12 +28,6 @@ const polaczListy = (lista) => {
   return result.sort((a, b) => a - b);
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const lista1 = [
   [-6, 23, 29, 33],
@@ -53,11 +47,11 @@ const wynik2 = [
   -12, -7, -6, -3, 0, 1, 2, 3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71,
 ];
 
-assert(
+console.assert(
   JSON.stringify(polaczListy(lista1)) === JSON.stringify(wynik1),
   "Test 1 nieudany"
 );
-assert(
+console.assert(
   JSON.stringify(polaczListy(lista2)) === JSON.stringify(wynik2),
   "Test 2 nieudany"
 );

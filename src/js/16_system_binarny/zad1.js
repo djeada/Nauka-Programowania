@@ -43,19 +43,13 @@ function test() {
   let dziesietna = 3;
   let oczekiwanaBinarna = "11";
   let binarna = dziesietnaNaBinarna(dziesietna);
-  assert(binarna === oczekiwanaBinarna, "Błąd dla ${dziesietna}");
+  console.assert(binarna === oczekiwanaBinarna, "Błąd dla ${dziesietna}");
 
   // Test konwersji binarnej na dziesiętną
   let binarna2 = "101";
   let oczekiwanaDziesietna = 5;
   let dziesietna2 = binarnaNaDziesietna(binarna2);
-  assert(dziesietna2 === oczekiwanaDziesietna, "Błąd dla ${binarna2}");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
+  console.assert(dziesietna2 === oczekiwanaDziesietna, "Błąd dla ${binarna2}");
 }
 
 test();

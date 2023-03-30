@@ -30,17 +30,12 @@ function znajdzElementDominujacy(lista) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testZnajdzElementDominujacy() {
-  assert(znajdzElementDominujacy([4, 7, 4, 4, 2]) === 4);
-  assert(znajdzElementDominujacy([2, 2, 1, 1, 3]) === -1);
-  assert(znajdzElementDominujacy([5, 5, 5, 3, 3, 5, 5]) === 5);
-  assert(znajdzElementDominujacy([6, 6, 6, 2, 6, 6]) === 6);
+  console.assert(znajdzElementDominujacy([4, 7, 4, 4, 2]) === 4);
+  console.assert(znajdzElementDominujacy([2, 2, 1, 1, 3]) === -1);
+  console.assert(znajdzElementDominujacy([5, 5, 5, 3, 3, 5, 5]) === 5);
+  console.assert(znajdzElementDominujacy([6, 6, 6, 2, 6, 6]) === 6);
 }
 
 testZnajdzElementDominujacy();

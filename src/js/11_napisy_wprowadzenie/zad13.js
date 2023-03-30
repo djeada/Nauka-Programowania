@@ -41,7 +41,7 @@ function test() {
   let expectedOutput = ["o", "ń"];
   let output = znakiNaPozycjachPierwszych(input);
 
-  assert(
+  console.assert(
     JSON.stringify(output) === JSON.stringify(expectedOutput),
     "Test nie powiódł się dla " +
       input +
@@ -51,12 +51,6 @@ function test() {
       expectedOutput
   );
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

@@ -48,7 +48,7 @@ function testNajwiekszyZysk() {
     ["Bob Marley", 110],
   ];
   const wynik1 = najwiekszyZysk(lista1);
-  assert(wynik1 === "Barnaba Barabash", "Test 1 nie powiódł się");
+  console.assert(wynik1 === "Barnaba Barabash", "Test 1 nie powiódł się");
 
   const lista2 = [
     ["Anna Nowak", 200],
@@ -57,14 +57,7 @@ function testNajwiekszyZysk() {
     ["Jan Kowalski", 100],
   ];
   const wynik2 = najwiekszyZysk(lista2);
-  assert(wynik2 === "Anna Nowak", "Test 2 nie powiódł się");
-}
-
-// test
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Asercja nie powiodła się");
-  }
+  console.assert(wynik2 === "Anna Nowak", "Test 2 nie powiódł się");
 }
 
 testNajwiekszyZysk();

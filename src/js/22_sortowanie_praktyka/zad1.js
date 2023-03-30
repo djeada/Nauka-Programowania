@@ -21,12 +21,6 @@ const sortowanieZnakow = (napis) => {
     .join("");
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const napis1 = "Ala ma kota";
 const wynik1 = " Aaaaklmot";
@@ -35,6 +29,6 @@ const wynik2 = "Jaaaciprstv";
 const napis3 = "zażółć";
 const wynik3 = "ażłózż";
 
-assert(sortowanieZnakow(napis1) === wynik1, "Test 1 nieudany");
-assert(sortowanieZnakow(napis2) === wynik2, "Test 2 nieudany");
-assert(sortowanieZnakow(napis3) === wynik3, "Test 3 nieudany");
+console.assert(sortowanieZnakow(napis1) === wynik1, "Test 1 nieudany");
+console.assert(sortowanieZnakow(napis2) === wynik2, "Test 2 nieudany");
+console.assert(sortowanieZnakow(napis3) === wynik3, "Test 3 nieudany");

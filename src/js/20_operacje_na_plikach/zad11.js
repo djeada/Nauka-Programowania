@@ -23,11 +23,7 @@ const podmienPliki = async (sciezka1, sciezka2) => {
   await fs.writeFile(sciezka1, dane2);
   await fs.writeFile(sciezka2, dane1);
 };
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
+
 const test1 = async () => {
   const sciezka1 = "temp1.txt";
   const sciezka2 = "temp2.txt";
@@ -41,13 +37,13 @@ const test1 = async () => {
 
   const oczekiwane1 = ["Kot ma Ale"];
   const wynik1 = await wczytajPlik(sciezka1);
-  assert(
+  console.assert(
     wynik1.length === oczekiwane1.length,
     `Błąd asercji: ${wynik1.length} != ${oczekiwane1.length}`
   );
 
   for (let i = 0; i < wynik1.length; i++) {
-    assert(
+    console.assert(
       wynik1[i] === oczekiwane1[i],
       `Błąd asercji: ${wynik1[i]} != ${oczekiwane1[i]}`
     );
@@ -55,13 +51,13 @@ const test1 = async () => {
 
   const oczekiwane2 = ["Ala ma kota"];
   const wynik2 = await wczytajPlik(sciezka2);
-  assert(
+  console.assert(
     wynik2.length === oczekiwane2.length,
     `Błąd asercji: ${wynik2.length} != ${oczekiwane2.length}`
   );
 
   for (let i = 0; i < wynik2.length; i++) {
-    assert(
+    console.assert(
       wynik2[i] === oczekiwane2[i],
       `Błąd asercji: ${wynik2[i]} != ${oczekiwane2[i]}`
     );

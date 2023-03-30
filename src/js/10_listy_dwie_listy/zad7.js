@@ -31,23 +31,18 @@ function znajdzRoznice(lista1, lista2) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testZnajdzRoznice() {
-  assert(
+  console.assert(
     znajdzRoznice([9, 2, 5, 4], [4, 2, 1]).toString() === [9, 5, 1].toString()
   );
-  assert(
+  console.assert(
     znajdzRoznice([9, 2, 5, 4], [4, 2, 1, 9]).toString() === [5, 1].toString()
   );
-  assert(
+  console.assert(
     znajdzRoznice([9, 2, 5, 4], [4, 2, 1, 9, 5]).toString() === [1].toString()
   );
-  assert(
+  console.assert(
     znajdzRoznice([9, 2, 5, 4], [4, 2, 1, 9, 5, 2]).toString() ===
       [1].toString()
   );

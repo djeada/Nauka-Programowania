@@ -22,20 +22,15 @@ function podniesDoPotegi(a, b) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testPotega() {
-  assert(podniesDoPotegi(2, 3) == 8);
-  assert(podniesDoPotegi(3, 2) == 9);
-  assert(podniesDoPotegi(4, 4) == 256);
-  assert(podniesDoPotegi(5, 3) == 125);
-  assert(podniesDoPotegi(6, 0) == 1);
-  assert(podniesDoPotegi(7, 1) == 7);
-  assert(podniesDoPotegi(0, 2) == 0);
+  console.assert(podniesDoPotegi(2, 3) == 8);
+  console.assert(podniesDoPotegi(3, 2) == 9);
+  console.assert(podniesDoPotegi(4, 4) == 256);
+  console.assert(podniesDoPotegi(5, 3) == 125);
+  console.assert(podniesDoPotegi(6, 0) == 1);
+  console.assert(podniesDoPotegi(7, 1) == 7);
+  console.assert(podniesDoPotegi(0, 2) == 0);
 }
 
 // Funkcja uruchamiająca testy

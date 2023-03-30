@@ -23,15 +23,10 @@ function mnozWektory(lista1, lista2) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testMnozWektory() {
-  assert(mnozWektory([1, 2, 3], [3, 1, 2]) === 5);
-  assert(mnozWektory([1, 2, 3], [3, 1, 2, 5]) === 5);
+  console.assert(mnozWektory([1, 2, 3], [3, 1, 2]) === 5);
+  console.assert(mnozWektory([1, 2, 3], [3, 1, 2, 5]) === 5);
 }
 
 function main() {

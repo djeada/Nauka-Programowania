@@ -32,18 +32,12 @@ function test() {
   };
   wypiszSłowa(input);
 
-  assert(
+  console.assert(
     output.length === expectedOutput.length &&
       output.every((element, index) => element === expectedOutput[index]),
     "Test nie powiódł się"
   );
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

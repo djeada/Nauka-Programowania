@@ -37,14 +37,8 @@ function test() {
   let expectedOutput = 1;
   let output = najdluzszyCiagZer(input);
 
-  assert(output === expectedOutput, "Test nie powiódł się");
+  console.assert(output === expectedOutput, "Test nie powiódł się");
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Assertion failed";
-  }
 }
 
 test();

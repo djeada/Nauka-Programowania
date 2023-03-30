@@ -32,17 +32,17 @@ function test() {
     [0, 1, 2],
   ];
   const wynik = utworzMacierz(3, 2);
-  assert(
+  console.assert(
     wynik.length === oczekiwana.length,
     `Długości macierzy nie są równe. Oczekiwano: ${oczekiwana.length}, otrzymano: ${wynik.length}.`
   );
   for (let i = 0; i < wynik.length; i++) {
-    assert(
+    console.assert(
       wynik[i].length === oczekiwana[i].length,
       `Długości wierszy nie są równe. Oczekiwano: ${oczekiwana[i].length}, otrzymano: ${wynik[i].length}.`
     );
     for (let j = 0; j < wynik[i].length; j++) {
-      assert(
+      console.assert(
         wynik[i][j] === oczekiwana[i][j],
         `Element macierzy o indeksie (${i}, ${j}) nie jest taki sam jak w oczekiwanej macierzy. Oczekiwano: ${oczekiwana[i][j]}, otrzymano: ${wynik[i][j]}.`
       );
@@ -50,9 +50,4 @@ function test() {
   }
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
-}
 test();

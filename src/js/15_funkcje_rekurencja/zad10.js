@@ -26,12 +26,6 @@ function liczbaSposobowWygranej(n) {
   );
 }
 
-function assert(warunek, komunikat) {
-  if (!warunek) {
-    throw komunikat || "Wystąpił błąd";
-  }
-}
-
 // Testy
 function testLiczbaSposobowWygranej() {
   let n;
@@ -39,19 +33,19 @@ function testLiczbaSposobowWygranej() {
 
   n = 6;
   wynik = liczbaSposobowWygranej(n);
-  assert(wynik === 2, "Test 1 nieudany");
+  console.assert(wynik === 2, "Test 1 nieudany");
 
   n = 10;
   wynik = liczbaSposobowWygranej(n);
-  assert(wynik === 2, "Test 2 nieudany");
+  console.assert(wynik === 2, "Test 2 nieudany");
 
   n = 20;
   wynik = liczbaSposobowWygranej(n);
-  assert(wynik === 4, "Test 3 nieudany");
+  console.assert(wynik === 4, "Test 3 nieudany");
 
   n = 25;
   wynik = liczbaSposobowWygranej(n);
-  assert(wynik === 5, "Test 4 nieudany");
+  console.assert(wynik === 5, "Test 4 nieudany");
 }
 
 testLiczbaSposobowWygranej();

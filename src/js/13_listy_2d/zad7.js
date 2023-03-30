@@ -62,19 +62,14 @@ function test() {
     [4, 5, 0],
     [0, 0, 0],
   ];
-  assert(
+  console.assert(
     JSON.stringify(zerujMacierz(macierz1)) === JSON.stringify(wynik1),
     `Niepoprawny wynik dla macierzy ${macierz1}.`
   );
-  assert(
+  console.assert(
     JSON.stringify(zerujMacierz(macierz2)) === JSON.stringify(wynik2),
     `Niepoprawny wynik dla macierzy ${macierz2}.`
   );
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
-}
 test();

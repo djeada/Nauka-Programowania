@@ -31,26 +31,21 @@ function znajdzElementyWspolne(lista1, lista2) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testZnajdzElementyWspolne() {
-  assert(
+  console.assert(
     znajdzElementyWspolne([9, 2, 5, 4], [4, 2, 1]).toString() ===
       [2, 4].toString()
   );
-  assert(
+  console.assert(
     znajdzElementyWspolne([9, 2, 5, 4], [4, 2, 1, 9]).toString() ===
       [2, 4, 9].toString()
   );
-  assert(
+  console.assert(
     znajdzElementyWspolne([9, 2, 5, 4], [4, 2, 1, 9, 5]).toString() ===
       [2, 4, 5, 9].toString()
   );
-  assert(
+  console.assert(
     znajdzElementyWspolne([9, 2, 5, 4], [4, 2, 1, 9, 5, 2]).toString() ===
       [2, 4, 5, 9].toString()
   );

@@ -24,17 +24,11 @@ function test() {
   const input = 111;
   const expectedOutput = 128;
   const output = najblizszaPotegaDwojki(input);
-  assert(
+  console.assert(
     output === expectedOutput,
     "Dla ${input} otrzymano ${output}, oczekiwano ${expectedOutput}"
   );
   console.log("Test passed!");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
 }
 
 test();

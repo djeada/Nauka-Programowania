@@ -29,16 +29,11 @@ function liczbaMniejszaOdNajwiekszej(lista) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testLiczbaMniejszaOdNajwiekszej() {
-  assert(liczbaMniejszaOdNajwiekszej([9, 2, 3, 2, 1, 7]) === 8.0);
-  assert(liczbaMniejszaOdNajwiekszej([1, 2, 3, 4, 5, 6]) === 5.5);
-  assert(liczbaMniejszaOdNajwiekszej([6, 5, 4, 3, 2, 1]) === 3.5);
+  console.assert(liczbaMniejszaOdNajwiekszej([9, 2, 3, 2, 1, 7]) === 8.0);
+  console.assert(liczbaMniejszaOdNajwiekszej([1, 2, 3, 4, 5, 6]) === 5.5);
+  console.assert(liczbaMniejszaOdNajwiekszej([6, 5, 4, 3, 2, 1]) === 3.5);
 }
 
 function main() {

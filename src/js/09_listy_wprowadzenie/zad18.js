@@ -26,16 +26,11 @@ function znajdzIndeksNajmniejszegoElementu(lista) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testZnajdzIndeksNajmniejszegoElementu() {
-  assert(znajdzIndeksNajmniejszegoElementu([7, 8, -1, 4, 5]) === 2);
-  assert(znajdzIndeksNajmniejszegoElementu([4, 5, 7, 8, -1]) === 4);
-  assert(znajdzIndeksNajmniejszegoElementu([-1, 4, 5, 7, 8]) === 0);
+  console.assert(znajdzIndeksNajmniejszegoElementu([7, 8, -1, 4, 5]) === 2);
+  console.assert(znajdzIndeksNajmniejszegoElementu([4, 5, 7, 8, -1]) === 4);
+  console.assert(znajdzIndeksNajmniejszegoElementu([-1, 4, 5, 7, 8]) === 0);
 }
 
 testZnajdzIndeksNajmniejszegoElementu();

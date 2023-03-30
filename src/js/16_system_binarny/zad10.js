@@ -22,18 +22,12 @@ function zamien(a, b) {
   return wynik;
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message);
-  }
-}
-
 function test() {
-  assert(zamien(34, 73) === 5, "Test 1 nie powiódł się");
-  assert(zamien(1, 1) === 0, "Test 2 nie powiódł się");
-  assert(zamien(0, 0) === 0, "Test 3 nie powiódł się");
-  assert(zamien(0, 1) === 1, "Test 4 nie powiódł się");
-  assert(zamien(1, 0) === 1, "Test 5 nie powiódł się");
+  console.assert(zamien(34, 73) === 5, "Test 1 nie powiódł się");
+  console.assert(zamien(1, 1) === 0, "Test 2 nie powiódł się");
+  console.assert(zamien(0, 0) === 0, "Test 3 nie powiódł się");
+  console.assert(zamien(0, 1) === 1, "Test 4 nie powiódł się");
+  console.assert(zamien(1, 0) === 1, "Test 5 nie powiódł się");
 }
 
 test();

@@ -26,20 +26,15 @@ function zwracajNWW(liczba_a, liczba_b) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testNWW() {
-  assert(zwracajNWW(2, 3) == 6);
-  assert(zwracajNWW(3, 2) == 6);
-  assert(zwracajNWW(4, 4) == 4);
-  assert(zwracajNWW(5, 3) == 15);
-  assert(zwracajNWW(6, 0) == 0);
-  assert(zwracajNWW(7, 1) == 7);
-  assert(zwracajNWW(0, 2) == 0);
+  console.assert(zwracajNWW(2, 3) == 6);
+  console.assert(zwracajNWW(3, 2) == 6);
+  console.assert(zwracajNWW(4, 4) == 4);
+  console.assert(zwracajNWW(5, 3) == 15);
+  console.assert(zwracajNWW(6, 0) == 0);
+  console.assert(zwracajNWW(7, 1) == 7);
+  console.assert(zwracajNWW(0, 2) == 0);
 }
 
 // Funkcja uruchamiająca testy

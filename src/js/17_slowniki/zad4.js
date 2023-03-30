@@ -31,9 +31,9 @@ function testUsunZeSlownika() {
     cba: 3,
   };
   const wynik1 = usunZeSlownika(slownik1, 5);
-  assert(wynik1["abc"] === 1, "Test 1 nie powiódł się");
-  assert(wynik1["cba"] === 3, "Test 2 nie powiódł się");
-  assert(Object.keys(wynik1).length === 2, "Test 3 nie powiódł się");
+  console.assert(wynik1["abc"] === 1, "Test 1 nie powiódł się");
+  console.assert(wynik1["cba"] === 3, "Test 2 nie powiódł się");
+  console.assert(Object.keys(wynik1).length === 2, "Test 3 nie powiódł się");
 
   const slownik2 = {
     a: 10,
@@ -41,14 +41,7 @@ function testUsunZeSlownika() {
     c: 30,
   };
   const wynik2 = usunZeSlownika(slownik2, 15);
-  assert(Object.keys(wynik2).length === 3, "Test 4 nie powiódł się");
-}
-
-// test
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Asercja nie powiodła się");
-  }
+  console.assert(Object.keys(wynik2).length === 3, "Test 4 nie powiódł się");
 }
 
 testUsunZeSlownika();

@@ -28,22 +28,17 @@ function znajdzPareSumujacaDo(lista, x) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testZnajdzPareSumujacaDo() {
-  assert(
+  console.assert(
     JSON.stringify(znajdzPareSumujacaDo([1, 3, 4, 5, 2], 5)) ===
       JSON.stringify([0, 2])
   );
-  assert(
+  console.assert(
     JSON.stringify(znajdzPareSumujacaDo([2, 5, 9, 4, 7], 12)) ===
       JSON.stringify([1, 4])
   );
-  assert(
+  console.assert(
     JSON.stringify(znajdzPareSumujacaDo([2, 5, 9, 4, 7], 20)) ===
       JSON.stringify([-1, -1])
   );

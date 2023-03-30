@@ -21,11 +21,7 @@ const przeniesPliki = async (zrodlo, cel, rozszerzenie) => {
     await fs.unlink(sciezkaPliku);
   }
 };
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
+
 const test1 = async () => {
   const folder1 = "temp_dir1";
   const folder2 = "temp_dir2";
@@ -51,7 +47,10 @@ const test1 = async () => {
 
   for (const nowaSciezkaPliku of noweSciezki) {
     const stat = await fs.lstat(nowaSciezkaPliku);
-    assert(stat.isFile(), `Błąd asercji: ${nowaSciezkaPliku} nie istnieje`);
+    console.assert(
+      stat.isFile(),
+      `Błąd asercji: ${nowaSciezkaPliku} nie istnieje`
+    );
   }
 
   for (const sciezkaPliku of sciezki) {

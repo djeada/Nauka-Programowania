@@ -26,19 +26,16 @@ function usunDuplikaty(lista) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testUsunDuplikaty() {
-  assert(usunDuplikaty([3, 2, 1, 3, 2, 2]).toString() === [3, 2, 1].toString());
-  assert(
+  console.assert(
+    usunDuplikaty([3, 2, 1, 3, 2, 2]).toString() === [3, 2, 1].toString()
+  );
+  console.assert(
     usunDuplikaty([1, 2, 3, 4, 5, 6]).toString() ===
       [1, 2, 3, 4, 5, 6].toString()
   );
-  assert(
+  console.assert(
     usunDuplikaty([6, 5, 4, 3, 2, 1]).toString() ===
       [6, 5, 4, 3, 2, 1].toString()
   );

@@ -58,15 +58,10 @@ function test() {
     [3, 9, 19, 14],
   ];
   const wynik = 75;
-  assert(
+  console.assert(
     najwiekszaSumaKlepsydry(macierz) === wynik,
     `Niepoprawny wynik dla macierzy ${macierz}.`
   );
 }
 
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
-}
 test();

@@ -29,12 +29,6 @@ function miejscaZeroweRownaniaKwadratowego(wspolczynniki) {
   }
 }
 
-function assert(warunek, komunikat) {
-  if (!warunek) {
-    throw komunikat || "Wystąpił błąd";
-  }
-}
-
 // Testy
 function testMiejscaZeroweRownaniaKwadratowego() {
   let wspolczynniki;
@@ -42,19 +36,31 @@ function testMiejscaZeroweRownaniaKwadratowego() {
 
   wspolczynniki = [1, 2, 1];
   wynik = miejscaZeroweRownaniaKwadratowego(wspolczynniki);
-  assert(JSON.stringify(wynik) === JSON.stringify([-1]), "Test 1 nieudany");
+  console.assert(
+    JSON.stringify(wynik) === JSON.stringify([-1]),
+    "Test 1 nieudany"
+  );
 
   wspolczynniki = [1, -3, 2];
   wynik = miejscaZeroweRownaniaKwadratowego(wspolczynniki);
-  assert(JSON.stringify(wynik) === JSON.stringify([1, 2]), "Test 2 nieudany");
+  console.assert(
+    JSON.stringify(wynik) === JSON.stringify([1, 2]),
+    "Test 2 nieudany"
+  );
 
   wspolczynniki = [1, 0, -1];
   wynik = miejscaZeroweRownaniaKwadratowego(wspolczynniki);
-  assert(JSON.stringify(wynik) === JSON.stringify([-1, 1]), "Test 3 nieudany");
+  console.assert(
+    JSON.stringify(wynik) === JSON.stringify([-1, 1]),
+    "Test 3 nieudany"
+  );
 
   wspolczynniki = [1, 0, 1];
   wynik = miejscaZeroweRownaniaKwadratowego(wspolczynniki);
-  assert(JSON.stringify(wynik) === JSON.stringify([]), "Test 4 nieudany");
+  console.assert(
+    JSON.stringify(wynik) === JSON.stringify([]),
+    "Test 4 nieudany"
+  );
 }
 
 testMiejscaZeroweRownaniaKwadratowego();

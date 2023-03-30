@@ -22,22 +22,17 @@ function pierwszeWystapienieKlucza(lista, klucz) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testPierwszeWystapienieKlucza_pozytywne() {
-  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], -1) === 2);
-  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 9) === 1);
-  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 2) === 0);
+  console.assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], -1) === 2);
+  console.assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 9) === 1);
+  console.assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 2) === 0);
 }
 
 function testPierwszeWystapienieKlucza_negatywne() {
-  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 0) === -1);
-  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 10) === -1);
-  assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 100) === -1);
+  console.assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 0) === -1);
+  console.assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 10) === -1);
+  console.assert(pierwszeWystapienieKlucza([2, 9, -1, 3, 8], 100) === -1);
 }
 
 function main() {

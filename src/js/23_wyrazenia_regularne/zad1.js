@@ -75,42 +75,36 @@ function czy_email_poprawny(email) {
   return true;
 }
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 function test_czy_email_poprawny_pozytywne() {
-  assert(czy_email_poprawny("email@example.com"));
-  assert(czy_email_poprawny("firstname.lastname@example.com"));
-  assert(czy_email_poprawny("email@subdomain.example.com"));
-  assert(czy_email_poprawny("firstname+lastname@example.com"));
-  assert(czy_email_poprawny("email@123.123.123.123"));
-  assert(czy_email_poprawny("1234567890@example.com"));
-  assert(czy_email_poprawny("email@example-one.com"));
-  assert(czy_email_poprawny("_______@example.com"));
-  assert(czy_email_poprawny("email@example.name"));
-  assert(czy_email_poprawny("email@example.museum"));
-  assert(czy_email_poprawny("email@example.co.jp"));
-  assert(czy_email_poprawny("firstname-lastname@example.com"));
+  console.assert(czy_email_poprawny("email@example.com"));
+  console.assert(czy_email_poprawny("firstname.lastname@example.com"));
+  console.assert(czy_email_poprawny("email@subdomain.example.com"));
+  console.assert(czy_email_poprawny("firstname+lastname@example.com"));
+  console.assert(czy_email_poprawny("email@123.123.123.123"));
+  console.assert(czy_email_poprawny("1234567890@example.com"));
+  console.assert(czy_email_poprawny("email@example-one.com"));
+  console.assert(czy_email_poprawny("_______@example.com"));
+  console.assert(czy_email_poprawny("email@example.name"));
+  console.assert(czy_email_poprawny("email@example.museum"));
+  console.assert(czy_email_poprawny("email@example.co.jp"));
+  console.assert(czy_email_poprawny("firstname-lastname@example.com"));
 }
 
 function test_czy_email_poprawny_negatywne() {
-  assert(!czy_email_poprawny("plainaddress"));
-  assert(!czy_email_poprawny("#@%^%#$@#$@#.com"));
-  assert(!czy_email_poprawny("@example.com"));
-  assert(!czy_email_poprawny("Joe Smith <email@example.com"));
-  assert(!czy_email_poprawny("email.example.com"));
-  assert(!czy_email_poprawny("email@example@example.com"));
-  assert(!czy_email_poprawny(".email@example.com"));
-  assert(!czy_email_poprawny("email..email@example.com"));
-  assert(!czy_email_poprawny("あいうえお@example.com"));
-  assert(!czy_email_poprawny("email@example.com (Joe Smith)"));
-  assert(!czy_email_poprawny("email@example"));
-  assert(!czy_email_poprawny("email@-example.com"));
-  assert(!czy_email_poprawny("email@example..com"));
-  assert(!czy_email_poprawny("Abc..123@example.com"));
+  console.assert(!czy_email_poprawny("plainaddress"));
+  console.assert(!czy_email_poprawny("#@%^%#$@#$@#.com"));
+  console.assert(!czy_email_poprawny("@example.com"));
+  console.assert(!czy_email_poprawny("Joe Smith <email@example.com"));
+  console.assert(!czy_email_poprawny("email.example.com"));
+  console.assert(!czy_email_poprawny("email@example@example.com"));
+  console.assert(!czy_email_poprawny(".email@example.com"));
+  console.assert(!czy_email_poprawny("email..email@example.com"));
+  console.assert(!czy_email_poprawny("あいうえお@example.com"));
+  console.assert(!czy_email_poprawny("email@example.com (Joe Smith)"));
+  console.assert(!czy_email_poprawny("email@example"));
+  console.assert(!czy_email_poprawny("email@-example.com"));
+  console.assert(!czy_email_poprawny("email@example..com"));
+  console.assert(!czy_email_poprawny("Abc..123@example.com"));
 }
 
 function main() {

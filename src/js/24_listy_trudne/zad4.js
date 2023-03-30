@@ -35,18 +35,12 @@ const wspolnyPodciagONajwiekszejSumie = (lista1, lista2) => {
   return max;
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const lista1 = [0, 0, 1, 1, 1, 1];
 const lista2 = [0, 1, 1, 0, 1, 0];
 const wynik = 5;
 
-assert(
+console.assert(
   wspolnyPodciagONajwiekszejSumie(lista1, lista2) === wynik,
   "Test 1 nieudany"
 );

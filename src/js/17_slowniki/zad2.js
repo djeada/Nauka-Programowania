@@ -29,22 +29,15 @@ function stworzSlownik(list1, list2) {
 
 function testSlownik() {
   const slownik1 = stworzSlownik([3, 5, 8], [1, 2, -1]);
-  assert(slownik1[3] === 1, "Test 1 nie powiódł się");
-  assert(slownik1[5] === 2, "Test 2 nie powiódł się");
-  assert(slownik1[8] === -1, "Test 3 nie powiódł się");
+  console.assert(slownik1[3] === 1, "Test 1 nie powiódł się");
+  console.assert(slownik1[5] === 2, "Test 2 nie powiódł się");
+  console.assert(slownik1[8] === -1, "Test 3 nie powiódł się");
 
   const slownik2 = stworzSlownik([1, 2, 3, 4], [10, 20, 30]);
-  assert(Object.keys(slownik2).length === 0, "Test 4 nie powiódł się");
+  console.assert(Object.keys(slownik2).length === 0, "Test 4 nie powiódł się");
 
   const slownik3 = stworzSlownik([], []);
-  assert(Object.keys(slownik3).length === 0, "Test 5 nie powiódł się");
-}
-
-// test
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Asercja nie powiodła się");
-  }
+  console.assert(Object.keys(slownik3).length === 0, "Test 5 nie powiódł się");
 }
 
 testSlownik();

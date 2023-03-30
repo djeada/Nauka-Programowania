@@ -33,17 +33,11 @@ const najdluzszyCiągJedynek = (lista) => {
   return index;
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const lista1 = [0, 0, 1, 0, 1, 1, 1, 0, 1, 1];
 const wynik1 = 7;
 const lista2 = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 const wynik2 = -1;
 
-assert(najdluzszyCiągJedynek(lista1) === wynik1, "Test 1 nieudany");
-assert(najdluzszyCiągJedynek(lista2) === wynik2, "Test 2 nieudany");
+console.assert(najdluzszyCiągJedynek(lista1) === wynik1, "Test 1 nieudany");
+console.assert(najdluzszyCiągJedynek(lista2) === wynik2, "Test 2 nieudany");

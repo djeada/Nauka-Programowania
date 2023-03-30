@@ -36,24 +36,17 @@ function testHistogramSlow() {
   const napis1 =
     "Here, a tricksy corpus will exist; a very strange, a sometimes cryptic corpus will dumbfound you maybe, perhaps a bit; in particular since my tricksy corpus will not match the pattern you expect from it; nor will it look like a fish, a boat, a sunflower, or a very handsome kitten. The tricksy corpus will surprise a user named Ami Tavory; this tricksy corpus will be fun to follow a year or a month or a minute from now.";
   const wynik1 = histogramSlow(napis1);
-  assert(wynik1["here"] === 1, "Test 1 nie powiódł się");
-  assert(wynik1["a"] === 12, "Test 2 nie powiódł się");
-  assert(wynik1["tricksy"] === 4, "Test 3 nie powiódł się");
-  assert(wynik1["corpus"] === 5, "Test 4 nie powiódł się");
-  assert(wynik1["will"] === 6, "Test 5 nie powiódł się");
+  console.assert(wynik1["here"] === 1, "Test 1 nie powiódł się");
+  console.assert(wynik1["a"] === 12, "Test 2 nie powiódł się");
+  console.assert(wynik1["tricksy"] === 4, "Test 3 nie powiódł się");
+  console.assert(wynik1["corpus"] === 5, "Test 4 nie powiódł się");
+  console.assert(wynik1["will"] === 6, "Test 5 nie powiódł się");
 
   const napis2 = "Ala ma kota, a kot ma Alę.";
   const wynik2 = histogramSlow(napis2);
-  assert(wynik2["ala"] === 2, "Test 6 nie powiódł się");
-  assert(wynik2["ma"] === 2, "Test 7 nie powiódł się");
-  assert(wynik2["kota"] === 1, "Test 8 nie powiódł się");
-}
-
-// test
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Asercja nie powiodła się");
-  }
+  console.assert(wynik2["ala"] === 2, "Test 6 nie powiódł się");
+  console.assert(wynik2["ma"] === 2, "Test 7 nie powiódł się");
+  console.assert(wynik2["kota"] === 1, "Test 8 nie powiódł się");
 }
 
 testHistogramSlow();

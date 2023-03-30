@@ -49,13 +49,6 @@ function czySlownikiSaIdentyczne(slownik1, slownik2) {
   return true;
 }
 
-// test
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Asercja nie powiodła się");
-  }
-}
-
 function testCzySlownikiSaIdentyczne() {
   const slownik1 = {
     a: [1, 2, 3],
@@ -66,7 +59,7 @@ function testCzySlownikiSaIdentyczne() {
     b: [5, 4],
   };
   const wynik1 = czySlownikiSaIdentyczne(slownik1, slownik2);
-  assert(wynik1 === true, "Błąd testu 1");
+  console.assert(wynik1 === true, "Błąd testu 1");
 
   const slownik3 = {
     a: [1, 2, 3],
@@ -78,7 +71,7 @@ function testCzySlownikiSaIdentyczne() {
     c: [6, 7],
   };
   const wynik2 = czySlownikiSaIdentyczne(slownik3, slownik4);
-  assert(wynik2 === false, "Błąd testu 2");
+  console.assert(wynik2 === false, "Błąd testu 2");
 }
 
 testCzySlownikiSaIdentyczne();

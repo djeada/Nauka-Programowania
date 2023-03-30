@@ -38,7 +38,7 @@ function test() {
   let expectedOutput = "ala mak otak";
   let output = odwróćSłowa(input);
 
-  assert(
+  console.assert(
     output === expectedOutput,
     'Test nie powiódł się dla "' +
       input +
@@ -49,12 +49,6 @@ function test() {
       '"'
   );
   console.log("Test przeszedł pomyślnie");
-}
-
-function assert(condition, message) {
-  if (!condition) {
-    throw message || "Wystąpił błąd";
-  }
 }
 
 test();

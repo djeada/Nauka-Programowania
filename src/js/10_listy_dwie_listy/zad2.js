@@ -43,28 +43,23 @@ function polaczListy2(lista1, lista2) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testPolaczListy() {
-  assert(
+  console.assert(
     polaczListy([1, 2, 3], [4, 5, 6]).toString() ===
       [1, 2, 3, 4, 5, 6].toString()
   );
-  assert(
+  console.assert(
     polaczListy([1, 2, 3], [4, 5, 6, 7, 8]).toString() ===
       [1, 2, 3, 4, 5, 6, 7, 8].toString()
   );
 }
 
 function testPolaczListy2() {
-  assert(
+  console.assert(
     polaczListy2([1, 2, 3], [4, 5, 6]).toString() === [4, 2, 6].toString()
   );
-  assert(
+  console.assert(
     polaczListy2([1, 2, 3], [4, 5, 6, 7, 8]).toString() === [4, 2, 6].toString()
   );
 }

@@ -22,20 +22,15 @@ function silnia(liczba) {
 }
 
 // Testy
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
 
 function testSilnia() {
-  assert(silnia(2) == 2);
-  assert(silnia(3) == 6);
-  assert(silnia(4) == 24);
-  assert(silnia(5) == 120);
-  assert(silnia(6) == 720);
-  assert(silnia(7) == 5040);
-  assert(silnia(8) == 40320);
+  console.assert(silnia(2) == 2);
+  console.assert(silnia(3) == 6);
+  console.assert(silnia(4) == 24);
+  console.assert(silnia(5) == 120);
+  console.assert(silnia(6) == 720);
+  console.assert(silnia(7) == 5040);
+  console.assert(silnia(8) == 40320);
 }
 
 // Funkcja uruchamiająca testy

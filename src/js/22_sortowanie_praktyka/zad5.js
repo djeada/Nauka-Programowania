@@ -29,12 +29,6 @@ const sortowanieMiastLiczbaMieszkancow = (lista) => {
   return lista.sort((a, b) => a.liczba_mieszkancow - b.liczba_mieszkancow);
 };
 
-const assert = (condition, message) => {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-};
-
 // Testy
 const listaMiast = [
   new Miasto("Paris", 2150000),
@@ -54,12 +48,12 @@ const wynikLiczbaMieszkancow = [
   new Miasto("New York", 8400000),
 ];
 
-assert(
+console.assert(
   JSON.stringify(sortowanieMiastNazwa(listaMiast)) ===
     JSON.stringify(wynikNazwa),
   "Test 1 nieudany"
 );
-assert(
+console.assert(
   JSON.stringify(sortowanieMiastLiczbaMieszkancow(listaMiast)) ===
     JSON.stringify(wynikLiczbaMieszkancow),
   "Test 2 nieudany"

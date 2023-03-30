@@ -10,12 +10,6 @@ Dane wyjściowe: Wartość logiczna
 
 const fs = require("fs").promises;
 
-function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message || "Assertion failed");
-  }
-}
-
 const czyPlik = async (sciezka) => {
   try {
     const stat = await fs.lstat(sciezka);
@@ -43,7 +37,7 @@ const testCzyPlik = async () => {
   const oczekiwane = true;
   const wynik = await czyPlik(sciezkaPliku);
 
-  assert(
+  console.assert(
     wynik === oczekiwane,
     `Błąd testu czyPlik: ${wynik} !== ${oczekiwane}`
   );
@@ -51,7 +45,7 @@ const testCzyPlik = async () => {
   const oczekiwane2 = false;
   const wynik2 = await czyFolder(sciezkaPliku);
 
-  assert(
+  console.assert(
     wynik2 === oczekiwane2,
     `Błąd testu czyPlik: ${wynik2} !== ${oczekiwane2}`
   );
@@ -67,7 +61,7 @@ const testCzyFolder = async () => {
   const oczekiwane = false;
   const wynik = await czyPlik(sciezkaFolderu);
 
-  assert(
+  console.assert(
     wynik === oczekiwane,
     `Błąd testu czyFolder: ${wynik} !== ${oczekiwane}`
   );
@@ -75,7 +69,7 @@ const testCzyFolder = async () => {
   const oczekiwane2 = true;
   const wynik2 = await czyFolder(sciezkaFolderu);
 
-  assert(
+  console.assert(
     wynik2 === oczekiwane2,
     `Błąd testu czyFolder: ${wynik2} !== ${oczekiwane2}`
   );
