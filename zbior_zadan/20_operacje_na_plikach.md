@@ -96,12 +96,12 @@ e) Słownik par: napis (słowo), liczba naturalna (częstotliwość występowani
 
 Tekst pliku:
 
-"The quick brown fox jumped over the lazy dog.
+The quick brown fox jumped over the lazy dog.
 The quick brown cat sat on the mat.
 Foxes are known for their cunning and intelligence.
 Dogs are known for their loyalty and kindness.
 Cats are independent animals but can be affectionate.
-This text file contains six lines and 25 words."
+This text file contains six lines and 25 words.
 
 ### Zad 7. (★☆☆)
 
