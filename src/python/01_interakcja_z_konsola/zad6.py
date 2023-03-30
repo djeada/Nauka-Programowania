@@ -1,12 +1,18 @@
 """
-Zamien jednostki:
+Tytuł: Obliczanie wyników operacji arytmetycznych.
+Treść zadania: Napisz program, który pobierze od użytkownika dwie liczby naturalne i wypisze wyniki następujących operacji arytmetycznych:
+a) suma tych liczb
+b) różnica pierwszej i drugiej liczby
+c) iloczyn tych liczb
+d) iloraz pierwszej liczby przez drugą
+e) reszta z dzielenia pierwszej liczby przez drugą
+f) pierwsza liczba podniesiona do potęgi równej drugiej liczbie
+Dane wejściowe: Dwie liczby naturalne dla wszystkich podpunktów.
+Dane wyjściowe: Liczba naturalna dla wszystkich podpunktów.
+Przykład:
+* Jeśli użytkownik poda liczby 9 oraz 1, program powinien wypisać liczby: 10, 1, 9, 9, 0, 9.
+* Jeśli użytkownik poda liczby 3 oraz 2, program powinien wypisać liczby: 5, 1, 6, 1, 1, 9.
 
-a) Pobierz wielkosc w kilogramach i wypisz ilu gramom odpowiada.
-b) Pobierz wielkosc w calach i wypisz ilu centymetrom odpowiada.
-c) Pobierz liczbe sekund i przelicz na godziny.
-d) Pobierz liczbe w euro i wypisz ilu zlotowkom odpowiada. 
-e) Pobierz miare kata w stopniach i wypisz ilu radianom odpowiada.
-f) Pobierz temperature w stopniach Fahrenheita i wypisz ilu stopniom Celsjusza oraz ilu stopniom Kelwina odpowiada. 
 """
 
 if __name__ == "__main__":

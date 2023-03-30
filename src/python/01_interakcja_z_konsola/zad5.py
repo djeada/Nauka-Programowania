@@ -1,14 +1,30 @@
+"""
+Tytuł: Pole powierzchni i objętość figur geometrycznych.
+Treść zadania: Napisz program, który będzie obliczał pola powierzchni i objętości figur geometrycznych zgodnie z następującymi instrukcjami:
+a) Pobierz długości podstawy i wysokości trójkąta i wypisz jego pole.
+b) Pobierz długości boków prostokąta i wypisz jego pole.
+c) Pobierz długości przekątnych rombu i wypisz jego pole.
+d) Pobierz promień kuli i wypisz jej objętość.
+e) Pobierz promień podstawy i wysokość stożka i wypisz jego objętość.
+f) Pobierz długość, szerokość i wysokość graniastosłupa i wypisz jego objętość.
+Jednostki są dowolne.
+Dane wejściowe:
+* Dwie liczby naturalne dla podpunktów a, b i c.
+* Liczba naturalna dla podpunktu d.
+* Dwie liczby naturalne dla podpunktu e.
+* Trzy liczby naturalne dla podpunktu f.
+Dane wyjściowe: Liczba naturalna dla wszystkich podpunktów.
+Przykład:
+a) Dla pobranych liczb: 5 i 2, powinna zostać wypisana liczba: 5.
+b) Dla pobranych liczb: 3 i 3, powinna zostać wypisana liczba: 4.
+c) Dla pobranych liczb: 2 i 4, powinna zostać wypisana liczba: 1.
+d) Dla pobranej liczby: 2, powinna zostać wypisana liczba: 33.493.
+e) Dla pobranych liczb: 3 i 2, powinna zostać wypisana liczba: 18.84.
+f) Dla pobranych liczb: 2, 2 i 2, powinny zostać wypisana liczba: 8.
+
+"""
 import math
 
-"""
-Wyznacz wartosc funkcji w punkcie:
-
-a) Otrzymujesz wspolrzedna x. Wyznacz wartosc funkcji y = 3x + 10 w zadanym punkcie.
-b) Pobierz wspolczynniki a, b oraz punkt x. Wyznacz wartosc funkcji y = ax + b w zadanym punkcie.
-c) Otrzymujesz wspolrzedna x. Wyznacz wartosc funkcji y = x3 + 22 - 20 w zadanym punkcie.
-d) Pobierz wspolczynniki a, b, c, d, m, n oraz punkt x. Wyznacz wartosc funkcji y = a*xm + b*xn + c - a w zadanym punkcie.
-e) Otrzymujesz wspolrzedna x. Wyznacz wartosc funkcji y = sin3x*cos2x + ex2 + log(x3+2x2-x-3) w zadanym punkcie.
-"""
 
 if __name__ == "__main__":
 
