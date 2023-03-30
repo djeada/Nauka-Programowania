@@ -12,7 +12,6 @@ Dla N = 7, powinna zostac zwrocona liczba: 13.
 
 """
 
-
 def silnia(n):
     """
     Funkcja oblicza silnie z n.
@@ -25,13 +24,11 @@ def silnia(n):
 
     return n * silnia(n - 1)
 
-
 def test_silnia():
     assert silnia(0) == 1
     assert silnia(1) == 1
     assert silnia(5) == 120
     assert silnia(10) == 3628800
-
 
 if __name__ == "__main__":
     test_silnia()

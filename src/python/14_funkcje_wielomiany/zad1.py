@@ -8,7 +8,6 @@ Dla listy wspolczynnikow [3, 2, 1] i liczby x = 1, zostanie zwrocona liczba 6.
 
 """
 
-
 def wartosc_wielomianu_w_punkcie(wspolczynniki, x):
     """
     Funkcja zwraca wartosc wielomianu w punkcie x.
@@ -18,11 +17,9 @@ def wartosc_wielomianu_w_punkcie(wspolczynniki, x):
         wynik += wspolczynniki[i] * x ** i
     return wynik
 
-
 def test_wartosc_wielomianu_w_punkcie():
     assert wartosc_wielomianu_w_punkcie([1, 2, 3, 4], 2) == 49
     assert wartosc_wielomianu_w_punkcie([1, 2, 3, 4], 3) == 142
-
 
 if __name__ == "__main__":
     test_wartosc_wielomianu_w_punkcie()

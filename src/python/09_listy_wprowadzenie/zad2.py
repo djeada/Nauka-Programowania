@@ -8,18 +8,14 @@ Dla otrzymanej listy ['A', 'B', 'A', 'B', 'B'] powinna zostac zwrocona liczba 5.
 
 """
 
-
 def dodaj_1(lista):
     return [element + 1 for element in lista]
-
 
 def pomnoz_przez_indeks(lista):
     return [element * indeks for indeks, element in enumerate(lista)]
 
-
 def zastap_pierwszym(lista):
     return [lista[0] for element in lista]
-
 
 if __name__ == "__main__":
 

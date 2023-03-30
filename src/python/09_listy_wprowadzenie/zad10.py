@@ -12,7 +12,6 @@ Dla N rownego 3 oraz pobranych liczb 3, 9, 7 w pierwszym podpunkcie powinno zost
 
 """
 
-
 def czy_trojkat(lista):
     xA, yA, xB, yB, xC, yC = lista
 
@@ -25,12 +24,10 @@ def czy_trojkat(lista):
 
     return False
 
-
 def test_czy_trojkat():
     assert not czy_trojkat([1, 1, 1, 1, 1, 1])
     assert not czy_trojkat([0, 0, 2, -2, 5, -5])
     assert czy_trojkat([-2, 4, 7, 5, 8, -8])
-
 
 if __name__ == "__main__":
 

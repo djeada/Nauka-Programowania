@@ -8,7 +8,6 @@ Dla otrzymanej listy wspolczynnikow [4, -3, 2] i liczby k = 1, zostanie zwrocona
 
 """
 
-
 def pochodna(wielomian, k):
     """
     Funkcja oblicza k-ta pochodna wielomianu.
@@ -25,11 +24,9 @@ def pochodna(wielomian, k):
 
     return wynik
 
-
 def test_pochodna():
     assert pochodna([4, -3, 2], 1) == [8, -3]
     assert pochodna([13, -6, 0, -1, -1], 2) == [156, -36, 0]
-
 
 if __name__ == "__main__":
 

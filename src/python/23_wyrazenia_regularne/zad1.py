@@ -20,7 +20,6 @@ Dla napisu: “adam@gmail.com”, powinna zostac zwrocona wartosc logiczna: Praw
 
 import re
 
-
 def poprawny_identyfikator(identyfikator):
     """
     Sprawdza poprawnosc identyfikatora.
@@ -41,7 +40,6 @@ def poprawny_identyfikator(identyfikator):
         r"^[a-zA-Z0-9!#$%&'*+-/=?^_`{|}~.]+[a-zA-Z0-9!#$%&'*+-/=?^_`{|}~.]*$",
         identyfikator,
     )
-
 
 def poprawna_nazwa_domenowa(nazwa_domenowa):
     """
@@ -65,7 +63,6 @@ def poprawna_nazwa_domenowa(nazwa_domenowa):
 
     return re.match(r"^[-a-zA-Z0-9.]+[-a-zA-Z0-9.]*$", nazwa_domenowa)
 
-
 def czy_email_poprawny(email):
     """
     Sprawdza poprawnosc adresu email.
@@ -83,7 +80,6 @@ def czy_email_poprawny(email):
 
     return True
 
-
 def test_czy_email_poprawny_pozytywne():
     assert czy_email_poprawny("email@example.com")
     assert czy_email_poprawny("firstname.lastname@example.com")
@@ -97,7 +93,6 @@ def test_czy_email_poprawny_pozytywne():
     assert czy_email_poprawny("email@example.museum")
     assert czy_email_poprawny("email@example.co.jp")
     assert czy_email_poprawny("firstname-lastname@example.com")
-
 
 def test_czy_email_poprawny_negatywne():
     assert not czy_email_poprawny("plainaddress")
@@ -114,7 +109,6 @@ def test_czy_email_poprawny_negatywne():
     assert not czy_email_poprawny("email@-example.com")
     assert not czy_email_poprawny("email@example..com")
     assert not czy_email_poprawny("Abc..123@example.com")
-
 
 if __name__ == "__main__":
     test_czy_email_poprawny_pozytywne()

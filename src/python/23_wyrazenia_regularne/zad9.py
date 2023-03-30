@@ -10,14 +10,12 @@ Dla otrzymanego napisu "C:\my-long\path_directory\file.html", powinna zostac zwr
 
 import re
 
-
 def usun_z_wiersza(tekst, zakazane_slowo):
     """
     Funkcja usuwa z tekstu czesci wierszy zawierajace zakazane slowo,
     od wystapienia zakazanego slowa do konca.
     """
     return [re.sub(r"{0}.*".format(zakazane_slowo), "", e) for e in tekst.splitlines()]
-
 
 def test_usun_z_wiersza():
     tekst = """Turned it up should no valley cousin he. 
@@ -55,7 +53,6 @@ The furnished she concluded depending procuring concealed.
     ]
 
     assert usun_z_wiersza(tekst, napis_a) == oczekiwane
-
 
 if __name__ == "__main__":
     test_usun_z_wiersza()

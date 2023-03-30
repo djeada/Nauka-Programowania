@@ -14,7 +14,6 @@ c) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "tEST".
 """
 import math
 
-
 def na_dziesietny(liczba, stara_podstawa):
     """
     Funkcja zamienia liczbe z reprezentacji w systemie stara_podstawa na reprezentacje w systemie dziesietnym.
@@ -33,7 +32,6 @@ def na_dziesietny(liczba, stara_podstawa):
             )
 
     return int(reprezentacja_dziesietna)
-
 
 def zmien_podstawe(liczba, stara_podstawa, nowa_podstawa):
     """
@@ -61,14 +59,12 @@ def zmien_podstawe(liczba, stara_podstawa, nowa_podstawa):
 
     return liczba[::-1]
 
-
 def test_zmien_podstawe():
     assert zmien_podstawe("101", 2, 10) == "5"
     assert zmien_podstawe("101", 2, 16) == "5"
     assert zmien_podstawe("101", 10, 2) == "1100101"
     assert zmien_podstawe("101", 10, 16) == "65"
     assert zmien_podstawe("4301", 10, 4) == "1003031"
-
 
 if __name__ == "__main__":
     test_zmien_podstawe()

@@ -163,8 +163,8 @@ def main():
         "sh": CommentInfo(line_by_line="#"),
     }
 
-    input_files = sorted(Path(sys.argv[1]).iterdir())
-    output_dirs = sorted(Path(sys.argv[2]).iterdir())
+    input_files = sorted(Path(sys.argv[1]).iterdir(), key=lambda p: str(p))
+    output_dirs = sorted(Path(sys.argv[2]).iterdir(), key=lambda p: str(p))
     file_extension = sys.argv[3]
 
     for input_file, output_dir in zip(input_files, output_dirs):
@@ -174,11 +174,17 @@ def main():
         tasks = parse_tasks(file_content)
 
         files = [
-            file / "Main.java"
+            file
             for file in Path(output_dir).iterdir()
-            #if file.is_file() and file.suffix == f".{file_extension}"
+            if file.is_file() and file.suffix == f".{file_extension}"
         ]
-        files = sorted(files)
+
+        if file_extension == "java":
+            files = [
+                        file / "Main.java"
+                        for file in Path(output_dir).iterdir()
+                    ]
+        files = sorted(files, key=lambda p: str(p))
 
         for file, task in zip(files, tasks.values()):
             comment_info = file_extension_comment_map.get(file_extension)

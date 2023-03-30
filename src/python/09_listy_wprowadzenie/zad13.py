@@ -18,10 +18,8 @@ e) Wynik: [2592, 0, 0, 36, 1080]
 
 """
 
-
 def suma_ciag_aryt(lista):
     return (len(lista) + 1) * (min(lista) + max(lista)) // 2
-
 
 def brakujacy_element(lista):
 
@@ -35,12 +33,10 @@ def brakujacy_element(lista):
 
     return 0
 
-
 def test_brakujacy_element():
     assert brakujacy_element([6, 8, 4, 10, 14, 2]) == 12
     assert brakujacy_element([1, 2, 4, 5, 6]) == 3
     assert brakujacy_element([1, 2, 3]) == 0
-
 
 if __name__ == "__main__":
 

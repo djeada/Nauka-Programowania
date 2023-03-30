@@ -8,7 +8,6 @@ Dla otrzymanych liczb: 4301, 10 i 4 powinna zostac zwrocona liczba: 1003031.
 
 """
 
-
 def suma(a, b):
     """
     Funkcja dodaje dwie liczby naturalne.
@@ -20,7 +19,6 @@ def suma(a, b):
 
     return a
 
-
 def roznica(a, b):
     """
     Funkcja odejmuje dwie liczby naturalne.
@@ -31,7 +29,6 @@ def roznica(a, b):
         b = pom << 1
 
     return a
-
 
 def iloczyn(a, b):
     """
@@ -50,7 +47,6 @@ def iloczyn(a, b):
         b = b >> 1
 
     return znak * pom
-
 
 def iloraz(a, b):
     """
@@ -91,18 +87,15 @@ def iloraz(a, b):
 
     return znak * wew_iloraz(a, b, b)
 
-
 def test_suma():
     assert suma(1, 1) == 2
     assert suma(5, 3) == 8
     assert suma(0, 0) == 0
 
-
 def test_roznica():
     assert roznica(1, 1) == 0
     assert roznica(5, 3) == 2
     assert roznica(0, 0) == 0
-
 
 def test_iloczyn():
     assert iloczyn(1, 1) == 1
@@ -112,14 +105,12 @@ def test_iloczyn():
     assert iloczyn(-3, -2) == 6
     assert iloczyn(3, -2) == -6
 
-
 def test_iloraz():
     assert iloraz(1, 1) == 1
     assert iloraz(9, 3) == 3
     assert iloraz(-3, 2) == -1
     assert iloraz(-3, -2) == 1
     assert iloraz(3, -2) == -1
-
 
 if __name__ == "__main__":
 

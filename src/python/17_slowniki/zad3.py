@@ -8,7 +8,6 @@ Dla otrzymanego napisu: “klasa”, slownik powinien wygladac nastepujaco: {“
 
 """
 
-
 def dodaj_ksiazke_do_czytelnika(baza_danych, czytelnik, ksiazka):
     """
     Funkcja dodaje ksiazke do listy ksiazek wypozyczonych przez czytelnika w bazie danych.
@@ -20,7 +19,6 @@ def dodaj_ksiazke_do_czytelnika(baza_danych, czytelnik, ksiazka):
 
     return baza_danych
 
-
 def zwroc_ksiazke_czytelnika(baza_danych, czytelnik, ksiazka):
     """
     Funkcja usuwa ksiazke z listy ksiazek wypozyczonych przez czytelnika w bazie danych.
@@ -29,7 +27,6 @@ def zwroc_ksiazke_czytelnika(baza_danych, czytelnik, ksiazka):
         baza_danych[czytelnik].remove(ksiazka)
 
     return baza_danych
-
 
 def wypisz_liste_wypozyczonych_ksiazek(baza_danych, czytelnik):
     """
@@ -42,7 +39,6 @@ def wypisz_liste_wypozyczonych_ksiazek(baza_danych, czytelnik):
     else:
         print("Nie ma takiego czytelnika w bazie danych")
 
-
 def test_dodaj_ksiazke_do_czytelnika():
     assert dodaj_ksiazke_do_czytelnika(
         {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Jan", "Ksiazka3"
@@ -54,12 +50,10 @@ def test_dodaj_ksiazke_do_czytelnika():
         {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Jan", "Ksiazka1"
     ) == {"Jan": {"Ksiazka1", "Ksiazka2"}}
 
-
 def test_zwroc_ksiazke_czytelnika():
     assert zwroc_ksiazke_czytelnika(
         {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Jan", "Ksiazka1"
     ) == {"Jan": {"Ksiazka2"}}
-
 
 if __name__ == "__main__":
     test_dodaj_ksiazke_do_czytelnika()

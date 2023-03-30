@@ -8,7 +8,6 @@ Dla otrzymanych dwoch list [3, 5, 2] oraz [2, -8, 1], zostanie zwrocona lista [5
 
 """
 
-
 def suma_wielomianow(wielomian_a, wielomian_b):
     """
     Funkcja sumuje dwie listy wielomianow.
@@ -25,11 +24,9 @@ def suma_wielomianow(wielomian_a, wielomian_b):
 
     return wynik
 
-
 def test_suma_wielomianow():
     assert suma_wielomianow([1, 2, 3], [1, 2, 3]) == [2, 4, 6]
     assert suma_wielomianow([1, 2, 3], [1, 2, 3, 4]) == [2, 4, 6, 4]
-
 
 if __name__ == "__main__":
     test_suma_wielomianow()

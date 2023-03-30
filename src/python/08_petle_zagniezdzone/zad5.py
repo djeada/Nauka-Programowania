@@ -12,7 +12,6 @@ Dla otrzymanej liczby 4 powinno zostac wypisane:
 
 """
 
-
 def litera_x(wysokosc):
     for i in range(wysokosc):
         for j in range(wysokosc):
@@ -21,7 +20,6 @@ def litera_x(wysokosc):
             else:
                 print(" ", end="")
         print()
-
 
 if __name__ == "__main__":
 

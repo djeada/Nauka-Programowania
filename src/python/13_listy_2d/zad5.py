@@ -8,7 +8,6 @@ Dla otrzymanej macierzy: [[1,2,3], [4,0,6], [7,8,9]], powinna zostac zwrocona ma
 
 """
 
-
 def czy_kwadrat_magiczny(macierz):
     # sprawdzenie, czy macierz jest kwadratem
     if len(macierz) != len(macierz[0]):
@@ -44,13 +43,11 @@ def czy_kwadrat_magiczny(macierz):
 
     return True
 
-
 def test_czy_kwadrat_magiczny():
 
     assert czy_kwadrat_magiczny([[4, 9, 2], [3, 5, 7], [8, 1, 6]])
     assert not czy_kwadrat_magiczny([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
     assert czy_kwadrat_magiczny([[2, 7, 6], [9, 5, 1], [4, 3, 8]])
-
 
 if __name__ == "__main__":
 

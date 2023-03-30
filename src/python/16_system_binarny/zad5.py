@@ -8,13 +8,11 @@ Dla otrzymanej liczby: 111, powinna zostac zwrocona liczba: 128.
 
 """
 
-
 def znak(n):
     """
     Funkcja zwraca znak liczby n.
     """
     return (n >> 31) & 0x01
-
 
 def maksimum(a, b):
     """
@@ -26,7 +24,6 @@ def maksimum(a, b):
     znak_a = znak_b ^ 1
     return znak_a * a + znak_b * b
 
-
 def minimum(a, b):
     """
     Funkcja zwraca minimum dwoch liczb.
@@ -37,7 +34,6 @@ def minimum(a, b):
     znak_a = znak_b ^ 1
     return znak_b * a + znak_a * b
 
-
 def test_maksimum():
     assert maksimum(2, 3) == 3
     assert maksimum(3, 2) == 3
@@ -47,7 +43,6 @@ def test_maksimum():
     assert maksimum(-3, -2) == -2
     assert maksimum(-3, -3) == -3
 
-
 def test_minimum():
     assert minimum(2, 3) == 2
     assert minimum(3, 2) == 2
@@ -56,7 +51,6 @@ def test_minimum():
     assert minimum(-2, -3) == -3
     assert minimum(-3, -2) == -3
     assert minimum(-3, -3) == -3
-
 
 if __name__ == "__main__":
 

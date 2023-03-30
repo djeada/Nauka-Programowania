@@ -6,7 +6,6 @@ Dane wyjsciowe: liczba naturalna, reprezentujaca liczbe instancji klasy w progra
 
 """
 
-
 class Klasa:
     liczba_instancji = 0
 
@@ -15,7 +14,6 @@ class Klasa:
 
     def __del__(self):
         Klasa.liczba_instancji -= 1
-
 
 if __name__ == "__main__":
     a = Klasa()

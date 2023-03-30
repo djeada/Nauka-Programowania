@@ -12,7 +12,6 @@ Napisz program, ktory przetestuje twoja klase. Stworz liczby zespolone: A (9, 12
 
 import math
 
-
 class Zespolona:
     def __init__(self, rzeczywista=0, urojona=0):
         self.rzeczywista = rzeczywista
@@ -53,7 +52,6 @@ class Zespolona:
 
     def modul(self):
         return math.sqrt(self.rzeczywista ** 2 + self.urojona ** 2)
-
 
 if __name__ == "__main__":
 

@@ -8,7 +8,6 @@ Dane wyjsciowe: Lista adresow IP posortowanych alfabetycznie.
 
 import pathlib
 
-
 def znajdz_pliki_z_rozszerzeniem(sciezka, rozszerzenie):
     """
     Funkcja zwraca liste plikow o podanym rozszerzeniu.
@@ -17,7 +16,6 @@ def znajdz_pliki_z_rozszerzeniem(sciezka, rozszerzenie):
     for plik in pathlib.Path(sciezka).glob("*." + rozszerzenie):
         lista_plikow.append(str(plik.relative_to(pathlib.Path(sciezka).parent)))
     return lista_plikow
-
 
 def test_znajdz_pliki_z_rozszerzeniem():
 
@@ -39,7 +37,6 @@ def test_znajdz_pliki_z_rozszerzeniem():
     import shutil
 
     shutil.rmtree(sciezka_folderu)
-
 
 if __name__ == "__main__":
 

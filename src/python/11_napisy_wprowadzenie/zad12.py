@@ -8,14 +8,11 @@ Dla otrzymanego napisu: "Rumcajs", powinien zostac zwrocony napis: "RUMCAJS".
 
 """
 
-
 def usun_spacje(zdanie):
     return zdanie.replace(" ", "")
 
-
 def test_usun_spacje():
     assert usun_spacje("Ala ma kota") == "Alamakota"
-
 
 if __name__ == "__main__":
 

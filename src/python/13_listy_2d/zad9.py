@@ -12,7 +12,6 @@ Powtarzaj krok 2, az wszystkie pozycje statkow zostana odkryte przez uzytkownika
 
 """
 
-
 def znajdz_klepsydry(macierz):
     """
     Przejdz przez macierz i znajdz wszystkie klepsydry.
@@ -43,10 +42,8 @@ def znajdz_klepsydry(macierz):
 
     return klepsydry
 
-
 def najwieksza_klepsydra(macierz):
     return max(znajdz_klepsydry(macierz))
-
 
 def test_najwieksza_klepsydra():
 
@@ -58,7 +55,6 @@ def test_najwieksza_klepsydra():
         [23, 26, 76, 62, 36],
     ]
     assert najwieksza_klepsydra(macierz) == 395
-
 
 if __name__ == "__main__":
 

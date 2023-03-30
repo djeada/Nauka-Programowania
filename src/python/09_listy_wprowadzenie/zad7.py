@@ -8,7 +8,6 @@ Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostana zwrocone indeksy pi
 
 """
 
-
 def srednia_dwoch_najwiekszych(lista):
 
     if len(lista) < 2:
@@ -18,7 +17,6 @@ def srednia_dwoch_najwiekszych(lista):
     najwieksza_druga = max(lista[: lista.index(najwieksza)])
     srednia = (najwieksza + najwieksza_druga) / 2
     return srednia
-
 
 def test_srednia_dwoch_najwiekszych():
 
@@ -30,7 +28,6 @@ def test_srednia_dwoch_najwiekszych():
         srednia_dwoch_najwiekszych([3, -2, 4, 9, -3, -40, 8, 5, -7, 4, 9, -11, 2])
         == 6.5
     )
-
 
 if __name__ == "__main__":
 

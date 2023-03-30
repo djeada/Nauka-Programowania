@@ -1,10 +1,10 @@
 """
-Tytul: Powtarzajace sie podnapisy.
-Tresc: Dostajesz napis. Znajdz wszystkie powtarzajace sie podnapisy w tym napisie.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
+Tytul: Najdluzszy wspolny przedrostek.
+Tresc: Dostajesz liste napisow. Znajdz najdluzszy wspolny przedrostek dla wszystkich napisow na liscie.
+Dane wejsciowe: Lista napisow.
+Dane wyjsciowe: Napis.
 Przyklad:
-Dla napisu "pythonpython" powinna zostac zwrocona lista zawierajaca napis "python".
+Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac zwrocony napis "Rem".
 
 """
 
@@ -33,31 +33,26 @@ def najdluzszy_przedrostek_v1(slowa):
 
     return wynik
 
-
 # Testy Poprawnosci
 def test_1():
     slowa = ["abcdefgh", "abcefgh", "abcd"]
     wynik = "abc"
     assert najdluzszy_przedrostek_v1(slowa) == wynik
 
-
 def test_2():
     slowa = ["flower", "flow", "flight", "flix"]
     wynik = "fl"
     assert najdluzszy_przedrostek_v1(slowa) == wynik
-
 
 def test_3():
     slowa = ["student", "studio", "stress", "lol"]
     wynik = ""
     assert najdluzszy_przedrostek_v1(slowa) == wynik
 
-
 def main():
     test_1()
     test_2()
     test_3()
-
 
 if __name__ == "__main__":
     main()

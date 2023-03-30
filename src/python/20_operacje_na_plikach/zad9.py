@@ -7,7 +7,6 @@ Dane wyjsciowe: Brak.
 """
 import pathlib
 
-
 def usun_pliki(sciezka):
     """
     Funkcja usuwa pliki o rozmiarze wiekszym niz 10kB znajdujace sie
@@ -17,7 +16,6 @@ def usun_pliki(sciezka):
         if sciezka_do_pliku.is_file():
             if sciezka_do_pliku.stat().st_size > 10240:
                 sciezka_do_pliku.unlink()
-
 
 def test_usun_pliki():
 
@@ -41,7 +39,6 @@ def test_usun_pliki():
     import shutil
 
     shutil.rmtree("test")
-
 
 if __name__ == "__main__":
 

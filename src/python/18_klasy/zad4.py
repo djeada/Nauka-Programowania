@@ -12,7 +12,6 @@ Napisz program, ktory przetestuje twoja klase. Stworz wektory: A (-3, -3, -3) or
 
 import math
 
-
 class Wektor2D:
     def __init__(self, x=0, y=0):
         self.x = x
@@ -43,7 +42,6 @@ class Wektor2D:
 
     def modul(self):
         return math.sqrt(self.x ** 2 + self.y ** 2)
-
 
 class Wektor3D(Wektor2D):
     def __init__(self, x=0, y=0, z=0):
@@ -81,7 +79,6 @@ class Wektor3D(Wektor2D):
         return Wektor3D(
             a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x
         )
-
 
 if __name__ == "__main__":
     wektor_a = Wektor3D(-3, -3, -3)

@@ -1,17 +1,16 @@
 """
-Tytul: Podmiana slowa w zdaniu.
-Tresc: Masz trzy napisy: zdanie, slowo A i slowo B. Twoim zadaniem jest zamiana wszystkich wystapien slowa A na slowo B w zdaniu.
-Dane wejsciowe: Trzy napisy.
+Tytul: Usun podnapis.
+Tresc: Dostajesz dwa napisy. Twoim zadaniem jest wyszukanie i usuniecie wszystkich wystapien drugiego napisu w pierwszym napisie.
+Dane wejsciowe: Dwa napisy.
 Dane wyjsciowe: Napis.
 Przyklad:
-Dla napisow: “Lezy jezy na wiezy”, “zy” oraz “rzy”, zwrocony napis powinien brzmiec: “Lerzy jerzy na wierzy”.
+Dla napisow: “Lezy jezy na wiezy” oraz “zy”, zwrocony napis powinien brzmiec: “Le je na wie”.
 
 """
 
 # Wersja 1
 def usun_wszystkie_v1(zdanie, slowo):
     return zdanie.replace(slowo, "")
-
 
 # Testy Poprawnosci
 def test_1():
@@ -21,10 +20,8 @@ def test_1():
 
     assert usun_wszystkie_v1(zdanie, slowo) == wynik
 
-
 def main():
     test_1()
-
 
 if __name__ == "__main__":
     main()

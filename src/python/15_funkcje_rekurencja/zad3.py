@@ -8,7 +8,6 @@ Dla N = 3, powinna zostac zwrocona liczba: 6.
 
 """
 
-
 def potega(a, b):
     """
     Funkcja oblicza a podniesione do b.
@@ -22,12 +21,10 @@ def potega(a, b):
     else:
         return a * potega(a, b - 1)
 
-
 def test_potega():
     assert potega(2, 3) == 8
     assert potega(2, 0) == 1
     assert potega(2, -3) == 0.125
-
 
 if __name__ == "__main__":
     test_potega()

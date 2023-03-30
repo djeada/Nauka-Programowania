@@ -8,7 +8,6 @@ Dla otrzymanej listy oraz liczby: [1, 2, 2] i 2, powinna zostac zwrocona liczba:
 
 """
 
-
 def wyraz_ciag(n):
     """
     Funkcja oblicza n-ty wyraz ciagu danego wzorem rekurencyjnym:
@@ -23,13 +22,11 @@ def wyraz_ciag(n):
     else:
         return 1 + 2 * wyraz_ciag(n - 1)
 
-
 def test_wyraz_ciag():
 
     assert wyraz_ciag(1) == 1
     assert wyraz_ciag(2) == 3
     assert wyraz_ciag(10) == 1023
-
 
 if __name__ == "__main__":
     test_wyraz_ciag()

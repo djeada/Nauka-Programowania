@@ -8,13 +8,11 @@ Dane wyjsciowe: Brak.
 import pathlib
 import string
 
-
 def wczytaj_plik(sciezka):
     """
     Funkcja wczytujaca plik tekstowy
     """
     return pathlib.Path(sciezka).read_text().splitlines()
-
 
 def liczba_wierszy(tresc_pliku):
     """
@@ -22,20 +20,17 @@ def liczba_wierszy(tresc_pliku):
     """
     return len(tresc_pliku)
 
-
 def podziel_zdanie_na_slowa(zdanie):
     """
     Funkcja rozdziela zdanie na slowa.
     """
     return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
 
-
 def na_male_litery(slowa):
     """
     Funkcja zamienia wielkie litery ze slow z listy slowa na male litery.
     """
     return [slowo.lower() for slowo in slowa]
-
 
 def liczba_slow(tresc_pliku):
     """
@@ -46,20 +41,17 @@ def liczba_slow(tresc_pliku):
         licznik += len(podziel_zdanie_na_slowa(wiersz))
     return licznik
 
-
 def srednia_dlugosc_wiersza(tresc_pliku):
     """
     Funkcja liczaca srednia dlugosc wiersza
     """
     return sum(len(wiersz) for wiersz in tresc_pliku) / liczba_wierszy(tresc_pliku)
 
-
 def srednia_liczba_slow_na_wiersz(tresc_pliku):
     """
     Funkcja liczaca srednia liczbe slow na wiersz
     """
     return liczba_slow(tresc_pliku) / liczba_wierszy(tresc_pliku)
-
 
 def czestosc_slow(tresc_pliku):
     """
@@ -73,7 +65,6 @@ def czestosc_slow(tresc_pliku):
             else:
                 histogram[slowo] = 1
     return histogram
-
 
 def test_statystyki():
 
@@ -181,7 +172,6 @@ def test_statystyki():
     import shutil
 
     shutil.rmtree("test")
-
 
 if __name__ == "__main__":
     test_statystyki()

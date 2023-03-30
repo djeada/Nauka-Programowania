@@ -8,7 +8,6 @@ Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] zostanie zwrocona lista: [2, 4]
 
 """
 
-
 def srednia_wazona(wartosci, wagi):
 
     if len(wartosci) != len(wagi):
@@ -20,11 +19,9 @@ def srednia_wazona(wartosci, wagi):
 
     return suma / sum(wartosci)
 
-
 def test_srednia_wazona():
     assert srednia_wazona([1, 2, 3], [1, 1, 1]) == 1
     assert srednia_wazona([0, -23, -5, 2, -3, 4, 9], [1, 2, 3, 4, 5, 6, 7]) == -1.1875
-
 
 if __name__ == "__main__":
     test_srednia_wazona()

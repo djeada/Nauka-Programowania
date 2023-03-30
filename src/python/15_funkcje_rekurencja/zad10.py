@@ -8,7 +8,6 @@ Dla N = 10, powinna zostac zwrocona liczba: 55.
 
 """
 
-
 def gra(n):
     """
     Funkcja zwraca liczbe sposobow na wygrana w grze.
@@ -41,14 +40,12 @@ def gra(n):
 
     return _gra(n)
 
-
 def test_gra():
 
     assert gra(20) == 4
     assert gra(10) == 2
     assert gra(50) == 14
     assert gra(1) == 0
-
 
 if __name__ == "__main__":
 

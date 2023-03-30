@@ -32,7 +32,6 @@ This text file contains six lines and 25 words."
 
 import pathlib
 
-
 def znajdz_sciezki(nazwa_pliku):
     """
     Funkcja zwraca liste sciezek do plikow o podanej nazwie.
@@ -42,7 +41,6 @@ def znajdz_sciezki(nazwa_pliku):
         if plik.name == nazwa_pliku:
             sciezki.append(str(plik.absolute()))
     return sciezki
-
 
 def test_znajdz_sciezki():
 
@@ -72,7 +70,6 @@ def test_znajdz_sciezki():
     import shutil
 
     shutil.rmtree(sciezka1)
-
 
 if __name__ == "__main__":
     test_znajdz_sciezki()

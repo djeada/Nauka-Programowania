@@ -8,7 +8,6 @@ Dla otrzymanego napisu: “taco”, powinna zostac zwrocona lista: ["taco", "toc
 
 """
 
-
 def permutacje(napis):
     """
     Funkcja zwraca liste wszystkich permutacji danego napisu.
@@ -22,13 +21,11 @@ def permutacje(napis):
                 permutacje.append(napis[i] + permutacja)
         return permutacje
 
-
 def czy_palindrom(napis):
     """
     Funkcja sprawdza czy dany napis jest palindromem.
     """
     return napis == napis[::-1]
-
 
 def permutacje_palindromiczne(napis):
     """
@@ -36,10 +33,8 @@ def permutacje_palindromiczne(napis):
     """
     return [permutacja for permutacja in permutacje(napis) if czy_palindrom(permutacja)]
 
-
 def test_permutacje_palindromiczne():
     assert sorted(permutacje_palindromiczne("adamm")) == sorted(["madam", "amdma"])
-
 
 if __name__ == "__main__":
     test_permutacje_palindromiczne()

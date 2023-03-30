@@ -1,10 +1,10 @@
 """
-Tytul: Najdluzszy wspolny przedrostek.
-Tresc: Dostajesz liste napisow. Znajdz najdluzszy wspolny przedrostek dla wszystkich napisow na liscie.
-Dane wejsciowe: Lista napisow.
+Tytul: Najdluzszy wspolny podnapis.
+Tresc: Dostajesz dwa napisy. Znajdz najdluzszy wspolny podnapis tych dwoch napisow.
+Dane wejsciowe: Dwa napisy.
 Dane wyjsciowe: Napis.
 Przyklad:
-Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac zwrocony napis "Rem".
+Dla napisow "ijkabcdl" i "xxxxabcd" powinien zostac zwrocony napis "abcd".
 
 """
 
@@ -31,7 +31,6 @@ def najdluzszy_podnapis_v1(slowo_a, slowo_b):
 
     return wynik
 
-
 # Testy Poprawnosci
 def test_1():
     slowo_a = "abcdxyz"
@@ -39,13 +38,11 @@ def test_1():
     wynik = "abcd"
     assert najdluzszy_podnapis_v1(slowo_a, slowo_b) == wynik
 
-
 def test_2():
     slowo_a = "hhaall"
     slowo_b = "hhaall"
     wynik = "hhaall"
     assert najdluzszy_podnapis_v1(slowo_a, slowo_b) == wynik
-
 
 def test_3():
     slowo_a = ""
@@ -53,12 +50,10 @@ def test_3():
     wynik = ""
     assert najdluzszy_podnapis_v1(slowo_a, slowo_b) == wynik
 
-
 def main():
     test_1()
     test_2()
     test_3()
-
 
 if __name__ == "__main__":
     main()

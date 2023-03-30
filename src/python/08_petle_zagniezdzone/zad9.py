@@ -9,7 +9,6 @@ Dla otrzymanej liczby 5 powinno zostac wypisane: 2, 3, 5, 7, 11.
 """
 import math
 
-
 def sito_eratostenesa(n):
     tablica = [True] * n
     tablica[0] = False
@@ -19,7 +18,6 @@ def sito_eratostenesa(n):
             for j in range(i ** 2, n, i):
                 tablica[j] = False
     return tablica
-
 
 if __name__ == "__main__":
 

@@ -9,7 +9,6 @@ Dla wejsciowej listy [1, 2, 1], powinna zostac zwrocona lista: [[], [1], [2], [1
 */
 import java.util.*;
 
-
 public class Main {
 
   public static (ArrayList<Integer> zbiorPotegowy(ArrayList<Integer> lista) {

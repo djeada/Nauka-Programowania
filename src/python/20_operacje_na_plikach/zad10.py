@@ -9,7 +9,6 @@ Dane wyjsciowe: Lista napisow
 import pathlib
 import shutil
 
-
 def skopiuj_pliki_png(sciezka_1, sciezka_2):
     """
     Funkcja kopiuje wszystkie pliki .png z folderu sciezka_1 do folderu sciezka_2.
@@ -20,7 +19,6 @@ def skopiuj_pliki_png(sciezka_1, sciezka_2):
 
     for plik in folder_1.glob("**/*.png"):
         shutil.copy(str(plik), str(folder_2))
-
 
 def test_skopiuj_pliki_png():
 
@@ -44,7 +42,6 @@ def test_skopiuj_pliki_png():
     # usun foldery testowe
     shutil.rmtree("test_1")
     shutil.rmtree("test_2")
-
 
 if __name__ == "__main__":
 

@@ -31,7 +31,6 @@ def podziel_sznurek_v1(ceny, n):
 
     return maks
 
-
 # Zlozonosc czasowa: O(n^2)
 # Zlozonosc pamieciowa: O(n)
 def podziel_sznurek_v2(ceny, n):
@@ -49,7 +48,6 @@ def podziel_sznurek_v2(ceny, n):
 
     return pom[n]
 
-
 # Testy Poprawnosci
 def test_1():
     ceny = [1, 5, 8, 9, 10, 17, 17, 20]
@@ -58,7 +56,6 @@ def test_1():
 
     assert podziel_sznurek_v1(ceny, n) == wynik
     assert podziel_sznurek_v2(ceny, n) == wynik
-
 
 def test_2():
     ceny = [3, 9, 10, 20]
@@ -71,7 +68,6 @@ def test_2():
         except ValueError:
             assert True
 
-
 def test_3():
     ceny = [5]
     n = 1
@@ -80,12 +76,10 @@ def test_3():
     assert podziel_sznurek_v1(ceny, n) == wynik
     assert podziel_sznurek_v2(ceny, n) == wynik
 
-
 def main():
     test_1()
     test_2()
     test_3()
-
 
 if __name__ == "__main__":
     main()

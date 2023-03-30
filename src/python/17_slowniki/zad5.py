@@ -9,7 +9,6 @@ Powinna zostac zwrocona litera: 'e'
 
 """
 
-
 def pracownik_z_najwiekszym_zyskiem(lista_par):
     """
     Funkcja zwraca napis reprezentujacy imie i nazwisko pracownika, ktory
@@ -25,7 +24,6 @@ def pracownik_z_najwiekszym_zyskiem(lista_par):
 
     return max(zyski, key=zyski.get)
 
-
 def test_pracownik_z_najwiekszym_zyskiem():
 
     assert (
@@ -40,7 +38,6 @@ def test_pracownik_z_najwiekszym_zyskiem():
         )
         == "Barnaba Barabash"
     )
-
 
 if __name__ == "__main__":
 

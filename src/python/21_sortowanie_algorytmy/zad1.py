@@ -18,7 +18,6 @@ def sortuj_v1(tablica):
             if tablica[j] > tablica[j + 1]:
                 tablica[j], tablica[j + 1] = tablica[j + 1], tablica[j]
 
-
 # Testy Poprawnosci
 def test_1():
     tablica = [4, 2, 5, 3, 1]
@@ -28,7 +27,6 @@ def test_1():
 
     assert tablica == wynik
 
-
 def test_2():
     tablica = [6, 5, 1, 2, 3, 1, 4, 3, 5, 2, 3]
     wynik = [1, 1, 2, 2, 3, 3, 3, 4, 5, 5, 6]
@@ -37,11 +35,9 @@ def test_2():
 
     assert tablica == wynik
 
-
 def main():
     test_1()
     test_2()
-
 
 if __name__ == "__main__":
     main()

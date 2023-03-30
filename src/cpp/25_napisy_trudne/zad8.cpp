@@ -1,8 +1,9 @@
 /*
-Tytul: Powtarzajace sie podnapisy.
-Tresc: Dostajesz napis. Znajdz wszystkie powtarzajace sie podnapisy w tym
-napisie. Dane wejsciowe: Napis. Dane wyjsciowe: Lista napisow. Przyklad: Dla
-napisu "pythonpython" powinna zostac zwrocona lista zawierajaca napis "python".
+Tytul: Najdluzszy wspolny przedrostek.
+Tresc: Dostajesz liste napisow. Znajdz najdluzszy wspolny przedrostek dla
+wszystkich napisow na liscie. Dane wejsciowe: Lista napisow. Dane wyjsciowe:
+Napis. Przyklad: Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac
+zwrocony napis "Rem".
 
 */
 #include <cassert>

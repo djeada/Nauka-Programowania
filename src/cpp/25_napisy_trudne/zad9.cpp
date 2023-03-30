@@ -1,9 +1,8 @@
 /*
-Tytul: Najdluzszy wspolny przedrostek.
-Tresc: Dostajesz liste napisow. Znajdz najdluzszy wspolny przedrostek dla
-wszystkich napisow na liscie. Dane wejsciowe: Lista napisow. Dane wyjsciowe:
-Napis. Przyklad: Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac
-zwrocony napis "Rem".
+Tytul: Najdluzszy wspolny podnapis.
+Tresc: Dostajesz dwa napisy. Znajdz najdluzszy wspolny podnapis tych dwoch
+napisow. Dane wejsciowe: Dwa napisy. Dane wyjsciowe: Napis. Przyklad: Dla
+napisow "ijkabcdl" i "xxxxabcd" powinien zostac zwrocony napis "abcd".
 
 */
 #include <cassert>

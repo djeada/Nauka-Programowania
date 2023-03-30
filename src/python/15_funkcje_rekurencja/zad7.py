@@ -8,7 +8,6 @@ Dla N = 3, powinna zostac zwrocona lista: [('A', 'B'), ('A', 'C'), ('B', 'C'), (
 
 """
 
-
 def wyszukiwani_liniowe(lista, klucz):
     """
     Funkcja zwraca indeks klucza w liscie przy pomocy rekurenkcji.
@@ -25,11 +24,9 @@ def wyszukiwani_liniowe(lista, klucz):
 
     return -1
 
-
 def test_wyszukiwani_liniowe():
     assert wyszukiwani_liniowe([1, 2, 3, 4, 5], 3) == 2
     assert wyszukiwani_liniowe([1, 2, 3, 4, 5], 6) == -1
-
 
 if __name__ == "__main__":
 

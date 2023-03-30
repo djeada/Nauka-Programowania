@@ -13,7 +13,6 @@ mport java.util.*;
 
 public class Main {
 
-
 	public static void usunZeSlownikaV1(Map<String, Integer> slownik, int wartosc) {
 
 		for (Iterator<Map.Entry<String, Integer>> it = slownik.entrySet().iterator(); it.hasNext();) {

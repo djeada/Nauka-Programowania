@@ -11,7 +11,6 @@ Napisz program, ktory przetestuje twoja klase. Stworz kolo o promieniu 3 i uzyj 
 
 import math
 
-
 class Kolo:
     def __init__(self, promien=1):
         self.promien = promien
@@ -24,7 +23,6 @@ class Kolo:
 
     def __str__(self):
         return f"Kolo o promieniu {self.promien:.2f}\nObwod: {self.obwod():.2f}\nPole: {self.pole():.2f}"
-
 
 if __name__ == "__main__":
     kolo = Kolo(3)

@@ -8,7 +8,6 @@ Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona li
 
 """
 
-
 def polacz_pokrywajace_sie_przedzialy(lista_przedzialow):
     """
     Funkcja zwraca liste niepokrywajacych sie przedzialow.
@@ -32,7 +31,6 @@ def polacz_pokrywajace_sie_przedzialy(lista_przedzialow):
             lista_napotkanych_przedzialow.append(przedzial)
     return lista_napotkanych_przedzialow
 
-
 def test_polacz_pokrywajace_sie_przedzialy():
     lista_przedzialow = [
         [23, 67],
@@ -45,7 +43,6 @@ def test_polacz_pokrywajace_sie_przedzialy():
     ]
     wynik = [[10, 22], [23, 88]]
     assert polacz_pokrywajace_sie_przedzialy(lista_przedzialow) == wynik
-
 
 if __name__ == "__main__":
     test_polacz_pokrywajace_sie_przedzialy()

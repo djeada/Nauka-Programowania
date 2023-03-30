@@ -8,7 +8,6 @@ Dla otrzymanej liczby 14, powinna zostac zwrocona liczba 1.
 
 """
 
-
 def wielkie_na_male(slowo):
     """
     Funkcja zamienia wielkie litery na male litery.
@@ -20,7 +19,6 @@ def wielkie_na_male(slowo):
 
     return wynik
 
-
 def male_na_wielkie(slowo):
     """
     Funkcja zamienia male litery na wielkie litery.
@@ -31,7 +29,6 @@ def male_na_wielkie(slowo):
         wynik += chr(ord(litera) & ord("_"))
 
     return wynik
-
 
 def odwroc_wielkosc_liter(slowo):
     """
@@ -51,21 +48,17 @@ def odwroc_wielkosc_liter(slowo):
 
     return wynik
 
-
 def test_wielkie_na_male():
     assert wielkie_na_male("KURCZAKU") == "kurczaku"
 
-
 def test_male_na_wielkie():
     assert male_na_wielkie("piesek") == "PIESEK"
-
 
 def test_odwroc_wielkosc_liter():
     assert (
         odwroc_wielkosc_liter("wszedl Kotek na PloteK i mrUga")
         == "WSZEDL kOTEK NA pLOTEk I MRuGA"
     )
-
 
 if __name__ == "__main__":
 

@@ -8,7 +8,6 @@ Dla otrzymanych dwoch list: [5, 0, 10, 6] oraz [1, 2, 4], zostanie zwrocona list
 
 """
 
-
 def iloczyn_wielomianow(wielomian_a, wielomian_b):
     """
     Funkcja zwraca wspolczynniki wielomianu bedacego iloczynem wielomianow a i b.
@@ -22,10 +21,8 @@ def iloczyn_wielomianow(wielomian_a, wielomian_b):
 
     return wynik
 
-
 def test_iloczyn_wielomianow():
     assert iloczyn_wielomianow([1, 1, 0], [-5, 0, 0, 2]) == [-5, -5, 0, 2, 2, 0]
-
 
 if __name__ == "__main__":
     test_iloczyn_wielomianow()

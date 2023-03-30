@@ -8,7 +8,6 @@ Dla otrzymanej listy [2, 9, -1, 3, 8] oraz klucza -1 powinno zostac zwrocone 2.
 
 """
 
-
 def policz_samchody(lista):
     licznik = 0
     pom = 0
@@ -20,14 +19,12 @@ def policz_samchody(lista):
 
     return licznik
 
-
 def test_policz_samochody():
     assert policz_samchody(["A", "B", "A", "B", "B"]) == 5
     assert (
         policz_samchody(["A", "A", "A", "B", "B", "A", "B", "A", "B", "A", "A", "A"])
         == 15
     )
-
 
 if __name__ == "__main__":
 

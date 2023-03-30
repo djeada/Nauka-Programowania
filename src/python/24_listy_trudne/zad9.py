@@ -36,7 +36,6 @@ def najdluzszy_naprzemienny_podciag_v1(lista):
 
     return list()
 
-
 # Testy Poprawnosci
 def test_1():
     lista = [1, -2, 6, 4, -3, 2, -4, -3]
@@ -44,13 +43,11 @@ def test_1():
 
     assert najdluzszy_naprzemienny_podciag_v1(lista) == wynik
 
-
 def test_2():
     lista = [1, 2, 3, 4, 5]
     wynik = []
 
     assert najdluzszy_naprzemienny_podciag_v1(lista) == wynik
-
 
 def test_3():
     lista = []
@@ -58,12 +55,10 @@ def test_3():
 
     assert najdluzszy_naprzemienny_podciag_v1(lista) == wynik
 
-
 def main():
     test_1()
     test_2()
     test_3()
-
 
 if __name__ == "__main__":
     main()

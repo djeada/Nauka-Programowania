@@ -8,7 +8,6 @@ Dla otrzymanej listy: [5, 27, 6, 2, 1, 10, 8] oraz liczb 0 i 2, powinna zostac z
 
 """
 
-
 def znajdz_klucz(lista, klucz):
 
     for i in range(len(lista)):
@@ -16,11 +15,9 @@ def znajdz_klucz(lista, klucz):
             return i
     return -1
 
-
 def test_znajdz_klucz():
     assert znajdz_klucz([1, 2, 3, 4, 5], 5) == 4
     assert znajdz_klucz([1, 2, 3, 4, 5], 6) == -1
-
 
 if __name__ == "__main__":
 

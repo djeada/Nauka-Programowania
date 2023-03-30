@@ -9,7 +9,6 @@ Powinien zostac zwrocony napis: "abc"
 
 """
 
-
 def histogram(napis):
     """
     Funkcja zwraca slownik zawierajacy wszystkie litery w napisie oraz czestosc ich wystepowania.
@@ -21,7 +20,6 @@ def histogram(napis):
         else:
             histogram[znak] = 1
     return histogram
-
 
 def test_histogram():
     assert histogram("") == {}
@@ -35,7 +33,6 @@ def test_histogram():
         "o": 1,
         "t": 1,
     }
-
 
 if __name__ == "__main__":
     test_histogram()

@@ -13,7 +13,6 @@ Dla otrzymanej liczby 5 powinno zostac wypisane:
 
 """
 
-
 def litera_z(wysokosc):
     for i in range(wysokosc):
         for j in range(wysokosc):
@@ -22,7 +21,6 @@ def litera_z(wysokosc):
             else:
                 print(" ", end="")
         print()
-
 
 if __name__ == "__main__":
 

@@ -15,7 +15,6 @@ d) Dla otrzymanych liczb: 9 i 3, powinna zostac zwrocona liczba: 3.
 
 """
 
-
 def czy_palindrom(liczba):
     """
     Funkcja sprawdza czy podana liczba jest palindromem.
@@ -30,14 +29,12 @@ def czy_palindrom(liczba):
 
     return odwrocona == liczba
 
-
 def test_czy_palindrom():
 
     assert czy_palindrom(0)
     assert czy_palindrom(27)
     assert not czy_palindrom(2)
     assert not czy_palindrom(77)
-
 
 if __name__ == "__main__":
 

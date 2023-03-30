@@ -8,7 +8,6 @@ Dla otrzymanej listy wspolczynnikow: [1, 2, 1], zostanie zwrocona lista: [-1, -1
 
 """
 
-
 def miesca_zerowe(wspolczynniki):
     """
     Funkcja zwraca liste miejsc zerowych rownania kwadratowego.
@@ -24,12 +23,10 @@ def miesca_zerowe(wspolczynniki):
     else:
         return [-b / (2 * a) + delta ** 0.5, -b / (2 * a) - delta ** 0.5]
 
-
 def test_miesca_zerowe():
 
     assert miesca_zerowe([1, 2, 1]) == [-1]
     assert miesca_zerowe([3, 9, -12]) == [13.5, -16.5]
-
 
 if __name__ == "__main__":
 

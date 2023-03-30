@@ -1,10 +1,8 @@
 /*
-Tytul: Rotacje napisow.
-Tresc: Dostajesz dwa napisy. Sprawdz, czy jeden z nich jest rotacja drugiego.
-Dane wejsciowe: Dwa napisy.
-Dane wyjsciowe: Wartosc logiczna.
-Przyklad:
-Dla napisow "malpka" i "pkamal" powinno zostac zwrocone "Prawda".
+Tytul: Powtarzajace sie podnapisy.
+Tresc: Dostajesz napis. Znajdz wszystkie powtarzajace sie podnapisy w tym
+napisie. Dane wejsciowe: Napis. Dane wyjsciowe: Lista napisow. Przyklad: Dla
+napisu "pythonpython" powinna zostac zwrocona lista zawierajaca napis "python".
 
 */
 #include <algorithm>

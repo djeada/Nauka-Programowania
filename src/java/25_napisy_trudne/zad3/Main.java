@@ -1,10 +1,10 @@
 /*
-Tytul: Usun podnapis.
-Tresc: Dostajesz dwa napisy. Twoim zadaniem jest wyszukanie i usuniecie wszystkich wystapien drugiego napisu w pierwszym napisie.
+Tytul: Czy napis A jest poczatkiem napisu B?
+Tresc: Dostajesz dwa napisy. Twoim zadaniem jest sprawdzenie, czy drugi napis zaczyna sie od pierwszego napisu.
 Dane wejsciowe: Dwa napisy.
-Dane wyjsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
 Przyklad:
-Dla napisow: “Lezy jezy na wiezy” oraz “zy”, zwrocony napis powinien brzmiec: “Le je na wie”.
+Dla napisow: “Dinozaur jest zly” oraz “Dino”, zwrocona wartosc powinna byc: Prawda.
 
 */
 import java.util.*;

@@ -10,13 +10,11 @@ Dane wyjsciowe: Brak.
 
 import pathlib
 
-
 def wczytaj_plik(sciezka):
     """
     Funkcja wczytujaca plik tekstowy
     """
     return pathlib.Path(sciezka).read_text().splitlines()
-
 
 def sortuj_adresy_ip(lista):
     """
@@ -28,7 +26,6 @@ def sortuj_adresy_ip(lista):
     lista = sorted(lista, key=lambda x: (x[0], x[1], x[2], x[3]))
     lista = [".".join([str(i) for i in ip]) for ip in lista]
     return lista
-
 
 def test_sortuj_adresy_ip():
 
@@ -64,7 +61,6 @@ def test_sortuj_adresy_ip():
     import shutil
 
     shutil.rmtree("test")
-
 
 if __name__ == "__main__":
 

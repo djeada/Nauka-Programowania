@@ -8,7 +8,6 @@ Dla otrzymanych list [5, 3, 7, 2] oraz [1, -2, 3], zostana wypisane: 5, 1, 3, -2
 
 """
 
-
 def wypisz_na_przemian(lista_a, lista_b):
 
     min_dlugosc = min(len(lista_a), len(lista_b))
@@ -23,7 +22,6 @@ def wypisz_na_przemian(lista_a, lista_b):
         print(f"0, {lista_b[i]}", end=", ")
 
     print()
-
 
 if __name__ == "__main__":
 

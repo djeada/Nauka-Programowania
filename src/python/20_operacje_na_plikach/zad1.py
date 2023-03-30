@@ -8,7 +8,6 @@ Dane wyjsciowe: Wartosc logiczna
 
 import pathlib
 
-
 def czy_sciezka_pliku(sciezka):
     """
     Funkcja zwraca True jesli podana sciezka jest sciezka pliku,
@@ -16,14 +15,12 @@ def czy_sciezka_pliku(sciezka):
     """
     return pathlib.Path(sciezka).is_file()
 
-
 def czy_sciezka_folderu(sciezka):
     """
     Funkcja zwraca True jesli podana sciezka jest sciezka folderu,
     False w przeciwnym wypadku.
     """
     return pathlib.Path(sciezka).is_dir()
-
 
 def test_czy_sciezka_pliku():
     # stworz folder testowy
@@ -40,7 +37,6 @@ def test_czy_sciezka_pliku():
 
     shutil.rmtree("test", ignore_errors=True)
 
-
 def test_czy_sciezka_folderu():
     # stworz folder testowy
     pathlib.Path("test").mkdir()
@@ -51,7 +47,6 @@ def test_czy_sciezka_folderu():
     import shutil
 
     shutil.rmtree("test", ignore_errors=True)
-
 
 if __name__ == "__main__":
     test_czy_sciezka_pliku()

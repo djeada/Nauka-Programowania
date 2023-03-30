@@ -8,7 +8,6 @@ Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona ma
 
 """
 
-
 def spirala(macierz):
     """
     Zwraca liste elementow z macierzy zebranych spiralnie.
@@ -26,7 +25,6 @@ def spirala(macierz):
             lista.append(macierz[i][k])
         k += 1
     return lista
-
 
 def test_spirala():
     macierz = [
@@ -64,7 +62,6 @@ def test_spirala():
         25,
     ]
     assert spirala(macierz) == wynik
-
 
 if __name__ == "__main__":
 

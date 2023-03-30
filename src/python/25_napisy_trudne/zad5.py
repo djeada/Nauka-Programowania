@@ -1,10 +1,10 @@
 """
-Tytul: Usun powtorzenia znakow.
-Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen kazdego znaku w napisie. Kazdy znak moze wystapic tylko raz.
+Tytul: Usun powtorzenia stojacych obok siebie znakow.
+Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen stojacych obok siebie znakow i zachowanie tylko pierwszego wystapienia kazdego znaku.
 Dane wejsciowe: Napis.
 Dane wyjsciowe: Napis.
 Przyklad:
-Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “AB”.
+Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “ABA”.
 
 """
 
@@ -23,37 +23,31 @@ def usun_powtarzajacych_sie_sasiadow_v1(napis):
 
     return nowy_napis
 
-
 # Testy Poprawnosci
 def test_1():
     napis = "AAAAAAAAAABBBBBBBBA"
     wynik = "ABA"
     assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
-
 def test_2():
     napis = "XXXYYASFBY"
     wynik = "XYASFBY"
     assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
-
 
 def test_3():
     napis = "CCCCCCCCCCCCCCCCCCCCCCCCCCCC"
     wynik = "C"
     assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
-
 def test_4():
     napis = ""
     wynik = ""
     assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
-
 def test_5():
     napis = "AAABB"
     wynik = "AB"
     assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
-
 
 def main():
     test_1()
@@ -61,7 +55,6 @@ def main():
     test_3()
     test_4()
     test_5()
-
 
 if __name__ == "__main__":
     main()

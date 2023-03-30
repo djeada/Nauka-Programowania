@@ -10,13 +10,11 @@ Dla otrzymanej liczby 2 powinno zostac wypisane:
 
 """
 
-
 def kwadrat(bok):
     for i in range(bok):
         for j in range(bok):
             print("*", end="")
         print()
-
 
 if __name__ == "__main__":
 

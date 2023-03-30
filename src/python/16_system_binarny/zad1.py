@@ -11,7 +11,6 @@ b) Dla otrzymanej liczby: 101, powinna zostac zwrocona liczba: 5.
 
 """
 
-
 def na_dziesietny(liczba):
     """
     Funkcja zamienia liczbe binarna na dziesietna.
@@ -21,7 +20,6 @@ def na_dziesietny(liczba):
         wynik += (2 ** int(pozycja)) * int(cyfra)
 
     return wynik
-
 
 def na_binarny(liczba):
     """
@@ -37,18 +35,15 @@ def na_binarny(liczba):
 
     return wynik
 
-
 def test_na_dziesietny():
     assert na_dziesietny("101") == 5
     assert na_dziesietny("1101") == 13
     assert na_dziesietny("1111") == 15
 
-
 def test_na_binarny():
     assert na_binarny(5) == "101"
     assert na_binarny(13) == "1101"
     assert na_binarny(15) == "1111"
-
 
 if __name__ == "__main__":
     test_na_dziesietny()

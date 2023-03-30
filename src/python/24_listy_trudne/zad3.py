@@ -22,7 +22,6 @@ def min_iloczyn_v1(lista):
 
     return min(lista[n - 1] * lista[n - 2] * lista[0], lista[0] * lista[1] * lista[2])
 
-
 # Wersja 2
 # Zlozonosc czasowa O(n)
 # Zlozonosc pamieciowa O(n)
@@ -70,7 +69,6 @@ def min_iloczyn_v2(lista):
 
     return wynik
 
-
 # Wersja 3
 # Zlozonosc czasowa O(n)
 # Zlozonosc pamieciowa O(1)
@@ -105,7 +103,6 @@ def min_iloczyn_v3(lista):
 
     return min(maks1 * maks2 * min1, min1 * min2 * min3)
 
-
 # Testy Poprawnosci
 def test_1():
     lista = [3, -1, -3, 2, 9, 4]
@@ -115,7 +112,6 @@ def test_1():
     assert min_iloczyn_v2(lista) == wynik
     assert min_iloczyn_v1(lista) == wynik
 
-
 def test_2():
     lista = [3, 2, 1, 7, 8]
     wynik = 6
@@ -123,7 +119,6 @@ def test_2():
     assert min_iloczyn_v3(lista) == wynik
     assert min_iloczyn_v2(lista) == wynik
     assert min_iloczyn_v1(lista) == wynik
-
 
 def test_3():
     lista = [1, 20, 2, -2, -4, -3]
@@ -133,12 +128,10 @@ def test_3():
     assert min_iloczyn_v2(lista) == wynik
     assert min_iloczyn_v1(lista) == wynik
 
-
 def main():
     test_1()
     test_2()
     test_3()
-
 
 if __name__ == "__main__":
     main()

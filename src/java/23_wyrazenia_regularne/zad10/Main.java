@@ -15,7 +15,6 @@ Dla napisu: “abc1234”, powinna zostac zwrocona wartosc logiczna: Falsz.
 */
 import java.util.*;
 
-
 public class Main {
   
   public static void podmien(String napis, List<String> listaA, List<String> listaB) {

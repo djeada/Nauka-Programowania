@@ -8,7 +8,6 @@ Dane wyjsciowe: Brak.
 
 import pathlib
 
-
 def dostaw_wiersz(sciezka, wiersz):
     """
     Funkcja dostawia wiersz na poczatek pliku tekstowego.
@@ -19,7 +18,6 @@ def dostaw_wiersz(sciezka, wiersz):
         plik.write(wiersz + "\n")
         for linia in linie:
             plik.write(linia)
-
 
 def test_dostaw_wiersz():
 
@@ -42,7 +40,6 @@ def test_dostaw_wiersz():
     import shutil
 
     shutil.rmtree("test")
-
 
 if __name__ == "__main__":
 

@@ -1,10 +1,10 @@
 /*
-Tytul: Usun powtorzenia znakow.
-Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen kazdego znaku w napisie. Kazdy znak moze wystapic tylko raz.
+Tytul: Usun powtorzenia stojacych obok siebie znakow.
+Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen stojacych obok siebie znakow i zachowanie tylko pierwszego wystapienia kazdego znaku.
 Dane wejsciowe: Napis.
 Dane wyjsciowe: Napis.
 Przyklad:
-Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “AB”.
+Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “ABA”.
 
 */
 import java.util.*;

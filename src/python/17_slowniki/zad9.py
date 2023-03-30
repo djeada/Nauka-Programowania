@@ -13,7 +13,6 @@ Powinna zostac zwrocona wartosc logiczna: Falsz.
 
 """
 
-
 def znaki_powtarzajace_sie_wiecej_niz_raz(napis):
     """
     Funkcja zwraca liste znakow powtarzajacych sie wiecej niz raz.
@@ -24,11 +23,9 @@ def znaki_powtarzajace_sie_wiecej_niz_raz(napis):
             znaki.append(znak)
     return znaki
 
-
 def test_znaki_powtarzajace_sie_wiecej_niz_raz():
     assert znaki_powtarzajace_sie_wiecej_niz_raz("ababab") == ["a", "b"]
     assert znaki_powtarzajace_sie_wiecej_niz_raz("abc") == []
-
 
 if __name__ == "__main__":
 

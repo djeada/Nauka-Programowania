@@ -9,7 +9,6 @@ Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwr
 
 """
 
-
 def najczestsza_litera(napis):
     """
     Zwraca najczesciej wystepujaca litere w napisie.
@@ -22,11 +21,9 @@ def najczestsza_litera(napis):
             slownik[litera] = 1
     return max(slownik, key=slownik.get)
 
-
 def test_najczestsza_litera():
 
     assert najczestsza_litera("ala ma kota") == "a"
-
 
 if __name__ == "__main__":
 

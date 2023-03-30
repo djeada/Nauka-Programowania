@@ -8,7 +8,6 @@ Dla otrzymanej liczby 26, powinna zostac zwrocona wartosc logiczna: Prawda.
 
 """
 
-
 def nastepna_potega_dwojki_v1(liczba):
     """
     Funkcja zwraca nastepna potege dwojki wieksza badz rowna liczbie.
@@ -28,7 +27,6 @@ def nastepna_potega_dwojki_v1(liczba):
 
     return liczba << 1
 
-
 def nastepna_potega_dwojki_v2(liczba):
     """
     Funkcja zwraca nastepna potege dwojki wieksza badz rowna liczbie.
@@ -47,19 +45,16 @@ def nastepna_potega_dwojki_v2(liczba):
 
     return potega
 
-
 def test_nastepna_potega_dwojki_v1():
     assert nastepna_potega_dwojki_v1(111) == 128
     assert nastepna_potega_dwojki_v1(-30) == 0
     assert nastepna_potega_dwojki_v1(1) == 2
-
 
 def test_nastepna_potega_dwojki_v2():
 
     assert nastepna_potega_dwojki_v2(111) == 128
     assert nastepna_potega_dwojki_v2(-30) == 0
     assert nastepna_potega_dwojki_v2(1) == 2
-
 
 if __name__ == "__main__":
     test_nastepna_potega_dwojki_v1()

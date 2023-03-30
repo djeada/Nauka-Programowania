@@ -8,7 +8,6 @@ Dla otrzymanych napisow: “grazyna” oraz “razynax”, powinna zostac zwroco
 
 """
 
-
 def liczba_znakow(napis_a, napis_b):
     """
     Funkcja zwraca liczbe znakow, ktore musimy usunac aby uzyskac anagramy.
@@ -26,12 +25,10 @@ def liczba_znakow(napis_a, napis_b):
 
     return sum(map(abs, pom))
 
-
 def test_liczba_znakow():
     assert liczba_znakow("grazyna", "razynax") == 2
     assert liczba_znakow("pan cytryna", "pan pomarancza") == -1
     assert liczba_znakow("20ejdy0978oa", "akv81w39j1ob") == 14
-
 
 if __name__ == "__main__":
 

@@ -6,7 +6,6 @@ Tresc: Zaprojektuj klase Ksztalt oraz klasy potomne Kolo i Kwadrat. Napisz progr
 
 import math
 
-
 class Ksztalt:
     def __init__(self):
         raise NotImplementedError("Nie zaimplementowano konstruktora")
@@ -19,7 +18,6 @@ class Ksztalt:
 
     def __str__(self):
         raise NotImplementedError("Nie zaimplementowano funkcji __str__")
-
 
 class Kolo(Ksztalt):
     def __init__(self, promien):
@@ -34,7 +32,6 @@ class Kolo(Ksztalt):
     def __str__(self):
         return f"Kolo o promieniu {self.promien}"
 
-
 class Kwadrat(Ksztalt):
     def __init__(self, bok):
         self.bok = bok
@@ -47,7 +44,6 @@ class Kwadrat(Ksztalt):
 
     def __str__(self):
         return f"Kwadrat o boku {self.bok}"
-
 
 if __name__ == "__main__":
 

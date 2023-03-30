@@ -8,7 +8,6 @@ Dla otrzymanej listy: [3, 2, 1, 3, 2, 2], powinna zostac zwrocona lista: [3, 2, 
 
 """
 
-
 def znajdz_pary(lista, x):
     wynik = []
     for i in range(len(lista)):
@@ -16,7 +15,6 @@ def znajdz_pary(lista, x):
             if lista[i] + lista[j] == x:
                 wynik.append((i, j))
     return wynik
-
 
 def test_znajdz_pary():
     assert znajdz_pary([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10) == [
@@ -26,7 +24,6 @@ def test_znajdz_pary():
         (3, 5),
     ]
     assert znajdz_pary([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 20) == []
-
 
 if __name__ == "__main__":
 

@@ -9,7 +9,6 @@ Dane wyjsciowe: Lista napisow
 import pathlib
 import datetime
 
-
 def podmien_tresci(plik1, plik2):
     """
     Funkcja zamienia tresci plikow.
@@ -18,7 +17,6 @@ def podmien_tresci(plik1, plik2):
     pathlib.Path(plik2).rename(pom_nazwa)
     pathlib.Path(plik1).rename(plik2)
     pathlib.Path(pom_nazwa).rename(plik1)
-
 
 def test_podmien_tresci():
 
@@ -47,7 +45,6 @@ def test_podmien_tresci():
     import shutil
 
     shutil.rmtree("test")
-
 
 if __name__ == "__main__":
 

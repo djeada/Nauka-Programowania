@@ -8,7 +8,6 @@ Dla otrzymanego napisu: “ula” oraz “lua”, powinna zostac zwrocona wartos
 
 """
 
-
 def anagramy(napis_a, napis_b):
     """
     Funkcja sprawdza czy dane napisy sa anagramami.
@@ -22,12 +21,10 @@ def anagramy(napis_a, napis_b):
 
     return True
 
-
 def test_anagramy():
     assert anagramy("kajak", "kajak")
     assert not anagramy("kajak", "kjakk")
     assert anagramy("adam", "mada")
-
 
 if __name__ == "__main__":
     test_anagramy()

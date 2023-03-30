@@ -8,7 +8,6 @@ Dla cyklicznie posortowanej listy [3, 4, 5, 6, 1, 2] i klucza 4, powinno zostac 
 
 """
 
-
 def znajdz_klucz_v1(lista, klucz):
 
     lewo = 0
@@ -38,7 +37,6 @@ def znajdz_klucz_v1(lista, klucz):
                 lewo = sr + 1
 
     return -1
-
 
 if __name__ == "__main__":
 

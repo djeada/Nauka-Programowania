@@ -1,10 +1,10 @@
 /*
-Tytul: Usun powtorzenia stojacych obok siebie znakow.
-Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen stojacych obok siebie znakow i zachowanie tylko pierwszego wystapienia kazdego znaku.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
+Tytul: Rotacje napisow.
+Tresc: Dostajesz dwa napisy. Sprawdz, czy jeden z nich jest rotacja drugiego.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Wartosc logiczna.
 Przyklad:
-Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “ABA”.
+Dla napisow "malpka" i "pkamal" powinno zostac zwrocone "Prawda".
 
 */
 import java.util.*;

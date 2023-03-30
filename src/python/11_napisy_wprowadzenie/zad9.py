@@ -8,11 +8,9 @@ Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "ala mak 
 
 """
 
-
 def rozdziel_informacje(napis):
     lista = napis.split(";")
     return lista
-
 
 def wypisz_informacje(napis):
     informacje = rozdziel_informacje(napis)
@@ -21,7 +19,6 @@ def wypisz_informacje(napis):
     print("Miejsce urodzenia: {}".format(informacje[2]))
     print("Stanowisko: {}".format(informacje[3]))
     print("Zarobki: {}".format(informacje[4]))
-
 
 if __name__ == "__main__":
 

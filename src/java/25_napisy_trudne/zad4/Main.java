@@ -1,10 +1,10 @@
 /*
-Tytul: Czy napis A jest poczatkiem napisu B?
-Tresc: Dostajesz dwa napisy. Twoim zadaniem jest sprawdzenie, czy drugi napis zaczyna sie od pierwszego napisu.
-Dane wejsciowe: Dwa napisy.
-Dane wyjsciowe: Wartosc logiczna.
+Tytul: Usun powtorzenia znakow.
+Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen kazdego znaku w napisie. Kazdy znak moze wystapic tylko raz.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
 Przyklad:
-Dla napisow: “Dinozaur jest zly” oraz “Dino”, zwrocona wartosc powinna byc: Prawda.
+Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “AB”.
 
 */
 import java.util.*;

@@ -8,7 +8,6 @@ Dla otrzymanego napisu: “abc”, powinna zostac zwrocona lista: [“abc”, �
 
 """
 
-
 def permutacje(napis):
     """
     Funkcja znajduje wszystkie permutacje dla podanego napisu.
@@ -21,7 +20,6 @@ def permutacje(napis):
             for permutacja in permutacje(napis[:i] + napis[i + 1 :]):
                 permutacje.append(napis[i] + permutacja)
         return permutacje
-
 
 def test_permutacje():
     assert permutacje("abc") == ["abc", "acb", "bac", "bca", "cab", "cba"]
@@ -51,7 +49,6 @@ def test_permutacje():
         "dcab",
         "dcba",
     ]
-
 
 if __name__ == "__main__":
     test_permutacje()

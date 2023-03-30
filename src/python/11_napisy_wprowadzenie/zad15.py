@@ -9,14 +9,11 @@ Dla otrzymanego napisu: "Robot", powinien zostac zwrocony napis: "82, 111, 98, 1
 """
 import string
 
-
 def podziel_zdanie_na_slowa(zdanie):
     return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
 
-
 def test_podziel_zdanie_na_slowa():
     assert podziel_zdanie_na_slowa("Ala ma kota.") == ["Ala", "ma", "kota"]
-
 
 if __name__ == "__main__":
 

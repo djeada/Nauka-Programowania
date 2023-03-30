@@ -23,7 +23,6 @@ e) Jesli otrzymasz wspolrzedna $x = 2$, program powinien wypisac liczbe 57.179.
 """
 import math
 
-
 if __name__ == "__main__":
 
     print("podaj x")

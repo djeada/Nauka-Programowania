@@ -38,7 +38,6 @@ def sortuj_v1(tablica):
 
     return scalaj(sortuj_v1(tablica[: n // 2]), sortuj_v1(tablica[n // 2 :]))
 
-
 # Zlozonosc czasowa O(nlogn)
 def sortuj_v2(tablica):
     def scalaj(tablica_a, tablica_b):
@@ -66,7 +65,6 @@ def sortuj_v2(tablica):
 
     return scalaj(sortuj_v2(tablica[: n // 2]), sortuj_v2(tablica[n // 2 :]))
 
-
 # Testy Poprawnosci
 def test_1():
     tablica = [4, 2, 5, 3, 1]
@@ -74,13 +72,11 @@ def test_1():
 
     assert sortuj_v1(tablica) == wynik
 
-
 def test_2():
     tablica = [6, 5, 1, 2, 3, 1, 4, 3, 5, 2, 3]
     wynik = [1, 1, 2, 2, 3, 3, 3, 4, 5, 5, 6]
 
     assert sortuj_v1(tablica) == wynik
-
 
 def test_3():
     tablica = [4, 2, 5, 3, 1]
@@ -88,20 +84,17 @@ def test_3():
 
     assert sortuj_v2(tablica) == wynik
 
-
 def test_4():
     tablica = [6, 5, 1, 2, 3, 1, 4, 3, 5, 2, 3]
     wynik = [1, 1, 2, 2, 3, 3, 3, 4, 5, 5, 6]
 
     assert sortuj_v2(tablica) == wynik
 
-
 def main():
     test_1()
     test_2()
     test_3()
     test_4()
-
 
 if __name__ == "__main__":
     main()

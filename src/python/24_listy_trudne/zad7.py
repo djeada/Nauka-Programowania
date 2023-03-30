@@ -39,7 +39,6 @@ def ile_wody_v1(slupki):
 
     return woda
 
-
 # Testy Poprawnosci
 def test_1():
     slupki = [3, 0, 1, 0, 2]
@@ -47,13 +46,11 @@ def test_1():
 
     assert ile_wody_v1(slupki) == wynik
 
-
 def test_2():
     slupki = [9, 2, 3, 9, 0, 2]
     wynik = 15
 
     assert ile_wody_v1(slupki) == wynik
-
 
 def test_3():
     slupki = [1, 1]
@@ -61,12 +58,10 @@ def test_3():
 
     assert ile_wody_v1(slupki) == wynik
 
-
 def main():
     test_1()
     test_2()
     test_3()
-
 
 if __name__ == "__main__":
     main()

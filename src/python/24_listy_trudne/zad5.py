@@ -22,7 +22,6 @@ def zbior_potegowy(lista):
 
     return zbior_potegowy
 
-
 # Testy Poprawnosci
 def test_1():
     lista = [1, 2, 1]
@@ -30,13 +29,11 @@ def test_1():
 
     assert sorted(zbior_potegowy(lista)) == sorted(wynik)
 
-
 def test_2():
     lista = [5, 3]
     wynik = {(), (3,), (3, 5), (5,)}
 
     assert sorted(zbior_potegowy(lista)) == sorted(wynik)
-
 
 def test_3():
     lista = []
@@ -44,12 +41,10 @@ def test_3():
 
     assert zbior_potegowy(lista) == wynik
 
-
 def main():
     test_1()
     test_2()
     test_3()
-
 
 if __name__ == "__main__":
     main()

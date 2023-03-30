@@ -8,10 +8,8 @@ Dla otrzymanego napisu: “Ala ma kota”, powinna zostac zwrocona lista: [“Al
 
 """
 
-
 def zamien_litery_a_na_znaki_zapytania(napis):
     return napis.replace("a", "?")
-
 
 def test_zamien_litery_a_na_znaki_zapytania():
     assert zamien_litery_a_na_znaki_zapytania("ala ma kota") == "?l? m? kot?"
@@ -19,7 +17,6 @@ def test_zamien_litery_a_na_znaki_zapytania():
         zamien_litery_a_na_znaki_zapytania("ala ma kota a kot ma ale")
         == "?l? m? kot? ? kot m? ?le"
     )
-
 
 if __name__ == "__main__":
     test_zamien_litery_a_na_znaki_zapytania()

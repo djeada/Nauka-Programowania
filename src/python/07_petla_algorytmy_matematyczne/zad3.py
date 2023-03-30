@@ -12,7 +12,6 @@ b) 2.
 
 """
 
-
 def iloczyn(mnozna, mnoznik):
 
     znak = 1
@@ -29,7 +28,6 @@ def iloczyn(mnozna, mnoznik):
     for i in range(mnozna):
         iloczyn += mnoznik
     return iloczyn * znak
-
 
 def iloraz(dzielna, dzielnik):
     znak = 1
@@ -48,7 +46,6 @@ def iloraz(dzielna, dzielnik):
         iloraz += 1
     return iloraz * znak
 
-
 def test_iloczyn():
     assert iloczyn(5, 3) == 15
     assert iloczyn(2, 3) == 6
@@ -56,14 +53,12 @@ def test_iloczyn():
     assert iloczyn(2, -3) == -6
     assert iloczyn(-2, -3) == 6
 
-
 def test_iloraz():
     assert iloraz(5, 3) == 1
     assert iloraz(2, 3) == 0
     assert iloraz(-2, 3) == 0
     assert iloraz(6, -3) == -2
     assert iloraz(-2, -3) == 0
-
 
 if __name__ == "__main__":
     test_iloczyn()

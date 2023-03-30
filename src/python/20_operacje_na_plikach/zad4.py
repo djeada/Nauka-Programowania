@@ -7,13 +7,11 @@ Dane wyjsciowe: Brak.
 """
 import pathlib
 
-
 def wypisz_plik(sciezka):
 
     plik = pathlib.Path(sciezka)
     if plik.is_file():
         print(plik.read_text())
-
 
 if __name__ == "__main__":
 

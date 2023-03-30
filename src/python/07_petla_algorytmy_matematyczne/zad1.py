@@ -8,14 +8,12 @@ Dla pobranych liczb 2, 4 i 6, funkcja powinna zwrocic liczbe 4.
 
 """
 
-
 def srednia_arytmetyczna(n):
     suma = 0
     for i in range(n):
         liczba = int(input("Podaj liczbe: "))
         suma += liczba
     return suma / n
-
 
 if __name__ == "__main__":
 
