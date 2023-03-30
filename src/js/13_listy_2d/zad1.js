@@ -1,15 +1,15 @@
 /*
-Tytuł: Macierz z identycznymi wierszami, składającymi się z liczb od 0 do b.
+Tytul: Macierz z identycznymi wierszami, skladajacymi sie z liczb od 0 do b.
 
-Treść: Otrzymujesz dwie liczby naturalne, a i b. Stwórz macierz, składającą się z a identycznych wierszy, które składają się z liczb od 0 do b.
+Tresc: Otrzymujesz dwie liczby naturalne, a i b. Stworz macierz, skladajaca sie z a identycznych wierszy, ktore skladaja sie z liczb od 0 do b.
 
-Dane wejściowe: Dwie liczby naturalne, a i b.
+Dane wejsciowe: Dwie liczby naturalne, a i b.
 
-Dane wyjściowe: Lista list liczb naturalnych.
+Dane wyjsciowe: Lista list liczb naturalnych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona macierz: [[0, 1, 2], [0, 1, 2], [0, 1, 2]].
+Dla otrzymanych liczb: 3 i 2, powinna zostac zwrocona macierz: [[0, 1, 2], [0, 1, 2], [0, 1, 2]].
 */
 
 function utworzMacierz(a, b) {
@@ -34,12 +34,12 @@ function test() {
   const wynik = utworzMacierz(3, 2);
   console.assert(
     wynik.length === oczekiwana.length,
-    `Długości macierzy nie są równe. Oczekiwano: ${oczekiwana.length}, otrzymano: ${wynik.length}.`
+    `Dlugosci macierzy nie sa rowne. Oczekiwano: ${oczekiwana.length}, otrzymano: ${wynik.length}.`
   );
   for (let i = 0; i < wynik.length; i++) {
     console.assert(
       wynik[i].length === oczekiwana[i].length,
-      `Długości wierszy nie są równe. Oczekiwano: ${oczekiwana[i].length}, otrzymano: ${wynik[i].length}.`
+      `Dlugosci wierszy nie sa rowne. Oczekiwano: ${oczekiwana[i].length}, otrzymano: ${wynik[i].length}.`
     );
     for (let j = 0; j < wynik[i].length; j++) {
       console.assert(
@@ -51,3 +51,4 @@ function test() {
 }
 
 test();
+

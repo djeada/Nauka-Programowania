@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Obliczenie iloczynu wielomianu przez skalar.
+Tytul: Obliczenie iloczynu wielomianu przez skalar.
 
-Treść: Otrzymujesz listę n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbę x. Oblicz współczynniki wielomianu, który jest wynikiem pomnożenia otrzymanego wielomianu przez liczbę x.
+Tresc: Otrzymujesz liste n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbe x. Oblicz wspolczynniki wielomianu, ktory jest wynikiem pomnozenia otrzymanego wielomianu przez liczbe x.
 
-Dane wejściowe: Lista liczb naturalnych i liczba naturalna.
+Dane wejsciowe: Lista liczb naturalnych i liczba naturalna.
 
-Dane wyjściowe: Lista liczb naturalnych.
+Dane wyjsciowe: Lista liczb naturalnych.
 
-Przykład:
+Przyklad:
 
-Dla listy współczynników [4, -3, 2] i liczby x = -2, zostanie zwrócona lista [-8, 6, -4].
+Dla listy wspolczynnikow [4, -3, 2] i liczby x = -2, zostanie zwrocona lista [-8, 6, -4].
 */
 function mnozenieWielomianuPrzezSkalar(wspolczynniki, skalar) {
   return wspolczynniki.map((wspolczynnik) => wspolczynnik * skalar);
@@ -48,4 +48,5 @@ function testMnozenieWielomianuPrzezSkalar() {
 }
 
 testMnozenieWielomianuPrzezSkalar();
-console.log("Wszystkie testy zakończone sukcesem");
+console.log("Wszystkie testy zakonczone sukcesem");
+

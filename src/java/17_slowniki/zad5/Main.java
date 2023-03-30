@@ -1,3 +1,13 @@
+/*
+Tytul: Najczesciej wystepujaca litera w zdaniu
+Tresc: Otrzymujesz napis reprezentujacy zdanie. Twoim zadaniem jest znalezienie najczesciej wystepujacej litery w zdaniu. Jesli wiecej niz jedna litera wystepuje te sama liczbe razy, nalezy zwrocic litere najwczesniej pojawiajaca sie w zdaniu.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Znak.
+Przyklad:
+Dla otrzymanego napisu: "lezy jerzy na wiezy"
+Powinna zostac zwrocona litera: 'e'
+
+*/
 import java.util.*;
 
 public class Main {
@@ -86,3 +96,4 @@ public class Main {
     test2();
   }
 }
+

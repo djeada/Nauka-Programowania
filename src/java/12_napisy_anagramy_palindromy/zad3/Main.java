@@ -1,8 +1,13 @@
-import java.util.Arrays;
-
 /*
-Czy napisy sa swoimi anagramami?
+Tytul: Sprawdzenie, czy dwa slowa sa anagramami.
+Tresc: Napisz program, ktory dla podanych dwoch napisow sprawdzi, czy sa anagramami. Dwa napisy sa anagramami, jesli jeden z nich mozna zbudowac poprzez przestawienie znakow w drugim.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla otrzymanego napisu: “ula” oraz “lua”, powinna zostac zwrocona wartosc logiczna: Prawda.
+
 */
+import java.util.Arrays;
 
 public class Main {
 
@@ -52,3 +57,4 @@ public class Main {
     assert !czyAnagramyV2(napisA, napisB);
   }
 }
+

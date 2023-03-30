@@ -1,6 +1,11 @@
-
 /*
-Sprawdz czy slowo jest palindromem.
+Tytul: Sprawdzenie, czy slowo jest palindromem.
+Tresc: Napisz program, ktory sprawdzi, czy slowo jest palindromem. Palindromem jest slowo, ktore brzmi tak samo czytane od lewej do prawej i od prawej do lewej.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla otrzymanego napisu: “kajak”, powinna zostac zwrocona wartosc logiczna: Prawda.
+
 */
 
 public class Main {
@@ -35,3 +40,4 @@ public class Main {
     assert !czyPalindromV2(slowo);
   }
 }
+

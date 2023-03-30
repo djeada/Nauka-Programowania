@@ -1,11 +1,21 @@
 """
-Dla pobranej od uzytkownika liczby, wypisz wszystkie liczby naturalne:
+Tytul: Liczby spelniajace okreslone warunki.
+Tresc: Dla pobranej liczby naturalnej wypisz:
+a) wszystkie liczby naturalne mniejsze od pobranej, ktorych suma cyfr jest rowna 10,
+b) wszystkie liczby naturalne dwucyfrowe wieksze od pobranej,
+c) wszystkie liczby naturalne trzycyfrowe, ktorych suma cyfr jest rowna pobranej liczbie,
+d) wszystkie liczby naturalne trzycyfrowe podzielne przez sume cyfr pobranej liczby,
+e) wszystkie liczby naturalne mniejsze od pobranej, skladajace sie wylacznie z parzystych cyfr.
+Dane wejsciowe: Liczba naturalna dla wszystkich podpunktow.
+Dane wyjsciowe: Kilka liczb naturalnych.
+Przyklady
+Dla pobranej liczby: 95:
+a) wszystkie liczby naturalne mniejsze od pobranej, ktorych suma cyfr jest rowna 10: brak
+b) wszystkie liczby naturalne dwucyfrowe wieksze od pobranej: 96, 97, 98, 99
+c) wszystkie liczby naturalne trzycyfrowe, ktorych suma cyfr jest rowna pobranej liczbie: brak
+d) wszystkie liczby naturalne trzycyfrowe podzielne przez sume cyfr pobranej liczby: brak
+e) wszystkie liczby naturalne mniejsze od pobranej, skladajace sie wylacznie z parzystych cyfr: 2, 4
 
-a) Mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10.
-b) Dwucyfrowe, wieksze od pobranej liczby.
-c) Trzycyfrowe, ktorych suma cyfr jest rowna pobranej liczbie.
-d) Trzycyfrowe podzielne przez sume cyfr pobranej liczby.
-e) Mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr.
 """
 
 if __name__ == "__main__":
@@ -64,3 +74,4 @@ if __name__ == "__main__":
                 break
         if flaga:
             print(i)
+

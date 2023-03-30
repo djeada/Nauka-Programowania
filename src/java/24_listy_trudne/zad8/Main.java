@@ -1,14 +1,13 @@
-import java.util.*;
-
 /*
-Otrzymujesz liste liczb oraz liczbe n. Lista reprezentuje ceny sznurka o
-dlugosci rownej indeksowi powiekszonemu o 1. Zaleznosc miedzy cenami i dlugoscia
-sznurka jest przypadkowa. Przykladowo sznurek o dlugosci rownej 2 jednostkom
-moze kosztowac tyle samo co sznurek o dlugosci rownej 3 jednostkom i byc piec
-razy drozszy niz sznurek o dlugosci 1 jednostce. Liczba n to dlugosc sznurka
-jaki mamy szprzedac. Na ile czesci powinnismy podzielic nasz sznurek, aby
-zarobic jak najwiecej na sprzedazy.
+Tytul: Sznurek.
+Tresc: Masz do sprzedania sznurek o dlugosci n, a takze liste cen dla sznurkow o dlugosciach od 1 do n. Ceny moga byc rozne dla roznych dlugosci. Znajdz maksymalny zysk, ktory mozna osiagnac poprzez sprzedaz danego sznurka.
+Dane wejsciowe: Lista n liczb calkowitych reprezentujacych ceny dla sznurkow o dlugosciach od 1 do n, oraz liczba naturalna n reprezentujaca dlugosc sznurka, ktory chcesz sprzedac.
+Dane wyjsciowe: Najwieksza mozliwa wartosc, jaka mozna uzyskac ze sprzedazy danego sznurka.
+Przyklad:
+Dla listy cen: [1, 5, 8, 9, 10, 17, 17, 20] oraz dlugosci sznurka 4, powinna zostac zwrocona liczba 10.
+
 */
+import java.util.*;
 
 public class Main {
 
@@ -84,3 +83,4 @@ public class Main {
     test3();
   }
 }
+

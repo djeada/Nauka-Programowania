@@ -1,8 +1,13 @@
-import math
+"""
+Tytul: Naiwny test pierwszosci
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej sprawdzi, czy jest ona liczba pierwsza.
+Dane wejsciowe: liczba naturalna
+Dane wyjsciowe: wartosc logiczna
+Przyklad:
+Dla otrzymanej liczby 7, funkcja powinna zwrocic wartosc logiczna prawda. Dla otrzymanej liczby 2, funkcja powinna zwrocic wartosc logiczna prawda.
 
 """
-Napisz funkcje, ktora dla otrzymanej liczby sprawdzi czy jest ona liczba pierwsza.
-"""
+import math
 
 
 def podziel(a, b):
@@ -51,3 +56,4 @@ def test_podziel():
 if __name__ == "__main__":
 
     test_podziel()
+

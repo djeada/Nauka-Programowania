@@ -1,3 +1,18 @@
+/*
+Tytul: Wypisz co k-ty znak napisu poziomo i pionowo.
+Tresc: Otrzymasz napis oraz liczbe k.
+a) Wypisz co k-ty znak napisu poziomo, rozdzielajac znaki spacjami.
+b) Wypisz co k-ty znak napisu pionowo, rozdzielajac znaki enterami.
+Dane wejsciowe: Napis oraz liczba.
+Dane wyjsciowe: Napis.
+Przyklad:
+a) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony napis: "z h n".
+b) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony napis:
+z
+h
+n
+
+*/
 import java.util.*;
 
 public class Main {
@@ -43,3 +58,4 @@ public class Main {
     test1();
   }
 }
+

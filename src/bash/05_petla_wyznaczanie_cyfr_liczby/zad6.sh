@@ -1,13 +1,24 @@
-#!/usr/bin/env bash
-
-#Dla pobranej od uzytkownika liczby, zwroc wszystkie liczby:
+# Tytul: Liczby spelniajace okreslone warunki.
+# Tresc: Dla pobranej liczby naturalnej wypisz:
+# a) wszystkie liczby naturalne mniejsze od pobranej, ktorych suma cyfr jest rowna 10,
+# b) wszystkie liczby naturalne dwucyfrowe wieksze od pobranej,
+# c) wszystkie liczby naturalne trzycyfrowe, ktorych suma cyfr jest rowna pobranej liczbie,
+# d) wszystkie liczby naturalne trzycyfrowe podzielne przez sume cyfr pobranej liczby,
+# e) wszystkie liczby naturalne mniejsze od pobranej, skladajace sie wylacznie z parzystych cyfr.
+# Dane wejsciowe: Liczba naturalna dla wszystkich podpunktow.
+# Dane wyjsciowe: Kilka liczb naturalnych.
+# Przyklady
+# Dla pobranej liczby: 95:
+# a) wszystkie liczby naturalne mniejsze od pobranej, ktorych suma cyfr jest rowna 10: brak
+# b) wszystkie liczby naturalne dwucyfrowe wieksze od pobranej: 96, 97, 98, 99
+# c) wszystkie liczby naturalne trzycyfrowe, ktorych suma cyfr jest rowna pobranej liczbie: brak
+# d) wszystkie liczby naturalne trzycyfrowe podzielne przez sume cyfr pobranej liczby: brak
+# e) wszystkie liczby naturalne mniejsze od pobranej, skladajace sie wylacznie z parzystych cyfr: 2, 4
 
 main() {
 
     echo "Podaj liczbe: "
     read a
-
-    #a) mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10
 
     echo "mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: "
     for (( i=0; i<$a; i++ )); do
@@ -24,15 +35,12 @@ main() {
         fi
     done
 
-    #b) dwucyfrowe mniejsze od pobranej liczby
-
     echo "dwucyfrowe mniejsze od pobranej liczby: "
     for (( i=10; i<100 && i <$a; i++ )); do
         echo $i
     done
 
-
-    #c) trzycyfrowe ktorych suma cyfr jest    rowna pobranej liczbie
+    echo "trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie"
     echo "trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie"
     for (( i=100; i<1000; i++ )); do
         pom=$i
@@ -48,7 +56,7 @@ main() {
         fi
     done
 
-    #d) trzycyfrowe podzielne przez sume cyfr pobranej liczby
+    echo "trzycyfrowe podzielne przez sume cyfr pobranej liczby"
     echo "trzycyfrowe podzielne przez sume cyfr pobranej liczby"
 
     pom=$a
@@ -66,7 +74,7 @@ main() {
         fi
     done
 
-    #d) mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr
+    echo "mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr"
     echo "mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr"
 
     for (( i=0; i<$a; i++ )); do
@@ -87,7 +95,6 @@ main() {
         fi
 
     done
-
 
 }
 

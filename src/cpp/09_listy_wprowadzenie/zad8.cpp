@@ -1,11 +1,15 @@
+/*
+Tytul: Znalezienie wszystkich par elementow listy o sumie rownej podanej
+liczbie. Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x, znajdz
+wszystkie pary elementow listy, ktorych suma jest rowna x. Dane wejsciowe: Lista
+liczb calkowitych oraz liczba calkowita. Dane wyjsciowe: Lista par liczb
+calkowitych. Przyklad: Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5,
+zostana zwrocone wszystkie pary elementow o sumie rownej 5: [(1, 4), (2, 3)].
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <vector>
-
-/*
-Dla otrzymanej listy oraz klucza, usun pierwsze
-wystapienie klucza w liscie.
-*/
 
 void usunPierwszeWystapienieV1(std::vector<int> &lista, int klucz) {
   std::vector<int>::iterator it = lista.begin();
@@ -63,3 +67,4 @@ int main() {
 
   return 0;
 }
+

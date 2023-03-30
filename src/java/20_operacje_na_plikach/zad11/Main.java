@@ -1,69 +1,79 @@
-import java.io.*;
+/*
+Tytul: Znalezienie sciezki pliku o danej nazwie
+Tresc: Otrzymujesz napis reprezentujacy nazwe pliku. Przeszukaj caly system i zapisz w liscie wszystkie sciezki plikow o podanej nazwie.
+Dane wejsciowe: Napis
+Dane wyjsciowe: Lista napisow
+
+*/
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
-  public static String rozszerzenie(String fileName) {
-    char ch;
-    int len;
-    if (fileName == null
-        || (len = fileName.length()) == 0
-        || (ch = fileName.charAt(len - 1)) == '/'
-        || ch == '\\'
-        || ch == '.') return "";
-    int dotInd = fileName.lastIndexOf('.'),
-        sepInd = Math.max(fileName.lastIndexOf('/'), fileName.lastIndexOf('\\'));
-    if (dotInd <= sepInd) return "";
-    else return fileName.substring(dotInd + 1).toLowerCase();
-  }
-
-  public static String nazwaPliku(final String sciezka) {
-    File plik = new File(sciezka);
-    return plik.getName();
-  }
-
-  public static void skopiujPlik(final String sciezka, final String sciezkaDocelowa) {
-    var zrodlo = (new File(sciezka)).toPath();
-    var cel = (new File(sciezkaDocelowa)).toPath();
-
-    System.out.println(zrodlo);
-    System.out.println(cel);
+  public static List<String> readFile(String path) {
+    List<String> content = new ArrayList<>();
     try {
-      Files.copy(zrodlo, cel);
-
+      content = Files.readAllLines(Paths.get(path), StandardCharsets.UTF_8);
     } catch (IOException e) {
-      System.out.println("Blad przy kopiowaniu.");
+      System.out.println("Error: " + e.getMessage());
+    }
+    return content;
+  }
+
+  public static void copyFile(String srcPath, String destPath) {
+    try {
+      Files.copy(Paths.get(srcPath), Paths.get(destPath), StandardCopyOption.REPLACE_EXISTING);
+    } catch (IOException e) {
+      System.out.println("Error: " + e.getMessage());
     }
   }
 
-  public static void zamienPliki(final String sciezkaA, final String sciezkaB) {
+  public static void swapFiles(String pathA, String pathB) {
+    String tempPath = pathB;
 
-    File tempPlik;
+    while (Files.exists(Paths.get(tempPath))) {
+      tempPath =
+          Paths.get(tempPath).getParent().toString() + "/x" + Paths.get(tempPath).getFileName();
+    }
+
+    copyFile(pathA, tempPath);
+    copyFile(pathB, pathA);
+    copyFile(tempPath, pathB);
     try {
-      tempPlik = File.createTempFile("temp", "." + rozszerzenie(sciezkaA));
-      String tempSciezka = tempPlik.getAbsolutePath();
-      tempPlik.delete();
-
-      skopiujPlik(sciezkaA, tempSciezka);
-      (new File(sciezkaA)).delete();
-
-      skopiujPlik(sciezkaB, sciezkaA);
-      (new File(sciezkaB)).delete();
-
-      skopiujPlik(tempSciezka, sciezkaB);
-      (new File(tempSciezka)).delete();
-
+      Files.delete(Paths.get(tempPath));
     } catch (IOException e) {
-      System.out.println("Blad przy tworzeniu pliku tymczasowego.");
+      System.out.println("Error: " + e.getMessage());
     }
   }
 
-  public static void main(String[] args) {
+  public static void testSwapFiles() throws IOException {
+    String testFolderPath = "test";
+    Files.createDirectory(Paths.get(testFolderPath));
 
-    final String sciezkaA =
-        System.getProperty("user.dir") + System.getProperty("file.separator") + "folder/test.txt";
-    final String sciezkaB =
-        System.getProperty("user.dir") + System.getProperty("file.separator") + "folder2/test.txt";
-    zamienPliki(sciezkaA, sciezkaB);
+    String pathA = testFolderPath + "/fileA.txt";
+    String pathB = testFolderPath + "/fileB.txt";
+
+    String textA = "Ala ma kota";
+    String textB = "Kot ma Ale";
+
+    Files.write(Paths.get(pathA), textA.getBytes(StandardCharsets.UTF_8));
+    Files.write(Paths.get(pathB), textB.getBytes(StandardCharsets.UTF_8));
+
+    swapFiles(pathA, pathB);
+
+    assert readFile(pathA).get(0).equals(textB);
+    assert readFile(pathB).get(0).equals(textA);
+
+    Files.delete(Paths.get(testFolderPath));
+  }
+
+  public static void main(String[] args) throws IOException {
+    String pathA = "folder/test.txt";
+    String pathB = "folder2/test2.txt";
+    swapFiles(pathA, pathB);
   }
 }
+

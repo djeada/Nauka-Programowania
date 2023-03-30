@@ -1,9 +1,13 @@
-import java.util.*;
-
 /*
-Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj nazwe pliku ze sciezki.
-Zwroc sama nazwe pliku, bez rozszerzen.
+Tytul: Czy napis sklada sie wylacznie z cyfr?
+Tresc: Masz napis. Sprawdz, czy sklada sie on wylacznie z cyfr.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla napisu: “1234”, powinna zostac zwrocona wartosc logiczna: Prawda.
+
 */
+import java.util.*;
 
 public class Main {
   public static String nazwaPlikuV1(String sciezka) {
@@ -42,3 +46,4 @@ public class Main {
     test4();
   }
 }
+

@@ -1,3 +1,15 @@
+/*
+Tytul: Trojkat Pascala.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze trojkat Pascala o wysokosci rownej tej liczbie.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Komunikat.
+Przyklad:
+Dla otrzymanej liczby 3 powinno zostac wypisane:
+1
+11
+121
+
+*/
 public class Main {
   public static boolean czyPierwsza(int n) {
 
@@ -61,3 +73,4 @@ public class Main {
     liczbyPierwszeV2(a);
   }
 }
+

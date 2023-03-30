@@ -1,3 +1,12 @@
+/*
+Tytul: Napis skladajacy sie z liczb od 1 do n.
+Tresc: Otrzymasz liczbe naturalna n. Zwroc napis skladajacy sie z liczb naturalnych od 1 do n.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanej liczby n rownej 3 powinien zostac zwrocony napis: "123".
+
+*/
 import java.util.*;
 
 public class Main {
@@ -28,3 +37,4 @@ public class Main {
     wypiszPionowo(napis, k);
   }
 }
+

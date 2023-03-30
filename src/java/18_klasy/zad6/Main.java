@@ -1,3 +1,14 @@
+/*
+Tytul: Zaprojektuj klase Zespolona.
+Tresc: Napisz klase Zespolona, ktora bedzie reprezentowala liczbe zespolona. Klasa powinna zawierac nastepujace funkcje:
+1. Konstruktor, ktory przyjmuje jako argument dwie liczby. Pierwsza liczba reprezentuje czesc rzeczywista, a druga czesc urojona liczby zespolonej. Domyslne wartosci dla obu argumentow to 0.
+2. Funkcje, ktore zwracaja wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnozenie, dzielenie). Jesli jest to mozliwe, nalezy przeciazyc operatory: +, -, *, /.
+3. Funkcje, ktora wypisuje informacje o liczbie zespolonej na standardowe wyjscie.
+4. Funkcje umozliwiajace porownanie dwoch obiektow klasy Zespolona. Jesli jest to mozliwe, nalezy przeciazyc operatory == oraz !=.
+5. Funkcje modul, ktora zwraca modul liczby zespolonej.
+Napisz program, ktory przetestuje twoja klase. Stworz liczby zespolone: A (9, 12) oraz B (-3, -3). Wypisz na standardowe wyjscie informacje o utworzonych liczbach zespolonych oraz ich sume, roznice pierwszej i drugiej, iloraz pierwszej przez druga oraz iloczyn liczb zespolonych.
+
+*/
 import java.util.*;
 
 public class Macierz {
@@ -185,3 +196,4 @@ public class Macierz {
     System.out.print("\n");
   }
 }
+

@@ -1,25 +1,25 @@
 /*
 
-Tytuł: Gra w statki
+Tytul: Gra w statki
 
-Treść: Napisz program implementujący grę w statki.
+Tresc: Napisz program implementujacy gre w statki.
 
-Stwórz macierz o wymiarach 10x10. Wylosuj położenia statków i zapisz je w macierzy. Do dyspozycji masz następujące statki:
+Stworz macierz o wymiarach 10x10. Wylosuj polozenia statkow i zapisz je w macierzy. Do dyspozycji masz nastepujace statki:
 
-* 1 statek o długości 4
-* 2 statki o długości 3
-* 3 statki o długości 2
-* 5 statków o długości 1
+* 1 statek o dlugosci 4
+* 2 statki o dlugosci 3
+* 3 statki o dlugosci 2
+* 5 statkow o dlugosci 1
 
-Każde pole może zawierać tylko jeden statek.
+Kazde pole moze zawierac tylko jeden statek.
 
-Wypisz na standardowe wyjście planszę złożoną z 10x10 kropek i poproś użytkownika o podanie współrzędnych. Jeśli na podanych przez użytkownika współrzędnych znajduje się statek, zamień kropkę na literę o na planszy. W przeciwnym razie, zamień kropkę na literę x.
+Wypisz na standardowe wyjscie plansze zlozona z 10x10 kropek i popros uzytkownika o podanie wspolrzednych. Jesli na podanych przez uzytkownika wspolrzednych znajduje sie statek, zamien kropke na litere o na planszy. W przeciwnym razie, zamien kropke na litere x.
 
-Powtarzaj krok 2, aż wszystkie pozycje statków zostaną odkryte przez użytkownika lub aż na planszy pojawi się 10 liter x. W obu przypadkach zakończ grę i poinformuj użytkownika o wyniku.
+Powtarzaj krok 2, az wszystkie pozycje statkow zostana odkryte przez uzytkownika lub az na planszy pojawi sie 10 liter x. W obu przypadkach zakoncz gre i poinformuj uzytkownika o wyniku.
 
 */
 
-// funkcja zwracająca nową, pustą planszę o wymiarach 10x10
+// funkcja zwracajaca nowa, pusta plansze o wymiarach 10x10
 function nowaPlansza() {
   const plansza = [];
 
@@ -30,7 +30,7 @@ function nowaPlansza() {
   return plansza;
 }
 
-// funkcja losująca położenie statków i zwracająca planszę z umieszczonymi na niej statkami
+// funkcja losujaca polozenie statkow i zwracajaca plansze z umieszczonymi na niej statkami
 function losujStatki() {
   const plansza = nowaPlansza();
 
@@ -42,7 +42,7 @@ function losujStatki() {
     let pozycja;
     let orientacja;
 
-    // losujemy pozycję i orientację statku tak długo, aż znajdziemy takie, które nie nachodzą na inne statki
+    // losujemy pozycje i orientacje statku tak dlugo, az znajdziemy takie, ktore nie nachodza na inne statki
     do {
       pozycja = [
         Math.floor(Math.random() * 10),
@@ -64,7 +64,7 @@ function losujStatki() {
   return plansza;
 }
 
-// funkcja sprawdzająca, czy można umieścić statek o podanych parametrach na planszy
+// funkcja sprawdzajaca, czy mozna umiescic statek o podanych parametrach na planszy
 function czyMoznaUmiescicStatek(plansza, pozycja, orientacja, dlugosc) {
   const [x, y] = pozycja;
 
@@ -93,7 +93,7 @@ function czyMoznaUmiescicStatek(plansza, pozycja, orientacja, dlugosc) {
   return true;
 }
 
-// funkcja wypisująca planszę na standardowe wyjście
+// funkcja wypisujaca plansze na standardowe wyjscie
 function wypiszPlansze(plansza) {
   console.log("  A B C D E F G H I J");
   for (let i = 0; i < 10; i++) {
@@ -102,13 +102,13 @@ function wypiszPlansze(plansza) {
   }
 }
 
-let remaining_ships = 15; // początkowo jest 15 statków do zatopienia
+let remaining_ships = 15; // poczatkowo jest 15 statkow do zatopienia
 
 while (remaining_ships > 0 && hits < 10) {
   // wypisanie planszy
   console.log(board.map((row) => row.join(" ")).join("\n"));
 
-  // pyta użytkownika o współrzędne
+  // pyta uzytkownika o wspolrzedne
   let row = prompt("Podaj numer wiersza (1-10): ");
   let col = prompt("Podaj numer kolumny (1-10): ");
 
@@ -116,16 +116,17 @@ while (remaining_ships > 0 && hits < 10) {
   row = parseInt(row) - 1;
   col = parseInt(col) - 1;
 
-  // sprawdzenie, czy użytkownik trafił w statek
+  // sprawdzenie, czy uzytkownik trafil w statek
   if (board[row][col] === "o") {
     console.log("TRAFIONY!");
     board[row][col] = "x"; // oznaczenie trafienia
-    remaining_ships--; // zmniejszenie liczby pozostałych statków
+    remaining_ships--; // zmniejszenie liczby pozostalych statkow
   } else if (board[row][col] === ".") {
-    console.log("PUDŁO!");
-    board[row][col] = "x"; // oznaczenie pudła
-    hits++; // zwiększenie liczby trafień w puste pola
+    console.log("PUDLO!");
+    board[row][col] = "x"; // oznaczenie pudla
+    hits++; // zwiekszenie liczby trafien w puste pola
   } else {
-    console.log("Już tu strzelałeś!");
+    console.log("Juz tu strzelales!");
   }
 }
+

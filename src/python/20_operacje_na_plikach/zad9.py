@@ -1,14 +1,16 @@
 """
-Otrzymujesz napis reprezentujacy sciezke folderu. Usun 
-wszystkie pliki o rozmiarach wiekszych niz 10 kB znajdujace 
-sie w podanym folderze oraz jego podfolderach.
+Tytul: Przesun wszystkie pliki CSV do jednego folderu.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Przenies wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderow) do drugiego folderu.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
+Dane wyjsciowe: Brak.
+
 """
 import pathlib
 
 
 def usun_pliki(sciezka):
     """
-    Funkcja usuwa pliki o rozmiarze wiekszym niz 10kB znajdujace sie 
+    Funkcja usuwa pliki o rozmiarze wiekszym niz 10kB znajdujace sie
     w podanym folderze oraz jego podfolderach.
     """
     for sciezka_do_pliku in sciezka.iterdir():
@@ -44,3 +46,4 @@ def test_usun_pliki():
 if __name__ == "__main__":
 
     test_usun_pliki()
+

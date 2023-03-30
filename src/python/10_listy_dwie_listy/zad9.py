@@ -1,6 +1,11 @@
 """
-Otrzymujesz dwie listy liczb calkowitych. Usun z pierwszej 
-listy te elementy, ktore wystepuja rowniez w drugiej liscie.
+Tytul: Znajdz mediane dwoch posortowanych list.
+Tresc: Otrzymujesz dwie posortowane listy liczb calkowitych rownej dlugosci. Znajdz ich mediane.
+Dane wejsciowe: Dwie listy liczb calkowitych o rownej dlugosci.
+Dane wyjsciowe: Liczba zmiennoprzecinkowa.
+Przyklad:
+Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinno zostac zwrocone: 4.5.
+
 """
 
 
@@ -20,3 +25,4 @@ def test_usun_czesc_wspolna():
 if __name__ == "__main__":
 
     test_usun_czesc_wspolna()
+

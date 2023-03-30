@@ -1,13 +1,13 @@
 /*
-Tytuł: Jaki mamy dzień tygodnia?	
+Tytul: Jaki mamy dzien tygodnia?	
 
-Treść: Napisz program, który dla trzech pobranych liczb naturalnych (reprezentujących datę) będzie wypisywał odpowiadający im dzień tygodnia. Pierwsza liczba jest dniem, druga miesiącem, trzecia rokiem.
+Tresc: Napisz program, ktory dla trzech pobranych liczb naturalnych (reprezentujacych date) bedzie wypisywal odpowiadajacy im dzien tygodnia. Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem.
 
-Podpowiedź: Można użyć wzoru Gaussa:
-Niech data będzie dana w formacie DD/MM/CCYY :
+Podpowiedz: Mozna uzyc wzoru Gaussa:
+Niech data bedzie dana w formacie DD/MM/CCYY :
 
-* DD - dzień
-* MM - miesiąc
+* DD - dzien
+* MM - miesiac
 * CC - stulecie
 * YY - rok
 
@@ -19,18 +19,18 @@ $$C = 26*(MM + 1)/10$$
 
 $$Dzien = (A + B + C + DD) mod 7$$
 
-Dane wejściowe: Trzy liczby naturalne.
+Dane wejsciowe: Trzy liczby naturalne.
 
-Dane wyjściowe: Komunikat o dniu tygodnia.
+Dane wyjsciowe: Komunikat o dniu tygodnia.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb 9, 10 i 2020, program powinien zwrócić napis "Czwartek".
+Dla pobranych liczb 9, 10 i 2020, program powinien zwrocic napis "Czwartek".
 */
 
-// Pobieranie danych od użytkownika
-const dzien = parseInt(prompt("Podaj dzień:"));
-const miesiac = parseInt(prompt("Podaj miesiąc:"));
+// Pobieranie danych od uzytkownika
+const dzien = parseInt(prompt("Podaj dzien:"));
+const miesiac = parseInt(prompt("Podaj miesiac:"));
 const rok = parseInt(prompt("Podaj rok:"));
 
 const A = rok; // 4 - 2 * rok - 1
@@ -42,15 +42,16 @@ const dzien_tygodnia = (A + B + C + dzien) % 7;
 if (dzien_tygodnia === 0) {
   console.log("Niedziela");
 } else if (dzien_tygodnia === 1) {
-  console.log("Poniedziałek");
+  console.log("Poniedzialek");
 } else if (dzien_tygodnia === 2) {
   console.log("Wtorek");
 } else if (dzien_tygodnia === 3) {
-  console.log("Środa");
+  console.log("Sroda");
 } else if (dzien_tygodnia === 4) {
   console.log("Czwartek");
 } else if (dzien_tygodnia === 5) {
-  console.log("Piątek");
+  console.log("Piatek");
 } else {
   console.log("Sobota");
 }
+

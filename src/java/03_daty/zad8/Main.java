@@ -1,20 +1,15 @@
+/*
+Tytul: Ile dni minelo od poczatku roku?
+Tresc: Dla trzech pobranych liczb: reprezentujacych date wypisz, ile dni minelo od poczatku roku. Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad: Dla pobranych liczb: 14, 2 oraz 1482, powinna zostac zwrocona liczba 45. **
+
+*/
 import java.util.*;
 
 public class Main {
   public static void main(String[] args) {
-
-    /*Niech data bedzie dana w formacie DD/MM/CCYY :
-    DD - dzien
-    MM - miesiac
-    CC - stulecie
-    YY - rok
-
-    A = CC/4 - 2*CC - 1
-    B = 5*YY/4
-    C = 26*(MM + 1)/10
-
-    Dzien = (A + B + C + DD) mod 7
-    */
 
     Scanner s = new Scanner(System.in);
 
@@ -72,3 +67,4 @@ public class Main {
     }
   }
 }
+

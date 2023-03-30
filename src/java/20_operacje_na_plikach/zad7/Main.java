@@ -1,48 +1,66 @@
+/*
+Tytul: Skopiuj pliki.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Skopiuj wszystkie pliki PNG z pierwszego folderu do drugiego folderu.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
+Dane wyjsciowe: Brak.
+
+*/
 import java.io.*;
-import java.nio.file.*;
-import java.util.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
-  // Otrzymujesz dwa napisy. Pierwszy reprezentuje sciezke pliku tekstowego.
-  // Drugi wiersz tekstu. Dodaj wiersz na poczatku pliku.
 
-  public static ArrayList<String> wczytajPlik(final String sciezka) {
+  public static List<String> readFile(String filePath) {
+    List<String> content = new ArrayList<>();
 
-    File plik = new File(sciezka);
-    ArrayList<String> tresc = new ArrayList<String>();
-
-    if (plik.exists()) {
-      try (BufferedReader br =
-          new BufferedReader(new InputStreamReader(new FileInputStream(plik), "UTF-8"))) {
-        String wiersz = null;
-        while ((wiersz = br.readLine()) != null) {
-          tresc.add(wiersz);
-        }
-      } catch (IOException e) {
-        e.printStackTrace();
+    try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+      String line;
+      while ((line = reader.readLine()) != null) {
+        content.add(line);
       }
-    } else {
-      System.out.println("Plik nie istnieje.");
-    }
-
-    return tresc;
-  }
-
-  public static void zapiszNaPoczatku(final String sciezka, final String dane) {
-
-    var trescPliku = wczytajPlik(sciezka);
-    var tekst = dane + Arrays.deepToString(trescPliku.toArray());
-
-    try {
-      Files.write(Paths.get(sciezka), tekst.getBytes());
     } catch (IOException e) {
-      System.out.println("Blad zapisu do pliku.");
+      System.out.println("Error: " + e.getMessage());
+    }
+
+    return content;
+  }
+
+  public static void writeAtBeginning(String filePath, String data) {
+    List<String> fileContent = readFile(filePath);
+
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+      writer.write(data);
+      for (String line : fileContent) {
+        writer.write(line + "\n");
+      }
+    } catch (IOException e) {
+      System.out.println("Error: " + e.getMessage());
     }
   }
 
-  public static void main(String[] args) {
+  public static void test1() throws IOException {
+    Path path = Paths.get("temp.txt");
 
-    final String sciezka = "folder/test.txt";
-    zapiszNaPoczatku(sciezka, "Hej \n");
+    try (BufferedWriter writer = Files.newBufferedWriter(path)) {
+      writer.write("example text\n");
+    }
+
+    writeAtBeginning(path.toString(), "Hey \n");
+    List<String> expectedResult = new ArrayList<>();
+    expectedResult.add("Hey ");
+    expectedResult.add("example text");
+
+    assert readFile(path.toString()).equals(expectedResult);
+
+    Files.delete(path);
+  }
+
+  public static void main(String[] args) throws IOException {
+    test1();
   }
 }
+

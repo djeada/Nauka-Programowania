@@ -1,6 +1,13 @@
 """
-Otrzymujesz liczbe N. Przy uzyciu rekurencji 
-oblicz wartosc N-tego wyrazu ciagu Fibonacciego.
+Tytul: N-ty wyraz ciagu danego wzorem rekurencyjnym.
+Tresc: Otrzymujesz liczbe N. Oblicz wartosc N-tego wyrazu ciagu danego wzorem rekurencyjnym:
+* $a_1 = 1$
+* $a_n = 1+2*a_{n-1}$
+Dane wejsciowe: Liczba naturalna N.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla N = 5, powinna zostac zwrocona liczba: 31.
+
 """
 
 
@@ -28,3 +35,4 @@ def test_wyraz_ciag_fibonacciego():
 if __name__ == "__main__":
 
     test_wyraz_ciag_fibonacciego()
+

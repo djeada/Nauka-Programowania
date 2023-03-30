@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Przesuń zera.
+Tytul: Przesun zera.
 
-Treść: Otrzymujesz listę liczb całkowitych. Przesuń wszystkie zera na koniec listy.
+Tresc: Otrzymujesz liste liczb calkowitych. Przesun wszystkie zera na koniec listy.
 
-Dane wejściowe: Lista liczb całkowitych.
+Dane wejsciowe: Lista liczb calkowitych.
 
-Dane wyjściowe: Lista liczb całkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0], powinna zostać zwrócona lista: [1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0].
+Dla otrzymanej listy: [0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0], powinna zostac zwrocona lista: [1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0].
 
 */
 
@@ -41,3 +41,4 @@ console.assert(
   JSON.stringify(przesunZera(lista2)) === JSON.stringify(wynik2),
   "Test 2 nieudany"
 );
+

@@ -1,7 +1,11 @@
 """
-Otrzymujesz rekord z bazy danych reprezentujacy dane pracownika. Sa to kolejno: 
-imie, nazwisko, miejsce urodzenia, stanowisko i zarobki. Informacje rozdzielone 
-sa srednikami. Zapisz je w osobnych zmiennych i wypisz wraz z komunikatem.
+Tytul: Odwroc slowa w zdaniu.
+Tresc: Otrzymujesz napis reprezentujacy zdanie. Zamien slowa zdania na te same napisy zapisane wspak. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "ala mak otak".
+
 """
 
 
@@ -23,3 +27,4 @@ if __name__ == "__main__":
 
     informacje = "Jan;Kowalski;Warszawa;kierownik;2000"
     wypisz_informacje(informacje)
+

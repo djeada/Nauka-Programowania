@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Naiwny test pierwszosci
+# Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej sprawdzi, czy jest ona liczba pierwsza.
+# Dane wejsciowe: liczba naturalna
+# Dane wyjsciowe: wartosc logiczna
+# Przyklad:
+# Dla otrzymanej liczby 7, funkcja powinna zwrocic wartosc logiczna prawda. Dla otrzymanej liczby 2, funkcja powinna zwrocic wartosc logiczna prawda.
 
 source ../assert.sh
-
-#Napisz funkcje, ktora dla otrzymanej liczby
-#sprawdzi czy jest ona liczba pierwsza.
 
 czyPierwsza() {
 
@@ -40,28 +42,27 @@ czyPierwsza() {
     return
 }
 
-
-#Testy
 test1() {
-    a=7
-    assertTrue "$(czyPierwsza $a)" $LINENO
-}
+    test1() {
+        a=7
+        assertTrue "$(czyPierwsza $a)" $LINENO
+    }
 
-test2() {
-    a=4
-    assertFalse "$(czyPierwsza $a)" $LINENO
-}
+    test2() {
+        a=4
+        assertFalse "$(czyPierwsza $a)" $LINENO
+    }
 
-test3() {
-    a=1
-    assertTrue "$(czyPierwsza $a)" $LINENO
-}
+    test3() {
+        a=1
+        assertTrue "$(czyPierwsza $a)" $LINENO
+    }
 
-main() {
-    test1
-    test2
-    test3
-}
+    main() {
+        test1
+        test2
+        test3
+    }
 
-main "$@"
+    main "$@"
 

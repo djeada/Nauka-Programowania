@@ -1,21 +1,22 @@
 /*
-Tytuł: Porównanie ze stałą.
+Tytul: Porownanie ze stala.
 
-Treść: Pobierz od użytkownika liczbę naturalną. Jeśli ta liczba jest większa niż 5, wypisz ją.
+Tresc: Pobierz od uzytkownika liczbe naturalna. Jesli ta liczba jest wieksza niz 5, wypisz ja.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczba naturalna lub brak danych wyjściowych.
+Dane wyjsciowe: Liczba naturalna lub brak danych wyjsciowych.
 
-Przykład:
+Przyklad:
 
-Dla pobranej liczby: 10, powinna zostać wypisana liczba: 10.
+Dla pobranej liczby: 10, powinna zostac wypisana liczba: 10.
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Porównanie ze stałą
+// Porownanie ze stala
 if (liczba > 5) {
   console.log(liczba);
 }
+

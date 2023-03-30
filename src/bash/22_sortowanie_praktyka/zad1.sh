@@ -1,11 +1,14 @@
-#!/usr/bin/env bash
+# Tytul: Sortowanie znakow w napisie.
+# Tresc: Otrzymujesz napis. Posortuj alfabetycznie jego znaki.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Napis.
+# Przyklad:
+# Dla napisu "Ala ma kota" powinno zostac zwrocone " Aaaaklmot".
 
 source ../assert.sh
 
-# Dla otrzymanego napisu, posortuj alfabetycznie jego znaki.
-
 sortuj_napis() {
-    # Funkcja sortuje alfabetycznie napis.
+    local napis="$1"
     local napis="$1"
     echo "$napis" |  grep -o . | sort -V | tr -d "\n"
     echo
@@ -19,7 +22,6 @@ test_sortuj_napis() {
 main() {
     test_sortuj_napis
 }
-
 
 main "$@"
 

@@ -1,10 +1,17 @@
+/*
+Tytul: Liczba zer i jedynek w reprezentacji binarnej.
+Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej.
+a) Oblicz, ile zer zawiera binarna reprezentacja otrzymanej liczby.
+b) Oblicz, ile jedynek zawiera binarna reprezentacja otrzymanej liczby.
+Dane wejsciowe: Liczba naturalna w obu podpunktach.
+Dane wyjsciowe: Liczba naturalna w obu podpunktach.
+Przyklad:
+a) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 0.
+b) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 2.
+
+*/
 #include <algorithm>
 #include <cassert>
-
-/*
-Otrzymujesz dziesietna reprezentacje liczby naturalnej.
-Oblicz dlugosc najdluzszego ciagu zer w jej binarnej reprezentacji.
-*/
 
 int najdluzszyCiagZer(int liczba) {
   /*
@@ -41,3 +48,4 @@ int main() {
 
   return 0;
 }
+

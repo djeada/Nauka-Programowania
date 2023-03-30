@@ -1,19 +1,19 @@
 /*
-Tytuł: Potęga liczby Pi.
+Tytul: Potega liczby Pi.
 
-Treść: Dla otrzymanej liczby naturalnej wypisz liczbę Pi podniesioną do potęgi równej tej liczbie. Wynik powinien zostać zaokrąglony do dwóch miejsc po przecinku.
+Tresc: Dla otrzymanej liczby naturalnej wypisz liczbe Pi podniesiona do potegi rownej tej liczbie. Wynik powinien zostac zaokraglony do dwoch miejsc po przecinku.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład: Dla otrzymanej liczby 1, powinna zostać wypisana liczba 3,14.
+Przyklad: Dla otrzymanej liczby 1, powinna zostac wypisana liczba 3,14.
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Pętla
+// Petla
 let wynik = Math.PI;
 for (let i = 1; i < liczba; i++) {
   wynik *= Math.PI;
@@ -21,3 +21,4 @@ for (let i = 1; i < liczba; i++) {
 
 // Wypisanie wyniku
 console.log(wynik.toFixed(2));
+

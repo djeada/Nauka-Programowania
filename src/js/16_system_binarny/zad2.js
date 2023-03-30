@@ -1,21 +1,21 @@
 /*
-Tytuł:  Konwersja warunkowa.
+Tytul:  Konwersja warunkowa.
 
-Treść: Otrzymujesz liczbę naturalną. Zwróć reprezentację binarną otrzymanej liczby, jeśli:
+Tresc: Otrzymujesz liczbe naturalna. Zwroc reprezentacje binarna otrzymanej liczby, jesli:
 
-a) Otrzymana liczba jest liczbą parzystą.
+a) Otrzymana liczba jest liczba parzysta.
 
-b) Otrzymana liczba jest liczbą pierwszą.
+b) Otrzymana liczba jest liczba pierwsza.
 
-Dane wejściowe: Liczba naturalna w obu podpunktach.
+Dane wejsciowe: Liczba naturalna w obu podpunktach.
 
-Dane wyjściowe: Liczba naturalna w obu podpunktach.
+Dane wyjsciowe: Liczba naturalna w obu podpunktach.
 
-Przykład:
+Przyklad:
 
-a) Dla otrzymanej liczby: 7, nie powinna zostać zwrócona żadna liczba.
+a) Dla otrzymanej liczby: 7, nie powinna zostac zwrocona zadna liczba.
 
-b) Dla otrzymanej liczby: 7, powinna zostać zwrócona liczba: 111.
+b) Dla otrzymanej liczby: 7, powinna zostac zwrocona liczba: 111.
 
 */
 
@@ -44,36 +44,37 @@ function test() {
   let expectedOutput = "";
   let output = konwersjaWarunkowa(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 
   input = 8;
   expectedOutput = "1000";
   output = konwersjaWarunkowa(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 
   input = 11;
   expectedOutput = "";
   output = konwersjaWarunkowa(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 
   input = 13;
   expectedOutput = "1101";
   output = konwersjaWarunkowa(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 
   input = 17;
   expectedOutput = "10001";
   output = konwersjaWarunkowa(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

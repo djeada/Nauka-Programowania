@@ -1,6 +1,9 @@
 """
-Otrzymujesz napis reprezentujacy sciezke pliku tekstowego. 
-Wczytaj i wypisz tresc pliku.
+Tytul: Dodaj wiersz do pliku.
+Tresc zadania: Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke do pliku tekstowego, a drugi napis reprezentuje wiersz tekstu. Dodaj otrzymany wiersz na poczatek pliku tekstowego.
+Dane wejsciowe: Dwa napisy - sciezka do pliku oraz wiersz tekstu.
+Dane wyjsciowe: Brak.
+
 """
 import pathlib
 
@@ -28,3 +31,4 @@ if __name__ == "__main__":
     import shutil
 
     shutil.rmtree("test")
+

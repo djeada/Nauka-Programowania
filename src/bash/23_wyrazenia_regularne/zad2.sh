@@ -1,20 +1,15 @@
-#!/usr/bin/env bash
+# Tytul: Sprawdz czy slowo wystepuje w zdaniu.
+# Tresc: Dostajesz dwa napisy. Sprawdz, czy drugi napis wystepuje w pierwszym jako pojedyncze slowo.
+# Dane wejsciowe: Dwa napisy.
+# Dane wyjsciowe: Wartosc logiczna.
+# Przyklad:
+# Dla napisow: “Siala baba mak.” oraz “babcia”, powinna zostac zwrocona wartosc logiczna: Falsz.
 
 source ../assert.sh
 
-# Otrzymujesz napis reprezentujacy haslo. Sprawdz czy 
-# haslo spelnia nastepujace warunki:
-# 1. Haslo musi zawierac przynajmniej jedna mala litere [a-z].
-# 2. Haslo musi zawierac przynajmniej jedna duza litere [A-Z].
-# 3. Haslo musi zawierac przynajmniej jedna cyfre [0-9].
-# 4. Haslo musi zawierac przynajmniej jeden znak specjalny 
-# [! # $ % & ' * + - / = ? ^ _ ` { | } ~].
-# 5. Minimalna dlugosc hasla to 8 znakow.
-# 6. Maksymalna dlugosc hasla to 20 znakow.
-
 czy_haslo_poprawne() {
     local haslo=$1
-    
+
     if [[ ${#haslo} -lt 8 || ${#haslo} -gt 20 ]]; then
         echo "false"
         return
@@ -52,7 +47,6 @@ test_czy_haslo_poprawne() {
 main() {
     test_czy_haslo_poprawne
 }
-
 
 main "$@"
 

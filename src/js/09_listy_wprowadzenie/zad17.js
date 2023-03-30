@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Znalezienie wszystkich par elementów listy o sumie równej podanej liczbie.
+Tytul: Znalezienie wszystkich par elementow listy o sumie rownej podanej liczbie.
 
-Treść: Dla otrzymanej listy liczb całkowitych oraz liczby x, znajdź wszystkie pary elementów listy, których suma jest równa x.
+Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x, znajdz wszystkie pary elementow listy, ktorych suma jest rowna x.
 
-Dane wejściowe: Lista liczb całkowitych oraz liczba całkowita.
+Dane wejsciowe: Lista liczb calkowitych oraz liczba calkowita.
 
-Dane wyjściowe: Lista par liczb całkowitych.
+Dane wyjsciowe: Lista par liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5, zostaną zwrócone wszystkie pary elementów o sumie równej 5: [(1, 4), (2, 3)].
+Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5, zostana zwrocone wszystkie pary elementow o sumie rownej 5: [(1, 4), (2, 3)].
 */
 
-// Funkcja znajdująca wszystkie pary elementów o sumie równej podanej liczbie
+// Funkcja znajdujaca wszystkie pary elementow o sumie rownej podanej liczbie
 function znajdzWszystkieParySumujaceDo(lista, x) {
   const mapaIndeksow = new Map();
   const pary = [];
@@ -53,3 +53,4 @@ function testZnajdzWszystkieParySumujaceDo() {
 }
 
 testZnajdzWszystkieParySumujaceDo();
+

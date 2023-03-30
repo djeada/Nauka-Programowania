@@ -1,3 +1,11 @@
+/*
+Tytul: Znalezienie w folderze wszystkich plikow z danym rozszerzeniem
+Tresc: Otrzymujesz dwa napisy. Pierwszy napis to sciezka folderu, a drugi to
+rozszerzenie szukanych plikow. Znajdz w folderze wszystkie pliki o podanym
+rozszerzeniu i zapisz ich nazwy w liscie. Dane wejsciowe: Dwa napisy Dane
+wyjsciowe: Lista napisow
+
+*/
 #include <cassert>
 #include <experimental/filesystem>
 #include <fstream>
@@ -5,11 +13,6 @@
 #include <string>
 
 namespace filesys = std::experimental::filesystem;
-
-/*
-Otrzymujesz dwa napisy reprezentujace sciezki folderow.
-Skopiuj wszystkie pliki .png z pierwszego folderu do drugiego folderu.
-*/
 
 std::string nazwaPliku(const std::string &sciezka) {
   return filesys::path(sciezka).filename();
@@ -84,3 +87,4 @@ int main() {
 
   return 0;
 }
+

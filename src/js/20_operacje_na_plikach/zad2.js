@@ -1,11 +1,11 @@
 /*
-Tytuł: Znalezienie w folderze wszystkich plików z danym rozszerzeniem
+Tytul: Znalezienie w folderze wszystkich plikow z danym rozszerzeniem
 
-Treść: Otrzymujesz dwa napisy. Pierwszy napis to ścieżka folderu, a drugi to rozszerzenie szukanych plików. Znajdź w folderze wszystkie pliki o podanym rozszerzeniu i zapisz ich nazwy w liście.
+Tresc: Otrzymujesz dwa napisy. Pierwszy napis to sciezka folderu, a drugi to rozszerzenie szukanych plikow. Znajdz w folderze wszystkie pliki o podanym rozszerzeniu i zapisz ich nazwy w liscie.
 
-Dane wejściowe: Dwa napisy
+Dane wejsciowe: Dwa napisy
 
-Dane wyjściowe: Lista napisów
+Dane wyjsciowe: Lista napisow
 */
 
 const fs = require("fs").promises;
@@ -41,13 +41,13 @@ const testZnajdzPliki = async () => {
 
   console.assert(
     wynik.length === oczekiwane.length,
-    `Błąd testu znajdzPliki: ${wynik.length} !== ${oczekiwane.length}`
+    `Blad testu znajdzPliki: ${wynik.length} !== ${oczekiwane.length}`
   );
 
   for (const nazwaPliku of oczekiwane) {
     console.assert(
       wynik.includes(nazwaPliku),
-      `Błąd testu znajdzPliki: ${wynik} nie zawiera ${nazwaPliku}`
+      `Blad testu znajdzPliki: ${wynik} nie zawiera ${nazwaPliku}`
     );
   }
 
@@ -61,3 +61,4 @@ const main = async () => {
 };
 
 main();
+

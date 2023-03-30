@@ -1,47 +1,48 @@
 /*
-Tytuł: Cyfry liczby spełniające określone warunki.
+Tytul: Cyfry liczby spelniajace okreslone warunki.
 
-Treść: Dla otrzymanej liczby naturalnej wypisz cyfry tej liczby, które są:
+Tresc: Dla otrzymanej liczby naturalnej wypisz cyfry tej liczby, ktore sa:
 
 a) liczbami parzystymi,
 
-b) mniejsze niż 5,
+b) mniejsze niz 5,
 
-c) różne od 0.
+c) rozne od 0.
 
-Dane wejściowe: Liczba naturalna dla wszystkich podpunktów.
+Dane wejsciowe: Liczba naturalna dla wszystkich podpunktow.
 
-Dane wyjściowe: Kilka liczb.
+Dane wyjsciowe: Kilka liczb.
 
-Przykład:
+Przyklad:
 
-a) Dla otrzymanej liczby 932, powinna zostać wypisana liczba 2.
+a) Dla otrzymanej liczby 932, powinna zostac wypisana liczba 2.
 
-b) Dla otrzymanej liczby 101, powinny zostać wypisane liczby 1, 0 i 1.
+b) Dla otrzymanej liczby 101, powinny zostac wypisane liczby 1, 0 i 1.
 
-c) Dla otrzymanej liczby 650, powinny zostać wypisane liczby 6 i 5.
+c) Dla otrzymanej liczby 650, powinny zostac wypisane liczby 6 i 5.
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// a) Pętla dla liczb parzystych
+// a) Petla dla liczb parzystych
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
   if (i % 2 == 0) {
     console.log(i % 10);
   }
 }
 
-// b) Pętla dla liczb mniejszych od 5
+// b) Petla dla liczb mniejszych od 5
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
   if (i % 10 < 5) {
     console.log(i % 10);
   }
 }
 
-// c) Pętla dla liczb różnych od 0
+// c) Petla dla liczb roznych od 0
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
   if (i % 10 != 0) {
     console.log(i % 10);
   }
 }
+

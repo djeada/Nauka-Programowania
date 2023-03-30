@@ -1,11 +1,11 @@
 /*
-Tytuł: Zlicz instancje klasy w programie.
+Tytul: Zlicz instancje klasy w programie.
 
-Treść: Opis zadania: Stwórz klasę Klasa, która będzie zawierała funkcję statyczną, zwracającą aktualną liczbę instancji tej klasy w programie. Następnie stwórz kilka obiektów tej klasy i przetestuj działanie funkcji.
+Tresc: Opis zadania: Stworz klase Klasa, ktora bedzie zawierala funkcje statyczna, zwracajaca aktualna liczbe instancji tej klasy w programie. Nastepnie stworz kilka obiektow tej klasy i przetestuj dzialanie funkcji.
 
-Dane wejściowe: brak
+Dane wejsciowe: brak
 
-Dane wyjściowe: liczba naturalna, reprezentująca liczbę instancji klasy w programie.
+Dane wyjsciowe: liczba naturalna, reprezentujaca liczbe instancji klasy w programie.
 */
 
 class Klasa {
@@ -26,3 +26,4 @@ for (let i = 0; i < 3; i++) {
 }
 
 console.log(Klasa.podajLiczbeInstancji()); // wyswietli 3
+

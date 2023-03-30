@@ -1,6 +1,9 @@
 """
-Otrzymujesz dwa napisy reprezentujace sciezki folderow. Przenies wszystkie pliki 
-csv z pierwszego folderu (oraz wszystkich jego podfolderow) do drugiego folderu.
+Tytul: Wczytaj i wypisz tresc pliku.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Wczytaj plik i wypisz jego tresc.
+Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
+Dane wyjsciowe: Napis zawierajacy tresc pliku.
+
 """
 
 import pathlib
@@ -46,3 +49,4 @@ def test_przenies_pliki_csv():
 if __name__ == "__main__":
 
     test_przenies_pliki_csv()
+

@@ -1,3 +1,17 @@
+/*
+Tytul: Zmiana wielkosci liter.
+Tresc: Otrzymujesz napis. Zaimplementuj nastepujace operacje przy uzyciu operatorow bitowych:
+a) Zamien wielkie litery na male litery.
+b) Zamien male litery na wielkie litery.
+c) Zamien male litery na wielkie litery i wielkie litery na male litery.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+a) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "test".
+b) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "TEST".
+c) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "tEST".
+
+*/
 public class Main {
   // Konwersja miedzy dowolnymi systemami liczbowymi.
   public static int naDec(String liczba, int podstawa) {
@@ -53,3 +67,4 @@ public class Main {
     test1();
   }
 }
+

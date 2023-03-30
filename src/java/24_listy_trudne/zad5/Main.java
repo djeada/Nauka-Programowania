@@ -1,9 +1,14 @@
+/*
+Tytul: Zbior potegowy
+Tresc: Otrzymujesz liste liczb naturalnych. Zwroc zbior potegowy otrzymanej listy, czyli zbior wszystkich jej podzbiorow.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Lista list zawierajaca elementy z wejsciowej listy lub pusta liste.
+Przyklad:
+Dla wejsciowej listy [1, 2, 1], powinna zostac zwrocona lista: [[], [1], [2], [1, 2], [1, 1], [1, 2, 1]].
+
+*/
 import java.util.*;
 
-/*
-Otrzymujesz liste liczb. Znajdz jej zbior potegowy, czyli zbior wszystkich jej
-podzbiorow.
-*/
 
 public class Main {
 

@@ -1,11 +1,14 @@
+/*
+Tytul: Permutacje slowa, ktore sa palindromami.
+Tresc: Napisz program, ktory znajdzie permutacje danego slowa, ktore sa
+palindromami. Dane wejsciowe: Napis. Dane wyjsciowe: Lista napisow. Przyklad:
+Dla otrzymanego napisu: “taco”, powinna zostac zwrocona lista: ["taco", "toca"].
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
 #include <vector>
-
-/*
-Znajdz permutacje danego slowa bedace palindromami.
-*/
 
 bool palindrom(std::string &slowo) {
   int N = slowo.length() - 1;
@@ -60,3 +63,4 @@ int main() {
   test1();
   return 0;
 }
+

@@ -1,7 +1,9 @@
-#!/usr/bin/env bash
-
-#Napisz funkcje realizujaca zaokraglanie ilorazu
-#bez uzycia '/' i '%'.
+# Tytul: Zaokraglanie w dol.
+# Tresc: Napisz funkcje, ktora zaokragli iloraz dwoch liczb naturalnych do najblizszej liczby calkowitej w dol, bez uzycia operatorow '/' i '%'.
+# Dane wejsciowe: dwie liczby naturalne
+# Dane wyjsciowe: liczba naturalna
+# Przyklad:
+# Dla otrzymanych liczb 7 i 2, funkcja powinna zwrocic liczbe 3.
 
 podziel() {
     a=$1

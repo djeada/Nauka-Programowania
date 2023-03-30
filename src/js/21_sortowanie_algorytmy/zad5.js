@@ -1,22 +1,22 @@
 /*
 
-Tytuł: Sortowanie szybkie.
+Tytul: Sortowanie szybkie.
 
-Treść: Dla danej listy liczb całkowitych zaimplementuj algorytm sortowania szybkiego.
+Tresc: Dla danej listy liczb calkowitych zaimplementuj algorytm sortowania szybkiego.
 
-1. Jeśli długość listy jest mniejsza niż 2, zwróć listę.
-2. Wybierz element rozdzielający, nazywany pivotem.
-3. Podziel listę na trzy części: elementy mniejsze od pivota, pivot oraz elementy większe od pivota.
-4. Wywołaj rekurencyjnie sortowanie szybkie dla części z elementami mniejszymi od pivota i większymi od pivota.
-5. Scal posortowane części listy w jedną posortowaną listę.
+1. Jesli dlugosc listy jest mniejsza niz 2, zwroc liste.
+2. Wybierz element rozdzielajacy, nazywany pivotem.
+3. Podziel liste na trzy czesci: elementy mniejsze od pivota, pivot oraz elementy wieksze od pivota.
+4. Wywolaj rekurencyjnie sortowanie szybkie dla czesci z elementami mniejszymi od pivota i wiekszymi od pivota.
+5. Scal posortowane czesci listy w jedna posortowana liste.
 
-Dane wejściowe: Lista liczb całkowitych.
+Dane wejsciowe: Lista liczb calkowitych.
 
-Dane wyjściowe: Posortowana lista liczb całkowitych.
+Dane wyjsciowe: Posortowana lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla danej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
+Dla danej listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
 
 */
 
@@ -67,3 +67,4 @@ console.assert(
   JSON.stringify(sortowanieSzybkie(lista3)) === JSON.stringify(wynik3),
   "Test 3 nieudany"
 );
+

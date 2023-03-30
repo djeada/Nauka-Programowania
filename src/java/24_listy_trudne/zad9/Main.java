@@ -1,8 +1,13 @@
-import java.util.*;
-
 /*
-Otrzymujesz liste liczb. Znajdz najdluzszy naprzemienny podciag w liscie.
+Tytul: Najdluzszy naprzemienny podciag.
+Tresc: Masz dana liste liczb. Znajdz najdluzszy podciag naprzemienny w tej liscie. Ciag jest naprzemienny, jesli liczby w nim rosna i maleja na zmiane. Na przyklad [1, 3, 2, 4, 3, 5] jest naprzemienny.
+Dane wejsciowe: Lista n liczb calkowitych.
+Dane wyjsciowe: Lista liczb calkowitych reprezentujaca najdluzszy podciag naprzemienny w tej liscie.
+Przyklad:
+Dla listy liczb: [1, -2, 6, 4, -3, 2, -4, -3], powinna zostac zwrocona lista [1, -2, 6, -3, 2, -4].
+
 */
+import java.util.*;
 
 public class Main {
   public static ArrayList<Integer> najdluzszyNaprzemiennyPodciagV1(ArrayList<Integer> lista) {
@@ -54,3 +59,4 @@ public class Main {
     test2();
   }
 }
+

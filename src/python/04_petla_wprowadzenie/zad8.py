@@ -1,5 +1,11 @@
 """
-Na farmie mamy a glow i b nog, znajdz liczbe kur oraz liczbe owieczek.
+Tytul: Liczba kur i owiec na farmie.
+Tresc: Na farmie jest a glow i b nog. Znajdz liczbe kur i liczbe owiec.
+Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
+Przyklad:
+Dla otrzymanych liczb 40 i 100, powinny zostac wypisane liczby 30 i 10.
+
 """
 
 if __name__ == "__main__":
@@ -16,3 +22,4 @@ if __name__ == "__main__":
             print("Liczba kur: ", i)
             print("Liczba owieczek: ", owieczki)
             break
+

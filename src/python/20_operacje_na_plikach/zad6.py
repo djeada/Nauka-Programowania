@@ -1,11 +1,9 @@
 """
-Otrzymujesz napis reprezentujacy sciezke pliku tekstowego. Oblicz:
-a) Liczbe wierszy pliku.
-b) Liczbe slow w pliku. Slowa oddzielone sa spacjami i moga skladac 
-sie wylacznie ze znakow bedacych literami.
-c) Srednia dlugosc wiersza.
-d) Srednia liczbe slow na wiersz.
-e) Czestosc wystepowania kazdego ze slow w pliku.
+Tytul: Usun pliki spelniajace warunek.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do folderu. Usun wszystkie pliki o rozmiarze wiekszym niz 10 kB znajdujace sie w podanym folderze i jego podfolderach.
+Dane wejsciowe: Napis reprezentujacy sciezke do folderu.
+Dane wyjsciowe: Brak.
+
 """
 import pathlib
 import string
@@ -187,3 +185,4 @@ def test_statystyki():
 
 if __name__ == "__main__":
     test_statystyki()
+

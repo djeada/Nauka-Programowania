@@ -1,11 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Suma elementow dwoch list.
+# Tresc: Dla otrzymanych dwoch list, zwroc liste, ktorej elementy sa suma odpowiadajacych sobie elementow obu list. Jesli listy nie sa tej samej dlugosci, zaloz, ze brakujace elementy krotszej listy sa rowne 0.
+# Dane wejsciowe: Dwie listy.
+# Dane wyjsciowe: Lista.
+# Przyklad:
+# Dla otrzymanych list [3, 1, 2, 5] oraz [2, 8, 6, 5], zostanie zwrocona lista: [5, 9, 8, 10].
 
 source ../assert.sh
-
-#Dla otrzymanych dwoch list zwroc liste powstala poprzez:
-#a) dostawienie drugiej listy na koniec pierwszej listy;
-#b) wstawienie elementow o indeksach parzystych z drugiej listy
-#na odpowiadajace im indeksy pierwszej listy.
 
 dostaw() {
     wynik=("${lista_a[@]}" "${lista_b[@]}")
@@ -40,7 +40,6 @@ main() {
     test1
     test2
 }
-
 
 main "$@"
 

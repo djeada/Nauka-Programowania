@@ -1,9 +1,11 @@
 """
-Otrzymujesz liste liczb, kierunek przesuniec (1 odpowiada przesunieciu 
-w prawo, a 0 w lewo) oraz liczbe miejsc o jaka maja zostac przesuniete
-elementy listy. Przykladowo dla przesuwania w prawo pierwszy element 
-trafia na miejsce drugiego, drugi trzeciego, a ostatni na miejsce pierwszego. 
-Przesun elementy listy w podanym kierunku.
+Tytul: Minimum oraz maksimum.
+Tresc: Otrzymujesz liste liczb calkowitych. Znajdz najwiekszy i najmniejszy element tej listy i zwroc je jako dwie osobne liczby calkowite.
+Dane wejsciowe: Lista liczb calkowitych.
+Dane wyjsciowe: Dwie liczby calkowite oznaczajace najwiekszy i najmniejszy element z listy.
+Przyklad:
+Dla otrzymanej listy [4, -7, 8, 5, 6, -9, 10, 2, -8] powinny zostac zwrocone liczby 10 oraz -9.
+
 """
 
 
@@ -27,3 +29,4 @@ def test_rotacja():
 if __name__ == "__main__":
 
     test_rotacja()
+

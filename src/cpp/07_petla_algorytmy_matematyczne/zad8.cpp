@@ -1,10 +1,14 @@
+/*
+Tytul: Naiwny test pierwszosci
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej sprawdzi, czy jest
+ona liczba pierwsza. Dane wejsciowe: liczba naturalna Dane wyjsciowe: wartosc
+logiczna Przyklad: Dla otrzymanej liczby 7, funkcja powinna zwrocic wartosc
+logiczna prawda. Dla otrzymanej liczby 2, funkcja powinna zwrocic wartosc
+logiczna prawda.
+
+*/
 #include <cassert>
 #include <cmath>
-
-/*
-Napisz funkcje, ktora dla otrzymanej liczby sprawdzi czy jest ona liczba
-pierwsza.
-*/
 
 bool pierwsza(int n) {
 
@@ -39,3 +43,4 @@ int main() {
 
   return 0;
 }
+

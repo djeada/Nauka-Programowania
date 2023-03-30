@@ -1,12 +1,19 @@
+/*
+Tytul: Sortowanie wzgledem kluczy/wartosci
+Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych. Twoim
+zadaniem jest wypisanie par posortowanych wzgledem napisow oraz wzgledem liczb.
+Dane wejsciowe: Slownik par: napis, liczba calkowita.
+Dane wyjsciowe: Lista par.
+Przyklad:
+Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac
+zwrocony slownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)]. Dla otrzymanego
+slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik:
+[("a", -2), ("c", 3), ("b", 4), ("x", 5)].
+
+*/
 #include <cassert>
 #include <string>
 #include <unordered_map>
-
-/*
-Otrzymujesz napis reprezentujacy zdanie. Znajdz najczesciej wystepujaca litere
-w zdaniu. Jesli wiecej niz jedna litera wystepuje ta sama liczbe razy, zwroc
-litere najwczesniej pojawiajaca sie w zdaniu.
-*/
 
 std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
   /*
@@ -65,3 +72,4 @@ int main() {
 
   return 0;
 }
+

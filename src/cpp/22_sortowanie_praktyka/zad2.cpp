@@ -1,14 +1,17 @@
 /*
-Otrzymujesz napis reprezentujacy zdanie. Podziel zdanie na slowa. 
-Posortuj slowa alfabetycznie i zapisz je w liscie. Pamietaj, znaki 
-interpunkcyjne nie sa liczone jako slowa.
+Tytul: Sortowanie slow w zdaniu.
+Tresc: Masz dany napis reprezentujacy zdanie. Podziel to zdanie na slowa,
+posortuj je alfabetycznie i zapisz w liscie. Znaki interpunkcyjne nie sa liczone
+jako slowa. Dane wejsciowe: Napis. Dane wyjsciowe: Lista napisow. Przyklad: Dla
+napisu "Lemur wygina smialo cialo" powinno zostac zwrocone ["Lemur", "cialo",
+"smialo", "wygina"].
+
 */
 
 #include <algorithm>
 #include <cassert>
 #include <string>
 #include <vector>
-
 
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
@@ -63,3 +66,4 @@ int main() {
 
   return 0;
 }
+

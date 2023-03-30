@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Znajdz i zmodyfikuj pliki spelniajace warunek.
+# Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do folderu.
+# a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych sie w podanym folderze i jego podfolderach.
+# b) Usun srodkowy wiersz z kazdego pliku CSV znajdujacego sie w podanym folderze i jego podfolderach.
+# Dane wejsciowe: Napis reprezentujacy sciezke do folderu.
+# Dane wyjsciowe: Brak.
 
 source ../assert.sh
-
-# Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
-# Kazdy wiersz pliku reprezentuje adres ip. Posortuj adresy ip
-# i zapisz je w liscie.
 
 sortuj_adresy_ip() {
     sort -t . -g -k1,1 -k2,2 -k3,3 -k4,4 $1
@@ -12,10 +13,10 @@ sortuj_adresy_ip() {
 
 test_sortuj_adresy_ip() {
 
-    # stworz folder testowy
+    mkdir -p 'test'
     mkdir -p 'test'
 
-    # stworz plik testowy
+    local plik='test/test.txt'
     local plik='test/test.txt'
     touch $plik
     echo "123.4.245.23"  > $plik
@@ -25,15 +26,15 @@ test_sortuj_adresy_ip() {
     echo "104.30.244.2" >> $plik
     echo "104.244.4.1" >> $plik
 
-    # sortuj adresy ip
-    IFS=$'\n' 
+    IFS=$'\n'
+    IFS=$'\n'
     wynik=($(sortuj_adresy_ip 'test/test.txt'))
 
-    # sprawdz czy adresy ip sa posortowane
+    local oczekiwane=(1.198.3.93 32.183.93.40 104.30.244.2 104.244.4.1 104.244.253.29 123.4.245.23)
     local oczekiwane=(1.198.3.93 32.183.93.40 104.30.244.2 104.244.4.1 104.244.253.29 123.4.245.23)
     assertArrayEqual wynik oczekiwane $LINENO
 
-    # usun folder testowy
+    rm -rf 'test'
     rm -rf 'test'
 }
 
@@ -42,3 +43,4 @@ main() {
 }
 
 main "$@"
+

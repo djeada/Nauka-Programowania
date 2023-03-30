@@ -1,3 +1,13 @@
+/*
+Tytul: Zaprojektuj klase Kolo.
+Opis zadania: Napisz klase Kolo, ktora bedzie reprezentowala kolo. Klasa powinna zawierac nastepujace funkcje:
+1. Konstruktor, ktory przyjmuje jedna liczbe jako argument, reprezentujaca promien kola. Domyslna wartoscia promienia powinno byc 1.
+2. Funkcje obwod, ktora zwraca obwod kola.
+3. Funkcje pole, ktora zwraca pole kola.
+4. Funkcje, ktora wypisuje informacje o kole na standardowe wyjscie.
+Napisz program, ktory przetestuje twoja klase. Stworz kolo o promieniu 3 i uzyj funkcji wypisujacej informacje o kole.
+
+*/
 import java.text.MessageFormat;
 
 public class Kolo {
@@ -52,3 +62,4 @@ public class Kolo {
     System.out.print(kolo);
   }
 }
+

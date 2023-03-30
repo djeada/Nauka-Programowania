@@ -1,3 +1,12 @@
+/*
+Tytul: Obliczenie wartosci wielomianu w punkcie.
+Tresc: Otrzymujesz liste n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbe naturalna x. Znajdz wartosc wielomianu w podanym punkcie.
+Dane wejsciowe: Lista liczb naturalnych i liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla listy wspolczynnikow [3, 2, 1] i liczby x = 1, zostanie zwrocona liczba 6.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -28,3 +37,4 @@ public class Main {
 		test1();
 
 	}
+

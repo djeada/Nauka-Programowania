@@ -1,23 +1,23 @@
 /*
-Tytuł: Posortowanie trzech liczb.
+Tytul: Posortowanie trzech liczb.
 
-Treść: Pobierz od użytkownika trzy liczby naturalne i wypisz je w kolejności rosnącej.
+Tresc: Pobierz od uzytkownika trzy liczby naturalne i wypisz je w kolejnosci rosnacej.
 
-Dane wejściowe: Trzy liczby naturalne.
+Dane wejsciowe: Trzy liczby naturalne.
 
-Dane wyjściowe: Trzy liczby naturalne.
+Dane wyjsciowe: Trzy liczby naturalne.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb: 2, 1 oraz 4, powinny zostać wypisane liczby: 1, 2 i 4.
+Dla pobranych liczb: 2, 1 oraz 4, powinny zostac wypisane liczby: 1, 2 i 4.
 */
 
-// Pobieranie danych od użytkownika
-const liczba_a = parseInt(prompt("Podaj pierwszą liczbę:"));
-const liczba_b = parseInt(prompt("Podaj drugą liczbę:"));
-const liczba_c = parseInt(prompt("Podaj trzecią liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
+const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
+const liczba_c = parseInt(prompt("Podaj trzecia liczbe:"));
 
-// Porównanie ze zmienną
+// Porownanie ze zmienna
 if (liczba_a > liczba_b && liczba_a > liczba_c) {
   if (liczba_b > liczba_c) {
     console.log(liczba_c);
@@ -49,3 +49,4 @@ if (liczba_a > liczba_b && liczba_a > liczba_c) {
     console.log(liczba_c);
   }
 }
+

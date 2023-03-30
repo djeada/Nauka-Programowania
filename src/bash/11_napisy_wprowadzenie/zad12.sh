@@ -1,8 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Zamien wszystkie male litery na duze.
+# Tresc: Otrzymasz napis. Zmien wszystkie male litery na duze.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Napis.
+# Przyklad:
+# Dla otrzymanego napisu: "Rumcajs", powinien zostac zwrocony napis: "RUMCAJS".
 
 source ../assert.sh
-
-# Usun spacje ze zdania.
 
 usun_spacje_v1() {
 
@@ -40,7 +43,6 @@ main() {
     test1
     test2
 }
-
 
 main "$@"
 

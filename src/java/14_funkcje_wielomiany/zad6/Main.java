@@ -1,3 +1,12 @@
+/*
+Tytul: Obliczenie miejsc zerowych rownania kwadratowego.
+Tresc: Otrzymujesz liste wspolczynnikow rownania kwadratowego $ax^2 + bx + c$. Znajdz rzeczywiste miejsca zerowe rownania kwadratowego.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Lista liczb zmiennoprzecinkowych.
+Przyklad:
+Dla otrzymanej listy wspolczynnikow: [1, 2, 1], zostanie zwrocona lista: [-1, -1].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -65,3 +74,4 @@ public class Main {
     test2();
   }
 }
+

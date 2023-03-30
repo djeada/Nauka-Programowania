@@ -1,12 +1,16 @@
+/*
+Tytul: Scalanie przedzialow w liscie przedzialow.
+Tresc: Otrzymujesz liste par liczb. Kazda para reprezentuje poczatek i koniec
+przedzialu. Niektore przedzialy moga sie nachodzic. W takim przypadku polacz je
+ze soba i zwroc liste przedzialow, ktore sie nie pokrywaja. Dane wejsciowe:
+Lista list liczb naturalnych. Dane wyjsciowe: Lista list liczb naturalnych.
+Przyklad:
+Dla otrzymanej listy: [[23, 67], [23, 53], [45, 88], [77, 88], [10, 22], [11,
+12], [42, 45]], powinna zostac zwrocona lista: [[10, 22], [23, 88]].
+
+*/
 #include <cassert>
 #include <vector>
-
-/*
-Otrzymujesz dwie macierze o tych samych wymiarach, zwroc macierz bedaca:
-
-a) Wynikiem dodawania otrzymanych macierzy.
-b) Wynikiem odejmowania pierwszej macierzy od drugiej.
-*/
 
 bool wymiaryRowne(std::vector<std::vector<int>> macierzA,
                   std::vector<std::vector<int>> macierzB) {
@@ -83,3 +87,4 @@ int main() {
   test2();
   return 0;
 }
+

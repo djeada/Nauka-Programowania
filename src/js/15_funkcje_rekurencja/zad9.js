@@ -1,14 +1,14 @@
 /*
-Tytuł: Słowa elfickie.
+Tytul: Slowa elfickie.
 
-Treść: Otrzymujesz napis. Przy użyciu rekurencji sprawdź czy otrzymane słowo jest słowem elfickim. Przez słowo elfickie rozumiemy taki napis, w którym co najmniej raz występuje każda z liter słowa elf.
+Tresc: Otrzymujesz napis. Przy uzyciu rekurencji sprawdz czy otrzymane slowo jest slowem elfickim. Przez slowo elfickie rozumiemy taki napis, w ktorym co najmniej raz wystepuje kazda z liter slowa elf.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
-Dla otrzymanego napisu: "reflektor", powinna zostać zwrócona wartość logiczna: Prawda.
+Przyklad:
+Dla otrzymanego napisu: "reflektor", powinna zostac zwrocona wartosc logiczna: Prawda.
 */
 
 function czyElfickie(slowo, elf = "elf", idx = 0) {
@@ -45,4 +45,5 @@ function testCzyElfickie() {
 }
 
 testCzyElfickie();
-console.log("Wszystkie testy zakończone sukcesem");
+console.log("Wszystkie testy zakonczone sukcesem");
+

@@ -1,9 +1,13 @@
+/*
+Tytul: Pierwiastek metoda Newtona
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej zwroci jej
+pierwiastek. Dane wejsciowe: liczba naturalna Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla otrzymanej liczby 16, funkcja powinna zwrocic liczbe 4.
+
+*/
 #include <cassert>
 #include <cmath>
-
-/*
-Napisz funkcje, ktora dla otrzymanej liczby zwroci jej pierwiastek.
-*/
 
 const float dokladnosc = 0.0001;
 
@@ -29,3 +33,4 @@ int main() {
 
   return 0;
 }
+

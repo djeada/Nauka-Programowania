@@ -1,3 +1,13 @@
+/*
+Tytul: Sortowanie napisow w liscie wzgledem dlugosci.
+Tresc: Masz dana liste napisow. Posortuj napisy w liscie wzgledem dlugosci.
+Dane wejsciowe: Lista napisow.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla listy ["abcd", "ab", "a", "abc"] powinno zostac zwrocone ["a", "ab", "abc",
+"abcd"].
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
@@ -25,3 +35,4 @@ int main() {
 
   return 0;
 }
+

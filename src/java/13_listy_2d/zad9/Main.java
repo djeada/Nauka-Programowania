@@ -1,3 +1,12 @@
+/*
+Tytul: Obroc macierz o 90 stopni.
+Tresc: Otrzymujesz macierz skladajaca sie z liczb naturalnych. Obroc ja o 90 stopni. Tzn. zamien miejscami ostatnia kolumne z ostatnim wierszem, przedostatnia kolumne z przedostatnim wierszem itd.
+Dane wejsciowe: Macierz skladajaca sie z liczb naturalnych.
+Dane wyjsciowe: Macierz skladajaca sie z liczb naturalnych.
+Przyklad:
+Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona macierz: [[7,4,1], [8,5,2], [9,6,3]].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -51,3 +60,4 @@ public class Main {
     test1();
   }
 }
+

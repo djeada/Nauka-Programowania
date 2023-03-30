@@ -1,22 +1,23 @@
 /*
-Tytuł: Czy liczba jest poprawnym numerem dnia tygodnia lub miesiąca?
+Tytul: Czy liczba jest poprawnym numerem dnia tygodnia lub miesiaca?
 
-Treść: Wypisz pobraną od użytkownika liczbę naturalną, jeśli jest ona poprawnym numerem dnia tygodnia lub miesiąca.
+Tresc: Wypisz pobrana od uzytkownika liczbe naturalna, jesli jest ona poprawnym numerem dnia tygodnia lub miesiaca.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-* Dla pobranej liczby: 10, powinna zostać wypisana liczba: 10.
-* Dla pobranej liczby: 15, nie powinna być wypisana żadna liczba.
+* Dla pobranej liczby: 10, powinna zostac wypisana liczba: 10.
+* Dla pobranej liczby: 15, nie powinna byc wypisana zadna liczba.
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Porównanie ze stałą
+// Porownanie ze stala
 if (liczba >= 1 && liczba <= 12) {
   console.log(liczba);
 }
+

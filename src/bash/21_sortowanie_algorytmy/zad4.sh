@@ -1,17 +1,23 @@
-#!/usr/bin/env bash
+# Tytul: Sortowanie przez scalanie.
+# Tresc: Dla danej listy liczb calkowitych zaimplementuj algorytm sortowania przez scalanie.
+# 1. Jesli dlugosc listy jest mniejsza niz 2, zwroc liste.
+# 2. Podziel liste na dwie rowne (lub prawie rowne) czesci.
+# 3. Wywolaj rekurencyjnie sortowanie przez scalanie dla obu czesci listy.
+# 4. Scal obie posortowane czesci listy w jedna posortowana liste.
+# Dane wejsciowe: Lista liczb calkowitych.
+# Dane wyjsciowe: Posortowana lista liczb calkowitych.
+# Przyklad:
+# Dla danej listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
 
 source ../assert.sh
 
-# Zaimplementuj sortowanie przez scalanie.
-
-
 scalaj() {
-    # Scalanie dwoch list. Przyjmujemy, ze listy sa posortowane i niepuste.
+    local dane=("$@")
     local dane=("$@")
     local _tablica_a=( ${dane[@]:0:${#dane[@]}/2} )
     local _tablica_b=( ${dane[@]:${#dane[@]}/2} )
     local _tablica_c=()
-    
+
     local i=0
     local j=0
     while [ $i -lt ${#_tablica_a[@]} ] && [ $j -lt ${#_tablica_b[@]} ]; do
@@ -38,7 +44,7 @@ scalaj() {
 }
 
 sortuj(){
-    # Implementacja sortowania przez scalanie.
+    local _tablica_ref=("$@")
     local _tablica_ref=("$@")
 
     if [ ${#_tablica_ref[@]} -gt 1 ]; then
@@ -63,5 +69,5 @@ main() {
     test_sortuj
 }
 
-
 main "$@"
+

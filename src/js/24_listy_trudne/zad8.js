@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Sznurek.
+Tytul: Sznurek.
 
-Treść: Masz do sprzedania sznurek o długości n, a także listę cen dla sznurków o długościach od 1 do n. Ceny mogą być różne dla różnych długości. Znajdź maksymalny zysk, który można osiągnąć poprzez sprzedaż danego sznurka.
+Tresc: Masz do sprzedania sznurek o dlugosci n, a takze liste cen dla sznurkow o dlugosciach od 1 do n. Ceny moga byc rozne dla roznych dlugosci. Znajdz maksymalny zysk, ktory mozna osiagnac poprzez sprzedaz danego sznurka.
 
-Dane wejściowe: Lista n liczb całkowitych reprezentujących ceny dla sznurków o długościach od 1 do n, oraz liczba naturalna n reprezentująca długość sznurka, który chcesz sprzedać.
+Dane wejsciowe: Lista n liczb calkowitych reprezentujacych ceny dla sznurkow o dlugosciach od 1 do n, oraz liczba naturalna n reprezentujaca dlugosc sznurka, ktory chcesz sprzedac.
 
-Dane wyjściowe: Największa możliwa wartość, jaką można uzyskać ze sprzedaży danego sznurka.
+Dane wyjsciowe: Najwieksza mozliwa wartosc, jaka mozna uzyskac ze sprzedazy danego sznurka.
 
-Przykład:
+Przyklad:
 
-Dla listy cen: [1, 5, 8, 9, 10, 17, 17, 20] oraz długości sznurka 4, powinna zostać zwrócona liczba 10.
+Dla listy cen: [1, 5, 8, 9, 10, 17, 17, 20] oraz dlugosci sznurka 4, powinna zostac zwrocona liczba 10.
 
 */
 
@@ -36,3 +36,4 @@ const wynik2 = 22;
 
 console.assert(sznurek(lista1, 4) === wynik1, "Test 1 nieudany");
 console.assert(sznurek(lista2, 8) === wynik2, "Test 2 nieudany");
+

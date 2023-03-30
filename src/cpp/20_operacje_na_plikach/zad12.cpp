@@ -1,3 +1,10 @@
+/*
+Tytul: Wczytaj i wypisz tresc pliku.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego.
+Wczytaj plik i wypisz jego tresc. Dane wejsciowe: Napis reprezentujacy sciezke
+do pliku. Dane wyjsciowe: Napis zawierajacy tresc pliku.
+
+*/
 #include <cassert>
 #include <experimental/filesystem>
 #include <fstream>
@@ -5,11 +12,6 @@
 #include <stdexcept>
 
 namespace filesys = std::experimental::filesystem;
-
-/*
-Otrzymujesz dwa napisy reprezentujace sciezki folderow. Przenies wszystkie pliki
-csv z pierwszego folderu (oraz wszystkich jego podfolderow) do drugiego folderu.
-*/
 
 std::string nazwaPliku(const std::string &sciezka) {
   return filesys::path(sciezka).filename();
@@ -87,3 +89,4 @@ int main() {
 
   return 0;
 }
+

@@ -1,5 +1,10 @@
 """
-Otrzymujesz dwa napisy. Sprawdz czy napisy sa swoimi rotacjami.
+Tytul: Usun powtorzenia stojacych obok siebie znakow.
+Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen stojacych obok siebie znakow i zachowanie tylko pierwszego wystapienia kazdego znaku.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “ABA”.
 
 """
 
@@ -32,3 +37,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

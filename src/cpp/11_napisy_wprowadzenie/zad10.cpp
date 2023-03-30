@@ -1,17 +1,15 @@
+/*
+Tytul: Policz wystapienia znaku.
+Tresc: Dla podanego napisu i znaku, znajdz liczbe wystapien tego znaku w
+napisie. Dane wejsciowe: Napis oraz znak. Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanego napisu: "klamra" oraz znaku 'a', powinno zostac zwrocone: 2.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
 #include <vector>
-
-/*
-Otrzymujesz napis reprezentujacy zdanie. Znajdz:
-a) Najdluzsze slowo w zdaniu.
-b) Najkrotsze slowo w zdaniu.
-
-Jesli wiecej niz jedno slowo ma ekstremalna dlugosc, zwroc to
-slowo sposrod nich, ktore wystepuje w zdaniu jako pierwsze.
-Znaki interpunkcyjne nie sa liczone jako slowa.
-*/
 
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
@@ -99,3 +97,4 @@ int main() {
   test2();
   return 0;
 }
+

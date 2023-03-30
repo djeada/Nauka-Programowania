@@ -1,11 +1,15 @@
 /*
-Otrzymujesz liste liczb, skladajaca sie wylacznie z zer i jedynek. Posortuj liste.
+Tytul: Sortowanie listy binarnej.
+Tresc: Otrzymujesz liste liczb skladajacych sie tylko z zer i jedynek. Posortuj
+te liste. Dane wejsciowe: Lista liczb naturalnych. Dane wyjsciowe: Posortowana
+lista liczb naturalnych. Przyklad: Dla listy: [1, 0, 1, 0, 1, 1], powinna zostac
+zwrocona lista: [0, 0, 1, 1, 1, 1].
+
 */
 
 #include <algorithm>
 #include <cassert>
 #include <vector>
-
 
 void sortuj(std::vector<int> &lista) {
   unsigned int zera = std::count(lista.begin(), lista.end(), 0);
@@ -42,3 +46,4 @@ int main() {
 
   return 0;
 }
+

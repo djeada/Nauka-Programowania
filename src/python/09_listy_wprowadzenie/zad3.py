@@ -1,7 +1,11 @@
 """
-Otrzymujesz liste oraz klucz. Znajdz indeks odpowiadajacy 
-pierwszemu wystapieniu klucza w liscie. Jesli klucz nie 
-wysteþuje w liscie, zwroc -1.
+Tytul: Rotacja w lewo/prawo.
+Tresc: Otrzymujesz liste liczb calkowitych, kierunek przesuniecia (1 odpowiada przesunieciu w prawo, a 0 w lewo) oraz liczbe miejsc, o jaka elementy listy maja zostac przesuniete. Na przyklad dla przesuniecia w prawo, pierwszy element trafia na drugie miejsce, drugi na trzecie, a ostatni na pierwsze miejsce. Przesun elementy listy w podanym kierunku.
+Dane wejsciowe: Lista liczb calkowitych oraz dwie liczby naturalne.
+Dane wyjsciowe: Lista liczb calkowitych.
+Przyklad:
+Dla otrzymanej listy: [5, 27, 6, 2, 1, 10, 8] oraz liczb 0 i 2, powinna zostac zwrocona lista: [6, 2, 1, 10, 8, 5, 27].
+
 """
 
 
@@ -21,3 +25,4 @@ def test_znajdz_klucz():
 if __name__ == "__main__":
 
     test_znajdz_klucz()
+

@@ -1,3 +1,16 @@
+/*
+Tytul: Wyjatkowe palindromy.
+Tresc: Napisz program, ktory znajdzie wszystkie wyjatkowe palindromy, jakie mozna utworzyc ze znakow w slowie (bez zmiany kolejnosci wystepowania). Nie uwzgledniaj duplikatow w liscie.
+Wyjatkowy palindrom musi spelniac jeden z dwoch warunkow:
+1. Wszystkie znaki sa identyczne, np. “xxx”.
+2. Wszystkie znaki poza srodkowym znakiem sa identyczne, np. “ccdcc”.
+Pojedynczy znak jest rowniez uznawany za wyjatkowy palindrom.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla otrzymanego napisu: “xxxx”, powinna zostac zwrocona lista: [“x”, “xx”, 'xxx', 'xxxx'].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -68,3 +81,4 @@ public class Main {
     test2();
   }
 }
+

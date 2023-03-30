@@ -1,3 +1,12 @@
+/*
+Tytul: Najdluzszy ciag zer w liczbie binarnej.
+Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Oblicz dlugosc najdluzszego ciagu zer w jej reprezentacji binarnej.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej liczby 14, powinna zostac zwrocona liczba 1.
+
+*/
 public class Main {
   // Przy uzyciu operatorow bitowych:
   // a) Zamien wielkie litery na male.
@@ -69,3 +78,4 @@ public class Main {
     test3();
   }
 }
+

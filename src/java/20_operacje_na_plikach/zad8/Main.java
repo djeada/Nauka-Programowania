@@ -1,111 +1,139 @@
+/*
+Tytul: Podmien tresci plikow.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do plikow. Podmien tresci obu plikow.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do plikow.
+Dane wyjsciowe: Brak.
+
+*/
+
 import java.io.*;
 import java.nio.file.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
-  // Otrzymujesz napis reprezentujacy sciezke folderu.
-  // Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych
-  // sie w folderze oraz podfolderach.
+  public static String findExtension(String path) {
+    Path object = Paths.get(path);
 
-  public static ArrayList<String> plikiWFolderze(final String sciezka, final String rozszerzenie) {
+    if (Files.isRegularFile(object) && object.getFileName().toString().contains("."))
+      return object
+          .getFileName()
+          .toString()
+          .substring(object.getFileName().toString().lastIndexOf('.'));
 
-    ArrayList<String> pliki = new ArrayList<String>();
-
-    File folder = new File(sciezka);
-
-    for (File plik : folder.listFiles()) {
-      var nazwa = plik.getName();
-      if (nazwa.endsWith(rozszerzenie)) {
-        pliki.add(plik.getAbsolutePath());
-      }
-    }
-    return pliki;
+    return "";
   }
 
-  public static ArrayList<String> wczytajPlik(final String sciezka) {
-    File plik = new File(sciezka);
-    ArrayList<String> tresc = new ArrayList<String>();
+  public static List<String> filesInFolder(String folderPath, String extension) {
+    List<String> files = new ArrayList<>();
 
-    if (plik.exists()) {
-      try (BufferedReader br =
-          new BufferedReader(new InputStreamReader(new FileInputStream(plik), "UTF-8"))) {
-        String wiersz = null;
-        while ((wiersz = br.readLine()) != null) {
-          tresc.add(wiersz);
-        }
-      } catch (IOException e) {
-        e.printStackTrace();
+    try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(Paths.get(folderPath))) {
+      for (Path file : directoryStream) {
+        if (findExtension(file.toString()).equals(extension)) files.add(file.toString());
       }
-    } else {
-      System.out.println("Plik nie istnieje." + sciezka);
-    }
-
-    return tresc;
-  }
-
-  public static void dodajInicjaly(final String sciezkaFolderu, final String dane) {
-
-    var sciezki = plikiWFolderze(sciezkaFolderu, ".txt");
-
-    for (var sciezka : sciezki) {
-      var trescPliku = wczytajPlik(sciezka);
-      var tekst = Arrays.deepToString(trescPliku.toArray()) + dane;
-
-      try {
-        Files.write(Paths.get(sciezka), tekst.getBytes());
-      } catch (IOException e) {
-        System.out.println("Blad zapisu do pliku.");
-      }
-    }
-  }
-
-  // Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie w folderze
-  // oraz podfolderach.
-
-  public static void zapiszDoPilku(final String sciezka, final String dane) {
-    try {
-      Files.write(Paths.get(sciezka), dane.getBytes());
     } catch (IOException e) {
-      System.out.println("Blad zapisu do pliku.");
+      e.printStackTrace();
     }
+
+    return files;
   }
 
-  public static void usunSrodkowy(final String sciezkaFolderu) {
+  public static void addInitials(String folderPath, String data) {
+    List<String> paths = filesInFolder(folderPath, ".txt");
 
-    var sciezki = plikiWFolderze(sciezkaFolderu, ".csv");
-
-    for (var sciezka : sciezki) {
-
-      File plik = new File(sciezka);
-      ArrayList<String> tresc = new ArrayList<String>();
-
-      if (plik.exists()) {
-        try (BufferedReader br =
-            new BufferedReader(new InputStreamReader(new FileInputStream(plik), "UTF-8"))) {
-          String wiersz = null;
-          while ((wiersz = br.readLine()) != null) {
-            tresc.add(wiersz);
-          }
-
-          if (tresc.size() / 2 - 1 > 0) {
-            tresc.remove(tresc.size() / 2 - 1);
-            zapiszDoPilku(sciezka, Arrays.deepToString(tresc.toArray()));
-          }
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
-      } else {
-        System.out.println("Plik nie istnieje." + sciezka);
+    for (String path : paths) {
+      try (FileWriter fileWriter = new FileWriter(path, true);
+          BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+        bufferedWriter.write("\n" + data);
+      } catch (IOException e) {
+        System.out.println("Error: " + e.getMessage());
       }
     }
   }
 
-  public static void main(String[] args) {
+  public static List<String> readFile(String filePath) {
+    List<String> content = new ArrayList<>();
 
-    String sciezka =
-        System.getProperty("user.dir") + System.getProperty("file.separator") + "folder";
-    String dane = "A.D.";
-    dodajInicjaly(sciezka, dane);
-    usunSrodkowy(sciezka);
+    try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+      String line;
+      while ((line = reader.readLine()) != null) {
+        content.add(line);
+      }
+    } catch (IOException e) {
+      System.out.println("Error: " + e.getMessage());
+    }
+
+    return content;
+  }
+
+  public static void removeMiddle(String folderPath) {
+    List<String> paths = filesInFolder(folderPath, ".csv");
+
+    for (String path : paths) {
+      List<String> fileContent = readFile(path);
+
+      if (fileContent.size() > 0) {
+        fileContent.remove(fileContent.size() / 2);
+      }
+
+      try (BufferedWriter writer = new BufferedWriter(new FileWriter(path))) {
+        for (String line : fileContent) {
+          writer.write(line + "\n");
+        }
+      } catch (IOException e) {
+        System.out.println("Error: " + e.getMessage());
+      }
+    }
+  }
+
+  public static void testAddInitials() throws IOException {
+    Path folderPath = Paths.get("temp_dir");
+    Files.createDirectories(folderPath);
+
+    String txtFile = "temp.txt";
+    try (BufferedWriter writer = Files.newBufferedWriter(folderPath.resolve(txtFile))) {
+      writer.write("example text\n");
+    }
+
+    String data = "A.D.";
+    addInitials(folderPath.toString(), data);
+
+    List<String> expectedResult = new ArrayList<>();
+    expectedResult.add("example text");
+    expectedResult.add("A.D.");
+
+    assert readFile(folderPath.resolve(txtFile).toString()).equals(expectedResult);
+
+    Files.delete(folderPath.resolve(txtFile));
+    Files.delete(folderPath);
+  }
+
+  public static void testRemoveMiddle() throws IOException {
+    Path folderPath = Paths.get("temp_dir");
+    Files.createDirectories(folderPath);
+
+    String csvFile = "temp.csv";
+    try (BufferedWriter writer = Files.newBufferedWriter(folderPath.resolve(csvFile))) {
+      writer.write("test1; test2; test3\n");
+      writer.write("test4; test5; test6\n");
+      writer.write("test7; test8; test9\n");
+    }
+
+    removeMiddle(folderPath.toString());
+
+    List<String> expectedResult = new ArrayList<>();
+    expectedResult.add("test1; test2; test3");
+    expectedResult.add("test7; test8; test9");
+
+    assert readFile(folderPath.resolve(csvFile).toString()).equals(expectedResult);
+
+    Files.delete(folderPath.resolve(csvFile));
+    Files.delete(folderPath);
+  }
+
+  public static void main(String[] args) throws IOException {
+    testAddInitials();
+    testRemoveMiddle();
   }
 }
+

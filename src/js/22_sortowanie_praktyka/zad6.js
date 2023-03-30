@@ -1,15 +1,15 @@
 /*
 
-Tytuł: Sortowanie listy binarnej.
+Tytul: Sortowanie listy binarnej.
 
-Treść: Otrzymujesz listę liczb składających się tylko z zer i jedynek. Posortuj tę listę.
+Tresc: Otrzymujesz liste liczb skladajacych sie tylko z zer i jedynek. Posortuj te liste.
 
-Dane wejściowe: Lista liczb naturalnych.
+Dane wejsciowe: Lista liczb naturalnych.
 
-Dane wyjściowe: Posortowana lista liczb naturalnych.
+Dane wyjsciowe: Posortowana lista liczb naturalnych.
 
-Przykład:
-Dla listy: [1, 0, 1, 0, 1, 1], powinna zostać zwrócona lista: [0, 0, 1, 1, 1, 1].
+Przyklad:
+Dla listy: [1, 0, 1, 0, 1, 1], powinna zostac zwrocona lista: [0, 0, 1, 1, 1, 1].
 
 */
 
@@ -31,3 +31,4 @@ console.assert(
   JSON.stringify(sortowanieListyBinarnej(lista2)) === JSON.stringify(wynik2),
   "Test 2 nieudany"
 );
+

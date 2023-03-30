@@ -1,7 +1,9 @@
 """
-Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke 
-pliku tekstowego. Drugi napis reprezentuje wiersz tekstu. 
-Dostaw otrzymany wiersz tekstu na poczatek pliku tekstowego.
+Tytul: Skopiuj pliki.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Skopiuj wszystkie pliki PNG z pierwszego folderu do drugiego folderu.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
+Dane wyjsciowe: Brak.
+
 """
 
 import pathlib
@@ -45,3 +47,4 @@ def test_dostaw_wiersz():
 if __name__ == "__main__":
 
     test_dostaw_wiersz()
+

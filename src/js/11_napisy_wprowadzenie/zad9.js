@@ -1,19 +1,19 @@
 /*
-Tytuł: Wczytaj i rozdziel informacje o pracowniku.
+Tytul: Wczytaj i rozdziel informacje o pracowniku.
 
-Treść: Otrzymasz rekord z bazy danych reprezentujący dane pracownika. Są to kolejno: imię, nazwisko, miejsce urodzenia, stanowisko i zarobki. Informacje są rozdzielone średnikami. Zapisz je w osobnych zmiennych i wypisz je razem z odpowiednimi komunikatami.
+Tresc: Otrzymasz rekord z bazy danych reprezentujacy dane pracownika. Sa to kolejno: imie, nazwisko, miejsce urodzenia, stanowisko i zarobki. Informacje sa rozdzielone srednikami. Zapisz je w osobnych zmiennych i wypisz je razem z odpowiednimi komunikatami.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
 Dla otrzymanego napisu:
 "Jan; Kowalski; Warszawa; Programista; 1000;",
 
-powinna zostać zwrócona lista:
-["Imię: Jan", "Nazwisko: Kowalski", "Miejsce urodzenia: Warszawa", "Zawód: Programista", "Zarobki: 1000"].
+powinna zostac zwrocona lista:
+["Imie: Jan", "Nazwisko: Kowalski", "Miejsce urodzenia: Warszawa", "Zawod: Programista", "Zarobki: 1000"].
 */
 
 function rozdzielRekord(rekord) {
@@ -25,10 +25,10 @@ function rozdzielRekord(rekord) {
   let zarobki = dane[4].trim();
 
   let lista = [
-    "Imię: " + imie,
+    "Imie: " + imie,
     "Nazwisko: " + nazwisko,
     "Miejsce urodzenia: " + miejsceUrodzenia,
-    "Zawód: " + zawod,
+    "Zawod: " + zawod,
     "Zarobki: " + zarobki,
   ];
   return lista;
@@ -39,10 +39,10 @@ function rozdzielRekord(rekord) {
 function test() {
   let input = "Jan; Kowalski; Warszawa; Programista; 1000;";
   let expectedOutput = [
-    "Imię: Jan",
+    "Imie: Jan",
     "Nazwisko: Kowalski",
     "Miejsce urodzenia: Warszawa",
-    "Zawód: Programista",
+    "Zawod: Programista",
     "Zarobki: 1000",
   ];
   let output = rozdzielRekord(input);
@@ -50,9 +50,10 @@ function test() {
   console.assert(
     output.length === expectedOutput.length &&
       output.every((element, index) => element === expectedOutput[index]),
-    "Test nie powiódł się"
+    "Test nie powiodl sie"
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

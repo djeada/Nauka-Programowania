@@ -1,3 +1,15 @@
+/*
+Tytul: Konwersja pomiedzy systemami binarnym i dziesietnym.
+Tresc:
+a) Otrzymujesz reprezentacje dziesietna liczby naturalnej, zwroc jej reprezentacje binarna.
+b) Otrzymujesz reprezentacje binarna liczby naturalnej, zwroc jej reprezentacje dziesietna.
+Dane wejsciowe: Liczba naturalna w obu podpunktach.
+Dane wyjsciowe: Liczba naturalna w obu podpunktach.
+Przyklad:
+a) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 11.
+b) Dla otrzymanej liczby: 101, powinna zostac zwrocona liczba: 5.
+
+*/
 public class Main {
 
   // Otrzymujesz liczbe, zamien ja na:
@@ -61,3 +73,4 @@ public class Main {
     test4();
   }
 }
+

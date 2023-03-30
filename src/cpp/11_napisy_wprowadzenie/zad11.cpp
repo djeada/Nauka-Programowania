@@ -1,12 +1,14 @@
+/*
+Tytul: Z ilu slow sklada sie zdanie?
+Tresc: Zlicz, ile slow sklada sie z podanego zdania. Znaki interpunkcyjne nie sa
+brane pod uwage jako slowa. Dane wejsciowe: Napis. Dane wyjsciowe: Liczba
+naturalna. Przyklad: Dla otrzymanego napisu: "gram na pianinie.", powinno zostac
+zwrocone: 3.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
-
-/*
-Otrzymujesz napis reprezentujacy zdanie.
-Oblicz srednia dlugosc slow w zdaniu.
-Znaki interpunkcyjne nie sa liczone jako slowa.
-*/
 
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
@@ -64,3 +66,4 @@ int main() {
   test2();
   return 0;
 }
+

@@ -1,10 +1,8 @@
-import java.util.*;
-
 /*
-Otrzymujesz trzy napisy. Pierwszy napis reprezentuje zdanie. Drugi reprezentuje
-slowo A wystepujace w zdaniu. Trzeci reprezentuje slowo B, na ktore ma zostac
-zamienione slowo A. Podmien w zdaniu wszystkie wystapienia slowa A na slowo B.
+## Napisy — trudne
+
 */
+import java.util.*;
 
 public class Main {
   public static String podmienNapis(String napis, String slowoA, String slowoB) {
@@ -27,3 +25,4 @@ public class Main {
     test1();
   }
 }
+

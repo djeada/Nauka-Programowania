@@ -1,12 +1,16 @@
+/*
+Tytul: Znalezienie brakujacego elementu w liscie.
+Tresc: Dla dostarczonej listy, skladajacej sie z nieuporzadkowanych kolejnych
+(oprocz jednego) elementow ciagu arytmetycznego, znajdz brakujacy element. Dane
+wejsciowe: Lista zawierajaca liczby naturalne. Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej listy: [5, 2, 1, 3] zostanie zwrocona liczba: 4.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <limits>
 #include <vector>
-
-/*
-Otrzymujesz liste. Znajdz najwiekszy i najmniejszy
-element tej listy. Zwroc znalezione wartosci.
-*/
 
 int maksV1(std::vector<int> &lista) {
 
@@ -59,3 +63,4 @@ int main() {
 
   return 0;
 }
+

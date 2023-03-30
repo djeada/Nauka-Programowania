@@ -1,9 +1,13 @@
-#include <iostream>
-
 /*
-Napisz funkcje, ktora dla otrzymanej liczby wypisze kwadrat
-o boku rownym otrzymanej liczbie.
+Tytul: Kwadrat
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze kwadrat o
+boku rownym tej liczbie. Dane wejsciowe: Liczba naturalna. Dane wyjsciowe:
+Komunikat. Przyklad: Dla otrzymanej liczby 2 powinno zostac wypisane:
+**
+**
+
 */
+#include <iostream>
 
 void kwadrat(int bok) {
 
@@ -24,3 +28,4 @@ int main() {
 
   return 0;
 }
+

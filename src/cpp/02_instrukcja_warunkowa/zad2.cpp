@@ -1,8 +1,14 @@
-#include <iostream>
-
 /*
-Dla dwoch pobranych od uzytkownika liczb, sprawdz czy liczby sa identyczne.
+Tytul: Porownanie ze zmienna.
+Tresc: Pobierz od uzytkownika dwie liczby naturalne i sprawdz, czy sa one
+identyczne. Wypisz odpowiedni komunikat. Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Komunikat.
+Przyklad:
+Dla pobranych liczb: 7 i 4, powinien zostac wypisany komunikat, ze liczby sa
+rozne.
+
 */
+#include <iostream>
 
 int main() {
 
@@ -20,3 +26,4 @@ int main() {
 
   return 0;
 }
+

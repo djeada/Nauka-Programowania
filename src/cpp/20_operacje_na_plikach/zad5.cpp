@@ -1,3 +1,12 @@
+/*
+Tytul: Znajdz i zmodyfikuj pliki spelniajace warunek.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do folderu.
+a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych sie w
+podanym folderze i jego podfolderach. b) Usun srodkowy wiersz z kazdego pliku
+CSV znajdujacego sie w podanym folderze i jego podfolderach. Dane wejsciowe:
+Napis reprezentujacy sciezke do folderu. Dane wyjsciowe: Brak.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <experimental/filesystem>
@@ -7,12 +16,6 @@
 #include <stdexcept>
 
 namespace filesys = std::experimental::filesystem;
-
-/*
-Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
-Kazdy wiersz pliku reprezentuje adres ip. Posortuj adresy ip
-i zapisz je w liscie.
-*/
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
 
@@ -115,3 +118,4 @@ int main() {
 
   return 0;
 }
+

@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Znalezienie elementu bez pary w liście liczb całkowitych.
+Tytul: Znalezienie elementu bez pary w liscie liczb calkowitych.
 
-Treść: Dla otrzymanej listy liczb całkowitych, składającej się z nieparzystej liczby elementów, znajdź element, który nie ma pary o tej samej wartości.
+Tresc: Dla otrzymanej listy liczb calkowitych, skladajacej sie z nieparzystej liczby elementow, znajdz element, ktory nie ma pary o tej samej wartosci.
 
-Dane wejściowe: Lista liczb całkowitych.
+Dane wejsciowe: Lista liczb calkowitych.
 
-Dane wyjściowe: Liczba całkowita.
+Dane wyjsciowe: Liczba calkowita.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [1, 3, 1, 7, 3, 1, 1] zostanie zwrócona liczba: 7.
+Dla otrzymanej listy: [1, 3, 1, 7, 3, 1, 1] zostanie zwrocona liczba: 7.
 */
 
-// Funkcja znajdująca element bez pary w liście liczb całkowitych
+// Funkcja znajdujaca element bez pary w liscie liczb calkowitych
 function znajdzElementBezPary(lista) {
   let bezPary = 0;
   for (let liczba of lista) {
@@ -32,3 +32,4 @@ function testZnajdzElementBezPary() {
 }
 
 testZnajdzElementBezPary();
+

@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Roznica miedzy dwoma listami.
+# Tresc: Dla otrzymanych dwoch list liczb calkowitych, znajdz elementy, ktore nie sa czescia wspolna obu list.
+# Dane wejsciowe: Dwie listy liczb calkowitych.
+# Dane wyjsciowe: Lista liczb calkowitych.
+# Przyklad:
+# Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5, 1].
 
 source ../assert.sh
-
-# Otrzymujesz dwie listy. Znajdz elementy wystepujace
-# zarowno w pierwszej jak i w drugiej liscie.
 
 czesc_wspolna_v1() {
     wynik=()
@@ -41,7 +43,6 @@ main() {
     test1
     test2
 }
-
 
 main "$@"
 

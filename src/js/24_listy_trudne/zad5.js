@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Zbiór potęgowy 
+Tytul: Zbior potegowy 
 
-Treść: Otrzymujesz listę liczb naturalnych. Zwróć zbiór potęgowy otrzymanej listy, czyli zbiór wszystkich jej podzbiorów.
+Tresc: Otrzymujesz liste liczb naturalnych. Zwroc zbior potegowy otrzymanej listy, czyli zbior wszystkich jej podzbiorow.
 
-Dane wejściowe: Lista liczb naturalnych.
+Dane wejsciowe: Lista liczb naturalnych.
 
-Dane wyjściowe: Lista list zawierająca elementy z wejściowej listy lub pustą listę.
+Dane wyjsciowe: Lista list zawierajaca elementy z wejsciowej listy lub pusta liste.
 
-Przykład:
+Przyklad:
 
-Dla wejściowej listy [1, 2, 1], powinna zostać zwrócona lista: [[], [1], [2], [1, 2], [1, 1], [1, 2, 1]].
+Dla wejsciowej listy [1, 2, 1], powinna zostac zwrocona lista: [[], [1], [2], [1, 2], [1, 1], [1, 2, 1]].
 
 */
 function zbiorPotegowy(lista) {
@@ -67,3 +67,4 @@ console.assert(
   JSON.stringify(sortedResult2) === JSON.stringify(sortedExpected2),
   "Test 2 nieudany"
 );
+

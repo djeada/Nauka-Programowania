@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Cyfry w slowach.
+# Tresc: Dostajesz napis reprezentujacy zdanie. Zapisz w liscie cyfry, ktore sa czescia slow. Cyfry oddzielone od liter spacja powinny zostac pominiete.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Lista napisow.
+# Przyklad:
+# Dla otrzymanego napisu: "Jerzy29 i An37a s3luchali91 lekcji 22 z jezyka polskiego", powinna zostac zwrocona lista: ["29", "37", "3891", "3"].
 
 source ../assert.sh
-
-# Otrzymujesz dwa napisy. Znajdz wiersze w pierwszym napisie 
-# konczace sie drugim napisem. Wiersz moze byc zakonczony 
-# dowolnym znakiem interpunkcyjnym.
 
 wiersze_konczace_sie_napisem() {
     local tekst=$1
@@ -21,9 +22,9 @@ wiersze_konczace_sie_napisem() {
 
 test_wiersze_konczace_sie_napisem() {
     local tekst="Folgujmy paniom nie sobie, ma rada;
-Milujmy wiernie nie jest w nich przysada.
-Godnosci trzeba nie za nic tu cnota,
-Milosci pragna nie pragna tu zlota."
+    Milujmy wiernie nie jest w nich przysada.
+    Godnosci trzeba nie za nic tu cnota,
+    Milosci pragna nie pragna tu zlota."
     local koniec="da"
     local wynik=($(wiersze_konczace_sie_napisem "$tekst" "$koniec"))
     local oczekiwane=('Folgujmy paniom nie sobie, ma rada;' 'Milujmy wiernie nie jest w nich przysada.')
@@ -34,7 +35,6 @@ Milosci pragna nie pragna tu zlota."
 main() {
     test_wiersze_konczace_sie_napisem
 }
-
 
 main "$@"
 

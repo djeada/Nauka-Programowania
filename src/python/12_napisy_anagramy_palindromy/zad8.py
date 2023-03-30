@@ -1,18 +1,21 @@
 """
-Znajdz wszystkie wyjatkowe palindromy jakie mozna utworzyc ze znakow w slowie 
-(bez zmiany kolejnosci wystepowania). Nie uwzgledniaj duplikatow w liscie.
-
+Tytul: Wyjatkowe palindromy.
+Tresc: Napisz program, ktory znajdzie wszystkie wyjatkowe palindromy, jakie mozna utworzyc ze znakow w slowie (bez zmiany kolejnosci wystepowania). Nie uwzgledniaj duplikatow w liscie.
 Wyjatkowy palindrom musi spelniac jeden z dwoch warunkow:
 1. Wszystkie znaki sa identyczne, np. “xxx”.
 2. Wszystkie znaki poza srodkowym znakiem sa identyczne, np. “ccdcc”.
-
 Pojedynczy znak jest rowniez uznawany za wyjatkowy palindrom.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla otrzymanego napisu: “xxxx”, powinna zostac zwrocona lista: [“x”, “xx”, 'xxx', 'xxxx'].
+
 """
 
 
 def wyjatkowy_palindrom(napis):
     """
-    Funkcja sprawdza czy podany napis jest wyjatkowym palindromem. 
+    Funkcja sprawdza czy podany napis jest wyjatkowym palindromem.
     """
     if not napis:
         return True
@@ -29,7 +32,7 @@ def wyjatkowy_palindrom(napis):
 
 def wyjatkowe_palindromy(napis):
     """
-    Funkcja zwraca wszystkie wyjatkowe palindromy, ktore mozna utworzyc z podnapisow danego napisu. 
+    Funkcja zwraca wszystkie wyjatkowe palindromy, ktore mozna utworzyc z podnapisow danego napisu.
     """
     if len(napis) == 1:
         return {napis}
@@ -60,3 +63,4 @@ def test_wyjatkowe_palindromy():
 if __name__ == "__main__":
     test_wyjatkowy_palindrom()
     test_wyjatkowe_palindromy()
+

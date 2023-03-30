@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Najdłuższy ciąg zer w liczbie binarnej.
+Tytul: Najdluzszy ciag zer w liczbie binarnej.
 
-Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. Oblicz długość najdłuższego ciągu zer w jej reprezentacji binarnej.
+Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Oblicz dlugosc najdluzszego ciagu zer w jej reprezentacji binarnej.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 14, powinna zostać zwrócona liczba 1.
+Dla otrzymanej liczby 14, powinna zostac zwrocona liczba 1.
 */
 
-// Funkcja obliczająca najdłuższy ciąg zer w liczbie binarnej
+// Funkcja obliczajaca najdluzszy ciag zer w liczbie binarnej
 function najdluzszyCiagZer(liczba) {
   let binarna = liczba.toString(2);
   let najdluzszyCiag = 0;
@@ -37,8 +37,9 @@ function test() {
   let expectedOutput = 1;
   let output = najdluzszyCiagZer(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

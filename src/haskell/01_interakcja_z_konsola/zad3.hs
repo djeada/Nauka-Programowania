@@ -1,16 +1,16 @@
 {-
-Tytuł: Rysowanie kształtów za pomocą znaków.
+Tytul: Rysowanie ksztaltow za pomoca znakow.
 
-Treść zadania: Napisz program, który wypisze na standardowe wyjście ciągi znaków tworzące kwadrat, trójkąt oraz romb z jedynek. Pamiętaj o dodawaniu odpowiednich spacji i przejściach do nowej linii.
+Tresc zadania: Napisz program, ktory wypisze na standardowe wyjscie ciagi znakow tworzace kwadrat, trojkat oraz romb z jedynek. Pamietaj o dodawaniu odpowiednich spacji i przejsciach do nowej linii.
 
-Przykłady:
+Przyklady:
 
 Kwadrat:
 
 xx
 xx
 
-Trójkąt:
+Trojkat:
 
 1
 22
@@ -24,9 +24,9 @@ Romb z jedynek:
 111
 1
 
-Dane wejściowe: Brak.
+Dane wejsciowe: Brak.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 -}
 
 main :: IO ()
@@ -46,3 +46,4 @@ main = do
   putStrLn "11111"
   putStrLn " 111"
   putStrLn "  1"
+

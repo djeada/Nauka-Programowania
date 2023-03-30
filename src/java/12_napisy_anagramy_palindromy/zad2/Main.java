@@ -1,13 +1,18 @@
+/*
+Tytul: Znalezienie wszystkich permutacji slowa.
+Tresc: Napisz program, ktory dla otrzymanego napisu znajdzie jego wszystkie permutacje.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla otrzymanego napisu: “abc”, powinna zostac zwrocona lista: [“abc”, “bac”, “cab”, “acb”, “bca”, “cba”].
+
+*/
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-
-/*
-Wszystkie permutacje.
-*/
 
 public class Main {
 
@@ -57,3 +62,4 @@ public class Main {
     assert znajdzWszystkiePerumtacjeV2(slowo).collect(Collectors.toSet()).equals(wynik);
   }
 }
+

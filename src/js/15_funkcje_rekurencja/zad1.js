@@ -1,15 +1,15 @@
 /*
-Tytuł: Liczby naturalne mniejsze od N.
+Tytul: Liczby naturalne mniejsze od N.
 
-Treść: Otrzymujesz liczbę N. Przy użyciu rekurencji stwórz napis składający się z liczb naturalnych mniejszych od N oddzielonych przecinkami.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji stworz napis skladajacy sie z liczb naturalnych mniejszych od N oddzielonych przecinkami.
 
-Dane wejściowe: Liczba naturalna N.
+Dane wejsciowe: Liczba naturalna N.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla N = 10, powinien zostać zwrócony napis: "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0".
+Dla N = 10, powinien zostac zwrocony napis: "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0".
 */
 
 function liczbyMniejszeOdN(n) {
@@ -31,3 +31,4 @@ function test() {
 }
 
 test();
+

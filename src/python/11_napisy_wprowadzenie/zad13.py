@@ -1,6 +1,17 @@
 """
-Otrzymujesz napis. Znajdz znaki znajdujace sie na 
-pozycjach bedacych liczbami pierwszymi.
+Tytul: Wypisz co k-ty znak napisu poziomo i pionowo.
+Tresc: Otrzymasz napis oraz liczbe k.
+a) Wypisz co k-ty znak napisu poziomo, rozdzielajac znaki spacjami.
+b) Wypisz co k-ty znak napisu pionowo, rozdzielajac znaki enterami.
+Dane wejsciowe: Napis oraz liczba.
+Dane wyjsciowe: Napis.
+Przyklad:
+a) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony napis: "z h n".
+b) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony napis:
+z
+h
+n
+
 """
 
 
@@ -37,3 +48,4 @@ def test_znaki_na_pozycjach_pierwszych():
 if __name__ == "__main__":
 
     test_znaki_na_pozycjach_pierwszych()
+

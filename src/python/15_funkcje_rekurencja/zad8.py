@@ -1,16 +1,17 @@
 """
-N krazkow o roznych srednicach ulozone jest na jednym z trzech slupkow 
-(A, B lub C). Na spodzie znajduje sie krazek o najwiekszej srednicy. 
-Kazdy nastepny krazek jest mniejszy od poprzedniego. Znajdz sposob na 
-przelozenie wszystkich krazkow na inny slupek. Pamietaj, ze nie wolno 
-klasc krazka o wiekszej srednicy na krazek o mniejszej srednicy, ani 
-przekladac kilku krazkow jednoczesnie. 
+Tytul: Slowa elfickie.
+Tresc: Otrzymujesz napis. Przy uzyciu rekurencji sprawdz czy otrzymane slowo jest slowem elfickim. Przez slowo elfickie rozumiemy taki napis, w ktorym co najmniej raz wystepuje kazda z liter slowa elf.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla otrzymanego napisu: "reflektor", powinna zostac zwrocona wartosc logiczna: Prawda.
+
 """
 
 
 def hanoi(n):
     """
-    Funkcja zwraca liste ruchow, ktore powinny byc wykonane, aby 
+    Funkcja zwraca liste ruchow, ktore powinny byc wykonane, aby
     przelozyc n krazkow ze slupka A na slupek B. Slupek C jest
     slupkiem pomocniczym.
     """
@@ -48,3 +49,4 @@ def test_hanoi():
 
 if __name__ == "__main__":
     test_hanoi()
+

@@ -1,13 +1,15 @@
+/*
+Tytul: Odwroc slowa w zdaniu.
+Tresc: Otrzymujesz napis reprezentujacy zdanie. Zamien slowa zdania na te same
+napisy zapisane wspak. Znaki interpunkcyjne nie sa uwzgledniane jako slowa. Dane
+wejsciowe: Napis. Dane wyjsciowe: Napis. Przyklad: Dla otrzymanego napisu: "Ala
+ma kota", powinien zostac zwrocony napis: "ala mak otak".
+
+*/
 #include <cassert>
 #include <iostream>
 #include <sstream>
 #include <vector>
-
-/*
-Otrzymujesz rekord z bazy danych reprezentujacy dane pracownika. Sa to kolejno:
-imie, nazwisko, miejsce urodzenia, stanowisko i zarobki. Informacje rozdzielone
-sa srednikami. Zapisz je w osobnych zmiennych i wypisz wraz z komunikatem.
-*/
 
 std::vector<std::string> dane(std::string &napis) {
 
@@ -42,3 +44,4 @@ int main() {
   wypiszDane(napis);
   return 0;
 }
+

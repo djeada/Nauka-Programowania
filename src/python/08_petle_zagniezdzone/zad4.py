@@ -1,7 +1,14 @@
 """
-Napisz funkcje, ktora dla otrzymanej liczby N, 
-wypisze N pierwszych wierszy i kolumn tabliczki 
-mnozenia.
+Tytul: Tabliczka mnozenia.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej N, wypisze N pierwszych wierszy i kolumn tabliczki mnozenia.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Wiersze i kolumny tabliczki mnozenia o wymiarach NxN.
+Przyklad:
+Dla otrzymanej liczby 3 powinno zostac wypisane:
+1 2 3
+2 4 6
+3 6 9
+
 """
 
 
@@ -18,3 +25,4 @@ if __name__ == "__main__":
     n = int(input())
 
     tabliczka_mnozenia(n)
+

@@ -1,15 +1,15 @@
 /*
-Tytuł: Litera X.
+Tytul: Litera X.
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze literę X o wysokości równej tej liczbie.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze litere X o wysokosci rownej tej liczbie.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 4 powinno zostać wypisane:
+Dla otrzymanej liczby 4 powinno zostac wypisane:
 
     *   *
      * *
@@ -18,7 +18,7 @@ Dla otrzymanej liczby 4 powinno zostać wypisane:
 
 */
 
-// Funkcja wypisująca literę X o wysokości równej liczbie
+// Funkcja wypisujaca litere X o wysokosci rownej liczbie
 function rysujX(wysokosc) {
   var wiersz = "";
   for (var i = 0; i < wysokosc; i++) {
@@ -35,11 +35,12 @@ function rysujX(wysokosc) {
 }
 
 // Testy
-console.log("Rysuj literę X o wysokości 2");
+console.log("Rysuj litere X o wysokosci 2");
 rysujX(2);
 
-console.log("\nRysuj literę X o wysokości 3");
+console.log("\nRysuj litere X o wysokosci 3");
 rysujX(3);
 
-console.log("\nRysuj literę X o wysokości 4");
+console.log("\nRysuj litere X o wysokosci 4");
 rysujX(4);
+

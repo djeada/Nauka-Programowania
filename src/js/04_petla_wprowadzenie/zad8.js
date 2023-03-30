@@ -1,25 +1,26 @@
 /*
-Tytuł: Liczba kur i owiec na farmie.
+Tytul: Liczba kur i owiec na farmie.
 
-Treść: Na farmie jest a głów i b nóg. Znajdź liczbę kur i liczbę owiec.
+Tresc: Na farmie jest a glow i b nog. Znajdz liczbe kur i liczbe owiec.
 
-Dane wejściowe: Dwie liczby naturalne.
+Dane wejsciowe: Dwie liczby naturalne.
 
-Dane wyjściowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych liczb 40 i 100, powinny zostać wypisane liczby 30 i 10.
+Dla otrzymanych liczb 40 i 100, powinny zostac wypisane liczby 30 i 10.
 */
 
-// Pobieranie danych od użytkownika
-const a = parseInt(prompt("Podaj liczbę głów:"));
-const b = parseInt(prompt("Podaj liczbę nóg:"));
+// Pobieranie danych od uzytkownika
+const a = parseInt(prompt("Podaj liczbe glow:"));
+const b = parseInt(prompt("Podaj liczbe nog:"));
 
-// Pętla
+// Petla
 for (let i = 0; i <= a; i++) {
   if (i * 2 + (a - i) * 4 === b) {
     console.log(i);
     console.log(a - i);
   }
 }
+

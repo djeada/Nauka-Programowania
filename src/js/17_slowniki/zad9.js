@@ -1,19 +1,19 @@
 /*
 
 
-Tytuł: Powtarzające się znaki
+Tytul: Powtarzajace sie znaki
 
-Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrócenie wszystkich znaków, które występują co najmniej 2 razy w ciągu.
+Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrocenie wszystkich znakow, ktore wystepuja co najmniej 2 razy w ciagu.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
 Dla otrzymanego napisu: "aaabbbccc"
 
-Powinien zostać zwrócony napis: "abc"
+Powinien zostac zwrocony napis: "abc"
 */
 
 function powtarzajaceSieZnaki(napis) {
@@ -38,15 +38,16 @@ function powtarzajaceSieZnaki(napis) {
 function testPowtarzajaceSieZnaki() {
   const napis1 = "aaabbbccc";
   const wynik1 = powtarzajaceSieZnaki(napis1);
-  console.assert(wynik1 === "abc", "Test 1 nie powiódł się");
+  console.assert(wynik1 === "abc", "Test 1 nie powiodl sie");
 
   const napis2 = "abcd";
   const wynik2 = powtarzajaceSieZnaki(napis2);
-  console.assert(wynik2 === "", "Test 2 nie powiódł się");
+  console.assert(wynik2 === "", "Test 2 nie powiodl sie");
 
   const napis3 = "Ala ma kota, a kot ma Ale.";
   const wynik3 = powtarzajaceSieZnaki(napis3);
-  console.assert(wynik3 === "aekmt", "Test 3 nie powiódł się");
+  console.assert(wynik3 === "aekmt", "Test 3 nie powiodl sie");
 }
 
 testPowtarzajaceSieZnaki();
+

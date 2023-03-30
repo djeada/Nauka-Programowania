@@ -1,13 +1,18 @@
+/*
+Tytul: Zwroc stala.
+Tresc: Napisz funkcje, ktora zwroci:
+a) Liczbe 3.
+b) Napis "Tak".
+c) Wartosc logiczna Prawda.
+Dane wejsciowe: Brak.
+Dane wyjsciowe:
+a) Liczba 3.
+b) Napis "Tak".
+c) Wartosc logiczna Prawda.
+
+*/
 #include <cassert>
 #include <string>
-
-/*
-Napisz funkcje, ktora zwroci:
-
-a) Liczbe 3.
-b) Napis “Tak”.
-c) Wartosc logiczna Prawda.
-*/
 
 int zwroc3() { return 3; }
 
@@ -29,3 +34,4 @@ int main() {
 
   return 0;
 }
+

@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Średnia długość słów w zdaniu.
+Tytul: Srednia dlugosc slow w zdaniu.
 
-Treść: Otrzymasz napis reprezentujący zdanie. Oblicz średnią długość słów w zdaniu. Znaki interpunkcyjne nie są uwzględniane jako słowa.
+Tresc: Otrzymasz napis reprezentujacy zdanie. Oblicz srednia dlugosc slow w zdaniu. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "Zepsuty rower.", powinna zostać zwrócona liczba: 6.
+Dla otrzymanego napisu: "Zepsuty rower.", powinna zostac zwrocona liczba: 6.
 */
 
 function sredniaDlugoscSlow(napis) {
@@ -32,14 +32,15 @@ function test() {
 
   console.assert(
     output === expectedOutput,
-    "Test nie powiódł się dla " +
+    "Test nie powiodl sie dla " +
       input +
       ". Otrzymany wynik to " +
       output +
       ", a oczekiwany wynik to " +
       expectedOutput
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

@@ -1,9 +1,13 @@
-from math import pow
+"""
+Tytul: Znalezienie wszystkich par elementow listy o sumie rownej podanej liczbie.
+Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x, znajdz wszystkie pary elementow listy, ktorych suma jest rowna x.
+Dane wejsciowe: Lista liczb calkowitych oraz liczba calkowita.
+Dane wyjsciowe: Lista par liczb calkowitych.
+Przyklad:
+Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5, zostana zwrocone wszystkie pary elementow o sumie rownej 5: [(1, 4), (2, 3)].
 
 """
-Dla otrzymanej listy oraz klucza, usun pierwsze 
-wystapienie klucza w liscie.
-"""
+from math import pow
 
 
 def usun_klucz(lista, klucz):
@@ -23,3 +27,4 @@ def test_usun_klucz():
 if __name__ == "__main__":
 
     test_usun_klucz()
+

@@ -1,19 +1,23 @@
-import java.util.*;
-
 /*
-Otrzymujesz napis reprezentujacy adres email. Sprawdz jego poprawnosc.
-Pamietaj, ze kazdy adres email sklada sie z identyfikatora uzytkownika,
-znaku @ oraz nazwy domenowej.
-Identyfikator uzytkownika sklada sie jedynie z:
-a) Malych (a-z) i wielkich (A-Z) liter.
-b) Cyfr (0-9).
-c) Znakow  ! # $ % & ' * + - / = ? ^ _ ` { | } ~.
-d) Kropki . pod warunkiem, ze nie jest pierwszym badz ostatnim znakiem i nie wystepuje dwukrotnie po sobie.
-Nazwa domenowa sklada sie jedynie z:
-a) Malych (a-z) i wielkich (A-Z) liter.
-b) Cyfr (0-9).
-c) Kropki . oraz myslnika - pod warunkiem, ze nie sa pierwszym badz ostatnim znakiem i nie wystepuja dwukrotnie po sobie.
+Tytul: Sprawdz poprawnosc adresu e-mail.
+Tresc: Masz napis reprezentujacy adres e-mail. Sprawdz, czy jest on poprawny.
+Pamietaj, ze kazdy adres e-mail sklada sie z identyfikatora uzytkownika, znaku @ oraz nazwy domenowej.
+Identyfikator uzytkownika sklada sie tylko z:
+* Malych (a-z) i wielkich (A-Z) liter.
+* Cyfr (0-9).
+* Znakow ! # $ % & ' * + — / = ? ^ _ ` { | } ~.
+* Kropek . pod warunkiem, ze nie jest pierwszym lub ostatnim znakiem i nie wystepuje dwukrotnie po sobie.
+Nazwa domenowa sklada sie tylko z:
+* Malych (a-z) i wielkich (A-Z) liter.
+* Cyfr (0-9).
+* Kropek . oraz myslnika — pod warunkiem, ze nie sa pierwszym lub ostatnim znakiem i nie wystepuja dwukrotnie po sobie.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla napisu: “adam@gmail.com”, powinna zostac zwrocona wartosc logiczna: Prawda.
+
 */
+import java.util.*;
 
 public class Main {
   public static boolean poprawnyIdentyfikator(String napis) {
@@ -85,3 +89,4 @@ public class Main {
     test2();
   }
 }
+

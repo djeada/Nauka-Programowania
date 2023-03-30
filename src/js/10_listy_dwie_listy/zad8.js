@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Połącz posortowane listy w posortowaną listę.
+Tytul: Polacz posortowane listy w posortowana liste.
 
-Treść: Dla otrzymanych dwóch posortowanych list, połącz je w jedną posortowaną listę.
+Tresc: Dla otrzymanych dwoch posortowanych list, polacz je w jedna posortowana liste.
 
-Dane wejściowe: Dwie listy liczb całkowitych.
+Dane wejsciowe: Dwie listy liczb calkowitych.
 
-Dane wyjściowe: Lista liczb całkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinna zostać zwrócona lista: [2, 3, 4, 7, 9].
+Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinna zostac zwrocona lista: [2, 3, 4, 7, 9].
  */
 
-// Funkcja zwracająca listę elementów, które nie są częścią wspólną obu list
+// Funkcja zwracajaca liste elementow, ktore nie sa czescia wspolna obu list
 function polaczPosortowaneListy(lista1, lista2) {
   let wynik = [];
   let maxLength = Math.max(lista1.length, lista2.length);
@@ -52,3 +52,4 @@ function testPolaczPosortowaneListy() {
 }
 
 testPolaczPosortowaneListy();
+

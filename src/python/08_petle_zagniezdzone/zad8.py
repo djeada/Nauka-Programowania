@@ -1,9 +1,16 @@
-from math import pow
+"""
+Tytul: Trojkat Pascala.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze trojkat Pascala o wysokosci rownej tej liczbie.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Komunikat.
+Przyklad:
+Dla otrzymanej liczby 3 powinno zostac wypisane:
+1
+11
+121
 
 """
-Napisz funkcje, ktora dla otrzymanej liczby wypisze 
-trojkat Pascala o wysokosci rownej otrzymanej liczbie.
-"""
+from math import pow
 
 
 def trojkat_pascala(wysokosc):
@@ -19,3 +26,4 @@ if __name__ == "__main__":
     print("Podaj wysokosc trojkata Pascala: ")
     wysokosc = int(input())
     trojkat_pascala(wysokosc)
+

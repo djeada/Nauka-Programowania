@@ -1,3 +1,12 @@
+/*
+Tytul: Odwroc slowa w zdaniu.
+Tresc: Otrzymujesz napis reprezentujacy zdanie. Zamien slowa zdania na te same napisy zapisane wspak. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "ala mak otak".
+
+*/
 import java.util.*;
 
 public class Main {
@@ -23,3 +32,4 @@ public class Main {
     wypiszDane(napis);
   }
 }
+

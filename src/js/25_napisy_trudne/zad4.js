@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Usuń powtórzenia znaków.
+Tytul: Usun powtorzenia znakow.
 
-Treść: Otrzymujesz napis. Twoim zadaniem jest usunięcie powtórzeń każdego znaku w napisie. Każdy znak może wystąpić tylko raz.
+Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen kazdego znaku w napisie. Kazdy znak moze wystapic tylko raz.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrócony napis powinien brzmieć: “AB”.
+Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “AB”.
 
 */
 
@@ -26,3 +26,4 @@ function testUsunPowtorzenia() {
 }
 
 testUsunPowtorzenia();
+

@@ -1,6 +1,11 @@
 """
-Otrzymujesz dwie listy liczb calkowitych. Znajdz elementy wystepujace 
-zarowno w pierwszej jak i w drugiej liscie.
+Tytul: Roznica miedzy dwoma listami.
+Tresc: Dla otrzymanych dwoch list liczb calkowitych, znajdz elementy, ktore nie sa czescia wspolna obu list.
+Dane wejsciowe: Dwie listy liczb calkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
+Przyklad:
+Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5, 1].
+
 """
 
 
@@ -15,3 +20,4 @@ def test_czesc_wspolna():
 
 if __name__ == "__main__":
     test_czesc_wspolna()
+

@@ -1,21 +1,22 @@
 /*
-Tytuł: Liczby mniejsze od podanej liczby.
+Tytul: Liczby mniejsze od podanej liczby.
 
-Treść: Dla otrzymanej liczby naturalnej wypisz wszystkie liczby naturalne mniejsze od niej.
+Tresc: Dla otrzymanej liczby naturalnej wypisz wszystkie liczby naturalne mniejsze od niej.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczby naturalne.
+Dane wyjsciowe: Liczby naturalne.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 3, powinny zostać wypisane liczby 2 i 1.
+Dla otrzymanej liczby 3, powinny zostac wypisane liczby 2 i 1.
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Pętla
+// Petla
 for (let i = liczba - 1; i > 0; i--) {
   console.log(i);
 }
+

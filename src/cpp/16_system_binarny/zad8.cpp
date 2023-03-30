@@ -1,10 +1,12 @@
-#include <cassert>
-
 /*
-Otrzymujesz dziesietna reprezentacje liczby naturalnej. Znajdz potege
-dwojki wieksza badz rowna otrzymanej liczbie. Inaczej: zaokraglij liczbe
-do nastepnej potegi dwojki.
+Tytul: Czy liczba jest palindromem?
+Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Sprawdz, czy
+reprezentacja binarna otrzymanej liczby jest palindromem. Dane wejsciowe: Liczba
+naturalna. Dane wyjsciowe: Wartosc logiczna. Przyklad: Dla otrzymanej liczby 26,
+powinna zostac zwrocona wartosc logiczna: Prawda.
+
 */
+#include <cassert>
 
 int nastepnaPotegaDwojkiV1(int liczba) {
   /*
@@ -64,3 +66,4 @@ int main() {
 
   return 0;
 }
+

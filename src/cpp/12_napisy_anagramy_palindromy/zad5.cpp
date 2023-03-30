@@ -1,13 +1,16 @@
+/*
+Tytul: Znalezienie anagramow slowa w zdaniu.
+Tresc: Napisz program, ktory otrzymuje napis reprezentujacy zdanie oraz slowo.
+Twoim zadaniem jest znalezienie wszystkich anagramow otrzymanego slowa w zdaniu.
+Roznice miedzy wielkimi i malymi literami powinny byc zignorowane. Dane
+wejsciowe: Dwa napisy. Dane wyjsciowe: Lista napisow. Przyklad: Dla otrzymanych
+napisow: “Sroga kara.” oraz “arak”, powinna zostac zwrocona lista: [“kara”].
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
 #include <vector>
-
-/*
-Otrzymujesz napis reprezentujacy zdanie oraz slowo. Znajdz wszystkie
-anagramy  otrzymanego slowa w zdaniu. Roznice miedzy wielkimi i malymi
-literami powinny byc zignorowane.
-*/
 
 void naMale(std::string &slowo) {
   transform(slowo.begin(), slowo.end(), slowo.begin(), ::tolower);
@@ -87,3 +90,4 @@ int main() {
 
   return 0;
 }
+

@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Najdłuższy naprzemienny podciąg.
+Tytul: Najdluzszy naprzemienny podciag.
 
-Treść: Masz daną listę liczb. Znajdź najdłuższy podciąg naprzemienny w tej liście. Ciąg jest naprzemienny, jeśli liczby w nim rosną i maleją na zmianę. Na przykład [1, 3, 2, 4, 3, 5] jest naprzemienny.
+Tresc: Masz dana liste liczb. Znajdz najdluzszy podciag naprzemienny w tej liscie. Ciag jest naprzemienny, jesli liczby w nim rosna i maleja na zmiane. Na przyklad [1, 3, 2, 4, 3, 5] jest naprzemienny.
 
-Dane wejściowe: Lista n liczb całkowitych.
+Dane wejsciowe: Lista n liczb calkowitych.
 
-Dane wyjściowe: Lista liczb całkowitych reprezentująca najdłuższy podciąg naprzemienny w tej liście.
+Dane wyjsciowe: Lista liczb calkowitych reprezentujaca najdluzszy podciag naprzemienny w tej liscie.
 
-Przykład:
+Przyklad:
 
-Dla listy liczb: [1, -2, 6, 4, -3, 2, -4, -3], powinna zostać zwrócona lista [1, -2, 6, -3, 2, -4].
+Dla listy liczb: [1, -2, 6, 4, -3, 2, -4, -3], powinna zostac zwrocona lista [1, -2, 6, -3, 2, -4].
 
 
 */
@@ -47,3 +47,4 @@ console.assert(
     JSON.stringify(wynik2),
   "Test 2 nieudany"
 );
+

@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Zamień A na B.
+Tytul: Zamien A na B.
 
-Treść: Otrzymujesz dwie liczby naturalne. Oblicz, ile bitów należy odwrócić, aby zamienić liczbę A na liczbę B.
+Tresc: Otrzymujesz dwie liczby naturalne. Oblicz, ile bitow nalezy odwrocic, aby zamienic liczbe A na liczbe B.
 
-Dane wejściowe: Dwie liczby naturalne.
+Dane wejsciowe: Dwie liczby naturalne.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych liczb 34 i 73, powinna zostać zwrócona liczba 5.*/
+Dla otrzymanych liczb 34 i 73, powinna zostac zwrocona liczba 5.*/
 
 function zamien(a, b) {
   let wynik = 0;
@@ -23,11 +23,12 @@ function zamien(a, b) {
 }
 
 function test() {
-  console.assert(zamien(34, 73) === 5, "Test 1 nie powiódł się");
-  console.assert(zamien(1, 1) === 0, "Test 2 nie powiódł się");
-  console.assert(zamien(0, 0) === 0, "Test 3 nie powiódł się");
-  console.assert(zamien(0, 1) === 1, "Test 4 nie powiódł się");
-  console.assert(zamien(1, 0) === 1, "Test 5 nie powiódł się");
+  console.assert(zamien(34, 73) === 5, "Test 1 nie powiodl sie");
+  console.assert(zamien(1, 1) === 0, "Test 2 nie powiodl sie");
+  console.assert(zamien(0, 0) === 0, "Test 3 nie powiodl sie");
+  console.assert(zamien(0, 1) === 1, "Test 4 nie powiodl sie");
+  console.assert(zamien(1, 0) === 1, "Test 5 nie powiodl sie");
 }
 
 test();
+

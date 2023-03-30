@@ -1,23 +1,23 @@
 /*
 
-Tytuł: Wyjątkowe palindromy.
+Tytul: Wyjatkowe palindromy.
 
-Treść: Napisz program, który znajdzie wszystkie wyjątkowe palindromy, jakie można utworzyć ze znaków w słowie (bez zmiany kolejności występowania). Nie uwzględniaj duplikatów w liście.
+Tresc: Napisz program, ktory znajdzie wszystkie wyjatkowe palindromy, jakie mozna utworzyc ze znakow w slowie (bez zmiany kolejnosci wystepowania). Nie uwzgledniaj duplikatow w liscie.
 
-Wyjątkowy palindrom musi spełniać jeden z dwóch warunków:
+Wyjatkowy palindrom musi spelniac jeden z dwoch warunkow:
 
-1. Wszystkie znaki są identyczne, np. “xxx”.
-2. Wszystkie znaki poza środkowym znakiem są identyczne, np. “ccdcc”.
+1. Wszystkie znaki sa identyczne, np. “xxx”.
+2. Wszystkie znaki poza srodkowym znakiem sa identyczne, np. “ccdcc”.
 
-Pojedynczy znak jest również uznawany za wyjątkowy palindrom.
+Pojedynczy znak jest rowniez uznawany za wyjatkowy palindrom.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: “xxxx”, powinna zostać zwrócona lista: [“x”, “xx”, 'xxx', 'xxxx'].
+Dla otrzymanego napisu: “xxxx”, powinna zostac zwrocona lista: [“x”, “xx”, 'xxx', 'xxxx'].
 */
 
 function czyWyjatkowyPalindrom(napis) {
@@ -63,14 +63,15 @@ function test() {
 
   console.assert(
     JSON.stringify(output) === JSON.stringify(expectedOutput),
-    'Test nie powiódł się dla "' +
+    'Test nie powiodl sie dla "' +
       input +
       '". Otrzymany wynik to ' +
       JSON.stringify(output) +
       ", a oczekiwany wynik to " +
       JSON.stringify(expectedOutput)
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

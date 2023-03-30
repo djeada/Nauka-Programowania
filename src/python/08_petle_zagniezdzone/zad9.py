@@ -1,9 +1,13 @@
-import math
+"""
+Tytul: N pierwszych liczb pierwszych.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej N, wypisze N pierwszych liczb pierwszych.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: N liczb pierwszych.
+Przyklad:
+Dla otrzymanej liczby 5 powinno zostac wypisane: 2, 3, 5, 7, 11.
 
 """
-Napisz funkcje, ktora dla otrzymanej liczby N, 
-wypisze N pierwszych liczb pierwszych.
-"""
+import math
 
 
 def sito_eratostenesa(n):
@@ -28,3 +32,4 @@ if __name__ == "__main__":
             print(f"{i}, ", end="")
 
     print()
+

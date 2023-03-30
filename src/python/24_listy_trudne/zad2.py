@@ -1,5 +1,11 @@
 """
-Otrzymujesz liste liczb. Przesun zera na koniec listy.
+Tytul: Przesun zera.
+Tresc: Otrzymujesz liste liczb calkowitych. Przesun wszystkie zera na koniec listy.
+Dane wejsciowe: Lista liczb calkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
+Przyklad:
+Dla otrzymanej listy: [0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0], powinna zostac zwrocona lista: [1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0].
+
 """
 
 # Wersja 1
@@ -40,3 +46,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

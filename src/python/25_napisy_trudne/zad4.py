@@ -1,6 +1,11 @@
 """
-Otrzymujesz napis. Usun powtorzenia z napisu. Dany znak moze pojawic sie jedynie
-raz w calym napisie.
+Tytul: Czy napis A jest poczatkiem napisu B?
+Tresc: Dostajesz dwa napisy. Twoim zadaniem jest sprawdzenie, czy drugi napis zaczyna sie od pierwszego napisu.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla napisow: “Dinozaur jest zly” oraz “Dino”, zwrocona wartosc powinna byc: Prawda.
+
 """
 
 # Wersja 1
@@ -54,3 +59,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

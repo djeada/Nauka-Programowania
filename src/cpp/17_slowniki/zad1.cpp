@@ -1,13 +1,15 @@
+/*
+Tytul: Slownik z kluczami bedacymi liczbami naturalnymi i wartosciami ich
+kwadratami. Tresc: Dostajesz liczbe naturalna. Stworz slownik, w ktorym kluczami
+beda kolejne liczby naturalne mniejsze od otrzymanej liczby, a wartosciami beda
+ich kwadraty. Dane wejsciowe: Liczba naturalna. Dane wyjsciowe: Slownik z
+kluczami i wartosciami bedacymi liczbami naturalnymi. Przyklad: Dla liczby 5,
+slownik powinien wygladac nastepujaco: {1: 1, 2: 4, 3: 9, 4: 16}.
+
+*/
 #include <cassert>
 #include <cmath>
 #include <unordered_map>
-
-/*
-Otrzymujesz liczbe naturalna. Zbuduj slownik skladajacy sie
-z kluczy bedacych kolejnymi liczbami naturalnymi mniejszymi
-od otrzymanej liczby oraz wartosci bedacych kwadratami
-odpowiadajacych im kluczy.
-*/
 
 std::unordered_map<int, int> budujSlownik(int liczba) {
   /*
@@ -44,3 +46,4 @@ int main() {
 
   return 0;
 }
+

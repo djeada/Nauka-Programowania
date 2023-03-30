@@ -1,18 +1,18 @@
 /*
-Tytuł: Cyfry liczby
+Tytul: Cyfry liczby
 
-Treść: Napisz funkcję, która dla otrzymanej liczby obliczy sumę jej cyfr.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby obliczy sume jej cyfr.
 
-Dane wejściowe: liczba naturalna
+Dane wejsciowe: liczba naturalna
 
-Dane wyjściowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
 
-Przykład:
+Przyklad:
 
-Dla pobranej liczby 13231, funkcja powinna zwrócić liczbę 10.
+Dla pobranej liczby 13231, funkcja powinna zwrocic liczbe 10.
 */
 
-// Funkcja zwracająca sumę cyfr liczby
+// Funkcja zwracajaca sume cyfr liczby
 function sumaCyfrLiczby(liczba) {
   var suma = 0;
   var liczbaTekst = liczba.toString();
@@ -22,11 +22,12 @@ function sumaCyfrLiczby(liczba) {
   return suma;
 }
 
-// Pobieranie danych od użytkownika i walidacja
-var liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika i walidacja
+var liczba = parseInt(prompt("Podaj liczbe:"));
 while (isNaN(liczba)) {
-  liczba = parseInt(prompt("Podaj poprawną liczbę:"));
+  liczba = parseInt(prompt("Podaj poprawna liczbe:"));
 }
 
 // Wypisanie wyniku
 console.log(sumaCyfrLiczby(liczba));
+

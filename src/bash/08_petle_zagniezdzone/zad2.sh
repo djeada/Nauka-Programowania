@@ -1,8 +1,12 @@
-#!/usr/bin/env bash
-
-#Napisz funkcje, ktora dla otrzymanej liczby
-#wypisze trojkat prostokatny rownoboczny o
-#wysokosci rownej otrzymanej liczbie.
+# Tytul: Trojkat prostokatny rownoboczny
+# Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze trojkat prostokatny rownoboczny o wysokosci rownej tej liczbie.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: Komunikat.
+# Przyklad:
+# Dla otrzymanej liczby 3 powinno zostac wypisane:
+# *
+# **
+# ***
 
 trojkat() {
 

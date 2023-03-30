@@ -1,35 +1,36 @@
 /*
-Tytuł: Obliczenie ceny podłogi.
+Tytul: Obliczenie ceny podlogi.
 
-Treść: Otrzymasz cenę pojedynczej płytki, wymiary płytki w postaci kwadratu oraz wymiary podłogi w postaci prostokąta. Oblicz, ile kosztować będzie podłoga o podanych wymiarach.
+Tresc: Otrzymasz cene pojedynczej plytki, wymiary plytki w postaci kwadratu oraz wymiary podlogi w postaci prostokata. Oblicz, ile kosztowac bedzie podloga o podanych wymiarach.
 
-Jednostki są umowne.
+Jednostki sa umowne.
 
-Dane wejściowe: Cztery liczby naturalne: cena płytki, długość boku płytki, długość podłogi oraz szerokość podłogi.
+Dane wejsciowe: Cztery liczby naturalne: cena plytki, dlugosc boku plytki, dlugosc podlogi oraz szerokosc podlogi.
 
-Dane wyjściowe: Liczba naturalna oznaczająca cenę podłogi.
+Dane wyjsciowe: Liczba naturalna oznaczajaca cene podlogi.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb: 2 (cena płytki), 3 (długość boku płytki), 20 (długość podłogi) oraz 40 (szerokość podłogi), powinna zostać wypisana liczba: 196.
+Dla pobranych liczb: 2 (cena plytki), 3 (dlugosc boku plytki), 20 (dlugosc podlogi) oraz 40 (szerokosc podlogi), powinna zostac wypisana liczba: 196.
 */
 
-// Pobieranie danych od użytkownika
+// Pobieranie danych od uzytkownika
 
-const cena_plytki = parseInt(prompt("Podaj cenę płytki:"));
-const dlugosc_boku_plytki = parseInt(prompt("Podaj długość boku płytki:"));
-const dlugosc_podlogi = parseInt(prompt("Podaj długość podłogi:"));
-const szerokosc_podlogi = parseInt(prompt("Podaj szerokość podłogi:"));
+const cena_plytki = parseInt(prompt("Podaj cene plytki:"));
+const dlugosc_boku_plytki = parseInt(prompt("Podaj dlugosc boku plytki:"));
+const dlugosc_podlogi = parseInt(prompt("Podaj dlugosc podlogi:"));
+const szerokosc_podlogi = parseInt(prompt("Podaj szerokosc podlogi:"));
 
-// Obliczanie wymiarów podłogi
+// Obliczanie wymiarow podlogi
 const wymiary_podlogi = dlugosc_podlogi * szerokosc_podlogi;
 const wymiary_plytki = dlugosc_boku_plytki ** 2;
 
-// Obliczanie ilości płytek
+// Obliczanie ilosci plytek
 const ilosc_plytek = wymiary_podlogi / wymiary_plytki;
 
-// Obliczanie ceny podłogi
+// Obliczanie ceny podlogi
 const cena_podlogi = ilosc_plytek * cena_plytki;
 
 // Wypisanie wyniku
 console.log(cena_podlogi);
+

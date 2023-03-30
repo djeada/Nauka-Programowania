@@ -1,10 +1,15 @@
+/*
+Tytul: Trojkat Pascala.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze trojkat
+Pascala o wysokosci rownej tej liczbie. Dane wejsciowe: Liczba naturalna. Dane
+wyjsciowe: Komunikat. Przyklad: Dla otrzymanej liczby 3 powinno zostac wypisane:
+1
+11
+121
+
+*/
 #include <cmath>
 #include <iostream>
-
-/*
-Napisz funkcje, ktora dla otrzymanej liczby wypisze
-trojkat Pascala o wysokosci rownej otrzymanej liczbie.
-*/
 
 void trojkatPascala(int wysokosc) {
 
@@ -26,3 +31,4 @@ int main() {
 
   return 0;
 }
+

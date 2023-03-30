@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Powtarzające się podnapisy.
+Tytul: Powtarzajace sie podnapisy.
 
-Treść: Dostajesz napis. Znajdź wszystkie powtarzające się podnapisy w tym napisie.
+Tresc: Dostajesz napis. Znajdz wszystkie powtarzajace sie podnapisy w tym napisie.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla napisu "pythonpython" powinna zostać zwrócona lista zawierająca napis "python".
+Dla napisu "pythonpython" powinna zostac zwrocona lista zawierajaca napis "python".
 
 */
 
@@ -82,3 +82,4 @@ function testPowtarzajaceSiePodnapisy() {
 }
 
 testPowtarzajaceSiePodnapisy();
+

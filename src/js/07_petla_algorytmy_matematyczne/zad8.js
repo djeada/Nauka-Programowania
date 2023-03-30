@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Naiwny test pierwszości
+Tytul: Naiwny test pierwszosci
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej sprawdzi, czy jest ona liczbą pierwszą.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej sprawdzi, czy jest ona liczba pierwsza.
 
-Dane wejściowe: liczba naturalna
+Dane wejsciowe: liczba naturalna
 
-Dane wyjściowe: wartość logiczna
+Dane wyjsciowe: wartosc logiczna
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 7, funkcja powinna zwrócić wartość logiczną prawda. Dla otrzymanej liczby 2, funkcja powinna zwrócić wartość logiczną prawda.
+Dla otrzymanej liczby 7, funkcja powinna zwrocic wartosc logiczna prawda. Dla otrzymanej liczby 2, funkcja powinna zwrocic wartosc logiczna prawda.
 */
 
-// Funkcja zwracająca wartość logiczną, czy liczba jest pierwsza
+// Funkcja zwracajaca wartosc logiczna, czy liczba jest pierwsza
 function czyPierwsza(liczba) {
   if (liczba < 2) {
     return false;
@@ -41,10 +41,11 @@ function testCzyPierwsza() {
   console.assert(czyPierwsza(19) == true);
 }
 
-// Funkcja uruchamiająca testy
+// Funkcja uruchamiajaca testy
 function main() {
   testCzyPierwsza();
 }
 
-// Uruchomienie testów
+// Uruchomienie testow
 main();
+

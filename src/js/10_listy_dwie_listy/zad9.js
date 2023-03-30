@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Usuń z pierwszej listy część wspólną obu list.
+Tytul: Usun z pierwszej listy czesc wspolna obu list.
 
-Treść: Otrzymujesz dwie listy liczb całkowitych. Usuń z pierwszej listy te elementy, które występują również w drugiej liście.
+Tresc: Otrzymujesz dwie listy liczb calkowitych. Usun z pierwszej listy te elementy, ktore wystepuja rowniez w drugiej liscie.
 
-Dane wejściowe: Dwie listy liczb całkowitych.
+Dane wejsciowe: Dwie listy liczb calkowitych.
 
-Dane wyjściowe: Lista liczb całkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostać zwrócona lista: [9, 5].
+Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5].
 */
 
-// Funkcja zwracająca listę elementów, które nie są częścią wspólną obu list
+// Funkcja zwracajaca liste elementow, ktore nie sa czescia wspolna obu list
 function usunCzescWspolna(lista1, lista2) {
   let wynik = [];
   let maxLength = Math.max(lista1.length, lista2.length);
@@ -50,3 +50,4 @@ function testUsunCzescWspolna() {
 }
 
 testUsunCzescWspolna();
+

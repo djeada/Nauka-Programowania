@@ -1,9 +1,13 @@
-import java.util.*;
-
 /*
-Otrzymujesz napis. Usun powtorzenia z napisu. Dany znak moze pojawic sie jedynie
-raz w calym napisie.
+Tytul: Czy napis A jest poczatkiem napisu B?
+Tresc: Dostajesz dwa napisy. Twoim zadaniem jest sprawdzenie, czy drugi napis zaczyna sie od pierwszego napisu.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla napisow: “Dinozaur jest zly” oraz “Dino”, zwrocona wartosc powinna byc: Prawda.
+
 */
+import java.util.*;
 
 public class Main {
 
@@ -63,3 +67,4 @@ public class Main {
     test5();
   }
 }
+

@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Czy liczba jest palindromem?
+Tytul: Czy liczba jest palindromem?
 
-Treść: Otrzymujesz dziesiętną reprezentację liczby naturalnej. Sprawdź, czy reprezentacja binarna otrzymanej liczby jest palindromem.
+Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Sprawdz, czy reprezentacja binarna otrzymanej liczby jest palindromem.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 26, powinna zostać zwrócona wartość logiczna: Prawda.*/
+Dla otrzymanej liczby 26, powinna zostac zwrocona wartosc logiczna: Prawda.*/
 
 function czyPalindrom(liczba) {
   let lewyBit = 1;
@@ -33,8 +33,9 @@ function test() {
   let expectedOutput = true;
   let output = czyPalindrom(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

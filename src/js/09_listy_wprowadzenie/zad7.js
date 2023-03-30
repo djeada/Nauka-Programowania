@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Liczba mniejsza od największej i większa od wszystkich pozostałych.
+Tytul: Liczba mniejsza od najwiekszej i wieksza od wszystkich pozostalych.
 
-Treść: Otrzymujesz listę liczb naturalnych. Znajdź największą i drugą co do wielkości liczbę w liście, a następnie oblicz średnią arytmetyczną tych dwóch liczb i zwróć ją jako liczbę zmiennoprzecinkową.
+Tresc: Otrzymujesz liste liczb naturalnych. Znajdz najwieksza i druga co do wielkosci liczbe w liscie, a nastepnie oblicz srednia arytmetyczna tych dwoch liczb i zwroc ja jako liczbe zmiennoprzecinkowa.
 
-Dane wejściowe: Lista liczb naturalnych.
+Dane wejsciowe: Lista liczb naturalnych.
 
-Dane wyjściowe: Liczba zmiennoprzecinkowa oznaczająca średnią arytmetyczną największej i drugiej co do wielkości liczby z listy.
+Dane wyjsciowe: Liczba zmiennoprzecinkowa oznaczajaca srednia arytmetyczna najwiekszej i drugiej co do wielkosci liczby z listy.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy [9, 2, 3, 2, 1, 7] powinna zostać zwrócona liczba 8.0.
+Dla otrzymanej listy [9, 2, 3, 2, 1, 7] powinna zostac zwrocona liczba 8.0.
     
     */
 
@@ -41,3 +41,4 @@ function main() {
 }
 
 main();
+

@@ -1,6 +1,9 @@
-#!/usr/bin/env bash
-
-#Dla pobranej liczby, wyswietl liczbe dni miesiaca odpowiadajacemu danej liczbie.
+# Tytul: Ile dni ma miesiac?
+# Tresc: Napisz program, ktory dla pobranej liczby naturalnej bedzie wypisywal liczbe dni w miesiacu odpowiadajacemu tej liczbie. Jesli pobrana liczba nie jest poprawnym numerem miesiaca, program powinien poinformowac o tym uzytkownika.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: Liczba naturalna.
+# Przyklad:
+# Dla pobranej liczby 1, program powinien zwrocic liczbe 31.
 
 main() {
 

@@ -15,3 +15,4 @@ fn main() {
 		println!("Liczba {} jest wieksza od 5", liczba);
 	}
 }
+

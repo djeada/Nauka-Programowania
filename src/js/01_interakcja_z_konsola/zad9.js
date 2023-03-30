@@ -1,33 +1,34 @@
 /*
-Tytuł: Kalkulator kredytowy
+Tytul: Kalkulator kredytowy
 
-Treść: Pobierz roczną stopę procentową, liczbę lat na spłacenie kredytu oraz wysokość udzielonego kredytu. Oblicz miesięczną ratę oraz całkowity koszt kredytu.
+Tresc: Pobierz roczna stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc udzielonego kredytu. Oblicz miesieczna rate oraz calkowity koszt kredytu.
 
-Dane wejściowe: Trzy liczby naturalne.
+Dane wejsciowe: Trzy liczby naturalne.
 
-Dane wyjściowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb: 3.5 (roczna stopa procentowa), 8 (liczba lat) oraz 12000 (wysokość kredytu), powinny zostać wypisane liczby 143.5 (miesięczna rata) oraz 13776 (całkowity koszt kredytu). Waluta jest umowna.
+Dla pobranych liczb: 3.5 (roczna stopa procentowa), 8 (liczba lat) oraz 12000 (wysokosc kredytu), powinny zostac wypisane liczby 143.5 (miesieczna rata) oraz 13776 (calkowity koszt kredytu). Waluta jest umowna.
 */
 
-// Pobieranie danych od użytkownika
+// Pobieranie danych od uzytkownika
 const roczna_stopa_procentowa = parseFloat(
-  prompt("Podaj roczną stopę procentową:")
+  prompt("Podaj roczna stope procentowa:")
 );
-const liczba_lat = parseInt(prompt("Podaj liczbę lat na spłacenie kredytu:"));
+const liczba_lat = parseInt(prompt("Podaj liczbe lat na splacenie kredytu:"));
 const wysokosc_kredytu = parseInt(
-  prompt("Podaj wysokość udzielonego kredytu:")
+  prompt("Podaj wysokosc udzielonego kredytu:")
 );
 
-// Obliczanie miesięcznej raty
+// Obliczanie miesiecznej raty
 const miesieczna_rata =
   (wysokosc_kredytu * (roczna_stopa_procentowa / 100)) / 12;
 
-// Obliczanie całkowitego kosztu kredytu
+// Obliczanie calkowitego kosztu kredytu
 const calkowity_koszt_kredytu = miesieczna_rata * liczba_lat * 12;
 
 // Wypisanie wyniku
 console.log(miesieczna_rata.toFixed(2));
 console.log(calkowity_koszt_kredytu.toFixed(2));
+

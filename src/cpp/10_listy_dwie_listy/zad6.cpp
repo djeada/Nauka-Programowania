@@ -1,12 +1,15 @@
+/*
+Tytul: Roznica miedzy dwoma listami.
+Tresc: Dla otrzymanych dwoch list liczb calkowitych, znajdz elementy, ktore nie
+sa czescia wspolna obu list. Dane wejsciowe: Dwie listy liczb calkowitych. Dane
+wyjsciowe: Lista liczb calkowitych. Przyklad: Dla otrzymanych list [9, 2, 5, 4]
+oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5, 1].
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <unordered_set>
 #include <vector>
-
-/*
-Otrzymujesz dwie listy liczb calkowitych. Znajdz elementy wystepujace
-zarowno w pierwszej jak i w drugiej liscie.
-*/
 
 // Zlozonosc obliczeniowa O(n^2)
 // Zlozonosc pamieciowa O(n)
@@ -64,3 +67,4 @@ int main() {
 
   return 0;
 }
+

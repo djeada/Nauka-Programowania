@@ -1,8 +1,9 @@
 """
-Dla dowolnych dwoch klas, dla ktorych jedna jest klasa bazowa, 
-a druga klasa potomna wywolaj metode klasy bazowej w metodzie 
-klasy potomnej nadpisujacej ta metode.
+Tytul: Wywolywanie metody klasy bazowej w klasie potomnej
+Tresc: Dla dwoch dowolnych klas, gdzie jedna jest klasa bazowa, a druga potomna, wywolaj metode klasy bazowej w metodzie klasy potomnej, ktora ja nadpisuje. Napisz program testujacy te klasy.
+
 """
+
 
 class Rodzic:
     def __init__(self):
@@ -22,11 +23,12 @@ class DzieckoB(Rodzic):
 
 if __name__ == "__main__":
 
-    print('Tworze obiekt klasy Rodzic:')
+    print("Tworze obiekt klasy Rodzic:")
     rodzic = Rodzic()
-    
-    print('\nTworze obiekt klasy DzieckoA:')
+
+    print("\nTworze obiekt klasy DzieckoA:")
     dziecko_a = DzieckoA()
 
-    print('\nTworze obiekt klasy DzieckoB:')
+    print("\nTworze obiekt klasy DzieckoB:")
     dziecko_b = DzieckoB()
+

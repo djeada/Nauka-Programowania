@@ -1,3 +1,12 @@
+/*
+Tytul: Slownik z kluczami bedacymi liczbami naturalnymi i wartosciami ich kwadratami.
+Tresc: Dostajesz liczbe naturalna. Stworz slownik, w ktorym kluczami beda kolejne liczby naturalne mniejsze od otrzymanej liczby, a wartosciami beda ich kwadraty.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Slownik z kluczami i wartosciami bedacymi liczbami naturalnymi.
+Przyklad:
+Dla liczby 5, slownik powinien wygladac nastepujaco: {1: 1, 2: 4, 3: 9, 4: 16}.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -36,3 +45,4 @@ public class Main {
     test2();
   }
 }
+

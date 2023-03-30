@@ -1,7 +1,14 @@
 """
-Otrzymujesz tekst w postaci napisu. Znajdz czestosc wystepowania kazdego 
-ze slow w tekscie. Zignoruj roznice miedzy malymi i wielkimi literami. 
-Pamietaj, slowa skladaja sie wylacznie z liter.
+Tytul: Anagramy w tekscie
+Otrzymujesz tekst w postaci napisu. Twoim zadaniem jest znalezienie wszystkich slow, w ktorych te same znaki wystepuja te sama liczbe razy. Innymi slowy, szukasz anagramow w tekscie. Nalezy zignorowac roznice miedzy malymi i wielkimi literami. Pamietaj, ze slowa skladaja sie wylacznie z liter.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista list napisow.
+Przyklad:
+Dla otrzymanego napisu:
+"To absurd, ze tyran Brudas, ten straszliwy bandzior sprawuje rzady w tym kraju. Burza nad galeria i alergia na narty to zadna zbrodnia jak bandzior i jego arbuz.",
+powinna zostac zwrocona lista:
+[["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]].
+
 """
 
 import string
@@ -101,3 +108,4 @@ def test_policz_slowa_w_zdaniu():
 if __name__ == "__main__":
 
     test_policz_slowa_w_zdaniu()
+

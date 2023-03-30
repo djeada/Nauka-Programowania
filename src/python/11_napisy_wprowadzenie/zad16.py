@@ -1,6 +1,11 @@
 """
-Otrzymujesz dwa napisy o rownej dlugosci. Oblicz odleglosc 
-Hamminga miedzy dwoma otrzymanymi napisami.
+Tytul:Wypisz pionowo slowa, z ktorych sklada sie zdanie.
+Tresc: Otrzymasz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe. Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Kilka napisow.
+Przyklad:
+Dla otrzymanego napisu: "Ala ma kota", powinno zostac wypisane: "Ala", "ma", "kota".
+
 """
 
 
@@ -26,3 +31,4 @@ def test_odleglosc_hamminga():
 if __name__ == "__main__":
 
     test_odleglosc_hamminga()
+

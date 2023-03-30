@@ -1,14 +1,14 @@
 /*
 
-Tytuł: Podmień napisy z listy A na napisy z listy B.
+Tytul: Podmien napisy z listy A na napisy z listy B.
 
-Treść: Dostajesz napis oraz dwie listy napisów. Zastąp napisy z pierwszej listy w pierwszym napisie odpowiadającymi im napisami z drugiej listy.
+Tresc: Dostajesz napis oraz dwie listy napisow. Zastap napisy z pierwszej listy w pierwszym napisie odpowiadajacymi im napisami z drugiej listy.
 
-Dane wejściowe: Napis oraz dwie listy napisów.
+Dane wejsciowe: Napis oraz dwie listy napisow.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
 Dla podanych danych:
 
@@ -21,7 +21,7 @@ Dla podanych danych:
   Warmth his law design says he is a person.
   Pronunciation suspected in belonging conveying ye repulsive.
 
-oraz ['or', 'be', 'he'] i ['and', 'off', 'she'], powinien zostać zwrócony napis:
+oraz ['or', 'be', 'he'] i ['and', 'off', 'she'], powinien zostac zwrocony napis:
 
 > Every mile was tilted at seven and.
   Wished her entire esteem mr oh by.
@@ -69,3 +69,4 @@ Pronunciation suspected in belonging conveying ye repulsive.`;
 }
 
 test_podmien_napisy();
+

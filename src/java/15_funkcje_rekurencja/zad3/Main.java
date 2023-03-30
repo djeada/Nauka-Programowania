@@ -1,7 +1,13 @@
+/*
+Tytul: Silnia.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz silnie z tej liczby.
+Dane wejsciowe: Liczba naturalna N.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla N = 3, powinna zostac zwrocona liczba: 6.
+
+*/
 public class Main {
-  /*
-  Potega.
-  */
 
   public static int potegaV1(int a, int b) {
 
@@ -25,3 +31,4 @@ public class Main {
     test1();
   }
 }
+

@@ -1,21 +1,21 @@
 /*
-Tytuł: Liczba cyfr.
+Tytul: Liczba cyfr.
 
-Treść: Dla otrzymanej od użytkownika liczby naturalnej wypisz liczbę cyfr, z których się składa.
+Tresc: Dla otrzymanej od uzytkownika liczby naturalnej wypisz liczbe cyfr, z ktorych sie sklada.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 342, powinna zostać wypisana liczba 3.
+Dla otrzymanej liczby 342, powinna zostac wypisana liczba 3.
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Pętla
+// Petla
 let cyfry = 0;
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
   cyfry++;
@@ -23,3 +23,4 @@ for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
 
 // Wypisanie wyniku
 console.log(cyfry);
+

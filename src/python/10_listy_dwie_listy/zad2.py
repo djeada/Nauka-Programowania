@@ -1,9 +1,11 @@
 """
-Dla otrzymanych dwoch list zwroc liste powstala poprzez:
+Tytul: Suma elementow dwoch list.
+Tresc: Dla otrzymanych dwoch list, zwroc liste, ktorej elementy sa suma odpowiadajacych sobie elementow obu list. Jesli listy nie sa tej samej dlugosci, zaloz, ze brakujace elementy krotszej listy sa rowne 0.
+Dane wejsciowe: Dwie listy.
+Dane wyjsciowe: Lista.
+Przyklad:
+Dla otrzymanych list [3, 1, 2, 5] oraz [2, 8, 6, 5], zostanie zwrocona lista: [5, 9, 8, 10].
 
-a) Dostawienie drugiej listy na koniec pierwszej listy.
-b) Wstawienie elementow o indeksach parzystych z drugiej 
-listy na odpowiadajace im indeksy pierwszej listy.
 """
 
 
@@ -32,3 +34,4 @@ if __name__ == "__main__":
 
     test_dostawienie_na_koniec()
     test_wstawianie_parzystych_indeksow()
+

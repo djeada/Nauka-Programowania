@@ -1,13 +1,17 @@
+/*
+Tytul: Zbior potegowy
+Tresc: Otrzymujesz liste liczb naturalnych. Zwroc zbior potegowy otrzymanej
+listy, czyli zbior wszystkich jej podzbiorow. Dane wejsciowe: Lista liczb
+naturalnych. Dane wyjsciowe: Lista list zawierajaca elementy z wejsciowej listy
+lub pusta liste. Przyklad: Dla wejsciowej listy [1, 2, 1], powinna zostac
+zwrocona lista: [[], [1], [2], [1, 2], [1, 1], [1, 2, 1]].
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <cmath>
 #include <set>
 #include <vector>
-
-/*
-Otrzymujesz liste liczb. Znajdz jej zbior potegowy, czyli zbior wszystkich jej
-podzbiorow.
-*/
 
 // Zlozonosc czasowa O(n.2^n)
 // Zlozonosc pamieciowa O(n)
@@ -69,3 +73,4 @@ int main() {
 
   return 0;
 }
+

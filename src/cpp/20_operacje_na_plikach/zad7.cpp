@@ -1,3 +1,10 @@
+/*
+Tytul: Skopiuj pliki.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow.
+Skopiuj wszystkie pliki PNG z pierwszego folderu do drugiego folderu. Dane
+wejsciowe: Dwa napisy reprezentujace sciezki do folderow. Dane wyjsciowe: Brak.
+
+*/
 #include <cassert>
 #include <experimental/filesystem>
 #include <fstream>
@@ -6,12 +13,6 @@
 #include <vector>
 
 namespace filesys = std::experimental::filesystem;
-
-/*
-Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke
-pliku tekstowego. Drugi napis reprezentuje wiersz tekstu.
-Dostaw otrzymany wiersz tekstu na poczatek pliku tekstowego.
-*/
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
 
@@ -79,3 +80,4 @@ int main() {
   test1();
   return 0;
 }
+

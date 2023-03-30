@@ -1,17 +1,17 @@
 /*
 
-Tytuł: Sortowanie względem kluczy/wartości
+Tytul: Sortowanie wzgledem kluczy/wartosci
 
-Otrzymujesz słownik składający się z par napisów i liczb całkowitych. Twoim zadaniem jest wypisanie par posortowanych względem napisów oraz względem liczb.
+Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych. Twoim zadaniem jest wypisanie par posortowanych wzgledem napisow oraz wzgledem liczb.
 
-Dane wejściowe: Słownik par: napis, liczba całkowita.
+Dane wejsciowe: Slownik par: napis, liczba calkowita.
 
-Dane wyjściowe: Lista par.
+Dane wyjsciowe: Lista par.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego słownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostać zwrócony słownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)].
-Dla otrzymanego słownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostać zwrócony słownik: [("a", -2), ("c", 3), ("b", 4), ("x", 5)].
+Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)].
+Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("c", 3), ("b", 4), ("x", 5)].
 
 
 */
@@ -44,10 +44,10 @@ function testSortujSlownikPoKluczach() {
     ["c", 3],
     ["x", 5],
   ];
-  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
+  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiodl sie");
   for (let i = 0; i < wynik.length; i++) {
-    console.assert(wynik[i][0] === poprawnyWynik[i][0], "Test nie powiódł się");
-    console.assert(wynik[i][1] === poprawnyWynik[i][1], "Test nie powiódł się");
+    console.assert(wynik[i][0] === poprawnyWynik[i][0], "Test nie powiodl sie");
+    console.assert(wynik[i][1] === poprawnyWynik[i][1], "Test nie powiodl sie");
   }
 }
 
@@ -65,12 +65,13 @@ function testSortujSlownikPoWartosciach() {
     ["b", 4],
     ["x", 5],
   ];
-  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
+  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiodl sie");
   for (let i = 0; i < wynik.length; i++) {
-    console.assert(wynik[i][0] === poprawnyWynik[i][0], "Test nie powiódł się");
-    console.assert(wynik[i][1] === poprawnyWynik[i][1], "Test nie powiódł się");
+    console.assert(wynik[i][0] === poprawnyWynik[i][0], "Test nie powiodl sie");
+    console.assert(wynik[i][1] === poprawnyWynik[i][1], "Test nie powiodl sie");
   }
 }
 
 testSortujSlownikPoKluczach();
 testSortujSlownikPoWartosciach();
+

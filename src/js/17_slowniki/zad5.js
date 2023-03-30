@@ -1,13 +1,13 @@
 /*
-Tytuł: Lista pracowników z największymi zyskami.
+Tytul: Lista pracownikow z najwiekszymi zyskami.
 
-Treść: Otrzymujesz listę par. Pierwszym elementem pary jest napis reprezentujący imię i nazwisko pracownika, drugim zysk z transakcji, jaką dany pracownik przeprowadził. Znajdź pracownika, który przyniósł firmie najwięcej zysku.
+Tresc: Otrzymujesz liste par. Pierwszym elementem pary jest napis reprezentujacy imie i nazwisko pracownika, drugim zysk z transakcji, jaka dany pracownik przeprowadzil. Znajdz pracownika, ktory przyniosl firmie najwiecej zysku.
 
-Dane wejściowe: Lista par napisów i liczb naturalnych.
+Dane wejsciowe: Lista par napisow i liczb naturalnych.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
 Dla otrzymanej listy:
 
@@ -17,7 +17,7 @@ Dla otrzymanej listy:
 ["Barnaba Barabash", 200],
 ["Bob Marley", 110]]
 
-zostanie zwrócony napis: “Barnaba Barabash”.
+zostanie zwrocony napis: “Barnaba Barabash”.
 
 
 */
@@ -48,7 +48,7 @@ function testNajwiekszyZysk() {
     ["Bob Marley", 110],
   ];
   const wynik1 = najwiekszyZysk(lista1);
-  console.assert(wynik1 === "Barnaba Barabash", "Test 1 nie powiódł się");
+  console.assert(wynik1 === "Barnaba Barabash", "Test 1 nie powiodl sie");
 
   const lista2 = [
     ["Anna Nowak", 200],
@@ -57,7 +57,8 @@ function testNajwiekszyZysk() {
     ["Jan Kowalski", 100],
   ];
   const wynik2 = najwiekszyZysk(lista2);
-  console.assert(wynik2 === "Anna Nowak", "Test 2 nie powiódł się");
+  console.assert(wynik2 === "Anna Nowak", "Test 2 nie powiodl sie");
 }
 
 testNajwiekszyZysk();
+

@@ -1,3 +1,10 @@
+/*
+Tytul: Znalezienie sciezki pliku o danej nazwie
+Tresc: Otrzymujesz napis reprezentujacy nazwe pliku. Przeszukaj caly system i
+zapisz w liscie wszystkie sciezki plikow o podanej nazwie. Dane wejsciowe: Napis
+Dane wyjsciowe: Lista napisow
+
+*/
 #include <cassert>
 #include <experimental/filesystem>
 #include <fstream>
@@ -5,11 +12,6 @@
 #include <stdexcept>
 
 namespace filesys = std::experimental::filesystem;
-
-/*
-Otrzymujesz dwa napisy reprezentujace sciezki plikow.
-Podmien tresci obu plikow.
-*/
 
 td::vector<std::string> wczytajPlik(const std::string &sciezka) {
 
@@ -101,3 +103,4 @@ int main() {
 
   return 0;
 }
+

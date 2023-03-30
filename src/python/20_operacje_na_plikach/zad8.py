@@ -1,9 +1,9 @@
 """
-Otrzymujesz napis reprezentujacy sciezke folderu.
-a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych 
-znajdujacych sie w folderze oraz podfolderach.
-b) Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie 
-w folderze oraz podfolderach.
+Tytul: Podmien tresci plikow.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do plikow. Podmien tresci obu plikow.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do plikow.
+Dane wyjsciowe: Brak.
+
 """
 import pathlib
 
@@ -122,3 +122,4 @@ if __name__ == "__main__":
 
     test_dodaj_inicjaly_do_plikow_w_folderze()
     test_usun_srodkowy_wiersz_z_plikow_w_folderze()
+

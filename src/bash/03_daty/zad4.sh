@@ -1,6 +1,9 @@
-#!/usr/bin/env bash
-
-#Dla pobranej liczby, wypisz dzien tygodnia odpowiadajcy tej liczbie.
+# Tytul: Dzien tygodnia odpowiadajacy danej liczbie.
+# Tresc: Napisz program, ktory dla pobranej liczby naturalnej bedzie wypisywal dzien tygodnia odpowiadajacy tej liczbie. Jesli otrzymano liczbe niedodatnia badz dodatnia wieksza niz 7, program powinien wypisac komunikat informujacy uzytkownika, ze liczba jest niepoprawna.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: Komunikat o dniu tygodnia.
+# Przyklad:
+# Dla pobranej liczby 2, program powinien wypisac napis "Wtorek".
 
 main() {
 

@@ -1,3 +1,23 @@
+/*
+Tytul: Maks i min
+Napisz funkcje, ktora:
+a) Dla otrzymanych dwoch liczb zwroci mniejsza.
+b) Dla otrzymanych dwoch liczb zwroci wieksza.
+c) Dla otrzymanych trzech liczb zwroci najmniejsza.
+d) Dla otrzymanych trzech liczb zwroci najwieksza.
+Dane wejsciowe:
+a) Dwie liczby naturalne.
+b) Dwie liczby naturalne.
+c) Trzy liczby naturalne.
+d) Trzy liczby naturalne.
+Dane wyjsciowe: Liczba naturalna dla wszystkich podpunktow.
+Przyklad:
+a) Dla otrzymanych liczb 3 i 1, funkcja powinna zwrocic liczbe 1.
+b) Dla otrzymanych liczb 3 i 1, funkcja powinna zwrocic liczbe 3.
+c) Dla otrzymanych liczb 3, 2 i 1, funkcja powinna zwrocic liczbe 1.
+d) Dla otrzymanych liczb 3, 2 i 1, funkcja powinna zwrocic liczbe 3."
+
+*/
 import java.util.*;
 
 public class Main {
@@ -46,3 +66,4 @@ public class Main {
     System.out.print("najwieksza liczba to " + maks3(a, b, c) + "\n");
   }
 }
+

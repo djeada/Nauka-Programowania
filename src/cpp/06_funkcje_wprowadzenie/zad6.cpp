@@ -1,9 +1,14 @@
+/*
+Tytul: Cyfry liczby
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby obliczy sume jej cyfr.
+Dane wejsciowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla pobranej liczby 13231, funkcja powinna zwrocic liczbe 10.
+
+*/
 #include <cassert>
 #include <cmath>
-
-/*
-Napisz funkcje, ktora dla otrzymanej liczby zwroci sume cyfr tej liczby.
-*/
 
 int sumaCyfr(int liczba) {
   int suma = 0;
@@ -28,3 +33,4 @@ int main() {
 
   return 0;
 }
+

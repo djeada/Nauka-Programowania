@@ -1,5 +1,11 @@
 """
-Napisz funkcje, ktora dla otrzymanej liczby zwroci jej pierwiastek.
+Tytul: Pierwiastek metoda Newtona
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej zwroci jej pierwiastek.
+Dane wejsciowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla otrzymanej liczby 16, funkcja powinna zwrocic liczbe 4.
+
 """
 
 dokladnosc = 0.0001
@@ -24,3 +30,4 @@ def test_pierwiastek():
 if __name__ == "__main__":
 
     test_pierwiastek()
+

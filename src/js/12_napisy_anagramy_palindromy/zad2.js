@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Znalezienie wszystkich permutacji słowa.
+Tytul: Znalezienie wszystkich permutacji slowa.
 
-Treść: Napisz program, który dla otrzymanego napisu znajdzie jego wszystkie permutacje.
+Tresc: Napisz program, ktory dla otrzymanego napisu znajdzie jego wszystkie permutacje.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: “abc”, powinna zostać zwrócona lista: [“abc”, “bac”, “cab”, “acb”, “bca”, “cba”].
+Dla otrzymanego napisu: “abc”, powinna zostac zwrocona lista: [“abc”, “bac”, “cab”, “acb”, “bca”, “cba”].
 */
 
 function permutacje(napis) {
@@ -41,14 +41,15 @@ function test() {
 
   console.assert(
     JSON.stringify(output) === JSON.stringify(expectedOutput),
-    'Test nie powiódł się dla "' +
+    'Test nie powiodl sie dla "' +
       input +
       '". Otrzymany wynik to ' +
       JSON.stringify(output) +
       ", a oczekiwany wynik to " +
       JSON.stringify(expectedOutput)
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

@@ -1,22 +1,22 @@
 /*
-Tytuł: Zaprojektuj klasę Kształt oraz klasy potomne Koło i Kwadrat.
+Tytul: Zaprojektuj klase Ksztalt oraz klasy potomne Kolo i Kwadrat.
 
-Treść: Zaprojektuj klasę Kształt oraz klasy potomne Koło i Kwadrat. Napisz program testujący te klasy.
+Tresc: Zaprojektuj klase Ksztalt oraz klasy potomne Kolo i Kwadrat. Napisz program testujacy te klasy.
 */
-class Kształt {
+class Ksztalt {
   pobierzNazwe() {
-    return "Kształt";
+    return "Ksztalt";
   }
 }
 
-class Koło extends Kształt {
+class Kolo extends Ksztalt {
   constructor(promien) {
     super();
     this.promien = promien;
   }
 
   pobierzNazwe() {
-    return "Koło";
+    return "Kolo";
   }
 
   pobierzPole() {
@@ -28,7 +28,7 @@ class Koło extends Kształt {
   }
 }
 
-class Kwadrat extends Kształt {
+class Kwadrat extends Ksztalt {
   constructor(bok) {
     super();
     this.bok = bok;
@@ -47,12 +47,13 @@ class Kwadrat extends Kształt {
   }
 }
 
-const kolo = new Koło(5);
-console.log(kolo.pobierzNazwe()); // wyświetli "Koło"
-console.log(kolo.pobierzPole()); // wyświetli 78.53981633974483
-console.log(kolo.pobierzObwod()); // wyświetli 31.41592653589793
+const kolo = new Kolo(5);
+console.log(kolo.pobierzNazwe()); // wyswietli "Kolo"
+console.log(kolo.pobierzPole()); // wyswietli 78.53981633974483
+console.log(kolo.pobierzObwod()); // wyswietli 31.41592653589793
 
 const kwadrat = new Kwadrat(4);
-console.log(kwadrat.pobierzNazwe()); // wyświetli "Kwadrat"
-console.log(kwadrat.pobierzPole()); // wyświetli 16
-console.log(kwadrat.pobierzObwod()); // wyświetli 16
+console.log(kwadrat.pobierzNazwe()); // wyswietli "Kwadrat"
+console.log(kwadrat.pobierzPole()); // wyswietli 16
+console.log(kwadrat.pobierzObwod()); // wyswietli 16
+

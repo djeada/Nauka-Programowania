@@ -1,7 +1,11 @@
-#!/bin/bash
+# Tytul: Posortowanie trzech liczb.
+# Tresc: Pobierz od uzytkownika trzy liczby naturalne i wypisz je w kolejnosci rosnacej.
+# Dane wejsciowe: Trzy liczby naturalne.
+# Dane wyjsciowe: Trzy liczby naturalne.
+# Przyklad:
+# Dla pobranych liczb: 2, 1 oraz 4, powinny zostac wypisane liczby: 1, 2 i 4.
 
 main() {
-    #Dla trzech pobranych liczb, wypisz je w kolejnosci rosnacej.
 
     echo "Podaj trzy liczby:"
     read a
@@ -43,3 +47,4 @@ main() {
 }
 
 main "$@"
+

@@ -1,23 +1,26 @@
 """
-Tytuł: Konwersja jednostek.
-Treść zadania: Napisz program, który będzie konwertować jednostki zgodnie z następującymi instrukcjami:
-a) Pobierz wielkość w kilogramach i wypisz, ile gramów odpowiada.
-b) Pobierz wielkość w calach i wypisz, ile centymetrów odpowiada.
-c) Pobierz liczbę sekund i przelicz na godziny.
-d) Pobierz liczbę w euro i wypisz, ile złotówek odpowiada.
-e) Pobierz miarę kąta w stopniach i wypisz, ile radianów odpowiada.
-f) Pobierz temperaturę w stopniach Fahrenheita i wypisz ile stopni Celsjusza oraz ile stopni Kelvina odpowiada.
-Dane wejściowe: Liczba naturalna we wszystkich podpunktach.
-Dane wyjściowe:
-* Liczba naturalna dla podpunktów 1 i 3.
-* Liczba zmiennoprzecinkowa dla pozostałych podpunktów.
-Przykład:
-a) Dla pobranej liczby: 2, powinna zostać wypisana liczba: 2000.
-b) Dla pobranej liczby: 12, powinna zostać wypisana liczba: 4.724.
-c) Dla pobranej liczby: 3600, powinna zostać wypisana liczba: 1.
-d) Dla pobranej liczby: 4, powinna zostać wypisana liczba: 17.6.
-e) Dla pobranej liczby: 120, powinna zostać wypisana liczba:  2.094.
-f) Dla pobranej liczby: 100, powinny zostać wypisane liczby: 37.777 i -235.222.
+Tytul: Pole powierzchni i objetosc figur geometrycznych.
+Tresc zadania: Napisz program, ktory bedzie obliczal pola powierzchni i objetosci figur geometrycznych zgodnie z nastepujacymi instrukcjami:
+a) Pobierz dlugosci podstawy i wysokosci trojkata i wypisz jego pole.
+b) Pobierz dlugosci bokow prostokata i wypisz jego pole.
+c) Pobierz dlugosci przekatnych rombu i wypisz jego pole.
+d) Pobierz promien kuli i wypisz jej objetosc.
+e) Pobierz promien podstawy i wysokosc stozka i wypisz jego objetosc.
+f) Pobierz dlugosc, szerokosc i wysokosc graniastoslupa i wypisz jego objetosc.
+Jednostki sa dowolne.
+Dane wejsciowe:
+* Dwie liczby naturalne dla podpunktow a, b i c.
+* Liczba naturalna dla podpunktu d.
+* Dwie liczby naturalne dla podpunktu e.
+* Trzy liczby naturalne dla podpunktu f.
+Dane wyjsciowe: Liczba naturalna dla wszystkich podpunktow.
+Przyklad:
+a) Dla pobranych liczb: 5 i 2, powinna zostac wypisana liczba: 5.
+b) Dla pobranych liczb: 3 i 3, powinna zostac wypisana liczba: 4.
+c) Dla pobranych liczb: 2 i 4, powinna zostac wypisana liczba: 1.
+d) Dla pobranej liczby: 2, powinna zostac wypisana liczba: 33.493.
+e) Dla pobranych liczb: 3 i 2, powinna zostac wypisana liczba: 18.84.
+f) Dla pobranych liczb: 2, 2 i 2, powinny zostac wypisana liczba: 8.
 
 """
 
@@ -70,3 +73,4 @@ if __name__ == "__main__":
         " jest rowna ",
         a * b * h,
     )
+

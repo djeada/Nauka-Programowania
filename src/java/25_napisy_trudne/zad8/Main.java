@@ -1,9 +1,13 @@
-import java.util.*;
-
 /*
-Otrzymujesz liste napisow. Znajdz najdluzszy wspolny przedrostek
-dla wszystkich napisow z listy.
+Tytul: Powtarzajace sie podnapisy.
+Tresc: Dostajesz napis. Znajdz wszystkie powtarzajace sie podnapisy w tym napisie.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla napisu "pythonpython" powinna zostac zwrocona lista zawierajaca napis "python".
+
 */
+import java.util.*;
 
 public class Main {
   public static String najdluzszyPrzedrostek(List<String> napisy) {
@@ -51,3 +55,4 @@ public class Main {
     test3();
   }
 }
+

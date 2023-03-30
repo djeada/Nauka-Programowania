@@ -1,16 +1,11 @@
 """
-Napisz klase Ptak, dziedziczaca po klasach Zwierz oraz ObiektLatajacy. 
-a) W sklad klasy Zwierz powinny wchodzic funkcje wypisujace na standardowe 
-wyjscie komunikaty odpowiadajace ich nazwom. Funkcje powinny miec 
-nastepujace nazwy: jedz(), spij(), wydaj_dzwiek(). 
-b) W sklad klasy ObiektLatajacy powinny wchodzic funkcje wypisujace na 
-standardowe wyjscie komunikaty odpowiadajace ich nazwom. Funkcje powinny 
-miec nastepujace nazwy: lec(), wyladuj().
+Tytul: Dziedziczenie wielokrotne
+Tresc: Napisz klase Ptak, dziedziczaca po klasach Zwierz i ObiektLatajacy. W sklad klasy Zwierz powinny wchodzic funkcje o nazwach 'jedz()', 'spij()', 'wydaj_dzwiek()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie. W sklad klasy ObiektLatajacy powinny wchodzic funkcje o nazwach 'lec()', 'wyladuj()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie. Napisz program testujacy te klase.
+
 """
 
 
 class Zwierz:
-
     def __init__(self, name):
         self.name = name
 
@@ -25,7 +20,6 @@ class Zwierz:
 
 
 class ObiektLatajacy:
-
     def __init__(self, name):
         self.name = name
 
@@ -37,11 +31,10 @@ class ObiektLatajacy:
 
 
 class Ptak(Zwierz, ObiektLatajacy):
-    
-        def __init__(self, name):
-            Zwierz.__init__(self, name)
-            ObiektLatajacy.__init__(self, name)
-        
+    def __init__(self, name):
+        Zwierz.__init__(self, name)
+        ObiektLatajacy.__init__(self, name)
+
 
 if __name__ == "__main__":
 
@@ -51,3 +44,4 @@ if __name__ == "__main__":
     ptak.wydaj_dzwiek()
     ptak.lec()
     ptak.wyladuj()
+

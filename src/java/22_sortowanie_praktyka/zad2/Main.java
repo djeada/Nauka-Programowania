@@ -1,10 +1,13 @@
-import java.util.*;
-
 /*
-Otrzymujesz napis reprezentujacy zdanie. Podziel zdanie na slowa.
-Posortuj slowa alfabetycznie i zapisz je w liscie. Pamietaj, znaki
-interpunkcyjne nie sa liczone jako slowa.
+Tytul: Sortowanie slow w zdaniu.
+Tresc: Masz dany napis reprezentujacy zdanie. Podziel to zdanie na slowa, posortuj je alfabetycznie i zapisz w liscie. Znaki interpunkcyjne nie sa liczone jako slowa.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla napisu "Lemur wygina smialo cialo" powinno zostac zwrocone ["Lemur", "cialo", "smialo", "wygina"].
+
 */
+import java.util.*;
 
 public class Main {
 
@@ -57,3 +60,4 @@ public class Main {
     test1();
   }
 }
+

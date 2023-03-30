@@ -1,24 +1,26 @@
-#!/usr/bin/env bash
+# Tytul: Sortowanie wzgledem kluczy/wartosci
+# Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych. Twoim zadaniem jest wypisanie par posortowanych wzgledem napisow oraz wzgledem liczb.
+# Dane wejsciowe: Slownik par: napis, liczba calkowita.
+# Dane wyjsciowe: Lista par.
+# Przyklad:
+# Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)].
+# Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("c", 3), ("b", 4), ("x", 5)].
 
 source ../assert.sh
-
-# Otrzymujesz napis reprezentujacy zdanie. Znajdz najczesciej wystepujaca litere 
-# w zdaniu. Jesli wiecej niz jedna litera wystepuje ta sama liczbe razy, zwroc 
-# litere najwczesniej pojawiajaca sie w zdaniu.
 
 najczesciej_wystepujaca_litera() {
     local zdanie="$1"
 
-    # usun znaki interpunkcyjne
+    local zdanie=$(echo "$zdanie" | tr -d ' .,:;!?\n')
     local zdanie=$(echo "$zdanie" | tr -d ' .,:;!?\n')
 
-    # zbuduj histogram wystapien liter w zdaniu
+    local -A histogram=()
     local -A histogram=()
     for (( i=0; i<${#zdanie}; i++ )); do
         ((histogram["${zdanie:$i:1}"]++))
     done
- 
-    # znajdz maksymalna ilosc wystapien litery w zdaniu
+
+    local maks=0
     local maks=0
     for litera in ${!histogram[@]}; do
         if [[ "${histogram[$litera]}" -gt "$maks" ]]; then
@@ -26,26 +28,24 @@ najczesciej_wystepujaca_litera() {
         fi
     done
 
-    # Przejdz przez litery w zdaniu i sprawdz ktora jako 
-    # pierwsza wystepuje maks razy
     for (( i=0; i<${#zdanie}; i++ )); do
-        if [[ "${histogram[${zdanie:$i:1}]}" -eq "$maks" ]]; then
-            echo "${zdanie:$i:1}"
-            break
-        fi
-    done
-}
+        for (( i=0; i<${#zdanie}; i++ )); do
+            if [[ "${histogram[${zdanie:$i:1}]}" -eq "$maks" ]]; then
+                echo "${zdanie:$i:1}"
+                break
+            fi
+        done
+    }
 
-test_najczesciej_wystepujaca_litera() {
+    test_najczesciej_wystepujaca_litera() {
 
-    assertEqual "$(najczesciej_wystepujaca_litera "Ala ma kota")" "a" $LINENO
+        assertEqual "$(najczesciej_wystepujaca_litera "Ala ma kota")" "a" $LINENO
 
-}
+    }
 
-main() {
-    test_najczesciej_wystepujaca_litera
-}
+    main() {
+        test_najczesciej_wystepujaca_litera
+    }
 
-
-main "$@"
+    main "$@"
 

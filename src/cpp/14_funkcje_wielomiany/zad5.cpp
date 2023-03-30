@@ -1,11 +1,16 @@
+/*
+Tytul: Obliczenie n-tej pochodnej wielomianu.
+Tresc: Otrzymujesz liste n wspolczynnikow wielomianu w postaci $a_nx^n +
+a_{n-1}x^{n-1} + ... + a_0$ oraz liczbe naturalna k. Oblicz wspolczynniki
+wielomianu bedacego k-ta pochodna otrzymanego wielomianu. Dane wejsciowe: Lista
+liczb naturalnych i liczba naturalna. Dane wyjsciowe: Lista liczb naturalnych.
+Przyklad:
+Dla otrzymanej listy wspolczynnikow [4, -3, 2] i liczby k = 1, zostanie zwrocona
+lista [8, -3].
+
+*/
 #include <cassert>
 #include <vector>
-
-/*
-Otrzymujesz liste n wspolczynnikow wielomianu postaci anxn+an-1xn-1+...+a0
-oraz liczbe k. Oblicz wspolczynniki wielomianu bedacego k-ta pochodna
-otrzymanego wielomianu.
-*/
 
 std::vector<int> pochodna(std::vector<int> &wielomian, int k) {
   /**
@@ -45,3 +50,4 @@ int main() {
   test2();
   return 0;
 }
+

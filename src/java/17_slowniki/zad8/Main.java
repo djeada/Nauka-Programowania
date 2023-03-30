@@ -1,12 +1,18 @@
+/*
+Tytul: Sortowanie wzgledem kluczy/wartosci
+Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych. Twoim zadaniem jest wypisanie par posortowanych wzgledem napisow oraz wzgledem liczb.
+Dane wejsciowe: Slownik par: napis, liczba calkowita.
+Dane wyjsciowe: Lista par.
+Przyklad:
+Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)].
+Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("c", 3), ("b", 4), ("x", 5)].
+
+*/
 import java.util.*;
 import java.util.Map.Entry;
 
 public class Main {
 
-  /*
-  Najczesciej wystepujacy znak.
-  Ignoruj spacje.
-  */
   public static Character najczesciejWystepujacyZnakV1(String slowo) {
 
     Map<Character, Integer> counter = new HashMap<>();
@@ -62,3 +68,4 @@ public class Main {
     assert najczesciejWystepujacyZnakV2(slowo).equals(wynik);
   }
 }
+

@@ -1,8 +1,13 @@
-import java.util.*;
-
 /*
-Dla otrzymanego napisu, posortuj alfabetycznie jego znaki.
+Tytul: Sortowanie znakow w napisie.
+Tresc: Otrzymujesz napis. Posortuj alfabetycznie jego znaki.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla napisu "Ala ma kota" powinno zostac zwrocone " Aaaaklmot".
+
 */
+import java.util.*;
 
 public class Main {
   public static sortujSlowoV1(final String slowo) {
@@ -26,3 +31,4 @@ public class Main {
     test1();
   }
 }
+

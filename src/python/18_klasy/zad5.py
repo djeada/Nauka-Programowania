@@ -1,17 +1,14 @@
-'''
-Napisz klase Macierz reprezentujaca macierz. W sklad klasy powinny wchodzic funkcje:
-a) Konstruktor pobierajacy liste list liczb calkowitych. Pobrana lista reprezentuje macierz. 
-Domyslna wartosc argumentu to pusta lista.
-b) Funkcje zwracajace wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnozenie) 
-oraz odwracanie macierzy. Jesli jest to mozliwe nalezy przeciazyc operatory: +, -, *.
-c) Funkcja wypisujaca informacje o macierzy na standardowe wyjscie.
-d) Funkcje umozliwiajace porownanie dwoch obiektow klasy Macierz. Jesli jest to mozliwe nalezy 
-przeciazyc operatory ==, !=.
+"""
+Tytul: Zaprojektuj klase Macierz.
+Tresc: Napisz klase Macierz, ktora bedzie reprezentowala macierz. Klasa powinna zawierac nastepujace funkcje:
+1. Konstruktor, ktory przyjmuje jako argument liste list liczb calkowitych. Pobrana lista reprezentuje macierz. Domyslna wartosc argumentu to pusta lista.
+2. Funkcje, ktore zwracaja wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnozenie) oraz odwracanie macierzy. Jesli jest to mozliwe, nalezy przeciazyc operatory: +, -, *.
+3. Funkcje, ktora wypisuje informacje o macierzy na standardowe wyjscie.
+4. Funkcje umozliwiajace porownanie dwoch obiektow klasy Macierz. Jesli jest to mozliwe, nalezy przeciazyc operatory == oraz !=.
+Napisz program, ktory przetestuje twoja klase. Stworz macierze: A ([[1, 3], [4, 2]]) oraz B ([[5, 0], [1, 3]]). Wypisz na standardowe wyjscie informacje o utworzonych macierzach oraz ich sume, roznice pierwszej i drugiej oraz iloczyn macierzy.
 
-Napisz program testujacy twoja klase. Stworz macierze: A([[1, 3], [4, 2]]) i B([[5, 0], [1, 3]]). 
-Wypisz na standardowe wyjscie informacje o utworzonych macierzach oraz ich sume, roznice pierwszej 
-i drugiej oraz iloczyn macierzy. 
-'''
+"""
+
 
 class Macierz:
     def __init__(self, macierz=[[]]):
@@ -27,9 +24,9 @@ class Macierz:
                         suma[i].append(self.macierz[i][j] + other.macierz[i][j])
                 return Macierz(suma)
             else:
-                raise ValueError('Macierze maja rozne wymiary')
+                raise ValueError("Macierze maja rozne wymiary")
         else:
-            raise ValueError('Macierze maja rozne wymiary')
+            raise ValueError("Macierze maja rozne wymiary")
 
     def __sub__(self, other):
         if len(self.macierz) == len(other.macierz):
@@ -41,9 +38,9 @@ class Macierz:
                         roznica[i].append(self.macierz[i][j] - other.macierz[i][j])
                 return Macierz(roznica)
             else:
-                raise ValueError('Macierze maja rozne wymiary')
+                raise ValueError("Macierze maja rozne wymiary")
         else:
-            raise ValueError('Macierze maja rozne wymiary')
+            raise ValueError("Macierze maja rozne wymiary")
 
     def __mul__(self, other):
         if len(self.macierz[0]) == len(other.macierz):
@@ -57,10 +54,10 @@ class Macierz:
             return Macierz(iloczyn)
 
         else:
-            raise ValueError('Macierze maja rozne wymiary')
+            raise ValueError("Macierze maja rozne wymiary")
 
     def __str__(self):
-        return f'{self.macierz}'
+        return f"{self.macierz}"
 
     def __eq__(self, other):
         if len(self.macierz) == len(other.macierz):
@@ -74,7 +71,6 @@ class Macierz:
                 return False
         else:
             return False
-
 
     def __ne__(self, other):
         if len(self.macierz) == len(other.macierz):
@@ -96,19 +92,20 @@ class Macierz:
             for j in range(len(self.macierz)):
                 transponowana[i].append(self.macierz[j][i])
         return Macierz(transponowana)
-    
+
 
 if __name__ == "__main__":
     macierz_a = Macierz([[1, 3], [4, 2]])
     macierz_b = Macierz([[5, 0], [1, 3]])
 
-    print(f'Macierz A: {macierz_a.macierz}')
-    print(f'Macierz B: {macierz_b.macierz}')
-    print(f'Suma: {macierz_a + macierz_b}')
-    print(f'Roznica: {macierz_a - macierz_b}')
-    print(f'Iloczyn: {macierz_a * macierz_b}')
-    print(f'Transponowana macierz A: {macierz_a.transponuj()}')
-    print(f'Macierz A == Macierz B: {macierz_a == macierz_b}')
-    print(f'Macierz A != Macierz B: {macierz_a != macierz_b}')
-    print(f'Macierz A == Macierz A: {macierz_a == macierz_a}')
-    print(f'Macierz A != Macierz A: {macierz_a != macierz_a}')
+    print(f"Macierz A: {macierz_a.macierz}")
+    print(f"Macierz B: {macierz_b.macierz}")
+    print(f"Suma: {macierz_a + macierz_b}")
+    print(f"Roznica: {macierz_a - macierz_b}")
+    print(f"Iloczyn: {macierz_a * macierz_b}")
+    print(f"Transponowana macierz A: {macierz_a.transponuj()}")
+    print(f"Macierz A == Macierz B: {macierz_a == macierz_b}")
+    print(f"Macierz A != Macierz B: {macierz_a != macierz_b}")
+    print(f"Macierz A == Macierz A: {macierz_a == macierz_a}")
+    print(f"Macierz A != Macierz A: {macierz_a != macierz_a}")
+

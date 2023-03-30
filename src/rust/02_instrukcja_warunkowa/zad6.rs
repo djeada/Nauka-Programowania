@@ -17,3 +17,4 @@ fn main() {
 	
 	println!("Najwieksza liczba to: {}", maks);
 }
+

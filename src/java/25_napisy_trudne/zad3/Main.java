@@ -1,8 +1,13 @@
-import java.util.*;
-
 /*
-Dla otrzymanych dwoch napisow, sprawdz czy drugi stanowi poczatek pierwszego.
+Tytul: Usun podnapis.
+Tresc: Dostajesz dwa napisy. Twoim zadaniem jest wyszukanie i usuniecie wszystkich wystapien drugiego napisu w pierwszym napisie.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla napisow: “Lezy jezy na wiezy” oraz “zy”, zwrocony napis powinien brzmiec: “Le je na wie”.
+
 */
+import java.util.*;
 
 public class Main {
 
@@ -35,3 +40,4 @@ public class Main {
     test2();
   }
 }
+

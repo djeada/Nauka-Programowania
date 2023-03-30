@@ -1,17 +1,17 @@
 {-
-Tytuł: Obliczenie ceny podłogi.
+Tytul: Obliczenie ceny podlogi.
 
-Treść: Otrzymasz cenę pojedynczej płytki, wymiary płytki w postaci kwadratu oraz wymiary podłogi w postaci prostokąta. Oblicz, ile kosztować będzie podłoga o podanych wymiarach.
+Tresc: Otrzymasz cene pojedynczej plytki, wymiary plytki w postaci kwadratu oraz wymiary podlogi w postaci prostokata. Oblicz, ile kosztowac bedzie podloga o podanych wymiarach.
 
-Jednostki są umowne.
+Jednostki sa umowne.
 
-Dane wejściowe: Cztery liczby naturalne: cena płytki, długość boku płytki, długość podłogi oraz szerokość podłogi.
+Dane wejsciowe: Cztery liczby naturalne: cena plytki, dlugosc boku plytki, dlugosc podlogi oraz szerokosc podlogi.
 
-Dane wyjściowe: Liczba naturalna oznaczająca cenę podłogi.
+Dane wyjsciowe: Liczba naturalna oznaczajaca cene podlogi.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb: 2 (cena płytki), 3 (długość boku płytki), 20 (długość podłogi) oraz 40 (szerokość podłogi), powinna zostać wypisana liczba: 196.
+Dla pobranych liczb: 2 (cena plytki), 3 (dlugosc boku plytki), 20 (dlugosc podlogi) oraz 40 (szerokosc podlogi), powinna zostac wypisana liczba: 196.
 -}
 
 main :: IO ()
@@ -31,3 +31,4 @@ main = do
   let totalCost = fromIntegral numberOfTiles * tilePrice
 
   putStrLn $ "Cena podlogi: " ++ show totalCost
+

@@ -1,11 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Usun klucz.
+# Tresc: Dla otrzymanej listy: liczb calkowitych oraz klucza, usun pierwsze wystapienie klucza w liscie.
+# Dane wejsciowe: Lista liczb calkowitych i liczba calkowita.
+# Dane wyjsciowe: Lista liczb calkowitych.
+# Przyklad:
+# Dla otrzymanej listy: [6, 2, 1, 4, 27] oraz 4, powinna zostac zwrocona lista: [6, 2, 1, 27].
 
 source ../assert.sh
-
-# Dla otrzymanej listy liczb naturalnych, znajdz elemnt
-# dominujacy. Element dominujacy to element, ktorego liczba
-# wystapien w liscie jest wieksza niz polowa dlugosci listy.
-# Jesli lista nie ma elementu dominujacego, zwroc -1.
 
 znajdz_pary() {
 

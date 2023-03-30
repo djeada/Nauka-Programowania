@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Rotacje napisów.
+Tytul: Rotacje napisow.
 
-Treść: Dostajesz dwa napisy. Sprawdź, czy jeden z nich jest rotacją drugiego.
+Tresc: Dostajesz dwa napisy. Sprawdz, czy jeden z nich jest rotacja drugiego.
 
-Dane wejściowe: Dwa napisy.
+Dane wejsciowe: Dwa napisy.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
+Przyklad:
 
-Dla napisów "malpka" i "pkamal" powinno zostać zwrócone "Prawda".
+Dla napisow "malpka" i "pkamal" powinno zostac zwrocone "Prawda".
 
 */
 
@@ -31,3 +31,4 @@ function testCzyRotacja() {
 }
 
 testCzyRotacja();
+

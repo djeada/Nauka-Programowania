@@ -1,11 +1,10 @@
 """
-Tytuł: Obliczenie ceny podłogi.
-Treść: Otrzymasz cenę pojedynczej płytki, wymiary płytki w postaci kwadratu oraz wymiary podłogi w postaci prostokąta. Oblicz, ile kosztować będzie podłoga o podanych wymiarach.
-Jednostki są umowne.
-Dane wejściowe: Cztery liczby naturalne: cena płytki, długość boku płytki, długość podłogi oraz szerokość podłogi.
-Dane wyjściowe: Liczba naturalna oznaczająca cenę podłogi.
-Przykład:
-Dla pobranych liczb: 2 (cena płytki), 3 (długość boku płytki), 20 (długość podłogi) oraz 40 (szerokość podłogi), powinna zostać wypisana liczba: 196.
+Tytul: Zamiana kolejnosci liczb.
+Tresc zadania: Napisz program, ktory pobierze od uzytkownika dwie liczby naturalne i wypisze je w odwroconej kolejnosci.
+Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
+Przyklad:
+Jesli uzytkownik poda liczby -7 oraz 4, program powinien wypisac liczby: 4 i -7.
 
 """
 
@@ -16,3 +15,4 @@ if __name__ == "__main__":
 
     print(y)
     print(x)
+

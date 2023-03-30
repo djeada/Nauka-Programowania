@@ -1,7 +1,6 @@
 E_ASSERT_FAILED=99
 E_PARAM_ERR=98
 
-
 assert() {
     if [ -z "$2" ]; then
         return $E_PARAM_ERR
@@ -176,5 +175,4 @@ assertSetsNotEqual() {
 
     assertNotEqual array_1 array_2 $lineno
 }
-
 

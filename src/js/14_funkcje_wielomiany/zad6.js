@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Obliczenie miejsc zerowych równania kwadratowego.
+Tytul: Obliczenie miejsc zerowych rownania kwadratowego.
 
-Treść: Otrzymujesz listę współczynników równania kwadratowego $ax^2 + bx + c$. Znajdź rzeczywiste miejsca zerowe równania kwadratowego.
+Tresc: Otrzymujesz liste wspolczynnikow rownania kwadratowego $ax^2 + bx + c$. Znajdz rzeczywiste miejsca zerowe rownania kwadratowego.
 
-Dane wejściowe: Lista liczb naturalnych.
+Dane wejsciowe: Lista liczb naturalnych.
 
-Dane wyjściowe: Lista liczb zmiennoprzecinkowych.
+Dane wyjsciowe: Lista liczb zmiennoprzecinkowych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy współczynników: [1, 2, 1], zostanie zwrócona lista: [-1, -1].
+Dla otrzymanej listy wspolczynnikow: [1, 2, 1], zostanie zwrocona lista: [-1, -1].
 */
 
 function miejscaZeroweRownaniaKwadratowego(wspolczynniki) {
@@ -64,4 +64,5 @@ function testMiejscaZeroweRownaniaKwadratowego() {
 }
 
 testMiejscaZeroweRownaniaKwadratowego();
-console.log("Wszystkie testy zakończone sukcesem");
+console.log("Wszystkie testy zakonczone sukcesem");
+

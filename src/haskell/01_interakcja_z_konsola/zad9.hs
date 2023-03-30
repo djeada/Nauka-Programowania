@@ -1,15 +1,15 @@
 {-
-Tytuł: Kalkulator kredytowy
+Tytul: Kalkulator kredytowy
 
-Treść: Pobierz roczną stopę procentową, liczbę lat na spłacenie kredytu oraz wysokość udzielonego kredytu. Oblicz miesięczną ratę oraz całkowity koszt kredytu.
+Tresc: Pobierz roczna stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc udzielonego kredytu. Oblicz miesieczna rate oraz calkowity koszt kredytu.
 
-Dane wejściowe: Trzy liczby naturalne.
+Dane wejsciowe: Trzy liczby naturalne.
 
-Dane wyjściowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb: 3.5 (roczna stopa procentowa), 8 (liczba lat) oraz 12000 (wysokość kredytu), powinny zostać wypisane liczby 143.5 (miesięczna rata) oraz 13776 (całkowity koszt kredytu). Waluta jest umowna.
+Dla pobranych liczb: 3.5 (roczna stopa procentowa), 8 (liczba lat) oraz 12000 (wysokosc kredytu), powinny zostac wypisane liczby 143.5 (miesieczna rata) oraz 13776 (calkowity koszt kredytu). Waluta jest umowna.
 -}
 
 main :: IO ()
@@ -29,3 +29,4 @@ main = do
 
   putStrLn $ "Miesieczna rata: " ++ show monthlyPayment
   putStrLn $ "Calkowity koszt kredytu: " ++ show totalCost
+

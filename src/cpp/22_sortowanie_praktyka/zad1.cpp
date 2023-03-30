@@ -1,11 +1,16 @@
 /*
-Dla otrzymanego napisu, posortuj alfabetycznie jego znaki.
+Tytul: Sortowanie znakow w napisie.
+Tresc: Otrzymujesz napis. Posortuj alfabetycznie jego znaki.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla napisu "Ala ma kota" powinno zostac zwrocone " Aaaaklmot".
+
 */
 
 #include <algorithm>
 #include <cassert>
 #include <string>
-
 
 void sortuj(std::string &napis) { std::sort(napis.begin(), napis.end()); }
 
@@ -24,3 +29,4 @@ int main() {
 
   return 0;
 }
+

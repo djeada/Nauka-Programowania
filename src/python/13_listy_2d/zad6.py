@@ -1,7 +1,11 @@
 """
-Otrzymujesz liste par liczb. Liczby w parze reprezentuja poczatek i koniec przedzialu. 
-Niektore przedzialy moga na siebie nachodzic. W takim przypadku polacz je ze soba 
-i zwroc liste niepokrywajacych sie przedzialow.
+Tytul: Wypisanie elementow macierzy spiralnie.
+Tresc: Otrzymujesz liste list liczb naturalnych. Zbierz elementy otrzymanej macierzy spiralnie i zapisz je w liscie.
+Dane wejsciowe: Lista list liczb naturalnych.
+Dane wyjsciowe: Lista.
+Przyklad:
+Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona lista: [1, 2, 3, 6, 9, 8, 7, 4, 5].
+
 """
 
 
@@ -45,3 +49,4 @@ def test_polacz_pokrywajace_sie_przedzialy():
 
 if __name__ == "__main__":
     test_polacz_pokrywajace_sie_przedzialy()
+

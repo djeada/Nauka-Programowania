@@ -1,11 +1,11 @@
 /*
-Tytuł: Dodaj wiersz do pliku.
+Tytul: Dodaj wiersz do pliku.
 
-Treść zadania: Otrzymujesz dwa napisy. Pierwszy napis reprezentuje ścieżkę do pliku tekstowego, a drugi napis reprezentuje wiersz tekstu. Dodaj otrzymany wiersz na początek pliku tekstowego.
+Tresc zadania: Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke do pliku tekstowego, a drugi napis reprezentuje wiersz tekstu. Dodaj otrzymany wiersz na poczatek pliku tekstowego.
 
-Dane wejściowe: Dwa napisy - ścieżka do pliku oraz wiersz tekstu.
+Dane wejsciowe: Dwa napisy - sciezka do pliku oraz wiersz tekstu.
 
-Dane wyjściowe: Brak.
+Dane wyjsciowe: Brak.
 */
 
 const fs = require("fs").promises;
@@ -34,13 +34,13 @@ const test1 = async () => {
 
   console.assert(
     wynik.length === oczekiwane.length,
-    `Błąd asercji: ${wynik.length} != ${oczekiwane.length}`
+    `Blad asercji: ${wynik.length} != ${oczekiwane.length}`
   );
 
   for (let i = 0; i < wynik.length; i++) {
     console.assert(
       wynik[i] === oczekiwane[i],
-      `Błąd asercji: ${wynik[i]} != ${oczekiwane[i]}`
+      `Blad asercji: ${wynik[i]} != ${oczekiwane[i]}`
     );
   }
 
@@ -52,3 +52,4 @@ const main = async () => {
 };
 
 main();
+

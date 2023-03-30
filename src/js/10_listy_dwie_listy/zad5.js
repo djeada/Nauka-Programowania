@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Obliczenie średniej ważonej.
+Tytul: Obliczenie sredniej wazonej.
 
-Treść: Otrzymujesz dwie listy liczb zmiennoprzecinkowych. Pierwsza lista reprezentuje wagi, a druga wartości. Oblicz średnią ważoną.
+Tresc: Otrzymujesz dwie listy liczb zmiennoprzecinkowych. Pierwsza lista reprezentuje wagi, a druga wartosci. Oblicz srednia wazona.
 
-Dane wejściowe: Dwie listy liczb zmiennoprzecinkowych.
+Dane wejsciowe: Dwie listy liczb zmiennoprzecinkowych.
 
-Dane wyjściowe: Liczba zmiennoprzecinkowa.
+Dane wyjsciowe: Liczba zmiennoprzecinkowa.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list [2.0, 5.0, 0.0, 2.0, 1.0] oraz [0.2, 0.4, 0.1, 0.2, 0.1] zostanie zwrócona wartość: 0.29.
+Dla otrzymanych list [2.0, 5.0, 0.0, 2.0, 1.0] oraz [0.2, 0.4, 0.1, 0.2, 0.1] zostanie zwrocona wartosc: 0.29.
 
 */
 
@@ -46,3 +46,4 @@ function main() {
 }
 
 main();
+

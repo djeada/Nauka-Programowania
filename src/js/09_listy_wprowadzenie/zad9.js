@@ -1,15 +1,15 @@
 /*
-Tytuł: Usuń duplikaty.
+Tytul: Usun duplikaty.
 
-Treść: Otrzymujesz listę liczb naturalnych. Usuń z niej wszystkie duplikaty, tak aby każda liczba pozostała tylko raz.
+Tresc: Otrzymujesz liste liczb naturalnych. Usun z niej wszystkie duplikaty, tak aby kazda liczba pozostala tylko raz.
 
-Dane wejściowe: Lista liczb naturalnych.
+Dane wejsciowe: Lista liczb naturalnych.
 
-Dane wyjściowe: Lista liczb naturalnych.
+Dane wyjsciowe: Lista liczb naturalnych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [3, 2, 1, 3, 2, 2], powinna zostać zwrócona lista: [3, 2, 1].
+Dla otrzymanej listy: [3, 2, 1, 3, 2, 2], powinna zostac zwrocona lista: [3, 2, 1].
 
 */
 
@@ -46,3 +46,4 @@ function main() {
 }
 
 main();
+

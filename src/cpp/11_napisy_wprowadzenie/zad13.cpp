@@ -1,12 +1,23 @@
+/*
+Tytul: Wypisz co k-ty znak napisu poziomo i pionowo.
+Tresc: Otrzymasz napis oraz liczbe k.
+a) Wypisz co k-ty znak napisu poziomo, rozdzielajac znaki spacjami.
+b) Wypisz co k-ty znak napisu pionowo, rozdzielajac znaki enterami.
+Dane wejsciowe: Napis oraz liczba.
+Dane wyjsciowe: Napis.
+Przyklad:
+a) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony
+napis: "z h n". b) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien
+zostac zwrocony napis:
+z
+h
+n
+
+*/
 #include <cassert>
 #include <cmath>
 #include <string>
 #include <vector>
-
-/*
-Otrzymujesz napis. Znajdz znaki znajdujace sie na
-pozycjach bedacych liczbami pierwszymi.
-*/
 
 bool czyPierwsza(int n) {
 
@@ -43,3 +54,4 @@ int main() {
   test1();
   return 0;
 }
+

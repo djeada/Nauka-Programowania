@@ -1,8 +1,13 @@
-import java.util.*;
-
 /*
-Otrzymujesz liste liczb, skladajaca sie wylacznie z zer, jedynek i dwojek. Posortuj liste.
+Tytul: Sortowanie listy liczb z zakresu 0-2.
+Tresc: Otrzymujesz liste liczb skladajacych sie tylko z zer, jedynek i dwojek. Posortuj te liste.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Posortowana lista liczb naturalnych.
+Przyklad:
+Dla listy: [1, 0, 1, 2, 2, 0, 1], powinna zostac zwrocona lista: [0, 0, 1, 1, 1, 2, 2].
+
 */
+import java.util.*;
 
 public class Main {
   public static void sortuj(ArrayList<Integer> lista) {
@@ -46,3 +51,4 @@ public class Main {
     test2();
   }
 }
+

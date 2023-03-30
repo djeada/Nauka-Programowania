@@ -1,13 +1,15 @@
-#!/usr/bin/env bash
+# Tytul: Wyodrebnij cyfry z tekstu.
+# Tresc: Dostajesz napis. Zwroc napis skladajacy sie z cyfr wystepujacych w tym napisie.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Napis.
+# Przyklad:
+# Dla napisu: “Terminator2001”, powinien zostac zwrocony napis: “2001”.
 
 source ../assert.sh
 
-# Otrzymujesz napis. Sprawdz, czy napis sklada sie wylacznie z cyfr.
-
-
 wylacznie_cyfry() {
     local napis=$1
-    
+
     if [[ $napis =~ ^[0-9]+$ ]]; then
         echo "true"
     else
@@ -25,7 +27,6 @@ test_wylacznie_cyfry() {
 main() {
     test_wylacznie_cyfry
 }
-
 
 main "$@"
 

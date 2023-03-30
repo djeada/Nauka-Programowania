@@ -1,3 +1,12 @@
+/*
+Tytul: Znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
+Tresc: Otrzymasz napis. Znajdz znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista znakow.
+Przyklad:
+Dla otrzymanego napisu: "Slon", powinna zostac zwrocona lista: ['o', 'n'].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -20,3 +29,4 @@ public class Main {
     test1();
   }
 }
+

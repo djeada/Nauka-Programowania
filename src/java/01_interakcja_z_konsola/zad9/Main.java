@@ -1,3 +1,12 @@
+/*
+Tytul: Kalkulator kredytowy
+Tresc: Pobierz roczna stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc udzielonego kredytu. Oblicz miesieczna rate oraz calkowity koszt kredytu.
+Dane wejsciowe: Trzy liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
+Przyklad:
+Dla pobranych liczb: 3.5 (roczna stopa procentowa), 8 (liczba lat) oraz 12000 (wysokosc kredytu), powinny zostac wypisane liczby 143.5 (miesieczna rata) oraz 13776 (calkowity koszt kredytu). Waluta jest umowna.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -35,3 +44,4 @@ public class Main {
     System.out.printf("\n");
   }
 }
+

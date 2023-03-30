@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Znajdz mediane dwoch posortowanych list.
+# Tresc: Otrzymujesz dwie posortowane listy liczb calkowitych rownej dlugosci. Znajdz ich mediane.
+# Dane wejsciowe: Dwie listy liczb calkowitych o rownej dlugosci.
+# Dane wyjsciowe: Liczba zmiennoprzecinkowa.
+# Przyklad:
+# Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinno zostac zwrocone: 4.5.
 
 source ../assert.sh
-
-# Otrzymujesz dwie listy. Usun z pierwszej listy te
-# elementy, ktore wystepuja rowniez w drugiej liscie.
 
 usun_czesc_wspolna_v1() {
     for elem_a in "${lista_a[@]}"; do

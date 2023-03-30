@@ -1,9 +1,15 @@
 """
-Otrzymujesz liste list liczb naturalnych. Znajdz w macierzy klepsydre o najwiekszej sumie. 
-Klepsydra sklada sie z dokladnie 7 elementow. Trzy pierwsze elementy sa kolejnymi 
-elementami dowolnego wiersza macierzy. Nastepny element znajduje sie w tej samej
-kolumnie co drugi element i w dokladnie jednym wierszu nizej. Trzy nastepne znajduja sie 
-w tych samych kolumnach co trzy pierwsze i dokladnie dwa wiersze nizej.
+Tytul: Gra w statki
+Tresc: Napisz program implementujacy gre w statki.
+Stworz macierz o wymiarach 10x10. Wylosuj polozenia statkow i zapisz je w macierzy. Do dyspozycji masz nastepujace statki:
+* 1 statek o dlugosci 4
+* 2 statki o dlugosci 3
+* 3 statki o dlugosci 2
+* 5 statkow o dlugosci 1
+Kazde pole moze zawierac tylko jeden statek.
+Wypisz na standardowe wyjscie plansze zlozona z 10x10 kropek i popros uzytkownika o podanie wspolrzednych. Jesli na podanych przez uzytkownika wspolrzednych znajduje sie statek, zamien kropke na litere o na planszy. W przeciwnym razie, zamien kropke na litere x.
+Powtarzaj krok 2, az wszystkie pozycje statkow zostana odkryte przez uzytkownika lub az na planszy pojawi sie 10 liter x. W obu przypadkach zakoncz gre i poinformuj uzytkownika o wyniku.
+
 """
 
 
@@ -57,3 +63,4 @@ def test_najwieksza_klepsydra():
 if __name__ == "__main__":
 
     test_najwieksza_klepsydra()
+

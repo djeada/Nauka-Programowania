@@ -1,10 +1,9 @@
-#!/usr/bin/env bash
+# Tytul: Sprawdzenie, czy sciezka nalezy do pliku/folderu
+# Tresc: Otrzymujesz napis reprezentujacy sciezke. Sprawdz, czy jest to sciezka do pliku lub folderu.
+# Dane wejsciowe: Napis
+# Dane wyjsciowe: Wartosc logiczna
 
 source ../assert.sh
-
-# Otrzymujesz napis reprezentujacy sciezke.
-# a) Sprawdz, czy jest to sciezka pliku.
-# b) Sprawdz, czy jest to sciezka folderu.
 
 czy_sciezka_pliku() {
     if [ -f "$1" ]; then
@@ -24,29 +23,29 @@ czy_sciezka_folderu() {
 
 test_czy_sciezka_pliku() {
 
-    # stworz folder testowy
+    mkdir 'test'
     mkdir 'test'
 
-    # stworz plik testowy
+    touch 'test/test.txt'
     touch 'test/test.txt'
 
-    # sprawdz czy jest to sciezka pliku
+    assertTrue "$(czy_sciezka_pliku test/test.txt)" $LINENO
     assertTrue "$(czy_sciezka_pliku test/test.txt)" $LINENO
     assertFalse "$(czy_sciezka_pliku test)" $LINENO
 
-    # usun folder testowy
+    rm -rf 'test'
     rm -rf 'test'
 }
 
 test_czy_sciezka_folderu() {
 
-    # stworz folder testowy
+    mkdir 'test'
     mkdir 'test'
 
-    # sprawdz czy jest to sciezka folderu
+    assertTrue "$(czy_sciezka_folderu test)" $LINENO
     assertTrue "$(czy_sciezka_folderu test)" $LINENO
 
-    # usun folder testowy
+    rm -rf 'test'
     rm -rf 'test'
 }
 
@@ -56,3 +55,4 @@ main() {
 }
 
 main "$@"
+

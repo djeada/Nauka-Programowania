@@ -1,8 +1,12 @@
-#!/usr/bin/env bash
-
-#Napisz funkcje, ktora dla otrzymanej liczby N,
-#wypisze N pierwszych liczb pierwszych.
-
+# Tytul: Trojkat Pascala.
+# Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze trojkat Pascala o wysokosci rownej tej liczbie.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: Komunikat.
+# Przyklad:
+# Dla otrzymanej liczby 3 powinno zostac wypisane:
+# 1
+# 11
+# 121
 
 czyPierwsza() {
 

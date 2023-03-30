@@ -1,15 +1,15 @@
 /*
 
-Tytuł: Sortowanie listy liczb z zakresu 0-2.
+Tytul: Sortowanie listy liczb z zakresu 0-2.
 
-Treść: Otrzymujesz listę liczb składających się tylko z zer, jedynek i dwójek. Posortuj tę listę.
+Tresc: Otrzymujesz liste liczb skladajacych sie tylko z zer, jedynek i dwojek. Posortuj te liste.
 
-Dane wejściowe: Lista liczb naturalnych.
+Dane wejsciowe: Lista liczb naturalnych.
 
-Dane wyjściowe: Posortowana lista liczb naturalnych.
+Dane wyjsciowe: Posortowana lista liczb naturalnych.
 
-Przykład:
-Dla listy: [1, 0, 1, 2, 2, 0, 1], powinna zostać zwrócona lista: [0, 0, 1, 1, 1, 2, 2].
+Przyklad:
+Dla listy: [1, 0, 1, 2, 2, 0, 1], powinna zostac zwrocona lista: [0, 0, 1, 1, 1, 2, 2].
 
 */
 
@@ -31,3 +31,4 @@ console.assert(
   JSON.stringify(sortuj(lista2)) === JSON.stringify(wynik2),
   "Test 2 nieudany"
 );
+

@@ -1,13 +1,18 @@
+/*
+Tytul: Znalezienie indeksow pierwszej pary elementow listy o sumie rownej
+podanej liczbie. Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x,
+znajdz indeksy pierwszej pary elementow listy, ktorych suma jest rowna x. Jesli
+taka para nie istnieje, zwroc pare (-1, -1). Dane wejsciowe: Lista liczb
+calkowitych oraz liczba calkowita. Dane wyjsciowe: Para liczb calkowitych.
+Przyklad:
+Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostana zwrocone indeksy
+pierwszej pary elementow o sumie rownej 5: (0, 2).
+
+*/
 #include <cassert>
 #include <iostream>
 #include <limits>
 #include <vector>
-
-/*
-Dla otrzymanej listy liczb naturalnych znajdz
-srednia arytmetyczna najwiekszej i drugiej najwiekszej
-liczby w liscie.
-*/
 
 double sredniaDwochNajwiekszych(std::vector<int> &lista) {
 
@@ -50,3 +55,4 @@ int main() {
 
   return 0;
 }
+

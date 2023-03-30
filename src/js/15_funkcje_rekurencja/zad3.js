@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Potęga.
+Tytul: Potega.
 
-Treść: Otrzymujesz dwie liczby, a i b. Przy użyciu rekurencji oblicz a podniesione do b.
+Tresc: Otrzymujesz dwie liczby, a i b. Przy uzyciu rekurencji oblicz a podniesione do b.
 
-Dane wejściowe: Dwie liczby naturalne a i b.
+Dane wejsciowe: Dwie liczby naturalne a i b.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla a = 2 i b = 3, powinna zostać zwrócona liczba: 8.
+Dla a = 2 i b = 3, powinna zostac zwrocona liczba: 8.
 */
 
 function potega(a, b) {
@@ -35,3 +35,4 @@ function test() {
 }
 
 test();
+

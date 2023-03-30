@@ -1,10 +1,11 @@
 """
-Zbuduj prosta baze danych dla biblioteki oparta o slownik w ktorym kluczami sa 
-imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek. 
-Baza danych powinna umozliwiac:
-a) Dodanie wypozyczonej ksiazki do danego czytelnika.
-b) Zwrocenie wypozyczonej ksiazki przez czytelnika.
-c) Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
+Tytul: Histogram wystapien znakow w slowie.
+Tresc: Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym napisie. Innymi slowy, zwroc histogram znakow w otrzymanym napisie.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Slownik par znakow i liczb naturalnych.
+Przyklad:
+Dla otrzymanego napisu: “klasa”, slownik powinien wygladac nastepujaco: {“k”: 1, “l”: 1, “a”: 2, “s”: 1}.
+
 """
 
 
@@ -31,7 +32,7 @@ def zwroc_ksiazke_czytelnika(baza_danych, czytelnik, ksiazka):
 
 
 def wypisz_liste_wypozyczonych_ksiazek(baza_danych, czytelnik):
-    """	
+    """
     Funkcja wypisuje liste wypozyczonych ksiazek dla danego czytelnika.
     """
     if czytelnik in baza_danych:
@@ -63,3 +64,4 @@ def test_zwroc_ksiazke_czytelnika():
 if __name__ == "__main__":
     test_dodaj_ksiazke_do_czytelnika()
     test_zwroc_ksiazke_czytelnika()
+

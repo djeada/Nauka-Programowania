@@ -1,15 +1,15 @@
 /*
-Tytuł: Macierz z parami elementów odpowiadających sobie z dwóch list.
+Tytul: Macierz z parami elementow odpowiadajacych sobie z dwoch list.
 
-Treść: Dla otrzymanych dwóch list, stwórz dwukolumnową macierz, której pierwsza kolumna składa się z elementów pierwszej listy, a druga kolumna z elementów drugiej listy. Jeśli otrzymane listy nie są równej długości, zwróć pustą macierz.
+Tresc: Dla otrzymanych dwoch list, stworz dwukolumnowa macierz, ktorej pierwsza kolumna sklada sie z elementow pierwszej listy, a druga kolumna z elementow drugiej listy. Jesli otrzymane listy nie sa rownej dlugosci, zwroc pusta macierz.
 
-Dane wejściowe: Dwie listy.
+Dane wejsciowe: Dwie listy.
 
-Dane wyjściowe: Lista list liczb naturalnych lub pusta macierz (w przypadku nierównych długości list).
+Dane wyjsciowe: Lista list liczb naturalnych lub pusta macierz (w przypadku nierownych dlugosci list).
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych dwóch list: [3, 5, 2] oraz [2, 8, 1], powinna zostać zwrócona macierz: [[3, 2], [5, 8], [2, 1]
+Dla otrzymanych dwoch list: [3, 5, 2] oraz [2, 8, 1], powinna zostac zwrocona macierz: [[3, 2], [5, 8], [2, 1]
 */
 
 function utworzMacierzZList(listA, listB) {
@@ -33,12 +33,12 @@ function test() {
   const wynik = utworzMacierzZList([3, 5, 2], [2, 8, 1]);
   console.assert(
     wynik.length === oczekiwana.length,
-    `Długości macierzy nie są równe. Oczekiwano: ${oczekiwana.length}, otrzymano: ${wynik.length}.`
+    `Dlugosci macierzy nie sa rowne. Oczekiwano: ${oczekiwana.length}, otrzymano: ${wynik.length}.`
   );
   for (let i = 0; i < wynik.length; i++) {
     console.assert(
       wynik[i].length === oczekiwana[i].length,
-      `Długości kolumn nie są równe. Oczekiwano: ${oczekiwana[i].length}, otrzymano: ${wynik[i].length}.`
+      `Dlugosci kolumn nie sa rowne. Oczekiwano: ${oczekiwana[i].length}, otrzymano: ${wynik[i].length}.`
     );
     for (let j = 0; j < wynik[i].length; j++) {
       console.assert(
@@ -50,3 +50,4 @@ function test() {
 }
 
 test();
+

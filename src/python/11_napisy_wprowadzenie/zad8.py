@@ -1,10 +1,13 @@
-import string
+"""
+Tytul: Konwersja listy na napis
+Tresc: Otrzymujesz liste liczb naturalnych. Zamie liste na napis.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanej listy: [2, 4, 7], powinien zostac zwrocony napis: “247”.
 
 """
-Otrzymujesz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe. 
-Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne 
-nie sa liczone jako slowa.
-"""
+import string
 
 
 def podziel_zdanie_na_slowa(zdanie):
@@ -19,3 +22,4 @@ def wypisz_pionowo(zdanie):
 if __name__ == "__main__":
     zdanie = "Ala ma kota, a kot ma Ale."
     wypisz_pionowo(zdanie)
+

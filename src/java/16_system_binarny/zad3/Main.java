@@ -1,3 +1,12 @@
+/*
+Tytul:  Konwersja miedzy dowolnymi systemami liczbowymi.
+Tresc: Otrzymujesz liczbe naturalna, podstawe systemu liczbowego, w ktorym zapisana jest ta liczba, oraz podstawe systemu, na ktory ma zostac dokonana konwersja. Zwroc reprezentacje otrzymanej liczby w nowym systemie.
+Dane wejsciowe: Trzy liczby naturalne.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanych liczb: 4301, 10 i 4 powinna zostac zwrocona liczba: 1003031.
+
+*/
 public class Main {
   // Otrzymujesz liczbe, zamien ja na jej binarny odpowiednik jesli:
 
@@ -166,3 +175,4 @@ public class Main {
     test8();
   }
 }
+

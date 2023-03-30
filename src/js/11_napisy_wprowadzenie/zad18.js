@@ -1,31 +1,31 @@
 /*
-Tytuł: Odwróć słowa w zdaniu.
+Tytul: Odwroc slowa w zdaniu.
 
-Treść: Otrzymujesz napis reprezentujący zdanie. Zamień słowa zdania na te same napisy zapisane wspak. Znaki interpunkcyjne nie są uwzględniane jako słowa.
+Tresc: Otrzymujesz napis reprezentujacy zdanie. Zamien slowa zdania na te same napisy zapisane wspak. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "Ala ma kota", powinien zostać zwrócony napis: "ala mak otak".
+Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "ala mak otak".
 */
 
-function rozbijNaSłowa(napis) {
+function rozbijNaSlowa(napis) {
   return napis.split(/[^\w]+/);
 }
 
-function odwróćSłowo(słowo) {
-  return słowo.split("").reverse().join("");
+function odwrocSlowo(slowo) {
+  return slowo.split("").reverse().join("");
 }
 
-function odwróćSłowa(napis) {
-  let słowa = rozbijNaSłowa(napis);
+function odwrocSlowa(napis) {
+  let slowa = rozbijNaSlowa(napis);
   let wynik = [];
-  for (let i = 0; i < słowa.length; i++) {
-    if (słowa[i] !== "") {
-      wynik.push(odwróćSłowo(słowa[i]));
+  for (let i = 0; i < slowa.length; i++) {
+    if (slowa[i] !== "") {
+      wynik.push(odwrocSlowo(slowa[i]));
     }
   }
   return wynik.join(" ");
@@ -36,11 +36,11 @@ function odwróćSłowa(napis) {
 function test() {
   let input = "Ala ma kota";
   let expectedOutput = "ala mak otak";
-  let output = odwróćSłowa(input);
+  let output = odwrocSlowa(input);
 
   console.assert(
     output === expectedOutput,
-    'Test nie powiódł się dla "' +
+    'Test nie powiodl sie dla "' +
       input +
       '". Otrzymany wynik to "' +
       output +
@@ -48,7 +48,8 @@ function test() {
       expectedOutput +
       '"'
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

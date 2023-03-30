@@ -1,6 +1,11 @@
 """
-Otrzymujesz tablice skladajaca sie wylacznie z zer i jedynek. Znajdz indeks zera, ktore po zamianie na jedynke daloby najdluzszy nieprzerwany ciag jedynek.
-Zachowanie dla otrzymanej tablicy skladajacej sie z samych zer jest nieokreslone.
+Tytul: Najdluzszy ciag jedynek.
+Tresc: Otrzymujesz liste skladajaca sie wylacznie z zer i jedynek. Znajdz indeks zera, ktore po zamianie na jedynke daloby najdluzszy ciag jedynek. Jesli lista sklada sie wylacznie z zer lub wylacznie z jedynek, zwroc -1.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej listy: [0, 0, 1, 0, 1, 1, 1, 0, 1, 1], powinna zostac zwrocona liczba: 7.
+
 """
 
 # Wersja 1
@@ -59,3 +64,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,12 +1,14 @@
-#!/usr/bin/env bash
+# Tytul: Sortowanie listy binarnej.
+# Tresc: Otrzymujesz liste liczb skladajacych sie tylko z zer i jedynek. Posortuj te liste.
+# Dane wejsciowe: Lista liczb naturalnych.
+# Dane wyjsciowe: Posortowana lista liczb naturalnych.
+# Przyklad:
+# Dla listy: [1, 0, 1, 0, 1, 1], powinna zostac zwrocona lista: [0, 0, 1, 1, 1, 1].
 
 source ../assert.sh
 
-# Otrzymujesz liste liczb, skladajaca sie wylacznie z zer, 
-# jedynek i dwojek. Posortuj liste.
-
 sortuj_liste() {
-    # Sortuj liste skladajaca sie z zer, jedynek i dwojek.
+    local -n _lista_ref="$1"
     local -n _lista_ref="$1"
 
     local zera=()
@@ -36,5 +38,5 @@ main() {
     test_sortuj_liste_binarna
 }
 
-
 main "$@"
+

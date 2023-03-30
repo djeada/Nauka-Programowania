@@ -1,18 +1,19 @@
 /*
 
-Tytuł: Wypisywanie na standardowe wyjście.
+Tytul: Wypisywanie na standardowe wyjscie.
 
-Treść zadania: Napisz program, który wypisze dowolny ciąg znaków na standardowe wyjście.
+Tresc zadania: Napisz program, ktory wypisze dowolny ciag znakow na standardowe wyjscie.
 
-Dane wejściowe: Brak.
+Dane wejsciowe: Brak.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Program może wypisać twoje inicjały lub komunikat "Witaj świecie!".
+Program moze wypisac twoje inicjaly lub komunikat "Witaj swiecie!".
 
 */
 
 console.info("A.D.");
-console.info("Witaj świecie");
+console.info("Witaj swiecie");
+

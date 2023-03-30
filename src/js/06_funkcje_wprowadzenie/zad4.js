@@ -1,18 +1,18 @@
 /*
 
-Tytuł: Maks i min
+Tytul: Maks i min
 
-Napisz funkcję, która:
+Napisz funkcje, ktora:
 
-a) Dla otrzymanych dwóch liczb zwróci mniejszą.
+a) Dla otrzymanych dwoch liczb zwroci mniejsza.
 
-b) Dla otrzymanych dwóch liczb zwróci większą.
+b) Dla otrzymanych dwoch liczb zwroci wieksza.
 
-c) Dla otrzymanych trzech liczb zwróci najmniejszą.
+c) Dla otrzymanych trzech liczb zwroci najmniejsza.
 
-d) Dla otrzymanych trzech liczb zwróci największą.
+d) Dla otrzymanych trzech liczb zwroci najwieksza.
 
-Dane wejściowe:
+Dane wejsciowe:
 
 a) Dwie liczby naturalne.
 
@@ -22,20 +22,20 @@ c) Trzy liczby naturalne.
 
 d) Trzy liczby naturalne.
 
-Dane wyjściowe: Liczba naturalna dla wszystkich podpunktów.
+Dane wyjsciowe: Liczba naturalna dla wszystkich podpunktow.
 
-Przykład:
+Przyklad:
 
-a) Dla otrzymanych liczb 3 i 1, funkcja powinna zwrócić liczbę 1.
+a) Dla otrzymanych liczb 3 i 1, funkcja powinna zwrocic liczbe 1.
 
-b) Dla otrzymanych liczb 3 i 1, funkcja powinna zwrócić liczbę 3.
+b) Dla otrzymanych liczb 3 i 1, funkcja powinna zwrocic liczbe 3.
 
-c) Dla otrzymanych liczb 3, 2 i 1, funkcja powinna zwrócić liczbę 1.
+c) Dla otrzymanych liczb 3, 2 i 1, funkcja powinna zwrocic liczbe 1.
 
-d) Dla otrzymanych liczb 3, 2 i 1, funkcja powinna zwrócić liczbę 3.
+d) Dla otrzymanych liczb 3, 2 i 1, funkcja powinna zwrocic liczbe 3.
 */
 
-// Funkcja zwracająca mniejszą liczbę
+// Funkcja zwracajaca mniejsza liczbe
 function zwracajMniejszaLiczbe(liczba_a, liczba_b) {
   if (liczba_a < liczba_b) {
     return liczba_a;
@@ -44,7 +44,7 @@ function zwracajMniejszaLiczbe(liczba_a, liczba_b) {
   }
 }
 
-// Funkcja zwracająca większą liczbę
+// Funkcja zwracajaca wieksza liczbe
 function zwracajWiekszaLiczbe(liczba_a, liczba_b) {
   if (liczba_a > liczba_b) {
     return liczba_a;
@@ -53,7 +53,7 @@ function zwracajWiekszaLiczbe(liczba_a, liczba_b) {
   }
 }
 
-// Funkcja zwracająca najmniejszą liczbę
+// Funkcja zwracajaca najmniejsza liczbe
 function zwracajNajmniejszaLiczbe(liczba_a, liczba_b, liczba_c) {
   if (liczba_a < liczba_b && liczba_a < liczba_c) {
     return liczba_a;
@@ -64,7 +64,7 @@ function zwracajNajmniejszaLiczbe(liczba_a, liczba_b, liczba_c) {
   }
 }
 
-// Funkcja zwracająca największą liczbę
+// Funkcja zwracajaca najwieksza liczbe
 function zwracajNajwiekszaLiczbe(liczba_a, liczba_b, liczba_c) {
   if (liczba_a > liczba_b && liczba_a > liczba_c) {
     return liczba_a;
@@ -75,19 +75,20 @@ function zwracajNajwiekszaLiczbe(liczba_a, liczba_b, liczba_c) {
   }
 }
 
-// Pobieranie danych od użytkownika
-var liczba_a = prompt("Podaj pierwszą liczbę: ");
-var liczba_b = prompt("Podaj drugą liczbę: ");
-var liczba_c = prompt("Podaj trzecią liczbę: ");
+// Pobieranie danych od uzytkownika
+var liczba_a = prompt("Podaj pierwsza liczbe: ");
+var liczba_b = prompt("Podaj druga liczbe: ");
+var liczba_c = prompt("Podaj trzecia liczbe: ");
 
-// Wyświetlanie wyników
+// Wyswietlanie wynikow
 console.log("Mniejsza liczba to: " + zwracajMniejszaLiczbe(liczba_a, liczba_b));
-console.log("Większa liczba to: " + zwracajWiekszaLiczbe(liczba_a, liczba_b));
+console.log("Wieksza liczba to: " + zwracajWiekszaLiczbe(liczba_a, liczba_b));
 console.log(
   "Najmniejsza liczba to: " +
     zwracajNajmniejszaLiczbe(liczba_a, liczba_b, liczba_c)
 );
 console.log(
-  "Największa liczba to: " +
+  "Najwieksza liczba to: " +
     zwracajNajwiekszaLiczbe(liczba_a, liczba_b, liczba_c)
 );
+

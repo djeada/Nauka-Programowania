@@ -1,3 +1,12 @@
+/*
+Tytul: Usun z pierwszej listy czesc wspolna obu list.
+Tresc: Otrzymujesz dwie listy liczb calkowitych. Usun z pierwszej listy te elementy, ktore wystepuja rowniez w drugiej liscie.
+Dane wejsciowe: Dwie listy liczb calkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
+Przyklad:
+Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -55,3 +64,4 @@ public class Main {
     test1();
   }
 }
+

@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Znalezienie indeksu najmniejszego elementu w posortowanej i przesunietej w prawo liscie.
+# Tresc: Dla otrzymanej listy liczb calkowitych, znajdz indeks najmniejszego elementu. Lista jest posortowana rosnaco, ale zostala przesunieta w prawo o okreslona liczbe miejsc. Przykladowo dla przesuniecia w prawo o 1, ostatni element trafia na pierwsze miejsce, a przedostatni na ostatnie miejsce itd.
+# Dane wejsciowe: Lista liczb calkowitych oraz liczba naturalna okreslajaca przesuniecie w prawo.
+# Dane wyjsciowe: Liczba calkowita.
+# Przyklad:
+# Dla otrzymanej listy: [7, 8, -1, 4, 5] zostanie zwrocona liczba: 2.
 
 source ../assert.sh
-
-# Usun wszystkie wystapienia klucza z listy.
-# Kolejnosc elementow w liscie powinna zostac zachowana.
 
 usun_duplikaty() {
     local pom=()
@@ -30,7 +32,6 @@ test1() {
 main() {
     test1
 }
-
 
 main "$@"
 

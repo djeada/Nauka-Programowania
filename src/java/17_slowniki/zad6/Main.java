@@ -1,3 +1,13 @@
+/*
+Tytul: Powtarzajace sie znaki
+Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrocenie wszystkich znakow, ktore wystepuja co najmniej 2 razy w ciagu.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "aaabbbccc"
+Powinien zostac zwrocony napis: "abc"
+
+*/
 import java.util.*;
 
 public class Main {
@@ -39,3 +49,4 @@ public class Main {
     test2();
   }
 }
+

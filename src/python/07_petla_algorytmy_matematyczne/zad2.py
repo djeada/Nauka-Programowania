@@ -1,6 +1,11 @@
 """
-Napisz funkcje, ktora dla otrzymanych dwoch liczb przy 
-pomocy petli obliczy ile wynosi a podniesione do b.
+Tytul: Podnies a do b.
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb obliczy ile wynosi a podniesione do b, przy pomocy petli.
+Dane wejsciowe: dwie liczby naturalne
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla pobranych liczb 3 i 5, funkcja powinna zwrocic liczbe 243.
+
 """
 
 
@@ -24,3 +29,4 @@ def test_potega():
 if __name__ == "__main__":
 
     test_potega()
+

@@ -1,3 +1,12 @@
+/*
+Tytul: Z ilu slow sklada sie zdanie?
+Tresc: Zlicz, ile slow sklada sie z podanego zdania. Znaki interpunkcyjne nie sa brane pod uwage jako slowa.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanego napisu: "gram na pianinie.", powinno zostac zwrocone: 3.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -56,3 +65,4 @@ public class Main {
     test2();
   }
 }
+

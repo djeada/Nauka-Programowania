@@ -1,13 +1,17 @@
+/*
+Tytul: Haslo.
+Tresc: Napisz dwie funkcje:
+* Pierwsza funkcja powinna prosic uzytkownika o podanie nazwy uzytkownika i
+hasla, a nastepnie zwrocic te dane.
+* Druga funkcja powinna otrzymac dane od pierwszej funkcji i ponownie prosic
+uzytkownika o podanie nazwy uzytkownika i hasla. Prosba o podanie danych powinna
+byc umieszczona w petli. Warunkiem zakonczenia petli jest podanie przez
+uzytkownika danych identycznych z tymi przekazanymi przez pierwsza funkcje. Dane
+wejsciowe: dwie nazwy uzytkownika i hasla (napisy) Dane wyjsciowe: komunikat
+
+*/
 #include <iostream>
 #include <string>
-
-/*
-Napisz dwie funkcje. Pierwsza powinna prosic uzytkownika o podanie nazwy oraz
-hasla oraz zwracac otrzymane dane. Druga powinna otrzymywac dane od pierwszej i
-ponownie prosic o podanie nazwy oraz hasla. Prosba o podanie danych powinna
-zostac umieszczona w petli. Warunkiem zakonczenia petli jest podanie przez
-uzytkownika danych identycznych z tymi przekazanymi przez pierwsza funkcje.
-*/
 
 void inicjalizacjaDanych(std::string &nazwa, std::string &haslo) {
   std::cout << "podaj nazwe oraz haslo do zapamietania" << std::endl;
@@ -36,3 +40,4 @@ int main() {
 
   return 0;
 }
+

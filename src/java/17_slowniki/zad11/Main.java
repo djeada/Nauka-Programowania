@@ -1,10 +1,14 @@
+/*
+Tytul: Klucz to imie, wartosc lista wypozyczonych ksiazek.
+Tresc: Zbuduj prosta baze danych dla biblioteki oparta o slownik, w ktorym kluczami sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek. Baza danych powinna umozliwiac:
+1. Dodanie wypozyczonej ksiazki do danego czytelnika.
+2. Zwrocenie wypozyczonej ksiazki przez czytelnika.
+3. Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
+
+*/
 import java.util.*;
 
 public class Main {
-
-  /*
-  Posortuj slownik.
-  */
 
   public static List<String> sortujWzgledemKluczyV1(Map<String, Integer> slownik) {
 
@@ -65,3 +69,4 @@ public class Main {
     test2();
   }
 }
+

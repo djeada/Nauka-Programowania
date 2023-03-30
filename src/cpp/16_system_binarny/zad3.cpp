@@ -1,15 +1,14 @@
+/*
+Tytul:  Konwersja miedzy dowolnymi systemami liczbowymi.
+Tresc: Otrzymujesz liczbe naturalna, podstawe systemu liczbowego, w ktorym
+zapisana jest ta liczba, oraz podstawe systemu, na ktory ma zostac dokonana
+konwersja. Zwroc reprezentacje otrzymanej liczby w nowym systemie. Dane
+wejsciowe: Trzy liczby naturalne. Dane wyjsciowe: Liczba naturalna. Przyklad:
+Dla otrzymanych liczb: 4301, 10 i 4 powinna zostac zwrocona liczba: 1003031.
+
+*/
 #include <cassert>
 #include <functional>
-
-/*
-Otrzymujesz dwie liczby naturalne. Uzywajac jedynie operatorow
-bitowych zaimplementuj:
-
-a) Dodawanie.
-b) Odejmowanie.
-c) Mnozenie
-d) Dzielenie.
-*/
 
 int suma(int a, int b) {
   /*
@@ -71,7 +70,7 @@ int iloraz(int a, int b) {
 
   std::function<int(int, int, int, int *)> wew_iloraz;
   wew_iloraz = [&wew_iloraz](int dzielna, int dzielnik, int org_b,
-                               int *reszta) -> int {
+                             int *reszta) -> int {
     /*
      * Funkcja wewnetrzna funkcji iloraz.
      */
@@ -184,3 +183,4 @@ int main() {
 
   return 0;
 }
+

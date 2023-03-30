@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Sortowanie bąbelkowe.
+Tytul: Sortowanie babelkowe.
 
-Treść: Napisz program sortujący listę liczb całkowitych metodą sortowania bąbelkowego. Porównaj sąsiednie liczby z listy i zamień je miejscami, jeśli pierwsza jest większa od drugiej. Powtarzaj operację, aż przejdziesz przez całą listę bez dokonywania zmian.
+Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania babelkowego. Porownaj sasiednie liczby z listy i zamien je miejscami, jesli pierwsza jest wieksza od drugiej. Powtarzaj operacje, az przejdziesz przez cala liste bez dokonywania zmian.
 
-Dane wejściowe: Lista liczb całkowitych.
+Dane wejsciowe: Lista liczb calkowitych.
 
-Dane wyjściowe: Posortowana lista liczb całkowitych.
+Dane wyjsciowe: Posortowana lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
+Dla listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
 
 */
 
@@ -48,3 +48,4 @@ console.assert(
   JSON.stringify(sortowanieBabelkowe(lista3)) === JSON.stringify(wynik3),
   "Test 3 nieudany"
 );
+

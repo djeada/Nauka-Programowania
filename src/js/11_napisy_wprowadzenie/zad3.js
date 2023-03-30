@@ -1,15 +1,15 @@
 /*
-Tytuł: Z ilu słów składa się zdanie?
+Tytul: Z ilu slow sklada sie zdanie?
 
-Treść: Zlicz, ile słów składa się z podanego zdania. Znaki interpunkcyjne nie są brane pod uwagę jako słowa.
+Tresc: Zlicz, ile slow sklada sie z podanego zdania. Znaki interpunkcyjne nie sa brane pod uwage jako slowa.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "gram na pianinie.", powinno zostać zwrócone: 3.
+Dla otrzymanego napisu: "gram na pianinie.", powinno zostac zwrocone: 3.
 */
 function policzSlowa(zdanie) {
   let slowa = zdanie.split(" ");
@@ -30,8 +30,9 @@ function test() {
   let expectedOutput = 3;
   let output = policzSlowa(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

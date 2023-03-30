@@ -1,11 +1,14 @@
+/*
+Tytul: Wypisanie elementow dwoch list na przemian.
+Tresc: Dla otrzymanych dwoch list, wypisuj na przemian elementy z obu list.
+Jesli listy nie sa tej samej dlugosci, po wyczerpaniu elementow krotszej listy,
+wypisuj pozostale elementy dluzszej listy. Dane wejsciowe: Dwie listy. Dane
+wyjsciowe: Kilka liczb. Przyklad: Dla otrzymanych list [5, 3, 7, 2] oraz [1, -2,
+3], zostana wypisane: 5, 1, 3, -2, 7, 3, 2.
+
+*/
 #include <iostream>
 #include <vector>
-
-/*
-Dla otrzymanych dwoch list wypisuj na przemian elementy pierwszej
-i drugiej listy. Jesli listy nie sa rownej dlugosci po wyczerpaniu
-elementow krotszej listy, wypisuj tylko elementy dluzszej listy.
-*/
 
 void wypisz(std::vector<int> &listaA, std::vector<int> &listaB) {
 
@@ -33,3 +36,4 @@ int main() {
 
   return 0;
 }
+

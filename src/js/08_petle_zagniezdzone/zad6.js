@@ -1,15 +1,15 @@
 /*
-Tytuł: Litera Z.
+Tytul: Litera Z.
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze literę Z o wysokości równej tej liczbie.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze litere Z o wysokosci rownej tej liczbie.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 5 powinno zostać wypisane:
+Dla otrzymanej liczby 5 powinno zostac wypisane:
 
     *****
         * 
@@ -19,7 +19,7 @@ Dla otrzymanej liczby 5 powinno zostać wypisane:
 
 */
 
-// Funkcja wypisująca literę Z o wysokości równej liczbie
+// Funkcja wypisujaca litere Z o wysokosci rownej liczbie
 function rysujZ(wysokosc) {
   var wiersz = "";
   for (var i = 0; i < wysokosc; i++) {
@@ -36,11 +36,12 @@ function rysujZ(wysokosc) {
 }
 
 // Testy
-console.log("Rysuj literę Z o wysokości 2");
+console.log("Rysuj litere Z o wysokosci 2");
 rysujZ(2);
 
-console.log("\nRysuj literę Z o wysokości 3");
+console.log("\nRysuj litere Z o wysokosci 3");
 rysujZ(3);
 
-console.log("\nRysuj literę Z o wysokości 4");
+console.log("\nRysuj litere Z o wysokosci 4");
 rysujZ(4);
+

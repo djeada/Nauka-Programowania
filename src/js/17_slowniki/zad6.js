@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Histogram wystąpień znaków w słowie.
+Tytul: Histogram wystapien znakow w slowie.
 
-Treść: Otrzymujesz napis. Znajdź częstość występowania znaków w otrzymanym napisie. Innymi słowy, zwróć histogram znaków w otrzymanym napisie.
+Tresc: Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym napisie. Innymi slowy, zwroc histogram znakow w otrzymanym napisie.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Słownik par znaków i liczb naturalnych.
+Dane wyjsciowe: Slownik par znakow i liczb naturalnych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: “klasa”, słownik powinien wyglądać następująco: {“k”: 1, “l”: 1, “a”: 2, “s”: 1}.
+Dla otrzymanego napisu: “klasa”, slownik powinien wygladac nastepujaco: {“k”: 1, “l”: 1, “a”: 2, “s”: 1}.
 
 */
 
@@ -29,14 +29,15 @@ function histogram(napis) {
 
 function testHistogram() {
   const wynik1 = histogram("klasa");
-  console.assert(wynik1["k"] === 1, "Test 1 nie powiódł się");
-  console.assert(wynik1["l"] === 1, "Test 2 nie powiódł się");
-  console.assert(wynik1["a"] === 2, "Test 3 nie powiódł się");
-  console.assert(wynik1["s"] === 1, "Test 4 nie powiódł się");
+  console.assert(wynik1["k"] === 1, "Test 1 nie powiodl sie");
+  console.assert(wynik1["l"] === 1, "Test 2 nie powiodl sie");
+  console.assert(wynik1["a"] === 2, "Test 3 nie powiodl sie");
+  console.assert(wynik1["s"] === 1, "Test 4 nie powiodl sie");
 
   const wynik2 = histogram("ala ma kota");
-  console.assert(wynik2["a"] === 4, "Test 5 nie powiódł się");
-  console.assert(wynik2["m"] === 2, "Test 6 nie powiódł się");
+  console.assert(wynik2["a"] === 4, "Test 5 nie powiodl sie");
+  console.assert(wynik2["m"] === 2, "Test 6 nie powiodl sie");
 }
 
 testHistogram();
+

@@ -1,16 +1,22 @@
+/*
+Tytul: Suma elementow ciagu.
+Tresc: Dla otrzymanej liczby naturalnej n, wypisz sume n pierwszych elementow
+ciagu danego wzorem:
+$$a_n = n^2 + n + 1$$
+$$a_n = n^2 + 5n$$
+$$a_n = n + 2n$$
+Wynik powinien zostac zaokraglony do najblizszej liczby naturalnej.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+* Dla otrzymanej liczby 2, w podpunkcie a) powinna zostac wypisana liczba 1.
+* Dla otrzymanej liczby 2, w podpunkcie b) powinna zostac wypisana liczba 17.
+* Dla otrzymanej liczby 2, w podpunkcie c) powinna zostac wypisana liczba 6.
+
+*/
 #include <cmath>
 #include <iomanip>
 #include <iostream>
-
-/*
-Dla pobranej liczby n, wypisz sume n pierwszych wyrazow ciagu danego wzorem:
-
-a) a_n = n/(n + 1)
-b) a_n = (n^2 + 5)/n
-c) a_n = n + 2^n
-
-Wynik powinien byc zaokraglony do najblizszej liczby naturalnej.
-*/
 
 int main() {
 
@@ -56,3 +62,4 @@ int main() {
 
   return 0;
 }
+

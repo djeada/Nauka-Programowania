@@ -1,15 +1,15 @@
 /*
-Tytuł: Usuń spacje ze zdania.
+Tytul: Usun spacje ze zdania.
 
-Treść: Otrzymasz napis reprezentujący zdanie. Usuń spacje ze zdania.
+Tresc: Otrzymasz napis reprezentujacy zdanie. Usun spacje ze zdania.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "Ala ma kota", powinien zostać zwrócony napis: "Alamakota".
+Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "Alamakota".
 */
 
 function usunSpacje(napis) {
@@ -25,14 +25,15 @@ function test() {
 
   console.assert(
     output === expectedOutput,
-    "Test nie powiódł się dla " +
+    "Test nie powiodl sie dla " +
       input +
       ". Otrzymany wynik to " +
       output +
       ", a oczekiwany wynik to " +
       expectedOutput
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

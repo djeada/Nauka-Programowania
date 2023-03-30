@@ -1,19 +1,19 @@
 /*
 
-Tytuł: N-ty wyraz ciągu danego wzorem rekurencyjnym.
+Tytul: N-ty wyraz ciagu danego wzorem rekurencyjnym.
 
-Treść: Otrzymujesz liczbę N. Oblicz wartość N-tego wyrazu ciągu danego wzorem rekurencyjnym:
+Tresc: Otrzymujesz liczbe N. Oblicz wartosc N-tego wyrazu ciagu danego wzorem rekurencyjnym:
 
 * $a_1 = 1$
 * $a_n = 1+2*a_{n-1}$
 
-Dane wejściowe: Liczba naturalna N.
+Dane wejsciowe: Liczba naturalna N.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla N = 5, powinna zostać zwrócona liczba: 31.
+Dla N = 5, powinna zostac zwrocona liczba: 31.
 */
 
 function ciag(n) {
@@ -38,3 +38,4 @@ function test() {
 }
 
 test();
+

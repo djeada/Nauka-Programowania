@@ -1,3 +1,12 @@
+/*
+Tytul: Znalezienie elementow wspolnych dwoch list.
+Tresc: Otrzymujesz dwie listy liczb calkowitych. Znajdz elementy wystepujace zarowno w pierwszej, jak i w drugiej liscie.
+Dane wejsciowe: Dwie listy liczb calkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
+Przyklad:
+Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] zostanie zwrocona lista: [2, 4].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -46,3 +55,4 @@ public class Main {
     test2();
   }
 }
+

@@ -1,3 +1,12 @@
+/*
+Tytul: Samochody jadace w przeciwnych kierunkach.
+Tresc: Otrzymujesz liste zlozona wylacznie z liter 'A' i 'B', ktore odpowiadaja samochodom jadacym odpowiednio na wschod ('A') i zachod ('B'). Policz, ile razy samochody jadace w przeciwnych kierunkach mijaja sie.
+Dane wejsciowe: Lista znakow odpowiadajacych samochodom jadacym na wschod ('A') i zachod ('B').
+Dane wyjsciowe: Liczba naturalna oznaczajaca liczbe mijajacych sie samochodow.
+Przyklad:
+Dla otrzymanej listy ['A', 'B', 'A', 'B', 'B'] powinna zostac zwrocona liczba 5.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -68,3 +77,4 @@ public class Main {
     wypiszOdKonca(kopia);
   }
 }
+

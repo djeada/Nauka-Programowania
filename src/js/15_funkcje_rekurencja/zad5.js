@@ -1,21 +1,21 @@
 /*
-Tytuł: Liczba Fibonacciego.
+Tytul: Liczba Fibonacciego.
 
-Treść: Otrzymujesz liczbę N. Przy użyciu rekurencji oblicz wartość N-tego wyrazu ciągu Fibonacciego.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz wartosc N-tego wyrazu ciagu Fibonacciego.
 
-Podpowiedź: Ciąg Fibonacciego zdefiniowany jest następująco:
+Podpowiedz: Ciag Fibonacciego zdefiniowany jest nastepujaco:
 
 * $a_0= 0$,
 * $a_1= 1$,
 * $a_n= a_{n-1}+a_n-2$.
 
-Dane wejściowe: Liczba naturalna N.
+Dane wejsciowe: Liczba naturalna N.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla N = 7, powinna zostać zwrócona liczba: 13.
+Dla N = 7, powinna zostac zwrocona liczba: 13.
 */
 
 function fib(n) {
@@ -43,3 +43,4 @@ function test() {
 }
 
 test();
+

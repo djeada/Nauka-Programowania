@@ -1,21 +1,21 @@
 /*
 
-Tytuł: Połączenie dwóch list.
+Tytul: Polaczenie dwoch list.
 
-Treść: Dla otrzymanych dwóch list, zwróć listę, która powstała poprzez:
+Tresc: Dla otrzymanych dwoch list, zwroc liste, ktora powstala poprzez:
 
 a) Dostawienie drugiej listy na koniec pierwszej listy.
-b) Wstawienie elementów o indeksach parzystych z drugiej listy na odpowiadające im indeksy pierwszej listy.
+b) Wstawienie elementow o indeksach parzystych z drugiej listy na odpowiadajace im indeksy pierwszej listy.
 
-Dane wejściowe: Dwie listy.
+Dane wejsciowe: Dwie listy.
 
-Dane wyjściowe: Lista.
+Dane wyjsciowe: Lista.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list [1, 2, 3] oraz [4, 5, 6], w podpunkcie a) powinna zostać zwrócona lista: [1, 2, 3, 4, 5, 6].
+Dla otrzymanych list [1, 2, 3] oraz [4, 5, 6], w podpunkcie a) powinna zostac zwrocona lista: [1, 2, 3, 4, 5, 6].
 
-W podpunkcie b) powinna zostać zwrócona lista: [4, 2, 6, 3].
+W podpunkcie b) powinna zostac zwrocona lista: [4, 2, 6, 3].
 
 */
 
@@ -70,3 +70,4 @@ function main() {
 }
 
 main();
+

@@ -1,12 +1,16 @@
+/*
+Tytul: Obliczenie miejsc zerowych rownania kwadratowego.
+Tresc: Otrzymujesz liste wspolczynnikow rownania kwadratowego $ax^2 + bx + c$.
+Znajdz rzeczywiste miejsca zerowe rownania kwadratowego. Dane wejsciowe: Lista
+liczb naturalnych. Dane wyjsciowe: Lista liczb zmiennoprzecinkowych. Przyklad:
+Dla otrzymanej listy wspolczynnikow: [1, 2, 1], zostanie zwrocona lista: [-1,
+-1].
+
+*/
 #include <cassert>
 #include <cmath>
 #include <utility>
 #include <vector>
-
-/*
-Otrzymujesz liste wspolczynnikow rownania kwadratowego ax^2 + bx + c.
-Znajdz rzeczywiste miejsca zerowe rownania kwadratowego.
-*/
 
 std::pair<double, double> pierwiastki(std::vector<int> &wspolczynniki) {
   /**
@@ -53,3 +57,4 @@ int main() {
   test2();
   return 0;
 }
+

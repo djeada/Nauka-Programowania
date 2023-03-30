@@ -1,7 +1,11 @@
 """
-Dla podanych dwoch napisow sprawdz czy sa swoimi anagramami. 
-Dwa napisy sa anagramami jesli jeden z nich mozna zbudowac 
-poprzez przestawienie znakow w drugim.
+Tytul: Sprawdzenie, czy dwa slowa sa anagramami.
+Tresc: Napisz program, ktory dla podanych dwoch napisow sprawdzi, czy sa anagramami. Dwa napisy sa anagramami, jesli jeden z nich mozna zbudowac poprzez przestawienie znakow w drugim.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla otrzymanego napisu: “ula” oraz “lua”, powinna zostac zwrocona wartosc logiczna: Prawda.
+
 """
 
 
@@ -27,3 +31,4 @@ def test_anagramy():
 
 if __name__ == "__main__":
     test_anagramy()
+

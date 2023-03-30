@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Sortowanie napisów w liście względem długości.
+Tytul: Sortowanie napisow w liscie wzgledem dlugosci.
 
-Treść: Masz daną listę napisów. Posortuj napisy w liście względem długości.
+Tresc: Masz dana liste napisow. Posortuj napisy w liscie wzgledem dlugosci.
 
-Dane wejściowe: Lista napisów.
+Dane wejsciowe: Lista napisow.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla listy ["abcd", "ab", "a", "abc"] powinno zostać zwrócone ["a", "ab", "abc", "abcd"].
+Dla listy ["abcd", "ab", "a", "abc"] powinno zostac zwrocone ["a", "ab", "abc", "abcd"].
 
 */
 
@@ -21,8 +21,8 @@ const sortowanieNapisowDlugosc = (lista) => {
 // Testy
 const lista1 = ["abcd", "ab", "a", "abc"];
 const wynik1 = ["a", "ab", "abc", "abcd"];
-const lista2 = ["kot", "pies", "żaba", "krowa"];
-const wynik2 = ["kot", "pies", "żaba", "krowa"];
+const lista2 = ["kot", "pies", "zaba", "krowa"];
+const wynik2 = ["kot", "pies", "zaba", "krowa"];
 
 console.assert(
   JSON.stringify(sortowanieNapisowDlugosc(lista1)) === JSON.stringify(wynik1),
@@ -32,3 +32,4 @@ console.assert(
   JSON.stringify(sortowanieNapisowDlugosc(lista2)) === JSON.stringify(wynik2),
   "Test 2 nieudany"
 );
+

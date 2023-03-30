@@ -1,14 +1,18 @@
+/*
+Tytul: Zmiana wielkosci liter.
+Tresc: Otrzymujesz napis. Zaimplementuj nastepujace operacje przy uzyciu
+operatorow bitowych: a) Zamien wielkie litery na male litery. b) Zamien male
+litery na wielkie litery. c) Zamien male litery na wielkie litery i wielkie
+litery na male litery. Dane wejsciowe: Napis. Dane wyjsciowe: Napis. Przyklad:
+a) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "test".
+b) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "TEST".
+c) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "tEST".
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <cmath>
 #include <string>
-
-/*
-Otrzymujesz liczbe naturalna, podstawe systemu liczbowego w ktorym
-zapisana jest otrzymana liczba oraz podstawe systemu na ktory ma
-zostac dokonana konwersja. Zwroc reprezentacje otrzymanej liczby
-w nowym systemie.
-*/
 
 int naDziesietny(std::string liczba, int staraPodstawa) {
   /*
@@ -73,3 +77,4 @@ int main() {
 
   return 0;
 }
+

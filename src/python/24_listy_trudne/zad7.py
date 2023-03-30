@@ -1,8 +1,18 @@
 """
-Otrzymujesz liste wysokosci slupkow. Wszystkie slupki maja jednakowa szerokosc,
-rowna jednej jednostce wysokosci i ustawione sa jeden obok drugiego. Wysokosc rowna 0
-oznacza brak slupka. Oblicz ile jednostek wody mozemy maksymalnie umiescic miedzy
-slupkami.
+Tytul: Woda
+Tresc: Otrzymujesz liste wysokosci slupkow. Wszystkie slupki maja jednakowa szerokosc, rowna jednej jednostce wysokosci, i ustawione sa obok siebie. Wysokosc rowna 0 oznacza brak slupka. Oblicz ile jednostek wody maksymalnie mozemy umiescic miedzy slupkami.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla wejsciowej listy [3, 0, 1, 0, 2], powinna zostac zwrocona liczba: 5.
+Oto ilustracja dla powyzszego przykladu:
+```
+o
+o      o
+o  o   o  o  o
+```
+Mozemy umiescic 5 jednostek wody pomiedzy slupkami.
+
 """
 
 # Zlozonosc czasowa O(n)
@@ -60,3 +70,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

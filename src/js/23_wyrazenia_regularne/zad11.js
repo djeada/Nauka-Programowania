@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Nazwa pliku bez rozszerzenia.
+Tytul: Nazwa pliku bez rozszerzenia.
 
-Treść: Otrzymujesz napis reprezentujący ścieżkę pliku. Odfiltruj z niego nazwę pliku wraz z rozszerzeniem. Zwróć samą nazwę pliku bez rozszerzenia.
+Tresc: Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj z niego nazwe pliku wraz z rozszerzeniem. Zwroc sama nazwe pliku bez rozszerzenia.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu "C:\my-long\path_directory\file.html", powinna zostać zwrócona nazwa pliku bez rozszerzenia "file".
+Dla otrzymanego napisu "C:\my-long\path_directory\file.html", powinna zostac zwrocona nazwa pliku bez rozszerzenia "file".
 
 */
 
@@ -30,3 +30,4 @@ function test_nazwa_pliku() {
 }
 
 test_nazwa_pliku();
+

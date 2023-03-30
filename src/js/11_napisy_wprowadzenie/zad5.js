@@ -1,21 +1,21 @@
 /*
-Tytuł: Wypisz co k-ty znak napisu poziomo i pionowo.
+Tytul: Wypisz co k-ty znak napisu poziomo i pionowo.
 
-Treść: Otrzymasz napis oraz liczbę k.
+Tresc: Otrzymasz napis oraz liczbe k.
 
-a) Wypisz co k-ty znak napisu poziomo, rozdzielając znaki spacjami.
+a) Wypisz co k-ty znak napisu poziomo, rozdzielajac znaki spacjami.
 
-b) Wypisz co k-ty znak napisu pionowo, rozdzielając znaki enterami.
+b) Wypisz co k-ty znak napisu pionowo, rozdzielajac znaki enterami.
 
-Dane wejściowe: Napis oraz liczba.
+Dane wejsciowe: Napis oraz liczba.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-a) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostać zwrócony napis: "z h n".
+a) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony napis: "z h n".
 
-b) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostać zwrócony napis:
+b) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony napis:
     
     z
     h
@@ -48,9 +48,10 @@ function test() {
   let output1 = coKtyPoziomo(input1, input2);
   let output2 = coKtyPionowo(input1, input2);
 
-  console.assert(output1 === expectedOutput1, "Test nie powiódł się");
-  console.assert(output2 === expectedOutput2, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output1 === expectedOutput1, "Test nie powiodl sie");
+  console.assert(output2 === expectedOutput2, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

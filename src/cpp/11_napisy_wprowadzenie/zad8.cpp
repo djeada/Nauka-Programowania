@@ -1,13 +1,16 @@
+/*
+Tytul: Konwersja listy na napis
+Tresc: Otrzymujesz liste liczb naturalnych. Zamie liste na napis.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanej listy: [2, 4, 7], powinien zostac zwrocony napis: “247”.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <iostream>
 #include <vector>
-
-/*
-Otrzymujesz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe.
-Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne
-nie sa liczone jako slowa.
-*/
 
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
@@ -45,3 +48,4 @@ int main() {
   wypiszSlowa(napis);
   return 0;
 }
+

@@ -1,8 +1,13 @@
-import java.util.*;
-
 /*
-Otrzymujesz liste napisow. Posortuj wzgledem dlugosci napisy w liscie.
+Tytul: Sortowanie napisow w liscie wzgledem dlugosci.
+Tresc: Masz dana liste napisow. Posortuj napisy w liscie wzgledem dlugosci.
+Dane wejsciowe: Lista napisow.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla listy ["abcd", "ab", "a", "abc"] powinno zostac zwrocone ["a", "ab", "abc", "abcd"].
+
 */
+import java.util.*;
 
 public class Main {
 
@@ -31,3 +36,4 @@ public class Main {
     test1();
   }
 }
+

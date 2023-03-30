@@ -1,3 +1,12 @@
+/*
+Tytul: Mnozenie wektorowe.
+Tresc: Tresc: Otrzymujesz dwie listy liczb calkowitych reprezentujace dwa wektory trojwymiarowej przestrzeni euklidesowej. Zaimplementuj mnozenie wektorowe (zdefiniowane jedynie dla wektorow 3-wymiarowej przestrzeni euklidesowej).
+Dane wejsciowe: Dwie listy liczb calkowitych o dlugosci 3.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanych list [1, 2, 3] oraz [3, 1, 2], powinno zostac zwrocone: 5.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -35,3 +44,4 @@ public class Main {
     test1();
   }
 }
+

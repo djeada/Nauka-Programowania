@@ -1,10 +1,13 @@
-import string
+"""
+Tytul: Z ilu slow sklada sie zdanie?
+Tresc: Zlicz, ile slow sklada sie z podanego zdania. Znaki interpunkcyjne nie sa brane pod uwage jako slowa.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanego napisu: "gram na pianinie.", powinno zostac zwrocone: 3.
 
 """
-Otrzymujesz napis reprezentujacy zdanie. 
-Oblicz srednia dlugosc slow w zdaniu. 
-Znaki interpunkcyjne nie sa liczone jako slowa. 
-"""
+import string
 
 
 def podziel_zdanie_na_slowa(zdanie):
@@ -24,3 +27,4 @@ def test_srednia_dlugosc_slow():
 
 if __name__ == "__main__":
     test_srednia_dlugosc_slow()
+

@@ -1,11 +1,16 @@
+/*
+Tytul: Obroc macierz o 90 stopni.
+Tresc: Otrzymujesz macierz skladajaca sie z liczb naturalnych. Obroc ja o 90
+stopni. Tzn. zamien miejscami ostatnia kolumne z ostatnim wierszem,
+przedostatnia kolumne z przedostatnim wierszem itd. Dane wejsciowe: Macierz
+skladajaca sie z liczb naturalnych. Dane wyjsciowe: Macierz skladajaca sie z
+liczb naturalnych. Przyklad: Dla otrzymanej macierzy: [[1,2,3], [4,5,6],
+[7,8,9]], powinna zostac zwrocona macierz: [[7,4,1], [8,5,2], [9,6,3]].
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <vector>
-
-/*
-Otrzymujesz liste list liczb naturalnych. Zbierz spiralnie
-elementy otrzymanej macierzy i zapisz je w liscie.
-*/
 
 std::vector<int> spiralaV1(std::vector<std::vector<int>> &macierz) {
   /**
@@ -74,3 +79,4 @@ int main() {
   test2();
   return 0;
 }
+

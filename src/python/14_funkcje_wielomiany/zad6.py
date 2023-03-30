@@ -1,6 +1,11 @@
 """
-Otrzymujesz liste wspolczynnikow rownania kwadratowego ax^2 + bx + c. 
-Znajdz rzeczywiste miejsca zerowe rownania kwadratowego.
+Tytul: Obliczenie miejsc zerowych rownania kwadratowego.
+Tresc: Otrzymujesz liste wspolczynnikow rownania kwadratowego $ax^2 + bx + c$. Znajdz rzeczywiste miejsca zerowe rownania kwadratowego.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Lista liczb zmiennoprzecinkowych.
+Przyklad:
+Dla otrzymanej listy wspolczynnikow: [1, 2, 1], zostanie zwrocona lista: [-1, -1].
+
 """
 
 
@@ -29,3 +34,4 @@ def test_miesca_zerowe():
 if __name__ == "__main__":
 
     test_miesca_zerowe()
+

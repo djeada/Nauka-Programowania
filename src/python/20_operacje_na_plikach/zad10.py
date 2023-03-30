@@ -1,6 +1,9 @@
 """
-Otrzymujesz dwa napisy reprezentujace sciezki folderow. 
-Skopiuj wszystkie pliki .png z pierwszego folderu do drugiego folderu.
+Tytul: Znalezienie w folderze wszystkich plikow z danym rozszerzeniem
+Tresc: Otrzymujesz dwa napisy. Pierwszy napis to sciezka folderu, a drugi to rozszerzenie szukanych plikow. Znajdz w folderze wszystkie pliki o podanym rozszerzeniu i zapisz ich nazwy w liscie.
+Dane wejsciowe: Dwa napisy
+Dane wyjsciowe: Lista napisow
+
 """
 
 import pathlib
@@ -46,3 +49,4 @@ def test_skopiuj_pliki_png():
 if __name__ == "__main__":
 
     test_skopiuj_pliki_png()
+

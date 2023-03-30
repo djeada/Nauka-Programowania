@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Wyszukiwanie indeksu klucza w cyklicznie posortowanej liście.
+Tytul: Wyszukiwanie indeksu klucza w cyklicznie posortowanej liscie.
 
-Treść: Otrzymujesz cyklicznie posortowaną listę oraz klucz. Znajdź indeks pierwszego wystąpienia klucza w liście. Jeśli klucz nie występuje w liście, zwróć -1.
+Tresc: Otrzymujesz cyklicznie posortowana liste oraz klucz. Znajdz indeks pierwszego wystapienia klucza w liscie. Jesli klucz nie wystepuje w liscie, zwroc -1.
 
-Dane wejściowe: Cyklicznie posortowana lista, klucz.
+Dane wejsciowe: Cyklicznie posortowana lista, klucz.
 
-Dane wyjściowe: Indeks pierwszego wystąpienia klucza lub -1.
+Dane wyjsciowe: Indeks pierwszego wystapienia klucza lub -1.
 
-Przykład:
+Przyklad:
 
-Dla cyklicznie posortowanej listy [3, 4, 5, 6, 1, 2] i klucza 4, powinno zostać zwrócone 2.
+Dla cyklicznie posortowanej listy [3, 4, 5, 6, 1, 2] i klucza 4, powinno zostac zwrocone 2.
 
 */
 
@@ -54,3 +54,4 @@ const wynik2 = 2;
 
 console.assert(szukaj(lista1, klucz1) === wynik1, "Test 1 nieudany");
 console.assert(szukaj(lista2, klucz2) === wynik2, "Test 2 nieudany");
+

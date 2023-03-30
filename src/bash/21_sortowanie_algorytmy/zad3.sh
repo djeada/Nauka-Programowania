@@ -1,8 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Sortowanie przez wstawianie.
+# Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania przez wstawianie. Stworz nowa, pusta liste i dodaj do niej pierwszy element listy wejsciowej. Dla kazdego kolejnego elementu znajdz odpowiednie miejsce w posortowanej juz czesci listy i wstaw go tam.
+# Dane wejsciowe: Lista liczb calkowitych.
+# Dane wyjsciowe: Posortowana lista liczb calkowitych.
+# Przyklad:
+# Dla listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
 
 source ../assert.sh
-
-# Zaimplementuj sortowanie przez wstawianie.
 
 sortuj(){
     local -n _tablica_ref=$1
@@ -28,7 +31,6 @@ test_sortuj() {
 main() {
     test_sortuj
 }
-
 
 main "$@"
 

@@ -1,20 +1,21 @@
-#!/usr/bin/env bash
-
-#Napisz funkcje ktora zwroci
-
-#a) liczbe 3
+# Tytul: Zwroc stala.
+# Tresc: Napisz funkcje, ktora zwroci:
+# a) Liczbe 3.
+# b) Napis "Tak".
+# c) Wartosc logiczna Prawda.
+# Dane wejsciowe: Brak.
+# Dane wyjsciowe:
+# a) Liczba 3.
+# b) Napis "Tak".
+# c) Wartosc logiczna Prawda.
 
 funkcja1() {
     return 3
 }
 
-#b) napis "Tak"
-
 funkcja2() {
     echo "Tak"
 }
-
-#c) wartosc logiczna prawda
 
 funkcja3() {
     echo true

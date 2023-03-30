@@ -1,3 +1,12 @@
+/*
+Tytul: Czy srednia elementow znajduje sie w liscie?
+Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby calkowitej jako klucza, usun pierwsze wystapienie klucza w liscie.
+Dane wejsciowe: Lista liczb calkowitych i liczba calkowita jako klucz.
+Dane wyjsciowe: Lista liczb calkowitych bez pierwszego wystapienia klucza.
+Przyklad:
+Dla otrzymanej listy [6, 2, 1, 4, 27] oraz 4 powinna zostac zwrocona lista [6, 2, 1, 27].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -51,3 +60,4 @@ public class Main {
     test2();
   }
 }
+

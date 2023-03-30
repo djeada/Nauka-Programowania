@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Sortowanie przez wybieranie.
+Tytul: Sortowanie przez wybieranie.
 
-Treść: Napisz program sortujący listę liczb całkowitych metodą sortowania przez wybieranie. Znajdź największy element w liście i zapisz go do zmiennej. Następnie znajdź najmniejszy element w pozostałej części listy i zamień go z pierwszym elementem nieposortowanej części. Powtarzaj operację, aż lista będzie posortowana.
+Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania przez wybieranie. Znajdz najwiekszy element w liscie i zapisz go do zmiennej. Nastepnie znajdz najmniejszy element w pozostalej czesci listy i zamien go z pierwszym elementem nieposortowanej czesci. Powtarzaj operacje, az lista bedzie posortowana.
 
-Dane wejściowe: Lista liczb całkowitych.
+Dane wejsciowe: Lista liczb calkowitych.
 
-Dane wyjściowe: Posortowana lista liczb całkowitych.
+Dane wyjsciowe: Posortowana lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
+Dla listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
 
 */
 
@@ -49,3 +49,4 @@ console.assert(
   JSON.stringify(sortowaniePrzezWybieranie(lista3)) === JSON.stringify(wynik3),
   "Test 3 nieudany"
 );
+

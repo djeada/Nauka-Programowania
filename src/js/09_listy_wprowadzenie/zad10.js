@@ -1,18 +1,18 @@
 /*
-Tytuł: Czy punkty mogą stanowić wierzchołki trójkąta?
+Tytul: Czy punkty moga stanowic wierzcholki trojkata?
 
-Treść: Otrzymujesz dokładnie 6 liczb całkowitych, które odpowiadają współrzędnym punktów A, B, C w kolejności: xA, yA, xB, yB, xC, yC. Sprawdź, czy punkty A, B, C mogą stanowić wierzchołki trójkąta.
+Tresc: Otrzymujesz dokladnie 6 liczb calkowitych, ktore odpowiadaja wspolrzednym punktow A, B, C w kolejnosci: xA, yA, xB, yB, xC, yC. Sprawdz, czy punkty A, B, C moga stanowic wierzcholki trojkata.
 
-Dane wejściowe: Lista liczb całkowitych reprezentująca współrzędne punktów A, B, C.
+Dane wejsciowe: Lista liczb calkowitych reprezentujaca wspolrzedne punktow A, B, C.
 
-Dane wyjściowe: Wartość logiczna określająca, czy punkty A, B, C mogą stanowić wierzchołki trójkąta.
+Dane wyjsciowe: Wartosc logiczna okreslajaca, czy punkty A, B, C moga stanowic wierzcholki trojkata.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy [-3, -2, -3, 1, -3, 0], powinna zostać zwrócona wartość logiczna: Fałsz.
+Dla otrzymanej listy [-3, -2, -3, 1, -3, 0], powinna zostac zwrocona wartosc logiczna: Falsz.
 */
 
-// Funkcja sprawdzająca, czy punkty mogą stanowić wierzchołki trójkąta
+// Funkcja sprawdzajaca, czy punkty moga stanowic wierzcholki trojkata
 function czyTrojkat(punkty) {
   var xA = punkty[0];
   var yA = punkty[1];
@@ -39,3 +39,4 @@ function testCzyTrojkat() {
 }
 
 testCzyTrojkat();
+

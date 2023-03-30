@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Wieża Hanoi.
+Tytul: Wieza Hanoi.
 
-Treść: N krążków o różnych średnicach ułożonych jest na jednym z trzech słupków (A, B lub C). Na dole znajduje się krążek o największej średnicy. Każdy następny jest mniejszy od poprzedniego. Znajdź sposób na przełożenie wszystkich krążków na inny słupek. Pamiętaj, że nie wolno kłaść krążka o większej średnicy na krążek o mniejszej średnicy, ani przekładać kilku krążków jednocześnie.
+Tresc: N krazkow o roznych srednicach ulozonych jest na jednym z trzech slupkow (A, B lub C). Na dole znajduje sie krazek o najwiekszej srednicy. Kazdy nastepny jest mniejszy od poprzedniego. Znajdz sposob na przelozenie wszystkich krazkow na inny slupek. Pamietaj, ze nie wolno klasc krazka o wiekszej srednicy na krazek o mniejszej srednicy, ani przekladac kilku krazkow jednoczesnie.
 
-Dane wejściowe: Liczba naturalna N.
+Dane wejsciowe: Liczba naturalna N.
 
-Dane wyjściowe: Lista par znaków.
+Dane wyjsciowe: Lista par znakow.
 
-Przykład:
+Przyklad:
 
-Dla N = 3, powinna zostać zwrócona lista: [('A', 'B'), ('A', 'C'), ('B', 'C'), ('A', 'B'), ('C', 'A'), ('C', 'B'), ('A', 'B')]
+Dla N = 3, powinna zostac zwrocona lista: [('A', 'B'), ('A', 'C'), ('B', 'C'), ('A', 'B'), ('C', 'A'), ('C', 'B'), ('A', 'B')]
 */
 
 function wiezaHanoi(n, zrodlo = "A", cel = "B", pomocniczy = "C") {
@@ -66,4 +66,5 @@ function testWiezaHanoi() {
 }
 
 testWiezaHanoi();
-console.log("Wszystkie testy zakończone sukcesem");
+console.log("Wszystkie testy zakonczone sukcesem");
+

@@ -1,20 +1,20 @@
 /*
 
-Tytuł: Znalezienie elementów wspólnych dwóch list.
+Tytul: Znalezienie elementow wspolnych dwoch list.
 
-Treść: Otrzymujesz dwie listy liczb całkowitych. Znajdź elementy występujące zarówno w pierwszej, jak i w drugiej liście.
+Tresc: Otrzymujesz dwie listy liczb calkowitych. Znajdz elementy wystepujace zarowno w pierwszej, jak i w drugiej liscie.
 
-Dane wejściowe: Dwie listy liczb całkowitych.
+Dane wejsciowe: Dwie listy liczb calkowitych.
 
-Dane wyjściowe: Lista liczb całkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] zostanie zwrócona lista: [2, 4].
+Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] zostanie zwrocona lista: [2, 4].
 
 */
 
-// Funkcja zwracająca listę elementów występujących zarówno w pierwszej, jak i w drugiej liście
+// Funkcja zwracajaca liste elementow wystepujacych zarowno w pierwszej, jak i w drugiej liscie
 function znajdzElementyWspolne(lista1, lista2) {
   let wynik = [];
   let maxLength = Math.max(lista1.length, lista2.length);
@@ -52,3 +52,4 @@ function testZnajdzElementyWspolne() {
 }
 
 testZnajdzElementyWspolne();
+

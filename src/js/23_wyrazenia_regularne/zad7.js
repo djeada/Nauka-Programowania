@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Podziel tekst względem znaków interpunkcyjnych.
+Tytul: Podziel tekst wzgledem znakow interpunkcyjnych.
 
-Treść: Dostajesz napis. Podziel go względem znaków interpunkcyjnych i zapisz w liście. Usuń spacje występujące na początku lub końcu otrzymanych napisów.
+Tresc: Dostajesz napis. Podziel go wzgledem znakow interpunkcyjnych i zapisz w liscie. Usun spacje wystepujace na poczatku lub koncu otrzymanych napisow.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla napisu: “Ani nie poszedł do kina, ani nie wybrał się do teatru.”, powinna zostać zwrócona lista: [“Ani nie poszedł do kina”, “ani nie wybrał się do teatru”].
+Dla napisu: “Ani nie poszedl do kina, ani nie wybral sie do teatru.”, powinna zostac zwrocona lista: [“Ani nie poszedl do kina”, “ani nie wybral sie do teatru”].
 
 */
 
@@ -23,14 +23,15 @@ function podziel_tekst(napis) {
 function test_podziel_tekst() {
   console.assert(
     podziel_tekst(
-      "Ani nie poszedł do kina, ani nie wybrał się do teatru."
-    ).join("") === "Aninieposzedłdokinaaniniewybrałsiędoteatru"
+      "Ani nie poszedl do kina, ani nie wybral sie do teatru."
+    ).join("") === "Aninieposzedldokinaaniniewybralsiedoteatru"
   );
   console.assert(
     podziel_tekst(
-      "Ani nie poszedł do kina, ani nie wybrał się do teatru."
-    ).join(" ") === "Ani nie poszedł do kina ani nie wybrał się do teatru"
+      "Ani nie poszedl do kina, ani nie wybral sie do teatru."
+    ).join(" ") === "Ani nie poszedl do kina ani nie wybral sie do teatru"
   );
 }
 
 test_podziel_tekst();
+

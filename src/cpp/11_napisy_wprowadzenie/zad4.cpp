@@ -1,10 +1,14 @@
+/*
+Tytul: Znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
+Tresc: Otrzymasz napis. Znajdz znaki znajdujace sie na pozycjach bedacych
+liczbami pierwszymi. Dane wejsciowe: Napis. Dane wyjsciowe: Lista znakow.
+Przyklad:
+Dla otrzymanego napisu: "Slon", powinna zostac zwrocona lista: ['o', 'n'].
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
-
-/*
-Otrzymujesz napis. Zamien wszystkie male litery na wielkie.
-*/
 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)
@@ -62,3 +66,4 @@ int main() {
   test3();
   return 0;
 }
+

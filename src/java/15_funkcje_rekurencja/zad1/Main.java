@@ -1,7 +1,13 @@
+/*
+Tytul: Liczby naturalne mniejsze od N.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji stworz napis skladajacy sie z liczb naturalnych mniejszych od N oddzielonych przecinkami.
+Dane wejsciowe: Liczba naturalna N.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla N = 10, powinien zostac zwrocony napis: "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0".
+
+*/
 public class Main {
-  /*
-  Liczby naturalne mniejsze rowne N.
-  */
 
   public static String mniejszeLiczbyV1(int n) {
 
@@ -23,3 +29,4 @@ public class Main {
     System.out.print("\n");
   }
 }
+

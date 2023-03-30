@@ -1,5 +1,11 @@
 /*
-Usun spacje ze zdania.
+Tytul: Zamien wszystkie male litery na duze.
+Tresc: Otrzymasz napis. Zmien wszystkie male litery na duze.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "Rumcajs", powinien zostac zwrocony napis: "RUMCAJS".
+
 */
 
 public class Main {
@@ -21,3 +27,4 @@ public class Main {
     assert usunSpacjeV1(zdanie).equals(wynik);
   }
 }
+

@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Znalezienie brakującego elementu w liście.
+Tytul: Znalezienie brakujacego elementu w liscie.
 
-Treść: Dla dostarczonej listy, składającej się z nieuporządkowanych kolejnych (oprócz jednego) elementów ciągu arytmetycznego, znajdź brakujący element.
+Tresc: Dla dostarczonej listy, skladajacej sie z nieuporzadkowanych kolejnych (oprocz jednego) elementow ciagu arytmetycznego, znajdz brakujacy element.
 
-Dane wejściowe: Lista zawierająca liczby naturalne.
+Dane wejsciowe: Lista zawierajaca liczby naturalne.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [5, 2, 1, 3] zostanie zwrócona liczba: 4.
+Dla otrzymanej listy: [5, 2, 1, 3] zostanie zwrocona liczba: 4.
 */
 
-// Funkcja znajdująca brakujący element w ciągu arytmetycznym
+// Funkcja znajdujaca brakujacy element w ciagu arytmetycznym
 function znajdzBrakujacyElement(lista) {
   const n = lista.length + 1;
   const sumaKolejnychLiczb = (n * (n + 1)) / 2;
@@ -34,3 +34,4 @@ function testZnajdzBrakujacyElement() {
 }
 
 testZnajdzBrakujacyElement();
+

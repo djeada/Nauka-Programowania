@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Odwrócenie sąsiadujących bitów.
+Tytul: Odwrocenie sasiadujacych bitow.
 
-Treść: Otrzymujesz reprezentację dziesiętną liczby naturalnej. Zmień miejscami sąsiadujące bity w zapisie binarnym tej liczby i zwróć dziesiętną reprezentację wyniku.
+Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej. Zmien miejscami sasiadujace bity w zapisie binarnym tej liczby i zwroc dziesietna reprezentacje wyniku.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby: 9131, powinna zostać zwrócona liczba: 4951.
+Dla otrzymanej liczby: 9131, powinna zostac zwrocona liczba: 4951.
 
 */
 
@@ -20,16 +20,16 @@ function odwrocSasiadujaceBity(liczba) {
   let wynik = "";
 
   for (let i = 0; i < n; i += 2) {
-    // zamiana sąsiadujących bitów
+    // zamiana sasiadujacych bitow
     if (i == n - 1) {
-      // dodanie ostatniego bitu, jeśli długość binarna jest nieparzysta
+      // dodanie ostatniego bitu, jesli dlugosc binarna jest nieparzysta
       wynik += binary[i];
     } else {
       wynik += binary[i + 1] + binary[i];
     }
   }
 
-  return parseInt(wynik, 2); // konwersja na system dziesiętny
+  return parseInt(wynik, 2); // konwersja na system dziesietny
 }
 
 // test
@@ -38,8 +38,9 @@ function test() {
   let expectedOutput = 4951;
   let output = odwrocSasiadujaceBity(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

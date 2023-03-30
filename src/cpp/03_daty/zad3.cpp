@@ -1,8 +1,14 @@
-#include <iostream>
-
 /*
-Dla pobranej liczby reprezentujacej rok, sprawdz czy rok jest przestepny.
+Tytul: Rok przestepny.
+Tresc: Napisz program, ktory dla pobranej liczby naturalnej bedzie sprawdzal,
+czy dany rok jest przestepny. Podpowiedz: Rok przestepny jest podzielny przez 4,
+ale nie jest podzielny przez 100, chyba ze jest podzielny przez 400. Dane
+wejsciowe: Liczba naturalna. Dane wyjsciowe: Komunikat o tym, czy rok jest
+przestepny, czy tez nie. Przyklad: Dla pobranej liczby 2100, program powinien
+wypisac informacje, ze rok nie jest przestepny.
+
 */
+#include <iostream>
 
 int main() {
 
@@ -18,3 +24,4 @@ int main() {
 
   return 0;
 }
+

@@ -1,8 +1,11 @@
 """
-Otrzymujesz dziesietna reprezentacje liczby naturalnej. 
+Tytul: Odwrocenie sasiadujacych bitow.
+Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej. Zmien miejscami sasiadujace bity w zapisie binarnym tej liczby i zwroc dziesietna reprezentacje wyniku.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej liczby: 9131, powinna zostac zwrocona liczba: 4951.
 
-a) Oblicz z ilu zer sklada sie binarna reprezentacja otrzymanej liczby.
-b) Oblicz z ilu jedynek sklada sie binarna reprezentacja otrzymanej liczby.
 """
 
 # Zlozonosc czasowa O(n)
@@ -51,3 +54,4 @@ def test_ustawione_bity():
 if __name__ == "__main__":
 
     test_ustawione_bity()
+

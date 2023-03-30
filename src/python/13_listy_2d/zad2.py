@@ -1,13 +1,21 @@
 """
-Dla otrzymanej liczby, stworz macierz kwadratowa skladajaca sie 
-z liczby kolumn i wierszy rownej otrzymanej liczbie, ktorej kazdy 
-element jest iloczynem jego wspolrzednych.
+Tytul: Dodawanie i odejmowanie macierzy.
+Tresc: Otrzymujesz dwie macierze o tych samych wymiarach. Zwroc dwie macierze bedace:
+a) wynikiem dodawania otrzymanych macierzy
+b) wynikiem odejmowania drugiej macierzy od pierwszej.
+Dane wejsciowe: Dwie listy list liczb naturalnych.
+Dane wyjsciowe: Dwie listy list liczb naturalnych.
+Przyklad:
+Dla otrzymanych dwoch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinny zostac zwrocone nastepujace macierze:
+a) [[6, -1], [-1, 7]] - wynik dodawania
+b) [[-4, 5], [-3, -7]] - wynik odejmowania drugiej macierzy od pierwszej.
+
 """
 
 
 def stworz_macierz(n):
     """
-    Funkcja tworzy macierz o wymiarach n x n, dla ktorej kazdy 
+    Funkcja tworzy macierz o wymiarach n x n, dla ktorej kazdy
     element jest rowny iloczynowi wspolrzednych.
     """
     macierz = []
@@ -26,3 +34,4 @@ def test_stworz_macierz():
 if __name__ == "__main__":
 
     test_stworz_macierz()
+

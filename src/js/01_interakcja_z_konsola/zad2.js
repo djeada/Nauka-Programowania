@@ -1,21 +1,22 @@
 /*
-Tytuł: Zamiana kolejności liczb.
+Tytul: Zamiana kolejnosci liczb.
 
-Treść zadania: Napisz program, który pobierze od użytkownika dwie liczby naturalne i wypisze je w odwróconej kolejności.
+Tresc zadania: Napisz program, ktory pobierze od uzytkownika dwie liczby naturalne i wypisze je w odwroconej kolejnosci.
 
-Dane wejściowe: Dwie liczby naturalne.
+Dane wejsciowe: Dwie liczby naturalne.
 
-Dane wyjściowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
 
-Przykład:
+Przyklad:
 
-Jeśli użytkownik poda liczby -7 oraz 4, program powinien wypisać liczby: 4 i -7.
+Jesli uzytkownik poda liczby -7 oraz 4, program powinien wypisac liczby: 4 i -7.
 */
 
-// Pobieranie danych od użytkownika
-const liczba_a = parseInt(prompt("Podaj pierwszą liczbę:"));
-const liczba_b = parseInt(prompt("Podaj drugą liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
+const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
-// Zamiana kolejności liczb
+// Zamiana kolejnosci liczb
 console.log(liczba_b);
 console.log(liczba_a);
+

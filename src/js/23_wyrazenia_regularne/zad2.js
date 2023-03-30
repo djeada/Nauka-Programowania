@@ -1,23 +1,23 @@
 /*
 
-Tytuł: Sprawdź poprawność hasła.
+Tytul: Sprawdz poprawnosc hasla.
 
-Treść: Masz napis reprezentujący hasło. Sprawdź, czy hasło spełnia następujące warunki:
+Tresc: Masz napis reprezentujacy haslo. Sprawdz, czy haslo spelnia nastepujace warunki:
 
-1. Hasło musi zawierać przynajmniej jedną małą literę [a-z].
-2. Hasło musi zawierać przynajmniej jedną dużą literę [A-Z].
-3. Hasło musi zawierać przynajmniej jedną cyfrę [0-9].
-4. Hasło musi zawierać przynajmniej jeden znak specjalny [! # $ % & ' * + — / = ? ^ _ ` { | } ~].
-5. Minimalna długość hasła to 8 znaków.
-6. Maksymalna długość hasła to 20 znaków.
+1. Haslo musi zawierac przynajmniej jedna mala litere [a-z].
+2. Haslo musi zawierac przynajmniej jedna duza litere [A-Z].
+3. Haslo musi zawierac przynajmniej jedna cyfre [0-9].
+4. Haslo musi zawierac przynajmniej jeden znak specjalny [! # $ % & ' * + — / = ? ^ _ ` { | } ~].
+5. Minimalna dlugosc hasla to 8 znakow.
+6. Maksymalna dlugosc hasla to 20 znakow.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
+Przyklad:
 
-Dla napisu: “abc1234”, powinna zostać zwrócona wartość logiczna: Fałsz.
+Dla napisu: “abc1234”, powinna zostac zwrocona wartosc logiczna: Falsz.
 
 */
 
@@ -67,3 +67,4 @@ function test_czy_haslo_poprawne() {
 }
 
 test_czy_haslo_poprawne();
+

@@ -1,26 +1,26 @@
 /*
 
-Tytuł: Zmiana wielkości liter.
+Tytul: Zmiana wielkosci liter.
 
-Treść: Otrzymujesz napis. Zaimplementuj następujące operacje przy użyciu operatorów bitowych:
+Tresc: Otrzymujesz napis. Zaimplementuj nastepujace operacje przy uzyciu operatorow bitowych:
 
-a) Zamień wielkie litery na małe litery.
+a) Zamien wielkie litery na male litery.
 
-b) Zamień małe litery na wielkie litery.
+b) Zamien male litery na wielkie litery.
 
-c) Zamień małe litery na wielkie litery i wielkie litery na małe litery.
+c) Zamien male litery na wielkie litery i wielkie litery na male litery.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-a) Dla otrzymanego napisu: "Test", powinien zostać zwrócony napis: "test".
+a) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "test".
 
-b) Dla otrzymanego napisu: "Test", powinien zostać zwrócony napis: "TEST".
+b) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "TEST".
 
-c) Dla otrzymanego napisu: "Test", powinien zostać zwrócony napis: "tEST".
+c) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "tEST".
 */
 
 function zamienNaMaleLitery(napis) {
@@ -73,9 +73,9 @@ function testZamienNaMaleLitery() {
 
   console.assert(
     output === expectedOutput,
-    `Test nie powiódł się dla ${input}`
+    `Test nie powiodl sie dla ${input}`
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 function testZamienNaWielkieLitery() {
@@ -85,9 +85,9 @@ function testZamienNaWielkieLitery() {
 
   console.assert(
     output === expectedOutput,
-    `Test nie powiódł się dla ${input}`
+    `Test nie powiodl sie dla ${input}`
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 function testZamienLitery() {
@@ -97,9 +97,9 @@ function testZamienLitery() {
 
   console.assert(
     output === expectedOutput,
-    `Test nie powiódł się dla ${input}`
+    `Test nie powiodl sie dla ${input}`
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 function main() {
@@ -109,3 +109,4 @@ function main() {
 }
 
 main();
+

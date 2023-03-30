@@ -1,15 +1,15 @@
 /*
-Tytuł: Odwróć napis.
+Tytul: Odwroc napis.
 
-Treść: Zmień otrzymany napis, tak aby zapisany był on od tyłu.
+Tresc: Zmien otrzymany napis, tak aby zapisany byl on od tylu.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "barszcz", powinien zostać zwrócony napis: "zczsrab".
+Dla otrzymanego napisu: "barszcz", powinien zostac zwrocony napis: "zczsrab".
 */
 
 function odwrocNapis(napis) {
@@ -21,8 +21,9 @@ function test() {
   let expectedOutput = "zczsrab";
   let output = odwrocNapis(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

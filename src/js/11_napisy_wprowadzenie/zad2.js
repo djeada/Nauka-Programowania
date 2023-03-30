@@ -1,15 +1,15 @@
 /*
-Tytuł: Policz wystąpienia znaku.
+Tytul: Policz wystapienia znaku.
 
-Treść: Dla podanego napisu i znaku, znajdź liczbę wystąpień tego znaku w napisie.
+Tresc: Dla podanego napisu i znaku, znajdz liczbe wystapien tego znaku w napisie.
 
-Dane wejściowe: Napis oraz znak.
+Dane wejsciowe: Napis oraz znak.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "klamra" oraz znaku 'a', powinno zostać zwrócone: 2.
+Dla otrzymanego napisu: "klamra" oraz znaku 'a', powinno zostac zwrocone: 2.
 */
 function policzWystapieniaZnaku(napis, znak) {
   let licznik = 0;
@@ -29,8 +29,9 @@ function test() {
   let expectedOutput = 2;
   let output = policzWystapieniaZnaku(input1, input2);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

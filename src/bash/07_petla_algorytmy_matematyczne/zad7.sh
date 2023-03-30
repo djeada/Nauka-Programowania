@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Pierwiastek metoda Newtona
+# Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej zwroci jej pierwiastek.
+# Dane wejsciowe: liczba naturalna
+# Dane wyjsciowe: liczba naturalna
+# Przyklad:
+# Dla otrzymanej liczby 16, funkcja powinna zwrocic liczbe 4.
 
 source ../assert.sh
-
-#Napisz funkcje, ktora dla otrzymanej liczby
-#zwroci jej pierwiastek.
 
 pierwiastek() {
 
@@ -17,17 +19,16 @@ pierwiastek() {
     echo ${wynik/.*}
 }
 
-
-#Testy
 test1() {
-    a=16
-    wynik=4
-    assert "$wynik -eq $(pierwiastek $a $b)" $LINENO
-}
+    test1() {
+        a=16
+        wynik=4
+        assert "$wynik -eq $(pierwiastek $a $b)" $LINENO
+    }
 
-main() {
-    test1
-}
+    main() {
+        test1
+    }
 
-main "$@"
+    main "$@"
 

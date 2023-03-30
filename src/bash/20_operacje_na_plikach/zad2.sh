@@ -1,11 +1,9 @@
-#!/usr/bin/env bash
+# Tytul: Plik z lista adresow IP.
+# Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Kazdy wiersz pliku reprezentuje adres IP. Posortuj adresy IP i zapisz je w liscie.
+# Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
+# Dane wyjsciowe: Lista adresow IP posortowanych alfabetycznie.
 
 source ../assert.sh
-
-# Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke folderu.
-# Drugi napis reprezentuje rozszerzenie szukanych plikow. Znajdz w
-# folderze wszystkie pliki z danym rozszerzeniem. Nazwy znalezionych
-# plikow zapisz w liscie.
 
 znajdz_pliki_z_rozszerzeniem() {
     local folder="$1"
@@ -21,26 +19,26 @@ znajdz_pliki_z_rozszerzeniem() {
 
 test_znajdz_pliki_z_rozszerzeniem() {
 
-    # stworz folder testowy
+    mkdir -p 'test/test1'
     mkdir -p 'test/test1'
     mkdir -p 'test/test2'
 
-    # stworz pliki
+    touch 'test/test1/test1.txt'
     touch 'test/test1/test1.txt'
     touch 'test/test1/test2.txt'
     touch 'test/test2/test1.txt'
     touch 'test/test2/test2.txt'
 
-    # znajdz pliki z rozszerzeniem .txt
+    IFS=' ' read -r -a wynik <<< $(znajdz_pliki_z_rozszerzeniem 'test' 'txt')
     IFS=' ' read -r -a wynik <<< $(znajdz_pliki_z_rozszerzeniem 'test' 'txt')
 
-    # sprawdz czy znaleziono wszystkie pliki
+    assert_array_contains wynik 'test/test1/test1.txt' $LINENO
     assert_array_contains wynik 'test/test1/test1.txt' $LINENO
     assert_array_contains wynik 'test/test1/test2.txt' $LINENO
     assert_array_contains wynik 'test/test2/test1.txt' $LINENO
     assert_array_contains wynik 'test/test2/test2.txt' $LINENO
 
-    # usun folder testowy
+    rm -rf 'test'
     rm -rf 'test'
 }
 
@@ -49,3 +47,4 @@ main() {
 }
 
 main "$@"
+

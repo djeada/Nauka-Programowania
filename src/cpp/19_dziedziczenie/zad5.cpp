@@ -1,15 +1,15 @@
 /*
-Napisz klase Ptak, dziedziczaca po klasach Zwierz oraz ObiektLatajacy. 
-a) W sklad klasy Zwierz powinny wchodzic funkcje wypisujace na standardowe 
-wyjscie komunikaty odpowiadajace ich nazwom. Funkcje powinny miec 
-nastepujace nazwy: jedz(), spij(), wydaj_dzwiek(). 
-b) W sklad klasy ObiektLatajacy powinny wchodzic funkcje wypisujace na 
-standardowe wyjscie komunikaty odpowiadajace ich nazwom. Funkcje powinny 
-miec nastepujace nazwy: lec(), wyladuj().
+Tytul: Dziedziczenie wielokrotne
+Tresc: Napisz klase Ptak, dziedziczaca po klasach Zwierz i ObiektLatajacy. W
+sklad klasy Zwierz powinny wchodzic funkcje o nazwach 'jedz()', 'spij()',
+'wydaj_dzwiek()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie.
+W sklad klasy ObiektLatajacy powinny wchodzic funkcje o nazwach 'lec()',
+'wyladuj()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie.
+Napisz program testujacy te klase.
+
 */
 
 #include <iostream>
-
 
 class Zwierz {
 
@@ -62,3 +62,4 @@ int main() {
 
   return 0;
 }
+

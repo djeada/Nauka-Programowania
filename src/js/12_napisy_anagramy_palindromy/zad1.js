@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Sprawdzenie, czy słowo jest palindromem.
+Tytul: Sprawdzenie, czy slowo jest palindromem.
 
-Treść: Napisz program, który sprawdzi, czy słowo jest palindromem. Palindromem jest słowo, które brzmi tak samo czytane od lewej do prawej i od prawej do lewej.
+Tresc: Napisz program, ktory sprawdzi, czy slowo jest palindromem. Palindromem jest slowo, ktore brzmi tak samo czytane od lewej do prawej i od prawej do lewej.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: “kajak”, powinna zostać zwrócona wartość logiczna: Prawda.
+Dla otrzymanego napisu: “kajak”, powinna zostac zwrocona wartosc logiczna: Prawda.
 */
 
 function czyPalindrom(napis) {
@@ -25,8 +25,9 @@ function test() {
   let expectedOutput = true;
   let output = czyPalindrom(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

@@ -1,24 +1,25 @@
 /*
-Tytuł: Porównanie ze zmienną.
+Tytul: Porownanie ze zmienna.
 
-Treść: Pobierz od użytkownika dwie liczby naturalne i sprawdź, czy są one identyczne. Wypisz odpowiedni komunikat.
+Tresc: Pobierz od uzytkownika dwie liczby naturalne i sprawdz, czy sa one identyczne. Wypisz odpowiedni komunikat.
 
-Dane wejściowe: Dwie liczby naturalne.
+Dane wejsciowe: Dwie liczby naturalne.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb: 7 i 4, powinien zostać wypisany komunikat, że liczby są różne.
+Dla pobranych liczb: 7 i 4, powinien zostac wypisany komunikat, ze liczby sa rozne.
 */
 
-// Pobieranie danych od użytkownika
-const liczba_a = parseInt(prompt("Podaj pierwszą liczbę:"));
-const liczba_b = parseInt(prompt("Podaj drugą liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
+const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
-// Porównanie ze zmienną
+// Porownanie ze zmienna
 if (liczba_a === liczba_b) {
-  console.log("Liczby są identyczne");
+  console.log("Liczby sa identyczne");
 } else {
-  console.log("Liczby są różne");
+  console.log("Liczby sa rozne");
 }
+

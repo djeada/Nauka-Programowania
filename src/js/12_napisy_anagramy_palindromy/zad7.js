@@ -1,15 +1,15 @@
 /*
-Tytuł: Minimalna ilość usuniętych znaków, aby uzyskać anagramy.
+Tytul: Minimalna ilosc usunietych znakow, aby uzyskac anagramy.
 
-Treść: Napisz program, który dla dwóch słów zwróci minimalną ilość znaków, które trzeba usunąć, aby uzyskać anagramy. Jeśli słowa są różnej długości, zwróć -1.
+Tresc: Napisz program, ktory dla dwoch slow zwroci minimalna ilosc znakow, ktore trzeba usunac, aby uzyskac anagramy. Jesli slowa sa roznej dlugosci, zwroc -1.
 
-Dane wejściowe: Dwa napisy.
+Dane wejsciowe: Dwa napisy.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych napisów: “grazyna” oraz “razynax”, powinna zostać zwrócona liczba: 2.
+Dla otrzymanych napisow: “grazyna” oraz “razynax”, powinna zostac zwrocona liczba: 2.
 */
 
 function minUsunieciaDoAnagramow(napis1, napis2) {
@@ -49,7 +49,7 @@ function test() {
 
   console.assert(
     output === expectedOutput,
-    'Test nie powiódł się dla "' +
+    'Test nie powiodl sie dla "' +
       input1 +
       '" i "' +
       input2 +
@@ -58,7 +58,8 @@ function test() {
       ", a oczekiwany wynik to " +
       expectedOutput
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

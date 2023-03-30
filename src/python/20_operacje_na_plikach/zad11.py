@@ -1,6 +1,9 @@
 """
-Otrzymujesz dwa napisy reprezentujace sciezki plikow. 
-Podmien tresci obu plikow.
+Tytul: Znalezienie sciezki pliku o danej nazwie
+Tresc: Otrzymujesz napis reprezentujacy nazwe pliku. Przeszukaj caly system i zapisz w liscie wszystkie sciezki plikow o podanej nazwie.
+Dane wejsciowe: Napis
+Dane wyjsciowe: Lista napisow
+
 """
 
 import pathlib
@@ -49,3 +52,4 @@ def test_podmien_tresci():
 if __name__ == "__main__":
 
     test_podmien_tresci()
+

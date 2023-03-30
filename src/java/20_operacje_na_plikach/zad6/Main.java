@@ -1,129 +1,202 @@
+/*
+Tytul: Usun pliki spelniajace warunek.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do folderu. Usun wszystkie pliki o rozmiarze wiekszym niz 10 kB znajdujace sie w podanym folderze i jego podfolderach.
+Dane wejsciowe: Napis reprezentujacy sciezke do folderu.
+Dane wyjsciowe: Brak.
+
+*/
+
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
-import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 public class Main {
-  // Otrzymujesz napis reprezentujacy sciezke pliku tekstowego. Oblicz:
-  public static String wyczysc(String napis) {
-    napis = napis.trim();
-    return napis.replaceAll("\\p{Punct}", "");
-  }
 
-  public static ArrayList<String> rozdzielSlowa(String napis) {
-    ArrayList<String> wynik = new ArrayList<String>();
-    int pocz = 0;
-    int konc = 0;
-    while ((konc = napis.indexOf(' ', pocz)) != -1) {
-      if (konc != pocz) {
-        var slowo = napis.substring(pocz, konc);
-        slowo = wyczysc(slowo);
-        slowo = slowo.toLowerCase();
-        if (!slowo.isEmpty()) {
-          wynik.add(slowo);
-        }
+  static List<String> readFile(String path) {
+    List<String> content = new ArrayList<>();
+    try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+      String line;
+      while ((line = br.readLine()) != null) {
+        content.add(line);
       }
-      pocz = konc + 1;
+    } catch (IOException e) {
+      System.out.println("Error: " + e.getMessage());
     }
-    if (konc != pocz) {
-      var slowo = napis.substring(pocz);
-      slowo = wyczysc(slowo);
-      slowo = slowo.toLowerCase();
-      if (!slowo.isEmpty()) {
-        wynik.add(slowo);
+    return content;
+  }
+
+  static String clean(String word) {
+    return word.replaceAll("\\p{Punct}", "");
+  }
+
+  static String toLowerCase(String word) {
+    return word.toLowerCase();
+  }
+
+  static List<String> splitWords(String line) {
+    List<String> words = new ArrayList<>();
+    for (String word : line.split("\\s+")) {
+      String cleanedWord = clean(toLowerCase(word));
+      if (!cleanedWord.isEmpty()) {
+        words.add(cleanedWord);
       }
     }
-
-    return new ArrayList<String>(wynik);
+    return words;
   }
 
-  public static ArrayList<String> wczytajPlik(final String sciezka) {
-    File plik = new File(sciezka);
-    ArrayList<String> tresc = new ArrayList<String>();
+  static int numberOfLines(List<String> content) {
+    return content.size();
+  }
 
-    if (plik.exists()) {
-      try (BufferedReader br =
-          new BufferedReader(new InputStreamReader(new FileInputStream(plik), "UTF-8"))) {
-        String wiersz = null;
-        while ((wiersz = br.readLine()) != null) {
-          tresc.add(wiersz);
-        }
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-    } else {
-      System.out.println("Plik nie istnieje.");
+  static int numberOfWords(List<String> content) {
+    int result = 0;
+    for (String line : content) {
+      result += splitWords(line).size();
+    }
+    return result;
+  }
+
+  static double averageLineLength(List<String> content) {
+    int totalLength = 0;
+    for (String line : content) {
+      totalLength += line.length();
+    }
+    return totalLength / (double) content.size();
+  }
+
+  static double averageWordsPerLine(List<String> content) {
+    return numberOfWords(content) / (double) numberOfLines(content);
+  }
+
+  static String listToString(List<String> list) {
+    return list.stream().collect(Collectors.joining());
+  }
+
+  static Map<String, Integer> wordHistogram(String content) {
+    Map<String, Integer> wordFrequency = new HashMap<>();
+    List<String> words = splitWords(content);
+
+    for (String word : words) {
+      wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
+    }
+    return wordFrequency;
+  }
+
+  static void test1() throws IOException {
+    Path path = Files.createTempFile("temp", ".txt");
+    try (BufferedWriter bw = Files.newBufferedWriter(path)) {
+      bw.write("Hej \n");
+      bw.write(
+          "This is an example of a simple ASCII text file stored on a Web "
+              + "server. Note that it has a file\n");
+      bw.write("extension of \".txt\".\n\n");
+      bw.write(
+          "Although such files may contains some basic layout formatting, such "
+              + "as paragraphs, there is no\n");
+      bw.write("support for the text to have attributes, such as bolding.\n\n");
+      bw.write(
+          "Text files can contain Hypertext Mark-up codes but these will not be "
+              + "interpreted by the \n");
+      bw.write(
+          "browser. For example, if the following characters "
+              + "<strong>hello</strong> were typed into an\n");
+      bw.write("\"html\" file then the word \"hello\" would be shown in bold.\n");
     }
 
-    return tresc;
-  }
+    List<String> content = readFile(path.toString());
+    String text = listToString(content);
 
-  // Liczbe wierszy pliku.
-  public static int liczbaWierszy(ArrayList<String> trescPliku) {
-    return trescPliku.size();
-  }
+    int expectedNumberOfLines = 10;
+    assert numberOfLines(content) == expectedNumberOfLines;
 
-  // Liczbe slow w pliku. Slowa oddzielone sa spacjami i nie moga skladac
-  // sie wylacznie ze znakow nie bedacych literami.
-  public static int liczbaSlow(ArrayList<String> trescPliku) {
-    int wynik = 0;
+    int expectedNumberOfWords = 88;
+    assert numberOfWords(content) == expectedNumberOfWords;
 
-    for (String wiersz : trescPliku) {
-      wynik += rozdzielSlowa(wiersz).size();
+    double expectedAverageLineLength = 60.0;
+    assert averageLineLength(content) == expectedAverageLineLength;
+
+    double expectedAverageWordsPerLine = 8.8;
+    assert averageWordsPerLine(content) == expectedAverageWordsPerLine;
+
+    Map<String, Integer> expectedWordHistogram = new HashMap<>();
+    expectedWordHistogram.put("bold", 1);
+    expectedWordHistogram.put("in", 1);
+    expectedWordHistogram.put("shown", 1);
+    expectedWordHistogram.put("word", 1);
+    expectedWordHistogram.put("then", 1);
+    expectedWordHistogram.put("anhtml", 1);
+    expectedWordHistogram.put("simple", 1);
+    expectedWordHistogram.put("basic", 1);
+    expectedWordHistogram.put("contains", 1);
+    expectedWordHistogram.put("layout", 1);
+    expectedWordHistogram.put("were", 1);
+    expectedWordHistogram.put("may", 1);
+    expectedWordHistogram.put("such", 3);
+    expectedWordHistogram.put("fileextension", 1);
+    expectedWordHistogram.put("files", 2);
+    expectedWordHistogram.put("it", 1);
+    expectedWordHistogram.put("hypertext", 1);
+    expectedWordHistogram.put("hello", 1);
+    expectedWordHistogram.put("note", 1);
+    expectedWordHistogram.put("file", 2);
+    expectedWordHistogram.put("web", 1);
+    expectedWordHistogram.put("ascii", 1);
+    expectedWordHistogram.put("is", 2);
+    expectedWordHistogram.put("an", 1);
+    expectedWordHistogram.put("example", 2);
+    expectedWordHistogram.put("hej", 1);
+    expectedWordHistogram.put("following", 1);
+    expectedWordHistogram.put("this", 1);
+    expectedWordHistogram.put("of", 2);
+    expectedWordHistogram.put("txtalthough", 1);
+    expectedWordHistogram.put("text", 2);
+    expectedWordHistogram.put("stored", 1);
+    expectedWordHistogram.put("that", 1);
+    expectedWordHistogram.put("by", 1);
+    expectedWordHistogram.put("on", 1);
+    expectedWordHistogram.put("formatting", 1);
+    expectedWordHistogram.put("nosupport", 1);
+    expectedWordHistogram.put("browser", 1);
+    expectedWordHistogram.put("typed", 1);
+    expectedWordHistogram.put("a", 3);
+    expectedWordHistogram.put("server", 1);
+    expectedWordHistogram.put("would", 1);
+    expectedWordHistogram.put("contain", 1);
+    expectedWordHistogram.put("as", 2);
+    expectedWordHistogram.put("markup", 1);
+    expectedWordHistogram.put("characters", 1);
+    expectedWordHistogram.put("there", 1);
+    expectedWordHistogram.put("for", 2);
+    expectedWordHistogram.put("the", 4);
+    expectedWordHistogram.put("to", 1);
+    expectedWordHistogram.put("have", 1);
+    expectedWordHistogram.put("these", 1);
+    expectedWordHistogram.put("will", 1);
+    expectedWordHistogram.put("paragraphs", 1);
+    expectedWordHistogram.put("attributes", 1);
+    expectedWordHistogram.put("boldingtext", 1);
+    expectedWordHistogram.put("can", 1);
+    expectedWordHistogram.put("has", 1);
+    expectedWordHistogram.put("codes", 1);
+    expectedWordHistogram.put("if", 1);
+    expectedWordHistogram.put("some", 1);
+    expectedWordHistogram.put("but", 1);
+    expectedWordHistogram.put("not", 1);
+    expectedWordHistogram.put("be", 2);
+    expectedWordHistogram.put("interpreted", 1);
+    expectedWordHistogram.put("stronghellostrong", 1);
+    expectedWordHistogram.put("into", 1);
+
+    Map<String, Integer> wordHistogram = wordHistogram(text);
+    for (String word : expectedWordHistogram.keySet()) {
+      assert wordHistogram.get(word) == expectedWordHistogram.get(word);
     }
-
-    return wynik;
   }
 
-  // srednia dlugosc wiersza.
-  public static double sredniaDlugoscWiersza(ArrayList<String> trescPliku) {
-
-    int calkDlugosc = 0;
-
-    for (String wiersz : trescPliku) {
-      calkDlugosc += wiersz.length();
-    }
-
-    return calkDlugosc / (double) trescPliku.size();
-  }
-
-  // srednia liczbe slow na wiersz.
-  public static double sredniaLiczbaSlow(ArrayList<String> trescPliku) {
-    return liczbaSlow(trescPliku) / (double) liczbaWierszy(trescPliku);
-  }
-
-  // Czestosc wystepowania kazdego ze slow w pliku.
-  public static HashMap<String, Integer> histogramSlow(String trescPliku) {
-    HashMap<String, Integer> slownik = new HashMap<String, Integer>();
-
-    ArrayList<String> slowa = rozdzielSlowa(trescPliku);
-
-    for (var slowo : slowa) {
-      if (slownik.containsKey(slowo)) slownik.put(slowo, slownik.get(slowo) + 1);
-      else slownik.put(slowo, 1);
-    }
-
-    return new HashMap<String, Integer>(slownik);
-  }
-
-  public static void main(String[] args) {
-
-    String sciezka = "folder/test.txt";
-    var trescPliku = wczytajPlik(sciezka);
-
-    System.out.print("Liczba wierszy: ");
-    System.out.println(liczbaWierszy(trescPliku));
-    System.out.print("Liczba slow: ");
-    System.out.println(liczbaSlow(trescPliku));
-    System.out.print("Srednia dlugosc wiersza: ");
-    System.out.println(sredniaDlugoscWiersza(trescPliku));
-    System.out.print("Srednia liczba slow na wiersz: ");
-    System.out.println(sredniaLiczbaSlow(trescPliku));
-    System.out.println("Histogram slow: ");
-
-    var tekst = Arrays.deepToString(trescPliku.toArray());
-
-    for (Entry<String, Integer> para : histogramSlow(tekst).entrySet()) {
-      System.out.println(para.getKey() + " : " + para.getValue());
-    }
+  public static void main(String[] args) throws IOException {
+    test1();
   }
 }
+

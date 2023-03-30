@@ -1,7 +1,11 @@
-#!/bin/bash
+# Tytul: Znak liczby.
+# Tresc: Pobierz liczbe naturalna od uzytkownika i sprawdz, czy liczba jest ujemna, dodatnia, czy jest zerem. Wypisz odpowiedni komunikat.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: Komunikat.
+# Przyklad:
+# Dla pobranej liczby: 2, powinien zostac wypisany komunikat, ze liczba jest dodatnia.
 
 main() {
-    #Dla pobranej liczby, sprawdz czy liczba jest ujemna, dodatnia, czy jest zerem.
 
     echo "Podaj liczbe:"
     read x
@@ -16,3 +20,4 @@ main() {
 }
 
 main "$@"
+

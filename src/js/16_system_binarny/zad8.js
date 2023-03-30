@@ -1,15 +1,15 @@
 /*
-Tytuł: Najbliższa potęga dwójki.
+Tytul: Najblizsza potega dwojki.
 
-Treść: Otrzymujesz reprezentację dziesiętną liczby naturalnej. Znajdź potęgę dwójki większą bądź równą tej liczbie. Inaczej: zaokrąglij liczbę do najbliższej potęgi dwójki.
+Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej. Znajdz potege dwojki wieksza badz rowna tej liczbie. Inaczej: zaokraglij liczbe do najblizszej potegi dwojki.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby: 111, powinna zostać zwrócona liczba: 128.*/
+Dla otrzymanej liczby: 111, powinna zostac zwrocona liczba: 128.*/
 
 function najblizszaPotegaDwojki(n) {
   let potegaDwojki = 1;
@@ -32,3 +32,4 @@ function test() {
 }
 
 test();
+

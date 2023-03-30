@@ -1,6 +1,11 @@
 """
-Dla otrzymanych dwoch napisow, znajdz i usun w pierwszym z nich wystapienia
-drugiego.
+Tytul: Usun podnapis.
+Tresc: Dostajesz dwa napisy. Twoim zadaniem jest wyszukanie i usuniecie wszystkich wystapien drugiego napisu w pierwszym napisie.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla napisow: “Lezy jezy na wiezy” oraz “zy”, zwrocony napis powinien brzmiec: “Le je na wie”.
+
 """
 
 # Wersja 1
@@ -23,3 +28,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

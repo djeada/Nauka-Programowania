@@ -1,15 +1,15 @@
 /*
-Tytuł: Trójkąt prostokątny równoboczny
+Tytul: Trojkat prostokatny rownoboczny
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze trójkąt prostokątny równoboczny o wysokości równej tej liczbie.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze trojkat prostokatny rownoboczny o wysokosci rownej tej liczbie.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 3 powinno zostać wypisane:
+Dla otrzymanej liczby 3 powinno zostac wypisane:
 
     *
     **
@@ -17,7 +17,7 @@ Dla otrzymanej liczby 3 powinno zostać wypisane:
 
 */
 
-// Funkcja wypisująca trójkąt prostokątny równoboczny o wysokości równej liczbie
+// Funkcja wypisujaca trojkat prostokatny rownoboczny o wysokosci rownej liczbie
 function rysujTrojkat(wysokosc) {
   var wiersz = "";
   for (var i = 0; i < wysokosc; i++) {
@@ -27,11 +27,12 @@ function rysujTrojkat(wysokosc) {
 }
 
 // Testy
-console.log("Rysuj trójkąt prostokątny równoboczny o wysokości 2");
+console.log("Rysuj trojkat prostokatny rownoboczny o wysokosci 2");
 rysujTrojkat(2);
 
-console.log("\nRysuj trójkąt prostokątny równoboczny o wysokości 3");
+console.log("\nRysuj trojkat prostokatny rownoboczny o wysokosci 3");
 rysujTrojkat(3);
 
-console.log("\nRysuj trójkąt prostokątny równoboczny o wysokości 4");
+console.log("\nRysuj trojkat prostokatny rownoboczny o wysokosci 4");
 rysujTrojkat(4);
+

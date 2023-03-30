@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Podmiana słowa w zdaniu.
+Tytul: Podmiana slowa w zdaniu.
 
-Treść: Masz trzy napisy: zdanie, słowo A i słowo B. Twoim zadaniem jest zamiana wszystkich wystąpień słowa A na słowo B w zdaniu.
+Tresc: Masz trzy napisy: zdanie, slowo A i slowo B. Twoim zadaniem jest zamiana wszystkich wystapien slowa A na slowo B w zdaniu.
 
-Dane wejściowe: Trzy napisy.
+Dane wejsciowe: Trzy napisy.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla napisów: “Lezy jezy na wiezy”, “zy” oraz “rzy”, zwrócony napis powinien brzmieć: “Lerzy jerzy na wierzy”.
+Dla napisow: “Lezy jezy na wiezy”, “zy” oraz “rzy”, zwrocony napis powinien brzmiec: “Lerzy jerzy na wierzy”.
 
 */
 
@@ -30,3 +30,4 @@ function testPodmianaSlowa() {
 }
 
 testPodmianaSlowa();
+

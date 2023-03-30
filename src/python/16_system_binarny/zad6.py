@@ -1,11 +1,18 @@
-import math
+"""
+Tytul: Zmiana wielkosci liter.
+Tresc: Otrzymujesz napis. Zaimplementuj nastepujace operacje przy uzyciu operatorow bitowych:
+a) Zamien wielkie litery na male litery.
+b) Zamien male litery na wielkie litery.
+c) Zamien male litery na wielkie litery i wielkie litery na male litery.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+a) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "test".
+b) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "TEST".
+c) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "tEST".
 
 """
-Otrzymujesz liczbe naturalna, podstawe systemu liczbowego w ktorym 
-zapisana jest otrzymana liczba oraz podstawe systemu na ktory ma 
-zostac dokonana konwersja. Zwroc reprezentacje otrzymanej liczby 
-w nowym systemie.
-"""
+import math
 
 
 def na_dziesietny(liczba, stara_podstawa):
@@ -30,7 +37,7 @@ def na_dziesietny(liczba, stara_podstawa):
 
 def zmien_podstawe(liczba, stara_podstawa, nowa_podstawa):
     """
-    Funkcja zamienia liczbe z reprezentacji w systemie stara_podstaw na 
+    Funkcja zamienia liczbe z reprezentacji w systemie stara_podstaw na
     reprezentacje w systemie nowa_podstawa.
     """
 
@@ -65,3 +72,4 @@ def test_zmien_podstawe():
 
 if __name__ == "__main__":
     test_zmien_podstawe()
+

@@ -1,3 +1,12 @@
+/*
+Tytul: Odleglosc Hamminga.
+Tresc: Otrzymujesz dwa napisy o rownej dlugosci. Oblicz odleglosc Hamminga miedzy dwoma otrzymanymi napisami. Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej dlugosci, zdefiniowana jako liczba pozycji, na ktorych napisy maja rozne znaki.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanych napisow: “adam” i “axam”, powinna zostac zwrocona liczba: 1.
+
+*/
 public class Main {
   // Otrzymujesz napis. Zamien wszystkie znaki napisu
   // na odpowiadajace im numery w tablicy ASCII. Podmien
@@ -37,3 +46,4 @@ public class Main {
     test2();
   }
 }
+

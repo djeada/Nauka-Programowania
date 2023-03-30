@@ -1,19 +1,20 @@
-#!/usr/bin/env bash
+# Tytul: Sprawdzenie, czy dwa slowa sa anagramami.
+# Tresc: Napisz program, ktory dla podanych dwoch napisow sprawdzi, czy sa anagramami. Dwa napisy sa anagramami, jesli jeden z nich mozna zbudowac poprzez przestawienie znakow w drugim.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Wartosc logiczna.
+# Przyklad:
+# Dla otrzymanego napisu: “ula” oraz “lua”, powinna zostac zwrocona wartosc logiczna: Prawda.
 
 source ../assert.sh
 
-# Dla podanych dwoch napisow sprawdz czy sa swoimi anagramami. 
-# Dwa napisy sa anagramami jesli jeden z nich mozna zbudowac 
-# poprzez przestawienie znakow w drugim.
-
 sortuj_napis() {
-    # Funkcja sortuje alfabetycznie napis.
+    local napis=$1
     local napis=$1
     echo "$napis" | tr -d ' ' | tr -d '\n' | tr -d '\t' | tr -d '\r' | grep -o . | sort | tr -d "\n"
 }
 
 czy_anagramy() {
-    # Funkcja sprawdza czy dane napisy sa anagramami.
+    local napis_a="$1"
     local napis_a="$1"
     local napis_b="$2"
 
@@ -33,7 +34,7 @@ czy_anagramy() {
 }
 
 test_czy_anagramy(){
- 
+
     assertTrue $(czy_anagramy "kajak" "kajak") $LINENO
     assertTrue $(czy_anagramy "kajak" "kjakk") $LINENO
     assertFalse $(czy_anagramy "adam" "mada") $LINENO
@@ -43,7 +44,6 @@ test_czy_anagramy(){
 main() {
     test_czy_anagramy
 }
-
 
 main "$@"
 

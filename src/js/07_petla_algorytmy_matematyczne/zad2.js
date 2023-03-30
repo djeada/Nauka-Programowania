@@ -1,18 +1,18 @@
 /*
-Tytuł: Podnieś a do b.	
+Tytul: Podnies a do b.	
 
-Treść: Napisz funkcję, która dla otrzymanych dwóch liczb obliczy ile wynosi a podniesione do b, przy pomocy pętli.
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb obliczy ile wynosi a podniesione do b, przy pomocy petli.
 
-Dane wejściowe: dwie liczby naturalne
+Dane wejsciowe: dwie liczby naturalne
 
-Dane wyjściowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb 3 i 5, funkcja powinna zwrócić liczbę 243.
+Dla pobranych liczb 3 i 5, funkcja powinna zwrocic liczbe 243.
 */
 
-// Funkcja zwracająca a podniesione do b
+// Funkcja zwracajaca a podniesione do b
 function podniesDoPotegi(a, b) {
   var wynik = 1;
   for (var i = 0; i < b; i++) {
@@ -33,10 +33,11 @@ function testPotega() {
   console.assert(podniesDoPotegi(0, 2) == 0);
 }
 
-// Funkcja uruchamiająca testy
+// Funkcja uruchamiajaca testy
 function main() {
   testPotega();
 }
 
-// Uruchomienie testów
+// Uruchomienie testow
 main();
+

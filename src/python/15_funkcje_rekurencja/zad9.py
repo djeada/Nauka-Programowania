@@ -1,7 +1,11 @@
 """
-Otrzymuejsz napis. Sprawdz przy pomocy rekurencji czy otrzymane slowo 
-jest slowem elfickim. Przez slowo elfickie rozumiemy taki napis, w 
-ktorym co najmniej raz wystepuje kazda z liter slowa elf.
+Tytul: Gra.
+Tresc: W grze, w kazdym ruchu gracz moze zdobyc 3, 5 lub 10 punktow. Oblicz przy uzyciu rekurencji, ile sposobow istnieje, aby gracz wygral gre, gdy ma do dyspozycji N punktow.
+Dane wejsciowe: Liczba naturalna N.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla N = 20, powinna zostac zwrocona liczba: 4.
+
 """
 
 
@@ -44,3 +48,4 @@ def test_czy_slowo_elfickie():
 if __name__ == "__main__":
 
     test_czy_slowo_elfickie()
+

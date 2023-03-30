@@ -1,3 +1,12 @@
+/*
+Tytul: Suma liczb naturalnych mniejszych od N.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz sume liczb naturalnych mniejszych od N.
+Dane wejsciowe: Liczba naturalna N.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla N = 10, powinna zostac zwrocona liczba: 55.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -21,15 +30,7 @@ public class Main {
   public static void oblicz(int n, Pair<Integer, Integer> wyniki) {
     oblicz(n, wyniki, "AB");
   }
-  /*
-  Gracz A oraz gracz B graja w kapsle.
-  Na poczatku gry otrzymuja pewna liczbe kapsli.
-  W kazdej turze grac moze z puli kapsli zabrac 1, 2 badz 4 kapsle.
-  Gracz, ktory zabral ostatni kapsel wygyrwa.
-  Gre rozpoczyna gracz A.
-  Znajdz liczbe mozliwych kombinacji wybrania liczby kapsli w danej turze
-  prowadzaca do zwyciestwa kazdego z graczy.
-  */
+
   private static String swapChars(String slowa, int i, int j) {
     StringBuilder sb = new StringBuilder(slowa);
     char l = sb.charAt(i), r = sb.charAt(j);
@@ -96,3 +97,4 @@ public class Main {
     test3();
   }
 }
+

@@ -17,9 +17,10 @@ fn main() {
 	let bok_c = liczby[2];
 
 	if bok_a + bok_b > bok_c && bok_a + bok_c > bok_b && bok_b + bok_c > bok_a {
-		println!("Można zbudować trojkat z podanych boków.");
+		println!("Mozna zbudowac trojkat z podanych bokow.");
 	} else {
-		println!("Nie można zbudować trojkata z podanych boków.");
+		println!("Nie mozna zbudowac trojkata z podanych bokow.");
 	}
 	
 }
+

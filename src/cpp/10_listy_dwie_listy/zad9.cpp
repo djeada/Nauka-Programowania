@@ -1,11 +1,14 @@
+/*
+Tytul: Znajdz mediane dwoch posortowanych list.
+Tresc: Otrzymujesz dwie posortowane listy liczb calkowitych rownej dlugosci.
+Znajdz ich mediane. Dane wejsciowe: Dwie listy liczb calkowitych o rownej
+dlugosci. Dane wyjsciowe: Liczba zmiennoprzecinkowa. Przyklad: Dla otrzymanych
+list [2, 4, 7] oraz [3, 5, 9] powinno zostac zwrocone: 4.5.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <vector>
-
-/*
-Otrzymujesz dwie listy liczb calkowitych. Usun z pierwszej
-listy te elementy, ktore wystepuja rowniez w drugiej liscie.
-*/
 
 // Zlozonosc obliczeniowa O(n^2)
 // Zlozonosc pamieciowa O(n)
@@ -37,3 +40,4 @@ int main() {
 
   return 0;
 }
+

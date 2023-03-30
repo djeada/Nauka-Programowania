@@ -1,10 +1,14 @@
+/*
+Tytul: Usun podnapis.
+Tresc: Dostajesz dwa napisy. Twoim zadaniem jest wyszukanie i usuniecie
+wszystkich wystapien drugiego napisu w pierwszym napisie. Dane wejsciowe: Dwa
+napisy. Dane wyjsciowe: Napis. Przyklad: Dla napisow: “Lezy jezy na wiezy” oraz
+“zy”, zwrocony napis powinien brzmiec: “Le je na wie”.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
-
-/*
-Dla otrzymanych dwoch napisow, sprawdz czy drugi stanowi poczatek pierwszego.
-*/
 
 bool jednakowyPoczatekV1(string slowoA, string slowoB) {
   transform(slowoA.begin(), slowoA.end(), slowoA.begin(), ::tolower);
@@ -35,3 +39,4 @@ int main() {
 
   return 0;
 }
+

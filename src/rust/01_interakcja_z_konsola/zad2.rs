@@ -14,3 +14,4 @@ fn main() {
 	println!("{} {}", liczby[0], liczby[1]);
 	
 }
+

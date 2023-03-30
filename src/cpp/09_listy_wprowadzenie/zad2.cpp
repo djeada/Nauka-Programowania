@@ -1,16 +1,16 @@
+/*
+Tytul: Samochody jadace w przeciwnych kierunkach.
+Tresc: Otrzymujesz liste zlozona wylacznie z liter 'A' i 'B', ktore odpowiadaja
+samochodom jadacym odpowiednio na wschod ('A') i zachod ('B'). Policz, ile razy
+samochody jadace w przeciwnych kierunkach mijaja sie. Dane wejsciowe: Lista
+znakow odpowiadajacych samochodom jadacym na wschod ('A') i zachod ('B'). Dane
+wyjsciowe: Liczba naturalna oznaczajaca liczbe mijajacych sie samochodow.
+Przyklad:
+Dla otrzymanej listy ['A', 'B', 'A', 'B', 'B'] powinna zostac zwrocona liczba 5.
+
+*/
 #include <iostream>
 #include <vector>
-
-/*
-Dla liczby N, wczytaj N liczb do listy, a nastepnie:
-
-a) Dodaj 1 do kazdego elementu.
-b) Pomnoz kazdy element przez jego indeks.
-c) Zastap wszystkie elementy wartoscia pierwszego elementu listy.
-
-Dla kazdego podpunktu wypisz zmodyfikowana liste. Elementy listy
-powinny byc oddzielone przecinkami i wypisane w jednym wierszu.
-*/
 
 void wczytaj(std::vector<int> &lista, int n) {
   for (int i = 0; i < n; i++) {
@@ -67,3 +67,4 @@ int main() {
 
   return 0;
 }
+

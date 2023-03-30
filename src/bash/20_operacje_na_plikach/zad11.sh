@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+# Tytul: Znalezienie sciezki pliku o danej nazwie
+# Tresc: Otrzymujesz napis reprezentujacy nazwe pliku. Przeszukaj caly system i zapisz w liscie wszystkie sciezki plikow o podanej nazwie.
+# Dane wejsciowe: Napis
+# Dane wyjsciowe: Lista napisow
 
 source ../assert.sh
-
-# Otrzymujesz dwa napisy reprezentujace sciezki plikow. 
-# Podmien tresci obu plikow.
 
 podmien_tresci() {
     local plik_1="$1"
@@ -17,21 +17,21 @@ podmien_tresci() {
 
 test_podmien_tresci() {
 
-    # stworz folder testowy
+    mkdir -p 'test'
     mkdir -p 'test'
 
-    # stworz pliki testowe
-    echo 'test1' > 'test/plik_1'	
+    echo 'test1' > 'test/plik_1'
+    echo 'test1' > 'test/plik_1'
     echo 'test2' > 'test/plik_2'
 
-    # podmien tresci
+    podmien_tresci 'test/plik_1' 'test/plik_2'
     podmien_tresci 'test/plik_1' 'test/plik_2'
 
-    # sprawdz czy pliki zostaly zamienione
+    assertEqual $(cat 'test/plik_1') 'test2' $LINENO
     assertEqual $(cat 'test/plik_1') 'test2' $LINENO
     assertEqual $(cat 'test/plik_2') 'test1' $LINENO
 
-    # usun foldery
+    rm -rf 'test'
     rm -rf 'test'
 
 }
@@ -41,3 +41,4 @@ main() {
 }
 
 main "$@"
+

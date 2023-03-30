@@ -1,3 +1,11 @@
+/*
+Tytul: Tresc: Dla otrzymanej liczby naturalnej wypisz sume cyfr tej liczby.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej liczby 129, powinna zostac wypisana liczba 12.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -21,3 +29,4 @@ public class Main {
     System.out.print("Suma cyfr podanej liczby wynosi " + suma + "\n");
   }
 }
+

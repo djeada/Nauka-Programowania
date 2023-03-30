@@ -1,17 +1,17 @@
 /*
-Tytuł: Sprawdzanie czy macierz jest "magiczna".
+Tytul: Sprawdzanie czy macierz jest "magiczna".
 
-Treść: Otrzymujesz macierz kwadratową. Sprawdź, czy jest ona kwadratem magicznym.
+Tresc: Otrzymujesz macierz kwadratowa. Sprawdz, czy jest ona kwadratem magicznym.
 
-Podpowiedź: Kwadrat magiczny składa się z powtarzających się dodatnich liczb naturalnych. Suma elementów w każdym wierszu, w każdej kolumnie oraz na każdej przekątnej jest taka sama.
+Podpowiedz: Kwadrat magiczny sklada sie z powtarzajacych sie dodatnich liczb naturalnych. Suma elementow w kazdym wierszu, w kazdej kolumnie oraz na kazdej przekatnej jest taka sama.
 
-Dane wejściowe: Lista list liczb naturalnych.
+Dane wejsciowe: Lista list liczb naturalnych.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej macierzy: [[6, 7, 2], [1, 5, 9], [8, 3, 4]], powinna zostać zwrócona wartość logiczna: Prawda.
+Dla otrzymanej macierzy: [[6, 7, 2], [1, 5, 9], [8, 3, 4]], powinna zostac zwrocona wartosc logiczna: Prawda.
 */
 
 function czyKwadratMagiczny(macierz) {
@@ -63,12 +63,13 @@ function test() {
   const wynik2 = false;
   console.assert(
     czyKwadratMagiczny(macierz1) === wynik1,
-    `Macierz ${macierz1} nie jest kwadratem magicznym, a powinna być.`
+    `Macierz ${macierz1} nie jest kwadratem magicznym, a powinna byc.`
   );
   console.assert(
     czyKwadratMagiczny(macierz2) === wynik2,
-    `Macierz ${macierz2} jest kwadratem magicznym, a nie powinna być.`
+    `Macierz ${macierz2} jest kwadratem magicznym, a nie powinna byc.`
   );
 }
 
 test();
+

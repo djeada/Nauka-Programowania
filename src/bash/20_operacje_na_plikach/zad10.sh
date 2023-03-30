@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+# Tytul: Znalezienie w folderze wszystkich plikow z danym rozszerzeniem
+# Tresc: Otrzymujesz dwa napisy. Pierwszy napis to sciezka folderu, a drugi to rozszerzenie szukanych plikow. Znajdz w folderze wszystkie pliki o podanym rozszerzeniu i zapisz ich nazwy w liscie.
+# Dane wejsciowe: Dwa napisy
+# Dane wyjsciowe: Lista napisow
 
 source ../assert.sh
-
-# Otrzymujesz dwa napisy reprezentujace sciezki folderow. 
-# Skopiuj wszystkie pliki .png z pierwszego folderu do drugiego folderu.
 
 kopiuj_pliki_png() {
     local folder_1="$1"
@@ -14,24 +14,24 @@ kopiuj_pliki_png() {
 
 test_kopiuj_pliki_png() {
 
-    # stworz foldery testowe
+    mkdir -p 'test/test1'
     mkdir -p 'test/test1'
     mkdir -p 'test/test2'
 
-    # stworz pliki testowe
+    touch 'test/test1/plik1.png'
     touch 'test/test1/plik1.png'
     touch 'test/test1/plik2.png'
 
-    # kopiuj pliki do drugiego folderu
+    kopiuj_pliki_png 'test/test1' 'test/test2'
     kopiuj_pliki_png 'test/test1' 'test/test2'
 
-    # sprawdz czy pliki zostaly skopiowane
+    assertTrue $(if [[ -f 'test/test2/plik1.png' ]]; then echo 'true'; else echo 'false'; fi) $LINENO
     assertTrue $(if [[ -f 'test/test2/plik1.png' ]]; then echo 'true'; else echo 'false'; fi) $LINENO
     assertTrue $(if [[ -f 'test/test2/plik2.png' ]]; then echo 'true'; else echo 'false'; fi) $LINENO
     assertTrue $(if [[ -f 'test/test1/plik1.png' ]]; then echo 'true'; else echo 'false'; fi) $LINENO
     assertTrue $(if [[ -f 'test/test1/plik2.png' ]]; then echo 'true'; else echo 'false'; fi) $LINENO
 
-    # usun foldery
+    rm -rf 'test'
     rm -rf 'test'
 
 }
@@ -41,3 +41,4 @@ main() {
 }
 
 main "$@"
+

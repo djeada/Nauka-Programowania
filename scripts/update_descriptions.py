@@ -153,8 +153,6 @@ def parse_tasks(input_str):
 
 
 def main():
-    input_file = sys.argv[1]
-    output_dir = sys.argv[2]
 
     file_extension_comment_map = {
         "cpp": CommentInfo(delimited=("/*", "*/"), line_by_line="//"),
@@ -165,40 +163,47 @@ def main():
         "sh": CommentInfo(line_by_line="#"),
     }
 
-    file_content = Path(input_file).read_text()
-    tasks = parse_tasks(file_content)
+    input_files = sorted(Path(sys.argv[1]).iterdir())
+    output_dirs = sorted(Path(sys.argv[2]).iterdir())
+    file_extension = sys.argv[3]
 
-    files = [
-        file
-        for file in Path(output_dir).iterdir()
-        if file.is_file() and file.suffix == ".py"
-    ]
+    for input_file, output_dir in zip(input_files, output_dirs):
+        print(input_file, output_dir)
 
-    for file, task in zip(files, tasks.values()):
-        file_extension = file.suffix[1:]
-        comment_info = file_extension_comment_map.get(file_extension)
+        file_content = Path(input_file).read_text()
+        tasks = parse_tasks(file_content)
 
-        if comment_info is None:
-            print(
-                f"No comment information found for file extension '{file_extension}'."
-            )
-            return
+        files = [
+            file / "Main.java"
+            for file in Path(output_dir).iterdir()
+            #if file.is_file() and file.suffix == f".{file_extension}"
+        ]
+        files = sorted(files)
 
-        if comment_info.delimited is not None:
-            comment_style = CommentStyle.DELIMITED
-            start_delimiter, end_delimiter = comment_info.delimited
-        elif comment_info.line_by_line is not None:
-            comment_style = CommentStyle.LINE_BY_LINE
-            start_delimiter, end_delimiter = comment_info.line_by_line, None
-        else:
-            print("Invalid comment information.")
-            return
+        for file, task in zip(files, tasks.values()):
+            comment_info = file_extension_comment_map.get(file_extension)
 
-        # Localize the top comment and remove it from the file
-        localize_top_comment(file, comment_style, start_delimiter, end_delimiter)
+            if comment_info is None:
+                print(
+                    f"No comment information found for file extension '{file_extension}'."
+                )
+                return
 
-        # Insert a top comment at the beginning of the file
-        insert_top_comment(file, comment_style, start_delimiter, end_delimiter, task)
+            if comment_info.delimited is not None:
+                comment_style = CommentStyle.DELIMITED
+                start_delimiter, end_delimiter = comment_info.delimited
+            elif comment_info.line_by_line is not None:
+                comment_style = CommentStyle.LINE_BY_LINE
+                start_delimiter, end_delimiter = comment_info.line_by_line, None
+            else:
+                print("Invalid comment information.")
+                return
+
+            # Localize the top comment and remove it from the file
+            localize_top_comment(file, comment_style, start_delimiter, end_delimiter)
+
+            # Insert a top comment at the beginning of the file
+            insert_top_comment(file, comment_style, start_delimiter, end_delimiter, task)
 
 
 if __name__ == "__main__":

@@ -1,3 +1,12 @@
+/*
+Tytul: Konwersja listy na napis
+Tresc: Otrzymujesz liste liczb naturalnych. Zamie liste na napis.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanej listy: [2, 4, 7], powinien zostac zwrocony napis: “247”.
+
+*/
 public class Main {
   // Otrzymujesz napis reprezuntajacy zdanie.
   // Podziel zdanie na slowa skladowe.
@@ -38,3 +47,4 @@ public class Main {
     slowaV1(napis);
   }
 }
+

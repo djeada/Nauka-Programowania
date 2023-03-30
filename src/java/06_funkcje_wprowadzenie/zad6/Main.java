@@ -1,3 +1,12 @@
+/*
+Tytul: Zamien wartosci miejscami.
+Tresc: Napisz funkcje, ktora zamieni wartosci zmiennych a i b miejscami. Po wykonaniu funkcji zmienna a powinna przechowywac wartosc zmiennej b, a zmienna b powinna przechowywac wartosc zmiennej a.
+Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
+Przyklad:
+Dla otrzymanych liczb: 8 i 5, powinny zostac zwrocone liczby 5 i 8.
+
+*/
 public class Main {
   // Napisz funkcje, ktora dla otrzymanej liczby zwroci sume cyfr tej liczby.
 
@@ -22,3 +31,4 @@ public class Main {
     System.out.print("Suma cyfr liczby to: " + sumaCyfr(a) + "\n");
   }
 }
+

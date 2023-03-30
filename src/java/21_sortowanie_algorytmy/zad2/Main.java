@@ -1,3 +1,12 @@
+/*
+Tytul: Sortowanie przez wybieranie.
+Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania przez wybieranie. Znajdz najwiekszy element w liscie i zapisz go do zmiennej. Nastepnie znajdz najmniejszy element w pozostalej czesci listy i zamien go z pierwszym elementem nieposortowanej czesci. Powtarzaj operacje, az lista bedzie posortowana.
+Dane wejsciowe: Lista liczb calkowitych.
+Dane wyjsciowe: Posortowana lista liczb calkowitych.
+Przyklad:
+Dla listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -29,3 +38,4 @@ public class Main {
     test1();
   }
 }
+

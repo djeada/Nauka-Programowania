@@ -1,11 +1,16 @@
 /*
-Otrzymujesz napis. Zwroc napis skladajacy sie z cyfr wystepujacych w otrzymanym napisie.
+Tytul: Podziel tekst wzgledem znakow interpunkcyjnych.
+Tresc: Dostajesz napis. Podziel go wzgledem znakow interpunkcyjnych i zapisz w
+liscie. Usun spacje wystepujace na poczatku lub koncu otrzymanych napisow. Dane
+wejsciowe: Napis. Dane wyjsciowe: Lista napisow. Przyklad: Dla napisu: “Ani nie
+poszedl do kina, ani nie wybral sie do teatru.”, powinna zostac zwrocona lista:
+[“Ani nie poszedl do kina”, “ani nie wybral sie do teatru”].
+
 */
 
 #include <cassert>
 #include <regex>
 #include <string>
-
 
 std::string odfiltrujCyfry(std::string &napis) {
   return std::regex_replace(napis, std::regex("[^0-9]*"), "");
@@ -30,3 +35,4 @@ int main() {
 
   return 0;
 }
+

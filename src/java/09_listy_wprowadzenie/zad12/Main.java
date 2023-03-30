@@ -1,3 +1,12 @@
+/*
+Tytul: Minimum oraz maksimum.
+Tresc: Otrzymujesz liste liczb calkowitych. Znajdz najwiekszy i najmniejszy element tej listy i zwroc je jako dwie osobne liczby calkowite.
+Dane wejsciowe: Lista liczb calkowitych.
+Dane wyjsciowe: Dwie liczby calkowite oznaczajace najwiekszy i najmniejszy element z listy.
+Przyklad:
+Dla otrzymanej listy [4, -7, 8, 5, 6, -9, 10, 2, -8] powinny zostac zwrocone liczby 10 oraz -9.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -52,3 +61,4 @@ public class Main {
     test2();
   }
 }
+

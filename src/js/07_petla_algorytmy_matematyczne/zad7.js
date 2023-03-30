@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Pierwiastek metodą Newtona
+Tytul: Pierwiastek metoda Newtona
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej zwróci jej pierwiastek.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej zwroci jej pierwiastek.
 
-Dane wejściowe: liczba naturalna
+Dane wejsciowe: liczba naturalna
 
-Dane wyjściowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 16, funkcja powinna zwrócić liczbę 4.
+Dla otrzymanej liczby 16, funkcja powinna zwrocic liczbe 4.
 */
 
-// Funkcja zwracająca pierwiastek z liczby
+// Funkcja zwracajaca pierwiastek z liczby
 function pierwiastekLiczby(liczba) {
   var pierwiastek = liczba;
   while (pierwiastek * pierwiastek > liczba) {
@@ -39,3 +39,4 @@ function testPierwiastekLiczby() {
 }
 
 testPierwiastekLiczby();
+

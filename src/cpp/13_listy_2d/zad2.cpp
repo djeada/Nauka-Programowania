@@ -1,12 +1,17 @@
+/*
+Tytul: Dodawanie i odejmowanie macierzy.
+Tresc: Otrzymujesz dwie macierze o tych samych wymiarach. Zwroc dwie macierze
+bedace: a) wynikiem dodawania otrzymanych macierzy b) wynikiem odejmowania
+drugiej macierzy od pierwszej. Dane wejsciowe: Dwie listy list liczb
+naturalnych. Dane wyjsciowe: Dwie listy list liczb naturalnych. Przyklad: Dla
+otrzymanych dwoch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinny
+zostac zwrocone nastepujace macierze: a) [[6, -1], [-1, 7]] - wynik dodawania b)
+[[-4, 5], [-3, -7]] - wynik odejmowania drugiej macierzy od pierwszej.
+
+*/
 #include <cassert>
 #include <utility>
 #include <vector>
-
-/*
-Dla otrzymanej liczby, stworz macierz kwadratowa skladajaca sie
-z liczby kolumn i wierszy rownej otrzymanej liczbie, ktorej kazdy
-element jest iloczynem jego wspolrzednych.
-*/
 
 std::vector<std::vector<int>> macierz(int n) {
   /**
@@ -36,3 +41,4 @@ int main() {
   test1();
   return 0;
 }
+

@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Czy srednia elementow znajduje sie w liscie?
+# Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby calkowitej jako klucza, usun pierwsze wystapienie klucza w liscie.
+# Dane wejsciowe: Lista liczb calkowitych i liczba calkowita jako klucz.
+# Dane wyjsciowe: Lista liczb calkowitych bez pierwszego wystapienia klucza.
+# Przyklad:
+# Dla otrzymanej listy [6, 2, 1, 4, 27] oraz 4 powinna zostac zwrocona lista [6, 2, 1, 27].
 
 source ../assert.sh
-
-# Dla otrzymanej listy skladajacej sie z nieparzystej
-# liczby elementow znajdz element bez pary. Przez pary
-# elementow rozumiemy tutaj elementy o rownej wartosci.
 
 element_bez_pary() {
     wynik=0

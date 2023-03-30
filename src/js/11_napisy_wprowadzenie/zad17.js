@@ -1,15 +1,15 @@
 /*
-Tytuł: Konwersja listy na napis
+Tytul: Konwersja listy na napis
 
-Treść: Otrzymujesz listę liczb naturalnych. Zamie listę na napis.
+Tresc: Otrzymujesz liste liczb naturalnych. Zamie liste na napis.
 
-Dane wejściowe: Lista liczb naturalnych.
+Dane wejsciowe: Lista liczb naturalnych.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [2, 4, 7], powinien zostać zwrócony napis: “247”.
+Dla otrzymanej listy: [2, 4, 7], powinien zostac zwrocony napis: “247”.
 */
 
 function listaNaNapis(lista) {
@@ -23,8 +23,9 @@ function test() {
   let expectedOutput = "247";
   let output = listaNaNapis(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

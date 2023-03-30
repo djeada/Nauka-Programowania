@@ -1,18 +1,18 @@
 /*
-Tytuł: Zamień wartości miejscami.
+Tytul: Zamien wartosci miejscami.
 
-Treść: Napisz funkcję, która zamieni wartości zmiennych a i b miejscami. Po wykonaniu funkcji zmienna a powinna przechowywać wartość zmiennej b, a zmienna b powinna przechowywać wartość zmiennej a.
+Tresc: Napisz funkcje, ktora zamieni wartosci zmiennych a i b miejscami. Po wykonaniu funkcji zmienna a powinna przechowywac wartosc zmiennej b, a zmienna b powinna przechowywac wartosc zmiennej a.
 
-Dane wejściowe: Dwie liczby naturalne.
+Dane wejsciowe: Dwie liczby naturalne.
 
-Dane wyjściowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych liczb: 8 i 5, powinny zostać zwrócone liczby 5 i 8.
+Dla otrzymanych liczb: 8 i 5, powinny zostac zwrocone liczby 5 i 8.
 */
 
-// Funkcja zamieniająca wartości zmiennych
+// Funkcja zamieniajaca wartosci zmiennych
 function zamienWartosciMiejscami(liczba_a, liczba_b) {
   let a = liczba_a;
   let b = liczba_b;
@@ -22,12 +22,13 @@ function zamienWartosciMiejscami(liczba_a, liczba_b) {
   return [a, b];
 }
 
-// Pobieranie danych od użytkownika
-const a = parseInt(prompt("Podaj liczbę a:"));
-const b = parseInt(prompt("Podaj liczbę b:"));
+// Pobieranie danych od uzytkownika
+const a = parseInt(prompt("Podaj liczbe a:"));
+const b = parseInt(prompt("Podaj liczbe b:"));
 
-// Wywołanie funkcji
+// Wywolanie funkcji
 const wynik = zamienWartosciMiejscami(a, b);
 
-// Wyświetlanie wyniku
+// Wyswietlanie wyniku
 console.log(wynik);
+

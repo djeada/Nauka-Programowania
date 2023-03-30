@@ -1,15 +1,15 @@
 /*
-Tytuł: Mnożenie wielomianów.
+Tytul: Mnozenie wielomianow.
 
-Treść: Otrzymujesz dwie listy n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz współczynniki wielomianu będącego iloczynem otrzymanych wielomianów.
+Tresc: Otrzymujesz dwie listy n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz wspolczynniki wielomianu bedacego iloczynem otrzymanych wielomianow.
 
-Dane wejściowe: Dwie listy liczb naturalnych.
+Dane wejsciowe: Dwie listy liczb naturalnych.
 
-Dane wyjściowe: Lista liczb naturalnych.
+Dane wyjsciowe: Lista liczb naturalnych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych dwóch list: [5, 0, 10, 6] oraz [1, 2, 4], zostanie zwrócona lista: [5, 10, 30, 26, 52, 24].
+Dla otrzymanych dwoch list: [5, 0, 10, 6] oraz [1, 2, 4], zostanie zwrocona lista: [5, 10, 30, 26, 52, 24].
 */
 
 function mnozenieWielomianow(wielomian1, wielomian2) {
@@ -56,4 +56,5 @@ function testMnozenieWielomianow() {
 }
 
 testMnozenieWielomianow();
-console.log("Wszystkie testy zakończone sukcesem");
+console.log("Wszystkie testy zakonczone sukcesem");
+

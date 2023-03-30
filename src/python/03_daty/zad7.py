@@ -1,6 +1,10 @@
 """
-Dla trzech pobranych liczb reprezentujacych date, wypisz ile dni minelo od poczatku roku. 
-Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem.
+Tytul: Ile dni minelo od poczatku roku?
+Tresc: Dla trzech pobranych liczb: reprezentujacych date wypisz, ile dni minelo od poczatku roku. Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad: Dla pobranych liczb: 14, 2 oraz 1482, powinna zostac zwrocona liczba 45. **
+
 """
 
 if __name__ == "__main__":
@@ -44,3 +48,4 @@ if __name__ == "__main__":
             liczba_dni += 1
 
     print(f"Od poczatku roku uplynelo: {liczba_dni}")
+

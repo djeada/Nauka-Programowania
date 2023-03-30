@@ -1,3 +1,8 @@
+/*
+Tytul: Dziedziczenie wielopoziomowe
+Tresc: Napisz klase Czlowiek oraz klasy pochodne Student i StudentFizyki. Czlowiek powinien zawierac informacje o imieniu, nazwisku, miejscu urodzenia i zawodzie. Student powinien dodawac pola numeru albumu oraz kierunku studiow. StudentFizyki powinien dodawac pola sredniej z laboratoriow oraz sredniej z wykladow. Napisz program testujacy te klasy.
+
+*/
 public class Main {
   private static class Czlowiek {
 
@@ -144,3 +149,4 @@ public class Main {
     test3();
   }
 }
+

@@ -1,44 +1,44 @@
 {-
-Tytuł: Pole powierzchni i objętość figur geometrycznych.
+Tytul: Pole powierzchni i objetosc figur geometrycznych.
 
-Treść zadania: Napisz program, który będzie obliczał pola powierzchni i objętości figur geometrycznych zgodnie z następującymi instrukcjami:
+Tresc zadania: Napisz program, ktory bedzie obliczal pola powierzchni i objetosci figur geometrycznych zgodnie z nastepujacymi instrukcjami:
 
-a) Pobierz długości podstawy i wysokości trójkąta i wypisz jego pole.
+a) Pobierz dlugosci podstawy i wysokosci trojkata i wypisz jego pole.
 
-b) Pobierz długości boków prostokąta i wypisz jego pole.
+b) Pobierz dlugosci bokow prostokata i wypisz jego pole.
 
-c) Pobierz długości przekątnych rombu i wypisz jego pole.
+c) Pobierz dlugosci przekatnych rombu i wypisz jego pole.
 
-d) Pobierz promień kuli i wypisz jej objętość.
+d) Pobierz promien kuli i wypisz jej objetosc.
 
-e) Pobierz promień podstawy i wysokość stożka i wypisz jego objętość.
+e) Pobierz promien podstawy i wysokosc stozka i wypisz jego objetosc.
 
-f) Pobierz długość, szerokość i wysokość graniastosłupa i wypisz jego objętość.
+f) Pobierz dlugosc, szerokosc i wysokosc graniastoslupa i wypisz jego objetosc.
 
-Jednostki są dowolne.
+Jednostki sa dowolne.
 
-Dane wejściowe:
+Dane wejsciowe:
 
-* Dwie liczby naturalne dla podpunktów a, b i c.
+* Dwie liczby naturalne dla podpunktow a, b i c.
 * Liczba naturalna dla podpunktu d.
 * Dwie liczby naturalne dla podpunktu e.
 * Trzy liczby naturalne dla podpunktu f.
 
-Dane wyjściowe: Liczba naturalna dla wszystkich podpunktów.
+Dane wyjsciowe: Liczba naturalna dla wszystkich podpunktow.
 
-Przykład:
+Przyklad:
 
-a) Dla pobranych liczb: 5 i 2, powinna zostać wypisana liczba: 5.
+a) Dla pobranych liczb: 5 i 2, powinna zostac wypisana liczba: 5.
 
-b) Dla pobranych liczb: 3 i 3, powinna zostać wypisana liczba: 4.
+b) Dla pobranych liczb: 3 i 3, powinna zostac wypisana liczba: 4.
 
-c) Dla pobranych liczb: 2 i 4, powinna zostać wypisana liczba: 1.
+c) Dla pobranych liczb: 2 i 4, powinna zostac wypisana liczba: 1.
 
-d) Dla pobranej liczby: 2, powinna zostać wypisana liczba: 33.493.
+d) Dla pobranej liczby: 2, powinna zostac wypisana liczba: 33.493.
 
-e) Dla pobranych liczb: 3 i 2, powinna zostać wypisana liczba: 18.84.
+e) Dla pobranych liczb: 3 i 2, powinna zostac wypisana liczba: 18.84.
 
-f) Dla pobranych liczb: 2, 2 i 2, powinny zostać wypisana liczba: 8.
+f) Dla pobranych liczb: 2, 2 i 2, powinny zostac wypisana liczba: 8.
 -}
 
 main :: IO ()
@@ -78,3 +78,4 @@ main = do
   height2 <- readLn :: IO Double
   let prismVolume = length2 * width2 * height2
   putStrLn $ "Objetosc graniastoslupa: " ++ show prismVolume
+

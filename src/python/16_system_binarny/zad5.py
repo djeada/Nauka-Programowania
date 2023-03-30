@@ -1,10 +1,11 @@
 """
-Otrzymujesz dwie liczby naturalne. 
+Tytul: Najblizsza potega dwojki.
+Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej. Znajdz potege dwojki wieksza badz rowna tej liczbie. Inaczej: zaokraglij liczbe do najblizszej potegi dwojki.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej liczby: 111, powinna zostac zwrocona liczba: 128.
 
-a) Zwroc mniejsza liczbe. Zabronione jest uzycie instrukcji 
-warunkowej i zewnetrznych bibliotek.
-b) Zwroc wieksza liczbe. Zabronione jest uzycie instrukcji 
-warunkowej i zewnetrznych bibliotek.
 """
 
 
@@ -61,3 +62,4 @@ if __name__ == "__main__":
 
     test_minimum()
     test_maksimum()
+

@@ -1,21 +1,21 @@
 /*
-Tytuł: Kwadrat
+Tytul: Kwadrat
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze kwadrat o boku równym tej liczbie.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze kwadrat o boku rownym tej liczbie.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 2 powinno zostać wypisane:
+Dla otrzymanej liczby 2 powinno zostac wypisane:
 
     **
     **
 */
 
-// Funkcja wypisująca kwadrat o boku równym liczbie
+// Funkcja wypisujaca kwadrat o boku rownym liczbie
 function rysujKwadrat(bok) {
   var wiersz = "";
   for (var i = 0; i < bok; i++) {
@@ -36,3 +36,4 @@ rysujKwadrat(3);
 
 console.log("\nRysuj kwadrat o boku 4");
 rysujKwadrat(4);
+

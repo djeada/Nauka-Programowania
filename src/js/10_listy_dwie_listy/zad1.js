@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Wypisanie elementów dwóch list na przemian.
+Tytul: Wypisanie elementow dwoch list na przemian.
 
-Treść: Dla otrzymanych dwóch list, wypisuj na przemian elementy z obu list. Jeśli listy nie są tej samej długości, po wyczerpaniu elementów krótszej listy, wypisuj pozostałe elementy dłuższej listy.
+Tresc: Dla otrzymanych dwoch list, wypisuj na przemian elementy z obu list. Jesli listy nie sa tej samej dlugosci, po wyczerpaniu elementow krotszej listy, wypisuj pozostale elementy dluzszej listy.
 
-Dane wejściowe: Dwie listy.
+Dane wejsciowe: Dwie listy.
 
-Dane wyjściowe: Kilka liczb.
+Dane wyjsciowe: Kilka liczb.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list [5, 3, 7, 2] oraz [1, -2, 3], zostaną wypisane: 5, 1, 3, -2, 7, 3, 2.
+Dla otrzymanych list [5, 3, 7, 2] oraz [1, -2, 3], zostana wypisane: 5, 1, 3, -2, 7, 3, 2.
 */
 
-// Funkcja wypisująca elementy dwóch list na przemian
+// Funkcja wypisujaca elementy dwoch list na przemian
 function wypiszElementyNaPrzemian(lista1, lista2) {
   let maxLength = Math.max(lista1.length, lista2.length);
 
@@ -30,3 +30,4 @@ function wypiszElementyNaPrzemian(lista1, lista2) {
 // Testy
 console.log("Test dla list [5, 3, 7, 2] oraz [1, -2, 3]:");
 wypiszElementyNaPrzemian([5, 3, 7, 2], [1, -2, 3]);
+

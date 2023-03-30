@@ -1,31 +1,32 @@
 /*
-Tytuł: Polimorfizm. 
+Tytul: Polimorfizm. 
 
-Treść: Zaprojektuj klasę Zwierz oraz klasy potomne Pies i Kot. Obie klasy potomne powinny nadpisywać metodę 'odgłos()' zdefiniowaną w klasie bazowej. Napisz program testujący te klasy, w którym umieścisz obiekty wszystkich trzech klas w jednej liście i przejdziesz przez wszystkie elementy tej listy, wywołując dla każdego z nich funkcję 'odgłos()'."
+Tresc: Zaprojektuj klase Zwierz oraz klasy potomne Pies i Kot. Obie klasy potomne powinny nadpisywac metode 'odglos()' zdefiniowana w klasie bazowej. Napisz program testujacy te klasy, w ktorym umiescisz obiekty wszystkich trzech klas w jednej liscie i przejdziesz przez wszystkie elementy tej listy, wywolujac dla kazdego z nich funkcje 'odglos()'."
 */ // Klasa Zwierz (klasa bazowa)
 class Zwierz {
-  odgłos() {
-    console.log("Nieznany dźwięk");
+  odglos() {
+    console.log("Nieznany dzwiek");
   }
 }
 
 // Klasy potomne Pies i Kot
 class Pies extends Zwierz {
-  odgłos() {
+  odglos() {
     console.log("Hau!");
   }
 }
 
 class Kot extends Zwierz {
-  odgłos() {
+  odglos() {
     console.log("Miau!");
   }
 }
 
-// Tworzymy listę obiektów klas Pies i Kot
+// Tworzymy liste obiektow klas Pies i Kot
 const listaZwierzat = [new Pies(), new Kot(), new Pies(), new Kot()];
 
-// Wywołujemy metodę odgłos() dla każdego obiektu w liście
+// Wywolujemy metode odglos() dla kazdego obiektu w liscie
 listaZwierzat.forEach((zwierze) => {
-  zwierze.odgłos();
+  zwierze.odglos();
 });
+

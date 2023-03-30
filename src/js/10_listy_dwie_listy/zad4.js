@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Mnożenie wektorowe.	
+Tytul: Mnozenie wektorowe.	
 
-Treść: Treść: Otrzymujesz dwie listy liczb całkowitych reprezentujące dwa wektory trójwymiarowej przestrzeni euklidesowej. Zaimplementuj mnożenie wektorowe (zdefiniowane jedynie dla wektorów 3-wymiarowej przestrzeni euklidesowej).
+Tresc: Tresc: Otrzymujesz dwie listy liczb calkowitych reprezentujace dwa wektory trojwymiarowej przestrzeni euklidesowej. Zaimplementuj mnozenie wektorowe (zdefiniowane jedynie dla wektorow 3-wymiarowej przestrzeni euklidesowej).
 
-Dane wejściowe: Dwie listy liczb całkowitych o długości 3.
+Dane wejsciowe: Dwie listy liczb calkowitych o dlugosci 3.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list [1, 2, 3] oraz [3, 1, 2], powinno zostać zwrócone: 5.
+Dla otrzymanych list [1, 2, 3] oraz [3, 1, 2], powinno zostac zwrocone: 5.
 */
 
-// Funkcja mnożąca wektory
+// Funkcja mnozaca wektory
 function mnozWektory(lista1, lista2) {
   let wynik = 0;
   for (let i = 0; i < 3; i++) {
@@ -34,3 +34,4 @@ function main() {
 }
 
 main();
+

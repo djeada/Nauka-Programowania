@@ -1,10 +1,17 @@
 /*
-Zaimplementuj sortowanie przez wybieranie.
+Tytul: Sortowanie przez wybieranie.
+Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania przez
+wybieranie. Znajdz najwiekszy element w liscie i zapisz go do zmiennej.
+Nastepnie znajdz najmniejszy element w pozostalej czesci listy i zamien go z
+pierwszym elementem nieposortowanej czesci. Powtarzaj operacje, az lista bedzie
+posortowana. Dane wejsciowe: Lista liczb calkowitych. Dane wyjsciowe:
+Posortowana lista liczb calkowitych. Przyklad: Dla listy: [6, 2, 1, 4, 27],
+powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
+
 */
 
 #include <cassert>
 #include <vector>
-
 
 void sortuj(std::vector<int> &lista) {
   auto it = lista.begin();
@@ -40,4 +47,6 @@ int main() {
   return 0;
 }
 
-// Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad2.cpp
+// Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra
+// -pedantic -o main.out Zad2.cpp
+

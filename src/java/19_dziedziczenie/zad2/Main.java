@@ -1,3 +1,8 @@
+/*
+Tytul: Zaprojektuj klase Ksztalt oraz klasy potomne Kolo i Kwadrat.
+Tresc: Zaprojektuj klase Ksztalt oraz klasy potomne Kolo i Kwadrat. Napisz program testujacy te klasy.
+
+*/
 // Zaprojektuj klase Ksztalt oraz klasy pochodne Kolo oraz Kwadrat.
 
 public class Main {
@@ -66,3 +71,4 @@ public class Main {
     test2();
   }
 }
+

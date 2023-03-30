@@ -1,14 +1,16 @@
+/*
+Tytul: Minimalny iloczyn.
+Tresc: Otrzymujesz liste liczb calkowitych. Znajdz najmniejszy iloczyn dla
+trzech liczb wybranych z listy. Jesli lista sklada sie z mniej niz trzech liczb,
+zwroc iloczyn wszystkich elementow listy. Dane wejsciowe: Lista liczb
+calkowitych. Dane wyjsciowe: Liczba calkowita. Przyklad: Dla otrzymanej listy:
+[3, -1, -3, 2, 9, 4], powinna zostac zwrocona liczba: -108.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <climits>
 #include <vector>
-
-/*
-Otrzymujesz tablice skladajaca sie wylacznie z zer i jedynek. Znajdz indeks
-zera, ktore po zamianie na jedynke daloby najdluzszy nieprzerwany ciag jedynek.
-Zachowanie dla otrzymanej tablicy skladajacej sie z samych zer jest
-nieokreslone.
-*/
 
 // Zlozonosc czasowa O(nlogn)
 // Zlozonosc pamieciowa O(1)
@@ -152,3 +154,4 @@ int main() {
 
   return 0;
 }
+

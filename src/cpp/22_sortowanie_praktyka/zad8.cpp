@@ -1,3 +1,12 @@
+/*
+Tytul: Wyszukiwanie indeksu klucza w cyklicznie posortowanej liscie.
+Tresc: Otrzymujesz cyklicznie posortowana liste oraz klucz. Znajdz indeks
+pierwszego wystapienia klucza w liscie. Jesli klucz nie wystepuje w liscie,
+zwroc -1. Dane wejsciowe: Cyklicznie posortowana lista, klucz. Dane wyjsciowe:
+Indeks pierwszego wystapienia klucza lub -1. Przyklad: Dla cyklicznie
+posortowanej listy [3, 4, 5, 6, 1, 2] i klucza 4, powinno zostac zwrocone 2.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <vector>
@@ -62,3 +71,4 @@ int main() {
 
   return 0;
 }
+

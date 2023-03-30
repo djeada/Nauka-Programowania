@@ -1,11 +1,16 @@
+/*
+Tytul: Usun spacje ze zdania.
+Tresc: Otrzymasz napis reprezentujacy zdanie. Usun spacje ze zdania.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis:
+"Alamakota".
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
-
-/*
-Policz z ilu slow sklada sie zdanie. Znaki interpunkcyjne nie sa liczone jako
-slowa.
-*/
 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)
@@ -37,3 +42,4 @@ int main() {
   test1();
   return 0;
 }
+

@@ -1,14 +1,18 @@
+/*
+Tytul: Wybieranie minimum i maksimum.
+Tresc: Otrzymujesz dwie liczby naturalne.
+a) Zwroc mniejsza z nich. Zabronione jest uzycie instrukcji warunkowej oraz
+zewnetrznych bibliotek. b) Zwroc wieksza z nich. Zabronione jest uzycie
+instrukcji warunkowej oraz zewnetrznych bibliotek. Dane wejsciowe: Dwie liczby
+naturalne w obu podpunktach. Dane wyjsciowe: Liczba naturalna w obu podpunktach.
+Przyklad:
+a) Dla otrzymanych liczb: 3 i 2, powinna zostac zwrocona liczba: 2.
+b) Dla otrzymanych liczb: 3 i 2, powinna zostac zwrocona liczba: 3.
+
+*/
 #include <cassert>
 #include <cmath>
 #include <string>
-
-/*
-Otrzymujesz liczbe naturalna. Zwroc binarna
-reprezentacje otrzymanej liczby jesli:
-
-a) Otrzymana liczba jest liczba parzysta.
-b) Otrzymana liczba jest liczba pierwsza.
-*/
 
 std::string naBinarny(int liczba) {
   /*
@@ -99,3 +103,4 @@ int main() {
 
   return 0;
 }
+

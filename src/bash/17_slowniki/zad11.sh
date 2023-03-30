@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+# Tytul: Klucz to imie, wartosc lista wypozyczonych ksiazek.
+# Tresc: Zbuduj prosta baze danych dla biblioteki oparta o slownik, w ktorym kluczami sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek. Baza danych powinna umozliwiac:
+# 1. Dodanie wypozyczonej ksiazki do danego czytelnika.
+# 2. Zwrocenie wypozyczonej ksiazki przez czytelnika.
+# 3. Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
 
 source ../assert.sh
-
-# Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych. 
-# a) Wypisz pary posortowane wzgledem napisow.
-# b) Wypisz pary posortowane wzgledem liczb.
 
 posortuj_wzgledem_napisow() {
 
@@ -16,7 +16,7 @@ posortuj_wzgledem_napisow() {
 }
 
 posortuj_wzgledem_liczb() {
-    
+
     for klucz in "${!slownik[@]}"; do
         echo "$klucz ${slownik[$klucz]};"
     done | sort -n -k2
@@ -42,3 +42,4 @@ main() {
 }
 
 main "$@"
+

@@ -1,15 +1,15 @@
 /*
-Tytuł: Choinka.
+Tytul: Choinka.
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej N, wypisze N trójkątów ustawionych w kolumnie, jeden na drugim. Wysokość pierwszego trójkąta to 1, a każdego następnego jest równa wysokości poprzedniego powiększonej o 1.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej N, wypisze N trojkatow ustawionych w kolumnie, jeden na drugim. Wysokosc pierwszego trojkata to 1, a kazdego nastepnego jest rowna wysokosci poprzedniego powiekszonej o 1.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 3 powinno zostać wypisane:
+Dla otrzymanej liczby 3 powinno zostac wypisane:
 
     *
     *
@@ -19,7 +19,7 @@ Dla otrzymanej liczby 3 powinno zostać wypisane:
     ***
     */
 
-// Funkcja wypisująca N trójkątów ustawionych w kolumnie
+// Funkcja wypisujaca N trojkatow ustawionych w kolumnie
 function rysujChoinke(n) {
   var wiersz = "";
   for (var i = 0; i < n; i++) {
@@ -32,11 +32,12 @@ function rysujChoinke(n) {
 }
 
 // Testy
-console.log("Rysuj choinkę o wysokości 2");
+console.log("Rysuj choinke o wysokosci 2");
 rysujChoinke(2);
 
-console.log("\nRysuj choinkę o wysokości 3");
+console.log("\nRysuj choinke o wysokosci 3");
 rysujChoinke(3);
 
-console.log("\nRysuj choinkę o wysokości 4");
+console.log("\nRysuj choinke o wysokosci 4");
 rysujChoinke(4);
+

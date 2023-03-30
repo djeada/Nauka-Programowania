@@ -1,9 +1,9 @@
 /*
-Tytuł: Prostokąt powstały z nałożenia się dwóch prostokątów.
+Tytul: Prostokat powstaly z nalozenia sie dwoch prostokatow.
 
-Opis zadania: Napisz klasę Prostokąt, która będzie reprezentowała prostokąt w układzie kartezjańskim. Prostokąt jest określony przez współrzędne jego czterech wierzchołków. Boki prostokąta są prostopadłe do osi układu współrzędnych. Klasa powinna zawierać funkcję statyczną, która zwraca pole prostokąta powstałego z nałożenia się dwóch prostokątów. Jeśli dwa prostokąty nie pokrywają się, funkcja powinna zwracać 0.
+Opis zadania: Napisz klase Prostokat, ktora bedzie reprezentowala prostokat w ukladzie kartezjanskim. Prostokat jest okreslony przez wspolrzedne jego czterech wierzcholkow. Boki prostokata sa prostopadle do osi ukladu wspolrzednych. Klasa powinna zawierac funkcje statyczna, ktora zwraca pole prostokata powstalego z nalozenia sie dwoch prostokatow. Jesli dwa prostokaty nie pokrywaja sie, funkcja powinna zwracac 0.
 
-Napisz program, który przetestuje twoją klasę. Stwórz prostokąty: A (3, 6, 9, 4) oraz B (2, 5, 7, 2). Wypisz na standardowe wyjście informacje o utworzonych prostokątach. Sprawdź, czy pole części wspólnej równe jest 6.
+Napisz program, ktory przetestuje twoja klase. Stworz prostokaty: A (3, 6, 9, 4) oraz B (2, 5, 7, 2). Wypisz na standardowe wyjscie informacje o utworzonych prostokatach. Sprawdz, czy pole czesci wspolnej rowne jest 6.
 */
 
 class Prostokat {
@@ -61,7 +61,7 @@ class Prostokat {
 
   wypiszInfo() {
     console.log(
-      `Prostokąt o wierzchołkach: (${this.wierzcholki[0][0]}, ${this.wierzcholki[0][1]}), (${this.wierzcholki[1][0]}, ${this.wierzcholki[1][1]}), (${this.wierzcholki[2][0]}, ${this.wierzcholki[2][1]}), (${this.wierzcholki[3][0]}, ${this.wierzcholki[3][1]})`
+      `Prostokat o wierzcholkach: (${this.wierzcholki[0][0]}, ${this.wierzcholki[0][1]}), (${this.wierzcholki[1][0]}, ${this.wierzcholki[1][1]}), (${this.wierzcholki[2][0]}, ${this.wierzcholki[2][1]}), (${this.wierzcholki[3][0]}, ${this.wierzcholki[3][1]})`
     );
   }
 }
@@ -73,4 +73,5 @@ prostokatA.wypiszInfo();
 prostokatB.wypiszInfo();
 
 const poleCzesciWspolnej = Prostokat.poleCzesciWspolnej(prostokatA, prostokatB);
-console.log(`Pole części wspólnej prostokątów A i B: ${poleCzesciWspolnej}`);
+console.log(`Pole czesci wspolnej prostokatow A i B: ${poleCzesciWspolnej}`);
+

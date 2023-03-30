@@ -1,6 +1,9 @@
-#!/usr/bin/env bash
-
-#Napisz funkcje, ktora zamieni wartosci miejscami.
+# Tytul: Zamien wartosci miejscami.
+# Tresc: Napisz funkcje, ktora zamieni wartosci zmiennych a i b miejscami. Po wykonaniu funkcji zmienna a powinna przechowywac wartosc zmiennej b, a zmienna b powinna przechowywac wartosc zmiennej a.
+# Dane wejsciowe: Dwie liczby naturalne.
+# Dane wyjsciowe: Dwie liczby naturalne.
+# Przyklad:
+# Dla otrzymanych liczb: 8 i 5, powinny zostac zwrocone liczby 5 i 8.
 
 swapV1() {
 

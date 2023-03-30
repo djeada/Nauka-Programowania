@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Minimalny iloczyn.
+Tytul: Minimalny iloczyn.
 
-Treść: Otrzymujesz listę liczb całkowitych. Znajdź najmniejszy iloczyn dla trzech liczb wybranych z listy. Jeśli lista składa się z mniej niż trzech liczb, zwróć iloczyn wszystkich elementów listy.
+Tresc: Otrzymujesz liste liczb calkowitych. Znajdz najmniejszy iloczyn dla trzech liczb wybranych z listy. Jesli lista sklada sie z mniej niz trzech liczb, zwroc iloczyn wszystkich elementow listy.
 
-Dane wejściowe: Lista liczb całkowitych.
+Dane wejsciowe: Lista liczb calkowitych.
 
-Dane wyjściowe: Liczba całkowita.
+Dane wyjsciowe: Liczba calkowita.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [3, -1, -3, 2, 9, 4], powinna zostać zwrócona liczba: -108.
+Dla otrzymanej listy: [3, -1, -3, 2, 9, 4], powinna zostac zwrocona liczba: -108.
 
 */
 
@@ -36,3 +36,4 @@ const wynik2 = 6;
 
 console.assert(minimalnyIloczyn(lista1) === wynik1, "Test 1 nieudany");
 console.assert(minimalnyIloczyn(lista2) === wynik2, "Test 2 nieudany");
+

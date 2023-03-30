@@ -1,15 +1,17 @@
+/*
+Tytul: Przesun wszystkie pliki CSV do jednego folderu.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow.
+Przenies wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderow) do
+drugiego folderu. Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
+Dane wyjsciowe: Brak.
+
+*/
 #include <cassert>
 #include <experimental/filesystem>
 #include <fstream>
 #include <string>
 
 namespace filesys = std::experimental::filesystem;
-
-/*
-Otrzymujesz napis reprezentujacy sciezke folderu. Usun
-wszystkie pliki o rozmiarach wiekszych niz 10 kB znajdujace
-sie w podanym folderze oraz jego podfolderach.
-*/
 
 int rozmiarPliku(const std::string &sciezka) {
   return filesys::file_size(filesys::path(sciezka));
@@ -52,3 +54,4 @@ int main() {
 
   return 0;
 }
+

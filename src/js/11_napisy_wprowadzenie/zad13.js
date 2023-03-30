@@ -1,15 +1,15 @@
 /*
-Tytuł: Znaki znajdujące się na pozycjach będących liczbami pierwszymi.
+Tytul: Znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
 
-Treść: Otrzymasz napis. Znajdź znaki znajdujące się na pozycjach będących liczbami pierwszymi.
+Tresc: Otrzymasz napis. Znajdz znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista znaków.
+Dane wyjsciowe: Lista znakow.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "Słoń", powinna zostać zwrócona lista: ['o', 'ń'].
+Dla otrzymanego napisu: "Slon", powinna zostac zwrocona lista: ['o', 'n'].
 */
 
 function czyLiczbaPierwsza(n) {
@@ -37,20 +37,21 @@ function znakiNaPozycjachPierwszych(napis) {
 // Test
 
 function test() {
-  let input = "Słoń";
-  let expectedOutput = ["o", "ń"];
+  let input = "Slon";
+  let expectedOutput = ["o", "n"];
   let output = znakiNaPozycjachPierwszych(input);
 
   console.assert(
     JSON.stringify(output) === JSON.stringify(expectedOutput),
-    "Test nie powiódł się dla " +
+    "Test nie powiodl sie dla " +
       input +
       ". Otrzymany wynik to " +
       output +
       ", a oczekiwany wynik to " +
       expectedOutput
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Najdłuższy wspólny podnapis.
+Tytul: Najdluzszy wspolny podnapis.
 
-Treść: Dostajesz dwa napisy. Znajdź najdłuższy wspólny podnapis tych dwóch napisów.
+Tresc: Dostajesz dwa napisy. Znajdz najdluzszy wspolny podnapis tych dwoch napisow.
 
-Dane wejściowe: Dwa napisy.
+Dane wejsciowe: Dwa napisy.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla napisów "ijkabcdl" i "xxxxabcd" powinien zostać zwrócony napis "abcd".
+Dla napisow "ijkabcdl" i "xxxxabcd" powinien zostac zwrocony napis "abcd".
 
 */
 
@@ -53,3 +53,4 @@ function testNajdluzszyWspolnyPodnapis() {
 }
 
 testNajdluzszyWspolnyPodnapis();
+

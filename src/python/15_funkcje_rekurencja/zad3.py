@@ -1,6 +1,11 @@
 """
-Otrzymuje dwie liczby a i b. Przy uzyciu rekurencji 
-oblicz ile wynosi a podniesione do b.
+Tytul: Silnia.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz silnie z tej liczby.
+Dane wejsciowe: Liczba naturalna N.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla N = 3, powinna zostac zwrocona liczba: 6.
+
 """
 
 
@@ -26,3 +31,4 @@ def test_potega():
 
 if __name__ == "__main__":
     test_potega()
+

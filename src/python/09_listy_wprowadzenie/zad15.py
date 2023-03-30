@@ -1,8 +1,11 @@
 """
-Dla otrzymanej listy liczb naturalnych, znajdz element dominujacy. 
-Element dominujacy to element, ktorego liczba wystapien w liscie 
-jest wieksza niz polowa dlugosci listy. Jesli lista nie ma 
-elementu dominujacego, zwroc -1.
+Tytul: Liczba mniejsza od najwiekszej i wieksza od wszystkich pozostalych.
+Tresc: Otrzymujesz liste liczb naturalnych. Znajdz najwieksza i druga co do wielkosci liczbe w liscie, a nastepnie oblicz srednia arytmetyczna tych dwoch liczb i zwroc ja jako liczbe zmiennoprzecinkowa.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Liczba zmiennoprzecinkowa oznaczajaca srednia arytmetyczna najwiekszej i drugiej co do wielkosci liczby z listy.
+Przyklad:
+Dla otrzymanej listy [9, 2, 3, 2, 1, 7] powinna zostac zwrocona liczba 8.0.
+
 """
 
 
@@ -24,3 +27,4 @@ def test_element_dominujacy():
 if __name__ == "__main__":
 
     test_element_dominujacy()
+

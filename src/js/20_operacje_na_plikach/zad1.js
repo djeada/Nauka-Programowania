@@ -1,11 +1,11 @@
 /*
-Tytuł: Sprawdzenie, czy ścieżka należy do pliku/folderu
+Tytul: Sprawdzenie, czy sciezka nalezy do pliku/folderu
 
-Treść: Otrzymujesz napis reprezentujący ścieżkę. Sprawdź, czy jest to ścieżka do pliku lub folderu.
+Tresc: Otrzymujesz napis reprezentujacy sciezke. Sprawdz, czy jest to sciezka do pliku lub folderu.
 
-Dane wejściowe: Napis
+Dane wejsciowe: Napis
 
-Dane wyjściowe: Wartość logiczna
+Dane wyjsciowe: Wartosc logiczna
 */
 
 const fs = require("fs").promises;
@@ -39,7 +39,7 @@ const testCzyPlik = async () => {
 
   console.assert(
     wynik === oczekiwane,
-    `Błąd testu czyPlik: ${wynik} !== ${oczekiwane}`
+    `Blad testu czyPlik: ${wynik} !== ${oczekiwane}`
   );
 
   const oczekiwane2 = false;
@@ -47,7 +47,7 @@ const testCzyPlik = async () => {
 
   console.assert(
     wynik2 === oczekiwane2,
-    `Błąd testu czyPlik: ${wynik2} !== ${oczekiwane2}`
+    `Blad testu czyPlik: ${wynik2} !== ${oczekiwane2}`
   );
 
   await fs.unlink(sciezkaPliku);
@@ -63,7 +63,7 @@ const testCzyFolder = async () => {
 
   console.assert(
     wynik === oczekiwane,
-    `Błąd testu czyFolder: ${wynik} !== ${oczekiwane}`
+    `Blad testu czyFolder: ${wynik} !== ${oczekiwane}`
   );
 
   const oczekiwane2 = true;
@@ -71,7 +71,7 @@ const testCzyFolder = async () => {
 
   console.assert(
     wynik2 === oczekiwane2,
-    `Błąd testu czyFolder: ${wynik2} !== ${oczekiwane2}`
+    `Blad testu czyFolder: ${wynik2} !== ${oczekiwane2}`
   );
 
   await fs.rmdir(sciezkaFolderu);
@@ -83,3 +83,4 @@ const main = async () => {
 };
 
 main();
+

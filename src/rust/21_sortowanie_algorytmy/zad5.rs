@@ -45,3 +45,4 @@ fn test_1() {
 fn main() {
 	test_1();
 }
+

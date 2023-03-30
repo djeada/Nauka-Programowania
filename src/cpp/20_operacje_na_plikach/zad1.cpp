@@ -1,15 +1,15 @@
+/*
+Tytul: Sprawdzenie, czy sciezka nalezy do pliku/folderu
+Tresc: Otrzymujesz napis reprezentujacy sciezke. Sprawdz, czy jest to sciezka do
+pliku lub folderu. Dane wejsciowe: Napis Dane wyjsciowe: Wartosc logiczna
+
+*/
 #include <cassert>
 #include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
 
 namespace filesys = std::experimental::filesystem;
-
-/*
-Otrzymujesz napis reprezentujacy sciezke.
-a) Sprawdz, czy jest to sciezka pliku.
-b) Sprawdz, czy jest to sciezka folderu.
-*/
 
 bool czyPlik(std::string sciezka) {
   try {
@@ -72,3 +72,4 @@ int main() {
 }
 
 // Compiling with g++ -std=c++17 Zad1.cpp -lstdc++fs -o exe
+

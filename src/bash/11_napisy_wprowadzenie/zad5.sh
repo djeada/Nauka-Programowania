@@ -1,8 +1,9 @@
-#!/usr/bin/env bash
-
-# Otrzymujesz napis oraz liczbe k.
-# a) wypisz poziomo co k-ty znak. Znaki powinny byc oddzielone spacjami.
-# b) wypisz pionowo co k-ty znak. Znaki powinny byc oddzielone enterami.
+# Tytul: Napis skladajacy sie z liczb od 1 do n.
+# Tresc: Otrzymasz liczbe naturalna n. Zwroc napis skladajacy sie z liczb naturalnych od 1 do n.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: Napis.
+# Przyklad:
+# Dla otrzymanej liczby n rownej 3 powinien zostac zwrocony napis: "123".
 
 wypisz_poziomo() {
     local napis="$1"
@@ -32,7 +33,6 @@ main() {
     wypisz_poziomo "$napis" $k
     wypisz_pionowo "$napis" $k
 }
-
 
 main "$@"
 

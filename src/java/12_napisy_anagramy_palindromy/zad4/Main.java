@@ -1,3 +1,12 @@
+/*
+Tytul: Wyszukanie wszystkich palindromow w zdaniu.
+Tresc: Napisz program, ktory otrzymuje napis reprezentujacy zdanie. Twoim zadaniem jest znalezienie wszystkich palindromow w zdaniu. Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla otrzymanego napisu: “Tata zabral kajak na wycieczke i uderzyl sie w oko”, powinna zostac zwrocona lista: ["kajak", "i", "w", "oko"].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -58,3 +67,4 @@ public class Main {
     test1();
   }
 }
+

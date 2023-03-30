@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+# Tytul:Wypisz pionowo slowa, z ktorych sklada sie zdanie.
+# Tresc: Otrzymasz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe. Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Kilka napisow.
+# Przyklad:
+# Dla otrzymanego napisu: "Ala ma kota", powinno zostac wypisane: "Ala", "ma", "kota".
 
 source ../assert.sh
-
-# Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej
-# dlugosci, zdefiniowana jako liczba pozycji na ktorych napisy maja rozne
-# znaki.
 
 odleglosc_hamminga() {
 
@@ -47,7 +48,6 @@ main() {
     test1
     test2
 }
-
 
 main "$@"
 

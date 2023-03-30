@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Różnica między dwoma listami.
+Tytul: Roznica miedzy dwoma listami.
 
-Treść: Dla otrzymanych dwóch list liczb całkowitych, znajdź elementy, które nie są częścią wspólną obu list.
+Tresc: Dla otrzymanych dwoch list liczb calkowitych, znajdz elementy, ktore nie sa czescia wspolna obu list.
 
-Dane wejściowe: Dwie listy liczb całkowitych.
+Dane wejsciowe: Dwie listy liczb calkowitych.
 
-Dane wyjściowe: Lista liczb całkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostać zwrócona lista: [9, 5, 1].
+Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5, 1].
 */
 
-// Funkcja zwracająca listę elementów, które nie są częścią wspólną obu list
+// Funkcja zwracajaca liste elementow, ktore nie sa czescia wspolna obu list
 function znajdzRoznice(lista1, lista2) {
   let wynik = [];
   let maxLength = Math.max(lista1.length, lista2.length);
@@ -49,3 +49,4 @@ function testZnajdzRoznice() {
 }
 
 testZnajdzRoznice();
+

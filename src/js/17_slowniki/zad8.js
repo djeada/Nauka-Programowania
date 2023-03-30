@@ -1,19 +1,19 @@
 /*
 
 
-Tytuł: Najczęściej występująca litera w zdaniu
+Tytul: Najczesciej wystepujaca litera w zdaniu
 
-Treść: Otrzymujesz napis reprezentujący zdanie. Twoim zadaniem jest znalezienie najczęściej występującej litery w zdaniu. Jeśli więcej niż jedna litera występuje tę samą liczbę razy, należy zwrócić literę najwcześniej pojawiającą się w zdaniu.
+Tresc: Otrzymujesz napis reprezentujacy zdanie. Twoim zadaniem jest znalezienie najczesciej wystepujacej litery w zdaniu. Jesli wiecej niz jedna litera wystepuje te sama liczbe razy, nalezy zwrocic litere najwczesniej pojawiajaca sie w zdaniu.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Znak.
+Dane wyjsciowe: Znak.
 
-Przykład:
+Przyklad:
 
 Dla otrzymanego napisu: "lezy jerzy na wiezy"
 
-Powinna zostać zwrócona litera: 'e'
+Powinna zostac zwrocona litera: 'e'
 */
 
 function najczestszaLitera(zdanie) {
@@ -40,11 +40,12 @@ function najczestszaLitera(zdanie) {
 function testNajczestszaLitera() {
   const zdanie1 = "lezy jerzy na wiezy";
   const wynik1 = najczestszaLitera(zdanie1);
-  console.assert(wynik1 === "e", "Test 1 nie powiódł się");
+  console.assert(wynik1 === "e", "Test 1 nie powiodl sie");
 
   const zdanie2 = "Ala ma kota";
   const wynik2 = najczestszaLitera(zdanie2);
-  console.assert(wynik2 === "a", "Test 2 nie powiódł się");
+  console.assert(wynik2 === "a", "Test 2 nie powiodl sie");
 }
 
 testNajczestszaLitera();
+

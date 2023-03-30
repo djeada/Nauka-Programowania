@@ -1,3 +1,12 @@
+/*
+Tytul: Haslo.
+Tresc: Napisz dwie funkcje:
+* Pierwsza funkcja powinna prosic uzytkownika o podanie nazwy uzytkownika i hasla, a nastepnie zwrocic te dane.
+* Druga funkcja powinna otrzymac dane od pierwszej funkcji i ponownie prosic uzytkownika o podanie nazwy uzytkownika i hasla. Prosba o podanie danych powinna byc umieszczona w petli. Warunkiem zakonczenia petli jest podanie przez uzytkownika danych identycznych z tymi przekazanymi przez pierwsza funkcje.
+Dane wejsciowe: dwie nazwy uzytkownika i hasla (napisy)
+Dane wyjsciowe: komunikat
+
+*/
 import java.util.*;
 
 public class Main {
@@ -55,3 +64,4 @@ public class Main {
     System.out.print("iloraz pierwszej przez druga to: " + podziel(a, b) + "\n");
   }
 }
+

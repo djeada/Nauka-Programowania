@@ -1,8 +1,14 @@
-#!/usr/bin/env bash
-
-#Napisz funkcje, ktora dla otrzymanej liczby
-#wypisze litere Z, o wysokosci rownej
-#otrzymanej liczbie.
+# Tytul: Litera Z.
+# Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze litere Z o wysokosci rownej tej liczbie.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: Komunikat.
+# Przyklad:
+# Dla otrzymanej liczby 5 powinno zostac wypisane:
+# *****
+# *
+# *
+# *
+# *****
 
 literaZ() {
 

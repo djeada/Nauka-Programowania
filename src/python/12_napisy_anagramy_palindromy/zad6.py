@@ -1,11 +1,17 @@
 """
-Znajdz permutacje danego slowa bedace palindromami.
+Tytul: Permutacje slowa, ktore sa palindromami.
+Tresc: Napisz program, ktory znajdzie permutacje danego slowa, ktore sa palindromami.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla otrzymanego napisu: “taco”, powinna zostac zwrocona lista: ["taco", "toca"].
+
 """
 
 
 def permutacje(napis):
     """
-    Funkcja zwraca liste wszystkich permutacji danego napisu. 
+    Funkcja zwraca liste wszystkich permutacji danego napisu.
     """
     if len(napis) == 1:
         return [napis]
@@ -19,14 +25,14 @@ def permutacje(napis):
 
 def czy_palindrom(napis):
     """
-    Funkcja sprawdza czy dany napis jest palindromem. 
+    Funkcja sprawdza czy dany napis jest palindromem.
     """
     return napis == napis[::-1]
 
 
 def permutacje_palindromiczne(napis):
     """
-    Funkcja zwraca liste wszystkich permutacji danego napisu, ktore sa palindromami. 
+    Funkcja zwraca liste wszystkich permutacji danego napisu, ktore sa palindromami.
     """
     return [permutacja for permutacja in permutacje(napis) if czy_palindrom(permutacja)]
 
@@ -37,3 +43,4 @@ def test_permutacje_palindromiczne():
 
 if __name__ == "__main__":
     test_permutacje_palindromiczne()
+

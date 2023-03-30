@@ -1,14 +1,17 @@
+/*
+Tytul: Najczesciej wystepujaca litera w zdaniu
+Tresc: Otrzymujesz napis reprezentujacy zdanie. Twoim zadaniem jest znalezienie
+najczesciej wystepujacej litery w zdaniu. Jesli wiecej niz jedna litera
+wystepuje te sama liczbe razy, nalezy zwrocic litere najwczesniej pojawiajaca
+sie w zdaniu. Dane wejsciowe: Napis. Dane wyjsciowe: Znak. Przyklad: Dla
+otrzymanego napisu: "lezy jerzy na wiezy" Powinna zostac zwrocona litera: 'e'
+
+*/
 #include <cassert>
 #include <string>
 #include <unordered_map>
 #include <utility>
 #include <vector>
-
-/*
-Otrzymujesz liste par. Pierwszym elementem pary jest napis reprezentujacy
-imie i nazwisko pracownika, drugim zysk z transakcji jaka dany pracownik
-przeprowadzil. Znajdz pracownika, ktory przyniosl firmie najwiecej zysku.
-*/
 
 void wypelnijSlownik(const std::vector<std::pair<std::string, int>> &lista,
                      std::unordered_map<std::string, int> &slownik) {
@@ -79,3 +82,4 @@ int main() {
 
   return 0;
 }
+

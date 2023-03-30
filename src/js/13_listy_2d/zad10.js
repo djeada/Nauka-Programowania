@@ -1,21 +1,21 @@
 /*
 
-Tytuł: Obróć macierz o 90 stopni.
+Tytul: Obroc macierz o 90 stopni.
 
-Treść: Otrzymujesz macierz składającą się z liczb naturalnych. Obróć ją o 90 stopni. Tzn. zamień miejscami ostatnią kolumnę z ostatnim wierszem, przedostatnią kolumnę z przedostatnim wierszem itd.
+Tresc: Otrzymujesz macierz skladajaca sie z liczb naturalnych. Obroc ja o 90 stopni. Tzn. zamien miejscami ostatnia kolumne z ostatnim wierszem, przedostatnia kolumne z przedostatnim wierszem itd.
 
-Dane wejściowe: Macierz składająca się z liczb naturalnych.
+Dane wejsciowe: Macierz skladajaca sie z liczb naturalnych.
 
-Dane wyjściowe: Macierz składająca się z liczb naturalnych.
+Dane wyjsciowe: Macierz skladajaca sie z liczb naturalnych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostać zwrócona macierz: [[7,4,1], [8,5,2], [9,6,3]].
+Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona macierz: [[7,4,1], [8,5,2], [9,6,3]].
 */
 function obrocMacierz(macierz) {
   const n = macierz.length;
 
-  // odwróć kolejność kolumn
+  // odwroc kolejnosc kolumn
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n / 2; j++) {
       const temp = macierz[i][j];
@@ -24,7 +24,7 @@ function obrocMacierz(macierz) {
     }
   }
 
-  // zamień wiersze z kolumnami
+  // zamien wiersze z kolumnami
   for (let i = 0; i < n; i++) {
     for (let j = i + 1; j < n; j++) {
       const temp = macierz[i][j];
@@ -59,10 +59,11 @@ function test() {
     }
   }
   if (czyPoprawny) {
-    console.log("Test przeszedł pomyślnie");
+    console.log("Test przeszedl pomyslnie");
   } else {
     console.error("Niepoprawny wynik dla macierzy ", macierz);
   }
 }
 
 test();
+

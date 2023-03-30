@@ -1,24 +1,25 @@
 /*
-Tytuł: Liczba pi.
+Tytul: Liczba pi.
 
-Treść: Dla otrzymanej liczby naturalnej wypisz liczbę Pi tyle razy, ile wynosi ta liczba, z dokładnością do tylu miejsc po przecinku, ile wynosi otrzymana liczba.
+Tresc: Dla otrzymanej liczby naturalnej wypisz liczbe Pi tyle razy, ile wynosi ta liczba, z dokladnoscia do tylu miejsc po przecinku, ile wynosi otrzymana liczba.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 2, powinno zostać wypisane:
+Dla otrzymanej liczby 2, powinno zostac wypisane:
 
     3,14
     3,14
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Pętla
+// Petla
 for (let i = 0; i < liczba; i++) {
   console.log(Math.PI.toFixed(liczba));
 }
+

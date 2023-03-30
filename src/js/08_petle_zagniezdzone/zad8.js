@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Trójkąt Pascala.
+Tytul: Trojkat Pascala.
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze trójkąt Pascala o wysokości równej tej liczbie.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze trojkat Pascala o wysokosci rownej tej liczbie.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 3 powinno zostać wypisane:
+Dla otrzymanej liczby 3 powinno zostac wypisane:
 
   1
   11
@@ -18,7 +18,7 @@ Dla otrzymanej liczby 3 powinno zostać wypisane:
 
 */
 
-// Funkcja wypisująca trójkąt Pascala o wysokości równej liczbie
+// Funkcja wypisujaca trojkat Pascala o wysokosci rownej liczbie
 function rysujTrojkatPascala(wysokosc) {
   var trojkat = [];
 
@@ -44,11 +44,12 @@ function rysujTrojkatPascala(wysokosc) {
 }
 
 // Testy
-console.log("Rysuj trójkąt Pascala o wysokości 2");
+console.log("Rysuj trojkat Pascala o wysokosci 2");
 rysujTrojkatPascala(2);
 
-console.log("\nRysuj trójkąt Pascala o wysokości 3");
+console.log("\nRysuj trojkat Pascala o wysokosci 3");
 rysujTrojkatPascala(3);
 
-console.log("\nRysuj trójkąt Pascala o wysokości 4");
+console.log("\nRysuj trojkat Pascala o wysokosci 4");
 rysujTrojkatPascala(4);
+

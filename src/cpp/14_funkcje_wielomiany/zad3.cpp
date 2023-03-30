@@ -1,12 +1,15 @@
+/*
+Tytul: Obliczenie sumy wielomianow.
+Tresc: Otrzymujesz dwie listy n wspolczynnikow wielomianu w postaci $a_nx^n +
+a_{n-1}x^{n-1} + ... + a_0$. Oblicz wspolczynniki wielomianu bedacego suma
+otrzymanych wielomianow. Dane wejsciowe: Dwie listy liczb naturalnych. Dane
+wyjsciowe: Lista liczb naturalnych. Przyklad: Dla otrzymanych dwoch list [3, 5,
+2] oraz [2, -8, 1], zostanie zwrocona lista [5, -3, 3].
+
+*/
 #include <cassert>
 #include <cmath>
 #include <vector>
-
-/*
-Otrzymujesz dwie listy n wspolczynnikow wielomianu postaci a_nx^n +
-a_(n-1)x^(n-1) + ... + a_0. Oblicz wspolczynniki wielomianu bedacego suma
-otrzymanych wielomianow.
-*/
 
 std::vector<int> sumaWielomianow(std::vector<int> &wielomianA,
                                  std::vector<int> &wielomianB) {
@@ -47,3 +50,4 @@ int main() {
 
   return 0;
 }
+

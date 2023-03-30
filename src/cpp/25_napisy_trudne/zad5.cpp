@@ -1,10 +1,13 @@
+/*
+Tytul: Usun powtorzenia znakow.
+Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen kazdego znaku
+w napisie. Kazdy znak moze wystapic tylko raz. Dane wejsciowe: Napis. Dane
+wyjsciowe: Napis. Przyklad: Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis
+powinien brzmiec: “AB”.
+
+*/
 #include <cassert>
 #include <string>
-
-/*
-Otrzymujesz napis. Jesli znaki stojace obok siebie powtarzaja sie,
-zachowaj pierwsze wystapienie znaku i usun powtorzenia.
-*/
 
 std::string usunPowtorzeniaV1(const std::string &slowo) {
 
@@ -73,3 +76,4 @@ int main() {
 }
 
 // Compiled with g++ -std=c++17 Zad1.cpp -lstdc++fs -o exe
+

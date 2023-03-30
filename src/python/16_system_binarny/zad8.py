@@ -1,7 +1,11 @@
 """
-Otrzymujesz dziesietna reprezentacje liczby naturalnej. Znajdz potege 
-dwojki wieksza badz rowna otrzymanej liczbie. Inaczej: zaokraglij liczbe 
-do nastepnej potegi dwojki.
+Tytul: Czy liczba jest palindromem?
+Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Sprawdz, czy reprezentacja binarna otrzymanej liczby jest palindromem.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla otrzymanej liczby 26, powinna zostac zwrocona wartosc logiczna: Prawda.
+
 """
 
 
@@ -28,7 +32,7 @@ def nastepna_potega_dwojki_v1(liczba):
 def nastepna_potega_dwojki_v2(liczba):
     """
     Funkcja zwraca nastepna potege dwojki wieksza badz rowna liczbie.
-    Zasada dzialania opiera sie na obliczeniu nastepnych poteg dwojki, 
+    Zasada dzialania opiera sie na obliczeniu nastepnych poteg dwojki,
     az otrzymamy liczbe wieksza lub rowna podanej liczbie.
     """
 
@@ -60,3 +64,4 @@ def test_nastepna_potega_dwojki_v2():
 if __name__ == "__main__":
     test_nastepna_potega_dwojki_v1()
     test_nastepna_potega_dwojki_v2()
+

@@ -1,12 +1,18 @@
+/*
+Tytul: Minimalna ilosc usunietych znakow, aby uzyskac anagramy.
+Tresc: Napisz program, ktory dla dwoch slow zwroci minimalna ilosc znakow, ktore
+trzeba usunac, aby uzyskac anagramy. Jesli slowa sa roznej dlugosci, zwroc -1.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanych napisow: “grazyna” oraz “razynax”, powinna zostac zwrocona
+liczba: 2.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
 #include <unordered_map>
-
-/*
-Dla dwoch slow, ile minimalnie znakow musimy usunac aby uzyskac anagramy.
-Zwroc -1 dla slow o roznych dlugosciach.
-*/
 
 int liczbaZnakow(const std::string &slowoA, const std::string &slowoB) {
 
@@ -55,3 +61,4 @@ int main() {
 
   return 0;
 }
+

@@ -1,3 +1,16 @@
+/*
+Tytul: Zwroc stala.
+Tresc: Napisz funkcje, ktora zwroci:
+a) Liczbe 3.
+b) Napis "Tak".
+c) Wartosc logiczna Prawda.
+Dane wejsciowe: Brak.
+Dane wyjsciowe:
+a) Liczba 3.
+b) Napis "Tak".
+c) Wartosc logiczna Prawda.
+
+*/
 public class Main {
   // Napisz funkcje ktora zwroci
   // a) liczbe 3
@@ -35,3 +48,4 @@ public class Main {
     test3();
   }
 }
+

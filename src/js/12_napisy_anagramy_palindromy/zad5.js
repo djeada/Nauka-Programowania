@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Znalezienie anagramów słowa w zdaniu.
+Tytul: Znalezienie anagramow slowa w zdaniu.
 
-Treść: Napisz program, który otrzymuje napis reprezentujący zdanie oraz słowo. Twoim zadaniem jest znalezienie wszystkich anagramów otrzymanego słowa w zdaniu. Różnice między wielkimi i małymi literami powinny być zignorowane.
+Tresc: Napisz program, ktory otrzymuje napis reprezentujacy zdanie oraz slowo. Twoim zadaniem jest znalezienie wszystkich anagramow otrzymanego slowa w zdaniu. Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
 
-Dane wejściowe: Dwa napisy.
+Dane wejsciowe: Dwa napisy.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych napisów: “Sroga kara.” oraz “arak”, powinna zostać zwrócona lista: [“kara”].
+Dla otrzymanych napisow: “Sroga kara.” oraz “arak”, powinna zostac zwrocona lista: [“kara”].
 */
 
 function czyAnagramy(napis1, napis2) {
@@ -47,7 +47,7 @@ function test() {
 
   console.assert(
     JSON.stringify(output) === JSON.stringify(expectedOutput),
-    'Test nie powiódł się dla "' +
+    'Test nie powiodl sie dla "' +
       inputZdanie +
       '" i "' +
       inputSlowo +
@@ -56,7 +56,8 @@ function test() {
       ", a oczekiwany wynik to " +
       JSON.stringify(expectedOutput)
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

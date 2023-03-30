@@ -1,16 +1,18 @@
-#include <cassert>
-#include <cmath>
-
 /*
-Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora dla otrzymanych
-dwoch liczb odpowie na nastepujace pytanie:
-
+Tytul:  Sprawdz warunek
+Napisz funkcje, ktora sprawdzi nastepujace warunki dla otrzymanych dwoch liczb:
 a) Czy pierwsza liczba jest wieksza od drugiej liczby?
 b) Czy suma liczb jest mniejsza niz 10?
 c) Czy obie liczby sa nieparzyste?
 d) Czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do
-kwadratu?
+kwadratu? Dane wejsciowe: dwie liczby naturalne Dane wyjsciowe: cztery wartosci
+logiczne, odpowiadajace na kazde z pytan Przyklad: Dla pobranych liczb 3 i 2,
+funkcja powinna zwrocic nastepujace wartosci logiczne: a) Prawda b) Prawda c)
+Falsz d) Prawda
+
 */
+#include <cassert>
+#include <cmath>
 
 bool pierwszaWieksza(int pierwszaLiczba, int drugaLiczba) {
   return pierwszaLiczba > drugaLiczba;
@@ -65,3 +67,4 @@ int main() {
 
   return 0;
 }
+

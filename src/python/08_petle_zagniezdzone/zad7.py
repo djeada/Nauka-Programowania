@@ -1,8 +1,17 @@
 """
-Napisz funkcje, ktora dla otrzymanej liczby N, wypisze N trojkatow. 
-Trojkaty powinny byc ustawione w kolumnie, jeden na drugim. Wysokosc 
-pierwszego trojkata to 1, a kazdego nastepnego rowna jest wysokosci 
-poprzedniego powiekszonej o 1.
+Tytul: Choinka.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej N, wypisze N trojkatow ustawionych w kolumnie, jeden na drugim. Wysokosc pierwszego trojkata to 1, a kazdego nastepnego jest rowna wysokosci poprzedniego powiekszonej o 1.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Komunikat.
+Przyklad:
+Dla otrzymanej liczby 3 powinno zostac wypisane:
+*
+*
+**
+*
+**
+***
+
 """
 
 
@@ -24,3 +33,4 @@ if __name__ == "__main__":
     wysokosc = int(input())
 
     choinka(wysokosc)
+

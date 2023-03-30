@@ -1,19 +1,19 @@
 /*
-Tytuł: Dodawanie i odejmowanie macierzy.
+Tytul: Dodawanie i odejmowanie macierzy.
 
-Treść: Otrzymujesz dwie macierze o tych samych wymiarach. Zwróć dwie macierze będące:
+Tresc: Otrzymujesz dwie macierze o tych samych wymiarach. Zwroc dwie macierze bedace:
 
 a) wynikiem dodawania otrzymanych macierzy
 
 b) wynikiem odejmowania drugiej macierzy od pierwszej.
 
-Dane wejściowe: Dwie listy list liczb naturalnych.
+Dane wejsciowe: Dwie listy list liczb naturalnych.
 
-Dane wyjściowe: Dwie listy list liczb naturalnych.
+Dane wyjsciowe: Dwie listy list liczb naturalnych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych dwóch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinny zostać zwrócone następujące macierze:
+Dla otrzymanych dwoch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinny zostac zwrocone nastepujace macierze:
 
 a) [[6, -1], [-1, 7]] - wynik dodawania
 
@@ -94,3 +94,4 @@ function testOdejmijMacierze() {
 
 testDodajMacierze();
 testOdejmijMacierze();
+

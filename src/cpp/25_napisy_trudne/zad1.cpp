@@ -1,11 +1,9 @@
+/*
+## Napisy — trudne
+
+*/
 #include <cassert>
 #include <string>
-
-/*
-Otrzymujesz trzy napisy. Pierwszy napis reprezentuje zdanie. Drugi reprezentuje
-slowo A wystepujace w zdaniu. Trzeci reprezentuje slowo B, na ktore ma zostac
-zamienione slowo A. Podmien w zdaniu wszystkie wystapienia slowa A na slowo B.
-*/
 
 std::string zamienWszystkoV1(std::string zdanie, std::string napisA,
                              std::string napisB) {
@@ -38,3 +36,4 @@ int main() {
 }
 
 // Compiled with g++ -std=c++17 Zad1.cpp -lstdc++fs -o exe
+

@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Sortowanie przez wstawianie.
+Tytul: Sortowanie przez wstawianie.
 
-Treść: Napisz program sortujący listę liczb całkowitych metodą sortowania przez wstawianie. Stwórz nową, pustą listę i dodaj do niej pierwszy element listy wejściowej. Dla każdego kolejnego elementu znajdź odpowiednie miejsce w posortowanej już części listy i wstaw go tam.
+Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania przez wstawianie. Stworz nowa, pusta liste i dodaj do niej pierwszy element listy wejsciowej. Dla kazdego kolejnego elementu znajdz odpowiednie miejsce w posortowanej juz czesci listy i wstaw go tam.
 
-Dane wejściowe: Lista liczb całkowitych.
+Dane wejsciowe: Lista liczb calkowitych.
 
-Dane wyjściowe: Posortowana lista liczb całkowitych.
+Dane wyjsciowe: Posortowana lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
+Dla listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
 
 */
 
@@ -53,3 +53,4 @@ console.assert(
   JSON.stringify(sortowaniePrzezWstawianie(lista3)) === JSON.stringify(wynik3),
   "Test 3 nieudany"
 );
+

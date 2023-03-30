@@ -1,3 +1,14 @@
+/*
+Tytul: Kwadrat
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze kwadrat o boku rownym tej liczbie.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Komunikat.
+Przyklad:
+Dla otrzymanej liczby 2 powinno zostac wypisane:
+**
+**
+
+*/
 public class Main {
   // Napisz funkcje, ktora dla otrzymanej liczby
   // wypisze kwadrat o boku rownym otrzymanej liczbie.
@@ -18,3 +29,4 @@ public class Main {
     kwadrat(a);
   }
 }
+

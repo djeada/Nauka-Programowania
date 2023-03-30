@@ -1,15 +1,15 @@
 /*
-Tytuł: Permutacje słowa, które są palindromami.
+Tytul: Permutacje slowa, ktore sa palindromami.
 
-Treść: Napisz program, który znajdzie permutacje danego słowa, które są palindromami.
+Tresc: Napisz program, ktory znajdzie permutacje danego slowa, ktore sa palindromami.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: “taco”, powinna zostać zwrócona lista: ["taco", "toca"].
+Dla otrzymanego napisu: “taco”, powinna zostac zwrocona lista: ["taco", "toca"].
 */
 
 function permutacje(napis) {
@@ -58,14 +58,15 @@ function test() {
 
   console.assert(
     JSON.stringify(output) === JSON.stringify(expectedOutput),
-    'Test nie powiódł się dla "' +
+    'Test nie powiodl sie dla "' +
       input +
       '". Otrzymany wynik to ' +
       JSON.stringify(output) +
       ", a oczekiwany wynik to " +
       JSON.stringify(expectedOutput)
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

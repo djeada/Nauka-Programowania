@@ -1,18 +1,18 @@
 /*
-Tytuł: N pierwszych liczb pierwszych.
+Tytul: N pierwszych liczb pierwszych.
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej N, wypisze N pierwszych liczb pierwszych.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej N, wypisze N pierwszych liczb pierwszych.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: N liczb pierwszych.
+Dane wyjsciowe: N liczb pierwszych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 5 powinno zostać wypisane: 2, 3, 5, 7, 11.
+Dla otrzymanej liczby 5 powinno zostac wypisane: 2, 3, 5, 7, 11.
 */
 
-// Funkcja sprawdzająca czy liczba jest pierwsza
+// Funkcja sprawdzajaca czy liczba jest pierwsza
 function czyLiczbaPierwsza(liczba) {
   if (liczba <= 1) {
     return false;
@@ -26,7 +26,7 @@ function czyLiczbaPierwsza(liczba) {
   return true;
 }
 
-// Funkcja wypisująca N pierwszych liczb pierwszych
+// Funkcja wypisujaca N pierwszych liczb pierwszych
 function wypiszNPierwszychLiczbPierwszych(N) {
   var liczbyPierwsze = [];
   var liczba = 2;
@@ -50,3 +50,4 @@ wypiszNPierwszychLiczbPierwszych(3);
 
 console.log("\nWypisz 4 pierwsze liczby pierwsze");
 wypiszNPierwszychLiczbPierwszych(4);
+

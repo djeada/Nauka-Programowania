@@ -1,21 +1,21 @@
 /*
 Czy liczba jest palindromem?
 
-Treść: Dla otrzymanej liczby naturalnej sprawdź, czy jest ona palindromem, tj. czy nie zmienia się po zapisaniu cyfr w odwrotnej kolejności.
+Tresc: Dla otrzymanej liczby naturalnej sprawdz, czy jest ona palindromem, tj. czy nie zmienia sie po zapisaniu cyfr w odwrotnej kolejnosci.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 13231, powinna zostać wypisana informacja o tym, że liczba jest palindromem.
+Dla otrzymanej liczby 13231, powinna zostac wypisana informacja o tym, ze liczba jest palindromem.
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Pętla
+// Petla
 let palindrom = true;
 for (let i = liczba, j = 0; i > 0; i = Math.floor(i / 10), j++) {
   if (Math.floor(liczba / 10 ** j) % 10 !== i % 10) {
@@ -30,3 +30,4 @@ if (palindrom) {
 } else {
   console.log("Liczba nie jest palindromem.");
 }
+

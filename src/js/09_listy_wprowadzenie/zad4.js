@@ -1,18 +1,18 @@
 /*
-Tytuł: Minimum oraz maksimum.
+Tytul: Minimum oraz maksimum.
 
-Treść: Otrzymujesz listę liczb całkowitych. Znajdź największy i najmniejszy element tej listy i zwróć je jako dwie osobne liczby całkowite.
+Tresc: Otrzymujesz liste liczb calkowitych. Znajdz najwiekszy i najmniejszy element tej listy i zwroc je jako dwie osobne liczby calkowite.
 
-Dane wejściowe: Lista liczb całkowitych.
+Dane wejsciowe: Lista liczb calkowitych.
 
-Dane wyjściowe: Dwie liczby całkowite oznaczające największy i najmniejszy element z listy.
+Dane wyjsciowe: Dwie liczby calkowite oznaczajace najwiekszy i najmniejszy element z listy.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy [4, -7, 8, 5, 6, -9, 10, 2, -8] powinny zostać zwrócone liczby 10 oraz -9.
+Dla otrzymanej listy [4, -7, 8, 5, 6, -9, 10, 2, -8] powinny zostac zwrocone liczby 10 oraz -9.
 */
 
-// Funkcja zwracająca największy i najmniejszy element listy
+// Funkcja zwracajaca najwiekszy i najmniejszy element listy
 function znajdzMinMax(lista) {
   var min = lista[0];
   var max = lista[0];
@@ -52,3 +52,4 @@ function testujZnajdzMinMax() {
 }
 
 testujZnajdzMinMax();
+

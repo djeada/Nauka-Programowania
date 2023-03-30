@@ -1,6 +1,9 @@
-#!/usr/bin/env bash
-
-#Czy osoba jest pelnoletnia?
+# Tytul: Czy osoba jest pelnoletnia?
+# Tresc: Dla pobranych szesciu liczb: dnia urodzenia osoby, miesiaca urodzenia osoby, roku urodzenia osoby oraz aktualnego dnia, aktualnego miesiaca i aktualnego roku, sprawdz czy dana osoba jest pelnoletnia.
+# Dane wejsciowe: 6 liczb.
+# Dane wyjsciowe: Komunikat.
+# Przyklad:
+# Dla pobranych liczb: 5, 12, 1999, 20, 11, 2020, powinna zostac wypisana informacja o pelnoletnosci osoby.
 
 main() {
 

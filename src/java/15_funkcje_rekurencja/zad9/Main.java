@@ -1,3 +1,12 @@
+/*
+Tytul: Slowa elfickie.
+Tresc: Otrzymujesz napis. Przy uzyciu rekurencji sprawdz czy otrzymane slowo jest slowem elfickim. Przez slowo elfickie rozumiemy taki napis, w ktorym co najmniej raz wystepuje kazda z liter slowa elf.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla otrzymanego napisu: "reflektor", powinna zostac zwrocona wartosc logiczna: Prawda.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -9,11 +18,6 @@ public class Main {
   public static boolean czyElfickieSlowoV1(String slowo) {
     return czyElfickieSlowoV1(slowo, "elf", 0);
   }
-  /*
-  Napisz funkcje, ktora sprawdzi czy otrzymane slowo jest elfickie.
-  Elfickie slowo to takie, w ktorym co najmniej raz wystepuje kazda
-  z liter slowa elf.
-  */
 
   public static boolean czyElfickieSlowoV1(String slowo, String elf, int i) {
 
@@ -54,3 +58,4 @@ public class Main {
     test2();
   }
 }
+

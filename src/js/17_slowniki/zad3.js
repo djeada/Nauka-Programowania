@@ -1,12 +1,12 @@
 /*
 
-Tytuł: Klucz to imię, wartość lista wypożyczonych książek.
+Tytul: Klucz to imie, wartosc lista wypozyczonych ksiazek.
 
-Treść: Zbuduj prostą bazę danych dla biblioteki opartą o słownik, w którym kluczami są imiona czytelników, a wartościami listy wypożyczonych książek. Baza danych powinna umożliwiać:
+Tresc: Zbuduj prosta baze danych dla biblioteki oparta o slownik, w ktorym kluczami sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek. Baza danych powinna umozliwiac:
 
-1. Dodanie wypożyczonej książki do danego czytelnika.
-2. Zwrócenie wypożyczonej książki przez czytelnika.
-3. Wypisanie aktualnej listy wypożyczonych książek dla danego czytelnika.
+1. Dodanie wypozyczonej ksiazki do danego czytelnika.
+2. Zwrocenie wypozyczonej ksiazki przez czytelnika.
+3. Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
 
 */
 
@@ -32,11 +32,11 @@ function zwrocKsiazke(imie, tytul) {
 
 function wypiszKsiazki(imie) {
   if (!bazaDanych[imie]) {
-    console.log("Brak wypożyczonych książek dla czytelnika o imieniu " + imie);
+    console.log("Brak wypozyczonych ksiazek dla czytelnika o imieniu " + imie);
     return;
   }
   console.log(
-    "Wypożyczone książki dla czytelnika " +
+    "Wypozyczone ksiazki dla czytelnika " +
       imie +
       ": " +
       bazaDanych[imie].join(", ")
@@ -47,11 +47,11 @@ function testBazaDanych() {
   dodajKsiazke("Adam", "Pan Tadeusz");
   dodajKsiazke("Adam", "Lalka");
   dodajKsiazke("Ewa", "Zbrodnia i kara");
-  console.assert(bazaDanych["Adam"].length === 2, "Test 1 nie powiódł się");
-  console.assert(bazaDanych["Ewa"].length === 1, "Test 2 nie powiódł się");
+  console.assert(bazaDanych["Adam"].length === 2, "Test 1 nie powiodl sie");
+  console.assert(bazaDanych["Ewa"].length === 1, "Test 2 nie powiodl sie");
 
   zwrocKsiazke("Adam", "Pan Tadeusz");
-  console.assert(bazaDanych["Adam"].length === 1, "Test 3 nie powiódł się");
+  console.assert(bazaDanych["Adam"].length === 1, "Test 3 nie powiodl sie");
 
   wypiszKsiazki("Adam");
   wypiszKsiazki("Ewa");
@@ -59,3 +59,4 @@ function testBazaDanych() {
 }
 
 testBazaDanych();
+

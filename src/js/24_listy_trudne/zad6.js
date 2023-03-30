@@ -1,22 +1,22 @@
 /*
 
-Tytuł: Połączone posortowane listy 
+Tytul: Polaczone posortowane listy 
 
-Treść: Otrzymujesz listę zawierającą M posortowanych list. Połącz te listy w jedną posortowaną listę. Wszystkie elementy są unikalne.
+Tresc: Otrzymujesz liste zawierajaca M posortowanych list. Polacz te listy w jedna posortowana liste. Wszystkie elementy sa unikalne.
 
-Dane wejściowe: Lista list zawierających liczby naturalne.
+Dane wejsciowe: Lista list zawierajacych liczby naturalne.
 
-Dane wyjściowe: Lista zawierająca liczby naturalne.
+Dane wyjsciowe: Lista zawierajaca liczby naturalne.
 
-Przykład:
+Przyklad:
 
-Dla wejściowej listy:
+Dla wejsciowej listy:
 [[ -6, 23, 29, 33],
 [ 6, 22, 35, 71 ],
 [ 5, 19, 21, 37 ],
 [ -12, -7, -3, 28 ]],
 
-powinna zostać zwrócona lista: [-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71].
+powinna zostac zwrocona lista: [-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71].
 
 */
 
@@ -55,3 +55,4 @@ console.assert(
   JSON.stringify(polaczListy(lista2)) === JSON.stringify(wynik2),
   "Test 2 nieudany"
 );
+

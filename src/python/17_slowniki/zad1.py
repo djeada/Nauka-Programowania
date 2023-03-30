@@ -1,15 +1,18 @@
 """
-Otrzymujesz liczbe naturalna. Zbuduj slownik skladajacy sie 
-z kluczy bedacych kolejnymi liczbami naturalnymi mniejszymi 
-od otrzymanej liczby oraz wartosci bedacych kwadratami 
-odpowiadajacych im kluczy.
+Tytul: Slownik z kluczami bedacymi liczbami naturalnymi i wartosciami ich kwadratami.
+Tresc: Dostajesz liczbe naturalna. Stworz slownik, w ktorym kluczami beda kolejne liczby naturalne mniejsze od otrzymanej liczby, a wartosciami beda ich kwadraty.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Slownik z kluczami i wartosciami bedacymi liczbami naturalnymi.
+Przyklad:
+Dla liczby 5, slownik powinien wygladac nastepujaco: {1: 1, 2: 4, 3: 9, 4: 16}.
+
 """
 
 
 def stworz_slownik(n):
     """
-    Funkcja tworzy slownik zawierajacy klucze bedace kolejnymi 
-    liczbami naturalnymi mniejszymi od podanej liczby n 
+    Funkcja tworzy slownik zawierajacy klucze bedace kolejnymi
+    liczbami naturalnymi mniejszymi od podanej liczby n
     oraz wartosci bedacymi kwadratami kluczy.
     """
 
@@ -27,3 +30,4 @@ def test_stworz_slownik():
 if __name__ == "__main__":
 
     test_stworz_slownik()
+

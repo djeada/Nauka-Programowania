@@ -1,11 +1,18 @@
+/*
+Tytul: Polaczenie dwoch list.
+Tresc: Dla otrzymanych dwoch list, zwroc liste, ktora powstala poprzez:
+a) Dostawienie drugiej listy na koniec pierwszej listy.
+b) Wstawienie elementow o indeksach parzystych z drugiej listy na odpowiadajace
+im indeksy pierwszej listy. Dane wejsciowe: Dwie listy. Dane wyjsciowe: Lista.
+Przyklad:
+Dla otrzymanych list [1, 2, 3] oraz [4, 5, 6], w podpunkcie a) powinna zostac
+zwrocona lista: [1, 2, 3, 4, 5, 6]. W podpunkcie b) powinna zostac zwrocona
+lista: [4, 2, 6, 3].
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <vector>
-
-/*
-Otrzymujesz dwie posortowane listy liczb calkowitych rownej dlugosci.
-Znajdz ich mediane.
-*/
 
 // Zlozonosc obliczeniowa O(m + n)
 // Zlozonosc pamieciowa O(1)
@@ -50,3 +57,4 @@ int main() {
 
   return 0;
 }
+

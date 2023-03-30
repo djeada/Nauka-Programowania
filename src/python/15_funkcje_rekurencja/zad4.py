@@ -1,6 +1,15 @@
 """
-Otrzymujesz liczbe N. Przy uzyciu rekurencji 
-oblicz silnie z otrzymanej liczby.
+Tytul: Liczba Fibonacciego.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz wartosc N-tego wyrazu ciagu Fibonacciego.
+Podpowiedz: Ciag Fibonacciego zdefiniowany jest nastepujaco:
+* $a_0= 0$,
+* $a_1= 1$,
+* $a_n= a_{n-1}+a_n-2$.
+Dane wejsciowe: Liczba naturalna N.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla N = 7, powinna zostac zwrocona liczba: 13.
+
 """
 
 
@@ -26,3 +35,4 @@ def test_silnia():
 
 if __name__ == "__main__":
     test_silnia()
+

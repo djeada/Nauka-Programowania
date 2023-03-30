@@ -1,14 +1,18 @@
 """
-Napisz funkcje, ktora dla otrzymanych dwoch liczb a oraz b zamieni wartosci miejscami. 
-Po wykonaniu funkcji zmienna a, powinna przechowywac dawna wartosc zmiennej b, a 
-zmienna b powinna przechowywac dawna wartosc zmiennej a.
+Tytul: Zamien wartosci miejscami.
+Tresc: Napisz funkcje, ktora zamieni wartosci zmiennych a i b miejscami. Po wykonaniu funkcji zmienna a powinna przechowywac wartosc zmiennej b, a zmienna b powinna przechowywac wartosc zmiennej a.
+Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
+Przyklad:
+Dla otrzymanych liczb: 8 i 5, powinny zostac zwrocone liczby 5 i 8.
+
 """
 
 
 def swap(pierwsza_liczba, druga_liczba):
-    '''
+    """
     Funkcja zamienia wartosci miejscami.
-    '''
+    """
     return druga_liczba, pierwsza_liczba
 
 
@@ -20,3 +24,4 @@ def test_swap():
 
 if __name__ == "__main__":
     test_swap()
+

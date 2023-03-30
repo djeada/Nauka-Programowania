@@ -1,3 +1,12 @@
+/*
+Tytul: Minimalna ilosc usunietych znakow, aby uzyskac anagramy.
+Tresc: Napisz program, ktory dla dwoch slow zwroci minimalna ilosc znakow, ktore trzeba usunac, aby uzyskac anagramy. Jesli slowa sa roznej dlugosci, zwroc -1.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanych napisow: “grazyna” oraz “razynax”, powinna zostac zwrocona liczba: 2.
+
+*/
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -77,3 +86,4 @@ public class Main {
     test3();
   }
 }
+

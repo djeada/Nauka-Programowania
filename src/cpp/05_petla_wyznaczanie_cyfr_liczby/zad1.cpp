@@ -1,8 +1,12 @@
-#include <iostream>
-
 /*
-Dla pobranej od uzytkownika, wypisz liczbe cyfr pobranej liczby.
+Tytul: Liczba cyfr.
+Tresc: Dla otrzymanej od uzytkownika liczby naturalnej wypisz liczbe cyfr, z
+ktorych sie sklada. Dane wejsciowe: Liczba naturalna. Dane wyjsciowe: Liczba
+naturalna. Przyklad: Dla otrzymanej liczby 342, powinna zostac wypisana
+liczba 3.
+
 */
+#include <iostream>
 
 int main() {
 
@@ -22,3 +26,4 @@ int main() {
 
   return 0;
 }
+

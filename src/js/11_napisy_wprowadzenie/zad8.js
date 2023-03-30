@@ -1,22 +1,22 @@
 /*
-Tytuł:Wypisz pionowo słowa, z których składa się zdanie.
+Tytul:Wypisz pionowo slowa, z ktorych sklada sie zdanie.
 
-Treść: Otrzymasz napis reprezentujący zdanie. Podziel zdanie na słowa składowe. Wypisz pionowo słowa, z których składa się zdanie. Znaki interpunkcyjne nie są uwzględniane jako słowa.
+Tresc: Otrzymasz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe. Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Kilka napisów.
+Dane wyjsciowe: Kilka napisow.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "Ala ma kota", powinno zostać wypisane: "Ala", "ma", "kota".
+Dla otrzymanego napisu: "Ala ma kota", powinno zostac wypisane: "Ala", "ma", "kota".
 */
 
-function wypiszSłowa(napis) {
-  let słowa = napis.split(/[^\w]+/);
-  for (let i = 0; i < słowa.length; i++) {
-    if (słowa[i] !== "") {
-      console.log(słowa[i]);
+function wypiszSlowa(napis) {
+  let slowa = napis.split(/[^\w]+/);
+  for (let i = 0; i < slowa.length; i++) {
+    if (slowa[i] !== "") {
+      console.log(slowa[i]);
     }
   }
 }
@@ -30,14 +30,15 @@ function test() {
   console.log = function (text) {
     output.push(text);
   };
-  wypiszSłowa(input);
+  wypiszSlowa(input);
 
   console.assert(
     output.length === expectedOutput.length &&
       output.every((element, index) => element === expectedOutput[index]),
-    "Test nie powiódł się"
+    "Test nie powiodl sie"
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

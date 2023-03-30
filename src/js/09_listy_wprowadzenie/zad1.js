@@ -1,38 +1,38 @@
 /*
-Tytuł: Wczytaj i wypisz.
+Tytul: Wczytaj i wypisz.
 
-Treść: Dla podanej liczby naturalnej N, wczytaj N liczb całkowitych do listy, a następnie:
+Tresc: Dla podanej liczby naturalnej N, wczytaj N liczb calkowitych do listy, a nastepnie:
 
-a) Wypisz listę od początku do końca, z każdym elementem w osobnym wierszu.
+a) Wypisz liste od poczatku do konca, z kazdym elementem w osobnym wierszu.
 
-b) Wypisz listę od końca, z elementami oddzielonymi przecinkami i wypisanymi w jednym wierszu.
+b) Wypisz liste od konca, z elementami oddzielonymi przecinkami i wypisanymi w jednym wierszu.
 
-Dane wejściowe: N liczb całkowitych.
+Dane wejsciowe: N liczb calkowitych.
 
-Dane wyjściowe: N liczb.
+Dane wyjsciowe: N liczb.
 
-Przykład:
+Przyklad:
 
-Dla N równego 3 oraz pobranych liczb: 8, 12, 7, w drugim podpunkcie powinno zostać wypisane: 7, 12, 8.
+Dla N rownego 3 oraz pobranych liczb: 8, 12, 7, w drugim podpunkcie powinno zostac wypisane: 7, 12, 8.
 */
 
-// Funkcja wczytująca N liczb całkowitych do listy
+// Funkcja wczytujaca N liczb calkowitych do listy
 function wczytajNliczbDoListy(N) {
   var lista = [];
   for (var i = 0; i < N; i++) {
-    lista.push(parseInt(prompt("Podaj liczbę:")));
+    lista.push(parseInt(prompt("Podaj liczbe:")));
   }
   return lista;
 }
 
-// Funkcja wypisująca listę od początku do końca
+// Funkcja wypisujaca liste od poczatku do konca
 function wypiszListeOdPoczatkuDoKonca(lista) {
   for (var i = 0; i < lista.length; i++) {
     console.log(lista[i]);
   }
 }
 
-// Funkcja wypisująca listę od końca z elementami oddzielonymi przecinkami
+// Funkcja wypisujaca liste od konca z elementami oddzielonymi przecinkami
 function wypiszListeOdKonca(lista) {
   for (var i = lista.length - 1; i >= 0; i--) {
     if (i === 0) {
@@ -46,8 +46,9 @@ function wypiszListeOdKonca(lista) {
 // Testy
 var lista = wczytajNliczbDoListy(3);
 
-console.log("Wypisz listę od początku do końca");
+console.log("Wypisz liste od poczatku do konca");
 wypiszListeOdPoczatkuDoKonca(lista);
 
-console.log("\nWypisz listę od końca");
+console.log("\nWypisz liste od konca");
 wypiszListeOdKonca(lista);
+

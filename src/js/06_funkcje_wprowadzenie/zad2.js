@@ -1,71 +1,72 @@
 /*
-Tytuł: Operacje arytmetyczne.
+Tytul: Operacje arytmetyczne.
 
-Treść: Napisz funkcję, która dla otrzymanych dwóch liczb zwróci:
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci:
 
-a) Ich sumę.
+a) Ich sume.
 
-b) Różnicę drugiej i pierwszej.
+b) Roznice drugiej i pierwszej.
 
 c) Ich iloczyn.
 
-d) Iloraz pierwszej przez drugą.
+d) Iloraz pierwszej przez druga.
 
-e) Resztę z dzielenia pierwszej przez drugą.
+e) Reszte z dzielenia pierwszej przez druga.
 
-Dane wejściowe: Dwie liczby naturalne dla wszystkich podpunktów.
+Dane wejsciowe: Dwie liczby naturalne dla wszystkich podpunktow.
 
-Dane wyjściowe: Liczba całkowita dla wszystkich podpunktów.
+Dane wyjsciowe: Liczba calkowita dla wszystkich podpunktow.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb: 3 i 5, funkcja powinna zwrócić:
+Dla pobranych liczb: 3 i 5, funkcja powinna zwrocic:
 
-a) Sumę: 8
+a) Sume: 8
 
-b) Różnicę: 2
+b) Roznice: 2
 
 c) Iloczyn: 15
 
 d) Iloraz: 0
 
-e) Resztę z dzielenia: 3
+e) Reszte z dzielenia: 3
 */
 
-// Funkcja zwracająca sumę
+// Funkcja zwracajaca sume
 function zwracajSuma(liczba_a, liczba_b) {
   return liczba_a + liczba_b;
 }
 
-// Funkcja zwracająca różnicę
+// Funkcja zwracajaca roznice
 function zwracajRoznica(liczba_a, liczba_b) {
   return liczba_b - liczba_a;
 }
 
-// Funkcja zwracająca iloczyn
+// Funkcja zwracajaca iloczyn
 function zwracajIloczyn(liczba_a, liczba_b) {
   return liczba_a * liczba_b;
 }
 
-// Funkcja zwracająca iloraz
+// Funkcja zwracajaca iloraz
 function zwracajIloraz(liczba_a, liczba_b) {
   return liczba_a / liczba_b;
 }
 
-// Funkcja zwracająca resztę z dzielenia
+// Funkcja zwracajaca reszte z dzielenia
 function zwracajReszteZDzielenia(liczba_a, liczba_b) {
   return liczba_a % liczba_b;
 }
 
-// Pobieranie danych od użytkownika
-const liczba_a = parseInt(prompt("Podaj pierwszą liczbę:"));
-const liczba_b = parseInt(prompt("Podaj drugą liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
+const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
-// Wywołanie funkcji
+// Wywolanie funkcji
 console.log("Suma: " + zwracajSuma(liczba_a, liczba_b));
-console.log("Różnica: " + zwracajRoznica(liczba_a, liczba_b));
+console.log("Roznica: " + zwracajRoznica(liczba_a, liczba_b));
 console.log("Iloczyn: " + zwracajIloczyn(liczba_a, liczba_b));
 console.log("Iloraz: " + zwracajIloraz(liczba_a, liczba_b));
 console.log(
   "Reszta z dzielenia: " + zwracajReszteZDzielenia(liczba_a, liczba_b)
 );
+

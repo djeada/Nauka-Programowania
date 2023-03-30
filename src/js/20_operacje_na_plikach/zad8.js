@@ -1,15 +1,15 @@
 /*
-Tytuł: Znajdź i zmodyfikuj pliki spełniające warunek.
+Tytul: Znajdz i zmodyfikuj pliki spelniajace warunek.
 
-Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do folderu.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do folderu.
 
-a) Dodaj swoje inicjały na końcu wszystkich plików tekstowych znajdujących się w podanym folderze i jego podfolderach.
+a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych sie w podanym folderze i jego podfolderach.
 
-b) Usuń środkowy wiersz z każdego pliku CSV znajdującego się w podanym folderze i jego podfolderach.
+b) Usun srodkowy wiersz z kazdego pliku CSV znajdujacego sie w podanym folderze i jego podfolderach.
 
-Dane wejściowe: Napis reprezentujący ścieżkę do folderu.
+Dane wejsciowe: Napis reprezentujacy sciezke do folderu.
 
-Dane wyjściowe: Brak.
+Dane wyjsciowe: Brak.
 */
 
 const fs = require("fs").promises;
@@ -71,13 +71,13 @@ const test1 = async () => {
     const wynik = await wczytajPlik(sciezkaPliku);
     console.assert(
       wynik.length === oczekiwane.length,
-      `Błąd asercji: ${wynik.length} != ${oczekiwane.length}`
+      `Blad asercji: ${wynik.length} != ${oczekiwane.length}`
     );
 
     for (let i = 0; i < wynik.length; i++) {
       console.assert(
         wynik[i] === oczekiwane[i],
-        `Błąd asercji: ${wynik[i]} != ${oczekiwane[i]}`
+        `Blad asercji: ${wynik[i]} != ${oczekiwane[i]}`
       );
     }
   }
@@ -107,13 +107,13 @@ const test2 = async () => {
     const wynik = await wczytajPlik(sciezkaPliku);
     console.assert(
       wynik.length === oczekiwane.length,
-      `Błąd asercji: ${wynik.length} != ${oczekiwane.length}`
+      `Blad asercji: ${wynik.length} != ${oczekiwane.length}`
     );
 
     for (let i = 0; i < wynik.length; i++) {
       console.assert(
         wynik[i] === oczekiwane[i],
-        `Błąd asercji: ${wynik[i]} != ${oczekiwane[i]}`
+        `Blad asercji: ${wynik[i]} != ${oczekiwane[i]}`
       );
     }
   }
@@ -129,3 +129,4 @@ const main = async () => {
 };
 
 main();
+

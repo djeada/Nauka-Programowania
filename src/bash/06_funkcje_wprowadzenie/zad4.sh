@@ -1,8 +1,20 @@
-#!/usr/bin/env bash
-
-#Napisz funkcje, ktora:
-
-#a) dla podanych dwoch liczb, zwroci mniejsza
+# Tytul: Maks i min
+# Napisz funkcje, ktora:
+# a) Dla otrzymanych dwoch liczb zwroci mniejsza.
+# b) Dla otrzymanych dwoch liczb zwroci wieksza.
+# c) Dla otrzymanych trzech liczb zwroci najmniejsza.
+# d) Dla otrzymanych trzech liczb zwroci najwieksza.
+# Dane wejsciowe:
+# a) Dwie liczby naturalne.
+# b) Dwie liczby naturalne.
+# c) Trzy liczby naturalne.
+# d) Trzy liczby naturalne.
+# Dane wyjsciowe: Liczba naturalna dla wszystkich podpunktow.
+# Przyklad:
+# a) Dla otrzymanych liczb 3 i 1, funkcja powinna zwrocic liczbe 1.
+# b) Dla otrzymanych liczb 3 i 1, funkcja powinna zwrocic liczbe 3.
+# c) Dla otrzymanych liczb 3, 2 i 1, funkcja powinna zwrocic liczbe 1.
+# d) Dla otrzymanych liczb 3, 2 i 1, funkcja powinna zwrocic liczbe 3."
 
 min2() {
 
@@ -13,8 +25,6 @@ min2() {
     fi
 }
 
-#b) dla podanych dwoch liczb, zwroci wieksza
-
 maks2() {
 
     if [[ $1 -gt $2 ]] ; then
@@ -23,9 +33,6 @@ maks2() {
         return $2
     fi
 }
-
-
-#c) dla podanych trzech liczb, zwroci najmniejsza
 
 min3() {
     if [[ $1 -le $2 && $1 -le $3 ]]; then
@@ -36,8 +43,6 @@ min3() {
         return $3
     fi
 }
-
-#d) dla podanych trzech liczb, zwroci najwieksza
 
 maks3() {
     if [[ $1 -ge $2 && $1 -ge $3 ]]; then

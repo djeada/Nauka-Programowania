@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Sortowanie listy miast.
+Tytul: Sortowanie listy miast.
 
-Treść: Klasa Miasto ma dwie właściwości: nazwa (napis) oraz liczba_mieszkańców (liczba naturalna). Posortuj listę miast względem nazwy oraz względem liczby mieszkańców.
+Tresc: Klasa Miasto ma dwie wlasciwosci: nazwa (napis) oraz liczba_mieszkancow (liczba naturalna). Posortuj liste miast wzgledem nazwy oraz wzgledem liczby mieszkancow.
 
-Dane wejściowe: Lista miast.
+Dane wejsciowe: Lista miast.
 
-Dane wyjściowe: Posortowana lista miast.
+Dane wyjsciowe: Posortowana lista miast.
 
-Przykład:
-Dla listy miast: [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)], powinna zostać zwrócona lista: [Miasto("Berlin", 3800000), Miasto("New York", 8400000), Miasto("Paris", 2150000)].
-Dla listy miast: [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)], powinna zostać zwrócona lista: [Miasto("Berlin", 3800000), Miasto("Paris", 2150000), Miasto("New York", 8400000)].
+Przyklad:
+Dla listy miast: [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)], powinna zostac zwrocona lista: [Miasto("Berlin", 3800000), Miasto("New York", 8400000), Miasto("Paris", 2150000)].
+Dla listy miast: [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)], powinna zostac zwrocona lista: [Miasto("Berlin", 3800000), Miasto("Paris", 2150000), Miasto("New York", 8400000)].
 
 */
 
@@ -58,3 +58,4 @@ console.assert(
     JSON.stringify(wynikLiczbaMieszkancow),
   "Test 2 nieudany"
 );
+

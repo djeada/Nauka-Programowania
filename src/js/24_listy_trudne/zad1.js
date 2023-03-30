@@ -1,21 +1,21 @@
 /*
 
-Tytuł: Najdłuższy ciąg jedynek.
+Tytul: Najdluzszy ciag jedynek.
 
-Treść: Otrzymujesz listę składającą się wyłącznie z zer i jedynek. Znajdź indeks zera, które po zamianie na jedynkę dałoby najdłuższy ciąg jedynek. Jeśli lista składa się wyłącznie z zer lub wyłącznie z jedynek, zwróć -1.
+Tresc: Otrzymujesz liste skladajaca sie wylacznie z zer i jedynek. Znajdz indeks zera, ktore po zamianie na jedynke daloby najdluzszy ciag jedynek. Jesli lista sklada sie wylacznie z zer lub wylacznie z jedynek, zwroc -1.
 
-Dane wejściowe: Lista liczb naturalnych.
+Dane wejsciowe: Lista liczb naturalnych.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [0, 0, 1, 0, 1, 1, 1, 0, 1, 1], powinna zostać zwrócona liczba: 7.
+Dla otrzymanej listy: [0, 0, 1, 0, 1, 1, 1, 0, 1, 1], powinna zostac zwrocona liczba: 7.
 
 */
 
-const najdluzszyCiągJedynek = (lista) => {
-  let najdluzszyCiągJedynek = 0;
+const najdluzszyCiagJedynek = (lista) => {
+  let najdluzszyCiagJedynek = 0;
   let index = -1;
   let liczbaJedynek = 0;
   let indeks = 0;
@@ -25,8 +25,8 @@ const najdluzszyCiągJedynek = (lista) => {
     } else {
       indeks = i;
     }
-    if (liczbaJedynek > najdluzszyCiągJedynek) {
-      najdluzszyCiągJedynek = liczbaJedynek;
+    if (liczbaJedynek > najdluzszyCiagJedynek) {
+      najdluzszyCiagJedynek = liczbaJedynek;
       index = indeks;
     }
   }
@@ -39,5 +39,6 @@ const wynik1 = 7;
 const lista2 = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 const wynik2 = -1;
 
-console.assert(najdluzszyCiągJedynek(lista1) === wynik1, "Test 1 nieudany");
-console.assert(najdluzszyCiągJedynek(lista2) === wynik2, "Test 2 nieudany");
+console.assert(najdluzszyCiagJedynek(lista1) === wynik1, "Test 1 nieudany");
+console.assert(najdluzszyCiagJedynek(lista2) === wynik2, "Test 2 nieudany");
+

@@ -1,11 +1,14 @@
+/*
+Tytul: Macierz kwadratowa, z elementami bedacymi iloczynem wspolrzednych.
+Tresc: Dla otrzymanej liczby naturalnej n, stworz macierz kwadratowa o rozmiarze
+n x n, ktorej kazdy element jest iloczynem jego wspolrzednych. Dane wejsciowe:
+Liczba naturalna n. Dane wyjsciowe: Lista list liczb naturalnych. Przyklad: Dla
+otrzymanej liczby 3 powinna zostac zwrocona macierz: [[0, 0, 0], [0, 1, 2], [0,
+2, 4]].
+
+*/
 #include <cassert>
 #include <vector>
-
-/*
-Otrzymujesz liste list liczb naturalnych. Obroc otrzymana liste o 90 stopni.
-Tzn. zamien miejscami ostatnia kolumne z ostatnim wierszem, przedostatnia
-kolumne z przedostatnim wierszem itd.
-*/
 
 void obroc(std::vector<std::vector<int>> &macierz) {
   /**
@@ -48,3 +51,4 @@ int main() {
 
   return 0;
 }
+

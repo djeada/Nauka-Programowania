@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Srednia dlugosc slow w zdaniu.
+# Tresc: Otrzymasz napis reprezentujacy zdanie. Oblicz srednia dlugosc slow w zdaniu. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Liczba naturalna.
+# Przyklad:
+# Dla otrzymanego napisu: "Zepsuty rower.", powinna zostac zwrocona liczba: 6.
 
 source ../assert.sh
-
-# Dla otrzymanego napisu oraz znaku,
-# znajdz liczbe wystapien znaku w napisie.
 
 policz_znak_v1() {
 
@@ -48,7 +50,6 @@ main() {
     test1
     test2
 }
-
 
 main "$@"
 

@@ -1,6 +1,12 @@
 """
-Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym 
-napisie. Inaczej, zwroc histogram znakow w otrzymanym napisie.
+Tytul: Powtarzajace sie znaki
+Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrocenie wszystkich znakow, ktore wystepuja co najmniej 2 razy w ciagu.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "aaabbbccc"
+Powinien zostac zwrocony napis: "abc"
+
 """
 
 
@@ -33,3 +39,4 @@ def test_histogram():
 
 if __name__ == "__main__":
     test_histogram()
+

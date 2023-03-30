@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Wypisanie elementów macierzy spiralnie.
+Tytul: Wypisanie elementow macierzy spiralnie.
 
-Treść: Otrzymujesz listę list liczb naturalnych. Zbierz elementy otrzymanej macierzy spiralnie i zapisz je w liście.
+Tresc: Otrzymujesz liste list liczb naturalnych. Zbierz elementy otrzymanej macierzy spiralnie i zapisz je w liscie.
 
-Dane wejściowe: Lista list liczb naturalnych.
+Dane wejsciowe: Lista list liczb naturalnych.
 
-Dane wyjściowe: Lista.
+Dane wyjsciowe: Lista.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostać zwrócona lista: [1, 2, 3, 6, 9, 8, 7, 4, 5].
+Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona lista: [1, 2, 3, 6, 9, 8, 7, 4, 5].
 */
 
 function spiralnie(macierz) {
@@ -21,19 +21,19 @@ function spiralnie(macierz) {
   let l = 0; // indeks ostatniej kolumny nieprzetworzonej
 
   while (k < m && l < n) {
-    // wypisujemy pierwszy wiersz od pozostałych nieprzetworzonych
+    // wypisujemy pierwszy wiersz od pozostalych nieprzetworzonych
     for (let i = l; i < n; i++) {
       wynik.push(macierz[k][i]);
     }
     k++;
 
-    // wypisujemy ostatnią kolumnę od pozostałych nieprzetworzonych
+    // wypisujemy ostatnia kolumne od pozostalych nieprzetworzonych
     for (let i = k; i < m; i++) {
       wynik.push(macierz[i][n - 1]);
     }
     n--;
 
-    // wypisujemy ostatni wiersz od pozostałych nieprzetworzonych, jeśli jeszcze nie wypisaliśmy wszystkich elementów
+    // wypisujemy ostatni wiersz od pozostalych nieprzetworzonych, jesli jeszcze nie wypisalismy wszystkich elementow
     if (k < m) {
       for (let i = n - 1; i >= l; i--) {
         wynik.push(macierz[m - 1][i]);
@@ -41,7 +41,7 @@ function spiralnie(macierz) {
       m--;
     }
 
-    // wypisujemy pierwszą kolumnę od pozostałych nieprzetworzonych, jeśli jeszcze nie wypisaliśmy wszystkich elementów
+    // wypisujemy pierwsza kolumne od pozostalych nieprzetworzonych, jesli jeszcze nie wypisalismy wszystkich elementow
     if (l < n) {
       for (let i = m - 1; i >= k; i--) {
         wynik.push(macierz[i][l]);
@@ -79,3 +79,4 @@ function test() {
 }
 
 test();
+

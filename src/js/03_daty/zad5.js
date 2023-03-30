@@ -1,23 +1,23 @@
 /*
-Tytuł: Ile dni ma miesiąc?
+Tytul: Ile dni ma miesiac?
 
-Treść: Napisz program, który dla pobranej liczby naturalnej będzie wypisywał liczbę dni w miesiącu odpowiadającemu tej liczbie. Jeśli pobrana liczba nie jest poprawnym numerem miesiąca, program powinien poinformować o tym użytkownika.
+Tresc: Napisz program, ktory dla pobranej liczby naturalnej bedzie wypisywal liczbe dni w miesiacu odpowiadajacemu tej liczbie. Jesli pobrana liczba nie jest poprawnym numerem miesiaca, program powinien poinformowac o tym uzytkownika.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla pobranej liczby 1, program powinien zwrócić liczbę 31.
+Dla pobranej liczby 1, program powinien zwrocic liczbe 31.
 */
 
-// Pobieranie danych od użytkownika
-const miesiac = parseInt(prompt("Podaj miesiąc:"));
+// Pobieranie danych od uzytkownika
+const miesiac = parseInt(prompt("Podaj miesiac:"));
 
 // Sprawdzenie, czy liczba jest poprawna
 if (miesiac > 0 && miesiac < 13) {
-  // Sprawdzenie, który miesiąc odpowiada liczbie
+  // Sprawdzenie, ktory miesiac odpowiada liczbie
   if (
     miesiac === 1 ||
     miesiac === 3 ||
@@ -27,17 +27,18 @@ if (miesiac > 0 && miesiac < 13) {
     miesiac === 10 ||
     miesiac === 12
   ) {
-    console.log("Miesiąc ma 31 dni");
+    console.log("Miesiac ma 31 dni");
   } else if (
     miesiac === 4 ||
     miesiac === 6 ||
     miesiac === 9 ||
     miesiac === 11
   ) {
-    console.log("Miesiąc ma 30 dni");
+    console.log("Miesiac ma 30 dni");
   } else {
-    console.log("Miesiąc ma 28 dni");
+    console.log("Miesiac ma 28 dni");
   }
 } else {
   console.log("Liczba jest niepoprawna");
 }
+

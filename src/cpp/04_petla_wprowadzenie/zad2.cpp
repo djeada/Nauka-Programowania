@@ -1,9 +1,12 @@
-#include <iostream>
-
 /*
-Dla pobranej liczby, powinny zostac wypisane wszystkie
-liczby naturalne mniejsze od podanej liczby.
+Tytul: Liczby mniejsze od podanej liczby.
+Tresc: Dla otrzymanej liczby naturalnej wypisz wszystkie liczby naturalne
+mniejsze od niej. Dane wejsciowe: Liczba naturalna. Dane wyjsciowe: Liczby
+naturalne. Przyklad: Dla otrzymanej liczby 3, powinny zostac wypisane liczby 2
+i 1.
+
 */
+#include <iostream>
 
 int main() {
 
@@ -18,3 +21,4 @@ int main() {
 
   return 0;
 }
+

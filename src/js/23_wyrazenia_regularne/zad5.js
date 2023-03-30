@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Wyodrębnij cyfry z tekstu.
+Tytul: Wyodrebnij cyfry z tekstu.
 
-Treść: Dostajesz napis. Zwróć napis składający się z cyfr występujących w tym napisie.
+Tresc: Dostajesz napis. Zwroc napis skladajacy sie z cyfr wystepujacych w tym napisie.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla napisu: “Terminator2001”, powinien zostać zwrócony napis: “2001”.
+Dla napisu: “Terminator2001”, powinien zostac zwrocony napis: “2001”.
 
 */
 
@@ -27,3 +27,4 @@ function test_wyodrebnij_cyfry() {
 }
 
 test_wyodrebnij_cyfry();
+

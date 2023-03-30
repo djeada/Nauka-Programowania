@@ -1,27 +1,27 @@
 /*
 
-Tytuł: Wiersze kończące się określonym napisem.
+Tytul: Wiersze konczace sie okreslonym napisem.
 
-Treść: Dostajesz dwa napisy. Znajdź wiersze w pierwszym napisie kończące się drugim napisem. Wiersz może być zakończony dowolnym znakiem interpunkcyjnym.
+Tresc: Dostajesz dwa napisy. Znajdz wiersze w pierwszym napisie konczace sie drugim napisem. Wiersz moze byc zakonczony dowolnym znakiem interpunkcyjnym.
 
-Dane wejściowe: Dwa napisy.
+Dane wejsciowe: Dwa napisy.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla napisów:
+Dla napisow:
 
 > Folgujmy paniom nie sobie, ma rada;
   Milujmy wiernie nie jest w nich przysada.
-  Godności trzeba nie za nic tu cnota,
-  Miłości pragną nie pragną tu złota.
+  Godnosci trzeba nie za nic tu cnota,
+  Milosci pragna nie pragna tu zlota.
 
 oraz
 
 > da
 
-powinna zostać zwrócona lista: [“Folgujmy paniom nie sobie, ma rada;”, “Milujmy wiernie nie jest w nich przysada.”]
+powinna zostac zwrocona lista: [“Folgujmy paniom nie sobie, ma rada;”, “Milujmy wiernie nie jest w nich przysada.”]
 
 */
 
@@ -34,8 +34,8 @@ function wiersze_konczace_sie_okreslonym_napisem(tekst, napis) {
 function test_wiersze_konczace_sie_okreslonym_napisem() {
   const tekst = `Folgujmy paniom nie sobie, ma rada;
 Milujmy wiernie nie jest w nich przysada.
-Godności trzeba nie za nic tu cnota,
-Miłości pragną nie pragną tu złota.`;
+Godnosci trzeba nie za nic tu cnota,
+Milosci pragna nie pragna tu zlota.`;
 
   const oczekiwany_wynik = [
     "Folgujmy paniom nie sobie, ma rada;",
@@ -49,3 +49,4 @@ Miłości pragną nie pragną tu złota.`;
 }
 
 test_wiersze_konczace_sie_okreslonym_napisem();
+

@@ -1,3 +1,12 @@
+/*
+Tytul: Porownanie ze zmienna.
+Tresc: Pobierz od uzytkownika dwie liczby naturalne i sprawdz, czy sa one identyczne. Wypisz odpowiedni komunikat.
+Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Komunikat.
+Przyklad:
+Dla pobranych liczb: 7 i 4, powinien zostac wypisany komunikat, ze liczby sa rozne.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -20,3 +29,4 @@ public class Main {
     }
   }
 }
+

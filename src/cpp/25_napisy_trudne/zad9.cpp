@@ -1,10 +1,14 @@
+/*
+Tytul: Najdluzszy wspolny przedrostek.
+Tresc: Dostajesz liste napisow. Znajdz najdluzszy wspolny przedrostek dla
+wszystkich napisow na liscie. Dane wejsciowe: Lista napisow. Dane wyjsciowe:
+Napis. Przyklad: Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac
+zwrocony napis "Rem".
+
+*/
 #include <cassert>
 #include <string>
 #include <vector>
-
-/*
-Otrzymujesz dwa napisy. Znajdz ich najdluzszy wspolny podnapis.
-*/
 
 std::string najdluzszyPodnapisV1(const std::string &slowoA,
                                  const std::string &slowoB) {
@@ -66,3 +70,4 @@ int main() {
 
   return 0;
 }
+

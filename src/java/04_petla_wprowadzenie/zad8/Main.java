@@ -1,3 +1,12 @@
+/*
+Tytul: Liczba kur i owiec na farmie.
+Tresc: Na farmie jest a glow i b nog. Znajdz liczbe kur i liczbe owiec.
+Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
+Przyklad:
+Dla otrzymanych liczb 40 i 100, powinny zostac wypisane liczby 30 i 10.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -23,3 +32,4 @@ public class Main {
     }
   }
 }
+

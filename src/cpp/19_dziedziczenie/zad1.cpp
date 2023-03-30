@@ -1,7 +1,9 @@
 /*
-Dla dowolnych dwoch klas, dla ktorych jedna jest klasa bazowa, 
-a druga klasa potomna wywolaj metode klasy bazowej w metodzie 
-klasy potomnej nadpisujacej ta metode.
+Tytul: Wywolywanie metody klasy bazowej w klasie potomnej
+Tresc: Dla dwoch dowolnych klas, gdzie jedna jest klasa bazowa, a druga potomna,
+wywolaj metode klasy bazowej w metodzie klasy potomnej, ktora ja nadpisuje.
+Napisz program testujacy te klasy.
+
 */
 
 #include <iostream>
@@ -37,3 +39,4 @@ int main() {
 
   return 0;
 }
+

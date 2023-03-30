@@ -1,10 +1,11 @@
 """
-Tytuł: Zamiana kolejności liczb.
-Treść zadania: Napisz program, który pobierze od użytkownika dwie liczby naturalne i wypisze je w odwróconej kolejności.
-Dane wejściowe: Dwie liczby naturalne.
-Dane wyjściowe: Dwie liczby naturalne.
-Przykład:
-Jeśli użytkownik poda liczby -7 oraz 4, program powinien wypisać liczby: 4 i -7.
+Tytul: Obliczenie ceny podlogi.
+Tresc: Otrzymasz cene pojedynczej plytki, wymiary plytki w postaci kwadratu oraz wymiary podlogi w postaci prostokata. Oblicz, ile kosztowac bedzie podloga o podanych wymiarach.
+Jednostki sa umowne.
+Dane wejsciowe: Cztery liczby naturalne: cena plytki, dlugosc boku plytki, dlugosc podlogi oraz szerokosc podlogi.
+Dane wyjsciowe: Liczba naturalna oznaczajaca cene podlogi.
+Przyklad:
+Dla pobranych liczb: 2 (cena plytki), 3 (dlugosc boku plytki), 20 (dlugosc podlogi) oraz 40 (szerokosc podlogi), powinna zostac wypisana liczba: 196.
 
 """
 
@@ -39,3 +40,4 @@ if __name__ == "__main__":
         " wynosi ",
         calkowity_koszt,
     )
+

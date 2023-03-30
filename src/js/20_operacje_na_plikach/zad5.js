@@ -1,11 +1,11 @@
 /*
-Tytuł: Plik z listą adresów IP.
+Tytul: Plik z lista adresow IP.
 
-Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Każdy wiersz pliku reprezentuje adres IP. Posortuj adresy IP i zapisz je w liście.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Kazdy wiersz pliku reprezentuje adres IP. Posortuj adresy IP i zapisz je w liscie.
 
-Dane wejściowe: Napis reprezentujący ścieżkę do pliku.
+Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
 
-Dane wyjściowe: Lista adresów IP posortowanych alfabetycznie.
+Dane wyjsciowe: Lista adresow IP posortowanych alfabetycznie.
 */
 const fs = require("fs").promises;
 
@@ -86,3 +86,4 @@ const main = async () => {
 };
 
 main();
+

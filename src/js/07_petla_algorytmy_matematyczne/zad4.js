@@ -1,18 +1,18 @@
 /*
-Tytuł: Silnia.
+Tytul: Silnia.
 
-Treść: Napisz funkcję, która obliczy silnię otrzymanej liczby naturalnej, przy pomocy pętli.
+Tresc: Napisz funkcje, ktora obliczy silnie otrzymanej liczby naturalnej, przy pomocy petli.
 
-Dane wejściowe: liczba naturalna
+Dane wejsciowe: liczba naturalna
 
-Dane wyjściowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 3, funkcja powinna zwrócić liczbę 6.
+Dla otrzymanej liczby 3, funkcja powinna zwrocic liczbe 6.
 */
 
-// Funkcja zwracająca silnię liczby
+// Funkcja zwracajaca silnie liczby
 function silnia(liczba) {
   var wynik = 1;
   for (var i = 1; i <= liczba; i++) {
@@ -33,10 +33,11 @@ function testSilnia() {
   console.assert(silnia(8) == 40320);
 }
 
-// Funkcja uruchamiająca testy
+// Funkcja uruchamiajaca testy
 function main() {
   testSilnia();
 }
 
-// Uruchomienie testów
+// Uruchomienie testow
 main();
+

@@ -1,9 +1,20 @@
+/*
+Tytul: Sprawdz poprawnosc hasla.
+Tresc: Masz napis reprezentujacy haslo. Sprawdz, czy haslo spelnia nastepujace warunki:
+1. Haslo musi zawierac przynajmniej jedna mala litere [a-z].
+2. Haslo musi zawierac przynajmniej jedna duza litere [A-Z].
+3. Haslo musi zawierac przynajmniej jedna cyfre [0-9].
+4. Haslo musi zawierac przynajmniej jeden znak specjalny [! # $ % & ' * + — / = ? ^ _ ` { | } ~].
+5. Minimalna dlugosc hasla to 8 znakow.
+6. Maksymalna dlugosc hasla to 20 znakow.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla napisu: “abc1234”, powinna zostac zwrocona wartosc logiczna: Falsz.
+
+*/
 import java.util.*;
 
-/*
-Otrzymujesz napis i dwie listy napisow. Podmien w pierwszym napisie, 
-napisy z pierwszej listy na odpowiadajace im napisy z drugiej listy.
-*/
 
 public class Main {
   
@@ -48,3 +59,4 @@ public class Main {
 
   }
 }
+

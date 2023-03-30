@@ -1,10 +1,17 @@
-import java.util.*;
-
 /*
-Otrzymujesz liste par napisow i liczb. Posortuj pary w liscie wzgledem:
+Tytul: Sortowanie listy par wzgledem jednej z kategorii.
+Tresc: Masz dana liste par napisow i liczb. Posortuj pary w liscie wzgledem:
 a) Liczb.
 b) Dlugosci napisow.
+Dane wejsciowe: Lista par napisow i liczb.
+Dane wyjsciowe: Lista par napisow i liczb.
+Przyklad:
+Dla listy [(“ab”, 3), (“bca”, 1), (“c”, 2)] powinno zostac zwrocone:
+a) [(“bca”, 1), (“c”, 2), (“ab”, 3)] lub
+b) [(“c”, 2), (“ab”, 3), (“bca”, 1)].
+
 */
+import java.util.*;
 
 public class Main {
 
@@ -89,3 +96,4 @@ public class Main {
     test2();
   }
 }
+

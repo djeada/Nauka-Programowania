@@ -1,3 +1,12 @@
+/*
+Tytul: Czy liczba jest palindromem?
+Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Sprawdz, czy reprezentacja binarna otrzymanej liczby jest palindromem.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla otrzymanej liczby 26, powinna zostac zwrocona wartosc logiczna: Prawda.
+
+*/
 public class Main {
   // Znajdz potege dwojki wieksza badz rowna otrzymanej liczbie.
   // Inaczej: zaaokraglij liczbe do nastepnej potegi dwojki.
@@ -88,3 +97,4 @@ public class Main {
     test6();
   }
 }
+

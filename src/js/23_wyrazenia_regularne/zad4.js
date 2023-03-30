@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Sprawdź czy słowo występuje w zdaniu.
+Tytul: Sprawdz czy slowo wystepuje w zdaniu.
 
-Treść: Dostajesz dwa napisy. Sprawdź, czy drugi napis występuje w pierwszym jako pojedyncze słowo.
+Tresc: Dostajesz dwa napisy. Sprawdz, czy drugi napis wystepuje w pierwszym jako pojedyncze slowo.
 
-Dane wejściowe: Dwa napisy.
+Dane wejsciowe: Dwa napisy.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
+Przyklad:
 
-Dla napisów: “Siała baba mak.” oraz “babcia”, powinna zostać zwrócona wartość logiczna: Fałsz.
+Dla napisow: “Siala baba mak.” oraz “babcia”, powinna zostac zwrocona wartosc logiczna: Falsz.
 
 */
 
@@ -22,26 +22,27 @@ function czy_wystepuje_jako_slowo(zdanie, slowo) {
 
 function test_czy_wystepuje_jako_slowo() {
   console.assert(
-    czy_wystepuje_jako_slowo("Siała baba mak.", "babcia") === false
+    czy_wystepuje_jako_slowo("Siala baba mak.", "babcia") === false
   );
-  console.assert(czy_wystepuje_jako_slowo("Siała baba mak.", "baba") === true);
-  console.assert(czy_wystepuje_jako_slowo("Siała baba mak.", "Siała") === true);
-  console.assert(czy_wystepuje_jako_slowo("Siała baba mak.", "mak.") === true);
+  console.assert(czy_wystepuje_jako_slowo("Siala baba mak.", "baba") === true);
+  console.assert(czy_wystepuje_jako_slowo("Siala baba mak.", "Siala") === true);
+  console.assert(czy_wystepuje_jako_slowo("Siala baba mak.", "mak.") === true);
   console.assert(
-    czy_wystepuje_jako_slowo("Siała baba mak.", "Siała baba mak.") === true
-  );
-  console.assert(
-    czy_wystepuje_jako_slowo("Siała baba mak.", "Siała baba mak") === false
+    czy_wystepuje_jako_slowo("Siala baba mak.", "Siala baba mak.") === true
   );
   console.assert(
-    czy_wystepuje_jako_slowo("Siała baba mak.", "Siała baba mak. ") === false
+    czy_wystepuje_jako_slowo("Siala baba mak.", "Siala baba mak") === false
   );
   console.assert(
-    czy_wystepuje_jako_slowo("Siała baba mak.", " Siała baba mak.") === false
+    czy_wystepuje_jako_slowo("Siala baba mak.", "Siala baba mak. ") === false
   );
   console.assert(
-    czy_wystepuje_jako_slowo("Siała baba mak.", " Siała baba mak. ") === false
+    czy_wystepuje_jako_slowo("Siala baba mak.", " Siala baba mak.") === false
+  );
+  console.assert(
+    czy_wystepuje_jako_slowo("Siala baba mak.", " Siala baba mak. ") === false
   );
 }
 
 test_czy_wystepuje_jako_slowo();
+

@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Rotacja w lewo/prawo.
+Tytul: Rotacja w lewo/prawo.
 
-Treść: Otrzymujesz listę liczb całkowitych, kierunek przesunięcia (1 odpowiada przesunięciu w prawo, a 0 w lewo) oraz liczbę miejsc, o jaką elementy listy mają zostać przesunięte. Na przykład dla przesunięcia w prawo, pierwszy element trafia na drugie miejsce, drugi na trzecie, a ostatni na pierwsze miejsce. Przesuń elementy listy w podanym kierunku.
+Tresc: Otrzymujesz liste liczb calkowitych, kierunek przesuniecia (1 odpowiada przesunieciu w prawo, a 0 w lewo) oraz liczbe miejsc, o jaka elementy listy maja zostac przesuniete. Na przyklad dla przesuniecia w prawo, pierwszy element trafia na drugie miejsce, drugi na trzecie, a ostatni na pierwsze miejsce. Przesun elementy listy w podanym kierunku.
 
-Dane wejściowe: Lista liczb całkowitych oraz dwie liczby naturalne.
+Dane wejsciowe: Lista liczb calkowitych oraz dwie liczby naturalne.
 
-Dane wyjściowe: Lista liczb całkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [5, 27, 6, 2, 1, 10, 8] oraz liczb 0 i 2, powinna zostać zwrócona lista: [6, 2, 1, 10, 8, 5, 27].
+Dla otrzymanej listy: [5, 27, 6, 2, 1, 10, 8] oraz liczb 0 i 2, powinna zostac zwrocona lista: [6, 2, 1, 10, 8, 5, 27].
 */
 
-// Funkcja rotująca elementy listy o podaną liczbę miejsc
+// Funkcja rotujaca elementy listy o podana liczbe miejsc
 function rotacjaListy(lista, kierunek, przesuniecie) {
   przesuniecie %= lista.length;
 
@@ -41,3 +41,4 @@ function testRotacjaListy() {
 }
 
 testRotacjaListy();
+

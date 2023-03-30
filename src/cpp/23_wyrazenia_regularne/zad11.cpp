@@ -1,12 +1,16 @@
 /*
-Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj nazwe pliku ze sciezki.
-Zwroc sama nazwe pliku, bez rozszerzen.
+Tytul: Czy napis sklada sie wylacznie z cyfr?
+Tresc: Masz napis. Sprawdz, czy sklada sie on wylacznie z cyfr.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla napisu: “1234”, powinna zostac zwrocona wartosc logiczna: Prawda.
+
 */
 
 #include <cassert>
 #include <regex>
 #include <string>
-
 
 std::string nazwaPliku(std::string &sciezka) {
   const std::regex wzorzec("(.*[\\\\/]+)?([^\\.]*)(.*)?");
@@ -52,3 +56,4 @@ int main() {
 
   return 0;
 }
+

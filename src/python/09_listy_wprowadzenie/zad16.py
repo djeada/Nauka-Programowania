@@ -1,7 +1,11 @@
 """
-Dla otrzymanej listy oraz liczby x, znajdz indeksy pierwszej pary 
-elementow listy, ktorych suma jest rowna liczbie x. Jesli w liscie 
-nie ma takiej pary, zwroc pare (-1, -1).
+Tytul: Usun klucz.
+Tresc: Dla otrzymanej listy: liczb calkowitych oraz klucza, usun pierwsze wystapienie klucza w liscie.
+Dane wejsciowe: Lista liczb calkowitych i liczba calkowita.
+Dane wyjsciowe: Lista liczb calkowitych.
+Przyklad:
+Dla otrzymanej listy: [6, 2, 1, 4, 27] oraz 4, powinna zostac zwrocona lista: [6, 2, 1, 27].
+
 """
 
 
@@ -23,3 +27,4 @@ def test_znajdz_pare():
 if __name__ == "__main__":
 
     test_znajdz_pare()
+

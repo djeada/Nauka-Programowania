@@ -1,17 +1,15 @@
+/*
+Tytul: Znalezienie elementu bez pary w liscie liczb calkowitych.
+Tresc: Dla otrzymanej listy liczb calkowitych, skladajacej sie z nieparzystej
+liczby elementow, znajdz element, ktory nie ma pary o tej samej wartosci. Dane
+wejsciowe: Lista liczb calkowitych. Dane wyjsciowe: Liczba calkowita. Przyklad:
+Dla otrzymanej listy: [1, 3, 1, 7, 3, 1, 1] zostanie zwrocona liczba: 7.
+
+*/
 #include <cassert>
 #include <cmath>
 #include <numeric>
 #include <vector>
-
-/*
-Otrzymujesz liste liczb, wykonaj nastepujace polecenia:
-a) Zwieksz o 1 wszystkie elementy o parzystych indeksach.
-b) Wyzeruj wszystkie wielokrotnosci liczby 3.
-c) Podnies do kwadratu wszystkie elementy mniejsze niz 10.
-d) Wstaw sume wszystkich elementow otrzymanej listy na indeksy bedace liczbami
-pierwszymi. e) Zamien kazdy element na iloczyn wszystkich elementow listy poza
-nim samym.
-*/
 
 void zwieksz(std::vector<int> &lista) {
 
@@ -124,3 +122,4 @@ int main() {
 
   return 0;
 }
+

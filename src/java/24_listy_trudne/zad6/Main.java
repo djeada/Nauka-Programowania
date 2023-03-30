@@ -1,9 +1,18 @@
-import java.util.*;
-
 /*
-Otrzymujesz liste 2d skladajaca sie z M posortowanych list. Polacz otrzymane
-listy w jedna posortowana liste. Wszystkie elementy sa unikalne.
+Tytul: Polaczone posortowane listy
+Tresc: Otrzymujesz liste zawierajaca M posortowanych list. Polacz te listy w jedna posortowana liste. Wszystkie elementy sa unikalne.
+Dane wejsciowe: Lista list zawierajacych liczby naturalne.
+Dane wyjsciowe: Lista zawierajaca liczby naturalne.
+Przyklad:
+Dla wejsciowej listy:
+[[ -6, 23, 29, 33],
+[ 6, 22, 35, 71 ],
+[ 5, 19, 21, 37 ],
+[ -12, -7, -3, 28 ]],
+powinna zostac zwrocona lista: [-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71].
+
 */
+import java.util.*;
 
 public class Main {
   private static class Wezel implements Comparable<Wezel> {
@@ -81,3 +90,4 @@ public class Main {
     test3();
   }
 }
+

@@ -1,17 +1,21 @@
 """
-Otrzymujesz dwa napisy. Pierwszy napis reprezentuje tekst, a drugi zakazane slowo. 
-Jesli w danym wierszu tekstu wystepuje zakazane slowo, to usun czesc wiersza 
-od wystapienia zakazanego slowa do konca. Zwroc zmodyfikowany tekst.
+Tytul: Nazwa pliku bez rozszerzenia.
+Tresc: Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj z niego nazwe pliku wraz z rozszerzeniem. Zwroc sama nazwe pliku bez rozszerzenia.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu "C:\my-long\path_directory\file.html", powinna zostac zwrocona nazwa pliku bez rozszerzenia "file".
+
 """
 
 import re
 
 
 def usun_z_wiersza(tekst, zakazane_slowo):
-    '''
-    Funkcja usuwa z tekstu czesci wierszy zawierajace zakazane slowo, 
+    """
+    Funkcja usuwa z tekstu czesci wierszy zawierajace zakazane slowo,
     od wystapienia zakazanego slowa do konca.
-    '''
+    """
     return [re.sub(r"{0}.*".format(zakazane_slowo), "", e) for e in tekst.splitlines()]
 
 
@@ -55,3 +59,4 @@ The furnished she concluded depending procuring concealed.
 
 if __name__ == "__main__":
     test_usun_z_wiersza()
+

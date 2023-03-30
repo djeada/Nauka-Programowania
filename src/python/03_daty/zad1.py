@@ -1,8 +1,12 @@
 """
-Wypisz pobrana od uzytkownika liczbe, jesli:
+Tytul: Czy liczba jest poprawnym numerem dnia tygodnia lub miesiaca?
+Tresc: Wypisz pobrana od uzytkownika liczbe naturalna, jesli jest ona poprawnym numerem dnia tygodnia lub miesiaca.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+* Dla pobranej liczby: 10, powinna zostac wypisana liczba: 10.
+* Dla pobranej liczby: 15, nie powinna byc wypisana zadna liczba.
 
-a) Liczba jest poprawnym numerem dnia tygodnia.
-b) Liczba jest poprawnym numerem miesiaca.
 """
 
 if __name__ == "__main__":
@@ -21,3 +25,4 @@ if __name__ == "__main__":
         print("Liczba jest poprawnym numerem miesiaca.")
     else:
         print("Liczba nie jest poprawnym numerem miesiaca.")
+

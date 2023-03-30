@@ -1,12 +1,9 @@
-#!/usr/bin/env bash
+# Tytul: Podmien tresci plikow.
+# Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do plikow. Podmien tresci obu plikow.
+# Dane wejsciowe: Dwa napisy reprezentujace sciezki do plikow.
+# Dane wyjsciowe: Brak.
 
 source ../assert.sh
-
-# Otrzymujesz napis reprezentujacy sciezke folderu.
-# a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych 
-# znajdujacych sie w folderze oraz podfolderach.
-# b) Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie 
-# w folderze oraz podfolderach.
 
 dodaj_inicjaly_do_plikow_w_folderze() {
     local folder=$1
@@ -27,23 +24,23 @@ usun_srodkowy_wiersz_z_plikow_w_folderze() {
 
 test_dodaj_inicjaly_do_plikow_w_folderze() {
 
-    # stworz folder testowy wraz z podfolderami
+    mkdir -p 'test/test1'
     mkdir -p 'test/test1'
     mkdir -p 'test/test2'
 
-    # stworz pliki testowe
     local sciezki=('test/test1/plik1.txt' 'test/test1/plik2.txt' 'test/test2/plik3.txt' 'test/test2/plik4.txt')
-    local tresc='testowy tekst'	
+    local sciezki=('test/test1/plik1.txt' 'test/test1/plik2.txt' 'test/test2/plik3.txt' 'test/test2/plik4.txt')
+    local tresc='testowy tekst'
 
     for plik in ${sciezki[@]}; do
         echo $tresc > $plik
     done
 
-    # dodaj inicjaly
+    local inicjaly='A.D.'
     local inicjaly='A.D.'
     local dodaj_inicjaly_do_plikow_w_folderze 'test' $inicjaly
 
-    # sprawdz czy pliki zostaly zmodyfikowane
+    IFS=$'\n'
     IFS=$'\n'
     local oczekiwane=('A.D.' 'testowy tekst')
     for plik in ${sciezki[@]}; do
@@ -52,17 +49,17 @@ test_dodaj_inicjaly_do_plikow_w_folderze() {
     done
     unset IFS
 
-    # usun folder testowy
+    rm -rf 'test'
     rm -rf 'test'
 }
 
 test_usun_srodkowy_wiersz_z_plikow_w_folderze() {
 
-    # stworz folder testowy wraz z podfolderami
+    mkdir -p 'test/test1'
     mkdir -p 'test/test1'
     mkdir -p 'test/test2'
 
-    # stworz pliki testowe
+    local sciezki=('test/test1/plik1.csv' 'test/test1/plik2.csv' 'test/test2/plik3.csv' 'test/test2/plik4.csv')
     local sciezki=('test/test1/plik1.csv' 'test/test1/plik2.csv' 'test/test2/plik3.csv' 'test/test2/plik4.csv')
     local tresc='test1; test2;\ntest3; test4;\ntest5; test6;'
 
@@ -70,10 +67,10 @@ test_usun_srodkowy_wiersz_z_plikow_w_folderze() {
         echo $tresc > $plik
     done
 
-    # usun srodkowy wiersz z plikow
+    local usun_srodkowy_wiersz_z_plikow_w_folderze 'test'
     local usun_srodkowy_wiersz_z_plikow_w_folderze 'test'
 
-    # sprawdz czy pliki zostaly zmodyfikowane
+    IFS=$'\n'
     IFS=$'\n'
     local oczekiwane=('test1; test2;\ntest5; test6;')
     for plik in ${sciezki[@]}; do
@@ -81,7 +78,7 @@ test_usun_srodkowy_wiersz_z_plikow_w_folderze() {
         assertArrayEqual tresc_pliku oczekiwane $LINENO
     done
 
-    # usun folder testowy
+    rm -rf 'test'
     rm -rf 'test'
 }
 
@@ -91,3 +88,4 @@ main() {
 }
 
 main "$@"
+

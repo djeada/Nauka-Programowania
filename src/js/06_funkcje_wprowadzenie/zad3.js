@@ -1,70 +1,71 @@
 /*
-Tytuł:  Sprawdź warunek
+Tytul:  Sprawdz warunek
 
-Napisz funkcję, która sprawdzi następujące warunki dla otrzymanych dwóch liczb:
+Napisz funkcje, ktora sprawdzi nastepujace warunki dla otrzymanych dwoch liczb:
 
-a) Czy pierwsza liczba jest większa od drugiej liczby?
+a) Czy pierwsza liczba jest wieksza od drugiej liczby?
 
-b) Czy suma liczb jest mniejsza niż 10?
+b) Czy suma liczb jest mniejsza niz 10?
 
-c) Czy obie liczby są nieparzyste?
+c) Czy obie liczby sa nieparzyste?
 
-d) Czy większa liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu?
+d) Czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu?
 
-Dane wejściowe: dwie liczby naturalne
+Dane wejsciowe: dwie liczby naturalne
 
-Dane wyjściowe: cztery wartości logiczne, odpowiadające na każde z pytań
+Dane wyjsciowe: cztery wartosci logiczne, odpowiadajace na kazde z pytan
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb 3 i 2, funkcja powinna zwrócić następujące wartości logiczne:
+Dla pobranych liczb 3 i 2, funkcja powinna zwrocic nastepujace wartosci logiczne:
 
 a) Prawda
 
 b) Prawda
 
-c) Fałsz
+c) Falsz
 
 d) Prawda
 */
 
-// Funkcja sprawdzająca czy pierwsza liczba jest większa od drugiej
+// Funkcja sprawdzajaca czy pierwsza liczba jest wieksza od drugiej
 function czyPierwszaWiekszaOdDrugiej(liczba_a, liczba_b) {
   return liczba_a > liczba_b;
 }
 
-// Funkcja sprawdzająca czy suma liczb jest mniejsza niż 10
+// Funkcja sprawdzajaca czy suma liczb jest mniejsza niz 10
 function czySumaMniejszaOd10(liczba_a, liczba_b) {
   return liczba_a + liczba_b < 10;
 }
 
-// Funkcja sprawdzająca czy obie liczby są nieparzyste
+// Funkcja sprawdzajaca czy obie liczby sa nieparzyste
 function czyObieNieparzyste(liczba_a, liczba_b) {
   return liczba_a % 2 !== 0 && liczba_b % 2 !== 0;
 }
 
-// Funkcja sprawdzająca czy większa liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu
+// Funkcja sprawdzajaca czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu
 function czyWiekszaMniejszaOdPierwszejDoKwadratu(liczba_a, liczba_b) {
   return Math.max(liczba_a, liczba_b) < Math.pow(liczba_a, 2);
 }
 
-// Pobieranie danych od użytkownika
-var liczba_a = parseInt(prompt("Podaj pierwszą liczbę:"));
-var liczba_b = parseInt(prompt("Podaj drugą liczbę:"));
+// Pobieranie danych od uzytkownika
+var liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
+var liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
-// Wyświetlanie wyników
+// Wyswietlanie wynikow
 console.log(
-  "Czy pierwsza liczba jest większa od drugiej liczby? " +
+  "Czy pierwsza liczba jest wieksza od drugiej liczby? " +
     czyPierwszaWiekszaOdDrugiej(liczba_a, liczba_b)
 );
 console.log(
-  "Czy suma liczb jest mniejsza niż 10? " +
+  "Czy suma liczb jest mniejsza niz 10? " +
     czySumaMniejszaOd10(liczba_a, liczba_b)
 );
 console.log(
-  "Czy obie liczby są nieparzyste? " + czyObieNieparzyste(liczba_a, liczba_b)
+  "Czy obie liczby sa nieparzyste? " + czyObieNieparzyste(liczba_a, liczba_b)
 );
 console.log(
-  "Czy większa liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu? " +
+  "Czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu? " +
     czyWiekszaMniejszaOdPierwszejDoKwadratu(liczba_a, liczba_b)
 );
+

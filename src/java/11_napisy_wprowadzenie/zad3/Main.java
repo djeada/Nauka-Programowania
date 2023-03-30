@@ -1,3 +1,12 @@
+/*
+Tytul: Usun spacje ze zdania.
+Tresc: Otrzymasz napis reprezentujacy zdanie. Usun spacje ze zdania.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "Alamakota".
+
+*/
 import java.util.*;
 
 public class Main {
@@ -34,3 +43,4 @@ public class Main {
     test1();
   }
 }
+

@@ -1,7 +1,11 @@
 """
-Rozwaz gre, w ktorej w kazdym ruchu gracz moze zdobyc 3, 5 lub 10 punktow. 
-Dla otrzymanej liczby N, reprezentujacej calkowita liczbe punktow, 
-oblicz na ile sposobow gracz moze wygrac gre.
+Tytul: Suma liczb naturalnych mniejszych od N.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz sume liczb naturalnych mniejszych od N.
+Dane wejsciowe: Liczba naturalna N.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla N = 10, powinna zostac zwrocona liczba: 55.
+
 """
 
 
@@ -49,3 +53,4 @@ def test_gra():
 if __name__ == "__main__":
 
     test_gra()
+

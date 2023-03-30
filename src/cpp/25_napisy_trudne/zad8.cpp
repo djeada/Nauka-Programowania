@@ -1,12 +1,14 @@
+/*
+Tytul: Powtarzajace sie podnapisy.
+Tresc: Dostajesz napis. Znajdz wszystkie powtarzajace sie podnapisy w tym
+napisie. Dane wejsciowe: Napis. Dane wyjsciowe: Lista napisow. Przyklad: Dla
+napisu "pythonpython" powinna zostac zwrocona lista zawierajaca napis "python".
+
+*/
 #include <cassert>
 #include <climits>
 #include <string>
 #include <vector>
-
-/*
- Otrzymujesz liste napisow. Znajdz najdluzszy wspolny przedrostek
-dla wszystkich napisow z listy.
-*/
 
 std::string najdluzszyPrzedrostekV1(const std::vector<std::string> &slowa) {
 
@@ -64,3 +66,4 @@ int main() {
 
   return 0;
 }
+

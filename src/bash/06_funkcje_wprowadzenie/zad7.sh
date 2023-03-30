@@ -1,7 +1,9 @@
-#!/usr/bin/env bash
-
-#Napisz dwie funkcje. Pierwsza powinna porsic uzytkownika o podanie
-#nazwy i hasla oraz zwracac otrzymane dane.
+# Tytul: Haslo.
+# Tresc: Napisz dwie funkcje:
+# * Pierwsza funkcja powinna prosic uzytkownika o podanie nazwy uzytkownika i hasla, a nastepnie zwrocic te dane.
+# * Druga funkcja powinna otrzymac dane od pierwszej funkcji i ponownie prosic uzytkownika o podanie nazwy uzytkownika i hasla. Prosba o podanie danych powinna byc umieszczona w petli. Warunkiem zakonczenia petli jest podanie przez uzytkownika danych identycznych z tymi przekazanymi przez pierwsza funkcje.
+# Dane wejsciowe: dwie nazwy uzytkownika i hasla (napisy)
+# Dane wyjsciowe: komunikat
 
 inicjalizacjaDanych() {
     echo "podaj nazwe oraz haslo do zapamietania"
@@ -10,10 +12,6 @@ inicjalizacjaDanych() {
     eval "$1=$nazwaTemp $2=$hasloTemp"
 }
 
-#Druga powinna otrzymywac dane od pierwszej i ponownie prosic o
-#podanie nazwy oraz hasla, dopoki dane nie beda identyczne z tymi
-#podanymi za pierwszym razem.
-
 czyDanePoprawne() {
 
     staraNazwa=$1
@@ -21,7 +19,6 @@ czyDanePoprawne() {
 
     nowaNazwa=""
     noweHaslo=""
-
 
     while [[ $nowaNazwa != $staraNazwa ]] || [[ $noweHaslo != $stareHaslo ]]
     do

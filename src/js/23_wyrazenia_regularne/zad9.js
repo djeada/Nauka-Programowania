@@ -1,15 +1,15 @@
 /*
 
-Tytuł: Usuń fragment napisu.
+Tytul: Usun fragment napisu.
 
-Treść: Dostajesz dwa napisy. Pierwszy napis to tekst, a drugi to słowo, które należy usunąć z tekstu. Jeśli w tekście znajduje się słowo do usunięcia, usuń całą część tekstu od słowa do końca. Zwróć zmodyfikowany tekst.
+Tresc: Dostajesz dwa napisy. Pierwszy napis to tekst, a drugi to slowo, ktore nalezy usunac z tekstu. Jesli w tekscie znajduje sie slowo do usuniecia, usun cala czesc tekstu od slowa do konca. Zwroc zmodyfikowany tekst.
 
-Dane wejściowe: Dwa napisy.
+Dane wejsciowe: Dwa napisy.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
-Dla podanych napisów:
+Przyklad:
+Dla podanych napisow:
 
 > Turned it up should no valley cousin he.
   Speaking numerous ask did horrible packages set.
@@ -26,7 +26,7 @@ Dla podanych napisów:
   Frequently sufficient in be unaffected.
   The furnished she concluded depending procuring concealed.
 
-oraz słowa "a", powinien zostać zwrócony napis:
+oraz slowa "a", powinien zostac zwrocony napis:
 
 > Turned it up should no v
   Spe
@@ -62,3 +62,4 @@ function test_usun_fragment() {
 }
 
 test_usun_fragment();
+

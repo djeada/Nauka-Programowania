@@ -1,15 +1,15 @@
 /*
-Tytuł: Zamień litery "a" na znaki zapytania.
+Tytul: Zamien litery "a" na znaki zapytania.
 
-Treść: Otrzymasz napis. Zmień litery "a" na znaki zapytania.
+Tresc: Otrzymasz napis. Zmien litery "a" na znaki zapytania.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "Latarnik", powinien zostać zwrócony napis: "L?t?rnik".
+Dla otrzymanego napisu: "Latarnik", powinien zostac zwrocony napis: "L?t?rnik".
 */
 
 function zamienLitery(napis) {
@@ -23,8 +23,9 @@ function test() {
   let expectedOutput = "L?t?rnik";
   let output = zamienLitery(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

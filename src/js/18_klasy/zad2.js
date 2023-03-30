@@ -1,15 +1,15 @@
 /*
 
-Tytuł: Zaprojektuj klasę Punkt.
+Tytul: Zaprojektuj klase Punkt.
 
-Treść: Napisz klasę Punkt, która będzie reprezentowała punkt w układzie kartezjańskim. Klasa powinna zawierać następujące funkcje:
+Tresc: Napisz klase Punkt, ktora bedzie reprezentowala punkt w ukladzie kartezjanskim. Klasa powinna zawierac nastepujace funkcje:
 
-1. Konstruktor, który przyjmuje dwa argumenty (liczby). Pierwsza liczba reprezentuje współrzędną x, a druga współrzędną y. Domyślne wartości dla obu argumentów powinny wynosić 0.
-2. Funkcję statyczną odległość, która zwraca odległość między dwoma punktami (obiektami klasy Punkt).
-3. Funkcję, która wypisuje informacje o punkcie na standardowe wyjście.
-4. Funkcje umożliwiające porównanie dwóch obiektów klasy Punkt. Jeśli jest to możliwe, należy przeciążyć operatory == oraz !=.
+1. Konstruktor, ktory przyjmuje dwa argumenty (liczby). Pierwsza liczba reprezentuje wspolrzedna x, a druga wspolrzedna y. Domyslne wartosci dla obu argumentow powinny wynosic 0.
+2. Funkcje statyczna odleglosc, ktora zwraca odleglosc miedzy dwoma punktami (obiektami klasy Punkt).
+3. Funkcje, ktora wypisuje informacje o punkcie na standardowe wyjscie.
+4. Funkcje umozliwiajace porownanie dwoch obiektow klasy Punkt. Jesli jest to mozliwe, nalezy przeciazyc operatory == oraz !=.
 
-Napisz program, który przetestuje twoją klasę. Stwórz punkty: A (5, 5) oraz B (-3, -3). Wypisz na standardowe wyjście informacje o utworzonych punktach oraz odległość między nimi.
+Napisz program, ktory przetestuje twoja klase. Stworz punkty: A (5, 5) oraz B (-3, -3). Wypisz na standardowe wyjscie informacje o utworzonych punktach oraz odleglosc miedzy nimi.
 */
 
 class Punkt {
@@ -48,4 +48,5 @@ punktA.wypiszInfo();
 punktB.wypiszInfo();
 
 const odlegloscAB = Punkt.odleglosc(punktA, punktB);
-console.log(`Odległość między punktem A i B: ${odlegloscAB}`);
+console.log(`Odleglosc miedzy punktem A i B: ${odlegloscAB}`);
+

@@ -1,3 +1,12 @@
+/*
+Tytul: Mnozenie wielomianow.
+Tresc: Otrzymujesz dwie listy n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz wspolczynniki wielomianu bedacego iloczynem otrzymanych wielomianow.
+Dane wejsciowe: Dwie listy liczb naturalnych.
+Dane wyjsciowe: Lista liczb naturalnych.
+Przyklad:
+Dla otrzymanych dwoch list: [5, 0, 10, 6] oraz [1, 2, 4], zostanie zwrocona lista: [5, 10, 30, 26, 52, 24].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -28,3 +37,4 @@ public class Main {
     test1();
   }
 }
+

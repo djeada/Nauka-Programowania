@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: NWD.
+# Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych zwroci ich najwiekszy wspolny dzielnik.
+# Dane wejsciowe: dwie liczby naturalne
+# Dane wyjsciowe: liczba naturalna
+# Przyklad:
+# Dla otrzymanych liczb 60 i 45, funkcja powinna zwrocic liczbe 15.
 
 source ../assert.sh
-
-#Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci
-#ich najwiekszy wspolny dzielnik.
 
 nwdV1() {
 
@@ -35,25 +37,25 @@ nwdV2() {
     echo $a
 }
 
-#Testy
 test1() {
-    a=14
-    b=21
-    wynik=7
-    assert "$wynik -eq $(nwdV1 $a $b)" $LINENO
-}
+    test1() {
+        a=14
+        b=21
+        wynik=7
+        assert "$wynik -eq $(nwdV1 $a $b)" $LINENO
+    }
 
-test2() {
-    a=14
-    b=21
-    wynik=7
-    assert "$wynik -eq $(nwdV2 $a $b)" $LINENO
-}
+    test2() {
+        a=14
+        b=21
+        wynik=7
+        assert "$wynik -eq $(nwdV2 $a $b)" $LINENO
+    }
 
-main() {
-    test1
-    test2
-}
+    main() {
+        test1
+        test2
+    }
 
-main "$@"
+    main "$@"
 

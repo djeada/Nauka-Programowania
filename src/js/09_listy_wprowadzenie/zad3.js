@@ -1,15 +1,15 @@
 /*
-Tytuł: Pierwsze wystąpienie klucza.
+Tytul: Pierwsze wystapienie klucza.
 
-Treść: Otrzymujesz listę liczb naturalnych oraz liczbę naturalną jako klucz. Znajdź indeks odpowiadający pierwszemu wystąpieniu klucza w liście. Jeśli klucz nie występuje w liście, zwróć -1.
+Tresc: Otrzymujesz liste liczb naturalnych oraz liczbe naturalna jako klucz. Znajdz indeks odpowiadajacy pierwszemu wystapieniu klucza w liscie. Jesli klucz nie wystepuje w liscie, zwroc -1.
 
-Dane wejściowe: Lista liczb naturalnych oraz liczba naturalna jako klucz.
+Dane wejsciowe: Lista liczb naturalnych oraz liczba naturalna jako klucz.
 
-Dane wyjściowe: Liczba całkowita oznaczająca indeks pierwszego wystąpienia klucza w liście.
+Dane wyjsciowe: Liczba calkowita oznaczajaca indeks pierwszego wystapienia klucza w liscie.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy [2, 9, -1, 3, 8] oraz klucza -1 powinno zostać zwrócone 2.
+Dla otrzymanej listy [2, 9, -1, 3, 8] oraz klucza -1 powinno zostac zwrocone 2.
 */
 
 function pierwszeWystapienieKlucza(lista, klucz) {
@@ -41,3 +41,4 @@ function main() {
 }
 
 main();
+

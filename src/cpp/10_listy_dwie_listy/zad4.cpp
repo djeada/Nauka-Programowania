@@ -1,11 +1,15 @@
+/*
+Tytul: Obliczenie sredniej wazonej.
+Tresc: Otrzymujesz dwie listy liczb zmiennoprzecinkowych. Pierwsza lista
+reprezentuje wagi, a druga wartosci. Oblicz srednia wazona. Dane wejsciowe: Dwie
+listy liczb zmiennoprzecinkowych. Dane wyjsciowe: Liczba zmiennoprzecinkowa.
+Przyklad:
+Dla otrzymanych list [2.0, 5.0, 0.0, 2.0, 1.0] oraz [0.2, 0.4, 0.1, 0.2, 0.1]
+zostanie zwrocona wartosc: 0.29.
+
+*/
 #include <cassert>
 #include <vector>
-
-/*
-Otrzymujesz dwie listy liczb calkowitych reprezentujace dwa wektory.
-Zaimplementuj mnozenie wektorowe (zdefiniowane jedynie dla wektorow
-3-wymiarowej przestrzeni euklidesowej).
-*/
 
 std::vector<int> mnozenieWektorowe(std::vector<int> &listaA,
                                    std::vector<int> &listaB) {
@@ -34,3 +38,4 @@ int main() {
 
   return 0;
 }
+

@@ -1,3 +1,12 @@
+/*
+Tytul: Policz wystapienia znaku.
+Tresc: Dla podanego napisu i znaku, znajdz liczbe wystapien tego znaku w napisie.
+Dane wejsciowe: Napis oraz znak.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanego napisu: "klamra" oraz znaku 'a', powinno zostac zwrocone: 2.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -88,3 +97,4 @@ public class Main {
     test2();
   }
 }
+

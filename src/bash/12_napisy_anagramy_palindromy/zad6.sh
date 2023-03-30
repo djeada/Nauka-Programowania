@@ -1,11 +1,14 @@
-#!/usr/bin/env bash
+# Tytul: Permutacje slowa, ktore sa palindromami.
+# Tresc: Napisz program, ktory znajdzie permutacje danego slowa, ktore sa palindromami.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Lista napisow.
+# Przyklad:
+# Dla otrzymanego napisu: “taco”, powinna zostac zwrocona lista: ["taco", "toca"].
 
 source ../assert.sh
 
-# Znajdz permutacje danego slowa bedace palindromami.
-
 permutacje() {
-    # Funkcja znajduje wszystkie permutacje dla podanego napisu.
+    local napis=$1
     local napis=$1
     if [ ${#napis} -eq 1 ]; then
         echo "$napis"
@@ -27,7 +30,7 @@ permutacje() {
 }
 
 czy_palindrom() {
-    # Funkcja sprawdza czy podany napis jest palindromem.
+    local slowo="$1"
     local slowo="$1"
     local slowo_odwrocone=$(echo "$slowo" | rev)
     if [ "$slowo" == "$slowo_odwrocone" ]; then
@@ -55,7 +58,6 @@ test_permutacje_palindromiczne(){
 main() {
     test_permutacje_palindromiczne
 }
-
 
 main "$@"
 

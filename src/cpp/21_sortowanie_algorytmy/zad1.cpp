@@ -1,5 +1,12 @@
 /*
-Zaimplementuj sortowanie babelkowe.
+Tytul: Sortowanie babelkowe.
+Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania
+babelkowego. Porownaj sasiednie liczby z listy i zamien je miejscami, jesli
+pierwsza jest wieksza od drugiej. Powtarzaj operacje, az przejdziesz przez cala
+liste bez dokonywania zmian. Dane wejsciowe: Lista liczb calkowitych. Dane
+wyjsciowe: Posortowana lista liczb calkowitych. Przyklad: Dla listy: [6, 2, 1,
+4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
+
 */
 
 #include <cassert>
@@ -36,4 +43,6 @@ int main() {
   return 0;
 }
 
-// Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o main.out Zad1.cpp
+// Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra
+// -pedantic -o main.out Zad1.cpp
+

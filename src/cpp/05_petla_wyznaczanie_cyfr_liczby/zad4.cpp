@@ -1,12 +1,18 @@
-#include <iostream>
-
 /*
-Dla pobranej liczby, powinne zostac wypisane cyfry liczb, ktore sa:
+Tytul: Cyfry liczby spelniajace okreslone warunki.
+Tresc: Dla otrzymanej liczby naturalnej wypisz cyfry tej liczby, ktore sa:
+a) liczbami parzystymi,
+b) mniejsze niz 5,
+c) rozne od 0.
+Dane wejsciowe: Liczba naturalna dla wszystkich podpunktow.
+Dane wyjsciowe: Kilka liczb.
+Przyklad:
+a) Dla otrzymanej liczby 932, powinna zostac wypisana liczba 2.
+b) Dla otrzymanej liczby 101, powinny zostac wypisane liczby 1, 0 i 1.
+c) Dla otrzymanej liczby 650, powinny zostac wypisane liczby 6 i 5.
 
-a) Liczbami parzystymi.
-b) Mniejsze niz 5.
-c) Rozne od 0.
 */
+#include <iostream>
 
 int main() {
 
@@ -52,3 +58,4 @@ int main() {
 
   return 0;
 }
+

@@ -1,14 +1,18 @@
+/*
+Tytul: Klucz to imie, wartosc lista wypozyczonych ksiazek.
+Tresc: Zbuduj prosta baze danych dla biblioteki oparta o slownik, w ktorym
+kluczami sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek. Baza
+danych powinna umozliwiac:
+1. Dodanie wypozyczonej ksiazki do danego czytelnika.
+2. Zwrocenie wypozyczonej ksiazki przez czytelnika.
+3. Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <unordered_map>
 #include <utility>
 #include <vector>
-
-/*
-Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych.
-a) Wypisz pary posortowane wzgledem napisow.
-b) Wypisz pary posortowane wzgledem liczb.
-*/
 
 bool porownujKlucze(const std::pair<std::string, int> &a,
                     const std::pair<std::string, int> &b) {
@@ -83,3 +87,4 @@ int main() {
 
   return 0;
 }
+

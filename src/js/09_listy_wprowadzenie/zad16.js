@@ -1,18 +1,18 @@
 /*
-Tytuł: Znalezienie indeksów pierwszej pary elementów listy o sumie równej podanej liczbie.
+Tytul: Znalezienie indeksow pierwszej pary elementow listy o sumie rownej podanej liczbie.
 
-Treść: Dla otrzymanej listy liczb całkowitych oraz liczby x, znajdź indeksy pierwszej pary elementów listy, których suma jest równa x. Jeśli taka para nie istnieje, zwróć parę (-1, -1).
+Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x, znajdz indeksy pierwszej pary elementow listy, ktorych suma jest rowna x. Jesli taka para nie istnieje, zwroc pare (-1, -1).
 
-Dane wejściowe: Lista liczb całkowitych oraz liczba całkowita.
+Dane wejsciowe: Lista liczb calkowitych oraz liczba calkowita.
 
-Dane wyjściowe: Para liczb całkowitych.
+Dane wyjsciowe: Para liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostaną zwrócone indeksy pierwszej pary elementów o sumie równej 5: (0, 2).
+Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostana zwrocone indeksy pierwszej pary elementow o sumie rownej 5: (0, 2).
 */
 
-// Funkcja znajdująca indeksy pierwszej pary elementów o sumie równej podanej liczbie
+// Funkcja znajdujaca indeksy pierwszej pary elementow o sumie rownej podanej liczbie
 function znajdzPareSumujacaDo(lista, x) {
   const mapaIndeksow = new Map();
 
@@ -45,3 +45,4 @@ function testZnajdzPareSumujacaDo() {
 }
 
 testZnajdzPareSumujacaDo();
+

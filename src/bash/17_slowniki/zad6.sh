@@ -1,10 +1,12 @@
-#!/usr/bin/env bash
+# Tytul: Powtarzajace sie znaki
+# Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrocenie wszystkich znakow, ktore wystepuja co najmniej 2 razy w ciagu.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Napis.
+# Przyklad:
+# Dla otrzymanego napisu: "aaabbbccc"
+# Powinien zostac zwrocony napis: "abc"
 
 source ../assert.sh
-
-# Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym 
-# napisie. Inaczej, zwroc histogram znakow w otrzymanym napisie.
-
 
 histogram_znakow() {
     local napis=$1
@@ -29,3 +31,4 @@ main() {
 }
 
 main "$@"
+

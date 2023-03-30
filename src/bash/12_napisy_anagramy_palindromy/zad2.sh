@@ -1,11 +1,14 @@
-#!/usr/bin/env bash
+# Tytul: Znalezienie wszystkich permutacji slowa.
+# Tresc: Napisz program, ktory dla otrzymanego napisu znajdzie jego wszystkie permutacje.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Lista napisow.
+# Przyklad:
+# Dla otrzymanego napisu: “abc”, powinna zostac zwrocona lista: [“abc”, “bac”, “cab”, “acb”, “bca”, “cba”].
 
 source ../assert.sh
 
-# Dla otrzymanego napisu, znajdz jego wszystkie permutacje.
-
 permutacje() {
-    # Funkcja znajduje wszystkie permutacje dla podanego napisu.
+    local napis=$1
     local napis=$1
     if [ ${#napis} -eq 1 ]; then
         echo "$napis"
@@ -36,5 +39,5 @@ main() {
     test_permutacje
 }
 
-
 main "$@"
+

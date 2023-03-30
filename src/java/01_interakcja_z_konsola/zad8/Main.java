@@ -1,12 +1,17 @@
+/*
+Tytul: Obliczenie ceny podlogi.
+Tresc: Otrzymasz cene pojedynczej plytki, wymiary plytki w postaci kwadratu oraz wymiary podlogi w postaci prostokata. Oblicz, ile kosztowac bedzie podloga o podanych wymiarach.
+Jednostki sa umowne.
+Dane wejsciowe: Cztery liczby naturalne: cena plytki, dlugosc boku plytki, dlugosc podlogi oraz szerokosc podlogi.
+Dane wyjsciowe: Liczba naturalna oznaczajaca cene podlogi.
+Przyklad:
+Dla pobranych liczb: 2 (cena plytki), 3 (dlugosc boku plytki), 20 (dlugosc podlogi) oraz 40 (szerokosc podlogi), powinna zostac wypisana liczba: 196.
+
+*/
 import java.util.*;
 
 public class Main {
   public static void main(String[] args) {
-
-    /*
-    Otrzymujesz cene oraz wymiary pojedynczej plytki. Oblicz ile bedzie wynosila cena
-    za podloge o podanych wymiarach. Podloga jest prostokatem, a plytka kwadratem
-    */
 
     System.out.print("podaj: cene plytki, dlugosc boku plytki i wymiary podlogi");
     System.out.print("\n");
@@ -35,3 +40,4 @@ public class Main {
     System.out.print("x" + dlugoscPodlogi + " wynosi " + calkowityKoszt + "\n");
   }
 }
+

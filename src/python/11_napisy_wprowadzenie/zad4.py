@@ -1,5 +1,11 @@
 """
-Otrzymujesz napis. Zamien wszystkie male litery na wielkie.
+Tytul: Znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
+Tresc: Otrzymasz napis. Znajdz znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista znakow.
+Przyklad:
+Dla otrzymanego napisu: "Slon", powinna zostac zwrocona lista: ['o', 'n'].
+
 """
 
 
@@ -15,3 +21,4 @@ def test_na_male():
 
 if __name__ == "__main__":
     test_na_male()
+

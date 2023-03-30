@@ -1,8 +1,8 @@
 /*
 
-Tytuł: Dziedziczenie wielokrotne
+Tytul: Dziedziczenie wielokrotne
 
-Treść: Napisz klasę Ptak, dziedziczącą po klasach Zwierz i ObiektLatający. W skład klasy Zwierz powinny wchodzić funkcje o nazwach 'jedz()', 'spij()', 'wydaj_dźwięk()', które wypisują odpowiednie komunikaty na standardowe wyjście. W skład klasy ObiektLatający powinny wchodzić funkcje o nazwach 'leć()', 'wyląduj()', które wypisują odpowiednie komunikaty na standardowe wyjście. Napisz program testujący tę klasę.
+Tresc: Napisz klase Ptak, dziedziczaca po klasach Zwierz i ObiektLatajacy. W sklad klasy Zwierz powinny wchodzic funkcje o nazwach 'jedz()', 'spij()', 'wydaj_dzwiek()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie. W sklad klasy ObiektLatajacy powinny wchodzic funkcje o nazwach 'lec()', 'wyladuj()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie. Napisz program testujacy te klase.
 */
 
 const Zwierz = (superclass) =>
@@ -56,3 +56,4 @@ const main = function () {
 };
 
 main();
+

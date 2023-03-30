@@ -58,3 +58,4 @@ fn main() {
 	println!("{} stopni Fahrenheita to {} stopni Kelwina", temperature_w_stopniach_Fahrenheita, (temperature_w_stopniach_Fahrenheita - 32.0) * 4.0 / 9.0);
 
 }
+

@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Zaprojektuj klasy Wektor2D oraz Wektor3D.
+Tytul: Zaprojektuj klasy Wektor2D oraz Wektor3D.
 
-Treść:  Napisz klasy Wektor2D oraz Wektor3D, które będą reprezentowały odpowiednio wektory w przestrzeni dwuwymiarowej i trzywymiarowej. Klasy powinny zawierać następujące funkcje:
+Tresc:  Napisz klasy Wektor2D oraz Wektor3D, ktore beda reprezentowaly odpowiednio wektory w przestrzeni dwuwymiarowej i trzywymiarowej. Klasy powinny zawierac nastepujace funkcje:
 
-1. Konstruktor, który przyjmuje dwa (trzy) argumenty (liczby). Liczby reprezentują współrzędne wektora. Domyślne wartości dla wszystkich argumentów powinny wynosić 0.
-2. Funkcje, które zwracają wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie) oraz iloczyn wektorowy i skalarny. Jeśli jest to możliwe, należy przeciążyć operatory: +, -, *.
-3. Funkcję, która wypisuje informacje o wektorze na standardowe wyjście.
-4. Funkcje umożliwiające porównanie dwóch obiektów klasy Wektor2D (Wektor3D). Jeśli jest to możliwe, należy przeciążyć operatory == oraz !=.
-5. Funkcję moduł, która zwraca moduł wektora.
+1. Konstruktor, ktory przyjmuje dwa (trzy) argumenty (liczby). Liczby reprezentuja wspolrzedne wektora. Domyslne wartosci dla wszystkich argumentow powinny wynosic 0.
+2. Funkcje, ktore zwracaja wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie) oraz iloczyn wektorowy i skalarny. Jesli jest to mozliwe, nalezy przeciazyc operatory: +, -, *.
+3. Funkcje, ktora wypisuje informacje o wektorze na standardowe wyjscie.
+4. Funkcje umozliwiajace porownanie dwoch obiektow klasy Wektor2D (Wektor3D). Jesli jest to mozliwe, nalezy przeciazyc operatory == oraz !=.
+5. Funkcje modul, ktora zwraca modul wektora.
 
-Napisz program, który przetestuje twoją klasę. Stwórz wektory: A (-3, -3, -3) oraz B (5, 5, 5). Wypisz na standardowe wyjście informacje o utworzonych wektorach oraz sumę wektorów, różnicę pierwszego i drugiego oraz ich iloczyn wektorowy.
+Napisz program, ktory przetestuje twoja klase. Stworz wektory: A (-3, -3, -3) oraz B (5, 5, 5). Wypisz na standardowe wyjscie informacje o utworzonych wektorach oraz sume wektorow, roznice pierwszego i drugiego oraz ich iloczyn wektorowy.
 */
 
 class Wektor2D {
@@ -139,3 +139,4 @@ suma.wypiszInfo();
 roznica.wypiszInfo();
 iloczynWektorowy.wypiszInfo();
 console.log(iloczynSkalarny);
+

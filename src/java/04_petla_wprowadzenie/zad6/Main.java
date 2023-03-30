@@ -1,3 +1,18 @@
+/*
+Tytul: Suma elementow ciagu.
+Tresc: Dla otrzymanej liczby naturalnej n, wypisz sume n pierwszych elementow ciagu danego wzorem:
+$$a_n = n^2 + n + 1$$
+$$a_n = n^2 + 5n$$
+$$a_n = n + 2n$$
+Wynik powinien zostac zaokraglony do najblizszej liczby naturalnej.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+* Dla otrzymanej liczby 2, w podpunkcie a) powinna zostac wypisana liczba 1.
+* Dla otrzymanej liczby 2, w podpunkcie b) powinna zostac wypisana liczba 17.
+* Dla otrzymanej liczby 2, w podpunkcie c) powinna zostac wypisana liczba 6.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -38,3 +53,4 @@ public class Main {
     System.out.printf("\n");
   }
 }
+

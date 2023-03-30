@@ -1,9 +1,17 @@
-#!/usr/bin/env bash
-
-#Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora
-#dla otrzymanych dwoch liczb ustali czy:
-
-#a) pierwsza liczba jest wieksza od drugiej
+# Tytul:  Sprawdz warunek
+# Napisz funkcje, ktora sprawdzi nastepujace warunki dla otrzymanych dwoch liczb:
+# a) Czy pierwsza liczba jest wieksza od drugiej liczby?
+# b) Czy suma liczb jest mniejsza niz 10?
+# c) Czy obie liczby sa nieparzyste?
+# d) Czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu?
+# Dane wejsciowe: dwie liczby naturalne
+# Dane wyjsciowe: cztery wartosci logiczne, odpowiadajace na kazde z pytan
+# Przyklad:
+# Dla pobranych liczb 3 i 2, funkcja powinna zwrocic nastepujace wartosci logiczne:
+# a) Prawda
+# b) Prawda
+# c) Falsz
+# d) Prawda
 
 czyWieksza() {
 
@@ -13,8 +21,6 @@ czyWieksza() {
         echo false
     fi
 }
-
-#b) czy suma liczb jest mneijsza niz 10
 
 czySumaMniejsza() {
     suma=$(($1 + $2))
@@ -26,8 +32,6 @@ czySumaMniejsza() {
     fi
 }
 
-#c) czy obie sa nieparzyste
-
 czyObieNieparzyste() {
     if [[ $(($1 % 2)) -eq 1 ]] && [[ $(($2 % 2)) -eq 1 ]]; then
         echo true
@@ -35,8 +39,6 @@ czyObieNieparzyste() {
         echo false
     fi
 }
-
-#d) czy wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu
 
 wieksza() {
     if [[ $1 > $2 ]]; then

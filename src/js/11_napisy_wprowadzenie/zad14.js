@@ -1,15 +1,15 @@
 /*
-Tytuł: Napis składający się z liczb od 1 do n.
+Tytul: Napis skladajacy sie z liczb od 1 do n.
 
-Treść: Otrzymasz liczbę naturalną n. Zwróć napis składający się z liczb naturalnych od 1 do n.
+Tresc: Otrzymasz liczbe naturalna n. Zwroc napis skladajacy sie z liczb naturalnych od 1 do n.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby n równej 3 powinien zostać zwrócony napis: "123".
+Dla otrzymanej liczby n rownej 3 powinien zostac zwrocony napis: "123".
 */
 
 function napisOd1DoN(n) {
@@ -29,14 +29,15 @@ function test() {
 
   console.assert(
     output === expectedOutput,
-    "Test nie powiódł się dla " +
+    "Test nie powiodl sie dla " +
       input +
       ". Otrzymany wynik to " +
       output +
       ", a oczekiwany wynik to " +
       expectedOutput
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

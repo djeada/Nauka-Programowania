@@ -1,8 +1,13 @@
-import java.util.*;
-
 /*
-Znajdz najdluzsze powtorzenie w napisie.
+Tytul: Rotacje napisow.
+Tresc: Dostajesz dwa napisy. Sprawdz, czy jeden z nich jest rotacja drugiego.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla napisow "malpka" i "pkamal" powinno zostac zwrocone "Prawda".
+
 */
+import java.util.*;
 
 public class Main {
   public static String najdluzszePowtorzenie(String napis) {
@@ -50,3 +55,4 @@ public class Main {
     test3();
   }
 }
+

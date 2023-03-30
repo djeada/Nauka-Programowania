@@ -1,11 +1,15 @@
 /*
-Napisz klase Kolo reprezentujaca kolo. W sklad klasy powinny wchodzic funkcje:
-a) Konstruktor pobierajacy jedna liczbe jako argument, reprezentujaca promien kola. Domyslna wartosc promienia to 1.
-b) Funkcja obwod, zwracajaca obwod kola.
-c) Funkcja pole, zwracajaca pole kola.
-d) Funkcja wypisujaca informacje o kole na standardowe wyjscie.
+Tytul: Zaprojektuj klase Kolo.
+Opis zadania: Napisz klase Kolo, ktora bedzie reprezentowala kolo. Klasa powinna
+zawierac nastepujace funkcje:
+1. Konstruktor, ktory przyjmuje jedna liczbe jako argument, reprezentujaca
+promien kola. Domyslna wartoscia promienia powinno byc 1.
+2. Funkcje obwod, ktora zwraca obwod kola.
+3. Funkcje pole, ktora zwraca pole kola.
+4. Funkcje, ktora wypisuje informacje o kole na standardowe wyjscie.
+Napisz program, ktory przetestuje twoja klase. Stworz kolo o promieniu 3 i uzyj
+funkcji wypisujacej informacje o kole.
 
-Napisz program testujacy twoja klase. Stworz kolo o promieniu rownym 3 i uzyj funkcji wypisujacej informacje o kole.
 */
 
 #include <cmath>
@@ -56,3 +60,4 @@ int main() {
 
   return 0;
 }
+

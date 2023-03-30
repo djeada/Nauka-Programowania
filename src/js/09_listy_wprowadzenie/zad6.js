@@ -1,15 +1,15 @@
 /*
-Tytuł: Czy średnia elementów znajduje się w liście?
+Tytul: Czy srednia elementow znajduje sie w liscie?
 
-Treść: Dla otrzymanej listy liczb całkowitych oraz liczby całkowitej jako klucza, usuń pierwsze wystąpienie klucza w liście.
+Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby calkowitej jako klucza, usun pierwsze wystapienie klucza w liscie.
 
-Dane wejściowe: Lista liczb całkowitych i liczba całkowita jako klucz.
+Dane wejsciowe: Lista liczb calkowitych i liczba calkowita jako klucz.
 
-Dane wyjściowe: Lista liczb całkowitych bez pierwszego wystąpienia klucza.
+Dane wyjsciowe: Lista liczb calkowitych bez pierwszego wystapienia klucza.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy [6, 2, 1, 4, 27] oraz 4 powinna zostać zwrócona lista [6, 2, 1, 27].
+Dla otrzymanej listy [6, 2, 1, 4, 27] oraz 4 powinna zostac zwrocona lista [6, 2, 1, 27].
 */
 
 function czySredniaWLiscie(lista) {
@@ -46,3 +46,4 @@ function main() {
 }
 
 main();
+

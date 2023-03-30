@@ -1,33 +1,56 @@
-import java.io.*;
+/*
+Tytul: Przesun wszystkie pliki CSV do jednego folderu.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Przenies wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderow) do drugiego folderu.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
+Dane wyjsciowe: Brak.
+
+*/
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.*;
 
 public class Main {
-  // Otrzymujesz napis reprezentujacy sciezke folderu.
-  // Usun wszystkie pliki o rozmiarach wiekszych niz 10kB
-  // znajdujacych sie w folderze oraz podfolderach.
-
-  public static long rozmiarPliku(final String sciezka) {
-    File plik = new File(sciezka);
-    return plik.length();
-  }
-
-  public static void usunPliki(final String sciezka) {
-    File folder = new File(sciezka);
-
-    for (File plik : folder.listFiles()) {
-
-      if (rozmiarPliku(plik.getAbsolutePath()) > 10000) {
-
-        if (!plik.delete()) {
-          System.out.println("Usuniecie pliku nie powiodlo sie.");
-        }
-      }
+  public static long fileSize(String path) {
+    try {
+      return Files.size(Paths.get(path));
+    } catch (IOException e) {
+      System.out.println("Error: " + e.getMessage());
+      return -1;
     }
   }
 
-  public static void main(String[] args) {
+  public static void removeFiles(String folderPath) {
+    try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(Paths.get(folderPath))) {
+      for (Path file : directoryStream) {
+        if (fileSize(file.toString()) > 10240) {
+          Files.delete(file);
+        }
+      }
+    } catch (IOException e) {
+      System.out.println("Error: " + e.getMessage());
+    }
+  }
 
-    final String sciezka =
-        System.getProperty("user.dir") + System.getProperty("file.separator") + "folder";
-    usunPliki(sciezka);
+  public static void testRemoveFiles() throws IOException {
+    String folderPath = "test";
+    Files.createDirectory(Paths.get(folderPath));
+
+    String filePath = "test/file.txt";
+    try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(filePath))) {
+      for (int i = 0; i < 100000; i++) {
+        writer.write("test\n");
+      }
+    }
+
+    removeFiles(folderPath);
+
+    assert Files.list(Paths.get(folderPath)).count() == 0;
+
+    Files.delete(Paths.get(folderPath));
+  }
+
+  public static void main(String[] args) throws IOException {
+    testRemoveFiles();
   }
 }
+

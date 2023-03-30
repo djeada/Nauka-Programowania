@@ -1,7 +1,11 @@
 """
-Otrzymujesz liste liczb naturalnych. Sprawdz czy srednia elementow 
-listy znajduje sie w liscie. Dla sredniej nie bedacej liczba calkowita, 
-zaokraglij wynik w dol.
+Tytul: Znalezienie elementu dominujacego w liscie liczb naturalnych.
+Tresc: Dla dostarczonej listy liczb naturalnych, znajdz element, ktory wystepuje w niej wiecej niz polowa jej dlugosci. Jesli taki element nie istnieje, zwroc -1.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej listy: [4, 7, 4, 4, 2] zostanie zwrocona liczba: 4.
+
 """
 
 
@@ -27,3 +31,4 @@ def test_czy_srednia_w_liscie_dla_pustej_listy():
 if __name__ == "__main__":
 
     test_czy_srednia_w_liscie_dla_pustej_listy()
+

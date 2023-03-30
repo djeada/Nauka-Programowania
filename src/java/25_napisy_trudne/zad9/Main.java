@@ -1,8 +1,13 @@
-import java.util.*;
-
 /*
-Otrzymujesz dwa napisy. Znajdz ich najdluzszy wspolny podnapis.
+Tytul: Najdluzszy wspolny przedrostek.
+Tresc: Dostajesz liste napisow. Znajdz najdluzszy wspolny przedrostek dla wszystkich napisow na liscie.
+Dane wejsciowe: Lista napisow.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac zwrocony napis "Rem".
+
 */
+import java.util.*;
 
 public class Main {
   public static String najdluzszyPodnapis(String napis1, String napis2) {
@@ -55,3 +60,4 @@ public class Main {
     test3();
   }
 }
+

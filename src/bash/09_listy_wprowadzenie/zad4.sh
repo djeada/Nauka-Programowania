@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Znalezienie brakujacego elementu w liscie.
+# Tresc: Dla dostarczonej listy, skladajacej sie z nieuporzadkowanych kolejnych (oprocz jednego) elementow ciagu arytmetycznego, znajdz brakujacy element.
+# Dane wejsciowe: Lista zawierajaca liczby naturalne.
+# Dane wyjsciowe: Liczba naturalna.
+# Przyklad:
+# Dla otrzymanej listy: [5, 2, 1, 3] zostanie zwrocona liczba: 4.
 
 source ../assert.sh
-
-# Otrzymujesz liste. Znajdz najwiekszy
-# i najmniejszy element tej listy.
 
 maks_v1() {
     local maks=${lista[0]}
@@ -31,7 +33,6 @@ min_v2() {
     echo "${lista[*]}" | sort -n | head -n1
 }
 
-
 test1() {
     local lista=(3 5 -7 4 9 -11 2)
     local wynik=9
@@ -55,7 +56,6 @@ test4() {
     local wynik=-11
     assertEqual $(min_v2) $wynik $LINENO
 }
-
 
 main() {
     test1

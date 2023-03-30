@@ -1,7 +1,11 @@
 """
-Dla pobranej liczby, sprawdz czy jest ona palindromem. 
-To znaczy, sprawdz czy liczba nie zmienia sie po zapisaniu 
-jej cyfr w odwrotnej kolejnosci.
+Czy liczba jest palindromem?
+Tresc: Dla otrzymanej liczby naturalnej sprawdz, czy jest ona palindromem, tj. czy nie zmienia sie po zapisaniu cyfr w odwrotnej kolejnosci.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Komunikat.
+Przyklad:
+Dla otrzymanej liczby 13231, powinna zostac wypisana informacja o tym, ze liczba jest palindromem.
+
 """
 
 if __name__ == "__main__":
@@ -20,3 +24,4 @@ if __name__ == "__main__":
         print("Liczba jest palindromem.")
     else:
         print("Liczba nie jest palindromem.")
+

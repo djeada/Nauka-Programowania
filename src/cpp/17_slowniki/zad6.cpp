@@ -1,11 +1,14 @@
+/*
+Tytul: Powtarzajace sie znaki
+Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrocenie wszystkich
+znakow, ktore wystepuja co najmniej 2 razy w ciagu. Dane wejsciowe: Napis. Dane
+wyjsciowe: Napis. Przyklad: Dla otrzymanego napisu: "aaabbbccc" Powinien zostac
+zwrocony napis: "abc"
+
+*/
 #include <cassert>
 #include <string>
 #include <unordered_map>
-
-/*
-Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym
-napisie. Inaczej, zwroc histogram znakow w otrzymanym napisie.
-*/
 
 std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
   /*
@@ -41,3 +44,4 @@ int main() {
 
   return 0;
 }
+

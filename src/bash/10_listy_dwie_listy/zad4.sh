@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Obliczenie sredniej wazonej.
+# Tresc: Otrzymujesz dwie listy liczb zmiennoprzecinkowych. Pierwsza lista reprezentuje wagi, a druga wartosci. Oblicz srednia wazona.
+# Dane wejsciowe: Dwie listy liczb zmiennoprzecinkowych.
+# Dane wyjsciowe: Liczba zmiennoprzecinkowa.
+# Przyklad:
+# Dla otrzymanych list [2.0, 5.0, 0.0, 2.0, 1.0] oraz [0.2, 0.4, 0.1, 0.2, 0.1] zostanie zwrocona wartosc: 0.29.
 
 source ../assert.sh
-
-#Otrzymujesz dwie listy liczb reprezentujacych wspolrzedne dwoch wektorow. Zaimplementuj:
-#a) mnozenie skla<rne.
-#b) mnozenie wektorowe (zdefiniowane jedynie dla wektorow 3-wymiarowej przestrzeni euklidesowej).
 
 mnozenie_skalarne() {
 
@@ -27,7 +28,6 @@ mnozenie_wektorowe() {
     wynik+=($(echo "${lista_a[0]} * ${lista_b[1]} - ${lista_a[1]} * ${lista_b[0]}" | bc -l))
 }
 
-
 test1() {
     local lista_a=(3 -5 4)
     local lista_b=(2 6 5)
@@ -47,7 +47,6 @@ main() {
     test1
     test2
 }
-
 
 main "$@"
 

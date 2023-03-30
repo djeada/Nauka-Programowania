@@ -1,15 +1,15 @@
 /*
 
-Tytuł: Zaprojektuj klasę Macierz.
+Tytul: Zaprojektuj klase Macierz.
 
-Treść: Napisz klasę Macierz, która będzie reprezentowała macierz. Klasa powinna zawierać następujące funkcje:
+Tresc: Napisz klase Macierz, ktora bedzie reprezentowala macierz. Klasa powinna zawierac nastepujace funkcje:
 
-1. Konstruktor, który przyjmuje jako argument listę list liczb całkowitych. Pobrana lista reprezentuje macierz. Domyślna wartość argumentu to pusta lista.
-2. Funkcje, które zwracają wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnożenie) oraz odwracanie macierzy. Jeśli jest to możliwe, należy przeciążyć operatory: +, -, *.
-3. Funkcję, która wypisuje informacje o macierzy na standardowe wyjście.
-4. Funkcje umożliwiające porównanie dwóch obiektów klasy Macierz. Jeśli jest to możliwe, należy przeciążyć operatory == oraz !=.
+1. Konstruktor, ktory przyjmuje jako argument liste list liczb calkowitych. Pobrana lista reprezentuje macierz. Domyslna wartosc argumentu to pusta lista.
+2. Funkcje, ktore zwracaja wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnozenie) oraz odwracanie macierzy. Jesli jest to mozliwe, nalezy przeciazyc operatory: +, -, *.
+3. Funkcje, ktora wypisuje informacje o macierzy na standardowe wyjscie.
+4. Funkcje umozliwiajace porownanie dwoch obiektow klasy Macierz. Jesli jest to mozliwe, nalezy przeciazyc operatory == oraz !=.
 
-Napisz program, który przetestuje twoją klasę. Stwórz macierze: A ([[1, 3], [4, 2]]) oraz B ([[5, 0], [1, 3]]). Wypisz na standardowe wyjście informacje o utworzonych macierzach oraz ich sumę, różnicę pierwszej i drugiej oraz iloczyn macierzy.
+Napisz program, ktory przetestuje twoja klase. Stworz macierze: A ([[1, 3], [4, 2]]) oraz B ([[5, 0], [1, 3]]). Wypisz na standardowe wyjscie informacje o utworzonych macierzach oraz ich sume, roznice pierwszej i drugiej oraz iloczyn macierzy.
 */
 
 class Macierz {
@@ -142,3 +142,4 @@ odwrocona.wypiszInfo();
 
 console.log(A.porownaj(B));
 console.log(A.porownaj(A));
+

@@ -1,3 +1,11 @@
+/*
+Tytul: Plik z lista adresow IP.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego.
+Kazdy wiersz pliku reprezentuje adres IP. Posortuj adresy IP i zapisz je w
+liscie. Dane wejsciowe: Napis reprezentujacy sciezke do pliku. Dane wyjsciowe:
+Lista adresow IP posortowanych alfabetycznie.
+
+*/
 #include <cassert>
 #include <experimental/filesystem>
 #include <fstream>
@@ -5,13 +13,6 @@
 #include <vector>
 
 namespace filesys = std::experimental::filesystem;
-
-/*
-Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke folderu.
-Drugi napis reprezentuje rozszerzenie szukanych plikow. Znajdz w
-folderze wszystkie pliki z danym rozszerzeniem. Nazwy znalezionych
-plikow zapisz w liscie.
-*/
 
 std::string znajdzRozszerzenie(std::string sciezka) {
 
@@ -61,3 +62,4 @@ int main() {
 
   return 0;
 }
+

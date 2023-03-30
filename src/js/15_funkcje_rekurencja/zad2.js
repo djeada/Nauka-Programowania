@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Suma liczb naturalnych mniejszych od N.
+Tytul: Suma liczb naturalnych mniejszych od N.
 
-Treść: Otrzymujesz liczbę N. Przy użyciu rekurencji oblicz sumę liczb naturalnych mniejszych od N.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz sume liczb naturalnych mniejszych od N.
 
-Dane wejściowe: Liczba naturalna N.
+Dane wejsciowe: Liczba naturalna N.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla N = 10, powinna zostać zwrócona liczba: 55.
+Dla N = 10, powinna zostac zwrocona liczba: 55.
 */
 
 function sumaLiczbNaturalnych(n) {
@@ -35,3 +35,4 @@ function test() {
 }
 
 test();
+

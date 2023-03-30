@@ -1,10 +1,15 @@
 /*
-Napisz klase Prostokat reprezentujaca prostokat w ukladzie kartezjanskim. 
-Prostokat okreslony jest przez wspolrzedne jego czterech wierzcholkow. 
-Boki prostokata sa prostopadle do osi ukladu wspolrzednych. 
-Klasa powinna zawierac funkcje statyczna zwracajaca pole prostokata 
-powstalego z nalozenia sie dwoch prostokatow. Jesli dwa prostokaty 
-nie pokrywaja sie, funkcja powinna zwracac 0.
+Tytul: Prostokat powstaly z nalozenia sie dwoch prostokatow.
+Opis zadania: Napisz klase Prostokat, ktora bedzie reprezentowala prostokat w
+ukladzie kartezjanskim. Prostokat jest okreslony przez wspolrzedne jego czterech
+wierzcholkow. Boki prostokata sa prostopadle do osi ukladu wspolrzednych. Klasa
+powinna zawierac funkcje statyczna, ktora zwraca pole prostokata powstalego z
+nalozenia sie dwoch prostokatow. Jesli dwa prostokaty nie pokrywaja sie, funkcja
+powinna zwracac 0. Napisz program, ktory przetestuje twoja klase. Stworz
+prostokaty: A (3, 6, 9, 4) oraz B (2, 5, 7, 2). Wypisz na standardowe wyjscie
+informacje o utworzonych prostokatach. Sprawdz, czy pole czesci wspolnej rowne
+jest 6.
+
 */
 
 #include <cassert>
@@ -58,3 +63,4 @@ int main() {
 
   return 0;
 }
+

@@ -1,3 +1,12 @@
+/*
+Tytul: Najblizsza potega dwojki.
+Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej. Znajdz potege dwojki wieksza badz rowna tej liczbie. Inaczej: zaokraglij liczbe do najblizszej potegi dwojki.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej liczby: 111, powinna zostac zwrocona liczba: 128.
+
+*/
 public class Main {
   // Znajdz min/maks dwoch liczb bez uzycia instrukcji warunkowej.
 
@@ -42,3 +51,4 @@ public class Main {
     test2();
   }
 }
+

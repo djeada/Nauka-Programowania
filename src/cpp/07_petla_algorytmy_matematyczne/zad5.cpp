@@ -1,9 +1,12 @@
-#include <cassert>
-
 /*
-Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci
-ich najwiekszy wspolny dzielnik.
+Tytul: NWD.
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych zwroci ich
+najwiekszy wspolny dzielnik. Dane wejsciowe: dwie liczby naturalne Dane
+wyjsciowe: liczba naturalna Przyklad: Dla otrzymanych liczb 60 i 45, funkcja
+powinna zwrocic liczbe 15.
+
 */
+#include <cassert>
 
 int nwdV1(int a, int b) {
 
@@ -50,3 +53,4 @@ int main() {
 
   return 0;
 }
+

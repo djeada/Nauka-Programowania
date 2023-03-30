@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Silnia.
+Tytul: Silnia.
 
-Treść: Otrzymujesz liczbę N. Przy użyciu rekurencji oblicz silnię z tej liczby.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz silnie z tej liczby.
 
-Dane wejściowe: Liczba naturalna N.
+Dane wejsciowe: Liczba naturalna N.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla N = 3, powinna zostać zwrócona liczba: 6.
+Dla N = 3, powinna zostac zwrocona liczba: 6.
 */
 
 function silnia(n) {
@@ -35,3 +35,4 @@ function test() {
 }
 
 test();
+

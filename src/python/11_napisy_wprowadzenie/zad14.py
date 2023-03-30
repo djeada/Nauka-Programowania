@@ -1,6 +1,11 @@
 """
-Otrzymujesz liczbe naturalna n. Zwroc napis skladajacy 
-sie z liczb naturalnych od 1 do n.
+Tytul: Zamien litery "a" na znaki zapytania.
+Tresc: Otrzymasz napis. Zmien litery "a" na znaki zapytania.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "Latarnik", powinien zostac zwrocony napis: "L?t?rnik".
+
 """
 
 
@@ -19,3 +24,4 @@ def test_liczby():
 if __name__ == "__main__":
 
     test_liczby()
+

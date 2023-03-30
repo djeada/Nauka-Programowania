@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Zamien litery "a" na znaki zapytania.
+# Tresc: Otrzymasz napis. Zmien litery "a" na znaki zapytania.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Napis.
+# Przyklad:
+# Dla otrzymanego napisu: "Latarnik", powinien zostac zwrocony napis: "L?t?rnik".
 
 source ../assert.sh
-
-# Otrzymujesz liczbe n. Zwroc napis skladajacy
-# sie z liczb naturalnych od 1 do n.
 
 liczby() {
 
@@ -34,7 +36,6 @@ main() {
     test1
     test2
 }
-
 
 main "$@"
 

@@ -1,5 +1,11 @@
 """
-Zamien otrzymany napis, na otrzymany napis zapisany wspak.
+Tytul: Odwroc napis.
+Tresc: Zmien otrzymany napis, tak aby zapisany byl on od tylu.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "barszcz", powinien zostac zwrocony napis: "zczsrab".
+
 """
 
 
@@ -34,3 +40,4 @@ if __name__ == "__main__":
 
     test_odwroc_v1()
     test_odwroc_v2()
+

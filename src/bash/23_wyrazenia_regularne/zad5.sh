@@ -1,7 +1,9 @@
-#!/usr/bin/env bash
-
-# Otrzymujesz napis. Zwroc napis skladajacy sie z cyfr wystepujacych w otrzymanym napisie.
-
+# Tytul: Podziel tekst wzgledem znakow interpunkcyjnych.
+# Tresc: Dostajesz napis. Podziel go wzgledem znakow interpunkcyjnych i zapisz w liscie. Usun spacje wystepujace na poczatku lub koncu otrzymanych napisow.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Lista napisow.
+# Przyklad:
+# Dla napisu: “Ani nie poszedl do kina, ani nie wybral sie do teatru.”, powinna zostac zwrocona lista: [“Ani nie poszedl do kina”, “ani nie wybral sie do teatru”].
 
 odfiltruj_cyfry() {
     echo "$1" | grep -o '[0-9]'
@@ -17,7 +19,6 @@ test_odfiltruj_cyfry() {
 main() {
     test_odfiltruj_cyfry
 }
-
 
 main "$@"
 

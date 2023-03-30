@@ -1,7 +1,11 @@
 """
-Otrzymujesz napis reprezentujacy sciezke pliku tekstowego. 
-Kazdy wiersz pliku reprezentuje adres ip. Posortuj adresy ip 
-i zapisz je w liscie.
+Tytul: Znajdz i zmodyfikuj pliki spelniajace warunek.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do folderu.
+a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych sie w podanym folderze i jego podfolderach.
+b) Usun srodkowy wiersz z kazdego pliku CSV znajdujacego sie w podanym folderze i jego podfolderach.
+Dane wejsciowe: Napis reprezentujacy sciezke do folderu.
+Dane wyjsciowe: Brak.
+
 """
 
 import pathlib
@@ -16,8 +20,8 @@ def wczytaj_plik(sciezka):
 
 def sortuj_adresy_ip(lista):
     """
-    Funkcja sortujaca liste adresow ip. Adresy ip dane sa 
-    w postaci napisow. Przyklad: '123.4.245.23' 
+    Funkcja sortujaca liste adresow ip. Adresy ip dane sa
+    w postaci napisow. Przyklad: '123.4.245.23'
     """
     lista = [ip.split(".") for ip in lista]
     lista = [[int(i) for i in ip] for ip in lista]
@@ -65,3 +69,4 @@ def test_sortuj_adresy_ip():
 if __name__ == "__main__":
 
     test_sortuj_adresy_ip()
+

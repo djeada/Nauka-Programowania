@@ -1,16 +1,24 @@
-#include <cassert>
-#include <string>
-
 /*
-Pobierz dwie liczby od uzytkownika. Napisz funkcje, ktora dla otrzymanych dwoch
-liczb zwroci:
-
+Tytul: Operacje arytmetyczne.
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci:
 a) Ich sume.
 b) Roznice drugiej i pierwszej.
 c) Ich iloczyn.
 d) Iloraz pierwszej przez druga.
 e) Reszte z dzielenia pierwszej przez druga.
+Dane wejsciowe: Dwie liczby naturalne dla wszystkich podpunktow.
+Dane wyjsciowe: Liczba calkowita dla wszystkich podpunktow.
+Przyklad:
+Dla pobranych liczb: 3 i 5, funkcja powinna zwrocic:
+a) Sume: 8
+b) Roznice: 2
+c) Iloczyn: 15
+d) Iloraz: 0
+e) Reszte z dzielenia: 3
+
 */
+#include <cassert>
+#include <string>
 
 int suma(int pierwszaLiczba, int drugaLiczba) {
   return pierwszaLiczba + drugaLiczba;
@@ -57,3 +65,4 @@ int main() {
 
   return 0;
 }
+

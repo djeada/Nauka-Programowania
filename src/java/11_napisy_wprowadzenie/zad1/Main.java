@@ -1,3 +1,12 @@
+/*
+Tytul: Odwroc napis.
+Tresc: Zmien otrzymany napis, tak aby zapisany byl on od tylu.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "barszcz", powinien zostac zwrocony napis: "zczsrab".
+
+*/
 import java.util.*;
 
 public class Main {
@@ -42,3 +51,4 @@ public class Main {
     test2();
   }
 }
+

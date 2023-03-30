@@ -1,10 +1,15 @@
+/*
+Tytul: Odwroc napis.
+Tresc: Zmien otrzymany napis, tak aby zapisany byl on od tylu.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "barszcz", powinien zostac zwrocony napis: "zczsrab".
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
-
-/*
-Zamien otrzymany napis, na otrzymany napis zapisany wspak.
-*/
 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)
@@ -44,3 +49,4 @@ int main() {
   test2();
   return 0;
 }
+

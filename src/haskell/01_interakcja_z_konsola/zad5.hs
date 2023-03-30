@@ -1,40 +1,40 @@
 {-
-  Tytuł: Obliczanie wartości funkcji w danym punkcie.
+  Tytul: Obliczanie wartosci funkcji w danym punkcie.
 
-  Treść zadania: Napisz program, który będzie obliczać wartość funkcji w danym punkcie zgodnie z następującymi instrukcjami:
+  Tresc zadania: Napisz program, ktory bedzie obliczac wartosc funkcji w danym punkcie zgodnie z nastepujacymi instrukcjami:
 
-  a) Otrzymujesz współrzędną $x$. Wyznacz wartość funkcji $y = 3x + 10$ w tym punkcie.
+  a) Otrzymujesz wspolrzedna $x$. Wyznacz wartosc funkcji $y = 3x + 10$ w tym punkcie.
 
-  b) Pobierz współczynniki $a$, $b$ oraz punkt $x$. Wyznacz wartość funkcji $y = ax + b$ w tym punkcie.
+  b) Pobierz wspolczynniki $a$, $b$ oraz punkt $x$. Wyznacz wartosc funkcji $y = ax + b$ w tym punkcie.
 
-  c) Otrzymujesz współrzędną $x$. Wyznacz wartość funkcji $y = x^3 + 22 - 20$ w tym punkcie.
+  c) Otrzymujesz wspolrzedna $x$. Wyznacz wartosc funkcji $y = x^3 + 22 - 20$ w tym punkcie.
 
-  d) Pobierz współczynniki $a$, $b$, $c$, $d$, $m$, $n$ oraz punkt $x$. Wyznacz wartość funkcji $y = ax^m + bx^n + c - a$ w tym punkcie.
+  d) Pobierz wspolczynniki $a$, $b$, $c$, $d$, $m$, $n$ oraz punkt $x$. Wyznacz wartosc funkcji $y = ax^m + bx^n + c - a$ w tym punkcie.
 
-  e) Otrzymujesz współrzędną $x$. Wyznacz wartość funkcji $y = sin^3(x) \cdot cos^2(x) + e^(x^2) + log(x^3 + 2x^2 - x - 3)$ w tym punkcie.
+  e) Otrzymujesz wspolrzedna $x$. Wyznacz wartosc funkcji $y = sin^3(x) \cdot cos^2(x) + e^(x^2) + log(x^3 + 2x^2 - x - 3)$ w tym punkcie.
 
-  Dane wejściowe:
+  Dane wejsciowe:
 
-  * Liczba naturalna dla punktów 1, 3 i 5.
+  * Liczba naturalna dla punktow 1, 3 i 5.
   * Trzy liczby naturalne dla punktu 2.
-  * Sześć liczb naturalnych dla punktu 4.
+  * Szesc liczb naturalnych dla punktu 4.
 
-  Dane wyjściowe:
+  Dane wyjsciowe:
 
-  * Liczba naturalna dla punktów 1, 2, 3 i 4.
+  * Liczba naturalna dla punktow 1, 2, 3 i 4.
   * Liczba zmiennoprzecinkowa dla punktu 5.
 
-  Przykład:
+  Przyklad:
 
-  a) Jeśli otrzymasz współrzędną $x = 3$, program powinien wypisać liczbę 19.
+  a) Jesli otrzymasz wspolrzedna $x = 3$, program powinien wypisac liczbe 19.
 
-  b) Jeśli pobierzesz liczby 1, 2 i 3, program powinien wypisać liczbę 5.
+  b) Jesli pobierzesz liczby 1, 2 i 3, program powinien wypisac liczbe 5.
 
-  c) Jeśli otrzymasz współrzędną $x = 5$, program powinien wypisać liczbę 155.
+  c) Jesli otrzymasz wspolrzedna $x = 5$, program powinien wypisac liczbe 155.
 
-  d) Jeśli pobierzesz liczby 1, 1, 1, 1, 1 i 1, program powinien wypisać liczbę 2.
+  d) Jesli pobierzesz liczby 1, 1, 1, 1, 1 i 1, program powinien wypisac liczbe 2.
 
-  e) Jeśli otrzymasz współrzędną $x = 2$, program powinien wypisać liczbę 57.179.
+  e) Jesli otrzymasz wspolrzedna $x = 2$, program powinien wypisac liczbe 57.179.
 -}
 
 import Data.Fixed (mod')
@@ -62,3 +62,4 @@ main = do
   n <- readLn :: IO Int
   putStrLn $ "Wartosc funkcji y = ax^m + bx^n + c - a: " ++ show (a * (x `pow` m) + b * (x `pow` n) + c - a)
   putStrLn $ "Wartosc funkcji y = sin^3(x) * cos^2(x) + e^(x^2) + log(x^3 + 2x^2 - x - 3): " ++ show ((sin x Prelude.^ 3) * (cos x Prelude.^ 2) + exp (x * x) + log (x * x * x + 2 * x * x - x - 3))
+

@@ -1,9 +1,14 @@
-#include <cassert>
-
 /*
-Otrzymujesz dwie liczby naturalne. Oblicz ile bitow
-nalezy odwrocic, aby zamienic liczbe A w liczbe B.
+Tytul:  Konwersja warunkowa.
+Tresc: Otrzymujesz liczbe naturalna. Zwroc reprezentacje binarna otrzymanej
+liczby, jesli: a) Otrzymana liczba jest liczba parzysta. b) Otrzymana liczba
+jest liczba pierwsza. Dane wejsciowe: Liczba naturalna w obu podpunktach. Dane
+wyjsciowe: Liczba naturalna w obu podpunktach. Przyklad: a) Dla otrzymanej
+liczby: 7, nie powinna zostac zwrocona zadna liczba. b) Dla otrzymanej liczby:
+7, powinna zostac zwrocona liczba: 111.
+
 */
+#include <cassert>
 
 int bityDoZmiany(int liczbaA, int liczbaB) {
   /*
@@ -34,3 +39,4 @@ int main() {
 
   return 0;
 }
+

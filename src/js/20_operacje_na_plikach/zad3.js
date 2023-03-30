@@ -1,11 +1,11 @@
 /*
-Tytuł: Znalezienie ścieżki pliku o danej nazwie
+Tytul: Znalezienie sciezki pliku o danej nazwie
 
-Treść: Otrzymujesz napis reprezentujący nazwę pliku. Przeszukaj cały system i zapisz w liście wszystkie ścieżki plików o podanej nazwie.
+Tresc: Otrzymujesz napis reprezentujacy nazwe pliku. Przeszukaj caly system i zapisz w liscie wszystkie sciezki plikow o podanej nazwie.
 
-Dane wejściowe: Napis
+Dane wejsciowe: Napis
 
-Dane wyjściowe: Lista napisów
+Dane wyjsciowe: Lista napisow
 */
 
 const fs = require("fs").promises;
@@ -43,12 +43,12 @@ const testZnajdzSciezki = async () => {
 
   console.assert(
     wynik.length === oczekiwane.length,
-    `Błąd testu znajdzSciezki: ${wynik.length} !== ${oczekiwane.length}`
+    `Blad testu znajdzSciezki: ${wynik.length} !== ${oczekiwane.length}`
   );
 
   console.assert(
     wynik.includes(oczekiwane[0]),
-    `Błąd testu znajdzSciezki: ${wynik} nie zawiera ${oczekiwane[0]}`
+    `Blad testu znajdzSciezki: ${wynik} nie zawiera ${oczekiwane[0]}`
   );
 
   await fs.rmdir(sciezkaFolderu, {
@@ -61,3 +61,4 @@ const main = async () => {
 };
 
 main();
+

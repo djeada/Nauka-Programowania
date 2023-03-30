@@ -1,41 +1,41 @@
 /*
-Tytuł: Liczby spełniające określone warunki.
+Tytul: Liczby spelniajace okreslone warunki.
 
-Treść: Dla pobranej liczby naturalnej wypisz:
+Tresc: Dla pobranej liczby naturalnej wypisz:
 
-a) wszystkie liczby naturalne mniejsze od pobranej, których suma cyfr jest równa 10,
+a) wszystkie liczby naturalne mniejsze od pobranej, ktorych suma cyfr jest rowna 10,
 
-b) wszystkie liczby naturalne dwucyfrowe większe od pobranej,
+b) wszystkie liczby naturalne dwucyfrowe wieksze od pobranej,
 
-c) wszystkie liczby naturalne trzycyfrowe, których suma cyfr jest równa pobranej liczbie,
+c) wszystkie liczby naturalne trzycyfrowe, ktorych suma cyfr jest rowna pobranej liczbie,
 
-d) wszystkie liczby naturalne trzycyfrowe podzielne przez sumę cyfr pobranej liczby,
+d) wszystkie liczby naturalne trzycyfrowe podzielne przez sume cyfr pobranej liczby,
 
-e) wszystkie liczby naturalne mniejsze od pobranej, składające się wyłącznie z parzystych cyfr.
+e) wszystkie liczby naturalne mniejsze od pobranej, skladajace sie wylacznie z parzystych cyfr.
 
-Dane wejściowe: Liczba naturalna dla wszystkich podpunktów.
+Dane wejsciowe: Liczba naturalna dla wszystkich podpunktow.
 
-Dane wyjściowe: Kilka liczb naturalnych.
+Dane wyjsciowe: Kilka liczb naturalnych.
 
-Przykłady
+Przyklady
 
 Dla pobranej liczby: 95:
 
-a) wszystkie liczby naturalne mniejsze od pobranej, których suma cyfr jest równa 10: brak
+a) wszystkie liczby naturalne mniejsze od pobranej, ktorych suma cyfr jest rowna 10: brak
 
-b) wszystkie liczby naturalne dwucyfrowe większe od pobranej: 96, 97, 98, 99
+b) wszystkie liczby naturalne dwucyfrowe wieksze od pobranej: 96, 97, 98, 99
 
-c) wszystkie liczby naturalne trzycyfrowe, których suma cyfr jest równa pobranej liczbie: brak
+c) wszystkie liczby naturalne trzycyfrowe, ktorych suma cyfr jest rowna pobranej liczbie: brak
 
-d) wszystkie liczby naturalne trzycyfrowe podzielne przez sumę cyfr pobranej liczby: brak
+d) wszystkie liczby naturalne trzycyfrowe podzielne przez sume cyfr pobranej liczby: brak
 
-e) wszystkie liczby naturalne mniejsze od pobranej, składające się wyłącznie z parzystych cyfr: 2, 4
+e) wszystkie liczby naturalne mniejsze od pobranej, skladajace sie wylacznie z parzystych cyfr: 2, 4
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// a) Pętla dla liczb mniejszych od pobranej, których suma cyfr jest równa 10
+// a) Petla dla liczb mniejszych od pobranej, ktorych suma cyfr jest rowna 10
 for (let i = liczba - 1; i > 0; i--) {
   let sumaCyfr = 0;
   for (let j = i; j > 0; j = Math.floor(j / 10)) {
@@ -46,12 +46,12 @@ for (let i = liczba - 1; i > 0; i--) {
   }
 }
 
-// b) Pętla dla liczb dwucyfrowych większych od pobranej
+// b) Petla dla liczb dwucyfrowych wiekszych od pobranej
 for (let i = liczba + 1; i < 100; i++) {
   console.log(i);
 }
 
-// c) Pętla dla liczb trzycyfrowych, których suma cyfr jest równa pobranej liczbie
+// c) Petla dla liczb trzycyfrowych, ktorych suma cyfr jest rowna pobranej liczbie
 for (let i = 100; i < 1000; i++) {
   let sumaCyfr = 0;
   for (let j = i; j > 0; j = Math.floor(j / 10)) {
@@ -62,7 +62,7 @@ for (let i = 100; i < 1000; i++) {
   }
 }
 
-// d) Pętla dla liczb trzycyfrowych podzielnych przez sumę cyfr pobranej liczby
+// d) Petla dla liczb trzycyfrowych podzielnych przez sume cyfr pobranej liczby
 for (let i = 100; i < 1000; i++) {
   let sumaCyfr = 0;
   for (let j = i; j > 0; j = Math.floor(j / 10)) {
@@ -73,7 +73,7 @@ for (let i = 100; i < 1000; i++) {
   }
 }
 
-// e) Pętla dla liczb mniejszych od pobranej, składające się wyłącznie z parzystych cyfr
+// e) Petla dla liczb mniejszych od pobranej, skladajace sie wylacznie z parzystych cyfr
 for (let i = liczba - 1; i > 0; i--) {
   let parzysta = true;
   for (let j = i; j > 0; j = Math.floor(j / 10)) {
@@ -86,3 +86,4 @@ for (let i = liczba - 1; i > 0; i--) {
     console.log(i);
   }
 }
+

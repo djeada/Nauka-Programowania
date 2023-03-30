@@ -1,3 +1,12 @@
+/*
+Tytul: Wypisanie elementow macierzy spiralnie.
+Tresc: Otrzymujesz liste list liczb naturalnych. Zbierz elementy otrzymanej macierzy spiralnie i zapisz je w liscie.
+Dane wejsciowe: Lista list liczb naturalnych.
+Dane wyjsciowe: Lista.
+Przyklad:
+Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona lista: [1, 2, 3, 6, 9, 8, 7, 4, 5].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -61,3 +70,4 @@ public class Main {
     test1();
   }
 }
+

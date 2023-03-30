@@ -1,18 +1,18 @@
 /*
-Tytuł: Znalezienie indeksu najmniejszego elementu w posortowanej i przesuniętej w prawo liście.
+Tytul: Znalezienie indeksu najmniejszego elementu w posortowanej i przesunietej w prawo liscie.
 
-Treść: Dla otrzymanej listy liczb całkowitych, znajdź indeks najmniejszego elementu. Lista jest posortowana rosnąco, ale została przesunięta w prawo o określoną liczbę miejsc. Przykładowo dla przesunięcia w prawo o 1, ostatni element trafia na pierwsze miejsce, a przedostatni na ostatnie miejsce itd.
+Tresc: Dla otrzymanej listy liczb calkowitych, znajdz indeks najmniejszego elementu. Lista jest posortowana rosnaco, ale zostala przesunieta w prawo o okreslona liczbe miejsc. Przykladowo dla przesuniecia w prawo o 1, ostatni element trafia na pierwsze miejsce, a przedostatni na ostatnie miejsce itd.
 
-Dane wejściowe: Lista liczb całkowitych oraz liczba naturalna określająca przesunięcie w prawo.
+Dane wejsciowe: Lista liczb calkowitych oraz liczba naturalna okreslajaca przesuniecie w prawo.
 
-Dane wyjściowe: Liczba całkowita.
+Dane wyjsciowe: Liczba calkowita.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [7, 8, -1, 4, 5] zostanie zwrócona liczba: 2.
+Dla otrzymanej listy: [7, 8, -1, 4, 5] zostanie zwrocona liczba: 2.
 */
 
-// Funkcja znajdująca indeks najmniejszego elementu w posortowanej i przesuniętej w prawo liście
+// Funkcja znajdujaca indeks najmniejszego elementu w posortowanej i przesunietej w prawo liscie
 function znajdzIndeksNajmniejszegoElementu(lista) {
   let indeksNajmniejszego = 0;
 
@@ -34,3 +34,4 @@ function testZnajdzIndeksNajmniejszegoElementu() {
 }
 
 testZnajdzIndeksNajmniejszegoElementu();
+

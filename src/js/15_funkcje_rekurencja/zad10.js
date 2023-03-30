@@ -1,14 +1,14 @@
 /*
-Tytuł: Gra.	
+Tytul: Gra.	
 
-Treść: W grze, w każdym ruchu gracz może zdobyć 3, 5 lub 10 punktów. Oblicz przy użyciu rekurencji, ile sposobów istnieje, aby gracz wygrał grę, gdy ma do dyspozycji N punktów.
+Tresc: W grze, w kazdym ruchu gracz moze zdobyc 3, 5 lub 10 punktow. Oblicz przy uzyciu rekurencji, ile sposobow istnieje, aby gracz wygral gre, gdy ma do dyspozycji N punktow.
 
-Dane wejściowe: Liczba naturalna N.
+Dane wejsciowe: Liczba naturalna N.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
-Dla N = 20, powinna zostać zwrócona liczba: 4.
+Przyklad:
+Dla N = 20, powinna zostac zwrocona liczba: 4.
 
 */
 
@@ -49,4 +49,5 @@ function testLiczbaSposobowWygranej() {
 }
 
 testLiczbaSposobowWygranej();
-console.log("Wszystkie testy zakończone sukcesem");
+console.log("Wszystkie testy zakonczone sukcesem");
+

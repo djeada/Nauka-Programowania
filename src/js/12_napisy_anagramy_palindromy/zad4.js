@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Wyszukanie wszystkich palindromów w zdaniu.
+Tytul: Wyszukanie wszystkich palindromow w zdaniu.
 
-Treść: Napisz program, który otrzymuje napis reprezentujący zdanie. Twoim zadaniem jest znalezienie wszystkich palindromów w zdaniu. Różnice między wielkimi i małymi literami powinny być zignorowane.
+Tresc: Napisz program, ktory otrzymuje napis reprezentujacy zdanie. Twoim zadaniem jest znalezienie wszystkich palindromow w zdaniu. Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: “Tata zabral kajak na wycieczke i uderzyl sie w oko”, powinna zostać zwrócona lista: ["kajak", "i", "w", "oko"].
+Dla otrzymanego napisu: “Tata zabral kajak na wycieczke i uderzyl sie w oko”, powinna zostac zwrocona lista: ["kajak", "i", "w", "oko"].
 */
 
 function czyPalindrom(napis) {
@@ -41,14 +41,15 @@ function test() {
 
   console.assert(
     JSON.stringify(output) === JSON.stringify(expectedOutput),
-    'Test nie powiódł się dla "' +
+    'Test nie powiodl sie dla "' +
       input +
       '". Otrzymany wynik to ' +
       JSON.stringify(output) +
       ", a oczekiwany wynik to " +
       JSON.stringify(expectedOutput)
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

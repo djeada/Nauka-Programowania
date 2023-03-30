@@ -1,12 +1,17 @@
 """
-Dla dwoch slow, ile minimalnie znakow musimy usunac aby uzyskac anagramy.
-Zwroc -1 dla slow o roznych dlugosciach.
+Tytul: Minimalna ilosc usunietych znakow, aby uzyskac anagramy.
+Tresc: Napisz program, ktory dla dwoch slow zwroci minimalna ilosc znakow, ktore trzeba usunac, aby uzyskac anagramy. Jesli slowa sa roznej dlugosci, zwroc -1.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanych napisow: “grazyna” oraz “razynax”, powinna zostac zwrocona liczba: 2.
+
 """
 
 
 def liczba_znakow(napis_a, napis_b):
     """
-    Funkcja zwraca liczbe znakow, ktore musimy usunac aby uzyskac anagramy. 
+    Funkcja zwraca liczbe znakow, ktore musimy usunac aby uzyskac anagramy.
     """
     if len(napis_a) != len(napis_b):
         return -1
@@ -31,3 +36,4 @@ def test_liczba_znakow():
 if __name__ == "__main__":
 
     test_liczba_znakow()
+

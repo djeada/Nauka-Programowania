@@ -1,15 +1,15 @@
 /*
-Tytuł: Odległość Hamminga.
+Tytul: Odleglosc Hamminga.
 
-Treść: Otrzymujesz dwa napisy o równej długości. Oblicz odległość Hamminga między dwoma otrzymanymi napisami. Odległość Hamminga to miara odmienności dwóch napisów o takiej samej długości, zdefiniowana jako liczba pozycji, na których napisy mają różne znaki.
+Tresc: Otrzymujesz dwa napisy o rownej dlugosci. Oblicz odleglosc Hamminga miedzy dwoma otrzymanymi napisami. Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej dlugosci, zdefiniowana jako liczba pozycji, na ktorych napisy maja rozne znaki.
 
-Dane wejściowe: Dwa napisy.
+Dane wejsciowe: Dwa napisy.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych napisów: “adam” i “axam”, powinna zostać zwrócona liczba: 1.
+Dla otrzymanych napisow: “adam” i “axam”, powinna zostac zwrocona liczba: 1.
 */
 
 function odlegloscHamminga(napis1, napis2) {
@@ -32,7 +32,7 @@ function test() {
 
   console.assert(
     output === expectedOutput,
-    'Test nie powiódł się dla "' +
+    'Test nie powiodl sie dla "' +
       input1 +
       '" i "' +
       input2 +
@@ -41,7 +41,8 @@ function test() {
       ", a oczekiwany wynik to " +
       expectedOutput
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

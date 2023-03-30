@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Czy napis sklada sie wylacznie z cyfr?
+# Tresc: Masz napis. Sprawdz, czy sklada sie on wylacznie z cyfr.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Wartosc logiczna.
+# Przyklad:
+# Dla napisu: “1234”, powinna zostac zwrocona wartosc logiczna: Prawda.
 
 source ../assert.sh
-
-# Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj nazwe pliku ze sciezki.
-# Zwroc sama nazwe pliku, bez rozszerzen.
 
 nazwa_pliku(){
     local sciezka="$1"
@@ -15,7 +17,7 @@ nazwa_pliku(){
     while [[ "$sciezka" = *.* ]]; do
         sciezka="${sciezka%.*}"
     done
-    
+
     echo "$sciezka"
 }
 
@@ -29,7 +31,6 @@ test_nazwa_pliku() {
 main() {
     test_nazwa_pliku
 }
-
 
 main "$@"
 

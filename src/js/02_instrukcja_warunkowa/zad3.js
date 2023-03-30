@@ -1,21 +1,21 @@
 /*
-Tytuł: Znak liczby.
+Tytul: Znak liczby.
 
-Treść: Pobierz liczbę naturalną od użytkownika i sprawdź, czy liczba jest ujemna, dodatnia, czy jest zerem. Wypisz odpowiedni komunikat.
+Tresc: Pobierz liczbe naturalna od uzytkownika i sprawdz, czy liczba jest ujemna, dodatnia, czy jest zerem. Wypisz odpowiedni komunikat.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Dla pobranej liczby: 2, powinien zostać wypisany komunikat, że liczba jest dodatnia.
+Dla pobranej liczby: 2, powinien zostac wypisany komunikat, ze liczba jest dodatnia.
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Porównanie ze stałą
+// Porownanie ze stala
 if (liczba > 0) {
   console.log("Liczba jest dodatnia");
 } else if (liczba < 0) {
@@ -23,3 +23,4 @@ if (liczba > 0) {
 } else {
   console.log("Liczba jest zerem");
 }
+

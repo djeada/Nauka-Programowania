@@ -1,3 +1,12 @@
+/*
+Tytul: NWW.
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych zwroci ich najmniejsza wspolna wielokrotnosc.
+Dane wejsciowe: dwie liczby naturalne
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla otrzymanych liczb 7 i 9, funkcja powinna zwrocic liczbe 63.
+
+*/
 public class Main {
   // Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci
   // ich najmniejsza wspolna wielokrotnosc.
@@ -36,3 +45,4 @@ public class Main {
     test1();
   }
 }
+

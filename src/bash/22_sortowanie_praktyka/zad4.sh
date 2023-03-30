@@ -1,12 +1,15 @@
-#!/usr/bin/env bash
+# Tytul: Sortowanie napisow w liscie wzgledem dlugosci.
+# Tresc: Masz dana liste napisow. Posortuj napisy w liscie wzgledem dlugosci.
+# Dane wejsciowe: Lista napisow.
+# Dane wyjsciowe: Lista napisow.
+# Przyklad:
+# Dla listy ["abcd", "ab", "a", "abc"] powinno zostac zwrocone ["a", "ab", "abc", "abcd"].
 
 source ../assert.sh
 
-# Otrzymujesz liste napisow. Posortuj wzgledem dlugosci napisy w liscie.
-
 sortuj_wzgledem_dlugosci() {
     local -n _lista_ref="$1"
-    echo "${_lista_ref[@]}" | tr " "	"\n"  | awk '{print length($0), $0}' | sort -n -k1,1 | cut -d' ' -f2- | tr "\n" " "	
+    echo "${_lista_ref[@]}" | tr " "	"\n"  | awk '{print length($0), $0}' | sort -n -k1,1 | cut -d' ' -f2- | tr "\n" " "
 }
 
 test_sortuj_wzgledem_dlugosci() {
@@ -16,11 +19,9 @@ test_sortuj_wzgledem_dlugosci() {
     assertArrayEqual lista oczekiwane wynik
 }
 
-
 main() {
     test_sortuj_wzgledem_dlugosci
 }
-
 
 main "$@"
 

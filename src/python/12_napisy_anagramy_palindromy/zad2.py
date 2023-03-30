@@ -1,5 +1,11 @@
 """
-Dla otrzymanego napisu, znajdz jego wszystkie permutacje.
+Tytul: Znalezienie wszystkich permutacji slowa.
+Tresc: Napisz program, ktory dla otrzymanego napisu znajdzie jego wszystkie permutacje.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla otrzymanego napisu: “abc”, powinna zostac zwrocona lista: [“abc”, “bac”, “cab”, “acb”, “bca”, “cba”].
+
 """
 
 
@@ -49,3 +55,4 @@ def test_permutacje():
 
 if __name__ == "__main__":
     test_permutacje()
+

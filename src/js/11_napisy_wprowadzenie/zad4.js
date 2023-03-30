@@ -1,15 +1,15 @@
 /*
-Tytuł: Zamień wszystkie małe litery na duże.
+Tytul: Zamien wszystkie male litery na duze.
 
-Treść: Otrzymasz napis. Zmień wszystkie małe litery na duże.
+Tresc: Otrzymasz napis. Zmien wszystkie male litery na duze.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "Rumcajs", powinien zostać zwrócony napis: "RUMCAJS".
+Dla otrzymanego napisu: "Rumcajs", powinien zostac zwrocony napis: "RUMCAJS".
 */
 
 function zamienNaDuze(napis) {
@@ -23,8 +23,9 @@ function test() {
   let expectedOutput = "RUMCAJS";
   let output = zamienNaDuze(input);
 
-  console.assert(output === expectedOutput, "Test nie powiódł się");
-  console.log("Test przeszedł pomyślnie");
+  console.assert(output === expectedOutput, "Test nie powiodl sie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

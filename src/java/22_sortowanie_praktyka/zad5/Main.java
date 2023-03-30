@@ -1,10 +1,14 @@
-import java.util.*;
-
 /*
-Klasa Miasto sklada sie z dwoch pol: nazwa (napis) oraz liczba_mieszkancow (liczba naturalna).
-a) Posortuj liste obiektow klasy Miasto wzgledem pola nazwa.
-b) Posortuj liste obiektow klasy Miasto wzgledem pola liczba_mieszkancow.
+Tytul: Sortowanie listy miast.
+Tresc: Klasa Miasto ma dwie wlasciwosci: nazwa (napis) oraz liczba_mieszkancow (liczba naturalna). Posortuj liste miast wzgledem nazwy oraz wzgledem liczby mieszkancow.
+Dane wejsciowe: Lista miast.
+Dane wyjsciowe: Posortowana lista miast.
+Przyklad:
+Dla listy miast: [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)], powinna zostac zwrocona lista: [Miasto("Berlin", 3800000), Miasto("New York", 8400000), Miasto("Paris", 2150000)].
+Dla listy miast: [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)], powinna zostac zwrocona lista: [Miasto("Berlin", 3800000), Miasto("Paris", 2150000), Miasto("New York", 8400000)].
+
 */
+import java.util.*;
 
 public class Main {
 
@@ -103,3 +107,4 @@ public class Main {
     test2();
   }
 }
+

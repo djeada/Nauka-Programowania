@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Czy napis A jest początkiem napisu B?
+Tytul: Czy napis A jest poczatkiem napisu B?
 
-Treść: Dostajesz dwa napisy. Twoim zadaniem jest sprawdzenie, czy drugi napis zaczyna się od pierwszego napisu.
+Tresc: Dostajesz dwa napisy. Twoim zadaniem jest sprawdzenie, czy drugi napis zaczyna sie od pierwszego napisu.
 
-Dane wejściowe: Dwa napisy.
+Dane wejsciowe: Dwa napisy.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
+Przyklad:
 
-Dla napisów: “Dinozaur jest zly” oraz “Dino”, zwrócona wartość powinna być: Prawda.
+Dla napisow: “Dinozaur jest zly” oraz “Dino”, zwrocona wartosc powinna byc: Prawda.
 
 */
 
@@ -26,3 +26,4 @@ function testCzyPoczatek() {
 }
 
 testCzyPoczatek();
+

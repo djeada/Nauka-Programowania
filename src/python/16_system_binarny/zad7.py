@@ -1,7 +1,11 @@
 """
-Otrzymujesz dziesietna reprezentacje liczby naturalnej. 
-Zamien miejscami sasiadujace bity w zapisie binarnym 
-otrzymanej liczbie. Zwroc dziesietna reprezentacje wyniku.
+Tytul: Zamien A na B.
+Tresc: Otrzymujesz dwie liczby naturalne. Oblicz, ile bitow nalezy odwrocic, aby zamienic liczbe A na liczbe B.
+Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanych liczb 34 i 73, powinna zostac zwrocona liczba 5.
+
 """
 
 
@@ -24,3 +28,4 @@ def test_zamien_sasiadow():
 
 if __name__ == "__main__":
     test_zamien_sasiadow()
+

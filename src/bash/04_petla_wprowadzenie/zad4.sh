@@ -1,6 +1,9 @@
-#!/usr/bin/env bash
-
-#Dla pobranej liczby, powinna zostac wyswietlona suma wszystkich liczb naturalnych mniejszych od pobranej liczby.
+# Tytul: Suma liczb mniejszych od podanej.
+# Tresc: Dla otrzymanej liczby naturalnej wypisz sume wszystkich liczb naturalnych mniejszych od niej.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: Liczba.
+# Przyklad:
+# Dla otrzymanej liczby 5, powinna zostac wypisana liczba 10.
 
 main() {
 

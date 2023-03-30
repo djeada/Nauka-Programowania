@@ -1,18 +1,18 @@
 /*
-Tytuł: Suma elementów dwóch list.
+Tytul: Suma elementow dwoch list.
 
-Treść: Dla otrzymanych dwóch list, zwróć listę, której elementy są sumą odpowiadających sobie elementów obu list. Jeśli listy nie są tej samej długości, załóż, że brakujące elementy krótszej listy są równe 0.
+Tresc: Dla otrzymanych dwoch list, zwroc liste, ktorej elementy sa suma odpowiadajacych sobie elementow obu list. Jesli listy nie sa tej samej dlugosci, zaloz, ze brakujace elementy krotszej listy sa rowne 0.
 
-Dane wejściowe: Dwie listy.
+Dane wejsciowe: Dwie listy.
 
-Dane wyjściowe: Lista.
+Dane wyjsciowe: Lista.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list [3, 1, 2, 5] oraz [2, 8, 6, 5], zostanie zwrócona lista: [5, 9, 8, 10].
+Dla otrzymanych list [3, 1, 2, 5] oraz [2, 8, 6, 5], zostanie zwrocona lista: [5, 9, 8, 10].
 */
 
-// Funkcja zwracająca listę, której elementy są sumą odpowiadających sobie elementów obu list
+// Funkcja zwracajaca liste, ktorej elementy sa suma odpowiadajacych sobie elementow obu list
 function sumaElementowList(lista1, lista2) {
   let wynik = [];
   let maxLength = Math.max(lista1.length, lista2.length);
@@ -48,3 +48,4 @@ function testSumaElementowList() {
 }
 
 testSumaElementowList();
+

@@ -1,11 +1,11 @@
 /*
-Tytuł: Skopiuj pliki.
+Tytul: Skopiuj pliki.
 
-Treść zadania: Otrzymujesz dwa napisy reprezentujące ścieżki do folderów. Skopiuj wszystkie pliki PNG z pierwszego folderu do drugiego folderu.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Skopiuj wszystkie pliki PNG z pierwszego folderu do drugiego folderu.
 
-Dane wejściowe: Dwa napisy reprezentujące ścieżki do folderów.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
 
-Dane wyjściowe: Brak.
+Dane wyjsciowe: Brak.
 
 */
 
@@ -53,7 +53,7 @@ const test1 = async () => {
     }
     console.assert(
       wynik === oczekiwane,
-      `Błąd asercji: ${sciezkaPliku} nie istnieje`
+      `Blad asercji: ${sciezkaPliku} nie istnieje`
     );
   }
 
@@ -70,3 +70,4 @@ const main = async () => {
 };
 
 main();
+

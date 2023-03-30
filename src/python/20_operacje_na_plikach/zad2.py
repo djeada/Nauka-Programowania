@@ -1,8 +1,9 @@
 """
-Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke folderu. 
-Drugi napis reprezentuje rozszerzenie szukanych plikow. Znajdz w 
-folderze wszystkie pliki z danym rozszerzeniem. Nazwy znalezionych 
-plikow zapisz w liscie.
+Tytul: Plik z lista adresow IP.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Kazdy wiersz pliku reprezentuje adres IP. Posortuj adresy IP i zapisz je w liscie.
+Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
+Dane wyjsciowe: Lista adresow IP posortowanych alfabetycznie.
+
 """
 
 import pathlib
@@ -43,3 +44,4 @@ def test_znajdz_pliki_z_rozszerzeniem():
 if __name__ == "__main__":
 
     test_znajdz_pliki_z_rozszerzeniem()
+

@@ -1,3 +1,12 @@
+/*
+Tytul: Polacz posortowane listy w posortowana liste.
+Tresc: Dla otrzymanych dwoch posortowanych list, polacz je w jedna posortowana liste.
+Dane wejsciowe: Dwie listy liczb calkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
+Przyklad:
+Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinna zostac zwrocona lista: [2, 3, 4, 7, 9].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -44,3 +53,4 @@ public class Main {
     test1();
   }
 }
+

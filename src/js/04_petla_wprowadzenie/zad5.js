@@ -1,37 +1,38 @@
 /*
-Tytuł: Liczby z określonego przedziału.
+Tytul: Liczby z okreslonego przedzialu.
 
-Treść: Dla otrzymanych dwóch liczb naturalnych wypisz:
+Tresc: Dla otrzymanych dwoch liczb naturalnych wypisz:
 
-a) Wszystkie liczby naturalne większe od mniejszej otrzymanej liczby i jednocześnie mniejsze od większej otrzymanej liczby.
+a) Wszystkie liczby naturalne wieksze od mniejszej otrzymanej liczby i jednoczesnie mniejsze od wiekszej otrzymanej liczby.
 
-b) Wszystkie liczby naturalne podzielne przez 3 większe od mniejszej otrzymanej liczby i jednocześnie mniejsze od większej otrzymanej liczby.
+b) Wszystkie liczby naturalne podzielne przez 3 wieksze od mniejszej otrzymanej liczby i jednoczesnie mniejsze od wiekszej otrzymanej liczby.
 
-Dane wejściowe: Dwie liczby naturalne.
+Dane wejsciowe: Dwie liczby naturalne.
 
-Dane wyjściowe: Kilka liczb naturalnych.
+Dane wyjsciowe: Kilka liczb naturalnych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych liczb 9 i 5 powinny zostać wypisane liczby 6, 7 i 8.
+Dla otrzymanych liczb 9 i 5 powinny zostac wypisane liczby 6, 7 i 8.
 */
 
-// Pobieranie danych od użytkownika
-const liczba_a = parseInt(prompt("Podaj pierwszą liczbę:"));
-const liczba_b = parseInt(prompt("Podaj drugą liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
+const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
-// Porównanie ze zmienną
+// Porownanie ze zmienna
 const min = Math.min(liczba_a, liczba_b);
 const max = Math.max(liczba_a, liczba_b);
 
-// Pętla
+// Petla
 for (let i = min + 1; i < max; i++) {
   console.log(i);
 }
 
-// Pętla
+// Petla
 for (let i = min + 1; i < max; i++) {
   if (i % 3 === 0) {
     console.log(i);
   }
 }
+

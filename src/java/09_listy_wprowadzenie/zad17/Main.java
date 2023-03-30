@@ -1,3 +1,12 @@
+/*
+Tytul: Usun duplikaty.
+Tresc: Otrzymujesz liste liczb naturalnych. Usun z niej wszystkie duplikaty, tak aby kazda liczba pozostala tylko raz.
+Dane wejsciowe: Lista liczb naturalnych.
+Dane wyjsciowe: Lista liczb naturalnych.
+Przyklad:
+Dla otrzymanej listy: [3, 2, 1, 3, 2, 2], powinna zostac zwrocona lista: [3, 2, 1].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -56,3 +65,4 @@ public class Main {
     test2();
   }
 }
+

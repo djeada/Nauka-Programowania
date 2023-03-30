@@ -1,14 +1,19 @@
-import random
+"""
+Tytul: Zaokraglanie w dol.
+Tresc: Napisz funkcje, ktora zaokragli iloraz dwoch liczb naturalnych do najblizszej liczby calkowitej w dol, bez uzycia operatorow '/' i '%'.
+Dane wejsciowe: dwie liczby naturalne
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla otrzymanych liczb 7 i 2, funkcja powinna zwrocic liczbe 3.
 
 """
-Napisz funkcje realizujaca zaokraglanie ilorazu bez uzycia operatorow  '/' i '%'.
-"""
+import random
 
 
 def podziel(a, b):
-    '''
+    """
     Funkcja zwraca iloraz a przez b.
-    '''
+    """
     znak = 1
 
     if b == 0:
@@ -52,3 +57,4 @@ def test_podziel():
 
 if __name__ == "__main__":
     test_podziel()
+

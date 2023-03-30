@@ -1,3 +1,16 @@
+/*
+Tytul: Sortowanie przez scalanie.
+Tresc: Dla danej listy liczb calkowitych zaimplementuj algorytm sortowania przez scalanie.
+1. Jesli dlugosc listy jest mniejsza niz 2, zwroc liste.
+2. Podziel liste na dwie rowne (lub prawie rowne) czesci.
+3. Wywolaj rekurencyjnie sortowanie przez scalanie dla obu czesci listy.
+4. Scal obie posortowane czesci listy w jedna posortowana liste.
+Dane wejsciowe: Lista liczb calkowitych.
+Dane wyjsciowe: Posortowana lista liczb calkowitych.
+Przyklad:
+Dla danej listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -62,3 +75,4 @@ public class Main {
     test1();
   }
 }
+

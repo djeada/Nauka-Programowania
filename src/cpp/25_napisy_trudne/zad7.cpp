@@ -1,10 +1,15 @@
+/*
+Tytul: Rotacje napisow.
+Tresc: Dostajesz dwa napisy. Sprawdz, czy jeden z nich jest rotacja drugiego.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla napisow "malpka" i "pkamal" powinno zostac zwrocone "Prawda".
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
-
-/*
-Znajdz najdluzsze powtorzenie w napisie.
-*/
 
 std::string nwp(std::string &slowoA, std::string &slowoB) {
 
@@ -68,3 +73,4 @@ int main() {
 
   return 0;
 }
+

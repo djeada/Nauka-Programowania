@@ -1,15 +1,15 @@
 /*
-Tytuł: Usuń klucz.
+Tytul: Usun klucz.
 
-Treść: Dla otrzymanej listy: liczb całkowitych oraz klucza, usuń pierwsze wystąpienie klucza w liście.
+Tresc: Dla otrzymanej listy: liczb calkowitych oraz klucza, usun pierwsze wystapienie klucza w liscie.
 
-Dane wejściowe: Lista liczb całkowitych i liczba całkowita.
+Dane wejsciowe: Lista liczb calkowitych i liczba calkowita.
 
-Dane wyjściowe: Lista liczb całkowitych.
+Dane wyjsciowe: Lista liczb calkowitych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [6, 2, 1, 4, 27] oraz 4, powinna zostać zwrócona lista: [6, 2, 1, 27].
+Dla otrzymanej listy: [6, 2, 1, 4, 27] oraz 4, powinna zostac zwrocona lista: [6, 2, 1, 27].
 
 */
 
@@ -45,3 +45,4 @@ function main() {
 }
 
 main();
+

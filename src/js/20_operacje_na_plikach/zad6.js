@@ -1,45 +1,45 @@
 /*
-Tytuł: Statystyki dla pliku tekstowego.
+Tytul: Statystyki dla pliku tekstowego.
 
-Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Oblicz:
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Oblicz:
 
-a) Liczbę wierszy w pliku.
+a) Liczbe wierszy w pliku.
 
-b) Liczbę słów w pliku (słowa oddzielone są spacjami i mogą składać się wyłącznie z liter).
+b) Liczbe slow w pliku (slowa oddzielone sa spacjami i moga skladac sie wylacznie z liter).
 
-c) Średnią długość wiersza.
+c) Srednia dlugosc wiersza.
 
-d) Średnią liczbę słów na wiersz.
+d) Srednia liczbe slow na wiersz.
 
-e) Częstość występowania każdego ze słów w pliku.
+e) Czestosc wystepowania kazdego ze slow w pliku.
 
-Dane wejściowe: Napis reprezentujący ścieżkę do pliku.
+Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
 
-Dane wyjściowe:
+Dane wyjsciowe:
 
-a) Liczba naturalna reprezentująca liczbę wierszy.
+a) Liczba naturalna reprezentujaca liczbe wierszy.
 
-b) Liczba naturalna reprezentująca liczbę słów.
+b) Liczba naturalna reprezentujaca liczbe slow.
 
-c) Liczba zmiennoprzecinkowa reprezentująca średnią długość wiersza.
+c) Liczba zmiennoprzecinkowa reprezentujaca srednia dlugosc wiersza.
 
-d) Liczba zmiennoprzecinkowa reprezentująca średnią liczbę słów na wiersz.
+d) Liczba zmiennoprzecinkowa reprezentujaca srednia liczbe slow na wiersz.
 
-e) Słownik par: napis (słowo), liczba naturalna (częstotliwość występowania słowa). 
+e) Slownik par: napis (slowo), liczba naturalna (czestotliwosc wystepowania slowa). 
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: "C:\Users\Username\Documents\text_file.txt" powinno zostać zwrócone:
+Dla otrzymanego napisu: "C:\Users\Username\Documents\text_file.txt" powinno zostac zwrocone:
 
-a) Liczba naturalna reprezentująca liczbę wierszy, np. 6
+a) Liczba naturalna reprezentujaca liczbe wierszy, np. 6
 
-b) Liczba naturalna reprezentująca liczbę słów, np. 25
+b) Liczba naturalna reprezentujaca liczbe slow, np. 25
 
-c) Liczba zmiennoprzecinkowa reprezentująca średnią długość wiersza, np. 41.5
+c) Liczba zmiennoprzecinkowa reprezentujaca srednia dlugosc wiersza, np. 41.5
 
-d) Liczba zmiennoprzecinkowa reprezentująca średnią liczbę słów na wiersz, np. 4.2
+d) Liczba zmiennoprzecinkowa reprezentujaca srednia liczbe slow na wiersz, np. 4.2
 
-e) Słownik par: napis (słowo), liczba naturalna (częstotliwość występowania słowa): {'The': 2, 'quick': 2, 'brown': 2, 'fox': 2, 'jumped': 1, 'over': 1, 'the': 1, 'lazy': 1, 'dog.': 1, 'cat': 1, 'sat': 1, 'on': 1, 'mat.': 1, 'Foxes': 1, 'are': 1, 'known': 1, 'for': 1, 'their': 2, 'cunning': 1, 'and': 1, 'intelligence.': 1, 'Dogs': 1, 'loyalty': 1, 'kindness.': 1, 'Cats': 1, 'independent': 1, 'animals': 1, 'but': 1, 'can': 1, 'be': 1, 'affectionate.': 1, 'This': 1, 'text': 1, 'file': 1, 'contains': 1, 'ten': 1, 'lines': 1, 'and': 1, 'words.': 1}
+e) Slownik par: napis (slowo), liczba naturalna (czestotliwosc wystepowania slowa): {'The': 2, 'quick': 2, 'brown': 2, 'fox': 2, 'jumped': 1, 'over': 1, 'the': 1, 'lazy': 1, 'dog.': 1, 'cat': 1, 'sat': 1, 'on': 1, 'mat.': 1, 'Foxes': 1, 'are': 1, 'known': 1, 'for': 1, 'their': 2, 'cunning': 1, 'and': 1, 'intelligence.': 1, 'Dogs': 1, 'loyalty': 1, 'kindness.': 1, 'Cats': 1, 'independent': 1, 'animals': 1, 'but': 1, 'can': 1, 'be': 1, 'affectionate.': 1, 'This': 1, 'text': 1, 'file': 1, 'contains': 1, 'ten': 1, 'lines': 1, 'and': 1, 'words.': 1}
 
 Tekst pliku:
 
@@ -136,7 +136,7 @@ const testznajdzLiczbeWierszy = () => {
   const wynik = znajdzLiczbeWierszy(wiersze);
   console.assert(
     wynik === oczekiwanaznajdzLiczbeWierszy,
-    "Nieprawidłowa liczba wierszy"
+    "Nieprawidlowa liczba wierszy"
   );
 };
 
@@ -146,7 +146,7 @@ const testznajdzLiczbeSlow = () => {
   const wynik = znajdzLiczbeSlow(wiersze);
   console.assert(
     wynik === oczekiwanaznajdzLiczbeSlow,
-    "Nieprawidłowa liczba słów"
+    "Nieprawidlowa liczba slow"
   );
 };
 const testznajdzSredniaDlugoscWiersza = () => {
@@ -156,7 +156,7 @@ const testznajdzSredniaDlugoscWiersza = () => {
   const wynik = znajdzSredniaDlugoscWiersza(wiersze);
   console.assert(
     Math.abs(wynik - oczekiwanaSredniaDlugosc) < 0.1,
-    "Nieprawidłowa średnia długość wiersza"
+    "Nieprawidlowa srednia dlugosc wiersza"
   );
 };
 const testznajdzSredniaLiczbeSlowNaWiersz = () => {
@@ -165,7 +165,7 @@ const testznajdzSredniaLiczbeSlowNaWiersz = () => {
   const wynik = znajdzSredniaLiczbeSlowNaWiersz(wiersze);
   console.assert(
     wynik === oczekiwanaSredniaznajdzLiczbeSlow,
-    "Nieprawidłowa średnia liczba słów na wiersz"
+    "Nieprawidlowa srednia liczba slow na wiersz"
   );
 };
 
@@ -181,7 +181,7 @@ const testznajdzHistogramSlow = () => {
   const wynik = znajdzHistogramSlow(wiersze);
   console.assert(
     JSON.stringify([...wynik]) === JSON.stringify([...oczekiwanyHistogram]),
-    "Nieprawidłowy histogram słów"
+    "Nieprawidlowy histogram slow"
   );
 };
 const testStatystykiDlaPliku = async () => {
@@ -214,7 +214,7 @@ const testStatystykiDlaPliku = async () => {
 
   console.assert(
     JSON.stringify(wynik) === JSON.stringify(oczekiwaneStatystyki),
-    "Nieprawidłowe statystyki"
+    "Nieprawidlowe statystyki"
   );
 };
 
@@ -225,7 +225,8 @@ const uruchomTesty = async () => {
   testznajdzSredniaLiczbeSlowNaWiersz();
   testznajdzHistogramSlow();
   testStatystykiDlaPliku();
-  console.log("Wszystkie testy zakończone powodzeniem");
+  console.log("Wszystkie testy zakonczone powodzeniem");
 };
 
 uruchomTesty();
+

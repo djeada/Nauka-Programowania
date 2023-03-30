@@ -1,26 +1,26 @@
 /*
-Tytuł: Mnożenie i dzielenie.
+Tytul: Mnozenie i dzielenie.
 
-Treść: Napisz funkcję, która dla otrzymanych dwóch liczb naturalnych a i b, przy pomocy dodawania lub odejmowania oraz pętli, obliczy:
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych a i b, przy pomocy dodawania lub odejmowania oraz petli, obliczy:
 
 a) iloczyn tych liczb
 
-b) iloraz liczby a przez liczbę b
+b) iloraz liczby a przez liczbe b
 
-Dane wejściowe: dwie liczby naturalne
+Dane wejsciowe: dwie liczby naturalne
 
-Dane wyjściowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb 3 i 2, funkcja powinna zwrócić liczbę:
+Dla pobranych liczb 3 i 2, funkcja powinna zwrocic liczbe:
 
 a) 6;
 
 b) 2.
 */
 
-// Funkcja zwracająca iloczyn dwóch liczb
+// Funkcja zwracajaca iloczyn dwoch liczb
 function zwracajIloczynLiczb(liczba_a, liczba_b) {
   var wynik = 0;
   for (var i = 0; i < liczba_b; i++) {
@@ -29,7 +29,7 @@ function zwracajIloczynLiczb(liczba_a, liczba_b) {
   return wynik;
 }
 
-// Funkcja zwracająca iloraz dwóch liczb
+// Funkcja zwracajaca iloraz dwoch liczb
 function zwracajIlorazLiczb(liczba_a, liczba_b) {
   if (liczba_b === 0) {
     return NaN;
@@ -65,11 +65,12 @@ function testIloraz() {
   console.assert(zwracajIlorazLiczb(0, 2) == 0);
 }
 
-// Funkcja uruchamiająca testy
+// Funkcja uruchamiajaca testy
 function main() {
   testIloczyn();
   testIloraz();
 }
 
-// Uruchomienie testów
+// Uruchomienie testow
 main();
+

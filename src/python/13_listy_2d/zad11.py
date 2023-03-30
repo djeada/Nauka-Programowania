@@ -1,22 +1,11 @@
 """
-Napisz program, realizujacy gre w statki. 
+Tytul: Macierz z parami elementow odpowiadajacych sobie z dwoch list.
+Tresc: Dla otrzymanych dwoch list, stworz dwukolumnowa macierz, ktorej pierwsza kolumna sklada sie z elementow pierwszej listy, a druga kolumna z elementow drugiej listy. Jesli otrzymane listy nie sa rownej dlugosci, zwroc pusta macierz.
+Dane wejsciowe: Dwie listy.
+Dane wyjsciowe: Lista list liczb naturalnych lub pusta macierz (w przypadku nierownych dlugosci list).
+Przyklad:
+Dla otrzymanych dwoch list: [3, 5, 2] oraz [2, 8, 1], powinna zostac zwrocona macierz: [[3, 2], [5, 8], [2, 1]
 
-Stworz macierz skladajaca sie z 10 wierszy i 10 kolumn. Wylosuj polozenia statkow 
-i zapisz je w macierzy. Masz do dyspozycji nastepujace statki: 
-a) 1 statek o dlugosci rownej 4 polom, 
-b) 2 statki o dlugosci rownej 3 polom, 
-c) 3 statki o dlugosci rownej 2 polom, 
-d) 5 statkow o dlugosci rownej 1 polu. 
-Na danym polu moze znajdowac sie tylko jeden statek.
-
-Wypisz na standardowe wyjscie plansze skladajaca sie z 10x10 kropek i popros 
-uzytkownika o podanie wspolrzednych. Jesli na podanych przez uzytkownika znajduje 
-sie statek, zamien na planszy kropke na litere o. W przeciwnym razie zamien 
-kropke na litere x.
-
-Powtarzaj krok 2 dopoki wszystkie pozycje statkow nie zostana odkryte przez 
-uzytkownika lub dopoki na planszy nie znajdzie sie 10 literek x. W obu 
-przypadkach zakoncz gre i poinformuj uzytkownika o wyniku.
 """
 
 import enum
@@ -303,3 +292,4 @@ def gra():
 if __name__ == "__main__":
 
     gra()
+

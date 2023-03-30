@@ -1,18 +1,18 @@
 /*
-Tytuł: Znajdź medianę dwóch posortowanych list.
+Tytul: Znajdz mediane dwoch posortowanych list.
 
-Treść: Otrzymujesz dwie posortowane listy liczb całkowitych równej długości. Znajdź ich medianę.
+Tresc: Otrzymujesz dwie posortowane listy liczb calkowitych rownej dlugosci. Znajdz ich mediane.
 
-Dane wejściowe: Dwie listy liczb całkowitych o równej długości.
+Dane wejsciowe: Dwie listy liczb calkowitych o rownej dlugosci.
 
-Dane wyjściowe: Liczba zmiennoprzecinkowa.
+Dane wyjsciowe: Liczba zmiennoprzecinkowa.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinno zostać zwrócone: 4.5.
+Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinno zostac zwrocone: 4.5.
 */
 
-// Funkcja zwracająca medianę dwóch posortowanych list
+// Funkcja zwracajaca mediane dwoch posortowanych list
 function znajdzMediane(lista1, lista2) {
   let wynik = [];
   let maxLength = Math.max(lista1.length, lista2.length);
@@ -39,3 +39,4 @@ function testZnajdzMediane() {
 }
 
 testZnajdzMediane();
+

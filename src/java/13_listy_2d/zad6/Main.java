@@ -1,3 +1,12 @@
+/*
+Tytul: Zerowanie macierzy.
+Tresc: Otrzymujesz liste list liczb naturalnych reprezentujaca macierz. Jesli element macierzy jest rowny zero, zamien wszystkie elementy tej samej kolumny i wiersza na zera.
+Dane wejsciowe: Lista list liczb naturalnych.
+Dane wyjsciowe: Lista list liczb naturalnych.
+Przyklad:
+Dla otrzymanej macierzy: [[1,2,3], [4,0,6], [7,8,9]], powinna zostac zwrocona macierz: [[1,0,3], [0,0,0], [7,0,9]].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -79,3 +88,4 @@ public class Main {
     test1();
   }
 }
+

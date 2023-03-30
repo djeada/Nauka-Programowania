@@ -1,6 +1,8 @@
-#!/usr/bin/env bash
-
-#Dla pobranej liczby, powinna zostac zwrocona suma cyfr tej liczby.
+# Tytul: Tresc: Dla otrzymanej liczby naturalnej wypisz sume cyfr tej liczby.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: Liczba naturalna.
+# Przyklad:
+# Dla otrzymanej liczby 129, powinna zostac wypisana liczba 12.
 
 main() {
 
@@ -8,7 +10,6 @@ main() {
     read a
 
     suma=0
-
 
     while [ $a -gt 0 ]
     do

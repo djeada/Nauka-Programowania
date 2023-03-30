@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Usun z pierwszej listy czesc wspolna obu list.
+# Tresc: Otrzymujesz dwie listy liczb calkowitych. Usun z pierwszej listy te elementy, ktore wystepuja rowniez w drugiej liscie.
+# Dane wejsciowe: Dwie listy liczb calkowitych.
+# Dane wyjsciowe: Lista liczb calkowitych.
+# Przyklad:
+# Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5].
 
 source ../assert.sh
-
-# Otrzymujesz dwie posortowane listy.
-# Polacz je w posortowana liste.
 
 polacz_v1() {
     wynik=()
@@ -54,7 +56,6 @@ test1() {
 main() {
     test1
 }
-
 
 main "$@"
 

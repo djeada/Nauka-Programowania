@@ -1,8 +1,13 @@
-import string
+"""
+Tytul: Usun spacje ze zdania.
+Tresc: Otrzymasz napis reprezentujacy zdanie. Usun spacje ze zdania.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "Alamakota".
 
 """
-Policz z ilu slow sklada sie zdanie. Znaki interpunkcyjne nie sa liczone jako slowa.
-"""
+import string
 
 
 def podziel_zdanie_na_slowa(zdanie):
@@ -20,3 +25,4 @@ def test_liczba_slow_w_zdaniu():
 
 if __name__ == "__main__":
     test_liczba_slow_w_zdaniu()
+

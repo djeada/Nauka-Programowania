@@ -1,3 +1,16 @@
+/*
+Tytul: Litera X.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze litere X o wysokosci rownej tej liczbie.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Komunikat.
+Przyklad:
+Dla otrzymanej liczby 4 powinno zostac wypisane:
+*   *
+* *
+* *
+*   *
+
+*/
 public class Main {
   // Napisz funkcje, ktora dla otrzymanej liczby
   // wypisze litere X, o wysokosci rownej
@@ -23,3 +36,4 @@ public class Main {
     literaX(a);
   }
 }
+

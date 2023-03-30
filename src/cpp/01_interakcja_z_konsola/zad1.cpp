@@ -1,8 +1,11 @@
-#include <iostream>
-
 /*
-Wypisz dowolny ciag znakow na standardowe wyjscie.
+Tytul: Wypisywanie na standardowe wyjscie.
+Tresc zadania: Napisz program, ktory wypisze dowolny ciag znakow na standardowe
+wyjscie. Dane wejsciowe: Brak. Dane wyjsciowe: Komunikat. Przyklad: Program moze
+wypisac twoje inicjaly lub komunikat "Witaj swiecie!".
+
 */
+#include <iostream>
 
 int main() {
 
@@ -11,3 +14,4 @@ int main() {
 
   return 0;
 }
+

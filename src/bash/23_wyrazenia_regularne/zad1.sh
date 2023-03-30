@@ -1,26 +1,26 @@
-#!/usr/bin/env bash
+# Tytul: Sprawdz poprawnosc adresu e-mail.
+# Tresc: Masz napis reprezentujacy adres e-mail. Sprawdz, czy jest on poprawny.
+# Pamietaj, ze kazdy adres e-mail sklada sie z identyfikatora uzytkownika, znaku @ oraz nazwy domenowej.
+# Identyfikator uzytkownika sklada sie tylko z:
+# * Malych (a-z) i wielkich (A-Z) liter.
+# * Cyfr (0-9).
+# * Znakow ! # $ % & ' * + — / = ? ^ _ ` { | } ~.
+# * Kropek . pod warunkiem, ze nie jest pierwszym lub ostatnim znakiem i nie wystepuje dwukrotnie po sobie.
+# Nazwa domenowa sklada sie tylko z:
+# * Malych (a-z) i wielkich (A-Z) liter.
+# * Cyfr (0-9).
+# * Kropek . oraz myslnika — pod warunkiem, ze nie sa pierwszym lub ostatnim znakiem i nie wystepuja dwukrotnie po sobie.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Wartosc logiczna.
+# Przyklad:
+# Dla napisu: “adam@gmail.com”, powinna zostac zwrocona wartosc logiczna: Prawda.
 
 source ../assert.sh
 
-# Otrzymujesz napis reprezentujacy adres email. Sprawdz jego poprawnosc.
-# Pamietaj, ze kazdy adres email sklada sie z identyfikatora uzytkownika, 
-# znaku @ oraz nazwy domenowej.
-# 
-# Identyfikator uzytkownika sklada sie jedynie z:
-# a) Malych (a-z) i wielkich (A-Z) liter.
-# b) Cyfr (0-9).
-# c) Znakow  ! # $ % & ' * + - / = ? ^ _ ` { | } ~.
-# d) Kropki . pod warunkiem, ze nie jest pierwszym badz ostatnim znakiem i nie wystepuje dwukrotnie po sobie.
-# 
-# Nazwa domenowa sklada sie jedynie z:
-# a) Malych (a-z) i wielkich (A-Z) liter.
-# b) Cyfr (0-9).
-# c) Kropki . oraz myslnika - pod warunkiem, ze nie sa pierwszym badz ostatnim znakiem i nie wystepuja dwukrotnie po sobie.
-
 poprawny_identyfikator() {
-    # Funkcja sprawdza, czy podany identyfikator jest poprawny.
     local identyfikator="$1"
-    
+    local identyfikator="$1"
+
     if [[ "${identyfikator:0:1}" == "." ]] || [[ "${identyfikator: -1}" == "." ]]; then
         echo "false"
         return
@@ -39,7 +39,6 @@ poprawny_identyfikator() {
 }
 
 poprawna_nazwa_domenowa() {
-    # Funkcja sprawdza, czy podana nazwa domenowa jest poprawna.
 
     local nazwa_domenowa="$1"
 
@@ -48,15 +47,12 @@ poprawna_nazwa_domenowa() {
         return
     fi
 
-    # check if there are any adjacent dots
-
-
     if [[ "${nazwa_domenowa}" =~ [.]{2,} ]] || [[ "${nazwa_domenowa}" =~ [-]{2,} ]]; then
         echo "false"
         return
     fi
 
-        local wystapienia_kropki=`echo "${nazwa_domenowa}" | grep -o '\\.' | wc -l`
+    local wystapienia_kropki=`echo "${nazwa_domenowa}" | grep -o '\\.' | wc -l`
 
     if [ $wystapienia_kropki -lt 1 ]; then
         echo "false"
@@ -72,11 +68,10 @@ poprawna_nazwa_domenowa() {
 }
 
 czy_email_poprawny() {
-    # Funkcja sprawdza, czy podany adres email jest poprawny.
 
     local email="$1"
 
-    # count how many times '@' appears in the email
+    local count=$(echo "$email" | grep -o "@" | wc -l)
     local count=$(echo "$email" | grep -o "@" | wc -l)
     if [ $count -ne 1 ]; then
         echo "false"
@@ -93,7 +88,6 @@ czy_email_poprawny() {
     fi
 
 }
-
 
 test_czy_email_poprawny_pozytywne() {
     assertTrue $(czy_email_poprawny "email@example.com") $LINENO
@@ -115,7 +109,7 @@ test_czy_email_poprawny_negatywne() {
     assertFalse $(czy_email_poprawny "plainaddress") $LINENO
     assertFalse $(czy_email_poprawny "#@%^%#$@#$@#.com") $LINENO
     assertFalse $(czy_email_poprawny "@example.com") $LINENO
-    assertFalse $(czy_email_poprawny "Joe Smith <email@example.com") $LINENO	
+    assertFalse $(czy_email_poprawny "Joe Smith <email@example.com") $LINENO
     assertFalse $(czy_email_poprawny "email.example.com") $LINENO
     assertFalse $(czy_email_poprawny ".email@example.com") $LINENO
     assertFalse $(czy_email_poprawny "email..email@example.com") $LINENO
@@ -131,7 +125,6 @@ main() {
     test_czy_email_poprawny_pozytywne
     test_czy_email_poprawny_negatywne
 }
-
 
 main "$@"
 

@@ -1,14 +1,17 @@
+/*
+Tytul: Dodaj wiersz do pliku.
+Tresc zadania: Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke do
+pliku tekstowego, a drugi napis reprezentuje wiersz tekstu. Dodaj otrzymany
+wiersz na poczatek pliku tekstowego. Dane wejsciowe: Dwa napisy - sciezka do
+pliku oraz wiersz tekstu. Dane wyjsciowe: Brak.
+
+*/
 #include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
 
 namespace filesys = std::experimental::filesystem;
-
-/*
-Otrzymujesz napis reprezentujacy sciezke pliku tekstowego.
-Wczytaj i wypisz tresc pliku.
-*/
 
 void wypiszPlik(const std::string &sciezka) {
   try {
@@ -44,3 +47,4 @@ int main() {
 
   return 0;
 }
+

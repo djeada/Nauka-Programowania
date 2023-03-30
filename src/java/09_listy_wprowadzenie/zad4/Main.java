@@ -1,5 +1,11 @@
 /*
-Znajdz najwieksza i najmniejsza wartosc w tablicy.
+Tytul: Znalezienie brakujacego elementu w liscie.
+Tresc: Dla dostarczonej listy, skladajacej sie z nieuporzadkowanych kolejnych (oprocz jednego) elementow ciagu arytmetycznego, znajdz brakujacy element.
+Dane wejsciowe: Lista zawierajaca liczby naturalne.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej listy: [5, 2, 1, 3] zostanie zwrocona liczba: 4.
+
 */
 
 public class Main {
@@ -44,3 +50,4 @@ public class Main {
     test2();
   }
 }
+

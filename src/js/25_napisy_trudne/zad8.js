@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Najdłuższy wspólny przedrostek.
+Tytul: Najdluzszy wspolny przedrostek.
 
-Treść: Dostajesz listę napisów. Znajdź najdłuższy wspólny przedrostek dla wszystkich napisów na liście.
+Tresc: Dostajesz liste napisow. Znajdz najdluzszy wspolny przedrostek dla wszystkich napisow na liscie.
 
-Dane wejściowe: Lista napisów.
+Dane wejsciowe: Lista napisow.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla listy ["Remolada", "Remux", "Remmy"] powinien zostać zwrócony napis "Rem".
+Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac zwrocony napis "Rem".
 
 */
 
@@ -50,3 +50,4 @@ function testNajdluzszyWspolnyPrzedrostek() {
 }
 
 testNajdluzszyWspolnyPrzedrostek();
+

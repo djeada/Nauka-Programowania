@@ -76,3 +76,4 @@ fn main() {
 	println!("Objetosc graniastoslupa wynosi: {}", a * b * h );
 	
 }
+

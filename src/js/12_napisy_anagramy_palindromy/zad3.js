@@ -1,15 +1,15 @@
 /*
-Tytuł: Sprawdzenie, czy dwa słowa są anagramami.
+Tytul: Sprawdzenie, czy dwa slowa sa anagramami.
 
-Treść: Napisz program, który dla podanych dwóch napisów sprawdzi, czy są anagramami. Dwa napisy są anagramami, jeśli jeden z nich można zbudować poprzez przestawienie znaków w drugim.
+Tresc: Napisz program, ktory dla podanych dwoch napisow sprawdzi, czy sa anagramami. Dwa napisy sa anagramami, jesli jeden z nich mozna zbudowac poprzez przestawienie znakow w drugim.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: “ula” oraz “lua”, powinna zostać zwrócona wartość logiczna: Prawda.
+Dla otrzymanego napisu: “ula” oraz “lua”, powinna zostac zwrocona wartosc logiczna: Prawda.
 */
 
 function czyAnagramy(napis1, napis2) {
@@ -33,7 +33,7 @@ function test() {
 
   console.assert(
     output === expectedOutput,
-    'Test nie powiódł się dla "' +
+    'Test nie powiodl sie dla "' +
       input1 +
       '" i "' +
       input2 +
@@ -42,7 +42,8 @@ function test() {
       ", a oczekiwany wynik to " +
       expectedOutput
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

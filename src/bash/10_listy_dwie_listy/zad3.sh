@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Mnozenie wektorowe.
+# Tresc: Tresc: Otrzymujesz dwie listy liczb calkowitych reprezentujace dwa wektory trojwymiarowej przestrzeni euklidesowej. Zaimplementuj mnozenie wektorowe (zdefiniowane jedynie dla wektorow 3-wymiarowej przestrzeni euklidesowej).
+# Dane wejsciowe: Dwie listy liczb calkowitych o dlugosci 3.
+# Dane wyjsciowe: Liczba naturalna.
+# Przyklad:
+# Dla otrzymanych list [1, 2, 3] oraz [3, 1, 2], powinno zostac zwrocone: 5.
 
 source ../assert.sh
-
-#Dla otrzymanych dwoch list, zwroc liste, ktorej elementy sa suma odpowiadajacych
-#sobie elementow otrzymanych list.  Jesli listy nie sa rownej dlugosci, zaloz ze
-#brakujace elementy krotszej listy sa rowne 0.
 
 suma() {
 
@@ -54,7 +55,6 @@ main() {
     test2
     test3
 }
-
 
 main "$@"
 

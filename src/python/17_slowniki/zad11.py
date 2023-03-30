@@ -1,7 +1,10 @@
 """
-Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych. 
-a) Wypisz pary posortowane wzgledem napisow.
-b) Wypisz pary posortowane wzgledem liczb.
+Tytul: Klucz to imie, wartosc lista wypozyczonych ksiazek.
+Tresc: Zbuduj prosta baze danych dla biblioteki oparta o slownik, w ktorym kluczami sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek. Baza danych powinna umozliwiac:
+1. Dodanie wypozyczonej ksiazki do danego czytelnika.
+2. Zwrocenie wypozyczonej ksiazki przez czytelnika.
+3. Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
+
 """
 
 
@@ -13,7 +16,7 @@ def sortuj_wzgledem_kluczy(slownik):
 
 
 def sortuj_wzgledem_wartosci(slownik):
-    """	
+    """
     Funkcja sortuje slownik wzgledem wartosci.
     """
     return sorted(slownik.items(), key=lambda x: x[1])
@@ -39,3 +42,4 @@ if __name__ == "__main__":
 
     test_sortuj_wzgledem_kluczy()
     test_sortuj_wzgledem_wartosci()
+

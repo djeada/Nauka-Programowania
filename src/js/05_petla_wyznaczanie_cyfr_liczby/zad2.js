@@ -1,21 +1,22 @@
 /*
-Tytuł: Cyfry liczby.
+Tytul: Cyfry liczby.
 
-Treść: Dla otrzymanej liczby naturalnej wypisz cyfry, z których się składa, zaczynając od cyfry jedności.
+Tresc: Dla otrzymanej liczby naturalnej wypisz cyfry, z ktorych sie sklada, zaczynajac od cyfry jednosci.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczby.
+Dane wyjsciowe: Liczby.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 8214, powinny zostać wypisane cyfry 4, 1, 2 i 8.
+Dla otrzymanej liczby 8214, powinny zostac wypisane cyfry 4, 1, 2 i 8.
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Pętla
+// Petla
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
   console.log(i % 10);
 }
+

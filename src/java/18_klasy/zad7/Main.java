@@ -1,3 +1,10 @@
+/*
+Tytul: Zlicz instancje klasy w programie.
+Tresc: Opis zadania: Stworz klase Klasa, ktora bedzie zawierala funkcje statyczna, zwracajaca aktualna liczbe instancji tej klasy w programie. Nastepnie stworz kilka obiektow tej klasy i przetestuj dzialanie funkcji.
+Dane wejsciowe: brak
+Dane wyjsciowe: liczba naturalna, reprezentujaca liczbe instancji klasy w programie.
+
+*/
 import java.io.*;
 import java.util.*;
 
@@ -38,3 +45,4 @@ public class Klasa implements Closeable {
     test2();
   }
 }
+

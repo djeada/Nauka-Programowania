@@ -1,3 +1,12 @@
+/*
+Tytul: Znalezienie elementu bez pary w liscie liczb calkowitych.
+Tresc: Dla otrzymanej listy liczb calkowitych, skladajacej sie z nieparzystej liczby elementow, znajdz element, ktory nie ma pary o tej samej wartosci.
+Dane wejsciowe: Lista liczb calkowitych.
+Dane wyjsciowe: Liczba calkowita.
+Przyklad:
+Dla otrzymanej listy: [1, 3, 1, 7, 3, 1, 1] zostanie zwrocona liczba: 7.
+
+*/
 import java.util.*;
 
 // Otrzymujesz liste liczb, wykonaj nastepujace polecenia:
@@ -124,3 +133,4 @@ public class Main {
     test4();
   }
 }
+

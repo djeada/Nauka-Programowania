@@ -1,3 +1,10 @@
+/*
+Tytul: Podmien tresci plikow.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do plikow. Podmien
+tresci obu plikow. Dane wejsciowe: Dwa napisy reprezentujace sciezki do plikow.
+Dane wyjsciowe: Brak.
+
+*/
 #include <cassert>
 #include <cstring>
 #include <experimental/filesystem>
@@ -7,14 +14,6 @@
 #include <vector>
 
 namespace filesys = std::experimental::filesystem;
-
-/*
-Otrzymujesz napis reprezentujacy sciezke folderu.
-a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych
-znajdujacych sie w folderze oraz podfolderach.
-b) Usun srodkowy wiersz z kazdego pliku csv znajdujacego sie
-w folderze oraz podfolderach.
-*/
 
 std::string znajdzRozszerzenie(std::string sciezka) {
 
@@ -171,3 +170,4 @@ int main() {
 
   return 0;
 }
+

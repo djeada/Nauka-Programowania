@@ -1,15 +1,15 @@
 /*
-Tytuł: Tabliczka mnożenia.
+Tytul: Tabliczka mnozenia.
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej N, wypisze N pierwszych wierszy i kolumn tabliczki mnożenia.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej N, wypisze N pierwszych wierszy i kolumn tabliczki mnozenia.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Wiersze i kolumny tabliczki mnożenia o wymiarach NxN.
+Dane wyjsciowe: Wiersze i kolumny tabliczki mnozenia o wymiarach NxN.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 3 powinno zostać wypisane:
+Dla otrzymanej liczby 3 powinno zostac wypisane:
 
     1 2 3
     2 4 6
@@ -17,7 +17,7 @@ Dla otrzymanej liczby 3 powinno zostać wypisane:
 
     */
 
-// Funkcja wypisująca tabliczkę mnożenia o wymiarach NxN
+// Funkcja wypisujaca tabliczke mnozenia o wymiarach NxN
 function tabliczkaMnozenia(n) {
   for (var i = 1; i <= n; i++) {
     var wiersz = "";
@@ -29,11 +29,12 @@ function tabliczkaMnozenia(n) {
 }
 
 // Testy
-console.log("Tabliczka mnożenia o wymiarach 2x2");
+console.log("Tabliczka mnozenia o wymiarach 2x2");
 tabliczkaMnozenia(2);
 
-console.log("\nTabliczka mnożenia o wymiarach 3x3");
+console.log("\nTabliczka mnozenia o wymiarach 3x3");
 tabliczkaMnozenia(3);
 
-console.log("\nTabliczka mnożenia o wymiarach 4x4");
+console.log("\nTabliczka mnozenia o wymiarach 4x4");
 tabliczkaMnozenia(4);
+

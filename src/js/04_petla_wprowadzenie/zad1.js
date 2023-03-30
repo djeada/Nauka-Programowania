@@ -1,17 +1,18 @@
 /*
-Tytuł: Warunek kończący pętle.
+Tytul: Warunek konczacy petle.
 
-Treść: Proś użytkownika o podanie liczby, dopóki nie zostanie podana liczba 7.
+Tresc: Pros uzytkownika o podanie liczby, dopoki nie zostanie podana liczba 7.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 */
 
-// Pobieranie danych od użytkownika
-let liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+let liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Warunek kończący pętle
+// Warunek konczacy petle
 while (liczba !== 7) {
-  liczba = parseInt(prompt("Podaj liczbę:"));
+  liczba = parseInt(prompt("Podaj liczbe:"));
 }
+

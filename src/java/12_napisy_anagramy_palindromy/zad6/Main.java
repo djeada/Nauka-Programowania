@@ -1,3 +1,12 @@
+/*
+Tytul: Permutacje slowa, ktore sa palindromami.
+Tresc: Napisz program, ktory znajdzie permutacje danego slowa, ktore sa palindromami.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla otrzymanego napisu: “taco”, powinna zostac zwrocona lista: ["taco", "toca"].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -57,3 +66,4 @@ public class Main {
     test1();
   }
 }
+

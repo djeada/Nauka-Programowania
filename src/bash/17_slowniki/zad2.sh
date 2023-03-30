@@ -1,10 +1,17 @@
-#!/usr/bin/env bash
+# Tytul: Lista pracownikow z najwiekszymi zyskami.
+# Tresc: Otrzymujesz liste par. Pierwszym elementem pary jest napis reprezentujacy imie i nazwisko pracownika, drugim zysk z transakcji, jaka dany pracownik przeprowadzil. Znajdz pracownika, ktory przyniosl firmie najwiecej zysku.
+# Dane wejsciowe: Lista par napisow i liczb naturalnych.
+# Dane wyjsciowe: Napis.
+# Przyklad:
+# Dla otrzymanej listy:
+# [["Barnaba Barabash", 120],
+# ["Jon Snow", 100],
+# ["Kira Summer", 300],
+# ["Barnaba Barabash", 200],
+# ["Bob Marley", 110]]
+# zostanie zwrocony napis: “Barnaba Barabash”.
 
 source ../assert.sh
-
-# Otrzymujesz dwie listy liczb calkowitych. Zbuduj slownik skladajacy sie z 
-# kluczy bedacych elementami pierwszej listy i wartosciami bedacymi elementami 
-# drugiej listy. Jesli listy sa roznej dlugosci zwroc pusty slownik.
 
 zbuduj_slownik() {
     local -a lista_a=($1)
@@ -36,7 +43,6 @@ test_zbuduj_slownik() {
 main() {
     test_zbuduj_slownik
 }
-
 
 main "$@"
 

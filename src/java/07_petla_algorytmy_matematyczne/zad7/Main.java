@@ -1,3 +1,12 @@
+/*
+Tytul: Pierwiastek metoda Newtona
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej zwroci jej pierwiastek.
+Dane wejsciowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla otrzymanej liczby 16, funkcja powinna zwrocic liczbe 4.
+
+*/
 public class Main {
   // Napisz funkcje, ktora dla otrzymanej liczby
   // zwroci jej pierwiastek.
@@ -27,3 +36,4 @@ public class Main {
     test1();
   }
 }
+

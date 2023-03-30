@@ -1,3 +1,20 @@
+/*
+Tytul:  Sprawdz warunek
+Napisz funkcje, ktora sprawdzi nastepujace warunki dla otrzymanych dwoch liczb:
+a) Czy pierwsza liczba jest wieksza od drugiej liczby?
+b) Czy suma liczb jest mniejsza niz 10?
+c) Czy obie liczby sa nieparzyste?
+d) Czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu?
+Dane wejsciowe: dwie liczby naturalne
+Dane wyjsciowe: cztery wartosci logiczne, odpowiadajace na kazde z pytan
+Przyklad:
+Dla pobranych liczb 3 i 2, funkcja powinna zwrocic nastepujace wartosci logiczne:
+a) Prawda
+b) Prawda
+c) Falsz
+d) Prawda
+
+*/
 import java.util.*;
 
 public class Main {
@@ -56,3 +73,4 @@ public class Main {
     System.out.printf("\n");
   }
 }
+

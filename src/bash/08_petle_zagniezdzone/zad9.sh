@@ -1,8 +1,9 @@
-#!/usr/bin/env bash
-
-#Napisz funkcje, ktora dla otrzymanej liczby N,
-#wypisze trojkat pascala o wysokosci N.
-
+# Tytul: N pierwszych liczb pierwszych.
+# Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej N, wypisze N pierwszych liczb pierwszych.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: N liczb pierwszych.
+# Przyklad:
+# Dla otrzymanej liczby 5 powinno zostac wypisane: 2, 3, 5, 7, 11.
 
 pascal() {
 
@@ -22,7 +23,6 @@ pascal() {
         echo ""
     done
 }
-
 
 main() {
 

@@ -1,31 +1,31 @@
 /*
 
-Tytuł: Sprawdź poprawność adresu e-mail.
+Tytul: Sprawdz poprawnosc adresu e-mail.
 
-Treść: Masz napis reprezentujący adres e-mail. Sprawdź, czy jest on poprawny.
+Tresc: Masz napis reprezentujacy adres e-mail. Sprawdz, czy jest on poprawny.
 
-Pamiętaj, że każdy adres e-mail składa się z identyfikatora użytkownika, znaku @ oraz nazwy domenowej.
+Pamietaj, ze kazdy adres e-mail sklada sie z identyfikatora uzytkownika, znaku @ oraz nazwy domenowej.
 
-Identyfikator użytkownika składa się tylko z:
+Identyfikator uzytkownika sklada sie tylko z:
 
-* Małych (a-z) i wielkich (A-Z) liter.
+* Malych (a-z) i wielkich (A-Z) liter.
 * Cyfr (0-9).
-* Znaków ! # $ % & ' * + — / = ? ^ _ ` { | } ~.
-* Kropek . pod warunkiem, że nie jest pierwszym lub ostatnim znakiem i nie występuje dwukrotnie po sobie.
+* Znakow ! # $ % & ' * + — / = ? ^ _ ` { | } ~.
+* Kropek . pod warunkiem, ze nie jest pierwszym lub ostatnim znakiem i nie wystepuje dwukrotnie po sobie.
 
-Nazwa domenowa składa się tylko z:
+Nazwa domenowa sklada sie tylko z:
 
-* Małych (a-z) i wielkich (A-Z) liter.
+* Malych (a-z) i wielkich (A-Z) liter.
 * Cyfr (0-9).
-* Kropek . oraz myślnika — pod warunkiem, że nie są pierwszym lub ostatnim znakiem i nie występują dwukrotnie po sobie.
+* Kropek . oraz myslnika — pod warunkiem, ze nie sa pierwszym lub ostatnim znakiem i nie wystepuja dwukrotnie po sobie.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
+Przyklad:
 
-Dla napisu: “adam@gmail.com”, powinna zostać zwrócona wartość logiczna: Prawda.
+Dla napisu: “adam@gmail.com”, powinna zostac zwrocona wartosc logiczna: Prawda.
 
 */
 function poprawny_identyfikator(identyfikator) {
@@ -113,3 +113,4 @@ function main() {
 }
 
 main();
+

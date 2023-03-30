@@ -1,40 +1,40 @@
 {-
-Tytuł: Konwersja jednostek.
+Tytul: Konwersja jednostek.
 
-Treść zadania: Napisz program, który będzie konwertować jednostki zgodnie z następującymi instrukcjami:
+Tresc zadania: Napisz program, ktory bedzie konwertowac jednostki zgodnie z nastepujacymi instrukcjami:
 
-a) Pobierz wielkość w kilogramach i wypisz, ile gramów odpowiada.
+a) Pobierz wielkosc w kilogramach i wypisz, ile gramow odpowiada.
 
-b) Pobierz wielkość w calach i wypisz, ile centymetrów odpowiada.
+b) Pobierz wielkosc w calach i wypisz, ile centymetrow odpowiada.
 
-c) Pobierz liczbę sekund i przelicz na godziny.
+c) Pobierz liczbe sekund i przelicz na godziny.
 
-d) Pobierz liczbę w euro i wypisz, ile złotówek odpowiada.
+d) Pobierz liczbe w euro i wypisz, ile zlotowek odpowiada.
 
-e) Pobierz miarę kąta w stopniach i wypisz, ile radianów odpowiada.
+e) Pobierz miare kata w stopniach i wypisz, ile radianow odpowiada.
 
-f) Pobierz temperaturę w stopniach Fahrenheita i wypisz ile stopni Celsjusza oraz ile stopni Kelvina odpowiada.
+f) Pobierz temperature w stopniach Fahrenheita i wypisz ile stopni Celsjusza oraz ile stopni Kelvina odpowiada.
 
-Dane wejściowe: Liczba naturalna we wszystkich podpunktach.
+Dane wejsciowe: Liczba naturalna we wszystkich podpunktach.
 
-Dane wyjściowe:
+Dane wyjsciowe:
 
-* Liczba naturalna dla podpunktów 1 i 3.
-* Liczba zmiennoprzecinkowa dla pozostałych podpunktów.
+* Liczba naturalna dla podpunktow 1 i 3.
+* Liczba zmiennoprzecinkowa dla pozostalych podpunktow.
 
-Przykład:
+Przyklad:
 
-a) Dla pobranej liczby: 2, powinna zostać wypisana liczba: 2000.
+a) Dla pobranej liczby: 2, powinna zostac wypisana liczba: 2000.
 
-b) Dla pobranej liczby: 12, powinna zostać wypisana liczba: 4.724.
+b) Dla pobranej liczby: 12, powinna zostac wypisana liczba: 4.724.
 
-c) Dla pobranej liczby: 3600, powinna zostać wypisana liczba: 1.
+c) Dla pobranej liczby: 3600, powinna zostac wypisana liczba: 1.
 
-d) Dla pobranej liczby: 4, powinna zostać wypisana liczba: 17.6.
+d) Dla pobranej liczby: 4, powinna zostac wypisana liczba: 17.6.
 
-e) Dla pobranej liczby: 120, powinna zostać wypisana liczba:  2.094.
+e) Dla pobranej liczby: 120, powinna zostac wypisana liczba:  2.094.
 
-f) Dla pobranej liczby: 100, powinny zostać wypisane liczby: 37.777 i -235.222.
+f) Dla pobranej liczby: 100, powinny zostac wypisane liczby: 37.777 i -235.222.
 -}
 
 main :: IO ()
@@ -71,3 +71,4 @@ main = do
   let kelvin = celsius + 273.15
   putStrLn $ "Liczba stopni Celsjusza: " ++ show celsius
   putStrLn $ "Liczba stopni Kelvina: " ++ show kelvin
+

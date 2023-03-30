@@ -1,8 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Sortowanie babelkowe.
+# Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania babelkowego. Porownaj sasiednie liczby z listy i zamien je miejscami, jesli pierwsza jest wieksza od drugiej. Powtarzaj operacje, az przejdziesz przez cala liste bez dokonywania zmian.
+# Dane wejsciowe: Lista liczb calkowitych.
+# Dane wyjsciowe: Posortowana lista liczb calkowitych.
+# Przyklad:
+# Dla listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
 
 source ../assert.sh
-
-# Zaimplementuj sortowanie babelkowe.
 
 sortuj(){
     local -n _tablica_ref=$1
@@ -28,7 +31,6 @@ test_sortuj() {
 main() {
     test_sortuj
 }
-
 
 main "$@"
 

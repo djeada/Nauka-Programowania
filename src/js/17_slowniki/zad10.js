@@ -1,20 +1,20 @@
 /*
 
-Tytuł: Anagramy w tekście
+Tytul: Anagramy w tekscie
 
-Otrzymujesz tekst w postaci napisu. Twoim zadaniem jest znalezienie wszystkich słów, w których te same znaki występują tę samą liczbę razy. Innymi słowy, szukasz anagramów w tekście. Należy zignorować różnice między małymi i wielkimi literami. Pamiętaj, że słowa składają się wyłącznie z liter.
+Otrzymujesz tekst w postaci napisu. Twoim zadaniem jest znalezienie wszystkich slow, w ktorych te same znaki wystepuja te sama liczbe razy. Innymi slowy, szukasz anagramow w tekscie. Nalezy zignorowac roznice miedzy malymi i wielkimi literami. Pamietaj, ze slowa skladaja sie wylacznie z liter.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista list napisów.
+Dane wyjsciowe: Lista list napisow.
 
-Przykład:
+Przyklad:
 
 Dla otrzymanego napisu:
 
-"To absurd, że tyran Brudas, ten straszliwy bandzior sprawuje rządy w tym kraju. Burza nad galerią i alergia na narty to żadna zbrodnia jak bandzior i jego arbuz.",
+"To absurd, ze tyran Brudas, ten straszliwy bandzior sprawuje rzady w tym kraju. Burza nad galeria i alergia na narty to zadna zbrodnia jak bandzior i jego arbuz.",
 
-powinna zostać zwrócona lista:
+powinna zostac zwrocona lista:
 
 [["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]].
 */
@@ -36,7 +36,7 @@ function anagramyWTekscie(tekst) {
 
 function testAnagramyWTekscie() {
   const tekst =
-    "To absurd, że tyran Brudas, ten straszliwy bandzior sprawuje rządy w tym kraju. Burza nad galerią i alergia na narty to żadna zbrodnia jak bandzior i jego arbuz.";
+    "To absurd, ze tyran Brudas, ten straszliwy bandzior sprawuje rzady w tym kraju. Burza nad galeria i alergia na narty to zadna zbrodnia jak bandzior i jego arbuz.";
   const wynik = anagramyWTekscie(tekst);
   const poprawnyWynik = [
     ["absurd", "brudas"],
@@ -45,13 +45,14 @@ function testAnagramyWTekscie() {
     ["burza", "arbuz"],
     ["galeria", "alergia"],
   ];
-  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiódł się");
+  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiodl sie");
   for (const anagram of wynik) {
     const poprawnyAnagram = poprawnyWynik.find(
       (pa) => pa.length === anagram.length && pa.includes(anagram[0])
     );
-    console.assert(poprawnyAnagram, "Test nie powiódł się");
+    console.assert(poprawnyAnagram, "Test nie powiodl sie");
   }
 }
 
 testAnagramyWTekscie();
+

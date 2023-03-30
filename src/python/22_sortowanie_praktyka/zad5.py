@@ -1,7 +1,12 @@
 """
-Klasa Miasto sklada sie z dwoch pol: nazwa (napis) oraz liczba_mieszkancow (liczba naturalna). 
-a) Posortuj liste obiektow klasy Miasto wzgledem pola nazwa.
-b) Posortuj liste obiektow klasy Miasto wzgledem pola liczba_mieszkancow .
+Tytul: Sortowanie listy miast.
+Tresc: Klasa Miasto ma dwie wlasciwosci: nazwa (napis) oraz liczba_mieszkancow (liczba naturalna). Posortuj liste miast wzgledem nazwy oraz wzgledem liczby mieszkancow.
+Dane wejsciowe: Lista miast.
+Dane wyjsciowe: Posortowana lista miast.
+Przyklad:
+Dla listy miast: [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)], powinna zostac zwrocona lista: [Miasto("Berlin", 3800000), Miasto("New York", 8400000), Miasto("Paris", 2150000)].
+Dla listy miast: [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)], powinna zostac zwrocona lista: [Miasto("Berlin", 3800000), Miasto("Paris", 2150000), Miasto("New York", 8400000)].
+
 """
 
 
@@ -17,30 +22,39 @@ class Miasto:
 def sortuj_liste_miast_wzgledem_nazwy(lista_miast):
     return sorted(lista_miast, key=lambda x: x.nazwa)
 
+
 def sortuj_liste_miast_wzgledem_liczby_mieszkancow(lista_miast):
     return sorted(lista_miast, key=lambda x: x.liczba_mieszkancow)
 
 
 def test_sortuj_liste_miast_wzgledem_nazwy():
     miasta = [
-    Miasto("New York", 8400000),
-    Miasto("Paris", 2150000),
-    Miasto("Berlin", 3800000),
+        Miasto("New York", 8400000),
+        Miasto("Paris", 2150000),
+        Miasto("Berlin", 3800000),
     ]
 
-    oczekiwana = [ Miasto("Berlin", 3800000), Miasto("New York", 8400000), Miasto("Paris", 2150000) ]
+    oczekiwana = [
+        Miasto("Berlin", 3800000),
+        Miasto("New York", 8400000),
+        Miasto("Paris", 2150000),
+    ]
 
     assert sortuj_liste_miast_wzgledem_nazwy(miasta) == oczekiwana
 
 
 def test_sortuj_liste_miast_wzgledem_liczby_mieszkancow():
     miasta = [
-    Miasto("New York", 8400000),
-    Miasto("Paris", 2150000),
-    Miasto("Berlin", 3800000),
+        Miasto("New York", 8400000),
+        Miasto("Paris", 2150000),
+        Miasto("Berlin", 3800000),
     ]
 
-    oczekiwana = [ Miasto("New York", 8400000), Miasto("Paris", 2150000), Miasto("Berlin", 3800000) ]
+    oczekiwana = [
+        Miasto("New York", 8400000),
+        Miasto("Paris", 2150000),
+        Miasto("Berlin", 3800000),
+    ]
 
     assert sortuj_liste_miast_wzgledem_liczby_mieszkancow(miasta) == oczekiwana
 
@@ -48,3 +62,4 @@ def test_sortuj_liste_miast_wzgledem_liczby_mieszkancow():
 if __name__ == "__main__":
     test_sortuj_liste_miast_wzgledem_nazwy()
     test_sortuj_liste_miast_wzgledem_liczby_mieszkancow()
+

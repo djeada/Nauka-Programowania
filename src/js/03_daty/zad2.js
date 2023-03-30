@@ -1,40 +1,41 @@
 /*
-Tytuł: Czy osoba jest pełnoletnia?
+Tytul: Czy osoba jest pelnoletnia?
 
-Treść: Dla pobranych sześciu liczb: dnia urodzenia osoby, miesiąca urodzenia osoby, roku urodzenia osoby oraz aktualnego dnia, aktualnego miesiąca i aktualnego roku, sprawdź czy dana osoba jest pełnoletnia.
+Tresc: Dla pobranych szesciu liczb: dnia urodzenia osoby, miesiaca urodzenia osoby, roku urodzenia osoby oraz aktualnego dnia, aktualnego miesiaca i aktualnego roku, sprawdz czy dana osoba jest pelnoletnia.
 
-Dane wejściowe: 6 liczb.
+Dane wejsciowe: 6 liczb.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb: 5, 12, 1999, 20, 11, 2020, powinna zostać wypisana informacja o pełnoletności osoby.
+Dla pobranych liczb: 5, 12, 1999, 20, 11, 2020, powinna zostac wypisana informacja o pelnoletnosci osoby.
 */
 
-// Pobieranie danych od użytkownika
-const dzien_urodzenia = parseInt(prompt("Podaj dzień urodzenia:"));
-const miesiac_urodzenia = parseInt(prompt("Podaj miesiąc urodzenia:"));
+// Pobieranie danych od uzytkownika
+const dzien_urodzenia = parseInt(prompt("Podaj dzien urodzenia:"));
+const miesiac_urodzenia = parseInt(prompt("Podaj miesiac urodzenia:"));
 const rok_urodzenia = parseInt(prompt("Podaj rok urodzenia:"));
-const dzien_obecny = parseInt(prompt("Podaj aktualny dzień:"));
-const miesiac_obecny = parseInt(prompt("Podaj aktualny miesiąc:"));
+const dzien_obecny = parseInt(prompt("Podaj aktualny dzien:"));
+const miesiac_obecny = parseInt(prompt("Podaj aktualny miesiac:"));
 const rok_obecny = parseInt(prompt("Podaj aktualny rok:"));
 
-// Warunek pełnoletności
+// Warunek pelnoletnosci
 if (rok_obecny - rok_urodzenia > 18) {
-  console.log("Osoba jest pełnoletnia.");
+  console.log("Osoba jest pelnoletnia.");
 } else if (rok_obecny - rok_urodzenia == 18) {
   if (miesiac_obecny > miesiac_urodzenia) {
-    console.log("Osoba jest pełnoletnia.");
+    console.log("Osoba jest pelnoletnia.");
   } else if (miesiac_obecny == miesiac_urodzenia) {
     if (dzien_obecny >= dzien_urodzenia) {
-      console.log("Osoba jest pełnoletnia.");
+      console.log("Osoba jest pelnoletnia.");
     } else {
-      console.log("Osoba nie jest pełnoletnia.");
+      console.log("Osoba nie jest pelnoletnia.");
     }
   } else {
-    console.log("Osoba nie jest pełnoletnia.");
+    console.log("Osoba nie jest pelnoletnia.");
   }
 } else {
-  console.log("Osoba nie jest pełnoletnia.");
+  console.log("Osoba nie jest pelnoletnia.");
 }
+

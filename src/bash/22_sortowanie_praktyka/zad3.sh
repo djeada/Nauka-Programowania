@@ -1,10 +1,15 @@
-#!/usr/bin/env bash
-
-source ../assert.sh
-
-# Otrzymujesz liste par napisow i liczb. Posortuj pary w liscie wzgledem:
+# Tytul: Sortowanie listy par wzgledem jednej z kategorii.
+# Tresc: Masz dana liste par napisow i liczb. Posortuj pary w liscie wzgledem:
 # a) Liczb.
 # b) Dlugosci napisow.
+# Dane wejsciowe: Lista par napisow i liczb.
+# Dane wyjsciowe: Lista par napisow i liczb.
+# Przyklad:
+# Dla listy [(“ab”, 3), (“bca”, 1), (“c”, 2)] powinno zostac zwrocone:
+# a) [(“bca”, 1), (“c”, 2), (“ab”, 3)] lub
+# b) [(“c”, 2), (“ab”, 3), (“bca”, 1)].
+
+source ../assert.sh
 
 posortuj_wzgledem_napisow() {
     local _lista_ref=("$@")

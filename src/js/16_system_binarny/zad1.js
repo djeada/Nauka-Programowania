@@ -1,24 +1,24 @@
 /*
-Tytuł: Konwersja pomiędzy systemami binarnym i dziesiętnym.
+Tytul: Konwersja pomiedzy systemami binarnym i dziesietnym.
 
-Treść:
+Tresc:
 
-a) Otrzymujesz reprezentację dziesiętną liczby naturalnej, zwróć jej reprezentację binarną.
+a) Otrzymujesz reprezentacje dziesietna liczby naturalnej, zwroc jej reprezentacje binarna.
 
-b) Otrzymujesz reprezentację binarną liczby naturalnej, zwróć jej reprezentację dziesiętną.
+b) Otrzymujesz reprezentacje binarna liczby naturalnej, zwroc jej reprezentacje dziesietna.
 
-Dane wejściowe: Liczba naturalna w obu podpunktach.
+Dane wejsciowe: Liczba naturalna w obu podpunktach.
 
-Dane wyjściowe: Liczba naturalna w obu podpunktach.
+Dane wyjsciowe: Liczba naturalna w obu podpunktach.
 
-Przykład:
+Przyklad:
 
-a) Dla otrzymanej liczby: 3, powinna zostać zwrócona liczba: 11.
+a) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 11.
 
-b) Dla otrzymanej liczby: 101, powinna zostać zwrócona liczba: 5.
+b) Dla otrzymanej liczby: 101, powinna zostac zwrocona liczba: 5.
 */
 
-// a) Konwersja liczby dziesiętnej na binarną
+// a) Konwersja liczby dziesietnej na binarna
 function dziesietnaNaBinarna(dziesietna) {
   let binarna = "";
   while (dziesietna > 0) {
@@ -28,7 +28,7 @@ function dziesietnaNaBinarna(dziesietna) {
   return binarna === "" ? "0" : binarna;
 }
 
-// b) Konwersja liczby binarnej na dziesiętną
+// b) Konwersja liczby binarnej na dziesietna
 function binarnaNaDziesietna(binarna) {
   let dziesietna = 0;
   for (let i = 0; i < binarna.length; i++) {
@@ -39,17 +39,18 @@ function binarnaNaDziesietna(binarna) {
 
 // Testy
 function test() {
-  // Test konwersji dziesiętnej na binarną
+  // Test konwersji dziesietnej na binarna
   let dziesietna = 3;
   let oczekiwanaBinarna = "11";
   let binarna = dziesietnaNaBinarna(dziesietna);
-  console.assert(binarna === oczekiwanaBinarna, "Błąd dla ${dziesietna}");
+  console.assert(binarna === oczekiwanaBinarna, "Blad dla ${dziesietna}");
 
-  // Test konwersji binarnej na dziesiętną
+  // Test konwersji binarnej na dziesietna
   let binarna2 = "101";
   let oczekiwanaDziesietna = 5;
   let dziesietna2 = binarnaNaDziesietna(binarna2);
-  console.assert(dziesietna2 === oczekiwanaDziesietna, "Błąd dla ${binarna2}");
+  console.assert(dziesietna2 === oczekiwanaDziesietna, "Blad dla ${binarna2}");
 }
 
 test();
+

@@ -1,18 +1,18 @@
 /*
-Tytuł: NWW.
+Tytul: NWW.
 
-Treść: Napisz funkcję, która dla otrzymanych dwóch liczb naturalnych zwróci ich najmniejszą wspólną wielokrotność.
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych zwroci ich najmniejsza wspolna wielokrotnosc.
 
-Dane wejściowe: dwie liczby naturalne
+Dane wejsciowe: dwie liczby naturalne
 
-Dane wyjściowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych liczb 7 i 9, funkcja powinna zwrócić liczbę 63.
+Dla otrzymanych liczb 7 i 9, funkcja powinna zwrocic liczbe 63.
 */
 
-// Funkcja zwracająca NWW
+// Funkcja zwracajaca NWW
 function zwracajNWW(liczba_a, liczba_b) {
   var nww = 1;
   var i = 1;
@@ -37,10 +37,11 @@ function testNWW() {
   console.assert(zwracajNWW(0, 2) == 0);
 }
 
-// Funkcja uruchamiająca testy
+// Funkcja uruchamiajaca testy
 function main() {
   testNWW();
 }
 
-// Uruchomienie testów
+// Uruchomienie testow
 main();
+

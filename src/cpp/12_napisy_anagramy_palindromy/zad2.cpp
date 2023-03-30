@@ -1,11 +1,15 @@
+/*
+Tytul: Znalezienie wszystkich permutacji slowa.
+Tresc: Napisz program, ktory dla otrzymanego napisu znajdzie jego wszystkie
+permutacje. Dane wejsciowe: Napis. Dane wyjsciowe: Lista napisow. Przyklad: Dla
+otrzymanego napisu: “abc”, powinna zostac zwrocona lista: [“abc”, “bac”, “cab”,
+“acb”, “bca”, “cba”].
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
 #include <vector>
-
-/*
-Dla otrzymanego napisu, znajdz jego wszystkie permutacje.
-*/
 
 void permutacja(std::string &slowoWej, std::string &slowoWyj,
                 std::vector<std::string> &wynik) {
@@ -54,3 +58,4 @@ int main() {
 
   return 0;
 }
+

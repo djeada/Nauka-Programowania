@@ -1,15 +1,15 @@
 /*
-Tytuł: Macierz kwadratowa, z elementami będącymi iloczynem współrzędnych.
+Tytul: Macierz kwadratowa, z elementami bedacymi iloczynem wspolrzednych.
 
-Treść: Dla otrzymanej liczby naturalnej n, stwórz macierz kwadratową o rozmiarze n x n, której każdy element jest iloczynem jego współrzędnych.
+Tresc: Dla otrzymanej liczby naturalnej n, stworz macierz kwadratowa o rozmiarze n x n, ktorej kazdy element jest iloczynem jego wspolrzednych.
 
-Dane wejściowe: Liczba naturalna n.
+Dane wejsciowe: Liczba naturalna n.
 
-Dane wyjściowe: Lista list liczb naturalnych.
+Dane wyjsciowe: Lista list liczb naturalnych.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 3 powinna zostać zwrócona macierz: [[0, 0, 0], [0, 1, 2], [0, 2, 4]].
+Dla otrzymanej liczby 3 powinna zostac zwrocona macierz: [[0, 0, 0], [0, 1, 2], [0, 2, 4]].
 */
 
 function utworzMacierzKwadratowa(n) {
@@ -34,12 +34,12 @@ function test() {
   const wynik = utworzMacierzKwadratowa(3);
   console.assert(
     wynik.length === oczekiwana.length,
-    `Długości macierzy nie są równe. Oczekiwano: ${oczekiwana.length}, otrzymano: ${wynik.length}.`
+    `Dlugosci macierzy nie sa rowne. Oczekiwano: ${oczekiwana.length}, otrzymano: ${wynik.length}.`
   );
   for (let i = 0; i < wynik.length; i++) {
     console.assert(
       wynik[i].length === oczekiwana[i].length,
-      `Długości wierszy nie są równe. Oczekiwano: ${oczekiwana[i].length}, otrzymano: ${wynik[i].length}.`
+      `Dlugosci wierszy nie sa rowne. Oczekiwano: ${oczekiwana[i].length}, otrzymano: ${wynik[i].length}.`
     );
     for (let j = 0; j < wynik[i].length; j++) {
       console.assert(
@@ -51,3 +51,4 @@ function test() {
 }
 
 test();
+

@@ -1,8 +1,8 @@
 /*
 
-Tytuł: Wywoływanie metody klasy bazowej w klasie potomnej
+Tytul: Wywolywanie metody klasy bazowej w klasie potomnej
 
-Treść: Dla dwóch dowolnych klas, gdzie jedna jest klasą bazową, a druga potomną, wywołaj metodę klasy bazowej w metodzie klasy potomnej, która ją nadpisuje. Napisz program testujący te klasy.
+Tresc: Dla dwoch dowolnych klas, gdzie jedna jest klasa bazowa, a druga potomna, wywolaj metode klasy bazowej w metodzie klasy potomnej, ktora ja nadpisuje. Napisz program testujacy te klasy.
 */
 
 class Zwierze {
@@ -11,7 +11,7 @@ class Zwierze {
   }
 
   dajGlos() {
-    console.log("Jestem zwierzęciem!");
+    console.log("Jestem zwierzeciem!");
   }
 }
 
@@ -27,7 +27,8 @@ class Pies extends Zwierze {
 }
 
 const zwierze = new Zwierze("Bajka");
-zwierze.dajGlos(); // wyświetli "Jestem zwierzęciem!"
+zwierze.dajGlos(); // wyswietli "Jestem zwierzeciem!"
 
 const pies = new Pies("Burek");
-pies.dajGlos(); // wyświetli "Jestem zwierzęciem!" oraz "Jestem psem!"
+pies.dajGlos(); // wyswietli "Jestem zwierzeciem!" oraz "Jestem psem!"
+

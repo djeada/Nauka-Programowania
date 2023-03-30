@@ -1,7 +1,9 @@
 """
-Otrzymujesz napis reprezentujacy sciezke. 
-a) Sprawdz, czy jest to sciezka pliku.
-b) Sprawdz, czy jest to sciezka folderu.
+Tytul: Sprawdzenie, czy sciezka nalezy do pliku/folderu
+Tresc: Otrzymujesz napis reprezentujacy sciezke. Sprawdz, czy jest to sciezka do pliku lub folderu.
+Dane wejsciowe: Napis
+Dane wyjsciowe: Wartosc logiczna
+
 """
 
 import pathlib
@@ -53,3 +55,4 @@ def test_czy_sciezka_folderu():
 
 if __name__ == "__main__":
     test_czy_sciezka_pliku()
+

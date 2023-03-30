@@ -1,5 +1,10 @@
 """
-Otrzymujesz dwa napisy. Znajdz ich najdluzszy wspolny podnapis.
+Tytul: Najdluzszy wspolny przedrostek.
+Tresc: Dostajesz liste napisow. Znajdz najdluzszy wspolny przedrostek dla wszystkich napisow na liscie.
+Dane wejsciowe: Lista napisow.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac zwrocony napis "Rem".
 
 """
 
@@ -57,3 +62,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

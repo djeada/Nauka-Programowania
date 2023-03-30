@@ -1,18 +1,18 @@
 /*
 
-Tytuł: Wspólny podciąg o największej sumie.
+Tytul: Wspolny podciag o najwiekszej sumie.
 
-Treść: Otrzymujesz dwie listy binarne, A oraz B. Znajdź największą długość takich dwóch podciągów, które dla obu list zaczynają się i kończą na tej samej pozycji i których suma elementów jest jednakowa.
+Tresc: Otrzymujesz dwie listy binarne, A oraz B. Znajdz najwieksza dlugosc takich dwoch podciagow, ktore dla obu list zaczynaja sie i koncza na tej samej pozycji i ktorych suma elementow jest jednakowa.
 
-Dane wejściowe: Dwie listy binarne.
+Dane wejsciowe: Dwie listy binarne.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list: [0, 0, 1, 1, 1, 1] i [0, 1, 1, 0, 1, 0], powinna zostać zwrócona liczba: 5.
+Dla otrzymanych list: [0, 0, 1, 1, 1, 1] i [0, 1, 1, 0, 1, 0], powinna zostac zwrocona liczba: 5.
 
-Wyjaśnienia: Suma elementów obu list na pozycjach od 0 do 4 jest równa 3.
+Wyjasnienia: Suma elementow obu list na pozycjach od 0 do 4 jest rowna 3.
 
 
 */
@@ -44,3 +44,4 @@ console.assert(
   wspolnyPodciagONajwiekszejSumie(lista1, lista2) === wynik,
   "Test 1 nieudany"
 );
+

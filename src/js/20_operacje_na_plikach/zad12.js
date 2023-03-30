@@ -1,11 +1,11 @@
 /*
-Tytuł: Przesuń wszystkie pliki CSV do jednego folderu.
+Tytul: Przesun wszystkie pliki CSV do jednego folderu.
 
-Treść zadania: Otrzymujesz dwa napisy reprezentujące ścieżki do folderów. Przenieś wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderów) do drugiego folderu.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Przenies wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderow) do drugiego folderu.
 
-Dane wejściowe: Dwa napisy reprezentujące ścieżki do folderów.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
 
-Dane wyjściowe: Brak.
+Dane wyjsciowe: Brak.
 */
 
 const fs = require("fs").promises;
@@ -49,14 +49,14 @@ const test1 = async () => {
     const stat = await fs.lstat(nowaSciezkaPliku);
     console.assert(
       stat.isFile(),
-      `Błąd asercji: ${nowaSciezkaPliku} nie istnieje`
+      `Blad asercji: ${nowaSciezkaPliku} nie istnieje`
     );
   }
 
   for (const sciezkaPliku of sciezki) {
     try {
       await fs.access(sciezkaPliku);
-      throw new Error(`Błąd asercji: ${sciezkaPliku} istnieje`);
+      throw new Error(`Blad asercji: ${sciezkaPliku} istnieje`);
     } catch (err) {
       if (err.code !== "ENOENT") {
         throw err;
@@ -77,3 +77,4 @@ const main = async () => {
 };
 
 main();
+

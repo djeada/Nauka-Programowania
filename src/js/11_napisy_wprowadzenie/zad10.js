@@ -1,27 +1,27 @@
 /*
-Tytuł: Znajdź najdłuższe/najkrótsze słowo w zdaniu.
+Tytul: Znajdz najdluzsze/najkrotsze slowo w zdaniu.
 
-Treść: Otrzymasz napis reprezentujący zdanie. Znajdź:
+Tresc: Otrzymasz napis reprezentujacy zdanie. Znajdz:
 
-a) najdłuższe słowo w zdaniu,
+a) najdluzsze slowo w zdaniu,
 
-b) najkrótsze słowo w zdaniu.
+b) najkrotsze slowo w zdaniu.
 
-Jeśli więcej niż jedno słowo ma ekstremalną długość, zwróć to słowo spośród nich, które występuje w zdaniu jako pierwsze. Znaki interpunkcyjne nie są uwzględniane jako słowa.
+Jesli wiecej niz jedno slowo ma ekstremalna dlugosc, zwroc to slowo sposrod nich, ktore wystepuje w zdaniu jako pierwsze. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe:
+Dane wyjsciowe:
 
 a) Napis.
 
 b) Napis.
 
-Przykład:
+Przyklad:
 
-a) Dla otrzymanego napisu: "Kaczka lubi wiosnę.", powinno zostać zwrócone: "Kaczka".
+a) Dla otrzymanego napisu: "Kaczka lubi wiosne.", powinno zostac zwrocone: "Kaczka".
 
-b) Dla otrzymanego napisu: "Kaczka lubi wiosnę.", powinno zostać zwrócone: "lubi".
+b) Dla otrzymanego napisu: "Kaczka lubi wiosne.", powinno zostac zwrocone: "lubi".
 */
 
 function znajdzEkstremalneSlowo(napis, ekstremum) {
@@ -57,16 +57,17 @@ function znajdzNajdluzszeISkrotszeSlowo(napis) {
 // Test
 
 function test() {
-  let input = "Kaczka lubi wiosnę.";
+  let input = "Kaczka lubi wiosne.";
   let expectedOutput = ["Kaczka", "lubi"];
   let output = znajdzNajdluzszeISkrotszeSlowo(input);
 
   console.assert(
     output.length === expectedOutput.length &&
       output.every((element, index) => element === expectedOutput[index]),
-    "Test nie powiódł się"
+    "Test nie powiodl sie"
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

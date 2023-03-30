@@ -1,8 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Odwroc napis.
+# Tresc: Zmien otrzymany napis, tak aby zapisany byl on od tylu.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Napis.
+# Przyklad:
+# Dla otrzymanego napisu: "barszcz", powinien zostac zwrocony napis: "zczsrab".
 
 source ../assert.sh
-
-# Odwroc napis.
 
 odwroc_napis_v1() {
 
@@ -39,7 +42,6 @@ main() {
     test1
     test2
 }
-
 
 main "$@"
 

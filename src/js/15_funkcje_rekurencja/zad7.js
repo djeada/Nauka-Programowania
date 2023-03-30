@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Wyszukiwanie liniowe rekurencyjnie.
+Tytul: Wyszukiwanie liniowe rekurencyjnie.
 
-Treść: Otrzymujesz listę liczb naturalnych oraz liczbę naturalną klucz. Przy użyciu rekurencji znajdź indeks odpowiadający pierwszemu wystąpieniu klucza w liście. Jeśli klucz nie występuje w liście, zwróć -1.
+Tresc: Otrzymujesz liste liczb naturalnych oraz liczbe naturalna klucz. Przy uzyciu rekurencji znajdz indeks odpowiadajacy pierwszemu wystapieniu klucza w liscie. Jesli klucz nie wystepuje w liscie, zwroc -1.
 
-Dane wejściowe: Lista liczb naturalnych oraz liczba naturalna klucz.
+Dane wejsciowe: Lista liczb naturalnych oraz liczba naturalna klucz.
 
-Dane wyjściowe: Liczba całkowita.
+Dane wyjsciowe: Liczba calkowita.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy oraz liczby: [1, 2, 2] i 2, powinna zostać zwrócona liczba: 1.
+Dla otrzymanej listy oraz liczby: [1, 2, 2] i 2, powinna zostac zwrocona liczba: 1.
 */
 
 function wyszukiwanieLinioweRekurencyjnie(lista, klucz) {
@@ -51,3 +51,4 @@ function test() {
 }
 
 test();
+

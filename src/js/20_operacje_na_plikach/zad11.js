@@ -1,11 +1,11 @@
 /*
-Tytuł: Podmień treści plików.
+Tytul: Podmien tresci plikow.
 
-Treść zadania: Otrzymujesz dwa napisy reprezentujące ścieżki do plików. Podmień treści obu plików.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do plikow. Podmien tresci obu plikow.
 
-Dane wejściowe: Dwa napisy reprezentujące ścieżki do plików.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do plikow.
 
-Dane wyjściowe: Brak.
+Dane wyjsciowe: Brak.
 
 */
 
@@ -39,13 +39,13 @@ const test1 = async () => {
   const wynik1 = await wczytajPlik(sciezka1);
   console.assert(
     wynik1.length === oczekiwane1.length,
-    `Błąd asercji: ${wynik1.length} != ${oczekiwane1.length}`
+    `Blad asercji: ${wynik1.length} != ${oczekiwane1.length}`
   );
 
   for (let i = 0; i < wynik1.length; i++) {
     console.assert(
       wynik1[i] === oczekiwane1[i],
-      `Błąd asercji: ${wynik1[i]} != ${oczekiwane1[i]}`
+      `Blad asercji: ${wynik1[i]} != ${oczekiwane1[i]}`
     );
   }
 
@@ -53,13 +53,13 @@ const test1 = async () => {
   const wynik2 = await wczytajPlik(sciezka2);
   console.assert(
     wynik2.length === oczekiwane2.length,
-    `Błąd asercji: ${wynik2.length} != ${oczekiwane2.length}`
+    `Blad asercji: ${wynik2.length} != ${oczekiwane2.length}`
   );
 
   for (let i = 0; i < wynik2.length; i++) {
     console.assert(
       wynik2[i] === oczekiwane2[i],
-      `Błąd asercji: ${wynik2[i]} != ${oczekiwane2[i]}`
+      `Blad asercji: ${wynik2[i]} != ${oczekiwane2[i]}`
     );
   }
 
@@ -72,3 +72,4 @@ const main = async () => {
 };
 
 main();
+

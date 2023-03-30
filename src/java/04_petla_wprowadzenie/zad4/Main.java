@@ -1,3 +1,12 @@
+/*
+Tytul: Suma liczb mniejszych od podanej.
+Tresc: Dla otrzymanej liczby naturalnej wypisz sume wszystkich liczb naturalnych mniejszych od niej.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba.
+Przyklad:
+Dla otrzymanej liczby 5, powinna zostac wypisana liczba 10.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -19,3 +28,4 @@ public class Main {
     System.out.print(suma + "\n");
   }
 }
+

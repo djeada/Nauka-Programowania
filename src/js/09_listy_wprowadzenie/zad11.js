@@ -1,18 +1,18 @@
 /*
-Tytuł: Samochody jadące w przeciwnych kierunkach.
+Tytul: Samochody jadace w przeciwnych kierunkach.
 
-Treść: Otrzymujesz listę złożoną wyłącznie z liter 'A' i 'B', które odpowiadają samochodom jadącym odpowiednio na wschód ('A') i zachód ('B'). Policz, ile razy samochody jadące w przeciwnych kierunkach mijają się.
+Tresc: Otrzymujesz liste zlozona wylacznie z liter 'A' i 'B', ktore odpowiadaja samochodom jadacym odpowiednio na wschod ('A') i zachod ('B'). Policz, ile razy samochody jadace w przeciwnych kierunkach mijaja sie.
 
-Dane wejściowe: Lista znaków odpowiadających samochodom jadącym na wschód ('A') i zachód ('B').
+Dane wejsciowe: Lista znakow odpowiadajacych samochodom jadacym na wschod ('A') i zachod ('B').
 
-Dane wyjściowe: Liczba naturalna oznaczająca liczbę mijających się samochodów.
+Dane wyjsciowe: Liczba naturalna oznaczajaca liczbe mijajacych sie samochodow.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy ['A', 'B', 'A', 'B', 'B'] powinna zostać zwrócona liczba 5.
+Dla otrzymanej listy ['A', 'B', 'A', 'B', 'B'] powinna zostac zwrocona liczba 5.
 */
 
-// Funkcja licząca ile razy samochody mijają się na drodze
+// Funkcja liczaca ile razy samochody mijaja sie na drodze
 function liczbaMijajacychSieSamochodow(listaSamochodow) {
   var samochodyA = 0;
   var liczbaMijajacych = 0;
@@ -49,3 +49,4 @@ function testLiczbaMijajacychSieSamochodow() {
 }
 
 testLiczbaMijajacychSieSamochodow();
+

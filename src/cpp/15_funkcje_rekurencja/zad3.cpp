@@ -1,9 +1,13 @@
-#include <cassert>
-
 /*
-Otrzymuje dwie liczby a i b. Przy uzyciu rekurencji
-oblicz ile wynosi a podniesione do b.
+Tytul: Silnia.
+Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz silnie z tej liczby.
+Dane wejsciowe: Liczba naturalna N.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla N = 3, powinna zostac zwrocona liczba: 6.
+
 */
+#include <cassert>
 
 int potegaV1(int a, int b) {
   /**
@@ -29,3 +33,4 @@ int main() {
 
   return 0;
 }
+

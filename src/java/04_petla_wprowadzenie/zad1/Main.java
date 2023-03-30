@@ -1,3 +1,10 @@
+/*
+Tytul: Warunek konczacy petle.
+Tresc: Pros uzytkownika o podanie liczby, dopoki nie zostanie podana liczba 7.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Komunikat.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -14,3 +21,4 @@ public class Main {
     }
   }
 }
+

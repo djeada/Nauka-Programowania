@@ -29,3 +29,4 @@ fn main() {
 	println!("Pierwsza liczba podniesiona do potegi rownej drugiej liczbie: {}", numbers[0].pow(numbers[1]));
 
 }
+

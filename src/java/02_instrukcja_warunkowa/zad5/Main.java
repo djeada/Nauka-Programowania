@@ -1,3 +1,12 @@
+/*
+Tytul: Posortowanie trzech liczb.
+Tresc: Pobierz od uzytkownika trzy liczby naturalne i wypisz je w kolejnosci rosnacej.
+Dane wejsciowe: Trzy liczby naturalne.
+Dane wyjsciowe: Trzy liczby naturalne.
+Przyklad:
+Dla pobranych liczb: 2, 1 oraz 4, powinny zostac wypisane liczby: 1, 2 i 4.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -56,3 +65,4 @@ public class Main {
     }
   }
 }
+

@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Minimalna ilosc usunietych znakow, aby uzyskac anagramy.
+# Tresc: Napisz program, ktory dla dwoch slow zwroci minimalna ilosc znakow, ktore trzeba usunac, aby uzyskac anagramy. Jesli slowa sa roznej dlugosci, zwroc -1.
+# Dane wejsciowe: Dwa napisy.
+# Dane wyjsciowe: Liczba naturalna.
+# Przyklad:
+# Dla otrzymanych napisow: “grazyna” oraz “razynax”, powinna zostac zwrocona liczba: 2.
 
 source ../assert.sh
-
-# Dla dwoch slow, ile minimalnie znakow musimy usunac aby uzyskac anagramy.
-# Zwroc -1 dla slow o roznych dlugosciach.
 
 liczba_znakow(){
     local slowo_a="$1"
@@ -21,13 +23,13 @@ liczba_znakow(){
     for (( i=0; i<${#slowo_a}; i++ )); do
         local litera=${slowo_a:$i:1}
         local ascii=$(echo -n "$litera" | od -An -N1 | bc)
-        pom[$ascii]=$((${pom[$ascii]} + 1)) 
+        pom[$ascii]=$((${pom[$ascii]} + 1))
     done
 
     for (( i=0; i<${#slowo_b}; i++ )); do
         local litera=${slowo_b:$i:1}
         local ascii=$(echo -n "$litera" | od -An -N1 | bc)
-        pom[$ascii]=$((${pom[$ascii]} - 1)) 
+        pom[$ascii]=$((${pom[$ascii]} - 1))
     done
 
     local licznik=0
@@ -47,7 +49,6 @@ test_liczba_znakow() {
 main() {
     test_liczba_znakow
 }
-
 
 main "$@"
 

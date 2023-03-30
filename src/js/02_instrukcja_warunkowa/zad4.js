@@ -1,22 +1,22 @@
 /*
-Tytuł: Maksimum i minimum z dwóch liczb.
+Tytul: Maksimum i minimum z dwoch liczb.
 
-Treść: Pobierz od użytkownika dwie liczby naturalne i wypisz najpierw większą, a potem mniejszą.
+Tresc: Pobierz od uzytkownika dwie liczby naturalne i wypisz najpierw wieksza, a potem mniejsza.
 
-Dane wejściowe: Dwie liczby naturalne.
+Dane wejsciowe: Dwie liczby naturalne.
 
-Dane wyjściowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb: 1 oraz 4, powinny zostać wypisane liczby: 4 i 1.
+Dla pobranych liczb: 1 oraz 4, powinny zostac wypisane liczby: 4 i 1.
 */
 
-// Pobieranie danych od użytkownika
-const liczba_a = parseInt(prompt("Podaj pierwszą liczbę:"));
-const liczba_b = parseInt(prompt("Podaj drugą liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
+const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
-// Porównanie ze zmienną
+// Porownanie ze zmienna
 if (liczba_a > liczba_b) {
   console.log(liczba_a);
   console.log(liczba_b);
@@ -24,3 +24,4 @@ if (liczba_a > liczba_b) {
   console.log(liczba_b);
   console.log(liczba_a);
 }
+

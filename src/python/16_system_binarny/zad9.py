@@ -1,8 +1,11 @@
 """
-Otrzymujesz napis. Przy uzyciu operatorow bitowych:
-a) Zamien wielkie litery na male litery.
-b) Zamien male litery na wielkie litery.
-c) Zamien male litery na wielkie litery i wielkie litery na male litery.
+Tytul: Najdluzszy ciag zer w liczbie binarnej.
+Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Oblicz dlugosc najdluzszego ciagu zer w jej reprezentacji binarnej.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej liczby 14, powinna zostac zwrocona liczba 1.
+
 """
 
 
@@ -69,3 +72,4 @@ if __name__ == "__main__":
     test_wielkie_na_male()
     test_male_na_wielkie()
     test_odwroc_wielkosc_liter()
+

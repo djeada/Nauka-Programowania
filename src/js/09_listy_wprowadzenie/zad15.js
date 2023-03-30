@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Znalezienie elementu dominującego w liście liczb naturalnych.
+Tytul: Znalezienie elementu dominujacego w liscie liczb naturalnych.
 
-Treść: Dla dostarczonej listy liczb naturalnych, znajdź element, który występuje w niej więcej niż połowa jej długości. Jeśli taki element nie istnieje, zwróć -1.
+Tresc: Dla dostarczonej listy liczb naturalnych, znajdz element, ktory wystepuje w niej wiecej niz polowa jej dlugosci. Jesli taki element nie istnieje, zwroc -1.
 
-Dane wejściowe: Lista liczb naturalnych.
+Dane wejsciowe: Lista liczb naturalnych.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej listy: [4, 7, 4, 4, 2] zostanie zwrócona liczba: 4.
+Dla otrzymanej listy: [4, 7, 4, 4, 2] zostanie zwrocona liczba: 4.
 */
 
-// Funkcja znajdująca element dominujący w liście liczb naturalnych
+// Funkcja znajdujaca element dominujacy w liscie liczb naturalnych
 function znajdzElementDominujacy(lista) {
   let kandydat = null;
   let licznik = 0;
@@ -39,3 +39,4 @@ function testZnajdzElementDominujacy() {
 }
 
 testZnajdzElementDominujacy();
+

@@ -1,3 +1,16 @@
+/*
+Tytul: Mnozenie i dzielenie.
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych a i b, przy pomocy dodawania lub odejmowania oraz petli, obliczy:
+a) iloczyn tych liczb
+b) iloraz liczby a przez liczbe b
+Dane wejsciowe: dwie liczby naturalne
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla pobranych liczb 3 i 2, funkcja powinna zwrocic liczbe:
+a) 6;
+b) 2.
+
+*/
 public class Main {
   // Napisz funkcje, ktora dla otrzymanych dwoch liczb,
   // przy pomocy dodawania badz odejmowania oraz petli zrealizuje:
@@ -45,3 +58,4 @@ public class Main {
     test2();
   }
 }
+

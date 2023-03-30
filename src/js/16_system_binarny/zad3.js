@@ -1,30 +1,30 @@
 /*
 
-Tytuł: Operacje arytmetyczne.
+Tytul: Operacje arytmetyczne.
 
-Treść: Otrzymujesz dwie liczby naturalne. Używając jedynie operatorów bitowych, zaimplementuj:
+Tresc: Otrzymujesz dwie liczby naturalne. Uzywajac jedynie operatorow bitowych, zaimplementuj:
 
 a) Dodawanie.
 
 b) Odejmowanie.
 
-c) Mnożenie.
+c) Mnozenie.
 
 d) Dzielenie.
 
-Dane wejściowe: Dwie liczby naturalne w każdym podpunkcie.
+Dane wejsciowe: Dwie liczby naturalne w kazdym podpunkcie.
 
-Dane wyjściowe: Liczba naturalna w każdym podpunkcie.
+Dane wyjsciowe: Liczba naturalna w kazdym podpunkcie.
 
-Przykład:
+Przyklad:
 
-a) Dla otrzymanych liczb: 2 i 3, powinna zostać zwrócona liczba: 5.
+a) Dla otrzymanych liczb: 2 i 3, powinna zostac zwrocona liczba: 5.
 
-b) Dla otrzymanych liczb: 7 i 5, powinna zostać zwrócona liczba: 2.
+b) Dla otrzymanych liczb: 7 i 5, powinna zostac zwrocona liczba: 2.
 
-c) Dla otrzymanych liczb: 4 i 4, powinna zostać zwrócona liczba: 16.
+c) Dla otrzymanych liczb: 4 i 4, powinna zostac zwrocona liczba: 16.
 
-d) Dla otrzymanych liczb: 9 i 3, powinna zostać zwrócona liczba: 3.
+d) Dla otrzymanych liczb: 9 i 3, powinna zostac zwrocona liczba: 3.
 */
 
 // Dodawanie
@@ -47,7 +47,7 @@ function odejmij(a, b) {
   return a;
 }
 
-// Mnożenie
+// Mnozenie
 function pomnoz(a, b) {
   let wynik = 0;
   while (b != 0) {
@@ -66,7 +66,8 @@ function test() {
   let b = 3;
   console.assert(dodaj(a, b) === a + b, "Niepoprawny wynik dodawania");
   console.assert(odejmij(a, b) === a - b, "Niepoprawny wynik odejmowania");
-  console.assert(pomnoz(a, b) === a * b, "Niepoprawny wynik mnożenia");
+  console.assert(pomnoz(a, b) === a * b, "Niepoprawny wynik mnozenia");
 }
 
 test();
+

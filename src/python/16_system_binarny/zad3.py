@@ -1,11 +1,11 @@
 """
-Otrzymujesz dwie liczby naturalne. Uzywajac jedynie operatorow 
-bitowych zaimplementuj:
+Tytul:  Konwersja miedzy dowolnymi systemami liczbowymi.
+Tresc: Otrzymujesz liczbe naturalna, podstawe systemu liczbowego, w ktorym zapisana jest ta liczba, oraz podstawe systemu, na ktory ma zostac dokonana konwersja. Zwroc reprezentacje otrzymanej liczby w nowym systemie.
+Dane wejsciowe: Trzy liczby naturalne.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanych liczb: 4301, 10 i 4 powinna zostac zwrocona liczba: 1003031.
 
-a) Dodawanie.
-b) Odejmowanie.
-c) Mnozenie
-d) Dzielenie.
 """
 
 
@@ -127,3 +127,4 @@ if __name__ == "__main__":
     test_roznica()
     test_iloczyn()
     test_iloraz()
+

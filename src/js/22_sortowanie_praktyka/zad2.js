@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Sortowanie słów w zdaniu.
+Tytul: Sortowanie slow w zdaniu.
 
-Treść: Masz dany napis reprezentujący zdanie. Podziel to zdanie na słowa, posortuj je alfabetycznie i zapisz w liście. Znaki interpunkcyjne nie są liczone jako słowa.
+Tresc: Masz dany napis reprezentujacy zdanie. Podziel to zdanie na slowa, posortuj je alfabetycznie i zapisz w liscie. Znaki interpunkcyjne nie sa liczone jako slowa.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla napisu "Lemur wygina śmiało ciało" powinno zostać zwrócone ["Lemur", "ciało", "śmiało", "wygina"].
+Dla napisu "Lemur wygina smialo cialo" powinno zostac zwrocone ["Lemur", "cialo", "smialo", "wygina"].
 
 */
 
@@ -19,10 +19,10 @@ const sortowanieSlow = (napis) => {
 };
 
 // Testy
-const napis1 = "Lemur wygina śmiało ciało";
-const wynik1 = ["Lemur", "ciało", "śmiało", "wygina"];
-const napis2 = "Ala ma kota a kot ma Alę";
-const wynik2 = ["Ala", "Alę", "a", "kot", "kota", "ma", "ma"];
+const napis1 = "Lemur wygina smialo cialo";
+const wynik1 = ["Lemur", "cialo", "smialo", "wygina"];
+const napis2 = "Ala ma kota a kot ma Ale";
+const wynik2 = ["Ala", "Ale", "a", "kot", "kota", "ma", "ma"];
 
 console.assert(
   JSON.stringify(sortowanieSlow(napis1)) === JSON.stringify(wynik1),
@@ -32,3 +32,4 @@ console.assert(
   JSON.stringify(sortowanieSlow(napis2)) === JSON.stringify(wynik2),
   "Test 2 nieudany"
 );
+

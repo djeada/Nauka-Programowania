@@ -1,3 +1,8 @@
+/*
+Tytul: Dziedziczenie wielokrotne
+Tresc: Napisz klase Ptak, dziedziczaca po klasach Zwierz i ObiektLatajacy. W sklad klasy Zwierz powinny wchodzic funkcje o nazwach 'jedz()', 'spij()', 'wydaj_dzwiek()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie. W sklad klasy ObiektLatajacy powinny wchodzic funkcje o nazwach 'lec()', 'wyladuj()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie. Napisz program testujacy te klase.
+
+*/
 public class Main {
 
   private static interface ZwierzInterfejs {
@@ -109,3 +114,4 @@ public class Main {
     koliber.spij();
   }
 }
+

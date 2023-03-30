@@ -1,10 +1,10 @@
 """
-Tytuł: Wypisywanie na standardowe wyjście.
-Treść zadania: Napisz program, który wypisze dowolny ciąg znaków na standardowe wyjście.
-Dane wejściowe: Brak.
-Dane wyjściowe: Komunikat.
-Przykład:
-Program może wypisać twoje inicjały lub komunikat "Witaj świecie!".
+Tytul: Kalkulator kredytowy
+Tresc: Pobierz roczna stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc udzielonego kredytu. Oblicz miesieczna rate oraz calkowity koszt kredytu.
+Dane wejsciowe: Trzy liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
+Przyklad:
+Dla pobranych liczb: 3.5 (roczna stopa procentowa), 8 (liczba lat) oraz 12000 (wysokosc kredytu), powinny zostac wypisane liczby 143.5 (miesieczna rata) oraz 13776 (calkowity koszt kredytu). Waluta jest umowna.
 
 """
 
@@ -28,3 +28,4 @@ if __name__ == "__main__":
     print("rata mieieczna to {:0.2f}".format(rata))
 
     print("calkowity koszt to {:0.2f}".format(calk_koszt))
+

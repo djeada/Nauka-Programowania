@@ -1,19 +1,19 @@
 /*
-Tytuł: Treść: Dla otrzymanej liczby naturalnej wypisz sumę cyfr tej liczby.
+Tytul: Tresc: Dla otrzymanej liczby naturalnej wypisz sume cyfr tej liczby.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanej liczby 129, powinna zostać wypisana liczba 12.
+Dla otrzymanej liczby 129, powinna zostac wypisana liczba 12.
 */
 
-// Pobieranie danych od użytkownika
-const liczba = parseInt(prompt("Podaj liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Pętla
+// Petla
 let suma = 0;
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
   suma += i % 10;
@@ -21,3 +21,4 @@ for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
 
 // Wypisanie wyniku
 console.log(suma);
+

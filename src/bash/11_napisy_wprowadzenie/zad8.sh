@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Konwersja listy na napis
+# Tresc: Otrzymujesz liste liczb naturalnych. Zamie liste na napis.
+# Dane wejsciowe: Lista liczb naturalnych.
+# Dane wyjsciowe: Napis.
+# Przyklad:
+# Dla otrzymanej listy: [2, 4, 7], powinien zostac zwrocony napis: “247”.
 
 source ../assert.sh
-
-#Otrzymujesz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe.
-#Wypisz pionowo slowa, z ktorych sklada sie zdanie.
-#Znaki interpunkcyjne nie sa liczone jako slowa.
 
 wypisz_slowa() {
 
@@ -15,20 +16,18 @@ wypisz_slowa() {
     read -ra lista_slow <<<"$zdanie"
 
     for slowo in "${lista_slow[@]}"; do
-        # sparawdz czy napis jest alfanumeryczny
-        # i zawiera co najmniej jedna litere
         if [[ "$slowo" =~ ^[[:alnum:]]*$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
-            echo "$slowo"
-        fi
-    done
+            if [[ "$slowo" =~ ^[[:alnum:]]*$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
+                echo "$slowo"
+            fi
+        done
 
-}
+    }
 
-main() {
-    local zdanie="We think in generalities, but we live in details."
-    wypisz_slowa "$zdanie"
-}
+    main() {
+        local zdanie="We think in generalities, but we live in details."
+        wypisz_slowa "$zdanie"
+    }
 
-
-main "$@"
+    main "$@"
 

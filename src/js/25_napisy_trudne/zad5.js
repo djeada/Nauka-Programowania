@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Usuń powtórzenia stojących obok siebie znaków.
+Tytul: Usun powtorzenia stojacych obok siebie znakow.
 
-Treść: Otrzymujesz napis. Twoim zadaniem jest usunięcie powtórzeń stojących obok siebie znaków i zachowanie tylko pierwszego wystąpienia każdego znaku.
+Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen stojacych obok siebie znakow i zachowanie tylko pierwszego wystapienia kazdego znaku.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrócony napis powinien brzmieć: “ABA”.
+Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “ABA”.
 
 */
 
@@ -31,3 +31,4 @@ function testUsunSasiedniePowtorzenia() {
 }
 
 testUsunSasiedniePowtorzenia();
+

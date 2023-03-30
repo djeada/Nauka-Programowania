@@ -1,3 +1,12 @@
+/*
+Tytul: NWD.
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych zwroci ich najwiekszy wspolny dzielnik.
+Dane wejsciowe: dwie liczby naturalne
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla otrzymanych liczb 60 i 45, funkcja powinna zwrocic liczbe 15.
+
+*/
 public class Main {
   // Napisz funkcje, ktora dla otrzymanych dwoch liczb zwroci
   // ich najwiekszy wspolny dzielnik.
@@ -50,3 +59,4 @@ public class Main {
     test2();
   }
 }
+

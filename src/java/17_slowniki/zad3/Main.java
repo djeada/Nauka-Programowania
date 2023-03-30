@@ -1,3 +1,12 @@
+/*
+Tytul: Histogram wystapien znakow w slowie.
+Tresc: Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym napisie. Innymi slowy, zwroc histogram znakow w otrzymanym napisie.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Slownik par znakow i liczb naturalnych.
+Przyklad:
+Dla otrzymanego napisu: “klasa”, slownik powinien wygladac nastepujaco: {“k”: 1, “l”: 1, “a”: 2, “s”: 1}.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -92,3 +101,4 @@ public class Main {
     wyswietlWszystkieKsiazki(lista);
   }
 }
+

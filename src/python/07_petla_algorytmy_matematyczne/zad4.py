@@ -1,6 +1,11 @@
 """
-Napisz funkcje, ktora przy pomocy petli obliczy silnie 
-otrzymanej liczby.
+Tytul: Silnia.
+Tresc: Napisz funkcje, ktora obliczy silnie otrzymanej liczby naturalnej, przy pomocy petli.
+Dane wejsciowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla otrzymanej liczby 3, funkcja powinna zwrocic liczbe 6.
+
 """
 
 
@@ -23,3 +28,4 @@ def test_silnia():
 if __name__ == "__main__":
 
     test_silnia()
+

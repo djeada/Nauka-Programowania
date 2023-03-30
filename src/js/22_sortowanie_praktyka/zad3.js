@@ -1,19 +1,19 @@
 /*
 
-Tytuł: Sortowanie listy par względem jednej z kategorii.
+Tytul: Sortowanie listy par wzgledem jednej z kategorii.
 
-Treść: Masz daną listę par napisów i liczb. Posortuj pary w liście względem:
+Tresc: Masz dana liste par napisow i liczb. Posortuj pary w liscie wzgledem:
 
 a) Liczb.
-b) Długości napisów.
+b) Dlugosci napisow.
 
-Dane wejściowe: Lista par napisów i liczb.
+Dane wejsciowe: Lista par napisow i liczb.
 
-Dane wyjściowe: Lista par napisów i liczb.
+Dane wyjsciowe: Lista par napisow i liczb.
 
-Przykład:
+Przyklad:
 
-Dla listy [(“ab”, 3), (“bca”, 1), (“c”, 2)] powinno zostać zwrócone:
+Dla listy [(“ab”, 3), (“bca”, 1), (“c”, 2)] powinno zostac zwrocone:
 
 a) [(“bca”, 1), (“c”, 2), (“ab”, 3)] lub
 b) [(“c”, 2), (“ab”, 3), (“bca”, 1)].
@@ -54,3 +54,4 @@ console.assert(
     JSON.stringify(wynikB),
   "Test b nieudany"
 );
+

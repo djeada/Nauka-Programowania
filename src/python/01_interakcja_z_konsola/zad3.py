@@ -1,11 +1,11 @@
 """
-Tytuł: Rysowanie kształtów za pomocą znaków.
-Treść zadania: Napisz program, który wypisze na standardowe wyjście ciągi znaków tworzące kwadrat, trójkąt oraz romb z jedynek. Pamiętaj o dodawaniu odpowiednich spacji i przejściach do nowej linii.
-Przykłady:
+Tytul: Rysowanie ksztaltow za pomoca znakow.
+Tresc zadania: Napisz program, ktory wypisze na standardowe wyjscie ciagi znakow tworzace kwadrat, trojkat oraz romb z jedynek. Pamietaj o dodawaniu odpowiednich spacji i przejsciach do nowej linii.
+Przyklady:
 Kwadrat:
 xx
 xx
-Trójkąt:
+Trojkat:
 1
 22
 333
@@ -15,8 +15,8 @@ Romb z jedynek:
 11111
 111
 1
-Dane wejściowe: Brak.
-Dane wyjściowe: Komunikat.
+Dane wejsciowe: Brak.
+Dane wyjsciowe: Komunikat.
 
 """
 
@@ -34,3 +34,4 @@ if __name__ == "__main__":
     print("11111")
     print(" 111")
     print("  1")
+

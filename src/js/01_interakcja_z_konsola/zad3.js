@@ -1,16 +1,16 @@
 /*
-Tytuł: Rysowanie kształtów za pomocą znaków.
+Tytul: Rysowanie ksztaltow za pomoca znakow.
 
-Treść zadania: Napisz program, który wypisze na standardowe wyjście ciągi znaków tworzące kwadrat, trójkąt oraz romb z jedynek. Pamiętaj o dodawaniu odpowiednich spacji i przejściach do nowej linii.
+Tresc zadania: Napisz program, ktory wypisze na standardowe wyjscie ciagi znakow tworzace kwadrat, trojkat oraz romb z jedynek. Pamietaj o dodawaniu odpowiednich spacji i przejsciach do nowej linii.
 
-Przykłady:
+Przyklady:
 
 Kwadrat:
 
 xx
 xx
 
-Trójkąt:
+Trojkat:
 
 1
 22
@@ -24,23 +24,24 @@ Romb z jedynek:
 111
 1
 
-Dane wejściowe: Brak.
+Dane wejsciowe: Brak.
 
-Dane wyjściowe: Komunikat.
+Dane wyjsciowe: Komunikat.
 */
 
-// Wyświetlenie kwadratu
+// Wyswietlenie kwadratu
 console.log("xx");
 console.log("xx");
 
-// Wyświetlenie trójkąta
+// Wyswietlenie trojkata
 console.log("1");
 console.log("22");
 console.log("333");
 
-// Wyświetlenie rombu
+// Wyswietlenie rombu
 console.log("1");
 console.log("111");
 console.log("11111");
 console.log("111");
 console.log("1");
+

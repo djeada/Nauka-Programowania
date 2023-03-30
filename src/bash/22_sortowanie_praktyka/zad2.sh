@@ -1,16 +1,17 @@
-#!/usr/bin/env bash
+# Tytul: Sortowanie slow w zdaniu.
+# Tresc: Masz dany napis reprezentujacy zdanie. Podziel to zdanie na slowa, posortuj je alfabetycznie i zapisz w liscie. Znaki interpunkcyjne nie sa liczone jako slowa.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Lista napisow.
+# Przyklad:
+# Dla napisu "Lemur wygina smialo cialo" powinno zostac zwrocone ["Lemur", "cialo", "smialo", "wygina"].
 
 source ../assert.sh
 
-# Otrzymujesz napis reprezentujacy zdanie. Podziel zdanie na slowa. 
-# Posortuj slowa alfabetycznie i zapisz je w liscie. Pamietaj, znaki 
-# interpunkcyjne nie sa liczone jako slowa.
-
 sortuj_slowa_w_zdaniu() {
-    # Funkcja sortuje alfabetycznie napis.
+    local zdanie="$1"
     local zdanie="$1"
     zdanie="${zdanie//[,.:;?!]/}"
-    echo "$zdanie" | tr " "	"\n"  | sort -V | tr "\n" " "	
+    echo "$zdanie" | tr " "	"\n"  | sort -V | tr "\n" " "
 }
 
 test_sortuj_slowa_w_zdaniu() {
@@ -22,7 +23,6 @@ test_sortuj_slowa_w_zdaniu() {
 main() {
     test_sortuj_slowa_w_zdaniu
 }
-
 
 main "$@"
 

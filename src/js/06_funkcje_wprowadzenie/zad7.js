@@ -1,27 +1,27 @@
 /*
-Tytuł: Hasło.
+Tytul: Haslo.
 
-Treść: Napisz dwie funkcje:
+Tresc: Napisz dwie funkcje:
 
-* Pierwsza funkcja powinna prosić użytkownika o podanie nazwy użytkownika i hasła, a następnie zwrócić te dane.
-* Druga funkcja powinna otrzymać dane od pierwszej funkcji i ponownie prosić użytkownika o podanie nazwy użytkownika i hasła. Prośba o podanie danych powinna być umieszczona w pętli. Warunkiem zakończenia pętli jest podanie przez użytkownika danych identycznych z tymi przekazanymi przez pierwszą funkcję.
+* Pierwsza funkcja powinna prosic uzytkownika o podanie nazwy uzytkownika i hasla, a nastepnie zwrocic te dane.
+* Druga funkcja powinna otrzymac dane od pierwszej funkcji i ponownie prosic uzytkownika o podanie nazwy uzytkownika i hasla. Prosba o podanie danych powinna byc umieszczona w petli. Warunkiem zakonczenia petli jest podanie przez uzytkownika danych identycznych z tymi przekazanymi przez pierwsza funkcje.
 
-Dane wejściowe: dwie nazwy użytkownika i hasła (napisy)
+Dane wejsciowe: dwie nazwy uzytkownika i hasla (napisy)
 
-Dane wyjściowe: komunikat
+Dane wyjsciowe: komunikat
 */
 
-// Funkcja prosi o podanie nazwy użytkownika i hasła, a następnie zwraca te dane
+// Funkcja prosi o podanie nazwy uzytkownika i hasla, a nastepnie zwraca te dane
 const pobierzDaneUzytkownika = () => {
-  const nazwaUzytkownika = prompt("Podaj nazwę użytkownika:");
-  const haslo = prompt("Podaj hasło:");
+  const nazwaUzytkownika = prompt("Podaj nazwe uzytkownika:");
+  const haslo = prompt("Podaj haslo:");
   return {
     nazwaUzytkownika,
     haslo,
   };
 };
 
-// Funkcja otrzymuje dane od pierwszej funkcji i ponownie prosi o podanie nazwy użytkownika i hasła
+// Funkcja otrzymuje dane od pierwszej funkcji i ponownie prosi o podanie nazwy uzytkownika i hasla
 const sprawdzDaneUzytkownika = (poprawneDane) => {
   let daneUzytkownika;
   do {
@@ -31,10 +31,10 @@ const sprawdzDaneUzytkownika = (poprawneDane) => {
     daneUzytkownika.haslo !== poprawneDane.haslo
   );
 
-  console.log("Poprawne dane użytkownika");
+  console.log("Poprawne dane uzytkownika");
 };
 
-// Główna funkcja programu
+// Glowna funkcja programu
 const main = () => {
   const poprawneDane = pobierzDaneUzytkownika();
   sprawdzDaneUzytkownika(poprawneDane);
@@ -42,3 +42,4 @@ const main = () => {
 
 // Uruchom program
 main();
+

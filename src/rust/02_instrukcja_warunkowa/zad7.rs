@@ -124,3 +124,4 @@ fn main() {
 	println!("Wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna {}", !(p || q) == (!p && !q));
 
 }
+

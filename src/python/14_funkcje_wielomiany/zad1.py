@@ -1,6 +1,11 @@
 """
-Otrzymujesz liste n wspolczynnikow wielomianu postaci: a_nx^n + a_(n-1)x^(n-1) + ... + a_0
-oraz liczbe naturalna x. Znajdz wartosc wielomianu w zadanym punkcie.
+Tytul: Obliczenie wartosci wielomianu w punkcie.
+Tresc: Otrzymujesz liste n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbe naturalna x. Znajdz wartosc wielomianu w podanym punkcie.
+Dane wejsciowe: Lista liczb naturalnych i liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla listy wspolczynnikow [3, 2, 1] i liczby x = 1, zostanie zwrocona liczba 6.
+
 """
 
 
@@ -21,3 +26,4 @@ def test_wartosc_wielomianu_w_punkcie():
 
 if __name__ == "__main__":
     test_wartosc_wielomianu_w_punkcie()
+

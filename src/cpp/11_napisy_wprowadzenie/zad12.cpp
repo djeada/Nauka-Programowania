@@ -1,10 +1,15 @@
+/*
+Tytul: Zamien wszystkie male litery na duze.
+Tresc: Otrzymasz napis. Zmien wszystkie male litery na duze.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "Rumcajs", powinien zostac zwrocony napis: "RUMCAJS".
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <string>
-
-/*
-Otrzymujesz napis reprezentujacy zdanie. Usun spacje ze zdania.
-*/
 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(n)
@@ -46,3 +51,4 @@ int main() {
 
   return 0;
 }
+

@@ -1,3 +1,12 @@
+/*
+Tytul: Zamien A na B.
+Tresc: Otrzymujesz dwie liczby naturalne. Oblicz, ile bitow nalezy odwrocic, aby zamienic liczbe A na liczbe B.
+Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanych liczb 34 i 73, powinna zostac zwrocona liczba 5.
+
+*/
 public class Main {
   // Zamien miejscami sasiadujace bity.
   public static int zamienSasiadow(int liczba) {
@@ -22,3 +31,4 @@ public class Main {
     test1();
   }
 }
+

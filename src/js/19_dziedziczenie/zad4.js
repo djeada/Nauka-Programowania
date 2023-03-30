@@ -1,7 +1,7 @@
 /*
-Tytuł: Dziedziczenie wielopoziomowe
+Tytul: Dziedziczenie wielopoziomowe
 
-Treść: Napisz klasę Człowiek oraz klasy pochodne Student i StudentFizyki. Człowiek powinien zawierać informacje o imieniu, nazwisku, miejscu urodzenia i zawodzie. Student powinien dodawać pola numeru albumu oraz kierunku studiów. StudentFizyki powinien dodawać pola średniej z laboratoriów oraz średniej z wykładów. Napisz program testujący te klasy.
+Tresc: Napisz klase Czlowiek oraz klasy pochodne Student i StudentFizyki. Czlowiek powinien zawierac informacje o imieniu, nazwisku, miejscu urodzenia i zawodzie. Student powinien dodawac pola numeru albumu oraz kierunku studiow. StudentFizyki powinien dodawac pola sredniej z laboratoriow oraz sredniej z wykladow. Napisz program testujacy te klasy.
 */
 
 class Czlowiek {
@@ -78,3 +78,4 @@ const main = function () {
 };
 
 main();
+

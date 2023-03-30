@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Czy napis składa się wyłącznie z cyfr?
+Tytul: Czy napis sklada sie wylacznie z cyfr?
 
-Treść: Masz napis. Sprawdź, czy składa się on wyłącznie z cyfr.
+Tresc: Masz napis. Sprawdz, czy sklada sie on wylacznie z cyfr.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Wartość logiczna.
+Dane wyjsciowe: Wartosc logiczna.
 
-Przykład:
+Przyklad:
 
-Dla napisu: “1234”, powinna zostać zwrócona wartość logiczna: Prawda.
+Dla napisu: “1234”, powinna zostac zwrocona wartosc logiczna: Prawda.
 
 */
 
@@ -31,3 +31,4 @@ function test_czy_tylko_cyfry() {
   console.assert(czy_tylko_cyfry("1234,5") === false);
 }
 test_czy_tylko_cyfry();
+

@@ -1,7 +1,6 @@
 """
-Otrzymujesz trzy napisy. Pierwszy napis reprezentuje zdanie. Drugi reprezentuje
-slowo A wystepujace w zdaniu. Trzeci reprezentuje slowo B, na ktore ma zostac
-zamienione slowo A. Podmien w zdaniu wszystkie wystapienia slowa A na slowo B.
+## Napisy — trudne
+
 """
 
 # Wersja 1
@@ -25,3 +24,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

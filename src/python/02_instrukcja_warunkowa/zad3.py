@@ -1,5 +1,11 @@
 """
-Dla pobranej liczby, sprawdz czy liczba jest ujemna, dodatnia, czy jest zerem.
+Tytul: Znak liczby.
+Tresc: Pobierz liczbe naturalna od uzytkownika i sprawdz, czy liczba jest ujemna, dodatnia, czy jest zerem. Wypisz odpowiedni komunikat.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Komunikat.
+Przyklad:
+Dla pobranej liczby: 2, powinien zostac wypisany komunikat, ze liczba jest dodatnia.
+
 """
 
 if __name__ == "__main__":
@@ -13,3 +19,4 @@ if __name__ == "__main__":
         print("liczba jest dodatnia")
     else:
         print("liczba jest zerem")
+

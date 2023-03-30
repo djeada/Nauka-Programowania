@@ -1,3 +1,12 @@
+/*
+Tytul: Obliczenie iloczynu wielomianu przez skalar.
+Tresc: Otrzymujesz liste n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbe x. Oblicz wspolczynniki wielomianu, ktory jest wynikiem pomnozenia otrzymanego wielomianu przez liczbe x.
+Dane wejsciowe: Lista liczb naturalnych i liczba naturalna.
+Dane wyjsciowe: Lista liczb naturalnych.
+Przyklad:
+Dla listy wspolczynnikow [4, -3, 2] i liczby x = -2, zostanie zwrocona lista [-8, 6, -4].
+
+*/
 import java.util.*;
 
 public class Main {
@@ -28,3 +37,4 @@ public class Main {
     test1();
   }
 }
+

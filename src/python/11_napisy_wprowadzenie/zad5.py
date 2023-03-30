@@ -1,7 +1,11 @@
 """
-Otrzymujesz napis oraz liczbe k. 
-a) Wypisz poziomo co k-ty znak. Znaki powinny byc oddzielone spacjami.
-b) Wypisz pionowo co k-ty znak. Znaki powinny byc oddzielone enterami.
+Tytul: Napis skladajacy sie z liczb od 1 do n.
+Tresc: Otrzymasz liczbe naturalna n. Zwroc napis skladajacy sie z liczb naturalnych od 1 do n.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanej liczby n rownej 3 powinien zostac zwrocony napis: "123".
+
 """
 
 
@@ -28,3 +32,4 @@ if __name__ == "__main__":
 
     print("Napis wypisany pionowo: ")
     wypisz_pionowo(napis, k)
+

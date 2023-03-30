@@ -1,5 +1,11 @@
 """
-Otrzymujesz napis. Sprawdz, czy napis sklada sie wylacznie z cyfr.
+Tytul: Wyodrebnij cyfry z tekstu.
+Tresc: Dostajesz napis. Zwroc napis skladajacy sie z cyfr wystepujacych w tym napisie.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla napisu: “Terminator2001”, powinien zostac zwrocony napis: “2001”.
+
 """
 
 import re
@@ -40,3 +46,4 @@ def test_czy_numeryczny_v2():
 if __name__ == "__main__":
     test_czy_numeryczny_v1()
     test_czy_numeryczny_v2()
+

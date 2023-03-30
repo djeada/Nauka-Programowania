@@ -1,13 +1,18 @@
+/*
+Tytul: Znalezienie indeksu najmniejszego elementu w posortowanej i przesunietej
+w prawo liscie. Tresc: Dla otrzymanej listy liczb calkowitych, znajdz indeks
+najmniejszego elementu. Lista jest posortowana rosnaco, ale zostala przesunieta
+w prawo o okreslona liczbe miejsc. Przykladowo dla przesuniecia w prawo o 1,
+ostatni element trafia na pierwsze miejsce, a przedostatni na ostatnie miejsce
+itd. Dane wejsciowe: Lista liczb calkowitych oraz liczba naturalna okreslajaca
+przesuniecie w prawo. Dane wyjsciowe: Liczba calkowita. Przyklad: Dla otrzymanej
+listy: [7, 8, -1, 4, 5] zostanie zwrocona liczba: 2.
+
+*/
 #include <algorithm>
 #include <cassert>
 #include <unordered_set>
 #include <vector>
-
-/*
-Otrzymujesz liste liczb naturalnych. Usun z niej
-wszystkie duplikaty. Tylko pierwsze wystapienie danej
-liczby powinno zostac zachowane.
-*/
 
 // Zlozonosc czasowa O(nlogn)
 void usunDuplikatyV1(std::vector<int> &lista) {
@@ -79,3 +84,4 @@ int main() {
 
   return 0;
 }
+

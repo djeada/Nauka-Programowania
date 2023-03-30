@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Słownik z kluczami będącymi elementami jednej listy i wartościami elementami drugiej listy.
+Tytul: Slownik z kluczami bedacymi elementami jednej listy i wartosciami elementami drugiej listy.
 
-Treść: Dostajesz dwie listy liczb całkowitych. Stwórz słownik, w którym kluczami będą elementy pierwszej listy, a wartościami elementy drugiej listy. Jeśli listy są różnej długości, zwróć pusty słownik.
+Tresc: Dostajesz dwie listy liczb calkowitych. Stworz slownik, w ktorym kluczami beda elementy pierwszej listy, a wartosciami elementy drugiej listy. Jesli listy sa roznej dlugosci, zwroc pusty slownik.
 
-Dane wejściowe: Dwie listy liczb całkowitych.
+Dane wejsciowe: Dwie listy liczb calkowitych.
 
-Dane wyjściowe: Słownik z kluczami i wartościami będącymi liczbami całkowitymi.
+Dane wyjsciowe: Slownik z kluczami i wartosciami bedacymi liczbami calkowitymi.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], słownik powinien wyglądać następująco: {3: 1, 5: 2, 8: -1}.
+Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], slownik powinien wygladac nastepujaco: {3: 1, 5: 2, 8: -1}.
 
 */
 
@@ -29,15 +29,16 @@ function stworzSlownik(list1, list2) {
 
 function testSlownik() {
   const slownik1 = stworzSlownik([3, 5, 8], [1, 2, -1]);
-  console.assert(slownik1[3] === 1, "Test 1 nie powiódł się");
-  console.assert(slownik1[5] === 2, "Test 2 nie powiódł się");
-  console.assert(slownik1[8] === -1, "Test 3 nie powiódł się");
+  console.assert(slownik1[3] === 1, "Test 1 nie powiodl sie");
+  console.assert(slownik1[5] === 2, "Test 2 nie powiodl sie");
+  console.assert(slownik1[8] === -1, "Test 3 nie powiodl sie");
 
   const slownik2 = stworzSlownik([1, 2, 3, 4], [10, 20, 30]);
-  console.assert(Object.keys(slownik2).length === 0, "Test 4 nie powiódł się");
+  console.assert(Object.keys(slownik2).length === 0, "Test 4 nie powiodl sie");
 
   const slownik3 = stworzSlownik([], []);
-  console.assert(Object.keys(slownik3).length === 0, "Test 5 nie powiódł się");
+  console.assert(Object.keys(slownik3).length === 0, "Test 5 nie powiodl sie");
 }
 
 testSlownik();
+

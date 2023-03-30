@@ -1,25 +1,26 @@
 /*
-Tytuł: Warunek trójkąta.
+Tytul: Warunek trojkata.
 
-Treść: Dla trzech pobranych od użytkownika długości boków sprawdź, czy można z nich zbudować trójkąt. Jednostki są umowne.
+Tresc: Dla trzech pobranych od uzytkownika dlugosci bokow sprawdz, czy mozna z nich zbudowac trojkat. Jednostki sa umowne.
 
-Dane wejściowe: Trzy liczby naturalne oznaczające długości boków trójkąta.
+Dane wejsciowe: Trzy liczby naturalne oznaczajace dlugosci bokow trojkata.
 
-Dane wyjściowe: Komunikat o możliwości lub niemożliwości zbudowania trójkąta.
+Dane wyjsciowe: Komunikat o mozliwosci lub niemozliwosci zbudowania trojkata.
 
-Przykład:
+Przyklad:
 
-Dla pobranych liczb: 1, 2 oraz 3, powinna zostać wypisana informacja, że nie można zbudować trójkąta z podanych boków.
+Dla pobranych liczb: 1, 2 oraz 3, powinna zostac wypisana informacja, ze nie mozna zbudowac trojkata z podanych bokow.
 */
 
-// Pobieranie danych od użytkownika
-const bok_a = parseInt(prompt("Podaj długość boku a:"));
-const bok_b = parseInt(prompt("Podaj długość boku b:"));
-const bok_c = parseInt(prompt("Podaj długość boku c:"));
+// Pobieranie danych od uzytkownika
+const bok_a = parseInt(prompt("Podaj dlugosc boku a:"));
+const bok_b = parseInt(prompt("Podaj dlugosc boku b:"));
+const bok_c = parseInt(prompt("Podaj dlugosc boku c:"));
 
-// Warunek trójkąta
+// Warunek trojkata
 if (bok_a + bok_b > bok_c && bok_a + bok_c > bok_b && bok_b + bok_c > bok_a) {
-  console.log("Można zbudować trójkąt z podanych boków.");
+  console.log("Mozna zbudowac trojkat z podanych bokow.");
 } else {
-  console.log("Nie można zbudować trójkąta z podanych boków.");
+  console.log("Nie mozna zbudowac trojkata z podanych bokow.");
 }
+

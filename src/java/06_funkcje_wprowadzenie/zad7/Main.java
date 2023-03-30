@@ -1,3 +1,12 @@
+/*
+Tytul: Cyfry liczby
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby obliczy sume jej cyfr.
+Dane wejsciowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla pobranej liczby 13231, funkcja powinna zwrocic liczbe 10.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -39,3 +48,4 @@ public class Main {
     czyDanePoprawne(nazwa, haslo);
   }
 }
+

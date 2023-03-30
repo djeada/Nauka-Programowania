@@ -1,5 +1,10 @@
 """
-Znajdz najdluzsze powtorzenie w napisie.
+Tytul: Rotacje napisow.
+Tresc: Dostajesz dwa napisy. Sprawdz, czy jeden z nich jest rotacja drugiego.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla napisow "malpka" i "pkamal" powinno zostac zwrocone "Prawda".
 
 """
 from collections import deque
@@ -50,3 +55,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

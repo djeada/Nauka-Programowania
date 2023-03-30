@@ -1,6 +1,11 @@
 """
-Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj nazwe pliku ze sciezki.
-Zwroc sama nazwe pliku, bez rozszerzen.
+Tytul: Czy napis sklada sie wylacznie z cyfr?
+Tresc: Masz napis. Sprawdz, czy sklada sie on wylacznie z cyfr.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Wartosc logiczna.
+Przyklad:
+Dla napisu: “1234”, powinna zostac zwrocona wartosc logiczna: Prawda.
+
 """
 
 import re
@@ -13,8 +18,8 @@ def nazwa_pliku(sciezka):
     nazwa = re.search(r'[^\\/:*?"<>|]+$', sciezka).group(0)
 
     # usun rozszerzenie pliku
-    while re.sub(r'\.[^.]+$', '', nazwa) is not nazwa:
-        nazwa = re.sub(r'\.[^.]+$', '', nazwa)
+    while re.sub(r"\.[^.]+$", "", nazwa) is not nazwa:
+        nazwa = re.sub(r"\.[^.]+$", "", nazwa)
     return nazwa
 
 
@@ -27,3 +32,4 @@ def test_nazwa_pliku():
 
 if __name__ == "__main__":
     test_nazwa_pliku()
+

@@ -1,11 +1,11 @@
 /*
-Tytuł: Wczytaj i wypisz treść pliku.
+Tytul: Wczytaj i wypisz tresc pliku.
 
-Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Wczytaj plik i wypisz jego treść.
+Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Wczytaj plik i wypisz jego tresc.
 
-Dane wejściowe: Napis reprezentujący ścieżkę do pliku.
+Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
 
-Dane wyjściowe: Napis zawierający treść pliku.
+Dane wyjsciowe: Napis zawierajacy tresc pliku.
 */
 
 const fs = require("fs").promises;
@@ -27,3 +27,4 @@ const main = async () => {
 };
 
 main();
+

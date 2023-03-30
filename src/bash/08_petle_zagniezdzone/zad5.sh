@@ -1,8 +1,13 @@
-#!/usr/bin/env bash
-
-#Napisz funkcje, ktora dla otrzymanej liczby N
-#wypisze N pierwszych wierszy i kolumn
-#tabliczki mnozenia.
+# Tytul: Litera X.
+# Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej wypisze litere X o wysokosci rownej tej liczbie.
+# Dane wejsciowe: Liczba naturalna.
+# Dane wyjsciowe: Komunikat.
+# Przyklad:
+# Dla otrzymanej liczby 4 powinno zostac wypisane:
+# *   *
+# * *
+# * *
+# *   *
 
 literaX() {
 

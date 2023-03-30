@@ -1,18 +1,18 @@
 /*
-Tytuł: NWD.
+Tytul: NWD.
 
-Treść: Napisz funkcję, która dla otrzymanych dwóch liczb naturalnych zwróci ich największy wspólny dzielnik.
+Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych zwroci ich najwiekszy wspolny dzielnik.
 
-Dane wejściowe: dwie liczby naturalne
+Dane wejsciowe: dwie liczby naturalne
 
-Dane wyjściowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych liczb 60 i 45, funkcja powinna zwrócić liczbę 15.
+Dla otrzymanych liczb 60 i 45, funkcja powinna zwrocic liczbe 15.
 */
 
-// Funkcja zwracająca NWD
+// Funkcja zwracajaca NWD
 function zwracajNWD(liczba_a, liczba_b) {
   var dzielnik = 1;
   for (var i = 1; i <= liczba_a; i++) {
@@ -35,10 +35,11 @@ function testNWD() {
   console.assert(zwracajNWD(0, 2) == 2);
 }
 
-// Funkcja uruchamiająca testy
+// Funkcja uruchamiajaca testy
 function main() {
   testNWD();
 }
 
-// Uruchomienie testów
+// Uruchomienie testow
 main();
+

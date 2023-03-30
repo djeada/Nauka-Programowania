@@ -1,25 +1,26 @@
 /*
-Tytuł: Rok przestępny.
+Tytul: Rok przestepny.
 
-Treść: Napisz program, który dla pobranej liczby naturalnej będzie sprawdzał, czy dany rok jest przestępny.
+Tresc: Napisz program, ktory dla pobranej liczby naturalnej bedzie sprawdzal, czy dany rok jest przestepny.
 
-Podpowiedź: Rok przestępny jest podzielny przez 4, ale nie jest podzielny przez 100, chyba że jest podzielny przez 400.
+Podpowiedz: Rok przestepny jest podzielny przez 4, ale nie jest podzielny przez 100, chyba ze jest podzielny przez 400.
 
-Dane wejściowe: Liczba naturalna.
+Dane wejsciowe: Liczba naturalna.
 
-Dane wyjściowe: Komunikat o tym, czy rok jest przestępny, czy też nie.
+Dane wyjsciowe: Komunikat o tym, czy rok jest przestepny, czy tez nie.
 
-Przykład:
+Przyklad:
 
-Dla pobranej liczby 2100, program powinien wypisać informację, że rok nie jest przestępny.
+Dla pobranej liczby 2100, program powinien wypisac informacje, ze rok nie jest przestepny.
 */
 
-// Pobieranie danych od użytkownika
+// Pobieranie danych od uzytkownika
 const rok = parseInt(prompt("Podaj rok:"));
 
-// Sprawdzenie, czy rok jest przestępny
+// Sprawdzenie, czy rok jest przestepny
 if ((rok % 4 === 0 && rok % 100 !== 0) || rok % 400 === 0) {
-  console.log("Rok jest przestępny");
+  console.log("Rok jest przestepny");
 } else {
-  console.log("Rok nie jest przestępny");
+  console.log("Rok nie jest przestepny");
 }
+

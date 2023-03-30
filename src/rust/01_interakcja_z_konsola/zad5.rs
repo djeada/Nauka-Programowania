@@ -85,3 +85,4 @@ fn main() {
 	println!("Wartosc funkcji y=sin3x*cos2x+e^2+log(x3+2x2-x-3) w punkcie {} wynosi: {}", x, (x*x*x).sin()*(x*x).cos()+x.exp()+x.ln());
 
 }
+

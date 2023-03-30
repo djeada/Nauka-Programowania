@@ -1,10 +1,9 @@
-#!/usr/bin/env bash
+# Tytul: Przesun wszystkie pliki CSV do jednego folderu.
+# Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Przenies wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderow) do drugiego folderu.
+# Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
+# Dane wyjsciowe: Brak.
 
 source ../assert.sh
-
-# Otrzymujesz napis reprezentujacy sciezke folderu. Usun 
-# wszystkie pliki o rozmiarach wiekszych niz 10 kB znajdujace 
-# sie w podanym folderze oraz jego podfolderach.
 
 usun_pliki_wieksze_niz_10k() {
     local folder=$1
@@ -13,11 +12,11 @@ usun_pliki_wieksze_niz_10k() {
 
 test_usun_pliki_wieksze_niz() {
 
-    # stworz foldery testowe
+    mkdir -p 'test/test1'
     mkdir -p 'test/test1'
     mkdir -p 'test/test2'
 
-    # stworz pliki testowe
+    sciezki=('test/test1/test1.txt' 'test/test1/test2.txt' 'test/test2/test1.txt' 'test/test2/test2.txt')
     sciezki=('test/test1/test1.txt' 'test/test1/test2.txt' 'test/test2/test1.txt' 'test/test2/test2.txt')
     for plik in ${sciezki[@]}; do
         touch $plik
@@ -26,21 +25,22 @@ test_usun_pliki_wieksze_niz() {
         done
     done
 
-    # usun pliki
+    usun_pliki_wieksze_niz_10k 'test'
     usun_pliki_wieksze_niz_10k 'test'
 
-    # sprawdz czy pliki zostaly usuniete
     for plik in ${sciezki[@]}; do
-        assertTrue $(if [[ -f $plik ]]; then echo "true"; else echo "false"; fi) $LINENO
-    done
+        for plik in ${sciezki[@]}; do
+            assertTrue $(if [[ -f $plik ]]; then echo "true"; else echo "false"; fi) $LINENO
+        done
 
-    # usun foldery
-    rm -rf 'test'
+        rm -rf 'test'
+        rm -rf 'test'
 
-}
+    }
 
-main() {
-    test_usun_pliki_wieksze_niz
-}
+    main() {
+        test_usun_pliki_wieksze_niz
+    }
 
-main "$@"
+    main "$@"
+

@@ -1,15 +1,15 @@
 /*
-Tytuł: Słowa ze zdania jako osobne elementy listy.
+Tytul: Slowa ze zdania jako osobne elementy listy.
 
-Treść: Otrzymujesz napis reprezentujący zdanie. Zwróć listę słów zdania. Znaki interpunkcyjne nie są liczone jako słowa.
+Tresc: Otrzymujesz napis reprezentujacy zdanie. Zwroc liste slow zdania. Znaki interpunkcyjne nie sa liczone jako slowa.
 
-Dane wejściowe: Napis.
+Dane wejsciowe: Napis.
 
-Dane wyjściowe: Lista napisów.
+Dane wyjsciowe: Lista napisow.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanego napisu: “Ala ma kota”, powinna zostać zwrócona lista: [“Ala”, “ma”, “kota”].
+Dla otrzymanego napisu: “Ala ma kota”, powinna zostac zwrocona lista: [“Ala”, “ma”, “kota”].
 */
 
 function slowaZeZdania(zdanie) {
@@ -33,7 +33,7 @@ function test() {
 
   console.assert(
     JSON.stringify(output) === JSON.stringify(expectedOutput),
-    'Test nie powiódł się dla "' +
+    'Test nie powiodl sie dla "' +
       input +
       '". Otrzymany wynik to [' +
       output +
@@ -41,7 +41,8 @@ function test() {
       expectedOutput +
       "]"
   );
-  console.log("Test przeszedł pomyślnie");
+  console.log("Test przeszedl pomyslnie");
 }
 
 test();
+

@@ -1,12 +1,15 @@
+/*
+Tytul: N pierwszych liczb pierwszych.
+Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej N, wypisze N
+pierwszych liczb pierwszych. Dane wejsciowe: Liczba naturalna. Dane wyjsciowe: N
+liczb pierwszych. Przyklad: Dla otrzymanej liczby 5 powinno zostac wypisane: 2,
+3, 5, 7, 11.
+
+*/
 #include <cassert>
 #include <cmath>
 #include <iostream>
 #include <vector>
-
-/*
-Napisz funkcje, ktora dla otrzymanej liczby N,
-wypisze N pierwszych liczb pierwszych.
-*/
 
 int czyPierwsza(int n) {
 
@@ -67,3 +70,4 @@ int main() {
 
   return 0;
 }
+

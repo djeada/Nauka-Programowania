@@ -1,15 +1,18 @@
-import string
+"""
+Tytul: Znalezienie anagramow slowa w zdaniu.
+Tresc: Napisz program, ktory otrzymuje napis reprezentujacy zdanie oraz slowo. Twoim zadaniem jest znalezienie wszystkich anagramow otrzymanego slowa w zdaniu. Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Lista napisow.
+Przyklad:
+Dla otrzymanych napisow: “Sroga kara.” oraz “arak”, powinna zostac zwrocona lista: [“kara”].
 
 """
-Otrzymujesz napis reprezentujacy zdanie oraz slowo. Znajdz wszystkie 
-anagramy otrzymanego slowa w zdaniu. Roznice miedzy wielkimi i malymi 
-literami powinny byc zignorowane.
-"""
+import string
 
 
 def anagramy(napis_a, napis_b):
     """
-    Funkcja sprawdza, czy otrzymane napisy sa anagramami. 
+    Funkcja sprawdza, czy otrzymane napisy sa anagramami.
     """
     if len(napis_a) != len(napis_b):
         return False
@@ -23,14 +26,14 @@ def anagramy(napis_a, napis_b):
 
 def podziel_zdanie_na_slowa(zdanie):
     """
-    Funkcja rozdziela zdanie na slowa. 
+    Funkcja rozdziela zdanie na slowa.
     """
     return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
 
 
 def anagramy_slowa_w_zdaniu(zdanie, slowo):
     """
-    Funkcja zwraca liste anagramow slowa znalezionych w zdaniu. 
+    Funkcja zwraca liste anagramow slowa znalezionych w zdaniu.
     """
     slowa = podziel_zdanie_na_slowa(zdanie)
     slowa = [s.lower() for s in slowa]
@@ -52,3 +55,4 @@ def test_anagramy_slowa_w_zdaniu():
 if __name__ == "__main__":
 
     test_anagramy_slowa_w_zdaniu()
+

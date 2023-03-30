@@ -1,9 +1,11 @@
-#!/usr/bin/env bash
+# Tytul: Znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
+# Tresc: Otrzymasz napis. Znajdz znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
+# Dane wejsciowe: Napis.
+# Dane wyjsciowe: Lista znakow.
+# Przyklad:
+# Dla otrzymanego napisu: "Slon", powinna zostac zwrocona lista: ['o', 'n'].
 
 source ../assert.sh
-
-# Otrzymujesz napis. Zamien wszystkie
-# male litery na wielkie.
 
 na_wielkie_v1() {
     awk '{ print toupper($0) }' <<< "$1"
@@ -29,7 +31,6 @@ main() {
     test1
     test2
 }
-
 
 main "$@"
 

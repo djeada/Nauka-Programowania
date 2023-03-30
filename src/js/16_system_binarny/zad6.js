@@ -1,16 +1,16 @@
 /*
 
-Tytuł:  Konwersja między dowolnymi systemami liczbowymi.
+Tytul:  Konwersja miedzy dowolnymi systemami liczbowymi.
 
-Treść: Otrzymujesz liczbę naturalną, podstawę systemu liczbowego, w którym zapisana jest ta liczba, oraz podstawę systemu, na który ma zostać dokonana konwersja. Zwróć reprezentację otrzymanej liczby w nowym systemie.
+Tresc: Otrzymujesz liczbe naturalna, podstawe systemu liczbowego, w ktorym zapisana jest ta liczba, oraz podstawe systemu, na ktory ma zostac dokonana konwersja. Zwroc reprezentacje otrzymanej liczby w nowym systemie.
 
-Dane wejściowe: Trzy liczby naturalne.
+Dane wejsciowe: Trzy liczby naturalne.
 
-Dane wyjściowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych liczb: 4301, 10 i 4 powinna zostać zwrócona liczba: 1003031.
+Dla otrzymanych liczb: 4301, 10 i 4 powinna zostac zwrocona liczba: 1003031.
 */
 function konwersjaSystemow(liczba, podstawa1, podstawa2) {
   let dziesietna = 0;
@@ -18,7 +18,7 @@ function konwersjaSystemow(liczba, podstawa1, podstawa2) {
   let potega = 0;
   let wynik = "";
 
-  // konwersja na system dziesiętny
+  // konwersja na system dziesietny
   while (liczba > 0) {
     reszta = liczba % 10;
     dziesietna += reszta * Math.pow(podstawa1, potega);
@@ -44,10 +44,11 @@ function test() {
   const wynik = "1003031";
 
   if (konwersjaSystemow(liczba1, podstawa1, podstawa2) === wynik) {
-    console.log("Test zakończony sukcesem.");
+    console.log("Test zakonczony sukcesem.");
   } else {
-    console.log("Test nie powiódł się.");
+    console.log("Test nie powiodl sie.");
   }
 }
 
 test();
+

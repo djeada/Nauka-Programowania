@@ -1,5 +1,8 @@
 /*
-Zaprojektuj klase Ksztalt oraz klasy pochodne Kolo i Kwadrat.
+Tytul: Zaprojektuj klase Ksztalt oraz klasy potomne Kolo i Kwadrat.
+Tresc: Zaprojektuj klase Ksztalt oraz klasy potomne Kolo i Kwadrat. Napisz
+program testujacy te klasy.
+
 */
 
 #include <cassert>
@@ -66,3 +69,4 @@ int main() {
 
   return 0;
 }
+

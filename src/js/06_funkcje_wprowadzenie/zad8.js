@@ -1,18 +1,18 @@
 /*
-Tytuł: Zaokrąglanie w dół.
+Tytul: Zaokraglanie w dol.
 
-Treść: Napisz funkcję, która zaokrągli iloraz dwóch liczb naturalnych do najbliższej liczby całkowitej w dół, bez użycia operatorów '/' i '%'.
+Tresc: Napisz funkcje, ktora zaokragli iloraz dwoch liczb naturalnych do najblizszej liczby calkowitej w dol, bez uzycia operatorow '/' i '%'.
 
-Dane wejściowe: dwie liczby naturalne
+Dane wejsciowe: dwie liczby naturalne
 
-Dane wyjściowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
 
-Przykład:
+Przyklad:
 
-Dla otrzymanych liczb 7 i 2, funkcja powinna zwrócić liczbę 3.
+Dla otrzymanych liczb 7 i 2, funkcja powinna zwrocic liczbe 3.
 */
 
-// Funkcja zaokrąglająca iloraz dwóch liczb naturalnych do najbliższej liczby całkowitej w dół
+// Funkcja zaokraglajaca iloraz dwoch liczb naturalnych do najblizszej liczby calkowitej w dol
 const podziel = (liczba1, liczba2) => {
   if (liczba2 === 0) return NaN;
 
@@ -30,9 +30,10 @@ const podziel = (liczba1, liczba2) => {
   return iloraz * kierunek;
 };
 
-// Pobieranie danych od użytkownika
-const liczba1 = parseInt(prompt("Podaj pierwszą liczbę:"));
-const liczba2 = parseInt(prompt("Podaj drugą liczbę:"));
+// Pobieranie danych od uzytkownika
+const liczba1 = parseInt(prompt("Podaj pierwsza liczbe:"));
+const liczba2 = parseInt(prompt("Podaj druga liczbe:"));
 
 // Wypisanie wyniku
 console.log(podziel(liczba1, liczba2));
+

@@ -1,3 +1,12 @@
+/*
+Tytul: Slownik z kluczami bedacymi elementami jednej listy i wartosciami elementami drugiej listy.
+Tresc: Dostajesz dwie listy liczb calkowitych. Stworz slownik, w ktorym kluczami beda elementy pierwszej listy, a wartosciami elementy drugiej listy. Jesli listy sa roznej dlugosci, zwroc pusty slownik.
+Dane wejsciowe: Dwie listy liczb calkowitych.
+Dane wyjsciowe: Slownik z kluczami i wartosciami bedacymi liczbami calkowitymi.
+Przyklad:
+Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], slownik powinien wygladac nastepujaco: {3: 1, 5: 2, 8: -1}.
+
+*/
 import java.util.*;
 
 public class Main {
@@ -107,3 +116,4 @@ public class Main {
 	}
 
 }
+

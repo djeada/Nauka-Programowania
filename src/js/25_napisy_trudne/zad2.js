@@ -1,16 +1,16 @@
 /*
 
-Tytuł: Usuń podnapis.
+Tytul: Usun podnapis.
 
-Treść: Dostajesz dwa napisy. Twoim zadaniem jest wyszukanie i usunięcie wszystkich wystąpień drugiego napisu w pierwszym napisie.
+Tresc: Dostajesz dwa napisy. Twoim zadaniem jest wyszukanie i usuniecie wszystkich wystapien drugiego napisu w pierwszym napisie.
 
-Dane wejściowe: Dwa napisy.
+Dane wejsciowe: Dwa napisy.
 
-Dane wyjściowe: Napis.
+Dane wyjsciowe: Napis.
 
-Przykład:
+Przyklad:
 
-Dla napisów: “Lezy jezy na wiezy” oraz “zy”, zwrócony napis powinien brzmieć: “Le je na wie”.
+Dla napisow: “Lezy jezy na wiezy” oraz “zy”, zwrocony napis powinien brzmiec: “Le je na wie”.
 
 */
 
@@ -26,3 +26,4 @@ function testUsunPodnapis() {
 }
 
 testUsunPodnapis();
+

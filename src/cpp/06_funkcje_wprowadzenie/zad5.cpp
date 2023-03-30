@@ -1,12 +1,14 @@
-#include <cassert>
-
 /*
-Napisz funkcje, ktora dla otrzymanych dwoch liczb pierwszaLiczba oraz
-drugaLiczba zamieni wartosci miejscami. Po wykonaniu funkcji zmienna
-pierwszaLiczba, powinna przechowywac dawna wartosc zmiennej drugaLiczba,
-pierwszaLiczba zmienna drugaLiczba powinna przechowywac dawna wartosc zmiennej
-pierwszaLiczba.
+Tytul: Zamien wartosci miejscami.
+Tresc: Napisz funkcje, ktora zamieni wartosci zmiennych a i b miejscami. Po
+wykonaniu funkcji zmienna a powinna przechowywac wartosc zmiennej b, a zmienna b
+powinna przechowywac wartosc zmiennej a. Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Dwie liczby naturalne.
+Przyklad:
+Dla otrzymanych liczb: 8 i 5, powinny zostac zwrocone liczby 5 i 8.
+
 */
+#include <cassert>
 
 void swap(int &pierwszaLiczba, int &drugaLiczba) {
   int c = pierwszaLiczba;
@@ -28,3 +30,4 @@ int main() {
 
   return 0;
 }
+
