@@ -1,10 +1,13 @@
 """
-Tytul: Slownik z kluczami bedacymi elementami jednej listy i wartosciami elementami drugiej listy.
-Tresc: Dostajesz dwie listy liczb calkowitych. Stworz slownik, w ktorym kluczami beda elementy pierwszej listy, a wartosciami elementy drugiej listy. Jesli listy sa roznej dlugosci, zwroc pusty slownik.
-Dane wejsciowe: Dwie listy liczb calkowitych.
-Dane wyjsciowe: Slownik z kluczami i wartosciami bedacymi liczbami calkowitymi.
+Tytul: Anagramy w tekscie
+Otrzymujesz tekst w postaci napisu. Twoim zadaniem jest znalezienie wszystkich slow, w ktorych te same znaki wystepuja te sama liczbe razy. Innymi slowy, szukasz anagramow w tekscie. Nalezy zignorowac roznice miedzy malymi i wielkimi literami. Pamietaj, ze slowa skladaja sie wylacznie z liter.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Lista list napisow.
 Przyklad:
-Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], slownik powinien wygladac nastepujaco: {3: 1, 5: 2, 8: -1}.
+Dla otrzymanego napisu:
+"To absurd, ze tyran Brudas, ten straszliwy bandzior sprawuje rzady w tym kraju. Burza nad galeria i alergia na narty to zadna zbrodnia jak bandzior i jego arbuz.",
+powinna zostac zwrocona lista:
+[["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]].
 
 """
 

@@ -1,10 +1,10 @@
 /*
-Tytul: Czy srednia elementow znajduje sie w liscie?
-Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby calkowitej jako
-klucza, usun pierwsze wystapienie klucza w liscie. Dane wejsciowe: Lista liczb
-calkowitych i liczba calkowita jako klucz. Dane wyjsciowe: Lista liczb
-calkowitych bez pierwszego wystapienia klucza. Przyklad: Dla otrzymanej listy
-[6, 2, 1, 4, 27] oraz 4 powinna zostac zwrocona lista [6, 2, 1, 27].
+Tytul: Znalezienie elementu bez pary w liscie liczb calkowitych.
+Tresc: Dla otrzymanej listy liczb calkowitych, skladajacej sie z nieparzystej liczby elementow, znajdz element, ktory nie ma pary o tej samej wartosci.
+Dane wejsciowe: Lista liczb calkowitych.
+Dane wyjsciowe: Liczba calkowita.
+Przyklad:
+Dla otrzymanej listy: [1, 3, 1, 7, 3, 1, 1] zostanie zwrocona liczba: 7.
 
 */
 #include <algorithm>

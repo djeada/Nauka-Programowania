@@ -1,9 +1,16 @@
 /*
-Tytul: Policz wystapienia znaku.
-Tresc: Dla podanego napisu i znaku, znajdz liczbe wystapien tego znaku w
-napisie. Dane wejsciowe: Napis oraz znak. Dane wyjsciowe: Liczba naturalna.
+Tytul: Znajdz najdluzsze/najkrotsze slowo w zdaniu.
+Tresc: Otrzymasz napis reprezentujacy zdanie. Znajdz:
+a) najdluzsze slowo w zdaniu,
+b) najkrotsze slowo w zdaniu.
+Jesli wiecej niz jedno slowo ma ekstremalna dlugosc, zwroc to slowo sposrod nich, ktore wystepuje w zdaniu jako pierwsze. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
+Dane wejsciowe: Napis.
+Dane wyjsciowe:
+a) Napis.
+b) Napis.
 Przyklad:
-Dla otrzymanego napisu: "klamra" oraz znaku 'a', powinno zostac zwrocone: 2.
+a) Dla otrzymanego napisu: "Kaczka lubi wiosne.", powinno zostac zwrocone: "Kaczka".
+b) Dla otrzymanego napisu: "Kaczka lubi wiosne.", powinno zostac zwrocone: "lubi".
 
 */
 #include <algorithm>

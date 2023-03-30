@@ -1,13 +1,10 @@
 """
-Tytul: Liczba zer i jedynek w reprezentacji binarnej.
-Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej.
-a) Oblicz, ile zer zawiera binarna reprezentacja otrzymanej liczby.
-b) Oblicz, ile jedynek zawiera binarna reprezentacja otrzymanej liczby.
-Dane wejsciowe: Liczba naturalna w obu podpunktach.
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
+Tytul: Najdluzszy ciag zer w liczbie binarnej.
+Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Oblicz dlugosc najdluzszego ciagu zer w jej reprezentacji binarnej.
+Dane wejsciowe: Liczba naturalna.
+Dane wyjsciowe: Liczba naturalna.
 Przyklad:
-a) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 0.
-b) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 2.
+Dla otrzymanej liczby 14, powinna zostac zwrocona liczba 1.
 
 """
 

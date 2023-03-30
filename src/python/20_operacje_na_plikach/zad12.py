@@ -1,8 +1,8 @@
 """
-Tytul: Wczytaj i wypisz tresc pliku.
-Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Wczytaj plik i wypisz jego tresc.
-Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
-Dane wyjsciowe: Napis zawierajacy tresc pliku.
+Tytul: Przesun wszystkie pliki CSV do jednego folderu.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Przenies wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderow) do drugiego folderu.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
+Dane wyjsciowe: Brak.
 
 """
 

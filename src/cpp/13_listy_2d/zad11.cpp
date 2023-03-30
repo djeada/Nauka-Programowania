@@ -1,12 +1,14 @@
 /*
-Tytul: Macierz z parami elementow odpowiadajacych sobie z dwoch list.
-Tresc: Dla otrzymanych dwoch list, stworz dwukolumnowa macierz, ktorej pierwsza
-kolumna sklada sie z elementow pierwszej listy, a druga kolumna z elementow
-drugiej listy. Jesli otrzymane listy nie sa rownej dlugosci, zwroc pusta
-macierz. Dane wejsciowe: Dwie listy. Dane wyjsciowe: Lista list liczb
-naturalnych lub pusta macierz (w przypadku nierownych dlugosci list). Przyklad:
-Dla otrzymanych dwoch list: [3, 5, 2] oraz [2, 8, 1], powinna zostac zwrocona
-macierz: [[3, 2], [5, 8], [2, 1]
+Tytul: Gra w statki
+Tresc: Napisz program implementujacy gre w statki.
+Stworz macierz o wymiarach 10x10. Wylosuj polozenia statkow i zapisz je w macierzy. Do dyspozycji masz nastepujace statki:
+* 1 statek o dlugosci 4
+* 2 statki o dlugosci 3
+* 3 statki o dlugosci 2
+* 5 statkow o dlugosci 1
+Kazde pole moze zawierac tylko jeden statek.
+Wypisz na standardowe wyjscie plansze zlozona z 10x10 kropek i popros uzytkownika o podanie wspolrzednych. Jesli na podanych przez uzytkownika wspolrzednych znajduje sie statek, zamien kropke na litere o na planszy. W przeciwnym razie, zamien kropke na litere x.
+Powtarzaj krok 2, az wszystkie pozycje statkow zostana odkryte przez uzytkownika lub az na planszy pojawi sie 10 liter x. W obu przypadkach zakoncz gre i poinformuj uzytkownika o wyniku.
 
 */
 #include <cassert>

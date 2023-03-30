@@ -1,18 +1,27 @@
 /*
-Tytul: Sprawdz poprawnosc hasla.
-Tresc: Masz napis reprezentujacy haslo. Sprawdz, czy haslo spelnia nastepujace
-warunki:
-1. Haslo musi zawierac przynajmniej jedna mala litere [a-z].
-2. Haslo musi zawierac przynajmniej jedna duza litere [A-Z].
-3. Haslo musi zawierac przynajmniej jedna cyfre [0-9].
-4. Haslo musi zawierac przynajmniej jeden znak specjalny [! # $ % & ' * + — / =
-? ^ _ ` { | } ~].
-5. Minimalna dlugosc hasla to 8 znakow.
-6. Maksymalna dlugosc hasla to 20 znakow.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Wartosc logiczna.
+Tytul: Podmien napisy z listy A na napisy z listy B.
+Tresc: Dostajesz napis oraz dwie listy napisow. Zastap napisy z pierwszej listy w pierwszym napisie odpowiadajacymi im napisami z drugiej listy.
+Dane wejsciowe: Napis oraz dwie listy napisow.
+Dane wyjsciowe: Napis.
 Przyklad:
-Dla napisu: “abc1234”, powinna zostac zwrocona wartosc logiczna: Falsz.
+Dla podanych danych:
+> 'Every mile was tilted at seven or.
+Wished her entire esteem mr oh by.
+He prevents requests by if in pleased.
+Picture too and concerned was comforting.
+Ten difficult resembled eagerness nor.
+Same park bore on be.
+Warmth his law design says he is a person.
+Pronunciation suspected in belonging conveying ye repulsive.
+oraz ['or', 'be', 'he'] i ['and', 'off', 'she'], powinien zostac zwrocony napis:
+> Every mile was tilted at seven and.
+Wished her entire esteem mr oh by.
+She prevents requests by if in pleased.
+Picture too and concerned was comforting.
+Ten difficult resembled eagerness nor.
+Same park bore on and off.
+Warmth his law design says she is a person.
+Pronunciation suspected in belonging conveying ye repulsive.
 
 */
 

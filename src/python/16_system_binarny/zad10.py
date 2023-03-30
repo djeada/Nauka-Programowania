@@ -1,13 +1,10 @@
 """
-Tytul:  Konwersja warunkowa.
-Tresc: Otrzymujesz liczbe naturalna. Zwroc reprezentacje binarna otrzymanej liczby, jesli:
-a) Otrzymana liczba jest liczba parzysta.
-b) Otrzymana liczba jest liczba pierwsza.
-Dane wejsciowe: Liczba naturalna w obu podpunktach.
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
+Tytul: Zamien A na B.
+Tresc: Otrzymujesz dwie liczby naturalne. Oblicz, ile bitow nalezy odwrocic, aby zamienic liczbe A na liczbe B.
+Dane wejsciowe: Dwie liczby naturalne.
+Dane wyjsciowe: Liczba naturalna.
 Przyklad:
-a) Dla otrzymanej liczby: 7, nie powinna zostac zwrocona zadna liczba.
-b) Dla otrzymanej liczby: 7, powinna zostac zwrocona liczba: 111.
+Dla otrzymanych liczb 34 i 73, powinna zostac zwrocona liczba 5.
 
 """
 

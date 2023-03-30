@@ -1,11 +1,10 @@
 /*
-Tytul: Usun duplikaty.
-Tresc: Otrzymujesz liste liczb naturalnych. Usun z niej wszystkie duplikaty, tak
-aby kazda liczba pozostala tylko raz. Dane wejsciowe: Lista liczb naturalnych.
-Dane wyjsciowe: Lista liczb naturalnych.
+Tytul: Znalezienie wszystkich par elementow listy o sumie rownej podanej liczbie.
+Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x, znajdz wszystkie pary elementow listy, ktorych suma jest rowna x.
+Dane wejsciowe: Lista liczb calkowitych oraz liczba calkowita.
+Dane wyjsciowe: Lista par liczb calkowitych.
 Przyklad:
-Dla otrzymanej listy: [3, 2, 1, 3, 2, 2], powinna zostac zwrocona lista: [3, 2,
-1].
+Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5, zostana zwrocone wszystkie pary elementow o sumie rownej 5: [(1, 4), (2, 3)].
 
 */
 #include <algorithm>

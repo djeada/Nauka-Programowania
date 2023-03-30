@@ -1,10 +1,10 @@
 """
-Tytul:Wypisz pionowo slowa, z ktorych sklada sie zdanie.
-Tresc: Otrzymasz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe. Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Kilka napisow.
+Tytul: Odleglosc Hamminga.
+Tresc: Otrzymujesz dwa napisy o rownej dlugosci. Oblicz odleglosc Hamminga miedzy dwoma otrzymanymi napisami. Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej dlugosci, zdefiniowana jako liczba pozycji, na ktorych napisy maja rozne znaki.
+Dane wejsciowe: Dwa napisy.
+Dane wyjsciowe: Liczba naturalna.
 Przyklad:
-Dla otrzymanego napisu: "Ala ma kota", powinno zostac wypisane: "Ala", "ma", "kota".
+Dla otrzymanych napisow: “adam” i “axam”, powinna zostac zwrocona liczba: 1.
 
 """
 

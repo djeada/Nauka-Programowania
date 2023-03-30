@@ -1,10 +1,10 @@
 """
-Tytul: Liczba mniejsza od najwiekszej i wieksza od wszystkich pozostalych.
-Tresc: Otrzymujesz liste liczb naturalnych. Znajdz najwieksza i druga co do wielkosci liczbe w liscie, a nastepnie oblicz srednia arytmetyczna tych dwoch liczb i zwroc ja jako liczbe zmiennoprzecinkowa.
+Tytul: Znalezienie elementu dominujacego w liscie liczb naturalnych.
+Tresc: Dla dostarczonej listy liczb naturalnych, znajdz element, ktory wystepuje w niej wiecej niz polowa jej dlugosci. Jesli taki element nie istnieje, zwroc -1.
 Dane wejsciowe: Lista liczb naturalnych.
-Dane wyjsciowe: Liczba zmiennoprzecinkowa oznaczajaca srednia arytmetyczna najwiekszej i drugiej co do wielkosci liczby z listy.
+Dane wyjsciowe: Liczba naturalna.
 Przyklad:
-Dla otrzymanej listy [9, 2, 3, 2, 1, 7] powinna zostac zwrocona liczba 8.0.
+Dla otrzymanej listy: [4, 7, 4, 4, 2] zostanie zwrocona liczba: 4.
 
 """
 

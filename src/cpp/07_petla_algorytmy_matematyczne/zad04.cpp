@@ -1,0 +1,39 @@
+/*
+Tytul: Silnia.
+Tresc: Napisz funkcje, ktora obliczy silnie otrzymanej liczby naturalnej, przy pomocy petli.
+Dane wejsciowe: liczba naturalna
+Dane wyjsciowe: liczba naturalna
+Przyklad:
+Dla otrzymanej liczby 3, funkcja powinna zwrocic liczbe 6.
+
+*/
+#include <cassert>
+
+int silnia(int liczba) {
+
+  int wynik = 1;
+
+  while (liczba > 0) {
+    wynik *= liczba;
+    liczba--;
+  }
+
+  return wynik;
+}
+
+void testSilnia() {
+  assert(silnia(0) == 1);
+  assert(silnia(1) == 1);
+  assert(silnia(2) == 2);
+  assert(silnia(3) == 6);
+  assert(silnia(4) == 24);
+  assert(silnia(5) == 120);
+}
+
+int main() {
+
+  testSilnia();
+
+  return 0;
+}
+

@@ -1,10 +1,10 @@
 """
-Tytul: Zamien znaki na kody ASCII.
-Tresc: Otrzymasz napis. Zmien wszystkie znaki w napisie na odpowiadajace im numery w tablicy ASCII. Zastap otrzymany napis napisem skladajacym sie z otrzymanych numerow, oddzielonych przecinkami.
+Tytul: Slowa ze zdania jako osobne elementy listy.
+Tresc: Otrzymujesz napis reprezentujacy zdanie. Zwroc liste slow zdania. Znaki interpunkcyjne nie sa liczone jako slowa.
 Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
+Dane wyjsciowe: Lista napisow.
 Przyklad:
-Dla otrzymanego napisu: "Robot", powinien zostac zwrocony napis: "82, 111, 98, 111, 116".
+Dla otrzymanego napisu: “Ala ma kota”, powinna zostac zwrocona lista: [“Ala”, “ma”, “kota”].
 
 """
 import string

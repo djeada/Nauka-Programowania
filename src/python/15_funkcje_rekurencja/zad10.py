@@ -1,10 +1,10 @@
 """
-Tytul: Suma liczb naturalnych mniejszych od N.
-Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz sume liczb naturalnych mniejszych od N.
+Tytul: Gra.
+Tresc: W grze, w kazdym ruchu gracz moze zdobyc 3, 5 lub 10 punktow. Oblicz przy uzyciu rekurencji, ile sposobow istnieje, aby gracz wygral gre, gdy ma do dyspozycji N punktow.
 Dane wejsciowe: Liczba naturalna N.
 Dane wyjsciowe: Liczba naturalna.
 Przyklad:
-Dla N = 10, powinna zostac zwrocona liczba: 55.
+Dla N = 20, powinna zostac zwrocona liczba: 4.
 
 """
 

@@ -1,10 +1,10 @@
 /*
-Tytul: Czy napis sklada sie wylacznie z cyfr?
-Tresc: Masz napis. Sprawdz, czy sklada sie on wylacznie z cyfr.
+Tytul: Nazwa pliku bez rozszerzenia.
+Tresc: Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj z niego nazwe pliku wraz z rozszerzeniem. Zwroc sama nazwe pliku bez rozszerzenia.
 Dane wejsciowe: Napis.
-Dane wyjsciowe: Wartosc logiczna.
+Dane wyjsciowe: Napis.
 Przyklad:
-Dla napisu: “1234”, powinna zostac zwrocona wartosc logiczna: Prawda.
+Dla otrzymanego napisu "C:\my-long\path_directory\file.html", powinna zostac zwrocona nazwa pliku bez rozszerzenia "file".
 
 */
 

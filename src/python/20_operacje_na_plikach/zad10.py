@@ -1,8 +1,8 @@
 """
-Tytul: Znalezienie w folderze wszystkich plikow z danym rozszerzeniem
-Tresc: Otrzymujesz dwa napisy. Pierwszy napis to sciezka folderu, a drugi to rozszerzenie szukanych plikow. Znajdz w folderze wszystkie pliki o podanym rozszerzeniu i zapisz ich nazwy w liscie.
-Dane wejsciowe: Dwa napisy
-Dane wyjsciowe: Lista napisow
+Tytul: Skopiuj pliki.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Skopiuj wszystkie pliki PNG z pierwszego folderu do drugiego folderu.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
+Dane wyjsciowe: Brak.
 
 """
 

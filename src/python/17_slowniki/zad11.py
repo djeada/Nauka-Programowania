@@ -1,9 +1,11 @@
 """
-Tytul: Klucz to imie, wartosc lista wypozyczonych ksiazek.
-Tresc: Zbuduj prosta baze danych dla biblioteki oparta o slownik, w ktorym kluczami sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek. Baza danych powinna umozliwiac:
-1. Dodanie wypozyczonej ksiazki do danego czytelnika.
-2. Zwrocenie wypozyczonej ksiazki przez czytelnika.
-3. Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
+Tytul: Sortowanie wzgledem kluczy/wartosci
+Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych. Twoim zadaniem jest wypisanie par posortowanych wzgledem napisow oraz wzgledem liczb.
+Dane wejsciowe: Slownik par: napis, liczba calkowita.
+Dane wyjsciowe: Lista par.
+Przyklad:
+Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)].
+Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("c", 3), ("b", 4), ("x", 5)].
 
 """
 

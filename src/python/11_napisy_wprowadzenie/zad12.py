@@ -1,10 +1,10 @@
 """
-Tytul: Zamien wszystkie male litery na duze.
-Tresc: Otrzymasz napis. Zmien wszystkie male litery na duze.
+Tytul: Usun spacje ze zdania.
+Tresc: Otrzymasz napis reprezentujacy zdanie. Usun spacje ze zdania.
 Dane wejsciowe: Napis.
 Dane wyjsciowe: Napis.
 Przyklad:
-Dla otrzymanego napisu: "Rumcajs", powinien zostac zwrocony napis: "RUMCAJS".
+Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "Alamakota".
 
 """
 

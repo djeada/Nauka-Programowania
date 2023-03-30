@@ -1,13 +1,10 @@
 """
-Tytul: Polaczenie dwoch list.
-Tresc: Dla otrzymanych dwoch list, zwroc liste, ktora powstala poprzez:
-a) Dostawienie drugiej listy na koniec pierwszej listy.
-b) Wstawienie elementow o indeksach parzystych z drugiej listy na odpowiadajace im indeksy pierwszej listy.
-Dane wejsciowe: Dwie listy.
-Dane wyjsciowe: Lista.
+Tytul: Znajdz mediane dwoch posortowanych list.
+Tresc: Otrzymujesz dwie posortowane listy liczb calkowitych rownej dlugosci. Znajdz ich mediane.
+Dane wejsciowe: Dwie listy liczb calkowitych o rownej dlugosci.
+Dane wyjsciowe: Liczba zmiennoprzecinkowa.
 Przyklad:
-Dla otrzymanych list [1, 2, 3] oraz [4, 5, 6], w podpunkcie a) powinna zostac zwrocona lista: [1, 2, 3, 4, 5, 6].
-W podpunkcie b) powinna zostac zwrocona lista: [4, 2, 6, 3].
+Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinno zostac zwrocone: 4.5.
 
 """
 

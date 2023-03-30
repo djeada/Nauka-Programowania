@@ -1,14 +1,10 @@
 /*
-Tytul: Znajdz najdluzsze/najkrotsze slowo w zdaniu.
-Tresc: Otrzymasz napis reprezentujacy zdanie. Znajdz:
-a) najdluzsze slowo w zdaniu,
-b) najkrotsze slowo w zdaniu.
-Jesli wiecej niz jedno slowo ma ekstremalna dlugosc, zwroc to slowo sposrod
-nich, ktore wystepuje w zdaniu jako pierwsze. Znaki interpunkcyjne nie sa
-uwzgledniane jako slowa. Dane wejsciowe: Napis. Dane wyjsciowe: a) Napis. b)
-Napis. Przyklad: a) Dla otrzymanego napisu: "Kaczka lubi wiosne.", powinno
-zostac zwrocone: "Kaczka". b) Dla otrzymanego napisu: "Kaczka lubi wiosne.",
-powinno zostac zwrocone: "lubi".
+Tytul: Odwroc slowa w zdaniu.
+Tresc: Otrzymujesz napis reprezentujacy zdanie. Zamien slowa zdania na te same napisy zapisane wspak. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Napis.
+Przyklad:
+Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "ala mak otak".
 
 */
 #include <algorithm>

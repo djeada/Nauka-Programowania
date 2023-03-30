@@ -1,9 +1,10 @@
 /*
-Tytul: Z ilu slow sklada sie zdanie?
-Tresc: Zlicz, ile slow sklada sie z podanego zdania. Znaki interpunkcyjne nie sa
-brane pod uwage jako slowa. Dane wejsciowe: Napis. Dane wyjsciowe: Liczba
-naturalna. Przyklad: Dla otrzymanego napisu: "gram na pianinie.", powinno zostac
-zwrocone: 3.
+Tytul: Srednia dlugosc slow w zdaniu.
+Tresc: Otrzymasz napis reprezentujacy zdanie. Oblicz srednia dlugosc slow w zdaniu. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
+Dane wejsciowe: Napis.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanego napisu: "Zepsuty rower.", powinna zostac zwrocona liczba: 6.
 
 */
 #include <algorithm>

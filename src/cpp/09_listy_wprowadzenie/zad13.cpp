@@ -1,15 +1,10 @@
 /*
-Tytul: Zmodyfikuj elementy spelniajace warunek.
-Tresc: Otrzymujesz liste liczb calkowitych. W wyniku wykonania ponizszych
-polecen otrzymasz nowa liste: a) Zwieksz o 1 wszystkie elementy o parzystych
-indeksach (indeksy zaczynaja sie od 0). b) Wyzeruj wszystkie elementy bedace
-wielokrotnosciami liczby 3. c) Podnies do kwadratu wszystkie elementy mniejsze
-niz 10. d) Wstaw sume wszystkich elementow otrzymanej listy na indeksy bedace
-liczbami pierwszymi. e) Zamien kazdy element na iloczyn wszystkich elementow
-listy poza nim samym. Dane wejsciowe: Lista liczb calkowitych. Dane wyjsciowe:
-Lista liczb calkowitych. Przyklad: Dla otrzymanej listy [5, 7, 9, 4, 2]: a)
-Wynik: [5, 8, 9, 5, 2] b) Wynik: [5, 0, 0, 5, 2] c) Wynik: [25, 0, 0, 25, 4] d)
-Wynik: [37, 0, 0, 25, 4] e) Wynik: [2592, 0, 0, 36, 1080]
+Tytul: Znalezienie brakujacego elementu w liscie.
+Tresc: Dla dostarczonej listy, skladajacej sie z nieuporzadkowanych kolejnych (oprocz jednego) elementow ciagu arytmetycznego, znajdz brakujacy element.
+Dane wejsciowe: Lista zawierajaca liczby naturalne.
+Dane wyjsciowe: Liczba naturalna.
+Przyklad:
+Dla otrzymanej listy: [5, 2, 1, 3] zostanie zwrocona liczba: 4.
 
 */
 #include <algorithm>

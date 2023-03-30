@@ -1,10 +1,10 @@
 """
-Tytul: Macierz kwadratowa, z elementami bedacymi iloczynem wspolrzednych.
-Tresc: Dla otrzymanej liczby naturalnej n, stworz macierz kwadratowa o rozmiarze n x n, ktorej kazdy element jest iloczynem jego wspolrzednych.
-Dane wejsciowe: Liczba naturalna n.
-Dane wyjsciowe: Lista list liczb naturalnych.
+Tytul: Obroc macierz o 90 stopni.
+Tresc: Otrzymujesz macierz skladajaca sie z liczb naturalnych. Obroc ja o 90 stopni. Tzn. zamien miejscami ostatnia kolumne z ostatnim wierszem, przedostatnia kolumne z przedostatnim wierszem itd.
+Dane wejsciowe: Macierz skladajaca sie z liczb naturalnych.
+Dane wyjsciowe: Macierz skladajaca sie z liczb naturalnych.
 Przyklad:
-Dla otrzymanej liczby 3 powinna zostac zwrocona macierz: [[0, 0, 0], [0, 1, 2], [0, 2, 4]].
+Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona macierz: [[7,4,1], [8,5,2], [9,6,3]].
 
 """
 

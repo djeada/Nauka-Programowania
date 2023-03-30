@@ -1,8 +1,8 @@
 """
-Tytul: Znalezienie sciezki pliku o danej nazwie
-Tresc: Otrzymujesz napis reprezentujacy nazwe pliku. Przeszukaj caly system i zapisz w liscie wszystkie sciezki plikow o podanej nazwie.
-Dane wejsciowe: Napis
-Dane wyjsciowe: Lista napisow
+Tytul: Podmien tresci plikow.
+Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do plikow. Podmien tresci obu plikow.
+Dane wejsciowe: Dwa napisy reprezentujace sciezki do plikow.
+Dane wyjsciowe: Brak.
 
 """
 
