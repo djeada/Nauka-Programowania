@@ -1,4 +1,3 @@
-
 ## Napisy — trudne
 
 ### Zad 1. (★★☆)
