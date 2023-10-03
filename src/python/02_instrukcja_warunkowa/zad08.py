@@ -19,4 +19,3 @@ if __name__ == "__main__":
 
     else:
         print("z podanych bokow nie mozna zbudowac trojkata")
-

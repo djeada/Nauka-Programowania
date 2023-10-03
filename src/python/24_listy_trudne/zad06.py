@@ -15,6 +15,7 @@ powinna zostac zwrocona lista: [-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 3
 
 import heapq
 
+
 class Node(object):
     def __init__(self, wartosc: int, i: int, indeks: int):
         self.wartosc = wartosc
@@ -23,6 +24,7 @@ class Node(object):
 
     def __lt__(self, inny):
         return self.wartosc < inny.wartosc
+
 
 # Zlozonosc czasowa: O(nlogm)
 # Zalozenie pop/push O(logm)
@@ -46,9 +48,11 @@ def polacz_listy_v1(lista):
 
     return wynik
 
+
 # Zlozonosc czasowa: O(n^2)
 def polacz_listy_v2(lista):
     return sorted([x for y in lista for x in y])
+
 
 # Testy Poprawnosci
 def test_1():
@@ -58,12 +62,14 @@ def test_1():
     assert polacz_listy_v1(lista) == wynik
     assert polacz_listy_v2(lista) == wynik
 
+
 def test_2():
     lista = [[1, 2, 3], [4, 5, 6]]
     wynik = [1, 2, 3, 4, 5, 6]
 
     assert polacz_listy_v1(lista) == wynik
     assert polacz_listy_v2(lista) == wynik
+
 
 def test_3():
     lista = [[]]
@@ -72,11 +78,12 @@ def test_3():
     assert polacz_listy_v1(lista) == wynik
     assert polacz_listy_v2(lista) == wynik
 
+
 def main():
     test_1()
     test_2()
     test_3()
 
+
 if __name__ == "__main__":
     main()
-

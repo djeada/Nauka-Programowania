@@ -16,4 +16,3 @@ if __name__ == "__main__":
     while liczba > 0:
         print(liczba % 10)
         liczba = liczba // 10
-

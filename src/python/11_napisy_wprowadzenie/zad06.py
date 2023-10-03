@@ -8,8 +8,10 @@ Dla otrzymanego napisu: "Latarnik", powinien zostac zwrocony napis: "L?t?rnik".
 
 """
 
+
 def zamien_litery_a_na_znaki_zapytania(napis):
     return napis.replace("a", "?")
+
 
 def test_zamien_litery_a_na_znaki_zapytania():
     assert zamien_litery_a_na_znaki_zapytania("ala ma kota") == "?l? m? kot?"
@@ -18,6 +20,6 @@ def test_zamien_litery_a_na_znaki_zapytania():
         == "?l? m? kot? ? kot m? ?le"
     )
 
+
 if __name__ == "__main__":
     test_zamien_litery_a_na_znaki_zapytania()
-

@@ -8,6 +8,7 @@ Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona ma
 
 """
 
+
 def obroc_o_90(macierz):
     """
     Funkcja obraca macierz o 90 stopni.
@@ -36,12 +37,13 @@ def obroc_o_90(macierz):
 
     return macierz
 
+
 def test_obroc_o_90():
     macierz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     wynik = [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
     assert obroc_o_90(macierz) == wynik
 
+
 if __name__ == "__main__":
 
     test_obroc_o_90()
-

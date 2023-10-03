@@ -8,6 +8,7 @@ Dla otrzymanej listy [6, 2, 1, 4, 27] oraz 4 powinna zostac zwrocona lista [6, 2
 
 """
 
+
 def czy_srednia_w_liscie(lista):
 
     if not lista:
@@ -20,12 +21,13 @@ def czy_srednia_w_liscie(lista):
     else:
         return round(srednia, 0) in lista
 
+
 def test_czy_srednia_w_liscie_dla_pustej_listy():
     assert not czy_srednia_w_liscie([])
     assert czy_srednia_w_liscie([1, 2, 3])
     assert czy_srednia_w_liscie([-5, 7, 2, 3, -1, 4])
 
+
 if __name__ == "__main__":
 
     test_czy_srednia_w_liscie_dla_pustej_listy()
-

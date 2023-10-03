@@ -4,6 +4,7 @@ Tresc: Napisz klase Czlowiek oraz klasy pochodne Student i StudentFizyki. Czlowi
 
 """
 
+
 class Czlowiek:
     def __init__(self, imie, nazwisko, miejsce_urodzenia, zawod):
         self.imie = imie
@@ -28,6 +29,7 @@ class Czlowiek:
     def __ne__(self, other):
         return not self.__eq__(other)
 
+
 class Student(Czlowiek):
     def __init__(
         self, imie, nazwisko, miejsce_urodzenia, numer_albumu, kierunek_studiow
@@ -51,6 +53,7 @@ class Student(Czlowiek):
 
     def __ne__(self, other):
         return not self.__eq__(other)
+
 
 class StudentFizyki(Student):
     def __init__(
@@ -82,6 +85,7 @@ class StudentFizyki(Student):
     def __ne__(self, other):
         return not self.__eq__(other)
 
+
 if __name__ == "__main__":
 
     czlowiek = Czlowiek("Jan", "Kowalski", "Warszawa", "programista")
@@ -91,4 +95,3 @@ if __name__ == "__main__":
     print(czlowiek)
     print(student)
     print(student_fizyki)
-

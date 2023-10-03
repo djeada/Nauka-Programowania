@@ -14,16 +14,19 @@ n
 
 """
 
+
 def wypisz_poziomo(napis, k):
     for i in range(len(napis)):
         if i % k == 0:
             print(napis[i], end=" ")
     print()
 
+
 def wypisz_pionowo(napis, k):
     for i in range(len(napis)):
         if i % k == 0:
             print(napis[i])
+
 
 if __name__ == "__main__":
 
@@ -35,4 +38,3 @@ if __name__ == "__main__":
 
     print("Napis wypisany pionowo: ")
     wypisz_pionowo(napis, k)
-

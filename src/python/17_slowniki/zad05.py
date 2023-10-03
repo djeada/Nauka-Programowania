@@ -14,6 +14,7 @@ zostanie zwrocony napis: “Barnaba Barabash”.
 
 """
 
+
 def pracownik_z_najwiekszym_zyskiem(lista_par):
     """
     Funkcja zwraca napis reprezentujacy imie i nazwisko pracownika, ktory
@@ -28,6 +29,7 @@ def pracownik_z_najwiekszym_zyskiem(lista_par):
             zyski[para[0]] = para[1]
 
     return max(zyski, key=zyski.get)
+
 
 def test_pracownik_z_najwiekszym_zyskiem():
 
@@ -44,7 +46,7 @@ def test_pracownik_z_najwiekszym_zyskiem():
         == "Barnaba Barabash"
     )
 
+
 if __name__ == "__main__":
 
     test_pracownik_z_najwiekszym_zyskiem()
-

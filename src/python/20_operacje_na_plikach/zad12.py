@@ -8,12 +8,14 @@ Dane wyjsciowe: Brak.
 
 import pathlib
 
+
 def przenies_pliki_csv(folder_1, folder_2):
     """
     Funkcja przenosi pliki csv z folderu folder_1 do folderu folder_2.
     """
     for plik in pathlib.Path(folder_1).glob("**/*.csv"):
         plik.rename(pathlib.Path(folder_2) / plik.name)
+
 
 def test_przenies_pliki_csv():
 
@@ -43,7 +45,7 @@ def test_przenies_pliki_csv():
 
     shutil.rmtree("test_1")
 
+
 if __name__ == "__main__":
 
     test_przenies_pliki_csv()
-

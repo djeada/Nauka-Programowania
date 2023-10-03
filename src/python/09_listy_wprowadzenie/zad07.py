@@ -8,6 +8,7 @@ Dla otrzymanej listy [9, 2, 3, 2, 1, 7] powinna zostac zwrocona liczba 8.0.
 
 """
 
+
 def srednia_dwoch_najwiekszych(lista):
 
     if len(lista) < 2:
@@ -17,6 +18,7 @@ def srednia_dwoch_najwiekszych(lista):
     najwieksza_druga = max(lista[: lista.index(najwieksza)])
     srednia = (najwieksza + najwieksza_druga) / 2
     return srednia
+
 
 def test_srednia_dwoch_najwiekszych():
 
@@ -29,7 +31,7 @@ def test_srednia_dwoch_najwiekszych():
         == 6.5
     )
 
+
 if __name__ == "__main__":
 
     test_srednia_dwoch_najwiekszych()
-

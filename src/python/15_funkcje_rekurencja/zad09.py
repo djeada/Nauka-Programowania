@@ -8,6 +8,7 @@ Dla otrzymanego napisu: "reflektor", powinna zostac zwrocona wartosc logiczna: P
 
 """
 
+
 def znajdz(slowo, litera, pozycja=0):
     """
     Funkcja zwraca indeks pierwszego wystapienia litera w slowie.
@@ -17,6 +18,7 @@ def znajdz(slowo, litera, pozycja=0):
     if slowo[pozycja] == litera:
         return pozycja
     return znajdz(slowo, litera, pozycja + 1)
+
 
 def czy_slowo_elfickie(napis, elf="elf"):
     """
@@ -36,12 +38,13 @@ def czy_slowo_elfickie(napis, elf="elf"):
 
     return czy_slowo_elfickie(napis[:pozycja] + napis[pozycja + 1 :], elf[1:])
 
+
 def test_czy_slowo_elfickie():
     assert czy_slowo_elfickie("elf")
     assert czy_slowo_elfickie("reflektor")
     assert not czy_slowo_elfickie("elzbieta")
 
+
 if __name__ == "__main__":
 
     test_czy_slowo_elfickie()
-

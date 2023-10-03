@@ -39,4 +39,3 @@ if __name__ == "__main__":
         suma += i + 2 ** i
 
     print(suma)
-

@@ -48,4 +48,3 @@ if __name__ == "__main__":
             liczba_dni += 1
 
     print(f"Od poczatku roku uplynelo: {liczba_dni}")
-

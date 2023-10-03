@@ -31,6 +31,7 @@ def przygotuj_tablice():
 
     return [_ustawione_bity(x) for x in range(256)]
 
+
 # Zlozonosc czasowa O(1)
 # Zlozonosc pamieciowa O(1)
 def ustawione_bity(tablica, n):
@@ -44,6 +45,7 @@ def ustawione_bity(tablica, n):
         + tablica[(n >> 24) & 0xFF]
     )
 
+
 def test_ustawione_bity():
     tablica = przygotuj_tablice()
     assert ustawione_bity(tablica, 0) == 0
@@ -51,7 +53,7 @@ def test_ustawione_bity():
     assert ustawione_bity(tablica, 9832) == 6
     assert ustawione_bity(tablica, 10000) == 5
 
+
 if __name__ == "__main__":
 
     test_ustawione_bity()
-

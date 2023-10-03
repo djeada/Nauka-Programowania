@@ -25,4 +25,3 @@ if __name__ == "__main__":
         print("Liczba jest poprawnym numerem miesiaca.")
     else:
         print("Liczba nie jest poprawnym numerem miesiaca.")
-

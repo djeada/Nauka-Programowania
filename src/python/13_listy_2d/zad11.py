@@ -15,6 +15,7 @@ Powtarzaj krok 2, az wszystkie pozycje statkow zostana odkryte przez uzytkownika
 import enum
 import random
 
+
 class Stale(enum.Enum):
     """
     Stale uzywane do reprezentacji stanu gry na planszy.
@@ -22,6 +23,7 @@ class Stale(enum.Enum):
 
     puste_pule = enum.auto()
     statek = enum.auto()
+
 
 class Symbole:
     """
@@ -33,6 +35,7 @@ class Symbole:
     chybiony_statek = "o"
     zatopiony_statek = "x"
 
+
 def inicjalizuj_plansze(znak, n=10):
     """
     Funkcja inicjalizujaca plansze gry.
@@ -43,6 +46,7 @@ def inicjalizuj_plansze(znak, n=10):
         for _ in range(n):
             plansza[i].append(znak)
     return plansza
+
 
 def rysuj_plansze(plansza_gracza):
     """
@@ -58,6 +62,7 @@ def rysuj_plansze(plansza_gracza):
         for j in range(len(plansza_gracza)):
             print(plansza_gracza[i][j], end=" ")
         print()
+
 
 def rysuj_obie_plansze(plansza_gracza, widoczna_plansza_komputera):
     """
@@ -79,6 +84,7 @@ def rysuj_obie_plansze(plansza_gracza, widoczna_plansza_komputera):
             print(plansza_gracza[i][j], end=" ")
         print(widoczna_plansza_komputera[i], end=" ")
         print()
+
 
 def rozmiesc_statki_komputera(plansza):
     """
@@ -132,6 +138,7 @@ def rozmiesc_statki_komputera(plansza):
                 liczba_statkow_do_rozmieszczenia -= 1
 
     return plansza
+
 
 def rozmiesc_statki_gracza(plansza):
     """
@@ -216,6 +223,7 @@ def rozmiesc_statki_gracza(plansza):
 
     return plansza
 
+
 def ruch_uzytkownika(widoczna_plansza_komputera, ukryta_plansza_komputera):
     """
     Funkcja wykonujaca ruch uzytkownika.
@@ -229,6 +237,7 @@ def ruch_uzytkownika(widoczna_plansza_komputera, ukryta_plansza_komputera):
         widoczna_plansza_komputera[x][y] = Symbole.chybiony_statek
         print("Pudlo!")
 
+
 def ruch_komputera(plansza_gracza):
     """
     Funkcja wykonujaca ruch komputera.
@@ -240,6 +249,7 @@ def ruch_komputera(plansza_gracza):
     else:
         plansza_gracza[x][y] = Symbole.chybiony_statek
 
+
 def sprawdz_czy_gracz_wygral(widoczna_plansza_komputera, ukryta_plansza_komputera):
     """
     Funkcja sprawdzajaca czy wygral gracz.
@@ -248,11 +258,13 @@ def sprawdz_czy_gracz_wygral(widoczna_plansza_komputera, ukryta_plansza_komputer
         Symbole.zatopiony_statek
     ) == ukryta_plansza_komputera.count(Stale.statek)
 
+
 def sprawdz_czy_komputer_wygral(plansza_gracza):
     """
     Funkcja sprawdzajaca czy wygral komputer.
     """
     return plansza_gracza.count(Symbole.statek) == 0
+
 
 def gra():
     """
@@ -280,7 +292,7 @@ def gra():
     else:
         print("Wygral gracz!")
 
+
 if __name__ == "__main__":
 
     gra()
-

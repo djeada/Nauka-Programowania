@@ -8,6 +8,7 @@ Dla otrzymanego napisu: "Slon", powinna zostac zwrocona lista: ['o', 'n'].
 
 """
 
+
 def czy_pierwsza(liczba):
     if liczba <= 1:
         return False
@@ -16,12 +17,14 @@ def czy_pierwsza(liczba):
             return False
     return True
 
+
 def znaki_na_pozycjach_pierwszych(napis):
     znaki = []
     for i, znak in enumerate(napis):
         if czy_pierwsza(i):
             znaki.append(znak)
     return znaki
+
 
 def test_znaki_na_pozycjach_pierwszych():
     assert znaki_na_pozycjach_pierwszych("abcd") == ["c", "d"]
@@ -35,7 +38,7 @@ def test_znaki_na_pozycjach_pierwszych():
         "e",
     ]
 
+
 if __name__ == "__main__":
 
     test_znaki_na_pozycjach_pierwszych()
-

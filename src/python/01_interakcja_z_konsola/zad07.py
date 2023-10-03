@@ -73,4 +73,3 @@ if __name__ == "__main__":
         " jest rowna ",
         a * b * h,
     )
-

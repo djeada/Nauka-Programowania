@@ -15,6 +15,7 @@ def przesun_zera(lista):
     lista.extend([0] * (pierwotna_dlugosc - len(lista)))
     return lista
 
+
 # Testy Poprawnosci
 def test_1():
     lista = [0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0]
@@ -22,11 +23,13 @@ def test_1():
 
     assert przesun_zera(lista) == wynik
 
+
 def test_2():
     lista = [0, 0, 0, 0]
     wynik = [0, 0, 0, 0]
 
     assert przesun_zera(lista) == wynik
+
 
 def test_3():
     lista = [1, 2, 3, 4, 5, 6]
@@ -34,11 +37,12 @@ def test_3():
 
     assert przesun_zera(lista) == wynik
 
+
 def main():
     test_1()
     test_2()
     test_3()
 
+
 if __name__ == "__main__":
     main()
-

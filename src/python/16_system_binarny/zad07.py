@@ -8,6 +8,7 @@ Dla otrzymanej liczby: 9131, powinna zostac zwrocona liczba: 4951.
 
 """
 
+
 def zamien_sasiadow(liczba):
     """
     Funkcja zamienia sasiadujace bity w binarnym zapisie liczby.
@@ -20,9 +21,10 @@ def zamien_sasiadow(liczba):
 
     return parzyste | nieparzyste
 
+
 def test_zamien_sasiadow():
     assert zamien_sasiadow(9131) == 4951
 
+
 if __name__ == "__main__":
     test_zamien_sasiadow()
-

@@ -13,17 +13,20 @@ powinna zostac zwrocona lista:
 
 import string
 
+
 def podziel_zdanie_na_slowa(zdanie):
     """
     Funkcja zwraca liste slow ze zdania.
     """
     return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
 
+
 def na_male_litery(slowa):
     """
     Funkcja zamienia wielkie litery ze slow z listy slowa na male litery.
     """
     return [slowo.lower() for slowo in slowa]
+
 
 def histogram(napis):
     """
@@ -36,6 +39,7 @@ def histogram(napis):
         else:
             histogram[znak] = 1
     return histogram
+
 
 def znajdz_wszystkie_anagramy_w_tekscie(napis):
     """
@@ -69,6 +73,7 @@ def znajdz_wszystkie_anagramy_w_tekscie(napis):
 
     return wynik
 
+
 def czy_listy_list_rowne(lista_a, lista_b):
     """
     Funkcja zwraca True jesli lista_a i lista_b skladaja sie z list, ktore maja taka sama ilosc elementow i elementy w tych listach sa takie same.
@@ -77,6 +82,7 @@ def czy_listy_list_rowne(lista_a, lista_b):
     _lista_b = [tuple(sorted(x)) for x in lista_b]
 
     return set(_lista_a) == set(_lista_b)
+
 
 def test_znajdz_wszystkie_anagramy_w_tekscie():
     assert znajdz_wszystkie_anagramy_w_tekscie("Ala ma kota") == []
@@ -93,7 +99,7 @@ def test_znajdz_wszystkie_anagramy_w_tekscie():
         ],
     )
 
+
 if __name__ == "__main__":
 
     test_znajdz_wszystkie_anagramy_w_tekscie()
-

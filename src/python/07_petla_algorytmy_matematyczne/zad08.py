@@ -9,6 +9,7 @@ Dla otrzymanej liczby 7, funkcja powinna zwrocic wartosc logiczna prawda. Dla ot
 """
 import math
 
+
 def podziel(a, b):
 
     znak = 1
@@ -41,6 +42,7 @@ def podziel(a, b):
 
     return licznik * znak
 
+
 def test_podziel():
     assert podziel(10, 2) == 5
     assert podziel(10, 3) == 3
@@ -50,7 +52,7 @@ def test_podziel():
     assert podziel(0, 5) == 0
     assert math.isnan(podziel(0, 0))
 
+
 if __name__ == "__main__":
 
     test_podziel()
-

@@ -10,6 +10,7 @@ Dla otrzymanego napisu "C:\my-long\path_directory\file.html", powinna zostac zwr
 
 import re
 
+
 def nazwa_pliku(sciezka):
     """
     Funkcja zwraca nazwe pliku z podanej sciezki.
@@ -21,12 +22,13 @@ def nazwa_pliku(sciezka):
         nazwa = re.sub(r"\.[^.]+$", "", nazwa)
     return nazwa
 
+
 def test_nazwa_pliku():
     assert nazwa_pliku("C:\\Windows\\explorer.exe") == "explorer"
     assert nazwa_pliku("/home/user/var/log/syslog") == "syslog"
     assert nazwa_pliku("test.jpg.png.mp3.mp5.html.txt") == "test"
     assert nazwa_pliku("test") == "test"
 
+
 if __name__ == "__main__":
     test_nazwa_pliku()
-

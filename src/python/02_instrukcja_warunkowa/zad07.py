@@ -239,4 +239,3 @@ if __name__ == "__main__":
         " wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
         (not (p or q)) == (not q and not p),
     )
-

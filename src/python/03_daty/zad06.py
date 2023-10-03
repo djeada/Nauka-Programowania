@@ -26,4 +26,3 @@ if __name__ == "__main__":
             print("Miesiac jest niepoprawny.")
     else:
         print("Dzien jest niepoprawny.")
-

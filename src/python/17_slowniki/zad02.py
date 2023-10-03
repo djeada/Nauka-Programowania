@@ -8,6 +8,7 @@ Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], slownik powinien wygladac nastepuj
 
 """
 
+
 def stworz_slownik(lista_a, lista_b):
     """
     Funkcja tworzy slownik zawierajacy klucze bedace elementami
@@ -19,11 +20,12 @@ def stworz_slownik(lista_a, lista_b):
 
     return dict(zip(lista_a, lista_b))
 
+
 def test_stworz_slownik():
     assert stworz_slownik([1, 2, 3], [4, 5, 6]) == {1: 4, 2: 5, 3: 6}
     assert stworz_slownik([1, 2, 3], [4, 5]) == {}
 
+
 if __name__ == "__main__":
 
     test_stworz_slownik()
-

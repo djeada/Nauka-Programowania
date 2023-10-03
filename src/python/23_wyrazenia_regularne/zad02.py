@@ -16,6 +16,7 @@ Dla napisu: “abc1234”, powinna zostac zwrocona wartosc logiczna: Falsz.
 
 import re
 
+
 def czy_haslo_poprawne(haslo):
     """
     Sprawdza czy haslo jest poprawne.
@@ -32,6 +33,7 @@ def czy_haslo_poprawne(haslo):
         return False
     return True
 
+
 def test_czy_haslo_poprawne():
     assert not czy_haslo_poprawne("Ab1!")
     assert not czy_haslo_poprawne("haslo")
@@ -45,6 +47,6 @@ def test_czy_haslo_poprawne():
     assert czy_haslo_poprawne("Haslo123!#$")
     assert czy_haslo_poprawne("Haslo123!#$%&*")
 
+
 if __name__ == "__main__":
     test_czy_haslo_poprawne()
-

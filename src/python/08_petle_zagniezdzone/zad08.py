@@ -12,6 +12,7 @@ Dla otrzymanej liczby 3 powinno zostac wypisane:
 """
 from math import pow
 
+
 def trojkat_pascala(wysokosc):
 
     for i in range(wysokosc):
@@ -19,9 +20,9 @@ def trojkat_pascala(wysokosc):
             print(pow(2, i) - pow(2, i - j) + pow(2, j), end=" ")
     print()
 
+
 if __name__ == "__main__":
 
     print("Podaj wysokosc trojkata Pascala: ")
     wysokosc = int(input())
     trojkat_pascala(wysokosc)
-

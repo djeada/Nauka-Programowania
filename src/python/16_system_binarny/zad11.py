@@ -8,6 +8,7 @@ Dla otrzymanej liczby 26, powinna zostac zwrocona wartosc logiczna: Prawda.
 
 """
 
+
 def czy_palindrom(liczba):
     """
     Funkcja sprawdza czy podana liczba jest palindromem.
@@ -22,6 +23,7 @@ def czy_palindrom(liczba):
 
     return odwrocona == liczba
 
+
 def test_czy_palindrom():
 
     assert czy_palindrom(0)
@@ -29,7 +31,7 @@ def test_czy_palindrom():
     assert not czy_palindrom(2)
     assert not czy_palindrom(77)
 
+
 if __name__ == "__main__":
 
     test_czy_palindrom()
-

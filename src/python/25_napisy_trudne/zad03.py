@@ -12,6 +12,7 @@ Dla napisow: “Dinozaur jest zly” oraz “Dino”, zwrocona wartosc powinna b
 def usun_wszystkie_v1(zdanie, slowo):
     return zdanie.replace(slowo, "")
 
+
 # Testy Poprawnosci
 def test_1():
     zdanie = "Lezy jezy na wiezy"
@@ -20,9 +21,10 @@ def test_1():
 
     assert usun_wszystkie_v1(zdanie, slowo) == wynik
 
+
 def main():
     test_1()
 
+
 if __name__ == "__main__":
     main()
-

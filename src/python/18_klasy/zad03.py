@@ -5,6 +5,7 @@ Napisz program, ktory przetestuje twoja klase. Stworz prostokaty: A (3, 6, 9, 4)
 
 """
 
+
 class Prostokat:
     def __init__(self, lewo, gora, prawo, dol):
         self.lewo = lewo
@@ -30,11 +31,13 @@ class Prostokat:
 
         return pole_x * pole_y
 
+
 def test_pole_czesci_wspolnej_pozytwne():
     prostokat_a = Prostokat(2, 7, 5, 2)
     prostokat_b = Prostokat(3, 9, 6, 4)
     wynik = 6
     assert Prostokat.pole_czesci_wspolnej(prostokat_a, prostokat_b) == wynik
+
 
 def test_pole_czesci_wspolnej_negatywne():
     prostokat_a = Prostokat(1, 1, -1, -1)
@@ -42,7 +45,7 @@ def test_pole_czesci_wspolnej_negatywne():
     wynik = 0
     assert Prostokat.pole_czesci_wspolnej(prostokat_b, prostokat_a) == wynik
 
+
 if __name__ == "__main__":
     test_pole_czesci_wspolnej_pozytwne()
     test_pole_czesci_wspolnej_negatywne()
-

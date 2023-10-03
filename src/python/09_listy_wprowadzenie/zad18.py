@@ -8,6 +8,7 @@ Dla otrzymanej listy: [7, 8, -1, 4, 5] zostanie zwrocona liczba: 2.
 
 """
 
+
 def znajdz_min_indeks(lista):
     for i in range(len(lista) - 1):
         if lista[i] > lista[i + 1]:
@@ -15,12 +16,13 @@ def znajdz_min_indeks(lista):
 
     return 0
 
+
 def test_znajdz_min_indeks():
     assert znajdz_min_indeks([7, 8, -1, 4, 5]) == 2
     assert znajdz_min_indeks([2, 3, 4, 5, 6]) == 0
     assert znajdz_min_indeks([8, 9, 10, 11, 1]) == 4
 
+
 if __name__ == "__main__":
 
     test_znajdz_min_indeks()
-

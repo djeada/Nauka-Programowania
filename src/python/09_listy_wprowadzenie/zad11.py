@@ -8,6 +8,7 @@ Dla otrzymanej listy ['A', 'B', 'A', 'B', 'B'] powinna zostac zwrocona liczba 5.
 
 """
 
+
 def policz_samchody(lista):
     licznik = 0
     pom = 0
@@ -19,6 +20,7 @@ def policz_samchody(lista):
 
     return licznik
 
+
 def test_policz_samochody():
     assert policz_samchody(["A", "B", "A", "B", "B"]) == 5
     assert (
@@ -26,7 +28,7 @@ def test_policz_samochody():
         == 15
     )
 
+
 if __name__ == "__main__":
 
     test_policz_samochody()
-

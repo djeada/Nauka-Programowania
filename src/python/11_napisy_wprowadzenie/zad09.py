@@ -11,9 +11,11 @@ powinna zostac zwrocona lista:
 
 """
 
+
 def rozdziel_informacje(napis):
     lista = napis.split(";")
     return lista
+
 
 def wypisz_informacje(napis):
     informacje = rozdziel_informacje(napis)
@@ -23,8 +25,8 @@ def wypisz_informacje(napis):
     print("Stanowisko: {}".format(informacje[3]))
     print("Zarobki: {}".format(informacje[4]))
 
+
 if __name__ == "__main__":
 
     informacje = "Jan;Kowalski;Warszawa;kierownik;2000"
     wypisz_informacje(informacje)
-

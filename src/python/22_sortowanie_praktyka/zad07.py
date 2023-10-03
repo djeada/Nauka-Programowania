@@ -36,11 +36,13 @@ def sortuj_liste(lista):
 
     return lista
 
+
 def test_sortuj_liste():
     lista = [0, 2, 2, 0, 1, 1, 2, 2, 1, 1]
     wynik = [0, 0, 1, 1, 1, 1, 2, 2, 2, 2]
 
     assert sortuj_liste(lista) == wynik
+
 
 def test_sortuj_liste():
     lista = [1, 1, 1, 1, 2, 1, 1, 1]
@@ -48,12 +50,13 @@ def test_sortuj_liste():
 
     assert sortuj_liste(lista) == wynik
 
+
 def test_sortuj_liste():
     lista = [2, 0, 0, 1, 1, 1, 1, 1]
     wynik = [0, 0, 1, 1, 1, 1, 1, 2]
 
     assert sortuj_liste(lista) == wynik
 
+
 if __name__ == "__main__":
     test_sortuj_liste()
-

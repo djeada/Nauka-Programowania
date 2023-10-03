@@ -8,6 +8,7 @@ Dla otrzymanej listy [2, 9, -1, 3, 8] oraz klucza -1 powinno zostac zwrocone 2.
 
 """
 
+
 def znajdz_klucz(lista, klucz):
 
     for i in range(len(lista)):
@@ -15,11 +16,12 @@ def znajdz_klucz(lista, klucz):
             return i
     return -1
 
+
 def test_znajdz_klucz():
     assert znajdz_klucz([1, 2, 3, 4, 5], 5) == 4
     assert znajdz_klucz([1, 2, 3, 4, 5], 6) == -1
 
+
 if __name__ == "__main__":
 
     test_znajdz_klucz()
-

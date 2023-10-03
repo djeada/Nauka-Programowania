@@ -12,6 +12,7 @@ Dla otrzymanej liczby 4 powinno zostac wypisane:
 
 """
 
+
 def litera_x(wysokosc):
     for i in range(wysokosc):
         for j in range(wysokosc):
@@ -21,10 +22,10 @@ def litera_x(wysokosc):
                 print(" ", end="")
         print()
 
+
 if __name__ == "__main__":
 
     print("Podaj wysokosc litery X: ")
     wysokosc = int(input())
 
     litera_x(wysokosc)
-

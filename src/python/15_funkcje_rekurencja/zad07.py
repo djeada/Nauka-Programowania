@@ -8,6 +8,7 @@ Dla otrzymanej listy oraz liczby: [1, 2, 2] i 2, powinna zostac zwrocona liczba:
 
 """
 
+
 def wyszukiwani_liniowe(lista, klucz):
     """
     Funkcja zwraca indeks klucza w liscie przy pomocy rekurenkcji.
@@ -24,11 +25,12 @@ def wyszukiwani_liniowe(lista, klucz):
 
     return -1
 
+
 def test_wyszukiwani_liniowe():
     assert wyszukiwani_liniowe([1, 2, 3, 4, 5], 3) == 2
     assert wyszukiwani_liniowe([1, 2, 3, 4, 5], 6) == -1
 
+
 if __name__ == "__main__":
 
     test_wyszukiwani_liniowe()
-

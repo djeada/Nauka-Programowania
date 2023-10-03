@@ -17,4 +17,3 @@ if __name__ == "__main__":
         liczba //= 10
 
     print(f"Suma cyfr wynosi: {suma}")
-

@@ -38,6 +38,7 @@ def znajdz_podciag_v1(lista_a, lista_b):
 
     return wynik
 
+
 # Testy Poprawnosci
 def test_1():
     lista_a = [0, 0, 1, 1, 1, 1]
@@ -45,6 +46,7 @@ def test_1():
     wynik = 5
 
     assert znajdz_podciag_v1(lista_a, lista_b) == wynik
+
 
 def test_2():
     lista_a = [0, 0, 1, 1]
@@ -56,10 +58,11 @@ def test_2():
     except ValueError:
         assert True
 
+
 def main():
     test_1()
     test_2()
 
+
 if __name__ == "__main__":
     main()
-

@@ -39,4 +39,3 @@ if __name__ == "__main__":
         print("Grudzien ma 31 dni.")
     else:
         print("Niepoprawny numer miesiaca.")
-

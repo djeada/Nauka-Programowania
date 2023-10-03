@@ -12,6 +12,7 @@ Dla N = 7, powinna zostac zwrocona liczba: 13.
 
 """
 
+
 def wyraz_ciag_fibonacciego(n):
     """
     Funkcja oblicza n-ty wyraz ciagu Fibonacciego.
@@ -26,12 +27,13 @@ def wyraz_ciag_fibonacciego(n):
 
     return wyraz_ciag_fibonacciego(n - 1) + wyraz_ciag_fibonacciego(n - 2)
 
+
 def test_wyraz_ciag_fibonacciego():
     assert wyraz_ciag_fibonacciego(0) == 0
     assert wyraz_ciag_fibonacciego(1) == 1
     assert wyraz_ciag_fibonacciego(12) == 144
 
+
 if __name__ == "__main__":
 
     test_wyraz_ciag_fibonacciego()
-

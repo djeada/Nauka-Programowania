@@ -9,11 +9,14 @@ Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "ala mak 
 """
 import string
 
+
 def podziel_zdanie_na_slowa(zdanie):
     return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
 
+
 def odwroc(napis):
     return napis[::-1]
+
 
 def odwroc_slowa(zdanie):
 
@@ -25,10 +28,11 @@ def odwroc_slowa(zdanie):
 
     return wynik
 
+
 def test_odwroc_slowa():
     assert odwroc_slowa("Ala ma kota.") == "alA am atok."
+
 
 if __name__ == "__main__":
 
     test_odwroc_slowa()
-

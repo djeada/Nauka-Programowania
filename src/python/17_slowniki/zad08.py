@@ -9,6 +9,7 @@ Powinna zostac zwrocona litera: 'e'
 
 """
 
+
 def najczestsza_litera(napis):
     """
     Zwraca najczesciej wystepujaca litere w napisie.
@@ -21,11 +22,12 @@ def najczestsza_litera(napis):
             slownik[litera] = 1
     return max(slownik, key=slownik.get)
 
+
 def test_najczestsza_litera():
 
     assert najczestsza_litera("ala ma kota") == "a"
 
+
 if __name__ == "__main__":
 
     test_najczestsza_litera()
-

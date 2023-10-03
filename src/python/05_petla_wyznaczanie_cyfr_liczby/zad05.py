@@ -24,4 +24,3 @@ if __name__ == "__main__":
         print("Liczba jest palindromem.")
     else:
         print("Liczba nie jest palindromem.")
-

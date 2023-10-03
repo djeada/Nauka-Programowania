@@ -9,6 +9,7 @@ Dla otrzymanej listy: [6, 2, 1, 4, 27] oraz 4, powinna zostac zwrocona lista: [6
 """
 from math import pow
 
+
 def usun_klucz(lista, klucz):
     for i in range(len(lista)):
         if lista[i] == klucz:
@@ -16,12 +17,13 @@ def usun_klucz(lista, klucz):
             return lista
     return lista
 
+
 def test_usun_klucz():
     assert usun_klucz([1, 2, 3, 3], 3) == [1, 2, 3]
     assert usun_klucz([1, 2, 3, 3], 4) == [1, 2, 3, 3]
     assert usun_klucz([1, 1, 1, 1], 1) == [1, 1, 1]
 
+
 if __name__ == "__main__":
 
     test_usun_klucz()
-

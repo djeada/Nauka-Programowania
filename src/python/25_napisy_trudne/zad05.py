@@ -23,31 +23,37 @@ def usun_powtarzajacych_sie_sasiadow_v1(napis):
 
     return nowy_napis
 
+
 # Testy Poprawnosci
 def test_1():
     napis = "AAAAAAAAAABBBBBBBBA"
     wynik = "ABA"
     assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
+
 def test_2():
     napis = "XXXYYASFBY"
     wynik = "XYASFBY"
     assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
+
 
 def test_3():
     napis = "CCCCCCCCCCCCCCCCCCCCCCCCCCCC"
     wynik = "C"
     assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
+
 def test_4():
     napis = ""
     wynik = ""
     assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
 
+
 def test_5():
     napis = "AAABB"
     wynik = "AB"
     assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
+
 
 def main():
     test_1()
@@ -56,6 +62,6 @@ def main():
     test_4()
     test_5()
 
+
 if __name__ == "__main__":
     main()
-

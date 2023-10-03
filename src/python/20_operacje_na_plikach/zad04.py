@@ -7,11 +7,13 @@ Dane wyjsciowe: Napis zawierajacy tresc pliku.
 """
 import pathlib
 
+
 def wypisz_plik(sciezka):
 
     plik = pathlib.Path(sciezka)
     if plik.is_file():
         print(plik.read_text())
+
 
 if __name__ == "__main__":
 
@@ -29,4 +31,3 @@ if __name__ == "__main__":
     import shutil
 
     shutil.rmtree("test")
-

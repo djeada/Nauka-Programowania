@@ -8,6 +8,7 @@ Dane wyjsciowe: komunikat
 
 """
 
+
 def inicjalizacja_danych():
     """
     Funkcja inicjalizujaca dane.
@@ -15,6 +16,7 @@ def inicjalizacja_danych():
     nazwa = input("Podaj nazwe: ")
     haslo = input("Podaj haslo: ")
     return nazwa, haslo
+
 
 def sprawdzenie_danych(nazwa, haslo):
     """
@@ -30,8 +32,8 @@ def sprawdzenie_danych(nazwa, haslo):
 
     print("Dane sa identyczne")
 
+
 if __name__ == "__main__":
 
     nazwa, haslo = inicjalizacja_danych()
     sprawdzenie_danych(nazwa, haslo)
-

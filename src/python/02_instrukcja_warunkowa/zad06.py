@@ -22,4 +22,3 @@ if __name__ == "__main__":
     maks = maks_ab if maks_ab > maks_cd else maks_cd
 
     print(maks)
-

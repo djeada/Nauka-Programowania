@@ -28,4 +28,3 @@ if __name__ == "__main__":
     print("rata mieieczna to {:0.2f}".format(rata))
 
     print("calkowity koszt to {:0.2f}".format(calk_koszt))
-

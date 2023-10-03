@@ -9,11 +9,13 @@ Dla otrzymanego napisu: “Tata zabral kajak na wycieczke i uderzyl sie w oko”
 """
 import string
 
+
 def podziel_zdanie_na_slowa(zdanie):
     """
     Funkcja rozdziela zdanie na slowa.
     """
     return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
+
 
 def czy_palindrom(slowo):
     """
@@ -21,17 +23,19 @@ def czy_palindrom(slowo):
     """
     return slowo == slowo[::-1]
 
+
 def palindromy_w_zdaniu(zdanie):
     """
     Funkcja zwraca liste palindromow w podanym zdaniu.
     """
     return [slowo for slowo in podziel_zdanie_na_slowa(zdanie) if czy_palindrom(slowo)]
 
+
 def test_palindromy_w_zdaniu():
     assert sorted(
         palindromy_w_zdaniu("Tata zbaral kajak na wycieczke i uderzyl sie w oko")
     ) == sorted(["kajak", "i", "w", "oko"])
 
+
 if __name__ == "__main__":
     test_palindromy_w_zdaniu()
-

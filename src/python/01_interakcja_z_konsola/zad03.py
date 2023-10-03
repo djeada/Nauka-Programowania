@@ -34,4 +34,3 @@ if __name__ == "__main__":
     print("11111")
     print(" 111")
     print("  1")
-

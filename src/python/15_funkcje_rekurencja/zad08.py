@@ -8,6 +8,7 @@ Dla N = 3, powinna zostac zwrocona lista: [('A', 'B'), ('A', 'C'), ('B', 'C'), (
 
 """
 
+
 def hanoi(n):
     """
     Funkcja zwraca liste ruchow, ktore powinny byc wykonane, aby
@@ -31,6 +32,7 @@ def hanoi(n):
     hanoi_rek(n, "A", "B", "C", wynik)
     return wynik
 
+
 def test_hanoi():
     assert hanoi(1) == [("A", "B")]
     assert hanoi(2) == [("A", "C"), ("A", "B"), ("C", "B")]
@@ -44,6 +46,6 @@ def test_hanoi():
         ("A", "B"),
     ]
 
+
 if __name__ == "__main__":
     test_hanoi()
-

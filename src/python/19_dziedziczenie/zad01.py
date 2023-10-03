@@ -4,18 +4,22 @@ Tresc: Dla dwoch dowolnych klas, gdzie jedna jest klasa bazowa, a druga potomna,
 
 """
 
+
 class Rodzic:
     def __init__(self):
         print("Jestem rodzicem")
+
 
 class DzieckoA(Rodzic):
     def __init__(self):
         print("Jestem dzieckiem A")
 
+
 class DzieckoB(Rodzic):
     def __init__(self):
         print("Jestem dzieckiem B")
         super().__init__()
+
 
 if __name__ == "__main__":
 
@@ -27,4 +31,3 @@ if __name__ == "__main__":
 
     print("\nTworze obiekt klasy DzieckoB:")
     dziecko_b = DzieckoB()
-

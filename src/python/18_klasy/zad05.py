@@ -9,6 +9,7 @@ Napisz program, ktory przetestuje twoja klase. Stworz macierze: A ([[1, 3], [4, 
 
 """
 
+
 class Macierz:
     def __init__(self, macierz=[[]]):
         self.macierz = macierz
@@ -92,6 +93,7 @@ class Macierz:
                 transponowana[i].append(self.macierz[j][i])
         return Macierz(transponowana)
 
+
 if __name__ == "__main__":
     macierz_a = Macierz([[1, 3], [4, 2]])
     macierz_b = Macierz([[5, 0], [1, 3]])
@@ -106,4 +108,3 @@ if __name__ == "__main__":
     print(f"Macierz A != Macierz B: {macierz_a != macierz_b}")
     print(f"Macierz A == Macierz A: {macierz_a == macierz_a}")
     print(f"Macierz A != Macierz A: {macierz_a != macierz_a}")
-

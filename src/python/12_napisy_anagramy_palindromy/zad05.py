@@ -9,6 +9,7 @@ Dla otrzymanych napisow: “Sroga kara.” oraz “arak”, powinna zostac zwroc
 """
 import string
 
+
 def anagramy(napis_a, napis_b):
     """
     Funkcja sprawdza, czy otrzymane napisy sa anagramami.
@@ -22,11 +23,13 @@ def anagramy(napis_a, napis_b):
 
     return True
 
+
 def podziel_zdanie_na_slowa(zdanie):
     """
     Funkcja rozdziela zdanie na slowa.
     """
     return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
+
 
 def anagramy_slowa_w_zdaniu(zdanie, slowo):
     """
@@ -42,12 +45,13 @@ def anagramy_slowa_w_zdaniu(zdanie, slowo):
 
     return wynik
 
+
 def test_anagramy_slowa_w_zdaniu():
     assert anagramy_slowa_w_zdaniu(
         "Za jego nikczemne uczynki, spotakla go wysoce sroga kara.", "arak"
     ) == ["kara"]
 
+
 if __name__ == "__main__":
 
     test_anagramy_slowa_w_zdaniu()
-

@@ -8,16 +8,18 @@ Dla listy wspolczynnikow [4, -3, 2] i liczby x = -2, zostanie zwrocona lista [-8
 
 """
 
+
 def mnozenie_wielomianu(wspolczynniki, x):
     """
     Funkcja zwraca wielomian bedacy wynikiem mnozenia otrzymanego wielomianu przez liczbe x.
     """
     return [wspolczynnik * x for wspolczynnik in wspolczynniki]
 
+
 def test_mnozenie_wielomianu():
     assert mnozenie_wielomianu([1, 2, 3, 4], 2) == [2, 4, 6, 8]
+
 
 if __name__ == "__main__":
 
     test_mnozenie_wielomianu()
-

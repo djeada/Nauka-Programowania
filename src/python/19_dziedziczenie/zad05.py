@@ -4,6 +4,7 @@ Tresc: Napisz klase Ptak, dziedziczaca po klasach Zwierz i ObiektLatajacy. W skl
 
 """
 
+
 class Zwierz:
     def __init__(self, name):
         self.name = name
@@ -17,6 +18,7 @@ class Zwierz:
     def wydaj_dzwiek(self):
         print(f"{self.name} wydaje dzwiek")
 
+
 class ObiektLatajacy:
     def __init__(self, name):
         self.name = name
@@ -27,10 +29,12 @@ class ObiektLatajacy:
     def wyladuj(self):
         print(f"{self.name} wylada")
 
+
 class Ptak(Zwierz, ObiektLatajacy):
     def __init__(self, name):
         Zwierz.__init__(self, name)
         ObiektLatajacy.__init__(self, name)
+
 
 if __name__ == "__main__":
 
@@ -40,4 +44,3 @@ if __name__ == "__main__":
     ptak.wydaj_dzwiek()
     ptak.lec()
     ptak.wyladuj()
-

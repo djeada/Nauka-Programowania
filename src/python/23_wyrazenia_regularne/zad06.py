@@ -17,12 +17,14 @@ powinna zostac zwrocona lista: [“Folgujmy paniom nie sobie, ma rada;”, “Mi
 
 import re
 
+
 def wiersze_konczace_sie_napisem(tekst, koniec):
     """
     Zwraca wszystkie wiersze konczace sie napisem koniec.
     """
     wiersze = re.split("\n|\.|\?|\!|\;|\:", tekst)
     return [wiersz for wiersz in wiersze if wiersz.endswith(koniec)]
+
 
 def test_wiersze_konczace_sie_napisem():
     tekst = """Folgujmy paniom nie sobie, ma rada;
@@ -37,6 +39,6 @@ Milosci pragna nie pragna tu zlota."""
 
     assert wiersze_konczace_sie_napisem(tekst, napis) == oczekiwane
 
+
 if __name__ == "__main__":
     test_wiersze_konczace_sie_napisem()
-

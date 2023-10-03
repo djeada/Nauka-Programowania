@@ -8,6 +8,7 @@ Dla otrzymanego napisu: “klasa”, slownik powinien wygladac nastepujaco: {“
 
 """
 
+
 def histogram(napis):
     """
     Funkcja zwraca slownik zawierajacy wszystkie litery w napisie oraz czestosc ich wystepowania.
@@ -19,6 +20,7 @@ def histogram(napis):
         else:
             histogram[znak] = 1
     return histogram
+
 
 def test_histogram():
     assert histogram("") == {}
@@ -33,6 +35,6 @@ def test_histogram():
         "t": 1,
     }
 
+
 if __name__ == "__main__":
     test_histogram()
-

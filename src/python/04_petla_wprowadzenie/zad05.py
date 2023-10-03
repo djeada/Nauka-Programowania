@@ -39,4 +39,3 @@ if __name__ == "__main__":
         for i in range(pierwsza_liczba, druga_liczba + 1):
             if i % 3 == 0:
                 print(i)
-

@@ -33,6 +33,7 @@ def znajdz_zero_do_podmiany_v1(lista):
 
     return indeks_zera
 
+
 # Testy Poprawnosci
 def test_1():
     lista = [0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
@@ -40,11 +41,13 @@ def test_1():
 
     assert znajdz_zero_do_podmiany_v1(lista) == wynik
 
+
 def test_2():
     lista = [1, 1, 1, 1, 1, 1, 1, 1]
     wynik = -1
 
     assert znajdz_zero_do_podmiany_v1(lista) == wynik
+
 
 def test_3():
     lista = [1, 0, 1, 1, 1, 1, 1, 1]
@@ -52,11 +55,12 @@ def test_3():
 
     assert znajdz_zero_do_podmiany_v1(lista) == wynik
 
+
 def main():
     test_1()
     test_2()
     test_3()
 
+
 if __name__ == "__main__":
     main()
-

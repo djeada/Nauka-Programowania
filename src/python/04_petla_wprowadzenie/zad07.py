@@ -19,4 +19,3 @@ if __name__ == "__main__":
         wynik = wynik * pi
 
     print("Wynik: ", round(wynik, 2))
-

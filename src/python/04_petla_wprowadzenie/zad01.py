@@ -12,4 +12,3 @@ if __name__ == "__main__":
 
     while liczba != 7:
         liczba = int(input("Podaj liczbe: "))
-

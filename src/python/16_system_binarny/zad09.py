@@ -13,6 +13,7 @@ c) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "tEST".
 
 """
 
+
 def wielkie_na_male(slowo):
     """
     Funkcja zamienia wielkie litery na male litery.
@@ -24,6 +25,7 @@ def wielkie_na_male(slowo):
 
     return wynik
 
+
 def male_na_wielkie(slowo):
     """
     Funkcja zamienia male litery na wielkie litery.
@@ -34,6 +36,7 @@ def male_na_wielkie(slowo):
         wynik += chr(ord(litera) & ord("_"))
 
     return wynik
+
 
 def odwroc_wielkosc_liter(slowo):
     """
@@ -53,11 +56,14 @@ def odwroc_wielkosc_liter(slowo):
 
     return wynik
 
+
 def test_wielkie_na_male():
     assert wielkie_na_male("KURCZAKU") == "kurczaku"
 
+
 def test_male_na_wielkie():
     assert male_na_wielkie("piesek") == "PIESEK"
+
 
 def test_odwroc_wielkosc_liter():
     assert (
@@ -65,9 +71,9 @@ def test_odwroc_wielkosc_liter():
         == "WSZEDL kOTEK NA pLOTEk I MRuGA"
     )
 
+
 if __name__ == "__main__":
 
     test_wielkie_na_male()
     test_male_na_wielkie()
     test_odwroc_wielkosc_liter()
-

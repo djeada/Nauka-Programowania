@@ -26,4 +26,3 @@ if __name__ == "__main__":
     print("Iloraz pierwszej liczby przez druga: ", x / y)
     print("Reszta z dzielenia pierwszej liczby przez druga: ", x % y)
     print("Pierwsza liczba podniesiona do potegi rownej drugiej liczbie: ", x ** y)
-

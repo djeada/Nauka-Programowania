@@ -18,4 +18,3 @@ if __name__ == "__main__":
         print("Rok jest przestepny.")
     else:
         print("Rok nie jest przestepny.")
-

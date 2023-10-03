@@ -40,4 +40,3 @@ if __name__ == "__main__":
         " wynosi ",
         calkowity_koszt,
     )
-

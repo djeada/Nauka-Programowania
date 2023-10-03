@@ -12,14 +12,18 @@ Dla N rownego 3 oraz pobranych liczb 3, 9, 7 w pierwszym podpunkcie powinno zost
 
 """
 
+
 def dodaj_1(lista):
     return [element + 1 for element in lista]
+
 
 def pomnoz_przez_indeks(lista):
     return [element * indeks for indeks, element in enumerate(lista)]
 
+
 def zastap_pierwszym(lista):
     return [lista[0] for element in lista]
+
 
 if __name__ == "__main__":
 
@@ -40,4 +44,3 @@ if __name__ == "__main__":
     print(
         f"Lista po zastapieniu kazdego elementu wartoscia pierwszego elementu: {zastap_pierwszym(lista)}"
     )
-

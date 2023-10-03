@@ -19,4 +19,3 @@ if __name__ == "__main__":
         liczba //= 10
 
     print("Liczba cyfr: ", cyfry)
-

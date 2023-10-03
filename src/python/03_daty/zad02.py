@@ -43,4 +43,3 @@ if __name__ == "__main__":
             print("Osoba nie jest pelnoletnia.")
     else:
         print("Osoba nie jest pelnoletnia.")
-

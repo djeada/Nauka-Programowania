@@ -12,17 +12,20 @@ Powinien zostac zwrocony slownik:
 
 import string
 
+
 def podziel_zdanie_na_slowa(zdanie):
     """
     Funkcja zwraca liste slow ze zdania.
     """
     return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
 
+
 def na_male_litery(slowa):
     """
     Funkcja zamienia wielkie litery ze slow z listy slowa na male litery.
     """
     return [slowo.lower() for slowo in slowa]
+
 
 def policz_wystapienia_slow(slowa):
     """
@@ -34,6 +37,7 @@ def policz_wystapienia_slow(slowa):
         wynik[slowo] = slowa.count(slowo)
     return wynik
 
+
 def policz_slowa_w_zdaniu(zdanie):
     """
     Funkcja zwraca slownik, gdzie kluczami sa slowa, a wartoscia ich ilosc wystapien.
@@ -41,6 +45,7 @@ def policz_slowa_w_zdaniu(zdanie):
     slowa = podziel_zdanie_na_slowa(zdanie)
     slowa = na_male_litery(slowa)
     return policz_wystapienia_slow(slowa)
+
 
 def test_policz_slowa_w_zdaniu():
     assert policz_slowa_w_zdaniu("Ala ma kota") == {"ala": 1, "ma": 1, "kota": 1}
@@ -98,7 +103,7 @@ def test_policz_slowa_w_zdaniu():
         "now": 1,
     }
 
+
 if __name__ == "__main__":
 
     test_policz_slowa_w_zdaniu()
-

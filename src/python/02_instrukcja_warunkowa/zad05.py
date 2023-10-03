@@ -33,4 +33,3 @@ if __name__ == "__main__":
             print(c, a, b)
         else:
             print(a, c, b)
-

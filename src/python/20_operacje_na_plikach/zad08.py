@@ -9,6 +9,7 @@ Dane wyjsciowe: Brak.
 """
 import pathlib
 
+
 def znajdz_pliki_z_rozszerzeniem(sciezka, rozszerzenie):
     """
     Funkcja zwraca liste plikow o podanym rozszerzeniu.
@@ -17,6 +18,7 @@ def znajdz_pliki_z_rozszerzeniem(sciezka, rozszerzenie):
     for plik in pathlib.Path(sciezka).glob("**/*." + rozszerzenie):
         lista_plikow.append(str(plik.relative_to(pathlib.Path(sciezka).parent)))
     return lista_plikow
+
 
 def dodaj_inicjaly(sciezka, inicjaly):
     """
@@ -27,6 +29,7 @@ def dodaj_inicjaly(sciezka, inicjaly):
     if plik.exists():
         plik.write_text(plik.read_text() + inicjaly + "\n")
 
+
 def dodaj_inicjaly_do_plikow_w_folderze(sciezka, inicjaly):
     """
     Funkcja dodaje inicjaly na koniec kazdego pliku tekstowego w folderze.
@@ -34,6 +37,7 @@ def dodaj_inicjaly_do_plikow_w_folderze(sciezka, inicjaly):
 
     for plik in znajdz_pliki_z_rozszerzeniem(sciezka, "txt"):
         dodaj_inicjaly(plik, inicjaly)
+
 
 def usun_srodkowy_wiersz(sciezka):
     """
@@ -46,6 +50,7 @@ def usun_srodkowy_wiersz(sciezka):
             "\n".join(tresc[: len(tresc) // 2] + tresc[len(tresc) // 2 + 1 :]) + "\n"
         )
 
+
 def usun_srodkowy_wiersz_z_plikow_w_folderze(sciezka):
     """
     Funkcja usuwa srodkowy wiersz z kazdego pliku csv w folderze.
@@ -53,6 +58,7 @@ def usun_srodkowy_wiersz_z_plikow_w_folderze(sciezka):
 
     for plik in znajdz_pliki_z_rozszerzeniem(sciezka, "csv"):
         usun_srodkowy_wiersz(plik)
+
 
 def test_dodaj_inicjaly_do_plikow_w_folderze():
 
@@ -81,6 +87,7 @@ def test_dodaj_inicjaly_do_plikow_w_folderze():
     import shutil
 
     shutil.rmtree("test")
+
 
 def test_usun_srodkowy_wiersz_z_plikow_w_folderze():
 
@@ -112,8 +119,8 @@ def test_usun_srodkowy_wiersz_z_plikow_w_folderze():
 
     shutil.rmtree("test")
 
+
 if __name__ == "__main__":
 
     test_dodaj_inicjaly_do_plikow_w_folderze()
     test_usun_srodkowy_wiersz_z_plikow_w_folderze()
-

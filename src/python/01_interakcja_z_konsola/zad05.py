@@ -84,4 +84,3 @@ if __name__ == "__main__":
         + math.exp(x ** 2)
         + math.log(x ** 3 + 2 * x ** 2 - x - 3)
     )
-

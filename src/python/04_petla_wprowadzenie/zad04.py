@@ -18,4 +18,3 @@ if __name__ == "__main__":
         suma += i
 
     print("Suma wszystkich liczb mniejszych od podanej liczby wynosi: ", suma)
-

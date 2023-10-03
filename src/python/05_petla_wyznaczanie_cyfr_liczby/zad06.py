@@ -74,4 +74,3 @@ if __name__ == "__main__":
                 break
         if flaga:
             print(i)
-

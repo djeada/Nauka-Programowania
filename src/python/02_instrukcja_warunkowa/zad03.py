@@ -19,4 +19,3 @@ if __name__ == "__main__":
         print("liczba jest dodatnia")
     else:
         print("liczba jest zerem")
-

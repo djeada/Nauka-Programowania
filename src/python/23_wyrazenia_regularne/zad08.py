@@ -10,6 +10,7 @@ Dla otrzymanego napisu: "Jerzy29 i An37a s3luchali91 lekcji 22 z jezyka polskieg
 
 import re
 
+
 def cyfry_w_slowach(tekst):
     """
     Funkcja zwraca liste cyfr w slowach w tekscie.
@@ -17,6 +18,7 @@ def cyfry_w_slowach(tekst):
     return [
         re.sub("[^\d]", "", e) for e in tekst.split() if re.search(r"\B[0-9]+\B", e)
     ]
+
 
 def test_cyfry_w_slowach():
     assert cyfry_w_slowach("jerzy29 i an37a s3uc8ali91 lekcji jezyka polki3go") == [
@@ -26,6 +28,6 @@ def test_cyfry_w_slowach():
         "3",
     ]
 
+
 if __name__ == "__main__":
     test_cyfry_w_slowach()
-

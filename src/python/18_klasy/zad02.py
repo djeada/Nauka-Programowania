@@ -11,6 +11,7 @@ Napisz program, ktory przetestuje twoja klase. Stworz punkty: A (5, 5) oraz B (-
 
 import math
 
+
 class Punkt:
     def __init__(self, x=0, y=0):
         self.x = x
@@ -29,10 +30,10 @@ class Punkt:
     def __ne__(self, other):
         return self.x != other.x or self.y != other.y
 
+
 if __name__ == "__main__":
     punkt_a = Punkt(5, 5)
     punkt_b = Punkt(-3, -3)
     print(
         f"Odleglosc miedzy punktami A {punkt_a} i B {punkt_b} wynosi: {Punkt.odleglosc(punkt_a, punkt_b):.2f}."
     )
-

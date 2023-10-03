@@ -20,4 +20,3 @@ if __name__ == "__main__":
 
     for i in range(liczba):
         print(f"{i+1}. {pi:.{liczba}f}")
-

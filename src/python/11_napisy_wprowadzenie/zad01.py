@@ -8,8 +8,10 @@ Dla otrzymanego napisu: "barszcz", powinien zostac zwrocony napis: "zczsrab".
 
 """
 
+
 def odwroc_v1(napis):
     return napis[::-1]
+
 
 def odwroc_v2(napis):
     nowy_napis = ""
@@ -19,11 +21,13 @@ def odwroc_v2(napis):
         i -= 1
     return nowy_napis
 
+
 def test_odwroc_v1():
     assert odwroc_v1("ala ma kota") == "kota ma ala"
     assert odwroc_v1("") == ""
     assert odwroc_v1("ala") == "ala"
     assert odwroc_v1("kot") == "tko"
+
 
 def test_odwroc_v2():
     assert odwroc_v2("ala ma kota") == "kota ma ala"
@@ -31,8 +35,8 @@ def test_odwroc_v2():
     assert odwroc_v2("ala") == "ala"
     assert odwroc_v2("kot") == "tko"
 
+
 if __name__ == "__main__":
 
     test_odwroc_v1()
     test_odwroc_v2()
-

@@ -11,4 +11,3 @@ Program moze wypisac twoje inicjaly lub komunikat "Witaj swiecie!".
 if __name__ == "__main__":
     print("A.D.")
     print("Witaj swiecie")
-

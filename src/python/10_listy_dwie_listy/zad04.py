@@ -8,6 +8,7 @@ Dla otrzymanych list [1, 2, 3] oraz [3, 1, 2], powinno zostac zwrocone: 5.
 
 """
 
+
 def iloczyn_wektorowy(lista_a, lista_b):
 
     if len(lista_a) != len(lista_b):
@@ -28,12 +29,13 @@ def iloczyn_wektorowy(lista_a, lista_b):
     )
     return list(wynik)
 
+
 def test_iloczyn_wektorowy():
 
     assert iloczyn_wektorowy([1, 2, 3], [4, 5, 6]) == [-3, 6, -3]
     assert iloczyn_wektorowy([0, -5, 8], [3, 7, -2]) == [-46, 24, 15]
 
+
 if __name__ == "__main__":
 
     test_iloczyn_wektorowy()
-

@@ -8,6 +8,7 @@ Dla otrzymanych list [2.0, 5.0, 0.0, 2.0, 1.0] oraz [0.2, 0.4, 0.1, 0.2, 0.1] zo
 
 """
 
+
 def srednia_wazona(wartosci, wagi):
 
     if len(wartosci) != len(wagi):
@@ -19,10 +20,11 @@ def srednia_wazona(wartosci, wagi):
 
     return suma / sum(wartosci)
 
+
 def test_srednia_wazona():
     assert srednia_wazona([1, 2, 3], [1, 1, 1]) == 1
     assert srednia_wazona([0, -23, -5, 2, -3, 4, 9], [1, 2, 3, 4, 5, 6, 7]) == -1.1875
 
+
 if __name__ == "__main__":
     test_srednia_wazona()
-

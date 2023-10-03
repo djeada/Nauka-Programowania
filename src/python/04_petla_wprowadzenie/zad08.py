@@ -22,4 +22,3 @@ if __name__ == "__main__":
             print("Liczba kur: ", i)
             print("Liczba owieczek: ", owieczki)
             break
-

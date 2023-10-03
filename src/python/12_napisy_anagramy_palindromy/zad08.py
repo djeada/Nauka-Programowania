@@ -12,6 +12,7 @@ Dla otrzymanego napisu: “xxxx”, powinna zostac zwrocona lista: [“x”, “
 
 """
 
+
 def wyjatkowy_palindrom(napis):
     """
     Funkcja sprawdza czy podany napis jest wyjatkowym palindromem.
@@ -27,6 +28,7 @@ def wyjatkowy_palindrom(napis):
         return wyjatkowy_palindrom(napis[1:-1])
 
     return False
+
 
 def wyjatkowe_palindromy(napis):
     """
@@ -44,10 +46,12 @@ def wyjatkowe_palindromy(napis):
 
     return wynik
 
+
 def test_wyjatkowy_palindrom():
     assert wyjatkowy_palindrom("xxx")
     assert wyjatkowy_palindrom("ccdcc")
     assert not wyjatkowy_palindrom("abc")
+
 
 def test_wyjatkowe_palindromy():
     assert wyjatkowe_palindromy("xxxx") == {"x", "xx", "xxx", "xxxx"}
@@ -55,7 +59,7 @@ def test_wyjatkowe_palindromy():
     assert wyjatkowe_palindromy("abc") == {"a", "b", "c"}
     assert wyjatkowe_palindromy("") == {}
 
+
 if __name__ == "__main__":
     test_wyjatkowy_palindrom()
     test_wyjatkowe_palindromy()
-

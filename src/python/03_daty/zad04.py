@@ -29,4 +29,3 @@ if __name__ == "__main__":
         print("Szostym dniem tygodnia jest sobota.")
     elif liczba == 7:
         print("Siodmym dniem tygodnia jest niedziela.")
-

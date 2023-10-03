@@ -18,11 +18,13 @@ e) Wynik: [2592, 0, 0, 36, 1080]
 
 """
 
+
 def zwieksz_parzyste(lista):
     for i in range(len(lista)):
         if i % 2 == 0:
             lista[i] += 1
     return lista
+
 
 def wyzeruj_wielokrotnosci_3(lista):
     for i in range(len(lista)):
@@ -30,11 +32,13 @@ def wyzeruj_wielokrotnosci_3(lista):
             lista[i] = 0
     return lista
 
+
 def kwadrat_mniejsze_10(lista):
     for i in range(len(lista)):
         if lista[i] < 10:
             lista[i] = lista[i] ** 2
     return lista
+
 
 def czy_pierwsza(n):
 
@@ -46,12 +50,14 @@ def czy_pierwsza(n):
             return False
     return True
 
+
 def suma_wszystkich_na_pierwszych_indeksach(lista):
     suma = sum(lista)
     for i in range(len(lista)):
         if czy_pierwsza(i):
             lista[i] = suma
     return lista
+
 
 def zamien_na_iloczyn_wszystkich_poza_soba(lista):
     kopia = lista[:]
@@ -63,20 +69,24 @@ def zamien_na_iloczyn_wszystkich_poza_soba(lista):
         kopia[i] = iloczyn
     return kopia
 
+
 def test_zwieksz_parzyste():
     assert zwieksz_parzyste([1, 2, 3, 4, 5]) == [2, 2, 4, 4, 6]
     assert zwieksz_parzyste([1, 2, 3, 4, 5, 6]) == [2, 2, 4, 4, 6, 6]
     assert zwieksz_parzyste([1, 2, 3, 4, 5, 6, 7]) == [2, 2, 4, 4, 6, 6, 8]
+
 
 def test_wyzeruj_wielokrotnosci_3():
     assert wyzeruj_wielokrotnosci_3([1, 2, 3, 4, 5]) == [1, 2, 0, 4, 5]
     assert wyzeruj_wielokrotnosci_3([1, 2, 3, 4, 5, 6]) == [1, 2, 0, 4, 5, 0]
     assert wyzeruj_wielokrotnosci_3([8, 6, 5, 3, 2, 0]) == [8, 0, 5, 0, 2, 0]
 
+
 def test_kwadrat_mniejsze_10():
     assert kwadrat_mniejsze_10([1, 2, 3, 4, 5]) == [1, 4, 9, 16, 25]
     assert kwadrat_mniejsze_10([1, 2, 3, 4, 5, 6]) == [1, 4, 9, 16, 25, 36]
     assert kwadrat_mniejsze_10([1, 2, 3, 4, 5, 6, 7]) == [1, 4, 9, 16, 25, 36, 49]
+
 
 def test_suma_wszystkich_na_pierwszych_indeksach():
     assert suma_wszystkich_na_pierwszych_indeksach([1, 2, 3, 4, 5]) == [1, 2, 15, 15, 5]
@@ -96,6 +106,7 @@ def test_suma_wszystkich_na_pierwszych_indeksach():
         -2,
     ]
 
+
 def test_zamien_na_iloczyn_wszystkich_poza_soba():
     assert zamien_na_iloczyn_wszystkich_poza_soba([1, 2, 3]) == [6, 3, 2]
     assert zamien_na_iloczyn_wszystkich_poza_soba([-1, 0, 3]) == [0, -3, 0]
@@ -109,6 +120,7 @@ def test_zamien_na_iloczyn_wszystkich_poza_soba():
         41580,
     ]
 
+
 if __name__ == "__main__":
 
     test_zwieksz_parzyste()
@@ -116,4 +128,3 @@ if __name__ == "__main__":
     test_kwadrat_mniejsze_10()
     test_suma_wszystkich_na_pierwszych_indeksach()
     test_zamien_na_iloczyn_wszystkich_poza_soba()
-

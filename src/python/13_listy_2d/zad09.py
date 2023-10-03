@@ -16,6 +16,7 @@ Dla otrzymanej macierzy: [[7, 4, 2, 0], [4, 8, 10, 8], [3, 6, 7, 6], [3, 9, 19, 
 
 """
 
+
 def znajdz_klepsydry(macierz):
     """
     Przejdz przez macierz i znajdz wszystkie klepsydry.
@@ -46,8 +47,10 @@ def znajdz_klepsydry(macierz):
 
     return klepsydry
 
+
 def najwieksza_klepsydra(macierz):
     return max(znajdz_klepsydry(macierz))
+
 
 def test_najwieksza_klepsydra():
 
@@ -60,7 +63,7 @@ def test_najwieksza_klepsydra():
     ]
     assert najwieksza_klepsydra(macierz) == 395
 
+
 if __name__ == "__main__":
 
     test_najwieksza_klepsydra()
-

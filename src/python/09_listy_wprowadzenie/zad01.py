@@ -10,14 +10,17 @@ Dla N rownego 3 oraz pobranych liczb: 8, 12, 7, w drugim podpunkcie powinno zost
 
 """
 
+
 def wypisz_od_poczatku(lista):
     for element in lista:
         print(element)
+
 
 def wypisz_od_konca(lista):
     for element in reversed(lista):
         print(f"{element}, ", end=", ")
     print()
+
 
 if __name__ == "__main__":
 
@@ -34,4 +37,3 @@ if __name__ == "__main__":
 
     print("\nLista od konca: ")
     wypisz_od_konca(lista)
-

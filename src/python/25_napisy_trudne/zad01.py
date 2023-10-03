@@ -12,6 +12,7 @@ Dla napisow: “Lezy jezy na wiezy”, “zy” oraz “rzy”, zwrocony napis p
 def zamien_wszystkoV1(zdanie, napis_a, napis_b):
     return zdanie.replace(napis_a, napis_b)
 
+
 # Testy Poprawnosci
 def test_1():
     zdanie = "Lezy jezy na wiezy"
@@ -21,9 +22,10 @@ def test_1():
 
     assert zamien_wszystkoV1(zdanie, napis_a, napis_b) == wynik
 
+
 def main():
     test_1()
 
+
 if __name__ == "__main__":
     main()
-
