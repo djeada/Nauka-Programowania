@@ -1,70 +1,76 @@
 <div align="center">
-  
 <a href="https://github.com/djeada/Nauka-programowania/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/djeada/Nauka-programowania"></a>
 <a href="https://github.com/djeada/Nauka-programowania/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/djeada/Nauka-programowania"></a>
 <a href="https://github.com/djeada/Nauka-programowania/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/djeada/Nauka-programowania"></a>
 <a href=""><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
 </div>
 
-# Nauka-programowania
-Jeśli chcesz nauczyć się programować, ale nie wiesz od czego zacząć, to trafiłeś we właściwe miejsce. Ten projekt oferuje zbiór zadań, które przeprowadzą Cię przez wszystkie koncepcje potrzebne do zrozumienia w programowaniu.
+# Nauka Programowania
+
+Witaj w świecie programowania! Jeśli zastanawiasz się, od czego zacząć, to jesteś w idealnym miejscu. Ten projekt oferuje ciąg zadań, które przeprowadzą Cię przez kluczowe koncepcje potrzebne do zrozumienia programowania, od podstaw aż do bardziej zaawansowanych tematów.
 
 ![laptop_with_snake_Seed-7632331_Steps-50_Guidance-7 5](https://user-images.githubusercontent.com/37275728/221419671-2d82a012-509d-4331-866c-af8eeb2b84a9.png)
 
 ## Gdzie mogę znaleźć dodatkowe materiały do nauki?
 
-Materiały dodatkowe, takie jak notatki z Python i C++, są dostępne na naszych osobnych repozytoriach na GitHubie:
+Oferujemy też szeroki wybór dodatkowych materiałów, takich jak notatki i poradniki dotyczące Pythona i C++, które są dostępne na naszych stronach GitHub:
 
-* <a href="https://github.com/djeada/Kurs-podstaw-Pythona">Notatki Python.</a>  
-* <a href="https://github.com/djeada/C-and-Cpp">Notatki C++.</a> 
+* [Notatki Python](https://github.com/djeada/Kurs-podstaw-Pythona)
+* [Notatki C++](https://github.com/djeada/C-and-Cpp)
 
-# Zbiór zadań
+## Zbiór zadań
 
-* Aktualny zbiór zadań znajdziesz pod tym <a href="https://github.com/djeada/Nauka-Programowania/tree/master/zbior_zadan">linkiem</a>. </br>
-* Zbiór będzie poszerzany i aktualizowany.
-* Więcej informacji na temat tego jak dodać własne rozwiązania, znajdziesz na <a href="https://github.com/djeada/Nauka-Programowania/blob/master/CONTRIBUTING.md">tej stronie</a>.
+Nasz zbiór zadań to bogate źródło wiedzy:
+
+* [Zbiór zadań](https://github.com/djeada/Nauka-Programowania/tree/master/zbior_zadan)
+* Zbiór jest regularnie poszerzany i aktualizowany.
+* Informacje o dodawaniu własnych rozwiązań znajdziesz [tutaj](https://github.com/djeada/Nauka-Programowania/blob/master/CONTRIBUTING.md).
 
 ## O zadaniach
-Zadania zostały podzielone tematycznie i uporządkowane według stopnia zaawansowania. Przygotowaliśmy je w taki sposób, aby każdy - nawet początkujący uczeń - mógł przećwiczyć podstawowe koncepcje programowania. W odróżnieniu od wielu innych kursów, które szybko przechodzą do bardziej zaawansowanych mechanizmów, nasze zadania koncentrują się głównie na podstawach.
 
-* Pierwsze 8 rozdziałów jest poświęcone najbardziej podstawowym koncepcjom, takim jak zmienne, warunki i pętle. Rozwiązania powinny być sprawdzane ręcznie poprzez komunikację z programem za pomocą konsoli. Dane wpisywane są z klawiatury, a wynik wyświetlany na ekranie.
-* W rozdziałach 9-17 znajdują się zadania wymagające zrozumienia koncepcji z pierwszych 8 rozdziałów oraz rozszerzające je o zagadnienia takie jak struktury danych, rekurencja i binarna reprezentacja liczb. Osoba rozwiązująca zadania powinna przygotować automatyczne testy dla swojego rozwiązania, uwzględniając wszystkie skrajne przypadki.
-* W rozdziałach 18-25 poruszane są bardziej zaawansowane tematy, takie jak praca z plikami, algorytmy sortowania i obsługa błędów. Zadania te wymagają już większej zaawansowanej wiedzy i umiejętności, a także znajomości narzędzi takich jak debugowanie i profilowanie kodu. Zadania te wymagają dużej samodzielności i umiejętności samodzielnego poszukiwania informacji oraz rozwiązywania problemów.
+Zadania są podzielone tematycznie i ułożone według stopnia trudności, aby każdy mógł ćwiczyć podstawowe koncepcje programowania:
 
-Przykładowe rozwiązania powinny być traktowane jako wskazówki, a nie jako jedyne słuszne sposoby rozwiązania zadania. W szczególności w dalszych rozdziałach, dane zadanie może mieć wiele różnych sposobów rozwiązania. Część przykładowych rozwiązań może zawierać nawet więcej niż jeden wariant rozwiązania. Alternatywne rozwiązania mogą różnić się między sobą pod względem złożoności czasowej, pamięciowej lub użycia funkcji języka.
+1. **Podstawy (Rozdziały 1-8):** Zmienne, warunki, pętle. Rozwiązania sprawdzane są ręcznie przez interakcję z konsolą.
+2. **Poziom średnio zaawansowany (Rozdziały 9-17):** Struktury danych, rekurencja, binarna reprezentacja liczb. Wymagają automatycznych testów i uwzględnienia skrajnych przypadków.
+3. **Zaawansowane (Rozdziały 18-25):** Praca z plikami, algorytmy sortowania, obsługa błędów. Wymagają głębszej wiedzy i narzędzi takich jak debugowanie.
 
-Należy pamiętać, że nauka programowania to długi proces, ale dzięki naszemu zbiorowi zadań oraz dodatkowym materiałom, powinieneś być w stanie wypracować solidne podstawy i rozwijać swoje umiejętności, które pozwolą Ci na osiągnięcie sukcesu w sektorze IT.
-
-Jeśli masz jakieś pytania lub potrzebujesz dodatkowej pomocy, nie wahaj się skontaktować z nami. Chętnie Ci pomożemy.
+Przykładowe rozwiązania służą jako wskazówki i często prezentują różne podejścia do rozwiązania problemów.
 
 ## Wspierane wersje języków
 
-Przykłady zostały przetestowane i dostosowane do następujących wersji języków:
+Przykłady zostały przetestowane w różnych wersjach języków:
 
 ### C++
-
-Większość przykładów wykorzystuje standard `C++11`. Niektóre zadania rozwiązane zostały przy użyciu składni wprowadzonej w wersjach `C++17` i `C++20`. Aby skompilować przykłady, należy użyć kompilatora `GCC` z flagami: `g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o plik_wykonwyalny.out sciezka_do_zadania.cpp`. Do formatowania kodu należy użyć narzędzia `clang-format` z flagami: `clang-format -i -style=file sciezka_do_zadania.cpp`. Przykłady nie używają bibliotek zewnętrznych.
+- Standard: C++11, C++17, C++20.
+- Kompilacja: `g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o plik_wykonwyalny.out sciezka_do_zadania.cpp`.
+- Formatowanie: `clang-format -i -style=file sciezka_do_zadania.cpp`.
 
 ### Python
-
-Wszystkie przykłady zostały przetestowane i dostosowane do wersji `3.8`. Skrypty języka Python nie wymagają kompilacji - aby uruchomić skrypt, należy użyć komendy `python sciezka_do_zadania.py`. Do formatowania kodu należy użyć narzędzia `black` bez flag: `black sciezka_do_zadania.py`. Przykłady nie używają bibliotek zewnętrznych.
+- Wersja:`3.10`.
+- Uruchomienie: `python3 sciezka_do_zadania.py`.
+- Formatowanie: `black sciezka_do_zadania.py`.
 
 ### Java
-    
-Przykłady zostały przetestowane i dostosowane do wersji `Java SE 17`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `javac` z flagami: `javac -d . sciezka_do_zadania.java`. Do formatowania kodu należy użyć narzędzia `google-java-format` z flagami: `java -jar google-java-format-1.7-all-deps.jar sciezka_do_zadania.java`. Przykłady nie używają bibliotek zewnętrznych.
+- Wersja: `Java SE 18`.
+- Kompilacja: `javac -d . sciezka_do_zadania.java`.
+- Formatowanie: `java -jar google-java-format-1.7-all-deps.jar sciezka_do_zadania.java`.
 
 ### JavaScript
-
-Rozwiązania zostały przetestowane i dostosowane do środowiska `NodeJS 19.8.1`. Skrypty języka JavaScript nie wymagają kompilacji - aby uruchomić skrypt, należy użyć komendy `node sciezka_do_zadania.js`. Do formatowania kodu należy użyć narzędzia `eslint` z konfiguracją: `.eslintrc.json` oraz flagami: `eslint --fix sciezka_do_zadania.js`. Przykłady nie używają bibliotek zewnętrznych.
+- Środowisko: `NodeJS 20.0.0`.
+- Uruchomienie: `node sciezka_do_zadania.js`.
+- Formatowanie: `eslint --fix sciezka_do_zadania.js` z konfiguracją `.eslintrc.json`.
 
 ### Haskell
-
-Przykłady zostały przetestowane i dostosowane do wersji `GHC 8.10.2`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `ghc` z flagami: `ghc -o plik_wykonwyalny.out sciezka_do_zadania.hs`. Do formatowania kodu należy użyć narzędzia `ormolu` z flagami:
-`ormolu --mode inplace sciezka_do_zadania.hs`. Przykłady nie używają bibliotek zewnętrznych.
+- Wersja: `GHC 9.2.1`.
+- Kompilacja: `ghc -o plik_wykonawczy.out sciezka_do_zadania.hs`.
+- Formatowanie: `ormolu --mode inplace sciezka_do_zadania.hs`.
 
 ### Rust
+- Wersja: `1.74.0`.
+- Kompilacja: `rustc sciezka_do_zadania.rs`.
+- Formatowanie: `rustfmt --write-mode=overwrite sciezka_do_zadania.rs`.
 
-Przykłady zostały przetestowane i dostosowane do wersji `1.68.0`. Aby skompilować przykłady z tego języka, należy użyć kompilatora `rustc` bez flag: `rustc sciezka_do_zadania.rs`. Do formatowania kodu należy użyć narzędzia `rustfmt` z flagami: `rustfmt --write-mode=overwrite sciezka_do_zadania.rs`. Przykłady nie używają bibliotek zewnętrznych.
+Nauka programowania to proces wymagający czasu i praktyki, ale z naszymi zasobami będziesz miał solidną podstawę do rozwoju umiejętności programistycznych. Jeśli masz pytania lub potrzebujesz pomocy, skontaktuj się z nami - z chęcią Ci pomożemy!
 
 ## Rozwiązania
 
