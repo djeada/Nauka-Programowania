@@ -1664,7 +1664,7 @@ Nauka programowania to proces wymagający czasu i praktyki, ale z naszymi zasoba
         </tr>
         <tr>
             <td>7</td>
-            <td>Dla dwóch słów, ile minimalnie znaków musimy usunąć aby uzyskać anagramy?</td>
+            <td>Najmniej usunięć do anagramów</td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_palindromy/zad07.py">Python</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_palindromy/zad07.cpp">Cpp</a></td>
             <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad7">Java</a></td>
