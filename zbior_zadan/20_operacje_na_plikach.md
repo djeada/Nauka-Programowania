@@ -1,168 +1,504 @@
-## Operacje na plikach
+# Operacje na plikach
 
-### Zad 1. (★☆☆)
+## Zadanie 1 - Sprawdzenie, czy ścieżka należy do pliku lub folderu
 
-Tytuł: Sprawdzenie, czy ścieżka należy do pliku/folderu
+**Poziom trudności**: ★☆☆
 
-Treść: Otrzymujesz napis reprezentujący ścieżkę. Sprawdź, czy jest to ścieżka do pliku lub folderu.
+### Treść zadania
 
-Dane wejściowe: Napis
+Otrzymujesz napis reprezentujący ścieżkę w systemie plików. Twoim zadaniem jest sprawdzić, czy podana ścieżka odnosi się do istniejącego pliku lub folderu.
 
-Dane wyjściowe: Wartość logiczna
+### Dane wejściowe
 
-### Zad 2. (★★☆)
+- Jeden napis reprezentujący ścieżkę w systemie plików.
 
-Tytuł: Znalezienie w folderze wszystkich plików z danym rozszerzeniem
+### Dane wyjściowe
 
-Treść: Otrzymujesz dwa napisy. Pierwszy napis to ścieżka folderu, a drugi to rozszerzenie szukanych plików. Znajdź w folderze wszystkie pliki o podanym rozszerzeniu i zapisz ich nazwy w liście.
+- Wartość logiczna:
+  - **Prawda**, jeśli ścieżka odnosi się do istniejącego pliku lub folderu.
+  - **Fałsz**, jeśli ścieżka nie odnosi się do żadnego istniejącego pliku ani folderu.
 
-Dane wejściowe: Dwa napisy
+### Przykład
 
-Dane wyjściowe: Lista napisów
+- **Dane wejściowe**:
+  ```
+  C:\Users\Username\Documents\plik.txt
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Prawda
+  ```
 
-### Zad 3. (★★☆)
+### Wskazówki
 
-Tytuł: Znalezienie ścieżki pliku o danej nazwie
+- Sprawdź, czy ścieżka istnieje w systemie plików.
+- Upewnij się, że obsługujesz zarówno ścieżki do plików, jak i do folderów.
 
-Treść: Otrzymujesz napis reprezentujący nazwę pliku. Przeszukaj cały system i zapisz w liście wszystkie ścieżki plików o podanej nazwie.
+---
 
-Dane wejściowe: Napis
+## Zadanie 2 - Znalezienie wszystkich plików z danym rozszerzeniem w folderze
 
-Dane wyjściowe: Lista napisów
+**Poziom trudności**: ★★☆
 
-### Zad 4. (★☆☆)
+### Treść zadania
 
-Tytuł: Wczytaj i wypisz treść pliku.
+Otrzymujesz dwa napisy:
 
-Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Wczytaj plik i wypisz jego treść.
+1. Ścieżka do folderu.
+2. Rozszerzenie plików do wyszukania (np. `.txt`, `.jpg`).
 
-Dane wejściowe: Napis reprezentujący ścieżkę do pliku.
+Twoim zadaniem jest znaleźć w podanym folderze wszystkie pliki o podanym rozszerzeniu i zwrócić ich nazwy w postaci listy.
 
-Dane wyjściowe: Napis zawierający treść pliku.
+### Dane wejściowe
 
-### Zad 5. (★☆☆)
+- Dwa napisy:
+  1. Ścieżka do folderu.
+  2. Rozszerzenie plików do wyszukania (wraz z kropką, np. `.txt`).
 
-Tytuł: Plik z listą adresów IP.
+### Dane wyjściowe
 
-Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Każdy wiersz pliku reprezentuje adres IP. Posortuj adresy IP i zapisz je w liście.
+- Lista napisów zawierająca nazwy plików z podanym rozszerzeniem znajdujących się w podanym folderze.
 
-Dane wejściowe: Napis reprezentujący ścieżkę do pliku.
+### Przykład
 
-Dane wyjściowe: Lista adresów IP posortowanych alfabetycznie.
+- **Dane wejściowe**:
+  ```
+  C:\Users\Username\Documents
+  .txt
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  ['dokument1.txt', 'notatki.txt', 'lista_zakupów.txt']
+  ```
 
-### Zad 6. (★★☆)
+### Wskazówki
 
-Tytuł: Statystyki dla pliku tekstowego.
+- Przeszukaj tylko bezpośrednie zawartości podanego folderu (nie uwzględniaj podfolderów).
+- Upewnij się, że porównujesz rozszerzenia plików w sposób niezależny od wielkości liter.
 
-Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Oblicz:
+---
+
+## Zadanie 3 - Znalezienie ścieżek plików o danej nazwie
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Otrzymujesz napis reprezentujący nazwę pliku (np. `raport.docx`). Twoim zadaniem jest przeszukać cały system plików i znaleźć wszystkie pliki o podanej nazwie. Zwróć listę pełnych ścieżek do tych plików.
+
+### Dane wejściowe
+
+- Jeden napis reprezentujący nazwę pliku do wyszukania.
+
+### Dane wyjściowe
+
+- Lista napisów zawierająca pełne ścieżki do wszystkich plików o podanej nazwie.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  raport.docx
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  [
+    'C:\Users\Username\Documents\raport.docx',
+    'D:\Projekty\Raporty\raport.docx',
+    'E:\Backup\raport.docx'
+  ]
+  ```
+
+### Wskazówki
+
+- Przeszukaj wszystkie dyski i foldery dostępne w systemie.
+- Upewnij się, że masz odpowiednie uprawnienia do odczytu poszczególnych folderów.
+
+---
+
+## Zadanie 4 - Wczytaj i wypisz treść pliku
+
+**Poziom trudności**: ★☆☆
+
+### Treść zadania
+
+Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Twoim zadaniem jest wczytać zawartość tego pliku i wypisać jego treść.
+
+### Dane wejściowe
+
+- Jeden napis reprezentujący ścieżkę do pliku tekstowego.
+
+### Dane wyjściowe
+
+- Napis zawierający treść pliku.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  C:\Users\Username\Documents\wiadomość.txt
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Witaj! To jest przykładowa treść pliku tekstowego.
+  ```
+
+### Wskazówki
+
+- Upewnij się, że plik istnieje i masz do niego dostęp.
+- Zadbaj o poprawne kodowanie znaków podczas wczytywania pliku.
+
+---
+
+## Zadanie 5 - Posortuj adresy IP z pliku
+
+**Poziom trudności**: ★☆☆
+
+### Treść zadania
+
+Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Plik zawiera w każdym wierszu jeden adres IP. Twoim zadaniem jest wczytać adresy IP z pliku, posortować je alfabetycznie i zwrócić w postaci listy.
+
+### Dane wejściowe
+
+- Jeden napis reprezentujący ścieżkę do pliku tekstowego.
+
+### Dane wyjściowe
+
+- Lista napisów zawierająca posortowane alfabetycznie adresy IP.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  C:\Users\Username\Documents\adresy_ip.txt
+  ```
+- **Plik "adresy_ip.txt" zawiera**:
+  ```
+  192.168.1.10
+  10.0.0.1
+  172.16.0.5
+  192.168.1.2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  ['10.0.0.1', '172.16.0.5', '192.168.1.10', '192.168.1.2']
+  ```
+
+### Wskazówki
+
+- Pamiętaj, że alfabetyczne sortowanie adresów IP może nie odpowiadać ich kolejności numerycznej.
+- Jeśli chcesz sortować adresy IP według wartości numerycznych, rozważ podział adresów na oktety i porównywanie ich jako liczb.
+
+---
+
+## Zadanie 6 - Statystyki dla pliku tekstowego
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Twoim zadaniem jest obliczyć następujące statystyki dla tego pliku:
 
 a) Liczbę wierszy w pliku.
 
-b) Liczbę słów w pliku (słowa oddzielone są spacjami i mogą składać się wyłącznie z liter).
+b) Łączną liczbę słów w pliku (słowa są oddzielone spacjami i składają się wyłącznie z liter).
 
-c) Średnią długość wiersza.
+c) Średnią długość wiersza (liczbę znaków na wiersz).
 
 d) Średnią liczbę słów na wiersz.
 
-e) Częstość występowania każdego ze słów w pliku.
+e) Częstotliwość występowania każdego słowa w pliku (w formie słownika).
 
-Dane wejściowe: Napis reprezentujący ścieżkę do pliku.
+### Dane wejściowe
 
-Dane wyjściowe:
+- Jeden napis reprezentujący ścieżkę do pliku tekstowego.
 
-a) Liczba naturalna reprezentująca liczbę wierszy.
+### Dane wyjściowe
 
-b) Liczba naturalna reprezentująca liczbę słów.
+- a) Liczba naturalna — liczba wierszy w pliku.
+- b) Liczba naturalna — łączna liczba słów w pliku.
+- c) Liczba zmiennoprzecinkowa — średnia długość wiersza (w znakach).
+- d) Liczba zmiennoprzecinkowa — średnia liczba słów na wiersz.
+- e) Słownik, w którym kluczami są słowa (napisy), a wartościami liczby naturalne reprezentujące częstotliwość występowania słów.
 
-c) Liczba zmiennoprzecinkowa reprezentująca średnią długość wiersza.
+### Przykład
 
-d) Liczba zmiennoprzecinkowa reprezentująca średnią liczbę słów na wiersz.
+- **Dane wejściowe**:
+  ```
+  C:\Users\Username\Documents\tekst.txt
+  ```
+- **Zawartość pliku "tekst.txt"**:
+  ```
+  Ala ma kota.
+  Kot ma na imię Filemon.
+  Filemon lubi mleko.
+  Ala lubi Filemona.
+  ```
+- **Oczekiwane wyjście**:
 
-e) Słownik par: napis (słowo), liczba naturalna (częstotliwość występowania słowa). 
+  a) Liczba wierszy: `4`
 
-Przykład:
+  b) Liczba słów: `12`
 
-Dla otrzymanego napisu: "C:\Users\Username\Documents\text_file.txt" powinno zostać zwrócone:
+  c) Średnia długość wiersza: `17.75`
 
-a) Liczba naturalna reprezentująca liczbę wierszy, np. 6
+  d) Średnia liczba słów na wiersz: `3.0`
 
-b) Liczba naturalna reprezentująca liczbę słów, np. 25
+  e) Częstotliwość słów:
+  ```
+  {
+    'Ala': 2,
+    'ma': 2,
+    'kota': 1,
+    'Kot': 1,
+    'na': 1,
+    'imię': 1,
+    'Filemon': 1,
+    'Filemona': 1,
+    'lubi': 2,
+    'mleko': 1
+  }
+  ```
 
-c) Liczba zmiennoprzecinkowa reprezentująca średnią długość wiersza, np. 41.5
+### Wskazówki
 
-d) Liczba zmiennoprzecinkowa reprezentująca średnią liczbę słów na wiersz, np. 4.2
+- Przy liczeniu słów usuń znaki interpunkcyjne i zamień tekst na małe litery, jeśli chcesz traktować słowa jednolicie.
+- Możesz użyć funkcji do podziału tekstu na słowa, takich jak `split()`.
+- Zadbaj o to, by słowa były traktowane identycznie bez względu na wielkość liter (jeśli to wymagane).
 
-e) Słownik par: napis (słowo), liczba naturalna (częstotliwość występowania słowa): {'The': 2, 'quick': 2, 'brown': 2, 'fox': 2, 'jumped': 1, 'over': 1, 'the': 1, 'lazy': 1, 'dog.': 1, 'cat': 1, 'sat': 1, 'on': 1, 'mat.': 1, 'Foxes': 1, 'are': 1, 'known': 1, 'for': 1, 'their': 2, 'cunning': 1, 'and': 1, 'intelligence.': 1, 'Dogs': 1, 'loyalty': 1, 'kindness.': 1, 'Cats': 1, 'independent': 1, 'animals': 1, 'but': 1, 'can': 1, 'be': 1, 'affectionate.': 1, 'This': 1, 'text': 1, 'file': 1, 'contains': 1, 'ten': 1, 'lines': 1, 'and': 1, 'words.': 1}
+---
 
-Tekst pliku:
+## Zadanie 7 - Dodaj wiersz na początku pliku
 
-The quick brown fox jumped over the lazy dog.
-The quick brown cat sat on the mat.
-Foxes are known for their cunning and intelligence.
-Dogs are known for their loyalty and kindness.
-Cats are independent animals but can be affectionate.
-This text file contains six lines and 25 words.
+**Poziom trudności**: ★☆☆
 
-### Zad 7. (★☆☆)
+### Treść zadania
 
-Tytuł: Dodaj wiersz do pliku.
+Otrzymujesz dwa napisy:
 
-Treść zadania: Otrzymujesz dwa napisy. Pierwszy napis reprezentuje ścieżkę do pliku tekstowego, a drugi napis reprezentuje wiersz tekstu. Dodaj otrzymany wiersz na początek pliku tekstowego.
+1. Ścieżka do pliku tekstowego.
+2. Wiersz tekstu do dodania.
 
-Dane wejściowe: Dwa napisy - ścieżka do pliku oraz wiersz tekstu.
+Twoim zadaniem jest dodać podany wiersz na początku pliku tekstowego.
 
-Dane wyjściowe: Brak.
+### Dane wejściowe
 
-### Zad 8. (★★☆)
+- Dwa napisy:
+  1. Ścieżka do pliku tekstowego.
+  2. Wiersz tekstu do dodania.
 
-Tytuł: Znajdź i zmodyfikuj pliki spełniające warunek.
+### Dane wyjściowe
 
-Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do folderu.
+- Brak (zmodyfikuj plik zgodnie z poleceniem).
 
-a) Dodaj swoje inicjały na końcu wszystkich plików tekstowych znajdujących się w podanym folderze i jego podfolderach.
+### Przykład
 
-b) Usuń środkowy wiersz z każdego pliku CSV znajdującego się w podanym folderze i jego podfolderach.
+- **Dane wejściowe**:
+  ```
+  C:\Users\Username\Documents\notatki.txt
+  ```
+  ```
+  To jest nowy wiersz dodany na początku pliku.
+  ```
+- **Operacja**:
+  - Dodaj podany wiersz na początku pliku "notatki.txt".
 
-Dane wejściowe: Napis reprezentujący ścieżkę do folderu.
+### Wskazówki
 
-Dane wyjściowe: Brak.
+- Pamiętaj, że musisz przesunąć istniejącą treść pliku, aby zrobić miejsce na nowy wiersz.
+- Upewnij się, że zachowujesz formatowanie pliku, np. dodając znak nowej linii po dodanym wierszu.
 
-### Zad 9. (★★☆)
+---
 
-Tytuł: Usuń pliki spełniające warunek.
+## Zadanie 8 - Modyfikacja plików spełniających warunek
 
-Treść zadania: Otrzymujesz napis reprezentujący ścieżkę do folderu. Usuń wszystkie pliki o rozmiarze większym niż 10 kB znajdujące się w podanym folderze i jego podfolderach.
+**Poziom trudności**: ★★☆
 
-Dane wejściowe: Napis reprezentujący ścieżkę do folderu.
+### Treść zadania
 
-Dane wyjściowe: Brak.
+Otrzymujesz napis reprezentujący ścieżkę do folderu. Wykonaj następujące operacje:
 
-### Zad 10. (★☆☆)
+a) Dodaj swoje inicjały na końcu wszystkich plików tekstowych (`.txt`) znajdujących się w podanym folderze oraz we wszystkich jego podfolderach.
 
-Tytuł: Skopiuj pliki.
+b) Usuń środkowy wiersz z każdego pliku CSV (`.csv`) znajdującego się w podanym folderze oraz we wszystkich jego podfolderach.
 
-Treść zadania: Otrzymujesz dwa napisy reprezentujące ścieżki do folderów. Skopiuj wszystkie pliki PNG z pierwszego folderu do drugiego folderu.
+### Dane wejściowe
 
-Dane wejściowe: Dwa napisy reprezentujące ścieżki do folderów.
+- Jeden napis reprezentujący ścieżkę do folderu.
 
-Dane wyjściowe: Brak.
+### Dane wyjściowe
 
-### Zad 11.  (★★☆)
+- Brak (zmodyfikuj pliki zgodnie z poleceniem).
 
-Tytuł: Podmień treści plików.
+### Przykład
 
-Treść zadania: Otrzymujesz dwa napisy reprezentujące ścieżki do plików. Podmień treści obu plików.
+- **Dane wejściowe**:
+  ```
+  C:\Users\Username\Documents\Projekt
+  ```
 
-Dane wejściowe: Dwa napisy reprezentujące ścieżki do plików.
+- **Operacje**:
+  - a) Dodaj swoje inicjały (np. "AB") na końcu każdego pliku `.txt` w folderze "Projekt" i jego podfolderach.
+  - b) W każdym pliku `.csv` w folderze "Projekt" i jego podfolderach usuń wiersz znajdujący się w środku pliku.
 
-Dane wyjściowe: Brak.
+### Wskazówki
 
-### Zad 12. (★★☆)
+- Przeszukaj folder rekurencyjnie, aby uwzględnić wszystkie podfoldery.
+- Przy usuwaniu środkowego wiersza, jeśli plik ma parzystą liczbę wierszy, usuń dolny z dwóch środkowych wierszy.
+- Upewnij się, że masz uprawnienia do modyfikacji plików.
 
-Tytuł: Przesuń wszystkie pliki CSV do jednego folderu.
+---
 
-Treść zadania: Otrzymujesz dwa napisy reprezentujące ścieżki do folderów. Przenieś wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderów) do drugiego folderu.
+## Zadanie 9 - Usuń pliki większe niż 10 kB
 
-Dane wejściowe: Dwa napisy reprezentujące ścieżki do folderów.
+**Poziom trudności**: ★★☆
 
-Dane wyjściowe: Brak.
+### Treść zadania
+
+Otrzymujesz napis reprezentujący ścieżkę do folderu. Twoim zadaniem jest usunąć wszystkie pliki o rozmiarze większym niż 10 kilobajtów (10 240 bajtów), znajdujące się w podanym folderze oraz we wszystkich jego podfolderach.
+
+### Dane wejściowe
+
+- Jeden napis reprezentujący ścieżkę do folderu.
+
+### Dane wyjściowe
+
+- Brak (usuń pliki zgodnie z poleceniem).
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  C:\Users\Username\Documents\DoUsunięcia
+  ```
+
+- **Operacja**:
+  - Usuń wszystkie pliki większe niż 10 kB w folderze "DoUsunięcia" i jego podfolderach.
+
+### Wskazówki
+
+- Przeszukaj folder rekurencyjnie, aby uwzględnić wszystkie podfoldery.
+- Upewnij się, że masz uprawnienia do usuwania plików.
+- Zachowaj ostrożność, aby nie usunąć plików, których nie powinieneś usuwać.
+
+---
+
+## Zadanie 10 - Skopiuj pliki PNG do innego folderu
+
+**Poziom trudności**: ★☆☆
+
+### Treść zadania
+
+Otrzymujesz dwa napisy:
+
+1. Ścieżka do folderu źródłowego.
+2. Ścieżka do folderu docelowego.
+
+Twoim zadaniem jest skopiować wszystkie pliki z rozszerzeniem `.png` z folderu źródłowego do folderu docelowego.
+
+### Dane wejściowe
+
+- Dwa napisy:
+  1. Ścieżka do folderu źródłowego.
+  2. Ścieżka do folderu docelowego.
+
+### Dane wyjściowe
+
+- Brak (skopiuj pliki zgodnie z poleceniem).
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  Źródło: C:\Users\Username\Obrazy
+  Cel: D:\Backup\Obrazy
+  ```
+
+- **Operacja**:
+  - Skopiuj wszystkie pliki `.png` z folderu "Obrazy" do folderu "D:\Backup\Obrazy".
+
+### Wskazówki
+
+- Upewnij się, że folder docelowy istnieje lub obsłuż sytuację, gdy nie istnieje.
+- Skopiuj tylko pliki z rozszerzeniem `.png` znajdujące się bezpośrednio w folderze źródłowym (nie uwzględniaj podfolderów, chyba że jest to wymagane).
+
+---
+
+## Zadanie 11 - Podmień treści plików
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Otrzymujesz dwa napisy reprezentujące ścieżki do dwóch plików. Twoim zadaniem jest zamienić miejscami treści tych plików, tak aby:
+
+- Plik A zawierał pierwotną treść pliku B.
+- Plik B zawierał pierwotną treść pliku A.
+
+### Dane wejściowe
+
+- Dwa napisy:
+  1. Ścieżka do pliku A.
+  2. Ścieżka do pliku B.
+
+### Dane wyjściowe
+
+- Brak (zmodyfikuj pliki zgodnie z poleceniem).
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  Plik A: C:\Users\Username\Documents\plik1.txt
+  Plik B: C:\Users\Username\Documents\plik2.txt
+  ```
+
+- **Operacja**:
+  - Zamień treści plików "plik1.txt" i "plik2.txt".
+
+### Wskazówki
+
+- Możesz użyć tymczasowego pliku lub zmiennej do przechowania treści jednego z plików podczas zamiany.
+- Upewnij się, że zachowujesz uprawnienia i atrybuty plików po modyfikacji.
+
+---
+
+## Zadanie 12 - Przenieś wszystkie pliki CSV do jednego folderu
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Otrzymujesz dwa napisy:
+
+1. Ścieżka do folderu źródłowego.
+2. Ścieżka do folderu docelowego.
+
+Twoim zadaniem jest przenieść wszystkie pliki z rozszerzeniem `.csv` z folderu źródłowego oraz wszystkich jego podfolderów do folderu docelowego.
+
+### Dane wejściowe
+
+- Dwa napisy:
+  1. Ścieżka do folderu źródłowego.
+  2. Ścieżka do folderu docelowego.
+
+### Dane wyjściowe
+
+- Brak (przenieś pliki zgodnie z poleceniem).
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  Źródło: C:\Users\Username\Projekty
+  Cel: D:\Dane\CSV
+  ```
+
+- **Operacja**:
+  - Przenieś wszystkie pliki `.csv` z folderu "Projekty" i jego podfolderów do folderu "D:\Dane\CSV".
+
+### Wskazówki
+
+- Upewnij się, że podczas przenoszenia plików nie dojdzie do konfliktu nazw plików.
+- Jeśli plik o tej samej nazwie już istnieje w folderze docelowym, rozważ zmianę nazwy pliku lub pomiń go.
+- Pamiętaj o przenoszeniu, a nie kopiowaniu plików.
