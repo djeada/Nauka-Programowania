@@ -1,165 +1,342 @@
-## Pętla — pętle zagnieżdżone
+## Zadanie 1 - Kwadrat
 
-### Zad 1. (★☆☆)
+**Poziom trudności**: ★☆☆
 
-Tytuł: Kwadrat
+### Treść zadania
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze kwadrat o boku równym tej liczbie.
+Napisz program, który dla podanej liczby naturalnej \( n \) wypisze kwadrat o boku długości \( n \), zbudowany z gwiazdek (\( * \)).
 
-Dane wejściowe: Liczba naturalna.
+### Dane wejściowe
 
-Dane wyjściowe: Komunikat.
+- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
 
-Przykład:
+### Dane wyjściowe
 
-Dla otrzymanej liczby 2 powinno zostać wypisane:
+- Kwadrat o boku \( n \), złożony z gwiazdek. Każdy wiersz powinien zawierać \( n \) gwiazdek bez odstępów.
+- Każdy wiersz kwadratu powinien być wypisany w osobnej linii.
 
-    **
-    **
+### Przykład
 
-### Zad 2. (★☆☆)
+- **Dane wejściowe**:
+  ```
+  2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  **
+  **
+  ```
 
-Tytuł: Trójkąt prostokątny równoboczny
+### Wskazówki
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze trójkąt prostokątny równoboczny o wysokości równej tej liczbie.
+- Użyj dwóch zagnieżdżonych pętli: zewnętrznej dla wierszy i wewnętrznej dla kolumn.
+- W każdej iteracji pętli zewnętrznej wypisz jeden wiersz gwiazdek.
 
-Dane wejściowe: Liczba naturalna.
+---
 
-Dane wyjściowe: Komunikat.
+## Zadanie 2 - Trójkąt prostokątny równoboczny
 
-Przykład:
+**Poziom trudności**: ★☆☆
 
-Dla otrzymanej liczby 3 powinno zostać wypisane:
+### Treść zadania
 
+Napisz program, który dla podanej liczby naturalnej \( n \) wypisze trójkąt prostokątny równoramienny o wysokości \( n \), zbudowany z gwiazdek (\( * \)).
+
+### Dane wejściowe
+
+- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
+
+### Dane wyjściowe
+
+- Trójkąt, w którym w pierwszym wierszu jest jedna gwiazdka, w drugim dwie, aż do \( n \) gwiazdek w ostatnim wierszu.
+- Każdy wiersz trójkąta powinien być wypisany w osobnej linii.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  3
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  *
+  **
+  ***
+  ```
+
+### Wskazówki
+
+- Użyj pętli, w której numer wiersza odpowiada liczbie gwiazdek do wypisania w tym wierszu.
+
+---
+
+## Zadanie 3 - Odwrócony trójkąt prostokątny równoboczny
+
+**Poziom trudności**: ★☆☆
+
+### Treść zadania
+
+Napisz program, który dla podanej liczby naturalnej \( n \) wypisze odwrócony trójkąt prostokątny równoramienny o wysokości \( n \), zaczynając od podstawy.
+
+### Dane wejściowe
+
+- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
+
+### Dane wyjściowe
+
+- Trójkąt, w którym w pierwszym wierszu jest \( n \) gwiazdek, w drugim \( n - 1 \), aż do jednej gwiazdki w ostatnim wierszu.
+- Każdy wiersz trójkąta powinien być wypisany w osobnej linii.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  4
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  ****
+  ***
+  **
+  *
+  ```
+
+### Wskazówki
+
+- Użyj pętli, która w każdej iteracji zmniejsza liczbę gwiazdek o jeden.
+
+---
+
+## Zadanie 4 - Tabliczka mnożenia
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Napisz program, który dla podanej liczby naturalnej \( N \) wypisze tabliczkę mnożenia o wymiarach \( N \times N \).
+
+### Dane wejściowe
+
+- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
+
+### Dane wyjściowe
+
+- Tabliczka mnożenia składająca się z \( N \) wierszy i \( N \) kolumn.
+- Wartości w tabliczce powinny być liczbami całkowitymi, a liczby w wierszu powinny być oddzielone spacjami.
+- Każdy wiersz powinien być wypisany w osobnej linii.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  3
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  1 2 3
+  2 4 6
+  3 6 9
+  ```
+
+### Wskazówki
+
+- Użyj zagnieżdżonych pętli: zewnętrznej dla wierszy i wewnętrznej dla kolumn.
+- Wartość w komórce to iloczyn numeru wiersza i kolumny.
+- Zadbaj o formatowanie wyjścia, aby tabliczka była czytelna.
+
+---
+
+## Zadanie 5 - Litera X
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Napisz program, który dla podanej liczby naturalnej \( n \) wypisze literę "X" o wysokości \( n \), zbudowaną z gwiazdek (\( * \)).
+
+### Dane wejściowe
+
+- Jedna liczba naturalna \( n \) (\( n \geq 3 \)).
+
+### Dane wyjściowe
+
+- Litera "X" o wysokości \( n \), gdzie gwiazdki są umieszczone na przekątnych.
+- Każdy wiersz powinien być wypisany w osobnej linii.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  5
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  *   *
+   * *
     *
-    **
-    ***
+   * *
+  *   *
+  ```
 
-### Zad 3. (★☆☆)
+### Wskazówki
 
-Tytuł: Odwrócony trójkąt prostokątny równoboczny
+- Użyj zagnieżdżonych pętli do iteracji przez wiersze i kolumny.
+- Wypisz gwiazdkę, gdy indeks kolumny jest równy indeksowi wiersza lub gdy suma indeksów wiersza i kolumny wynosi \( n - 1 \).
+- W pozostałych miejscach wypisz spację.
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze, zaczynając od podstawy, trójkąt prostokątny równoboczny o wysokości równej tej liczbie.
+---
 
-Dane wejściowe: Liczba naturalna.
+## Zadanie 6 - Litera Z
 
-Dane wyjściowe: Komunikat.
+**Poziom trudności**: ★★☆
 
-Przykład:
+### Treść zadania
 
-Dla otrzymanej liczby 4 powinno zostać wypisane:
+Napisz program, który dla podanej liczby naturalnej \( n \) wypisze literę "Z" o wysokości \( n \), zbudowaną z gwiazdek (\( * \)).
 
-    ****
-    ***
-    **
+### Dane wejściowe
+
+- Jedna liczba naturalna \( n \) (\( n \geq 3 \)).
+
+### Dane wyjściowe
+
+- Litera "Z" o wysokości \( n \), gdzie górna i dolna linia oraz przekątna są zbudowane z gwiazdek.
+- Każdy wiersz powinien być wypisany w osobnej linii.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  5
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  *****
+     *
     *
+   *
+  *****
+  ```
 
-### Zad 4. (★★☆)
+### Wskazówki
 
-Tytuł: Tabliczka mnożenia.
+- W pierwszym i ostatnim wierszu wypisz \( n \) gwiazdek.
+- W wierszach pomiędzy wypisz gwiazdkę w odpowiednim miejscu przekątnej.
+- Użyj zagnieżdżonych pętli i warunków do określenia, kiedy wypisać gwiazdkę, a kiedy spację.
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej N, wypisze N pierwszych wierszy i kolumn tabliczki mnożenia.
+---
 
-Dane wejściowe: Liczba naturalna.
+## Zadanie 7 - Choinka
 
-Dane wyjściowe: Wiersze i kolumny tabliczki mnożenia o wymiarach NxN.
+**Poziom trudności**: ★★☆
 
-Przykład:
+### Treść zadania
 
-Dla otrzymanej liczby 3 powinno zostać wypisane:
+Napisz program, który dla podanej liczby naturalnej \( N \) wypisze choinkę złożoną z \( N \) trójkątów ustawionych jeden na drugim. Wysokość pierwszego trójkąta to 1, a wysokość każdego kolejnego jest o 1 większa od poprzedniego.
 
-    1 2 3
-    2 4 6
-    3 6 9
+### Dane wejściowe
 
-### Zad 5. (★★☆)
+- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
 
-Tytuł: Litera X.
+### Dane wyjściowe
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze literę X o wysokości równej tej liczbie.
+- Choinka złożona z \( N \) trójkątów, gdzie każdy trójkąt jest zbudowany z gwiazdek (\( * \)).
+- Każdy wiersz powinien być wypisany w osobnej linii.
 
-Dane wejściowe: Liczba naturalna.
+### Przykład
 
-Dane wyjściowe: Komunikat.
+- **Dane wejściowe**:
+  ```
+  3
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  *
+  *
+  **
+  *
+  **
+  ***
+  ```
 
-Przykład:
+### Wskazówki
 
-Dla otrzymanej liczby 4 powinno zostać wypisane:
+- Użyj pętli do generowania kolejnych trójkątów.
+- Wysokość każdego trójkąta zwiększa się o 1.
+- W każdej iteracji generuj trójkąt o odpowiedniej wysokości.
 
-    *   *
-     * *
-     * *
-    *   *
+---
 
-### Zad 6. (★★☆)
+## Zadanie 8 - Trójkąt Pascala
 
-Tytuł: Litera Z.
+**Poziom trudności**: ★★☆
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze literę Z o wysokości równej tej liczbie.
+### Treść zadania
 
-Dane wejściowe: Liczba naturalna.
+Napisz program, który dla podanej liczby naturalnej \( n \) wypisze trójkąt Pascala o wysokości \( n \).
 
-Dane wyjściowe: Komunikat.
+### Dane wejściowe
 
-Przykład:
+- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
 
-Dla otrzymanej liczby 5 powinno zostać wypisane:
+### Dane wyjściowe
 
-    *****
-        * 
-       *
-      *
-    *****
+- Trójkąt Pascala o wysokości \( n \), gdzie każdy wiersz zawiera odpowiednie współczynniki dwumianowe.
+- Każdy wiersz powinien być wypisany w osobnej linii, a liczby w wierszu powinny być oddzielone spacjami.
 
-### Zad 7. (★★☆)
+### Przykład
 
-Tytuł: Choinka.
+- **Dane wejściowe**:
+  ```
+  3
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  1
+  1 1
+  1 2 1
+  ```
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej N, wypisze N trójkątów ustawionych w kolumnie, jeden na drugim. Wysokość pierwszego trójkąta to 1, a każdego następnego jest równa wysokości poprzedniego powiększonej o 1.
+### Wskazówki
 
-Dane wejściowe: Liczba naturalna.
+- Użyj list do przechowywania poprzedniego wiersza trójkąta.
+- W każdym wierszu oblicz kolejne wartości na podstawie sumy dwóch liczb nad nim.
+- Możesz korzystać ze wzoru na współczynniki dwumianowe.
 
-Dane wyjściowe: Komunikat.
+---
 
-Przykład:
+## Zadanie 9 - N pierwszych liczb pierwszych
 
-Dla otrzymanej liczby 3 powinno zostać wypisane:
+**Poziom trudności**: ★★☆
 
-    *
-    *
-    **
-    *
-    **
-    ***
+### Treść zadania
 
-### Zad 8. (★★☆)
+Napisz program, który dla podanej liczby naturalnej \( N \) wypisze pierwsze \( N \) liczb pierwszych.
 
-Tytuł: Trójkąt Pascala.
+### Dane wejściowe
 
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej wypisze trójkąt Pascala o wysokości równej tej liczbie.
+- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
 
-Dane wejściowe: Liczba naturalna.
+### Dane wyjściowe
 
-Dane wyjściowe: Komunikat.
+- Pierwsze \( N \) liczb pierwszych, oddzielone spacjami lub przecinkami.
+- Wszystkie liczby powinny być wypisane w jednej linii.
 
-Przykład:
+### Przykład
 
-Dla otrzymanej liczby 3 powinno zostać wypisane:
+- **Dane wejściowe**:
+  ```
+  5
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  2 3 5 7 11
+  ```
 
-      1
-      11
-      121
+### Wskazówki
 
-### Zad 9. (★★☆)
+- Użyj pętli, aby znaleźć kolejne liczby pierwsze.
+- Sprawdzaj podzielność liczby przez liczby mniejsze lub równe jej pierwiastkowi kwadratowemu.
+- Kontynuuj, aż znajdziesz \( N \) liczb pierwszych.
 
-Tytuł: N pierwszych liczb pierwszych.
-
-Treść: Napisz funkcję, która dla otrzymanej liczby naturalnej N, wypisze N pierwszych liczb pierwszych.
-
-Dane wejściowe: Liczba naturalna.
-
-Dane wyjściowe: N liczb pierwszych.
-
-Przykład:
-
-Dla otrzymanej liczby 5 powinno zostać wypisane: 2, 3, 5, 7, 11.
+---
