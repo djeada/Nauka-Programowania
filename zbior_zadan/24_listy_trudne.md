@@ -1,145 +1,337 @@
-## Listy — trudne
+# Listy — trudne
 
-### Zad 1.  (★★☆)
+## Zadanie 1 - Najdłuższy ciąg jedynek
 
-Tytuł: Najdłuższy ciąg jedynek.
+**Poziom trudności**: ★★☆
 
-Treść: Otrzymujesz listę składającą się wyłącznie z zer i jedynek. Znajdź indeks zera, które po zamianie na jedynkę dałoby najdłuższy ciąg jedynek. Jeśli lista składa się wyłącznie z zer lub wyłącznie z jedynek, zwróć -1.
+### Treść zadania
 
-Dane wejściowe: Lista liczb naturalnych.
+Otrzymujesz listę składającą się wyłącznie z zer i jedynek. Twoim zadaniem jest znaleźć indeks zera, które po zamianie na jedynkę spowoduje uzyskanie najdłuższego ciągu jedynek w tej liście. Jeśli lista składa się wyłącznie z zer lub wyłącznie z jedynek, zwróć `-1`.
 
-Dane wyjściowe: Liczba naturalna.
+### Dane wejściowe
 
-Przykład:
+- **Lista liczb naturalnych** — lista składająca się z zer i jedynek.
 
-Dla otrzymanej listy: [0, 0, 1, 0, 1, 1, 1, 0, 1, 1], powinna zostać zwrócona liczba: 7.
+### Dane wyjściowe
 
-### Zad 2. (★★☆)
+- **Jedna liczba całkowita** — indeks zera, którego zamiana na jedynkę da najdłuższy ciąg jedynek.
+- Jeśli lista składa się wyłącznie z zer lub jedynek, zwróć `-1`.
 
-Tytuł: Przesuń zera.
+### Przykład
 
-Treść: Otrzymujesz listę liczb całkowitych. Przesuń wszystkie zera na koniec listy.
+- **Dane wejściowe**:
+  ```
+  [0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  7
+  ```
 
-Dane wejściowe: Lista liczb całkowitych.
+**Wyjaśnienie**:
 
-Dane wyjściowe: Lista liczb całkowitych.
+Zmiana zera na indeksie `7` (ósmy element listy) na jedynkę tworzy najdłuższy ciąg jedynek o długości `6`.
 
-Przykład:
+### Wskazówki
 
-Dla otrzymanej listy: [0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0], powinna zostać zwrócona lista: [1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0].
+- Przeanalizuj listę, identyfikując ciągi jedynek otoczone zerami.
+- Dla każdego zera oblicz sumę długości ciągów jedynek sąsiadujących z tym zerem.
+- Wybierz zero, które po zamianie maksymalizuje długość ciągu jedynek.
 
-### Zad 3.  (★★☆)
+---
 
-Tytuł: Minimalny iloczyn.
+## Zadanie 2 - Przesuń zera na koniec listy
 
-Treść: Otrzymujesz listę liczb całkowitych. Znajdź najmniejszy iloczyn dla trzech liczb wybranych z listy. Jeśli lista składa się z mniej niż trzech liczb, zwróć iloczyn wszystkich elementów listy.
+**Poziom trudności**: ★★☆
 
-Dane wejściowe: Lista liczb całkowitych.
+### Treść zadania
 
-Dane wyjściowe: Liczba całkowita.
+Otrzymujesz listę liczb całkowitych. Przenieś wszystkie zera na koniec listy, zachowując kolejność pozostałych elementów.
 
-Przykład:
+### Dane wejściowe
 
-Dla otrzymanej listy: [3, -1, -3, 2, 9, 4], powinna zostać zwrócona liczba: -108.
+- **Lista liczb całkowitych**.
 
-### Zad 4.  (★★★)
+### Dane wyjściowe
 
-Tytuł: Wspólny podciąg o największej sumie.
+- **Lista liczb całkowitych** — lista z zerami przeniesionymi na koniec.
 
-Treść: Otrzymujesz dwie listy binarne, A oraz B. Znajdź największą długość takich dwóch podciągów, które dla obu list zaczynają się i kończą na tej samej pozycji i których suma elementów jest jednakowa.
+### Przykład
 
-Dane wejściowe: Dwie listy binarne.
+- **Dane wejściowe**:
+  ```
+  [0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0]
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  [1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0]
+  ```
 
-Dane wyjściowe: Liczba naturalna.
+### Wskazówki
 
-Przykład:
+- Przejdź przez listę i zbierz wszystkie elementy różne od zera.
+- Policz liczbę zer i dodaj je na końcu listy.
 
-Dla otrzymanych list: [0, 0, 1, 1, 1, 1] i [0, 1, 1, 0, 1, 0], powinna zostać zwrócona liczba: 5.
+---
 
-Wyjaśnienia: Suma elementów obu list na pozycjach od 0 do 4 jest równa 3.
+## Zadanie 3 - Minimalny iloczyn trzech liczb
 
-### Zad 5. (★★★)
+**Poziom trudności**: ★★☆
 
-Tytuł: Zbiór potęgowy 
+### Treść zadania
 
-Treść: Otrzymujesz listę liczb naturalnych. Zwróć zbiór potęgowy otrzymanej listy, czyli zbiór wszystkich jej podzbiorów.
+Otrzymujesz listę liczb całkowitych. Znajdź najmniejszy możliwy iloczyn trzech liczb wybranych z tej listy. Jeśli lista zawiera mniej niż trzy liczby, oblicz iloczyn wszystkich jej elementów.
 
-Dane wejściowe: Lista liczb naturalnych.
+### Dane wejściowe
 
-Dane wyjściowe: Lista list zawierająca elementy z wejściowej listy lub pustą listę.
+- **Lista liczb całkowitych**.
 
-Przykład:
+### Dane wyjściowe
 
-Dla wejściowej listy [1, 2, 1], powinna zostać zwrócona lista: [[], [1], [2], [1, 2], [1, 1], [1, 2, 1]].
+- **Jedna liczba całkowita** — najmniejszy iloczyn trzech liczb lub iloczyn wszystkich elementów, jeśli lista ma mniej niż trzy elementy.
 
-### Zad 6. (★★★)
+### Przykład
 
-Tytuł: Połączone posortowane listy 
+- **Dane wejściowe**:
+  ```
+  [3, -1, -3, 2, 9, 4]
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  -108
+  ```
 
-Treść: Otrzymujesz listę zawierającą M posortowanych list. Połącz te listy w jedną posortowaną listę. Wszystkie elementy są unikalne.
+**Wyjaśnienie**:
 
-Dane wejściowe: Lista list zawierających liczby naturalne.
+Najmniejszy iloczyn to \(-3 \times 9 \times 4 = -108\).
 
-Dane wyjściowe: Lista zawierająca liczby naturalne.
+### Wskazówki
 
-Przykład:
+- Rozważ kombinacje najmniejszych i największych liczb, ponieważ iloczyn dwóch ujemnych liczb jest dodatni.
+- Możesz posortować listę i sprawdzić możliwe kombinacje skrajnych wartości.
 
-Dla wejściowej listy:
-[[ -6, 23, 29, 33],
-[ 6, 22, 35, 71 ],
-[ 5, 19, 21, 37 ],
-[ -12, -7, -3, 28 ]],
+---
 
-powinna zostać zwrócona lista: [-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71].
+## Zadanie 4 - Wspólny podciąg o największej sumie
 
-### Zad 7. (★★★)
+**Poziom trudności**: ★★★
 
-Tytuł: Woda
+### Treść zadania
 
-Treść: Otrzymujesz listę wysokości słupków. Wszystkie słupki mają jednakową szerokość, równą jednej jednostce wysokości, i ustawione są obok siebie. Wysokość równa 0 oznacza brak słupka. Oblicz ile jednostek wody maksymalnie możemy umieścić między słupkami.
+Otrzymujesz dwie listy binarne \( A \) i \( B \) (składające się z zer i jedynek) o tej samej długości. Znajdź maksymalną długość podciągu (ciągłych elementów), dla którego suma elementów w podciągu z listy \( A \) jest równa sumie elementów w odpowiadającym podciągu z listy \( B \). Podciągi muszą zaczynać się i kończyć na tych samych indeksach w obu listach.
 
-Dane wejściowe: Lista liczb naturalnych.
+### Dane wejściowe
 
-Dane wyjściowe: Liczba naturalna.
+- **Dwie listy liczb binarnych** — listy \( A \) i \( B \) tej samej długości.
 
-Przykład:
+### Dane wyjściowe
 
-Dla wejściowej listy [3, 0, 1, 0, 2], powinna zostać zwrócona liczba: 5.
+- **Jedna liczba naturalna** — maksymalna długość podciągu spełniającego warunek.
 
-Oto ilustracja dla powyższego przykładu:
+### Przykład
 
-```
-   o           
-   o      o    
-o  o   o  o  o 
-```
+- **Dane wejściowe**:
+  ```
+  A = [0, 0, 1, 1, 1, 1]
+  B = [0, 1, 1, 0, 1, 0]
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  5
+  ```
 
-Możemy umieścić 5 jednostek wody pomiędzy słupkami.
+**Wyjaśnienie**:
 
-### Zad 8.  (★★★)
+Podciąg od indeksu 0 do 4 (pięć elementów) ma sumę równą 3 w obu listach.
 
-Tytuł: Sznurek.
+### Wskazówki
 
-Treść: Masz do sprzedania sznurek o długości n, a także listę cen dla sznurków o długościach od 1 do n. Ceny mogą być różne dla różnych długości. Znajdź maksymalny zysk, który można osiągnąć poprzez sprzedaż danego sznurka.
+- Oblicz różnicę sum skumulowanych list \( A \) i \( B \).
+- Poszukaj najdłuższego podciągu, w którym różnica sum skumulowanych jest taka sama.
 
-Dane wejściowe: Lista n liczb całkowitych reprezentujących ceny dla sznurków o długościach od 1 do n, oraz liczba naturalna n reprezentująca długość sznurka, który chcesz sprzedać.
+---
 
-Dane wyjściowe: Największa możliwa wartość, jaką można uzyskać ze sprzedaży danego sznurka.
+## Zadanie 5 - Zbiór potęgowy listy
 
-Przykład:
+**Poziom trudności**: ★★★
 
-Dla listy cen: [1, 5, 8, 9, 10, 17, 17, 20] oraz długości sznurka 4, powinna zostać zwrócona liczba 10.
+### Treść zadania
 
-### Zad 9. (★★★)
+Otrzymujesz listę liczb naturalnych (mogą występować powtórzenia). Wygeneruj zbiór wszystkich możliwych podzbiorów tej listy, uwzględniając powtórzenia i kolejność elementów.
 
-Tytuł: Najdłuższy naprzemienny podciąg.
+### Dane wejściowe
 
-Treść: Masz daną listę liczb. Znajdź najdłuższy podciąg naprzemienny w tej liście. Ciąg jest naprzemienny, jeśli liczby w nim rosną i maleją na zmianę. Na przykład [1, 3, 2, 4, 3, 5] jest naprzemienny.
+- **Lista liczb naturalnych**.
 
-Dane wejściowe: Lista n liczb całkowitych.
+### Dane wyjściowe
 
-Dane wyjściowe: Lista liczb całkowitych reprezentująca najdłuższy podciąg naprzemienny w tej liście.
+- **Lista list** — wszystkie możliwe podzbiory elementów z listy wejściowej, włącznie z pustą listą.
 
-Przykład:
+### Przykład
 
-Dla listy liczb: [1, -2, 6, 4, -3, 2, -4, -3], powinna zostać zwrócona lista [1, -2, 6, -3, 2, -4].
+- **Dane wejściowe**:
+  ```
+  [1, 2, 1]
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  [[], [1], [2], [1, 2], [1, 1], [2, 1], [1, 1, 2], [1, 2, 1], [1, 1, 2, 1]]
+  ```
+
+**Uwaga**:
+
+Kolejność elementów i powtórzenia są istotne.
+
+### Wskazówki
+
+- Możesz użyć algorytmu generującego kombinacje na podstawie binarnej reprezentacji liczb od \( 0 \) do \( 2^n - 1 \).
+- Dla każdej pozycji w liście zdecyduj, czy element jest w podzbiorze.
+
+---
+
+## Zadanie 6 - Połączenie posortowanych list
+
+**Poziom trudności**: ★★★
+
+### Treść zadania
+
+Otrzymujesz listę zawierającą \( M \) posortowanych list liczb naturalnych. Połącz te listy w jedną posortowaną listę zawierającą wszystkie elementy bez powtórzeń.
+
+### Dane wejściowe
+
+- **Lista posortowanych list liczb naturalnych**.
+
+### Dane wyjściowe
+
+- **Jedna posortowana lista liczb naturalnych** — zawierająca unikalne elementy ze wszystkich list wejściowych.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  [
+    [-6, 23, 29, 33],
+    [6, 22, 35, 71],
+    [5, 19, 21, 37],
+    [-12, -7, -3, 28]
+  ]
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  [-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71]
+  ```
+
+### Wskazówki
+
+- Użyj algorytmu scalania wielu list, np. z wykorzystaniem kopca (kolejki priorytetowej).
+- Pamiętaj o usunięciu duplikatów podczas scalania.
+
+---
+
+## Zadanie 7 - Obliczanie pojemności wody między słupkami
+
+**Poziom trudności**: ★★★
+
+### Treść zadania
+
+Otrzymujesz listę liczb naturalnych reprezentujących wysokości słupków ustawionych obok siebie. Twoim zadaniem jest obliczyć, ile jednostek wody może zostać zatrzymanych pomiędzy słupkami po opadach deszczu.
+
+### Dane wejściowe
+
+- **Lista liczb naturalnych** — wysokości słupków.
+
+### Dane wyjściowe
+
+- **Jedna liczba naturalna** — maksymalna ilość wody, jaka może zostać zatrzymana.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  [3, 0, 1, 0, 2]
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  5
+  ```
+
+**Wyjaśnienie**:
+
+Łączna ilość wody zatrzymanej między słupkami wynosi 5 jednostek.
+
+### Wskazówki
+
+- Dla każdego słupka oblicz maksymalną wysokość słupka po lewej i prawej stronie.
+- Ilość wody nad danym słupkiem to minimalna z tych dwóch wartości minus wysokość bieżącego słupka.
+
+---
+
+## Zadanie 8 - Maksymalny zysk ze sprzedaży sznurka
+
+**Poziom trudności**: ★★★
+
+### Treść zadania
+
+Masz sznurek o długości \( n \) jednostek i cennik określający ceny sznurków o długościach od 1 do \( n \). Możesz pociąć sznurek na kawałki o całkowitych długościach. Znajdź maksymalny zysk, jaki można uzyskać ze sprzedaży sznurka.
+
+### Dane wejściowe
+
+- **Lista \( n \) liczb całkowitych** — ceny sznurków o długościach od 1 do \( n \).
+- **Liczba naturalna \( n \)** — długość sznurka do sprzedania.
+
+### Dane wyjściowe
+
+- **Jedna liczba całkowita** — maksymalny zysk ze sprzedaży.
+
+### Przykład
+
+- **Dane wejściowe**:
+  - Ceny: `[1, 5, 8, 9, 10, 17, 17, 20]`
+  - Długość sznurka: `4`
+- **Oczekiwane wyjście**:
+  ```
+  10
+  ```
+
+**Wyjaśnienie**:
+
+Największy zysk uzyskamy, sprzedając sznurek o długości 4 w całości.
+
+### Wskazówki
+
+- Zastosuj podejście dynamiczne, rozważając wszystkie możliwe podziały sznurka.
+- Użyj pamięci podręcznej do przechowywania wyników dla mniejszych długości.
+
+---
+
+## Zadanie 9 - Najdłuższy naprzemienny podciąg
+
+**Poziom trudności**: ★★★
+
+### Treść zadania
+
+Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienny, w którym różnice między kolejnymi elementami zmieniają znak na przeciwny.
+
+### Dane wejściowe
+
+- **Lista liczb całkowitych**.
+
+### Dane wyjściowe
+
+- **Lista liczb całkowitych** — najdłuższy naprzemienny podciąg.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  [1, -2, 6, 4, -3, 2, -4, -3]
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  [1, -2, 6, -3, 2, -4]
+  ```
+
+### Wskazówki
+
+- Przechowuj dwa stany dla każdego elementu: rosnący i malejący.
+- Dla każdego elementu aktualizuj maksymalną długość naprzemiennego podciągu.
