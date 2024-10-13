@@ -186,11 +186,3 @@ Algorytm:
 - W najgorszym przypadku algorytm ma złożoność O(n²), ale średnio O(n log n).
 - Dobór pivota może wpłynąć na wydajność algorytmu.
 
----
-
-
-Dane wyjściowe: Posortowana lista liczb całkowitych.
-
-Przykład:
-
-Dla danej listy: [6, 2, 1, 4, 27], powinna zostać zwrócona lista: [1, 2, 4, 6, 27].
