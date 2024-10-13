@@ -1,148 +1,275 @@
-## Funkcje — rekurencja
+---
 
-### Zad 1. (★☆☆)
+## Zadanie 1 - Obliczenie wartości wielomianu w punkcie
 
-Tytuł: Liczby naturalne mniejsze od N.
+**Poziom trudności**: ★☆☆
 
-Treść: Otrzymujesz liczbę N. Przy użyciu rekurencji stwórz napis składający się z liczb naturalnych mniejszych od N oddzielonych przecinkami.
+### Treść zadania
 
-Dane wejściowe: Liczba naturalna N.
+Otrzymujesz listę współczynników wielomianu w postaci \( a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 \) oraz liczbę \( x \). Oblicz wartość tego wielomianu w podanym punkcie \( x \).
 
-Dane wyjściowe: Napis.
+### Dane wejściowe
 
-Przykład:
+- **Liczba naturalna \( n \geq 0 \)** — stopień wielomianu.
+- **Lista \( n+1 \) liczb całkowitych** — współczynniki wielomianu w kolejności od najwyższej potęgi:
+  \[ [a_n, a_{n-1}, \dots, a_0] \]
+- **Liczba całkowita \( x \)** — punkt, w którym należy obliczyć wartość wielomianu.
 
-Dla N = 10, powinien zostać zwrócony napis: "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0".
+### Dane wyjściowe
 
-### Zad 2. (★☆☆)
+- **Jedna liczba całkowita** — wartość wielomianu w punkcie \( x \).
 
-Tytuł: Suma liczb naturalnych mniejszych od N.
+### Przykład
 
-Treść: Otrzymujesz liczbę N. Przy użyciu rekurencji oblicz sumę liczb naturalnych mniejszych od N.
+- **Dane wejściowe**:
+  ```
+  2
+  3 2 1
+  1
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  6
+  ```
 
-Dane wejściowe: Liczba naturalna N.
+**Objaśnienie**:
 
-Dane wyjściowe: Liczba naturalna.
+Wielomian: \( 3x^2 + 2x + 1 \). Dla \( x = 1 \) wartość wynosi \( 3 \times 1^2 + 2 \times 1 + 1 = 6 \).
 
-Przykład:
+### Wskazówki
 
-Dla N = 10, powinna zostać zwrócona liczba: 55.
+- Użyj schematu Hornera lub sumuj iloczyny współczynników i odpowiednich potęg \( x \).
 
-### Zad 3. (★☆☆)
+---
 
-Tytuł: Potęga.
+## Zadanie 2 - Obliczenie iloczynu wielomianu przez skalar
 
-Treść: Otrzymujesz dwie liczby, a i b. Przy użyciu rekurencji oblicz a podniesione do b.
+**Poziom trudności**: ★☆☆
 
-Dane wejściowe: Dwie liczby naturalne a i b.
+### Treść zadania
 
-Dane wyjściowe: Liczba naturalna.
+Otrzymujesz listę współczynników wielomianu \( a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 \) oraz liczbę \( k \). Oblicz współczynniki wielomianu powstałego w wyniku pomnożenia oryginalnego wielomianu przez skalar \( k \).
 
-Przykład:
+### Dane wejściowe
 
-Dla a = 2 i b = 3, powinna zostać zwrócona liczba: 8.
+- **Liczba naturalna \( n \geq 0 \)** — stopień wielomianu.
+- **Lista \( n+1 \) liczb całkowitych** — współczynniki oryginalnego wielomianu:
+  \[ [a_n, a_{n-1}, \dots, a_0] \]
+- **Liczba całkowita \( k \)** — skalar, przez który należy pomnożyć wielomian.
 
-### Zad 4. (★☆☆)
+### Dane wyjściowe
 
-Tytuł: Silnia.
+- **Lista \( n+1 \) liczb całkowitych** — współczynniki nowego wielomianu po mnożeniu przez \( k \).
 
-Treść: Otrzymujesz liczbę N. Przy użyciu rekurencji oblicz silnię z tej liczby.
+### Przykład
 
-Dane wejściowe: Liczba naturalna N.
+- **Dane wejściowe**:
+  ```
+  2
+  4 -3 2
+  -2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  -8 6 -4
+  ```
 
-Dane wyjściowe: Liczba naturalna.
+**Objaśnienie**:
 
-Przykład:
+Oryginalny wielomian: \( 4x^2 - 3x + 2 \).
 
-Dla N = 3, powinna zostać zwrócona liczba: 6.
+Po pomnożeniu przez \( -2 \) otrzymujemy: \( -8x^2 + 6x - 4 \).
 
-### Zad 5. (★☆☆)
+### Wskazówki
 
-Tytuł: Liczba Fibonacciego.
+- Pomnóż każdy współczynnik wielomianu przez liczbę \( k \).
 
-Treść: Otrzymujesz liczbę N. Przy użyciu rekurencji oblicz wartość N-tego wyrazu ciągu Fibonacciego.
+---
 
-Podpowiedź: Ciąg Fibonacciego zdefiniowany jest następująco:
+## Zadanie 3 - Obliczenie sumy wielomianów
 
-* $a_0= 0$,
-* $a_1= 1$,
-* $a_n= a_{n-1}+a_n-2$.
+**Poziom trudności**: ★☆☆
 
-Dane wejściowe: Liczba naturalna N.
+### Treść zadania
 
-Dane wyjściowe: Liczba naturalna.
+Otrzymujesz dwie listy współczynników dwóch wielomianów \( a(x) \) i \( b(x) \). Oblicz współczynniki wielomianu będącego sumą tych dwóch wielomianów.
 
-Przykład:
+### Dane wejściowe
 
-Dla N = 7, powinna zostać zwrócona liczba: 13.
+- **Liczba naturalna \( n \geq 0 \)** — stopień pierwszego wielomianu.
+- **Lista \( n+1 \) liczb całkowitych** — współczynniki pierwszego wielomianu:
+  \[ [a_n, a_{n-1}, \dots, a_0] \]
+- **Liczba naturalna \( m \geq 0 \)** — stopień drugiego wielomianu.
+- **Lista \( m+1 \) liczb całkowitych** — współczynniki drugiego wielomianu:
+  \[ [b_m, b_{m-1}, \dots, b_0] \]
 
-### Zad 6. (★☆☆)
+### Dane wyjściowe
 
-Tytuł: N-ty wyraz ciągu danego wzorem rekurencyjnym.
+- **Lista liczb całkowitych** — współczynniki sumy wielomianów, zaczynając od najwyższej potęgi.
 
-Treść: Otrzymujesz liczbę N. Oblicz wartość N-tego wyrazu ciągu danego wzorem rekurencyjnym:
+### Przykład
 
-* $a_1 = 1$
-* $a_n = 1+2*a_{n-1}$
+- **Dane wejściowe**:
+  ```
+  2
+  3 5 2
+  2
+  2 -8 1
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  5 -3 3
+  ```
 
-Dane wejściowe: Liczba naturalna N.
+**Objaśnienie**:
 
-Dane wyjściowe: Liczba naturalna.
+Pierwszy wielomian: \( 3x^2 + 5x + 2 \).
 
-Przykład:
+Drugi wielomian: \( 2x^2 - 8x + 1 \).
 
-Dla N = 5, powinna zostać zwrócona liczba: 31.
+Suma: \( (3+2)x^2 + (5+(-8))x + (2+1) = 5x^2 - 3x + 3 \).
 
-### Zad 7. (★★☆)
+### Wskazówki
 
-Tytuł: Wyszukiwanie liniowe rekurencyjnie.
+- Dostosuj długości list współczynników, dodając zera tam, gdzie to konieczne.
 
-Treść: Otrzymujesz listę liczb naturalnych oraz liczbę naturalną klucz. Przy użyciu rekurencji znajdź indeks odpowiadający pierwszemu wystąpieniu klucza w liście. Jeśli klucz nie występuje w liście, zwróć -1.
+---
 
-Dane wejściowe: Lista liczb naturalnych oraz liczba naturalna klucz.
+## Zadanie 4 - Mnożenie wielomianów
 
-Dane wyjściowe: Liczba całkowita.
+**Poziom trudności**: ★★☆
 
-Przykład:
+### Treść zadania
 
-Dla otrzymanej listy oraz liczby: [1, 2, 2] i 2, powinna zostać zwrócona liczba: 1.
+Otrzymujesz dwie listy współczynników dwóch wielomianów \( a(x) \) i \( b(x) \). Oblicz współczynniki wielomianu będącego iloczynem tych dwóch wielomianów.
 
-### Zad 8. (★★☆)
+### Dane wejściowe
 
-Tytuł: Wieża Hanoi.
+- **Liczba naturalna \( n \geq 0 \)** — stopień pierwszego wielomianu.
+- **Lista \( n+1 \) liczb całkowitych** — współczynniki pierwszego wielomianu:
+  \[ [a_n, a_{n-1}, \dots, a_0] \]
+- **Liczba naturalna \( m \geq 0 \)** — stopień drugiego wielomianu.
+- **Lista \( m+1 \) liczb całkowitych** — współczynniki drugiego wielomianu:
+  \[ [b_m, b_{m-1}, \dots, b_0] \]
 
-Treść: N krążków o różnych średnicach ułożonych jest na jednym z trzech słupków (A, B lub C). Na dole znajduje się krążek o największej średnicy. Każdy następny jest mniejszy od poprzedniego. Znajdź sposób na przełożenie wszystkich krążków na inny słupek. Pamiętaj, że nie wolno kłaść krążka o większej średnicy na krążek o mniejszej średnicy, ani przekładać kilku krążków jednocześnie.
+### Dane wyjściowe
 
-Dane wejściowe: Liczba naturalna N.
+- **Lista liczb całkowitych** — współczynniki iloczynu wielomianów, zaczynając od najwyższej potęgi.
 
-Dane wyjściowe: Lista par znaków.
+### Przykład
 
-Przykład:
+- **Dane wejściowe**:
+  ```
+  3
+  5 0 10 6
+  2
+  1 2 4
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  5 10 30 26 52 24
+  ```
 
-Dla N = 3, powinna zostać zwrócona lista: [('A', 'B'), ('A', 'C'), ('B', 'C'), ('A', 'B'), ('C', 'A'), ('C', 'B'), ('A', 'B')]
+**Objaśnienie**:
 
-### Zad 9. (★★☆)
+Pierwszy wielomian: \( 5x^3 + 0x^2 + 10x + 6 \).
 
-Tytuł: Słowa elfickie.
+Drugi wielomian: \( x^2 + 2x + 4 \).
 
-Treść: Otrzymujesz napis. Przy użyciu rekurencji sprawdź czy otrzymane słowo jest słowem elfickim. Przez słowo elfickie rozumiemy taki napis, w którym co najmniej raz występuje każda z liter słowa elf.
+Iloczyn wielomianów daje wielomian stopnia \( 5 \).
 
-Dane wejściowe: Napis.
+### Wskazówki
 
-Dane wyjściowe: Wartość logiczna.
+- Mnożenie wielomianów polega na sumowaniu iloczynów współczynników, przy dodawaniu potęg \( x \).
 
-Przykład:
-Dla otrzymanego napisu: "reflektor", powinna zostać zwrócona wartość logiczna: Prawda.
+---
 
-### Zad 10. (★★☆)
+## Zadanie 5 - Obliczenie \( n \)-tej pochodnej wielomianu
 
-Tytuł: Gra.	
+**Poziom trudności**: ★★☆
 
-Treść: W grze, w każdym ruchu gracz może zdobyć 3, 5 lub 10 punktów. Oblicz przy użyciu rekurencji, ile sposobów istnieje, aby gracz wygrał grę, gdy ma do dyspozycji N punktów.
+### Treść zadania
 
-Dane wejściowe: Liczba naturalna N.
+Otrzymujesz listę współczynników wielomianu \( a(x) = a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 \) oraz liczbę naturalną \( k \). Oblicz współczynniki wielomianu będącego \( k \)-tą pochodną funkcji \( a(x) \).
 
-Dane wyjściowe: Liczba naturalna.
+### Dane wejściowe
 
-Przykład:
-Dla N = 20, powinna zostać zwrócona liczba: 4.
+- **Liczba naturalna \( n \geq 0 \)** — stopień wielomianu.
+- **Lista \( n+1 \) liczb całkowitych** — współczynniki wielomianu:
+  \[ [a_n, a_{n-1}, \dots, a_0] \]
+- **Liczba naturalna \( k \geq 1 \)** — rząd pochodnej do obliczenia.
+
+### Dane wyjściowe
+
+- **Lista liczb całkowitych** — współczynniki \( k \)-tej pochodnej wielomianu, zaczynając od najwyższej potęgi.
+- Jeśli po \( k \)-tym różniczkowaniu wielomian zniknie (wszystkie współczynniki będą zero), wypisz pustą listę.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  2
+  4 -3 2
+  1
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  8 -3
+  ```
+
+**Objaśnienie**:
+
+Oryginalny wielomian: \( 4x^2 - 3x + 2 \).
+
+Pierwsza pochodna: \( (2 \times 4)x^{2-1} - 3 = 8x - 3 \).
+
+### Wskazówki
+
+- Stosuj wzór na pochodną jednomianu: \( \frac{d}{dx} (a_nx^n) = n \times a_n x^{n-1} \).
+- Powtórz proces różniczkowania \( k \) razy.
+
+---
+
+## Zadanie 6 - Obliczenie miejsc zerowych równania kwadratowego
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Otrzymujesz współczynniki równania kwadratowego \( ax^2 + bx + c = 0 \). Znajdź rzeczywiste miejsca zerowe tego równania.
+
+### Dane wejściowe
+
+- **Trzy liczby całkowite** — współczynniki \( a \), \( b \) i \( c \), podane w jednej linii, oddzielone spacjami.
+
+### Dane wyjściowe
+
+- **Lista liczb zmiennoprzecinkowych** — rzeczywiste pierwiastki równania, posortowane rosnąco.
+- Jeśli równanie ma jeden pierwiastek podwójny, wypisz go raz.
+- Jeśli brak rzeczywistych pierwiastków, wypisz pustą listę `[]`.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  1 2 1
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  [-1.0]
+  ```
+
+**Objaśnienie**:
+
+Równanie: \( x^2 + 2x + 1 = 0 \).
+
+Delta: \( \Delta = 2^2 - 4 \times 1 \times 1 = 0 \).
+
+Pierwiastek: \( x = \frac{-2}{2 \times 1} = -1.0 \).
+
+### Wskazówki
+
+- Oblicz deltę \( \Delta = b^2 - 4ac \).
+- Zastosuj wzory na pierwiastki w zależności od wartości delty.
+
+---
