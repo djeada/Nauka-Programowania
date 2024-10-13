@@ -1,182 +1,497 @@
-## Listy 2D
+---
 
-### Zad 1. (★☆☆)
+## Zadanie 1 - Macierz z identycznymi wierszami, składającymi się z liczb od 0 do \( b \)
 
-Tytuł: Macierz z identycznymi wierszami, składającymi się z liczb od 0 do b.
+**Poziom trudności**: ★☆☆
 
-Treść: Otrzymujesz dwie liczby naturalne, a i b. Stwórz macierz, składającą się z a identycznych wierszy, które składają się z liczb od 0 do b.
+### Treść zadania
 
-Dane wejściowe: Dwie liczby naturalne, a i b.
+Otrzymujesz dwie liczby naturalne \( a \) i \( b \). Utwórz macierz składającą się z \( a \) identycznych wierszy, gdzie każdy wiersz zawiera liczby od 0 do \( b \) włącznie.
 
-Dane wyjściowe: Lista list liczb naturalnych.
+### Dane wejściowe
 
-Przykład:
+- Dwie liczby naturalne \( a \) i \( b \), każda podana w osobnej linii.
 
-Dla otrzymanych liczb: 3 i 2, powinna zostać zwrócona macierz: [[0, 1, 2], [0, 1, 2], [0, 1, 2]].
+### Dane wyjściowe
 
-### Zad 2. (★☆☆)
+- Macierz składająca się z \( a \) wierszy.
+- Każdy wiersz zawiera liczby od 0 do \( b \) włącznie, oddzielone spacjami.
+- Każdy wiersz wypisz w osobnej linii.
 
-Tytuł: Macierz kwadratowa, z elementami będącymi iloczynem współrzędnych.
+### Przykład
 
-Treść: Dla otrzymanej liczby naturalnej n, stwórz macierz kwadratową o rozmiarze n x n, której każdy element jest iloczynem jego współrzędnych.
+- **Dane wejściowe**:
+  ```
+  3
+  2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  0 1 2
+  0 1 2
+  0 1 2
+  ```
 
-Dane wejściowe: Liczba naturalna n.
+### Wskazówki
 
-Dane wyjściowe: Lista list liczb naturalnych.
+- Wygeneruj listę liczb od 0 do \( b \).
+- Powtórz ten wiersz \( a \) razy, tworząc macierz.
 
-Przykład:
+---
 
-Dla otrzymanej liczby 3 powinna zostać zwrócona macierz: [[0, 0, 0], [0, 1, 2], [0, 2, 4]].
+## Zadanie 2 - Macierz kwadratowa z iloczynem współrzędnych
 
-### Zad 3. (★☆☆)
+**Poziom trudności**: ★☆☆
 
-Tytuł: Macierz z parami elementów odpowiadających sobie z dwóch list.
+### Treść zadania
 
-Treść: Dla otrzymanych dwóch list, stwórz dwukolumnową macierz, której pierwsza kolumna składa się z elementów pierwszej listy, a druga kolumna z elementów drugiej listy. Jeśli otrzymane listy nie są równej długości, zwróć pustą macierz.
+Dla podanej liczby naturalnej \( n \), utwórz macierz kwadratową o wymiarach \( n \times n \), w której każdy element jest iloczynem jego indeksów wiersza i kolumny.
 
-Dane wejściowe: Dwie listy.
+### Dane wejściowe
 
-Dane wyjściowe: Lista list liczb naturalnych lub pusta macierz (w przypadku nierównych długości list).
+- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
 
-Przykład:
+### Dane wyjściowe
 
-Dla otrzymanych dwóch list: [3, 5, 2] oraz [2, 8, 1], powinna zostać zwrócona macierz: [[3, 2], [5, 8], [2, 1]
+- Macierz składająca się z \( n \) wierszy i \( n \) kolumn.
+- Element na pozycji \( [i][j] \) (przy indeksowaniu od 0) jest równy \( i \times j \).
+- Każdy wiersz wypisz w osobnej linii, a elementy w wierszu oddziel spacjami.
 
-### Zad 4. (★☆☆)
+### Przykład
 
-Tytuł: Dodawanie i odejmowanie macierzy.
+- **Dane wejściowe**:
+  ```
+  3
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  0 0 0
+  0 1 2
+  0 2 4
+  ```
 
-Treść: Otrzymujesz dwie macierze o tych samych wymiarach. Zwróć dwie macierze będące:
+### Wskazówki
 
-a) wynikiem dodawania otrzymanych macierzy
+- Użyj zagnieżdżonych pętli, aby wypełnić macierz.
 
-b) wynikiem odejmowania drugiej macierzy od pierwszej.
+---
 
-Dane wejściowe: Dwie listy list liczb naturalnych.
+## Zadanie 3 - Macierz z parami elementów odpowiadających sobie z dwóch list
 
-Dane wyjściowe: Dwie listy list liczb naturalnych.
+**Poziom trudności**: ★☆☆
 
-Przykład:
+### Treść zadania
 
-Dla otrzymanych dwóch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinny zostać zwrócone następujące macierze:
+Otrzymujesz dwie listy liczb naturalnych. Utwórz macierz dwukolumnową, w której:
 
-a) [[6, -1], [-1, 7]] - wynik dodawania
+- Pierwsza kolumna zawiera elementy pierwszej listy.
+- Druga kolumna zawiera elementy drugiej listy.
 
-b) [[-4, 5], [-3, -7]] - wynik odejmowania drugiej macierzy od pierwszej.
+Jeśli listy nie są tej samej długości, zwróć pustą macierz.
 
-### Zad 5. (★★☆)
+### Dane wejściowe
 
-Tytuł: Sprawdzanie czy macierz jest "magiczna".
+- Dwie liczby naturalne \( n \) i \( m \) — długości list, każda w osobnej linii.
+- Następnie \( n \) liczb naturalnych — elementy pierwszej listy.
+- Następnie \( m \) liczb naturalnych — elementy drugiej listy.
 
-Treść: Otrzymujesz macierz kwadratową. Sprawdź, czy jest ona kwadratem magicznym.
+### Dane wyjściowe
 
-Podpowiedź: Kwadrat magiczny składa się z powtarzających się dodatnich liczb naturalnych. Suma elementów w każdym wierszu, w każdej kolumnie oraz na każdej przekątnej jest taka sama.
+- Jeśli \( n = m \), wypisz macierz o \( n \) wierszach i 2 kolumnach.
+  - Każdy wiersz wypisz w osobnej linii, elementy w wierszu oddziel spacjami.
+- Jeśli \( n \ne m \), wypisz komunikat **"Pusta macierz"**.
 
-Dane wejściowe: Lista list liczb naturalnych.
+### Przykład
 
-Dane wyjściowe: Wartość logiczna.
+- **Dane wejściowe**:
+  ```
+  3
+  3
+  3
+  5
+  2
+  2
+  8
+  1
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  3 2
+  5 8
+  2 1
+  ```
 
-Przykład:
+### Wskazówki
 
-Dla otrzymanej macierzy: [[6, 7, 2], [1, 5, 9], [8, 3, 4]], powinna zostać zwrócona wartość logiczna: Prawda.
+- Sprawdź, czy długości list są równe.
+- Jeśli nie, wypisz odpowiedni komunikat.
 
-### Zad 6. (★★☆)
+---
 
-Tytuł: Scalanie przedziałów w liście przedziałów.
+## Zadanie 4 - Dodawanie i odejmowanie macierzy
 
-Treść: Otrzymujesz listę par liczb. Każda para reprezentuje początek i koniec przedziału. Niektóre przedziały mogą się nachodzić. W takim przypadku połącz je ze sobą i zwróć listę przedziałów, które się nie pokrywają.
+**Poziom trudności**: ★☆☆
 
-Dane wejściowe: Lista list liczb naturalnych.
+### Treść zadania
 
-Dane wyjściowe: Lista list liczb naturalnych.
+Otrzymujesz dwie macierze o tych samych wymiarach. Wykonaj następujące operacje:
 
-Przykład:
+- **a)** Dodaj do siebie elementy obu macierzy, tworząc nową macierz.
+- **b)** Odejmij od pierwszej macierzy drugą macierz, tworząc nową macierz.
 
-Dla otrzymanej listy: [[23, 67], [23, 53], [45, 88], [77, 88], [10, 22], [11, 12], [42, 45]], powinna zostać zwrócona lista: [[10, 22], [23, 88]].
+### Dane wejściowe
 
-### Zad 7. (★★☆)
+- Dwie liczby naturalne \( n \) i \( m \) — liczba wierszy i kolumn macierzy, każda w osobnej linii.
+- Następnie \( n \) wierszy pierwszej macierzy, każdy wiersz zawiera \( m \) liczb całkowitych oddzielonych spacjami.
+- Następnie \( n \) wierszy drugiej macierzy, każdy wiersz zawiera \( m \) liczb całkowitych oddzielonych spacjami.
 
-Tytuł: Zerowanie macierzy.
+### Dane wyjściowe
 
-Treść: Otrzymujesz listę list liczb naturalnych reprezentującą macierz. Jeśli element macierzy jest równy zero, zamień wszystkie elementy tej samej kolumny i wiersza na zera.
+- **Podpunkt a):** macierz będąca sumą obu macierzy.
+- **Podpunkt b):** macierz będąca różnicą pierwszej i drugiej macierzy.
+- Każdy wiersz macierzy wypisz w osobnej linii, elementy w wierszu oddziel spacjami.
 
-Dane wejściowe: Lista list liczb naturalnych.
+### Przykład
 
-Dane wyjściowe: Lista list liczb naturalnych.
+- **Dane wejściowe**:
+  ```
+  2
+  2
+  1 2
+  -2 0
+  5 -3
+  1 7
+  ```
+- **Oczekiwane wyjście**:
 
-Przykład:
+  **Podpunkt a):**
+  ```
+  6 -1
+  -1 7
+  ```
 
-Dla otrzymanej macierzy: [[1,2,3], [4,0,6], [7,8,9]], powinna zostać zwrócona macierz: [[1,0,3], [0,0,0], [7,0,9]].
+  **Podpunkt b):**
+  ```
+  -4 5
+  -3 -7
+  ```
 
-### Zad 8. (★★☆)
+### Wskazówki
 
-Tytuł: Wypisanie elementów macierzy spiralnie.
+- Upewnij się, że macierze mają takie same wymiary.
+- Dodawaj i odejmuj odpowiadające sobie elementy macierzy.
 
-Treść: Otrzymujesz listę list liczb naturalnych. Zbierz elementy otrzymanej macierzy spiralnie i zapisz je w liście.
+---
 
-Dane wejściowe: Lista list liczb naturalnych.
+## Zadanie 5 - Sprawdzanie czy macierz jest "magiczna"
 
-Dane wyjściowe: Lista.
+**Poziom trudności**: ★★☆
 
-Przykład:
+### Treść zadania
 
-Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostać zwrócona lista: [1, 2, 3, 6, 9, 8, 7, 4, 5].
+Otrzymujesz macierz kwadratową z dodatnimi liczbami naturalnymi. Sprawdź, czy jest to kwadrat magiczny, czyli czy suma liczb w każdym wierszu, każdej kolumnie oraz obu przekątnych jest taka sama.
 
-### Zad 9. (★★☆)
+### Dane wejściowe
 
-Tytuł: Klepsydra o największej sumie.
+- Jedna liczba naturalna \( n \) — wymiar macierzy (\( n \geq 1 \)).
+- Następnie \( n \) wierszy macierzy, każdy wiersz zawiera \( n \) liczb naturalnych oddzielonych spacjami.
 
-Treść: Otrzymasz listę list liczb naturalnych. Znajdź w macierzy klepsydrę o największej sumie. Klepsydra składa się dokładnie z 7 elementów. Pierwsze trzy elementy są kolejnymi elementami dowolnego wiersza macierzy. Czwarty element znajduje się w tej samej kolumnie co drugi element i o jeden wiersz niżej. Ostatnie trzy elementy znajdują się w tych samych kolumnach co trzy pierwsze i o dwa wiersze niżej.
+### Dane wyjściowe
 
-Podpowiedź: Następująca macierz:
+- Jeden napis: **"Prawda"**, jeśli macierz jest kwadratem magicznym, lub **"Fałsz"**, jeśli nie jest.
 
-      1 2 3
-      4 5 6
-      7 8 9
+### Przykład
 
-ma tylko jedną klepsydrę:
+- **Dane wejściowe**:
+  ```
+  3
+  6 7 2
+  1 5 9
+  8 3 4
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Prawda
+  ```
 
-      1 2 3
-        5
-      7 8 9
+### Wskazówki
 
-Dane wejściowe: Lista list liczb naturalnych.
+- Oblicz sumę pierwszego wiersza jako sumę oczekiwaną.
+- Sprawdź sumy wszystkich wierszy, kolumn i obu przekątnych.
 
-Dane wyjściowe: Liczba naturalna.
+---
 
-Przykład:
+## Zadanie 6 - Scalanie przedziałów w liście przedziałów
 
-Dla otrzymanej macierzy: [[7, 4, 2, 0], [4, 8, 10, 8], [3, 6, 7, 6], [3, 9, 19, 14]], powinna zostać zwrócona liczba: 75.
+**Poziom trudności**: ★★☆
 
-### Zad 10. (★★☆)
+### Treść zadania
 
-Tytuł: Obróć macierz o 90 stopni.
+Otrzymujesz listę przedziałów, gdzie każdy przedział jest parą liczb naturalnych \([a_i, b_i]\), przy czym \( a_i \leq b_i \). Niektóre przedziały mogą się nakładać na siebie. Połącz nakładające się przedziały i zwróć listę przedziałów, które się nie pokrywają.
 
-Treść: Otrzymujesz macierz składającą się z liczb naturalnych. Obróć ją o 90 stopni. Tzn. zamień miejscami ostatnią kolumnę z ostatnim wierszem, przedostatnią kolumnę z przedostatnim wierszem itd.
+### Dane wejściowe
 
-Dane wejściowe: Macierz składająca się z liczb naturalnych.
+- Jedna liczba naturalna \( n \) — liczba przedziałów (\( n \geq 1 \)).
+- Następnie \( n \) wierszy, każdy zawiera dwa liczby naturalne \( a_i \) i \( b_i \), oddzielone spacją.
 
-Dane wyjściowe: Macierz składająca się z liczb naturalnych.
+### Dane wyjściowe
 
-Przykład:
+- Lista przedziałów po scaleniu, każdy przedział wypisz w osobnej linii w formacie \( a_j \) i \( b_j \), oddzielone spacją.
+- Przedziały wypisz w kolejności rosnącej po ich początkach.
 
-Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostać zwrócona macierz: [[7,4,1], [8,5,2], [9,6,3]].
+### Przykład
 
-### Zad 11. (★★★)
+- **Dane wejściowe**:
+  ```
+  7
+  23 67
+  23 53
+  45 88
+  77 88
+  10 22
+  11 12
+  42 45
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  10 22
+  23 88
+  ```
 
-Tytuł: Gra w statki
+### Wskazówki
 
-Treść: Napisz program implementujący grę w statki.
+- Posortuj przedziały według początków.
+- Iteruj przez przedziały i scalaj je, jeśli się nakładają.
 
-Stwórz macierz o wymiarach 10x10. Wylosuj położenia statków i zapisz je w macierzy. Do dyspozycji masz następujące statki:
+---
 
-* 1 statek o długości 4
-* 2 statki o długości 3
-* 3 statki o długości 2
-* 5 statków o długości 1
+## Zadanie 7 - Zerowanie macierzy
 
-Każde pole może zawierać tylko jeden statek.
+**Poziom trudności**: ★★☆
 
-Wypisz na standardowe wyjście planszę złożoną z 10x10 kropek i poproś użytkownika o podanie współrzędnych. Jeśli na podanych przez użytkownika współrzędnych znajduje się statek, zamień kropkę na literę o na planszy. W przeciwnym razie, zamień kropkę na literę x.
+### Treść zadania
 
-Powtarzaj krok 2, aż wszystkie pozycje statków zostaną odkryte przez użytkownika lub aż na planszy pojawi się 10 liter x. W obu przypadkach zakończ grę i poinformuj użytkownika o wyniku.
+Otrzymujesz macierz (listę list) liczb naturalnych. Jeśli którykolwiek element macierzy jest równy zero, zamień wszystkie elementy w jego wierszu i kolumnie na zera.
+
+### Dane wejściowe
+
+- Dwie liczby naturalne \( n \) i \( m \) — liczba wierszy i kolumn macierzy (\( n \geq 1, m \geq 1 \)).
+- Następnie \( n \) wierszy macierzy, każdy zawiera \( m \) liczb naturalnych oddzielonych spacjami.
+
+### Dane wyjściowe
+
+- Macierz po przekształceniu, wypisz w takiej samej formie jak dane wejściowe.
+- Każdy wiersz wypisz w osobnej linii, elementy w wierszu oddziel spacjami.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  3 3
+  1 2 3
+  4 0 6
+  7 8 9
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  1 0 3
+  0 0 0
+  7 0 9
+  ```
+
+### Wskazówki
+
+- Najpierw znajdź wszystkie pozycje zer w macierzy.
+- Następnie ustaw odpowiednie wiersze i kolumny na zera.
+
+---
+
+## Zadanie 8 - Wypisanie elementów macierzy spiralnie
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Otrzymujesz macierz (listę list) liczb naturalnych. Wypisz elementy macierzy w kolejności spiralnej, zaczynając od elementu w lewym górnym rogu i poruszając się zgodnie z ruchem wskazówek zegara.
+
+### Dane wejściowe
+
+- Dwie liczby naturalne \( n \) i \( m \) — liczba wierszy i kolumn macierzy (\( n \geq 1, m \geq 1 \)).
+- Następnie \( n \) wierszy macierzy, każdy zawiera \( m \) liczb naturalnych oddzielonych spacjami.
+
+### Dane wyjściowe
+
+- Jedna linia zawierająca elementy macierzy w kolejności spiralnej, oddzielone spacjami.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  3 3
+  1 2 3
+  4 5 6
+  7 8 9
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  1 2 3 6 9 8 7 4 5
+  ```
+
+### Wskazówki
+
+- Użyj zmiennych do śledzenia granic macierzy podczas iteracji spiralnej.
+
+---
+
+## Zadanie 9 - Klepsydra o największej sumie
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Otrzymujesz macierz (listę list) liczb całkowitych o wymiarach co najmniej \( 3 \times 3 \). Znajdź klepsydrę o największej sumie. Klepsydra składa się z 7 elementów:
+
+- Trzy kolejne elementy w jednym wierszu.
+- Jeden element bezpośrednio pod środkowym elementem z poprzedniego wiersza.
+- Trzy kolejne elementy w wierszu dwa poziomy niżej, w tych samych kolumnach co pierwsze trzy elementy.
+
+### Dane wejściowe
+
+- Dwie liczby naturalne \( n \) i \( m \) — liczba wierszy i kolumn macierzy (\( n \geq 3, m \geq 3 \)).
+- Następnie \( n \) wierszy macierzy, każdy zawiera \( m \) liczb całkowitych oddzielonych spacjami.
+
+### Dane wyjściowe
+
+- Jedna liczba całkowita — maksymalna suma elementów klepsydry w macierzy.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  4 4
+  7 4 2 0
+  4 8 10 8
+  3 6 7 6
+  3 9 19 14
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  75
+  ```
+
+### Wskazówki
+
+- Przejdź przez wszystkie możliwe pozycje klepsydr w macierzy.
+- Oblicz sumę elementów dla każdej klepsydry i zachowaj największą.
+
+---
+
+## Zadanie 10 - Obróć macierz o 90 stopni
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Otrzymujesz kwadratową macierz liczb naturalnych. Obróć ją o 90 stopni zgodnie z ruchem wskazówek zegara.
+
+### Dane wejściowe
+
+- Jedna liczba naturalna \( n \) — wymiar macierzy (\( n \geq 1 \)).
+- Następnie \( n \) wierszy macierzy, każdy wiersz zawiera \( n \) liczb naturalnych oddzielonych spacjami.
+
+### Dane wyjściowe
+
+- Macierz po obrocie, wypisz w takiej samej formie jak dane wejściowe.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  3
+  1 2 3
+  4 5 6
+  7 8 9
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  7 4 1
+  8 5 2
+  9 6 3
+  ```
+
+### Wskazówki
+
+- Możesz transponować macierz, a następnie odwrócić kolejność elementów w każdym wierszu.
+
+---
+
+## Zadanie 11 - Gra w statki
+
+**Poziom trudności**: ★★★
+
+### Treść zadania
+
+Stwórz grę w statki na planszy \( 10 \times 10 \):
+
+1. **Przygotowanie planszy**:
+   - Utwórz macierz \( 10 \times 10 \) wypełnioną znakami '.' (kropka).
+   - Wylosuj położenie następujących statków:
+     - 1 statek o długości 4.
+     - 2 statki o długości 3.
+     - 3 statki o długości 2.
+     - 5 statków o długości 1.
+   - Statki mogą być umieszczane poziomo lub pionowo.
+   - Statki nie mogą się stykać ani nachodzić na siebie.
+
+2. **Rozgrywka**:
+   - Wyświetl planszę złożoną z 10 wierszy po 10 kropek.
+   - Poproś użytkownika o podanie współrzędnych (wiersz i kolumna) do ostrzału.
+   - Jeśli na podanych współrzędnych znajduje się część statku, zamień kropkę na 'o' i poinformuj o trafieniu.
+   - Jeśli nie trafiono w statek, zamień kropkę na 'x' i poinformuj o pudle.
+   - Wyświetl zaktualizowaną planszę po każdym ruchu.
+
+3. **Zakończenie gry**:
+   - Gra kończy się, gdy wszystkie części statków zostaną trafione (wygrana) lub gdy użytkownik wykona 10 nietrafionych strzałów (przegrana).
+   - Po zakończeniu gry poinformuj użytkownika o wyniku.
+
+### Dane wejściowe
+
+- W trakcie gry użytkownik podaje pary liczb naturalnych \( r \) i \( c \) (\( 0 \leq r, c < 10 \)), reprezentujące wiersz i kolumnę na planszy.
+
+### Dane wyjściowe
+
+- W trakcie gry wyświetlaj aktualną planszę po każdym ruchu.
+- Po zakończeniu gry wyświetl komunikat o wygranej lub przegranej.
+
+### Przykład
+
+- **Rozpoczęcie gry**:
+  ```
+  . . . . . . . . . .
+  . . . . . . . . . .
+  . . . . . . . . . .
+  . . . . . . . . . .
+  . . . . . . . . . .
+  . . . . . . . . . .
+  . . . . . . . . . .
+  . . . . . . . . . .
+  . . . . . . . . . .
+  . . . . . . . . . .
+  ```
+- **Przykładowy komunikat po strzale**:
+  ```
+  Podaj współrzędne (wiersz i kolumna): 2 3
+  Pudło!
+  ```
+- **Zakończenie gry**:
+  ```
+  Gratulacje! Zatopiłeś wszystkie statki.
+  ```
+
+### Wskazówki
+
+- Do losowania położeń statków możesz użyć generatora liczb losowych.
+- Upewnij się, że statki nie nachodzą na siebie i nie stykają się bokami ani rogami.
+- Śledź liczbę trafionych i nietrafionych strzałów.
+
+---
