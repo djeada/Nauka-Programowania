@@ -1,4 +1,4 @@
----
+# Słowniki
 
 ## Zadanie 1 - Słownik z kluczami będącymi liczbami naturalnymi i wartościami ich kwadratów
 
