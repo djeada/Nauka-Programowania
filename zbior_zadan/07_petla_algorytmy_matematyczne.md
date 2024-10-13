@@ -1,3 +1,5 @@
+# Pętla - Algorytmy Matematyczne
+
 ## Zadanie 1 - Obliczanie średniej z n liczb
 
 **Poziom trudności**: ★☆☆
