@@ -1,120 +1,297 @@
-## Napisy — anagramy i palindromy
+## Zadanie 1 - Sprawdzenie, czy słowo jest palindromem
 
-### Zad 1. (★☆☆)
+**Poziom trudności**: ★☆☆
 
-Tytuł: Sprawdzenie, czy słowo jest palindromem.
+### Treść zadania
 
-Treść: Napisz program, który sprawdzi, czy słowo jest palindromem. Palindromem jest słowo, które brzmi tak samo czytane od lewej do prawej i od prawej do lewej.
+Napisz program, który sprawdzi, czy podane słowo jest palindromem. Palindrom to słowo, które brzmi tak samo czytane od lewej do prawej i od prawej do lewej.
 
-Dane wejściowe: Napis.
+### Dane wejściowe
 
-Dane wyjściowe: Wartość logiczna.
+- Jeden napis składający się z liter alfabetu (bez spacji i znaków interpunkcyjnych).
 
-Przykład:
+### Dane wyjściowe
 
-Dla otrzymanego napisu: “kajak”, powinna zostać zwrócona wartość logiczna: Prawda.
+- Jeden napis: **"Prawda"**, jeśli słowo jest palindromem, lub **"Fałsz"**, jeśli nie jest.
 
-### Zad 2. (★★☆)
+### Przykład
 
-Tytuł: Znalezienie wszystkich permutacji słowa.
+- **Dane wejściowe**:
+  ```
+  kajak
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Prawda
+  ```
 
-Treść: Napisz program, który dla otrzymanego napisu znajdzie jego wszystkie permutacje.
+### Wskazówki
 
-Dane wejściowe: Napis.
+- Porównaj napis z jego odwróconą wersją.
+- Możesz zignorować wielkość liter, stosując odpowiednie funkcje do zmiany wielkości.
 
-Dane wyjściowe: Lista napisów.
+---
 
-Przykład:
+## Zadanie 2 - Znalezienie wszystkich permutacji słowa
 
-Dla otrzymanego napisu: “abc”, powinna zostać zwrócona lista: [“abc”, “bac”, “cab”, “acb”, “bca”, “cba”].
+**Poziom trudności**: ★★☆
 
-### Zad 3. (★☆☆)
+### Treść zadania
 
-Tytuł: Sprawdzenie, czy dwa słowa są anagramami.
+Napisz program, który dla podanego słowa wygeneruje wszystkie jego permutacje, czyli wszystkie możliwe układy liter tego słowa.
 
-Treść: Napisz program, który dla podanych dwóch napisów sprawdzi, czy są anagramami. Dwa napisy są anagramami, jeśli jeden z nich można zbudować poprzez przestawienie znaków w drugim.
+### Dane wejściowe
 
-Dane wejściowe: Napis.
+- Jeden napis składający się z unikalnych liter (bez powtarzających się znaków).
 
-Dane wyjściowe: Wartość logiczna.
+### Dane wyjściowe
 
-Przykład:
+- Lista napisów zawierająca wszystkie możliwe permutacje słowa, każda permutacja w osobnej linii.
 
-Dla otrzymanego napisu: “ula” oraz “lua”, powinna zostać zwrócona wartość logiczna: Prawda.
+### Przykład
 
-### Zad 4. (★★☆)
+- **Dane wejściowe**:
+  ```
+  abc
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  abc
+  acb
+  bac
+  bca
+  cab
+  cba
+  ```
 
-Tytuł: Wyszukanie wszystkich palindromów w zdaniu.
+### Wskazówki
 
-Treść: Napisz program, który otrzymuje napis reprezentujący zdanie. Twoim zadaniem jest znalezienie wszystkich palindromów w zdaniu. Różnice między wielkimi i małymi literami powinny być zignorowane.
+- Rozważ użycie rekurencji lub algorytmów generujących permutacje.
+- Upewnij się, że wszystkie permutacje są unikalne i że żadne nie zostały pominięte.
 
-Dane wejściowe: Napis.
+---
 
-Dane wyjściowe: Lista napisów.
+## Zadanie 3 - Sprawdzenie, czy dwa słowa są anagramami
 
-Przykład:
+**Poziom trudności**: ★☆☆
 
-Dla otrzymanego napisu: “Tata zabral kajak na wycieczke i uderzyl sie w oko”, powinna zostać zwrócona lista: ["kajak", "i", "w", "oko"].
+### Treść zadania
 
-### Zad 5. (★★☆)
+Napisz program, który sprawdzi, czy podane dwa słowa są anagramami. Dwa słowa są anagramami, jeśli jedno można utworzyć poprzez przestawienie liter drugiego.
 
-Tytuł: Znalezienie anagramów słowa w zdaniu.
+### Dane wejściowe
 
-Treść: Napisz program, który otrzymuje napis reprezentujący zdanie oraz słowo. Twoim zadaniem jest znalezienie wszystkich anagramów otrzymanego słowa w zdaniu. Różnice między wielkimi i małymi literami powinny być zignorowane.
+- Dwa napisy składające się z liter alfabetu (bez spacji i znaków interpunkcyjnych), każdy w osobnej linii.
 
-Dane wejściowe: Dwa napisy.
+### Dane wyjściowe
 
-Dane wyjściowe: Lista napisów.
+- Jeden napis: **"Prawda"**, jeśli słowa są anagramami, lub **"Fałsz"**, jeśli nie są.
 
-Przykład:
+### Przykład
 
-Dla otrzymanych napisów: “Sroga kara.” oraz “arak”, powinna zostać zwrócona lista: [“kara”].
+- **Dane wejściowe**:
+  ```
+  ula
+  lua
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Prawda
+  ```
 
-### Zad 6. (★★☆)
+### Wskazówki
 
-Tytuł: Permutacje słowa, które są palindromami.
+- Porównaj liczby wystąpień poszczególnych liter w obu słowach.
+- Możesz użyć sortowania liter w słowach i porównania wyników.
 
-Treść: Napisz program, który znajdzie permutacje danego słowa, które są palindromami.
+---
 
-Dane wejściowe: Napis.
+## Zadanie 4 - Wyszukanie wszystkich palindromów w zdaniu
 
-Dane wyjściowe: Lista napisów.
+**Poziom trudności**: ★★☆
 
-Przykład:
+### Treść zadania
 
-Dla otrzymanego napisu: “taco”, powinna zostać zwrócona lista: ["taco", "toca"].
+Napisz program, który dla podanego zdania znajdzie wszystkie słowa będące palindromami. Wielkość liter nie ma znaczenia (ignoruj różnice między małymi i wielkimi literami).
 
-### Zad 7. (★★★)
+### Dane wejściowe
 
-Tytuł: Minimalna ilość usuniętych znaków, aby uzyskać anagramy.
+- Jeden napis reprezentujący zdanie, który może zawierać litery, cyfry, spacje oraz znaki interpunkcyjne.
 
-Treść: Napisz program, który dla dwóch słów zwróci minimalną ilość znaków, które trzeba usunąć, aby uzyskać anagramy. Jeśli słowa są różnej długości, zwróć -1.
+### Dane wyjściowe
 
-Dane wejściowe: Dwa napisy.
+- Lista słów będących palindromami, każde słowo w osobnej linii, w kolejności ich występowania w zdaniu.
 
-Dane wyjściowe: Liczba naturalna.
+### Przykład
 
-Przykład:
+- **Dane wejściowe**:
+  ```
+  Tata zabrał kajak na wycieczkę i uderzył się w oko
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Tata
+  kajak
+  i
+  w
+  oko
+  ```
 
-Dla otrzymanych napisów: “grazyna” oraz “razynax”, powinna zostać zwrócona liczba: 2.
+### Wskazówki
 
-### Zad 8. (★★★)
+- Podziel zdanie na słowa, usuwając znaki interpunkcyjne.
+- Dla każdego słowa sprawdź, czy jest palindromem, ignorując wielkość liter.
 
-Tytuł: Wyjątkowe palindromy.
+---
 
-Treść: Napisz program, który znajdzie wszystkie wyjątkowe palindromy, jakie można utworzyć ze znaków w słowie (bez zmiany kolejności występowania). Nie uwzględniaj duplikatów w liście.
+## Zadanie 5 - Znalezienie anagramów słowa w zdaniu
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Napisz program, który w podanym zdaniu znajdzie wszystkie słowa będące anagramami podanego słowa. Wielkość liter nie ma znaczenia.
+
+### Dane wejściowe
+
+- Jeden napis reprezentujący zdanie.
+- Jeden napis reprezentujący słowo do sprawdzenia, oba napisy w osobnych liniach.
+
+### Dane wyjściowe
+
+- Lista słów z zdania, które są anagramami podanego słowa, każde słowo w osobnej linii.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  Sroga kara.
+  arak
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  kara
+  ```
+
+### Wskazówki
+
+- Podziel zdanie na słowa i usuń znaki interpunkcyjne.
+- Porównaj uporządkowane litery słowa z literami każdego słowa w zdaniu.
+
+---
+
+## Zadanie 6 - Permutacje słowa, które są palindromami
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Napisz program, który znajdzie wszystkie permutacje podanego słowa, które są palindromami.
+
+### Dane wejściowe
+
+- Jeden napis składający się z liter alfabetu.
+
+### Dane wyjściowe
+
+- Lista unikalnych palindromów będących permutacjami podanego słowa, każde w osobnej linii.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  aabb
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  abba
+  baab
+  ```
+
+### Wskazówki
+
+- Sprawdź, czy możliwe jest ułożenie palindromu z podanych liter.
+- Generuj permutacje i sprawdzaj, czy są palindromami, eliminując duplikaty.
+
+---
+
+## Zadanie 7 - Minimalna liczba usuniętych znaków, aby uzyskać anagramy
+
+**Poziom trudności**: ★★★
+
+### Treść zadania
+
+Napisz program, który dla dwóch podanych słów zwróci minimalną liczbę znaków, które trzeba usunąć z obu słów, aby otrzymać z nich anagramy. Jeśli słowa są różnej długości, zwróć **-1**.
+
+### Dane wejściowe
+
+- Dwa napisy składające się z liter alfabetu, każdy w osobnej linii.
+
+### Dane wyjściowe
+
+- Jedna liczba naturalna — minimalna liczba znaków do usunięcia z obu słów, aby otrzymać anagramy, lub **-1**, jeśli słowa są różnej długości.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  grazyna
+  razynax
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  2
+  ```
+
+### Wskazówki
+
+- Porównaj liczby wystąpień każdej litery w obu słowach.
+- Suma różnic w liczbie wystąpień poszczególnych liter da minimalną liczbę znaków do usunięcia.
+
+---
+
+## Zadanie 8 - Wyjątkowe palindromy
+
+**Poziom trudności**: ★★★
+
+### Treść zadania
+
+Napisz program, który znajdzie wszystkie unikalne, wyjątkowe palindromy, jakie można utworzyć z podanego słowa, bez zmiany kolejności występowania znaków. Nie uwzględniaj duplikatów w wyniku.
 
 Wyjątkowy palindrom musi spełniać jeden z dwóch warunków:
 
-1. Wszystkie znaki są identyczne, np. “xxx”.
-2. Wszystkie znaki poza środkowym znakiem są identyczne, np. “ccdcc”.
+1. Wszystkie znaki są identyczne, np. "aaa".
+2. Wszystkie znaki poza środkowym są identyczne, np. "cbc".
 
 Pojedynczy znak jest również uznawany za wyjątkowy palindrom.
 
-Dane wejściowe: Napis.
+### Dane wejściowe
 
-Dane wyjściowe: Lista napisów.
+- Jeden napis składający się z liter alfabetu.
 
-Przykład:
+### Dane wyjściowe
 
-Dla otrzymanego napisu: “xxxx”, powinna zostać zwrócona lista: [“x”, “xx”, 'xxx', 'xxxx'].
+- Lista unikalnych palindromów spełniających powyższe warunki, każde w osobnej linii.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  xxyxx
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  x
+  xx
+  xxx
+  xxyxx
+  y
+  yxy
+  ```
+
+### Wskazówki
+
+- Przejdź przez wszystkie podciągi słowa i sprawdź, czy spełniają warunki wyjątkowego palindromu.
+- Upewnij się, że nie uwzględniasz duplikatów w wyniku.
+
+---
