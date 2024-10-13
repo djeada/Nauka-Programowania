@@ -1,239 +1,629 @@
-## Interakcja z konsolą
+## Zadanie 1 - Wypisywanie tekstu na ekran
 
-### Zad 1. (★☆☆)
+**Poziom trudności**: ★☆☆
 
-Tytuł: Wypisywanie na standardowe wyjście.
+### Treść zadania
 
-Treść zadania: Napisz program, który wypisze dowolny ciąg znaków na standardowe wyjście.
+Napisz program, który wypisuje na standardowe wyjście określony ciąg znaków. Program powinien wyświetlić komunikat **"Witaj, świecie!"** (bez cudzysłowów).
 
-Dane wejściowe: Brak.
+### Dane wejściowe
 
-Dane wyjściowe: Komunikat.
+Brak.
 
-Przykład:
+### Dane wyjściowe
 
-Program może wypisać twoje inicjały lub komunikat "Witaj świecie!".
+- Tekst: `Witaj, świecie!` (dokładnie tak, jak podano).
+- Typ wyniku: tekst.
 
-### Zad 2. (★☆☆)
+### Przykład
 
-Tytuł: Zamiana kolejności liczb.
+- **Dane wejściowe**:
+  ```
+  ```
+  *(brak danych wejściowych)*
 
-Treść zadania: Napisz program, który pobierze od użytkownika dwie liczby naturalne i wypisze je w odwróconej kolejności.
+- **Oczekiwane wyjście**:
+  ```
+  Witaj, świecie!
+  ```
 
-Dane wejściowe: Dwie liczby naturalne.
+### Wskazówki
 
-Dane wyjściowe: Dwie liczby naturalne.
+- Możesz użyć funkcji lub instrukcji do wyświetlania tekstu, takiej jak `print` w języku Python.
+- Upewnij się, że tekst jest wypisany dokładnie w podanej formie, łącznie ze znakami interpunkcyjnymi i spacjami.
 
-Przykład:
+---
 
-Jeśli użytkownik poda liczby -7 oraz 4, program powinien wypisać liczby: 4 i -7.
+## Zadanie 2 - Zamiana kolejności liczb
 
-### Zad 3. (★☆☆)
+**Poziom trudności**: ★☆☆
 
-Tytuł: Rysowanie kształtów za pomocą znaków.
+### Treść zadania
 
-Treść zadania: Napisz program, który wypisze na standardowe wyjście ciągi znaków tworzące kwadrat, trójkąt oraz romb z jedynek. Pamiętaj o dodawaniu odpowiednich spacji i przejściach do nowej linii.
+Napisz program, który pobiera od użytkownika dwie liczby całkowite i wypisuje je w odwrotnej kolejności. Program powinien najpierw pobrać pierwszą liczbę, potem drugą, a następnie wyświetlić najpierw drugą liczbę, a potem pierwszą.
 
-Przykłady:
+### Dane wejściowe
 
-Kwadrat:
+- Dwie liczby całkowite, każda w oddzielnej linii.
+- Liczby mogą być dodatnie, ujemne lub zerowe.
 
-    xx
-    xx
+### Dane wyjściowe
 
-Trójkąt:
+- Dwie liczby całkowite wypisane w odwrotnej kolejności niż zostały wprowadzone, każda w oddzielnej linii.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  -7
+  4
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  4
+  -7
+  ```
+
+### Wskazówki
+
+- Przechowaj liczby w zmiennych i wypisz je w odwrotnej kolejności.
+- Upewnij się, że każda liczba jest wypisana w oddzielnej linii.
+
+---
+
+## Zadanie 3 - Rysowanie kształtów za pomocą znaków
+
+**Poziom trudności**: ★☆☆
+
+### Treść zadania
+
+Napisz program, który wypisze na standardowe wyjście następujące kształty zbudowane z określonych znaków:
+
+a) **Kwadrat** zbudowany z liter `x` o wymiarach 2x2.
+
+b) **Trójkąt liczbowy** składający się z 3 linii, gdzie w każdej linii liczba znaków odpowiada numerowi linii, a znak to numer linii.
+
+c) **Romb** zbudowany z jedynek, o maksymalnej szerokości 5 znaków.
+
+### Dane wejściowe
+
+Brak.
+
+### Dane wyjściowe
+
+Program powinien wypisać trzy kształty, każdy oddzielony pustą linią.
+
+### Przykład
+
+- **Oczekiwane wyjście**:
+  ```
+  xx
+  xx
+
+  1
+  22
+  333
 
     1
-    22
-    333
-
-Romb z jedynek:
-
+   111
+  11111
+   111
     1
-    111
-    11111
-    111
-    1
+  ```
 
-Dane wejściowe: Brak.
+### Wskazówki
 
-Dane wyjściowe: Komunikat.
+- Użyj pętli do generowania kolejnych linii każdego kształtu.
+- Zwróć uwagę na odpowiednie rozmieszczenie spacji, aby kształty były prawidłowo sformatowane.
+- Możesz wykorzystać operacje na ciągach znaków, takie jak powielanie znaków.
 
-### Zad 4. (★☆☆)
+---
 
-Tytuł: Obliczanie wyników operacji arytmetycznych.
+## Zadanie 4 - Podstawowe operacje arytmetyczne
 
-Treść zadania: Napisz program, który pobierze od użytkownika dwie liczby naturalne i wypisze wyniki następujących operacji arytmetycznych:
+**Poziom trudności**: ★☆☆
 
-a) suma tych liczb
+### Treść zadania
 
-b) różnica pierwszej i drugiej liczby
+Napisz program, który pobiera od użytkownika dwie liczby naturalne i oblicza oraz wypisuje wyniki następujących operacji:
 
-c) iloczyn tych liczb
+a) **Suma** tych liczb.
 
-d) iloraz pierwszej liczby przez drugą
+b) **Różnica** pierwszej liczby i drugiej liczby.
 
-e) reszta z dzielenia pierwszej liczby przez drugą
+c) **Iloczyn** tych liczb.
 
-f) pierwsza liczba podniesiona do potęgi równej drugiej liczbie
+d) **Iloraz całkowity** pierwszej liczby przez drugą (dzielenie całkowitoliczbowe).
 
-Dane wejściowe: Dwie liczby naturalne dla wszystkich podpunktów.
+e) **Reszta z dzielenia** pierwszej liczby przez drugą.
 
-Dane wyjściowe: Liczba naturalna dla wszystkich podpunktów.
+f) **Potęga**, gdzie pierwsza liczba jest podstawą, a druga wykładnikiem.
 
-Przykład:
+### Dane wejściowe
 
-* Jeśli użytkownik poda liczby 9 oraz 1, program powinien wypisać liczby: 10, 1, 9, 9, 0, 9.
-* Jeśli użytkownik poda liczby 3 oraz 2, program powinien wypisać liczby: 5, 1, 6, 1, 1, 9.
+- Dwie liczby naturalne (całkowite dodatnie), każda w oddzielnej linii.
 
-### Zad 5. (★☆☆)
+### Dane wyjściowe
 
-Tytuł: Obliczanie wartości funkcji w danym punkcie.
+- Sześć liczb całkowitych, każda w oddzielnej linii, będących wynikami operacji a)–f) w podanej kolejności.
 
-Treść zadania: Napisz program, który będzie obliczać wartość funkcji w danym punkcie zgodnie z następującymi instrukcjami:
+### Przykład
 
-a) Otrzymujesz współrzędną $x$. Wyznacz wartość funkcji $y = 3x + 10$ w tym punkcie.
+**Przykład 1:**
 
-b) Pobierz współczynniki $a$, $b$ oraz punkt $x$. Wyznacz wartość funkcji $y = ax + b$ w tym punkcie.
+- **Dane wejściowe**:
+  ```
+  9
+  1
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  10
+  8
+  9
+  9
+  0
+  9
+  ```
 
-c) Otrzymujesz współrzędną $x$. Wyznacz wartość funkcji $y = x^3 + 22 - 20$ w tym punkcie.
+**Przykład 2:**
 
-d) Pobierz współczynniki $a$, $b$, $c$, $d$, $m$, $n$ oraz punkt $x$. Wyznacz wartość funkcji $y = ax^m + bx^n + c - a$ w tym punkcie.
+- **Dane wejściowe**:
+  ```
+  3
+  2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  5
+  1
+  6
+  1
+  1
+  9
+  ```
 
-e) Otrzymujesz współrzędną $x$. Wyznacz wartość funkcji $y = sin^3(x) \cdot cos^2(x) + e^(x^2) + log(x^3 + 2x^2 - x - 3)$ w tym punkcie.
+### Wskazówki
 
-Dane wejściowe:
+- Przy dzieleniu upewnij się, że wykonujesz dzielenie całkowitoliczbowe (bez części ułamkowej).
+- Do obliczenia potęgi możesz użyć operatora potęgowania lub funkcji matematycznej.
+- Zachowaj kolejność wypisywanych wyników zgodnie z poleceniem.
 
-* Liczba naturalna dla punktów 1, 3 i 5.
-* Trzy liczby naturalne dla punktu 2.
-* Sześć liczb naturalnych dla punktu 4.
+---
 
-Dane wyjściowe:
+## Zadanie 5 - Obliczanie wartości funkcji w danym punkcie
 
-* Liczba naturalna dla punktów 1, 2, 3 i 4.
-* Liczba zmiennoprzecinkowa dla punktu 5.
+**Poziom trudności**: ★★☆
 
-Przykład:
+### Treść zadania
 
-a) Jeśli otrzymasz współrzędną $x = 3$, program powinien wypisać liczbę 19.
+Napisz program, który oblicza wartość funkcji w danym punkcie, zgodnie z poniższymi instrukcjami:
 
-b) Jeśli pobierzesz liczby 1, 2 i 3, program powinien wypisać liczbę 5.
+a) Otrzymujesz wartość \( x \). Oblicz wartość funkcji \( y = 3x + 10 \).
 
-c) Jeśli otrzymasz współrzędną $x = 5$, program powinien wypisać liczbę 155.
+b) Pobierz wartości współczynników \( a \), \( b \) oraz wartość \( x \). Oblicz wartość funkcji \( y = ax + b \).
 
-d) Jeśli pobierzesz liczby 1, 1, 1, 1, 1 i 1, program powinien wypisać liczbę 2.
- 
-e) Jeśli otrzymasz współrzędną $x = 2$, program powinien wypisać liczbę 57.179.
+c) Otrzymujesz wartość \( x \). Oblicz wartość funkcji \( y = x^3 + 22 - 20 \).
 
-### Zad 6. (★☆☆)
+d) Pobierz wartości \( a \), \( b \), \( c \), \( m \), \( n \) oraz \( x \). Oblicz wartość funkcji \( y = ax^m + bx^n + c - a \).
 
-Tytuł: Konwersja jednostek.
+e) Otrzymujesz wartość \( x \) (w radianach). Oblicz wartość funkcji:
+\[ y = \sin^3(x) \cdot \cos^2(x) + e^{x^2} + \ln(x^3 + 2x^2 - x - 3) \]
 
-Treść zadania: Napisz program, który będzie konwertować jednostki zgodnie z następującymi instrukcjami:
+### Dane wejściowe
 
-a) Pobierz wielkość w kilogramach i wypisz, ile gramów odpowiada.
+- **Podpunkt a):** Jedna liczba (całkowita lub zmiennoprzecinkowa) – wartość \( x \).
+- **Podpunkt b):** Trzy liczby (całkowite lub zmiennoprzecinkowe): \( a \), \( b \), \( x \).
+- **Podpunkt c):** Jedna liczba (całkowita lub zmiennoprzecinkowa) – wartość \( x \).
+- **Podpunkt d):** Sześć liczb (całkowitych lub zmiennoprzecinkowych): \( a \), \( b \), \( c \), \( m \), \( n \), \( x \).
+- **Podpunkt e):** Jedna liczba zmiennoprzecinkowa – wartość \( x \) w radianach.
 
-b) Pobierz wielkość w calach i wypisz, ile centymetrów odpowiada.
+### Dane wyjściowe
 
-c) Pobierz liczbę sekund i przelicz na godziny.
+- W każdym podpunkcie: jedna liczba zmiennoprzecinkowa z dokładnością do trzech miejsc po przecinku – wynik \( y \).
 
-d) Pobierz liczbę w euro i wypisz, ile złotówek odpowiada.
- 
-e) Pobierz miarę kąta w stopniach i wypisz, ile radianów odpowiada.
+### Przykład
 
-f) Pobierz temperaturę w stopniach Fahrenheita i wypisz ile stopni Celsjusza oraz ile stopni Kelvina odpowiada.
+**Podpunkt a):**
 
-Dane wejściowe: Liczba naturalna we wszystkich podpunktach.
+- **Dane wejściowe**:
+  ```
+  3
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  19.000
+  ```
 
-Dane wyjściowe:
+**Podpunkt b):**
 
-* Liczba naturalna dla podpunktów 1 i 3.
-* Liczba zmiennoprzecinkowa dla pozostałych podpunktów.
+- **Dane wejściowe**:
+  ```
+  1
+  2
+  3
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  5.000
+  ```
 
-Przykład:
+**Podpunkt c):**
 
-a) Dla pobranej liczby: 2, powinna zostać wypisana liczba: 2000.
+- **Dane wejściowe**:
+  ```
+  5
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  127.000
+  ```
 
-b) Dla pobranej liczby: 12, powinna zostać wypisana liczba: 4.724.
+**Podpunkt d):**
 
-c) Dla pobranej liczby: 3600, powinna zostać wypisana liczba: 1.
+- **Dane wejściowe**:
+  ```
+  1
+  1
+  1
+  1
+  1
+  1
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  2.000
+  ```
 
-d) Dla pobranej liczby: 4, powinna zostać wypisana liczba: 17.6.
+**Podpunkt e):**
 
-e) Dla pobranej liczby: 120, powinna zostać wypisana liczba:  2.094.
+- **Dane wejściowe**:
+  ```
+  2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  57.179
+  ```
 
-f) Dla pobranej liczby: 100, powinny zostać wypisane liczby: 37.777 i -235.222.
+### Wskazówki
 
+- W podpunkcie e) korzystaj z funkcji trygonometrycznych w radianach.
+- Funkcja \( \ln \) oznacza logarytm naturalny.
+- Upewnij się, że argumenty funkcji logarytmicznej są dodatnie.
+- Do obliczeń możesz użyć biblioteki matematycznej, np. `math` w Pythonie.
+
+---
+
+## Zadanie 6 - Konwersja jednostek
+
+**Poziom trudności**: ★☆☆
+
+### Treść zadania
+
+Napisz program, który dokonuje konwersji jednostek zgodnie z poniższymi poleceniami:
+
+a) Pobierz masę w **kilogramach** i oblicz, ile to **gramów**.
+
+b) Pobierz długość w **calach** i oblicz, ile to **centymetrów**.
+
+c) Pobierz czas w **sekundach** i przelicz na **pełne godziny**.
+
+d) Pobierz kwotę w **euro** i oblicz, ile to **złotych**, przy kursie 1 euro = 4.4 zł.
+
+e) Pobierz kąt w **stopniach** i oblicz, ile to **radianów**.
 
-### Zad 7. (★☆☆)
+f) Pobierz temperaturę w **stopniach Fahrenheita** i oblicz odpowiadającą temperaturę w **stopniach Celsjusza** oraz w **kelwinach**.
 
-Tytuł: Pole powierzchni i objętość figur geometrycznych.
+### Dane wejściowe
 
-Treść zadania: Napisz program, który będzie obliczał pola powierzchni i objętości figur geometrycznych zgodnie z następującymi instrukcjami:
+- Jedna liczba (całkowita lub zmiennoprzecinkowa) dla każdego podpunktu.
 
-a) Pobierz długości podstawy i wysokości trójkąta i wypisz jego pole.
+### Dane wyjściowe
 
-b) Pobierz długości boków prostokąta i wypisz jego pole.
+- **Podpunkt a)**: jedna liczba całkowita – masa w gramach.
+- **Podpunkt b)**: jedna liczba zmiennoprzecinkowa z dokładnością do dwóch miejsc po przecinku – długość w centymetrach.
+- **Podpunkt c)**: jedna liczba całkowita – liczba pełnych godzin.
+- **Podpunkt d)**: jedna liczba zmiennoprzecinkowa z dokładnością do dwóch miejsc po przecinku – kwota w złotych.
+- **Podpunkt e)**: jedna liczba zmiennoprzecinkowa z dokładnością do trzech miejsc po przecinku – kąt w radianach.
+- **Podpunkt f)**: dwie liczby zmiennoprzecinkowe z dokładnością do trzech miejsc po przecinku – temperatura w stopniach Celsjusza i w kelwinach.
 
-c) Pobierz długości przekątnych rombu i wypisz jego pole.
+### Przykład
 
-d) Pobierz promień kuli i wypisz jej objętość.
+**Podpunkt a):**
 
-e) Pobierz promień podstawy i wysokość stożka i wypisz jego objętość.
+- **Dane wejściowe**:
+  ```
+  2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  2000
+  ```
 
-f) Pobierz długość, szerokość i wysokość graniastosłupa i wypisz jego objętość.
+**Podpunkt b):**
 
-Jednostki są dowolne.
+- **Dane wejściowe**:
+  ```
+  12
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  30.48
+  ```
 
-Dane wejściowe:
+**Podpunkt c):**
 
-* Dwie liczby naturalne dla podpunktów a, b i c.
-* Liczba naturalna dla podpunktu d.
-* Dwie liczby naturalne dla podpunktu e.
-* Trzy liczby naturalne dla podpunktu f.
+- **Dane wejściowe**:
+  ```
+  3600
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  1
+  ```
 
-Dane wyjściowe: Liczba naturalna dla wszystkich podpunktów.
+**Podpunkt d):**
 
-Przykład:
+- **Dane wejściowe**:
+  ```
+  4
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  17.60
+  ```
 
-a) Dla pobranych liczb: 5 i 2, powinna zostać wypisana liczba: 5.
+**Podpunkt e):**
 
-b) Dla pobranych liczb: 3 i 3, powinna zostać wypisana liczba: 4.
+- **Dane wejściowe**:
+  ```
+  120
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  2.094
+  ```
 
-c) Dla pobranych liczb: 2 i 4, powinna zostać wypisana liczba: 1.
+**Podpunkt f):**
 
-d) Dla pobranej liczby: 2, powinna zostać wypisana liczba: 33.493.
+- **Dane wejściowe**:
+  ```
+  100
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  37.778
+  310.928
+  ```
 
-e) Dla pobranych liczb: 3 i 2, powinna zostać wypisana liczba: 18.84.
+### Wskazówki
 
-f) Dla pobranych liczb: 2, 2 i 2, powinny zostać wypisana liczba: 8.
+- Użyj stałej \( \pi \) (pi) ≈ 3.1416.
+- W konwersji temperatur zastosuj wzory:
+  - \( °C = \frac{5}{9} (°F - 32) \)
+  - \( K = °C + 273.15 \)
+- Zaokrąglij wyniki do wymaganej liczby miejsc po przecinku.
 
-### Zad 8. (★☆☆)
+---
 
-Tytuł: Obliczenie ceny podłogi.
+## Zadanie 7 - Pola i objętości figur geometrycznych
 
-Treść: Otrzymasz cenę pojedynczej płytki, wymiary płytki w postaci kwadratu oraz wymiary podłogi w postaci prostokąta. Oblicz, ile kosztować będzie podłoga o podanych wymiarach.
+**Poziom trudności**: ★★☆
+
+### Treść zadania
 
-Jednostki są umowne.
+Napisz program, który oblicza pola i objętości figur geometrycznych zgodnie z poniższymi poleceniami:
 
-Dane wejściowe: Cztery liczby naturalne: cena płytki, długość boku płytki, długość podłogi oraz szerokość podłogi.
+a) Oblicz **pole trójkąta** o podanej podstawie \( a \) i wysokości \( h \): \( P = \frac{1}{2} a h \).
 
-Dane wyjściowe: Liczba naturalna oznaczająca cenę podłogi.
+b) Oblicz **pole prostokąta** o bokach \( a \) i \( b \): \( P = a b \).
 
-Przykład:
+c) Oblicz **pole rombu** o przekątnych \( d_1 \) i \( d_2 \): \( P = \frac{1}{2} d_1 d_2 \).
 
-Dla pobranych liczb: 2 (cena płytki), 3 (długość boku płytki), 20 (długość podłogi) oraz 40 (szerokość podłogi), powinna zostać wypisana liczba: 196.
+d) Oblicz **objętość kuli** o promieniu \( r \): \( V = \frac{4}{3} \pi r^3 \).
 
-### Zad 9. (★☆☆)
+e) Oblicz **objętość stożka** o promieniu podstawy \( r \) i wysokości \( h \): \( V = \frac{1}{3} \pi r^2 h \).
 
-Tytuł: Kalkulator kredytowy
+f) Oblicz **objętość prostopadłościanu** o wymiarach \( a \), \( b \), \( c \): \( V = a b c \).
 
-Treść: Pobierz roczną stopę procentową, liczbę lat na spłacenie kredytu oraz wysokość udzielonego kredytu. Oblicz miesięczną ratę oraz całkowity koszt kredytu.
+### Dane wejściowe
 
-Dane wejściowe: Trzy liczby naturalne.
+- **Podpunkt a)**, b), c): Dwie liczby (całkowite lub zmiennoprzecinkowe).
+- **Podpunkt d)**: Jedna liczba (całkowita lub zmiennoprzecinkowa).
+- **Podpunkt e)**: Dwie liczby (całkowite lub zmiennoprzecinkowe).
+- **Podpunkt f)**: Trzy liczby (całkowite lub zmiennoprzecinkowe).
 
-Dane wyjściowe: Dwie liczby naturalne.
+### Dane wyjściowe
 
-Przykład:
+- W każdym podpunkcie: jedna liczba zmiennoprzecinkowa z dokładnością do trzech miejsc po przecinku.
 
-Dla pobranych liczb: 3.5 (roczna stopa procentowa), 8 (liczba lat) oraz 12000 (wysokość kredytu), powinny zostać wypisane liczby 143.5 (miesięczna rata) oraz 13776 (całkowity koszt kredytu). Waluta jest umowna.
+### Przykład
+
+**Podpunkt a):**
+
+- **Dane wejściowe**:
+  ```
+  5
+  2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  5.000
+  ```
+
+**Podpunkt b):**
+
+- **Dane wejściowe**:
+  ```
+  3
+  3
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  9.000
+  ```
+
+**Podpunkt c):**
+
+- **Dane wejściowe**:
+  ```
+  2
+  4
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  4.000
+  ```
+
+**Podpunkt d):**
+
+- **Dane wejściowe**:
+  ```
+  2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  33.510
+  ```
+
+**Podpunkt e):**
+
+- **Dane wejściowe**:
+  ```
+  3
+  2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  18.850
+  ```
+
+**Podpunkt f):**
+
+- **Dane wejściowe**:
+  ```
+  2
+  2
+  2
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  8.000
+  ```
+
+### Wskazówki
+
+- Użyj stałej \( \pi \) (pi) ≈ 3.1416 w obliczeniach.
+- Pamiętaj o odpowiednim zaokrągleniu wyników.
+
+---
+
+## Zadanie 8 - Obliczanie kosztu pokrycia podłogi płytkami
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Napisz program, który obliczy całkowity koszt pokrycia podłogi płytkami. Otrzymasz:
+
+- Cenę jednej płytki.
+- Długość boku płytki (płytka jest kwadratowa).
+- Długość podłogi.
+- Szerokość podłogi.
+
+Oblicz, ile płytek potrzeba, aby pokryć całą podłogę, i podaj całkowity koszt.
+
+### Dane wejściowe
+
+- Cztery liczby (całkowite lub zmiennoprzecinkowe):
+
+  1. Cena jednej płytki.
+  2. Długość boku płytki.
+  3. Długość podłogi.
+  4. Szerokość podłogi.
+
+### Dane wyjściowe
+
+- Jedna liczba zmiennoprzecinkowa z dokładnością do dwóch miejsc po przecinku – całkowity koszt.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  2
+  3
+  20
+  40
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  196.00
+  ```
+
+### Wskazówki
+
+- Oblicz liczbę płytek potrzebnych wzdłuż długości i szerokości podłogi, zaokrąglając w górę do najbliższej liczby całkowitej.
+- Liczba płytek = liczba płytek wzdłuż długości × liczba płytek wzdłuż szerokości.
+- Całkowity koszt = liczba płytek × cena jednej płytki.
+
+---
+
+## Zadanie 9 - Kalkulator kredytowy
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Napisz program, który obliczy miesięczną ratę oraz całkowity koszt kredytu na podstawie:
+
+- Rocznej stopy procentowej (w procentach).
+- Okresu spłaty kredytu (w latach).
+- Kwoty kredytu.
+
+Użyj wzoru na ratę annuitetową (stałą):
+
+\[ M = P \times \frac{r (1 + r)^n}{(1 + r)^n - 1} \]
+
+gdzie:
+
+- \( M \) – miesięczna rata,
+- \( P \) – kwota kredytu,
+- \( r \) – miesięczna stopa procentowa (roczna stopa procentowa podzielona przez 12 i wyrażona jako ułamek dziesiętny),
+- \( n \) – łączna liczba rat (liczba miesięcy).
+
+### Dane wejściowe
+
+- Trzy liczby:
+
+  1. Roczna stopa procentowa (zmiennoprzecinkowa).
+  2. Okres spłaty w latach (całkowita).
+  3. Kwota kredytu (zmiennoprzecinkowa).
+
+### Dane wyjściowe
+
+- Dwie liczby zmiennoprzecinkowe z dokładnością do dwóch miejsc po przecinku:
+
+  1. Miesięczna rata.
+  2. Całkowity koszt kredytu.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  3.5
+  8
+  12000
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  143.50
+  13776.00
+  ```
+
+### Wskazówki
+
+- Oblicz miesięczną stopę procentową: \( r = \frac{\text{roczna stopa procentowa}}{12 \times 100} \).
+- Oblicz łączną liczbę rat: \( n = \text{okres spłaty w latach} \times 12 \).
+- Całkowity koszt kredytu to: \( M \times n \).
+- Zaokrąglij wyniki do dwóch miejsc po przecinku.
