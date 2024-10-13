@@ -1,178 +1,454 @@
-## Funkcje — wprowadzenie
+## Zadanie 1 - Zwracanie stałej wartości
 
-### Zad 1. (★☆☆)
+**Poziom trudności**: ★☆☆
 
-Tytuł: Zwróć stałą.
+### Treść zadania
 
-Treść: Napisz funkcję, która zwróci:
+Napisz funkcje, które zwracają określone stałe wartości:
 
-a) Liczbę 3.
+a) Funkcja zwraca liczbę całkowitą **3**.
 
-b) Napis "Tak".
+b) Funkcja zwraca napis **"Tak"**.
 
-c) Wartość logiczną Prawda.
+c) Funkcja zwraca wartość logiczną **True** (Prawda).
 
-Dane wejściowe: Brak.
+### Dane wejściowe
 
-Dane wyjściowe:
+Brak. Funkcje nie przyjmują żadnych argumentów.
 
-a) Liczba 3.
+### Dane wyjściowe
 
-b) Napis "Tak".
+- **Podpunkt a):** Liczba całkowita `3`.
+- **Podpunkt b):** Napis `"Tak"`.
+- **Podpunkt c):** Wartość logiczna `True`.
 
-c) Wartość logiczna Prawda.
+### Przykład
 
-### Zad 2. (★☆☆)
+**Podpunkt a):**
 
-Tytuł: Operacje arytmetyczne.
+- **Wywołanie funkcji**:
+  ```python
+  wynik = zwroc_liczbe()
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  3
+  ```
 
-Treść: Napisz funkcję, która dla otrzymanych dwóch liczb zwróci:
+**Podpunkt b):**
 
-a) Ich sumę.
+- **Wywołanie funkcji**:
+  ```python
+  wynik = zwroc_napis()
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Tak
+  ```
 
-b) Różnicę drugiej i pierwszej.
+**Podpunkt c):**
 
-c) Ich iloczyn.
+- **Wywołanie funkcji**:
+  ```python
+  wynik = zwroc_prawda()
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  True
+  ```
 
-d) Iloraz pierwszej przez drugą.
+### Wskazówki
 
-e) Resztę z dzielenia pierwszej przez drugą.
+- Każdą funkcję zdefiniuj osobno.
+- Funkcje nie przyjmują argumentów i zwracają jedynie określoną wartość.
+- Upewnij się, że zwracany typ danych jest zgodny z oczekiwaniami (liczba całkowita, napis, wartość logiczna).
 
-Dane wejściowe: Dwie liczby naturalne dla wszystkich podpunktów.
+---
 
-Dane wyjściowe: Liczba całkowita dla wszystkich podpunktów.
+## Zadanie 2 - Podstawowe operacje arytmetyczne w funkcji
 
-Przykład:
+**Poziom trudności**: ★☆☆
 
-Dla pobranych liczb: 3 i 5, funkcja powinna zwrócić:
+### Treść zadania
 
-a) Sumę: 8
+Napisz funkcję, która dla podanych dwóch liczb całkowitych wykona następujące operacje:
 
-b) Różnicę: 2
+a) Zwróci **sumę** tych liczb.
 
-c) Iloczyn: 15
+b) Zwróci **różnicę**: druga liczba minus pierwsza liczba.
 
-d) Iloraz: 0
+c) Zwróci **iloczyn** tych liczb.
 
-e) Resztę z dzielenia: 3
+d) Zwróci **iloraz całkowity** z dzielenia pierwszej liczby przez drugą.
 
-### Zad 3. (★☆☆)
+e) Zwróci **resztę z dzielenia** pierwszej liczby przez drugą.
 
-Tytuł:  Sprawdź warunek
+### Dane wejściowe
 
-Napisz funkcję, która sprawdzi następujące warunki dla otrzymanych dwóch liczb:
+- Dwie liczby całkowite (mogą być dodatnie lub ujemne), przekazywane jako argumenty funkcji.
 
-a) Czy pierwsza liczba jest większa od drugiej liczby?
+### Dane wyjściowe
 
-b) Czy suma liczb jest mniejsza niż 10?
+- W każdym podpunkcie: jedna liczba całkowita będąca wynikiem odpowiedniej operacji.
 
-c) Czy obie liczby są nieparzyste?
+### Przykład
 
-d) Czy większa liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu?
+Dla liczb **3** i **5**:
 
-Dane wejściowe: dwie liczby naturalne
+**Podpunkt a):**
 
-Dane wyjściowe: cztery wartości logiczne, odpowiadające na każde z pytań
+- **Wywołanie funkcji**:
+  ```python
+  wynik = suma(3, 5)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  8
+  ```
 
-Przykład:
+**Podpunkt b):**
 
-Dla pobranych liczb 3 i 2, funkcja powinna zwrócić następujące wartości logiczne:
+- **Wywołanie funkcji**:
+  ```python
+  wynik = roznica(3, 5)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  2
+  ```
 
-a) Prawda
+**Podpunkt c):**
 
-b) Prawda
+- **Wywołanie funkcji**:
+  ```python
+  wynik = iloczyn(3, 5)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  15
+  ```
 
-c) Fałsz
+**Podpunkt d):**
 
-d) Prawda
+- **Wywołanie funkcji**:
+  ```python
+  wynik = iloraz(3, 5)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  0
+  ```
 
-### Zad 4. (★☆☆)
+**Podpunkt e):**
 
-Tytuł: Maks i min
+- **Wywołanie funkcji**:
+  ```python
+  wynik = reszta(3, 5)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  3
+  ```
 
-Napisz funkcję, która:
+### Wskazówki
 
-a) Dla otrzymanych dwóch liczb zwróci mniejszą.
+- Przy dzieleniu upewnij się, że druga liczba nie jest zerem, aby uniknąć błędu dzielenia przez zero.
+- Do obliczenia ilorazu całkowitego użyj operatora `//`, a do reszty z dzielenia operatora `%`.
+- Upewnij się, że funkcje zwracają wynik odpowiedniego typu (liczba całkowita).
 
-b) Dla otrzymanych dwóch liczb zwróci większą.
+---
 
-c) Dla otrzymanych trzech liczb zwróci najmniejszą.
+## Zadanie 3 - Sprawdzanie warunków logicznych
 
-d) Dla otrzymanych trzech liczb zwróci największą.
+**Poziom trudności**: ★☆☆
 
-Dane wejściowe:
+### Treść zadania
 
-a) Dwie liczby naturalne.
+Napisz funkcję, która dla podanych dwóch liczb naturalnych sprawdza następujące warunki i zwraca odpowiednie wartości logiczne:
 
-b) Dwie liczby naturalne.
+a) Czy pierwsza liczba jest **większa** od drugiej liczby?
 
-c) Trzy liczby naturalne.
+b) Czy **suma** tych liczb jest **mniejsza niż 10**?
 
-d) Trzy liczby naturalne.
+c) Czy **obie liczby są nieparzyste**?
 
-Dane wyjściowe: Liczba naturalna dla wszystkich podpunktów.
+d) Czy **większa liczba** jest **mniejsza** od **kwadratu pierwszej liczby**?
 
-Przykład:
+### Dane wejściowe
 
-a) Dla otrzymanych liczb 3 i 1, funkcja powinna zwrócić liczbę 1.
+- Dwie liczby naturalne (całkowite nieujemne), przekazywane jako argumenty funkcji.
 
-b) Dla otrzymanych liczb 3 i 1, funkcja powinna zwrócić liczbę 3.
+### Dane wyjściowe
 
-c) Dla otrzymanych liczb 3, 2 i 1, funkcja powinna zwrócić liczbę 1.
+- Cztery wartości logiczne (`True` lub `False`), odpowiadające wynikom sprawdzenia warunków a)–d).
 
-d) Dla otrzymanych liczb 3, 2 i 1, funkcja powinna zwrócić liczbę 3."
+### Przykład
 
-### Zad 5. (★☆☆)
+Dla liczb **3** i **2**:
 
-Tytuł: Zamień wartości miejscami.
+- **Wywołanie funkcji**:
+  ```python
+  wynik_a, wynik_b, wynik_c, wynik_d = sprawdz_warunki(3, 2)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  True
+  True
+  False
+  True
+  ```
 
-Treść: Napisz funkcję, która zamieni wartości zmiennych a i b miejscami. Po wykonaniu funkcji zmienna a powinna przechowywać wartość zmiennej b, a zmienna b powinna przechowywać wartość zmiennej a.
+### Wskazówki
 
-Dane wejściowe: Dwie liczby naturalne.
+- Do sprawdzania parzystości liczby użyj operatora modulo `%`.
+- Funkcja może zwracać wyniki jako krotkę lub listę wartości logicznych.
+- Przy porównywaniu liczb zwróć uwagę na kolejność argumentów.
 
-Dane wyjściowe: Dwie liczby naturalne.
+---
 
-Przykład:
+## Zadanie 4 - Znajdowanie minimum i maksimum
 
-Dla otrzymanych liczb: 8 i 5, powinny zostać zwrócone liczby 5 i 8.
+**Poziom trudności**: ★☆☆
 
-### Zad 6. (★☆☆)
+### Treść zadania
 
-Tytuł: Cyfry liczby
+Napisz funkcje, które:
 
-Treść: Napisz funkcję, która dla otrzymanej liczby obliczy sumę jej cyfr.
+a) Dla podanych dwóch liczb zwracają **mniejszą** z nich.
 
-Dane wejściowe: liczba naturalna
+b) Dla podanych dwóch liczb zwracają **większą** z nich.
 
-Dane wyjściowe: liczba naturalna
+c) Dla podanych trzech liczb zwracają **najmniejszą** z nich.
 
-Przykład:
+d) Dla podanych trzech liczb zwracają **największą** z nich.
 
-Dla pobranej liczby 13231, funkcja powinna zwrócić liczbę 10.
+### Dane wejściowe
 
-### Zad 7. (★★☆)
+- **Podpunkt a)** i **b)**: Dwie liczby naturalne.
+- **Podpunkt c)** i **d)**: Trzy liczby naturalne.
 
-Tytuł: Hasło.
+### Dane wyjściowe
 
-Treść: Napisz dwie funkcje:
+- W każdym podpunkcie: jedna liczba naturalna – wynik odpowiedniej funkcji.
 
-* Pierwsza funkcja powinna prosić użytkownika o podanie nazwy użytkownika i hasła, a następnie zwrócić te dane.
-* Druga funkcja powinna otrzymać dane od pierwszej funkcji i ponownie prosić użytkownika o podanie nazwy użytkownika i hasła. Prośba o podanie danych powinna być umieszczona w pętli. Warunkiem zakończenia pętli jest podanie przez użytkownika danych identycznych z tymi przekazanymi przez pierwszą funkcję.
+### Przykład
 
-Dane wejściowe: dwie nazwy użytkownika i hasła (napisy)
+**Podpunkt a):**
 
-Dane wyjściowe: komunikat
+- **Wywołanie funkcji**:
+  ```python
+  wynik = min_z_dwoch(3, 1)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  1
+  ```
 
-### Zad 8. (★★☆)
+**Podpunkt b):**
 
-Tytuł: Zaokrąglanie w dół.
+- **Wywołanie funkcji**:
+  ```python
+  wynik = max_z_dwoch(3, 1)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  3
+  ```
 
-Treść: Napisz funkcję, która zaokrągli iloraz dwóch liczb naturalnych do najbliższej liczby całkowitej w dół, bez użycia operatorów '/' i '%'.
+**Podpunkt c):**
 
-Dane wejściowe: dwie liczby naturalne
+- **Wywołanie funkcji**:
+  ```python
+  wynik = min_z_trzech(3, 2, 1)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  1
+  ```
 
-Dane wyjściowe: liczba naturalna
+**Podpunkt d):**
 
-Przykład:
+- **Wywołanie funkcji**:
+  ```python
+  wynik = max_z_trzech(3, 2, 1)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  3
+  ```
 
-Dla otrzymanych liczb 7 i 2, funkcja powinna zwrócić liczbę 3.
+### Wskazówki
+
+- Możesz użyć wbudowanych funkcji `min()` i `max()`.
+- Upewnij się, że funkcje działają poprawnie również dla liczb równych.
+
+---
+
+## Zadanie 5 - Zamiana wartości miejscami
+
+**Poziom trudności**: ★☆☆
+
+### Treść zadania
+
+Napisz funkcję, która zamienia miejscami wartości dwóch zmiennych. Po wykonaniu funkcji, zmienna `a` powinna przechowywać wartość zmiennej `b`, a zmienna `b` powinna przechowywać wartość zmiennej `a`.
+
+### Dane wejściowe
+
+- Dwie liczby naturalne, przekazywane jako argumenty funkcji.
+
+### Dane wyjściowe
+
+- Dwie liczby naturalne – wartości zmiennych po zamianie, zwrócone jako krotka lub lista.
+
+### Przykład
+
+- **Wywołanie funkcji**:
+  ```python
+  a, b = zamien_wartosci(8, 5)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  a = 5
+  b = 8
+  ```
+
+### Wskazówki
+
+- W niektórych językach programowania można zamienić wartości zmiennych bez użycia zmiennej pomocniczej, np. w Pythonie: `a, b = b, a`.
+- Upewnij się, że funkcja zwraca wartości w odpowiedniej kolejności.
+
+---
+
+## Zadanie 6 - Obliczanie sumy cyfr liczby
+
+**Poziom trudności**: ★☆☆
+
+### Treść zadania
+
+Napisz funkcję, która dla podanej liczby naturalnej oblicza sumę jej cyfr.
+
+### Dane wejściowe
+
+- Jedna liczba naturalna.
+
+### Dane wyjściowe
+
+- Jedna liczba naturalna – suma cyfr podanej liczby.
+
+### Przykład
+
+- **Wywołanie funkcji**:
+  ```python
+  wynik = suma_cyfr(13231)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  10
+  ```
+
+### Wskazówki
+
+- Możesz zamienić liczbę na napis i sumować cyfry za pomocą pętli.
+- Alternatywnie, użyj pętli z dzieleniem przez 10 i operatorem modulo `%` do wyodrębniania cyfr.
+
+---
+
+## Zadanie 7 - Weryfikacja nazwy użytkownika i hasła
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Napisz dwie funkcje:
+
+1. **Pierwsza funkcja** powinna poprosić użytkownika o podanie **nazwy użytkownika** i **hasła**, a następnie zwrócić te dane.
+
+2. **Druga funkcja** powinna otrzymać dane zwrócone przez pierwszą funkcję i w pętli prosić użytkownika o ponowne podanie nazwy użytkownika i hasła. Pętla powinna trwać do momentu, gdy użytkownik poda dane **identyczne** z tymi przekazanymi przez pierwszą funkcję. Po poprawnym wprowadzeniu danych funkcja powinna wyświetlić komunikat **"Dane poprawne. Dostęp przyznany."**
+
+### Dane wejściowe
+
+- **Pierwsza funkcja**: nazwa użytkownika i hasło wprowadzone przez użytkownika.
+- **Druga funkcja**: nazwa użytkownika i hasło wprowadzone przez użytkownika w pętli.
+
+### Dane wyjściowe
+
+- **Druga funkcja**: komunikat po poprawnym wprowadzeniu danych.
+
+### Przykład
+
+1. **Pierwsza funkcja**:
+
+   - **Dane wejściowe**:
+     ```
+     Podaj nazwę użytkownika: admin
+     Podaj hasło: 1234
+     ```
+
+2. **Druga funkcja**:
+
+   - **Przykładowy przebieg pętli**:
+     ```
+     Podaj nazwę użytkownika: user
+     Podaj hasło: 4321
+     ```
+     *(Dane niepoprawne, pętla trwa dalej)*
+     ```
+     Podaj nazwę użytkownika: admin
+     Podaj hasło: 1234
+     ```
+     *(Dane poprawne)*
+
+   - **Oczekiwane wyjście**:
+     ```
+     Dane poprawne. Dostęp przyznany.
+     ```
+
+### Wskazówki
+
+- W drugiej funkcji użyj pętli `while` do wielokrotnego pobierania danych.
+- Do porównania napisów możesz użyć operatora `==`.
+- Pamiętaj o tym, że porównanie jest czułe na wielkość liter.
+
+---
+
+## Zadanie 8 - Zaokrąglanie ilorazu w dół bez operatorów dzielenia
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Napisz funkcję, która oblicza iloraz dwóch liczb naturalnych, zaokrąglony w dół do najbliższej liczby całkowitej, **bez użycia operatorów dzielenia (`/`) i reszty z dzielenia (`%`)**.
+
+### Dane wejściowe
+
+- Dwie liczby naturalne:
+  - **Dzielna** (liczba, którą dzielimy).
+  - **Dzielnik** (liczba, przez którą dzielimy).
+
+### Dane wyjściowe
+
+- Jedna liczba naturalna – iloraz zaokrąglony w dół.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  7
+  2
+  ```
+- **Wywołanie funkcji**:
+  ```python
+  wynik = zaokraglij_w_dol(7, 2)
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  3
+  ```
+
+### Wskazówki
+
+- Możesz użyć pętli, w której będziesz odejmować dzielnik od dzielnej, aż dzielna będzie mniejsza od dzielnika. Licznik pętli będzie wynikiem ilorazu.
+- Pamiętaj o obsłudze przypadku, gdy dzielnik jest równy 0 – w takiej sytuacji należy zwrócić komunikat o błędzie lub obsłużyć wyjątek.
+- Upewnij się, że zwracana wartość jest liczbą całkowitą.
+
+---
