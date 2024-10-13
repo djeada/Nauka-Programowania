@@ -1,198 +1,480 @@
-## Słowniki
+---
 
-### Zad 1. (★☆☆)
+## Zadanie 1 - Słownik z kluczami będącymi liczbami naturalnymi i wartościami ich kwadratów
 
-Tytuł: Słownik z kluczami będącymi liczbami naturalnymi i wartościami ich kwadratami.
+**Poziom trudności**: ★☆☆
 
-Treść: Dostajesz liczbę naturalną. Stwórz słownik, w którym kluczami będą kolejne liczby naturalne mniejsze od otrzymanej liczby, a wartościami będą ich kwadraty.
+### Treść zadania
 
-Dane wejściowe: Liczba naturalna.
+Otrzymujesz liczbę naturalną. Stwórz słownik, w którym kluczami będą kolejne liczby naturalne mniejsze od otrzymanej liczby, a wartościami będą ich kwadraty.
 
-Dane wyjściowe: Słownik z kluczami i wartościami będącymi liczbami naturalnymi.
+### Dane wejściowe
 
-Przykład:
+- Jedna liczba naturalna \( n \geq 1 \).
 
-Dla liczby 5, słownik powinien wyglądać następująco: {1: 1, 2: 4, 3: 9, 4: 16}.
+### Dane wyjściowe
 
-### Zad 2. (★☆☆)
+- Słownik, gdzie kluczami są liczby od 1 do \( n-1 \), a wartościami są kwadraty tych liczb.
 
-Tytuł: Słownik z kluczami będącymi elementami jednej listy i wartościami elementami drugiej listy.
+### Przykład
 
-Treść: Dostajesz dwie listy liczb całkowitych. Stwórz słownik, w którym kluczami będą elementy pierwszej listy, a wartościami elementy drugiej listy. Jeśli listy są różnej długości, zwróć pusty słownik.
+- **Dane wejściowe**:
+  ```
+  5
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  {1: 1, 2: 4, 3: 9, 4: 16}
+  ```
 
-Dane wejściowe: Dwie listy liczb całkowitych.
+### Wskazówki
 
-Dane wyjściowe: Słownik z kluczami i wartościami będącymi liczbami całkowitymi.
+- Użyj pętli, aby iterować przez liczby od 1 do \( n-1 \).
+- Oblicz kwadrat każdej liczby i dodaj parę klucz-wartość do słownika.
 
-Przykład:
+---
 
-Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], słownik powinien wyglądać następująco: {3: 1, 5: 2, 8: -1}.
+## Zadanie 2 - Słownik z kluczami z jednej listy i wartościami z drugiej listy
 
-### Zad 3. (★☆☆)
+**Poziom trudności**: ★☆☆
 
-Tytuł: Klucz to imię, wartość lista wypożyczonych książek.
+### Treść zadania
 
-Treść: Zbuduj prostą bazę danych dla biblioteki opartą o słownik, w którym kluczami są imiona czytelników, a wartościami listy wypożyczonych książek. Baza danych powinna umożliwiać:
+Otrzymujesz dwie listy liczb całkowitych. Utwórz słownik, w którym kluczami są elementy pierwszej listy, a wartościami są odpowiadające im elementy drugiej listy. Jeśli listy są różnej długości, zwróć pusty słownik.
 
-1. Dodanie wypożyczonej książki do danego czytelnika.
-2. Zwrócenie wypożyczonej książki przez czytelnika.
-3. Wypisanie aktualnej listy wypożyczonych książek dla danego czytelnika.
+### Dane wejściowe
 
-### Zad 4. (★☆☆)
+- Dwie liczby naturalne \( n \) i \( m \) — długości list, każda w osobnej linii.
+- Następnie \( n \) liczb całkowitych — elementy pierwszej listy.
+- Następnie \( m \) liczb całkowitych — elementy drugiej listy.
 
-Tytuł: Usuwanie z słownika.
+### Dane wyjściowe
 
-Treść: Otrzymujesz słownik par napisów i liczb całkowitych oraz pojedynczą liczbę całkowitą. Usuń z słownika pary, dla których wartość jest równa otrzymanej liczbie.
+- Słownik z kluczami z pierwszej listy i wartościami z drugiej listy.
+- Jeśli \( n \ne m \), wypisz pusty słownik `{}`.
 
-Dane wejściowe: Słownik par napisów i liczb całkowitych oraz liczba całkowita.
+### Przykład
 
-Dane wyjściowe: Słownik par napisów i liczb całkowitych.
+- **Dane wejściowe**:
+  ```
+  3
+  3
+  3 5 8
+  1 2 -1
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  {3: 1, 5: 2, 8: -1}
+  ```
 
-Przykład:
+### Wskazówki
 
-Dla słownika i liczby: {“aaa”: 5, “abc”: 1, “xxx”: 5, “cba” : 3} i 5, słownik powinien wyglądać następująco: {“abc”: 1, “cba” : 3}.
+- Sprawdź, czy długości obu list są takie same.
+- Jeśli tak, iteruj równocześnie przez obie listy, tworząc pary klucz-wartość.
 
-### Zad 5. (★☆☆)
+---
 
-Tytuł: Lista pracowników z największymi zyskami.
+## Zadanie 3 - Biblioteka: baza danych wypożyczonych książek
 
-Treść: Otrzymujesz listę par. Pierwszym elementem pary jest napis reprezentujący imię i nazwisko pracownika, drugim zysk z transakcji, jaką dany pracownik przeprowadził. Znajdź pracownika, który przyniósł firmie najwięcej zysku.
+**Poziom trudności**: ★☆☆
 
-Dane wejściowe: Lista par napisów i liczb naturalnych.
+### Treść zadania
 
-Dane wyjściowe: Napis.
+Stwórz prostą bazę danych dla biblioteki, używając słownika, w którym kluczami są imiona czytelników, a wartościami są listy wypożyczonych przez nich książek. Program powinien umożliwiać:
 
-Przykład:
+1. Dodanie wypożyczonej książki do listy danego czytelnika.
+2. Usunięcie książki z listy czytelnika (zwrot książki).
+3. Wyświetlenie aktualnej listy wypożyczonych książek dla danego czytelnika.
 
-Dla otrzymanej listy:
+### Dane wejściowe
 
-[["Barnaba Barabash", 120],
-["Jon Snow", 100],
-["Kira Summer", 300],
-["Barnaba Barabash", 200],
-["Bob Marley", 110]]
+- Operacje wykonywane przez użytkownika, każda w osobnej linii:
+  - **Dodanie książki**: `dodaj [imię] [tytuł_książki]`
+  - **Zwrot książki**: `zwróć [imię] [tytuł_książki]`
+  - **Wyświetlenie listy**: `lista [imię]`
+- Program kończy działanie po wpisaniu słowa `koniec`.
 
-zostanie zwrócony napis: “Barnaba Barabash”.
+### Dane wyjściowe
 
-### Zad 6. (★☆☆)
+- Po operacji `lista [imię]` wypisz: `Książki wypożyczone przez [imię]: [lista książek]`
+- Jeśli czytelnik nie ma wypożyczonych książek, wypisz odpowiedni komunikat.
 
-Tytuł: Histogram wystąpień znaków w słowie.
+### Przykład
 
-Treść: Otrzymujesz napis. Znajdź częstość występowania znaków w otrzymanym napisie. Innymi słowy, zwróć histogram znaków w otrzymanym napisie.
+- **Dane wejściowe**:
+  ```
+  dodaj Jan Hobbit
+  dodaj Anna "Duma i uprzedzenie"
+  dodaj Jan "Władca Pierścieni"
+  lista Jan
+  zwróć Jan Hobbit
+  lista Jan
+  lista Anna
+  koniec
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Książki wypożyczone przez Jan: Hobbit, Władca Pierścieni
+  Książki wypożyczone przez Jan: Władca Pierścieni
+  Książki wypożyczone przez Anna: Duma i uprzedzenie
+  ```
 
-Dane wejściowe: Napis.
+### Wskazówki
 
-Dane wyjściowe: Słownik par znaków i liczb naturalnych.
+- Użyj słownika z imionami jako kluczami i listami książek jako wartościami.
+- Pamiętaj o obsłudze sytuacji, gdy czytelnik lub książka nie istnieje.
 
-Przykład:
+---
 
-Dla otrzymanego napisu: “klasa”, słownik powinien wyglądać następująco: {“k”: 1, “l”: 1, “a”: 2, “s”: 1}.
+## Zadanie 4 - Usuwanie par z słownika na podstawie wartości
 
-### Zad 7. (★☆☆)
+**Poziom trudności**: ★☆☆
 
-Tytuł: Histogram słów w tekście
+### Treść zadania
 
-Treść: Otrzymujesz tekst w postaci napisu. Twoim zadaniem jest znaleźć częstość występowania każdego ze słów w tekście. Należy zignorować różnice między małymi i wielkimi literami. Pamiętaj, że słowa składają się wyłącznie z liter.
+Otrzymujesz słownik zawierający pary klucz-wartość, gdzie kluczami są napisy, a wartościami liczby całkowite. Otrzymujesz również liczbę całkowitą. Usuń z słownika wszystkie pary, dla których wartość jest równa podanej liczbie.
 
-Dane wejściowe: Napis.
+### Dane wejściowe
 
-Dane wyjściowe: Słownik par: napis, liczba naturalna.
+- Liczba naturalna \( n \) — liczba par w słowniku.
+- Następnie \( n \) linii z parą: `[klucz] [wartość]`.
+- Jedna liczba całkowita \( k \) — wartość do usunięcia.
 
-Przykład:
+### Dane wyjściowe
 
-Dla otrzymanego napisu: "Here, a tricksy corpus will exist; a very strange, a sometimes cryptic corpus will dumbfound you maybe, perhaps a bit; in particular since my tricksy corpus will not match the pattern you expect from it; nor will it look like a fish, a boat, a sunflower, or a very handsome kitten. The tricksy corpus will surprise a user named Ami Tavory; this tricksy corpus will be fun to follow a year or a month or a minute from now."
+- Słownik po usunięciu odpowiednich par.
 
-Powinien zostać zwrócony słownik:
+### Przykład
 
-{"here": 1, "a": 12, "tricksy": 4, "corpus": 5, "will": 6, "exist": 1, "very": 2, "strange": 1, "sometimes": 1, "cryptic": 1, "dumbfound": 1, "you": 2, "maybe": 1, "perhaps": 1, "bit": 1, "in": 1, "particular": 1, "since": 1, "my": 1, "not": 1, "match": 1, "the": 2, "pattern": 1, "expect": 1, "from": 2, "it": 2, "nor": 1, "look": 1, "like": 1, "fish": 1, "boat": 1, "sunflower": 1, "or": 3, "handsome": 1, "kitten": 1, "surprise": 1, "user": 1, "named": 1, "ami": 1, "tavory": 1, "this": 1, "be": 1, "fun": 1, "to": 1, "follow": 1, "year": 1, "month": 1, "minute": 1, "now": 1}
+- **Dane wejściowe**:
+  ```
+  4
+  aaa 5
+  abc 1
+  xxx 5
+  cba 3
+  5
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  {'abc': 1, 'cba': 3}
+  ```
 
-### Zad 8. (★☆☆)
+### Wskazówki
 
-Tytuł: Najczęściej występująca litera w zdaniu
+- Możesz użyć kopii słownika lub zbudować nowy słownik z filtrowanymi elementami.
 
-Treść: Otrzymujesz napis reprezentujący zdanie. Twoim zadaniem jest znalezienie najczęściej występującej litery w zdaniu. Jeśli więcej niż jedna litera występuje tę samą liczbę razy, należy zwrócić literę najwcześniej pojawiającą się w zdaniu.
+---
 
-Dane wejściowe: Napis.
+## Zadanie 5 - Pracownik z największym sumarycznym zyskiem
 
-Dane wyjściowe: Znak.
+**Poziom trudności**: ★☆☆
 
-Przykład:
+### Treść zadania
 
-Dla otrzymanego napisu: "lezy jerzy na wiezy"
+Otrzymujesz listę par, gdzie każda para zawiera imię i nazwisko pracownika oraz liczbę naturalną reprezentującą zysk z transakcji przeprowadzonej przez tego pracownika. Znajdź pracownika, który łącznie przyniósł firmie największy zysk.
 
-Powinna zostać zwrócona litera: 'e'
+### Dane wejściowe
 
-### Zad 9. (★☆☆)
+- Liczba naturalna \( n \) — liczba wpisów.
+- Następnie \( n \) linii z parą: `[imię_i_nazwisko] [zysk]`.
 
-Tytuł: Powtarzające się znaki
+### Dane wyjściowe
 
-Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrócenie wszystkich znaków, które występują co najmniej 2 razy w ciągu.
+- Imię i nazwisko pracownika z największym sumarycznym zyskiem.
 
-Dane wejściowe: Napis.
+### Przykład
 
-Dane wyjściowe: Napis.
+- **Dane wejściowe**:
+  ```
+  5
+  Barnaba_Barabash 120
+  Jon_Snow 100
+  Kira_Summer 300
+  Barnaba_Barabash 200
+  Bob_Marley 110
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Barnaba_Barabash
+  ```
 
-Przykład:
+### Wskazówki
 
-Dla otrzymanego napisu: "aaabbbccc"
+- Sumuj zyski dla każdego pracownika w słowniku.
+- Znajdź klucz z największą sumaryczną wartością.
 
-Powinien zostać zwrócony napis: "abc"
+---
 
-### Zad 10. (★★☆)
+## Zadanie 6 - Histogram wystąpień znaków w słowie
 
-Tytuł: Anagramy w tekście
+**Poziom trudności**: ★☆☆
 
-Otrzymujesz tekst w postaci napisu. Twoim zadaniem jest znalezienie wszystkich słów, w których te same znaki występują tę samą liczbę razy. Innymi słowy, szukasz anagramów w tekście. Należy zignorować różnice między małymi i wielkimi literami. Pamiętaj, że słowa składają się wyłącznie z liter.
+### Treść zadania
 
-Dane wejściowe: Napis.
+Otrzymujesz napis. Znajdź częstość występowania każdego znaku w tym napisie.
 
-Dane wyjściowe: Lista list napisów.
+### Dane wejściowe
 
-Przykład:
+- Jeden napis.
 
-Dla otrzymanego napisu:
+### Dane wyjściowe
 
-"To absurd, że tyran Brudas, ten straszliwy bandzior sprawuje rządy w tym kraju. Burza nad galerią i alergia na narty to żadna zbrodnia jak bandzior i jego arbuz.",
+- Słownik z kluczami będącymi znakami i wartościami będącymi liczbą ich wystąpień.
 
-powinna zostać zwrócona lista:
+### Przykład
 
-[["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]].
+- **Dane wejściowe**:
+  ```
+  klasa
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  {'k': 1, 'l': 1, 'a': 2, 's': 1}
+  ```
 
-### Zad 11. (★☆☆)
+### Wskazówki
 
-Tytuł: Sortowanie względem kluczy/wartości
+- Iteruj przez znaki w napisie i zliczaj ich wystąpienia.
 
-Otrzymujesz słownik składający się z par napisów i liczb całkowitych. Twoim zadaniem jest wypisanie par posortowanych względem napisów oraz względem liczb.
+---
 
-Dane wejściowe: Słownik par: napis, liczba całkowita.
+## Zadanie 7 - Histogram słów w tekście
 
-Dane wyjściowe: Lista par.
+**Poziom trudności**: ★☆☆
 
-Przykład:
+### Treść zadania
 
-Dla otrzymanego słownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostać zwrócony słownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)].
-Dla otrzymanego słownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostać zwrócony słownik: [("a", -2), ("c", 3), ("b", 4), ("x", 5)].
+Otrzymujesz tekst w postaci napisu. Znajdź częstość występowania każdego słowa w tym tekście, ignorując wielkość liter. Słowa składają się wyłącznie z liter.
 
-### Zad 12. (★★☆)
+### Dane wejściowe
 
-Tytuł: Czy słowniki są identyczne?
+- Jeden napis reprezentujący tekst.
 
-Otrzymujesz dwa słowniki składające się z par napisów i list liczb całkowitych. Listy są nieuporządkowane. Twoim zadaniem jest sprawdzenie, czy słowniki składają się z tych samych par. Dwie listy uznajemy za identyczne, jeśli zawierają te same elementy, niezależnie od kolejności, w jakiej się one znajdują.
+### Dane wyjściowe
 
-Dane wejściowe: Dwa słowniki par: napis, lista liczb całkowitych.
+- Słownik z kluczami będącymi słowami (małymi literami) i wartościami będącymi liczbą ich wystąpień.
 
-Dane wyjściowe: Wartość boolowska.
+### Przykład
 
-Przykład:
+- **Dane wejściowe**:
+  ```
+  Ala ma kota. Ala lubi koty.
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  {'ala': 2, 'ma': 1, 'kota': 1, 'lubi': 1, 'koty': 1}
+  ```
 
-Dla otrzymanych słowników:
+### Wskazówki
 
-{'a': [1, 2, 3], 'b': [4, 5]}, {'a': [3, 2, 1], 'b': [5, 4]}
+- Usuń znaki interpunkcyjne i zamień tekst na małe litery.
+- Podziel tekst na słowa i zliczaj ich wystąpienia.
 
-Powinna zostać zwrócona wartość logiczna: Prawda.
+---
 
-Dla otrzymanych słowników:
+## Zadanie 8 - Najczęściej występująca litera w zdaniu
 
-{'a': [1, 2, 3], 'b': [4, 5]}, {'a': [3, 2, 1], 'b': [5, 4], 'c': [6, 7]}
+**Poziom trudności**: ★☆☆
 
-Powinna zostać zwrócona wartość logiczna: Fałsz.
+### Treść zadania
+
+Otrzymujesz zdanie. Znajdź literę, która występuje w nim najczęściej. Jeśli jest kilka takich liter, wybierz tę, która pojawia się jako pierwsza.
+
+### Dane wejściowe
+
+- Jeden napis reprezentujący zdanie.
+
+### Dane wyjściowe
+
+- Jeden znak — najczęściej występująca litera.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  lezy jerzy na wiezy
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  e
+  ```
+
+### Wskazówki
+
+- Zignoruj spacje i znaki interpunkcyjne.
+- Użyj słownika do zliczenia wystąpień liter.
+
+---
+
+## Zadanie 9 - Znaki występujące co najmniej dwa razy
+
+**Poziom trudności**: ★☆☆
+
+### Treść zadania
+
+Otrzymujesz napis. Znajdź wszystkie znaki, które występują w nim co najmniej dwa razy, i wypisz je bez powtórzeń.
+
+### Dane wejściowe
+
+- Jeden napis.
+
+### Dane wyjściowe
+
+- Napis składający się z unikalnych znaków występujących co najmniej dwa razy.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  aaabbbccc
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  abc
+  ```
+
+### Wskazówki
+
+- Zlicz wystąpienia znaków i wybierz te z liczbą większą lub równą 2.
+
+---
+
+## Zadanie 10 - Znalezienie anagramów w tekście
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Otrzymujesz tekst. Znajdź wszystkie grupy słów będących anagramami (słowa zawierające te same litery w tej samej liczbie). Ignoruj wielkość liter. Słowa składają się wyłącznie z liter.
+
+### Dane wejściowe
+
+- Jeden napis.
+
+### Dane wyjściowe
+
+- Lista list słów będących anagramami.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  To absurd, że tyran Brudas, ten straszliwy bandzior sprawuje rządy w tym kraju. Burza nad galerią i alergia na narty to żadna zbrodnia jak bandzior i jego arbuz.
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  [["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]]
+  ```
+
+### Wskazówki
+
+- Posortuj litery w każdym słowie i użyj ich jako klucza do grupowania.
+
+---
+
+## Zadanie 11 - Sortowanie słownika według kluczy i wartości
+
+**Poziom trudności**: ★☆☆
+
+### Treść zadania
+
+Otrzymujesz słownik z parami napisów i liczb całkowitych. Wypisz listę par:
+
+**a)** Posortowaną według kluczy (napisów) w porządku alfabetycznym.
+
+**b)** Posortowaną według wartości (liczb) w porządku rosnącym.
+
+### Dane wejściowe
+
+- Liczba naturalna \( n \) — liczba par w słowniku.
+- Następnie \( n \) linii z parą: `[klucz] [wartość]`.
+
+### Dane wyjściowe
+
+- **Podpunkt a):** Lista par posortowanych według kluczy.
+- **Podpunkt b):** Lista par posortowanych według wartości.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  4
+  c 3
+  x 5
+  a -2
+  b 4
+  ```
+- **Oczekiwane wyjście**:
+
+  **a)**
+  ```
+  [('a', -2), ('b', 4), ('c', 3), ('x', 5)]
+  ```
+
+  **b)**
+  ```
+  [('a', -2), ('c', 3), ('b', 4), ('x', 5)]
+  ```
+
+### Wskazówki
+
+- Użyj odpowiednich funkcji sortowania z kluczem.
+
+---
+
+## Zadanie 12 - Porównanie dwóch słowników
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Otrzymujesz dwa słowniki, gdzie kluczami są napisy, a wartościami listy liczb całkowitych. Listy mogą być w różnej kolejności. Sprawdź, czy słowniki zawierają te same pary klucz-wartość, przy czym kolejność elementów w listach nie ma znaczenia.
+
+### Dane wejściowe
+
+- Dwa słowniki:
+  - Liczba naturalna \( n \), a następnie \( n \) par `[klucz] [lista_wartości]`.
+  - Liczba naturalna \( m \), a następnie \( m \) par `[klucz] [lista_wartości]`.
+
+### Dane wyjściowe
+
+- Wartość logiczna: **"Prawda"**, jeśli słowniki są identyczne, lub **"Fałsz"**, jeśli nie są.
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  2
+  a 1 2 3
+  b 4 5
+  2
+  a 3 2 1
+  b 5 4
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Prawda
+  ```
+
+- **Dane wejściowe**:
+  ```
+  2
+  a 1 2 3
+  b 4 5
+  3
+  a 3 2 1
+  b 5 4
+  c 6 7
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Fałsz
+  ```
+
+### Wskazówki
+
+- Porównaj klucze obu słowników.
+- Dla każdego klucza porównaj zestawy wartości (nie kolejność).
+
+---
