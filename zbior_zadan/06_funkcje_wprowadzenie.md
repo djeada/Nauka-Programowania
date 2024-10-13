@@ -1,3 +1,5 @@
+# Funkcje - Wprowadzenie
+
 ## Zadanie 1 - Zwracanie stałej wartości
 
 **Poziom trudności**: ★☆☆
