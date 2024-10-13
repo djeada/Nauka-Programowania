@@ -1,3 +1,5 @@
+# Daty
+
 ## Zadanie 1 - Sprawdzanie poprawności numeru dnia tygodnia lub miesiąca
 
 **Poziom trudności**: ★☆☆
