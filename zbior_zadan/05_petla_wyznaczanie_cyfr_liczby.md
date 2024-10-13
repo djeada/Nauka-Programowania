@@ -1,113 +1,303 @@
-## Pętla — wyznaczanie cyfr liczby
+## Zadanie 1 - Liczenie cyfr w liczbie
 
-### Zad 1. (★☆☆)
+**Poziom trudności**: ★☆☆
 
-Tytuł: Liczba cyfr.
+### Treść zadania
 
-Treść: Dla otrzymanej od użytkownika liczby naturalnej wypisz liczbę cyfr, z których się składa.
+Napisz program, który pobiera od użytkownika liczbę naturalną i wypisuje, z ilu cyfr składa się ta liczba.
 
-Dane wejściowe: Liczba naturalna.
+### Dane wejściowe
 
-Dane wyjściowe: Liczba naturalna.
+- Jedna liczba naturalna (całkowita nieujemna).
 
-Przykład:
+### Dane wyjściowe
 
-Dla otrzymanej liczby 342, powinna zostać wypisana liczba 3.
+- Jedna liczba naturalna – liczba cyfr w podanej liczbie.
 
-### Zad 2. (★☆☆)
+### Przykład
 
-Tytuł: Cyfry liczby.
+- **Dane wejściowe**:
+  ```
+  342
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  3
+  ```
 
-Treść: Dla otrzymanej liczby naturalnej wypisz cyfry, z których się składa, zaczynając od cyfry jedności.
+### Wskazówki
 
-Dane wejściowe: Liczba naturalna.
+- Możesz zamienić liczbę na ciąg znaków i policzyć długość tego ciągu.
+- Alternatywnie, możesz użyć pętli i dzielić liczbę przez 10, zwiększając licznik przy każdej iteracji.
 
-Dane wyjściowe: Liczby.
+---
 
-Przykład:
+## Zadanie 2 - Wypisywanie cyfr liczby w odwrotnej kolejności
 
-Dla otrzymanej liczby 8214, powinny zostać wypisane cyfry 4, 1, 2 i 8.
+**Poziom trudności**: ★☆☆
 
-### Zad 3. (★☆☆)
+### Treść zadania
 
-Tytuł: Treść: Dla otrzymanej liczby naturalnej wypisz sumę cyfr tej liczby.
+Napisz program, który pobiera od użytkownika liczbę naturalną i wypisuje cyfry, z których się składa, zaczynając od cyfry jedności (czyli w odwrotnej kolejności niż w zapisie liczby).
 
-Dane wejściowe: Liczba naturalna.
+### Dane wejściowe
 
-Dane wyjściowe: Liczba naturalna.
+- Jedna liczba naturalna.
 
-Przykład:
+### Dane wyjściowe
 
-Dla otrzymanej liczby 129, powinna zostać wypisana liczba 12.
+- Kolejne cyfry liczby, każda w nowej linii, zaczynając od cyfry jedności.
 
-### Zad 4. (★☆☆)
+### Przykład
 
-Tytuł: Cyfry liczby spełniające określone warunki.
+- **Dane wejściowe**:
+  ```
+  8214
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  4
+  1
+  2
+  8
+  ```
 
-Treść: Dla otrzymanej liczby naturalnej wypisz cyfry tej liczby, które są:
+### Wskazówki
 
-a) liczbami parzystymi,
+- Możesz użyć operatora modulo (`%`) oraz dzielenia całkowitego (`//`) do wyodrębnienia kolejnych cyfr.
+- Pętla powinna trwać, dopóki liczba jest większa od zera.
 
-b) mniejsze niż 5,
+---
 
-c) różne od 0.
+## Zadanie 3 - Sumowanie cyfr liczby
 
-Dane wejściowe: Liczba naturalna dla wszystkich podpunktów.
+**Poziom trudności**: ★☆☆
 
-Dane wyjściowe: Kilka liczb.
+### Treść zadania
 
-Przykład:
+Napisz program, który pobiera od użytkownika liczbę naturalną i oblicza sumę cyfr tej liczby.
 
-a) Dla otrzymanej liczby 932, powinna zostać wypisana liczba 2.
+### Dane wejściowe
 
-b) Dla otrzymanej liczby 101, powinny zostać wypisane liczby 1, 0 i 1.
+- Jedna liczba naturalna.
 
-c) Dla otrzymanej liczby 650, powinny zostać wypisane liczby 6 i 5.
+### Dane wyjściowe
 
-### Zad 5. (★★☆)
+- Jedna liczba naturalna – suma cyfr podanej liczby.
 
-Czy liczba jest palindromem?
+### Przykład
 
-Treść: Dla otrzymanej liczby naturalnej sprawdź, czy jest ona palindromem, tj. czy nie zmienia się po zapisaniu cyfr w odwrotnej kolejności.
+- **Dane wejściowe**:
+  ```
+  129
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  12
+  ```
 
-Dane wejściowe: Liczba naturalna.
+### Wskazówki
 
-Dane wyjściowe: Komunikat.
+- Użyj operatora modulo (`%`) i dzielenia całkowitego (`//`) do wyodrębnienia cyfr.
+- Suma cyfr to suma wszystkich wyodrębnionych cyfr z liczby.
 
-Przykład:
+---
 
-Dla otrzymanej liczby 13231, powinna zostać wypisana informacja o tym, że liczba jest palindromem.
+## Zadanie 4 - Wypisywanie cyfr spełniających określone warunki
 
-### Zad 6. (★☆☆)
+**Poziom trudności**: ★☆☆
 
-Tytuł: Liczby spełniające określone warunki.
+### Treść zadania
 
-Treść: Dla pobranej liczby naturalnej wypisz:
+Napisz program, który pobiera od użytkownika liczbę naturalną i wypisuje cyfry tej liczby, które spełniają poniższe warunki:
 
-a) wszystkie liczby naturalne mniejsze od pobranej, których suma cyfr jest równa 10,
+a) Są liczbami **parzystymi**.
 
-b) wszystkie liczby naturalne dwucyfrowe większe od pobranej,
+b) Są **mniejsze niż 5**.
 
-c) wszystkie liczby naturalne trzycyfrowe, których suma cyfr jest równa pobranej liczbie,
+c) Są **różne od zera**.
 
-d) wszystkie liczby naturalne trzycyfrowe podzielne przez sumę cyfr pobranej liczby,
+### Dane wejściowe
 
-e) wszystkie liczby naturalne mniejsze od pobranej, składające się wyłącznie z parzystych cyfr.
+- Jedna liczba naturalna dla wszystkich podpunktów.
 
-Dane wejściowe: Liczba naturalna dla wszystkich podpunktów.
+### Dane wyjściowe
 
-Dane wyjściowe: Kilka liczb naturalnych.
+- Dla każdego podpunktu wypisz odpowiednie cyfry, każda w nowej linii.
 
-Przykłady
+### Przykład
 
-Dla pobranej liczby: 95:
+**Podpunkt a):**
 
-a) wszystkie liczby naturalne mniejsze od pobranej, których suma cyfr jest równa 10: brak
+- **Dane wejściowe**:
+  ```
+  932
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  2
+  ```
 
-b) wszystkie liczby naturalne dwucyfrowe większe od pobranej: 96, 97, 98, 99
+**Podpunkt b):**
 
-c) wszystkie liczby naturalne trzycyfrowe, których suma cyfr jest równa pobranej liczbie: brak
+- **Dane wejściowe**:
+  ```
+  101
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  1
+  0
+  1
+  ```
 
-d) wszystkie liczby naturalne trzycyfrowe podzielne przez sumę cyfr pobranej liczby: brak
+**Podpunkt c):**
 
-e) wszystkie liczby naturalne mniejsze od pobranej, składające się wyłącznie z parzystych cyfr: 2, 4
+- **Dane wejściowe**:
+  ```
+  650
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  6
+  5
+  ```
+
+### Wskazówki
+
+- Dla każdego podpunktu przeanalizuj cyfry liczby i sprawdź, czy spełniają dany warunek.
+- Możesz użyć pętli i operatorów logicznych do filtrowania cyfr.
+
+---
+
+## Zadanie 5 - Sprawdzanie, czy liczba jest palindromem
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Napisz program, który sprawdza, czy podana przez użytkownika liczba naturalna jest **palindromem**, czyli czy pozostaje taka sama po odwróceniu kolejności jej cyfr.
+
+### Dane wejściowe
+
+- Jedna liczba naturalna.
+
+### Dane wyjściowe
+
+- Jeden komunikat tekstowy:
+  - Jeśli liczba jest palindromem, wypisz: **"Liczba jest palindromem."**
+  - Jeśli liczba nie jest palindromem, wypisz: **"Liczba nie jest palindromem."**
+
+### Przykład
+
+- **Dane wejściowe**:
+  ```
+  13231
+  ```
+- **Oczekiwane wyjście**:
+  ```
+  Liczba jest palindromem.
+  ```
+
+### Wskazówki
+
+- Możesz zamienić liczbę na ciąg znaków i sprawdzić, czy jest równy swojemu odbiciu.
+- Alternatywnie, możesz odwrócić liczbę matematycznie i porównać z oryginałem.
+
+---
+
+## Zadanie 6 - Wypisywanie liczb spełniających określone warunki
+
+**Poziom trudności**: ★★☆
+
+### Treść zadania
+
+Napisz program, który pobiera od użytkownika liczbę naturalną i wypisuje liczby spełniające poniższe warunki:
+
+a) Wszystkie liczby naturalne **mniejsze** od podanej liczby, których **suma cyfr jest równa 10**.
+
+b) Wszystkie liczby naturalne **dwucyfrowe** **większe** od podanej liczby.
+
+c) Wszystkie liczby naturalne **trzycyfrowe**, których **suma cyfr jest równa** podanej liczbie.
+
+d) Wszystkie liczby naturalne **trzycyfrowe**, które są **podzielne przez sumę cyfr** podanej liczby.
+
+e) Wszystkie liczby naturalne **mniejsze** od podanej liczby, składające się wyłącznie z **parzystych cyfr**.
+
+### Dane wejściowe
+
+- Jedna liczba naturalna dla wszystkich podpunktów.
+
+### Dane wyjściowe
+
+- Dla każdego podpunktu wypisz odpowiednie liczby, każda w nowej linii.
+
+### Przykład
+
+**Dla podanej liczby: 95**
+
+**Podpunkt a):**
+
+- **Oczekiwane wyjście**:
+  ```
+  (brak)
+  ```
+
+**Podpunkt b):**
+
+- **Oczekiwane wyjście**:
+  ```
+  96
+  97
+  98
+  99
+  ```
+
+**Podpunkt c):**
+
+- **Oczekiwane wyjście**:
+  ```
+  (brak)
+  ```
+
+**Podpunkt d):**
+
+- **Oczekiwane wyjście**:
+  ```
+  (brak)
+  ```
+
+**Podpunkt e):**
+
+- **Oczekiwane wyjście**:
+  ```
+  2
+  4
+  6
+  8
+  22
+  24
+  26
+  28
+  42
+  44
+  46
+  48
+  62
+  64
+  66
+  68
+  82
+  84
+  86
+  88
+  ```
+
+### Wskazówki
+
+- **Podpunkt a):** Iteruj po liczbach mniejszych od podanej i sprawdzaj, czy suma ich cyfr wynosi 10.
+- **Podpunkt b):** Wypisz liczby dwucyfrowe większe od podanej liczby (od 10 do 99).
+- **Podpunkt c):** Iteruj po liczbach trzycyfrowych (od 100 do 999) i sprawdzaj, czy suma ich cyfr jest równa podanej liczbie.
+- **Podpunkt d):** Oblicz sumę cyfr podanej liczby, a następnie wypisz liczby trzycyfrowe podzielne przez tę sumę.
+- **Podpunkt e):** Wypisz liczby mniejsze od podanej, których wszystkie cyfry są parzyste (np. 2, 4, 6, 8, 22, 24, itd.).
+
