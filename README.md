@@ -9,7 +9,7 @@
 
 Witaj w świecie programowania! Jeśli zastanawiasz się, od czego zacząć, to jesteś w idealnym miejscu. Ten projekt oferuje ciąg zadań, które przeprowadzą Cię przez kluczowe koncepcje potrzebne do zrozumienia programowania, od podstaw aż do bardziej zaawansowanych tematów.
 
-![laptop_with_snake_Seed-7632331_Steps-50_Guidance-7 5](https://user-images.githubusercontent.com/37275728/221419671-2d82a012-509d-4331-866c-af8eeb2b84a9.png)
+![nauka_programowania](https://github.com/user-attachments/assets/64fb3baa-c080-45c0-bb8f-abb612581f18)
 
 ## Gdzie mogę znaleźć dodatkowe materiały do nauki?
 
