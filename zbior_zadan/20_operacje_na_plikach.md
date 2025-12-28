@@ -1,504 +1,445 @@
-# Operacje na plikach
+# Rozdział: Operacje na plikach (stdin/stdout)
 
-## Zadanie 1 - Sprawdzenie, czy ścieżka należy do pliku lub folderu
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-**Poziom trudności**: ★☆☆
+**Konwencje wspólne:**
 
-### Treść zadania
-
-Otrzymujesz napis reprezentujący ścieżkę w systemie plików. Twoim zadaniem jest sprawdzić, czy podana ścieżka odnosi się do istniejącego pliku lub folderu.
-
-### Dane wejściowe
-
-- Jeden napis reprezentujący ścieżkę w systemie plików.
-
-### Dane wyjściowe
-
-- Wartość logiczna:
-  - **Prawda**, jeśli ścieżka odnosi się do istniejącego pliku lub folderu.
-  - **Fałsz**, jeśli ścieżka nie odnosi się do żadnego istniejącego pliku ani folderu.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  C:\Users\Username\Documents\plik.txt
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Prawda
-  ```
-
-### Wskazówki
-
-- Sprawdź, czy ścieżka istnieje w systemie plików.
-- Upewnij się, że obsługujesz zarówno ścieżki do plików, jak i do folderów.
+* Ścieżki wczytuj jako całe linie (mogą zawierać spacje).
+* Rozszerzenia podawane są **z kropką**, np. `.txt`.
+* Jeśli zadanie wymaga wypisania listy lub słownika — wypisz je w formacie jak w przykładach (np. `['a', 'b']`, `{ 'a': 1 }`).
+* W zadaniach „modyfikujących pliki” w **wyjściu może nie być nic** — liczy się wykonana operacja (jeśli środowisko testujące to sprawdza).
 
 ---
 
-## Zadanie 2 - Znalezienie wszystkich plików z danym rozszerzeniem w folderze
+## ZAD-01 — Czy ścieżka istnieje?
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `files`, `path`, `os`, `pathlib`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwa napisy:
+Otrzymujesz ścieżkę w systemie plików. Sprawdź, czy odnosi się do istniejącego **pliku lub folderu**.
 
-1. Ścieżka do folderu.
-2. Rozszerzenie plików do wyszukania (np. `.txt`, `.jpg`).
+### Wejście
 
-Twoim zadaniem jest znaleźć w podanym folderze wszystkie pliki o podanym rozszerzeniu i zwrócić ich nazwy w postaci listy.
+* 1 linia: `path` (napis — ścieżka)
 
-### Dane wejściowe
+### Wyjście
 
-- Dwa napisy:
-  1. Ścieżka do folderu.
-  2. Rozszerzenie plików do wyszukania (wraz z kropką, np. `.txt`).
-
-### Dane wyjściowe
-
-- Lista napisów zawierająca nazwy plików z podanym rozszerzeniem znajdujących się w podanym folderze.
+* 1 linia: `Prawda` jeśli ścieżka istnieje, w przeciwnym razie `Fałsz`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  C:\Users\Username\Documents
-  .txt
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ['dokument1.txt', 'notatki.txt', 'lista_zakupów.txt']
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+C:\Users\Username\Documents\plik.txt
+```
 
-- Przeszukaj tylko bezpośrednie zawartości podanego folderu (nie uwzględniaj podfolderów).
-- Upewnij się, że porównujesz rozszerzenia plików w sposób niezależny od wielkości liter.
+**Wyjście:**
+
+```
+Prawda
+```
 
 ---
 
-## Zadanie 3 - Znalezienie ścieżek plików o danej nazwie
+## ZAD-02 — Pliki o danym rozszerzeniu w folderze (bez podfolderów)
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `files`, `dir`, `listdir`, `pathlib`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis reprezentujący nazwę pliku (np. `raport.docx`). Twoim zadaniem jest przeszukać cały system plików i znaleźć wszystkie pliki o podanej nazwie. Zwróć listę pełnych ścieżek do tych plików.
+Otrzymujesz ścieżkę do folderu i rozszerzenie (np. `.txt`). Znajdź wszystkie pliki o tym rozszerzeniu znajdujące się **bezpośrednio** w tym folderze (bez przeszukiwania podfolderów). Zwróć listę nazw plików.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis reprezentujący nazwę pliku do wyszukania.
+* 1 linia: `folder_path`
+* 2 linia: `ext` (np. `.txt`)
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista napisów zawierająca pełne ścieżki do wszystkich plików o podanej nazwie.
+* 1 linia: lista nazw plików w formacie `['a.txt', 'b.txt']`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  raport.docx
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [
-    'C:\Users\Username\Documents\raport.docx',
-    'D:\Projekty\Raporty\raport.docx',
-    'E:\Backup\raport.docx'
-  ]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+C:\Users\Username\Documents
+.txt
+```
 
-- Przeszukaj wszystkie dyski i foldery dostępne w systemie.
-- Upewnij się, że masz odpowiednie uprawnienia do odczytu poszczególnych folderów.
+**Wyjście:**
+
+```
+['dokument1.txt', 'notatki.txt', 'lista_zakupów.txt']
+```
+
+### Uwagi o formatowaniu
+
+* Porównuj rozszerzenia **bez względu na wielkość liter** (np. `.TXT` też pasuje do `.txt`).
 
 ---
 
-## Zadanie 4 - Wczytaj i wypisz treść pliku
+## ZAD-03 — Znajdź wszystkie ścieżki plików o danej nazwie (rekurencyjnie)
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★★☆
+**Tagi:** `files`, `walk`, `recursive`, `pathlib`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Twoim zadaniem jest wczytać zawartość tego pliku i wypisać jego treść.
+Otrzymujesz nazwę pliku (np. `raport.docx`). Przeszukaj cały system plików i znajdź wszystkie pliki o tej nazwie. Wypisz listę pełnych ścieżek do znalezionych plików.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis reprezentujący ścieżkę do pliku tekstowego.
+* 1 linia: `filename` (np. `raport.docx`)
 
-### Dane wyjściowe
+### Wyjście
 
-- Napis zawierający treść pliku.
+* 1 linia: lista pełnych ścieżek (napisy)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  C:\Users\Username\Documents\wiadomość.txt
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Witaj! To jest przykładowa treść pliku tekstowego.
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+raport.docx
+```
 
-- Upewnij się, że plik istnieje i masz do niego dostęp.
-- Zadbaj o poprawne kodowanie znaków podczas wczytywania pliku.
+**Wyjście:**
+
+```
+[
+  'C:\Users\Username\Documents\raport.docx',
+  'D:\Projekty\Raporty\raport.docx',
+  'E:\Backup\raport.docx'
+]
+```
+
+### Uwagi
+
+* W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów — program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca).
 
 ---
 
-## Zadanie 5 - Posortuj adresy IP z pliku
+## ZAD-04 — Wczytaj i wypisz treść pliku
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `files`, `read`, `encoding`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Plik zawiera w każdym wierszu jeden adres IP. Twoim zadaniem jest wczytać adresy IP z pliku, posortować je alfabetycznie i zwrócić w postaci listy.
+Otrzymujesz ścieżkę do pliku tekstowego. Wczytaj zawartość pliku i wypisz ją.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis reprezentujący ścieżkę do pliku tekstowego.
+* 1 linia: `file_path`
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista napisów zawierająca posortowane alfabetycznie adresy IP.
+* treść pliku (dokładnie taka jak w pliku)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  C:\Users\Username\Documents\adresy_ip.txt
-  ```
-- **Plik "adresy_ip.txt" zawiera**:
-  ```
-  192.168.1.10
-  10.0.0.1
-  172.16.0.5
-  192.168.1.2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ['10.0.0.1', '172.16.0.5', '192.168.1.10', '192.168.1.2']
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+C:\Users\Username\Documents\wiadomość.txt
+```
 
-- Pamiętaj, że alfabetyczne sortowanie adresów IP może nie odpowiadać ich kolejności numerycznej.
-- Jeśli chcesz sortować adresy IP według wartości numerycznych, rozważ podział adresów na oktety i porównywanie ich jako liczb.
+**Wyjście:**
+
+```
+Witaj! To jest przykładowa treść pliku tekstowego.
+```
 
 ---
 
-## Zadanie 6 - Statystyki dla pliku tekstowego
+## ZAD-05 — Posortuj adresy IP z pliku
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `files`, `sort`, `list`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis reprezentujący ścieżkę do pliku tekstowego. Twoim zadaniem jest obliczyć następujące statystyki dla tego pliku:
+Otrzymujesz ścieżkę do pliku tekstowego, w którym w każdej linii znajduje się jeden adres IP. Wczytaj wszystkie adresy, posortuj je **alfabetycznie** i wypisz jako listę.
 
-a) Liczbę wierszy w pliku.
+### Wejście
 
-b) Łączną liczbę słów w pliku (słowa są oddzielone spacjami i składają się wyłącznie z liter).
+* 1 linia: `file_path`
 
-c) Średnią długość wiersza (liczbę znaków na wiersz).
+### Wyjście
 
-d) Średnią liczbę słów na wiersz.
-
-e) Częstotliwość występowania każdego słowa w pliku (w formie słownika).
-
-### Dane wejściowe
-
-- Jeden napis reprezentujący ścieżkę do pliku tekstowego.
-
-### Dane wyjściowe
-
-- a) Liczba naturalna — liczba wierszy w pliku.
-- b) Liczba naturalna — łączna liczba słów w pliku.
-- c) Liczba zmiennoprzecinkowa — średnia długość wiersza (w znakach).
-- d) Liczba zmiennoprzecinkowa — średnia liczba słów na wiersz.
-- e) Słownik, w którym kluczami są słowa (napisy), a wartościami liczby naturalne reprezentujące częstotliwość występowania słów.
+* 1 linia: lista adresów IP jako napisy, np. `['10.0.0.1', ...]`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  C:\Users\Username\Documents\tekst.txt
-  ```
-- **Zawartość pliku "tekst.txt"**:
-  ```
-  Ala ma kota.
-  Kot ma na imię Filemon.
-  Filemon lubi mleko.
-  Ala lubi Filemona.
-  ```
-- **Oczekiwane wyjście**:
+**Wejście:**
 
-  a) Liczba wierszy: `4`
+```
+C:\Users\Username\Documents\adresy_ip.txt
+```
 
-  b) Liczba słów: `12`
+**Wyjście:**
 
-  c) Średnia długość wiersza: `17.75`
-
-  d) Średnia liczba słów na wiersz: `3.0`
-
-  e) Częstotliwość słów:
-  ```
-  {
-    'Ala': 2,
-    'ma': 2,
-    'kota': 1,
-    'Kot': 1,
-    'na': 1,
-    'imię': 1,
-    'Filemon': 1,
-    'Filemona': 1,
-    'lubi': 2,
-    'mleko': 1
-  }
-  ```
-
-### Wskazówki
-
-- Przy liczeniu słów usuń znaki interpunkcyjne i zamień tekst na małe litery, jeśli chcesz traktować słowa jednolicie.
-- Możesz użyć funkcji do podziału tekstu na słowa, takich jak `split()`.
-- Zadbaj o to, by słowa były traktowane identycznie bez względu na wielkość liter (jeśli to wymagane).
+```
+['10.0.0.1', '172.16.0.5', '192.168.1.10', '192.168.1.2']
+```
 
 ---
 
-## Zadanie 7 - Dodaj wiersz na początku pliku
+## ZAD-06 — Statystyki pliku tekstowego
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★★☆
+**Tagi:** `files`, `stats`, `dict`, `regex`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwa napisy:
+Otrzymujesz ścieżkę do pliku tekstowego. Oblicz:
 
-1. Ścieżka do pliku tekstowego.
-2. Wiersz tekstu do dodania.
+a) liczbę wierszy,
+b) łączną liczbę słów (słowa = ciągi liter),
+c) średnią długość wiersza (w znakach),
+d) średnią liczbę słów na wiersz,
+e) częstość występowania słów (słownik).
 
-Twoim zadaniem jest dodać podany wiersz na początku pliku tekstowego.
+### Wejście
 
-### Dane wejściowe
+* 1 linia: `file_path`
 
-- Dwa napisy:
-  1. Ścieżka do pliku tekstowego.
-  2. Wiersz tekstu do dodania.
+### Wyjście
 
-### Dane wyjściowe
+5 elementów w tej kolejności:
 
-- Brak (zmodyfikuj plik zgodnie z poleceniem).
+1. liczba wierszy
+2. liczba słów
+3. średnia długość wiersza
+4. średnia liczba słów na wiersz
+5. słownik częstości słów
+
+Każdy element wypisz w osobnej linii.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  C:\Users\Username\Documents\notatki.txt
-  ```
-  ```
-  To jest nowy wiersz dodany na początku pliku.
-  ```
-- **Operacja**:
-  - Dodaj podany wiersz na początku pliku "notatki.txt".
+**Wejście:**
 
-### Wskazówki
+```
+C:\Users\Username\Documents\tekst.txt
+```
 
-- Pamiętaj, że musisz przesunąć istniejącą treść pliku, aby zrobić miejsce na nowy wiersz.
-- Upewnij się, że zachowujesz formatowanie pliku, np. dodając znak nowej linii po dodanym wierszu.
+**Wyjście:**
+
+```
+4
+12
+17.75
+3.0
+{'ala': 2, 'ma': 2, 'kota': 1, 'kot': 1, 'na': 1, 'imię': 1, 'filemon': 1, 'filemona': 1, 'lubi': 2, 'mleko': 1}
+```
+
+### Uwagi o formatowaniu
+
+* Jeżeli ujednolicisz wielkość liter — w słowniku używaj małych liter (jak w przykładzie).
+* Interpunkcję traktuj jako separator (usuń ją przy wyznaczaniu słów).
 
 ---
 
-## Zadanie 8 - Modyfikacja plików spełniających warunek
+## ZAD-07 — Dodaj wiersz na początku pliku
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `files`, `write`, `prepend`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis reprezentujący ścieżkę do folderu. Wykonaj następujące operacje:
+Otrzymujesz ścieżkę do pliku tekstowego i wiersz tekstu. Dodaj ten wiersz na **początku** pliku.
 
-a) Dodaj swoje inicjały na końcu wszystkich plików tekstowych (`.txt`) znajdujących się w podanym folderze oraz we wszystkich jego podfolderach.
+### Wejście
 
-b) Usuń środkowy wiersz z każdego pliku CSV (`.csv`) znajdującego się w podanym folderze oraz we wszystkich jego podfolderach.
+* 1 linia: `file_path`
+* 2 linia: `line_to_add` (może zawierać spacje)
 
-### Dane wejściowe
+### Wyjście
 
-- Jeden napis reprezentujący ścieżkę do folderu.
-
-### Dane wyjściowe
-
-- Brak (zmodyfikuj pliki zgodnie z poleceniem).
+Brak.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  C:\Users\Username\Documents\Projekt
-  ```
+**Wejście:**
 
-- **Operacje**:
-  - a) Dodaj swoje inicjały (np. "AB") na końcu każdego pliku `.txt` w folderze "Projekt" i jego podfolderach.
-  - b) W każdym pliku `.csv` w folderze "Projekt" i jego podfolderach usuń wiersz znajdujący się w środku pliku.
+```
+C:\Users\Username\Documents\notatki.txt
+To jest nowy wiersz dodany na początku pliku.
+```
 
-### Wskazówki
-
-- Przeszukaj folder rekurencyjnie, aby uwzględnić wszystkie podfoldery.
-- Przy usuwaniu środkowego wiersza, jeśli plik ma parzystą liczbę wierszy, usuń dolny z dwóch środkowych wierszy.
-- Upewnij się, że masz uprawnienia do modyfikacji plików.
+**Wyjście:**
+*(brak)*
 
 ---
 
-## Zadanie 9 - Usuń pliki większe niż 10 kB
+## ZAD-08 — Modyfikacja plików spełniających warunek (rekurencyjnie)
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `files`, `recursive`, `txt`, `csv`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis reprezentujący ścieżkę do folderu. Twoim zadaniem jest usunąć wszystkie pliki o rozmiarze większym niż 10 kilobajtów (10 240 bajtów), znajdujące się w podanym folderze oraz we wszystkich jego podfolderach.
+Otrzymujesz ścieżkę do folderu. Wykonaj:
 
-### Dane wejściowe
+a) dopisz swoje inicjały na końcu każdego pliku `.txt` w folderze i podfolderach,
+b) usuń **środkowy wiersz** z każdego pliku `.csv` w folderze i podfolderach
+(jeśli liczba wierszy jest parzysta — usuń **dolny z dwóch środkowych**).
 
-- Jeden napis reprezentujący ścieżkę do folderu.
+### Wejście
 
-### Dane wyjściowe
+* 1 linia: `folder_path`
 
-- Brak (usuń pliki zgodnie z poleceniem).
+### Wyjście
+
+Brak.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  C:\Users\Username\Documents\DoUsunięcia
-  ```
+**Wejście:**
 
-- **Operacja**:
-  - Usuń wszystkie pliki większe niż 10 kB w folderze "DoUsunięcia" i jego podfolderach.
+```
+C:\Users\Username\Documents\Projekt
+```
 
-### Wskazówki
-
-- Przeszukaj folder rekurencyjnie, aby uwzględnić wszystkie podfoldery.
-- Upewnij się, że masz uprawnienia do usuwania plików.
-- Zachowaj ostrożność, aby nie usunąć plików, których nie powinieneś usuwać.
+**Wyjście:**
+*(brak)*
 
 ---
 
-## Zadanie 10 - Skopiuj pliki PNG do innego folderu
+## ZAD-09 — Usuń pliki większe niż 10 kB (rekurencyjnie)
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★★☆
+**Tagi:** `files`, `delete`, `size`, `recursive`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwa napisy:
+Otrzymujesz ścieżkę do folderu. Usuń wszystkie pliki o rozmiarze **> 10240 bajtów** w tym folderze i jego podfolderach.
 
-1. Ścieżka do folderu źródłowego.
-2. Ścieżka do folderu docelowego.
+### Wejście
 
-Twoim zadaniem jest skopiować wszystkie pliki z rozszerzeniem `.png` z folderu źródłowego do folderu docelowego.
+* 1 linia: `folder_path`
 
-### Dane wejściowe
+### Wyjście
 
-- Dwa napisy:
-  1. Ścieżka do folderu źródłowego.
-  2. Ścieżka do folderu docelowego.
-
-### Dane wyjściowe
-
-- Brak (skopiuj pliki zgodnie z poleceniem).
+Brak.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Źródło: C:\Users\Username\Obrazy
-  Cel: D:\Backup\Obrazy
-  ```
+**Wejście:**
 
-- **Operacja**:
-  - Skopiuj wszystkie pliki `.png` z folderu "Obrazy" do folderu "D:\Backup\Obrazy".
+```
+C:\Users\Username\Documents\DoUsunięcia
+```
 
-### Wskazówki
-
-- Upewnij się, że folder docelowy istnieje lub obsłuż sytuację, gdy nie istnieje.
-- Skopiuj tylko pliki z rozszerzeniem `.png` znajdujące się bezpośrednio w folderze źródłowym (nie uwzględniaj podfolderów, chyba że jest to wymagane).
+**Wyjście:**
+*(brak)*
 
 ---
 
-## Zadanie 11 - Podmień treści plików
+## ZAD-10 — Skopiuj pliki PNG do innego folderu (bez podfolderów)
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `files`, `copy`, `png`, `shutil`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwa napisy reprezentujące ścieżki do dwóch plików. Twoim zadaniem jest zamienić miejscami treści tych plików, tak aby:
+Otrzymujesz ścieżkę folderu źródłowego i docelowego. Skopiuj wszystkie pliki `.png` znajdujące się **bezpośrednio** w folderze źródłowym do folderu docelowego.
 
-- Plik A zawierał pierwotną treść pliku B.
-- Plik B zawierał pierwotną treść pliku A.
+### Wejście
 
-### Dane wejściowe
+* 1 linia: `src_folder`
+* 2 linia: `dst_folder`
 
-- Dwa napisy:
-  1. Ścieżka do pliku A.
-  2. Ścieżka do pliku B.
+### Wyjście
 
-### Dane wyjściowe
-
-- Brak (zmodyfikuj pliki zgodnie z poleceniem).
+Brak.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Plik A: C:\Users\Username\Documents\plik1.txt
-  Plik B: C:\Users\Username\Documents\plik2.txt
-  ```
+**Wejście:**
 
-- **Operacja**:
-  - Zamień treści plików "plik1.txt" i "plik2.txt".
+```
+C:\Users\Username\Obrazy
+D:\Backup\Obrazy
+```
 
-### Wskazówki
-
-- Możesz użyć tymczasowego pliku lub zmiennej do przechowania treści jednego z plików podczas zamiany.
-- Upewnij się, że zachowujesz uprawnienia i atrybuty plików po modyfikacji.
+**Wyjście:**
+*(brak)*
 
 ---
 
-## Zadanie 12 - Przenieś wszystkie pliki CSV do jednego folderu
+## ZAD-11 — Zamień miejscami treści dwóch plików
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `files`, `swap`, `read/write`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwa napisy:
+Otrzymujesz ścieżki do dwóch plików. Zamień ich treści miejscami:
 
-1. Ścieżka do folderu źródłowego.
-2. Ścieżka do folderu docelowego.
+* plik A ma mieć dawną treść pliku B,
+* plik B ma mieć dawną treść pliku A.
 
-Twoim zadaniem jest przenieść wszystkie pliki z rozszerzeniem `.csv` z folderu źródłowego oraz wszystkich jego podfolderów do folderu docelowego.
+### Wejście
 
-### Dane wejściowe
+* 1 linia: `file_A`
+* 2 linia: `file_B`
 
-- Dwa napisy:
-  1. Ścieżka do folderu źródłowego.
-  2. Ścieżka do folderu docelowego.
+### Wyjście
 
-### Dane wyjściowe
-
-- Brak (przenieś pliki zgodnie z poleceniem).
+Brak.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Źródło: C:\Users\Username\Projekty
-  Cel: D:\Dane\CSV
-  ```
+**Wejście:**
 
-- **Operacja**:
-  - Przenieś wszystkie pliki `.csv` z folderu "Projekty" i jego podfolderów do folderu "D:\Dane\CSV".
+```
+C:\Users\Username\Documents\plik1.txt
+C:\Users\Username\Documents\plik2.txt
+```
 
-### Wskazówki
+**Wyjście:**
+*(brak)*
 
-- Upewnij się, że podczas przenoszenia plików nie dojdzie do konfliktu nazw plików.
-- Jeśli plik o tej samej nazwie już istnieje w folderze docelowym, rozważ zmianę nazwy pliku lub pomiń go.
-- Pamiętaj o przenoszeniu, a nie kopiowaniu plików.
+---
+
+## ZAD-12 — Przenieś wszystkie pliki CSV do jednego folderu (rekurencyjnie)
+
+**Poziom:** ★★☆
+**Tagi:** `files`, `move`, `csv`, `recursive`
+
+### Treść
+
+Otrzymujesz ścieżkę folderu źródłowego i docelowego. Przenieś wszystkie pliki `.csv` z folderu źródłowego **i wszystkich jego podfolderów** do folderu docelowego.
+
+### Wejście
+
+* 1 linia: `src_folder`
+* 2 linia: `dst_folder`
+
+### Wyjście
+
+Brak.
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Projekty
+D:\Dane\CSV
+```
+
+**Wyjście:**
+*(brak)*
+
+### Uwagi
+
+* Jeśli w folderze docelowym istnieje już plik o tej samej nazwie, zadanie wymaga zdefiniowania zachowania (np. zmiana nazwy / pominięcie) — jeśli sprawdzarka tego nie doprecyzowuje, przyjmij jedną spójną strategię w całym rozwiązaniu.
