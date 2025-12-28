@@ -26,6 +26,20 @@ Nasz zbiór zadań to bogate źródło wiedzy:
 * Zbiór jest regularnie poszerzany i aktualizowany.
 * Informacje o dodawaniu własnych rozwiązań znajdziesz [tutaj](https://github.com/djeada/Nauka-Programowania/blob/master/CONTRIBUTING.md).
 
+### Generowanie PDF
+
+Możesz wygenerować profesjonalny PDF ze wszystkimi zadaniami:
+
+```bash
+# Zainstaluj wymagane biblioteki
+pip install weasyprint markdown2 pygments
+
+# Wygeneruj PDF
+python3 scripts/generate_pdf.py
+```
+
+Skrypt utworzy plik `Nauka_Programowania_Zbior_Zadan.pdf` zawierający wszystkie 25 rozdziałów w czystym, profesjonalnym formacie. PDF zawiera stronę tytułową, spis treści, oraz wszystkie zadania z odpowiednim formatowaniem kodu, tabel i wzorów matematycznych.
+
 ## O zadaniach
 
 Zadania są podzielone tematycznie i ułożone według stopnia trudności, aby każdy mógł ćwiczyć podstawowe koncepcje programowania:
