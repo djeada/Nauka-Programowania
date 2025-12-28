@@ -1,275 +1,260 @@
+# Rozdział: Funkcje — wielomiany (stdin/stdout)
+
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem.**
+
+**Konwencje wspólne:**
+
+* Wielomian jest podany jako lista współczynników w kolejności: `[a_n, a_{n-1}, ..., a_0]`.
+* Liczby całkowite mogą być ujemne.
+* Jeśli w wyjściu jest „lista” — wypisz współczynniki w **jednej linii**, oddzielone pojedynczą spacją.
+  *Wyjątek:* jeśli lista ma być pusta, wypisz dokładnie: `[]`.
+* Nie wypisuj żadnych dodatkowych opisów ani nawiasów (poza `[]` dla pustej listy).
+
 ---
 
-## Zadanie 1 - Obliczenie wartości wielomianu w punkcie
+## ZAD-01 — Wartość wielomianu w punkcie
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `wielomiany`, `Horner`, `I/O`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę współczynników wielomianu w postaci \( a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 \) oraz liczbę \( x \). Oblicz wartość tego wielomianu w podanym punkcie \( x \).
+Wczytaj współczynniki wielomianu ( a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 ) oraz liczbę ( x ). Oblicz wartość wielomianu w punkcie ( x ).
 
-### Dane wejściowe
+### Wejście
 
-- **Liczba naturalna \( n \geq 0 \)** — stopień wielomianu.
-- **Lista \( n+1 \) liczb całkowitych** — współczynniki wielomianu w kolejności od najwyższej potęgi:
-  \[ [a_n, a_{n-1}, \dots, a_0] \]
-- **Liczba całkowita \( x \)** — punkt, w którym należy obliczyć wartość wielomianu.
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb całkowitych: `a_n a_{n-1} ... a_0`
+* 3. linia: `x` — liczba całkowita
 
-### Dane wyjściowe
+### Wyjście
 
-- **Jedna liczba całkowita** — wartość wielomianu w punkcie \( x \).
+Jedna liczba całkowita — wartość wielomianu w punkcie `x`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  2
-  3 2 1
-  1
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  6
-  ```
+**Wejście:**
 
-**Objaśnienie**:
+```
+2
+3 2 1
+1
+```
 
-Wielomian: \( 3x^2 + 2x + 1 \). Dla \( x = 1 \) wartość wynosi \( 3 \times 1^2 + 2 \times 1 + 1 = 6 \).
+**Wyjście:**
 
-### Wskazówki
+```
+6
+```
 
-- Użyj schematu Hornera lub sumuj iloczyny współczynników i odpowiednich potęg \( x \).
+### Uwagi o formatowaniu
+
+* Użyj schematu Hornera (jest najprostszy i najszybszy).
 
 ---
 
-## Zadanie 2 - Obliczenie iloczynu wielomianu przez skalar
+## ZAD-02 — Iloczyn wielomianu przez skalar
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `wielomiany`, `listy`, `I/O`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę współczynników wielomianu \( a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 \) oraz liczbę \( k \). Oblicz współczynniki wielomianu powstałego w wyniku pomnożenia oryginalnego wielomianu przez skalar \( k \).
+Wczytaj współczynniki wielomianu oraz liczbę `k`. Wypisz współczynniki wielomianu powstałego przez pomnożenie każdego współczynnika przez `k`.
 
-### Dane wejściowe
+### Wejście
 
-- **Liczba naturalna \( n \geq 0 \)** — stopień wielomianu.
-- **Lista \( n+1 \) liczb całkowitych** — współczynniki oryginalnego wielomianu:
-  \[ [a_n, a_{n-1}, \dots, a_0] \]
-- **Liczba całkowita \( k \)** — skalar, przez który należy pomnożyć wielomian.
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb całkowitych: `a_n ... a_0`
+* 3. linia: `k` — liczba całkowita (skalar)
 
-### Dane wyjściowe
+### Wyjście
 
-- **Lista \( n+1 \) liczb całkowitych** — współczynniki nowego wielomianu po mnożeniu przez \( k \).
+Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielonych spacją.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  2
-  4 -3 2
-  -2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  -8 6 -4
-  ```
+**Wejście:**
 
-**Objaśnienie**:
+```
+2
+4 -3 2
+-2
+```
 
-Oryginalny wielomian: \( 4x^2 - 3x + 2 \).
+**Wyjście:**
 
-Po pomnożeniu przez \( -2 \) otrzymujemy: \( -8x^2 + 6x - 4 \).
-
-### Wskazówki
-
-- Pomnóż każdy współczynnik wielomianu przez liczbę \( k \).
+```
+-8 6 -4
+```
 
 ---
 
-## Zadanie 3 - Obliczenie sumy wielomianów
+## ZAD-03 — Suma wielomianów
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `wielomiany`, `wyrównanie stopni`, `I/O`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie listy współczynników dwóch wielomianów \( a(x) \) i \( b(x) \). Oblicz współczynniki wielomianu będącego sumą tych dwóch wielomianów.
+Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich sumą.
 
-### Dane wejściowe
+### Wejście
 
-- **Liczba naturalna \( n \geq 0 \)** — stopień pierwszego wielomianu.
-- **Lista \( n+1 \) liczb całkowitych** — współczynniki pierwszego wielomianu:
-  \[ [a_n, a_{n-1}, \dots, a_0] \]
-- **Liczba naturalna \( m \geq 0 \)** — stopień drugiego wielomianu.
-- **Lista \( m+1 \) liczb całkowitych** — współczynniki drugiego wielomianu:
-  \[ [b_m, b_{m-1}, \dots, b_0] \]
+* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb: `a_n ... a_0`
+* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
+* 4. linia: `m+1` liczb: `b_m ... b_0`
 
-### Dane wyjściowe
+### Wyjście
 
-- **Lista liczb całkowitych** — współczynniki sumy wielomianów, zaczynając od najwyższej potęgi.
+Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  2
-  3 5 2
-  2
-  2 -8 1
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5 -3 3
-  ```
+**Wejście:**
 
-**Objaśnienie**:
+```
+2
+3 5 2
+2
+2 -8 1
+```
 
-Pierwszy wielomian: \( 3x^2 + 5x + 2 \).
+**Wyjście:**
 
-Drugi wielomian: \( 2x^2 - 8x + 1 \).
+```
+5 -3 3
+```
 
-Suma: \( (3+2)x^2 + (5+(-8))x + (2+1) = 5x^2 - 3x + 3 \).
+### Uwagi o formatowaniu
 
-### Wskazówki
-
-- Dostosuj długości list współczynników, dodając zera tam, gdzie to konieczne.
+* Jeśli stopnie są różne, wyrównaj listy „od końca” (od wyrazu wolnego), dopisując zera na początku krótszej.
 
 ---
 
-## Zadanie 4 - Mnożenie wielomianów
+## ZAD-04 — Mnożenie wielomianów
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `wielomiany`, `konwolucja`, `I/O`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie listy współczynników dwóch wielomianów \( a(x) \) i \( b(x) \). Oblicz współczynniki wielomianu będącego iloczynem tych dwóch wielomianów.
+Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich iloczynem.
 
-### Dane wejściowe
+### Wejście
 
-- **Liczba naturalna \( n \geq 0 \)** — stopień pierwszego wielomianu.
-- **Lista \( n+1 \) liczb całkowitych** — współczynniki pierwszego wielomianu:
-  \[ [a_n, a_{n-1}, \dots, a_0] \]
-- **Liczba naturalna \( m \geq 0 \)** — stopień drugiego wielomianu.
-- **Lista \( m+1 \) liczb całkowitych** — współczynniki drugiego wielomianu:
-  \[ [b_m, b_{m-1}, \dots, b_0] \]
+* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb: `a_n ... a_0`
+* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
+* 4. linia: `m+1` liczb: `b_m ... b_0`
 
-### Dane wyjściowe
+### Wyjście
 
-- **Lista liczb całkowitych** — współczynniki iloczynu wielomianów, zaczynając od najwyższej potęgi.
+Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  3
-  5 0 10 6
-  2
-  1 2 4
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5 10 30 26 52 24
-  ```
+**Wejście:**
 
-**Objaśnienie**:
+```
+3
+5 0 10 6
+2
+1 2 4
+```
 
-Pierwszy wielomian: \( 5x^3 + 0x^2 + 10x + 6 \).
+**Wyjście:**
 
-Drugi wielomian: \( x^2 + 2x + 4 \).
-
-Iloczyn wielomianów daje wielomian stopnia \( 5 \).
-
-### Wskazówki
-
-- Mnożenie wielomianów polega na sumowaniu iloczynów współczynników, przy dodawaniu potęg \( x \).
+```
+5 10 30 26 52 24
+```
 
 ---
 
-## Zadanie 5 - Obliczenie \( n \)-tej pochodnej wielomianu
+## ZAD-05 — k-ta pochodna wielomianu
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `pochodna`, `wielomiany`, `I/O`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę współczynników wielomianu \( a(x) = a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 \) oraz liczbę naturalną \( k \). Oblicz współczynniki wielomianu będącego \( k \)-tą pochodną funkcji \( a(x) \).
+Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomianu będącego `k`-tą pochodną.
 
-### Dane wejściowe
+### Wejście
 
-- **Liczba naturalna \( n \geq 0 \)** — stopień wielomianu.
-- **Lista \( n+1 \) liczb całkowitych** — współczynniki wielomianu:
-  \[ [a_n, a_{n-1}, \dots, a_0] \]
-- **Liczba naturalna \( k \geq 1 \)** — rząd pochodnej do obliczenia.
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb: `a_n ... a_0`
+* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)
 
-### Dane wyjściowe
+### Wyjście
 
-- **Lista liczb całkowitych** — współczynniki \( k \)-tej pochodnej wielomianu, zaczynając od najwyższej potęgi.
-- Jeśli po \( k \)-tym różniczkowaniu wielomian zniknie (wszystkie współczynniki będą zero), wypisz pustą listę.
+* Jeśli po zróżniczkowaniu `k` razy zostaje wielomian niezerowy: wypisz jego współczynniki w jednej linii (spacje).
+* Jeśli wielomian „znika” (stopień < k): wypisz dokładnie `[]`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  2
-  4 -3 2
-  1
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  8 -3
-  ```
+**Wejście:**
 
-**Objaśnienie**:
+```
+2
+4 -3 2
+1
+```
 
-Oryginalny wielomian: \( 4x^2 - 3x + 2 \).
+**Wyjście:**
 
-Pierwsza pochodna: \( (2 \times 4)x^{2-1} - 3 = 8x - 3 \).
+```
+8 -3
+```
 
-### Wskazówki
+### Uwagi o formatowaniu
 
-- Stosuj wzór na pochodną jednomianu: \( \frac{d}{dx} (a_nx^n) = n \times a_n x^{n-1} \).
-- Powtórz proces różniczkowania \( k \) razy.
+* Pochodna: jeśli aktualne współczynniki to `[c_d, c_{d-1}, ..., c_0]`, to pochodna ma współczynniki:
+  `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]`.
 
 ---
 
-## Zadanie 6 - Obliczenie miejsc zerowych równania kwadratowego
+## ZAD-06 — Miejsca zerowe równania kwadratowego (rzeczywiste)
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `delta`, `pierwiastki`, `I/O`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz współczynniki równania kwadratowego \( ax^2 + bx + c = 0 \). Znajdź rzeczywiste miejsca zerowe tego równania.
+Wczytaj współczynniki równania kwadratowego ( ax^2 + bx + c = 0 ). Wypisz wszystkie **rzeczywiste** miejsca zerowe w kolejności rosnącej.
 
-### Dane wejściowe
+### Wejście
 
-- **Trzy liczby całkowite** — współczynniki \( a \), \( b \) i \( c \), podane w jednej linii, oddzielone spacjami.
+* 1. linia: trzy liczby całkowite: `a b c` (oddzielone spacją)
 
-### Dane wyjściowe
+### Wyjście
 
-- **Lista liczb zmiennoprzecinkowych** — rzeczywiste pierwiastki równania, posortowane rosnąco.
-- Jeśli równanie ma jeden pierwiastek podwójny, wypisz go raz.
-- Jeśli brak rzeczywistych pierwiastków, wypisz pustą listę `[]`.
+* Jeśli brak rzeczywistych pierwiastków: wypisz `[]`
+* Jeśli jeden pierwiastek (delta = 0): wypisz go raz w formacie listy: `[x]`
+* Jeśli dwa pierwiastki: wypisz w formacie listy: `[x1, x2]` gdzie `x1 ≤ x2`
+
+**Format liczb:**
+
+* wypisuj jako liczby zmiennoprzecinkowe (np. `-1.0`, `2.5`)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  1 2 1
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [-1.0]
-  ```
+**Wejście:**
 
-**Objaśnienie**:
+```
+1 2 1
+```
 
-Równanie: \( x^2 + 2x + 1 = 0 \).
+**Wyjście:**
 
-Delta: \( \Delta = 2^2 - 4 \times 1 \times 1 = 0 \).
+```
+[-1.0]
+```
 
-Pierwiastek: \( x = \frac{-2}{2 \times 1} = -1.0 \).
+### Uwagi o formatowaniu
 
-### Wskazówki
-
-- Oblicz deltę \( \Delta = b^2 - 4ac \).
-- Zastosuj wzory na pierwiastki w zależności od wartości delty.
-
----
+* Licz deltę: `Δ = b*b - 4*a*c`.
+* Dla `Δ > 0`: policz oba pierwiastki i posortuj rosnąco.
+* Zakładamy `a ≠ 0`.
