@@ -59,19 +59,14 @@ echo ""
 
 # Format JavaScript files with prettier (preferred) or eslint
 echo "Formatting JavaScript files..."
-JS_FILES=$(find src/js -name "*.js" -type f)
 if command -v prettier &> /dev/null; then
-    if [ -n "$JS_FILES" ]; then
-        echo "$JS_FILES" | xargs prettier --write || \
-            echo "⚠ Warning: Some JavaScript files may have formatting errors"
-    fi
+    find src/js -name "*.js" -type f -print0 | xargs -0 -r prettier --write || \
+        echo "⚠ Warning: Some JavaScript files may have formatting errors"
     echo "✓ JavaScript files formatted with prettier"
 elif command -v eslint &> /dev/null; then
     # eslint may return non-zero if files need fixing, but that's expected
-    if [ -n "$JS_FILES" ]; then
-        echo "$JS_FILES" | xargs eslint --fix || \
-            echo "⚠ Warning: Some JavaScript files may have linting errors"
-    fi
+    find src/js -name "*.js" -type f -print0 | xargs -0 -r eslint --fix || \
+        echo "⚠ Warning: Some JavaScript files may have linting errors"
     echo "✓ JavaScript files formatted with eslint"
 else
     echo "⚠ Warning: neither prettier nor eslint found, skipping JavaScript formatting"
@@ -81,7 +76,12 @@ echo ""
 # Format Rust files with rustfmt
 echo "Formatting Rust files..."
 if command -v rustfmt &> /dev/null; then
-    find src/rust -name "*.rs" -type f -exec rustfmt {} +
+    # Check if rustfmt.toml exists for configuration
+    if [ -f "$REPO_ROOT/rustfmt.toml" ]; then
+        find src/rust -name "*.rs" -type f -exec rustfmt --config-path "$REPO_ROOT/rustfmt.toml" --edition 2021 {} +
+    else
+        find src/rust -name "*.rs" -type f -exec rustfmt --edition 2021 {} +
+    fi
     echo "✓ Rust files formatted with rustfmt"
 else
     echo "⚠ Warning: rustfmt not found, skipping Rust formatting"
