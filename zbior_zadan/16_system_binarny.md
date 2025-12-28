@@ -1,570 +1,785 @@
+# Rozdział: Bity i systemy liczbowe
+
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
+
+**Konwencje wspólne:**
+
+* Jeśli zadanie mówi „nie wypisuj nic” — nie drukuj nawet pustej linii.
+* Reprezentacje binarne wypisuj jako ciąg znaków `0` i `1` **bez spacji**.
+* Dla systemów o podstawie `> 10` używaj cyfr `0–9` oraz liter `A–Z` (wielkie).
+* Nie wypisuj promptów typu „Podaj liczbę”.
+
 ---
 
-## Zadanie 1 - Konwersja pomiędzy systemami binarnym i dziesiętnym
+## ZAD-01A — Dziesiętny → binarny
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `konwersja`, `binarne`, `pętle`
 
-### Treść zadania
+### Treść
 
-**a)** Otrzymujesz reprezentację dziesiętną liczby naturalnej. Zwróć jej reprezentację binarną.
+Wczytaj liczbę naturalną w systemie dziesiętnym i wypisz jej reprezentację binarną.
 
-**b)** Otrzymujesz reprezentację binarną liczby naturalnej. Zwróć jej reprezentację dziesiętną.
+### Wejście
 
-### Dane wejściowe
+* 1. linia: `n` (liczba naturalna)
 
-- **Podpunkt a):** Jedna liczba naturalna w systemie dziesiętnym.
-- **Podpunkt b):** Jedna liczba naturalna w systemie binarnym (ciąg cyfr 0 i 1).
+### Wyjście
 
-### Dane wyjściowe
-
-- **Podpunkt a):** Reprezentacja binarna podanej liczby naturalnej (ciąg cyfr 0 i 1).
-- **Podpunkt b):** Reprezentacja dziesiętna podanej liczby binarnej (liczba naturalna).
+Jedna linia: zapis binarny `n`.
 
 ### Przykład
 
-**Podpunkt a):**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  11
-  ```
+```
+3
+```
 
-**Podpunkt b):**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  101
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5
-  ```
+```
+11
+```
 
-### Wskazówki
+### Uwagi o formacie
 
-- **Podpunkt a):** Aby przekonwertować liczbę dziesiętną na binarną, dziel liczbę przez 2 i zapisuj reszty z dzielenia.
-- **Podpunkt b):** Aby przekonwertować liczbę binarną na dziesiętną, pomnóż każdą cyfrę przez odpowiednią potęgę liczby 2 i zsumuj wyniki.
+* Dla `n = 0` wypisz `0`.
 
 ---
 
-## Zadanie 2 - Konwersja warunkowa
+## ZAD-01B — Binarny → dziesiętny
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `konwersja`, `string`, `binarne`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz liczbę naturalną. Zwróć jej reprezentację binarną tylko wtedy, gdy:
+Wczytaj liczbę naturalną w systemie binarnym (ciąg `0/1`) i wypisz jej wartość w systemie dziesiętnym.
 
-**a)** Liczba jest parzysta.
+### Wejście
 
-**b)** Liczba jest liczbą pierwszą.
+* 1. linia: `b` (ciąg znaków `0` i `1`)
 
-### Dane wejściowe
+### Wyjście
 
-- Jedna liczba naturalna.
-
-### Dane wyjściowe
-
-- Reprezentacja binarna podanej liczby naturalnej (ciąg cyfr 0 i 1), jeśli spełnia warunek.
-- Jeśli liczba nie spełnia warunku, nie wypisuj nic.
+Jedna linia: liczba w systemie dziesiętnym.
 
 ### Przykład
 
-**Podpunkt a):**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  7
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ```
-  *(Brak wyjścia, ponieważ 7 nie jest liczbą parzystą.)*
+```
+101
+```
 
-**Podpunkt b):**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  7
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  111
-  ```
-
-### Wskazówki
-
-- **Podpunkt a):** Sprawdź, czy liczba jest podzielna przez 2.
-- **Podpunkt b):** Sprawdź, czy liczba jest liczbą pierwszą, dzieląc ją przez wszystkie liczby naturalne mniejsze od niej i większe od 1.
+```
+5
+```
 
 ---
 
-## Zadanie 3 - Operacje arytmetyczne z użyciem operatorów bitowych
+## ZAD-02A — Wypisz binarnie tylko gdy liczba parzysta
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `warunki`, `parzystość`, `binarne`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie liczby naturalne. Używając wyłącznie operatorów bitowych, zaimplementuj następujące operacje:
+Wczytaj liczbę naturalną `n`. Jeśli `n` jest parzysta — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
 
-**a)** Dodawanie dwóch liczb.
+### Wejście
 
-**b)** Odejmowanie drugiej liczby od pierwszej.
+* 1. linia: `n` (liczba naturalna)
 
-**c)** Mnożenie dwóch liczb.
+### Wyjście
 
-**d)** Dzielenie pierwszej liczby przez drugą (całkowite).
-
-### Dane wejściowe
-
-- Dwie liczby naturalne, każda w osobnej linii.
-
-### Dane wyjściowe
-
-- Jedna liczba naturalna — wynik odpowiedniej operacji arytmetycznej.
+* Jeśli `n % 2 == 0`: jedna linia z zapisem binarnym `n`
+* W przeciwnym razie: brak wyjścia
 
 ### Przykład
 
-**Podpunkt a):**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  2
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5
-  ```
+```
+7
+```
 
-**Podpunkt b):**
-
-- **Dane wejściowe**:
-  ```
-  7
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2
-  ```
-
-**Podpunkt c):**
-
-- **Dane wejściowe**:
-  ```
-  4
-  4
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  16
-  ```
-
-**Podpunkt d):**
-
-- **Dane wejściowe**:
-  ```
-  9
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  3
-  ```
-
-### Wskazówki
-
-- **Operatorzy bitowi**: AND (&), OR (|), XOR (^), NOT (~), przesunięcia bitowe (<<, >>).
-- **Dodawanie i odejmowanie** można zrealizować przy użyciu operatorów XOR i AND.
-- **Mnożenie** można zrealizować poprzez wielokrotne dodawanie.
-- **Dzielenie** można zrealizować poprzez wielokrotne odejmowanie lub przesunięcia bitowe.
+**Wyjście:** *(brak)*
 
 ---
 
-## Zadanie 4 - Liczba zer i jedynek w reprezentacji binarnej
+## ZAD-02B — Wypisz binarnie tylko gdy liczba pierwsza
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pierwszość`, `warunki`, `binarne`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz liczbę naturalną w systemie dziesiętnym.
+Wczytaj liczbę naturalną `n`. Jeśli `n` jest liczbą pierwszą — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
 
-**a)** Oblicz, ile zer zawiera jej binarna reprezentacja.
+### Wejście
 
-**b)** Oblicz, ile jedynek zawiera jej binarna reprezentacja.
+* 1. linia: `n` (liczba naturalna)
 
-### Dane wejściowe
+### Wyjście
 
-- Jedna liczba naturalna.
-
-### Dane wyjściowe
-
-- Jedna liczba naturalna — liczba zer (podpunkt a) lub jedynek (podpunkt b) w reprezentacji binarnej.
+* Jeśli `n` jest pierwsza: jedna linia z zapisem binarnym `n`
+* W przeciwnym razie: brak wyjścia
 
 ### Przykład
 
-**Podpunkt a):**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  0
-  ```
-  *(Reprezentacja binarna liczby 3 to '11', która nie zawiera zer.)*
+```
+7
+```
 
-**Podpunkt b):**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2
-  ```
-  *(Reprezentacja binarna liczby 3 to '11', która zawiera dwie jedynki.)*
-
-### Wskazówki
-
-- Przekonwertuj liczbę na system binarny i zlicz wystąpienia '0' lub '1'.
-- Możesz też iterować przez bity liczby, używając operacji bitowych.
+```
+111
+```
 
 ---
 
-## Zadanie 5 - Wybieranie minimum i maksimum bez instrukcji warunkowych
+## ZAD-03A — Dodawanie bitowe
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `XOR`, `AND`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie liczby naturalne.
+Wczytaj dwie liczby naturalne `a` i `b`. Oblicz `a + b` używając wyłącznie operatorów bitowych (i przesunięć).
 
-**a)** Zwróć mniejszą z nich, nie używając instrukcji warunkowych ani zewnętrznych bibliotek.
+### Wejście
 
-**b)** Zwróć większą z nich, nie używając instrukcji warunkowych ani zewnętrznych bibliotek.
+* 1. linia: `a`
+* 2. linia: `b`
 
-### Dane wejściowe
+### Wyjście
 
-- Dwie liczby naturalne, każda w osobnej linii.
-
-### Dane wyjściowe
-
-- Jedna liczba naturalna — mniejsza (podpunkt a) lub większa (podpunkt b) z podanych liczb.
+Jedna liczba naturalna: `a + b`.
 
 ### Przykład
 
-**Podpunkt a):**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  3
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2
-  ```
+```
+2
+3
+```
 
-**Podpunkt b):**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  3
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  3
-  ```
-
-### Wskazówki
-
-- Możesz użyć operacji arytmetycznych i bitowych, takich jak dodawanie, odejmowanie, mnożenie, dzielenie oraz przesunięcia bitowe.
-- Rozważ wykorzystanie różnicy liczb oraz właściwości znaku wyniku.
+```
+5
+```
 
 ---
 
-## Zadanie 6 - Konwersja między dowolnymi systemami liczbowymi
+## ZAD-03B — Odejmowanie bitowe
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `pożyczki`, `XOR`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz liczbę naturalną, podstawę systemu liczbowego, w którym jest zapisana ta liczba, oraz podstawę systemu docelowego. Przekonwertuj tę liczbę na nowy system liczbowy.
+Wczytaj `a` i `b`. Oblicz `a - b` używając wyłącznie operatorów bitowych.
 
-### Dane wejściowe
+### Wejście
 
-- Trzy liczby naturalne, każda w osobnej linii:
-  1. Liczba do konwersji.
-  2. Podstawa systemu liczbowego tej liczby (od 2 do 36).
-  3. Podstawa systemu liczbowego docelowego (od 2 do 36).
+* 1. linia: `a`
+* 2. linia: `b`
 
-### Dane wyjściowe
+### Wyjście
 
-- Liczba naturalna — reprezentacja podanej liczby w nowym systemie liczbowym.
+Jedna liczba naturalna: `a - b`.
+
+### Ograniczenia / gwarancje
+
+* Zakładamy, że `a ≥ b` (wynik jest naturalny).
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  4301
-  10
-  4
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  1003031
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+7
+5
+```
 
-- Najpierw przekonwertuj liczbę do systemu dziesiętnego, jeśli nie jest w nim podana.
-- Następnie przekonwertuj liczbę z systemu dziesiętnego na system docelowy.
-- Dla podstaw większych niż 10 użyj odpowiednich symboli (np. A dla 10, B dla 11, ..., Z dla 35).
+**Wyjście:**
+
+```
+2
+```
 
 ---
 
-## Zadanie 7 - Odwrócenie sąsiadujących bitów
+## ZAD-03C — Mnożenie bitowe
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `shift`, `pętle`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz liczbę naturalną w systemie dziesiętnym. Zamień miejscami każdą parę sąsiadujących bitów w jej reprezentacji binarnej i zwróć wynik w systemie dziesiętnym.
+Wczytaj `a` i `b`. Oblicz `a * b` używając wyłącznie operatorów bitowych (np. metoda „shift-and-add”).
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna.
+* 1. linia: `a`
+* 2. linia: `b`
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna liczba naturalna — wynik po zamianie miejscami sąsiadujących bitów.
+Jedna liczba naturalna: `a * b`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  9131
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  4951
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+4
+4
+```
 
-- Podziel bity liczby na pary i zamień w każdej parze bity miejscami.
-- Jeśli liczba bitów jest nieparzysta, ostatni bit pozostaje bez zmian.
+**Wyjście:**
+
+```
+16
+```
 
 ---
 
-## Zadanie 8 - Najbliższa potęga dwójki
+## ZAD-03D — Dzielenie całkowite bitowe
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `dzielenie`, `shift`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz liczbę naturalną w systemie dziesiętnym. Znajdź najmniejszą potęgę liczby 2, która jest większa lub równa podanej liczbie.
+Wczytaj `a` i `b`. Oblicz `a // b` używając wyłącznie operatorów bitowych.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna.
+* 1. linia: `a`
+* 2. linia: `b`
 
-### Dane wyjściowe
+### Ograniczenia / gwarancje
 
-- Jedna liczba naturalna — potęga dwójki większa lub równa podanej liczbie.
+* `b > 0`
+
+### Wyjście
+
+Jedna liczba naturalna: `a // b`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  111
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  128
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+9
+3
+```
 
-- Możesz wykorzystać właściwości bitowe liczb potęg dwójki.
-- Potęgi dwójki mają w reprezentacji binarnej jeden bit ustawiony na 1 i resztę na 0.
+**Wyjście:**
+
+```
+3
+```
 
 ---
 
-## Zadanie 9 - Zmiana wielkości liter za pomocą operatorów bitowych
+## ZAD-04A — Liczba zer w zapisie binarnym
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `binarne`, `zliczanie`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis składający się z liter alfabetu łacińskiego.
+Wczytaj liczbę naturalną `n`. Policz, ile znaków `0` zawiera jej binarna reprezentacja (bez wiodących zer).
 
-**a)** Zamień wszystkie wielkie litery na małe.
+### Wejście
 
-**b)** Zamień wszystkie małe litery na wielkie.
+* 1. linia: `n`
 
-**c)** Zamień wielkość wszystkich liter na przeciwną (małe na wielkie, wielkie na małe).
+### Wyjście
 
-### Dane wejściowe
-
-- Jeden napis.
-
-### Dane wyjściowe
-
-- Jeden napis — wynik po odpowiedniej konwersji liter.
+Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.
 
 ### Przykład
 
-**Podpunkt a):**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  Test
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  test
-  ```
+```
+3
+```
 
-**Podpunkt b):**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  Test
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  TEST
-  ```
+```
+0
+```
 
-**Podpunkt c):**
+### Uwagi
 
-- **Dane wejściowe**:
-  ```
-  Test
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  tEST
-  ```
-
-### Wskazówki
-
-- Litery w kodowaniu ASCII mają określone wartości bitowe.
-- Możesz użyć operacji bitowych, takich jak OR, AND, XOR, aby manipulować konkretnymi bitami odpowiedzialnymi za wielkość liter.
+* Dla `n = 0` binarnie to `0`, więc liczba zer wynosi `1`.
 
 ---
 
-## Zadanie 10 - Zamień A na B
+## ZAD-04B — Liczba jedynek w zapisie binarnym
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `popcount`, `binarne`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie liczby naturalne \( A \) i \( B \). Oblicz, ile bitów należy zmienić (odwrócić) w liczbie \( A \), aby otrzymać liczbę \( B \).
+Wczytaj `n`. Policz, ile bitów `1` ma liczba w zapisie binarnym.
 
-### Dane wejściowe
+### Wejście
 
-- Dwie liczby naturalne \( A \) i \( B \), każda w osobnej linii.
+* 1. linia: `n`
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna liczba naturalna — liczba bitów, które należy odwrócić.
+Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  34
-  73
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+3
+```
 
-- Wykonaj operację XOR na liczbach \( A \) i \( B \), a następnie policz liczbę jedynek w wyniku.
-- Każda jedynka w wyniku XOR oznacza różnicę w odpowiednim bicie.
+**Wyjście:**
+
+```
+2
+```
 
 ---
 
-## Zadanie 11 - Czy liczba jest palindromem w systemie binarnym?
+## ZAD-05A — Minimum bez instrukcji warunkowych
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `bit-trick`, `min/max`, `bez if`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz liczbę naturalną w systemie dziesiętnym. Sprawdź, czy jej reprezentacja binarna jest palindromem (czytana od lewej do prawej i od prawej do lewej jest taka sama).
+Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, `?:`) i bez bibliotek.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna.
+* 1. linia: `a`
+* 2. linia: `b`
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis: **"Prawda"**, jeśli reprezentacja binarna liczby jest palindromem, lub **"Fałsz"**, jeśli nie jest.
+Jedna liczba naturalna: `min(a, b)`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  26
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Prawda
-  ```
-  *(Reprezentacja binarna liczby 26 to '11010', która jest palindromem po usunięciu wiodących zer.)*
+**Wejście:**
 
-### Wskazówki
+```
+3
+2
+```
 
-- Przekonwertuj liczbę na system binarny.
-- Porównaj ciąg binarny z jego odwróconą wersją.
+**Wyjście:**
+
+```
+2
+```
+
+### Uwagi
+
+* Dopuszczalne są operacje arytmetyczne i bitowe.
 
 ---
 
-## Zadanie 12 - Najdłuższy ciąg zer w liczbie binarnej
+## ZAD-05B — Maksimum bez instrukcji warunkowych
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★☆
+**Tagi:** `bit-trick`, `min/max`, `bez if`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz liczbę naturalną w systemie dziesiętnym. Oblicz długość najdłuższego ciągu zer otoczonego jedynkami w jej reprezentacji binarnej.
+Wczytaj `a` i `b`. Wypisz większą z nich **bez użycia instrukcji warunkowych** i bez bibliotek.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna.
+* 1. linia: `a`
+* 2. linia: `b`
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna liczba naturalna — długość najdłuższego ciągu zer otoczonego jedynkami.
+Jedna liczba naturalna: `max(a, b)`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  14
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  1
-  ```
-  *(Reprezentacja binarna liczby 14 to '1110', najdłuższy ciąg zer otoczony jedynkami ma długość 1.)*
+**Wejście:**
 
-### Wskazówki
+```
+3
+2
+```
 
-- Przekonwertuj liczbę na system binarny.
-- Znajdź wszystkie ciągi zer pomiędzy jedynkami i określ najdłuższy z nich.
+**Wyjście:**
+
+```
+3
+```
 
 ---
+
+## ZAD-06 — Konwersja między dowolnymi systemami (2..36)
+
+**Poziom:** ★★☆
+**Tagi:** `konwersja`, `base`, `string`
+
+### Treść
+
+Wczytaj:
+
+1. liczbę `X` zapisaną w systemie o podstawie `p`
+2. podstawę `p` (2..36)
+3. podstawę docelową `q` (2..36)
+
+i wypisz reprezentację `X` w systemie o podstawie `q`.
+
+### Wejście
+
+Trzy linie:
+
+1. `X` (zapis liczby; dla podstaw >10 może zawierać litery `A-Z`)
+2. `p` (2..36)
+3. `q` (2..36)
+
+### Wyjście
+
+Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`).
+
+### Przykład
+
+**Wejście:**
+
+```
+4301
+10
+4
+```
+
+**Wyjście:**
+
+```
+1003031
+```
+
+### Uwagi o formacie
+
+* `X` może być duże — traktuj jako napis, a nie typ int „na wejściu”.
+* Dla wartości 10..35 stosuj `A..Z`.
+
+---
+
+## ZAD-07 — Zamiana sąsiadujących bitów
+
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `maski`, `swap bits`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Zamień miejscami każdą parę sąsiadujących bitów w jej zapisie binarnym:
+
+* bit 0 z bitem 1,
+* bit 2 z bitem 3,
+* bit 4 z bitem 5,
+* itd.
+
+Następnie wypisz wynik w systemie dziesiętnym.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: wynik po zamianie bitów.
+
+### Przykład
+
+**Wejście:**
+
+```
+9131
+```
+
+**Wyjście:**
+
+```
+4951
+```
+
+### Uwagi
+
+* Jeśli liczba ma nieparzystą liczbę bitów, najwyższy (samotny) bit pozostaje bez zmian.
+
+---
+
+## ZAD-08 — Najbliższa potęga dwójki (>= n)
+
+**Poziom:** ★☆☆
+**Tagi:** `potęgi 2`, `bitwise`, `pętle`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która jest **większa lub równa** `n`.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
+
+### Przykład
+
+**Wejście:**
+
+```
+111
+```
+
+**Wyjście:**
+
+```
+128
+```
+
+### Uwagi
+
+* Dla `n = 0` przyjmij wynik `1`.
+
+---
+
+## ZAD-09A — Wielkie → małe (bitowo)
+
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `string`
+
+### Treść
+
+Wczytaj napis z liter alfabetu łacińskiego. Zamień wszystkie wielkie litery na małe, używając operacji bitowych na kodach ASCII.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+Jedna linia: napis po konwersji.
+
+### Przykład
+
+**Wejście:**
+
+```
+Test
+```
+
+**Wyjście:**
+
+```
+test
+```
+
+---
+
+## ZAD-09B — Małe → wielkie (bitowo)
+
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `string`
+
+### Treść
+
+Wczytaj napis. Zamień wszystkie małe litery na wielkie, używając operacji bitowych na ASCII.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+Jedna linia: napis po konwersji.
+
+### Przykład
+
+**Wejście:**
+
+```
+Test
+```
+
+**Wyjście:**
+
+```
+TEST
+```
+
+---
+
+## ZAD-09C — Odwróć wielkość liter (bitowo)
+
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `toggle case`
+
+### Treść
+
+Wczytaj napis. Zamień wielkość każdej litery na przeciwną (mała↔wielka) używając operacji bitowych na ASCII.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+Jedna linia: napis po zmianie.
+
+### Przykład
+
+**Wejście:**
+
+```
+Test
+```
+
+**Wyjście:**
+
+```
+tEST
+```
+
+---
+
+## ZAD-10 — Ile bitów trzeba odwrócić (A → B)
+
+**Poziom:** ★★☆
+**Tagi:** `XOR`, `popcount`, `bitwise`
+
+### Treść
+
+Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w `A`, aby otrzymać `B`.
+
+### Wejście
+
+* 1. linia: `A`
+* 2. linia: `B`
+
+### Wyjście
+
+Jedna liczba naturalna: liczba różniących się bitów.
+
+### Przykład
+
+**Wejście:**
+
+```
+34
+73
+```
+
+**Wyjście:**
+
+```
+5
+```
+
+---
+
+## ZAD-11 — Palindrom w systemie binarnym
+
+**Poziom:** ★★☆
+**Tagi:** `binarne`, `palindrom`, `string`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Sprawdź, czy jej reprezentacja binarna (bez wiodących zer) jest palindromem.
+
+Wypisz:
+
+* `Prawda` — jeśli tak,
+* `Fałsz` — jeśli nie.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedno słowo: `Prawda` lub `Fałsz`.
+
+### Przykład
+
+**Wejście:**
+
+```
+26
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
+
+### Uwagi (ważne)
+
+* `26` ma zapis binarny `11010`, który **nie** jest palindromem.
+  (W Twoim wcześniejszym przykładzie było to opisane błędnie — tu trzymamy się definicji palindromu 1:1.)
+
+---
+
+## ZAD-12 — Najdłuższy ciąg zer otoczony jedynkami
+
+**Poziom:** ★★★
+**Tagi:** `binarne`, `binary gap`, `pętle`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. W jej reprezentacji binarnej znajdź długość najdłuższego ciągu kolejnych zer, który jest **z obu stron otoczony jedynkami** (tzw. *binary gap*).
+
+Jeśli nie ma takiego ciągu — wypisz `0`.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: długość najdłuższego „gapu”.
+
+### Przykład
+
+**Wejście:**
+
+```
+14
+```
+
+**Wyjście:**
+
+```
+0
+```
+
+### Uwagi (ważne)
+
+* `14` ma zapis `1110` — zero na końcu **nie jest otoczone jedynkami z prawej**, więc wynik to `0`.
+  Dla przykładu `20` (`10100`) najdłuższy gap ma długość `1` (między `1` i `1`).
