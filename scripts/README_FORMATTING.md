@@ -43,7 +43,7 @@ Format all files:
 
 Format only Python files:
 ```bash
-black src/python/**/*.py
+find src/python -name "*.py" -exec black {} +
 ```
 
 Format only C++ files:

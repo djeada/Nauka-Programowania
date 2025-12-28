@@ -3,7 +3,7 @@
 # Script to format all solution files in the repository
 # This script formats code in multiple programming languages using their respective formatters
 
-set -e
+# Note: We don't use 'set -e' here because we want to continue even if some formatters fail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -29,7 +29,12 @@ echo ""
 # Format C++ files with clang-format
 echo "Formatting C++ files..."
 if command -v clang-format &> /dev/null; then
-    find src/cpp -type f \( -name "*.cpp" -o -name "*.hpp" -o -name "*.c" -o -name "*.h" \) -exec clang-format -i -style=file {} +
+    # Check if .clang-format exists, otherwise use Google style as default
+    if [ -f "$REPO_ROOT/.clang-format" ]; then
+        find src/cpp -type f \( -name "*.cpp" -o -name "*.hpp" -o -name "*.c" -o -name "*.h" \) -exec clang-format -i -style=file {} + 2>/dev/null || echo "⚠ Warning: Some C++ files may have formatting errors"
+    else
+        find src/cpp -type f \( -name "*.cpp" -o -name "*.hpp" -o -name "*.c" -o -name "*.h" \) -exec clang-format -i -style=Google {} + 2>/dev/null || echo "⚠ Warning: Some C++ files may have formatting errors"
+    fi
     echo "✓ C++ files formatted with clang-format"
 else
     echo "⚠ Warning: clang-format not found, skipping C++ formatting"
@@ -49,10 +54,11 @@ echo ""
 # Format JavaScript files with prettier (preferred) or eslint
 echo "Formatting JavaScript files..."
 if command -v prettier &> /dev/null; then
-    find src/js -name "*.js" -type f -exec prettier --write {} +
+    find src/js -name "*.js" -type f -exec prettier --write {} + || echo "⚠ Warning: Some JavaScript files may have formatting errors"
     echo "✓ JavaScript files formatted with prettier"
 elif command -v eslint &> /dev/null; then
-    find src/js -name "*.js" -type f -exec eslint --fix {} + 2>/dev/null || true
+    # eslint may return non-zero if files need fixing, but that's expected
+    find src/js -name "*.js" -type f -exec eslint --fix {} + || echo "⚠ Warning: Some JavaScript files may have linting errors"
     echo "✓ JavaScript files formatted with eslint"
 else
     echo "⚠ Warning: neither prettier nor eslint found, skipping JavaScript formatting"
