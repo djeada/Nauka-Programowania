@@ -1,296 +1,336 @@
-# Sortowanie — praktyka
+# Rozdział: Sortowanie — praktyka (stdin/stdout)
 
-## Zadanie 1 - Sortowanie znaków w napisie
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-**Poziom trudności**: ★☆☆
+**Konwencje wspólne:**
 
-### Treść zadania
+* Jeśli w danych wejściowych jest napis — wczytaj go jako całą linię (łącznie ze spacjami).
+* Jeśli w danych wejściowych jest lista — w zadaniach poniżej lista jest podana jako:
 
-Otrzymujesz napis. Posortuj alfabetycznie wszystkie jego znaki i zwróć wynikowy napis.
-
-### Dane wejściowe
-
-- Jeden napis.
-
-### Dane wyjściowe
-
-- Napis z posortowanymi znakami.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  Ala ma kota
-  ```
-- **Oczekiwane wyjście**:
-  ```
-   Aaaaklmot
-  ```
-
-### Wskazówki
-
-- Możesz użyć funkcji sortującej dostępnej dla ciągów znaków lub list.
+  * najpierw `N` (liczba elementów),
+  * potem `N` elementów (w jednej linii lub w wielu — zależnie od opisu w zadaniu).
+* Jeśli w wyjściu jest lista Pythonowa (np. `['a', 'b']`) — wypisz ją dokładnie w takim formacie jak w przykładzie.
+* Nie dopisuj dodatkowych spacji ani pustych linii (chyba że przykład je zawiera).
 
 ---
 
-## Zadanie 2 - Sortowanie słów w zdaniu
+## ZAD-01 — Sortowanie znaków w napisie
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `string`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz zdanie w postaci napisu. Podziel je na słowa, a następnie posortuj te słowa alfabetycznie. Zwróć listę posortowanych słów. Pomijaj znaki interpunkcyjne; traktuj je jako separatory.
+Otrzymujesz napis. Posortuj alfabetycznie wszystkie jego znaki i wypisz wynikowy napis.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis reprezentujący zdanie.
+* 1 linia: napis `s`
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista posortowanych słów.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  Lemur wygina śmiało ciało
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ['Lemur', 'ciało', 'wygina', 'śmiało']
-  ```
-
-### Wskazówki
-
-- Użyj funkcji do podziału napisu na słowa (np. `split()`).
-- Przy sortowaniu uwzględnij polskie znaki.
-
----
-
-## Zadanie 3 - Sortowanie listy par względem jednej z kategorii
-
-**Poziom trudności**: ★☆☆
-
-### Treść zadania
-
-Otrzymujesz listę par, gdzie każda para składa się z napisu i liczby.
-
-**a)** Posortuj listę par względem liczb (rosnąco).
-
-**b)** Posortuj listę par względem długości napisów (rosnąco).
-
-### Dane wejściowe
-
-- Lista par: `(napis, liczba)`.
-
-### Dane wyjściowe
-
-- Lista posortowanych par zgodnie z podanym kryterium.
+* 1 linia: napis `s` po posortowaniu znaków rosnąco (porównanie znaków jak w Pythonie / Unicode)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [('ab', 3), ('bca', 1), ('c', 2)]
-  ```
-- **Oczekiwane wyjście**:
+**Wejście:**
 
-  **a)**
-  ```
-  [('bca', 1), ('c', 2), ('ab', 3)]
-  ```
+```
+Ala ma kota
+```
 
-  **b)**
-  ```
-  [('c', 2), ('ab', 3), ('bca', 1)]
-  ```
+**Wyjście:**
 
-### Wskazówki
+```
+ Aaaaklmot
+```
 
-- Użyj funkcji sortującej z odpowiednim kluczem (np. `key=lambda x: x[1]` dla liczb).
+### Uwagi o formatowaniu
+
+* Spacje też są znakami i biorą udział w sortowaniu (dlatego w przykładzie wyjście zaczyna się od spacji).
 
 ---
 
-## Zadanie 4 - Sortowanie napisów w liście względem długości
+## ZAD-02 — Sortowanie słów w zdaniu
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★★☆
+**Tagi:** `sort`, `string`, `split`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę napisów. Posortuj tę listę względem długości napisów, od najkrótszego do najdłuższego.
+Otrzymujesz zdanie. Podziel je na słowa, traktując znaki interpunkcyjne jako separatory, a następnie posortuj słowa alfabetycznie i wypisz listę.
 
-### Dane wejściowe
+### Wejście
 
-- Lista napisów.
+* 1 linia: napis `zdanie`
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista napisów posortowana według długości.
+* 1 linia: lista słów w formacie jak w przykładzie, np. `['Ala', 'kota', 'ma']`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  ['abcd', 'ab', 'a', 'abc']
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ['a', 'ab', 'abc', 'abcd']
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Lemur wygina śmiało ciało
+```
 
-- Użyj funkcji sortującej z kluczem `len`.
+**Wyjście:**
+
+```
+['Lemur', 'ciało', 'wygina', 'śmiało']
+```
+
+### Uwagi o formatowaniu
+
+* Ignoruj znaki interpunkcyjne (np. `.,!?;:`) — nie są częścią słów.
+* Wielkość liter pozostaje bez zmian (nie zamieniaj na małe/duże), sortujesz to, co w tekście.
 
 ---
 
-## Zadanie 5 - Sortowanie listy miast
+## ZAD-03 — Sortowanie listy par względem kryterium
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `tuple`, `list`
 
-### Treść zadania
+### Treść
 
-Masz klasę `Miasto`, która posiada dwie właściwości:
+Otrzymujesz listę par `(napis, liczba)`.
 
-- `nazwa` — napis,
-- `liczba_mieszkańców` — liczba naturalna.
+a) Posortuj pary rosnąco po liczbie.
+b) Posortuj pary rosnąco po długości napisu.
 
-Otrzymujesz listę obiektów tej klasy.
+Wypisz wyniki dla a) i b) w osobnych liniach.
 
-**a)** Posortuj listę miast alfabetycznie według nazw.
+### Wejście
 
-**b)** Posortuj listę miast według liczby mieszkańców (rosnąco).
+* 1 linia: liczba naturalna `N`
+* następnie `N` linii: `napis liczba` (napis bez spacji)
 
-### Dane wejściowe
+### Wyjście
 
-- Lista obiektów klasy `Miasto`.
-
-### Dane wyjściowe
-
-- Lista obiektów klasy `Miasto` posortowana zgodnie z podanym kryterium.
+* 1 linia: lista par posortowana jak w podpunkcie a)
+* 2 linia: lista par posortowana jak w podpunkcie b)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)]
-  ```
-- **Oczekiwane wyjście**:
+**Wejście:**
 
-  **a)**
-  ```
-  [Miasto("Berlin", 3800000), Miasto("New York", 8400000), Miasto("Paris", 2150000)]
-  ```
+```
+3
+ab 3
+bca 1
+c 2
+```
 
-  **b)**
-  ```
-  [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New York", 8400000)]
-  ```
+**Wyjście:**
 
-### Wskazówki
-
-- Przy sortowaniu możesz użyć funkcji sortującej z kluczem, który odwołuje się do odpowiedniej właściwości obiektu.
+```
+[('bca', 1), ('c', 2), ('ab', 3)]
+[('c', 2), ('ab', 3), ('bca', 1)]
+```
 
 ---
 
-## Zadanie 6 - Sortowanie listy binarnej
+## ZAD-04 — Sortowanie napisów według długości
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `string`, `list`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb naturalnych, składającą się wyłącznie z zer i jedynek. Posortuj tę listę w kolejności rosnącej.
+Otrzymujesz listę napisów. Posortuj ją rosnąco według długości napisów.
 
-### Dane wejściowe
+### Wejście
 
-- Lista liczb naturalnych (0 lub 1).
+* 1 linia: liczba naturalna `N`
+* następnie `N` linii: napis (bez spacji)
 
-### Dane wyjściowe
+### Wyjście
 
-- Posortowana lista liczb naturalnych.
+* 1 linia: lista napisów posortowana jak w przykładzie
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [1, 0, 1, 0, 1, 1]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [0, 0, 1, 1, 1, 1]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+4
+abcd
+ab
+a
+abc
+```
 
-- Możesz użyć algorytmu zliczania lub funkcji sortującej.
+**Wyjście:**
+
+```
+['a', 'ab', 'abc', 'abcd']
+```
 
 ---
 
-## Zadanie 7 - Sortowanie listy liczb z zakresu 0-2
+## ZAD-05 — Sortowanie listy miast
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `class`, `sort`, `obiekty`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb naturalnych, w której elementami są tylko 0, 1 lub 2. Posortuj tę listę w kolejności rosnącej.
+Masz klasę `Miasto` z polami:
 
-### Dane wejściowe
+* `nazwa` (napis),
+* `liczba_mieszkancow` (liczba naturalna).
 
-- Lista liczb naturalnych (0, 1, 2).
+Otrzymujesz listę miast.
 
-### Dane wyjściowe
+a) Posortuj miasta alfabetycznie po nazwie.
+b) Posortuj miasta rosnąco po liczbie mieszkańców.
 
-- Posortowana lista liczb naturalnych.
+Wypisz wyniki w dwóch liniach jako listy w formacie jak w przykładzie.
+
+### Wejście
+
+* 1 linia: liczba naturalna `N`
+* następnie `N` linii: `nazwa liczba_mieszkancow` (nazwa bez spacji)
+
+### Wyjście
+
+* 1 linia: lista miast po sortowaniu a)
+* 2 linia: lista miast po sortowaniu b)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [1, 0, 1, 2, 2, 0, 1]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [0, 0, 1, 1, 1, 2, 2]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+3
+Paris 2150000
+Berlin 3800000
+New_York 8400000
+```
 
-- Możesz użyć algorytmu zliczania liczby wystąpień każdego z elementów.
+**Wyjście:**
+
+```
+[Miasto("Berlin", 3800000), Miasto("New_York", 8400000), Miasto("Paris", 2150000)]
+[Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New_York", 8400000)]
+```
+
+### Uwagi o formatowaniu
+
+* Wydruk obiektów ma mieć dokładnie format: `Miasto("NAZWA", LICZBA)`.
 
 ---
 
-## Zadanie 8 - Wyszukiwanie indeksu klucza w cyklicznie posortowanej liście
+## ZAD-06 — Sortowanie listy binarnej (0/1)
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sort`, `counting`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz cyklicznie posortowaną listę liczb całkowitych oraz klucz. Lista jest posortowana rosnąco, ale została przesunięta o pewną liczbę miejsc (rotacja). Twoim zadaniem jest znaleźć indeks pierwszego wystąpienia klucza w tej liście. Jeśli klucz nie występuje w liście, zwróć -1.
+Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Posortuj ją rosnąco.
 
-### Dane wejściowe
+### Wejście
 
-- Lista liczb całkowitych — cyklicznie posortowana.
-- Liczba całkowita — klucz do znalezienia.
+* 1 linia: liczba naturalna `N`
+* 2 linia: `N` liczb (0/1) oddzielonych spacjami
 
-### Dane wyjściowe
+### Wyjście
 
-- Liczba całkowita — indeks pierwszego wystąpienia klucza lub -1, jeśli klucz nie występuje.
+* 1 linia: posortowana lista w formacie jak w przykładzie
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [3, 4, 5, 6, 1, 2]
-  4
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  1
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+6
+1 0 1 0 1 1
+```
 
-- Użyj zmodyfikowanego algorytmu wyszukiwania binarnego, który uwzględnia rotację listy.
-- Sprawdź, w której części listy (lewej czy prawej) należy kontynuować poszukiwania.
+**Wyjście:**
+
+```
+[0, 0, 1, 1, 1, 1]
+```
 
 ---
+
+## ZAD-07 — Sortowanie listy 0/1/2
+
+**Poziom:** ★★☆
+**Tagi:** `sort`, `counting`
+
+### Treść
+
+Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj ją rosnąco.
+
+### Wejście
+
+* 1 linia: liczba naturalna `N`
+* 2 linia: `N` liczb (0/1/2) oddzielonych spacjami
+
+### Wyjście
+
+* 1 linia: posortowana lista w formacie jak w przykładzie
+
+### Przykład
+
+**Wejście:**
+
+```
+7
+1 0 1 2 2 0 1
+```
+
+**Wyjście:**
+
+```
+[0, 0, 1, 1, 1, 2, 2]
+```
+
+---
+
+## ZAD-08 — Indeks klucza w cyklicznie posortowanej liście
+
+**Poziom:** ★★☆
+**Tagi:** `binary search`, `rotacja`, `list`
+
+### Treść
+
+Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosnąca, ale została przesunięta) oraz klucz. Znajdź indeks **pierwszego** wystąpienia klucza. Jeśli klucza nie ma — wypisz `-1`.
+
+### Wejście
+
+* 1 linia: liczba naturalna `N`
+* 2 linia: `N` liczb całkowitych oddzielonych spacjami
+* 3 linia: liczba całkowita `x` (szukany klucz)
+
+### Wyjście
+
+* 1 linia: indeks pierwszego wystąpienia `x` albo `-1`
+
+### Przykład
+
+**Wejście:**
+
+```
+6
+3 4 5 6 1 2
+4
+```
+
+**Wyjście:**
+
+```
+1
+```
+
+### Ograniczenia / gwarancje
+
+* Lista jest wynikiem rotacji listy posortowanej niemalejąco (mogą wystąpić duplikaty).
+
