@@ -1,498 +1,446 @@
-# Wyrażenia regularne
+# Rozdział: Wyrażenia regularne (stdin/stdout)
 
-## Zadanie 1 - Sprawdź poprawność adresu e-mail
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-**Poziom trudności**: ★★☆
+**Konwencje wspólne:**
 
-### Treść zadania
-
-Otrzymujesz napis reprezentujący adres e-mail. Twoim zadaniem jest sprawdzić, czy jest to poprawny adres e-mail zgodnie z następującymi regułami:
-
-- Adres e-mail składa się z identyfikatora użytkownika, znaku `@` oraz nazwy domeny.
-
-- **Identyfikator użytkownika** może zawierać wyłącznie:
-
-  - Małe (a–z) i wielkie (A–Z) litery.
-  - Cyfry (0–9).
-  - Znaki specjalne: `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`.
-  - Kropki `.`, pod warunkiem że nie są pierwszym ani ostatnim znakiem oraz nie występują dwukrotnie po sobie.
-
-- **Nazwa domeny** może zawierać wyłącznie:
-
-  - Małe (a–z) i wielkie (A–Z) litery.
-  - Cyfry (0–9).
-  - Kropki `.` oraz myślniki `-`, pod warunkiem że nie są pierwszym ani ostatnim znakiem oraz nie występują dwukrotnie po sobie.
-
-### Dane wejściowe
-
-- Jeden napis reprezentujący adres e-mail.
-
-### Dane wyjściowe
-
-- Wartość logiczna:
-  - **Prawda**, jeśli adres e-mail jest poprawny.
-  - **Fałsz**, jeśli adres e-mail nie jest poprawny.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  adam@gmail.com
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Prawda
-  ```
-
-### Wskazówki
-
-- Możesz użyć wyrażeń regularnych do sprawdzenia poprawności adresu e-mail według podanych reguł.
-- Zwróć uwagę na warunki dotyczące kropek i myślników.
+* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
+* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.
+* Dla wartości logicznych wypisuj dokładnie `Prawda` lub `Fałsz`.
 
 ---
 
-## Zadanie 2 - Sprawdź poprawność hasła
+## ZAD-01 — Sprawdź poprawność adresu e-mail
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `walidacja`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis reprezentujący hasło. Twoim zadaniem jest sprawdzić, czy hasło spełnia wszystkie poniższe warunki:
+Otrzymujesz napis reprezentujący adres e-mail. Sprawdź, czy jest poprawny zgodnie z regułami:
 
-1. Zawiera co najmniej jedną małą literę [a–z].
-2. Zawiera co najmniej jedną wielką literę [A–Z].
-3. Zawiera co najmniej jedną cyfrę [0–9].
-4. Zawiera co najmniej jeden znak specjalny spośród: `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`.
+* Adres e-mail składa się z identyfikatora użytkownika, znaku `@` oraz nazwy domeny.
+* **Identyfikator użytkownika** może zawierać wyłącznie:
+
+  * litery `a–z`, `A–Z`,
+  * cyfry `0–9`,
+  * znaki specjalne: `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`,
+  * kropki `.`, ale:
+
+    * nie może być pierwszym ani ostatnim znakiem,
+    * nie może wystąpić dwukrotnie po sobie.
+* **Nazwa domeny** może zawierać wyłącznie:
+
+  * litery `a–z`, `A–Z`,
+  * cyfry `0–9`,
+  * kropki `.` oraz myślniki `-`, ale:
+
+    * nie mogą być pierwszym ani ostatnim znakiem,
+    * nie mogą wystąpić dwukrotnie po sobie.
+
+### Wejście
+
+Jedna linia:
+
+* `email`
+
+### Wyjście
+
+Jedna linia:
+
+* `Prawda` — jeśli e-mail jest poprawny
+* `Fałsz` — w przeciwnym razie
+
+### Przykład
+
+**Wejście:**
+
+```
+adam@gmail.com
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
+
+---
+
+## ZAD-02 — Sprawdź poprawność hasła
+
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `walidacja`
+
+### Treść
+
+Otrzymujesz napis reprezentujący hasło. Sprawdź, czy hasło spełnia wszystkie warunki:
+
+1. Zawiera co najmniej jedną małą literę `[a–z]`.
+2. Zawiera co najmniej jedną wielką literę `[A–Z]`.
+3. Zawiera co najmniej jedną cyfrę `[0–9]`.
+4. Zawiera co najmniej jeden znak specjalny spośród:
+   `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`.
 5. Ma długość co najmniej 8 znaków.
 6. Ma długość nie większą niż 20 znaków.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis reprezentujący hasło.
+Jedna linia:
 
-### Dane wyjściowe
+* `haslo`
 
-- Wartość logiczna:
-  - **Prawda**, jeśli hasło spełnia wszystkie powyższe warunki.
-  - **Fałsz**, jeśli hasło nie spełnia któregokolwiek z warunków.
+### Wyjście
 
-### Przykład
+Jedna linia:
 
-- **Dane wejściowe**:
-  ```
-  abc1234
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Fałsz
-  ```
-
-### Wskazówki
-
-- Możesz użyć wyrażeń regularnych, aby sprawdzić obecność poszczególnych typów znaków.
-- Upewnij się, że hasło spełnia zarówno wymagania dotyczące zawartości, jak i długości.
-
----
-
-## Zadanie 3 - Sprawdź, czy napis składa się wyłącznie z cyfr
-
-**Poziom trudności**: ★☆☆
-
-### Treść zadania
-
-Otrzymujesz napis. Twoim zadaniem jest sprawdzić, czy napis ten składa się wyłącznie z cyfr (znaków od '0' do '9').
-
-### Dane wejściowe
-
-- Jeden napis.
-
-### Dane wyjściowe
-
-- Wartość logiczna:
-  - **Prawda**, jeśli napis składa się wyłącznie z cyfr.
-  - **Fałsz**, jeśli w napisie występują inne znaki niż cyfry.
+* `Prawda` albo `Fałsz`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  1234
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Prawda
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+abc1234
+```
 
-- Możesz wykorzystać funkcje lub metody sprawdzające, czy wszystkie znaki w napisie są cyframi.
-- Zwróć uwagę na ewentualne białe znaki lub inne niedrukowalne znaki.
+**Wyjście:**
+
+```
+Fałsz
+```
 
 ---
 
-## Zadanie 4 - Sprawdź, czy słowo występuje w zdaniu
+## ZAD-03 — Sprawdź, czy napis składa się wyłącznie z cyfr
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
 
-### Treść zadania
+### Treść
+
+Otrzymujesz napis. Sprawdź, czy składa się wyłącznie z cyfr (`0–9`).
+
+### Wejście
+
+Jedna linia:
+
+* `s`
+
+### Wyjście
+
+Jedna linia:
+
+* `Prawda` — jeśli napis zawiera tylko cyfry
+* `Fałsz` — w przeciwnym razie
+
+### Przykład
+
+**Wejście:**
+
+```
+1234
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
+
+---
+
+## ZAD-04 — Sprawdź, czy słowo występuje w zdaniu jako osobne słowo
+
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
+
+### Treść
+
+Otrzymujesz dwa napisy: zdanie oraz słowo. Sprawdź, czy słowo występuje w zdaniu jako samodzielne słowo (nie jako fragment innego słowa).
+
+### Wejście
+
+Dwie linie:
+
+1. `zdanie`
+2. `slowo`
+
+### Wyjście
+
+Jedna linia:
+
+* `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+Siała baba mak.
+babcia
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
+
+---
+
+## ZAD-05 — Wyodrębnij cyfry z tekstu
+
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
+
+### Treść
+
+Otrzymujesz napis zawierający różne znaki. Wyodrębnij wszystkie cyfry i wypisz je jako jeden napis (z zachowaniem kolejności).
+
+### Wejście
+
+Jedna linia:
+
+* `tekst`
+
+### Wyjście
+
+Jedna linia:
+
+* napis złożony tylko z cyfr z tekstu wejściowego
+
+### Przykład
+
+**Wejście:**
+
+```
+Terminator2001
+```
+
+**Wyjście:**
+
+```
+2001
+```
+
+---
+
+## ZAD-06 — Wiersze kończące się określonym napisem
+
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`, `linijki`
+
+### Treść
 
 Otrzymujesz dwa napisy:
 
-- Pierwszy napis to zdanie.
-- Drugi napis to słowo.
+1. tekst wielowierszowy,
+2. słowo lub fragment.
 
-Twoim zadaniem jest sprawdzić, czy drugie słowo występuje w pierwszym napisie jako samodzielne słowo, nie będąc częścią innego wyrazu.
+Znajdź wszystkie wiersze, które kończą się podanym napisem (wiersz może kończyć się znakiem interpunkcyjnym).
 
-### Dane wejściowe
+### Wejście
 
-- Dwa napisy:
-  1. Zdanie.
-  2. Słowo do wyszukania.
+Dwie części:
 
-### Dane wyjściowe
+1. Tekst (wiele wierszy)
+2. W osobnej linii: `koncowka`
 
-- Wartość logiczna:
-  - **Prawda**, jeśli słowo występuje w zdaniu jako samodzielne słowo.
-  - **Fałsz**, jeśli słowo nie występuje lub jest tylko częścią innego wyrazu.
+*(Sposób wczytania tekstu wielowierszowego zależy od platformy — przyjmij, że tekst jest podany w całości jako wejście, a ostatnia linia to `koncowka`.)*
 
-### Przykład
+### Wyjście
 
-- **Dane wejściowe**:
-  ```
-  Siała baba mak.
-  babcia
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Fałsz
-  ```
-
-### Wskazówki
-
-- Możesz podzielić zdanie na słowa i sprawdzić, czy słowo znajduje się wśród nich.
-- Zwróć uwagę na znaki interpunkcyjne i wielkość liter.
-
----
-
-## Zadanie 5 - Wyodrębnij cyfry z tekstu
-
-**Poziom trudności**: ★☆☆
-
-### Treść zadania
-
-Otrzymujesz napis zawierający różne znaki. Twoim zadaniem jest wyodrębnić wszystkie cyfry z tego napisu i zwrócić je jako nowy napis, zachowując kolejność wystąpień.
-
-### Dane wejściowe
-
-- Jeden napis.
-
-### Dane wyjściowe
-
-- Napis składający się wyłącznie z cyfr występujących w napisie wejściowym, w kolejności ich pojawienia się.
+Wiersze spełniające warunek, każdy w osobnej linii, w kolejności występowania.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Terminator2001
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2001
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Folgujmy paniom nie sobie, ma rada;
+Milujmy wiernie nie jest w nich przysada.
+Godności trzeba nie za nic tu cnota,
+Miłości pragną nie pragną tu złota.
+da
+```
 
-- Możesz iterować przez znaki napisu i wybierać te, które są cyframi.
-- Rozważ użycie funkcji sprawdzającej, czy dany znak jest cyfrą.
+**Wyjście:**
+
+```
+Folgujmy paniom nie sobie, ma rada;
+Milujmy wiernie nie jest w nich przysada.
+```
 
 ---
 
-## Zadanie 6 - Wiersze kończące się określonym napisem
+## ZAD-07 — Podziel tekst względem znaków interpunkcyjnych
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwa napisy:
+Otrzymujesz napis (jedno lub kilka zdań). Podziel tekst na fragmenty w miejscach występowania znaków interpunkcyjnych (np. `, . ! ? ; :`). Usuń spacje na początku i końcu każdego fragmentu.
 
-1. Tekst zawierający wiele wierszy (linijek).
-2. Słowo lub fragment napisu.
+### Wejście
 
-Twoim zadaniem jest znaleźć i zwrócić listę wierszy z pierwszego napisu, które kończą się drugim napisem. Wiersze mogą być zakończone dowolnym znakiem interpunkcyjnym.
+Jedna linia:
 
-### Dane wejściowe
+* `tekst`
 
-- Dwa napisy:
-  1. Tekst zawierający kilka wierszy, w których poszukasz dopasowań.
-  2. Napis, który ma być na końcu wiersza.
+### Wyjście
 
-### Dane wyjściowe
-
-- Lista napisów zawierających wiersze, które spełniają warunek.
+Każdy fragment w osobnej linii.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Folgujmy paniom nie sobie, ma rada;
-  Milujmy wiernie nie jest w nich przysada.
-  Godności trzeba nie za nic tu cnota,
-  Miłości pragną nie pragną tu złota.
-  ```
-  ```
-  da
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ['Folgujmy paniom nie sobie, ma rada;', 'Milujmy wiernie nie jest w nich przysada.']
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Ani nie poszedł do kina, ani nie wybrał się do teatru.
+```
 
-- Możesz podzielić tekst na wiersze (np. używając znaku nowej linii).
-- Dla każdego wiersza sprawdź, czy kończy się podanym napisem, uwzględniając ewentualne znaki interpunkcyjne na końcu.
+**Wyjście:**
+
+```
+Ani nie poszedł do kina
+ani nie wybrał się do teatru
+```
 
 ---
 
-## Zadanie 7 - Podziel tekst względem znaków interpunkcyjnych
+## ZAD-08 — Cyfry w słowach
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis zawierający zdanie lub kilka zdań. Twoim zadaniem jest podzielić ten napis na fragmenty, rozdzielając go w miejscach występowania znaków interpunkcyjnych (np. przecinek, kropka, wykrzyknik, pytajnik itp.). Po podzieleniu należy usunąć ewentualne spacje znajdujące się na początku lub końcu każdego fragmentu.
+Otrzymujesz zdanie. Wyodrębnij wszystkie ciągi cyfr, które są częścią słów (czyli są bezpośrednio połączone z literami). Nie uwzględniaj cyfr oddzielonych od liter spacjami.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis.
+Jedna linia:
 
-### Dane wyjściowe
+* `zdanie`
 
-- Lista napisów będących fragmentami tekstu po podziale.
+### Wyjście
+
+Każdy znaleziony ciąg cyfr w osobnej linii (w kolejności występowania).
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Ani nie poszedł do kina, ani nie wybrał się do teatru.
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ['Ani nie poszedł do kina', 'ani nie wybrał się do teatru']
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
+```
 
-- Możesz użyć wyrażeń regularnych do podziału tekstu na podstawie znaków interpunkcyjnych.
-- Zwróć uwagę na usunięcie zbędnych spacji.
+**Wyjście:**
+
+```
+29
+37
+3
+91
+```
 
 ---
 
-## Zadanie 8 - Cyfry w słowach
+## ZAD-09 — Usuń fragment napisu od pierwszego wystąpienia słowa klucz
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis reprezentujący zdanie. Twoim zadaniem jest wyodrębnić wszystkie ciągi cyfr, które są częścią słów, czyli są bezpośrednio połączone z literami. Nie należy uwzględniać cyfr, które są oddzielone od liter spacjami.
+Otrzymujesz tekst (wiele zdań lub wierszy) oraz słowo klucz. Jeśli słowo klucz wystąpi w tekście, usuń całą część od **pierwszego wystąpienia** tego słowa do końca tekstu. Jeśli słowo klucz nie występuje, wypisz tekst bez zmian.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis zawierający zdanie.
+Dwie części:
 
-### Dane wyjściowe
+1. Tekst (może mieć wiele wierszy)
+2. W osobnej linii: `klucz`
 
-- Lista napisów zawierających ciągi cyfr będących częścią słów, w kolejności ich występowania w tekście.
+### Wyjście
+
+Zmodyfikowany tekst.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ['29', '37', '3', '91']
-  ```
-
-### Wskazówki
-
-- Możesz użyć wyrażeń regularnych do wyszukania cyfr w obrębie słów.
-- Upewnij się, że cyfry otoczone spacjami nie są brane pod uwagę.
+*(jak w treści zadania — długi tekst)*
 
 ---
 
-## Zadanie 9 - Usuń fragment napisu
+## ZAD-10 — Podmień napisy z listy A na napisy z listy B
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `zamiana`
 
-### Treść zadania
-
-Otrzymujesz dwa napisy:
-
-1. Tekst składający się z wielu zdań lub wierszy.
-2. Słowo klucz.
-
-Twoim zadaniem jest przeszukać tekst i, jeśli wystąpi w nim słowo klucz, usunąć z tekstu całą część od pierwszego wystąpienia tego słowa aż do końca tekstu. Jeśli słowo klucz nie występuje w tekście, zwróć oryginalny tekst.
-
-### Dane wejściowe
-
-- Dwa napisy:
-  1. Tekst do modyfikacji.
-  2. Słowo klucz do wyszukania i usunięcia wraz z resztą tekstu.
-
-### Dane wyjściowe
-
-- Napis będący zmodyfikowanym tekstem po usunięciu odpowiedniego fragmentu.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  Turned it up should no valley cousin he.
-  Speaking numerous ask did horrible packages set.
-  Ashamed herself has distant can studied mrs.
-  Led therefore its middleton perpetual fulfilled provision frankness.
-  Small he drawn after among every three no.
-  All having but you edward genius though remark one.
-  Rooms oh fully taken by worse do.
-  Points afraid but may end law lasted.
-  Was out laughter raptures returned outweigh.
-  Luckily cheered colonel me do we attacks on highest enabled.
-  Tried law yet style child.
-  Bore of true of no be deal.
-  Frequently sufficient in be unaffected.
-  The furnished she concluded depending procuring concealed.
-  ```
-  ```
-  a
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Turned it up should no v
-  Spe
-  Ash
-  Led therefore its middleton perpetu
-  Sm
-  All h
-  Rooms oh fully t
-  Points
-  W
-  Luckily cheered colonel me do we
-  Tried l
-  Bore of true of no be de
-  Frequently sufficient in be un
-  The furnished she concluded depending procuring conce.
-  ```
-
-### Wskazówki
-
-- Znajdź pierwsze wystąpienie słowa klucz w tekście.
-- Usuń wszystko od tego miejsca do końca tekstu.
-- Jeśli słowo klucz nie występuje, tekst pozostaje bez zmian.
-
----
-
-## Zadanie 10 - Podmień napisy z listy A na napisy z listy B
-
-**Poziom trudności**: ★★☆
-
-### Treść zadania
+### Treść
 
 Otrzymujesz:
 
-- Napis zawierający tekst.
-- Dwie listy napisów o tej samej długości:
-  - Lista A zawierająca napisy do znalezienia w tekście.
-  - Lista B zawierająca napisy, które zastąpią odpowiednie napisy z listy A.
+* tekst,
+* listę A (napisy do znalezienia),
+* listę B (napisy do podmiany), tej samej długości co A.
 
-Twoim zadaniem jest w tekście zastąpić wszystkie wystąpienia napisów z listy A odpowiadającymi im napisami z listy B. Zastąpienia należy dokonać dla każdego napisu z listy A, używając odpowiednika z listy B o tym samym indeksie.
+Zastąp w tekście wszystkie wystąpienia słów z listy A odpowiadającymi im słowami z listy B (ten sam indeks). Zamieniaj tylko **całe słowa**, nie fragmenty innych słów.
 
-### Dane wejściowe
+### Wejście
 
-- Napis (tekst do modyfikacji).
-- Dwie listy napisów (lista A i lista B), każda o takiej samej długości.
+1. Tekst (jedna lub wiele linii)
+2. Liczba naturalna `n` — długość list
+3. `n` wierszy: elementy listy A
+4. `n` wierszy: elementy listy B
 
-### Dane wyjściowe
+### Wyjście
 
-- Napis będący zmodyfikowanym tekstem po dokonaniu zastąpień.
+Zmodyfikowany tekst.
 
 ### Przykład
 
-- **Dane wejściowe**:
-
-  Tekst:
-  ```
-  Every mile was tilted at seven or.
-  Wished her entire esteem mr oh by.
-  He prevents requests by if in pleased.
-  Picture too and concerned was comforting.
-  Ten difficult resembled eagerness nor.
-  Same park bore on be.
-  Warmth his law design says he is a person.
-  Pronunciation suspected in belonging conveying ye repulsive.
-  ```
-
-  Lista A:
-  ```
-  ['or', 'be', 'he']
-  ```
-
-  Lista B:
-  ```
-  ['and', 'off', 'she']
-  ```
-
-- **Oczekiwane wyjście**:
-  ```
-  Every mile was tilted at seven and.
-  Wished her entire esteem mr oh by.
-  She prevents requests by if in pleased.
-  Picture too and concerned was comforting.
-  Ten difficult resembled eagerness nor.
-  Same park bore on and off.
-  Warmth his law design says she is a person.
-  Pronunciation suspected in belonging conveying ye repulsive.
-  ```
-
-### Wskazówki
-
-- Upewnij się, że zastąpisz wszystkie wystąpienia każdego napisu z listy A.
-- Zwróć uwagę na to, by nie zmieniać części innych słów (zastąp tylko całe słowa).
-- Możesz użyć wyrażeń regularnych do precyzyjnego dopasowania słów.
+*(jak w treści — z listami A/B)*
 
 ---
 
-## Zadanie 11 - Nazwa pliku bez rozszerzenia
+## ZAD-11 — Nazwa pliku bez rozszerzenia
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `ścieżki`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis reprezentujący pełną ścieżkę do pliku w systemie plików. Twoim zadaniem jest wyodrębnić nazwę pliku (bez ścieżki) i usunąć z niej rozszerzenie. Zwróć samą nazwę pliku bez rozszerzenia.
+Otrzymujesz napis reprezentujący pełną ścieżkę do pliku. Wyodrębnij nazwę pliku (bez katalogów) i usuń rozszerzenie (część po ostatniej kropce). Zwróć samą nazwę bez rozszerzenia.
 
-### Dane wejściowe
+Ścieżka może zawierać separator `\` lub `/`.
 
-- Jeden napis reprezentujący ścieżkę do pliku.
+### Wejście
 
-### Dane wyjściowe
+Jedna linia:
 
-- Napis zawierający nazwę pliku bez rozszerzenia.
+* `sciezka`
+
+### Wyjście
+
+Jedna linia:
+
+* `nazwa_pliku_bez_rozszerzenia`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  C:\my-long\path_directory\file.html
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  file
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+C:\my-long\path_directory\file.html
+```
 
-- Rozważ, jak rozdzielić ścieżkę na komponenty katalogów i nazwy pliku.
-- Pamiętaj, że rozszerzenie pliku to część po ostatniej kropce w nazwie pliku.
-- Upewnij się, że działanie będzie poprawne dla ścieżek z różnymi separatorami katalogów (np. `\` lub `/`).
+**Wyjście:**
+
+```
+file
+```
+
