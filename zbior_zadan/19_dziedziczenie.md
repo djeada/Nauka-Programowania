@@ -1,282 +1,320 @@
-# Dziedziczenie
+# Rozdział: Dziedziczenie (stdin/stdout)
 
-## Zadanie 1 - Wywołanie metody klasy bazowej w klasie potomnej
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-**Poziom trudności**: ★☆☆
+**Konwencje wspólne:**
 
-### Treść zadania
-
-Zaplanować i zaimplementować dwie klasy:
-
-1. **Klasa bazowa** – posiadająca metodę o określonej funkcjonalności.
-
-2. **Klasa potomna** – dziedzicząca po klasie bazowej i nadpisująca tę samą metodę.
-
-Twoim zadaniem jest w metodzie klasy potomnej, która nadpisuje metodę z klasy bazowej, wywołać tę metodę z klasy bazowej. 
-
-Napisz program testujący te klasy, który:
-
-- Tworzy obiekt klasy potomnej.
-- Wywołuje nadpisaną metodę.
-- Demonstruje wywołanie metody klasy bazowej z poziomu klasy potomnej.
-
-### Dane wejściowe
-
-- Brak danych wejściowych. Zadanie dotyczy implementacji klas i ich metod.
-
-### Dane wyjściowe
-
-- Komunikaty pokazujące działanie metod, w tym wywołanie metody klasy bazowej z poziomu klasy potomnej.
-
-### Przykład
-
-- **Oczekiwane zachowanie**:
-
-  - **Klasa Bazowa** posiada metodę `przedstaw_się()`, która wypisuje komunikat, np. "Jestem klasą bazową."
-  - **Klasa Potomna** nadpisuje metodę `przedstaw_się()`, w której najpierw wywołuje metodę z klasy bazowej, a następnie wypisuje dodatkowy komunikat, np. "A ja jestem klasą potomną."
-  - W programie testowym tworzymy obiekt klasy potomnej i wywołujemy metodę `przedstaw_się()`. Oczekujemy następującego wyjścia:
-    ```
-    Jestem klasą bazową.
-    A ja jestem klasą potomną.
-    ```
-
-### Wskazówki
-
-- W metodzie klasy potomnej możesz odwołać się do metody klasy bazowej, używając odpowiedniej konstrukcji (np. poprzez specjalne słowo kluczowe lub nazwę klasy bazowej).
-- Pamiętaj, że nadpisywanie metod pozwala na rozszerzenie lub modyfikację zachowania metod z klasy bazowej w klasie potomnej.
+* Jeśli w zadaniu jest „brak wejścia” — program nic nie wczytuje.
+* Jeśli zadanie wymaga wypisania kilku linii — wypisz je w tej samej kolejności, co w przykładzie.
+* Dla liczb zmiennoprzecinkowych trzymaj stałą liczbę miejsc po przecinku, jeśli jest pokazana w przykładzie.
 
 ---
 
-## Zadanie 2 - Klasa Kształt oraz klasy Koło i Kwadrat
+## ZAD-01 — Wywołanie metody klasy bazowej w klasie potomnej
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `dziedziczenie`, `override`, `super`
 
-### Treść zadania
+### Treść
 
-Zaprojektuj hierarchię klas składającą się z:
+Zaprojektuj dwie klasy:
 
-1. **Klasy Kształt** – ogólnej klasy bazowej reprezentującej dowolny kształt.
+1. **Bazowa** — posiada metodę `przedstaw_sie()`, która wypisuje komunikat o klasie bazowej.
+2. **Potomna** — dziedziczy po **Bazowej** i **nadpisuje** metodę `przedstaw_sie()`, ale w swojej implementacji:
 
-2. **Klasy Koło** – klasy potomnej dziedziczącej po klasie Kształt, reprezentującej koło.
+   * najpierw **wywołuje** wersję metody z klasy bazowej,
+   * potem dopisuje własny komunikat.
 
-3. **Klasy Kwadrat** – klasy potomnej dziedziczącej po klasie Kształt, reprezentującej kwadrat.
+Program testowy:
 
-Każda z klas powinna zawierać:
+* tworzy obiekt klasy potomnej,
+* wywołuje metodę `przedstaw_sie()`.
 
-- **Metodę** obliczającą pole powierzchni kształtu.
-- **Metodę** wyświetlającą informacje o kształcie, takie jak jego typ, parametry i obliczone pole.
+### Wejście
 
-Napisz program testujący te klasy, który:
+Brak.
 
-- Tworzy obiekty klasy **Koło** i **Kwadrat** z odpowiednimi parametrami.
-- Wywołuje metody obliczające pole i wyświetlające informacje o kształtach.
+### Wyjście
 
-### Dane wejściowe
-
-- Parametry potrzebne do utworzenia kształtów:
-  - Dla koła: promień (liczba rzeczywista).
-  - Dla kwadratu: długość boku (liczba rzeczywista).
-
-### Dane wyjściowe
-
-- Informacje o utworzonych kształtach, w tym:
-  - Typ kształtu.
-  - Parametry kształtu.
-  - Obliczone pole powierzchni.
+Dwie linie, pokazujące najpierw komunikat klasy bazowej, a potem potomnej.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  - Koło o promieniu 5.
-  - Kwadrat o boku 4.
+**Wyjście:**
 
-- **Oczekiwane wyjście**:
-  ```
-  Kształt: Koło
-  Promień: 5
-  Pole powierzchni: 78.5398
-
-  Kształt: Kwadrat
-  Długość boku: 4
-  Pole powierzchni: 16
-  ```
-  *(Przyjmując, że π ≈ 3.1416)*
-
-### Wskazówki
-
-- W klasie **Kształt** możesz zdefiniować metodę abstrakcyjną lub ogólną metodę obliczającą pole, którą nadpiszesz w klasach potomnych.
-- Użyj dziedziczenia, aby zorganizować wspólne elementy klas i uniknąć duplikowania kodu.
+```
+Jestem klasą bazową.
+A ja jestem klasą potomną.
+```
 
 ---
 
-## Zadanie 3 - Polimorfizm z klasami Zwierz, Pies i Kot
+## ZAD-02 — Klasa Kształt oraz klasy Koło i Kwadrat
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `dziedziczenie`, `polimorfizm`, `math`
 
-### Treść zadania
+### Treść
 
-Zaprojektuj następujące klasy:
+Zaprojektuj hierarchię klas:
 
-1. **Klasa Zwierz** – klasa bazowa reprezentująca ogólne zwierzę, zawierająca metodę `odgłos()`, która definiuje dźwięk wydawany przez zwierzę.
+* **Kształt** — klasa bazowa (ogólna) dla kształtów.
+* **Koło** — dziedziczy po `Kształt`.
+* **Kwadrat** — dziedziczy po `Kształt`.
 
-2. **Klasa Pies** – klasa potomna dziedzicząca po klasie **Zwierz**, nadpisująca metodę `odgłos()` tak, aby zwracała odgłos psa.
+Każda klasa ma mieć:
 
-3. **Klasa Kot** – klasa potomna dziedzicząca po klasie **Zwierz**, nadpisująca metodę `odgłos()` tak, aby zwracała odgłos kota.
+* metodę obliczającą **pole**,
+* metodę wypisującą informacje o obiekcie: typ, parametry i pole.
 
-Napisz program testujący te klasy, który:
+Program:
 
-- Tworzy obiekty klasy **Zwierz**, **Pies** i **Kot**.
-- Umieszcza te obiekty w jednej kolekcji (np. liście lub tablicy).
-- Iteruje przez kolekcję i dla każdego obiektu wywołuje metodę `odgłos()`, demonstrując polimorfizm.
+* wczytuje promień `r` koła oraz bok `a` kwadratu,
+* tworzy obiekty `Koło(r)` i `Kwadrat(a)`,
+* wypisuje informacje o obu.
 
-### Dane wejściowe
+**Uwaga do formatowania:**
+*Pole koła wypisz do 4 miejsc po przecinku.*
+*Pole kwadratu wypisz bez wymuszania miejsc po przecinku (jak w przykładzie).*
 
-- Brak danych wejściowych. Zadanie polega na implementacji klas i metod oraz ich wykorzystaniu w programie testującym.
+### Wejście
 
-### Dane wyjściowe
+* 1 linia: `r` (liczba rzeczywista)
+* 2 linia: `a` (liczba rzeczywista)
 
-- Komunikaty wypisywane przez metodę `odgłos()` dla każdego obiektu w kolekcji.
+### Wyjście
+
+Blok informacji o kole, pusta linia, blok informacji o kwadracie.
 
 ### Przykład
 
-- **Oczekiwane wyjście**:
-  ```
-  Zwierz wydaje odgłos: ...
-  Pies wydaje odgłos: Hau!
-  Kot wydaje odgłos: Miau!
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+5
+4
+```
 
-- Polimorfizm umożliwia traktowanie obiektów różnych klas dziedziczących po tej samej klasie bazowej w jednolity sposób.
-- Umieszczając obiekty różnych klas w jednej kolekcji, możesz iterować przez nią i wywoływać na obiektach metody zdefiniowane w klasie bazowej, które zostały nadpisane w klasach potomnych.
+**Wyjście:**
+
+```
+Kształt: Koło
+Promień: 5
+Pole powierzchni: 78.5398
+
+Kształt: Kwadrat
+Długość boku: 4
+Pole powierzchni: 16
+```
 
 ---
 
-## Zadanie 4 - Dziedziczenie wielopoziomowe z klasą Człowiek
+## ZAD-03 — Polimorfizm: Zwierz, Pies i Kot
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `dziedziczenie`, `polimorfizm`, `override`
 
-### Treść zadania
+### Treść
 
-Zaprojektuj hierarchię klas wykorzystującą dziedziczenie wielopoziomowe:
+Zaprojektuj klasy:
 
-1. **Klasa Człowiek** – zawiera pola:
-   - Imię (tekst).
-   - Nazwisko (tekst).
-   - Miejsce urodzenia (tekst).
-   - Zawód (tekst).
+* **Zwierz** — metoda `odglos()` zwraca/drukuje ogólny dźwięk.
+* **Pies** — dziedziczy po `Zwierz` i nadpisuje `odglos()`.
+* **Kot** — dziedziczy po `Zwierz` i nadpisuje `odglos()`.
 
-2. **Klasa Student** – dziedziczy po klasie **Człowiek** i dodaje pola:
-   - Numer albumu (liczba całkowita).
-   - Kierunek studiów (tekst).
+Program testowy:
 
-3. **Klasa StudentFizyki** – dziedziczy po klasie **Student** i dodaje pola:
-   - Średnia z laboratoriów (liczba rzeczywista).
-   - Średnia z wykładów (liczba rzeczywista).
+* tworzy obiekty: `Zwierz`, `Pies`, `Kot`,
+* umieszcza je w jednej kolekcji,
+* iteruje i dla każdego wypisuje linię w formacie:
+  `NazwaKlasy wydaje odgłos: ...`
 
-Napisz program testujący te klasy, który:
+### Wejście
 
-- Tworzy obiekty każdej z klas z odpowiednimi danymi.
-- Wyświetla informacje o utworzonych obiektach, pokazując dziedziczenie i rozszerzanie właściwości na kolejnych poziomach.
+Brak.
 
-### Dane wejściowe
+### Wyjście
 
-- Informacje potrzebne do utworzenia obiektów:
-  - Dla **Człowiek**: imię, nazwisko, miejsce urodzenia, zawód.
-  - Dla **Student**: wszystkie powyższe oraz numer albumu i kierunek studiów.
-  - Dla **StudentFizyki**: wszystkie powyższe oraz średnia z laboratoriów i średnia z wykładów.
-
-### Dane wyjściowe
-
-- Szczegółowe informacje o utworzonych obiektach, obejmujące wszystkie pola zdefiniowane w ich klasach i klasach bazowych.
+Trzy linie, po jednej dla każdego obiektu.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  - Człowiek: Imię: Jan, Nazwisko: Kowalski, Miejsce urodzenia: Kraków, Zawód: Inżynier.
-  - Student: Imię: Anna, Nazwisko: Nowak, Miejsce urodzenia: Warszawa, Zawód: Student, Numer albumu: 12345, Kierunek studiów: Informatyka.
-  - StudentFizyki: Imię: Piotr, Nazwisko: Wiśniewski, Miejsce urodzenia: Gdańsk, Zawód: Student, Numer albumu: 54321, Kierunek studiów: Fizyka, Średnia z laboratoriów: 4.5, Średnia z wykładów: 4.0.
+**Wyjście:**
 
-- **Oczekiwane wyjście**:
-  ```
-  Człowiek:
-  Imię: Jan
-  Nazwisko: Kowalski
-  Miejsce urodzenia: Kraków
-  Zawód: Inżynier
-
-  Student:
-  Imię: Anna
-  Nazwisko: Nowak
-  Miejsce urodzenia: Warszawa
-  Zawód: Student
-  Numer albumu: 12345
-  Kierunek studiów: Informatyka
-
-  Student Fizyki:
-  Imię: Piotr
-  Nazwisko: Wiśniewski
-  Miejsce urodzenia: Gdańsk
-  Zawód: Student
-  Numer albumu: 54321
-  Kierunek studiów: Fizyka
-  Średnia z laboratoriów: 4.5
-  Średnia z wykładów: 4.0
-  ```
-
-### Wskazówki
-
-- W dziedziczeniu wielopoziomowym każda klasa potomna dziedziczy wszystkie pola i metody swoich klas bazowych.
-- Upewnij się, że konstruktory klas potomnych poprawnie inicjalizują pola zdefiniowane w klasach bazowych, przekazując odpowiednie wartości.
+```
+Zwierz wydaje odgłos: ...
+Pies wydaje odgłos: Hau!
+Kot wydaje odgłos: Miau!
+```
 
 ---
 
-## Zadanie 5 - Dziedziczenie wielokrotne z klasą Ptak
+## ZAD-04 — Dziedziczenie wielopoziomowe: Człowiek → Student → StudentFizyki
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `dziedziczenie`, `konstruktory`, `super`
 
-### Treść zadania
+### Treść
 
-Zaprojektuj następujące klasy:
+Zaprojektuj hierarchię klas:
 
-1. **Klasa Zwierz** – zawierająca metody:
-   - `jedz()` – wypisuje komunikat, np. "Zwierz je."
-   - `spij()` – wypisuje komunikat, np. "Zwierz śpi."
-   - `wydaj_dźwięk()` – wypisuje komunikat, np. "Zwierz wydaje dźwięk."
+1. **Człowiek** — pola:
 
-2. **Klasa ObiektLatający** – zawierająca metody:
-   - `leć()` – wypisuje komunikat, np. "Obiekt latający leci."
-   - `wyląduj()` – wypisuje komunikat, np. "Obiekt latający ląduje."
+   * imię
+   * nazwisko
+   * miejsce urodzenia
+   * zawód
 
-3. **Klasa Ptak** – dziedzicząca **wielokrotnie** po obu klasach: **Zwierz** i **ObiektLatający**.
+2. **Student** (dziedziczy po `Człowiek`) — dodatkowo:
 
-Napisz program testujący klasę **Ptak**, który:
+   * numer albumu
+   * kierunek studiów
 
-- Tworzy obiekt klasy **Ptak**.
-- Wywołuje metody odziedziczone z obu klas bazowych.
+3. **StudentFizyki** (dziedziczy po `Student`) — dodatkowo:
 
-### Dane wejściowe
+   * średnia z laboratoriów
+   * średnia z wykładów
 
-- Brak danych wejściowych. Zadanie polega na implementacji klas i ich metod oraz wykorzystaniu ich w programie testującym.
+Program:
 
-### Dane wyjściowe
+* wczytuje dane dla trzech obiektów (Człowiek, Student, StudentFizyki),
+* tworzy obiekty,
+* wypisuje je w formacie jak w przykładzie.
 
-- Komunikaty wypisywane przez metody klasy **Ptak**, pochodzące z obu klas bazowych.
+**Uwaga do wejścia:** wszystko w osobnych liniach, w podanej kolejności.
+
+### Wejście
+
+**Dane dla Człowiek:**
+
+1. imię
+2. nazwisko
+3. miejsce urodzenia
+4. zawód
+
+**Dane dla Student:**
+5. imię
+6. nazwisko
+7. miejsce urodzenia
+8. zawód
+9. numer albumu (int)
+10. kierunek studiów
+
+**Dane dla StudentFizyki:**
+11. imię
+12. nazwisko
+13. miejsce urodzenia
+14. zawód
+15. numer albumu (int)
+16. kierunek studiów
+17. średnia z laboratoriów (float)
+18. średnia z wykładów (float)
+
+### Wyjście
+
+Trzy bloki jak w przykładzie, oddzielone pustą linią.
 
 ### Przykład
 
-- **Oczekiwane wyjście**:
-  ```
-  Ptak je.
-  Ptak śpi.
-  Ptak wydaje dźwięk.
-  Ptak leci.
-  Ptak ląduje.
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Jan
+Kowalski
+Kraków
+Inżynier
+Anna
+Nowak
+Warszawa
+Student
+12345
+Informatyka
+Piotr
+Wiśniewski
+Gdańsk
+Student
+54321
+Fizyka
+4.5
+4.0
+```
 
-- W dziedziczeniu wielokrotnym klasa potomna dziedziczy po więcej niż jednej klasie bazowej.
-- Upewnij się, że w klasie **Ptak** dostępne są wszystkie metody z klas **Zwierz** i **ObiektLatający**.
-- Zwróć uwagę na ewentualne konflikty nazw metod lub pól i zastanów się, jak je rozwiązać, aby zachować poprawność programu.
+**Wyjście:**
+
+```
+Człowiek:
+Imię: Jan
+Nazwisko: Kowalski
+Miejsce urodzenia: Kraków
+Zawód: Inżynier
+
+Student:
+Imię: Anna
+Nazwisko: Nowak
+Miejsce urodzenia: Warszawa
+Zawód: Student
+Numer albumu: 12345
+Kierunek studiów: Informatyka
+
+Student Fizyki:
+Imię: Piotr
+Nazwisko: Wiśniewski
+Miejsce urodzenia: Gdańsk
+Zawód: Student
+Numer albumu: 54321
+Kierunek studiów: Fizyka
+Średnia z laboratoriów: 4.5
+Średnia z wykładów: 4.0
+```
+
+---
+
+## ZAD-05 — Dziedziczenie wielokrotne: Ptak
+
+**Poziom:** ★★☆
+**Tagi:** `multiple inheritance`, `dziedziczenie`, `metody`
+
+### Treść
+
+Zaprojektuj klasy:
+
+* **Zwierz** — metody:
+
+  * `jedz()` → wypisuje `Ptak je.`
+  * `spij()` → wypisuje `Ptak śpi.`
+  * `wydaj_dzwiek()` → wypisuje `Ptak wydaje dźwięk.`
+
+* **ObiektLatajacy** — metody:
+
+  * `lec()` → wypisuje `Ptak leci.`
+  * `wyladuj()` → wypisuje `Ptak ląduje.`
+
+* **Ptak** — dziedziczy po `Zwierz` oraz `ObiektLatajacy`.
+
+Program testowy:
+
+* tworzy obiekt `Ptak`,
+* wywołuje metody w kolejności: `jedz`, `spij`, `wydaj_dzwiek`, `lec`, `wyladuj`.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Pięć linii jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Ptak je.
+Ptak śpi.
+Ptak wydaje dźwięk.
+Ptak leci.
+Ptak ląduje.
+```
+
+---
