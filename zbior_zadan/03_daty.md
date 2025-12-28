@@ -1,213 +1,175 @@
-# Daty
+# Rozdział: Daty (warunki + kalendarz)
 
-## Zadanie 1 - Sprawdzanie poprawności numeru dnia tygodnia lub miesiąca
+Zadania w tym rozdziale dotyczą walidacji i obliczeń na datach w kalendarzu gregoriańskim.
 
-**Poziom trudności**: ★☆☆
+**Konwencje wspólne:**
 
-### Treść zadania
-
-Napisz program, który pobiera od użytkownika liczbę naturalną i wypisuje ją na standardowe wyjście **tylko wtedy**, gdy jest ona poprawnym numerem dnia tygodnia lub miesiąca.
-
-- **Dzień tygodnia** jest numerowany od 1 (poniedziałek) do 7 (niedziela).
-- **Miesiąc** jest numerowany od 1 (styczeń) do 12 (grudzień).
-
-Jeśli podana liczba nie mieści się w żadnym z tych zakresów, program nie powinien wypisywać nic.
-
-### Dane wejściowe
-
-- Jedna liczba naturalna (całkowita nieujemna) wprowadzona przez użytkownika.
-
-### Dane wyjściowe
-
-- Jeśli podana liczba jest w zakresie od 1 do 12 (włącznie), wypisz tę liczbę.
-- W przeciwnym razie nie wypisuj nic.
-
-### Przykład
-
-**Przykład 1:**
-
-- **Dane wejściowe**:
-  ```
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5
-  ```
-
-**Przykład 2:**
-
-- **Dane wejściowe**:
-  ```
-  10
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  10
-  ```
-
-**Przykład 3:**
-
-- **Dane wejściowe**:
-  ```
-  15
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ```
-  *(brak danych wyjściowych)*
-
-### Wskazówki
-
-- Użyj instrukcji warunkowej, aby sprawdzić, czy liczba mieści się w zakresie od 1 do 12.
-- Pamiętaj, że liczby od 1 do 12 obejmują zarówno numery dni tygodnia (1–7), jak i miesiące (1–12).
+* Każde zadanie to **osobny program**.
+* Liczby wczytuj z osobnych linii, w kolejności z opisu.
+* Komunikaty wypisuj **dokładnie** jak w treści (kropki, polskie znaki, spacje).
+* Jeśli zadanie mówi „nie wypisuj nic” — program kończy się bez żadnego wyjścia.
 
 ---
 
-## Zadanie 2 - Sprawdzanie pełnoletności na podstawie daty urodzenia
+## ZAD-01 — Numer dnia tygodnia lub miesiąca
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if`, `zakresy`, `I/O`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika datę urodzenia oraz aktualną datę i sprawdza, czy osoba urodzona w podanym dniu jest **pełnoletnia** (ma ukończone 18 lat) w podanym dniu aktualnym.
+Wczytaj liczbę naturalną `n`. Wypisz `n` **tylko wtedy**, gdy jest poprawnym numerem:
 
-Program powinien wypisać odpowiedni komunikat:
+* dnia tygodnia (1–7) **lub**
+* miesiąca (1–12).
 
-- Jeśli osoba jest pełnoletnia, wypisz: **"Osoba jest pełnoletnia."**
-- Jeśli osoba nie jest pełnoletnia, wypisz: **"Osoba nie jest pełnoletnia."**
+W praktyce oznacza to: wypisz `n` tylko wtedy, gdy `1 ≤ n ≤ 12`.
 
-**Założenia:**
+### Wejście
 
-- Data urodzenia i data aktualna są poprawnymi datami.
-- Uwzględnij, że pełnoletność osiąga się dokładnie w dniu 18. urodzin.
+* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
 
-### Dane wejściowe
+### Wyjście
 
-Sześć liczb całkowitych, każda w oddzielnej linii:
+* Jeśli `1 ≤ n ≤ 12`: wypisz `n` w osobnej linii
+* W przeciwnym razie: brak wyjścia
 
-1. Dzień urodzenia (1–31)
-2. Miesiąc urodzenia (1–12)
-3. Rok urodzenia (np. 2002)
-4. Aktualny dzień (1–31)
-5. Aktualny miesiąc (1–12)
-6. Aktualny rok (np. 2020)
+### Przykłady
 
-### Dane wyjściowe
+**Wejście:**
 
-- Jeden komunikat tekstowy:
-  - **"Osoba jest pełnoletnia."** lub
-  - **"Osoba nie jest pełnoletnia."**
+```
+5
+```
 
-### Przykład
+**Wyjście:**
 
-**Przykład 1:**
+```
+5
+```
 
-- **Dane wejściowe**:
-  ```
-  5
-  12
-  1999
-  20
-  11
-  2020
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Osoba jest pełnoletnia.
-  ```
+**Wejście:**
 
-**Przykład 2:**
+```
+15
+```
 
-- **Dane wejściowe**:
-  ```
-  15
-  6
-  2005
-  20
-  11
-  2020
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Osoba nie jest pełnoletnia.
-  ```
-
-### Wskazówki
-
-- Porównaj daty, zaczynając od roku, następnie miesiąca, a na końcu dnia.
-- Jeśli aktualny rok minus rok urodzenia jest większy niż 18, osoba jest pełnoletnia.
-- Jeśli różnica lat wynosi dokładnie 18, porównaj miesiące i dni, aby ustalić pełnoletność.
+**Wyjście:** *(brak)*
 
 ---
 
-## Zadanie 3 - Sprawdzanie, czy rok jest przestępny
+## ZAD-02 — Pełnoletność (18 lat)
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `daty`, `porównywanie`, `if`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika rok (liczbę naturalną) i sprawdza, czy jest to **rok przestępny**.
+Wczytaj datę urodzenia oraz datę „dzisiaj” i sprawdź, czy osoba ma **ukończone 18 lat** w dniu daty aktualnej.
 
-Program powinien wypisać odpowiedni komunikat:
+Wypisz:
 
-- Jeśli rok jest przestępny, wypisz: **"Rok jest przestępny."**
-- Jeśli rok nie jest przestępny, wypisz: **"Rok nie jest przestępny."**
+* `Osoba jest pełnoletnia.` — jeśli ma ≥ 18 lat,
+* `Osoba nie jest pełnoletnia.` — w przeciwnym razie.
 
-**Definicja roku przestępnego:**
+### Wejście
 
-- Rok jest przestępny, jeśli jest podzielny przez 4, ale nie jest podzielny przez 100, **chyba że** jest podzielny przez 400.
+6 liczb całkowitych (każda w osobnej linii):
 
-### Dane wejściowe
+1. `d1` — dzień urodzenia
+2. `m1` — miesiąc urodzenia
+3. `y1` — rok urodzenia
+4. `d2` — aktualny dzień
+5. `m2` — aktualny miesiąc
+6. `y2` — aktualny rok
 
-- Jedna liczba naturalna – rok.
+### Wyjście
 
-### Dane wyjściowe
+Jedna linia — jeden z komunikatów.
 
-- Jeden komunikat tekstowy zgodny z powyższym opisem.
+### Ograniczenia / gwarancje
+
+* Obie daty są poprawne (nie musisz walidować).
+* Pełnoletność jest osiągana **dokładnie w dniu 18. urodzin**.
+
+### Uwagi (jak to porównać)
+
+Osoba jest pełnoletnia wtedy, gdy data `y1+18, m1, d1` jest **nie późniejsza** niż data aktualna.
 
 ### Przykład
 
-**Przykład 1:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  2020
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Rok jest przestępny.
-  ```
+```
+5
+12
+1999
+20
+11
+2020
+```
 
-**Przykład 2:**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  2100
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Rok nie jest przestępny.
-  ```
-
-### Wskazówki
-
-- Użyj operatora modulo `%` do sprawdzania podzielności.
-- Zwróć uwagę na kolejność warunków:
-  - Jeśli rok jest podzielny przez 400, jest przestępny.
-  - Jeśli rok jest podzielny przez 100 (ale nie przez 400), nie jest przestępny.
-  - Jeśli rok jest podzielny przez 4 (ale nie przez 100), jest przestępny.
-  - W przeciwnym razie rok nie jest przestępny.
+```
+Osoba jest pełnoletnia.
+```
 
 ---
 
-## Zadanie 4 - Wypisywanie dnia tygodnia na podstawie numeru
+## ZAD-03 — Rok przestępny
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `modulo`, `if`, `kalendarz`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanej liczby naturalnej wypisze odpowiadający jej **dzień tygodnia**. Numeracja dni tygodnia jest następująca:
+Wczytaj rok `y` i sprawdź, czy jest przestępny w kalendarzu gregoriańskim.
+
+Wypisz:
+
+* `Rok jest przestępny.`
+* `Rok nie jest przestępny.`
+
+### Wejście
+
+* 1 linia: `y` (liczba całkowita, `y ≥ 0`)
+
+### Wyjście
+
+Jedna linia — odpowiedni komunikat.
+
+### Definicja
+
+Rok jest przestępny, gdy:
+
+* jest podzielny przez 400 **lub**
+* jest podzielny przez 4 i **nie** jest podzielny przez 100.
+
+### Przykład
+
+**Wejście:**
+
+```
+2100
+```
+
+**Wyjście:**
+
+```
+Rok nie jest przestępny.
+```
+
+---
+
+## ZAD-04 — Dzień tygodnia z numeru
+
+**Poziom:** ★☆☆
+**Tagi:** `if-elif-else`, `mapowanie`, `string`
+
+### Treść
+
+Wczytaj liczbę `n`. Jeśli `n` jest w zakresie 1–7, wypisz nazwę dnia tygodnia:
 
 1. Poniedziałek
 2. Wtorek
@@ -217,307 +179,225 @@ Napisz program, który dla podanej liczby naturalnej wypisze odpowiadający jej 
 6. Sobota
 7. Niedziela
 
-Jeśli podana liczba nie jest w zakresie od 1 do 7 (włącznie), program powinien wypisać komunikat: **"Niepoprawny numer dnia tygodnia."**
+W przeciwnym razie wypisz:
+`Niepoprawny numer dnia tygodnia.`
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna.
+* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
 
-### Dane wyjściowe
+### Wyjście
 
-- Nazwa dnia tygodnia lub komunikat o błędzie.
-
-### Przykład
-
-**Przykład 1:**
-
-- **Dane wejściowe**:
-  ```
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Wtorek
-  ```
-
-**Przykład 2:**
-
-- **Dane wejściowe**:
-  ```
-  8
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Niepoprawny numer dnia tygodnia.
-  ```
-
-### Wskazówki
-
-- Możesz użyć instrukcji `if-elif-else` lub struktury danych (np. listy) do mapowania numerów na nazwy dni tygodnia.
-- Upewnij się, że program obsługuje poprawnie liczby spoza zakresu 1–7.
-
----
-
-## Zadanie 5 - Liczba dni w miesiącu
-
-**Poziom trudności**: ★☆☆
-
-### Treść zadania
-
-Napisz program, który dla podanego numeru miesiąca (liczby naturalnej) wypisze liczbę dni w tym miesiącu.
-
-Przyjmij, że rok **nie jest** przestępny (luty ma 28 dni).
-
-Jeśli podana liczba nie jest poprawnym numerem miesiąca (1–12), program powinien wypisać komunikat: **"Niepoprawny numer miesiąca."**
-
-### Dane wejściowe
-
-- Jedna liczba naturalna – numer miesiąca.
-
-### Dane wyjściowe
-
-- Liczba dni w miesiącu lub komunikat o błędzie.
+Jedna linia: nazwa dnia lub komunikat o błędzie.
 
 ### Przykład
 
-**Przykład 1:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  1
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  31
-  ```
+```
+8
+```
 
-**Przykład 2:**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  28
-  ```
-
-**Przykład 3:**
-
-- **Dane wejściowe**:
-  ```
-  13
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Niepoprawny numer miesiąca.
-  ```
-
-### Wskazówki
-
-- Miesiące i liczba ich dni:
-  - Styczeń (1): 31
-  - Luty (2): 28
-  - Marzec (3): 31
-  - Kwiecień (4): 30
-  - Maj (5): 31
-  - Czerwiec (6): 30
-  - Lipiec (7): 31
-  - Sierpień (8): 31
-  - Wrzesień (9): 30
-  - Październik (10): 31
-  - Listopad (11): 30
-  - Grudzień (12): 31
-- Możesz użyć listy lub słownika do przechowywania liczby dni w poszczególnych miesiącach.
+```
+Niepoprawny numer dnia tygodnia.
+```
 
 ---
 
-## Zadanie 6 - Sprawdzanie poprawności daty
+## ZAD-05 — Liczba dni w miesiącu (rok nieprzestępny)
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `if`, `tablice`, `walidacja`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanej daty (dzień, miesiąc, rok) sprawdza, czy jest ona **poprawną datą** w kalendarzu gregoriańskim.
+Wczytaj numer miesiąca `m`. Zakładając rok **nieprzestępny**, wypisz liczbę dni w tym miesiącu.
+Jeśli `m` nie jest w zakresie 1–12, wypisz:
+`Niepoprawny numer miesiąca.`
 
-Program powinien wypisać odpowiedni komunikat:
+### Wejście
 
-- Jeśli data jest poprawna, wypisz: **"Data jest poprawna."**
-- Jeśli data jest niepoprawna, wypisz: **"Data jest niepoprawna."**
+* 1 linia: `m` (liczba całkowita, `m ≥ 0`)
 
-### Dane wejściowe
+### Wyjście
 
-- Trzy liczby naturalne:
-  1. Dzień (1–31)
-  2. Miesiąc (1–12)
-  3. Rok (np. 2020)
-
-### Dane wyjściowe
-
-- Jeden komunikat tekstowy.
+* liczba dni (jedna linia) **albo**
+* komunikat o błędzie (jedna linia)
 
 ### Przykład
 
-**Przykład 1:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  29
-  2
-  2020
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Data jest poprawna.
-  ```
+```
+2
+```
 
-**Przykład 2:**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  31
-  4
-  2021
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Data jest niepoprawna.
-  ```
-
-### Wskazówki
-
-- Sprawdź, czy miesiąc jest w zakresie 1–12.
-- Ustal, ile dni ma dany miesiąc (pamiętaj o roku przestępnym dla lutego).
-- Sprawdź, czy dzień mieści się w zakresie 1–maksymalna liczba dni w miesiącu.
-- Rok przestępny ustal zgodnie z zasadami z **Zadania 3**.
+```
+28
+```
 
 ---
 
-## Zadanie 7 - Obliczanie liczby dni od początku roku
+## ZAD-06 — Sprawdzanie poprawności daty
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `walidacja`, `przestępny`, `if`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanej daty (dzień, miesiąc, rok) obliczy, ile dni minęło od początku tego roku do podanej daty **włącznie**.
+Wczytaj `d, m, y` i sprawdź, czy jest to poprawna data w kalendarzu gregoriańskim.
 
-### Dane wejściowe
+Wypisz:
 
-- Trzy liczby naturalne:
-  1. Dzień (1–31)
-  2. Miesiąc (1–12)
-  3. Rok (np. 2021)
+* `Data jest poprawna.`
+* `Data jest niepoprawna.`
 
-### Dane wyjściowe
+### Wejście
 
-- Jedna liczba naturalna – liczba dni od początku roku.
+3 liczby całkowite (w osobnych liniach):
+
+1. `d` — dzień
+2. `m` — miesiąc
+3. `y` — rok
+
+### Wyjście
+
+Jedna linia — komunikat.
+
+### Ograniczenia / gwarancje
+
+* `y ≥ 0` (lub `y ≥ 1`, jeśli tak chcesz przyjąć — ważne, by było spójnie w całym zbiorze)
+
+### Reguły walidacji
+
+1. `m` musi być w zakresie 1–12
+2. Ustal liczbę dni w miesiącu:
+
+   * 31: 1,3,5,7,8,10,12
+   * 30: 4,6,9,11
+   * luty: 28 lub 29 (zależnie od przestępności roku)
+3. `d` musi być w zakresie 1–dni_w_miesiącu
 
 ### Przykład
 
-**Przykład 1:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  14
-  2
-  1482
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  45
-  ```
+```
+31
+4
+2021
+```
 
-**Przykład 2:**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  1
-  1
-  2021
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  1
-  ```
-
-### Wskazówki
-
-- Utwórz listę z liczbą dni w poszczególnych miesiącach.
-- Jeśli rok jest przestępny, luty ma 29 dni, w przeciwnym razie 28 dni.
-- Zsumuj dni pełnych miesięcy, które minęły, oraz dodaj dzień z aktualnego miesiąca.
-- Przykład obliczeń dla daty 14.02.1482:
-  - Styczeń: 31 dni
-  - Luty: 14 dni
-  - Suma: 31 + 14 = 45 dni
+```
+Data jest niepoprawna.
+```
 
 ---
 
-## Zadanie 8 - Obliczanie dnia tygodnia dla podanej daty
+## ZAD-07 — Dzień roku (liczba dni od 1 stycznia, włącznie)
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sumowanie`, `tablice`, `przestępny`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanej daty (dzień, miesiąc, rok) wyznaczy, jaki to **dzień tygodnia**.
+Wczytaj datę `d, m, y` i oblicz numer dnia w roku, tzn. ile dni minęło od 1 stycznia do tej daty **włącznie**.
 
-**Użyj wzoru** Zeller's Congruence (dla kalendarza gregoriańskiego):
+### Wejście
 
-1. Jeśli miesiąc jest mniejszy niż 3 (styczeń lub luty), dodaj 12 do miesiąca i odejmij 1 od roku:
+3 liczby całkowite (w osobnych liniach): `d`, `m`, `y`
 
-   ```
-   Jeśli miesiąc <= 2:
-       miesiąc += 12
-       rok -= 1
-   ```
+### Wyjście
 
-2. Oblicz wartości pomocnicze:
+Jedna liczba całkowita: numer dnia w roku.
 
-   ```
-   K = rok % 100
-   J = rok // 100
-   h = (dzień + ((13 * (miesiąc + 1)) // 5) + K + (K // 4) + (J // 4) + (5 * J)) % 7
-   ```
+### Ograniczenia / gwarancje
 
-3. Dzień tygodnia to:
+* Podana data jest poprawna (nie musisz jej sprawdzać), **albo** możesz jawnie napisać: „jeśli data jest niepoprawna, zachowanie nieokreślone”.
 
-   - 0: Sobota
-   - 1: Niedziela
-   - 2: Poniedziałek
-   - 3: Wtorek
-   - 4: Środa
-   - 5: Czwartek
-   - 6: Piątek
-
-### Dane wejściowe
-
-- Trzy liczby naturalne:
-  1. Dzień (1–31)
-  2. Miesiąc (1–12)
-  3. Rok (np. 2020)
-
-### Dane wyjściowe
-
-- Nazwa dnia tygodnia odpowiadającego podanej dacie.
+  * (Najczyściej: dać gwarancję poprawności.)
 
 ### Przykład
 
-**Przykład:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  9
-  10
-  2020
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Piątek
-  ```
+```
+14
+2
+1482
+```
 
-### Wskazówki
+**Wyjście:**
 
-- Przy obliczeniach używaj dzielenia całkowitoliczbowego `//` i operacji modulo `%`.
-- Po obliczeniu wartości `h`, zmapuj ją na nazwę dnia tygodnia według podanej tabeli.
-- Upewnij się, że data jest poprawna (możesz wykorzystać rozwiązanie z **Zadania 6**).
+```
+45
+```
 
 ---
+
+## ZAD-08 — Dzień tygodnia dla daty (Zeller)
+
+**Poziom:** ★★☆
+**Tagi:** `algorytmy`, `Zeller`, `mapowanie`, `daty`
+
+### Treść
+
+Wczytaj datę `d, m, y` i wyznacz nazwę dnia tygodnia, używając **kongruencji Zellera** dla kalendarza gregoriańskiego.
+
+Kroki:
+
+1. Jeśli `m <= 2`, to:
+
+* `m = m + 12`
+* `y = y - 1`
+
+2. Oblicz:
+
+* `K = y % 100`
+* `J = y // 100`
+* `h = (d + (13*(m+1))//5 + K + K//4 + J//4 + 5*J) % 7`
+
+3. Zmapuj `h` na dzień tygodnia:
+
+* 0 → `Sobota`
+* 1 → `Niedziela`
+* 2 → `Poniedziałek`
+* 3 → `Wtorek`
+* 4 → `Środa`
+* 5 → `Czwartek`
+* 6 → `Piątek`
+
+### Wejście
+
+3 liczby całkowite (w osobnych liniach): `d`, `m`, `y`
+
+### Wyjście
+
+Jedna linia: nazwa dnia tygodnia (dokładnie jedna z: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota, Niedziela).
+
+### Ograniczenia / gwarancje
+
+* Data wejściowa jest poprawna (zalecane; inaczej dopisz, co robić dla błędnej).
+* Kalendarz gregoriański.
+
+### Przykład
+
+**Wejście:**
+
+```
+9
+10
+2020
+```
+
+**Wyjście:**
+
+```
+Piątek
+```
