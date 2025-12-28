@@ -1,364 +1,382 @@
-# Pętla - Algorytmy Matematyczne
+# Rozdział: Pętla — Algorytmy Matematyczne
 
-## Zadanie 1 - Obliczanie średniej z n liczb
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem / ćwiczeniem funkcji.**
 
-**Poziom trudności**: ★☆☆
+**Konwencje wspólne:**
 
-### Treść zadania
-
-Napisz funkcję, która dla podanej liczby \( n \) poprosi użytkownika o podanie \( n \) liczb i zwróci ich średnią arytmetyczną.
-
-### Dane wejściowe
-
-- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
-- Następnie \( n \) liczb (mogą być całkowite lub zmiennoprzecinkowe), wprowadzonych przez użytkownika.
-
-### Dane wyjściowe
-
-- Jedna liczba zmiennoprzecinkowa – średnia arytmetyczna podanych \( n \) liczb.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  2
-  4
-  6
-  ```
-- **Wywołanie funkcji**:
-  ```python
-  wynik = oblicz_srednia()
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5.0
-  ```
-  *(Ponieważ \( \frac{4 + 6}{2} = 5.0 \).)*
-
-### Wskazówki
-
-- Upewnij się, że \( n \) jest liczbą naturalną większą od zera.
-- Możesz użyć pętli do wczytywania \( n \) liczb od użytkownika.
-- Sumuj podane liczby i na końcu podziel sumę przez \( n \), aby uzyskać średnią.
-- Zwróć uwagę, że średnia może nie być liczbą całkowitą, więc wynik powinien być typu zmiennoprzecinkowego.
+* Jeśli zadanie mówi „napisz funkcję” — implementujesz funkcję o podanej nazwie i zwracasz wynik przez `return`.
+* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
+* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.
+* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem.
 
 ---
 
-## Zadanie 2 - Potęgowanie liczby przy pomocy pętli
+## ZAD-01 — Obliczanie średniej z n liczb
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `suma`, `średnia`, `float`
 
-### Treść zadania
+### Treść
 
-Napisz funkcję, która dla podanych dwóch liczb naturalnych \( a \) i \( b \) obliczy wartość \( a^b \) (czyli \( a \) podniesione do potęgi \( b \)) przy użyciu pętli.
+Napisz funkcję `oblicz_srednia()`, która:
 
-### Dane wejściowe
+1. Wczytuje liczbę naturalną `n` (`n ≥ 1`).
+2. Wczytuje następnie `n` liczb (całkowitych lub zmiennoprzecinkowych).
+3. Zwraca ich średnią arytmetyczną.
 
-- Dwie liczby naturalne:
-  - \( a \) – podstawa potęgi.
-  - \( b \) – wykładnik potęgi (\( b \geq 0 \)).
+### Wejście
 
-### Dane wyjściowe
+* 1. linia: `n` (`n ≥ 1`)
+* kolejne `n` linii: liczby (int lub float)
 
-- Jedna liczba naturalna – wynik potęgowania \( a^b \).
+### Wyjście
 
-### Przykład
-
-- **Wywołanie funkcji**:
-  ```python
-  wynik = potega(3, 5)
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  243
-  ```
-  *(Ponieważ \( 3^5 = 243 \).)*
-
-### Wskazówki
-
-- Upewnij się, że wykładnik \( b \) jest liczbą naturalną (może być zero).
-- Rozpocznij z wynikiem równym 1 i w pętli pomnóż go \( b \) razy przez \( a \).
-- Jeśli \( b = 0 \), wynik powinien być równy 1 (każda liczba do potęgi zerowej wynosi 1).
-
----
-
-## Zadanie 3 - Mnożenie i dzielenie przy pomocy pętli
-
-**Poziom trudności**: ★☆☆
-
-### Treść zadania
-
-Napisz funkcję, która dla podanych dwóch liczb naturalnych \( a \) i \( b \) obliczy:
-
-a) **Iloczyn** tych liczb przy użyciu jedynie dodawania oraz pętli.
-
-b) **Iloraz całkowity** liczby \( a \) przez liczbę \( b \) przy użyciu jedynie odejmowania oraz pętli.
-
-### Dane wejściowe
-
-- Dwie liczby naturalne \( a \) i \( b \), przy czym dla podpunktu b) \( b \neq 0 \).
-
-### Dane wyjściowe
-
-- **Podpunkt a):** Jedna liczba naturalna – iloczyn \( a \times b \).
-- **Podpunkt b):** Jedna liczba naturalna – iloraz całkowity \( a // b \).
+Funkcja zwraca jedną liczbę zmiennoprzecinkową — średnią arytmetyczną.
 
 ### Przykład
 
-**Dla liczb \( a = 3 \) i \( b = 2 \):**
+**Wejście:**
 
-- **Podpunkt a):**
+```
+2
+4
+6
+```
 
-  - **Wywołanie funkcji**:
-    ```python
-    wynik = iloczyn(3, 2)
-    ```
-  - **Oczekiwane wyjście**:
-    ```
-    6
-    ```
+**Wywołanie funkcji:**
 
-- **Podpunkt b):**
+```python
+wynik = oblicz_srednia()
+print(wynik)
+```
 
-  - **Wywołanie funkcji**:
-    ```python
-    wynik = iloraz(3, 2)
-    ```
-  - **Oczekiwane wyjście**:
-    ```
-    1
-    ```
+**Wyjście:**
 
-### Wskazówki
+```
+5.0
+```
 
-- **Podpunkt a):**
-  - Zainicjuj zmienną wynikową na 0.
-  - Wykonaj pętlę \( b \) razy, w każdej iteracji dodając \( a \) do wyniku.
-- **Podpunkt b):**
-  - Zainicjuj licznik na 0.
-  - W pętli odejmuj od \( a \) wartość \( b \), zwiększając licznik o 1 za każdym razem, aż \( a \) będzie mniejsze od \( b \).
-  - Wynikiem jest wartość licznika.
-- Pamiętaj o obsłudze przypadku dzielenia przez zero – jeśli \( b = 0 \), funkcja powinna zwrócić komunikat o błędzie lub obsłużyć wyjątek.
+### Uwagi o formatowaniu
+
+* Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`).
 
 ---
 
-## Zadanie 4 - Obliczanie silni liczby
+## ZAD-02 — Potęgowanie liczby przy pomocy pętli
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `potęgowanie`, `mnożenie`
 
-### Treść zadania
+### Treść
 
-Napisz funkcję, która oblicza **silnię** podanej liczby naturalnej \( n \) przy użyciu pętli.
+Napisz funkcję `potega(a, b)`, która oblicza `a^b` przy użyciu pętli (bez operatora potęgowania).
 
-Silnia liczby \( n \) (oznaczana jako \( n! \)) jest iloczynem wszystkich liczb naturalnych od 1 do \( n \):
+### Wejście
 
-\[
-n! = 1 \times 2 \times 3 \times \ldots \times n
-\]
+Dwa argumenty funkcji:
 
-Przyjmij, że \( 0! = 1 \).
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna, `b ≥ 0`)
 
-### Dane wejściowe
+### Wyjście
 
-- Jedna liczba naturalna \( n \) (\( n \geq 0 \)).
-
-### Dane wyjściowe
-
-- Jedna liczba naturalna – wartość \( n! \).
+Funkcja zwraca jedną liczbę naturalną — wartość `a^b`.
 
 ### Przykład
 
-- **Wywołanie funkcji**:
-  ```python
-  wynik = silnia(3)
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  6
-  ```
-  *(Ponieważ \( 3! = 1 \times 2 \times 3 = 6 \).)*
+**Wywołanie funkcji:**
 
-### Wskazówki
+```python
+print(potega(3, 5))
+```
 
-- Zainicjuj zmienną wynikową na 1.
-- Użyj pętli do mnożenia kolejnych liczb od 1 do \( n \).
-- Upewnij się, że funkcja poprawnie obsługuje przypadek \( n = 0 \).
+**Wyjście:**
+
+```
+243
+```
+
+### Uwagi o formatowaniu
+
+* Dla `b = 0` wynik ma wynosić `1`.
 
 ---
 
-## Zadanie 5 - Obliczanie największego wspólnego dzielnika (NWD)
+## ZAD-03A — Mnożenie przy pomocy dodawania
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `dodawanie`, `mnożenie`
 
-### Treść zadania
+### Treść
 
-Napisz funkcję, która dla podanych dwóch liczb naturalnych \( a \) i \( b \) zwraca ich **największy wspólny dzielnik (NWD)**.
+Napisz funkcję `iloczyn(a, b)`, która oblicza `a * b` używając **tylko dodawania** i pętli.
 
-### Dane wejściowe
+### Wejście
 
-- Dwie liczby naturalne \( a \) i \( b \), przy czym \( a > 0 \) i \( b > 0 \).
+Dwa argumenty funkcji:
 
-### Dane wyjściowe
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna, `b ≥ 0`)
 
-- Jedna liczba naturalna – NWD liczb \( a \) i \( b \).
+### Wyjście
+
+Funkcja zwraca jedną liczbę naturalną — `a * b`.
 
 ### Przykład
 
-- **Wywołanie funkcji**:
-  ```python
-  wynik = nwd(60, 45)
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  15
-  ```
-  *(Ponieważ największy wspólny dzielnik 60 i 45 to 15.)*
+**Wywołanie funkcji:**
 
-### Wskazówki
+```python
+print(iloczyn(3, 2))
+```
 
-- Możesz użyć **Algorytmu Euklidesa**:
-  - Dopóki \( b \neq 0 \), wykonuj operacje:
-    - \( c = a \mod b \)
-    - \( a = b \)
-    - \( b = c \)
-  - Gdy \( b = 0 \), NWD jest równe \( a \).
-- Upewnij się, że funkcja działa poprawnie niezależnie od tego, która liczba jest większa.
+**Wyjście:**
+
+```
+6
+```
 
 ---
 
-## Zadanie 6 - Obliczanie najmniejszej wspólnej wielokrotności (NWW)
+## ZAD-03B — Dzielenie całkowite przy pomocy odejmowania
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `odejmowanie`, `dzielenie`
 
-### Treść zadania
+### Treść
 
-Napisz funkcję, która dla podanych dwóch liczb naturalnych \( a \) i \( b \) zwraca ich **najmniejszą wspólną wielokrotność (NWW)**.
+Napisz funkcję `iloraz(a, b)`, która oblicza `a // b` używając **tylko odejmowania** i pętli.
 
-### Dane wejściowe
+### Wejście
 
-- Dwie liczby naturalne \( a \) i \( b \), przy czym \( a > 0 \) i \( b > 0 \).
+Dwa argumenty funkcji:
 
-### Dane wyjściowe
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna)
 
-- Jedna liczba naturalna – NWW liczb \( a \) i \( b \).
+### Ograniczenia / gwarancje
+
+* `b > 0`
+
+### Wyjście
+
+Funkcja zwraca jedną liczbę naturalną — `a // b`.
 
 ### Przykład
 
-- **Wywołanie funkcji**:
-  ```python
-  wynik = nww(7, 9)
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  63
-  ```
-  *(Ponieważ najmniejsza wspólna wielokrotność 7 i 9 to 63.)*
+**Wywołanie funkcji:**
 
-### Wskazówki
+```python
+print(iloraz(3, 2))
+```
 
-- NWW można obliczyć za pomocą wzoru:
+**Wyjście:**
 
-  \[
-  \text{NWW}(a, b) = \frac{a \times b}{\text{NWD}(a, b)}
-  \]
-
-- Najpierw oblicz NWD liczb \( a \) i \( b \) (możesz użyć funkcji z **Zadania 5**).
-- Następnie oblicz NWW korzystając z powyższego wzoru.
+```
+1
+```
 
 ---
 
-## Zadanie 7 - Obliczanie pierwiastka metodą Newtona
+## ZAD-04 — Obliczanie silni liczby
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `silnia`, `mnożenie`
 
-### Treść zadania
+### Treść
 
-Napisz funkcję, która dla podanej liczby naturalnej \( n \) zwraca jej pierwiastek kwadratowy, obliczony przy użyciu **metody Newtona (Herona)**.
+Napisz funkcję `silnia(n)`, która zwraca `n!` obliczone przy użyciu pętli.
+Przyjmij, że `0! = 1`.
 
-Metoda Newtona do obliczania pierwiastka kwadratowego polega na iteracyjnym stosowaniu wzoru:
+### Wejście
 
-\[
-x_{k+1} = \frac{1}{2} \left( x_k + \frac{n}{x_k} \right)
-\]
+Jeden argument funkcji:
 
-Gdzie:
+* `n` (liczba naturalna, `n ≥ 0`)
 
-- \( x_0 \) – początkowe przybliżenie (możesz przyjąć \( x_0 = n \) lub \( x_0 = n/2 \)).
-- Proces iteracyjny kontynuujemy, aż do osiągnięcia zadanej dokładności (np. różnica między kolejnymi przybliżeniami jest mniejsza niż \( \epsilon = 0.0001 \)).
+### Wyjście
 
-### Dane wejściowe
-
-- Jedna liczba naturalna \( n \) (\( n \geq 0 \)).
-
-### Dane wyjściowe
-
-- Jedna liczba zmiennoprzecinkowa – przybliżona wartość pierwiastka kwadratowego z \( n \).
+Funkcja zwraca jedną liczbę naturalną — `n!`.
 
 ### Przykład
 
-- **Wywołanie funkcji**:
-  ```python
-  wynik = pierwiastek(16)
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  4.0
-  ```
-  *(Ponieważ \( \sqrt{16} = 4 \).)*
+**Wywołanie funkcji:**
 
-### Wskazówki
+```python
+print(silnia(3))
+```
 
-- Zainicjuj \( x_0 = n \) lub \( x_0 = n/2 \).
-- Użyj pętli `while` do iteracyjnego obliczania kolejnych przybliżeń.
-- Warunek zakończenia pętli może być oparty na różnicy między kolejnymi przybliżeniami (np. \( |x_{k+1} - x_k| < \epsilon \)).
-- Upewnij się, że funkcja działa poprawnie dla \( n = 0 \) i \( n = 1 \).
-- Wynik może być zaokrąglony do określonej liczby miejsc po przecinku, jeśli jest to wymagane.
+**Wyjście:**
+
+```
+6
+```
 
 ---
 
-## Zadanie 8 - Naiwny test pierwszości liczby
+## ZAD-05 — Największy wspólny dzielnik (NWD)
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `Euklides`, `modulo`, `pętle`
 
-### Treść zadania
+### Treść
 
-Napisz funkcję, która dla podanej liczby naturalnej \( n \) sprawdza, czy jest ona **liczbą pierwszą**.
+Napisz funkcję `nwd(a, b)`, która zwraca największy wspólny dzielnik dwóch liczb naturalnych.
 
-Liczba pierwsza to liczba naturalna większa od 1, która ma dokładnie dwa dzielniki: 1 i samą siebie.
+### Wejście
 
-### Dane wejściowe
+Dwa argumenty funkcji:
 
-- Jedna liczba naturalna \( n \) (\( n \geq 2 \)).
+* `a` (liczba naturalna, `a > 0`)
+* `b` (liczba naturalna, `b > 0`)
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna wartość logiczna (`True` lub `False`), wskazująca, czy liczba \( n \) jest pierwsza.
+Funkcja zwraca jedną liczbę naturalną — `NWD(a, b)`.
 
 ### Przykład
 
-- **Wywołanie funkcji**:
-  ```python
-  wynik = czy_pierwsza(7)
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  True
-  ```
+**Wywołanie funkcji:**
 
-- **Wywołanie funkcji**:
-  ```python
-  wynik = czy_pierwsza(4)
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  False
-  ```
+```python
+print(nwd(60, 45))
+```
 
-### Wskazówki
+**Wyjście:**
 
-- Możesz użyć prostego algorytmu polegającego na sprawdzaniu, czy \( n \) dzieli się bez reszty przez którąkolwiek liczbę naturalną od 2 do \( n - 1 \).
-- Aby zoptymalizować algorytm, możesz sprawdzać dzielniki tylko do \( \sqrt{n} \).
-- Jeśli znajdziesz choć jeden dzielnik różny od 1 i \( n \), liczba nie jest pierwsza.
-- Upewnij się, że funkcja zwraca `False` dla \( n = 1 \), ponieważ 1 nie jest liczbą pierwszą.
+```
+15
+```
 
 ---
+
+## ZAD-06 — Najmniejsza wspólna wielokrotność (NWW)
+
+**Poziom:** ★☆☆
+**Tagi:** `nww`, `nwd`, `arytmetyka`
+
+### Treść
+
+Napisz funkcję `nww(a, b)`, która zwraca najmniejszą wspólną wielokrotność liczb `a` i `b`.
+
+### Wejście
+
+Dwa argumenty funkcji:
+
+* `a` (liczba naturalna, `a > 0`)
+* `b` (liczba naturalna, `b > 0`)
+
+### Wyjście
+
+Funkcja zwraca jedną liczbę naturalną — `NWW(a, b)`.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(nww(7, 9))
+```
+
+**Wyjście:**
+
+```
+63
+```
+
+### Ograniczenia / gwarancje
+
+* Możesz użyć zależności: `NWW(a, b) = (a * b) // NWD(a, b)`.
+
+---
+
+## ZAD-07 — Pierwiastek metodą Newtona (Herona)
+
+**Poziom:** ★★☆
+**Tagi:** `Newton`, `float`, `pętle`, `dokładność`
+
+### Treść
+
+Napisz funkcję `pierwiastek(n)`, która dla `n ≥ 0` zwraca przybliżenie `sqrt(n)` metodą Newtona:
+
+[
+x_{k+1} = \frac{1}{2}\left(x_k + \frac{n}{x_k}\right)
+]
+
+Iteruj do momentu, aż:
+[
+|x_{k+1} - x_k| < 0.0001
+]
+
+### Wejście
+
+Jeden argument funkcji:
+
+* `n` (liczba naturalna, `n ≥ 0`)
+
+### Wyjście
+
+Funkcja zwraca jedną liczbę zmiennoprzecinkową — przybliżony pierwiastek z `n`.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(pierwiastek(16))
+```
+
+**Wyjście:**
+
+```
+4.0
+```
+
+### Ograniczenia / gwarancje
+
+* Dla `n = 0` funkcja ma zwrócić `0.0`.
+
+---
+
+## ZAD-08 — Naiwny test pierwszości liczby
+
+**Poziom:** ★★☆
+**Tagi:** `pierwszość`, `pętle`, `dzielniki`
+
+### Treść
+
+Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.
+
+### Wejście
+
+Jeden argument funkcji:
+
+* `n` (liczba naturalna, `n ≥ 2`)
+
+### Wyjście
+
+Funkcja zwraca wartość logiczną:
+
+* `True` lub `False`
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(czy_pierwsza(7))
+print(czy_pierwsza(4))
+```
+
+**Wyjście:**
+
+```
+True
+False
+```
+
+### Uwagi
+
+* Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.
+* Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`.
