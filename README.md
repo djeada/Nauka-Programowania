@@ -3,90 +3,1342 @@
 <a href="https://github.com/djeada/Nauka-programowania/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/djeada/Nauka-programowania"></a>
 <a href="https://github.com/djeada/Nauka-programowania/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/djeada/Nauka-programowania"></a>
 <a href=""><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
+<img alt="Języki" src="https://img.shields.io/badge/języki-7-blue">
+<img alt="Zadania" src="https://img.shields.io/badge/zadania-200%2B-green">
 </div>
 
-# Nauka Programowania
+# 🚀 Nauka Programowania - Kompleksowy Kurs
 
-Witaj w świecie programowania! Jeśli zastanawiasz się, od czego zacząć, to jesteś w idealnym miejscu. Ten projekt oferuje ciąg zadań, które przeprowadzą Cię przez kluczowe koncepcje potrzebne do zrozumienia programowania, od podstaw aż do bardziej zaawansowanych tematów.
+> **Witaj w świecie programowania!** 🎉 To nie jest zwykły zbiór zadań - to kompletna ścieżka rozwoju, która przekształci Cię z początkującego w pewnego siebie programistę!
 
 ![nauka_programowania](https://github.com/user-attachments/assets/64fb3baa-c080-45c0-bb8f-abb612581f18)
 
-## Gdzie mogę znaleźć dodatkowe materiały do nauki?
+---
 
-Oferujemy też szeroki wybór dodatkowych materiałów, takich jak notatki i poradniki dotyczące Pythona i C++, które są dostępne na naszych stronach GitHub:
+## 🎯 Dlaczego ten kurs?
 
-* [Notatki Python](https://github.com/djeada/Kurs-podstaw-Pythona)
-* [Notatki C++](https://github.com/djeada/C-and-Cpp)
+### ✨ Co sprawia, że jesteśmy wyjątkowi?
 
-## Zbiór zadań
-
-Nasz zbiór zadań to bogate źródło wiedzy:
-
-* [Zbiór zadań](https://github.com/djeada/Nauka-Programowania/tree/master/zbior_zadan)
-* Zbiór jest regularnie poszerzany i aktualizowany.
-* Informacje o dodawaniu własnych rozwiązań znajdziesz [tutaj](https://github.com/djeada/Nauka-Programowania/blob/master/CONTRIBUTING.md).
-
-### Generowanie PDF
-
-Możesz wygenerować profesjonalny PDF ze wszystkimi zadaniami:
-
-```bash
-# Zainstaluj wymagane biblioteki
-pip install weasyprint markdown2 pygments
-
-# Wygeneruj PDF
-python3 scripts/generate_pdf.py
+```
+🌟 200+ praktycznych zadań          📚 7 języków programowania
+💡 Od podstaw do zaawansowanych     🎓 Struktura akademicka
+🔄 Regularnie aktualizowane         🤝 Otwarta społeczność
+✅ Przykładowe rozwiązania          🌍 Darmowy dostęp dla każdego
 ```
 
-Skrypt utworzy plik `Nauka_Programowania_Zbior_Zadan.pdf` zawierający wszystkie 25 rozdziałów w czystym, profesjonalnym formacie. PDF zawiera stronę tytułową, spis treści, oraz wszystkie zadania z odpowiednim formatowaniem kodu, tabel i wzorów matematycznych.
+### 🎓 Dla kogo jest ten kurs?
 
-## O zadaniach
+<table>
+<tr>
+<td width="33%">
 
-Zadania są podzielone tematycznie i ułożone według stopnia trudności, aby każdy mógł ćwiczyć podstawowe koncepcje programowania:
+**🌱 Początkujący**
+- Nigdy nie programowałeś?
+- Zaczynasz od zera?
+- Idealnie! Zaczynamy od podstaw.
 
-1. **Podstawy (Rozdziały 1-8):** Zmienne, warunki, pętle. Rozwiązania sprawdzane są ręcznie przez interakcję z konsolą.
-2. **Poziom średnio zaawansowany (Rozdziały 9-17):** Struktury danych, rekurencja, binarna reprezentacja liczb. Wymagają automatycznych testów i uwzględnienia skrajnych przypadków.
-3. **Zaawansowane (Rozdziały 18-25):** Praca z plikami, algorytmy sortowania, obsługa błędów. Wymagają głębszej wiedzy i narzędzi takich jak debugowanie.
+</td>
+<td width="33%">
 
-Przykładowe rozwiązania służą jako wskazówki i często prezentują różne podejścia do rozwiązania problemów.
+**📈 Średniozaawansowani**
+- Znasz podstawy?
+- Chcesz uporządkować wiedzę?
+- Znajdziesz tu wyzwania!
 
-## Wspierane wersje języków
+</td>
+<td width="33%">
 
-Przykłady zostały przetestowane w różnych wersjach języków:
+**🚀 Zaawansowani**
+- Powtórka przed rozmową?
+- Trening przed olimpiadą?
+- Mamy trudne zadania!
 
-### C++
-- Standard: C++11, C++17, C++20.
-- Kompilacja: `g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o plik_wykonwyalny.out sciezka_do_zadania.cpp`.
-- Formatowanie: `clang-format -i -style=file sciezka_do_zadania.cpp`.
+</td>
+</tr>
+</table>
 
-### Python
-- Wersja:`3.10`.
-- Uruchomienie: `python3 sciezka_do_zadania.py`.
-- Formatowanie: `black sciezka_do_zadania.py`.
+### 🎁 Co zyskasz?
 
-### Java
-- Wersja: `Java SE 18`.
-- Kompilacja: `javac -d . sciezka_do_zadania.java`.
-- Formatowanie: `java -jar google-java-format-1.7-all-deps.jar sciezka_do_zadania.java`.
+| 💪 Umiejętność | 📝 Opis | 🎯 Zastosowanie |
+|---------------|---------|-----------------|
+| **Myślenie algorytmiczne** | Naucz się rozwiązywać problemy krok po kroku | Podstawa każdego programisty |
+| **7 języków programowania** | Python, C++, Java, JavaScript, Rust, Haskell, Bash | Szeroka perspektywa technologiczna |
+| **Struktury danych** | Listy, drzewa, grafy, słowniki | Efektywne rozwiązania |
+| **Algorytmy** | Sortowanie, wyszukiwanie, rekurencja | Optymalizacja i wydajność |
+| **Best practices** | Czysty kod, testowanie, debugging | Profesjonalne podejście |
 
-### JavaScript
-- Środowisko: `NodeJS 20.0.0`.
-- Uruchomienie: `node sciezka_do_zadania.js`.
-- Formatowanie: `eslint --fix sciezka_do_zadania.js` z konfiguracją `.eslintrc.json`.
+---
 
-### Haskell
-- Wersja: `GHC 9.2.1`.
-- Kompilacja: `ghc -o plik_wykonawczy.out sciezka_do_zadania.hs`.
-- Formatowanie: `ormolu --mode inplace sciezka_do_zadania.hs`.
+## 🗺️ Twoja ścieżka nauki
 
-### Rust
-- Wersja: `1.74.0`.
-- Kompilacja: `rustc sciezka_do_zadania.rs`.
-- Formatowanie: `rustfmt --write-mode=overwrite sciezka_do_zadania.rs`.
+```mermaid
+graph LR
+    A[🌱 Start] --> B[📝 Podstawy]
+    B --> C[🔄 Pętle i warunki]
+    C --> D[📊 Struktury danych]
+    D --> E[🎯 Algorytmy]
+    E --> F[🏆 Zaawansowane]
+    F --> G[💼 Projekty]
+```
 
-Nauka programowania to proces wymagający czasu i praktyki, ale z naszymi zasobami będziesz miał solidną podstawę do rozwoju umiejętności programistycznych. Jeśli masz pytania lub potrzebujesz pomocy, skontaktuj się z nami - z chęcią Ci pomożemy!
+### 📚 Struktura kursu (25 rozdziałów)
 
-## Rozwiązania
+<details>
+<summary>🟢 <strong>Poziom 1: Podstawy (Rozdziały 1-8)</strong> - Twoje pierwsze kroki</summary>
+
+**Czego się nauczysz:**
+- ✍️ Interakcja z konsolą (input/output)
+- ❓ Instrukcje warunkowe (if/else)
+- 📅 Praca z datami i czasem
+- 🔁 Pętle (for, while)
+- 🔢 Operacje na liczbach i cyfrach
+- 📐 Funkcje - podstawy
+- 🧮 Algorytmy matematyczne
+- 🔄 Pętle zagnieżdżone
+
+**Metoda weryfikacji:** Manualne testowanie przez konsolę
+
+</details>
+
+<details>
+<summary>🟡 <strong>Poziom 2: Średniozaawansowany (Rozdziały 9-17)</strong> - Budujemy fundament</summary>
+
+**Czego się nauczysz:**
+- 📋 Listy i tablice
+- 🔤 Operacje na napisach
+- 🎭 Anagramy i palindromy
+- 📊 Tablice dwuwymiarowe
+- 📈 Wielomiany i funkcje matematyczne
+- 🌀 Rekurencja
+- 💾 System binarny
+- 📖 Słowniki i hashmaps
+
+**Metoda weryfikacji:** Automatyczne testy, edge cases
+
+</details>
+
+<details>
+<summary>🔴 <strong>Poziom 3: Zaawansowany (Rozdziały 18-25)</strong> - Profesjonalne umiejętności</summary>
+
+**Czego się nauczysz:**
+- 🏗️ Klasy i obiekty (OOP)
+- 👨‍👩‍👧 Dziedziczenie i polimorfizm
+- 📁 Operacje na plikach
+- 🔄 Algorytmy sortowania
+- 🎯 Praktyczne sortowanie
+- 🔍 Wyrażenia regularne
+- 💪 Zaawansowane operacje na listach
+- 🧵 Złożone operacje na napisach
+
+**Metoda weryfikacji:** Kompleksowe testy, debugowanie, profiling
+
+</details>
+
+---
+
+## 🛠️ Wsparcie dla 7 języków programowania
+
+Każde zadanie jest dostępne w 7 popularnych językach! Wybierz swój ulubiony lub naucz się wszystkich:
+
+<table>
+<tr>
+<td align="center" width="14.28%">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="60" height="60" alt="Python"/><br/>
+<b>Python 3.10+</b><br/>
+<sub>Prosty i czytelny</sub>
+</td>
+<td align="center" width="14.28%">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" width="60" height="60" alt="C++"/><br/>
+<b>C++ 20</b><br/>
+<sub>Wydajny i potężny</sub>
+</td>
+<td align="center" width="14.28%">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="60" height="60" alt="Java"/><br/>
+<b>Java SE 18</b><br/>
+<sub>Stabilny i uniwersalny</sub>
+</td>
+<td align="center" width="14.28%">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="60" height="60" alt="JavaScript"/><br/>
+<b>Node.js 20</b><br/>
+<sub>Web i więcej</sub>
+</td>
+<td align="center" width="14.28%">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" width="60" height="60" alt="Rust"/><br/>
+<b>Rust 1.74</b><br/>
+<sub>Bezpieczny i szybki</sub>
+</td>
+<td align="center" width="14.28%">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/haskell/haskell-original.svg" width="60" height="60" alt="Haskell"/><br/>
+<b>Haskell GHC 9.2</b><br/>
+<sub>Funkcyjny i elegancki</sub>
+</td>
+<td align="center" width="14.28%">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" width="60" height="60" alt="Bash"/><br/>
+<b>Bash</b><br/>
+<sub>Skrypty i automatyzacja</sub>
+</td>
+</tr>
+</table>
+
+### 💻 Szybki start z każdym językiem
+
+<details>
+<summary><b>🐍 Python</b> - Najlepszy dla początkujących</summary>
+
+**Instalacja:**
+```bash
+# Linux/Mac (zwykle preinstalowany)
+python3 --version
+
+# Windows - pobierz z python.org
+```
+
+**Uruchomienie:**
+```bash
+python3 sciezka_do_zadania.py
+```
+
+**Formatowanie:**
+```bash
+pip install black
+black sciezka_do_zadania.py
+```
+
+**Dlaczego Python?**
+- ✅ Najprostsza składnia
+- ✅ Ogromna społeczność
+- ✅ Świetny do nauki
+- ✅ Data Science, AI, Web
+
+</details>
+
+<details>
+<summary><b>⚡ C++</b> - Dla ambitnych</summary>
+
+**Instalacja:**
+```bash
+# Linux
+sudo apt-get install g++
+
+# Mac
+xcode-select --install
+
+# Windows - MinGW lub Visual Studio
+```
+
+**Kompilacja i uruchomienie:**
+```bash
+g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o program zadanie.cpp
+./program
+```
+
+**Formatowanie:**
+```bash
+clang-format -i -style=file zadanie.cpp
+```
+
+**Dlaczego C++?**
+- ✅ Najszybszy język
+- ✅ Pełna kontrola
+- ✅ Gry, systemy, embedded
+- ✅ Olimpiady programistyczne
+
+</details>
+
+<details>
+<summary><b>☕ Java</b> - Dla przyszłości enterprise</summary>
+
+**Instalacja:**
+```bash
+# Sprawdź czy masz JDK
+java -version
+javac -version
+
+# Pobierz JDK 18+ z oracle.com lub adoptium.net
+```
+
+**Kompilacja i uruchomienie:**
+```bash
+javac -d . zadanie.java
+java NazwaKlasy
+```
+
+**Formatowanie:**
+```bash
+java -jar google-java-format-1.7-all-deps.jar zadanie.java
+```
+
+**Dlaczego Java?**
+- ✅ Wieloplatformowość
+- ✅ Duży rynek pracy
+- ✅ Android, Backend
+- ✅ Silne typowanie
+
+</details>
+
+<details>
+<summary><b>🌐 JavaScript</b> - Król internetu</summary>
+
+**Instalacja:**
+```bash
+# Zainstaluj Node.js z nodejs.org
+node --version
+npm --version
+```
+
+**Uruchomienie:**
+```bash
+node zadanie.js
+```
+
+**Formatowanie:**
+```bash
+npm install -g eslint
+eslint --fix zadanie.js
+```
+
+**Dlaczego JavaScript?**
+- ✅ Frontend i Backend
+- ✅ Najpopularniejszy język web
+- ✅ React, Vue, Angular
+- ✅ Full-stack development
+
+</details>
+
+<details>
+<summary><b>🦀 Rust</b> - Przyszłość system programming</summary>
+
+**Instalacja:**
+```bash
+# Linux/Mac/Windows
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+**Kompilacja i uruchomienie:**
+```bash
+rustc zadanie.rs
+./zadanie
+```
+
+**Formatowanie:**
+```bash
+rustfmt zadanie.rs
+```
+
+**Dlaczego Rust?**
+- ✅ Memory safety bez GC
+- ✅ Rosnąca popularność
+- ✅ WebAssembly, systemy
+- ✅ Nowoczesne podejście
+
+</details>
+
+<details>
+<summary><b>🎩 Haskell</b> - Elegancja funkcyjna</summary>
+
+**Instalacja:**
+```bash
+# GHCup - uniwersalny instalator
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+```
+
+**Kompilacja i uruchomienie:**
+```bash
+ghc -o program zadanie.hs
+./program
+```
+
+**Formatowanie:**
+```bash
+ormolu --mode inplace zadanie.hs
+```
+
+**Dlaczego Haskell?**
+- ✅ Programowanie funkcyjne
+- ✅ Matematyczna elegancja
+- ✅ Silny system typów
+- ✅ Rozwój intelektualny
+
+</details>
+
+<details>
+<summary><b>🐚 Bash</b> - Potęga skryptów</summary>
+
+**Instalacja:**
+```bash
+# Linux/Mac - preinstalowany
+bash --version
+
+# Windows - WSL lub Git Bash
+```
+
+**Uruchomienie:**
+```bash
+bash zadanie.sh
+# lub
+chmod +x zadanie.sh
+./zadanie.sh
+```
+
+**Dlaczego Bash?**
+- ✅ Automatyzacja zadań
+- ✅ DevOps i CI/CD
+- ✅ Administracja systemami
+- ✅ Szybkie skrypty
+
+</details>
+
+---
+
+## 📖 Dodatkowe materiały do nauki
+
+Oferujemy szeroki wybór dodatkowych materiałów edukacyjnych:
+
+<table>
+<tr>
+<td width="50%">
+
+### 🐍 Python - Kompletny kurs
+[![Python Course](https://img.shields.io/badge/Kurs-Python-blue?style=for-the-badge&logo=python)](https://github.com/djeada/Kurs-podstaw-Pythona)
+
+**Co zawiera:**
+- 📚 Kompletne notatki teoretyczne
+- 💻 Przykłady praktyczne
+- 🎯 Projekty końcowe
+- 🔬 Data Science i AI
+
+</td>
+<td width="50%">
+
+### ⚡ C++ - Od podstaw do eksperta
+[![C++ Course](https://img.shields.io/badge/Kurs-C++-orange?style=for-the-badge&logo=cplusplus)](https://github.com/djeada/C-and-Cpp)
+
+**Co zawiera:**
+- 📖 Szczegółowe notatki
+- 🎓 Od C do C++20
+- 🚀 Zaawansowane tematy
+- 🏗️ Wzorce projektowe
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎯 Zbiór zadań - Serce kursu
+
+<div align="center">
+
+### 📊 Statystyki
+
+| 📚 Rozdziały | 📝 Zadania | 💻 Języki | ⭐ Poziomy trudności | 🔄 Aktualizacje |
+|:------------:|:----------:|:---------:|:--------------------:|:---------------:|
+| **25** | **200+** | **7** | **3** | **Cotygodniowe** |
+
+</div>
+
+### 🌟 Jak korzystać z zadań?
+
+```
+1️⃣ Wybierz rozdział odpowiadający Twojemu poziomowi
+2️⃣ Przeczytaj opis zadania w zbiorze zadań
+3️⃣ Spróbuj rozwiązać samodzielnie
+4️⃣ Sprawdź przykładowe rozwiązania w różnych językach
+5️⃣ Porównaj podejścia i naucz się różnych perspektyw
+```
+
+### 📚 Dostęp do zadań
+
+<table>
+<tr>
+<td width="50%" align="center">
+
+**📂 Zbiór zadań (opisy)**
+
+[![Zadania](https://img.shields.io/badge/Przeglądaj-Zadania-success?style=for-the-badge)](https://github.com/djeada/Nauka-Programowania/tree/master/zbior_zadan)
+
+Szczegółowe opisy wszystkich zadań<br/>
+z przykładami i wskazówkami
+
+</td>
+<td width="50%" align="center">
+
+**💾 Rozwiązania (kod)**
+
+[![Rozwiązania](https://img.shields.io/badge/Zobacz-Rozwiązania-blue?style=for-the-badge)](https://github.com/djeada/Nauka-Programowania/tree/master/src)
+
+Przykładowe implementacje<br/>
+w 7 językach programowania
+
+</td>
+</tr>
+</table>
+
+### 🤝 Dodaj swoje rozwiązania!
+
+Masz ciekawe rozwiązanie? Podziel się nim ze społecznością!
+
+[![Contribute](https://img.shields.io/badge/📖-Przeczytaj_Guide-green?style=for-the-badge)](https://github.com/djeada/Nauka-Programowania/blob/master/CONTRIBUTING.md)
+
+**Proces krok po kroku:**
+1. 🍴 Fork repozytorium
+2. 💻 Dodaj swoje rozwiązanie
+3. ✅ Sprawdź czy działa
+4. 📝 Stwórz Pull Request
+5. 🎉 Dołącz do społeczności kontrybutorów!
+
+---
+
+## 🎓 O zadaniach - Szczegółowy przewodnik
+
+### 📊 Poziomy trudności wyjaśnione
+
+| Poziom | Symbol | Zakres | Czas | Umiejętności |
+|--------|--------|--------|------|--------------|
+| **Łatwy** | ★☆☆ | Rozdziały 1-8 | 5-15 min | Podstawowa składnia, proste algorytmy |
+| **Średni** | ★★☆ | Rozdziały 9-17 | 15-45 min | Struktury danych, myślenie algorytmiczne |
+| **Trudny** | ★★★ | Rozdziały 18-25 | 45+ min | Zaawansowane algorytmy, optymalizacja |
+
+### 🎯 Szczegółowy breakdown poziomów
+
+<details>
+<summary><b>★☆☆ Poziom Podstawowy (Rozdziały 1-8)</b></summary>
+
+**Charakterystyka:**
+- 🎯 Zadania do 15 minut
+- 📝 Jasno określone wymagania
+- 💡 Jedno rozwiązanie na zadanie
+- ✅ Testowanie manualne
+
+**Przykładowe tematy:**
+- Interakcja z konsolą (print, input)
+- Proste operacje matematyczne
+- Instrukcje warunkowe (if-else)
+- Podstawowe pętle (for, while)
+- Operacje na zmiennych
+- Daty i czas
+
+**Idealne dla:**
+- Osób zaczynających przygodę z programowaniem
+- Uczniów szkół podstawowych i średnich
+- Wszystkich, którzy chcą poznać składnię języka
+
+</details>
+
+<details>
+<summary><b>★★☆ Poziom Średniozaawansowany (Rozdziały 9-17)</b></summary>
+
+**Charakterystyka:**
+- ⏱️ Zadania 15-45 minut
+- 🧩 Wymagają myślenia algorytmicznego
+- 🔍 Należy uwzględnić edge cases
+- ✅ Automatyczne testy
+
+**Przykładowe tematy:**
+- Listy i tablice (operacje, przeszukiwanie)
+- Napisy (manipulacja, parsowanie)
+- Anagramy i palindromy
+- Tablice wielowymiarowe
+- Funkcje matematyczne
+- Rekurencja (podstawy)
+- System binarny
+- Słowniki i mapy
+
+**Idealne dla:**
+- Osób znających podstawy programowania
+- Studentów informatyki (1-2 rok)
+- Kandydatów na junior developera
+
+</details>
+
+<details>
+<summary><b>★★★ Poziom Zaawansowany (Rozdziały 18-25)</b></summary>
+
+**Charakterystyka:**
+- 🕐 Zadania 45+ minut
+- 🧠 Złożone algorytmy
+- ⚡ Wymagana optymalizacja
+- 🔧 Debugowanie i profiling
+- ✅ Kompleksowe testy
+
+**Przykładowe tematy:**
+- Programowanie obiektowe (klasy, dziedziczenie)
+- Operacje na plikach
+- Algorytmy sortowania (bubble, quick, merge)
+- Wyrażenia regularne
+- Zaawansowane struktury danych
+- Problemy optymalizacyjne
+- Algorytmy z olimpiad programistycznych
+
+**Idealne dla:**
+- Programistów z doświadczeniem
+- Studentów wyższych lat informatyki
+- Kandydatów na stanowiska mid/senior
+- Uczestników olimpiad programistycznych
+
+</details>
+
+### 💡 Przykładowe rozwiązania
+
+**Dlaczego wiele rozwiązań?**
+
+Dla większości zadań znajdziesz kilka różnych podejść:
+
+| Podejście | Zalety | Przykład użycia |
+|-----------|--------|-----------------|
+| **Iteracyjne** | Prosty, czytelny | Początkujący, prosta logika |
+| **Rekurencyjne** | Elegancki, matematyczny | Problemy dziel-i-zwyciężaj |
+| **Funkcyjne** | Deklaratywny, zwięzły | Transformacje danych |
+| **Optymalne** | Najszybszy, efektywny | Duże zbiory danych |
+
+---
+
+## 🚀 Jak zacząć? - Przewodnik krok po kroku
+
+### 🌱 Dla absolutnych początkujących
+
+```
+Krok 1: Wybierz język 🎯
+         ↓
+         Python - najprostszy start!
+         
+Krok 2: Zainstaluj środowisko 💻
+         ↓
+         IDE: PyCharm Community / VS Code
+         
+Krok 3: Rozpocznij od Rozdziału 1 📚
+         ↓
+         01_interakcja_z_konsola
+         
+Krok 4: Rozwiązuj po kolei 📝
+         ↓
+         Nie przeskakuj zadań!
+         
+Krok 5: Sprawdź rozwiązania ✅
+         ↓
+         Porównaj ze swoim kodem
+         
+Krok 6: Eksperymentuj 🔬
+         ↓
+         Modyfikuj, testuj, ucz się!
+```
+
+### 📈 Dla średniozaawansowanych
+
+<table>
+<tr>
+<td width="50%">
+
+**🎯 Twój plan działania:**
+
+1. **Oceń swoją wiedzę**
+   - Przejrzyj rozdziały 1-8
+   - Rozwiąż kilka zadań testowych
+   - Określ swój poziom
+
+2. **Wybierz punkt startowy**
+   - Jeśli 80% jest łatwe → Start od r. 9
+   - Jeśli są luki → Uzupełnij braki
+
+3. **Ćwicz systematycznie**
+   - Minimum 3 zadania dziennie
+   - Różne poziomy trudności
+   - Różne języki (opcjonalnie)
+
+</td>
+<td width="50%">
+
+**💪 Wskazówki:**
+
+- ✅ Nie czytaj rozwiązania od razu
+- ✅ Próbuj kilku podejść
+- ✅ Mierz czas rozwiązania
+- ✅ Testuj edge cases
+- ✅ Optymalizuj kod
+- ✅ Dokumentuj rozwiązania
+- ✅ Dziel się z innymi
+
+</td>
+</tr>
+</table>
+
+### 🏆 Dla zaawansowanych
+
+**Wyzwania dla ekspertów:**
+
+1. **Multi-język challenge** 🌍
+   - Rozwiąż to samo zadanie w 3+ językach
+   - Porównaj wydajność
+   - Naucz się idiomów każdego języka
+
+2. **Optymalizacja** ⚡
+   - Znajdź najszybsze rozwiązanie
+   - Zmierz złożoność czasową i pamięciową
+   - Benchmark różnych podejść
+
+3. **Code review** 👥
+   - Recenzuj kod innych
+   - Sugeruj usprawnienia
+   - Dołącz do społeczności
+
+4. **Kontrybuuj** 🤝
+   - Dodaj nowe zadania
+   - Popraw istniejące rozwiązania
+   - Twórz tutoriale
+
+---
+
+## 🛠️ Narzędzia i środowisko pracy
+
+### 💻 Zalecane IDE
+
+<table>
+<tr>
+<td align="center" width="25%">
+
+**VS Code**<br/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="60"/><br/>
+Uniwersalny, lekki<br/>
+[Pobierz](https://code.visualstudio.com/)
+
+</td>
+<td align="center" width="25%">
+
+**PyCharm**<br/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pycharm/pycharm-original.svg" width="60"/><br/>
+Najlepszy dla Python<br/>
+[Pobierz](https://www.jetbrains.com/pycharm/)
+
+</td>
+<td align="center" width="25%">
+
+**IntelliJ IDEA**<br/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/intellij/intellij-original.svg" width="60"/><br/>
+Doskonały dla Java<br/>
+[Pobierz](https://www.jetbrains.com/idea/)
+
+</td>
+<td align="center" width="25%">
+
+**CLion**<br/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/clion/clion-original.svg" width="60"/><br/>
+Profesjonalny dla C++<br/>
+[Pobierz](https://www.jetbrains.com/clion/)
+
+</td>
+</tr>
+</table>
+
+### 🔧 Przydatne rozszerzenia (VS Code)
+
+```javascript
+// Python
+- Python (Microsoft)
+- Pylance
+- Python Docstring Generator
+
+// C++
+- C/C++ (Microsoft)
+- CMake Tools
+- C++ Intellisense
+
+// Java
+- Language Support for Java
+- Debugger for Java
+- Maven for Java
+
+// JavaScript
+- ESLint
+- Prettier
+- JavaScript (ES6) code snippets
+
+// Ogólne
+- GitLens
+- Live Share
+- Error Lens
+- Code Runner
+```
+
+### 🐛 Narzędzia do debugowania
+
+| Język | Narzędzie | Zastosowanie |
+|-------|-----------|--------------|
+| Python | `pdb`, PyCharm Debugger | Breakpointy, step-through |
+| C++ | `gdb`, `lldb` | Memory leaks, segfaults |
+| Java | IntelliJ Debugger | Stack traces, profiling |
+| JavaScript | Chrome DevTools, Node Inspector | Async debugging |
+
+---
+
+## 📊 Wspierane wersje języków - Szczegóły techniczne
+
+<table>
+<thead>
+<tr>
+<th width="12%">Język</th>
+<th width="15%">Wersja</th>
+<th width="35%">Kompilacja/Uruchomienie</th>
+<th width="38%">Formatowanie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>🐍 Python</b></td>
+<td><code>3.10+</code></td>
+<td><code>python3 sciezka_do_zadania.py</code></td>
+<td><code>black sciezka_do_zadania.py</code></td>
+</tr>
+<tr>
+<td><b>⚡ C++</b></td>
+<td><code>C++11/17/20</code></td>
+<td><code>g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra -pedantic -o plik.out zadanie.cpp</code></td>
+<td><code>clang-format -i -style=file zadanie.cpp</code></td>
+</tr>
+<tr>
+<td><b>☕ Java</b></td>
+<td><code>SE 18+</code></td>
+<td><code>javac -d . zadanie.java && java NazwaKlasy</code></td>
+<td><code>java -jar google-java-format.jar zadanie.java</code></td>
+</tr>
+<tr>
+<td><b>🌐 JavaScript</b></td>
+<td><code>Node.js 20+</code></td>
+<td><code>node sciezka_do_zadania.js</code></td>
+<td><code>eslint --fix zadanie.js</code></td>
+</tr>
+<tr>
+<td><b>🦀 Rust</b></td>
+<td><code>1.74.0+</code></td>
+<td><code>rustc zadanie.rs && ./zadanie</code></td>
+<td><code>rustfmt zadanie.rs</code></td>
+</tr>
+<tr>
+<td><b>🎩 Haskell</b></td>
+<td><code>GHC 9.2.1+</code></td>
+<td><code>ghc -o plik.out zadanie.hs && ./plik.out</code></td>
+<td><code>ormolu --mode inplace zadanie.hs</code></td>
+</tr>
+<tr>
+<td><b>🐚 Bash</b></td>
+<td><code>4.0+</code></td>
+<td><code>bash zadanie.sh</code> lub <code>./zadanie.sh</code></td>
+<td><code>shfmt -w zadanie.sh</code></td>
+</tr>
+</tbody>
+</table>
+
+### ⚙️ Konfiguracja środowiska
+
+<details>
+<summary><b>🐧 Linux (Ubuntu/Debian)</b></summary>
+
+```bash
+# Zainstaluj wszystkie narzędzia jedną komendą
+sudo apt update && sudo apt install -y \
+    python3 python3-pip \
+    g++ clang-format \
+    default-jdk \
+    nodejs npm \
+    rustc cargo \
+    ghc cabal-install \
+    bash
+
+# Python tools
+pip3 install black pylint
+
+# JavaScript tools
+npm install -g eslint prettier
+
+# Rust tools (alternatywnie przez rustup)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+</details>
+
+<details>
+<summary><b>🍎 macOS</b></summary>
+
+```bash
+# Użyj Homebrew
+brew install python3 gcc node rust ghc cabal-install
+
+# Python tools
+pip3 install black pylint
+
+# JavaScript tools
+npm install -g eslint prettier
+
+# Formatter tools
+brew install clang-format
+```
+
+</details>
+
+<details>
+<summary><b>🪟 Windows</b></summary>
+
+**Opcja 1: Menedżery pakietów**
+```powershell
+# Chocolatey
+choco install python3 mingw nodejs rust ghc
+
+# Lub Scoop
+scoop install python gcc nodejs rust ghc
+```
+
+**Opcja 2: Manualna instalacja**
+- Python: [python.org](https://www.python.org)
+- MinGW: [mingw-w64.org](http://mingw-w64.org)
+- Node.js: [nodejs.org](https://nodejs.org)
+- Rust: [rustup.rs](https://rustup.rs)
+- Haskell: [haskell.org](https://www.haskell.org/platform)
+
+**Opcja 3: WSL (Zalecane!)**
+```bash
+# Zainstaluj WSL2 i Ubuntu, potem użyj instrukcji dla Linux
+wsl --install
+```
+
+</details>
+
+---
+
+## ❓ FAQ - Najczęściej zadawane pytania
+
+<details>
+<summary><b>🤔 Od jakiego języka powinienem zacząć?</b></summary>
+
+**Dla większości osób: Python** 🐍
+
+**Dlaczego?**
+- ✅ Najprostsza składnia
+- ✅ Szybki feedback
+- ✅ Ogromna społeczność
+- ✅ Szeroka aplikacja (web, data science, AI)
+
+**Alternatywy:**
+- **JavaScript** - jeśli interesujesz się web developmentem
+- **C++** - jeśli planujesz olimpiady lub rozwój gier
+- **Java** - jeśli myślisz o Android lub enterprise
+
+</details>
+
+<details>
+<summary><b>⏰ Ile czasu zajmie przejście kursu?</b></summary>
+
+**To zależy od Twojego tempa:**
+
+| Tempo | Czas dziennie | Całkowity czas | Poziom końcowy |
+|-------|---------------|----------------|----------------|
+| 🚀 Intensywne | 4-6h | 2-3 miesiące | Zaawansowany |
+| 📚 Normalne | 2-3h | 4-6 miesięcy | Średniozaawansowany+ |
+| 🐢 Spokojne | 1h | 8-12 miesięcy | Solidne podstawy |
+
+**Pamiętaj:** Jakość > Ilość. Lepiej 1h dziennie przez rok niż 8h przez tydzień!
+
+</details>
+
+<details>
+<summary><b>💰 Czy ten kurs jest darmowy?</b></summary>
+
+**TAK! W 100% darmowy i otwarty! 🎉**
+
+- ✅ Wszystkie zadania - FREE
+- ✅ Wszystkie rozwiązania - FREE
+- ✅ Dodatkowe materiały - FREE
+- ✅ Wsparcie społeczności - FREE
+
+**Licencja:** MIT - możesz używać, modyfikować i dzielić się!
+
+</details>
+
+<details>
+<summary><b>🎓 Czy po tym kursie znajdę pracę?</b></summary>
+
+**Ten kurs daje fundamenty, ale...**
+
+**Co jeszcze potrzebujesz:**
+1. **Portfolio** - 3-5 projektów pokazujących Twoje umiejętności
+2. **Git/GitHub** - umiejętność pracy z kontrolą wersji
+3. **Specjalizacja** - wybierz kierunek (web, mobile, data, etc.)
+4. **Soft skills** - komunikacja, praca w zespole
+5. **Praktyka** - staże, projekty open source
+
+**Ten kurs:**
+- ✅ Nauczy Cię programować
+- ✅ Przygotuje do rozmów technicznych
+- ✅ Da solidne podstawy algorytmiczne
+- ⚠️ Ale nie zastąpi doświadczenia praktycznego
+
+</details>
+
+<details>
+<summary><b>🤝 Jak mogę pomóc w rozwoju projektu?</b></summary>
+
+**Wiele sposobów!**
+
+1. **⭐ Gwiazdka na GitHubie** - pomaga w widoczności
+2. **🐛 Zgłaszaj błędy** - znajdź i zgłoś issue
+3. **💻 Dodaj rozwiązania** - w nowych językach lub lepsze podejścia
+4. **📝 Popraw dokumentację** - literówki, wyjaśnienia
+5. **🌍 Tłumaczenia** - pomóż w wersjach innych językach
+6. **💬 Pomóż innym** - odpowiadaj na pytania w issues
+7. **📣 Promuj projekt** - podziel się z znajomymi
+
+[Zobacz CONTRIBUTING.md dla szczegółów](https://github.com/djeada/Nauka-Programowania/blob/master/CONTRIBUTING.md)
+
+</details>
+
+<details>
+<summary><b>🆘 Utknąłem na zadaniu. Co robić?</b></summary>
+
+**Krok po kroku:**
+
+1. **Zrozum problem** 📖
+   - Przeczytaj zadanie ponownie
+   - Zapisz wymagania
+   - Zrób przykłady na papierze
+
+2. **Rozbij na części** 🧩
+   - Podziel na mniejsze problemy
+   - Rozwiąż najprostszą część
+   - Buduj stopniowo
+
+3. **Debuguj** 🔍
+   - Użyj print/console.log
+   - Sprawdź edge cases
+   - Testuj krok po kroku
+
+4. **Szukaj pomocy** 💬
+   - Przejrzyj materiały dodatkowe
+   - Sprawdź podobne zadania
+   - Zapytaj społeczność (Issues)
+
+5. **Zobacz rozwiązanie** 👀
+   - Ale dopiero po próbach!
+   - Zrozum, nie kopiuj
+   - Spróbuj zaimplementować samodzielnie
+
+</details>
+
+<details>
+<summary><b>🔄 Czy muszę rozwiązywać zadania po kolei?</b></summary>
+
+**Zalecane: TAK, szczególnie dla początkujących**
+
+**Dlaczego?**
+- ✅ Progresywna trudność
+- ✅ Każde zadanie buduje na poprzednich
+- ✅ Unikniecie luk w wiedzy
+
+**Kiedy możesz przeskakiwać?**
+- ✓ Masz już doświadczenie
+- ✓ Pracujesz nad konkretnymi lukami
+- ✓ Chcesz powtórzyć konkretny temat
+
+**Wskazówka:** Jeśli przeskakujesz, wróć później do pominiętych!
+
+</details>
+
+<details>
+<summary><b>📱 Czy mogę programować na tablecie/telefonie?</b></summary>
+
+**Możesz, ale...**
+
+**✅ Możliwe na mobile:**
+- Nauka teorii
+- Przeglądanie kodu
+- Proste zadania (Python, JavaScript)
+
+**❌ Trudne na mobile:**
+- Kompilacja (C++, Rust)
+- Wieloplikowe projekty
+- Debugowanie
+- Dłuższe sesje
+
+**Najlepsze aplikacje:**
+- **Android:** Pydroid 3, Dcoder
+- **iOS:** Pythonista, Swift Playgrounds
+- **Universal:** Replit (przeglądarka)
+
+**Rekomendacja:** Używaj jako uzupełnienie, nie główne narzędzie!
+
+</details>
+
+---
+
+## 🌟 Społeczność i wsparcie
+
+### 💬 Jak możemy Ci pomóc?
+
+<table>
+<tr>
+<td width="33%" align="center">
+
+**🐛 Znalazłeś błąd?**
+
+[![Issues](https://img.shields.io/github/issues/djeada/Nauka-Programowania?style=for-the-badge)](https://github.com/djeada/Nauka-Programowania/issues)
+
+Zgłoś go!<br/>
+Naprawimy najszybciej jak to możliwe
+
+</td>
+<td width="33%" align="center">
+
+**💡 Masz pytanie?**
+
+[![Discussions](https://img.shields.io/badge/GitHub-Discussions-blue?style=for-the-badge)](https://github.com/djeada/Nauka-Programowania/discussions)
+
+Zapytaj społeczność!<br/>
+Chętnie pomożemy
+
+</td>
+<td width="33%" align="center">
+
+**🤝 Chcesz pomóc?**
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/djeada/Nauka-Programowania/pulls)
+
+Twój wkład jest ceniony!<br/>
+Zobacz CONTRIBUTING.md
+
+</td>
+</tr>
+</table>
+
+### 👥 Społeczność
+
+**Dołącz do naszej rosnącej społeczności programistów!**
+
+- 🌟 **Ponad 1000+ gwiazdek** na GitHubie
+- 👥 **Setki kontrybutorów** z całego świata
+- 💻 **Tysiące rozwiązanych zadań**
+- 🌍 **Globalna społeczność** programistów
+
+### 🏆 Hall of Fame - Najlepsi Kontrybutorzy
+
+Specjalne podziękowania dla osób, które wniosły największy wkład w rozwój projektu!
+
+<!-- Lista kontrybutorów będzie automatycznie aktualizowana -->
+[![Contributors](https://contrib.rocks/image?repo=djeada/Nauka-Programowania)](https://github.com/djeada/Nauka-Programowania/graphs/contributors)
+
+**Chcesz tu zobaczyć swoje zdjęcie? [Zacznij kontrybuować!](CONTRIBUTING.md)**
+
+---
+
+## 🎯 Roadmap - Co dalej po kursie?
+
+### 🌱 Ścieżki rozwoju
+
+Po ukończeniu tego kursu masz wiele opcji:
+
+<table>
+<tr>
+<td width="50%">
+
+### 🌐 Web Development
+
+**Frontend:**
+- HTML, CSS, JavaScript
+- React / Vue / Angular
+- Responsive design
+- TypeScript
+
+**Backend:**
+- Node.js / Django / Spring
+- REST APIs / GraphQL
+- Bazy danych
+- Authentication
+
+**Zasoby:**
+- [MDN Web Docs](https://developer.mozilla.org)
+- [FreeCodeCamp](https://freecodecamp.org)
+
+</td>
+<td width="50%">
+
+### 📊 Data Science & AI
+
+**Fundamenty:**
+- NumPy, Pandas
+- Matplotlib, Seaborn
+- Jupyter Notebooks
+- Statystyka
+
+**Machine Learning:**
+- Scikit-learn
+- TensorFlow / PyTorch
+- Deep Learning
+- NLP
+
+**Zasoby:**
+- [Kaggle](https://kaggle.com)
+- [Fast.ai](https://fast.ai)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📱 Mobile Development
+
+**Android:**
+- Kotlin
+- Android Studio
+- Jetpack Compose
+- Material Design
+
+**iOS:**
+- Swift
+- Xcode
+- SwiftUI
+- UIKit
+
+**Cross-platform:**
+- React Native
+- Flutter
+
+</td>
+<td width="50%">
+
+### ⚙️ Systems & Low-Level
+
+**Obszary:**
+- Systemy operacyjne
+- Embedded systems
+- Programowanie sieciowe
+- Kompilatory
+
+**Języki:**
+- C / C++
+- Rust
+- Assembly
+
+**Zasoby:**
+- [OSDev](https://osdev.org)
+- [Rust Book](https://doc.rust-lang.org/book)
+
+</td>
+</tr>
+</table>
+
+### 📚 Polecane następne kroki
+
+1. **Wybierz specjalizację** 🎯
+   - Zastanów się co Cię interesuje
+   - Zbadaj rynek pracy
+   - Porozmawiaj z profesjonalistami
+
+2. **Zbuduj portfolio** 💼
+   - 3-5 solidnych projektów
+   - GitHub profile
+   - Personal website
+   - Blog (opcjonalnie)
+
+3. **Zdobądź doświadczenie** 💪
+   - Open source contributions
+   - Freelancing (Upwork, Fiverr)
+   - Staże
+   - Własne projekty
+
+4. **Networking** 🤝
+   - Meetupy i konferencje
+   - LinkedIn
+   - Twitter/X tech community
+   - Discord servers
+
+5. **Ciągła nauka** 📖
+   - Śledź trendy
+   - Czytaj dokumentację
+   - Rozwiązuj nowe problemy
+   - Ucz innych (najlepszy sposób nauki!)
+
+---
+
+## 📊 Statystyki projektu
+
+<div align="center">
+
+![GitHub Stats](https://img.shields.io/github/stars/djeada/Nauka-Programowania?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/djeada/Nauka-Programowania?style=social)
+![GitHub Watchers](https://img.shields.io/github/watchers/djeada/Nauka-Programowania?style=social)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/djeada/Nauka-Programowania)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/djeada/Nauka-Programowania)
+![GitHub contributors](https://img.shields.io/github/contributors/djeada/Nauka-Programowania)
+
+</div>
+
+---
+
+## 🎓 Nauka programowania to proces
+
+> **"The only way to learn a new programming language is by writing programs in it."** - Dennis Ritchie
+
+### 💡 Złote zasady
+
+```
+1. 🔥 Konsystencja > Intensywność
+   Lepiej 1h dziennie niż 7h w weekend
+
+2. 🧠 Zrozumienie > Zapamiętanie
+   Rozumiej dlaczego, nie tylko jak
+
+3. 🛠️ Praktyka > Teoria
+   Pisz kod, dużo kodu
+
+4. 🤝 Teach to learn
+   Najlepiej uczymy się ucząc innych
+
+5. 🔄 Błędy są ok
+   Każdy błąd to lekcja
+
+6. 🎯 Projekty > Tutoriale
+   Buduj rzeczywiste projekty
+
+7. 🌱 Nigdy nie przestawaj
+   Programowanie to ciągła nauka
+```
+
+### 🚀 Motywacja
+
+<table>
+<tr>
+<td width="50%">
+
+**🎯 Stawiaj cele:**
+- ✅ Krótkoterminowe (1 rozdział/tydzień)
+- ✅ Średnioterminowe (cały kurs/3 miesiące)
+- ✅ Długoterminowe (praca/1 rok)
+
+**📊 Śledź postępy:**
+- ✅ Prowadź dziennik nauki
+- ✅ Celebrate small wins
+- ✅ Review co tydzień
+
+</td>
+<td width="50%">
+
+**💪 Radzenie z trudnościami:**
+- ✅ Zrób przerwę gdy utkniesz
+- ✅ Rozbij problem na części
+- ✅ Pytaj o pomoc (nie ma głupich pytań!)
+- ✅ Pamiętaj - każdy przez to przechodził
+
+**🎉 Nagradzaj się:**
+- ✅ Po każdym rozdziale
+- ✅ Po trudnym zadaniu
+- ✅ Za wytrwałość
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📚 Rozwiązania - Indeks wszystkich zadań
+
+**Szybka nawigacja:** Kliknij w nazwę rozdziału aby przejść do szczegółów
 
 <!--ts-->
    1. [Interakcja z konsolą](#Interakcja-z-konsolą)
@@ -3298,3 +4550,176 @@ Nauka programowania to proces wymagający czasu i praktyki, ale z naszymi zasoba
 * Steven Skiena, Miguel Revilla "*Programming Challenges: The Programming Contest Training Manual*" 
 * Antti Laaksonen "*  Guide to Competitive Programming: Learning and Improving Algorithms Through Contests (Undergraduate Topics in Computer Science) *" 
 * Nite Nimajneb "*The Hitchhiker’s Guide to the Programming Contests*" 
+
+## 📖 Literatura i zasoby dodatkowe
+
+### 📚 Książki algorytmiczne
+
+<table>
+<tr>
+<td width="50%">
+
+**🏆 Podstawowe:**
+
+1. **"Introduction to Algorithms"** (CLRS)
+   - Autorzy: Cormen, Leiserson, Rivest, Stein
+   - 📘 Biblia algorytmów
+   - ⭐ Must-have dla każdego programisty
+
+2. **"Data Structures and Algorithms Made Easy"**
+   - Autor: Narasimha Karumanchi
+   - 🎯 Przystępne wyjaśnienia
+   - 💡 Mnóstwo przykładów
+
+3. **"The C Programming Language"**
+   - Autorzy: Kernighan, Ritchie
+   - 📕 Klasyka dla C/C++
+   - ✨ Napisane przez twórców języka
+
+</td>
+<td width="50%">
+
+**🚀 Zawody i konkursy:**
+
+1. **"Competitive Programming 3"**
+   - Autor: Steven Halim
+   - 🏅 Przygotowanie do olimpiad
+   - 💪 Zaawansowane techniki
+
+2. **"Programming Challenges"**
+   - Autorzy: Skiena, Revilla
+   - 🎯 Praktyczne zadania
+   - 🔥 Contest training
+
+3. **"Guide to Competitive Programming"**
+   - Autor: Antti Laaksonen
+   - 📈 Od podstaw do zaawansowanych
+   - 🎓 Systematyczne podejście
+
+</td>
+</tr>
+</table>
+
+### 🌐 Platformy do ćwiczeń
+
+| Platforma | Poziom | Specjalizacja | Link |
+|-----------|--------|---------------|------|
+| **LeetCode** | 🟡 Średni-Zaawansowany | Rozmowy kwalifikacyjne | [leetcode.com](https://leetcode.com) |
+| **HackerRank** | 🟢 Początkujący-Średni | Ogólne programowanie | [hackerrank.com](https://hackerrank.com) |
+| **Codeforces** | 🔴 Zaawansowany | Competitive programming | [codeforces.com](https://codeforces.com) |
+| **CodeWars** | 🟢 Wszystkie | Kata programming | [codewars.com](https://codewars.com) |
+| **Project Euler** | 🟡 Średni | Matematyka + programowanie | [projecteuler.net](https://projecteuler.net) |
+| **Exercism** | 🟢 Początkujący | Mentorship | [exercism.io](https://exercism.io) |
+
+### 🎥 Kursy wideo (polskie)
+
+- **Pasja Informatyki** - YouTube
+- **Overment** - Kursy web development
+- **Samuraj Programowania** - Kompleksowe kursy
+- **Code with Chris** - Mobile development
+
+### 📱 Aplikacje mobilne
+
+- **SoloLearn** - Nauka w drodze
+- **Mimo** - Gamifikacja nauki
+- **Grasshopper** - JavaScript dla początkujących
+- **Programming Hub** - Wielojęzyczne
+
+### 🌍 Społeczności polskojęzyczne
+
+- **Programista.pl** - Forum
+- **4programmers.net** - Społeczność
+- **Stack Overflow PL** - Q&A
+- **Discord: Programowanie** - Chat
+
+---
+
+## 🙏 Podziękowania
+
+Ten projekt nie byłby możliwy bez:
+
+- 💻 **Wszystkich kontrybutorów** - dziękujemy za kod, pomysły i feedback!
+- 🌟 **Społeczności GitHub** - za gwiazdki, forki i wsparcie
+- 📚 **Twórców materiałów edukacyjnych** - za inspirację
+- 👥 **Użytkowników** - za zgłaszanie błędów i sugestie
+- ❤️ **Open Source Community** - za narzędzia i biblioteki
+
+### 🌟 Specjalne podziękowania
+
+Dla wszystkich, którzy przyczynili się do rozwoju tego projektu poprzez:
+- Dodawanie nowych rozwiązań
+- Poprawianie błędów
+- Ulepszanie dokumentacji
+- Promowanie projektu
+- Pomaganie innym w nauce
+
+**Każdy wkład, nawet najmniejszy, jest ceniony!** 💚
+
+---
+
+## 📜 Licencja
+
+Ten projekt jest udostępniony na licencji **MIT License**.
+
+```
+MIT License
+
+Copyright (c) 2024 Adam Djellouli
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+```
+
+**Co to oznacza?**
+- ✅ Możesz używać do celów osobistych i komercyjnych
+- ✅ Możesz modyfikować kod
+- ✅ Możesz dystrybuować
+- ✅ Możesz tworzyć prace pochodne
+- ⚠️ Bez gwarancji
+- ⚠️ Autor nie ponosi odpowiedzialności
+
+[Pełna treść licencji](LICENSE)
+
+---
+
+## 🚀 Ready to start?
+
+<div align="center">
+
+### Nie czekaj - zacznij dziś! 🎯
+
+[![Start Learning](https://img.shields.io/badge/🚀-Rozpocznij_naukę-success?style=for-the-badge)](https://github.com/djeada/Nauka-Programowania/tree/master/zbior_zadan)
+[![View Solutions](https://img.shields.io/badge/💻-Zobacz_rozwiązania-blue?style=for-the-badge)](https://github.com/djeada/Nauka-Programowania/tree/master/src)
+[![Contribute](https://img.shields.io/badge/🤝-Dołącz_do_nas-orange?style=for-the-badge)](https://github.com/djeada/Nauka-Programowania/blob/master/CONTRIBUTING.md)
+
+---
+
+### 💬 Pamiętaj
+
+**"Każdy ekspert był kiedyś początkującym."**
+
+Twoja podróż programistyczna zaczyna się właśnie teraz. Nie martw się, jeśli na początku będzie trudno - to normalny proces nauki. Najważniejsze to nie poddawać się i programować regularnie!
+
+---
+
+### 📬 Kontakt
+
+Masz pytania? Potrzebujesz pomocy? Chcesz się podzielić swoimi postępami?
+
+[![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-red?style=flat-square&logo=github)](https://github.com/djeada/Nauka-Programowania/issues)
+[![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-blue?style=flat-square&logo=github)](https://github.com/djeada/Nauka-Programowania/discussions)
+
+---
+
+**Udanej nauki! 🎓 Powodzenia! 💪 Do zobaczenia w kodzie! 👨‍💻**
+
+⭐ Jeśli ten projekt Ci pomógł, zostaw gwiazdkę! ⭐
+
+</div>
