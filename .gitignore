@@ -337,3 +337,6 @@ Cargo.lock
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
+
+# Generated PDF files
+Nauka_Programowania_Zbior_Zadan.pdf
