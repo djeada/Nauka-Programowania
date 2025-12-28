@@ -1,85 +1,185 @@
-## Funkcje — wielomiany
+# Rozdział: Funkcje — wielomiany
 
-### Zad 1. (★☆☆)
+Poniższe zadania dotyczą implementacji **funkcji** operujących na wielomianach zapisanych jako lista współczynników w kolejności od najwyższej potęgi do wyrazu wolnego:
+`[a_n, a_{n-1}, ..., a_0]` oznacza wielomian `a_n x^n + a_{n-1} x^{n-1} + ... + a_0`.
 
-Tytuł: Obliczenie wartości wielomianu w punkcie.
+**Konwencje wspólne:**
 
-Treść: Otrzymujesz listę n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbę naturalną x. Znajdź wartość wielomianu w podanym punkcie.
+* Każdy podpunkt to osobna funkcja (możesz też robić osobne programy testujące – ale zadanie dotyczy funkcji).
+* Współczynniki mogą być ujemne (czyli w praktyce: liczby całkowite).
+* Dla wyniku jako listy: zwracaj listę współczynników w tym samym formacie (od najwyższej potęgi).
+* Jeśli wynikowy wielomian ma wiodące zera, można je usuwać, ale **zostaw przynajmniej jedno zero**, jeśli cały wielomian jest zerowy (np. `[0]`).
 
-Dane wejściowe: Lista liczb naturalnych i liczba naturalna.
+---
 
-Dane wyjściowe: Liczba naturalna.
+## ZAD-01 — Wartość wielomianu w punkcie
 
-Przykład:
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `wielomiany`, `Horner`
 
-Dla listy współczynników [3, 2, 1] i liczby x = 1, zostanie zwrócona liczba 6.
+### Treść
 
-### Zad 2. (★☆☆)
+Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `x`, a następnie zwraca wartość wielomianu w punkcie `x`.
 
-Tytuł: Obliczenie iloczynu wielomianu przez skalar.
+### Wejście (argumenty funkcji)
 
-Treść: Otrzymujesz listę n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbę x. Oblicz współczynniki wielomianu, który jest wynikiem pomnożenia otrzymanego wielomianu przez liczbę x.
+* `a` — lista współczynników `[a_n, ..., a_0]`
+* `x` — liczba naturalna (lub całkowita)
 
-Dane wejściowe: Lista liczb naturalnych i liczba naturalna.
+### Wyjście (zwracana wartość)
 
-Dane wyjściowe: Lista liczb naturalnych.
+* jedna liczba (całkowita)
 
-Przykład:
+### Przykład
 
-Dla listy współczynników [4, -3, 2] i liczby x = -2, zostanie zwrócona lista [-8, 6, -4].
+Dla `a = [3, 2, 1]` i `x = 1` funkcja zwraca:
+`6`
 
-### Zad 3. (★☆☆)
+### Uwagi
 
-Tytuł: Obliczenie sumy wielomianów.
+* Najprościej użyć schematu Hornera.
 
-Treść: Otrzymujesz dwie listy n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz współczynniki wielomianu będącego sumą otrzymanych wielomianów.
+---
 
-Dane wejściowe: Dwie listy liczb naturalnych.
+## ZAD-02 — Iloczyn wielomianu przez skalar
 
-Dane wyjściowe: Lista liczb naturalnych.
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `wielomiany`, `skalar`
 
-Przykład:
+### Treść
 
-Dla otrzymanych dwóch list [3, 5, 2] oraz [2, -8, 1], zostanie zwrócona lista [5, -3, 3].
+Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `k`, a następnie zwraca współczynniki wielomianu powstałego z pomnożenia każdego współczynnika przez `k`.
 
-### Zad 4. (★★☆)
+### Wejście (argumenty funkcji)
 
-Tytuł: Mnożenie wielomianów.
+* `a` — lista współczynników `[a_n, ..., a_0]`
+* `k` — liczba (całkowita)
 
-Treść: Otrzymujesz dwie listy n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz współczynniki wielomianu będącego iloczynem otrzymanych wielomianów.
+### Wyjście (zwracana wartość)
 
-Dane wejściowe: Dwie listy liczb naturalnych.
+* lista współczynników wielomianu `k * P(x)`
 
-Dane wyjściowe: Lista liczb naturalnych.
+### Przykład
 
-Przykład:
+Dla `a = [4, -3, 2]` i `k = -2` funkcja zwraca:
+`[-8, 6, -4]`
 
-Dla otrzymanych dwóch list: [5, 0, 10, 6] oraz [1, 2, 4], zostanie zwrócona lista: [5, 10, 30, 26, 52, 24].
+---
 
-### Zad 5.  (★★☆)
+## ZAD-03 — Suma wielomianów
 
-Tytuł: Obliczenie n-tej pochodnej wielomianu.
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `wielomiany`, `listy`
 
-Treść: Otrzymujesz listę n współczynników wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbę naturalną k. Oblicz współczynniki wielomianu będącego k-tą pochodną otrzymanego wielomianu.
+### Treść
 
-Dane wejściowe: Lista liczb naturalnych i liczba naturalna.
+Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` i `b` (mogą mieć różne stopnie) i zwraca współczynniki wielomianu będącego ich sumą.
 
-Dane wyjściowe: Lista liczb naturalnych.
+### Wejście (argumenty funkcji)
 
-Przykład:
+* `a` — lista `[a_n, ..., a_0]`
+* `b` — lista `[b_m, ..., b_0]`
 
-Dla otrzymanej listy współczynników [4, -3, 2] i liczby k = 1, zostanie zwrócona lista [8, -3].
+### Wyjście (zwracana wartość)
 
-### Zad 6. (★★☆)
+* lista współczynników `a + b` w tej samej konwencji
 
-Tytuł: Obliczenie miejsc zerowych równania kwadratowego.
+### Przykład
 
-Treść: Otrzymujesz listę współczynników równania kwadratowego $ax^2 + bx + c$. Znajdź rzeczywiste miejsca zerowe równania kwadratowego.
+Dla `a = [3, 5, 2]` i `b = [2, -8, 1]` funkcja zwraca:
+`[5, -3, 3]`
 
-Dane wejściowe: Lista liczb naturalnych.
+### Uwagi
 
-Dane wyjściowe: Lista liczb zmiennoprzecinkowych.
+* Jeśli listy mają różne długości, wyrównaj je od końca (od wyrazu wolnego).
 
-Przykład:
+---
 
-Dla otrzymanej listy współczynników: [1, 2, 1], zostanie zwrócona lista: [-1, -1].
+## ZAD-04 — Mnożenie wielomianów
+
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `wielomiany`, `konwolucja`
+
+### Treść
+
+Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` i `b` i zwraca listę współczynników wielomianu będącego ich iloczynem.
+
+### Wejście (argumenty funkcji)
+
+* `a` — lista `[a_n, ..., a_0]`
+* `b` — lista `[b_m, ..., b_0]`
+
+### Wyjście (zwracana wartość)
+
+* lista współczynników wielomianu `a * b` (długość `len(a)+len(b)-1`)
+
+### Przykład
+
+Dla `a = [5, 0, 10, 6]` oraz `b = [1, 2, 4]` funkcja zwraca:
+`[5, 10, 30, 26, 52, 24]`
+
+---
+
+## ZAD-05 — k-ta pochodna wielomianu
+
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `pochodna`, `wielomiany`
+
+### Treść
+
+Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę naturalną `k` i zwraca współczynniki wielomianu będącego **k-tą pochodną**.
+
+### Wejście (argumenty funkcji)
+
+* `a` — lista `[a_n, ..., a_0]`
+* `k` — liczba naturalna
+
+### Wyjście (zwracana wartość)
+
+* lista współczynników wielomianu po zróżniczkowaniu `k` razy
+
+### Przykład
+
+Dla `a = [4, -3, 2]` oraz `k = 1` funkcja zwraca:
+`[8, -3]`
+
+### Uwagi
+
+* Jeśli `k` jest większe niż stopień wielomianu, wynikiem jest wielomian zerowy: `[0]`.
+
+---
+
+## ZAD-06 — Miejsca zerowe równania kwadratowego (rzeczywiste)
+
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `delta`, `pierwiastki`
+
+### Treść
+
+Napisz funkcję, która otrzymuje listę współczynników równania kwadratowego `[a, b, c]` dla `a x^2 + b x + c` i zwraca listę **rzeczywistych** miejsc zerowych.
+
+### Wejście (argumenty funkcji)
+
+* `coef` — lista trzech liczb `[a, b, c]`
+
+### Wyjście (zwracana wartość)
+
+* lista liczb zmiennoprzecinkowych:
+
+  * jeśli `Δ < 0` → pusta lista `[]`
+  * jeśli `Δ = 0` → dwa jednakowe pierwiastki `[x, x]`
+  * jeśli `Δ > 0` → dwa pierwiastki `[x1, x2]` (kolejność dowolna)
+
+### Przykład
+
+Dla `[1, 2, 1]` funkcja zwraca:
+`[-1.0, -1.0]`
+
+### Ograniczenia / gwarancje
+
+* Zakładamy `a ≠ 0` (to naprawdę równanie kwadratowe).
+
+### Uwagi
+
+* Licz `Δ = b^2 - 4ac`.
+* Pierwiastki: `(-b ± sqrt(Δ)) / (2a)`.
