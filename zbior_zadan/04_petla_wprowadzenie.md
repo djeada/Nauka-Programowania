@@ -1,372 +1,385 @@
-## Zadanie 1 - Warunek kończący pętlę
+# Rozdział: Pętle i proste obliczenia (while / for)
 
-**Poziom trudności**: ★☆☆
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-### Treść zadania
+**Konwencje wspólne:**
 
-Napisz program, który prosi użytkownika o podanie liczby naturalnej. Program powinien kontynuować pobieranie liczb od użytkownika, dopóki użytkownik nie wprowadzi liczby **7**. Po wprowadzeniu liczby 7 program powinien zakończyć działanie bez wyświetlania dodatkowych komunikatów.
-
-### Dane wejściowe
-
-- Dowolna liczba liczb naturalnych (całkowitych nieujemnych), wprowadzanych pojedynczo przez użytkownika.
-
-### Dane wyjściowe
-
-- Brak (program nie wyświetla żadnych danych wyjściowych).
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  3
-  10
-  5
-  7
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ```
-  *(brak danych wyjściowych)*
-
-### Wskazówki
-
-- Użyj pętli `while` lub `do...while`, która będzie trwała, dopóki wprowadzona liczba nie będzie równa 7.
-- Nie musisz wyświetlać żadnych komunikatów podczas działania programu.
-- Upewnij się, że liczba 7 kończy pętlę i nie jest dalej przetwarzana.
+* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
+* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.
+* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem (np. `%.3f`, `format(x, ".3f")`).
+* Jeśli zadanie mówi „brak danych wyjściowych” — program nie wypisuje nic (nawet pustej linii).
 
 ---
 
-## Zadanie 2 - Wypisywanie liczb mniejszych od podanej
+## ZAD-01 — Warunek kończący pętlę
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `while`, `break`, `I/O`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika jedną liczbę naturalną \( n \) (większą od 0) i wypisuje wszystkie liczby naturalne mniejsze od \( n \), zaczynając od \( n - 1 \) i kończąc na 1.
+Wczytuj kolejne liczby naturalne, dopóki nie pojawi się liczba `7`.
+Po wczytaniu liczby `7` program kończy działanie **bez wypisywania czegokolwiek**.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna \( n \) (\( n > 0 \)).
+Dowolna liczba liczb naturalnych (każda w osobnej linii).
 
-### Dane wyjściowe
+### Ograniczenia / gwarancje
 
-- Kolejne liczby naturalne mniejsze od \( n \), każda w nowej linii, w kolejności malejącej.
+* W danych wejściowych na pewno pojawi się co najmniej jedna liczba `7`.
 
-### Przykład
+### Wyjście
 
-- **Dane wejściowe**:
-  ```
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2
-  1
-  ```
-
-### Wskazówki
-
-- Użyj pętli `for` lub `while` do iteracji od \( n - 1 \) do 1.
-- Upewnij się, że program poprawnie obsługuje przypadek, gdy \( n = 1 \) (wtedy nie wypisuje nic).
-
----
-
-## Zadanie 3 - Wypisywanie liczby Pi z określoną dokładnością
-
-**Poziom trudności**: ★☆☆
-
-### Treść zadania
-
-Napisz program, który:
-
-1. Pobiera od użytkownika jedną liczbę naturalną \( n \) (\( n > 0 \)).
-2. Wypisuje liczbę \( \pi \) dokładnie \( n \) razy.
-3. Każda wypisana wartość liczby \( \pi \) powinna mieć dokładnie \( n \) miejsc po przecinku.
-
-### Dane wejściowe
-
-- Jedna liczba naturalna \( n \) (\( n > 0 \)).
-
-### Dane wyjściowe
-
-- \( n \) wierszy, w każdym liczba \( \pi \) z dokładnością do \( n \) miejsc po przecinku.
+Brak.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  3.14
-  3.14
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+3
+10
+5
+7
+```
 
-- Użyj biblioteki matematycznej (np. `math` w Pythonie) do pobrania wartości \( \pi \).
-- Do formatowania liczby \( \pi \) z określoną liczbą miejsc po przecinku możesz użyć funkcji formatowania ciągów znaków, np. `"{:.nf}".format(math.pi)`, gdzie `n` to liczba miejsc po przecinku.
-- Upewnij się, że liczba miejsc po przecinku jest zgodna z wartością \( n \).
+**Wyjście:**
+
+```
+```
+
+*(brak danych wyjściowych)*
+
+### Uwagi o formatowaniu
+
+* Nie wypisuj żadnych komunikatów typu „Podaj liczbę”.
+* Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana.
 
 ---
 
-## Zadanie 4 - Sumowanie liczb mniejszych od podanej
+## ZAD-02 — Wypisywanie liczb mniejszych od podanej
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `for`, `while`, `pętle`
 
-### Treść zadania
+### Treść
 
-Napisz program, który:
+Wczytaj liczbę naturalną `n` (`n > 0`) i wypisz wszystkie liczby naturalne mniejsze od `n`, zaczynając od `n - 1` i kończąc na `1`.
 
-1. Pobiera od użytkownika jedną liczbę naturalną \( n \) (\( n \geq 1 \)).
-2. Oblicza sumę wszystkich liczb naturalnych mniejszych od \( n \) (czyli od 1 do \( n - 1 \)).
-3. Wypisuje obliczoną sumę.
+### Wejście
 
-### Dane wejściowe
+Jedna liczba naturalna:
 
-- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
+* 1. linia: `n` (`n > 0`)
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna liczba naturalna – suma liczb od 1 do \( n - 1 \).
+Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności malejącej.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  10
-  ```
-  *(Ponieważ \( 1 + 2 + 3 + 4 = 10 \).)*
+**Wejście:**
 
-### Wskazówki
+```
+3
+```
 
-- Możesz użyć wzoru na sumę ciągu arytmetycznego:
-  \[ S = \frac{(n - 1) \times n}{2} \]
-- Upewnij się, że program poprawnie obsługuje przypadek, gdy \( n = 1 \) (wtedy suma wynosi 0).
+**Wyjście:**
+
+```
+2
+1
+```
+
+### Uwagi o formatowaniu
+
+* Jeśli `n = 1`, nie wypisuj nic.
 
 ---
 
-## Zadanie 5 - Liczby z przedziału
+## ZAD-03 — Wypisywanie liczby π z określoną dokładnością
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `math.pi`, `formatowanie`, `pętle`
 
-### Treść zadania
+### Treść
 
-Napisz program, który:
+1. Wczytaj liczbę naturalną `n` (`n > 0`).
+2. Wypisz liczbę π dokładnie `n` razy.
+3. Każda wypisana wartość ma mieć **dokładnie `n` miejsc po przecinku**.
 
-1. Pobiera od użytkownika dwie liczby naturalne \( a \) i \( b \).
-2. Określa, która z liczb \( a \) i \( b \) jest mniejsza, a która większa.
-3. Wykonuje następujące operacje:
-   - **a)** Wypisuje wszystkie liczby naturalne większe od mniejszej liczby i mniejsze od większej liczby.
-   - **b)** Wypisuje wszystkie liczby naturalne podzielne przez 3, które są większe od mniejszej liczby i mniejsze od większej liczby.
+### Wejście
 
-### Dane wejściowe
+Jedna liczba naturalna:
 
-- Dwie liczby naturalne \( a \) i \( b \), każda w oddzielnej linii.
+* 1. linia: `n` (`n > 0`)
 
-### Dane wyjściowe
+### Wyjście
 
-- **Podpunkt a):** Wypisz liczby spełniające warunek, każda w nowej linii.
-- **Podpunkt b):** Wypisz liczby podzielne przez 3 spełniające warunek, każda w nowej linii.
+`n` wierszy, w każdym liczba π z dokładnością do `n` miejsc po przecinku.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  9
-  5
-  ```
-- **Oczekiwane wyjście**:
+**Wejście:**
 
-  **Podpunkt a):**
-  ```
-  6
-  7
-  8
-  ```
+```
+2
+```
 
-  **Podpunkt b):**
-  ```
-  6
-  ```
+**Wyjście:**
 
-### Wskazówki
+```
+3.14
+3.14
+```
 
-- Najpierw ustal, która z liczb \( a \) i \( b \) jest mniejsza.
-- Użyj pętli do iteracji od mniejszej liczby + 1 do większej liczby - 1.
-- W podpunkcie b) dodatkowo sprawdzaj, czy liczba jest podzielna przez 3 (operator modulo `%`).
+### Uwagi o formatowaniu
+
+* Liczba miejsc po przecinku ma być **dokładnie** równa `n` (np. dla `n=1` wypisz `3.1`).
+* Stosuj standardowe zaokrąglanie przy formatowaniu.
 
 ---
 
-## Zadanie 6 - Sumowanie elementów ciągu
+## ZAD-04 — Sumowanie liczb mniejszych od podanej
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `sumowanie`, `pętle`, `arytmetyka`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanej liczby naturalnej \( n \) oblicza i wypisuje sumę pierwszych \( n \) wyrazów ciągu \( a_n \) według poniższych wzorów:
+Wczytaj liczbę naturalną `n` (`n ≥ 1`). Oblicz sumę wszystkich liczb naturalnych mniejszych od `n`, czyli:
+`1 + 2 + ... + (n - 1)`
+Następnie wypisz wynik.
 
-- **a)** \( a_n = n^2 + n + 1 \)
-- **b)** \( a_n = n^2 + 5n \)
-- **c)** \( a_n = n + 2n \)
+### Wejście
 
-Wynik w każdym przypadku powinien być zaokrąglony do najbliższej liczby naturalnej (choć w tym zadaniu wyniki będą liczbami całkowitymi).
+Jedna liczba naturalna:
 
-### Dane wejściowe
+* 1. linia: `n` (`n ≥ 1`)
 
-- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
+### Wyjście
 
-### Dane wyjściowe
-
-- Trzy liczby naturalne – suma \( n \) pierwszych wyrazów ciągu dla każdego podpunktu (a, b, c), każda w oddzielnej linii.
+Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  2
-  ```
-- **Oczekiwane wyjście**:
+**Wejście:**
 
-  **Podpunkt a):**
-  ```
-  10
-  ```
-  *(Ponieważ \( a_1 = 3 \), \( a_2 = 7 \); suma: \( 3 + 7 = 10 \).)*
+```
+5
+```
 
-  **Podpunkt b):**
-  ```
-  16
-  ```
-  *(Ponieważ \( a_1 = 6 \), \( a_2 = 10 \); suma: \( 6 + 10 = 16 \).)*
+**Wyjście:**
 
-  **Podpunkt c):**
-  ```
-  9
-  ```
-  *(Ponieważ \( a_n = n + 2n = 3n \), więc \( a_1 = 3 \), \( a_2 = 6 \); suma: \( 3 + 6 = 9 \).)*
+```
+10
+```
 
-### Wskazówki
+### Uwagi o formatowaniu
 
-- Dla każdego podpunktu użyj pętli do sumowania wartości \( a_n \) od \( n = 1 \) do podanego \( n \).
-- Upewnij się, że obliczenia są wykonywane poprawnie zgodnie z podanymi wzorami.
-- Możesz użyć funkcji `round()`, jeśli zajdzie potrzeba zaokrąglenia.
+* Dla `n = 1` wynik to `0`.
 
 ---
 
-## Zadanie 7 - Potęgowanie liczby Pi
+## ZAD-05 — Liczby z przedziału
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `przedziały`, `modulo`
 
-### Treść zadania
+### Treść
 
-Napisz program, który:
+Wczytaj dwie liczby naturalne `a` i `b`. Najpierw ustal:
 
-1. Pobiera od użytkownika jedną liczbę naturalną \( n \) (\( n \geq 0 \)).
-2. Oblicza wartość \( \pi^n \) (liczba Pi podniesiona do potęgi \( n \)).
-3. Wypisuje wynik z dokładnością do dwóch miejsc po przecinku.
+* `lo = min(a, b)`
+* `hi = max(a, b)`
 
-### Dane wejściowe
+Następnie:
 
-- Jedna liczba naturalna \( n \) (\( n \geq 0 \)).
+a) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` (każda w osobnej linii).
 
-### Dane wyjściowe
+b) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` oraz `x` jest podzielne przez `3` (każda w osobnej linii).
 
-- Jedna liczba zmiennoprzecinkowa – wynik \( \pi^n \) zaokrąglony do dwóch miejsc po przecinku.
+### Wejście
+
+Dwie liczby naturalne:
+
+* 1. linia: `a`
+* 2. linia: `b`
+
+### Wyjście
+
+Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobnej linii.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  1
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  3.14
-  ```
-  *(Ponieważ \( \pi^1 = \pi \approx 3.14 \).)*
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  9.87
-  ```
-  *(Ponieważ \( \pi^2 \approx 9.8696 \).)*
+```
+9
+5
+```
 
-### Wskazówki
+**Wyjście:**
 
-- Użyj funkcji potęgowania (np. `math.pow()` lub operatora `**`).
-- Skorzystaj z biblioteki matematycznej do uzyskania wartości \( \pi \).
-- Do zaokrąglenia wyniku do dwóch miejsc po przecinku użyj funkcji formatowania, np. `"{:.2f}".format(wynik)`.
+```
+6
+7
+8
+6
+```
+
+### Uwagi o formatowaniu
+
+* Nie wypisuj nagłówków typu „a)” i „b)”.
+* Jeśli w którymś podpunkcie nie ma liczb do wypisania, w tej części nie wypisuj nic.
+* Nie dodawaj pustej linii między podpunktami.
 
 ---
 
-## Zadanie 8 - Obliczanie liczby kur i owiec na farmie
+## ZAD-06 — Sumowanie elementów ciągu
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `ciągi`, `sumowanie`, `pętle`
 
-### Treść zadania
+### Treść
 
-Na farmie znajdują się kury i owce. Wiadomo, że:
+Wczytaj liczbę naturalną `n` (`n ≥ 1`) i oblicz:
 
-- Łączna liczba **głów** wynosi \( a \).
-- Łączna liczba **nóg** wynosi \( b \).
+a) ( \sum_{k=1}^{n} (k^2 + k + 1) )
 
-Napisz program, który obliczy:
+b) ( \sum_{k=1}^{n} (k^2 + 5k) )
 
-- Liczbę **kur** na farmie.
-- Liczbę **owiec** na farmie.
+c) ( \sum_{k=1}^{n} (k + 2k) )  (czyli ( \sum_{k=1}^{n} 3k ))
 
-Przyjmij następujące założenia:
+Wypisz trzy sumy w kolejności a), b), c).
 
-- Każda kura ma 1 głowę i 2 nogi.
-- Każda owca ma 1 głowę i 4 nogi.
-- Liczba kur i owiec jest liczbą naturalną nieujemną.
-- Zakładamy, że dane wejściowe są takie, że istnieje rozwiązanie w liczbach naturalnych.
+### Wejście
 
-### Dane wejściowe
+Jedna liczba naturalna:
 
-- Dwie liczby naturalne:
-  1. \( a \) – liczba głów (całkowita nieujemna).
-  2. \( b \) – liczba nóg (całkowita nieujemna).
+* 1. linia: `n` (`n ≥ 1`)
 
-### Dane wyjściowe
+### Wyjście
 
-- Dwie liczby naturalne:
-  1. Liczba kur na farmie.
-  2. Liczba owiec na farmie.
+Trzy liczby naturalne — każda w oddzielnej linii:
+
+1. suma dla (a)
+2. suma dla (b)
+3. suma dla (c)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  40
-  100
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  30
-  10
-  ```
-  *(Oznacza to, że na farmie jest 30 kur i 10 owiec.)*
+**Wejście:**
 
-### Wskazówki
+```
+2
+```
 
-- Utwórz układ równań:
-  1. \( c + s = a \) (gdzie \( c \) – liczba kur, \( s \) – liczba owiec).
-  2. \( 2c + 4s = b \) (ponieważ kura ma 2 nogi, a owca 4).
-- Rozwiąż układ równań metodą podstawiania lub eliminacji:
-  - Możesz wyliczyć \( c = a - s \) z pierwszego równania i podstawić do drugiego.
-  - Otrzymasz równanie z jedną niewiadomą \( s \).
-- Po obliczeniu liczby owiec \( s \), wylicz liczbę kur \( c \) korzystając z pierwszego równania.
-- Upewnij się, że wyniki są liczbami naturalnymi nieujemnymi.
+**Wyjście:**
+
+```
+10
+16
+9
+```
+
+### Uwagi o formatowaniu
+
+* Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania.
 
 ---
+
+## ZAD-07 — Potęgowanie liczby π
+
+**Poziom:** ★☆☆
+**Tagi:** `math.pi`, `potęgi`, `formatowanie`
+
+### Treść
+
+Wczytaj liczbę naturalną `n` (`n ≥ 0`), oblicz wartość ( \pi^n ) i wypisz wynik z dokładnością do **dwóch miejsc po przecinku**.
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Jedna liczba zmiennoprzecinkowa — ( \pi^n ) z dokładnością do dwóch miejsc po przecinku.
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+```
+
+**Wyjście:**
+
+```
+9.87
+```
+
+### Uwagi o formatowaniu
+
+* Dla `n = 0` wypisz `1.00`.
+
+---
+
+## ZAD-08 — Obliczanie liczby kur i owiec na farmie
+
+**Poziom:** ★★☆
+**Tagi:** `układ równań`, `arytmetyka`
+
+### Treść
+
+Na farmie są kury i owce. Wiadomo, że:
+
+* łączna liczba głów wynosi `a`,
+* łączna liczba nóg wynosi `b`,
+* kura ma 2 nogi, owca ma 4 nogi,
+* każda ma dokładnie 1 głowę.
+
+Oblicz liczbę kur oraz liczbę owiec.
+
+### Wejście
+
+Dwie liczby naturalne:
+
+* 1. linia: `a` — liczba głów (`a ≥ 0`)
+* 2. linia: `b` — liczba nóg (`b ≥ 0`)
+
+### Ograniczenia / gwarancje
+
+* Istnieje rozwiązanie w liczbach całkowitych nieujemnych.
+
+### Wyjście
+
+Dwie liczby naturalne, każda w oddzielnej linii:
+
+1. liczba kur
+2. liczba owiec
+
+### Przykład
+
+**Wejście:**
+
+```
+40
+100
+```
+
+**Wyjście:**
+
+```
+30
+10
+```
+
+### Uwagi o formatowaniu
+
+* Nie wypisuj dodatkowych opisów — tylko liczby.
