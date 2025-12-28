@@ -1,399 +1,400 @@
-## Zadanie 1 - Wypisanie elementów dwóch list na przemian
+# Rozdział: Listy — Dwie listy (stdin/stdout)
 
-**Poziom trudności**: ★☆☆
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-### Treść zadania
+**Konwencje wspólne:**
 
-Dla otrzymanych dwóch list liczb całkowitych, wypisz na przemian elementy z obu list. Jeśli listy nie są tej samej długości, po wyczerpaniu elementów krótszej listy kontynuuj wypisywanie pozostałych elementów dłuższej listy.
-
-### Dane wejściowe
-
-- **Lista 1**: lista liczb całkowitych.
-- **Lista 2**: lista liczb całkowitych.
-- Listy mogą mieć dowolną długość i zawierać dowolne liczby całkowite.
-
-### Dane wyjściowe
-
-- Jedna linia zawierająca elementy obu list wypisane na przemian, oddzielone przecinkami (bez spacji).
-- Po wyczerpaniu elementów krótszej listy, wypisz pozostałe elementy dłuższej listy w tej samej kolejności.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  Lista 1: [5, 3, 7, 2]
-  Lista 2: [1, -2, 3]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5,1,3,-2,7,3,2
-  ```
-
-### Wskazówki
-
-- Możesz użyć funkcji `zip()` do iteracji przez elementy obu list jednocześnie.
-- Aby uwzględnić różne długości list, możesz użyć modułu `itertools` i funkcji `zip_longest()`.
-- Alternatywnie, iteruj po indeksach do długości dłuższej listy, sprawdzając przy każdym kroku, czy indeks nie przekracza długości którejś z list.
+* Listy w wejściu są podane w **jednej linii** w zapisie z nawiasami kwadratowymi, np. `[5, 3, 7, 2]`.
+* Jeśli w danych są dwie listy — wczytaj je w kolejnych liniach: najpierw lista 1, potem lista 2.
+* Gdy wynikiem jest lista — wypisz ją w formacie jak w przykładach, np. `[1, 2, 3]`.
+* Jeśli wynik ma być w jednej linii z elementami oddzielonymi przecinkami **bez spacji**, trzymaj się dokładnie tego formatu.
 
 ---
 
-## Zadanie 2 - Połączenie dwóch list
+## ZAD-01 — Wypisanie elementów dwóch list na przemian
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `iteracja`
 
-### Treść zadania
+### Treść
 
-Dla otrzymanych dwóch list liczb całkowitych, wykonaj następujące operacje:
+Wczytaj dwie listy liczb całkowitych i wypisz ich elementy **na przemian**:
+pierwszy z listy 1, pierwszy z listy 2, drugi z listy 1, drugi z listy 2, itd.
 
-- **a)** Połącz listy, dostawiając drugą listę na koniec pierwszej.
-- **b)** Wstaw elementy o parzystych indeksach z drugiej listy na odpowiadające im indeksy pierwszej listy, zastępując istniejące elementy.
+Jeśli listy mają różne długości, po wyczerpaniu krótszej listy dopisz pozostałe elementy dłuższej listy w tej samej kolejności.
 
-### Dane wejściowe
+### Wejście
 
-- **Lista 1**: lista liczb całkowitych.
-- **Lista 2**: lista liczb całkowitych.
-- Obie listy mogą mieć różną długość.
+* 1 linia: lista 1
+* 2 linia: lista 2
 
-### Dane wyjściowe
+### Wyjście
 
-- **Podpunkt a)**: Jedna lista zawierająca elementy pierwszej listy, a następnie elementy drugiej listy, w oryginalnej kolejności.
-- **Podpunkt b)**: Jedna lista, w której elementy o parzystych indeksach zostały zastąpione elementami z drugiej listy o tych samych indeksach (jeśli istnieją).
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  Lista 1: [1, 2, 3]
-  Lista 2: [4, 5, 6]
-  ```
-- **Oczekiwane wyjście**:
-
-  **Podpunkt a)**:
-  ```
-  [1, 2, 3, 4, 5, 6]
-  ```
-
-  **Podpunkt b)**:
-  ```
-  [4, 2, 6, 3]
-  ```
-
-### Wskazówki
-
-- **Podpunkt a)**: Możesz użyć operatora `+` do łączenia list.
-- **Podpunkt b)**:
-  - Iteruj po indeksach parzystych do długości krótszej z dwóch list.
-  - W pierwszej liście podmień elementy o parzystych indeksach elementami z drugiej listy.
-  - Jeśli druga lista jest krótsza, podmienisz tylko te elementy, które istnieją w obu listach.
-
----
-
-## Zadanie 3 - Suma elementów dwóch list
-
-**Poziom trudności**: ★☆☆
-
-### Treść zadania
-
-Dla otrzymanych dwóch list liczb całkowitych, zwróć listę, której elementy są sumą odpowiadających sobie elementów obu list. Jeśli listy nie są tej samej długości, brakujące elementy krótszej listy traktuj jako zera.
-
-### Dane wejściowe
-
-- **Lista 1**: lista liczb całkowitych.
-- **Lista 2**: lista liczb całkowitych.
-- Listy mogą mieć różne długości.
-
-### Dane wyjściowe
-
-- Jedna lista liczb całkowitych, gdzie każdy element jest sumą elementów o tym samym indeksie z obu list.
-- Jeśli jedna z list jest krótsza, do sumy dodawane jest zero za brakujący element.
+* 1 linia: elementy obu list wypisane na przemian, oddzielone przecinkami **bez spacji**
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Lista 1: [3, 1, 2, 5]
-  Lista 2: [2, 8, 6, 5]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [5, 9, 8, 10]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[5, 3, 7, 2]
+[1, -2, 3]
+```
 
-- Ustal długość najdłuższej listy.
-- Iteruj po indeksach od 0 do maksymalnej długości.
-- Przy pobieraniu elementów z list sprawdzaj, czy indeks nie przekracza ich długości; jeśli tak, użyj zera.
+**Wyjście:**
+
+```
+5,1,3,-2,7,3,2
+```
 
 ---
 
-## Zadanie 4 - Mnożenie wektorowe
+## ZAD-02 — Połączenie dwóch list
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `indeksy`, `concat`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie listy liczb całkowitych reprezentujące dwa wektory w trójwymiarowej przestrzeni euklidesowej. Zaimplementuj iloczyn skalarny tych wektorów.
+Wczytaj dwie listy liczb całkowitych i wykonaj niezależnie:
 
-### Dane wejściowe
+**a)** Połącz listy, doklejając drugą listę na koniec pierwszej.
+**b)** W pierwszej liście **podmień** elementy o parzystych indeksach (0, 2, 4, …) elementami z drugiej listy o tych samych indeksach — o ile taki indeks istnieje w obu listach.
 
-- **Wektor A**: lista 3 liczb całkowitych.
-- **Wektor B**: lista 3 liczb całkowitych.
+### Wejście
 
-### Dane wyjściowe
+* 1 linia: lista 1
+* 2 linia: lista 2
 
-- Jedna liczba całkowita — wynik iloczynu skalarnego dwóch wektorów.
+### Wyjście
+
+* 1 linia: wynik dla **a)** jako lista
+* 2 linia: wynik dla **b)** jako lista
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Wektor A: [1, 2, 3]
-  Wektor B: [3, 1, 2]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  11
-  ```
-  *(Obliczenie: \( 1 \times 3 + 2 \times 1 + 3 \times 2 = 3 + 2 + 6 = 11 \))*
+**Wejście:**
 
-### Wskazówki
+```
+[1, 2, 3]
+[4, 5, 6]
+```
 
-- Iloczyn skalarny dwóch wektorów \( \vec{A} \) i \( \vec{B} \) to suma iloczynów odpowiadających sobie współrzędnych: \( A_x B_x + A_y B_y + A_z B_z \).
-- Upewnij się, że obie listy mają dokładnie 3 elementy.
+**Wyjście:**
+
+```
+[1, 2, 3, 4, 5, 6]
+[4, 2, 6]
+```
 
 ---
 
-## Zadanie 5 - Obliczenie średniej ważonej
+## ZAD-03 — Suma elementów dwóch list
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `iteracja`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie listy liczb zmiennoprzecinkowych:
+Wczytaj dwie listy liczb całkowitych i zwróć listę, w której element o indeksie `i` jest sumą elementów o indeksie `i` z obu list.
+Jeśli któraś lista jest krótsza, brakujące elementy traktuj jako `0`.
 
-- Pierwsza lista zawiera **wartości**.
-- Druga lista zawiera odpowiadające im **wagi**.
+### Wejście
 
-Oblicz średnią ważoną tych wartości.
+* 1 linia: lista 1
+* 2 linia: lista 2
 
-### Dane wejściowe
+### Wyjście
 
-- **Lista wartości**: lista liczb zmiennoprzecinkowych.
-- **Lista wag**: lista liczb zmiennoprzecinkowych.
-- Obie listy mają tę samą długość.
-
-### Dane wyjściowe
-
-- Jedna liczba zmiennoprzecinkowa — średnia ważona wartości, obliczona jako suma iloczynów wartości i ich wag, podzielona przez sumę wag.
+* 1 linia: lista sum
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Wartości: [0.2, 0.4, 0.1, 0.2, 0.1]
-  Wagi: [2.0, 5.0, 0.0, 2.0, 1.0]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  0.29
-  ```
-  *(Obliczenie: \( \frac{0.2 \times 2.0 + 0.4 \times 5.0 + 0.1 \times 0.0 + 0.2 \times 2.0 + 0.1 \times 1.0}{2.0 + 5.0 + 0.0 + 2.0 + 1.0} = \frac{0.4 + 2.0 + 0 + 0.4 + 0.1}{10.0} = \frac{2.9}{10.0} = 0.29 \))*
+**Wejście:**
 
-### Wskazówki
+```
+[3, 1, 2, 5]
+[2, 8, 6, 5]
+```
 
-- Oblicz sumę iloczynów wartości i wag.
-- Oblicz sumę wag.
-- Podziel sumę iloczynów przez sumę wag.
+**Wyjście:**
+
+```
+[5, 9, 8, 10]
+```
 
 ---
 
-## Zadanie 6 - Znalezienie elementów wspólnych dwóch list
+## ZAD-04 — Iloczyn skalarny dwóch wektorów 3D
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `wektory`, `math`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie listy liczb całkowitych. Znajdź i wypisz elementy, które występują w obu listach.
+Wczytaj dwie listy długości 3 (wektory 3D) i oblicz ich **iloczyn skalarny**:
+[
+A_xB_x + A_yB_y + A_zB_z
+]
 
-### Dane wejściowe
+### Wejście
 
-- **Lista 1**: lista liczb całkowitych.
-- **Lista 2**: lista liczb całkowitych.
+* 1 linia: wektor A (lista 3 liczb całkowitych)
+* 2 linia: wektor B (lista 3 liczb całkowitych)
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista liczb całkowitych będących elementami wspólnymi obu list.
-- Elementy wypisz w kolejności występowania w pierwszej liście.
-- Jeśli nie ma elementów wspólnych, wypisz pustą listę `[]`.
+* 1 linia: jedna liczba całkowita — iloczyn skalarny
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Lista 1: [9, 2, 5, 4]
-  Lista 2: [4, 2, 1]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [2, 4]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[1, 2, 3]
+[3, 1, 2]
+```
 
-- Możesz użyć zbiorów (`set`) do znalezienia przecięcia, ale pamiętaj o kolejności elementów.
-- Iteruj przez pierwszą listę i dodawaj do wyniku elementy, które są również w drugiej liście.
+**Wyjście:**
+
+```
+11
+```
 
 ---
 
-## Zadanie 7 - Różnica między dwoma listami
+## ZAD-05 — Obliczenie średniej ważonej
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `float`
 
-### Treść zadania
+### Treść
 
-Dla otrzymanych dwóch list liczb całkowitych, znajdź elementy, które nie są wspólne dla obu list. Innymi słowy, wypisz elementy, które występują tylko w jednej z list.
+Wczytaj dwie listy liczb zmiennoprzecinkowych tej samej długości:
 
-### Dane wejściowe
+* lista wartości,
+* lista wag.
 
-- **Lista 1**: lista liczb całkowitych.
-- **Lista 2**: lista liczb całkowitych.
+Oblicz średnią ważoną:
+[
+\frac{\sum (wartość_i \cdot waga_i)}{\sum waga_i}
+]
 
-### Dane wyjściowe
+### Wejście
 
-- Lista liczb całkowitych, które występują tylko w jednej z list.
-- Elementy wypisz w dowolnej kolejności.
-- Jeśli wszystkie elementy są wspólne, wypisz pustą listę `[]`.
+* 1 linia: lista wartości (float)
+* 2 linia: lista wag (float)
+
+### Wyjście
+
+* 1 linia: jedna liczba zmiennoprzecinkowa — średnia ważona **z dokładnością do 2 miejsc po przecinku**
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Lista 1: [9, 2, 5, 4]
-  Lista 2: [4, 2, 1]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [9, 5, 1]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[0.2, 0.4, 0.1, 0.2, 0.1]
+[2.0, 5.0, 0.0, 2.0, 1.0]
+```
 
-- Użyj operacji różnicy symetrycznej na zbiorach (`set`), aby znaleźć elementy unikalne dla każdej listy.
-- Możesz też iterować przez obie listy i sprawdzać, czy element nie występuje w drugiej liście.
+**Wyjście:**
+
+```
+0.29
+```
 
 ---
 
-## Zadanie 8 - Połącz posortowane listy w posortowaną listę
+## ZAD-06 — Znalezienie elementów wspólnych dwóch list
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `set`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie posortowane rosnąco listy liczb całkowitych. Połącz je w jedną posortowaną listę, eliminując duplikaty.
+Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występują w obu listach:
 
-### Dane wejściowe
+* zachowaj **kolejność występowania w pierwszej liście**,
+* jeśli element z pierwszej listy występuje w drugiej liście, dodaj go do wyniku,
+* jeśli nie ma elementów wspólnych — wypisz `[]`.
 
-- **Lista 1**: posortowana rosnąco lista liczb całkowitych.
-- **Lista 2**: posortowana rosnąco lista liczb całkowitych.
+### Wejście
 
-### Dane wyjściowe
+* 1 linia: lista 1
+* 2 linia: lista 2
 
-- Jedna posortowana rosnąco lista liczb całkowitych, zawierająca elementy z obu list bez duplikatów.
+### Wyjście
+
+* 1 linia: lista elementów wspólnych
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Lista 1: [2, 4, 7]
-  Lista 2: [3, 5, 9]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [2, 3, 4, 5, 7, 9]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[9, 2, 5, 4]
+[4, 2, 1]
+```
 
-- Użyj metody merge z algorytmu sortowania przez scalanie.
-- Iteruj przez obie listy jednocześnie, porównując bieżące elementy i dodając mniejszy do wyniku.
-- Pamiętaj o obsłudze duplikatów i dodawaniu pozostałych elementów, gdy jedna z list się skończy.
+**Wyjście:**
+
+```
+[2, 4]
+```
 
 ---
 
-## Zadanie 9 - Usuń z pierwszej listy część wspólną obu list
+## ZAD-07 — Różnica między dwoma listami
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `set`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie listy liczb całkowitych. Usuń z pierwszej listy wszystkie elementy, które występują również w drugiej liście.
+Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **tylko w jednej** z list (różnica symetryczna).
 
-### Dane wejściowe
+* Kolejność elementów w wyniku może być **dowolna**.
+* Jeśli wszystkie elementy są wspólne — wypisz `[]`.
 
-- **Lista 1**: lista liczb całkowitych.
-- **Lista 2**: lista liczb całkowitych.
+### Wejście
 
-### Dane wyjściowe
+* 1 linia: lista 1
+* 2 linia: lista 2
 
-- Lista liczb całkowitych zawierająca elementy pierwszej listy po usunięciu elementów wspólnych z drugą listą.
-- Elementy wypisz w oryginalnej kolejności z pierwszej listy.
-- Jeśli wszystkie elementy zostały usunięte, wypisz pustą listę `[]`.
+### Wyjście
+
+* 1 linia: lista elementów niewspólnych
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Lista 1: [9, 2, 5, 4]
-  Lista 2: [4, 2, 1]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [9, 5]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[9, 2, 5, 4]
+[4, 2, 1]
+```
 
-- Przejdź przez pierwszą listę i dodaj do wyniku te elementy, które nie są w drugiej liście.
-- Możesz użyć zbioru (`set`) z elementami drugiej listy dla szybszego sprawdzania przynależności.
+**Wyjście (jedna z poprawnych odpowiedzi):**
+
+```
+[9, 5, 1]
+```
 
 ---
 
-## Zadanie 10 - Znajdź medianę dwóch posortowanych list
+## ZAD-08 — Połącz posortowane listy w posortowaną listę bez duplikatów
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `list`, `merge`, `sort`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie posortowane rosnąco listy liczb całkowitych o równej długości. Znajdź medianę zbioru wszystkich elementów obu list.
+Wczytaj dwie listy liczb całkowitych, każda **posortowana rosnąco**. Połącz je w jedną listę:
 
-### Dane wejściowe
+* wynik ma być posortowany rosnąco,
+* wynik ma zawierać **unikalne** elementy (bez duplikatów).
 
-- **Lista 1**: posortowana rosnąco lista liczb całkowitych.
-- **Lista 2**: posortowana rosnąco lista liczb całkowitych.
-- Obie listy mają tę samą, niezerową długość.
+### Wejście
 
-### Dane wyjściowe
+* 1 linia: lista 1 (posortowana rosnąco)
+* 2 linia: lista 2 (posortowana rosnąco)
 
-- Jedna liczba zmiennoprzecinkowa — mediana wszystkich elementów z obu list.
+### Wyjście
+
+* 1 linia: jedna posortowana lista bez duplikatów
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Lista 1: [2, 4, 7]
-  Lista 2: [3, 5, 9]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  4.5
-  ```
-  *(Złączone listy: [2, 3, 4, 5, 7, 9]; mediana to średnia z dwóch środkowych wartości: \( (4 + 5) / 2 = 4.5 \))*
+**Wejście:**
 
-### Wskazówki
+```
+[2, 4, 7]
+[3, 5, 9]
+```
 
-- Połącz obie listy i posortuj wynikową listę.
-- Mediana to środkowy element (lub średnia dwóch środkowych elementów, jeśli liczba elementów jest parzysta).
-- Możesz zoptymalizować rozwiązanie, unikając pełnego sortowania, korzystając z właściwości posortowanych list.
+**Wyjście:**
+
+```
+[2, 3, 4, 5, 7, 9]
+```
 
 ---
+
+## ZAD-09 — Usuń z pierwszej listy część wspólną obu list
+
+**Poziom:** ★★☆
+**Tagi:** `list`, `filter`
+
+### Treść
+
+Wczytaj dwie listy liczb całkowitych. Usuń z pierwszej listy wszystkie elementy, które występują również w drugiej liście.
+
+* Zachowaj kolejność pozostałych elementów z pierwszej listy.
+* Jeśli wszystko zostanie usunięte — wypisz `[]`.
+
+### Wejście
+
+* 1 linia: lista 1
+* 2 linia: lista 2
+
+### Wyjście
+
+* 1 linia: lista 1 po usunięciu elementów wspólnych
+
+### Przykład
+
+**Wejście:**
+
+```
+[9, 2, 5, 4]
+[4, 2, 1]
+```
+
+**Wyjście:**
+
+```
+[9, 5]
+```
+
+---
+
+## ZAD-10 — Mediana dwóch posortowanych list
+
+**Poziom:** ★★☆
+**Tagi:** `list`, `median`, `sort`
+
+### Treść
+
+Wczytaj dwie listy liczb całkowitych:
+
+* obie są posortowane rosnąco,
+* obie mają tę samą, niezerową długość.
+
+Znajdź medianę zbioru wszystkich elementów z obu list (czyli medianę po „złączeniu” obu list).
+
+### Wejście
+
+* 1 linia: lista 1 (posortowana rosnąco)
+* 2 linia: lista 2 (posortowana rosnąco)
+
+### Wyjście
+
+* 1 linia: mediana jako liczba zmiennoprzecinkowa
+  (jeśli mediana jest całkowita, wypisz ją z `.0`, np. `4.0`)
+
+### Przykład
+
+**Wejście:**
+
+```
+[2, 4, 7]
+[3, 5, 9]
+```
+
+**Wyjście:**
+
+```
+4.5
+```
