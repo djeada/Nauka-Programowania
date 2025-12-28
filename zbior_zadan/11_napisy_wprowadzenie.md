@@ -1,644 +1,665 @@
-## Zadanie 1 - Odwróć napis
+# Rozdział: Napisy — operacje podstawowe (stdin/stdout)
 
-**Poziom trudności**: ★☆☆
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem.**
 
-### Treść zadania
+**Konwencje wspólne:**
 
-Zmień otrzymany napis tak, aby został zapisany od tyłu.
-
-### Dane wejściowe
-
-- Jeden napis (ciąg znaków), który może zawierać litery, cyfry i inne znaki.
-
-### Dane wyjściowe
-
-- Jeden napis — odwrócony ciąg wejściowy.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  barszcz
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  zczsrab
-  ```
-
-### Wskazówki
-
-- Możesz użyć indeksowania z krokiem ujemnym lub funkcji do odwracania ciągów znaków.
+* Wczytuj dane dokładnie w kolejności podanej w sekcji **Wejście**.
+* Jeśli w danych jest „jeden napis” — wczytaj **całą linię** (może zawierać spacje).
+* Jeśli w wyjściu ma być lista w stylu `["Ala", "ma"]` albo `['o', 'ń']`, wypisz ją dokładnie w tej postaci.
 
 ---
 
-## Zadanie 2 - Policz wystąpienia znaku
+## ZAD-01 — Odwróć napis
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `I/O`
 
-### Treść zadania
+### Treść
 
-Dla podanego napisu oraz znaku, znajdź liczbę wystąpień tego znaku w napisie.
+Wczytaj napis i wypisz go od tyłu.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis (ciąg znaków).
-- Jeden znak (pojedynczy znak), którego wystąpienia mają być policzone.
+* 1. linia: napis
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna liczba naturalna — liczba wystąpień podanego znaku w napisie.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  klamra
-  a
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2
-  ```
-
-### Wskazówki
-
-- Użyj metody `count()` dostępnej dla ciągów znaków.
-
----
-
-## Zadanie 3 - Z ilu słów składa się zdanie?
-
-**Poziom trudności**: ★☆☆
-
-### Treść zadania
-
-Zlicz, ile słów składa się na podane zdanie. Znaki interpunkcyjne nie są traktowane jako słowa.
-
-### Dane wejściowe
-
-- Jeden napis reprezentujący zdanie, może zawierać litery, cyfry, spacje oraz znaki interpunkcyjne.
-
-### Dane wyjściowe
-
-- Jedna liczba naturalna — liczba słów w zdaniu.
+* 1. linia: odwrócony napis
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  gram na pianinie.
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  3
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+barszcz
+```
 
-- Użyj metody `split()`, aby podzielić zdanie na słowa.
-- Możesz potrzebować usunąć znaki interpunkcyjne z końców słów.
+**Wyjście:**
+
+```
+zczsrab
+```
 
 ---
 
-## Zadanie 4 - Zamień wszystkie małe litery na duże
+## ZAD-02 — Policz wystąpienia znaku
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `count`
 
-### Treść zadania
+### Treść
 
-Otrzymasz napis. Zamień wszystkie małe litery w tym napisie na duże.
+Wczytaj napis oraz jeden znak. Wypisz, ile razy ten znak występuje w napisie.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis (ciąg znaków), zawierający małe i duże litery.
+* 1. linia: napis
+* 2. linia: pojedynczy znak
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis — oryginalny napis z zamienionymi małymi literami na duże.
+* 1. linia: liczba wystąpień
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Rumcajs
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  RUMCAJS
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+klamra
+a
+```
 
-- Skorzystaj z metody `upper()` dostępnej dla ciągów znaków.
+**Wyjście:**
+
+```
+2
+```
 
 ---
 
-## Zadanie 5 - Wypisz co k-ty znak napisu poziomo i pionowo
+## ZAD-03 — Z ilu słów składa się zdanie?
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `split`
 
-### Treść zadania
+### Treść
 
-Otrzymasz napis oraz liczbę \( k \).
+Wczytaj zdanie i policz, z ilu słów się składa. Znaki interpunkcyjne nie są słowami.
 
-- **a)** Wypisz co \( k \)-ty znak napisu poziomo, oddzielając znaki spacjami.
-- **b)** Wypisz co \( k \)-ty znak napisu pionowo, wypisując każdy znak w osobnej linii.
+### Wejście
 
-### Dane wejściowe
+* 1. linia: zdanie
 
-- Jeden napis (ciąg znaków).
-- Jedna liczba naturalna \( k \) (\( k \geq 1 \)).
+### Wyjście
 
-### Dane wyjściowe
-
-- **a)** Jeden napis — co \( k \)-ty znak napisu, oddzielony spacjami.
-- **b)** Kilka linii — każdy \( k \)-ty znak napisu w osobnej linii.
+* 1. linia: liczba słów
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Grzechotnik
-  3
-  ```
-- **Oczekiwane wyjście**:
+**Wejście:**
 
-  **a)**
+```
+gram na pianinie.
+```
 
-  ```
-  z h n
-  ```
+**Wyjście:**
 
-  **b)**
+```
+3
+```
 
-  ```
-  z
-  h
-  n
-  ```
+### Uwagi o formatowaniu
 
-### Wskazówki
-
-- Użyj indeksowania z odpowiednim krokiem (slicing) dla wybrania co \( k \)-tego znaku.
+* Najprościej: podziel po białych znakach, a z końców słów usuń interpunkcję.
 
 ---
 
-## Zadanie 6 - Zamień litery "a" na znaki zapytania
+## ZAD-04 — Zamień wszystkie małe litery na duże
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `upper`
 
-### Treść zadania
+### Treść
 
-Otrzymasz napis. Zamień w nim wszystkie litery "a" na znaki zapytania `?`.
+Wczytaj napis i zamień wszystkie litery na wielkie.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis (ciąg znaków).
+* 1. linia: napis
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis — oryginalny napis z zamienionymi literami "a" na `?`.
+* 1. linia: napis po konwersji
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Latarnik
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  L?t?rnik
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Rumcajs
+```
 
-- Użyj metody `replace('a', '?')`.
+**Wyjście:**
+
+```
+RUMCAJS
+```
 
 ---
 
-## Zadanie 7 - Zamień znaki na kody ASCII
+## ZAD-05 — Co k-ty znak poziomo i pionowo
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `slicing`, `pętle`
 
-### Treść zadania
+### Treść
 
-Otrzymasz napis. Zamień wszystkie znaki w tym napisie na odpowiadające im kody ASCII. Zastąp oryginalny napis ciągiem tych kodów, oddzielonych przecinkami i spacjami.
+Wczytaj napis i liczbę `k`.
 
-### Dane wejściowe
+a) Wypisz co `k`-ty znak w jednym wierszu, oddzielając znaki spacjami.
+b) Wypisz co `k`-ty znak pionowo (każdy w osobnej linii).
 
-- Jeden napis (ciąg znaków).
+### Wejście
 
-### Dane wyjściowe
+* 1. linia: napis
+* 2. linia: liczba naturalna `k` (k ≥ 1)
 
-- Jeden napis — ciąg kodów ASCII znaków z oryginalnego napisu, oddzielonych przecinkami i spacjami.
+### Wyjście
+
+* (a) 1 linia: znaki oddzielone spacjami
+* (b) wiele linii: każdy znak osobno
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Robot
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  82, 111, 98, 111, 116
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Grzechotnik
+3
+```
 
-- Iteruj przez znaki w napisie i użyj funkcji `ord()` dla każdego z nich.
+**Wyjście:**
+
+```
+z h n
+z
+h
+n
+```
+
+### Uwagi o formatowaniu
+
+* Dokładnie jedna spacja między znakami w punkcie (a), bez spacji na końcu linii.
 
 ---
 
-## Zadanie 8 - Wypisz pionowo słowa, z których składa się zdanie
+## ZAD-06 — Zamień litery „a” na „?”
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `replace`
 
-### Treść zadania
+### Treść
 
-Otrzymasz napis reprezentujący zdanie. Podziel zdanie na słowa i wypisz każde słowo w osobnej linii. Znaki interpunkcyjne nie są uwzględniane jako słowa.
+Wczytaj napis i zamień wszystkie wystąpienia litery `a` na znak `?`.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis (ciąg znaków).
+* 1. linia: napis
 
-### Dane wyjściowe
+### Wyjście
 
-- Kilka linii — każde słowo zdania w osobnej linii.
+* 1. linia: napis po zamianie
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Ala ma kota
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Ala
-  ma
-  kota
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Latarnik
+```
 
-- Użyj metody `split()` do podziału zdania na słowa.
+**Wyjście:**
+
+```
+L?t?rnik
+```
 
 ---
 
-## Zadanie 9 - Wczytaj i rozdziel informacje o pracowniku
+## ZAD-07 — Zamień znaki na kody ASCII
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `ASCII`, `ord`, `string`
 
-### Treść zadania
+### Treść
 
-Otrzymasz napis zawierający informacje o pracowniku, oddzielone średnikami:
+Wczytaj napis i wypisz kody ASCII wszystkich jego znaków, oddzielone przecinkiem i spacją `", "`.
 
-- Imię
-- Nazwisko
-- Miejsce urodzenia
-- Stanowisko
-- Zarobki
+### Wejście
 
-Zapisz te informacje w osobnych zmiennych i wypisz je z odpowiednimi komunikatami.
+* 1. linia: napis
 
-### Dane wejściowe
+### Wyjście
 
-- Jeden napis — informacje o pracowniku, dane oddzielone średnikami `;`.
-
-### Dane wyjściowe
-
-- Kilka linii — każda zawierająca jeden element informacji z odpowiednim opisem.
+* 1. linia: kody ASCII oddzielone `, `
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Jan; Kowalski; Warszawa; Programista; 1000;
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Imię: Jan
-  Nazwisko: Kowalski
-  Miejsce urodzenia: Warszawa
-  Zawód: Programista
-  Zarobki: 1000
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Robot
+```
 
-- Użyj metody `split(';')` do podziału napisu na części.
+**Wyjście:**
+
+```
+82, 111, 98, 111, 116
+```
 
 ---
 
-## Zadanie 10 - Znajdź najdłuższe/najkrótsze słowo w zdaniu
+## ZAD-08 — Wypisz pionowo słowa ze zdania
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `split`, `string`
 
-### Treść zadania
+### Treść
 
-Otrzymasz zdanie. Znajdź:
+Wczytaj zdanie, podziel na słowa i wypisz każde słowo w osobnej linii. Interpunkcja nie jest słowem.
 
-- **a)** Najdłuższe słowo w zdaniu.
-- **b)** Najkrótsze słowo w zdaniu.
+### Wejście
 
-Jeśli jest kilka słów o takiej samej długości, wybierz to, które występuje jako pierwsze.
+* 1. linia: zdanie
 
-### Dane wejściowe
+### Wyjście
 
-- Jeden napis reprezentujący zdanie.
-
-### Dane wyjściowe
-
-- **a)** Jeden napis — najdłuższe słowo.
-- **b)** Jeden napis — najkrótsze słowo.
+* wiele linii: słowa w kolejności występowania
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Kaczka lubi wiosnę.
-  ```
-- **Oczekiwane wyjście**:
+**Wejście:**
 
-  **a)**
+```
+Ala ma kota
+```
 
-  ```
-  Kaczka
-  ```
+**Wyjście:**
 
-  **b)**
-
-  ```
-  lubi
-  ```
-
-### Wskazówki
-
-- Użyj metody `split()` i funkcji `len()`.
+```
+Ala
+ma
+kota
+```
 
 ---
 
-## Zadanie 11 - Średnia długość słów w zdaniu
+## ZAD-09 — Rozdziel informacje o pracowniku
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `split`, `formatowanie`
 
-### Treść zadania
+### Treść
 
-Otrzymasz zdanie. Oblicz średnią długość słów w tym zdaniu. Wynik powinien być liczbą całkowitą.
+Wczytaj linię z danymi pracownika rozdzielonymi średnikami `;`:
 
-### Dane wejściowe
+1. Imię, 2) Nazwisko, 3) Miejsce urodzenia, 4) Stanowisko, 5) Zarobki
 
-- Jeden napis reprezentujący zdanie.
+Wypisz każdą informację w osobnej linii z etykietą.
 
-### Dane wyjściowe
+### Wejście
 
-- Jedna liczba naturalna — średnia długość słów.
+* 1. linia: dane w formacie `Imię; Nazwisko; Miasto; Zawód; Zarobki;`
+
+### Wyjście
+
+Pięć linii w formacie:
+
+* `Imię: ...`
+* `Nazwisko: ...`
+* `Miejsce urodzenia: ...`
+* `Zawód: ...`
+* `Zarobki: ...`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Zepsuty rower.
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  6
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Jan; Kowalski; Warszawa; Programista; 1000;
+```
 
-- Oblicz sumę długości słów i podziel przez ich liczbę.
+**Wyjście:**
+
+```
+Imię: Jan
+Nazwisko: Kowalski
+Miejsce urodzenia: Warszawa
+Zawód: Programista
+Zarobki: 1000
+```
+
+### Uwagi
+
+* Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).
+* Ostatni średnik może powodować pusty element na końcu — zignoruj go.
 
 ---
 
-## Zadanie 12 - Usuń spacje ze zdania
+## ZAD-10 — Najdłuższe i najkrótsze słowo
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `min/max`, `len`
 
-### Treść zadania
+### Treść
 
-Otrzymasz zdanie. Usuń z niego wszystkie spacje.
+Wczytaj zdanie i znajdź:
 
-### Dane wejściowe
+a) najdłuższe słowo,
+b) najkrótsze słowo.
 
-- Jeden napis reprezentujący zdanie.
+Jeśli jest remis, wybierz słowo, które występuje wcześniej.
 
-### Dane wyjściowe
+### Wejście
 
-- Jeden napis — zdanie bez spacji.
+* 1. linia: zdanie
+
+### Wyjście
+
+* 1. linia: najdłuższe słowo
+* 2. linia: najkrótsze słowo
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Ala ma kota
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Alamakota
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Kaczka lubi wiosnę.
+```
 
-- Użyj metody `replace(' ', '')`.
+**Wyjście:**
+
+```
+Kaczka
+lubi
+```
 
 ---
 
-## Zadanie 13 - Znaki znajdujące się na pozycjach będących liczbami pierwszymi
+## ZAD-11 — Średnia długość słów
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `arytmetyka`
 
-### Treść zadania
+### Treść
 
-Otrzymasz napis. Znajdź znaki na pozycjach będących liczbami pierwszymi.
+Wczytaj zdanie i oblicz średnią długość słów. Wynik ma być liczbą całkowitą.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis (ciąg znaków).
+* 1. linia: zdanie
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista znaków — znaki z pozycji o indeksach będących liczbami pierwszymi.
+* 1. linia: średnia długość słów (liczba całkowita)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Słoń
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ['o', 'ń']
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Zepsuty rower.
+```
 
-- Indeksy w Pythonie zaczynają się od 0.
-- Liczby pierwsze w zakresie indeksów to 2, 3, 5, 7, itd.
+**Wyjście:**
+
+```
+6
+```
+
+### Uwagi
+
+* Licz jako: `suma_dlugosci // liczba_slow` (dzielenie całkowite).
 
 ---
 
-## Zadanie 14 - Napis składający się z liczb od 1 do n
+## ZAD-12 — Usuń spacje ze zdania
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `replace`, `string`
 
-### Treść zadania
+### Treść
 
-Otrzymasz liczbę naturalną \( n \). Zwróć napis składający się z kolejnych liczb od 1 do \( n \), bez separatorów.
+Wczytaj zdanie i usuń z niego wszystkie spacje.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
+* 1. linia: zdanie
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis — ciąg liczb od 1 do \( n \).
+* 1. linia: zdanie bez spacji
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  123
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Ala ma kota
+```
 
-- Użyj pętli i konkatenacji napisów.
+**Wyjście:**
+
+```
+Alamakota
+```
 
 ---
 
-## Zadanie 15 - Słowa ze zdania jako osobne elementy listy
+## ZAD-13 — Znaki na indeksach będących liczbami pierwszymi
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `liczby pierwsze`, `indeksy`, `string`
 
-### Treść zadania
+### Treść
 
-Otrzymasz zdanie. Zwróć listę słów w nim zawartych.
+Wczytaj napis. Zbierz znaki, których **indeksy (od 0)** są liczbami pierwszymi (2, 3, 5, 7, ...). Wypisz wynik jako listę w stylu Pythona.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis reprezentujący zdanie.
+* 1. linia: napis
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista napisów — słów ze zdania.
+* 1. linia: lista znaków, np. `['o', 'ń']`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Ala ma kota
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ["Ala", "ma", "kota"]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Słoń
+```
 
-- Użyj metody `split()`.
+**Wyjście:**
+
+```
+['o', 'ń']
+```
+
+### Uwagi
+
+* Indeksy: `S(0) ł(1) o(2) ń(3)` → bierz 2 i 3.
 
 ---
 
-## Zadanie 16 - Odległość Hamminga
+## ZAD-14 — Napis z liczb od 1 do n
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `string`
 
-### Treść zadania
+### Treść
 
-Otrzymasz dwa napisy o tej samej długości. Oblicz odległość Hamminga między nimi.
+Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separatorów.
 
-### Dane wejściowe
+### Wejście
 
-- Dwa napisy o równej długości.
+* 1. linia: liczba naturalna `n` (n ≥ 1)
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna liczba naturalna — liczba pozycji, na których znaki w napisach są różne.
+* 1. linia: ciąg `1..n` bez spacji
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  adam
-  axam
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  1
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+3
+```
 
-- Iteruj przez indeksy napisów i porównuj znaki.
+**Wyjście:**
+
+```
+123
+```
 
 ---
 
-## Zadanie 17 - Konwersja listy na napis
+## ZAD-15 — Słowa jako lista
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `split`, `list`
 
-### Treść zadania
+### Treść
 
-Otrzymasz listę liczb naturalnych. Zamień ją na napis, łącząc liczby bez separatorów.
+Wczytaj zdanie i wypisz listę słów w formacie `["Ala", "ma", "kota"]`.
 
-### Dane wejściowe
+### Wejście
 
-- Lista liczb naturalnych.
+* 1. linia: zdanie
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis — liczby z listy połączone w ciąg znaków.
+* 1. linia: lista słów (jak w przykładzie)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [2, 4, 7]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  247
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Ala ma kota
+```
 
-- Użyj funkcji `str()` dla każdego elementu i połącz je.
+**Wyjście:**
+
+```
+["Ala", "ma", "kota"]
+```
 
 ---
 
-## Zadanie 18 - Odwróć słowa w zdaniu
+## ZAD-16 — Odległość Hamminga
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `string`, `porównanie`
 
-### Treść zadania
+### Treść
 
-Otrzymasz zdanie. Zamień każde słowo na jego lustrzane odbicie (odwróć litery w słowie).
+Wczytaj dwa napisy tej samej długości i policz, na ilu pozycjach różnią się znakami.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis reprezentujący zdanie.
+* 1. linia: napis `s1`
+* 2. linia: napis `s2`  (ta sama długość)
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis — zdanie z odwróconymi słowami.
+* 1. linia: odległość Hamminga
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Ala ma kota
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  alA am atok
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+adam
+axam
+```
 
-- Użyj metody `split()` i odwróć każde słowo osobno.
+**Wyjście:**
+
+```
+1
+```
 
 ---
+
+## ZAD-17 — Konwersja listy na napis
+
+**Poziom:** ★☆☆
+**Tagi:** `list`, `string`
+
+### Treść
+
+Otrzymujesz listę liczb naturalnych w zapisie tekstowym (np. `[2, 4, 7]`). Połącz liczby bez separatorów i wypisz jako napis.
+
+### Wejście
+
+* 1. linia: lista w formacie podobnym do Pythona, np. `[2, 4, 7]`
+
+### Wyjście
+
+* 1. linia: napis z połączonych liczb, np. `247`
+
+### Przykład
+
+**Wejście:**
+
+```
+[2, 4, 7]
+```
+
+**Wyjście:**
+
+```
+247
+```
+
+### Uwagi
+
+* Najprościej: usuń nawiasy `[` `]`, rozdziel po przecinkach, `strip()`, potem sklej.
+
+---
+
+## ZAD-18 — Odwróć słowa w zdaniu
+
+**Poziom:** ★★☆
+**Tagi:** `split`, `string`, `pętle`
+
+### Treść
+
+Wczytaj zdanie i odwróć litery **w każdym słowie osobno**, zachowując kolejność słów.
+
+### Wejście
+
+* 1. linia: zdanie
+
+### Wyjście
+
+* 1. linia: zdanie z odwróconymi słowami
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+alA am atok
+```
