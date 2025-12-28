@@ -1,341 +1,348 @@
-# Napisy — trudne
+# Rozdział: Napisy — zadania dodatkowe
 
-## Zadanie 1 - Podmiana słowa w zdaniu
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-**Poziom trudności**: ★★☆
+**Konwencje wspólne:**
 
-### Treść zadania
+* Jeśli wejściem jest „napis” — wczytaj całą linię (razem ze spacjami), o ile zadanie nie mówi inaczej.
+* Wypisuj dokładnie to, co wynika z polecenia: jeden napis / `Prawda` / `Fałsz` / lista.
+* Wielkość liter ma znaczenie, jeśli nie napisano inaczej.
+* Dla list w wyjściu przyjmujemy zapis w stylu Pythona, np. `['a', 'b']`, jeśli zadanie mówi „lista”.
+
+---
+
+## ZAD-01 — Podmiana słowa w zdaniu
+
+**Poziom:** ★★☆
+**Tagi:** `string`, `replace`, `substring`
+
+### Treść
 
 Masz trzy napisy:
 
-1. **Zdanie** — tekst, w którym dokonasz zamiany.
-2. **Słowo A** — słowo do znalezienia w zdaniu.
-3. **Słowo B** — słowo, na które zamienisz każde wystąpienie słowa A.
+1. Zdanie (tekst do modyfikacji),
+2. Słowo A (podnapis do znalezienia),
+3. Słowo B (podnapis zastępujący).
 
-Twoim zadaniem jest zamienić wszystkie wystąpienia słowa **A** na słowo **B** w podanym zdaniu.
+Zamień **wszystkie wystąpienia** słowa/podnapisu **A** na **B** w podanym zdaniu.
 
-### Dane wejściowe
+> Uwaga: A może być częścią innych słów — zamiana dotyczy **każdego wystąpienia podnapisu**.
 
-- Trzy napisy:
-  1. Zdanie.
-  2. Słowo A.
-  3. Słowo B.
+### Wejście
 
-### Dane wyjściowe
+* 1 linia: zdanie `S`
+* 2 linia: napis `A`
+* 3 linia: napis `B`
 
-- Jeden napis — zdanie po dokonaniu zamian.
+### Wyjście
+
+* 1 linia: zdanie po zamianie
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Lezy jezy na wiezy
-  zy
-  rzy
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Lerzy jerzy na wierzy
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Lezy jezy na wiezy
+zy
+rzy
+```
 
-- Upewnij się, że zamieniasz wszystkie wystąpienia słowa **A** w zdaniu.
-- Możesz wykorzystać funkcje do zastępowania tekstu w napisie.
-- Pamiętaj, że słowo może być częścią innego słowa.
+**Wyjście:**
+
+```
+Lerzy jerzy na wierzy
+```
 
 ---
 
-## Zadanie 2 - Usuń podnapis
+## ZAD-02 — Usuń podnapis
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `string`, `replace`, `substring`
 
-### Treść zadania
+### Treść
+
+Dostajesz dwa napisy:
+
+1. Napis główny,
+2. Podnapis do usunięcia.
+
+Usuń **wszystkie wystąpienia** podnapisu z napisu głównego.
+
+### Wejście
+
+* 1 linia: napis `S`
+* 2 linia: napis `T` (do usunięcia)
+
+### Wyjście
+
+* 1 linia: wynikowy napis po usunięciu wszystkich wystąpień
+
+### Przykład
+
+**Wejście:**
+
+```
+Lezy jezy na wiezy
+zy
+```
+
+**Wyjście:**
+
+```
+Le je na wie
+```
+
+---
+
+## ZAD-03 — Czy napis A jest początkiem napisu B?
+
+**Poziom:** ★★☆
+**Tagi:** `string`, `prefix`
+
+### Treść
 
 Otrzymujesz dwa napisy:
 
-1. **Napis główny** — tekst, z którego usuniesz podnapis.
-2. **Podnapis do usunięcia** — ciąg znaków, który należy usunąć z napisu głównego.
+1. Napis `A` — potencjalny przedrostek,
+2. Napis `B` — napis testowany.
 
-Twoim zadaniem jest znaleźć i usunąć wszystkie wystąpienia podanego podnapisu w napisie głównym.
+Sprawdź, czy `B` **zaczyna się** od `A`.
 
-### Dane wejściowe
+### Wejście
 
-- Dwa napisy:
-  1. Napis główny.
-  2. Podnapis do usunięcia.
+* 1 linia: `A`
+* 2 linia: `B`
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis — wynik po usunięciu wszystkich wystąpień podnapisu.
+* 1 linia: `Prawda` albo `Fałsz`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Lezy jezy na wiezy
-  zy
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Le je na wie
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Dino
+Dinozaur jest zly
+```
 
-- Upewnij się, że usuwasz wszystkie wystąpienia podnapisu, niezależnie od ich pozycji.
-- Możesz użyć funkcji do zastępowania podnapisu pustym ciągiem znaków.
+**Wyjście:**
+
+```
+Prawda
+```
 
 ---
 
-## Zadanie 3 - Czy napis A jest początkiem napisu B?
+## ZAD-04 — Usuń powtórzenia znaków
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★★
+**Tagi:** `string`, `set`, `unique`, `kolejność`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwa napisy:
+Otrzymujesz napis. Usuń wszystkie powtórzenia znaków tak, aby **każdy znak wystąpił tylko raz**, zachowując **kolejność pierwszych wystąpień**.
 
-1. **Napis A** — potencjalny przedrostek.
-2. **Napis B** — napis, który sprawdzasz pod kątem przedrostka.
+### Wejście
 
-Twoim zadaniem jest sprawdzić, czy napis **B** zaczyna się od napisu **A**.
+* 1 linia: napis `S`
 
-### Dane wejściowe
+### Wyjście
 
-- Dwa napisy:
-  1. Napis A.
-  2. Napis B.
-
-### Dane wyjściowe
-
-- Wartość logiczna:
-  - **Prawda**, jeśli napis **B** zaczyna się od napisu **A**.
-  - **Fałsz**, w przeciwnym razie.
+* 1 linia: napis z unikalnymi znakami
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Dino
-  Dinozaur jest zly
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Prawda
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+AAAAAAAAAABBBBBBBBA
+```
 
-- Porównaj początkowy fragment napisu **B** z napisem **A**.
-- Upewnij się, że uwzględniasz całość napisu **A**.
+**Wyjście:**
+
+```
+AB
+```
 
 ---
 
-## Zadanie 4 - Usuń powtórzenia znaków
+## ZAD-05 — Usuń powtórzenia sąsiadujących znaków
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★★
+**Tagi:** `string`, `compress`, `run-length`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis. Twoim zadaniem jest usunięcie wszystkich powtórzeń znaków w tym napisie, tak aby każdy znak wystąpił tylko raz.
+Otrzymujesz napis. Usuń powtórzenia znaków występujących **bezpośrednio obok siebie**, pozostawiając jedno wystąpienie z każdej „serii”.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis.
+* 1 linia: napis `S`
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis — zawierający unikalne znaki z napisu wejściowego.
+* 1 linia: napis po redukcji sąsiadów
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  AAAAAAAAAABBBBBBBBA
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  AB
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+AAAAAAAAAABBBBBBBBA
+```
 
-- Przechowuj już napotkane znaki i pomijaj te, które się powtarzają.
-- Zachowaj kolejność pierwszych wystąpień znaków.
+**Wyjście:**
+
+```
+ABA
+```
 
 ---
 
-## Zadanie 5 - Usuń powtórzenia sąsiadujących znaków
+## ZAD-06 — Rotacje napisów
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★★
+**Tagi:** `string`, `rotation`, `substring`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis. Twoim zadaniem jest usunięcie powtórzeń tych samych znaków, które występują bezpośrednio obok siebie, pozostawiając tylko jedno wystąpienie z każdej serii takich znaków.
+Otrzymujesz dwa napisy `A` i `B`. Sprawdź, czy jeden z nich jest **rotacją** drugiego (mają tę samą długość i da się uzyskać jeden przez przesunięcie cykliczne drugiego).
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis.
+* 1 linia: napis `A`
+* 2 linia: napis `B`
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis — wynik po usunięciu powtórzeń sąsiadujących znaków.
+* 1 linia: `Prawda` albo `Fałsz`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  AAAAAAAAAABBBBBBBBA
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ABA
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+malpka
+pkamal
+```
 
-- Iteruj przez napis i porównuj każdy znak z poprzednim.
-- Dodaj znak do wyniku tylko jeśli różni się od poprzedniego.
+**Wyjście:**
+
+```
+Prawda
+```
 
 ---
 
-## Zadanie 6 - Rotacje napisów
+## ZAD-07 — Powtarzające się podnapisy
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★★
+**Tagi:** `string`, `substrings`, `count`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwa napisy o tej samej długości. Twoim zadaniem jest sprawdzić, czy jeden napis jest rotacją drugiego. Rotacja oznacza przesunięcie znaków w napisie tak, że część z końca trafia na początek.
+Otrzymujesz napis. Znajdź wszystkie **podnapisy**, które występują w nim **więcej niż jeden raz**.
 
-### Dane wejściowe
+### Wejście
 
-- Dwa napisy.
+* 1 linia: napis `S`
 
-### Dane wyjściowe
+### Wyjście
 
-- Wartość logiczna:
-  - **Prawda**, jeśli jeden napis jest rotacją drugiego.
-  - **Fałsz**, w przeciwnym razie.
+* 1 linia: lista napisów — wszystkie powtarzające się podnapisy
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  malpka
-  pkamal
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Prawda
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+pythonpython
+```
 
-- Możesz sprawdzić, czy jeden z napisów jest podciągiem dwóch połączonych kopii drugiego napisu.
-- Sprawdź, czy długości obu napisów są identyczne.
+**Wyjście:**
+
+```
+['python']
+```
+
+### Uwagi
+
+* Jeśli sprawdzarka wymaga konkretnej kolejności (np. rosnąco po długości/alfabetycznie) — musi to być opisane. W przeciwnym razie dopuszczalna może być dowolna kolejność.
 
 ---
 
-## Zadanie 7 - Powtarzające się podnapisy
+## ZAD-08 — Najdłuższy wspólny przedrostek
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★★
+**Tagi:** `string`, `prefix`, `list`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz napis. Twoim zadaniem jest znaleźć wszystkie podnapisy, które występują w tym napisie więcej niż jeden raz.
+Otrzymujesz listę napisów (w kolejnych liniach). Znajdź najdłuższy przedrostek wspólny dla wszystkich.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis.
+* 1 linia: `n` — liczba napisów
+* kolejne `n` linii: napisy
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista napisów — zawierająca wszystkie powtarzające się podnapisy.
+* 1 linia: najdłuższy wspólny przedrostek (może być pusty)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  pythonpython
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ['python']
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+3
+Remolada
+Remux
+Remmy
+```
 
-- Rozważ wszystkie możliwe długości podnapisów od 1 do połowy długości napisu.
-- Użyj struktury danych do śledzenia liczby wystąpień każdego podnapisu.
+**Wyjście:**
+
+```
+Rem
+```
 
 ---
 
-## Zadanie 8 - Najdłuższy wspólny przedrostek
+## ZAD-09 — Najdłuższy wspólny podnapis
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★★
+**Tagi:** `string`, `dp`, `substring`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę napisów. Twoim zadaniem jest znaleźć najdłuższy przedrostek (początkowy fragment), który jest wspólny dla wszystkich napisów w liście.
+Otrzymujesz dwa napisy. Znajdź **najdłuższy wspólny podnapis** (ciągły fragment), który występuje w obu napisach.
 
-### Dane wejściowe
+### Wejście
 
-- Lista napisów.
+* 1 linia: napis `A`
+* 2 linia: napis `B`
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis — najdłuższy wspólny przedrostek.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  Remolada
-  Remux
-  Remmy
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Rem
-  ```
-
-### Wskazówki
-
-- Porównuj znaki na tych samych pozycjach we wszystkich napisach.
-- Przerwij porównywanie, gdy napotkasz różne znaki.
-
----
-
-## Zadanie 9 - Najdłuższy wspólny podnapis
-
-**Poziom trudności**: ★★★
-
-### Treść zadania
-
-Otrzymujesz dwa napisy. Twoim zadaniem jest znaleźć najdłuższy wspólny podciąg znaków (podnapis), który występuje w obu napisach.
-
-### Dane wejściowe
-
-- Dwa napisy.
-
-### Dane wyjściowe
-
-- Jeden napis — najdłuższy wspólny podnapis.
+* 1 linia: najdłuższy wspólny podnapis
+  (jeśli jest kilka o tej samej długości — wybierz ten, który występuje **najwcześniej w A**; jeśli nadal remis, najwcześniej w B)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  ijkabcdl
-  xxxxabcd
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  abcd
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+ijkabcdl
+xxxxabcd
+```
 
-- Możesz użyć algorytmu dynamicznego programowania do znalezienia najdłuższego wspólnego podciągu.
-- Twórz tablicę dwuwymiarową, która przechowuje długości wspólnych podciągów dla różnych indeksów.
+**Wyjście:**
+
+```
+abcd
+```
+
