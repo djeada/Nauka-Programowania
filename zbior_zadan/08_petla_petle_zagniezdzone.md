@@ -1,344 +1,393 @@
-# Pętla - Pętle Zagnieżdżone
+# Rozdział: Pętla — Pętle zagnieżdżone
 
-## Zadanie 1 - Kwadrat
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-**Poziom trudności**: ★☆☆
+**Konwencje wspólne:**
 
-### Treść zadania
-
-Napisz program, który dla podanej liczby naturalnej \( n \) wypisze kwadrat o boku długości \( n \), zbudowany z gwiazdek (\( * \)).
-
-### Dane wejściowe
-
-- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
-
-### Dane wyjściowe
-
-- Kwadrat o boku \( n \), złożony z gwiazdek. Każdy wiersz powinien zawierać \( n \) gwiazdek bez odstępów.
-- Każdy wiersz kwadratu powinien być wypisany w osobnej linii.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  **
-  **
-  ```
-
-### Wskazówki
-
-- Użyj dwóch zagnieżdżonych pętli: zewnętrznej dla wierszy i wewnętrznej dla kolumn.
-- W każdej iteracji pętli zewnętrznej wypisz jeden wiersz gwiazdek.
+* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
+* Jeśli w danych wyjściowych jest „każdy wiersz w osobnej linii” — po każdym wierszu wypisz znak nowej linii.
+* W zadaniach z rysowaniem znakami **spacje są istotne** (nie przycinaj końcowych spacji — najlepiej ich nie drukować, ale w środku linii muszą być).
+* Nie wypisuj promptów typu „Podaj n”.
 
 ---
 
-## Zadanie 2 - Trójkąt prostokątny równoboczny
+## ZAD-01 — Kwadrat
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle zagnieżdżone`, `print`, `string`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanej liczby naturalnej \( n \) wypisze trójkąt prostokątny równoramienny o wysokości \( n \), zbudowany z gwiazdek (\( * \)).
+Wczytaj liczbę naturalną `n` (`n ≥ 1`) i wypisz kwadrat `n × n` zbudowany z gwiazdek `*`.
+Każdy wiersz ma zawierać dokładnie `n` gwiazdek (bez spacji).
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
+Jedna liczba naturalna:
 
-### Dane wyjściowe
+* 1. linia: `n` (`n ≥ 1`)
 
-- Trójkąt, w którym w pierwszym wierszu jest jedna gwiazdka, w drugim dwie, aż do \( n \) gwiazdek w ostatnim wierszu.
-- Każdy wiersz trójkąta powinien być wypisany w osobnej linii.
+### Wyjście
+
+`n` linii, w każdej dokładnie `n` znaków `*`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
+**Wejście:**
+
+```
+2
+```
+
+**Wyjście:**
+
+```
+**
+**
+```
+
+---
+
+## ZAD-02 — Trójkąt prostokątny (rosnący)
+
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `print`, `string`
+
+### Treść
+
+Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt o wysokości `n`, gdzie w wierszu `i` jest `i` gwiazdek (`i = 1..n`).
+
+### Wejście
+
+* 1. linia: `n` (`n ≥ 1`)
+
+### Wyjście
+
+`n` linii:
+
+* 1. linia: `*`
+* 2. linia: `**`
+* …
+* `n`-ta linia: `n` gwiazdek
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+*
+**
+***
+```
+
+---
+
+## ZAD-03 — Trójkąt prostokątny (malejący)
+
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `print`, `string`
+
+### Treść
+
+Wczytaj `n` (`n ≥ 1`) i wypisz odwrócony trójkąt o wysokości `n`, zaczynając od `n` gwiazdek i kończąc na `1`.
+
+### Wejście
+
+* 1. linia: `n` (`n ≥ 1`)
+
+### Wyjście
+
+`n` linii:
+
+* 1. linia: `n` gwiazdek
+* 2. linia: `n-1` gwiazdek
+* …
+* ostatnia linia: `*`
+
+### Przykład
+
+**Wejście:**
+
+```
+4
+```
+
+**Wyjście:**
+
+```
+****
+***
+**
+*
+```
+
+---
+
+## ZAD-04 — Tabliczka mnożenia N × N
+
+**Poziom:** ★★☆
+**Tagi:** `pętle zagnieżdżone`, `formatowanie`, `arytmetyka`
+
+### Treść
+
+Wczytaj liczbę naturalną `N` (`N ≥ 1`) i wypisz tabliczkę mnożenia `N × N`.
+
+W wierszu `i` i kolumnie `j` (licząc od 1) ma znaleźć się wartość `i*j`.
+Liczby w jednym wierszu oddzielaj pojedynczą spacją.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+
+### Wyjście
+
+`N` linii, w każdej `N` liczb.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+1 2 3
+2 4 6
+3 6 9
+```
+
+### Uwagi o formatowaniu
+
+* Nie dodawaj spacji na końcu wiersza.
+
+---
+
+## ZAD-05 — Litera „X”
+
+**Poziom:** ★★☆
+**Tagi:** `pętle zagnieżdżone`, `warunki`, `ASCII-art`
+
+### Treść
+
+Wczytaj `n` (`n ≥ 3`) i wypisz literę `X` o wysokości `n`, zbudowaną z `*` na obu przekątnych.
+
+W wierszu `i` i kolumnie `j` (indeksy od 0):
+
+* wypisz `*`, gdy `j == i` **lub** `j == n - 1 - i`,
+* w przeciwnym razie wypisz spację.
+
+### Wejście
+
+* 1. linia: `n` (`n ≥ 3`)
+
+### Wyjście
+
+`n` linii po `n` znaków (`*` lub spacja).
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+```
+
+**Wyjście:**
+
+```
+*   *
+ * *
   *
-  **
-  ***
-  ```
-
-### Wskazówki
-
-- Użyj pętli, w której numer wiersza odpowiada liczbie gwiazdek do wypisania w tym wierszu.
+ * *
+*   *
+```
 
 ---
 
-## Zadanie 3 - Odwrócony trójkąt prostokątny równoboczny
+## ZAD-06 — Litera „Z”
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★★☆
+**Tagi:** `pętle zagnieżdżone`, `warunki`, `ASCII-art`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanej liczby naturalnej \( n \) wypisze odwrócony trójkąt prostokątny równoramienny o wysokości \( n \), zaczynając od podstawy.
+Wczytaj `n` (`n ≥ 3`) i wypisz literę `Z` o wysokości `n`:
 
-### Dane wejściowe
+* pierwszy wiersz: `n` gwiazdek,
+* ostatni wiersz: `n` gwiazdek,
+* w środku: jedna gwiazdka na przekątnej od prawej do lewej.
 
-- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
+W wierszu `i` (0..n-1) i kolumnie `j`:
 
-### Dane wyjściowe
+* jeśli `i == 0` lub `i == n-1` → `*`
+* else jeśli `j == n-1-i` → `*`
+* else → spacja
 
-- Trójkąt, w którym w pierwszym wierszu jest \( n \) gwiazdek, w drugim \( n - 1 \), aż do jednej gwiazdki w ostatnim wierszu.
-- Każdy wiersz trójkąta powinien być wypisany w osobnej linii.
+### Wejście
 
-### Przykład
+* 1. linia: `n` (`n ≥ 3`)
 
-- **Dane wejściowe**:
-  ```
-  4
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ****
-  ***
-  **
-  *
-  ```
+### Wyjście
 
-### Wskazówki
-
-- Użyj pętli, która w każdej iteracji zmniejsza liczbę gwiazdek o jeden.
-
----
-
-## Zadanie 4 - Tabliczka mnożenia
-
-**Poziom trudności**: ★★☆
-
-### Treść zadania
-
-Napisz program, który dla podanej liczby naturalnej \( N \) wypisze tabliczkę mnożenia o wymiarach \( N \times N \).
-
-### Dane wejściowe
-
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-
-### Dane wyjściowe
-
-- Tabliczka mnożenia składająca się z \( N \) wierszy i \( N \) kolumn.
-- Wartości w tabliczce powinny być liczbami całkowitymi, a liczby w wierszu powinny być oddzielone spacjami.
-- Każdy wiersz powinien być wypisany w osobnej linii.
+`n` linii po `n` znaków.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  1 2 3
-  2 4 6
-  3 6 9
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+5
+```
 
-- Użyj zagnieżdżonych pętli: zewnętrznej dla wierszy i wewnętrznej dla kolumn.
-- Wartość w komórce to iloczyn numeru wiersza i kolumny.
-- Zadbaj o formatowanie wyjścia, aby tabliczka była czytelna.
+**Wyjście:**
 
----
-
-## Zadanie 5 - Litera X
-
-**Poziom trudności**: ★★☆
-
-### Treść zadania
-
-Napisz program, który dla podanej liczby naturalnej \( n \) wypisze literę "X" o wysokości \( n \), zbudowaną z gwiazdek (\( * \)).
-
-### Dane wejściowe
-
-- Jedna liczba naturalna \( n \) (\( n \geq 3 \)).
-
-### Dane wyjściowe
-
-- Litera "X" o wysokości \( n \), gdzie gwiazdki są umieszczone na przekątnych.
-- Każdy wiersz powinien być wypisany w osobnej linii.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  *   *
-   * *
-    *
-   * *
-  *   *
-  ```
-
-### Wskazówki
-
-- Użyj zagnieżdżonych pętli do iteracji przez wiersze i kolumny.
-- Wypisz gwiazdkę, gdy indeks kolumny jest równy indeksowi wiersza lub gdy suma indeksów wiersza i kolumny wynosi \( n - 1 \).
-- W pozostałych miejscach wypisz spację.
-
----
-
-## Zadanie 6 - Litera Z
-
-**Poziom trudności**: ★★☆
-
-### Treść zadania
-
-Napisz program, który dla podanej liczby naturalnej \( n \) wypisze literę "Z" o wysokości \( n \), zbudowaną z gwiazdek (\( * \)).
-
-### Dane wejściowe
-
-- Jedna liczba naturalna \( n \) (\( n \geq 3 \)).
-
-### Dane wyjściowe
-
-- Litera "Z" o wysokości \( n \), gdzie górna i dolna linia oraz przekątna są zbudowane z gwiazdek.
-- Każdy wiersz powinien być wypisany w osobnej linii.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  *****
-     *
-    *
+```
+*****
    *
-  *****
-  ```
-
-### Wskazówki
-
-- W pierwszym i ostatnim wierszu wypisz \( n \) gwiazdek.
-- W wierszach pomiędzy wypisz gwiazdkę w odpowiednim miejscu przekątnej.
-- Użyj zagnieżdżonych pętli i warunków do określenia, kiedy wypisać gwiazdkę, a kiedy spację.
+  *
+ *
+*****
+```
 
 ---
 
-## Zadanie 7 - Choinka
+## ZAD-07 — Choinka z N trójkątów
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `pętle zagnieżdżone`, `generowanie`, `print`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanej liczby naturalnej \( N \) wypisze choinkę złożoną z \( N \) trójkątów ustawionych jeden na drugim. Wysokość pierwszego trójkąta to 1, a wysokość każdego kolejnego jest o 1 większa od poprzedniego.
+Wczytaj liczbę naturalną `N` (`N ≥ 1`). Wypisz choinkę składającą się z `N` trójkątów ustawionych jeden pod drugim:
 
-### Dane wejściowe
+* 1. trójkąt ma wysokość 1,
+* 2. trójkąt ma wysokość 2,
+* …
+* `N`-ty trójkąt ma wysokość `N`.
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
+Każdy trójkąt jest „rosnący” (jak w ZAD-02): w jego wierszu `i` wypisz `i` gwiazdek.
 
-### Dane wyjściowe
+### Wejście
 
-- Choinka złożona z \( N \) trójkątów, gdzie każdy trójkąt jest zbudowany z gwiazdek (\( * \)).
-- Każdy wiersz powinien być wypisany w osobnej linii.
+* 1. linia: `N` (`N ≥ 1`)
+
+### Wyjście
+
+Suma wysokości wszystkich trójkątów, czyli `1 + 2 + ... + N` linii.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  *
-  *
-  **
-  *
-  **
-  ***
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+3
+```
 
-- Użyj pętli do generowania kolejnych trójkątów.
-- Wysokość każdego trójkąta zwiększa się o 1.
-- W każdej iteracji generuj trójkąt o odpowiedniej wysokości.
+**Wyjście:**
+
+```
+*
+*
+**
+*
+**
+***
+```
+
+### Uwagi o formatowaniu
+
+* Nie dodawaj pustych linii między trójkątami.
 
 ---
 
-## Zadanie 8 - Trójkąt Pascala
+## ZAD-08 — Trójkąt Pascala
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `pętle zagnieżdżone`, `listy`, `kombinatoryka`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanej liczby naturalnej \( n \) wypisze trójkąt Pascala o wysokości \( n \).
+Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt Pascala o wysokości `n`.
 
-### Dane wejściowe
+Wiersz 1: `1`
+Wiersz 2: `1 1`
+Wiersz 3: `1 2 1`
+itd.
 
-- Jedna liczba naturalna \( n \) (\( n \geq 1 \)).
+Liczby w wierszu oddzielaj pojedynczą spacją.
 
-### Dane wyjściowe
+### Wejście
 
-- Trójkąt Pascala o wysokości \( n \), gdzie każdy wiersz zawiera odpowiednie współczynniki dwumianowe.
-- Każdy wiersz powinien być wypisany w osobnej linii, a liczby w wierszu powinny być oddzielone spacjami.
+* 1. linia: `n` (`n ≥ 1`)
+
+### Wyjście
+
+`n` linii, w `i`-tej linii jest `i` liczb.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  1
-  1 1
-  1 2 1
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+3
+```
 
-- Użyj list do przechowywania poprzedniego wiersza trójkąta.
-- W każdym wierszu oblicz kolejne wartości na podstawie sumy dwóch liczb nad nim.
-- Możesz korzystać ze wzoru na współczynniki dwumianowe.
+**Wyjście:**
+
+```
+1
+1 1
+1 2 1
+```
+
+### Uwagi o formatowaniu
+
+* Nie dodawaj spacji na końcu wiersza.
 
 ---
 
-## Zadanie 9 - N pierwszych liczb pierwszych
+## ZAD-09 — N pierwszych liczb pierwszych
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `pętle`, `pierwszość`, `wydajność`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanej liczby naturalnej \( N \) wypisze pierwsze \( N \) liczb pierwszych.
+Wczytaj liczbę naturalną `N` (`N ≥ 1`) i wypisz pierwsze `N` liczb pierwszych w **jednej linii**, oddzielone pojedynczą spacją.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
+* 1. linia: `N` (`N ≥ 1`)
 
-### Dane wyjściowe
+### Wyjście
 
-- Pierwsze \( N \) liczb pierwszych, oddzielone spacjami lub przecinkami.
-- Wszystkie liczby powinny być wypisane w jednej linii.
+Jedna linia: `N` liczb pierwszych oddzielonych spacjami.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2 3 5 7 11
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+5
+```
 
-- Użyj pętli, aby znaleźć kolejne liczby pierwsze.
-- Sprawdzaj podzielność liczby przez liczby mniejsze lub równe jej pierwiastkowi kwadratowemu.
-- Kontynuuj, aż znajdziesz \( N \) liczb pierwszych.
+**Wyjście:**
 
----
+```
+2 3 5 7 11
+```
+
+### Uwagi o formatowaniu
+
+* Nie dodawaj spacji na końcu linii.
+* Do sprawdzania pierwszości wystarczy test dzielnikami do `⌊sqrt(x)⌋`.
