@@ -1,488 +1,410 @@
-# Instrukcja Warunkowa
+# Rozdział 2: Instrukcja warunkowa (if / else)
 
-## Zadanie 1 - Sprawdzenie liczby większej od 5
+Zadania w tym rozdziale ćwiczą podejmowanie decyzji w programie na podstawie warunków.
 
-**Poziom trudności**: ★☆☆
+**Konwencje wspólne:**
 
-### Treść zadania
-
-Napisz program, który pobiera od użytkownika jedną liczbę naturalną (całkowitą nieujemną). Jeżeli podana liczba jest **większa niż 5**, program powinien ją wypisać na standardowe wyjście. W przeciwnym razie program nie powinien wypisywać nic.
-
-### Dane wejściowe
-
-- Jedna liczba naturalna \( n \) (całkowita nieujemna), wprowadzona przez użytkownika.
-
-### Dane wyjściowe
-
-- Jeśli \( n > 5 \), wypisz liczbę \( n \).
-- Jeśli \( n \leq 5 \), nie wypisuj nic.
-
-### Przykład
-
-**Przykład 1:**
-
-- **Dane wejściowe**:
-  ```
-  10
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  10
-  ```
-
-**Przykład 2:**
-
-- **Dane wejściowe**:
-  ```
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  ```
-  *(brak danych wyjściowych)*
-
-### Wskazówki
-
-- Pamiętaj, że liczba naturalna to liczba całkowita nieujemna (0, 1, 2, ...).
-- Użyj instrukcji warunkowej, aby sprawdzić, czy liczba jest większa niż 5.
+* Każde zadanie jest **osobnym programem**.
+* Dane wejściowe wczytuj dokładnie w podanej kolejności, każdą wartość z osobnej linii (o ile nie napisano inaczej).
+* Wyniki wypisuj dokładnie jak w specyfikacji (w tym wielkość liter, kropki, spacje).
+* Jeżeli zadanie mówi „nie wypisuj nic” — program ma zakończyć się bez żadnego outputu (bez spacji, bez pustej linii).
 
 ---
 
-## Zadanie 2 - Porównanie dwóch liczb
+## ZAD-01 — Liczba większa od 5
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if`, `porównania`, `I/O`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika dwie liczby naturalne (całkowite nieujemne) i sprawdza, czy są one identyczne. Program powinien wypisać odpowiedni komunikat:
+Wczytaj jedną liczbę naturalną `n`.
+Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 
-- Jeśli liczby są identyczne, wypisz: **"Liczby są identyczne."**
-- Jeśli liczby są różne, wypisz: **"Liczby są różne."**
+### Wejście
 
-### Dane wejściowe
+* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
 
-- Dwie liczby naturalne, każda w oddzielnej linii.
+### Wyjście
 
-### Dane wyjściowe
+* Jeśli `n > 5`: jedna linia z liczbą `n`
+* Jeśli `n ≤ 5`: brak wyjścia
 
-- Jeden komunikat tekstowy, zgodnie z powyższym opisem.
+### Przykład 1
 
-### Przykład
+**Wejście:**
 
-**Przykład 1:**
+```
+10
+```
 
-- **Dane wejściowe**:
-  ```
-  7
-  4
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Liczby są różne.
-  ```
+**Wyjście:**
 
-**Przykład 2:**
+```
+10
+```
 
-- **Dane wejściowe**:
-  ```
-  5
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Liczby są identyczne.
-  ```
+### Przykład 2
 
-### Wskazówki
+**Wejście:**
 
-- Upewnij się, że komunikat jest wypisany dokładnie tak, jak podano.
-- Do porównania liczb użyj operatora porównania.
+```
+3
+```
+
+**Wyjście:** *(brak)*
 
 ---
 
-## Zadanie 3 - Określanie znaku liczby
+## ZAD-02 — Porównanie dwóch liczb
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if-else`, `równość`, `string`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika jedną liczbę całkowitą (może być ujemna, dodatnia lub zero) i określa jej znak. Program powinien wypisać odpowiedni komunikat:
+Wczytaj dwie liczby naturalne `a` i `b`.
+Jeśli są równe, wypisz:
+`Liczby są identyczne.`
+W przeciwnym razie wypisz:
+`Liczby są różne.`
 
-- Jeśli liczba jest ujemna, wypisz: **"Liczba jest ujemna."**
-- Jeśli liczba jest dodatnia, wypisz: **"Liczba jest dodatnia."**
-- Jeśli liczba jest zerem, wypisz: **"Liczba jest zerem."**
+### Wejście
 
-### Dane wejściowe
+* 1 linia: `a` (całkowita, `a ≥ 0`)
+* 2 linia: `b` (całkowita, `b ≥ 0`)
 
-- Jedna liczba całkowita (ujemna, dodatnia lub zero).
+### Wyjście
 
-### Dane wyjściowe
+Jedna linia — dokładnie jeden z komunikatów.
 
-- Jeden komunikat tekstowy, zgodnie z powyższym opisem.
+### Przykład 1
 
-### Przykład
+**Wejście:**
 
-**Przykład 1:**
+```
+7
+4
+```
 
-- **Dane wejściowe**:
-  ```
-  -5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Liczba jest ujemna.
-  ```
+**Wyjście:**
 
-**Przykład 2:**
+```
+Liczby są różne.
+```
 
-- **Dane wejściowe**:
-  ```
-  0
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Liczba jest zerem.
-  ```
+### Przykład 2
 
-**Przykład 3:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Liczba jest dodatnia.
-  ```
+```
+5
+5
+```
 
-### Wskazówki
+**Wyjście:**
 
-- Zero nie jest ani dodatnie, ani ujemne.
-- Użyj instrukcji warunkowych, aby sprawdzić warunki.
+```
+Liczby są identyczne.
+```
 
 ---
 
-## Zadanie 4 - Maksimum i minimum z dwóch liczb
+## ZAD-03 — Określanie znaku liczby
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if-elif-else`, `porównania`, `string`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika dwie liczby naturalne (całkowite nieujemne) i wypisuje je w taki sposób, że najpierw wypisana zostanie liczba większa (maksimum), a następnie mniejsza (minimum).
+Wczytaj liczbę całkowitą `x` i wypisz jeden z komunikatów:
 
-Jeśli liczby są identyczne, wypisz je w tej samej kolejności.
+* dla `x < 0`: `Liczba jest ujemna.`
+* dla `x > 0`: `Liczba jest dodatnia.`
+* dla `x = 0`: `Liczba jest zerem.`
 
-### Dane wejściowe
+### Wejście
 
-- Dwie liczby naturalne, każda w oddzielnej linii.
+* 1 linia: `x` (liczba całkowita)
 
-### Dane wyjściowe
+### Wyjście
 
-- Dwie liczby naturalne wypisane w jednej linii, oddzielone spacją:
-  - Najpierw liczba większa (lub dowolna, jeśli są równe),
-  - Następnie liczba mniejsza (lub druga taka sama).
+Jedna linia — dokładnie jeden komunikat.
 
-### Przykład
+### Przykłady
 
-**Przykład 1:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  1
-  4
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  4 1
-  ```
+```
+-5
+```
 
-**Przykład 2:**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  7
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  7 3
-  ```
+```
+Liczba jest ujemna.
+```
 
-**Przykład 3:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  5
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5 5
-  ```
+```
+0
+```
 
-### Wskazówki
+**Wyjście:**
 
-- Możesz użyć funkcji maksymalnej i minimalnej lub instrukcji warunkowych.
-- Upewnij się, że liczby są wypisane w jednej linii, oddzielone spacją.
+```
+Liczba jest zerem.
+```
+
+**Wejście:**
+
+```
+2
+```
+
+**Wyjście:**
+
+```
+Liczba jest dodatnia.
+```
 
 ---
 
-## Zadanie 5 - Sortowanie trzech liczb
+## ZAD-04 — Maksimum i minimum z dwóch liczb
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `max`, `min`, `if`, `formatowanie`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika trzy liczby naturalne (całkowite nieujemne) i wypisuje je w kolejności rosnącej, od najmniejszej do największej.
+Wczytaj dwie liczby naturalne `a` i `b`.
+Wypisz je w jednej linii w kolejności: **większa, potem mniejsza**, oddzielone pojedynczą spacją.
+Jeśli `a = b`, wypisz `a b` (czyli dwie takie same liczby).
 
-### Dane wejściowe
+### Wejście
 
-- Trzy liczby naturalne, każda w oddzielnej linii.
+* 1 linia: `a` (całkowita, `a ≥ 0`)
+* 2 linia: `b` (całkowita, `b ≥ 0`)
 
-### Dane wyjściowe
+### Wyjście
 
-- Trzy liczby naturalne wypisane w jednej linii, oddzielone spacjami, w kolejności rosnącej.
+Jedna linia:
+`max(a, b) min(a, b)`
 
-### Przykład
+### Przykłady
 
-**Przykład 1:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  2
-  1
-  4
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  1 2 4
-  ```
+```
+1
+4
+```
 
-**Przykład 2:**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  5
-  3
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  3 5 5
-  ```
+```
+4 1
+```
 
-**Przykład 3:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  7
-  7
-  7
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  7 7 7
-  ```
+```
+5
+5
+```
 
-### Wskazówki
+**Wyjście:**
 
-- Możesz użyć wbudowanych funkcji sortujących, jeśli są dostępne.
-- Upewnij się, że liczby są wypisane w jednej linii, oddzielone spacjami.
+```
+5 5
+```
 
 ---
 
-## Zadanie 6 - Maksimum z czterech liczb
+## ZAD-05 — Sortowanie trzech liczb
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★★☆
+**Tagi:** `sort`, `warunki`, `porządkowanie`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika cztery liczby naturalne (całkowite nieujemne) i wypisuje największą z nich.
+Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności rosnącej.
 
-### Dane wejściowe
+### Wejście
 
-- Cztery liczby naturalne, każda w oddzielnej linii.
+* 1 linia: `a` (całkowita, `a ≥ 0`)
+* 2 linia: `b` (całkowita, `b ≥ 0`)
+* 3 linia: `c` (całkowita, `c ≥ 0`)
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna liczba naturalna – największa spośród podanych.
+Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
 
 ### Przykład
 
-**Przykład 1:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  2
-  5
-  1
-  4
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5
-  ```
+```
+2
+1
+4
+```
 
-**Przykład 2:**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  7
-  7
-  3
-  7
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  7
-  ```
+```
+1 2 4
+```
 
-### Wskazówki
+### Uwagi
 
-- Możesz użyć funkcji maksymalnej dla listy liczb.
-- Upewnij się, że program działa poprawnie, nawet gdy największa liczba występuje kilka razy.
+* Możesz użyć wbudowanego sortowania, ale da się też rozwiązać czystymi warunkami.
 
 ---
 
-## Zadanie 7 - Weryfikacja praw logiki
+## ZAD-06 — Maksimum z czterech liczb
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `max`, `if`, `porównania`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla wszystkich możliwych kombinacji wartości logicznych zmiennych \( p \) i \( q \) (True i False) sprawdza poprawność następujących praw logiki:
+Wczytaj cztery liczby naturalne i wypisz największą z nich.
 
-a) **Prawo wyłączonego środka**:
-   \[ p \lor \lnot p = \text{True} \]
+### Wejście
 
-b) **Prawo niesprzeczności**:
-   \[ \lnot (p \land \lnot p) = \text{True} \]
+4 linie: `a`, `b`, `c`, `d` (całkowite, każda `≥ 0`)
 
-c) **Przemienność koniunkcji**:
-   \[ p \land q = q \land p \]
+### Wyjście
 
-d) **Przemienność alternatywy**:
-   \[ p \lor q = q \lor p \]
-
-e) **Pierwsze prawo de Morgana**:
-   \[ \lnot (p \land q) = \lnot p \lor \lnot q \]
-
-f) **Drugie prawo de Morgana**:
-   \[ \lnot (p \lor q) = \lnot p \land \lnot q \]
-
-### Dane wejściowe
-
-- Brak. Program powinien automatycznie przetestować wszystkie możliwe kombinacje wartości \( p \) i \( q \).
-
-### Dane wyjściowe
-
-Dla każdego prawa wypisz:
-
-- Kombinację wartości \( p \) i \( q \).
-- Wartości wyrażenia po lewej i prawej stronie.
-- Informację, czy wartości są równe.
+Jedna linia: największa liczba.
 
 ### Przykład
 
-**Prawo niesprzeczności:**
+**Wejście:**
 
-- **Wynik programu**:
-  ```
-  Prawo niesprzeczności:
-  p = True
-  Left side: True
-  Right side: True
-  Equal: True
+```
+2
+5
+1
+4
+```
 
-  p = False
-  Left side: True
-  Right side: True
-  Equal: True
-  ```
+**Wyjście:**
 
-**Pierwsze prawo de Morgana:**
-
-- **Wynik programu**:
-  ```
-  Pierwsze prawo de Morgana:
-  p = True, q = True
-  Left side: False
-  Right side: False
-  Equal: True
-
-  p = True, q = False
-  Left side: True
-  Right side: True
-  Equal: True
-
-  p = False, q = True
-  Left side: True
-  Right side: True
-  Equal: True
-
-  p = False, q = False
-  Left side: True
-  Right side: True
-  Equal: True
-  ```
-
-### Wskazówki
-
-- Użyj operatorów logicznych dostępnych w języku programowania.
-- Upewnij się, że dla każdej kombinacji wartości \( p \) i \( q \) wyniki po obu stronach są porównywane.
+```
+5
+```
 
 ---
 
-## Zadanie 8 - Sprawdzanie możliwości zbudowania trójkąta
+## ZAD-07 — Prawa logiki (p i q)
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★★☆
+**Tagi:** `bool`, `logika`, `tabele prawdy`, `formatowanie`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika trzy liczby naturalne (większe od zera) reprezentujące długości boków i sprawdza, czy z odcinków o takich długościach można zbudować trójkąt.
+Dla wszystkich kombinacji wartości logicznych `p` i `q` (True/False) sprawdź poprawność praw:
 
-Program powinien wypisać odpowiedni komunikat:
+1. Wyłączony środek: `p OR (NOT p)`
+2. Niesprzeczność: `NOT (p AND (NOT p))`
+3. Przemienność AND: `p AND q` vs `q AND p`
+4. Przemienność OR: `p OR q` vs `q OR p`
+5. De Morgana 1: `NOT (p AND q)` vs `(NOT p) OR (NOT q)`
+6. De Morgana 2: `NOT (p OR q)` vs `(NOT p) AND (NOT q)`
 
-- Jeśli można zbudować trójkąt, wypisz: **"Trójkąt można zbudować z podanych boków."**
-- Jeśli nie można zbudować trójkąta, wypisz: **"Trójkąta nie można zbudować z podanych boków."**
+### Wejście
 
-### Dane wejściowe
+Brak.
 
-- Trzy liczby naturalne (większe od zera), każda w oddzielnej linii.
+### Wyjście
 
-### Dane wyjściowe
+Żeby wynik był **jednoznaczny i łatwy do sprawdzenia**, zastosuj dokładnie ten format:
 
-- Jeden komunikat tekstowy, zgodnie z powyższym opisem.
+Dla każdego z 6 praw wypisz:
+
+* nazwę prawa w jednej linii,
+* następnie w osobnych liniach wynik dla każdej kombinacji `p, q` w kolejności:
+
+  1. `p=False, q=False`
+  2. `p=False, q=True`
+  3. `p=True, q=False`
+  4. `p=True, q=True`
+
+Każda linia kombinacji ma mieć format:
+`p=<...> q=<...> L=<...> R=<...> EQ=<...>`
+
+Gdzie `<...>` to dosłownie `True` albo `False`.
+
+### Przykład fragmentu (dla jednego prawa)
+
+```
+Przemienność alternatywy:
+p=False q=False L=False R=False EQ=True
+p=False q=True L=True R=True EQ=True
+p=True q=False L=True R=True EQ=True
+p=True q=True L=True R=True EQ=True
+```
+
+### Uwagi o formatowaniu
+
+* Dokładne nazwy praw (nagłówki) użyj jak poniżej:
+
+  1. `Prawo wyłączonego środka:`
+  2. `Prawo niesprzeczności:`
+  3. `Przemienność koniunkcji:`
+  4. `Przemienność alternatywy:`
+  5. `Pierwsze prawo de Morgana:`
+  6. `Drugie prawo de Morgana:`
+* Między blokami praw możesz wstawić **jedną pustą linię** (zalecane), ale nie więcej.
+
+## ZAD-08 — Czy można zbudować trójkąt?
+
+**Poziom:** ★☆☆
+**Tagi:** `if`, `geometria`, `warunek trójkąta`
+
+### Treść
+
+Wczytaj trzy dodatnie długości odcinków `a`, `b`, `c`.
+Sprawdź, czy można z nich zbudować trójkąt.
+
+Wypisz:
+
+* jeśli tak: `Trójkąt można zbudować z podanych boków.`
+* jeśli nie: `Trójkąta nie można zbudować z podanych boków.`
+
+### Wejście
+
+* 1 linia: `a` (całkowita, `a > 0`)
+* 2 linia: `b` (całkowita, `b > 0`)
+* 3 linia: `c` (całkowita, `c > 0`)
+
+### Wyjście
+
+Jedna linia — dokładnie jeden z komunikatów.
+
+### Ograniczenia / warunek
+
+Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są wszystkie:
+
+* `a + b > c`
+* `a + c > b`
+* `b + c > a`
 
 ### Przykład
 
-**Przykład 1:**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  3
-  4
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Trójkąt można zbudować z podanych boków.
-  ```
+```
+3
+4
+5
+```
 
-**Przykład 2:**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  1
-  2
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Trójkąta nie można zbudować z podanych boków.
-  ```
-
-### Wskazówki
-
-- Warunek istnienia trójkąta: suma długości dowolnych dwóch boków musi być większa od długości trzeciego boku.
-- Sprawdź wszystkie trzy kombinacje.
+```
+Trójkąt można zbudować z podanych boków.
+```
