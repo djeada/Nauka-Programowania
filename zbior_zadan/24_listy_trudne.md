@@ -1,337 +1,331 @@
-# Listy — trudne
+# Rozdział: Listy — zadania dodatkowe (stdin/stdout)
 
-## Zadanie 1 - Najdłuższy ciąg jedynek
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-**Poziom trudności**: ★★☆
+**Konwencje wspólne:**
 
-### Treść zadania
-
-Otrzymujesz listę składającą się wyłącznie z zer i jedynek. Twoim zadaniem jest znaleźć indeks zera, które po zamianie na jedynkę spowoduje uzyskanie najdłuższego ciągu jedynek w tej liście. Jeśli lista składa się wyłącznie z zer lub wyłącznie z jedynek, zwróć `-1`.
-
-### Dane wejściowe
-
-- **Lista liczb naturalnych** — lista składająca się z zer i jedynek.
-
-### Dane wyjściowe
-
-- **Jedna liczba całkowita** — indeks zera, którego zamiana na jedynkę da najdłuższy ciąg jedynek.
-- Jeśli lista składa się wyłącznie z zer lub jedynek, zwróć `-1`.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  [0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  7
-  ```
-
-**Wyjaśnienie**:
-
-Zmiana zera na indeksie `7` (ósmy element listy) na jedynkę tworzy najdłuższy ciąg jedynek o długości `6`.
-
-### Wskazówki
-
-- Przeanalizuj listę, identyfikując ciągi jedynek otoczone zerami.
-- Dla każdego zera oblicz sumę długości ciągów jedynek sąsiadujących z tym zerem.
-- Wybierz zero, które po zamianie maksymalizuje długość ciągu jedynek.
+* Jeśli na wejściu jest „lista” — w testach będzie podana w jednej linii w formacie podobnym do Pythona, np. `[1, 0, 1]`.
+* Wypisuj wyniki dokładnie w formacie wymaganym w treści (liczba / lista / lista list).
+* Indeksy liczymy od `0`.
 
 ---
 
-## Zadanie 2 - Przesuń zera na koniec listy
+## ZAD-01 — Najdłuższy ciąg jedynek
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `list`, `0/1`, `analiza`, `indeksy`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb całkowitych. Przenieś wszystkie zera na koniec listy, zachowując kolejność pozostałych elementów.
+Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Znajdź **indeks zera**, które po zamianie na `1` da **najdłuższy ciąg kolejnych jedynek**.
 
-### Dane wejściowe
+Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — wypisz `-1`.
 
-- **Lista liczb całkowitych**.
+### Wejście
 
-### Dane wyjściowe
+* 1 linia: lista `A` (tylko `0` i `1`)
 
-- **Lista liczb całkowitych** — lista z zerami przeniesionymi na koniec.
+### Wyjście
+
+* 1 linia: indeks (liczba całkowita) albo `-1`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
+```
 
-- Przejdź przez listę i zbierz wszystkie elementy różne od zera.
-- Policz liczbę zer i dodaj je na końcu listy.
+**Wyjście:**
+
+```
+7
+```
+
+### Uwagi
+
+* Jeśli kilka zer daje ten sam maksymalny wynik — wybierz to o **najmniejszym indeksie** (jeśli nie określono inaczej w testach).
 
 ---
 
-## Zadanie 3 - Minimalny iloczyn trzech liczb
+## ZAD-02 — Przesuń zera na koniec listy
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `list`, `stabilność`, `przekształcenie`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb całkowitych. Znajdź najmniejszy możliwy iloczyn trzech liczb wybranych z tej listy. Jeśli lista zawiera mniej niż trzy liczby, oblicz iloczyn wszystkich jej elementów.
+Otrzymujesz listę liczb całkowitych. Przenieś wszystkie zera na koniec listy, **zachowując kolejność** pozostałych elementów.
 
-### Dane wejściowe
+### Wejście
 
-- **Lista liczb całkowitych**.
+* 1 linia: lista liczb całkowitych `A`
 
-### Dane wyjściowe
+### Wyjście
 
-- **Jedna liczba całkowita** — najmniejszy iloczyn trzech liczb lub iloczyn wszystkich elementów, jeśli lista ma mniej niż trzy elementy.
+* 1 linia: lista po przekształceniu
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [3, -1, -3, 2, 9, 4]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  -108
-  ```
+**Wejście:**
 
-**Wyjaśnienie**:
+```
+[0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0]
+```
 
-Najmniejszy iloczyn to \(-3 \times 9 \times 4 = -108\).
+**Wyjście:**
 
-### Wskazówki
-
-- Rozważ kombinacje najmniejszych i największych liczb, ponieważ iloczyn dwóch ujemnych liczb jest dodatni.
-- Możesz posortować listę i sprawdzić możliwe kombinacje skrajnych wartości.
+```
+[1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0]
+```
 
 ---
 
-## Zadanie 4 - Wspólny podciąg o największej sumie
+## ZAD-03 — Minimalny iloczyn trzech liczb
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★☆
+**Tagi:** `list`, `min`, `math`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz dwie listy binarne \( A \) i \( B \) (składające się z zer i jedynek) o tej samej długości. Znajdź maksymalną długość podciągu (ciągłych elementów), dla którego suma elementów w podciągu z listy \( A \) jest równa sumie elementów w odpowiadającym podciągu z listy \( B \). Podciągi muszą zaczynać się i kończyć na tych samych indeksach w obu listach.
+Otrzymujesz listę liczb całkowitych. Znajdź **najmniejszy możliwy iloczyn trzech liczb** wybranych z tej listy.
 
-### Dane wejściowe
+Jeśli lista zawiera mniej niż 3 liczby — wypisz iloczyn wszystkich elementów listy.
 
-- **Dwie listy liczb binarnych** — listy \( A \) i \( B \) tej samej długości.
+### Wejście
 
-### Dane wyjściowe
+* 1 linia: lista liczb całkowitych `A`
 
-- **Jedna liczba naturalna** — maksymalna długość podciągu spełniającego warunek.
+### Wyjście
+
+* 1 linia: jedna liczba całkowita
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  A = [0, 0, 1, 1, 1, 1]
-  B = [0, 1, 1, 0, 1, 0]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5
-  ```
+**Wejście:**
 
-**Wyjaśnienie**:
+```
+[3, -1, -3, 2, 9, 4]
+```
 
-Podciąg od indeksu 0 do 4 (pięć elementów) ma sumę równą 3 w obu listach.
+**Wyjście:**
 
-### Wskazówki
-
-- Oblicz różnicę sum skumulowanych list \( A \) i \( B \).
-- Poszukaj najdłuższego podciągu, w którym różnica sum skumulowanych jest taka sama.
+```
+-108
+```
 
 ---
 
-## Zadanie 5 - Zbiór potęgowy listy
+## ZAD-04 — Wspólny podciąg o największej długości (równe sumy)
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★★
+**Tagi:** `list`, `prefix`, `hashmap`, `podciąg`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb naturalnych (mogą występować powtórzenia). Wygeneruj zbiór wszystkich możliwych podzbiorów tej listy, uwzględniając powtórzenia i kolejność elementów.
+Otrzymujesz dwie listy binarne `A` i `B` (zera i jedynki) o tej samej długości. Znajdź **maksymalną długość** podciągu (ciągłych elementów), dla którego suma elementów w podciągu z `A` jest równa sumie elementów w odpowiadającym podciągu z `B` (ten sam zakres indeksów).
 
-### Dane wejściowe
+### Wejście
 
-- **Lista liczb naturalnych**.
+* 1 linia: lista binarna `A`
+* 2 linia: lista binarna `B` (tej samej długości)
 
-### Dane wyjściowe
+### Wyjście
 
-- **Lista list** — wszystkie możliwe podzbiory elementów z listy wejściowej, włącznie z pustą listą.
+* 1 linia: maksymalna długość (liczba naturalna)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [1, 2, 1]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [[], [1], [2], [1, 2], [1, 1], [2, 1], [1, 1, 2], [1, 2, 1], [1, 1, 2, 1]]
-  ```
+**Wejście:**
 
-**Uwaga**:
+```
+[0, 0, 1, 1, 1, 1]
+[0, 1, 1, 0, 1, 0]
+```
 
-Kolejność elementów i powtórzenia są istotne.
+**Wyjście:**
 
-### Wskazówki
-
-- Możesz użyć algorytmu generującego kombinacje na podstawie binarnej reprezentacji liczb od \( 0 \) do \( 2^n - 1 \).
-- Dla każdej pozycji w liście zdecyduj, czy element jest w podzbiorze.
+```
+5
+```
 
 ---
 
-## Zadanie 6 - Połączenie posortowanych list
+## ZAD-05 — Zbiór potęgowy listy
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★★
+**Tagi:** `list`, `subsets`, `combinatorics`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę zawierającą \( M \) posortowanych list liczb naturalnych. Połącz te listy w jedną posortowaną listę zawierającą wszystkie elementy bez powtórzeń.
+Otrzymujesz listę liczb naturalnych (mogą występować powtórzenia). Wygeneruj zbiór wszystkich możliwych podzbiorów tej listy.
 
-### Dane wejściowe
+Wynik ma zawierać wszystkie podzbiory (włącznie z pustym).
 
-- **Lista posortowanych list liczb naturalnych**.
+### Wejście
 
-### Dane wyjściowe
+* 1 linia: lista liczb naturalnych `A`
 
-- **Jedna posortowana lista liczb naturalnych** — zawierająca unikalne elementy ze wszystkich list wejściowych.
+### Wyjście
+
+* 1 linia: lista list (wszystkie podzbiory)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [
-    [-6, 23, 29, 33],
-    [6, 22, 35, 71],
-    [5, 19, 21, 37],
-    [-12, -7, -3, 28]
-  ]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[1, 2, 1]
+```
 
-- Użyj algorytmu scalania wielu list, np. z wykorzystaniem kopca (kolejki priorytetowej).
-- Pamiętaj o usunięciu duplikatów podczas scalania.
+**Wyjście:**
+
+```
+[[], [1], [2], [1, 2], [1, 1], [2, 1], [1, 1, 2], [1, 2, 1]]
+```
+
+### Uwagi
+
+* Jeśli sprawdzarka wymaga konkretnej kolejności podzbiorów, musi być ona opisana w treści — w przeciwnym razie dopuszczalna może być dowolna. (Jeśli chcesz, mogę dopisać sztywną konwencję kolejności, ale bez rozwiązań.)
 
 ---
 
-## Zadanie 7 - Obliczanie pojemności wody między słupkami
+## ZAD-06 — Połączenie posortowanych list (unikalne)
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★★
+**Tagi:** `merge`, `heap`, `unique`, `sorted`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb naturalnych reprezentujących wysokości słupków ustawionych obok siebie. Twoim zadaniem jest obliczyć, ile jednostek wody może zostać zatrzymanych pomiędzy słupkami po opadach deszczu.
+Otrzymujesz listę zawierającą `M` posortowanych list liczb naturalnych. Połącz je w jedną **posortowaną** listę zawierającą wszystkie elementy **bez powtórzeń**.
 
-### Dane wejściowe
+### Wejście
 
-- **Lista liczb naturalnych** — wysokości słupków.
+* 1 linia: lista list (każda wewnętrzna lista jest posortowana)
 
-### Dane wyjściowe
+### Wyjście
 
-- **Jedna liczba naturalna** — maksymalna ilość wody, jaka może zostać zatrzymana.
+* 1 linia: jedna posortowana lista bez duplikatów
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [3, 0, 1, 0, 2]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5
-  ```
+**Wejście:**
 
-**Wyjaśnienie**:
+```
+[[-6, 23, 29, 33], [6, 22, 35, 71], [5, 19, 21, 37], [-12, -7, -3, 28]]
+```
 
-Łączna ilość wody zatrzymanej między słupkami wynosi 5 jednostek.
+**Wyjście:**
 
-### Wskazówki
-
-- Dla każdego słupka oblicz maksymalną wysokość słupka po lewej i prawej stronie.
-- Ilość wody nad danym słupkiem to minimalna z tych dwóch wartości minus wysokość bieżącego słupka.
+```
+[-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71]
+```
 
 ---
 
-## Zadanie 8 - Maksymalny zysk ze sprzedaży sznurka
+## ZAD-07 — Pojemność wody między słupkami
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★★
+**Tagi:** `two pointers`, `prefix`, `trapping rain water`
 
-### Treść zadania
+### Treść
 
-Masz sznurek o długości \( n \) jednostek i cennik określający ceny sznurków o długościach od 1 do \( n \). Możesz pociąć sznurek na kawałki o całkowitych długościach. Znajdź maksymalny zysk, jaki można uzyskać ze sprzedaży sznurka.
+Otrzymujesz listę liczb naturalnych — wysokości słupków. Oblicz, ile jednostek wody może się zatrzymać pomiędzy słupkami po deszczu.
 
-### Dane wejściowe
+### Wejście
 
-- **Lista \( n \) liczb całkowitych** — ceny sznurków o długościach od 1 do \( n \).
-- **Liczba naturalna \( n \)** — długość sznurka do sprzedania.
+* 1 linia: lista wysokości `H`
 
-### Dane wyjściowe
+### Wyjście
 
-- **Jedna liczba całkowita** — maksymalny zysk ze sprzedaży.
+* 1 linia: jedna liczba naturalna — ilość wody
 
 ### Przykład
 
-- **Dane wejściowe**:
-  - Ceny: `[1, 5, 8, 9, 10, 17, 17, 20]`
-  - Długość sznurka: `4`
-- **Oczekiwane wyjście**:
-  ```
-  10
-  ```
+**Wejście:**
 
-**Wyjaśnienie**:
+```
+[3, 0, 1, 0, 2]
+```
 
-Największy zysk uzyskamy, sprzedając sznurek o długości 4 w całości.
+**Wyjście:**
 
-### Wskazówki
-
-- Zastosuj podejście dynamiczne, rozważając wszystkie możliwe podziały sznurka.
-- Użyj pamięci podręcznej do przechowywania wyników dla mniejszych długości.
+```
+5
+```
 
 ---
 
-## Zadanie 9 - Najdłuższy naprzemienny podciąg
+## ZAD-08 — Maksymalny zysk ze sprzedaży sznurka
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★★
+**Tagi:** `dp`, `rod cutting`, `optymalizacja`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienny, w którym różnice między kolejnymi elementami zmieniają znak na przeciwny.
+Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`. Możesz pociąć sznurek na kawałki o całkowitych długościach. Znajdź maksymalny zysk.
 
-### Dane wejściowe
+### Wejście
 
-- **Lista liczb całkowitych**.
+* 1 linia: lista `prices` (długości 1..n)
+* 2 linia: `n` (liczba naturalna)
 
-### Dane wyjściowe
+### Wyjście
 
-- **Lista liczb całkowitych** — najdłuższy naprzemienny podciąg.
+* 1 linia: maksymalny zysk (liczba całkowita)
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [1, -2, 6, 4, -3, 2, -4, -3]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [1, -2, 6, -3, 2, -4]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[1, 5, 8, 9, 10, 17, 17, 20]
+4
+```
 
-- Przechowuj dwa stany dla każdego elementu: rosnący i malejący.
-- Dla każdego elementu aktualizuj maksymalną długość naprzemiennego podciągu.
+**Wyjście:**
+
+```
+10
+```
+
+---
+
+## ZAD-09 — Najdłuższy naprzemienny podciąg
+
+**Poziom:** ★★★
+**Tagi:** `dp`, `subsequence`, `naprzemienny`
+
+### Treść
+
+Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienny, w którym różnice między kolejnymi elementami zmieniają znak (raz dodatnia, raz ujemna, itd.).
+
+### Wejście
+
+* 1 linia: lista liczb całkowitych `A`
+
+### Wyjście
+
+* 1 linia: lista liczb — najdłuższy naprzemienny podciąg
+
+### Przykład
+
+**Wejście:**
+
+```
+[1, -2, 6, 4, -3, 2, -4, -3]
+```
+
+**Wyjście:**
+
+```
+[1, -2, 6, -3, 2, -4]
+```
+
+### Uwagi
+
+* Jeśli istnieje kilka podciągów o tej samej maksymalnej długości — wybierz ten, który pojawia się „najwcześniej” (najmniejszy możliwy indeks startu), o ile sprawdzarka tego wymaga.
+
+---
