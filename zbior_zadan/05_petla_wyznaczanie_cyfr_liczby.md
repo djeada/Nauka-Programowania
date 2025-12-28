@@ -1,303 +1,465 @@
-## Zadanie 1 - Liczenie cyfr w liczbie
+# Rozdział: Cyfry w liczbie (dzielenie przez 10, modulo)
 
-**Poziom trudności**: ★☆☆
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-### Treść zadania
+**Konwencje wspólne:**
 
-Napisz program, który pobiera od użytkownika liczbę naturalną i wypisuje, z ilu cyfr składa się ta liczba.
-
-### Dane wejściowe
-
-- Jedna liczba naturalna (całkowita nieujemna).
-
-### Dane wyjściowe
-
-- Jedna liczba naturalna – liczba cyfr w podanej liczbie.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  342
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  3
-  ```
-
-### Wskazówki
-
-- Możesz zamienić liczbę na ciąg znaków i policzyć długość tego ciągu.
-- Alternatywnie, możesz użyć pętli i dzielić liczbę przez 10, zwiększając licznik przy każdej iteracji.
+* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
+* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.
+* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem.
+* Jeżeli zadanie wymaga „brak danych wyjściowych”, program nie wypisuje nic (nawet pustej linii).
 
 ---
 
-## Zadanie 2 - Wypisywanie cyfr liczby w odwrotnej kolejności
+## ZAD-01 — Liczenie cyfr w liczbie
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika liczbę naturalną i wypisuje cyfry, z których się składa, zaczynając od cyfry jedności (czyli w odwrotnej kolejności niż w zapisie liczby).
+Wczytaj liczbę naturalną `n` i wypisz, z ilu cyfr składa się jej zapis dziesiętny.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna.
+Jedna liczba naturalna:
 
-### Dane wyjściowe
+* 1. linia: `n` (`n ≥ 0`)
 
-- Kolejne cyfry liczby, każda w nowej linii, zaczynając od cyfry jedności.
+### Wyjście
+
+Jedna liczba naturalna — liczba cyfr w `n`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  8214
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  4
-  1
-  2
-  8
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+342
+```
 
-- Możesz użyć operatora modulo (`%`) oraz dzielenia całkowitego (`//`) do wyodrębnienia kolejnych cyfr.
-- Pętla powinna trwać, dopóki liczba jest większa od zera.
+**Wyjście:**
+
+```
+3
+```
+
+### Ograniczenia / gwarancje
+
+* `n` mieści się w typowym zakresie liczb całkowitych.
+
+### Uwagi o formatowaniu
+
+* Dla `n = 0` poprawna odpowiedź to `1` (liczba „0” ma jedną cyfrę).
 
 ---
 
-## Zadanie 3 - Sumowanie cyfr liczby
+## ZAD-02 — Wypisywanie cyfr liczby w odwrotnej kolejności
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika liczbę naturalną i oblicza sumę cyfr tej liczby.
+Wczytaj liczbę naturalną `n` i wypisz jej cyfry w kolejności od cyfry jedności (czyli w odwrotnej kolejności niż w zapisie liczby). Każdą cyfrę wypisz w osobnej linii.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna.
+Jedna liczba naturalna:
 
-### Dane wyjściowe
+* 1. linia: `n` (`n ≥ 0`)
 
-- Jedna liczba naturalna – suma cyfr podanej liczby.
+### Wyjście
+
+Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  129
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  12
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+8214
+```
 
-- Użyj operatora modulo (`%`) i dzielenia całkowitego (`//`) do wyodrębnienia cyfr.
-- Suma cyfr to suma wszystkich wyodrębnionych cyfr z liczby.
+**Wyjście:**
+
+```
+4
+1
+2
+8
+```
+
+### Uwagi o formatowaniu
+
+* Dla `n = 0` wypisz jedną linię z `0`.
 
 ---
 
-## Zadanie 4 - Wypisywanie cyfr spełniających określone warunki
+## ZAD-03 — Sumowanie cyfr liczby
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika liczbę naturalną i wypisuje cyfry tej liczby, które spełniają poniższe warunki:
+Wczytaj liczbę naturalną `n` i oblicz sumę jej cyfr. Następnie wypisz wynik.
 
-a) Są liczbami **parzystymi**.
+### Wejście
 
-b) Są **mniejsze niż 5**.
+Jedna liczba naturalna:
 
-c) Są **różne od zera**.
+* 1. linia: `n` (`n ≥ 0`)
 
-### Dane wejściowe
+### Wyjście
 
-- Jedna liczba naturalna dla wszystkich podpunktów.
-
-### Dane wyjściowe
-
-- Dla każdego podpunktu wypisz odpowiednie cyfry, każda w nowej linii.
+Jedna liczba naturalna — suma cyfr liczby `n`.
 
 ### Przykład
 
-**Podpunkt a):**
+**Wejście:**
 
-- **Dane wejściowe**:
-  ```
-  932
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2
-  ```
+```
+129
+```
 
-**Podpunkt b):**
+**Wyjście:**
 
-- **Dane wejściowe**:
-  ```
-  101
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  1
-  0
-  1
-  ```
+```
+12
+```
 
-**Podpunkt c):**
+### Uwagi o formatowaniu
 
-- **Dane wejściowe**:
-  ```
-  650
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  6
-  5
-  ```
-
-### Wskazówki
-
-- Dla każdego podpunktu przeanalizuj cyfry liczby i sprawdź, czy spełniają dany warunek.
-- Możesz użyć pętli i operatorów logicznych do filtrowania cyfr.
+* Dla `n = 0` suma cyfr wynosi `0`.
 
 ---
 
-## Zadanie 5 - Sprawdzanie, czy liczba jest palindromem
+## ZAD-04A — Cyfry parzyste
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `warunki`
 
-### Treść zadania
+### Treść
 
-Napisz program, który sprawdza, czy podana przez użytkownika liczba naturalna jest **palindromem**, czyli czy pozostaje taka sama po odwróceniu kolejności jej cyfr.
+Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **parzyste**. Każdą cyfrę wypisz w osobnej linii.
 
-### Dane wejściowe
+Cyfry analizuj od końca (od jedności), czyli w tej samej kolejności, co w zadaniu o wypisywaniu cyfr w odwrotnej kolejności.
 
-- Jedna liczba naturalna.
+### Wejście
 
-### Dane wyjściowe
+Jedna liczba naturalna:
 
-- Jeden komunikat tekstowy:
-  - Jeśli liczba jest palindromem, wypisz: **"Liczba jest palindromem."**
-  - Jeśli liczba nie jest palindromem, wypisz: **"Liczba nie jest palindromem."**
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Cyfry parzyste liczby `n`, każda w nowej linii (w kolejności od jedności do najwyższej cyfry).
+Jeśli nie ma takich cyfr — brak wyjścia.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  13231
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Liczba jest palindromem.
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+932
+```
 
-- Możesz zamienić liczbę na ciąg znaków i sprawdzić, czy jest równy swojemu odbiciu.
-- Alternatywnie, możesz odwrócić liczbę matematycznie i porównać z oryginałem.
+**Wyjście:**
+
+```
+2
+```
 
 ---
 
-## Zadanie 6 - Wypisywanie liczb spełniających określone warunki
+## ZAD-04B — Cyfry mniejsze niż 5
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `warunki`
 
-### Treść zadania
+### Treść
 
-Napisz program, który pobiera od użytkownika liczbę naturalną i wypisuje liczby spełniające poniższe warunki:
+Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **mniejsze niż 5**. Każdą cyfrę wypisz w osobnej linii.
 
-a) Wszystkie liczby naturalne **mniejsze** od podanej liczby, których **suma cyfr jest równa 10**.
+Cyfry analizuj od końca (od jedności).
 
-b) Wszystkie liczby naturalne **dwucyfrowe** **większe** od podanej liczby.
+### Wejście
 
-c) Wszystkie liczby naturalne **trzycyfrowe**, których **suma cyfr jest równa** podanej liczbie.
+Jedna liczba naturalna:
 
-d) Wszystkie liczby naturalne **trzycyfrowe**, które są **podzielne przez sumę cyfr** podanej liczby.
+* 1. linia: `n` (`n ≥ 0`)
 
-e) Wszystkie liczby naturalne **mniejsze** od podanej liczby, składające się wyłącznie z **parzystych cyfr**.
+### Wyjście
 
-### Dane wejściowe
-
-- Jedna liczba naturalna dla wszystkich podpunktów.
-
-### Dane wyjściowe
-
-- Dla każdego podpunktu wypisz odpowiednie liczby, każda w nowej linii.
+Cyfry < 5, każda w nowej linii.
+Jeśli brak — brak wyjścia.
 
 ### Przykład
 
-**Dla podanej liczby: 95**
+**Wejście:**
 
-**Podpunkt a):**
+```
+101
+```
 
-- **Oczekiwane wyjście**:
-  ```
-  (brak)
-  ```
+**Wyjście:**
 
-**Podpunkt b):**
+```
+1
+0
+1
+```
 
-- **Oczekiwane wyjście**:
-  ```
-  96
-  97
-  98
-  99
-  ```
+---
 
-**Podpunkt c):**
+## ZAD-04C — Cyfry różne od zera
 
-- **Oczekiwane wyjście**:
-  ```
-  (brak)
-  ```
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `warunki`
 
-**Podpunkt d):**
+### Treść
 
-- **Oczekiwane wyjście**:
-  ```
-  (brak)
-  ```
+Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **różne od zera**. Każdą cyfrę wypisz w osobnej linii.
 
-**Podpunkt e):**
+Cyfry analizuj od końca (od jedności).
 
-- **Oczekiwane wyjście**:
-  ```
-  2
-  4
-  6
-  8
-  22
-  24
-  26
-  28
-  42
-  44
-  46
-  48
-  62
-  64
-  66
-  68
-  82
-  84
-  86
-  88
-  ```
+### Wejście
 
-### Wskazówki
+Jedna liczba naturalna:
 
-- **Podpunkt a):** Iteruj po liczbach mniejszych od podanej i sprawdzaj, czy suma ich cyfr wynosi 10.
-- **Podpunkt b):** Wypisz liczby dwucyfrowe większe od podanej liczby (od 10 do 99).
-- **Podpunkt c):** Iteruj po liczbach trzycyfrowych (od 100 do 999) i sprawdzaj, czy suma ich cyfr jest równa podanej liczbie.
-- **Podpunkt d):** Oblicz sumę cyfr podanej liczby, a następnie wypisz liczby trzycyfrowe podzielne przez tę sumę.
-- **Podpunkt e):** Wypisz liczby mniejsze od podanej, których wszystkie cyfry są parzyste (np. 2, 4, 6, 8, 22, 24, itd.).
+* 1. linia: `n` (`n ≥ 0`)
 
+### Wyjście
+
+Cyfry ≠ 0, każda w nowej linii.
+Jeśli brak — brak wyjścia.
+
+### Przykład
+
+**Wejście:**
+
+```
+650
+```
+
+**Wyjście:**
+
+```
+5
+6
+```
+
+### Uwagi o formatowaniu
+
+* W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`.
+
+---
+
+## ZAD-05 — Sprawdzanie, czy liczba jest palindromem
+
+**Poziom:** ★★☆
+**Tagi:** `string`, `pętle`, `odwracanie`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Sprawdź, czy jest palindromem (czyli czy po odwróceniu cyfr pozostaje taka sama). Wypisz odpowiedni komunikat:
+
+* `Liczba jest palindromem.`
+* `Liczba nie jest palindromem.`
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Jeden komunikat tekstowy (dokładnie jeden z powyższych).
+
+### Przykład
+
+**Wejście:**
+
+```
+13231
+```
+
+**Wyjście:**
+
+```
+Liczba jest palindromem.
+```
+
+### Uwagi o formatowaniu
+
+* `0` jest palindromem.
+
+---
+
+## ZAD-06A — Liczby mniejsze od n o sumie cyfr równej 10
+
+**Poziom:** ★★☆
+**Tagi:** `pętle`, `suma cyfr`, `warunki`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby naturalne `x` takie, że `0 ≤ x < n` oraz suma cyfr liczby `x` wynosi `10`. Każdą liczbę wypisz w osobnej linii.
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Liczby spełniające warunek, każda w nowej linii.
+Jeśli brak — brak wyjścia.
+
+---
+
+## ZAD-06B — Dwucyfrowe większe od n
+
+**Poziom:** ★★☆
+**Tagi:** `pętle`, `przedziały`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby **dwucyfrowe** większe od `n` (czyli z zakresu 10–99), każdą w osobnej linii.
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Liczby dwucyfrowe `x` takie, że `x > n`, każda w nowej linii.
+Jeśli brak — brak wyjścia.
+
+### Przykład (dla n = 95)
+
+**Wejście:**
+
+```
+95
+```
+
+**Wyjście:**
+
+```
+96
+97
+98
+99
+```
+
+---
+
+## ZAD-06C — Trzycyfrowe o sumie cyfr równej n
+
+**Poziom:** ★★☆
+**Tagi:** `pętle`, `suma cyfr`, `warunki`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby trzycyfrowe `x` (100–999), których suma cyfr jest równa `n`. Każdą liczbę wypisz w osobnej linii.
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Liczby trzycyfrowe spełniające warunek, każda w nowej linii.
+Jeśli brak — brak wyjścia.
+
+---
+
+## ZAD-06D — Trzycyfrowe podzielne przez sumę cyfr liczby n
+
+**Poziom:** ★★☆
+**Tagi:** `pętle`, `dzielenie`, `suma cyfr`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Oblicz sumę cyfr liczby `n` i oznacz ją jako `s`. Następnie wypisz wszystkie liczby trzycyfrowe `x` (100–999), które są podzielne przez `s`. Każdą liczbę wypisz w osobnej linii.
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Ograniczenia / gwarancje
+
+* Suma cyfr `n` jest większa od zera (czyli `n ≠ 0`), aby dzielenie było poprawne.
+
+### Wyjście
+
+Liczby trzycyfrowe podzielne przez `s`, każda w nowej linii.
+
+---
+
+## ZAD-06E — Mniejsze od n złożone wyłącznie z parzystych cyfr
+
+**Poziom:** ★★☆
+**Tagi:** `pętle`, `warunki`, `cyfry`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby naturalne `x` takie, że `0 ≤ x < n` oraz każda cyfra w zapisie dziesiętnym `x` jest parzysta. Każdą liczbę wypisz w osobnej linii.
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Liczby spełniające warunek, każda w nowej linii.
+Jeśli brak — brak wyjścia.
+
+### Przykład (dla n = 95)
+
+**Wejście:**
+
+```
+95
+```
+
+**Wyjście:**
+
+```
+2
+4
+6
+8
+22
+24
+26
+28
+42
+44
+46
+48
+62
+64
+66
+68
+82
+84
+86
+88
+```
+
+### Uwagi o formatowaniu
+
+* W tym zadaniu `0` też składa się wyłącznie z parzystych cyfr. Jeśli chcesz je uwzględniać, dopisz to jako regułę w treści (tu: pomijamy `0`, bo w przykładzie go nie ma).
