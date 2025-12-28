@@ -366,104 +366,422 @@ y=\sin^3(x)\cdot\cos^2(x)+e^{x^2}+\ln(x^3+2x^2-x-3)
 57.179
 ```
 
----
-
-# Konwersje — zadania niezależne (ZAD-06A … ZAD-06F)
-
 ## ZAD-06A — Kilogramy → gramy
 
-**Poziom:** ★☆☆ | **Tagi:** `konwersje`
+**Poziom:** ★☆☆
+**Tagi:** `konwersje`
 
-* Wejście: `kg`
-* Wyjście: `g` jako liczba całkowita (`g = kg * 1000`)
-* Gwarancja: `kg` jest liczbą całkowitą lub taką, że wynik w gramach jest całkowity.
+### Treść
+
+Wczytaj wartość w kilogramach `kg` i przelicz na gramy.
+
+### Wejście
+
+* 1 linia: `kg`
+
+### Wyjście
+
+* 1 linia: `g` jako **liczba całkowita**, gdzie:
+  `g = kg * 1000`
+
+### Gwarancje
+
+* `kg` jest liczbą całkowitą **lub** taką, że wynik w gramach jest całkowity.
+
+### Przykład
+
+**Wejście:**
+
+```
+2.5
+```
+
+**Wyjście:**
+
+```
+2500
+```
 
 ---
 
 ## ZAD-06B — Cale → centymetry
 
-**Poziom:** ★☆☆ | **Tagi:** `konwersje`, `float`
+**Poziom:** ★☆☆
+**Tagi:** `konwersje`, `float`
 
-* Wejście: `inch`
-* Wyjście: `cm = inch * 2.54` do **2 miejsc po przecinku**
+### Treść
+
+Wczytaj liczbę cali `inch` i przelicz na centymetry.
+
+### Wejście
+
+* 1 linia: `inch`
+
+### Wyjście
+
+* 1 linia: `cm = inch * 2.54` wypisane do **2 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+10
+```
+
+**Wyjście:**
+
+```
+25.40
+```
 
 ---
 
 ## ZAD-06C — Sekundy → pełne godziny
 
-**Poziom:** ★☆☆ | **Tagi:** `dzielenie całkowite`
+**Poziom:** ★☆☆
+**Tagi:** `dzielenie całkowite`
 
-* Wejście: `s` (liczba całkowita, `s ≥ 0`)
-* Wyjście: `s // 3600`
+### Treść
+
+Wczytaj liczbę sekund `s` i wypisz liczbę **pełnych godzin**.
+
+### Wejście
+
+* 1 linia: `s` (liczba całkowita, `s ≥ 0`)
+
+### Wyjście
+
+* 1 linia: `s // 3600`
+
+### Przykład
+
+**Wejście:**
+
+```
+8639
+```
+
+**Wyjście:**
+
+```
+2
+```
 
 ---
 
 ## ZAD-06D — Euro → złotówki (kurs stały)
 
-**Poziom:** ★☆☆ | **Tagi:** `konwersje`, `float`
+**Poziom:** ★☆☆
+**Tagi:** `konwersje`, `float`
 
-* Wejście: `eur`
-* Wyjście: `pln = eur * 4.4` do **2 miejsc po przecinku**
+### Treść
+
+Wczytaj kwotę w euro `eur` i przelicz na złotówki przy stałym kursie.
+
+### Wejście
+
+* 1 linia: `eur`
+
+### Wyjście
+
+* 1 linia: `pln = eur * 4.4` do **2 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+13.20
+```
 
 ---
 
 ## ZAD-06E — Stopnie → radiany
 
-**Poziom:** ★☆☆ | **Tagi:** `pi`, `float`
+**Poziom:** ★☆☆
+**Tagi:** `pi`, `float`
 
-* Wejście: `deg`
-* Wyjście: `rad = deg * π / 180` do **3 miejsc po przecinku**
-* Przyjmij `π` z biblioteki (np. `math.pi`) lub `π = 3.141592653589793`.
+### Treść
 
----
+Wczytaj kąt w stopniach `deg` i przelicz na radiany.
+
+### Wejście
+
+* 1 linia: `deg`
+
+### Wyjście
+
+* 1 linia: `rad = deg * π / 180` do **3 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+180
+```
+
+**Wyjście:**
+
+```
+3.142
+```
 
 ## ZAD-06F — Fahrenheit → Celsius i Kelviny
 
-**Poziom:** ★☆☆ | **Tagi:** `konwersje`, `float`
+**Poziom:** ★☆☆
+**Tagi:** `konwersje`, `float`
 
-* Wejście: `F`
-* Wyjście:
+### Treść
 
-  1. `C = (5/9) * (F - 32)` do **3 miejsc**
-  2. `K = C + 273.15` do **3 miejsc**
-* Każdy wynik w osobnej linii.
+Wczytaj temperaturę w stopniach Fahrenheita `F`. Oblicz temperaturę w Celsjuszach oraz Kelvinach.
+
+### Wejście
+
+* 1 linia: `F`
+
+### Wyjście
+
+Dwie linie:
+
+1. `C = (5/9) * (F - 32)` do **3 miejsc**
+2. `K = C + 273.15` do **3 miejsc**
+
+### Przykład
+
+**Wejście:**
+
+```
+32
+```
+
+**Wyjście:**
+
+```
+0.000
+273.150
+```
+
+## ZAD-07A — Pole trójkąta
+
+**Poziom:** ★☆☆
+**Tagi:** `geometria`, `float`
+
+### Treść
+
+Oblicz pole trójkąta ze wzoru:
+( P = \frac{1}{2} a h )
+
+### Wejście
+
+* 1 linia: `a`
+* 2 linia: `h`
+
+### Wyjście
+
+* 1 linia: `P` do **3 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+6
+4
+```
+
+**Wyjście:**
+
+```
+12.000
+```
 
 ---
 
-# Geometria — zadania niezależne (ZAD-07A … ZAD-07F)
+## ZAD-07B — Pole prostokąta
 
-**Wspólna zasada:** wszystkie wyniki wypisz do **3 miejsc po przecinku**.
+**Poziom:** ★☆☆
+**Tagi:** `geometria`, `float`
+
+### Treść
+
+Oblicz pole prostokąta:
+( P = ab )
+
+### Wejście
+
+* 1 linia: `a`
+* 2 linia: `b`
+
+### Wyjście
+
+* 1 linia: `P` do **3 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+2.5
+4
+```
+
+**Wyjście:**
+
+```
+10.000
+```
+
+---
+
+## ZAD-07C — Pole rombu
+
+**Poziom:** ★☆☆
+**Tagi:** `geometria`, `float`
+
+### Treść
+
+Oblicz pole rombu z przekątnych:
+( P = \frac{1}{2} d_1 d_2 )
+
+### Wejście
+
+* 1 linia: `d1`
+* 2 linia: `d2`
+
+### Wyjście
+
+* 1 linia: `P` do **3 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+10
+6
+```
+
+**Wyjście:**
+
+```
+30.000
+```
+
+---
+
+## ZAD-07D — Objętość kuli
+
+**Poziom:** ★★☆
 **Tagi:** `geometria`, `pi`, `float`
 
-## ZAD-07A — Pole trójkąta: (P = \frac{1}{2}ah)
+### Treść
 
-Wejście: `a`, `h` (2 linie) → Wyjście: `P`
+Oblicz objętość kuli:
+( V = \frac{4}{3}\pi r^3 )
 
-## ZAD-07B — Pole prostokąta: (P = ab)
+### Wejście
 
-Wejście: `a`, `b` → Wyjście: `P`
+* 1 linia: `r`
 
-## ZAD-07C — Pole rombu: (P = \frac{1}{2}d_1d_2)
+### Wyjście
 
-Wejście: `d1`, `d2` → Wyjście: `P`
+* 1 linia: `V` do **3 miejsc po przecinku**
 
-## ZAD-07D — Objętość kuli: (V = \frac{4}{3}\pi r^3)
+### Przykład
 
-Wejście: `r` → Wyjście: `V`
+**Wejście:**
 
-## ZAD-07E — Objętość stożka: (V = \frac{1}{3}\pi r^2 h)
+```
+1
+```
 
-Wejście: `r`, `h` → Wyjście: `V`
+**Wyjście:**
 
-## ZAD-07F — Objętość prostopadłościanu: (V = abc)
-
-Wejście: `a`, `b`, `c` (3 linie) → Wyjście: `V`
-
-**Ograniczenia / gwarancje (dla wszystkich):**
-
-* Wszystkie długości są dodatnie.
+```
+4.189
+```
 
 ---
+
+## ZAD-07E — Objętość stożka
+
+**Poziom:** ★★☆
+**Tagi:** `geometria`, `pi`, `float`
+
+### Treść
+
+Oblicz objętość stożka:
+( V = \frac{1}{3}\pi r^2 h )
+
+### Wejście
+
+* 1 linia: `r`
+* 2 linia: `h`
+
+### Wyjście
+
+* 1 linia: `V` do **3 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+3
+```
+
+**Wyjście:**
+
+```
+12.566
+```
+
+---
+
+## ZAD-07F — Objętość prostopadłościanu
+
+**Poziom:** ★☆☆
+**Tagi:** `geometria`, `float`
+
+### Treść
+
+Oblicz objętość prostopadłościanu:
+( V = abc )
+
+### Wejście
+
+* 1 linia: `a`
+* 2 linia: `b`
+* 3 linia: `c`
+
+### Wyjście
+
+* 1 linia: `V` do **3 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+3
+4
+```
+
+**Wyjście:**
+
+```
+24.000
+```
 
 ## ZAD-08 — Koszt pokrycia podłogi płytkami
 
