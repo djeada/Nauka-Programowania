@@ -322,7 +322,7 @@ rustc zadanie.rs
 
 **Formatowanie:**
 ```bash
-rustfmt --write-mode=overwrite zadanie.rs
+rustfmt zadanie.rs
 ```
 
 **Dlaczego Rust?**
