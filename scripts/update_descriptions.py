@@ -1,3 +1,18 @@
+#!/usr/bin/env python3
+"""
+Update file descriptions/comments from task markdown files.
+
+This script reads task descriptions from markdown files and updates
+the corresponding source code files with appropriate comments.
+
+Supported file types:
+- Python (.py) - uses triple-quoted strings or # comments
+- C++ (.cpp) - uses /* */ or // comments
+- Java (.java) - uses /* */ or // comments
+- JavaScript (.js) - uses /* */ or // comments
+- Rust (.rs) - uses /* */ or // comments
+- Shell (.sh) - uses # comments
+"""
 from enum import Enum
 from typing import Optional, Tuple
 from dataclasses import dataclass
@@ -92,8 +107,13 @@ def localize_top_comment(file_path, comment_style, start_delimiter, end_delimite
         start_delimiter: Starting delimiter
         end_delimiter: Ending delimiter (for DELIMITED style)
     """
-    with open(file_path, "r") as file:
-        content = file.readlines()
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            content = file.readlines()
+    except UnicodeDecodeError:
+        # Try with a different encoding if UTF-8 fails
+        with open(file_path, "r", encoding="latin-1") as file:
+            content = file.readlines()
 
     if comment_style == CommentStyle.DELIMITED:
         modified_content = localize_delimited_comment(
@@ -103,10 +123,10 @@ def localize_top_comment(file_path, comment_style, start_delimiter, end_delimite
         modified_content = localize_line_by_line_comment(content, start_delimiter)
 
     if modified_content is not None:
-        with open(file_path, "w") as file:
+        with open(file_path, "w", encoding="utf-8") as file:
             file.writelines(modified_content)
     else:
-        print("No top comment found.")
+        print(f"  No top comment found in {file_path}")
 
 
 def insert_delimited_comment(content, start_delimiter, end_delimiter, comment_content):
@@ -159,8 +179,13 @@ def insert_top_comment(
         end_delimiter: Ending delimiter (for DELIMITED style)
         comment_content: The comment text to insert
     """
-    with open(file_path, "r") as file:
-        content = file.readlines()
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            content = file.readlines()
+    except UnicodeDecodeError:
+        # Try with a different encoding if UTF-8 fails
+        with open(file_path, "r", encoding="latin-1") as file:
+            content = file.readlines()
 
     if comment_style == CommentStyle.DELIMITED:
         modified_content = insert_delimited_comment(
@@ -171,7 +196,7 @@ def insert_top_comment(
             content, start_delimiter, comment_content
         )
 
-    with open(file_path, "w") as file:
+    with open(file_path, "w", encoding="utf-8") as file:
         file.writelines(modified_content)
 
 
@@ -187,7 +212,6 @@ def parse_tasks(input_str):
     """
     # split the input string into lines
     lines = input_str.split("\n")
-    lines = lines[1:]
 
     # initialize a dictionary to hold the tasks
     tasks = {}
@@ -195,12 +219,14 @@ def parse_tasks(input_str):
     # initialize variables to keep track of the current task
     task_num = 1
     task_lines = []
+    in_task = False
 
     # loop over the lines and extract task information
     for line in lines:
-        line = line.strip()
+        line_stripped = line.strip()
 
-        if line.startswith("### Zad"):
+        # Check if this is a task header (e.g., "## Zadanie 1" or "## Zad1")
+        if line_stripped.startswith("## Zad"):
             # add the current task to the dictionary
             if task_lines:
                 task_id = "zad" + str(task_num)
@@ -208,17 +234,23 @@ def parse_tasks(input_str):
                 tasks[task_id] = task_content
                 task_num += 1
                 task_lines = []
+            
+            in_task = True
+            # Skip the task header itself, start collecting from next line
+            continue
 
-        elif line:
-            # add the line to the current task content
-            task_lines.append(line)
+        # Collect lines that are part of a task
+        if in_task and line_stripped:
+            # Stop at the horizontal rule or next major section
+            if line_stripped == "---" or line_stripped.startswith("# "):
+                continue
+            task_lines.append(line_stripped)
 
+    # Don't forget the last task
     if task_lines:
         task_id = "zad" + str(task_num)
         task_content = "\n".join(task_lines)
         tasks[task_id] = task_content
-        task_num += 1
-        task_lines = []
 
     # return the dictionary of tasks
     return tasks
@@ -303,7 +335,14 @@ Example usage:
         print(f"Processing: {input_file.name} -> {output_dir.name}")
 
         try:
-            file_content = Path(input_file).read_text()
+            file_content = Path(input_file).read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            # Try with a different encoding if UTF-8 fails
+            try:
+                file_content = Path(input_file).read_text(encoding="latin-1")
+            except Exception as e:
+                print(f"Error reading {input_file}: {e}", file=sys.stderr)
+                continue
         except Exception as e:
             print(f"Error reading {input_file}: {e}", file=sys.stderr)
             continue
