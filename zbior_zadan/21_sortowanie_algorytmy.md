@@ -1,188 +1,216 @@
-# Sortowanie — Algorytmy
+# Rozdział: Sortowanie — Algorytmy (stdin/stdout)
 
-## Zadanie 1 - Sortowanie bąbelkowe
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-**Poziom trudności**: ★☆☆
+**Konwencje wspólne:**
 
-### Treść zadania
-
-Napisz algorytm sortowania bąbelkowego dla listy liczb całkowitych. Algorytm polega na wielokrotnym porównywaniu sąsiednich elementów listy i zamianie ich miejscami, jeśli są w niewłaściwej kolejności. Proces ten jest powtarzany, aż cała lista zostanie posortowana, czyli przejście przez listę nie spowoduje żadnych zmian.
-
-### Dane wejściowe
-
-- Lista liczb całkowitych.
-
-### Dane wyjściowe
-
-- Posortowana lista liczb całkowitych w kolejności rosnącej.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  [6, 2, 1, 4, 27]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [1, 2, 4, 6, 27]
-  ```
-
-### Wskazówki
-
-- W każdej iteracji największy element "wypływa" na koniec nieposortowanej części listy.
-- Pamiętaj o zmniejszaniu zakresu iteracji po każdej pełnej przebieżce.
+* W każdej wersji zadania wczytaj **jedną linię** z listą w formacie jak w przykładzie, np. `[6, 2, 1, 4, 27]`.
+* Wypisz wynik jako listę w **tym samym formacie**, np. `[1, 2, 4, 6, 27]`.
+* Zakładamy, że wejście jest poprawne (lista liczb całkowitych w notacji Pythona).
 
 ---
 
-## Zadanie 2 - Sortowanie przez wybieranie
+## ZAD-01 — Sortowanie bąbelkowe
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `sorting`, `bubble-sort`, `list`
 
-### Treść zadania
+### Treść
 
-Napisz algorytm sortowania przez wybieranie dla listy liczb całkowitych. Algorytm działa poprzez wielokrotne znajdowanie najmniejszego elementu z nieposortowanej części listy i zamianę go z pierwszym elementem tej części. Proces ten jest powtarzany, aż cała lista zostanie posortowana.
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania bąbelkowego**.
+Algorytm polega na wielokrotnym porównywaniu sąsiednich elementów i zamianie ich miejscami, jeśli są w złej kolejności. Powtarzaj przebiegi, aż w całym przebiegu nie zajdzie żadna zamiana.
 
-### Dane wejściowe
+### Wejście
 
-- Lista liczb całkowitych.
+* 1 linia: lista liczb całkowitych, np. `[6, 2, 1, 4, 27]`
 
-### Dane wyjściowe
+### Wyjście
 
-- Posortowana lista liczb całkowitych w kolejności rosnącej.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  [6, 2, 1, 4, 27]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [1, 2, 4, 6, 27]
-  ```
-
-### Wskazówki
-
-- Dla każdego indeksu znajdź najmniejszy element w nieposortowanej części i zamień go z elementem na bieżącym indeksie.
-- Algorytm ma złożoność czasową O(n²).
-
----
-
-## Zadanie 3 - Sortowanie przez wstawianie
-
-**Poziom trudności**: ★★☆
-
-### Treść zadania
-
-Napisz algorytm sortowania przez wstawianie dla listy liczb całkowitych. Algorytm działa poprzez budowanie posortowanej listy element po elemencie. Dla każdego elementu z listy wejściowej wstaw go w odpowiednie miejsce w posortowanej części listy.
-
-### Dane wejściowe
-
-- Lista liczb całkowitych.
-
-### Dane wyjściowe
-
-- Posortowana lista liczb całkowitych w kolejności rosnącej.
+* 1 linia: posortowana lista rosnąco
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [6, 2, 1, 4, 27]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [1, 2, 4, 6, 27]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[6, 2, 1, 4, 27]
+```
 
-- Przechodź przez listę i dla każdego elementu przesuń go w lewo, aż znajdzie odpowiednie miejsce.
-- Algorytm jest efektywny dla niemal posortowanych danych.
+**Wyjście:**
+
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Po każdym pełnym przebiegu największy element „wypływa” na koniec.
+* W kolejnych przebiegach możesz zmniejszać zakres sprawdzania o 1.
 
 ---
 
-## Zadanie 4 - Sortowanie przez scalanie
+## ZAD-02 — Sortowanie przez wybieranie
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `selection-sort`, `list`
 
-### Treść zadania
+### Treść
 
-Zaimplementuj algorytm sortowania przez scalanie dla danej listy liczb całkowitych. Algorytm działa rekurencyjnie, dzieląc listę na mniejsze części i łącząc je w posortowane fragmenty.
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wybieranie**.
+Dla każdej pozycji `i` znajdź najmniejszy element w zakresie `i..koniec` i zamień go z elementem na pozycji `i`.
 
-Algorytm:
+### Wejście
 
-1. Jeśli lista ma mniej niż dwa elementy, jest już posortowana.
+* 1 linia: lista liczb całkowitych
+
+### Wyjście
+
+* 1 linia: posortowana lista rosnąco
+
+### Przykład
+
+**Wejście:**
+
+```
+[6, 2, 1, 4, 27]
+```
+
+**Wyjście:**
+
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Złożoność czasowa: `O(n^2)`.
+
+---
+
+## ZAD-03 — Sortowanie przez wstawianie
+
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `insertion-sort`, `list`
+
+### Treść
+
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wstawianie**.
+Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w odpowiednie miejsce, przesuwając większe elementy w prawo.
+
+### Wejście
+
+* 1 linia: lista liczb całkowitych
+
+### Wyjście
+
+* 1 linia: posortowana lista rosnąco
+
+### Przykład
+
+**Wejście:**
+
+```
+[6, 2, 1, 4, 27]
+```
+
+**Wyjście:**
+
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Działa bardzo dobrze dla danych prawie posortowanych.
+
+---
+
+## ZAD-04 — Sortowanie przez scalanie
+
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `merge-sort`, `recursion`
+
+### Treść
+
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez scalanie**:
+
+1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.
 2. Podziel listę na dwie (w miarę) równe części.
-3. Rekurencyjnie zastosuj sortowanie przez scalanie do obu części.
-4. Scal dwie posortowane części w jedną posortowaną listę.
+3. Rekurencyjnie posortuj obie części.
+4. **Scal** dwie posortowane listy w jedną posortowaną.
 
-### Dane wejściowe
+### Wejście
 
-- Lista liczb całkowitych.
+* 1 linia: lista liczb całkowitych
 
-### Dane wyjściowe
+### Wyjście
 
-- Posortowana lista liczb całkowitych w kolejności rosnącej.
+* 1 linia: posortowana lista rosnąco
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [6, 2, 1, 4, 27]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [1, 2, 4, 6, 27]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[6, 2, 1, 4, 27]
+```
 
-- Funkcja scalająca powinna łączyć dwie posortowane listy w jedną.
-- Algorytm ma złożoność czasową O(n log n).
+**Wyjście:**
+
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Złożoność czasowa: `O(n log n)`.
 
 ---
 
-## Zadanie 5 - Sortowanie szybkie
+## ZAD-05 — Sortowanie szybkie
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `quick-sort`, `recursion`
 
-### Treść zadania
+### Treść
 
-Zaimplementuj algorytm sortowania szybkiego (Quick Sort) dla danej listy liczb całkowitych. Algorytm działa poprzez wybór elementu zwanego pivotem i podział listy na części.
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **Quick Sort**:
 
-Algorytm:
+1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.
+2. Wybierz **pivot** (np. pierwszy element).
+3. Podziel elementy na trzy grupy:
 
-1. Jeśli lista ma mniej niż dwa elementy, jest już posortowana.
-2. Wybierz pivot (np. pierwszy element listy).
-3. Podziel listę na trzy części:
-   - Elementy mniejsze od pivota.
-   - Elementy równe pivotowi.
-   - Elementy większe od pivota.
-4. Rekurencyjnie zastosuj sortowanie szybkie do części z elementami mniejszymi i większymi od pivota.
-5. Połącz wyniki w następującej kolejności: posortowane mniejsze, pivoty, posortowane większe.
+   * mniejsze od pivota,
+   * równe pivotowi,
+   * większe od pivota.
+4. Rekurencyjnie posortuj część mniejszych i większych.
+5. Sklej wynik: `mniejsze + równe + większe`.
 
-### Dane wejściowe
+### Wejście
 
-- Lista liczb całkowitych.
+* 1 linia: lista liczb całkowitych
 
-### Dane wyjściowe
+### Wyjście
 
-- Posortowana lista liczb całkowitych w kolejności rosnącej.
+* 1 linia: posortowana lista rosnąco
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  [6, 2, 1, 4, 27]
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  [1, 2, 4, 6, 27]
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+[6, 2, 1, 4, 27]
+```
 
-- W najgorszym przypadku algorytm ma złożoność O(n²), ale średnio O(n log n).
-- Dobór pivota może wpłynąć na wydajność algorytmu.
+**Wyjście:**
+
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Średnio: `O(n log n)`, w pesymistycznym przypadku: `O(n^2)`.
+* Wybór pivota ma wpływ na wydajność.
 
