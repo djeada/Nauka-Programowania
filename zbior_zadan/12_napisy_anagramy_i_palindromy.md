@@ -1,297 +1,346 @@
-## Zadanie 1 - Sprawdzenie, czy słowo jest palindromem
+# Rozdział: Napisy — palindromy, anagramy, permutacje (stdin/stdout)
 
-**Poziom trudności**: ★☆☆
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem.**
 
-### Treść zadania
+**Konwencje wspólne:**
 
-Napisz program, który sprawdzi, czy podane słowo jest palindromem. Palindrom to słowo, które brzmi tak samo czytane od lewej do prawej i od prawej do lewej.
-
-### Dane wejściowe
-
-- Jeden napis składający się z liter alfabetu (bez spacji i znaków interpunkcyjnych).
-
-### Dane wyjściowe
-
-- Jeden napis: **"Prawda"**, jeśli słowo jest palindromem, lub **"Fałsz"**, jeśli nie jest.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  kajak
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Prawda
-  ```
-
-### Wskazówki
-
-- Porównaj napis z jego odwróconą wersją.
-- Możesz zignorować wielkość liter, stosując odpowiednie funkcje do zmiany wielkości.
+* Napis wczytuj jako całą linię (może zawierać spacje tylko tam, gdzie jest to powiedziane).
+* Jeśli w wyjściu jest „każde słowo w osobnej linii” — wypisuj dokładnie po jednej pozycji na linię.
+* W zadaniach „ignoruj wielkość liter” — porównuj w wersji np. `lower()`, ale wypisuj słowa **w oryginalnej postaci z wejścia**, chyba że treść mówi inaczej.
+* Jeśli wynikiem ma być „lista” i nic nie znaleziono — nie wypisuj nic (puste wyjście), o ile nie ma wprost formatu `[]`.
 
 ---
 
-## Zadanie 2 - Znalezienie wszystkich permutacji słowa
+## ZAD-01 — Czy słowo jest palindromem?
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `palindrom`, `I/O`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanego słowa wygeneruje wszystkie jego permutacje, czyli wszystkie możliwe układy liter tego słowa.
+Wczytaj jedno słowo i sprawdź, czy jest palindromem (czytane od lewej do prawej i od prawej do lewej jest takie samo).
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis składający się z unikalnych liter (bez powtarzających się znaków).
+* 1. linia: słowo (same litery, bez spacji)
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista napisów zawierająca wszystkie możliwe permutacje słowa, każda permutacja w osobnej linii.
+Jedna linia:
 
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  abc
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  abc
-  acb
-  bac
-  bca
-  cab
-  cba
-  ```
-
-### Wskazówki
-
-- Rozważ użycie rekurencji lub algorytmów generujących permutacje.
-- Upewnij się, że wszystkie permutacje są unikalne i że żadne nie zostały pominięte.
-
----
-
-## Zadanie 3 - Sprawdzenie, czy dwa słowa są anagramami
-
-**Poziom trudności**: ★☆☆
-
-### Treść zadania
-
-Napisz program, który sprawdzi, czy podane dwa słowa są anagramami. Dwa słowa są anagramami, jeśli jedno można utworzyć poprzez przestawienie liter drugiego.
-
-### Dane wejściowe
-
-- Dwa napisy składające się z liter alfabetu (bez spacji i znaków interpunkcyjnych), każdy w osobnej linii.
-
-### Dane wyjściowe
-
-- Jeden napis: **"Prawda"**, jeśli słowa są anagramami, lub **"Fałsz"**, jeśli nie są.
+* `Prawda` — jeśli słowo jest palindromem
+* `Fałsz` — w przeciwnym razie
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  ula
-  lua
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Prawda
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+kajak
+```
 
-- Porównaj liczby wystąpień poszczególnych liter w obu słowach.
-- Możesz użyć sortowania liter w słowach i porównania wyników.
+**Wyjście:**
+
+```
+Prawda
+```
+
+### Uwagi o formatowaniu
+
+* Jeśli chcesz ignorować wielkość liter, porównuj wersje `lower()`.
 
 ---
 
-## Zadanie 4 - Wyszukanie wszystkich palindromów w zdaniu
+## ZAD-02 — Wszystkie permutacje słowa
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `rekurencja`, `permutacje`, `backtracking`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla podanego zdania znajdzie wszystkie słowa będące palindromami. Wielkość liter nie ma znaczenia (ignoruj różnice między małymi i wielkimi literami).
+Wczytaj słowo z **unikalnych liter** i wypisz wszystkie jego permutacje — każdą w osobnej linii.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis reprezentujący zdanie, który może zawierać litery, cyfry, spacje oraz znaki interpunkcyjne.
+* 1. linia: słowo (litery nie powtarzają się)
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista słów będących palindromami, każde słowo w osobnej linii, w kolejności ich występowania w zdaniu.
+Wiele linii — wszystkie permutacje słowa, każda w osobnej linii.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Tata zabrał kajak na wycieczkę i uderzył się w oko
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Tata
-  kajak
-  i
-  w
-  oko
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+abc
+```
 
-- Podziel zdanie na słowa, usuwając znaki interpunkcyjne.
-- Dla każdego słowa sprawdź, czy jest palindromem, ignorując wielkość liter.
+**Wyjście:**
+
+```
+abc
+acb
+bac
+bca
+cab
+cba
+```
+
+### Uwagi o formatowaniu
+
+* Kolejność wypisywania permutacji nie musi być dokładnie taka jak w przykładzie, o ile są wszystkie i bez powtórzeń.
 
 ---
 
-## Zadanie 5 - Znalezienie anagramów słowa w zdaniu
+## ZAD-03 — Czy dwa słowa są anagramami?
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `anagram`, `sortowanie`, `zliczanie`
 
-### Treść zadania
+### Treść
 
-Napisz program, który w podanym zdaniu znajdzie wszystkie słowa będące anagramami podanego słowa. Wielkość liter nie ma znaczenia.
+Wczytaj dwa słowa i sprawdź, czy są anagramami (czy da się utworzyć jedno przez przestawienie liter drugiego).
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis reprezentujący zdanie.
-- Jeden napis reprezentujący słowo do sprawdzenia, oba napisy w osobnych liniach.
+* 1. linia: słowo `s1`
+* 2. linia: słowo `s2`
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista słów z zdania, które są anagramami podanego słowa, każde słowo w osobnej linii.
+Jedna linia:
+
+* `Prawda` — jeśli anagramy
+* `Fałsz` — jeśli nie
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  Sroga kara.
-  arak
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  kara
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+ula
+lua
+```
 
-- Podziel zdanie na słowa i usuń znaki interpunkcyjne.
-- Porównaj uporządkowane litery słowa z literami każdego słowa w zdaniu.
+**Wyjście:**
+
+```
+Prawda
+```
+
+### Uwagi
+
+* Najprościej: porównaj posortowane litery albo słowniki zliczeń znaków.
 
 ---
 
-## Zadanie 6 - Permutacje słowa, które są palindromami
+## ZAD-04 — Palindromy w zdaniu
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `string`, `tokenizacja`, `palindrom`
 
-### Treść zadania
+### Treść
 
-Napisz program, który znajdzie wszystkie permutacje podanego słowa, które są palindromami.
+Wczytaj zdanie i wypisz wszystkie słowa, które są palindromami.
+Ignoruj wielkość liter przy sprawdzaniu.
 
-### Dane wejściowe
+### Wejście
 
-- Jeden napis składający się z liter alfabetu.
+* 1. linia: zdanie (może zawierać spacje i znaki interpunkcyjne)
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista unikalnych palindromów będących permutacjami podanego słowa, każde w osobnej linii.
+Każdy znaleziony palindrom w osobnej linii, w kolejności występowania w zdaniu.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  aabb
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  abba
-  baab
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Tata zabrał kajak na wycieczkę i uderzył się w oko
+```
 
-- Sprawdź, czy możliwe jest ułożenie palindromu z podanych liter.
-- Generuj permutacje i sprawdzaj, czy są palindromami, eliminując duplikaty.
+**Wyjście:**
+
+```
+Tata
+kajak
+i
+w
+oko
+```
+
+### Uwagi o formatowaniu
+
+* Traktuj „słowo” jako ciąg liter/cyfr po usunięciu interpunkcji z brzegów (np. `kara.` → `kara`).
+* Porównuj w wersji `lower()`, ale wypisz w oryginalnym brzmieniu z wejścia (tak jak w przykładzie).
 
 ---
 
-## Zadanie 7 - Minimalna liczba usuniętych znaków, aby uzyskać anagramy
+## ZAD-05 — Anagramy słowa w zdaniu
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★☆
+**Tagi:** `anagram`, `string`, `zliczanie`
 
-### Treść zadania
+### Treść
 
-Napisz program, który dla dwóch podanych słów zwróci minimalną liczbę znaków, które trzeba usunąć z obu słów, aby otrzymać z nich anagramy. Jeśli słowa są różnej długości, zwróć **-1**.
+Wczytaj zdanie oraz słowo-klucz. Wypisz wszystkie słowa ze zdania, które są anagramami słowa-klucza (ignoruj wielkość liter).
 
-### Dane wejściowe
+### Wejście
 
-- Dwa napisy składające się z liter alfabetu, każdy w osobnej linii.
+* 1. linia: zdanie
+* 2. linia: słowo-klucz `k`
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna liczba naturalna — minimalna liczba znaków do usunięcia z obu słów, aby otrzymać anagramy, lub **-1**, jeśli słowa są różnej długości.
+Każde słowo ze zdania będące anagramem `k` — w osobnej linii (w kolejności występowania).
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  grazyna
-  razynax
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+Sroga kara.
+arak
+```
 
-- Porównaj liczby wystąpień każdej litery w obu słowach.
-- Suma różnic w liczbie wystąpień poszczególnych liter da minimalną liczbę znaków do usunięcia.
+**Wyjście:**
+
+```
+kara
+```
+
+### Uwagi
+
+* Tak jak wyżej: usuń interpunkcję z brzegów słów.
+* Porównuj np. posortowane litery w `lower()`.
 
 ---
 
-## Zadanie 8 - Wyjątkowe palindromy
+## ZAD-06 — Permutacje słowa, które są palindromami
 
-**Poziom trudności**: ★★★
+**Poziom:** ★★☆
+**Tagi:** `palindrom`, `permutacje`, `multiset`
 
-### Treść zadania
+### Treść
 
-Napisz program, który znajdzie wszystkie unikalne, wyjątkowe palindromy, jakie można utworzyć z podanego słowa, bez zmiany kolejności występowania znaków. Nie uwzględniaj duplikatów w wyniku.
+Wczytaj słowo i wypisz wszystkie **unikalne** palindromy, które są jego permutacjami.
 
-Wyjątkowy palindrom musi spełniać jeden z dwóch warunków:
+### Wejście
 
-1. Wszystkie znaki są identyczne, np. "aaa".
-2. Wszystkie znaki poza środkowym są identyczne, np. "cbc".
+* 1. linia: słowo (litery mogą się powtarzać)
 
-Pojedynczy znak jest również uznawany za wyjątkowy palindrom.
+### Wyjście
 
-### Dane wejściowe
-
-- Jeden napis składający się z liter alfabetu.
-
-### Dane wyjściowe
-
-- Lista unikalnych palindromów spełniających powyższe warunki, każde w osobnej linii.
+Każdy unikalny palindrom w osobnej linii. Jeśli nie istnieje żaden — puste wyjście.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  xxyxx
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  x
-  xx
-  xxx
-  xxyxx
-  y
-  yxy
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+aabb
+```
 
-- Przejdź przez wszystkie podciągi słowa i sprawdź, czy spełniają warunki wyjątkowego palindromu.
-- Upewnij się, że nie uwzględniasz duplikatów w wyniku.
+**Wyjście:**
+
+```
+abba
+baab
+```
+
+### Uwagi
+
+* Najpierw sprawdź warunek istnienia palindromu z liter: co najwyżej jeden znak może mieć nieparzystą liczbę wystąpień.
+* Generuj palindromy z połówek (bez wypisywania duplikatów).
 
 ---
+
+## ZAD-07 — Minimalna liczba usunięć, aby uzyskać anagramy
+
+**Poziom:** ★★★
+**Tagi:** `anagram`, `zliczanie`, `greedy`
+
+### Treść
+
+Wczytaj dwa słowa. Jeśli mają różne długości, wypisz `-1`.
+W przeciwnym razie oblicz minimalną liczbę znaków, które trzeba usunąć (łącznie z obu słów), aby pozostałe napisy były anagramami.
+
+### Wejście
+
+* 1. linia: słowo `s1`
+* 2. linia: słowo `s2`
+
+### Wyjście
+
+* jedna liczba całkowita: minimalna liczba usunięć lub `-1`
+
+### Przykład
+
+**Wejście:**
+
+```
+grazyna
+razynax
+```
+
+**Wyjście:**
+
+```
+2
+```
+
+### Uwagi
+
+* Dla tej samej długości: policz zliczenia liter i zsumuj wartości `abs(c1[lit] - c2[lit])`, a wynik wypisz jako tę sumę. (To jest łączna liczba usunięć.)
+
+---
+
+## ZAD-08 — Wyjątkowe palindromy (podciągi bez zmiany kolejności)
+
+**Poziom:** ★★★
+**Tagi:** `substring`, `palindrom`, `unikalność`
+
+### Treść
+
+Wczytaj słowo i znajdź wszystkie **unikalne** palindromy, które można z niego utworzyć jako **spójne podciągi** (substringi), bez zmiany kolejności znaków, spełniające warunek „wyjątkowości”:
+
+1. wszystkie znaki są identyczne (np. `aaa`), **albo**
+2. wszystkie znaki poza środkowym są identyczne (np. `cbc`).
+
+Pojedynczy znak też jest wyjątkowym palindromem.
+
+### Wejście
+
+* 1. linia: słowo (litery)
+
+### Wyjście
+
+Każdy unikalny wyjątkowy palindrom w osobnej linii.
+Jeśli nic poza pojedynczymi znakami nie pasuje, wypisz tylko te unikalne znaki (po jednej linii na znak).
+
+### Przykład
+
+**Wejście:**
+
+```
+xxyxx
+```
+
+**Wyjście:**
+
+```
+x
+xx
+xxx
+xxyxx
+y
+yxy
+```
+
+### Uwagi o formatowaniu
+
+* Usuń duplikaty w wyniku (np. ten sam palindrom znaleziony w kilku miejscach wypisz raz).
+* Kolejność wypisywania może być zgodna z pierwszym pojawieniem się w tekście (łatwe i czytelne): wypisuj przy pierwszym znalezieniu danego palindromu.
