@@ -7,7 +7,7 @@
 <img alt="Zadania" src="https://img.shields.io/badge/zadania-200%2B-green">
 </div>
 
-# 🚀 Nauka Programowania - Kompleksowy Kurs
+# 🚀 Nauka Programowania
 
 > **Witaj w świecie programowania!** 🎉 To nie jest zwykły zbiór zadań - to kompletna ścieżka rozwoju, która przekształci Cię z początkującego w pewnego siebie programistę!
 
