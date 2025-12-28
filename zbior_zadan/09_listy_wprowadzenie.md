@@ -1,811 +1,820 @@
-# Listy - Wprowadzenie
+# Rozdział: Listy — Wprowadzenie
 
-## Zadanie 1 - Wczytaj i wypisz
+Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
 
-**Poziom trudności**: ★☆☆
+**Konwencje wspólne:**
 
-### Treść zadania
-
-Dla podanej liczby naturalnej \( N \), wczytaj \( N \) liczb całkowitych do listy, a następnie:
-
-- **a)** Wypisz elementy listy od początku do końca, każdy w osobnym wierszu.
-- **b)** Wypisz elementy listy od końca do początku, wypisując je w jednym wierszu, oddzielone przecinkami (bez spacji).
-
-### Dane wejściowe
-
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
-
-### Dane wyjściowe
-
-- **Podpunkt a):** \( N \) liczb całkowitych, każda w osobnym wierszu, w kolejności wprowadzenia.
-- **Podpunkt b):** Jedna linia zawierająca \( N \) liczb całkowitych w odwrotnej kolejności niż wprowadzono, oddzielonych przecinkami.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  3
-  8
-  12
-  7
-  ```
-- **Oczekiwane wyjście**:
-
-  **Podpunkt a):**
-  ```
-  8
-  12
-  7
-  ```
-
-  **Podpunkt b):**
-  ```
-  7,12,8
-  ```
-
-### Wskazówki
-
-- Użyj listy do przechowywania wczytanych liczb.
-- Do wypisania listy w odwrotnej kolejności możesz użyć odwracania listy lub indeksowania od końca.
-- Przy wypisywaniu elementów oddzielonych przecinkami, upewnij się, że nie dodajesz przecinka na końcu.
+* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
+* Jeśli w danych wyjściowych jest „elementy oddzielone przecinkami” — użyj przecinka **bez spacji**.
+* Jeśli w danych wyjściowych jest „oddzielone spacją” — użyj pojedynczej spacji.
+* Nie wypisuj promptów typu „Podaj N”.
 
 ---
 
-## Zadanie 2 - Wczytaj, zmodyfikuj i wypisz
+## ZAD-01 — Wczytaj i wypisz
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `I/O`, `odwracanie`
 
-### Treść zadania
+### Treść
 
-Wczytaj liczbę naturalną \( N \) oraz \( N \) liczb całkowitych i umieść je w liście. Następnie wykonaj poniższe operacje:
+Wczytaj `N`, następnie `N` liczb całkowitych do listy.
 
-- **a)** Dodaj 1 do każdego elementu listy.
-- **b)** Pomnóż każdy element przez jego indeks w liście (indeksy zaczynają się od 0).
-- **c)** Zastąp wszystkie elementy listy wartością pierwszego elementu.
+a) Wypisz elementy listy od początku do końca — każdy w osobnej linii.
+b) Wypisz elementy listy od końca do początku — w **jednej** linii, oddzielone przecinkami (bez spacji).
 
-Dla każdego podpunktu wypisz zmodyfikowaną listę w jednym wierszu, oddzielając elementy przecinkami.
+### Wejście
 
-### Dane wejściowe
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
+### Wyjście
 
-### Dane wyjściowe
-
-- Dla każdego podpunktu: jedna linia zawierająca \( N \) liczb całkowitych, oddzielonych przecinkami, reprezentujących zmodyfikowaną listę.
-
-### Przykład
-
-- **Dane wejściowe**:
-  ```
-  3
-  3
-  9
-  7
-  ```
-- **Oczekiwane wyjście**:
-
-  **Podpunkt a):**
-  ```
-  4,10,8
-  ```
-
-  **Podpunkt b):**
-  ```
-  0,9,14
-  ```
-
-  **Podpunkt c):**
-  ```
-  3,3,3
-  ```
-
-### Wskazówki
-
-- W podpunkcie a) zwiększ każdy element o 1.
-- W podpunkcie b) pomnóż każdy element przez jego indeks.
-- W podpunkcie c) ustaw wszystkie elementy na wartość pierwszego elementu.
-
----
-
-## Zadanie 3 - Pierwsze wystąpienie klucza
-
-**Poziom trudności**: ★☆☆
-
-### Treść zadania
-
-Otrzymujesz listę liczb całkowitych oraz liczbę całkowitą jako klucz. Znajdź indeks pierwszego wystąpienia klucza w liście. Jeśli klucz nie występuje w liście, zwróć **-1**.
-
-### Dane wejściowe
-
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
-- Na końcu jedna liczba całkowita — klucz do wyszukania.
-
-### Dane wyjściowe
-
-- Jedna liczba całkowita — indeks pierwszego wystąpienia klucza (indeksy zaczynają się od 0) lub **-1**, jeśli klucz nie występuje w liście.
+a) `N` linii — elementy w kolejności wczytania.
+b) 1 linia — elementy w kolejności odwrotnej, oddzielone przecinkami.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  2
-  9
-  -1
-  3
-  8
-  -1
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+3
+8
+12
+7
+```
 
-- Możesz użyć metody `index()` listy, ale pamiętaj o obsłudze wyjątku, gdy klucza nie ma w liście.
-- Alternatywnie, przejdź przez listę za pomocą pętli i sprawdź, czy element jest równy kluczowi.
+**Wyjście:**
+
+```
+8
+12
+7
+7,12,8
+```
+
+### Uwagi o formatowaniu
+
+* W podpunkcie (b) nie dodawaj przecinka na końcu.
 
 ---
 
-## Zadanie 4 - Minimum oraz maksimum
+## ZAD-02 — Wczytaj, zmodyfikuj i wypisz
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `indeksy`, `modyfikacja`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb całkowitych. Znajdź największy i najmniejszy element tej listy i wypisz je jako dwie osobne liczby całkowite.
+Wczytaj `N` oraz `N` liczb całkowitych do listy. Następnie:
 
-### Dane wejściowe
+a) Zwiększ każdy element o `1`.
+b) Pomnóż każdy element przez jego indeks (indeksy od `0`).
+c) Zastąp wszystkie elementy wartością pierwszego elementu.
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
+Po każdym podpunkcie wypisz wynikową listę w **jednej** linii, elementy oddzielone przecinkami.
 
-### Dane wyjściowe
+### Wejście
 
-- Dwie liczby całkowite, oddzielone spacją:
-  - Największy element listy.
-  - Najmniejszy element listy.
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Trzy linie:
+
+1. wynik po (a)
+2. wynik po (b)
+3. wynik po (c)
+
+Elementy w linii oddzielone przecinkami (bez spacji).
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  9
-  4
-  -7
-  8
-  5
-  6
-  -9
-  10
-  2
-  -8
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  10 -9
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+3
+3
+9
+7
+```
 
-- Możesz użyć funkcji `max()` i `min()` na liście.
-- Upewnij się, że wypisujesz liczby w odpowiedniej kolejności.
+**Wyjście:**
+
+```
+4,10,8
+0,9,14
+3,3,3
+```
 
 ---
 
-## Zadanie 5 - Zmodyfikuj elementy spełniające warunek
+## ZAD-03 — Pierwsze wystąpienie klucza
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `wyszukiwanie`, `indeksy`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb całkowitych. Wykonaj poniższe operacje, tworząc za każdym razem nową listę:
+Wczytaj listę liczb całkowitych oraz liczbę `klucz`. Wypisz indeks pierwszego wystąpienia `klucz` w liście.
+Jeśli `klucz` nie występuje — wypisz `-1`.
 
-- **a)** Zwiększ o 1 wszystkie elementy o parzystych indeksach (indeksy zaczynają się od 0).
-- **b)** Wyzeruj wszystkie elementy będące wielokrotnościami liczby 3.
-- **c)** Podnieś do kwadratu wszystkie elementy mniejsze niż 10.
-- **d)** Wstaw sumę wszystkich elementów listy na indeksy będące liczbami pierwszymi.
-- **e)** Zamień każdy element na iloczyn wszystkich pozostałych elementów listy.
+### Wejście
 
-Dla każdego podpunktu wypisz zmodyfikowaną listę w jednym wierszu, oddzielając elementy przecinkami.
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `klucz` (liczba całkowita)
 
-### Dane wejściowe
+### Wyjście
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
-
-### Dane wyjściowe
-
-- Dla każdego podpunktu: jedna linia zawierająca zmodyfikowaną listę, elementy oddzielone przecinkami.
+Jedna liczba całkowita — indeks (od `0`) lub `-1`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  5
-  7
-  9
-  4
-  2
-  ```
-- **Oczekiwane wyjście**:
+**Wejście:**
 
-  **Podpunkt a):**
-  ```
-  6,7,10,4,3
-  ```
+```
+5
+2
+9
+-1
+3
+8
+-1
+```
 
-  **Podpunkt b):**
-  ```
-  6,7,0,4,3
-  ```
+**Wyjście:**
 
-  **Podpunkt c):**
-  ```
-  36,49,0,16,9
-  ```
-
-  **Podpunkt d):**
-  ```
-  37,49,0,37,9
-  ```
-
-  **Podpunkt e):**
-  ```
-  2592,0,0,36,1080
-  ```
-
-### Wskazówki
-
-- **Podpunkt a):** Iteruj po indeksach listy i zwiększ elementy o parzystych indeksach.
-- **Podpunkt b):** Sprawdź, czy element jest podzielny przez 3.
-- **Podpunkt c):** Podnieś do kwadratu elementy mniejsze niż 10.
-- **Podpunkt d):** Oblicz sumę wszystkich elementów i wstaw na indeksy pierwsze (2, 3, 5, 7, ...).
-- **Podpunkt e):** Oblicz iloczyn wszystkich elementów i dla każdego indeksu ustaw wartość iloczynu podzielonego przez wartość elementu na tym indeksie.
+```
+2
+```
 
 ---
 
-## Zadanie 6 - Czy średnia elementów znajduje się w liście?
+## ZAD-04 — Minimum oraz maksimum
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `min`, `max`
 
-### Treść zadania
+### Treść
 
-Dla otrzymanej listy liczb całkowitych sprawdź, czy średnia arytmetyczna jej elementów znajduje się w tej liście. Wypisz **"Tak"**, jeśli średnia jest elementem listy, lub **"Nie"** w przeciwnym razie.
+Wczytaj `N` liczb całkowitych. Wypisz:
 
-### Dane wejściowe
+1. największą liczbę w liście
+2. najmniejszą liczbę w liście
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
+w jednej linii, oddzielone pojedynczą spacją.
 
-### Dane wyjściowe
+### Wejście
 
-- Jeden napis: **"Tak"** lub **"Nie"**.
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Jedna linia:
+
+* `max min`
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  6
-  2
-  1
-  4
-  27
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Nie
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+9
+4
+-7
+8
+5
+6
+-9
+10
+2
+-8
+```
 
-- Oblicz średnią arytmetyczną elementów listy.
-- Sprawdź, czy średnia (lub jej całkowita część) znajduje się w liście.
+**Wyjście:**
+
+```
+10 -9
+```
 
 ---
 
-## Zadanie 7 - Średnia dwóch największych liczb
+## ZAD-05 — Zmodyfikuj elementy spełniające warunek
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `warunki`, `liczby pierwsze`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb naturalnych. Znajdź największą i drugą co do wielkości liczbę w liście, a następnie oblicz ich średnią arytmetyczną i wypisz jako liczbę zmiennoprzecinkową.
+Wczytaj listę liczb całkowitych. Dla każdego podpunktu utwórz **nową listę** na podstawie listy z poprzedniego podpunktu i wypisz ją w jednej linii (przecinki bez spacji):
 
-### Dane wejściowe
+a) Zwiększ o 1 elementy o **parzystych indeksach** (0,2,4,...).
+b) Ustaw na `0` elementy będące **wielokrotnością 3**.
+c) Podnieś do kwadratu elementy **mniejsze niż 10**.
+d) Oblicz sumę wszystkich elementów listy i wstaw tę sumę na indeksy, które są **liczbami pierwszymi** (2,3,5,7,11,...) — tylko te, które mieszczą się w zakresie listy.
+e) Zamień każdy element na **iloczyn wszystkich pozostałych elementów** listy.
 
-- Jedna liczba naturalna \( N \) (\( N \geq 2 \)).
-- Następnie \( N \) liczb naturalnych, każda w nowej linii.
+### Wejście
 
-### Dane wyjściowe
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
-- Jedna liczba zmiennoprzecinkowa — średnia arytmetyczna dwóch największych liczb z dokładnością do jednego miejsca po przecinku.
+### Wyjście
+
+Pięć linii (po kolei: a, b, c, d, e), w każdej lista oddzielona przecinkami.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  6
-  9
-  2
-  3
-  2
-  1
-  7
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  8.0
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+5
+5
+7
+9
+4
+2
+```
 
-- Posortuj listę lub znajdź największą i drugą największą liczbę.
-- Oblicz średnią tych dwóch liczb.
+**Wyjście:**
+
+```
+6,7,10,4,3
+6,7,0,4,3
+36,49,0,16,9
+36,49,36,36,9
+0,0,0,0,0
+```
+
+### Uwagi o formatowaniu
+
+* W podpunkcie (d) indeks 0 i 1 nie są pierwsze.
+* W podpunkcie (e) jeśli w liście jest `0`, to wiele wyników będzie `0` — to normalne.
+* Nie dodawaj przecinków na końcu linii.
 
 ---
 
-## Zadanie 8 - Usuń klucz
+## ZAD-06 — Czy średnia elementów znajduje się w liście?
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `średnia`, `wyszukiwanie`
 
-### Treść zadania
+### Treść
 
-Dla otrzymanej listy liczb całkowitych oraz liczby całkowitej jako klucza, usuń pierwsze wystąpienie klucza w liście.
+Wczytaj listę liczb całkowitych. Oblicz średnią arytmetyczną elementów i sprawdź, czy ta średnia jest **dokładnie** jednym z elementów listy.
 
-### Dane wejściowe
+Wypisz:
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
-- Na końcu jedna liczba całkowita — klucz do usunięcia.
+* `Tak` — jeśli średnia występuje w liście,
+* `Nie` — w przeciwnym razie.
 
-### Dane wyjściowe
+### Wejście
 
-- Lista liczb całkowitych po usunięciu pierwszego wystąpienia klucza, elementy oddzielone przecinkami.
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Jedno słowo: `Tak` lub `Nie`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  6
-  2
-  1
-  4
-  27
-  4
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  6,2,1,27
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+5
+6
+2
+1
+4
+27
+```
 
-- Użyj metody `remove()` do usunięcia pierwszego wystąpienia klucza.
-- Jeśli klucz nie występuje w liście, lista pozostaje bez zmian.
+**Wyjście:**
+
+```
+Nie
+```
+
+### Uwagi
+
+* Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb całkowitych.
 
 ---
 
-## Zadanie 9 - Usuń duplikaty
+## ZAD-07 — Średnia dwóch największych liczb
 
-**Poziom trudności**: ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `max`, `sortowanie`, `float`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb naturalnych. Usuń z niej wszystkie duplikaty, tak aby każda liczba występowała tylko raz.
+Wczytaj `N` liczb naturalnych (`N ≥ 2`). Znajdź największą i drugą największą wartość, a następnie wypisz ich średnią arytmetyczną jako liczbę zmiennoprzecinkową z dokładnością do **jednego** miejsca po przecinku.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb naturalnych, każda w nowej linii.
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby naturalne
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista liczb naturalnych bez duplikatów, elementy oddzielone przecinkami, w kolejności ich pierwszego wystąpienia.
+Jedna liczba zmiennoprzecinkowa w formacie `%.1f`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  6
-  3
-  2
-  1
-  3
-  2
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  3,2,1
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+6
+9
+2
+3
+2
+1
+7
+```
 
-- Możesz użyć zbioru `set` do identyfikacji unikalnych elementów, ale pamiętaj o zachowaniu kolejności — użyj więc struktury `OrderedDict` lub iteruj ręcznie i dodawaj elementy, jeśli nie zostały wcześniej dodane.
+**Wyjście:**
+
+```
+8.0
+```
 
 ---
 
-## Zadanie 10 - Czy punkty mogą stanowić wierzchołki trójkąta?
+## ZAD-08 — Usuń klucz
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `remove`, `wyszukiwanie`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz współrzędne trzech punktów \( A(x_A, y_A) \), \( B(x_B, y_B) \) i \( C(x_C, y_C) \). Sprawdź, czy te punkty mogą stanowić wierzchołki trójkąta (czy nie leżą na jednej prostej).
+Wczytaj listę liczb całkowitych oraz `klucz`. Usuń **pierwsze** wystąpienie `klucz` (jeśli istnieje). Następnie wypisz listę po modyfikacji w jednej linii, elementy oddzielone przecinkami.
 
-### Dane wejściowe
+### Wejście
 
-- Sześć liczb całkowitych, każda w nowej linii:
-  - \( x_A \), \( y_A \)
-  - \( x_B \), \( y_B \)
-  - \( x_C \), \( y_C \)
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `klucz` (liczba całkowita)
 
-### Dane wyjściowe
+### Wyjście
 
-- Jeden napis: **"Tak"** jeśli punkty mogą stanowić wierzchołki trójkąta, lub **"Nie"** w przeciwnym razie.
+Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  -3
-  -2
-  -3
-  1
-  -3
-  0
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  Nie
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+5
+6
+2
+1
+4
+27
+4
+```
 
-- Sprawdź, czy pole trójkąta wyznaczonego przez te punkty jest różne od zera.
-- Możesz użyć wzoru na pole trójkąta z wykorzystaniem współrzędnych.
+**Wyjście:**
+
+```
+6,2,1,27
+```
+
+### Uwagi
+
+* Jeśli `klucz` nie występuje, wypisz listę bez zmian.
 
 ---
 
-## Zadanie 11 - Samochody jadące w przeciwnych kierunkach
+## ZAD-09 — Usuń duplikaty (z zachowaniem kolejności)
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `duplikaty`, `set`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę znaków reprezentujących samochody jadące na wschód ('A') i zachód ('B'). Policz, ile razy samochody jadące w przeciwnych kierunkach mijają się.
+Wczytaj listę liczb naturalnych i usuń duplikaty tak, aby każda liczba występowała tylko raz — **zachowując kolejność pierwszego wystąpienia**.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie ciąg \( N \) znaków 'A' lub 'B', bez spacji, w jednej linii.
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby naturalne
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna liczba naturalna — liczba mijających się par samochodów.
+Jedna linia: lista bez duplikatów, elementy oddzielone przecinkami.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  ABABB
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  5
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+6
+3
+2
+1
+3
+2
+2
+```
 
-- Iteruj przez listę i licz, ile samochodów jedzie na wschód ('A').
-- Gdy napotkasz samochód jadący na zachód ('B'), dodaj do wyniku liczbę samochodów jadących na wschód, które już minąłeś.
+**Wyjście:**
+
+```
+3,2,1
+```
 
 ---
 
-## Zadanie 12 - Rotacja w lewo/prawo
+## ZAD-10 — Czy punkty mogą być wierzchołkami trójkąta?
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `geometria`, `warunki`, `listy`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb całkowitych, kierunek przesunięcia oraz liczbę miejsc, o jakie elementy listy mają zostać przesunięte.
+Wczytaj współrzędne trzech punktów `A(xA, yA)`, `B(xB, yB)`, `C(xC, yC)`.
+Wypisz `Tak`, jeśli punkty **nie są współliniowe** (mogą tworzyć trójkąt), w przeciwnym razie `Nie`.
 
-- Kierunek przesunięcia:
-  - **0** — przesunięcie w lewo.
-  - **1** — przesunięcie w prawo.
+### Wejście
 
-Przesuń elementy listy w podanym kierunku o podaną liczbę miejsc.
+Sześć liczb całkowitych (każda w osobnej linii):
 
-### Dane wejściowe
+1. `xA`
+2. `yA`
+3. `xB`
+4. `yB`
+5. `xC`
+6. `yC`
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
-- Kolejna liczba naturalna — kierunek przesunięcia (0 lub 1).
-- Ostatnia liczba naturalna — liczba miejsc do przesunięcia (\( K \geq 0 \)).
+### Wyjście
 
-### Dane wyjściowe
-
-- Lista liczb całkowitych po przesunięciu, elementy oddzielone przecinkami.
+Jedno słowo: `Tak` lub `Nie`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  7
-  5
-  27
-  6
-  2
-  1
-  10
-  8
-  0
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  6,2,1,10,8,5,27
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+-3
+-2
+-3
+1
+-3
+0
+```
 
-- Możesz użyć operacji cięcia listy (`slice`) i konkatenacji.
-- Pamiętaj o obsłudze przypadku, gdy \( K \) jest większe niż długość listy (użyj operacji modulo).
+**Wyjście:**
+
+```
+Nie
+```
+
+### Uwagi
+
+* Sprawdź pole trójkąta: jeśli równe `0`, punkty są współliniowe.
 
 ---
 
-## Zadanie 13 - Znalezienie brakującego elementu w ciągu arytmetycznym
+## ZAD-11 — Samochody jadące w przeciwnych kierunkach
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `listy`, `zliczanie`, `string`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb naturalnych, która jest fragmentem ciągu arytmetycznego z jednym brakującym elementem. Znajdź brakujący element.
+Wczytaj `N` oraz napis długości `N` złożony z liter `A` i `B`:
 
-### Dane wejściowe
+* `A` oznacza samochód jadący na wschód,
+* `B` oznacza samochód jadący na zachód.
 
-- Jedna liczba naturalna \( N \) (\( N \geq 2 \)).
-- Następnie \( N \) liczb naturalnych, każda w nowej linii.
+Policz, ile par samochodów minie się, gdy uznamy, że para mija się wtedy, gdy `A` stoi **przed** `B` w ciągu.
 
-### Dane wyjściowe
+### Wejście
 
-- Jedna liczba naturalna — brakujący element ciągu.
+* 1. linia: `N` (`N ≥ 1`)
+* 2. linia: napis długości `N`, tylko `A` i `B` (bez spacji)
+
+### Wyjście
+
+Jedna liczba naturalna — liczba mijających się par.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  4
-  5
-  2
-  1
-  3
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  4
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+5
+ABABB
+```
 
-- Posortuj listę.
-- Oblicz różnicę ciągu (różnicę między kolejnymi elementami).
-- Znajdź miejsce, gdzie różnica jest inna, i oblicz brakujący element.
+**Wyjście:**
+
+```
+5
+```
 
 ---
 
-## Zadanie 14 - Znalezienie elementu bez pary
+## ZAD-12 — Rotacja w lewo / prawo
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `listy`, `rotacja`, `modulo`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb całkowitych zawierającą nieparzystą liczbę elementów. Każdy element poza jednym występuje w parze (dokładnie dwa razy). Znajdź element, który nie ma pary.
+Wczytaj listę liczb całkowitych, a następnie:
 
-### Dane wejściowe
+* `kierunek = 0` → rotacja w lewo,
+* `kierunek = 1` → rotacja w prawo,
 
-- Jedna liczba naturalna \( N \) (nieparzysta, \( N \geq 1 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
+o `K` pozycji (gdzie `K ≥ 0`). Wypisz listę po rotacji, przecinkami bez spacji.
 
-### Dane wyjściowe
+### Wejście
 
-- Jedna liczba całkowita — element bez pary.
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+* kolejna linia: `kierunek` (0 lub 1)
+* ostatnia linia: `K` (`K ≥ 0`)
+
+### Wyjście
+
+Jedna linia: lista po rotacji, elementy oddzielone przecinkami.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  7
-  1
-  3
-  1
-  7
-  3
-  1
-  1
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  7
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+7
+5
+27
+6
+2
+1
+10
+8
+0
+2
+```
 
-- Użyj operacji XOR na wszystkich elementach — pary się wyzerują, pozostanie element bez pary.
-- Możesz też użyć słownika (`dict`) do zliczania wystąpień.
+**Wyjście:**
+
+```
+6,2,1,10,8,5,27
+```
+
+### Uwagi
+
+* Zredukuj `K` przez `K % N`.
 
 ---
 
-## Zadanie 15 - Znalezienie elementu dominującego
+## ZAD-13 — Brakujący element w ciągu arytmetycznym
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sortowanie`, `ciąg arytmetyczny`, `listy`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb naturalnych. Znajdź element, który występuje w liście więcej niż połowa jej długości (tzw. element dominujący). Jeśli taki element nie istnieje, wypisz **-1**.
+Wczytaj `N` liczb naturalnych. Lista jest fragmentem ciągu arytmetycznego z **jednym brakującym elementem**. Znajdź i wypisz brakującą wartość.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb naturalnych, każda w nowej linii.
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby naturalne
 
-### Dane wyjściowe
+### Wyjście
 
-- Jedna liczba naturalna — element dominujący lub **-1**, jeśli taki element nie istnieje.
+Jedna liczba naturalna — brakujący element.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  4
-  7
-  4
-  4
-  2
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  4
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+4
+5
+2
+1
+3
+```
 
-- Użyj słownika (`dict`) do zliczania liczby wystąpień każdego elementu.
-- Sprawdź, czy któryś element występuje więcej niż \( N/2 \) razy.
+**Wyjście:**
+
+```
+4
+```
 
 ---
 
-## Zadanie 16 - Znalezienie indeksów pierwszej pary o sumie x
+## ZAD-14 — Element bez pary
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `XOR`, `listy`, `zliczanie`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb całkowitych oraz liczbę całkowitą \( x \). Znajdź indeksy pierwszej pary elementów, których suma jest równa \( x \). Jeśli taka para nie istnieje, wypisz **-1 -1**.
+Wczytaj listę liczb całkowitych o nieparzystej długości: wszystkie liczby poza jedną występują dokładnie dwa razy. Znajdź liczbę bez pary.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna \( N \) (\( N \geq 2 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
-- Na końcu liczba całkowita \( x \).
+* 1. linia: `N` (nieparzyste, `N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
-### Dane wyjściowe
+### Wyjście
 
-- Dwie liczby całkowite — indeksy pary elementów (indeksy zaczynają się od 0), lub **-1 -1**, jeśli taka para nie istnieje.
+Jedna liczba całkowita — element bez pary.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  1
-  3
-  4
-  5
-  2
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  0 2
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+7
+1
+3
+1
+7
+3
+1
+1
+```
 
-- Możesz użyć słownika do przechowywania wcześniej napotkanych wartości i ich indeksów.
-- Iteruj przez listę i dla każdego elementu sprawdź, czy \( x - \) ten element jest w słowniku.
+**Wyjście:**
+
+```
+7
+```
 
 ---
 
-## Zadanie 17 - Znalezienie wszystkich par o sumie x
+## ZAD-15 — Element dominujący
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `zliczanie`, `dict`, `majority`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb całkowitych oraz liczbę całkowitą \( x \). Znajdź wszystkie pary elementów, których suma jest równa \( x \).
+Wczytaj listę liczb naturalnych. Jeśli istnieje liczba, która występuje **więcej niż N/2 razy**, wypisz ją. W przeciwnym razie wypisz `-1`.
 
-### Dane wejściowe
+### Wejście
 
-- Jedna liczba naturalna \( N \) (\( N \geq 2 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
-- Na końcu liczba całkowita \( x \).
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby naturalne
 
-### Dane wyjściowe
+### Wyjście
 
-- Lista par liczb całkowitych — wartości elementów, nie indeksy. Każda para w osobnej linii, elementy w parze oddzielone spacją.
+Jedna liczba naturalna — element dominujący lub `-1`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  1
-  2
-  4
-  3
-  7
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  1 4
-  2 3
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+5
+4
+7
+4
+4
+2
+```
 
-- Użyj dwóch pętli zagnieżdżonych lub słownika do efektywnego znajdowania par.
-- Upewnij się, że nie wypisujesz tych samych par więcej niż raz.
+**Wyjście:**
+
+```
+4
+```
 
 ---
 
-## Zadanie 18 - Znalezienie indeksu najmniejszego elementu w przesuniętej liście
+## ZAD-16 — Indeksy pierwszej pary o sumie x
 
-**Poziom trudności**: ★★☆
+**Poziom:** ★★☆
+**Tagi:** `hashmap`, `indeksy`, `2-sum`
 
-### Treść zadania
+### Treść
 
-Otrzymujesz listę liczb całkowitych, która została posortowana rosnąco i przesunięta w prawo o nieznaną liczbę miejsc. Znajdź indeks najmniejszego elementu w tej liście.
+Wczytaj listę liczb całkowitych oraz liczbę `x`. Znajdź indeksy **pierwszej** pary `(i, j)` (z `i < j`) takiej, że `lista[i] + lista[j] == x`.
 
-### Dane wejściowe
+Jeśli nie istnieje taka para — wypisz `-1 -1`.
 
-- Jedna liczba naturalna \( N \) (\( N \geq 1 \)).
-- Następnie \( N \) liczb całkowitych, każda w nowej linii.
+### Wejście
 
-### Dane wyjściowe
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `x` (liczba całkowita)
 
-- Jedna liczba całkowita — indeks najmniejszego elementu (indeksy zaczynają się od 0).
+### Wyjście
+
+Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
 
 ### Przykład
 
-- **Dane wejściowe**:
-  ```
-  5
-  7
-  8
-  -1
-  4
-  5
-  ```
-- **Oczekiwane wyjście**:
-  ```
-  2
-  ```
+**Wejście:**
 
-### Wskazówki
+```
+5
+1
+3
+4
+5
+2
+5
+```
 
-- Możesz użyć zmodyfikowanego algorytmu wyszukiwania binarnego.
-- Szukaj punktu, w którym następuje przełamanie rosnącej sekwencji.
+**Wyjście:**
+
+```
+0 2
+```
 
 ---
+
+## ZAD-17 — Wszystkie pary o sumie x (wartości)
+
+**Poziom:** ★★☆
+**Tagi:** `listy`, `2-sum`, `pary`
+
+### Treść
+
+Wczytaj listę liczb całkowitych oraz `x`. Wypisz wszystkie pary **wartości** `(a, b)` z listy (nie indeksy), takie że `a + b == x`. Każdą parę wypisz w osobnej linii jako:
+`a b`
+
+Każdą parę wypisz tylko raz (nie dubluj `(a,b)` i `(b,a)`).
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `x` (liczba całkowita)
+
+### Wyjście
+
+Wiele linii — po jednej parze na linię.
+Jeśli brak par — brak wyjścia.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+1
+2
+4
+3
+7
+5
+```
+
+**Wyjście:**
+
+```
+1 4
+2 3
+```
+
+---
+
+## ZAD-18 — Indeks najmniejszego elementu w przesuniętej liście
+
+**Poziom:** ★★☆
+**Tagi:** `binarne`, `rotacja`, `minimum`
+
+### Treść
+
+Wczytaj listę liczb całkowitych, która była posortowana rosnąco i została przesunięta w prawo o nieznaną liczbę miejsc. Znajdź indeks najmniejszego elementu.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+7
+8
+-1
+4
+5
+```
+
+**Wyjście:**
+
+```
+2
+```
