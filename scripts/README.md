@@ -2,6 +2,103 @@
 
 This directory contains utility scripts for the Nauka Programowania project.
 
+## md_to_json.py
+
+This script converts all markdown files from the `zbior_zadan` directory to JSON format suitable for consumption by external APIs and LeetCode-like websites.
+
+### Features
+
+- **Parses 25 markdown files** containing 270+ programming exercises
+- **Extracts structured data**:
+  - Chapter title and description
+  - Exercise ID, title, and difficulty level
+  - Tags for categorization
+  - Problem description
+  - Input/output specifications
+  - Example test cases
+  - Constraints and notes
+- **Generates JSON files**:
+  - Individual JSON file for each chapter (e.g., `01_interakcja_z_konsola.json`)
+  - Combined `all_exercises.json` with all exercises
+- **API-ready format**: JSON structure designed for easy integration with coding platforms
+
+### Requirements
+
+- Python 3.6 or higher (no external dependencies required)
+
+### Usage
+
+Run the script from the repository root:
+
+```bash
+python3 scripts/md_to_json.py
+```
+
+This will create a `zbior_zadan_json` directory containing:
+- 25 individual JSON files (one per chapter)
+- 1 combined `all_exercises.json` file with all exercises
+
+#### Command-line Options
+
+```bash
+python3 scripts/md_to_json.py --help
+```
+
+Available options:
+- `--input-dir DIR`: Input directory containing markdown files (default: `zbior_zadan`)
+- `--output-dir DIR`: Output directory for JSON files (default: `zbior_zadan_json`)
+- `--exclude FILE [FILE ...]`: Files to exclude from processing (default: `szablon.md`)
+
+Example with custom directories:
+```bash
+python3 scripts/md_to_json.py --input-dir custom_exercises --output-dir output/json
+```
+
+### JSON Schema
+
+Each generated JSON file follows this structure:
+
+```json
+{
+  "file": "01_interakcja_z_konsola.md",
+  "chapter_title": "Rozdział 1: Interakcja z konsolą (stdin/stdout)",
+  "chapter_description": "...",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "title": "Wypisywanie tekstu na ekran",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": ["I/O", "print", "string"],
+      "description": "...",
+      "input": "...",
+      "output": "...",
+      "examples": [
+        {
+          "input": "...",
+          "output": "..."
+        }
+      ],
+      "constraints": "...",
+      "notes": "..."
+    }
+  ]
+}
+```
+
+### Difficulty Levels
+
+- `1` (★☆☆): Easy
+- `2` (★★☆): Medium
+- `3` (★★★): Hard
+
+### Output
+
+The script generates approximately 500KB of JSON data total, containing:
+- **25 chapters**
+- **270+ exercises**
+- Complete problem descriptions, examples, and constraints
+
 ## generate_pdf.py
 
 This script generates a professional PDF document from all markdown files in the `zbior_zadan` directory.
