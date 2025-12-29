@@ -36,6 +36,7 @@ JSON Schema:
 import re
 import json
 import os
+import traceback
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Tuple
 
@@ -349,11 +350,8 @@ def main():
             print(f"  ✗ File error processing {md_file.name}: {e}")
         except UnicodeDecodeError as e:
             print(f"  ✗ Encoding error processing {md_file.name}: {e}")
-        except json.JSONDecodeError as e:
-            print(f"  ✗ JSON error processing {md_file.name}: {e}")
         except Exception as e:
             print(f"  ✗ Unexpected error processing {md_file.name}: {e}")
-            import traceback
             traceback.print_exc()
     
     # Create combined JSON file with all exercises
