@@ -37,7 +37,25 @@ import re
 import json
 import os
 from pathlib import Path
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Optional, Any, Tuple
+
+
+# Compile regex patterns at module level for performance
+EXERCISE_HEADER_PATTERN = re.compile(r'^##\s+(ZAD-\d+[A-Z]?)\s+[—-]\s+(.+)$')
+CHAPTER_HEADER_PATTERN = re.compile(r'^#\s+[^#]')
+DIFFICULTY_PATTERN = re.compile(r'[★☆]+')
+TAG_PATTERN = re.compile(r'`([^`]+)`')
+INPUT_MARKER_PATTERN = re.compile(r'\*\*Wejście:\*\*|\*\*Dane wejściowe:\*\*')
+OUTPUT_MARKER_PATTERN = re.compile(r'\*\*Wyjście:\*\*|\*\*Oczekiwane wyjście:\*\*|\*\*Dane wyjściowe:\*\*')
+
+# Section name mappings for consistent handling
+SECTION_NAMES = {
+    'description': ['Treść'],
+    'input': ['Wejście'],
+    'output': ['Wyjście'],
+    'constraints': ['Ograniczenia / gwarancje', 'Ograniczenia/gwarancje', 'Gwarancje'],
+    'notes': ['Uwagi o formatowaniu', 'Uwagi']
+}
 
 
 def parse_difficulty(difficulty_str: str) -> int:
@@ -53,7 +71,7 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 
-def extract_code_block(lines: List[str], start_idx: int) -> tuple[str, int]:
+def extract_code_block(lines: List[str], start_idx: int) -> Tuple[str, int]:
     """Extract a code block starting from start_idx."""
     code_lines = []
     i = start_idx
@@ -73,7 +91,22 @@ def extract_code_block(lines: List[str], start_idx: int) -> tuple[str, int]:
     return '\n'.join(code_lines), i
 
 
-def parse_exercise(lines: List[str], start_idx: int) -> tuple[Optional[Dict[str, Any]], int]:
+def map_section_to_field(section_name: str) -> Optional[str]:
+    """Map a section name to its corresponding field in the exercise dict."""
+    for field, names in SECTION_NAMES.items():
+        if section_name in names:
+            return field
+    return None
+
+
+def save_section_content(exercise: Dict[str, Any], section_name: str, content: str) -> None:
+    """Save content to the appropriate field based on section name."""
+    field = map_section_to_field(section_name)
+    if field:
+        exercise[field] = content
+
+
+def parse_exercise(lines: List[str], start_idx: int) -> Tuple[Optional[Dict[str, Any]], int]:
     """Parse a single exercise starting from start_idx."""
     exercise = {
         "id": "",
@@ -96,8 +129,9 @@ def parse_exercise(lines: List[str], start_idx: int) -> tuple[Optional[Dict[str,
     example_state = None  # None, 'input', or 'output'
     
     # Parse exercise header (## ZAD-XX — Title)
+    # Note: The pattern matches both em dash (—) and hyphen (-) for flexibility
     if i < len(lines):
-        header_match = re.match(r'^##\s+(ZAD-\d+[A-Z]?)\s+[—-]\s+(.+)$', lines[i])
+        header_match = EXERCISE_HEADER_PATTERN.match(lines[i])
         if not header_match:
             return None, i
         
@@ -114,7 +148,7 @@ def parse_exercise(lines: List[str], start_idx: int) -> tuple[Optional[Dict[str,
     # Parse difficulty and tags
     if i < len(lines) and lines[i].strip().startswith('**Poziom:**'):
         difficulty_line = lines[i]
-        difficulty_match = re.search(r'[★☆]+', difficulty_line)
+        difficulty_match = DIFFICULTY_PATTERN.search(difficulty_line)
         if difficulty_match:
             exercise["difficulty_display"] = difficulty_match.group(0)
             exercise["difficulty"] = parse_difficulty(difficulty_match.group(0))
@@ -123,7 +157,7 @@ def parse_exercise(lines: List[str], start_idx: int) -> tuple[Optional[Dict[str,
     if i < len(lines) and lines[i].strip().startswith('**Tagi:**'):
         tags_line = lines[i]
         # Extract tags from backticks
-        tags = re.findall(r'`([^`]+)`', tags_line)
+        tags = TAG_PATTERN.findall(tags_line)
         exercise["tags"] = tags
         i += 1
     
@@ -132,7 +166,7 @@ def parse_exercise(lines: List[str], start_idx: int) -> tuple[Optional[Dict[str,
         line = lines[i]
         
         # Check if we've reached the next exercise or end
-        if line and (re.match(r'^##\s+ZAD-\d+[A-Z]?', line) or re.match(r'^#\s+[^#]', line)):
+        if line and (EXERCISE_HEADER_PATTERN.match(line) or CHAPTER_HEADER_PATTERN.match(line)):
             break
         
         # Check for section headers
@@ -140,16 +174,7 @@ def parse_exercise(lines: List[str], start_idx: int) -> tuple[Optional[Dict[str,
             # Save previous section content
             if current_section and section_content:
                 content = clean_text('\n'.join(section_content))
-                if current_section == "Treść":
-                    exercise["description"] = content
-                elif current_section == "Wejście":
-                    exercise["input"] = content
-                elif current_section == "Wyjście":
-                    exercise["output"] = content
-                elif current_section in ["Ograniczenia / gwarancje", "Ograniczenia/gwarancje", "Gwarancje"]:
-                    exercise["constraints"] = content
-                elif current_section in ["Uwagi o formatowaniu", "Uwagi"]:
-                    exercise["notes"] = content
+                save_section_content(exercise, current_section, content)
             
             section_content = []
             current_section = line.strip().replace('### ', '').strip()
@@ -165,13 +190,13 @@ def parse_exercise(lines: List[str], start_idx: int) -> tuple[Optional[Dict[str,
         # Handle content based on current section
         if current_section and (current_section == "Przykład" or current_section.startswith("Przykład")):
             # Look for **Wejście:** or **Dane wejściowe:**
-            if line and re.match(r'\*\*Wejście:\*\*|\*\*Dane wejściowe:\*\*', line.strip()):
+            if line and INPUT_MARKER_PATTERN.match(line.strip()):
                 example_state = 'input'
                 i += 1
                 continue
             
             # Look for **Wyjście:** or **Oczekiwane wyjście:** or **Dane wyjściowe:**
-            if line and re.match(r'\*\*Wyjście:\*\*|\*\*Oczekiwane wyjście:\*\*|\*\*Dane wyjściowe:\*\*', line.strip()):
+            if line and OUTPUT_MARKER_PATTERN.match(line.strip()):
                 example_state = 'output'
                 i += 1
                 continue
@@ -199,16 +224,7 @@ def parse_exercise(lines: List[str], start_idx: int) -> tuple[Optional[Dict[str,
     # Save last section content
     if current_section and section_content:
         content = clean_text('\n'.join(section_content))
-        if current_section == "Treść":
-            exercise["description"] = content
-        elif current_section == "Wejście":
-            exercise["input"] = content
-        elif current_section == "Wyjście":
-            exercise["output"] = content
-        elif current_section in ["Ograniczenia / gwarancje", "Ograniczenia/gwarancje", "Gwarancje"]:
-            exercise["constraints"] = content
-        elif current_section in ["Uwagi o formatowaniu", "Uwagi"]:
-            exercise["notes"] = content
+        save_section_content(exercise, current_section, content)
     
     return exercise, i
 
@@ -254,7 +270,7 @@ def parse_markdown_file(file_path: Path) -> Dict[str, Any]:
         line = lines[i]
         
         # Look for exercise headers
-        if re.match(r'^##\s+ZAD-\d+[A-Z]?', line):
+        if EXERCISE_HEADER_PATTERN.match(line):
             exercise, new_i = parse_exercise(lines, i)
             if exercise:
                 result["exercises"].append(exercise)
