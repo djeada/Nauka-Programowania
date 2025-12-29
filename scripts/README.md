@@ -38,6 +38,22 @@ This will create a `zbior_zadan_json` directory containing:
 - 25 individual JSON files (one per chapter)
 - 1 combined `all_exercises.json` file with all exercises
 
+#### Command-line Options
+
+```bash
+python3 scripts/md_to_json.py --help
+```
+
+Available options:
+- `--input-dir DIR`: Input directory containing markdown files (default: `zbior_zadan`)
+- `--output-dir DIR`: Output directory for JSON files (default: `zbior_zadan_json`)
+- `--exclude FILE [FILE ...]`: Files to exclude from processing (default: `szablon.md`)
+
+Example with custom directories:
+```bash
+python3 scripts/md_to_json.py --input-dir custom_exercises --output-dir output/json
+```
+
 ### JSON Schema
 
 Each generated JSON file follows this structure:

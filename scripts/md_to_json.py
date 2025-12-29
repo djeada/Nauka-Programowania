@@ -208,8 +208,8 @@ def parse_exercise(lines: List[str], start_idx: int) -> Tuple[Optional[Dict[str,
                     current_example["input"] = code
                 elif example_state == 'output':
                     current_example["output"] = code
-                    # Example complete, add it
-                    if current_example["input"] or current_example["output"]:
+                    # Example complete, add it only if both input and output are present
+                    if current_example["input"] and current_example["output"]:
                         exercise["examples"].append(current_example.copy())
                     current_example = {"input": "", "output": ""}
                     example_state = None
@@ -283,21 +283,51 @@ def parse_markdown_file(file_path: Path) -> Dict[str, Any]:
 
 def main():
     """Main function to process all markdown files."""
+    import argparse
+    
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(
+        description='Convert zbior_zadan markdown files to JSON format'
+    )
+    parser.add_argument(
+        '--input-dir',
+        default='zbior_zadan',
+        help='Input directory containing markdown files (default: zbior_zadan)'
+    )
+    parser.add_argument(
+        '--output-dir',
+        default='zbior_zadan_json',
+        help='Output directory for JSON files (default: zbior_zadan_json)'
+    )
+    parser.add_argument(
+        '--exclude',
+        nargs='*',
+        default=['szablon.md'],
+        help='Files to exclude from processing (default: szablon.md)'
+    )
+    
+    args = parser.parse_args()
+    
     # Get the script directory and repository root
     script_dir = Path(__file__).parent
     repo_root = script_dir.parent
-    zbior_zadan_dir = repo_root / "zbior_zadan"
-    output_dir = repo_root / "zbior_zadan_json"
+    zbior_zadan_dir = repo_root / args.input_dir
+    output_dir = repo_root / args.output_dir
+    
+    # Check if input directory exists
+    if not zbior_zadan_dir.exists():
+        print(f"Error: Input directory '{args.input_dir}' not found")
+        return 1
     
     # Create output directory if it doesn't exist
     output_dir.mkdir(exist_ok=True)
     
-    # Process all markdown files except szablon.md
+    # Process all markdown files except excluded ones
     md_files = sorted(zbior_zadan_dir.glob("*.md"))
     all_exercises = []
     
     for md_file in md_files:
-        if md_file.name == "szablon.md":
+        if md_file.name in args.exclude:
             continue
         
         print(f"Processing {md_file.name}...")
@@ -315,21 +345,37 @@ def main():
             # Add to combined list
             all_exercises.append(result)
         
+        except (IOError, OSError) as e:
+            print(f"  ✗ File error processing {md_file.name}: {e}")
+        except UnicodeDecodeError as e:
+            print(f"  ✗ Encoding error processing {md_file.name}: {e}")
+        except json.JSONDecodeError as e:
+            print(f"  ✗ JSON error processing {md_file.name}: {e}")
         except Exception as e:
-            print(f"  ✗ Error processing {md_file.name}: {e}")
+            print(f"  ✗ Unexpected error processing {md_file.name}: {e}")
+            import traceback
+            traceback.print_exc()
     
     # Create combined JSON file with all exercises
     combined_file = output_dir / "all_exercises.json"
-    with open(combined_file, 'w', encoding='utf-8') as f:
-        json.dump(all_exercises, f, ensure_ascii=False, indent=2)
+    try:
+        with open(combined_file, 'w', encoding='utf-8') as f:
+            json.dump(all_exercises, f, ensure_ascii=False, indent=2)
+        
+        print(f"\n✓ Created combined file: {combined_file.name}")
+    except (IOError, OSError) as e:
+        print(f"\n✗ Error creating combined file: {e}")
+        return 1
     
-    print(f"\n✓ Created combined file: {combined_file.name}")
     print(f"✓ Total files processed: {len(all_exercises)}")
     
     # Create summary statistics
     total_exercises = sum(len(chapter["exercises"]) for chapter in all_exercises)
     print(f"✓ Total exercises: {total_exercises}")
+    
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    sys.exit(main())
