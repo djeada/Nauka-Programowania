@@ -340,3 +340,6 @@ Cargo.lock
 
 # Generated PDF files
 Nauka_Programowania_Zbior_Zadan.pdf
+
+# Generated JSON files
+zbior_zadan_json/
