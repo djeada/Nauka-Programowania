@@ -11,7 +11,7 @@
 
 > **Witaj w świecie programowania!** 🎉 To nie jest zwykły zbiór zadań - to kompletna ścieżka rozwoju, która przekształci Cię z początkującego w pewnego siebie programistę!
 
-![nauka_programowania](https://github.com/user-attachments/assets/64fb3baa-c080-45c0-bb8f-abb612581f18)
+<img width="1024" height="1024" alt="nauka_programowania" src="https://github.com/user-attachments/assets/70e28cc3-6352-4440-a843-853fdbaa2a14" />
 
 ---
 
