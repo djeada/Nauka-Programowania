@@ -9,7 +9,7 @@
 
 # 🚀 Nauka Programowania
 
-> **Witaj w świecie programowania!** 🎉 To nie jest zwykły zbiór zadań - to kompletna ścieżka rozwoju, która przekształci Cię z początkującego w pewnego siebie programistę!
+> **Witaj w świecie programowania!** 🎉 To kompletna ścieżka rozwoju, która przekształci Cię z początkującego w pewnego siebie programistę!
 
 <img width="1024" height="1024" alt="nauka_programowania" src="https://github.com/user-attachments/assets/70e28cc3-6352-4440-a843-853fdbaa2a14" />
 
