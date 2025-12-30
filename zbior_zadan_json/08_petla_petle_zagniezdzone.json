@@ -1,0 +1,304 @@
+{
+  "file": "08_petla_petle_zagniezdzone.md",
+  "chapter_title": "Rozdział: Pętla — Pętle zagnieżdżone",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wyjściowych jest „każdy wiersz w osobnej linii” — po każdym wierszu wypisz znak nowej linii.\n* W zadaniach z rysowaniem znakami **spacje są istotne** (nie przycinaj końcowych spacji — najlepiej ich nie drukować, ale w środku linii muszą być).\n* Nie wypisuj promptów typu „Podaj n”.",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "08_petla_petle_zagniezdzone/ZAD-01",
+      "title": "Kwadrat",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle zagnieżdżone",
+        "print",
+        "string"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` (`n ≥ 1`) i wypisz kwadrat `n × n` zbudowany z gwiazdek `*`.\nKażdy wiersz ma zawierać dokładnie `n` gwiazdek (bez spacji).",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 1`)",
+      "output": "`n` linii, w każdej dokładnie `n` znaków `*`.",
+      "examples": [
+        {
+          "input": "2",
+          "output": "**\n**"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "*"
+        },
+        {
+          "input": "3",
+          "output": "***\n***\n***"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "08_petla_petle_zagniezdzone/ZAD-02",
+      "title": "Trójkąt prostokątny (rosnący)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "print",
+        "string"
+      ],
+      "description": "Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt o wysokości `n`, gdzie w wierszu `i` jest `i` gwiazdek (`i = 1..n`).",
+      "input": "* 1. linia: `n` (`n ≥ 1`)",
+      "output": "`n` linii:\n\n* 1. linia: `*`\n* 2. linia: `**`\n* …\n* `n`-ta linia: `n` gwiazdek",
+      "examples": [
+        {
+          "input": "3",
+          "output": "*\n**\n***"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "*"
+        },
+        {
+          "input": "4",
+          "output": "*\n**\n***\n****"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "08_petla_petle_zagniezdzone/ZAD-03",
+      "title": "Trójkąt prostokątny (malejący)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "print",
+        "string"
+      ],
+      "description": "Wczytaj `n` (`n ≥ 1`) i wypisz odwrócony trójkąt o wysokości `n`, zaczynając od `n` gwiazdek i kończąc na `1`.",
+      "input": "* 1. linia: `n` (`n ≥ 1`)",
+      "output": "`n` linii:\n\n* 1. linia: `n` gwiazdek\n* 2. linia: `n-1` gwiazdek\n* …\n* ostatnia linia: `*`",
+      "examples": [
+        {
+          "input": "4",
+          "output": "****\n***\n**\n*"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "*"
+        },
+        {
+          "input": "4",
+          "output": "****\n***\n**\n*"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "08_petla_petle_zagniezdzone/ZAD-04",
+      "title": "Tabliczka mnożenia N × N",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle zagnieżdżone",
+        "formatowanie",
+        "arytmetyka"
+      ],
+      "description": "Wczytaj liczbę naturalną `N` (`N ≥ 1`) i wypisz tabliczkę mnożenia `N × N`.\n\nW wierszu `i` i kolumnie `j` (licząc od 1) ma znaleźć się wartość `i*j`.\nLiczby w jednym wierszu oddzielaj pojedynczą spacją.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)",
+      "output": "`N` linii, w każdej `N` liczb.",
+      "examples": [
+        {
+          "input": "3",
+          "output": "1 2 3\n2 4 6\n3 6 9"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "1"
+        },
+        {
+          "input": "4",
+          "output": "1 2 3 4\n2 4 6 8\n3 6 9 12\n4 8 12 16"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Nie dodawaj spacji na końcu wiersza."
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "08_petla_petle_zagniezdzone/ZAD-05",
+      "title": "Litera „X”",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle zagnieżdżone",
+        "warunki",
+        "ASCII-art"
+      ],
+      "description": "Wczytaj `n` (`n ≥ 3`) i wypisz literę `X` o wysokości `n`, zbudowaną z `*` na obu przekątnych.\n\nW wierszu `i` i kolumnie `j` (indeksy od 0):\n\n* wypisz `*`, gdy `j == i` **lub** `j == n - 1 - i`,\n* w przeciwnym razie wypisz spację.",
+      "input": "* 1. linia: `n` (`n ≥ 3`)",
+      "output": "`n` linii po `n` znaków (`*` lub spacja).",
+      "examples": [
+        {
+          "input": "5",
+          "output": "*   *\n * *\n  *\n * *\n*   *"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3",
+          "output": "* *\n * \n* *"
+        },
+        {
+          "input": "5",
+          "output": "*   *\n * * \n  *  \n * * \n*   *"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "08_petla_petle_zagniezdzone/ZAD-06",
+      "title": "Litera „Z”",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle zagnieżdżone",
+        "warunki",
+        "ASCII-art"
+      ],
+      "description": "Wczytaj `n` (`n ≥ 3`) i wypisz literę `Z` o wysokości `n`:\n\n* pierwszy wiersz: `n` gwiazdek,\n* ostatni wiersz: `n` gwiazdek,\n* w środku: jedna gwiazdka na przekątnej od prawej do lewej.\n\nW wierszu `i` (0..n-1) i kolumnie `j`:\n\n* jeśli `i == 0` lub `i == n-1` → `*`\n* else jeśli `j == n-1-i` → `*`\n* else → spacja",
+      "input": "* 1. linia: `n` (`n ≥ 3`)",
+      "output": "`n` linii po `n` znaków.",
+      "examples": [
+        {
+          "input": "5",
+          "output": "*****\n   *\n  *\n *\n*****"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3",
+          "output": "***\n *\n***"
+        },
+        {
+          "input": "5",
+          "output": "*****\n   *\n  *\n *\n*****"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "08_petla_petle_zagniezdzone/ZAD-07",
+      "title": "Choinka z N trójkątów",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle zagnieżdżone",
+        "generowanie",
+        "print"
+      ],
+      "description": "Wczytaj liczbę naturalną `N` (`N ≥ 1`). Wypisz choinkę składającą się z `N` trójkątów ustawionych jeden pod drugim:\n\n* 1. trójkąt ma wysokość 1,\n* 2. trójkąt ma wysokość 2,\n* …\n* `N`-ty trójkąt ma wysokość `N`.\n\nKażdy trójkąt jest „rosnący” (jak w ZAD-02): w jego wierszu `i` wypisz `i` gwiazdek.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)",
+      "output": "Suma wysokości wszystkich trójkątów, czyli `1 + 2 + ... + N` linii.",
+      "examples": [
+        {
+          "input": "3",
+          "output": "*\n*\n**\n*\n**\n***"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2",
+          "output": "*\n*\n**"
+        },
+        {
+          "input": "4",
+          "output": "*\n*\n**\n*\n**\n***\n*\n**\n***\n****"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Nie dodawaj pustych linii między trójkątami."
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "08_petla_petle_zagniezdzone/ZAD-08",
+      "title": "Trójkąt Pascala",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle zagnieżdżone",
+        "listy",
+        "kombinatoryka"
+      ],
+      "description": "Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt Pascala o wysokości `n`.\n\nWiersz 1: `1`\nWiersz 2: `1 1`\nWiersz 3: `1 2 1`\nitd.\n\nLiczby w wierszu oddzielaj pojedynczą spacją.",
+      "input": "* 1. linia: `n` (`n ≥ 1`)",
+      "output": "`n` linii, w `i`-tej linii jest `i` liczb.",
+      "examples": [
+        {
+          "input": "3",
+          "output": "1\n1 1\n1 2 1"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2",
+          "output": "1\n1 1"
+        },
+        {
+          "input": "4",
+          "output": "1\n1 1\n1 2 1\n1 3 3 1"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Nie dodawaj spacji na końcu wiersza."
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "08_petla_petle_zagniezdzone/ZAD-09",
+      "title": "N pierwszych liczb pierwszych",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle",
+        "pierwszość",
+        "wydajność"
+      ],
+      "description": "Wczytaj liczbę naturalną `N` (`N ≥ 1`) i wypisz pierwsze `N` liczb pierwszych w **jednej linii**, oddzielone pojedynczą spacją.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)",
+      "output": "Jedna linia: `N` liczb pierwszych oddzielonych spacjami.",
+      "examples": [
+        {
+          "input": "5",
+          "output": "2 3 5 7 11"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "2"
+        },
+        {
+          "input": "6",
+          "output": "2 3 5 7 11 13"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Nie dodawaj spacji na końcu linii.\n* Do sprawdzania pierwszości wystarczy test dzielnikami do `⌊sqrt(x)⌋`."
+    }
+  ]
+}

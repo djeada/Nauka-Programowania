@@ -1,0 +1,172 @@
+{
+  "ZAD-01A": [
+    {
+      "input": "",
+      "output": "3"
+    },
+    {
+      "input": "",
+      "output": "3"
+    }
+  ],
+  "ZAD-01B": [
+    {
+      "input": "",
+      "output": "Tak"
+    },
+    {
+      "input": "",
+      "output": "Tak"
+    }
+  ],
+  "ZAD-01C": [
+    {
+      "input": "",
+      "output": "True"
+    },
+    {
+      "input": "",
+      "output": "True"
+    }
+  ],
+  "ZAD-02A": [
+    {
+      "input": "7\n-2",
+      "output": "5"
+    },
+    {
+      "input": "0\n0",
+      "output": "0"
+    }
+  ],
+  "ZAD-02B": [
+    {
+      "input": "7\n-2",
+      "output": "-9"
+    },
+    {
+      "input": "3\n10",
+      "output": "7"
+    }
+  ],
+  "ZAD-02C": [
+    {
+      "input": "-4\n3",
+      "output": "-12"
+    },
+    {
+      "input": "0\n9",
+      "output": "0"
+    }
+  ],
+  "ZAD-02D": [
+    {
+      "input": "7\n2",
+      "output": "3"
+    },
+    {
+      "input": "9\n3",
+      "output": "3"
+    }
+  ],
+  "ZAD-02E": [
+    {
+      "input": "7\n2",
+      "output": "1"
+    },
+    {
+      "input": "9\n3",
+      "output": "0"
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "3\n2",
+      "output": "True\nTrue\nFalse\nTrue"
+    },
+    {
+      "input": "1\n1",
+      "output": "False\nTrue\nTrue\nFalse"
+    }
+  ],
+  "ZAD-04A": [
+    {
+      "input": "5\n2",
+      "output": "2"
+    },
+    {
+      "input": "0\n7",
+      "output": "0"
+    }
+  ],
+  "ZAD-04B": [
+    {
+      "input": "5\n2",
+      "output": "5"
+    },
+    {
+      "input": "0\n7",
+      "output": "7"
+    }
+  ],
+  "ZAD-04C": [
+    {
+      "input": "5\n2\n9",
+      "output": "2"
+    },
+    {
+      "input": "0\n7\n3",
+      "output": "0"
+    }
+  ],
+  "ZAD-04D": [
+    {
+      "input": "5\n2\n9",
+      "output": "9"
+    },
+    {
+      "input": "0\n7\n3",
+      "output": "7"
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "8\n5",
+      "output": "5\n8"
+    },
+    {
+      "input": "0\n7",
+      "output": "7\n0"
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "13231",
+      "output": "10"
+    },
+    {
+      "input": "0",
+      "output": "0"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "admin\n1234\nroot\npass\nadmin\n1234",
+      "output": "Dane poprawne. Dostęp przyznany."
+    },
+    {
+      "input": "alice\nqwerty\nalice\n123\nalice\nqwerty",
+      "output": "Dane poprawne. Dostęp przyznany."
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "9\n2",
+      "output": "4"
+    },
+    {
+      "input": "0\n5",
+      "output": "0"
+    }
+  ]
+}

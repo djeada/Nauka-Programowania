@@ -1,0 +1,72 @@
+{
+  "ZAD-01": [
+    {
+      "input": "3",
+      "output": "Koło o promieniu: 3\nObwód koła: 18.8496\nPole koła: 28.2743"
+    },
+    {
+      "input": "1.5",
+      "output": "Koło o promieniu: 1.5\nObwód koła: 9.4248\nPole koła: 7.0686"
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "",
+      "output": "Punkt A: (5, 5)\nPunkt B: (-3, -3)\nOdległość między punktami A i B: 11.3137"
+    },
+    {
+      "input": "",
+      "output": "Punkt A: (5, 5)\nPunkt B: (-3, -3)\nOdległość między punktami A i B: 11.3137"
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "",
+      "output": "Prostokąt A: lewy dolny (3, 4), prawy górny (9, 6)\nProstokąt B: lewy dolny (2, 2), prawy górny (7, 5)\nPole części wspólnej: 6"
+    },
+    {
+      "input": "",
+      "output": "Prostokąt A: lewy dolny (3, 4), prawy górny (9, 6)\nProstokąt B: lewy dolny (2, 2), prawy górny (7, 5)\nPole części wspólnej: 6"
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "",
+      "output": "Wektor A: (-3, -3, -3)\nWektor B: (5, 5, 5)\nSuma wektorów: (2, 2, 2)\nRóżnica wektorów A - B: (-8, -8, -8)\nIloczyn skalarny: -45\nIloczyn wektorowy: (0, 0, 0)"
+    },
+    {
+      "input": "",
+      "output": "Wektor A: (-3, -3, -3)\nWektor B: (5, 5, 5)\nSuma wektorów: (2, 2, 2)\nRóżnica wektorów A - B: (-8, -8, -8)\nIloczyn skalarny: -45\nIloczyn wektorowy: (0, 0, 0)"
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "",
+      "output": "Macierz A:\n[1, 3]\n[4, 2]\n\nMacierz B:\n[5, 0]\n[1, 3]\n\nSuma macierzy:\n[6, 3]\n[5, 5]\n\nRóżnica macierzy A - B:\n[-4, 3]\n[3, -1]\n\nIloczyn macierzy A * B:\n[8, 9]\n[22, 12]"
+    },
+    {
+      "input": "",
+      "output": "Macierz A:\n[1, 3]\n[4, 2]\n\nMacierz B:\n[5, 0]\n[1, 3]\n\nSuma macierzy:\n[6, 3]\n[5, 5]\n\nRóżnica macierzy A - B:\n[-4, 3]\n[3, -1]\n\nIloczyn macierzy A * B:\n[8, 9]\n[22, 12]"
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "",
+      "output": "Liczba A: 9 + 12i\nLiczba B: -3 - 3i\n\nSuma: 6 + 9i\nRóżnica A - B: 12 + 15i\nIloczyn: 27 + 63i\nIloraz A / B: -3.5 + 0.5i"
+    },
+    {
+      "input": "",
+      "output": "Liczba A: 9 + 12i\nLiczba B: -3 - 3i\n\nSuma: 6 + 9i\nRóżnica A - B: 12 + 15i\nIloczyn: 27 + 63i\nIloraz A / B: -3.5 + 0.5i"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "",
+      "output": "Liczba utworzonych instancji: 3"
+    },
+    {
+      "input": "",
+      "output": "Liczba utworzonych instancji: 3"
+    }
+  ]
+}

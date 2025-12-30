@@ -1,0 +1,122 @@
+{
+  "ZAD-01": [
+    {
+      "input": "/tmp/np/exist",
+      "output": "Prawda"
+    },
+    {
+      "input": "/tmp/np/missing",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "/tmp/np/docs\n.txt",
+      "output": "['a.txt', 'b.txt']"
+    },
+    {
+      "input": "/tmp/np/empty\n.txt",
+      "output": "[]"
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "report.txt",
+      "output": "['/tmp/np/a/report.txt', '/tmp/np/b/report.txt']"
+    },
+    {
+      "input": "missing.txt",
+      "output": "[]"
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "/tmp/np/hello.txt",
+      "output": "Hello"
+    },
+    {
+      "input": "/tmp/np/two_lines.txt",
+      "output": "Line1\nLine2"
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "/tmp/np/ips.txt",
+      "output": "['10.0.0.1', '192.168.1.2']"
+    },
+    {
+      "input": "/tmp/np/ips2.txt",
+      "output": "['1.1.1.1', '8.8.8.8']"
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "/tmp/np/text1.txt",
+      "output": "2\n6\n10.5\n3.0\n{'ala': 2, 'ma': 2, 'kota': 1, 'psa': 1}"
+    },
+    {
+      "input": "/tmp/np/text2.txt",
+      "output": "2\n3\n6.0\n1.5\n{'one': 1, 'two': 1, 'three': 1}"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "/tmp/np/note.txt\nHEADER",
+      "output": ""
+    },
+    {
+      "input": "/tmp/np/note2.txt\nSTART",
+      "output": ""
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "/tmp/np/project",
+      "output": ""
+    },
+    {
+      "input": "/tmp/np/project2",
+      "output": ""
+    }
+  ],
+  "ZAD-09": [
+    {
+      "input": "/tmp/np/to_delete",
+      "output": ""
+    },
+    {
+      "input": "/tmp/np/to_delete2",
+      "output": ""
+    }
+  ],
+  "ZAD-10": [
+    {
+      "input": "/tmp/np/src\n/tmp/np/dst",
+      "output": ""
+    },
+    {
+      "input": "/tmp/np/src2\n/tmp/np/dst2",
+      "output": ""
+    }
+  ],
+  "ZAD-11": [
+    {
+      "input": "/tmp/np/a.txt\n/tmp/np/b.txt",
+      "output": ""
+    },
+    {
+      "input": "/tmp/np/c.txt\n/tmp/np/d.txt",
+      "output": ""
+    }
+  ],
+  "ZAD-12": [
+    {
+      "input": "/tmp/np/src_csv\n/tmp/np/dst_csv",
+      "output": ""
+    },
+    {
+      "input": "/tmp/np/src_csv2\n/tmp/np/dst_csv2",
+      "output": ""
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "file": "22_sortowanie_praktyka.md",
+  "chapter_title": "Rozdział: Sortowanie — praktyka (stdin/stdout)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych jest napis — wczytaj go jako całą linię (łącznie ze spacjami).\n* Jeśli w danych wejściowych jest lista — w zadaniach poniżej lista jest podana jako:\n  * najpierw `N` (liczba elementów),\n  * potem `N` elementów (w jednej linii lub w wielu — zależnie od opisu w zadaniu).\n* Jeśli w wyjściu jest lista Pythonowa (np. `['a', 'b']`) — wypisz ją dokładnie w takim formacie jak w przykładzie.\n* Nie dopisuj dodatkowych spacji ani pustych linii (chyba że przykład je zawiera).",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "22_sortowanie_praktyka/ZAD-01",
+      "title": "Sortowanie znaków w napisie",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "sort",
+        "string"
+      ],
+      "description": "Otrzymujesz napis. Posortuj alfabetycznie wszystkie jego znaki i wypisz wynikowy napis.",
+      "input": "* 1 linia: napis `s`",
+      "output": "* 1 linia: napis `s` po posortowaniu znaków rosnąco (porównanie znaków jak w Pythonie / Unicode)",
+      "examples": [
+        {
+          "input": "Ala ma kota",
+          "output": " Aaaaklmot"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "b a",
+          "output": " ab"
+        },
+        {
+          "input": "cba",
+          "output": "abc"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Spacje też są znakami i biorą udział w sortowaniu (dlatego w przykładzie wyjście zaczyna się od spacji)."
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "22_sortowanie_praktyka/ZAD-02",
+      "title": "Sortowanie słów w zdaniu",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sort",
+        "string",
+        "split"
+      ],
+      "description": "Otrzymujesz zdanie. Podziel je na słowa, traktując znaki interpunkcyjne jako separatory, a następnie posortuj słowa alfabetycznie i wypisz listę.",
+      "input": "* 1 linia: napis `zdanie`",
+      "output": "* 1 linia: lista słów w formacie jak w przykładzie, np. `['Ala', 'kota', 'ma']`",
+      "examples": [
+        {
+          "input": "Lemur wygina śmiało ciało",
+          "output": "['Lemur', 'ciało', 'wygina', 'śmiało']"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Bob, Ala pies.",
+          "output": "['Ala', 'Bob', 'pies']"
+        },
+        {
+          "input": "zoo! ala? kot.",
+          "output": "['ala', 'kot', 'zoo']"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Ignoruj znaki interpunkcyjne (np. `.,!?;:`) — nie są częścią słów.\n* Wielkość liter pozostaje bez zmian (nie zamieniaj na małe/duże), sortujesz to, co w tekście."
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "22_sortowanie_praktyka/ZAD-03",
+      "title": "Sortowanie listy par względem kryterium",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "sort",
+        "tuple",
+        "list"
+      ],
+      "description": "Otrzymujesz listę par `(napis, liczba)`.\n\na) Posortuj pary rosnąco po liczbie.\nb) Posortuj pary rosnąco po długości napisu.\n\nWypisz wyniki dla a) i b) w osobnych liniach.",
+      "input": "* 1 linia: liczba naturalna `N`\n* następnie `N` linii: `napis liczba` (napis bez spacji)",
+      "output": "* 1 linia: lista par posortowana jak w podpunkcie a)\n* 2 linia: lista par posortowana jak w podpunkcie b)",
+      "examples": [
+        {
+          "input": "3\nab 3\nbca 1\nc 2",
+          "output": "[('bca', 1), ('c', 2), ('ab', 3)]\n[('c', 2), ('ab', 3), ('bca', 1)]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\nab 3\nbca 1\nc 2",
+          "output": "[('bca', 1), ('c', 2), ('ab', 3)]\n[('c', 2), ('ab', 3), ('bca', 1)]"
+        },
+        {
+          "input": "2\nxx 5\na 1",
+          "output": "[('a', 1), ('xx', 5)]\n[('a', 1), ('xx', 5)]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "22_sortowanie_praktyka/ZAD-04",
+      "title": "Sortowanie napisów według długości",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "sort",
+        "string",
+        "list"
+      ],
+      "description": "Otrzymujesz listę napisów. Posortuj ją rosnąco według długości napisów.",
+      "input": "* 1 linia: liczba naturalna `N`\n* następnie `N` linii: napis (bez spacji)",
+      "output": "* 1 linia: lista napisów posortowana jak w przykładzie",
+      "examples": [
+        {
+          "input": "4\nabcd\nab\na\nabc",
+          "output": "['a', 'ab', 'abc', 'abcd']"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\nabcd\nab\na\nabc",
+          "output": "['a', 'ab', 'abc', 'abcd']"
+        },
+        {
+          "input": "3\nzz\nx\nyy",
+          "output": "['x', 'zz', 'yy']"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "22_sortowanie_praktyka/ZAD-05",
+      "title": "Sortowanie listy miast",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "class",
+        "sort",
+        "obiekty"
+      ],
+      "description": "Masz klasę `Miasto` z polami:\n\n* `nazwa` (napis),\n* `liczba_mieszkancow` (liczba naturalna).\n\nOtrzymujesz listę miast.\n\na) Posortuj miasta alfabetycznie po nazwie.\nb) Posortuj miasta rosnąco po liczbie mieszkańców.\n\nWypisz wyniki w dwóch liniach jako listy w formacie jak w przykładzie.",
+      "input": "* 1 linia: liczba naturalna `N`\n* następnie `N` linii: `nazwa liczba_mieszkancow` (nazwa bez spacji)",
+      "output": "* 1 linia: lista miast po sortowaniu a)\n* 2 linia: lista miast po sortowaniu b)",
+      "examples": [
+        {
+          "input": "3\nParis 2150000\nBerlin 3800000\nNew_York 8400000",
+          "output": "[Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000), Miasto(\"Paris\", 2150000)]\n[Miasto(\"Paris\", 2150000), Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000)]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\nParis 2150000\nBerlin 3800000\nNew_York 8400000",
+          "output": "[Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000), Miasto(\"Paris\", 2150000)]\n[Miasto(\"Paris\", 2150000), Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000)]"
+        },
+        {
+          "input": "2\nGdansk 470000\nWarszawa 1800000",
+          "output": "[Miasto(\"Gdansk\", 470000), Miasto(\"Warszawa\", 1800000)]\n[Miasto(\"Gdansk\", 470000), Miasto(\"Warszawa\", 1800000)]"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Wydruk obiektów ma mieć dokładnie format: `Miasto(\"NAZWA\", LICZBA)`."
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "22_sortowanie_praktyka/ZAD-06",
+      "title": "Sortowanie listy binarnej (0/1)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sort",
+        "counting"
+      ],
+      "description": "Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Posortuj ją rosnąco.",
+      "input": "* 1 linia: liczba naturalna `N`\n* 2 linia: `N` liczb (0/1) oddzielonych spacjami",
+      "output": "* 1 linia: posortowana lista w formacie jak w przykładzie",
+      "examples": [
+        {
+          "input": "6\n1 0 1 0 1 1",
+          "output": "[0, 0, 1, 1, 1, 1]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "6\n1 0 1 0 1 1",
+          "output": "[0, 0, 1, 1, 1, 1]"
+        },
+        {
+          "input": "4\n0 0 0 1",
+          "output": "[0, 0, 0, 1]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "22_sortowanie_praktyka/ZAD-07",
+      "title": "Sortowanie listy 0/1/2",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sort",
+        "counting"
+      ],
+      "description": "Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj ją rosnąco.",
+      "input": "* 1 linia: liczba naturalna `N`\n* 2 linia: `N` liczb (0/1/2) oddzielonych spacjami",
+      "output": "* 1 linia: posortowana lista w formacie jak w przykładzie",
+      "examples": [
+        {
+          "input": "7\n1 0 1 2 2 0 1",
+          "output": "[0, 0, 1, 1, 1, 2, 2]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "7\n1 0 1 2 2 0 1",
+          "output": "[0, 0, 1, 1, 1, 2, 2]"
+        },
+        {
+          "input": "5\n2 2 2 1 0",
+          "output": "[0, 1, 2, 2, 2]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "22_sortowanie_praktyka/ZAD-08",
+      "title": "Indeks klucza w cyklicznie posortowanej liście",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "binary search",
+        "rotacja",
+        "list"
+      ],
+      "description": "Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosnąca, ale została przesunięta) oraz klucz. Znajdź indeks **pierwszego** wystąpienia klucza. Jeśli klucza nie ma — wypisz `-1`.",
+      "input": "* 1 linia: liczba naturalna `N`\n* 2 linia: `N` liczb całkowitych oddzielonych spacjami\n* 3 linia: liczba całkowita `x` (szukany klucz)",
+      "output": "* 1 linia: indeks pierwszego wystąpienia `x` albo `-1`",
+      "examples": [
+        {
+          "input": "6\n3 4 5 6 1 2\n4",
+          "output": "1"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "6\n3 4 5 6 1 2\n4",
+          "output": "1"
+        },
+        {
+          "input": "5\n4 5 6 1 2\n3",
+          "output": "-1"
+        }
+      ],
+      "constraints": "* Lista jest wynikiem rotacji listy posortowanej niemalejąco (mogą wystąpić duplikaty).",
+      "notes": ""
+    }
+  ]
+}

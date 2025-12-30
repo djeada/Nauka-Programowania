@@ -1,0 +1,387 @@
+{
+  "file": "05_petla_wyznaczanie_cyfr_liczby.md",
+  "chapter_title": "Rozdział: Cyfry w liczbie (dzielenie przez 10, modulo)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.\n* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem.\n* Jeżeli zadanie wymaga „brak danych wyjściowych”, program nie wypisuje nic (nawet pustej linii).",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-01",
+      "title": "Liczenie cyfr w liczbie",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "modulo",
+        "dzielenie całkowite"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` i wypisz, z ilu cyfr składa się jej zapis dziesiętny.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Jedna liczba naturalna — liczba cyfr w `n`.",
+      "examples": [
+        {
+          "input": "342",
+          "output": "3"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "1"
+        },
+        {
+          "input": "10000",
+          "output": "5"
+        }
+      ],
+      "constraints": "* `n` mieści się w typowym zakresie liczb całkowitych.",
+      "notes": "* Dla `n = 0` poprawna odpowiedź to `1` (liczba „0” ma jedną cyfrę)."
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-02",
+      "title": "Wypisywanie cyfr liczby w odwrotnej kolejności",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "modulo",
+        "dzielenie całkowite"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` i wypisz jej cyfry w kolejności od cyfry jedności (czyli w odwrotnej kolejności niż w zapisie liczby). Każdą cyfrę wypisz w osobnej linii.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.",
+      "examples": [
+        {
+          "input": "8214",
+          "output": "4\n1\n2\n8"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "12030",
+          "output": "0\n3\n0\n2\n1"
+        },
+        {
+          "input": "0",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dla `n = 0` wypisz jedną linię z `0`."
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-03",
+      "title": "Sumowanie cyfr liczby",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "modulo",
+        "dzielenie całkowite"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` i oblicz sumę jej cyfr. Następnie wypisz wynik.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Jedna liczba naturalna — suma cyfr liczby `n`.",
+      "examples": [
+        {
+          "input": "129",
+          "output": "12"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "999",
+          "output": "27"
+        },
+        {
+          "input": "12345",
+          "output": "15"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dla `n = 0` suma cyfr wynosi `0`."
+    },
+    {
+      "id": "ZAD-04A",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-04A",
+      "title": "Cyfry parzyste",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "modulo",
+        "warunki"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **parzyste**. Każdą cyfrę wypisz w osobnej linii.\n\nCyfry analizuj od końca (od jedności), czyli w tej samej kolejności, co w zadaniu o wypisywaniu cyfr w odwrotnej kolejności.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Cyfry parzyste liczby `n`, każda w nowej linii (w kolejności od jedności do najwyższej cyfry).\nJeśli nie ma takich cyfr — brak wyjścia.",
+      "examples": [
+        {
+          "input": "932",
+          "output": "2"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "90724",
+          "output": "4\n2\n0"
+        },
+        {
+          "input": "135",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04B",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-04B",
+      "title": "Cyfry mniejsze niż 5",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "modulo",
+        "warunki"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **mniejsze niż 5**. Każdą cyfrę wypisz w osobnej linii.\n\nCyfry analizuj od końca (od jedności).",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Cyfry < 5, każda w nowej linii.\nJeśli brak — brak wyjścia.",
+      "examples": [
+        {
+          "input": "101",
+          "output": "1\n0\n1"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "908341",
+          "output": "1\n4\n3\n0"
+        },
+        {
+          "input": "777",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04C",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-04C",
+      "title": "Cyfry różne od zera",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "modulo",
+        "warunki"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **różne od zera**. Każdą cyfrę wypisz w osobnej linii.\n\nCyfry analizuj od końca (od jedności).",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Cyfry ≠ 0, każda w nowej linii.\nJeśli brak — brak wyjścia.",
+      "examples": [
+        {
+          "input": "650",
+          "output": "5\n6"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "100200",
+          "output": "2\n1"
+        },
+        {
+          "input": "0",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": "* W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`."
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-05",
+      "title": "Sprawdzanie, czy liczba jest palindromem",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "string",
+        "pętle",
+        "odwracanie"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Sprawdź, czy jest palindromem (czyli czy po odwróceniu cyfr pozostaje taka sama). Wypisz odpowiedni komunikat:\n\n* `Liczba jest palindromem.`\n* `Liczba nie jest palindromem.`",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Jeden komunikat tekstowy (dokładnie jeden z powyższych).",
+      "examples": [
+        {
+          "input": "13231",
+          "output": "Liczba jest palindromem."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "12321",
+          "output": "Liczba jest palindromem."
+        },
+        {
+          "input": "123",
+          "output": "Liczba nie jest palindromem."
+        }
+      ],
+      "constraints": "",
+      "notes": "* `0` jest palindromem."
+    },
+    {
+      "id": "ZAD-06A",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-06A",
+      "title": "Liczby mniejsze od n o sumie cyfr równej 10",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle",
+        "suma cyfr",
+        "warunki"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby naturalne `x` takie, że `0 ≤ x < n` oraz suma cyfr liczby `x` wynosi `10`. Każdą liczbę wypisz w osobnej linii.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Liczby spełniające warunek, każda w nowej linii.\nJeśli brak — brak wyjścia.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "30",
+          "output": "19\n28"
+        },
+        {
+          "input": "12",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06B",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-06B",
+      "title": "Dwucyfrowe większe od n",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle",
+        "przedziały"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby **dwucyfrowe** większe od `n` (czyli z zakresu 10–99), każdą w osobnej linii.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Liczby dwucyfrowe `x` takie, że `x > n`, każda w nowej linii.\nJeśli brak — brak wyjścia.",
+      "examples": [
+        {
+          "input": "95",
+          "output": "96\n97\n98\n99"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "98",
+          "output": "99"
+        },
+        {
+          "input": "99",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06C",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-06C",
+      "title": "Trzycyfrowe o sumie cyfr równej n",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle",
+        "suma cyfr",
+        "warunki"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby trzycyfrowe `x` (100–999), których suma cyfr jest równa `n`. Każdą liczbę wypisz w osobnej linii.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Liczby trzycyfrowe spełniające warunek, każda w nowej linii.\nJeśli brak — brak wyjścia.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "100"
+        },
+        {
+          "input": "2",
+          "output": "101\n110\n200"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06D",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-06D",
+      "title": "Trzycyfrowe podzielne przez sumę cyfr liczby n",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle",
+        "dzielenie",
+        "suma cyfr"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Oblicz sumę cyfr liczby `n` i oznacz ją jako `s`. Następnie wypisz wszystkie liczby trzycyfrowe `x` (100–999), które są podzielne przez `s`. Każdą liczbę wypisz w osobnej linii.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Liczby trzycyfrowe podzielne przez `s`, każda w nowej linii.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "999999999",
+          "output": "162\n243\n324\n405\n486\n567\n648\n729\n810\n891\n972"
+        },
+        {
+          "input": "888888888",
+          "output": "144\n216\n288\n360\n432\n504\n576\n648\n720\n792\n864\n936"
+        }
+      ],
+      "constraints": "* Suma cyfr `n` jest większa od zera (czyli `n ≠ 0`), aby dzielenie było poprawne.",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06E",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-06E",
+      "title": "Mniejsze od n złożone wyłącznie z parzystych cyfr",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle",
+        "warunki",
+        "cyfry"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby naturalne `x` takie, że `0 ≤ x < n` oraz każda cyfra w zapisie dziesiętnym `x` jest parzysta. Każdą liczbę wypisz w osobnej linii.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Liczby spełniające warunek, każda w nowej linii.\nJeśli brak — brak wyjścia.",
+      "examples": [
+        {
+          "input": "95",
+          "output": "2\n4\n6\n8\n22\n24\n26\n28\n42\n44\n46\n48\n62\n64\n66\n68\n82\n84\n86\n88"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "30",
+          "output": "2\n4\n6\n8\n20\n22\n24\n26\n28"
+        },
+        {
+          "input": "10",
+          "output": "2\n4\n6\n8"
+        }
+      ],
+      "constraints": "",
+      "notes": "* W tym zadaniu `0` też składa się wyłącznie z parzystych cyfr. Jeśli chcesz je uwzględniać, dopisz to jako regułę w treści (tu: pomijamy `0`, bo w przykładzie go nie ma)."
+    }
+  ]
+}

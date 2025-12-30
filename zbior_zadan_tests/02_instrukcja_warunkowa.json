@@ -1,0 +1,90 @@
+{
+  "ZAD-01": [
+    {
+      "input": "6",
+      "output": "6"
+    },
+    {
+      "input": "5",
+      "output": ""
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "9\n9",
+      "output": "Liczby są identyczne."
+    },
+    {
+      "input": "0\n7",
+      "output": "Liczby są różne."
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "-1",
+      "output": "Liczba jest ujemna."
+    },
+    {
+      "input": "0",
+      "output": "Liczba jest zerem."
+    },
+    {
+      "input": "12",
+      "output": "Liczba jest dodatnia."
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "9\n3",
+      "output": "9 3"
+    },
+    {
+      "input": "2\n10",
+      "output": "10 2"
+    },
+    {
+      "input": "4\n4",
+      "output": "4 4"
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "3\n1\n2",
+      "output": "1 2 3"
+    },
+    {
+      "input": "5\n5\n1",
+      "output": "1 5 5"
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "1\n9\n3\n7",
+      "output": "9"
+    },
+    {
+      "input": "0\n0\n0\n0",
+      "output": "0"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "",
+      "output": "Prawo wyłączonego środka:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrawo niesprzeczności:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność koniunkcji:\np=False q=False L=False R=False EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność alternatywy:\np=False q=False L=False R=False EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPierwsze prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=False R=False EQ=True\n\nDrugie prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=False R=False EQ=True"
+    },
+    {
+      "input": "",
+      "output": "Prawo wyłączonego środka:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrawo niesprzeczności:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność koniunkcji:\np=False q=False L=False R=False EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność alternatywy:\np=False q=False L=False R=False EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPierwsze prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=False R=False EQ=True\n\nDrugie prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=False R=False EQ=True"
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "2\n3\n4",
+      "output": "Trójkąt można zbudować z podanych boków."
+    },
+    {
+      "input": "1\n2\n3",
+      "output": "Trójkąta nie można zbudować z podanych boków."
+    }
+  ]
+}

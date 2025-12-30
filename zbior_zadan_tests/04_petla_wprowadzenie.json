@@ -1,0 +1,82 @@
+{
+  "ZAD-01": [
+    {
+      "input": "7",
+      "output": ""
+    },
+    {
+      "input": "3\n10\n7",
+      "output": ""
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "5",
+      "output": "4\n3\n2\n1"
+    },
+    {
+      "input": "1",
+      "output": ""
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "1",
+      "output": "3.1"
+    },
+    {
+      "input": "3",
+      "output": "3.142\n3.142\n3.142"
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "1",
+      "output": "0"
+    },
+    {
+      "input": "10",
+      "output": "45"
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "2\n7",
+      "output": "3\n4\n5\n6\n3\n6"
+    },
+    {
+      "input": "1\n4",
+      "output": "2\n3\n3"
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "3",
+      "output": "23\n44\n18"
+    },
+    {
+      "input": "5",
+      "output": "75\n130\n45"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "0",
+      "output": "1.00"
+    },
+    {
+      "input": "3",
+      "output": "31.01"
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "10\n26",
+      "output": "7\n3"
+    },
+    {
+      "input": "0\n0",
+      "output": "0\n0"
+    }
+  ]
+}

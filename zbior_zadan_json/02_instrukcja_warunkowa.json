@@ -1,0 +1,297 @@
+{
+  "file": "02_instrukcja_warunkowa.md",
+  "chapter_title": "Rozdział 2: Instrukcja warunkowa (if / else)",
+  "chapter_description": "Zadania w tym rozdziale ćwiczą podejmowanie decyzji w programie na podstawie warunków.\n**Konwencje wspólne:**\n* Każde zadanie jest **osobnym programem**.\n* Dane wejściowe wczytuj dokładnie w podanej kolejności, każdą wartość z osobnej linii (o ile nie napisano inaczej).\n* Wyniki wypisuj dokładnie jak w specyfikacji (w tym wielkość liter, kropki, spacje).\n* Jeżeli zadanie mówi „nie wypisuj nic” — program ma zakończyć się bez żadnego outputu (bez spacji, bez pustej linii).",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "02_instrukcja_warunkowa/ZAD-01",
+      "title": "Liczba większa od 5",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "if",
+        "porównania",
+        "I/O"
+      ],
+      "description": "Wczytaj jedną liczbę naturalną `n`.\nJeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.",
+      "input": "* 1 linia: `n` (liczba całkowita, `n ≥ 0`)",
+      "output": "* Jeśli `n > 5`: jedna linia z liczbą `n`\n* Jeśli `n ≤ 5`: brak wyjścia",
+      "examples": [
+        {
+          "input": "10",
+          "output": "10"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "6",
+          "output": "6"
+        },
+        {
+          "input": "5",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "02_instrukcja_warunkowa/ZAD-02",
+      "title": "Porównanie dwóch liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "if-else",
+        "równość",
+        "string"
+      ],
+      "description": "Wczytaj dwie liczby naturalne `a` i `b`.\nJeśli są równe, wypisz:\n`Liczby są identyczne.`\nW przeciwnym razie wypisz:\n`Liczby są różne.`",
+      "input": "* 1 linia: `a` (całkowita, `a ≥ 0`)\n* 2 linia: `b` (całkowita, `b ≥ 0`)",
+      "output": "Jedna linia — dokładnie jeden z komunikatów.",
+      "examples": [
+        {
+          "input": "7\n4",
+          "output": "Liczby są różne."
+        },
+        {
+          "input": "5\n5",
+          "output": "Liczby są identyczne."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "9\n9",
+          "output": "Liczby są identyczne."
+        },
+        {
+          "input": "0\n7",
+          "output": "Liczby są różne."
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "02_instrukcja_warunkowa/ZAD-03",
+      "title": "Określanie znaku liczby",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "if-elif-else",
+        "porównania",
+        "string"
+      ],
+      "description": "Wczytaj liczbę całkowitą `x` i wypisz jeden z komunikatów:\n\n* dla `x < 0`: `Liczba jest ujemna.`\n* dla `x > 0`: `Liczba jest dodatnia.`\n* dla `x = 0`: `Liczba jest zerem.`",
+      "input": "* 1 linia: `x` (liczba całkowita)",
+      "output": "Jedna linia — dokładnie jeden komunikat.",
+      "examples": [
+        {
+          "input": "-5",
+          "output": "Liczba jest ujemna."
+        },
+        {
+          "input": "0",
+          "output": "Liczba jest zerem."
+        },
+        {
+          "input": "2",
+          "output": "Liczba jest dodatnia."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "-1",
+          "output": "Liczba jest ujemna."
+        },
+        {
+          "input": "0",
+          "output": "Liczba jest zerem."
+        },
+        {
+          "input": "12",
+          "output": "Liczba jest dodatnia."
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "02_instrukcja_warunkowa/ZAD-04",
+      "title": "Maksimum i minimum z dwóch liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "max",
+        "min",
+        "if",
+        "formatowanie"
+      ],
+      "description": "Wczytaj dwie liczby naturalne `a` i `b`.\nWypisz je w jednej linii w kolejności: **większa, potem mniejsza**, oddzielone pojedynczą spacją.\nJeśli `a = b`, wypisz `a b` (czyli dwie takie same liczby).",
+      "input": "* 1 linia: `a` (całkowita, `a ≥ 0`)\n* 2 linia: `b` (całkowita, `b ≥ 0`)",
+      "output": "Jedna linia:\n`max(a, b) min(a, b)`",
+      "examples": [
+        {
+          "input": "1\n4",
+          "output": "4 1"
+        },
+        {
+          "input": "5\n5",
+          "output": "5 5"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "9\n3",
+          "output": "9 3"
+        },
+        {
+          "input": "2\n10",
+          "output": "10 2"
+        },
+        {
+          "input": "4\n4",
+          "output": "4 4"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "02_instrukcja_warunkowa/ZAD-05",
+      "title": "Sortowanie trzech liczb",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sort",
+        "warunki",
+        "porządkowanie"
+      ],
+      "description": "Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności rosnącej.",
+      "input": "* 1 linia: `a` (całkowita, `a ≥ 0`)\n* 2 linia: `b` (całkowita, `b ≥ 0`)\n* 3 linia: `c` (całkowita, `c ≥ 0`)",
+      "output": "Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.",
+      "examples": [
+        {
+          "input": "2\n1\n4",
+          "output": "1 2 4"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\n1\n2",
+          "output": "1 2 3"
+        },
+        {
+          "input": "5\n5\n1",
+          "output": "1 5 5"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Możesz użyć wbudowanego sortowania, ale da się też rozwiązać czystymi warunkami."
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "02_instrukcja_warunkowa/ZAD-06",
+      "title": "Maksimum z czterech liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "max",
+        "if",
+        "porównania"
+      ],
+      "description": "Wczytaj cztery liczby naturalne i wypisz największą z nich.",
+      "input": "4 linie: `a`, `b`, `c`, `d` (całkowite, każda `≥ 0`)",
+      "output": "Jedna linia: największa liczba.",
+      "examples": [
+        {
+          "input": "2\n5\n1\n4",
+          "output": "5"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n9\n3\n7",
+          "output": "9"
+        },
+        {
+          "input": "0\n0\n0\n0",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "02_instrukcja_warunkowa/ZAD-07",
+      "title": "Prawa logiki (p i q)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "bool",
+        "logika",
+        "tabele prawdy",
+        "formatowanie"
+      ],
+      "description": "Dla wszystkich kombinacji wartości logicznych `p` i `q` (True/False) sprawdź poprawność praw:\n\n1. Wyłączony środek: `p OR (NOT p)`\n2. Niesprzeczność: `NOT (p AND (NOT p))`\n3. Przemienność AND: `p AND q` vs `q AND p`\n4. Przemienność OR: `p OR q` vs `q OR p`\n5. De Morgana 1: `NOT (p AND q)` vs `(NOT p) OR (NOT q)`\n6. De Morgana 2: `NOT (p OR q)` vs `(NOT p) AND (NOT q)`",
+      "input": "Brak.",
+      "output": "Żeby wynik był **jednoznaczny i łatwy do sprawdzenia**, zastosuj dokładnie ten format:\n\nDla każdego z 6 praw wypisz:\n\n* nazwę prawa w jednej linii,\n* następnie w osobnych liniach wynik dla każdej kombinacji `p, q` w kolejności:\n\n  1. `p=False, q=False`\n  2. `p=False, q=True`\n  3. `p=True, q=False`\n  4. `p=True, q=True`\n\nKażda linia kombinacji ma mieć format:\n`p=<...> q=<...> L=<...> R=<...> EQ=<...>`\n\nGdzie `<...>` to dosłownie `True` albo `False`.",
+      "examples": [
+        {
+          "input": "",
+          "output": "Przemienność alternatywy:\np=False q=False L=False R=False EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Prawo wyłączonego środka:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrawo niesprzeczności:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność koniunkcji:\np=False q=False L=False R=False EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność alternatywy:\np=False q=False L=False R=False EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPierwsze prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=False R=False EQ=True\n\nDrugie prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=False R=False EQ=True"
+        },
+        {
+          "input": "",
+          "output": "Prawo wyłączonego środka:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrawo niesprzeczności:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność koniunkcji:\np=False q=False L=False R=False EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność alternatywy:\np=False q=False L=False R=False EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPierwsze prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=False R=False EQ=True\n\nDrugie prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=False R=False EQ=True"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dokładne nazwy praw (nagłówki) użyj jak poniżej:\n\n  1. `Prawo wyłączonego środka:`\n  2. `Prawo niesprzeczności:`\n  3. `Przemienność koniunkcji:`\n  4. `Przemienność alternatywy:`\n  5. `Pierwsze prawo de Morgana:`\n  6. `Drugie prawo de Morgana:`\n* Między blokami praw możesz wstawić **jedną pustą linię** (zalecane), ale nie więcej."
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "02_instrukcja_warunkowa/ZAD-08",
+      "title": "Czy można zbudować trójkąt?",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "if",
+        "geometria",
+        "warunek trójkąta"
+      ],
+      "description": "Wczytaj trzy dodatnie długości odcinków `a`, `b`, `c`.\nSprawdź, czy można z nich zbudować trójkąt.\n\nWypisz:\n\n* jeśli tak: `Trójkąt można zbudować z podanych boków.`\n* jeśli nie: `Trójkąta nie można zbudować z podanych boków.`",
+      "input": "* 1 linia: `a` (całkowita, `a > 0`)\n* 2 linia: `b` (całkowita, `b > 0`)\n* 3 linia: `c` (całkowita, `c > 0`)",
+      "output": "Jedna linia — dokładnie jeden z komunikatów.",
+      "examples": [
+        {
+          "input": "3\n4\n5",
+          "output": "Trójkąt można zbudować z podanych boków."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2\n3\n4",
+          "output": "Trójkąt można zbudować z podanych boków."
+        },
+        {
+          "input": "1\n2\n3",
+          "output": "Trójkąta nie można zbudować z podanych boków."
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}

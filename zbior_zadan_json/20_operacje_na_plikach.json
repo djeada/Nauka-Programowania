@@ -1,0 +1,381 @@
+{
+  "file": "20_operacje_na_plikach.md",
+  "chapter_title": "Rozdział: Operacje na plikach (stdin/stdout)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Ścieżki wczytuj jako całe linie (mogą zawierać spacje).\n* Rozszerzenia podawane są **z kropką**, np. `.txt`.\n* Jeśli zadanie wymaga wypisania listy lub słownika — wypisz je w formacie jak w przykładach (np. `['a', 'b']`, `{ 'a': 1 }`).\n* W zadaniach „modyfikujących pliki” w **wyjściu może nie być nic** — liczy się wykonana operacja (jeśli środowisko testujące to sprawdza).",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "20_operacje_na_plikach/ZAD-01",
+      "title": "Czy ścieżka istnieje?",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "files",
+        "path",
+        "os",
+        "pathlib"
+      ],
+      "description": "Otrzymujesz ścieżkę w systemie plików. Sprawdź, czy odnosi się do istniejącego **pliku lub folderu**.",
+      "input": "* 1 linia: `path` (napis — ścieżka)",
+      "output": "* 1 linia: `Prawda` jeśli ścieżka istnieje, w przeciwnym razie `Fałsz`",
+      "examples": [
+        {
+          "input": "C:\\Users\\Username\\Documents\\plik.txt",
+          "output": "Prawda"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "/tmp/np/exist",
+          "output": "Prawda"
+        },
+        {
+          "input": "/tmp/np/missing",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "20_operacje_na_plikach/ZAD-02",
+      "title": "Pliki o danym rozszerzeniu w folderze (bez podfolderów)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "files",
+        "dir",
+        "listdir",
+        "pathlib"
+      ],
+      "description": "Otrzymujesz ścieżkę do folderu i rozszerzenie (np. `.txt`). Znajdź wszystkie pliki o tym rozszerzeniu znajdujące się **bezpośrednio** w tym folderze (bez przeszukiwania podfolderów). Zwróć listę nazw plików.",
+      "input": "* 1 linia: `folder_path`\n* 2 linia: `ext` (np. `.txt`)",
+      "output": "* 1 linia: lista nazw plików w formacie `['a.txt', 'b.txt']`",
+      "examples": [
+        {
+          "input": "C:\\Users\\Username\\Documents\n.txt",
+          "output": "['dokument1.txt', 'notatki.txt', 'lista_zakupów.txt']"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "/tmp/np/docs\n.txt",
+          "output": "['a.txt', 'b.txt']"
+        },
+        {
+          "input": "/tmp/np/empty\n.txt",
+          "output": "[]"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Porównuj rozszerzenia **bez względu na wielkość liter** (np. `.TXT` też pasuje do `.txt`)."
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "20_operacje_na_plikach/ZAD-03",
+      "title": "Znajdź wszystkie ścieżki plików o danej nazwie (rekurencyjnie)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "files",
+        "walk",
+        "recursive",
+        "pathlib"
+      ],
+      "description": "Otrzymujesz nazwę pliku (np. `raport.docx`). Przeszukaj cały system plików i znajdź wszystkie pliki o tej nazwie. Wypisz listę pełnych ścieżek do znalezionych plików.",
+      "input": "* 1 linia: `filename` (np. `raport.docx`)",
+      "output": "* 1 linia: lista pełnych ścieżek (napisy)",
+      "examples": [
+        {
+          "input": "raport.docx",
+          "output": "[\n  'C:\\Users\\Username\\Documents\\raport.docx',\n  'D:\\Projekty\\Raporty\\raport.docx',\n  'E:\\Backup\\raport.docx'\n]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "report.txt",
+          "output": "['/tmp/np/a/report.txt', '/tmp/np/b/report.txt']"
+        },
+        {
+          "input": "missing.txt",
+          "output": "[]"
+        }
+      ],
+      "constraints": "",
+      "notes": "* W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów — program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca)."
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "20_operacje_na_plikach/ZAD-04",
+      "title": "Wczytaj i wypisz treść pliku",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "files",
+        "read",
+        "encoding"
+      ],
+      "description": "Otrzymujesz ścieżkę do pliku tekstowego. Wczytaj zawartość pliku i wypisz ją.",
+      "input": "* 1 linia: `file_path`",
+      "output": "* treść pliku (dokładnie taka jak w pliku)",
+      "examples": [
+        {
+          "input": "C:\\Users\\Username\\Documents\\wiadomość.txt",
+          "output": "Witaj! To jest przykładowa treść pliku tekstowego."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "/tmp/np/hello.txt",
+          "output": "Hello"
+        },
+        {
+          "input": "/tmp/np/two_lines.txt",
+          "output": "Line1\nLine2"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "20_operacje_na_plikach/ZAD-05",
+      "title": "Posortuj adresy IP z pliku",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "files",
+        "sort",
+        "list"
+      ],
+      "description": "Otrzymujesz ścieżkę do pliku tekstowego, w którym w każdej linii znajduje się jeden adres IP. Wczytaj wszystkie adresy, posortuj je **alfabetycznie** i wypisz jako listę.",
+      "input": "* 1 linia: `file_path`",
+      "output": "* 1 linia: lista adresów IP jako napisy, np. `['10.0.0.1', ...]`",
+      "examples": [
+        {
+          "input": "C:\\Users\\Username\\Documents\\adresy_ip.txt",
+          "output": "['10.0.0.1', '172.16.0.5', '192.168.1.10', '192.168.1.2']"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "/tmp/np/ips.txt",
+          "output": "['10.0.0.1', '192.168.1.2']"
+        },
+        {
+          "input": "/tmp/np/ips2.txt",
+          "output": "['1.1.1.1', '8.8.8.8']"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "20_operacje_na_plikach/ZAD-06",
+      "title": "Statystyki pliku tekstowego",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "files",
+        "stats",
+        "dict",
+        "regex"
+      ],
+      "description": "Otrzymujesz ścieżkę do pliku tekstowego. Oblicz:\n\na) liczbę wierszy,\nb) łączną liczbę słów (słowa = ciągi liter),\nc) średnią długość wiersza (w znakach),\nd) średnią liczbę słów na wiersz,\ne) częstość występowania słów (słownik).",
+      "input": "* 1 linia: `file_path`",
+      "output": "5 elementów w tej kolejności:\n\n1. liczba wierszy\n2. liczba słów\n3. średnia długość wiersza\n4. średnia liczba słów na wiersz\n5. słownik częstości słów\n\nKażdy element wypisz w osobnej linii.",
+      "examples": [
+        {
+          "input": "C:\\Users\\Username\\Documents\\tekst.txt",
+          "output": "4\n12\n17.75\n3.0\n{'ala': 2, 'ma': 2, 'kota': 1, 'kot': 1, 'na': 1, 'imię': 1, 'filemon': 1, 'filemona': 1, 'lubi': 2, 'mleko': 1}"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "/tmp/np/text1.txt",
+          "output": "2\n6\n10.5\n3.0\n{'ala': 2, 'ma': 2, 'kota': 1, 'psa': 1}"
+        },
+        {
+          "input": "/tmp/np/text2.txt",
+          "output": "2\n3\n6.0\n1.5\n{'one': 1, 'two': 1, 'three': 1}"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Jeżeli ujednolicisz wielkość liter — w słowniku używaj małych liter (jak w przykładzie).\n* Interpunkcję traktuj jako separator (usuń ją przy wyznaczaniu słów)."
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "20_operacje_na_plikach/ZAD-07",
+      "title": "Dodaj wiersz na początku pliku",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "files",
+        "write",
+        "prepend"
+      ],
+      "description": "Otrzymujesz ścieżkę do pliku tekstowego i wiersz tekstu. Dodaj ten wiersz na **początku** pliku.",
+      "input": "* 1 linia: `file_path`\n* 2 linia: `line_to_add` (może zawierać spacje)",
+      "output": "Brak.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "/tmp/np/note.txt\nHEADER",
+          "output": ""
+        },
+        {
+          "input": "/tmp/np/note2.txt\nSTART",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "20_operacje_na_plikach/ZAD-08",
+      "title": "Modyfikacja plików spełniających warunek (rekurencyjnie)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "files",
+        "recursive",
+        "txt",
+        "csv"
+      ],
+      "description": "Otrzymujesz ścieżkę do folderu. Wykonaj:\n\na) dopisz swoje inicjały na końcu każdego pliku `.txt` w folderze i podfolderach,\nb) usuń **środkowy wiersz** z każdego pliku `.csv` w folderze i podfolderach\n(jeśli liczba wierszy jest parzysta — usuń **dolny z dwóch środkowych**).",
+      "input": "* 1 linia: `folder_path`",
+      "output": "Brak.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "/tmp/np/project",
+          "output": ""
+        },
+        {
+          "input": "/tmp/np/project2",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "20_operacje_na_plikach/ZAD-09",
+      "title": "Usuń pliki większe niż 10 kB (rekurencyjnie)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "files",
+        "delete",
+        "size",
+        "recursive"
+      ],
+      "description": "Otrzymujesz ścieżkę do folderu. Usuń wszystkie pliki o rozmiarze **> 10240 bajtów** w tym folderze i jego podfolderach.",
+      "input": "* 1 linia: `folder_path`",
+      "output": "Brak.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "/tmp/np/to_delete",
+          "output": ""
+        },
+        {
+          "input": "/tmp/np/to_delete2",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "20_operacje_na_plikach/ZAD-10",
+      "title": "Skopiuj pliki PNG do innego folderu (bez podfolderów)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "files",
+        "copy",
+        "png",
+        "shutil"
+      ],
+      "description": "Otrzymujesz ścieżkę folderu źródłowego i docelowego. Skopiuj wszystkie pliki `.png` znajdujące się **bezpośrednio** w folderze źródłowym do folderu docelowego.",
+      "input": "* 1 linia: `src_folder`\n* 2 linia: `dst_folder`",
+      "output": "Brak.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "/tmp/np/src\n/tmp/np/dst",
+          "output": ""
+        },
+        {
+          "input": "/tmp/np/src2\n/tmp/np/dst2",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-11",
+      "slug": "20_operacje_na_plikach/ZAD-11",
+      "title": "Zamień miejscami treści dwóch plików",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "files",
+        "swap",
+        "read/write"
+      ],
+      "description": "Otrzymujesz ścieżki do dwóch plików. Zamień ich treści miejscami:\n\n* plik A ma mieć dawną treść pliku B,\n* plik B ma mieć dawną treść pliku A.",
+      "input": "* 1 linia: `file_A`\n* 2 linia: `file_B`",
+      "output": "Brak.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "/tmp/np/a.txt\n/tmp/np/b.txt",
+          "output": ""
+        },
+        {
+          "input": "/tmp/np/c.txt\n/tmp/np/d.txt",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-12",
+      "slug": "20_operacje_na_plikach/ZAD-12",
+      "title": "Przenieś wszystkie pliki CSV do jednego folderu (rekurencyjnie)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "files",
+        "move",
+        "csv",
+        "recursive"
+      ],
+      "description": "Otrzymujesz ścieżkę folderu źródłowego i docelowego. Przenieś wszystkie pliki `.csv` z folderu źródłowego **i wszystkich jego podfolderów** do folderu docelowego.",
+      "input": "* 1 linia: `src_folder`\n* 2 linia: `dst_folder`",
+      "output": "Brak.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "/tmp/np/src_csv\n/tmp/np/dst_csv",
+          "output": ""
+        },
+        {
+          "input": "/tmp/np/src_csv2\n/tmp/np/dst_csv2",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": "* Jeśli w folderze docelowym istnieje już plik o tej samej nazwie, zadanie wymaga zdefiniowania zachowania (np. zmiana nazwy / pominięcie) — jeśli sprawdzarka tego nie doprecyzowuje, przyjmij jedną spójną strategię w całym rozwiązaniu."
+    }
+  ]
+}

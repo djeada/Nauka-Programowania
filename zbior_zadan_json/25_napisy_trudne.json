@@ -1,0 +1,304 @@
+{
+  "file": "25_napisy_trudne.md",
+  "chapter_title": "Rozdział: Napisy — zadania dodatkowe",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli wejściem jest „napis” — wczytaj całą linię (razem ze spacjami), o ile zadanie nie mówi inaczej.\n* Wypisuj dokładnie to, co wynika z polecenia: jeden napis / `Prawda` / `Fałsz` / lista.\n* Wielkość liter ma znaczenie, jeśli nie napisano inaczej.\n* Dla list w wyjściu przyjmujemy zapis w stylu Pythona, np. `['a', 'b']`, jeśli zadanie mówi „lista”.",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "25_napisy_trudne/ZAD-01",
+      "title": "Podmiana słowa w zdaniu",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "string",
+        "replace",
+        "substring"
+      ],
+      "description": "Masz trzy napisy:\n\n1. Zdanie (tekst do modyfikacji),\n2. Słowo A (podnapis do znalezienia),\n3. Słowo B (podnapis zastępujący).\n\nZamień **wszystkie wystąpienia** słowa/podnapisu **A** na **B** w podanym zdaniu.\n\n> Uwaga: A może być częścią innych słów — zamiana dotyczy **każdego wystąpienia podnapisu**.",
+      "input": "* 1 linia: zdanie `S`\n* 2 linia: napis `A`\n* 3 linia: napis `B`",
+      "output": "* 1 linia: zdanie po zamianie",
+      "examples": [
+        {
+          "input": "Lezy jezy na wiezy\nzy\nrzy",
+          "output": "Lerzy jerzy na wierzy"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "hello hello\nlo\nX",
+          "output": "helX helX"
+        },
+        {
+          "input": "abc ab abc\nab\nX",
+          "output": "Xc X Xc"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "25_napisy_trudne/ZAD-02",
+      "title": "Usuń podnapis",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "string",
+        "replace",
+        "substring"
+      ],
+      "description": "Dostajesz dwa napisy:\n\n1. Napis główny,\n2. Podnapis do usunięcia.\n\nUsuń **wszystkie wystąpienia** podnapisu z napisu głównego.",
+      "input": "* 1 linia: napis `S`\n* 2 linia: napis `T` (do usunięcia)",
+      "output": "* 1 linia: wynikowy napis po usunięciu wszystkich wystąpień",
+      "examples": [
+        {
+          "input": "Lezy jezy na wiezy\nzy",
+          "output": "Le je na wie"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "banana\nna",
+          "output": "ba"
+        },
+        {
+          "input": "aaaa\naa",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "25_napisy_trudne/ZAD-03",
+      "title": "Czy napis A jest początkiem napisu B?",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "string",
+        "prefix"
+      ],
+      "description": "Otrzymujesz dwa napisy:\n\n1. Napis `A` — potencjalny przedrostek,\n2. Napis `B` — napis testowany.\n\nSprawdź, czy `B` **zaczyna się** od `A`.",
+      "input": "* 1 linia: `A`\n* 2 linia: `B`",
+      "output": "* 1 linia: `Prawda` albo `Fałsz`",
+      "examples": [
+        {
+          "input": "Dino\nDinozaur jest zly",
+          "output": "Prawda"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "pre\nprefix",
+          "output": "Prawda"
+        },
+        {
+          "input": "abc\nab",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "25_napisy_trudne/ZAD-04",
+      "title": "Usuń powtórzenia znaków",
+      "difficulty": 3,
+      "difficulty_display": "★★★",
+      "tags": [
+        "string",
+        "set",
+        "unique",
+        "kolejność"
+      ],
+      "description": "Otrzymujesz napis. Usuń wszystkie powtórzenia znaków tak, aby **każdy znak wystąpił tylko raz**, zachowując **kolejność pierwszych wystąpień**.",
+      "input": "* 1 linia: napis `S`",
+      "output": "* 1 linia: napis z unikalnymi znakami",
+      "examples": [
+        {
+          "input": "AAAAAAAAAABBBBBBBBA",
+          "output": "AB"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "abac",
+          "output": "abc"
+        },
+        {
+          "input": "aaaa",
+          "output": "a"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "25_napisy_trudne/ZAD-05",
+      "title": "Usuń powtórzenia sąsiadujących znaków",
+      "difficulty": 3,
+      "difficulty_display": "★★★",
+      "tags": [
+        "string",
+        "compress",
+        "run-length"
+      ],
+      "description": "Otrzymujesz napis. Usuń powtórzenia znaków występujących **bezpośrednio obok siebie**, pozostawiając jedno wystąpienie z każdej „serii”.",
+      "input": "* 1 linia: napis `S`",
+      "output": "* 1 linia: napis po redukcji sąsiadów",
+      "examples": [
+        {
+          "input": "AAAAAAAAAABBBBBBBBA",
+          "output": "ABA"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "aaabbbcca",
+          "output": "abca"
+        },
+        {
+          "input": "ab",
+          "output": "ab"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "25_napisy_trudne/ZAD-06",
+      "title": "Rotacje napisów",
+      "difficulty": 3,
+      "difficulty_display": "★★★",
+      "tags": [
+        "string",
+        "rotation",
+        "substring"
+      ],
+      "description": "Otrzymujesz dwa napisy `A` i `B`. Sprawdź, czy jeden z nich jest **rotacją** drugiego (mają tę samą długość i da się uzyskać jeden przez przesunięcie cykliczne drugiego).",
+      "input": "* 1 linia: napis `A`\n* 2 linia: napis `B`",
+      "output": "* 1 linia: `Prawda` albo `Fałsz`",
+      "examples": [
+        {
+          "input": "malpka\npkamal",
+          "output": "Prawda"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "abcd\ncdab",
+          "output": "Prawda"
+        },
+        {
+          "input": "abcd\nacbd",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "25_napisy_trudne/ZAD-07",
+      "title": "Powtarzające się podnapisy",
+      "difficulty": 3,
+      "difficulty_display": "★★★",
+      "tags": [
+        "string",
+        "substrings",
+        "count"
+      ],
+      "description": "Otrzymujesz napis. Znajdź wszystkie **podnapisy**, które występują w nim **więcej niż jeden raz**.",
+      "input": "* 1 linia: napis `S`",
+      "output": "* 1 linia: lista napisów — wszystkie powtarzające się podnapisy",
+      "examples": [
+        {
+          "input": "pythonpython",
+          "output": "['python']"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "aa",
+          "output": "['a']"
+        },
+        {
+          "input": "abca",
+          "output": "['a']"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Jeśli sprawdzarka wymaga konkretnej kolejności (np. rosnąco po długości/alfabetycznie) — musi to być opisane. W przeciwnym razie dopuszczalna może być dowolna kolejność."
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "25_napisy_trudne/ZAD-08",
+      "title": "Najdłuższy wspólny przedrostek",
+      "difficulty": 3,
+      "difficulty_display": "★★★",
+      "tags": [
+        "string",
+        "prefix",
+        "list"
+      ],
+      "description": "Otrzymujesz listę napisów (w kolejnych liniach). Znajdź najdłuższy przedrostek wspólny dla wszystkich.",
+      "input": "* 1 linia: `n` — liczba napisów\n* kolejne `n` linii: napisy",
+      "output": "* 1 linia: najdłuższy wspólny przedrostek (może być pusty)",
+      "examples": [
+        {
+          "input": "3\nRemolada\nRemux\nRemmy",
+          "output": "Rem"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\nflower\nflow\nflight",
+          "output": "fl"
+        },
+        {
+          "input": "2\ndog\nrace",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "25_napisy_trudne/ZAD-09",
+      "title": "Najdłuższy wspólny podnapis",
+      "difficulty": 3,
+      "difficulty_display": "★★★",
+      "tags": [
+        "string",
+        "dp",
+        "substring"
+      ],
+      "description": "Otrzymujesz dwa napisy. Znajdź **najdłuższy wspólny podnapis** (ciągły fragment), który występuje w obu napisach.",
+      "input": "* 1 linia: napis `A`\n* 2 linia: napis `B`",
+      "output": "* 1 linia: najdłuższy wspólny podnapis\n  (jeśli jest kilka o tej samej długości — wybierz ten, który występuje **najwcześniej w A**; jeśli nadal remis, najwcześniej w B)",
+      "examples": [
+        {
+          "input": "ijkabcdl\nxxxxabcd",
+          "output": "abcd"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "abcXYZ\nXYZabc",
+          "output": "abc"
+        },
+        {
+          "input": "hello\nyellow",
+          "output": "ello"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}

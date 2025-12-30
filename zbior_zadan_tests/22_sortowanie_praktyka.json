@@ -1,0 +1,82 @@
+{
+  "ZAD-01": [
+    {
+      "input": "b a",
+      "output": " ab"
+    },
+    {
+      "input": "cba",
+      "output": "abc"
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "Bob, Ala pies.",
+      "output": "['Ala', 'Bob', 'pies']"
+    },
+    {
+      "input": "zoo! ala? kot.",
+      "output": "['ala', 'kot', 'zoo']"
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "3\nab 3\nbca 1\nc 2",
+      "output": "[('bca', 1), ('c', 2), ('ab', 3)]\n[('c', 2), ('ab', 3), ('bca', 1)]"
+    },
+    {
+      "input": "2\nxx 5\na 1",
+      "output": "[('a', 1), ('xx', 5)]\n[('a', 1), ('xx', 5)]"
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "4\nabcd\nab\na\nabc",
+      "output": "['a', 'ab', 'abc', 'abcd']"
+    },
+    {
+      "input": "3\nzz\nx\nyy",
+      "output": "['x', 'zz', 'yy']"
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "3\nParis 2150000\nBerlin 3800000\nNew_York 8400000",
+      "output": "[Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000), Miasto(\"Paris\", 2150000)]\n[Miasto(\"Paris\", 2150000), Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000)]"
+    },
+    {
+      "input": "2\nGdansk 470000\nWarszawa 1800000",
+      "output": "[Miasto(\"Gdansk\", 470000), Miasto(\"Warszawa\", 1800000)]\n[Miasto(\"Gdansk\", 470000), Miasto(\"Warszawa\", 1800000)]"
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "6\n1 0 1 0 1 1",
+      "output": "[0, 0, 1, 1, 1, 1]"
+    },
+    {
+      "input": "4\n0 0 0 1",
+      "output": "[0, 0, 0, 1]"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "7\n1 0 1 2 2 0 1",
+      "output": "[0, 0, 1, 1, 1, 2, 2]"
+    },
+    {
+      "input": "5\n2 2 2 1 0",
+      "output": "[0, 1, 2, 2, 2]"
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "6\n3 4 5 6 1 2\n4",
+      "output": "1"
+    },
+    {
+      "input": "5\n4 5 6 1 2\n3",
+      "output": "-1"
+    }
+  ]
+}

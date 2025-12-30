@@ -1,0 +1,326 @@
+{
+  "file": "10_listy_dwie_listy.md",
+  "chapter_title": "Rozdział: Listy — Dwie listy (stdin/stdout)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Listy w wejściu są podane w **jednej linii** w zapisie z nawiasami kwadratowymi, np. `[5, 3, 7, 2]`.\n* Jeśli w danych są dwie listy — wczytaj je w kolejnych liniach: najpierw lista 1, potem lista 2.\n* Gdy wynikiem jest lista — wypisz ją w formacie jak w przykładach, np. `[1, 2, 3]`.\n* Jeśli wynik ma być w jednej linii z elementami oddzielonymi przecinkami **bez spacji**, trzymaj się dokładnie tego formatu.",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "10_listy_dwie_listy/ZAD-01",
+      "title": "Wypisanie elementów dwóch list na przemian",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "list",
+        "iteracja"
+      ],
+      "description": "Wczytaj dwie listy liczb całkowitych i wypisz ich elementy **na przemian**:\npierwszy z listy 1, pierwszy z listy 2, drugi z listy 1, drugi z listy 2, itd.\n\nJeśli listy mają różne długości, po wyczerpaniu krótszej listy dopisz pozostałe elementy dłuższej listy w tej samej kolejności.",
+      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
+      "output": "* 1 linia: elementy obu list wypisane na przemian, oddzielone przecinkami **bez spacji**",
+      "examples": [
+        {
+          "input": "[5, 3, 7, 2]\n[1, -2, 3]",
+          "output": "5,1,3,-2,7,3,2"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[1, 2, 3]\n[10, 20]",
+          "output": "1,10,2,20,3"
+        },
+        {
+          "input": "[5]\n[7, 8, 9]",
+          "output": "5,7,8,9"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "10_listy_dwie_listy/ZAD-02",
+      "title": "Połączenie dwóch list",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "list",
+        "indeksy",
+        "concat"
+      ],
+      "description": "Wczytaj dwie listy liczb całkowitych i wykonaj niezależnie:\n\n**a)** Połącz listy, doklejając drugą listę na koniec pierwszej.\n**b)** W pierwszej liście **podmień** elementy o parzystych indeksach (0, 2, 4, …) elementami z drugiej listy o tych samych indeksach — o ile taki indeks istnieje w obu listach.",
+      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
+      "output": "* 1 linia: wynik dla **a)** jako lista\n* 2 linia: wynik dla **b)** jako lista",
+      "examples": [
+        {
+          "input": "[1, 2, 3]\n[4, 5, 6]",
+          "output": "[1, 2, 3, 4, 5, 6]\n[4, 2, 6]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[0, 1, 2, 3]\n[9, 8]",
+          "output": "[0, 1, 2, 3, 9, 8]\n[9, 1, 2, 3]"
+        },
+        {
+          "input": "[5]\n[7, 8, 9]",
+          "output": "[5, 7, 8, 9]\n[7]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "10_listy_dwie_listy/ZAD-03",
+      "title": "Suma elementów dwóch list",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "list",
+        "iteracja"
+      ],
+      "description": "Wczytaj dwie listy liczb całkowitych i zwróć listę, w której element o indeksie `i` jest sumą elementów o indeksie `i` z obu list.\nJeśli któraś lista jest krótsza, brakujące elementy traktuj jako `0`.",
+      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
+      "output": "* 1 linia: lista sum",
+      "examples": [
+        {
+          "input": "[3, 1, 2, 5]\n[2, 8, 6, 5]",
+          "output": "[5, 9, 8, 10]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[1, 2, 3]\n[4]",
+          "output": "[5, 2, 3]"
+        },
+        {
+          "input": "[0, 0]\n[5, 6, 7]",
+          "output": "[5, 6, 7]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "10_listy_dwie_listy/ZAD-04",
+      "title": "Iloczyn skalarny dwóch wektorów 3D",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "list",
+        "wektory",
+        "math"
+      ],
+      "description": "Wczytaj dwie listy długości 3 (wektory 3D) i oblicz ich **iloczyn skalarny**:\n[\nA_xB_x + A_yB_y + A_zB_z\n]",
+      "input": "* 1 linia: wektor A (lista 3 liczb całkowitych)\n* 2 linia: wektor B (lista 3 liczb całkowitych)",
+      "output": "* 1 linia: jedna liczba całkowita — iloczyn skalarny",
+      "examples": [
+        {
+          "input": "[1, 2, 3]\n[3, 1, 2]",
+          "output": "11"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[1, 0, -1]\n[2, 3, 4]",
+          "output": "-2"
+        },
+        {
+          "input": "[3, 5, 7]\n[2, -1, 0]",
+          "output": "1"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "10_listy_dwie_listy/ZAD-05",
+      "title": "Obliczenie średniej ważonej",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "list",
+        "float"
+      ],
+      "description": "Wczytaj dwie listy liczb zmiennoprzecinkowych tej samej długości:\n\n* lista wartości,\n* lista wag.\n\nOblicz średnią ważoną:\n[\n\\frac{\\sum (wartość_i \\cdot waga_i)}{\\sum waga_i}\n]",
+      "input": "* 1 linia: lista wartości (float)\n* 2 linia: lista wag (float)",
+      "output": "* 1 linia: jedna liczba zmiennoprzecinkowa — średnia ważona **z dokładnością do 2 miejsc po przecinku**",
+      "examples": [
+        {
+          "input": "[0.2, 0.4, 0.1, 0.2, 0.1]\n[2.0, 5.0, 0.0, 2.0, 1.0]",
+          "output": "0.29"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[1.0, 2.0, 3.0]\n[1.0, 1.0, 2.0]",
+          "output": "2.25"
+        },
+        {
+          "input": "[10.0, 0.0]\n[3.0, 1.0]",
+          "output": "7.50"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "10_listy_dwie_listy/ZAD-06",
+      "title": "Znalezienie elementów wspólnych dwóch list",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "list",
+        "set"
+      ],
+      "description": "Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występują w obu listach:\n\n* zachowaj **kolejność występowania w pierwszej liście**,\n* jeśli element z pierwszej listy występuje w drugiej liście, dodaj go do wyniku,\n* jeśli nie ma elementów wspólnych — wypisz `[]`.",
+      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
+      "output": "* 1 linia: lista elementów wspólnych",
+      "examples": [
+        {
+          "input": "[9, 2, 5, 4]\n[4, 2, 1]",
+          "output": "[2, 4]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[3, 1, 4]\n[1, 5]",
+          "output": "[1]"
+        },
+        {
+          "input": "[1, 3, 5]\n[2, 4, 6]",
+          "output": "[]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "10_listy_dwie_listy/ZAD-07",
+      "title": "Różnica między dwoma listami",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "list",
+        "set"
+      ],
+      "description": "Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **tylko w jednej** z list (różnica symetryczna).\n\n* Kolejność elementów w wyniku może być **dowolna**.\n* Jeśli wszystkie elementy są wspólne — wypisz `[]`.",
+      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
+      "output": "* 1 linia: lista elementów niewspólnych",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "[1, 2, 3]\n[3, 4]",
+          "output": "[1, 2, 4]"
+        },
+        {
+          "input": "[5, 5]\n[5]",
+          "output": "[]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "10_listy_dwie_listy/ZAD-08",
+      "title": "Połącz posortowane listy w posortowaną listę bez duplikatów",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "list",
+        "merge",
+        "sort"
+      ],
+      "description": "Wczytaj dwie listy liczb całkowitych, każda **posortowana rosnąco**. Połącz je w jedną listę:\n\n* wynik ma być posortowany rosnąco,\n* wynik ma zawierać **unikalne** elementy (bez duplikatów).",
+      "input": "* 1 linia: lista 1 (posortowana rosnąco)\n* 2 linia: lista 2 (posortowana rosnąco)",
+      "output": "* 1 linia: jedna posortowana lista bez duplikatów",
+      "examples": [
+        {
+          "input": "[2, 4, 7]\n[3, 5, 9]",
+          "output": "[2, 3, 4, 5, 7, 9]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[1, 3, 5]\n[2, 3, 4]",
+          "output": "[1, 2, 3, 4, 5]"
+        },
+        {
+          "input": "[0, 2, 2]\n[2, 2, 3]",
+          "output": "[0, 2, 3]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "10_listy_dwie_listy/ZAD-09",
+      "title": "Usuń z pierwszej listy część wspólną obu list",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "list",
+        "filter"
+      ],
+      "description": "Wczytaj dwie listy liczb całkowitych. Usuń z pierwszej listy wszystkie elementy, które występują również w drugiej liście.\n\n* Zachowaj kolejność pozostałych elementów z pierwszej listy.\n* Jeśli wszystko zostanie usunięte — wypisz `[]`.",
+      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
+      "output": "* 1 linia: lista 1 po usunięciu elementów wspólnych",
+      "examples": [
+        {
+          "input": "[9, 2, 5, 4]\n[4, 2, 1]",
+          "output": "[9, 5]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[1, 2, 3, 2, 4]\n[2, 5]",
+          "output": "[1, 3, 4]"
+        },
+        {
+          "input": "[1, 1]\n[1]",
+          "output": "[]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "10_listy_dwie_listy/ZAD-10",
+      "title": "Mediana dwóch posortowanych list",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "list",
+        "median",
+        "sort"
+      ],
+      "description": "Wczytaj dwie listy liczb całkowitych:\n\n* obie są posortowane rosnąco,\n* obie mają tę samą, niezerową długość.\n\nZnajdź medianę zbioru wszystkich elementów z obu list (czyli medianę po „złączeniu” obu list).",
+      "input": "* 1 linia: lista 1 (posortowana rosnąco)\n* 2 linia: lista 2 (posortowana rosnąco)",
+      "output": "* 1 linia: mediana jako liczba zmiennoprzecinkowa\n  (jeśli mediana jest całkowita, wypisz ją z `.0`, np. `4.0`)",
+      "examples": [
+        {
+          "input": "[2, 4, 7]\n[3, 5, 9]",
+          "output": "4.5"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[1, 3, 5]\n[2, 4, 6]",
+          "output": "3.5"
+        },
+        {
+          "input": "[1, 2]\n[2, 3]",
+          "output": "2.0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}

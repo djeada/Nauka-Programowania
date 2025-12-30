@@ -1,0 +1,212 @@
+{
+  "ZAD-01A": [
+    {
+      "input": "0",
+      "output": "0"
+    },
+    {
+      "input": "13",
+      "output": "1101"
+    }
+  ],
+  "ZAD-01B": [
+    {
+      "input": "0",
+      "output": "0"
+    },
+    {
+      "input": "10110",
+      "output": "22"
+    }
+  ],
+  "ZAD-02A": [
+    {
+      "input": "8",
+      "output": "1000"
+    },
+    {
+      "input": "7",
+      "output": ""
+    }
+  ],
+  "ZAD-02B": [
+    {
+      "input": "11",
+      "output": "1011"
+    },
+    {
+      "input": "12",
+      "output": ""
+    }
+  ],
+  "ZAD-03A": [
+    {
+      "input": "5\n9",
+      "output": "14"
+    },
+    {
+      "input": "0\n0",
+      "output": "0"
+    }
+  ],
+  "ZAD-03B": [
+    {
+      "input": "10\n3",
+      "output": "7"
+    },
+    {
+      "input": "5\n5",
+      "output": "0"
+    }
+  ],
+  "ZAD-03C": [
+    {
+      "input": "7\n6",
+      "output": "42"
+    },
+    {
+      "input": "0\n5",
+      "output": "0"
+    }
+  ],
+  "ZAD-03D": [
+    {
+      "input": "17\n3",
+      "output": "5"
+    },
+    {
+      "input": "100\n10",
+      "output": "10"
+    }
+  ],
+  "ZAD-04A": [
+    {
+      "input": "0",
+      "output": "1"
+    },
+    {
+      "input": "10",
+      "output": "2"
+    }
+  ],
+  "ZAD-04B": [
+    {
+      "input": "0",
+      "output": "0"
+    },
+    {
+      "input": "15",
+      "output": "4"
+    }
+  ],
+  "ZAD-05A": [
+    {
+      "input": "9\n2",
+      "output": "2"
+    },
+    {
+      "input": "5\n5",
+      "output": "5"
+    }
+  ],
+  "ZAD-05B": [
+    {
+      "input": "9\n2",
+      "output": "9"
+    },
+    {
+      "input": "5\n5",
+      "output": "5"
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "1A\n16\n10",
+      "output": "26"
+    },
+    {
+      "input": "1011\n2\n16",
+      "output": "B"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "13",
+      "output": "14"
+    },
+    {
+      "input": "2",
+      "output": "1"
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "0",
+      "output": "1"
+    },
+    {
+      "input": "5",
+      "output": "8"
+    }
+  ],
+  "ZAD-09A": [
+    {
+      "input": "TeSt123",
+      "output": "test123"
+    },
+    {
+      "input": "ABC",
+      "output": "abc"
+    }
+  ],
+  "ZAD-09B": [
+    {
+      "input": "TeSt123",
+      "output": "TEST123"
+    },
+    {
+      "input": "xyz",
+      "output": "XYZ"
+    }
+  ],
+  "ZAD-09C": [
+    {
+      "input": "TeSt",
+      "output": "tEsT"
+    },
+    {
+      "input": "aZ",
+      "output": "Az"
+    }
+  ],
+  "ZAD-10": [
+    {
+      "input": "29\n15",
+      "output": "2"
+    },
+    {
+      "input": "0\n0",
+      "output": "0"
+    }
+  ],
+  "ZAD-11": [
+    {
+      "input": "9",
+      "output": "Prawda"
+    },
+    {
+      "input": "10",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-12": [
+    {
+      "input": "20",
+      "output": "1"
+    },
+    {
+      "input": "9",
+      "output": "2"
+    }
+  ]
+}

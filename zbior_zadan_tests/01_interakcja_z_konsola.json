@@ -1,0 +1,232 @@
+{
+  "ZAD-01": [
+    {
+      "input": "",
+      "output": "Witaj, świecie!"
+    },
+    {
+      "input": "",
+      "output": "Witaj, świecie!"
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "10\n-3",
+      "output": "-3\n10"
+    },
+    {
+      "input": "0\n5",
+      "output": "5\n0"
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "",
+      "output": "xx\nxx\n\n1\n22\n333\n\n  1\n 111\n11111\n 111\n  1"
+    },
+    {
+      "input": "",
+      "output": "xx\nxx\n\n1\n22\n333\n\n  1\n 111\n11111\n 111\n  1"
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "10\n3",
+      "output": "13\n7\n30\n3\n1\n1000"
+    },
+    {
+      "input": "7\n1",
+      "output": "8\n6\n7\n7\n0\n7"
+    }
+  ],
+  "ZAD-05A": [
+    {
+      "input": "0",
+      "output": "10.000"
+    },
+    {
+      "input": "-2.5",
+      "output": "2.500"
+    }
+  ],
+  "ZAD-05B": [
+    {
+      "input": "2\n3\n4",
+      "output": "11.000"
+    },
+    {
+      "input": "-1.5\n2\n8",
+      "output": "-10.000"
+    }
+  ],
+  "ZAD-05C": [
+    {
+      "input": "0",
+      "output": "2.000"
+    },
+    {
+      "input": "-3",
+      "output": "-25.000"
+    }
+  ],
+  "ZAD-05D": [
+    {
+      "input": "2\n3\n4\n2\n1\n5",
+      "output": "67.000"
+    },
+    {
+      "input": "1\n-1\n0\n3\n2\n2",
+      "output": "3.000"
+    }
+  ],
+  "ZAD-05E": [
+    {
+      "input": "1.5",
+      "output": "10.709"
+    },
+    {
+      "input": "2.5",
+      "output": "521.269"
+    }
+  ],
+  "ZAD-06A": [
+    {
+      "input": "1.2",
+      "output": "1200"
+    },
+    {
+      "input": "7",
+      "output": "7000"
+    }
+  ],
+  "ZAD-06B": [
+    {
+      "input": "2.5",
+      "output": "6.35"
+    },
+    {
+      "input": "12",
+      "output": "30.48"
+    }
+  ],
+  "ZAD-06C": [
+    {
+      "input": "0",
+      "output": "0"
+    },
+    {
+      "input": "7200",
+      "output": "2"
+    }
+  ],
+  "ZAD-06D": [
+    {
+      "input": "2.5",
+      "output": "11.00"
+    },
+    {
+      "input": "7.35",
+      "output": "32.34"
+    }
+  ],
+  "ZAD-06E": [
+    {
+      "input": "90",
+      "output": "1.571"
+    },
+    {
+      "input": "45",
+      "output": "0.785"
+    }
+  ],
+  "ZAD-06F": [
+    {
+      "input": "212",
+      "output": "100.000\n373.150"
+    },
+    {
+      "input": "0",
+      "output": "-17.778\n255.372"
+    }
+  ],
+  "ZAD-07A": [
+    {
+      "input": "3\n8",
+      "output": "12.000"
+    },
+    {
+      "input": "5.5\n2",
+      "output": "5.500"
+    }
+  ],
+  "ZAD-07B": [
+    {
+      "input": "3\n7",
+      "output": "21.000"
+    },
+    {
+      "input": "0.5\n0.2",
+      "output": "0.100"
+    }
+  ],
+  "ZAD-07C": [
+    {
+      "input": "8\n5",
+      "output": "20.000"
+    },
+    {
+      "input": "3.3\n4",
+      "output": "6.600"
+    }
+  ],
+  "ZAD-07D": [
+    {
+      "input": "2",
+      "output": "33.510"
+    },
+    {
+      "input": "0.5",
+      "output": "0.524"
+    }
+  ],
+  "ZAD-07E": [
+    {
+      "input": "2\n5",
+      "output": "20.944"
+    },
+    {
+      "input": "1.5\n2",
+      "output": "4.712"
+    }
+  ],
+  "ZAD-07F": [
+    {
+      "input": "1.5\n2\n3",
+      "output": "9.000"
+    },
+    {
+      "input": "2.2\n3.3\n4.4",
+      "output": "31.944"
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "2.5\n0.3\n1.2\n0.8",
+      "output": "30.00"
+    },
+    {
+      "input": "1.99\n0.5\n2.1\n2.1",
+      "output": "49.75"
+    }
+  ],
+  "ZAD-09": [
+    {
+      "input": "5\n1\n10000",
+      "output": "856.07\n10272.90"
+    },
+    {
+      "input": "0\n3\n15000",
+      "output": "416.67\n15000.00"
+    }
+  ]
+}

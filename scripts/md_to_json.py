@@ -13,6 +13,7 @@ JSON Schema:
     "exercises": [
         {
             "id": "ZAD-01",
+            "slug": "01_interakcja_z_konsola/ZAD-01",
             "title": "Wypisywanie tekstu na ekran",
             "difficulty": 1,
             "difficulty_display": "★☆☆",
@@ -21,6 +22,12 @@ JSON Schema:
             "input": "...",
             "output": "...",
             "examples": [
+                {
+                    "input": "...",
+                    "output": "..."
+                }
+            ],
+            "testcases": [
                 {
                     "input": "...",
                     "output": "..."
@@ -111,6 +118,7 @@ def parse_exercise(lines: List[str], start_idx: int) -> Tuple[Optional[Dict[str,
     """Parse a single exercise starting from start_idx."""
     exercise = {
         "id": "",
+        "slug": "",
         "title": "",
         "difficulty": 1,
         "difficulty_display": "★☆☆",
@@ -119,6 +127,7 @@ def parse_exercise(lines: List[str], start_idx: int) -> Tuple[Optional[Dict[str,
         "input": "",
         "output": "",
         "examples": [],
+        "testcases": [],
         "constraints": "",
         "notes": ""
     }
@@ -214,11 +223,17 @@ def parse_exercise(lines: List[str], start_idx: int) -> Tuple[Optional[Dict[str,
                         exercise["examples"].append(current_example.copy())
                     current_example = {"input": "", "output": ""}
                     example_state = None
+                else:
+                    # Output-only example block
+                    current_example["output"] = code
+                    exercise["examples"].append(current_example.copy())
+                    current_example = {"input": "", "output": ""}
                 i = new_i
                 continue
         else:
             # Regular content line
-            section_content.append(line)
+            if line.strip() != '---':
+                section_content.append(line)
         
         i += 1
     
@@ -230,7 +245,7 @@ def parse_exercise(lines: List[str], start_idx: int) -> Tuple[Optional[Dict[str,
     return exercise, i
 
 
-def parse_markdown_file(file_path: Path) -> Dict[str, Any]:
+def parse_markdown_file(file_path: Path, tests_map: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     """Parse a single markdown file and extract all exercises."""
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -274,6 +289,14 @@ def parse_markdown_file(file_path: Path) -> Dict[str, Any]:
         if EXERCISE_HEADER_PATTERN.match(line):
             exercise, new_i = parse_exercise(lines, i)
             if exercise:
+                exercise["slug"] = f"{file_path.stem}/{exercise['id']}"
+                if tests_map:
+                    testcase_key = exercise["id"]
+                    slug_key = exercise["slug"]
+                    if testcase_key in tests_map:
+                        exercise["testcases"] = tests_map.get(testcase_key, [])
+                    elif slug_key in tests_map:
+                        exercise["testcases"] = tests_map.get(slug_key, [])
                 result["exercises"].append(exercise)
             i = new_i
         else:
@@ -306,6 +329,11 @@ def main():
         default=['szablon.md'],
         help='Files to exclude from processing (default: szablon.md)'
     )
+    parser.add_argument(
+        '--tests-dir',
+        default='zbior_zadan_tests',
+        help='Directory containing per-chapter JSON testcase maps (default: zbior_zadan_tests)'
+    )
     
     args = parser.parse_args()
     
@@ -314,6 +342,7 @@ def main():
     repo_root = script_dir.parent
     zbior_zadan_dir = repo_root / args.input_dir
     output_dir = repo_root / args.output_dir
+    tests_dir = repo_root / args.tests_dir
     
     # Check if input directory exists
     if not zbior_zadan_dir.exists():
@@ -325,7 +354,8 @@ def main():
     
     # Process all markdown files except excluded ones
     md_files = sorted(zbior_zadan_dir.glob("*.md"))
-    all_exercises = []
+    total_files = 0
+    total_exercises = 0
     
     for md_file in md_files:
         if md_file.name in args.exclude:
@@ -334,7 +364,12 @@ def main():
         print(f"Processing {md_file.name}...")
         
         try:
-            result = parse_markdown_file(md_file)
+            tests_map = None
+            tests_file = tests_dir / f"{md_file.stem}.json"
+            if tests_file.exists():
+                with open(tests_file, 'r', encoding='utf-8') as f:
+                    tests_map = json.load(f)
+            result = parse_markdown_file(md_file, tests_map)
             
             # Save individual file JSON
             output_file = output_dir / f"{md_file.stem}.json"
@@ -343,8 +378,8 @@ def main():
             
             print(f"  ✓ Created {output_file.name} with {len(result['exercises'])} exercises")
             
-            # Add to combined list
-            all_exercises.append(result)
+            total_files += 1
+            total_exercises += len(result["exercises"])
         
         except (IOError, OSError) as e:
             print(f"  ✗ File error processing {md_file.name}: {e}")
@@ -354,21 +389,7 @@ def main():
             print(f"  ✗ Unexpected error processing {md_file.name}: {e}")
             traceback.print_exc()
     
-    # Create combined JSON file with all exercises
-    combined_file = output_dir / "all_exercises.json"
-    try:
-        with open(combined_file, 'w', encoding='utf-8') as f:
-            json.dump(all_exercises, f, ensure_ascii=False, indent=2)
-        
-        print(f"\n✓ Created combined file: {combined_file.name}")
-    except (IOError, OSError) as e:
-        print(f"\n✗ Error creating combined file: {e}")
-        return 1
-    
-    print(f"✓ Total files processed: {len(all_exercises)}")
-    
-    # Create summary statistics
-    total_exercises = sum(len(chapter["exercises"]) for chapter in all_exercises)
+    print(f"\n✓ Total files processed: {total_files}")
     print(f"✓ Total exercises: {total_exercises}")
     
     return 0

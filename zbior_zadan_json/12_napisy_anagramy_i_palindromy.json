@@ -1,0 +1,271 @@
+{
+  "file": "12_napisy_anagramy_i_palindromy.md",
+  "chapter_title": "Rozdział: Napisy — palindromy, anagramy, permutacje (stdin/stdout)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Napis wczytuj jako całą linię (może zawierać spacje tylko tam, gdzie jest to powiedziane).\n* Jeśli w wyjściu jest „każde słowo w osobnej linii” — wypisuj dokładnie po jednej pozycji na linię.\n* W zadaniach „ignoruj wielkość liter” — porównuj w wersji np. `lower()`, ale wypisuj słowa **w oryginalnej postaci z wejścia**, chyba że treść mówi inaczej.\n* Jeśli wynikiem ma być „lista” i nic nie znaleziono — nie wypisuj nic (puste wyjście), o ile nie ma wprost formatu `[]`.",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "12_napisy_anagramy_i_palindromy/ZAD-01",
+      "title": "Czy słowo jest palindromem?",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "string",
+        "palindrom",
+        "I/O"
+      ],
+      "description": "Wczytaj jedno słowo i sprawdź, czy jest palindromem (czytane od lewej do prawej i od prawej do lewej jest takie samo).",
+      "input": "* 1. linia: słowo (same litery, bez spacji)",
+      "output": "Jedna linia:\n\n* `Prawda` — jeśli słowo jest palindromem\n* `Fałsz` — w przeciwnym razie",
+      "examples": [
+        {
+          "input": "kajak",
+          "output": "Prawda"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "level",
+          "output": "Prawda"
+        },
+        {
+          "input": "hello",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Jeśli chcesz ignorować wielkość liter, porównuj wersje `lower()`."
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "12_napisy_anagramy_i_palindromy/ZAD-02",
+      "title": "Wszystkie permutacje słowa",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "rekurencja",
+        "permutacje",
+        "backtracking"
+      ],
+      "description": "Wczytaj słowo z **unikalnych liter** i wypisz wszystkie jego permutacje — każdą w osobnej linii.",
+      "input": "* 1. linia: słowo (litery nie powtarzają się)",
+      "output": "Wiele linii — wszystkie permutacje słowa, każda w osobnej linii.",
+      "examples": [
+        {
+          "input": "abc",
+          "output": "abc\nacb\nbac\nbca\ncab\ncba"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "a",
+          "output": "a"
+        },
+        {
+          "input": "Z",
+          "output": "Z"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Kolejność wypisywania permutacji nie musi być dokładnie taka jak w przykładzie, o ile są wszystkie i bez powtórzeń."
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "12_napisy_anagramy_i_palindromy/ZAD-03",
+      "title": "Czy dwa słowa są anagramami?",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "anagram",
+        "sortowanie",
+        "zliczanie"
+      ],
+      "description": "Wczytaj dwa słowa i sprawdź, czy są anagramami (czy da się utworzyć jedno przez przestawienie liter drugiego).",
+      "input": "* 1. linia: słowo `s1`\n* 2. linia: słowo `s2`",
+      "output": "Jedna linia:\n\n* `Prawda` — jeśli anagramy\n* `Fałsz` — jeśli nie",
+      "examples": [
+        {
+          "input": "ula\nlua",
+          "output": "Prawda"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "listen\nsilent",
+          "output": "Prawda"
+        },
+        {
+          "input": "abc\nab",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Najprościej: porównaj posortowane litery albo słowniki zliczeń znaków."
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "12_napisy_anagramy_i_palindromy/ZAD-04",
+      "title": "Palindromy w zdaniu",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "string",
+        "tokenizacja",
+        "palindrom"
+      ],
+      "description": "Wczytaj zdanie i wypisz wszystkie słowa, które są palindromami.\nIgnoruj wielkość liter przy sprawdzaniu.",
+      "input": "* 1. linia: zdanie (może zawierać spacje i znaki interpunkcyjne)",
+      "output": "Każdy znaleziony palindrom w osobnej linii, w kolejności występowania w zdaniu.",
+      "examples": [
+        {
+          "input": "Tata zabrał kajak na wycieczkę i uderzył się w oko",
+          "output": "Tata\nkajak\ni\nw\noko"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Ada Bob ala.",
+          "output": "Ada\nBob\nala"
+        },
+        {
+          "input": "Hello world",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": "* Traktuj „słowo” jako ciąg liter/cyfr po usunięciu interpunkcji z brzegów (np. `kara.` → `kara`).\n* Porównuj w wersji `lower()`, ale wypisz w oryginalnym brzmieniu z wejścia (tak jak w przykładzie)."
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "12_napisy_anagramy_i_palindromy/ZAD-05",
+      "title": "Anagramy słowa w zdaniu",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "anagram",
+        "string",
+        "zliczanie"
+      ],
+      "description": "Wczytaj zdanie oraz słowo-klucz. Wypisz wszystkie słowa ze zdania, które są anagramami słowa-klucza (ignoruj wielkość liter).",
+      "input": "* 1. linia: zdanie\n* 2. linia: słowo-klucz `k`",
+      "output": "Każde słowo ze zdania będące anagramem `k` — w osobnej linii (w kolejności występowania).",
+      "examples": [
+        {
+          "input": "Sroga kara.\narak",
+          "output": "kara"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "kara raka arka\narak",
+          "output": "kara\nraka\narka"
+        },
+        {
+          "input": "pies kot\nmysz",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": "* Tak jak wyżej: usuń interpunkcję z brzegów słów.\n* Porównuj np. posortowane litery w `lower()`."
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "12_napisy_anagramy_i_palindromy/ZAD-06",
+      "title": "Permutacje słowa, które są palindromami",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "palindrom",
+        "permutacje",
+        "multiset"
+      ],
+      "description": "Wczytaj słowo i wypisz wszystkie **unikalne** palindromy, które są jego permutacjami.",
+      "input": "* 1. linia: słowo (litery mogą się powtarzać)",
+      "output": "Każdy unikalny palindrom w osobnej linii. Jeśli nie istnieje żaden — puste wyjście.",
+      "examples": [
+        {
+          "input": "aabb",
+          "output": "abba\nbaab"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "aaaa",
+          "output": "aaaa"
+        },
+        {
+          "input": "abc",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": "* Najpierw sprawdź warunek istnienia palindromu z liter: co najwyżej jeden znak może mieć nieparzystą liczbę wystąpień.\n* Generuj palindromy z połówek (bez wypisywania duplikatów)."
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "12_napisy_anagramy_i_palindromy/ZAD-07",
+      "title": "Minimalna liczba usunięć, aby uzyskać anagramy",
+      "difficulty": 3,
+      "difficulty_display": "★★★",
+      "tags": [
+        "anagram",
+        "zliczanie",
+        "greedy"
+      ],
+      "description": "Wczytaj dwa słowa. Jeśli mają różne długości, wypisz `-1`.\nW przeciwnym razie oblicz minimalną liczbę znaków, które trzeba usunąć (łącznie z obu słów), aby pozostałe napisy były anagramami.",
+      "input": "* 1. linia: słowo `s1`\n* 2. linia: słowo `s2`",
+      "output": "* jedna liczba całkowita: minimalna liczba usunięć lub `-1`",
+      "examples": [
+        {
+          "input": "grazyna\nrazynax",
+          "output": "2"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "abc\nbcd",
+          "output": "2"
+        },
+        {
+          "input": "ab\nabc",
+          "output": "-1"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dla tej samej długości: policz zliczenia liter i zsumuj wartości `abs(c1[lit] - c2[lit])`, a wynik wypisz jako tę sumę. (To jest łączna liczba usunięć.)"
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "12_napisy_anagramy_i_palindromy/ZAD-08",
+      "title": "Wyjątkowe palindromy (podciągi bez zmiany kolejności)",
+      "difficulty": 3,
+      "difficulty_display": "★★★",
+      "tags": [
+        "substring",
+        "palindrom",
+        "unikalność"
+      ],
+      "description": "Wczytaj słowo i znajdź wszystkie **unikalne** palindromy, które można z niego utworzyć jako **spójne podciągi** (substringi), bez zmiany kolejności znaków, spełniające warunek „wyjątkowości”:\n\n1. wszystkie znaki są identyczne (np. `aaa`), **albo**\n2. wszystkie znaki poza środkowym są identyczne (np. `cbc`).\n\nPojedynczy znak też jest wyjątkowym palindromem.",
+      "input": "* 1. linia: słowo (litery)",
+      "output": "Każdy unikalny wyjątkowy palindrom w osobnej linii.\nJeśli nic poza pojedynczymi znakami nie pasuje, wypisz tylko te unikalne znaki (po jednej linii na znak).",
+      "examples": [
+        {
+          "input": "xxyxx",
+          "output": "x\nxx\nxxx\nxxyxx\ny\nyxy"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "aaa",
+          "output": "a\naa\naaa"
+        },
+        {
+          "input": "aba",
+          "output": "a\nb\naba"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Usuń duplikaty w wyniku (np. ten sam palindrom znaleziony w kilku miejscach wypisz raz).\n* Kolejność wypisywania może być zgodna z pierwszym pojawieniem się w tekście (łatwe i czytelne): wypisuj przy pierwszym znalezieniu danego palindromu."
+    }
+  ]
+}

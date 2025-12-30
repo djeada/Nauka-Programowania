@@ -1,0 +1,175 @@
+{
+  "file": "14_funkcje_wielomiany.md",
+  "chapter_title": "Rozdział: Funkcje — wielomiany",
+  "chapter_description": "Poniższe zadania dotyczą implementacji **funkcji** operujących na wielomianach zapisanych jako lista współczynników w kolejności od najwyższej potęgi do wyrazu wolnego:\n`[a_n, a_{n-1}, ..., a_0]` oznacza wielomian `a_n x^n + a_{n-1} x^{n-1} + ... + a_0`.\n**Konwencje wspólne:**\n* Każdy podpunkt to osobna funkcja (możesz też robić osobne programy testujące – ale zadanie dotyczy funkcji).\n* Współczynniki mogą być ujemne (czyli w praktyce: liczby całkowite).\n* Dla wyniku jako listy: zwracaj listę współczynników w tym samym formacie (od najwyższej potęgi).\n* Jeśli wynikowy wielomian ma wiodące zera, można je usuwać, ale **zostaw przynajmniej jedno zero**, jeśli cały wielomian jest zerowy (np. `[0]`).",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "14_funkcje_wielomiany/ZAD-01",
+      "title": "Wartość wielomianu w punkcie",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "wielomiany",
+        "Horner"
+      ],
+      "description": "Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `x`, a następnie zwraca wartość wielomianu w punkcie `x`.",
+      "input": "",
+      "output": "",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "[3, 2, 1]\n2",
+          "output": "17"
+        },
+        {
+          "input": "[1, 0, -1]\n3",
+          "output": "8"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Najprościej użyć schematu Hornera."
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "14_funkcje_wielomiany/ZAD-02",
+      "title": "Iloczyn wielomianu przez skalar",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "wielomiany",
+        "skalar"
+      ],
+      "description": "Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `k`, a następnie zwraca współczynniki wielomianu powstałego z pomnożenia każdego współczynnika przez `k`.",
+      "input": "",
+      "output": "",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "[4, -3, 2]\n-2",
+          "output": "[-8, 6, -4]"
+        },
+        {
+          "input": "[0, 5]\n3",
+          "output": "[0, 15]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "14_funkcje_wielomiany/ZAD-03",
+      "title": "Suma wielomianów",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "wielomiany",
+        "listy"
+      ],
+      "description": "Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` i `b` (mogą mieć różne stopnie) i zwraca współczynniki wielomianu będącego ich sumą.",
+      "input": "",
+      "output": "",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "[3, 5, 2]\n[2, -8, 1]",
+          "output": "[5, -3, 3]"
+        },
+        {
+          "input": "[1, 2, 3, 4]\n[5, 6]",
+          "output": "[1, 2, 8, 10]"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Jeśli listy mają różne długości, wyrównaj je od końca (od wyrazu wolnego)."
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "14_funkcje_wielomiany/ZAD-04",
+      "title": "Mnożenie wielomianów",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "funkcje",
+        "wielomiany",
+        "konwolucja"
+      ],
+      "description": "Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` i `b` i zwraca listę współczynników wielomianu będącego ich iloczynem.",
+      "input": "",
+      "output": "",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "[1, 2]\n[3, 4]",
+          "output": "[3, 10, 8]"
+        },
+        {
+          "input": "[2, 0, 1]\n[1, 1]",
+          "output": "[2, 2, 1, 1]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "14_funkcje_wielomiany/ZAD-05",
+      "title": "k-ta pochodna wielomianu",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "funkcje",
+        "pochodna",
+        "wielomiany"
+      ],
+      "description": "Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę naturalną `k` i zwraca współczynniki wielomianu będącego **k-tą pochodną**.",
+      "input": "",
+      "output": "",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "[4, -3, 2]\n1",
+          "output": "[8, -3]"
+        },
+        {
+          "input": "[5, 0, 0]\n3",
+          "output": "[0]"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Jeśli `k` jest większe niż stopień wielomianu, wynikiem jest wielomian zerowy: `[0]`."
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "14_funkcje_wielomiany/ZAD-06",
+      "title": "Miejsca zerowe równania kwadratowego (rzeczywiste)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "funkcje",
+        "delta",
+        "pierwiastki"
+      ],
+      "description": "Napisz funkcję, która otrzymuje listę współczynników równania kwadratowego `[a, b, c]` dla `a x^2 + b x + c` i zwraca listę **rzeczywistych** miejsc zerowych.",
+      "input": "",
+      "output": "",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "[1, 2, 1]",
+          "output": "[-1.0, -1.0]"
+        },
+        {
+          "input": "[1, 0, 1]",
+          "output": "[]"
+        }
+      ],
+      "constraints": "* Zakładamy `a ≠ 0` (to naprawdę równanie kwadratowe).",
+      "notes": "* Licz `Δ = b^2 - 4ac`.\n* Pierwiastki: `(-b ± sqrt(Δ)) / (2a)`."
+    }
+  ]
+}

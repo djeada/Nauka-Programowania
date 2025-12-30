@@ -19,7 +19,7 @@ This script converts all markdown files from the `zbior_zadan` directory to JSON
   - Constraints and notes
 - **Generates JSON files**:
   - Individual JSON file for each chapter (e.g., `01_interakcja_z_konsola.json`)
-  - Combined `all_exercises.json` with all exercises
+- **Merges testcases** from per-chapter JSON maps in `zbior_zadan_tests`
 - **API-ready format**: JSON structure designed for easy integration with coding platforms
 
 ### Requirements
@@ -36,7 +36,7 @@ python3 scripts/md_to_json.py
 
 This will create a `zbior_zadan_json` directory containing:
 - 25 individual JSON files (one per chapter)
-- 1 combined `all_exercises.json` file with all exercises
+If `zbior_zadan_tests` exists, testcases will be merged into each exercise.
 
 #### Command-line Options
 
@@ -48,6 +48,7 @@ Available options:
 - `--input-dir DIR`: Input directory containing markdown files (default: `zbior_zadan`)
 - `--output-dir DIR`: Output directory for JSON files (default: `zbior_zadan_json`)
 - `--exclude FILE [FILE ...]`: Files to exclude from processing (default: `szablon.md`)
+- `--tests-dir DIR`: Directory containing per-chapter testcase maps (default: `zbior_zadan_tests`)
 
 Example with custom directories:
 ```bash
@@ -66,6 +67,7 @@ Each generated JSON file follows this structure:
   "exercises": [
     {
       "id": "ZAD-01",
+      "slug": "01_interakcja_z_konsola/ZAD-01",
       "title": "Wypisywanie tekstu na ekran",
       "difficulty": 1,
       "difficulty_display": "★☆☆",
@@ -74,6 +76,12 @@ Each generated JSON file follows this structure:
       "input": "...",
       "output": "...",
       "examples": [
+        {
+          "input": "...",
+          "output": "..."
+        }
+      ],
+      "testcases": [
         {
           "input": "...",
           "output": "..."
@@ -98,6 +106,24 @@ The script generates approximately 500KB of JSON data total, containing:
 - **25 chapters**
 - **270+ exercises**
 - Complete problem descriptions, examples, and constraints
+
+### Testcase Maps
+
+Place per-chapter testcase maps in `zbior_zadan_tests` with the same filename as
+the chapter, e.g. `zbior_zadan_tests/01_interakcja_z_konsola.json`.
+
+Each file should be a JSON map from exercise id or slug to an array of cases:
+
+```json
+{
+  "ZAD-01": [
+    {"input": "", "output": "Witaj, świecie!\n"}
+  ],
+  "01_interakcja_z_konsola/ZAD-02": [
+    {"input": "-7\n4\n", "output": "4\n-7\n"}
+  ]
+}
+```
 
 ## generate_pdf.py
 

@@ -1,0 +1,693 @@
+{
+  "file": "16_system_binarny.md",
+  "chapter_title": "Rozdział: Bity i systemy liczbowe",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli zadanie mówi „nie wypisuj nic” — nie drukuj nawet pustej linii.\n* Reprezentacje binarne wypisuj jako ciąg znaków `0` i `1` **bez spacji**.\n* Dla systemów o podstawie `> 10` używaj cyfr `0–9` oraz liter `A–Z` (wielkie).\n* Nie wypisuj promptów typu „Podaj liczbę”.",
+  "exercises": [
+    {
+      "id": "ZAD-01A",
+      "slug": "16_system_binarny/ZAD-01A",
+      "title": "Dziesiętny → binarny",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "konwersja",
+        "binarne",
+        "pętle"
+      ],
+      "description": "Wczytaj liczbę naturalną w systemie dziesiętnym i wypisz jej reprezentację binarną.",
+      "input": "* 1. linia: `n` (liczba naturalna)",
+      "output": "Jedna linia: zapis binarny `n`.",
+      "examples": [
+        {
+          "input": "3",
+          "output": "11"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "0"
+        },
+        {
+          "input": "13",
+          "output": "1101"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-01B",
+      "slug": "16_system_binarny/ZAD-01B",
+      "title": "Binarny → dziesiętny",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "konwersja",
+        "string",
+        "binarne"
+      ],
+      "description": "Wczytaj liczbę naturalną w systemie binarnym (ciąg `0/1`) i wypisz jej wartość w systemie dziesiętnym.",
+      "input": "* 1. linia: `b` (ciąg znaków `0` i `1`)",
+      "output": "Jedna linia: liczba w systemie dziesiętnym.",
+      "examples": [
+        {
+          "input": "101",
+          "output": "5"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "0"
+        },
+        {
+          "input": "10110",
+          "output": "22"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02A",
+      "slug": "16_system_binarny/ZAD-02A",
+      "title": "Wypisz binarnie tylko gdy liczba parzysta",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "warunki",
+        "parzystość",
+        "binarne"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Jeśli `n` jest parzysta — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.",
+      "input": "* 1. linia: `n` (liczba naturalna)",
+      "output": "* Jeśli `n % 2 == 0`: jedna linia z zapisem binarnym `n`\n* W przeciwnym razie: brak wyjścia",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "8",
+          "output": "1000"
+        },
+        {
+          "input": "7",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02B",
+      "slug": "16_system_binarny/ZAD-02B",
+      "title": "Wypisz binarnie tylko gdy liczba pierwsza",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pierwszość",
+        "warunki",
+        "binarne"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Jeśli `n` jest liczbą pierwszą — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.",
+      "input": "* 1. linia: `n` (liczba naturalna)",
+      "output": "* Jeśli `n` jest pierwsza: jedna linia z zapisem binarnym `n`\n* W przeciwnym razie: brak wyjścia",
+      "examples": [
+        {
+          "input": "7",
+          "output": "111"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "11",
+          "output": "1011"
+        },
+        {
+          "input": "12",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03A",
+      "slug": "16_system_binarny/ZAD-03A",
+      "title": "Dodawanie bitowe",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "bitwise",
+        "XOR",
+        "AND"
+      ],
+      "description": "Wczytaj dwie liczby naturalne `a` i `b`. Oblicz `a + b` używając wyłącznie operatorów bitowych (i przesunięć).",
+      "input": "* 1. linia: `a`\n* 2. linia: `b`",
+      "output": "Jedna liczba naturalna: `a + b`.",
+      "examples": [
+        {
+          "input": "2\n3",
+          "output": "5"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n9",
+          "output": "14"
+        },
+        {
+          "input": "0\n0",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03B",
+      "slug": "16_system_binarny/ZAD-03B",
+      "title": "Odejmowanie bitowe",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "bitwise",
+        "pożyczki",
+        "XOR"
+      ],
+      "description": "Wczytaj `a` i `b`. Oblicz `a - b` używając wyłącznie operatorów bitowych.",
+      "input": "* 1. linia: `a`\n* 2. linia: `b`",
+      "output": "Jedna liczba naturalna: `a - b`.",
+      "examples": [
+        {
+          "input": "7\n5",
+          "output": "2"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "10\n3",
+          "output": "7"
+        },
+        {
+          "input": "5\n5",
+          "output": "0"
+        }
+      ],
+      "constraints": "* Zakładamy, że `a ≥ b` (wynik jest naturalny).",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03C",
+      "slug": "16_system_binarny/ZAD-03C",
+      "title": "Mnożenie bitowe",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "bitwise",
+        "shift",
+        "pętle"
+      ],
+      "description": "Wczytaj `a` i `b`. Oblicz `a * b` używając wyłącznie operatorów bitowych (np. metoda „shift-and-add”).",
+      "input": "* 1. linia: `a`\n* 2. linia: `b`",
+      "output": "Jedna liczba naturalna: `a * b`.",
+      "examples": [
+        {
+          "input": "4\n4",
+          "output": "16"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "7\n6",
+          "output": "42"
+        },
+        {
+          "input": "0\n5",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03D",
+      "slug": "16_system_binarny/ZAD-03D",
+      "title": "Dzielenie całkowite bitowe",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "bitwise",
+        "dzielenie",
+        "shift"
+      ],
+      "description": "Wczytaj `a` i `b`. Oblicz `a // b` używając wyłącznie operatorów bitowych.",
+      "input": "* 1. linia: `a`\n* 2. linia: `b`",
+      "output": "Jedna liczba naturalna: `a // b`.",
+      "examples": [
+        {
+          "input": "9\n3",
+          "output": "3"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "17\n3",
+          "output": "5"
+        },
+        {
+          "input": "100\n10",
+          "output": "10"
+        }
+      ],
+      "constraints": "* `b > 0`",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04A",
+      "slug": "16_system_binarny/ZAD-04A",
+      "title": "Liczba zer w zapisie binarnym",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "binarne",
+        "zliczanie"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Policz, ile znaków `0` zawiera jej binarna reprezentacja (bez wiodących zer).",
+      "input": "* 1. linia: `n`",
+      "output": "Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.",
+      "examples": [
+        {
+          "input": "3",
+          "output": "0"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "1"
+        },
+        {
+          "input": "10",
+          "output": "2"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dla `n = 0` binarnie to `0`, więc liczba zer wynosi `1`."
+    },
+    {
+      "id": "ZAD-04B",
+      "slug": "16_system_binarny/ZAD-04B",
+      "title": "Liczba jedynek w zapisie binarnym",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "popcount",
+        "binarne"
+      ],
+      "description": "Wczytaj `n`. Policz, ile bitów `1` ma liczba w zapisie binarnym.",
+      "input": "* 1. linia: `n`",
+      "output": "Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.",
+      "examples": [
+        {
+          "input": "3",
+          "output": "2"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "0"
+        },
+        {
+          "input": "15",
+          "output": "4"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05A",
+      "slug": "16_system_binarny/ZAD-05A",
+      "title": "Minimum bez instrukcji warunkowych",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "bit-trick",
+        "min/max",
+        "bez if"
+      ],
+      "description": "Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, `?:`) i bez bibliotek.",
+      "input": "* 1. linia: `a`\n* 2. linia: `b`",
+      "output": "Jedna liczba naturalna: `min(a, b)`.",
+      "examples": [
+        {
+          "input": "3\n2",
+          "output": "2"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "9\n2",
+          "output": "2"
+        },
+        {
+          "input": "5\n5",
+          "output": "5"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dopuszczalne są operacje arytmetyczne i bitowe."
+    },
+    {
+      "id": "ZAD-05B",
+      "slug": "16_system_binarny/ZAD-05B",
+      "title": "Maksimum bez instrukcji warunkowych",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "bit-trick",
+        "min/max",
+        "bez if"
+      ],
+      "description": "Wczytaj `a` i `b`. Wypisz większą z nich **bez użycia instrukcji warunkowych** i bez bibliotek.",
+      "input": "* 1. linia: `a`\n* 2. linia: `b`",
+      "output": "Jedna liczba naturalna: `max(a, b)`.",
+      "examples": [
+        {
+          "input": "3\n2",
+          "output": "3"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "9\n2",
+          "output": "9"
+        },
+        {
+          "input": "5\n5",
+          "output": "5"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "16_system_binarny/ZAD-06",
+      "title": "Konwersja między dowolnymi systemami (2..36)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "konwersja",
+        "base",
+        "string"
+      ],
+      "description": "Wczytaj:\n\n1. liczbę `X` zapisaną w systemie o podstawie `p`\n2. podstawę `p` (2..36)\n3. podstawę docelową `q` (2..36)\n\ni wypisz reprezentację `X` w systemie o podstawie `q`.",
+      "input": "Trzy linie:\n\n1. `X` (zapis liczby; dla podstaw >10 może zawierać litery `A-Z`)\n2. `p` (2..36)\n3. `q` (2..36)",
+      "output": "Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`).",
+      "examples": [
+        {
+          "input": "4301\n10\n4",
+          "output": "1003031"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1A\n16\n10",
+          "output": "26"
+        },
+        {
+          "input": "1011\n2\n16",
+          "output": "B"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "16_system_binarny/ZAD-07",
+      "title": "Zamiana sąsiadujących bitów",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "bitwise",
+        "maski",
+        "swap bits"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Zamień miejscami każdą parę sąsiadujących bitów w jej zapisie binarnym:\n\n* bit 0 z bitem 1,\n* bit 2 z bitem 3,\n* bit 4 z bitem 5,\n* itd.\n\nNastępnie wypisz wynik w systemie dziesiętnym.",
+      "input": "* 1. linia: `n`",
+      "output": "Jedna liczba naturalna: wynik po zamianie bitów.",
+      "examples": [
+        {
+          "input": "9131",
+          "output": "4951"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "13",
+          "output": "14"
+        },
+        {
+          "input": "2",
+          "output": "1"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Jeśli liczba ma nieparzystą liczbę bitów, najwyższy (samotny) bit pozostaje bez zmian."
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "16_system_binarny/ZAD-08",
+      "title": "Najbliższa potęga dwójki (>= n)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "potęgi 2",
+        "bitwise",
+        "pętle"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która jest **większa lub równa** `n`.",
+      "input": "* 1. linia: `n`",
+      "output": "Jedna liczba naturalna: najmniejsze `2^k ≥ n`.",
+      "examples": [
+        {
+          "input": "111",
+          "output": "128"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "1"
+        },
+        {
+          "input": "5",
+          "output": "8"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dla `n = 0` przyjmij wynik `1`."
+    },
+    {
+      "id": "ZAD-09A",
+      "slug": "16_system_binarny/ZAD-09A",
+      "title": "Wielkie → małe (bitowo)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "ASCII",
+        "bitwise",
+        "string"
+      ],
+      "description": "Wczytaj napis z liter alfabetu łacińskiego. Zamień wszystkie wielkie litery na małe, używając operacji bitowych na kodach ASCII.",
+      "input": "* 1. linia: napis",
+      "output": "Jedna linia: napis po konwersji.",
+      "examples": [
+        {
+          "input": "Test",
+          "output": "test"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "TeSt123",
+          "output": "test123"
+        },
+        {
+          "input": "ABC",
+          "output": "abc"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-09B",
+      "slug": "16_system_binarny/ZAD-09B",
+      "title": "Małe → wielkie (bitowo)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "ASCII",
+        "bitwise",
+        "string"
+      ],
+      "description": "Wczytaj napis. Zamień wszystkie małe litery na wielkie, używając operacji bitowych na ASCII.",
+      "input": "* 1. linia: napis",
+      "output": "Jedna linia: napis po konwersji.",
+      "examples": [
+        {
+          "input": "Test",
+          "output": "TEST"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "TeSt123",
+          "output": "TEST123"
+        },
+        {
+          "input": "xyz",
+          "output": "XYZ"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-09C",
+      "slug": "16_system_binarny/ZAD-09C",
+      "title": "Odwróć wielkość liter (bitowo)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "ASCII",
+        "bitwise",
+        "toggle case"
+      ],
+      "description": "Wczytaj napis. Zamień wielkość każdej litery na przeciwną (mała↔wielka) używając operacji bitowych na ASCII.",
+      "input": "* 1. linia: napis",
+      "output": "Jedna linia: napis po zmianie.",
+      "examples": [
+        {
+          "input": "Test",
+          "output": "tEST"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "TeSt",
+          "output": "tEsT"
+        },
+        {
+          "input": "aZ",
+          "output": "Az"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "16_system_binarny/ZAD-10",
+      "title": "Ile bitów trzeba odwrócić (A → B)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "XOR",
+        "popcount",
+        "bitwise"
+      ],
+      "description": "Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w `A`, aby otrzymać `B`.",
+      "input": "* 1. linia: `A`\n* 2. linia: `B`",
+      "output": "Jedna liczba naturalna: liczba różniących się bitów.",
+      "examples": [
+        {
+          "input": "34\n73",
+          "output": "5"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "29\n15",
+          "output": "2"
+        },
+        {
+          "input": "0\n0",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-11",
+      "slug": "16_system_binarny/ZAD-11",
+      "title": "Palindrom w systemie binarnym",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "binarne",
+        "palindrom",
+        "string"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Sprawdź, czy jej reprezentacja binarna (bez wiodących zer) jest palindromem.\n\nWypisz:\n\n* `Prawda` — jeśli tak,\n* `Fałsz` — jeśli nie.",
+      "input": "* 1. linia: `n`",
+      "output": "Jedno słowo: `Prawda` lub `Fałsz`.",
+      "examples": [
+        {
+          "input": "26",
+          "output": "Fałsz"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "9",
+          "output": "Prawda"
+        },
+        {
+          "input": "10",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-12",
+      "slug": "16_system_binarny/ZAD-12",
+      "title": "Najdłuższy ciąg zer otoczony jedynkami",
+      "difficulty": 3,
+      "difficulty_display": "★★★",
+      "tags": [
+        "binarne",
+        "binary gap",
+        "pętle"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. W jej reprezentacji binarnej znajdź długość najdłuższego ciągu kolejnych zer, który jest **z obu stron otoczony jedynkami** (tzw. *binary gap*).\n\nJeśli nie ma takiego ciągu — wypisz `0`.",
+      "input": "* 1. linia: `n`",
+      "output": "Jedna liczba naturalna: długość najdłuższego „gapu”.",
+      "examples": [
+        {
+          "input": "14",
+          "output": "0"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "20",
+          "output": "1"
+        },
+        {
+          "input": "9",
+          "output": "2"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}

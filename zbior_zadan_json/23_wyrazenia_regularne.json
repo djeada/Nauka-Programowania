@@ -1,0 +1,354 @@
+{
+  "file": "23_wyrazenia_regularne.md",
+  "chapter_title": "Rozdział: Wyrażenia regularne (stdin/stdout)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.\n* Dla wartości logicznych wypisuj dokładnie `Prawda` lub `Fałsz`.",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "23_wyrazenia_regularne/ZAD-01",
+      "title": "Sprawdź poprawność adresu e-mail",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "regex",
+        "string",
+        "walidacja"
+      ],
+      "description": "Otrzymujesz napis reprezentujący adres e-mail. Sprawdź, czy jest poprawny zgodnie z regułami:\n\n* Adres e-mail składa się z identyfikatora użytkownika, znaku `@` oraz nazwy domeny.\n* **Identyfikator użytkownika** może zawierać wyłącznie:\n\n  * litery `a–z`, `A–Z`,\n  * cyfry `0–9`,\n  * znaki specjalne: `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`,\n  * kropki `.`, ale:\n\n    * nie może być pierwszym ani ostatnim znakiem,\n    * nie może wystąpić dwukrotnie po sobie.\n* **Nazwa domeny** może zawierać wyłącznie:\n\n  * litery `a–z`, `A–Z`,\n  * cyfry `0–9`,\n  * kropki `.` oraz myślniki `-`, ale:\n\n    * nie mogą być pierwszym ani ostatnim znakiem,\n    * nie mogą wystąpić dwukrotnie po sobie.",
+      "input": "Jedna linia:\n\n* `email`",
+      "output": "Jedna linia:\n\n* `Prawda` — jeśli e-mail jest poprawny\n* `Fałsz` — w przeciwnym razie",
+      "examples": [
+        {
+          "input": "adam@gmail.com",
+          "output": "Prawda"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "adam@gmail.com",
+          "output": "Prawda"
+        },
+        {
+          "input": "..bad@domain.com",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "23_wyrazenia_regularne/ZAD-02",
+      "title": "Sprawdź poprawność hasła",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "regex",
+        "string",
+        "walidacja"
+      ],
+      "description": "Otrzymujesz napis reprezentujący hasło. Sprawdź, czy hasło spełnia wszystkie warunki:\n\n1. Zawiera co najmniej jedną małą literę `[a–z]`.\n2. Zawiera co najmniej jedną wielką literę `[A–Z]`.\n3. Zawiera co najmniej jedną cyfrę `[0–9]`.\n4. Zawiera co najmniej jeden znak specjalny spośród:\n   `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`.\n5. Ma długość co najmniej 8 znaków.\n6. Ma długość nie większą niż 20 znaków.",
+      "input": "Jedna linia:\n\n* `haslo`",
+      "output": "Jedna linia:\n\n* `Prawda` albo `Fałsz`",
+      "examples": [
+        {
+          "input": "abc1234",
+          "output": "Fałsz"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Abcdef1!",
+          "output": "Prawda"
+        },
+        {
+          "input": "abc1234",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "23_wyrazenia_regularne/ZAD-03",
+      "title": "Sprawdź, czy napis składa się wyłącznie z cyfr",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "regex",
+        "string"
+      ],
+      "description": "Otrzymujesz napis. Sprawdź, czy składa się wyłącznie z cyfr (`0–9`).",
+      "input": "Jedna linia:\n\n* `s`",
+      "output": "Jedna linia:\n\n* `Prawda` — jeśli napis zawiera tylko cyfry\n* `Fałsz` — w przeciwnym razie",
+      "examples": [
+        {
+          "input": "1234",
+          "output": "Prawda"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "123456",
+          "output": "Prawda"
+        },
+        {
+          "input": "12a",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "23_wyrazenia_regularne/ZAD-04",
+      "title": "Sprawdź, czy słowo występuje w zdaniu jako osobne słowo",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "regex",
+        "string"
+      ],
+      "description": "Otrzymujesz dwa napisy: zdanie oraz słowo. Sprawdź, czy słowo występuje w zdaniu jako samodzielne słowo (nie jako fragment innego słowa).",
+      "input": "Dwie linie:\n\n1. `zdanie`\n2. `slowo`",
+      "output": "Jedna linia:\n\n* `Prawda` albo `Fałsz`",
+      "examples": [
+        {
+          "input": "Siała baba mak.\nbabcia",
+          "output": "Fałsz"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "ala ma kota\nma",
+          "output": "Prawda"
+        },
+        {
+          "input": "Siala baba mak\nbab",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "23_wyrazenia_regularne/ZAD-05",
+      "title": "Wyodrębnij cyfry z tekstu",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "regex",
+        "string"
+      ],
+      "description": "Otrzymujesz napis zawierający różne znaki. Wyodrębnij wszystkie cyfry i wypisz je jako jeden napis (z zachowaniem kolejności).",
+      "input": "Jedna linia:\n\n* `tekst`",
+      "output": "Jedna linia:\n\n* napis złożony tylko z cyfr z tekstu wejściowego",
+      "examples": [
+        {
+          "input": "Terminator2001",
+          "output": "2001"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "A1b2C3",
+          "output": "123"
+        },
+        {
+          "input": "NoDigits",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "23_wyrazenia_regularne/ZAD-06",
+      "title": "Wiersze kończące się określonym napisem",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "regex",
+        "string",
+        "linijki"
+      ],
+      "description": "Otrzymujesz dwa napisy:\n\n1. tekst wielowierszowy,\n2. słowo lub fragment.\n\nZnajdź wszystkie wiersze, które kończą się podanym napisem (wiersz może kończyć się znakiem interpunkcyjnym).",
+      "input": "Dwie części:\n\n1. Tekst (wiele wierszy)\n2. W osobnej linii: `koncowka`\n\n*(Sposób wczytania tekstu wielowierszowego zależy od platformy — przyjmij, że tekst jest podany w całości jako wejście, a ostatnia linia to `koncowka`.)*",
+      "output": "Wiersze spełniające warunek, każdy w osobnej linii, w kolejności występowania.",
+      "examples": [
+        {
+          "input": "Folgujmy paniom nie sobie, ma rada;\nMilujmy wiernie nie jest w nich przysada.\nGodności trzeba nie za nic tu cnota,\nMiłości pragną nie pragną tu złota.\nda",
+          "output": "Folgujmy paniom nie sobie, ma rada;\nMilujmy wiernie nie jest w nich przysada."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "alpha end.\nbeta end!\ngamma\nend",
+          "output": "alpha end.\nbeta end!"
+        },
+        {
+          "input": "one.\ntwo?\nthree\nee",
+          "output": "three"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "23_wyrazenia_regularne/ZAD-07",
+      "title": "Podziel tekst względem znaków interpunkcyjnych",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "regex",
+        "string"
+      ],
+      "description": "Otrzymujesz napis (jedno lub kilka zdań). Podziel tekst na fragmenty w miejscach występowania znaków interpunkcyjnych (np. `, . ! ? ; :`). Usuń spacje na początku i końcu każdego fragmentu.",
+      "input": "Jedna linia:\n\n* `tekst`",
+      "output": "Każdy fragment w osobnej linii.",
+      "examples": [
+        {
+          "input": "Ani nie poszedł do kina, ani nie wybrał się do teatru.",
+          "output": "Ani nie poszedł do kina\nani nie wybrał się do teatru"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Hi, there! Ok.",
+          "output": "Hi\nthere\nOk"
+        },
+        {
+          "input": "Ala; ma, kota",
+          "output": "Ala\nma\nkota"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "23_wyrazenia_regularne/ZAD-08",
+      "title": "Cyfry w słowach",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "regex",
+        "string"
+      ],
+      "description": "Otrzymujesz zdanie. Wyodrębnij wszystkie ciągi cyfr, które są częścią słów (czyli są bezpośrednio połączone z literami). Nie uwzględniaj cyfr oddzielonych od liter spacjami.",
+      "input": "Jedna linia:\n\n* `zdanie`",
+      "output": "Każdy znaleziony ciąg cyfr w osobnej linii (w kolejności występowania).",
+      "examples": [
+        {
+          "input": "Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego",
+          "output": "29\n37\n3\n91"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "ab12 cd 3e4 f",
+          "output": "12\n3\n4"
+        },
+        {
+          "input": "x9y z 10",
+          "output": "9"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "23_wyrazenia_regularne/ZAD-09",
+      "title": "Usuń fragment napisu od pierwszego wystąpienia słowa klucz",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "regex",
+        "string"
+      ],
+      "description": "Otrzymujesz tekst (wiele zdań lub wierszy) oraz słowo klucz. Jeśli słowo klucz wystąpi w tekście, usuń całą część od **pierwszego wystąpienia** tego słowa do końca tekstu. Jeśli słowo klucz nie występuje, wypisz tekst bez zmian.",
+      "input": "Dwie części:\n\n1. Tekst (może mieć wiele wierszy)\n2. W osobnej linii: `klucz`",
+      "output": "Zmodyfikowany tekst.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "Hello key world\nkey",
+          "output": "Hello "
+        },
+        {
+          "input": "No keyword here\nXYZ",
+          "output": "No keyword here"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "23_wyrazenia_regularne/ZAD-10",
+      "title": "Podmień napisy z listy A na napisy z listy B",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "regex",
+        "string",
+        "zamiana"
+      ],
+      "description": "Otrzymujesz:\n\n* tekst,\n* listę A (napisy do znalezienia),\n* listę B (napisy do podmiany), tej samej długości co A.\n\nZastąp w tekście wszystkie wystąpienia słów z listy A odpowiadającymi im słowami z listy B (ten sam indeks). Zamieniaj tylko **całe słowa**, nie fragmenty innych słów.",
+      "input": "1. Tekst (jedna lub wiele linii)\n2. Liczba naturalna `n` — długość list\n3. `n` wierszy: elementy listy A\n4. `n` wierszy: elementy listy B",
+      "output": "Zmodyfikowany tekst.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "dog cat doge\n2\ndog\ncat\nwolf\ntiger",
+          "output": "wolf tiger doge"
+        },
+        {
+          "input": "one two three\n1\ntwo\n2",
+          "output": "one 2 three"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-11",
+      "slug": "23_wyrazenia_regularne/ZAD-11",
+      "title": "Nazwa pliku bez rozszerzenia",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "regex",
+        "string",
+        "ścieżki"
+      ],
+      "description": "Otrzymujesz napis reprezentujący pełną ścieżkę do pliku. Wyodrębnij nazwę pliku (bez katalogów) i usuń rozszerzenie (część po ostatniej kropce). Zwróć samą nazwę bez rozszerzenia.\n\nŚcieżka może zawierać separator `\\` lub `/`.",
+      "input": "Jedna linia:\n\n* `sciezka`",
+      "output": "Jedna linia:\n\n* `nazwa_pliku_bez_rozszerzenia`",
+      "examples": [
+        {
+          "input": "C:\\my-long\\path_directory\\file.html",
+          "output": "file"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "C:/path/to/file.txt",
+          "output": "file"
+        },
+        {
+          "input": "folder/inner/archive.tar.gz",
+          "output": "archive.tar"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}

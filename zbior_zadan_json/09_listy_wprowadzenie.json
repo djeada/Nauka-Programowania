@@ -1,0 +1,602 @@
+{
+  "file": "09_listy_wprowadzenie.md",
+  "chapter_title": "Rozdział: Listy — Wprowadzenie",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wyjściowych jest „elementy oddzielone przecinkami” — użyj przecinka **bez spacji**.\n* Jeśli w danych wyjściowych jest „oddzielone spacją” — użyj pojedynczej spacji.\n* Nie wypisuj promptów typu „Podaj N”.",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "09_listy_wprowadzenie/ZAD-01",
+      "title": "Wczytaj i wypisz",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "listy",
+        "I/O",
+        "odwracanie"
+      ],
+      "description": "Wczytaj `N`, następnie `N` liczb całkowitych do listy.\n\na) Wypisz elementy listy od początku do końca — każdy w osobnej linii.\nb) Wypisz elementy listy od końca do początku — w **jednej** linii, oddzielone przecinkami (bez spacji).",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby całkowite",
+      "output": "a) `N` linii — elementy w kolejności wczytania.\nb) 1 linia — elementy w kolejności odwrotnej, oddzielone przecinkami.",
+      "examples": [
+        {
+          "input": "3\n8\n12\n7",
+          "output": "8\n12\n7\n7,12,8"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\n1\n2\n3",
+          "output": "1\n2\n3\n3,2,1"
+        },
+        {
+          "input": "1\n9",
+          "output": "9\n9"
+        }
+      ],
+      "constraints": "",
+      "notes": "* W podpunkcie (b) nie dodawaj przecinka na końcu."
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "09_listy_wprowadzenie/ZAD-02",
+      "title": "Wczytaj, zmodyfikuj i wypisz",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "listy",
+        "indeksy",
+        "modyfikacja"
+      ],
+      "description": "Wczytaj `N` oraz `N` liczb całkowitych do listy. Następnie:\n\na) Zwiększ każdy element o `1`.\nb) Pomnóż każdy element przez jego indeks (indeksy od `0`).\nc) Zastąp wszystkie elementy wartością pierwszego elementu.\n\nPo każdym podpunkcie wypisz wynikową listę w **jednej** linii, elementy oddzielone przecinkami.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby całkowite",
+      "output": "Trzy linie:\n\n1. wynik po (a)\n2. wynik po (b)\n3. wynik po (c)\n\nElementy w linii oddzielone przecinkami (bez spacji).",
+      "examples": [
+        {
+          "input": "3\n3\n9\n7",
+          "output": "4,10,8\n0,9,14\n3,3,3"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\n3\n9\n7",
+          "output": "4,10,8\n0,9,14\n3,3,3"
+        },
+        {
+          "input": "2\n5\n-1",
+          "output": "6,0\n0,-1\n5,5"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "09_listy_wprowadzenie/ZAD-03",
+      "title": "Pierwsze wystąpienie klucza",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "listy",
+        "wyszukiwanie",
+        "indeksy"
+      ],
+      "description": "Wczytaj listę liczb całkowitych oraz liczbę `klucz`. Wypisz indeks pierwszego wystąpienia `klucz` w liście.\nJeśli `klucz` nie występuje — wypisz `-1`.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby całkowite\n* ostatnia linia: `klucz` (liczba całkowita)",
+      "output": "Jedna liczba całkowita — indeks (od `0`) lub `-1`.",
+      "examples": [
+        {
+          "input": "5\n2\n9\n-1\n3\n8\n-1",
+          "output": "2"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n2\n9\n-1\n3\n8\n-1",
+          "output": "2"
+        },
+        {
+          "input": "3\n5\n6\n7\n4",
+          "output": "-1"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "09_listy_wprowadzenie/ZAD-04",
+      "title": "Minimum oraz maksimum",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "listy",
+        "min",
+        "max"
+      ],
+      "description": "Wczytaj `N` liczb całkowitych. Wypisz:\n\n1. największą liczbę w liście\n2. najmniejszą liczbę w liście\n\nw jednej linii, oddzielone pojedynczą spacją.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby całkowite",
+      "output": "Jedna linia:\n\n* `max min`",
+      "examples": [
+        {
+          "input": "9\n4\n-7\n8\n5\n6\n-9\n10\n2\n-8",
+          "output": "10 -9"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\n1\n9\n-2\n5",
+          "output": "9 -2"
+        },
+        {
+          "input": "1\n7",
+          "output": "7 7"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "09_listy_wprowadzenie/ZAD-05",
+      "title": "Zmodyfikuj elementy spełniające warunek",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "listy",
+        "warunki",
+        "liczby pierwsze"
+      ],
+      "description": "Wczytaj listę liczb całkowitych. Dla każdego podpunktu utwórz **nową listę** na podstawie listy z poprzedniego podpunktu i wypisz ją w jednej linii (przecinki bez spacji):\n\na) Zwiększ o 1 elementy o **parzystych indeksach** (0,2,4,...).\nb) Ustaw na `0` elementy będące **wielokrotnością 3**.\nc) Podnieś do kwadratu elementy **mniejsze niż 10**.\nd) Oblicz sumę wszystkich elementów listy i wstaw tę sumę na indeksy, które są **liczbami pierwszymi** (2,3,5,7,11,...) — tylko te, które mieszczą się w zakresie listy.\ne) Zamień każdy element na **iloczyn wszystkich pozostałych elementów** listy.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby całkowite",
+      "output": "Pięć linii (po kolei: a, b, c, d, e), w każdej lista oddzielona przecinkami.",
+      "examples": [
+        {
+          "input": "5\n5\n7\n9\n4\n2",
+          "output": "6,7,10,4,3\n6,7,0,4,3\n36,49,0,16,9\n36,49,36,36,9\n0,0,0,0,0"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\n2\n4\n6\n8",
+          "output": "3,4,7,8\n0,4,7,8\n0,16,49,64\n0,16,129,129\n266256,0,0,0"
+        },
+        {
+          "input": "3\n1\n2\n3",
+          "output": "2,2,4\n2,2,0\n4,4,0\n4,4,8\n0,0,0"
+        }
+      ],
+      "constraints": "",
+      "notes": "* W podpunkcie (d) indeks 0 i 1 nie są pierwsze.\n* W podpunkcie (e) jeśli w liście jest `0`, to wiele wyników będzie `0` — to normalne.\n* Nie dodawaj przecinków na końcu linii."
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "09_listy_wprowadzenie/ZAD-06",
+      "title": "Czy średnia elementów znajduje się w liście?",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "listy",
+        "średnia",
+        "wyszukiwanie"
+      ],
+      "description": "Wczytaj listę liczb całkowitych. Oblicz średnią arytmetyczną elementów i sprawdź, czy ta średnia jest **dokładnie** jednym z elementów listy.\n\nWypisz:\n\n* `Tak` — jeśli średnia występuje w liście,\n* `Nie` — w przeciwnym razie.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby całkowite",
+      "output": "Jedno słowo: `Tak` lub `Nie`.",
+      "examples": [
+        {
+          "input": "5\n6\n2\n1\n4\n27",
+          "output": "Nie"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\n2\n4\n6\n8",
+          "output": "Nie"
+        },
+        {
+          "input": "3\n2\n4\n6",
+          "output": "Tak"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb całkowitych."
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "09_listy_wprowadzenie/ZAD-07",
+      "title": "Średnia dwóch największych liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "listy",
+        "max",
+        "sortowanie",
+        "float"
+      ],
+      "description": "Wczytaj `N` liczb naturalnych (`N ≥ 2`). Znajdź największą i drugą największą wartość, a następnie wypisz ich średnią arytmetyczną jako liczbę zmiennoprzecinkową z dokładnością do **jednego** miejsca po przecinku.",
+      "input": "* 1. linia: `N` (`N ≥ 2`)\n* kolejne `N` linii: liczby naturalne",
+      "output": "Jedna liczba zmiennoprzecinkowa w formacie `%.1f`.",
+      "examples": [
+        {
+          "input": "6\n9\n2\n3\n2\n1\n7",
+          "output": "8.0"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\n9\n7\n3\n1",
+          "output": "8.0"
+        },
+        {
+          "input": "2\n5\n6",
+          "output": "5.5"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "09_listy_wprowadzenie/ZAD-08",
+      "title": "Usuń klucz",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "listy",
+        "remove",
+        "wyszukiwanie"
+      ],
+      "description": "Wczytaj listę liczb całkowitych oraz `klucz`. Usuń **pierwsze** wystąpienie `klucz` (jeśli istnieje). Następnie wypisz listę po modyfikacji w jednej linii, elementy oddzielone przecinkami.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby całkowite\n* ostatnia linia: `klucz` (liczba całkowita)",
+      "output": "Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.",
+      "examples": [
+        {
+          "input": "5\n6\n2\n1\n4\n27\n4",
+          "output": "6,2,1,27"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n6\n2\n1\n4\n27\n4",
+          "output": "6,2,1,27"
+        },
+        {
+          "input": "3\n1\n2\n3\n4",
+          "output": "1,2,3"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Jeśli `klucz` nie występuje, wypisz listę bez zmian."
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "09_listy_wprowadzenie/ZAD-09",
+      "title": "Usuń duplikaty (z zachowaniem kolejności)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "listy",
+        "duplikaty",
+        "set"
+      ],
+      "description": "Wczytaj listę liczb naturalnych i usuń duplikaty tak, aby każda liczba występowała tylko raz — **zachowując kolejność pierwszego wystąpienia**.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby naturalne",
+      "output": "Jedna linia: lista bez duplikatów, elementy oddzielone przecinkami.",
+      "examples": [
+        {
+          "input": "6\n3\n2\n1\n3\n2\n2",
+          "output": "3,2,1"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "6\n3\n2\n1\n3\n2\n2",
+          "output": "3,2,1"
+        },
+        {
+          "input": "4\n5\n5\n5\n5",
+          "output": "5"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "09_listy_wprowadzenie/ZAD-10",
+      "title": "Czy punkty mogą być wierzchołkami trójkąta?",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "geometria",
+        "warunki",
+        "listy"
+      ],
+      "description": "Wczytaj współrzędne trzech punktów `A(xA, yA)`, `B(xB, yB)`, `C(xC, yC)`.\nWypisz `Tak`, jeśli punkty **nie są współliniowe** (mogą tworzyć trójkąt), w przeciwnym razie `Nie`.",
+      "input": "Sześć liczb całkowitych (każda w osobnej linii):\n\n1. `xA`\n2. `yA`\n3. `xB`\n4. `yB`\n5. `xC`\n6. `yC`",
+      "output": "Jedno słowo: `Tak` lub `Nie`.",
+      "examples": [
+        {
+          "input": "-3\n-2\n-3\n1\n-3\n0",
+          "output": "Nie"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0\n0\n1\n1\n2\n0",
+          "output": "Tak"
+        },
+        {
+          "input": "0\n0\n1\n1\n2\n2",
+          "output": "Nie"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Sprawdź pole trójkąta: jeśli równe `0`, punkty są współliniowe."
+    },
+    {
+      "id": "ZAD-11",
+      "slug": "09_listy_wprowadzenie/ZAD-11",
+      "title": "Samochody jadące w przeciwnych kierunkach",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "listy",
+        "zliczanie",
+        "string"
+      ],
+      "description": "Wczytaj `N` oraz napis długości `N` złożony z liter `A` i `B`:\n\n* `A` oznacza samochód jadący na wschód,\n* `B` oznacza samochód jadący na zachód.\n\nPolicz, ile par samochodów minie się, gdy uznamy, że para mija się wtedy, gdy `A` stoi **przed** `B` w ciągu.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* 2. linia: napis długości `N`, tylko `A` i `B` (bez spacji)",
+      "output": "Jedna liczba naturalna — liczba mijających się par.",
+      "examples": [
+        {
+          "input": "5\nABABB",
+          "output": "5"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\nAABBB",
+          "output": "6"
+        },
+        {
+          "input": "5\nBAAAB",
+          "output": "3"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-12",
+      "slug": "09_listy_wprowadzenie/ZAD-12",
+      "title": "Rotacja w lewo / prawo",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "listy",
+        "rotacja",
+        "modulo"
+      ],
+      "description": "Wczytaj listę liczb całkowitych, a następnie:\n\n* `kierunek = 0` → rotacja w lewo,\n* `kierunek = 1` → rotacja w prawo,\n\no `K` pozycji (gdzie `K ≥ 0`). Wypisz listę po rotacji, przecinkami bez spacji.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby całkowite\n* kolejna linia: `kierunek` (0 lub 1)\n* ostatnia linia: `K` (`K ≥ 0`)",
+      "output": "Jedna linia: lista po rotacji, elementy oddzielone przecinkami.",
+      "examples": [
+        {
+          "input": "7\n5\n27\n6\n2\n1\n10\n8\n0\n2",
+          "output": "6,2,1,10,8,5,27"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\n1\n2\n3\n4\n0\n1",
+          "output": "2,3,4,1"
+        },
+        {
+          "input": "5\n10\n20\n30\n40\n50\n1\n2",
+          "output": "40,50,10,20,30"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Zredukuj `K` przez `K % N`."
+    },
+    {
+      "id": "ZAD-13",
+      "slug": "09_listy_wprowadzenie/ZAD-13",
+      "title": "Brakujący element w ciągu arytmetycznym",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sortowanie",
+        "ciąg arytmetyczny",
+        "listy"
+      ],
+      "description": "Wczytaj `N` liczb naturalnych. Lista jest fragmentem ciągu arytmetycznego z **jednym brakującym elementem**. Znajdź i wypisz brakującą wartość.",
+      "input": "* 1. linia: `N` (`N ≥ 2`)\n* kolejne `N` linii: liczby naturalne",
+      "output": "Jedna liczba naturalna — brakujący element.",
+      "examples": [
+        {
+          "input": "4\n5\n2\n1\n3",
+          "output": "4"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\n2\n4\n8\n10",
+          "output": "6"
+        },
+        {
+          "input": "5\n5\n8\n11\n14\n17",
+          "output": "20"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-14",
+      "slug": "09_listy_wprowadzenie/ZAD-14",
+      "title": "Element bez pary",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "XOR",
+        "listy",
+        "zliczanie"
+      ],
+      "description": "Wczytaj listę liczb całkowitych o nieparzystej długości: wszystkie liczby poza jedną występują dokładnie dwa razy. Znajdź liczbę bez pary.",
+      "input": "* 1. linia: `N` (nieparzyste, `N ≥ 1`)\n* kolejne `N` linii: liczby całkowite",
+      "output": "Jedna liczba całkowita — element bez pary.",
+      "examples": [
+        {
+          "input": "7\n1\n3\n1\n7\n3\n1\n1",
+          "output": "7"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n4\n1\n4\n2\n1",
+          "output": "2"
+        },
+        {
+          "input": "3\n7\n7\n7",
+          "output": "7"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-15",
+      "slug": "09_listy_wprowadzenie/ZAD-15",
+      "title": "Element dominujący",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "zliczanie",
+        "dict",
+        "majority"
+      ],
+      "description": "Wczytaj listę liczb naturalnych. Jeśli istnieje liczba, która występuje **więcej niż N/2 razy**, wypisz ją. W przeciwnym razie wypisz `-1`.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby naturalne",
+      "output": "Jedna liczba naturalna — element dominujący lub `-1`.",
+      "examples": [
+        {
+          "input": "5\n4\n7\n4\n4\n2",
+          "output": "4"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n1\n2\n3\n2\n2",
+          "output": "2"
+        },
+        {
+          "input": "4\n1\n2\n3\n4",
+          "output": "-1"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-16",
+      "slug": "09_listy_wprowadzenie/ZAD-16",
+      "title": "Indeksy pierwszej pary o sumie x",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "hashmap",
+        "indeksy",
+        "2-sum"
+      ],
+      "description": "Wczytaj listę liczb całkowitych oraz liczbę `x`. Znajdź indeksy **pierwszej** pary `(i, j)` (z `i < j`) takiej, że `lista[i] + lista[j] == x`.\n\nJeśli nie istnieje taka para — wypisz `-1 -1`.",
+      "input": "* 1. linia: `N` (`N ≥ 2`)\n* kolejne `N` linii: liczby całkowite\n* ostatnia linia: `x` (liczba całkowita)",
+      "output": "Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.",
+      "examples": [
+        {
+          "input": "5\n1\n3\n4\n5\n2\n5",
+          "output": "0 2"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\n2\n7\n11\n15\n9",
+          "output": "0 1"
+        },
+        {
+          "input": "3\n1\n2\n3\n7",
+          "output": "-1 -1"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-17",
+      "slug": "09_listy_wprowadzenie/ZAD-17",
+      "title": "Wszystkie pary o sumie x (wartości)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "listy",
+        "2-sum",
+        "pary"
+      ],
+      "description": "Wczytaj listę liczb całkowitych oraz `x`. Wypisz wszystkie pary **wartości** `(a, b)` z listy (nie indeksy), takie że `a + b == x`. Każdą parę wypisz w osobnej linii jako:\n`a b`\n\nKażdą parę wypisz tylko raz (nie dubluj `(a,b)` i `(b,a)`).",
+      "input": "* 1. linia: `N` (`N ≥ 2`)\n* kolejne `N` linii: liczby całkowite\n* ostatnia linia: `x` (liczba całkowita)",
+      "output": "Wiele linii — po jednej parze na linię.\nJeśli brak par — brak wyjścia.",
+      "examples": [
+        {
+          "input": "5\n1\n2\n4\n3\n7\n5",
+          "output": "1 4\n2 3"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n1\n2\n3\n4\n5\n6",
+          "output": "2 4\n1 5"
+        },
+        {
+          "input": "4\n0\n0\n0\n0\n0",
+          "output": "0 0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-18",
+      "slug": "09_listy_wprowadzenie/ZAD-18",
+      "title": "Indeks najmniejszego elementu w przesuniętej liście",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "binarne",
+        "rotacja",
+        "minimum"
+      ],
+      "description": "Wczytaj listę liczb całkowitych, która była posortowana rosnąco i została przesunięta w prawo o nieznaną liczbę miejsc. Znajdź indeks najmniejszego elementu.",
+      "input": "* 1. linia: `N` (`N ≥ 1`)\n* kolejne `N` linii: liczby całkowite",
+      "output": "Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).",
+      "examples": [
+        {
+          "input": "5\n7\n8\n-1\n4\n5",
+          "output": "2"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "6\n4\n5\n6\n1\n2\n3",
+          "output": "3"
+        },
+        {
+          "input": "3\n1\n2\n3",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}

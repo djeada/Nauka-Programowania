@@ -1,0 +1,112 @@
+{
+  "ZAD-01": [
+    {
+      "input": "adam@gmail.com",
+      "output": "Prawda"
+    },
+    {
+      "input": "..bad@domain.com",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "Abcdef1!",
+      "output": "Prawda"
+    },
+    {
+      "input": "abc1234",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "123456",
+      "output": "Prawda"
+    },
+    {
+      "input": "12a",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "ala ma kota\nma",
+      "output": "Prawda"
+    },
+    {
+      "input": "Siala baba mak\nbab",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "A1b2C3",
+      "output": "123"
+    },
+    {
+      "input": "NoDigits",
+      "output": ""
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "alpha end.\nbeta end!\ngamma\nend",
+      "output": "alpha end.\nbeta end!"
+    },
+    {
+      "input": "one.\ntwo?\nthree\nee",
+      "output": "three"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "Hi, there! Ok.",
+      "output": "Hi\nthere\nOk"
+    },
+    {
+      "input": "Ala; ma, kota",
+      "output": "Ala\nma\nkota"
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "ab12 cd 3e4 f",
+      "output": "12\n3\n4"
+    },
+    {
+      "input": "x9y z 10",
+      "output": "9"
+    }
+  ],
+  "ZAD-09": [
+    {
+      "input": "Hello key world\nkey",
+      "output": "Hello "
+    },
+    {
+      "input": "No keyword here\nXYZ",
+      "output": "No keyword here"
+    }
+  ],
+  "ZAD-10": [
+    {
+      "input": "dog cat doge\n2\ndog\ncat\nwolf\ntiger",
+      "output": "wolf tiger doge"
+    },
+    {
+      "input": "one two three\n1\ntwo\n2",
+      "output": "one 2 three"
+    }
+  ],
+  "ZAD-11": [
+    {
+      "input": "C:/path/to/file.txt",
+      "output": "file"
+    },
+    {
+      "input": "folder/inner/archive.tar.gz",
+      "output": "archive.tar"
+    }
+  ]
+}

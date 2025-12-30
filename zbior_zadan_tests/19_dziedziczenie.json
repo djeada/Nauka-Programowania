@@ -1,0 +1,52 @@
+{
+  "ZAD-01": [
+    {
+      "input": "",
+      "output": "Jestem klasą bazową.\nA ja jestem klasą potomną."
+    },
+    {
+      "input": "",
+      "output": "Jestem klasą bazową.\nA ja jestem klasą potomną."
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "5\n4",
+      "output": "Kształt: Koło\nPromień: 5\nPole powierzchni: 78.5398\n\nKształt: Kwadrat\nDługość boku: 4\nPole powierzchni: 16"
+    },
+    {
+      "input": "2.5\n3",
+      "output": "Kształt: Koło\nPromień: 2.5\nPole powierzchni: 19.6350\n\nKształt: Kwadrat\nDługość boku: 3\nPole powierzchni: 9"
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "",
+      "output": "Zwierz wydaje odgłos: ...\nPies wydaje odgłos: Hau!\nKot wydaje odgłos: Miau!"
+    },
+    {
+      "input": "",
+      "output": "Zwierz wydaje odgłos: ...\nPies wydaje odgłos: Hau!\nKot wydaje odgłos: Miau!"
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "Jan\nKowalski\nKrakow\nInzynier\nAnna\nNowak\nWarszawa\nStudent\n12345\nInformatyka\nPiotr\nWisniewski\nGdansk\nStudent\n54321\nFizyka\n4.5\n4.0",
+      "output": "Człowiek:\nImię: Jan\nNazwisko: Kowalski\nMiejsce urodzenia: Krakow\nZawód: Inzynier\n\nStudent:\nImię: Anna\nNazwisko: Nowak\nMiejsce urodzenia: Warszawa\nZawód: Student\nNumer albumu: 12345\nKierunek studiów: Informatyka\n\nStudent Fizyki:\nImię: Piotr\nNazwisko: Wisniewski\nMiejsce urodzenia: Gdansk\nZawód: Student\nNumer albumu: 54321\nKierunek studiów: Fizyka\nŚrednia z laboratoriów: 4.5\nŚrednia z wykładów: 4.0"
+    },
+    {
+      "input": "Ala\nZielinska\nLodz\nLekarz\nBob\nSmith\nLondon\nStudent\n111\nMath\nEve\nStone\nParis\nStudent\n222\nPhysics\n3.2\n4.8",
+      "output": "Człowiek:\nImię: Ala\nNazwisko: Zielinska\nMiejsce urodzenia: Lodz\nZawód: Lekarz\n\nStudent:\nImię: Bob\nNazwisko: Smith\nMiejsce urodzenia: London\nZawód: Student\nNumer albumu: 111\nKierunek studiów: Math\n\nStudent Fizyki:\nImię: Eve\nNazwisko: Stone\nMiejsce urodzenia: Paris\nZawód: Student\nNumer albumu: 222\nKierunek studiów: Physics\nŚrednia z laboratoriów: 3.2\nŚrednia z wykładów: 4.8"
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "",
+      "output": "Ptak je.\nPtak śpi.\nPtak wydaje dźwięk.\nPtak leci.\nPtak ląduje."
+    },
+    {
+      "input": "",
+      "output": "Ptak je.\nPtak śpi.\nPtak wydaje dźwięk.\nPtak leci.\nPtak ląduje."
+    }
+  ]
+}

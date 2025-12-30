@@ -1,0 +1,172 @@
+{
+  "file": "21_sortowanie_algorytmy.md",
+  "chapter_title": "Rozdział: Sortowanie — Algorytmy (stdin/stdout)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* W każdej wersji zadania wczytaj **jedną linię** z listą w formacie jak w przykładzie, np. `[6, 2, 1, 4, 27]`.\n* Wypisz wynik jako listę w **tym samym formacie**, np. `[1, 2, 4, 6, 27]`.\n* Zakładamy, że wejście jest poprawne (lista liczb całkowitych w notacji Pythona).",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "21_sortowanie_algorytmy/ZAD-01",
+      "title": "Sortowanie bąbelkowe",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "sorting",
+        "bubble-sort",
+        "list"
+      ],
+      "description": "Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania bąbelkowego**.\nAlgorytm polega na wielokrotnym porównywaniu sąsiednich elementów i zamianie ich miejscami, jeśli są w złej kolejności. Powtarzaj przebiegi, aż w całym przebiegu nie zajdzie żadna zamiana.",
+      "input": "* 1 linia: lista liczb całkowitych, np. `[6, 2, 1, 4, 27]`",
+      "output": "* 1 linia: posortowana lista rosnąco",
+      "examples": [
+        {
+          "input": "[6, 2, 1, 4, 27]",
+          "output": "[1, 2, 4, 6, 27]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[3, 1, 2]",
+          "output": "[1, 2, 3]"
+        },
+        {
+          "input": "[5, -1, 0, 5]",
+          "output": "[-1, 0, 5, 5]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "21_sortowanie_algorytmy/ZAD-02",
+      "title": "Sortowanie przez wybieranie",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sorting",
+        "selection-sort",
+        "list"
+      ],
+      "description": "Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wybieranie**.\nDla każdej pozycji `i` znajdź najmniejszy element w zakresie `i..koniec` i zamień go z elementem na pozycji `i`.",
+      "input": "* 1 linia: lista liczb całkowitych",
+      "output": "* 1 linia: posortowana lista rosnąco",
+      "examples": [
+        {
+          "input": "[6, 2, 1, 4, 27]",
+          "output": "[1, 2, 4, 6, 27]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[9, 7, 8]",
+          "output": "[7, 8, 9]"
+        },
+        {
+          "input": "[2, 2, 1]",
+          "output": "[1, 2, 2]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "21_sortowanie_algorytmy/ZAD-03",
+      "title": "Sortowanie przez wstawianie",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sorting",
+        "insertion-sort",
+        "list"
+      ],
+      "description": "Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wstawianie**.\nBuduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w odpowiednie miejsce, przesuwając większe elementy w prawo.",
+      "input": "* 1 linia: lista liczb całkowitych",
+      "output": "* 1 linia: posortowana lista rosnąco",
+      "examples": [
+        {
+          "input": "[6, 2, 1, 4, 27]",
+          "output": "[1, 2, 4, 6, 27]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[4, 3, 2, 1]",
+          "output": "[1, 2, 3, 4]"
+        },
+        {
+          "input": "[1, 3, 2]",
+          "output": "[1, 2, 3]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "21_sortowanie_algorytmy/ZAD-04",
+      "title": "Sortowanie przez scalanie",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sorting",
+        "merge-sort",
+        "recursion"
+      ],
+      "description": "Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez scalanie**:\n\n1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.\n2. Podziel listę na dwie (w miarę) równe części.\n3. Rekurencyjnie posortuj obie części.\n4. **Scal** dwie posortowane listy w jedną posortowaną.",
+      "input": "* 1 linia: lista liczb całkowitych",
+      "output": "* 1 linia: posortowana lista rosnąco",
+      "examples": [
+        {
+          "input": "[6, 2, 1, 4, 27]",
+          "output": "[1, 2, 4, 6, 27]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[6, 2, 1, 4]",
+          "output": "[1, 2, 4, 6]"
+        },
+        {
+          "input": "[0, -2, 5, 3]",
+          "output": "[-2, 0, 3, 5]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "21_sortowanie_algorytmy/ZAD-05",
+      "title": "Sortowanie szybkie",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sorting",
+        "quick-sort",
+        "recursion"
+      ],
+      "description": "Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **Quick Sort**:\n\n1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.\n2. Wybierz **pivot** (np. pierwszy element).\n3. Podziel elementy na trzy grupy:\n\n   * mniejsze od pivota,\n   * równe pivotowi,\n   * większe od pivota.\n4. Rekurencyjnie posortuj część mniejszych i większych.\n5. Sklej wynik: `mniejsze + równe + większe`.",
+      "input": "* 1 linia: lista liczb całkowitych",
+      "output": "* 1 linia: posortowana lista rosnąco",
+      "examples": [
+        {
+          "input": "[6, 2, 1, 4, 27]",
+          "output": "[1, 2, 4, 6, 27]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[10, 7, 8, 9, 1, 5]",
+          "output": "[1, 5, 7, 8, 9, 10]"
+        },
+        {
+          "input": "[3, 3, 2, 1]",
+          "output": "[1, 2, 3, 3]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}

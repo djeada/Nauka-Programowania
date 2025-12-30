@@ -1,0 +1,157 @@
+{
+  "file": "19_dziedziczenie.md",
+  "chapter_title": "Rozdział: Dziedziczenie (stdin/stdout)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w zadaniu jest „brak wejścia” — program nic nie wczytuje.\n* Jeśli zadanie wymaga wypisania kilku linii — wypisz je w tej samej kolejności, co w przykładzie.\n* Dla liczb zmiennoprzecinkowych trzymaj stałą liczbę miejsc po przecinku, jeśli jest pokazana w przykładzie.",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "19_dziedziczenie/ZAD-01",
+      "title": "Wywołanie metody klasy bazowej w klasie potomnej",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dziedziczenie",
+        "override",
+        "super"
+      ],
+      "description": "Zaprojektuj dwie klasy:\n\n1. **Bazowa** — posiada metodę `przedstaw_sie()`, która wypisuje komunikat o klasie bazowej.\n2. **Potomna** — dziedziczy po **Bazowej** i **nadpisuje** metodę `przedstaw_sie()`, ale w swojej implementacji:\n\n   * najpierw **wywołuje** wersję metody z klasy bazowej,\n   * potem dopisuje własny komunikat.\n\nProgram testowy:\n\n* tworzy obiekt klasy potomnej,\n* wywołuje metodę `przedstaw_sie()`.",
+      "input": "Brak.",
+      "output": "Dwie linie, pokazujące najpierw komunikat klasy bazowej, a potem potomnej.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Jestem klasą bazową.\nA ja jestem klasą potomną."
+        },
+        {
+          "input": "",
+          "output": "Jestem klasą bazową.\nA ja jestem klasą potomną."
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "19_dziedziczenie/ZAD-02",
+      "title": "Klasa Kształt oraz klasy Koło i Kwadrat",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "dziedziczenie",
+        "polimorfizm",
+        "math"
+      ],
+      "description": "Zaprojektuj hierarchię klas:\n\n* **Kształt** — klasa bazowa (ogólna) dla kształtów.\n* **Koło** — dziedziczy po `Kształt`.\n* **Kwadrat** — dziedziczy po `Kształt`.\n\nKażda klasa ma mieć:\n\n* metodę obliczającą **pole**,\n* metodę wypisującą informacje o obiekcie: typ, parametry i pole.\n\nProgram:\n\n* wczytuje promień `r` koła oraz bok `a` kwadratu,\n* tworzy obiekty `Koło(r)` i `Kwadrat(a)`,\n* wypisuje informacje o obu.\n\n**Uwaga do formatowania:**\n*Pole koła wypisz do 4 miejsc po przecinku.*\n*Pole kwadratu wypisz bez wymuszania miejsc po przecinku (jak w przykładzie).*",
+      "input": "* 1 linia: `r` (liczba rzeczywista)\n* 2 linia: `a` (liczba rzeczywista)",
+      "output": "Blok informacji o kole, pusta linia, blok informacji o kwadracie.",
+      "examples": [
+        {
+          "input": "5\n4",
+          "output": "Kształt: Koło\nPromień: 5\nPole powierzchni: 78.5398\n\nKształt: Kwadrat\nDługość boku: 4\nPole powierzchni: 16"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n4",
+          "output": "Kształt: Koło\nPromień: 5\nPole powierzchni: 78.5398\n\nKształt: Kwadrat\nDługość boku: 4\nPole powierzchni: 16"
+        },
+        {
+          "input": "2.5\n3",
+          "output": "Kształt: Koło\nPromień: 2.5\nPole powierzchni: 19.6350\n\nKształt: Kwadrat\nDługość boku: 3\nPole powierzchni: 9"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "19_dziedziczenie/ZAD-03",
+      "title": "Polimorfizm: Zwierz, Pies i Kot",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "dziedziczenie",
+        "polimorfizm",
+        "override"
+      ],
+      "description": "Zaprojektuj klasy:\n\n* **Zwierz** — metoda `odglos()` zwraca/drukuje ogólny dźwięk.\n* **Pies** — dziedziczy po `Zwierz` i nadpisuje `odglos()`.\n* **Kot** — dziedziczy po `Zwierz` i nadpisuje `odglos()`.\n\nProgram testowy:\n\n* tworzy obiekty: `Zwierz`, `Pies`, `Kot`,\n* umieszcza je w jednej kolekcji,\n* iteruje i dla każdego wypisuje linię w formacie:\n  `NazwaKlasy wydaje odgłos: ...`",
+      "input": "Brak.",
+      "output": "Trzy linie, po jednej dla każdego obiektu.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Zwierz wydaje odgłos: ...\nPies wydaje odgłos: Hau!\nKot wydaje odgłos: Miau!"
+        },
+        {
+          "input": "",
+          "output": "Zwierz wydaje odgłos: ...\nPies wydaje odgłos: Hau!\nKot wydaje odgłos: Miau!"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "19_dziedziczenie/ZAD-04",
+      "title": "Dziedziczenie wielopoziomowe: Człowiek → Student → StudentFizyki",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "dziedziczenie",
+        "konstruktory",
+        "super"
+      ],
+      "description": "Zaprojektuj hierarchię klas:\n\n1. **Człowiek** — pola:\n\n   * imię\n   * nazwisko\n   * miejsce urodzenia\n   * zawód\n\n2. **Student** (dziedziczy po `Człowiek`) — dodatkowo:\n\n   * numer albumu\n   * kierunek studiów\n\n3. **StudentFizyki** (dziedziczy po `Student`) — dodatkowo:\n\n   * średnia z laboratoriów\n   * średnia z wykładów\n\nProgram:\n\n* wczytuje dane dla trzech obiektów (Człowiek, Student, StudentFizyki),\n* tworzy obiekty,\n* wypisuje je w formacie jak w przykładzie.\n\n**Uwaga do wejścia:** wszystko w osobnych liniach, w podanej kolejności.",
+      "input": "**Dane dla Człowiek:**\n\n1. imię\n2. nazwisko\n3. miejsce urodzenia\n4. zawód\n\n**Dane dla Student:**\n5. imię\n6. nazwisko\n7. miejsce urodzenia\n8. zawód\n9. numer albumu (int)\n10. kierunek studiów\n\n**Dane dla StudentFizyki:**\n11. imię\n12. nazwisko\n13. miejsce urodzenia\n14. zawód\n15. numer albumu (int)\n16. kierunek studiów\n17. średnia z laboratoriów (float)\n18. średnia z wykładów (float)",
+      "output": "Trzy bloki jak w przykładzie, oddzielone pustą linią.",
+      "examples": [
+        {
+          "input": "Jan\nKowalski\nKraków\nInżynier\nAnna\nNowak\nWarszawa\nStudent\n12345\nInformatyka\nPiotr\nWiśniewski\nGdańsk\nStudent\n54321\nFizyka\n4.5\n4.0",
+          "output": "Człowiek:\nImię: Jan\nNazwisko: Kowalski\nMiejsce urodzenia: Kraków\nZawód: Inżynier\n\nStudent:\nImię: Anna\nNazwisko: Nowak\nMiejsce urodzenia: Warszawa\nZawód: Student\nNumer albumu: 12345\nKierunek studiów: Informatyka\n\nStudent Fizyki:\nImię: Piotr\nNazwisko: Wiśniewski\nMiejsce urodzenia: Gdańsk\nZawód: Student\nNumer albumu: 54321\nKierunek studiów: Fizyka\nŚrednia z laboratoriów: 4.5\nŚrednia z wykładów: 4.0"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Jan\nKowalski\nKrakow\nInzynier\nAnna\nNowak\nWarszawa\nStudent\n12345\nInformatyka\nPiotr\nWisniewski\nGdansk\nStudent\n54321\nFizyka\n4.5\n4.0",
+          "output": "Człowiek:\nImię: Jan\nNazwisko: Kowalski\nMiejsce urodzenia: Krakow\nZawód: Inzynier\n\nStudent:\nImię: Anna\nNazwisko: Nowak\nMiejsce urodzenia: Warszawa\nZawód: Student\nNumer albumu: 12345\nKierunek studiów: Informatyka\n\nStudent Fizyki:\nImię: Piotr\nNazwisko: Wisniewski\nMiejsce urodzenia: Gdansk\nZawód: Student\nNumer albumu: 54321\nKierunek studiów: Fizyka\nŚrednia z laboratoriów: 4.5\nŚrednia z wykładów: 4.0"
+        },
+        {
+          "input": "Ala\nZielinska\nLodz\nLekarz\nBob\nSmith\nLondon\nStudent\n111\nMath\nEve\nStone\nParis\nStudent\n222\nPhysics\n3.2\n4.8",
+          "output": "Człowiek:\nImię: Ala\nNazwisko: Zielinska\nMiejsce urodzenia: Lodz\nZawód: Lekarz\n\nStudent:\nImię: Bob\nNazwisko: Smith\nMiejsce urodzenia: London\nZawód: Student\nNumer albumu: 111\nKierunek studiów: Math\n\nStudent Fizyki:\nImię: Eve\nNazwisko: Stone\nMiejsce urodzenia: Paris\nZawód: Student\nNumer albumu: 222\nKierunek studiów: Physics\nŚrednia z laboratoriów: 3.2\nŚrednia z wykładów: 4.8"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "19_dziedziczenie/ZAD-05",
+      "title": "Dziedziczenie wielokrotne: Ptak",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "multiple inheritance",
+        "dziedziczenie",
+        "metody"
+      ],
+      "description": "Zaprojektuj klasy:\n\n* **Zwierz** — metody:\n\n  * `jedz()` → wypisuje `Ptak je.`\n  * `spij()` → wypisuje `Ptak śpi.`\n  * `wydaj_dzwiek()` → wypisuje `Ptak wydaje dźwięk.`\n\n* **ObiektLatajacy** — metody:\n\n  * `lec()` → wypisuje `Ptak leci.`\n  * `wyladuj()` → wypisuje `Ptak ląduje.`\n\n* **Ptak** — dziedziczy po `Zwierz` oraz `ObiektLatajacy`.\n\nProgram testowy:\n\n* tworzy obiekt `Ptak`,\n* wywołuje metody w kolejności: `jedz`, `spij`, `wydaj_dzwiek`, `lec`, `wyladuj`.",
+      "input": "Brak.",
+      "output": "Pięć linii jak w przykładzie.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Ptak je.\nPtak śpi.\nPtak wydaje dźwięk.\nPtak leci.\nPtak ląduje."
+        },
+        {
+          "input": "",
+          "output": "Ptak je.\nPtak śpi.\nPtak wydaje dźwięk.\nPtak leci.\nPtak ląduje."
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}

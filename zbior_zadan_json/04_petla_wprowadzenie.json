@@ -1,0 +1,265 @@
+{
+  "file": "04_petla_wprowadzenie.md",
+  "chapter_title": "Rozdział: Pętle i proste obliczenia (while / for)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.\n* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem (np. `%.3f`, `format(x, \".3f\")`).\n* Jeśli zadanie mówi „brak danych wyjściowych” — program nie wypisuje nic (nawet pustej linii).",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "04_petla_wprowadzenie/ZAD-01",
+      "title": "Warunek kończący pętlę",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "while",
+        "break",
+        "I/O"
+      ],
+      "description": "Wczytuj kolejne liczby naturalne, dopóki nie pojawi się liczba `7`.\nPo wczytaniu liczby `7` program kończy działanie **bez wypisywania czegokolwiek**.",
+      "input": "Dowolna liczba liczb naturalnych (każda w osobnej linii).",
+      "output": "Brak.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "7",
+          "output": ""
+        },
+        {
+          "input": "3\n10\n7",
+          "output": ""
+        }
+      ],
+      "constraints": "* W danych wejściowych na pewno pojawi się co najmniej jedna liczba `7`.",
+      "notes": "* Nie wypisuj żadnych komunikatów typu „Podaj liczbę”.\n* Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana."
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "04_petla_wprowadzenie/ZAD-02",
+      "title": "Wypisywanie liczb mniejszych od podanej",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "for",
+        "while",
+        "pętle"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` (`n > 0`) i wypisz wszystkie liczby naturalne mniejsze od `n`, zaczynając od `n - 1` i kończąc na `1`.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n > 0`)",
+      "output": "Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności malejącej.",
+      "examples": [
+        {
+          "input": "3",
+          "output": "2\n1"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5",
+          "output": "4\n3\n2\n1"
+        },
+        {
+          "input": "1",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": "* Jeśli `n = 1`, nie wypisuj nic."
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "04_petla_wprowadzenie/ZAD-03",
+      "title": "Wypisywanie liczby π z określoną dokładnością",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "math.pi",
+        "formatowanie",
+        "pętle"
+      ],
+      "description": "1. Wczytaj liczbę naturalną `n` (`n > 0`).\n2. Wypisz liczbę π dokładnie `n` razy.\n3. Każda wypisana wartość ma mieć **dokładnie `n` miejsc po przecinku**.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n > 0`)",
+      "output": "`n` wierszy, w każdym liczba π z dokładnością do `n` miejsc po przecinku.",
+      "examples": [
+        {
+          "input": "2",
+          "output": "3.14\n3.14"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "3.1"
+        },
+        {
+          "input": "3",
+          "output": "3.142\n3.142\n3.142"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Liczba miejsc po przecinku ma być **dokładnie** równa `n` (np. dla `n=1` wypisz `3.1`).\n* Stosuj standardowe zaokrąglanie przy formatowaniu."
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "04_petla_wprowadzenie/ZAD-04",
+      "title": "Sumowanie liczb mniejszych od podanej",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "sumowanie",
+        "pętle",
+        "arytmetyka"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` (`n ≥ 1`). Oblicz sumę wszystkich liczb naturalnych mniejszych od `n`, czyli:\n`1 + 2 + ... + (n - 1)`\nNastępnie wypisz wynik.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 1`)",
+      "output": "Jedna liczba naturalna — suma liczb od `1` do `n - 1`.",
+      "examples": [
+        {
+          "input": "5",
+          "output": "10"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "0"
+        },
+        {
+          "input": "10",
+          "output": "45"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dla `n = 1` wynik to `0`."
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "04_petla_wprowadzenie/ZAD-05",
+      "title": "Liczby z przedziału",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "przedziały",
+        "modulo"
+      ],
+      "description": "Wczytaj dwie liczby naturalne `a` i `b`. Najpierw ustal:\n\n* `lo = min(a, b)`\n* `hi = max(a, b)`\n\nNastępnie:\n\na) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` (każda w osobnej linii).\n\nb) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` oraz `x` jest podzielne przez `3` (każda w osobnej linii).",
+      "input": "Dwie liczby naturalne:\n\n* 1. linia: `a`\n* 2. linia: `b`",
+      "output": "Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobnej linii.",
+      "examples": [
+        {
+          "input": "9\n5",
+          "output": "6\n7\n8\n6"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2\n7",
+          "output": "3\n4\n5\n6\n3\n6"
+        },
+        {
+          "input": "1\n4",
+          "output": "2\n3\n3"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Nie wypisuj nagłówków typu „a)” i „b)”.\n* Jeśli w którymś podpunkcie nie ma liczb do wypisania, w tej części nie wypisuj nic.\n* Nie dodawaj pustej linii między podpunktami."
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "04_petla_wprowadzenie/ZAD-06",
+      "title": "Sumowanie elementów ciągu",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "ciągi",
+        "sumowanie",
+        "pętle"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` (`n ≥ 1`) i oblicz:\n\na) ( \\sum_{k=1}^{n} (k^2 + k + 1) )\n\nb) ( \\sum_{k=1}^{n} (k^2 + 5k) )\n\nc) ( \\sum_{k=1}^{n} (k + 2k) )  (czyli ( \\sum_{k=1}^{n} 3k ))\n\nWypisz trzy sumy w kolejności a), b), c).",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 1`)",
+      "output": "Trzy liczby naturalne — każda w oddzielnej linii:\n\n1. suma dla (a)\n2. suma dla (b)\n3. suma dla (c)",
+      "examples": [
+        {
+          "input": "2",
+          "output": "10\n16\n9"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3",
+          "output": "23\n44\n18"
+        },
+        {
+          "input": "5",
+          "output": "75\n130\n45"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania."
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "04_petla_wprowadzenie/ZAD-07",
+      "title": "Potęgowanie liczby π",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "math.pi",
+        "potęgi",
+        "formatowanie"
+      ],
+      "description": "Wczytaj liczbę naturalną `n` (`n ≥ 0`), oblicz wartość ( \\pi^n ) i wypisz wynik z dokładnością do **dwóch miejsc po przecinku**.",
+      "input": "Jedna liczba naturalna:\n\n* 1. linia: `n` (`n ≥ 0`)",
+      "output": "Jedna liczba zmiennoprzecinkowa — ( \\pi^n ) z dokładnością do dwóch miejsc po przecinku.",
+      "examples": [
+        {
+          "input": "2",
+          "output": "9.87"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "1.00"
+        },
+        {
+          "input": "3",
+          "output": "31.01"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dla `n = 0` wypisz `1.00`."
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "04_petla_wprowadzenie/ZAD-08",
+      "title": "Obliczanie liczby kur i owiec na farmie",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "układ równań",
+        "arytmetyka"
+      ],
+      "description": "Na farmie są kury i owce. Wiadomo, że:\n\n* łączna liczba głów wynosi `a`,\n* łączna liczba nóg wynosi `b`,\n* kura ma 2 nogi, owca ma 4 nogi,\n* każda ma dokładnie 1 głowę.\n\nOblicz liczbę kur oraz liczbę owiec.",
+      "input": "Dwie liczby naturalne:\n\n* 1. linia: `a` — liczba głów (`a ≥ 0`)\n* 2. linia: `b` — liczba nóg (`b ≥ 0`)",
+      "output": "Dwie liczby naturalne, każda w oddzielnej linii:\n\n1. liczba kur\n2. liczba owiec",
+      "examples": [
+        {
+          "input": "40\n100",
+          "output": "30\n10"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "10\n26",
+          "output": "7\n3"
+        },
+        {
+          "input": "0\n0",
+          "output": "0\n0"
+        }
+      ],
+      "constraints": "* Istnieje rozwiązanie w liczbach całkowitych nieujemnych.",
+      "notes": "* Nie wypisuj dodatkowych opisów — tylko liczby."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "ZAD-01": [
+    {
+      "input": "level",
+      "output": "Prawda"
+    },
+    {
+      "input": "hello",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "a",
+      "output": "a"
+    },
+    {
+      "input": "Z",
+      "output": "Z"
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "listen\nsilent",
+      "output": "Prawda"
+    },
+    {
+      "input": "abc\nab",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "Ada Bob ala.",
+      "output": "Ada\nBob\nala"
+    },
+    {
+      "input": "Hello world",
+      "output": ""
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "kara raka arka\narak",
+      "output": "kara\nraka\narka"
+    },
+    {
+      "input": "pies kot\nmysz",
+      "output": ""
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "aaaa",
+      "output": "aaaa"
+    },
+    {
+      "input": "abc",
+      "output": ""
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "abc\nbcd",
+      "output": "2"
+    },
+    {
+      "input": "ab\nabc",
+      "output": "-1"
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "aaa",
+      "output": "a\naa\naaa"
+    },
+    {
+      "input": "aba",
+      "output": "a\nb\naba"
+    }
+  ]
+}

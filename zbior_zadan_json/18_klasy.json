@@ -1,0 +1,209 @@
+{
+  "file": "18_klasy.md",
+  "chapter_title": "Rozdział: Klasy (stdin/stdout)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli format wyjścia zawiera kilka linii — wypisz je w tej samej kolejności.\n* Dla liczb zmiennoprzecinkowych trzymaj stałą liczbę miejsc po przecinku (jak w przykładach).",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "18_klasy/ZAD-01",
+      "title": "Klasa Koło",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "class",
+        "metody",
+        "float",
+        "math"
+      ],
+      "description": "Zaprojektuj klasę **Koło**:\n\n1. Konstruktor przyjmuje promień `r` (domyślnie 1).\n2. Metoda licząca **obwód**: ( 2\\pi r )\n3. Metoda licząca **pole**: ( \\pi r^2 )\n4. Metoda wypisująca informacje: promień, obwód i pole.\n\nProgram ma utworzyć koło o promieniu wczytanym z wejścia (np. 3) i wypisać informacje.",
+      "input": "* 1 linia: `r` (liczba rzeczywista)",
+      "output": "Trzy linie jak w przykładzie (obwód i pole do 4 miejsc po przecinku).",
+      "examples": [
+        {
+          "input": "3",
+          "output": "Koło o promieniu: 3\nObwód koła: 18.8496\nPole koła: 28.2743"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3",
+          "output": "Koło o promieniu: 3\nObwód koła: 18.8496\nPole koła: 28.2743"
+        },
+        {
+          "input": "1.5",
+          "output": "Koło o promieniu: 1.5\nObwód koła: 9.4248\nPole koła: 7.0686"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "18_klasy/ZAD-02",
+      "title": "Klasa Punkt",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "class",
+        "static",
+        "porównania",
+        "math"
+      ],
+      "description": "Zaprojektuj klasę **Punkt**:\n\n1. Konstruktor `(x=0, y=0)`.\n2. Metoda statyczna `odleglosc(p1, p2)` licząca odległość.\n3. Metoda wypisująca współrzędne.\n4. Porównania `==` i `!=` (równe, gdy oba współrzędne identyczne).\n\nProgram tworzy:\n\n* A = (5, 5)\n* B = (-3, -3)\n\nWypisuje oba punkty i odległość między nimi (4 miejsca po przecinku).",
+      "input": "Brak.",
+      "output": "Jak w przykładzie.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Punkt A: (5, 5)\nPunkt B: (-3, -3)\nOdległość między punktami A i B: 11.3137"
+        },
+        {
+          "input": "",
+          "output": "Punkt A: (5, 5)\nPunkt B: (-3, -3)\nOdległość między punktami A i B: 11.3137"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "18_klasy/ZAD-03",
+      "title": "Pole nałożenia się dwóch prostokątów",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "class",
+        "static",
+        "geometria"
+      ],
+      "description": "Zaprojektuj klasę **Prostokąt** opisaną przez dwa przeciwległe wierzchołki:\n\n* lewy dolny `(x1, y1)`\n* prawy górny `(x2, y2)`\n  Boki równoległe do osi.\n\nKlasa ma mieć:\n\n1. Konstruktor `(x1, y1, x2, y2)`\n2. Metodę statyczną `pole_wspolne(A, B)` zwracającą pole części wspólnej (albo 0).\n3. Metodę wypisującą informacje o prostokącie.\n\nProgram tworzy:\n\n* A: (3, 4) i (9, 6)\n* B: (2, 2) i (7, 5)\n\nWypisuje oba i pole części wspólnej.",
+      "input": "Brak.",
+      "output": "Jak w przykładzie.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Prostokąt A: lewy dolny (3, 4), prawy górny (9, 6)\nProstokąt B: lewy dolny (2, 2), prawy górny (7, 5)\nPole części wspólnej: 6"
+        },
+        {
+          "input": "",
+          "output": "Prostokąt A: lewy dolny (3, 4), prawy górny (9, 6)\nProstokąt B: lewy dolny (2, 2), prawy górny (7, 5)\nPole części wspólnej: 6"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "18_klasy/ZAD-04",
+      "title": "Klasy Wektor2D i Wektor3D",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "class",
+        "operatory",
+        "math"
+      ],
+      "description": "Zaprojektuj klasy **Wektor2D** i **Wektor3D**:\n\nWspólne:\n\n* konstruktor z domyślnymi współrzędnymi 0,\n* dodawanie, odejmowanie,\n* iloczyn skalarny,\n* porównania `==` i `!=`,\n* moduł (długość),\n* metoda wypisująca wektor.\n\nDodatkowo dla **Wektor3D**:\n\n* iloczyn wektorowy.\n\nProgram tworzy:\n\n* A = (-3, -3, -3)\n* B = (5, 5, 5)\n\nWypisuje A, B oraz:\n\n* A + B\n* A - B\n* A · B\n* A × B",
+      "input": "Brak.",
+      "output": "Jak w przykładzie.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Wektor A: (-3, -3, -3)\nWektor B: (5, 5, 5)\nSuma wektorów: (2, 2, 2)\nRóżnica wektorów A - B: (-8, -8, -8)\nIloczyn skalarny: -45\nIloczyn wektorowy: (0, 0, 0)"
+        },
+        {
+          "input": "",
+          "output": "Wektor A: (-3, -3, -3)\nWektor B: (5, 5, 5)\nSuma wektorów: (2, 2, 2)\nRóżnica wektorów A - B: (-8, -8, -8)\nIloczyn skalarny: -45\nIloczyn wektorowy: (0, 0, 0)"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "18_klasy/ZAD-05",
+      "title": "Klasa Macierz",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "class",
+        "macierze",
+        "operacje"
+      ],
+      "description": "Zaprojektuj klasę **Macierz**:\n\n1. Konstruktor przyjmuje listę list (domyślnie pusta).\n2. Operacje: dodawanie, odejmowanie, mnożenie.\n3. Metoda wypisująca macierz (wierszami).\n4. Porównania `==` i `!=`.\n\n(Operację odwracania możesz pominąć w tym zadaniu, jeśli nie jest wymagana w sprawdzarce; najczęściej w podstawowych zadaniach nie ma testów na odwracanie.)\n\nProgram tworzy:\n\n* A = [[1, 3], [4, 2]]\n* B = [[5, 0], [1, 3]]\n\nWypisuje A, B, a potem A+B, A-B, A*B.",
+      "input": "Brak.",
+      "output": "Jak w przykładzie.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Macierz A:\n[1, 3]\n[4, 2]\n\nMacierz B:\n[5, 0]\n[1, 3]\n\nSuma macierzy:\n[6, 3]\n[5, 5]\n\nRóżnica macierzy A - B:\n[-4, 3]\n[3, -1]\n\nIloczyn macierzy A * B:\n[8, 9]\n[22, 12]"
+        },
+        {
+          "input": "",
+          "output": "Macierz A:\n[1, 3]\n[4, 2]\n\nMacierz B:\n[5, 0]\n[1, 3]\n\nSuma macierzy:\n[6, 3]\n[5, 5]\n\nRóżnica macierzy A - B:\n[-4, 3]\n[3, -1]\n\nIloczyn macierzy A * B:\n[8, 9]\n[22, 12]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "18_klasy/ZAD-06",
+      "title": "Klasa LiczbaZespolona",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "class",
+        "operacje",
+        "math"
+      ],
+      "description": "Zaprojektuj klasę **LiczbaZespolona**:\n\n* konstruktor `(re=0, im=0)`,\n* dodawanie, odejmowanie, mnożenie, dzielenie,\n* porównania,\n* moduł,\n* wypisywanie w formacie `a + bi` lub `a - bi` (z zachowaniem znaku).\n\nProgram tworzy:\n\n* A = 9 + 12i\n* B = -3 - 3i\n\nWypisuje A, B oraz: sumę, różnicę A-B, iloczyn i iloraz A/B.",
+      "input": "Brak.",
+      "output": "Jak w przykładzie.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Liczba A: 9 + 12i\nLiczba B: -3 - 3i\n\nSuma: 6 + 9i\nRóżnica A - B: 12 + 15i\nIloczyn: 27 + 63i\nIloraz A / B: -3.5 + 0.5i"
+        },
+        {
+          "input": "",
+          "output": "Liczba A: 9 + 12i\nLiczba B: -3 - 3i\n\nSuma: 6 + 9i\nRóżnica A - B: 12 + 15i\nIloczyn: 27 + 63i\nIloraz A / B: -3.5 + 0.5i"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "18_klasy/ZAD-07",
+      "title": "Zliczanie instancji klasy",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "class",
+        "static"
+      ],
+      "description": "Zaprojektuj klasę **MojaKlasa**, która zlicza ile instancji utworzono:\n\n* prywatne pole statyczne licznik,\n* konstruktor zwiększa licznik,\n* metoda statyczna zwraca licznik.\n\nProgram tworzy np. 3 obiekty i wypisuje liczbę instancji.",
+      "input": "Brak.",
+      "output": "Jedna linia.",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Liczba utworzonych instancji: 3"
+        },
+        {
+          "input": "",
+          "output": "Liczba utworzonych instancji: 3"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}

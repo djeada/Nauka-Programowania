@@ -1,0 +1,306 @@
+{
+  "file": "07_petla_algorytmy_matematyczne.md",
+  "chapter_title": "Rozdział: Pętla — Algorytmy Matematyczne",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem / ćwiczeniem funkcji.**\n**Konwencje wspólne:**\n* Jeśli zadanie mówi „napisz funkcję” — implementujesz funkcję o podanej nazwie i zwracasz wynik przez `return`.\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.\n* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem.",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "07_petla_algorytmy_matematyczne/ZAD-01",
+      "title": "Obliczanie średniej z n liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "suma",
+        "średnia",
+        "float"
+      ],
+      "description": "Napisz funkcję `oblicz_srednia()`, która:\n\n1. Wczytuje liczbę naturalną `n` (`n ≥ 1`).\n2. Wczytuje następnie `n` liczb (całkowitych lub zmiennoprzecinkowych).\n3. Zwraca ich średnią arytmetyczną.",
+      "input": "* 1. linia: `n` (`n ≥ 1`)\n* kolejne `n` linii: liczby (int lub float)",
+      "output": "Funkcja zwraca jedną liczbę zmiennoprzecinkową — średnią arytmetyczną.",
+      "examples": [
+        {
+          "input": "wynik = oblicz_srednia()\nprint(wynik)",
+          "output": "5.0"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\n1\n2\n3",
+          "output": "2.0"
+        },
+        {
+          "input": "4\n1.5\n2.5\n3.0\n4.0",
+          "output": "2.75"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`)."
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "07_petla_algorytmy_matematyczne/ZAD-02",
+      "title": "Potęgowanie liczby przy pomocy pętli",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "potęgowanie",
+        "mnożenie"
+      ],
+      "description": "Napisz funkcję `potega(a, b)`, która oblicza `a^b` przy użyciu pętli (bez operatora potęgowania).",
+      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba naturalna, `a ≥ 0`)\n* `b` (liczba naturalna, `b ≥ 0`)",
+      "output": "Funkcja zwraca jedną liczbę naturalną — wartość `a^b`.",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(potega(3, 5))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2\n0",
+          "output": "1"
+        },
+        {
+          "input": "5\n3",
+          "output": "125"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dla `b = 0` wynik ma wynosić `1`."
+    },
+    {
+      "id": "ZAD-03A",
+      "slug": "07_petla_algorytmy_matematyczne/ZAD-03A",
+      "title": "Mnożenie przy pomocy dodawania",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "dodawanie",
+        "mnożenie"
+      ],
+      "description": "Napisz funkcję `iloczyn(a, b)`, która oblicza `a * b` używając **tylko dodawania** i pętli.",
+      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba naturalna, `a ≥ 0`)\n* `b` (liczba naturalna, `b ≥ 0`)",
+      "output": "Funkcja zwraca jedną liczbę naturalną — `a * b`.",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(iloczyn(3, 2))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\n0",
+          "output": "0"
+        },
+        {
+          "input": "6\n7",
+          "output": "42"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03B",
+      "slug": "07_petla_algorytmy_matematyczne/ZAD-03B",
+      "title": "Dzielenie całkowite przy pomocy odejmowania",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "odejmowanie",
+        "dzielenie"
+      ],
+      "description": "Napisz funkcję `iloraz(a, b)`, która oblicza `a // b` używając **tylko odejmowania** i pętli.",
+      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba naturalna, `a ≥ 0`)\n* `b` (liczba naturalna)",
+      "output": "Funkcja zwraca jedną liczbę naturalną — `a // b`.",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(iloraz(3, 2))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "7\n2",
+          "output": "3"
+        },
+        {
+          "input": "9\n3",
+          "output": "3"
+        }
+      ],
+      "constraints": "* `b > 0`",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "07_petla_algorytmy_matematyczne/ZAD-04",
+      "title": "Obliczanie silni liczby",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "silnia",
+        "mnożenie"
+      ],
+      "description": "Napisz funkcję `silnia(n)`, która zwraca `n!` obliczone przy użyciu pętli.\nPrzyjmij, że `0! = 1`.",
+      "input": "Jeden argument funkcji:\n\n* `n` (liczba naturalna, `n ≥ 0`)",
+      "output": "Funkcja zwraca jedną liczbę naturalną — `n!`.",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(silnia(3))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "1"
+        },
+        {
+          "input": "5",
+          "output": "120"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "07_petla_algorytmy_matematyczne/ZAD-05",
+      "title": "Największy wspólny dzielnik (NWD)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "Euklides",
+        "modulo",
+        "pętle"
+      ],
+      "description": "Napisz funkcję `nwd(a, b)`, która zwraca największy wspólny dzielnik dwóch liczb naturalnych.",
+      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba naturalna, `a > 0`)\n* `b` (liczba naturalna, `b > 0`)",
+      "output": "Funkcja zwraca jedną liczbę naturalną — `NWD(a, b)`.",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(nwd(60, 45))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "48\n18",
+          "output": "6"
+        },
+        {
+          "input": "21\n14",
+          "output": "7"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "07_petla_algorytmy_matematyczne/ZAD-06",
+      "title": "Najmniejsza wspólna wielokrotność (NWW)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "nww",
+        "nwd",
+        "arytmetyka"
+      ],
+      "description": "Napisz funkcję `nww(a, b)`, która zwraca najmniejszą wspólną wielokrotność liczb `a` i `b`.",
+      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba naturalna, `a > 0`)\n* `b` (liczba naturalna, `b > 0`)",
+      "output": "Funkcja zwraca jedną liczbę naturalną — `NWW(a, b)`.",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(nww(7, 9))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\n6",
+          "output": "12"
+        },
+        {
+          "input": "9\n6",
+          "output": "18"
+        }
+      ],
+      "constraints": "* Możesz użyć zależności: `NWW(a, b) = (a * b) // NWD(a, b)`.",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "07_petla_algorytmy_matematyczne/ZAD-07",
+      "title": "Pierwiastek metodą Newtona (Herona)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "Newton",
+        "float",
+        "pętle",
+        "dokładność"
+      ],
+      "description": "Napisz funkcję `pierwiastek(n)`, która dla `n ≥ 0` zwraca przybliżenie `sqrt(n)` metodą Newtona:\n\n[\nx_{k+1} = \\frac{1}{2}\\left(x_k + \\frac{n}{x_k}\\right)\n]\n\nIteruj do momentu, aż:\n[\n|x_{k+1} - x_k| < 0.0001\n]",
+      "input": "Jeden argument funkcji:\n\n* `n` (liczba naturalna, `n ≥ 0`)",
+      "output": "Funkcja zwraca jedną liczbę zmiennoprzecinkową — przybliżony pierwiastek z `n`.",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(pierwiastek(16))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2",
+          "output": "1.4142135623746899"
+        },
+        {
+          "input": "10",
+          "output": "3.162277660168379"
+        }
+      ],
+      "constraints": "* Dla `n = 0` funkcja ma zwrócić `0.0`.",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "07_petla_algorytmy_matematyczne/ZAD-08",
+      "title": "Naiwny test pierwszości liczby",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pierwszość",
+        "pętle",
+        "dzielniki"
+      ],
+      "description": "Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.",
+      "input": "Jeden argument funkcji:\n\n* `n` (liczba naturalna, `n ≥ 2`)",
+      "output": "Funkcja zwraca wartość logiczną:\n\n* `True` lub `False`",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(czy_pierwsza(7))\nprint(czy_pierwsza(4))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2",
+          "output": "True"
+        },
+        {
+          "input": "9",
+          "output": "False"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.\n* Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`."
+    }
+  ]
+}

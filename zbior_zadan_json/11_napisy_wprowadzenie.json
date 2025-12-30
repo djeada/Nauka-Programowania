@@ -1,0 +1,588 @@
+{
+  "file": "11_napisy_wprowadzenie.md",
+  "chapter_title": "Rozdział: Napisy — operacje podstawowe (stdin/stdout)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Wczytuj dane dokładnie w kolejności podanej w sekcji **Wejście**.\n* Jeśli w danych jest „jeden napis” — wczytaj **całą linię** (może zawierać spacje).\n* Jeśli w wyjściu ma być lista w stylu `[\"Ala\", \"ma\"]` albo `['o', 'ń']`, wypisz ją dokładnie w tej postaci.",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "11_napisy_wprowadzenie/ZAD-01",
+      "title": "Odwróć napis",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "string",
+        "I/O"
+      ],
+      "description": "Wczytaj napis i wypisz go od tyłu.",
+      "input": "* 1. linia: napis",
+      "output": "* 1. linia: odwrócony napis",
+      "examples": [
+        {
+          "input": "barszcz",
+          "output": "zczsrab"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "abcd",
+          "output": "dcba"
+        },
+        {
+          "input": "hello world",
+          "output": "dlrow olleh"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "11_napisy_wprowadzenie/ZAD-02",
+      "title": "Policz wystąpienia znaku",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "string",
+        "count"
+      ],
+      "description": "Wczytaj napis oraz jeden znak. Wypisz, ile razy ten znak występuje w napisie.",
+      "input": "* 1. linia: napis\n* 2. linia: pojedynczy znak",
+      "output": "* 1. linia: liczba wystąpień",
+      "examples": [
+        {
+          "input": "klamra\na",
+          "output": "2"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "banana\na",
+          "output": "3"
+        },
+        {
+          "input": "Mississippi\ns",
+          "output": "4"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "11_napisy_wprowadzenie/ZAD-03",
+      "title": "Z ilu słów składa się zdanie?",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "string",
+        "split"
+      ],
+      "description": "Wczytaj zdanie i policz, z ilu słów się składa. Znaki interpunkcyjne nie są słowami.",
+      "input": "* 1. linia: zdanie",
+      "output": "* 1. linia: liczba słów",
+      "examples": [
+        {
+          "input": "gram na pianinie.",
+          "output": "3"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Hello world.",
+          "output": "2"
+        },
+        {
+          "input": "One, two, three!",
+          "output": "3"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Najprościej: podziel po białych znakach, a z końców słów usuń interpunkcję."
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "11_napisy_wprowadzenie/ZAD-04",
+      "title": "Zamień wszystkie małe litery na duże",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "string",
+        "upper"
+      ],
+      "description": "Wczytaj napis i zamień wszystkie litery na wielkie.",
+      "input": "* 1. linia: napis",
+      "output": "* 1. linia: napis po konwersji",
+      "examples": [
+        {
+          "input": "Rumcajs",
+          "output": "RUMCAJS"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Abc De",
+          "output": "ABC DE"
+        },
+        {
+          "input": "xyz",
+          "output": "XYZ"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "11_napisy_wprowadzenie/ZAD-05",
+      "title": "Co k-ty znak poziomo i pionowo",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "string",
+        "slicing",
+        "pętle"
+      ],
+      "description": "Wczytaj napis i liczbę `k`.\n\na) Wypisz co `k`-ty znak w jednym wierszu, oddzielając znaki spacjami.\nb) Wypisz co `k`-ty znak pionowo (każdy w osobnej linii).",
+      "input": "* 1. linia: napis\n* 2. linia: liczba naturalna `k` (k ≥ 1)",
+      "output": "* (a) 1 linia: znaki oddzielone spacjami\n* (b) wiele linii: każdy znak osobno",
+      "examples": [
+        {
+          "input": "Grzechotnik\n3",
+          "output": "z h n\nz\nh\nn"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "abcdefg\n2",
+          "output": "b d f\nb\nd\nf"
+        },
+        {
+          "input": "hello\n1",
+          "output": "h e l l o\nh\ne\nl\nl\no"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dokładnie jedna spacja między znakami w punkcie (a), bez spacji na końcu linii."
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "11_napisy_wprowadzenie/ZAD-06",
+      "title": "Zamień litery „a” na „?”",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "string",
+        "replace"
+      ],
+      "description": "Wczytaj napis i zamień wszystkie wystąpienia litery `a` na znak `?`.",
+      "input": "* 1. linia: napis",
+      "output": "* 1. linia: napis po zamianie",
+      "examples": [
+        {
+          "input": "Latarnik",
+          "output": "L?t?rnik"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "banana",
+          "output": "b?n?n?"
+        },
+        {
+          "input": "xyz",
+          "output": "xyz"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "11_napisy_wprowadzenie/ZAD-07",
+      "title": "Zamień znaki na kody ASCII",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "ASCII",
+        "ord",
+        "string"
+      ],
+      "description": "Wczytaj napis i wypisz kody ASCII wszystkich jego znaków, oddzielone przecinkiem i spacją `\", \"`.",
+      "input": "* 1. linia: napis",
+      "output": "* 1. linia: kody ASCII oddzielone `, `",
+      "examples": [
+        {
+          "input": "Robot",
+          "output": "82, 111, 98, 111, 116"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "ABC",
+          "output": "65, 66, 67"
+        },
+        {
+          "input": "a z",
+          "output": "97, 32, 122"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "11_napisy_wprowadzenie/ZAD-08",
+      "title": "Wypisz pionowo słowa ze zdania",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "split",
+        "string"
+      ],
+      "description": "Wczytaj zdanie, podziel na słowa i wypisz każde słowo w osobnej linii. Interpunkcja nie jest słowem.",
+      "input": "* 1. linia: zdanie",
+      "output": "* wiele linii: słowa w kolejności występowania",
+      "examples": [
+        {
+          "input": "Ala ma kota",
+          "output": "Ala\nma\nkota"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Ala ma kota",
+          "output": "Ala\nma\nkota"
+        },
+        {
+          "input": "Hello, world!",
+          "output": "Hello\nworld"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "11_napisy_wprowadzenie/ZAD-09",
+      "title": "Rozdziel informacje o pracowniku",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "split",
+        "formatowanie"
+      ],
+      "description": "Wczytaj linię z danymi pracownika rozdzielonymi średnikami `;`:\n\n1. Imię, 2) Nazwisko, 3) Miejsce urodzenia, 4) Stanowisko, 5) Zarobki\n\nWypisz każdą informację w osobnej linii z etykietą.",
+      "input": "* 1. linia: dane w formacie `Imię; Nazwisko; Miasto; Zawód; Zarobki;`",
+      "output": "Pięć linii w formacie:\n\n* `Imię: ...`\n* `Nazwisko: ...`\n* `Miejsce urodzenia: ...`\n* `Zawód: ...`\n* `Zarobki: ...`",
+      "examples": [
+        {
+          "input": "Jan; Kowalski; Warszawa; Programista; 1000;",
+          "output": "Imię: Jan\nNazwisko: Kowalski\nMiejsce urodzenia: Warszawa\nZawód: Programista\nZarobki: 1000"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Jan; Kowalski; Krakow; Tester; 5000;",
+          "output": "Imię: Jan\nNazwisko: Kowalski\nMiejsce urodzenia: Krakow\nZawód: Tester\nZarobki: 5000"
+        },
+        {
+          "input": "Ala;Nowak;Gdansk;Manager;1234;",
+          "output": "Imię: Ala\nNazwisko: Nowak\nMiejsce urodzenia: Gdansk\nZawód: Manager\nZarobki: 1234"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).\n* Ostatni średnik może powodować pusty element na końcu — zignoruj go."
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "11_napisy_wprowadzenie/ZAD-10",
+      "title": "Najdłuższe i najkrótsze słowo",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "string",
+        "min/max",
+        "len"
+      ],
+      "description": "Wczytaj zdanie i znajdź:\n\na) najdłuższe słowo,\nb) najkrótsze słowo.\n\nJeśli jest remis, wybierz słowo, które występuje wcześniej.",
+      "input": "* 1. linia: zdanie",
+      "output": "* 1. linia: najdłuższe słowo\n* 2. linia: najkrótsze słowo",
+      "examples": [
+        {
+          "input": "Kaczka lubi wiosnę.",
+          "output": "Kaczka\nlubi"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "one three five.",
+          "output": "three\none"
+        },
+        {
+          "input": "aa bbb cc",
+          "output": "bbb\naa"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-11",
+      "slug": "11_napisy_wprowadzenie/ZAD-11",
+      "title": "Średnia długość słów",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "string",
+        "arytmetyka"
+      ],
+      "description": "Wczytaj zdanie i oblicz średnią długość słów. Wynik ma być liczbą całkowitą.",
+      "input": "* 1. linia: zdanie",
+      "output": "* 1. linia: średnia długość słów (liczba całkowita)",
+      "examples": [
+        {
+          "input": "Zepsuty rower.",
+          "output": "6"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Ala ma kota",
+          "output": "3"
+        },
+        {
+          "input": "one two three",
+          "output": "3"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Licz jako: `suma_dlugosci // liczba_slow` (dzielenie całkowite)."
+    },
+    {
+      "id": "ZAD-12",
+      "slug": "11_napisy_wprowadzenie/ZAD-12",
+      "title": "Usuń spacje ze zdania",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "replace",
+        "string"
+      ],
+      "description": "Wczytaj zdanie i usuń z niego wszystkie spacje.",
+      "input": "* 1. linia: zdanie",
+      "output": "* 1. linia: zdanie bez spacji",
+      "examples": [
+        {
+          "input": "Ala ma kota",
+          "output": "Alamakota"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Ala ma kota",
+          "output": "Alamakota"
+        },
+        {
+          "input": "a b c",
+          "output": "abc"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-13",
+      "slug": "11_napisy_wprowadzenie/ZAD-13",
+      "title": "Znaki na indeksach będących liczbami pierwszymi",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "liczby pierwsze",
+        "indeksy",
+        "string"
+      ],
+      "description": "Wczytaj napis. Zbierz znaki, których **indeksy (od 0)** są liczbami pierwszymi (2, 3, 5, 7, ...). Wypisz wynik jako listę w stylu Pythona.",
+      "input": "* 1. linia: napis",
+      "output": "* 1. linia: lista znaków, np. `['o', 'ń']`",
+      "examples": [
+        {
+          "input": "Słoń",
+          "output": "['o', 'ń']"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "abcdefg",
+          "output": "['c', 'd', 'f']"
+        },
+        {
+          "input": "hi",
+          "output": "[]"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Indeksy: `S(0) ł(1) o(2) ń(3)` → bierz 2 i 3."
+    },
+    {
+      "id": "ZAD-14",
+      "slug": "11_napisy_wprowadzenie/ZAD-14",
+      "title": "Napis z liczb od 1 do n",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "pętle",
+        "string"
+      ],
+      "description": "Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separatorów.",
+      "input": "* 1. linia: liczba naturalna `n` (n ≥ 1)",
+      "output": "* 1. linia: ciąg `1..n` bez spacji",
+      "examples": [
+        {
+          "input": "3",
+          "output": "123"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5",
+          "output": "12345"
+        },
+        {
+          "input": "12",
+          "output": "123456789101112"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-15",
+      "slug": "11_napisy_wprowadzenie/ZAD-15",
+      "title": "Słowa jako lista",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "split",
+        "list"
+      ],
+      "description": "Wczytaj zdanie i wypisz listę słów w formacie `[\"Ala\", \"ma\", \"kota\"]`.",
+      "input": "* 1. linia: zdanie",
+      "output": "* 1. linia: lista słów (jak w przykładzie)",
+      "examples": [
+        {
+          "input": "Ala ma kota",
+          "output": "[\"Ala\", \"ma\", \"kota\"]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Ala ma kota",
+          "output": "[\"Ala\", \"ma\", \"kota\"]"
+        },
+        {
+          "input": "one two",
+          "output": "[\"one\", \"two\"]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-16",
+      "slug": "11_napisy_wprowadzenie/ZAD-16",
+      "title": "Odległość Hamminga",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "string",
+        "porównanie"
+      ],
+      "description": "Wczytaj dwa napisy tej samej długości i policz, na ilu pozycjach różnią się znakami.",
+      "input": "* 1. linia: napis `s1`\n* 2. linia: napis `s2`  (ta sama długość)",
+      "output": "* 1. linia: odległość Hamminga",
+      "examples": [
+        {
+          "input": "adam\naxam",
+          "output": "1"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "abcd\nabxd",
+          "output": "1"
+        },
+        {
+          "input": "1010\n0101",
+          "output": "4"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-17",
+      "slug": "11_napisy_wprowadzenie/ZAD-17",
+      "title": "Konwersja listy na napis",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "list",
+        "string"
+      ],
+      "description": "Otrzymujesz listę liczb naturalnych w zapisie tekstowym (np. `[2, 4, 7]`). Połącz liczby bez separatorów i wypisz jako napis.",
+      "input": "* 1. linia: lista w formacie podobnym do Pythona, np. `[2, 4, 7]`",
+      "output": "* 1. linia: napis z połączonych liczb, np. `247`",
+      "examples": [
+        {
+          "input": "[2, 4, 7]",
+          "output": "247"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "[2, 4, 7]",
+          "output": "247"
+        },
+        {
+          "input": "[10, 0, 3]",
+          "output": "1003"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Najprościej: usuń nawiasy `[` `]`, rozdziel po przecinkach, `strip()`, potem sklej."
+    },
+    {
+      "id": "ZAD-18",
+      "slug": "11_napisy_wprowadzenie/ZAD-18",
+      "title": "Odwróć słowa w zdaniu",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "split",
+        "string",
+        "pętle"
+      ],
+      "description": "Wczytaj zdanie i odwróć litery **w każdym słowie osobno**, zachowując kolejność słów.",
+      "input": "* 1. linia: zdanie",
+      "output": "* 1. linia: zdanie z odwróconymi słowami",
+      "examples": [
+        {
+          "input": "Ala ma kota",
+          "output": "alA am atok"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Ala ma kota",
+          "output": "alA am atok"
+        },
+        {
+          "input": "hello world",
+          "output": "olleh dlrow"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}

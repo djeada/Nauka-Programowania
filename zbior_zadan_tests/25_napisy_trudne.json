@@ -1,0 +1,92 @@
+{
+  "ZAD-01": [
+    {
+      "input": "hello hello\nlo\nX",
+      "output": "helX helX"
+    },
+    {
+      "input": "abc ab abc\nab\nX",
+      "output": "Xc X Xc"
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "banana\nna",
+      "output": "ba"
+    },
+    {
+      "input": "aaaa\naa",
+      "output": ""
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "pre\nprefix",
+      "output": "Prawda"
+    },
+    {
+      "input": "abc\nab",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "abac",
+      "output": "abc"
+    },
+    {
+      "input": "aaaa",
+      "output": "a"
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "aaabbbcca",
+      "output": "abca"
+    },
+    {
+      "input": "ab",
+      "output": "ab"
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "abcd\ncdab",
+      "output": "Prawda"
+    },
+    {
+      "input": "abcd\nacbd",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "aa",
+      "output": "['a']"
+    },
+    {
+      "input": "abca",
+      "output": "['a']"
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "3\nflower\nflow\nflight",
+      "output": "fl"
+    },
+    {
+      "input": "2\ndog\nrace",
+      "output": ""
+    }
+  ],
+  "ZAD-09": [
+    {
+      "input": "abcXYZ\nXYZabc",
+      "output": "abc"
+    },
+    {
+      "input": "hello\nyellow",
+      "output": "ello"
+    }
+  ]
+}

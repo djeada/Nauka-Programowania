@@ -1,0 +1,86 @@
+{
+  "ZAD-01": [
+    {
+      "input": "12",
+      "output": "12"
+    },
+    {
+      "input": "0",
+      "output": ""
+    }
+  ],
+  "ZAD-02": [
+    {
+      "input": "20\n11\n2006\n20\n11\n2024",
+      "output": "Osoba jest pełnoletnia."
+    },
+    {
+      "input": "21\n11\n2006\n20\n11\n2024",
+      "output": "Osoba nie jest pełnoletnia."
+    }
+  ],
+  "ZAD-03": [
+    {
+      "input": "2000",
+      "output": "Rok jest przestępny."
+    },
+    {
+      "input": "1900",
+      "output": "Rok nie jest przestępny."
+    }
+  ],
+  "ZAD-04": [
+    {
+      "input": "3",
+      "output": "Środa"
+    },
+    {
+      "input": "8",
+      "output": "Niepoprawny numer dnia tygodnia."
+    }
+  ],
+  "ZAD-05": [
+    {
+      "input": "1",
+      "output": "31"
+    },
+    {
+      "input": "2",
+      "output": "28"
+    },
+    {
+      "input": "13",
+      "output": "Niepoprawny numer miesiąca."
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "29\n2\n2020",
+      "output": "Data jest poprawna."
+    },
+    {
+      "input": "29\n2\n2019",
+      "output": "Data jest niepoprawna."
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "29\n2\n2020",
+      "output": "60"
+    },
+    {
+      "input": "31\n12\n2021",
+      "output": "365"
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "29\n2\n2020",
+      "output": "Sobota"
+    },
+    {
+      "input": "4\n7\n2023",
+      "output": "Wtorek"
+    }
+  ]
+}

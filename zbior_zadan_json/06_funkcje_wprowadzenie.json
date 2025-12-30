@@ -1,0 +1,557 @@
+{
+  "file": "06_funkcje_wprowadzenie.md",
+  "chapter_title": "Rozdział: Funkcje — Wprowadzenie",
+  "chapter_description": "Poniższe zadania dotyczą pisania **funkcji**.\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem / ćwiczeniem funkcji.**\n**Konwencje wspólne:**\n* Jeśli zadanie mówi „funkcja zwraca” — chodzi o użycie instrukcji `return`.\n* Jeśli zadanie zawiera kilka podpunktów (a, b, c…) — każdy podpunkt to **osobna funkcja**.\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.",
+  "exercises": [
+    {
+      "id": "ZAD-01A",
+      "slug": "06_funkcje_wprowadzenie/ZAD-01A",
+      "title": "Zwracanie stałej wartości: liczba 3",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "return",
+        "int"
+      ],
+      "description": "Napisz funkcję (bez argumentów), która zwraca liczbę całkowitą `3`.",
+      "input": "Brak.",
+      "output": "Funkcja ma zwrócić:\n\n* `3`",
+      "examples": [
+        {
+          "input": "",
+          "output": "wynik = zwroc_liczbe()\nprint(wynik)"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "",
+          "output": "3"
+        },
+        {
+          "input": "",
+          "output": "3"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-01B",
+      "slug": "06_funkcje_wprowadzenie/ZAD-01B",
+      "title": "Zwracanie stałej wartości: napis „Tak”",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "return",
+        "string"
+      ],
+      "description": "Napisz funkcję (bez argumentów), która zwraca napis `Tak`.",
+      "input": "Brak.",
+      "output": "Funkcja ma zwrócić:\n\n* `Tak`",
+      "examples": [
+        {
+          "input": "",
+          "output": "wynik = zwroc_napis()\nprint(wynik)"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "",
+          "output": "Tak"
+        },
+        {
+          "input": "",
+          "output": "Tak"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-01C",
+      "slug": "06_funkcje_wprowadzenie/ZAD-01C",
+      "title": "Zwracanie stałej wartości: True",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "return",
+        "bool"
+      ],
+      "description": "Napisz funkcję (bez argumentów), która zwraca wartość logiczną `True`.",
+      "input": "Brak.",
+      "output": "Funkcja ma zwrócić:\n\n* `True`",
+      "examples": [
+        {
+          "input": "",
+          "output": "wynik = zwroc_prawda()\nprint(wynik)"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "",
+          "output": "True"
+        },
+        {
+          "input": "",
+          "output": "True"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02A",
+      "slug": "06_funkcje_wprowadzenie/ZAD-02A",
+      "title": "Suma dwóch liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "arytmetyka"
+      ],
+      "description": "Napisz funkcję `suma(a, b)`, która zwraca sumę dwóch liczb całkowitych.",
+      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba całkowita)\n* `b` (liczba całkowita)",
+      "output": "Funkcja zwraca:\n\n* `a + b`",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(suma(3, 5))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "7\n-2",
+          "output": "5"
+        },
+        {
+          "input": "0\n0",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02B",
+      "slug": "06_funkcje_wprowadzenie/ZAD-02B",
+      "title": "Różnica: b − a",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "arytmetyka"
+      ],
+      "description": "Napisz funkcję `roznica(a, b)`, która zwraca różnicę: `b - a`.",
+      "input": "Dwa argumenty funkcji: `a`, `b` (liczby całkowite)",
+      "output": "Funkcja zwraca:\n\n* `b - a`",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(roznica(3, 5))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "7\n-2",
+          "output": "-9"
+        },
+        {
+          "input": "3\n10",
+          "output": "7"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02C",
+      "slug": "06_funkcje_wprowadzenie/ZAD-02C",
+      "title": "Iloczyn dwóch liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "arytmetyka"
+      ],
+      "description": "Napisz funkcję `iloczyn(a, b)`, która zwraca iloczyn `a * b`.",
+      "input": "Dwa argumenty funkcji: `a`, `b` (liczby całkowite)",
+      "output": "Funkcja zwraca:\n\n* `a * b`",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(iloczyn(3, 5))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "-4\n3",
+          "output": "-12"
+        },
+        {
+          "input": "0\n9",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02D",
+      "slug": "06_funkcje_wprowadzenie/ZAD-02D",
+      "title": "Iloraz całkowity: a // b",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "dzielenie",
+        "//"
+      ],
+      "description": "Napisz funkcję `iloraz(a, b)`, która zwraca iloraz całkowity `a // b`.",
+      "input": "Dwa argumenty funkcji: `a`, `b` (liczby całkowite)",
+      "output": "Funkcja zwraca:\n\n* `a // b`",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(iloraz(3, 5))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "7\n2",
+          "output": "3"
+        },
+        {
+          "input": "9\n3",
+          "output": "3"
+        }
+      ],
+      "constraints": "* `b ≠ 0`",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02E",
+      "slug": "06_funkcje_wprowadzenie/ZAD-02E",
+      "title": "Reszta z dzielenia: a % b",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "modulo",
+        "%"
+      ],
+      "description": "Napisz funkcję `reszta(a, b)`, która zwraca resztę z dzielenia `a % b`.",
+      "input": "Dwa argumenty funkcji: `a`, `b` (liczby całkowite)",
+      "output": "Funkcja zwraca:\n\n* `a % b`",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(reszta(3, 5))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "7\n2",
+          "output": "1"
+        },
+        {
+          "input": "9\n3",
+          "output": "0"
+        }
+      ],
+      "constraints": "* `b ≠ 0`",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "06_funkcje_wprowadzenie/ZAD-03",
+      "title": "Sprawdzanie warunków logicznych",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "bool",
+        "warunki"
+      ],
+      "description": "Napisz funkcję `sprawdz_warunki(a, b)`, która dla dwóch liczb naturalnych zwraca cztery wartości logiczne (np. jako krotkę) odpowiadające warunkom:\n\na) Czy `a > b`?\nb) Czy `a + b < 10`?\nc) Czy obie liczby są nieparzyste?\nd) Czy `max(a, b) < a^2`?",
+      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba całkowita, `a ≥ 0`)\n* `b` (liczba całkowita, `b ≥ 0`)",
+      "output": "Cztery wartości logiczne w kolejności a), b), c), d).",
+      "examples": [
+        {
+          "input": "",
+          "output": "A, B, C, D = sprawdz_warunki(3, 2)\nprint(A)\nprint(B)\nprint(C)\nprint(D)"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\n2",
+          "output": "True\nTrue\nFalse\nTrue"
+        },
+        {
+          "input": "1\n1",
+          "output": "False\nTrue\nTrue\nFalse"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04A",
+      "slug": "06_funkcje_wprowadzenie/ZAD-04A",
+      "title": "Minimum z dwóch liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "min"
+      ],
+      "description": "Napisz funkcję `min_z_dwoch(a, b)`, która zwraca mniejszą z dwóch liczb naturalnych.",
+      "input": "Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)",
+      "output": "Funkcja zwraca:\n\n* `min(a, b)`",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(min_z_dwoch(3, 1))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n2",
+          "output": "2"
+        },
+        {
+          "input": "0\n7",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04B",
+      "slug": "06_funkcje_wprowadzenie/ZAD-04B",
+      "title": "Maksimum z dwóch liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "max"
+      ],
+      "description": "Napisz funkcję `max_z_dwoch(a, b)`, która zwraca większą z dwóch liczb naturalnych.",
+      "input": "Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)",
+      "output": "Funkcja zwraca:\n\n* `max(a, b)`",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(max_z_dwoch(3, 1))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n2",
+          "output": "5"
+        },
+        {
+          "input": "0\n7",
+          "output": "7"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04C",
+      "slug": "06_funkcje_wprowadzenie/ZAD-04C",
+      "title": "Minimum z trzech liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "min"
+      ],
+      "description": "Napisz funkcję `min_z_trzech(a, b, c)`, która zwraca najmniejszą z trzech liczb naturalnych.",
+      "input": "Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)",
+      "output": "Funkcja zwraca:\n\n* `min(a, b, c)`",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(min_z_trzech(3, 2, 1))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n2\n9",
+          "output": "2"
+        },
+        {
+          "input": "0\n7\n3",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04D",
+      "slug": "06_funkcje_wprowadzenie/ZAD-04D",
+      "title": "Maksimum z trzech liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "max"
+      ],
+      "description": "Napisz funkcję `max_z_trzech(a, b, c)`, która zwraca największą z trzech liczb naturalnych.",
+      "input": "Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)",
+      "output": "Funkcja zwraca:\n\n* `max(a, b, c)`",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(max_z_trzech(3, 2, 1))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n2\n9",
+          "output": "9"
+        },
+        {
+          "input": "0\n7\n3",
+          "output": "7"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "06_funkcje_wprowadzenie/ZAD-05",
+      "title": "Zamiana wartości miejscami",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "krotka",
+        "zmienne"
+      ],
+      "description": "Napisz funkcję `zamien_wartosci(a, b)`, która zamienia wartości miejscami i zwraca je jako parę `(b, a)`.",
+      "input": "Dwa argumenty: `a`, `b` (liczby naturalne)",
+      "output": "Dwie liczby naturalne zwrócone jako krotka / para:\n\n* najpierw nowa wartość `a` (czyli stare `b`)\n* potem nowa wartość `b` (czyli stare `a`)",
+      "examples": [
+        {
+          "input": "",
+          "output": "a, b = zamien_wartosci(8, 5)\nprint(\"a =\", a)\nprint(\"b =\", b)"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "8\n5",
+          "output": "5\n8"
+        },
+        {
+          "input": "0\n7",
+          "output": "7\n0"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "06_funkcje_wprowadzenie/ZAD-06",
+      "title": "Suma cyfr liczby (funkcja)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "pętle",
+        "modulo"
+      ],
+      "description": "Napisz funkcję `suma_cyfr(n)`, która zwraca sumę cyfr liczby naturalnej `n`.",
+      "input": "Jeden argument: `n` (`n ≥ 0`)",
+      "output": "Funkcja zwraca sumę cyfr.",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(suma_cyfr(13231))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "13231",
+          "output": "10"
+        },
+        {
+          "input": "0",
+          "output": "0"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Dla `n = 0` suma cyfr to `0`."
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "06_funkcje_wprowadzenie/ZAD-07",
+      "title": "Weryfikacja nazwy użytkownika i hasła",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "funkcje",
+        "while",
+        "string",
+        "porównania"
+      ],
+      "description": "Napisz dwie funkcje:\n\n1. `pobierz_dane()` — pobiera od użytkownika nazwę użytkownika i hasło i zwraca je (np. jako parę).\n2. `sprawdz_dane(poprawny_login, poprawne_haslo)` — w pętli wczytuje login i hasło aż będą identyczne z przekazanymi. Po poprawnym wczytaniu wypisuje:\n   `Dane poprawne. Dostęp przyznany.`",
+      "input": "* `pobierz_dane()` wczytuje dwie linie:\n\n  1. login\n  2. hasło\n* `sprawdz_dane(...)` wczytuje kolejne pary (login, hasło), po dwie linie na próbę.",
+      "output": "Jedna linia (tylko raz, po poprawnym dopasowaniu):\n\n* `Dane poprawne. Dostęp przyznany.`",
+      "examples": [],
+      "testcases": [
+        {
+          "input": "admin\n1234\nroot\npass\nadmin\n1234",
+          "output": "Dane poprawne. Dostęp przyznany."
+        },
+        {
+          "input": "alice\nqwerty\nalice\n123\nalice\nqwerty",
+          "output": "Dane poprawne. Dostęp przyznany."
+        }
+      ],
+      "constraints": "* W pewnym momencie użytkownik poda poprawne dane.",
+      "notes": "* **Nie wypisuj promptów** typu „Podaj nazwę użytkownika:”.\n* Porównanie jest czułe na wielkość liter."
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "06_funkcje_wprowadzenie/ZAD-08",
+      "title": "Iloraz w dół bez / i %",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "funkcje",
+        "pętle",
+        "odejmowanie"
+      ],
+      "description": "Napisz funkcję `zaokraglij_w_dol(a, b)`, która zwraca wartość `a // b`, ale **nie używa** operatorów `/` ani `%`.",
+      "input": "Dwa argumenty:\n\n* `a` (liczba naturalna, `a ≥ 0`)\n* `b` (liczba naturalna)",
+      "output": "Funkcja zwraca liczbę naturalną — iloraz `a` przez `b` zaokrąglony w dół.",
+      "examples": [
+        {
+          "input": "",
+          "output": "print(zaokraglij_w_dol(7, 2))"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "9\n2",
+          "output": "4"
+        },
+        {
+          "input": "0\n5",
+          "output": "0"
+        }
+      ],
+      "constraints": "* `b > 0`",
+      "notes": ""
+    }
+  ]
+}

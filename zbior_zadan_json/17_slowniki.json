@@ -1,0 +1,396 @@
+{
+  "file": "17_slowniki.md",
+  "chapter_title": "Rozdział: Słowniki (stdin/stdout)",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych liczby/napisy są w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wejściowych w jednej linii jest kilka wartości — rozbij linię po spacjach.\n* Wypisuj wynik dokładnie w formacie z treści (np. słownik w postaci `{...}`, listy jak `[...]`).",
+  "exercises": [
+    {
+      "id": "ZAD-01",
+      "slug": "17_slowniki/ZAD-01",
+      "title": "Słownik: liczby i ich kwadraty",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dict",
+        "pętla"
+      ],
+      "description": "Wczytaj liczbę `n`. Utwórz słownik, gdzie klucze to liczby od `1` do `n-1`, a wartości to ich kwadraty.",
+      "input": "* 1 linia: `n` (n ≥ 1)",
+      "output": "* Słownik w postaci: `{1: 1, 2: 4, ...}`",
+      "examples": [
+        {
+          "input": "5",
+          "output": "{1: 1, 2: 4, 3: 9, 4: 16}"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4",
+          "output": "{1: 1, 2: 4, 3: 9}"
+        },
+        {
+          "input": "1",
+          "output": "{}"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-02",
+      "slug": "17_slowniki/ZAD-02",
+      "title": "Słownik z dwóch list (klucze i wartości)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dict",
+        "listy"
+      ],
+      "description": "Wczytaj dwie listy. Jeśli mają tę samą długość, utwórz słownik: klucz z pierwszej listy → wartość z drugiej listy.\nJeśli długości są różne, wypisz pusty słownik `{}`.",
+      "input": "* 1 linia: `n`\n* 2 linia: `m`\n* następnie `n` liczb (pierwsza lista)\n* następnie `m` liczb (druga lista)",
+      "output": "* Słownik albo `{}`",
+      "examples": [
+        {
+          "input": "3\n3\n3 5 8\n1 2 -1",
+          "output": "{3: 1, 5: 2, 8: -1}"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\n3\n1 2 3\n4 5 6",
+          "output": "{1: 4, 2: 5, 3: 6}"
+        },
+        {
+          "input": "2\n3\n1 2\n3 4 5",
+          "output": "{}"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-03",
+      "slug": "17_slowniki/ZAD-03",
+      "title": "Biblioteka: baza wypożyczeń",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dict",
+        "list",
+        "pętle",
+        "string"
+      ],
+      "description": "Utrzymuj słownik: `imię -> lista wypożyczonych książek`.\nObsługuj komendy (każda w osobnej linii) aż do `koniec`:\n\n* `dodaj [imię] [tytuł]`\n* `zwróć [imię] [tytuł]`\n* `lista [imię]`\n\nPo `lista [imię]` wypisz:\n\n* jeśli lista niepusta: `Książki wypożyczone przez [imię]: t1, t2, ...`\n* jeśli brak książek (lub brak czytelnika): `Książki wypożyczone przez [imię]: brak`",
+      "input": "Wiele linii z komendami, koniec po słowie `koniec`.",
+      "output": "Tylko po komendach `lista ...`.",
+      "examples": [
+        {
+          "input": "dodaj Jan Hobbit\ndodaj Anna \"Duma i uprzedzenie\"\ndodaj Jan \"Władca Pierścieni\"\nlista Jan\nzwróć Jan Hobbit\nlista Jan\nlista Anna\nkoniec",
+          "output": "Książki wypożyczone przez Jan: Hobbit, Władca Pierścieni\nKsiążki wypożyczone przez Jan: Władca Pierścieni\nKsiążki wypożyczone przez Anna: Duma i uprzedzenie"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "dodaj Jan Hobbit\ndodaj Jan Dune\nlista Jan\nzwróć Jan Hobbit\nlista Jan\nkoniec",
+          "output": "Książki wypożyczone przez Jan: Hobbit, Dune\nKsiążki wypożyczone przez Jan: Dune"
+        },
+        {
+          "input": "lista Anna\ndodaj Anna Solaris\nlista Anna\nkoniec",
+          "output": "Książki wypożyczone przez Anna: brak\nKsiążki wypożyczone przez Anna: Solaris"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-04",
+      "slug": "17_slowniki/ZAD-04",
+      "title": "Usuń pary ze słownika na podstawie wartości",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dict",
+        "filtrowanie"
+      ],
+      "description": "Wczytaj słownik (`n` par: klucz-napis, wartość-liczba) oraz liczbę `k`. Usuń wszystkie pary, gdzie wartość == `k`. Wypisz wynikowy słownik.",
+      "input": "* 1 linia: `n`\n* następnie `n` linii: `klucz wartość`\n* ostatnia linia: `k`",
+      "output": "* Słownik po usunięciu par",
+      "examples": [
+        {
+          "input": "4\naaa 5\nabc 1\nxxx 5\ncba 3\n5",
+          "output": "{'abc': 1, 'cba': 3}"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\na 1\nb 2\nc 1\n1",
+          "output": "{'b': 2}"
+        },
+        {
+          "input": "2\nx 9\ny 8\n5",
+          "output": "{'x': 9, 'y': 8}"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-05",
+      "slug": "17_slowniki/ZAD-05",
+      "title": "Pracownik z największym sumarycznym zyskiem",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dict",
+        "sumowanie"
+      ],
+      "description": "Wczytaj `n` wpisów: `pracownik zysk`. Zsumuj zyski per pracownik i wypisz nazwę pracownika z największą sumą.\n(Jeśli remis, wybierz tego, który pierwszy osiągnął tę maksymalną sumę podczas przetwarzania.)",
+      "input": "* 1 linia: `n`\n* następnie `n` linii: `imie_i_nazwisko zysk`",
+      "output": "* Jedna linia: `imie_i_nazwisko`",
+      "examples": [
+        {
+          "input": "5\nBarnaba_Barabash 120\nJon_Snow 100\nKira_Summer 300\nBarnaba_Barabash 200\nBob_Marley 110",
+          "output": "Barnaba_Barabash"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\nAnn 5\nBob 7\nAnn 4\nBob 3\nCara 10",
+          "output": "Bob"
+        },
+        {
+          "input": "3\nA 1\nB 5\nA 5",
+          "output": "A"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "17_slowniki/ZAD-06",
+      "title": "Histogram znaków w słowie",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dict",
+        "string"
+      ],
+      "description": "Wczytaj napis. Zwróć słownik: znak → liczba wystąpień.",
+      "input": "* 1 linia: napis",
+      "output": "* Słownik, np. `{'k': 1, 'l': 1, 'a': 2, 's': 1}`",
+      "examples": [
+        {
+          "input": "klasa",
+          "output": "{'k': 1, 'l': 1, 'a': 2, 's': 1}"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "aba",
+          "output": "{'a': 2, 'b': 1}"
+        },
+        {
+          "input": "abBA",
+          "output": "{'a': 1, 'b': 1, 'B': 1, 'A': 1}"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "17_slowniki/ZAD-07",
+      "title": "Histogram słów w tekście (ignoruj wielkość liter)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dict",
+        "string",
+        "tekst"
+      ],
+      "description": "Wczytaj tekst. Policz częstość występowania słów (tylko litery), ignorując wielkość liter. Wypisz słownik: słowo (małe litery) → liczba wystąpień.",
+      "input": "* 1 linia: tekst",
+      "output": "* Słownik",
+      "examples": [
+        {
+          "input": "Ala ma kota. Ala lubi koty.",
+          "output": "{'ala': 2, 'ma': 1, 'kota': 1, 'lubi': 1, 'koty': 1}"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Ala ma kota. Ala ma psa!",
+          "output": "{'ala': 2, 'ma': 2, 'kota': 1, 'psa': 1}"
+        },
+        {
+          "input": "One two two.",
+          "output": "{'one': 1, 'two': 2}"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "17_slowniki/ZAD-08",
+      "title": "Najczęstsza litera w zdaniu",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dict",
+        "string"
+      ],
+      "description": "Wczytaj zdanie. Zignoruj spacje i znaki interpunkcyjne. Znajdź literę występującą najczęściej.\nJeśli jest kilka, wybierz tę, która **pojawia się jako pierwsza w zdaniu**.",
+      "input": "* 1 linia: zdanie",
+      "output": "* 1 znak",
+      "examples": [
+        {
+          "input": "lezy jerzy na wiezy",
+          "output": "e"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "ab ba",
+          "output": "a"
+        },
+        {
+          "input": "Hello!",
+          "output": "l"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "17_slowniki/ZAD-09",
+      "title": "Znaki występujące co najmniej dwa razy",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dict",
+        "string"
+      ],
+      "description": "Wczytaj napis. Wypisz napis złożony z **unikalnych** znaków, które występują co najmniej 2 razy, w kolejności pierwszego pojawienia się w wejściu.",
+      "input": "* 1 linia: napis",
+      "output": "* 1 linia: wynikowy napis",
+      "examples": [
+        {
+          "input": "aaabbbccc",
+          "output": "abc"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "aabccdde",
+          "output": "acd"
+        },
+        {
+          "input": "abc",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "17_slowniki/ZAD-10",
+      "title": "Znalezienie anagramów w tekście (grupy)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "dict",
+        "anagramy",
+        "string"
+      ],
+      "description": "Wczytaj tekst. Znajdź grupy słów będących anagramami (ignoruj wielkość liter, słowa to tylko litery).\nWypisz wynik jako listę list, np. `[['absurd', 'brudas'], ...]`.\nDo grup wypisuj tylko te klucze, które mają co najmniej 2 słowa.",
+      "input": "* 1 linia: tekst",
+      "output": "* Lista list słów",
+      "examples": [
+        {
+          "input": "",
+          "output": "[[\"absurd\", \"brudas\"], [\"tyran\", \"narty\"], [\"bandzior\", \"zbrodnia\"], [\"burza\", \"arbuz\"], [\"galeria\", \"alergia\"]]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "rat tar art dog",
+          "output": "[[\"rat\", \"tar\", \"art\"]]"
+        },
+        {
+          "input": "listen silent enlist inlets cat",
+          "output": "[[\"listen\", \"silent\", \"enlist\", \"inlets\"]]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-11",
+      "slug": "17_slowniki/ZAD-11",
+      "title": "Sortowanie „słownika” po kluczach i po wartościach",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "sort",
+        "dict"
+      ],
+      "description": "Wczytaj `n` par `klucz wartość`.\na) Wypisz listę par posortowaną rosnąco po kluczach.\nb) Wypisz listę par posortowaną rosnąco po wartościach.",
+      "input": "* 1 linia: `n`\n* następnie `n` linii: `klucz wartość`",
+      "output": "* 1 linia: lista par dla a)\n* 2 linia: lista par dla b)",
+      "examples": [
+        {
+          "input": "4\nc 3\nx 5\na -2\nb 4",
+          "output": "[('a', -2), ('b', 4), ('c', 3), ('x', 5)]\n[('a', -2), ('c', 3), ('b', 4), ('x', 5)]"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\nb 2\na 3\nc 1",
+          "output": "[('a', 3), ('b', 2), ('c', 1)]\n[('c', 1), ('b', 2), ('a', 3)]"
+        },
+        {
+          "input": "3\nc 10\nb 5\na 7",
+          "output": "[('a', 7), ('b', 5), ('c', 10)]\n[('b', 5), ('a', 7), ('c', 10)]"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    },
+    {
+      "id": "ZAD-12",
+      "slug": "17_slowniki/ZAD-12",
+      "title": "Porównanie dwóch słowników z listami (kolejność list bez znaczenia)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "dict",
+        "porównanie",
+        "list"
+      ],
+      "description": "Wczytaj dwa „słowniki” (opis w wejściu). Dla każdego klucza wartościami są listy liczb całkowitych, ale **kolejność w listach nie ma znaczenia**.\nWypisz `Prawda` jeśli słowniki są identyczne (te same klucze i te same wielozbiory wartości), w przeciwnym razie `Fałsz`.",
+      "input": "* Najpierw:\n\n  * 1 linia: `n`\n  * następnie `n` linii: `klucz v1 v2 v3 ...` (co najmniej jedna wartość)\n* Potem:\n\n  * 1 linia: `m`\n  * następnie `m` linii: `klucz v1 v2 v3 ...`",
+      "output": "* `Prawda` lub `Fałsz`",
+      "examples": [
+        {
+          "input": "2\na 1 2 3\nb 4 5\n2\na 3 2 1\nb 5 4",
+          "output": "Prawda"
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2\na 1 2 3\nb 4 5\n2\na 3 2 1\nb 5 4",
+          "output": "Prawda"
+        },
+        {
+          "input": "1\na 1 2\n1\na 1 2 2",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "",
+      "notes": ""
+    }
+  ]
+}
