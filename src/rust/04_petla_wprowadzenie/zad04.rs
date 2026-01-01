@@ -39,4 +39,15 @@ Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 * Dla `n = 1` wynik to `0`.
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: i32 = n.trim().parse().unwrap();
+    
+    let mut suma = 0;
+    for i in 1..n {
+        suma += i;
+    }
+    
+    println!("{}", suma);
+}

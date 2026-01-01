@@ -37,4 +37,13 @@ Jedna liczba zmiennoprzecinkowa — ( \pi^n ) z dokładnością do dwóch miejsc
 * Dla `n = 0` wypisz `1.00`.
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: u32 = n.trim().parse().unwrap();
+    
+    let pi = std::f64::consts::PI;
+    let wynik = pi.powi(n as i32);
+    
+    println!("{:.2}", wynik);
+}

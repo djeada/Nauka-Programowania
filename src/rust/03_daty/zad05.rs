@@ -34,4 +34,15 @@ Jeśli `m` nie jest w zakresie 1–12, wypisz:
 ```
 
 */
-fn main() {}
+fn main() {
+    let mut m = String::new();
+    std::io::stdin().read_line(&mut m).unwrap();
+    let m: i32 = m.trim().parse().unwrap();
+    
+    match m {
+        1 | 3 | 5 | 7 | 8 | 10 | 12 => println!("31"),
+        4 | 6 | 9 | 11 => println!("30"),
+        2 => println!("28"),
+        _ => println!("Niepoprawny numer miesiąca."),
+    }
+}

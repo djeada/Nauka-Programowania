@@ -38,4 +38,12 @@ Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności ma
 * Jeśli `n = 1`, nie wypisuj nic.
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: i32 = n.trim().parse().unwrap();
+    
+    for i in (1..n).rev() {
+        println!("{}", i);
+    }
+}

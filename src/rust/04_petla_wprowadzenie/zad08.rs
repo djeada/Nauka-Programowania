@@ -54,4 +54,28 @@ Dwie liczby naturalne, każda w oddzielnej linii:
 * Nie wypisuj dodatkowych opisów — tylko liczby.
 
 */
-fn main() {}
+fn main() {
+    let mut a = String::new();
+    std::io::stdin().read_line(&mut a).unwrap();
+    let a: i32 = a.trim().parse().unwrap();
+    
+    let mut b = String::new();
+    std::io::stdin().read_line(&mut b).unwrap();
+    let b: i32 = b.trim().parse().unwrap();
+    
+    // Uklad rownan:
+    // kury + owce = a
+    // 2*kury + 4*owce = b
+    // Z pierwszego: kury = a - owce
+    // Podstawiamy do drugiego: 2*(a - owce) + 4*owce = b
+    // 2*a - 2*owce + 4*owce = b
+    // 2*a + 2*owce = b
+    // 2*owce = b - 2*a
+    // owce = (b - 2*a) / 2
+    
+    let owce = (b - 2 * a) / 2;
+    let kury = a - owce;
+    
+    println!("{}", kury);
+    println!("{}", owce);
+}

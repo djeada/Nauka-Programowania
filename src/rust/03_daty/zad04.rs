@@ -42,4 +42,19 @@ Niepoprawny numer dnia tygodnia.
 ```
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: i32 = n.trim().parse().unwrap();
+    
+    match n {
+        1 => println!("Poniedziałek"),
+        2 => println!("Wtorek"),
+        3 => println!("Środa"),
+        4 => println!("Czwartek"),
+        5 => println!("Piątek"),
+        6 => println!("Sobota"),
+        7 => println!("Niedziela"),
+        _ => println!("Niepoprawny numer dnia tygodnia."),
+    }
+}
