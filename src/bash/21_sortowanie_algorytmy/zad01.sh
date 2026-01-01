@@ -39,15 +39,20 @@ source ../assert.sh
 
 sortuj() {
     local -n _tablica_ref=$1
+    local n=${#_tablica_ref[@]}
+    local swapped=true
 
-    for ((i = 0; i < ${#_tablica_ref[@]} - 1; i++)); do
-        for ((j = i + 1; j < ${#_tablica_ref[@]}; j++)); do
-            if [[ ${_tablica_ref[i]} -gt ${_tablica_ref[j]} ]]; then
+    while [ "$swapped" = true ]; do
+        swapped=false
+        for ((i = 0; i < n - 1; i++)); do
+            if [[ ${_tablica_ref[i]} -gt ${_tablica_ref[i+1]} ]]; then
                 local tmp=${_tablica_ref[i]}
-                _tablica_ref[i]=${_tablica_ref[j]}
-                _tablica_ref[j]=$tmp
+                _tablica_ref[i]=${_tablica_ref[i+1]}
+                _tablica_ref[i+1]=$tmp
+                swapped=true
             fi
         done
+        ((n--))
     done
 }
 
