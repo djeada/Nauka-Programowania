@@ -121,55 +121,39 @@ public class Main {
   public static void main(String[] args) {
 
     // Dla pobranej liczby, powinny zostac zwrocone cyfry
-    // liczby spelniajce nastepujacy warunek:
+    // liczby spelniajace nastepujacy warunek:
 
-    System.out.print("Podaj liczbe\n");
     Scanner s = new Scanner(System.in);
-    int a = Integer.parseInt(s.nextLine());
+    int n = Integer.parseInt(s.nextLine());
 
-    // a) Liczby parzyste;
-
-    int pom = a;
-    System.out.print("Cyfry liczby badace liczbami parzystymi: \n");
-
-    while (pom > 0) {
-      int cyfra = pom % 10;
-
-      if (cyfra % 2 == 0) {
-        System.out.print(cyfra + "\n");
+    // a) Cyfry parzyste
+    int temp = n;
+    while (temp > 0) {
+      int digit = temp % 10;
+      if (digit % 2 == 0) {
+        System.out.println(digit);
       }
-
-      pom /= 10;
+      temp /= 10;
     }
 
-    // b) Mniejsze niz 5;
-
-    pom = a;
-    System.out.print("Cyfry liczby mniejsze niz 5: \n");
-
-    while (pom > 0) {
-      int cyfra = pom % 10;
-
-      if (cyfra < 5) {
-        System.out.print(cyfra + "\n");
+    // b) Cyfry mniejsze niz 5
+    temp = n;
+    while (temp > 0) {
+      int digit = temp % 10;
+      if (digit < 5) {
+        System.out.println(digit);
       }
-
-      pom /= 10;
+      temp /= 10;
     }
 
-    // c) Rozne od 0;
-
-    pom = a;
-    System.out.print("Cyfry liczby rozne od 0: \n");
-
-    while (pom > 0) {
-      int cyfra = pom % 10;
-
-      if (cyfra != 0) {
-        System.out.print(cyfra + "\n");
+    // c) Cyfry rozne od 0
+    temp = n;
+    while (temp > 0) {
+      int digit = temp % 10;
+      if (digit != 0) {
+        System.out.println(digit);
       }
-
-      pom /= 10;
+      temp /= 10;
     }
   }
 }

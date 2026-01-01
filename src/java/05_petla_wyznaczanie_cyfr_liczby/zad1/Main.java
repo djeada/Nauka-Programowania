@@ -46,21 +46,23 @@ import java.util.*;
 public class Main {
   public static void main(String[] args) {
     // Dla pobranej od uzytkownika liczby,
-    // zwroc liczbe cyfr pobranje liczby.
-
-    System.out.print("Podaj liczbe\n");
+    // zwroc liczbe cyfr pobranej liczby.
 
     Scanner s = new Scanner(System.in);
-    int a = Integer.parseInt(s.nextLine());
+    int n = Integer.parseInt(s.nextLine());
 
-    int licznik = 0;
-
-    while (a > 0) {
-      a = a / 10;
-      licznik++;
+    if (n == 0) {
+      System.out.println(1);
+      return;
     }
 
-    System.out.print("Podana liczba sklada sie z " + licznik + " cyfr.\n");
+    int count = 0;
+    while (n > 0) {
+      n = n / 10;
+      count++;
+    }
+
+    System.out.println(count);
   }
 }
 

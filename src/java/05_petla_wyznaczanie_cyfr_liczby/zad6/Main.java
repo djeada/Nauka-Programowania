@@ -162,92 +162,75 @@ import java.util.*;
 public class Main {
   public static void main(String[] args) {
 
-    // Dla pobranej liczby n, wyswietl sume n
-    // pierwszych wyrazow ciagu danego wzorem:
-    System.out.print("Podaj liczbe\n");
+    // Dla pobranej liczby n, wyswietl liczby spelniajace rozne warunki
+
     Scanner s = new Scanner(System.in);
-    int a = Integer.parseInt(s.nextLine());
+    int n = Integer.parseInt(s.nextLine());
 
-    // a) mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10
-
-    System.out.print("mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: \n");
-    for (int i = 0; i < a; i++) {
-      int pom = i;
-      int suma = 0;
-
-      while (pom > 0) {
-        suma += (pom % 10);
-        pom /= 10;
+    // a) mniejsze od n, ktorych suma cyfr jest rowna 10
+    for (int i = 0; i < n; i++) {
+      int temp = i;
+      int sum = 0;
+      while (temp > 0) {
+        sum += (temp % 10);
+        temp /= 10;
       }
-
-      if (suma == 10) {
-        System.out.print(i);
-        System.out.print("\n");
+      if (sum == 10) {
+        System.out.println(i);
       }
     }
 
-    // b) dwucyfrowe mniejsze od pobranej liczby
-
-    System.out.print("dwucyfrowe mniejsze od pobranej liczby: \n");
-    for (int i = 10; i < 100 && i < a; i++) {
-      System.out.print(i);
-      System.out.print("\n");
+    // b) dwucyfrowe wieksze od n
+    for (int i = Math.max(10, n + 1); i < 100; i++) {
+      System.out.println(i);
     }
 
-    // c) trzycyfrowe ktorych suma cyfr jest	rowna pobranej liczbie
-    System.out.print("trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie\n");
+    // c) trzycyfrowe ktorych suma cyfr jest rowna n
     for (int i = 100; i < 1000; i++) {
-      int pom = i;
-      int suma = 0;
-
-      while (pom > 0) {
-        suma += (pom % 10);
-        pom /= 10;
+      int temp = i;
+      int sum = 0;
+      while (temp > 0) {
+        sum += (temp % 10);
+        temp /= 10;
       }
-
-      if (suma == a) {
-        System.out.print(i);
-        System.out.print("\n");
+      if (sum == n) {
+        System.out.println(i);
       }
     }
 
-    // d) trzycyfrowe podzielne przez sume cyfr pobranej liczby
-    System.out.print("trzycyfrowe podzielne przez sume cyfr pobranej liczby\n");
-
-    int pom = a;
-    int suma = 0;
-
-    while (pom > 0) {
-      suma += (pom % 10);
-      pom /= 10;
+    // d) trzycyfrowe podzielne przez sume cyfr n
+    int temp = n;
+    int sumN = 0;
+    while (temp > 0) {
+      sumN += (temp % 10);
+      temp /= 10;
     }
-
-    for (int i = 100; i < 1000; i++) {
-
-      if (i % suma == 0) {
-        System.out.print(i);
-        System.out.print("\n");
-      }
-    }
-
-    // e) mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr
-    System.out.print("mniejsze od pobranej liczby, skladajace sie wylacznie z parzystych cyfr\n");
-
-    for (int i = 0; i < a; i++) {
-      pom = i;
-      boolean flaga = true;
-      while (pom > 0) {
-        int cyfra = pom % 10;
-        if (cyfra % 2 == 1) {
-          flaga = false;
-          break;
+    if (sumN > 0) {
+      for (int i = 100; i < 1000; i++) {
+        if (i % sumN == 0) {
+          System.out.println(i);
         }
-        pom /= 10;
       }
+    }
 
-      if (flaga) {
-        System.out.print(i);
-        System.out.print("\n");
+    // e) mniejsze od n, skladajace sie wylacznie z parzystych cyfr
+    for (int i = 0; i < n; i++) {
+      temp = i;
+      boolean allEven = true;
+      if (i == 0) {
+        allEven = true; // 0 is considered all even
+      } else {
+        while (temp > 0) {
+          int digit = temp % 10;
+          if (digit % 2 == 1) {
+            allEven = false;
+            break;
+          }
+          temp /= 10;
+        }
+      }
+      if (allEven) {
+        System.out.println(i);
       }
     }
   }
