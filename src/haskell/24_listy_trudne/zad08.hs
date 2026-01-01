@@ -33,5 +33,21 @@ Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`
 ```
 
 -}
+import Text.Read (readMaybe)
+
+-- Cięcie sznurka (maksymalny zysk)
+-- Złożoność czasowa: O(n^2)
+-- Złożoność pamięciowa: O(n)
+maxProfit :: [Int] -> Int -> Int
+maxProfit prices n
+    | n == 0 = 0
+    | n < 0 = 0
+    | otherwise = maximum [prices !! (i-1) + maxProfit prices (n - i) | i <- [1..min n (length prices)]]
+
 main :: IO ()
-main = pure ()
+main = do
+    pricesInput <- getLine
+    nInput <- getLine
+    case (readMaybe pricesInput :: Maybe [Int], readMaybe nInput :: Maybe Int) of
+        (Just prices, Just n) -> print $ maxProfit prices n
+        _ -> print (0 :: Int)

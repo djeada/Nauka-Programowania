@@ -36,19 +36,15 @@ Terminator2001
 
 -}
 
--- Zamiana formatu daty (DD-MM-YYYY -> YYYY-MM-DD)
+import Data.Char (isDigit)
+
+-- Wyodrębnij cyfry z tekstu
 -- Złożoność czasowa: O(n)
 -- Złożoność pamięciowa: O(n)
-convertDate :: String -> String
-convertDate date = 
-    case break (== '-') date of
-        (day, '-':rest) -> 
-            case break (== '-') rest of
-                (month, '-':year) -> year ++ "-" ++ month ++ "-" ++ day
-                _ -> date
-        _ -> date
+extractDigits :: String -> String
+extractDigits = filter isDigit
 
 main :: IO ()
 main = do
-    date <- getLine
-    putStrLn $ convertDate date
+    text <- getLine
+    putStrLn $ extractDigits text

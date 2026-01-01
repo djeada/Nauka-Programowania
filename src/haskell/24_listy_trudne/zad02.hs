@@ -31,5 +31,20 @@ Otrzymujesz listę liczb całkowitych. Przenieś wszystkie zera na koniec listy,
 ```
 
 -}
+import Text.Read (readMaybe)
+
+-- Przesuń zera na koniec listy
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n)
+moveZerosToEnd :: [Int] -> [Int]
+moveZerosToEnd xs = 
+    let nonZeros = filter (/= 0) xs
+        zeros = replicate (length xs - length nonZeros) 0
+    in nonZeros ++ zeros
+
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case readMaybe input :: Maybe [Int] of
+        Just xs -> print $ moveZerosToEnd xs
+        Nothing -> print ([] :: [Int])

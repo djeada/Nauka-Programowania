@@ -35,19 +35,28 @@ ani nie wybrał się do teatru
 
 -}
 
--- Usuwanie HTML tagów (uproszczona wersja)
+-- Podziel tekst względem znaków interpunkcyjnych
 -- Złożoność czasowa: O(n)
 -- Złożoność pamięciowa: O(n)
-removeHTMLTags :: String -> String
-removeHTMLTags [] = []
-removeHTMLTags ('<':rest) = removeHTMLTags (dropTag rest)
+
+-- Sprawdź czy znak jest interpunkcyjny
+isPunctuation :: Char -> Bool
+isPunctuation c = c `elem` ",.!?;:"
+
+-- Podziel tekst według interpunkcji i usuń białe znaki z brzegów
+splitByPunctuation :: String -> [String]
+splitByPunctuation text = filter (not . null) $ map trim $ split text
     where
-        dropTag [] = []
-        dropTag ('>':xs) = xs
-        dropTag (_:xs) = dropTag xs
-removeHTMLTags (c:rest) = c : removeHTMLTags rest
+        split [] = [""]
+        split (c:cs)
+            | isPunctuation c = "" : split cs
+            | otherwise = case split cs of
+                (x:xs) -> (c:x):xs
+                [] -> [[c]]
+        
+        trim = dropWhile (== ' ') . reverse . dropWhile (== ' ') . reverse
 
 main :: IO ()
 main = do
-    html <- getLine
-    putStrLn $ removeHTMLTags html
+    text <- getLine
+    mapM_ putStrLn $ splitByPunctuation text

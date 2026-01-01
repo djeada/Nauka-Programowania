@@ -37,19 +37,29 @@ Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
 
 -}
 
-import Data.Char (isDigit)
+import Data.Char (isDigit, isAlpha)
 
--- Walidacja kodu pocztowego (format: XX-XXX gdzie X to cyfra)
--- Złożoność czasowa: O(1)
--- Złożoność pamięciowa: O(1)
-validatePostalCode :: String -> Bool
-validatePostalCode code = 
-    length code == 6 &&
-    all isDigit (take 2 code) &&
-    code !! 2 == '-' &&
-    all isDigit (drop 3 code)
+-- Cyfry w słowach (cyfry połączone z literami)
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n)
+
+-- Sprawdź czy słowo zawiera zarówno literę jak i cyfrę
+hasLetterAndDigit :: String -> Bool
+hasLetterAndDigit w = any isAlpha w && any isDigit w
+
+-- Wyodrębnij ciągi cyfr z słowa
+extractDigitsFromWord :: String -> [String]
+extractDigitsFromWord [] = []
+extractDigitsFromWord text = 
+    case dropWhile (not . isDigit) text of
+        [] -> []
+        rest -> 
+            let (num, remaining) = span isDigit rest
+            in num : extractDigitsFromWord remaining
 
 main :: IO ()
 main = do
-    code <- getLine
-    putStrLn $ if validatePostalCode code then "Prawda" else "Fałsz"
+    sentence <- getLine
+    let wordsWithDigits = filter hasLetterAndDigit (words sentence)
+        allDigits = concatMap extractDigitsFromWord wordsWithDigits
+    mapM_ putStrLn allDigits

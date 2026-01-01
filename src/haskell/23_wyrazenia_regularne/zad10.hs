@@ -31,22 +31,29 @@ Zmodyfikowany tekst.
 
 -}
 
--- Zamiana tekstu (zastępowanie wzorca)
--- Złożoność czasowa: O(n*m), gdzie n to długość tekstu, m to długość wzorca
+import Data.Char (isAlphaNum)
+
+-- Podmień napisy z listy A na napisy z listy B
+-- Złożoność czasowa: O(n*m*k) gdzie n to liczba słów, m to długość list, k to długość słowa
 -- Złożoność pamięciowa: O(n)
-replaceText :: String -> String -> String -> String
-replaceText _ _ [] = []
-replaceText pattern replacement text
-    | pattern `isPrefixOf` text = replacement ++ replaceText pattern replacement (drop (length pattern) text)
-    | otherwise = head text : replaceText pattern replacement (tail text)
+
+-- Zamień słowa w tekście według map
+replaceWords :: [(String, String)] -> String -> String
+replaceWords replacements text = unwords $ map replaceWord (words (map wordBoundary text))
     where
-        isPrefixOf [] _ = True
-        isPrefixOf _ [] = False
-        isPrefixOf (x:xs) (y:ys) = x == y && isPrefixOf xs ys
+        wordBoundary c = if isAlphaNum c then c else ' '
+        replaceWord w = case lookup w replacements of
+            Just replacement -> replacement
+            Nothing -> w
 
 main :: IO ()
 main = do
-    pattern <- getLine
-    replacement <- getLine
-    text <- getLine
-    putStrLn $ replaceText pattern replacement text
+    content <- getContents
+    let allLines = lines content
+        text = head allLines
+        n = read (allLines !! 1) :: Int
+        listA = take n (drop 2 allLines)
+        listB = take n (drop (2 + n) allLines)
+        replacements = zip listA listB
+        result = replaceWords replacements text
+    putStrLn result

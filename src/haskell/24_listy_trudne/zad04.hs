@@ -33,5 +33,18 @@ Otrzymujesz dwie listy binarne `A` i `B` (zera i jedynki) o tej samej długości
 ```
 
 -}
+import Text.Read (readMaybe)
+
+-- Wspólny podciąg o największej długości (równe sumy)
+-- Złożoność czasowa: O(n^2)
+-- Złożoność pamięciowa: O(1)
+maxLengthEqualSum :: [Int] -> [Int] -> Int
+maxLengthEqualSum a b = maximum [len | i <- [0..length a - 1], j <- [i..length a - 1], let len = j - i + 1, sum (take len (drop i a)) == sum (take len (drop i b))]
+
 main :: IO ()
-main = pure ()
+main = do
+    inputA <- getLine
+    inputB <- getLine
+    case (readMaybe inputA :: Maybe [Int], readMaybe inputB :: Maybe [Int]) of
+        (Just a, Just b) -> print $ maxLengthEqualSum a b
+        _ -> print (0 :: Int)

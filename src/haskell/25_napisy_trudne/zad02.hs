@@ -38,5 +38,19 @@ Le je na wie
 ```
 
 -}
+import Data.List (isPrefixOf)
+
+-- Usuń podnapis
+-- Złożoność czasowa: O(n*m)
+-- Złożoność pamięciowa: O(n)
+removeAll :: String -> String -> String
+removeAll _ [] = []
+removeAll pattern text
+    | pattern `isPrefixOf` text = removeAll pattern (drop (length pattern) text)
+    | otherwise = head text : removeAll pattern (tail text)
+
 main :: IO ()
-main = pure ()
+main = do
+    mainStr <- getLine
+    subStr <- getLine
+    putStrLn $ removeAll subStr mainStr

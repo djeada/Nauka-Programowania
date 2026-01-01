@@ -34,5 +34,25 @@ abcd
 ```
 
 -}
+import Data.List (tails, inits)
+
+-- Najdłuższy wspólny podnapis
+-- Złożoność czasowa: O(n*m*min(n,m))
+-- Złożoność pamięciowa: O(1)
+longestCommonSubstring :: String -> String -> String
+longestCommonSubstring a b = 
+    let allSubsA = [sub | t <- tails a, sub <- tail (inits t), not (null sub)]
+        commonSubs = filter (`elem` allSubsB) allSubsA
+        allSubsB = [sub | t <- tails b, sub <- tail (inits t), not (null sub)]
+        longest = if null commonSubs then "" else maximumBy (comparing length) commonSubs
+    in longest
+    where
+        comparing f x y = compare (f x) (f y)
+        maximumBy cmp (x:xs) = foldl (\a b -> if cmp a b == GT then a else b) x xs
+        maximumBy _ [] = error "empty list"
+
 main :: IO ()
-main = pure ()
+main = do
+    a <- getLine
+    b <- getLine
+    putStrLn $ longestCommonSubstring a b

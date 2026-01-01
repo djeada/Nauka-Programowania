@@ -37,18 +37,29 @@ abc
 
 -}
 
-import Data.List (sortBy)
+import Data.List (sortBy, intercalate)
 import Data.Ord (comparing)
-import Text.Read (readMaybe)
 
--- Sortowanie po drugim elemencie krotki
+-- Sortowanie napisów według długości
 -- Złożoność czasowa: O(n log n)
 -- Złożoność pamięciowa: O(n)
+
+-- Funkcja do formatowania listy napisów
+formatList :: [String] -> String
+formatList xs = "[" ++ intercalate ", " (map (\x -> "'" ++ x ++ "'") xs) ++ "]"
+
 main :: IO ()
 main = do
-    input <- getLine
-    case readMaybe input :: Maybe [(Int, Int)] of
-        Just pairs -> do
-            let sorted = sortBy (comparing snd) pairs
-            print sorted
-        Nothing -> print ([] :: [(Int, Int)])
+    nStr <- getLine
+    let n = read nStr :: Int
+    napisy <- readLines n
+    let posortowane = sortBy (comparing length) napisy
+    putStrLn $ formatList posortowane
+
+-- Funkcja pomocnicza do wczytania N napisów
+readLines :: Int -> IO [String]
+readLines 0 = return []
+readLines n = do
+    line <- getLine
+    rest <- readLines (n - 1)
+    return (line : rest)

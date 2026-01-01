@@ -37,18 +37,16 @@ Prawda
 
 -}
 
-import Data.List (isPrefixOf)
+import Data.Char (isDigit)
 
--- Wyciąganie URL z tekstu (uproszczona wersja)
+-- Sprawdź, czy napis składa się wyłącznie z cyfr
 -- Złożoność czasowa: O(n)
--- Złożoność pamięciowa: O(n)
-extractURLs :: String -> [String]
-extractURLs text = filter isURL $ words text
-    where
-        isURL w = any (`isPrefixOf` w) ["http://", "https://", "www."]
+-- Złożoność pamięciowa: O(1)
+isAllDigits :: String -> Bool
+isAllDigits [] = False  -- Empty string is not all digits
+isAllDigits s = all isDigit s
 
 main :: IO ()
 main = do
-    text <- getLine
-    let urls = extractURLs text
-    print urls
+    s <- getLine
+    putStrLn $ if isAllDigits s then "Prawda" else "Fałsz"

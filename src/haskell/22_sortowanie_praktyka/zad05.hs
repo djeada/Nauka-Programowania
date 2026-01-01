@@ -52,16 +52,42 @@ New_York 8400000
 
 -}
 
-import Data.List (sortBy)
-import Data.Ord (comparing, Down(..))
-import Text.Read (readMaybe)
+import Data.List (sortBy, intercalate)
+import Data.Ord (comparing)
 
--- Sortowanie malejąco
+-- Sortowanie listy miast
 -- Złożoność czasowa: O(n log n)
 -- Złożoność pamięciowa: O(n)
+
+-- Typ danych reprezentujący miasto
+data Miasto = Miasto String Int deriving (Eq)
+
+-- Funkcja do formatowania Miasto
+instance Show Miasto where
+    show (Miasto nazwa pop) = "Miasto(\"" ++ nazwa ++ "\", " ++ show pop ++ ")"
+
+-- Funkcja do formatowania listy miast
+formatList :: [Miasto] -> String
+formatList xs = "[" ++ intercalate ", " (map show xs) ++ "]"
+
 main :: IO ()
 main = do
-    input <- getLine
-    case readMaybe input :: Maybe [Int] of
-        Just xs -> print $ sortBy (comparing Down) xs
-        Nothing -> print ([] :: [Int])
+    nStr <- getLine
+    let n = read nStr :: Int
+    miasta <- readCities n
+    -- a) Sortowanie alfabetycznie po nazwie
+    let sortedByName = sortBy (comparing (\(Miasto nazwa _) -> nazwa)) miasta
+    putStrLn $ formatList sortedByName
+    -- b) Sortowanie rosnąco po liczbie mieszkańców
+    let sortedByPop = sortBy (comparing (\(Miasto _ pop) -> pop)) miasta
+    putStrLn $ formatList sortedByPop
+
+-- Funkcja pomocnicza do wczytania N miast
+readCities :: Int -> IO [Miasto]
+readCities 0 = return []
+readCities n = do
+    line <- getLine
+    let [nazwa, popStr] = words line
+    let pop = read popStr :: Int
+    rest <- readCities (n - 1)
+    return (Miasto nazwa pop : rest)

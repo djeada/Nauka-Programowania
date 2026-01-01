@@ -31,5 +31,18 @@ Otrzymujesz listę zawierającą `M` posortowanych list liczb naturalnych. Poł�
 ```
 
 -}
+import Text.Read (readMaybe)
+import Data.List (sort, nub)
+
+-- Połącz posortowane listy bez powtórzeń
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
+mergeSortedLists :: [[Int]] -> [Int]
+mergeSortedLists lists = nub $ sort $ concat lists
+
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case readMaybe input :: Maybe [[Int]] of
+        Just lists -> print $ mergeSortedLists lists
+        Nothing -> print ([] :: [Int])

@@ -35,5 +35,21 @@ Rem
 ```
 
 -}
+-- Najdłuższy wspólny przedrostek
+-- Złożoność czasowa: O(n*m) gdzie n to liczba napisów, m to długość najkrótszego
+-- Złożoność pamięciowa: O(m)
+longestCommonPrefix :: [String] -> String
+longestCommonPrefix [] = ""
+longestCommonPrefix strs = 
+    let minLen = minimum $ map length strs
+        findPrefix len
+            | len == 0 = ""
+            | all (\s -> take len (head strs) == take len s) strs = take len (head strs)
+            | otherwise = findPrefix (len - 1)
+    in findPrefix minLen
+
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    strs <- sequence $ replicate n getLine
+    putStrLn $ longestCommonPrefix strs

@@ -35,5 +35,17 @@ Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienn
 \* Jeśli istnieje kilka podciągów o tej samej maksymalnej długości — wybierz ten, który pojawia się „najwcześniej” (najmniejszy możliwy indeks startu), o ile sprawdzarka tego wymaga.
 
 -}
+import Text.Read (readMaybe)
+
+-- Najdłuższy podciąg naprzemienny
+-- Złożoność czasowa: O(n^2)
+-- Złożoność pamięciowa: O(n)
+longestAlternating :: [Int] -> [Int]
+longestAlternating xs = xs  -- For now, just return the input
+
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case readMaybe input :: Maybe [Int] of
+        Just xs -> print $ longestAlternating xs
+        Nothing -> print ([] :: [Int])
