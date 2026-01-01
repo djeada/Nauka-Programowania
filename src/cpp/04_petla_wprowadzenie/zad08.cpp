@@ -57,17 +57,23 @@ Dwie liczby naturalne, każda w oddzielnej linii:
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj dwie liczby: " << std::endl;
   int glowy, nogi;
   std::cin >> glowy >> nogi;
 
-  for (int i = 0; i < glowy; i++) {
-    int owce = glowy - i;
-    if (2 * i + 4 * owce == nogi) {
-      std::cout << i << " " << owce << std::endl;
-      break;
-    }
-  }
+  // kury mają 2 nogi, owce mają 4 nogi
+  // k + o = glowy
+  // 2k + 4o = nogi
+  // k = glowy - o
+  // 2(glowy - o) + 4o = nogi
+  // 2*glowy - 2o + 4o = nogi
+  // 2o = nogi - 2*glowy
+  // o = (nogi - 2*glowy) / 2
+  
+  int owce = (nogi - 2 * glowy) / 2;
+  int kury = glowy - owce;
+
+  std::cout << kury << std::endl;
+  std::cout << owce << std::endl;
 
   return 0;
 }

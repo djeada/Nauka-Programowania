@@ -46,15 +46,13 @@ Rok nie jest przestępny.
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj rok:" << endl;
-
   int rok;
   std::cin >> rok;
 
   if (rok % 4 == 0 && rok % 100 != 0 || rok % 400 == 0)
-    std::cout << "Rok jest przestepny." << endl;
+    std::cout << "Rok jest przestępny." << std::endl;
   else
-    std::cout << "Rok nie jest przestepny." << endl;
+    std::cout << "Rok nie jest przestępny." << std::endl;
 
   return 0;
 }

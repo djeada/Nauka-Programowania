@@ -1,80 +1,29 @@
 /*
-ZAD-18 — Indeks najmniejszego elementu w przesuniętej liście
-
-**Poziom:** ★★☆
-**Tagi:** `binarne`, `rotacja`, `minimum`
-
-### Treść
-
-Wczytaj listę liczb całkowitych, która była posortowana rosnąco i została
-przesunięta w prawo o nieznaną liczbę miejsc. Znajdź indeks najmniejszego
-elementu.
-
-### Wejście
-
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
-
-### Wyjście
-
-Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
-
-### Przykład
-
-**Wejście:**
-
-```
-5
-7
-8
--1
-4
-5
-```
-
-**Wyjście:**
-
-```
-2
-```
-
+ZAD-18 — Indeks minimum rotowanej posortowanej listy
 */
-#include <algorithm>
-#include <cassert>
+#include <iostream>
 #include <vector>
 
-int indeksMin(std::vector<int> &lista) {
-  int n = lista.size();
-
-  for (int i = 0; i < n - 1; i++) {
-    if (lista[i] > lista[i + 1]) return i + 1;
-  }
-
-  return 0;
-}
-
-void test1() {
-  std::vector<int> lista{7, 8, -1, 4, 5};
-  int wynik = 2;
-  assert(indeksMin(lista) == wynik);
-}
-
-void test2() {
-  std::vector<int> lista{2, 3, 4, 5, 6};
-  int wynik = 0;
-  assert(indeksMin(lista) == wynik);
-}
-
-void test3() {
-  std::vector<int> lista{8, 9, 10, 11, 1};
-  int wynik = 4;
-  assert(indeksMin(lista) == wynik);
-}
-
 int main() {
-  test1();
-  test2();
-  test3();
+  int n;
+  std::cin >> n;
+  
+  std::vector<int> lista;
+  for (int i = 0; i < n; i++) {
+    int liczba;
+    std::cin >> liczba;
+    lista.push_back(liczba);
+  }
+  
+  int indeks = 0;
+  for (int i = 0; i < n - 1; i++) {
+    if (lista[i] > lista[i + 1]) {
+      indeks = i + 1;
+      break;
+    }
+  }
+  
+  std::cout << indeks << std::endl;
 
   return 0;
 }

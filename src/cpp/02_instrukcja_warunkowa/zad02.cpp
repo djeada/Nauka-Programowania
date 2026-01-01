@@ -55,17 +55,13 @@ Liczby są identyczne.
 #include <iostream>
 
 int main() {
-  std::cout << "podaj dwie liczby:" << std::endl;
-  int a;
-  int b;
-
-  std::cin >> a;
-  std::cin >> b;
+  int a, b;
+  std::cin >> a >> b;
 
   if (a == b)
-    std::cout << "liczby sa jednakowe" << std::endl;
+    std::cout << "Liczby są identyczne." << std::endl;
   else
-    std::cout << "liczby sa rozne" << std::endl;
+    std::cout << "Liczby są różne." << std::endl;
 
   return 0;
 }

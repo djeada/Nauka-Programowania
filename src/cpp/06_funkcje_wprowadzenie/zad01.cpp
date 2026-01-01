@@ -102,25 +102,22 @@ True
 ```
 
 */
-#include <cassert>
+#include <iostream>
 #include <string>
 
+// ZAD-01A
 int zwroc3() { return 3; }
 
+// ZAD-01B
 std::string zwrocTak() { return "Tak"; }
 
+// ZAD-01C
 bool zwrocTrue() { return true; }
 
-void testZwroc3() { assert(zwroc3() == 3); }
-
-void testZwrocTak() { assert(zwrocTak() == "Tak"); }
-
-void testZwrocTrue() { assert(zwrocTrue()); }
-
 int main() {
-  testZwroc3();
-  testZwrocTak();
-  testZwrocTrue();
+  std::cout << zwroc3() << std::endl;
+  std::cout << zwrocTak() << std::endl;
+  std::cout << (zwrocTrue() ? "True" : "False") << std::endl;
 
   return 0;
 }

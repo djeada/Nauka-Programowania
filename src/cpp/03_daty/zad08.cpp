@@ -66,58 +66,41 @@ Piątek
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj dzien:" << std::endl;
-  int DD;
-  std::cin >> DD;
+  int d, m, y;
+  std::cin >> d >> m >> y;
 
-  std::cout << "Podaj miesiac:" << std::endl;
-  int MM;
-  std::cin >> MM;
+  // Zeller's congruence wymaga stycznia i lutego jako m=13,14 poprzedniego roku
+  if (m <= 2) {
+    m = m + 12;
+    y = y - 1;
+  }
 
-  std::cout << "Podaj rok:" << std::endl;
-  int rok;
-  std::cin >> rok;
+  int K = y % 100;
+  int J = y / 100;
+  int h = (d + (13 * (m + 1)) / 5 + K + K / 4 + J / 4 + 5 * J) % 7;
 
-  int CC = rok / 100;
-  int YY = rok % 100;
-
-  int A = (CC / 4) - 2 * CC - 1;
-  int B = 5 * YY / 4;
-  int C = 26 * (MM + 1) / 10;
-
-  int wynik = (A + B + C + DD) % 7;
-
-  switch (wynik) {
+  switch (h) {
+    case 0:
+      std::cout << "Sobota" << std::endl;
+      break;
     case 1:
-      std::cout << "Pierwszym dniem tygodnia jest poniedzialek." << std::endl;
+      std::cout << "Niedziela" << std::endl;
       break;
-
     case 2:
-      std::cout << "Drugim dniem tygodnia jest wtorek." << std::endl;
+      std::cout << "Poniedziałek" << std::endl;
       break;
-
     case 3:
-      std::cout << "Trzecim dniem tygodnia jest sroda." << std::endl;
+      std::cout << "Wtorek" << std::endl;
       break;
-
     case 4:
-      std::cout << "Czwartym dniem tygodnia jest czwartek." << std::endl;
+      std::cout << "Środa" << std::endl;
       break;
-
     case 5:
-      std::cout << "Piatym dniem tygodnia jest piatek." << std::endl;
+      std::cout << "Czwartek" << std::endl;
       break;
-
     case 6:
-      std::cout << "Szostym dniem tygodnia jest sobota." << std::endl;
+      std::cout << "Piątek" << std::endl;
       break;
-
-    case 7:
-      std::cout << "Siodmym dniem tygodnia jest niedziela." << std::endl;
-      break;
-
-    default:
-      std::cout << "Podano bledne dane." << std::endl;
   }
 
   return 0;

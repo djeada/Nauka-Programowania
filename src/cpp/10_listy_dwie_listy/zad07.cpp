@@ -1,102 +1,55 @@
 /*
-ZAD-07 — Różnica między dwoma listami
-
-**Poziom:** ★☆☆
-**Tagi:** `list`, `set`
-
-### Treść
-
-Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **tylko
-w jednej** z list (różnica symetryczna).
-
-* Kolejność elementów w wyniku może być **dowolna**.
-* Jeśli wszystkie elementy są wspólne — wypisz `[]`.
-
-### Wejście
-
-* 1 linia: lista 1
-* 2 linia: lista 2
-
-### Wyjście
-
-* 1 linia: lista elementów niewspólnych
-
-### Przykład
-
-**Wejście:**
-
-```
-[9, 2, 5, 4]
-[4, 2, 1]
-```
-
-**Wyjście (jedna z poprawnych odpowiedzi):**
-
-```
-[9, 5, 1]
-```
-
+ZAD-07 — Różnica symetryczna dwóch list
 */
-#include <algorithm>
-#include <cassert>
-#include <unordered_set>
+#include <iostream>
 #include <vector>
+#include <sstream>
+#include <string>
+#include <algorithm>
 
-// Zlozonosc obliczeniowa O(n^2)
-// Zlozonosc pamieciowa O(n)
-std::vector<int> roznicaV1(std::vector<int> &listaA, std::vector<int> &listaB) {
-  std::vector<int> wynik;
-
-  for (auto liczba : listaA) {
-    if (find(listaB.begin(), listaB.end(), liczba) == listaB.end())
-      wynik.push_back(liczba);
+std::vector<int> parseList(const std::string& line) {
+  std::vector<int> result;
+  std::string cleaned;
+  for (char c : line) {
+    if (c != '[' && c != ']' && c != ' ') cleaned += c;
   }
-
-  for (auto liczba : listaB) {
-    if (find(listaA.begin(), listaA.end(), liczba) == listaA.end())
-      wynik.push_back(liczba);
+  std::stringstream ss(cleaned);
+  std::string token;
+  while (std::getline(ss, token, ',')) {
+    if (!token.empty()) result.push_back(std::stoi(token));
   }
-
-  return wynik;
+  return result;
 }
 
-// Zlozonosc obliczeniowa O(nlogn)
-// Zlozonosc pamieciowa O(n)
-std::vector<int> roznicaV2(std::vector<int> &listaA, std::vector<int> &listaB) {
-  std::vector<int> wynik;
-  sort(listaA.begin(), listaA.end());
-  sort(listaB.begin(), listaB.end());
-  set_difference(listaA.begin(), listaA.end(), listaB.begin(), listaB.end(),
-                 inserter(wynik, wynik.begin()));
-  set_difference(listaB.begin(), listaB.end(), listaA.begin(), listaA.end(),
-                 inserter(wynik, wynik.begin()));
-
-  return wynik;
-}
-
-bool wektoryRowne(std::vector<int> v1, std::vector<int> v2) {
-  sort(v1.begin(), v1.end());
-  sort(v2.begin(), v2.end());
-  return v1 == v2;
-}
-
-void test1() {
-  std::vector<int> listaA{9, 2, 5, 4};
-  std::vector<int> listaB{4, 2, 1};
-  std::vector<int> wynik{9, 5, 1};
-  assert(wektoryRowne(roznicaV1(listaA, listaB), wynik));
-}
-
-void test2() {
-  std::vector<int> listaA{9, 2, 5, 4};
-  std::vector<int> listaB{4, 2, 1};
-  std::vector<int> wynik{9, 5, 1};
-  assert(wektoryRowne(roznicaV2(listaA, listaB), wynik));
+void printList(const std::vector<int>& lista) {
+  std::cout << "[";
+  for (size_t i = 0; i < lista.size(); i++) {
+    if (i > 0) std::cout << ", ";
+    std::cout << lista[i];
+  }
+  std::cout << "]" << std::endl;
 }
 
 int main() {
-  test1();
-  test2();
-
+  std::string line1, line2;
+  std::getline(std::cin, line1);
+  std::getline(std::cin, line2);
+  
+  std::vector<int> listaA = parseList(line1);
+  std::vector<int> listaB = parseList(line2);
+  
+  std::vector<int> roznica;
+  for (int a : listaA) {
+    if (std::find(listaB.begin(), listaB.end(), a) == listaB.end()) {
+      roznica.push_back(a);
+    }
+  }
+  for (int b : listaB) {
+    if (std::find(listaA.begin(), listaA.end(), b) == listaA.end()) {
+      roznica.push_back(b);
+    }
+  }
+  
+  printList(roznica);
   return 0;
 }

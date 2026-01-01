@@ -60,7 +60,6 @@ nic.
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj dwie liczby: " << std::endl;
   int a, b;
   std::cin >> a >> b;
 
@@ -70,21 +69,14 @@ int main() {
     b = pom;
   }
 
-  std::cout << "Liczby naturalne wieksze od mniejszej pobranej liczby i "
-               "jednoczesnie mniejsze od wiekszej pobranej liczby: "
-            << std::endl;
+  // Podpunkt a) - wszystkie liczby między a i b
+  for (int i = a + 1; i < b; i++) 
+    std::cout << i << std::endl;
 
-  for (int i = a + 1; i < b; i++) std::cout << i << " ";
-
-  std::cout << std::endl;
-
-  std::cout
-      << "Liczby naturalne podzielne przez 3 wieksze od mniejszej pobranej "
-         "liczby i jednoczesnie mniejsze od wiekszej pobranej liczby: "
-      << std::endl;
-
+  // Podpunkt b) - liczby podzielne przez 3
   for (int i = a + 1; i < b; i++) {
-    if (i % 3 == 0) std::cout << i << " ";
+    if (i % 3 == 0) 
+      std::cout << i << std::endl;
   }
 
   return 0;

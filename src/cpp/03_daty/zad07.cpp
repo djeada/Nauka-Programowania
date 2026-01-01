@@ -87,13 +87,14 @@ int main() {
       break;
   }
 
+  // Jeśli rok przestępny i miesiąc po lutym, dodaj 1 dzień
   if (rok % 4 == 0 && rok % 100 != 0 || rok % 400 == 0) {
     if (miesiac > 2) {
       liczba_dni += 1;
     }
   }
 
-  std::cout << "Od poczatku roku uplynelo: " << liczba_dni << std::endl;
+  std::cout << liczba_dni << std::endl;
 
   return 0;
 }

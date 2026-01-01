@@ -52,21 +52,13 @@ Trójkąt można zbudować z podanych boków.
 #include <iostream>
 
 int main() {
-  std::cout << "podaj trzy liczby:" << std::endl;
+  int a, b, c;
+  std::cin >> a >> b >> c;
 
-  int a;
-  int b;
-  int c;
-
-  std::cin >> a;
-  std::cin >> b;
-  std::cin >> c;
-
-  if (a + b > c && b + c > a && a + c > b)
-    std::cout << "z podanych bokow mozna zbudowac trojkat" << std::endl;
-
+  if (a + b > c && a + c > b && b + c > a)
+    std::cout << "Trójkąt można zbudować z podanych boków." << std::endl;
   else
-    std::cout << "z podanych bokow nie mozna zbudowac trojkata" << std::endl;
+    std::cout << "Trójkąta nie można zbudować z podanych boków." << std::endl;
 
   return 0;
 }

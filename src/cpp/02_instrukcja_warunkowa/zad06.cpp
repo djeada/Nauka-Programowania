@@ -37,23 +37,14 @@ Jedna linia: największa liczba.
 #include <iostream>
 
 int main() {
-  std::cout << "podaj cztery liczby:" << std::endl;
+  int a, b, c, d;
+  std::cin >> a >> b >> c >> d;
 
-  int a;
-  int b;
-  int c;
-  int d;
+  int max_ab = (a > b) ? a : b;
+  int max_cd = (c > d) ? c : d;
+  int max_val = (max_ab > max_cd) ? max_ab : max_cd;
 
-  std::cin >> a;
-  std::cin >> b;
-  std::cin >> c;
-  std::cin >> d;
-
-  int maksAB = a > b ? a : b;
-  int maksCD = c > d ? c : d;
-  int maks = maksAB > maksCD ? maksAB : maksCD;
-
-  std::cout << maks << std::endl;
+  std::cout << max_val << std::endl;
 
   return 0;
 }

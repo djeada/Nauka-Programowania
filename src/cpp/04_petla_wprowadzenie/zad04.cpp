@@ -41,13 +41,12 @@ Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj liczbe: " << std::endl;
   int n;
   std::cin >> n;
 
   int suma = 0;
-
-  for (int i = 1; i < n; i++) suma += i;
+  for (int i = 1; i < n; i++) 
+    suma += i;
 
   std::cout << suma << std::endl;
 

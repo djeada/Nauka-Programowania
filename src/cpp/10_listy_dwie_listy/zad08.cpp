@@ -1,85 +1,62 @@
 /*
-ZAD-08 — Połącz posortowane listy w posortowaną listę bez duplikatów
-
-**Poziom:** ★★☆
-**Tagi:** `list`, `merge`, `sort`
-
-### Treść
-
-Wczytaj dwie listy liczb całkowitych, każda **posortowana rosnąco**. Połącz je w
-jedną listę:
-
-* wynik ma być posortowany rosnąco,
-* wynik ma zawierać **unikalne** elementy (bez duplikatów).
-
-### Wejście
-
-* 1 linia: lista 1 (posortowana rosnąco)
-* 2 linia: lista 2 (posortowana rosnąco)
-
-### Wyjście
-
-* 1 linia: jedna posortowana lista bez duplikatów
-
-### Przykład
-
-**Wejście:**
-
-```
-[2, 4, 7]
-[3, 5, 9]
-```
-
-**Wyjście:**
-
-```
-[2, 3, 4, 5, 7, 9]
-```
-
+ZAD-08 — Łączenie posortowanych list
 */
-#include <algorithm>
-#include <cassert>
+#include <iostream>
 #include <vector>
+#include <sstream>
+#include <string>
+#include <algorithm>
 
-// Zlozonosc obliczeniowa O(n)
-// Zlozonosc pamieciowa O(n)
-std::vector<int> polaczV1(std::vector<int> &listaA, std::vector<int> &listaB) {
-  if (listaA.empty()) return listaB;
-
-  if (listaB.empty()) return listaA;
-
-  std::vector<int> wynik;
-
-  unsigned int i = 0;
-  unsigned int j = 0;
-
-  while (i < listaA.size() && j < listaB.size()) {
-    if (listaA[i] < listaB[j]) {
-      wynik.push_back(listaA[i]);
-      i++;
-    } else {
-      wynik.push_back(listaB[j]);
-      j++;
-    }
+std::vector<int> parseList(const std::string& line) {
+  std::vector<int> result;
+  std::string cleaned;
+  for (char c : line) {
+    if (c != '[' && c != ']' && c != ' ') cleaned += c;
   }
-
-  for (unsigned int k = i; k < listaA.size(); k++) wynik.push_back(listaA[k]);
-
-  for (unsigned int k = j; k < listaB.size(); k++) wynik.push_back(listaB[k]);
-
-  return wynik;
+  std::stringstream ss(cleaned);
+  std::string token;
+  while (std::getline(ss, token, ',')) {
+    if (!token.empty()) result.push_back(std::stoi(token));
+  }
+  return result;
 }
 
-void test1() {
-  std::vector<int> listaA{5, 7, 11};
-  std::vector<int> listaB{1, 3, 8, 14};
-
-  std::vector<int> wynik{1, 3, 5, 7, 8, 11, 14};
-  assert(polaczV1(listaA, listaB) == wynik);
+void printList(const std::vector<int>& lista) {
+  std::cout << "[";
+  for (size_t i = 0; i < lista.size(); i++) {
+    if (i > 0) std::cout << ", ";
+    std::cout << lista[i];
+  }
+  std::cout << "]" << std::endl;
 }
 
 int main() {
-  test1();
-
+  std::string line1, line2;
+  std::getline(std::cin, line1);
+  std::getline(std::cin, line2);
+  
+  std::vector<int> listaA = parseList(line1);
+  std::vector<int> listaB = parseList(line2);
+  
+  std::vector<int> wynik;
+  size_t i = 0, j = 0;
+  
+  while (i < listaA.size() && j < listaB.size()) {
+    if (listaA[i] < listaB[j]) {
+      wynik.push_back(listaA[i++]);
+    } else {
+      wynik.push_back(listaB[j++]);
+    }
+  }
+  
+  while (i < listaA.size()) {
+    wynik.push_back(listaA[i++]);
+  }
+  
+  while (j < listaB.size()) {
+    wynik.push_back(listaB[j++]);
+  }
+  
+  printList(wynik);
   return 0;
 }

@@ -44,23 +44,22 @@ Liczba jest palindromem.
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj liczbe" << std::endl;
   int liczba;
   std::cin >> liczba;
 
   int odwrocona = 0;
-  int liczbaPomocnicza = liczba;
+  int temp = liczba;
 
-  while (liczbaPomocnicza > 0) {
-    int cyfra = liczbaPomocnicza % 10;
+  while (temp > 0) {
+    int cyfra = temp % 10;
     odwrocona = (odwrocona * 10 + cyfra);
-    liczbaPomocnicza /= 10;
+    temp /= 10;
   }
 
   if (odwrocona == liczba)
-    std::cout << "Podana liczba jest palindromem." << std::endl;
+    std::cout << "Liczba jest palindromem." << std::endl;
   else
-    std::cout << "Podana liczba nie jest palindromem." << std::endl;
+    std::cout << "Liczba nie jest palindromem." << std::endl;
 
   return 0;
 }

@@ -45,42 +45,33 @@ Niepoprawny numer dnia tygodnia.
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj numer dnia tygodnia:" << std::endl;
-
   int dzien;
   std::cin >> dzien;
 
   switch (dzien) {
     case 1:
-      std::cout << "Pierwszym dniem tygodnia jest poniedzialek." << std::endl;
+      std::cout << "Poniedziałek" << std::endl;
       break;
-
     case 2:
-      std::cout << "Drugim dniem tygodnia jest wtorek." << std::endl;
+      std::cout << "Wtorek" << std::endl;
       break;
-
     case 3:
-      std::cout << "Trzecim dniem tygodnia jest sroda." << std::endl;
+      std::cout << "Środa" << std::endl;
       break;
-
     case 4:
-      std::cout << "Czwartym dniem tygodnia jest czwartek." << std::endl;
+      std::cout << "Czwartek" << std::endl;
       break;
-
     case 5:
-      std::cout << "Piatym dniem tygodnia jest piatek." << std::endl;
+      std::cout << "Piątek" << std::endl;
       break;
-
     case 6:
-      std::cout << "Szostym dniem tygodnia jest sobota." << std::endl;
+      std::cout << "Sobota" << std::endl;
       break;
-
     case 7:
-      std::cout << "Siodmym dniem tygodnia jest niedziela." << std::endl;
+      std::cout << "Niedziela" << std::endl;
       break;
-
     default:
-      std::cout << "Podano niepoprawna liczbe." << std::endl;
+      std::cout << "Niepoprawny numer dnia tygodnia." << std::endl;
   }
 
   return 0;
