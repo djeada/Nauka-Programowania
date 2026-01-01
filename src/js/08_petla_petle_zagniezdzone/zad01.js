@@ -36,6 +36,15 @@ Jedna liczba naturalna:
 
 */
 function main() {
+  const n = parseInt(prompt("Podaj liczbe:"));
+  
+  for (let i = 0; i < n; i++) {
+    let wiersz = "";
+    for (let j = 0; j < n; j++) {
+      wiersz += "*";
+    }
+    console.log(wiersz);
+  }
 }
 
 main();

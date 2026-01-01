@@ -48,6 +48,17 @@ Suma wysokości wszystkich trójkątów, czyli `1 + 2 + ... + N` linii.
 
 */
 function main() {
+  const n = parseInt(prompt("Podaj liczbe:"));
+  
+  for (let trojkat = 1; trojkat <= n; trojkat++) {
+    for (let wiersz = 1; wiersz <= trojkat; wiersz++) {
+      let linia = "";
+      for (let gwiazdka = 0; gwiazdka < wiersz; gwiazdka++) {
+        linia += "*";
+      }
+      console.log(linia);
+    }
+  }
 }
 
 main();

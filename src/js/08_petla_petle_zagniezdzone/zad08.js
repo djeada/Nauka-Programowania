@@ -45,6 +45,24 @@ Liczby w wierszu oddzielaj pojedynczą spacją.
 
 */
 function main() {
+  const n = parseInt(prompt("Podaj liczbe:"));
+  
+  for (let i = 0; i < n; i++) {
+    let wiersz = [];
+    for (let j = 0; j <= i; j++) {
+      if (j === 0 || j === i) {
+        wiersz.push(1);
+      } else {
+        // Calculate binomial coefficient C(i,j) = i! / (j! * (i-j)!)
+        let val = 1;
+        for (let k = 0; k < j; k++) {
+          val = val * (i - k) / (k + 1);
+        }
+        wiersz.push(Math.round(val));
+      }
+    }
+    console.log(wiersz.join(" "));
+  }
 }
 
 main();
