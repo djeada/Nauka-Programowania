@@ -3,7 +3,7 @@
 # Dane wejsciowe: Dwa napisy.
 # Dane wyjsciowe: Liczba naturalna.
 # Przyklad:
-# Dla otrzymanych napisow: "grazyna" oraz "razynax", powinna zostac zwrocona liczba: 2.
+# Dla otrzymanych napisow: "grazyna" oraz "razynax", powinna zostać zwrocona liczba: 2.
 
 source ../assert.sh
 

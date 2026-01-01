@@ -3,7 +3,7 @@
 # Dane wejsciowe: Napis.
 # Dane wyjsciowe: Lista napisow.
 # Przyklad:
-# Dla otrzymanego napisu: "Tata zabral kajak na wycieczke i uderzyl sie w oko", powinna zostac zwrocona lista: ["kajak", "i", "w", "oko"].
+# Dla otrzymanego napisu: "Tata zabral kajak na wycieczke i uderzyl sie w oko", powinna zostać zwrocona lista: ["kajak", "i", "w", "oko"].
 
 source ../assert.sh
 

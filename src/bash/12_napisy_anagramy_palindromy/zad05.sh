@@ -3,7 +3,7 @@
 # Dane wejsciowe: Dwa napisy.
 # Dane wyjsciowe: Lista napisow.
 # Przyklad:
-# Dla otrzymanych napisow: "Sroga kara." oraz "arak", powinna zostac zwrocona lista: ["kara"].
+# Dla otrzymanych napisow: "Sroga kara." oraz "arak", powinna zostać zwrocona lista: ["kara"].
 
 source ../assert.sh
 

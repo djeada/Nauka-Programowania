@@ -3,7 +3,7 @@
 # Dane wejsciowe: Napis.
 # Dane wyjsciowe: Lista napisow.
 # Przyklad:
-# Dla otrzymanego napisu: "taco", powinna zostac zwrocona lista: ["taco", "toca"].
+# Dla otrzymanego napisu: "taco", powinna zostać zwrocona lista: ["taco", "toca"].
 
 source ../assert.sh
 

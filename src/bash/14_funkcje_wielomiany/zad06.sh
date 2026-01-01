@@ -29,8 +29,8 @@
 # * Zakładamy `a ≠ 0` (to naprawdę równanie kwadratowe).
 
 # Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(n^2)
-# Zlozonosc pamieciowa: O(n)
+# Złożoność czasowa: O(n^2)
+# Złożoność pamieciowa: O(n)
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"
