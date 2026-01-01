@@ -80,28 +80,14 @@ public class Main {
 
   public static void main(String[] args) {
 
-    System.out.print("Podaj dwie liczby: \n");
-
     Scanner s = new Scanner(System.in);
-
     int a = Integer.parseInt(s.nextLine());
     int b = Integer.parseInt(s.nextLine());
 
-    System.out.print("Pierwsza liczba jest wieksza od drugiej: ");
-    System.out.printf("%b", czyWieksza(a, b));
-    System.out.printf("\n");
-
-    System.out.printf("Suma liczb jest mniejsza od 10: ");
-    System.out.printf("%b", czySumaMniejsza(a, b));
-    System.out.printf("\n");
-
-    System.out.printf("Obie liczby nieparzyste: ");
-    System.out.printf("%b", czyObieNieparzyste(a, b));
-    System.out.printf("\n");
-
-    System.out.printf("Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu: ");
-    System.out.printf("%b", czyWiekszaNizKwad(a, b));
-    System.out.printf("\n");
+    System.out.println(czyWieksza(a, b));
+    System.out.println(czySumaMniejsza(a, b));
+    System.out.println(czyObieNieparzyste(a, b));
+    System.out.println(czyWiekszaNizKwad(a, b));
   }
 }
 

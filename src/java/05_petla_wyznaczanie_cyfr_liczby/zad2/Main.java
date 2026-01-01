@@ -48,14 +48,17 @@ public class Main {
     // Dla pobranej liczby, powinny zostac zwrocone
     // cyfry pobranej liczby poczynajac od cyfry jednosci.
 
-    System.out.print("Podaj liczbe\n");
     Scanner s = new Scanner(System.in);
-    int a = Integer.parseInt(s.nextLine());
+    int n = Integer.parseInt(s.nextLine());
 
-    while (a > 0) {
-      System.out.print(a % 10);
-      System.out.print("\n");
-      a = a / 10;
+    if (n == 0) {
+      System.out.println(0);
+      return;
+    }
+
+    while (n > 0) {
+      System.out.println(n % 10);
+      n = n / 10;
     }
   }
 }

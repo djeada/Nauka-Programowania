@@ -39,7 +39,18 @@ Wczytaj `n` (`n ≥ 1`) i wypisz odwrócony trójkąt o wysokości `n`, zaczynaj
 ```
 
 */
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = Integer.parseInt(s.nextLine());
+        
+        for (int i = n; i >= 1; i--) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }

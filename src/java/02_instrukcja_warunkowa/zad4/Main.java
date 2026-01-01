@@ -56,25 +56,13 @@ public class Main {
 
     // Dla dwoch pobranych liczb, wypisz najpierw wieksza potem mniejsza.
 
-    System.out.print("podaj dwie liczby:\n");
-
-    int a;
-    int b;
     Scanner s = new Scanner(System.in);
+    int a = Integer.parseInt(s.nextLine());
+    int b = Integer.parseInt(s.nextLine());
 
-    a = Integer.parseInt(s.nextLine());
-    b = Integer.parseInt(s.nextLine());
-
-    if (a > b) {
-      System.out.print(a + "\n");
-      System.out.print(b + "\n");
-      System.out.print("pierwsza liczba jest wieksza od drugiej\n");
-
-    } else {
-      System.out.print(b + "\n");
-      System.out.print(a + "\n");
-      System.out.print("pierwsza liczba nie jest wieksza od drugiej\n");
-    }
+    int max = Math.max(a, b);
+    int min = Math.min(a, b);
+    System.out.println(max + " " + min);
   }
 }
 

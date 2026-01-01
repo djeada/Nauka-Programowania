@@ -61,113 +61,68 @@ p=True q=True L=True R=True EQ=True
 * Między blokami praw możesz wstawić **jedną pustą linię** (zalecane), ale nie więcej.
 
 */
-package test;
-
 public class Main {
   public static void main(String[] args) {
 
-    // Prawo wylacznego srodka
-    System.out.print("Prawo wylacznego srodka");
-    System.out.print(System.getProperty("line.separator"));
-    boolean p = false;
-    System.out.print("dla p majacego wartosc logiczna ");
-    System.out.print(p);
-    System.out.print(" wyrazenie p v ~p ma wartosc logiczna ");
-    System.out.printf("%b", (p || !p));
-    System.out.printf(System.getProperty("line.separator"));
-    p = true;
-    System.out.printf("dla p majacego wartosc logiczna ");
-    System.out.printf("%b", p);
-    System.out.printf(" wyrazenie p v ~p ma wartosc logiczna ");
-    System.out.printf("%b", (p || !p));
-    System.out.printf(System.getProperty("line.separator"));
+    // Prawo wylaczonego srodka
+    System.out.println("Prawo wyłączonego środka:");
+    printTruthTable1("p OR (NOT p)", (p, q) -> p || !p);
+    System.out.println();
 
-    // Zasada niesprzecznosci
-    System.out.printf("\nZasada niesprzecznosci");
-    System.out.printf(System.getProperty("line.separator"));
-    p = false;
-    System.out.printf("dla p majacego wartosc logiczna ");
-    System.out.printf("%b", p);
-    System.out.printf(" wyrazenie ~(p Ʌ ~p) ma wartosc logiczna ");
-    System.out.printf("%b", !(p && !p));
-    System.out.printf(System.getProperty("line.separator"));
-    p = true;
-    System.out.printf("dla p majacego wartosc logiczna ");
-    System.out.printf("%b", p);
-    System.out.printf(" wyrazenie ~(p Ʌ ~p) ma wartosc logiczna ");
-    System.out.printf("%b", !(p && !p));
-    System.out.printf(System.getProperty("line.separator"));
+    // Prawo niesprzecznosci
+    System.out.println("Prawo niesprzeczności:");
+    printTruthTable1("NOT (p AND (NOT p))", (p, q) -> !(p && !p));
+    System.out.println();
 
     // Przemiennosc koniunkcji
-    System.out.printf("\nPrzemiennosc koniunkcji");
-    System.out.printf(System.getProperty("line.separator"));
-    p = false;
-    boolean q = false;
-    System.out.printf("dla p majacego wartosc logiczna ");
-    System.out.printf("%b", p);
-    System.out.printf(" oraz q majacego wartosc logiczna ");
-    System.out.printf("%b", q);
-    System.out.printf(" wyrazenie (p Ʌ q)<= > (q Ʌ p) ma wartosc logiczna ");
-    System.out.printf("%b", ((p && q) == (q && p)));
-    System.out.printf(System.getProperty("line.separator"));
-    p = true;
-    q = false;
-    System.out.printf("dla p majacego wartosc logiczna ");
-    System.out.printf("%b", p);
-    System.out.printf(" oraz q majacego wartosc logiczna ");
-    System.out.printf("%b", q);
-    System.out.printf(" wyrazenie (p Ʌ q)<= > (q Ʌ p) ma wartosc logiczna ");
-    System.out.printf("%b", ((p && q) == (q && p)));
-    System.out.printf(System.getProperty("line.separator"));
-    p = false;
-    q = true;
-    System.out.printf("dla p majacego wartosc logiczna ");
-    System.out.printf("%b", p);
-    System.out.printf(" oraz q majacego wartosc logiczna ");
-    System.out.printf("%b", q);
-    System.out.printf(" wyrazenie (p Ʌ q)<= > (q Ʌ p) ma wartosc logiczna ");
-    System.out.printf("%b", ((p && q) == (q && p)));
-    System.out.printf(System.getProperty("line.separator"));
-    p = true;
-    q = true;
-    System.out.printf("dla p majacego wartosc logiczna ");
-    System.out.printf("%b", p);
-    System.out.printf(" oraz q majacego wartosc logiczna ");
-    System.out.printf("%b", q);
-    System.out.printf(" wyrazenie (p Ʌ q)<= > (q Ʌ p) ma wartosc logiczna ");
-    System.out.printf("%b", ((p && q) == (q && p)));
-    System.out.printf(System.getProperty("line.separator"));
+    System.out.println("Przemienność koniunkcji:");
+    printTruthTable2("p AND q", "q AND p", (p, q) -> p && q, (p, q) -> q && p);
+    System.out.println();
 
     // Przemiennosc alternatywy
-    System.out.printf("\nPrzemiennosc alternatywy");
-    System.out.printf(System.getProperty("line.separator"));
-    p = false;
-    q = false;
-    System.out.printf("dla p majacego wartosc logiczna ");
-    System.out.printf("%b", p);
-    System.out.printf(" oraz q majacego wartosc logiczna ");
-    System.out.printf("%b", q);
-    System.out.printf(" wyrazenie (p v q)<= > (q v p) ma wartosc logiczna ");
-    System.out.printf("%b", ((p || q) == (q || p)));
-    System.out.printf(System.getProperty("line.separator"));
-    p = true;
-    q = false;
-    System.out.printf("dla p majacego wartosc logiczna ");
-    System.out.printf("%b", p);
-    System.out.printf(" oraz q majacego wartosc logiczna ");
-    System.out.printf("%b", q);
-    System.out.printf(" wyrazenie (p v q)<= > (q v p) ma wartosc logiczna ");
-    System.out.printf("%b", ((p || q) == (q || p)));
-    System.out.printf(System.getProperty("line.separator"));
-    p = false;
-    q = true;
-    System.out.printf("dla p majacego wartosc logiczna ");
-    System.out.printf("%b", p);
-    System.out.printf(" oraz q majacego wartosc logiczna ");
-    System.out.printf("%b", q);
-    System.out.printf(" wyrazenie (p v q)<= > (q v p) ma wartosc logiczna ");
-    System.out.printf("%b", ((p || q) == (q || p)));
-    System.out.printf(System.getProperty("line.separator"));
+    System.out.println("Przemienność alternatywy:");
+    printTruthTable2("p OR q", "q OR p", (p, q) -> p || q, (p, q) -> q || p);
+    System.out.println();
+
+    // Pierwsze prawo de Morgana
+    System.out.println("Pierwsze prawo de Morgana:");
+    printTruthTable2("NOT (p AND q)", "(NOT p) OR (NOT q)", (p, q) -> !(p && q), (p, q) -> !p || !q);
+    System.out.println();
+
+    // Drugie prawo de Morgana
+    System.out.println("Drugie prawo de Morgana:");
+    printTruthTable2("NOT (p OR q)", "(NOT p) AND (NOT q)", (p, q) -> !(p || q), (p, q) -> !p && !q);
+  }
+
+  interface BoolFunc {
+    boolean apply(boolean p, boolean q);
+  }
+
+  static void printTruthTable1(String expr, BoolFunc func) {
+    boolean[] values = {false, true};
+    for (boolean p : values) {
+      for (boolean q : values) {
+        boolean result = func.apply(p, q);
+        System.out.printf("p=%s q=%s L=%s R=%s EQ=%s%n",
+            toBool(p), toBool(q), toBool(result), toBool(result), "True");
+      }
+    }
+  }
+
+  static void printTruthTable2(String exprL, String exprR, BoolFunc funcL, BoolFunc funcR) {
+    boolean[] values = {false, true};
+    for (boolean p : values) {
+      for (boolean q : values) {
+        boolean resL = funcL.apply(p, q);
+        boolean resR = funcR.apply(p, q);
+        System.out.printf("p=%s q=%s L=%s R=%s EQ=%s%n",
+            toBool(p), toBool(q), toBool(resL), toBool(resR), toBool(resL == resR));
+      }
+    }
+  }
+
+  static String toBool(boolean b) {
+    return b ? "True" : "False";
   }
 }
 

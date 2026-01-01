@@ -58,37 +58,29 @@ public class Main {
 
     // Dla pobranej liczby n, wyswietl sume n
     // pierwszych wyrazow ciagu danego wzorem:
-    System.out.print("Podaj liczbe: \n");
     Scanner s = new Scanner(System.in);
     int n = Integer.parseInt(s.nextLine());
 
-    // a_n = n/(n+1)
-    float suma = (float) 0.0;
-    for (float i = 1; i <= n; i++) {
-      float a = i / (i + 1);
-      suma += a;
+    // a) sum k^2 + k + 1
+    int sum1 = 0;
+    for (int k = 1; k <= n; k++) {
+      sum1 += k * k + k + 1;
     }
-    System.out.printf("%.2f", suma);
-    System.out.printf("\n");
+    System.out.println(sum1);
 
-    // a_n = (n^2+5)/n
-    suma = (float) 0.0;
-    for (float i = 1; i <= n; i++) {
-      float a = (float) ((Math.pow(i, 2) + 5) / i);
-      suma += a;
+    // b) sum k^2 + 5k
+    int sum2 = 0;
+    for (int k = 1; k <= n; k++) {
+      sum2 += k * k + 5 * k;
     }
-    System.out.printf("%.2f", suma);
-    System.out.printf("\n");
+    System.out.println(sum2);
 
-    // a_n = n + 2^n
-    suma = (float) 0.0;
-    for (int i = 1; i <= n; i++) {
-      int a = (int) (i + Math.pow(2, i));
-      suma += a;
+    // c) sum 3k
+    int sum3 = 0;
+    for (int k = 1; k <= n; k++) {
+      sum3 += 3 * k;
     }
-
-    System.out.printf("%.2f", suma);
-    System.out.printf("\n");
+    System.out.println(sum3);
   }
 }
 

@@ -40,7 +40,19 @@ Liczby w jednym wierszu oddzielaj pojedynczą spacją.
 * Nie dodawaj spacji na końcu wiersza.
 
 */
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = Integer.parseInt(s.nextLine());
+        
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                System.out.print(i * j);
+                if (j < n) System.out.print(" ");
+            }
+            System.out.println();
+        }
     }
 }

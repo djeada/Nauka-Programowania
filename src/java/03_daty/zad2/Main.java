@@ -64,50 +64,23 @@ public class Main {
 
     // Czy osoba jest pelnoletnia?
 
-    System.out.print("Podaj trzy liczby reprezentujace dzien, miesiac i rok urodzenia osoby:\n");
-
-    int dzien;
-    int miesiac;
-    int rok;
-
     Scanner s = new Scanner(System.in);
+    int d1 = Integer.parseInt(s.nextLine());
+    int m1 = Integer.parseInt(s.nextLine());
+    int y1 = Integer.parseInt(s.nextLine());
+    int d2 = Integer.parseInt(s.nextLine());
+    int m2 = Integer.parseInt(s.nextLine());
+    int y2 = Integer.parseInt(s.nextLine());
 
-    dzien = Integer.parseInt(s.nextLine());
-    miesiac = Integer.parseInt(s.nextLine());
-    rok = Integer.parseInt(s.nextLine());
+    int age = y2 - y1;
+    if (m2 < m1 || (m2 == m1 && d2 < d1)) {
+      age--;
+    }
 
-    System.out.print("Podaj trzy liczby reprezentujace dzisiejsza date:\n");
-
-    int dzienAktualny;
-    int miesiacAktualny;
-    int rokAktualny;
-
-    dzienAktualny = Integer.parseInt(s.nextLine());
-    miesiacAktualny = Integer.parseInt(s.nextLine());
-    rokAktualny = Integer.parseInt(s.nextLine());
-
-    int roznicaLata = rokAktualny - rok;
-    int roznicaMiesiace = miesiacAktualny - miesiac;
-    int roznicaDni = dzienAktualny - dzien;
-
-    if (roznicaLata > 18) {
-      System.out.print("osoba jest pelnoletnia\n");
-    } else if (roznicaLata == 18) {
-
-      if (roznicaMiesiace > 0) {
-        System.out.print("osoba jest pelnoletnia\n");
-      } else if (roznicaMiesiace == 0) {
-
-        if (roznicaDni >= 0) {
-          System.out.print("osoba jest pelnoletnia\n");
-        } else {
-          System.out.print("osoba nie jest pelnoletnia\n");
-        }
-      } else {
-        System.out.print("osoba nie jest pelnoletnia\n");
-      }
+    if (age >= 18) {
+      System.out.println("Osoba jest pełnoletnia.");
     } else {
-      System.out.print("osoba nie jest pelnoletnia\n");
+      System.out.println("Osoba nie jest pełnoletnia.");
     }
   }
 }

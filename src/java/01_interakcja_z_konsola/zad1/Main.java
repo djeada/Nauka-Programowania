@@ -35,13 +35,11 @@ Witaj, świecie!
 public class Main {
   public static void main(String[] args) {
 
-    System.out.print("A.D. \n");
-
     /*
-    Wypisz na konsole "witaj swiecie"
+    Wypisz na konsole "Witaj, świecie!"
     */
 
-    System.out.print("Witaj swiecie\n");
+    System.out.println("Witaj, świecie!");
   }
 }
 

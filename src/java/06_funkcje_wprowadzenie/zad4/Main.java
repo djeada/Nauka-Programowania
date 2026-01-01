@@ -133,6 +133,24 @@ print(max_z_trzech(3, 2, 1))
 
 */
 public class Main {
-    public static void main(String[] args) {
-    }
+  // Funkcje min/max dla 2 i 3 liczb
+  
+  public static int min2(int a, int b) {
+    return a < b ? a : b;
+  }
+
+  public static int max2(int a, int b) {
+    return a > b ? a : b;
+  }
+
+  public static int min3(int a, int b, int c) {
+    return Math.min(Math.min(a, b), c);
+  }
+
+  public static int max3(int a, int b, int c) {
+    return Math.max(Math.max(a, b), c);
+  }
+
+  public static void main(String[] args) {
+  }
 }

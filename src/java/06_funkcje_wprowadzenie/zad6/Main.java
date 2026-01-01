@@ -35,6 +35,8 @@ print(suma_cyfr(13231))
 * Dla `n = 0` suma cyfr to `0`.
 
 */
+import java.util.*;
+
 public class Main {
   // Napisz funkcje, ktora dla otrzymanej liczby zwroci sume cyfr tej liczby.
 
@@ -50,13 +52,11 @@ public class Main {
   }
 
   public static void main(String[] args) {
-    System.out.print("Podaj liczbe: \n");
 
     Scanner s = new Scanner(System.in);
+    int n = Integer.parseInt(s.nextLine());
 
-    int a = Integer.parseInt(s.nextLine());
-
-    System.out.print("Suma cyfr liczby to: " + sumaCyfr(a) + "\n");
+    System.out.println(sumaCyfr(n));
   }
 }
 

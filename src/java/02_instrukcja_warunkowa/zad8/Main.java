@@ -54,25 +54,19 @@ import java.util.*;
 public class Main {
 	public static void main(String[] args) {
 
-		//Pobierz od uzytkownika trzy dlugosci bokow i sprawdz, 
-		//czy mozna z nich zbudowac trojkat.
-
-		System.out.print("podaj trzy liczby:\n");
-
-		int a;
-		int b;
-		int c;
+		// Pobierz od uzytkownika trzy dlugosci bokow i sprawdz, 
+		// czy mozna z nich zbudowac trojkat.
 
 		Scanner s = new Scanner(System.in);
-
-		a = Integer.parseInt(s.nextLine());
-		b = Integer.parseInt(s.nextLine());
-		c = Integer.parseInt(s.nextLine());
+		int a = Integer.parseInt(s.nextLine());
+		int b = Integer.parseInt(s.nextLine());
+		int c = Integer.parseInt(s.nextLine());
 
 		if (a + b > c && b + c > a && a + c > b) {
-			System.out.print("z podanych bokow mozna zbudowac trojkat\n");
+			System.out.println("Trójkąt można zbudować z podanych boków.");
 		} else {
-			System.out.print("z podanych bokow nie mozna zbudowac trojkata\n");
+			System.out.println("Trójkąta nie można zbudować z podanych boków.");
 		}
-	
+	}
+}
 

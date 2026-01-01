@@ -59,18 +59,14 @@ public class Main {
 
     // Dla dwoch pobranych liczb, sprawdz czy pobrane liczby sa identyczne.
 
-    System.out.print("podaj dwie liczby:\n");
-    int a;
-    int b;
     Scanner s = new Scanner(System.in);
-
-    a = Integer.parseInt(s.nextLine());
-    b = Integer.parseInt(s.nextLine());
+    int a = Integer.parseInt(s.nextLine());
+    int b = Integer.parseInt(s.nextLine());
 
     if (a == b) {
-      System.out.print("liczby sa jednakowe\n");
+      System.out.println("Liczby są identyczne.");
     } else {
-      System.out.print("liczby sa rozne\n");
+      System.out.println("Liczby są różne.");
     }
   }
 }

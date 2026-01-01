@@ -65,33 +65,26 @@ public class Main {
     // Otrzymujesz roczna stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc
     // udzielonego kredytu. Oblicz miesieczna rate oraz calkowity koszt kredytu.
 
-    System.out.print(
-        "Podaj: stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc udzielonego"
-            + " kredytu");
-    System.out.print("\n");
-
-    float stopa;
-    int lata;
-    int kredyt;
-
     Scanner s = new Scanner(System.in);
 
-    stopa = Float.parseFloat(s.nextLine());
-    lata = Integer.parseInt(s.nextLine());
-    kredyt = Integer.parseInt(s.nextLine());
+    double R = Double.parseDouble(s.nextLine());
+    int Y = Integer.parseInt(s.nextLine());
+    double P = Double.parseDouble(s.nextLine());
 
-    float r = (float) (stopa / 12 * 0.01);
-    int n = lata * 12;
+    int n = Y * 12;
+    double M;
 
-    float rata = (float) (kredyt * r * Math.pow((1 + r), n) / (Math.pow((1 + r), n) - 1));
-    float calkKosz = rata * n;
+    if (R > 0) {
+      double r = R / (12 * 100);
+      M = P * r * Math.pow((1 + r), n) / (Math.pow((1 + r), n) - 1);
+    } else {
+      M = P / n;
+    }
 
-    System.out.printf("rata mieieczna to ");
-    System.out.printf("%.2f", rata);
-    System.out.printf("\n");
-    System.out.printf("calkowity koszt to ");
-    System.out.printf("%.2f", calkKosz);
-    System.out.printf("\n");
+    double C = M * n;
+
+    System.out.printf("%.2f%n", M);
+    System.out.printf("%.2f%n", C);
   }
 }
 

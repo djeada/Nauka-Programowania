@@ -61,22 +61,18 @@ public class Main {
 
     // Na farmie mamy a glow i b nog, znajdz liczbe kur oraz owieczek.
 
-    System.out.print("Podaj dwie liczby: \n");
-    int glowy;
-    int nogi;
-
     Scanner s = new Scanner(System.in);
+    int heads = Integer.parseInt(s.nextLine());
+    int legs = Integer.parseInt(s.nextLine());
 
-    glowy = Integer.parseInt(s.nextLine());
-    nogi = Integer.parseInt(s.nextLine());
+    // Chickens have 2 legs, sheep have 4 legs
+    // chickens + sheep = heads
+    // 2*chickens + 4*sheep = legs
+    int chickens = (4 * heads - legs) / 2;
+    int sheep = heads - chickens;
 
-    for (int i = 0; i < glowy; i++) {
-      int owce = glowy - i;
-      if (2 * i + 4 * owce == nogi) {
-        System.out.print(i + " " + owce + "\n");
-        break;
-      }
-    }
+    System.out.println(chickens);
+    System.out.println(sheep);
   }
 }
 

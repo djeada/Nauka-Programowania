@@ -36,7 +36,35 @@ Jedna linia: `N` liczb pierwszych oddzielonych spacjami.
 * Do sprawdzania pierwszości wystarczy test dzielnikami do `⌊sqrt(x)⌋`.
 
 */
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = Integer.parseInt(s.nextLine());
+        
+        int count = 0;
+        int num = 2;
+        
+        while (count < n) {
+            if (isPrime(num)) {
+                if (count > 0) System.out.print(" ");
+                System.out.print(num);
+                count++;
+            }
+            num++;
+        }
+        System.out.println();
+    }
+    
+    static boolean isPrime(int x) {
+        if (x < 2) return false;
+        if (x == 2) return true;
+        if (x % 2 == 0) return false;
+        
+        for (int i = 3; i * i <= x; i += 2) {
+            if (x % i == 0) return false;
+        }
+        return true;
     }
 }

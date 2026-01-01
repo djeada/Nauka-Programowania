@@ -53,9 +53,8 @@ import java.util.*;
 
 public class Main {
   // Dla liczby N, wczytaj N liczb do listy, a nastepnie:
-  public static void wczytaj(ArrayList<Integer> lista, int n) {
+  public static void wczytaj(ArrayList<Integer> lista, int n, Scanner s) {
     for (int i = 0; i < n; i++) {
-      Scanner s = new Scanner(System.in);
       int liczba = Integer.parseInt(s.nextLine());
       lista.add(liczba);
     }
@@ -99,12 +98,9 @@ public class Main {
   public static void main(String[] args) {
 
     ArrayList<Integer> lista = new ArrayList<Integer>();
-    int n;
-
-    System.out.print("podaj liczbe n: ");
     Scanner s = new Scanner(System.in);
-    n = Integer.parseInt(s.nextLine());
-    wczytaj(lista, n);
+    int n = Integer.parseInt(s.nextLine());
+    wczytaj(lista, n, s);
 
     ArrayList<Integer> kopia = new ArrayList<Integer>(lista);
     zwieksz(kopia);
