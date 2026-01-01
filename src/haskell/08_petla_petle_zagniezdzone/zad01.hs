@@ -36,4 +36,6 @@ Jedna liczba naturalna:
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  mapM_ putStrLn $ replicate n $ replicate n '*'

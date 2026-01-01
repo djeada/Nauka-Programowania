@@ -41,4 +41,15 @@ Jedna liczba całkowita — indeks (od `0`) lub `-1`.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
+  klucz <- readLn :: IO Int
+  
+  let findIndex _ [] = -1
+      findIndex x (y:ys)
+        | x == y = 0
+        | otherwise = let idx = findIndex x ys
+                      in if idx == -1 then -1 else idx + 1
+  
+  print $ findIndex klucz nums

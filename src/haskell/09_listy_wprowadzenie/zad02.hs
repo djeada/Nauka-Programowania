@@ -50,4 +50,22 @@ Elementy w linii oddzielone przecinkami (bez spacji).
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
+  
+  -- a) Zwiększ każdy element o 1
+  let resA = map (+1) nums
+  putStrLn $ intercalate "," $ map show resA
+  
+  -- b) Pomnóż każdy element przez jego indeks
+  let resB = zipWith (*) nums [0..]
+  putStrLn $ intercalate "," $ map show resB
+  
+  -- c) Zastąp wszystkie elementy wartością pierwszego
+  let resC = replicate n (head nums)
+  putStrLn $ intercalate "," $ map show resC
+  where
+    intercalate sep [] = ""
+    intercalate sep [x] = x
+    intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs

@@ -41,4 +41,6 @@ Liczby w jednym wierszu oddzielaj pojedynczą spacją.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  mapM_ (\i -> putStrLn $ unwords $ map show [i*j | j <- [1..n]]) [1..n]
