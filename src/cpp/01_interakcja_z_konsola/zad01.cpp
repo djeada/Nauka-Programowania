@@ -35,8 +35,7 @@ Witaj, świecie!
 #include <iostream>
 
 int main() {
-  std::cout << "A.D." << std::endl;
-  std::cout << "Witaj swiecie" << std::endl;
+  std::cout << "Witaj, świecie!" << std::endl;
 
   return 0;
 }

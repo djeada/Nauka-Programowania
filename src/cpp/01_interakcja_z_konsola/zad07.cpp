@@ -204,53 +204,42 @@ Oblicz objętość prostopadłościanu:
 ```
 
 */
+#include <cmath>
+#include <iomanip>
 #include <iostream>
 
 int main() {
-  std::cout << "podaj podstawe i wysokosc trojkata:" << std::endl;
+  double a, b, c;
 
-  float a;
-  float b;
+  // ZAD-07A: Area of triangle
+  std::cin >> a >> b;
+  double P = 0.5 * a * b;
+  std::cout << std::fixed << std::setprecision(3) << P << std::endl;
 
+  // ZAD-07B: Area of rectangle
+  std::cin >> a >> b;
+  P = a * b;
+  std::cout << std::fixed << std::setprecision(3) << P << std::endl;
+
+  // ZAD-07C: Area of rhombus
+  std::cin >> a >> b;
+  P = 0.5 * a * b;
+  std::cout << std::fixed << std::setprecision(3) << P << std::endl;
+
+  // ZAD-07D: Volume of sphere
   std::cin >> a;
-  std::cin >> b;
+  double V = (4.0 / 3.0) * M_PI * pow(a, 3);
+  std::cout << std::fixed << std::setprecision(3) << V << std::endl;
 
-  std::cout << "pole trojkata o podstawie " << a << " i wysokosci " << b
-            << " jest rowne " << a * b / 2 << std::endl;
+  // ZAD-07E: Volume of cone
+  std::cin >> a >> b;
+  V = (1.0 / 3.0) * M_PI * pow(a, 2) * b;
+  std::cout << std::fixed << std::setprecision(3) << V << std::endl;
 
-  std::cout << "podaj dlugosci bokow prostokata:" << std::endl;
-
-  std::cin >> a;
-  std::cin >> b;
-
-  std::cout << "pole prostokata o bokach " << a << " i " << b << " jest rowne "
-            << a * b << std::endl;
-
-  std::cout << "podaj dlugosci przekatnych rombu:" << std::endl;
-  std::cin >> a;
-  std::cin >> b;
-  std::cout << "pole rombu o przekotnych " << a << " i " << b << " jest rowne "
-            << a * b / 2 << std::endl;
-
-  std::cout << "podaj promien kuli:" << std::endl;
-  std::cin >> a;
-  std::cout << "objetosc kuli o promieniu " << a << " jest rowna "
-            << 4 / 3 * 3.14 * a * a * a << std::endl;
-
-  std::cout << "podaj promien podstawy i wysokosc stozka:" << std::endl;
-  std::cin >> a;
-  std::cin >> b;
-  std::cout << "objetosc stozka o promieniu podstawy " << a << " i wysokosci "
-            << b << " jest rowna " << 1 / 3 * 3.14 * a * a * b << std::endl;
-
-  std::cout << "podaj dlugosc, szerokosc i wysokosc graniastoslupa:"
-            << std::endl;
-  std::cin >> a;
-  std::cin >> b;
-  float c;
-  std::cin >> c;
-  std::cout << "objetosc graniastoslupa o dlugosci " << a << " szerokosci " << b
-            << " i wysokosci " << c << " jest rowna " << a * b * c << std::endl;
+  // ZAD-07F: Volume of cuboid
+  std::cin >> a >> b >> c;
+  V = a * b * c;
+  std::cout << std::fixed << std::setprecision(3) << V << std::endl;
 
   return 0;
 }

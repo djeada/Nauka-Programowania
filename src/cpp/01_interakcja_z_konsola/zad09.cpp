@@ -62,27 +62,25 @@ Dwie linie (do **2 miejsc po przecinku**):
 #include <iostream>
 
 int main() {
-  std::cout
-      << "Podaj: stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc 
-      udzielonego kredytu " << std::endl;
+  double R, P;
+  int Y;
 
-      float stopa;
-  int lata;
-  int wysokoscKredytu;
+  std::cin >> R >> Y >> P;
 
-  std::cin >> stopa;
-  std::cin >> lata;
-  std::cin >> wysokoscKredytu;
+  int n = Y * 12;
+  double M, C;
 
-  float r = stopa / 12 * 0.01;
-  int n = lata * 12;
+  if (R > 0) {
+    double r = R / (12 * 100);
+    M = P * r * pow((1 + r), n) / (pow((1 + r), n) - 1);
+  } else {
+    M = P / n;
+  }
 
-  float rata = wysokoscKredytu * r * pow((1 + r), n) / (pow((1 + r), n) - 1);
-  float calkKoszt = rata * n;
+  C = M * n;
 
-  std::cout << std::fixed << std::setprecision(2);
-  std::cout << "rata mieieczna to " << rata << std::endl;
-  std::cout << "calkowity koszt to " << calkKoszt << std::endl;
+  std::cout << std::fixed << std::setprecision(2) << M << std::endl;
+  std::cout << std::fixed << std::setprecision(2) << C << std::endl;
 
   return 0;
 }

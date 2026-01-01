@@ -196,59 +196,48 @@ Dwie linie:
 ```
 
 */
+#include <cmath>
+#include <iomanip>
 #include <iostream>
 
 int main() {
-  std::cout << "podaj wielkosc w kilogramach:" << std::endl;
+  // ZAD-06A: kg to g
+  double kg;
+  std::cin >> kg;
+  int g = (int)(kg * 1000);
+  std::cout << g << std::endl;
 
-  int kilogramy;
-  std::cin >> kilogramy;
-  int gramy = kilogramy * 1000;
+  // ZAD-06B: inches to cm
+  double inch;
+  std::cin >> inch;
+  double cm = inch * 2.54;
+  std::cout << std::fixed << std::setprecision(2) << cm << std::endl;
 
-  std::cout << kilogramy << " kg to " << gramy << " g." << std::endl;
+  // ZAD-06C: seconds to full hours
+  int s;
+  std::cin >> s;
+  int hours = s / 3600;
+  std::cout << hours << std::endl;
 
-  std::cout << "podaj wielkosc w calach:" << std::endl;
+  // ZAD-06D: euro to pln
+  double eur;
+  std::cin >> eur;
+  double pln = eur * 4.4;
+  std::cout << std::fixed << std::setprecision(2) << pln << std::endl;
 
-  float cal;
-  std::cin >> cal;
-  float cm = cal / 2.54;
+  // ZAD-06E: degrees to radians
+  double deg;
+  std::cin >> deg;
+  double rad = deg * M_PI / 180;
+  std::cout << std::fixed << std::setprecision(3) << rad << std::endl;
 
-  std::cout << cal << " cal to " << cm << " cm." << std::endl;
-
-  std::cout << "podaj ilosc sekund:" << std::endl;
-
-  float sekundy;
-  std::cin >> sekundy;
-  float godziny = sekundy / 3600;
-
-  std::cout << sekundy << " sekund to " << godziny << " godzin" << std::endl;
-
-  std::cout << "podaj liczbe w euro:" << std::endl;
-
-  float euro;
-  std::cin >> euro;
-  float zloty = euro * 4.40;
-
-  std::cout << euro << " euro to " << zloty << " zlotych" << std::endl;
-
-  std::cout << "podaj miare kata w stopniach:" << std::endl;
-
-  float katStopnie;
-  std::cin >> katStopnie;
-  float katRad = katStopnie * 0.0174532;
-
-  std::cout << katStopnie << " stopni to " << katRad << " radianow."
-            << std::endl;
-
-  std::cout << "podaj temperature w Farenheitach:" << std::endl;
-
-  float tempF;
-  std::cin >> tempF;
-  float tempC = (tempF - 32) * 5 / 9;
-  float tempK = tempC - 273;
-
-  std::cout << tempF << " F to " << tempC << " C i " << tempK << " K"
-            << std::endl;
+  // ZAD-06F: Fahrenheit to Celsius and Kelvin
+  double F;
+  std::cin >> F;
+  double C = (5.0 / 9.0) * (F - 32);
+  double K = C + 273.15;
+  std::cout << std::fixed << std::setprecision(3) << C << std::endl;
+  std::cout << std::fixed << std::setprecision(3) << K << std::endl;
 
   return 0;
 }

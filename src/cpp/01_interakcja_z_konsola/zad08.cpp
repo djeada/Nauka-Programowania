@@ -54,36 +54,19 @@ Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
 
 */
 #include <cmath>
+#include <iomanip>
 #include <iostream>
 
 int main() {
-  std::cout << "podaj: cene plytki, dlugosc boku plytki i wymiary podlogi"
-            << std::endl;
+  double p, t, L, W;
+  std::cin >> p >> t >> L >> W;
 
-  int cena;
-  int bokPlytki;
-  int szerokoscPodlogi;
-  int dlugoscPodlogi;
+  int nL = (int)ceil(L / t);
+  int nW = (int)ceil(W / t);
+  int n = nL * nW;
+  double cost = n * p;
 
-  std::cin >> cena;
-  std::cin >> bokPlytki;
-  std::cin >> szerokoscPodlogi;
-  std::cin >> dlugoscPodlogi;
-
-  int szerokoscKonieczna =
-      szerokoscPodlogi + bokPlytki - szerokoscPodlogi % bokPlytki;
-  int dlugoscKonieczna =
-      dlugoscPodlogi + bokPlytki - dlugoscPodlogi % bokPlytki;
-
-  int polePlytki = pow(bokPlytki, 2);
-  int polePodlogi = szerokoscKonieczna * dlugoscKonieczna;
-
-  float calkowityKoszt = cena * (float)polePodlogi / polePlytki;
-
-  std::cout << "Dla plytki o dlugosci boku " << bokPlytki << "i ceny " << cena
-            << " calkowity koszt wylozenia podlogi o wymiarach "
-            << szerokoscPodlogi << "x" << dlugoscPodlogi << " wynosi "
-            << calkowityKoszt << std::endl;
+  std::cout << std::fixed << std::setprecision(2) << cost << std::endl;
 
   return 0;
 }
