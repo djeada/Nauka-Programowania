@@ -1,12 +1,44 @@
 /*
-Tytul: N-ty wyraz ciagu danego wzorem rekurencyjnym.
-Tresc: Otrzymujesz liczbe N. Oblicz wartosc N-tego wyrazu ciagu danego wzorem rekurencyjnym:
-* $a_1 = 1$
-* $a_n = 1+2*a_{n-1}$
-Dane wejsciowe: Liczba naturalna N.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla N = 5, powinna zostac zwrocona liczba: 31.
+ZAD-05 — k-ta pochodna wielomianu
+
+**Poziom:** ★★☆
+**Tagi:** `pochodna`, `wielomiany`, `I/O`
+
+### Treść
+
+Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomianu będącego `k`-tą pochodną.
+
+### Wejście
+
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb: `a_n ... a_0`
+* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)
+
+### Wyjście
+
+* Jeśli po zróżniczkowaniu `k` razy zostaje wielomian niezerowy: wypisz jego współczynniki w jednej linii (spacje).
+* Jeśli wielomian „znika” (stopień < k): wypisz dokładnie `[]`.
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+4 -3 2
+1
+```
+
+**Wyjście:**
+
+```
+8 -3
+```
+
+### Uwagi o formatowaniu
+
+* Pochodna: jeśli aktualne współczynniki to `[c_d, c_{d-1}, ..., c_0]`, to pochodna ma współczynniki:
+  `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]`.
 
 */
 public class Main {

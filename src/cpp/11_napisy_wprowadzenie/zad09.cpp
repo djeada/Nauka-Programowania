@@ -1,13 +1,53 @@
 /*
-Tytul: Wczytaj i rozdziel informacje o pracowniku.
-Tresc: Otrzymasz rekord z bazy danych reprezentujacy dane pracownika. Sa to kolejno: imie, nazwisko, miejsce urodzenia, stanowisko i zarobki. Informacje sa rozdzielone srednikami. Zapisz je w osobnych zmiennych i wypisz je razem z odpowiednimi komunikatami.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla otrzymanego napisu:
-"Jan; Kowalski; Warszawa; Programista; 1000;",
-powinna zostac zwrocona lista:
-["Imie: Jan", "Nazwisko: Kowalski", "Miejsce urodzenia: Warszawa", "Zawod: Programista", "Zarobki: 1000"].
+ZAD-09 — Rozdziel informacje o pracowniku
+
+**Poziom:** ★☆☆
+**Tagi:** `split`, `formatowanie`
+
+### Treść
+
+Wczytaj linię z danymi pracownika rozdzielonymi średnikami `;`:
+
+1. Imię, 2) Nazwisko, 3) Miejsce urodzenia, 4) Stanowisko, 5) Zarobki
+
+Wypisz każdą informację w osobnej linii z etykietą.
+
+### Wejście
+
+* 1. linia: dane w formacie `Imię; Nazwisko; Miasto; Zawód; Zarobki;`
+
+### Wyjście
+
+Pięć linii w formacie:
+
+* `Imię: ...`
+* `Nazwisko: ...`
+* `Miejsce urodzenia: ...`
+* `Zawód: ...`
+* `Zarobki: ...`
+
+### Przykład
+
+**Wejście:**
+
+```
+Jan; Kowalski; Warszawa; Programista; 1000;
+```
+
+**Wyjście:**
+
+```
+Imię: Jan
+Nazwisko: Kowalski
+Miejsce urodzenia: Warszawa
+Zawód: Programista
+Zarobki: 1000
+```
+
+### Uwagi
+
+* Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).
+* Ostatni średnik może powodować pusty element na końcu — zignoruj go.
 
 */
 #include <cassert>
@@ -16,15 +56,13 @@ powinna zostac zwrocona lista:
 #include <vector>
 
 std::vector<std::string> dane(std::string &napis) {
-
   std::vector<std::string> wynik;
   std::stringstream ss(napis);
 
   for (std::string slowo; ss >> slowo;) {
     if (slowo.size() > 1) {
       wynik.push_back(slowo.substr(0, slowo.size() - 1));
-      if (ss.peek() == ';')
-        ss.ignore();
+      if (ss.peek() == ';') ss.ignore();
     }
   }
 
@@ -32,7 +70,6 @@ std::vector<std::string> dane(std::string &napis) {
 }
 
 void wypiszDane(std::string &napis) {
-
   std::vector<std::string> wynik = dane(napis);
   assert(wynik.size() == 5);
 
@@ -48,4 +85,3 @@ int main() {
   wypiszDane(napis);
   return 0;
 }
-

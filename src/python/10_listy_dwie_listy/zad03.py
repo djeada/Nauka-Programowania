@@ -1,10 +1,37 @@
 """
-Tytul: Suma elementow dwoch list.
-Tresc: Dla otrzymanych dwoch list, zwroc liste, ktorej elementy sa suma odpowiadajacych sobie elementow obu list. Jesli listy nie sa tej samej dlugosci, zaloz, ze brakujace elementy krotszej listy sa rowne 0.
-Dane wejsciowe: Dwie listy.
-Dane wyjsciowe: Lista.
-Przyklad:
-Dla otrzymanych list [3, 1, 2, 5] oraz [2, 8, 6, 5], zostanie zwrocona lista: [5, 9, 8, 10].
+ZAD-03 — Suma elementów dwóch list
+
+**Poziom:** ★☆☆
+**Tagi:** `list`, `iteracja`
+
+### Treść
+
+Wczytaj dwie listy liczb całkowitych i zwróć listę, w której element o indeksie `i` jest sumą elementów o indeksie `i` z obu list.
+Jeśli któraś lista jest krótsza, brakujące elementy traktuj jako `0`.
+
+### Wejście
+
+* 1 linia: lista 1
+* 2 linia: lista 2
+
+### Wyjście
+
+* 1 linia: lista sum
+
+### Przykład
+
+**Wejście:**
+
+```
+[3, 1, 2, 5]
+[2, 8, 6, 5]
+```
+
+**Wyjście:**
+
+```
+[5, 9, 8, 10]
+```
 
 """
 

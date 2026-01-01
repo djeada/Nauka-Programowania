@@ -1,16 +1,34 @@
 /*
+ZAD-05 — Usuń powtórzenia sąsiadujących znaków
 
-Tytul: Usun powtorzenia stojacych obok siebie znakow.
+**Poziom:** ★★★
+**Tagi:** `string`, `compress`, `run-length`
 
-Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen stojacych obok siebie znakow i zachowanie tylko pierwszego wystapienia kazdego znaku.
+### Treść
 
-Dane wejsciowe: Napis.
+Otrzymujesz napis. Usuń powtórzenia znaków występujących **bezpośrednio obok siebie**, pozostawiając jedno wystąpienie z każdej „serii”.
 
-Dane wyjsciowe: Napis.
+### Wejście
 
-Przyklad:
+* 1 linia: napis `S`
 
-Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “ABA”.
+### Wyjście
+
+* 1 linia: napis po redukcji sąsiadów
+
+### Przykład
+
+**Wejście:**
+
+```
+AAAAAAAAAABBBBBBBBA
+```
+
+**Wyjście:**
+
+```
+ABA
+```
 
 */
 

@@ -1,15 +1,44 @@
 /*
-Czy liczba jest palindromem?
+ZAD-05 — Sprawdzanie, czy liczba jest palindromem
 
-Tresc: Dla otrzymanej liczby naturalnej sprawdz, czy jest ona palindromem, tj. czy nie zmienia sie po zapisaniu cyfr w odwrotnej kolejnosci.
+**Poziom:** ★★☆
+**Tagi:** `string`, `pętle`, `odwracanie`
 
-Dane wejsciowe: Liczba naturalna.
+### Treść
 
-Dane wyjsciowe: Komunikat.
+Wczytaj liczbę naturalną `n`. Sprawdź, czy jest palindromem (czyli czy po odwróceniu cyfr pozostaje taka sama). Wypisz odpowiedni komunikat:
 
-Przyklad:
+* `Liczba jest palindromem.`
+* `Liczba nie jest palindromem.`
 
-Dla otrzymanej liczby 13231, powinna zostac wypisana informacja o tym, ze liczba jest palindromem.
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Jeden komunikat tekstowy (dokładnie jeden z powyższych).
+
+### Przykład
+
+**Wejście:**
+
+```
+13231
+```
+
+**Wyjście:**
+
+```
+Liczba jest palindromem.
+```
+
+### Uwagi o formatowaniu
+
+* `0` jest palindromem.
+
 */
 
 // Pobieranie danych od uzytkownika

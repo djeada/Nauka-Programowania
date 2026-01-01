@@ -1,31 +1,50 @@
 /*
-Tytul:  Sprawdz warunek
+ZAD-03 — Sprawdzanie warunków logicznych
 
-Napisz funkcje, ktora sprawdzi nastepujace warunki dla otrzymanych dwoch liczb:
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `bool`, `warunki`
 
-a) Czy pierwsza liczba jest wieksza od drugiej liczby?
+### Treść
 
-b) Czy suma liczb jest mniejsza niz 10?
+Napisz funkcję `sprawdz_warunki(a, b)`, która dla dwóch liczb naturalnych zwraca cztery wartości logiczne (np. jako krotkę) odpowiadające warunkom:
 
-c) Czy obie liczby sa nieparzyste?
+a) Czy `a > b`?
+b) Czy `a + b < 10`?
+c) Czy obie liczby są nieparzyste?
+d) Czy `max(a, b) < a^2`?
 
-d) Czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu?
+### Wejście
 
-Dane wejsciowe: dwie liczby naturalne
+Dwa argumenty funkcji:
 
-Dane wyjsciowe: cztery wartosci logiczne, odpowiadajace na kazde z pytan
+* `a` (liczba całkowita, `a ≥ 0`)
+* `b` (liczba całkowita, `b ≥ 0`)
 
-Przyklad:
+### Wyjście
 
-Dla pobranych liczb 3 i 2, funkcja powinna zwrocic nastepujace wartosci logiczne:
+Cztery wartości logiczne w kolejności a), b), c), d).
 
-a) Prawda
+### Przykład
 
-b) Prawda
+**Wywołanie funkcji:**
 
-c) Falsz
+```python
+A, B, C, D = sprawdz_warunki(3, 2)
+print(A)
+print(B)
+print(C)
+print(D)
+```
 
-d) Prawda
+**Wyjście:**
+
+```
+True
+True
+False
+True
+```
+
 */
 
 // Funkcja sprawdzajaca czy pierwsza liczba jest wieksza od drugiej

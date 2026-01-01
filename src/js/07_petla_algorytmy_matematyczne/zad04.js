@@ -1,15 +1,38 @@
 /*
-Tytul: Silnia.
+ZAD-04 — Obliczanie silni liczby
 
-Tresc: Napisz funkcje, ktora obliczy silnie otrzymanej liczby naturalnej, przy pomocy petli.
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `silnia`, `mnożenie`
 
-Dane wejsciowe: liczba naturalna
+### Treść
 
-Dane wyjsciowe: liczba naturalna
+Napisz funkcję `silnia(n)`, która zwraca `n!` obliczone przy użyciu pętli.
+Przyjmij, że `0! = 1`.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej liczby 3, funkcja powinna zwrocic liczbe 6.
+Jeden argument funkcji:
+
+* `n` (liczba naturalna, `n ≥ 0`)
+
+### Wyjście
+
+Funkcja zwraca jedną liczbę naturalną — `n!`.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(silnia(3))
+```
+
+**Wyjście:**
+
+```
+6
+```
+
 */
 
 // Funkcja zwracajaca silnie liczby

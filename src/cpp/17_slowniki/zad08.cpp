@@ -1,11 +1,36 @@
 /*
-Tytul: Najczesciej wystepujaca litera w zdaniu
-Tresc: Otrzymujesz napis reprezentujacy zdanie. Twoim zadaniem jest znalezienie najczesciej wystepujacej litery w zdaniu. Jesli wiecej niz jedna litera wystepuje te sama liczbe razy, nalezy zwrocic litere najwczesniej pojawiajaca sie w zdaniu.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Znak.
-Przyklad:
-Dla otrzymanego napisu: "lezy jerzy na wiezy"
-Powinna zostac zwrocona litera: 'e'
+ZAD-08 — Najczęstsza litera w zdaniu
+
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
+
+### Treść
+
+Wczytaj zdanie. Zignoruj spacje i znaki interpunkcyjne. Znajdź literę
+występującą najczęściej. Jeśli jest kilka, wybierz tę, która **pojawia się jako
+pierwsza w zdaniu**.
+
+### Wejście
+
+* 1 linia: zdanie
+
+### Wyjście
+
+* 1 znak
+
+### Przykład
+
+**Wejście:**
+
+```
+lezy jerzy na wiezy
+```
+
+**Wyjście:**
+
+```
+e
+```
 
 */
 #include <cassert>
@@ -20,8 +45,7 @@ std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
   std::unordered_map<char, int> slownik;
 
   for (const auto &znak : slowo)
-    if (tolower(isalpha(znak)))
-      slownik[znak]++;
+    if (tolower(isalpha(znak))) slownik[znak]++;
 
   return slownik;
 }
@@ -53,20 +77,19 @@ void test1() {
 }
 
 void test2() {
-  std::string slowo = "The most intelligent people disguise the fact that they "
-                      "are intelligent. Wise men do not wear name tags., "
-                      "The more people talk about their own skills, the more "
-                      "desperate they are--their work should speak for itself.";
+  std::string slowo =
+      "The most intelligent people disguise the fact that they "
+      "are intelligent. Wise men do not wear name tags., "
+      "The more people talk about their own skills, the more "
+      "desperate they are--their work should speak for itself.";
   char wynik = 'e';
 
   assert(litera(slowo) == wynik);
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

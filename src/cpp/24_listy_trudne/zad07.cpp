@@ -1,17 +1,35 @@
 /*
-Tytul: Woda
-Tresc: Otrzymujesz liste wysokosci slupkow. Wszystkie slupki maja jednakowa szerokosc, rowna jednej jednostce wysokosci, i ustawione sa obok siebie. Wysokosc rowna 0 oznacza brak slupka. Oblicz ile jednostek wody maksymalnie mozemy umiescic miedzy slupkami.
-Dane wejsciowe: Lista liczb naturalnych.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla wejsciowej listy [3, 0, 1, 0, 2], powinna zostac zwrocona liczba: 5.
-Oto ilustracja dla powyzszego przykladu:
+ZAD-07 — Pojemność wody między słupkami
+
+**Poziom:** ★★★
+**Tagi:** `two pointers`, `prefix`, `trapping rain water`
+
+### Treść
+
+Otrzymujesz listę liczb naturalnych — wysokości słupków. Oblicz, ile jednostek
+wody może się zatrzymać pomiędzy słupkami po deszczu.
+
+### Wejście
+
+* 1 linia: lista wysokości `H`
+
+### Wyjście
+
+* 1 linia: jedna liczba naturalna — ilość wody
+
+### Przykład
+
+**Wejście:**
+
 ```
-o
-o      o
-o  o   o  o  o
+[3, 0, 1, 0, 2]
 ```
-Mozemy umiescic 5 jednostek wody pomiedzy slupkami.
+
+**Wyjście:**
+
+```
+5
+```
 
 */
 #include <cassert>
@@ -21,19 +39,16 @@ Mozemy umiescic 5 jednostek wody pomiedzy slupkami.
 // Zlozonosc czasowa O(n)
 // Zlozonosc pamieciowa O(n)
 int ileWodyV1(std::vector<int> &slupki) {
-
   auto n = slupki.size();
   auto woda = 0;
 
   std::vector<int> lewy{INT_MIN};
 
-  for (auto i = 0; i < n; i++)
-    lewy.push_back(std::max(lewy[i], slupki[i]));
+  for (auto i = 0; i < n; i++) lewy.push_back(std::max(lewy[i], slupki[i]));
 
   auto prawy = INT_MIN;
 
   for (int i = n - 1; i >= 0; i--) {
-
     prawy = std::max(prawy, slupki[i]);
 
     if (std::min(lewy[i], prawy) > slupki[i])
@@ -66,11 +81,9 @@ void test3() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
 
   return 0;
 }
-

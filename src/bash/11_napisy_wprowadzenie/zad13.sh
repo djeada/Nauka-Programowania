@@ -1,15 +1,37 @@
-# Tytul: Wypisz co k-ty znak napisu poziomo i pionowo.
-# Tresc: Otrzymasz napis oraz liczbe k.
-# a) Wypisz co k-ty znak napisu poziomo, rozdzielajac znaki spacjami.
-# b) Wypisz co k-ty znak napisu pionowo, rozdzielajac znaki enterami.
-# Dane wejsciowe: Napis oraz liczba.
-# Dane wyjsciowe: Napis.
-# Przyklad:
-# a) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony napis: "z h n".
-# b) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony napis:
-# z
-# h
-# n
+# ZAD-13 — Znaki na indeksach będących liczbami pierwszymi
+# 
+# **Poziom:** ★☆☆
+# **Tagi:** `liczby pierwsze`, `indeksy`, `string`
+# 
+# ### Treść
+# 
+# Wczytaj napis. Zbierz znaki, których **indeksy (od 0)** są liczbami pierwszymi (2, 3, 5, 7, ...). Wypisz wynik jako listę w stylu Pythona.
+# 
+# ### Wejście
+# 
+# * 1. linia: napis
+# 
+# ### Wyjście
+# 
+# * 1. linia: lista znaków, np. `['o', 'ń']`
+# 
+# ### Przykład
+# 
+# **Wejście:**
+# 
+# ```
+# Słoń
+# ```
+# 
+# **Wyjście:**
+# 
+# ```
+# ['o', 'ń']
+# ```
+# 
+# ### Uwagi
+# 
+# * Indeksy: `S(0) ł(1) o(2) ń(3)` → bierz 2 i 3.
 
 source ../assert.sh
 

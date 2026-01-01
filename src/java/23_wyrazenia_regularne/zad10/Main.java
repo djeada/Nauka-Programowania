@@ -1,16 +1,33 @@
 /*
-Tytul: Sprawdz poprawnosc hasla.
-Tresc: Masz napis reprezentujacy haslo. Sprawdz, czy haslo spelnia nastepujace warunki:
-1. Haslo musi zawierac przynajmniej jedna mala litere [a-z].
-2. Haslo musi zawierac przynajmniej jedna duza litere [A-Z].
-3. Haslo musi zawierac przynajmniej jedna cyfre [0-9].
-4. Haslo musi zawierac przynajmniej jeden znak specjalny [! # $ % & ' * + — / = ? ^ _ ` { | } ~].
-5. Minimalna dlugosc hasla to 8 znakow.
-6. Maksymalna dlugosc hasla to 20 znakow.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Wartosc logiczna.
-Przyklad:
-Dla napisu: “abc1234”, powinna zostac zwrocona wartosc logiczna: Falsz.
+ZAD-10 — Podmień napisy z listy A na napisy z listy B
+
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `zamiana`
+
+### Treść
+
+Otrzymujesz:
+
+* tekst,
+* listę A (napisy do znalezienia),
+* listę B (napisy do podmiany), tej samej długości co A.
+
+Zastąp w tekście wszystkie wystąpienia słów z listy A odpowiadającymi im słowami z listy B (ten sam indeks). Zamieniaj tylko **całe słowa**, nie fragmenty innych słów.
+
+### Wejście
+
+1. Tekst (jedna lub wiele linii)
+2. Liczba naturalna `n` — długość list
+3. `n` wierszy: elementy listy A
+4. `n` wierszy: elementy listy B
+
+### Wyjście
+
+Zmodyfikowany tekst.
+
+### Przykład
+
+*(jak w treści — z listami A/B)*
 
 */
 import java.util.*;

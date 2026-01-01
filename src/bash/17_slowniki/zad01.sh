@@ -1,9 +1,33 @@
-# Tytul: Slownik z kluczami bedacymi liczbami naturalnymi i wartosciami ich kwadratami.
-# Tresc: Dostajesz liczbe naturalna. Stworz slownik, w ktorym kluczami beda kolejne liczby naturalne mniejsze od otrzymanej liczby, a wartosciami beda ich kwadraty.
-# Dane wejsciowe: Liczba naturalna.
-# Dane wyjsciowe: Slownik z kluczami i wartosciami bedacymi liczbami naturalnymi.
-# Przyklad:
-# Dla liczby 5, slownik powinien wygladac nastepujaco: {1: 1, 2: 4, 3: 9, 4: 16}.
+# ZAD-01 — Słownik: liczby i ich kwadraty
+# 
+# **Poziom:** ★☆☆
+# **Tagi:** `dict`, `pętla`
+# 
+# ### Treść
+# 
+# Wczytaj liczbę `n`. Utwórz słownik, gdzie klucze to liczby od `1` do `n-1`, a wartości to ich kwadraty.
+# 
+# ### Wejście
+# 
+# * 1 linia: `n` (n ≥ 1)
+# 
+# ### Wyjście
+# 
+# * Słownik w postaci: `{1: 1, 2: 4, ...}`
+# 
+# ### Przykład
+# 
+# **Wejście:**
+# 
+# ```
+# 5
+# ```
+# 
+# **Wyjście:**
+# 
+# ```
+# {1: 1, 2: 4, 3: 9, 4: 16}
+# ```
 
 source ../assert.sh
 

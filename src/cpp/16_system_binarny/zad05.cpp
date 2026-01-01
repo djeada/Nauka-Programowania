@@ -1,13 +1,75 @@
 /*
-Tytul: Wybieranie minimum i maksimum.
-Tresc: Otrzymujesz dwie liczby naturalne.
-a) Zwroc mniejsza z nich. Zabronione jest uzycie instrukcji warunkowej oraz zewnetrznych bibliotek.
-b) Zwroc wieksza z nich. Zabronione jest uzycie instrukcji warunkowej oraz zewnetrznych bibliotek.
-Dane wejsciowe: Dwie liczby naturalne w obu podpunktach.
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
-Przyklad:
-a) Dla otrzymanych liczb: 3 i 2, powinna zostac zwrocona liczba: 2.
-b) Dla otrzymanych liczb: 3 i 2, powinna zostac zwrocona liczba: 3.
+ZAD-05A — Minimum bez instrukcji warunkowych
+
+**Poziom:** ★★☆
+**Tagi:** `bit-trick`, `min/max`, `bez if`
+
+### Treść
+
+Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia
+instrukcji warunkowych** (`if`, `?:`) i bez bibliotek.
+
+### Wejście
+
+* 1. linia: `a`
+* 2. linia: `b`
+
+### Wyjście
+
+Jedna liczba naturalna: `min(a, b)`.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+2
+```
+
+**Wyjście:**
+
+```
+2
+```
+
+### Uwagi
+
+* Dopuszczalne są operacje arytmetyczne i bitowe.
+
+ZAD-05B — Maksimum bez instrukcji warunkowych
+
+**Poziom:** ★★☆
+**Tagi:** `bit-trick`, `min/max`, `bez if`
+
+### Treść
+
+Wczytaj `a` i `b`. Wypisz większą z nich **bez użycia instrukcji warunkowych** i
+bez bibliotek.
+
+### Wejście
+
+* 1. linia: `a`
+* 2. linia: `b`
+
+### Wyjście
+
+Jedna liczba naturalna: `max(a, b)`.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+2
+```
+
+**Wyjście:**
+
+```
+3
+```
 
 */
 #include <cassert>
@@ -58,10 +120,8 @@ void testMin() {
 }
 
 int main() {
-
   testMaks();
   testMin();
 
   return 0;
 }
-

@@ -1,14 +1,51 @@
 /*
-Tytul: Wczytaj, zmodyfikuj i wypisz.
-Tresc: Wczytaj liczbe calkowita N oraz N liczb calkowitych i umiesc je w liscie. Nastepnie:
-a) Dodaj 1 do kazdego elementu listy.
-b) Pomnoz kazdy element przez jego indeks w liscie (indeksy zaczynaja sie od 0).
-c) Zastap wszystkie elementy wartoscia pierwszego elementu listy.
-Dla kazdego z powyzszych podpunktow wypisz zmodyfikowana liste. Elementy listy powinny byc oddzielone przecinkami i wypisane w jednym wierszu.
-Dane wejsciowe: N oraz N liczb calkowitych.
-Dane wyjsciowe: N liczb calkowitych.
-Przyklad:
-Dla N rownego 3 oraz pobranych liczb 3, 9, 7 w pierwszym podpunkcie powinno zostac wypisana: 4, 10, 8.
+ZAD-10 — Czy punkty mogą być wierzchołkami trójkąta?
+
+**Poziom:** ★★☆
+**Tagi:** `geometria`, `warunki`, `listy`
+
+### Treść
+
+Wczytaj współrzędne trzech punktów `A(xA, yA)`, `B(xB, yB)`, `C(xC, yC)`.
+Wypisz `Tak`, jeśli punkty **nie są współliniowe** (mogą tworzyć trójkąt), w przeciwnym razie `Nie`.
+
+### Wejście
+
+Sześć liczb całkowitych (każda w osobnej linii):
+
+1. `xA`
+2. `yA`
+3. `xB`
+4. `yB`
+5. `xC`
+6. `yC`
+
+### Wyjście
+
+Jedno słowo: `Tak` lub `Nie`.
+
+### Przykład
+
+**Wejście:**
+
+```
+-3
+-2
+-3
+1
+-3
+0
+```
+
+**Wyjście:**
+
+```
+Nie
+```
+
+### Uwagi
+
+* Sprawdź pole trójkąta: jeśli równe `0`, punkty są współliniowe.
 
 */
 import java.util.*;

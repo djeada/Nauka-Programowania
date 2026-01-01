@@ -1,22 +1,70 @@
 /*
+ZAD-04A — Liczba zer w zapisie binarnym
 
-Tytul: Liczba zer i jedynek w reprezentacji binarnej.
+**Poziom:** ★☆☆
+**Tagi:** `binarne`, `zliczanie`
 
-Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej.
+### Treść
 
-a) Oblicz, ile zer zawiera binarna reprezentacja otrzymanej liczby.
+Wczytaj liczbę naturalną `n`. Policz, ile znaków `0` zawiera jej binarna reprezentacja (bez wiodących zer).
 
-b) Oblicz, ile jedynek zawiera binarna reprezentacja otrzymanej liczby.
+### Wejście
 
-Dane wejsciowe: Liczba naturalna w obu podpunktach.
+* 1. linia: `n`
 
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
+### Wyjście
 
-Przyklad:
+Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.
 
-a) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 0.
- 
-b) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 2.
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+0
+```
+
+### Uwagi
+
+* Dla `n = 0` binarnie to `0`, więc liczba zer wynosi `1`.
+
+ZAD-04B — Liczba jedynek w zapisie binarnym
+
+**Poziom:** ★☆☆
+**Tagi:** `popcount`, `binarne`
+
+### Treść
+
+Wczytaj `n`. Policz, ile bitów `1` ma liczba w zapisie binarnym.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+2
+```
+
 */
 
 // Funkcja obliczajaca ilosc zer w reprezentacji binarnej liczby

@@ -1,8 +1,51 @@
 /*
+ZAD-05 — Dziedziczenie wielokrotne: Ptak
 
-Tytul: Dziedziczenie wielokrotne
+**Poziom:** ★★☆
+**Tagi:** `multiple inheritance`, `dziedziczenie`, `metody`
 
-Tresc: Napisz klase Ptak, dziedziczaca po klasach Zwierz i ObiektLatajacy. W sklad klasy Zwierz powinny wchodzic funkcje o nazwach 'jedz()', 'spij()', 'wydaj_dzwiek()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie. W sklad klasy ObiektLatajacy powinny wchodzic funkcje o nazwach 'lec()', 'wyladuj()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie. Napisz program testujacy te klase.
+### Treść
+
+Zaprojektuj klasy:
+
+* **Zwierz** — metody:
+
+  * `jedz()` → wypisuje `Ptak je.`
+  * `spij()` → wypisuje `Ptak śpi.`
+  * `wydaj_dzwiek()` → wypisuje `Ptak wydaje dźwięk.`
+
+* **ObiektLatajacy** — metody:
+
+  * `lec()` → wypisuje `Ptak leci.`
+  * `wyladuj()` → wypisuje `Ptak ląduje.`
+
+* **Ptak** — dziedziczy po `Zwierz` oraz `ObiektLatajacy`.
+
+Program testowy:
+
+* tworzy obiekt `Ptak`,
+* wywołuje metody w kolejności: `jedz`, `spij`, `wydaj_dzwiek`, `lec`, `wyladuj`.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Pięć linii jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Ptak je.
+Ptak śpi.
+Ptak wydaje dźwięk.
+Ptak leci.
+Ptak ląduje.
+```
+
 */
 
 const Zwierz = (superclass) =>

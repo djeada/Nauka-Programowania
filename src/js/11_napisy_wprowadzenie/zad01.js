@@ -1,15 +1,35 @@
 /*
-Tytul: Odwroc napis.
+ZAD-01 — Odwróć napis
 
-Tresc: Zmien otrzymany napis, tak aby zapisany byl on od tylu.
+**Poziom:** ★☆☆
+**Tagi:** `string`, `I/O`
 
-Dane wejsciowe: Napis.
+### Treść
 
-Dane wyjsciowe: Napis.
+Wczytaj napis i wypisz go od tyłu.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanego napisu: "barszcz", powinien zostac zwrocony napis: "zczsrab".
+* 1. linia: napis
+
+### Wyjście
+
+* 1. linia: odwrócony napis
+
+### Przykład
+
+**Wejście:**
+
+```
+barszcz
+```
+
+**Wyjście:**
+
+```
+zczsrab
+```
+
 */
 
 function odwrocNapis(napis) {

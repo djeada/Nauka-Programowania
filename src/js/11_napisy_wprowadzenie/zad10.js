@@ -1,27 +1,42 @@
 /*
-Tytul: Znajdz najdluzsze/najkrotsze slowo w zdaniu.
+ZAD-10 — Najdłuższe i najkrótsze słowo
 
-Tresc: Otrzymasz napis reprezentujacy zdanie. Znajdz:
+**Poziom:** ★☆☆
+**Tagi:** `string`, `min/max`, `len`
 
-a) najdluzsze slowo w zdaniu,
+### Treść
 
-b) najkrotsze slowo w zdaniu.
+Wczytaj zdanie i znajdź:
 
-Jesli wiecej niz jedno slowo ma ekstremalna dlugosc, zwroc to slowo sposrod nich, ktore wystepuje w zdaniu jako pierwsze. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
+a) najdłuższe słowo,
+b) najkrótsze słowo.
 
-Dane wejsciowe: Napis.
+Jeśli jest remis, wybierz słowo, które występuje wcześniej.
 
-Dane wyjsciowe:
+### Wejście
 
-a) Napis.
+* 1. linia: zdanie
 
-b) Napis.
+### Wyjście
 
-Przyklad:
+* 1. linia: najdłuższe słowo
+* 2. linia: najkrótsze słowo
 
-a) Dla otrzymanego napisu: "Kaczka lubi wiosne.", powinno zostac zwrocone: "Kaczka".
+### Przykład
 
-b) Dla otrzymanego napisu: "Kaczka lubi wiosne.", powinno zostac zwrocone: "lubi".
+**Wejście:**
+
+```
+Kaczka lubi wiosnę.
+```
+
+**Wyjście:**
+
+```
+Kaczka
+lubi
+```
+
 */
 
 function znajdzEkstremalneSlowo(napis, ekstremum) {

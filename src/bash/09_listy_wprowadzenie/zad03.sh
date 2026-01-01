@@ -1,9 +1,42 @@
-# Tytul: Rotacja w lewo/prawo.
-# Tresc: Otrzymujesz liste liczb calkowitych, kierunek przesuniecia (1 odpowiada przesunieciu w prawo, a 0 w lewo) oraz liczbe miejsc, o jaka elementy listy maja zostac przesuniete. Na przyklad dla przesuniecia w prawo, pierwszy element trafia na drugie miejsce, drugi na trzecie, a ostatni na pierwsze miejsce. Przesun elementy listy w podanym kierunku.
-# Dane wejsciowe: Lista liczb calkowitych oraz dwie liczby naturalne.
-# Dane wyjsciowe: Lista liczb calkowitych.
-# Przyklad:
-# Dla otrzymanej listy: [5, 27, 6, 2, 1, 10, 8] oraz liczb 0 i 2, powinna zostac zwrocona lista: [6, 2, 1, 10, 8, 5, 27].
+# ZAD-03 — Pierwsze wystąpienie klucza
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `listy`, `wyszukiwanie`, `indeksy`
+#
+# ### Treść
+#
+# Wczytaj listę liczb całkowitych oraz liczbę `klucz`. Wypisz indeks pierwszego wystąpienia `klucz` w liście.
+# Jeśli `klucz` nie występuje — wypisz `-1`.
+#
+# ### Wejście
+#
+# * 1. linia: `N` (`N ≥ 1`)
+# * kolejne `N` linii: liczby całkowite
+# * ostatnia linia: `klucz` (liczba całkowita)
+#
+# ### Wyjście
+#
+# Jedna liczba całkowita — indeks (od `0`) lub `-1`.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 5
+# 2
+# 9
+# -1
+# 3
+# 8
+# -1
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 2
+# ```
 
 source ../assert.sh
 
@@ -11,8 +44,7 @@ znajdz_klucz_v1() {
 
     local n=${#lista[@]}
 
-    for (( i=0; i<n; i++ ))
-    do
+    for ((i = 0; i < n; i++)); do
         if [ ${lista[$i]} -eq $1 ]; then
             echo $i
             return
@@ -42,4 +74,3 @@ main() {
 }
 
 main "$@"
-

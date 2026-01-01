@@ -1,10 +1,51 @@
 """
-Tytul: Minimum oraz maksimum.
-Tresc: Otrzymujesz liste liczb calkowitych. Znajdz najwiekszy i najmniejszy element tej listy i zwroc je jako dwie osobne liczby calkowite.
-Dane wejsciowe: Lista liczb calkowitych.
-Dane wyjsciowe: Dwie liczby calkowite oznaczajace najwiekszy i najmniejszy element z listy.
-Przyklad:
-Dla otrzymanej listy [4, -7, 8, 5, 6, -9, 10, 2, -8] powinny zostac zwrocone liczby 10 oraz -9.
+ZAD-04 — Minimum oraz maksimum
+
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `min`, `max`
+
+### Treść
+
+Wczytaj `N` liczb całkowitych. Wypisz:
+
+1. największą liczbę w liście
+2. najmniejszą liczbę w liście
+
+w jednej linii, oddzielone pojedynczą spacją.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Jedna linia:
+
+* `max min`
+
+### Przykład
+
+**Wejście:**
+
+```
+9
+4
+-7
+8
+5
+6
+-9
+10
+2
+-8
+```
+
+**Wyjście:**
+
+```
+10 -9
+```
 
 """
 

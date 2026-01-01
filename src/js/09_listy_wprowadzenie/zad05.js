@@ -1,36 +1,57 @@
 /*
+ZAD-05 — Zmodyfikuj elementy spełniające warunek
 
-Tytul: Zmodyfikuj elementy spelniajace warunek.
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `warunki`, `liczby pierwsze`
 
-Tresc: Otrzymujesz liste liczb calkowitych. W wyniku wykonania ponizszych polecen otrzymasz nowa liste:
+### Treść
 
-a) Zwieksz o 1 wszystkie elementy o parzystych indeksach (indeksy zaczynaja sie od 0).
+Wczytaj listę liczb całkowitych. Dla każdego podpunktu utwórz **nową listę** na podstawie listy z poprzedniego podpunktu i wypisz ją w jednej linii (przecinki bez spacji):
 
-b) Wyzeruj wszystkie elementy bedace wielokrotnosciami liczby 3.
+a) Zwiększ o 1 elementy o **parzystych indeksach** (0,2,4,...).
+b) Ustaw na `0` elementy będące **wielokrotnością 3**.
+c) Podnieś do kwadratu elementy **mniejsze niż 10**.
+d) Oblicz sumę wszystkich elementów listy i wstaw tę sumę na indeksy, które są **liczbami pierwszymi** (2,3,5,7,11,...) — tylko te, które mieszczą się w zakresie listy.
+e) Zamień każdy element na **iloczyn wszystkich pozostałych elementów** listy.
 
-c) Podnies do kwadratu wszystkie elementy mniejsze niz 10.
+### Wejście
 
-d) Wstaw sume wszystkich elementow otrzymanej listy na indeksy bedace liczbami pierwszymi.
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
-e) Zamien kazdy element na iloczyn wszystkich elementow listy poza nim samym.
+### Wyjście
 
-Dane wejsciowe: Lista liczb calkowitych.
+Pięć linii (po kolei: a, b, c, d, e), w każdej lista oddzielona przecinkami.
 
-Dane wyjsciowe: Lista liczb calkowitych.
+### Przykład
 
-Przyklad:
+**Wejście:**
 
-Dla otrzymanej listy [5, 7, 9, 4, 2]:
+```
+5
+5
+7
+9
+4
+2
+```
 
-a) Wynik: [5, 8, 9, 5, 2]
+**Wyjście:**
 
-b) Wynik: [5, 0, 0, 5, 2]
+```
+6,7,10,4,3
+6,7,0,4,3
+36,49,0,16,9
+36,49,36,36,9
+0,0,0,0,0
+```
 
-c) Wynik: [25, 0, 0, 25, 4]
+### Uwagi o formatowaniu
 
-d) Wynik: [37, 0, 0, 25, 4]
+* W podpunkcie (d) indeks 0 i 1 nie są pierwsze.
+* W podpunkcie (e) jeśli w liście jest `0`, to wiele wyników będzie `0` — to normalne.
+* Nie dodawaj przecinków na końcu linii.
 
-e) Wynik: [2592, 0, 0, 36, 1080]
 */
 // a) Zwieksz o 1 wszystkie elementy o parzystych indeksach (indeksy zaczynaja sie od 0).
 function zwiekszElementyOParzystychIndeksach(lista) {

@@ -1,10 +1,9 @@
 /*
 Tytul: Sprawdzenie, czy slowo jest palindromem.
-Tresc: Napisz program, ktory sprawdzi, czy slowo jest palindromem. Palindromem jest slowo, ktore brzmi tak samo czytane od lewej do prawej i od prawej do lewej.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Wartosc logiczna.
-Przyklad:
-Dla otrzymanego napisu: “kajak”, powinna zostac zwrocona wartosc logiczna: Prawda.
+Tresc: Napisz program, ktory sprawdzi, czy slowo jest palindromem. Palindromem
+jest slowo, ktore brzmi tak samo czytane od lewej do prawej i od prawej do
+lewej. Dane wejsciowe: Napis. Dane wyjsciowe: Wartosc logiczna. Przyklad: Dla
+otrzymanego napisu: “kajak”, powinna zostac zwrocona wartosc logiczna: Prawda.
 
 */
 #include <algorithm>
@@ -14,8 +13,7 @@ Dla otrzymanego napisu: “kajak”, powinna zostac zwrocona wartosc logiczna: P
 bool palindrom(std::string &slowo) {
   int N = slowo.length() - 1;
   for (int i = 0; i <= N / 2; i++) {
-    if (slowo[i] != slowo[N - i])
-      return false;
+    if (slowo[i] != slowo[N - i]) return false;
   }
 
   return true;
@@ -32,10 +30,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

@@ -1,10 +1,41 @@
 /*
-Tytul: Haslo.
-Tresc: Napisz dwie funkcje:
-* Pierwsza funkcja powinna prosic uzytkownika o podanie nazwy uzytkownika i hasla, a nastepnie zwrocic te dane.
-* Druga funkcja powinna otrzymac dane od pierwszej funkcji i ponownie prosic uzytkownika o podanie nazwy uzytkownika i hasla. Prosba o podanie danych powinna byc umieszczona w petli. Warunkiem zakonczenia petli jest podanie przez uzytkownika danych identycznych z tymi przekazanymi przez pierwsza funkcje.
-Dane wejsciowe: dwie nazwy uzytkownika i hasla (napisy)
-Dane wyjsciowe: komunikat
+ZAD-08 — Iloraz w dół bez / i %
+
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `pętle`, `odejmowanie`
+
+### Treść
+
+Napisz funkcję `zaokraglij_w_dol(a, b)`, która zwraca wartość `a // b`, ale **nie używa** operatorów `/` ani `%`.
+
+### Wejście
+
+Dwa argumenty:
+
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna)
+
+### Ograniczenia / gwarancje
+
+* `b > 0`
+
+### Wyjście
+
+Funkcja zwraca liczbę naturalną — iloraz `a` przez `b` zaokrąglony w dół.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(zaokraglij_w_dol(7, 2))
+```
+
+**Wyjście:**
+
+```
+3
+```
 
 */
 import java.util.*;

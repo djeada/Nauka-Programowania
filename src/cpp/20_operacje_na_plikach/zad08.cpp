@@ -1,10 +1,36 @@
 /*
-Tytul: Znajdz i zmodyfikuj pliki spelniajace warunek.
-Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do folderu.
-a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych sie w podanym folderze i jego podfolderach.
-b) Usun srodkowy wiersz z kazdego pliku CSV znajdujacego sie w podanym folderze i jego podfolderach.
-Dane wejsciowe: Napis reprezentujacy sciezke do folderu.
-Dane wyjsciowe: Brak.
+ZAD-08 — Modyfikacja plików spełniających warunek (rekurencyjnie)
+
+**Poziom:** ★★☆
+**Tagi:** `files`, `recursive`, `txt`, `csv`
+
+### Treść
+
+Otrzymujesz ścieżkę do folderu. Wykonaj:
+
+a) dopisz swoje inicjały na końcu każdego pliku `.txt` w folderze i
+podfolderach, b) usuń **środkowy wiersz** z każdego pliku `.csv` w folderze i
+podfolderach (jeśli liczba wierszy jest parzysta — usuń **dolny z dwóch
+środkowych**).
+
+### Wejście
+
+* 1 linia: `folder_path`
+
+### Wyjście
+
+Brak.
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\Projekt
+```
+
+**Wyjście:**
+*(brak)*
 
 */
 #include <cassert>
@@ -18,18 +44,15 @@ Dane wyjsciowe: Brak.
 namespace filesys = std::experimental::filesystem;
 
 std::string znajdzRozszerzenie(std::string sciezka) {
-
   filesys::path obiekt(sciezka);
 
-  if (obiekt.has_extension())
-    return obiekt.extension().string();
+  if (obiekt.has_extension()) return obiekt.extension().string();
 
   return "";
 }
 
 std::vector<std::string> plikiWFolderze(const std::string &sciezka,
                                         const std::string &rozszerzenie) {
-
   std::vector<std::string> pliki;
 
   for (const auto plik : filesys::directory_iterator(sciezka)) {
@@ -41,13 +64,11 @@ std::vector<std::string> plikiWFolderze(const std::string &sciezka,
 }
 
 void dodajInicjaly(const std::string &sciezkaFolderu, const std::string &dane) {
-
   auto _dodajInicjaly = [](const std::string &sciezka,
                            const std::string &dane) {
     std::ofstream plik;
     plik.open(sciezka, std::ios::out | std::ios::app);
-    if (plik.fail())
-      throw std::ios_base::failure(std::strerror(errno));
+    if (plik.fail()) throw std::ios_base::failure(std::strerror(errno));
 
     plik.exceptions(plik.exceptions() | std::ios::failbit |
                     std::ifstream::badbit);
@@ -56,12 +77,10 @@ void dodajInicjaly(const std::string &sciezkaFolderu, const std::string &dane) {
 
   auto sciezki = plikiWFolderze(sciezkaFolderu, ".txt");
 
-  for (const auto &sciezka : sciezki)
-    _dodajInicjaly(sciezka, dane);
+  for (const auto &sciezka : sciezki) _dodajInicjaly(sciezka, dane);
 }
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
-
   std::vector<std::string> tresc;
   try {
     std::string wiersz;
@@ -85,7 +104,6 @@ std::vector<std::string> wczytajPlik(const std::string &sciezka) {
 }
 
 void usunSrodkowy(const std::string &sciezkaFolderu) {
-
   auto _usunSrodkowy = [](const std::string &sciezka) {
     auto trescPliku = wczytajPlik(sciezka);
 
@@ -97,8 +115,7 @@ void usunSrodkowy(const std::string &sciezkaFolderu) {
 
       trescPliku.erase(trescPliku.begin() + trescPliku.size() / 2);
 
-      for (auto &wiersz : trescPliku)
-        plik << wiersz + "\n";
+      for (auto &wiersz : trescPliku) plik << wiersz + "\n";
 
       plik.close();
     }
@@ -110,12 +127,10 @@ void usunSrodkowy(const std::string &sciezkaFolderu) {
 
   auto sciezki = plikiWFolderze(sciezkaFolderu, ".csv");
 
-  for (const auto &sciezka : sciezki)
-    _usunSrodkowy(sciezka);
+  for (const auto &sciezka : sciezki) _usunSrodkowy(sciezka);
 }
 
 void testDodajInicjaly() {
-
   // stworz folder temp_dir
   filesys::path sciezka{"temp_dir"};
   filesys::create_directories(sciezka);
@@ -140,7 +155,6 @@ void testDodajInicjaly() {
 }
 
 void testUsunSrodkowy() {
-
   // stworz folder temp_dir
   filesys::path sciezka{"temp_dir"};
   filesys::create_directories(sciezka);
@@ -166,10 +180,8 @@ void testUsunSrodkowy() {
 }
 
 int main() {
-
   testDodajInicjaly();
   testUsunSrodkowy();
 
   return 0;
 }
-

@@ -1,9 +1,26 @@
-# Tytul: Nazwa pliku bez rozszerzenia.
-# Tresc: Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj z niego nazwe pliku wraz z rozszerzeniem. Zwroc sama nazwe pliku bez rozszerzenia.
-# Dane wejsciowe: Napis.
-# Dane wyjsciowe: Napis.
-# Przyklad:
-# Dla otrzymanego napisu "C:\my-long\path_directory\file.html", powinna zostac zwrocona nazwa pliku bez rozszerzenia "file".
+# ZAD-09 — Usuń fragment napisu od pierwszego wystąpienia słowa klucz
+#
+# **Poziom:** ★★☆
+# **Tagi:** `regex`, `string`
+#
+# ### Treść
+#
+# Otrzymujesz tekst (wiele zdań lub wierszy) oraz słowo klucz. Jeśli słowo klucz wystąpi w tekście, usuń całą część od **pierwszego wystąpienia** tego słowa do końca tekstu. Jeśli słowo klucz nie występuje, wypisz tekst bez zmian.
+#
+# ### Wejście
+#
+# Dwie części:
+#
+# 1. Tekst (może mieć wiele wierszy)
+# 2. W osobnej linii: `klucz`
+#
+# ### Wyjście
+#
+# Zmodyfikowany tekst.
+#
+# ### Przykład
+#
+# *(jak w treści zadania — długi tekst)*
 
 usun_zakazane_slowo() {
     local tekst="$1"
@@ -46,4 +63,3 @@ main() {
 }
 
 main "$@"
-

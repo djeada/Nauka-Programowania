@@ -1,16 +1,48 @@
 /*
+ZAD-17 — Wszystkie pary o sumie x (wartości)
 
-Tytul: Znalezienie wszystkich par elementow listy o sumie rownej podanej liczbie.
+**Poziom:** ★★☆
+**Tagi:** `listy`, `2-sum`, `pary`
 
-Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x, znajdz wszystkie pary elementow listy, ktorych suma jest rowna x.
+### Treść
 
-Dane wejsciowe: Lista liczb calkowitych oraz liczba calkowita.
+Wczytaj listę liczb całkowitych oraz `x`. Wypisz wszystkie pary **wartości** `(a, b)` z listy (nie indeksy), takie że `a + b == x`. Każdą parę wypisz w osobnej linii jako:
+`a b`
 
-Dane wyjsciowe: Lista par liczb calkowitych.
+Każdą parę wypisz tylko raz (nie dubluj `(a,b)` i `(b,a)`).
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5, zostana zwrocone wszystkie pary elementow o sumie rownej 5: [(1, 4), (2, 3)].
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `x` (liczba całkowita)
+
+### Wyjście
+
+Wiele linii — po jednej parze na linię.
+Jeśli brak par — brak wyjścia.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+1
+2
+4
+3
+7
+5
+```
+
+**Wyjście:**
+
+```
+1 4
+2 3
+```
+
 */
 
 // Funkcja znajdujaca wszystkie pary elementow o sumie rownej podanej liczbie

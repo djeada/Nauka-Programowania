@@ -1,10 +1,34 @@
 /*
-Tytul: Slowa ze zdania jako osobne elementy listy.
-Tresc: Otrzymujesz napis reprezentujacy zdanie. Zwroc liste slow zdania. Znaki interpunkcyjne nie sa liczone jako slowa.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla otrzymanego napisu: “Ala ma kota”, powinna zostac zwrocona lista: [“Ala”, “ma”, “kota”].
+ZAD-06 — Zamień litery „a” na „?”
+
+**Poziom:** ★☆☆
+**Tagi:** `string`, `replace`
+
+### Treść
+
+Wczytaj napis i zamień wszystkie wystąpienia litery `a` na znak `?`.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+* 1. linia: napis po zamianie
+
+### Przykład
+
+**Wejście:**
+
+```
+Latarnik
+```
+
+**Wyjście:**
+
+```
+L?t?rnik
+```
 
 */
 public class Main {

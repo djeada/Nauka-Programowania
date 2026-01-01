@@ -1,16 +1,40 @@
 /*
+ZAD-07 — Różnica między dwoma listami
 
-Tytul: Roznica miedzy dwoma listami.
+**Poziom:** ★☆☆
+**Tagi:** `list`, `set`
 
-Tresc: Dla otrzymanych dwoch list liczb calkowitych, znajdz elementy, ktore nie sa czescia wspolna obu list.
+### Treść
 
-Dane wejsciowe: Dwie listy liczb calkowitych.
+Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **tylko w jednej** z list (różnica symetryczna).
 
-Dane wyjsciowe: Lista liczb calkowitych.
+* Kolejność elementów w wyniku może być **dowolna**.
+* Jeśli wszystkie elementy są wspólne — wypisz `[]`.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5, 1].
+* 1 linia: lista 1
+* 2 linia: lista 2
+
+### Wyjście
+
+* 1 linia: lista elementów niewspólnych
+
+### Przykład
+
+**Wejście:**
+
+```
+[9, 2, 5, 4]
+[4, 2, 1]
+```
+
+**Wyjście (jedna z poprawnych odpowiedzi):**
+
+```
+[9, 5, 1]
+```
+
 */
 
 // Funkcja zwracajaca liste elementow, ktore nie sa czescia wspolna obu list

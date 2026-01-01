@@ -1,16 +1,41 @@
 /*
+ZAD-02 — Słownik z dwóch list (klucze i wartości)
 
-Tytul: Slownik z kluczami bedacymi elementami jednej listy i wartosciami elementami drugiej listy.
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `listy`
 
-Tresc: Dostajesz dwie listy liczb calkowitych. Stworz slownik, w ktorym kluczami beda elementy pierwszej listy, a wartosciami elementy drugiej listy. Jesli listy sa roznej dlugosci, zwroc pusty slownik.
+### Treść
 
-Dane wejsciowe: Dwie listy liczb calkowitych.
+Wczytaj dwie listy. Jeśli mają tę samą długość, utwórz słownik: klucz z pierwszej listy → wartość z drugiej listy.
+Jeśli długości są różne, wypisz pusty słownik `{}`.
 
-Dane wyjsciowe: Slownik z kluczami i wartosciami bedacymi liczbami calkowitymi.
+### Wejście
 
-Przyklad:
+* 1 linia: `n`
+* 2 linia: `m`
+* następnie `n` liczb (pierwsza lista)
+* następnie `m` liczb (druga lista)
 
-Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], slownik powinien wygladac nastepujaco: {3: 1, 5: 2, 8: -1}.
+### Wyjście
+
+* Słownik albo `{}`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+3
+3 5 8
+1 2 -1
+```
+
+**Wyjście:**
+
+```
+{3: 1, 5: 2, 8: -1}
+```
 
 */
 

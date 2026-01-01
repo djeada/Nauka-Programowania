@@ -1,9 +1,40 @@
-# Tytul: Podnies a do b.
-# Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb obliczy ile wynosi a podniesione do b, przy pomocy petli.
-# Dane wejsciowe: dwie liczby naturalne
-# Dane wyjsciowe: liczba naturalna
-# Przyklad:
-# Dla pobranych liczb 3 i 5, funkcja powinna zwrocic liczbe 243.
+# ZAD-02 — Potęgowanie liczby przy pomocy pętli
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `pętle`, `potęgowanie`, `mnożenie`
+#
+# ### Treść
+#
+# Napisz funkcję `potega(a, b)`, która oblicza `a^b` przy użyciu pętli (bez operatora potęgowania).
+#
+# ### Wejście
+#
+# Dwa argumenty funkcji:
+#
+# * `a` (liczba naturalna, `a ≥ 0`)
+# * `b` (liczba naturalna, `b ≥ 0`)
+#
+# ### Wyjście
+#
+# Funkcja zwraca jedną liczbę naturalną — wartość `a^b`.
+#
+# ### Przykład
+#
+# **Wywołanie funkcji:**
+#
+# ```python
+# print(potega(3, 5))
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 243
+# ```
+#
+# ### Uwagi o formatowaniu
+#
+# * Dla `b = 0` wynik ma wynosić `1`.
 
 source ../assert.sh
 
@@ -13,7 +44,7 @@ potega() {
     b=$2
     wynik=1
 
-    for (( i=0; i<$b; i++ )); do
+    for ((i = 0; i < $b; i++)); do
         wynik=$(($wynik * $a))
     done
 
@@ -28,4 +59,3 @@ main() {
 }
 
 main "$@"
-

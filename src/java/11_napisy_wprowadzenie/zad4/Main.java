@@ -1,10 +1,34 @@
 /*
-Tytul: Znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
-Tresc: Otrzymasz napis. Znajdz znaki znajdujace sie na pozycjach bedacych liczbami pierwszymi.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista znakow.
-Przyklad:
-Dla otrzymanego napisu: "Slon", powinna zostac zwrocona lista: ['o', 'n'].
+ZAD-04 — Zamień wszystkie małe litery na duże
+
+**Poziom:** ★☆☆
+**Tagi:** `string`, `upper`
+
+### Treść
+
+Wczytaj napis i zamień wszystkie litery na wielkie.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+* 1. linia: napis po konwersji
+
+### Przykład
+
+**Wejście:**
+
+```
+Rumcajs
+```
+
+**Wyjście:**
+
+```
+RUMCAJS
+```
 
 */
 import java.util.*;

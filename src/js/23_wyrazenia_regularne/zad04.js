@@ -1,16 +1,40 @@
 /*
+ZAD-04 — Sprawdź, czy słowo występuje w zdaniu jako osobne słowo
 
-Tytul: Sprawdz czy slowo wystepuje w zdaniu.
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
 
-Tresc: Dostajesz dwa napisy. Sprawdz, czy drugi napis wystepuje w pierwszym jako pojedyncze slowo.
+### Treść
 
-Dane wejsciowe: Dwa napisy.
+Otrzymujesz dwa napisy: zdanie oraz słowo. Sprawdź, czy słowo występuje w zdaniu jako samodzielne słowo (nie jako fragment innego słowa).
 
-Dane wyjsciowe: Wartosc logiczna.
+### Wejście
 
-Przyklad:
+Dwie linie:
 
-Dla napisow: “Siala baba mak.” oraz “babcia”, powinna zostac zwrocona wartosc logiczna: Falsz.
+1. `zdanie`
+2. `slowo`
+
+### Wyjście
+
+Jedna linia:
+
+* `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+Siała baba mak.
+babcia
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
 
 */
 

@@ -1,15 +1,35 @@
 /*
-Tytul: Slowa ze zdania jako osobne elementy listy.
+ZAD-15 — Słowa jako lista
 
-Tresc: Otrzymujesz napis reprezentujacy zdanie. Zwroc liste slow zdania. Znaki interpunkcyjne nie sa liczone jako slowa.
+**Poziom:** ★☆☆
+**Tagi:** `split`, `list`
 
-Dane wejsciowe: Napis.
+### Treść
 
-Dane wyjsciowe: Lista napisow.
+Wczytaj zdanie i wypisz listę słów w formacie `["Ala", "ma", "kota"]`.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanego napisu: “Ala ma kota”, powinna zostac zwrocona lista: [“Ala”, “ma”, “kota”].
+* 1. linia: zdanie
+
+### Wyjście
+
+* 1. linia: lista słów (jak w przykładzie)
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+["Ala", "ma", "kota"]
+```
+
 */
 
 function slowaZeZdania(zdanie) {

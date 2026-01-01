@@ -1,10 +1,40 @@
 """
-Tytul: Znalezienie elementow wspolnych dwoch list.
-Tresc: Otrzymujesz dwie listy liczb calkowitych. Znajdz elementy wystepujace zarowno w pierwszej, jak i w drugiej liscie.
-Dane wejsciowe: Dwie listy liczb calkowitych.
-Dane wyjsciowe: Lista liczb calkowitych.
-Przyklad:
-Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] zostanie zwrocona lista: [2, 4].
+ZAD-06 — Znalezienie elementów wspólnych dwóch list
+
+**Poziom:** ★☆☆
+**Tagi:** `list`, `set`
+
+### Treść
+
+Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występują w obu listach:
+
+* zachowaj **kolejność występowania w pierwszej liście**,
+* jeśli element z pierwszej listy występuje w drugiej liście, dodaj go do wyniku,
+* jeśli nie ma elementów wspólnych — wypisz `[]`.
+
+### Wejście
+
+* 1 linia: lista 1
+* 2 linia: lista 2
+
+### Wyjście
+
+* 1 linia: lista elementów wspólnych
+
+### Przykład
+
+**Wejście:**
+
+```
+[9, 2, 5, 4]
+[4, 2, 1]
+```
+
+**Wyjście:**
+
+```
+[2, 4]
+```
 
 """
 

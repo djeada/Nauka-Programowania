@@ -1,10 +1,36 @@
 /*
-Tytul: Macierz z parami elementow odpowiadajacych sobie z dwoch list.
-Tresc: Dla otrzymanych dwoch list, stworz dwukolumnowa macierz, ktorej pierwsza kolumna sklada sie z elementow pierwszej listy, a druga kolumna z elementow drugiej listy. Jesli otrzymane listy nie sa rownej dlugosci, zwroc pusta macierz.
-Dane wejsciowe: Dwie listy.
-Dane wyjsciowe: Lista list liczb naturalnych lub pusta macierz (w przypadku nierownych dlugosci list).
-Przyklad:
-Dla otrzymanych dwoch list: [3, 5, 2] oraz [2, 8, 1], powinna zostac zwrocona macierz: [[3, 2], [5, 8], [2, 1]
+ZAD-02 — Macierz n×n: iloczyn indeksów
+
+**Poziom:** ★☆☆
+**Tagi:** `macierze`, `pętle zagnieżdżone`
+
+### Treść
+
+Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od 0) ma wartość `i*j`.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+* `n` wierszy po `n` liczb
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+0 0 0
+0 1 2
+0 2 4
+```
 
 */
 import java.util.*;

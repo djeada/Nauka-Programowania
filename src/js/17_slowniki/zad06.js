@@ -1,16 +1,34 @@
 /*
+ZAD-06 — Histogram znaków w słowie
 
-Tytul: Histogram wystapien znakow w slowie.
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
 
-Tresc: Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym napisie. Innymi slowy, zwroc histogram znakow w otrzymanym napisie.
+### Treść
 
-Dane wejsciowe: Napis.
+Wczytaj napis. Zwróć słownik: znak → liczba wystąpień.
 
-Dane wyjsciowe: Slownik par znakow i liczb naturalnych.
+### Wejście
 
-Przyklad:
+* 1 linia: napis
 
-Dla otrzymanego napisu: “klasa”, slownik powinien wygladac nastepujaco: {“k”: 1, “l”: 1, “a”: 2, “s”: 1}.
+### Wyjście
+
+* Słownik, np. `{'k': 1, 'l': 1, 'a': 2, 's': 1}`
+
+### Przykład
+
+**Wejście:**
+
+```
+klasa
+```
+
+**Wyjście:**
+
+```
+{'k': 1, 'l': 1, 'a': 2, 's': 1}
+```
 
 */
 

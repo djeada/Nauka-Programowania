@@ -7,6 +7,7 @@ Przyklad:
 Dla otrzymanego napisu: “Tata zabral kajak na wycieczke i uderzyl sie w oko”, powinna zostac zwrocona lista: ["kajak", "i", "w", "oko"].
 
 """
+
 import string
 
 

@@ -1,16 +1,54 @@
 /*
-Tytul: Suma elementow ciagu.
-Tresc: Dla otrzymanej liczby naturalnej n, wypisz sume n pierwszych elementow ciagu danego wzorem:
-$$a_n = n^2 + n + 1$$
-$$a_n = n^2 + 5n$$
-$$a_n = n + 2n$$
-Wynik powinien zostac zaokraglony do najblizszej liczby naturalnej.
-Dane wejsciowe: Liczba naturalna.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-* Dla otrzymanej liczby 2, w podpunkcie a) powinna zostac wypisana liczba 1.
-* Dla otrzymanej liczby 2, w podpunkcie b) powinna zostac wypisana liczba 17.
-* Dla otrzymanej liczby 2, w podpunkcie c) powinna zostac wypisana liczba 6.
+ZAD-06 — Sumowanie elementów ciągu
+
+**Poziom:** ★☆☆
+**Tagi:** `ciągi`, `sumowanie`, `pętle`
+
+### Treść
+
+Wczytaj liczbę naturalną `n` (`n ≥ 1`) i oblicz:
+
+a) ( \sum_{k=1}^{n} (k^2 + k + 1) )
+
+b) ( \sum_{k=1}^{n} (k^2 + 5k) )
+
+c) ( \sum_{k=1}^{n} (k + 2k) )  (czyli ( \sum_{k=1}^{n} 3k ))
+
+Wypisz trzy sumy w kolejności a), b), c).
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 1`)
+
+### Wyjście
+
+Trzy liczby naturalne — każda w oddzielnej linii:
+
+1. suma dla (a)
+2. suma dla (b)
+3. suma dla (c)
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+```
+
+**Wyjście:**
+
+```
+10
+16
+9
+```
+
+### Uwagi o formatowaniu
+
+* Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania.
 
 */
 #include <cmath>
@@ -18,7 +56,6 @@ Przyklad:
 #include <iostream>
 
 int main() {
-
   std::cout << "Podaj liczbe: " << std::endl;
   int n;
   std::cin >> n;
@@ -61,4 +98,3 @@ int main() {
 
   return 0;
 }
-

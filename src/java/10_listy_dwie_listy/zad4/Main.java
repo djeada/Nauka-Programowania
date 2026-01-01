@@ -1,10 +1,39 @@
 /*
-Tytul: Obliczenie sredniej wazonej.
-Tresc: Otrzymujesz dwie listy liczb zmiennoprzecinkowych. Pierwsza lista reprezentuje wagi, a druga wartosci. Oblicz srednia wazona.
-Dane wejsciowe: Dwie listy liczb zmiennoprzecinkowych.
-Dane wyjsciowe: Liczba zmiennoprzecinkowa.
-Przyklad:
-Dla otrzymanych list [2.0, 5.0, 0.0, 2.0, 1.0] oraz [0.2, 0.4, 0.1, 0.2, 0.1] zostanie zwrocona wartosc: 0.29.
+ZAD-04 — Iloczyn skalarny dwóch wektorów 3D
+
+**Poziom:** ★☆☆
+**Tagi:** `list`, `wektory`, `math`
+
+### Treść
+
+Wczytaj dwie listy długości 3 (wektory 3D) i oblicz ich **iloczyn skalarny**:
+[
+A_xB_x + A_yB_y + A_zB_z
+]
+
+### Wejście
+
+* 1 linia: wektor A (lista 3 liczb całkowitych)
+* 2 linia: wektor B (lista 3 liczb całkowitych)
+
+### Wyjście
+
+* 1 linia: jedna liczba całkowita — iloczyn skalarny
+
+### Przykład
+
+**Wejście:**
+
+```
+[1, 2, 3]
+[3, 1, 2]
+```
+
+**Wyjście:**
+
+```
+11
+```
 
 */
 import java.util.*;

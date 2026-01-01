@@ -1,11 +1,43 @@
 /*
-Tytul: Zaprojektuj klase Kolo.
-Opis zadania: Napisz klase Kolo, ktora bedzie reprezentowala kolo. Klasa powinna zawierac nastepujace funkcje:
-1. Konstruktor, ktory przyjmuje jedna liczbe jako argument, reprezentujaca promien kola. Domyslna wartoscia promienia powinno byc 1.
-2. Funkcje obwod, ktora zwraca obwod kola.
-3. Funkcje pole, ktora zwraca pole kola.
-4. Funkcje, ktora wypisuje informacje o kole na standardowe wyjscie.
-Napisz program, ktory przetestuje twoja klase. Stworz kolo o promieniu 3 i uzyj funkcji wypisujacej informacje o kole.
+ZAD-01 — Klasa Koło
+
+**Poziom:** ★★☆
+**Tagi:** `class`, `metody`, `float`, `math`
+
+### Treść
+
+Zaprojektuj klasę **Koło**:
+
+1. Konstruktor przyjmuje promień `r` (domyślnie 1).
+2. Metoda licząca **obwód**: ( 2\pi r )
+3. Metoda licząca **pole**: ( \pi r^2 )
+4. Metoda wypisująca informacje: promień, obwód i pole.
+
+Program ma utworzyć koło o promieniu wczytanym z wejścia (np. 3) i wypisać informacje.
+
+### Wejście
+
+* 1 linia: `r` (liczba rzeczywista)
+
+### Wyjście
+
+Trzy linie jak w przykładzie (obwód i pole do 4 miejsc po przecinku).
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+Koło o promieniu: 3
+Obwód koła: 18.8496
+Pole koła: 28.2743
+```
 
 */
 import java.text.MessageFormat;

@@ -1,8 +1,43 @@
 /*
-Tytul: Znalezienie w folderze wszystkich plikow z danym rozszerzeniem
-Tresc: Otrzymujesz dwa napisy. Pierwszy napis to sciezka folderu, a drugi to rozszerzenie szukanych plikow. Znajdz w folderze wszystkie pliki o podanym rozszerzeniu i zapisz ich nazwy w liscie.
-Dane wejsciowe: Dwa napisy
-Dane wyjsciowe: Lista napisow
+ZAD-02 — Pliki o danym rozszerzeniu w folderze (bez podfolderów)
+
+**Poziom:** ★★☆
+**Tagi:** `files`, `dir`, `listdir`, `pathlib`
+
+### Treść
+
+Otrzymujesz ścieżkę do folderu i rozszerzenie (np. `.txt`). Znajdź wszystkie
+pliki o tym rozszerzeniu znajdujące się **bezpośrednio** w tym folderze (bez
+przeszukiwania podfolderów). Zwróć listę nazw plików.
+
+### Wejście
+
+* 1 linia: `folder_path`
+* 2 linia: `ext` (np. `.txt`)
+
+### Wyjście
+
+* 1 linia: lista nazw plików w formacie `['a.txt', 'b.txt']`
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents
+.txt
+```
+
+**Wyjście:**
+
+```
+['dokument1.txt', 'notatki.txt', 'lista_zakupów.txt']
+```
+
+### Uwagi o formatowaniu
+
+* Porównuj rozszerzenia **bez względu na wielkość liter** (np. `.TXT` też pasuje
+do `.txt`).
 
 */
 #include <cassert>
@@ -14,18 +49,15 @@ Dane wyjsciowe: Lista napisow
 namespace filesys = std::experimental::filesystem;
 
 std::string znajdzRozszerzenie(std::string sciezka) {
-
   filesys::path obiekt(sciezka);
 
-  if (obiekt.has_extension())
-    return obiekt.extension().string();
+  if (obiekt.has_extension()) return obiekt.extension().string();
 
   return "";
 }
 
 std::vector<std::string> plikiWFolderze(const std::string &sciezka,
                                         const std::string &rozszerzenie) {
-
   std::vector<std::string> pliki;
 
   for (const auto plik : filesys::directory_iterator(sciezka)) {
@@ -37,7 +69,6 @@ std::vector<std::string> plikiWFolderze(const std::string &sciezka,
 }
 
 void test1() {
-
   filesys::path sciezka{"temp_dir"};
   filesys::create_directories(sciezka);
 
@@ -56,9 +87,7 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
 }
-

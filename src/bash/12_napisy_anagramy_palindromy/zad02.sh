@@ -17,8 +17,8 @@ permutacje() {
 
     local permutacje=()
 
-    for ((i=0; i<${#napis}; i++)); do
-        for permutacja in $(permutacje ${napis:0:$i}${napis:$((i+1)):${#napis}}); do
+    for ((i = 0; i < ${#napis}; i++)); do
+        for permutacja in $(permutacje ${napis:0:$i}${napis:$((i + 1)):${#napis}}); do
             local permutacja="${napis:$i:1}$permutacja"
             if [[ ! " ${permutacje[@]} " =~ " $permutacja " ]] && [ ${#permutacja} -eq ${#napis} ]; then
                 permutacje+=("$permutacja")
@@ -40,4 +40,3 @@ main() {
 }
 
 main "$@"
-

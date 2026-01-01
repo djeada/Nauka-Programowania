@@ -1,16 +1,58 @@
-# Tytul: Znalezienie elementu dominujacego w liscie liczb naturalnych.
-# Tresc: Dla dostarczonej listy liczb naturalnych, znajdz element, ktory wystepuje w niej wiecej niz polowa jej dlugosci. Jesli taki element nie istnieje, zwroc -1.
-# Dane wejsciowe: Lista liczb naturalnych.
-# Dane wyjsciowe: Liczba naturalna.
-# Przyklad:
-# Dla otrzymanej listy: [4, 7, 4, 4, 2] zostanie zwrocona liczba: 4.
+# ZAD-06 — Czy średnia elementów znajduje się w liście?
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `listy`, `średnia`, `wyszukiwanie`
+#
+# ### Treść
+#
+# Wczytaj listę liczb całkowitych. Oblicz średnią arytmetyczną elementów i sprawdź, czy ta średnia jest **dokładnie** jednym z elementów listy.
+#
+# Wypisz:
+#
+# * `Tak` — jeśli średnia występuje w liście,
+# * `Nie` — w przeciwnym razie.
+#
+# ### Wejście
+#
+# * 1. linia: `N` (`N ≥ 1`)
+# * kolejne `N` linii: liczby całkowite
+#
+# ### Wyjście
+#
+# Jedno słowo: `Tak` lub `Nie`.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 5
+# 6
+# 2
+# 1
+# 4
+# 27
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# Nie
+# ```
+#
+# ### Uwagi
+#
+# * Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb całkowitych.
 
 source ../assert.sh
 
 srednia() {
-    local suma=$(IFS=+; echo "$((${lista[*]}))")
+    local suma=$(
+        IFS=+
+        echo "$((${lista[*]}))"
+    )
     local n=${#lista[@]}
-    echo $((suma/n))
+    echo $((suma / n))
 }
 
 czy_srednia_w_liscie() {
@@ -42,4 +84,3 @@ main() {
 }
 
 main "$@"
-

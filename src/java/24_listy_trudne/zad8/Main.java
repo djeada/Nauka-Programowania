@@ -1,10 +1,36 @@
 /*
-Tytul: Sznurek.
-Tresc: Masz do sprzedania sznurek o dlugosci n, a takze liste cen dla sznurkow o dlugosciach od 1 do n. Ceny moga byc rozne dla roznych dlugosci. Znajdz maksymalny zysk, ktory mozna osiagnac poprzez sprzedaz danego sznurka.
-Dane wejsciowe: Lista n liczb calkowitych reprezentujacych ceny dla sznurkow o dlugosciach od 1 do n, oraz liczba naturalna n reprezentujaca dlugosc sznurka, ktory chcesz sprzedac.
-Dane wyjsciowe: Najwieksza mozliwa wartosc, jaka mozna uzyskac ze sprzedazy danego sznurka.
-Przyklad:
-Dla listy cen: [1, 5, 8, 9, 10, 17, 17, 20] oraz dlugosci sznurka 4, powinna zostac zwrocona liczba 10.
+ZAD-08 — Maksymalny zysk ze sprzedaży sznurka
+
+**Poziom:** ★★★
+**Tagi:** `dp`, `rod cutting`, `optymalizacja`
+
+### Treść
+
+Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`. Możesz pociąć sznurek na kawałki o całkowitych długościach. Znajdź maksymalny zysk.
+
+### Wejście
+
+* 1 linia: lista `prices` (długości 1..n)
+* 2 linia: `n` (liczba naturalna)
+
+### Wyjście
+
+* 1 linia: maksymalny zysk (liczba całkowita)
+
+### Przykład
+
+**Wejście:**
+
+```
+[1, 5, 8, 9, 10, 17, 17, 20]
+4
+```
+
+**Wyjście:**
+
+```
+10
+```
 
 */
 import java.util.*;

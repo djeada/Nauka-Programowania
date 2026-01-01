@@ -1,11 +1,35 @@
 """
-Tytul: Najczesciej wystepujaca litera w zdaniu
-Tresc: Otrzymujesz napis reprezentujacy zdanie. Twoim zadaniem jest znalezienie najczesciej wystepujacej litery w zdaniu. Jesli wiecej niz jedna litera wystepuje te sama liczbe razy, nalezy zwrocic litere najwczesniej pojawiajaca sie w zdaniu.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Znak.
-Przyklad:
-Dla otrzymanego napisu: "lezy jerzy na wiezy"
-Powinna zostac zwrocona litera: 'e'
+ZAD-08 — Najczęstsza litera w zdaniu
+
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
+
+### Treść
+
+Wczytaj zdanie. Zignoruj spacje i znaki interpunkcyjne. Znajdź literę występującą najczęściej.
+Jeśli jest kilka, wybierz tę, która **pojawia się jako pierwsza w zdaniu**.
+
+### Wejście
+
+* 1 linia: zdanie
+
+### Wyjście
+
+* 1 znak
+
+### Przykład
+
+**Wejście:**
+
+```
+lezy jerzy na wiezy
+```
+
+**Wyjście:**
+
+```
+e
+```
 
 """
 

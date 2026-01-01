@@ -1,16 +1,40 @@
 /*
+ZAD-01 — Wypisanie elementów dwóch list na przemian
 
-Tytul: Wypisanie elementow dwoch list na przemian.
+**Poziom:** ★☆☆
+**Tagi:** `list`, `iteracja`
 
-Tresc: Dla otrzymanych dwoch list, wypisuj na przemian elementy z obu list. Jesli listy nie sa tej samej dlugosci, po wyczerpaniu elementow krotszej listy, wypisuj pozostale elementy dluzszej listy.
+### Treść
 
-Dane wejsciowe: Dwie listy.
+Wczytaj dwie listy liczb całkowitych i wypisz ich elementy **na przemian**:
+pierwszy z listy 1, pierwszy z listy 2, drugi z listy 1, drugi z listy 2, itd.
 
-Dane wyjsciowe: Kilka liczb.
+Jeśli listy mają różne długości, po wyczerpaniu krótszej listy dopisz pozostałe elementy dłuższej listy w tej samej kolejności.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanych list [5, 3, 7, 2] oraz [1, -2, 3], zostana wypisane: 5, 1, 3, -2, 7, 3, 2.
+* 1 linia: lista 1
+* 2 linia: lista 2
+
+### Wyjście
+
+* 1 linia: elementy obu list wypisane na przemian, oddzielone przecinkami **bez spacji**
+
+### Przykład
+
+**Wejście:**
+
+```
+[5, 3, 7, 2]
+[1, -2, 3]
+```
+
+**Wyjście:**
+
+```
+5,1,3,-2,7,3,2
+```
+
 */
 
 // Funkcja wypisujaca elementy dwoch list na przemian

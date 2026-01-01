@@ -1,10 +1,10 @@
 /*
 Tytul: Znalezienie anagramow slowa w zdaniu.
-Tresc: Napisz program, ktory otrzymuje napis reprezentujacy zdanie oraz slowo. Twoim zadaniem jest znalezienie wszystkich anagramow otrzymanego slowa w zdaniu. Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
-Dane wejsciowe: Dwa napisy.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla otrzymanych napisow: “Sroga kara.” oraz “arak”, powinna zostac zwrocona lista: [“kara”].
+Tresc: Napisz program, ktory otrzymuje napis reprezentujacy zdanie oraz slowo.
+Twoim zadaniem jest znalezienie wszystkich anagramow otrzymanego slowa w zdaniu.
+Roznice miedzy wielkimi i malymi literami powinny byc zignorowane. Dane
+wejsciowe: Dwa napisy. Dane wyjsciowe: Lista napisow. Przyklad: Dla otrzymanych
+napisow: “Sroga kara.” oraz “arak”, powinna zostac zwrocona lista: [“kara”].
 
 */
 #include <algorithm>
@@ -17,24 +17,19 @@ void naMale(std::string &slowo) {
 }
 
 bool anagram(std::string s1, std::string s2) {
-
   unsigned int N = s1.length();
   unsigned int M = s2.length();
 
-  if (N != M)
-    return false;
+  if (N != M) return false;
 
   int pom[256] = {0};
 
-  for (const auto &znak : s1)
-    pom[znak]++;
+  for (const auto &znak : s1) pom[znak]++;
 
-  for (const auto &znak : s2)
-    pom[znak]--;
+  for (const auto &znak : s2) pom[znak]--;
 
   for (const auto &x : pom) {
-    if (x != 0)
-      return false;
+    if (x != 0) return false;
   }
 
   return true;
@@ -61,8 +56,7 @@ std::vector<std::string> anagramyV1(const std::string &zdanie,
       auto slowo = zdanie.substr(pocz, konc - pocz);
       wyczysc(slowo);
       naMale(slowo);
-      if (!slowo.empty() && anagram(slowo, napis))
-        wynik.push_back(slowo);
+      if (!slowo.empty() && anagram(slowo, napis)) wynik.push_back(slowo);
     }
     pocz = konc + 1;
   }
@@ -70,8 +64,7 @@ std::vector<std::string> anagramyV1(const std::string &zdanie,
     auto slowo = zdanie.substr(pocz);
     wyczysc(slowo);
     naMale(slowo);
-    if (!slowo.empty() && anagram(slowo, napis))
-      wynik.push_back(slowo);
+    if (!slowo.empty() && anagram(slowo, napis)) wynik.push_back(slowo);
   }
 
   return wynik;
@@ -90,4 +83,3 @@ int main() {
 
   return 0;
 }
-

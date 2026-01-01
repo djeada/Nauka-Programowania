@@ -1,10 +1,41 @@
 /*
-Tytul: Powtarzajace sie podnapisy.
-Tresc: Dostajesz napis. Znajdz wszystkie powtarzajace sie podnapisy w tym napisie.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla napisu "pythonpython" powinna zostac zwrocona lista zawierajaca napis "python".
+ZAD-07 — Powtarzające się podnapisy
+
+**Poziom:** ★★★
+**Tagi:** `string`, `substrings`, `count`
+
+### Treść
+
+Otrzymujesz napis. Znajdź wszystkie **podnapisy**, które występują w nim
+**więcej niż jeden raz**.
+
+### Wejście
+
+* 1 linia: napis `S`
+
+### Wyjście
+
+* 1 linia: lista napisów — wszystkie powtarzające się podnapisy
+
+### Przykład
+
+**Wejście:**
+
+```
+pythonpython
+```
+
+**Wyjście:**
+
+```
+['python']
+```
+
+### Uwagi
+
+* Jeśli sprawdzarka wymaga konkretnej kolejności (np. rosnąco po
+długości/alfabetycznie) — musi to być opisane. W przeciwnym razie dopuszczalna
+może być dowolna kolejność.
 
 */
 #include <algorithm>
@@ -12,19 +43,16 @@ Dla napisu "pythonpython" powinna zostac zwrocona lista zawierajaca napis "pytho
 #include <string>
 
 std::string nwp(std::string &slowoA, std::string &slowoB) {
-
   int N = slowoA.length() < slowoB.length() ? slowoA.length() : slowoB.length();
 
   for (int i = 0; i < N; i++) {
-    if (slowoA[i] != slowoB[i])
-      return slowoA.substr(0, i);
+    if (slowoA[i] != slowoB[i]) return slowoA.substr(0, i);
   }
 
   return slowoA.substr(0, N);
 }
 
 std::string najdluzszePowtorzenieV1(std::string &slowo) {
-
   std::string maks;
 
   int N = slowo.length();
@@ -35,8 +63,7 @@ std::string najdluzszePowtorzenieV1(std::string &slowo) {
       std::string slowoB = slowo.substr(j, N);
       std::string podslowo = nwp(slowoA, slowoB);
 
-      if (podslowo.length() > maks.length())
-        maks = podslowo;
+      if (podslowo.length() > maks.length()) maks = podslowo;
     }
   }
 
@@ -66,11 +93,9 @@ void test3() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
 
   return 0;
 }
-

@@ -1,13 +1,38 @@
 /*
-Tytul: Wczytaj i rozdziel informacje o pracowniku.
-Tresc: Otrzymasz rekord z bazy danych reprezentujacy dane pracownika. Sa to kolejno: imie, nazwisko, miejsce urodzenia, stanowisko i zarobki. Informacje sa rozdzielone srednikami. Zapisz je w osobnych zmiennych i wypisz je razem z odpowiednimi komunikatami.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla otrzymanego napisu:
-"Jan; Kowalski; Warszawa; Programista; 1000;",
-powinna zostac zwrocona lista:
-["Imie: Jan", "Nazwisko: Kowalski", "Miejsce urodzenia: Warszawa", "Zawod: Programista", "Zarobki: 1000"].
+ZAD-17 — Konwersja listy na napis
+
+**Poziom:** ★☆☆
+**Tagi:** `list`, `string`
+
+### Treść
+
+Otrzymujesz listę liczb naturalnych w zapisie tekstowym (np. `[2, 4, 7]`). Połącz liczby bez separatorów i wypisz jako napis.
+
+### Wejście
+
+* 1. linia: lista w formacie podobnym do Pythona, np. `[2, 4, 7]`
+
+### Wyjście
+
+* 1. linia: napis z połączonych liczb, np. `247`
+
+### Przykład
+
+**Wejście:**
+
+```
+[2, 4, 7]
+```
+
+**Wyjście:**
+
+```
+247
+```
+
+### Uwagi
+
+* Najprościej: usuń nawiasy `[` `]`, rozdziel po przecinkach, `strip()`, potem sklej.
 
 */
 import java.util.*;

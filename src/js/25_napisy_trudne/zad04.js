@@ -1,16 +1,34 @@
 /*
+ZAD-04 — Usuń powtórzenia znaków
 
-Tytul: Usun powtorzenia znakow.
+**Poziom:** ★★★
+**Tagi:** `string`, `set`, `unique`, `kolejność`
 
-Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen kazdego znaku w napisie. Kazdy znak moze wystapic tylko raz.
+### Treść
 
-Dane wejsciowe: Napis.
+Otrzymujesz napis. Usuń wszystkie powtórzenia znaków tak, aby **każdy znak wystąpił tylko raz**, zachowując **kolejność pierwszych wystąpień**.
 
-Dane wyjsciowe: Napis.
+### Wejście
 
-Przyklad:
+* 1 linia: napis `S`
 
-Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “AB”.
+### Wyjście
+
+* 1 linia: napis z unikalnymi znakami
+
+### Przykład
+
+**Wejście:**
+
+```
+AAAAAAAAAABBBBBBBBA
+```
+
+**Wyjście:**
+
+```
+AB
+```
 
 */
 

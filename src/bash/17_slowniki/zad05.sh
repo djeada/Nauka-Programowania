@@ -1,25 +1,53 @@
-# Tytul: Najczesciej wystepujaca litera w zdaniu
-# Tresc: Otrzymujesz napis reprezentujacy zdanie. Twoim zadaniem jest znalezienie najczesciej wystepujacej litery w zdaniu. Jesli wiecej niz jedna litera wystepuje te sama liczbe razy, nalezy zwrocic litere najwczesniej pojawiajaca sie w zdaniu.
-# Dane wejsciowe: Napis.
-# Dane wyjsciowe: Znak.
-# Przyklad:
-# Dla otrzymanego napisu: "lezy jerzy na wiezy"
-# Powinna zostac zwrocona litera: 'e'
+# ZAD-05 — Pracownik z największym sumarycznym zyskiem
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `dict`, `sumowanie`
+#
+# ### Treść
+#
+# Wczytaj `n` wpisów: `pracownik zysk`. Zsumuj zyski per pracownik i wypisz nazwę pracownika z największą sumą.
+# (Jeśli remis, wybierz tego, który pierwszy osiągnął tę maksymalną sumę podczas przetwarzania.)
+#
+# ### Wejście
+#
+# * 1 linia: `n`
+# * następnie `n` linii: `imie_i_nazwisko zysk`
+#
+# ### Wyjście
+#
+# * Jedna linia: `imie_i_nazwisko`
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 5
+# Barnaba_Barabash 120
+# Jon_Snow 100
+# Kira_Summer 300
+# Barnaba_Barabash 200
+# Bob_Marley 110
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# Barnaba_Barabash
+# ```
 
-najlepszy_pracownik(){
+najlepszy_pracownik() {
     local transakcje=($1)
     local -A lista_pracownikow=()
 
-    for transakcja in ${transakcje[@]}
-    do
+    for transakcja in ${transakcje[@]}; do
         local pracownik="$(echo $transakcja | cut -d' ' -f1) $(echo $transakcja | cut -d' ' -f2)"
         local zysk="$(echo $transakcja | cut -d' ' -f3)"
 
-        if [[ -z ${lista_pracownikow[$pracownik]} ]]
-        then
+        if [[ -z ${lista_pracownikow[$pracownik]} ]]; then
             lista_pracownikow[$pracownik]=$zysk
         else
-            lista_pracownikow[$pracownik]=$((${lista_pracownikow[$pracownik]}+$zysk))
+            lista_pracownikow[$pracownik]=$((${lista_pracownikow[$pracownik]} + $zysk))
         fi
     done
 
@@ -33,7 +61,7 @@ najlepszy_pracownik(){
     echo $najlepszy_pracownik
 }
 
-test_najlepszy_pracownik(){
+test_najlepszy_pracownik() {
 
     local -a transakcje=(
         "Barnaba Barabash: 120;"
@@ -51,4 +79,3 @@ main() {
 }
 
 main "$@"
-

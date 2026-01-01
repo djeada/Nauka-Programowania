@@ -1,15 +1,47 @@
 """
-Tytul: Czy slowniki sa identyczne?
-Otrzymujesz dwa slowniki skladajace sie z par napisow i list liczb calkowitych. Listy sa nieuporzadkowane. Twoim zadaniem jest sprawdzenie, czy slowniki skladaja sie z tych samych par. Dwie listy uznajemy za identyczne, jesli zawieraja te same elementy, niezaleznie od kolejnosci, w jakiej sie one znajduja.
-Dane wejsciowe: Dwa slowniki par: napis, lista liczb calkowitych.
-Dane wyjsciowe: Wartosc boolowska.
-Przyklad:
-Dla otrzymanych slownikow:
-{'a': [1, 2, 3], 'b': [4, 5]}, {'a': [3, 2, 1], 'b': [5, 4]}
-Powinna zostac zwrocona wartosc logiczna: Prawda.
-Dla otrzymanych slownikow:
-{'a': [1, 2, 3], 'b': [4, 5]}, {'a': [3, 2, 1], 'b': [5, 4], 'c': [6, 7]}
-Powinna zostac zwrocona wartosc logiczna: Falsz.
+ZAD-12 — Porównanie dwóch słowników z listami (kolejność list bez znaczenia)
+
+**Poziom:** ★★☆
+**Tagi:** `dict`, `porównanie`, `list`
+
+### Treść
+
+Wczytaj dwa „słowniki” (opis w wejściu). Dla każdego klucza wartościami są listy liczb całkowitych, ale **kolejność w listach nie ma znaczenia**.
+Wypisz `Prawda` jeśli słowniki są identyczne (te same klucze i te same wielozbiory wartości), w przeciwnym razie `Fałsz`.
+
+### Wejście
+
+* Najpierw:
+
+  * 1 linia: `n`
+  * następnie `n` linii: `klucz v1 v2 v3 ...` (co najmniej jedna wartość)
+* Potem:
+
+  * 1 linia: `m`
+  * następnie `m` linii: `klucz v1 v2 v3 ...`
+
+### Wyjście
+
+* `Prawda` lub `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+a 1 2 3
+b 4 5
+2
+a 3 2 1
+b 5 4
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 """
 

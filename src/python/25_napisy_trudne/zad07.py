@@ -1,13 +1,43 @@
 """
-Tytul: Powtarzajace sie podnapisy.
-Tresc: Dostajesz napis. Znajdz wszystkie powtarzajace sie podnapisy w tym napisie.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla napisu "pythonpython" powinna zostac zwrocona lista zawierajaca napis "python".
+ZAD-07 — Powtarzające się podnapisy
+
+**Poziom:** ★★★
+**Tagi:** `string`, `substrings`, `count`
+
+### Treść
+
+Otrzymujesz napis. Znajdź wszystkie **podnapisy**, które występują w nim **więcej niż jeden raz**.
+
+### Wejście
+
+* 1 linia: napis `S`
+
+### Wyjście
+
+* 1 linia: lista napisów — wszystkie powtarzające się podnapisy
+
+### Przykład
+
+**Wejście:**
+
+```
+pythonpython
+```
+
+**Wyjście:**
+
+```
+['python']
+```
+
+### Uwagi
+
+* Jeśli sprawdzarka wymaga konkretnej kolejności (np. rosnąco po długości/alfabetycznie) — musi to być opisane. W przeciwnym razie dopuszczalna może być dowolna kolejność.
 
 """
+
 from collections import deque
+
 
 # Wersja 1
 def najdluzsze_powtorzenie_v1(slowo):

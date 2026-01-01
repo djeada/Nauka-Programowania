@@ -1,10 +1,69 @@
 /*
-Tytul: Odwrocenie sasiadujacych bitow.
-Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej. Zmien miejscami sasiadujace bity w zapisie binarnym tej liczby i zwroc dziesietna reprezentacje wyniku.
-Dane wejsciowe: Liczba naturalna.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla otrzymanej liczby: 9131, powinna zostac zwrocona liczba: 4951.
+ZAD-04A — Liczba zer w zapisie binarnym
+
+**Poziom:** ★☆☆
+**Tagi:** `binarne`, `zliczanie`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Policz, ile znaków `0` zawiera jej binarna reprezentacja (bez wiodących zer).
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+0
+```
+
+### Uwagi
+
+* Dla `n = 0` binarnie to `0`, więc liczba zer wynosi `1`.
+
+ZAD-04B — Liczba jedynek w zapisie binarnym
+
+**Poziom:** ★☆☆
+**Tagi:** `popcount`, `binarne`
+
+### Treść
+
+Wczytaj `n`. Policz, ile bitów `1` ma liczba w zapisie binarnym.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+2
+```
 
 */
 import java.util.*;

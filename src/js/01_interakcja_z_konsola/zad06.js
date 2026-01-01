@@ -1,40 +1,199 @@
 /*
-Tytul: Konwersja jednostek.
+ZAD-06A — Kilogramy → gramy
 
-Tresc zadania: Napisz program, ktory bedzie konwertowac jednostki zgodnie z nastepujacymi instrukcjami:
+**Poziom:** ★☆☆
+**Tagi:** `konwersje`
 
-a) Pobierz wielkosc w kilogramach i wypisz, ile gramow odpowiada.
+### Treść
 
-b) Pobierz wielkosc w calach i wypisz, ile centymetrow odpowiada.
+Wczytaj wartość w kilogramach `kg` i przelicz na gramy.
 
-c) Pobierz liczbe sekund i przelicz na godziny.
+### Wejście
 
-d) Pobierz liczbe w euro i wypisz, ile zlotowek odpowiada.
- 
-e) Pobierz miare kata w stopniach i wypisz, ile radianow odpowiada.
+* 1 linia: `kg`
 
-f) Pobierz temperature w stopniach Fahrenheita i wypisz ile stopni Celsjusza oraz ile stopni Kelvina odpowiada.
+### Wyjście
 
-Dane wejsciowe: Liczba naturalna we wszystkich podpunktach.
+* 1 linia: `g` jako **liczba całkowita**, gdzie:
+  `g = kg * 1000`
 
-Dane wyjsciowe:
+### Gwarancje
 
-* Liczba naturalna dla podpunktow 1 i 3.
-* Liczba zmiennoprzecinkowa dla pozostalych podpunktow.
+* `kg` jest liczbą całkowitą **lub** taką, że wynik w gramach jest całkowity.
 
-Przyklad:
+### Przykład
 
-a) Dla pobranej liczby: 2, powinna zostac wypisana liczba: 2000.
+**Wejście:**
 
-b) Dla pobranej liczby: 12, powinna zostac wypisana liczba: 4.724.
+```
+2.5
+```
 
-c) Dla pobranej liczby: 3600, powinna zostac wypisana liczba: 1.
+**Wyjście:**
 
-d) Dla pobranej liczby: 4, powinna zostac wypisana liczba: 17.6.
+```
+2500
+```
 
-e) Dla pobranej liczby: 120, powinna zostac wypisana liczba:  2.094.
+ZAD-06B — Cale → centymetry
 
-f) Dla pobranej liczby: 100, powinny zostac wypisane liczby: 37.777 i -235.222.
+**Poziom:** ★☆☆
+**Tagi:** `konwersje`, `float`
+
+### Treść
+
+Wczytaj liczbę cali `inch` i przelicz na centymetry.
+
+### Wejście
+
+* 1 linia: `inch`
+
+### Wyjście
+
+* 1 linia: `cm = inch * 2.54` wypisane do **2 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+10
+```
+
+**Wyjście:**
+
+```
+25.40
+```
+
+ZAD-06C — Sekundy → pełne godziny
+
+**Poziom:** ★☆☆
+**Tagi:** `dzielenie całkowite`
+
+### Treść
+
+Wczytaj liczbę sekund `s` i wypisz liczbę **pełnych godzin**.
+
+### Wejście
+
+* 1 linia: `s` (liczba całkowita, `s ≥ 0`)
+
+### Wyjście
+
+* 1 linia: `s // 3600`
+
+### Przykład
+
+**Wejście:**
+
+```
+8639
+```
+
+**Wyjście:**
+
+```
+2
+```
+
+ZAD-06D — Euro → złotówki (kurs stały)
+
+**Poziom:** ★☆☆
+**Tagi:** `konwersje`, `float`
+
+### Treść
+
+Wczytaj kwotę w euro `eur` i przelicz na złotówki przy stałym kursie.
+
+### Wejście
+
+* 1 linia: `eur`
+
+### Wyjście
+
+* 1 linia: `pln = eur * 4.4` do **2 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+13.20
+```
+
+ZAD-06E — Stopnie → radiany
+
+**Poziom:** ★☆☆
+**Tagi:** `pi`, `float`
+
+### Treść
+
+Wczytaj kąt w stopniach `deg` i przelicz na radiany.
+
+### Wejście
+
+* 1 linia: `deg`
+
+### Wyjście
+
+* 1 linia: `rad = deg * π / 180` do **3 miejsc po przecinku**
+
+### Przykład
+
+**Wejście:**
+
+```
+180
+```
+
+**Wyjście:**
+
+```
+3.142
+```
+
+ZAD-06F — Fahrenheit → Celsius i Kelviny
+
+**Poziom:** ★☆☆
+**Tagi:** `konwersje`, `float`
+
+### Treść
+
+Wczytaj temperaturę w stopniach Fahrenheita `F`. Oblicz temperaturę w Celsjuszach oraz Kelvinach.
+
+### Wejście
+
+* 1 linia: `F`
+
+### Wyjście
+
+Dwie linie:
+
+1. `C = (5/9) * (F - 32)` do **3 miejsc**
+2. `K = C + 273.15` do **3 miejsc**
+
+### Przykład
+
+**Wejście:**
+
+```
+32
+```
+
+**Wyjście:**
+
+```
+0.000
+273.150
+```
+
 */
 
 // a) Pobierz wielkosc w kilogramach i wypisz, ile gramow odpowiada.

@@ -1,16 +1,46 @@
 /*
+ZAD-08 — Naiwny test pierwszości liczby
 
-Tytul: Naiwny test pierwszosci
+**Poziom:** ★★☆
+**Tagi:** `pierwszość`, `pętle`, `dzielniki`
 
-Tresc: Napisz funkcje, ktora dla otrzymanej liczby naturalnej sprawdzi, czy jest ona liczba pierwsza.
+### Treść
 
-Dane wejsciowe: liczba naturalna
+Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.
 
-Dane wyjsciowe: wartosc logiczna
+### Wejście
 
-Przyklad:
+Jeden argument funkcji:
 
-Dla otrzymanej liczby 7, funkcja powinna zwrocic wartosc logiczna prawda. Dla otrzymanej liczby 2, funkcja powinna zwrocic wartosc logiczna prawda.
+* `n` (liczba naturalna, `n ≥ 2`)
+
+### Wyjście
+
+Funkcja zwraca wartość logiczną:
+
+* `True` lub `False`
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(czy_pierwsza(7))
+print(czy_pierwsza(4))
+```
+
+**Wyjście:**
+
+```
+True
+False
+```
+
+### Uwagi
+
+* Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.
+* Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`.
+
 */
 
 // Funkcja zwracajaca wartosc logiczna, czy liczba jest pierwsza

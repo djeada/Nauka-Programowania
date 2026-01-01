@@ -1,16 +1,46 @@
 /*
+ZAD-11 — Palindrom w systemie binarnym
 
-Tytul: Czy liczba jest palindromem?
+**Poziom:** ★★☆
+**Tagi:** `binarne`, `palindrom`, `string`
 
-Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Sprawdz, czy reprezentacja binarna otrzymanej liczby jest palindromem.
+### Treść
 
-Dane wejsciowe: Liczba naturalna.
+Wczytaj liczbę naturalną `n`. Sprawdź, czy jej reprezentacja binarna (bez wiodących zer) jest palindromem.
 
-Dane wyjsciowe: Wartosc logiczna.
+Wypisz:
 
-Przyklad:
+* `Prawda` — jeśli tak,
+* `Fałsz` — jeśli nie.
 
-Dla otrzymanej liczby 26, powinna zostac zwrocona wartosc logiczna: Prawda.*/
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedno słowo: `Prawda` lub `Fałsz`.
+
+### Przykład
+
+**Wejście:**
+
+```
+26
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
+
+### Uwagi (ważne)
+
+* `26` ma zapis binarny `11010`, który **nie** jest palindromem.
+  (W Twoim wcześniejszym przykładzie było to opisane błędnie — tu trzymamy się definicji palindromu 1:1.)
+
+*/
 
 function czyPalindrom(liczba) {
   let lewyBit = 1;

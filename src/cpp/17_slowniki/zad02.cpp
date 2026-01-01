@@ -1,10 +1,42 @@
 /*
-Tytul: Slownik z kluczami bedacymi elementami jednej listy i wartosciami elementami drugiej listy.
-Tresc: Dostajesz dwie listy liczb calkowitych. Stworz slownik, w ktorym kluczami beda elementy pierwszej listy, a wartosciami elementy drugiej listy. Jesli listy sa roznej dlugosci, zwroc pusty slownik.
-Dane wejsciowe: Dwie listy liczb calkowitych.
-Dane wyjsciowe: Slownik z kluczami i wartosciami bedacymi liczbami calkowitymi.
-Przyklad:
-Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], slownik powinien wygladac nastepujaco: {3: 1, 5: 2, 8: -1}.
+ZAD-02 — Słownik z dwóch list (klucze i wartości)
+
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `listy`
+
+### Treść
+
+Wczytaj dwie listy. Jeśli mają tę samą długość, utwórz słownik: klucz z
+pierwszej listy → wartość z drugiej listy. Jeśli długości są różne, wypisz pusty
+słownik `{}`.
+
+### Wejście
+
+* 1 linia: `n`
+* 2 linia: `m`
+* następnie `n` liczb (pierwsza lista)
+* następnie `m` liczb (druga lista)
+
+### Wyjście
+
+* Słownik albo `{}`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+3
+3 5 8
+1 2 -1
+```
+
+**Wyjście:**
+
+```
+{3: 1, 5: 2, 8: -1}
+```
 
 */
 #include <cassert>
@@ -19,8 +51,7 @@ std::unordered_map<int, int> budujSlownik(std::vector<int> &listaA,
    */
   std::unordered_map<int, int> slownik;
 
-  if (listaA.size() != listaB.size())
-    return slownik;
+  if (listaA.size() != listaB.size()) return slownik;
 
   for (unsigned int i = 0; i < listaA.size(); i++)
     slownik[listaA[i]] = listaB[i];
@@ -45,10 +76,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

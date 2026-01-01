@@ -1,10 +1,30 @@
 """
-Tytul: Obliczenie n-tej pochodnej wielomianu.
-Tresc: Otrzymujesz liste n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbe naturalna k. Oblicz wspolczynniki wielomianu bedacego k-ta pochodna otrzymanego wielomianu.
-Dane wejsciowe: Lista liczb naturalnych i liczba naturalna.
-Dane wyjsciowe: Lista liczb naturalnych.
-Przyklad:
-Dla otrzymanej listy wspolczynnikow [4, -3, 2] i liczby k = 1, zostanie zwrocona lista [8, -3].
+ZAD-05 — k-ta pochodna wielomianu
+
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `pochodna`, `wielomiany`
+
+### Treść
+
+Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę naturalną `k` i zwraca współczynniki wielomianu będącego **k-tą pochodną**.
+
+### Wejście (argumenty funkcji)
+
+* `a` — lista `[a_n, ..., a_0]`
+* `k` — liczba naturalna
+
+### Wyjście (zwracana wartość)
+
+* lista współczynników wielomianu po zróżniczkowaniu `k` razy
+
+### Przykład
+
+Dla `a = [4, -3, 2]` oraz `k = 1` funkcja zwraca:
+`[8, -3]`
+
+### Uwagi
+
+* Jeśli `k` jest większe niż stopień wielomianu, wynikiem jest wielomian zerowy: `[0]`.
 
 """
 

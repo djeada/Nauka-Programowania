@@ -1,10 +1,35 @@
 /*
-Tytul: Odwroc slowa w zdaniu.
-Tresc: Otrzymujesz napis reprezentujacy zdanie. Zamien slowa zdania na te same napisy zapisane wspak. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "ala mak otak".
+ZAD-18 — Odwróć słowa w zdaniu
+
+**Poziom:** ★★☆
+**Tagi:** `split`, `string`, `pętle`
+
+### Treść
+
+Wczytaj zdanie i odwróć litery **w każdym słowie osobno**, zachowując kolejność
+słów.
+
+### Wejście
+
+* 1. linia: zdanie
+
+### Wyjście
+
+* 1. linia: zdanie z odwróconymi słowami
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+alA am atok
+```
 
 */
 #include <algorithm>
@@ -15,7 +40,6 @@ Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "ala mak 
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)
 void odwrocNapis(std::string &slowo, int pocz, int koniec) {
-
   int j = koniec;
 
   for (int i = pocz; i <= j; i++, j--) {
@@ -28,7 +52,6 @@ void odwrocNapis(std::string &slowo, int pocz, int koniec) {
 // Zlozonosc Czasowa O(n^2)
 // Zlozonosc Pamieciowa O(1)
 void odwrocNapisy(std::string &zdanie) {
-
   unsigned int N = zdanie.length();
   unsigned int pocz = 0;
   unsigned int koniec;
@@ -51,9 +74,7 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
 }
-

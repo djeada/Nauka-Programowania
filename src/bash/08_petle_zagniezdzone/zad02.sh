@@ -12,8 +12,8 @@ trojkat() {
 
     a=$1
 
-    for (( i=0; i<$a; i++ )); do
-        for (( j=0; j<=$i; j++ )); do
+    for ((i = 0; i < $a; i++)); do
+        for ((j = 0; j <= $i; j++)); do
             echo -n "x"
         done
         echo ""
@@ -28,4 +28,3 @@ main() {
 }
 
 main "$@"
-

@@ -1,16 +1,43 @@
 /*
+ZAD-14 — Element bez pary
 
-Tytul: Znalezienie elementu bez pary w liscie liczb calkowitych.
+**Poziom:** ★★☆
+**Tagi:** `XOR`, `listy`, `zliczanie`
 
-Tresc: Dla otrzymanej listy liczb calkowitych, skladajacej sie z nieparzystej liczby elementow, znajdz element, ktory nie ma pary o tej samej wartosci.
+### Treść
 
-Dane wejsciowe: Lista liczb calkowitych.
+Wczytaj listę liczb całkowitych o nieparzystej długości: wszystkie liczby poza jedną występują dokładnie dwa razy. Znajdź liczbę bez pary.
 
-Dane wyjsciowe: Liczba calkowita.
+### Wejście
 
-Przyklad:
+* 1. linia: `N` (nieparzyste, `N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
-Dla otrzymanej listy: [1, 3, 1, 7, 3, 1, 1] zostanie zwrocona liczba: 7.
+### Wyjście
+
+Jedna liczba całkowita — element bez pary.
+
+### Przykład
+
+**Wejście:**
+
+```
+7
+1
+3
+1
+7
+3
+1
+1
+```
+
+**Wyjście:**
+
+```
+7
+```
+
 */
 
 // Funkcja znajdujaca element bez pary w liscie liczb calkowitych

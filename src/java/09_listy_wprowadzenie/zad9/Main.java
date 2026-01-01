@@ -1,10 +1,41 @@
 /*
-Tytul: Znalezienie indeksu najmniejszego elementu w posortowanej i przesunietej w prawo liscie.
-Tresc: Dla otrzymanej listy liczb calkowitych, znajdz indeks najmniejszego elementu. Lista jest posortowana rosnaco, ale zostala przesunieta w prawo o okreslona liczbe miejsc. Przykladowo dla przesuniecia w prawo o 1, ostatni element trafia na pierwsze miejsce, a przedostatni na ostatnie miejsce itd.
-Dane wejsciowe: Lista liczb calkowitych oraz liczba naturalna okreslajaca przesuniecie w prawo.
-Dane wyjsciowe: Liczba calkowita.
-Przyklad:
-Dla otrzymanej listy: [7, 8, -1, 4, 5] zostanie zwrocona liczba: 2.
+ZAD-09 — Usuń duplikaty (z zachowaniem kolejności)
+
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `duplikaty`, `set`
+
+### Treść
+
+Wczytaj listę liczb naturalnych i usuń duplikaty tak, aby każda liczba występowała tylko raz — **zachowując kolejność pierwszego wystąpienia**.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby naturalne
+
+### Wyjście
+
+Jedna linia: lista bez duplikatów, elementy oddzielone przecinkami.
+
+### Przykład
+
+**Wejście:**
+
+```
+6
+3
+2
+1
+3
+2
+2
+```
+
+**Wyjście:**
+
+```
+3,2,1
+```
 
 */
 import java.util.*;

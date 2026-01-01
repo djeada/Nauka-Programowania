@@ -1,15 +1,53 @@
 /*
-Tytul: Maksimum i minimum z dwoch liczb.
+ZAD-04 — Maksimum i minimum z dwóch liczb
 
-Tresc: Pobierz od uzytkownika dwie liczby naturalne i wypisz najpierw wieksza, a potem mniejsza.
+**Poziom:** ★☆☆
+**Tagi:** `max`, `min`, `if`, `formatowanie`
 
-Dane wejsciowe: Dwie liczby naturalne.
+### Treść
 
-Dane wyjsciowe: Dwie liczby naturalne.
+Wczytaj dwie liczby naturalne `a` i `b`.
+Wypisz je w jednej linii w kolejności: **większa, potem mniejsza**, oddzielone pojedynczą spacją.
+Jeśli `a = b`, wypisz `a b` (czyli dwie takie same liczby).
 
-Przyklad:
+### Wejście
 
-Dla pobranych liczb: 1 oraz 4, powinny zostac wypisane liczby: 4 i 1.
+* 1 linia: `a` (całkowita, `a ≥ 0`)
+* 2 linia: `b` (całkowita, `b ≥ 0`)
+
+### Wyjście
+
+Jedna linia:
+`max(a, b) min(a, b)`
+
+### Przykłady
+
+**Wejście:**
+
+```
+1
+4
+```
+
+**Wyjście:**
+
+```
+4 1
+```
+
+**Wejście:**
+
+```
+5
+5
+```
+
+**Wyjście:**
+
+```
+5 5
+```
+
 */
 
 // Pobieranie danych od uzytkownika

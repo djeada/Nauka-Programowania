@@ -1,10 +1,33 @@
-# Tytul: Powtarzajace sie znaki
-# Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrocenie wszystkich znakow, ktore wystepuja co najmniej 2 razy w ciagu.
-# Dane wejsciowe: Napis.
-# Dane wyjsciowe: Napis.
-# Przyklad:
-# Dla otrzymanego napisu: "aaabbbccc"
-# Powinien zostac zwrocony napis: "abc"
+# ZAD-06 — Histogram znaków w słowie
+# 
+# **Poziom:** ★☆☆
+# **Tagi:** `dict`, `string`
+# 
+# ### Treść
+# 
+# Wczytaj napis. Zwróć słownik: znak → liczba wystąpień.
+# 
+# ### Wejście
+# 
+# * 1 linia: napis
+# 
+# ### Wyjście
+# 
+# * Słownik, np. `{'k': 1, 'l': 1, 'a': 2, 's': 1}`
+# 
+# ### Przykład
+# 
+# **Wejście:**
+# 
+# ```
+# klasa
+# ```
+# 
+# **Wyjście:**
+# 
+# ```
+# {'k': 1, 'l': 1, 'a': 2, 's': 1}
+# ```
 
 source ../assert.sh
 

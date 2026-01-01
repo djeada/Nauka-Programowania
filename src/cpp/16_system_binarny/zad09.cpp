@@ -1,15 +1,99 @@
 /*
-Tytul: Zmiana wielkosci liter.
-Tresc: Otrzymujesz napis. Zaimplementuj nastepujace operacje przy uzyciu operatorow bitowych:
-a) Zamien wielkie litery na male litery.
-b) Zamien male litery na wielkie litery.
-c) Zamien male litery na wielkie litery i wielkie litery na male litery.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-a) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "test".
-b) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "TEST".
-c) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "tEST".
+ZAD-09A — Wielkie → małe (bitowo)
+
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `string`
+
+### Treść
+
+Wczytaj napis z liter alfabetu łacińskiego. Zamień wszystkie wielkie litery na
+małe, używając operacji bitowych na kodach ASCII.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+Jedna linia: napis po konwersji.
+
+### Przykład
+
+**Wejście:**
+
+```
+Test
+```
+
+**Wyjście:**
+
+```
+test
+```
+
+ZAD-09B — Małe → wielkie (bitowo)
+
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `string`
+
+### Treść
+
+Wczytaj napis. Zamień wszystkie małe litery na wielkie, używając operacji
+bitowych na ASCII.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+Jedna linia: napis po konwersji.
+
+### Przykład
+
+**Wejście:**
+
+```
+Test
+```
+
+**Wyjście:**
+
+```
+TEST
+```
+
+ZAD-09C — Odwróć wielkość liter (bitowo)
+
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `toggle case`
+
+### Treść
+
+Wczytaj napis. Zamień wielkość każdej litery na przeciwną (mała↔wielka) używając
+operacji bitowych na ASCII.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+Jedna linia: napis po zmianie.
+
+### Przykład
+
+**Wejście:**
+
+```
+Test
+```
+
+**Wyjście:**
+
+```
+tEST
+```
 
 */
 #include <cassert>
@@ -21,8 +105,7 @@ std::string wielkieNaMale(std::string slowo) {
    */
   std::string wynik = "";
 
-  for (const int &litera : slowo)
-    wynik += (char)(litera | (int)' ');
+  for (const int &litera : slowo) wynik += (char)(litera | (int)' ');
 
   return wynik;
 }
@@ -33,8 +116,7 @@ std::string maleNaWielkie(std::string slowo) {
    */
   std::string wynik = "";
 
-  for (const int &litera : slowo)
-    wynik += (char)(litera & (int)'_');
+  for (const int &litera : slowo) wynik += (char)(litera & (int)'_');
 
   return wynik;
 }
@@ -47,7 +129,6 @@ std::string odwrocWielkoscLiter(std::string slowo) {
   std::string wynik = "";
 
   for (const int &litera : slowo) {
-
     if (litera >= 'a' and litera <= 'z')
       wynik += (char)(litera ^ (int)' ');
 
@@ -83,11 +164,9 @@ void testOdwrocWielkoscLiter() {
 }
 
 int main() {
-
   testWielkieNaMale();
   testMaleNaWielkie();
   testOdwrocWielkoscLiter();
 
   return 0;
 }
-

@@ -7,6 +7,7 @@ Przyklad:
 Dla otrzymanej liczby 5 powinno zostac wypisane: 2, 3, 5, 7, 11.
 
 """
+
 import math
 
 
@@ -16,7 +17,7 @@ def sito_eratostenesa(n):
     tablica[1] = False
     for i in range(2, int(math.sqrt(n)) + 1):
         if tablica[i]:
-            for j in range(i ** 2, n, i):
+            for j in range(i**2, n, i):
                 tablica[j] = False
     return tablica
 

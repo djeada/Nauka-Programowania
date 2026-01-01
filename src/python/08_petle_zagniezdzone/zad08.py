@@ -10,6 +10,7 @@ Dla otrzymanej liczby 3 powinno zostac wypisane:
 121
 
 """
+
 from math import pow
 
 

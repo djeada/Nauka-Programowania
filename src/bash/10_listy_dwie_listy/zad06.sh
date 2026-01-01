@@ -1,9 +1,39 @@
-# Tytul: Roznica miedzy dwoma listami.
-# Tresc: Dla otrzymanych dwoch list liczb calkowitych, znajdz elementy, ktore nie sa czescia wspolna obu list.
-# Dane wejsciowe: Dwie listy liczb calkowitych.
-# Dane wyjsciowe: Lista liczb calkowitych.
-# Przyklad:
-# Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5, 1].
+# ZAD-06 — Znalezienie elementów wspólnych dwóch list
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `list`, `set`
+#
+# ### Treść
+#
+# Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występują w obu listach:
+#
+# * zachowaj **kolejność występowania w pierwszej liście**,
+# * jeśli element z pierwszej listy występuje w drugiej liście, dodaj go do wyniku,
+# * jeśli nie ma elementów wspólnych — wypisz `[]`.
+#
+# ### Wejście
+#
+# * 1 linia: lista 1
+# * 2 linia: lista 2
+#
+# ### Wyjście
+#
+# * 1 linia: lista elementów wspólnych
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# [9, 2, 5, 4]
+# [4, 2, 1]
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# [2, 4]
+# ```
 
 source ../assert.sh
 
@@ -12,7 +42,7 @@ czesc_wspolna_v1() {
     for elem_a in "${lista_a[@]}"; do
         for elem_b in "${lista_b[@]}"; do
             if [ $elem_a -eq $elem_b ]; then
-                wynik+=( "$elem_a" )
+                wynik+=("$elem_a")
                 break
             fi
         done
@@ -45,4 +75,3 @@ main() {
 }
 
 main "$@"
-

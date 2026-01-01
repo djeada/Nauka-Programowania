@@ -1,10 +1,39 @@
 /*
-Tytul: Z ilu slow sklada sie zdanie?
-Tresc: Zlicz, ile slow sklada sie z podanego zdania. Znaki interpunkcyjne nie sa brane pod uwage jako slowa.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla otrzymanego napisu: "gram na pianinie.", powinno zostac zwrocone: 3.
+ZAD-03 — Z ilu słów składa się zdanie?
+
+**Poziom:** ★☆☆
+**Tagi:** `string`, `split`
+
+### Treść
+
+Wczytaj zdanie i policz, z ilu słów się składa. Znaki interpunkcyjne nie są
+słowami.
+
+### Wejście
+
+* 1. linia: zdanie
+
+### Wyjście
+
+* 1. linia: liczba słów
+
+### Przykład
+
+**Wejście:**
+
+```
+gram na pianinie.
+```
+
+**Wyjście:**
+
+```
+3
+```
+
+### Uwagi o formatowaniu
+
+* Najprościej: podziel po białych znakach, a z końców słów usuń interpunkcję.
 
 */
 #include <algorithm>
@@ -14,7 +43,6 @@ Dla otrzymanego napisu: "gram na pianinie.", powinno zostac zwrocone: 3.
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)
 int policzSlowaV1(std::string &slowo) {
-
   bool spacja = true;
   int licznik = 0;
 
@@ -41,4 +69,3 @@ int main() {
   test1();
   return 0;
 }
-

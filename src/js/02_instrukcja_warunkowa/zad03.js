@@ -1,15 +1,63 @@
 /*
-Tytul: Znak liczby.
+ZAD-03 — Określanie znaku liczby
 
-Tresc: Pobierz liczbe naturalna od uzytkownika i sprawdz, czy liczba jest ujemna, dodatnia, czy jest zerem. Wypisz odpowiedni komunikat.
+**Poziom:** ★☆☆
+**Tagi:** `if-elif-else`, `porównania`, `string`
 
-Dane wejsciowe: Liczba naturalna.
+### Treść
 
-Dane wyjsciowe: Komunikat.
+Wczytaj liczbę całkowitą `x` i wypisz jeden z komunikatów:
 
-Przyklad:
+* dla `x < 0`: `Liczba jest ujemna.`
+* dla `x > 0`: `Liczba jest dodatnia.`
+* dla `x = 0`: `Liczba jest zerem.`
 
-Dla pobranej liczby: 2, powinien zostac wypisany komunikat, ze liczba jest dodatnia.
+### Wejście
+
+* 1 linia: `x` (liczba całkowita)
+
+### Wyjście
+
+Jedna linia — dokładnie jeden komunikat.
+
+### Przykłady
+
+**Wejście:**
+
+```
+-5
+```
+
+**Wyjście:**
+
+```
+Liczba jest ujemna.
+```
+
+**Wejście:**
+
+```
+0
+```
+
+**Wyjście:**
+
+```
+Liczba jest zerem.
+```
+
+**Wejście:**
+
+```
+2
+```
+
+**Wyjście:**
+
+```
+Liczba jest dodatnia.
+```
+
 */
 
 // Pobieranie danych od uzytkownika

@@ -1,8 +1,36 @@
 /*
-Tytul: Podmien tresci plikow.
-Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do plikow. Podmien tresci obu plikow.
-Dane wejsciowe: Dwa napisy reprezentujace sciezki do plikow.
-Dane wyjsciowe: Brak.
+ZAD-11 — Zamień miejscami treści dwóch plików
+
+**Poziom:** ★★☆
+**Tagi:** `files`, `swap`, `read/write`
+
+### Treść
+
+Otrzymujesz ścieżki do dwóch plików. Zamień ich treści miejscami:
+
+* plik A ma mieć dawną treść pliku B,
+* plik B ma mieć dawną treść pliku A.
+
+### Wejście
+
+* 1 linia: `file_A`
+* 2 linia: `file_B`
+
+### Wyjście
+
+Brak.
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\plik1.txt
+C:\Users\Username\Documents\plik2.txt
+```
+
+**Wyjście:**
+*(brak)*
 
 */
 #include <cassert>
@@ -14,7 +42,6 @@ Dane wyjsciowe: Brak.
 namespace filesys = std::experimental::filesystem;
 
 td::vector<std::string> wczytajPlik(const std::string &sciezka) {
-
   std::vector<std::string> tresc;
   try {
     std::string wiersz;
@@ -39,7 +66,6 @@ td::vector<std::string> wczytajPlik(const std::string &sciezka) {
 
 void skopiujPlik(const std::string &sciezka,
                  const std::string &sciezkaDocelowa) {
-
   try {
     filesys::copy_file(sciezka, sciezkaDocelowa,
                        filesys::copy_options::overwrite_existing);
@@ -49,7 +75,6 @@ void skopiujPlik(const std::string &sciezka,
 }
 
 void zamienPliki(const std::string &sciezkaA, const std::string &sciezkaB) {
-
   std::string tempSciezka(sciezkaB);
 
   while (filesys::exists(tempSciezka))
@@ -64,7 +89,6 @@ void zamienPliki(const std::string &sciezkaA, const std::string &sciezkaB) {
 }
 
 void testZamienPliki() {
-
   // stworz folder test
   std::string sciezkaTest = "test";
   filesys::create_directory(sciezkaTest);
@@ -96,11 +120,9 @@ void testZamienPliki() {
 }
 
 int main() {
-
   const std::string sciezkaA = "folder/test.txt";
   const std::string sciezkaB = "folder2/test2.txt";
   zamienPliki(sciezkaA, sciezkaB);
 
   return 0;
 }
-

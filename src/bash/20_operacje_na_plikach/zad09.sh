@@ -1,7 +1,30 @@
-# Tytul: Przesun wszystkie pliki CSV do jednego folderu.
-# Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Przenies wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderow) do drugiego folderu.
-# Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
-# Dane wyjsciowe: Brak.
+# ZAD-09 — Usuń pliki większe niż 10 kB (rekurencyjnie)
+# 
+# **Poziom:** ★★☆
+# **Tagi:** `files`, `delete`, `size`, `recursive`
+# 
+# ### Treść
+# 
+# Otrzymujesz ścieżkę do folderu. Usuń wszystkie pliki o rozmiarze **> 10240 bajtów** w tym folderze i jego podfolderach.
+# 
+# ### Wejście
+# 
+# * 1 linia: `folder_path`
+# 
+# ### Wyjście
+# 
+# Brak.
+# 
+# ### Przykład
+# 
+# **Wejście:**
+# 
+# ```
+# C:\Users\Username\Documents\DoUsunięcia
+# ```
+# 
+# **Wyjście:**
+# *(brak)*
 
 source ../assert.sh
 

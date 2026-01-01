@@ -1,31 +1,65 @@
 /*
-Tytul: Jaki mamy dzien tygodnia?	
+ZAD-08 — Dzień tygodnia dla daty (Zeller)
 
-Tresc: Napisz program, ktory dla trzech pobranych liczb naturalnych (reprezentujacych date) bedzie wypisywal odpowiadajacy im dzien tygodnia. Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem.
+**Poziom:** ★★☆
+**Tagi:** `algorytmy`, `Zeller`, `mapowanie`, `daty`
 
-Podpowiedz: Mozna uzyc wzoru Gaussa:
-Niech data bedzie dana w formacie DD/MM/CCYY :
+### Treść
 
-* DD - dzien
-* MM - miesiac
-* CC - stulecie
-* YY - rok
+Wczytaj datę `d, m, y` i wyznacz nazwę dnia tygodnia, używając **kongruencji Zellera** dla kalendarza gregoriańskiego.
 
-$$A = CC/4 - 2CC - 1$$
+Kroki:
 
-$$B = 5YY/4$$
+1. Jeśli `m <= 2`, to:
 
-$$C = 26*(MM + 1)/10$$
+* `m = m + 12`
+* `y = y - 1`
 
-$$Dzien = (A + B + C + DD) mod 7$$
+2. Oblicz:
 
-Dane wejsciowe: Trzy liczby naturalne.
+* `K = y % 100`
+* `J = y // 100`
+* `h = (d + (13*(m+1))//5 + K + K//4 + J//4 + 5*J) % 7`
 
-Dane wyjsciowe: Komunikat o dniu tygodnia.
+3. Zmapuj `h` na dzień tygodnia:
 
-Przyklad:
+* 0 → `Sobota`
+* 1 → `Niedziela`
+* 2 → `Poniedziałek`
+* 3 → `Wtorek`
+* 4 → `Środa`
+* 5 → `Czwartek`
+* 6 → `Piątek`
 
-Dla pobranych liczb 9, 10 i 2020, program powinien zwrocic napis "Czwartek".
+### Wejście
+
+3 liczby całkowite (w osobnych liniach): `d`, `m`, `y`
+
+### Wyjście
+
+Jedna linia: nazwa dnia tygodnia (dokładnie jedna z: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota, Niedziela).
+
+### Ograniczenia / gwarancje
+
+* Data wejściowa jest poprawna (zalecane; inaczej dopisz, co robić dla błędnej).
+* Kalendarz gregoriański.
+
+### Przykład
+
+**Wejście:**
+
+```
+9
+10
+2020
+```
+
+**Wyjście:**
+
+```
+Piątek
+```
+
 */
 
 // Pobieranie danych od uzytkownika

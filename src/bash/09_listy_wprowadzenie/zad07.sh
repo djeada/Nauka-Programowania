@@ -1,9 +1,40 @@
-# Tytul: Znalezienie indeksow pierwszej pary elementow listy o sumie rownej podanej liczbie.
-# Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x, znajdz indeksy pierwszej pary elementow listy, ktorych suma jest rowna x. Jesli taka para nie istnieje, zwroc pare (-1, -1).
-# Dane wejsciowe: Lista liczb calkowitych oraz liczba calkowita.
-# Dane wyjsciowe: Para liczb calkowitych.
-# Przyklad:
-# Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostana zwrocone indeksy pierwszej pary elementow o sumie rownej 5: (0, 2).
+# ZAD-07 — Średnia dwóch największych liczb
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `listy`, `max`, `sortowanie`, `float`
+#
+# ### Treść
+#
+# Wczytaj `N` liczb naturalnych (`N ≥ 2`). Znajdź największą i drugą największą wartość, a następnie wypisz ich średnią arytmetyczną jako liczbę zmiennoprzecinkową z dokładnością do **jednego** miejsca po przecinku.
+#
+# ### Wejście
+#
+# * 1. linia: `N` (`N ≥ 2`)
+# * kolejne `N` linii: liczby naturalne
+#
+# ### Wyjście
+#
+# Jedna liczba zmiennoprzecinkowa w formacie `%.1f`.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 6
+# 9
+# 2
+# 3
+# 2
+# 1
+# 7
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 8.0
+# ```
 
 source ../assert.sh
 
@@ -16,24 +47,24 @@ wieksza() {
     fi
 
     if [ $n -eq 1 ]; then
-        echo $((lista[0]- 1))
+        echo $((lista[0] - 1))
         return
     fi
 
-    local maks="$((1<<63))"
-    local maks2="$((1<<63))"
+    local maks="$((1 << 63))"
+    local maks2="$((1 << 63))"
 
-    for liczba in "${lista[@]}" ; do
+    for liczba in "${lista[@]}"; do
 
         if [ $liczba -gt $maks ]; then
-            maks2=$maks;
-            maks=$liczba;
-        elif  [ $liczba -gt $maks ]; then
+            maks2=$maks
+            maks=$liczba
+        elif [ $liczba -gt $maks ]; then
             maks2=$liczba
         fi
     done
 
-    echo $(bc -l <<< "scale=2; ($maks+$maks2)/2")
+    echo $(bc -l <<<"scale=2; ($maks+$maks2)/2")
 }
 
 main() {
@@ -42,4 +73,3 @@ main() {
 }
 
 main "$@"
-

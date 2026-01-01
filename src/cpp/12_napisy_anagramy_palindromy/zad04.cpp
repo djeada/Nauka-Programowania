@@ -1,10 +1,11 @@
 /*
 Tytul: Wyszukanie wszystkich palindromow w zdaniu.
-Tresc: Napisz program, ktory otrzymuje napis reprezentujacy zdanie. Twoim zadaniem jest znalezienie wszystkich palindromow w zdaniu. Roznice miedzy wielkimi i malymi literami powinny byc zignorowane.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla otrzymanego napisu: “Tata zabral kajak na wycieczke i uderzyl sie w oko”, powinna zostac zwrocona lista: ["kajak", "i", "w", "oko"].
+Tresc: Napisz program, ktory otrzymuje napis reprezentujacy zdanie. Twoim
+zadaniem jest znalezienie wszystkich palindromow w zdaniu. Roznice miedzy
+wielkimi i malymi literami powinny byc zignorowane. Dane wejsciowe: Napis. Dane
+wyjsciowe: Lista napisow. Przyklad: Dla otrzymanego napisu: “Tata zabral kajak
+na wycieczke i uderzyl sie w oko”, powinna zostac zwrocona lista: ["kajak", "i",
+"w", "oko"].
 
 */
 #include <algorithm>
@@ -19,8 +20,7 @@ void naMale(std::string &slowo) {
 bool palindrom(std::string &slowo) {
   int N = slowo.length() - 1;
   for (int i = 0; i <= N / 2; i++) {
-    if (slowo[i] != slowo[N - i])
-      return false;
+    if (slowo[i] != slowo[N - i]) return false;
   }
 
   return true;
@@ -46,8 +46,7 @@ std::vector<std::string> palindromyV1(std::string &napis) {
       auto slowo = napis.substr(pocz, konc - pocz);
       wyczysc(slowo);
       naMale(slowo);
-      if (!slowo.empty() && palindrom(slowo))
-        wynik.push_back(slowo);
+      if (!slowo.empty() && palindrom(slowo)) wynik.push_back(slowo);
     }
     pocz = konc + 1;
   }
@@ -55,8 +54,7 @@ std::vector<std::string> palindromyV1(std::string &napis) {
     auto slowo = napis.substr(pocz);
     wyczysc(slowo);
     naMale(slowo);
-    if (!slowo.empty() && palindrom(slowo))
-      wynik.push_back(slowo);
+    if (!slowo.empty() && palindrom(slowo)) wynik.push_back(slowo);
   }
 
   return wynik;
@@ -73,4 +71,3 @@ int main() {
 
   return 0;
 }
-

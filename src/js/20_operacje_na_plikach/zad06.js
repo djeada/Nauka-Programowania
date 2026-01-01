@@ -1,54 +1,58 @@
 /*
-Tytul: Statystyki dla pliku tekstowego.
+ZAD-06 — Statystyki pliku tekstowego
 
-Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Oblicz:
+**Poziom:** ★★☆
+**Tagi:** `files`, `stats`, `dict`, `regex`
 
-a) Liczbe wierszy w pliku.
+### Treść
 
-b) Liczbe slow w pliku (slowa oddzielone sa spacjami i moga skladac sie wylacznie z liter).
+Otrzymujesz ścieżkę do pliku tekstowego. Oblicz:
 
-c) Srednia dlugosc wiersza.
+a) liczbę wierszy,
+b) łączną liczbę słów (słowa = ciągi liter),
+c) średnią długość wiersza (w znakach),
+d) średnią liczbę słów na wiersz,
+e) częstość występowania słów (słownik).
 
-d) Srednia liczbe slow na wiersz.
+### Wejście
 
-e) Czestosc wystepowania kazdego ze slow w pliku.
+* 1 linia: `file_path`
 
-Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
+### Wyjście
 
-Dane wyjsciowe:
+5 elementów w tej kolejności:
 
-a) Liczba naturalna reprezentujaca liczbe wierszy.
+1. liczba wierszy
+2. liczba słów
+3. średnia długość wiersza
+4. średnia liczba słów na wiersz
+5. słownik częstości słów
 
-b) Liczba naturalna reprezentujaca liczbe slow.
+Każdy element wypisz w osobnej linii.
 
-c) Liczba zmiennoprzecinkowa reprezentujaca srednia dlugosc wiersza.
+### Przykład
 
-d) Liczba zmiennoprzecinkowa reprezentujaca srednia liczbe slow na wiersz.
+**Wejście:**
 
-e) Slownik par: napis (slowo), liczba naturalna (czestotliwosc wystepowania slowa). 
+```
+C:\Users\Username\Documents\tekst.txt
+```
 
-Przyklad:
+**Wyjście:**
 
-Dla otrzymanego napisu: "C:\Users\Username\Documents\text_file.txt" powinno zostac zwrocone:
+```
+4
+12
+17.75
+3.0
+{'ala': 2, 'ma': 2, 'kota': 1, 'kot': 1, 'na': 1, 'imię': 1, 'filemon': 1, 'filemona': 1, 'lubi': 2, 'mleko': 1}
+```
 
-a) Liczba naturalna reprezentujaca liczbe wierszy, np. 6
+### Uwagi o formatowaniu
 
-b) Liczba naturalna reprezentujaca liczbe slow, np. 25
+* Jeżeli ujednolicisz wielkość liter — w słowniku używaj małych liter (jak w przykładzie).
+* Interpunkcję traktuj jako separator (usuń ją przy wyznaczaniu słów).
 
-c) Liczba zmiennoprzecinkowa reprezentujaca srednia dlugosc wiersza, np. 41.5
-
-d) Liczba zmiennoprzecinkowa reprezentujaca srednia liczbe slow na wiersz, np. 4.2
-
-e) Slownik par: napis (slowo), liczba naturalna (czestotliwosc wystepowania slowa): {'The': 2, 'quick': 2, 'brown': 2, 'fox': 2, 'jumped': 1, 'over': 1, 'the': 1, 'lazy': 1, 'dog.': 1, 'cat': 1, 'sat': 1, 'on': 1, 'mat.': 1, 'Foxes': 1, 'are': 1, 'known': 1, 'for': 1, 'their': 2, 'cunning': 1, 'and': 1, 'intelligence.': 1, 'Dogs': 1, 'loyalty': 1, 'kindness.': 1, 'Cats': 1, 'independent': 1, 'animals': 1, 'but': 1, 'can': 1, 'be': 1, 'affectionate.': 1, 'This': 1, 'text': 1, 'file': 1, 'contains': 1, 'ten': 1, 'lines': 1, 'and': 1, 'words.': 1}
-
-Tekst pliku:
-
-"The quick brown fox jumped over the lazy dog.
-The quick brown cat sat on the mat.
-Foxes are known for their cunning and intelligence.
-Dogs are known for their loyalty and kindness.
-Cats are independent animals but can be affectionate.
-This text file contains six lines and 25 words."
 */
 const fs = require("fs").promises;
 

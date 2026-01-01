@@ -1,16 +1,35 @@
 /*
+ZAD-01 — Wypisywanie tekstu na ekran
 
-Tytul: Wypisywanie na standardowe wyjscie.
+**Poziom:** ★☆☆
+**Tagi:** `I/O`, `print`, `string`
 
-Tresc zadania: Napisz program, ktory wypisze dowolny ciag znakow na standardowe wyjscie.
+### Treść
 
-Dane wejsciowe: Brak.
+Napisz program, który wypisze dokładnie:
+`Witaj, świecie!`
 
-Dane wyjsciowe: Komunikat.
+### Wejście
 
-Przyklad:
+Brak.
 
-Program moze wypisac twoje inicjaly lub komunikat "Witaj swiecie!".
+### Wyjście
+
+Jedna linia:
+
+* `Witaj, świecie!`
+
+### Przykład
+
+**Wyjście:**
+
+```
+Witaj, świecie!
+```
+
+### Uwagi o formatowaniu
+
+* Tekst musi być identyczny (łącznie z przecinkiem, spacją i wykrzyknikiem).
 
 */
 

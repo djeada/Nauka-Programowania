@@ -1,23 +1,48 @@
 /*
-Tytul: Dodawanie i odejmowanie macierzy.
+ZAD-04 — Dodawanie i odejmowanie macierzy
 
-Tresc: Otrzymujesz dwie macierze o tych samych wymiarach. Zwroc dwie macierze bedace:
+**Poziom:** ★☆☆
+**Tagi:** `macierze`, `arytmetyka`
 
-a) wynikiem dodawania otrzymanych macierzy
+### Treść
 
-b) wynikiem odejmowania drugiej macierzy od pierwszej.
+Wczytaj dwie macierze `n×m`.
+a) Wypisz ich sumę.
+b) Wypisz różnicę: (pierwsza − druga).
 
-Dane wejsciowe: Dwie listy list liczb naturalnych.
+### Wejście
 
-Dane wyjsciowe: Dwie listy list liczb naturalnych.
+* 1. linia: `n`
+* 2. linia: `m`
+* potem `n` wierszy pierwszej macierzy (po `m` liczb)
+* potem `n` wierszy drugiej macierzy (po `m` liczb)
 
-Przyklad:
+### Wyjście
 
-Dla otrzymanych dwoch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinny zostac zwrocone nastepujace macierze:
+Najpierw `n` wierszy sumy, potem `n` wierszy różnicy (bez dodatkowych napisów).
 
-a) [[6, -1], [-1, 7]] - wynik dodawania
+### Przykład
 
-b) [[-4, 5], [-3, -7]] - wynik odejmowania drugiej macierzy od pierwszej.
+**Wejście:**
+
+```
+2
+2
+1 2
+-2 0
+5 -3
+1 7
+```
+
+**Wyjście:**
+
+```
+6 -1
+-1 7
+-4 5
+-3 -7
+```
+
 */
 function dodajMacierze(macierzA, macierzB) {
   const wynik = [];

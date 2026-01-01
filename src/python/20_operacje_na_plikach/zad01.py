@@ -1,8 +1,34 @@
 """
-Tytul: Sprawdzenie, czy sciezka nalezy do pliku/folderu
-Tresc: Otrzymujesz napis reprezentujacy sciezke. Sprawdz, czy jest to sciezka do pliku lub folderu.
-Dane wejsciowe: Napis
-Dane wyjsciowe: Wartosc logiczna
+ZAD-01 — Czy ścieżka istnieje?
+
+**Poziom:** ★☆☆
+**Tagi:** `files`, `path`, `os`, `pathlib`
+
+### Treść
+
+Otrzymujesz ścieżkę w systemie plików. Sprawdź, czy odnosi się do istniejącego **pliku lub folderu**.
+
+### Wejście
+
+* 1 linia: `path` (napis — ścieżka)
+
+### Wyjście
+
+* 1 linia: `Prawda` jeśli ścieżka istnieje, w przeciwnym razie `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\plik.txt
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 """
 

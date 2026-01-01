@@ -1,24 +1,49 @@
 /*
-Tytul: NWD.
-Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych zwroci ich najwiekszy wspolny dzielnik.
-Dane wejsciowe: dwie liczby naturalne
-Dane wyjsciowe: liczba naturalna
-Przyklad:
-Dla otrzymanych liczb 60 i 45, funkcja powinna zwrocic liczbe 15.
+ZAD-05 — Największy wspólny dzielnik (NWD)
+
+**Poziom:** ★☆☆
+**Tagi:** `Euklides`, `modulo`, `pętle`
+
+### Treść
+
+Napisz funkcję `nwd(a, b)`, która zwraca największy wspólny dzielnik dwóch liczb
+naturalnych.
+
+### Wejście
+
+Dwa argumenty funkcji:
+
+* `a` (liczba naturalna, `a > 0`)
+* `b` (liczba naturalna, `b > 0`)
+
+### Wyjście
+
+Funkcja zwraca jedną liczbę naturalną — `NWD(a, b)`.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(nwd(60, 45))
+```
+
+**Wyjście:**
+
+```
+15
+```
 
 */
 #include <cassert>
 
 int nwdV1(int a, int b) {
-
-  if (b == 0)
-    return a;
+  if (b == 0) return a;
 
   return nwdV1(b, a % b);
 }
 
 int nwdV2(int a, int b) {
-
   int c;
 
   while (b != a % b) {
@@ -26,8 +51,7 @@ int nwdV2(int a, int b) {
     b = a % b;
     a = c;
 
-    if (b == 0)
-      break;
+    if (b == 0) break;
   }
 
   return a;
@@ -48,10 +72,8 @@ void testNwd2() {
 }
 
 int main() {
-
   testNwd1();
   testNwd2();
 
   return 0;
 }
-

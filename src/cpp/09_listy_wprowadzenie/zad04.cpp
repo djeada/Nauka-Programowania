@@ -1,10 +1,51 @@
 /*
-Tytul: Minimum oraz maksimum.
-Tresc: Otrzymujesz liste liczb calkowitych. Znajdz najwiekszy i najmniejszy element tej listy i zwroc je jako dwie osobne liczby calkowite.
-Dane wejsciowe: Lista liczb calkowitych.
-Dane wyjsciowe: Dwie liczby calkowite oznaczajace najwiekszy i najmniejszy element z listy.
-Przyklad:
-Dla otrzymanej listy [4, -7, 8, 5, 6, -9, 10, 2, -8] powinny zostac zwrocone liczby 10 oraz -9.
+ZAD-04 — Minimum oraz maksimum
+
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `min`, `max`
+
+### Treść
+
+Wczytaj `N` liczb całkowitych. Wypisz:
+
+1. największą liczbę w liście
+2. najmniejszą liczbę w liście
+
+w jednej linii, oddzielone pojedynczą spacją.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Jedna linia:
+
+* `max min`
+
+### Przykład
+
+**Wejście:**
+
+```
+9
+4
+-7
+8
+5
+6
+-9
+10
+2
+-8
+```
+
+**Wyjście:**
+
+```
+10 -9
+```
 
 */
 #include <algorithm>
@@ -13,30 +54,24 @@ Dla otrzymanej listy [4, -7, 8, 5, 6, -9, 10, 2, -8] powinny zostac zwrocone lic
 #include <vector>
 
 int maksV1(std::vector<int> &lista) {
-
-  if (lista.empty())
-    return std::numeric_limits<int>::min();
+  if (lista.empty()) return std::numeric_limits<int>::min();
 
   int maks = lista.front();
 
   for (auto liczba : lista) {
-    if (liczba > maks)
-      maks = liczba;
+    if (liczba > maks) maks = liczba;
   }
 
   return maks;
 }
 
 int minV1(std::vector<int> &lista) {
-
-  if (lista.empty())
-    return std::numeric_limits<int>::max();
+  if (lista.empty()) return std::numeric_limits<int>::max();
 
   int min = lista.front();
 
   for (auto liczba : lista) {
-    if (liczba < min)
-      min = liczba;
+    if (liczba < min) min = liczba;
   }
 
   return min;
@@ -57,10 +92,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

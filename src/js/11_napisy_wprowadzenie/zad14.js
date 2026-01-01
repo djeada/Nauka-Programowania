@@ -1,15 +1,35 @@
 /*
-Tytul: Napis skladajacy sie z liczb od 1 do n.
+ZAD-14 — Napis z liczb od 1 do n
 
-Tresc: Otrzymasz liczbe naturalna n. Zwroc napis skladajacy sie z liczb naturalnych od 1 do n.
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `string`
 
-Dane wejsciowe: Liczba naturalna.
+### Treść
 
-Dane wyjsciowe: Napis.
+Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separatorów.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej liczby n rownej 3 powinien zostac zwrocony napis: "123".
+* 1. linia: liczba naturalna `n` (n ≥ 1)
+
+### Wyjście
+
+* 1. linia: ciąg `1..n` bez spacji
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+123
+```
+
 */
 
 function napisOd1DoN(n) {

@@ -1,16 +1,41 @@
 /*
+ZAD-04 — Usuń pary ze słownika na podstawie wartości
 
-Tytul: Usuwanie z slownika.
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `filtrowanie`
 
-Tresc: Otrzymujesz slownik par napisow i liczb calkowitych oraz pojedyncza liczbe calkowita. Usun z slownika pary, dla ktorych wartosc jest rowna otrzymanej liczbie.
+### Treść
 
-Dane wejsciowe: Slownik par napisow i liczb calkowitych oraz liczba calkowita.
+Wczytaj słownik (`n` par: klucz-napis, wartość-liczba) oraz liczbę `k`. Usuń wszystkie pary, gdzie wartość == `k`. Wypisz wynikowy słownik.
 
-Dane wyjsciowe: Slownik par napisow i liczb calkowitych.
+### Wejście
 
-Przyklad:
+* 1 linia: `n`
+* następnie `n` linii: `klucz wartość`
+* ostatnia linia: `k`
 
-Dla slownika i liczby: {“aaa”: 5, “abc”: 1, “xxx”: 5, “cba” : 3} i 5, slownik powinien wygladac nastepujaco: {“abc”: 1, “cba” : 3}.
+### Wyjście
+
+* Słownik po usunięciu par
+
+### Przykład
+
+**Wejście:**
+
+```
+4
+aaa 5
+abc 1
+xxx 5
+cba 3
+5
+```
+
+**Wyjście:**
+
+```
+{'abc': 1, 'cba': 3}
+```
 
 */
 

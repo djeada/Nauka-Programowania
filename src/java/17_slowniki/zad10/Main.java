@@ -1,10 +1,30 @@
 /*
-Tytul: Slownik z kluczami bedacymi elementami jednej listy i wartosciami elementami drugiej listy.
-Tresc: Dostajesz dwie listy liczb calkowitych. Stworz slownik, w ktorym kluczami beda elementy pierwszej listy, a wartosciami elementy drugiej listy. Jesli listy sa roznej dlugosci, zwroc pusty slownik.
-Dane wejsciowe: Dwie listy liczb calkowitych.
-Dane wyjsciowe: Slownik z kluczami i wartosciami bedacymi liczbami calkowitymi.
-Przyklad:
-Dla otrzymanych list: [3, 5, 8] i [1, 2, -1], slownik powinien wygladac nastepujaco: {3: 1, 5: 2, 8: -1}.
+ZAD-10 — Znalezienie anagramów w tekście (grupy)
+
+**Poziom:** ★★☆
+**Tagi:** `dict`, `anagramy`, `string`
+
+### Treść
+
+Wczytaj tekst. Znajdź grupy słów będących anagramami (ignoruj wielkość liter, słowa to tylko litery).
+Wypisz wynik jako listę list, np. `[['absurd', 'brudas'], ...]`.
+Do grup wypisuj tylko te klucze, które mają co najmniej 2 słowa.
+
+### Wejście
+
+* 1 linia: tekst
+
+### Wyjście
+
+* Lista list słów
+
+### Przykład
+
+Wejście jak w treści zadania → wyjście:
+
+```
+[["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]]
+```
 
 */
 import java.util.*;

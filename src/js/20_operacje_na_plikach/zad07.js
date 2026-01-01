@@ -1,11 +1,34 @@
 /*
-Tytul: Dodaj wiersz do pliku.
+ZAD-07 — Dodaj wiersz na początku pliku
 
-Tresc zadania: Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke do pliku tekstowego, a drugi napis reprezentuje wiersz tekstu. Dodaj otrzymany wiersz na poczatek pliku tekstowego.
+**Poziom:** ★☆☆
+**Tagi:** `files`, `write`, `prepend`
 
-Dane wejsciowe: Dwa napisy - sciezka do pliku oraz wiersz tekstu.
+### Treść
 
-Dane wyjsciowe: Brak.
+Otrzymujesz ścieżkę do pliku tekstowego i wiersz tekstu. Dodaj ten wiersz na **początku** pliku.
+
+### Wejście
+
+* 1 linia: `file_path`
+* 2 linia: `line_to_add` (może zawierać spacje)
+
+### Wyjście
+
+Brak.
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\notatki.txt
+To jest nowy wiersz dodany na początku pliku.
+```
+
+**Wyjście:**
+*(brak)*
+
 */
 
 const fs = require("fs").promises;

@@ -1,22 +1,45 @@
 /*
+ZAD-03 — Sortowanie listy par względem kryterium
 
-Tytul: Sortowanie listy par wzgledem jednej z kategorii.
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `tuple`, `list`
 
-Tresc: Masz dana liste par napisow i liczb. Posortuj pary w liscie wzgledem:
+### Treść
 
-a) Liczb.
-b) Dlugosci napisow.
+Otrzymujesz listę par `(napis, liczba)`.
 
-Dane wejsciowe: Lista par napisow i liczb.
+a) Posortuj pary rosnąco po liczbie.
+b) Posortuj pary rosnąco po długości napisu.
 
-Dane wyjsciowe: Lista par napisow i liczb.
+Wypisz wyniki dla a) i b) w osobnych liniach.
 
-Przyklad:
+### Wejście
 
-Dla listy [(“ab”, 3), (“bca”, 1), (“c”, 2)] powinno zostac zwrocone:
+* 1 linia: liczba naturalna `N`
+* następnie `N` linii: `napis liczba` (napis bez spacji)
 
-a) [(“bca”, 1), (“c”, 2), (“ab”, 3)] lub
-b) [(“c”, 2), (“ab”, 3), (“bca”, 1)].
+### Wyjście
+
+* 1 linia: lista par posortowana jak w podpunkcie a)
+* 2 linia: lista par posortowana jak w podpunkcie b)
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+ab 3
+bca 1
+c 2
+```
+
+**Wyjście:**
+
+```
+[('bca', 1), ('c', 2), ('ab', 3)]
+[('c', 2), ('ab', 3), ('bca', 1)]
+```
 
 */
 

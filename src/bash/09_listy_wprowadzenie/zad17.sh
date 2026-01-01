@@ -1,9 +1,46 @@
-# Tytul: Usun duplikaty.
-# Tresc: Otrzymujesz liste liczb naturalnych. Usun z niej wszystkie duplikaty, tak aby kazda liczba pozostala tylko raz.
-# Dane wejsciowe: Lista liczb naturalnych.
-# Dane wyjsciowe: Lista liczb naturalnych.
-# Przyklad:
-# Dla otrzymanej listy: [3, 2, 1, 3, 2, 2], powinna zostac zwrocona lista: [3, 2, 1].
+# ZAD-17 — Wszystkie pary o sumie x (wartości)
+#
+# **Poziom:** ★★☆
+# **Tagi:** `listy`, `2-sum`, `pary`
+#
+# ### Treść
+#
+# Wczytaj listę liczb całkowitych oraz `x`. Wypisz wszystkie pary **wartości** `(a, b)` z listy (nie indeksy), takie że `a + b == x`. Każdą parę wypisz w osobnej linii jako:
+# `a b`
+#
+# Każdą parę wypisz tylko raz (nie dubluj `(a,b)` i `(b,a)`).
+#
+# ### Wejście
+#
+# * 1. linia: `N` (`N ≥ 2`)
+# * kolejne `N` linii: liczby całkowite
+# * ostatnia linia: `x` (liczba całkowita)
+#
+# ### Wyjście
+#
+# Wiele linii — po jednej parze na linię.
+# Jeśli brak par — brak wyjścia.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 5
+# 1
+# 2
+# 4
+# 3
+# 7
+# 5
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 1 4
+# 2 3
+# ```
 
 source ../assert.sh
 
@@ -11,8 +48,8 @@ suma_dwoch() {
     local n=${#lista[@]}
     local liczba=$1
 
-    for (( i=0; i<n; i++ )); do
-        for (( j=i+1; j<n; j++ )); do
+    for ((i = 0; i < n; i++)); do
+        for ((j = i + 1; j < n; j++)); do
             if [ $((lista[i] + lista[j])) -eq $liczba ]; then
                 echo "($i, $j)"
                 return
@@ -43,4 +80,3 @@ main() {
 }
 
 main "$@"
-

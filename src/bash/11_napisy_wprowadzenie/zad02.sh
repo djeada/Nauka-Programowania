@@ -1,9 +1,35 @@
-# Tytul: Srednia dlugosc slow w zdaniu.
-# Tresc: Otrzymasz napis reprezentujacy zdanie. Oblicz srednia dlugosc slow w zdaniu. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
-# Dane wejsciowe: Napis.
-# Dane wyjsciowe: Liczba naturalna.
-# Przyklad:
-# Dla otrzymanego napisu: "Zepsuty rower.", powinna zostac zwrocona liczba: 6.
+# ZAD-02 — Policz wystąpienia znaku
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `string`, `count`
+#
+# ### Treść
+#
+# Wczytaj napis oraz jeden znak. Wypisz, ile razy ten znak występuje w napisie.
+#
+# ### Wejście
+#
+# * 1. linia: napis
+# * 2. linia: pojedynczy znak
+#
+# ### Wyjście
+#
+# * 1. linia: liczba wystąpień
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# klamra
+# a
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 2
+# ```
 
 source ../assert.sh
 
@@ -13,11 +39,11 @@ policz_znak_v1() {
     local szukany_znak=$2
     local licznik=0
 
-    while IFS= read -n 1 znak ; do
+    while IFS= read -n 1 znak; do
         if [[ "$znak" == "$szukany_znak" ]]; then
-            local licznik=$((licznik+1))
+            local licznik=$((licznik + 1))
         fi
-    done <<< "$1"
+    done <<<"$1"
 
     echo $licznik
 
@@ -52,4 +78,3 @@ main() {
 }
 
 main "$@"
-

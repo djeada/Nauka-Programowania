@@ -1,13 +1,41 @@
 """
-Tytul: Polaczenie dwoch list.
-Tresc: Dla otrzymanych dwoch list, zwroc liste, ktora powstala poprzez:
-a) Dostawienie drugiej listy na koniec pierwszej listy.
-b) Wstawienie elementow o indeksach parzystych z drugiej listy na odpowiadajace im indeksy pierwszej listy.
-Dane wejsciowe: Dwie listy.
-Dane wyjsciowe: Lista.
-Przyklad:
-Dla otrzymanych list [1, 2, 3] oraz [4, 5, 6], w podpunkcie a) powinna zostac zwrocona lista: [1, 2, 3, 4, 5, 6].
-W podpunkcie b) powinna zostac zwrocona lista: [4, 2, 6, 3].
+ZAD-02 — Połączenie dwóch list
+
+**Poziom:** ★☆☆
+**Tagi:** `list`, `indeksy`, `concat`
+
+### Treść
+
+Wczytaj dwie listy liczb całkowitych i wykonaj niezależnie:
+
+**a)** Połącz listy, doklejając drugą listę na koniec pierwszej.
+**b)** W pierwszej liście **podmień** elementy o parzystych indeksach (0, 2, 4, …) elementami z drugiej listy o tych samych indeksach — o ile taki indeks istnieje w obu listach.
+
+### Wejście
+
+* 1 linia: lista 1
+* 2 linia: lista 2
+
+### Wyjście
+
+* 1 linia: wynik dla **a)** jako lista
+* 2 linia: wynik dla **b)** jako lista
+
+### Przykład
+
+**Wejście:**
+
+```
+[1, 2, 3]
+[4, 5, 6]
+```
+
+**Wyjście:**
+
+```
+[1, 2, 3, 4, 5, 6]
+[4, 2, 6]
+```
 
 """
 

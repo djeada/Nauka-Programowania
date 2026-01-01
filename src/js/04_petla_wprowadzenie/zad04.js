@@ -1,15 +1,43 @@
 /*
-Tytul: Suma liczb mniejszych od podanej.
+ZAD-04 — Sumowanie liczb mniejszych od podanej
 
-Tresc: Dla otrzymanej liczby naturalnej wypisz sume wszystkich liczb naturalnych mniejszych od niej.
+**Poziom:** ★☆☆
+**Tagi:** `sumowanie`, `pętle`, `arytmetyka`
 
-Dane wejsciowe: Liczba naturalna.
+### Treść
 
-Dane wyjsciowe: Liczba.
+Wczytaj liczbę naturalną `n` (`n ≥ 1`). Oblicz sumę wszystkich liczb naturalnych mniejszych od `n`, czyli:
+`1 + 2 + ... + (n - 1)`
+Następnie wypisz wynik.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej liczby 5, powinna zostac wypisana liczba 10.
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 1`)
+
+### Wyjście
+
+Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+```
+
+**Wyjście:**
+
+```
+10
+```
+
+### Uwagi o formatowaniu
+
+* Dla `n = 1` wynik to `0`.
+
 */
 
 // Pobieranie danych od uzytkownika

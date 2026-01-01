@@ -1,18 +1,43 @@
 /*
+ZAD-07 — Średnia dwóch największych liczb
 
-Tytul: Liczba mniejsza od najwiekszej i wieksza od wszystkich pozostalych.
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `max`, `sortowanie`, `float`
 
-Tresc: Otrzymujesz liste liczb naturalnych. Znajdz najwieksza i druga co do wielkosci liczbe w liscie, a nastepnie oblicz srednia arytmetyczna tych dwoch liczb i zwroc ja jako liczbe zmiennoprzecinkowa.
+### Treść
 
-Dane wejsciowe: Lista liczb naturalnych.
+Wczytaj `N` liczb naturalnych (`N ≥ 2`). Znajdź największą i drugą największą wartość, a następnie wypisz ich średnią arytmetyczną jako liczbę zmiennoprzecinkową z dokładnością do **jednego** miejsca po przecinku.
 
-Dane wyjsciowe: Liczba zmiennoprzecinkowa oznaczajaca srednia arytmetyczna najwiekszej i drugiej co do wielkosci liczby z listy.
+### Wejście
 
-Przyklad:
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby naturalne
 
-Dla otrzymanej listy [9, 2, 3, 2, 1, 7] powinna zostac zwrocona liczba 8.0.
-    
-    */
+### Wyjście
+
+Jedna liczba zmiennoprzecinkowa w formacie `%.1f`.
+
+### Przykład
+
+**Wejście:**
+
+```
+6
+9
+2
+3
+2
+1
+7
+```
+
+**Wyjście:**
+
+```
+8.0
+```
+
+*/
 
 function liczbaMniejszaOdNajwiekszej(lista) {
   let max = lista[0];

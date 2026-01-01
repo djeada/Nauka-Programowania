@@ -1,16 +1,27 @@
 /*
+ZAD-02 — Iloczyn wielomianu przez skalar
 
-Tytul: Obliczenie iloczynu wielomianu przez skalar.
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `wielomiany`, `skalar`
 
-Tresc: Otrzymujesz liste n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbe x. Oblicz wspolczynniki wielomianu, ktory jest wynikiem pomnozenia otrzymanego wielomianu przez liczbe x.
+### Treść
 
-Dane wejsciowe: Lista liczb naturalnych i liczba naturalna.
+Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `k`, a następnie zwraca współczynniki wielomianu powstałego z pomnożenia każdego współczynnika przez `k`.
 
-Dane wyjsciowe: Lista liczb naturalnych.
+### Wejście (argumenty funkcji)
 
-Przyklad:
+* `a` — lista współczynników `[a_n, ..., a_0]`
+* `k` — liczba (całkowita)
 
-Dla listy wspolczynnikow [4, -3, 2] i liczby x = -2, zostanie zwrocona lista [-8, 6, -4].
+### Wyjście (zwracana wartość)
+
+* lista współczynników wielomianu `k * P(x)`
+
+### Przykład
+
+Dla `a = [4, -3, 2]` i `k = -2` funkcja zwraca:
+`[-8, 6, -4]`
+
 */
 function mnozenieWielomianuPrzezSkalar(wspolczynniki, skalar) {
   return wspolczynniki.map((wspolczynnik) => wspolczynnik * skalar);

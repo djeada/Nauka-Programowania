@@ -15,8 +15,8 @@ trojkat() {
 
     a=$1
 
-    for (( i=0; i<$a; i++ )); do
-        for (( j=0; j<=$i; j++ )); do
+    for ((i = 0; i < $a; i++)); do
+        for ((j = 0; j <= $i; j++)); do
             echo -n "x"
         done
         echo ""
@@ -28,7 +28,7 @@ choinka() {
 
     n=$1
 
-    for (( i=1; i<=$n; i++ )); do
+    for ((i = 1; i <= $n; i++)); do
         trojkat $i
     done
 
@@ -41,4 +41,3 @@ main() {
 }
 
 main "$@"
-

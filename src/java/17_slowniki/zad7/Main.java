@@ -1,13 +1,34 @@
 /*
-Tytul: Anagramy w tekscie
-Otrzymujesz tekst w postaci napisu. Twoim zadaniem jest znalezienie wszystkich slow, w ktorych te same znaki wystepuja te sama liczbe razy. Innymi slowy, szukasz anagramow w tekscie. Nalezy zignorowac roznice miedzy malymi i wielkimi literami. Pamietaj, ze slowa skladaja sie wylacznie z liter.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista list napisow.
-Przyklad:
-Dla otrzymanego napisu:
-"To absurd, ze tyran Brudas, ten straszliwy bandzior sprawuje rzady w tym kraju. Burza nad galeria i alergia na narty to zadna zbrodnia jak bandzior i jego arbuz.",
-powinna zostac zwrocona lista:
-[["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]].
+ZAD-07 — Histogram słów w tekście (ignoruj wielkość liter)
+
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`, `tekst`
+
+### Treść
+
+Wczytaj tekst. Policz częstość występowania słów (tylko litery), ignorując wielkość liter. Wypisz słownik: słowo (małe litery) → liczba wystąpień.
+
+### Wejście
+
+* 1 linia: tekst
+
+### Wyjście
+
+* Słownik
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota. Ala lubi koty.
+```
+
+**Wyjście:**
+
+```
+{'ala': 2, 'ma': 1, 'kota': 1, 'lubi': 1, 'koty': 1}
+```
 
 */
 import java.util.*;

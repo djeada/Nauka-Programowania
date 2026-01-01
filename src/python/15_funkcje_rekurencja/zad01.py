@@ -1,10 +1,42 @@
 """
-Tytul: Liczby naturalne mniejsze od N.
-Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji stworz napis skladajacy sie z liczb naturalnych mniejszych od N oddzielonych przecinkami.
-Dane wejsciowe: Liczba naturalna N.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla N = 10, powinien zostac zwrocony napis: "10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0".
+ZAD-01 — Wartość wielomianu w punkcie
+
+**Poziom:** ★☆☆
+**Tagi:** `wielomiany`, `Horner`, `I/O`
+
+### Treść
+
+Wczytaj współczynniki wielomianu ( a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 ) oraz liczbę ( x ). Oblicz wartość wielomianu w punkcie ( x ).
+
+### Wejście
+
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb całkowitych: `a_n a_{n-1} ... a_0`
+* 3. linia: `x` — liczba całkowita
+
+### Wyjście
+
+Jedna liczba całkowita — wartość wielomianu w punkcie `x`.
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+3 2 1
+1
+```
+
+**Wyjście:**
+
+```
+6
+```
+
+### Uwagi o formatowaniu
+
+* Użyj schematu Hornera (jest najprostszy i najszybszy).
 
 """
 

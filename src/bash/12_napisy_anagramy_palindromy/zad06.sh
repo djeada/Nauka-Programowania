@@ -17,8 +17,8 @@ permutacje() {
 
     local permutacje=()
 
-    for ((i=0; i<${#napis}; i++)); do
-        for permutacja in $(permutacje ${napis:0:$i}${napis:$((i+1)):${#napis}}); do
+    for ((i = 0; i < ${#napis}; i++)); do
+        for permutacja in $(permutacje ${napis:0:$i}${napis:$((i + 1)):${#napis}}); do
             local permutacja="${napis:$i:1}$permutacja"
             if [[ ! " ${permutacje[@]} " =~ " $permutacja " ]] && [ ${#permutacja} -eq ${#napis} ]; then
                 permutacje+=("$permutacja")
@@ -40,7 +40,7 @@ czy_palindrom() {
     fi
 }
 
-permutacje_palindromiczne(){
+permutacje_palindromiczne() {
     local napis=$1
     for permutacja in $(permutacje "$napis"); do
         if [ $(czy_palindrom "$permutacja") == "true" ]; then
@@ -49,7 +49,7 @@ permutacje_palindromiczne(){
     done
 }
 
-test_permutacje_palindromiczne(){
+test_permutacje_palindromiczne() {
     local wynik=($(permutacje_palindromiczne "adamm"))
     local oczekiwane=("madam" "amdma")
     assertIdenticalElements oczekiwane wynik $LINENO
@@ -60,4 +60,3 @@ main() {
 }
 
 main "$@"
-

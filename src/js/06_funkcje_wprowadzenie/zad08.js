@@ -1,15 +1,42 @@
 /*
-Tytul: Zaokraglanie w dol.
+ZAD-08 — Iloraz w dół bez / i %
 
-Tresc: Napisz funkcje, ktora zaokragli iloraz dwoch liczb naturalnych do najblizszej liczby calkowitej w dol, bez uzycia operatorow '/' i '%'.
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `pętle`, `odejmowanie`
 
-Dane wejsciowe: dwie liczby naturalne
+### Treść
 
-Dane wyjsciowe: liczba naturalna
+Napisz funkcję `zaokraglij_w_dol(a, b)`, która zwraca wartość `a // b`, ale **nie używa** operatorów `/` ani `%`.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanych liczb 7 i 2, funkcja powinna zwrocic liczbe 3.
+Dwa argumenty:
+
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna)
+
+### Ograniczenia / gwarancje
+
+* `b > 0`
+
+### Wyjście
+
+Funkcja zwraca liczbę naturalną — iloraz `a` przez `b` zaokrąglony w dół.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(zaokraglij_w_dol(7, 2))
+```
+
+**Wyjście:**
+
+```
+3
+```
+
 */
 
 // Funkcja zaokraglajaca iloraz dwoch liczb naturalnych do najblizszej liczby calkowitej w dol

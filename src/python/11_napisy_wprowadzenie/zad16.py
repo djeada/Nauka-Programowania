@@ -1,10 +1,36 @@
 """
-Tytul: Odleglosc Hamminga.
-Tresc: Otrzymujesz dwa napisy o rownej dlugosci. Oblicz odleglosc Hamminga miedzy dwoma otrzymanymi napisami. Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej dlugosci, zdefiniowana jako liczba pozycji, na ktorych napisy maja rozne znaki.
-Dane wejsciowe: Dwa napisy.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla otrzymanych napisow: “adam” i “axam”, powinna zostac zwrocona liczba: 1.
+ZAD-16 — Odległość Hamminga
+
+**Poziom:** ★★☆
+**Tagi:** `string`, `porównanie`
+
+### Treść
+
+Wczytaj dwa napisy tej samej długości i policz, na ilu pozycjach różnią się znakami.
+
+### Wejście
+
+* 1. linia: napis `s1`
+* 2. linia: napis `s2`  (ta sama długość)
+
+### Wyjście
+
+* 1. linia: odległość Hamminga
+
+### Przykład
+
+**Wejście:**
+
+```
+adam
+axam
+```
+
+**Wyjście:**
+
+```
+1
+```
 
 """
 

@@ -1,10 +1,36 @@
 """
-Tytul: Macierz kwadratowa, z elementami bedacymi iloczynem wspolrzednych.
-Tresc: Dla otrzymanej liczby naturalnej n, stworz macierz kwadratowa o rozmiarze n x n, ktorej kazdy element jest iloczynem jego wspolrzednych.
-Dane wejsciowe: Liczba naturalna n.
-Dane wyjsciowe: Lista list liczb naturalnych.
-Przyklad:
-Dla otrzymanej liczby 3 powinna zostac zwrocona macierz: [[0, 0, 0], [0, 1, 2], [0, 2, 4]].
+ZAD-02 — Macierz n×n: iloczyn indeksów
+
+**Poziom:** ★☆☆
+**Tagi:** `macierze`, `pętle zagnieżdżone`
+
+### Treść
+
+Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od 0) ma wartość `i*j`.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+* `n` wierszy po `n` liczb
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+0 0 0
+0 1 2
+0 2 4
+```
 
 """
 

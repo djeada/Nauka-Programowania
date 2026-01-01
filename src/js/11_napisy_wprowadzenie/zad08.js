@@ -1,15 +1,37 @@
 /*
-Tytul:Wypisz pionowo slowa, z ktorych sklada sie zdanie.
+ZAD-08 — Wypisz pionowo słowa ze zdania
 
-Tresc: Otrzymasz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe. Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
+**Poziom:** ★☆☆
+**Tagi:** `split`, `string`
 
-Dane wejsciowe: Napis.
+### Treść
 
-Dane wyjsciowe: Kilka napisow.
+Wczytaj zdanie, podziel na słowa i wypisz każde słowo w osobnej linii. Interpunkcja nie jest słowem.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanego napisu: "Ala ma kota", powinno zostac wypisane: "Ala", "ma", "kota".
+* 1. linia: zdanie
+
+### Wyjście
+
+* wiele linii: słowa w kolejności występowania
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+Ala
+ma
+kota
+```
+
 */
 
 function wypiszSlowa(napis) {

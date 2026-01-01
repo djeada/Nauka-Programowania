@@ -1,10 +1,38 @@
 /*
-Tytul: Rotacje napisow.
-Tresc: Dostajesz dwa napisy. Sprawdz, czy jeden z nich jest rotacja drugiego.
-Dane wejsciowe: Dwa napisy.
-Dane wyjsciowe: Wartosc logiczna.
-Przyklad:
-Dla napisow "malpka" i "pkamal" powinno zostac zwrocone "Prawda".
+ZAD-06 — Rotacje napisów
+
+**Poziom:** ★★★
+**Tagi:** `string`, `rotation`, `substring`
+
+### Treść
+
+Otrzymujesz dwa napisy `A` i `B`. Sprawdź, czy jeden z nich jest **rotacją**
+drugiego (mają tę samą długość i da się uzyskać jeden przez przesunięcie
+cykliczne drugiego).
+
+### Wejście
+
+* 1 linia: napis `A`
+* 2 linia: napis `B`
+
+### Wyjście
+
+* 1 linia: `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+malpka
+pkamal
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 #include <algorithm>
@@ -12,9 +40,7 @@ Dla napisow "malpka" i "pkamal" powinno zostac zwrocone "Prawda".
 #include <string>
 
 bool czyRotacjaV1(std::string &s1, std::string &s2) {
-
-  if (s1.length() != s2.length())
-    return false;
+  if (s1.length() != s2.length()) return false;
 
   std::string pom = s1 + s1;
 
@@ -37,10 +63,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

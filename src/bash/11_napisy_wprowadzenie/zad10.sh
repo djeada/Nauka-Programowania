@@ -1,9 +1,40 @@
-# Tytul: Policz wystapienia znaku.
-# Tresc: Dla podanego napisu i znaku, znajdz liczbe wystapien tego znaku w napisie.
-# Dane wejsciowe: Napis oraz znak.
-# Dane wyjsciowe: Liczba naturalna.
-# Przyklad:
-# Dla otrzymanego napisu: "klamra" oraz znaku 'a', powinno zostac zwrocone: 2.
+# ZAD-10 — Najdłuższe i najkrótsze słowo
+# 
+# **Poziom:** ★☆☆
+# **Tagi:** `string`, `min/max`, `len`
+# 
+# ### Treść
+# 
+# Wczytaj zdanie i znajdź:
+# 
+# a) najdłuższe słowo,
+# b) najkrótsze słowo.
+# 
+# Jeśli jest remis, wybierz słowo, które występuje wcześniej.
+# 
+# ### Wejście
+# 
+# * 1. linia: zdanie
+# 
+# ### Wyjście
+# 
+# * 1. linia: najdłuższe słowo
+# * 2. linia: najkrótsze słowo
+# 
+# ### Przykład
+# 
+# **Wejście:**
+# 
+# ```
+# Kaczka lubi wiosnę.
+# ```
+# 
+# **Wyjście:**
+# 
+# ```
+# Kaczka
+# lubi
+# ```
 
 source ../assert.sh
 

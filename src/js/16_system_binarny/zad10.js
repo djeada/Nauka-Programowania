@@ -1,16 +1,38 @@
 /*
+ZAD-10 — Ile bitów trzeba odwrócić (A → B)
 
-Tytul: Zamien A na B.
+**Poziom:** ★★☆
+**Tagi:** `XOR`, `popcount`, `bitwise`
 
-Tresc: Otrzymujesz dwie liczby naturalne. Oblicz, ile bitow nalezy odwrocic, aby zamienic liczbe A na liczbe B.
+### Treść
 
-Dane wejsciowe: Dwie liczby naturalne.
+Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w `A`, aby otrzymać `B`.
 
-Dane wyjsciowe: Liczba naturalna.
+### Wejście
 
-Przyklad:
+* 1. linia: `A`
+* 2. linia: `B`
 
-Dla otrzymanych liczb 34 i 73, powinna zostac zwrocona liczba 5.*/
+### Wyjście
+
+Jedna liczba naturalna: liczba różniących się bitów.
+
+### Przykład
+
+**Wejście:**
+
+```
+34
+73
+```
+
+**Wyjście:**
+
+```
+5
+```
+
+*/
 
 function zamien(a, b) {
   let wynik = 0;

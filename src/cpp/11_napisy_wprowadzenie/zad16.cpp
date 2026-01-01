@@ -1,10 +1,37 @@
 /*
-Tytul: Odleglosc Hamminga.
-Tresc: Otrzymujesz dwa napisy o rownej dlugosci. Oblicz odleglosc Hamminga miedzy dwoma otrzymanymi napisami. Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej dlugosci, zdefiniowana jako liczba pozycji, na ktorych napisy maja rozne znaki.
-Dane wejsciowe: Dwa napisy.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla otrzymanych napisow: “adam” i “axam”, powinna zostac zwrocona liczba: 1.
+ZAD-16 — Odległość Hamminga
+
+**Poziom:** ★★☆
+**Tagi:** `string`, `porównanie`
+
+### Treść
+
+Wczytaj dwa napisy tej samej długości i policz, na ilu pozycjach różnią się
+znakami.
+
+### Wejście
+
+* 1. linia: napis `s1`
+* 2. linia: napis `s2`  (ta sama długość)
+
+### Wyjście
+
+* 1. linia: odległość Hamminga
+
+### Przykład
+
+**Wejście:**
+
+```
+adam
+axam
+```
+
+**Wyjście:**
+
+```
+1
+```
 
 */
 #include <algorithm>
@@ -12,14 +39,12 @@ Dla otrzymanych napisow: “adam” i “axam”, powinna zostac zwrocona liczba
 #include <string>
 
 int odlegloscHammingaV1(const std::string &napisA, const std::string &napisB) {
-  if (napisA.size() != napisB.size())
-    return -1;
+  if (napisA.size() != napisB.size()) return -1;
 
   int wynik = 0;
 
   for (unsigned int i = 0; i < napisA.size(); i++) {
-    if (napisA[i] != napisB[i])
-      wynik++;
+    if (napisA[i] != napisB[i]) wynik++;
   }
 
   return wynik;
@@ -44,4 +69,3 @@ int main() {
   test2();
   return 0;
 }
-

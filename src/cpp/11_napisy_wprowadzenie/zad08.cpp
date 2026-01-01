@@ -1,10 +1,37 @@
 /*
-Tytul:Wypisz pionowo slowa, z ktorych sklada sie zdanie.
-Tresc: Otrzymasz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe. Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Kilka napisow.
-Przyklad:
-Dla otrzymanego napisu: "Ala ma kota", powinno zostac wypisane: "Ala", "ma", "kota".
+ZAD-08 — Wypisz pionowo słowa ze zdania
+
+**Poziom:** ★☆☆
+**Tagi:** `split`, `string`
+
+### Treść
+
+Wczytaj zdanie, podziel na słowa i wypisz każde słowo w osobnej linii.
+Interpunkcja nie jest słowem.
+
+### Wejście
+
+* 1. linia: zdanie
+
+### Wyjście
+
+* wiele linii: słowa w kolejności występowania
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+Ala
+ma
+kota
+```
 
 */
 #include <algorithm>
@@ -30,16 +57,14 @@ void wypiszSlowa(std::string &napis) {
     if (konc != pocz) {
       auto slowo = napis.substr(pocz, konc - pocz);
       wyczysc(slowo);
-      if (!slowo.empty())
-        std::cout << slowo << std::endl;
+      if (!slowo.empty()) std::cout << slowo << std::endl;
     }
     pocz = konc + 1;
   }
   if (konc != pocz) {
     auto slowo = napis.substr(pocz);
     wyczysc(slowo);
-    if (!slowo.empty())
-      std::cout << slowo << std::endl;
+    if (!slowo.empty()) std::cout << slowo << std::endl;
   }
 }
 
@@ -48,4 +73,3 @@ int main() {
   wypiszSlowa(napis);
   return 0;
 }
-

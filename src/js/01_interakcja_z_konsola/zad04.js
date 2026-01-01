@@ -1,28 +1,54 @@
 /*
-Tytul: Obliczanie wynikow operacji arytmetycznych.
+ZAD-04 — Podstawowe operacje arytmetyczne
 
-Tresc zadania: Napisz program, ktory pobierze od uzytkownika dwie liczby naturalne i wypisze wyniki nastepujacych operacji arytmetycznych:
+**Poziom:** ★☆☆
+**Tagi:** `arytmetyka`, `I/O`
 
-a) suma tych liczb
+### Treść
 
-b) roznica pierwszej i drugiej liczby
+Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:
 
-c) iloczyn tych liczb
+1. `a + b`
+2. `a - b`
+3. `a * b`
+4. `a // b` (dzielenie całkowite)
+5. `a % b`
+6. `a^b`
 
-d) iloraz pierwszej liczby przez druga
+### Wejście
 
-e) reszta z dzielenia pierwszej liczby przez druga
+* 1. linia: `a` (liczba całkowita)
+* 2. linia: `b` (liczba całkowita)
 
-f) pierwsza liczba podniesiona do potegi rownej drugiej liczbie
+### Wyjście
 
-Dane wejsciowe: Dwie liczby naturalne dla wszystkich podpunktow.
+6 linii — wyniki działań w kolejności 1–6.
 
-Dane wyjsciowe: Liczba naturalna dla wszystkich podpunktow.
+### Ograniczenia / gwarancje
 
-Przyklad:
+* `a ≥ 0`
+* `b > 0` (żeby dzielenie i modulo były poprawne)
 
-    Jesli uzytkownik poda liczby 9 oraz 1, program powinien wypisac liczby: 10, 1, 9, 9, 0, 9.
-    Jesli uzytkownik poda liczby 3 oraz 2, program powinien wypisac liczby: 5, 1, 6, 1, 1, 9.
+### Przykład
+
+**Wejście:**
+
+```
+3
+2
+```
+
+**Wyjście:**
+
+```
+5
+1
+6
+1
+1
+9
+```
+
 */
 
 // Pobieranie danych od uzytkownika

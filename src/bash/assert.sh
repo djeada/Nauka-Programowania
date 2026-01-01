@@ -45,7 +45,7 @@ check_alphanumeric() {
     echo 0
 }
 
-assertEqual () {
+assertEqual() {
     local lineno=$3
 
     if [ $(check_integer "$1") -eq 1 ] && [ $(check_integer "$2") -eq 1 ]; then
@@ -63,7 +63,7 @@ assertEqual () {
     fi
 }
 
-assertNotEqual () {
+assertNotEqual() {
     local lineno=$3
 
     if [ $(check_integer "$1") -eq 1 ] && [ $(check_integer "$2") -eq 1 ]; then
@@ -87,19 +87,18 @@ assertArrayEqual() {
     local lineno=$3
 
     #check length equal
-    n=$(( ${#array_a[@]}))
-    m=$(( ${#array_b[@]}))
+    n=$((${#array_a[@]}))
+    m=$((${#array_b[@]}))
     assertEqual $n $m $lineno
 
     #check element for element
-    for (( i=0; i<n; i++ ))
-    do
+    for ((i = 0; i < n; i++)); do
         assertEqual "${array_a[$i]}" "${array_b[$i]}" $lineno
     done
 
 }
 
-assertTrue () {
+assertTrue() {
     local lineno=$2
 
     if [ "$1" = false ]; then
@@ -109,7 +108,7 @@ assertTrue () {
     fi
 }
 
-assertFalse () {
+assertFalse() {
     local lineno=$2
 
     if [ "$1" = true ]; then
@@ -124,8 +123,7 @@ assert_array_contains() {
     local element="$2"
     local lineno=$3
 
-    for (( i=0; i<${#array[@]}; i++ ))
-    do
+    for ((i = 0; i < ${#array[@]}; i++)); do
         if [ "${array[$i]}" = "$element" ]; then
             return
         fi
@@ -141,8 +139,7 @@ assert_array_not_contains() {
     local element="$2"
     local lineno=$3
 
-    for (( i=0; i<${#array_a[@]}; i++ ))
-    do
+    for ((i = 0; i < ${#array_a[@]}; i++)); do
         if [ "${array_a[$i]}" = "$element" ]; then
             echo "Assertion failed:  \"$element\""
             echo "File \"$0\", line $lineno"
@@ -158,8 +155,10 @@ assertSetsEqual() {
     local -n array_2=$2
     local lineno=$3
 
-    IFS=$'\n' array_1=($(sort <<<"${array_1[*]}")); unset IFS
-    IFS=$'\n' array_2=($(sort <<<"${array_2[*]}")); unset IFS
+    IFS=$'\n' array_1=($(sort <<<"${array_1[*]}"))
+    unset IFS
+    IFS=$'\n' array_2=($(sort <<<"${array_2[*]}"))
+    unset IFS
 
     assertArrayEqual array_1 array_2 $lineno
 
@@ -170,9 +169,10 @@ assertSetsNotEqual() {
     local -n array_2=$2
     local lineno=$3
 
-    IFS=$'\n' array_1=($(sort <<<"${array_1[*]}")); unset IFS
-    IFS=$'\n' array_2=($(sort <<<"${array_2[*]}")); unset IFS
+    IFS=$'\n' array_1=($(sort <<<"${array_1[*]}"))
+    unset IFS
+    IFS=$'\n' array_2=($(sort <<<"${array_2[*]}"))
+    unset IFS
 
     assertNotEqual array_1 array_2 $lineno
 }
-

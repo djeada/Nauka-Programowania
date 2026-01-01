@@ -1,15 +1,31 @@
 /*
-Tytul: Obliczenie sumy wielomianow.
+ZAD-03 — Suma wielomianów
 
-Tresc: Otrzymujesz dwie listy n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz wspolczynniki wielomianu bedacego suma otrzymanych wielomianow.
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `wielomiany`, `listy`
 
-Dane wejsciowe: Dwie listy liczb naturalnych.
+### Treść
 
-Dane wyjsciowe: Lista liczb naturalnych.
+Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` i `b` (mogą mieć różne stopnie) i zwraca współczynniki wielomianu będącego ich sumą.
 
-Przyklad:
+### Wejście (argumenty funkcji)
 
-Dla otrzymanych dwoch list [3, 5, 2] oraz [2, -8, 1], zostanie zwrocona lista [5, -3, 3].
+* `a` — lista `[a_n, ..., a_0]`
+* `b` — lista `[b_m, ..., b_0]`
+
+### Wyjście (zwracana wartość)
+
+* lista współczynników `a + b` w tej samej konwencji
+
+### Przykład
+
+Dla `a = [3, 5, 2]` i `b = [2, -8, 1]` funkcja zwraca:
+`[5, -3, 3]`
+
+### Uwagi
+
+* Jeśli listy mają różne długości, wyrównaj je od końca (od wyrazu wolnego).
+
 */
 
 function dodawanieWielomianow(wielomian1, wielomian2) {

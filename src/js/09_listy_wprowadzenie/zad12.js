@@ -1,16 +1,56 @@
 /*
+ZAD-12 — Rotacja w lewo / prawo
 
-Tytul: Rotacja w lewo/prawo.
+**Poziom:** ★★☆
+**Tagi:** `listy`, `rotacja`, `modulo`
 
-Tresc: Otrzymujesz liste liczb calkowitych, kierunek przesuniecia (1 odpowiada przesunieciu w prawo, a 0 w lewo) oraz liczbe miejsc, o jaka elementy listy maja zostac przesuniete. Na przyklad dla przesuniecia w prawo, pierwszy element trafia na drugie miejsce, drugi na trzecie, a ostatni na pierwsze miejsce. Przesun elementy listy w podanym kierunku.
+### Treść
 
-Dane wejsciowe: Lista liczb calkowitych oraz dwie liczby naturalne.
+Wczytaj listę liczb całkowitych, a następnie:
 
-Dane wyjsciowe: Lista liczb calkowitych.
+* `kierunek = 0` → rotacja w lewo,
+* `kierunek = 1` → rotacja w prawo,
 
-Przyklad:
+o `K` pozycji (gdzie `K ≥ 0`). Wypisz listę po rotacji, przecinkami bez spacji.
 
-Dla otrzymanej listy: [5, 27, 6, 2, 1, 10, 8] oraz liczb 0 i 2, powinna zostac zwrocona lista: [6, 2, 1, 10, 8, 5, 27].
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+* kolejna linia: `kierunek` (0 lub 1)
+* ostatnia linia: `K` (`K ≥ 0`)
+
+### Wyjście
+
+Jedna linia: lista po rotacji, elementy oddzielone przecinkami.
+
+### Przykład
+
+**Wejście:**
+
+```
+7
+5
+27
+6
+2
+1
+10
+8
+0
+2
+```
+
+**Wyjście:**
+
+```
+6,2,1,10,8,5,27
+```
+
+### Uwagi
+
+* Zredukuj `K` przez `K % N`.
+
 */
 
 // Funkcja rotujaca elementy listy o podana liczbe miejsc

@@ -1,15 +1,46 @@
 /*
-Tytul: Dzien tygodnia odpowiadajacy danej liczbie.
+ZAD-04 — Dzień tygodnia z numeru
 
-Tresc: Napisz program, ktory dla pobranej liczby naturalnej bedzie wypisywal dzien tygodnia odpowiadajacy tej liczbie. Jesli otrzymano liczbe niedodatnia badz dodatnia wieksza niz 7, program powinien wypisac komunikat informujacy uzytkownika, ze liczba jest niepoprawna.
+**Poziom:** ★☆☆
+**Tagi:** `if-elif-else`, `mapowanie`, `string`
 
-Dane wejsciowe: Liczba naturalna.
+### Treść
 
-Dane wyjsciowe: Komunikat o dniu tygodnia.
+Wczytaj liczbę `n`. Jeśli `n` jest w zakresie 1–7, wypisz nazwę dnia tygodnia:
 
-Przyklad:
+1. Poniedziałek
+2. Wtorek
+3. Środa
+4. Czwartek
+5. Piątek
+6. Sobota
+7. Niedziela
 
-Dla pobranej liczby 2, program powinien wypisac napis "Wtorek".
+W przeciwnym razie wypisz:
+`Niepoprawny numer dnia tygodnia.`
+
+### Wejście
+
+* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+
+### Wyjście
+
+Jedna linia: nazwa dnia lub komunikat o błędzie.
+
+### Przykład
+
+**Wejście:**
+
+```
+8
+```
+
+**Wyjście:**
+
+```
+Niepoprawny numer dnia tygodnia.
+```
+
 */
 
 // Pobieranie danych od uzytkownika

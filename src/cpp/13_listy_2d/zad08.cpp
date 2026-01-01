@@ -1,10 +1,39 @@
 /*
-Tytul: Wypisanie elementow macierzy spiralnie.
-Tresc: Otrzymujesz liste list liczb naturalnych. Zbierz elementy otrzymanej macierzy spiralnie i zapisz je w liscie.
-Dane wejsciowe: Lista list liczb naturalnych.
-Dane wyjsciowe: Lista.
-Przyklad:
-Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona lista: [1, 2, 3, 6, 9, 8, 7, 4, 5].
+ZAD-08 — Wypisanie elementów macierzy spiralnie
+
+**Poziom:** ★★☆
+**Tagi:** `macierze`, `spirala`
+
+### Treść
+
+Wczytaj macierz `n×m` i wypisz jej elementy spiralnie (zgodnie z ruchem
+wskazówek zegara), startując z lewego górnego rogu.
+
+### Wejście
+
+* 1. linia: `n m`
+* następnie `n` wierszy po `m` liczb
+
+### Wyjście
+
+* 1 linia: elementy spiralnie, oddzielone spacjami
+
+### Przykład
+
+**Wejście:**
+
+```
+3 3
+1 2 3
+4 5 6
+7 8 9
+```
+
+**Wyjście:**
+
+```
+1 2 3 6 9 8 7 4 5
+```
 
 */
 #include <algorithm>
@@ -23,28 +52,21 @@ std::vector<int> spiralaV1(std::vector<std::vector<int>> &macierz) {
   int l = 0;
 
   while (k < y && l < x) {
-
-    for (int i = l; i < x; i++)
-      wynik.push_back(macierz[k][i]);
+    for (int i = l; i < x; i++) wynik.push_back(macierz[k][i]);
 
     k++;
 
-    for (int i = k; i < y; i++)
-      wynik.push_back(macierz[i][x - 1]);
+    for (int i = k; i < y; i++) wynik.push_back(macierz[i][x - 1]);
 
     x--;
 
     if (k < x) {
-
-      for (int i = x - 1; i > l - 1; i--)
-        wynik.push_back(macierz[y - 1][i]);
+      for (int i = x - 1; i > l - 1; i--) wynik.push_back(macierz[y - 1][i]);
       y--;
     }
 
     if (l < y) {
-
-      for (int i = y - 1; i > k - 1; i--)
-        wynik.push_back(macierz[i][l]);
+      for (int i = y - 1; i > k - 1; i--) wynik.push_back(macierz[i][l]);
       l++;
     }
   }
@@ -78,4 +100,3 @@ int main() {
   test2();
   return 0;
 }
-

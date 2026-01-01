@@ -1,10 +1,45 @@
 /*
-Tytul: Obroc macierz o 90 stopni.
-Tresc: Otrzymujesz macierz skladajaca sie z liczb naturalnych. Obroc ja o 90 stopni. Tzn. zamien miejscami ostatnia kolumne z ostatnim wierszem, przedostatnia kolumne z przedostatnim wierszem itd.
-Dane wejsciowe: Macierz skladajaca sie z liczb naturalnych.
-Dane wyjsciowe: Macierz skladajaca sie z liczb naturalnych.
-Przyklad:
-Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona macierz: [[7,4,1], [8,5,2], [9,6,3]].
+ZAD-09 — Klepsydra o największej sumie
+
+**Poziom:** ★★☆
+**Tagi:** `macierze`, `przeszukiwanie`
+
+### Treść
+
+Wczytaj macierz `n×m` (n,m ≥ 3). Znajdź maksymalną sumę „klepsydry” (7 pól):
+
+```
+a b c
+  d
+e f g
+```
+
+### Wejście
+
+* 1. linia: `n m`
+* następnie `n` wierszy po `m` liczb całkowitych
+
+### Wyjście
+
+* 1 linia: maksymalna suma klepsydry
+
+### Przykład
+
+**Wejście:**
+
+```
+4 4
+7 4 2 0
+4 8 10 8
+3 6 7 6
+3 9 19 14
+```
+
+**Wyjście:**
+
+```
+75
+```
 
 */
 import java.util.*;

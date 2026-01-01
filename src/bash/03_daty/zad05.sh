@@ -1,9 +1,36 @@
-# Tytul: Ile dni ma miesiac?
-# Tresc: Napisz program, ktory dla pobranej liczby naturalnej bedzie wypisywal liczbe dni w miesiacu odpowiadajacemu tej liczbie. Jesli pobrana liczba nie jest poprawnym numerem miesiaca, program powinien poinformowac o tym uzytkownika.
-# Dane wejsciowe: Liczba naturalna.
-# Dane wyjsciowe: Liczba naturalna.
-# Przyklad:
-# Dla pobranej liczby 1, program powinien zwrocic liczbe 31.
+# ZAD-05 — Liczba dni w miesiącu (rok nieprzestępny)
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `if`, `tablice`, `walidacja`
+#
+# ### Treść
+#
+# Wczytaj numer miesiąca `m`. Zakładając rok **nieprzestępny**, wypisz liczbę dni w tym miesiącu.
+# Jeśli `m` nie jest w zakresie 1–12, wypisz:
+# `Niepoprawny numer miesiąca.`
+#
+# ### Wejście
+#
+# * 1 linia: `m` (liczba całkowita, `m ≥ 0`)
+#
+# ### Wyjście
+#
+# * liczba dni (jedna linia) **albo**
+# * komunikat o błędzie (jedna linia)
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 2
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 28
+# ```
 
 main() {
 
@@ -52,4 +79,3 @@ main() {
 }
 
 main "$@"
-

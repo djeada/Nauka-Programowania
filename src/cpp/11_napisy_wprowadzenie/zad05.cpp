@@ -1,22 +1,53 @@
 /*
-Tytul: Wypisz co k-ty znak napisu poziomo i pionowo.
-Tresc: Otrzymasz napis oraz liczbe k.
-a) Wypisz co k-ty znak napisu poziomo, rozdzielajac znaki spacjami.
-b) Wypisz co k-ty znak napisu pionowo, rozdzielajac znaki enterami.
-Dane wejsciowe: Napis oraz liczba.
-Dane wyjsciowe: Napis.
-Przyklad:
-a) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony napis: "z h n".
-b) Dla otrzymanego napisu: "Grzechotnik" oraz liczby 3, powinien zostac zwrocony napis:
+ZAD-05 — Co k-ty znak poziomo i pionowo
+
+**Poziom:** ★☆☆
+**Tagi:** `string`, `slicing`, `pętle`
+
+### Treść
+
+Wczytaj napis i liczbę `k`.
+
+a) Wypisz co `k`-ty znak w jednym wierszu, oddzielając znaki spacjami.
+b) Wypisz co `k`-ty znak pionowo (każdy w osobnej linii).
+
+### Wejście
+
+* 1. linia: napis
+* 2. linia: liczba naturalna `k` (k ≥ 1)
+
+### Wyjście
+
+* (a) 1 linia: znaki oddzielone spacjami
+* (b) wiele linii: każdy znak osobno
+
+### Przykład
+
+**Wejście:**
+
+```
+Grzechotnik
+3
+```
+
+**Wyjście:**
+
+```
+z h n
 z
 h
 n
+```
+
+### Uwagi o formatowaniu
+
+* Dokładnie jedna spacja między znakami w punkcie (a), bez spacji na końcu
+linii.
 
 */
 #include <iostream>
 
 void wypiszPoziomo(const std::string &napis, int k) {
-
   for (unsigned int i = 0; i < napis.size(); i += k)
     std::cout << napis[i] << ", ";
 
@@ -24,7 +55,6 @@ void wypiszPoziomo(const std::string &napis, int k) {
 }
 
 void wypiszPionowo(const std::string &napis, int k) {
-
   for (unsigned int i = 0; i < napis.size(); i += k)
     std::cout << napis[i] << std::endl;
 }
@@ -37,4 +67,3 @@ int main() {
 
   return 0;
 }
-

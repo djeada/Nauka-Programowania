@@ -1,9 +1,38 @@
-# Tytul: Polacz posortowane listy w posortowana liste.
-# Tresc: Dla otrzymanych dwoch posortowanych list, polacz je w jedna posortowana liste.
-# Dane wejsciowe: Dwie listy liczb calkowitych.
-# Dane wyjsciowe: Lista liczb calkowitych.
-# Przyklad:
-# Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinna zostac zwrocona lista: [2, 3, 4, 7, 9].
+# ZAD-07 — Różnica między dwoma listami
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `list`, `set`
+#
+# ### Treść
+#
+# Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **tylko w jednej** z list (różnica symetryczna).
+#
+# * Kolejność elementów w wyniku może być **dowolna**.
+# * Jeśli wszystkie elementy są wspólne — wypisz `[]`.
+#
+# ### Wejście
+#
+# * 1 linia: lista 1
+# * 2 linia: lista 2
+#
+# ### Wyjście
+#
+# * 1 linia: lista elementów niewspólnych
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# [9, 2, 5, 4]
+# [4, 2, 1]
+# ```
+#
+# **Wyjście (jedna z poprawnych odpowiedzi):**
+#
+# ```
+# [9, 5, 1]
+# ```
 
 source ../assert.sh
 
@@ -18,7 +47,7 @@ roznica_v1() {
             fi
         done
         if [ $flag -eq 0 ]; then
-            wynik+=( "$elem_a" )
+            wynik+=("$elem_a")
         fi
     done
 
@@ -31,7 +60,7 @@ roznica_v1() {
             fi
         done
         if [ $flag -eq 0 ]; then
-            wynik+=( "$elem_b" )
+            wynik+=("$elem_b")
         fi
     done
 
@@ -66,4 +95,3 @@ main() {
 }
 
 main "$@"
-

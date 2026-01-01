@@ -1,16 +1,40 @@
 /*
+ZAD-05 — Zbiór potęgowy listy
 
-Tytul: Zbior potegowy 
+**Poziom:** ★★★
+**Tagi:** `list`, `subsets`, `combinatorics`
 
-Tresc: Otrzymujesz liste liczb naturalnych. Zwroc zbior potegowy otrzymanej listy, czyli zbior wszystkich jej podzbiorow.
+### Treść
 
-Dane wejsciowe: Lista liczb naturalnych.
+Otrzymujesz listę liczb naturalnych (mogą występować powtórzenia). Wygeneruj zbiór wszystkich możliwych podzbiorów tej listy.
 
-Dane wyjsciowe: Lista list zawierajaca elementy z wejsciowej listy lub pusta liste.
+Wynik ma zawierać wszystkie podzbiory (włącznie z pustym).
 
-Przyklad:
+### Wejście
 
-Dla wejsciowej listy [1, 2, 1], powinna zostac zwrocona lista: [[], [1], [2], [1, 2], [1, 1], [1, 2, 1]].
+* 1 linia: lista liczb naturalnych `A`
+
+### Wyjście
+
+* 1 linia: lista list (wszystkie podzbiory)
+
+### Przykład
+
+**Wejście:**
+
+```
+[1, 2, 1]
+```
+
+**Wyjście:**
+
+```
+[[], [1], [2], [1, 2], [1, 1], [2, 1], [1, 1, 2], [1, 2, 1]]
+```
+
+### Uwagi
+
+* Jeśli sprawdzarka wymaga konkretnej kolejności podzbiorów, musi być ona opisana w treści — w przeciwnym razie dopuszczalna może być dowolna. (Jeśli chcesz, mogę dopisać sztywną konwencję kolejności, ale bez rozwiązań.)
 
 */
 function zbiorPotegowy(lista) {

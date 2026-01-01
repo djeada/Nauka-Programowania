@@ -1,16 +1,38 @@
 /*
+ZAD-05 — Wyodrębnij cyfry z tekstu
 
-Tytul: Wyodrebnij cyfry z tekstu.
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
 
-Tresc: Dostajesz napis. Zwroc napis skladajacy sie z cyfr wystepujacych w tym napisie.
+### Treść
 
-Dane wejsciowe: Napis.
+Otrzymujesz napis zawierający różne znaki. Wyodrębnij wszystkie cyfry i wypisz je jako jeden napis (z zachowaniem kolejności).
 
-Dane wyjsciowe: Napis.
+### Wejście
 
-Przyklad:
+Jedna linia:
 
-Dla napisu: “Terminator2001”, powinien zostac zwrocony napis: “2001”.
+* `tekst`
+
+### Wyjście
+
+Jedna linia:
+
+* napis złożony tylko z cyfr z tekstu wejściowego
+
+### Przykład
+
+**Wejście:**
+
+```
+Terminator2001
+```
+
+**Wyjście:**
+
+```
+2001
+```
 
 */
 

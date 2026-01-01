@@ -1,9 +1,37 @@
-# Tytul: Podziel tekst wzgledem znakow interpunkcyjnych.
-# Tresc: Dostajesz napis. Podziel go wzgledem znakow interpunkcyjnych i zapisz w liscie. Usun spacje wystepujace na poczatku lub koncu otrzymanych napisow.
-# Dane wejsciowe: Napis.
-# Dane wyjsciowe: Lista napisow.
-# Przyklad:
-# Dla napisu: “Ani nie poszedl do kina, ani nie wybral sie do teatru.”, powinna zostac zwrocona lista: [“Ani nie poszedl do kina”, “ani nie wybral sie do teatru”].
+# ZAD-05 — Wyodrębnij cyfry z tekstu
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `regex`, `string`
+#
+# ### Treść
+#
+# Otrzymujesz napis zawierający różne znaki. Wyodrębnij wszystkie cyfry i wypisz je jako jeden napis (z zachowaniem kolejności).
+#
+# ### Wejście
+#
+# Jedna linia:
+#
+# * `tekst`
+#
+# ### Wyjście
+#
+# Jedna linia:
+#
+# * napis złożony tylko z cyfr z tekstu wejściowego
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# Terminator2001
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 2001
+# ```
 
 odfiltruj_cyfry() {
     echo "$1" | grep -o '[0-9]'
@@ -21,4 +49,3 @@ main() {
 }
 
 main "$@"
-

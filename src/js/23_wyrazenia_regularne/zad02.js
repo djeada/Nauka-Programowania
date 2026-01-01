@@ -1,23 +1,46 @@
 /*
+ZAD-02 — Sprawdź poprawność hasła
 
-Tytul: Sprawdz poprawnosc hasla.
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `walidacja`
 
-Tresc: Masz napis reprezentujacy haslo. Sprawdz, czy haslo spelnia nastepujace warunki:
+### Treść
 
-1. Haslo musi zawierac przynajmniej jedna mala litere [a-z].
-2. Haslo musi zawierac przynajmniej jedna duza litere [A-Z].
-3. Haslo musi zawierac przynajmniej jedna cyfre [0-9].
-4. Haslo musi zawierac przynajmniej jeden znak specjalny [! # $ % & ' * + — / = ? ^ _ ` { | } ~].
-5. Minimalna dlugosc hasla to 8 znakow.
-6. Maksymalna dlugosc hasla to 20 znakow.
+Otrzymujesz napis reprezentujący hasło. Sprawdź, czy hasło spełnia wszystkie warunki:
 
-Dane wejsciowe: Napis.
+1. Zawiera co najmniej jedną małą literę `[a–z]`.
+2. Zawiera co najmniej jedną wielką literę `[A–Z]`.
+3. Zawiera co najmniej jedną cyfrę `[0–9]`.
+4. Zawiera co najmniej jeden znak specjalny spośród:
+   `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`.
+5. Ma długość co najmniej 8 znaków.
+6. Ma długość nie większą niż 20 znaków.
 
-Dane wyjsciowe: Wartosc logiczna.
+### Wejście
 
-Przyklad:
+Jedna linia:
 
-Dla napisu: “abc1234”, powinna zostac zwrocona wartosc logiczna: Falsz.
+* `haslo`
+
+### Wyjście
+
+Jedna linia:
+
+* `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+abc1234
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
 
 */
 

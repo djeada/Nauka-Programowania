@@ -1,17 +1,41 @@
 /*
-Tytul: Usun powtorzenia stojacych obok siebie znakow.
-Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen stojacych obok siebie znakow i zachowanie tylko pierwszego wystapienia kazdego znaku.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “ABA”.
+ZAD-05 — Usuń powtórzenia sąsiadujących znaków
+
+**Poziom:** ★★★
+**Tagi:** `string`, `compress`, `run-length`
+
+### Treść
+
+Otrzymujesz napis. Usuń powtórzenia znaków występujących **bezpośrednio obok
+siebie**, pozostawiając jedno wystąpienie z każdej „serii”.
+
+### Wejście
+
+* 1 linia: napis `S`
+
+### Wyjście
+
+* 1 linia: napis po redukcji sąsiadów
+
+### Przykład
+
+**Wejście:**
+
+```
+AAAAAAAAAABBBBBBBBA
+```
+
+**Wyjście:**
+
+```
+ABA
+```
 
 */
 #include <cassert>
 #include <string>
 
 std::string usunPowtorzeniaV1(const std::string &slowo) {
-
   std::string wynik;
   char ostatniUsunietyZnak;
   int n = slowo.size();
@@ -66,7 +90,6 @@ void test5() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
@@ -77,4 +100,3 @@ int main() {
 }
 
 // Compiled with g++ -std=c++17 Zad1.cpp -lstdc++fs -o exe
-

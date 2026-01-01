@@ -1,17 +1,41 @@
 /*
+ZAD-08 — Połącz posortowane listy w posortowaną listę bez duplikatów
 
-Tytul: Polacz posortowane listy w posortowana liste.
+**Poziom:** ★★☆
+**Tagi:** `list`, `merge`, `sort`
 
-Tresc: Dla otrzymanych dwoch posortowanych list, polacz je w jedna posortowana liste.
+### Treść
 
-Dane wejsciowe: Dwie listy liczb calkowitych.
+Wczytaj dwie listy liczb całkowitych, każda **posortowana rosnąco**. Połącz je w jedną listę:
 
-Dane wyjsciowe: Lista liczb calkowitych.
+* wynik ma być posortowany rosnąco,
+* wynik ma zawierać **unikalne** elementy (bez duplikatów).
 
-Przyklad:
+### Wejście
 
-Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinna zostac zwrocona lista: [2, 3, 4, 7, 9].
- */
+* 1 linia: lista 1 (posortowana rosnąco)
+* 2 linia: lista 2 (posortowana rosnąco)
+
+### Wyjście
+
+* 1 linia: jedna posortowana lista bez duplikatów
+
+### Przykład
+
+**Wejście:**
+
+```
+[2, 4, 7]
+[3, 5, 9]
+```
+
+**Wyjście:**
+
+```
+[2, 3, 4, 5, 7, 9]
+```
+
+*/
 
 // Funkcja zwracajaca liste elementow, ktore nie sa czescia wspolna obu list
 function polaczPosortowaneListy(lista1, lista2) {

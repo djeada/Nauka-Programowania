@@ -1,10 +1,38 @@
 /*
-Tytul: Sznurek.
-Tresc: Masz do sprzedania sznurek o dlugosci n, a takze liste cen dla sznurkow o dlugosciach od 1 do n. Ceny moga byc rozne dla roznych dlugosci. Znajdz maksymalny zysk, ktory mozna osiagnac poprzez sprzedaz danego sznurka.
-Dane wejsciowe: Lista n liczb calkowitych reprezentujacych ceny dla sznurkow o dlugosciach od 1 do n, oraz liczba naturalna n reprezentujaca dlugosc sznurka, ktory chcesz sprzedac.
-Dane wyjsciowe: Najwieksza mozliwa wartosc, jaka mozna uzyskac ze sprzedazy danego sznurka.
-Przyklad:
-Dla listy cen: [1, 5, 8, 9, 10, 17, 17, 20] oraz dlugosci sznurka 4, powinna zostac zwrocona liczba 10.
+ZAD-08 — Maksymalny zysk ze sprzedaży sznurka
+
+**Poziom:** ★★★
+**Tagi:** `dp`, `rod cutting`, `optymalizacja`
+
+### Treść
+
+Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`.
+Możesz pociąć sznurek na kawałki o całkowitych długościach. Znajdź maksymalny
+zysk.
+
+### Wejście
+
+* 1 linia: lista `prices` (długości 1..n)
+* 2 linia: `n` (liczba naturalna)
+
+### Wyjście
+
+* 1 linia: maksymalny zysk (liczba całkowita)
+
+### Przykład
+
+**Wejście:**
+
+```
+[1, 5, 8, 9, 10, 17, 17, 20]
+4
+```
+
+**Wyjście:**
+
+```
+10
+```
 
 */
 #include <cassert>
@@ -14,21 +42,19 @@ Dla listy cen: [1, 5, 8, 9, 10, 17, 17, 20] oraz dlugosci sznurka 4, powinna zos
 // Zlozonosc czasowa O(n^n)
 // Zlozonosc pamieciowa O(1)
 int podzielSznurekV1(std::vector<int> &ceny, int n) {
-
   if (ceny.size() < n)
-    throw std::invalid_argument("Dlugosc sznurka do sprzedazy nie moze byc "
-                                "wieksza od liczby elementow listy ceny.");
+    throw std::invalid_argument(
+        "Dlugosc sznurka do sprzedazy nie moze byc "
+        "wieksza od liczby elementow listy ceny.");
 
-  if (n == 0)
-    return 0;
+  if (n == 0) return 0;
 
   auto maks = 0;
 
   for (auto i = 0; i < n; i++) {
     auto cena = ceny[i] + podzielSznurekV1(ceny, n - i - 1);
 
-    if (cena > maks)
-      maks = cena;
+    if (cena > maks) maks = cena;
   }
 
   return maks;
@@ -37,10 +63,10 @@ int podzielSznurekV1(std::vector<int> &ceny, int n) {
 // Zlozonosc czasowa O(n^2)
 // Zlozonosc pamieciowa O(n)
 int podzielSznurekV2(std::vector<int> &ceny, int n) {
-
   if (ceny.size() < n)
-    throw std::invalid_argument("Dlugosc sznurka do sprzedazy nie moze byc "
-                                "wieksza od liczby elementow listy ceny.");
+    throw std::invalid_argument(
+        "Dlugosc sznurka do sprzedazy nie moze byc "
+        "wieksza od liczby elementow listy ceny.");
 
   std::vector<int> pom(n + 1, 0);
 
@@ -87,11 +113,9 @@ void test3() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
 
   return 0;
 }
-

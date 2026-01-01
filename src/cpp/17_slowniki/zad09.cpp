@@ -1,11 +1,35 @@
 /*
-Tytul: Powtarzajace sie znaki
-Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrocenie wszystkich znakow, ktore wystepuja co najmniej 2 razy w ciagu.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanego napisu: "aaabbbccc"
-Powinien zostac zwrocony napis: "abc"
+ZAD-09 — Znaki występujące co najmniej dwa razy
+
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
+
+### Treść
+
+Wczytaj napis. Wypisz napis złożony z **unikalnych** znaków, które występują co
+najmniej 2 razy, w kolejności pierwszego pojawienia się w wejściu.
+
+### Wejście
+
+* 1 linia: napis
+
+### Wyjście
+
+* 1 linia: wynikowy napis
+
+### Przykład
+
+**Wejście:**
+
+```
+aaabbbccc
+```
+
+**Wyjście:**
+
+```
+abc
+```
 
 */
 #include <algorithm>
@@ -21,8 +45,7 @@ std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
    */
   std::unordered_map<char, int> slownik;
 
-  for (const auto &znak : slowo)
-    slownik[znak]++;
+  for (const auto &znak : slowo) slownik[znak]++;
 
   return slownik;
 }
@@ -36,8 +59,7 @@ std::vector<char> znaki(const std::string &slowo) {
   std::vector<char> wynik;
 
   for (auto it = slownik.begin(); it != slownik.end(); it++) {
-    if (it->second > 1)
-      wynik.push_back(it->first);
+    if (it->second > 1) wynik.push_back(it->first);
   }
 
   return wynik;
@@ -68,10 +90,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

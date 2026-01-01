@@ -1,16 +1,39 @@
 /*
+ZAD-04 — Sortowanie napisów według długości
 
-Tytul: Sortowanie napisow w liscie wzgledem dlugosci.
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `string`, `list`
 
-Tresc: Masz dana liste napisow. Posortuj napisy w liscie wzgledem dlugosci.
+### Treść
 
-Dane wejsciowe: Lista napisow.
+Otrzymujesz listę napisów. Posortuj ją rosnąco według długości napisów.
 
-Dane wyjsciowe: Lista napisow.
+### Wejście
 
-Przyklad:
+* 1 linia: liczba naturalna `N`
+* następnie `N` linii: napis (bez spacji)
 
-Dla listy ["abcd", "ab", "a", "abc"] powinno zostac zwrocone ["a", "ab", "abc", "abcd"].
+### Wyjście
+
+* 1 linia: lista napisów posortowana jak w przykładzie
+
+### Przykład
+
+**Wejście:**
+
+```
+4
+abcd
+ab
+a
+abc
+```
+
+**Wyjście:**
+
+```
+['a', 'ab', 'abc', 'abcd']
+```
 
 */
 

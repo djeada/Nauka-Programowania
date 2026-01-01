@@ -1,32 +1,68 @@
 /*
-Tytul: Znalezienie sciezki pliku o danej nazwie
-Tresc: Otrzymujesz napis reprezentujacy nazwe pliku. Przeszukaj caly system i zapisz w liscie wszystkie sciezki plikow o podanej nazwie.
-Dane wejsciowe: Napis
-Dane wyjsciowe: Lista napisow
+ZAD-03 — Znajdź wszystkie ścieżki plików o danej nazwie (rekurencyjnie)
+
+**Poziom:** ★★☆
+**Tagi:** `files`, `walk`, `recursive`, `pathlib`
+
+### Treść
+
+Otrzymujesz nazwę pliku (np. `raport.docx`). Przeszukaj cały system plików i
+znajdź wszystkie pliki o tej nazwie. Wypisz listę pełnych ścieżek do
+znalezionych plików.
+
+### Wejście
+
+* 1 linia: `filename` (np. `raport.docx`)
+
+### Wyjście
+
+* 1 linia: lista pełnych ścieżek (napisy)
+
+### Przykład
+
+**Wejście:**
+
+```
+raport.docx
+```
+
+**Wyjście:**
+
+```
+[
+  'C:\Users\Username\Documents\raport.docx',
+  'D:\Projekty\Raporty\raport.docx',
+  'E:\Backup\raport.docx'
+]
+```
+
+### Uwagi
+
+* W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów —
+program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca).
 
 */
+#include <pwd.h>
+#include <sys/types.h>
+#include <unistd.h>
+
 #include <algorithm>
 #include <cassert>
 #include <cstdlib>
 #include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
-#include <pwd.h>
-#include <sys/types.h>
-#include <unistd.h>
 
 namespace filesys = std::experimental::filesystem;
 
 std::string katalogDomowy() {
-
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
   return std::string(getenv("HOMEDRIVE")) + std::string(getenv("HOMEPATH"));
 
 #else
   const char *homedir;
 
-  if ((homedir = getenv("HOME")) == NULL)
-    homedir = getpwuid(getuid())->pw_dir;
+  if ((homedir = getenv("HOME")) == NULL) homedir = getpwuid(getuid())->pw_dir;
 
   return std::string(homedir);
 #endif
@@ -36,7 +72,6 @@ std::string katalogDomowy() {
 
 std::vector<std::string> plikiWFolderze(const std::string &sciezkaFolderu,
                                         const std::string &szukanyPlik) {
-
   std::vector<std::string> listaSciezek;
   try {
     for (auto &file : filesys::recursive_directory_iterator(sciezkaFolderu)) {
@@ -57,7 +92,6 @@ std::vector<std::string> sciezkiWSystemie(const std::string &szukanyPlik) {
 }
 
 void test1() {
-
   const std::string szukanyPlik = "test.txt";
 
   // stworz dwa foldery
@@ -89,9 +123,7 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
 }
-

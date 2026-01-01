@@ -1,10 +1,41 @@
 /*
-Tytul: Czy napis A jest poczatkiem napisu B?
-Tresc: Dostajesz dwa napisy. Twoim zadaniem jest sprawdzenie, czy drugi napis zaczyna sie od pierwszego napisu.
-Dane wejsciowe: Dwa napisy.
-Dane wyjsciowe: Wartosc logiczna.
-Przyklad:
-Dla napisow: “Dinozaur jest zly” oraz “Dino”, zwrocona wartosc powinna byc: Prawda.
+ZAD-03 — Czy napis A jest początkiem napisu B?
+
+**Poziom:** ★★☆
+**Tagi:** `string`, `prefix`
+
+### Treść
+
+Otrzymujesz dwa napisy:
+
+1. Napis `A` — potencjalny przedrostek,
+2. Napis `B` — napis testowany.
+
+Sprawdź, czy `B` **zaczyna się** od `A`.
+
+### Wejście
+
+* 1 linia: `A`
+* 2 linia: `B`
+
+### Wyjście
+
+* 1 linia: `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+Dino
+Dinozaur jest zly
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 #include <algorithm>
@@ -34,10 +65,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

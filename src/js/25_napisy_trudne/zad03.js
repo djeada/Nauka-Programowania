@@ -1,16 +1,41 @@
 /*
+ZAD-03 — Czy napis A jest początkiem napisu B?
 
-Tytul: Czy napis A jest poczatkiem napisu B?
+**Poziom:** ★★☆
+**Tagi:** `string`, `prefix`
 
-Tresc: Dostajesz dwa napisy. Twoim zadaniem jest sprawdzenie, czy drugi napis zaczyna sie od pierwszego napisu.
+### Treść
 
-Dane wejsciowe: Dwa napisy.
+Otrzymujesz dwa napisy:
 
-Dane wyjsciowe: Wartosc logiczna.
+1. Napis `A` — potencjalny przedrostek,
+2. Napis `B` — napis testowany.
 
-Przyklad:
+Sprawdź, czy `B` **zaczyna się** od `A`.
 
-Dla napisow: “Dinozaur jest zly” oraz “Dino”, zwrocona wartosc powinna byc: Prawda.
+### Wejście
+
+* 1 linia: `A`
+* 2 linia: `B`
+
+### Wyjście
+
+* 1 linia: `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+Dino
+Dinozaur jest zly
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 

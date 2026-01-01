@@ -1,16 +1,38 @@
 /*
+ZAD-01 — Sortowanie znaków w napisie
 
-Tytul: Sortowanie znakow w napisie.
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `string`
 
-Tresc: Otrzymujesz napis. Posortuj alfabetycznie jego znaki.
+### Treść
 
-Dane wejsciowe: Napis.
+Otrzymujesz napis. Posortuj alfabetycznie wszystkie jego znaki i wypisz wynikowy napis.
 
-Dane wyjsciowe: Napis.
+### Wejście
 
-Przyklad:
+* 1 linia: napis `s`
 
-Dla napisu "Ala ma kota" powinno zostac zwrocone " Aaaaklmot".
+### Wyjście
+
+* 1 linia: napis `s` po posortowaniu znaków rosnąco (porównanie znaków jak w Pythonie / Unicode)
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+ Aaaaklmot
+```
+
+### Uwagi o formatowaniu
+
+* Spacje też są znakami i biorą udział w sortowaniu (dlatego w przykładzie wyjście zaczyna się od spacji).
 
 */
 

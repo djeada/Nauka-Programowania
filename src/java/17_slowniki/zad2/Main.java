@@ -1,16 +1,41 @@
 /*
-Tytul: Lista pracownikow z najwiekszymi zyskami.
-Tresc: Otrzymujesz liste par. Pierwszym elementem pary jest napis reprezentujacy imie i nazwisko pracownika, drugim zysk z transakcji, jaka dany pracownik przeprowadzil. Znajdz pracownika, ktory przyniosl firmie najwiecej zysku.
-Dane wejsciowe: Lista par napisow i liczb naturalnych.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanej listy:
-[["Barnaba Barabash", 120],
-["Jon Snow", 100],
-["Kira Summer", 300],
-["Barnaba Barabash", 200],
-["Bob Marley", 110]]
-zostanie zwrocony napis: “Barnaba Barabash”.
+ZAD-02 — Słownik z dwóch list (klucze i wartości)
+
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `listy`
+
+### Treść
+
+Wczytaj dwie listy. Jeśli mają tę samą długość, utwórz słownik: klucz z pierwszej listy → wartość z drugiej listy.
+Jeśli długości są różne, wypisz pusty słownik `{}`.
+
+### Wejście
+
+* 1 linia: `n`
+* 2 linia: `m`
+* następnie `n` liczb (pierwsza lista)
+* następnie `m` liczb (druga lista)
+
+### Wyjście
+
+* Słownik albo `{}`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+3
+3 5 8
+1 2 -1
+```
+
+**Wyjście:**
+
+```
+{3: 1, 5: 2, 8: -1}
+```
 
 */
 import java.util.*;

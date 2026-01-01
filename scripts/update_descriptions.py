@@ -14,11 +14,12 @@ Supported file types:
 - Shell (.sh) - uses # comments
 """
 from enum import Enum
-from typing import Optional, Tuple
+from typing import Optional, Tuple, Dict, List
 from dataclasses import dataclass
 from pathlib import Path
 import sys
 import argparse
+import re
 
 
 class CommentStyle(Enum):
@@ -200,7 +201,28 @@ def insert_top_comment(
         file.writelines(modified_content)
 
 
-def parse_tasks(input_str):
+def create_stub_file(file_path: Path, file_extension: str) -> None:
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    if file_extension == "py":
+        content = 'if __name__ == "__main__":\n    pass\n'
+    elif file_extension == "cpp":
+        content = "#include <iostream>\n\nint main() {\n    return 0;\n}\n"
+    elif file_extension == "java":
+        content = "public class Main {\n    public static void main(String[] args) {\n    }\n}\n"
+    elif file_extension == "js":
+        content = "function main() {\n}\n\nmain();\n"
+    elif file_extension == "rs":
+        content = "fn main() {}\n"
+    elif file_extension == "sh":
+        content = "main() {\n}\n\nmain \"$@\"\n"
+    elif file_extension == "hs":
+        content = "main :: IO ()\nmain = pure ()\n"
+    else:
+        content = ""
+    file_path.write_text(content, encoding="utf-8")
+
+
+def parse_tasks(input_str) -> Dict[str, List[str]]:
     """
     Parse tasks from a markdown file content.
     
@@ -210,100 +232,66 @@ def parse_tasks(input_str):
     Returns:
         Dictionary mapping task IDs to task content
     """
-    # split the input string into lines
     lines = input_str.split("\n")
+    tasks: Dict[str, List[str]] = {}
 
-    # initialize a dictionary to hold the tasks
-    tasks = {}
+    task_header_re = re.compile(r"^##\s+(ZAD-\d{2})([A-Z])?(?:\s+[—-]\s*(.*))?$")
+    current_key = None
+    current_header = None
+    current_lines: List[str] = []
 
-    # initialize variables to keep track of the current task
-    task_num = 1
-    task_lines = []
-    in_task = False
+    def flush_task():
+        nonlocal current_key, current_header, current_lines
+        if current_key is None or current_header is None:
+            return
+        body = "\n".join(current_lines).rstrip()
+        part_text = current_header if not body else f"{current_header}\n{body}"
+        tasks.setdefault(current_key, []).append(part_text)
+        current_key = None
+        current_header = None
+        current_lines = []
 
-    # loop over the lines and extract task information
     for line in lines:
-        line_stripped = line.strip()
-
-        # Check if this is a task header (e.g., "## Zadanie 1" or "## Zad1")
-        if line_stripped.startswith("## Zad"):
-            # add the current task to the dictionary
-            if task_lines:
-                task_id = "zad" + str(task_num)
-                task_content = "\n".join(task_lines)
-                tasks[task_id] = task_content
-                task_num += 1
-                task_lines = []
-            
-            in_task = True
-            # Skip the task header itself, start collecting from next line
+        stripped = line.rstrip("\n")
+        header_match = task_header_re.match(stripped.strip())
+        if header_match:
+            flush_task()
+            base_id = header_match.group(1)
+            letter = header_match.group(2) or ""
+            title = header_match.group(3) or ""
+            header_text = base_id + letter
+            if title:
+                header_text += f" — {title}"
+            current_key = base_id
+            current_header = header_text
             continue
 
-        # Collect lines that are part of a task
-        if in_task and line_stripped:
-            # Stop at the horizontal rule or next major section
-            if line_stripped == "---" or line_stripped.startswith("# "):
+        if current_key is not None:
+            if stripped.strip() == "---":
                 continue
-            task_lines.append(line_stripped)
+            if stripped.lstrip().startswith("# "):
+                continue
+            current_lines.append(stripped)
 
-    # Don't forget the last task
-    if task_lines:
-        task_id = "zad" + str(task_num)
-        task_content = "\n".join(task_lines)
-        tasks[task_id] = task_content
-
-    # return the dictionary of tasks
+    flush_task()
     return tasks
 
 
-def main():
-    parser = argparse.ArgumentParser(
-        description="Update file descriptions/comments from task markdown files.",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Example usage:
-  python update_descriptions.py zbior_zadan/ src/python/ py
-  python update_descriptions.py zbior_zadan/ src/cpp/ cpp
-  python update_descriptions.py zbior_zadan/ src/java/ java
-        """
-    )
-    parser.add_argument(
-        "input_dir",
-        type=str,
-        help="Directory containing markdown files with task descriptions"
-    )
-    parser.add_argument(
-        "output_dir",
-        type=str,
-        help="Directory containing source code files to update"
-    )
-    parser.add_argument(
-        "file_extension",
-        type=str,
-        help="File extension (e.g., py, cpp, java, js, rs, sh)"
-    )
-
-    args = parser.parse_args()
-
-    # Validate input directory
-    input_path = Path(args.input_dir)
+def update_descriptions(input_dir: str, output_dir: str, file_extension: str) -> None:
+    # Validate input directory or file
+    input_path = Path(input_dir)
     if not input_path.exists():
-        print(f"Error: Input directory '{args.input_dir}' does not exist.", file=sys.stderr)
-        sys.exit(1)
-    if not input_path.is_dir():
-        print(f"Error: Input path '{args.input_dir}' is not a directory.", file=sys.stderr)
-        sys.exit(1)
+        print(f"Error: Input path '{input_dir}' does not exist.", file=sys.stderr)
+        return
 
     # Validate output directory
-    output_path = Path(args.output_dir)
+    output_path = Path(output_dir)
     if not output_path.exists():
-        print(f"Error: Output directory '{args.output_dir}' does not exist.", file=sys.stderr)
-        sys.exit(1)
+        print(f"Error: Output directory '{output_dir}' does not exist.", file=sys.stderr)
+        return
     if not output_path.is_dir():
-        print(f"Error: Output path '{args.output_dir}' is not a directory.", file=sys.stderr)
-        sys.exit(1)
-
-    file_extension = args.file_extension
+        print(f"Error: Output path '{output_dir}' is not a directory.", file=sys.stderr)
+        return
 
     file_extension_comment_map = {
         "cpp": CommentInfo(delimited=("/*", "*/"), line_by_line="//"),
@@ -312,32 +300,45 @@ Example usage:
         "py": CommentInfo(delimited=('"""', '"""'), line_by_line="#"),
         "rs": CommentInfo(delimited=("/*", "*/"), line_by_line="//"),
         "sh": CommentInfo(line_by_line="#"),
+        "hs": CommentInfo(line_by_line="--"),
     }
 
-    # Validate file extension
     if file_extension not in file_extension_comment_map:
         print(f"Error: Unsupported file extension '{file_extension}'.", file=sys.stderr)
-        print(f"Supported extensions: {', '.join(file_extension_comment_map.keys())}", file=sys.stderr)
-        sys.exit(1)
+        print(
+            f"Supported extensions: {', '.join(file_extension_comment_map.keys())}",
+            file=sys.stderr,
+        )
+        return
 
-    input_files = sorted(Path(args.input_dir).iterdir(), key=lambda p: str(p))
-    output_dirs = sorted(Path(args.output_dir).iterdir(), key=lambda p: str(p))
+    if input_path.is_dir():
+        input_files = sorted(
+            [
+                p
+                for p in input_path.iterdir()
+                if p.is_file() and p.suffix == ".md" and p.name != "szablon.md"
+            ],
+            key=lambda p: str(p),
+        )
+    else:
+        if input_path.suffix != ".md":
+            print(f"Error: Input file '{input_dir}' is not a markdown file.", file=sys.stderr)
+            return
+        input_files = [input_path]
 
-    for input_file, output_dir in zip(input_files, output_dirs):
-        # Skip non-markdown files
-        if not input_file.is_file() or input_file.suffix != ".md":
-            continue
-        
-        # Skip if output_dir is not a directory
-        if not output_dir.is_dir():
-            continue
+    output_dirs = {p.name: p for p in output_path.iterdir() if p.is_dir()}
 
-        print(f"Processing: {input_file.name} -> {output_dir.name}")
+    for input_file in input_files:
+        output_dir_path = output_dirs.get(input_file.stem)
+        if output_dir_path is None:
+            output_dir_path = output_path / input_file.stem
+            output_dir_path.mkdir(parents=True, exist_ok=True)
+
+        print(f"Processing: {input_file.name} -> {output_dir_path.name}")
 
         try:
             file_content = Path(input_file).read_text(encoding="utf-8")
         except UnicodeDecodeError:
-            # Try with a different encoding if UTF-8 fails
             try:
                 file_content = Path(input_file).read_text(encoding="latin-1")
             except Exception as e:
@@ -349,35 +350,37 @@ Example usage:
 
         tasks = parse_tasks(file_content)
 
-        files = [
-            file
-            for file in Path(output_dir).iterdir()
-            if file.is_file() and file.suffix == f".{file_extension}"
-        ]
+        for task_key in sorted(tasks.keys()):
+            match = re.search(r"(\d+)", task_key)
+            if not match:
+                print(f"Warning: Can't parse task id from {task_key}", file=sys.stderr)
+                continue
+            task_num = int(match.group(1))
+            if file_extension == "java":
+                dir_name = f"zad{task_num}"
+                file = output_dir_path / dir_name / "Main.java"
+            else:
+                file = output_dir_path / f"zad{task_num:02d}.{file_extension}"
 
-        if file_extension == "java":
-            files = [
-                file / "Main.java"
-                for file in Path(output_dir).iterdir()
-                if file.is_dir()
-            ]
-        files = sorted(files, key=lambda p: str(p))
-
-        # Check if we have matching number of files and tasks
-        if len(files) != len(tasks):
-            print(f"Warning: Number of files ({len(files)}) does not match number of tasks ({len(tasks)}) in {input_file.name}", file=sys.stderr)
-
-        for file, task in zip(files, tasks.values()):
             if not file.exists():
-                print(f"Warning: File {file} does not exist, skipping.", file=sys.stderr)
+                create_stub_file(file, file_extension)
+                print(f"  Created: {file}")
+
+            task_parts = tasks.get(task_key)
+            if not task_parts:
+                print(
+                    f"Warning: No task content for {task_key} in {input_file.name}",
+                    file=sys.stderr,
+                )
                 continue
 
-            comment_info = file_extension_comment_map.get(file_extension)
+            task = "\n\n".join(task_parts).rstrip()
 
+            comment_info = file_extension_comment_map.get(file_extension)
             if comment_info is None:
                 print(
                     f"No comment information found for file extension '{file_extension}'.",
-                    file=sys.stderr
+                    file=sys.stderr,
                 )
                 return
 
@@ -392,15 +395,54 @@ Example usage:
                 return
 
             try:
-                # Localize the top comment and remove it from the file
                 localize_top_comment(file, comment_style, start_delimiter, end_delimiter)
-
-                # Insert a top comment at the beginning of the file
-                insert_top_comment(file, comment_style, start_delimiter, end_delimiter, task)
+                insert_top_comment(
+                    file, comment_style, start_delimiter, end_delimiter, task
+                )
                 print(f"  Updated: {file}")
             except Exception as e:
                 print(f"Error processing {file}: {e}", file=sys.stderr)
                 continue
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Update file descriptions/comments from task markdown files.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Example usage:
+  python update_descriptions.py zbior_zadan/ src/python/ py
+  python update_descriptions.py zbior_zadan/ src/cpp/ cpp
+  python update_descriptions.py zbior_zadan/ src/java/ java
+        """,
+    )
+    parser.add_argument("input_dir", nargs="?", type=str)
+    parser.add_argument("output_dir", nargs="?", type=str)
+    parser.add_argument("file_extension", nargs="?", type=str)
+
+    args = parser.parse_args()
+
+    if args.input_dir and args.output_dir and args.file_extension:
+        update_descriptions(args.input_dir, args.output_dir, args.file_extension)
+        return
+
+    if args.input_dir or args.output_dir or args.file_extension:
+        parser.error("the following arguments are required: input_dir, output_dir, file_extension")
+
+    defaults = [
+        ("src/python", "py"),
+        ("src/cpp", "cpp"),
+        ("src/java", "java"),
+        ("src/js", "js"),
+        ("src/rust", "rs"),
+        ("src/bash", "sh"),
+        ("src/haskell", "hs"),
+    ]
+
+    for output_dir, ext in defaults:
+        if not Path(output_dir).is_dir():
+            continue
+        update_descriptions("zbior_zadan", output_dir, ext)
 
 
 if __name__ == "__main__":

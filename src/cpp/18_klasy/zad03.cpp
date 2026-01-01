@@ -1,7 +1,48 @@
 /*
-Tytul: Prostokat powstaly z nalozenia sie dwoch prostokatow.
-Opis zadania: Napisz klase Prostokat, ktora bedzie reprezentowala prostokat w ukladzie kartezjanskim. Prostokat jest okreslony przez wspolrzedne jego czterech wierzcholkow. Boki prostokata sa prostopadle do osi ukladu wspolrzednych. Klasa powinna zawierac funkcje statyczna, ktora zwraca pole prostokata powstalego z nalozenia sie dwoch prostokatow. Jesli dwa prostokaty nie pokrywaja sie, funkcja powinna zwracac 0.
-Napisz program, ktory przetestuje twoja klase. Stworz prostokaty: A (3, 6, 9, 4) oraz B (2, 5, 7, 2). Wypisz na standardowe wyjscie informacje o utworzonych prostokatach. Sprawdz, czy pole czesci wspolnej rowne jest 6.
+ZAD-03 — Pole nałożenia się dwóch prostokątów
+
+**Poziom:** ★★☆
+**Tagi:** `class`, `static`, `geometria`
+
+### Treść
+
+Zaprojektuj klasę **Prostokąt** opisaną przez dwa przeciwległe wierzchołki:
+
+* lewy dolny `(x1, y1)`
+* prawy górny `(x2, y2)`
+  Boki równoległe do osi.
+
+Klasa ma mieć:
+
+1. Konstruktor `(x1, y1, x2, y2)`
+2. Metodę statyczną `pole_wspolne(A, B)` zwracającą pole części wspólnej (albo
+0).
+3. Metodę wypisującą informacje o prostokącie.
+
+Program tworzy:
+
+* A: (3, 4) i (9, 6)
+* B: (2, 2) i (7, 5)
+
+Wypisuje oba i pole części wspólnej.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Prostokąt A: lewy dolny (3, 4), prawy górny (9, 6)
+Prostokąt B: lewy dolny (2, 2), prawy górny (7, 5)
+Pole części wspólnej: 6
+```
 
 */
 
@@ -9,7 +50,7 @@ Napisz program, ktory przetestuje twoja klase. Stworz prostokaty: A (3, 6, 9, 4)
 #include <cmath>
 
 class Prostokat {
-public:
+ public:
   Prostokat(double _lewo, double _prawo, double _gora, double _dol)
       : lewo(_lewo), prawo(_prawo), gora(_gora), dol(_dol) {}
 
@@ -29,7 +70,7 @@ public:
     return poleX * poleY;
   }
 
-private:
+ private:
   double lewo, prawo, gora, dol;
 };
 
@@ -50,10 +91,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

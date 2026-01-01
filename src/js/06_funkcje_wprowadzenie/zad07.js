@@ -1,14 +1,40 @@
 /*
-Tytul: Haslo.
+ZAD-07 — Weryfikacja nazwy użytkownika i hasła
 
-Tresc: Napisz dwie funkcje:
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `while`, `string`, `porównania`
 
-* Pierwsza funkcja powinna prosic uzytkownika o podanie nazwy uzytkownika i hasla, a nastepnie zwrocic te dane.
-* Druga funkcja powinna otrzymac dane od pierwszej funkcji i ponownie prosic uzytkownika o podanie nazwy uzytkownika i hasla. Prosba o podanie danych powinna byc umieszczona w petli. Warunkiem zakonczenia petli jest podanie przez uzytkownika danych identycznych z tymi przekazanymi przez pierwsza funkcje.
+### Treść
 
-Dane wejsciowe: dwie nazwy uzytkownika i hasla (napisy)
+Napisz dwie funkcje:
 
-Dane wyjsciowe: komunikat
+1. `pobierz_dane()` — pobiera od użytkownika nazwę użytkownika i hasło i zwraca je (np. jako parę).
+2. `sprawdz_dane(poprawny_login, poprawne_haslo)` — w pętli wczytuje login i hasło aż będą identyczne z przekazanymi. Po poprawnym wczytaniu wypisuje:
+   `Dane poprawne. Dostęp przyznany.`
+
+### Wejście
+
+* `pobierz_dane()` wczytuje dwie linie:
+
+  1. login
+  2. hasło
+* `sprawdz_dane(...)` wczytuje kolejne pary (login, hasło), po dwie linie na próbę.
+
+### Wyjście
+
+Jedna linia (tylko raz, po poprawnym dopasowaniu):
+
+* `Dane poprawne. Dostęp przyznany.`
+
+### Ograniczenia / gwarancje
+
+* W pewnym momencie użytkownik poda poprawne dane.
+
+### Uwagi o formatowaniu
+
+* **Nie wypisuj promptów** typu „Podaj nazwę użytkownika:”.
+* Porównanie jest czułe na wielkość liter.
+
 */
 
 // Funkcja prosi o podanie nazwy uzytkownika i hasla, a nastepnie zwraca te dane

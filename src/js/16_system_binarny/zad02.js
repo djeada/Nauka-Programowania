@@ -1,21 +1,63 @@
 /*
-Tytul:  Konwersja warunkowa.
+ZAD-02A — Wypisz binarnie tylko gdy liczba parzysta
 
-Tresc: Otrzymujesz liczbe naturalna. Zwroc reprezentacje binarna otrzymanej liczby, jesli:
+**Poziom:** ★☆☆
+**Tagi:** `warunki`, `parzystość`, `binarne`
 
-a) Otrzymana liczba jest liczba parzysta.
+### Treść
 
-b) Otrzymana liczba jest liczba pierwsza.
+Wczytaj liczbę naturalną `n`. Jeśli `n` jest parzysta — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
 
-Dane wejsciowe: Liczba naturalna w obu podpunktach.
+### Wejście
 
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
+* 1. linia: `n` (liczba naturalna)
 
-Przyklad:
+### Wyjście
 
-a) Dla otrzymanej liczby: 7, nie powinna zostac zwrocona zadna liczba.
+* Jeśli `n % 2 == 0`: jedna linia z zapisem binarnym `n`
+* W przeciwnym razie: brak wyjścia
 
-b) Dla otrzymanej liczby: 7, powinna zostac zwrocona liczba: 111.
+### Przykład
+
+**Wejście:**
+
+```
+7
+```
+
+**Wyjście:** *(brak)*
+
+ZAD-02B — Wypisz binarnie tylko gdy liczba pierwsza
+
+**Poziom:** ★☆☆
+**Tagi:** `pierwszość`, `warunki`, `binarne`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Jeśli `n` jest liczbą pierwszą — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
+
+### Wejście
+
+* 1. linia: `n` (liczba naturalna)
+
+### Wyjście
+
+* Jeśli `n` jest pierwsza: jedna linia z zapisem binarnym `n`
+* W przeciwnym razie: brak wyjścia
+
+### Przykład
+
+**Wejście:**
+
+```
+7
+```
+
+**Wyjście:**
+
+```
+111
+```
 
 */
 

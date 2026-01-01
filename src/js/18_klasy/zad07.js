@@ -1,11 +1,35 @@
 /*
-Tytul: Zlicz instancje klasy w programie.
+ZAD-07 — Zliczanie instancji klasy
 
-Tresc: Opis zadania: Stworz klase Klasa, ktora bedzie zawierala funkcje statyczna, zwracajaca aktualna liczbe instancji tej klasy w programie. Nastepnie stworz kilka obiektow tej klasy i przetestuj dzialanie funkcji.
+**Poziom:** ★☆☆
+**Tagi:** `class`, `static`
 
-Dane wejsciowe: brak
+### Treść
 
-Dane wyjsciowe: liczba naturalna, reprezentujaca liczbe instancji klasy w programie.
+Zaprojektuj klasę **MojaKlasa**, która zlicza ile instancji utworzono:
+
+* prywatne pole statyczne licznik,
+* konstruktor zwiększa licznik,
+* metoda statyczna zwraca licznik.
+
+Program tworzy np. 3 obiekty i wypisuje liczbę instancji.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Jedna linia.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Liczba utworzonych instancji: 3
+```
+
 */
 
 class Klasa {

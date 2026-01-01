@@ -1,10 +1,39 @@
 /*
-Tytul: Sortowanie napisow w liscie wzgledem dlugosci.
-Tresc: Masz dana liste napisow. Posortuj napisy w liscie wzgledem dlugosci.
-Dane wejsciowe: Lista napisow.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla listy ["abcd", "ab", "a", "abc"] powinno zostac zwrocone ["a", "ab", "abc", "abcd"].
+ZAD-04 — Sortowanie napisów według długości
+
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `string`, `list`
+
+### Treść
+
+Otrzymujesz listę napisów. Posortuj ją rosnąco według długości napisów.
+
+### Wejście
+
+* 1 linia: liczba naturalna `N`
+* następnie `N` linii: napis (bez spacji)
+
+### Wyjście
+
+* 1 linia: lista napisów posortowana jak w przykładzie
+
+### Przykład
+
+**Wejście:**
+
+```
+4
+abcd
+ab
+a
+abc
+```
+
+**Wyjście:**
+
+```
+['a', 'ab', 'abc', 'abcd']
+```
 
 */
 import java.util.*;

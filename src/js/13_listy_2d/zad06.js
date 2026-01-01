@@ -1,16 +1,48 @@
 /*
+ZAD-06 — Scalanie przedziałów
 
-Tytul: Scalanie przedzialow w liscie przedzialow.
+**Poziom:** ★★☆
+**Tagi:** `sortowanie`, `przedziały`, `algorytmy`
 
-Tresc: Otrzymujesz liste par liczb. Kazda para reprezentuje poczatek i koniec przedzialu. Niektore przedzialy moga sie nachodzic. W takim przypadku polacz je ze soba i zwroc liste przedzialow, ktore sie nie pokrywaja.
+### Treść
 
-Dane wejsciowe: Lista list liczb naturalnych.
+Wczytaj `n` przedziałów `[a_i, b_i]` (a_i ≤ b_i). Scal przedziały nachodzące na siebie i wypisz wynik w kolejności rosnącej po początku.
 
-Dane wyjsciowe: Lista list liczb naturalnych.
+### Wejście
 
-Przyklad:
+* 1. linia: `n`
+* następnie `n` linii: `a_i b_i`
 
-Dla otrzymanej listy: [[23, 67], [23, 53], [45, 88], [77, 88], [10, 22], [11, 12], [42, 45]], powinna zostac zwrocona lista: [[10, 22], [23, 88]].
+### Wyjście
+
+* Każdy scalony przedział w osobnej linii: `a b`
+
+### Przykład
+
+**Wejście:**
+
+```
+7
+23 67
+23 53
+45 88
+77 88
+10 22
+11 12
+42 45
+```
+
+**Wyjście:**
+
+```
+10 22
+23 88
+```
+
+### Uwagi
+
+* Przedziały uznajemy za nachodzące, gdy `next_start <= current_end`.
+
 */
 
 function scalPrzedzialy(przedzialy) {

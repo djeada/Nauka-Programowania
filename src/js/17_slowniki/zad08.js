@@ -1,19 +1,36 @@
 /*
+ZAD-08 — Najczęstsza litera w zdaniu
 
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
 
-Tytul: Najczesciej wystepujaca litera w zdaniu
+### Treść
 
-Tresc: Otrzymujesz napis reprezentujacy zdanie. Twoim zadaniem jest znalezienie najczesciej wystepujacej litery w zdaniu. Jesli wiecej niz jedna litera wystepuje te sama liczbe razy, nalezy zwrocic litere najwczesniej pojawiajaca sie w zdaniu.
+Wczytaj zdanie. Zignoruj spacje i znaki interpunkcyjne. Znajdź literę występującą najczęściej.
+Jeśli jest kilka, wybierz tę, która **pojawia się jako pierwsza w zdaniu**.
 
-Dane wejsciowe: Napis.
+### Wejście
 
-Dane wyjsciowe: Znak.
+* 1 linia: zdanie
 
-Przyklad:
+### Wyjście
 
-Dla otrzymanego napisu: "lezy jerzy na wiezy"
+* 1 znak
 
-Powinna zostac zwrocona litera: 'e'
+### Przykład
+
+**Wejście:**
+
+```
+lezy jerzy na wiezy
+```
+
+**Wyjście:**
+
+```
+e
+```
+
 */
 
 function najczestszaLitera(zdanie) {

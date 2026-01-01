@@ -1,15 +1,43 @@
 /*
+ZAD-02 — Klasa Punkt
 
-Tytul: Zaprojektuj klase Punkt.
+**Poziom:** ★★☆
+**Tagi:** `class`, `static`, `porównania`, `math`
 
-Tresc: Napisz klase Punkt, ktora bedzie reprezentowala punkt w ukladzie kartezjanskim. Klasa powinna zawierac nastepujace funkcje:
+### Treść
 
-1. Konstruktor, ktory przyjmuje dwa argumenty (liczby). Pierwsza liczba reprezentuje wspolrzedna x, a druga wspolrzedna y. Domyslne wartosci dla obu argumentow powinny wynosic 0.
-2. Funkcje statyczna odleglosc, ktora zwraca odleglosc miedzy dwoma punktami (obiektami klasy Punkt).
-3. Funkcje, ktora wypisuje informacje o punkcie na standardowe wyjscie.
-4. Funkcje umozliwiajace porownanie dwoch obiektow klasy Punkt. Jesli jest to mozliwe, nalezy przeciazyc operatory == oraz !=.
+Zaprojektuj klasę **Punkt**:
 
-Napisz program, ktory przetestuje twoja klase. Stworz punkty: A (5, 5) oraz B (-3, -3). Wypisz na standardowe wyjscie informacje o utworzonych punktach oraz odleglosc miedzy nimi.
+1. Konstruktor `(x=0, y=0)`.
+2. Metoda statyczna `odleglosc(p1, p2)` licząca odległość.
+3. Metoda wypisująca współrzędne.
+4. Porównania `==` i `!=` (równe, gdy oba współrzędne identyczne).
+
+Program tworzy:
+
+* A = (5, 5)
+* B = (-3, -3)
+
+Wypisuje oba punkty i odległość między nimi (4 miejsca po przecinku).
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Punkt A: (5, 5)
+Punkt B: (-3, -3)
+Odległość między punktami A i B: 11.3137
+```
+
 */
 
 class Punkt {

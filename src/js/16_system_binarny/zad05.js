@@ -1,22 +1,74 @@
 /*
+ZAD-05A — Minimum bez instrukcji warunkowych
 
-Tytul: Wybieranie minimum i maksimum.
+**Poziom:** ★★☆
+**Tagi:** `bit-trick`, `min/max`, `bez if`
 
-Tresc: Otrzymujesz dwie liczby naturalne.
+### Treść
 
-a) Zwroc mniejsza z nich. Zabronione jest uzycie instrukcji warunkowej oraz zewnetrznych bibliotek.
+Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, `?:`) i bez bibliotek.
 
-b) Zwroc wieksza z nich. Zabronione jest uzycie instrukcji warunkowej oraz zewnetrznych bibliotek.
+### Wejście
 
-Dane wejsciowe: Dwie liczby naturalne w obu podpunktach.
+* 1. linia: `a`
+* 2. linia: `b`
 
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
+### Wyjście
 
-Przyklad:
+Jedna liczba naturalna: `min(a, b)`.
 
-a) Dla otrzymanych liczb: 3 i 2, powinna zostac zwrocona liczba: 2.
+### Przykład
 
-b) Dla otrzymanych liczb: 3 i 2, powinna zostac zwrocona liczba: 3.
+**Wejście:**
+
+```
+3
+2
+```
+
+**Wyjście:**
+
+```
+2
+```
+
+### Uwagi
+
+* Dopuszczalne są operacje arytmetyczne i bitowe.
+
+ZAD-05B — Maksimum bez instrukcji warunkowych
+
+**Poziom:** ★★☆
+**Tagi:** `bit-trick`, `min/max`, `bez if`
+
+### Treść
+
+Wczytaj `a` i `b`. Wypisz większą z nich **bez użycia instrukcji warunkowych** i bez bibliotek.
+
+### Wejście
+
+* 1. linia: `a`
+* 2. linia: `b`
+
+### Wyjście
+
+Jedna liczba naturalna: `max(a, b)`.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+2
+```
+
+**Wyjście:**
+
+```
+3
+```
+
 */
 
 // Funkcja zwracajaca mniejsza z dwoch liczb

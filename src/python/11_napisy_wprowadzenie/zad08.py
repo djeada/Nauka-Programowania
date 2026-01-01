@@ -1,12 +1,39 @@
 """
-Tytul:Wypisz pionowo slowa, z ktorych sklada sie zdanie.
-Tresc: Otrzymasz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe. Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Kilka napisow.
-Przyklad:
-Dla otrzymanego napisu: "Ala ma kota", powinno zostac wypisane: "Ala", "ma", "kota".
+ZAD-08 — Wypisz pionowo słowa ze zdania
+
+**Poziom:** ★☆☆
+**Tagi:** `split`, `string`
+
+### Treść
+
+Wczytaj zdanie, podziel na słowa i wypisz każde słowo w osobnej linii. Interpunkcja nie jest słowem.
+
+### Wejście
+
+* 1. linia: zdanie
+
+### Wyjście
+
+* wiele linii: słowa w kolejności występowania
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+Ala
+ma
+kota
+```
 
 """
+
 import string
 
 

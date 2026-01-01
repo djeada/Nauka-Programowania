@@ -1,55 +1,65 @@
 /*
-Tytul: Dowody praw logicznych.
+ZAD-07 — Prawa logiki (p i q)
 
-Tresc: Pokaz za pomoca operacji logicznych nastepujace prawa:
+**Poziom:** ★★☆
+**Tagi:** `bool`, `logika`, `tabele prawdy`, `formatowanie`
 
-a) Prawo wylaczonego srodka.
+### Treść
 
-b) Prawo niesprzecznosci.
+Dla wszystkich kombinacji wartości logicznych `p` i `q` (True/False) sprawdź poprawność praw:
 
-c) Przemiennosc koniunkcji.
+1. Wyłączony środek: `p OR (NOT p)`
+2. Niesprzeczność: `NOT (p AND (NOT p))`
+3. Przemienność AND: `p AND q` vs `q AND p`
+4. Przemienność OR: `p OR q` vs `q OR p`
+5. De Morgana 1: `NOT (p AND q)` vs `(NOT p) OR (NOT q)`
+6. De Morgana 2: `NOT (p OR q)` vs `(NOT p) AND (NOT q)`
 
-d) Przemiennosc alternatywy.
+### Wejście
 
-e) Pierwsze prawo de Morgana.
+Brak.
 
-f) Drugie prawo de Morgana.
+### Wyjście
 
-Dane wejsciowe: Brak.
+Żeby wynik był **jednoznaczny i łatwy do sprawdzenia**, zastosuj dokładnie ten format:
 
-Dane wyjsciowe: Komunikat.
+Dla każdego z 6 praw wypisz:
 
-a) Prawo wylaczonego srodka:
-- Dla p majacego wartosc logiczna: `False` wyrazenie p v ~p ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `True` wyrazenie p v ~p ma wartosc logiczna: `True`.
+* nazwę prawa w jednej linii,
+* następnie w osobnych liniach wynik dla każdej kombinacji `p, q` w kolejności:
 
-b) Zasada niesprzecznosci:
-- Dla p majacego wartosc logiczna: `False` wyrazenie ~(p Ʌ ~p) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `True` wyrazenie ~(p Ʌ ~p) ma wartosc logiczna: `True`.
+  1. `p=False, q=False`
+  2. `p=False, q=True`
+  3. `p=True, q=False`
+  4. `p=True, q=True`
 
-c) Przemiennosc koniunkcji:
-- Dla p majacego wartosc logiczna: `False` oraz q majacego wartosc logiczna: `False` wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `True` oraz q majacego wartosc logiczna: `False` wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `False` oraz q majacego wartosc logiczna: `True` wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `True` oraz q majacego wartosc logiczna: `True` wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna: `True`.
+Każda linia kombinacji ma mieć format:
+`p=<...> q=<...> L=<...> R=<...> EQ=<...>`
 
-d) Przemiennosc alternatywy:
-- Dla p majacego wartosc logiczna: `False` oraz q majacego wartosc logiczna: `False` wyrazenie (p v q) < = > (q v p) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `True` oraz q majacego wartosc logiczna: `False` wyrazenie (p v q) < = > (q v p) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `False` oraz q majacego wartosc logiczna: `True` wyrazenie (p v q) < = > (q v p) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `True` oraz q majacego wartosc logiczna: `True` wyrazenie (p v q) < = > (q v p) ma wartosc logiczna: `True`.
+Gdzie `<...>` to dosłownie `True` albo `False`.
 
-e) Pierwsze prawo de Morgana:
-- Dla p majacego wartosc logiczna: `False` oraz q majacego wartosc logiczna: `False` wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `True` oraz q majacego wartosc logiczna: `False` wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `False` oraz q majacego wartosc logiczna: `True` wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `True` oraz q majacego wartosc logiczna: `True` wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna: `True`.
+### Przykład fragmentu (dla jednego prawa)
 
-f) Drugie prawo de Morgana:
-- Dla p majacego wartosc logiczna: `False` oraz q majacego wartosc logiczna: `False` wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `True` oraz q majacego wartosc logiczna: `False` wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `False` oraz q majacego wartosc logiczna: `True` wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna: `True`.
-- Dla p majacego wartosc logiczna: `True` oraz q majacego wartosc logiczna: `True` wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna: `True`.
+```
+Przemienność alternatywy:
+p=False q=False L=False R=False EQ=True
+p=False q=True L=True R=True EQ=True
+p=True q=False L=True R=True EQ=True
+p=True q=True L=True R=True EQ=True
+```
+
+### Uwagi o formatowaniu
+
+* Dokładne nazwy praw (nagłówki) użyj jak poniżej:
+
+  1. `Prawo wyłączonego środka:`
+  2. `Prawo niesprzeczności:`
+  3. `Przemienność koniunkcji:`
+  4. `Przemienność alternatywy:`
+  5. `Pierwsze prawo de Morgana:`
+  6. `Drugie prawo de Morgana:`
+* Między blokami praw możesz wstawić **jedną pustą linię** (zalecane), ale nie więcej.
+
 */
 
 console.info("Prawo wylacznego srodka");

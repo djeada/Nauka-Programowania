@@ -1,10 +1,40 @@
 /*
-Tytul: Polacz posortowane listy w posortowana liste.
-Tresc: Dla otrzymanych dwoch posortowanych list, polacz je w jedna posortowana liste.
-Dane wejsciowe: Dwie listy liczb calkowitych.
-Dane wyjsciowe: Lista liczb calkowitych.
-Przyklad:
-Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinna zostac zwrocona lista: [2, 3, 4, 7, 9].
+ZAD-08 — Połącz posortowane listy w posortowaną listę bez duplikatów
+
+**Poziom:** ★★☆
+**Tagi:** `list`, `merge`, `sort`
+
+### Treść
+
+Wczytaj dwie listy liczb całkowitych, każda **posortowana rosnąco**. Połącz je w
+jedną listę:
+
+* wynik ma być posortowany rosnąco,
+* wynik ma zawierać **unikalne** elementy (bez duplikatów).
+
+### Wejście
+
+* 1 linia: lista 1 (posortowana rosnąco)
+* 2 linia: lista 2 (posortowana rosnąco)
+
+### Wyjście
+
+* 1 linia: jedna posortowana lista bez duplikatów
+
+### Przykład
+
+**Wejście:**
+
+```
+[2, 4, 7]
+[3, 5, 9]
+```
+
+**Wyjście:**
+
+```
+[2, 3, 4, 5, 7, 9]
+```
 
 */
 #include <algorithm>
@@ -14,12 +44,9 @@ Dla otrzymanych list [2, 4, 7] oraz [3, 5, 9] powinna zostac zwrocona lista: [2,
 // Zlozonosc obliczeniowa O(n)
 // Zlozonosc pamieciowa O(n)
 std::vector<int> polaczV1(std::vector<int> &listaA, std::vector<int> &listaB) {
+  if (listaA.empty()) return listaB;
 
-  if (listaA.empty())
-    return listaB;
-
-  if (listaB.empty())
-    return listaA;
+  if (listaB.empty()) return listaA;
 
   std::vector<int> wynik;
 
@@ -36,11 +63,9 @@ std::vector<int> polaczV1(std::vector<int> &listaA, std::vector<int> &listaB) {
     }
   }
 
-  for (unsigned int k = i; k < listaA.size(); k++)
-    wynik.push_back(listaA[k]);
+  for (unsigned int k = i; k < listaA.size(); k++) wynik.push_back(listaA[k]);
 
-  for (unsigned int k = j; k < listaB.size(); k++)
-    wynik.push_back(listaB[k]);
+  for (unsigned int k = j; k < listaB.size(); k++) wynik.push_back(listaB[k]);
 
   return wynik;
 }
@@ -54,9 +79,7 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
 }
-

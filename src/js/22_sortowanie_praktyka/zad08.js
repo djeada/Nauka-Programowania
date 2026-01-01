@@ -1,16 +1,42 @@
 /*
+ZAD-08 — Indeks klucza w cyklicznie posortowanej liście
 
-Tytul: Wyszukiwanie indeksu klucza w cyklicznie posortowanej liscie.
+**Poziom:** ★★☆
+**Tagi:** `binary search`, `rotacja`, `list`
 
-Tresc: Otrzymujesz cyklicznie posortowana liste oraz klucz. Znajdz indeks pierwszego wystapienia klucza w liscie. Jesli klucz nie wystepuje w liscie, zwroc -1.
+### Treść
 
-Dane wejsciowe: Cyklicznie posortowana lista, klucz.
+Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosnąca, ale została przesunięta) oraz klucz. Znajdź indeks **pierwszego** wystąpienia klucza. Jeśli klucza nie ma — wypisz `-1`.
 
-Dane wyjsciowe: Indeks pierwszego wystapienia klucza lub -1.
+### Wejście
 
-Przyklad:
+* 1 linia: liczba naturalna `N`
+* 2 linia: `N` liczb całkowitych oddzielonych spacjami
+* 3 linia: liczba całkowita `x` (szukany klucz)
 
-Dla cyklicznie posortowanej listy [3, 4, 5, 6, 1, 2] i klucza 4, powinno zostac zwrocone 2.
+### Wyjście
+
+* 1 linia: indeks pierwszego wystąpienia `x` albo `-1`
+
+### Przykład
+
+**Wejście:**
+
+```
+6
+3 4 5 6 1 2
+4
+```
+
+**Wyjście:**
+
+```
+1
+```
+
+### Ograniczenia / gwarancje
+
+* Lista jest wynikiem rotacji listy posortowanej niemalejąco (mogą wystąpić duplikaty).
 
 */
 

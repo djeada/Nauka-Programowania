@@ -1,13 +1,43 @@
-# Tytul: Czy napis sklada sie wylacznie z cyfr?
-# Tresc: Masz napis. Sprawdz, czy sklada sie on wylacznie z cyfr.
-# Dane wejsciowe: Napis.
-# Dane wyjsciowe: Wartosc logiczna.
-# Przyklad:
-# Dla napisu: “1234”, powinna zostac zwrocona wartosc logiczna: Prawda.
+# ZAD-11 — Nazwa pliku bez rozszerzenia
+#
+# **Poziom:** ★★☆
+# **Tagi:** `regex`, `string`, `ścieżki`
+#
+# ### Treść
+#
+# Otrzymujesz napis reprezentujący pełną ścieżkę do pliku. Wyodrębnij nazwę pliku (bez katalogów) i usuń rozszerzenie (część po ostatniej kropce). Zwróć samą nazwę bez rozszerzenia.
+#
+# Ścieżka może zawierać separator `\` lub `/`.
+#
+# ### Wejście
+#
+# Jedna linia:
+#
+# * `sciezka`
+#
+# ### Wyjście
+#
+# Jedna linia:
+#
+# * `nazwa_pliku_bez_rozszerzenia`
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# C:\my-long\path_directory\file.html
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# file
+# ```
 
 source ../assert.sh
 
-nazwa_pliku(){
+nazwa_pliku() {
     local sciezka="$1"
     sciezka="${sciezka//\\//}"
     sciezka="${sciezka%/}"
@@ -33,4 +63,3 @@ main() {
 }
 
 main "$@"
-

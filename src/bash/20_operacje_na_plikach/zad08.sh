@@ -1,7 +1,34 @@
-# Tytul: Podmien tresci plikow.
-# Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do plikow. Podmien tresci obu plikow.
-# Dane wejsciowe: Dwa napisy reprezentujace sciezki do plikow.
-# Dane wyjsciowe: Brak.
+# ZAD-08 — Modyfikacja plików spełniających warunek (rekurencyjnie)
+#
+# **Poziom:** ★★☆
+# **Tagi:** `files`, `recursive`, `txt`, `csv`
+#
+# ### Treść
+#
+# Otrzymujesz ścieżkę do folderu. Wykonaj:
+#
+# a) dopisz swoje inicjały na końcu każdego pliku `.txt` w folderze i podfolderach,
+# b) usuń **środkowy wiersz** z każdego pliku `.csv` w folderze i podfolderach
+# (jeśli liczba wierszy jest parzysta — usuń **dolny z dwóch środkowych**).
+#
+# ### Wejście
+#
+# * 1 linia: `folder_path`
+#
+# ### Wyjście
+#
+# Brak.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# C:\Users\Username\Documents\Projekt
+# ```
+#
+# **Wyjście:**
+# *(brak)*
 
 source ../assert.sh
 
@@ -33,7 +60,7 @@ test_dodaj_inicjaly_do_plikow_w_folderze() {
     local tresc='testowy tekst'
 
     for plik in ${sciezki[@]}; do
-        echo $tresc > $plik
+        echo $tresc >$plik
     done
 
     local inicjaly='A.D.'
@@ -64,7 +91,7 @@ test_usun_srodkowy_wiersz_z_plikow_w_folderze() {
     local tresc='test1; test2;\ntest3; test4;\ntest5; test6;'
 
     for plik in ${sciezki[@]}; do
-        echo $tresc > $plik
+        echo $tresc >$plik
     done
 
     local usun_srodkowy_wiersz_z_plikow_w_folderze 'test'
@@ -88,4 +115,3 @@ main() {
 }
 
 main "$@"
-

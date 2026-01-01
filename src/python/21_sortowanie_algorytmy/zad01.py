@@ -1,12 +1,43 @@
 """
-Tytul: Sortowanie babelkowe.
-Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania babelkowego. Porownaj sasiednie liczby z listy i zamien je miejscami, jesli pierwsza jest wieksza od drugiej. Powtarzaj operacje, az przejdziesz przez cala liste bez dokonywania zmian.
-Dane wejsciowe: Lista liczb calkowitych.
-Dane wyjsciowe: Posortowana lista liczb calkowitych.
-Przyklad:
-Dla listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
+ZAD-01 — Sortowanie bąbelkowe
+
+**Poziom:** ★☆☆
+**Tagi:** `sorting`, `bubble-sort`, `list`
+
+### Treść
+
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania bąbelkowego**.
+Algorytm polega na wielokrotnym porównywaniu sąsiednich elementów i zamianie ich miejscami, jeśli są w złej kolejności. Powtarzaj przebiegi, aż w całym przebiegu nie zajdzie żadna zamiana.
+
+### Wejście
+
+* 1 linia: lista liczb całkowitych, np. `[6, 2, 1, 4, 27]`
+
+### Wyjście
+
+* 1 linia: posortowana lista rosnąco
+
+### Przykład
+
+**Wejście:**
+
+```
+[6, 2, 1, 4, 27]
+```
+
+**Wyjście:**
+
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Po każdym pełnym przebiegu największy element „wypływa” na koniec.
+* W kolejnych przebiegach możesz zmniejszać zakres sprawdzania o 1.
 
 """
+
 
 # Zlozonosc czasowa O(n^2)
 def sortuj_v1(tablica):

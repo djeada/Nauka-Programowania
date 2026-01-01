@@ -1,9 +1,33 @@
-# Tytul: Zamien litery "a" na znaki zapytania.
-# Tresc: Otrzymasz napis. Zmien litery "a" na znaki zapytania.
-# Dane wejsciowe: Napis.
-# Dane wyjsciowe: Napis.
-# Przyklad:
-# Dla otrzymanego napisu: "Latarnik", powinien zostac zwrocony napis: "L?t?rnik".
+# ZAD-14 — Napis z liczb od 1 do n
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `pętle`, `string`
+#
+# ### Treść
+#
+# Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separatorów.
+#
+# ### Wejście
+#
+# * 1. linia: liczba naturalna `n` (n ≥ 1)
+#
+# ### Wyjście
+#
+# * 1. linia: ciąg `1..n` bez spacji
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 3
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 123
+# ```
 
 source ../assert.sh
 
@@ -12,7 +36,7 @@ liczby() {
     local n="$1"
     local wynik=""
 
-    for((i=1;i<=n;i++)); do
+    for ((i = 1; i <= n; i++)); do
         local wynik="$wynik$i"
     done
 
@@ -38,4 +62,3 @@ main() {
 }
 
 main "$@"
-

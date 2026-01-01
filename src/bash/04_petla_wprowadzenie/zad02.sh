@@ -1,9 +1,40 @@
-# Tytul: Liczby mniejsze od podanej liczby.
-# Tresc: Dla otrzymanej liczby naturalnej wypisz wszystkie liczby naturalne mniejsze od niej.
-# Dane wejsciowe: Liczba naturalna.
-# Dane wyjsciowe: Liczby naturalne.
-# Przyklad:
-# Dla otrzymanej liczby 3, powinny zostac wypisane liczby 2 i 1.
+# ZAD-02 — Wypisywanie liczb mniejszych od podanej
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `for`, `while`, `pętle`
+#
+# ### Treść
+#
+# Wczytaj liczbę naturalną `n` (`n > 0`) i wypisz wszystkie liczby naturalne mniejsze od `n`, zaczynając od `n - 1` i kończąc na `1`.
+#
+# ### Wejście
+#
+# Jedna liczba naturalna:
+#
+# * 1. linia: `n` (`n > 0`)
+#
+# ### Wyjście
+#
+# Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności malejącej.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 3
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 2
+# 1
+# ```
+#
+# ### Uwagi o formatowaniu
+#
+# * Jeśli `n = 1`, nie wypisuj nic.
 
 main() {
 
@@ -11,11 +42,10 @@ main() {
     read a
 
     while [ $a -gt 0 ]; do
-        a=$(($a-1))
+        a=$(($a - 1))
         echo $a
     done
 
 }
 
 main "$@"
-

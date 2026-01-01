@@ -1,15 +1,51 @@
 /*
-Tytul: Zmiana wielkosci liter.
-Tresc: Otrzymujesz napis. Zaimplementuj nastepujace operacje przy uzyciu operatorow bitowych:
-a) Zamien wielkie litery na male litery.
-b) Zamien male litery na wielkie litery.
-c) Zamien male litery na wielkie litery i wielkie litery na male litery.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-a) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "test".
-b) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "TEST".
-c) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "tEST".
+ZAD-06 — Konwersja między dowolnymi systemami (2..36)
+
+**Poziom:** ★★☆
+**Tagi:** `konwersja`, `base`, `string`
+
+### Treść
+
+Wczytaj:
+
+1. liczbę `X` zapisaną w systemie o podstawie `p`
+2. podstawę `p` (2..36)
+3. podstawę docelową `q` (2..36)
+
+i wypisz reprezentację `X` w systemie o podstawie `q`.
+
+### Wejście
+
+Trzy linie:
+
+1. `X` (zapis liczby; dla podstaw >10 może zawierać litery `A-Z`)
+2. `p` (2..36)
+3. `q` (2..36)
+
+### Wyjście
+
+Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`).
+
+### Przykład
+
+**Wejście:**
+
+```
+4301
+10
+4
+```
+
+**Wyjście:**
+
+```
+1003031
+```
+
+### Uwagi o formacie
+
+* `X` może być duże — traktuj jako napis, a nie typ int „na wejściu”.
+* Dla wartości 10..35 stosuj `A..Z`.
 
 */
 public class Main {

@@ -1,26 +1,51 @@
-# Tytul: Mnozenie wektorowe.
-# Tresc: Tresc: Otrzymujesz dwie listy liczb calkowitych reprezentujace dwa wektory trojwymiarowej przestrzeni euklidesowej. Zaimplementuj mnozenie wektorowe (zdefiniowane jedynie dla wektorow 3-wymiarowej przestrzeni euklidesowej).
-# Dane wejsciowe: Dwie listy liczb calkowitych o dlugosci 3.
-# Dane wyjsciowe: Liczba naturalna.
-# Przyklad:
-# Dla otrzymanych list [1, 2, 3] oraz [3, 1, 2], powinno zostac zwrocone: 5.
+# ZAD-03 — Suma elementów dwóch list
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `list`, `iteracja`
+#
+# ### Treść
+#
+# Wczytaj dwie listy liczb całkowitych i zwróć listę, w której element o indeksie `i` jest sumą elementów o indeksie `i` z obu list.
+# Jeśli któraś lista jest krótsza, brakujące elementy traktuj jako `0`.
+#
+# ### Wejście
+#
+# * 1 linia: lista 1
+# * 2 linia: lista 2
+#
+# ### Wyjście
+#
+# * 1 linia: lista sum
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# [3, 1, 2, 5]
+# [2, 8, 6, 5]
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# [5, 9, 8, 10]
+# ```
 
 source ../assert.sh
 
 suma() {
 
-    local n=$(( ${#lista_a[@]} ))
-    local m=$(( ${#lista_b[@]} ))
-    local min_dlugosc=$((n<m ? n : m))
+    local n=$((${#lista_a[@]}))
+    local m=$((${#lista_b[@]}))
+    local min_dlugosc=$((n < m ? n : m))
     wynik=("${lista_a[@]}")
 
-    for (( i=0; i<min_dlugosc; i++ ))
-    do
+    for ((i = 0; i < min_dlugosc; i++)); do
         wynik[$i]=$((wynik[i] + lista_b[i]))
     done
 
-    for (( i=min_dlugosc; i<m; i++ ))
-    do
+    for ((i = min_dlugosc; i < m; i++)); do
         wynik+=("{lista_b[$i]}")
     done
 
@@ -57,4 +82,3 @@ main() {
 }
 
 main "$@"
-

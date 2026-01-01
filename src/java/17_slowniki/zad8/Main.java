@@ -1,11 +1,35 @@
 /*
-Tytul: Sortowanie wzgledem kluczy/wartosci
-Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych. Twoim zadaniem jest wypisanie par posortowanych wzgledem napisow oraz wzgledem liczb.
-Dane wejsciowe: Slownik par: napis, liczba calkowita.
-Dane wyjsciowe: Lista par.
-Przyklad:
-Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)].
-Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("c", 3), ("b", 4), ("x", 5)].
+ZAD-08 — Najczęstsza litera w zdaniu
+
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
+
+### Treść
+
+Wczytaj zdanie. Zignoruj spacje i znaki interpunkcyjne. Znajdź literę występującą najczęściej.
+Jeśli jest kilka, wybierz tę, która **pojawia się jako pierwsza w zdaniu**.
+
+### Wejście
+
+* 1 linia: zdanie
+
+### Wyjście
+
+* 1 znak
+
+### Przykład
+
+**Wejście:**
+
+```
+lezy jerzy na wiezy
+```
+
+**Wyjście:**
+
+```
+e
+```
 
 */
 import java.util.*;

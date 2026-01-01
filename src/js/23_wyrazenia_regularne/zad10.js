@@ -1,36 +1,33 @@
 /*
+ZAD-10 — Podmień napisy z listy A na napisy z listy B
 
-Tytul: Podmien napisy z listy A na napisy z listy B.
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `zamiana`
 
-Tresc: Dostajesz napis oraz dwie listy napisow. Zastap napisy z pierwszej listy w pierwszym napisie odpowiadajacymi im napisami z drugiej listy.
+### Treść
 
-Dane wejsciowe: Napis oraz dwie listy napisow.
+Otrzymujesz:
 
-Dane wyjsciowe: Napis.
+* tekst,
+* listę A (napisy do znalezienia),
+* listę B (napisy do podmiany), tej samej długości co A.
 
-Przyklad:
+Zastąp w tekście wszystkie wystąpienia słów z listy A odpowiadającymi im słowami z listy B (ten sam indeks). Zamieniaj tylko **całe słowa**, nie fragmenty innych słów.
 
-Dla podanych danych:
+### Wejście
 
-> 'Every mile was tilted at seven or.
-  Wished her entire esteem mr oh by.
-  He prevents requests by if in pleased.
-  Picture too and concerned was comforting.
-  Ten difficult resembled eagerness nor.
-  Same park bore on be.
-  Warmth his law design says he is a person.
-  Pronunciation suspected in belonging conveying ye repulsive.
+1. Tekst (jedna lub wiele linii)
+2. Liczba naturalna `n` — długość list
+3. `n` wierszy: elementy listy A
+4. `n` wierszy: elementy listy B
 
-oraz ['or', 'be', 'he'] i ['and', 'off', 'she'], powinien zostac zwrocony napis:
+### Wyjście
 
-> Every mile was tilted at seven and.
-  Wished her entire esteem mr oh by.
-  She prevents requests by if in pleased.
-  Picture too and concerned was comforting.
-  Ten difficult resembled eagerness nor.
-  Same park bore on and off.
-  Warmth his law design says she is a person.
-  Pronunciation suspected in belonging conveying ye repulsive.
+Zmodyfikowany tekst.
+
+### Przykład
+
+*(jak w treści — z listami A/B)*
 
 */
 

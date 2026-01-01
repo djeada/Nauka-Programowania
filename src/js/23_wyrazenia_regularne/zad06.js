@@ -1,27 +1,49 @@
 /*
+ZAD-06 — Wiersze kończące się określonym napisem
 
-Tytul: Wiersze konczace sie okreslonym napisem.
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`, `linijki`
 
-Tresc: Dostajesz dwa napisy. Znajdz wiersze w pierwszym napisie konczace sie drugim napisem. Wiersz moze byc zakonczony dowolnym znakiem interpunkcyjnym.
+### Treść
 
-Dane wejsciowe: Dwa napisy.
+Otrzymujesz dwa napisy:
 
-Dane wyjsciowe: Lista napisow.
+1. tekst wielowierszowy,
+2. słowo lub fragment.
 
-Przyklad:
+Znajdź wszystkie wiersze, które kończą się podanym napisem (wiersz może kończyć się znakiem interpunkcyjnym).
 
-Dla napisow:
+### Wejście
 
-> Folgujmy paniom nie sobie, ma rada;
-  Milujmy wiernie nie jest w nich przysada.
-  Godnosci trzeba nie za nic tu cnota,
-  Milosci pragna nie pragna tu zlota.
+Dwie części:
 
-oraz
+1. Tekst (wiele wierszy)
+2. W osobnej linii: `koncowka`
 
-> da
+*(Sposób wczytania tekstu wielowierszowego zależy od platformy — przyjmij, że tekst jest podany w całości jako wejście, a ostatnia linia to `koncowka`.)*
 
-powinna zostac zwrocona lista: [“Folgujmy paniom nie sobie, ma rada;”, “Milujmy wiernie nie jest w nich przysada.”]
+### Wyjście
+
+Wiersze spełniające warunek, każdy w osobnej linii, w kolejności występowania.
+
+### Przykład
+
+**Wejście:**
+
+```
+Folgujmy paniom nie sobie, ma rada;
+Milujmy wiernie nie jest w nich przysada.
+Godności trzeba nie za nic tu cnota,
+Miłości pragną nie pragną tu złota.
+da
+```
+
+**Wyjście:**
+
+```
+Folgujmy paniom nie sobie, ma rada;
+Milujmy wiernie nie jest w nich przysada.
+```
 
 */
 

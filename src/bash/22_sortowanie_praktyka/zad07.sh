@@ -1,9 +1,35 @@
-# Tytul: Sortowanie listy binarnej.
-# Tresc: Otrzymujesz liste liczb skladajacych sie tylko z zer i jedynek. Posortuj te liste.
-# Dane wejsciowe: Lista liczb naturalnych.
-# Dane wyjsciowe: Posortowana lista liczb naturalnych.
-# Przyklad:
-# Dla listy: [1, 0, 1, 0, 1, 1], powinna zostac zwrocona lista: [0, 0, 1, 1, 1, 1].
+# ZAD-07 — Sortowanie listy 0/1/2
+#
+# **Poziom:** ★★☆
+# **Tagi:** `sort`, `counting`
+#
+# ### Treść
+#
+# Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj ją rosnąco.
+#
+# ### Wejście
+#
+# * 1 linia: liczba naturalna `N`
+# * 2 linia: `N` liczb (0/1/2) oddzielonych spacjami
+#
+# ### Wyjście
+#
+# * 1 linia: posortowana lista w formacie jak w przykładzie
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 7
+# 1 0 1 2 2 0 1
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# [0, 0, 1, 1, 1, 2, 2]
+# ```
 
 source ../assert.sh
 
@@ -39,4 +65,3 @@ main() {
 }
 
 main "$@"
-

@@ -1,15 +1,35 @@
 /*
-Tytul: Zamien wszystkie male litery na duze.
+ZAD-04 — Zamień wszystkie małe litery na duże
 
-Tresc: Otrzymasz napis. Zmien wszystkie male litery na duze.
+**Poziom:** ★☆☆
+**Tagi:** `string`, `upper`
 
-Dane wejsciowe: Napis.
+### Treść
 
-Dane wyjsciowe: Napis.
+Wczytaj napis i zamień wszystkie litery na wielkie.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanego napisu: "Rumcajs", powinien zostac zwrocony napis: "RUMCAJS".
+* 1. linia: napis
+
+### Wyjście
+
+* 1. linia: napis po konwersji
+
+### Przykład
+
+**Wejście:**
+
+```
+Rumcajs
+```
+
+**Wyjście:**
+
+```
+RUMCAJS
+```
+
 */
 
 function zamienNaDuze(napis) {

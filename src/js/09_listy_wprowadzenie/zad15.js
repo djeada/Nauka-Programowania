@@ -1,16 +1,41 @@
 /*
+ZAD-15 — Element dominujący
 
-Tytul: Znalezienie elementu dominujacego w liscie liczb naturalnych.
+**Poziom:** ★★☆
+**Tagi:** `zliczanie`, `dict`, `majority`
 
-Tresc: Dla dostarczonej listy liczb naturalnych, znajdz element, ktory wystepuje w niej wiecej niz polowa jej dlugosci. Jesli taki element nie istnieje, zwroc -1.
+### Treść
 
-Dane wejsciowe: Lista liczb naturalnych.
+Wczytaj listę liczb naturalnych. Jeśli istnieje liczba, która występuje **więcej niż N/2 razy**, wypisz ją. W przeciwnym razie wypisz `-1`.
 
-Dane wyjsciowe: Liczba naturalna.
+### Wejście
 
-Przyklad:
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby naturalne
 
-Dla otrzymanej listy: [4, 7, 4, 4, 2] zostanie zwrocona liczba: 4.
+### Wyjście
+
+Jedna liczba naturalna — element dominujący lub `-1`.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+4
+7
+4
+4
+2
+```
+
+**Wyjście:**
+
+```
+4
+```
+
 */
 
 // Funkcja znajdujaca element dominujacy w liscie liczb naturalnych

@@ -1,16 +1,36 @@
 /*
+ZAD-03 — Minimalny iloczyn trzech liczb
 
-Tytul: Minimalny iloczyn.
+**Poziom:** ★★☆
+**Tagi:** `list`, `min`, `math`
 
-Tresc: Otrzymujesz liste liczb calkowitych. Znajdz najmniejszy iloczyn dla trzech liczb wybranych z listy. Jesli lista sklada sie z mniej niz trzech liczb, zwroc iloczyn wszystkich elementow listy.
+### Treść
 
-Dane wejsciowe: Lista liczb calkowitych.
+Otrzymujesz listę liczb całkowitych. Znajdź **najmniejszy możliwy iloczyn trzech liczb** wybranych z tej listy.
 
-Dane wyjsciowe: Liczba calkowita.
+Jeśli lista zawiera mniej niż 3 liczby — wypisz iloczyn wszystkich elementów listy.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej listy: [3, -1, -3, 2, 9, 4], powinna zostac zwrocona liczba: -108.
+* 1 linia: lista liczb całkowitych `A`
+
+### Wyjście
+
+* 1 linia: jedna liczba całkowita
+
+### Przykład
+
+**Wejście:**
+
+```
+[3, -1, -3, 2, 9, 4]
+```
+
+**Wyjście:**
+
+```
+-108
+```
 
 */
 

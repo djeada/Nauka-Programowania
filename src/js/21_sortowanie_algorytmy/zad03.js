@@ -1,16 +1,39 @@
 /*
+ZAD-03 — Sortowanie przez wstawianie
 
-Tytul: Sortowanie przez wstawianie.
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `insertion-sort`, `list`
 
-Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania przez wstawianie. Stworz nowa, pusta liste i dodaj do niej pierwszy element listy wejsciowej. Dla kazdego kolejnego elementu znajdz odpowiednie miejsce w posortowanej juz czesci listy i wstaw go tam.
+### Treść
 
-Dane wejsciowe: Lista liczb calkowitych.
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wstawianie**.
+Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w odpowiednie miejsce, przesuwając większe elementy w prawo.
 
-Dane wyjsciowe: Posortowana lista liczb calkowitych.
+### Wejście
 
-Przyklad:
+* 1 linia: lista liczb całkowitych
 
-Dla listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
+### Wyjście
+
+* 1 linia: posortowana lista rosnąco
+
+### Przykład
+
+**Wejście:**
+
+```
+[6, 2, 1, 4, 27]
+```
+
+**Wyjście:**
+
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Działa bardzo dobrze dla danych prawie posortowanych.
 
 */
 

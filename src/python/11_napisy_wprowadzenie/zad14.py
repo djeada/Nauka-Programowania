@@ -1,10 +1,34 @@
 """
-Tytul: Napis skladajacy sie z liczb od 1 do n.
-Tresc: Otrzymasz liczbe naturalna n. Zwroc napis skladajacy sie z liczb naturalnych od 1 do n.
-Dane wejsciowe: Liczba naturalna.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanej liczby n rownej 3 powinien zostac zwrocony napis: "123".
+ZAD-14 — Napis z liczb od 1 do n
+
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `string`
+
+### Treść
+
+Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separatorów.
+
+### Wejście
+
+* 1. linia: liczba naturalna `n` (n ≥ 1)
+
+### Wyjście
+
+* 1. linia: ciąg `1..n` bez spacji
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+123
+```
 
 """
 

@@ -1,10 +1,34 @@
 /*
-Tytul: Odwroc napis.
-Tresc: Zmien otrzymany napis, tak aby zapisany byl on od tylu.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanego napisu: "barszcz", powinien zostac zwrocony napis: "zczsrab".
+ZAD-01 — Odwróć napis
+
+**Poziom:** ★☆☆
+**Tagi:** `string`, `I/O`
+
+### Treść
+
+Wczytaj napis i wypisz go od tyłu.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+* 1. linia: odwrócony napis
+
+### Przykład
+
+**Wejście:**
+
+```
+barszcz
+```
+
+**Wyjście:**
+
+```
+zczsrab
+```
 
 */
 #include <algorithm>
@@ -14,7 +38,6 @@ Dla otrzymanego napisu: "barszcz", powinien zostac zwrocony napis: "zczsrab".
 // Zlozonosc Czasowa O(n)
 // Zlozonosc Pamieciowa O(1)
 void odwrocNapisV1(std::string &slowo) {
-
   int j = slowo.length() - 1;
 
   for (int i = 0; i <= j; i++, j--) {
@@ -49,4 +72,3 @@ int main() {
   test2();
   return 0;
 }
-

@@ -1,15 +1,42 @@
 /*
-Tytul: Liczby mniejsze od podanej liczby.
+ZAD-02 — Wypisywanie liczb mniejszych od podanej
 
-Tresc: Dla otrzymanej liczby naturalnej wypisz wszystkie liczby naturalne mniejsze od niej.
+**Poziom:** ★☆☆
+**Tagi:** `for`, `while`, `pętle`
 
-Dane wejsciowe: Liczba naturalna.
+### Treść
 
-Dane wyjsciowe: Liczby naturalne.
+Wczytaj liczbę naturalną `n` (`n > 0`) i wypisz wszystkie liczby naturalne mniejsze od `n`, zaczynając od `n - 1` i kończąc na `1`.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej liczby 3, powinny zostac wypisane liczby 2 i 1.
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n > 0`)
+
+### Wyjście
+
+Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności malejącej.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+2
+1
+```
+
+### Uwagi o formatowaniu
+
+* Jeśli `n = 1`, nie wypisuj nic.
+
 */
 
 // Pobieranie danych od uzytkownika

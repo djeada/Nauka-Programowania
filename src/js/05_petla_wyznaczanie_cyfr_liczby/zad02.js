@@ -1,15 +1,44 @@
 /*
-Tytul: Cyfry liczby.
+ZAD-02 — Wypisywanie cyfr liczby w odwrotnej kolejności
 
-Tresc: Dla otrzymanej liczby naturalnej wypisz cyfry, z ktorych sie sklada, zaczynajac od cyfry jednosci.
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
 
-Dane wejsciowe: Liczba naturalna.
+### Treść
 
-Dane wyjsciowe: Liczby.
+Wczytaj liczbę naturalną `n` i wypisz jej cyfry w kolejności od cyfry jedności (czyli w odwrotnej kolejności niż w zapisie liczby). Każdą cyfrę wypisz w osobnej linii.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej liczby 8214, powinny zostac wypisane cyfry 4, 1, 2 i 8.
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
+
+### Przykład
+
+**Wejście:**
+
+```
+8214
+```
+
+**Wyjście:**
+
+```
+4
+1
+2
+8
+```
+
+### Uwagi o formatowaniu
+
+* Dla `n = 0` wypisz jedną linię z `0`.
+
 */
 
 // Pobieranie danych od uzytkownika

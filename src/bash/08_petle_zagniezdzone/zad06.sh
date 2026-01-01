@@ -14,8 +14,8 @@ literaZ() {
 
     a=$1
 
-    for (( i=0; i<$a; i++ )); do
-        for (( j=0; j<$a; j++ )); do
+    for ((i = 0; i < $a; i++)); do
+        for ((j = 0; j < $a; j++)); do
             if [ $i -eq 0 ] || [ $i -eq $(($a - 1)) ]; then
                 echo -n "*"
             elif [ $j -eq $(($a - $i - 1)) ]; then
@@ -36,4 +36,3 @@ main() {
 }
 
 main "$@"
-

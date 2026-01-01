@@ -1,15 +1,56 @@
-# Tytul: Znalezienie brakujacego elementu w liscie.
-# Tresc: Dla dostarczonej listy, skladajacej sie z nieuporzadkowanych kolejnych (oprocz jednego) elementow ciagu arytmetycznego, znajdz brakujacy element.
-# Dane wejsciowe: Lista zawierajaca liczby naturalne.
-# Dane wyjsciowe: Liczba naturalna.
-# Przyklad:
-# Dla otrzymanej listy: [5, 2, 1, 3] zostanie zwrocona liczba: 4.
+# ZAD-04 — Minimum oraz maksimum
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `listy`, `min`, `max`
+#
+# ### Treść
+#
+# Wczytaj `N` liczb całkowitych. Wypisz:
+#
+# 1. największą liczbę w liście
+# 2. najmniejszą liczbę w liście
+#
+# w jednej linii, oddzielone pojedynczą spacją.
+#
+# ### Wejście
+#
+# * 1. linia: `N` (`N ≥ 1`)
+# * kolejne `N` linii: liczby całkowite
+#
+# ### Wyjście
+#
+# Jedna linia:
+#
+# * `max min`
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 9
+# 4
+# -7
+# 8
+# 5
+# 6
+# -9
+# 10
+# 2
+# -8
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 10 -9
+# ```
 
 source ../assert.sh
 
 maks_v1() {
     local maks=${lista[0]}
-    for elem in "${lista[@]}" ; do
+    for elem in "${lista[@]}"; do
         ((elem > maks)) && maks=$elem
     done
     echo $maks
@@ -17,7 +58,7 @@ maks_v1() {
 
 min_v1() {
     local min=${lista[0]}
-    for elem in "${lista[@]}" ; do
+    for elem in "${lista[@]}"; do
         ((elem < min)) && min=$elem
     done
     echo $min
@@ -65,4 +106,3 @@ main() {
 }
 
 main "$@"
-

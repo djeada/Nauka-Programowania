@@ -1,11 +1,35 @@
 /*
-Tytul: Sprawdzenie, czy sciezka nalezy do pliku/folderu
+ZAD-01 — Czy ścieżka istnieje?
 
-Tresc: Otrzymujesz napis reprezentujacy sciezke. Sprawdz, czy jest to sciezka do pliku lub folderu.
+**Poziom:** ★☆☆
+**Tagi:** `files`, `path`, `os`, `pathlib`
 
-Dane wejsciowe: Napis
+### Treść
 
-Dane wyjsciowe: Wartosc logiczna
+Otrzymujesz ścieżkę w systemie plików. Sprawdź, czy odnosi się do istniejącego **pliku lub folderu**.
+
+### Wejście
+
+* 1 linia: `path` (napis — ścieżka)
+
+### Wyjście
+
+* 1 linia: `Prawda` jeśli ścieżka istnieje, w przeciwnym razie `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\plik.txt
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
+
 */
 
 const fs = require("fs").promises;

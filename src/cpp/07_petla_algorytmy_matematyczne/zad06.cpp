@@ -1,16 +1,47 @@
 /*
-Tytul: NWW.
-Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych zwroci ich najmniejsza wspolna wielokrotnosc.
-Dane wejsciowe: dwie liczby naturalne
-Dane wyjsciowe: liczba naturalna
-Przyklad:
-Dla otrzymanych liczb 7 i 9, funkcja powinna zwrocic liczbe 63.
+ZAD-06 — Najmniejsza wspólna wielokrotność (NWW)
+
+**Poziom:** ★☆☆
+**Tagi:** `nww`, `nwd`, `arytmetyka`
+
+### Treść
+
+Napisz funkcję `nww(a, b)`, która zwraca najmniejszą wspólną wielokrotność liczb
+`a` i `b`.
+
+### Wejście
+
+Dwa argumenty funkcji:
+
+* `a` (liczba naturalna, `a > 0`)
+* `b` (liczba naturalna, `b > 0`)
+
+### Wyjście
+
+Funkcja zwraca jedną liczbę naturalną — `NWW(a, b)`.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(nww(7, 9))
+```
+
+**Wyjście:**
+
+```
+63
+```
+
+### Ograniczenia / gwarancje
+
+* Możesz użyć zależności: `NWW(a, b) = (a * b) // NWD(a, b)`.
 
 */
 #include <cassert>
 
 int nwd(int a, int b) {
-
   int c;
 
   while (b != a % b) {
@@ -18,8 +49,7 @@ int nwd(int a, int b) {
     b = a % b;
     a = c;
 
-    if (b == 0)
-      break;
+    if (b == 0) break;
   }
 
   return a;
@@ -34,9 +64,7 @@ void testNww() {
 }
 
 int main() {
-
   testNww();
 
   return 0;
 }
-

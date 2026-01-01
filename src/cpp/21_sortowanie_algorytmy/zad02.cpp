@@ -1,10 +1,40 @@
 /*
-Tytul: Sortowanie przez wybieranie.
-Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania przez wybieranie. Znajdz najwiekszy element w liscie i zapisz go do zmiennej. Nastepnie znajdz najmniejszy element w pozostalej czesci listy i zamien go z pierwszym elementem nieposortowanej czesci. Powtarzaj operacje, az lista bedzie posortowana.
-Dane wejsciowe: Lista liczb calkowitych.
-Dane wyjsciowe: Posortowana lista liczb calkowitych.
-Przyklad:
-Dla listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
+ZAD-02 — Sortowanie przez wybieranie
+
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `selection-sort`, `list`
+
+### Treść
+
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania
+przez wybieranie**. Dla każdej pozycji `i` znajdź najmniejszy element w zakresie
+`i..koniec` i zamień go z elementem na pozycji `i`.
+
+### Wejście
+
+* 1 linia: lista liczb całkowitych
+
+### Wyjście
+
+* 1 linia: posortowana lista rosnąco
+
+### Przykład
+
+**Wejście:**
+
+```
+[6, 2, 1, 4, 27]
+```
+
+**Wyjście:**
+
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Złożoność czasowa: `O(n^2)`.
 
 */
 
@@ -15,13 +45,10 @@ void sortuj(std::vector<int> &lista) {
   auto it = lista.begin();
 
   while (it != lista.end()) {
-
     auto it_min = it;
 
     for (auto i = it + 1; i != lista.end(); i++) {
-
-      if (*i < *it_min)
-        it_min = i;
+      if (*i < *it_min) it_min = i;
     }
 
     std::iter_swap(it, it_min);
@@ -39,7 +66,6 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
@@ -47,4 +73,3 @@ int main() {
 
 // Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra
 // -pedantic -o main.out Zad2.cpp
-

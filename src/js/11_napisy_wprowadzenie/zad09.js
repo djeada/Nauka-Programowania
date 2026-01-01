@@ -1,19 +1,54 @@
 /*
-Tytul: Wczytaj i rozdziel informacje o pracowniku.
+ZAD-09 — Rozdziel informacje o pracowniku
 
-Tresc: Otrzymasz rekord z bazy danych reprezentujacy dane pracownika. Sa to kolejno: imie, nazwisko, miejsce urodzenia, stanowisko i zarobki. Informacje sa rozdzielone srednikami. Zapisz je w osobnych zmiennych i wypisz je razem z odpowiednimi komunikatami.
+**Poziom:** ★☆☆
+**Tagi:** `split`, `formatowanie`
 
-Dane wejsciowe: Napis.
+### Treść
 
-Dane wyjsciowe: Lista napisow.
+Wczytaj linię z danymi pracownika rozdzielonymi średnikami `;`:
 
-Przyklad:
+1. Imię, 2) Nazwisko, 3) Miejsce urodzenia, 4) Stanowisko, 5) Zarobki
 
-Dla otrzymanego napisu:
-"Jan; Kowalski; Warszawa; Programista; 1000;",
+Wypisz każdą informację w osobnej linii z etykietą.
 
-powinna zostac zwrocona lista:
-["Imie: Jan", "Nazwisko: Kowalski", "Miejsce urodzenia: Warszawa", "Zawod: Programista", "Zarobki: 1000"].
+### Wejście
+
+* 1. linia: dane w formacie `Imię; Nazwisko; Miasto; Zawód; Zarobki;`
+
+### Wyjście
+
+Pięć linii w formacie:
+
+* `Imię: ...`
+* `Nazwisko: ...`
+* `Miejsce urodzenia: ...`
+* `Zawód: ...`
+* `Zarobki: ...`
+
+### Przykład
+
+**Wejście:**
+
+```
+Jan; Kowalski; Warszawa; Programista; 1000;
+```
+
+**Wyjście:**
+
+```
+Imię: Jan
+Nazwisko: Kowalski
+Miejsce urodzenia: Warszawa
+Zawód: Programista
+Zarobki: 1000
+```
+
+### Uwagi
+
+* Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).
+* Ostatni średnik może powodować pusty element na końcu — zignoruj go.
+
 */
 
 function rozdzielRekord(rekord) {

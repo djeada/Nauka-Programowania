@@ -1,16 +1,41 @@
 /*
-Tytul: Znajdz najdluzsze/najkrotsze slowo w zdaniu.
-Tresc: Otrzymasz napis reprezentujacy zdanie. Znajdz:
-a) najdluzsze slowo w zdaniu,
-b) najkrotsze slowo w zdaniu.
-Jesli wiecej niz jedno slowo ma ekstremalna dlugosc, zwroc to slowo sposrod nich, ktore wystepuje w zdaniu jako pierwsze. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
-Dane wejsciowe: Napis.
-Dane wyjsciowe:
-a) Napis.
-b) Napis.
-Przyklad:
-a) Dla otrzymanego napisu: "Kaczka lubi wiosne.", powinno zostac zwrocone: "Kaczka".
-b) Dla otrzymanego napisu: "Kaczka lubi wiosne.", powinno zostac zwrocone: "lubi".
+ZAD-10 — Najdłuższe i najkrótsze słowo
+
+**Poziom:** ★☆☆
+**Tagi:** `string`, `min/max`, `len`
+
+### Treść
+
+Wczytaj zdanie i znajdź:
+
+a) najdłuższe słowo,
+b) najkrótsze słowo.
+
+Jeśli jest remis, wybierz słowo, które występuje wcześniej.
+
+### Wejście
+
+* 1. linia: zdanie
+
+### Wyjście
+
+* 1. linia: najdłuższe słowo
+* 2. linia: najkrótsze słowo
+
+### Przykład
+
+**Wejście:**
+
+```
+Kaczka lubi wiosnę.
+```
+
+**Wyjście:**
+
+```
+Kaczka
+lubi
+```
 
 */
 #include <algorithm>
@@ -104,4 +129,3 @@ int main() {
   test2();
   return 0;
 }
-

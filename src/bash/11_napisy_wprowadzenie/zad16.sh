@@ -1,9 +1,35 @@
-# Tytul:Wypisz pionowo slowa, z ktorych sklada sie zdanie.
-# Tresc: Otrzymasz napis reprezentujacy zdanie. Podziel zdanie na slowa skladowe. Wypisz pionowo slowa, z ktorych sklada sie zdanie. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
-# Dane wejsciowe: Napis.
-# Dane wyjsciowe: Kilka napisow.
-# Przyklad:
-# Dla otrzymanego napisu: "Ala ma kota", powinno zostac wypisane: "Ala", "ma", "kota".
+# ZAD-16 — Odległość Hamminga
+#
+# **Poziom:** ★★☆
+# **Tagi:** `string`, `porównanie`
+#
+# ### Treść
+#
+# Wczytaj dwa napisy tej samej długości i policz, na ilu pozycjach różnią się znakami.
+#
+# ### Wejście
+#
+# * 1. linia: napis `s1`
+# * 2. linia: napis `s2`  (ta sama długość)
+#
+# ### Wyjście
+#
+# * 1. linia: odległość Hamminga
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# adam
+# axam
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 1
+# ```
 
 source ../assert.sh
 
@@ -20,9 +46,9 @@ odleglosc_hamminga() {
     fi
 
     local wynik=0
-    for((i=0;i<n;i++)); do
+    for ((i = 0; i < n; i++)); do
         if [[ "${napis_a:$i:1}" != "${napis_b:$i:1}" ]]; then
-            local wynik=$((wynik+1))
+            local wynik=$((wynik + 1))
         fi
     done
 
@@ -50,4 +76,3 @@ main() {
 }
 
 main "$@"
-

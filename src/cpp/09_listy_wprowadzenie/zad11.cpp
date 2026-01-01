@@ -1,30 +1,59 @@
 /*
-Tytul: Samochody jadace w przeciwnych kierunkach.
-Tresc: Otrzymujesz liste zlozona wylacznie z liter 'A' i 'B', ktore odpowiadaja samochodom jadacym odpowiednio na wschod ('A') i zachod ('B'). Policz, ile razy samochody jadace w przeciwnych kierunkach mijaja sie.
-Dane wejsciowe: Lista znakow odpowiadajacych samochodom jadacym na wschod ('A') i zachod ('B').
-Dane wyjsciowe: Liczba naturalna oznaczajaca liczbe mijajacych sie samochodow.
-Przyklad:
-Dla otrzymanej listy ['A', 'B', 'A', 'B', 'B'] powinna zostac zwrocona liczba 5.
+ZAD-11 — Samochody jadące w przeciwnych kierunkach
+
+**Poziom:** ★★☆
+**Tagi:** `listy`, `zliczanie`, `string`
+
+### Treść
+
+Wczytaj `N` oraz napis długości `N` złożony z liter `A` i `B`:
+
+* `A` oznacza samochód jadący na wschód,
+* `B` oznacza samochód jadący na zachód.
+
+Policz, ile par samochodów minie się, gdy uznamy, że para mija się wtedy, gdy
+`A` stoi **przed** `B` w ciągu.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* 2. linia: napis długości `N`, tylko `A` i `B` (bez spacji)
+
+### Wyjście
+
+Jedna liczba naturalna — liczba mijających się par.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+ABABB
+```
+
+**Wyjście:**
+
+```
+5
+```
 
 */
 #include <cassert>
 #include <vector>
 
 int policzSamochodyV1(std::vector<char> &lista) {
-
   int licznik = 0;
   for (unsigned int i = 0; i < lista.size(); i++) {
     if (lista[i] == 'A') {
       for (unsigned int j = i + 1; j < lista.size(); j++) {
-        if (lista[j] == 'B')
-          licznik++;
+        if (lista[j] == 'B') licznik++;
       }
     }
 
     else if (lista[i] == 'B') {
       for (int j = i - 1; j > -1; j--) {
-        if (lista[j] == 'A')
-          licznik++;
+        if (lista[j] == 'A') licznik++;
       }
     }
   }
@@ -63,10 +92,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

@@ -1,15 +1,49 @@
 /*
-Tytul: Macierz z parami elementow odpowiadajacych sobie z dwoch list.
+ZAD-03 — Macierz 2-kolumnowa z dwóch list
 
-Tresc: Dla otrzymanych dwoch list, stworz dwukolumnowa macierz, ktorej pierwsza kolumna sklada sie z elementow pierwszej listy, a druga kolumna z elementow drugiej listy. Jesli otrzymane listy nie sa rownej dlugosci, zwroc pusta macierz.
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `macierze`
 
-Dane wejsciowe: Dwie listy.
+### Treść
 
-Dane wyjsciowe: Lista list liczb naturalnych lub pusta macierz (w przypadku nierownych dlugosci list).
+Wczytaj dwie listy. Jeśli mają tę samą długość, wypisz macierz 2-kolumnową: wiersz `i` to `(lista1[i], lista2[i])`.
+Jeśli długości są różne, wypisz: `Pusta macierz`
 
-Przyklad:
+### Wejście
 
-Dla otrzymanych dwoch list: [3, 5, 2] oraz [2, 8, 1], powinna zostac zwrocona macierz: [[3, 2], [5, 8], [2, 1]
+* 1. linia: `n`
+* 2. linia: `m`
+* następnie `n` liczb (pierwsza lista)
+* następnie `m` liczb (druga lista)
+
+### Wyjście
+
+* Jeśli `n = m`: `n` wierszy `x y`
+* Jeśli `n ≠ m`: jedna linia `Pusta macierz`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+3
+3
+5
+2
+2
+8
+1
+```
+
+**Wyjście:**
+
+```
+3 2
+5 8
+2 1
+```
+
 */
 
 function utworzMacierzZList(listA, listB) {

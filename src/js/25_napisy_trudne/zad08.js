@@ -1,16 +1,38 @@
 /*
+ZAD-08 — Najdłuższy wspólny przedrostek
 
-Tytul: Najdluzszy wspolny przedrostek.
+**Poziom:** ★★★
+**Tagi:** `string`, `prefix`, `list`
 
-Tresc: Dostajesz liste napisow. Znajdz najdluzszy wspolny przedrostek dla wszystkich napisow na liscie.
+### Treść
 
-Dane wejsciowe: Lista napisow.
+Otrzymujesz listę napisów (w kolejnych liniach). Znajdź najdłuższy przedrostek wspólny dla wszystkich.
 
-Dane wyjsciowe: Napis.
+### Wejście
 
-Przyklad:
+* 1 linia: `n` — liczba napisów
+* kolejne `n` linii: napisy
 
-Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac zwrocony napis "Rem".
+### Wyjście
+
+* 1 linia: najdłuższy wspólny przedrostek (może być pusty)
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+Remolada
+Remux
+Remmy
+```
+
+**Wyjście:**
+
+```
+Rem
+```
 
 */
 

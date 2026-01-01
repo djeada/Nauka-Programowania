@@ -16,7 +16,8 @@ czyPierwsza() {
     if [[ $(($1 % 2)) -eq 0 ]] || [[ $(($1 % 3)) -eq 0 ]]; then
         return 0
     fi
-    temp=5; w=2
+    temp=5
+    w=2
     while [[ $((temp * temp)) -le $1 ]]; do
         if [[ $(($temp % temp)) -eq 0 ]]; then
             return 0
@@ -28,8 +29,7 @@ czyPierwsza() {
 }
 
 liczbyPierwszeV1() {
-    for (( i=2; i<$1; i++ ))
-    do
+    for ((i = 2; i < $1; i++)); do
         if ! czyPierwsza $i; then
             echo -n "$i "
         fi
@@ -44,4 +44,3 @@ main() {
 }
 
 main "$@"
-

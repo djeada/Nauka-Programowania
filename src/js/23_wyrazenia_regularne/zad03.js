@@ -1,16 +1,39 @@
 /*
+ZAD-03 — Sprawdź, czy napis składa się wyłącznie z cyfr
 
-Tytul: Czy napis sklada sie wylacznie z cyfr?
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
 
-Tresc: Masz napis. Sprawdz, czy sklada sie on wylacznie z cyfr.
+### Treść
 
-Dane wejsciowe: Napis.
+Otrzymujesz napis. Sprawdź, czy składa się wyłącznie z cyfr (`0–9`).
 
-Dane wyjsciowe: Wartosc logiczna.
+### Wejście
 
-Przyklad:
+Jedna linia:
 
-Dla napisu: “1234”, powinna zostac zwrocona wartosc logiczna: Prawda.
+* `s`
+
+### Wyjście
+
+Jedna linia:
+
+* `Prawda` — jeśli napis zawiera tylko cyfry
+* `Fałsz` — w przeciwnym razie
+
+### Przykład
+
+**Wejście:**
+
+```
+1234
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 

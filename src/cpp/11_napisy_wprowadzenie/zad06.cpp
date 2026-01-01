@@ -1,10 +1,34 @@
 /*
-Tytul: Zamien litery "a" na znaki zapytania.
-Tresc: Otrzymasz napis. Zmien litery "a" na znaki zapytania.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanego napisu: "Latarnik", powinien zostac zwrocony napis: "L?t?rnik".
+ZAD-06 — Zamień litery „a” na „?”
+
+**Poziom:** ★☆☆
+**Tagi:** `string`, `replace`
+
+### Treść
+
+Wczytaj napis i zamień wszystkie wystąpienia litery `a` na znak `?`.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+* 1. linia: napis po zamianie
+
+### Przykład
+
+**Wejście:**
+
+```
+Latarnik
+```
+
+**Wyjście:**
+
+```
+L?t?rnik
+```
 
 */
 #include <algorithm>
@@ -12,10 +36,8 @@ Dla otrzymanego napisu: "Latarnik", powinien zostac zwrocony napis: "L?t?rnik".
 #include <string>
 
 void zamienV1(std::string &napis) {
-
   for (auto &znak : napis) {
-    if (znak == 'a')
-      znak = '?';
+    if (znak == 'a') znak = '?';
   }
 }
 
@@ -44,4 +66,3 @@ int main() {
   test2();
   return 0;
 }
-

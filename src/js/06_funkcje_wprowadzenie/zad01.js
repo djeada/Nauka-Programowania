@@ -1,23 +1,106 @@
 /*
-Tytul: Zwroc stala.
+ZAD-01A — Zwracanie stałej wartości: liczba 3
 
-Tresc: Napisz funkcje, ktora zwroci:
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `return`, `int`
 
-a) Liczbe 3.
+### Treść
 
-b) Napis "Tak".
+Napisz funkcję (bez argumentów), która zwraca liczbę całkowitą `3`.
 
-c) Wartosc logiczna Prawda.
+### Wejście
 
-Dane wejsciowe: Brak.
+Brak.
 
-Dane wyjsciowe:
+### Wyjście
 
-a) Liczba 3.
+Funkcja ma zwrócić:
 
-b) Napis "Tak".
+* `3`
 
-c) Wartosc logiczna Prawda.
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+wynik = zwroc_liczbe()
+print(wynik)
+```
+
+**Wyjście:**
+
+```
+3
+```
+
+ZAD-01B — Zwracanie stałej wartości: napis „Tak”
+
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `return`, `string`
+
+### Treść
+
+Napisz funkcję (bez argumentów), która zwraca napis `Tak`.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Funkcja ma zwrócić:
+
+* `Tak`
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+wynik = zwroc_napis()
+print(wynik)
+```
+
+**Wyjście:**
+
+```
+Tak
+```
+
+ZAD-01C — Zwracanie stałej wartości: True
+
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `return`, `bool`
+
+### Treść
+
+Napisz funkcję (bez argumentów), która zwraca wartość logiczną `True`.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Funkcja ma zwrócić:
+
+* `True`
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+wynik = zwroc_prawda()
+print(wynik)
+```
+
+**Wyjście:**
+
+```
+True
+```
+
 */
 
 // Funkcja zwracajaca liczbe 3

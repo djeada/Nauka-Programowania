@@ -1,9 +1,33 @@
-# Tytul: Zamien wszystkie male litery na duze.
-# Tresc: Otrzymasz napis. Zmien wszystkie male litery na duze.
-# Dane wejsciowe: Napis.
-# Dane wyjsciowe: Napis.
-# Przyklad:
-# Dla otrzymanego napisu: "Rumcajs", powinien zostac zwrocony napis: "RUMCAJS".
+# ZAD-12 — Usuń spacje ze zdania
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `replace`, `string`
+#
+# ### Treść
+#
+# Wczytaj zdanie i usuń z niego wszystkie spacje.
+#
+# ### Wejście
+#
+# * 1. linia: zdanie
+#
+# ### Wyjście
+#
+# * 1. linia: zdanie bez spacji
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# Ala ma kota
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# Alamakota
+# ```
 
 source ../assert.sh
 
@@ -12,11 +36,11 @@ usun_spacje_v1() {
     local zdanie="$1"
     local wynik=""
 
-    while IFS= read -n 1 znak ; do
+    while IFS= read -n 1 znak; do
         if [[ "$znak" != " " ]]; then
             local wynik="${wynik}${znak}"
         fi
-    done <<< "$zdanie"
+    done <<<"$zdanie"
 
     echo "$wynik"
 }
@@ -45,4 +69,3 @@ main() {
 }
 
 main "$@"
-

@@ -1,16 +1,41 @@
 /*
+ZAD-02 — Usuń podnapis
 
-Tytul: Usun podnapis.
+**Poziom:** ★★☆
+**Tagi:** `string`, `replace`, `substring`
 
-Tresc: Dostajesz dwa napisy. Twoim zadaniem jest wyszukanie i usuniecie wszystkich wystapien drugiego napisu w pierwszym napisie.
+### Treść
 
-Dane wejsciowe: Dwa napisy.
+Dostajesz dwa napisy:
 
-Dane wyjsciowe: Napis.
+1. Napis główny,
+2. Podnapis do usunięcia.
 
-Przyklad:
+Usuń **wszystkie wystąpienia** podnapisu z napisu głównego.
 
-Dla napisow: “Lezy jezy na wiezy” oraz “zy”, zwrocony napis powinien brzmiec: “Le je na wie”.
+### Wejście
+
+* 1 linia: napis `S`
+* 2 linia: napis `T` (do usunięcia)
+
+### Wyjście
+
+* 1 linia: wynikowy napis po usunięciu wszystkich wystąpień
+
+### Przykład
+
+**Wejście:**
+
+```
+Lezy jezy na wiezy
+zy
+```
+
+**Wyjście:**
+
+```
+Le je na wie
+```
 
 */
 

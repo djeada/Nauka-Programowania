@@ -18,7 +18,7 @@ czy_palindrom() {
     fi
 }
 
-test_czy_palindrom(){
+test_czy_palindrom() {
     assertTrue "czy_palindrom 'kajak'"
     assertFalse "czy_palindrom 'kot'"
 }
@@ -28,4 +28,3 @@ main() {
 }
 
 main "$@"
-

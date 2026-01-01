@@ -1,11 +1,43 @@
 /*
-Tytul: Sortowanie wzgledem kluczy/wartosci
-Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych. Twoim zadaniem jest wypisanie par posortowanych wzgledem napisow oraz wzgledem liczb.
-Dane wejsciowe: Slownik par: napis, liczba calkowita.
-Dane wyjsciowe: Lista par.
-Przyklad:
-Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)].
-Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("c", 3), ("b", 4), ("x", 5)].
+ZAD-11 — Sortowanie „słownika” po kluczach i po wartościach
+
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `dict`
+
+### Treść
+
+Wczytaj `n` par `klucz wartość`.
+a) Wypisz listę par posortowaną rosnąco po kluczach.
+b) Wypisz listę par posortowaną rosnąco po wartościach.
+
+### Wejście
+
+* 1 linia: `n`
+* następnie `n` linii: `klucz wartość`
+
+### Wyjście
+
+* 1 linia: lista par dla a)
+* 2 linia: lista par dla b)
+
+### Przykład
+
+**Wejście:**
+
+```
+4
+c 3
+x 5
+a -2
+b 4
+```
+
+**Wyjście:**
+
+```
+[('a', -2), ('b', 4), ('c', 3), ('x', 5)]
+[('a', -2), ('c', 3), ('b', 4), ('x', 5)]
+```
 
 */
 #include <algorithm>
@@ -22,8 +54,8 @@ bool porownujKlucze(const std::pair<std::string, int> &a,
   return a.first < b.first;
 }
 
-std::vector<std::pair<std::string, int>>
-sortujWzgledemKluczy(const std::unordered_map<std::string, int> &slownik) {
+std::vector<std::pair<std::string, int>> sortujWzgledemKluczy(
+    const std::unordered_map<std::string, int> &slownik) {
   /*
    * Funkcja sortuje slownik wzgledem kluczy.
    */
@@ -46,8 +78,8 @@ bool porownujWartosci(const std::pair<std::string, int> &a,
   return a.second < b.second;
 }
 
-std::vector<std::pair<std::string, int>>
-sortujWzgledemWartosci(const std::unordered_map<std::string, int> &slownik) {
+std::vector<std::pair<std::string, int>> sortujWzgledemWartosci(
+    const std::unordered_map<std::string, int> &slownik) {
   /*
    * Funkcja sortuje slownik wzgledem wartosci.
    */
@@ -81,10 +113,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

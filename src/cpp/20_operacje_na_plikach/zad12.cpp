@@ -1,8 +1,42 @@
 /*
-Tytul: Przesun wszystkie pliki CSV do jednego folderu.
-Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Przenies wszystkie pliki CSV z pierwszego folderu (oraz jego podfolderow) do drugiego folderu.
-Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
-Dane wyjsciowe: Brak.
+ZAD-12 — Przenieś wszystkie pliki CSV do jednego folderu (rekurencyjnie)
+
+**Poziom:** ★★☆
+**Tagi:** `files`, `move`, `csv`, `recursive`
+
+### Treść
+
+Otrzymujesz ścieżkę folderu źródłowego i docelowego. Przenieś wszystkie pliki
+`.csv` z folderu źródłowego **i wszystkich jego podfolderów** do folderu
+docelowego.
+
+### Wejście
+
+* 1 linia: `src_folder`
+* 2 linia: `dst_folder`
+
+### Wyjście
+
+Brak.
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Projekty
+D:\Dane\CSV
+```
+
+**Wyjście:**
+*(brak)*
+
+### Uwagi
+
+* Jeśli w folderze docelowym istnieje już plik o tej samej nazwie, zadanie
+wymaga zdefiniowania zachowania (np. zmiana nazwy / pominięcie) — jeśli
+sprawdzarka tego nie doprecyzowuje, przyjmij jedną spójną strategię w całym
+rozwiązaniu.
 
 */
 #include <cassert>
@@ -19,7 +53,6 @@ std::string nazwaPliku(const std::string &sciezka) {
 
 void przeniesPlik(const std::string &sciezka,
                   const std::string &sciezkaDocelowa) {
-
   try {
     filesys::copy_file(sciezka,
                        sciezkaDocelowa + filesys::path::preferred_separator +
@@ -32,18 +65,15 @@ void przeniesPlik(const std::string &sciezka,
 }
 
 std::string znajdzRozszerzenie(std::string sciezka) {
-
   filesys::path obiekt(sciezka);
 
-  if (obiekt.has_extension())
-    return obiekt.extension().string();
+  if (obiekt.has_extension()) return obiekt.extension().string();
 
   return "";
 }
 
 void przeniesPliki(const std::string &sciezka,
                    const std::string &sciezkaDocelowa) {
-
   for (const auto plik : filesys::directory_iterator(sciezka)) {
     if (znajdzRozszerzenie(plik.path()) == ".csv")
       przeniesPlik(plik.path(), sciezkaDocelowa);
@@ -51,7 +81,6 @@ void przeniesPliki(const std::string &sciezka,
 }
 
 void testPrzeniesPliki() {
-
   // stworz foldery test1 i test2
   filesys::create_directory("test1");
   filesys::create_directory("test2");
@@ -84,9 +113,7 @@ void testPrzeniesPliki() {
 }
 
 int main() {
-
   testPrzeniesPliki();
 
   return 0;
 }
-

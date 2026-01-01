@@ -1,10 +1,49 @@
 """
-Tytul: Czy srednia elementow znajduje sie w liscie?
-Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby calkowitej jako klucza, usun pierwsze wystapienie klucza w liscie.
-Dane wejsciowe: Lista liczb calkowitych i liczba calkowita jako klucz.
-Dane wyjsciowe: Lista liczb calkowitych bez pierwszego wystapienia klucza.
-Przyklad:
-Dla otrzymanej listy [6, 2, 1, 4, 27] oraz 4 powinna zostac zwrocona lista [6, 2, 1, 27].
+ZAD-06 — Czy średnia elementów znajduje się w liście?
+
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `średnia`, `wyszukiwanie`
+
+### Treść
+
+Wczytaj listę liczb całkowitych. Oblicz średnią arytmetyczną elementów i sprawdź, czy ta średnia jest **dokładnie** jednym z elementów listy.
+
+Wypisz:
+
+* `Tak` — jeśli średnia występuje w liście,
+* `Nie` — w przeciwnym razie.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Jedno słowo: `Tak` lub `Nie`.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+6
+2
+1
+4
+27
+```
+
+**Wyjście:**
+
+```
+Nie
+```
+
+### Uwagi
+
+* Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb całkowitych.
 
 """
 

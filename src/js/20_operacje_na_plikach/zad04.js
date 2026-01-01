@@ -1,11 +1,35 @@
 /*
-Tytul: Wczytaj i wypisz tresc pliku.
+ZAD-04 — Wczytaj i wypisz treść pliku
 
-Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Wczytaj plik i wypisz jego tresc.
+**Poziom:** ★☆☆
+**Tagi:** `files`, `read`, `encoding`
 
-Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
+### Treść
 
-Dane wyjsciowe: Napis zawierajacy tresc pliku.
+Otrzymujesz ścieżkę do pliku tekstowego. Wczytaj zawartość pliku i wypisz ją.
+
+### Wejście
+
+* 1 linia: `file_path`
+
+### Wyjście
+
+* treść pliku (dokładnie taka jak w pliku)
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\wiadomość.txt
+```
+
+**Wyjście:**
+
+```
+Witaj! To jest przykładowa treść pliku tekstowego.
+```
+
 */
 
 const fs = require("fs").promises;

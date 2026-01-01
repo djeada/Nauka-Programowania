@@ -1,10 +1,45 @@
 /*
-Tytul: Znalezienie indeksow pierwszej pary elementow listy o sumie rownej podanej liczbie.
-Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x, znajdz indeksy pierwszej pary elementow listy, ktorych suma jest rowna x. Jesli taka para nie istnieje, zwroc pare (-1, -1).
-Dane wejsciowe: Lista liczb calkowitych oraz liczba calkowita.
-Dane wyjsciowe: Para liczb calkowitych.
-Przyklad:
-Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostana zwrocone indeksy pierwszej pary elementow o sumie rownej 5: (0, 2).
+ZAD-16 — Indeksy pierwszej pary o sumie x
+
+**Poziom:** ★★☆
+**Tagi:** `hashmap`, `indeksy`, `2-sum`
+
+### Treść
+
+Wczytaj listę liczb całkowitych oraz liczbę `x`. Znajdź indeksy **pierwszej**
+pary `(i, j)` (z `i < j`) takiej, że `lista[i] + lista[j] == x`.
+
+Jeśli nie istnieje taka para — wypisz `-1 -1`.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `x` (liczba całkowita)
+
+### Wyjście
+
+Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+1
+3
+4
+5
+2
+5
+```
+
+**Wyjście:**
+
+```
+0 2
+```
 
 */
 #include <algorithm>
@@ -13,13 +48,11 @@ Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostana zwrocone indeksy pi
 
 std::vector<std::pair<int, int>> znajdzParyV1(std::vector<int> &lista,
                                               int suma) {
-
   std::vector<std::pair<int, int>> wynik;
 
   for (unsigned int i = 0; i < lista.size(); i++) {
     for (unsigned int j = i + 1; j < lista.size(); j++) {
-      if (lista[i] + lista[j] == suma)
-        wynik.emplace_back(lista[i], lista[j]);
+      if (lista[i] + lista[j] == suma) wynik.emplace_back(lista[i], lista[j]);
     }
   }
 
@@ -35,9 +68,7 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
 }
-

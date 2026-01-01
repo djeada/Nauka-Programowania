@@ -1,25 +1,55 @@
 /*
-Tytul: Suma elementow ciagu.
+ZAD-06 — Sumowanie elementów ciągu
 
-Tresc: Dla otrzymanej liczby naturalnej n, wypisz sume n pierwszych elementow ciagu danego wzorem:
+**Poziom:** ★☆☆
+**Tagi:** `ciągi`, `sumowanie`, `pętle`
 
-$$a_n = n^2 + n + 1$$
+### Treść
 
-$$a_n = n^2 + 5n$$
+Wczytaj liczbę naturalną `n` (`n ≥ 1`) i oblicz:
 
-$$a_n = n + 2n$$
+a) ( \sum_{k=1}^{n} (k^2 + k + 1) )
 
-Wynik powinien zostac zaokraglony do najblizszej liczby naturalnej.
+b) ( \sum_{k=1}^{n} (k^2 + 5k) )
 
-Dane wejsciowe: Liczba naturalna.
+c) ( \sum_{k=1}^{n} (k + 2k) )  (czyli ( \sum_{k=1}^{n} 3k ))
 
-Dane wyjsciowe: Liczba naturalna.
+Wypisz trzy sumy w kolejności a), b), c).
 
-Przyklad:
+### Wejście
 
-* Dla otrzymanej liczby 2, w podpunkcie a) powinna zostac wypisana liczba 1.
-* Dla otrzymanej liczby 2, w podpunkcie b) powinna zostac wypisana liczba 17.
-* Dla otrzymanej liczby 2, w podpunkcie c) powinna zostac wypisana liczba 6.    
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 1`)
+
+### Wyjście
+
+Trzy liczby naturalne — każda w oddzielnej linii:
+
+1. suma dla (a)
+2. suma dla (b)
+3. suma dla (c)
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+```
+
+**Wyjście:**
+
+```
+10
+16
+9
+```
+
+### Uwagi o formatowaniu
+
+* Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania.
+
 */
 
 // Pobieranie danych od uzytkownika

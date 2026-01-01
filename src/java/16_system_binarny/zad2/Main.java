@@ -1,13 +1,63 @@
 /*
-Tytul: Wybieranie minimum i maksimum.
-Tresc: Otrzymujesz dwie liczby naturalne.
-a) Zwroc mniejsza z nich. Zabronione jest uzycie instrukcji warunkowej oraz zewnetrznych bibliotek.
-b) Zwroc wieksza z nich. Zabronione jest uzycie instrukcji warunkowej oraz zewnetrznych bibliotek.
-Dane wejsciowe: Dwie liczby naturalne w obu podpunktach.
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
-Przyklad:
-a) Dla otrzymanych liczb: 3 i 2, powinna zostac zwrocona liczba: 2.
-b) Dla otrzymanych liczb: 3 i 2, powinna zostac zwrocona liczba: 3.
+ZAD-02A — Wypisz binarnie tylko gdy liczba parzysta
+
+**Poziom:** ★☆☆
+**Tagi:** `warunki`, `parzystość`, `binarne`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Jeśli `n` jest parzysta — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
+
+### Wejście
+
+* 1. linia: `n` (liczba naturalna)
+
+### Wyjście
+
+* Jeśli `n % 2 == 0`: jedna linia z zapisem binarnym `n`
+* W przeciwnym razie: brak wyjścia
+
+### Przykład
+
+**Wejście:**
+
+```
+7
+```
+
+**Wyjście:** *(brak)*
+
+ZAD-02B — Wypisz binarnie tylko gdy liczba pierwsza
+
+**Poziom:** ★☆☆
+**Tagi:** `pierwszość`, `warunki`, `binarne`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Jeśli `n` jest liczbą pierwszą — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
+
+### Wejście
+
+* 1. linia: `n` (liczba naturalna)
+
+### Wyjście
+
+* Jeśli `n` jest pierwsza: jedna linia z zapisem binarnym `n`
+* W przeciwnym razie: brak wyjścia
+
+### Przykład
+
+**Wejście:**
+
+```
+7
+```
+
+**Wyjście:**
+
+```
+111
+```
 
 */
 public class Main {

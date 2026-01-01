@@ -1,16 +1,36 @@
 /*
+ZAD-06 — Rotacje napisów
 
-Tytul: Rotacje napisow.
+**Poziom:** ★★★
+**Tagi:** `string`, `rotation`, `substring`
 
-Tresc: Dostajesz dwa napisy. Sprawdz, czy jeden z nich jest rotacja drugiego.
+### Treść
 
-Dane wejsciowe: Dwa napisy.
+Otrzymujesz dwa napisy `A` i `B`. Sprawdź, czy jeden z nich jest **rotacją** drugiego (mają tę samą długość i da się uzyskać jeden przez przesunięcie cykliczne drugiego).
 
-Dane wyjsciowe: Wartosc logiczna.
+### Wejście
 
-Przyklad:
+* 1 linia: napis `A`
+* 2 linia: napis `B`
 
-Dla napisow "malpka" i "pkamal" powinno zostac zwrocone "Prawda".
+### Wyjście
+
+* 1 linia: `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+malpka
+pkamal
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 

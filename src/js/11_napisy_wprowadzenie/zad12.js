@@ -1,15 +1,35 @@
 /*
-Tytul: Usun spacje ze zdania.
+ZAD-12 — Usuń spacje ze zdania
 
-Tresc: Otrzymasz napis reprezentujacy zdanie. Usun spacje ze zdania.
+**Poziom:** ★☆☆
+**Tagi:** `replace`, `string`
 
-Dane wejsciowe: Napis.
+### Treść
 
-Dane wyjsciowe: Napis.
+Wczytaj zdanie i usuń z niego wszystkie spacje.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "Alamakota".
+* 1. linia: zdanie
+
+### Wyjście
+
+* 1. linia: zdanie bez spacji
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+Alamakota
+```
+
 */
 
 function usunSpacje(napis) {

@@ -1,10 +1,39 @@
 /*
-Tytul: Wyodrebnij cyfry z tekstu.
-Tresc: Dostajesz napis. Zwroc napis skladajacy sie z cyfr wystepujacych w tym napisie.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla napisu: “Terminator2001”, powinien zostac zwrocony napis: “2001”.
+ZAD-03 — Sprawdź, czy napis składa się wyłącznie z cyfr
+
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
+
+### Treść
+
+Otrzymujesz napis. Sprawdź, czy składa się wyłącznie z cyfr (`0–9`).
+
+### Wejście
+
+Jedna linia:
+
+* `s`
+
+### Wyjście
+
+Jedna linia:
+
+* `Prawda` — jeśli napis zawiera tylko cyfry
+* `Fałsz` — w przeciwnym razie
+
+### Przykład
+
+**Wejście:**
+
+```
+1234
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 

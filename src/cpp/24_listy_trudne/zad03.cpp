@@ -1,10 +1,38 @@
 /*
-Tytul: Minimalny iloczyn.
-Tresc: Otrzymujesz liste liczb calkowitych. Znajdz najmniejszy iloczyn dla trzech liczb wybranych z listy. Jesli lista sklada sie z mniej niz trzech liczb, zwroc iloczyn wszystkich elementow listy.
-Dane wejsciowe: Lista liczb calkowitych.
-Dane wyjsciowe: Liczba calkowita.
-Przyklad:
-Dla otrzymanej listy: [3, -1, -3, 2, 9, 4], powinna zostac zwrocona liczba: -108.
+ZAD-03 — Minimalny iloczyn trzech liczb
+
+**Poziom:** ★★☆
+**Tagi:** `list`, `min`, `math`
+
+### Treść
+
+Otrzymujesz listę liczb całkowitych. Znajdź **najmniejszy możliwy iloczyn trzech
+liczb** wybranych z tej listy.
+
+Jeśli lista zawiera mniej niż 3 liczby — wypisz iloczyn wszystkich elementów
+listy.
+
+### Wejście
+
+* 1 linia: lista liczb całkowitych `A`
+
+### Wyjście
+
+* 1 linia: jedna liczba całkowita
+
+### Przykład
+
+**Wejście:**
+
+```
+[3, -1, -3, 2, 9, 4]
+```
+
+**Wyjście:**
+
+```
+-108
+```
 
 */
 #include <algorithm>
@@ -15,7 +43,6 @@ Dla otrzymanej listy: [3, -1, -3, 2, 9, 4], powinna zostac zwrocona liczba: -108
 // Zlozonosc czasowa O(nlogn)
 // Zlozonosc pamieciowa O(1)
 int minIloczynV1(std::vector<int> lista) {
-
   auto n = lista.size();
 
   if (n <= 2)
@@ -30,7 +57,6 @@ int minIloczynV1(std::vector<int> lista) {
 // Zlozonosc czasowa O(n)
 // Zlozonosc pamieciowa O(n)
 int minIloczynV2(std::vector<int> lista) {
-
   auto n = lista.size();
 
   if (n <= 2)
@@ -78,7 +104,6 @@ int minIloczynV2(std::vector<int> lista) {
 // Zlozonosc czasowa O(n)
 // Zlozonosc pamieciowa O(1)
 int minIloczynV3(std::vector<int> lista) {
-
   auto n = lista.size();
 
   if (n <= 2)
@@ -91,7 +116,6 @@ int minIloczynV3(std::vector<int> lista) {
   auto maks2 = INT_MIN;
 
   for (auto &x : lista) {
-
     if (x < min1) {
       min3 = min2;
       min2 = min1;
@@ -147,11 +171,9 @@ void test3() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
 
   return 0;
 }
-

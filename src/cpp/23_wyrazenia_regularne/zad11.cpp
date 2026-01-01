@@ -1,10 +1,42 @@
 /*
-Tytul: Nazwa pliku bez rozszerzenia.
-Tresc: Otrzymujesz napis reprezentujacy sciezke pliku. Odfiltruj z niego nazwe pliku wraz z rozszerzeniem. Zwroc sama nazwe pliku bez rozszerzenia.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanego napisu "C:\my-long\path_directory\file.html", powinna zostac zwrocona nazwa pliku bez rozszerzenia "file".
+ZAD-11 — Nazwa pliku bez rozszerzenia
+
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `ścieżki`
+
+### Treść
+
+Otrzymujesz napis reprezentujący pełną ścieżkę do pliku. Wyodrębnij nazwę pliku
+(bez katalogów) i usuń rozszerzenie (część po ostatniej kropce). Zwróć samą
+nazwę bez rozszerzenia.
+
+Ścieżka może zawierać separator `\` lub `/`.
+
+### Wejście
+
+Jedna linia:
+
+* `sciezka`
+
+### Wyjście
+
+Jedna linia:
+
+* `nazwa_pliku_bez_rozszerzenia`
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\my-long\path_directory\file.html
+```
+
+**Wyjście:**
+
+```
+file
+```
 
 */
 
@@ -48,7 +80,6 @@ void test4() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
@@ -56,4 +87,3 @@ int main() {
 
   return 0;
 }
-

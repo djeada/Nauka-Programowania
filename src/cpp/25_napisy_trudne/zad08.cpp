@@ -1,10 +1,39 @@
 /*
-Tytul: Najdluzszy wspolny przedrostek.
-Tresc: Dostajesz liste napisow. Znajdz najdluzszy wspolny przedrostek dla wszystkich napisow na liscie.
-Dane wejsciowe: Lista napisow.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac zwrocony napis "Rem".
+ZAD-08 — Najdłuższy wspólny przedrostek
+
+**Poziom:** ★★★
+**Tagi:** `string`, `prefix`, `list`
+
+### Treść
+
+Otrzymujesz listę napisów (w kolejnych liniach). Znajdź najdłuższy przedrostek
+wspólny dla wszystkich.
+
+### Wejście
+
+* 1 linia: `n` — liczba napisów
+* kolejne `n` linii: napisy
+
+### Wyjście
+
+* 1 linia: najdłuższy wspólny przedrostek (może być pusty)
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+Remolada
+Remux
+Remmy
+```
+
+**Wyjście:**
+
+```
+Rem
+```
 
 */
 #include <cassert>
@@ -13,15 +42,13 @@ Dla listy ["Remolada", "Remux", "Remmy"] powinien zostac zwrocony napis "Rem".
 #include <vector>
 
 std::string najdluzszyPrzedrostekV1(const std::vector<std::string> &slowa) {
-
   std::string wynik = "";
   auto n = slowa.size();
   auto j = INT_MAX;
 
   for (const auto &slowo : slowa) {
     auto s = slowo.length();
-    if (j > s)
-      j = s;
+    if (j > s) j = s;
   }
 
   for (auto i = 0; i < j; i++) {
@@ -61,11 +88,9 @@ void test3() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
 
   return 0;
 }
-

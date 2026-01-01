@@ -1,9 +1,39 @@
-# Tytul: Zamien wartosci miejscami.
-# Tresc: Napisz funkcje, ktora zamieni wartosci zmiennych a i b miejscami. Po wykonaniu funkcji zmienna a powinna przechowywac wartosc zmiennej b, a zmienna b powinna przechowywac wartosc zmiennej a.
-# Dane wejsciowe: Dwie liczby naturalne.
-# Dane wyjsciowe: Dwie liczby naturalne.
-# Przyklad:
-# Dla otrzymanych liczb: 8 i 5, powinny zostac zwrocone liczby 5 i 8.
+# ZAD-05 — Zamiana wartości miejscami
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `funkcje`, `krotka`, `zmienne`
+#
+# ### Treść
+#
+# Napisz funkcję `zamien_wartosci(a, b)`, która zamienia wartości miejscami i zwraca je jako parę `(b, a)`.
+#
+# ### Wejście
+#
+# Dwa argumenty: `a`, `b` (liczby naturalne)
+#
+# ### Wyjście
+#
+# Dwie liczby naturalne zwrócone jako krotka / para:
+#
+# * najpierw nowa wartość `a` (czyli stare `b`)
+# * potem nowa wartość `b` (czyli stare `a`)
+#
+# ### Przykład
+#
+# **Wywołanie funkcji:**
+#
+# ```python
+# a, b = zamien_wartosci(8, 5)
+# print("a =", a)
+# print("b =", b)
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# a = 5
+# b = 8
+# ```
 
 swapV1() {
 
@@ -22,4 +52,3 @@ main() {
 }
 
 main "$@"
-

@@ -12,8 +12,8 @@ tabliczkaMnozenia() {
 
     a=$1
 
-    for (( i=1; i<=$a; i++ )); do
-        for (( j=1; j<=$a; j++ )); do
+    for ((i = 1; i <= $a; i++)); do
+        for ((j = 1; j <= $a; j++)); do
             echo -n "$(($i * $j)) "
         done
         echo ""
@@ -28,4 +28,3 @@ main() {
 }
 
 main "$@"
-

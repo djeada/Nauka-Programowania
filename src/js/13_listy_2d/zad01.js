@@ -1,15 +1,39 @@
 /*
-Tytul: Macierz z identycznymi wierszami, skladajacymi sie z liczb od 0 do b.
+ZAD-01 — Macierz z identycznymi wierszami 0..b
 
-Tresc: Otrzymujesz dwie liczby naturalne, a i b. Stworz macierz, skladajaca sie z a identycznych wierszy, ktore skladaja sie z liczb od 0 do b.
+**Poziom:** ★☆☆
+**Tagi:** `macierze`, `pętle`, `print`
 
-Dane wejsciowe: Dwie liczby naturalne, a i b.
+### Treść
 
-Dane wyjsciowe: Lista list liczb naturalnych.
+Wczytaj `a` i `b`. Wypisz macierz składającą się z `a` identycznych wierszy, gdzie każdy wiersz to liczby od `0` do `b` włącznie.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanych liczb: 3 i 2, powinna zostac zwrocona macierz: [[0, 1, 2], [0, 1, 2], [0, 1, 2]].
+* 1. linia: `a`
+* 2. linia: `b`
+
+### Wyjście
+
+* `a` wierszy, w każdym: `0 1 2 ... b`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+2
+```
+
+**Wyjście:**
+
+```
+0 1 2
+0 1 2
+0 1 2
+```
+
 */
 
 function utworzMacierz(a, b) {

@@ -1,17 +1,44 @@
 /*
-Tytul: Operacje arytmetyczne.
-Tresc: Otrzymujesz dwie liczby naturalne. Uzywajac jedynie operatorow bitowych, zaimplementuj:
-a) Dodawanie.
-b) Odejmowanie.
-c) Mnozenie.
-d) Dzielenie.
-Dane wejsciowe: Dwie liczby naturalne w kazdym podpunkcie.
-Dane wyjsciowe: Liczba naturalna w kazdym podpunkcie.
-Przyklad:
-a) Dla otrzymanych liczb: 2 i 3, powinna zostac zwrocona liczba: 5.
-b) Dla otrzymanych liczb: 7 i 5, powinna zostac zwrocona liczba: 2.
-c) Dla otrzymanych liczb: 4 i 4, powinna zostac zwrocona liczba: 16.
-d) Dla otrzymanych liczb: 9 i 3, powinna zostac zwrocona liczba: 3.
+ZAD-11 — Palindrom w systemie binarnym
+
+**Poziom:** ★★☆
+**Tagi:** `binarne`, `palindrom`, `string`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Sprawdź, czy jej reprezentacja binarna (bez wiodących zer) jest palindromem.
+
+Wypisz:
+
+* `Prawda` — jeśli tak,
+* `Fałsz` — jeśli nie.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedno słowo: `Prawda` lub `Fałsz`.
+
+### Przykład
+
+**Wejście:**
+
+```
+26
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
+
+### Uwagi (ważne)
+
+* `26` ma zapis binarny `11010`, który **nie** jest palindromem.
+  (W Twoim wcześniejszym przykładzie było to opisane błędnie — tu trzymamy się definicji palindromu 1:1.)
 
 */
 import java.util.BitSet;

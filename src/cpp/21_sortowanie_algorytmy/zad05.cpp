@@ -1,15 +1,49 @@
 /*
-Tytul: Sortowanie szybkie.
-Tresc: Dla danej listy liczb calkowitych zaimplementuj algorytm sortowania szybkiego.
-1. Jesli dlugosc listy jest mniejsza niz 2, zwroc liste.
-2. Wybierz element rozdzielajacy, nazywany pivotem.
-3. Podziel liste na trzy czesci: elementy mniejsze od pivota, pivot oraz elementy wieksze od pivota.
-4. Wywolaj rekurencyjnie sortowanie szybkie dla czesci z elementami mniejszymi od pivota i wiekszymi od pivota.
-5. Scal posortowane czesci listy w jedna posortowana liste.
-Dane wejsciowe: Lista liczb calkowitych.
-Dane wyjsciowe: Posortowana lista liczb calkowitych.
-Przyklad:
-Dla danej listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
+ZAD-05 — Sortowanie szybkie
+
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `quick-sort`, `recursion`
+
+### Treść
+
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **Quick Sort**:
+
+1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.
+2. Wybierz **pivot** (np. pierwszy element).
+3. Podziel elementy na trzy grupy:
+
+   * mniejsze od pivota,
+   * równe pivotowi,
+   * większe od pivota.
+4. Rekurencyjnie posortuj część mniejszych i większych.
+5. Sklej wynik: `mniejsze + równe + większe`.
+
+### Wejście
+
+* 1 linia: lista liczb całkowitych
+
+### Wyjście
+
+* 1 linia: posortowana lista rosnąco
+
+### Przykład
+
+**Wejście:**
+
+```
+[6, 2, 1, 4, 27]
+```
+
+**Wyjście:**
+
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Średnio: `O(n log n)`, w pesymistycznym przypadku: `O(n^2)`.
+* Wybór pivota ma wpływ na wydajność.
 
 */
 
@@ -55,7 +89,6 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
@@ -63,4 +96,3 @@ int main() {
 
 // Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra
 // -pedantic -o main.out Zad5.cpp
-

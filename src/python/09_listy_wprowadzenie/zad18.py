@@ -1,10 +1,40 @@
 """
-Tytul: Znalezienie indeksu najmniejszego elementu w posortowanej i przesunietej w prawo liscie.
-Tresc: Dla otrzymanej listy liczb calkowitych, znajdz indeks najmniejszego elementu. Lista jest posortowana rosnaco, ale zostala przesunieta w prawo o okreslona liczbe miejsc. Przykladowo dla przesuniecia w prawo o 1, ostatni element trafia na pierwsze miejsce, a przedostatni na ostatnie miejsce itd.
-Dane wejsciowe: Lista liczb calkowitych oraz liczba naturalna okreslajaca przesuniecie w prawo.
-Dane wyjsciowe: Liczba calkowita.
-Przyklad:
-Dla otrzymanej listy: [7, 8, -1, 4, 5] zostanie zwrocona liczba: 2.
+ZAD-18 — Indeks najmniejszego elementu w przesuniętej liście
+
+**Poziom:** ★★☆
+**Tagi:** `binarne`, `rotacja`, `minimum`
+
+### Treść
+
+Wczytaj listę liczb całkowitych, która była posortowana rosnąco i została przesunięta w prawo o nieznaną liczbę miejsc. Znajdź indeks najmniejszego elementu.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+7
+8
+-1
+4
+5
+```
+
+**Wyjście:**
+
+```
+2
+```
 
 """
 

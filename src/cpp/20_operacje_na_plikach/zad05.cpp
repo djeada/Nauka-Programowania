@@ -1,8 +1,36 @@
 /*
-Tytul: Plik z lista adresow IP.
-Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Kazdy wiersz pliku reprezentuje adres IP. Posortuj adresy IP i zapisz je w liscie.
-Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
-Dane wyjsciowe: Lista adresow IP posortowanych alfabetycznie.
+ZAD-05 — Posortuj adresy IP z pliku
+
+**Poziom:** ★☆☆
+**Tagi:** `files`, `sort`, `list`
+
+### Treść
+
+Otrzymujesz ścieżkę do pliku tekstowego, w którym w każdej linii znajduje się
+jeden adres IP. Wczytaj wszystkie adresy, posortuj je **alfabetycznie** i wypisz
+jako listę.
+
+### Wejście
+
+* 1 linia: `file_path`
+
+### Wyjście
+
+* 1 linia: lista adresów IP jako napisy, np. `['10.0.0.1', ...]`
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\adresy_ip.txt
+```
+
+**Wyjście:**
+
+```
+['10.0.0.1', '172.16.0.5', '192.168.1.10', '192.168.1.2']
+```
 
 */
 #include <algorithm>
@@ -16,7 +44,6 @@ Dane wyjsciowe: Lista adresow IP posortowanych alfabetycznie.
 namespace filesys = std::experimental::filesystem;
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
-
   std::vector<std::string> tresc;
   try {
     std::string wiersz;
@@ -49,8 +76,7 @@ void sortujAdresyIp(std::vector<std::string> &ip) {
 
       for (int i; ss >> i;) {
         wektor.push_back(i);
-        if (ss.peek() == '.')
-          ss.ignore();
+        if (ss.peek() == '.') ss.ignore();
       }
     };
 
@@ -111,9 +137,7 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
 }
-

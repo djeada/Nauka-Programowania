@@ -1,10 +1,39 @@
 /*
-Tytul: Podziel tekst wzgledem znakow interpunkcyjnych.
-Tresc: Dostajesz napis. Podziel go wzgledem znakow interpunkcyjnych i zapisz w liscie. Usun spacje wystepujace na poczatku lub koncu otrzymanych napisow.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla napisu: “Ani nie poszedl do kina, ani nie wybral sie do teatru.”, powinna zostac zwrocona lista: [“Ani nie poszedl do kina”, “ani nie wybral sie do teatru”].
+ZAD-07 — Podziel tekst względem znaków interpunkcyjnych
+
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
+
+### Treść
+
+Otrzymujesz napis (jedno lub kilka zdań). Podziel tekst na fragmenty w miejscach
+występowania znaków interpunkcyjnych (np. `, . ! ? ; :`). Usuń spacje na
+początku i końcu każdego fragmentu.
+
+### Wejście
+
+Jedna linia:
+
+* `tekst`
+
+### Wyjście
+
+Każdy fragment w osobnej linii.
+
+### Przykład
+
+**Wejście:**
+
+```
+Ani nie poszedł do kina, ani nie wybrał się do teatru.
+```
+
+**Wyjście:**
+
+```
+Ani nie poszedł do kina
+ani nie wybrał się do teatru
+```
 
 */
 
@@ -45,9 +74,7 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
 }
-

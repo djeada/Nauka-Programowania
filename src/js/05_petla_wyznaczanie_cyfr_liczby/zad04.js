@@ -1,25 +1,119 @@
 /*
-Tytul: Cyfry liczby spelniajace okreslone warunki.
+ZAD-04A — Cyfry parzyste
 
-Tresc: Dla otrzymanej liczby naturalnej wypisz cyfry tej liczby, ktore sa:
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `warunki`
 
-a) liczbami parzystymi,
+### Treść
 
-b) mniejsze niz 5,
+Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **parzyste**. Każdą cyfrę wypisz w osobnej linii.
 
-c) rozne od 0.
+Cyfry analizuj od końca (od jedności), czyli w tej samej kolejności, co w zadaniu o wypisywaniu cyfr w odwrotnej kolejności.
 
-Dane wejsciowe: Liczba naturalna dla wszystkich podpunktow.
+### Wejście
 
-Dane wyjsciowe: Kilka liczb.
+Jedna liczba naturalna:
 
-Przyklad:
+* 1. linia: `n` (`n ≥ 0`)
 
-a) Dla otrzymanej liczby 932, powinna zostac wypisana liczba 2.
+### Wyjście
 
-b) Dla otrzymanej liczby 101, powinny zostac wypisane liczby 1, 0 i 1.
+Cyfry parzyste liczby `n`, każda w nowej linii (w kolejności od jedności do najwyższej cyfry).
+Jeśli nie ma takich cyfr — brak wyjścia.
 
-c) Dla otrzymanej liczby 650, powinny zostac wypisane liczby 6 i 5.
+### Przykład
+
+**Wejście:**
+
+```
+932
+```
+
+**Wyjście:**
+
+```
+2
+```
+
+ZAD-04B — Cyfry mniejsze niż 5
+
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `warunki`
+
+### Treść
+
+Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **mniejsze niż 5**. Każdą cyfrę wypisz w osobnej linii.
+
+Cyfry analizuj od końca (od jedności).
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Cyfry < 5, każda w nowej linii.
+Jeśli brak — brak wyjścia.
+
+### Przykład
+
+**Wejście:**
+
+```
+101
+```
+
+**Wyjście:**
+
+```
+1
+0
+1
+```
+
+ZAD-04C — Cyfry różne od zera
+
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `warunki`
+
+### Treść
+
+Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **różne od zera**. Każdą cyfrę wypisz w osobnej linii.
+
+Cyfry analizuj od końca (od jedności).
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Cyfry ≠ 0, każda w nowej linii.
+Jeśli brak — brak wyjścia.
+
+### Przykład
+
+**Wejście:**
+
+```
+650
+```
+
+**Wyjście:**
+
+```
+5
+6
+```
+
+### Uwagi o formatowaniu
+
+* W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`.
+
 */
 
 // Pobieranie danych od uzytkownika

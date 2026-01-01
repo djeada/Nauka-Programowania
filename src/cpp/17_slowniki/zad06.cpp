@@ -1,10 +1,34 @@
 /*
-Tytul: Histogram wystapien znakow w slowie.
-Tresc: Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym napisie. Innymi slowy, zwroc histogram znakow w otrzymanym napisie.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Slownik par znakow i liczb naturalnych.
-Przyklad:
-Dla otrzymanego napisu: “klasa”, slownik powinien wygladac nastepujaco: {“k”: 1, “l”: 1, “a”: 2, “s”: 1}.
+ZAD-06 — Histogram znaków w słowie
+
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
+
+### Treść
+
+Wczytaj napis. Zwróć słownik: znak → liczba wystąpień.
+
+### Wejście
+
+* 1 linia: napis
+
+### Wyjście
+
+* Słownik, np. `{'k': 1, 'l': 1, 'a': 2, 's': 1}`
+
+### Przykład
+
+**Wejście:**
+
+```
+klasa
+```
+
+**Wyjście:**
+
+```
+{'k': 1, 'l': 1, 'a': 2, 's': 1}
+```
 
 */
 #include <cassert>
@@ -18,8 +42,7 @@ std::unordered_map<char, int> budujSlownik(const std::string &slowo) {
    */
   std::unordered_map<char, int> slownik;
 
-  for (const auto &znak : slowo)
-    slownik[znak]++;
+  for (const auto &znak : slowo) slownik[znak]++;
 
   return slownik;
 }
@@ -39,10 +62,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

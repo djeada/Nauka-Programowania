@@ -1,7 +1,39 @@
-# Tytul: Plik z lista adresow IP.
-# Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Kazdy wiersz pliku reprezentuje adres IP. Posortuj adresy IP i zapisz je w liscie.
-# Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
-# Dane wyjsciowe: Lista adresow IP posortowanych alfabetycznie.
+# ZAD-02 — Pliki o danym rozszerzeniu w folderze (bez podfolderów)
+#
+# **Poziom:** ★★☆
+# **Tagi:** `files`, `dir`, `listdir`, `pathlib`
+#
+# ### Treść
+#
+# Otrzymujesz ścieżkę do folderu i rozszerzenie (np. `.txt`). Znajdź wszystkie pliki o tym rozszerzeniu znajdujące się **bezpośrednio** w tym folderze (bez przeszukiwania podfolderów). Zwróć listę nazw plików.
+#
+# ### Wejście
+#
+# * 1 linia: `folder_path`
+# * 2 linia: `ext` (np. `.txt`)
+#
+# ### Wyjście
+#
+# * 1 linia: lista nazw plików w formacie `['a.txt', 'b.txt']`
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# C:\Users\Username\Documents
+# .txt
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# ['dokument1.txt', 'notatki.txt', 'lista_zakupów.txt']
+# ```
+#
+# ### Uwagi o formatowaniu
+#
+# * Porównuj rozszerzenia **bez względu na wielkość liter** (np. `.TXT` też pasuje do `.txt`).
 
 source ../assert.sh
 
@@ -29,8 +61,8 @@ test_znajdz_pliki_z_rozszerzeniem() {
     touch 'test/test2/test1.txt'
     touch 'test/test2/test2.txt'
 
-    IFS=' ' read -r -a wynik <<< $(znajdz_pliki_z_rozszerzeniem 'test' 'txt')
-    IFS=' ' read -r -a wynik <<< $(znajdz_pliki_z_rozszerzeniem 'test' 'txt')
+    IFS=' ' read -r -a wynik <<<$(znajdz_pliki_z_rozszerzeniem 'test' 'txt')
+    IFS=' ' read -r -a wynik <<<$(znajdz_pliki_z_rozszerzeniem 'test' 'txt')
 
     assert_array_contains wynik 'test/test1/test1.txt' $LINENO
     assert_array_contains wynik 'test/test1/test1.txt' $LINENO
@@ -47,4 +79,3 @@ main() {
 }
 
 main "$@"
-

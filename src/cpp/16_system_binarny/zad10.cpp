@@ -1,10 +1,37 @@
 /*
-Tytul: Zamien A na B.
-Tresc: Otrzymujesz dwie liczby naturalne. Oblicz, ile bitow nalezy odwrocic, aby zamienic liczbe A na liczbe B.
-Dane wejsciowe: Dwie liczby naturalne.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla otrzymanych liczb 34 i 73, powinna zostac zwrocona liczba 5.
+ZAD-10 — Ile bitów trzeba odwrócić (A → B)
+
+**Poziom:** ★★☆
+**Tagi:** `XOR`, `popcount`, `bitwise`
+
+### Treść
+
+Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w
+`A`, aby otrzymać `B`.
+
+### Wejście
+
+* 1. linia: `A`
+* 2. linia: `B`
+
+### Wyjście
+
+Jedna liczba naturalna: liczba różniących się bitów.
+
+### Przykład
+
+**Wejście:**
+
+```
+34
+73
+```
+
+**Wyjście:**
+
+```
+5
+```
 
 */
 #include <cassert>
@@ -33,9 +60,7 @@ void testBityDoZmiany() {
 }
 
 int main() {
-
   testBityDoZmiany();
 
   return 0;
 }
-

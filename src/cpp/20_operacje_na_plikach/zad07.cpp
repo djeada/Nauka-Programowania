@@ -1,8 +1,34 @@
 /*
-Tytul: Dodaj wiersz do pliku.
-Tresc zadania: Otrzymujesz dwa napisy. Pierwszy napis reprezentuje sciezke do pliku tekstowego, a drugi napis reprezentuje wiersz tekstu. Dodaj otrzymany wiersz na poczatek pliku tekstowego.
-Dane wejsciowe: Dwa napisy - sciezka do pliku oraz wiersz tekstu.
-Dane wyjsciowe: Brak.
+ZAD-07 — Dodaj wiersz na początku pliku
+
+**Poziom:** ★☆☆
+**Tagi:** `files`, `write`, `prepend`
+
+### Treść
+
+Otrzymujesz ścieżkę do pliku tekstowego i wiersz tekstu. Dodaj ten wiersz na
+**początku** pliku.
+
+### Wejście
+
+* 1 linia: `file_path`
+* 2 linia: `line_to_add` (może zawierać spacje)
+
+### Wyjście
+
+Brak.
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\notatki.txt
+To jest nowy wiersz dodany na początku pliku.
+```
+
+**Wyjście:**
+*(brak)*
 
 */
 #include <cassert>
@@ -15,7 +41,6 @@ Dane wyjsciowe: Brak.
 namespace filesys = std::experimental::filesystem;
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
-
   std::vector<std::string> tresc;
   try {
     std::string wiersz;
@@ -39,7 +64,6 @@ std::vector<std::string> wczytajPlik(const std::string &sciezka) {
 }
 
 void zapiszNaPoczatku(const std::string &sciezka, const std::string &dane) {
-
   auto trescPliku = wczytajPlik(sciezka);
 
   try {
@@ -49,8 +73,7 @@ void zapiszNaPoczatku(const std::string &sciezka, const std::string &dane) {
                     std::ifstream::badbit);
 
     plik << dane;
-    for (auto &wiersz : trescPliku)
-      plik << wiersz + "\n";
+    for (auto &wiersz : trescPliku) plik << wiersz + "\n";
 
     plik.close();
   }
@@ -76,8 +99,6 @@ void test1() {
 }
 
 int main() {
-
   test1();
   return 0;
 }
-

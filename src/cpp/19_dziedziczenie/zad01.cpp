@@ -1,23 +1,59 @@
 /*
-Tytul: Wywolywanie metody klasy bazowej w klasie potomnej
-Tresc: Dla dwoch dowolnych klas, gdzie jedna jest klasa bazowa, a druga potomna, wywolaj metode klasy bazowej w metodzie klasy potomnej, ktora ja nadpisuje. Napisz program testujacy te klasy.
+ZAD-01 — Wywołanie metody klasy bazowej w klasie potomnej
+
+**Poziom:** ★☆☆
+**Tagi:** `dziedziczenie`, `override`, `super`
+
+### Treść
+
+Zaprojektuj dwie klasy:
+
+1. **Bazowa** — posiada metodę `przedstaw_sie()`, która wypisuje komunikat o
+klasie bazowej.
+2. **Potomna** — dziedziczy po **Bazowej** i **nadpisuje** metodę
+`przedstaw_sie()`, ale w swojej implementacji:
+
+   * najpierw **wywołuje** wersję metody z klasy bazowej,
+   * potem dopisuje własny komunikat.
+
+Program testowy:
+
+* tworzy obiekt klasy potomnej,
+* wywołuje metodę `przedstaw_sie()`.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Dwie linie, pokazujące najpierw komunikat klasy bazowej, a potem potomnej.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Jestem klasą bazową.
+A ja jestem klasą potomną.
+```
 
 */
 
 #include <iostream>
 
 class Rodzic {
-public:
+ public:
   void info() { std::cout << "Jestem rodzicem" << std::endl; }
 };
 
 class DzieckoA : public Rodzic {
-public:
+ public:
   void info() { std::cout << "Jestem dzieckiem A" << std::endl; }
 };
 
 class DzieckoB : public Rodzic {
-public:
+ public:
   void info() {
     std::cout << "Jestem dzieckiem B" << std::endl;
     Rodzic::info();
@@ -25,7 +61,6 @@ public:
 };
 
 int main() {
-
   Rodzic rodzic;
   rodzic.info();
 
@@ -37,4 +72,3 @@ int main() {
 
   return 0;
 }
-

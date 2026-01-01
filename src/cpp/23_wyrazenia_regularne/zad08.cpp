@@ -1,10 +1,41 @@
 /*
-Tytul: Cyfry w slowach.
-Tresc: Dostajesz napis reprezentujacy zdanie. Zapisz w liscie cyfry, ktore sa czescia slow. Cyfry oddzielone od liter spacja powinny zostac pominiete.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla otrzymanego napisu: "Jerzy29 i An37a s3luchali91 lekcji 22 z jezyka polskiego", powinna zostac zwrocona lista: ["29", "37", "3891", "3"].
+ZAD-08 — Cyfry w słowach
+
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`
+
+### Treść
+
+Otrzymujesz zdanie. Wyodrębnij wszystkie ciągi cyfr, które są częścią słów
+(czyli są bezpośrednio połączone z literami). Nie uwzględniaj cyfr oddzielonych
+od liter spacjami.
+
+### Wejście
+
+Jedna linia:
+
+* `zdanie`
+
+### Wyjście
+
+Każdy znaleziony ciąg cyfr w osobnej linii (w kolejności występowania).
+
+### Przykład
+
+**Wejście:**
+
+```
+Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
+```
+
+**Wyjście:**
+
+```
+29
+37
+3
+91
+```
 
 */
 
@@ -37,9 +68,7 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
 }
-

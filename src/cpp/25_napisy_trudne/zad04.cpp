@@ -1,10 +1,35 @@
 /*
-Tytul: Usun powtorzenia znakow.
-Tresc: Otrzymujesz napis. Twoim zadaniem jest usuniecie powtorzen kazdego znaku w napisie. Kazdy znak moze wystapic tylko raz.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “AB”.
+ZAD-04 — Usuń powtórzenia znaków
+
+**Poziom:** ★★★
+**Tagi:** `string`, `set`, `unique`, `kolejność`
+
+### Treść
+
+Otrzymujesz napis. Usuń wszystkie powtórzenia znaków tak, aby **każdy znak
+wystąpił tylko raz**, zachowując **kolejność pierwszych wystąpień**.
+
+### Wejście
+
+* 1 linia: napis `S`
+
+### Wyjście
+
+* 1 linia: napis z unikalnymi znakami
+
+### Przykład
+
+**Wejście:**
+
+```
+AAAAAAAAAABBBBBBBBA
+```
+
+**Wyjście:**
+
+```
+AB
+```
 
 */
 #include <cassert>
@@ -12,12 +37,10 @@ Dla napisu: “AAAAAAAAAABBBBBBBBA”, zwrocony napis powinien brzmiec: “AB”
 #include <unordered_map>
 
 std::string usunPowtorzeniaV1(const std::string &slowo) {
-
   std::unordered_map<char, int> histogram;
   std::string wynik;
 
   for (auto &znak : slowo) {
-
     if (!histogram.count(znak)) {
       histogram[znak] = 1;
       wynik += znak;
@@ -64,7 +87,6 @@ void test5() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
@@ -75,4 +97,3 @@ int main() {
 }
 
 // Compiled with g++ -std=c++17 Zad1.cpp -lstdc++fs -o exe
-

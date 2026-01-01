@@ -1,14 +1,48 @@
 /*
-Tytul: Dodawanie i odejmowanie macierzy.
-Tresc: Otrzymujesz dwie macierze o tych samych wymiarach. Zwroc dwie macierze bedace:
-a) wynikiem dodawania otrzymanych macierzy
-b) wynikiem odejmowania drugiej macierzy od pierwszej.
-Dane wejsciowe: Dwie listy list liczb naturalnych.
-Dane wyjsciowe: Dwie listy list liczb naturalnych.
-Przyklad:
-Dla otrzymanych dwoch macierzy: [[1, 2], [-2, 0]] oraz [[5, -3], [1, 7]], powinny zostac zwrocone nastepujace macierze:
-a) [[6, -1], [-1, 7]] - wynik dodawania
-b) [[-4, 5], [-3, -7]] - wynik odejmowania drugiej macierzy od pierwszej.
+ZAD-03 — Macierz 2-kolumnowa z dwóch list
+
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `macierze`
+
+### Treść
+
+Wczytaj dwie listy. Jeśli mają tę samą długość, wypisz macierz 2-kolumnową: wiersz `i` to `(lista1[i], lista2[i])`.
+Jeśli długości są różne, wypisz: `Pusta macierz`
+
+### Wejście
+
+* 1. linia: `n`
+* 2. linia: `m`
+* następnie `n` liczb (pierwsza lista)
+* następnie `m` liczb (druga lista)
+
+### Wyjście
+
+* Jeśli `n = m`: `n` wierszy `x y`
+* Jeśli `n ≠ m`: jedna linia `Pusta macierz`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+3
+3
+5
+2
+2
+8
+1
+```
+
+**Wyjście:**
+
+```
+3 2
+5 8
+2 1
+```
 
 */
 import java.util.*;

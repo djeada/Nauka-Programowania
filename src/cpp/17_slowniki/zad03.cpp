@@ -1,9 +1,54 @@
 /*
-Tytul: Klucz to imie, wartosc lista wypozyczonych ksiazek.
-Tresc: Zbuduj prosta baze danych dla biblioteki oparta o slownik, w ktorym kluczami sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek. Baza danych powinna umozliwiac:
-1. Dodanie wypozyczonej ksiazki do danego czytelnika.
-2. Zwrocenie wypozyczonej ksiazki przez czytelnika.
-3. Wypisanie aktualnej listy wypozyczonych ksiazek dla danego czytelnika.
+ZAD-03 — Biblioteka: baza wypożyczeń
+
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `list`, `pętle`, `string`
+
+### Treść
+
+Utrzymuj słownik: `imię -> lista wypożyczonych książek`.
+Obsługuj komendy (każda w osobnej linii) aż do `koniec`:
+
+* `dodaj [imię] [tytuł]`
+* `zwróć [imię] [tytuł]`
+* `lista [imię]`
+
+Po `lista [imię]` wypisz:
+
+* jeśli lista niepusta: `Książki wypożyczone przez [imię]: t1, t2, ...`
+* jeśli brak książek (lub brak czytelnika): `Książki wypożyczone przez [imię]:
+brak`
+
+### Wejście
+
+Wiele linii z komendami, koniec po słowie `koniec`.
+
+### Wyjście
+
+Tylko po komendach `lista ...`.
+
+### Przykład
+
+**Wejście:**
+
+```
+dodaj Jan Hobbit
+dodaj Anna "Duma i uprzedzenie"
+dodaj Jan "Władca Pierścieni"
+lista Jan
+zwróć Jan Hobbit
+lista Jan
+lista Anna
+koniec
+```
+
+**Wyjście:**
+
+```
+Książki wypożyczone przez Jan: Hobbit, Władca Pierścieni
+Książki wypożyczone przez Jan: Władca Pierścieni
+Książki wypożyczone przez Anna: Duma i uprzedzenie
+```
 
 */
 #include <algorithm>
@@ -22,7 +67,6 @@ void dodajKsiazke(
     std::unordered_map<std::string, std::vector<std::string>> &lista,
     const std::string &uzytkownik, const std::string &ksiazka) {
   if (lista.count(uzytkownik)) {
-
     if (find(lista[uzytkownik].begin(), lista[uzytkownik].end(), ksiazka) ==
         lista[uzytkownik].end())
       lista[uzytkownik].push_back(ksiazka);
@@ -66,7 +110,6 @@ void wyswietlKsiazki(
      */
     std::unordered_map<std::string, std::vector<std::string>> &lista,
     const std::string &uzytkownik) {
-
   if (!lista.count(uzytkownik)) {
     cout << "Podany uzytkownik nie znajduje sie w liscie." << endl;
     return;
@@ -75,8 +118,7 @@ void wyswietlKsiazki(
   cout << "Uzytkownik " << uzytkownik
        << " wypozyczyl nastepujace ksiazki: " << endl;
 
-  for (const auto &ksiazka : lista[uzytkownik])
-    cout << ksiazka << endl;
+  for (const auto &ksiazka : lista[uzytkownik]) cout << ksiazka << endl;
 }
 
 void wyswietlWszystkieKsiazki(
@@ -84,7 +126,6 @@ void wyswietlWszystkieKsiazki(
      * Funkcja wypisuje liste wszystkich wypozyczonych ksiazek.
      */
     std::unordered_map<std::string, std::vector<std::string>> &lista) {
-
   for (auto it = lista.begin(); it != lista.end(); it++) {
     wyswietlKsiazki(lista, it->first);
     cout << endl;
@@ -92,7 +133,6 @@ void wyswietlWszystkieKsiazki(
 }
 
 void testDodajKsiazke() {
-
   std::unordered_map<std::string, std::vector<std::string>> lista;
 
   dodajKsiazke(lista, "Jan Kowalski", "W pustyni i w puszczy");
@@ -107,7 +147,6 @@ void testDodajKsiazke() {
 }
 
 void testUsunKsiazke() {
-
   std::unordered_map<std::string, std::vector<std::string>> lista{
       {"Jan Kowalski", {"W pustyni i w puszczy", "Wladca Pierscieni"}},
       {"Janina Kowalska", {"W pustyni i w puszczy"}}};
@@ -120,10 +159,8 @@ void testUsunKsiazke() {
 }
 
 int main() {
-
   testDodajKsiazke();
   testUsunKsiazke();
 
   return 0;
 }
-

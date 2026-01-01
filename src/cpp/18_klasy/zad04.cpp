@@ -1,12 +1,58 @@
 /*
-Tytul: Zaprojektuj klasy Wektor2D oraz Wektor3D.
-Tresc:  Napisz klasy Wektor2D oraz Wektor3D, ktore beda reprezentowaly odpowiednio wektory w przestrzeni dwuwymiarowej i trzywymiarowej. Klasy powinny zawierac nastepujace funkcje:
-1. Konstruktor, ktory przyjmuje dwa (trzy) argumenty (liczby). Liczby reprezentuja wspolrzedne wektora. Domyslne wartosci dla wszystkich argumentow powinny wynosic 0.
-2. Funkcje, ktore zwracaja wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie) oraz iloczyn wektorowy i skalarny. Jesli jest to mozliwe, nalezy przeciazyc operatory: +, -, *.
-3. Funkcje, ktora wypisuje informacje o wektorze na standardowe wyjscie.
-4. Funkcje umozliwiajace porownanie dwoch obiektow klasy Wektor2D (Wektor3D). Jesli jest to mozliwe, nalezy przeciazyc operatory == oraz !=.
-5. Funkcje modul, ktora zwraca modul wektora.
-Napisz program, ktory przetestuje twoja klase. Stworz wektory: A (-3, -3, -3) oraz B (5, 5, 5). Wypisz na standardowe wyjscie informacje o utworzonych wektorach oraz sume wektorow, roznice pierwszego i drugiego oraz ich iloczyn wektorowy.
+ZAD-04 — Klasy Wektor2D i Wektor3D
+
+**Poziom:** ★★☆
+**Tagi:** `class`, `operatory`, `math`
+
+### Treść
+
+Zaprojektuj klasy **Wektor2D** i **Wektor3D**:
+
+Wspólne:
+
+* konstruktor z domyślnymi współrzędnymi 0,
+* dodawanie, odejmowanie,
+* iloczyn skalarny,
+* porównania `==` i `!=`,
+* moduł (długość),
+* metoda wypisująca wektor.
+
+Dodatkowo dla **Wektor3D**:
+
+* iloczyn wektorowy.
+
+Program tworzy:
+
+* A = (-3, -3, -3)
+* B = (5, 5, 5)
+
+Wypisuje A, B oraz:
+
+* A + B
+* A - B
+* A · B
+* A × B
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Wektor A: (-3, -3, -3)
+Wektor B: (5, 5, 5)
+Suma wektorów: (2, 2, 2)
+Różnica wektorów A - B: (-8, -8, -8)
+Iloczyn skalarny: -45
+Iloczyn wektorowy: (0, 0, 0)
+```
 
 */
 
@@ -14,7 +60,7 @@ Napisz program, ktory przetestuje twoja klase. Stworz wektory: A (-3, -3, -3) or
 #include <iostream>
 
 class Wektor {
-public:
+ public:
   Wektor(double _x, double _y, double _z) : x(_x), y(_y), z(_z) {}
 
   void setX(double _x) { x = _x; }
@@ -69,12 +115,11 @@ public:
     return w1.x != w2.x || w1.y != w2.y || w1.z != w2.z;
   }
 
-private:
+ private:
   double x, y, z;
 };
 
 int main() {
-
   Wektor wektorA(5, 5, 5);
   Wektor wektorB(-3, -3, -3);
 
@@ -91,4 +136,3 @@ int main() {
 
   return 0;
 }
-

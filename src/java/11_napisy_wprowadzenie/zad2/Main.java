@@ -1,10 +1,36 @@
 /*
-Tytul: Srednia dlugosc slow w zdaniu.
-Tresc: Otrzymasz napis reprezentujacy zdanie. Oblicz srednia dlugosc slow w zdaniu. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla otrzymanego napisu: "Zepsuty rower.", powinna zostac zwrocona liczba: 6.
+ZAD-02 — Policz wystąpienia znaku
+
+**Poziom:** ★☆☆
+**Tagi:** `string`, `count`
+
+### Treść
+
+Wczytaj napis oraz jeden znak. Wypisz, ile razy ten znak występuje w napisie.
+
+### Wejście
+
+* 1. linia: napis
+* 2. linia: pojedynczy znak
+
+### Wyjście
+
+* 1. linia: liczba wystąpień
+
+### Przykład
+
+**Wejście:**
+
+```
+klamra
+a
+```
+
+**Wyjście:**
+
+```
+2
+```
 
 */
 import java.util.*;

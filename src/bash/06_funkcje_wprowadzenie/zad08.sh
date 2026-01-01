@@ -1,9 +1,40 @@
-# Tytul: Zaokraglanie w dol.
-# Tresc: Napisz funkcje, ktora zaokragli iloraz dwoch liczb naturalnych do najblizszej liczby calkowitej w dol, bez uzycia operatorow '/' i '%'.
-# Dane wejsciowe: dwie liczby naturalne
-# Dane wyjsciowe: liczba naturalna
-# Przyklad:
-# Dla otrzymanych liczb 7 i 2, funkcja powinna zwrocic liczbe 3.
+# ZAD-08 — Iloraz w dół bez / i %
+#
+# **Poziom:** ★★☆
+# **Tagi:** `funkcje`, `pętle`, `odejmowanie`
+#
+# ### Treść
+#
+# Napisz funkcję `zaokraglij_w_dol(a, b)`, która zwraca wartość `a // b`, ale **nie używa** operatorów `/` ani `%`.
+#
+# ### Wejście
+#
+# Dwa argumenty:
+#
+# * `a` (liczba naturalna, `a ≥ 0`)
+# * `b` (liczba naturalna)
+#
+# ### Ograniczenia / gwarancje
+#
+# * `b > 0`
+#
+# ### Wyjście
+#
+# Funkcja zwraca liczbę naturalną — iloraz `a` przez `b` zaokrąglony w dół.
+#
+# ### Przykład
+#
+# **Wywołanie funkcji:**
+#
+# ```python
+# print(zaokraglij_w_dol(7, 2))
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 3
+# ```
 
 podziel() {
     a=$1
@@ -21,12 +52,12 @@ podziel() {
 
     if [[ $a -lt $b ]]; then
         znak=-1
-        a=$(($a*-1))
+        a=$(($a * -1))
     fi
 
     if [[ $b -lt 0 ]]; then
-        znak=$(($znak*-1))
-        b=$(($b*-1))
+        znak=$(($znak * -1))
+        b=$(($b * -1))
     fi
 
     if [[ $znak -eq 1 ]]; then
@@ -43,7 +74,7 @@ podziel() {
         done
     fi
 
-    wynik=$(($licznik*$znak))
+    wynik=$(($licznik * $znak))
 
     return $wynik
 }
@@ -60,4 +91,3 @@ main() {
 }
 
 main "$@"
-

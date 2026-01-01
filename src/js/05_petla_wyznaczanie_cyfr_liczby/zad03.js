@@ -1,13 +1,41 @@
 /*
-Tytul: Tresc: Dla otrzymanej liczby naturalnej wypisz sume cyfr tej liczby.
+ZAD-03 — Sumowanie cyfr liczby
 
-Dane wejsciowe: Liczba naturalna.
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
 
-Dane wyjsciowe: Liczba naturalna.
+### Treść
 
-Przyklad:
+Wczytaj liczbę naturalną `n` i oblicz sumę jej cyfr. Następnie wypisz wynik.
 
-Dla otrzymanej liczby 129, powinna zostac wypisana liczba 12.
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Jedna liczba naturalna — suma cyfr liczby `n`.
+
+### Przykład
+
+**Wejście:**
+
+```
+129
+```
+
+**Wyjście:**
+
+```
+12
+```
+
+### Uwagi o formatowaniu
+
+* Dla `n = 0` suma cyfr wynosi `0`.
+
 */
 
 // Pobieranie danych od uzytkownika

@@ -1,15 +1,36 @@
 /*
-Tytul: Znajdz i zmodyfikuj pliki spelniajace warunek.
+ZAD-08 — Modyfikacja plików spełniających warunek (rekurencyjnie)
 
-Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do folderu.
+**Poziom:** ★★☆
+**Tagi:** `files`, `recursive`, `txt`, `csv`
 
-a) Dodaj swoje inicjaly na koncu wszystkich plikow tekstowych znajdujacych sie w podanym folderze i jego podfolderach.
+### Treść
 
-b) Usun srodkowy wiersz z kazdego pliku CSV znajdujacego sie w podanym folderze i jego podfolderach.
+Otrzymujesz ścieżkę do folderu. Wykonaj:
 
-Dane wejsciowe: Napis reprezentujacy sciezke do folderu.
+a) dopisz swoje inicjały na końcu każdego pliku `.txt` w folderze i podfolderach,
+b) usuń **środkowy wiersz** z każdego pliku `.csv` w folderze i podfolderach
+(jeśli liczba wierszy jest parzysta — usuń **dolny z dwóch środkowych**).
 
-Dane wyjsciowe: Brak.
+### Wejście
+
+* 1 linia: `folder_path`
+
+### Wyjście
+
+Brak.
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\Projekt
+```
+
+**Wyjście:**
+*(brak)*
+
 */
 
 const fs = require("fs").promises;

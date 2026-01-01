@@ -1,10 +1,9 @@
 /*
 Tytul: Gra.
-Tresc: W grze, w kazdym ruchu gracz moze zdobyc 3, 5 lub 10 punktow. Oblicz przy uzyciu rekurencji, ile sposobow istnieje, aby gracz wygral gre, gdy ma do dyspozycji N punktow.
-Dane wejsciowe: Liczba naturalna N.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla N = 20, powinna zostac zwrocona liczba: 4.
+Tresc: W grze, w kazdym ruchu gracz moze zdobyc 3, 5 lub 10 punktow. Oblicz przy
+uzyciu rekurencji, ile sposobow istnieje, aby gracz wygral gre, gdy ma do
+dyspozycji N punktow. Dane wejsciowe: Liczba naturalna N. Dane wyjsciowe: Liczba
+naturalna. Przyklad: Dla N = 20, powinna zostac zwrocona liczba: 4.
 
 */
 #include <cassert>
@@ -20,8 +19,7 @@ void gra(int n) {
     std::vector<std::vector<int>> listaWynikow;
 
     auto _gra = [&](int n, std::vector<int> wynik) {
-      if (n < 0)
-        return 0;
+      if (n < 0) return 0;
 
       if (n == 0) {
         std::sort(wynik.begin(), wynik.end());
@@ -42,16 +40,13 @@ void gra(int n) {
 }
 
 void testGra() {
-
   assert(gra(0) == 0);
   assert(gra(10) == 2);
   assert(gra(20) == 4);
   assert(gra(50) == 14);
 }
 int main() {
-
   testGra();
 
   return 0;
 }
-

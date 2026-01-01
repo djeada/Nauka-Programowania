@@ -1,10 +1,55 @@
 /*
-Tytul: Rotacja w lewo/prawo.
-Tresc: Otrzymujesz liste liczb calkowitych, kierunek przesuniecia (1 odpowiada przesunieciu w prawo, a 0 w lewo) oraz liczbe miejsc, o jaka elementy listy maja zostac przesuniete. Na przyklad dla przesuniecia w prawo, pierwszy element trafia na drugie miejsce, drugi na trzecie, a ostatni na pierwsze miejsce. Przesun elementy listy w podanym kierunku.
-Dane wejsciowe: Lista liczb calkowitych oraz dwie liczby naturalne.
-Dane wyjsciowe: Lista liczb calkowitych.
-Przyklad:
-Dla otrzymanej listy: [5, 27, 6, 2, 1, 10, 8] oraz liczb 0 i 2, powinna zostac zwrocona lista: [6, 2, 1, 10, 8, 5, 27].
+ZAD-12 — Rotacja w lewo / prawo
+
+**Poziom:** ★★☆
+**Tagi:** `listy`, `rotacja`, `modulo`
+
+### Treść
+
+Wczytaj listę liczb całkowitych, a następnie:
+
+* `kierunek = 0` → rotacja w lewo,
+* `kierunek = 1` → rotacja w prawo,
+
+o `K` pozycji (gdzie `K ≥ 0`). Wypisz listę po rotacji, przecinkami bez spacji.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+* kolejna linia: `kierunek` (0 lub 1)
+* ostatnia linia: `K` (`K ≥ 0`)
+
+### Wyjście
+
+Jedna linia: lista po rotacji, elementy oddzielone przecinkami.
+
+### Przykład
+
+**Wejście:**
+
+```
+7
+5
+27
+6
+2
+1
+10
+8
+0
+2
+```
+
+**Wyjście:**
+
+```
+6,2,1,10,8,5,27
+```
+
+### Uwagi
+
+* Zredukuj `K` przez `K % N`.
 
 */
 #include <cassert>
@@ -14,7 +59,6 @@ Dla otrzymanej listy: [5, 27, 6, 2, 1, 10, 8] oraz liczb 0 i 2, powinna zostac z
 // Zlozonosc czasowa O(n)
 // Zlozonosc pamieciowa O(n)
 void rotacja(std::vector<int> &lista, const std::string &kierunek, int liczba) {
-
   if (kierunek == "prawo") {
     for (int i = 0; i < liczba; i++) {
       lista.insert(lista.begin(), lista.back());
@@ -31,7 +75,6 @@ void rotacja(std::vector<int> &lista, const std::string &kierunek, int liczba) {
 }
 
 void test1() {
-
   std::vector<int> lista{5, 27, 6, 2, 1, 10, 8};
   std::vector<int> wynik{6, 2, 1, 10, 8, 5, 27};
   std::string kierunek = "lewo";
@@ -42,7 +85,6 @@ void test1() {
 }
 
 void test2() {
-
   std::vector<int> lista{9, 9, 42, 47, 5, 6, 19, 7};
   std::vector<int> wynik{6, 19, 7, 9, 9, 42, 47, 5};
   std::string kierunek = "prawo";
@@ -53,10 +95,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

@@ -1,10 +1,38 @@
 """
-Tytul: Najblizsza potega dwojki.
-Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej. Znajdz potege dwojki wieksza badz rowna tej liczbie. Inaczej: zaokraglij liczbe do najblizszej potegi dwojki.
-Dane wejsciowe: Liczba naturalna.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla otrzymanej liczby: 111, powinna zostac zwrocona liczba: 128.
+ZAD-08 — Najbliższa potęga dwójki (>= n)
+
+**Poziom:** ★☆☆
+**Tagi:** `potęgi 2`, `bitwise`, `pętle`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która jest **większa lub równa** `n`.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
+
+### Przykład
+
+**Wejście:**
+
+```
+111
+```
+
+**Wyjście:**
+
+```
+128
+```
+
+### Uwagi
+
+* Dla `n = 0` przyjmij wynik `1`.
 
 """
 

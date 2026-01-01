@@ -1,9 +1,33 @@
-# Tytul: Odleglosc Hamminga.
-# Tresc: Otrzymujesz dwa napisy o rownej dlugosci. Oblicz odleglosc Hamminga miedzy dwoma otrzymanymi napisami. Odleglosc Hamminga to miara odmiennosci dwoch napisow o takiej samej dlugosci, zdefiniowana jako liczba pozycji, na ktorych napisy maja rozne znaki.
-# Dane wejsciowe: Dwa napisy.
-# Dane wyjsciowe: Liczba naturalna.
-# Przyklad:
-# Dla otrzymanych napisow: “adam” i “axam”, powinna zostac zwrocona liczba: 1.
+# ZAD-07 — Zamień znaki na kody ASCII
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `ASCII`, `ord`, `string`
+#
+# ### Treść
+#
+# Wczytaj napis i wypisz kody ASCII wszystkich jego znaków, oddzielone przecinkiem i spacją `", "`.
+#
+# ### Wejście
+#
+# * 1. linia: napis
+#
+# ### Wyjście
+#
+# * 1. linia: kody ASCII oddzielone `, `
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# Robot
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 82, 111, 98, 111, 116
+# ```
 
 source ../assert.sh
 
@@ -14,7 +38,7 @@ ord() {
 zamien() {
 
     local napis="$1"
-    local n=$(( ${#napis} - 1 ))
+    local n=$((${#napis} - 1))
 
     for ((i = 0; i < n; i++)); do
         echo -n "$(ord "${napis:$i:1}"), "
@@ -43,4 +67,3 @@ main() {
 }
 
 main "$@"
-

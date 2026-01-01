@@ -1,11 +1,61 @@
 /*
-Tytul: Zaprojektuj klase Macierz.
-Tresc: Napisz klase Macierz, ktora bedzie reprezentowala macierz. Klasa powinna zawierac nastepujace funkcje:
-1. Konstruktor, ktory przyjmuje jako argument liste list liczb calkowitych. Pobrana lista reprezentuje macierz. Domyslna wartosc argumentu to pusta lista.
-2. Funkcje, ktore zwracaja wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnozenie) oraz odwracanie macierzy. Jesli jest to mozliwe, nalezy przeciazyc operatory: +, -, *.
-3. Funkcje, ktora wypisuje informacje o macierzy na standardowe wyjscie.
-4. Funkcje umozliwiajace porownanie dwoch obiektow klasy Macierz. Jesli jest to mozliwe, nalezy przeciazyc operatory == oraz !=.
-Napisz program, ktory przetestuje twoja klase. Stworz macierze: A ([[1, 3], [4, 2]]) oraz B ([[5, 0], [1, 3]]). Wypisz na standardowe wyjscie informacje o utworzonych macierzach oraz ich sume, roznice pierwszej i drugiej oraz iloczyn macierzy.
+ZAD-05 — Klasa Macierz
+
+**Poziom:** ★★☆
+**Tagi:** `class`, `macierze`, `operacje`
+
+### Treść
+
+Zaprojektuj klasę **Macierz**:
+
+1. Konstruktor przyjmuje listę list (domyślnie pusta).
+2. Operacje: dodawanie, odejmowanie, mnożenie.
+3. Metoda wypisująca macierz (wierszami).
+4. Porównania `==` i `!=`.
+
+(Operację odwracania możesz pominąć w tym zadaniu, jeśli nie jest wymagana w
+sprawdzarce; najczęściej w podstawowych zadaniach nie ma testów na odwracanie.)
+
+Program tworzy:
+
+* A = [[1, 3], [4, 2]]
+* B = [[5, 0], [1, 3]]
+
+Wypisuje A, B, a potem A+B, A-B, A*B.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Macierz A:
+[1, 3]
+[4, 2]
+
+Macierz B:
+[5, 0]
+[1, 3]
+
+Suma macierzy:
+[6, 3]
+[5, 5]
+
+Różnica macierzy A - B:
+[-4, 3]
+[3, -1]
+
+Iloczyn macierzy A * B:
+[8, 9]
+[22, 12]
+```
 
 */
 
@@ -13,7 +63,7 @@ Napisz program, ktory przetestuje twoja klase. Stworz macierze: A ([[1, 3], [4, 
 #include <vector>
 
 class Macierz {
-public:
+ public:
   Macierz(const std::vector<std::vector<int>> _macierz) : macierz(_macierz) {}
 
   void setElement(unsigned int wiersz, unsigned int kolumna, int wartosc) {
@@ -24,7 +74,6 @@ public:
   }
 
   int element(unsigned int wiersz, unsigned int kolumna) const {
-
     if (wiersz >= wiersze() || kolumna >= kolumny())
       throw std::invalid_argument("Nieprawidlowy indeks.");
 
@@ -41,7 +90,6 @@ public:
   }
 
   Macierz operator+(const Macierz &innaMacierz) {
-
     if (wiersze() != innaMacierz.wiersze() ||
         kolumny() != innaMacierz.kolumny())
       throw std::invalid_argument("Wymiary macierzy musza byc jednakowe.");
@@ -56,7 +104,6 @@ public:
     return pom;
   }
   Macierz operator-(const Macierz &innaMacierz) {
-
     if (wiersze() != innaMacierz.wiersze() ||
         kolumny() != innaMacierz.kolumny())
       throw std::invalid_argument("Wymiary macierzy musza byc jednakowe.");
@@ -72,7 +119,6 @@ public:
   }
 
   Macierz operator*(const Macierz &innaMacierz) {
-
     if (kolumny() != innaMacierz.wiersze())
       throw std::invalid_argument(
           "Liczba kolumn mnoznej musi sie rownac liczbie wierszy mnoznika.");
@@ -86,9 +132,9 @@ public:
     for (unsigned int j = 0; j < p; j++) {
       for (unsigned int k = 0; k < m; k++) {
         for (unsigned int i = 0; i < n; i++)
-          pom.setElement(i, j,
-                         pom.element(i, j) +
-                             element(i, k) * innaMacierz.element(k, j));
+          pom.setElement(
+              i, j,
+              pom.element(i, j) + element(i, k) * innaMacierz.element(k, j));
       }
     }
 
@@ -96,10 +142,8 @@ public:
   }
 
   friend std::ostream &operator<<(std::ostream &out, Macierz &p) {
-
     for (const auto &wiersz : p.macierz) {
-      for (const auto &wartosc : wiersz)
-        std::cout << wartosc << " ";
+      for (const auto &wartosc : wiersz) std::cout << wartosc << " ";
       std::cout << std::endl;
     }
 
@@ -114,11 +158,10 @@ public:
     return p1.macierz != p2.macierz;
   }
 
-private:
+ private:
   std::vector<std::vector<int>> macierz;
 };
 int main() {
-
   Macierz macierzA(std::vector<std::vector<int>>{{1, -2, 3}});
   Macierz macierzB(std::vector<std::vector<int>>{{8, 9, -5}});
 
@@ -149,4 +192,3 @@ int main() {
 
   return 0;
 }
-

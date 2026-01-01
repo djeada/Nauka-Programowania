@@ -1,14 +1,53 @@
 /*
-Tytul: Wczytaj, zmodyfikuj i wypisz.
-Tresc: Wczytaj liczbe calkowita N oraz N liczb calkowitych i umiesc je w liscie. Nastepnie:
-a) Dodaj 1 do kazdego elementu listy.
-b) Pomnoz kazdy element przez jego indeks w liscie (indeksy zaczynaja sie od 0).
-c) Zastap wszystkie elementy wartoscia pierwszego elementu listy.
-Dla kazdego z powyzszych podpunktow wypisz zmodyfikowana liste. Elementy listy powinny byc oddzielone przecinkami i wypisane w jednym wierszu.
-Dane wejsciowe: N oraz N liczb calkowitych.
-Dane wyjsciowe: N liczb calkowitych.
-Przyklad:
-Dla N rownego 3 oraz pobranych liczb 3, 9, 7 w pierwszym podpunkcie powinno zostac wypisana: 4, 10, 8.
+ZAD-02 — Wczytaj, zmodyfikuj i wypisz
+
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `indeksy`, `modyfikacja`
+
+### Treść
+
+Wczytaj `N` oraz `N` liczb całkowitych do listy. Następnie:
+
+a) Zwiększ każdy element o `1`.
+b) Pomnóż każdy element przez jego indeks (indeksy od `0`).
+c) Zastąp wszystkie elementy wartością pierwszego elementu.
+
+Po każdym podpunkcie wypisz wynikową listę w **jednej** linii, elementy
+oddzielone przecinkami.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Trzy linie:
+
+1. wynik po (a)
+2. wynik po (b)
+3. wynik po (c)
+
+Elementy w linii oddzielone przecinkami (bez spacji).
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+3
+9
+7
+```
+
+**Wyjście:**
+
+```
+4,10,8
+0,9,14
+3,3,3
+```
 
 */
 #include <iostream>
@@ -23,31 +62,25 @@ void wczytaj(std::vector<int> &lista, int n) {
 }
 
 void zwieksz(std::vector<int> &lista) {
-  for (auto &liczba : lista)
-    liczba += 1;
+  for (auto &liczba : lista) liczba += 1;
 }
 
 void pomnoz(std::vector<int> &lista) {
-  for (unsigned int i = 0; i < lista.size(); i++)
-    lista[i] *= i;
+  for (unsigned int i = 0; i < lista.size(); i++) lista[i] *= i;
 }
 
 void zastap(std::vector<int> &lista) {
-  if (lista.empty())
-    return;
+  if (lista.empty()) return;
 
-  for (auto &liczba : lista)
-    liczba = lista[0];
+  for (auto &liczba : lista) liczba = lista[0];
 }
 
 void wypisz(std::vector<int> &lista) {
-  for (auto liczba : lista)
-    std::cout << liczba << ", ";
+  for (auto liczba : lista) std::cout << liczba << ", ";
   std::cout << std::endl;
 }
 
 int main() {
-
   std::vector<int> lista;
   int n;
 
@@ -69,4 +102,3 @@ int main() {
 
   return 0;
 }
-

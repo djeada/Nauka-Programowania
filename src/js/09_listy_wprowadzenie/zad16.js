@@ -1,15 +1,45 @@
 /*
-Tytul: Znalezienie indeksow pierwszej pary elementow listy o sumie rownej podanej liczbie.
+ZAD-16 — Indeksy pierwszej pary o sumie x
 
-Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x, znajdz indeksy pierwszej pary elementow listy, ktorych suma jest rowna x. Jesli taka para nie istnieje, zwroc pare (-1, -1).
+**Poziom:** ★★☆
+**Tagi:** `hashmap`, `indeksy`, `2-sum`
 
-Dane wejsciowe: Lista liczb calkowitych oraz liczba calkowita.
+### Treść
 
-Dane wyjsciowe: Para liczb calkowitych.
+Wczytaj listę liczb całkowitych oraz liczbę `x`. Znajdź indeksy **pierwszej** pary `(i, j)` (z `i < j`) takiej, że `lista[i] + lista[j] == x`.
 
-Przyklad:
+Jeśli nie istnieje taka para — wypisz `-1 -1`.
 
-Dla otrzymanej listy: [1, 3, 4, 5, 2] oraz liczby 5, zostana zwrocone indeksy pierwszej pary elementow o sumie rownej 5: (0, 2).
+### Wejście
+
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `x` (liczba całkowita)
+
+### Wyjście
+
+Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+1
+3
+4
+5
+2
+5
+```
+
+**Wyjście:**
+
+```
+0 2
+```
+
 */
 
 // Funkcja znajdujaca indeksy pierwszej pary elementow o sumie rownej podanej liczbie

@@ -33,7 +33,7 @@ czy_anagramy() {
     fi
 }
 
-test_czy_anagramy(){
+test_czy_anagramy() {
 
     assertTrue $(czy_anagramy "kajak" "kajak") $LINENO
     assertTrue $(czy_anagramy "kajak" "kjakk") $LINENO
@@ -46,4 +46,3 @@ main() {
 }
 
 main "$@"
-

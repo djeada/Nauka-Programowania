@@ -1,25 +1,54 @@
 /*
-Tytul: Zaokraglanie w dol.
-Tresc: Napisz funkcje, ktora zaokragli iloraz dwoch liczb naturalnych do najblizszej liczby calkowitej w dol, bez uzycia operatorow '/' i '%'.
-Dane wejsciowe: dwie liczby naturalne
-Dane wyjsciowe: liczba naturalna
-Przyklad:
-Dla otrzymanych liczb 7 i 2, funkcja powinna zwrocic liczbe 3.
+ZAD-08 — Iloraz w dół bez / i %
+
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `pętle`, `odejmowanie`
+
+### Treść
+
+Napisz funkcję `zaokraglij_w_dol(a, b)`, która zwraca wartość `a // b`, ale
+**nie używa** operatorów `/` ani `%`.
+
+### Wejście
+
+Dwa argumenty:
+
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna)
+
+### Ograniczenia / gwarancje
+
+* `b > 0`
+
+### Wyjście
+
+Funkcja zwraca liczbę naturalną — iloraz `a` przez `b` zaokrąglony w dół.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(zaokraglij_w_dol(7, 2))
+```
+
+**Wyjście:**
+
+```
+3
+```
 
 */
 #include <cassert>
 #include <limits>
 
 int podziel(int dzielna, int dzielnik) {
-
   int znak = 1;
   int licznik = 0;
 
-  if (dzielnik == 0)
-    return std::numeric_limits<int>::signaling_NaN();
+  if (dzielnik == 0) return std::numeric_limits<int>::signaling_NaN();
 
-  if (dzielna == 0)
-    return 0;
+  if (dzielna == 0) return 0;
 
   if (dzielna < 0) {
     znak = -1;
@@ -62,9 +91,7 @@ void testPodziel() {
 }
 
 int main() {
-
   testPodziel();
 
   return 0;
 }
-

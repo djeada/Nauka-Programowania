@@ -1,19 +1,63 @@
 /*
-Tytul: Dziedziczenie wielokrotne
-Tresc: Napisz klase Ptak, dziedziczaca po klasach Zwierz i ObiektLatajacy. W sklad klasy Zwierz powinny wchodzic funkcje o nazwach 'jedz()', 'spij()', 'wydaj_dzwiek()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie. W sklad klasy ObiektLatajacy powinny wchodzic funkcje o nazwach 'lec()', 'wyladuj()', ktore wypisuja odpowiednie komunikaty na standardowe wyjscie. Napisz program testujacy te klase.
+ZAD-05 — Dziedziczenie wielokrotne: Ptak
+
+**Poziom:** ★★☆
+**Tagi:** `multiple inheritance`, `dziedziczenie`, `metody`
+
+### Treść
+
+Zaprojektuj klasy:
+
+* **Zwierz** — metody:
+
+  * `jedz()` → wypisuje `Ptak je.`
+  * `spij()` → wypisuje `Ptak śpi.`
+  * `wydaj_dzwiek()` → wypisuje `Ptak wydaje dźwięk.`
+
+* **ObiektLatajacy** — metody:
+
+  * `lec()` → wypisuje `Ptak leci.`
+  * `wyladuj()` → wypisuje `Ptak ląduje.`
+
+* **Ptak** — dziedziczy po `Zwierz` oraz `ObiektLatajacy`.
+
+Program testowy:
+
+* tworzy obiekt `Ptak`,
+* wywołuje metody w kolejności: `jedz`, `spij`, `wydaj_dzwiek`, `lec`,
+`wyladuj`.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Pięć linii jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Ptak je.
+Ptak śpi.
+Ptak wydaje dźwięk.
+Ptak leci.
+Ptak ląduje.
+```
 
 */
 
 #include <iostream>
 
 class Zwierz {
-
-private:
+ private:
   std::string nazwa;
   std::string pokarm;
   std::string dzwiek;
 
-public:
+ public:
   Zwierz(std::string nazwa, std::string pokarm, std::string dzwiek)
       : nazwa(nazwa), pokarm(pokarm), dzwiek(dzwiek) {}
 
@@ -27,11 +71,10 @@ public:
 };
 
 class ObiektLatajacy {
-
-private:
+ private:
   std::string nazwa;
 
-public:
+ public:
   ObiektLatajacy(std::string nazwa) : nazwa(nazwa) {}
 
   void lec() { std::cout << nazwa << " wznosi sie w powietrze." << std::endl; }
@@ -40,14 +83,12 @@ public:
 };
 
 class Ptak : public Zwierz, public ObiektLatajacy {
-
-public:
+ public:
   Ptak(std::string nazwa)
       : Zwierz(nazwa, "robaki", "Aww!Aww!"), ObiektLatajacy(nazwa) {}
 };
 
 int main() {
-
   Ptak koliber("Koliberek");
   koliber.jedz();
   koliber.lec();
@@ -57,4 +98,3 @@ int main() {
 
   return 0;
 }
-

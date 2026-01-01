@@ -1,10 +1,35 @@
 /*
-Tytul: Zamien znaki na kody ASCII.
-Tresc: Otrzymasz napis. Zmien wszystkie znaki w napisie na odpowiadajace im numery w tablicy ASCII. Zastap otrzymany napis napisem skladajacym sie z otrzymanych numerow, oddzielonych przecinkami.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanego napisu: "Robot", powinien zostac zwrocony napis: "82, 111, 98, 111, 116".
+ZAD-07 — Zamień znaki na kody ASCII
+
+**Poziom:** ★☆☆
+**Tagi:** `ASCII`, `ord`, `string`
+
+### Treść
+
+Wczytaj napis i wypisz kody ASCII wszystkich jego znaków, oddzielone przecinkiem
+i spacją `", "`.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+* 1. linia: kody ASCII oddzielone `, `
+
+### Przykład
+
+**Wejście:**
+
+```
+Robot
+```
+
+**Wyjście:**
+
+```
+82, 111, 98, 111, 116
+```
 
 */
 #include <algorithm>
@@ -12,14 +37,11 @@ Dla otrzymanego napisu: "Robot", powinien zostac zwrocony napis: "82, 111, 98, 1
 #include <string>
 
 void zamienV1(std::string &napis) {
-
-  if (napis.empty())
-    return;
+  if (napis.empty()) return;
 
   std::string wynik = "";
 
-  for (int numer : napis)
-    wynik += std::to_string(numer) + ", ";
+  for (int numer : napis) wynik += std::to_string(numer) + ", ";
 
   napis = wynik.substr(0, wynik.size() - 2);
 }
@@ -45,4 +67,3 @@ int main() {
   test2();
   return 0;
 }
-

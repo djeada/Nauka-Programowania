@@ -1,14 +1,44 @@
 /*
-Tytul: Sortowanie przez scalanie.
-Tresc: Dla danej listy liczb calkowitych zaimplementuj algorytm sortowania przez scalanie.
-1. Jesli dlugosc listy jest mniejsza niz 2, zwroc liste.
-2. Podziel liste na dwie rowne (lub prawie rowne) czesci.
-3. Wywolaj rekurencyjnie sortowanie przez scalanie dla obu czesci listy.
-4. Scal obie posortowane czesci listy w jedna posortowana liste.
-Dane wejsciowe: Lista liczb calkowitych.
-Dane wyjsciowe: Posortowana lista liczb calkowitych.
-Przyklad:
-Dla danej listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
+ZAD-04 — Sortowanie przez scalanie
+
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `merge-sort`, `recursion`
+
+### Treść
+
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania
+przez scalanie**:
+
+1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.
+2. Podziel listę na dwie (w miarę) równe części.
+3. Rekurencyjnie posortuj obie części.
+4. **Scal** dwie posortowane listy w jedną posortowaną.
+
+### Wejście
+
+* 1 linia: lista liczb całkowitych
+
+### Wyjście
+
+* 1 linia: posortowana lista rosnąco
+
+### Przykład
+
+**Wejście:**
+
+```
+[6, 2, 1, 4, 27]
+```
+
+**Wyjście:**
+
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Złożoność czasowa: `O(n log n)`.
 
 */
 
@@ -23,8 +53,7 @@ void scalaj(std::vector<int> &lista, unsigned int p, unsigned int q,
   std::vector<int> lewaLista(rozmiarLewy);
   std::vector<int> prawaLista(rozmiarPrawy);
 
-  for (unsigned int i = 0; i < rozmiarLewy; i++)
-    lewaLista[i] = lista[p + i];
+  for (unsigned int i = 0; i < rozmiarLewy; i++) lewaLista[i] = lista[p + i];
 
   for (unsigned int j = 0; j < rozmiarPrawy; j++)
     prawaLista[j] = lista[q + j + 1];
@@ -34,7 +63,6 @@ void scalaj(std::vector<int> &lista, unsigned int p, unsigned int q,
   unsigned int k = p;
 
   for (; k <= r && i < rozmiarLewy && j < rozmiarPrawy; k++) {
-
     if (lewaLista[i] <= prawaLista[j]) {
       lista[k] = lewaLista[i];
       i++;
@@ -81,7 +109,6 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
@@ -89,4 +116,3 @@ int main() {
 
 // Kompilowano z uzyciem komendy: g++-10 -ggdb3 -O0 -std=c++20 -Wall -Wextra
 // -pedantic -o main.out Zad4.cpp
-

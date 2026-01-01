@@ -1,11 +1,46 @@
 """
-Tytul: Rok przestepny.
-Tresc: Napisz program, ktory dla pobranej liczby naturalnej bedzie sprawdzal, czy dany rok jest przestepny.
-Podpowiedz: Rok przestepny jest podzielny przez 4, ale nie jest podzielny przez 100, chyba ze jest podzielny przez 400.
-Dane wejsciowe: Liczba naturalna.
-Dane wyjsciowe: Komunikat o tym, czy rok jest przestepny, czy tez nie.
-Przyklad:
-Dla pobranej liczby 2100, program powinien wypisac informacje, ze rok nie jest przestepny.
+ZAD-03 — Rok przestępny
+
+**Poziom:** ★☆☆
+**Tagi:** `modulo`, `if`, `kalendarz`
+
+### Treść
+
+Wczytaj rok `y` i sprawdź, czy jest przestępny w kalendarzu gregoriańskim.
+
+Wypisz:
+
+* `Rok jest przestępny.`
+* `Rok nie jest przestępny.`
+
+### Wejście
+
+* 1 linia: `y` (liczba całkowita, `y ≥ 0`)
+
+### Wyjście
+
+Jedna linia — odpowiedni komunikat.
+
+### Definicja
+
+Rok jest przestępny, gdy:
+
+* jest podzielny przez 400 **lub**
+* jest podzielny przez 4 i **nie** jest podzielny przez 100.
+
+### Przykład
+
+**Wejście:**
+
+```
+2100
+```
+
+**Wyjście:**
+
+```
+Rok nie jest przestępny.
+```
 
 """
 

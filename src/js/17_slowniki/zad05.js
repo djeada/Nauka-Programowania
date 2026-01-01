@@ -1,24 +1,41 @@
 /*
-Tytul: Lista pracownikow z najwiekszymi zyskami.
+ZAD-05 — Pracownik z największym sumarycznym zyskiem
 
-Tresc: Otrzymujesz liste par. Pierwszym elementem pary jest napis reprezentujacy imie i nazwisko pracownika, drugim zysk z transakcji, jaka dany pracownik przeprowadzil. Znajdz pracownika, ktory przyniosl firmie najwiecej zysku.
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `sumowanie`
 
-Dane wejsciowe: Lista par napisow i liczb naturalnych.
+### Treść
 
-Dane wyjsciowe: Napis.
+Wczytaj `n` wpisów: `pracownik zysk`. Zsumuj zyski per pracownik i wypisz nazwę pracownika z największą sumą.
+(Jeśli remis, wybierz tego, który pierwszy osiągnął tę maksymalną sumę podczas przetwarzania.)
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej listy:
+* 1 linia: `n`
+* następnie `n` linii: `imie_i_nazwisko zysk`
 
-[["Barnaba Barabash", 120],
-["Jon Snow", 100],
-["Kira Summer", 300],
-["Barnaba Barabash", 200],
-["Bob Marley", 110]]
+### Wyjście
 
-zostanie zwrocony napis: “Barnaba Barabash”.
+* Jedna linia: `imie_i_nazwisko`
 
+### Przykład
+
+**Wejście:**
+
+```
+5
+Barnaba_Barabash 120
+Jon_Snow 100
+Kira_Summer 300
+Barnaba_Barabash 200
+Bob_Marley 110
+```
+
+**Wyjście:**
+
+```
+Barnaba_Barabash
+```
 
 */
 function najwiekszyZysk(lista) {

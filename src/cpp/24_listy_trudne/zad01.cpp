@@ -1,10 +1,43 @@
 /*
-Tytul: Najdluzszy ciag jedynek.
-Tresc: Otrzymujesz liste skladajaca sie wylacznie z zer i jedynek. Znajdz indeks zera, ktore po zamianie na jedynke daloby najdluzszy ciag jedynek. Jesli lista sklada sie wylacznie z zer lub wylacznie z jedynek, zwroc -1.
-Dane wejsciowe: Lista liczb naturalnych.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla otrzymanej listy: [0, 0, 1, 0, 1, 1, 1, 0, 1, 1], powinna zostac zwrocona liczba: 7.
+ZAD-01 — Najdłuższy ciąg jedynek
+
+**Poziom:** ★★☆
+**Tagi:** `list`, `0/1`, `analiza`, `indeksy`
+
+### Treść
+
+Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Znajdź **indeks zera**,
+które po zamianie na `1` da **najdłuższy ciąg kolejnych jedynek**.
+
+Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — wypisz
+`-1`.
+
+### Wejście
+
+* 1 linia: lista `A` (tylko `0` i `1`)
+
+### Wyjście
+
+* 1 linia: indeks (liczba całkowita) albo `-1`
+
+### Przykład
+
+**Wejście:**
+
+```
+[0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
+```
+
+**Wyjście:**
+
+```
+7
+```
+
+### Uwagi
+
+* Jeśli kilka zer daje ten sam maksymalny wynik — wybierz to o **najmniejszym
+indeksie** (jeśli nie określono inaczej w testach).
 
 */
 #include <cassert>
@@ -13,7 +46,6 @@ Dla otrzymanej listy: [0, 0, 1, 0, 1, 1, 1, 0, 1, 1], powinna zostac zwrocona li
 // Zlozonosc czasowa O(n)
 // Zlozonosc pamieciowa O(1)
 int znajdzZeroDoPodmianyV1(std::vector<int> &lista) {
-
   auto licznikJedynek = 0;
   auto licznikZer = 0;
 
@@ -21,7 +53,6 @@ int znajdzZeroDoPodmianyV1(std::vector<int> &lista) {
   auto poprzedniIndeksZera = -1;
 
   for (unsigned int i = 0; i < lista.size(); i++) {
-
     if (lista[i] == 1)
       licznikZer++;
 
@@ -62,11 +93,9 @@ void test3() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
 
   return 0;
 }
-

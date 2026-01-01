@@ -1,18 +1,43 @@
 /*
+ZAD-11 — Sortowanie „słownika” po kluczach i po wartościach
 
-Tytul: Sortowanie wzgledem kluczy/wartosci
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `dict`
 
-Otrzymujesz slownik skladajacy sie z par napisow i liczb calkowitych. Twoim zadaniem jest wypisanie par posortowanych wzgledem napisow oraz wzgledem liczb.
+### Treść
 
-Dane wejsciowe: Slownik par: napis, liczba calkowita.
+Wczytaj `n` par `klucz wartość`.
+a) Wypisz listę par posortowaną rosnąco po kluczach.
+b) Wypisz listę par posortowaną rosnąco po wartościach.
 
-Dane wyjsciowe: Lista par.
+### Wejście
 
-Przyklad:
+* 1 linia: `n`
+* następnie `n` linii: `klucz wartość`
 
-Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("b", 4), ("c", 3), ("x", 5)].
-Dla otrzymanego slownika: {"c": 3, "x": 5, "a": -2, "b": 4}, powinien zostac zwrocony slownik: [("a", -2), ("c", 3), ("b", 4), ("x", 5)].
+### Wyjście
 
+* 1 linia: lista par dla a)
+* 2 linia: lista par dla b)
+
+### Przykład
+
+**Wejście:**
+
+```
+4
+c 3
+x 5
+a -2
+b 4
+```
+
+**Wyjście:**
+
+```
+[('a', -2), ('b', 4), ('c', 3), ('x', 5)]
+[('a', -2), ('c', 3), ('b', 4), ('x', 5)]
+```
 
 */
 

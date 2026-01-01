@@ -1,10 +1,38 @@
 /*
-Tytul: Scalanie przedzialow w liscie przedzialow.
-Tresc: Otrzymujesz liste par liczb. Kazda para reprezentuje poczatek i koniec przedzialu. Niektore przedzialy moga sie nachodzic. W takim przypadku polacz je ze soba i zwroc liste przedzialow, ktore sie nie pokrywaja.
-Dane wejsciowe: Lista list liczb naturalnych.
-Dane wyjsciowe: Lista list liczb naturalnych.
-Przyklad:
-Dla otrzymanej listy: [[23, 67], [23, 53], [45, 88], [77, 88], [10, 22], [11, 12], [42, 45]], powinna zostac zwrocona lista: [[10, 22], [23, 88]].
+ZAD-05 — Czy macierz jest magiczna?
+
+**Poziom:** ★★☆
+**Tagi:** `macierze`, `suma`, `warunki`
+
+### Treść
+
+Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami naturalnymi. Sprawdź, czy to **kwadrat magiczny**: suma każdego wiersza, każdej kolumny oraz obu przekątnych jest taka sama.
+
+### Wejście
+
+* 1. linia: `n`
+* następnie `n` wierszy po `n` liczb
+
+### Wyjście
+
+* `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+6 7 2
+1 5 9
+8 3 4
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 import java.util.*;

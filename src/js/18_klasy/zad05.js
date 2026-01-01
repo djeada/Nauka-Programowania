@@ -1,15 +1,61 @@
 /*
+ZAD-05 — Klasa Macierz
 
-Tytul: Zaprojektuj klase Macierz.
+**Poziom:** ★★☆
+**Tagi:** `class`, `macierze`, `operacje`
 
-Tresc: Napisz klase Macierz, ktora bedzie reprezentowala macierz. Klasa powinna zawierac nastepujace funkcje:
+### Treść
 
-1. Konstruktor, ktory przyjmuje jako argument liste list liczb calkowitych. Pobrana lista reprezentuje macierz. Domyslna wartosc argumentu to pusta lista.
-2. Funkcje, ktore zwracaja wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnozenie) oraz odwracanie macierzy. Jesli jest to mozliwe, nalezy przeciazyc operatory: +, -, *.
-3. Funkcje, ktora wypisuje informacje o macierzy na standardowe wyjscie.
-4. Funkcje umozliwiajace porownanie dwoch obiektow klasy Macierz. Jesli jest to mozliwe, nalezy przeciazyc operatory == oraz !=.
+Zaprojektuj klasę **Macierz**:
 
-Napisz program, ktory przetestuje twoja klase. Stworz macierze: A ([[1, 3], [4, 2]]) oraz B ([[5, 0], [1, 3]]). Wypisz na standardowe wyjscie informacje o utworzonych macierzach oraz ich sume, roznice pierwszej i drugiej oraz iloczyn macierzy.
+1. Konstruktor przyjmuje listę list (domyślnie pusta).
+2. Operacje: dodawanie, odejmowanie, mnożenie.
+3. Metoda wypisująca macierz (wierszami).
+4. Porównania `==` i `!=`.
+
+(Operację odwracania możesz pominąć w tym zadaniu, jeśli nie jest wymagana w sprawdzarce; najczęściej w podstawowych zadaniach nie ma testów na odwracanie.)
+
+Program tworzy:
+
+* A = [[1, 3], [4, 2]]
+* B = [[5, 0], [1, 3]]
+
+Wypisuje A, B, a potem A+B, A-B, A*B.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Macierz A:
+[1, 3]
+[4, 2]
+
+Macierz B:
+[5, 0]
+[1, 3]
+
+Suma macierzy:
+[6, 3]
+[5, 5]
+
+Różnica macierzy A - B:
+[-4, 3]
+[3, -1]
+
+Iloczyn macierzy A * B:
+[8, 9]
+[22, 12]
+```
+
 */
 
 class Macierz {

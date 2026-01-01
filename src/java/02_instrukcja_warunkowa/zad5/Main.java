@@ -1,10 +1,42 @@
 /*
-Tytul: Posortowanie trzech liczb.
-Tresc: Pobierz od uzytkownika trzy liczby naturalne i wypisz je w kolejnosci rosnacej.
-Dane wejsciowe: Trzy liczby naturalne.
-Dane wyjsciowe: Trzy liczby naturalne.
-Przyklad:
-Dla pobranych liczb: 2, 1 oraz 4, powinny zostac wypisane liczby: 1, 2 i 4.
+ZAD-05 — Sortowanie trzech liczb
+
+**Poziom:** ★★☆
+**Tagi:** `sort`, `warunki`, `porządkowanie`
+
+### Treść
+
+Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności rosnącej.
+
+### Wejście
+
+* 1 linia: `a` (całkowita, `a ≥ 0`)
+* 2 linia: `b` (całkowita, `b ≥ 0`)
+* 3 linia: `c` (całkowita, `c ≥ 0`)
+
+### Wyjście
+
+Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+1
+4
+```
+
+**Wyjście:**
+
+```
+1 2 4
+```
+
+### Uwagi
+
+* Możesz użyć wbudowanego sortowania, ale da się też rozwiązać czystymi warunkami.
 
 */
 import java.util.*;

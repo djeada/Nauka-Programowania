@@ -1,17 +1,52 @@
-# Tytul: Znalezienie wszystkich par elementow listy o sumie rownej podanej liczbie.
-# Tresc: Dla otrzymanej listy liczb calkowitych oraz liczby x, znajdz wszystkie pary elementow listy, ktorych suma jest rowna x.
-# Dane wejsciowe: Lista liczb calkowitych oraz liczba calkowita.
-# Dane wyjsciowe: Lista par liczb calkowitych.
-# Przyklad:
-# Dla otrzymanej listy: [1, 2, 4, 3, 7] oraz liczby 5, zostana zwrocone wszystkie pary elementow o sumie rownej 5: [(1, 4), (2, 3)].
+# ZAD-08 — Usuń klucz
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `listy`, `remove`, `wyszukiwanie`
+#
+# ### Treść
+#
+# Wczytaj listę liczb całkowitych oraz `klucz`. Usuń **pierwsze** wystąpienie `klucz` (jeśli istnieje). Następnie wypisz listę po modyfikacji w jednej linii, elementy oddzielone przecinkami.
+#
+# ### Wejście
+#
+# * 1. linia: `N` (`N ≥ 1`)
+# * kolejne `N` linii: liczby całkowite
+# * ostatnia linia: `klucz` (liczba całkowita)
+#
+# ### Wyjście
+#
+# Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 5
+# 6
+# 2
+# 1
+# 4
+# 27
+# 4
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 6,2,1,27
+# ```
+#
+# ### Uwagi
+#
+# * Jeśli `klucz` nie występuje, wypisz listę bez zmian.
 
 source ../assert.sh
 
 usun() {
     local klucz=$1
     local pom=()
-    for liczba in "${lista[@]}"
-    do
+    for liczba in "${lista[@]}"; do
         [ $liczba -ne $klucz ] && pom+=($liczba)
     done
     lista=("${pom[@]}")
@@ -40,4 +75,3 @@ main() {
 }
 
 main "$@"
-

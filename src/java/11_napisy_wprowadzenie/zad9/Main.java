@@ -1,10 +1,53 @@
 /*
-Tytul: Odwroc slowa w zdaniu.
-Tresc: Otrzymujesz napis reprezentujacy zdanie. Zamien slowa zdania na te same napisy zapisane wspak. Znaki interpunkcyjne nie sa uwzgledniane jako slowa.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanego napisu: "Ala ma kota", powinien zostac zwrocony napis: "ala mak otak".
+ZAD-09 — Rozdziel informacje o pracowniku
+
+**Poziom:** ★☆☆
+**Tagi:** `split`, `formatowanie`
+
+### Treść
+
+Wczytaj linię z danymi pracownika rozdzielonymi średnikami `;`:
+
+1. Imię, 2) Nazwisko, 3) Miejsce urodzenia, 4) Stanowisko, 5) Zarobki
+
+Wypisz każdą informację w osobnej linii z etykietą.
+
+### Wejście
+
+* 1. linia: dane w formacie `Imię; Nazwisko; Miasto; Zawód; Zarobki;`
+
+### Wyjście
+
+Pięć linii w formacie:
+
+* `Imię: ...`
+* `Nazwisko: ...`
+* `Miejsce urodzenia: ...`
+* `Zawód: ...`
+* `Zarobki: ...`
+
+### Przykład
+
+**Wejście:**
+
+```
+Jan; Kowalski; Warszawa; Programista; 1000;
+```
+
+**Wyjście:**
+
+```
+Imię: Jan
+Nazwisko: Kowalski
+Miejsce urodzenia: Warszawa
+Zawód: Programista
+Zarobki: 1000
+```
+
+### Uwagi
+
+* Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).
+* Ostatni średnik może powodować pusty element na końcu — zignoruj go.
 
 */
 import java.util.*;

@@ -1,21 +1,70 @@
 /*
-Tytul: Konwersja pomiedzy systemami binarnym i dziesietnym.
+ZAD-01A — Dziesiętny → binarny
 
-Tresc:
+**Poziom:** ★☆☆
+**Tagi:** `konwersja`, `binarne`, `pętle`
 
-a) Otrzymujesz reprezentacje dziesietna liczby naturalnej, zwroc jej reprezentacje binarna.
+### Treść
 
-b) Otrzymujesz reprezentacje binarna liczby naturalnej, zwroc jej reprezentacje dziesietna.
+Wczytaj liczbę naturalną w systemie dziesiętnym i wypisz jej reprezentację binarną.
 
-Dane wejsciowe: Liczba naturalna w obu podpunktach.
+### Wejście
 
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
+* 1. linia: `n` (liczba naturalna)
 
-Przyklad:
+### Wyjście
 
-a) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 11.
+Jedna linia: zapis binarny `n`.
 
-b) Dla otrzymanej liczby: 101, powinna zostac zwrocona liczba: 5.
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+11
+```
+
+### Uwagi o formacie
+
+* Dla `n = 0` wypisz `0`.
+
+ZAD-01B — Binarny → dziesiętny
+
+**Poziom:** ★☆☆
+**Tagi:** `konwersja`, `string`, `binarne`
+
+### Treść
+
+Wczytaj liczbę naturalną w systemie binarnym (ciąg `0/1`) i wypisz jej wartość w systemie dziesiętnym.
+
+### Wejście
+
+* 1. linia: `b` (ciąg znaków `0` i `1`)
+
+### Wyjście
+
+Jedna linia: liczba w systemie dziesiętnym.
+
+### Przykład
+
+**Wejście:**
+
+```
+101
+```
+
+**Wyjście:**
+
+```
+5
+```
+
 */
 
 // a) Konwersja liczby dziesietnej na binarna

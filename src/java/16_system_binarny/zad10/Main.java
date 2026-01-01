@@ -1,13 +1,36 @@
 /*
-Tytul:  Konwersja warunkowa.
-Tresc: Otrzymujesz liczbe naturalna. Zwroc reprezentacje binarna otrzymanej liczby, jesli:
-a) Otrzymana liczba jest liczba parzysta.
-b) Otrzymana liczba jest liczba pierwsza.
-Dane wejsciowe: Liczba naturalna w obu podpunktach.
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
-Przyklad:
-a) Dla otrzymanej liczby: 7, nie powinna zostac zwrocona zadna liczba.
-b) Dla otrzymanej liczby: 7, powinna zostac zwrocona liczba: 111.
+ZAD-10 — Ile bitów trzeba odwrócić (A → B)
+
+**Poziom:** ★★☆
+**Tagi:** `XOR`, `popcount`, `bitwise`
+
+### Treść
+
+Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w `A`, aby otrzymać `B`.
+
+### Wejście
+
+* 1. linia: `A`
+* 2. linia: `B`
+
+### Wyjście
+
+Jedna liczba naturalna: liczba różniących się bitów.
+
+### Przykład
+
+**Wejście:**
+
+```
+34
+73
+```
+
+**Wyjście:**
+
+```
+5
+```
 
 */
 public class Main {

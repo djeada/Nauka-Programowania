@@ -1,23 +1,53 @@
 /*
-Tytul: Wczytaj, zmodyfikuj i wypisz.
+ZAD-02 — Wczytaj, zmodyfikuj i wypisz
 
-Tresc: Wczytaj liczbe calkowita N oraz N liczb calkowitych i umiesc je w liscie. Nastepnie:
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `indeksy`, `modyfikacja`
 
-a) Dodaj 1 do kazdego elementu listy.
+### Treść
 
-b) Pomnoz kazdy element przez jego indeks w liscie (indeksy zaczynaja sie od 0).
+Wczytaj `N` oraz `N` liczb całkowitych do listy. Następnie:
 
-c) Zastap wszystkie elementy wartoscia pierwszego elementu listy.
+a) Zwiększ każdy element o `1`.
+b) Pomnóż każdy element przez jego indeks (indeksy od `0`).
+c) Zastąp wszystkie elementy wartością pierwszego elementu.
 
-Dla kazdego z powyzszych podpunktow wypisz zmodyfikowana liste. Elementy listy powinny byc oddzielone przecinkami i wypisane w jednym wierszu.
+Po każdym podpunkcie wypisz wynikową listę w **jednej** linii, elementy oddzielone przecinkami.
 
-Dane wejsciowe: N oraz N liczb calkowitych.
+### Wejście
 
-Dane wyjsciowe: N liczb calkowitych.
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
-Przyklad:
+### Wyjście
 
-Dla N rownego 3 oraz pobranych liczb 3, 9, 7 w pierwszym podpunkcie powinno zostac wypisana: 4, 10, 8.
+Trzy linie:
+
+1. wynik po (a)
+2. wynik po (b)
+3. wynik po (c)
+
+Elementy w linii oddzielone przecinkami (bez spacji).
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+3
+9
+7
+```
+
+**Wyjście:**
+
+```
+4,10,8
+0,9,14
+3,3,3
+```
+
 */
 
 // Funkcja wczytujaca N liczb calkowitych do listy

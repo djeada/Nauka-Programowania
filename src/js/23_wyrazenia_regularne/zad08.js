@@ -1,16 +1,39 @@
 /*
+ZAD-08 — Cyfry w słowach
 
-Tytul: Cyfry w slowach.
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`
 
-Tresc: Dostajesz napis reprezentujacy zdanie. Zapisz w liscie cyfry, ktore sa czescia slow. Cyfry oddzielone od liter spacja powinny zostac pominiete.
+### Treść
 
-Dane wejsciowe: Napis.
+Otrzymujesz zdanie. Wyodrębnij wszystkie ciągi cyfr, które są częścią słów (czyli są bezpośrednio połączone z literami). Nie uwzględniaj cyfr oddzielonych od liter spacjami.
 
-Dane wyjsciowe: Lista napisow.
+### Wejście
 
-Przyklad:
+Jedna linia:
 
-Dla otrzymanego napisu: "Jerzy29 i An37a s3luchali91 lekcji 22 z jezyka polskiego", powinna zostac zwrocona lista: ["29", "37", "3891", "3"].
+* `zdanie`
+
+### Wyjście
+
+Każdy znaleziony ciąg cyfr w osobnej linii (w kolejności występowania).
+
+### Przykład
+
+**Wejście:**
+
+```
+Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
+```
+
+**Wyjście:**
+
+```
+29
+37
+3
+91
+```
 
 */
 

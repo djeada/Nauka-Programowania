@@ -1,26 +1,97 @@
 /*
+ZAD-09A — Wielkie → małe (bitowo)
 
-Tytul: Zmiana wielkosci liter.
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `string`
 
-Tresc: Otrzymujesz napis. Zaimplementuj nastepujace operacje przy uzyciu operatorow bitowych:
+### Treść
 
-a) Zamien wielkie litery na male litery.
+Wczytaj napis z liter alfabetu łacińskiego. Zamień wszystkie wielkie litery na małe, używając operacji bitowych na kodach ASCII.
 
-b) Zamien male litery na wielkie litery.
+### Wejście
 
-c) Zamien male litery na wielkie litery i wielkie litery na male litery.
+* 1. linia: napis
 
-Dane wejsciowe: Napis.
+### Wyjście
 
-Dane wyjsciowe: Napis.
+Jedna linia: napis po konwersji.
 
-Przyklad:
+### Przykład
 
-a) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "test".
+**Wejście:**
 
-b) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "TEST".
+```
+Test
+```
 
-c) Dla otrzymanego napisu: "Test", powinien zostac zwrocony napis: "tEST".
+**Wyjście:**
+
+```
+test
+```
+
+ZAD-09B — Małe → wielkie (bitowo)
+
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `string`
+
+### Treść
+
+Wczytaj napis. Zamień wszystkie małe litery na wielkie, używając operacji bitowych na ASCII.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+Jedna linia: napis po konwersji.
+
+### Przykład
+
+**Wejście:**
+
+```
+Test
+```
+
+**Wyjście:**
+
+```
+TEST
+```
+
+ZAD-09C — Odwróć wielkość liter (bitowo)
+
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `toggle case`
+
+### Treść
+
+Wczytaj napis. Zamień wielkość każdej litery na przeciwną (mała↔wielka) używając operacji bitowych na ASCII.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+Jedna linia: napis po zmianie.
+
+### Przykład
+
+**Wejście:**
+
+```
+Test
+```
+
+**Wyjście:**
+
+```
+tEST
+```
+
 */
 
 function zamienNaMaleLitery(napis) {

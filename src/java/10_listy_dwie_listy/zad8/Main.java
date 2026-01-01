@@ -1,10 +1,39 @@
 /*
-Tytul: Usun z pierwszej listy czesc wspolna obu list.
-Tresc: Otrzymujesz dwie listy liczb calkowitych. Usun z pierwszej listy te elementy, ktore wystepuja rowniez w drugiej liscie.
-Dane wejsciowe: Dwie listy liczb calkowitych.
-Dane wyjsciowe: Lista liczb calkowitych.
-Przyklad:
-Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5].
+ZAD-08 — Połącz posortowane listy w posortowaną listę bez duplikatów
+
+**Poziom:** ★★☆
+**Tagi:** `list`, `merge`, `sort`
+
+### Treść
+
+Wczytaj dwie listy liczb całkowitych, każda **posortowana rosnąco**. Połącz je w jedną listę:
+
+* wynik ma być posortowany rosnąco,
+* wynik ma zawierać **unikalne** elementy (bez duplikatów).
+
+### Wejście
+
+* 1 linia: lista 1 (posortowana rosnąco)
+* 2 linia: lista 2 (posortowana rosnąco)
+
+### Wyjście
+
+* 1 linia: jedna posortowana lista bez duplikatów
+
+### Przykład
+
+**Wejście:**
+
+```
+[2, 4, 7]
+[3, 5, 9]
+```
+
+**Wyjście:**
+
+```
+[2, 3, 4, 5, 7, 9]
+```
 
 */
 import java.util.*;

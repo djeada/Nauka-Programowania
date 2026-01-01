@@ -1,10 +1,38 @@
 """
-Tytul: Konwersja listy na napis
-Tresc: Otrzymujesz liste liczb naturalnych. Zamie liste na napis.
-Dane wejsciowe: Lista liczb naturalnych.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanej listy: [2, 4, 7], powinien zostac zwrocony napis: “247”.
+ZAD-17 — Konwersja listy na napis
+
+**Poziom:** ★☆☆
+**Tagi:** `list`, `string`
+
+### Treść
+
+Otrzymujesz listę liczb naturalnych w zapisie tekstowym (np. `[2, 4, 7]`). Połącz liczby bez separatorów i wypisz jako napis.
+
+### Wejście
+
+* 1. linia: lista w formacie podobnym do Pythona, np. `[2, 4, 7]`
+
+### Wyjście
+
+* 1. linia: napis z połączonych liczb, np. `247`
+
+### Przykład
+
+**Wejście:**
+
+```
+[2, 4, 7]
+```
+
+**Wyjście:**
+
+```
+247
+```
+
+### Uwagi
+
+* Najprościej: usuń nawiasy `[` `]`, rozdziel po przecinkach, `strip()`, potem sklej.
 
 """
 

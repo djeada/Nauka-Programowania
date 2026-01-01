@@ -1,13 +1,30 @@
 """
-Tytul: Anagramy w tekscie
-Otrzymujesz tekst w postaci napisu. Twoim zadaniem jest znalezienie wszystkich slow, w ktorych te same znaki wystepuja te sama liczbe razy. Innymi slowy, szukasz anagramow w tekscie. Nalezy zignorowac roznice miedzy malymi i wielkimi literami. Pamietaj, ze slowa skladaja sie wylacznie z liter.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista list napisow.
-Przyklad:
-Dla otrzymanego napisu:
-"To absurd, ze tyran Brudas, ten straszliwy bandzior sprawuje rzady w tym kraju. Burza nad galeria i alergia na narty to zadna zbrodnia jak bandzior i jego arbuz.",
-powinna zostac zwrocona lista:
-[["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]].
+ZAD-10 — Znalezienie anagramów w tekście (grupy)
+
+**Poziom:** ★★☆
+**Tagi:** `dict`, `anagramy`, `string`
+
+### Treść
+
+Wczytaj tekst. Znajdź grupy słów będących anagramami (ignoruj wielkość liter, słowa to tylko litery).
+Wypisz wynik jako listę list, np. `[['absurd', 'brudas'], ...]`.
+Do grup wypisuj tylko te klucze, które mają co najmniej 2 słowa.
+
+### Wejście
+
+* 1 linia: tekst
+
+### Wyjście
+
+* Lista list słów
+
+### Przykład
+
+Wejście jak w treści zadania → wyjście:
+
+```
+[["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]]
+```
 
 """
 

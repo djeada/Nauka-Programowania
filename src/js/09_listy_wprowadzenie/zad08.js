@@ -1,15 +1,46 @@
 /*
-Tytul: Usun klucz.
+ZAD-08 — Usuń klucz
 
-Tresc: Dla otrzymanej listy: liczb calkowitych oraz klucza, usun pierwsze wystapienie klucza w liscie.
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `remove`, `wyszukiwanie`
 
-Dane wejsciowe: Lista liczb calkowitych i liczba calkowita.
+### Treść
 
-Dane wyjsciowe: Lista liczb calkowitych.
+Wczytaj listę liczb całkowitych oraz `klucz`. Usuń **pierwsze** wystąpienie `klucz` (jeśli istnieje). Następnie wypisz listę po modyfikacji w jednej linii, elementy oddzielone przecinkami.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej listy: [6, 2, 1, 4, 27] oraz 4, powinna zostac zwrocona lista: [6, 2, 1, 27].
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `klucz` (liczba całkowita)
+
+### Wyjście
+
+Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+6
+2
+1
+4
+27
+4
+```
+
+**Wyjście:**
+
+```
+6,2,1,27
+```
+
+### Uwagi
+
+* Jeśli `klucz` nie występuje, wypisz listę bez zmian.
 
 */
 

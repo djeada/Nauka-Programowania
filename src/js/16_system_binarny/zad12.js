@@ -1,16 +1,42 @@
 /*
+ZAD-12 — Najdłuższy ciąg zer otoczony jedynkami
 
-Tytul: Najdluzszy ciag zer w liczbie binarnej.
+**Poziom:** ★★★
+**Tagi:** `binarne`, `binary gap`, `pętle`
 
-Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Oblicz dlugosc najdluzszego ciagu zer w jej reprezentacji binarnej.
+### Treść
 
-Dane wejsciowe: Liczba naturalna.
+Wczytaj liczbę naturalną `n`. W jej reprezentacji binarnej znajdź długość najdłuższego ciągu kolejnych zer, który jest **z obu stron otoczony jedynkami** (tzw. *binary gap*).
 
-Dane wyjsciowe: Liczba naturalna.
+Jeśli nie ma takiego ciągu — wypisz `0`.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej liczby 14, powinna zostac zwrocona liczba 1.
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: długość najdłuższego „gapu”.
+
+### Przykład
+
+**Wejście:**
+
+```
+14
+```
+
+**Wyjście:**
+
+```
+0
+```
+
+### Uwagi (ważne)
+
+* `14` ma zapis `1110` — zero na końcu **nie jest otoczone jedynkami z prawej**, więc wynik to `0`.
+  Dla przykładu `20` (`10100`) najdłuższy gap ma długość `1` (między `1` i `1`).
+
 */
 
 // Funkcja obliczajaca najdluzszy ciag zer w liczbie binarnej

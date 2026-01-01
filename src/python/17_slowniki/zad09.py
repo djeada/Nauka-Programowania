@@ -1,11 +1,34 @@
 """
-Tytul: Powtarzajace sie znaki
-Otrzymujesz napis. Twoim zadaniem jest znalezienie i zwrocenie wszystkich znakow, ktore wystepuja co najmniej 2 razy w ciagu.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanego napisu: "aaabbbccc"
-Powinien zostac zwrocony napis: "abc"
+ZAD-09 — Znaki występujące co najmniej dwa razy
+
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
+
+### Treść
+
+Wczytaj napis. Wypisz napis złożony z **unikalnych** znaków, które występują co najmniej 2 razy, w kolejności pierwszego pojawienia się w wejściu.
+
+### Wejście
+
+* 1 linia: napis
+
+### Wyjście
+
+* 1 linia: wynikowy napis
+
+### Przykład
+
+**Wejście:**
+
+```
+aaabbbccc
+```
+
+**Wyjście:**
+
+```
+abc
+```
 
 """
 

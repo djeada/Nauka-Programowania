@@ -1,15 +1,53 @@
 /*
-Tytul: Warunek trojkata.
+ZAD-08 — Czy można zbudować trójkąt?
 
-Tresc: Dla trzech pobranych od uzytkownika dlugosci bokow sprawdz, czy mozna z nich zbudowac trojkat. Jednostki sa umowne.
+**Poziom:** ★☆☆
+**Tagi:** `if`, `geometria`, `warunek trójkąta`
 
-Dane wejsciowe: Trzy liczby naturalne oznaczajace dlugosci bokow trojkata.
+### Treść
 
-Dane wyjsciowe: Komunikat o mozliwosci lub niemozliwosci zbudowania trojkata.
+Wczytaj trzy dodatnie długości odcinków `a`, `b`, `c`.
+Sprawdź, czy można z nich zbudować trójkąt.
 
-Przyklad:
+Wypisz:
 
-Dla pobranych liczb: 1, 2 oraz 3, powinna zostac wypisana informacja, ze nie mozna zbudowac trojkata z podanych bokow.
+* jeśli tak: `Trójkąt można zbudować z podanych boków.`
+* jeśli nie: `Trójkąta nie można zbudować z podanych boków.`
+
+### Wejście
+
+* 1 linia: `a` (całkowita, `a > 0`)
+* 2 linia: `b` (całkowita, `b > 0`)
+* 3 linia: `c` (całkowita, `c > 0`)
+
+### Wyjście
+
+Jedna linia — dokładnie jeden z komunikatów.
+
+### Ograniczenia / warunek
+
+Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są wszystkie:
+
+* `a + b > c`
+* `a + c > b`
+* `b + c > a`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+4
+5
+```
+
+**Wyjście:**
+
+```
+Trójkąt można zbudować z podanych boków.
+```
+
 */
 
 // Pobieranie danych od uzytkownika

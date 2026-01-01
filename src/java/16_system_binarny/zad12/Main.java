@@ -1,13 +1,41 @@
 /*
-Tytul: Liczba zer i jedynek w reprezentacji binarnej.
-Tresc: Otrzymujesz reprezentacje dziesietna liczby naturalnej.
-a) Oblicz, ile zer zawiera binarna reprezentacja otrzymanej liczby.
-b) Oblicz, ile jedynek zawiera binarna reprezentacja otrzymanej liczby.
-Dane wejsciowe: Liczba naturalna w obu podpunktach.
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
-Przyklad:
-a) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 0.
-b) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 2.
+ZAD-12 — Najdłuższy ciąg zer otoczony jedynkami
+
+**Poziom:** ★★★
+**Tagi:** `binarne`, `binary gap`, `pętle`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. W jej reprezentacji binarnej znajdź długość najdłuższego ciągu kolejnych zer, który jest **z obu stron otoczony jedynkami** (tzw. *binary gap*).
+
+Jeśli nie ma takiego ciągu — wypisz `0`.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: długość najdłuższego „gapu”.
+
+### Przykład
+
+**Wejście:**
+
+```
+14
+```
+
+**Wyjście:**
+
+```
+0
+```
+
+### Uwagi (ważne)
+
+* `14` ma zapis `1110` — zero na końcu **nie jest otoczone jedynkami z prawej**, więc wynik to `0`.
+  Dla przykładu `20` (`10100`) najdłuższy gap ma długość `1` (między `1` i `1`).
 
 */
 public class Main {

@@ -1,31 +1,58 @@
 /*
+ZAD-01 — Sprawdź poprawność adresu e-mail
 
-Tytul: Sprawdz poprawnosc adresu e-mail.
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `walidacja`
 
-Tresc: Masz napis reprezentujacy adres e-mail. Sprawdz, czy jest on poprawny.
+### Treść
 
-Pamietaj, ze kazdy adres e-mail sklada sie z identyfikatora uzytkownika, znaku @ oraz nazwy domenowej.
+Otrzymujesz napis reprezentujący adres e-mail. Sprawdź, czy jest poprawny zgodnie z regułami:
 
-Identyfikator uzytkownika sklada sie tylko z:
+* Adres e-mail składa się z identyfikatora użytkownika, znaku `@` oraz nazwy domeny.
+* **Identyfikator użytkownika** może zawierać wyłącznie:
 
-* Malych (a-z) i wielkich (A-Z) liter.
-* Cyfr (0-9).
-* Znakow ! # $ % & ' * + — / = ? ^ _ ` { | } ~.
-* Kropek . pod warunkiem, ze nie jest pierwszym lub ostatnim znakiem i nie wystepuje dwukrotnie po sobie.
+  * litery `a–z`, `A–Z`,
+  * cyfry `0–9`,
+  * znaki specjalne: `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`,
+  * kropki `.`, ale:
 
-Nazwa domenowa sklada sie tylko z:
+    * nie może być pierwszym ani ostatnim znakiem,
+    * nie może wystąpić dwukrotnie po sobie.
+* **Nazwa domeny** może zawierać wyłącznie:
 
-* Malych (a-z) i wielkich (A-Z) liter.
-* Cyfr (0-9).
-* Kropek . oraz myslnika — pod warunkiem, ze nie sa pierwszym lub ostatnim znakiem i nie wystepuja dwukrotnie po sobie.
+  * litery `a–z`, `A–Z`,
+  * cyfry `0–9`,
+  * kropki `.` oraz myślniki `-`, ale:
 
-Dane wejsciowe: Napis.
+    * nie mogą być pierwszym ani ostatnim znakiem,
+    * nie mogą wystąpić dwukrotnie po sobie.
 
-Dane wyjsciowe: Wartosc logiczna.
+### Wejście
 
-Przyklad:
+Jedna linia:
 
-Dla napisu: “adam@gmail.com”, powinna zostac zwrocona wartosc logiczna: Prawda.
+* `email`
+
+### Wyjście
+
+Jedna linia:
+
+* `Prawda` — jeśli e-mail jest poprawny
+* `Fałsz` — w przeciwnym razie
+
+### Przykład
+
+**Wejście:**
+
+```
+adam@gmail.com
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 function poprawny_identyfikator(identyfikator) {

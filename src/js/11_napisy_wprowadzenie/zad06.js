@@ -1,15 +1,35 @@
 /*
-Tytul: Zamien litery "a" na znaki zapytania.
+ZAD-06 — Zamień litery „a” na „?”
 
-Tresc: Otrzymasz napis. Zmien litery "a" na znaki zapytania.
+**Poziom:** ★☆☆
+**Tagi:** `string`, `replace`
 
-Dane wejsciowe: Napis.
+### Treść
 
-Dane wyjsciowe: Napis.
+Wczytaj napis i zamień wszystkie wystąpienia litery `a` na znak `?`.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanego napisu: "Latarnik", powinien zostac zwrocony napis: "L?t?rnik".
+* 1. linia: napis
+
+### Wyjście
+
+* 1. linia: napis po zamianie
+
+### Przykład
+
+**Wejście:**
+
+```
+Latarnik
+```
+
+**Wyjście:**
+
+```
+L?t?rnik
+```
+
 */
 
 function zamienLitery(napis) {

@@ -1,16 +1,39 @@
 /*
+ZAD-08 — Wypisanie elementów macierzy spiralnie
 
-Tytul: Wypisanie elementow macierzy spiralnie.
+**Poziom:** ★★☆
+**Tagi:** `macierze`, `spirala`
 
-Tresc: Otrzymujesz liste list liczb naturalnych. Zbierz elementy otrzymanej macierzy spiralnie i zapisz je w liscie.
+### Treść
 
-Dane wejsciowe: Lista list liczb naturalnych.
+Wczytaj macierz `n×m` i wypisz jej elementy spiralnie (zgodnie z ruchem wskazówek zegara), startując z lewego górnego rogu.
 
-Dane wyjsciowe: Lista.
+### Wejście
 
-Przyklad:
+* 1. linia: `n m`
+* następnie `n` wierszy po `m` liczb
 
-Dla otrzymanej macierzy: [[1,2,3], [4,5,6], [7,8,9]], powinna zostac zwrocona lista: [1, 2, 3, 6, 9, 8, 7, 4, 5].
+### Wyjście
+
+* 1 linia: elementy spiralnie, oddzielone spacjami
+
+### Przykład
+
+**Wejście:**
+
+```
+3 3
+1 2 3
+4 5 6
+7 8 9
+```
+
+**Wyjście:**
+
+```
+1 2 3 6 9 8 7 4 5
+```
+
 */
 
 function spiralnie(macierz) {

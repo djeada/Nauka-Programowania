@@ -1,12 +1,47 @@
 """
-Tytul: Zaprojektuj klase Zespolona.
-Tresc: Napisz klase Zespolona, ktora bedzie reprezentowala liczbe zespolona. Klasa powinna zawierac nastepujace funkcje:
-1. Konstruktor, ktory przyjmuje jako argument dwie liczby. Pierwsza liczba reprezentuje czesc rzeczywista, a druga czesc urojona liczby zespolonej. Domyslne wartosci dla obu argumentow to 0.
-2. Funkcje, ktore zwracaja wynik podstawowych operacji arytmetycznych (dodawanie, odejmowanie, mnozenie, dzielenie). Jesli jest to mozliwe, nalezy przeciazyc operatory: +, -, *, /.
-3. Funkcje, ktora wypisuje informacje o liczbie zespolonej na standardowe wyjscie.
-4. Funkcje umozliwiajace porownanie dwoch obiektow klasy Zespolona. Jesli jest to mozliwe, nalezy przeciazyc operatory == oraz !=.
-5. Funkcje modul, ktora zwraca modul liczby zespolonej.
-Napisz program, ktory przetestuje twoja klase. Stworz liczby zespolone: A (9, 12) oraz B (-3, -3). Wypisz na standardowe wyjscie informacje o utworzonych liczbach zespolonych oraz ich sume, roznice pierwszej i drugiej, iloraz pierwszej przez druga oraz iloczyn liczb zespolonych.
+ZAD-06 — Klasa LiczbaZespolona
+
+**Poziom:** ★★☆
+**Tagi:** `class`, `operacje`, `math`
+
+### Treść
+
+Zaprojektuj klasę **LiczbaZespolona**:
+
+* konstruktor `(re=0, im=0)`,
+* dodawanie, odejmowanie, mnożenie, dzielenie,
+* porównania,
+* moduł,
+* wypisywanie w formacie `a + bi` lub `a - bi` (z zachowaniem znaku).
+
+Program tworzy:
+
+* A = 9 + 12i
+* B = -3 - 3i
+
+Wypisuje A, B oraz: sumę, różnicę A-B, iloczyn i iloraz A/B.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Liczba A: 9 + 12i
+Liczba B: -3 - 3i
+
+Suma: 6 + 9i
+Różnica A - B: 12 + 15i
+Iloczyn: 27 + 63i
+Iloraz A / B: -3.5 + 0.5i
+```
 
 """
 
@@ -37,9 +72,9 @@ class Zespolona:
     def __truediv__(self, other):
         return Zespolona(
             (self.rzeczywista * other.rzeczywista + self.urojona * other.urojona)
-            / (other.rzeczywista ** 2 + other.urojona ** 2),
+            / (other.rzeczywista**2 + other.urojona**2),
             (self.urojona * other.rzeczywista - self.rzeczywista * other.urojona)
-            / (other.rzeczywista ** 2 + other.urojona ** 2),
+            / (other.rzeczywista**2 + other.urojona**2),
         )
 
     def __str__(self):
@@ -52,7 +87,7 @@ class Zespolona:
         return self.rzeczywista != other.rzeczywista or self.urojona != other.urojona
 
     def modul(self):
-        return math.sqrt(self.rzeczywista ** 2 + self.urojona ** 2)
+        return math.sqrt(self.rzeczywista**2 + self.urojona**2)
 
 
 if __name__ == "__main__":

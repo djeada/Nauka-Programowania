@@ -1,16 +1,40 @@
 /*
+ZAD-04 — Iloczyn skalarny dwóch wektorów 3D
 
-Tytul: Mnozenie wektorowe.	
+**Poziom:** ★☆☆
+**Tagi:** `list`, `wektory`, `math`
 
-Tresc: Tresc: Otrzymujesz dwie listy liczb calkowitych reprezentujace dwa wektory trojwymiarowej przestrzeni euklidesowej. Zaimplementuj mnozenie wektorowe (zdefiniowane jedynie dla wektorow 3-wymiarowej przestrzeni euklidesowej).
+### Treść
 
-Dane wejsciowe: Dwie listy liczb calkowitych o dlugosci 3.
+Wczytaj dwie listy długości 3 (wektory 3D) i oblicz ich **iloczyn skalarny**:
+[
+A_xB_x + A_yB_y + A_zB_z
+]
 
-Dane wyjsciowe: Liczba naturalna.
+### Wejście
 
-Przyklad:
+* 1 linia: wektor A (lista 3 liczb całkowitych)
+* 2 linia: wektor B (lista 3 liczb całkowitych)
 
-Dla otrzymanych list [1, 2, 3] oraz [3, 1, 2], powinno zostac zwrocone: 5.
+### Wyjście
+
+* 1 linia: jedna liczba całkowita — iloczyn skalarny
+
+### Przykład
+
+**Wejście:**
+
+```
+[1, 2, 3]
+[3, 1, 2]
+```
+
+**Wyjście:**
+
+```
+11
+```
+
 */
 
 // Funkcja mnozaca wektory

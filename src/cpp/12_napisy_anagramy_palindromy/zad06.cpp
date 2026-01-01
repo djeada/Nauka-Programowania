@@ -1,9 +1,7 @@
 /*
 Tytul: Permutacje slowa, ktore sa palindromami.
-Tresc: Napisz program, ktory znajdzie permutacje danego slowa, ktore sa palindromami.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
+Tresc: Napisz program, ktory znajdzie permutacje danego slowa, ktore sa
+palindromami. Dane wejsciowe: Napis. Dane wyjsciowe: Lista napisow. Przyklad:
 Dla otrzymanego napisu: “taco”, powinna zostac zwrocona lista: ["taco", "toca"].
 
 */
@@ -15,8 +13,7 @@ Dla otrzymanego napisu: “taco”, powinna zostac zwrocona lista: ["taco", "toc
 bool palindrom(std::string &slowo) {
   int N = slowo.length() - 1;
   for (int i = 0; i <= N / 2; i++) {
-    if (slowo[i] != slowo[N - i])
-      return false;
+    if (slowo[i] != slowo[N - i]) return false;
   }
 
   return true;
@@ -40,7 +37,6 @@ void permutacja(std::string &slowoWej, std::string &slowoWyj,
 }
 
 std::vector<std::string> permutacje(std::string &slowoWej) {
-
   std::vector<std::string> wynik;
 
   std::string slowoWyj;
@@ -65,4 +61,3 @@ int main() {
   test1();
   return 0;
 }
-

@@ -1,18 +1,60 @@
 /*
-Wypisz pobrana od uzytkownika liczbe, jesli jest ona wieksza niz 5.
+ZAD-01 — Liczba większa od 5
+
+**Poziom:** ★☆☆
+**Tagi:** `if`, `porównania`, `I/O`
+
+### Treść
+
+Wczytaj jedną liczbę naturalną `n`.
+Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
+
+### Wejście
+
+* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+
+### Wyjście
+
+* Jeśli `n > 5`: jedna linia z liczbą `n`
+* Jeśli `n ≤ 5`: brak wyjścia
+
+### Przykład 1
+
+**Wejście:**
+
+```
+10
+```
+
+**Wyjście:**
+
+```
+10
+```
+
+### Przykład 2
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:** *(brak)*
+
 */
 
 use ::std::*;
 
 fn main() {
+    println!("Podaj liczbe: ");
+    let mut liczba = String::new();
+    std::io::stdin()
+        .read_line(&mut liczba)
+        .expect("Blad odczytu");
+    let liczba: i32 = liczba.trim().parse().expect("Blad parsowania");
 
-	println!("Podaj liczbe: ");
-	let mut liczba = String::new();
-	std::io::stdin().read_line(&mut liczba).expect("Blad odczytu");
-	let liczba: i32 = liczba.trim().parse().expect("Blad parsowania");
-	
-	if liczba > 5 {
-		println!("Liczba {} jest wieksza od 5", liczba);
-	}
+    if liczba > 5 {
+        println!("Liczba {} jest wieksza od 5", liczba);
+    }
 }
-

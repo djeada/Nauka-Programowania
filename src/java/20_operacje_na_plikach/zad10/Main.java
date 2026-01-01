@@ -1,8 +1,33 @@
 /*
-Tytul: Znalezienie w folderze wszystkich plikow z danym rozszerzeniem
-Tresc: Otrzymujesz dwa napisy. Pierwszy napis to sciezka folderu, a drugi to rozszerzenie szukanych plikow. Znajdz w folderze wszystkie pliki o podanym rozszerzeniu i zapisz ich nazwy w liscie.
-Dane wejsciowe: Dwa napisy
-Dane wyjsciowe: Lista napisow
+ZAD-10 — Skopiuj pliki PNG do innego folderu (bez podfolderów)
+
+**Poziom:** ★☆☆
+**Tagi:** `files`, `copy`, `png`, `shutil`
+
+### Treść
+
+Otrzymujesz ścieżkę folderu źródłowego i docelowego. Skopiuj wszystkie pliki `.png` znajdujące się **bezpośrednio** w folderze źródłowym do folderu docelowego.
+
+### Wejście
+
+* 1 linia: `src_folder`
+* 2 linia: `dst_folder`
+
+### Wyjście
+
+Brak.
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Obrazy
+D:\Backup\Obrazy
+```
+
+**Wyjście:**
+*(brak)*
 
 */
 import java.io.IOException;

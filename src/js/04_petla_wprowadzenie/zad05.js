@@ -1,19 +1,57 @@
 /*
-Tytul: Liczby z okreslonego przedzialu.
+ZAD-05 — Liczby z przedziału
 
-Tresc: Dla otrzymanych dwoch liczb naturalnych wypisz:
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `przedziały`, `modulo`
 
-a) Wszystkie liczby naturalne wieksze od mniejszej otrzymanej liczby i jednoczesnie mniejsze od wiekszej otrzymanej liczby.
+### Treść
 
-b) Wszystkie liczby naturalne podzielne przez 3 wieksze od mniejszej otrzymanej liczby i jednoczesnie mniejsze od wiekszej otrzymanej liczby.
+Wczytaj dwie liczby naturalne `a` i `b`. Najpierw ustal:
 
-Dane wejsciowe: Dwie liczby naturalne.
+* `lo = min(a, b)`
+* `hi = max(a, b)`
 
-Dane wyjsciowe: Kilka liczb naturalnych.
+Następnie:
 
-Przyklad:
+a) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` (każda w osobnej linii).
 
-Dla otrzymanych liczb 9 i 5 powinny zostac wypisane liczby 6, 7 i 8.
+b) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` oraz `x` jest podzielne przez `3` (każda w osobnej linii).
+
+### Wejście
+
+Dwie liczby naturalne:
+
+* 1. linia: `a`
+* 2. linia: `b`
+
+### Wyjście
+
+Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobnej linii.
+
+### Przykład
+
+**Wejście:**
+
+```
+9
+5
+```
+
+**Wyjście:**
+
+```
+6
+7
+8
+6
+```
+
+### Uwagi o formatowaniu
+
+* Nie wypisuj nagłówków typu „a)” i „b)”.
+* Jeśli w którymś podpunkcie nie ma liczb do wypisania, w tej części nie wypisuj nic.
+* Nie dodawaj pustej linii między podpunktami.
+
 */
 
 // Pobieranie danych od uzytkownika

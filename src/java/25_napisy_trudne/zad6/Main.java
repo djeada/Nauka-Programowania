@@ -1,10 +1,36 @@
 /*
-Tytul: Rotacje napisow.
-Tresc: Dostajesz dwa napisy. Sprawdz, czy jeden z nich jest rotacja drugiego.
-Dane wejsciowe: Dwa napisy.
-Dane wyjsciowe: Wartosc logiczna.
-Przyklad:
-Dla napisow "malpka" i "pkamal" powinno zostac zwrocone "Prawda".
+ZAD-06 — Rotacje napisów
+
+**Poziom:** ★★★
+**Tagi:** `string`, `rotation`, `substring`
+
+### Treść
+
+Otrzymujesz dwa napisy `A` i `B`. Sprawdź, czy jeden z nich jest **rotacją** drugiego (mają tę samą długość i da się uzyskać jeden przez przesunięcie cykliczne drugiego).
+
+### Wejście
+
+* 1 linia: napis `A`
+* 2 linia: napis `B`
+
+### Wyjście
+
+* 1 linia: `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+malpka
+pkamal
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 import java.util.*;

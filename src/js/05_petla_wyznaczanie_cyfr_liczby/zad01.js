@@ -1,15 +1,45 @@
 /*
-Tytul: Liczba cyfr.
+ZAD-01 — Liczenie cyfr w liczbie
 
-Tresc: Dla otrzymanej od uzytkownika liczby naturalnej wypisz liczbe cyfr, z ktorych sie sklada.
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
 
-Dane wejsciowe: Liczba naturalna.
+### Treść
 
-Dane wyjsciowe: Liczba naturalna.
+Wczytaj liczbę naturalną `n` i wypisz, z ilu cyfr składa się jej zapis dziesiętny.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanej liczby 342, powinna zostac wypisana liczba 3.
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Jedna liczba naturalna — liczba cyfr w `n`.
+
+### Przykład
+
+**Wejście:**
+
+```
+342
+```
+
+**Wyjście:**
+
+```
+3
+```
+
+### Ograniczenia / gwarancje
+
+* `n` mieści się w typowym zakresie liczb całkowitych.
+
+### Uwagi o formatowaniu
+
+* Dla `n = 0` poprawna odpowiedź to `1` (liczba „0” ma jedną cyfrę).
+
 */
 
 // Pobieranie danych od uzytkownika

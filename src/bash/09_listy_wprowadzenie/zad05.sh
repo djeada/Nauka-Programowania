@@ -1,17 +1,62 @@
-# Tytul: Znalezienie elementu bez pary w liscie liczb calkowitych.
-# Tresc: Dla otrzymanej listy liczb calkowitych, skladajacej sie z nieparzystej liczby elementow, znajdz element, ktory nie ma pary o tej samej wartosci.
-# Dane wejsciowe: Lista liczb calkowitych.
-# Dane wyjsciowe: Liczba calkowita.
-# Przyklad:
-# Dla otrzymanej listy: [1, 3, 1, 7, 3, 1, 1] zostanie zwrocona liczba: 7.
+# ZAD-05 — Zmodyfikuj elementy spełniające warunek
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `listy`, `warunki`, `liczby pierwsze`
+#
+# ### Treść
+#
+# Wczytaj listę liczb całkowitych. Dla każdego podpunktu utwórz **nową listę** na podstawie listy z poprzedniego podpunktu i wypisz ją w jednej linii (przecinki bez spacji):
+#
+# a) Zwiększ o 1 elementy o **parzystych indeksach** (0,2,4,...).
+# b) Ustaw na `0` elementy będące **wielokrotnością 3**.
+# c) Podnieś do kwadratu elementy **mniejsze niż 10**.
+# d) Oblicz sumę wszystkich elementów listy i wstaw tę sumę na indeksy, które są **liczbami pierwszymi** (2,3,5,7,11,...) — tylko te, które mieszczą się w zakresie listy.
+# e) Zamień każdy element na **iloczyn wszystkich pozostałych elementów** listy.
+#
+# ### Wejście
+#
+# * 1. linia: `N` (`N ≥ 1`)
+# * kolejne `N` linii: liczby całkowite
+#
+# ### Wyjście
+#
+# Pięć linii (po kolei: a, b, c, d, e), w każdej lista oddzielona przecinkami.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 5
+# 5
+# 7
+# 9
+# 4
+# 2
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 6,7,10,4,3
+# 6,7,0,4,3
+# 36,49,0,16,9
+# 36,49,36,36,9
+# 0,0,0,0,0
+# ```
+#
+# ### Uwagi o formatowaniu
+#
+# * W podpunkcie (d) indeks 0 i 1 nie są pierwsze.
+# * W podpunkcie (e) jeśli w liście jest `0`, to wiele wyników będzie `0` — to normalne.
+# * Nie dodawaj przecinków na końcu linii.
 
 source ../assert.sh
 
 zwieksz() {
     local n=${#lista[@]}
 
-    for (( i=0; i<n; i++ ))
-    do
+    for ((i = 0; i < n; i++)); do
         if [ $((i % 2)) -eq 0 ]; then
             lista[$i]=$((lista[$i] + 1))
         fi
@@ -22,8 +67,7 @@ zwieksz() {
 wyzeruj() {
     local n=${#lista[@]}
 
-    for (( i=0; i<n; i++ ))
-    do
+    for ((i = 0; i < n; i++)); do
         if [ $((lista[$i] % 3)) -eq 0 ]; then
             lista[$i]=0
         fi
@@ -31,14 +75,13 @@ wyzeruj() {
 
 }
 
-kwadrat(){
+kwadrat() {
     local n=${#lista[@]}
 
-    for (( i=0; i<n; i++ ))
-    do
+    for ((i = 0; i < n; i++)); do
         elem=${lista[$i]}
         if [ $elem -lt 10 ]; then
-            lista[$i]=$((elem*elem))
+            lista[$i]=$((elem * elem))
         fi
     done
 
@@ -79,12 +122,14 @@ czy_pierwsza() {
     return
 }
 
-suma(){
-    local suma_elementow=$(IFS=+; echo "$((${lista[*]}))")
+suma() {
+    local suma_elementow=$(
+        IFS=+
+        echo "$((${lista[*]}))"
+    )
     local n=${#lista[@]}
 
-    for (( i=0; i<n; i++ ))
-    do
+    for ((i = 0; i < n; i++)); do
         if [[ $(czy_pierwsza $i) == "true" ]]; then
             lista[$i]=$suma_elementow
         fi
@@ -95,11 +140,9 @@ zamien() {
     declare -a iloczyny
     local n=${#lista[@]}
 
-    for (( i=0; i<n; i++ ))
-    do
+    for ((i = 0; i < n; i++)); do
         local iloczyn=1
-        for (( j=0; j<n; j++ ))
-        do
+        for ((j = 0; j < n; j++)); do
 
             if [ $i -ne $j ]; then
                 iloczyn=$((iloczyn * lista[$j]))
@@ -155,4 +198,3 @@ main() {
 }
 
 main "$@"
-

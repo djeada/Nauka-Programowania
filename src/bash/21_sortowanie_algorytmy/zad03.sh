@@ -1,23 +1,52 @@
-# Tytul: Sortowanie przez wstawianie.
-# Tresc: Napisz program sortujacy liste liczb calkowitych metoda sortowania przez wstawianie. Stworz nowa, pusta liste i dodaj do niej pierwszy element listy wejsciowej. Dla kazdego kolejnego elementu znajdz odpowiednie miejsce w posortowanej juz czesci listy i wstaw go tam.
-# Dane wejsciowe: Lista liczb calkowitych.
-# Dane wyjsciowe: Posortowana lista liczb calkowitych.
-# Przyklad:
-# Dla listy: [6, 2, 1, 4, 27], powinna zostac zwrocona lista: [1, 2, 4, 6, 27].
+# ZAD-03 — Sortowanie przez wstawianie
+#
+# **Poziom:** ★★☆
+# **Tagi:** `sorting`, `insertion-sort`, `list`
+#
+# ### Treść
+#
+# Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wstawianie**.
+# Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w odpowiednie miejsce, przesuwając większe elementy w prawo.
+#
+# ### Wejście
+#
+# * 1 linia: lista liczb całkowitych
+#
+# ### Wyjście
+#
+# * 1 linia: posortowana lista rosnąco
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# [6, 2, 1, 4, 27]
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# [1, 2, 4, 6, 27]
+# ```
+#
+# ### Uwagi o algorytmie
+#
+# * Działa bardzo dobrze dla danych prawie posortowanych.
 
 source ../assert.sh
 
-sortuj(){
+sortuj() {
     local -n _tablica_ref=$1
 
-    for (( i=1; i<${#_tablica_ref[@]}; i++ )); do
+    for ((i = 1; i < ${#_tablica_ref[@]}; i++)); do
         local tmp=${_tablica_ref[$i]}
-        local j=$((i-1))
-        while (( j>=0 && _tablica_ref[j]>tmp )); do
-            _tablica_ref[$((j+1))]=${_tablica_ref[$j]}
+        local j=$((i - 1))
+        while ((j >= 0 && _tablica_ref[j] > tmp)); do
+            _tablica_ref[$((j + 1))]=${_tablica_ref[$j]}
             ((j--))
         done
-        _tablica_ref[$((j+1))]=$tmp
+        _tablica_ref[$((j + 1))]=$tmp
     done
 }
 
@@ -33,4 +62,3 @@ main() {
 }
 
 main "$@"
-

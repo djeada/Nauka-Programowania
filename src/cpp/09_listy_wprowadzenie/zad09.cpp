@@ -1,10 +1,42 @@
 /*
-Tytul: Usun duplikaty.
-Tresc: Otrzymujesz liste liczb naturalnych. Usun z niej wszystkie duplikaty, tak aby kazda liczba pozostala tylko raz.
-Dane wejsciowe: Lista liczb naturalnych.
-Dane wyjsciowe: Lista liczb naturalnych.
-Przyklad:
-Dla otrzymanej listy: [3, 2, 1, 3, 2, 2], powinna zostac zwrocona lista: [3, 2, 1].
+ZAD-09 — Usuń duplikaty (z zachowaniem kolejności)
+
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `duplikaty`, `set`
+
+### Treść
+
+Wczytaj listę liczb naturalnych i usuń duplikaty tak, aby każda liczba
+występowała tylko raz — **zachowując kolejność pierwszego wystąpienia**.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby naturalne
+
+### Wyjście
+
+Jedna linia: lista bez duplikatów, elementy oddzielone przecinkami.
+
+### Przykład
+
+**Wejście:**
+
+```
+6
+3
+2
+1
+3
+2
+2
+```
+
+**Wyjście:**
+
+```
+3,2,1
+```
 
 */
 #include <algorithm>
@@ -22,8 +54,7 @@ void usunDuplikatyV1(std::vector<int> &lista) {
 // Zlozonosc pamieciowa O(n)
 void usunDuplikatyV2(std::vector<int> &lista) {
   std::unordered_set<int> zbior;
-  for (auto liczba : lista)
-    zbior.insert(liczba);
+  for (auto liczba : lista) zbior.insert(liczba);
 
   lista.assign(zbior.begin(), zbior.end());
 }
@@ -75,11 +106,9 @@ void test3() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
 
   return 0;
 }
-

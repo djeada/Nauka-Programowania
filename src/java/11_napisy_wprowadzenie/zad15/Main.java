@@ -1,10 +1,34 @@
 /*
-Tytul: Zamien znaki na kody ASCII.
-Tresc: Otrzymasz napis. Zmien wszystkie znaki w napisie na odpowiadajace im numery w tablicy ASCII. Zastap otrzymany napis napisem skladajacym sie z otrzymanych numerow, oddzielonych przecinkami.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla otrzymanego napisu: "Robot", powinien zostac zwrocony napis: "82, 111, 98, 111, 116".
+ZAD-15 — Słowa jako lista
+
+**Poziom:** ★☆☆
+**Tagi:** `split`, `list`
+
+### Treść
+
+Wczytaj zdanie i wypisz listę słów w formacie `["Ala", "ma", "kota"]`.
+
+### Wejście
+
+* 1. linia: zdanie
+
+### Wyjście
+
+* 1. linia: lista słów (jak w przykładzie)
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+["Ala", "ma", "kota"]
+```
 
 */
 import java.util.*;

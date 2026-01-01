@@ -1,21 +1,52 @@
-# Tytul:  Sprawdz warunek
-# Napisz funkcje, ktora sprawdzi nastepujace warunki dla otrzymanych dwoch liczb:
-# a) Czy pierwsza liczba jest wieksza od drugiej liczby?
-# b) Czy suma liczb jest mniejsza niz 10?
-# c) Czy obie liczby sa nieparzyste?
-# d) Czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu?
-# Dane wejsciowe: dwie liczby naturalne
-# Dane wyjsciowe: cztery wartosci logiczne, odpowiadajace na kazde z pytan
-# Przyklad:
-# Dla pobranych liczb 3 i 2, funkcja powinna zwrocic nastepujace wartosci logiczne:
-# a) Prawda
-# b) Prawda
-# c) Falsz
-# d) Prawda
+# ZAD-03 — Sprawdzanie warunków logicznych
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `funkcje`, `bool`, `warunki`
+#
+# ### Treść
+#
+# Napisz funkcję `sprawdz_warunki(a, b)`, która dla dwóch liczb naturalnych zwraca cztery wartości logiczne (np. jako krotkę) odpowiadające warunkom:
+#
+# a) Czy `a > b`?
+# b) Czy `a + b < 10`?
+# c) Czy obie liczby są nieparzyste?
+# d) Czy `max(a, b) < a^2`?
+#
+# ### Wejście
+#
+# Dwa argumenty funkcji:
+#
+# * `a` (liczba całkowita, `a ≥ 0`)
+# * `b` (liczba całkowita, `b ≥ 0`)
+#
+# ### Wyjście
+#
+# Cztery wartości logiczne w kolejności a), b), c), d).
+#
+# ### Przykład
+#
+# **Wywołanie funkcji:**
+#
+# ```python
+# A, B, C, D = sprawdz_warunki(3, 2)
+# print(A)
+# print(B)
+# print(C)
+# print(D)
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# True
+# True
+# False
+# True
+# ```
 
 czyWieksza() {
 
-    if [[ $1 -gt $2 ]] ; then
+    if [[ $1 -gt $2 ]]; then
         echo true
     else
         echo false
@@ -25,7 +56,7 @@ czyWieksza() {
 czySumaMniejsza() {
     suma=$(($1 + $2))
 
-    if [[ $suma -lt 10 ]] ; then
+    if [[ $suma -lt 10 ]]; then
         echo true
     else
         echo false
@@ -52,7 +83,7 @@ czyWiekszaNizKwad() {
     wieksza $1 $2
     wieksza=$?
 
-    if [[ $wieksza -lt $(($1**2)) ]]; then
+    if [[ $wieksza -lt $(($1 ** 2)) ]]; then
         echo true
     else
         echo false
@@ -78,4 +109,3 @@ main() {
 }
 
 main "$@"
-

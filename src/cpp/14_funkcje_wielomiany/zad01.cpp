@@ -1,10 +1,31 @@
 /*
-Tytul: Obliczenie wartosci wielomianu w punkcie.
-Tresc: Otrzymujesz liste n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$ oraz liczbe naturalna x. Znajdz wartosc wielomianu w podanym punkcie.
-Dane wejsciowe: Lista liczb naturalnych i liczba naturalna.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla listy wspolczynnikow [3, 2, 1] i liczby x = 1, zostanie zwrocona liczba 6.
+ZAD-01 — Wartość wielomianu w punkcie
+
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `wielomiany`, `Horner`
+
+### Treść
+
+Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę
+`x`, a następnie zwraca wartość wielomianu w punkcie `x`.
+
+### Wejście (argumenty funkcji)
+
+* `a` — lista współczynników `[a_n, ..., a_0]`
+* `x` — liczba naturalna (lub całkowita)
+
+### Wyjście (zwracana wartość)
+
+* jedna liczba (całkowita)
+
+### Przykład
+
+Dla `a = [3, 2, 1]` i `x = 1` funkcja zwraca:
+`6`
+
+### Uwagi
+
+* Najprościej użyć schematu Hornera.
 
 */
 #include <cassert>
@@ -18,8 +39,7 @@ int wartoscWielomianu(std::vector<int> &wielomian, int x) {
   int n = wielomian.size();
   int wynik = 0;
 
-  for (int i = 0; i < n; i++)
-    wynik += wielomian[i] * pow(x, n - i);
+  for (int i = 0; i < n; i++) wynik += wielomian[i] * pow(x, n - i);
 
   return wynik;
 }
@@ -32,9 +52,7 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
 }
-

@@ -1,11 +1,40 @@
 /*
-Tytul: Sprawdzanie czy macierz jest "magiczna".
-Tresc: Otrzymujesz macierz kwadratowa. Sprawdz, czy jest ona kwadratem magicznym.
-Podpowiedz: Kwadrat magiczny sklada sie z powtarzajacych sie dodatnich liczb naturalnych. Suma elementow w kazdym wierszu, w kazdej kolumnie oraz na kazdej przekatnej jest taka sama.
-Dane wejsciowe: Lista list liczb naturalnych.
-Dane wyjsciowe: Wartosc logiczna.
-Przyklad:
-Dla otrzymanej macierzy: [[6, 7, 2], [1, 5, 9], [8, 3, 4]], powinna zostac zwrocona wartosc logiczna: Prawda.
+ZAD-05 — Czy macierz jest magiczna?
+
+**Poziom:** ★★☆
+**Tagi:** `macierze`, `suma`, `warunki`
+
+### Treść
+
+Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami naturalnymi. Sprawdź, czy
+to **kwadrat magiczny**: suma każdego wiersza, każdej kolumny oraz obu
+przekątnych jest taka sama.
+
+### Wejście
+
+* 1. linia: `n`
+* następnie `n` wierszy po `n` liczb
+
+### Wyjście
+
+* `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+6 7 2
+1 5 9
+8 3 4
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 #include <cassert>
@@ -19,8 +48,7 @@ bool macierzKwadratowa(const std::vector<std::vector<int>> &macierz) {
   unsigned int n = macierz.size();
 
   for (unsigned int i = 0; i < n; i++) {
-    if (macierz[i].size() != n)
-      return false;
+    if (macierz[i].size() != n) return false;
   }
 
   return true;
@@ -50,8 +78,7 @@ std::vector<int> wiersze(const std::vector<std::vector<int>> &macierz) {
   for (auto wiersz : macierz) {
     int sumaWiersz = 0;
 
-    for (auto liczba : wiersz)
-      sumaWiersz += liczba;
+    for (auto liczba : wiersz) sumaWiersz += liczba;
 
     wynik.push_back(sumaWiersz);
   }
@@ -81,24 +108,20 @@ bool magicznyKwadrat(const std::vector<std::vector<int>> &macierz) {
   /**
    *
    */
-  if (!macierzKwadratowa(macierz))
-    return false;
+  if (!macierzKwadratowa(macierz)) return false;
 
   int n = macierz.size();
 
   std::pair<int, int> sumaPrzekatnych = przekatne(macierz);
 
-  if (sumaPrzekatnych.first != sumaPrzekatnych.second)
-    return false;
+  if (sumaPrzekatnych.first != sumaPrzekatnych.second) return false;
 
   for (auto sumaWiersz : wiersze(macierz)) {
-    if (sumaWiersz != sumaPrzekatnych.first)
-      return false;
+    if (sumaWiersz != sumaPrzekatnych.first) return false;
   }
 
   for (auto sumaKolumna : kolumny(macierz)) {
-    if (sumaKolumna != sumaPrzekatnych.first)
-      return false;
+    if (sumaKolumna != sumaPrzekatnych.first) return false;
   }
 
   return true;
@@ -119,4 +142,3 @@ int main() {
   test2();
   return 0;
 }
-

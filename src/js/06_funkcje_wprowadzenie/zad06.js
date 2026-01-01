@@ -1,15 +1,39 @@
 /*
-Tytul: Cyfry liczby
+ZAD-06 — Suma cyfr liczby (funkcja)
 
-Tresc: Napisz funkcje, ktora dla otrzymanej liczby obliczy sume jej cyfr.
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `pętle`, `modulo`
 
-Dane wejsciowe: liczba naturalna
+### Treść
 
-Dane wyjsciowe: liczba naturalna
+Napisz funkcję `suma_cyfr(n)`, która zwraca sumę cyfr liczby naturalnej `n`.
 
-Przyklad:
+### Wejście
 
-Dla pobranej liczby 13231, funkcja powinna zwrocic liczbe 10.
+Jeden argument: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Funkcja zwraca sumę cyfr.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(suma_cyfr(13231))
+```
+
+**Wyjście:**
+
+```
+10
+```
+
+### Uwagi
+
+* Dla `n = 0` suma cyfr to `0`.
+
 */
 
 // Funkcja zwracajaca sume cyfr liczby

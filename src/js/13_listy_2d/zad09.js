@@ -1,27 +1,45 @@
 /*
-Tytul: Klepsydra o najwiekszej sumie.
+ZAD-09 — Klepsydra o największej sumie
 
-Tresc: Otrzymasz liste list liczb naturalnych. Znajdz w macierzy klepsydre o najwiekszej sumie. Klepsydra sklada sie dokladnie z 7 elementow. Pierwsze trzy elementy sa kolejnymi elementami dowolnego wiersza macierzy. Czwarty element znajduje sie w tej samej kolumnie co drugi element i o jeden wiersz nizej. Ostatnie trzy elementy znajduja sie w tych samych kolumnach co trzy pierwsze i o dwa wiersze nizej.
+**Poziom:** ★★☆
+**Tagi:** `macierze`, `przeszukiwanie`
 
-Podpowiedz: Nastepujaca macierz:
+### Treść
 
-      1 2 3
-      4 5 6
-      7 8 9
+Wczytaj macierz `n×m` (n,m ≥ 3). Znajdź maksymalną sumę „klepsydry” (7 pól):
 
-ma tylko jedna klepsydre:
+```
+a b c
+  d
+e f g
+```
 
-      1 2 3
-        5
-      7 8 9
+### Wejście
 
-Dane wejsciowe: Lista list liczb naturalnych.
+* 1. linia: `n m`
+* następnie `n` wierszy po `m` liczb całkowitych
 
-Dane wyjsciowe: Liczba naturalna.
+### Wyjście
 
-Przyklad:
+* 1 linia: maksymalna suma klepsydry
 
-Dla otrzymanej macierzy: [[7, 4, 2, 0], [4, 8, 10, 8], [3, 6, 7, 6], [3, 9, 19, 14]], powinna zostac zwrocona liczba: 75.
+### Przykład
+
+**Wejście:**
+
+```
+4 4
+7 4 2 0
+4 8 10 8
+3 6 7 6
+3 9 19 14
+```
+
+**Wyjście:**
+
+```
+75
+```
 
 */
 

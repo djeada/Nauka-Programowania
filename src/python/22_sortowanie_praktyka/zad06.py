@@ -1,12 +1,39 @@
 """
-Tytul: Sortowanie listy binarnej.
-Tresc: Otrzymujesz liste liczb skladajacych sie tylko z zer i jedynek. Posortuj te liste.
-Dane wejsciowe: Lista liczb naturalnych.
-Dane wyjsciowe: Posortowana lista liczb naturalnych.
-Przyklad:
-Dla listy: [1, 0, 1, 0, 1, 1], powinna zostac zwrocona lista: [0, 0, 1, 1, 1, 1].
+ZAD-06 — Sortowanie listy binarnej (0/1)
+
+**Poziom:** ★★☆
+**Tagi:** `sort`, `counting`
+
+### Treść
+
+Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Posortuj ją rosnąco.
+
+### Wejście
+
+* 1 linia: liczba naturalna `N`
+* 2 linia: `N` liczb (0/1) oddzielonych spacjami
+
+### Wyjście
+
+* 1 linia: posortowana lista w formacie jak w przykładzie
+
+### Przykład
+
+**Wejście:**
+
+```
+6
+1 0 1 0 1 1
+```
+
+**Wyjście:**
+
+```
+[0, 0, 1, 1, 1, 1]
+```
 
 """
+
 
 # Zlozonosc czasowa O(n)
 # Zlozonosc pamieciowa O(1)

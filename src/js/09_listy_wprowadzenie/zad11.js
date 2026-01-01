@@ -1,15 +1,42 @@
 /*
-Tytul: Samochody jadace w przeciwnych kierunkach.
+ZAD-11 — Samochody jadące w przeciwnych kierunkach
 
-Tresc: Otrzymujesz liste zlozona wylacznie z liter 'A' i 'B', ktore odpowiadaja samochodom jadacym odpowiednio na wschod ('A') i zachod ('B'). Policz, ile razy samochody jadace w przeciwnych kierunkach mijaja sie.
+**Poziom:** ★★☆
+**Tagi:** `listy`, `zliczanie`, `string`
 
-Dane wejsciowe: Lista znakow odpowiadajacych samochodom jadacym na wschod ('A') i zachod ('B').
+### Treść
 
-Dane wyjsciowe: Liczba naturalna oznaczajaca liczbe mijajacych sie samochodow.
+Wczytaj `N` oraz napis długości `N` złożony z liter `A` i `B`:
 
-Przyklad:
+* `A` oznacza samochód jadący na wschód,
+* `B` oznacza samochód jadący na zachód.
 
-Dla otrzymanej listy ['A', 'B', 'A', 'B', 'B'] powinna zostac zwrocona liczba 5.
+Policz, ile par samochodów minie się, gdy uznamy, że para mija się wtedy, gdy `A` stoi **przed** `B` w ciągu.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* 2. linia: napis długości `N`, tylko `A` i `B` (bez spacji)
+
+### Wyjście
+
+Jedna liczba naturalna — liczba mijających się par.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+ABABB
+```
+
+**Wyjście:**
+
+```
+5
+```
+
 */
 
 // Funkcja liczaca ile razy samochody mijaja sie na drodze

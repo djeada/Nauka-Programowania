@@ -1,10 +1,38 @@
 /*
-Tytul: Sortowanie znakow w napisie.
-Tresc: Otrzymujesz napis. Posortuj alfabetycznie jego znaki.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Napis.
-Przyklad:
-Dla napisu "Ala ma kota" powinno zostac zwrocone " Aaaaklmot".
+ZAD-01 — Sortowanie znaków w napisie
+
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `string`
+
+### Treść
+
+Otrzymujesz napis. Posortuj alfabetycznie wszystkie jego znaki i wypisz wynikowy napis.
+
+### Wejście
+
+* 1 linia: napis `s`
+
+### Wyjście
+
+* 1 linia: napis `s` po posortowaniu znaków rosnąco (porównanie znaków jak w Pythonie / Unicode)
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+ Aaaaklmot
+```
+
+### Uwagi o formatowaniu
+
+* Spacje też są znakami i biorą udział w sortowaniu (dlatego w przykładzie wyjście zaczyna się od spacji).
 
 */
 import java.util.*;

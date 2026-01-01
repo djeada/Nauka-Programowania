@@ -1,15 +1,27 @@
 /*
-Tytul: Mnozenie wielomianow.
+ZAD-04 — Mnożenie wielomianów
 
-Tresc: Otrzymujesz dwie listy n wspolczynnikow wielomianu w postaci $a_nx^n + a_{n-1}x^{n-1} + ... + a_0$. Oblicz wspolczynniki wielomianu bedacego iloczynem otrzymanych wielomianow.
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `wielomiany`, `konwolucja`
 
-Dane wejsciowe: Dwie listy liczb naturalnych.
+### Treść
 
-Dane wyjsciowe: Lista liczb naturalnych.
+Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` i `b` i zwraca listę współczynników wielomianu będącego ich iloczynem.
 
-Przyklad:
+### Wejście (argumenty funkcji)
 
-Dla otrzymanych dwoch list: [5, 0, 10, 6] oraz [1, 2, 4], zostanie zwrocona lista: [5, 10, 30, 26, 52, 24].
+* `a` — lista `[a_n, ..., a_0]`
+* `b` — lista `[b_m, ..., b_0]`
+
+### Wyjście (zwracana wartość)
+
+* lista współczynników wielomianu `a * b` (długość `len(a)+len(b)-1`)
+
+### Przykład
+
+Dla `a = [5, 0, 10, 6]` oraz `b = [1, 2, 4]` funkcja zwraca:
+`[5, 10, 30, 26, 52, 24]`
+
 */
 
 function mnozenieWielomianow(wielomian1, wielomian2) {

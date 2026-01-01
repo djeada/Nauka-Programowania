@@ -1,8 +1,34 @@
 /*
-Tytul: Wczytaj i wypisz tresc pliku.
-Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do pliku tekstowego. Wczytaj plik i wypisz jego tresc.
-Dane wejsciowe: Napis reprezentujacy sciezke do pliku.
-Dane wyjsciowe: Napis zawierajacy tresc pliku.
+ZAD-04 — Wczytaj i wypisz treść pliku
+
+**Poziom:** ★☆☆
+**Tagi:** `files`, `read`, `encoding`
+
+### Treść
+
+Otrzymujesz ścieżkę do pliku tekstowego. Wczytaj zawartość pliku i wypisz ją.
+
+### Wejście
+
+* 1 linia: `file_path`
+
+### Wyjście
+
+* treść pliku (dokładnie taka jak w pliku)
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\wiadomość.txt
+```
+
+**Wyjście:**
+
+```
+Witaj! To jest przykładowa treść pliku tekstowego.
+```
 
 */
 #include <experimental/filesystem>
@@ -33,7 +59,6 @@ void wypiszPlik(const std::string &sciezka) {
 }
 
 int main() {
-
   const std::string sciezka = "test.txt";
 
   std::ofstream ofs(sciezka);
@@ -46,4 +71,3 @@ int main() {
 
   return 0;
 }
-

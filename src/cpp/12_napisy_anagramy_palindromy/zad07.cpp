@@ -1,10 +1,12 @@
 /*
 Tytul: Minimalna ilosc usunietych znakow, aby uzyskac anagramy.
-Tresc: Napisz program, ktory dla dwoch slow zwroci minimalna ilosc znakow, ktore trzeba usunac, aby uzyskac anagramy. Jesli slowa sa roznej dlugosci, zwroc -1.
+Tresc: Napisz program, ktory dla dwoch slow zwroci minimalna ilosc znakow, ktore
+trzeba usunac, aby uzyskac anagramy. Jesli slowa sa roznej dlugosci, zwroc -1.
 Dane wejsciowe: Dwa napisy.
 Dane wyjsciowe: Liczba naturalna.
 Przyklad:
-Dla otrzymanych napisow: “grazyna” oraz “razynax”, powinna zostac zwrocona liczba: 2.
+Dla otrzymanych napisow: “grazyna” oraz “razynax”, powinna zostac zwrocona
+liczba: 2.
 
 */
 #include <algorithm>
@@ -13,19 +15,15 @@ Dla otrzymanych napisow: “grazyna” oraz “razynax”, powinna zostac zwroco
 #include <unordered_map>
 
 int liczbaZnakow(const std::string &slowoA, const std::string &slowoB) {
-
   std::vector<int> pom(256, 0);
 
-  for (auto znak : slowoA)
-    pom[znak - 'a']++;
+  for (auto znak : slowoA) pom[znak - 'a']++;
 
-  for (auto znak : slowoB)
-    pom[znak - 'a']--;
+  for (auto znak : slowoB) pom[znak - 'a']--;
 
   long wynik = 0;
 
-  for (auto liczba : pom)
-    wynik += abs(liczba);
+  for (auto liczba : pom) wynik += abs(liczba);
 
   return wynik;
 }
@@ -52,11 +50,9 @@ void test3() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
 
   return 0;
 }
-

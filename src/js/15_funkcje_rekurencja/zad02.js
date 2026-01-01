@@ -1,16 +1,39 @@
 /*
+ZAD-02 — Iloczyn wielomianu przez skalar
 
-Tytul: Suma liczb naturalnych mniejszych od N.
+**Poziom:** ★☆☆
+**Tagi:** `wielomiany`, `listy`, `I/O`
 
-Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz sume liczb naturalnych mniejszych od N.
+### Treść
 
-Dane wejsciowe: Liczba naturalna N.
+Wczytaj współczynniki wielomianu oraz liczbę `k`. Wypisz współczynniki wielomianu powstałego przez pomnożenie każdego współczynnika przez `k`.
 
-Dane wyjsciowe: Liczba naturalna.
+### Wejście
 
-Przyklad:
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb całkowitych: `a_n ... a_0`
+* 3. linia: `k` — liczba całkowita (skalar)
 
-Dla N = 10, powinna zostac zwrocona liczba: 55.
+### Wyjście
+
+Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielonych spacją.
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+4 -3 2
+-2
+```
+
+**Wyjście:**
+
+```
+-8 6 -4
+```
+
 */
 
 function sumaLiczbNaturalnych(n) {

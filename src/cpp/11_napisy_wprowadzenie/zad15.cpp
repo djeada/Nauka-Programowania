@@ -1,10 +1,34 @@
 /*
-Tytul: Slowa ze zdania jako osobne elementy listy.
-Tresc: Otrzymujesz napis reprezentujacy zdanie. Zwroc liste slow zdania. Znaki interpunkcyjne nie sa liczone jako slowa.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Lista napisow.
-Przyklad:
-Dla otrzymanego napisu: “Ala ma kota”, powinna zostac zwrocona lista: [“Ala”, “ma”, “kota”].
+ZAD-15 — Słowa jako lista
+
+**Poziom:** ★☆☆
+**Tagi:** `split`, `list`
+
+### Treść
+
+Wczytaj zdanie i wypisz listę słów w formacie `["Ala", "ma", "kota"]`.
+
+### Wejście
+
+* 1. linia: zdanie
+
+### Wyjście
+
+* 1. linia: lista słów (jak w przykładzie)
+
+### Przykład
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+["Ala", "ma", "kota"]
+```
 
 */
 #include <algorithm>
@@ -31,16 +55,14 @@ std::vector<std::string> slowaV1(std::string &napis) {
     if (konc != pocz) {
       auto slowo = napis.substr(pocz, konc - pocz);
       wyczysc(slowo);
-      if (!slowo.empty())
-        wynik.push_back(slowo);
+      if (!slowo.empty()) wynik.push_back(slowo);
     }
     pocz = konc + 1;
   }
   if (konc != pocz) {
     auto slowo = napis.substr(pocz);
     wyczysc(slowo);
-    if (!slowo.empty())
-      wynik.push_back(slowo);
+    if (!slowo.empty()) wynik.push_back(slowo);
   }
 
   return wynik;
@@ -64,4 +86,3 @@ int main() {
   test2();
   return 0;
 }
-

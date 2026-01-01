@@ -1,20 +1,58 @@
 /*
-Tytul: Sprawdz poprawnosc adresu e-mail.
-Tresc: Masz napis reprezentujacy adres e-mail. Sprawdz, czy jest on poprawny.
-Pamietaj, ze kazdy adres e-mail sklada sie z identyfikatora uzytkownika, znaku @ oraz nazwy domenowej.
-Identyfikator uzytkownika sklada sie tylko z:
-* Malych (a-z) i wielkich (A-Z) liter.
-* Cyfr (0-9).
-* Znakow ! # $ % & ' * + — / = ? ^ _ ` { | } ~.
-* Kropek . pod warunkiem, ze nie jest pierwszym lub ostatnim znakiem i nie wystepuje dwukrotnie po sobie.
-Nazwa domenowa sklada sie tylko z:
-* Malych (a-z) i wielkich (A-Z) liter.
-* Cyfr (0-9).
-* Kropek . oraz myslnika — pod warunkiem, ze nie sa pierwszym lub ostatnim znakiem i nie wystepuja dwukrotnie po sobie.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Wartosc logiczna.
-Przyklad:
-Dla napisu: “adam@gmail.com”, powinna zostac zwrocona wartosc logiczna: Prawda.
+ZAD-01 — Sprawdź poprawność adresu e-mail
+
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `walidacja`
+
+### Treść
+
+Otrzymujesz napis reprezentujący adres e-mail. Sprawdź, czy jest poprawny zgodnie z regułami:
+
+* Adres e-mail składa się z identyfikatora użytkownika, znaku `@` oraz nazwy domeny.
+* **Identyfikator użytkownika** może zawierać wyłącznie:
+
+  * litery `a–z`, `A–Z`,
+  * cyfry `0–9`,
+  * znaki specjalne: `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`,
+  * kropki `.`, ale:
+
+    * nie może być pierwszym ani ostatnim znakiem,
+    * nie może wystąpić dwukrotnie po sobie.
+* **Nazwa domeny** może zawierać wyłącznie:
+
+  * litery `a–z`, `A–Z`,
+  * cyfry `0–9`,
+  * kropki `.` oraz myślniki `-`, ale:
+
+    * nie mogą być pierwszym ani ostatnim znakiem,
+    * nie mogą wystąpić dwukrotnie po sobie.
+
+### Wejście
+
+Jedna linia:
+
+* `email`
+
+### Wyjście
+
+Jedna linia:
+
+* `Prawda` — jeśli e-mail jest poprawny
+* `Fałsz` — w przeciwnym razie
+
+### Przykład
+
+**Wejście:**
+
+```
+adam@gmail.com
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
 
 */
 import java.util.*;

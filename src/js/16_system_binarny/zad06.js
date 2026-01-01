@@ -1,16 +1,52 @@
 /*
+ZAD-06 — Konwersja między dowolnymi systemami (2..36)
 
-Tytul:  Konwersja miedzy dowolnymi systemami liczbowymi.
+**Poziom:** ★★☆
+**Tagi:** `konwersja`, `base`, `string`
 
-Tresc: Otrzymujesz liczbe naturalna, podstawe systemu liczbowego, w ktorym zapisana jest ta liczba, oraz podstawe systemu, na ktory ma zostac dokonana konwersja. Zwroc reprezentacje otrzymanej liczby w nowym systemie.
+### Treść
 
-Dane wejsciowe: Trzy liczby naturalne.
+Wczytaj:
 
-Dane wyjsciowe: Liczba naturalna.
+1. liczbę `X` zapisaną w systemie o podstawie `p`
+2. podstawę `p` (2..36)
+3. podstawę docelową `q` (2..36)
 
-Przyklad:
+i wypisz reprezentację `X` w systemie o podstawie `q`.
 
-Dla otrzymanych liczb: 4301, 10 i 4 powinna zostac zwrocona liczba: 1003031.
+### Wejście
+
+Trzy linie:
+
+1. `X` (zapis liczby; dla podstaw >10 może zawierać litery `A-Z`)
+2. `p` (2..36)
+3. `q` (2..36)
+
+### Wyjście
+
+Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`).
+
+### Przykład
+
+**Wejście:**
+
+```
+4301
+10
+4
+```
+
+**Wyjście:**
+
+```
+1003031
+```
+
+### Uwagi o formacie
+
+* `X` może być duże — traktuj jako napis, a nie typ int „na wejściu”.
+* Dla wartości 10..35 stosuj `A..Z`.
+
 */
 function konwersjaSystemow(liczba, podstawa1, podstawa2) {
   let dziesietna = 0;

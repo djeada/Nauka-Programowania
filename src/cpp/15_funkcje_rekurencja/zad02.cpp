@@ -1,10 +1,40 @@
 /*
-Tytul: Suma liczb naturalnych mniejszych od N.
-Tresc: Otrzymujesz liczbe N. Przy uzyciu rekurencji oblicz sume liczb naturalnych mniejszych od N.
-Dane wejsciowe: Liczba naturalna N.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla N = 10, powinna zostac zwrocona liczba: 55.
+ZAD-02 — Iloczyn wielomianu przez skalar
+
+**Poziom:** ★☆☆
+**Tagi:** `wielomiany`, `listy`, `I/O`
+
+### Treść
+
+Wczytaj współczynniki wielomianu oraz liczbę `k`. Wypisz współczynniki
+wielomianu powstałego przez pomnożenie każdego współczynnika przez `k`.
+
+### Wejście
+
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb całkowitych: `a_n ... a_0`
+* 3. linia: `k` — liczba całkowita (skalar)
+
+### Wyjście
+
+Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielonych
+spacją.
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+4 -3 2
+-2
+```
+
+**Wyjście:**
+
+```
+-8 6 -4
+```
 
 */
 #include <cassert>
@@ -14,8 +44,7 @@ int sumaV1(int N) {
    * Funkcja zwraca wielomian bedacy wynikiem mnozenia otrzymanego wielomianu
    * przez liczbe x.
    */
-  if (N <= 0)
-    return 0;
+  if (N <= 0) return 0;
 
   return N + sumaV1(N - 1);
 }
@@ -28,9 +57,7 @@ void test1() {
 }
 
 int main() {
-
   test1();
 
   return 0;
 }
-

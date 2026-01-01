@@ -1,16 +1,37 @@
 /*
+ZAD-07 — Podziel tekst względem znaków interpunkcyjnych
 
-Tytul: Podziel tekst wzgledem znakow interpunkcyjnych.
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
 
-Tresc: Dostajesz napis. Podziel go wzgledem znakow interpunkcyjnych i zapisz w liscie. Usun spacje wystepujace na poczatku lub koncu otrzymanych napisow.
+### Treść
 
-Dane wejsciowe: Napis.
+Otrzymujesz napis (jedno lub kilka zdań). Podziel tekst na fragmenty w miejscach występowania znaków interpunkcyjnych (np. `, . ! ? ; :`). Usuń spacje na początku i końcu każdego fragmentu.
 
-Dane wyjsciowe: Lista napisow.
+### Wejście
 
-Przyklad:
+Jedna linia:
 
-Dla napisu: “Ani nie poszedl do kina, ani nie wybral sie do teatru.”, powinna zostac zwrocona lista: [“Ani nie poszedl do kina”, “ani nie wybral sie do teatru”].
+* `tekst`
+
+### Wyjście
+
+Każdy fragment w osobnej linii.
+
+### Przykład
+
+**Wejście:**
+
+```
+Ani nie poszedł do kina, ani nie wybrał się do teatru.
+```
+
+**Wyjście:**
+
+```
+Ani nie poszedł do kina
+ani nie wybrał się do teatru
+```
 
 */
 

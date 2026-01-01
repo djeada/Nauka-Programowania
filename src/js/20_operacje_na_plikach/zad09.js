@@ -1,11 +1,32 @@
 /*
-Tytul: Usun pliki spelniajace warunek.
+ZAD-09 — Usuń pliki większe niż 10 kB (rekurencyjnie)
 
-Tresc zadania: Otrzymujesz napis reprezentujacy sciezke do folderu. Usun wszystkie pliki o rozmiarze wiekszym niz 10 kB znajdujace sie w podanym folderze i jego podfolderach.
+**Poziom:** ★★☆
+**Tagi:** `files`, `delete`, `size`, `recursive`
 
-Dane wejsciowe: Napis reprezentujacy sciezke do folderu.
+### Treść
 
-Dane wyjsciowe: Brak.
+Otrzymujesz ścieżkę do folderu. Usuń wszystkie pliki o rozmiarze **> 10240 bajtów** w tym folderze i jego podfolderach.
+
+### Wejście
+
+* 1 linia: `folder_path`
+
+### Wyjście
+
+Brak.
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Documents\DoUsunięcia
+```
+
+**Wyjście:**
+*(brak)*
+
 */
 const fs = require("fs").promises;
 const path = require("path");

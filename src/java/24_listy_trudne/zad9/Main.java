@@ -1,10 +1,38 @@
 /*
-Tytul: Najdluzszy naprzemienny podciag.
-Tresc: Masz dana liste liczb. Znajdz najdluzszy podciag naprzemienny w tej liscie. Ciag jest naprzemienny, jesli liczby w nim rosna i maleja na zmiane. Na przyklad [1, 3, 2, 4, 3, 5] jest naprzemienny.
-Dane wejsciowe: Lista n liczb calkowitych.
-Dane wyjsciowe: Lista liczb calkowitych reprezentujaca najdluzszy podciag naprzemienny w tej liscie.
-Przyklad:
-Dla listy liczb: [1, -2, 6, 4, -3, 2, -4, -3], powinna zostac zwrocona lista [1, -2, 6, -3, 2, -4].
+ZAD-09 — Najdłuższy naprzemienny podciąg
+
+**Poziom:** ★★★
+**Tagi:** `dp`, `subsequence`, `naprzemienny`
+
+### Treść
+
+Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienny, w którym różnice między kolejnymi elementami zmieniają znak (raz dodatnia, raz ujemna, itd.).
+
+### Wejście
+
+* 1 linia: lista liczb całkowitych `A`
+
+### Wyjście
+
+* 1 linia: lista liczb — najdłuższy naprzemienny podciąg
+
+### Przykład
+
+**Wejście:**
+
+```
+[1, -2, 6, 4, -3, 2, -4, -3]
+```
+
+**Wyjście:**
+
+```
+[1, -2, 6, -3, 2, -4]
+```
+
+### Uwagi
+
+* Jeśli istnieje kilka podciągów o tej samej maksymalnej długości — wybierz ten, który pojawia się „najwcześniej” (najmniejszy możliwy indeks startu), o ile sprawdzarka tego wymaga.
 
 */
 import java.util.*;

@@ -1,10 +1,40 @@
 /*
-Tytul: Roznica miedzy dwoma listami.
-Tresc: Dla otrzymanych dwoch list liczb calkowitych, znajdz elementy, ktore nie sa czescia wspolna obu list.
-Dane wejsciowe: Dwie listy liczb calkowitych.
-Dane wyjsciowe: Lista liczb calkowitych.
-Przyklad:
-Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: [9, 5, 1].
+ZAD-07 — Różnica między dwoma listami
+
+**Poziom:** ★☆☆
+**Tagi:** `list`, `set`
+
+### Treść
+
+Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **tylko
+w jednej** z list (różnica symetryczna).
+
+* Kolejność elementów w wyniku może być **dowolna**.
+* Jeśli wszystkie elementy są wspólne — wypisz `[]`.
+
+### Wejście
+
+* 1 linia: lista 1
+* 2 linia: lista 2
+
+### Wyjście
+
+* 1 linia: lista elementów niewspólnych
+
+### Przykład
+
+**Wejście:**
+
+```
+[9, 2, 5, 4]
+[4, 2, 1]
+```
+
+**Wyjście (jedna z poprawnych odpowiedzi):**
+
+```
+[9, 5, 1]
+```
 
 */
 #include <algorithm>
@@ -15,7 +45,6 @@ Dla otrzymanych list [9, 2, 5, 4] oraz [4, 2, 1] powinna zostac zwrocona lista: 
 // Zlozonosc obliczeniowa O(n^2)
 // Zlozonosc pamieciowa O(n)
 std::vector<int> roznicaV1(std::vector<int> &listaA, std::vector<int> &listaB) {
-
   std::vector<int> wynik;
 
   for (auto liczba : listaA) {
@@ -34,7 +63,6 @@ std::vector<int> roznicaV1(std::vector<int> &listaA, std::vector<int> &listaB) {
 // Zlozonosc obliczeniowa O(nlogn)
 // Zlozonosc pamieciowa O(n)
 std::vector<int> roznicaV2(std::vector<int> &listaA, std::vector<int> &listaB) {
-
   std::vector<int> wynik;
   sort(listaA.begin(), listaA.end());
   sort(listaB.begin(), listaB.end());
@@ -67,10 +95,8 @@ void test2() {
 }
 
 int main() {
-
   test1();
   test2();
 
   return 0;
 }
-

@@ -1,8 +1,35 @@
 /*
-Tytul: Skopiuj pliki.
-Tresc zadania: Otrzymujesz dwa napisy reprezentujace sciezki do folderow. Skopiuj wszystkie pliki PNG z pierwszego folderu do drugiego folderu.
-Dane wejsciowe: Dwa napisy reprezentujace sciezki do folderow.
-Dane wyjsciowe: Brak.
+ZAD-10 — Skopiuj pliki PNG do innego folderu (bez podfolderów)
+
+**Poziom:** ★☆☆
+**Tagi:** `files`, `copy`, `png`, `shutil`
+
+### Treść
+
+Otrzymujesz ścieżkę folderu źródłowego i docelowego. Skopiuj wszystkie pliki
+`.png` znajdujące się **bezpośrednio** w folderze źródłowym do folderu
+docelowego.
+
+### Wejście
+
+* 1 linia: `src_folder`
+* 2 linia: `dst_folder`
+
+### Wyjście
+
+Brak.
+
+### Przykład
+
+**Wejście:**
+
+```
+C:\Users\Username\Obrazy
+D:\Backup\Obrazy
+```
+
+**Wyjście:**
+*(brak)*
 
 */
 #include <cassert>
@@ -30,18 +57,15 @@ void skopiujPlik(const std::string &sciezka,
 }
 
 std::string znajdzRozszerzenie(std::string sciezka) {
-
   filesys::path obiekt(sciezka);
 
-  if (obiekt.has_extension())
-    return obiekt.extension().string();
+  if (obiekt.has_extension()) return obiekt.extension().string();
 
   return "";
 }
 
 void skopiujPliki(const std::string &sciezka,
                   const std::string &sciezkaDocelowa) {
-
   for (const auto plik : filesys::directory_iterator(sciezka)) {
     if (znajdzRozszerzenie(plik.path()) == ".png")
       skopiujPlik(plik.path(), sciezkaDocelowa);
@@ -49,7 +73,6 @@ void skopiujPliki(const std::string &sciezka,
 }
 
 void testSkopiujPliki() {
-
   // stworz foldery test1 i folder test2
   std::string sciezka1 = "test1";
   std::string sciezka2 = "test2";
@@ -81,9 +104,7 @@ void testSkopiujPliki() {
 }
 
 int main() {
-
   testSkopiujPliki();
 
   return 0;
 }
-

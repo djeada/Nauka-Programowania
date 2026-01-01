@@ -1,10 +1,45 @@
 /*
-Tytul: Zamien A na B.
-Tresc: Otrzymujesz dwie liczby naturalne. Oblicz, ile bitow nalezy odwrocic, aby zamienic liczbe A na liczbe B.
-Dane wejsciowe: Dwie liczby naturalne.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla otrzymanych liczb 34 i 73, powinna zostac zwrocona liczba 5.
+ZAD-07 — Zamiana sąsiadujących bitów
+
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `maski`, `swap bits`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Zamień miejscami każdą parę sąsiadujących bitów w jej zapisie binarnym:
+
+* bit 0 z bitem 1,
+* bit 2 z bitem 3,
+* bit 4 z bitem 5,
+* itd.
+
+Następnie wypisz wynik w systemie dziesiętnym.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: wynik po zamianie bitów.
+
+### Przykład
+
+**Wejście:**
+
+```
+9131
+```
+
+**Wyjście:**
+
+```
+4951
+```
+
+### Uwagi
+
+* Jeśli liczba ma nieparzystą liczbę bitów, najwyższy (samotny) bit pozostaje bez zmian.
 
 */
 public class Main {

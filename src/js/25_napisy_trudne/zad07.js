@@ -1,16 +1,38 @@
 /*
+ZAD-07 — Powtarzające się podnapisy
 
-Tytul: Powtarzajace sie podnapisy.
+**Poziom:** ★★★
+**Tagi:** `string`, `substrings`, `count`
 
-Tresc: Dostajesz napis. Znajdz wszystkie powtarzajace sie podnapisy w tym napisie.
+### Treść
 
-Dane wejsciowe: Napis.
+Otrzymujesz napis. Znajdź wszystkie **podnapisy**, które występują w nim **więcej niż jeden raz**.
 
-Dane wyjsciowe: Lista napisow.
+### Wejście
 
-Przyklad:
+* 1 linia: napis `S`
 
-Dla napisu "pythonpython" powinna zostac zwrocona lista zawierajaca napis "python".
+### Wyjście
+
+* 1 linia: lista napisów — wszystkie powtarzające się podnapisy
+
+### Przykład
+
+**Wejście:**
+
+```
+pythonpython
+```
+
+**Wyjście:**
+
+```
+['python']
+```
+
+### Uwagi
+
+* Jeśli sprawdzarka wymaga konkretnej kolejności (np. rosnąco po długości/alfabetycznie) — musi to być opisane. W przeciwnym razie dopuszczalna może być dowolna kolejność.
 
 */
 

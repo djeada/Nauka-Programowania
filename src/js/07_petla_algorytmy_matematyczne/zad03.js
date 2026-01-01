@@ -1,23 +1,76 @@
 /*
-Tytul: Mnozenie i dzielenie.
+ZAD-03A — Mnożenie przy pomocy dodawania
 
-Tresc: Napisz funkcje, ktora dla otrzymanych dwoch liczb naturalnych a i b, przy pomocy dodawania lub odejmowania oraz petli, obliczy:
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `dodawanie`, `mnożenie`
 
-a) iloczyn tych liczb
+### Treść
 
-b) iloraz liczby a przez liczbe b
+Napisz funkcję `iloczyn(a, b)`, która oblicza `a * b` używając **tylko dodawania** i pętli.
 
-Dane wejsciowe: dwie liczby naturalne
+### Wejście
 
-Dane wyjsciowe: liczba naturalna
+Dwa argumenty funkcji:
 
-Przyklad:
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna, `b ≥ 0`)
 
-Dla pobranych liczb 3 i 2, funkcja powinna zwrocic liczbe:
+### Wyjście
 
-a) 6;
+Funkcja zwraca jedną liczbę naturalną — `a * b`.
 
-b) 2.
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(iloczyn(3, 2))
+```
+
+**Wyjście:**
+
+```
+6
+```
+
+ZAD-03B — Dzielenie całkowite przy pomocy odejmowania
+
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `odejmowanie`, `dzielenie`
+
+### Treść
+
+Napisz funkcję `iloraz(a, b)`, która oblicza `a // b` używając **tylko odejmowania** i pętli.
+
+### Wejście
+
+Dwa argumenty funkcji:
+
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna)
+
+### Ograniczenia / gwarancje
+
+* `b > 0`
+
+### Wyjście
+
+Funkcja zwraca jedną liczbę naturalną — `a // b`.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(iloraz(3, 2))
+```
+
+**Wyjście:**
+
+```
+1
+```
+
 */
 
 // Funkcja zwracajaca iloczyn dwoch liczb

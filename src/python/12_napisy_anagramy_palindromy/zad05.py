@@ -7,6 +7,7 @@ Przyklad:
 Dla otrzymanych napisow: “Sroga kara.” oraz “arak”, powinna zostac zwrocona lista: [“kara”].
 
 """
+
 import string
 
 

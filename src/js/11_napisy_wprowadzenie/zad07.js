@@ -1,15 +1,35 @@
 /*
-Tytul: Zamien znaki na kody ASCII.
+ZAD-07 — Zamień znaki na kody ASCII
 
-Tresc: Otrzymasz napis. Zmien wszystkie znaki w napisie na odpowiadajace im numery w tablicy ASCII. Zastap otrzymany napis napisem skladajacym sie z otrzymanych numerow, oddzielonych przecinkami.
+**Poziom:** ★☆☆
+**Tagi:** `ASCII`, `ord`, `string`
 
-Dane wejsciowe: Napis.
+### Treść
 
-Dane wyjsciowe: Napis.
+Wczytaj napis i wypisz kody ASCII wszystkich jego znaków, oddzielone przecinkiem i spacją `", "`.
 
-Przyklad:
+### Wejście
 
-Dla otrzymanego napisu: "Robot", powinien zostac zwrocony napis: "82, 111, 98, 111, 116".
+* 1. linia: napis
+
+### Wyjście
+
+* 1. linia: kody ASCII oddzielone `, `
+
+### Przykład
+
+**Wejście:**
+
+```
+Robot
+```
+
+**Wyjście:**
+
+```
+82, 111, 98, 111, 116
+```
+
 */
 
 function zamienNaKodyASCII(napis) {

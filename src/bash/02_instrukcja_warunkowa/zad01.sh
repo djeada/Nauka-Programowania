@@ -1,9 +1,45 @@
-# Tytul: Porownanie ze stala.
-# Tresc: Pobierz od uzytkownika liczbe naturalna. Jesli ta liczba jest wieksza niz 5, wypisz ja.
-# Dane wejsciowe: Liczba naturalna.
-# Dane wyjsciowe: Liczba naturalna lub brak danych wyjsciowych.
-# Przyklad:
-# Dla pobranej liczby: 10, powinna zostac wypisana liczba: 10.
+# ZAD-01 — Liczba większa od 5
+#
+# **Poziom:** ★☆☆
+# **Tagi:** `if`, `porównania`, `I/O`
+#
+# ### Treść
+#
+# Wczytaj jedną liczbę naturalną `n`.
+# Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
+#
+# ### Wejście
+#
+# * 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+#
+# ### Wyjście
+#
+# * Jeśli `n > 5`: jedna linia z liczbą `n`
+# * Jeśli `n ≤ 5`: brak wyjścia
+#
+# ### Przykład 1
+#
+# **Wejście:**
+#
+# ```
+# 10
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 10
+# ```
+#
+# ### Przykład 2
+#
+# **Wejście:**
+#
+# ```
+# 3
+# ```
+#
+# **Wyjście:** *(brak)*
 
 main() {
 
@@ -16,4 +52,3 @@ main() {
 }
 
 main "$@"
-

@@ -1,17 +1,60 @@
 /*
-Tytul: Poprawnosc daty.	
+ZAD-06 — Sprawdzanie poprawności daty
 
-Tresc: Napisz program, ktory dla pobranych trzech liczb naturalnych sprawdzi, czy reprezentuja one poprawna date. Pierwsza liczba jest dniem, druga miesiacem, trzecia rokiem.
+**Poziom:** ★★☆
+**Tagi:** `walidacja`, `przestępny`, `if`
 
-Podpowiedz: Wszystkie liczby nie moga byc mniejsze od 1. Druga liczba nie moze byc wieksza niz 12 itd.
+### Treść
 
-Dane wejsciowe: Trzy liczby naturalne.
+Wczytaj `d, m, y` i sprawdź, czy jest to poprawna data w kalendarzu gregoriańskim.
 
-Dane wyjsciowe: Komunikat o poprawnosci lub niepoprawnosci daty.
+Wypisz:
 
-Przyklad:
+* `Data jest poprawna.`
+* `Data jest niepoprawna.`
 
-Dla pobranych liczb 2, 1 i 4, program powinien wypisac informacje o poprawnosci daty.
+### Wejście
+
+3 liczby całkowite (w osobnych liniach):
+
+1. `d` — dzień
+2. `m` — miesiąc
+3. `y` — rok
+
+### Wyjście
+
+Jedna linia — komunikat.
+
+### Ograniczenia / gwarancje
+
+* `y ≥ 0` (lub `y ≥ 1`, jeśli tak chcesz przyjąć — ważne, by było spójnie w całym zbiorze)
+
+### Reguły walidacji
+
+1. `m` musi być w zakresie 1–12
+2. Ustal liczbę dni w miesiącu:
+
+   * 31: 1,3,5,7,8,10,12
+   * 30: 4,6,9,11
+   * luty: 28 lub 29 (zależnie od przestępności roku)
+3. `d` musi być w zakresie 1–dni_w_miesiącu
+
+### Przykład
+
+**Wejście:**
+
+```
+31
+4
+2021
+```
+
+**Wyjście:**
+
+```
+Data jest niepoprawna.
+```
+
 */
 
 // Pobieranie danych od uzytkownika

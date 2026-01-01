@@ -1,21 +1,46 @@
 /*
+ZAD-11 — Gra w statki (projekt konsolowy)
 
-Tytul: Gra w statki
+**Poziom:** ★★★
+**Tagi:** `macierze`, `losowanie`, `gra`, `pętle`
 
-Tresc: Napisz program implementujacy gre w statki.
+### Treść
 
-Stworz macierz o wymiarach 10x10. Wylosuj polozenia statkow i zapisz je w macierzy. Do dyspozycji masz nastepujace statki:
+Zaimplementuj grę w statki na planszy 10×10:
 
-* 1 statek o dlugosci 4
-* 2 statki o dlugosci 3
-* 3 statki o dlugosci 2
-* 5 statkow o dlugosci 1
+1. Plansza startowa: 10×10 wypełniona `.`
+2. Losowo rozmieść statki (poziomo/pionowo), bez stykania bokami ani rogami:
 
-Kazde pole moze zawierac tylko jeden statek.
+   * 1× długość 4
+   * 2× długość 3
+   * 3× długość 2
+   * 5× długość 1
+3. Pętla gry:
 
-Wypisz na standardowe wyjscie plansze zlozona z 10x10 kropek i popros uzytkownika o podanie wspolrzednych. Jesli na podanych przez uzytkownika wspolrzednych znajduje sie statek, zamien kropke na litere o na planszy. W przeciwnym razie, zamien kropke na litere x.
+   * wypisz planszę,
+   * wczytaj `r c` (0..9),
+   * jeśli trafienie: wstaw `o`, wypisz komunikat o trafieniu,
+   * jeśli pudło: wstaw `x`, zwiększ licznik pudeł,
+   * gra kończy się, gdy:
 
-Powtarzaj krok 2, az wszystkie pozycje statkow zostana odkryte przez uzytkownika lub az na planszy pojawi sie 10 liter x. W obu przypadkach zakoncz gre i poinformuj uzytkownika o wyniku.
+     * wszystkie pola statków trafione (wygrana), albo
+     * 10 pudeł (przegrana).
+   * po każdym ruchu wypisz zaktualizowaną planszę.
+
+### Wejście
+
+Wielokrotnie:
+
+* `r c` (w jednej linii)
+
+### Wyjście
+
+* plansza i komunikaty w trakcie,
+* na końcu komunikat o wygranej/przegranej.
+
+### Uwagi praktyczne
+
+* To zadanie jest **większym projektem** — format wyjścia bywa sprawdzany „ręcznie” (nie zawsze automatycznie), więc trzymaj się spójnego stylu wypisywania planszy.
 
 */
 

@@ -1,10 +1,38 @@
 /*
-Tytul: Czy liczba jest palindromem?
-Tresc: Otrzymujesz dziesietna reprezentacje liczby naturalnej. Sprawdz, czy reprezentacja binarna otrzymanej liczby jest palindromem.
-Dane wejsciowe: Liczba naturalna.
-Dane wyjsciowe: Wartosc logiczna.
-Przyklad:
-Dla otrzymanej liczby 26, powinna zostac zwrocona wartosc logiczna: Prawda.
+ZAD-08 — Najbliższa potęga dwójki (>= n)
+
+**Poziom:** ★☆☆
+**Tagi:** `potęgi 2`, `bitwise`, `pętle`
+
+### Treść
+
+Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która jest **większa lub równa** `n`.
+
+### Wejście
+
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
+
+### Przykład
+
+**Wejście:**
+
+```
+111
+```
+
+**Wyjście:**
+
+```
+128
+```
+
+### Uwagi
+
+* Dla `n = 0` przyjmij wynik `1`.
 
 */
 public class Main {

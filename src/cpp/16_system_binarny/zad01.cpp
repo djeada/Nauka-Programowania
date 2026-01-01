@@ -1,13 +1,71 @@
 /*
-Tytul: Konwersja pomiedzy systemami binarnym i dziesietnym.
-Tresc:
-a) Otrzymujesz reprezentacje dziesietna liczby naturalnej, zwroc jej reprezentacje binarna.
-b) Otrzymujesz reprezentacje binarna liczby naturalnej, zwroc jej reprezentacje dziesietna.
-Dane wejsciowe: Liczba naturalna w obu podpunktach.
-Dane wyjsciowe: Liczba naturalna w obu podpunktach.
-Przyklad:
-a) Dla otrzymanej liczby: 3, powinna zostac zwrocona liczba: 11.
-b) Dla otrzymanej liczby: 101, powinna zostac zwrocona liczba: 5.
+ZAD-01A — Dziesiętny → binarny
+
+**Poziom:** ★☆☆
+**Tagi:** `konwersja`, `binarne`, `pętle`
+
+### Treść
+
+Wczytaj liczbę naturalną w systemie dziesiętnym i wypisz jej reprezentację
+binarną.
+
+### Wejście
+
+* 1. linia: `n` (liczba naturalna)
+
+### Wyjście
+
+Jedna linia: zapis binarny `n`.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+11
+```
+
+### Uwagi o formacie
+
+* Dla `n = 0` wypisz `0`.
+
+ZAD-01B — Binarny → dziesiętny
+
+**Poziom:** ★☆☆
+**Tagi:** `konwersja`, `string`, `binarne`
+
+### Treść
+
+Wczytaj liczbę naturalną w systemie binarnym (ciąg `0/1`) i wypisz jej wartość w
+systemie dziesiętnym.
+
+### Wejście
+
+* 1. linia: `b` (ciąg znaków `0` i `1`)
+
+### Wyjście
+
+Jedna linia: liczba w systemie dziesiętnym.
+
+### Przykład
+
+**Wejście:**
+
+```
+101
+```
+
+**Wyjście:**
+
+```
+5
+```
 
 */
 #include <cassert>
@@ -22,8 +80,7 @@ int naDziesietny(std::string liczba) {
 
   int dec = 0;
   int n = liczba.size();
-  for (int i = 0; i < n; i++)
-    dec += pow(2, n - i - 1) * naLiczbe(liczba[i]);
+  for (int i = 0; i < n; i++) dec += pow(2, n - i - 1) * naLiczbe(liczba[i]);
 
   return dec;
 }
@@ -71,7 +128,6 @@ void test4() {
 }
 
 int main() {
-
   test1();
   test2();
   test3();
@@ -79,4 +135,3 @@ int main() {
 
   return 0;
 }
-

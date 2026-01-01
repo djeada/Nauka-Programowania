@@ -1,15 +1,56 @@
 /*
-Tytul: Porownanie ze zmienna.
+ZAD-02 — Porównanie dwóch liczb
 
-Tresc: Pobierz od uzytkownika dwie liczby naturalne i sprawdz, czy sa one identyczne. Wypisz odpowiedni komunikat.
+**Poziom:** ★☆☆
+**Tagi:** `if-else`, `równość`, `string`
 
-Dane wejsciowe: Dwie liczby naturalne.
+### Treść
 
-Dane wyjsciowe: Komunikat.
+Wczytaj dwie liczby naturalne `a` i `b`.
+Jeśli są równe, wypisz:
+`Liczby są identyczne.`
+W przeciwnym razie wypisz:
+`Liczby są różne.`
 
-Przyklad:
+### Wejście
 
-Dla pobranych liczb: 7 i 4, powinien zostac wypisany komunikat, ze liczby sa rozne.
+* 1 linia: `a` (całkowita, `a ≥ 0`)
+* 2 linia: `b` (całkowita, `b ≥ 0`)
+
+### Wyjście
+
+Jedna linia — dokładnie jeden z komunikatów.
+
+### Przykład 1
+
+**Wejście:**
+
+```
+7
+4
+```
+
+**Wyjście:**
+
+```
+Liczby są różne.
+```
+
+### Przykład 2
+
+**Wejście:**
+
+```
+5
+5
+```
+
+**Wyjście:**
+
+```
+Liczby są identyczne.
+```
+
 */
 
 // Pobieranie danych od uzytkownika

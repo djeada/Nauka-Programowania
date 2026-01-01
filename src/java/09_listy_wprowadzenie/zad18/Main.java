@@ -1,10 +1,40 @@
 /*
-Tytul: Czy punkty moga stanowic wierzcholki trojkata?
-Tresc: Otrzymujesz dokladnie 6 liczb calkowitych, ktore odpowiadaja wspolrzednym punktow A, B, C w kolejnosci: xA, yA, xB, yB, xC, yC. Sprawdz, czy punkty A, B, C moga stanowic wierzcholki trojkata.
-Dane wejsciowe: Lista liczb calkowitych reprezentujaca wspolrzedne punktow A, B, C.
-Dane wyjsciowe: Wartosc logiczna okreslajaca, czy punkty A, B, C moga stanowic wierzcholki trojkata.
-Przyklad:
-Dla otrzymanej listy [-3, -2, -3, 1, -3, 0], powinna zostac zwrocona wartosc logiczna: Falsz.
+ZAD-18 — Indeks najmniejszego elementu w przesuniętej liście
+
+**Poziom:** ★★☆
+**Tagi:** `binarne`, `rotacja`, `minimum`
+
+### Treść
+
+Wczytaj listę liczb całkowitych, która była posortowana rosnąco i została przesunięta w prawo o nieznaną liczbę miejsc. Znajdź indeks najmniejszego elementu.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+7
+8
+-1
+4
+5
+```
+
+**Wyjście:**
+
+```
+2
+```
 
 */
 import java.util.*;
