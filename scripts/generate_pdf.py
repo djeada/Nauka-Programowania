@@ -35,11 +35,18 @@ def create_title_page():
     current_year = datetime.now().year
     return f"""
     <div class="title-page">
-        <h1 class="main-title">Nauka Programowania</h1>
-        <h2 class="subtitle">Zbiór Zadań</h2>
-        <p class="description">Kompletny zbiór zadań programistycznych<br/>
-        od podstaw do zaawansowanych technik</p>
-        <p class="year">{current_year}</p>
+        <div class="title-page-inner">
+            <p class="title-kicker">Kurs Programowania</p>
+            <h1 class="main-title">Nauka Programowania</h1>
+            <div class="title-rule"></div>
+            <h2 class="subtitle">Zbiór Zadań</h2>
+            <p class="description">Kompletny zbiór zadań programistycznych<br/>
+            od podstaw do zaawansowanych technik</p>
+            <div class="title-meta">
+                <span class="title-tag">Wersja PDF</span>
+                <span class="title-year">{current_year}</span>
+            </div>
+        </div>
     </div>
     <div class="page-break"></div>
     """
@@ -50,6 +57,7 @@ def create_table_of_contents(md_files):
     toc_html = """
     <div class="toc">
         <h1 class="toc-title">Spis Treści</h1>
+        <p class="toc-subtitle">Rozdziały uporządkowane rosnąco według numerów</p>
         <ul class="toc-list">
     """
     
@@ -92,19 +100,20 @@ def create_css():
     return """
     @page {
         size: A4;
-        margin: 2.5cm 2cm;
+        margin: 2.4cm 2cm;
         
         @top-center {
             content: "Nauka Programowania - Zbiór Zadań";
             font-size: 9pt;
-            color: #666;
+            color: #6b7280;
             font-family: 'DejaVu Sans', Arial, sans-serif;
+            letter-spacing: 0.5pt;
         }
         
         @bottom-center {
             content: "Strona " counter(page);
             font-size: 9pt;
-            color: #666;
+            color: #6b7280;
             font-family: 'DejaVu Sans', Arial, sans-serif;
         }
     }
@@ -124,8 +133,8 @@ def create_css():
     body {
         font-family: 'DejaVu Sans', Arial, sans-serif;
         font-size: 11pt;
-        line-height: 1.6;
-        color: #333;
+        line-height: 1.65;
+        color: #1f2937;
     }
     
     /* Title Page */
@@ -136,35 +145,76 @@ def create_css():
         justify-content: center;
         align-items: center;
         text-align: center;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background:
+            radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2), transparent 45%),
+            radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.12), transparent 40%),
+            linear-gradient(135deg, #16222a 0%, #3a6073 100%);
         color: white;
-        margin: -2.5cm -2cm;
-        padding: 2.5cm 2cm;
+        margin: -2.4cm -2cm;
+        padding: 2.4cm 2cm;
+    }
+
+    .title-page-inner {
+        max-width: 80%;
+    }
+
+    .title-kicker {
+        text-transform: uppercase;
+        letter-spacing: 3pt;
+        font-size: 9pt;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 18pt;
     }
     
     .main-title {
-        font-size: 48pt;
-        font-weight: bold;
-        margin-bottom: 20pt;
+        font-family: 'DejaVu Serif', 'Times New Roman', serif;
+        font-size: 46pt;
+        font-weight: 700;
+        margin-bottom: 14pt;
         text-transform: uppercase;
-        letter-spacing: 2pt;
+        letter-spacing: 2.5pt;
+    }
+
+    .title-rule {
+        width: 120pt;
+        height: 4pt;
+        margin: 0 auto 24pt auto;
+        background: linear-gradient(90deg, #f2994a 0%, #ffd166 100%);
+        border-radius: 2pt;
     }
     
     .subtitle {
-        font-size: 32pt;
+        font-size: 28pt;
         font-weight: 300;
-        margin-bottom: 40pt;
+        margin-bottom: 24pt;
     }
     
     .description {
         font-size: 14pt;
-        margin-bottom: 60pt;
+        margin-bottom: 42pt;
         font-weight: 300;
         line-height: 1.8;
     }
     
-    .year {
-        font-size: 18pt;
+    .title-meta {
+        display: inline-flex;
+        gap: 12pt;
+        align-items: center;
+        justify-content: center;
+        font-size: 12pt;
+        letter-spacing: 1pt;
+    }
+
+    .title-tag {
+        text-transform: uppercase;
+        padding: 6pt 12pt;
+        border: 1pt solid rgba(255, 255, 255, 0.5);
+        border-radius: 999pt;
+        font-size: 9pt;
+    }
+
+    .title-year {
+        font-size: 14pt;
         font-weight: 300;
     }
     
@@ -174,42 +224,54 @@ def create_css():
     }
     
     .toc-title {
-        font-size: 28pt;
-        font-weight: bold;
-        color: #667eea;
-        margin-bottom: 30pt;
-        border-bottom: 3pt solid #667eea;
+        font-family: 'DejaVu Serif', 'Times New Roman', serif;
+        font-size: 26pt;
+        font-weight: 700;
+        color: #1f3a5f;
+        margin-bottom: 10pt;
+        border-bottom: 3pt solid #f2994a;
         padding-bottom: 10pt;
+    }
+
+    .toc-subtitle {
+        font-size: 11pt;
+        color: #6b7280;
+        margin-bottom: 18pt;
     }
     
     .toc-list {
         list-style: none;
         padding-left: 0;
+        column-count: 2;
+        column-gap: 18pt;
     }
     
     .toc-item {
-        font-size: 13pt;
-        padding: 8pt 0;
-        border-bottom: 1pt solid #eee;
+        font-size: 12pt;
+        padding: 6pt 0;
+        border-bottom: 1pt solid #eef2f7;
+        break-inside: avoid;
     }
     
     .toc-number {
         display: inline-block;
         width: 40pt;
         font-weight: bold;
-        color: #667eea;
+        color: #2d9cdb;
     }
-    
+
     /* Headings */
     h1 {
-        font-size: 24pt;
-        font-weight: bold;
-        color: #667eea;
-        margin-top: 30pt;
-        margin-bottom: 20pt;
+        font-family: 'DejaVu Serif', 'Times New Roman', serif;
+        font-size: 22pt;
+        font-weight: 700;
+        color: #1f3a5f;
+        margin-top: 26pt;
+        margin-bottom: 16pt;
         page-break-before: always;
-        border-bottom: 2pt solid #667eea;
-        padding-bottom: 8pt;
+        border-left: 6pt solid #2d9cdb;
+        padding: 6pt 0 6pt 12pt;
+        background: #f3f6fb;
     }
     
     h1:first-of-type {
@@ -217,27 +279,27 @@ def create_css():
     }
     
     h2 {
-        font-size: 18pt;
-        font-weight: bold;
-        color: #444;
-        margin-top: 25pt;
-        margin-bottom: 15pt;
+        font-size: 17pt;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-top: 22pt;
+        margin-bottom: 12pt;
         page-break-after: avoid;
     }
     
     h3 {
-        font-size: 14pt;
+        font-size: 13pt;
         font-weight: bold;
-        color: #555;
-        margin-top: 20pt;
-        margin-bottom: 12pt;
+        color: #374151;
+        margin-top: 18pt;
+        margin-bottom: 10pt;
         page-break-after: avoid;
     }
     
     h4, h5, h6 {
         font-size: 12pt;
         font-weight: bold;
-        color: #666;
+        color: #4b5563;
         margin-top: 15pt;
         margin-bottom: 10pt;
         page-break-after: avoid;
@@ -254,7 +316,7 @@ def create_css():
     /* Lists */
     ul, ol {
         margin-bottom: 12pt;
-        margin-left: 20pt;
+        margin-left: 22pt;
         orphans: 3;
         widows: 3;
     }
@@ -265,25 +327,26 @@ def create_css():
     
     /* Code blocks */
     pre {
-        background-color: #f5f5f5;
-        border: 1pt solid #ddd;
-        border-left: 4pt solid #667eea;
-        border-radius: 4pt;
-        padding: 12pt;
+        background-color: #0f172a;
+        border: 1pt solid #0b1220;
+        border-left: 4pt solid #f2994a;
+        border-radius: 6pt;
+        padding: 12pt 14pt;
         margin-bottom: 15pt;
         overflow-x: auto;
         font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
-        font-size: 9pt;
-        line-height: 1.4;
+        font-size: 9.5pt;
+        line-height: 1.45;
         page-break-inside: avoid;
+        color: #e5e7eb;
     }
     
     code {
         font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
         font-size: 10pt;
-        background-color: #f5f5f5;
+        background-color: #f3f4f6;
         padding: 2pt 4pt;
-        border-radius: 2pt;
+        border-radius: 3pt;
     }
     
     pre code {
@@ -297,37 +360,39 @@ def create_css():
         border-collapse: collapse;
         margin-bottom: 15pt;
         page-break-inside: avoid;
+        border-radius: 6pt;
+        overflow: hidden;
     }
     
     th, td {
-        border: 1pt solid #ddd;
-        padding: 8pt;
+        border: 1pt solid #e5e7eb;
+        padding: 8pt 10pt;
         text-align: left;
     }
     
     th {
-        background-color: #667eea;
+        background-color: #1f3a5f;
         color: white;
         font-weight: bold;
     }
     
     tr:nth-child(even) {
-        background-color: #f9f9f9;
+        background-color: #f8fafc;
     }
     
     /* Blockquotes */
     blockquote {
-        border-left: 4pt solid #667eea;
+        border-left: 4pt solid #2d9cdb;
         padding-left: 15pt;
         margin-left: 0;
         margin-bottom: 15pt;
-        color: #555;
+        color: #4b5563;
         font-style: italic;
     }
     
     /* Links */
     a {
-        color: #667eea;
+        color: #2d9cdb;
         text-decoration: none;
     }
     
@@ -338,7 +403,7 @@ def create_css():
     /* Strong and emphasis */
     strong {
         font-weight: bold;
-        color: #222;
+        color: #111827;
     }
     
     em {
@@ -362,8 +427,12 @@ def create_css():
     /* Horizontal rules */
     hr {
         border: none;
-        border-top: 1pt solid #ddd;
-        margin: 20pt 0;
+        border-top: 2pt solid #e5e7eb;
+        margin: 22pt 0;
+    }
+
+    .chapter {
+        padding-top: 6pt;
     }
     """
 
