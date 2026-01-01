@@ -39,19 +39,25 @@ Jeśli listy mają różne długości, po wyczerpaniu krótszej listy dopisz poz
 
 // Funkcja wypisujaca elementy dwoch list na przemian
 function wypiszElementyNaPrzemian(lista1, lista2) {
-  let maxLength = Math.max(lista1.length, lista2.length);
-
+  const wynik = [];
+  const maxLength = Math.max(lista1.length, lista2.length);
+  
   for (let i = 0; i < maxLength; i++) {
     if (i < lista1.length) {
-      console.log(lista1[i]);
+      wynik.push(lista1[i]);
     }
     if (i < lista2.length) {
-      console.log(lista2[i]);
+      wynik.push(lista2[i]);
     }
   }
+  
+  console.log(wynik.join(","));
 }
 
-// Testy
-console.log("Test dla list [5, 3, 7, 2] oraz [1, -2, 3]:");
-wypiszElementyNaPrzemian([5, 3, 7, 2], [1, -2, 3]);
+// Pobieranie danych od uzytkownika
+const lista1 = JSON.parse(prompt("Podaj liste 1:"));
+const lista2 = JSON.parse(prompt("Podaj liste 2:"));
+
+// Wywolanie funkcji
+wypiszElementyNaPrzemian(lista1, lista2);
 

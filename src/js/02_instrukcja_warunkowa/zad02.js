@@ -59,8 +59,8 @@ const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
 // Porownanie ze zmienna
 if (liczba_a === liczba_b) {
-  console.log("Liczby sa identyczne");
+  console.log("Liczby są identyczne.");
 } else {
-  console.log("Liczby sa rozne");
+  console.log("Liczby są różne.");
 }
 

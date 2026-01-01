@@ -47,24 +47,24 @@ Niepoprawny numer dnia tygodnia.
 const dzien_tygodnia = parseInt(prompt("Podaj dzien tygodnia:"));
 
 // Sprawdzenie, czy liczba jest poprawna
-if (dzien_tygodnia > 0 && dzien_tygodnia < 8) {
+if (dzien_tygodnia >= 1 && dzien_tygodnia <= 7) {
   // Sprawdzenie, ktory dzien tygodnia odpowiada liczbie
   if (dzien_tygodnia === 1) {
-    console.log("Poniedzialek");
+    console.log("Poniedziałek");
   } else if (dzien_tygodnia === 2) {
     console.log("Wtorek");
   } else if (dzien_tygodnia === 3) {
-    console.log("Sroda");
+    console.log("Środa");
   } else if (dzien_tygodnia === 4) {
     console.log("Czwartek");
   } else if (dzien_tygodnia === 5) {
-    console.log("Piatek");
+    console.log("Piątek");
   } else if (dzien_tygodnia === 6) {
     console.log("Sobota");
   } else {
     console.log("Niedziela");
   }
 } else {
-  console.log("Liczba jest niepoprawna");
+  console.log("Niepoprawny numer dnia tygodnia.");
 }
 

@@ -63,29 +63,35 @@ Piątek
 */
 
 // Pobieranie danych od uzytkownika
-const dzien = parseInt(prompt("Podaj dzien:"));
-const miesiac = parseInt(prompt("Podaj miesiac:"));
-const rok = parseInt(prompt("Podaj rok:"));
+let dzien = parseInt(prompt("Podaj dzien:"));
+let miesiac = parseInt(prompt("Podaj miesiac:"));
+let rok = parseInt(prompt("Podaj rok:"));
 
-const A = rok; // 4 - 2 * rok - 1
-const B = 5 * rok; // 4
-const C = 26 * (miesiac + 1); // 10
+// Kongruencja Zellera - jezeli miesiac <= 2, przesuwamy do poprzedniego roku
+if (miesiac <= 2) {
+  miesiac = miesiac + 12;
+  rok = rok - 1;
+}
 
-const dzien_tygodnia = (A + B + C + dzien) % 7;
+// Obliczenia wedlug wzoru Zellera
+const K = rok % 100;
+const J = Math.floor(rok / 100);
+const h = (dzien + Math.floor((13 * (miesiac + 1)) / 5) + K + Math.floor(K / 4) + Math.floor(J / 4) + 5 * J) % 7;
 
-if (dzien_tygodnia === 0) {
-  console.log("Niedziela");
-} else if (dzien_tygodnia === 1) {
-  console.log("Poniedzialek");
-} else if (dzien_tygodnia === 2) {
-  console.log("Wtorek");
-} else if (dzien_tygodnia === 3) {
-  console.log("Sroda");
-} else if (dzien_tygodnia === 4) {
-  console.log("Czwartek");
-} else if (dzien_tygodnia === 5) {
-  console.log("Piatek");
-} else {
+// Mapowanie h na dzien tygodnia
+if (h === 0) {
   console.log("Sobota");
+} else if (h === 1) {
+  console.log("Niedziela");
+} else if (h === 2) {
+  console.log("Poniedziałek");
+} else if (h === 3) {
+  console.log("Wtorek");
+} else if (h === 4) {
+  console.log("Środa");
+} else if (h === 5) {
+  console.log("Czwartek");
+} else {
+  console.log("Piątek");
 }
 

@@ -48,23 +48,10 @@ function podniesDoPotegi(a, b) {
   return wynik;
 }
 
-// Testy
+// Pobieranie danych od uzytkownika
+const a = parseInt(prompt("Podaj podstawe:"));
+const b = parseInt(prompt("Podaj wykladnik:"));
 
-function testPotega() {
-  console.assert(podniesDoPotegi(2, 3) == 8);
-  console.assert(podniesDoPotegi(3, 2) == 9);
-  console.assert(podniesDoPotegi(4, 4) == 256);
-  console.assert(podniesDoPotegi(5, 3) == 125);
-  console.assert(podniesDoPotegi(6, 0) == 1);
-  console.assert(podniesDoPotegi(7, 1) == 7);
-  console.assert(podniesDoPotegi(0, 2) == 0);
-}
-
-// Funkcja uruchamiajaca testy
-function main() {
-  testPotega();
-}
-
-// Uruchomienie testow
-main();
+// Wypisanie wyniku
+console.log(podniesDoPotegi(a, b));
 

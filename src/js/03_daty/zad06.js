@@ -62,38 +62,27 @@ const dzien = parseInt(prompt("Podaj dzien:"));
 const miesiac = parseInt(prompt("Podaj miesiac:"));
 const rok = parseInt(prompt("Podaj rok:"));
 
-// Sprawdzenie, czy liczby sa poprawne
-if (dzien > 0 && miesiac > 0 && rok > 0) {
-  // Sprawdzenie, czy miesiac jest poprawny
-  if (miesiac < 13) {
-    // Sprawdzenie, czy rok jest przestepny
-    if ((rok % 4 === 0 && rok % 100 !== 0) || rok % 400 === 0) {
-      // Sprawdzenie, czy dzien jest poprawny
-      if (
-        dzien < 30 ||
-        (dzien === 30 && miesiac !== 2) ||
-        (dzien === 29 && miesiac === 2)
-      ) {
-        console.log("Data jest poprawna");
-      } else {
-        console.log("Data jest niepoprawna");
-      }
-    } else {
-      // Sprawdzenie, czy dzien jest poprawny
-      if (
-        dzien < 29 ||
-        (dzien === 29 && miesiac !== 2) ||
-        (dzien === 28 && miesiac === 2)
-      ) {
-        console.log("Data jest poprawna");
-      } else {
-        console.log("Data jest niepoprawna");
-      }
-    }
-  } else {
-    console.log("Data jest niepoprawna");
-  }
+// Sprawdzenie, czy miesiac jest poprawny
+if (miesiac < 1 || miesiac > 12) {
+  console.log("Data jest niepoprawna.");
 } else {
-  console.log("Data jest niepoprawna");
+  // Ustalenie liczby dni w miesiącu
+  let dni_w_miesiacu;
+  if (miesiac === 2) {
+    // Luty - sprawdzamy czy rok przestepny
+    const przestepny = (rok % 4 === 0 && rok % 100 !== 0) || rok % 400 === 0;
+    dni_w_miesiacu = przestepny ? 29 : 28;
+  } else if ([4, 6, 9, 11].includes(miesiac)) {
+    dni_w_miesiacu = 30;
+  } else {
+    dni_w_miesiacu = 31;
+  }
+  
+  // Sprawdzenie, czy dzien jest poprawny
+  if (dzien >= 1 && dzien <= dni_w_miesiacu) {
+    console.log("Data jest poprawna.");
+  } else {
+    console.log("Data jest niepoprawna.");
+  }
 }
 

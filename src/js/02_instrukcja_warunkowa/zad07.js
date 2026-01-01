@@ -62,155 +62,75 @@ p=True q=True L=True R=True EQ=True
 
 */
 
-console.info("Prawo wylacznego srodka");
-var p = false;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info(" wyrazenie p v ~p ma wartosc logiczna ", p || !p);
-p = true;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("wyrazenie p v ~p ma wartosc logiczna", p || !p);
-p = false;
+// Helper function to convert boolean to string
+function boolToStr(val) {
+  return val ? "True" : "False";
+}
 
-console.info("Zasada niesprzecznosci");
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("wyrazenie ~(p Ʌ ~p) ma wartosc logiczna ", !(p && !p));
-p = true;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("wyrazenie ~(p Ʌ ~p) ma wartosc logiczna ", !(p && !p));
-p = false;
-var q = false;
+// All combinations of p and q
+const combinations = [
+  [false, false],
+  [false, true],
+  [true, false],
+  [true, true]
+];
 
-console.info("Przemiennosc koniunkcji");
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
-  (p && q) == (q && p)
-);
-p = true;
-q = false;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
-  (p && q) == (q && p)
-);
-p = false;
-q = true;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
-  (p && q) == (q && p)
-);
-p = true;
-q = true;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
-  (p && q) == (q && p)
-);
-p = false;
-q = false;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
-  (p && q) == (q && p)
-);
+// 1. Prawo wylaczonego srodka: p OR (NOT p)
+console.log("Prawo wyłączonego środka:");
+for (const [p, q] of combinations) {
+  const L = p || !p;
+  const R = true; // always true
+  const EQ = L === R;
+  console.log(`p=${boolToStr(p)} q=${boolToStr(q)} L=${boolToStr(L)} R=${boolToStr(R)} EQ=${boolToStr(EQ)}`);
+}
+console.log("");
 
-console.info("Przemiennosc alternatywy");
-p = false;
-q = false;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
-  (p || q) == (q || p)
-);
-p = true;
-q = false;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
-  (p || q) == (q || p)
-);
-p = false;
-q = true;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
-  (p || q) == (q || p)
-);
-p = true;
-q = true;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
-  (p || q) == (q || p)
-);
+// 2. Prawo niesprzecznosci: NOT (p AND (NOT p))
+console.log("Prawo niesprzeczności:");
+for (const [p, q] of combinations) {
+  const L = !(p && !p);
+  const R = true; // always true
+  const EQ = L === R;
+  console.log(`p=${boolToStr(p)} q=${boolToStr(q)} L=${boolToStr(L)} R=${boolToStr(R)} EQ=${boolToStr(EQ)}`);
+}
+console.log("");
 
-console.info("Pierwsze prawo de Morgana");
-p = false;
-q = false;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ",
-  !(p && q) == (!p || !q)
-);
-p = true;
-q = false;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ",
-  !(p && q) == (!p || !q)
-);
-p = false;
-q = true;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ",
-  !(p && q) == (!p || !q)
-);
-p = true;
-q = true;
-console.info("dla p majacego wartosc logiczna ", p);
+// 3. Przemiennosc koniunkcji: (p AND q) === (q AND p)
+console.log("Przemienność koniunkcji:");
+for (const [p, q] of combinations) {
+  const L = p && q;
+  const R = q && p;
+  const EQ = L === R;
+  console.log(`p=${boolToStr(p)} q=${boolToStr(q)} L=${boolToStr(L)} R=${boolToStr(R)} EQ=${boolToStr(EQ)}`);
+}
+console.log("");
 
-console.info("Drugie prawo de Morgana");
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
-  !(p || q) == (!p && !q)
-);
-p = true;
-q = false;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
-  !(p || q) == (!p && !q)
-);
-p = false;
-q = true;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
-  !(p || q) == (!p && !q)
-);
-p = true;
-q = true;
-console.info("dla p majacego wartosc logiczna ", p);
-console.info("oraz q majacego wartosc logiczna ", q);
-console.info(
-  "wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
-  !(p || q) == (!p && !q)
-);
+// 4. Przemiennosc alternatywy: (p OR q) === (q OR p)
+console.log("Przemienność alternatywy:");
+for (const [p, q] of combinations) {
+  const L = p || q;
+  const R = q || p;
+  const EQ = L === R;
+  console.log(`p=${boolToStr(p)} q=${boolToStr(q)} L=${boolToStr(L)} R=${boolToStr(R)} EQ=${boolToStr(EQ)}`);
+}
+console.log("");
+
+// 5. Pierwsze prawo de Morgana: NOT(p AND q) === (NOT p) OR (NOT q)
+console.log("Pierwsze prawo de Morgana:");
+for (const [p, q] of combinations) {
+  const L = !(p && q);
+  const R = !p || !q;
+  const EQ = L === R;
+  console.log(`p=${boolToStr(p)} q=${boolToStr(q)} L=${boolToStr(L)} R=${boolToStr(R)} EQ=${boolToStr(EQ)}`);
+}
+console.log("");
+
+// 6. Drugie prawo de Morgana: NOT(p OR q) === (NOT p) AND (NOT q)
+console.log("Drugie prawo de Morgana:");
+for (const [p, q] of combinations) {
+  const L = !(p || q);
+  const R = !p && !q;
+  const EQ = L === R;
+  console.log(`p=${boolToStr(p)} q=${boolToStr(q)} L=${boolToStr(L)} R=${boolToStr(R)} EQ=${boolToStr(EQ)}`);
+}
 

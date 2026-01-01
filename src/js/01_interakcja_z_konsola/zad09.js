@@ -63,16 +63,29 @@ const roczna_stopa_procentowa = parseFloat(
   prompt("Podaj roczna stope procentowa:")
 );
 const liczba_lat = parseInt(prompt("Podaj liczbe lat na splacenie kredytu:"));
-const wysokosc_kredytu = parseInt(
+const wysokosc_kredytu = parseFloat(
   prompt("Podaj wysokosc udzielonego kredytu:")
 );
 
-// Obliczanie miesiecznej raty
-const miesieczna_rata =
-  (wysokosc_kredytu * (roczna_stopa_procentowa / 100)) / 12;
+// Obliczanie liczby miesiecy
+const liczba_miesiecy = liczba_lat * 12;
+
+let miesieczna_rata;
+if (roczna_stopa_procentowa === 0) {
+  // Dla zerowego oprocentowania
+  miesieczna_rata = wysokosc_kredytu / liczba_miesiecy;
+} else {
+  // Obliczanie miesiecznej stopy procentowej
+  const miesieczna_stopa = roczna_stopa_procentowa / (12 * 100);
+  
+  // Wzor na rate annuitetowa: M = P * r * (1 + r)^n / ((1 + r)^n - 1)
+  miesieczna_rata = wysokosc_kredytu * 
+    (miesieczna_stopa * Math.pow(1 + miesieczna_stopa, liczba_miesiecy)) /
+    (Math.pow(1 + miesieczna_stopa, liczba_miesiecy) - 1);
+}
 
 // Obliczanie calkowitego kosztu kredytu
-const calkowity_koszt_kredytu = miesieczna_rata * liczba_lat * 12;
+const calkowity_koszt_kredytu = miesieczna_rata * liczba_miesiecy;
 
 // Wypisanie wyniku
 console.log(miesieczna_rata.toFixed(2));

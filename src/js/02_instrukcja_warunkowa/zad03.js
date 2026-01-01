@@ -65,10 +65,10 @@ const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Porownanie ze stala
 if (liczba > 0) {
-  console.log("Liczba jest dodatnia");
+  console.log("Liczba jest dodatnia.");
 } else if (liczba < 0) {
-  console.log("Liczba jest ujemna");
+  console.log("Liczba jest ujemna.");
 } else {
-  console.log("Liczba jest zerem");
+  console.log("Liczba jest zerem.");
 }
 

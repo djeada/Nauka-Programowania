@@ -49,8 +49,8 @@ const rok = parseInt(prompt("Podaj rok:"));
 
 // Sprawdzenie, czy rok jest przestepny
 if ((rok % 4 === 0 && rok % 100 !== 0) || rok % 400 === 0) {
-  console.log("Rok jest przestepny");
+  console.log("Rok jest przestępny.");
 } else {
-  console.log("Rok nie jest przestepny");
+  console.log("Rok nie jest przestępny.");
 }
 

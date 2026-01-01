@@ -197,27 +197,28 @@ Dwie linie:
 */
 
 // a) Pobierz wielkosc w kilogramach i wypisz, ile gramow odpowiada.
-const kg = parseInt(prompt("Podaj liczbe w kilogramach:"));
-console.log(kg * 1000);
+const kg = parseFloat(prompt("Podaj liczbe w kilogramach:"));
+console.log(Math.floor(kg * 1000));
 
 // b) Pobierz wielkosc w calach i wypisz, ile centymetrow odpowiada.
-const inch = parseInt(prompt("Podaj liczbe w calach:"));
-console.log(inch * 2.54);
+const inch = parseFloat(prompt("Podaj liczbe w calach:"));
+console.log((inch * 2.54).toFixed(2));
 
 // c) Pobierz liczbe sekund i przelicz na godziny.
 const sec = parseInt(prompt("Podaj liczbe w sekundach:"));
-console.log(sec / 3600);
+console.log(Math.floor(sec / 3600));
 
 // d) Pobierz liczbe w euro i wypisz, ile zlotowek odpowiada.
-const euro = parseInt(prompt("Podaj liczbe w euro:"));
-console.log(euro * 4.56);
+const euro = parseFloat(prompt("Podaj liczbe w euro:"));
+console.log((euro * 4.4).toFixed(2));
 
 // e) Pobierz miare kata w stopniach i wypisz, ile radianow odpowiada.
-const deg = parseInt(prompt("Podaj liczbe w stopniach:"));
-console.log(deg * 0.0174533);
+const deg = parseFloat(prompt("Podaj liczbe w stopniach:"));
+console.log((deg * Math.PI / 180).toFixed(3));
 
 // f) Pobierz temperature w stopniach Fahrenheita i wypisz ile stopni Celsjusza oraz ile stopni Kelvina odpowiada.
-const temp = parseInt(prompt("Podaj liczbe w stopniach Fahrenheita:"));
-console.log(((temp - 32) * 5) / 9);
-console.log(((temp - 32) * 5) / 9 + 273.15);
+const temp = parseFloat(prompt("Podaj liczbe w stopniach Fahrenheita:"));
+const celsius = ((temp - 32) * 5) / 9;
+console.log(celsius.toFixed(3));
+console.log((celsius + 273.15).toFixed(3));
 

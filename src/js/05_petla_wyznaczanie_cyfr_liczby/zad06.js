@@ -161,6 +161,12 @@ Jeśli brak — brak wyjścia.
 // Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
+// Obliczanie sumy cyfr pobranej liczby (dla zad d)
+let sumaCyfrLiczby = 0;
+for (let j = liczba; j > 0; j = Math.floor(j / 10)) {
+  sumaCyfrLiczby += j % 10;
+}
+
 // a) Petla dla liczb mniejszych od pobranej, ktorych suma cyfr jest rowna 10
 for (let i = liczba - 1; i > 0; i--) {
   let sumaCyfr = 0;
@@ -173,7 +179,7 @@ for (let i = liczba - 1; i > 0; i--) {
 }
 
 // b) Petla dla liczb dwucyfrowych wiekszych od pobranej
-for (let i = liczba + 1; i < 100; i++) {
+for (let i = Math.max(10, liczba + 1); i < 100; i++) {
   console.log(i);
 }
 
@@ -189,21 +195,19 @@ for (let i = 100; i < 1000; i++) {
 }
 
 // d) Petla dla liczb trzycyfrowych podzielnych przez sume cyfr pobranej liczby
-for (let i = 100; i < 1000; i++) {
-  let sumaCyfr = 0;
-  for (let j = i; j > 0; j = Math.floor(j / 10)) {
-    sumaCyfr += j % 10;
-  }
-  if (i % sumaCyfr == 0) {
-    console.log(i);
+if (sumaCyfrLiczby > 0) {
+  for (let i = 100; i < 1000; i++) {
+    if (i % sumaCyfrLiczby == 0) {
+      console.log(i);
+    }
   }
 }
 
 // e) Petla dla liczb mniejszych od pobranej, skladajace sie wylacznie z parzystych cyfr
-for (let i = liczba - 1; i > 0; i--) {
+for (let i = 2; i < liczba; i++) {
   let parzysta = true;
   for (let j = i; j > 0; j = Math.floor(j / 10)) {
-    if (j % 2 != 0) {
+    if ((j % 10) % 2 != 0) {
       parzysta = false;
       break;
     }

@@ -54,21 +54,21 @@ Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
 
 // Pobieranie danych od uzytkownika
 
-const cena_plytki = parseInt(prompt("Podaj cene plytki:"));
-const dlugosc_boku_plytki = parseInt(prompt("Podaj dlugosc boku plytki:"));
-const dlugosc_podlogi = parseInt(prompt("Podaj dlugosc podlogi:"));
-const szerokosc_podlogi = parseInt(prompt("Podaj szerokosc podlogi:"));
+const cena_plytki = parseFloat(prompt("Podaj cene plytki:"));
+const dlugosc_boku_plytki = parseFloat(prompt("Podaj dlugosc boku plytki:"));
+const dlugosc_podlogi = parseFloat(prompt("Podaj dlugosc podlogi:"));
+const szerokosc_podlogi = parseFloat(prompt("Podaj szerokosc podlogi:"));
 
-// Obliczanie wymiarow podlogi
-const wymiary_podlogi = dlugosc_podlogi * szerokosc_podlogi;
-const wymiary_plytki = dlugosc_boku_plytki ** 2;
+// Obliczanie liczby plytek potrzebnych w kazdym wymiarze
+const liczba_plytek_dlugosc = Math.ceil(dlugosc_podlogi / dlugosc_boku_plytki);
+const liczba_plytek_szerokosc = Math.ceil(szerokosc_podlogi / dlugosc_boku_plytki);
 
-// Obliczanie ilosci plytek
-const ilosc_plytek = wymiary_podlogi / wymiary_plytki;
+// Obliczanie calkowitej liczby plytek
+const ilosc_plytek = liczba_plytek_dlugosc * liczba_plytek_szerokosc;
 
 // Obliczanie ceny podlogi
 const cena_podlogi = ilosc_plytek * cena_plytki;
 
 // Wypisanie wyniku
-console.log(cena_podlogi);
+console.log(cena_podlogi.toFixed(2));
 

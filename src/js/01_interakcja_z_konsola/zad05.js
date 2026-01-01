@@ -164,34 +164,33 @@ y=\sin^3(x)\cdot\cos^2(x)+e^{x^2}+\ln(x^3+2x^2-x-3)
 
 */
 // a) Otrzymujesz wspolrzedna $x$. Wyznacz wartosc funkcji $y = 3x + 10$ w tym punkcie.
-const x1 = parseInt(prompt("Podaj wspolrzedna x:"));
-console.log(3 * x1 + 10);
+const x1 = parseFloat(prompt("Podaj wspolrzedna x:"));
+console.log((3 * x1 + 10).toFixed(3));
 
 // b) Pobierz wspolczynniki $a$, $b$ oraz punkt $x$. Wyznacz wartosc funkcji $y = ax + b$ w tym punkcie.
-const a2 = parseInt(prompt("Podaj wspolczynnik a:"));
-const b2 = parseInt(prompt("Podaj wspolczynnik b:"));
-const x2 = parseInt(prompt("Podaj wspolrzedna x:"));
-console.log(a2 * x2 + b2);
+const a2 = parseFloat(prompt("Podaj wspolczynnik a:"));
+const b2 = parseFloat(prompt("Podaj wspolczynnik b:"));
+const x2 = parseFloat(prompt("Podaj wspolrzedna x:"));
+console.log((a2 * x2 + b2).toFixed(3));
 
 // c) Otrzymujesz wspolrzedna $x$. Wyznacz wartosc funkcji $y = x^3 + 22 - 20$ w tym punkcie.
-const x3 = parseInt(prompt("Podaj wspolrzedna x:"));
-console.log(x3 ** 3 + 2);
+const x3 = parseFloat(prompt("Podaj wspolrzedna x:"));
+console.log((x3 ** 3 + 2).toFixed(3));
 
-// d) Pobierz wspolczynniki $a$, $b$, $c$, $d$, $m$, $n$ oraz punkt $x$. Wyznacz wartosc funkcji $y = ax^m + bx^n + c - d$ w tym punkcie.
-const a4 = parseInt(prompt("Podaj wspolczynnik a:"));
-const b4 = parseInt(prompt("Podaj wspolczynnik b:"));
-const c4 = parseInt(prompt("Podaj wspolczynnik c:"));
-const d4 = parseInt(prompt("Podaj wspolczynnik d:"));
-const m4 = parseInt(prompt("Podaj wspolczynnik m:"));
-const n4 = parseInt(prompt("Podaj wspolczynnik n:"));
-const x4 = parseInt(prompt("Podaj wspolrzedna x:"));
-console.log(a4 * x4 ** m4 + b4 * x4 ** n4 + c4 - d4);
+// d) Pobierz wspolczynniki $a$, $b$, $c$, $m$, $n$ oraz punkt $x$. Wyznacz wartosc funkcji $y = ax^m + bx^n + c - a$ w tym punkcie.
+const a4 = parseFloat(prompt("Podaj wspolczynnik a:"));
+const b4 = parseFloat(prompt("Podaj wspolczynnik b:"));
+const c4 = parseFloat(prompt("Podaj wspolczynnik c:"));
+const m4 = parseFloat(prompt("Podaj wspolczynnik m:"));
+const n4 = parseFloat(prompt("Podaj wspolczynnik n:"));
+const x4 = parseFloat(prompt("Podaj wspolrzedna x:"));
+console.log((a4 * x4 ** m4 + b4 * x4 ** n4 + c4 - a4).toFixed(3));
 
 // e) Otrzymujesz wspolrzedna $x$. Wyznacz wartosc funkcji $y = sin^3(x) \cdot cos^2(x) + e^(x^2) + log(x^3 + 2x^2 - x - 3)$ w tym punkcie.
-const x5 = parseInt(prompt("Podaj wspolrzedna x:"));
+const x5 = parseFloat(prompt("Podaj wspolrzedna x:"));
 console.log(
-  Math.sin(x5) ** 3 * Math.cos(x5) ** 2 +
-    Math.E ** (x5 ** 2) +
-    Math.log(x5 ** 3 + 2 * x5 ** 2 - x5 - 3)
+  (Math.sin(x5) ** 3 * Math.cos(x5) ** 2 +
+    Math.exp(x5 ** 2) +
+    Math.log(x5 ** 3 + 2 * x5 ** 2 - x5 - 3)).toFixed(3)
 );
 

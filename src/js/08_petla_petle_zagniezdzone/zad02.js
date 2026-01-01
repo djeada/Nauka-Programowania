@@ -39,6 +39,15 @@ Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt o wysokości `n`, gdzie w wierszu `i`
 
 */
 function main() {
+  const n = parseInt(prompt("Podaj liczbe:"));
+  
+  for (let i = 1; i <= n; i++) {
+    let wiersz = "";
+    for (let j = 0; j < i; j++) {
+      wiersz += "*";
+    }
+    console.log(wiersz);
+  }
 }
 
 main();

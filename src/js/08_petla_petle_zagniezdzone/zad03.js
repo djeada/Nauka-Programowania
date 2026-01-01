@@ -40,6 +40,15 @@ Wczytaj `n` (`n ≥ 1`) i wypisz odwrócony trójkąt o wysokości `n`, zaczynaj
 
 */
 function main() {
+  const n = parseInt(prompt("Podaj liczbe:"));
+  
+  for (let i = n; i >= 1; i--) {
+    let wiersz = "";
+    for (let j = 0; j < i; j++) {
+      wiersz += "*";
+    }
+    console.log(wiersz);
+  }
 }
 
 main();

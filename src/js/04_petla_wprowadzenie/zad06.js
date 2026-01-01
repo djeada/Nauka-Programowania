@@ -62,7 +62,7 @@ for (let i = 1; i <= liczba; i++) {
 }
 
 // Wypisanie wyniku
-console.log(`a) ${suma}`);
+console.log(suma);
 
 // Petla $$a_n = n^2 + 5n$$
 suma = 0;
@@ -71,7 +71,7 @@ for (let i = 1; i <= liczba; i++) {
 }
 
 // Wypisanie wyniku
-console.log(`b) ${suma}`);
+console.log(suma);
 
 // Petla $$a_n = n + 2n$$
 suma = 0;
@@ -80,5 +80,5 @@ for (let i = 1; i <= liczba; i++) {
 }
 
 // Wypisanie wyniku
-console.log(`c) ${suma}`);
+console.log(suma);
 

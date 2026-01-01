@@ -115,11 +115,11 @@ function zwracajNapis() {
 
 // Funkcja zwracajaca wartosc logiczna Prawda
 function zwracajWartoscLogiczna() {
-  return true;
+  return "True";
 }
 
 // Wypisanie wynikow
-console.log(`a) ${zwracajLiczbe()}`);
-console.log(`b) ${zwracajNapis()}`);
-console.log(`c) ${zwracajWartoscLogiczna()}`);
+console.log(zwracajLiczbe());
+console.log(zwracajNapis());
+console.log(zwracajWartoscLogiczna());
 

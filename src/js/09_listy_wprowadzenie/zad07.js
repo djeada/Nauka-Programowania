@@ -53,17 +53,14 @@ function liczbaMniejszaOdNajwiekszej(lista) {
   return (max + secondMax) / 2;
 }
 
-// Testy
-
-function testLiczbaMniejszaOdNajwiekszej() {
-  console.assert(liczbaMniejszaOdNajwiekszej([9, 2, 3, 2, 1, 7]) === 8.0);
-  console.assert(liczbaMniejszaOdNajwiekszej([1, 2, 3, 4, 5, 6]) === 5.5);
-  console.assert(liczbaMniejszaOdNajwiekszej([6, 5, 4, 3, 2, 1]) === 3.5);
+// Pobieranie danych od uzytkownika
+const N = parseInt(prompt("Podaj liczbe elementow:"));
+const lista = [];
+for (let i = 0; i < N; i++) {
+  lista.push(parseInt(prompt("Podaj liczbe:")));
 }
 
-function main() {
-  testLiczbaMniejszaOdNajwiekszej();
-}
-
-main();
+// Wypisanie wyniku
+const wynik = liczbaMniejszaOdNajwiekszej(lista);
+console.log(wynik.toFixed(1));
 

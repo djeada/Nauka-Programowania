@@ -55,16 +55,18 @@ xx
 // Wyswietlenie kwadratu
 console.log("xx");
 console.log("xx");
+console.log("");
 
 // Wyswietlenie trojkata
 console.log("1");
 console.log("22");
 console.log("333");
+console.log("");
 
 // Wyswietlenie rombu
-console.log("1");
-console.log("111");
+console.log("  1");
+console.log(" 111");
 console.log("11111");
-console.log("111");
-console.log("1");
+console.log(" 111");
+console.log("  1");
 

@@ -41,6 +41,15 @@ Liczby w jednym wierszu oddzielaj pojedynczą spacją.
 
 */
 function main() {
+  const n = parseInt(prompt("Podaj liczbe:"));
+  
+  for (let i = 1; i <= n; i++) {
+    let wiersz = [];
+    for (let j = 1; j <= n; j++) {
+      wiersz.push(i * j);
+    }
+    console.log(wiersz.join(" "));
+  }
 }
 
 main();

@@ -67,7 +67,7 @@ console.log(liczba_a - liczba_b);
 console.log(liczba_a * liczba_b);
 
 // d) iloraz pierwszej liczby przez druga
-console.log(liczba_a / liczba_b);
+console.log(Math.floor(liczba_a / liczba_b));
 
 // e) reszta z dzielenia pierwszej liczby przez druga
 console.log(liczba_a % liczba_b);

@@ -39,7 +39,7 @@ Jeśli `m` nie jest w zakresie 1–12, wypisz:
 const miesiac = parseInt(prompt("Podaj miesiac:"));
 
 // Sprawdzenie, czy liczba jest poprawna
-if (miesiac > 0 && miesiac < 13) {
+if (miesiac >= 1 && miesiac <= 12) {
   // Sprawdzenie, ktory miesiac odpowiada liczbie
   if (
     miesiac === 1 ||
@@ -50,18 +50,18 @@ if (miesiac > 0 && miesiac < 13) {
     miesiac === 10 ||
     miesiac === 12
   ) {
-    console.log("Miesiac ma 31 dni");
+    console.log(31);
   } else if (
     miesiac === 4 ||
     miesiac === 6 ||
     miesiac === 9 ||
     miesiac === 11
   ) {
-    console.log("Miesiac ma 30 dni");
+    console.log(30);
   } else {
-    console.log("Miesiac ma 28 dni");
+    console.log(28);
   }
 } else {
-  console.log("Liczba jest niepoprawna");
+  console.log("Niepoprawny numer miesiąca.");
 }
 

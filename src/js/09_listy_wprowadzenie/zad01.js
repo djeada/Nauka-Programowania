@@ -65,21 +65,18 @@ function wypiszListeOdPoczatkuDoKonca(lista) {
 
 // Funkcja wypisujaca liste od konca z elementami oddzielonymi przecinkami
 function wypiszListeOdKonca(lista) {
-  for (var i = lista.length - 1; i >= 0; i--) {
-    if (i === 0) {
-      console.log(lista[i]);
-    } else {
-      console.log(lista[i] + ", ");
-    }
+  const wynik = [];
+  for (let i = lista.length - 1; i >= 0; i--) {
+    wynik.push(lista[i]);
   }
+  console.log(wynik.join(","));
 }
 
-// Testy
-var lista = wczytajNliczbDoListy(3);
+// Pobieranie danych od uzytkownika
+const N = parseInt(prompt("Podaj liczbe elementow:"));
+const lista = wczytajNliczbDoListy(N);
 
-console.log("Wypisz liste od poczatku do konca");
+// Wypisanie listy
 wypiszListeOdPoczatkuDoKonca(lista);
-
-console.log("\nWypisz liste od konca");
 wypiszListeOdKonca(lista);
 
