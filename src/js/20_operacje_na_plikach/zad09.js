@@ -64,7 +64,7 @@ const test1 = async () => {
     `Blad asercji: ${daneFolderu.length} != 0`
   );
 
-  await fs.rmdir(sciezkaFolderu, {
+  await fs.rm(sciezkaFolderu, {
     recursive: true,
   });
 };

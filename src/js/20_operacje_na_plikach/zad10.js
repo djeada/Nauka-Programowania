@@ -79,10 +79,10 @@ const test1 = async () => {
     );
   }
 
-  await fs.rmdir(sciezka1, {
+  await fs.rm(sciezka1, {
     recursive: true,
   });
-  await fs.rmdir(sciezka2, {
+  await fs.rm(sciezka2, {
     recursive: true,
   });
 };

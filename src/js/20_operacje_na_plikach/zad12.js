@@ -91,10 +91,10 @@ const test1 = async () => {
     }
   }
 
-  await fs.rmdir(folder1, {
+  await fs.rm(folder1, {
     recursive: true,
   });
-  await fs.rmdir(folder2, {
+  await fs.rm(folder2, {
     recursive: true,
   });
 };
