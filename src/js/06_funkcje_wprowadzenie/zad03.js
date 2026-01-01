@@ -72,8 +72,8 @@ var liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
 var liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
 // Wyswietlanie wynikow
-console.log(czyPierwszaWiekszaOdDrugiej(liczba_a, liczba_b));
-console.log(czySumaMniejszaOd10(liczba_a, liczba_b));
-console.log(czyObieNieparzyste(liczba_a, liczba_b));
-console.log(czyWiekszaMniejszaOdPierwszejDoKwadratu(liczba_a, liczba_b));
+console.log(czyPierwszaWiekszaOdDrugiej(liczba_a, liczba_b) ? "True" : "False");
+console.log(czySumaMniejszaOd10(liczba_a, liczba_b) ? "True" : "False");
+console.log(czyObieNieparzyste(liczba_a, liczba_b) ? "True" : "False");
+console.log(czyWiekszaMniejszaOdPierwszejDoKwadratu(liczba_a, liczba_b) ? "True" : "False");
 

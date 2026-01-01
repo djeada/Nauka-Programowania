@@ -115,7 +115,7 @@ function zwracajNapis() {
 
 // Funkcja zwracajaca wartosc logiczna Prawda
 function zwracajWartoscLogiczna() {
-  return true;
+  return "True";
 }
 
 // Wypisanie wynikow

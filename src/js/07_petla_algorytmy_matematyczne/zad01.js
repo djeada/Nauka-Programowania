@@ -63,6 +63,7 @@ function sredniaArytmetycznaNLiczb(n) {
 // Pobieranie danych od uzytkownika
 var n = parseInt(prompt("Podaj liczbe liczb:"));
 
-// Wypisanie wyniku
-console.log(sredniaArytmetycznaNLiczb(n));
+// Wypisanie wyniku - zawsze z jednym miejscem po przecinku minimum
+const srednia = sredniaArytmetycznaNLiczb(n);
+console.log(srednia % 1 === 0 ? srednia.toFixed(1) : srednia);
 
