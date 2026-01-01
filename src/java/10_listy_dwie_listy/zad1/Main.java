@@ -44,24 +44,31 @@ public class Main {
   // elementow krotszej listy, wypisuj tylko elementy dluzszej listy.
 
   public static void wypisz(ArrayList<Integer> listaA, ArrayList<Integer> listaB) {
-    int n = listaA.size() < listaB.size() ? listaA.size() : listaB.size();
+    int n = Math.min(listaA.size(), listaB.size());
+    boolean first = true;
 
     for (int i = 0; i < n; i++) {
+      if (!first) System.out.print(",");
       System.out.print(listaA.get(i));
-      System.out.print(", ");
+      first = false;
+      
+      System.out.print(",");
       System.out.print(listaB.get(i));
-      System.out.print(", ");
     }
 
     for (int i = n; i < listaA.size(); i++) {
+      if (!first) System.out.print(",");
       System.out.print(listaA.get(i));
-      System.out.print(", ");
+      first = false;
     }
 
     for (int i = n; i < listaB.size(); i++) {
+      if (!first) System.out.print(",");
       System.out.print(listaB.get(i));
-      System.out.print(", ");
+      first = false;
     }
+    
+    System.out.println();
   }
 
   public static void main(String[] args) {
