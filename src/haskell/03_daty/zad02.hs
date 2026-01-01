@@ -58,4 +58,19 @@ Osoba jest pełnoletnia.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  d1 <- readLn :: IO Int
+  m1 <- readLn :: IO Int
+  y1 <- readLn :: IO Int
+  d2 <- readLn :: IO Int
+  m2 <- readLn :: IO Int
+  y2 <- readLn :: IO Int
+  
+  let age18Year = y1 + 18
+  let isAdult = (y2 > age18Year) || 
+                (y2 == age18Year && m2 > m1) || 
+                (y2 == age18Year && m2 == m1 && d2 >= d1)
+  
+  if isAdult
+    then putStrLn "Osoba jest pełnoletnia."
+    else putStrLn "Osoba nie jest pełnoletnia."

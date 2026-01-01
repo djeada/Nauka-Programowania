@@ -43,4 +43,15 @@ Niepoprawny numer dnia tygodnia.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  let dayName = case n of
+        1 -> "Poniedziałek"
+        2 -> "Wtorek"
+        3 -> "Środa"
+        4 -> "Czwartek"
+        5 -> "Piątek"
+        6 -> "Sobota"
+        7 -> "Niedziela"
+        _ -> "Niepoprawny numer dnia tygodnia."
+  putStrLn dayName

@@ -62,4 +62,24 @@ Piątek
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  d <- readLn :: IO Int
+  m <- readLn :: IO Int
+  y <- readLn :: IO Int
+  
+  let (m', y') = if m <= 2 then (m + 12, y - 1) else (m, y)
+  let k = y' `mod` 100
+  let j = y' `div` 100
+  let h = (d + (13 * (m' + 1)) `div` 5 + k + k `div` 4 + j `div` 4 + 5 * j) `mod` 7
+  
+  let dayName = case h of
+        0 -> "Sobota"
+        1 -> "Niedziela"
+        2 -> "Poniedziałek"
+        3 -> "Wtorek"
+        4 -> "Środa"
+        5 -> "Czwartek"
+        6 -> "Piątek"
+        _ -> error "Invalid h value"
+  
+  putStrLn dayName

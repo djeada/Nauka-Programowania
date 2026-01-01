@@ -40,4 +40,13 @@ Jedna liczba całkowita: numer dnia w roku.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  d <- readLn :: IO Int
+  m <- readLn :: IO Int
+  y <- readLn :: IO Int
+  
+  let isLeap = (y `mod` 400 == 0) || (y `mod` 4 == 0 && y `mod` 100 /= 0)
+  let daysInMonths = [31, if isLeap then 29 else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  let dayOfYear = sum (take (m - 1) daysInMonths) + d
+  
+  print dayOfYear

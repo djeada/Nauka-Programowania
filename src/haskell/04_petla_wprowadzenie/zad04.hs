@@ -40,4 +40,7 @@ Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  let result = sum [1..n-1]
+  print result
