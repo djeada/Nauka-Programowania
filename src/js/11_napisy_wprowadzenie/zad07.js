@@ -32,6 +32,9 @@ Robot
 
 */
 
+// Funkcja zamienia znaki na ich kody ASCII
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(n) dla przechowania wyniku
 function zamienNaKodyASCII(napis) {
   let wynik = "";
   for (let i = 0; i < napis.length; i++) {

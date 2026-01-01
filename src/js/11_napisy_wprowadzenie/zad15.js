@@ -32,6 +32,9 @@ Ala ma kota
 
 */
 
+// Funkcja zwraca listę słów ze zdania (bez interpunkcji)
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(m), gdzie m to liczba słów
 function slowaZeZdania(zdanie) {
   let slowa = zdanie.split(" ");
   let wynik = [];

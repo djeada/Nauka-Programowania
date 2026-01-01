@@ -51,6 +51,9 @@ Zarobki: 1000
 
 */
 
+// Funkcja rozdziela informacje o pracowniku zapisane w jednej linii
+// Złożoność czasowa: O(n), gdzie n to długość stringu rekord
+// Złożoność pamięciowa: O(n) dla przechowania tablicy danych i wyniku
 function rozdzielRekord(rekord) {
   let dane = rekord.split(";");
   let imie = dane[0].trim();
@@ -60,10 +63,10 @@ function rozdzielRekord(rekord) {
   let zarobki = dane[4].trim();
 
   let lista = [
-    "Imie: " + imie,
+    "Imię: " + imie,
     "Nazwisko: " + nazwisko,
     "Miejsce urodzenia: " + miejsceUrodzenia,
-    "Zawod: " + zawod,
+    "Zawód: " + zawod,
     "Zarobki: " + zarobki,
   ];
   return lista;
@@ -74,10 +77,10 @@ function rozdzielRekord(rekord) {
 function test() {
   let input = "Jan; Kowalski; Warszawa; Programista; 1000;";
   let expectedOutput = [
-    "Imie: Jan",
+    "Imię: Jan",
     "Nazwisko: Kowalski",
     "Miejsce urodzenia: Warszawa",
-    "Zawod: Programista",
+    "Zawód: Programista",
     "Zarobki: 1000",
   ];
   let output = rozdzielRekord(input);

@@ -32,6 +32,9 @@ Alamakota
 
 */
 
+// Funkcja usuwa wszystkie spacje z napisu
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(n) dla przechowania wyniku
 function usunSpacje(napis) {
   return napis.replace(/\s+/g, "");
 }

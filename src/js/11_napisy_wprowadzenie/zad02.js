@@ -33,6 +33,9 @@ a
 ```
 
 */
+// Funkcja liczy wystąpienia określonego znaku w napisie
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(1)
 function policzWystapieniaZnaku(napis, znak) {
   let licznik = 0;
   for (let i = 0; i < napis.length; i++) {

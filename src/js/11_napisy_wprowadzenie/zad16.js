@@ -34,6 +34,9 @@ axam
 
 */
 
+// Funkcja oblicza odległość Hamminga między dwoma napisami (liczba różniących się pozycji)
+// Złożoność czasowa: O(n), gdzie n to długość napisów
+// Złożoność pamięciowa: O(1)
 function odlegloscHamminga(napis1, napis2) {
   let odleglosc = 0;
   for (let i = 0; i < napis1.length; i++) {

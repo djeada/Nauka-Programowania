@@ -39,23 +39,20 @@ lubi
 
 */
 
-function znajdzEkstremalneSlowo(napis, ekstremum) {
-  let slowa = napis.split(/[^\w]+/);
-  let slowoEkstremalne = slowa[0];
-  for (let i = 0; i < slowa.length; i++) {
-    if (slowa[i].length === ekstremum) {
-      slowoEkstremalne = slowa[i];
-      break;
-    }
-  }
-  return slowoEkstremalne;
-}
-
+// Funkcja znajduje najdłuższe i najkrótsze słowo w napisie
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(m), gdzie m to liczba słów
 function znajdzNajdluzszeISkrotszeSlowo(napis) {
-  let slowa = napis.split(/[^\w]+/);
+  let slowa = napis.split(/[^\w]+/).filter(s => s.length > 0);
+  
+  if (slowa.length === 0) {
+    return ["", ""];
+  }
+  
   let najdluzszeSlowo = slowa[0];
   let najkrotszeSlowo = slowa[0];
-  for (let i = 0; i < slowa.length; i++) {
+  
+  for (let i = 1; i < slowa.length; i++) {
     let slowo = slowa[i];
     if (slowo.length > najdluzszeSlowo.length) {
       najdluzszeSlowo = slowo;
@@ -64,8 +61,7 @@ function znajdzNajdluzszeISkrotszeSlowo(napis) {
       najkrotszeSlowo = slowo;
     }
   }
-  najdluzszeSlowo = znajdzEkstremalneSlowo(napis, najdluzszeSlowo.length);
-  najkrotszeSlowo = znajdzEkstremalneSlowo(napis, najkrotszeSlowo.length);
+  
   return [najdluzszeSlowo, najkrotszeSlowo];
 }
 

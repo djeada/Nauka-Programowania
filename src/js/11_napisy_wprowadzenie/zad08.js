@@ -34,6 +34,9 @@ kota
 
 */
 
+// Funkcja wypisuje słowa ze zdania pionowo (jedno słowo w linii)
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(n) dla przechowania tablicy słów
 function wypiszSlowa(napis) {
   let slowa = napis.split(/[^\w]+/);
   for (let i = 0; i < slowa.length; i++) {
@@ -49,10 +52,19 @@ function test() {
   let input = "Ala ma kota";
   let expectedOutput = ["Ala", "ma", "kota"];
   let output = [];
+  
+  // Zapisz oryginalną funkcję console.log
+  const originalLog = console.log;
+  
+  // Nadpisz console.log tymczasowo
   console.log = function (text) {
     output.push(text);
   };
+  
   wypiszSlowa(input);
+
+  // Przywróć oryginalną funkcję console.log
+  console.log = originalLog;
 
   console.assert(
     output.length === expectedOutput.length &&
