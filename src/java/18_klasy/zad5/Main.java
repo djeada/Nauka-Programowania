@@ -59,22 +59,22 @@ Iloczyn macierzy A * B:
 */
 import java.text.MessageFormat;
 
-public class Zespolona {
+public class Main {
 
   private double Re;
   private double Im;
 
-  public Zespolona() {
+  public Main() {
     Re = 0;
     Im = 0;
   }
 
-  public Zespolona(double a, double b) {
+  public Main(double a, double b) {
     Re = a;
     Im = b;
   }
 
-  public Zespolona(Zespolona innaZespolona) {
+  public Main(Main innaZespolona) {
     Re = innaZespolona.Re;
     Im = innaZespolona.Im;
   }
@@ -87,29 +87,29 @@ public class Zespolona {
     Im *= -1;
   }
 
-  public static Zespolona suma(final Zespolona z1, final Zespolona z2) {
-    Zespolona z3 = new Zespolona(z1.Re + z2.Re, z1.Im + z2.Im);
-    return new Zespolona(z3);
+  public static Main suma(final Main z1, final Main z2) {
+    Main z3 = new Main(z1.Re + z2.Re, z1.Im + z2.Im);
+    return new Main(z3);
   }
 
-  public static Zespolona roznica(final Zespolona z1, final Zespolona z2) {
-    Zespolona z3 = new Zespolona(z1.Re - z2.Re, z1.Im - z2.Im);
-    return new Zespolona(z3);
+  public static Main roznica(final Main z1, final Main z2) {
+    Main z3 = new Main(z1.Re - z2.Re, z1.Im - z2.Im);
+    return new Main(z3);
   }
 
-  public static Zespolona iloczyn(final Zespolona z1, final Zespolona z2) {
-    Zespolona z3 = new Zespolona(z1.Re * z2.Re - z1.Im * z2.Im, z1.Im * z2.Re + z2.Im * z1.Re);
-    return new Zespolona(z3);
+  public static Main iloczyn(final Main z1, final Main z2) {
+    Main z3 = new Main(z1.Re * z2.Re - z1.Im * z2.Im, z1.Im * z2.Re + z2.Im * z1.Re);
+    return new Main(z3);
   }
 
-  public Zespolona podziel(final Zespolona z2) {
+  public Main podziel(final Main z2) {
     double a = (Re * z2.Re + Im * z2.Im) / (z2.Re * z2.Re + z2.Im * z2.Im);
     double b = (Re * z2.Im - Im * z2.Re) / (z2.Re * z2.Re + z2.Im * z2.Im);
-    Zespolona z3 = new Zespolona(a, b);
-    return new Zespolona(z3);
+    Main z3 = new Main(a, b);
+    return new Main(z3);
   }
 
-  public boolean equalsTo(final Zespolona z1, final Zespolona z2) {
+  public boolean equalsTo(final Main z1, final Main z2) {
     return z1.Re == z2.Re && z1.Im == z2.Im;
   }
 
@@ -125,8 +125,8 @@ public class Zespolona {
 
   public static void main(String[] args) {
 
-    Zespolona z1 = new Zespolona();
-    Zespolona z2 = new Zespolona(9, 12);
+    Main z1 = new Main();
+    Main z2 = new Main(9, 12);
 
     System.out.print(z1);
     System.out.print("\n");
@@ -134,12 +134,12 @@ public class Zespolona {
     System.out.print(z2);
     System.out.print("\n");
 
-    System.out.print(Zespolona.iloczyn(z1, z2));
+    System.out.print(Main.iloczyn(z1, z2));
     System.out.print("\n");
 
-    Zespolona z3 = new Zespolona(-3, -3);
+    Main z3 = new Main(-3, -3);
 
-    System.out.print(Zespolona.suma(z3, z2));
+    System.out.print(Main.suma(z3, z2));
     System.out.print("\n");
 
     System.out.print(z3.podziel(z2));

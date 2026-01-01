@@ -1,12 +1,12 @@
 /*
-ZAD-02 — Klasa Punkt
+ZAD-02 — Klasa Main
 
 **Poziom:** ★★☆
 **Tagi:** `class`, `static`, `porównania`, `math`
 
 ### Treść
 
-Zaprojektuj klasę **Punkt**:
+Zaprojektuj klasę **Main**:
 
 1. Konstruktor `(x=0, y=0)`.
 2. Metoda statyczna `odleglosc(p1, p2)` licząca odległość.
@@ -33,28 +33,28 @@ Jak w przykładzie.
 **Wyjście:**
 
 ```
-Punkt A: (5, 5)
-Punkt B: (-3, -3)
+Main A: (5, 5)
+Main B: (-3, -3)
 Odległość między punktami A i B: 11.3137
 ```
 
 */
 import java.text.MessageFormat;
 
-public class Punkt {
+public class Main {
 
   private double x;
   private double y;
 
-  public Punkt(double _x) {
+  public Main(double _x) {
     this(_x, 0);
   }
 
-  public Punkt() {
+  public Main() {
     this(0, 0);
   }
 
-  public Punkt(double _x, double _y) {
+  public Main(double _x, double _y) {
     this.x = _x;
     this.y = _y;
   }
@@ -75,7 +75,7 @@ public class Punkt {
     return y;
   }
 
-  public final double odleglosc(Punkt innyPunkt) {
+  public final double odleglosc(Main innyPunkt) {
     double odlegloscX = x - innyPunkt.getX();
     double odlegloscY = y - innyPunkt.getY();
 
@@ -88,18 +88,18 @@ public class Punkt {
     return MessageFormat.format("({0}, {1})", this.x, this.y);
   }
 
-  public boolean equalsTo(final Punkt p1, final Punkt p2) {
+  public boolean equalsTo(final Main p1, final Main p2) {
     return p1.x == p2.x && p1.y == p2.y;
   }
 
-  public boolean notEqualsTo(final Punkt p1, final Punkt p2) {
+  public boolean notEqualsTo(final Main p1, final Main p2) {
     return p1.x != p2.x || p1.y != p2.y;
   }
 
   public static void main(String[] args) {
 
-    Punkt punktA = new Punkt(5, 5);
-    Punkt punktB = new Punkt(-3, -3);
+    Main punktA = new Main(5, 5);
+    Main punktB = new Main(-3, -3);
 
     System.out.print("Odleglosc miedzy punktem A ");
     System.out.print(punktA);

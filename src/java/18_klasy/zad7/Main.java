@@ -34,10 +34,10 @@ Liczba utworzonych instancji: 3
 import java.io.*;
 import java.util.*;
 
-public class Klasa implements Closeable {
+public class Main implements Closeable {
   private static int licznik = 0;
 
-  public Klasa() {
+  public Main() {
     licznik++;
   }
 
@@ -57,12 +57,19 @@ public class Klasa implements Closeable {
 
   public static void test1() {
     int n = 5;
-    ArrayList<Klasa> lista = new ArrayList<Klasa>(n);
-    assert Klasa.liczbaInstancji() == n;
+    ArrayList<Main> lista = new ArrayList<Main>();
+    for (int i = 0; i < n; i++) {
+      lista.add(new Main());
+    }
+    assert Main.liczbaInstancji() == n;
+    // Clean up
+    for (Main m : lista) {
+      m.close();
+    }
   }
 
   public static void test2() {
-    assert Klasa.liczbaInstancji() == 0;
+    assert Main.liczbaInstancji() == 0;
   }
 
   public static void main(String[] args) {
