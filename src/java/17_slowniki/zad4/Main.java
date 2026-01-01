@@ -38,10 +38,12 @@ cba 3
 ```
 
 */
-mport java.util.*;
+import java.util.*;
 
 public class Main {
 
+	// Zlozonosc Czasowa: O(n), gdzie n to liczba elementow w slowniku
+	// Zlozonosc Pamieciowa: O(1)
 	public static void usunZeSlownikaV1(Map<String, Integer> slownik, int wartosc) {
 
 		for (Iterator<Map.Entry<String, Integer>> it = slownik.entrySet().iterator(); it.hasNext();) {

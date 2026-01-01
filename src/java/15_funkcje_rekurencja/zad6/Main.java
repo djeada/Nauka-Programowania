@@ -45,6 +45,8 @@ Wczytaj współczynniki równania kwadratowego ( ax^2 + bx + c = 0 ). Wypisz wsz
 */
 public class Main {
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu
   public static int ciagV1(int n) {
 
     if (n == 1) {

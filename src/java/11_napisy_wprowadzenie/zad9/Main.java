@@ -58,9 +58,19 @@ public class Main {
   // Informacje rozdzielone sa srednikami. Zapisz je w osobnych zmiennych
   // i wypisz wraz z komunikatem.
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static void wypiszDane(String napis) {
 
-    ArrayList<String> wynik = new ArrayList<String>(Arrays.asList(napis.split(";")));
+    ArrayList<String> wynik = new ArrayList<String>();
+    // Podziel po srednikach i usun puste elementy
+    for (String pole : napis.split(";")) {
+      String trimmed = pole.trim();
+      if (!trimmed.isEmpty()) {
+        wynik.add(trimmed);
+      }
+    }
+    
     assert wynik.size() == 5;
 
     System.out.print("Imie: " + wynik.get(0) + "\n");

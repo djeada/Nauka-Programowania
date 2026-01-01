@@ -38,6 +38,8 @@ public class Main {
   // Zignoruj roznice miedzy malymi i wielkimi literami. Pamietaj, slowa skladaja sie wylacznie z
   // liter!
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String wyczysc(String napis) {
     napis = napis.trim();
     return napis.replaceAll("\\p{Punct}", "");

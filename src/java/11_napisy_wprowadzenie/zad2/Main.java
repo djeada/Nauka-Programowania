@@ -39,8 +39,8 @@ public class Main {
   // Dla otrzymanego napisu oraz znaku,
   // znajdz liczbe wystapien znaku w napisie.
 
-  // Zlozonosc Czasowa O(n)
-  // Zlozonosc Pamieciowa O(1)
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(1)
   public static int policzZnakV1(final String slowo, final char znak) {
 
     int licznik = 0;

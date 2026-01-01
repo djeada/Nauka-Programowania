@@ -41,6 +41,8 @@ Jedna liczba całkowita — wartość wielomianu w punkcie `x`.
 */
 public class Main {
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu
   public static String mniejszeLiczbyV1(int n) {
 
     if (n < 0) {

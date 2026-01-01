@@ -43,6 +43,8 @@ Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
 */
 public class Main {
 
+  // Zlozonosc Czasowa: O(b)
+  // Zlozonosc Pamieciowa: O(b) - rekurencja uzywa stosu
   public static int potegaV1(int a, int b) {
 
     if (b == 0) {

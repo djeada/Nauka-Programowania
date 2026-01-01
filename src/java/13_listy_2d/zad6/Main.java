@@ -67,6 +67,8 @@ public class Main {
     }
   }
 
+  // Zlozonosc Czasowa: O(n log n)
+  // Zlozonosc Pamieciowa: O(n)
   public static ArrayList<Pair<Integer, Integer>> polaczPrzedzialyV1(
       ArrayList<Pair<Integer, Integer>> lista) {
 

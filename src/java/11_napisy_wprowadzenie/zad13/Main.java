@@ -41,7 +41,13 @@ public class Main {
   // Otrzymujesz zdanie. Znajdz znaki znajdujace
   // sie na pozycjach bedacych liczbami pierwszymi.
 
+  // Zlozonosc Czasowa: O(sqrt(n))
+  // Zlozonosc Pamieciowa: O(1)
   public static boolean czyPierwsza(int n) {
+
+    if (n < 2) {
+      return false;
+    }
 
     if ((n % 2) == 0 && n != 2) {
       return false;
@@ -56,6 +62,8 @@ public class Main {
     return true;
   }
 
+  // Zlozonosc Czasowa: O(n * sqrt(max_index))
+  // Zlozonosc Pamieciowa: O(k), gdzie k to liczba znakow na pozycjach pierwszych
   public static ArrayList<Character> znaki(final String napis) {
 
     ArrayList<Character> znaki = new ArrayList<Character>();
@@ -72,7 +80,7 @@ public class Main {
   public static void test1() {
     String napis = "Kaczka lubi wiosne.";
     ArrayList<Character> wynik =
-        new ArrayList<Character>(Arrays.asList('a', 'c', 'z', 'a', 'l', ' ', 'i', 'e'));
+        new ArrayList<Character>(Arrays.asList('c', 'z', 'a', 'l', ' ', 'i', 'e'));
     assert wynik.equals(znaki(napis));
   }
 

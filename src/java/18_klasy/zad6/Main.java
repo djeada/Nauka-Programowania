@@ -46,17 +46,17 @@ Iloraz A / B: -3.5 + 0.5i
 */
 import java.util.*;
 
-public class Macierz {
+public class Main {
 
   private ArrayList<ArrayList<Integer>> macierz = new ArrayList<ArrayList<Integer>>();
 
-  public Macierz() {}
+  public Main() {}
 
-  public Macierz(final ArrayList<ArrayList<Integer>> _macierz) {
+  public Main(final ArrayList<ArrayList<Integer>> _macierz) {
     this.macierz = new ArrayList<ArrayList<Integer>>(_macierz);
   }
 
-  public Macierz(Macierz innaMacierz) {
+  public Main(Main innaMacierz) {
     this.macierz = innaMacierz.macierz;
   }
 
@@ -89,14 +89,14 @@ public class Macierz {
     }
   }
 
-  public Macierz dodaj(final Macierz innaMacierz) {
+  public Main dodaj(final Main innaMacierz) {
 
     if (wiersze() != innaMacierz.wiersze() || kolumny() != innaMacierz.kolumny()) {
       throw new IllegalArgumentException("Wymiary macierzy musza byc jednakowe.");
     }
 
-    Macierz pom =
-        new Macierz(
+    Main pom =
+        new Main(
             new ArrayList<ArrayList<Integer>>(
                 Collections.nCopies(
                     wiersze(), new ArrayList<Integer>(Collections.nCopies(kolumny(), 0)))));
@@ -107,17 +107,17 @@ public class Macierz {
       }
     }
 
-    return new Macierz(pom);
+    return new Main(pom);
   }
 
-  public Macierz odejmij(final Macierz innaMacierz) {
+  public Main odejmij(final Main innaMacierz) {
 
     if (wiersze() != innaMacierz.wiersze() || kolumny() != innaMacierz.kolumny()) {
       throw new IllegalArgumentException("Wymiary macierzy musza byc jednakowe.");
     }
 
-    Macierz pom =
-        new Macierz(
+    Main pom =
+        new Main(
             new ArrayList<ArrayList<Integer>>(
                 Collections.nCopies(
                     wiersze(), new ArrayList<Integer>(Collections.nCopies(kolumny(), 0)))));
@@ -128,10 +128,10 @@ public class Macierz {
       }
     }
 
-    return new Macierz(pom);
+    return new Main(pom);
   }
 
-  public Macierz pomnoz(final Macierz innaMacierz) {
+  public Main pomnoz(final Main innaMacierz) {
 
     if (kolumny() != innaMacierz.wiersze()) {
       throw new IllegalArgumentException(
@@ -143,8 +143,8 @@ public class Macierz {
 
     final int p = innaMacierz.kolumny();
 
-    Macierz pom =
-        new Macierz(
+    Main pom =
+        new Main(
             new ArrayList<ArrayList<Integer>>(
                 Collections.nCopies(n, new ArrayList<Integer>(Collections.nCopies(p, 0)))));
 
@@ -155,7 +155,7 @@ public class Macierz {
         }
       }
     }
-    return new Macierz(pom);
+    return new Main(pom);
   }
 
   public void wypisz() {
@@ -169,31 +169,31 @@ public class Macierz {
     }
   }
 
-  public boolean equalsTo(final Macierz p1, final Macierz p2) {
+  public boolean equalsTo(final Main p1, final Main p2) {
     return p1.macierz == p2.macierz;
   }
 
-  public boolean notEqualsTo(final Macierz p1, final Macierz p2) {
+  public boolean notEqualsTo(final Main p1, final Main p2) {
     return p1.macierz != p2.macierz;
   }
 
   public static void main(String[] args) {
 
-    Macierz macierzA =
-        new Macierz(
+    Main macierzA =
+        new Main(
             new ArrayList<ArrayList<Integer>>(
                 Arrays.asList(new ArrayList<Integer>(Arrays.asList(1, -2, 3)))));
-    Macierz macierzB =
-        new Macierz(
+    Main macierzB =
+        new Main(
             new ArrayList<ArrayList<Integer>>(
                 Arrays.asList(new ArrayList<Integer>(Arrays.asList(8, 9, -5)))));
 
     var suma = macierzA.dodaj(macierzB);
     var roznica = macierzA.odejmij(macierzB);
 
-    System.out.print("Macierz A \n");
+    System.out.print("Main A \n");
     macierzA.wypisz();
-    System.out.print("Macierz B \n");
+    System.out.print("Main B \n");
     macierzB.wypisz();
     System.out.print("\n");
     System.out.print("suma: \n");
@@ -204,11 +204,11 @@ public class Macierz {
     System.out.print("\n");
 
     macierzA =
-        new Macierz(
+        new Main(
             new ArrayList<ArrayList<Integer>>(
                 Arrays.asList(new ArrayList<Integer>(Arrays.asList(1, 2, 3)))));
     macierzB =
-        new Macierz(
+        new Main(
             new ArrayList<ArrayList<Integer>>(
                 Arrays.asList(
                     new ArrayList<Integer>(Arrays.asList(4)),
@@ -218,9 +218,9 @@ public class Macierz {
     var iloczynAB = macierzA.pomnoz(macierzB);
     var iloczynBA = macierzB.pomnoz(macierzA);
 
-    System.out.print("Macierz A \n");
+    System.out.print("Main A \n");
     macierzA.wypisz();
-    System.out.print("Macierz B \n");
+    System.out.print("Main B \n");
     macierzB.wypisz();
     System.out.print("\n");
     System.out.print("iloczyn A*B: \n");

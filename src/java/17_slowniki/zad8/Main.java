@@ -37,6 +37,8 @@ import java.util.Map.Entry;
 
 public class Main {
 
+  // Zlozonosc Czasowa: O(n), gdzie n to dlugosc napisu
+  // Zlozonosc Pamieciowa: O(k), gdzie k to liczba unikalnych znakow
   public static Character najczesciejWystepujacyZnakV1(String slowo) {
 
     Map<Character, Integer> counter = new HashMap<>();

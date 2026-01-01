@@ -37,6 +37,9 @@ public class Main {
   // Otrzymujesz napis reprezentajacy zdanie.
   // Zwroc liste skladajaca sie ze slow zdania.
   // Znaki interpunkcyjne nie sa liczone jako slowa.
+
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String wyczysc(String napis) {
     napis = napis.trim();
 

@@ -39,6 +39,8 @@ Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
 */
 public class Main {
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu
   public static int silniaV1(int n) {
 
     if (n == 0 || n == 1) {

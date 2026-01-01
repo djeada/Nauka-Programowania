@@ -44,14 +44,14 @@ Pole części wspólnej: 6
 ```
 
 */
-public class Prostokat {
+public class Main {
 
   private double lewo;
   private double prawo;
   private double gora;
   private double dol;
 
-  public Prostokat(double _lewo, double _prawo, double _gora, double _dol) {
+  public Main(double _lewo, double _prawo, double _gora, double _dol) {
     this.lewo = _lewo;
     this.prawo = _prawo;
     this.gora = _gora;
@@ -74,7 +74,7 @@ public class Prostokat {
     return dol;
   }
 
-  public final double poleCzesciWspolnej(Prostokat innyProstokat) {
+  public final double poleCzesciWspolnej(Main innyProstokat) {
     double poleX =
         Math.max(
             0.00,
@@ -86,16 +86,16 @@ public class Prostokat {
   }
 
   public static void test1() {
-    Prostokat prostokatA = new Prostokat(2, 5, 7, 2);
-    Prostokat prostokatB = new Prostokat(3, 6, 9, 4);
+    Main prostokatA = new Main(2, 5, 7, 2);
+    Main prostokatB = new Main(3, 6, 9, 4);
     double wynik = 6.00;
 
     assert prostokatA.poleCzesciWspolnej(prostokatB) == wynik;
   }
 
   public static void test2() {
-    Prostokat prostokatA = new Prostokat(-9.5, 10.5, 6, 2);
-    Prostokat prostokatB = new Prostokat(-4.5, 2.3, 3.8, -3.3);
+    Main prostokatA = new Main(-9.5, 10.5, 6, 2);
+    Main prostokatB = new Main(-4.5, 2.3, 3.8, -3.3);
     double wynik = 12.24;
 
     assert Math.abs(prostokatA.poleCzesciWspolnej(prostokatB) - wynik) < 0.01;

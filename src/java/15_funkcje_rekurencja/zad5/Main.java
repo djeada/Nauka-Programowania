@@ -44,6 +44,8 @@ Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomian
 public class Main {
   // Liczba Fibonacciego.
 
+  // Zlozonosc Czasowa: O(2^n) - bez memoizacji
+  // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu
   public static int fibonnaciV1(int n) {
 
     if (n == 0 || n == 1) {

@@ -40,6 +40,8 @@ public class Main {
   // sie z liczby kolumn i wierszy rownej otrzymanej liczbie
   // ktorej kazdy element jest iloczynem jego wspolrzednych.
 
+  // Zlozonosc Czasowa: O(n^2)
+  // Zlozonosc Pamieciowa: O(n^2)
   public static ArrayList<ArrayList<Integer>> macierz(int n) {
 
     ArrayList<ArrayList<Integer>> macierz = new ArrayList<ArrayList<Integer>>();

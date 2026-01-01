@@ -36,6 +36,8 @@ public class Main {
   // na odpowiadajace im numery w tablicy ASCII. Podmien
   // otrzymany napis na uzyskane numery oddzielone przecinkami.
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String zamienV1(String napis) {
 
     if (napis.length() == 0) {

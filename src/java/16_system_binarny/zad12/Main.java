@@ -41,6 +41,8 @@ Jedna liczba naturalna: długość najdłuższego „gapu”.
 public class Main {
   // Znajdz dlugosc najdluzszego ciagu zer w liczbie binarnej.
 
+  // Zlozonosc Czasowa: O(log n)
+  // Zlozonosc Pamieciowa: O(1)
   public static int najdluzszyCiagZer(int liczba) {
     if (liczba == 0) {
       return 1;

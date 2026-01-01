@@ -41,6 +41,8 @@ public class Main {
     hanoiWew(n - 1, c, b, a, wynik);
   }
 
+  // Zlozonosc Czasowa: O(2^n)
+  // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu
   public static ArrayList<Pair<Character, Character>> hanoi(int n) {
     ArrayList<Pair<Character, Character>> wynik = new ArrayList<Pair<Character, Character>>();
     hanoiWew(n, 'A', 'B', 'C', wynik);

@@ -33,6 +33,9 @@ L?t?rnik
 */
 public class Main {
   // Otrzymujesz napis. Zamien litery a na znaki zapytania.
+
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String zamienV1(String napis) {
 
     String wynik = "";
@@ -48,6 +51,8 @@ public class Main {
     return wynik;
   }
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(1)
   public static String zamienV2(String napis) {
     return napis.replaceAll("a", "?");
   }

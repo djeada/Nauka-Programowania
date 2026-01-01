@@ -61,6 +61,8 @@ public class Main {
     }
   }
 
+  // Zlozonosc Czasowa: O(n), gdzie n to liczba par
+  // Zlozonosc Pamieciowa: O(n)
   public static void wypelnijSlownik(
       final ArrayList<Pair<String, Integer>> lista, HashMap<String, Integer> slownik) {
 

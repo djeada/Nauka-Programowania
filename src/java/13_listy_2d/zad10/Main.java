@@ -44,6 +44,8 @@ public class Main {
   // Tzn. zamien miejscami ostatnia kolumne, z ostatnim wierszem,
   // przedostatnia kolumne z przedostatnim wierszem itd.
 
+  // Zlozonosc Czasowa: O(n^2)
+  // Zlozonosc Pamieciowa: O(1)
   public static void obroc(ArrayList<ArrayList<Integer>> macierz) {
 
     int N = macierz.size();
@@ -83,7 +85,7 @@ public class Main {
                 new ArrayList<Integer>(Arrays.asList(9, 6, 3))));
 
     obroc(macierz);
-    assert macierz == wynik;
+    assert macierz.equals(wynik);
   }
 
   public static void main(String[] args) {

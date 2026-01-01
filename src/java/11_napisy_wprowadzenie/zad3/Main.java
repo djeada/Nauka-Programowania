@@ -41,8 +41,8 @@ public class Main {
   // Policz z ilu slow sklada sie zdanie.
   // Znaki interpunkcyjne nie sa liczone jako slowa.
 
-  // Zlozonosc Czasowa O(n)
-  // Zlozonosc Pamieciowa O(1)
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(1)
   public static int policzSlowaV1(String slowo) {
 
     boolean spacja = true;

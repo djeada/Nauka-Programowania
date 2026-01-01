@@ -46,8 +46,8 @@ Jak w przykładzie.
 **Wyjście:**
 
 ```
-Wektor A: (-3, -3, -3)
-Wektor B: (5, 5, 5)
+Main A: (-3, -3, -3)
+Main B: (5, 5, 5)
 Suma wektorów: (2, 2, 2)
 Różnica wektorów A - B: (-8, -8, -8)
 Iloczyn skalarny: -45
@@ -57,31 +57,31 @@ Iloczyn wektorowy: (0, 0, 0)
 */
 import java.text.MessageFormat;
 
-public class Wektor {
+public class Main {
 
   private double x;
   private double y;
   private double z;
 
-  public Wektor() {
+  public Main() {
     this(0, 0, 0);
   }
 
-  public Wektor(double _x) {
+  public Main(double _x) {
     this(_x, 0, 0);
   }
 
-  public Wektor(double _x, double _y) {
+  public Main(double _x, double _y) {
     this(_x, _y, 0);
   }
 
-  public Wektor(double _x, double _y, double _z) {
+  public Main(double _x, double _y, double _z) {
     this.x = _x;
     this.y = _y;
     this.z = _z;
   }
 
-  public Wektor(Wektor innyWektor) {
+  public Main(Main innyWektor) {
     this.x = innyWektor.getX();
     this.y = innyWektor.getY();
     this.z = innyWektor.getZ();
@@ -119,22 +119,22 @@ public class Wektor {
     return Math.sqrt(kwadratX + kwadratY + kwadratZ);
   }
 
-  public static Wektor suma(final Wektor w1, final Wektor w2) {
-    Wektor w3 = new Wektor(w1.x + w2.x, w1.y + w2.y, w1.z + w2.z);
-    return new Wektor(w3);
+  public static Main suma(final Main w1, final Main w2) {
+    Main w3 = new Main(w1.x + w2.x, w1.y + w2.y, w1.z + w2.z);
+    return new Main(w3);
   }
 
-  public static Wektor roznica(final Wektor w1, final Wektor w2) {
-    Wektor w3 = new Wektor(w1.x - w2.x, w1.y - w2.y, w1.z - w2.z);
-    return new Wektor(w3);
+  public static Main roznica(final Main w1, final Main w2) {
+    Main w3 = new Main(w1.x - w2.x, w1.y - w2.y, w1.z - w2.z);
+    return new Main(w3);
   }
 
-  public static Wektor iloczyn(final Wektor w1, final Wektor w2) {
+  public static Main iloczyn(final Main w1, final Main w2) {
     double x = w1.y * w2.z - w1.z * w2.y;
     double y = w1.z * w2.x - w1.x * w2.z;
     double z = w1.x * w2.y - w1.y * w2.x;
 
-    return new Wektor(x, y, z);
+    return new Main(x, y, z);
   }
 
   @Override
@@ -143,22 +143,22 @@ public class Wektor {
     return MessageFormat.format("({0}, {1}, {2})", this.x, this.y, this.z);
   }
 
-  public boolean equalsTo(final Wektor w1, final Wektor w2) {
+  public boolean equalsTo(final Main w1, final Main w2) {
     return w1.x == w2.x && w1.y == w2.y && w1.z == w2.z;
   }
 
-  public boolean notEqualsTo(final Wektor w1, final Wektor w2) {
+  public boolean notEqualsTo(final Main w1, final Main w2) {
     return w1.x != w2.x || w1.y != w2.y || w1.z != w2.z;
   }
 
   public static void main(String[] args) {
 
-    Wektor wektorA = new Wektor(5, 5, 5);
-    Wektor wektorB = new Wektor(-3, -3, -3);
+    Main wektorA = new Main(5, 5, 5);
+    Main wektorB = new Main(-3, -3, -3);
 
-    var suma = Wektor.suma(wektorA, wektorB);
-    var roznica = Wektor.roznica(wektorA, wektorB);
-    var iloczynWek = Wektor.iloczyn(wektorA, wektorB);
+    var suma = Main.suma(wektorA, wektorB);
+    var roznica = Main.roznica(wektorA, wektorB);
+    var iloczynWek = Main.iloczyn(wektorA, wektorB);
 
     System.out.print("Dla wektorow A: ");
     System.out.print(wektorA);

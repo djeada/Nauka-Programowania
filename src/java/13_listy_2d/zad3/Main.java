@@ -52,6 +52,9 @@ public class Main {
   // ktorej pierwsza kolumna sklada sie z elementow pierwszej
   // listy, a druga drugiej. Jesli otrzymane listy nie sa rownej
   // dlugosci zwroc pusta macierz.
+  
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   private static class Pair<T1, T2> {
     public T1 first;
     public T2 second;

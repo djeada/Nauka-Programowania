@@ -49,17 +49,23 @@ import java.util.*;
 public class Main {
   // Otrzymujesz napis oraz liczbe k.
   // a) wypisz poziomo co k-ty znak. Znaki powinny byc oddzielone spacjami.
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(1)
   public static void wypiszPoziomo(final String napis, int k) {
 
     for (int i = 0; i < napis.length(); i += k) {
+      if (i > 0) {
+        System.out.print(" ");
+      }
       System.out.print(napis.charAt(i));
-      System.out.print(", ");
     }
 
     System.out.print("\n");
   }
 
   // b) wypisz pionowo co k-ty znak. Znaki powinny byc oddzielone enterami.
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(1)
   public static void wypiszPionowo(final String napis, int k) {
     for (int i = 0; i < napis.length(); i += k) {
       System.out.print(napis.charAt(i));

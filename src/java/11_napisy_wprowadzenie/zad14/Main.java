@@ -35,6 +35,8 @@ public class Main {
   // Otrzymujesz liczbe n. Zwroc napis skladajacy
   // sie z liczb naturalnych od 1 do n.
 
+  // Zlozonosc Czasowa: O(n * log(n))
+  // Zlozonosc Pamieciowa: O(n * log(n))
   public static String liczby(int n) {
     String wynik = "";
 

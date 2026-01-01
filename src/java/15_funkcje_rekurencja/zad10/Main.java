@@ -39,6 +39,8 @@ public class Main {
     return sb.toString();
   }
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu
   public static void oblicz(int n, Pair<Integer, Integer> wyniki, String s) {
 
     if (n <= 0) {

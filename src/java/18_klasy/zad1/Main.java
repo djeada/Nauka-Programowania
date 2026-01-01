@@ -42,13 +42,15 @@ Pole koła: 28.2743
 */
 import java.text.MessageFormat;
 
-public class Kolo {
+// Zlozonosc Czasowa: O(1) dla wszystkich metod
+// Zlozonosc Pamieciowa: O(1)
+public class Main {
 
-  public Kolo() {
+  public Main() {
     this(1);
   }
 
-  public Kolo(double r) {
+  public Main(double r) {
     if (r <= 0) {
       System.out.print("Promien nie moze byc liczba ujemna.\n");
       System.out.print("Promien ustawiono na 1.\n");
@@ -90,7 +92,7 @@ public class Kolo {
 
   public static void main(String[] args) {
 
-    Kolo kolo = new Kolo(3);
+    Main kolo = new Main(3);
     System.out.print(kolo);
   }
 }

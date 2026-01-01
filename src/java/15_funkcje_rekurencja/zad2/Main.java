@@ -37,6 +37,8 @@ Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielony
 */
 public class Main {
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu
   public static int sumaV1(int N) {
 
     if (N <= 0) {

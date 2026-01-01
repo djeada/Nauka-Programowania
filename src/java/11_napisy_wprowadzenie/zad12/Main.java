@@ -34,6 +34,8 @@ Alamakota
 
 public class Main {
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(1)
   public static String usunSpacjeV1(String zdanie) {
     return zdanie.replaceAll("\\s", "");
   }

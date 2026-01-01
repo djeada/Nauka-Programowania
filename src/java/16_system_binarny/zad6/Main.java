@@ -50,6 +50,9 @@ Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`)
 */
 public class Main {
   // Konwersja miedzy dowolnymi systemami liczbowymi.
+  
+  // Zlozonosc Czasowa: O(n), gdzie n to dlugosc napisu
+  // Zlozonosc Pamieciowa: O(1)
   public static int naDec(String liczba, int podstawa) {
     int wartoscDec = 0;
 

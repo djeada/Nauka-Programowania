@@ -47,6 +47,8 @@ public class Main {
   // zwroc te, ktore wystepuje w zdaniu jako pierwsze.
   // Znaki interpunkcyjne nie sa liczone jako slowa.
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String wyczysc(String napis) {
     napis = napis.trim();
 

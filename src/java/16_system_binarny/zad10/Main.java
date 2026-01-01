@@ -37,6 +37,8 @@ public class Main {
   // Policz ile bitow nalezy odwrocic,
   // aby zamien liczbe A w liczbe B.
 
+  // Zlozonosc Czasowa: O(log n)
+  // Zlozonosc Pamieciowa: O(1)
   public static int bityDoZmiany(int liczbaA, int liczbaB) {
 
     int n = liczbaA ^ liczbaB;

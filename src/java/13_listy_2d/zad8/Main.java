@@ -41,6 +41,8 @@ public class Main {
   // Otrzymujesz liste 2d. Zbierz spiralnie elementy
   // otrzymanej listy i zapisz je w zwyklej liscie.
 
+  // Zlozonosc Czasowa: O(n * m)
+  // Zlozonosc Pamieciowa: O(n * m)
   public static ArrayList<Integer> spiralaV1(ArrayList<ArrayList<Integer>> macierz) {
     ArrayList<Integer> wynik = new ArrayList<Integer>();
 

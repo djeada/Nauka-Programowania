@@ -40,7 +40,42 @@ Prawda
 * Najprościej: porównaj posortowane litery albo słowniki zliczeń znaków.
 
 */
+import java.util.*;
+
 public class Main {
+    
+    // Sprawdza czy dwa slowa sa anagramami.
+    // Zlozonosc Czasowa: O(n log n)
+    // Zlozonosc Pamieciowa: O(n)
+    public static boolean czyAnagram(String slowo1, String slowo2) {
+        if (slowo1.length() != slowo2.length()) {
+            return false;
+        }
+        
+        char[] tab1 = slowo1.toLowerCase().toCharArray();
+        char[] tab2 = slowo2.toLowerCase().toCharArray();
+        
+        Arrays.sort(tab1);
+        Arrays.sort(tab2);
+        
+        return Arrays.equals(tab1, tab2);
+    }
+    
+    public static void test1() {
+        assert czyAnagram("ula", "lua") == true;
+    }
+    
+    public static void test2() {
+        assert czyAnagram("kara", "arak") == true;
+    }
+    
+    public static void test3() {
+        assert czyAnagram("kot", "pies") == false;
+    }
+    
     public static void main(String[] args) {
+        test1();
+        test2();
+        test3();
     }
 }

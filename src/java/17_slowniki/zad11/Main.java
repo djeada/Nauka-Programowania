@@ -44,6 +44,8 @@ import java.util.*;
 
 public class Main {
 
+  // Zlozonosc Czasowa: O(n log n), gdzie n to liczba kluczy
+  // Zlozonosc Pamieciowa: O(n)
   public static List<String> sortujWzgledemKluczyV1(Map<String, Integer> slownik) {
 
     List<String> lista = new ArrayList<String>();

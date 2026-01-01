@@ -52,6 +52,8 @@ public class Main {
   // jednym wierszu nizej. Trzy nastepne znajduja sie w tych samych
   // kolumnach co trzy pierwsze i dokladnie dwie wiersze nizej.
 
+  // Zlozonosc Czasowa: O(n * m)
+  // Zlozonosc Pamieciowa: O(1)
   public static int klepsydraV1(ArrayList<ArrayList<Integer>> macierz) {
     int wynik = Integer.MIN_VALUE;
 

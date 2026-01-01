@@ -29,6 +29,9 @@ public class Main {
   // Otrzymujesz dwie listy n wspolczynnikow wielomianu postaci
   // a_nx^n + a_(n-1)x^(n-1) + ... + a_. Oblicz wartosc wspolczynnikow
   // wielomianu bedacego iloczynem otrzymanych wielomianow.
+  
+  // Zlozonosc Czasowa: O(n * m)
+  // Zlozonosc Pamieciowa: O(n + m)
   public static ArrayList<Integer> iloczyn(ArrayList<Integer> listaA, ArrayList<Integer> listaB) {
     ArrayList<Integer> wynik =
         new ArrayList<Integer>(Collections.nCopies(listaA.size() + listaB.size() - 1, 0));

@@ -36,6 +36,8 @@ import java.util.*;
 public class Main {
   // Odwroc napis.
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String odwrocNapisV1(String slowo) {
 
     char[] in = slowo.toCharArray();
@@ -52,6 +54,8 @@ public class Main {
     return new String(in);
   }
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String odwrocNapisV2(String slowo) {
     return new StringBuilder(slowo).reverse().toString();
   }
