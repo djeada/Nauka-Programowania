@@ -52,7 +52,7 @@ fn main() {
     std::io::stdin().read_line(&mut y).unwrap();
     let y: i32 = y.trim().parse().unwrap();
     
-    // Liczba dni w kazdym miesiacu
+    // Liczba dni w każdym miesiącu
     let przestepny = (y % 400 == 0) || (y % 4 == 0 && y % 100 != 0);
     let dni_w_miesiącach = if przestepny {
         [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]

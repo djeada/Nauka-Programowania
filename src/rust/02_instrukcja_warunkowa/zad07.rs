@@ -65,7 +65,7 @@ p=True q=True L=True R=True EQ=True
 use ::std::*;
 
 fn main() {
-    // Prawo wylaczonego srodka
+    // Prawo wyłączonego środka
     println!("Prawo wyłączonego środka:");
     for &p in &[false, true] {
         let l = p || !p;
@@ -74,7 +74,7 @@ fn main() {
     }
     println!();
 
-    // Prawo niesprzecznosci
+    // Prawo niesprzeczności
     println!("Prawo niesprzeczności:");
     for &p in &[false, true] {
         let l = !(p && !p);
@@ -83,7 +83,7 @@ fn main() {
     }
     println!();
 
-    // Przemiennosc koniunkcji
+    // Przemienność koniunkcji
     println!("Przemienność koniunkcji:");
     for &p in &[false, true] {
         for &q in &[false, true] {
@@ -94,7 +94,7 @@ fn main() {
     }
     println!();
 
-    // Przemiennosc alternatywy
+    // Przemienność alternatywy
     println!("Przemienność alternatywy:");
     for &p in &[false, true] {
         for &q in &[false, true] {
