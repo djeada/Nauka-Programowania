@@ -196,8 +196,8 @@ public class Main {
     a = Double.parseDouble(s.nextLine());
     b = Double.parseDouble(s.nextLine());
     double c = Double.parseDouble(s.nextLine());
-    double m = Double.parseDouble(s.nextLine());
-    double n = Double.parseDouble(s.nextLine());
+    int m = Integer.parseInt(s.nextLine());
+    int n = Integer.parseInt(s.nextLine());
     x = Double.parseDouble(s.nextLine());
     y = a * Math.pow(x, m) + b * Math.pow(x, n) + c - a;
     System.out.printf("%.3f%n", y);
