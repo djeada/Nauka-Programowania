@@ -46,6 +46,7 @@ import java.util.*;
 
 public class Main {
 
+  // Klasa reprezentująca parę (napis, liczba)
   private static class Para implements Comparable<Para> {
     private final String napis;
     private final int liczba;

@@ -44,6 +44,9 @@ import java.util.*;
 
 public class Main {
 
+  // Sortowanie przez scalanie - dzieli listę na połowy i rekurencyjnie sortuje
+  // Złożoność czasowa: O(n log n) - podział logarytmiczny i scalanie liniowe
+  // Złożoność pamięciowa: O(n) - tworzenie pomocniczych list
   public static ArrayList<Integer> sortuj(ArrayList<Integer> lista) {
     if (lista.size() <= 1) {
       return lista;
@@ -68,6 +71,9 @@ public class Main {
     return posortowana;
   }
 
+  // Scala dwie posortowane listy w jedną posortowaną listę
+  // Złożoność czasowa: O(n+m) gdzie n i m to rozmiary list
+  // Złożoność pamięciowa: O(n+m)
   public static ArrayList<Integer> polacz(
       ArrayList<Integer> lewaLista, ArrayList<Integer> prawaLista) {
     ArrayList<Integer> polaczonaLista = new ArrayList<Integer>();

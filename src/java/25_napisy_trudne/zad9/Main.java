@@ -37,6 +37,9 @@ abcd
 import java.util.*;
 
 public class Main {
+  // Znajduje najdłuższy wspólny podnapis dwóch napisów
+  // Złożoność czasowa: O(n*m) gdzie n i m to długości napisów
+  // Złożoność pamięciowa: O(n*m)
   public static String najdluzszyPodnapis(String napis1, String napis2) {
     String wynik = "";
     String wynik_tmp = "";
@@ -73,9 +76,9 @@ public class Main {
   }
 
   public static void test3() {
-    String napis1;
-    String napis2;
-    String wynik;
+    String napis1 = "";
+    String napis2 = "";
+    String wynik = "";
 
     assert (najdluzszyPodnapis(napis1, napis2).equals(wynik));
   }

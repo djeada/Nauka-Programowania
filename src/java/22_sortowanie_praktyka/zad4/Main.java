@@ -40,6 +40,9 @@ import java.util.*;
 
 public class Main {
 
+  // Sortuje listę napisów według ich długości
+  // Złożoność czasowa: O(n log n) - sortowanie porównaniowe
+  // Złożoność pamięciowa: O(1) - sortowanie w miejscu
   public static void sortujWzgledemDlugosci(ArrayList<String> lista) {
     Collections.sort(
         lista,

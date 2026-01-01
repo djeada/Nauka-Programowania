@@ -68,11 +68,17 @@ public class Main {
     }
   }
 
+  // Zwraca ścieżkę do katalogu domowego użytkownika
+  // Złożoność czasowa: O(1)
+  // Złożoność pamięciowa: O(1)
   public static String katalogDomowy() {
     String homeDir = System.getProperty("user.home");
     return homeDir;
   }
 
+  // Rekurencyjnie przeszukuje folder w poszukiwaniu plików o podanej nazwie
+  // Złożoność czasowa: O(n) gdzie n to całkowita liczba plików w drzewie katalogów
+  // Złożoność pamięciowa: O(m) gdzie m to liczba znalezionych plików + głębokość rekursji
   public static List<String> plikiWFolderze(String sciezkaFolderu, String szukanyPlik) {
     List<String> listaSciezek = new ArrayList<>();
     try {
@@ -109,6 +115,9 @@ public class Main {
     return listaSciezek;
   }
 
+  // Wyszukuje plik w katalogu domowym użytkownika
+  // Złożoność czasowa: O(n) gdzie n to liczba plików w katalogu domowym
+  // Złożoność pamięciowa: O(m) gdzie m to liczba znalezionych plików
   public static List<String> sciezkiWSystemie(String szukanyPlik) {
     return plikiWFolderze(katalogDomowy(), szukanyPlik);
   }

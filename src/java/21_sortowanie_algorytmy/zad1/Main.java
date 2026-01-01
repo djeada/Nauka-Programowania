@@ -40,6 +40,9 @@ Algorytm polega na wielokrotnym porównywaniu sąsiednich elementów i zamianie 
 import java.util.*;
 
 public class Main {
+  // Sortowanie bąbelkowe - porównuje sąsiednie elementy i zamienia je miejscami
+  // Złożoność czasowa: O(n²) - dwie zagnieżdżone pętle
+  // Złożoność pamięciowa: O(1) - sortowanie w miejscu
   public static void sortuj(ArrayList<Integer> lista) {
 
     for (int i = 0; i < lista.size(); i++) {

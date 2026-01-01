@@ -42,6 +42,9 @@ Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosn�
 import java.util.*;
 
 public class Main {
+  // Znajduje klucz w cyklicznie posortowanej liście używając zmodyfikowanego wyszukiwania binarnego
+  // Złożoność czasowa: O(log n) - wyszukiwanie binarne
+  // Złożoność pamięciowa: O(1)
   public static int znajdzKlucz(List<Integer> lista, int klucz) {
     int lewo = 0;
     int prawo = lista.size() - 1;

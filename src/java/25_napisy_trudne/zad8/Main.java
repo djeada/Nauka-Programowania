@@ -38,6 +38,9 @@ Rem
 import java.util.*;
 
 public class Main {
+  // Znajduje najdłuższy wspólny przedrostek dla wszystkich napisów z listy
+  // Złożoność czasowa: O(n*m) gdzie n to liczba napisów, m to długość przedrostka
+  // Złożoność pamięciowa: O(m)
   public static String najdluzszyPrzedrostek(List<String> napisy) {
     String wynik = "";
     String wynik_tmp = "";
@@ -71,7 +74,7 @@ public class Main {
 
   public static void test3() {
     List<String> napisy = Arrays.asList("student", "studio", "stress", "lol");
-    String wynik;
+    String wynik = "";
 
     assert (najdluzszyPrzedrostek(napisy).equals(wynik));
   }

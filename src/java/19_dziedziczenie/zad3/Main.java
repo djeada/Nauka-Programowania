@@ -44,8 +44,7 @@ public class Main {
   private static class Zwierz {
 
     public void odglos() {
-      System.out.print("Jestem zwierzem");
-      System.out.print("\n");
+      System.out.println("Zwierz wydaje odgłos: ...");
     }
   }
 
@@ -53,8 +52,7 @@ public class Main {
 
     @Override
     public void odglos() {
-      System.out.print("Miau");
-      System.out.print("\n");
+      System.out.println("Kot wydaje odgłos: Miau!");
     }
   }
 
@@ -62,8 +60,7 @@ public class Main {
 
     @Override
     public void odglos() {
-      System.out.print("Hau");
-      System.out.print("\n");
+      System.out.println("Pies wydaje odgłos: Hau!");
     }
   }
 

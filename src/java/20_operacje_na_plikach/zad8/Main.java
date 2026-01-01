@@ -39,6 +39,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+  // Zwraca rozszerzenie pliku
+  // Złożoność czasowa: O(n) gdzie n to długość nazwy pliku
+  // Złożoność pamięciowa: O(n)
   public static String findExtension(String path) {
     Path object = Paths.get(path);
 
@@ -51,6 +54,9 @@ public class Main {
     return "";
   }
 
+  // Zwraca listę plików o podanym rozszerzeniu w folderze
+  // Złożoność czasowa: O(n) gdzie n to liczba plików w folderze
+  // Złożoność pamięciowa: O(m) gdzie m to liczba plików z pasującym rozszerzeniem
   public static List<String> filesInFolder(String folderPath, String extension) {
     List<String> files = new ArrayList<>();
 
@@ -65,6 +71,9 @@ public class Main {
     return files;
   }
 
+  // Dodaje inicjały na końcu wszystkich plików .txt w folderze
+  // Złożoność czasowa: O(n*m) gdzie n to liczba plików, m to średni rozmiar pliku
+  // Złożoność pamięciowa: O(1)
   public static void addInitials(String folderPath, String data) {
     List<String> paths = filesInFolder(folderPath, ".txt");
 

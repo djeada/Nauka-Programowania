@@ -40,6 +40,9 @@ import java.nio.file.Paths;
 
 public class Main {
 
+  // Sprawdza czy podana ścieżka prowadzi do pliku
+  // Złożoność czasowa: O(1) - operacja systemowa
+  // Złożoność pamięciowa: O(1)
   public static boolean czyPlik(String sciezka) {
     try {
       Path obiekt = Paths.get(sciezka);
@@ -50,6 +53,9 @@ public class Main {
     return false;
   }
 
+  // Sprawdza czy podana ścieżka prowadzi do folderu
+  // Złożoność czasowa: O(1) - operacja systemowa
+  // Złożoność pamięciowa: O(1)
   public static boolean czyFolder(String sciezka) {
     try {
       Path obiekt = Paths.get(sciezka);

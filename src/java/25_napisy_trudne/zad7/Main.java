@@ -38,6 +38,9 @@ pythonpython
 import java.util.*;
 
 public class Main {
+  // Znajduje najdłuższy powtarzający się podnapis
+  // Złożoność czasowa: O(n²) gdzie n to długość napisu
+  // Złożoność pamięciowa: O(n)
   public static String najdluzszePowtorzenie(String napis) {
     String wynik = "";
     String wynik_tmp = "";
@@ -64,7 +67,7 @@ public class Main {
 
   public static void test2() {
     String slowo = "abcdef";
-    String wynik;
+    String wynik = "";
 
     assert (najdluzszePowtorzenie(slowo).equals(wynik));
   }

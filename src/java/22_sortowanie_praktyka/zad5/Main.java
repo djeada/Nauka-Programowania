@@ -55,6 +55,7 @@ import java.util.*;
 
 public class Main {
 
+  // Klasa reprezentująca miasto z nazwą i liczbą mieszkańców
   private static class Miasto implements Comparable<Miasto> {
     private final String nazwa;
     private final int liczba_mieszkancow;

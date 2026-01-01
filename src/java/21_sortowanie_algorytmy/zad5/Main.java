@@ -50,10 +50,16 @@ import java.util.*;
 
 public class Main {
 
+  // Sortowanie szybkie (Quick Sort) - dzieli listę względem pivota
+  // Złożoność czasowa: O(n log n) średnio, O(n²) w najgorszym przypadku
+  // Złożoność pamięciowa: O(log n) - stos rekurencji
   public static void sortuj(ArrayList<Integer> lista) {
     _sortuj(lista, 0, lista.size() - 1);
   }
 
+  // Rekurencyjna funkcja pomocnicza sortowania szybkiego
+  // Złożoność czasowa: O(n log n) średnio
+  // Złożoność pamięciowa: O(log n) - stos rekurencji
   public static void _sortuj(ArrayList<Integer> lista, int indeksPoczatkowy, int indeksKoncowy) {
 
     var indeks = rozdziel(lista, indeksPoczatkowy, indeksKoncowy);
@@ -67,6 +73,9 @@ public class Main {
     }
   }
 
+  // Partycjonuje listę wokół pivota
+  // Złożoność czasowa: O(n) gdzie n to rozmiar partycji
+  // Złożoność pamięciowa: O(1)
   public static int rozdziel(ArrayList<Integer> lista, int lewyIndeks, int prawyIndeks) {
     var piwot = lista.get(lewyIndeks);
 

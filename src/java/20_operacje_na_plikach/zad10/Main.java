@@ -34,10 +34,16 @@ import java.io.IOException;
 import java.nio.file.*;
 
 public class Main {
+  // Zwraca nazwę pliku ze ścieżki
+  // Złożoność czasowa: O(1)
+  // Złożoność pamięciowa: O(1)
   public static String fileName(String path) {
     return Paths.get(path).getFileName().toString();
   }
 
+  // Kopiuje plik do folderu docelowego
+  // Złożoność czasowa: O(m) gdzie m to rozmiar pliku
+  // Złożoność pamięciowa: O(1)
   public static void copyFile(String srcPath, String destFolderPath) {
     String destFilePath = destFolderPath + "/" + fileName(srcPath);
     try {
@@ -47,6 +53,9 @@ public class Main {
     }
   }
 
+  // Zwraca rozszerzenie pliku
+  // Złożoność czasowa: O(n) gdzie n to długość nazwy pliku
+  // Złożoność pamięciowa: O(n)
   public static String findExtension(String path) {
     String ext = "";
     int i = path.lastIndexOf('.');
@@ -56,6 +65,9 @@ public class Main {
     return ext;
   }
 
+  // Kopiuje wszystkie pliki .png z folderu źródłowego do docelowego
+  // Złożoność czasowa: O(n*m) gdzie n to liczba plików, m to średni rozmiar pliku
+  // Złożoność pamięciowa: O(1)
   public static void copyFiles(String srcFolderPath, String destFolderPath) {
     try (DirectoryStream<Path> directoryStream =
         Files.newDirectoryStream(Paths.get(srcFolderPath))) {

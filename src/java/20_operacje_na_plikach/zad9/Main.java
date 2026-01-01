@@ -33,6 +33,9 @@ import java.io.IOException;
 import java.nio.file.*;
 
 public class Main {
+  // Zwraca rozmiar pliku w bajtach
+  // Złożoność czasowa: O(1) - operacja systemowa
+  // Złożoność pamięciowa: O(1)
   public static long fileSize(String path) {
     try {
       return Files.size(Paths.get(path));
@@ -42,6 +45,9 @@ public class Main {
     }
   }
 
+  // Usuwa pliki większe niż 10240 bajtów z folderu
+  // Złożoność czasowa: O(n) gdzie n to liczba plików
+  // Złożoność pamięciowa: O(1)
   public static void removeFiles(String folderPath) {
     try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(Paths.get(folderPath))) {
       for (Path file : directoryStream) {

@@ -41,9 +41,12 @@ import java.util.*;
 
 public class Main {
 
-  public static (ArrayList<Integer> zbiorPotegowy(ArrayList<Integer> lista) {
+  // Generuje zbiór potęgowy - wszystkie możliwe podzbiory listy
+  // Złożoność czasowa: O(2^n * n) gdzie n to długość listy
+  // Złożoność pamięciowa: O(2^n * n) - przechowuje wszystkie podzbiory
+  public static ArrayList<ArrayList<Integer>> zbiorPotegowy(ArrayList<Integer> lista) {
     int N = (int) Math.pow(2, lista.size());
-    ArrayList<Integer> zbiorPotegowy = new ArrayList<Integer>();
+    ArrayList<ArrayList<Integer>> zbiorPotegowy = new ArrayList<ArrayList<Integer>>();
 
     for (int i = 0; i < N; i++) {
       ArrayList<Integer> podzbior = new ArrayList<Integer>();
@@ -65,7 +68,7 @@ public class Main {
     lista.add(2);
     lista.add(1);
 
-    ArrayList<Integer> wynik = new ArrayList<Integer>();
+    ArrayList<ArrayList<Integer>> wynik = new ArrayList<ArrayList<Integer>>();
     wynik.add(new ArrayList<Integer>(Arrays.asList(1, 2)));
     wynik.add(new ArrayList<Integer>(Arrays.asList(1)));
     wynik.add(new ArrayList<Integer>(Arrays.asList(2)));
@@ -81,7 +84,7 @@ public class Main {
     lista.add(5);
     lista.add(3);
 
-    ArrayList<Integer> wynik = new ArrayList<Integer>();
+    ArrayList<ArrayList<Integer>> wynik = new ArrayList<ArrayList<Integer>>();
     wynik.add(new ArrayList<Integer>(Arrays.asList(3)));
     wynik.add(new ArrayList<Integer>(Arrays.asList(3, 5)));
     wynik.add(new ArrayList<Integer>(Arrays.asList(5)));
@@ -93,7 +96,7 @@ public class Main {
   public static void test3() {
     ArrayList<Integer> lista = new ArrayList<Integer>();
 
-    ArrayList<Integer> wynik = new ArrayList<Integer>();
+    ArrayList<ArrayList<Integer>> wynik = new ArrayList<ArrayList<Integer>>();
     wynik.add(new ArrayList<Integer>(Arrays.asList()));
 
     assert(zbiorPotegowy(lista).equals(wynik));

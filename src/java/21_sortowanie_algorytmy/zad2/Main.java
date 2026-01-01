@@ -40,6 +40,9 @@ import java.util.*;
 
 public class Main {
 
+  // Sortowanie przez wybieranie - dla każdej pozycji znajduje najmniejszy element
+  // Złożoność czasowa: O(n²) - dwie zagnieżdżone pętle
+  // Złożoność pamięciowa: O(1) - sortowanie w miejscu
   public static void sortuj(ArrayList<Integer> lista) {
     for (int i = 0; i < lista.size() - 1; i++) {
       var i_min = i;

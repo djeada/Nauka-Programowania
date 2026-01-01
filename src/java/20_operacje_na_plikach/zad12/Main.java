@@ -40,10 +40,16 @@ import java.nio.file.*;
 
 public class Main {
 
+  // Zwraca nazwę pliku ze ścieżki
+  // Złożoność czasowa: O(1)
+  // Złożoność pamięciowa: O(1)
   public static String getFileName(String path) {
     return Paths.get(path).getFileName().toString();
   }
 
+  // Przenosi plik ze ścieżki źródłowej do folderu docelowego
+  // Złożoność czasowa: O(m) gdzie m to rozmiar pliku
+  // Złożoność pamięciowa: O(1)
   public static void moveFile(String srcPath, String destPath) {
     try {
       Files.copy(
@@ -56,6 +62,9 @@ public class Main {
     }
   }
 
+  // Zwraca rozszerzenie pliku
+  // Złożoność czasowa: O(n) gdzie n to długość nazwy pliku
+  // Złożoność pamięciowa: O(n)
   public static String getFileExtension(String path) {
     String fileName = getFileName(path);
     int lastDotIndex = fileName.lastIndexOf(".");
@@ -66,6 +75,9 @@ public class Main {
     }
   }
 
+  // Przenosi wszystkie pliki .csv z folderu źródłowego (rekurencyjnie) do docelowego
+  // Złożoność czasowa: O(n*m) gdzie n to liczba plików, m to średni rozmiar pliku
+  // Złożoność pamięciowa: O(d) gdzie d to głębokość drzewa katalogów
   public static void moveFiles(String srcPath, String destPath) throws IOException {
     Files.walk(Paths.get(srcPath))
         .filter(Files::isRegularFile)

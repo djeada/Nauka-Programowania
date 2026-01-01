@@ -34,6 +34,9 @@ Otrzymujesz listę liczb naturalnych — wysokości słupków. Oblicz, ile jedno
 import java.util.*;
 
 public class Main {
+  // Oblicza ile wody może zgromadzić się między słupkami
+  // Złożoność czasowa: O(n) gdzie n to liczba słupków
+  // Złożoność pamięciowa: O(n) - tablice pomocnicze
   public static int ileWodyV1(ArrayList<Integer> slupki) {
     int n = slupki.size();
     int woda = 0;

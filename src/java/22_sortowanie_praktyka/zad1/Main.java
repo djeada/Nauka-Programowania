@@ -38,7 +38,10 @@ Ala ma kota
 import java.util.*;
 
 public class Main {
-  public static sortujSlowoV1(final String slowo) {
+  // Sortuje znaki w słowie alfabetycznie
+  // Złożoność czasowa: O(n log n) - sortowanie wbudowane
+  // Złożoność pamięciowa: O(n) - tablica znaków
+  public static String sortujSlowoV1(final String slowo) {
     char[] tablica = slowo.toCharArray();
     Arrays.sort(tablica);
     return new String(tablica);

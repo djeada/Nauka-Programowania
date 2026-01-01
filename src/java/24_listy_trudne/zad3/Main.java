@@ -37,6 +37,9 @@ import java.util.*;
 
 public class Main {
 
+  // Znajduje minimalny iloczyn trzech liczb - wersja prosta z sortowaniem
+  // Złożoność czasowa: O(n log n) ze względu na sortowanie
+  // Złożoność pamięciowa: O(1)
   public static int minIloczynV1(ArrayList<Integer> lista) {
 
     int n = lista.size();
@@ -90,10 +93,12 @@ public class Main {
           Math.min(
               wynik,
               Math.min(
-                  lista.get(i + 1) * minLewo.get(i + 1) * minPrawo.get(i + 1),
-                  lista.get(i + 1) * minLewo.get(i + 1) * maksPrawo.get(i + 1),
-                  lista.get(i + 1) * maksLewo.get(i + 1) * minPrawo.get(i + 1),
-                  lista.get(i + 1) * maksLewo.get(i + 1) * maksPrawo.get(i + 1)));
+                  Math.min(
+                      lista.get(i + 1) * minLewo.get(i + 1) * minPrawo.get(i + 1),
+                      lista.get(i + 1) * minLewo.get(i + 1) * maksPrawo.get(i + 1)),
+                  Math.min(
+                      lista.get(i + 1) * maksLewo.get(i + 1) * minPrawo.get(i + 1),
+                      lista.get(i + 1) * maksLewo.get(i + 1) * maksPrawo.get(i + 1))));
 
     return wynik;
   }

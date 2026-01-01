@@ -40,6 +40,9 @@ file
 import java.util.*;
 
 public class Main {
+  // Wyodrębnia nazwę pliku bez rozszerzenia ze ścieżki
+  // Złożoność czasowa: O(n) gdzie n to długość ścieżki
+  // Złożoność pamięciowa: O(n)
   public static String nazwaPlikuV1(String sciezka) {
     return sciezka.replaceAll("(.*[\\\\/]+)?([^\\.]*)(.*)?", "$2");
   }

@@ -60,70 +60,71 @@ Pole powierzchni: 16
 */
 // Zaprojektuj klase Ksztalt oraz klasy pochodne Kolo oraz Kwadrat.
 
+import java.util.Scanner;
+
 public class Main {
 
-  private static interface Ksztalt {
-    double obwod();
-
-    double pole();
+  private static abstract class Ksztalt {
+    abstract double pole();
+    abstract void wypisz();
   }
 
-  private static class Kolo implements Ksztalt {
-    public Kolo(double _promien) {
-      if (_promien <= 0) {
+  private static class Kolo extends Ksztalt {
+    private double promien;
+
+    public Kolo(double promien) {
+      if (promien <= 0) {
         throw new IllegalArgumentException("Wartosc musi byc dodatnia.");
       }
-
-      promien = _promien;
+      this.promien = promien;
     }
 
-    public final double obwod() {
-      return 2 * Math.PI * promien;
-    }
-
-    public final double pole() {
+    public double pole() {
       return Math.PI * Math.pow(promien, 2);
     }
 
-    private double promien;
+    public void wypisz() {
+      System.out.println("Kształt: Koło");
+      System.out.println("Promień: " + (int)promien);
+      System.out.printf("Pole powierzchni: %.4f%n", pole());
+    }
   }
 
-  private static class Kwadrat implements Ksztalt {
-    public Kwadrat(double _bok) {
-      if (_bok <= 0) {
+  private static class Kwadrat extends Ksztalt {
+    private double bok;
+
+    public Kwadrat(double bok) {
+      if (bok <= 0) {
         throw new IllegalArgumentException("Wartosc musi byc dodatnia.");
       }
-
-      bok = _bok;
+      this.bok = bok;
     }
 
-    public final double obwod() {
-      return 4 * bok;
-    }
-
-    public final double pole() {
+    public double pole() {
       return Math.pow(bok, 2);
     }
 
-    private double bok;
-  }
-
-  public static void test1() {
-    Kolo kolo = new Kolo(3);
-    assert Math.abs(kolo.obwod() - 18.85) < 0.01;
-    assert Math.abs(kolo.pole() - 28.27) < 0.01;
-  }
-
-  public static void test2() {
-    Kwadrat kwadrat = new Kwadrat(3);
-    assert Math.abs(kwadrat.obwod() - 12) < 0.01;
-    assert Math.abs(kwadrat.pole() - 9) < 0.01;
+    public void wypisz() {
+      System.out.println("Kształt: Kwadrat");
+      System.out.println("Długość boku: " + (int)bok);
+      System.out.println("Pole powierzchni: " + (int)pole());
+    }
   }
 
   public static void main(String[] args) {
-
-    test1();
-    test2();
+    Scanner scanner = new Scanner(System.in);
+    
+    double r = scanner.nextDouble();
+    double a = scanner.nextDouble();
+    
+    Kolo kolo = new Kolo(r);
+    Kwadrat kwadrat = new Kwadrat(a);
+    
+    kolo.wypisz();
+    System.out.println();
+    kwadrat.wypisz();
+    
+    scanner.close();
   }
 }
 

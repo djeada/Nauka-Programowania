@@ -42,6 +42,9 @@ import java.util.*;
 
 public class Main {
 
+  // Sprawdza czy napis2 jest początkiem napis1
+  // Złożoność czasowa: O(m) gdzie m to długość napis2
+  // Złożoność pamięciowa: O(m)
   public static boolean czyPoczatek(String napis1, String napis2) {
     if (napis1.length() < napis2.length()) return false;
 
@@ -52,7 +55,7 @@ public class Main {
     String napis1 = "Dinozaur jest zly";
     String napis2 = "Dino";
     boolean oczekiwane = true;
-    String wynik = czyPoczatek(napis1, napis2);
+    boolean wynik = czyPoczatek(napis1, napis2);
 
     assert (oczekiwane == wynik);
   }
@@ -61,7 +64,7 @@ public class Main {
     String napis1 = "Dinozaur jest zly";
     String napis2 = "Pies";
     boolean oczekiwane = false;
-    String wynik = czyPoczatek(napis1, napis2);
+    boolean wynik = czyPoczatek(napis1, napis2);
 
     assert (oczekiwane == wynik);
   }

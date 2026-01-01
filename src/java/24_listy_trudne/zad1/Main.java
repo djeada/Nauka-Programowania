@@ -40,6 +40,9 @@ Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — w
 import java.util.*;
 
 public class Main {
+  // Znajduje indeks zera, które po zamianie na 1 maksymalizuje długość podciągu jedynek
+  // Złożoność czasowa: O(n) gdzie n to długość listy
+  // Złożoność pamięciowa: O(1)
   public static int indeksZera(ArrayList<Integer> lista) {
     int licznikJedynek = 0;
     int licznikZer = 0;

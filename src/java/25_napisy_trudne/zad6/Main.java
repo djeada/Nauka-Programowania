@@ -36,6 +36,9 @@ Prawda
 import java.util.*;
 
 public class Main {
+  // Sprawdza czy napis2 jest rotacją napis1
+  // Złożoność czasowa: O(n) gdzie n to długość napisów
+  // Złożoność pamięciowa: O(n) - tworzenie zduplikowanego napisu
   public static boolean czyRotacja(String napis1, String napis2) {
     if (napis1.length() != napis2.length()) return false;
 

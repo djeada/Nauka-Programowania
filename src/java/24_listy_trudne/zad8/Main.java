@@ -37,6 +37,9 @@ import java.util.*;
 
 public class Main {
 
+  // Znajduje maksymalny przychód z podzielenia sznurka - programowanie dynamiczne
+  // Złożoność czasowa: O(n²) gdzie n to długość sznurka
+  // Złożoność pamięciowa: O(n)
   public static int podzielSznurekV1(List<Integer> ceny, int n) {
     if (ceny.size() < n)
       throw new IllegalArgumentException(
@@ -83,13 +86,18 @@ public class Main {
     List<Integer> lista = Arrays.asList(3, 9, 10, 20);
     int n = 5;
 
-    for (int funkcja : Arrays.asList(podzielSznurekV1, podzielSznurekV2)) {
-      try {
-        funkcja(lista, n);
-        assert (false);
-      } catch (Exception e) {
-        assert (true);
-      }
+    try {
+      podzielSznurekV1(lista, n);
+      assert (false);
+    } catch (Exception e) {
+      assert (true);
+    }
+    
+    try {
+      podzielSznurekV2(lista, n);
+      assert (false);
+    } catch (Exception e) {
+      assert (true);
     }
   }
 

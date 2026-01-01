@@ -35,6 +35,9 @@ import java.util.*;
 
 public class Main {
 
+  // Usuwa kolejne powtórzenia tego samego znaku
+  // Złożoność czasowa: O(n) gdzie n to długość napisu
+  // Złożoność pamięciowa: O(n)
   public static String usunPowtorzeniaV1(String napis) {
     String wynik = "";
     char ostatniUsunietyZnak = ' ';
