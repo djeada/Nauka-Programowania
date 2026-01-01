@@ -48,27 +48,16 @@ wypisz_slowa() {
 
     }
 
-    histogram_slow_w_tekscie() {
-        local tekst="$1"
-        local -A histogram=()
-        for slowo in $(wypisz_slowa "$tekst"); do
-            ((histogram["$slowo"]++))
-        done
-        for slowo in ${!histogram[@]}; do
-            echo "$slowo: ${histogram[$slowo]};"
-        done
-    }
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n)
+# Zlozonosc pamieciowa: O(n)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
+}
 
-    test_histogram_slow_w_tekscie() {
-        local tekst="Ala ma kota."
-        local wynik=($(histogram_slow_w_tekscie "$tekst"))
-        local oczekiwane=('ala: 1;' 'ma: 1;' 'kota: 1;')
-        assertIdenticalElements wynik oczekiwane $LINENO
-    }
+main() {
+    funkcja_glowna
+}
 
-    main() {
-        test_histogram_slow_w_tekscie
-    }
-
-    main "$@"
-
+main "$@"

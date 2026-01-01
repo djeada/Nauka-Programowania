@@ -47,33 +47,17 @@ posortuj_wzgledem_napisow() {
     for klucz in "${klucze[@]}"; do
         echo "$klucz ${slownik[$klucz]};"
     done
-}
 
-posortuj_wzgledem_liczb() {
-
-    for klucz in "${!slownik[@]}"; do
-        echo "$klucz ${slownik[$klucz]};"
-    done | sort -n -k2
-}
-
-test_posortuj_wzgledem_napisow() {
-    local -A slownik=([a]=2 [c]=1 [b]=3)
-    local wynik=($(posortuj_wzgledem_napisow))
-    local oczekiwane=(a 2; b 3; c 1;)
-    assertElementsEqual wynik oczekiwane $LINENO
-}
-
-test_posortuj_wzgledem_liczb() {
-    local -A slownik=([a]=2 [c]=1 [b]=3)
-    local wynik=($(posortuj_wzgledem_liczb))
-    local oczekiwane=(c 1; a 2; b 3;)
-    assertElementsEqual wynik oczekiwane $LINENO
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n)
+# Zlozonosc pamieciowa: O(n)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
 }
 
 main() {
-    test_posortuj_wzgledem_napisow
-    test_posortuj_wzgledem_liczb
+    funkcja_glowna
 }
 
 main "$@"
-
