@@ -44,6 +44,8 @@ public class Main {
   // rowny zero, zamien wszystkie elementy w tej samej
   // kolumnie i tym samym wierszu na zera.
 
+  // Zlozonosc Czasowa: O(n * m)
+  // Zlozonosc Pamieciowa: O(n + m)
   public static void wyzerujV1(ArrayList<ArrayList<Integer>> macierz) {
 
     if (macierz.isEmpty()) {

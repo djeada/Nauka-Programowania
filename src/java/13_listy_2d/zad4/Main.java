@@ -50,6 +50,9 @@ public class Main {
   // Otrzymujesz dwie macierze o tych samych wymiarach, zwroc macierz bedaca:
 
   // a) wynikiem dodawania otrzymanych macierzy;
+  
+  // Zlozonosc Czasowa: O(n * m)
+  // Zlozonosc Pamieciowa: O(1)
   public static boolean wymiaryRowne(
       ArrayList<ArrayList<Integer>> macierzA, ArrayList<ArrayList<Integer>> macierzB) {
 
@@ -66,6 +69,8 @@ public class Main {
     return true;
   }
 
+  // Zlozonosc Czasowa: O(n * m)
+  // Zlozonosc Pamieciowa: O(n * m)
   public static ArrayList<ArrayList<Integer>> dodaj(
       ArrayList<ArrayList<Integer>> macierzA, ArrayList<ArrayList<Integer>> macierzB) {
 

@@ -33,6 +33,9 @@ public class Main {
   // Otrzymujesz dwie listy n wspolczynnikow wielomianu postaci
   // a_nx^n + a_(n-1)x^(n-1) + ... + a_. Oblicz wartosc wspolczynnikow
   // wielomianu bedacego suma otrzymanych wielomianow.
+  
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static ArrayList<Integer> suma(ArrayList<Integer> listaA, ArrayList<Integer> listaB) {
 
     assert listaA.size() == listaB.size();

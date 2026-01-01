@@ -59,6 +59,8 @@ public class Main {
     }
   }
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(1)
   public static boolean macierzKwadratowa(final ArrayList<ArrayList<Integer>> macierz) {
     int n = macierz.size();
 
@@ -71,6 +73,8 @@ public class Main {
     return true;
   }
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(1)
   public static Pair<Integer, Integer> przekatne(final ArrayList<ArrayList<Integer>> macierz) {
     int sumaPrzekatnej1 = 0;
     int sumaPrzekatnej2 = 0;

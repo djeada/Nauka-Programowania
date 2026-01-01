@@ -34,6 +34,9 @@ public class Main {
   // a_nx^n + a_(n-1)x^(n-1) + ... + a_0 oraz liczbe k.
   // Oblicz wartosc wspolczynnikow wielomianu bedacego k-ta
   // pochodna otrzymanego wielomianu.
+  
+  // Zlozonosc Czasowa: O(n * k)
+  // Zlozonosc Pamieciowa: O(n)
   public static ArrayList<Integer> pochodna(ArrayList<Integer> lista, int k) {
 
     ArrayList<Integer> wynik = new ArrayList<Integer>();

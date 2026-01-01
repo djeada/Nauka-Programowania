@@ -63,6 +63,8 @@ public class Main {
     }
   }
 
+  // Zlozonosc Czasowa: O(1)
+  // Zlozonosc Pamieciowa: O(1)
   public static Pair<Double, Double> pierwiastki(ArrayList<Double> lista) {
 
     assert lista.size() == 3;

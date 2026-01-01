@@ -30,6 +30,9 @@ public class Main {
   // a_nx^n + a_(n-1)x^(n-1) + ... + a_0 oraz liczbe x.
   // Oblicz wartosc wspolczynnikow wielomianu po
   // przemnozeniu przez liczbe x.
+  
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static ArrayList<Integer> iloczyn(ArrayList<Integer> lista, int x) {
 
     ArrayList<Integer> wynik = new ArrayList<Integer>();
