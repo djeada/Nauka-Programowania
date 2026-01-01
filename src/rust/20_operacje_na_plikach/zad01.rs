@@ -31,4 +31,25 @@ Prawda
 ```
 
 */
-fn main() {}
+
+use std::io;
+use std::path::Path;
+
+// Funkcja sprawdzająca czy ścieżka istnieje
+// Złożoność czasowa: O(1) - wywołanie systemowe
+// Złożoność pamięciowa: O(1)
+fn czy_sciezka_istnieje(sciezka: &str) -> bool {
+    Path::new(sciezka).exists()
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let sciezka = input.trim();
+    
+    if czy_sciezka_istnieje(sciezka) {
+        println!("Prawda");
+    } else {
+        println!("Fałsz");
+    }
+}
