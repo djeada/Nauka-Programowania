@@ -39,7 +39,30 @@ Jedna liczba całkowita: numer dnia w roku.
 ```
 
 */
+import java.util.*;
+
 public class Main {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
+    
+    // Oblicz numer dnia w roku
+
+    Scanner s = new Scanner(System.in);
+    int d = Integer.parseInt(s.nextLine());
+    int m = Integer.parseInt(s.nextLine());
+    int y = Integer.parseInt(s.nextLine());
+
+    int[] days = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    
+    // Check for leap year
+    if ((y % 400 == 0) || (y % 4 == 0 && y % 100 != 0)) {
+      days[2] = 29;
     }
+
+    int dayOfYear = d;
+    for (int i = 1; i < m; i++) {
+      dayOfYear += days[i];
+    }
+
+    System.out.println(dayOfYear);
+  }
 }

@@ -52,11 +52,10 @@ public class Main {
     // Pros uzytkownika o podanie liczby, dopoki
     // nie zostanie podana liczba 7.
 
-    int a = 0;
     Scanner s = new Scanner(System.in);
+    int a = 0;
 
     while (a != 7) {
-      System.out.print("Podaj liczbe: \n");
       a = Integer.parseInt(s.nextLine());
     }
   }
