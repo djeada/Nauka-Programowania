@@ -34,7 +34,7 @@ Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj j
 
 -}
 
-import Data.List (sort)
+import Data.List (sort, intercalate)
 
 -- Sortowanie listy 0/1/2
 -- Złożoność czasowa: O(n log n) lub O(n) przy counting sort
@@ -43,11 +43,6 @@ import Data.List (sort)
 -- Funkcja do formatowania listy liczb
 formatList :: [Int] -> String
 formatList xs = "[" ++ intercalate ", " (map show xs) ++ "]"
-  where
-    intercalate sep = concat . intersperse sep
-    intersperse _ [] = []
-    intersperse _ [x] = [x]
-    intersperse sep (x:xs) = x : sep : intersperse sep xs
 
 main :: IO ()
 main = do

@@ -52,7 +52,7 @@ New_York 8400000
 
 -}
 
-import Data.List (sortBy)
+import Data.List (sortBy, intercalate)
 import Data.Ord (comparing)
 
 -- Sortowanie listy miast
@@ -69,11 +69,6 @@ instance Show Miasto where
 -- Funkcja do formatowania listy miast
 formatList :: [Miasto] -> String
 formatList xs = "[" ++ intercalate ", " (map show xs) ++ "]"
-  where
-    intercalate sep = concat . intersperse sep
-    intersperse _ [] = []
-    intersperse _ [x] = [x]
-    intersperse sep (x:xs) = x : sep : intersperse sep xs
 
 main :: IO ()
 main = do

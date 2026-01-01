@@ -37,7 +37,7 @@ abc
 
 -}
 
-import Data.List (sortBy)
+import Data.List (sortBy, intercalate)
 import Data.Ord (comparing)
 
 -- Sortowanie napisów według długości
@@ -47,11 +47,6 @@ import Data.Ord (comparing)
 -- Funkcja do formatowania listy napisów
 formatList :: [String] -> String
 formatList xs = "[" ++ intercalate ", " (map (\x -> "'" ++ x ++ "'") xs) ++ "]"
-  where
-    intercalate sep = concat . intersperse sep
-    intersperse _ [] = []
-    intersperse _ [x] = [x]
-    intersperse sep (x:xs) = x : sep : intersperse sep xs
 
 main :: IO ()
 main = do

@@ -43,7 +43,7 @@ c 2
 
 -}
 
-import Data.List (sortBy)
+import Data.List (sortBy, intercalate)
 import Data.Ord (comparing)
 
 -- Sortowanie listy par względem kryterium
@@ -57,11 +57,6 @@ formatPair (s, n) = "('" ++ s ++ "', " ++ show n ++ ")"
 -- Funkcja do formatowania listy par
 formatList :: [(String, Int)] -> String
 formatList xs = "[" ++ intercalate ", " (map formatPair xs) ++ "]"
-  where
-    intercalate sep = concat . intersperse sep
-    intersperse _ [] = []
-    intersperse _ [x] = [x]
-    intersperse sep (x:xs) = x : sep : intersperse sep xs
 
 main :: IO ()
 main = do
