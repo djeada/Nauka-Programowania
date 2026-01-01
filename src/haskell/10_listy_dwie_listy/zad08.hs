@@ -37,4 +37,19 @@ Wczytaj dwie listy liczb całkowitych, każda **posortowana rosnąco**. Połącz
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  list1Str <- getLine
+  list2Str <- getLine
+  
+  let parseList str = read str :: [Int]
+  let list1 = parseList list1Str
+  let list2 = parseList list2Str
+  
+  let merge [] ys = ys
+      merge xs [] = xs
+      merge (x:xs) (y:ys)
+        | x < y = x : merge xs (y:ys)
+        | x > y = y : merge (x:xs) ys
+        | otherwise = x : merge xs ys  -- usuń duplikaty
+  
+  print $ merge list1 list2

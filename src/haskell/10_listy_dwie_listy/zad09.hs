@@ -37,4 +37,14 @@ Wczytaj dwie listy liczb całkowitych. Usuń z pierwszej listy wszystkie element
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  list1Str <- getLine
+  list2Str <- getLine
+  
+  let parseList str = read str :: [Int]
+  let list1 = parseList list1Str
+  let list2 = parseList list2Str
+  
+  let result = [x | x <- list1, x `notElem` list2]
+  
+  print result

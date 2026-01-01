@@ -37,4 +37,14 @@ A_xB_x + A_yB_y + A_zB_z
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  listAStr <- getLine
+  listBStr <- getLine
+  
+  let parseList str = read str :: [Int]
+  let listA = parseList listAStr
+  let listB = parseList listBStr
+  
+  let dotProduct = sum $ zipWith (*) listA listB
+  
+  print dotProduct

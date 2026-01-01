@@ -40,4 +40,24 @@ Znajdź medianę zbioru wszystkich elementów z obu list (czyli medianę po „z
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  list1Str <- getLine
+  list2Str <- getLine
+  
+  let parseList str = read str :: [Int]
+  let list1 = parseList list1Str
+  let list2 = parseList list2Str
+  
+  let merge [] ys = ys
+      merge xs [] = xs
+      merge (x:xs) (y:ys)
+        | x < y = x : merge xs (y:ys)
+        | otherwise = y : merge (x:xs) ys
+  
+  let merged = merge list1 list2
+  let len = length merged
+  let median = if even len
+               then fromIntegral (merged !! (len `div` 2 - 1) + merged !! (len `div` 2)) / 2
+               else fromIntegral (merged !! (len `div` 2))
+  
+  print (median :: Double)

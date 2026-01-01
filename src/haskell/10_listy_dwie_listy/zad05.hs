@@ -42,4 +42,16 @@ Oblicz średnią ważoną:
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  valsStr <- getLine
+  weightsStr <- getLine
+  
+  let parseList str = read str :: [Double]
+  let vals = parseList valsStr
+  let weights = parseList weightsStr
+  
+  let weightedSum = sum $ zipWith (*) vals weights
+  let totalWeight = sum weights
+  let avg = weightedSum / totalWeight
+  
+  print avg

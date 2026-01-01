@@ -35,4 +35,21 @@ Jeśli któraś lista jest krótsza, brakujące elementy traktuj jako `0`.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  list1Str <- getLine
+  list2Str <- getLine
+  
+  let parseList str = read str :: [Int]
+  let list1 = parseList list1Str
+  let list2 = parseList list2Str
+  
+  let intercalate sep [] = ""
+      intercalate sep [x] = x
+      intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs
+  
+  let maxLen = max (length list1) (length list2)
+  let list1' = list1 ++ replicate (maxLen - length list1) 0
+  let list2' = list2 ++ replicate (maxLen - length list2) 0
+  let sums = zipWith (+) list1' list2'
+  
+  putStrLn $ intercalate "," $ map show sums

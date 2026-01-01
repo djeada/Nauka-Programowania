@@ -47,4 +47,13 @@ Nie
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
+  
+  let avg = fromIntegral (sum nums) / fromIntegral n :: Double
+  let avgInt = round avg :: Int
+  
+  if fromIntegral avgInt == avg && avgInt `elem` nums
+    then putStrLn "Tak"
+    else putStrLn "Nie"
