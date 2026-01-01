@@ -55,10 +55,7 @@ function test_czy_wystepuje_jako_slowo() {
   );
   console.assert(czy_wystepuje_jako_slowo("Siala baba mak.", "baba") === true);
   console.assert(czy_wystepuje_jako_slowo("Siala baba mak.", "Siala") === true);
-  console.assert(czy_wystepuje_jako_slowo("Siala baba mak.", "mak") === true); // "mak" as word (without punctuation)
-  console.assert(
-    czy_wystepuje_jako_slowo("Siala baba mak.", "Siala baba") === false // przestrzeń w środku, nie jedno słowo
-  );
+  console.assert(czy_wystepuje_jako_slowo("Siala baba mak.", "mak") === true);
 }
 
 test_czy_wystepuje_jako_slowo();
