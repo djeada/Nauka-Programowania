@@ -208,33 +208,48 @@ import java.util.*;
 
 public class Main {
   public static void main(String[] args) {
-    // Pobierz podstawe i wysokosc trojkata i wypisz pole.
-
-    System.out.print("podaj podstawe i wysokosc trojkata: \n");
+    // ZAD-07A: Pobierz podstawe i wysokosc trojkata i wypisz pole.
 
     Scanner s = new Scanner(System.in);
+    double a = Double.parseDouble(s.nextLine());
+    double h = Double.parseDouble(s.nextLine());
+    double P = a * h / 2;
+    System.out.printf("%.3f%n", P);
 
-    float a = Float.parseFloat(s.nextLine());
-    float h = Float.parseFloat(s.nextLine());
+    // ZAD-07B: Pobierz dlogosci bokow prostokata i wypisz pole.
 
-    System.out.print(
-        "pole trojkata o podstawie "
-            + a
-            + " i wysokosci "
-            + h
-            + " jest rowne "
-            + (a * h / 2)
-            + "\n");
+    a = Double.parseDouble(s.nextLine());
+    double b = Double.parseDouble(s.nextLine());
+    P = a * b;
+    System.out.printf("%.3f%n", P);
 
-    // Pobierz dlogosci bokow prostokata i wypisz pole.
+    // ZAD-07C: Pobierz dwie przekatne rombu i wypisz pole.
 
-    System.out.print("podaj dlugosci bokow prostokata:\n");
+    double d1 = Double.parseDouble(s.nextLine());
+    double d2 = Double.parseDouble(s.nextLine());
+    P = d1 * d2 / 2;
+    System.out.printf("%.3f%n", P);
 
-    a = Float.parseFloat(s.nextLine());
+    // ZAD-07D: Pobierz promien kuli i wypisz objetosc.
 
-    float b = Float.parseFloat(s.nextLine());
+    double r = Double.parseDouble(s.nextLine());
+    double V = (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
+    System.out.printf("%.3f%n", V);
 
-    System.out.print("pole prostokata o bokach " + a + " i " + b + " jest rowne " + (a * b) + "\n");
+    // ZAD-07E: Pobierz promien i wysokosc stozka i wypisz objetosc.
+
+    r = Double.parseDouble(s.nextLine());
+    h = Double.parseDouble(s.nextLine());
+    V = (1.0 / 3.0) * Math.PI * Math.pow(r, 2) * h;
+    System.out.printf("%.3f%n", V);
+
+    // ZAD-07F: Pobierz trzy wymiary prostopadloscianu i wypisz objetosc.
+
+    a = Double.parseDouble(s.nextLine());
+    b = Double.parseDouble(s.nextLine());
+    double c = Double.parseDouble(s.nextLine());
+    V = a * b * c;
+    System.out.printf("%.3f%n", V);
   }
 }
 
