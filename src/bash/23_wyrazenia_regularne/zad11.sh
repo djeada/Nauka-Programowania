@@ -37,6 +37,9 @@
 
 source ../assert.sh
 
+# Wyciąga nazwę pliku ze ścieżki (bez rozszerzenia i ścieżki).
+# Złożoność czasowa: O(n), gdzie n to długość ścieżki
+# Złożoność pamięciowa: O(n)
 nazwa_pliku() {
     local sciezka="$1"
     sciezka="${sciezka//\\//}"

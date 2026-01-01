@@ -34,6 +34,9 @@
 
 source ../assert.sh
 
+# Dzieli zdanie na słowa, usuwając znaki interpunkcyjne.
+# Złożoność czasowa: O(n), gdzie n to liczba znaków w zdaniu
+# Złożoność pamięciowa: O(n)
 podziel_na_slowa() {
     local zdanie="$1"
     echo "$zdanie" | tr '[[:punct:]]' '\n' | awk '{$1=$1};1'

@@ -43,6 +43,9 @@
 
 source ../assert.sh
 
+# Sprawdza, czy hasło spełnia wszystkie wymagane warunki.
+# Złożoność czasowa: O(n), gdzie n to długość hasła
+# Złożoność pamięciowa: O(1)
 czy_haslo_poprawne() {
     local haslo=$1
 

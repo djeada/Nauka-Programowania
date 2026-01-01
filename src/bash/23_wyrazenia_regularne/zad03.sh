@@ -36,6 +36,9 @@
 
 source ../assert.sh
 
+# Sprawdza, czy napis składa się wyłącznie z cyfr.
+# Złożoność czasowa: O(n), gdzie n to długość napisu
+# Złożoność pamięciowa: O(1)
 wylacznie_cyfry() {
     local napis=$1
 

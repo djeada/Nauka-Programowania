@@ -55,8 +55,10 @@
 
 source ../assert.sh
 
+# Sprawdza, czy identyfikator użytkownika w adresie email jest poprawny.
+# Złożoność czasowa: O(n), gdzie n to długość identyfikatora
+# Złożoność pamięciowa: O(1)
 poprawny_identyfikator() {
-    local identyfikator="$1"
     local identyfikator="$1"
 
     if [[ "${identyfikator:0:1}" == "." ]] || [[ "${identyfikator: -1}" == "." ]]; then
@@ -77,6 +79,9 @@ poprawny_identyfikator() {
 
 }
 
+# Sprawdza, czy nazwa domenowa w adresie email jest poprawna.
+# Złożoność czasowa: O(n), gdzie n to długość nazwy domenowej
+# Złożoność pamięciowa: O(1)
 poprawna_nazwa_domenowa() {
 
     local nazwa_domenowa="$1"
@@ -106,11 +111,13 @@ poprawna_nazwa_domenowa() {
 
 }
 
+# Sprawdza, czy adres email jest poprawny zgodnie z regułami.
+# Złożoność czasowa: O(n), gdzie n to długość adresu email
+# Złożoność pamięciowa: O(n)
 czy_email_poprawny() {
 
     local email="$1"
 
-    local count=$(echo "$email" | grep -o "@" | wc -l)
     local count=$(echo "$email" | grep -o "@" | wc -l)
     if [ $count -ne 1 ]; then
         echo "false"

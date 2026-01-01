@@ -37,6 +37,9 @@
 
 source ../assert.sh
 
+# Sprawdza, czy słowo (napis_b) występuje jako fragment w zdaniu (napis_a).
+# Złożoność czasowa: O(n), gdzie n to długość napis_a
+# Złożoność pamięciowa: O(1)
 czy_podnapis() {
     local napis_a="$1"
     local napis_b="$2"

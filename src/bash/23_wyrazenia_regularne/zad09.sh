@@ -22,6 +22,11 @@
 #
 # *(jak w treści zadania — długi tekst)*
 
+source ../assert.sh
+
+# Usuwa zakazane słowo z wierszy tekstu (usuwa część od zakazanego słowa do końca wiersza).
+# Złożoność czasowa: O(n*m), gdzie n to liczba wierszy, m to długość wiersza
+# Złożoność pamięciowa: O(n)
 usun_zakazane_slowo() {
     local tekst="$1"
     local zakazane_slowo="$2"
