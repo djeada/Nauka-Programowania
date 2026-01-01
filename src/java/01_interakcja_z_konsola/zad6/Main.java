@@ -204,7 +204,7 @@ public class Main {
 
     Scanner s = new Scanner(System.in);
     double kg = Double.parseDouble(s.nextLine());
-    int g = (int) (kg * 1000);
+    int g = (int) Math.round(kg * 1000);
     System.out.println(g);
 
     // ZAD-06B: Pobierz wielkosc w calach i wypisz ilu centymetrom odpowiada.
