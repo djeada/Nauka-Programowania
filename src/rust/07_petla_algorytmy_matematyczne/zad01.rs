@@ -49,4 +49,24 @@ print(wynik)
 * Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`).
 
 */
-fn main() {}
+
+fn oblicz_srednia() -> f64 {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: i32 = n.trim().parse().unwrap();
+    
+    let mut suma = 0.0;
+    for _ in 0..n {
+        let mut liczba = String::new();
+        std::io::stdin().read_line(&mut liczba).unwrap();
+        let liczba: f64 = liczba.trim().parse().unwrap();
+        suma += liczba;
+    }
+    
+    suma / (n as f64)
+}
+
+fn main() {
+    let wynik = oblicz_srednia();
+    println!("{}", wynik);
+}

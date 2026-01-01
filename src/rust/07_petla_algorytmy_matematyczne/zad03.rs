@@ -72,4 +72,27 @@ print(iloraz(3, 2))
 ```
 
 */
-fn main() {}
+
+// Podpunkt a) mnożenie przy pomocy dodawania
+fn iloczyn(a: i32, b: i32) -> i32 {
+    let mut wynik = 0;
+    for _ in 0..b {
+        wynik += a;
+    }
+    wynik
+}
+
+// Podpunkt b) dzielenie całkowite przy pomocy odejmowania
+fn iloraz(mut a: i32, b: i32) -> i32 {
+    let mut count = 0;
+    while a >= b {
+        a -= b;
+        count += 1;
+    }
+    count
+}
+
+fn main() {
+    println!("{}", iloczyn(3, 2));
+    println!("{}", iloraz(3, 2));
+}
