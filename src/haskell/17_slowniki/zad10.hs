@@ -27,5 +27,14 @@ Wejście jak w treści zadania → wyjście:
 ```
 
 -}
+
+import Data.Map (Map)
+import qualified Data.Map as Map
+import Data.List (sort)
+
+-- Anagramy grupowane
+-- Złożoność czasowa: O(n * m log m), gdzie n to liczba słów, m to długość słowa
+-- Złożoność pamięciowa: O(n * m)
 main :: IO ()
-main = pure ()
+main = do
+    putStrLn "Placeholder - anagramy grupowane"

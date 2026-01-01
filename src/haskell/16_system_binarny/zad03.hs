@@ -140,5 +140,50 @@ Jedna liczba naturalna: `a // b`.
 ```
 
 -}
+
+import Data.Bits (xor, (.&.), shiftL, shiftR)
+
+-- Dodawanie bitowe
+-- Złożoność czasowa: O(log(max(a,b)))
+-- Złożoność pamięciowa: O(1)
+bitwiseAdd :: Int -> Int -> Int
+bitwiseAdd a 0 = a
+bitwiseAdd a b = bitwiseAdd (a `xor` b) ((a .&. b) `shiftL` 1)
+
+-- Odejmowanie bitowe
+-- Złożoność czasowa: O(log(max(a,b)))
+bitwiseSubtract :: Int -> Int -> Int
+bitwiseSubtract a b = bitwiseAdd a (bitwiseAdd (complement b) 1)
+    where complement x = xor x (2^32 - 1)  -- dla 32-bitowych liczb
+
+-- Mnożenie bitowe
+-- Złożoność czasowa: O(log b)
+bitwiseMultiply :: Int -> Int -> Int
+bitwiseMultiply a 0 = 0
+bitwiseMultiply a b
+    | b .&. 1 == 1 = bitwiseAdd a (bitwiseMultiply (a `shiftL` 1) (b `shiftR` 1))
+    | otherwise = bitwiseMultiply (a `shiftL` 1) (b `shiftR` 1)
+
+-- Dzielenie bitowe
+-- Złożoność czasowa: O(log a)
+bitwiseDivide :: Int -> Int -> Int
+bitwiseDivide a b = go a b 0
+    where
+        go dividend divisor quotient
+            | dividend < divisor = quotient
+            | otherwise = 
+                let shift = findShift dividend divisor 0
+                    newQuotient = quotient + (1 `shiftL` shift)
+                    newDividend = dividend - (divisor `shiftL` shift)
+                in go newDividend divisor newQuotient
+        findShift dividend divisor shift
+            | (divisor `shiftL` (shift + 1)) > dividend = shift
+            | otherwise = findShift dividend divisor (shift + 1)
+
+-- Obsługa różnych operacji
 main :: IO ()
-main = pure ()
+main = do
+    a <- readLn :: IO Int
+    b <- readLn :: IO Int
+    -- Domyślnie wykonujemy dodawanie (zad03A)
+    print $ bitwiseAdd a b

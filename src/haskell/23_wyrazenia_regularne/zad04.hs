@@ -37,5 +37,21 @@ Fałsz
 ```
 
 -}
+
+import Data.Char (isUpper, isLower, isDigit)
+
+-- Walidacja hasła
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(1)
+validatePassword :: String -> Bool
+validatePassword pwd = 
+    length pwd >= 8 &&
+    any isUpper pwd &&
+    any isLower pwd &&
+    any isDigit pwd &&
+    any (`elem` "!@#$%^&*()_+-=[]{}|;:,.<>?") pwd
+
 main :: IO ()
-main = pure ()
+main = do
+    password <- getLine
+    putStrLn $ if validatePassword password then "Prawda" else "Fałsz"

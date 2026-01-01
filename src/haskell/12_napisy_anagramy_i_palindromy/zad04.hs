@@ -41,5 +41,22 @@ oko
 \* Porównuj w wersji `lower()`, ale wypisz w oryginalnym brzmieniu z wejścia (tak jak w przykładzie).
 
 -}
+
+import Data.Char (isPunctuation, toLower)
+
+-- Usuwa interpunkcję z brzegów słowa
+stripPunctuation :: String -> String
+stripPunctuation = reverse . dropWhile isPunctuation . reverse . dropWhile isPunctuation
+
+-- Sprawdza czy słowo jest palindromem
+isPalindrome :: String -> Bool
+isPalindrome s = s_lower == reverse s_lower
+    where s_lower = map toLower s
+
+-- Znajduje wszystkie palindromy w zdaniu
 main :: IO ()
-main = pure ()
+main = do
+    zdanie <- getLine
+    let slowa = map stripPunctuation $ words zdanie
+    let palindromy = filter (\w -> not (null w) && isPalindrome w) slowa
+    mapM_ putStrLn palindromy

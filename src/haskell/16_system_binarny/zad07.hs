@@ -42,5 +42,14 @@ Jedna liczba naturalna: wynik po zamianie bitów.
 \* Jeśli liczba ma nieparzystą liczbę bitów, najwyższy (samotny) bit pozostaje bez zmian.
 
 -}
+
+import Numeric (showIntAtBase, showOct)
+import Data.Char (intToDigit)
+
+-- Konwersja na system ósemkowy
+-- Złożoność czasowa: O(log n)
+-- Złożoność pamięciowa: O(log n)
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    putStrLn $ showOct n ""

@@ -41,5 +41,31 @@ Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomian
   `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]`.
 
 -}
+
+import Data.List (intercalate)
+
+-- Oblicza k-tą pochodną wielomianu
+-- Złożoność czasowa: O(n*k), gdzie n to stopień wielomianu
+-- Złożoność pamięciowa: O(n)
+kthDerivative :: [Int] -> Int -> [Int]
+kthDerivative coeffs 0 = coeffs
+kthDerivative [] _ = []
+kthDerivative coeffs k
+    | k < 0 = coeffs
+    | k >= length coeffs = []
+    | otherwise = kthDerivative (derivative coeffs) (k - 1)
+    where
+        derivative [] = []
+        derivative [_] = []
+        derivative cs = zipWith (*) [length cs - 1, length cs - 2 .. 1] (init cs)
+
+-- k-ta pochodna wielomianu (z I/O)
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    coeffs <- map read . words <$> getLine :: IO [Int]
+    k <- readLn :: IO Int
+    let result = kthDerivative coeffs k
+    if null result
+        then putStrLn "[]"
+        else putStrLn $ intercalate " " $ map show result

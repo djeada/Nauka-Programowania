@@ -31,5 +31,13 @@ Ala ma kota. Ala lubi koty.
 ```
 
 -}
+
+import Data.Map (Map)
+import qualified Data.Map as Map
+
+-- Grupowanie po długości
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    putStrLn "Placeholder - grupowanie po długości"

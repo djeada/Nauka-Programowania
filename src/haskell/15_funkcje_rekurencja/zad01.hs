@@ -39,5 +39,20 @@ Jedna liczba całkowita — wartość wielomianu w punkcie `x`.
 \* Użyj schematu Hornera (jest najprostszy i najszybszy).
 
 -}
+
+import Data.List (intercalate)
+
+-- Oblicza wartość wielomianu w punkcie x używając schematu Hornera
+-- Złożoność czasowa: O(n), gdzie n to stopień wielomianu
+-- Złożoność pamięciowa: O(1)
+evaluatePolynomial :: [Int] -> Int -> Int
+evaluatePolynomial [] _ = 0
+evaluatePolynomial coeffs x = foldl (\acc c -> acc * x + c) 0 coeffs
+
+-- Wartość wielomianu w punkcie (z I/O)
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    coeffs <- map read . words <$> getLine :: IO [Int]
+    x <- readLn :: IO Int
+    print $ evaluatePolynomial coeffs x

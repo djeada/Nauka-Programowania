@@ -37,5 +37,19 @@ file
 ```
 
 -}
+
+-- Dzielenie tekstu według separatora
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n)
+splitText :: Char -> String -> [String]
+splitText sep text = 
+    case break (== sep) text of
+        (part, []) -> [part]
+        (part, _:rest) -> part : splitText sep rest
+
 main :: IO ()
-main = pure ()
+main = do
+    sep <- getLine
+    text <- getLine
+    let separator = if null sep then ',' else head sep
+    print $ splitText separator text

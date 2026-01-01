@@ -38,5 +38,15 @@ Barnaba_Barabash
 ```
 
 -}
+
+import Data.Map (Map)
+import qualified Data.Map as Map
+import Data.List (sortBy)
+import Data.Ord (comparing)
+
+-- Sortowanie słownika po wartościach
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    putStrLn "Placeholder - sortowanie słownika po wartościach"

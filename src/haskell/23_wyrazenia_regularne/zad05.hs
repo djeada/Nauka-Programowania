@@ -35,5 +35,20 @@ Terminator2001
 ```
 
 -}
+
+-- Zamiana formatu daty (DD-MM-YYYY -> YYYY-MM-DD)
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n)
+convertDate :: String -> String
+convertDate date = 
+    case break (== '-') date of
+        (day, '-':rest) -> 
+            case break (== '-') rest of
+                (month, '-':year) -> year ++ "-" ++ month ++ "-" ++ day
+                _ -> date
+        _ -> date
+
 main :: IO ()
-main = pure ()
+main = do
+    date <- getLine
+    putStrLn $ convertDate date

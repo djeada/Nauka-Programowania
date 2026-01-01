@@ -40,5 +40,14 @@ cba
 \* Kolejność wypisywania permutacji nie musi być dokładnie taka jak w przykładzie, o ile są wszystkie i bez powtórzeń.
 
 -}
+
+import Data.List (permutations)
+
+-- Generuje wszystkie permutacje słowa
+-- Złożoność czasowa: O(n!), gdzie n to długość słowa
+-- Złożoność pamięciowa: O(n!)
 main :: IO ()
-main = pure ()
+main = do
+    slowo <- getLine
+    let perms = permutations slowo
+    mapM_ putStrLn perms

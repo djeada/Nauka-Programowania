@@ -23,5 +23,12 @@ Dla `a = [4, -3, 2]` i `k = -2` funkcja zwraca:
 `[-8, 6, -4]`
 
 -}
+
+multiplyByScalar :: [Int] -> Int -> [Int]
+multiplyByScalar coeffs k = map (* k) coeffs
+
 main :: IO ()
-main = pure ()
+main = do
+    let coeffs = [4, -3, 2]
+    let k = -2
+    print $ multiplyByScalar coeffs k

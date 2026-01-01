@@ -339,3 +339,12 @@ Cargo.lock
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
 
+# Haskell
+*.hi
+dist/
+dist-newstyle/
+.stack-work/
+*.cabal
+cabal.project.local
+.ghc.environment.*
+

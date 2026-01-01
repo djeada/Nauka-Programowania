@@ -35,5 +35,22 @@ Zepsuty rower.
 \* Licz jako: `suma_dlugosci // liczba_slow` (dzielenie całkowite).
 
 -}
+
+import Data.Char (isPunctuation)
+
+-- Usuwa znaki interpunkcyjne z końców słowa
+-- Złożoność czasowa: O(n), gdzie n to długość słowa
+-- Złożoność pamięciowa: O(n)
+stripPunctuation :: String -> String
+stripPunctuation = reverse . dropWhile isPunctuation . reverse . dropWhile isPunctuation
+
+-- Oblicza średnią długość słów (dzielenie całkowite)
+-- Złożoność czasowa: O(n), gdzie n to długość zdania
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    zdanie <- getLine
+    let slowa = filter (not . null) $ map stripPunctuation $ words zdanie
+    let sumaDlugosci = sum $ map length slowa
+    let liczbaSlow = length slowa
+    print $ sumaDlugosci `div` liczbaSlow

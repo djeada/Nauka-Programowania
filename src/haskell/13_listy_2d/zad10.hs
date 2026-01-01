@@ -37,5 +37,19 @@ Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruch
 ```
 
 -}
+
+import Data.List (intercalate, transpose)
+
+readMatrix :: Int -> IO [[Int]]
+readMatrix n = sequence [map read . words <$> getLine | _ <- [1..n]]
+
+rotate90 :: [[Int]] -> [[Int]]
+rotate90 m = map reverse (transpose m)
+
 main :: IO ()
+main = do
+    n <- readLn :: IO Int
+    macierz <- readMatrix n
+    let obrocona = rotate90 macierz
+    mapM_ (putStrLn . intercalate " " . map show) obrocona
 main = pure ()

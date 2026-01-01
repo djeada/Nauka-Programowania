@@ -38,5 +38,16 @@ Prawda
 \* Jeśli chcesz ignorować wielkość liter, porównuj wersje `lower()`.
 
 -}
+
+import Data.Char (toLower)
+
+-- Sprawdza czy słowo jest palindromem (ignoruje wielkość liter)
+-- Złożoność czasowa: O(n), gdzie n to długość słowa
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    slowo <- getLine
+    let slowo_lower = map toLower slowo
+    if slowo_lower == reverse slowo_lower
+        then putStrLn "Prawda"
+        else putStrLn "Fałsz"

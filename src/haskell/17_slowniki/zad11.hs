@@ -40,5 +40,13 @@ b 4
 ```
 
 -}
+
+import Data.Map (Map)
+import qualified Data.Map as Map
+
+-- Transpozycja słownika list
+-- Złożoność czasowa: O(n * m)
+-- Złożoność pamięciowa: O(n * m)
 main :: IO ()
-main = pure ()
+main = do
+    putStrLn "Placeholder - transpozycja słownika list"

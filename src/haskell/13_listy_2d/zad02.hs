@@ -33,5 +33,11 @@ Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od
 ```
 
 -}
+
+import Data.List (intercalate)
+
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    let macierz = [[i * j | j <- [0..n-1]] | i <- [0..n-1]]
+    mapM_ (putStrLn . intercalate " " . map show) macierz

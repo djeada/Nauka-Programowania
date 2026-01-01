@@ -31,5 +31,12 @@ L?t?rnik
 ```
 
 -}
+
+-- Zamienia wszystkie wystąpienia litery 'a' na '?'
+-- Złożoność czasowa: O(n), gdzie n to długość napisu
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    napis <- getLine
+    let wynik = map (\c -> if c == 'a' then '?' else c) napis
+    putStrLn wynik

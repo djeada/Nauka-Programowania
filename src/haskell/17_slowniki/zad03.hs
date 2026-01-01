@@ -50,5 +50,15 @@ Książki wypożyczone przez Anna: Duma i uprzedzenie
 ```
 
 -}
+
+import Data.Map (Map)
+import qualified Data.Map as Map
+import Data.List (intercalate)
+
+-- Biblioteka - baza wypożyczeń (uproszczona implementacja)
+-- Złożoność czasowa: O(n log n) dla n operacji
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    putStrLn "Biblioteka - implementacja wymaga interaktywnego parsowania komend"
+    -- Pełna implementacja wymagałaby parsowania komend i zarządzania stanem

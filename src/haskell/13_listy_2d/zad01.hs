@@ -35,5 +35,13 @@ Wczytaj `a` i `b`. Wypisz macierz składającą się z `a` identycznych wierszy,
 ```
 
 -}
+
+import Data.List (intercalate)
+
 main :: IO ()
-main = pure ()
+main = do
+    a <- readLn :: IO Int
+    b <- readLn :: IO Int
+    let wiersz = [0..b]
+    let macierz = replicate a wiersz
+    mapM_ (putStrLn . intercalate " " . map show) macierz

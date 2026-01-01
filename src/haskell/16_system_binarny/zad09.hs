@@ -93,5 +93,16 @@ tEST
 ```
 
 -}
+
+import Data.Bits ((.&.), (.|.), xor)
+
+-- Operacje bitowe: AND, OR, XOR
+-- Złożoność czasowa: O(1)
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    a <- readLn :: IO Int
+    b <- readLn :: IO Int
+    putStrLn $ "AND: " ++ show (a .&. b)
+    putStrLn $ "OR: " ++ show (a .|. b)
+    putStrLn $ "XOR: " ++ show (a `xor` b)

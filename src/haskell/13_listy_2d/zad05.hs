@@ -35,5 +35,27 @@ Prawda
 ```
 
 -}
+
+import Data.List (transpose)
+
+readMatrix :: Int -> IO [[Int]]
+readMatrix n = sequence [map read . words <$> getLine | _ <- [1..n]]
+
+isMagicSquare :: [[Int]] -> Bool
+isMagicSquare m = all (== target) sums
+    where
+        n = length m
+        rowSums = map sum m
+        colSums = map sum (transpose m)
+        diag1 = sum [m !! i !! i | i <- [0..n-1]]
+        diag2 = sum [m !! i !! (n-1-i) | i <- [0..n-1]]
+        sums = rowSums ++ colSums ++ [diag1, diag2]
+        target = head rowSums
+
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    macierz <- readMatrix n
+    if isMagicSquare macierz
+        then putStrLn "Prawda"
+        else putStrLn "Fałsz"

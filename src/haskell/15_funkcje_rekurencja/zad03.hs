@@ -41,5 +41,24 @@ Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
 \* Jeśli stopnie są różne, wyrównaj listy „od końca” (od wyrazu wolnego), dopisując zera na początku krótszej.
 
 -}
+
+import Data.List (intercalate)
+
+-- Dodaje dwa wielomiany
+-- Złożoność czasowa: O(max(n, m)), gdzie n, m to stopnie wielomianów
+-- Złożoność pamięciowa: O(max(n, m))
+addPolynomials :: [Int] -> [Int] -> [Int]
+addPolynomials a b = zipWith (+) a' b'
+    where
+        maxLen = max (length a) (length b)
+        a' = replicate (maxLen - length a) 0 ++ a
+        b' = replicate (maxLen - length b) 0 ++ b
+
+-- Suma wielomianów (z I/O)
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    coeffsA <- map read . words <$> getLine :: IO [Int]
+    m <- readLn :: IO Int
+    coeffsB <- map read . words <$> getLine :: IO [Int]
+    putStrLn $ intercalate " " $ map show $ addPolynomials coeffsA coeffsB

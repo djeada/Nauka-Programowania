@@ -50,5 +50,33 @@ Zarobki: 1000
 \* Ostatni średnik może powodować pusty element na końcu — zignoruj go.
 
 -}
+
+-- Dzieli napis po podanym znaku (zachowuje puste elementy)
+-- Złożoność czasowa: O(n), gdzie n to długość napisu
+-- Złożoność pamięciowa: O(n)
+splitOn :: Char -> String -> [String]
+splitOn delimiter str = go str
+  where
+    go [] = [""]
+    go (c:cs)
+        | c == delimiter = "" : go cs
+        | otherwise = case go cs of
+                        (x:xs) -> (c:x):xs
+                        [] -> [[c]]
+
+-- Usuwa białe znaki z początku i końca napisu
+-- Złożoność czasowa: O(n), gdzie n to długość napisu
+-- Złożoność pamięciowa: O(n)
+strip :: String -> String
+strip = reverse . dropWhile (== ' ') . reverse . dropWhile (== ' ')
+
+-- Przetwarza dane pracownika rozdzielone średnikami
+-- Złożoność czasowa: O(n), gdzie n to długość wejścia
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    linia <- getLine
+    let pola = map strip $ splitOn ';' linia
+    let dane = filter (not . null) pola
+    let etykiety = ["Imię", "Nazwisko", "Miejsce urodzenia", "Zawód", "Zarobki"]
+    mapM_ putStrLn $ zipWith (\e d -> e ++ ": " ++ d) etykiety dane

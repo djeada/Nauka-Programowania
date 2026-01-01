@@ -27,5 +27,16 @@ Dla `a = [3, 5, 2]` i `b = [2, -8, 1]` funkcja zwraca:
 \* Jeśli listy mają różne długości, wyrównaj je od końca (od wyrazu wolnego).
 
 -}
+
+addPolynomials :: [Int] -> [Int] -> [Int]
+addPolynomials a b = zipWith (+) a' b'
+    where
+        maxLen = max (length a) (length b)
+        a' = replicate (maxLen - length a) 0 ++ a
+        b' = replicate (maxLen - length b) 0 ++ b
+
 main :: IO ()
-main = pure ()
+main = do
+    let a = [3, 5, 2]
+    let b = [2, -8, 1]
+    print $ addPolynomials a b

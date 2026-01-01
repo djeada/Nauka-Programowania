@@ -35,5 +35,13 @@ Ala ma kota
 \* Spacje też są znakami i biorą udział w sortowaniu (dlatego w przykładzie wyjście zaczyna się od spacji).
 
 -}
+
+import Data.List (sort)
+
+-- Sortowanie znaków w napisie
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    napis <- getLine
+    putStrLn $ sort napis

@@ -40,5 +40,16 @@ Prawda
 \* Najprościej: porównaj posortowane litery albo słowniki zliczeń znaków.
 
 -}
+
+import Data.List (sort)
+
+-- Sprawdza czy dwa słowa są anagramami
+-- Złożoność czasowa: O(n log n), gdzie n to długość słowa
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    s1 <- getLine
+    s2 <- getLine
+    if sort s1 == sort s2
+        then putStrLn "Prawda"
+        else putStrLn "Fałsz"

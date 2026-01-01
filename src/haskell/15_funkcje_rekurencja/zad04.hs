@@ -37,5 +37,23 @@ Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
 ```
 
 -}
+
+import Data.List (intercalate)
+
+-- Mnoży dwa wielomiany (konwolucja)
+-- Złożoność czasowa: O(n*m), gdzie n, m to stopnie wielomianów
+-- Złożoność pamięciowa: O(n+m)
+multiplyPolynomials :: [Int] -> [Int] -> [Int]
+multiplyPolynomials a b = [sum [a !! i * b !! j | i <- [0..length a - 1], 
+                                                     j <- [0..length b - 1], 
+                                                     i + j == k] 
+                            | k <- [0..length a + length b - 2]]
+
+-- Mnożenie wielomianów (z I/O)
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    coeffsA <- map read . words <$> getLine :: IO [Int]
+    m <- readLn :: IO Int
+    coeffsB <- map read . words <$> getLine :: IO [Int]
+    putStrLn $ intercalate " " $ map show $ multiplyPolynomials coeffsA coeffsB

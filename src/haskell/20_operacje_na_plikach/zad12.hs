@@ -34,5 +34,15 @@ D:\Dane\CSV
 \* Jeśli w folderze docelowym istnieje już plik o tej samej nazwie, zadanie wymaga zdefiniowania zachowania (np. zmiana nazwy / pominięcie) — jeśli sprawdzarka tego nie doprecyzowuje, przyjmij jedną spójną strategię w całym rozwiązaniu.
 
 -}
+
+import System.FilePath ((</>), takeFileName, takeDirectory, takeExtension)
+
+-- Operacje na ścieżkach
+-- Złożoność czasowa: O(n), gdzie n to długość ścieżki
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    path <- getLine
+    putStrLn $ "Nazwa pliku: " ++ takeFileName path
+    putStrLn $ "Katalog: " ++ takeDirectory path
+    putStrLn $ "Rozszerzenie: " ++ takeExtension path

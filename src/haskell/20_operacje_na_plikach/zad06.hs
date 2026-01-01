@@ -54,5 +54,15 @@ C:\Users\Username\Documents\tekst.txt
 \* Interpunkcję traktuj jako separator (usuń ją przy wyznaczaniu słów).
 
 -}
+
+import System.IO (writeFile)
+
+-- Zapisuje tekst do pliku
+-- Złożoność czasowa: O(n), gdzie n to długość tekstu
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    filePath <- getLine
+    content <- getLine
+    writeFile filePath content
+    putStrLn "Zapisano do pliku"

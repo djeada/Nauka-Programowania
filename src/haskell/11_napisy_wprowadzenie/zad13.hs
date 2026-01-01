@@ -35,5 +35,22 @@ Słoń
 \* Indeksy: `S(0) ł(1) o(2) ń(3)` → bierz 2 i 3.
 
 -}
+
+-- Sprawdza, czy liczba jest pierwsza
+-- Złożoność czasowa: O(sqrt(n))
+-- Złożoność pamięciowa: O(1)
+czyPierwsza :: Int -> Bool
+czyPierwsza n
+    | n < 2 = False
+    | n == 2 = True
+    | even n = False
+    | otherwise = not $ any (\x -> n `mod` x == 0) [3, 5 .. floor (sqrt (fromIntegral n))]
+
+-- Pobiera znaki z indeksów będących liczbami pierwszymi
+-- Złożoność czasowa: O(n * sqrt(n)), gdzie n to długość napisu
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    napis <- getLine
+    let znaki = [napis !! i | (i, _) <- zip [0..] napis, czyPierwsza i]
+    putStrLn $ "[" ++ concat [if i == 0 then "'" ++ [c] ++ "'" else ", '" ++ [c] ++ "'" | (c, i) <- zip znaki [0..]] ++ "]"

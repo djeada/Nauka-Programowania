@@ -46,5 +46,31 @@ Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **Quick Sor
 \* Wybór pivota ma wpływ na wydajność.
 
 -}
+
+import Text.Read (readMaybe)
+
+-- Mergesort
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
+mergesort :: Ord a => [a] -> [a]
+mergesort [] = []
+mergesort [x] = [x]
+mergesort xs = merge (mergesort left) (mergesort right)
+    where
+        (left, right) = splitAt (length xs `div` 2) xs
+        
+        merge [] ys = ys
+        merge xs [] = xs
+        merge (x:xs) (y:ys)
+            | x <= y = x : merge xs (y:ys)
+            | otherwise = y : merge (x:xs) ys
+
+parseList :: String -> Maybe [Int]
+parseList s = readMaybe s
+
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case parseList input of
+        Just xs -> print $ mergesort xs
+        Nothing -> print ([] :: [Int])

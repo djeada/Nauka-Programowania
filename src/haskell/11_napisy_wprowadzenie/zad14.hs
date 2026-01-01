@@ -31,5 +31,12 @@ Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separato
 ```
 
 -}
+
+-- Tworzy napis z liczb od 1 do n bez separatorów
+-- Złożoność czasowa: O(n * log n) ze względu na konwersję liczb do stringów
+-- Złożoność pamięciowa: O(n * log n)
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    let wynik = concatMap show [1..n]
+    putStrLn wynik

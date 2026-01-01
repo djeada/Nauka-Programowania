@@ -34,5 +34,20 @@ ani nie wybrał się do teatru
 ```
 
 -}
+
+-- Usuwanie HTML tagów (uproszczona wersja)
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n)
+removeHTMLTags :: String -> String
+removeHTMLTags [] = []
+removeHTMLTags ('<':rest) = removeHTMLTags (dropTag rest)
+    where
+        dropTag [] = []
+        dropTag ('>':xs) = xs
+        dropTag (_:xs) = dropTag xs
+removeHTMLTags (c:rest) = c : removeHTMLTags rest
+
 main :: IO ()
-main = pure ()
+main = do
+    html <- getLine
+    putStrLn $ removeHTMLTags html

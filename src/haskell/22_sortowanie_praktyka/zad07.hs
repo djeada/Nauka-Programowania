@@ -33,5 +33,17 @@ Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj j
 ```
 
 -}
+
+import Data.List (sortBy)
+import Data.Ord (comparing)
+
+-- Sortowanie po wielu kryteriach
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    putStrLn "Sortowanie po wielu kryteriach"
+    -- Przykład: sortowanie po długości, potem alfabetycznie
+    let slowa = ["kot", "pies", "dom", "auto"]
+    let sorted = sortBy (\a b -> compare (length a, a) (length b, b)) slowa
+    print sorted

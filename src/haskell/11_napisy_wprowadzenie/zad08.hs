@@ -33,5 +33,12 @@ kota
 ```
 
 -}
+
+-- Dzieli zdanie na słowa i wypisuje każde w osobnej linii
+-- Złożoność czasowa: O(n), gdzie n to długość zdania
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    zdanie <- getLine
+    let slowa = words zdanie
+    mapM_ putStrLn slowa

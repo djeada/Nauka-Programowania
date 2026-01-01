@@ -31,5 +31,13 @@ alA am atok
 ```
 
 -}
+
+-- Odwraca litery w każdym słowie osobno
+-- Złożoność czasowa: O(n), gdzie n to długość zdania
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    zdanie <- getLine
+    let slowa = words zdanie
+    let odwroconeSlowa = map reverse slowa
+    putStrLn $ unwords odwroconeSlowa

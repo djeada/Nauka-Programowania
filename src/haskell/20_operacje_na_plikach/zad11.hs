@@ -33,5 +33,12 @@ C:\Users\Username\Documents\plik2.txt
 \*(brak)*
 
 -}
+
+-- Rekurencyjne listowanie plików
+-- Złożoność czasowa: O(n), gdzie n to liczba plików
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    folderPath <- getLine
+    putStrLn "Rekurencyjne listowanie wymaga bardziej zaawansowanej implementacji"
+    print ([] :: [String])

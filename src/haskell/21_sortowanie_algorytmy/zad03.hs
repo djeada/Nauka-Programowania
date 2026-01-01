@@ -36,5 +36,27 @@ Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w
 \* Działa bardzo dobrze dla danych prawie posortowanych.
 
 -}
+
+import Text.Read (readMaybe)
+
+-- Sortowanie przez wstawianie
+-- Złożoność czasowa: O(n^2)
+-- Złożoność pamięciowa: O(n)
+insertionSort :: Ord a => [a] -> [a]
+insertionSort [] = []
+insertionSort (x:xs) = insert x (insertionSort xs)
+    where
+        insert y [] = [y]
+        insert y (z:zs)
+            | y <= z = y : z : zs
+            | otherwise = z : insert y zs
+
+parseList :: String -> Maybe [Int]
+parseList s = readMaybe s
+
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case parseList input of
+        Just xs -> print $ insertionSort xs
+        Nothing -> print ([] :: [Int])

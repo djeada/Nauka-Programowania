@@ -32,5 +32,16 @@ e
 ```
 
 -}
+
+import Data.Map (Map)
+import qualified Data.Map as Map
+
+-- Zliczanie wystąpień słów
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    text <- getLine
+    let words' = words text
+    let wordCount = Map.fromListWith (+) [(w, 1) | w <- words']
+    print wordCount

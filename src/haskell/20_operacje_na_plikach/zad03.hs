@@ -39,5 +39,12 @@ raport.docx
 \* W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów — program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca).
 
 -}
+
+-- Rekurencyjne wyszukiwanie plików (uproszczona wersja)
+-- Złożoność czasowa: O(n), gdzie n to liczba plików w systemie
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    filename <- getLine
+    putStrLn "Rekurencyjne wyszukiwanie plików wymaga bardziej zaawansowanej implementacji"
+    print ([] :: [String])

@@ -43,5 +43,20 @@ Fałsz
 ```
 
 -}
+
+import Data.Char (isDigit)
+
+-- Walidacja numeru telefonu (uproszczona)
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(1)
+validatePhone :: String -> Bool
+validatePhone phone = 
+    let cleaned = filter (/= ' ') $ filter (/= '-') phone
+        hasPlus = not (null cleaned) && head cleaned == '+'
+        digits = if hasPlus then tail cleaned else cleaned
+    in length digits >= 9 && length digits <= 15 && all isDigit digits
+
 main :: IO ()
-main = pure ()
+main = do
+    phone <- getLine
+    putStrLn $ if validatePhone phone then "Prawda" else "Fałsz"

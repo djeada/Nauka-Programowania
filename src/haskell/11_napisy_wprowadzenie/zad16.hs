@@ -33,5 +33,13 @@ axam
 ```
 
 -}
+
+-- Oblicza odległość Hamminga między dwoma napisami
+-- Złożoność czasowa: O(n), gdzie n to długość napisów
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    s1 <- getLine
+    s2 <- getLine
+    let odleglosc = length $ filter (\(c1, c2) -> c1 /= c2) $ zip s1 s2
+    print odleglosc

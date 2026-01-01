@@ -38,5 +38,20 @@ kara
 \* Porównuj np. posortowane litery w `lower()`.
 
 -}
+
+import Data.Char (isPunctuation, toLower)
+import Data.List (sort)
+
+stripPunctuation :: String -> String
+stripPunctuation = reverse . dropWhile isPunctuation . reverse . dropWhile isPunctuation
+
+isAnagram :: String -> String -> Bool
+isAnagram s1 s2 = sort (map toLower s1) == sort (map toLower s2)
+
 main :: IO ()
-main = pure ()
+main = do
+    zdanie <- getLine
+    klucz <- getLine
+    let slowa = map stripPunctuation $ words zdanie
+    let anagramy = filter (\w -> not (null w) && isAnagram w klucz) slowa
+    mapM_ putStrLn anagramy

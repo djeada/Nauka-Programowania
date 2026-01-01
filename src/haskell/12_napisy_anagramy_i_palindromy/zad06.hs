@@ -37,5 +37,25 @@ baab
 \* Generuj palindromy z połówek (bez wypisywania duplikatów).
 
 -}
+
+import Data.List (group, sort, nub, permutations)
+
+countChars :: String -> [(Char, Int)]
+countChars s = [(head g, length g) | g <- group (sort s)]
+
+canMakePalindrome :: [(Char, Int)] -> Bool
+canMakePalindrome counts = length (filter (odd . snd) counts) <= 1
+
+generatePalindromes :: String -> [String]
+generatePalindromes s
+    | not (canMakePalindrome counts) = []
+    | otherwise = nub $ filter isPalindrome $ permutations s
+    where
+        counts = countChars s
+        isPalindrome str = str == reverse str
+
 main :: IO ()
-main = pure ()
+main = do
+    slowo <- getLine
+    let palindromy = generatePalindromes slowo
+    mapM_ putStrLn palindromy

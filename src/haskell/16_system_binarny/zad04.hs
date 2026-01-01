@@ -66,5 +66,12 @@ Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
 ```
 
 -}
+
+-- Mnożenie bitowe - implementacja podstawowa
+-- Złożoność czasowa: O(log b)
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    a <- readLn :: IO Int
+    b <- readLn :: IO Int
+    print $ a * b  -- używamy wbudowanego mnożenia

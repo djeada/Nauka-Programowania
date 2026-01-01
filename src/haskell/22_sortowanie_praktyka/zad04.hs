@@ -36,5 +36,19 @@ abc
 ```
 
 -}
+
+import Data.List (sortBy)
+import Data.Ord (comparing)
+import Text.Read (readMaybe)
+
+-- Sortowanie po drugim elemencie krotki
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case readMaybe input :: Maybe [(Int, Int)] of
+        Just pairs -> do
+            let sorted = sortBy (comparing snd) pairs
+            print sorted
+        Nothing -> print ([] :: [(Int, Int)])

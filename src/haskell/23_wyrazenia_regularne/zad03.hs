@@ -36,5 +36,19 @@ Prawda
 ```
 
 -}
+
+import Data.List (isPrefixOf)
+
+-- Wyciąganie URL z tekstu (uproszczona wersja)
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n)
+extractURLs :: String -> [String]
+extractURLs text = filter isURL $ words text
+    where
+        isURL w = any (`isPrefixOf` w) ["http://", "https://", "www."]
+
 main :: IO ()
-main = pure ()
+main = do
+    text <- getLine
+    let urls = extractURLs text
+    print urls
