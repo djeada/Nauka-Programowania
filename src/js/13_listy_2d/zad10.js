@@ -37,24 +37,27 @@ Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruch
 ```
 
 */
+// Funkcja obraca macierz kwadratową o 90° zgodnie z ruchem wskazówek zegara
+// Złożoność czasowa: O(n²), gdzie n to rozmiar macierzy
+// Złożoność pamięciowa: O(1) - modyfikacja in-place
 function obrocMacierz(macierz) {
   const n = macierz.length;
 
-  // odwroc kolejnosc kolumn
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n / 2; j++) {
-      const temp = macierz[i][j];
-      macierz[i][j] = macierz[i][n - j - 1];
-      macierz[i][n - j - 1] = temp;
-    }
-  }
-
-  // zamien wiersze z kolumnami
+  // Krok 1: Transpozycja macierzy (zamiana wierszy z kolumnami)
   for (let i = 0; i < n; i++) {
     for (let j = i + 1; j < n; j++) {
       const temp = macierz[i][j];
       macierz[i][j] = macierz[j][i];
       macierz[j][i] = temp;
+    }
+  }
+
+  // Krok 2: Odwrócenie kolejności elementów w każdym wierszu
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n / 2; j++) {
+      const temp = macierz[i][j];
+      macierz[i][j] = macierz[i][n - j - 1];
+      macierz[i][n - j - 1] = temp;
     }
   }
 

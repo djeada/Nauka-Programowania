@@ -36,6 +36,10 @@ Prawda
 
 */
 
+// Funkcja sprawdza czy macierz jest kwadratem magicznym
+// (sumy wierszy, kolumn i przekątnych są równe)
+// Złożoność czasowa: O(n²), gdzie n to rozmiar macierzy
+// Złożoność pamięciowa: O(1)
 function czyKwadratMagiczny(macierz) {
   const n = macierz.length;
   const sumaOczekiwana = (n * (n * n + 1)) / 2;

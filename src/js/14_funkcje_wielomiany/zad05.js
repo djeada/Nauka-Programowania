@@ -28,14 +28,28 @@ Dla `a = [4, -3, 2]` oraz `k = 1` funkcja zwraca:
 
 */
 
+// Funkcja oblicza k-tą pochodną wielomianu
+// Współczynniki podane od najwyższej potęgi do najniższej: [a_n, ..., a_0]
+// Złożoność czasowa: O(k*n), gdzie n to stopień wielomianu, k to rząd pochodnej
+// Złożoność pamięciowa: O(n)
 function pochodnaWielomianu(wspolczynniki, k) {
+  // Tworzymy kopię tablicy aby nie modyfikować oryginału
+  let wynik = [...wspolczynniki];
+  
   for (let i = 0; i < k; i++) {
-    for (let j = wspolczynniki.length - 1; j > 0; j--) {
-      wspolczynniki[j - 1] = wspolczynniki[j] * j;
+    if (wynik.length === 1) {
+      return [0]; // Wielomian zerowy
     }
-    wspolczynniki.pop();
+    
+    const nowyWynik = [];
+    for (let j = 0; j < wynik.length - 1; j++) {
+      // Pochodna a_j * x^(n-j) to a_j * (n-j) * x^(n-j-1)
+      nowyWynik.push(wynik[j] * (wynik.length - 1 - j));
+    }
+    wynik = nowyWynik;
   }
-  return wspolczynniki;
+  
+  return wynik.length === 0 ? [0] : wynik;
 }
 
 // Testy
@@ -44,6 +58,7 @@ function testPochodnaWielomianu() {
   let k;
   let wynik;
 
+  // Test 1: 4x^2 - 3x + 2, pochodna = 8x - 3
   wspolczynniki = [4, -3, 2];
   k = 1;
   wynik = pochodnaWielomianu(wspolczynniki, k);
@@ -52,19 +67,21 @@ function testPochodnaWielomianu() {
     "Test 1 nieudany"
   );
 
+  // Test 2: 6x^3 - 5x^2 + 4x - 3, druga pochodna = 36x - 10
   wspolczynniki = [6, -5, 4, -3];
   k = 2;
   wynik = pochodnaWielomianu(wspolczynniki, k);
   console.assert(
-    JSON.stringify(wynik) === JSON.stringify([36, -20, 4]),
+    JSON.stringify(wynik) === JSON.stringify([36, -10]),
     "Test 2 nieudany"
   );
 
+  // Test 3: 1x^3 + 2x^2 + 3x + 4, trzecia pochodna = 6
   wspolczynniki = [1, 2, 3, 4];
   k = 3;
   wynik = pochodnaWielomianu(wspolczynniki, k);
   console.assert(
-    JSON.stringify(wynik) === JSON.stringify([24]),
+    JSON.stringify(wynik) === JSON.stringify([6]),
     "Test 3 nieudany"
   );
 }

@@ -43,6 +43,9 @@ e f g
 
 */
 
+// Funkcja znajduje największą sumę elementów w kształcie klepsydry w macierzy
+// Złożoność czasowa: O(n²), gdzie n to rozmiar macierzy
+// Złożoność pamięciowa: O(1)
 function najwiekszaSumaKlepsydry(macierz) {
   const n = macierz.length;
   let najwiekszaSuma = 0;

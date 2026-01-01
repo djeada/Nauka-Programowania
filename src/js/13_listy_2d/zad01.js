@@ -36,6 +36,9 @@ Wczytaj `a` i `b`. Wypisz macierz składającą się z `a` identycznych wierszy,
 
 */
 
+// Funkcja tworzy macierz o 'a' wierszach, każdy wiersz zawiera liczby od 0 do b
+// Złożoność czasowa: O(a*b), gdzie a to liczba wierszy, b to maksymalna liczba w wierszu
+// Złożoność pamięciowa: O(a*b)
 function utworzMacierz(a, b) {
   const macierz = [];
   for (let i = 0; i < a; i++) {
