@@ -42,8 +42,6 @@
 # **Wyjście:** *(brak)*
 
 main() {
-
-    echo "Podaj liczbe"
     read x
 
     if [[ $x -gt 5 ]]; then

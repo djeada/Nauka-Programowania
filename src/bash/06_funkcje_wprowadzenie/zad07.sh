@@ -50,7 +50,6 @@ czyDanePoprawne() {
     noweHaslo=""
 
     while [[ $nowaNazwa != $staraNazwa ]] || [[ $noweHaslo != $stareHaslo ]]; do
-        echo "Aby zalogowac sie do systemu: podaj nazwe oraz haslo"
         read nowaNazwa
         read noweHaslo
     done

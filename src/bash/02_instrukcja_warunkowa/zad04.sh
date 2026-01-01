@@ -48,17 +48,13 @@
 # ```
 
 main() {
-
-    echo "Podaj dwie liczby:"
     read x
     read y
 
     if [[ $x -gt $y ]]; then
-        echo $x
-        echo $y
+        echo "$x $y"
     else
-        echo $y
-        echo $x
+        echo "$y $x"
     fi
 }
 

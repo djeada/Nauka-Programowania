@@ -50,23 +50,19 @@
 # ```
 
 main() {
+    read p
+    read t
+    read L
+    read W
 
-    echo "Podaj: cene plytki, dlugosc boku plytki i wymiary podlogi: "
-    read cena
-    read bokPlytki
-    read szerokoscPodlogi
-    read dlugoscPodlogi
-
-    szerokoscKonieczna=$(($szerokoscPodlogi + $bokPlytki - $szerokoscPodlogi % $bokPlytki))
-    dlugoscKonieczna=$(($dlugoscPodlogi + $bokPlytki - $dlugoscPodlogi % $bokPlytki))
-
-    polePlytki=$(($bokPlytki * $bokPlytki))
-    polePodlogi=$(($szerokoscKonieczna * $dlugoscKonieczna))
-
-    calkowityKoszt=$(($cena * $polePodlogi / $polePlytki))
-
-    echo "Dla plytki o dlugosci boku $bokPlytki  i ceny $cena calkowity koszt wylozenia podlogi o wymiarach $szerokoscPodlogi x $dlugoscPodlogi wynosi $calkowityKoszt"
-
+    # Calculate number of tiles needed in each direction (ceiling division)
+    # Using epsilon (0.000001) to handle floating-point precision before division
+    nL=$(echo "scale=0; ($L + $t - 0.000001) / $t" | bc | cut -d'.' -f1)
+    nW=$(echo "scale=0; ($W + $t - 0.000001) / $t" | bc | cut -d'.' -f1)
+    
+    # Calculate total cost
+    result=$(echo "scale=2; $nL * $nW * $p" | bc)
+    printf "%.2f\n" "$result"
 }
 
 main "$@"

@@ -174,42 +174,50 @@
 # 3
 # ```
 
+# ZAD-02A — Suma dwóch liczb
+# ZAD-02B — Różnica: b − a
+# ZAD-02C — Iloczyn dwóch liczb
+# ZAD-02D — Iloraz całkowity: a // b
+# ZAD-02E — Reszta z dzielenia: a % b
+
 suma() {
-    return $(($1 + $2))
+    echo $(($1 + $2))
 }
 
 roznica() {
-    return $(($2 - $1))
+    echo $(($2 - $1))
 }
 
 iloczyn() {
-    return $(($1 * $2))
+    echo $(($1 * $2))
+}
+
+iloraz() {
+    echo $(($1 / $2))
 }
 
 reszta() {
-    return $(($2 % $1))
+    echo $(($1 % $2))
 }
 
 main() {
-    echo "Podaj dwie liczby: "
     read a
     read b
 
-    suma $a $b
-    wynik=$?
-    echo "suma liczb to $wynik"
+    # ZAD-02A: Suma
+    echo $(suma $a $b)
 
-    roznica $a $b
-    wynik=$?
-    echo "iloczyn liczb to $wynik"
+    # ZAD-02B: Różnica b - a
+    echo $(roznica $a $b)
 
-    iloczyn $a $b
-    wynik=$?
-    echo "suma liczb to $wynik"
+    # ZAD-02C: Iloczyn
+    echo $(iloczyn $a $b)
 
-    reszta $a $b
-    wynik=$?
-    echo "reszte z dzielenia pierwszej przez druga to $wynik"
+    # ZAD-02D: Iloraz całkowity
+    echo $(iloraz $a $b)
+
+    # ZAD-02E: Reszta z dzielenia
+    echo $(reszta $a $b)
 }
 
 main "$@"

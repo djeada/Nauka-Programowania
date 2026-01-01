@@ -40,9 +40,13 @@
 # * Dla `n = 0` poprawna odpowiedź to `1` (liczba „0” ma jedną cyfrę).
 
 main() {
-
-    echo "Podaj liczbe: "
     read a
+
+    # Przypadek specjalny: n = 0 ma jedną cyfrę
+    if [[ $a -eq 0 ]]; then
+        echo "1"
+        return
+    fi
 
     licznik=0
 
@@ -51,8 +55,7 @@ main() {
         licznik=$(($licznik + 1))
     done
 
-    echo "Podana cyfra sklada sie z $licznik cyfr."
-
+    echo "$licznik"
 }
 
 main "$@"

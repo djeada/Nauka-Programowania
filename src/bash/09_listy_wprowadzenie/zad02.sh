@@ -96,26 +96,21 @@ wypisz() {
 main() {
 
     declare -a lista
-    echo "podaj liczbe n:"
     read n
 
-    echo "podaj $n liczb:"
     wczytaj $n
     local kopia=("${lista[@]}")
 
-    echo -e "\nliczby powiekszone o 1:"
     zwieksz
     wypisz
 
     lista=("${kopia[@]}")
 
-    echo -e "\nliczby pomnozone przez indeks:"
     pomnoz
     wypisz
 
     lista=("${kopia[@]}")
 
-    echo -e "\npierwsza liczba $n razy:"
     zastap
     wypisz
 

@@ -47,13 +47,11 @@ sumaCyfr() {
 }
 
 main() {
-    echo "Podaj liczbe: "
     read a
 
     sumaCyfr $a
     wynik=$?
 
-    echo "Suma cyfr twojej liczby: $wynik"
 
 }
 

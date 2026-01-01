@@ -38,42 +38,28 @@
 # * Możesz użyć wbudowanego sortowania, ale da się też rozwiązać czystymi warunkami.
 
 main() {
-
-    echo "Podaj trzy liczby:"
     read a
     read b
     read c
 
-    if [[ $a -ls $b && $a -ls $c ]]; then
-        if [[ $b -ls $c ]]; then
-            echo $a
-            echo $b
-            echo $c
+    # Sortuj trzy liczby używając warunków
+    if [[ $a -le $b && $a -le $c ]]; then
+        if [[ $b -le $c ]]; then
+            echo "$a $b $c"
         else
-            echo $a
-            echo $c
-            echo $b
+            echo "$a $c $b"
         fi
-
-    elif [[ $b -ls $a && $b -ls $c ]]; then
-        if [[ $a -ls $c ]]; then
-            echo $b
-            echo $a
-            echo $c
+    elif [[ $b -le $a && $b -le $c ]]; then
+        if [[ $a -le $c ]]; then
+            echo "$b $a $c"
         else
-            echo $b
-            echo $c
-            echo $a
+            echo "$b $c $a"
         fi
     else
-        if [[ $a -ls $b ]]; then
-            echo $c
-            echo $a
-            echo $b
+        if [[ $a -le $b ]]; then
+            echo "$c $a $b"
         else
-            echo $c
-            echo $b
-            echo $a
+            echo "$c $b $a"
         fi
     fi
 }

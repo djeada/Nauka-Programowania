@@ -194,35 +194,37 @@
 # ```
 
 main() {
-
-    echo "Podaj liczbe kg: "
+    # ZAD-06A: kg → g
     read kg
+    result=$(echo "scale=0; $kg * 1000 / 1" | bc)
+    echo "$result"
 
-    echo "$kg kg to  $(($kg * 1000)) g"
+    # ZAD-06B: inch → cm
+    read inch
+    result=$(echo "scale=2; $inch * 2.54" | bc)
+    printf "%.2f\n" "$result"
 
-    echo "Podaj liczbe cali: "
-    read cal
-
-    echo "$cal cali to  $(bc -l <<<$cal/2.54) cm"
-
-    echo "Podaj liczbe sekund: "
+    # ZAD-06C: seconds → hours
     read s
+    echo "$(($s / 3600))"
 
-    echo "$s s to  $(($kg / 3600)) h"
+    # ZAD-06D: euro → pln
+    read eur
+    result=$(echo "scale=2; $eur * 4.4" | bc)
+    printf "%.2f\n" "$result"
 
-    echo "Podaj liczbe euro: "
-    read stopnie
-    rad=$(echo "$stopnie*0.0174532" | bc)
+    # ZAD-06E: stopnie → radiany
+    read deg
+    # Użyj wbudowanej funkcji arctangent w bc do obliczenia pi: pi = 4 * atan(1)
+    result=$(echo "scale=10; pi = 4 * a(1); $deg * pi / 180" | bc -l)
+    printf "%.3f\n" "$result"
 
-    echo "$stopnie stopni to $rad radianow"
-
-    echo "Podaj temperature w Fahrenheitach "
+    # ZAD-06F: Fahrenheit → Celsius i Kelvin
     read F
-
-    C=$((($F - 32) * 5 / 9))
-    K=$(($C - 273))
-
-    echo "$F to Farenheitow to $C C i $K K"
+    C=$(echo "scale=10; (5.0/9.0) * ($F - 32)" | bc)
+    printf "%.3f\n" "$C"
+    K=$(echo "scale=10; $C + 273.15" | bc)
+    printf "%.3f\n" "$K"
 }
 
 main "$@"

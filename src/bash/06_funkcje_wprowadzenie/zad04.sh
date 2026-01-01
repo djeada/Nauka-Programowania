@@ -169,7 +169,6 @@ maks3() {
 }
 
 main() {
-    echo "Podaj dwie liczby: "
     read a
     read b
 
@@ -181,7 +180,6 @@ main() {
     wynik=$?
     echo "wieksza liczba to $wynik"
 
-    echo "Podaj trzy liczby: "
     read a
     read b
     read c

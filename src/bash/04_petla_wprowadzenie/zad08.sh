@@ -53,21 +53,23 @@
 # * Nie wypisuj dodatkowych opisów — tylko liczby.
 
 main() {
-
-    echo "Podaj liczby a glow i b nog: "
     read a
     read b
 
-    for ((i = 1; i <= $a; i++)); do
-        owieczki=$(($a - $i))
-
-        if [[ $((2 * $i + 4 * $owieczki)) -eq $b ]]; then
-            echo "Na farmie mamy $i kur i $owieczki owieczek"
-            break
-        fi
-
-    done
-
+    # Rozwiązanie układu równań:
+    # kury + owce = a
+    # 2*kury + 4*owce = b
+    # Z pierwszego: kury = a - owce
+    # Podstawiając do drugiego: 2*(a - owce) + 4*owce = b
+    # 2*a - 2*owce + 4*owce = b
+    # 2*a + 2*owce = b
+    # owce = (b - 2*a) / 2
+    
+    owce=$(( ($b - 2 * $a) / 2 ))
+    kury=$(( $a - $owce ))
+    
+    echo "$kury"
+    echo "$owce"
 }
 
 main "$@"

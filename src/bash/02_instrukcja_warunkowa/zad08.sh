@@ -48,18 +48,15 @@
 # ```
 
 main() {
-
-    echo "Podaj trzy dlugosci bokow: "
-
     read a
     read b
     read c
 
-    if [[ $(($a + $b)) > $c ]] && [[ $(($a + $c)) > $b ]] && [[ $(($b + $c)) > $a ]]; then
-        echo "Z podanych dlugosci bokow mozna zbudowac trojkat"
-
+    # Warunek trójkąta: suma dwóch dowolnych boków musi być większa od trzeciego
+    if [[ $(($a + $b)) -gt $c ]] && [[ $(($a + $c)) -gt $b ]] && [[ $(($b + $c)) -gt $a ]]; then
+        echo "Trójkąt można zbudować z podanych boków."
     else
-        echo "Z podanych dlugosci bokow nie mozna zbudowac trojkata"
+        echo "Trójkąta nie można zbudować z podanych boków."
     fi
 }
 

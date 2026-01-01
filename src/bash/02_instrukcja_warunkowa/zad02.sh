@@ -51,15 +51,13 @@
 # ```
 
 main() {
-
-    echo "Podaj dwie liczby:"
     read x
     read y
 
     if [[ $x -eq $y ]]; then
-        echo "liczby sa jednakowe"
+        echo "Liczby są identyczne."
     else
-        echo "liczby sa rozne"
+        echo "Liczby są różne."
     fi
 }
 
