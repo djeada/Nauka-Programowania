@@ -162,34 +162,37 @@
 # ```
 
 main() {
-
-    echo "Podaj wspolrzedna x: "
+    # ZAD-05A: y = 3x + 10
     read x
+    result=$(echo "scale=3; 3 * $x + 10" | bc)
+    printf "%.3f\n" "$result"
 
-    echo "Wartosc funkcji y = 3x + 10 w punkcie $x: wynosi  $((3 * $x + 10))"
-
-    echo "Podaj wspolczynniki a, b oraz wspolrzedna x: "
+    # ZAD-05B: y = ax + b
     read a
     read b
     read x
+    result=$(echo "scale=3; $a * $x + $b" | bc)
+    printf "%.3f\n" "$result"
 
-    echo "Wartosc funkcji y = $a x + $b w punkcie $x: wynosi  $(($a * $x + $b))"
-
-    echo "Podaj wspolrzedna x: "
+    # ZAD-05C: y = x^3 + 2
     read x
+    result=$(echo "scale=3; $x^3 + 2" | bc)
+    printf "%.3f\n" "$result"
 
-    echo "Wartosc funkcji y = x^3 + 2x^2 - 20 w punkcie $x: wynosi  $(($x ** 3 + 2 * ($x ** 2) - 20))"
-
-    echo "Podaj wspolczynniki a, b, c, d, m, n oraz wspolrzedna x: "
+    # ZAD-05D: y = a*x^m + b*x^n + c - a
     read a
     read b
     read c
-    read d
     read m
     read n
+    read x
+    result=$(echo "scale=3; $a * ($x^$m) + $b * ($x^$n) + $c - $a" | bc)
+    printf "%.3f\n" "$result"
 
-    echo "Wartosc funkcji  y = $a*x^$m + $b*x^$n + $c - $a w punkcie $x: wynosi  $(($a * ($x ** $m) + $b * ($x ** $n) + $c - $a))"
-
+    # ZAD-05E: y = sin^3(x)*cos^2(x) + e^(x^2) + ln(x^3 + 2x^2 - x - 3)
+    read x
+    result=$(echo "scale=10; s_x=s($x); c_x=c($x); sin3=s_x*s_x*s_x; cos2=c_x*c_x; exp_part=e($x*$x); ln_arg=$x^3 + 2*$x^2 - $x - 3; ln_part=l(ln_arg); sin3*cos2 + exp_part + ln_part" | bc -l)
+    printf "%.3f\n" "$result"
 }
 
 main "$@"

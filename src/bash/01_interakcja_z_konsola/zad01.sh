@@ -31,10 +31,7 @@
 # * Tekst musi być identyczny (łącznie z przecinkiem, spacją i wykrzyknikiem).
 
 main() {
-
-    echo "A. D."
-
-    echo "Witaj swiecie"
+    echo "Witaj, świecie!"
 }
 
 main "$@"

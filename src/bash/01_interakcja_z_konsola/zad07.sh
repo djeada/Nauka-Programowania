@@ -203,19 +203,41 @@
 # ```
 
 main() {
-
-    echo "Podaj podstawe i wysokosc trojkata: "
+    # ZAD-07A: Triangle area P = 0.5 * a * h
     read a
     read h
+    result=$(echo "scale=3; 0.5 * $a * $h" | bc)
+    printf "%.3f\n" "$result"
 
-    echo "Pole trojkata o podstawie $a i wysokosci $h jest rowne $(($a * $h / 2))"
-
-    echo "Podaj dlugosci bokow prostokata: "
+    # ZAD-07B: Rectangle area P = a * b
     read a
     read b
+    result=$(echo "scale=3; $a * $b" | bc)
+    printf "%.3f\n" "$result"
 
-    echo "Pole prostokata o bokach $a i $b jest rowne $(($a * $b))"
+    # ZAD-07C: Rhombus area P = 0.5 * d1 * d2
+    read d1
+    read d2
+    result=$(echo "scale=3; 0.5 * $d1 * $d2" | bc)
+    printf "%.3f\n" "$result"
 
+    # ZAD-07D: Sphere volume V = (4/3) * π * r^3
+    read r
+    result=$(echo "scale=10; (4.0/3.0) * 3.141592653589793 * $r^3" | bc)
+    printf "%.3f\n" "$result"
+
+    # ZAD-07E: Cone volume V = (1/3) * π * r^2 * h
+    read r
+    read h
+    result=$(echo "scale=10; (1.0/3.0) * 3.141592653589793 * $r^2 * $h" | bc)
+    printf "%.3f\n" "$result"
+
+    # ZAD-07F: Cuboid volume V = a * b * c
+    read a
+    read b
+    read c
+    result=$(echo "scale=3; $a * $b * $c" | bc)
+    printf "%.3f\n" "$result"
 }
 
 main "$@"
