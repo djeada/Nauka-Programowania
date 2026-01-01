@@ -210,7 +210,7 @@ use ::std::*;
 fn main() {
     let pi = std::f64::consts::PI;
     
-    // ZAD-07A: Triangle area
+    // Podpunkt a) Pole trojkata
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
     let a: f64 = a.trim().parse().expect("Blad parsowania");
@@ -219,7 +219,7 @@ fn main() {
     let h: f64 = h.trim().parse().expect("Blad parsowania");
     println!("{:.3}", 0.5 * a * h);
 
-    // ZAD-07B: Rectangle area
+    // Podpunkt b) Pole prostokata
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
     let a: f64 = a.trim().parse().expect("Blad parsowania");
@@ -228,7 +228,7 @@ fn main() {
     let b: f64 = b.trim().parse().expect("Blad parsowania");
     println!("{:.3}", a * b);
 
-    // ZAD-07C: Rhombus area
+    // Podpunkt c) Pole rombu
     let mut d1 = String::new();
     std::io::stdin().read_line(&mut d1).expect("Blad odczytu");
     let d1: f64 = d1.trim().parse().expect("Blad parsowania");
@@ -237,13 +237,13 @@ fn main() {
     let d2: f64 = d2.trim().parse().expect("Blad parsowania");
     println!("{:.3}", 0.5 * d1 * d2);
 
-    // ZAD-07D: Sphere volume
+    // Podpunkt d) Objetosc kuli
     let mut r = String::new();
     std::io::stdin().read_line(&mut r).expect("Blad odczytu");
     let r: f64 = r.trim().parse().expect("Blad parsowania");
     println!("{:.3}", (4.0 / 3.0) * pi * r.powi(3));
 
-    // ZAD-07E: Cone volume
+    // Podpunkt e) Objetosc stozka
     let mut r = String::new();
     std::io::stdin().read_line(&mut r).expect("Blad odczytu");
     let r: f64 = r.trim().parse().expect("Blad parsowania");
@@ -252,7 +252,7 @@ fn main() {
     let h: f64 = h.trim().parse().expect("Blad parsowania");
     println!("{:.3}", (1.0 / 3.0) * pi * r.powi(2) * h);
 
-    // ZAD-07F: Cuboid volume
+    // Podpunkt f) Objetosc prostopadloscianu
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
     let a: f64 = a.trim().parse().expect("Blad parsowania");

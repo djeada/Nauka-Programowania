@@ -167,13 +167,13 @@ y=\sin^3(x)\cdot\cos^2(x)+e^{x^2}+\ln(x^3+2x^2-x-3)
 use ::std::*;
 
 fn main() {
-    // ZAD-05A: y = 3x + 10
+    // Podpunkt a) y = 3x + 10
     let mut x = String::new();
     std::io::stdin().read_line(&mut x).expect("Blad odczytu");
     let x: f64 = x.trim().parse().expect("Blad parsowania");
     println!("{:.3}", 3.0 * x + 10.0);
 
-    // ZAD-05B: y = ax + b
+    // Podpunkt b) y = ax + b
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
     let a: f64 = a.trim().parse().expect("Blad parsowania");
@@ -185,13 +185,13 @@ fn main() {
     let x: f64 = x.trim().parse().expect("Blad parsowania");
     println!("{:.3}", a * x + b);
 
-    // ZAD-05C: y = x^3 + 2
+    // Podpunkt c) y = x^3 + 2
     let mut x = String::new();
     std::io::stdin().read_line(&mut x).expect("Blad odczytu");
     let x: f64 = x.trim().parse().expect("Blad parsowania");
     println!("{:.3}", x.powi(3) + 2.0);
 
-    // ZAD-05D: y = a*x^m + b*x^n + c - a
+    // Podpunkt d) y = a*x^m + b*x^n + c - a
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
     let a: f64 = a.trim().parse().expect("Blad parsowania");
@@ -212,7 +212,7 @@ fn main() {
     let x: f64 = x.trim().parse().expect("Blad parsowania");
     println!("{:.3}", a * x.powi(m) + b * x.powi(n) + c - a);
 
-    // ZAD-05E: y = sin^3(x)*cos^2(x) + e^(x^2) + ln(x^3+2x^2-x-3)
+    // Podpunkt e) y = sin^3(x)*cos^2(x) + e^(x^2) + ln(x^3+2x^2-x-3)
     let mut x = String::new();
     std::io::stdin().read_line(&mut x).expect("Blad odczytu");
     let x: f64 = x.trim().parse().expect("Blad parsowania");

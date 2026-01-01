@@ -67,6 +67,6 @@ fn main() {
     println!("{}", a * b);
     println!("{}", a / b);
     println!("{}", a % b);
-    // According to docstring, b > 0 is guaranteed, so cast is safe
+    // Zgodnie z opisem zadania, b > 0 jest gwarantowane, więc rzutowanie jest bezpieczne
     println!("{}", a.pow(b as u32));
 }
