@@ -36,18 +36,22 @@
 # * Dla `n = 0` suma cyfr wynosi `0`.
 
 main() {
-
-    echo "Podaj liczbe: "
     read a
 
     suma=0
+
+    # Przypadek specjalny: n = 0
+    if [[ $a -eq 0 ]]; then
+        echo "0"
+        return
+    fi
 
     while [ $a -gt 0 ]; do
         suma=$(($suma + $a % 10))
         a=$(($a / 10))
     done
 
-    echo "Suma cyfr podanej liczby wynosi $suma."
+    echo "$suma"
 }
 
 main "$@"

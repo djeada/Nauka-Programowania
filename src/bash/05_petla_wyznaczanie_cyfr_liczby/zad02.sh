@@ -39,15 +39,18 @@
 # * Dla `n = 0` wypisz jedną linię z `0`.
 
 main() {
-
-    echo "Podaj liczbe: "
     read a
+
+    # Przypadek specjalny: n = 0
+    if [[ $a -eq 0 ]]; then
+        echo "0"
+        return
+    fi
 
     while [ $a -gt 0 ]; do
         echo $(($a % 10))
         a=$(($a / 10))
     done
-
 }
 
 main "$@"

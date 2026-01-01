@@ -39,24 +39,29 @@
 # * `0` jest palindromem.
 
 main() {
-
-    echo "Podaj liczbe: "
     read a
 
     pom=$a
     odwrocona=0
 
+    # Przypadek specjalny: n = 0 jest palindromem
+    if [[ $a -eq 0 ]]; then
+        echo "Liczba jest palindromem."
+        return
+    fi
+
+    # Odwróć liczbę
     while [ $pom -gt 0 ]; do
         cyfra=$(($pom % 10))
-
         odwrocona=$(($odwrocona * 10 + $cyfra))
         pom=$(($pom / 10))
     done
 
+    # Sprawdź czy jest palindromem
     if [[ $odwrocona -eq $a ]]; then
-        echo "podana liczba jest palindromem"
+        echo "Liczba jest palindromem."
     else
-        echo "podana liczba nie jest palindromem"
+        echo "Liczba nie jest palindromem."
     fi
 }
 

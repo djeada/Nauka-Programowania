@@ -114,13 +114,11 @@
 # * W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`.
 
 main() {
-
-    echo "Podaj liczbe: "
     read a
 
     pom=$a
-    echo "Cyfry liczby badace liczbami parzystymi: "
 
+    # ZAD-04A: Cyfry parzyste
     while [ $pom -gt 0 ]; do
         cyfra=$(($pom % 10))
 
@@ -132,8 +130,8 @@ main() {
     done
 
     pom=$a
-    echo "Cyfry liczby mniejsze niz 5: "
 
+    # ZAD-04B: Cyfry mniejsze niż 5
     while [ $pom -gt 0 ]; do
         cyfra=$(($pom % 10))
 
@@ -145,8 +143,8 @@ main() {
     done
 
     pom=$a
-    echo "Cyfry liczby rozne od 0: "
 
+    # ZAD-04C: Cyfry różne od 0
     while [ $pom -gt 0 ]; do
         cyfra=$(($pom % 10))
 
@@ -156,7 +154,6 @@ main() {
 
         pom=$(($pom / 10))
     done
-
 }
 
 main "$@"
