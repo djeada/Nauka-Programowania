@@ -55,7 +55,12 @@ main :: IO ()
 main = do
     zdanie <- getLine
     let slowa = filter (not . null) $ map stripPunctuation $ words zdanie
-    let najdluzsze = foldl1' (\acc w -> if length w > length acc then w else acc) slowa
-    let najkrotsze = foldl1' (\acc w -> if length w < length acc then w else acc) slowa
-    putStrLn najdluzsze
-    putStrLn najkrotsze
+    if null slowa
+        then do
+            putStrLn ""
+            putStrLn ""
+        else do
+            let najdluzsze = foldl1' (\acc w -> if length w > length acc then w else acc) slowa
+            let najkrotsze = foldl1' (\acc w -> if length w < length acc then w else acc) slowa
+            putStrLn najdluzsze
+            putStrLn najkrotsze

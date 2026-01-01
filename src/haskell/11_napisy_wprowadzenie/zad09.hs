@@ -51,14 +51,18 @@ Zarobki: 1000
 
 -}
 
--- Dzieli napis po podanym znaku
+-- Dzieli napis po podanym znaku (zachowuje puste elementy)
 -- Złożoność czasowa: O(n), gdzie n to długość napisu
 -- Złożoność pamięciowa: O(n)
 splitOn :: Char -> String -> [String]
-splitOn delimiter str = case dropWhile (== delimiter) str of
-    "" -> []
-    s' -> w : splitOn delimiter s''
-        where (w, s'') = break (== delimiter) s'
+splitOn delimiter str = go str
+  where
+    go [] = [""]
+    go (c:cs)
+        | c == delimiter = "" : go cs
+        | otherwise = case go cs of
+                        (x:xs) -> (c:x):xs
+                        [] -> [[c]]
 
 -- Usuwa białe znaki z początku i końca napisu
 -- Złożoność czasowa: O(n), gdzie n to długość napisu

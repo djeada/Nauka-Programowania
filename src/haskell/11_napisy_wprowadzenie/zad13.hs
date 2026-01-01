@@ -52,6 +52,5 @@ czyPierwsza n
 main :: IO ()
 main = do
     napis <- getLine
-    let indeksy = [0 .. length napis - 1]
-    let znaki = [napis !! i | i <- indeksy, czyPierwsza i]
+    let znaki = [napis !! i | (i, _) <- zip [0..] napis, czyPierwsza i]
     putStrLn $ "[" ++ concat [if i == 0 then "'" ++ [c] ++ "'" else ", '" ++ [c] ++ "'" | (c, i) <- zip znaki [0..]] ++ "]"
