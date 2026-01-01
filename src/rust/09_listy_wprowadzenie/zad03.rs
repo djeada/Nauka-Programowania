@@ -40,4 +40,26 @@ Jedna liczba całkowita — indeks (od `0`) lub `-1`.
 ```
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: usize = n.trim().parse().unwrap();
+    
+    let mut lista = Vec::new();
+    for _ in 0..n {
+        let mut num = String::new();
+        std::io::stdin().read_line(&mut num).unwrap();
+        let num: i32 = num.trim().parse().unwrap();
+        lista.push(num);
+    }
+    
+    let mut klucz = String::new();
+    std::io::stdin().read_line(&mut klucz).unwrap();
+    let klucz: i32 = klucz.trim().parse().unwrap();
+    
+    if let Some(pos) = lista.iter().position(|&x| x == klucz) {
+        println!("{}", pos);
+    } else {
+        println!("-1");
+    }
+}
