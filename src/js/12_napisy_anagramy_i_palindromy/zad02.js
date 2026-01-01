@@ -40,7 +40,49 @@ cba
 * Kolejność wypisywania permutacji nie musi być dokładnie taka jak w przykładzie, o ile są wszystkie i bez powtórzeń.
 
 */
-function main() {
+
+// Funkcja generuje wszystkie permutacje słowa (rekurencyjnie)
+// Złożoność czasowa: O(n!), gdzie n to długość słowa
+// Złożoność pamięciowa: O(n!) dla przechowania wszystkich permutacji
+function permutacje(slowo) {
+  if (slowo.length <= 1) {
+    return [slowo];
+  }
+
+  const wynik = [];
+  for (let i = 0; i < slowo.length; i++) {
+    const pierwszyZnak = slowo[i];
+    const pozostaleZnaki = slowo.slice(0, i) + slowo.slice(i + 1);
+    const permutacjePozostałych = permutacje(pozostaleZnaki);
+
+    for (const perm of permutacjePozostałych) {
+      wynik.push(pierwszyZnak + perm);
+    }
+  }
+
+  return wynik;
 }
 
-main();
+// Test
+function test() {
+  const input = "abc";
+  const expectedOutput = ["abc", "acb", "bac", "bca", "cab", "cba"];
+  const output = permutacje(input);
+
+  // Sortujemy obie tablice dla porównania
+  const outputSorted = output.sort();
+  const expectedSorted = expectedOutput.sort();
+
+  console.assert(
+    JSON.stringify(outputSorted) === JSON.stringify(expectedSorted),
+    'Test nie powiodl sie dla "' +
+      input +
+      '". Otrzymany wynik to ' +
+      JSON.stringify(output) +
+      ", a oczekiwany wynik to " +
+      JSON.stringify(expectedOutput)
+  );
+  console.log("Test przeszedl pomyslnie");
+}
+
+test();
