@@ -38,5 +38,13 @@ Prawda
 ```
 
 -}
+import Data.List (isPrefixOf)
+
+-- Czy napis A jest początkiem napisu B?
+-- Złożoność czasowa: O(min(m,n))
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    a <- getLine
+    b <- getLine
+    putStrLn $ if a `isPrefixOf` b then "Prawda" else "Fałsz"

@@ -31,5 +31,12 @@ AB
 ```
 
 -}
+import Data.List (nub)
+
+-- Usuń wszystkie powtórzenia znaków
+-- Złożoność czasowa: O(n^2)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    text <- getLine
+    putStrLn $ nub text

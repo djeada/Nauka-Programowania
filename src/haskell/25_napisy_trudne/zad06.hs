@@ -33,5 +33,16 @@ Prawda
 ```
 
 -}
+import Data.List (isInfixOf)
+
+-- Rotacje napisów
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n)
+isRotation :: String -> String -> Bool
+isRotation a b = length a == length b && a `isInfixOf` (b ++ b)
+
 main :: IO ()
-main = pure ()
+main = do
+    a <- getLine
+    b <- getLine
+    putStrLn $ if isRotation a b then "Prawda" else "Fałsz"

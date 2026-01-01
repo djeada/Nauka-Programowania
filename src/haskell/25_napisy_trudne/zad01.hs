@@ -43,5 +43,20 @@ Lerzy jerzy na wierzy
 ```
 
 -}
+import Data.List (isPrefixOf)
+
+-- Podmiana słowa w zdaniu
+-- Złożoność czasowa: O(n*m)
+-- Złożoność pamięciowa: O(n)
+replaceAll :: String -> String -> String -> String
+replaceAll _ _ [] = []
+replaceAll pattern replacement text
+    | pattern `isPrefixOf` text = replacement ++ replaceAll pattern replacement (drop (length pattern) text)
+    | otherwise = head text : replaceAll pattern replacement (tail text)
+
 main :: IO ()
-main = pure ()
+main = do
+    sentence <- getLine
+    wordA <- getLine
+    wordB <- getLine
+    putStrLn $ replaceAll wordA wordB sentence
