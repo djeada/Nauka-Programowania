@@ -46,10 +46,6 @@ public class Main {
     public void odglos() {
       System.out.println("Zwierz wydaje odgłos: ...");
     }
-    
-    public String getNazwaKlasy() {
-      return "Zwierz";
-    }
   }
 
   private static class Kot extends Zwierz {
@@ -58,11 +54,6 @@ public class Main {
     public void odglos() {
       System.out.println("Kot wydaje odgłos: Miau!");
     }
-    
-    @Override
-    public String getNazwaKlasy() {
-      return "Kot";
-    }
   }
 
   private static class Pies extends Zwierz {
@@ -70,11 +61,6 @@ public class Main {
     @Override
     public void odglos() {
       System.out.println("Pies wydaje odgłos: Hau!");
-    }
-    
-    @Override
-    public String getNazwaKlasy() {
-      return "Pies";
     }
   }
 
