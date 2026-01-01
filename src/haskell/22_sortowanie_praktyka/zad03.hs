@@ -46,12 +46,41 @@ c 2
 import Data.List (sortBy)
 import Data.Ord (comparing)
 
--- Sortowanie po długości słowa
+-- Sortowanie listy par względem kryterium
 -- Złożoność czasowa: O(n log n)
 -- Złożoność pamięciowa: O(n)
+
+-- Funkcja do formatowania pary jako ('napis', liczba)
+formatPair :: (String, Int) -> String
+formatPair (s, n) = "('" ++ s ++ "', " ++ show n ++ ")"
+
+-- Funkcja do formatowania listy par
+formatList :: [(String, Int)] -> String
+formatList xs = "[" ++ intercalate ", " (map formatPair xs) ++ "]"
+  where
+    intercalate sep = concat . intersperse sep
+    intersperse _ [] = []
+    intersperse _ [x] = [x]
+    intersperse sep (x:xs) = x : sep : intersperse sep xs
+
 main :: IO ()
 main = do
-    zdanie <- getLine
-    let slowa = words zdanie
-    let posortowane = sortBy (comparing length) slowa
-    putStrLn $ unwords posortowane
+    nStr <- getLine
+    let n = read nStr :: Int
+    pairs <- readPairs n
+    -- a) Sortowanie po liczbie
+    let sortedByNumber = sortBy (comparing snd) pairs
+    putStrLn $ formatList sortedByNumber
+    -- b) Sortowanie po długości napisu
+    let sortedByLength = sortBy (comparing (length . fst)) pairs
+    putStrLn $ formatList sortedByLength
+
+-- Funkcja pomocnicza do wczytania N par
+readPairs :: Int -> IO [(String, Int)]
+readPairs 0 = return []
+readPairs n = do
+    line <- getLine
+    let [str, numStr] = words line
+    let num = read numStr :: Int
+    rest <- readPairs (n - 1)
+    return ((str, num) : rest)

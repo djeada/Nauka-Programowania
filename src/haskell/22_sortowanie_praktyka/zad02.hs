@@ -38,13 +38,28 @@ Lemur wygina śmiało ciało
 -}
 
 import Data.List (sort)
+import Data.Char (isAlpha)
 
 -- Sortowanie słów w zdaniu
 -- Złożoność czasowa: O(n log n)
 -- Złożoność pamięciowa: O(n)
+-- Funkcja pomocnicza do filtrowania tylko liter
+filterWord :: String -> String
+filterWord = filter isAlpha
+
+-- Funkcja do formatowania listy słów w formacie ['word1', 'word2', ...]
+formatList :: [String] -> String
+formatList xs = "[" ++ intercalate ", " (map (\x -> "'" ++ x ++ "'") xs) ++ "]"
+  where
+    intercalate sep = concat . intersperse sep
+    intersperse _ [] = []
+    intersperse _ [x] = [x]
+    intersperse sep (x:xs) = x : sep : intersperse sep xs
+
 main :: IO ()
 main = do
     zdanie <- getLine
     let slowa = words zdanie
-    let posortowane = sort slowa
-    putStrLn $ unwords posortowane
+    let czysteSlowa = filter (not . null) $ map filterWord slowa
+    let posortowane = sort czysteSlowa
+    putStrLn $ formatList posortowane

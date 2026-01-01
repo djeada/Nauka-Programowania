@@ -34,15 +34,26 @@ Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Posortuj ją rosn
 
 -}
 
-import Data.List (sortBy)
-import Text.Read (readMaybe)
+import Data.List (sort)
 
--- Sortowanie stabilne (Haskell's sort jest stabilny)
--- Złożoność czasowa: O(n log n)
+-- Sortowanie listy binarnej (0/1)
+-- Złożoność czasowa: O(n log n) lub O(n) przy counting sort
 -- Złożoność pamięciowa: O(n)
+
+-- Funkcja do formatowania listy liczb
+formatList :: [Int] -> String
+formatList xs = "[" ++ intercalate ", " (map show xs) ++ "]"
+  where
+    intercalate sep = concat . intersperse sep
+    intersperse _ [] = []
+    intersperse _ [x] = [x]
+    intersperse sep (x:xs) = x : sep : intersperse sep xs
+
 main :: IO ()
 main = do
-    input <- getLine
-    case readMaybe input :: Maybe [Int] of
-        Just xs -> print $ sortBy compare xs
-        Nothing -> print ([] :: [Int])
+    nStr <- getLine
+    let n = read nStr :: Int
+    numsLine <- getLine
+    let nums = map read (words numsLine) :: [Int]
+    let sorted = sort nums
+    putStrLn $ formatList sorted

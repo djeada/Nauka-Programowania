@@ -40,16 +40,20 @@ Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosn�
 
 -}
 
-import Data.List (sortBy)
+import Data.List (elemIndex)
+import Data.Maybe (fromMaybe)
 
--- Sortowanie niestandardowe
--- Złożoność czasowa: O(n log n)
--- Złożoność pamięciowa: O(n)
+-- Indeks klucza w cyklicznie posortowanej liście
+-- Złożoność czasowa: O(n) dla prostej implementacji, O(log n) możliwe z binary search
+-- Złożoność pamięciowa: O(1)
+
 main :: IO ()
 main = do
-    putStrLn "Sortowanie niestandardowe"
-    -- Przykład: sortowanie według własnej funkcji
-    let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    -- Sortowanie: najpierw parzyste, potem nieparzyste
-    let sorted = sortBy (\a b -> compare (even b, a) (even a, b)) nums
-    print sorted
+    nStr <- getLine
+    let n = read nStr :: Int
+    numsLine <- getLine
+    let nums = map read (words numsLine) :: [Int]
+    keyStr <- getLine
+    let key = read keyStr :: Int
+    let index = fromMaybe (-1) (elemIndex key nums)
+    print index
