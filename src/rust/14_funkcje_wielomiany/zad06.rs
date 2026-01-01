@@ -35,4 +35,37 @@ Dla `[1, 2, 1]` funkcja zwraca:
 * Pierwiastki: `(-b ± sqrt(Δ)) / (2a)`.
 
 */
-fn main() {}
+
+// Funkcja znajdująca rzeczywiste miejsca zerowe równania kwadratowego
+// Złożoność czasowa: O(1)
+// Złożoność pamięciowa: O(1)
+fn miejsca_zerowe_kwadratowe(coef: &[f64; 3]) -> Vec<f64> {
+    let a = coef[0];
+    let b = coef[1];
+    let c = coef[2];
+    
+    let delta = b * b - 4.0 * a * c;
+    
+    if delta < 0.0 {
+        // Brak rzeczywistych pierwiastków
+        Vec::new()
+    } else if delta == 0.0 {
+        // Jeden pierwiastek (podwójny)
+        let x = -b / (2.0 * a);
+        vec![x, x]
+    } else {
+        // Dwa różne pierwiastki
+        let sqrt_delta = delta.sqrt();
+        let x1 = (-b + sqrt_delta) / (2.0 * a);
+        let x2 = (-b - sqrt_delta) / (2.0 * a);
+        vec![x1, x2]
+    }
+}
+
+fn main() {
+    // Przykład: [1, 2, 1] -> x^2 + 2x + 1 = 0
+    let coef = [1.0, 2.0, 1.0];
+    
+    let wynik = miejsca_zerowe_kwadratowe(&coef);
+    println!("{:?}", wynik);
+}

@@ -27,4 +27,28 @@ Dla `a = [3, 2, 1]` i `x = 1` funkcja zwraca:
 * Najprościej użyć schematu Hornera.
 
 */
-fn main() {}
+
+// Funkcja obliczająca wartość wielomianu w punkcie (schemat Hornera)
+// Złożoność czasowa: O(n), gdzie n to stopień wielomianu
+// Złożoność pamięciowa: O(1)
+fn wartosc_wielomianu(wspolczynniki: &[i32], x: i32) -> i32 {
+    if wspolczynniki.is_empty() {
+        return 0;
+    }
+    
+    let mut wynik = wspolczynniki[0];
+    
+    for i in 1..wspolczynniki.len() {
+        wynik = wynik * x + wspolczynniki[i];
+    }
+    
+    wynik
+}
+
+fn main() {
+    // Przykład: [3, 2, 1] oznacza 3x^2 + 2x + 1
+    let a = vec![3, 2, 1];
+    let x = 1;
+    
+    println!("{}", wartosc_wielomianu(&a, x));
+}
