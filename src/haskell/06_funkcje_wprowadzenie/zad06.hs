@@ -36,7 +36,7 @@ print(suma_cyfr(13231))
 
 -}
 sumaCyfr :: Int -> Int
-sumaCyfr n = sum $ map (\c -> read [c] :: Int) $ show n
+sumaCyfr n = sum $ map (\c -> read [c] :: Int) $ show $ abs n
 
 main :: IO ()
 main = do

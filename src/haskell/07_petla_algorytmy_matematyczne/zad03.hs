@@ -78,7 +78,7 @@ iloczyn a b = sum $ replicate b a
 
 -- ZAD-03B: Dzielenie całkowite przy pomocy odejmowania
 iloraz :: Int -> Int -> Int
-iloraz a b = (length $ takeWhile (>= 0) $ iterate (\x -> x - b) a) - 1
+iloraz a b = length $ takeWhile (>= b) $ iterate (\x -> x - b) a
 
 main :: IO ()
 main = do

@@ -39,6 +39,7 @@ print(potega(3, 5))
 
 -}
 potega :: Int -> Int -> Int
+potega a 0 = 1
 potega a b = product $ replicate b a
 
 main :: IO ()
