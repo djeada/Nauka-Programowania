@@ -52,8 +52,7 @@ function sredniaDlugoscSlow(napis) {
   }
   
   // Dzielenie całkowite zgodnie z uwagami w zadaniu
-  let sredniaDlugosc = Math.floor(sumaDlugosciSlow / slowa.length);
-  return sredniaDlugosc;
+  return Math.floor(sumaDlugosciSlow / slowa.length);
 }
 
 // Test

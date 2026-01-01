@@ -56,21 +56,24 @@ function test() {
   // Zapisz oryginalną funkcję console.log
   const originalLog = console.log;
   
-  // Nadpisz console.log tymczasowo
-  console.log = function (text) {
-    output.push(text);
-  };
+  try {
+    // Nadpisz console.log tymczasowo
+    console.log = function (text) {
+      output.push(text);
+    };
+    
+    wypiszSlowa(input);
+
+    console.assert(
+      output.length === expectedOutput.length &&
+        output.every((element, index) => element === expectedOutput[index]),
+      "Test nie powiodl sie"
+    );
+  } finally {
+    // Przywróć oryginalną funkcję console.log
+    console.log = originalLog;
+  }
   
-  wypiszSlowa(input);
-
-  // Przywróć oryginalną funkcję console.log
-  console.log = originalLog;
-
-  console.assert(
-    output.length === expectedOutput.length &&
-      output.every((element, index) => element === expectedOutput[index]),
-    "Test nie powiodl sie"
-  );
   console.log("Test przeszedl pomyslnie");
 }
 
