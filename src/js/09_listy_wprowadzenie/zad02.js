@@ -85,24 +85,26 @@ function zastapElementyListy(lista) {
 
 // Funkcja wypisujaca liste z elementami oddzielonymi przecinkami
 function wypiszListe(lista) {
-  for (var i = 0; i < lista.length; i++) {
-    if (i === lista.length - 1) {
-      console.log(lista[i]);
-    } else {
-      console.log(lista[i] + ", ");
-    }
-  }
+  console.log(lista.join(","));
 }
 
-// Testy
-var lista = wczytajNliczbDoListy(3);
+// Pobieranie danych od uzytkownika
+const N = parseInt(prompt("Podaj liczbe elementow:"));
+const lista = wczytajNliczbDoListy(N);
 
-console.log("Dodaj 1 do kazdego elementu listy");
-wypiszListe(dodajJedynkeDoListy(lista));
+// Zapisz oryginalna pierwsza wartosc
+const pierwszaWartosc = lista[0];
 
-console.log("\nPomnoz kazdy element przez jego indeks w liscie");
-wypiszListe(pomnozElementyListy(lista));
+// a) Dodaj 1 do kazdego elementu
+const listaA = dodajJedynkeDoListy([...lista]);
+wypiszListe(listaA);
 
-console.log("\nZastap wszystkie elementy wartoscia pierwszego elementu listy");
-wypiszListe(zastapElementyListy(lista));
+// b) Pomnoz kazdy element przez jego indeks (na oryginalnej liscie + 1)
+const listaB = lista.map(x => x + 1);
+const listaB2 = pomnozElementyListy(listaB);
+wypiszListe(listaB2);
+
+// c) Zastap wszystkie elementy wartoscia pierwszego elementu (z oryginalnej listy)
+const listaC = new Array(N).fill(pierwszaWartosc);
+wypiszListe(listaC);
 
