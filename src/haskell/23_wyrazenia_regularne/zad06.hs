@@ -47,24 +47,26 @@ Milujmy wiernie nie jest w nich przysada.
 
 -}
 
--- Wyszukiwanie słów zawierających podciąg
--- Złożoność czasowa: O(n*m), gdzie n to liczba słów, m to długość podciągu
+import Data.Char (isAlphaNum)
+import Data.List (isSuffixOf)
+
+-- Wiersze kończące się określonym napisem
+-- Złożoność czasowa: O(n*m) gdzie n to liczba wierszy, m to długość końcówki
 -- Złożoność pamięciowa: O(n)
-findWords :: String -> String -> [String]
-findWords pattern text = filter (pattern `isInfixOf`) (words text)
-    where
-        isInfixOf [] _ = True
-        isInfixOf _ [] = False
-        isInfixOf needle haystack@(_:hs)
-            | needle `isPrefixOf` haystack = True
-            | otherwise = isInfixOf needle hs
-        
-        isPrefixOf [] _ = True
-        isPrefixOf _ [] = False
-        isPrefixOf (x:xs) (y:ys) = x == y && isPrefixOf xs ys
+
+-- Usuń znaki interpunkcyjne z końca linii
+stripTrailingPunctuation :: String -> String
+stripTrailingPunctuation = reverse . dropWhile (not . isAlphaNum) . reverse
+
+-- Sprawdź czy linia kończy się danym napisem (ignorując interpunkcję na końcu)
+endsWithPattern :: String -> String -> Bool
+endsWithPattern line pattern = pattern `isSuffixOf` stripTrailingPunctuation line
 
 main :: IO ()
 main = do
-    pattern <- getLine
-    text <- getLine
-    print $ findWords pattern text
+    content <- getContents
+    let allLines = lines content
+        ending = last allLines
+        textLines = init allLines
+        matchingLines = filter (`endsWithPattern` ending) textLines
+    mapM_ putStrLn matchingLines

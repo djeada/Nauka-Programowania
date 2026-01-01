@@ -25,21 +25,38 @@ Zmodyfikowany tekst.
 
 -}
 
-import Data.Char (isDigit)
+import Data.List (isPrefixOf)
 
--- Ekstrakcja wszystkich numerów z tekstu
--- Złożoność czasowa: O(n)
+-- Usuń fragment napisu od pierwszego wystąpienia słowa klucz
+-- Złożoność czasowa: O(n*m) gdzie n to długość tekstu, m to długość klucza
 -- Złożoność pamięciowa: O(n)
-extractNumbers :: String -> [String]
-extractNumbers [] = []
-extractNumbers text = 
-    case dropWhile (not . isDigit) text of
-        [] -> []
-        rest -> 
-            let (num, remaining) = span isDigit rest
-            in num : extractNumbers remaining
+
+-- Znajdź pozycję pierwszego wystąpienia wzorca w tekście
+findPattern :: String -> String -> Maybe Int
+findPattern pattern text = findAt 0 text
+    where
+        findAt _ [] = Nothing
+        findAt pos str
+            | pattern `isPrefixOf` str = Just pos
+            | otherwise = case str of
+                [] -> Nothing
+                (_:rest) -> findAt (pos + 1) rest
+
+-- Usuń od pierwszego wystąpienia klucza do końca
+removeFromKeyword :: String -> String -> String
+removeFromKeyword keyword text =
+    case findPattern keyword text of
+        Nothing -> text
+        Just pos -> take pos text
 
 main :: IO ()
 main = do
-    text <- getLine
-    print $ extractNumbers text
+    content <- getContents
+    let allLines = lines content
+        keyword = last allLines
+        textLines = init allLines
+        text = unlines textLines
+        -- Remove the trailing newline that unlines adds
+        textWithoutTrailingNewline = if null text then "" else init text
+        result = removeFromKeyword keyword textWithoutTrailingNewline
+    putStr result

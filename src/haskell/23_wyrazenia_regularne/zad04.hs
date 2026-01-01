@@ -38,20 +38,18 @@ Fałsz
 
 -}
 
-import Data.Char (isUpper, isLower, isDigit)
+import Data.Char (isAlphaNum)
 
--- Walidacja hasła
+-- Sprawdź, czy słowo występuje w zdaniu jako osobne słowo
 -- Złożoność czasowa: O(n)
--- Złożoność pamięciowa: O(1)
-validatePassword :: String -> Bool
-validatePassword pwd = 
-    length pwd >= 8 &&
-    any isUpper pwd &&
-    any isLower pwd &&
-    any isDigit pwd &&
-    any (`elem` "!@#$%^&*()_+-=[]{}|;:,.<>?") pwd
+-- Złożoność pamięciowa: O(n)
+containsWholeWord :: String -> String -> Bool
+containsWholeWord sentence word = word `elem` words (map replaceNonAlnum sentence)
+    where
+        replaceNonAlnum c = if isAlphaNum c then c else ' '
 
 main :: IO ()
 main = do
-    password <- getLine
-    putStrLn $ if validatePassword password then "Prawda" else "Fałsz"
+    sentence <- getLine
+    word <- getLine
+    putStrLn $ if containsWholeWord sentence word then "Prawda" else "Fałsz"

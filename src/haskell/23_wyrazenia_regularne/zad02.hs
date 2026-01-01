@@ -44,19 +44,21 @@ Fałsz
 
 -}
 
-import Data.Char (isDigit)
+import Data.Char (isUpper, isLower, isDigit)
 
--- Walidacja numeru telefonu (uproszczona)
+-- Walidacja hasła
 -- Złożoność czasowa: O(n)
 -- Złożoność pamięciowa: O(1)
-validatePhone :: String -> Bool
-validatePhone phone = 
-    let cleaned = filter (/= ' ') $ filter (/= '-') phone
-        hasPlus = not (null cleaned) && head cleaned == '+'
-        digits = if hasPlus then tail cleaned else cleaned
-    in length digits >= 9 && length digits <= 15 && all isDigit digits
+validatePassword :: String -> Bool
+validatePassword pwd = 
+    length pwd >= 8 &&
+    length pwd <= 20 &&
+    any isUpper pwd &&
+    any isLower pwd &&
+    any isDigit pwd &&
+    any (`elem` "!#$%&'*+-/=?^_`{|}~") pwd
 
 main :: IO ()
 main = do
-    phone <- getLine
-    putStrLn $ if validatePhone phone then "Prawda" else "Fałsz"
+    password <- getLine
+    putStrLn $ if validatePassword password then "Prawda" else "Fałsz"

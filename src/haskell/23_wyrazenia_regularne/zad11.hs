@@ -38,18 +38,29 @@ file
 
 -}
 
--- Dzielenie tekstu według separatora
+-- Nazwa pliku bez rozszerzenia
 -- Złożoność czasowa: O(n)
 -- Złożoność pamięciowa: O(n)
-splitText :: Char -> String -> [String]
-splitText sep text = 
-    case break (== sep) text of
-        (part, []) -> [part]
-        (part, _:rest) -> part : splitText sep rest
+
+-- Wyodrębnij nazwę pliku z pełnej ścieżki
+getFilename :: String -> String
+getFilename path = 
+    let afterSlash = reverse $ takeWhile (\c -> c /= '/' && c /= '\\') (reverse path)
+    in afterSlash
+
+-- Usuń rozszerzenie (część po ostatniej kropce)
+removeExtension :: String -> String
+removeExtension filename =
+    case break (== '.') filename of
+        (name, '.':rest) -> 
+            if '.' `elem` rest 
+            then name ++ "." ++ removeExtension rest
+            else name
+        _ -> filename
 
 main :: IO ()
 main = do
-    sep <- getLine
-    text <- getLine
-    let separator = if null sep then ',' else head sep
-    print $ splitText separator text
+    path <- getLine
+    let filename = getFilename path
+        nameWithoutExt = removeExtension filename
+    putStrLn nameWithoutExt
