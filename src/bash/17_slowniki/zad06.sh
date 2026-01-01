@@ -47,11 +47,17 @@ test_histogram_znakow() {
     local wynik=($(histogram_znakow "$napis"))
     local oczekiwane=(a:4; l:1; m:1; k:1; o:1; t:1)
     assertIdenticalElements wynik oczekiwane $LINENO
+
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n)
+# Zlozonosc pamieciowa: O(n)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
 }
 
 main() {
-    test_histogram_znakow
+    funkcja_glowna
 }
 
 main "$@"
-

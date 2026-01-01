@@ -31,11 +31,15 @@
 
 source ../assert.sh
 
+# Funkcja usuwajaca spacje ze zdania (wersja z petla)
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc zdania
+# Zlozonosc pamieciowa: O(n) dla wyniku
 usun_spacje_v1() {
 
     local zdanie="$1"
     local wynik=""
 
+    # Iteracja przez wszystkie znaki
     while IFS= read -n 1 znak; do
         if [[ "$znak" != " " ]]; then
             local wynik="${wynik}${znak}"
@@ -45,6 +49,9 @@ usun_spacje_v1() {
     echo "$wynik"
 }
 
+# Funkcja usuwajaca spacje ze zdania (wersja z sed)
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc zdania
+# Zlozonosc pamieciowa: O(n) dla wyniku
 usun_spacje_v2() {
 
     local zdanie="$1"

@@ -33,6 +33,9 @@
 
 source ../assert.sh
 
+# Funkcja liczaca wystapienia znaku w napisie (wersja z petla)
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(1)
 policz_znak_v1() {
 
     local slowo=$1
@@ -49,6 +52,9 @@ policz_znak_v1() {
 
 }
 
+# Funkcja liczaca wystapienia znaku w napisie (wersja z grep)
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(n) dla wyjscia grep
 policz_znak_v2() {
 
     local slowo=$1

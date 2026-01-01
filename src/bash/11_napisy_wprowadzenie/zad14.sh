@@ -31,11 +31,15 @@
 
 source ../assert.sh
 
+# Funkcja tworzaca napis z liczb od 1 do n
+# Zlozonosc czasowa: O(n)
+# Zlozonosc pamieciowa: O(n) dla wyniku
 liczby() {
 
     local n="$1"
     local wynik=""
 
+    # Iteracja od 1 do n
     for ((i = 1; i <= n; i++)); do
         local wynik="$wynik$i"
     done

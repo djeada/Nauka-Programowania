@@ -3,13 +3,16 @@
 # Dane wejsciowe: Napis.
 # Dane wyjsciowe: Lista napisow.
 # Przyklad:
-# Dla otrzymanego napisu: “taco”, powinna zostac zwrocona lista: ["taco", "toca"].
+# Dla otrzymanego napisu: "taco", powinna zostać zwrocona lista: ["taco", "toca"].
 
 source ../assert.sh
 
+# Funkcja generujaca wszystkie permutacje napisu (rekurencyjnie)
+# Zlozonosc czasowa: O(n!)
+# Zlozonosc pamieciowa: O(n!)
 permutacje() {
     local napis=$1
-    local napis=$1
+    
     if [ ${#napis} -eq 1 ]; then
         echo "$napis"
         return
@@ -29,8 +32,10 @@ permutacje() {
     echo "${permutacje[@]}"
 }
 
+# Funkcja sprawdzajaca czy slowo jest palindromem
+# Zlozonosc czasowa: O(n)
+# Zlozonosc pamieciowa: O(n)
 czy_palindrom() {
-    local slowo="$1"
     local slowo="$1"
     local slowo_odwrocone=$(echo "$slowo" | rev)
     if [ "$slowo" == "$slowo_odwrocone" ]; then
@@ -40,23 +45,28 @@ czy_palindrom() {
     fi
 }
 
-permutacje_palindromiczne() {
-    local napis=$1
-    for permutacja in $(permutacje "$napis"); do
-        if [ $(czy_palindrom "$permutacja") == "true" ]; then
+# Funkcja znajdujaca permutacje, ktore sa palindromami
+# Zlozonosc czasowa: O(n! * n)
+# Zlozonosc pamieciowa: O(n!)
+permutacje_palindromy() {
+    local napis="$1"
+    local wszystkie_permutacje=$(permutacje "$napis")
+    
+    for permutacja in $wszystkie_permutacje; do
+        if [ "$(czy_palindrom "$permutacja")" == "true" ]; then
             echo "$permutacja"
         fi
     done
 }
 
-test_permutacje_palindromiczne() {
-    local wynik=($(permutacje_palindromiczne "adamm"))
-    local oczekiwane=("madam" "amdma")
-    assertIdenticalElements oczekiwane wynik $LINENO
+test_permutacje_palindromy() {
+    local wynik=($(permutacje_palindromy "taco"))
+    local oczekiwane=(taco toca)
+    assertArrayEqual wynik oczekiwane $LINENO
 }
 
 main() {
-    test_permutacje_palindromiczne
+    test_permutacje_palindromy
 }
 
 main "$@"

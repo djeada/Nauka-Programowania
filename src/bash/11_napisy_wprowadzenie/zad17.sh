@@ -35,7 +35,11 @@
 
 source ../assert.sh
 
+# Funkcja laczaca liczby z tablicy w napis
+# Zlozonosc czasowa: O(n), gdzie n to liczba elementow w tablicy
+# Zlozonosc pamieciowa: O(n) dla wyniku
 liczby() {
+    # Polaczenie wszystkich elementow tablicy w jeden napis
     printf -v wynik '%s' "${lista[@]}"
     echo "$wynik"
 }

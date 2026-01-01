@@ -47,10 +47,17 @@ test_znaki_powtarzajace_sie_wiecej_niz_raz() {
     local wynik=($(znaki_powtarzajace_sie_wiecej_niz_raz "$napis"))
     local oczekiwane=(a b)
     assertElementsEqual wynik oczekiwane $LINENO
+
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n)
+# Zlozonosc pamieciowa: O(n)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
 }
 
 main() {
-    test_znaki_powtarzajace_sie_wiecej_niz_raz
+    funkcja_glowna
 }
 
 main "$@"

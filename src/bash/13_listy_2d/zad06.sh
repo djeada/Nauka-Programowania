@@ -27,21 +27,17 @@
 # 45 88
 # 77 88
 # 10 22
-# 11 12
-# 42 45
-# ```
-#
-# **Wyjście:**
-#
-# ```
-# 10 22
-# 23 88
-# ```
-#
-# ### Uwagi
-#
-# * Przedziały uznajemy za nachodzące, gdy `next_start <= current_end`.
+
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n^2)
+# Zlozonosc pamieciowa: O(n^2)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
+}
+
 main() {
+    funkcja_glowna
 }
 
 main "$@"

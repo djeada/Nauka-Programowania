@@ -37,7 +37,19 @@
 # Obwód koła: 18.8496
 # Pole koła: 28.2743
 # ```
+
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(1)
+# Zlozonosc pamieciowa: O(1)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    # Bash nie ma natywnego wsparcia dla klas obiektowych
+    # Mozna uzyc asocjacyjnych tablic lub zagniezdzonej struktury funkcji
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
+}
+
 main() {
+    funkcja_glowna
 }
 
 main "$@"

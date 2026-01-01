@@ -35,43 +35,73 @@
 
 source ../assert.sh
 
-srednia_dlugosc() {
+# Funkcja pomocnicza sprawdzajaca czy liczba jest pierwsza
+# Zlozonosc czasowa: O(sqrt(n))
+# Zlozonosc pamieciowa: O(1)
+czy_pierwsza() {
+    local n=$1
+    
+    if [ $n -lt 2 ]; then
+        return 1
+    fi
+    
+    if [ $n -eq 2 ]; then
+        return 0
+    fi
+    
+    local j
+    for ((j = 2; j * j <= n; j++)); do
+        if [ $((n % j)) -eq 0 ]; then
+            return 1
+        fi
+    done
+    
+    return 0
+}
 
-    local zdanie="$1"
-    local licznik=0
-    local calkowita_dlugosc=0
-
-    zdanie=$(echo "$zdanie" | sed -r 's/[.,:;!?]+/ /g')
-
-    read -ra lista_slow <<<"$zdanie"
-
-    for slowo in "${lista_slow[@]}"; do
-        if [[ "$slowo" =~ ^[[:alnum:]]*$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
-            if [[ "$slowo" =~ ^[[:alnum:]]*$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
-                local licznik=$((licznik + 1))
-                local calkowita_dlugosc=$(( calkowita_dlugosc + ${#slowo} ))
+# Funkcja wypisujaca znaki na indeksach bedacych liczbami pierwszymi
+# Zlozonosc czasowa: O(n * sqrt(n)), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(n) dla listy wynikowej
+znaki_na_indeksach_pierwszych() {
+    local napis="$1"
+    local n=${#napis}
+    local wynik="["
+    local pierwszy=1
+    
+    # Iteracja przez wszystkie indeksy
+    local i
+    for ((i = 0; i < n; i++)); do
+        # Sprawdzenie czy indeks jest liczba pierwsza
+        if czy_pierwsza $i; then
+            if [ $pierwszy -eq 1 ]; then
+                wynik="${wynik}'${napis:$i:1}'"
+                pierwszy=0
+            else
+                wynik="${wynik}, '${napis:$i:1}'"
             fi
-        done
+        fi
+    done
+    
+    wynik="${wynik}]"
+    echo "$wynik"
+}
 
-        echo $(bc -l <<< "scale=0; $calkowita_dlugosc/$licznik")
-    }
+test1() {
+    local napis="Slon"
+    local wynik="['o', 'n']"
+    assertEqual "$(znaki_na_indeksach_pierwszych "$napis")" "$wynik" $LINENO
+}
 
-    test1() {
-        local zdanie="Ile to   ma :  slow w swoim zdaniu na   koniec?"
-        local wynik=3
-        assertEqual "$(srednia_dlugosc "$zdanie")" "$wynik" $LINENO
-    }
+test2() {
+    local napis="abcdefghijk"
+    local wynik="['c', 'd', 'f', 'h']"
+    assertEqual "$(znaki_na_indeksach_pierwszych "$napis")" "$wynik" $LINENO
+}
 
-    test2() {
-        local zdanie="Kaczka lubi wiosne."
-        local wynik=5
-        assertEqual "$(srednia_dlugosc "$zdanie")" "$wynik" $LINENO
-    }
+main() {
+    test1
+    test2
+}
 
-    main() {
-        test1
-        test2
-    }
-
-    main "$@"
+main "$@"
 

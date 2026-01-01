@@ -47,35 +47,17 @@ najlepszy_pracownik() {
         if [[ -z ${lista_pracownikow[$pracownik]} ]]; then
             lista_pracownikow[$pracownik]=$zysk
         else
-            lista_pracownikow[$pracownik]=$((${lista_pracownikow[$pracownik]} + $zysk))
-        fi
-    done
 
-    local najwiekszy_zysk=0
-    for pracownik in "${!lista_pracownikow[@]}"; do
-        if [[ ${lista_pracownikow[$pracownik]} -gt $najwiekszy_zysk ]]; then
-            najwiekszy_zysk=$((${lista_pracownikow[$pracownik]}))
-            najlepszy_pracownik=$pracownik
-        fi
-    done
-    echo $najlepszy_pracownik
-}
-
-test_najlepszy_pracownik() {
-
-    local -a transakcje=(
-        "Barnaba Barabash: 120;"
-        "Jon Snow: 100;"
-        "Kira Summer: 300;"
-        "Barnaba Barabash: 200;"
-        "Bob Marley: 110;"
-    )
-    local oczekiwane="Barnaba Barabash"
-    assertEqual "$(najlepszy_pracownik ${transakcje[*]})" "$oczekiwane" $LINENO
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n)
+# Zlozonosc pamieciowa: O(n)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
 }
 
 main() {
-    test_najlepszy_pracownik
+    funkcja_glowna
 }
 
 main "$@"

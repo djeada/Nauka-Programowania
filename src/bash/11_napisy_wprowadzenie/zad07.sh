@@ -31,19 +31,27 @@
 
 source ../assert.sh
 
+# Funkcja pomocnicza konwertujaca znak na kod ASCII
+# Zlozonosc czasowa: O(1)
+# Zlozonosc pamieciowa: O(1)
 ord() {
     LC_CTYPE=C printf '%d' "'$1"
 }
 
+# Funkcja zamieniajaca znaki na kody ASCII
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(n) dla wyniku
 zamien() {
 
     local napis="$1"
     local n=$((${#napis} - 1))
 
+    # Wypisywanie kodow ASCII wszystkich znakow oprocz ostatniego
     for ((i = 0; i < n; i++)); do
         echo -n "$(ord "${napis:$i:1}"), "
     done
 
+    # Wypisywanie kodu ASCII ostatniego znaku (bez przecinka)
     if [ $n -ne -1 ]; then
         echo "$(ord "${napis:$n:1}")"
     fi

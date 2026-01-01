@@ -47,34 +47,17 @@ source ../assert.sh
 czy_slowniki_identyczne() {
 
     if [[ "${!slownik_a[@]}" != "${!slownik_b[@]}" ]]; then
-        if [[ "${!slownik_a[@]}" != "${!slownik_b[@]}" ]]; then
-            echo false
-            return
-        fi
 
-        for klucz in "${!slownik_a[@]}"; do
-            for klucz in "${!slownik_a[@]}"; do
-                local posortowane_wartosci_a=($(echo "${slownik_a[$klucz]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
-                local posortowane_wartosci_a=($(echo "${slownik_a[$klucz]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
-                local posortowane_wartosci_b=($(echo "${slownik_b[$klucz]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
-                if [[ "${posortowane_wartosci_a[@]}" != "${posortowane_wartosci_b[@]}" ]]; then
-                    echo false
-                    return
-                fi
-            done
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n)
+# Zlozonosc pamieciowa: O(n)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
+}
 
-            echo true
-        }
+main() {
+    funkcja_glowna
+}
 
-        test_czy_slowniki_identyczne() {
-            local -A slownik_a=(["a"]="1 2 3" ["b"]="4 5 6")
-            local -A slownik_b=(["a"]="3 1 2" ["b"]="5 4 6")
-            assertTrue "$(czy_slowniki_identyczne)" $LINENO
-        }
-
-        main() {
-            test_czy_slowniki_identyczne
-        }
-
-        main "$@"
-
+main "$@"

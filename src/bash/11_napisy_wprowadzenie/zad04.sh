@@ -31,10 +31,16 @@
 
 source ../assert.sh
 
+# Funkcja zamieniajaca male litery na wielkie (wersja z awk)
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(n) dla wyniku
 na_wielkie_v1() {
     awk '{ print toupper($0) }' <<<"$1"
 }
 
+# Funkcja zamieniajaca male litery na wielkie (wersja z tr)
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(n) dla wyniku
 na_wielkie_v2() {
     tr a-z A-Z <<<"$1"
 }

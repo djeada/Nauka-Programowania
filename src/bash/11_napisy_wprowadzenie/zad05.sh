@@ -42,31 +42,44 @@
 #
 # * Dokładnie jedna spacja między znakami w punkcie (a), bez spacji na końcu linii.
 
+# Wypisywanie co k-tego znaku poziomo (z oddzieleniem spacjami)
+# Zlozonosc czasowa: O(n/k), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(1)
 wypisz_poziomo() {
     local napis="$1"
     local k=$2
     local n=${#napis}
-
+    local wynik=""
+    
+    # Zbieranie znakow
     for ((i = 0; i < n; i += k)); do
-        echo -n "${napis:$i:1} "
+        if [ -z "$wynik" ]; then
+            wynik="${napis:$i:1}"
+        else
+            wynik="$wynik ${napis:$i:1}"
+        fi
     done
-    echo ""
+    
+    echo "$wynik"
 }
 
+# Wypisywanie co k-tego znaku pionowo (kazdy znak w osobnej linii)
+# Zlozonosc czasowa: O(n/k), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(1)
 wypisz_pionowo() {
     local napis="$1"
     local k=$2
     local n=${#napis}
-
+    
     for ((i = 0; i < n; i += k)); do
-        echo "${napis:$i:1} "
+        echo "${napis:$i:1}"
     done
 }
 
 main() {
     local napis="hej dzieci jesli chcecie zobaczyc smerfow las"
     local k=3
-
+    
     wypisz_poziomo "$napis" $k
     wypisz_pionowo "$napis" $k
 }

@@ -33,6 +33,9 @@
 
 source ../assert.sh
 
+# Funkcja obliczajaca odleglosc Hamminga miedzy dwoma napisami
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(1)
 odleglosc_hamminga() {
 
     local napis_a="$1"
@@ -40,13 +43,16 @@ odleglosc_hamminga() {
     local n=${#napis_a}
     local m=${#napis_b}
 
+    # Sprawdzenie czy napisy maja ta sama dlugosc
     if [ $n -ne $m ]; then
         echo "-1"
         return
     fi
 
     local wynik=0
+    # Iteracja przez wszystkie znaki
     for ((i = 0; i < n; i++)); do
+        # Sprawdzenie czy znaki sa rozne
         if [[ "${napis_a:$i:1}" != "${napis_b:$i:1}" ]]; then
             local wynik=$((wynik + 1))
         fi

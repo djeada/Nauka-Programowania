@@ -35,51 +35,55 @@
 
 source ../assert.sh
 
+# Funkcja liczaca slowa w zdaniu
+# Zlozonosc czasowa: O(n), gdzie n to liczba slow
+# Zlozonosc pamieciowa: O(n) dla tablicy slow
 liczba_slow_v1() {
 
     local zdanie="$1"
     local licznik=0
 
+    # Usuniecie znakow interpunkcyjnych
     zdanie=$(echo "$zdanie" | sed -r 's/[.,:;!?]+/ /g')
 
     read -ra lista_slow <<<"$zdanie"
 
+    # Iteracja przez wszystkie slowa
+    # Zlozonosc czasowa: O(n), gdzie n to liczba slow
+    # Zlozonosc pamieciowa: O(n) dla tablicy slow
     for slowo in "${lista_slow[@]}"; do
-        if [[ "$slowo" =~ ^[[:alnum:]]*$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
-            if [[ "$slowo" =~ ^[[:alnum:]]*$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
-                local licznik=$((licznik + 1))
-            fi
-        done
+        # Sprawdzenie czy slowo zawiera tylko znaki alfanumeryczne i nie jest liczba
+        if [[ "$slowo" =~ ^[[:alnum:]]+$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
+            local licznik=$((licznik + 1))
+        fi
+    done
 
-        echo "$licznik"
-    }
+    echo "$licznik"
+}
 
-    test1() {
-        local zdanie="Ile to   ma :  slow w swoim zdaniu na   koniec?"
-        local wynik=9
-        local wynik=9
-        assertEqual "$(liczba_slow_v1 "$zdanie")" "$wynik" $LINENO
-    }
+test1() {
+    local zdanie="Ile to   ma :  slow w swoim zdaniu na   koniec?"
+    local wynik=9
+    assertEqual "$(liczba_slow_v1 "$zdanie")" "$wynik" $LINENO
+}
 
-    test2() {
-        local zdanie="to sa cztery slowa"
-        local wynik=4
-        local wynik=4
-        assertEqual "$(liczba_slow_v1 "$zdanie")" "$wynik" $LINENO
-    }
+test2() {
+    local zdanie="to sa cztery slowa"
+    local wynik=4
+    assertEqual "$(liczba_slow_v1 "$zdanie")" "$wynik" $LINENO
+}
 
-    test3() {
-        local zdanie="31    331 .,,,.,.,brak slow!!!    "
-        local wynik=2
-        local wynik=2
-        assertEqual "$(liczba_slow_v1 "$zdanie")" "$wynik" $LINENO
-    }
+test3() {
+    local zdanie="31    331 .,,,.,.,brak slow!!!    "
+    local wynik=2
+    assertEqual "$(liczba_slow_v1 "$zdanie")" "$wynik" $LINENO
+}
 
-    main() {
-        test1
-        test2
-        test3
-    }
+main() {
+    test1
+    test2
+    test3
+}
 
-    main "$@"
+main "$@"
 

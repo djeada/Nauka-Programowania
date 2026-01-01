@@ -27,14 +27,17 @@
 # 7 8 9
 # ```
 #
-# **Wyjście:**
-#
-# ```
-# 7 4 1
-# 8 5 2
-# 9 6 3
-# ```
+
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n^2)
+# Zlozonosc pamieciowa: O(n^2)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
+}
+
 main() {
+    funkcja_glowna
 }
 
 main "$@"

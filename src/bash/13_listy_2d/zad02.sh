@@ -30,7 +30,29 @@
 # 0 1 2
 # 0 2 4
 # ```
+
+# Funkcja generujaca macierz n×n z iloczynem indeksow
+# Zlozonosc czasowa: O(n^2)
+# Zlozonosc pamieciowa: O(1)
+macierz_iloczyn() {
+    local n=$1
+    
+    for ((i = 0; i < n; i++)); do
+        for ((j = 0; j < n; j++)); do
+            local wartość=$((i * j))
+            if [ $j -eq $((n - 1)) ]; then
+                echo -n "$wartość"
+            else
+                echo -n "$wartość "
+            fi
+        done
+        echo ""
+    done
+}
+
 main() {
+    local n=3
+    macierz_iloczyn $n
 }
 
 main "$@"

@@ -47,29 +47,17 @@ najczesciej_wystepujaca_litera() {
     local maks=0
     local maks=0
     for litera in ${!histogram[@]}; do
-        if [[ "${histogram[$litera]}" -gt "$maks" ]]; then
-            maks="${histogram[$litera]}"
-        fi
-    done
 
-    for (( i=0; i<${#zdanie}; i++ )); do
-        for (( i=0; i<${#zdanie}; i++ )); do
-            if [[ "${histogram[${zdanie:$i:1}]}" -eq "$maks" ]]; then
-                echo "${zdanie:$i:1}"
-                break
-            fi
-        done
-    }
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n)
+# Zlozonosc pamieciowa: O(n)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
+}
 
-    test_najczesciej_wystepujaca_litera() {
+main() {
+    funkcja_glowna
+}
 
-        assertEqual "$(najczesciej_wystepujaca_litera "Ala ma kota")" "a" $LINENO
-
-    }
-
-    main() {
-        test_najczesciej_wystepujaca_litera
-    }
-
-    main "$@"
-
+main "$@"

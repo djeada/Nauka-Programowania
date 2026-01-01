@@ -7,8 +7,10 @@
 
 source ../assert.sh
 
+# Funkcja sprawdzajaca czy slowo jest palindromem
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc slowa
+# Zlozonosc pamieciowa: O(n) dla odwroconego slowa
 czy_palindrom() {
-    local slowo="$1"
     local slowo="$1"
     local slowo_odwrocone=$(echo "$slowo" | rev)
     if [ "$slowo" == "$slowo_odwrocone" ]; then
