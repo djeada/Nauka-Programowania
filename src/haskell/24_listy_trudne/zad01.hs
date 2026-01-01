@@ -37,5 +37,25 @@ Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — w
 \* Jeśli kilka zer daje ten sam maksymalny wynik — wybierz to o **najmniejszym indeksie** (jeśli nie określono inaczej w testach).
 
 -}
+import Text.Read (readMaybe)
+
+-- Najdłuższy ciąg jedynek po zamianie jednego zera
+-- Złożoność czasowa: O(n^2)
+-- Złożoność pamięciowa: O(1)
+findBestZeroToFlip :: [Int] -> Int
+findBestZeroToFlip xs
+    | all (== 0) xs || all (== 1) xs = -1
+    | otherwise = snd $ maximum [(consecutiveOnes i, i) | (i, x) <- zip [0..] xs, x == 0]
+    where
+        consecutiveOnes idx =
+            let (before, _:after) = splitAt idx xs
+                countBack = length $ takeWhile (== 1) (reverse before)
+                countForward = length $ takeWhile (== 1) after
+            in countBack + countForward + 1
+
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case readMaybe input :: Maybe [Int] of
+        Just xs -> print $ findBestZeroToFlip xs
+        Nothing -> print (-1 :: Int)

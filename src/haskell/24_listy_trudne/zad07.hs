@@ -31,5 +31,22 @@ Otrzymujesz listę liczb naturalnych — wysokości słupków. Oblicz, ile jedno
 ```
 
 -}
+import Text.Read (readMaybe)
+
+-- Woda między słupkami
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n)
+trapRainWater :: [Int] -> Int
+trapRainWater heights = 
+    let n = length heights
+        leftMax = scanl1 max heights
+        rightMax = scanr1 max heights
+        water = [min (leftMax !! i) (rightMax !! i) - heights !! i | i <- [0..n-1]]
+    in sum water
+
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case readMaybe input :: Maybe [Int] of
+        Just heights -> print $ trapRainWater heights
+        Nothing -> print (0 :: Int)

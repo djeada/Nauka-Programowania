@@ -37,5 +37,20 @@ Wynik ma zawierać wszystkie podzbiory (włącznie z pustym).
 \* Jeśli sprawdzarka wymaga konkretnej kolejności podzbiorów, musi być ona opisana w treści — w przeciwnym razie dopuszczalna może być dowolna. (Jeśli chcesz, mogę dopisać sztywną konwencję kolejności, ale bez rozwiązań.)
 
 -}
+import Text.Read (readMaybe)
+
+-- Zbiór potęgowy listy
+-- Złożoność czasowa: O(2^n * n)
+-- Złożoność pamięciowa: O(2^n * n)
+powerSet :: [a] -> [[a]]
+powerSet [] = [[]]
+powerSet (x:xs) = 
+    let ps = powerSet xs
+    in ps ++ map (x:) ps
+
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case readMaybe input :: Maybe [Int] of
+        Just xs -> print $ powerSet xs
+        Nothing -> print ([] :: [[Int]])
