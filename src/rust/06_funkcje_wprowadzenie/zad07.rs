@@ -36,4 +36,29 @@ Jedna linia (tylko raz, po poprawnym dopasowaniu):
 * Porównanie jest czułe na wielkość liter.
 
 */
-fn main() {}
+
+fn pobierz_dane() -> (String, String) {
+    let mut login = String::new();
+    std::io::stdin().read_line(&mut login).unwrap();
+    let login = login.trim().to_string();
+    
+    let mut haslo = String::new();
+    std::io::stdin().read_line(&mut haslo).unwrap();
+    let haslo = haslo.trim().to_string();
+    
+    (login, haslo)
+}
+
+fn sprawdz_dane(poprawny_login: &str, poprawne_haslo: &str) {
+    loop {
+        let (login, haslo) = pobierz_dane();
+        if login == poprawny_login && haslo == poprawne_haslo {
+            println!("Dane poprawne. Dostęp przyznany.");
+            break;
+        }
+    }
+}
+
+fn main() {
+    sprawdz_dane("admin", "haslo123");
+}

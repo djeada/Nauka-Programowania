@@ -38,4 +38,16 @@ print(zaokraglij_w_dol(7, 2))
 ```
 
 */
-fn main() {}
+
+fn zaokraglij_w_dol(mut a: i32, b: i32) -> i32 {
+    let mut count = 0;
+    while a >= b {
+        a -= b;
+        count += 1;
+    }
+    count
+}
+
+fn main() {
+    println!("{}", zaokraglij_w_dol(7, 2));
+}

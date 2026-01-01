@@ -102,4 +102,24 @@ True
 ```
 
 */
-fn main() {}
+
+// Podpunkt a) zwraca liczbę 3
+fn zwroc_liczbe() -> i32 {
+    3
+}
+
+// Podpunkt b) zwraca napis "Tak"
+fn zwroc_napis() -> &'static str {
+    "Tak"
+}
+
+// Podpunkt c) zwraca wartość logiczną true
+fn zwroc_prawda() -> bool {
+    true
+}
+
+fn main() {
+    println!("{}", zwroc_liczbe());
+    println!("{}", zwroc_napis());
+    println!("{}", zwroc_prawda());
+}

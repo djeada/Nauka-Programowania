@@ -37,4 +37,13 @@ b = 8
 ```
 
 */
-fn main() {}
+
+fn zamien_wartosci(a: i32, b: i32) -> (i32, i32) {
+    (b, a)
+}
+
+fn main() {
+    let (a, b) = zamien_wartosci(8, 5);
+    println!("a = {}", a);
+    println!("b = {}", b);
+}
