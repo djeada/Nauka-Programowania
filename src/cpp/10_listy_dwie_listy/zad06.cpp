@@ -1,99 +1,52 @@
 /*
-ZAD-06 — Znalezienie elementów wspólnych dwóch list
-
-**Poziom:** ★☆☆
-**Tagi:** `list`, `set`
-
-### Treść
-
-Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występują w
-obu listach:
-
-* zachowaj **kolejność występowania w pierwszej liście**,
-* jeśli element z pierwszej listy występuje w drugiej liście, dodaj go do
-wyniku,
-* jeśli nie ma elementów wspólnych — wypisz `[]`.
-
-### Wejście
-
-* 1 linia: lista 1
-* 2 linia: lista 2
-
-### Wyjście
-
-* 1 linia: lista elementów wspólnych
-
-### Przykład
-
-**Wejście:**
-
-```
-[9, 2, 5, 4]
-[4, 2, 1]
-```
-
-**Wyjście:**
-
-```
-[2, 4]
-```
-
+ZAD-06 — Część wspólna dwóch list
 */
-#include <algorithm>
-#include <cassert>
-#include <unordered_set>
+#include <iostream>
 #include <vector>
+#include <sstream>
+#include <string>
+#include <algorithm>
 
-// Zlozonosc obliczeniowa O(n^2)
-// Zlozonosc pamieciowa O(n)
-std::vector<int> czescWspolnaV1(std::vector<int> &listaA,
-                                std::vector<int> &listaB) {
-  std::vector<int> wynik;
-
-  for (auto liczba : listaA) {
-    if (find(listaB.begin(), listaB.end(), liczba) != listaB.end())
-      wynik.push_back(liczba);
+std::vector<int> parseList(const std::string& line) {
+  std::vector<int> result;
+  std::string cleaned;
+  for (char c : line) {
+    if (c != '[' && c != ']' && c != ' ') cleaned += c;
   }
-
-  return wynik;
+  std::stringstream ss(cleaned);
+  std::string token;
+  while (std::getline(ss, token, ',')) {
+    if (!token.empty()) result.push_back(std::stoi(token));
+  }
+  return result;
 }
 
-// Zlozonosc obliczeniowa O(nlogn)
-// Zlozonosc pamieciowa O(n)
-std::vector<int> czescWspolnaV2(std::vector<int> &listaA,
-                                std::vector<int> &listaB) {
-  std::vector<int> wynik;
-  sort(listaA.begin(), listaA.end());
-  sort(listaB.begin(), listaB.end());
-  set_intersection(listaA.begin(), listaA.end(), listaB.begin(), listaB.end(),
-                   inserter(wynik, wynik.begin()));
-
-  return wynik;
-}
-
-bool wektoryRowne(std::vector<int> v1, std::vector<int> v2) {
-  sort(v1.begin(), v1.end());
-  sort(v2.begin(), v2.end());
-  return v1 == v2;
-}
-
-void test1() {
-  std::vector<int> listaA{3, 6, 2, 7, 9};
-  std::vector<int> listaB{4, 2, 3, 5, 6};
-  std::vector<int> wynik{3, 6, 2};
-  assert(wektoryRowne(czescWspolnaV1(listaA, listaB), wynik));
-}
-
-void test2() {
-  std::vector<int> listaA{3, 6, 2, 7, 9};
-  std::vector<int> listaB{4, 2, 3, 5, 6};
-  std::vector<int> wynik{3, 6, 2};
-  assert(wektoryRowne(czescWspolnaV2(listaA, listaB), wynik));
+void printList(const std::vector<int>& lista) {
+  std::cout << "[";
+  for (size_t i = 0; i < lista.size(); i++) {
+    if (i > 0) std::cout << ", ";
+    std::cout << lista[i];
+  }
+  std::cout << "]" << std::endl;
 }
 
 int main() {
-  test1();
-  test2();
-
+  std::string line1, line2;
+  std::getline(std::cin, line1);
+  std::getline(std::cin, line2);
+  
+  std::vector<int> listaA = parseList(line1);
+  std::vector<int> listaB = parseList(line2);
+  
+  std::vector<int> wspolne;
+  for (int a : listaA) {
+    if (std::find(listaB.begin(), listaB.end(), a) != listaB.end()) {
+      if (std::find(wspolne.begin(), wspolne.end(), a) == wspolne.end()) {
+        wspolne.push_back(a);
+      }
+    }
+  }
+  
+  printList(wspolne);
   return 0;
 }

@@ -1,71 +1,50 @@
 /*
-ZAD-09 — Usuń z pierwszej listy część wspólną obu list
-
-**Poziom:** ★★☆
-**Tagi:** `list`, `filter`
-
-### Treść
-
-Wczytaj dwie listy liczb całkowitych. Usuń z pierwszej listy wszystkie elementy,
-które występują również w drugiej liście.
-
-* Zachowaj kolejność pozostałych elementów z pierwszej listy.
-* Jeśli wszystko zostanie usunięte — wypisz `[]`.
-
-### Wejście
-
-* 1 linia: lista 1
-* 2 linia: lista 2
-
-### Wyjście
-
-* 1 linia: lista 1 po usunięciu elementów wspólnych
-
-### Przykład
-
-**Wejście:**
-
-```
-[9, 2, 5, 4]
-[4, 2, 1]
-```
-
-**Wyjście:**
-
-```
-[9, 5]
-```
-
+ZAD-09 — Usunięcie części wspólnej z listy 1
 */
-#include <algorithm>
-#include <cassert>
+#include <iostream>
 #include <vector>
+#include <sstream>
+#include <string>
+#include <algorithm>
 
-// Zlozonosc obliczeniowa O(n^2)
-// Zlozonosc pamieciowa O(n)
-void usunCzescWspolnaV1(std::vector<int> &listaA, std::vector<int> &listaB) {
-  auto it = listaA.begin();
-
-  while (it != listaA.end()) {
-    if (find(listaB.begin(), listaB.end(), *it) != listaB.end())
-      it = listaA.erase(it);
-    else
-      it++;
+std::vector<int> parseList(const std::string& line) {
+  std::vector<int> result;
+  std::string cleaned;
+  for (char c : line) {
+    if (c != '[' && c != ']' && c != ' ') cleaned += c;
   }
+  std::stringstream ss(cleaned);
+  std::string token;
+  while (std::getline(ss, token, ',')) {
+    if (!token.empty()) result.push_back(std::stoi(token));
+  }
+  return result;
 }
 
-void test1() {
-  std::vector<int> listaA{3, 6, 2, 7, 9};
-  std::vector<int> listaB{4, 2, 3, 5, 6};
-  std::vector<int> wynik{7, 9};
-
-  usunCzescWspolnaV1(listaA, listaB);
-
-  assert(listaA == wynik);
+void printList(const std::vector<int>& lista) {
+  std::cout << "[";
+  for (size_t i = 0; i < lista.size(); i++) {
+    if (i > 0) std::cout << ", ";
+    std::cout << lista[i];
+  }
+  std::cout << "]" << std::endl;
 }
 
 int main() {
-  test1();
-
+  std::string line1, line2;
+  std::getline(std::cin, line1);
+  std::getline(std::cin, line2);
+  
+  std::vector<int> listaA = parseList(line1);
+  std::vector<int> listaB = parseList(line2);
+  
+  std::vector<int> wynik;
+  for (int a : listaA) {
+    if (std::find(listaB.begin(), listaB.end(), a) == listaB.end()) {
+      wynik.push_back(a);
+    }
+  }
+  
+  printList(wynik);
   return 0;
 }

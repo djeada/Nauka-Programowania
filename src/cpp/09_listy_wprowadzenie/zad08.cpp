@@ -1,106 +1,35 @@
 /*
-ZAD-08 — Usuń klucz
-
-**Poziom:** ★☆☆
-**Tagi:** `listy`, `remove`, `wyszukiwanie`
-
-### Treść
-
-Wczytaj listę liczb całkowitych oraz `klucz`. Usuń **pierwsze** wystąpienie
-`klucz` (jeśli istnieje). Następnie wypisz listę po modyfikacji w jednej linii,
-elementy oddzielone przecinkami.
-
-### Wejście
-
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
-* ostatnia linia: `klucz` (liczba całkowita)
-
-### Wyjście
-
-Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
-
-### Przykład
-
-**Wejście:**
-
-```
-5
-6
-2
-1
-4
-27
-4
-```
-
-**Wyjście:**
-
-```
-6,2,1,27
-```
-
-### Uwagi
-
-* Jeśli `klucz` nie występuje, wypisz listę bez zmian.
-
+ZAD-08 — Usuń wszystkie wystąpienia klucza
 */
-#include <algorithm>
-#include <cassert>
+#include <iostream>
 #include <vector>
 
-void usunPierwszeWystapienieV1(std::vector<int> &lista, int klucz) {
-  std::vector<int>::iterator it = lista.begin();
-  while (it != lista.end()) {
-    if (*it == klucz) {
-      it = lista.erase(it);
-      return;
-    } else
-      it++;
-  }
-}
-
-// Zlozonosc Czasowa O(n^2)
-// erase przesuwa wszystkie elementy wiec sam ma zlozonosc O(n)
-void usunWszystkieWystapieniaV1(std::vector<int> &lista, int klucz) {
-  std::vector<int>::iterator it = lista.begin();
-  while (it != lista.end()) {
-    if (*it == klucz)
-      it = lista.erase(it);
-
-    else
-      it++;
-  }
-}
-
-// Zlozonosc Czasowa O(n)
-void usunWszystkieWystapieniaV2(std::vector<int> &lista, int klucz) {
-  lista.erase(std::remove(lista.begin(), lista.end(), klucz), lista.end());
-}
-
-void test1() {
-  std::vector<int> lista{6, 7, 2, 1, 8};
-  std::vector<int> wynik{6, 7, 1, 8};
-  int klucz = 2;
-
-  usunWszystkieWystapieniaV1(lista, klucz);
-
-  assert(lista == wynik);
-}
-
-void test2() {
-  std::vector<int> lista{1, 1, 1, 1};
-  std::vector<int> wynik;
-  int klucz = 1;
-
-  usunWszystkieWystapieniaV2(lista, klucz);
-
-  assert(lista == wynik);
-}
-
 int main() {
-  test1();
-  test2();
+  int n;
+  std::cin >> n;
+  
+  std::vector<int> lista;
+  for (int i = 0; i < n; i++) {
+    int liczba;
+    std::cin >> liczba;
+    lista.push_back(liczba);
+  }
+  
+  int klucz;
+  std::cin >> klucz;
+  
+  std::vector<int> nowa;
+  for (int i = 0; i < n; i++) {
+    if (lista[i] != klucz) {
+      nowa.push_back(lista[i]);
+    }
+  }
+  
+  for (size_t i = 0; i < nowa.size(); i++) {
+    if (i > 0) std::cout << ",";
+    std::cout << nowa[i];
+  }
+  std::cout << std::endl;
 
   return 0;
 }

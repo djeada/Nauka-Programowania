@@ -1,66 +1,39 @@
 /*
-ZAD-04 — Iloczyn skalarny dwóch wektorów 3D
-
-**Poziom:** ★☆☆
-**Tagi:** `list`, `wektory`, `math`
-
-### Treść
-
-Wczytaj dwie listy długości 3 (wektory 3D) i oblicz ich **iloczyn skalarny**:
-[
-A_xB_x + A_yB_y + A_zB_z
-]
-
-### Wejście
-
-* 1 linia: wektor A (lista 3 liczb całkowitych)
-* 2 linia: wektor B (lista 3 liczb całkowitych)
-
-### Wyjście
-
-* 1 linia: jedna liczba całkowita — iloczyn skalarny
-
-### Przykład
-
-**Wejście:**
-
-```
-[1, 2, 3]
-[3, 1, 2]
-```
-
-**Wyjście:**
-
-```
-11
-```
-
+ZAD-04 — Iloczyn skalarny i wektorowy
 */
-#include <cassert>
+#include <iostream>
 #include <vector>
+#include <sstream>
+#include <string>
 
-std::vector<int> mnozenieWektorowe(std::vector<int> &listaA,
-                                   std::vector<int> &listaB) {
-  assert(listaA.size() == listaB.size() && listaA.size() == 3);
-
-  std::vector<int> wynik;
-  wynik.push_back(listaA[1] * listaB[2] - listaA[2] * listaB[1]);
-  wynik.push_back(listaA[2] * listaB[0] - listaA[0] * listaB[2]);
-  wynik.push_back(listaA[0] * listaB[1] - listaA[1] * listaB[0]);
-
-  return wynik;
-}
-
-void testMnozenieWektorowe() {
-  std::vector<int> listaA{3, -5, 4};
-  std::vector<int> listaB{2, 6, 5};
-
-  std::vector<int> iloczynWekt({-49, -7, 28});
-  assert(mnozenieWektorowe(listaA, listaB) == iloczynWekt);
+std::vector<int> parseList(const std::string& line) {
+  std::vector<int> result;
+  std::string cleaned;
+  for (char c : line) {
+    if (c != '[' && c != ']' && c != ' ') cleaned += c;
+  }
+  std::stringstream ss(cleaned);
+  std::string token;
+  while (std::getline(ss, token, ',')) {
+    if (!token.empty()) result.push_back(std::stoi(token));
+  }
+  return result;
 }
 
 int main() {
-  testMnozenieWektorowe();
-
+  std::string line1, line2;
+  std::getline(std::cin, line1);
+  std::getline(std::cin, line2);
+  
+  std::vector<int> listaA = parseList(line1);
+  std::vector<int> listaB = parseList(line2);
+  
+  // Iloczyn skalarny
+  int iloczyn = 0;
+  for (size_t i = 0; i < listaA.size(); i++) {
+    iloczyn += listaA[i] * listaB[i];
+  }
+  
+  std::cout << iloczyn << std::endl;
   return 0;
 }
