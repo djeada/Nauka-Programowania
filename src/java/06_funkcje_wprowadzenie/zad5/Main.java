@@ -66,23 +66,19 @@ public class Main {
 
   public static void main(String[] args) {
 
-    System.out.print("Podaj dwie liczby: \n");
-
     Scanner s = new Scanner(System.in);
-
     int a = Integer.parseInt(s.nextLine());
     int b = Integer.parseInt(s.nextLine());
 
-    System.out.print("mniejsza liczba to: " + min2(a, b) + "\n");
-    System.out.print("wieksza liczba to: " + maks2(a, b) + "\n");
+    System.out.println(min2(a, b));
+    System.out.println(maks2(a, b));
 
-    System.out.print("Podaj trzy liczby: \n");
     a = Integer.parseInt(s.nextLine());
     b = Integer.parseInt(s.nextLine());
     int c = Integer.parseInt(s.nextLine());
 
-    System.out.print("najmniejsza liczba to: " + min3(a, b, c) + "\n");
-    System.out.print("najwieksza liczba to " + maks3(a, b, c) + "\n");
+    System.out.println(min3(a, b, c));
+    System.out.println(maks3(a, b, c));
   }
 }
 

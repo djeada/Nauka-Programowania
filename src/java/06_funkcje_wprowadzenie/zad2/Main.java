@@ -204,17 +204,14 @@ public class Main {
 
   public static void main(String[] args) {
 
-    System.out.print("Podaj dwie liczby: \n");
-
     Scanner s = new Scanner(System.in);
-
     int a = Integer.parseInt(s.nextLine());
     int b = Integer.parseInt(s.nextLine());
 
-    System.out.print("suma liczb to: " + suma(a, b) + "\n");
-    System.out.print("roznice drugiej i pierwszej to: " + roznica(a, b) + "\n");
-    System.out.print("iloczyn liczb to: " + iloczyn(a, b) + "\n");
-    System.out.print("reszte z dzielenia pierwszej przez druga to: " + reszta(a, b) + "\n");
+    System.out.println(suma(a, b));
+    System.out.println(roznica(a, b));
+    System.out.println(iloczyn(a, b));
+    System.out.println(reszta(a, b));
   }
 }
 
