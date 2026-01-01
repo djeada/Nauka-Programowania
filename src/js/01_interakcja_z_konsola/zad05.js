@@ -177,7 +177,7 @@ console.log((a2 * x2 + b2).toFixed(3));
 const x3 = parseFloat(prompt("Podaj wspolrzedna x:"));
 console.log((x3 ** 3 + 2).toFixed(3));
 
-// d) Pobierz wspolczynniki $a$, $b$, $c$, $d$, $m$, $n$ oraz punkt $x$. Wyznacz wartosc funkcji $y = ax^m + bx^n + c - d$ w tym punkcie.
+// d) Pobierz wspolczynniki $a$, $b$, $c$, $m$, $n$ oraz punkt $x$. Wyznacz wartosc funkcji $y = ax^m + bx^n + c - a$ w tym punkcie.
 const a4 = parseFloat(prompt("Podaj wspolczynnik a:"));
 const b4 = parseFloat(prompt("Podaj wspolczynnik b:"));
 const c4 = parseFloat(prompt("Podaj wspolczynnik c:"));
