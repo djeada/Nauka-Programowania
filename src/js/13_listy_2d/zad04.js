@@ -44,6 +44,10 @@ Najpierw `n` wierszy sumy, potem `n` wierszy różnicy (bez dodatkowych napisów
 ```
 
 */
+
+// Funkcja dodaje dwie macierze element po elemencie
+// Złożoność czasowa: O(n*m), gdzie n to liczba wierszy, m to liczba kolumn
+// Złożoność pamięciowa: O(n*m)
 function dodajMacierze(macierzA, macierzB) {
   const wynik = [];
   for (let i = 0; i < macierzA.length; i++) {
@@ -56,6 +60,9 @@ function dodajMacierze(macierzA, macierzB) {
   return wynik;
 }
 
+// Funkcja odejmuje dwie macierze element po elemencie
+// Złożoność czasowa: O(n*m), gdzie n to liczba wierszy, m to liczba kolumn
+// Złożoność pamięciowa: O(n*m)
 function odejmijMacierze(macierzA, macierzB) {
   const wynik = [];
   for (let i = 0; i < macierzA.length; i++) {

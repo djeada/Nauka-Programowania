@@ -32,14 +32,23 @@ alA am atok
 
 */
 
+// Funkcja dzieli napis na słowa (bez interpunkcji)
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(m), gdzie m to liczba słów
 function rozbijNaSlowa(napis) {
   return napis.split(/[^\w]+/);
 }
 
+// Funkcja odwraca litery w słowie
+// Złożoność czasowa: O(k), gdzie k to długość słowa
+// Złożoność pamięciowa: O(k)
 function odwrocSlowo(slowo) {
   return slowo.split("").reverse().join("");
 }
 
+// Funkcja odwraca każde słowo w zdaniu osobno, zachowując kolejność słów
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(n)
 function odwrocSlowa(napis) {
   let slowa = rozbijNaSlowa(napis);
   let wynik = [];
@@ -55,7 +64,7 @@ function odwrocSlowa(napis) {
 
 function test() {
   let input = "Ala ma kota";
-  let expectedOutput = "ala mak otak";
+  let expectedOutput = "alA am atok";
   let output = odwrocSlowa(input);
 
   console.assert(

@@ -36,6 +36,9 @@ Słoń
 
 */
 
+// Funkcja sprawdza czy liczba jest pierwsza
+// Złożoność czasowa: O(√n), gdzie n to wartość liczby
+// Złożoność pamięciowa: O(1)
 function czyLiczbaPierwsza(n) {
   if (n < 2) {
     return false;
@@ -48,6 +51,9 @@ function czyLiczbaPierwsza(n) {
   return true;
 }
 
+// Funkcja zwraca znaki znajdujące się na pozycjach będących liczbami pierwszymi
+// Złożoność czasowa: O(n√n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(k), gdzie k to liczba znalezionych znaków
 function znakiNaPozycjachPierwszych(napis) {
   let wynik = [];
   for (let i = 0; i < napis.length; i++) {

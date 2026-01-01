@@ -43,17 +43,37 @@ raport.docx
 const fs = require("fs").promises;
 const path = require("path");
 
-const znajdzSciezki = async (nazwaPliku) => {
+// Funkcja rekurencyjnie przeszukuje katalog w poszukiwaniu plików o podanej nazwie
+// Złożoność czasowa: O(n), gdzie n to liczba wszystkich plików i katalogów
+// Złożoność pamięciowa: O(d*k), gdzie d to głębokość drzewa katalogów, k to szerokość
+const znajdzSciezki = async (nazwaPliku, katalogBazowy = process.env.HOME) => {
   const sciezki = [];
-  const sciezka = process.env.HOME;
-  const dane = await fs.readdir(sciezka);
-  for (const danePliku of dane) {
-    const sciezkaPliku = path.join(sciezka, danePliku);
-    const stat = await fs.lstat(sciezkaPliku);
-    if (stat.isFile() && danePliku === nazwaPliku) {
-      sciezki.push(sciezkaPliku);
+  
+  try {
+    const dane = await fs.readdir(katalogBazowy);
+    
+    for (const danePliku of dane) {
+      const sciezkaPliku = path.join(katalogBazowy, danePliku);
+      
+      try {
+        const stat = await fs.lstat(sciezkaPliku);
+        
+        if (stat.isFile() && danePliku === nazwaPliku) {
+          sciezki.push(sciezkaPliku);
+        } else if (stat.isDirectory()) {
+          // Rekurencyjnie przeszukaj podkatalogi
+          const podsciezki = await znajdzSciezki(nazwaPliku, sciezkaPliku);
+          sciezki.push(...podsciezki);
+        }
+      } catch (err) {
+        // Pomijaj niedostępne pliki/katalogi (brak uprawnień)
+        continue;
+      }
     }
+  } catch (err) {
+    // Pomijaj niedostępne katalogi
   }
+  
   return sciezki;
 };
 
@@ -62,7 +82,7 @@ const testZnajdzSciezki = async () => {
   const sciezkiPlikow = ["lista.txt", nazwaPliku];
   const tekst = "przykladowy tekst.\n";
 
-  const sciezkaFolderu = "temp_dir";
+  const sciezkaFolderu = path.join(process.env.HOME, "temp_dir");
   await fs.mkdir(sciezkaFolderu);
 
   for (const plik of sciezkiPlikow) {
@@ -70,7 +90,7 @@ const testZnajdzSciezki = async () => {
     await fs.writeFile(sciezkaPliku, tekst);
   }
 
-  const oczekiwane = [path.join(process.env.HOME, sciezkaFolderu, nazwaPliku)];
+  const oczekiwane = [path.join(sciezkaFolderu, nazwaPliku)];
   const wynik = await znajdzSciezki(nazwaPliku);
 
   console.assert(
@@ -83,7 +103,7 @@ const testZnajdzSciezki = async () => {
     `Blad testu znajdzSciezki: ${wynik} nie zawiera ${oczekiwane[0]}`
   );
 
-  await fs.rmdir(sciezkaFolderu, {
+  await fs.rm(sciezkaFolderu, {
     recursive: true,
   });
 };

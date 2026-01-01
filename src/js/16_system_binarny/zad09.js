@@ -163,7 +163,7 @@ function testZamienNaWielkieLitery() {
 
 function testZamienLitery() {
   const input = "TeST nAPIsu";
-  const expectedOutput = "tEst NapIsU";
+  const expectedOutput = "tEst NapiSU"; // Wszystkie litery odwracają wielkość
   const output = zamienLitery(input);
 
   console.assert(

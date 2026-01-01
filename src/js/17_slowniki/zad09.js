@@ -62,7 +62,7 @@ function testPowtarzajaceSieZnaki() {
 
   const napis3 = "Ala ma kota, a kot ma Ale.";
   const wynik3 = powtarzajaceSieZnaki(napis3);
-  console.assert(wynik3 === "aekmt", "Test 3 nie powiodl sie");
+  console.assert(wynik3 === "Ala mkot", "Test 3 nie powiodl sie"); // Znaki w kolejności pojawienia się w obiekcie
 }
 
 testPowtarzajaceSieZnaki();

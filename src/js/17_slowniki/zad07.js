@@ -58,9 +58,10 @@ function testHistogramSlow() {
 
   const napis2 = "Ala ma kota, a kot ma Ale.";
   const wynik2 = histogramSlow(napis2);
-  console.assert(wynik2["ala"] === 2, "Test 6 nie powiodl sie");
-  console.assert(wynik2["ma"] === 2, "Test 7 nie powiodl sie");
-  console.assert(wynik2["kota"] === 1, "Test 8 nie powiodl sie");
+  console.assert(wynik2["ala"] === 1, "Test 6 nie powiodl sie"); // "Ala" i "Ale" to różne słowa
+  console.assert(wynik2["ale"] === 1, "Test 7 nie powiodl sie");
+  console.assert(wynik2["ma"] === 2, "Test 8 nie powiodl sie");
+  console.assert(wynik2["kota"] === 1, "Test 9 nie powiodl sie");
 }
 
 testHistogramSlow();

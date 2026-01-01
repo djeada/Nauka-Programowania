@@ -83,7 +83,7 @@ function konwersjaWarunkowa(liczba) {
 // Testy
 function test() {
   let input = 7;
-  let expectedOutput = "";
+  let expectedOutput = "111"; // 7 jest liczbą pierwszą
   let output = konwersjaWarunkowa(input);
 
   console.assert(output === expectedOutput, "Test nie powiodl sie");
@@ -97,7 +97,7 @@ function test() {
   console.log("Test przeszedl pomyslnie");
 
   input = 11;
-  expectedOutput = "";
+  expectedOutput = "1011"; // 11 jest liczbą pierwszą
   output = konwersjaWarunkowa(input);
 
   console.assert(output === expectedOutput, "Test nie powiodl sie");

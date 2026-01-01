@@ -34,6 +34,9 @@ Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od
 
 */
 
+// Funkcja tworzy kwadratową macierz n×n, gdzie element [i][j] = i*j
+// Złożoność czasowa: O(n²), gdzie n to rozmiar macierzy
+// Złożoność pamięciowa: O(n²)
 function utworzMacierzKwadratowa(n) {
   const macierz = [];
   for (let i = 0; i < n; i++) {

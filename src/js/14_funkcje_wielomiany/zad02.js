@@ -23,6 +23,10 @@ Dla `a = [4, -3, 2]` i `k = -2` funkcja zwraca:
 `[-8, 6, -4]`
 
 */
+
+// Funkcja mnoży wielomian przez skalar (każdy współczynnik razy skalar)
+// Złożoność czasowa: O(n), gdzie n to stopień wielomianu
+// Złożoność pamięciowa: O(n)
 function mnozenieWielomianuPrzezSkalar(wspolczynniki, skalar) {
   return wspolczynniki.map((wspolczynnik) => wspolczynnik * skalar);
 }

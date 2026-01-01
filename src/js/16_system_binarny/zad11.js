@@ -60,7 +60,7 @@ function czyPalindrom(liczba) {
 // Testy
 function test() {
   let input = 26;
-  let expectedOutput = true;
+  let expectedOutput = false; // 26 = 11010 (nie jest palindromem)
   let output = czyPalindrom(input);
 
   console.assert(output === expectedOutput, "Test nie powiodl sie");

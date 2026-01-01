@@ -36,6 +36,9 @@ Otrzymujesz listę liczb naturalnych w zapisie tekstowym (np. `[2, 4, 7]`). Poł
 
 */
 
+// Funkcja łączy elementy listy w jeden napis
+// Złożoność czasowa: O(n), gdzie n to długość listy
+// Złożoność pamięciowa: O(n) dla przechowania wyniku
 function listaNaNapis(lista) {
   return lista.join("");
 }

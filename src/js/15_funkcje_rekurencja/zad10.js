@@ -12,18 +12,31 @@ Dla N = 20, powinna zostac zwrocona liczba: 4.
 
 */
 
-function liczbaSposobowWygranej(n) {
-  if (n === 0) {
-    return 1;
+// Funkcja oblicza liczbę sposobów (nieuporządkowanych) osiągnięcia n punktów
+// Złożoność czasowa: O(n) z memoizacją
+// Złożoność pamięciowa: O(n)
+function liczbaSposobowWygranej(n, minRuch = 3, memo = {}) {
+  if (n === 0) return 1;
+  if (n < 0) return 0;
+  
+  const klucz = `${n},${minRuch}`;
+  if (klucz in memo) return memo[klucz];
+  
+  let sposoby = 0;
+  
+  // Aby uniknąć powtórzeń, używamy tylko ruchów >= minRuch
+  if (minRuch <= 3 && n >= 3) {
+    sposoby += liczbaSposobowWygranej(n - 3, 3, memo);
   }
-  if (n < 0) {
-    return 0;
+  if (minRuch <= 5 && n >= 5) {
+    sposoby += liczbaSposobowWygranej(n - 5, 5, memo);
   }
-  return (
-    liczbaSposobowWygranej(n - 3) +
-    liczbaSposobowWygranej(n - 5) +
-    liczbaSposobowWygranej(n - 10)
-  );
+  if (minRuch <= 10 && n >= 10) {
+    sposoby += liczbaSposobowWygranej(n - 10, 10, memo);
+  }
+  
+  memo[klucz] = sposoby;
+  return sposoby;
 }
 
 // Testy
@@ -33,7 +46,7 @@ function testLiczbaSposobowWygranej() {
 
   n = 6;
   wynik = liczbaSposobowWygranej(n);
-  console.assert(wynik === 2, "Test 1 nieudany");
+  console.assert(wynik === 1, "Test 1 nieudany"); // Tylko 3+3
 
   n = 10;
   wynik = liczbaSposobowWygranej(n);
@@ -49,5 +62,5 @@ function testLiczbaSposobowWygranej() {
 }
 
 testLiczbaSposobowWygranej();
-console.log("Wszystkie testy zakonczone sukcesem");
+console.log("Wszystkie testy zakończone sukcesem");
 

@@ -98,7 +98,7 @@ const testCzyFolder = async () => {
     `Blad testu czyFolder: ${wynik2} !== ${oczekiwane2}`
   );
 
-  await fs.rmdir(sciezkaFolderu);
+  await fs.rm(sciezkaFolderu, { recursive: true });
 };
 
 const main = async () => {

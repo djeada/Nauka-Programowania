@@ -32,6 +32,9 @@ zczsrab
 
 */
 
+// Funkcja odwraca kolejność znaków w napisie
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(n) dla przechowania tablicy znaków i wyniku
 function odwrocNapis(napis) {
   return napis.split("").reverse().join("");
 }

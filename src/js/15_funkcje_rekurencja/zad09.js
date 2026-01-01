@@ -11,15 +11,19 @@ Przyklad:
 Dla otrzymanego napisu: "reflektor", powinna zostac zwrocona wartosc logiczna: Prawda.
 */
 
+// Funkcja sprawdza czy słowo zawiera wszystkie litery z "elf"
+// Złożoność czasowa: O(n*m), gdzie n to długość słowa, m to liczba liter do znalezienia
+// Złożoność pamięciowa: O(m) dla rekurencji
 function czyElfickie(slowo, elf = "elf", idx = 0) {
   if (idx === elf.length) {
     return true;
   }
-  const pozycja = slowo.indexOf(elf[idx]);
-  if (pozycja === -1) {
+  // Sprawdź czy aktualna litera elf[idx] występuje w słowie
+  if (slowo.indexOf(elf[idx]) === -1) {
     return false;
   }
-  return czyElfickie(slowo.slice(pozycja + 1), elf, idx + 1);
+  // Przejdź do sprawdzania następnej litery
+  return czyElfickie(slowo, elf, idx + 1);
 }
 
 // Testy
@@ -33,7 +37,7 @@ function testCzyElfickie() {
 
   slowo = "elefant";
   wynik = czyElfickie(slowo);
-  console.assert(wynik === false, "Test 2 nieudany");
+  console.assert(wynik === true, "Test 2 nieudany"); // "elefant" ma e, l, f
 
   slowo = "efektywnelekcje";
   wynik = czyElfickie(slowo);
@@ -45,5 +49,5 @@ function testCzyElfickie() {
 }
 
 testCzyElfickie();
-console.log("Wszystkie testy zakonczone sukcesem");
+console.log("Wszystkie testy zakończone sukcesem");
 

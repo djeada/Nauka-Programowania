@@ -38,7 +38,34 @@ Prawda
 * Jeśli chcesz ignorować wielkość liter, porównuj wersje `lower()`.
 
 */
-function main() {
+
+// Funkcja sprawdza czy słowo jest palindromem (ignorując wielkość liter)
+// Złożoność czasowa: O(n), gdzie n to długość słowa
+// Złożoność pamięciowa: O(n) dla przechowania odwróconego słowa
+function czyPalindrom(slowo) {
+  const slowoMale = slowo.toLowerCase();
+  const odwrocone = slowoMale.split("").reverse().join("");
+  return slowoMale === odwrocone;
 }
 
-main();
+// Test
+function test() {
+  const input = "kajak";
+  const expectedOutput = "Prawda";
+  const wynik = czyPalindrom(input);
+  const output = wynik ? "Prawda" : "Fałsz";
+
+  console.assert(
+    output === expectedOutput,
+    'Test nie powiodl sie dla "' +
+      input +
+      '". Otrzymany wynik to "' +
+      output +
+      '", a oczekiwany wynik to "' +
+      expectedOutput +
+      '"'
+  );
+  console.log("Test przeszedl pomyslnie");
+}
+
+test();
