@@ -194,7 +194,7 @@ function zwracajIloczyn(liczba_a, liczba_b) {
 
 // Funkcja zwracajaca iloraz
 function zwracajIloraz(liczba_a, liczba_b) {
-  return liczba_a / liczba_b;
+  return Math.floor(liczba_a / liczba_b);
 }
 
 // Funkcja zwracajaca reszte z dzielenia
@@ -207,11 +207,9 @@ const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
 const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
 // Wywolanie funkcji
-console.log("Suma: " + zwracajSuma(liczba_a, liczba_b));
-console.log("Roznica: " + zwracajRoznica(liczba_a, liczba_b));
-console.log("Iloczyn: " + zwracajIloczyn(liczba_a, liczba_b));
-console.log("Iloraz: " + zwracajIloraz(liczba_a, liczba_b));
-console.log(
-  "Reszta z dzielenia: " + zwracajReszteZDzielenia(liczba_a, liczba_b)
-);
+console.log(zwracajSuma(liczba_a, liczba_b));
+console.log(zwracajRoznica(liczba_a, liczba_b));
+console.log(zwracajIloczyn(liczba_a, liczba_b));
+console.log(zwracajIloraz(liczba_a, liczba_b));
+console.log(zwracajReszteZDzielenia(liczba_a, liczba_b));
 

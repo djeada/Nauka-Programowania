@@ -56,5 +56,6 @@ const b = parseInt(prompt("Podaj liczbe b:"));
 const wynik = zamienWartosciMiejscami(a, b);
 
 // Wyswietlanie wyniku
-console.log(wynik);
+console.log(wynik[0]);
+console.log(wynik[1]);
 

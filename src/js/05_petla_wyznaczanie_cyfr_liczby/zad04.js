@@ -121,7 +121,7 @@ const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // a) Petla dla liczb parzystych
 for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
-  if (i % 2 == 0) {
+  if ((i % 10) % 2 == 0) {
     console.log(i % 10);
   }
 }

@@ -57,7 +57,7 @@ const sprawdzDaneUzytkownika = (poprawneDane) => {
     daneUzytkownika.haslo !== poprawneDane.haslo
   );
 
-  console.log("Poprawne dane uzytkownika");
+  console.log("Dane poprawne. Dostęp przyznany.");
 };
 
 // Glowna funkcja programu

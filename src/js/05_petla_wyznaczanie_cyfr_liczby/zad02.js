@@ -45,7 +45,11 @@ Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Petla
-for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
-  console.log(i % 10);
+if (liczba === 0) {
+  console.log(0);
+} else {
+  for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
+    console.log(i % 10);
+  }
 }
 

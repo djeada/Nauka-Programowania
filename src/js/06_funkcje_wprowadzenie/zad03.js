@@ -72,19 +72,8 @@ var liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
 var liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
 // Wyswietlanie wynikow
-console.log(
-  "Czy pierwsza liczba jest wieksza od drugiej liczby? " +
-    czyPierwszaWiekszaOdDrugiej(liczba_a, liczba_b)
-);
-console.log(
-  "Czy suma liczb jest mniejsza niz 10? " +
-    czySumaMniejszaOd10(liczba_a, liczba_b)
-);
-console.log(
-  "Czy obie liczby sa nieparzyste? " + czyObieNieparzyste(liczba_a, liczba_b)
-);
-console.log(
-  "Czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu? " +
-    czyWiekszaMniejszaOdPierwszejDoKwadratu(liczba_a, liczba_b)
-);
+console.log(czyPierwszaWiekszaOdDrugiej(liczba_a, liczba_b));
+console.log(czySumaMniejszaOd10(liczba_a, liczba_b));
+console.log(czyObieNieparzyste(liczba_a, liczba_b));
+console.log(czyWiekszaMniejszaOdPierwszejDoKwadratu(liczba_a, liczba_b));
 

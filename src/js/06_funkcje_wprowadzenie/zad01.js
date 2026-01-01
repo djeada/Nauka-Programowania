@@ -119,7 +119,7 @@ function zwracajWartoscLogiczna() {
 }
 
 // Wypisanie wynikow
-console.log(`a) ${zwracajLiczbe()}`);
-console.log(`b) ${zwracajNapis()}`);
-console.log(`c) ${zwracajWartoscLogiczna()}`);
+console.log(zwracajLiczbe());
+console.log(zwracajNapis());
+console.log(zwracajWartoscLogiczna());
 

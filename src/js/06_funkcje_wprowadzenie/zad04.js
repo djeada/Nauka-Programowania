@@ -174,19 +174,13 @@ function zwracajNajwiekszaLiczbe(liczba_a, liczba_b, liczba_c) {
 }
 
 // Pobieranie danych od uzytkownika
-var liczba_a = prompt("Podaj pierwsza liczbe: ");
-var liczba_b = prompt("Podaj druga liczbe: ");
-var liczba_c = prompt("Podaj trzecia liczbe: ");
+var liczba_a = parseInt(prompt("Podaj pierwsza liczbe: "));
+var liczba_b = parseInt(prompt("Podaj druga liczbe: "));
+var liczba_c = parseInt(prompt("Podaj trzecia liczbe: "));
 
 // Wyswietlanie wynikow
-console.log("Mniejsza liczba to: " + zwracajMniejszaLiczbe(liczba_a, liczba_b));
-console.log("Wieksza liczba to: " + zwracajWiekszaLiczbe(liczba_a, liczba_b));
-console.log(
-  "Najmniejsza liczba to: " +
-    zwracajNajmniejszaLiczbe(liczba_a, liczba_b, liczba_c)
-);
-console.log(
-  "Najwieksza liczba to: " +
-    zwracajNajwiekszaLiczbe(liczba_a, liczba_b, liczba_c)
-);
+console.log(zwracajMniejszaLiczbe(liczba_a, liczba_b));
+console.log(zwracajWiekszaLiczbe(liczba_a, liczba_b));
+console.log(zwracajNajmniejszaLiczbe(liczba_a, liczba_b, liczba_c));
+console.log(zwracajNajwiekszaLiczbe(liczba_a, liczba_b, liczba_c));
 

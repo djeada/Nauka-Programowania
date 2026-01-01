@@ -54,7 +54,7 @@ print(wynik)
 function sredniaArytmetycznaNLiczb(n) {
   var suma = 0;
   for (var i = 0; i < n; i++) {
-    var liczba = parseInt(prompt("Podaj liczbe:"));
+    var liczba = parseFloat(prompt("Podaj liczbe:"));
     suma += liczba;
   }
   return suma / n;

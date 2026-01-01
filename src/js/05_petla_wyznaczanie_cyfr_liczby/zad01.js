@@ -47,8 +47,12 @@ const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Petla
 let cyfry = 0;
-for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
-  cyfry++;
+if (liczba === 0) {
+  cyfry = 1;
+} else {
+  for (let i = liczba; i > 0; i = Math.floor(i / 10)) {
+    cyfry++;
+  }
 }
 
 // Wypisanie wyniku
