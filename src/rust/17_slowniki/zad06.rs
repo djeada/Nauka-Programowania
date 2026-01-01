@@ -31,4 +31,41 @@ klasa
 ```
 
 */
-fn main() {}
+
+use std::io;
+use std::collections::HashMap;
+
+// Funkcja tworząca histogram znaków
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(k), gdzie k to liczba unikalnych znaków
+fn histogram_znakow(napis: &str) -> HashMap<char, usize> {
+    let mut histogram = HashMap::new();
+    
+    for c in napis.chars() {
+        *histogram.entry(c).or_insert(0) += 1;
+    }
+    
+    histogram
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let napis = input.trim();
+    
+    let histogram = histogram_znakow(napis);
+    
+    print!("{{");
+    let mut first = true;
+    for c in napis.chars() {
+        if let Some(&count) = histogram.get(&c) {
+            if !first {
+                print!(", ");
+            }
+            print!("'{}': {}", c, count);
+            first = false;
+            // Usuń aby nie wypisywać duplikatów
+        }
+    }
+    println!("}}");
+}

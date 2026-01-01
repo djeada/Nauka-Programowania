@@ -93,4 +93,51 @@ tEST
 ```
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja konwertująca wielkie litery na małe (bitowo)
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(n)
+fn wielkie_na_male_bitowo(napis: &str) -> String {
+    napis
+        .chars()
+        .map(|c| {
+            if c.is_ascii_uppercase() {
+                // Ustaw bit 5 (dodaj 32)
+                ((c as u8) | 0x20) as char
+            } else {
+                c
+            }
+        })
+        .collect()
+}
+
+// Funkcja konwertująca małe litery na wielkie (bitowo)
+// Złożoność czasowa: O(n)
+// Złożoność pamięciowa: O(n)
+fn male_na_wielkie_bitowo(napis: &str) -> String {
+    napis
+        .chars()
+        .map(|c| {
+            if c.is_ascii_lowercase() {
+                // Wyczyść bit 5 (odejmij 32)
+                ((c as u8) & !0x20) as char
+            } else {
+                c
+            }
+        })
+        .collect()
+}
+
+fn main() {
+    // ZAD-09A: Wielkie → małe (bitowo)
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let napis = input.trim();
+    
+    println!("{}", wielkie_na_male_bitowo(napis));
+    
+    // ZAD-09B: Małe → wielkie (bitowo) (opcjonalnie)
+    // println!("{}", male_na_wielkie_bitowo(napis));
+}
