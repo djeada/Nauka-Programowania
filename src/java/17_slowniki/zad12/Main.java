@@ -48,6 +48,8 @@ import java.util.*;
 
 public class Main {
 
+  // Zlozonosc Czasowa: O(n * m), gdzie n to liczba kluczy, m to dlugosc tablicy
+  // Zlozonosc Pamieciowa: O(1)
   public static <A, B> boolean czyIdentyczneV1(
       Map<String, int[]> slownikA, Map<String, int[]> slownikB) {
 

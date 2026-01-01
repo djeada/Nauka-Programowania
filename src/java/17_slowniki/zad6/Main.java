@@ -36,6 +36,8 @@ import java.util.*;
 public class Main {
   // Otrzymujesz napis. Znajdz czestosc wystepowania znakow w otrzymanym napisie.
 
+  // Zlozonosc Czasowa: O(n), gdzie n to dlugosc napisu
+  // Zlozonosc Pamieciowa: O(k), gdzie k to liczba unikalnych znakow
   public static HashMap<Character, Integer> budujSlownik(final String slowo) {
     HashMap<Character, Integer> slownik = new HashMap<Character, Integer>();
 

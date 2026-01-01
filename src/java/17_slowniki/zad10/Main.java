@@ -81,6 +81,8 @@ public class Main {
 		return new HashMap<Character, Integer> (slownik);
 	}
 
+	// Zlozonosc Czasowa: O(n^2 * m), gdzie n to liczba slow, m to srednia dlugosc slowa
+	// Zlozonosc Pamieciowa: O(n * m)
 	public static ArrayList<ArrayList<String>> znajdzAnagramy(final String tekst) {
 
 		var slowa = rozdzielSlowa(tekst);

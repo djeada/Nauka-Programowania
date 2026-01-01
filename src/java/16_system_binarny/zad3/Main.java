@@ -147,6 +147,8 @@ public class Main {
   // Otrzymujesz dwie liczby. Uzywajac jedynie operatorow bitowych zaimplementuj:
 
   // a) dodawanie.
+  // Zlozonosc Czasowa: O(log n)
+  // Zlozonosc Pamieciowa: O(1)
   private static int suma(int a, int b) {
 
     while (b != 0) {
@@ -159,6 +161,8 @@ public class Main {
   }
 
   // b) odejmowanie.
+  // Zlozonosc Czasowa: O(log n)
+  // Zlozonosc Pamieciowa: O(1)
   private static int roznica(int a, int b) {
 
     while (b != 0) {
@@ -171,6 +175,8 @@ public class Main {
   }
 
   // c) mnozenie.
+  // Zlozonosc Czasowa: O(log n)
+  // Zlozonosc Pamieciowa: O(1)
   private static int iloczyn(int a, int b) {
 
     int znak = (a < 0 && b >= 0) || (b < 0 && a >= 0) ? -1 : 1;
@@ -197,6 +203,8 @@ public class Main {
   }
 
   // d) dzielenie.
+  // Zlozonosc Czasowa: O(log^2 n)
+  // Zlozonosc Pamieciowa: O(log n) - rekurencja
   private static int wew_iloraz(int dzielna, int dzielnik, int org_b, int reszta) {
     int wynik = 1;
 

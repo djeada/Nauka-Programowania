@@ -57,6 +57,9 @@ public class Main {
   // sa imiona czytelnikow, a wartosciami listy wypozyczonych ksiazek.
   // Baza danych powinna umozliwiac:
   // a) dodanie wypozyczonej ksiazki do danego czytelnika;
+  
+  // Zlozonosc Czasowa: O(1) - srednia dla HashMap
+  // Zlozonosc Pamieciowa: O(1)
   public static void dodajKsiazke(
       HashMap<String, ArrayList<String>> lista, final String uzytkownik, final String ksiazka) {
     if (lista.containsKey(uzytkownik)) {

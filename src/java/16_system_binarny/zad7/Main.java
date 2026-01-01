@@ -44,6 +44,9 @@ Jedna liczba naturalna: wynik po zamianie bitów.
 */
 public class Main {
   // Zamien miejscami sasiadujace bity.
+  
+  // Zlozonosc Czasowa: O(1)
+  // Zlozonosc Pamieciowa: O(1)
   public static int zamienSasiadow(int liczba) {
     int parzyste = (int) (liczba & 0xAAAAAAAA);
     int nieparzyste = liczba & 0x55555555;

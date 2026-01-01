@@ -40,6 +40,8 @@ public class Main {
   // Inaczej: zaaokraglij liczbe do nastepnej potegi dwojki.
   // Dla otrzymanej liczby ujemnej zwroc 0.
 
+  // Zlozonosc Czasowa: O(log n)
+  // Zlozonosc Pamieciowa: O(1)
   public static int nastepnaPotegaDwojkiV1(int liczba) {
     if (liczba <= 0) {
       return 0;

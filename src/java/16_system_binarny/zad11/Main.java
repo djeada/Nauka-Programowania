@@ -48,6 +48,8 @@ public class Main {
 
   public static final int liczbaBitow = 8;
 
+  // Zlozonosc Czasowa: O(1) - stala liczba bitow
+  // Zlozonosc Pamieciowa: O(1)
   public static boolean czyPalindromV1(int liczba) {
     BitSet bity = BitSet.valueOf(new long[] {liczba});
 

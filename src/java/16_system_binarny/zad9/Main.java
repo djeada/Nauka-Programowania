@@ -96,6 +96,9 @@ tEST
 public class Main {
   // Przy uzyciu operatorow bitowych:
   // a) Zamien wielkie litery na male.
+  
+  // Zlozonosc Czasowa: O(n), gdzie n to dlugosc napisu
+  // Zlozonosc Pamieciowa: O(n)
   public static String wielkieNaMale(String slowo) {
     String wynik = "";
 

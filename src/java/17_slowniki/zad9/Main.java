@@ -37,6 +37,8 @@ import java.util.stream.Collectors;
 
 public class Main {
 
+  // Zlozonosc Czasowa: O(n), gdzie n to dlugosc napisu
+  // Zlozonosc Pamieciowa: O(k), gdzie k to liczba unikalnych znakow
   public static ArrayList<Character> policzPowtarzajaceSieZnakiV1(String slowo) {
 
     ArrayList<Character> listaZnakow = new ArrayList<Character>();

@@ -73,6 +73,8 @@ Jedna liczba naturalna: `max(a, b)`.
 public class Main {
   // Znajdz min/maks dwoch liczb bez uzycia instrukcji warunkowej.
 
+  // Zlozonosc Czasowa: O(1)
+  // Zlozonosc Pamieciowa: O(1)
   public static int znak(int n) {
 
     return (n >> 31) & 0x01;
@@ -80,6 +82,8 @@ public class Main {
 
   // a >= b : znakA = 1, znakB = 0;
   // a<b : znakA = 0, znakB = 1;
+  // Zlozonosc Czasowa: O(1)
+  // Zlozonosc Pamieciowa: O(1)
   public static int maks(int a, int b) {
     int znakB = znak(a - b);
     int znakA = znakB ^ 1;

@@ -44,6 +44,9 @@ public class Main {
   // Otrzymujesz dwie listy. Zbuduj slownik skladajacy sie z kluczy bedacych
   // elementami pierwszej listy i wartosciami bedacymi elementami drugiej listy.
   // Jesli listy sa roznej dlugosci zwroc pusty slownik.
+  
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static HashMap<Integer, Integer> budujSlownik(
       ArrayList<Integer> listaA, ArrayList<Integer> listaB) {
     HashMap<Integer, Integer> slownik = new HashMap<Integer, Integer>();

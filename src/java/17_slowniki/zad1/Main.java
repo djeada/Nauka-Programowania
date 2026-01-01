@@ -38,6 +38,8 @@ public class Main {
   // z kluczy bedacych kolejnymi liczbami naturalnymi mniejszymi
   // od otrzymanej liczby oraz wartosci bedacych kwadratami swoich kluczy.
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static HashMap<Integer, Integer> budujSlownik(int liczba) {
     HashMap<Integer, Integer> slownik = new HashMap<Integer, Integer>();
 
