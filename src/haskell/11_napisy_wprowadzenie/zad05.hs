@@ -44,5 +44,24 @@ n
 \* Dokładnie jedna spacja między znakami w punkcie (a), bez spacji na końcu linii.
 
 -}
+
+import Data.List (intercalate)
+
+-- Pobiera co k-ty znak z napisu (indeksowanie od 0)
+-- Złożoność czasowa: O(n/k), gdzie n to długość napisu
+-- Złożoność pamięciowa: O(n/k)
+coKtyZnak :: String -> Int -> String
+coKtyZnak napis k = [napis !! i | i <- [k-1, k-1+k .. length napis - 1]]
+
+-- Wypisuje co k-ty znak poziomo i pionowo
+-- Złożoność czasowa: O(n), gdzie n to długość napisu
+-- Złożoność pamięciowa: O(n/k)
 main :: IO ()
-main = pure ()
+main = do
+    napis <- getLine
+    k <- readLn :: IO Int
+    let znaki = coKtyZnak napis k
+    -- Wypisz poziomo z spacjami
+    putStrLn $ intercalate " " $ map (:[]) znaki
+    -- Wypisz pionowo
+    mapM_ putStrLn $ map (:[]) znaki

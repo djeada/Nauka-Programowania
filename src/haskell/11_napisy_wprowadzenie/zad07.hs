@@ -31,5 +31,15 @@ Robot
 ```
 
 -}
+
+import Data.Char (ord)
+import Data.List (intercalate)
+
+-- Konwertuje napis na kody ASCII oddzielone ", "
+-- Złożoność czasowa: O(n), gdzie n to długość napisu
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    napis <- getLine
+    let kody = map (show . ord) napis
+    putStrLn $ intercalate ", " kody

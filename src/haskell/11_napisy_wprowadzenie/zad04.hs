@@ -31,5 +31,13 @@ RUMCAJS
 ```
 
 -}
+
+import Data.Char (toUpper)
+
+-- Zamienia wszystkie litery na wielkie
+-- Złożoność czasowa: O(n), gdzie n to długość napisu
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    napis <- getLine
+    putStrLn $ map toUpper napis

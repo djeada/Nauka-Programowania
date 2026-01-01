@@ -33,5 +33,16 @@ a
 ```
 
 -}
+
+-- Zlicza wystąpienia znaku w napisie
+-- Złożoność czasowa: O(n), gdzie n to długość napisu
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    napis <- getLine
+    znak <- getLine
+    case znak of
+        (c:_) -> do
+            let liczba = length $ filter (== c) napis
+            print liczba
+        [] -> print 0

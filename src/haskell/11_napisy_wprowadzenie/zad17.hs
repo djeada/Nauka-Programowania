@@ -35,5 +35,17 @@ Otrzymujesz listę liczb naturalnych w zapisie tekstowym (np. `[2, 4, 7]`). Poł
 \* Najprościej: usuń nawiasy `[` `]`, rozdziel po przecinkach, `strip()`, potem sklej.
 
 -}
+
+import Data.Char (isDigit)
+
+-- Parsuje listę liczb w formacie [2, 4, 7] i łączy je w napis
+-- Złożoność czasowa: O(n), gdzie n to liczba elementów w liście
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    linia <- getLine
+    -- Usuń nawiasy i podziel po przecinkach
+    let bezNawiasow = filter (\c -> c /= '[' && c /= ']') linia
+    let liczbyStr = map (filter isDigit) $ words $ map (\c -> if c == ',' then ' ' else c) bezNawiasow
+    let wynik = concat liczbyStr
+    putStrLn wynik
