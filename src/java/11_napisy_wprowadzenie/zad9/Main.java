@@ -62,14 +62,22 @@ public class Main {
   // Zlozonosc Pamieciowa: O(n)
   public static void wypiszDane(String napis) {
 
-    ArrayList<String> wynik = new ArrayList<String>(Arrays.asList(napis.split(";")));
-    assert wynik.size() == 5 || wynik.size() == 6;
+    ArrayList<String> wynik = new ArrayList<String>();
+    // Podziel po srednikach i usun puste elementy
+    for (String pole : napis.split(";")) {
+      String trimmed = pole.trim();
+      if (!trimmed.isEmpty()) {
+        wynik.add(trimmed);
+      }
+    }
+    
+    assert wynik.size() == 5;
 
-    System.out.print("Imie: " + wynik.get(0).trim() + "\n");
-    System.out.print("Nazwisko: " + wynik.get(1).trim() + "\n");
-    System.out.print("Miejsce urodzenia: " + wynik.get(2).trim() + "\n");
-    System.out.print("Zawod: " + wynik.get(3).trim() + "\n");
-    System.out.print("Zarobki: " + wynik.get(4).trim() + "\n");
+    System.out.print("Imie: " + wynik.get(0) + "\n");
+    System.out.print("Nazwisko: " + wynik.get(1) + "\n");
+    System.out.print("Miejsce urodzenia: " + wynik.get(2) + "\n");
+    System.out.print("Zawod: " + wynik.get(3) + "\n");
+    System.out.print("Zarobki: " + wynik.get(4) + "\n");
   }
 
   public static void main(String[] args) {
