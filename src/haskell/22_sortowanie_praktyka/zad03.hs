@@ -42,5 +42,16 @@ c 2
 ```
 
 -}
+
+import Data.List (sortBy)
+import Data.Ord (comparing)
+
+-- Sortowanie po długości słowa
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    zdanie <- getLine
+    let slowa = words zdanie
+    let posortowane = sortBy (comparing length) slowa
+    putStrLn $ unwords posortowane

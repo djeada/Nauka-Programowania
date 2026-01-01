@@ -33,5 +33,16 @@ Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Posortuj ją rosn
 ```
 
 -}
+
+import Data.List (sortBy)
+import Text.Read (readMaybe)
+
+-- Sortowanie stabilne (Haskell's sort jest stabilny)
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case readMaybe input :: Maybe [Int] of
+        Just xs -> print $ sortBy compare xs
+        Nothing -> print ([] :: [Int])

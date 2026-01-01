@@ -36,5 +36,15 @@ Lemur wygina śmiało ciało
 \* Wielkość liter pozostaje bez zmian (nie zamieniaj na małe/duże), sortujesz to, co w tekście.
 
 -}
+
+import Data.List (sort)
+
+-- Sortowanie słów w zdaniu
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    zdanie <- getLine
+    let slowa = words zdanie
+    let posortowane = sort slowa
+    putStrLn $ unwords posortowane

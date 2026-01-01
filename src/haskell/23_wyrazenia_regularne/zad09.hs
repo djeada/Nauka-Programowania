@@ -24,5 +24,22 @@ Zmodyfikowany tekst.
 \*(jak w treści zadania — długi tekst)*
 
 -}
+
+import Data.Char (isDigit)
+
+-- Ekstrakcja wszystkich numerów z tekstu
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n)
+extractNumbers :: String -> [String]
+extractNumbers [] = []
+extractNumbers text = 
+    case dropWhile (not . isDigit) text of
+        [] -> []
+        rest -> 
+            let (num, remaining) = span isDigit rest
+            in num : extractNumbers remaining
+
 main :: IO ()
-main = pure ()
+main = do
+    text <- getLine
+    print $ extractNumbers text

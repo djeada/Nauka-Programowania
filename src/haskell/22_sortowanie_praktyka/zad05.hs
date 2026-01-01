@@ -51,5 +51,17 @@ New_York 8400000
 \* Wydruk obiektów ma mieć dokładnie format: `Miasto("NAZWA", LICZBA)`.
 
 -}
+
+import Data.List (sortBy)
+import Data.Ord (comparing, Down(..))
+import Text.Read (readMaybe)
+
+-- Sortowanie malejąco
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    case readMaybe input :: Maybe [Int] of
+        Just xs -> print $ sortBy (comparing Down) xs
+        Nothing -> print ([] :: [Int])

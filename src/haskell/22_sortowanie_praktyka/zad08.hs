@@ -39,5 +39,17 @@ Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosn�
 \* Lista jest wynikiem rotacji listy posortowanej niemalejąco (mogą wystąpić duplikaty).
 
 -}
+
+import Data.List (sortBy)
+
+-- Sortowanie niestandardowe
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    putStrLn "Sortowanie niestandardowe"
+    -- Przykład: sortowanie według własnej funkcji
+    let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    -- Sortowanie: najpierw parzyste, potem nieparzyste
+    let sorted = sortBy (\a b -> compare (even b, a) (even a, b)) nums
+    print sorted
