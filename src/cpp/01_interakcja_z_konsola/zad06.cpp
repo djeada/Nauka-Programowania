@@ -201,37 +201,37 @@ Dwie linie:
 #include <iostream>
 
 int main() {
-  // ZAD-06A: kg to g
+  // ZAD-06A: kg na g
   double kg;
   std::cin >> kg;
   int g = (int)(kg * 1000);
   std::cout << g << std::endl;
 
-  // ZAD-06B: inches to cm
+  // ZAD-06B: cale na cm
   double inch;
   std::cin >> inch;
   double cm = inch * 2.54;
   std::cout << std::fixed << std::setprecision(2) << cm << std::endl;
 
-  // ZAD-06C: seconds to full hours
+  // ZAD-06C: sekundy na pełne godziny
   int s;
   std::cin >> s;
   int hours = s / 3600;
   std::cout << hours << std::endl;
 
-  // ZAD-06D: euro to pln
+  // ZAD-06D: euro na pln
   double eur;
   std::cin >> eur;
   double pln = eur * 4.4;
   std::cout << std::fixed << std::setprecision(2) << pln << std::endl;
 
-  // ZAD-06E: degrees to radians
+  // ZAD-06E: stopnie na radiany
   double deg;
   std::cin >> deg;
   double rad = deg * M_PI / 180;
   std::cout << std::fixed << std::setprecision(3) << rad << std::endl;
 
-  // ZAD-06F: Fahrenheit to Celsius and Kelvin
+  // ZAD-06F: Fahrenheit na Celsius i Kelvin
   double F;
   std::cin >> F;
   double C = (5.0 / 9.0) * (F - 32);

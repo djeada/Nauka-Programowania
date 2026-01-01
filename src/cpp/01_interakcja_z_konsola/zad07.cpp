@@ -211,32 +211,32 @@ Oblicz objętość prostopadłościanu:
 int main() {
   double a, b, c;
 
-  // ZAD-07A: Area of triangle
+  // ZAD-07A: Pole trójkąta
   std::cin >> a >> b;
   double P = 0.5 * a * b;
   std::cout << std::fixed << std::setprecision(3) << P << std::endl;
 
-  // ZAD-07B: Area of rectangle
+  // ZAD-07B: Pole prostokąta
   std::cin >> a >> b;
   P = a * b;
   std::cout << std::fixed << std::setprecision(3) << P << std::endl;
 
-  // ZAD-07C: Area of rhombus
+  // ZAD-07C: Pole rombu
   std::cin >> a >> b;
   P = 0.5 * a * b;
   std::cout << std::fixed << std::setprecision(3) << P << std::endl;
 
-  // ZAD-07D: Volume of sphere
+  // ZAD-07D: Objętość kuli
   std::cin >> a;
   double V = (4.0 / 3.0) * M_PI * pow(a, 3);
   std::cout << std::fixed << std::setprecision(3) << V << std::endl;
 
-  // ZAD-07E: Volume of cone
+  // ZAD-07E: Objętość stożka
   std::cin >> a >> b;
   V = (1.0 / 3.0) * M_PI * pow(a, 2) * b;
   std::cout << std::fixed << std::setprecision(3) << V << std::endl;
 
-  // ZAD-07F: Volume of cuboid
+  // ZAD-07F: Objętość prostopadłościanu
   std::cin >> a >> b >> c;
   V = a * b * c;
   std::cout << std::fixed << std::setprecision(3) << V << std::endl;

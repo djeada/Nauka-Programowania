@@ -46,7 +46,6 @@ Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 #include <iostream>
 
 int main() {
-  std::cout << "podaj liczbe:" << std::endl;
   int x;
   std::cin >> x;
 

@@ -52,26 +52,13 @@ Jedna linia:
 #include <iostream>
 
 int main() {
-  std::cout << "podaj dwie liczby:" << std::endl;
+  int a, b;
+  std::cin >> a >> b;
 
-  int a;
-  int b;
-
-  std::cin >> a;
-  std::cin >> b;
-
-  if (a > b) {
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << "pierwsza liczba jest wieksza od drugiej" << std::endl;
-
-  }
-
-  else {
-    std::cout << b << std::endl;
-    std::cout << a << std::endl;
-    std::cout << "pierwsza liczba nie jest wieksza od drugiej" << std::endl;
-  }
+  int max_val = (a > b) ? a : b;
+  int min_val = (a < b) ? a : b;
+  
+  std::cout << max_val << " " << min_val << std::endl;
 
   return 0;
 }
