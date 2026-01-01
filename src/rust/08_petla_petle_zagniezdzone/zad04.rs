@@ -40,4 +40,18 @@ Liczby w jednym wierszu oddzielaj pojedynczą spacją.
 * Nie dodawaj spacji na końcu wiersza.
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: usize = n.trim().parse().unwrap();
+    
+    for i in 1..=n {
+        for j in 1..=n {
+            if j > 1 {
+                print!(" ");
+            }
+            print!("{}", i * j);
+        }
+        println!();
+    }
+}

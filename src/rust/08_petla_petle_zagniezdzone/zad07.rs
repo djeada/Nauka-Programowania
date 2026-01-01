@@ -47,4 +47,17 @@ Suma wysokości wszystkich trójkątów, czyli `1 + 2 + ... + N` linii.
 * Nie dodawaj pustych linii między trójkątami.
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: usize = n.trim().parse().unwrap();
+    
+    for trojkat in 1..=n {
+        for i in 1..=trojkat {
+            for _ in 0..i {
+                print!("*");
+            }
+            println!();
+        }
+    }
+}
