@@ -36,18 +36,27 @@ Dla każdej pozycji `i` znajdź najmniejszy element w zakresie `i..koniec` i zam
 * Złożoność czasowa: `O(n^2)`.
 
 */
+
+use std::io;
+
+// Sortowanie przez wybieranie - wersja 1
+// Złożoność czasowa: O(n^2)
+// Złożoność pamięciowa: O(1)
 fn sort_v1(lista: &mut [i32]) {
     for i in 0..lista.len() {
-        let mut pom = i;
+        let mut min_idx = i;
         for j in (i + 1)..lista.len() {
-            if lista[pom] > lista[j] {
-                pom = j;
+            if lista[min_idx] > lista[j] {
+                min_idx = j;
             }
         }
-        lista.swap(i, pom);
+        lista.swap(i, min_idx);
     }
 }
 
+// Sortowanie przez wybieranie - wersja 2 (z iteratorami)
+// Złożoność czasowa: O(n^2)
+// Złożoność pamięciowa: O(1)
 fn sort_v2(lista: &mut [i32]) {
     for x in 0..lista.len() {
         let min = lista[x..]
@@ -63,6 +72,16 @@ fn sort_v2(lista: &mut [i32]) {
     }
 }
 
+fn parsuj_liste(input: &str) -> Vec<i32> {
+    input
+        .trim()
+        .trim_start_matches('[')
+        .trim_end_matches(']')
+        .split(',')
+        .filter_map(|s| s.trim().parse().ok())
+        .collect()
+}
+
 fn test_1() {
     let mut lista = vec![4, 2, 5, 3, 1];
     sort_v1(&mut lista);
@@ -76,6 +95,18 @@ fn test_2() {
 }
 
 fn main() {
-    test_1();
-    test_2();
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    
+    let mut lista = parsuj_liste(&input);
+    sort_v1(&mut lista);
+    
+    print!("[");
+    for (i, &val) in lista.iter().enumerate() {
+        if i > 0 {
+            print!(", ");
+        }
+        print!("{}", val);
+    }
+    println!("]");
 }

@@ -40,6 +40,12 @@ Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowani
 * Złożoność czasowa: `O(n log n)`.
 
 */
+
+use std::io;
+
+// Sortowanie przez scalanie (merge sort)
+// Złożoność czasowa: O(n log n)
+// Złożoność pamięciowa: O(n) dla bufora
 fn sort_v1(lista: &mut [i32]) {
     let srodek = lista.len() / 2;
 
@@ -55,6 +61,7 @@ fn sort_v1(lista: &mut [i32]) {
     lista.copy_from_slice(&ret);
 }
 
+// Funkcja scalająca dwie posortowane listy
 fn polacz(lista_a: &[i32], lista_b: &[i32], ret: &mut [i32]) {
     let mut lewo = 0;
     let mut prawo = 0;
@@ -81,6 +88,16 @@ fn polacz(lista_a: &[i32], lista_b: &[i32], ret: &mut [i32]) {
     }
 }
 
+fn parsuj_liste(input: &str) -> Vec<i32> {
+    input
+        .trim()
+        .trim_start_matches('[')
+        .trim_end_matches(']')
+        .split(',')
+        .filter_map(|s| s.trim().parse().ok())
+        .collect()
+}
+
 fn test_1() {
     let mut lista = vec![4, 2, 5, 3, 1];
     sort_v1(&mut lista);
@@ -88,5 +105,18 @@ fn test_1() {
 }
 
 fn main() {
-    test_1();
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    
+    let mut lista = parsuj_liste(&input);
+    sort_v1(&mut lista);
+    
+    print!("[");
+    for (i, &val) in lista.iter().enumerate() {
+        if i > 0 {
+            print!(", ");
+        }
+        print!("{}", val);
+    }
+    println!("]");
 }

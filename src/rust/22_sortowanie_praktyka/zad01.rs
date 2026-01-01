@@ -35,29 +35,38 @@ Ala ma kota
 * Spacje też są znakami i biorą udział w sortowaniu (dlatego w przykładzie wyjście zaczyna się od spacji).
 
 */
-use std::iter::FromIterator;
-use std::iter::Iterator;
 
-fn sort_v1(napis: String) -> String {
-    let s_slice: &str = &napis[..];
-    let mut chars: Vec<char> = s_slice.chars().collect();
-    chars.sort_by(|a, b| a.cmp(b));
-    return String::from_iter(chars);
+use std::io;
+use std::iter::FromIterator;
+
+// Funkcja sortująca znaki w napisie
+// Złożoność czasowa: O(n log n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(n)
+fn sortuj_znaki(napis: String) -> String {
+    let mut chars: Vec<char> = napis.chars().collect();
+    chars.sort();
+    String::from_iter(chars)
 }
 
 fn test_1() {
     let napis: String = "cab".to_owned();
     let wynik = "abc".to_owned();
-    assert_eq!(sort_v1(napis), wynik);
+    assert_eq!(sortuj_znaki(napis), wynik);
 }
 
 fn test_2() {
     let napis: String = "eDedCBcbAaa".to_owned();
     let wynik = "ABCDabcdeae".to_owned();
-    assert_eq!(sort_v1(napis), wynik);
+    assert_eq!(sortuj_znaki(napis), wynik);
 }
 
 fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let napis = input.trim().to_string();
+    
+    println!("{}", sortuj_znaki(napis));
+}
     test_1();
     test_2();
 }
