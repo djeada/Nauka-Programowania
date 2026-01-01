@@ -58,8 +58,6 @@
 # ```
 
 main() {
-
-    echo "Podaj liczbe:"
     read x
 
     if [[ $x -gt 0 ]]; then

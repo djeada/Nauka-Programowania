@@ -213,12 +213,13 @@ main() {
     result=$(echo "scale=2; $eur * 4.4" | bc)
     printf "%.2f\n" "$result"
 
-    # ZAD-06E: degrees → radians
+    # ZAD-06E: stopnie → radiany
     read deg
-    result=$(echo "scale=10; $deg * 3.141592653589793 / 180" | bc)
+    # Użyj wbudowanej funkcji arctangent w bc do obliczenia pi: pi = 4 * atan(1)
+    result=$(echo "scale=10; pi = 4 * a(1); $deg * pi / 180" | bc -l)
     printf "%.3f\n" "$result"
 
-    # ZAD-06F: Fahrenheit → Celsius and Kelvin
+    # ZAD-06F: Fahrenheit → Celsius i Kelvin
     read F
     C=$(echo "scale=10; (5.0/9.0) * ($F - 32)" | bc)
     printf "%.3f\n" "$C"

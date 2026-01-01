@@ -203,36 +203,38 @@
 # ```
 
 main() {
-    # ZAD-07A: Triangle area P = 0.5 * a * h
+    # ZAD-07A: Pole trójkąta P = 0.5 * a * h
     read a
     read h
     result=$(echo "scale=3; 0.5 * $a * $h" | bc)
     printf "%.3f\n" "$result"
 
-    # ZAD-07B: Rectangle area P = a * b
+    # ZAD-07B: Pole prostokąta P = a * b
     read a
     read b
     result=$(echo "scale=3; $a * $b" | bc)
     printf "%.3f\n" "$result"
 
-    # ZAD-07C: Rhombus area P = 0.5 * d1 * d2
+    # ZAD-07C: Pole rombu P = 0.5 * d1 * d2
     read d1
     read d2
     result=$(echo "scale=3; 0.5 * $d1 * $d2" | bc)
     printf "%.3f\n" "$result"
 
-    # ZAD-07D: Sphere volume V = (4/3) * π * r^3
+    # ZAD-07D: Objętość kuli V = (4/3) * π * r^3
     read r
-    result=$(echo "scale=10; (4.0/3.0) * 3.141592653589793 * $r^3" | bc)
+    # Użyj wbudowanej funkcji arctangent w bc do obliczenia pi: pi = 4 * atan(1)
+    result=$(echo "scale=10; pi = 4 * a(1); (4.0/3.0) * pi * $r^3" | bc -l)
     printf "%.3f\n" "$result"
 
-    # ZAD-07E: Cone volume V = (1/3) * π * r^2 * h
+    # ZAD-07E: Objętość stożka V = (1/3) * π * r^2 * h
     read r
     read h
-    result=$(echo "scale=10; (1.0/3.0) * 3.141592653589793 * $r^2 * $h" | bc)
+    # Użyj wbudowanej funkcji arctangent w bc do obliczenia pi: pi = 4 * atan(1)
+    result=$(echo "scale=10; pi = 4 * a(1); (1.0/3.0) * pi * $r^2 * $h" | bc -l)
     printf "%.3f\n" "$result"
 
-    # ZAD-07F: Cuboid volume V = a * b * c
+    # ZAD-07F: Objętość prostopadłościanu V = a * b * c
     read a
     read b
     read c

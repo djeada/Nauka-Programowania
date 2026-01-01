@@ -33,16 +33,22 @@
 # ```
 
 main() {
-
-    echo "Podaj cztery liczby."
     read a
     read b
     read c
     read d
 
-    maxAB=$([ $a -gt $b ] && echo "$a" || echo "$b")
-    maxCD=$([ $c -gt $d ] && echo "$c" || echo "$d")
-    max=$([ $maxAB -gt $maxCD ] && echo "$maxAB" || echo "$maxCD")
+    # Znajdź maksimum z czterech liczb
+    max=$a
+    if [[ $b -gt $max ]]; then
+        max=$b
+    fi
+    if [[ $c -gt $max ]]; then
+        max=$c
+    fi
+    if [[ $d -gt $max ]]; then
+        max=$d
+    fi
 
     echo $max
 }

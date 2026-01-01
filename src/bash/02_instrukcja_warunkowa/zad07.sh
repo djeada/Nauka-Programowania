@@ -2,137 +2,83 @@
 #
 # **Poziom:** ★★☆
 # **Tagi:** `bool`, `logika`, `tabele prawdy`, `formatowanie`
-#
-# ### Treść
-#
-# Dla wszystkich kombinacji wartości logicznych `p` i `q` (True/False) sprawdź poprawność praw:
-#
-# 1. Wyłączony środek: `p OR (NOT p)`
-# 2. Niesprzeczność: `NOT (p AND (NOT p))`
-# 3. Przemienność AND: `p AND q` vs `q AND p`
-# 4. Przemienność OR: `p OR q` vs `q OR p`
-# 5. De Morgana 1: `NOT (p AND q)` vs `(NOT p) OR (NOT q)`
-# 6. De Morgana 2: `NOT (p OR q)` vs `(NOT p) AND (NOT q)`
-#
-# ### Wejście
-#
-# Brak.
-#
-# ### Wyjście
-#
-# Żeby wynik był **jednoznaczny i łatwy do sprawdzenia**, zastosuj dokładnie ten format:
-#
-# Dla każdego z 6 praw wypisz:
-#
-# * nazwę prawa w jednej linii,
-# * następnie w osobnych liniach wynik dla każdej kombinacji `p, q` w kolejności:
-#
-#   1. `p=False, q=False`
-#   2. `p=False, q=True`
-#   3. `p=True, q=False`
-#   4. `p=True, q=True`
-#
-# Każda linia kombinacji ma mieć format:
-# `p=<...> q=<...> L=<...> R=<...> EQ=<...>`
-#
-# Gdzie `<...>` to dosłownie `True` albo `False`.
-#
-# ### Przykład fragmentu (dla jednego prawa)
-#
-# ```
-# Przemienność alternatywy:
-# p=False q=False L=False R=False EQ=True
-# p=False q=True L=True R=True EQ=True
-# p=True q=False L=True R=True EQ=True
-# p=True q=True L=True R=True EQ=True
-# ```
-#
-# ### Uwagi o formatowaniu
-#
-# * Dokładne nazwy praw (nagłówki) użyj jak poniżej:
-#
-#   1. `Prawo wyłączonego środka:`
-#   2. `Prawo niesprzeczności:`
-#   3. `Przemienność koniunkcji:`
-#   4. `Przemienność alternatywy:`
-#   5. `Pierwsze prawo de Morgana:`
-#   6. `Drugie prawo de Morgana:`
-# * Między blokami praw możesz wstawić **jedną pustą linię** (zalecane), ale nie więcej.
 
 main() {
+    # Funkcje pomocnicze do konwersji bool
+    to_str() {
+        if [ "$1" -eq 1 ]; then echo "True"; else echo "False"; fi
+    }
 
-    echo "Prawo wylacznego srodka"
-    echo "Prawo wylacznego srodka"
-    p=false
-    echo "dla p majacego wartosc logiczna $p wyrazenie p v ~p ma wartosc logiczna $(($p || !$p))"
-    p=true
-    echo "dla p majacego wartosc logiczna $p wyrazenie p v ~p ma wartosc logiczna $(($p || !$p))"
+    # Prawo wyłączonego środka: p OR (NOT p)
+    echo "Prawo wyłączonego środka:"
+    for p in 0 1; do
+        for q in 0 1; do
+            L=$(( $p || !$p ))
+            R=1  # zawsze prawda
+            EQ=$(( $L == $R ))
+            echo "p=$(to_str $p) q=$(to_str $q) L=$(to_str $L) R=$(to_str $R) EQ=$(to_str $EQ)"
+        done
+    done
 
-    echo -e "\nZasada niesprzecznosci"
-    echo -e "\nZasada niesprzecznosci"
-    p=false
-    echo "dla p majacego wartosc logiczna $p wyrazenie ~(p Ʌ ~p) ma wartosc logiczna $((!($p && !$p)))"
-    p=true
-    echo "dla p majacego wartosc logiczna $p wyrazenie ~(p Ʌ ~p) ma wartosc logiczna $((!($p && !$p)))"
+    echo ""
+    # Prawo niesprzeczności: NOT (p AND (NOT p))
+    echo "Prawo niesprzeczności:"
+    for p in 0 1; do
+        for q in 0 1; do
+            L=$(( !($p && !$p) ))
+            R=1  # zawsze prawda
+            EQ=$(( $L == $R ))
+            echo "p=$(to_str $p) q=$(to_str $q) L=$(to_str $L) R=$(to_str $R) EQ=$(to_str $EQ)"
+        done
+    done
 
-    echo -e "\nPrzemiennosc koniunkcji"
-    echo -e "\nPrzemiennosc koniunkcji"
-    p=false
-    q=false
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie (p Ʌ q) <=> (q Ʌ p) ma wartosc logiczna $((($p && $q) == ($q && $p)))"
-    p=true
-    q=false
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie (p Ʌ q) <=> (q Ʌ p) ma wartosc logiczna $((($p && $q) == ($q && $p)))"
-    p=false
-    q=true
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie (p Ʌ q) <=> (q Ʌ p) ma wartosc logiczna $((($p && $q) == ($q && $p)))"
-    p=true
-    q=true
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie (p Ʌ q) <=> (q Ʌ p) ma wartosc logiczna $((($p && $q) == ($q && $p)))"
+    echo ""
+    # Przemienność koniunkcji: p AND q = q AND p
+    echo "Przemienność koniunkcji:"
+    for p in 0 1; do
+        for q in 0 1; do
+            L=$(( $p && $q ))
+            R=$(( $q && $p ))
+            EQ=$(( $L == $R ))
+            echo "p=$(to_str $p) q=$(to_str $q) L=$(to_str $L) R=$(to_str $R) EQ=$(to_str $EQ)"
+        done
+    done
 
-    echo -e "\nPrzemiennosc alternatywy"
-    echo -e "\nPrzemiennosc alternatywy"
-    p=false
-    q=false
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie (p v q) <=> (q v p) ma wartosc logiczna $((($p || $q) == ($q || $p)))"
-    p=true
-    q=false
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie (p v q) <=> (q v p) ma wartosc logiczna $((($p || $q) == ($q || $p)))"
-    p=false
-    q=true
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie (p v q) <=> (q v p) ma wartosc logiczna $((($p || $q) == ($q || $p)))"
-    p=true
-    q=true
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie (p v q) <=> (q v p) ma wartosc logiczna $((($p || $q) == ($q || $p)))"
+    echo ""
+    # Przemienność alternatywy: p OR q = q OR p
+    echo "Przemienność alternatywy:"
+    for p in 0 1; do
+        for q in 0 1; do
+            L=$(( $p || $q ))
+            R=$(( $q || $p ))
+            EQ=$(( $L == $R ))
+            echo "p=$(to_str $p) q=$(to_str $q) L=$(to_str $L) R=$(to_str $R) EQ=$(to_str $EQ)"
+        done
+    done
 
-    echo -e "\nPierwsze prawo de Morgana"
-    echo -e "\nPierwsze prawo de Morgana"
-    p=false
-    q=false
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie ~(p Ʌ q) <=> (~p v ~q) ma wartosc logiczna $((!($p && $q) == (!$p || !$q)))"
-    p=true
-    q=false
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie ~(p Ʌ q) <=> (~p v ~q) ma wartosc logiczna $((!($p && $q) == (!$p || !$q)))"
-    p=false
-    q=true
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie ~(p Ʌ q) <=> (~p v ~q) ma wartosc logiczna $((!($p && $q) == (!$p || !$q)))"
-    p=true
-    q=true
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie ~(p Ʌ q) <=> (~p v ~q) ma wartosc logiczna $((!($p && $q) == (!$p || !$q)))"
+    echo ""
+    # Pierwsze prawo de Morgana: NOT (p AND q) = (NOT p) OR (NOT q)
+    echo "Pierwsze prawo de Morgana:"
+    for p in 0 1; do
+        for q in 0 1; do
+            L=$(( !($p && $q) ))
+            R=$(( !$p || !$q ))
+            EQ=$(( $L == $R ))
+            echo "p=$(to_str $p) q=$(to_str $q) L=$(to_str $L) R=$(to_str $R) EQ=$(to_str $EQ)"
+        done
+    done
 
-    echo -e "\nDrugie prawo de Morgana"
-    echo -e "\nDrugie prawo de Morgana"
-    p=false
-    q=false
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie ~(p v q) <=> (~p Ʌ ~q) ma wartosc logiczna $((!($p || $q) == (!$p && !$q)))"
-    p=true
-    q=false
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie ~(p v q) <=> (~p Ʌ ~q) ma wartosc logiczna $((!($p || $q) == (!$p && !$q)))"
-    p=false
-    q=true
-    echo "dla p majacego wartosc logiczna $p oraz q majacego wartosc logiczna $q wyrazenie ~(p v q) <=> (~p Ʌ ~q) ma wartosc logiczna $((!($p || $q) == (!$p && !$q)))"
-    p=true
-    q=true
+    echo ""
+    # Drugie prawo de Morgana: NOT (p OR q) = (NOT p) AND (NOT q)
+    echo "Drugie prawo de Morgana:"
+    for p in 0 1; do
+        for q in 0 1; do
+            L=$(( !($p || $q) ))
+            R=$(( !$p && !$q ))
+            EQ=$(( $L == $R ))
+            echo "p=$(to_str $p) q=$(to_str $q) L=$(to_str $L) R=$(to_str $R) EQ=$(to_str $EQ)"
+        done
+    done
 }
 
 main "$@"
