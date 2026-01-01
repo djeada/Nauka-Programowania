@@ -176,50 +176,42 @@ print(reszta(3, 5))
 ```
 
 */
-#include <cassert>
-#include <string>
+#include <iostream>
 
-int suma(int pierwszaLiczba, int drugaLiczba) {
-  return pierwszaLiczba + drugaLiczba;
+// ZAD-02A: Suma dwóch liczb
+int suma(int a, int b) {
+  return a + b;
 }
 
-int roznica(int pierwszaLiczba, int drugaLiczba) {
-  return drugaLiczba - pierwszaLiczba;
+// ZAD-02B: Różnica: b − a
+int roznica(int a, int b) {
+  return b - a;
 }
 
-int iloczyn(int pierwszaLiczba, int drugaLiczba) {
-  return pierwszaLiczba * drugaLiczba;
+// ZAD-02C: Iloczyn dwóch liczb
+int iloczyn(int a, int b) {
+  return a * b;
 }
 
-int reszta(int pierwszaLiczba, int drugaLiczba) {
-  return pierwszaLiczba % drugaLiczba;
+// ZAD-02D: Iloraz całkowity: a // b
+int iloraz(int a, int b) {
+  return a / b;
 }
 
-void testSuma() {
-  assert(suma(1, 2) == 3);
-  assert(suma(2, 2) == 4);
-}
-
-void testRoznica() {
-  assert(roznica(1, 2) == -1);
-  assert(roznica(2, 2) == 0);
-}
-
-void testIloczyn() {
-  assert(iloczyn(1, 2) == 2);
-  assert(iloczyn(2, 2) == 4);
-}
-
-void testReszta() {
-  assert(reszta(1, 2) == 1);
-  assert(reszta(2, 2) == 0);
+// ZAD-02E: Reszta z dzielenia: a % b
+int reszta(int a, int b) {
+  return a % b;
 }
 
 int main() {
-  testSuma();
-  testRoznica();
-  testIloczyn();
-  testReszta();
+  int a, b;
+  std::cin >> a >> b;
+  
+  std::cout << suma(a, b) << std::endl;
+  std::cout << roznica(a, b) << std::endl;
+  std::cout << iloczyn(a, b) << std::endl;
+  std::cout << iloraz(a, b) << std::endl;
+  std::cout << reszta(a, b) << std::endl;
 
   return 0;
 }
