@@ -41,11 +41,8 @@ Jedna liczba zmiennoprzecinkowa — ( \pi^n ) z dokładnością do dwóch miejsc
 // Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
-// Petla
-let wynik = Math.PI;
-for (let i = 1; i < liczba; i++) {
-  wynik *= Math.PI;
-}
+// Obliczanie potegi
+const wynik = Math.pow(Math.PI, liczba);
 
 // Wypisanie wyniku
 console.log(wynik.toFixed(2));
