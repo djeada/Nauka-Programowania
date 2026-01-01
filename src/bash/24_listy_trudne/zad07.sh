@@ -72,6 +72,8 @@ pojemnosc_wody() {
         [ ${prawy_max[$i]} -lt $min_wysokosc ] && min_wysokosc=${prawy_max[$i]}
         
         local woda_tutaj=$((min_wysokosc - ${_wysokosci_ref[$i]}))
+        # Upewnij się że woda nie jest ujemna
+        [ $woda_tutaj -lt 0 ] && woda_tutaj=0
         woda=$((woda + woda_tutaj))
     done
     

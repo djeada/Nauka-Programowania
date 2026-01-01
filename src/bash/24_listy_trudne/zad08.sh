@@ -46,10 +46,12 @@ maksymalny_zysk_sznurek() {
     
     for ((i=1; i<=n; i++)); do
         local max_val=0
-        for ((j=1; j<=i; j++)); do
+        for ((j=1; j<=i && j<=${#_ceny_ref[@]}; j++)); do
             local cena_idx=$((j-1))
-            local val=$((${_ceny_ref[$cena_idx]} + ${dp[$((i-j))]}))
-            [ $val -gt $max_val ] && max_val=$val
+            if [ $cena_idx -lt ${#_ceny_ref[@]} ]; then
+                local val=$((${_ceny_ref[$cena_idx]} + ${dp[$((i-j))]}))
+                [ $val -gt $max_val ] && max_val=$val
+            fi
         done
         dp[$i]=$max_val
     done

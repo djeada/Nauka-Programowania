@@ -35,8 +35,8 @@
 source ../assert.sh
 
 # Znajduje najdłuższy wspólny podnapis.
-# Złożoność czasowa: O(n*m), gdzie n i m to długości napisów
-# Złożoność pamięciowa: O(n*m)
+# Złożoność czasowa: O(n*m*min(n,m)), gdzie n i m to długości napisów
+# Złożoność pamięciowa: O(1)
 najdluzszy_wspolny_podnapis() {
     local napis_a="$1"
     local napis_b="$2"
