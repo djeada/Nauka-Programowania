@@ -37,5 +37,10 @@ Jedna liczba zmiennoprzecinkowa — ( \pi^n ) z dokładnością do dwóch miejsc
 \* Dla `n = 0` wypisz `1.00`.
 
 -}
+import Text.Printf
+
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  let result = pi ^ n :: Double
+  printf "%.2f\n" result

@@ -42,4 +42,9 @@ Jedna liczba naturalna — liczba cyfr w `n`.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  let countDigits num
+        | num == 0 = 1
+        | otherwise = length $ show $ abs num
+  print $ countDigits n

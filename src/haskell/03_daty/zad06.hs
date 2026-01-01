@@ -57,4 +57,29 @@ Data jest niepoprawna.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  d <- readLn :: IO Int
+  m <- readLn :: IO Int
+  y <- readLn :: IO Int
+  
+  let isLeap = (y `mod` 400 == 0) || (y `mod` 4 == 0 && y `mod` 100 /= 0)
+  let daysInMonth = case m of
+        1 -> 31
+        2 -> if isLeap then 29 else 28
+        3 -> 31
+        4 -> 30
+        5 -> 31
+        6 -> 30
+        7 -> 31
+        8 -> 31
+        9 -> 30
+        10 -> 31
+        11 -> 30
+        12 -> 31
+        _ -> 0
+  
+  let isValid = m >= 1 && m <= 12 && d >= 1 && d <= daysInMonth
+  
+  if isValid
+    then putStrLn "Data jest poprawna."
+    else putStrLn "Data jest niepoprawna."

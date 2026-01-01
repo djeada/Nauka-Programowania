@@ -41,4 +41,6 @@ W wierszu `i` i kolumnie `j` (indeksy od 0):
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  mapM_ (\i -> putStrLn [if j == i || j == n - 1 - i then '*' else ' ' | j <- [0..n-1]]) [0..n-1]

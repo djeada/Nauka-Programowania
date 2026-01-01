@@ -46,4 +46,8 @@ W praktyce oznacza to: wypisz `n` tylko wtedy, gdy `1 ≤ n ≤ 12`.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  if n >= 1 && n <= 12
+    then print n
+    else return ()

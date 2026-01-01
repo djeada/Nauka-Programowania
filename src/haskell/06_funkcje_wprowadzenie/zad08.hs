@@ -38,5 +38,11 @@ print(zaokraglij_w_dol(7, 2))
 ```
 
 -}
+zaokraglij_w_dol :: Int -> Int -> Int
+zaokraglij_w_dol a b
+  | a < b = 0
+  | otherwise = 1 + zaokraglij_w_dol (a - b) b
+
 main :: IO ()
-main = pure ()
+main = do
+  print $ zaokraglij_w_dol 7 2

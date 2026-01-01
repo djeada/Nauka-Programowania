@@ -49,5 +49,13 @@ print(wynik)
 \* Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`).
 
 -}
+obliczSrednia :: IO Double
+obliczSrednia = do
+  n <- readLn :: IO Int
+  nums <- mapM (\_ -> readLn :: IO Double) [1..n]
+  return $ sum nums / fromIntegral n
+
 main :: IO ()
-main = pure ()
+main = do
+  wynik <- obliczSrednia
+  print wynik

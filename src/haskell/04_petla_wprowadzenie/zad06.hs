@@ -52,4 +52,18 @@ Trzy liczby naturalne — każda w oddzielnej linii:
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  
+  -- a) sum of (k^2 + k + 1) for k from 1 to n
+  let sumA = sum [k*k + k + 1 | k <- [1..n]]
+  
+  -- b) sum of (k^2 + 5k) for k from 1 to n
+  let sumB = sum [k*k + 5*k | k <- [1..n]]
+  
+  -- c) sum of (k + 2k) = sum of 3k for k from 1 to n
+  let sumC = sum [3*k | k <- [1..n]]
+  
+  print sumA
+  print sumB
+  print sumC

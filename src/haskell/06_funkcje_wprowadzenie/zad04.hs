@@ -132,5 +132,25 @@ print(max_z_trzech(3, 2, 1))
 ```
 
 -}
+-- ZAD-04A: Minimum z dwóch liczb
+minZDwoch :: Int -> Int -> Int
+minZDwoch = min
+
+-- ZAD-04B: Maksimum z dwóch liczb
+maxZDwoch :: Int -> Int -> Int
+maxZDwoch = max
+
+-- ZAD-04C: Minimum z trzech liczb
+minZTrzech :: Int -> Int -> Int -> Int
+minZTrzech a b c = minimum [a, b, c]
+
+-- ZAD-04D: Maksimum z trzech liczb
+maxZTrzech :: Int -> Int -> Int -> Int
+maxZTrzech a b c = maximum [a, b, c]
+
 main :: IO ()
-main = pure ()
+main = do
+  print $ minZDwoch 3 1
+  print $ maxZDwoch 3 1
+  print $ minZTrzech 3 2 1
+  print $ maxZTrzech 3 2 1

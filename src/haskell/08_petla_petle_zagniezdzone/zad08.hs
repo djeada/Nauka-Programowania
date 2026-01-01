@@ -45,4 +45,7 @@ Liczby w wierszu oddzielaj pojedynczą spacją.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  let pascal = iterate (\row -> zipWith (+) (0:row) (row ++ [0])) [1]
+  mapM_ (putStrLn . unwords . map show) $ take n pascal

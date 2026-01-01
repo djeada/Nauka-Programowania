@@ -48,4 +48,6 @@ Suma wysokości wszystkich trójkątów, czyli `1 + 2 + ... + N` linii.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  mapM_ (\h -> mapM_ (putStrLn . flip replicate '*') [1..h]) [1..n]

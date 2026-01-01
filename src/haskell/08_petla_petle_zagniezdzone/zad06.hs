@@ -46,4 +46,6 @@ W wierszu `i` (0..n-1) i kolumnie `j`:
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  mapM_ (\i -> putStrLn [if i == 0 || i == n-1 || j == n-1-i then '*' else ' ' | j <- [0..n-1]]) [0..n-1]

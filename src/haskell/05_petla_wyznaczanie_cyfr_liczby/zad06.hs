@@ -158,4 +158,26 @@ Jeśli brak — brak wyjścia.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  
+  let sumDigits num = sum $ map (\c -> read [c] :: Int) $ show num
+  let allDigitsEven num = all even $ map (\c -> read [c] :: Int) $ show num
+  
+  -- ZAD-06A: liczby mniejsze od n o sumie cyfr równej 10
+  mapM_ print [x | x <- [0..n-1], sumDigits x == 10]
+  
+  -- ZAD-06B: dwucyfrowe większe od n
+  mapM_ print [x | x <- [10..99], x > n]
+  
+  -- ZAD-06C: trzycyfrowe o sumie cyfr równej n
+  mapM_ print [x | x <- [100..999], sumDigits x == n]
+  
+  -- ZAD-06D: trzycyfrowe podzielne przez sumę cyfr liczby n
+  let s = sumDigits n
+  if s > 0
+    then mapM_ print [x | x <- [100..999], x `mod` s == 0]
+    else return ()
+  
+  -- ZAD-06E: mniejsze od n złożone wyłącznie z parzystych cyfr
+  mapM_ print [x | x <- [2..n-1], x > 0, allDigitsEven x]

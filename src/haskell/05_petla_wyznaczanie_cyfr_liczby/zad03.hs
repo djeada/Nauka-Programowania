@@ -38,4 +38,7 @@ Jedna liczba naturalna — suma cyfr liczby `n`.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  let sumDigits num = sum $ map (\c -> read [c] :: Int) $ show $ abs num
+  print $ sumDigits n

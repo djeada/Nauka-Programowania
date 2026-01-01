@@ -46,5 +46,18 @@ True
 ```
 
 -}
+sprawdzWarunki :: Int -> Int -> (Bool, Bool, Bool, Bool)
+sprawdzWarunki a b = (condA, condB, condC, condD)
+  where
+    condA = a > b
+    condB = a + b < 10
+    condC = odd a && odd b
+    condD = max a b < a * a
+
 main :: IO ()
-main = pure ()
+main = do
+  let (condA, condB, condC, condD) = sprawdzWarunki 3 2
+  print condA
+  print condB
+  print condC
+  print condD

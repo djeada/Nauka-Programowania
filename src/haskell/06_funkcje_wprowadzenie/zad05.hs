@@ -37,5 +37,11 @@ b = 8
 ```
 
 -}
+zamienWartosci :: Int -> Int -> (Int, Int)
+zamienWartosci a b = (b, a)
+
 main :: IO ()
-main = pure ()
+main = do
+  let (a, b) = zamienWartosci 8 5
+  putStrLn $ "a = " ++ show a
+  putStrLn $ "b = " ++ show b

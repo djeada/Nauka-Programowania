@@ -176,5 +176,30 @@ print(reszta(3, 5))
 ```
 
 -}
+-- ZAD-02A: Suma dwóch liczb
+suma :: Int -> Int -> Int
+suma a b = a + b
+
+-- ZAD-02B: Różnica: b − a
+roznica :: Int -> Int -> Int
+roznica a b = b - a
+
+-- ZAD-02C: Iloczyn dwóch liczb
+iloczyn :: Int -> Int -> Int
+iloczyn a b = a * b
+
+-- ZAD-02D: Iloraz całkowity: a // b
+iloraz :: Int -> Int -> Int
+iloraz a b = a `div` b
+
+-- ZAD-02E: Reszta z dzielenia: a % b
+reszta :: Int -> Int -> Int
+reszta a b = a `mod` b
+
 main :: IO ()
-main = pure ()
+main = do
+  print $ suma 3 5
+  print $ roznica 3 5
+  print $ iloczyn 3 5
+  print $ iloraz 3 5
+  print $ reszta 3 5

@@ -46,4 +46,11 @@ Brak.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  let loop = do
+        input <- getLine
+        let n = read input :: Int
+        if n /= 7
+          then loop
+          else return ()
+  loop

@@ -38,4 +38,11 @@ Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
+  
+  let minVal = minimum nums
+  let minIndex = head [i | (i, x) <- zip [0..] nums, x == minVal]
+  
+  print minIndex

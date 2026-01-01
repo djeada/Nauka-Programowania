@@ -116,4 +116,15 @@ Jeśli brak — brak wyjścia.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  let digits = reverse $ map (\c -> read [c] :: Int) $ show n
+  
+  -- ZAD-04A: cyfry parzyste
+  mapM_ print $ filter even digits
+  
+  -- ZAD-04B: cyfry mniejsze niż 5
+  mapM_ print $ filter (< 5) digits
+  
+  -- ZAD-04C: cyfry różne od zera
+  mapM_ print $ filter (/= 0) digits

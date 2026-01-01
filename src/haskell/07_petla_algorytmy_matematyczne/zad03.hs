@@ -72,5 +72,15 @@ print(iloraz(3, 2))
 ```
 
 -}
+-- ZAD-03A: Mnożenie przy pomocy dodawania
+iloczyn :: Int -> Int -> Int
+iloczyn a b = sum $ replicate b a
+
+-- ZAD-03B: Dzielenie całkowite przy pomocy odejmowania
+iloraz :: Int -> Int -> Int
+iloraz a b = length $ takeWhile (>= b) $ iterate (\x -> x - b) a
+
 main :: IO ()
-main = pure ()
+main = do
+  print $ iloczyn 3 2
+  print $ iloraz 3 2

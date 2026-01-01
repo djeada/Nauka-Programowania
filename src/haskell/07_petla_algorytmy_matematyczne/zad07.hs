@@ -46,5 +46,17 @@ print(pierwiastek(16))
 \* Dla `n = 0` funkcja ma zwrócić `0.0`.
 
 -}
+pierwiastek :: Double -> Double
+pierwiastek n
+  | n == 0 = 0.0
+  | otherwise = newton n (n / 2)
+  where
+    newton num x
+      | abs (x' - x) < 0.0001 = x'
+      | otherwise = newton num x'
+      where
+        x' = 0.5 * (x + num / x)
+
 main :: IO ()
-main = pure ()
+main = do
+  print $ pierwiastek 16

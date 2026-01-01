@@ -37,4 +37,8 @@ Jedna linia: `N` liczb pierwszych oddzielonych spacjami.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  let isPrime x = x > 1 && null [d | d <- [2..floor (sqrt (fromIntegral x))], x `mod` d == 0]
+  let primes = filter isPrime [2..]
+  putStrLn $ unwords $ map show $ take n primes

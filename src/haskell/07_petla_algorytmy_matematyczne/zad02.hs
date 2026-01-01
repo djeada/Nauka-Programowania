@@ -38,5 +38,10 @@ print(potega(3, 5))
 \* Dla `b = 0` wynik ma wynosić `1`.
 
 -}
+potega :: Int -> Int -> Int
+potega a 0 = 1
+potega a b = product $ replicate b a
+
 main :: IO ()
-main = pure ()
+main = do
+  print $ potega 3 5

@@ -37,4 +37,16 @@ Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **ty
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  list1Str <- getLine
+  list2Str <- getLine
+  
+  let parseList str = read str :: [Int]
+  let list1 = parseList list1Str
+  let list2 = parseList list2Str
+  
+  let onlyIn1 = [x | x <- list1, x `notElem` list2]
+  let onlyIn2 = [x | x <- list2, x `notElem` list1]
+  let result = onlyIn1 ++ onlyIn2
+  
+  print result

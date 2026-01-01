@@ -44,4 +44,9 @@ Rok nie jest przestępny.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  y <- readLn :: IO Int
+  let isLeap = (y `mod` 400 == 0) || (y `mod` 4 == 0 && y `mod` 100 /= 0)
+  if isLeap
+    then putStrLn "Rok jest przestępny."
+    else putStrLn "Rok nie jest przestępny."

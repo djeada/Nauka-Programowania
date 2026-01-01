@@ -45,4 +45,15 @@ Jeśli brak par — brak wyjścia.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
+  x <- readLn :: IO Int
+  
+  let pairs = [(a, b) | (i, a) <- zip [0..] nums, (j, b) <- zip [0..] nums, i < j, a + b == x, a <= b]
+  let uniquePairs = nub pairs
+  
+  mapM_ (\(a, b) -> putStrLn $ show a ++ " " ++ show b) uniquePairs
+  where
+    nub [] = []
+    nub (x:xs) = x : nub (filter (/= x) xs)

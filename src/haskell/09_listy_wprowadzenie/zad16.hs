@@ -42,4 +42,18 @@ Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
+  x <- readLn :: IO Int
+  
+  let findPair [] = Nothing
+      findPair (a:as) = case [j | (j, b) <- zip [1..] as, a + b == x] of
+        (j:_) -> Just (0, j)
+        [] -> case findPair as of
+          Just (i, j) -> Just (i+1, j+1)
+          Nothing -> Nothing
+  
+  case findPair nums of
+    Just (i, j) -> putStrLn $ show i ++ " " ++ show j
+    Nothing -> putStrLn "-1 -1"

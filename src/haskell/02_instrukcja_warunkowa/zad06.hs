@@ -35,4 +35,14 @@ Jedna linia: największa liczba.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  aInput <- getLine
+  bInput <- getLine
+  cInput <- getLine
+  dInput <- getLine
+  let a = read aInput :: Int
+  let b = read bInput :: Int
+  let c = read cInput :: Int
+  let d = read dInput :: Int
+  let maxVal = maximum [a, b, c, d]
+  print maxVal

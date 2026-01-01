@@ -34,5 +34,11 @@ print(nwd(60, 45))
 ```
 
 -}
+nwd :: Int -> Int -> Int
+nwd a b
+  | b == 0 = a
+  | otherwise = nwd b (a `mod` b)
+
 main :: IO ()
-main = pure ()
+main = do
+  print $ nwd 60 45

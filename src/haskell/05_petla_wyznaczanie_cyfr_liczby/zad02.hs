@@ -41,4 +41,9 @@ Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  let printDigitsReverse num
+        | num == 0 = print 0
+        | otherwise = mapM_ print $ reverse $ map (\c -> read [c] :: Int) $ show num
+  printDigitsReverse n

@@ -50,4 +50,11 @@ Jedna linia:
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  aInput <- getLine
+  bInput <- getLine
+  let a = read aInput :: Int
+  let b = read bInput :: Int
+  let maxVal = max a b
+  let minVal = min a b
+  putStrLn $ show maxVal ++ " " ++ show minVal

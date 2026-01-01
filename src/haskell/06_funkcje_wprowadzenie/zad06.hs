@@ -35,5 +35,9 @@ print(suma_cyfr(13231))
 \* Dla `n = 0` suma cyfr to `0`.
 
 -}
+sumaCyfr :: Int -> Int
+sumaCyfr n = sum $ map (\c -> read [c] :: Int) $ show $ abs n
+
 main :: IO ()
-main = pure ()
+main = do
+  print $ sumaCyfr 13231

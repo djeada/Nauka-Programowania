@@ -39,4 +39,6 @@ Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt o wysokości `n`, gdzie w wierszu `i`
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  mapM_ (putStrLn . flip replicate '*') [1..n]

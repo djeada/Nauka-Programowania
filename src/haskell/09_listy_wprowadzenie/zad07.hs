@@ -38,5 +38,20 @@ Jedna liczba zmiennoprzecinkowa w formacie `%.1f`.
 ```
 
 -}
+import Text.Printf
+
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
+  
+  let sorted = reverse $ take 2 $ reverse $ map fromIntegral $ sort nums :: [Double]
+  let avg = sum sorted / 2
+  
+  printf "%.1f\n" avg
+  where
+    sort [] = []
+    sort (x:xs) = sort smaller ++ [x] ++ sort larger
+      where
+        smaller = [a | a <- xs, a <= x]
+        larger = [a | a <- xs, a > x]

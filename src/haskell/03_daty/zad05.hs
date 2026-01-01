@@ -35,4 +35,22 @@ Jeśli `m` nie jest w zakresie 1–12, wypisz:
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  m <- readLn :: IO Int
+  let daysInMonth = case m of
+        1 -> 31
+        2 -> 28  -- non-leap year
+        3 -> 31
+        4 -> 30
+        5 -> 31
+        6 -> 30
+        7 -> 31
+        8 -> 31
+        9 -> 30
+        10 -> 31
+        11 -> 30
+        12 -> 31
+        _ -> -1
+  if daysInMonth == -1
+    then putStrLn "Niepoprawny numer miesiąca."
+    else print daysInMonth

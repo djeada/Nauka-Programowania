@@ -60,4 +60,11 @@ Liczba jest dodatnia.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  input <- getLine
+  let x = read input :: Int
+  if x < 0
+    then putStrLn "Liczba jest ujemna."
+    else if x > 0
+      then putStrLn "Liczba jest dodatnia."
+      else putStrLn "Liczba jest zerem."
