@@ -3,13 +3,17 @@
 # Dane wejsciowe: Napis.
 # Dane wyjsciowe: Lista napisow.
 # Przyklad:
-# Dla otrzymanego napisu: “abc”, powinna zostac zwrocona lista: [“abc”, “bac”, “cab”, “acb”, “bca”, “cba”].
+# Dla otrzymanego napisu: "abc", powinna zostac zwrocona lista: ["abc", "bac", "cab", "acb", "bca", "cba"].
 
 source ../assert.sh
 
+# Funkcja generujaca wszystkie permutacje napisu (rekurencyjnie)
+# Zlozonosc czasowa: O(n!), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(n!)
 permutacje() {
     local napis=$1
-    local napis=$1
+    
+    # Przypadek bazowy: slowo jednoznakowe
     if [ ${#napis} -eq 1 ]; then
         echo "$napis"
         return
@@ -17,6 +21,7 @@ permutacje() {
 
     local permutacje=()
 
+    # Dla kazdego znaku generuj permutacje pozostalych znakow
     for ((i = 0; i < ${#napis}; i++)); do
         for permutacja in $(permutacje ${napis:0:$i}${napis:$((i + 1)):${#napis}}); do
             local permutacja="${napis:$i:1}$permutacja"
@@ -32,7 +37,7 @@ permutacje() {
 test_permutacje() {
     local wynik=($(permutacje "abc"))
     local oczekiwane=(abc acb bac bca cab cba)
-    assertIdenticalElements oczekiwane wynik $LINENO
+    assertArrayEqual wynik oczekiwane $LINENO
 }
 
 main() {
