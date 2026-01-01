@@ -36,4 +36,36 @@ Lemur wygina śmiało ciało
 * Wielkość liter pozostaje bez zmian (nie zamieniaj na małe/duże), sortujesz to, co w tekście.
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja sortująca słowa w zdaniu
+// Złożoność czasowa: O(n log n), gdzie n to liczba słów
+// Złożoność pamięciowa: O(n)
+fn sortuj_slowa(zdanie: &str) -> Vec<String> {
+    let mut slowa: Vec<String> = zdanie
+        .split(|c: char| !c.is_alphanumeric())
+        .filter(|s| !s.is_empty())
+        .map(|s| s.to_string())
+        .collect();
+    
+    slowa.sort();
+    slowa
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let zdanie = input.trim();
+    
+    let slowa = sortuj_slowa(zdanie);
+    
+    print!("[");
+    for (i, slowo) in slowa.iter().enumerate() {
+        if i > 0 {
+            print!(", ");
+        }
+        print!("'{}'", slowo);
+    }
+    println!("]");
+}

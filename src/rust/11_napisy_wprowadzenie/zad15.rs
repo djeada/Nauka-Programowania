@@ -31,4 +31,27 @@ Ala ma kota
 ```
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja formatująca słowa jako lista
+// Złożoność czasowa: O(n), gdzie n to długość zdania
+// Złożoność pamięciowa: O(m), gdzie m to liczba słów
+fn slowa_jako_lista(zdanie: &str) -> String {
+    let slowa: Vec<&str> = zdanie.split_whitespace().collect();
+    
+    let sformatowane: Vec<String> = slowa
+        .iter()
+        .map(|s| format!("\"{}\"", s))
+        .collect();
+    
+    format!("[{}]", sformatowane.join(", "))
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let zdanie = input.trim();
+    
+    println!("{}", slowa_jako_lista(zdanie));
+}

@@ -36,6 +36,12 @@ Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w
 * Działa bardzo dobrze dla danych prawie posortowanych.
 
 */
+
+use std::io;
+
+// Sortowanie przez wstawianie - wersja 1 (klasyczna)
+// Złożoność czasowa: O(n^2) w najgorszym przypadku, O(n) dla posortowanych
+// Złożoność pamięciowa: O(1)
 fn sort_v1(lista: &mut [i32]) {
     for i in 1..lista.len() {
         let mut j = i;
@@ -46,6 +52,9 @@ fn sort_v1(lista: &mut [i32]) {
     }
 }
 
+// Sortowanie przez wstawianie - wersja 2 (z wyszukiwaniem binarnym)
+// Złożoność czasowa: O(n^2) (przesunięcia dominują)
+// Złożoność pamięciowa: O(1)
 fn sort_v2(lista: &mut [i32]) {
     for x in 1..lista.len() {
         let i = match lista[..x].binary_search(&lista[x]) {
@@ -54,6 +63,16 @@ fn sort_v2(lista: &mut [i32]) {
         };
         lista[i..=x].rotate_right(1);
     }
+}
+
+fn parsuj_liste(input: &str) -> Vec<i32> {
+    input
+        .trim()
+        .trim_start_matches('[')
+        .trim_end_matches(']')
+        .split(',')
+        .filter_map(|s| s.trim().parse().ok())
+        .collect()
 }
 
 fn test_1() {
@@ -69,6 +88,18 @@ fn test_2() {
 }
 
 fn main() {
-    test_1();
-    test_2();
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    
+    let mut lista = parsuj_liste(&input);
+    sort_v1(&mut lista);
+    
+    print!("[");
+    for (i, &val) in lista.iter().enumerate() {
+        if i > 0 {
+            print!(", ");
+        }
+        print!("{}", val);
+    }
+    println!("]");
 }

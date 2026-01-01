@@ -38,4 +38,26 @@ Prawda
 * Jeśli chcesz ignorować wielkość liter, porównuj wersje `lower()`.
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja sprawdzająca czy słowo jest palindromem
+// Złożoność czasowa: O(n), gdzie n to długość słowa
+// Złożoność pamięciowa: O(n) dla odwróconego słowa
+fn czy_palindrom(slowo: &str) -> bool {
+    let slowo_lower = slowo.to_lowercase();
+    let odwrocone: String = slowo_lower.chars().rev().collect();
+    slowo_lower == odwrocone
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let slowo = input.trim();
+    
+    if czy_palindrom(slowo) {
+        println!("Prawda");
+    } else {
+        println!("Fałsz");
+    }
+}

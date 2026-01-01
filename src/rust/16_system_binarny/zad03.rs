@@ -140,4 +140,46 @@ Jedna liczba naturalna: `a // b`.
 ```
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja dodawania bitowego
+// Złożoność czasowa: O(log(max(a,b)))
+// Złożoność pamięciowa: O(1)
+fn dodawanie_bitowe(mut a: u32, mut b: u32) -> u32 {
+    while b != 0 {
+        let przeniesienie = a & b;
+        a = a ^ b;
+        b = przeniesienie << 1;
+    }
+    a
+}
+
+// Funkcja odejmowania bitowego
+// Złożoność czasowa: O(log(max(a,b)))
+// Złożoność pamięciowa: O(1)
+fn odejmowanie_bitowe(mut a: u32, mut b: u32) -> u32 {
+    while b != 0 {
+        let pozyczka = (!a) & b;
+        a = a ^ b;
+        b = pozyczka << 1;
+    }
+    a
+}
+
+fn main() {
+    // ZAD-03A: Dodawanie bitowe
+    let mut a_str = String::new();
+    let mut b_str = String::new();
+    
+    io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
+    io::stdin().read_line(&mut b_str).expect("Błąd wczytywania");
+    
+    let a: u32 = a_str.trim().parse().unwrap_or(0);
+    let b: u32 = b_str.trim().parse().unwrap_or(0);
+    
+    println!("{}", dodawanie_bitowe(a, b));
+    
+    // ZAD-03B: Odejmowanie bitowe (opcjonalnie)
+    // println!("{}", odejmowanie_bitowe(a, b));
+}

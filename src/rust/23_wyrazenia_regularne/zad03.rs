@@ -36,4 +36,24 @@ Prawda
 ```
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja sprawdzająca czy napis składa się wyłącznie z cyfr
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(1)
+fn czy_tylko_cyfry(napis: &str) -> bool {
+    !napis.is_empty() && napis.chars().all(|c| c.is_digit(10))
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let napis = input.trim();
+    
+    if czy_tylko_cyfry(napis) {
+        println!("Prawda");
+    } else {
+        println!("Fałsz");
+    }
+}

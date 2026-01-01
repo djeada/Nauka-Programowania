@@ -40,4 +40,47 @@ Pole koła: 28.2743
 ```
 
 */
-fn main() {}
+
+use std::io;
+use std::f64::consts::PI;
+
+// Struktura reprezentująca koło
+// Złożoność pamięciowa: O(1)
+struct Kolo {
+    promien: f64,
+}
+
+impl Kolo {
+    // Konstruktor
+    fn new(r: f64) -> Self {
+        Kolo { promien: r }
+    }
+    
+    // Metoda licząca obwód
+    // Złożoność czasowa: O(1)
+    fn obwod(&self) -> f64 {
+        2.0 * PI * self.promien
+    }
+    
+    // Metoda licząca pole
+    // Złożoność czasowa: O(1)
+    fn pole(&self) -> f64 {
+        PI * self.promien * self.promien
+    }
+    
+    // Metoda wypisująca informacje
+    fn wypisz_info(&self) {
+        println!("Koło o promieniu: {}", self.promien);
+        println!("Obwód koła: {:.4}", self.obwod());
+        println!("Pole koła: {:.4}", self.pole());
+    }
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let r: f64 = input.trim().parse().unwrap_or(1.0);
+    
+    let kolo = Kolo::new(r);
+    kolo.wypisz_info();
+}

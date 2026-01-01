@@ -58,4 +58,80 @@ Pole powierzchni: 16
 ```
 
 */
-fn main() {}
+
+use std::io;
+use std::f64::consts::PI;
+
+// Trait reprezentujący kształt (interfejs polimorficzny)
+trait Ksztalt {
+    fn pole(&self) -> f64;
+    fn wypisz_info(&self);
+}
+
+// Struktura reprezentująca koło
+// Złożoność pamięciowa: O(1)
+struct Kolo {
+    promien: f64,
+}
+
+impl Kolo {
+    fn new(promien: f64) -> Self {
+        Kolo { promien }
+    }
+}
+
+impl Ksztalt for Kolo {
+    // Złożoność czasowa: O(1)
+    fn pole(&self) -> f64 {
+        PI * self.promien * self.promien
+    }
+    
+    fn wypisz_info(&self) {
+        println!("Kształt: Koło");
+        println!("Promień: {}", self.promien);
+        println!("Pole powierzchni: {:.4}", self.pole());
+    }
+}
+
+// Struktura reprezentująca kwadrat
+// Złożoność pamięciowa: O(1)
+struct Kwadrat {
+    bok: f64,
+}
+
+impl Kwadrat {
+    fn new(bok: f64) -> Self {
+        Kwadrat { bok }
+    }
+}
+
+impl Ksztalt for Kwadrat {
+    // Złożoność czasowa: O(1)
+    fn pole(&self) -> f64 {
+        self.bok * self.bok
+    }
+    
+    fn wypisz_info(&self) {
+        println!("Kształt: Kwadrat");
+        println!("Długość boku: {}", self.bok);
+        println!("Pole powierzchni: {}", self.pole() as i32);
+    }
+}
+
+fn main() {
+    let mut r_str = String::new();
+    let mut a_str = String::new();
+    
+    io::stdin().read_line(&mut r_str).expect("Błąd wczytywania");
+    io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
+    
+    let r: f64 = r_str.trim().parse().unwrap_or(1.0);
+    let a: f64 = a_str.trim().parse().unwrap_or(1.0);
+    
+    let kolo = Kolo::new(r);
+    let kwadrat = Kwadrat::new(a);
+    
+    kolo.wypisz_info();
+    println!();
+    kwadrat.wypisz_info();
+}

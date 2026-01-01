@@ -27,4 +27,39 @@ Dla `a = [3, 5, 2]` i `b = [2, -8, 1]` funkcja zwraca:
 * Jeśli listy mają różne długości, wyrównaj je od końca (od wyrazu wolnego).
 
 */
-fn main() {}
+
+// Funkcja dodająca dwa wielomiany
+// Złożoność czasowa: O(max(n, m)), gdzie n i m to stopnie wielomianów
+// Złożoność pamięciowa: O(max(n, m))
+fn dodaj_wielomiany(a: &[i32], b: &[i32]) -> Vec<i32> {
+    let max_len = a.len().max(b.len());
+    let mut wynik = vec![0; max_len];
+    
+    // Dodaj współczynniki z a (od najstarszego do najmłodszego)
+    let offset_a = max_len - a.len();
+    for (i, &val) in a.iter().enumerate() {
+        wynik[offset_a + i] += val;
+    }
+    
+    // Dodaj współczynniki z b
+    let offset_b = max_len - b.len();
+    for (i, &val) in b.iter().enumerate() {
+        wynik[offset_b + i] += val;
+    }
+    
+    // Usuń wiodące zera
+    while wynik.len() > 1 && wynik[0] == 0 {
+        wynik.remove(0);
+    }
+    
+    wynik
+}
+
+fn main() {
+    // Przykład: [3, 5, 2] + [2, -8, 1]
+    let a = vec![3, 5, 2];
+    let b = vec![2, -8, 1];
+    
+    let wynik = dodaj_wielomiany(&a, &b);
+    println!("{:?}", wynik);
+}

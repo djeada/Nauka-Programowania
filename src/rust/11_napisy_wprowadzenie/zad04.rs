@@ -31,4 +31,20 @@ RUMCAJS
 ```
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja zamieniająca małe litery na duże
+// Złożoność czasowa: O(n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(n)
+fn zamien_na_wielkie(napis: &str) -> String {
+    napis.to_uppercase()
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let napis = input.trim();
+    
+    println!("{}", zamien_na_wielkie(napis));
+}

@@ -37,4 +37,45 @@ A ja jestem klasą potomną.
 ```
 
 */
-fn main() {}
+
+// W Rust nie ma tradycyjnego dziedziczenia, ale możemy symulować to zachowanie
+// używając trait'ów i kompozycji
+
+// Struktura bazowa
+// Złożoność pamięciowa: O(1)
+struct Bazowa;
+
+impl Bazowa {
+    fn new() -> Self {
+        Bazowa
+    }
+    
+    fn przedstaw_sie(&self) {
+        println!("Jestem klasą bazową.");
+    }
+}
+
+// Struktura potomna zawierająca bazową
+// Złożoność pamięciowa: O(1)
+struct Potomna {
+    bazowa: Bazowa,
+}
+
+impl Potomna {
+    fn new() -> Self {
+        Potomna {
+            bazowa: Bazowa::new(),
+        }
+    }
+    
+    // Metoda nadpisująca, która najpierw wywołuje metodę bazową
+    fn przedstaw_sie(&self) {
+        self.bazowa.przedstaw_sie();
+        println!("A ja jestem klasą potomną.");
+    }
+}
+
+fn main() {
+    let potomna = Potomna::new();
+    potomna.przedstaw_sie();
+}
