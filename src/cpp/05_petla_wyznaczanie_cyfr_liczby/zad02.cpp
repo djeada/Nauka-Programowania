@@ -45,9 +45,13 @@ Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj liczbe" << std::endl;
   int liczba;
   std::cin >> liczba;
+
+  if (liczba == 0) {
+    std::cout << "0" << std::endl;
+    return 0;
+  }
 
   while (liczba > 0) {
     std::cout << liczba % 10 << std::endl;

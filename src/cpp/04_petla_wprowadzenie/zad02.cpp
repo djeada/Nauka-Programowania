@@ -43,13 +43,11 @@ malejącej.
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj liczbe" << std::endl;
   int a;
   std::cin >> a;
 
-  for (int i = 1; i < a; i++) std::cout << i << " ";
-
-  std::cout << std::endl;
+  for (int i = a - 1; i >= 1; i--) 
+    std::cout << i << std::endl;
 
   return 0;
 }

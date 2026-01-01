@@ -122,41 +122,34 @@ Jeśli brak — brak wyjścia.
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj liczbe: " << std::endl;
   int liczba;
   std::cin >> liczba;
 
-  int liczbaPomocnicza = liczba;
-  std::cout << "Cyfry liczby badace liczbami parzystymi: " << std::endl;
-
-  while (liczbaPomocnicza > 0) {
-    int cyfra = liczbaPomocnicza % 10;
-
-    if (cyfra % 2 == 0) std::cout << cyfra << std::endl;
-
-    liczbaPomocnicza /= 10;
+  // ZAD-04A: Cyfry parzyste
+  int temp = liczba;
+  while (temp > 0) {
+    int cyfra = temp % 10;
+    if (cyfra % 2 == 0) 
+      std::cout << cyfra << std::endl;
+    temp /= 10;
   }
 
-  liczbaPomocnicza = liczba;
-  std::cout << "Cyfry liczby mniejsze niz 5: " << std::endl;
-
-  while (liczbaPomocnicza > 0) {
-    int cyfra = liczbaPomocnicza % 10;
-
-    if (cyfra < 5) std::cout << cyfra << std::endl;
-
-    liczbaPomocnicza /= 10;
+  // ZAD-04B: Cyfry mniejsze niż 5
+  temp = liczba;
+  while (temp > 0) {
+    int cyfra = temp % 10;
+    if (cyfra < 5) 
+      std::cout << cyfra << std::endl;
+    temp /= 10;
   }
 
-  liczbaPomocnicza = liczba;
-  std::cout << "Cyfry liczby rozne od 0: " << std::endl;
-
-  while (liczbaPomocnicza > 0) {
-    int cyfra = liczbaPomocnicza % 10;
-
-    if (cyfra != 0) std::cout << cyfra << std::endl;
-
-    liczbaPomocnicza /= 10;
+  // ZAD-04C: Cyfry różne od 0
+  temp = liczba;
+  while (temp > 0) {
+    int cyfra = temp % 10;
+    if (cyfra != 0) 
+      std::cout << cyfra << std::endl;
+    temp /= 10;
   }
 
   return 0;

@@ -45,19 +45,21 @@ Jedna liczba naturalna — liczba cyfr w `n`.
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj liczbe" << std::endl;
   int liczba;
   std::cin >> liczba;
 
-  int licznik = 0;
+  if (liczba == 0) {
+    std::cout << "1" << std::endl;
+    return 0;
+  }
 
+  int licznik = 0;
   while (liczba > 0) {
     liczba = liczba / 10;
     licznik++;
   }
 
-  std::cout << "Podana liczba sklada sie z " << licznik << " cyfr."
-            << std::endl;
+  std::cout << licznik << std::endl;
 
   return 0;
 }

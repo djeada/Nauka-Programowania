@@ -42,20 +42,18 @@ wypisz `3.1`).
 * Stosuj standardowe zaokrąglanie przy formatowaniu.
 
 */
+#include <cmath>
 #include <iomanip>
 #include <iostream>
-#include <numbers>
 
 int main() {
-  std::cout << "Podaj liczbe: " << std::endl;
   int n;
   std::cin >> n;
 
   std::cout << std::fixed << std::setprecision(n);
 
-  for (int i = 0; i < n; i++) std::cout << std::numbers::pi << " ";
+  for (int i = 0; i < n; i++) 
+    std::cout << M_PI << std::endl;
 
   return 0;
 }
-
-// g++-10 -Wall -Wextra -std=c++20 Zad3.cpp -o exe

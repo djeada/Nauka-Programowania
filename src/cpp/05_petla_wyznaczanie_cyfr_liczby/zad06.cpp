@@ -170,76 +170,60 @@ go nie ma).
 */
 #include <iostream>
 
-int main() {
-  std::cout << "Podaj liczbe: " << std::endl;
-  int liczba;
-  std::cin >> liczba;
-
-  std::cout << "mniejsze od pobranej liczby, ktorych suma cyfr jest rowna 10: "
-            << std::endl;
-  for (int i = 0; i < liczba; i++) {
-    int liczbaPomocnicza = i;
-    int suma = 0;
-
-    while (liczbaPomocnicza > 0) {
-      suma += (liczbaPomocnicza % 10);
-      liczbaPomocnicza /= 10;
-    }
-
-    if (suma == 10) std::cout << i << std::endl;
-  }
-
-  std::cout << "dwucyfrowe mniejsze od pobranej liczby: " << std::endl;
-  for (int i = 10; i < 100 && i < liczba; i++) {
-    std::cout << i << std::endl;
-  }
-
-  std::cout << "trzycyfrowe ktorych suma cyfr jest rowna pobranej liczbie"
-            << std::endl;
-  for (int i = 100; i < 1000; i++) {
-    int liczbaPomocnicza = i;
-    int suma = 0;
-
-    while (liczbaPomocnicza > 0) {
-      suma += (liczbaPomocnicza % 10);
-      liczbaPomocnicza /= 10;
-    }
-
-    if (suma == liczba) std::cout << i << std::endl;
-  }
-
-  std::cout << "trzycyfrowe podzielne przez sume cyfr pobranej liczby"
-            << std::endl;
-
-  int liczbaPomocnicza = liczba;
+// Funkcja pomocnicza do obliczania sumy cyfr
+int suma_cyfr(int n) {
   int suma = 0;
+  while (n > 0) {
+    suma += (n % 10);
+    n /= 10;
+  }
+  return suma;
+}
 
-  while (liczbaPomocnicza > 0) {
-    suma += (liczbaPomocnicza % 10);
-    liczbaPomocnicza /= 10;
+// Funkcja pomocnicza do sprawdzania czy wszystkie cyfry są parzyste
+bool wszystkie_parzyste(int n) {
+  if (n == 0) return true;
+  while (n > 0) {
+    int cyfra = n % 10;
+    if (cyfra % 2 == 1) return false;
+    n /= 10;
+  }
+  return true;
+}
+
+int main() {
+  int n;
+  std::cin >> n;
+
+  // ZAD-06A: Liczby < n o sumie cyfr równej 10
+  for (int x = 0; x < n; x++) {
+    if (suma_cyfr(x) == 10) 
+      std::cout << x << std::endl;
   }
 
-  for (int i = 100; i < 1000; i++) {
-    if (i % suma == 0) std::cout << i << std::endl;
+  // ZAD-06B: Dwucyfrowe większe od n
+  for (int x = 10; x < 100; x++) {
+    if (x > n) 
+      std::cout << x << std::endl;
   }
 
-  std::cout << "mniejsze od pobranej liczby, skladajace sie wylacznie z "
-               "parzystych cyfr"
-            << std::endl;
+  // ZAD-06C: Trzycyfrowe o sumie cyfr równej n
+  for (int x = 100; x < 1000; x++) {
+    if (suma_cyfr(x) == n) 
+      std::cout << x << std::endl;
+  }
 
-  for (int i = 0; i < liczba; i++) {
-    int liczbaPomocnicza = i;
-    bool flaga = true;
-    while (liczbaPomocnicza > 0) {
-      int cyfra = liczbaPomocnicza % 10;
-      if (cyfra % 2 == 1) {
-        flaga = false;
-        break;
-      }
-      liczbaPomocnicza /= 10;
-    }
+  // ZAD-06D: Trzycyfrowe podzielne przez sumę cyfr n
+  int s = suma_cyfr(n);
+  for (int x = 100; x < 1000; x++) {
+    if (x % s == 0) 
+      std::cout << x << std::endl;
+  }
 
-    if (flaga) std::cout << i << std::endl;
+  // ZAD-06E: Mniejsze od n złożone wyłącznie z parzystych cyfr
+  for (int x = 2; x < n; x++) {
+    if (wszystkie_parzyste(x)) 
+      std::cout << x << std::endl;
   }
 
   return 0;

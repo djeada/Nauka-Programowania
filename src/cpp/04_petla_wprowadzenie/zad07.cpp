@@ -39,20 +39,16 @@ przecinku.
 * Dla `n = 0` wypisz `1.00`.
 
 */
+#include <cmath>
 #include <iomanip>
 #include <iostream>
 
 int main() {
-  std::cout << "Podaj liczbe: " << std::endl;
   int n;
   std::cin >> n;
 
-  std::cout << std::fixed << std::setprecision(2);
-
-  int wynik = 1;
-  for (unsigned int i = 0; i < n; i++) wynik *= 3.14;
-
-  std::cout << wynik << std::endl;
+  double wynik = pow(M_PI, n);
+  std::cout << std::fixed << std::setprecision(2) << wynik << std::endl;
 
   return 0;
 }
