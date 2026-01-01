@@ -35,5 +35,19 @@ Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielony
 ```
 
 -}
+
+import Data.List (intercalate)
+
+-- Mnoży wielomian przez skalar
+-- Złożoność czasowa: O(n), gdzie n to stopień wielomianu
+-- Złożoność pamięciowa: O(n)
+multiplyByScalar :: [Int] -> Int -> [Int]
+multiplyByScalar coeffs k = map (* k) coeffs
+
+-- Iloczyn wielomianu przez skalar (z I/O)
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    coeffs <- map read . words <$> getLine :: IO [Int]
+    k <- readLn :: IO Int
+    putStrLn $ intercalate " " $ map show $ multiplyByScalar coeffs k

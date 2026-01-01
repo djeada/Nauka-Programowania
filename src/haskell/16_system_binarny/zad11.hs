@@ -41,5 +41,16 @@ Fałsz
   (W Twoim wcześniejszym przykładzie było to opisane błędnie — tu trzymamy się definicji palindromu 1:1.)
 
 -}
+
+import Data.Bits (complement, xor)
+
+-- Uzupełnienie do jedynki i dwójki
+-- Złożoność czasowa: O(1)
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    let onesComplement = complement n
+    let twosComplement = onesComplement + 1
+    putStrLn $ "Ones complement: " ++ show onesComplement
+    putStrLn $ "Twos complement: " ++ show twosComplement

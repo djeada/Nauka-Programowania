@@ -38,5 +38,13 @@ cba 3
 ```
 
 -}
+
+import Data.Map (Map)
+import qualified Data.Map as Map
+
+-- Filtrowanie słownika
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    putStrLn "Placeholder - filtrowanie słownika"

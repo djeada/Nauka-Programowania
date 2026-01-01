@@ -33,5 +33,15 @@ Jedna liczba naturalna: liczba różniących się bitów.
 ```
 
 -}
+
+import Data.Bits (shiftL, shiftR)
+
+-- Przesunięcia bitowe
+-- Złożoność czasowa: O(1)
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    k <- readLn :: IO Int
+    putStrLn $ "Left shift: " ++ show (n `shiftL` k)
+    putStrLn $ "Right shift: " ++ show (n `shiftR` k)

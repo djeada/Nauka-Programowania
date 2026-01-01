@@ -38,5 +38,13 @@ Jedna liczba naturalna: długość najdłuższego „gapu”.
   Dla przykładu `20` (`10100`) najdłuższy gap ma długość `1` (między `1` i `1`).
 
 -}
+
+-- Reprezentacja zmiennoprzecinkowa (IEEE 754 - uproszczona)
+-- Złożoność czasowa: O(1)
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    x <- readLn :: IO Double
+    putStrLn $ "Float representation (approximation): " ++ show x
+    putStrLn $ "Sign: " ++ show (if x < 0 then 1 else 0)
+    -- Uproszczona reprezentacja

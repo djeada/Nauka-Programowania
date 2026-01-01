@@ -60,5 +60,31 @@ Wczytaj liczbę naturalną `n`. Jeśli `n` jest liczbą pierwszą — wypisz jej
 ```
 
 -}
+
+import Numeric (showIntAtBase)
+import Data.Char (intToDigit)
+import Data.Bits (testBit)
+
+-- Sprawdza czy liczba jest pierwsza
+-- Złożoność czasowa: O(sqrt(n))
+isPrime :: Int -> Bool
+isPrime n
+    | n < 2 = False
+    | n == 2 = True
+    | even n = False
+    | otherwise = not $ any (\x -> n `mod` x == 0) [3, 5 .. floor (sqrt (fromIntegral n))]
+
+-- Konwertuje liczbę dziesiętną na binarną
+decimalToBinary :: Int -> String
+decimalToBinary 0 = "0"
+decimalToBinary n = showIntAtBase 2 intToDigit n ""
+
+-- ZAD-02A: Wypisz binarnie tylko gdy parzysta
+-- ZAD-02B: Wypisz binarnie tylko gdy pierwsza
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    -- Sprawdź czy pierwsza (zad02B)
+    if isPrime n
+        then putStrLn $ decimalToBinary n
+        else return ()  -- brak wyjścia dla nieparzystych/nienpierwszych

@@ -66,5 +66,29 @@ Jedna linia: liczba w systemie dziesiętnym.
 ```
 
 -}
+
+import Numeric (showIntAtBase, readInt)
+import Data.Char (intToDigit, digitToInt, isDigit, isHexDigit, toUpper)
+
+-- Konwertuje liczbę dziesiętną na binarną
+-- Złożoność czasowa: O(log n)
+-- Złożoność pamięciowa: O(log n)
+decimalToBinary :: Int -> String
+decimalToBinary 0 = "0"
+decimalToBinary n = showIntAtBase 2 intToDigit n ""
+
+-- Konwertuje liczbę binarną na dziesiętną
+-- Złożoność czasowa: O(n), gdzie n to długość napisu
+-- Złożoność pamięciowa: O(1)
+binaryToDecimal :: String -> Int
+binaryToDecimal = foldl (\acc c -> acc * 2 + digitToInt c) 0
+
+-- ZAD-01A: Dziesiętny → binarny
+-- ZAD-01B: Binarny → dziesiętny
 main :: IO ()
-main = pure ()
+main = do
+    input <- getLine
+    -- Próbujemy określić czy wejście to liczba binarna czy dziesiętna
+    if all (`elem` "01") input && not (null input)
+        then print $ binaryToDecimal input  -- Binarne → Dziesiętne
+        else putStrLn $ decimalToBinary (read input :: Int)  -- Dziesiętne → Binarne

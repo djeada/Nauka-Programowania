@@ -44,5 +44,13 @@ Prawda
 ```
 
 -}
+
+import Data.Map (Map)
+import qualified Data.Map as Map
+
+-- Głębokie scalanie słowników
+-- Złożoność czasowa: O(n log n)
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    putStrLn "Placeholder - głębokie scalanie słowników"

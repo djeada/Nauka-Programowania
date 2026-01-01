@@ -35,5 +35,14 @@ Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
 \* Dla `n = 0` przyjmij wynik `1`.
 
 -}
+
+import Numeric (showHex)
+
+-- Konwersja na system szesnastkowy
+-- Złożoność czasowa: O(log n)
+-- Złożoność pamięciowa: O(log n)
 main :: IO ()
-main = pure ()
+main = do
+    n <- readLn :: IO Int
+    putStrLn $ map toUpper $ showHex n ""
+    where toUpper c = if c >= 'a' && c <= 'z' then toEnum (fromEnum c - 32) else c
