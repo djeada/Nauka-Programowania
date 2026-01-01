@@ -56,29 +56,22 @@ public class Main {
   // poprosi uzytkownika o podanie n liczb i zwroci
   // ich srednia arytmetyczna
 
-  public static float srednia(int n) {
-
-    float suma = 0.0F;
-    int x;
-
+  public static double obliczSrednia() {
+    Scanner s = new Scanner(System.in);
+    int n = Integer.parseInt(s.nextLine());
+    
+    double sum = 0.0;
     for (int i = 0; i < n; i++) {
-      System.out.print("Podaj liczbe: \n");
-      Scanner s = new Scanner(System.in);
-      x = Integer.parseInt(s.nextLine());
-      suma += x;
+      double x = Double.parseDouble(s.nextLine());
+      sum += x;
     }
-
-    return suma / n;
+    
+    return sum / n;
   }
 
   public static void main(String[] args) {
-    System.out.print("Podaj liczbe: \n");
-    Scanner s = new Scanner(System.in);
-    int n = Integer.parseInt(s.nextLine());
-
-    float wynik = srednia(n);
-
-    System.out.print("Srednia z podanych liczb to " + wynik + "\n");
+    double result = obliczSrednia();
+    System.out.println(result);
   }
 }
 
