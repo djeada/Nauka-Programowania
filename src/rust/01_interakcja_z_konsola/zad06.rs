@@ -199,16 +199,18 @@ Dwie linie:
 use ::std::*;
 
 fn main() {
+    const KELVIN_OFFSET: f64 = 273.15;
+    
     // ZAD-06A: kg -> g
     let mut kg = String::new();
     std::io::stdin().read_line(&mut kg).expect("Blad odczytu");
-    let kg: f32 = kg.trim().parse().expect("Blad parsowania");
+    let kg: f64 = kg.trim().parse().expect("Blad parsowania");
     println!("{}", (kg * 1000.0) as i32);
 
     // ZAD-06B: inches -> cm
     let mut inch = String::new();
     std::io::stdin().read_line(&mut inch).expect("Blad odczytu");
-    let inch: f32 = inch.trim().parse().expect("Blad parsowania");
+    let inch: f64 = inch.trim().parse().expect("Blad parsowania");
     println!("{:.2}", inch * 2.54);
 
     // ZAD-06C: seconds -> full hours
@@ -220,22 +222,22 @@ fn main() {
     // ZAD-06D: EUR -> PLN
     let mut eur = String::new();
     std::io::stdin().read_line(&mut eur).expect("Blad odczytu");
-    let eur: f32 = eur.trim().parse().expect("Blad parsowania");
+    let eur: f64 = eur.trim().parse().expect("Blad parsowania");
     println!("{:.2}", eur * 4.4);
 
     // ZAD-06E: degrees -> radians
     let mut deg = String::new();
     std::io::stdin().read_line(&mut deg).expect("Blad odczytu");
-    let deg: f32 = deg.trim().parse().expect("Blad parsowania");
-    let pi = std::f32::consts::PI;
+    let deg: f64 = deg.trim().parse().expect("Blad parsowania");
+    let pi = std::f64::consts::PI;
     println!("{:.3}", deg * pi / 180.0);
 
     // ZAD-06F: Fahrenheit -> Celsius and Kelvin
     let mut f = String::new();
     std::io::stdin().read_line(&mut f).expect("Blad odczytu");
-    let f: f32 = f.trim().parse().expect("Blad parsowania");
+    let f: f64 = f.trim().parse().expect("Blad parsowania");
     let c = (5.0 / 9.0) * (f - 32.0);
-    let k = c + 273.15;
+    let k = c + KELVIN_OFFSET;
     println!("{:.3}", c);
     println!("{:.3}", k);
 }

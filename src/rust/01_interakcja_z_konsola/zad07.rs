@@ -208,6 +208,8 @@ Oblicz objętość prostopadłościanu:
 use ::std::*;
 
 fn main() {
+    let pi = std::f64::consts::PI;
+    
     // ZAD-07A: Triangle area
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
@@ -239,7 +241,6 @@ fn main() {
     let mut r = String::new();
     std::io::stdin().read_line(&mut r).expect("Blad odczytu");
     let r: f64 = r.trim().parse().expect("Blad parsowania");
-    let pi = std::f64::consts::PI;
     println!("{:.3}", (4.0 / 3.0) * pi * r.powi(3));
 
     // ZAD-07E: Cone volume
@@ -249,7 +250,6 @@ fn main() {
     let mut h = String::new();
     std::io::stdin().read_line(&mut h).expect("Blad odczytu");
     let h: f64 = h.trim().parse().expect("Blad parsowania");
-    let pi = std::f64::consts::PI;
     println!("{:.3}", (1.0 / 3.0) * pi * r.powi(2) * h);
 
     // ZAD-07F: Cuboid volume
