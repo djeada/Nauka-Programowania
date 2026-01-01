@@ -45,4 +45,12 @@ W praktyce oznacza to: wypisz `n` tylko wtedy, gdy `1 ≤ n ≤ 12`.
 **Wyjście:** *(brak)*
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: i32 = n.trim().parse().unwrap();
+
+    if n >= 1 && n <= 12 {
+        println!("{}", n);
+    }
+}

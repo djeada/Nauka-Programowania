@@ -40,4 +40,23 @@ Liczba jest palindromem.
 * `0` jest palindromem.
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: i32 = n.trim().parse().unwrap();
+    
+    // Odwróć liczbę
+    let mut temp = n;
+    let mut odwrocona = 0;
+    
+    while temp > 0 {
+        odwrocona = odwrocona * 10 + temp % 10;
+        temp /= 10;
+    }
+    
+    if n == odwrocona {
+        println!("Liczba jest palindromem.");
+    } else {
+        println!("Liczba nie jest palindromem.");
+    }
+}

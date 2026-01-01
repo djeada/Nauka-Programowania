@@ -34,6 +34,5 @@ Witaj, świecie!
 */
 
 fn main() {
-    println!("A.D.");
-    println!("Witaj swiecie");
+    println!("Witaj, świecie!");
 }

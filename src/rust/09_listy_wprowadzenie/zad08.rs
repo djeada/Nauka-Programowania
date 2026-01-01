@@ -43,4 +43,30 @@ Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
 * Jeśli `klucz` nie występuje, wypisz listę bez zmian.
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: usize = n.trim().parse().unwrap();
+    
+    let mut lista = Vec::new();
+    for _ in 0..n {
+        let mut num = String::new();
+        std::io::stdin().read_line(&mut num).unwrap();
+        let num: i32 = num.trim().parse().unwrap();
+        lista.push(num);
+    }
+    
+    let mut klucz = String::new();
+    std::io::stdin().read_line(&mut klucz).unwrap();
+    let klucz: i32 = klucz.trim().parse().unwrap();
+    
+    if let Some(pos) = lista.iter().position(|&x| x == klucz) {
+        lista.remove(pos);
+    }
+    
+    for (i, num) in lista.iter().enumerate() {
+        if i > 0 { print!(","); }
+        print!("{}", num);
+    }
+    println!();
+}

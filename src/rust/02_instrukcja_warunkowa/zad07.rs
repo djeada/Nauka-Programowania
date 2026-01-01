@@ -65,161 +65,64 @@ p=True q=True L=True R=True EQ=True
 use ::std::*;
 
 fn main() {
-    // Podpunkt a)
-    println!("Prawo wylaczonego srodka.");
-    let mut p = true;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Wyrazenie p v ~p ma wartosc logiczna {}", p || !p);
-    let mut p = false;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Wyrazenie p v ~p ma wartosc logiczna {}", p || !p);
+    // Prawo wyłączonego środka
+    println!("Prawo wyłączonego środka:");
+    for &p in &[false, true] {
+        let l = p || !p;
+        let r = true; // zawsze prawda
+        println!("p={} q=N/A L={} R={} EQ={}", p, l, r, l == r);
+    }
+    println!();
 
-    // Podpunkt b)
-    println!("Prawo niesprzecznosci.");
-    let mut p = true;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Wyrazenie ~(p Ʌ ~p) ma wartosc logiczna {}", !(p && !p));
-    let mut p = false;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Wyrazenie ~(p Ʌ ~p) ma wartosc logiczna {}", !(p && !p));
+    // Prawo niesprzeczności
+    println!("Prawo niesprzeczności:");
+    for &p in &[false, true] {
+        let l = !(p && !p);
+        let r = true; // zawsze prawda
+        println!("p={} q=N/A L={} R={} EQ={}", p, l, r, l == r);
+    }
+    println!();
 
-    // Podpunkt c)
-    println!("Przemiennosc koniunkcji.");
-    let mut p = true;
-    let mut q = true;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna {}",
-        (p && q) == (q && p)
-    );
-    let mut p = false;
-    let mut q = true;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna {}",
-        (p && q) == (q && p)
-    );
-    let mut p = true;
-    let mut q = false;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna {}",
-        (p && q) == (q && p)
-    );
-    let mut p = false;
-    let mut q = false;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna {}",
-        (p && q) == (q && p)
-    );
+    // Przemienność koniunkcji
+    println!("Przemienność koniunkcji:");
+    for &p in &[false, true] {
+        for &q in &[false, true] {
+            let l = p && q;
+            let r = q && p;
+            println!("p={} q={} L={} R={} EQ={}", p, q, l, r, l == r);
+        }
+    }
+    println!();
 
-    // Podpunkt d)
-    println!("Przemiennosc alternatywy.");
-    let mut p = true;
-    let mut q = true;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie (p v q) < = > (q v p) ma wartosc logiczna {}",
-        (p || q) == (q || p)
-    );
-    let mut p = false;
-    let mut q = true;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie (p v q) < = > (q v p) ma wartosc logiczna {}",
-        (p || q) == (q || p)
-    );
-    let mut p = true;
-    let mut q = false;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie (p v q) < = > (q v p) ma wartosc logiczna {}",
-        (p || q) == (q || p)
-    );
-    let mut p = false;
-    let mut q = false;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie (p v q) < = > (q v p) ma wartosc logiczna {}",
-        (p || q) == (q || p)
-    );
+    // Przemienność alternatywy
+    println!("Przemienność alternatywy:");
+    for &p in &[false, true] {
+        for &q in &[false, true] {
+            let l = p || q;
+            let r = q || p;
+            println!("p={} q={} L={} R={} EQ={}", p, q, l, r, l == r);
+        }
+    }
+    println!();
 
-    // Podpunkt e)
-    println!("Pierwsze prawo de Morgana.");
-    let mut p = true;
-    let mut q = true;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna {}",
-        !(p && q) == (!p || !q)
-    );
-    let mut p = false;
-    let mut q = true;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna {}",
-        !(p && q) == (!p || !q)
-    );
-    let mut p = true;
-    let mut q = false;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna {}",
-        !(p && q) == (!p || !q)
-    );
-    let mut p = false;
-    let mut q = false;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna {}",
-        !(p && q) == (!p || !q)
-    );
+    // Pierwsze prawo de Morgana
+    println!("Pierwsze prawo de Morgana:");
+    for &p in &[false, true] {
+        for &q in &[false, true] {
+            let l = !(p && q);
+            let r = !p || !q;
+            println!("p={} q={} L={} R={} EQ={}", p, q, l, r, l == r);
+        }
+    }
+    println!();
 
-    // Podpunkt f)
-    println!("Pierwsze prawo de Morgana.");
-    let mut p = true;
-    let mut q = true;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna {}",
-        !(p || q) == (!p && !q)
-    );
-    let mut p = false;
-    let mut q = true;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna {}",
-        !(p || q) == (!p && !q)
-    );
-    let mut p = true;
-    let mut q = false;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna {}",
-        !(p || q) == (!p && !q)
-    );
-    let mut p = false;
-    let mut q = false;
-    println!("Dla p majacego wartosc logiczna {}", p);
-    println!("Dla q majacego wartosc logiczna {}", q);
-    println!(
-        "Wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna {}",
-        !(p || q) == (!p && !q)
-    );
+    // Drugie prawo de Morgana
+    println!("Drugie prawo de Morgana:");
+    for &p in &[false, true] {
+        for &q in &[false, true] {
+            let l = !(p || q);
+            let r = !p && !q;
+            println!("p={} q={} L={} R={} EQ={}", p, q, l, r, l == r);
+        }
+    }
 }

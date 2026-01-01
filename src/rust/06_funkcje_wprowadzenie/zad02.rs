@@ -176,4 +176,36 @@ print(reszta(3, 5))
 ```
 
 */
-fn main() {}
+
+// Podpunkt a) suma dwóch liczb
+fn suma(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+// Podpunkt b) różnica b - a
+fn roznica(a: i32, b: i32) -> i32 {
+    b - a
+}
+
+// Podpunkt c) iloczyn dwóch liczb
+fn iloczyn(a: i32, b: i32) -> i32 {
+    a * b
+}
+
+// Podpunkt d) iloraz całkowity a // b
+fn iloraz(a: i32, b: i32) -> i32 {
+    a / b
+}
+
+// Podpunkt e) reszta z dzielenia a % b
+fn reszta(a: i32, b: i32) -> i32 {
+    a % b
+}
+
+fn main() {
+    println!("{}", suma(3, 5));
+    println!("{}", roznica(3, 5));
+    println!("{}", iloczyn(3, 5));
+    println!("{}", iloraz(3, 5));
+    println!("{}", reszta(3, 5));
+}

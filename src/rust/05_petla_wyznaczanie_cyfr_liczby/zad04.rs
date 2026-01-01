@@ -115,4 +115,41 @@ Jeśli brak — brak wyjścia.
 * W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`.
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let mut n: i32 = n.trim().parse().unwrap();
+    
+    // Podpunkt a) cyfry parzyste
+    let mut temp = n;
+    while temp > 0 {
+        let cyfra = temp % 10;
+        if cyfra % 2 == 0 {
+            println!("{}", cyfra);
+        }
+        temp /= 10;
+    }
+    
+    // Podpunkt b) cyfry mniejsze niż 5
+    temp = n;
+    while temp > 0 {
+        let cyfra = temp % 10;
+        if cyfra < 5 {
+            println!("{}", cyfra);
+        }
+        temp /= 10;
+    }
+    
+    // Podpunkt c) cyfry różne od zera
+    if n == 0 {
+        return;
+    }
+    
+    while n > 0 {
+        let cyfra = n % 10;
+        if cyfra != 0 {
+            println!("{}", cyfra);
+        }
+        n /= 10;
+    }
+}

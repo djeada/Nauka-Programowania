@@ -43,34 +43,38 @@ Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
 use ::std::*;
 
 fn main() {
-    println!("Podaj trzy liczby oddzielone spacjami:");
-    let mut line = String::new();
-    std::io::stdin().read_line(&mut line).unwrap();
-    let liczby: Vec<i32> = line
-        .trim()
-        .split(' ')
-        .map(|x| x.parse::<i32>().unwrap())
-        .collect();
+    let mut a = String::new();
+    std::io::stdin().read_line(&mut a).unwrap();
+    let a: i32 = a.trim().parse().unwrap();
+    
+    let mut b = String::new();
+    std::io::stdin().read_line(&mut b).unwrap();
+    let b: i32 = b.trim().parse().unwrap();
+    
+    let mut c = String::new();
+    std::io::stdin().read_line(&mut c).unwrap();
+    let c: i32 = c.trim().parse().unwrap();
 
-    let mut liczba_a = liczby[0];
-    let mut liczba_b = liczby[1];
-    let mut liczba_c = liczby[2];
+    // Sortowanie przez porownania
+    let mut min = a;
+    let mut mid = b;
+    let mut max = c;
 
-    if liczba_a >= liczba_b {
-        if liczba_b >= liczba_c {
-            println!("{} {} {}", liczba_a, liczba_b, liczba_c);
-        } else if liczba_a >= liczba_c {
-            println!("{} {} {}", liczba_a, liczba_c, liczba_b);
-        } else {
-            println!("{} {} {}", liczba_c, liczba_a, liczba_b);
-        }
-    } else {
-        if liczba_a >= liczba_c {
-            println!("{} {} {}", liczba_b, liczba_a, liczba_c);
-        } else if liczba_b >= liczba_c {
-            println!("{} {} {}", liczba_b, liczba_c, liczba_a);
-        } else {
-            println!("{} {} {}", liczba_c, liczba_b, liczba_a);
-        }
+    if min > mid {
+        let temp = min;
+        min = mid;
+        mid = temp;
     }
+    if min > max {
+        let temp = min;
+        min = max;
+        max = temp;
+    }
+    if mid > max {
+        let temp = mid;
+        mid = max;
+        max = temp;
+    }
+
+    println!("{} {} {}", min, mid, max);
 }

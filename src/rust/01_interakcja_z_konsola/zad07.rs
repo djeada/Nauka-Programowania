@@ -208,65 +208,59 @@ Oblicz objętość prostopadłościanu:
 use ::std::*;
 
 fn main() {
-    // Podpunkt a)
-    println!("Podaj dlugosc podstawy trojkata: ");
+    let pi = std::f64::consts::PI;
+    
+    // Podpunkt a) Pole trojkata
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
-    let a: i32 = a.trim().parse().expect("Blad parsowania");
-    println!("Podaj wysokosc trojkata: ");
+    let a: f64 = a.trim().parse().expect("Blad parsowania");
     let mut h = String::new();
     std::io::stdin().read_line(&mut h).expect("Blad odczytu");
-    let h: i32 = h.trim().parse().expect("Blad parsowania");
-    println!("Pole trojkata wynosi: {}", a * h / 2);
+    let h: f64 = h.trim().parse().expect("Blad parsowania");
+    println!("{:.3}", 0.5 * a * h);
 
-    // Podpunkt b)
-    println!("Podaj dlugosc a boku prostokata: ");
+    // Podpunkt b) Pole prostokata
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
-    let a: i32 = a.trim().parse().expect("Blad parsowania");
-    println!("Podaj dlugosc b boku prostokata: ");
+    let a: f64 = a.trim().parse().expect("Blad parsowania");
     let mut b = String::new();
     std::io::stdin().read_line(&mut b).expect("Blad odczytu");
-    let b: i32 = b.trim().parse().expect("Blad parsowania");
-    println!("Pole prostokata wynosi: {}", a * b);
+    let b: f64 = b.trim().parse().expect("Blad parsowania");
+    println!("{:.3}", a * b);
 
-    // Podpunkt c)
-    println!("Podaj dlugosc przekatnej rombu: ");
-    let mut a = String::new();
-    std::io::stdin().read_line(&mut a).expect("Blad odczytu");
-    let a: f32 = a.trim().parse().expect("Blad parsowania");
-    println!("Pole rombu wynosi: {}", a * a / 2.00);
+    // Podpunkt c) Pole rombu
+    let mut d1 = String::new();
+    std::io::stdin().read_line(&mut d1).expect("Blad odczytu");
+    let d1: f64 = d1.trim().parse().expect("Blad parsowania");
+    let mut d2 = String::new();
+    std::io::stdin().read_line(&mut d2).expect("Blad odczytu");
+    let d2: f64 = d2.trim().parse().expect("Blad parsowania");
+    println!("{:.3}", 0.5 * d1 * d2);
 
-    // Podpunkt d)
-    println!("Podaj promien kuli: ");
+    // Podpunkt d) Objetosc kuli
     let mut r = String::new();
     std::io::stdin().read_line(&mut r).expect("Blad odczytu");
-    let r: f32 = r.trim().parse().expect("Blad parsowania");
-    println!("Objetosc kuli wynosi: {}", (4.0 / 3.0) * 3.14 * (r * r * r));
+    let r: f64 = r.trim().parse().expect("Blad parsowania");
+    println!("{:.3}", (4.0 / 3.0) * pi * r.powi(3));
 
-    // Podpunkt e)
-    println!("Podaj dlugosc podstawy stozka: ");
-    let mut a = String::new();
-    std::io::stdin().read_line(&mut a).expect("Blad odczytu");
-    let a: f32 = a.trim().parse().expect("Blad parsowania");
-    println!("Podaj wysokosc stozka: ");
+    // Podpunkt e) Objetosc stozka
+    let mut r = String::new();
+    std::io::stdin().read_line(&mut r).expect("Blad odczytu");
+    let r: f64 = r.trim().parse().expect("Blad parsowania");
     let mut h = String::new();
     std::io::stdin().read_line(&mut h).expect("Blad odczytu");
-    let h: f32 = h.trim().parse().expect("Blad parsowania");
-    println!("Objetosc stozka wynosi: {}", 1.00 / 3.00 * 3.14 * a * a * h);
+    let h: f64 = h.trim().parse().expect("Blad parsowania");
+    println!("{:.3}", (1.0 / 3.0) * pi * r.powi(2) * h);
 
-    // Podpunkt f)
-    println!("Podaj dlugosc graniastoslupa: ");
+    // Podpunkt f) Objetosc prostopadloscianu
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
-    let a: i32 = a.trim().parse().expect("Blad parsowania");
-    println!("Podaj szerokosc graniastoslupa: ");
+    let a: f64 = a.trim().parse().expect("Blad parsowania");
     let mut b = String::new();
     std::io::stdin().read_line(&mut b).expect("Blad odczytu");
-    let b: i32 = b.trim().parse().expect("Blad parsowania");
-    println!("Podaj wysokosc graniastoslupa: ");
-    let mut h = String::new();
-    std::io::stdin().read_line(&mut h).expect("Blad odczytu");
-    let h: i32 = h.trim().parse().expect("Blad parsowania");
-    println!("Objetosc graniastoslupa wynosi: {}", a * b * h);
+    let b: f64 = b.trim().parse().expect("Blad parsowania");
+    let mut c = String::new();
+    std::io::stdin().read_line(&mut c).expect("Blad odczytu");
+    let c: f64 = c.trim().parse().expect("Blad parsowania");
+    println!("{:.3}", a * b * c);
 }

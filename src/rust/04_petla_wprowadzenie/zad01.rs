@@ -45,4 +45,14 @@ Brak.
 * Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana.
 
 */
-fn main() {}
+fn main() {
+    loop {
+        let mut n = String::new();
+        std::io::stdin().read_line(&mut n).unwrap();
+        let n: i32 = n.trim().parse().unwrap();
+        
+        if n == 7 {
+            break;
+        }
+    }
+}

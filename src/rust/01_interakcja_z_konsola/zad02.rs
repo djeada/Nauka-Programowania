@@ -47,13 +47,14 @@ Dwie linie:
 use ::std::*;
 
 fn main() {
-    println!("Podaj dwie liczby oddzielone spacjami.");
-    let mut wiersz = String::new();
-    std::io::stdin().read_line(&mut wiersz).unwrap();
-    let liczby: Vec<i32> = wiersz
-        .trim()
-        .split(' ')
-        .map(|x| x.parse::<i32>().unwrap())
-        .collect();
-    println!("{} {}", liczby[0], liczby[1]);
+    let mut a = String::new();
+    std::io::stdin().read_line(&mut a).unwrap();
+    let a: i32 = a.trim().parse().unwrap();
+    
+    let mut b = String::new();
+    std::io::stdin().read_line(&mut b).unwrap();
+    let b: i32 = b.trim().parse().unwrap();
+    
+    println!("{}", b);
+    println!("{}", a);
 }

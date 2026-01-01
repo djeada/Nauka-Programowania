@@ -40,4 +40,19 @@ W wierszu `i` i kolumnie `j` (indeksy od 0):
 ```
 
 */
-fn main() {}
+fn main() {
+    let mut n = String::new();
+    std::io::stdin().read_line(&mut n).unwrap();
+    let n: usize = n.trim().parse().unwrap();
+    
+    for i in 0..n {
+        for j in 0..n {
+            if j == i || j == n - 1 - i {
+                print!("*");
+            } else {
+                print!(" ");
+            }
+        }
+        println!();
+    }
+}

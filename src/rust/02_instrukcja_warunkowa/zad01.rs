@@ -47,7 +47,6 @@ Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 use ::std::*;
 
 fn main() {
-    println!("Podaj liczbe: ");
     let mut liczba = String::new();
     std::io::stdin()
         .read_line(&mut liczba)
@@ -55,6 +54,6 @@ fn main() {
     let liczba: i32 = liczba.trim().parse().expect("Blad parsowania");
 
     if liczba > 5 {
-        println!("Liczba {} jest wieksza od 5", liczba);
+        println!("{}", liczba);
     }
 }

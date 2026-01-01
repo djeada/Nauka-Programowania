@@ -51,4 +51,27 @@ Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
 ```
 
 */
-fn main() {}
+fn main() {
+    let mut p = String::new();
+    std::io::stdin().read_line(&mut p).unwrap();
+    let p: f64 = p.trim().parse().unwrap();
+    
+    let mut t = String::new();
+    std::io::stdin().read_line(&mut t).unwrap();
+    let t: f64 = t.trim().parse().unwrap();
+    
+    let mut l = String::new();
+    std::io::stdin().read_line(&mut l).unwrap();
+    let l: f64 = l.trim().parse().unwrap();
+    
+    let mut w = String::new();
+    std::io::stdin().read_line(&mut w).unwrap();
+    let w: f64 = w.trim().parse().unwrap();
+    
+    let nl = (l / t).ceil();
+    let nw = (w / t).ceil();
+    let n = nl * nw;
+    let cost = n * p;
+    
+    println!("{:.2}", cost);
+}

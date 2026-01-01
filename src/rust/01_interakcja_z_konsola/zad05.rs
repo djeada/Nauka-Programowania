@@ -167,97 +167,55 @@ y=\sin^3(x)\cdot\cos^2(x)+e^{x^2}+\ln(x^3+2x^2-x-3)
 use ::std::*;
 
 fn main() {
-    // Podpunkt a)
-    println!("Podaj wspolrzedna x: ");
+    // Podpunkt a) y = 3x + 10
     let mut x = String::new();
     std::io::stdin().read_line(&mut x).expect("Blad odczytu");
     let x: f64 = x.trim().parse().expect("Blad parsowania");
-    println!(
-        "Wartosc funkcji y=3x+10 w punkcie {} wynosi: {}",
-        x,
-        3 * x + 10
-    );
+    println!("{:.3}", 3.0 * x + 10.0);
 
-    // Podpunkt b)
-    println!("Podaj wspolczynnik a: ");
+    // Podpunkt b) y = ax + b
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
     let a: f64 = a.trim().parse().expect("Blad parsowania");
-    println!("Podaj wspolczynnik b: ");
     let mut b = String::new();
     std::io::stdin().read_line(&mut b).expect("Blad odczytu");
     let b: f64 = b.trim().parse().expect("Blad parsowania");
-    println!("Podaj wspolrzedna x: ");
     let mut x = String::new();
     std::io::stdin().read_line(&mut x).expect("Blad odczytu");
     let x: f64 = x.trim().parse().expect("Blad parsowania");
-    println!(
-        "Wartosc funkcji y={}x+{} w punkcie {} wynosi: {}",
-        a,
-        b,
-        x,
-        a * x + b
-    );
+    println!("{:.3}", a * x + b);
 
-    // Podpunkt c)
-    println!("Podaj wspolrzedna x: ");
+    // Podpunkt c) y = x^3 + 2
     let mut x = String::new();
     std::io::stdin().read_line(&mut x).expect("Blad odczytu");
     let x: f64 = x.trim().parse().expect("Blad parsowania");
-    println!(
-        "Wartosc funkcji y=x3+22-20 w punkcie {} wynosi: {}",
-        x,
-        x * x * x + 22 - 20
-    );
+    println!("{:.3}", x.powi(3) + 2.0);
 
-    // Podpunkt d)
-    println!("Podaj wspolczynnik a: ");
+    // Podpunkt d) y = a*x^m + b*x^n + c - a
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
     let a: f64 = a.trim().parse().expect("Blad parsowania");
-    println!("Podaj wspolczynnik b: ");
     let mut b = String::new();
     std::io::stdin().read_line(&mut b).expect("Blad odczytu");
     let b: f64 = b.trim().parse().expect("Blad parsowania");
-    println!("Podaj wspolczynnik c: ");
     let mut c = String::new();
     std::io::stdin().read_line(&mut c).expect("Blad odczytu");
     let c: f64 = c.trim().parse().expect("Blad parsowania");
-    println!("Podaj wspolczynnik d: ");
-    let mut d = String::new();
-    std::io::stdin().read_line(&mut d).expect("Blad odczytu");
-    let d: f64 = d.trim().parse().expect("Blad parsowania");
-    println!("Podaj wspolczynnik m: ");
     let mut m = String::new();
     std::io::stdin().read_line(&mut m).expect("Blad odczytu");
-    let m: f64 = m.trim().parse().expect("Blad parsowania");
-    println!("Podaj wspolczynnik n: ");
+    let m: i32 = m.trim().parse().expect("Blad parsowania");
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).expect("Blad odczytu");
-    let n: f64 = n.trim().parse().expect("Blad parsowania");
-    println!("Podaj wspolrzedna x: ");
+    let n: i32 = n.trim().parse().expect("Blad parsowania");
     let mut x = String::new();
     std::io::stdin().read_line(&mut x).expect("Blad odczytu");
     let x: f64 = x.trim().parse().expect("Blad parsowania");
-    println!(
-        "Wartosc funkcji y={}x{}+{}x{}+{} w punkcie {} wynosi: {}",
-        a,
-        m,
-        b,
-        n,
-        c,
-        x,
-        a * x * m + b * x * n + c
-    );
+    println!("{:.3}", a * x.powi(m) + b * x.powi(n) + c - a);
 
-    // Podpunkt e)
-    println!("Podaj wspolrzedna x: ");
+    // Podpunkt e) y = sin^3(x)*cos^2(x) + e^(x^2) + ln(x^3+2x^2-x-3)
     let mut x = String::new();
     std::io::stdin().read_line(&mut x).expect("Blad odczytu");
     let x: f64 = x.trim().parse().expect("Blad parsowania");
-    println!(
-        "Wartosc funkcji y=sin3x*cos2x+e^2+log(x3+2x2-x-3) w punkcie {} wynosi: {}",
-        x,
-        (x * x * x).sin() * (x * x).cos() + x.exp() + x.ln()
-    );
+    let y = x.sin().powi(3) * x.cos().powi(2) + (x * x).exp() + (x.powi(3) + 2.0 * x.powi(2) - x - 3.0).ln();
+    println!("{:.3}", y);
 }

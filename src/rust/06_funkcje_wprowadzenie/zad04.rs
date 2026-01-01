@@ -132,4 +132,30 @@ print(max_z_trzech(3, 2, 1))
 ```
 
 */
-fn main() {}
+
+// Podpunkt a) minimum z dwóch liczb
+fn min_z_dwoch(a: i32, b: i32) -> i32 {
+    if a < b { a } else { b }
+}
+
+// Podpunkt b) maksimum z dwóch liczb
+fn max_z_dwoch(a: i32, b: i32) -> i32 {
+    if a > b { a } else { b }
+}
+
+// Podpunkt c) minimum z trzech liczb
+fn min_z_trzech(a: i32, b: i32, c: i32) -> i32 {
+    min_z_dwoch(min_z_dwoch(a, b), c)
+}
+
+// Podpunkt d) maksimum z trzech liczb
+fn max_z_trzech(a: i32, b: i32, c: i32) -> i32 {
+    max_z_dwoch(max_z_dwoch(a, b), c)
+}
+
+fn main() {
+    println!("{}", min_z_dwoch(3, 1));
+    println!("{}", max_z_dwoch(3, 1));
+    println!("{}", min_z_trzech(3, 2, 1));
+    println!("{}", max_z_trzech(3, 2, 1));
+}

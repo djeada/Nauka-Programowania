@@ -38,4 +38,19 @@ print(potega(3, 5))
 * Dla `b = 0` wynik ma wynosić `1`.
 
 */
-fn main() {}
+
+fn potega(a: i32, b: i32) -> i32 {
+    if b == 0 {
+        return 1;
+    }
+    
+    let mut wynik = 1;
+    for _ in 0..b {
+        wynik *= a;
+    }
+    wynik
+}
+
+fn main() {
+    println!("{}", potega(3, 5));
+}

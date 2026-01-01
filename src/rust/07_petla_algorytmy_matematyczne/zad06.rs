@@ -38,4 +38,20 @@ print(nww(7, 9))
 * Możesz użyć zależności: `NWW(a, b) = (a * b) // NWD(a, b)`.
 
 */
-fn main() {}
+
+fn nwd(mut a: i32, mut b: i32) -> i32 {
+    while b != 0 {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    a
+}
+
+fn nww(a: i32, b: i32) -> i32 {
+    (a * b) / nwd(a, b)
+}
+
+fn main() {
+    println!("{}", nww(7, 9));
+}

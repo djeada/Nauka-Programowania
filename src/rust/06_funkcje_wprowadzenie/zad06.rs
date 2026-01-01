@@ -35,4 +35,16 @@ print(suma_cyfr(13231))
 * Dla `n = 0` suma cyfr to `0`.
 
 */
-fn main() {}
+
+fn suma_cyfr(mut n: i32) -> i32 {
+    let mut suma = 0;
+    while n > 0 {
+        suma += n % 10;
+        n /= 10;
+    }
+    suma
+}
+
+fn main() {
+    println!("{}", suma_cyfr(13231));
+}
