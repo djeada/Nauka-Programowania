@@ -39,5 +39,15 @@ Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
 \* Możesz użyć wbudowanego sortowania, ale da się też rozwiązać czystymi warunkami.
 
 -}
+import Data.List (sort)
+
 main :: IO ()
-main = pure ()
+main = do
+  aInput <- getLine
+  bInput <- getLine
+  cInput <- getLine
+  let a = read aInput :: Int
+  let b = read bInput :: Int
+  let c = read cInput :: Int
+  let sorted = sort [a, b, c]
+  putStrLn $ unwords (map show sorted)

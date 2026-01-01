@@ -50,4 +50,13 @@ Trójkąt można zbudować z podanych boków.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  aInput <- getLine
+  bInput <- getLine
+  cInput <- getLine
+  let a = read aInput :: Int
+  let b = read bInput :: Int
+  let c = read cInput :: Int
+  if (a + b > c) && (a + c > b) && (b + c > a)
+    then putStrLn "Trójkąt można zbudować z podanych boków."
+    else putStrLn "Trójkąta nie można zbudować z podanych boków."

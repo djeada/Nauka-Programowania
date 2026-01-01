@@ -53,4 +53,11 @@ Liczby są identyczne.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  aInput <- getLine
+  bInput <- getLine
+  let a = read aInput :: Int
+  let b = read bInput :: Int
+  if a == b
+    then putStrLn "Liczby są identyczne."
+    else putStrLn "Liczby są różne."

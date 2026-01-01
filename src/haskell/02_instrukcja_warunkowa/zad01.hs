@@ -44,4 +44,9 @@ Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  input <- getLine
+  let n = read input :: Int
+  if n > 5
+    then print n
+    else return ()
