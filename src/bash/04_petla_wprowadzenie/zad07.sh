@@ -36,18 +36,20 @@
 # * Dla `n = 0` wypisz `1.00`.
 
 main() {
+    read n
 
-    echo "Podaj liczbe:"
-    read x
-    pi=$(echo "scale=2; 4*a(1)" | bc -l)
-    potega=$pi
-
-    for ((i = 1; i <= $x; i++)); do
-        potega=$(echo "scale=2; $potega * $pi" | bc)
-    done
-
-    echo "liczbe Pi podniesiona do potegi rownej pobranej liczbie, wynosi $potega"
-
+    if [[ $n -eq 0 ]]; then
+        echo "1.00"
+    else
+        # Oblicz pi
+        pi=$(echo "scale=10; 4*a(1)" | bc -l)
+        
+        # Oblicz pi^n
+        wynik=$(echo "scale=10; $pi^$n" | bc -l)
+        
+        # Wypisz z dokładnością do 2 miejsc po przecinku
+        printf "%.2f\n" "$wynik"
+    fi
 }
 
 main "$@"

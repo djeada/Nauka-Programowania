@@ -50,40 +50,28 @@
 # * Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania.
 
 main() {
-
-    echo "Podaj liczbe:"
     read n
 
-    suma=0
-
-    for ((i = 1; i <= $n; i++)); do
-        a_n=$(echo "scale=2; $i/$(($i + 1))" | bc)
-        suma=$(echo "scale=2; $suma + $a_n" | bc)
-
+    # a) suma (k^2 + k + 1) dla k=1..n
+    sumaA=0
+    for ((k = 1; k <= $n; k++)); do
+        sumaA=$(($sumaA + $k * $k + $k + 1))
     done
+    echo "$sumaA"
 
-    echo "suma n pierwszych wyrazow ciagu danego wzorem n/(n+1) dla n=$n: $suma"
-
-    suma=0
-
-    for ((i = 1; i <= $n; i++)); do
-        a_n=$(echo "scale=2; $(($n ** 2 + 5))/$n" | bc)
-        suma=$(echo "scale=2; $suma + $a_n" | bc)
-
+    # b) suma (k^2 + 5k) dla k=1..n
+    sumaB=0
+    for ((k = 1; k <= $n; k++)); do
+        sumaB=$(($sumaB + $k * $k + 5 * $k))
     done
+    echo "$sumaB"
 
-    echo "suma n pierwszych wyrazow ciagu danego wzorem (n^2 + 5)/n dla n=$n: $suma"
-
-    suma=0
-
-    for ((i = 1; i <= $n; i++)); do
-        a_n=$(($n + 2 ** $n))
-        suma=$(($suma + $a_n))
-
+    # c) suma (k + 2k) = suma(3k) dla k=1..n
+    sumaC=0
+    for ((k = 1; k <= $n; k++)); do
+        sumaC=$(($sumaC + $k + 2 * $k))
     done
-
-    echo "suma n pierwszych wyrazow ciagu danego wzorem n + 2^n dla n=$n: $suma"
-
+    echo "$sumaC"
 }
 
 main "$@"
