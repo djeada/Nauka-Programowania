@@ -37,15 +37,12 @@
 # * Jeśli `n = 1`, nie wypisuj nic.
 
 main() {
-
-    echo "Podaj liczbe:"
     read a
 
-    while [ $a -gt 0 ]; do
+    while [ $a -gt 1 ]; do
         a=$(($a - 1))
         echo $a
     done
-
 }
 
 main "$@"

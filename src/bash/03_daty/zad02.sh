@@ -56,13 +56,10 @@
 # ```
 
 main() {
-
-    echo "Podaj trzy liczby reprezentujace dzien, miesiac i rok urodzenia osoby:"
     read dzien
     read miesiac
     read rok
 
-    echo "Podaj trzy liczby reprezentujace dzisiejsza date:"
     read dzienAktualny
     read miesiacAktualny
     read rokAktualny
@@ -71,25 +68,22 @@ main() {
     roznicaMiesiace=$(($miesiacAktualny - $miesiac))
     roznicaDni=$(($dzienAktualny - $dzien))
 
-    echo $roznicaLata
-
     if [[ $roznicaLata -gt 18 ]]; then
-        echo "osoba jest pelnoletnia"
-
+        echo "Osoba jest pełnoletnia."
     elif [[ $roznicaLata -eq 18 ]]; then
         if [[ $roznicaMiesiace -gt 0 ]]; then
-            echo "osoba jest pelnoletnia"
+            echo "Osoba jest pełnoletnia."
         elif [[ $roznicaMiesiace -eq 0 ]]; then
             if [[ $roznicaDni -ge 0 ]]; then
-                echo "osoba jest pelnoletnia"
+                echo "Osoba jest pełnoletnia."
             else
-                echo "osoba nie jest pelnoletnia"
+                echo "Osoba nie jest pełnoletnia."
             fi
         else
-            echo "osoba nie jest pelnoletnia"
+            echo "Osoba nie jest pełnoletnia."
         fi
     else
-        echo "osoba nie jest pelnoletnia"
+        echo "Osoba nie jest pełnoletnia."
     fi
 }
 

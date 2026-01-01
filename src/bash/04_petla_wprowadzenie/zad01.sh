@@ -44,14 +44,11 @@
 # * Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana.
 
 main() {
-
     a=0
 
     while [ $a -ne 7 ]; do
-        echo "Podaj liczbe:"
         read a
     done
-
 }
 
 main "$@"

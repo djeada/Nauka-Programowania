@@ -42,22 +42,20 @@
 # ```
 
 main() {
-
-    echo "Podaj rok:"
     read rok
 
     if [[ $(($rok % 4)) -eq 0 ]]; then
         if [[ $(($rok % 100)) -eq 0 ]]; then
             if [[ $(($rok % 400)) -eq 0 ]]; then
-                echo "rok jest przestepny"
+                echo "Rok jest przestępny."
             else
-                echo "rok nie jest przestepny"
+                echo "Rok nie jest przestępny."
             fi
         else
-            echo "rok jest przestepny"
+            echo "Rok jest przestępny."
         fi
     else
-        echo "rok nie jest przestepny"
+        echo "Rok nie jest przestępny."
     fi
 }
 

@@ -40,11 +40,15 @@
 # * Stosuj standardowe zaokrąglanie przy formatowaniu.
 
 main() {
+    read n
 
-    echo "Podaj liczbe:"
-    read a
-
-    echo "scale=$a; 4*a(1)" | bc -l
+    # Oblicz pi z odpowiednią dokładnością
+    pi=$(echo "scale=$n; 4*a(1)" | bc -l)
+    
+    # Wypisz pi n razy
+    for ((i=0; i<n; i++)); do
+        printf "%.${n}f\n" "$pi"
+    done
 }
 
 main "$@"

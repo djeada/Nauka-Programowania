@@ -38,17 +38,14 @@
 # * Dla `n = 1` wynik to `0`.
 
 main() {
-
-    echo "Podaj liczbe:"
     read a
     suma=0
 
     for ((i = 0; i < $a; i++)); do
-        echo $i
         suma=$(($suma + $i))
     done
 
-    echo "Suma liczb naturalnych mniejszych od pobranej liczby wynosi $suma"
+    echo "$suma"
 }
 
 main "$@"

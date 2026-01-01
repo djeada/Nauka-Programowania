@@ -52,31 +52,34 @@
 # * Nie dodawaj pustej linii między podpunktami.
 
 main() {
-
-    echo "Podaj dwie liczby:"
     read a
     read b
 
+    # Określ lo i hi
     if [[ $a -gt $b ]]; then
-        echo "swap"
-        temp=$a
-        a=$b
-        b=$temp
+        lo=$b
+        hi=$a
+    else
+        lo=$a
+        hi=$b
     fi
 
-    echo "Liczby naturalne wieksze od mniejszej pobranej liczby i mniejsze od wiekszej pobranej liczby: "
-
-    for ((i = $(($a + 1)); i < $b; i++)); do
+    # a) Wypisz liczby z przedziału (lo, hi)
+    for ((i = $(($lo + 1)); i < $hi; i++)); do
         echo $i
     done
 
-    echo "Liczby naturalne podzielne przez 3 wieksze od mniejszej pobranej liczby i mniejsze od wiekszej pobranej liczby: "
-
-    for ((i = $(($a + 1)); i < $b; i++)); do
+    # b) Wypisz liczby z przedziału (lo, hi) podzielne przez 3
+    suma=0
+    for ((i = $(($lo + 1)); i < $hi; i++)); do
         if [[ $(($i % 3)) -eq 0 ]]; then
             echo $i
+            suma=$(($suma + $i))
         fi
     done
+    
+    # Wypisz sumę liczb podzielnych przez 3
+    echo "$suma"
 }
 
 main "$@"
