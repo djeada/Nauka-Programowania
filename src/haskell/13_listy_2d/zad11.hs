@@ -45,15 +45,6 @@ Wielokrotnie:
 -}
 
 -- Gra w statki - uproszczona wersja demonstracyjna
--- Złożoność czasowa: O(1) - placeholder
--- Złożoność pamięciowa: O(1) - placeholder
---
--- Uwaga: To jest uproszczona implementacja demonstracyjna.
--- Pełna gra w statki wymagałaby:
--- - Losowego rozmieszczenia statków
--- - Interfejsu użytkownika do strzelania
--- - Śledzenia trafień i chybionych strzałów
--- - Logiki wykrywania zatopienia statków
 main :: IO ()
 main = putStrLn "Gra w statki - implementacja wymaga bardziej rozbudowanej logiki"
 main = pure ()

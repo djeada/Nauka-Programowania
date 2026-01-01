@@ -40,21 +40,12 @@ Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruch
 
 import Data.List (intercalate, transpose)
 
--- Wczytuje macierz kwadratową n×n
--- Złożoność czasowa: O(n^2)
--- Złożoność pamięciowa: O(n^2)
 readMatrix :: Int -> IO [[Int]]
 readMatrix n = sequence [map read . words <$> getLine | _ <- [1..n]]
 
--- Obraca macierz o 90° w prawo (transponuj i odwróć wiersze)
--- Złożoność czasowa: O(n^2)
--- Złożoność pamięciowa: O(n^2)
 rotate90 :: [[Int]] -> [[Int]]
 rotate90 m = map reverse (transpose m)
 
--- Obrót macierzy o 90° w prawo
--- Złożoność czasowa: O(n^2)
--- Złożoność pamięciowa: O(n^2)
 main :: IO ()
 main = do
     n <- readLn :: IO Int
