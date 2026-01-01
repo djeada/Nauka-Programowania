@@ -67,5 +67,6 @@ fn main() {
     println!("{}", a * b);
     println!("{}", a / b);
     println!("{}", a % b);
+    // According to docstring, b > 0 is guaranteed, so cast is safe
     println!("{}", a.pow(b as u32));
 }

@@ -200,6 +200,7 @@ use ::std::*;
 
 fn main() {
     const KELVIN_OFFSET: f64 = 273.15;
+    const PI: f64 = std::f64::consts::PI;
     
     // ZAD-06A: kg -> g
     let mut kg = String::new();
@@ -229,8 +230,7 @@ fn main() {
     let mut deg = String::new();
     std::io::stdin().read_line(&mut deg).expect("Blad odczytu");
     let deg: f64 = deg.trim().parse().expect("Blad parsowania");
-    let pi = std::f64::consts::PI;
-    println!("{:.3}", deg * pi / 180.0);
+    println!("{:.3}", deg * PI / 180.0);
 
     // ZAD-06F: Fahrenheit -> Celsius and Kelvin
     let mut f = String::new();
