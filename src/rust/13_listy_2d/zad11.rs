@@ -46,6 +46,9 @@ Wielokrotnie:
 
 use std::io;
 
+// Maksymalna liczba pudeł przed przegraną
+const MAX_PUDEL: usize = 10;
+
 // Gra w statki - uproszczona wersja konsolowa bez losowania
 // Złożoność czasowa: O(1) dla każdego ruchu
 // Złożoność pamięciowa: O(1) dla planszy 10x10
@@ -149,7 +152,7 @@ impl Gra {
     }
     
     fn czy_przegrana(&self) -> bool {
-        self.pudla >= 10
+        self.pudla >= MAX_PUDEL
     }
 }
 

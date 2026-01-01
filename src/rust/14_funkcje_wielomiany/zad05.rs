@@ -36,6 +36,10 @@ fn pochodna_wielomianu(wspolczynniki: &[i32], k: usize) -> Vec<i32> {
         return wspolczynniki.to_vec();
     }
     
+    if wspolczynniki.is_empty() {
+        return vec![0];
+    }
+    
     if wspolczynniki.len() <= k {
         return vec![0];
     }

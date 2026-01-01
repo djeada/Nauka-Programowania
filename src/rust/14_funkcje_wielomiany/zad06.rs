@@ -39,6 +39,9 @@ Dla `[1, 2, 1]` funkcja zwraca:
 // Funkcja znajdująca rzeczywiste miejsca zerowe równania kwadratowego
 // Złożoność czasowa: O(1)
 // Złożoność pamięciowa: O(1)
+// 
+// Uwaga: Dla podwójnego pierwiastka (delta = 0) zwraca dwa identyczne wartości,
+// co odpowiada matematycznej konwencji pierwiastka o krotności 2
 fn miejsca_zerowe_kwadratowe(coef: &[f64; 3]) -> Vec<f64> {
     let a = coef[0];
     let b = coef[1];

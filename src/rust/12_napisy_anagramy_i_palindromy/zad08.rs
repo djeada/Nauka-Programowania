@@ -110,7 +110,8 @@ fn znajdz_wyjatkowe_palindromy(slowo: &str) -> Vec<String> {
     }
     
     let mut wynik: Vec<String> = znalezione.into_iter().collect();
-    wynik.sort_by_key(|s| s.len());
+    // Sortuj według długości, a następnie leksykograficznie dla determinizmu
+    wynik.sort_by(|a, b| a.len().cmp(&b.len()).then_with(|| a.cmp(b)));
     wynik
 }
 
