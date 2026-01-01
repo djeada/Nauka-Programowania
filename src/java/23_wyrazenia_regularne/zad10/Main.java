@@ -48,20 +48,20 @@ public class Main {
 
   public static void test1() {
     String napis =
-        "Every mile was tilted at seven or. Wished her entire esteem mr oh by. "
-        "He prevents requests by if in pleased. Picture too and concerned was "
-        "comforting. Ten difficult resembled eagerness nor. Same park bore on "
-        "be. Warmth his law design says he is a person. Pronunciation suspected "
+        "Every mile was tilted at seven or. Wished her entire esteem mr oh by. " +
+        "He prevents requests by if in pleased. Picture too and concerned was " +
+        "comforting. Ten difficult resembled eagerness nor. Same park bore on " +
+        "be. Warmth his law design says he is a person. Pronunciation suspected " +
         "in belonging conveying ye repulsive.";
 
     List<String> listaA = Arrays.asList("or", "be", "he");
     List<String> listaB = Arrays.asList("and", "off", "she");
 
     String oczekiwane =
-        "Every mile was tilted at seven and. Wished her entire esteem mr oh by. "
-        "He prevents requests by if in pleased. Picture too and concerned was "
-        "comforting. Ten difficult resembled eagerness nor. Same park bore on "
-        "off. Warmth his law design says she is a person. Pronunciation "
+        "Every mile was tilted at seven and. Wished her entire esteem mr oh by. " +
+        "He prevents requests by if in pleased. Picture too and concerned was " +
+        "comforting. Ten difficult resembled eagerness nor. Same park bore on " +
+        "off. Warmth his law design says she is a person. Pronunciation " +
         "suspected in belonging conveying ye repulsive.";
 
     podmien(napis, listaA, listaB);

@@ -39,7 +39,7 @@ Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
 import java.util.*;
 
 public class Main {
-  public static cyfryV1(String napis) {
+  public static List<String> cyfryV1(String napis) {
     String[] tablica = napis.split("\\p{Punct}+");
     List<String> lista = new ArrayList<String>();
     for (String slowo : tablica) {

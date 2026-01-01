@@ -71,7 +71,7 @@ public class Main {
 
   public static void test3() {
     List<String> napisy = Arrays.asList("student", "studio", "stress", "lol");
-    String wynik;
+    String wynik = "";
 
     assert (najdluzszyPrzedrostek(napisy).equals(wynik));
   }

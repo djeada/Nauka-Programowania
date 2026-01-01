@@ -73,9 +73,9 @@ public class Main {
   }
 
   public static void test3() {
-    String napis1;
-    String napis2;
-    String wynik;
+    String napis1 = "";
+    String napis2 = "";
+    String wynik = "";
 
     assert (najdluzszyPodnapis(napis1, napis2).equals(wynik));
   }

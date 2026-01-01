@@ -83,13 +83,18 @@ public class Main {
     List<Integer> lista = Arrays.asList(3, 9, 10, 20);
     int n = 5;
 
-    for (int funkcja : Arrays.asList(podzielSznurekV1, podzielSznurekV2)) {
-      try {
-        funkcja(lista, n);
-        assert (false);
-      } catch (Exception e) {
-        assert (true);
-      }
+    try {
+      podzielSznurekV1(lista, n);
+      assert (false);
+    } catch (Exception e) {
+      assert (true);
+    }
+    
+    try {
+      podzielSznurekV2(lista, n);
+      assert (false);
+    } catch (Exception e) {
+      assert (true);
     }
   }
 

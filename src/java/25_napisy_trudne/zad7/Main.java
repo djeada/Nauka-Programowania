@@ -64,7 +64,7 @@ public class Main {
 
   public static void test2() {
     String slowo = "abcdef";
-    String wynik;
+    String wynik = "";
 
     assert (najdluzszePowtorzenie(slowo).equals(wynik));
   }

@@ -47,6 +47,7 @@ Milujmy wiernie nie jest w nich przysada.
 
 */
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class Main {
   public static ArrayList<String> znajdzWierszeV1(String napis, String podnapis) {

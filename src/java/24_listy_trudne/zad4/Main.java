@@ -33,6 +33,7 @@ Otrzymujesz dwie listy binarne `A` i `B` (zera i jedynki) o tej samej długości
 ```
 
 */
+import java.util.*;
 
 public class Main {
 
@@ -62,7 +63,7 @@ public class Main {
   }
 
   // Testy Poprawnosc
-  void test1() {
+  public static void test1() {
     ArrayList<Integer> listaA = new ArrayList<Integer>();
     listaA.add(0);
     listaA.add(0);
@@ -84,7 +85,7 @@ public class Main {
     assert (znajdzPodciagV1(listaA, listaB) == wynik);
   }
 
-  void test2() {
+  public static void test2() {
     ArrayList<Integer> listaA = new ArrayList<Integer>();
     listaA.add(0);
     listaA.add(0);

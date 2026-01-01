@@ -52,7 +52,7 @@ public class Main {
     String napis1 = "Dinozaur jest zly";
     String napis2 = "Dino";
     boolean oczekiwane = true;
-    String wynik = czyPoczatek(napis1, napis2);
+    boolean wynik = czyPoczatek(napis1, napis2);
 
     assert (oczekiwane == wynik);
   }
@@ -61,7 +61,7 @@ public class Main {
     String napis1 = "Dinozaur jest zly";
     String napis2 = "Pies";
     boolean oczekiwane = false;
-    String wynik = czyPoczatek(napis1, napis2);
+    boolean wynik = czyPoczatek(napis1, napis2);
 
     assert (oczekiwane == wynik);
   }

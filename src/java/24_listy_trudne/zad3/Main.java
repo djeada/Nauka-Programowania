@@ -90,10 +90,12 @@ public class Main {
           Math.min(
               wynik,
               Math.min(
-                  lista.get(i + 1) * minLewo.get(i + 1) * minPrawo.get(i + 1),
-                  lista.get(i + 1) * minLewo.get(i + 1) * maksPrawo.get(i + 1),
-                  lista.get(i + 1) * maksLewo.get(i + 1) * minPrawo.get(i + 1),
-                  lista.get(i + 1) * maksLewo.get(i + 1) * maksPrawo.get(i + 1)));
+                  Math.min(
+                      lista.get(i + 1) * minLewo.get(i + 1) * minPrawo.get(i + 1),
+                      lista.get(i + 1) * minLewo.get(i + 1) * maksPrawo.get(i + 1)),
+                  Math.min(
+                      lista.get(i + 1) * maksLewo.get(i + 1) * minPrawo.get(i + 1),
+                      lista.get(i + 1) * maksLewo.get(i + 1) * maksPrawo.get(i + 1))));
 
     return wynik;
   }

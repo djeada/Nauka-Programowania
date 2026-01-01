@@ -76,8 +76,8 @@ public class Main {
   }
 
   public static void test5() {
-    String napis;
-    String wynik;
+    String napis = "";
+    String wynik = "";
 
     assert (usunPowtorzeniaV1(napis).equals(wynik));
   }

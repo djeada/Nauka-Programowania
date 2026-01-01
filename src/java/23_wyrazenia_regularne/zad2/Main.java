@@ -90,7 +90,7 @@ public class Main {
             "22tajnE",
             "Ab6*");
 
-    for (String haslo : niepoprawneHasla) assert (!poprawneHasla(haslo));
+    for (String haslo : niepoprawneHasla) assert (!poprawneHaslo(haslo));
   }
 
   public static void main(String[] args) {

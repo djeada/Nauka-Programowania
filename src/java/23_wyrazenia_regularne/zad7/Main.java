@@ -39,7 +39,7 @@ import java.util.*;
 public class Main {
   public static ArrayList<String> podzielNapisV1(String napis) {
     String[] tablica = napis.split("\\p{Punct}+");
-    List<String> lista = new ArrayList<String>();
+    ArrayList<String> lista = new ArrayList<String>();
     for (String slowo : tablica) {
       if (!slowo.isEmpty()) {
         lista.add(slowo);
