@@ -199,84 +199,43 @@ Dwie linie:
 use ::std::*;
 
 fn main() {
-    // Podpunkt a)
-    println!("Podaj wielkosc w kilogramach: ");
-    let mut wielkosc_w_kg = String::new();
-    std::io::stdin()
-        .read_line(&mut wielkosc_w_kg)
-        .expect("Blad odczytu");
-    let wielkosc_w_kg: f32 = wielkosc_w_kg.trim().parse().expect("Blad parsowania");
-    println!("{} kg to {} gram", wielkosc_w_kg, wielkosc_w_kg * 1000.0);
+    // ZAD-06A: kg -> g
+    let mut kg = String::new();
+    std::io::stdin().read_line(&mut kg).expect("Blad odczytu");
+    let kg: f32 = kg.trim().parse().expect("Blad parsowania");
+    println!("{}", (kg * 1000.0) as i32);
 
-    // Podpunkt b)
-    println!("Podaj wielkosc w calach: ");
-    let mut wielkosc_w_calach = String::new();
-    std::io::stdin()
-        .read_line(&mut wielkosc_w_calach)
-        .expect("Blad odczytu");
-    let wielkosc_w_calach: f32 = wielkosc_w_calach.trim().parse().expect("Blad parsowania");
-    println!(
-        "{} cal to {} cm",
-        wielkosc_w_calach,
-        wielkosc_w_calach * 2.54
-    );
+    // ZAD-06B: inches -> cm
+    let mut inch = String::new();
+    std::io::stdin().read_line(&mut inch).expect("Blad odczytu");
+    let inch: f32 = inch.trim().parse().expect("Blad parsowania");
+    println!("{:.2}", inch * 2.54);
 
-    // Podpunkt c)
-    println!("Podaj liczbe sekund: ");
-    let mut liczba_sekund = String::new();
-    std::io::stdin()
-        .read_line(&mut liczba_sekund)
-        .expect("Blad odczytu");
-    let liczba_sekund: f32 = liczba_sekund.trim().parse().expect("Blad parsowania");
-    println!(
-        "{} sekund to {} godzin",
-        liczba_sekund,
-        liczba_sekund / 3600.0
-    );
+    // ZAD-06C: seconds -> full hours
+    let mut s = String::new();
+    std::io::stdin().read_line(&mut s).expect("Blad odczytu");
+    let s: i32 = s.trim().parse().expect("Blad parsowania");
+    println!("{}", s / 3600);
 
-    // Podpunkt d)
-    println!("Podaj liczbe w euro: ");
-    let mut liczba_w_euro = String::new();
-    std::io::stdin()
-        .read_line(&mut liczba_w_euro)
-        .expect("Blad odczytu");
-    let liczba_w_euro: f32 = liczba_w_euro.trim().parse().expect("Blad parsowania");
-    println!("{} euro to {} zlotych", liczba_w_euro, liczba_w_euro * 4.2);
+    // ZAD-06D: EUR -> PLN
+    let mut eur = String::new();
+    std::io::stdin().read_line(&mut eur).expect("Blad odczytu");
+    let eur: f32 = eur.trim().parse().expect("Blad parsowania");
+    println!("{:.2}", eur * 4.4);
 
-    // Podpunkt e)
-    println!("Podaj miare kata w stopniach: ");
-    let mut miare_kata_w_stopniach = String::new();
-    std::io::stdin()
-        .read_line(&mut miare_kata_w_stopniach)
-        .expect("Blad odczytu");
-    let miare_kata_w_stopniach: f32 = miare_kata_w_stopniach
-        .trim()
-        .parse()
-        .expect("Blad parsowania");
-    println!(
-        "{} stopni to {} radianow",
-        miare_kata_w_stopniach,
-        miare_kata_w_stopniach * 0.0174533
-    );
+    // ZAD-06E: degrees -> radians
+    let mut deg = String::new();
+    std::io::stdin().read_line(&mut deg).expect("Blad odczytu");
+    let deg: f32 = deg.trim().parse().expect("Blad parsowania");
+    let pi = std::f32::consts::PI;
+    println!("{:.3}", deg * pi / 180.0);
 
-    // Podpunkt f)
-    println!("Podaj temperature w stopniach Fahrenheita: ");
-    let mut temperature_w_stopniach_Fahrenheita = String::new();
-    std::io::stdin()
-        .read_line(&mut temperature_w_stopniach_Fahrenheita)
-        .expect("Blad odczytu");
-    let temperature_w_stopniach_Fahrenheita: f32 = temperature_w_stopniach_Fahrenheita
-        .trim()
-        .parse()
-        .expect("Blad parsowania");
-    println!(
-        "{} stopni Fahrenheita to {} stopni Celsjusza",
-        temperature_w_stopniach_Fahrenheita,
-        (temperature_w_stopniach_Fahrenheita - 32.0) * 5.0 / 9.0
-    );
-    println!(
-        "{} stopni Fahrenheita to {} stopni Kelwina",
-        temperature_w_stopniach_Fahrenheita,
-        (temperature_w_stopniach_Fahrenheita - 32.0) * 4.0 / 9.0
-    );
+    // ZAD-06F: Fahrenheit -> Celsius and Kelvin
+    let mut f = String::new();
+    std::io::stdin().read_line(&mut f).expect("Blad odczytu");
+    let f: f32 = f.trim().parse().expect("Blad parsowania");
+    let c = (5.0 / 9.0) * (f - 32.0);
+    let k = c + 273.15;
+    println!("{:.3}", c);
+    println!("{:.3}", k);
 }
