@@ -44,8 +44,11 @@ public class Main {
   private static class Zwierz {
 
     public void odglos() {
-      System.out.print("Jestem zwierzem");
-      System.out.print("\n");
+      System.out.println("Zwierz wydaje odgłos: ...");
+    }
+    
+    public String getNazwaKlasy() {
+      return "Zwierz";
     }
   }
 
@@ -53,8 +56,12 @@ public class Main {
 
     @Override
     public void odglos() {
-      System.out.print("Miau");
-      System.out.print("\n");
+      System.out.println("Kot wydaje odgłos: Miau!");
+    }
+    
+    @Override
+    public String getNazwaKlasy() {
+      return "Kot";
     }
   }
 
@@ -62,8 +69,12 @@ public class Main {
 
     @Override
     public void odglos() {
-      System.out.print("Hau");
-      System.out.print("\n");
+      System.out.println("Pies wydaje odgłos: Hau!");
+    }
+    
+    @Override
+    public String getNazwaKlasy() {
+      return "Pies";
     }
   }
 

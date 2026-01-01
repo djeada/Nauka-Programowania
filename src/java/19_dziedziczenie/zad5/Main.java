@@ -62,59 +62,32 @@ public class Main {
 
     public void lec();
 
-    public void laduj();
+    public void wyladuj();
   }
 
   private static class Zwierz implements ZwierzInterfejs {
 
-    private String nazwa = "";
-    private String pokarm = "";
-    private String dzwiek = "";
-
-    public Zwierz(String nazwa, String pokarm, String dzwiek) {
-      this.nazwa = nazwa;
-      this.pokarm = pokarm;
-      this.dzwiek = dzwiek;
+    public void jedz() {
+      System.out.println("Ptak je.");
     }
 
-    public final void jedz() {
-      System.out.print(nazwa);
-      System.out.print(" spozywa ");
-      System.out.print(pokarm);
-      System.out.print(".");
-      System.out.print("\n");
+    public void spij() {
+      System.out.println("Ptak śpi.");
     }
 
-    public final void spij() {
-      System.out.print(nazwa);
-      System.out.print(" idzie spac.");
-      System.out.print("\n");
-    }
-
-    public final void wydajDzwiek() {
-      System.out.print(dzwiek);
-      System.out.print("\n");
+    public void wydajDzwiek() {
+      System.out.println("Ptak wydaje dźwięk.");
     }
   }
 
   private static class ObiektLatajacy implements ObiektLatajacyInterfejs {
 
-    private String nazwa = "";
-
-    public ObiektLatajacy(String nazwa) {
-      this.nazwa = nazwa;
+    public void lec() {
+      System.out.println("Ptak leci.");
     }
 
-    public final void lec() {
-      System.out.print(nazwa);
-      System.out.print(" wznosi sie w powietrze.");
-      System.out.print("\n");
-    }
-
-    public final void laduj() {
-      System.out.print(nazwa);
-      System.out.print(" laduje.");
-      System.out.print("\n");
+    public void wyladuj() {
+      System.out.println("Ptak ląduje.");
     }
   }
 
@@ -122,40 +95,40 @@ public class Main {
     Zwierz zwierz;
     ObiektLatajacy obiektLatajacy;
 
-    public Ptak(String nazwa) {
-      zwierz = new Zwierz(nazwa, "robaki", "Aww!Aww!");
-      obiektLatajacy = new ObiektLatajacy(nazwa);
+    public Ptak() {
+      zwierz = new Zwierz();
+      obiektLatajacy = new ObiektLatajacy();
     }
 
-    public final void jedz() {
+    public void jedz() {
       zwierz.jedz();
     }
 
-    public final void spij() {
+    public void spij() {
       zwierz.spij();
     }
 
-    public final void wydajDzwiek() {
+    public void wydajDzwiek() {
       zwierz.wydajDzwiek();
     }
 
-    public final void lec() {
+    public void lec() {
       obiektLatajacy.lec();
     }
 
-    public final void laduj() {
-      obiektLatajacy.laduj();
+    public void wyladuj() {
+      obiektLatajacy.wyladuj();
     }
   }
 
   public static void main(String[] args) {
 
-    Ptak koliber = new Ptak("Koliberek");
-    koliber.jedz();
-    koliber.lec();
-    koliber.laduj();
-    koliber.wydajDzwiek();
-    koliber.spij();
+    Ptak ptak = new Ptak();
+    ptak.jedz();
+    ptak.spij();
+    ptak.wydajDzwiek();
+    ptak.lec();
+    ptak.wyladuj();
   }
 }
 

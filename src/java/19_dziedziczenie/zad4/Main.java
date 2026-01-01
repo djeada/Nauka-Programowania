@@ -118,6 +118,8 @@ Kierunek studiów: Fizyka
 ```
 
 */
+import java.util.Scanner;
+
 public class Main {
   private static class Czlowiek {
 
@@ -133,20 +135,12 @@ public class Main {
       this.zawod = zawod;
     }
 
-    public final String getImie() {
-      return imie;
-    }
-
-    public final String getNazwisko() {
-      return nazwisko;
-    }
-
-    public final String getMiejsceUrodzenia() {
-      return miejsceUrodzenia;
-    }
-
-    public final String getZawod() {
-      return zawod;
+    public void wypisz() {
+      System.out.println("Człowiek:");
+      System.out.println("Imię: " + imie);
+      System.out.println("Nazwisko: " + nazwisko);
+      System.out.println("Miejsce urodzenia: " + miejsceUrodzenia);
+      System.out.println("Zawód: " + zawod);
     }
   }
 
@@ -159,19 +153,23 @@ public class Main {
         String imie,
         String nazwisko,
         String miejsceUrodzenia,
+        String zawod,
         int numerAlbumu,
         String kierunekStudiow) {
-      super(imie, nazwisko, miejsceUrodzenia, "Student");
+      super(imie, nazwisko, miejsceUrodzenia, zawod);
       this.numerAlbumu = numerAlbumu;
       this.kierunekStudiow = kierunekStudiow;
     }
 
-    public final int getNumerAlbumu() {
-      return numerAlbumu;
-    }
-
-    public final String getKierunekStudiow() {
-      return kierunekStudiow;
+    @Override
+    public void wypisz() {
+      System.out.println("Student:");
+      System.out.println("Imię: " + imie);
+      System.out.println("Nazwisko: " + nazwisko);
+      System.out.println("Miejsce urodzenia: " + miejsceUrodzenia);
+      System.out.println("Zawód: " + zawod);
+      System.out.println("Numer albumu: " + numerAlbumu);
+      System.out.println("Kierunek studiów: " + kierunekStudiow);
     }
   }
 
@@ -184,84 +182,70 @@ public class Main {
         String imie,
         String nazwisko,
         String miejsceUrodzenia,
+        String zawod,
         int numerAlbumu,
+        String kierunekStudiow,
         double sredniaLaboratoria,
         double sredniaWyklady) {
-      super(imie, nazwisko, miejsceUrodzenia, numerAlbumu, "Fizyka");
+      super(imie, nazwisko, miejsceUrodzenia, zawod, numerAlbumu, kierunekStudiow);
       this.sredniaLaboratoria = sredniaLaboratoria;
       this.sredniaWyklady = sredniaWyklady;
     }
 
-    public final double getSredniaLaboratoria() {
-      return sredniaLaboratoria;
+    @Override
+    public void wypisz() {
+      System.out.println("Student Fizyki:");
+      System.out.println("Imię: " + imie);
+      System.out.println("Nazwisko: " + nazwisko);
+      System.out.println("Miejsce urodzenia: " + miejsceUrodzenia);
+      System.out.println("Zawód: " + zawod);
+      System.out.println("Numer albumu: " + numerAlbumu);
+      System.out.println("Kierunek studiów: " + kierunekStudiow);
+      System.out.println("Średnia z laboratoriów: " + sredniaLaboratoria);
+      System.out.println("Średnia z wykładów: " + sredniaWyklady);
     }
-
-    public final double getSredniaWyklady() {
-      return sredniaWyklady;
-    }
-  }
-
-  public static void test1() {
-    final String imie = "Jan";
-    final String nazwisko = "Kowalski";
-    final String miejsceUrodzenia = "Warszawa";
-    final String zawod = "Profesor";
-
-    Czlowiek czlowiek = new Czlowiek(imie, nazwisko, miejsceUrodzenia, zawod);
-
-    assert imie.equals(czlowiek.getImie());
-    assert nazwisko.equals(czlowiek.getNazwisko());
-    assert miejsceUrodzenia.equals(czlowiek.getMiejsceUrodzenia());
-    assert zawod.equals(czlowiek.getZawod());
-  }
-
-  public static void test2() {
-    final String imie = "Jan";
-    final String nazwisko = "Kowalski";
-    final String miejsceUrodzenia = "Warszawa";
-    final String zawod = "Student";
-    final int numerAlbumu = 271932;
-    final String kierunekStudiow = "Fizyka";
-
-    Student student = new Student(imie, nazwisko, miejsceUrodzenia, numerAlbumu, kierunekStudiow);
-
-    assert imie.equals(student.getImie());
-    assert nazwisko.equals(student.getNazwisko());
-    assert miejsceUrodzenia.equals(student.getMiejsceUrodzenia());
-    assert zawod.equals(student.getZawod());
-    assert student.getNumerAlbumu() == numerAlbumu;
-    assert kierunekStudiow.equals(student.getKierunekStudiow());
-  }
-
-  public static void test3() {
-    final String imie = "Jan";
-    final String nazwisko = "Kowalski";
-    final String miejsceUrodzenia = "Warszawa";
-    final String zawod = "Student";
-    final int numerAlbumu = 271932;
-    final String kierunekStudiow = "Fizyka";
-    final double sredniaLaboratoria = 3.82;
-    final double sredniaWyklady = 4.56;
-
-    StudentFizyki student =
-        new StudentFizyki(
-            imie, nazwisko, miejsceUrodzenia, numerAlbumu, sredniaLaboratoria, sredniaWyklady);
-
-    assert imie.equals(student.getImie());
-    assert nazwisko.equals(student.getNazwisko());
-    assert miejsceUrodzenia.equals(student.getMiejsceUrodzenia());
-    assert zawod.equals(student.getZawod());
-    assert student.getNumerAlbumu() == numerAlbumu;
-    assert kierunekStudiow.equals(student.getKierunekStudiow());
-    assert student.getSredniaLaboratoria() == sredniaLaboratoria;
-    assert student.getSredniaWyklady() == sredniaWyklady;
   }
 
   public static void main(String[] args) {
-
-    test1();
-    test2();
-    test3();
+    Scanner scanner = new Scanner(System.in);
+    
+    // Read data for Człowiek
+    String imie1 = scanner.nextLine();
+    String nazwisko1 = scanner.nextLine();
+    String miejsceUrodzenia1 = scanner.nextLine();
+    String zawod1 = scanner.nextLine();
+    
+    // Read data for Student
+    String imie2 = scanner.nextLine();
+    String nazwisko2 = scanner.nextLine();
+    String miejsceUrodzenia2 = scanner.nextLine();
+    String zawod2 = scanner.nextLine();
+    int numerAlbumu2 = Integer.parseInt(scanner.nextLine());
+    String kierunekStudiow2 = scanner.nextLine();
+    
+    // Read data for StudentFizyki
+    String imie3 = scanner.nextLine();
+    String nazwisko3 = scanner.nextLine();
+    String miejsceUrodzenia3 = scanner.nextLine();
+    String zawod3 = scanner.nextLine();
+    int numerAlbumu3 = Integer.parseInt(scanner.nextLine());
+    String kierunekStudiow3 = scanner.nextLine();
+    double sredniaLaboratoria3 = Double.parseDouble(scanner.nextLine());
+    double sredniaWyklady3 = Double.parseDouble(scanner.nextLine());
+    
+    // Create objects
+    Czlowiek czlowiek = new Czlowiek(imie1, nazwisko1, miejsceUrodzenia1, zawod1);
+    Student student = new Student(imie2, nazwisko2, miejsceUrodzenia2, zawod2, numerAlbumu2, kierunekStudiow2);
+    StudentFizyki studentFizyki = new StudentFizyki(imie3, nazwisko3, miejsceUrodzenia3, zawod3, numerAlbumu3, kierunekStudiow3, sredniaLaboratoria3, sredniaWyklady3);
+    
+    // Print objects
+    czlowiek.wypisz();
+    System.out.println();
+    student.wypisz();
+    System.out.println();
+    studentFizyki.wypisz();
+    
+    scanner.close();
   }
 }
 
