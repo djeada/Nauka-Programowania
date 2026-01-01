@@ -31,7 +31,8 @@
 
 main() {
     read deg
-    result=$(echo "scale=10; $deg * 3.141592653589793 / 180" | bc)
+    # Use bc's arctangent to compute pi: pi = 4 * atan(1)
+    result=$(echo "scale=10; pi = 4 * a(1); $deg * pi / 180" | bc -l)
     printf "%.3f\n" "$result"
 }
 

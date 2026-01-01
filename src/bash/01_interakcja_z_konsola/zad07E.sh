@@ -35,7 +35,8 @@
 main() {
     read r
     read h
-    result=$(echo "scale=10; (1.0/3.0) * 3.141592653589793 * $r^2 * $h" | bc)
+    # Use bc's arctangent to compute pi: pi = 4 * atan(1)
+    result=$(echo "scale=10; pi = 4 * a(1); (1.0/3.0) * pi * $r^2 * $h" | bc -l)
     printf "%.3f\n" "$result"
 }
 

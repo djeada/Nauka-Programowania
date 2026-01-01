@@ -56,6 +56,7 @@ main() {
     read W
 
     # Calculate number of tiles needed in each direction (ceiling division)
+    # Using epsilon (0.000001) to handle floating-point precision before division
     nL=$(echo "scale=0; ($L + $t - 0.000001) / $t" | bc | cut -d'.' -f1)
     nW=$(echo "scale=0; ($W + $t - 0.000001) / $t" | bc | cut -d'.' -f1)
     
