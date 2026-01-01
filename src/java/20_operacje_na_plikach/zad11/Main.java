@@ -41,6 +41,9 @@ import java.util.List;
 
 public class Main {
 
+  // Wczytuje wszystkie linie z pliku
+  // Złożoność czasowa: O(n) gdzie n to liczba linii
+  // Złożoność pamięciowa: O(n)
   public static List<String> readFile(String path) {
     List<String> content = new ArrayList<>();
     try {
@@ -51,6 +54,9 @@ public class Main {
     return content;
   }
 
+  // Kopiuje zawartość pliku źródłowego do docelowego
+  // Złożoność czasowa: O(m) gdzie m to rozmiar pliku
+  // Złożoność pamięciowa: O(1)
   public static void copyFile(String srcPath, String destPath) {
     try {
       Files.copy(Paths.get(srcPath), Paths.get(destPath), StandardCopyOption.REPLACE_EXISTING);
@@ -59,6 +65,9 @@ public class Main {
     }
   }
 
+  // Zamienia miejscami zawartość dwóch plików
+  // Złożoność czasowa: O(m) gdzie m to rozmiar większego pliku
+  // Złożoność pamięciowa: O(1)
   public static void swapFiles(String pathA, String pathB) {
     String tempPath = pathB;
 

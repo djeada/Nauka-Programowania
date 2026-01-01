@@ -39,6 +39,9 @@ import java.util.List;
 
 public class Main {
 
+  // Wczytuje wszystkie linie z pliku
+  // Złożoność czasowa: O(n) gdzie n to liczba linii
+  // Złożoność pamięciowa: O(n)
   public static List<String> readFile(String filePath) {
     List<String> content = new ArrayList<>();
 
@@ -54,6 +57,9 @@ public class Main {
     return content;
   }
 
+  // Dodaje wiersz na początku pliku
+  // Złożoność czasowa: O(n) gdzie n to liczba linii w pliku
+  // Złożoność pamięciowa: O(n)
   public static void writeAtBeginning(String filePath, String data) {
     List<String> fileContent = readFile(filePath);
 

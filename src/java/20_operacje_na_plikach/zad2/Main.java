@@ -65,6 +65,9 @@ public class Main {
     }
   }
 
+  // Zwraca rozszerzenie pliku z podanej ścieżki
+  // Złożoność czasowa: O(n) gdzie n to długość nazwy pliku
+  // Złożoność pamięciowa: O(n)
   public static String znajdzRozszerzenie(String sciezka) {
     Path obiekt = Paths.get(sciezka);
 
@@ -77,6 +80,9 @@ public class Main {
     return "";
   }
 
+  // Wyszukuje pliki o podanym rozszerzeniu w folderze (bez podfolderów)
+  // Złożoność czasowa: O(n) gdzie n to liczba plików w folderze
+  // Złożoność pamięciowa: O(m) gdzie m to liczba plików z pasującym rozszerzeniem
   public static List<String> plikiWFolderze(String sciezka, String rozszerzenie) {
     List<String> pliki = new ArrayList<>();
 

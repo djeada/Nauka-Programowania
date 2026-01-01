@@ -46,6 +46,9 @@ import java.util.stream.Stream;
 
 public class Main {
 
+  // Wczytuje wszystkie linie z pliku do listy
+  // Złożoność czasowa: O(n) gdzie n to liczba linii
+  // Złożoność pamięciowa: O(n)
   public static List<String> wczytajPlik(String sciezka) {
     List<String> tresc = new ArrayList<>();
     try {
@@ -64,6 +67,9 @@ public class Main {
     return tresc;
   }
 
+  // Sortuje adresy IP numerycznie według oktetów
+  // Złożoność czasowa: O(n log n) - sortowanie porównaniowe
+  // Złożoność pamięciowa: O(n) - konwersja IP na tablice
   public static void sortujAdresyIp(List<String> ip) {
     ip.sort(
         new Comparator<String>() {

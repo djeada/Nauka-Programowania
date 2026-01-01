@@ -39,6 +39,9 @@ Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w
 import java.util.*;
 
 public class Main {
+  // Sortowanie przez wstawianie - buduje posortowany fragment od lewej
+  // Złożoność czasowa: O(n²) w najgorszym przypadku, O(n) dla danych prawie posortowanych
+  // Złożoność pamięciowa: O(1) - sortowanie w miejscu
   public static void sortuj(ArrayList<Integer> lista) {
 
     for (int i = 1; i < lista.size(); i++) {

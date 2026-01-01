@@ -63,6 +63,9 @@ import java.util.stream.Collectors;
 
 public class Main {
 
+  // Wczytuje wszystkie linie z pliku do listy
+  // Złożoność czasowa: O(n) gdzie n to liczba linii
+  // Złożoność pamięciowa: O(n)
   static List<String> readFile(String path) {
     List<String> content = new ArrayList<>();
     try (BufferedReader br = new BufferedReader(new FileReader(path))) {
@@ -76,6 +79,9 @@ public class Main {
     return content;
   }
 
+  // Usuwa znaki interpunkcyjne ze słowa
+  // Złożoność czasowa: O(n) gdzie n to długość słowa
+  // Złożoność pamięciowa: O(n)
   static String clean(String word) {
     return word.replaceAll("\\p{Punct}", "");
   }

@@ -36,6 +36,9 @@ Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Posortuj ją rosn
 import java.util.*;
 
 public class Main {
+  // Sortuje listę binarną (0/1) używając algorytmu zliczającego
+  // Złożoność czasowa: O(n) - dwa przejścia przez listę
+  // Złożoność pamięciowa: O(1) - sortowanie w miejscu
   public static void sortuj(ArrayList<Integer> lista) {
     int zera = 0;
     for (int i = 0; i < lista.size(); i++) {

@@ -40,10 +40,16 @@ import java.util.*;
 
 public class Main {
 
+  // Usuwa znaki interpunkcyjne ze słowa
+  // Złożoność czasowa: O(n) gdzie n to długość słowa
+  // Złożoność pamięciowa: O(n)
   public static String wyczysc(final String napis) {
     return napis.trim().replaceAll("\\p{Punct}", "");
   }
 
+  // Dzieli zdanie na listę słów (bez znaków interpunkcyjnych)
+  // Złożoność czasowa: O(n) gdzie n to długość napisu
+  // Złożoność pamięciowa: O(m) gdzie m to liczba słów
   public static ArrayList<String> slowa(final String napis) {
     ArrayList<String> wynik = new ArrayList<String>();
     int pocz = 0;
@@ -69,6 +75,9 @@ public class Main {
     return new ArrayList<String>(wynik);
   }
 
+  // Sortuje słowa w zdaniu alfabetycznie
+  // Złożoność czasowa: O(m log m) gdzie m to liczba słów
+  // Złożoność pamięciowa: O(m)
   public static ArrayList<String> sortuj(final String zdanie) {
     ArrayList<String> wynik = slowa(zdanie);
     Collections.sort(wynik);

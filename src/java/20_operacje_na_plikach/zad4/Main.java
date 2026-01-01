@@ -41,6 +41,9 @@ import java.nio.file.Paths;
 
 public class Main {
 
+  // Wczytuje i wypisuje zawartość pliku tekstowego linia po linii
+  // Złożoność czasowa: O(n) gdzie n to liczba linii w pliku
+  // Złożoność pamięciowa: O(1) - czyta linia po linii
   public static void wypiszPlik(String sciezka) {
     try {
       String wiersz;
