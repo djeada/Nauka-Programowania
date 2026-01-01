@@ -66,17 +66,15 @@ public class Main {
 
     // Dla pobranej liczby, sprawdz czy liczba jest ujemna, dodatnia, czy jest zerem.
 
-    System.out.print("podaj liczbe:\n");
-
     Scanner s = new Scanner(System.in);
-    int a = Integer.parseInt(s.nextLine());
+    int x = Integer.parseInt(s.nextLine());
 
-    if (a < 0) {
-      System.out.print("liczba jest ujemna\n");
-    } else if (a > 0) {
-      System.out.print("liczba jest dodatnia\n");
+    if (x < 0) {
+      System.out.println("Liczba jest ujemna.");
+    } else if (x > 0) {
+      System.out.println("Liczba jest dodatnia.");
     } else {
-      System.out.print("liczba jest zerem\n");
+      System.out.println("Liczba jest zerem.");
     }
   }
 }

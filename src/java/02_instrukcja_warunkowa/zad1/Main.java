@@ -50,14 +50,11 @@ public class Main {
 
     // Wypisz pobrana od uzytkownika liczbe, jesli jest wieksza od 5.
 
-    System.out.print("podaj liczbe:\n");
-
     Scanner s = new Scanner(System.in);
-    int x = Integer.parseInt(s.nextLine());
+    int n = Integer.parseInt(s.nextLine());
 
-    if (x > 5) {
-      System.out.print(x);
-      System.out.print("\n");
+    if (n > 5) {
+      System.out.println(n);
     }
   }
 }
