@@ -31,6 +31,9 @@
 
 source ../assert.sh
 
+# Funkcja odwracajaca napis za pomoca petli
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(n) dla odwroconego napisu
 odwroc_napis_v1() {
 
     local napis="$1"
@@ -44,6 +47,9 @@ odwroc_napis_v1() {
 
 }
 
+# Funkcja odwracajaca napis za pomoca polecenia rev
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(n) dla odwroconego napisu
 odwroc_napis_v2() {
 
     echo $1 | rev

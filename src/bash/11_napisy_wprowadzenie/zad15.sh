@@ -31,40 +31,60 @@
 
 source ../assert.sh
 
-wypisz_slowa() {
-
+# Funkcja wypisujaca slowa jako liste w formacie JSON
+# Zlozonosc czasowa: O(n), gdzie n to liczba slow
+# Zlozonosc pamieciowa: O(n) dla tablicy slow
+wypisz_slowa_jako_liste() {
     local zdanie="$1"
-
+    
+    # Usuniecie znakow interpunkcyjnych
     zdanie=$(echo "$zdanie" | sed -r 's/[.,:;!?]+/ /g')
-
+    
     read -ra lista_slow <<<"$zdanie"
-
+    
+    local wynik="["
+    local pierwszy=1
+    
+    # Iteracja przez wszystkie slowa
     for slowo in "${lista_slow[@]}"; do
-        if [[ "$slowo" =~ ^[[:alnum:]]*$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
-            if [[ "$slowo" =~ ^[[:alnum:]]*$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
-                echo "$slowo" | tr '[:upper:]' '[:lower:]'
+        # Sprawdzenie czy slowo zawiera tylko znaki alfanumeryczne i nie jest liczba
+        if [[ "$slowo" =~ ^[[:alnum:]]+$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
+            if [ $pierwszy -eq 1 ]; then
+                wynik="${wynik}\"${slowo}\""
+                pierwszy=0
+            else
+                wynik="${wynik}, \"${slowo}\""
             fi
-        done
+        fi
+    done
+    
+    wynik="${wynik}]"
+    echo "$wynik"
+}
 
-    }
+test1() {
+    local napis="Ala ma kota"
+    local wynik='["Ala", "ma", "kota"]'
+    assertEqual "$(wypisz_slowa_jako_liste "$napis")" "$wynik" $LINENO
+}
 
-    test1() {
-        local napis="We think in generalities, but we live in details"
-        local oczekiwane=('we' 'think' 'in' 'generalities' 'but' 'we' 'live' 'in' 'details')
-        readarray -t wynik <<< "$(wypisz_slowa "$napis")"
-        assertArrayEqual wynik oczekiwane $LINENO
-    }
+test2() {
+    local napis="We think in generalities, but we live in details"
+    local wynik='["We", "think", "in", "generalities", "but", "we", "live", "in", "details"]'
+    assertEqual "$(wypisz_slowa_jako_liste "$napis")" "$wynik" $LINENO
+}
 
-    test2() {
-        local napis=""
-        local wynik=""
-        assertEqual "$(wypisz_slowa "$napis")" "$wynik" $LINENO
-    }
+test3() {
+    local napis=""
+    local wynik="[]"
+    assertEqual "$(wypisz_slowa_jako_liste "$napis")" "$wynik" $LINENO
+}
 
-    main() {
-        test1
-        test2
-    }
+main() {
+    test1
+    test2
+    test3
+}
 
-    main "$@"
+main "$@"
 

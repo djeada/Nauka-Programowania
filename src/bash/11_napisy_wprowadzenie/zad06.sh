@@ -31,8 +31,11 @@
 
 source ../assert.sh
 
+# Zamiana wszystkich wystapien litery 'a' na znak '?'
+# Zlozonosc czasowa: O(n), gdzie n to dlugosc napisu
+# Zlozonosc pamieciowa: O(n) dla wyniku
 zamien() {
-    sed -r 's/[a]+/?/g' <<<"$1"
+    sed -r 's/a/?/g' <<<"$1"
 }
 
 test1() {
