@@ -38,6 +38,8 @@ public class Main {
   // Podziel zdanie na slowa skladowe.
   // Znaki interpunkcyjne nie sa liczone jako slowa.
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String wyczysc(String napis) {
     napis = napis.trim();
 

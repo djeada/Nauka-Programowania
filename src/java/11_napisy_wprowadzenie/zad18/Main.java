@@ -37,6 +37,8 @@ import java.util.stream.Collectors;
 
 public class Main {
 
+  // Zlozonosc Czasowa: O(n * m), gdzie n to liczba slow, m to srednia dlugosc slowa
+  // Zlozonosc Pamieciowa: O(n * m)
   public static String odwrocNapisyV1(String napis) {
 
     String[] slowa = napis.split(" ");
@@ -56,6 +58,8 @@ public class Main {
     return odwrocony.toString().trim();
   }
 
+  // Zlozonosc Czasowa: O(n * m), gdzie n to liczba slow, m to srednia dlugosc slowa
+  // Zlozonosc Pamieciowa: O(n * m)
   public static String odwrocNapisyV2(String napis) {
     return Pattern.compile(" +")
         .splitAsStream(napis)

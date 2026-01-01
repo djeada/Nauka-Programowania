@@ -38,6 +38,8 @@ public class Main {
   // dlugosci, zdefiniowana jako liczba pozycji na ktorych napisy maja rozne
   // znaki.
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(1)
   public static int odlegloscHammingaV1(final String napisA, final String napisB) {
     if (napisA.length() != napisB.length()) {
       return -1;

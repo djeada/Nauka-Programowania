@@ -42,6 +42,8 @@ public class Main {
   // Znajdz srednia dlugosc slow w zdaniu.
   // Znaki interpunkcyjne nie sa liczone jako slowa.
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String wyczysc(String napis) {
     napis = napis.trim();
 

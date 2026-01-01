@@ -41,6 +41,8 @@ public class Main {
   // Otrzymujesz liste liczb.
   // Zamien liste na napis.
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String liczby(final ArrayList<Integer> lista) {
     String wynik = "";
 

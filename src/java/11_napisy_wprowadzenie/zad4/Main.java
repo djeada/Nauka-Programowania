@@ -37,6 +37,8 @@ public class Main {
   // Otrzymujesz napis. Zamien wszystkie
   // male litery na wielkie.
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n)
   public static String naWielkieV1(String slowo) {
 
     return slowo.toUpperCase();
