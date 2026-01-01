@@ -46,6 +46,9 @@
 
 source ../assert.sh
 
+# Znajduje wiersze kończące się podanym napisem.
+# Złożoność czasowa: O(n*m), gdzie n to liczba wierszy, m to długość wiersza
+# Złożoność pamięciowa: O(n)
 wiersze_konczace_sie_napisem() {
     local tekst=$1
     local koniec=$2

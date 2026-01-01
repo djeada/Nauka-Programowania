@@ -35,16 +35,18 @@
 
 source ../assert.sh
 
+# Sortuje wszystkie znaki w napisie alfabetycznie.
+# Złożoność czasowa: O(n log n), gdzie n to liczba znaków
+# Złożoność pamięciowa: O(n)
 sortuj_napis() {
     local napis="$1"
-    local napis="$1"
-    echo "$napis" | grep -o . | sort -V | tr -d "\n"
+    echo "$napis" | grep -o . | sort | tr -d "\n"
     echo
 }
 
 test_sortuj_napis() {
-    assertEquals "$(sortuj_napis "Ala ma kota")" "Aaaaklmot  " $LINENO
-    assertEquals "$(sortuj_napis "kot ma Ale")" "Aaeklmot  " $LINENO
+    assertEqual "$(sortuj_napis "Ala ma kota")" "  Aaaaklmot" $LINENO
+    assertEqual "$(sortuj_napis "kot ma Ale")" "  Aaeklmot" $LINENO
 }
 
 main() {

@@ -36,6 +36,9 @@
 
 source ../assert.sh
 
+# Wyciąga cyfry będące częścią słów (słowa zawierające litery i cyfry).
+# Złożoność czasowa: O(n*m), gdzie n to liczba słów, m to długość słowa
+# Złożoność pamięciowa: O(k), gdzie k to liczba znalezionych cyfr
 cyfry_bedace_czescia_slow() {
     local zdanie="$1"
     local cyfry=()

@@ -35,7 +35,33 @@
 # ```
 # Prawda
 # ```
+
+source ../assert.sh
+
+# Sprawdza, czy napis B zaczyna się od napisu A.
+# Złożoność czasowa: O(m), gdzie m to długość A
+# Złożoność pamięciowa: O(1)
+czy_prefix() {
+    local napis_a="$1"
+    local napis_b="$2"
+    
+    if [[ "$napis_b" == "$napis_a"* ]]; then
+        echo "Prawda"
+    else
+        echo "Fałsz"
+    fi
+}
+
+test_czy_prefix() {
+    local wynik=$(czy_prefix "Dino" "Dinozaur jest zly")
+    assertEqual "$wynik" "Prawda" $LINENO
+    
+    local wynik2=$(czy_prefix "ABC" "XYZ")
+    assertEqual "$wynik2" "Fałsz" $LINENO
+}
+
 main() {
+    test_czy_prefix
 }
 
 main "$@"

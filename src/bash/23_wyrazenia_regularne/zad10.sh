@@ -30,6 +30,9 @@
 
 source ../assert.sh
 
+# Podmienia napisy z listy A na odpowiadające im napisy z listy B.
+# Złożoność czasowa: O(n*m*k), gdzie n to długość tekstu, m to liczba podmian, k to długość napisu do podmiany
+# Złożoność pamięciowa: O(n)
 podmien_napisy() {
     local tekst="$1"
 

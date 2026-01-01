@@ -33,8 +33,10 @@
 
 source ../assert.sh
 
+# Sortuje listę składającą się z 0, 1, 2 metodą zliczania.
+# Złożoność czasowa: O(n), gdzie n to liczba elementów
+# Złożoność pamięciowa: O(n)
 sortuj_liste() {
-    local -n _lista_ref="$1"
     local -n _lista_ref="$1"
 
     local zera=()
@@ -53,7 +55,7 @@ sortuj_liste() {
     _lista_ref=("${zera[@]}" "${jedynki[@]}" "${dwojki[@]}")
 }
 
-sortuj_liste() {
+test_sortuj_liste() {
     local lista=(0 1 1 2 2 0 1 0 2)
     local oczekiwane=(0 0 0 1 1 1 2 2 2)
     sortuj_liste lista
@@ -61,7 +63,7 @@ sortuj_liste() {
 }
 
 main() {
-    test_sortuj_liste_binarna
+    test_sortuj_liste
 }
 
 main "$@"

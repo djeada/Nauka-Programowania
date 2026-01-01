@@ -32,7 +32,11 @@
 # ```
 # 2001
 # ```
+source ../assert.sh
 
+# Odfiltruje i zwraca wszystkie cyfry z napisu.
+# Złożoność czasowa: O(n), gdzie n to długość napisu
+# Złożoność pamięciowa: O(k), gdzie k to liczba cyfr
 odfiltruj_cyfry() {
     echo "$1" | grep -o '[0-9]'
 }

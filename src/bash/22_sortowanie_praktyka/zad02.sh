@@ -36,8 +36,10 @@
 
 source ../assert.sh
 
+# Sortuje słowa w zdaniu alfabetycznie, usuwając znaki interpunkcyjne.
+# Złożoność czasowa: O(n log n), gdzie n to liczba słów
+# Złożoność pamięciowa: O(n)
 sortuj_slowa_w_zdaniu() {
-    local zdanie="$1"
     local zdanie="$1"
     zdanie="${zdanie//[,.:;?!]/}"
     echo "$zdanie" | tr " " "\n" | sort -V | tr "\n" " "

@@ -42,11 +42,17 @@
 
 source ../assert.sh
 
+# Sortuje listę par względem napisów (pierwszej części pary).
+# Złożoność czasowa: O(n log n), gdzie n to liczba par
+# Złożoność pamięciowa: O(n)
 posortuj_wzgledem_napisow() {
     local _lista_ref=("$@")
     echo "${_lista_ref[@]}" | tr ' ' '\n' | sort -u
 }
 
+# Sortuje listę par względem liczb (drugiej części pary).
+# Złożoność czasowa: O(n log n), gdzie n to liczba par
+# Złożoność pamięciowa: O(n)
 posortuj_wzgledem_liczb() {
     local _lista_ref=("$@")
     echo "${_lista_ref[@]}" | tr ' ' '\n' | sort -t ':' -k 2 -n
@@ -56,14 +62,14 @@ test_posortuj_wzgledem_napisow() {
     local lista_par=('a:2' 'c:1' 'b:3')
     local wynik=($(posortuj_wzgledem_napisow "${lista_par[@]}"))
     local oczekiwane=('a:2' 'b:3' 'c:1')
-    assertElementsEqual wynik oczekiwane $LINENO
+    assertSetsEqual wynik oczekiwane $LINENO
 }
 
 test_posortuj_wzgledem_liczb() {
     local lista_par=('a:2' 'c:1' 'b:3')
     local wynik=($(posortuj_wzgledem_liczb "${lista_par[@]}"))
     local oczekiwane=('c:1' 'a:2' 'b:3')
-    assertElementsEqual wynik oczekiwane $LINENO
+    assertArrayEqual wynik oczekiwane $LINENO
 }
 
 main() {

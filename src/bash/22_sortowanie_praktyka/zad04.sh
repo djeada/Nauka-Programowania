@@ -36,6 +36,9 @@
 
 source ../assert.sh
 
+# Sortuje listę napisów względem ich długości.
+# Złożoność czasowa: O(n log n), gdzie n to liczba napisów
+# Złożoność pamięciowa: O(n)
 sortuj_wzgledem_dlugosci() {
     local -n _lista_ref="$1"
     echo "${_lista_ref[@]}" | tr " " "\n" | awk '{print length($0), $0}' | sort -n -k1,1 | cut -d' ' -f2- | tr "\n" " "
@@ -44,8 +47,8 @@ sortuj_wzgledem_dlugosci() {
 test_sortuj_wzgledem_dlugosci() {
     local lista=(Ala ma kota a kot ma Ale)
     local oczekiwane=(a ma ma Ala Ale kot kota)
-    local wynik=$(sortuj_wzgledem_dlugosci lista)
-    assertArrayEqual lista oczekiwane wynik
+    local wynik=($(sortuj_wzgledem_dlugosci lista))
+    assertArrayEqual wynik oczekiwane $LINENO
 }
 
 main() {

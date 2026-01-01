@@ -42,7 +42,6 @@ source ../assert.sh
 
 scalaj() {
     local dane=("$@")
-    local dane=("$@")
     local _tablica_a=(${dane[@]:0:${#dane[@]}/2})
     local _tablica_b=(${dane[@]:${#dane[@]}/2})
     local _tablica_c=()
@@ -73,7 +72,6 @@ scalaj() {
 }
 
 sortuj() {
-    local _tablica_ref=("$@")
     local _tablica_ref=("$@")
 
     if [ ${#_tablica_ref[@]} -gt 1 ]; then

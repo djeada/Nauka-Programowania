@@ -33,8 +33,10 @@
 
 source ../assert.sh
 
+# Sortuje listę binarną (0/1) metodą zliczania.
+# Złożoność czasowa: O(n), gdzie n to liczba elementów
+# Złożoność pamięciowa: O(n)
 sortuj_liste_binarna() {
-    local -n _lista_ref="$1"
     local -n _lista_ref="$1"
 
     local zera=()
