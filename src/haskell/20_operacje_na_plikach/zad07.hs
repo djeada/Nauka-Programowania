@@ -30,5 +30,15 @@ To jest nowy wiersz dodany na początku pliku.
 \*(brak)*
 
 -}
+
+import System.IO (appendFile)
+
+-- Dopisuje tekst do pliku
+-- Złożoność czasowa: O(n), gdzie n to długość tekstu
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    filePath <- getLine
+    content <- getLine
+    appendFile filePath content
+    putStrLn "Dopisano do pliku"

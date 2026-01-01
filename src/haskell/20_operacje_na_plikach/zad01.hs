@@ -31,5 +31,14 @@ Prawda
 ```
 
 -}
+
+import System.Directory (doesPathExist)
+
+-- Sprawdza czy ścieżka istnieje
+-- Złożoność czasowa: O(1) - operacja systemowa
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    path <- getLine
+    exists <- doesPathExist path
+    putStrLn $ if exists then "Prawda" else "Fałsz"

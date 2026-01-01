@@ -37,5 +37,22 @@ C:\Users\Username\Documents
 \* Porównuj rozszerzenia **bez względu na wielkość liter** (np. `.TXT` też pasuje do `.txt`).
 
 -}
+
+import System.Directory (listDirectory, doesDirectoryExist)
+import System.FilePath (takeExtension)
+import Data.List (isSuffixOf)
+
+-- Znajduje pliki o danym rozszerzeniu w folderze
+-- Złożoność czasowa: O(n), gdzie n to liczba plików
+-- Złożoność pamięciowa: O(n)
 main :: IO ()
-main = pure ()
+main = do
+    folderPath <- getLine
+    ext <- getLine
+    exists <- doesDirectoryExist folderPath
+    if exists
+        then do
+            files <- listDirectory folderPath
+            let matching = filter (isSuffixOf ext) files
+            print matching
+        else print ([] :: [String])

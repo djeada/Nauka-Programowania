@@ -31,5 +31,27 @@ Liczba utworzonych instancji: 3
 ```
 
 -}
+
+import Data.IORef
+
+-- W Haskell używamy IORef do zliczania instancji
+-- Złożoność pamięciowa: O(1)
+data MojaKlasa = MojaKlasa { id :: Int }
+
 main :: IO ()
-main = pure ()
+main = do
+    -- Symulacja zliczania instancji
+    licznik <- newIORef 0
+    
+    -- Tworzenie instancji
+    modifyIORef licznik (+1)
+    let obj1 = MojaKlasa 1
+    
+    modifyIORef licznik (+1)
+    let obj2 = MojaKlasa 2
+    
+    modifyIORef licznik (+1)
+    let obj3 = MojaKlasa 3
+    
+    count <- readIORef licznik
+    putStrLn $ "Liczba utworzonych instancji: " ++ show count

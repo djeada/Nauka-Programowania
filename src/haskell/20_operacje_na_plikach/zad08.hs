@@ -32,5 +32,22 @@ C:\Users\Username\Documents\Projekt
 \*(brak)*
 
 -}
+
+import System.Directory (copyFile, doesFileExist)
+import Control.Exception (catch, IOException)
+
+-- Kopiuje plik
+-- Złożoność czasowa: O(n), gdzie n to rozmiar pliku
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    source <- getLine
+    dest <- getLine
+    exists <- doesFileExist source
+    if exists
+        then do
+            catch (copyFile source dest >> putStrLn "Skopiowano plik")
+                  (\e -> do
+                      let _ = (e :: IOException)
+                      putStrLn "Błąd kopiowania")
+        else putStrLn "Plik źródłowy nie istnieje"

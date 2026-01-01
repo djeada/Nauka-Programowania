@@ -38,5 +38,34 @@ Kot wydaje odgłos: Miau!
 ```
 
 -}
+
+-- Type class dla zwierząt
+-- Złożoność pamięciowa: O(1)
+class Zwierz a where
+    odglos :: a -> String
+    nazwaKlasy :: a -> String
+
+data ZwierzOgolny = ZwierzOgolny
+data Pies = Pies
+data Kot = Kot
+
+instance Zwierz ZwierzOgolny where
+    odglos _ = "jakiś dźwięk"
+    nazwaKlasy _ = "Zwierz"
+
+instance Zwierz Pies where
+    odglos _ = "Hau hau!"
+    nazwaKlasy _ = "Pies"
+
+instance Zwierz Kot where
+    odglos _ = "Miau!"
+    nazwaKlasy _ = "Kot"
+
+wypiszOdglos :: Zwierz a => a -> IO ()
+wypiszOdglos z = putStrLn $ nazwaKlasy z ++ " wydaje odgłos: " ++ odglos z
+
 main :: IO ()
-main = pure ()
+main = do
+    wypiszOdglos ZwierzOgolny
+    wypiszOdglos Pies
+    wypiszOdglos Kot

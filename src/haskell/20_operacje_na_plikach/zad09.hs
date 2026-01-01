@@ -28,5 +28,21 @@ C:\Users\Username\Documents\DoUsunięcia
 \*(brak)*
 
 -}
+
+import System.Directory (removeFile, doesFileExist)
+import Control.Exception (catch, IOException)
+
+-- Usuwa plik
+-- Złożoność czasowa: O(1)
+-- Złożoność pamięciowa: O(1)
 main :: IO ()
-main = pure ()
+main = do
+    filePath <- getLine
+    exists <- doesFileExist filePath
+    if exists
+        then do
+            catch (removeFile filePath >> putStrLn "Usunięto plik")
+                  (\e -> do
+                      let _ = (e :: IOException)
+                      putStrLn "Błąd usuwania")
+        else putStrLn "Plik nie istnieje"
