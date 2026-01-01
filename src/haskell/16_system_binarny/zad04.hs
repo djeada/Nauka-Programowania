@@ -1,87 +1,70 @@
--- ZAD-04A — Liczba zer w zapisie binarnym
---
+{-
+ZAD-04A — Liczba zer w zapisie binarnym
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `binarne`, `zliczanie`
 
--- ** Tagi:** `binarne`, `zliczanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n`. Policz, ile znaków `0` zawiera jej binarna reprezentacja (bez wiodących zer).
---
--- ### Wejście
---
+Wczytaj liczbę naturalną `n`. Policz, ile znaków `0` zawiera jej binarna reprezentacja (bez wiodących zer).
 
--- * 1. linia: `n`
+### Wejście
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.
---
--- ### Przykład
---
+* 1. linia: `n`
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- 3
--- ```
---
+Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- 0
--- ```
---
--- ### Uwagi
---
+**Wejście:**
 
--- * Dla `n = 0` binarnie to `0`, więc liczba zer wynosi `1`.
+```
+3
+```
 
---
--- ZAD-04B — Liczba jedynek w zapisie binarnym
---
+**Wyjście:**
 
--- ** Poziom:** ★☆☆
+```
+0
+```
 
--- ** Tagi:** `popcount`, `binarne`
+### Uwagi
 
---
--- ### Treść
---
--- Wczytaj `n`. Policz, ile bitów `1` ma liczba w zapisie binarnym.
---
--- ### Wejście
---
+* Dla `n = 0` binarnie to `0`, więc liczba zer wynosi `1`.
 
--- * 1. linia: `n`
+ZAD-04B — Liczba jedynek w zapisie binarnym
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
---
--- ### Przykład
---
+**Poziom:** ★☆☆
+**Tagi:** `popcount`, `binarne`
 
--- ** Wejście:**
+### Treść
 
---
--- ```
--- 3
--- ```
---
+Wczytaj `n`. Policz, ile bitów `1` ma liczba w zapisie binarnym.
 
--- ** Wyjście:**
+### Wejście
 
---
--- ```
--- 2
--- ```
+* 1. linia: `n`
+
+### Wyjście
+
+Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+2
+```
+
+-}
 main :: IO ()
 main = pure ()

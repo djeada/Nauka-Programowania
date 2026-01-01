@@ -1,85 +1,64 @@
--- ZAD-02A — Wypisz binarnie tylko gdy liczba parzysta
---
+{-
+ZAD-02A — Wypisz binarnie tylko gdy liczba parzysta
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `warunki`, `parzystość`, `binarne`
 
--- ** Tagi:** `warunki`, `parzystość`, `binarne`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n`. Jeśli `n` jest parzysta — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
---
--- ### Wejście
---
+Wczytaj liczbę naturalną `n`. Jeśli `n` jest parzysta — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
 
--- * 1. linia: `n` (liczba naturalna)
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: `n` (liczba naturalna)
 
--- * Jeśli `n % 2 == 0`: jedna linia z zapisem binarnym `n`
+### Wyjście
 
--- * W przeciwnym razie: brak wyjścia
+* Jeśli `n % 2 == 0`: jedna linia z zapisem binarnym `n`
+* W przeciwnym razie: brak wyjścia
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 7
--- ```
---
+```
+7
+```
 
--- ** Wyjście:** *(brak)*
+**Wyjście:** *(brak)*
 
---
--- ZAD-02B — Wypisz binarnie tylko gdy liczba pierwsza
---
+ZAD-02B — Wypisz binarnie tylko gdy liczba pierwsza
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pierwszość`, `warunki`, `binarne`
 
--- ** Tagi:** `pierwszość`, `warunki`, `binarne`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n`. Jeśli `n` jest liczbą pierwszą — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
---
--- ### Wejście
---
+Wczytaj liczbę naturalną `n`. Jeśli `n` jest liczbą pierwszą — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
 
--- * 1. linia: `n` (liczba naturalna)
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: `n` (liczba naturalna)
 
--- * Jeśli `n` jest pierwsza: jedna linia z zapisem binarnym `n`
+### Wyjście
 
--- * W przeciwnym razie: brak wyjścia
+* Jeśli `n` jest pierwsza: jedna linia z zapisem binarnym `n`
+* W przeciwnym razie: brak wyjścia
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 7
--- ```
---
+```
+7
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 111
--- ```
+```
+111
+```
+
+-}
 main :: IO ()
 main = pure ()

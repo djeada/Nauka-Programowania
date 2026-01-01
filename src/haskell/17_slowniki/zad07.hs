@@ -1,43 +1,35 @@
--- ZAD-07 — Histogram słów w tekście (ignoruj wielkość liter)
---
+{-
+ZAD-07 — Histogram słów w tekście (ignoruj wielkość liter)
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`, `tekst`
 
--- ** Tagi:** `dict`, `string`, `tekst`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj tekst. Policz częstość występowania słów (tylko litery), ignorując wielkość liter. Wypisz słownik: słowo (małe litery) → liczba wystąpień.
---
--- ### Wejście
---
+Wczytaj tekst. Policz częstość występowania słów (tylko litery), ignorując wielkość liter. Wypisz słownik: słowo (małe litery) → liczba wystąpień.
 
--- * 1 linia: tekst
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: tekst
 
--- * Słownik
+### Wyjście
 
---
--- ### Przykład
---
+* Słownik
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- Ala ma kota. Ala lubi koty.
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+Ala ma kota. Ala lubi koty.
+```
 
---
--- ```
--- {'ala': 2, 'ma': 1, 'kota': 1, 'lubi': 1, 'koty': 1}
--- ```
+**Wyjście:**
+
+```
+{'ala': 2, 'ma': 1, 'kota': 1, 'lubi': 1, 'koty': 1}
+```
+
+-}
 main :: IO ()
 main = pure ()

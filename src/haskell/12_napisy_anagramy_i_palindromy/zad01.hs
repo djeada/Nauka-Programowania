@@ -1,53 +1,42 @@
--- ZAD-01 — Czy słowo jest palindromem?
---
+{-
+ZAD-01 — Czy słowo jest palindromem?
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `palindrom`, `I/O`
 
--- ** Tagi:** `string`, `palindrom`, `I/O`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj jedno słowo i sprawdź, czy jest palindromem (czytane od lewej do prawej i od prawej do lewej jest takie samo).
---
--- ### Wejście
---
+Wczytaj jedno słowo i sprawdź, czy jest palindromem (czytane od lewej do prawej i od prawej do lewej jest takie samo).
 
--- * 1. linia: słowo (same litery, bez spacji)
+### Wejście
 
---
--- ### Wyjście
---
--- Jedna linia:
---
+* 1. linia: słowo (same litery, bez spacji)
 
--- * `Prawda` — jeśli słowo jest palindromem
+### Wyjście
 
--- * `Fałsz` — w przeciwnym razie
+Jedna linia:
 
---
--- ### Przykład
---
+* `Prawda` — jeśli słowo jest palindromem
+* `Fałsz` — w przeciwnym razie
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- kajak
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+kajak
+```
 
---
--- ```
--- Prawda
--- ```
---
--- ### Uwagi o formatowaniu
---
+**Wyjście:**
 
--- * Jeśli chcesz ignorować wielkość liter, porównuj wersje `lower()`.
+```
+Prawda
+```
 
+### Uwagi o formatowaniu
+
+* Jeśli chcesz ignorować wielkość liter, porównuj wersje `lower()`.
+
+-}
 main :: IO ()
 main = pure ()

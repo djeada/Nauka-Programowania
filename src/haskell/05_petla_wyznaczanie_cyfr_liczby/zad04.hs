@@ -1,145 +1,119 @@
--- ZAD-04A — Cyfry parzyste
---
+{-
+ZAD-04A — Cyfry parzyste
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `warunki`
 
--- ** Tagi:** `pętle`, `modulo`, `warunki`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **parzyste**. Każdą cyfrę wypisz w osobnej linii.
---
--- Cyfry analizuj od końca (od jedności), czyli w tej samej kolejności, co w zadaniu o wypisywaniu cyfr w odwrotnej kolejności.
---
--- ### Wejście
---
--- Jedna liczba naturalna:
---
+Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **parzyste**. Każdą cyfrę wypisz w osobnej linii.
 
--- * 1. linia: `n` (`n ≥ 0`)
+Cyfry analizuj od końca (od jedności), czyli w tej samej kolejności, co w zadaniu o wypisywaniu cyfr w odwrotnej kolejności.
 
---
--- ### Wyjście
---
--- Cyfry parzyste liczby `n`, każda w nowej linii (w kolejności od jedności do najwyższej cyfry).
--- Jeśli nie ma takich cyfr — brak wyjścia.
---
--- ### Przykład
---
+### Wejście
 
--- ** Wejście:**
+Jedna liczba naturalna:
 
---
--- ```
--- 932
--- ```
---
+* 1. linia: `n` (`n ≥ 0`)
 
--- ** Wyjście:**
+### Wyjście
 
---
--- ```
--- 2
--- ```
---
--- ZAD-04B — Cyfry mniejsze niż 5
---
+Cyfry parzyste liczby `n`, każda w nowej linii (w kolejności od jedności do najwyższej cyfry).
+Jeśli nie ma takich cyfr — brak wyjścia.
 
--- ** Poziom:** ★☆☆
+### Przykład
 
--- ** Tagi:** `pętle`, `modulo`, `warunki`
+**Wejście:**
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **mniejsze niż 5**. Każdą cyfrę wypisz w osobnej linii.
---
--- Cyfry analizuj od końca (od jedności).
---
--- ### Wejście
---
--- Jedna liczba naturalna:
---
+```
+932
+```
 
--- * 1. linia: `n` (`n ≥ 0`)
+**Wyjście:**
 
---
--- ### Wyjście
---
--- Cyfry < 5, każda w nowej linii.
--- Jeśli brak — brak wyjścia.
---
--- ### Przykład
---
+```
+2
+```
 
--- ** Wejście:**
+ZAD-04B — Cyfry mniejsze niż 5
 
---
--- ```
--- 101
--- ```
---
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `warunki`
 
--- ** Wyjście:**
+### Treść
 
---
--- ```
--- 1
--- 0
--- 1
--- ```
---
--- ZAD-04C — Cyfry różne od zera
---
+Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **mniejsze niż 5**. Każdą cyfrę wypisz w osobnej linii.
 
--- ** Poziom:** ★☆☆
+Cyfry analizuj od końca (od jedności).
 
--- ** Tagi:** `pętle`, `modulo`, `warunki`
+### Wejście
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **różne od zera**. Każdą cyfrę wypisz w osobnej linii.
---
--- Cyfry analizuj od końca (od jedności).
---
--- ### Wejście
---
--- Jedna liczba naturalna:
---
+Jedna liczba naturalna:
 
--- * 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` (`n ≥ 0`)
 
---
--- ### Wyjście
---
--- Cyfry ≠ 0, każda w nowej linii.
--- Jeśli brak — brak wyjścia.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Cyfry < 5, każda w nowej linii.
+Jeśli brak — brak wyjścia.
 
---
--- ```
--- 650
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 5
--- 6
--- ```
---
--- ### Uwagi o formatowaniu
---
+```
+101
+```
 
--- * W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`.
+**Wyjście:**
 
+```
+1
+0
+1
+```
+
+ZAD-04C — Cyfry różne od zera
+
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `warunki`
+
+### Treść
+
+Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **różne od zera**. Każdą cyfrę wypisz w osobnej linii.
+
+Cyfry analizuj od końca (od jedności).
+
+### Wejście
+
+Jedna liczba naturalna:
+
+* 1. linia: `n` (`n ≥ 0`)
+
+### Wyjście
+
+Cyfry ≠ 0, każda w nowej linii.
+Jeśli brak — brak wyjścia.
+
+### Przykład
+
+**Wejście:**
+
+```
+650
+```
+
+**Wyjście:**
+
+```
+5
+6
+```
+
+### Uwagi o formatowaniu
+
+* W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`.
+
+-}
 main :: IO ()
 main = pure ()

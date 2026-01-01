@@ -1,49 +1,40 @@
--- ZAD-04 — Sortowanie napisów według długości
---
+{-
+ZAD-04 — Sortowanie napisów według długości
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `string`, `list`
 
--- ** Tagi:** `sort`, `string`, `list`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę napisów. Posortuj ją rosnąco według długości napisów.
---
--- ### Wejście
---
+Otrzymujesz listę napisów. Posortuj ją rosnąco według długości napisów.
 
--- * 1 linia: liczba naturalna `N`
+### Wejście
 
--- * następnie `N` linii: napis (bez spacji)
+* 1 linia: liczba naturalna `N`
+* następnie `N` linii: napis (bez spacji)
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1 linia: lista napisów posortowana jak w przykładzie
+* 1 linia: lista napisów posortowana jak w przykładzie
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 4
--- abcd
--- ab
--- a
--- abc
--- ```
---
+```
+4
+abcd
+ab
+a
+abc
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- ['a', 'ab', 'abc', 'abcd']
--- ```
+```
+['a', 'ab', 'abc', 'abcd']
+```
+
+-}
 main :: IO ()
 main = pure ()

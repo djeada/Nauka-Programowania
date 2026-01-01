@@ -1,56 +1,45 @@
--- ZAD-11 — Palindrom w systemie binarnym
---
+{-
+ZAD-11 — Palindrom w systemie binarnym
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `binarne`, `palindrom`, `string`
 
--- ** Tagi:** `binarne`, `palindrom`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n`. Sprawdź, czy jej reprezentacja binarna (bez wiodących zer) jest palindromem.
---
--- Wypisz:
---
+Wczytaj liczbę naturalną `n`. Sprawdź, czy jej reprezentacja binarna (bez wiodących zer) jest palindromem.
 
--- * `Prawda` — jeśli tak,
+Wypisz:
 
--- * `Fałsz` — jeśli nie.
+* `Prawda` — jeśli tak,
+* `Fałsz` — jeśli nie.
 
---
--- ### Wejście
---
+### Wejście
 
--- * 1. linia: `n`
+* 1. linia: `n`
 
---
--- ### Wyjście
---
--- Jedno słowo: `Prawda` lub `Fałsz`.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedno słowo: `Prawda` lub `Fałsz`.
 
---
--- ```
--- 26
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- Fałsz
--- ```
---
--- ### Uwagi (ważne)
---
+```
+26
+```
 
--- * `26` ma zapis binarny `11010`, który **nie** jest palindromem.
+**Wyjście:**
 
---   (W Twoim wcześniejszym przykładzie było to opisane błędnie — tu trzymamy się definicji palindromu 1:1.)
+```
+Fałsz
+```
+
+### Uwagi (ważne)
+
+* `26` ma zapis binarny `11010`, który **nie** jest palindromem.
+  (W Twoim wcześniejszym przykładzie było to opisane błędnie — tu trzymamy się definicji palindromu 1:1.)
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,45 +1,37 @@
--- ZAD-08 — Wypisz pionowo słowa ze zdania
---
+{-
+ZAD-08 — Wypisz pionowo słowa ze zdania
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `split`, `string`
 
--- ** Tagi:** `split`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj zdanie, podziel na słowa i wypisz każde słowo w osobnej linii. Interpunkcja nie jest słowem.
---
--- ### Wejście
---
+Wczytaj zdanie, podziel na słowa i wypisz każde słowo w osobnej linii. Interpunkcja nie jest słowem.
 
--- * 1. linia: zdanie
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: zdanie
 
--- * wiele linii: słowa w kolejności występowania
+### Wyjście
 
---
--- ### Przykład
---
+* wiele linii: słowa w kolejności występowania
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- Ala ma kota
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+Ala ma kota
+```
 
---
--- ```
--- Ala
--- ma
--- kota
--- ```
+**Wyjście:**
+
+```
+Ala
+ma
+kota
+```
+
+-}
 main :: IO ()
 main = pure ()

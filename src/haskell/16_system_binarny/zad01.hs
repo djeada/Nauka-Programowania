@@ -1,87 +1,70 @@
--- ZAD-01A — Dziesiętny → binarny
---
+{-
+ZAD-01A — Dziesiętny → binarny
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `konwersja`, `binarne`, `pętle`
 
--- ** Tagi:** `konwersja`, `binarne`, `pętle`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną w systemie dziesiętnym i wypisz jej reprezentację binarną.
---
--- ### Wejście
---
+Wczytaj liczbę naturalną w systemie dziesiętnym i wypisz jej reprezentację binarną.
 
--- * 1. linia: `n` (liczba naturalna)
+### Wejście
 
---
--- ### Wyjście
---
--- Jedna linia: zapis binarny `n`.
---
--- ### Przykład
---
+* 1. linia: `n` (liczba naturalna)
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- 3
--- ```
---
+Jedna linia: zapis binarny `n`.
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- 11
--- ```
---
--- ### Uwagi o formacie
---
+**Wejście:**
 
--- * Dla `n = 0` wypisz `0`.
+```
+3
+```
 
---
--- ZAD-01B — Binarny → dziesiętny
---
+**Wyjście:**
 
--- ** Poziom:** ★☆☆
+```
+11
+```
 
--- ** Tagi:** `konwersja`, `string`, `binarne`
+### Uwagi o formacie
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną w systemie binarnym (ciąg `0/1`) i wypisz jej wartość w systemie dziesiętnym.
---
--- ### Wejście
---
+* Dla `n = 0` wypisz `0`.
 
--- * 1. linia: `b` (ciąg znaków `0` i `1`)
+ZAD-01B — Binarny → dziesiętny
 
---
--- ### Wyjście
---
--- Jedna linia: liczba w systemie dziesiętnym.
---
--- ### Przykład
---
+**Poziom:** ★☆☆
+**Tagi:** `konwersja`, `string`, `binarne`
 
--- ** Wejście:**
+### Treść
 
---
--- ```
--- 101
--- ```
---
+Wczytaj liczbę naturalną w systemie binarnym (ciąg `0/1`) i wypisz jej wartość w systemie dziesiętnym.
 
--- ** Wyjście:**
+### Wejście
 
---
--- ```
--- 5
--- ```
+* 1. linia: `b` (ciąg znaków `0` i `1`)
+
+### Wyjście
+
+Jedna linia: liczba w systemie dziesiętnym.
+
+### Przykład
+
+**Wejście:**
+
+```
+101
+```
+
+**Wyjście:**
+
+```
+5
+```
+
+-}
 main :: IO ()
 main = pure ()

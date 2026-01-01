@@ -1,57 +1,44 @@
--- ZAD-05 — Litera „X”
---
+{-
+ZAD-05 — Litera „X”
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `pętle zagnieżdżone`, `warunki`, `ASCII-art`
 
--- ** Tagi:** `pętle zagnieżdżone`, `warunki`, `ASCII-art`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `n` (`n ≥ 3`) i wypisz literę `X` o wysokości `n`, zbudowaną z `*` na obu przekątnych.
---
--- W wierszu `i` i kolumnie `j` (indeksy od 0):
---
+Wczytaj `n` (`n ≥ 3`) i wypisz literę `X` o wysokości `n`, zbudowaną z `*` na obu przekątnych.
 
--- * wypisz `*`, gdy `j == i` **lub** `j == n - 1 - i`,
+W wierszu `i` i kolumnie `j` (indeksy od 0):
 
--- * w przeciwnym razie wypisz spację.
+* wypisz `*`, gdy `j == i` **lub** `j == n - 1 - i`,
+* w przeciwnym razie wypisz spację.
 
---
--- ### Wejście
---
+### Wejście
 
--- * 1. linia: `n` (`n ≥ 3`)
+* 1. linia: `n` (`n ≥ 3`)
 
---
--- ### Wyjście
---
--- `n` linii po `n` znaków (`*` lub spacja).
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+`n` linii po `n` znaków (`*` lub spacja).
 
---
--- ```
--- 5
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
+```
+5
+```
 
--- *   *
+**Wyjście:**
 
---  * *
---   *
---  * *
+```
+*   *
+ * *
+  *
+ * *
+*   *
+```
 
--- *   *
-
--- ```
+-}
 main :: IO ()
 main = pure ()

@@ -1,52 +1,42 @@
--- ZAD-04 — Usuń pary ze słownika na podstawie wartości
---
+{-
+ZAD-04 — Usuń pary ze słownika na podstawie wartości
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `filtrowanie`
 
--- ** Tagi:** `dict`, `filtrowanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj słownik (`n` par: klucz-napis, wartość-liczba) oraz liczbę `k`. Usuń wszystkie pary, gdzie wartość == `k`. Wypisz wynikowy słownik.
---
--- ### Wejście
---
+Wczytaj słownik (`n` par: klucz-napis, wartość-liczba) oraz liczbę `k`. Usuń wszystkie pary, gdzie wartość == `k`. Wypisz wynikowy słownik.
 
--- * 1 linia: `n`
+### Wejście
 
--- * następnie `n` linii: `klucz wartość`
+* 1 linia: `n`
+* następnie `n` linii: `klucz wartość`
+* ostatnia linia: `k`
 
--- * ostatnia linia: `k`
+### Wyjście
 
---
--- ### Wyjście
---
+* Słownik po usunięciu par
 
--- * Słownik po usunięciu par
+### Przykład
 
---
--- ### Przykład
---
+**Wejście:**
 
--- ** Wejście:**
+```
+4
+aaa 5
+abc 1
+xxx 5
+cba 3
+5
+```
 
---
--- ```
--- 4
--- aaa 5
--- abc 1
--- xxx 5
--- cba 3
--- 5
--- ```
---
+**Wyjście:**
 
--- ** Wyjście:**
+```
+{'abc': 1, 'cba': 3}
+```
 
---
--- ```
--- {'abc': 1, 'cba': 3}
--- ```
+-}
 main :: IO ()
 main = pure ()

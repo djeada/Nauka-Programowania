@@ -1,53 +1,43 @@
--- ZAD-01 — Wartość wielomianu w punkcie
---
+{-
+ZAD-01 — Wartość wielomianu w punkcie
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `wielomiany`, `Horner`, `I/O`
 
--- ** Tagi:** `wielomiany`, `Horner`, `I/O`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj współczynniki wielomianu ( a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 ) oraz liczbę ( x ). Oblicz wartość wielomianu w punkcie ( x ).
---
--- ### Wejście
---
+Wczytaj współczynniki wielomianu ( a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 ) oraz liczbę ( x ). Oblicz wartość wielomianu w punkcie ( x ).
 
--- * 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+### Wejście
 
--- * 2. linia: `n+1` liczb całkowitych: `a_n a_{n-1} ... a_0`
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb całkowitych: `a_n a_{n-1} ... a_0`
+* 3. linia: `x` — liczba całkowita
 
--- * 3. linia: `x` — liczba całkowita
+### Wyjście
 
---
--- ### Wyjście
---
--- Jedna liczba całkowita — wartość wielomianu w punkcie `x`.
---
--- ### Przykład
---
+Jedna liczba całkowita — wartość wielomianu w punkcie `x`.
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 2
--- 3 2 1
--- 1
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+2
+3 2 1
+1
+```
 
---
--- ```
--- 6
--- ```
---
--- ### Uwagi o formatowaniu
---
+**Wyjście:**
 
--- * Użyj schematu Hornera (jest najprostszy i najszybszy).
+```
+6
+```
 
+### Uwagi o formatowaniu
+
+* Użyj schematu Hornera (jest najprostszy i najszybszy).
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,62 +1,51 @@
--- ZAD-05 — Dziedziczenie wielokrotne: Ptak
---
+{-
+ZAD-05 — Dziedziczenie wielokrotne: Ptak
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `multiple inheritance`, `dziedziczenie`, `metody`
 
--- ** Tagi:** `multiple inheritance`, `dziedziczenie`, `metody`
+### Treść
 
---
--- ### Treść
---
--- Zaprojektuj klasy:
---
+Zaprojektuj klasy:
 
--- * **Zwierz** — metody:
+* **Zwierz** — metody:
 
---
---   * `jedz()` → wypisuje `Ptak je.`
---   * `spij()` → wypisuje `Ptak śpi.`
---   * `wydaj_dzwiek()` → wypisuje `Ptak wydaje dźwięk.`
---
+  * `jedz()` → wypisuje `Ptak je.`
+  * `spij()` → wypisuje `Ptak śpi.`
+  * `wydaj_dzwiek()` → wypisuje `Ptak wydaje dźwięk.`
 
--- * **ObiektLatajacy** — metody:
+* **ObiektLatajacy** — metody:
 
---
---   * `lec()` → wypisuje `Ptak leci.`
---   * `wyladuj()` → wypisuje `Ptak ląduje.`
---
+  * `lec()` → wypisuje `Ptak leci.`
+  * `wyladuj()` → wypisuje `Ptak ląduje.`
 
--- * **Ptak** — dziedziczy po `Zwierz` oraz `ObiektLatajacy`.
+* **Ptak** — dziedziczy po `Zwierz` oraz `ObiektLatajacy`.
 
---
--- Program testowy:
---
+Program testowy:
 
--- * tworzy obiekt `Ptak`,
+* tworzy obiekt `Ptak`,
+* wywołuje metody w kolejności: `jedz`, `spij`, `wydaj_dzwiek`, `lec`, `wyladuj`.
 
--- * wywołuje metody w kolejności: `jedz`, `spij`, `wydaj_dzwiek`, `lec`, `wyladuj`.
+### Wejście
 
---
--- ### Wejście
---
--- Brak.
---
--- ### Wyjście
---
--- Pięć linii jak w przykładzie.
---
--- ### Przykład
---
+Brak.
 
--- ** Wyjście:**
+### Wyjście
 
---
--- ```
--- Ptak je.
--- Ptak śpi.
--- Ptak wydaje dźwięk.
--- Ptak leci.
--- Ptak ląduje.
--- ```
+Pięć linii jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Ptak je.
+Ptak śpi.
+Ptak wydaje dźwięk.
+Ptak leci.
+Ptak ląduje.
+```
+
+-}
 main :: IO ()
 main = pure ()

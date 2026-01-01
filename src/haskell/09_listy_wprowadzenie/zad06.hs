@@ -1,62 +1,50 @@
--- ZAD-06 — Czy średnia elementów znajduje się w liście?
---
+{-
+ZAD-06 — Czy średnia elementów znajduje się w liście?
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `średnia`, `wyszukiwanie`
 
--- ** Tagi:** `listy`, `średnia`, `wyszukiwanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych. Oblicz średnią arytmetyczną elementów i sprawdź, czy ta średnia jest **dokładnie** jednym z elementów listy.
---
--- Wypisz:
---
+Wczytaj listę liczb całkowitych. Oblicz średnią arytmetyczną elementów i sprawdź, czy ta średnia jest **dokładnie** jednym z elementów listy.
 
--- * `Tak` — jeśli średnia występuje w liście,
+Wypisz:
 
--- * `Nie` — w przeciwnym razie.
+* `Tak` — jeśli średnia występuje w liście,
+* `Nie` — w przeciwnym razie.
 
---
--- ### Wejście
---
+### Wejście
 
--- * 1. linia: `N` (`N ≥ 1`)
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
--- * kolejne `N` linii: liczby całkowite
+### Wyjście
 
---
--- ### Wyjście
---
--- Jedno słowo: `Tak` lub `Nie`.
---
--- ### Przykład
---
+Jedno słowo: `Tak` lub `Nie`.
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 5
--- 6
--- 2
--- 1
--- 4
--- 27
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+5
+6
+2
+1
+4
+27
+```
 
---
--- ```
--- Nie
--- ```
---
--- ### Uwagi
---
+**Wyjście:**
 
--- * Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb całkowitych.
+```
+Nie
+```
 
+### Uwagi
+
+* Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb całkowitych.
+
+-}
 main :: IO ()
 main = pure ()

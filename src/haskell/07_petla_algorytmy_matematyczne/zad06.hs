@@ -1,51 +1,42 @@
--- ZAD-06 — Najmniejsza wspólna wielokrotność (NWW)
---
+{-
+ZAD-06 — Najmniejsza wspólna wielokrotność (NWW)
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `nww`, `nwd`, `arytmetyka`
 
--- ** Tagi:** `nww`, `nwd`, `arytmetyka`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję `nww(a, b)`, która zwraca najmniejszą wspólną wielokrotność liczb `a` i `b`.
---
--- ### Wejście
---
--- Dwa argumenty funkcji:
---
+Napisz funkcję `nww(a, b)`, która zwraca najmniejszą wspólną wielokrotność liczb `a` i `b`.
 
--- * `a` (liczba naturalna, `a > 0`)
+### Wejście
 
--- * `b` (liczba naturalna, `b > 0`)
+Dwa argumenty funkcji:
 
---
--- ### Wyjście
---
--- Funkcja zwraca jedną liczbę naturalną — `NWW(a, b)`.
---
--- ### Przykład
---
+* `a` (liczba naturalna, `a > 0`)
+* `b` (liczba naturalna, `b > 0`)
 
--- ** Wywołanie funkcji:**
+### Wyjście
 
---
--- ```python
--- print(nww(7, 9))
--- ```
---
+Funkcja zwraca jedną liczbę naturalną — `NWW(a, b)`.
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- 63
--- ```
---
--- ### Ograniczenia / gwarancje
---
+**Wywołanie funkcji:**
 
--- * Możesz użyć zależności: `NWW(a, b) = (a * b) // NWD(a, b)`.
+```python
+print(nww(7, 9))
+```
 
+**Wyjście:**
+
+```
+63
+```
+
+### Ograniczenia / gwarancje
+
+* Możesz użyć zależności: `NWW(a, b) = (a * b) // NWD(a, b)`.
+
+-}
 main :: IO ()
 main = pure ()

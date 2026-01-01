@@ -1,42 +1,34 @@
--- ZAD-10 — Skopiuj pliki PNG do innego folderu (bez podfolderów)
---
+{-
+ZAD-10 — Skopiuj pliki PNG do innego folderu (bez podfolderów)
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `files`, `copy`, `png`, `shutil`
 
--- ** Tagi:** `files`, `copy`, `png`, `shutil`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz ścieżkę folderu źródłowego i docelowego. Skopiuj wszystkie pliki `.png` znajdujące się **bezpośrednio** w folderze źródłowym do folderu docelowego.
---
--- ### Wejście
---
+Otrzymujesz ścieżkę folderu źródłowego i docelowego. Skopiuj wszystkie pliki `.png` znajdujące się **bezpośrednio** w folderze źródłowym do folderu docelowego.
 
--- * 1 linia: `src_folder`
+### Wejście
 
--- * 2 linia: `dst_folder`
+* 1 linia: `src_folder`
+* 2 linia: `dst_folder`
 
---
--- ### Wyjście
---
--- Brak.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Brak.
 
---
--- ```
--- C:\Users\Username\Obrazy
--- D:\Backup\Obrazy
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
--- * (brak)*
+```
+C:\Users\Username\Obrazy
+D:\Backup\Obrazy
+```
 
+**Wyjście:**
+*(brak)*
+
+-}
 main :: IO ()
 main = pure ()

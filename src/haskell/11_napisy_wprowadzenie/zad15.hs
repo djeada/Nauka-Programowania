@@ -1,43 +1,35 @@
--- ZAD-15 — Słowa jako lista
---
+{-
+ZAD-15 — Słowa jako lista
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `split`, `list`
 
--- ** Tagi:** `split`, `list`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj zdanie i wypisz listę słów w formacie `["Ala", "ma", "kota"]`.
---
--- ### Wejście
---
+Wczytaj zdanie i wypisz listę słów w formacie `["Ala", "ma", "kota"]`.
 
--- * 1. linia: zdanie
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: zdanie
 
--- * 1. linia: lista słów (jak w przykładzie)
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: lista słów (jak w przykładzie)
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- Ala ma kota
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+Ala ma kota
+```
 
---
--- ```
--- ["Ala", "ma", "kota"]
--- ```
+**Wyjście:**
+
+```
+["Ala", "ma", "kota"]
+```
+
+-}
 main :: IO ()
 main = pure ()

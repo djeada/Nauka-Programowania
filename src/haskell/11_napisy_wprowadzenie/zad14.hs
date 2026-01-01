@@ -1,43 +1,35 @@
--- ZAD-14 — Napis z liczb od 1 do n
---
+{-
+ZAD-14 — Napis z liczb od 1 do n
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `string`
 
--- ** Tagi:** `pętle`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separatorów.
---
--- ### Wejście
---
+Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separatorów.
 
--- * 1. linia: liczba naturalna `n` (n ≥ 1)
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: liczba naturalna `n` (n ≥ 1)
 
--- * 1. linia: ciąg `1..n` bez spacji
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: ciąg `1..n` bez spacji
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 3
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+3
+```
 
---
--- ```
--- 123
--- ```
+**Wyjście:**
+
+```
+123
+```
+
+-}
 main :: IO ()
 main = pure ()

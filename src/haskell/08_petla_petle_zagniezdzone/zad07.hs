@@ -1,59 +1,51 @@
--- ZAD-07 — Choinka z N trójkątów
---
+{-
+ZAD-07 — Choinka z N trójkątów
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `pętle zagnieżdżone`, `generowanie`, `print`
 
--- ** Tagi:** `pętle zagnieżdżone`, `generowanie`, `print`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `N` (`N ≥ 1`). Wypisz choinkę składającą się z `N` trójkątów ustawionych jeden pod drugim:
---
+Wczytaj liczbę naturalną `N` (`N ≥ 1`). Wypisz choinkę składającą się z `N` trójkątów ustawionych jeden pod drugim:
 
--- * 1. trójkąt ma wysokość 1,
+* 1. trójkąt ma wysokość 1,
+* 2. trójkąt ma wysokość 2,
+* …
+* `N`-ty trójkąt ma wysokość `N`.
 
--- * 2. trójkąt ma wysokość 2,
+Każdy trójkąt jest „rosnący” (jak w ZAD-02): w jego wierszu `i` wypisz `i` gwiazdek.
 
--- * …
+### Wejście
 
--- * `N`-ty trójkąt ma wysokość `N`.
+* 1. linia: `N` (`N ≥ 1`)
 
---
--- Każdy trójkąt jest „rosnący” (jak w ZAD-02): w jego wierszu `i` wypisz `i` gwiazdek.
---
--- ### Wejście
---
+### Wyjście
 
--- * 1. linia: `N` (`N ≥ 1`)
+Suma wysokości wszystkich trójkątów, czyli `1 + 2 + ... + N` linii.
 
---
--- ### Wyjście
---
--- Suma wysokości wszystkich trójkątów, czyli `1 + 2 + ... + N` linii.
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 3
--- ```
---
+```
+3
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
+```
+*
+*
+**
+*
+**
+***
+```
 
--- ```
---
--- ### Uwagi o formatowaniu
---
+### Uwagi o formatowaniu
 
--- * Nie dodawaj pustych linii między trójkątami.
+* Nie dodawaj pustych linii między trójkątami.
 
+-}
 main :: IO ()
 main = pure ()

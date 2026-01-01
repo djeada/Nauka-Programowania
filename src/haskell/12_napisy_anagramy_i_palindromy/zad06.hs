@@ -1,50 +1,41 @@
--- ZAD-06 — Permutacje słowa, które są palindromami
---
+{-
+ZAD-06 — Permutacje słowa, które są palindromami
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `palindrom`, `permutacje`, `multiset`
 
--- ** Tagi:** `palindrom`, `permutacje`, `multiset`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj słowo i wypisz wszystkie **unikalne** palindromy, które są jego permutacjami.
---
--- ### Wejście
---
+Wczytaj słowo i wypisz wszystkie **unikalne** palindromy, które są jego permutacjami.
 
--- * 1. linia: słowo (litery mogą się powtarzać)
+### Wejście
 
---
--- ### Wyjście
---
--- Każdy unikalny palindrom w osobnej linii. Jeśli nie istnieje żaden — puste wyjście.
---
--- ### Przykład
---
+* 1. linia: słowo (litery mogą się powtarzać)
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- aabb
--- ```
---
+Każdy unikalny palindrom w osobnej linii. Jeśli nie istnieje żaden — puste wyjście.
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- abba
--- baab
--- ```
---
--- ### Uwagi
---
+**Wejście:**
 
--- * Najpierw sprawdź warunek istnienia palindromu z liter: co najwyżej jeden znak może mieć nieparzystą liczbę wystąpień.
+```
+aabb
+```
 
--- * Generuj palindromy z połówek (bez wypisywania duplikatów).
+**Wyjście:**
 
+```
+abba
+baab
+```
+
+### Uwagi
+
+* Najpierw sprawdź warunek istnienia palindromu z liter: co najwyżej jeden znak może mieć nieparzystą liczbę wystąpień.
+* Generuj palindromy z połówek (bez wypisywania duplikatów).
+
+-}
 main :: IO ()
 main = pure ()

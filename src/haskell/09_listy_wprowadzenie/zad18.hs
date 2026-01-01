@@ -1,48 +1,41 @@
--- ZAD-18 — Indeks najmniejszego elementu w przesuniętej liście
---
+{-
+ZAD-18 — Indeks najmniejszego elementu w przesuniętej liście
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `binarne`, `rotacja`, `minimum`
 
--- ** Tagi:** `binarne`, `rotacja`, `minimum`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych, która była posortowana rosnąco i została przesunięta w prawo o nieznaną liczbę miejsc. Znajdź indeks najmniejszego elementu.
---
--- ### Wejście
---
+Wczytaj listę liczb całkowitych, która była posortowana rosnąco i została przesunięta w prawo o nieznaną liczbę miejsc. Znajdź indeks najmniejszego elementu.
 
--- * 1. linia: `N` (`N ≥ 1`)
+### Wejście
 
--- * kolejne `N` linii: liczby całkowite
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
---
--- ### Wyjście
---
--- Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
 
---
--- ```
--- 5
--- 7
--- 8
--- -1
--- 4
--- 5
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 2
--- ```
+```
+5
+7
+8
+-1
+4
+5
+```
+
+**Wyjście:**
+
+```
+2
+```
+
+-}
 main :: IO ()
 main = pure ()

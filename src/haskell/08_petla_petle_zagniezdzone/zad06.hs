@@ -1,63 +1,49 @@
--- ZAD-06 — Litera „Z”
---
+{-
+ZAD-06 — Litera „Z”
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `pętle zagnieżdżone`, `warunki`, `ASCII-art`
 
--- ** Tagi:** `pętle zagnieżdżone`, `warunki`, `ASCII-art`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `n` (`n ≥ 3`) i wypisz literę `Z` o wysokości `n`:
---
+Wczytaj `n` (`n ≥ 3`) i wypisz literę `Z` o wysokości `n`:
 
--- * pierwszy wiersz: `n` gwiazdek,
+* pierwszy wiersz: `n` gwiazdek,
+* ostatni wiersz: `n` gwiazdek,
+* w środku: jedna gwiazdka na przekątnej od prawej do lewej.
 
--- * ostatni wiersz: `n` gwiazdek,
+W wierszu `i` (0..n-1) i kolumnie `j`:
 
--- * w środku: jedna gwiazdka na przekątnej od prawej do lewej.
+* jeśli `i == 0` lub `i == n-1` → `*`
+* else jeśli `j == n-1-i` → `*`
+* else → spacja
 
---
--- W wierszu `i` (0..n-1) i kolumnie `j`:
---
+### Wejście
 
--- * jeśli `i == 0` lub `i == n-1` → `*`
+* 1. linia: `n` (`n ≥ 3`)
 
--- * else jeśli `j == n-1-i` → `*`
+### Wyjście
 
--- * else → spacja
+`n` linii po `n` znaków.
 
---
--- ### Wejście
---
+### Przykład
 
--- * 1. linia: `n` (`n ≥ 3`)
+**Wejście:**
 
---
--- ### Wyjście
---
--- `n` linii po `n` znaków.
---
--- ### Przykład
---
+```
+5
+```
 
--- ** Wejście:**
+**Wyjście:**
 
---
--- ```
--- 5
--- ```
---
+```
+*****
+   *
+  *
+ *
+*****
+```
 
--- ** Wyjście:**
-
---
--- ```
-
---    *
---   *
---  *
-
--- ```
+-}
 main :: IO ()
 main = pure ()

@@ -1,66 +1,61 @@
--- ZAD-05 — Klasa Macierz
---
+{-
+ZAD-05 — Klasa Macierz
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `class`, `macierze`, `operacje`
 
--- ** Tagi:** `class`, `macierze`, `operacje`
+### Treść
 
---
--- ### Treść
---
--- Zaprojektuj klasę **Macierz**:
---
--- 1. Konstruktor przyjmuje listę list (domyślnie pusta).
--- 2. Operacje: dodawanie, odejmowanie, mnożenie.
--- 3. Metoda wypisująca macierz (wierszami).
--- 4. Porównania `==` i `!=`.
---
--- (Operację odwracania możesz pominąć w tym zadaniu, jeśli nie jest wymagana w sprawdzarce; najczęściej w podstawowych zadaniach nie ma testów na odwracanie.)
---
--- Program tworzy:
---
+Zaprojektuj klasę **Macierz**:
 
--- * A = [[1, 3], [4, 2]]
+1. Konstruktor przyjmuje listę list (domyślnie pusta).
+2. Operacje: dodawanie, odejmowanie, mnożenie.
+3. Metoda wypisująca macierz (wierszami).
+4. Porównania `==` i `!=`.
 
--- * B = [[5, 0], [1, 3]]
+(Operację odwracania możesz pominąć w tym zadaniu, jeśli nie jest wymagana w sprawdzarce; najczęściej w podstawowych zadaniach nie ma testów na odwracanie.)
 
---
--- Wypisuje A, B, a potem A+B, A-B, A*B.
---
--- ### Wejście
---
--- Brak.
---
--- ### Wyjście
---
--- Jak w przykładzie.
---
--- ### Przykład
---
+Program tworzy:
 
--- ** Wyjście:**
+* A = [[1, 3], [4, 2]]
+* B = [[5, 0], [1, 3]]
 
---
--- ```
--- Macierz A:
--- [1, 3]
--- [4, 2]
---
--- Macierz B:
--- [5, 0]
--- [1, 3]
---
--- Suma macierzy:
--- [6, 3]
--- [5, 5]
---
--- Różnica macierzy A - B:
--- [-4, 3]
--- [3, -1]
---
--- Iloczyn macierzy A * B:
--- [8, 9]
--- [22, 12]
--- ```
+Wypisuje A, B, a potem A+B, A-B, A*B.
+
+### Wejście
+
+Brak.
+
+### Wyjście
+
+Jak w przykładzie.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Macierz A:
+[1, 3]
+[4, 2]
+
+Macierz B:
+[5, 0]
+[1, 3]
+
+Suma macierzy:
+[6, 3]
+[5, 5]
+
+Różnica macierzy A - B:
+[-4, 3]
+[3, -1]
+
+Iloczyn macierzy A * B:
+[8, 9]
+[22, 12]
+```
+
+-}
 main :: IO ()
 main = pure ()

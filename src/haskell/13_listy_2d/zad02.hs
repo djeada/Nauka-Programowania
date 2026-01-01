@@ -1,45 +1,37 @@
--- ZAD-02 — Macierz n×n: iloczyn indeksów
---
+{-
+ZAD-02 — Macierz n×n: iloczyn indeksów
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `macierze`, `pętle zagnieżdżone`
 
--- ** Tagi:** `macierze`, `pętle zagnieżdżone`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od 0) ma wartość `i*j`.
---
--- ### Wejście
---
+Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od 0) ma wartość `i*j`.
 
--- * 1. linia: `n`
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: `n`
 
--- * `n` wierszy po `n` liczb
+### Wyjście
 
---
--- ### Przykład
---
+* `n` wierszy po `n` liczb
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 3
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+3
+```
 
---
--- ```
--- 0 0 0
--- 0 1 2
--- 0 2 4
--- ```
+**Wyjście:**
+
+```
+0 0 0
+0 1 2
+0 2 4
+```
+
+-}
 main :: IO ()
 main = pure ()

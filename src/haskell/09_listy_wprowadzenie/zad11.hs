@@ -1,52 +1,42 @@
--- ZAD-11 — Samochody jadące w przeciwnych kierunkach
---
+{-
+ZAD-11 — Samochody jadące w przeciwnych kierunkach
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `listy`, `zliczanie`, `string`
 
--- ** Tagi:** `listy`, `zliczanie`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `N` oraz napis długości `N` złożony z liter `A` i `B`:
---
+Wczytaj `N` oraz napis długości `N` złożony z liter `A` i `B`:
 
--- * `A` oznacza samochód jadący na wschód,
+* `A` oznacza samochód jadący na wschód,
+* `B` oznacza samochód jadący na zachód.
 
--- * `B` oznacza samochód jadący na zachód.
+Policz, ile par samochodów minie się, gdy uznamy, że para mija się wtedy, gdy `A` stoi **przed** `B` w ciągu.
 
---
--- Policz, ile par samochodów minie się, gdy uznamy, że para mija się wtedy, gdy `A` stoi **przed** `B` w ciągu.
---
--- ### Wejście
---
+### Wejście
 
--- * 1. linia: `N` (`N ≥ 1`)
+* 1. linia: `N` (`N ≥ 1`)
+* 2. linia: napis długości `N`, tylko `A` i `B` (bez spacji)
 
--- * 2. linia: napis długości `N`, tylko `A` i `B` (bez spacji)
+### Wyjście
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna — liczba mijających się par.
---
--- ### Przykład
---
+Jedna liczba naturalna — liczba mijających się par.
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 5
--- ABABB
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+5
+ABABB
+```
 
---
--- ```
--- 5
--- ```
+**Wyjście:**
+
+```
+5
+```
+
+-}
 main :: IO ()
 main = pure ()

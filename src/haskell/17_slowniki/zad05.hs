@@ -1,51 +1,42 @@
--- ZAD-05 — Pracownik z największym sumarycznym zyskiem
---
+{-
+ZAD-05 — Pracownik z największym sumarycznym zyskiem
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `sumowanie`
 
--- ** Tagi:** `dict`, `sumowanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `n` wpisów: `pracownik zysk`. Zsumuj zyski per pracownik i wypisz nazwę pracownika z największą sumą.
--- (Jeśli remis, wybierz tego, który pierwszy osiągnął tę maksymalną sumę podczas przetwarzania.)
---
--- ### Wejście
---
+Wczytaj `n` wpisów: `pracownik zysk`. Zsumuj zyski per pracownik i wypisz nazwę pracownika z największą sumą.
+(Jeśli remis, wybierz tego, który pierwszy osiągnął tę maksymalną sumę podczas przetwarzania.)
 
--- * 1 linia: `n`
+### Wejście
 
--- * następnie `n` linii: `imie_i_nazwisko zysk`
+* 1 linia: `n`
+* następnie `n` linii: `imie_i_nazwisko zysk`
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * Jedna linia: `imie_i_nazwisko`
+* Jedna linia: `imie_i_nazwisko`
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 5
--- Barnaba_Barabash 120
--- Jon_Snow 100
--- Kira_Summer 300
--- Barnaba_Barabash 200
--- Bob_Marley 110
--- ```
---
+```
+5
+Barnaba_Barabash 120
+Jon_Snow 100
+Kira_Summer 300
+Barnaba_Barabash 200
+Bob_Marley 110
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Barnaba_Barabash
--- ```
+```
+Barnaba_Barabash
+```
+
+-}
 main :: IO ()
 main = pure ()

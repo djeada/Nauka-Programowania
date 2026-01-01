@@ -1,65 +1,49 @@
--- ZAD-01 — Numer dnia tygodnia lub miesiąca
---
+{-
+ZAD-01 — Numer dnia tygodnia lub miesiąca
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if`, `zakresy`, `I/O`
 
--- ** Tagi:** `if`, `zakresy`, `I/O`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n`. Wypisz `n` **tylko wtedy**, gdy jest poprawnym numerem:
---
+Wczytaj liczbę naturalną `n`. Wypisz `n` **tylko wtedy**, gdy jest poprawnym numerem:
 
--- * dnia tygodnia (1–7) **lub**
+* dnia tygodnia (1–7) **lub**
+* miesiąca (1–12).
 
--- * miesiąca (1–12).
+W praktyce oznacza to: wypisz `n` tylko wtedy, gdy `1 ≤ n ≤ 12`.
 
---
--- W praktyce oznacza to: wypisz `n` tylko wtedy, gdy `1 ≤ n ≤ 12`.
---
--- ### Wejście
---
+### Wejście
 
--- * 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * Jeśli `1 ≤ n ≤ 12`: wypisz `n` w osobnej linii
+* Jeśli `1 ≤ n ≤ 12`: wypisz `n` w osobnej linii
+* W przeciwnym razie: brak wyjścia
 
--- * W przeciwnym razie: brak wyjścia
+### Przykłady
 
---
--- ### Przykłady
---
+**Wejście:**
 
--- ** Wejście:**
+```
+5
+```
 
---
--- ```
--- 5
--- ```
---
+**Wyjście:**
 
--- ** Wyjście:**
+```
+5
+```
 
---
--- ```
--- 5
--- ```
---
+**Wejście:**
 
--- ** Wejście:**
+```
+15
+```
 
---
--- ```
--- 15
--- ```
---
+**Wyjście:** *(brak)*
 
--- ** Wyjście:** *(brak)*
-
+-}
 main :: IO ()
 main = pure ()

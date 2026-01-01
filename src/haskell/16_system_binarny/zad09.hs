@@ -1,121 +1,97 @@
--- ZAD-09A — Wielkie → małe (bitowo)
---
+{-
+ZAD-09A — Wielkie → małe (bitowo)
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `string`
 
--- ** Tagi:** `ASCII`, `bitwise`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj napis z liter alfabetu łacińskiego. Zamień wszystkie wielkie litery na małe, używając operacji bitowych na kodach ASCII.
---
--- ### Wejście
---
+Wczytaj napis z liter alfabetu łacińskiego. Zamień wszystkie wielkie litery na małe, używając operacji bitowych na kodach ASCII.
 
--- * 1. linia: napis
+### Wejście
 
---
--- ### Wyjście
---
--- Jedna linia: napis po konwersji.
---
--- ### Przykład
---
+* 1. linia: napis
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- Test
--- ```
---
+Jedna linia: napis po konwersji.
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- test
--- ```
---
--- ZAD-09B — Małe → wielkie (bitowo)
---
+**Wejście:**
 
--- ** Poziom:** ★★☆
+```
+Test
+```
 
--- ** Tagi:** `ASCII`, `bitwise`, `string`
+**Wyjście:**
 
---
--- ### Treść
---
--- Wczytaj napis. Zamień wszystkie małe litery na wielkie, używając operacji bitowych na ASCII.
---
--- ### Wejście
---
+```
+test
+```
 
--- * 1. linia: napis
+ZAD-09B — Małe → wielkie (bitowo)
 
---
--- ### Wyjście
---
--- Jedna linia: napis po konwersji.
---
--- ### Przykład
---
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `string`
 
--- ** Wejście:**
+### Treść
 
---
--- ```
--- Test
--- ```
---
+Wczytaj napis. Zamień wszystkie małe litery na wielkie, używając operacji bitowych na ASCII.
 
--- ** Wyjście:**
+### Wejście
 
---
--- ```
--- TEST
--- ```
---
--- ZAD-09C — Odwróć wielkość liter (bitowo)
---
+* 1. linia: napis
 
--- ** Poziom:** ★★☆
+### Wyjście
 
--- ** Tagi:** `ASCII`, `bitwise`, `toggle case`
+Jedna linia: napis po konwersji.
 
---
--- ### Treść
---
--- Wczytaj napis. Zamień wielkość każdej litery na przeciwną (mała↔wielka) używając operacji bitowych na ASCII.
---
--- ### Wejście
---
+### Przykład
 
--- * 1. linia: napis
+**Wejście:**
 
---
--- ### Wyjście
---
--- Jedna linia: napis po zmianie.
---
--- ### Przykład
---
+```
+Test
+```
 
--- ** Wejście:**
+**Wyjście:**
 
---
--- ```
--- Test
--- ```
---
+```
+TEST
+```
 
--- ** Wyjście:**
+ZAD-09C — Odwróć wielkość liter (bitowo)
 
---
--- ```
--- tEST
--- ```
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `toggle case`
+
+### Treść
+
+Wczytaj napis. Zamień wielkość każdej litery na przeciwną (mała↔wielka) używając operacji bitowych na ASCII.
+
+### Wejście
+
+* 1. linia: napis
+
+### Wyjście
+
+Jedna linia: napis po zmianie.
+
+### Przykład
+
+**Wejście:**
+
+```
+Test
+```
+
+**Wyjście:**
+
+```
+tEST
+```
+
+-}
 main :: IO ()
 main = pure ()

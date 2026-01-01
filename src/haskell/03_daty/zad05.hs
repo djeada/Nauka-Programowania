@@ -1,47 +1,38 @@
--- ZAD-05 — Liczba dni w miesiącu (rok nieprzestępny)
---
+{-
+ZAD-05 — Liczba dni w miesiącu (rok nieprzestępny)
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if`, `tablice`, `walidacja`
 
--- ** Tagi:** `if`, `tablice`, `walidacja`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj numer miesiąca `m`. Zakładając rok **nieprzestępny**, wypisz liczbę dni w tym miesiącu.
--- Jeśli `m` nie jest w zakresie 1–12, wypisz:
--- `Niepoprawny numer miesiąca.`
---
--- ### Wejście
---
+Wczytaj numer miesiąca `m`. Zakładając rok **nieprzestępny**, wypisz liczbę dni w tym miesiącu.
+Jeśli `m` nie jest w zakresie 1–12, wypisz:
+`Niepoprawny numer miesiąca.`
 
--- * 1 linia: `m` (liczba całkowita, `m ≥ 0`)
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: `m` (liczba całkowita, `m ≥ 0`)
 
--- * liczba dni (jedna linia) **albo**
+### Wyjście
 
--- * komunikat o błędzie (jedna linia)
+* liczba dni (jedna linia) **albo**
+* komunikat o błędzie (jedna linia)
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 2
--- ```
---
+```
+2
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 28
--- ```
+```
+28
+```
+
+-}
 main :: IO ()
 main = pure ()

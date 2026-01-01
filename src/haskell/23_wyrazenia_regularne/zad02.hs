@@ -1,55 +1,47 @@
--- ZAD-02 — Sprawdź poprawność hasła
---
+{-
+ZAD-02 — Sprawdź poprawność hasła
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `walidacja`
 
--- ** Tagi:** `regex`, `string`, `walidacja`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz napis reprezentujący hasło. Sprawdź, czy hasło spełnia wszystkie warunki:
---
--- 1. Zawiera co najmniej jedną małą literę `[a–z]`.
--- 2. Zawiera co najmniej jedną wielką literę `[A–Z]`.
--- 3. Zawiera co najmniej jedną cyfrę `[0–9]`.
--- 4. Zawiera co najmniej jeden znak specjalny spośród:
---    `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`.
--- 5. Ma długość co najmniej 8 znaków.
--- 6. Ma długość nie większą niż 20 znaków.
---
--- ### Wejście
---
--- Jedna linia:
---
+Otrzymujesz napis reprezentujący hasło. Sprawdź, czy hasło spełnia wszystkie warunki:
 
--- * `haslo`
+1. Zawiera co najmniej jedną małą literę `[a–z]`.
+2. Zawiera co najmniej jedną wielką literę `[A–Z]`.
+3. Zawiera co najmniej jedną cyfrę `[0–9]`.
+4. Zawiera co najmniej jeden znak specjalny spośród:
+   `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`.
+5. Ma długość co najmniej 8 znaków.
+6. Ma długość nie większą niż 20 znaków.
 
---
--- ### Wyjście
---
--- Jedna linia:
---
+### Wejście
 
--- * `Prawda` albo `Fałsz`
+Jedna linia:
 
---
--- ### Przykład
---
+* `haslo`
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- abc1234
--- ```
---
+Jedna linia:
 
--- ** Wyjście:**
+* `Prawda` albo `Fałsz`
 
---
--- ```
--- Fałsz
--- ```
+### Przykład
+
+**Wejście:**
+
+```
+abc1234
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
+
+-}
 main :: IO ()
 main = pure ()

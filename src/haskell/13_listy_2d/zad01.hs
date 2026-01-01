@@ -1,48 +1,39 @@
--- ZAD-01 — Macierz z identycznymi wierszami 0..b
---
+{-
+ZAD-01 — Macierz z identycznymi wierszami 0..b
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `macierze`, `pętle`, `print`
 
--- ** Tagi:** `macierze`, `pętle`, `print`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `a` i `b`. Wypisz macierz składającą się z `a` identycznych wierszy, gdzie każdy wiersz to liczby od `0` do `b` włącznie.
---
--- ### Wejście
---
+Wczytaj `a` i `b`. Wypisz macierz składającą się z `a` identycznych wierszy, gdzie każdy wiersz to liczby od `0` do `b` włącznie.
 
--- * 1. linia: `a`
+### Wejście
 
--- * 2. linia: `b`
+* 1. linia: `a`
+* 2. linia: `b`
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * `a` wierszy, w każdym: `0 1 2 ... b`
+* `a` wierszy, w każdym: `0 1 2 ... b`
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 3
--- 2
--- ```
---
+```
+3
+2
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 0 1 2
--- 0 1 2
--- 0 1 2
--- ```
+```
+0 1 2
+0 1 2
+0 1 2
+```
+
+-}
 main :: IO ()
 main = pure ()

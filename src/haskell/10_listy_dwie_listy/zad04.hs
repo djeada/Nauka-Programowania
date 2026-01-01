@@ -1,49 +1,40 @@
--- ZAD-04 — Iloczyn skalarny dwóch wektorów 3D
---
+{-
+ZAD-04 — Iloczyn skalarny dwóch wektorów 3D
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `wektory`, `math`
 
--- ** Tagi:** `list`, `wektory`, `math`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie listy długości 3 (wektory 3D) i oblicz ich **iloczyn skalarny**:
--- [
--- A_xB_x + A_yB_y + A_zB_z
--- ]
---
--- ### Wejście
---
+Wczytaj dwie listy długości 3 (wektory 3D) i oblicz ich **iloczyn skalarny**:
+[
+A_xB_x + A_yB_y + A_zB_z
+]
 
--- * 1 linia: wektor A (lista 3 liczb całkowitych)
+### Wejście
 
--- * 2 linia: wektor B (lista 3 liczb całkowitych)
+* 1 linia: wektor A (lista 3 liczb całkowitych)
+* 2 linia: wektor B (lista 3 liczb całkowitych)
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1 linia: jedna liczba całkowita — iloczyn skalarny
+* 1 linia: jedna liczba całkowita — iloczyn skalarny
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- [1, 2, 3]
--- [3, 1, 2]
--- ```
---
+```
+[1, 2, 3]
+[3, 1, 2]
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 11
--- ```
+```
+11
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,53 +1,45 @@
--- ZAD-16 — Indeksy pierwszej pary o sumie x
---
+{-
+ZAD-16 — Indeksy pierwszej pary o sumie x
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `hashmap`, `indeksy`, `2-sum`
 
--- ** Tagi:** `hashmap`, `indeksy`, `2-sum`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych oraz liczbę `x`. Znajdź indeksy **pierwszej** pary `(i, j)` (z `i < j`) takiej, że `lista[i] + lista[j] == x`.
---
--- Jeśli nie istnieje taka para — wypisz `-1 -1`.
---
--- ### Wejście
---
+Wczytaj listę liczb całkowitych oraz liczbę `x`. Znajdź indeksy **pierwszej** pary `(i, j)` (z `i < j`) takiej, że `lista[i] + lista[j] == x`.
 
--- * 1. linia: `N` (`N ≥ 2`)
+Jeśli nie istnieje taka para — wypisz `-1 -1`.
 
--- * kolejne `N` linii: liczby całkowite
+### Wejście
 
--- * ostatnia linia: `x` (liczba całkowita)
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `x` (liczba całkowita)
 
---
--- ### Wyjście
---
--- Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
 
---
--- ```
--- 5
--- 1
--- 3
--- 4
--- 5
--- 2
--- 5
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 0 2
--- ```
+```
+5
+1
+3
+4
+5
+2
+5
+```
+
+**Wyjście:**
+
+```
+0 2
+```
+
+-}
 main :: IO ()
 main = pure ()

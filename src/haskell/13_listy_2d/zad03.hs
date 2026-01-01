@@ -1,61 +1,49 @@
--- ZAD-03 — Macierz 2-kolumnowa z dwóch list
---
+{-
+ZAD-03 — Macierz 2-kolumnowa z dwóch list
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `macierze`
 
--- ** Tagi:** `listy`, `macierze`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie listy. Jeśli mają tę samą długość, wypisz macierz 2-kolumnową: wiersz `i` to `(lista1[i], lista2[i])`.
--- Jeśli długości są różne, wypisz: `Pusta macierz`
---
--- ### Wejście
---
+Wczytaj dwie listy. Jeśli mają tę samą długość, wypisz macierz 2-kolumnową: wiersz `i` to `(lista1[i], lista2[i])`.
+Jeśli długości są różne, wypisz: `Pusta macierz`
 
--- * 1. linia: `n`
+### Wejście
 
--- * 2. linia: `m`
+* 1. linia: `n`
+* 2. linia: `m`
+* następnie `n` liczb (pierwsza lista)
+* następnie `m` liczb (druga lista)
 
--- * następnie `n` liczb (pierwsza lista)
+### Wyjście
 
--- * następnie `m` liczb (druga lista)
+* Jeśli `n = m`: `n` wierszy `x y`
+* Jeśli `n ≠ m`: jedna linia `Pusta macierz`
 
---
--- ### Wyjście
---
+### Przykład
 
--- * Jeśli `n = m`: `n` wierszy `x y`
+**Wejście:**
 
--- * Jeśli `n ≠ m`: jedna linia `Pusta macierz`
+```
+3
+3
+3
+5
+2
+2
+8
+1
+```
 
---
--- ### Przykład
---
+**Wyjście:**
 
--- ** Wejście:**
+```
+3 2
+5 8
+2 1
+```
 
---
--- ```
--- 3
--- 3
--- 3
--- 5
--- 2
--- 2
--- 8
--- 1
--- ```
---
-
--- ** Wyjście:**
-
---
--- ```
--- 3 2
--- 5 8
--- 2 1
--- ```
+-}
 main :: IO ()
 main = pure ()

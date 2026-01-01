@@ -1,43 +1,35 @@
--- ZAD-01 — Odwróć napis
---
+{-
+ZAD-01 — Odwróć napis
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `I/O`
 
--- ** Tagi:** `string`, `I/O`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj napis i wypisz go od tyłu.
---
--- ### Wejście
---
+Wczytaj napis i wypisz go od tyłu.
 
--- * 1. linia: napis
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: napis
 
--- * 1. linia: odwrócony napis
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: odwrócony napis
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- barszcz
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+barszcz
+```
 
---
--- ```
--- zczsrab
--- ```
+**Wyjście:**
+
+```
+zczsrab
+```
+
+-}
 main :: IO ()
 main = pure ()

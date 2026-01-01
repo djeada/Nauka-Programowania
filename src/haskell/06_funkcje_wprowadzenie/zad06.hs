@@ -1,45 +1,39 @@
--- ZAD-06 — Suma cyfr liczby (funkcja)
---
+{-
+ZAD-06 — Suma cyfr liczby (funkcja)
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `pętle`, `modulo`
 
--- ** Tagi:** `funkcje`, `pętle`, `modulo`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję `suma_cyfr(n)`, która zwraca sumę cyfr liczby naturalnej `n`.
---
--- ### Wejście
---
--- Jeden argument: `n` (`n ≥ 0`)
---
--- ### Wyjście
---
--- Funkcja zwraca sumę cyfr.
---
--- ### Przykład
---
+Napisz funkcję `suma_cyfr(n)`, która zwraca sumę cyfr liczby naturalnej `n`.
 
--- ** Wywołanie funkcji:**
+### Wejście
 
---
--- ```python
--- print(suma_cyfr(13231))
--- ```
---
+Jeden argument: `n` (`n ≥ 0`)
 
--- ** Wyjście:**
+### Wyjście
 
---
--- ```
--- 10
--- ```
---
--- ### Uwagi
---
+Funkcja zwraca sumę cyfr.
 
--- * Dla `n = 0` suma cyfr to `0`.
+### Przykład
 
+**Wywołanie funkcji:**
+
+```python
+print(suma_cyfr(13231))
+```
+
+**Wyjście:**
+
+```
+10
+```
+
+### Uwagi
+
+* Dla `n = 0` suma cyfr to `0`.
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,32 +1,27 @@
--- ZAD-02 — Iloczyn wielomianu przez skalar
---
+{-
+ZAD-02 — Iloczyn wielomianu przez skalar
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `wielomiany`, `skalar`
 
--- ** Tagi:** `funkcje`, `wielomiany`, `skalar`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `k`, a następnie zwraca współczynniki wielomianu powstałego z pomnożenia każdego współczynnika przez `k`.
---
--- ### Wejście (argumenty funkcji)
---
+Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `k`, a następnie zwraca współczynniki wielomianu powstałego z pomnożenia każdego współczynnika przez `k`.
 
--- * `a` — lista współczynników `[a_n, ..., a_0]`
+### Wejście (argumenty funkcji)
 
--- * `k` — liczba (całkowita)
+* `a` — lista współczynników `[a_n, ..., a_0]`
+* `k` — liczba (całkowita)
 
---
--- ### Wyjście (zwracana wartość)
---
+### Wyjście (zwracana wartość)
 
--- * lista współczynników wielomianu `k * P(x)`
+* lista współczynników wielomianu `k * P(x)`
 
---
--- ### Przykład
---
--- Dla `a = [4, -3, 2]` i `k = -2` funkcja zwraca:
--- `[-8, 6, -4]`
+### Przykład
+
+Dla `a = [4, -3, 2]` i `k = -2` funkcja zwraca:
+`[-8, 6, -4]`
+
+-}
 main :: IO ()
 main = pure ()

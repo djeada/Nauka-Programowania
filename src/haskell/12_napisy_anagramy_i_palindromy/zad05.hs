@@ -1,52 +1,42 @@
--- ZAD-05 — Anagramy słowa w zdaniu
---
+{-
+ZAD-05 — Anagramy słowa w zdaniu
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `anagram`, `string`, `zliczanie`
 
--- ** Tagi:** `anagram`, `string`, `zliczanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj zdanie oraz słowo-klucz. Wypisz wszystkie słowa ze zdania, które są anagramami słowa-klucza (ignoruj wielkość liter).
---
--- ### Wejście
---
+Wczytaj zdanie oraz słowo-klucz. Wypisz wszystkie słowa ze zdania, które są anagramami słowa-klucza (ignoruj wielkość liter).
 
--- * 1. linia: zdanie
+### Wejście
 
--- * 2. linia: słowo-klucz `k`
+* 1. linia: zdanie
+* 2. linia: słowo-klucz `k`
 
---
--- ### Wyjście
---
--- Każde słowo ze zdania będące anagramem `k` — w osobnej linii (w kolejności występowania).
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Każde słowo ze zdania będące anagramem `k` — w osobnej linii (w kolejności występowania).
 
---
--- ```
--- Sroga kara.
--- arak
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- kara
--- ```
---
--- ### Uwagi
---
+```
+Sroga kara.
+arak
+```
 
--- * Tak jak wyżej: usuń interpunkcję z brzegów słów.
+**Wyjście:**
 
--- * Porównuj np. posortowane litery w `lower()`.
+```
+kara
+```
 
+### Uwagi
+
+* Tak jak wyżej: usuń interpunkcję z brzegów słów.
+* Porównuj np. posortowane litery w `lower()`.
+
+-}
 main :: IO ()
 main = pure ()

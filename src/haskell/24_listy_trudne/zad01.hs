@@ -1,51 +1,41 @@
--- ZAD-01 — Najdłuższy ciąg jedynek
---
+{-
+ZAD-01 — Najdłuższy ciąg jedynek
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `list`, `0/1`, `analiza`, `indeksy`
 
--- ** Tagi:** `list`, `0/1`, `analiza`, `indeksy`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Znajdź **indeks zera**, które po zamianie na `1` da **najdłuższy ciąg kolejnych jedynek**.
---
--- Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — wypisz `-1`.
---
--- ### Wejście
---
+Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Znajdź **indeks zera**, które po zamianie na `1` da **najdłuższy ciąg kolejnych jedynek**.
 
--- * 1 linia: lista `A` (tylko `0` i `1`)
+Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — wypisz `-1`.
 
---
--- ### Wyjście
---
+### Wejście
 
--- * 1 linia: indeks (liczba całkowita) albo `-1`
+* 1 linia: lista `A` (tylko `0` i `1`)
 
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+* 1 linia: indeks (liczba całkowita) albo `-1`
 
---
--- ```
--- [0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 7
--- ```
---
--- ### Uwagi
---
+```
+[0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
+```
 
--- * Jeśli kilka zer daje ten sam maksymalny wynik — wybierz to o **najmniejszym indeksie** (jeśli nie określono inaczej w testach).
+**Wyjście:**
 
+```
+7
+```
+
+### Uwagi
+
+* Jeśli kilka zer daje ten sam maksymalny wynik — wybierz to o **najmniejszym indeksie** (jeśli nie określono inaczej w testach).
+
+-}
 main :: IO ()
 main = pure ()

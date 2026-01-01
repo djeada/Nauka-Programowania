@@ -1,30 +1,28 @@
--- ZAD-09 — Usuń fragment napisu od pierwszego wystąpienia słowa klucz
---
+{-
+ZAD-09 — Usuń fragment napisu od pierwszego wystąpienia słowa klucz
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`
 
--- ** Tagi:** `regex`, `string`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz tekst (wiele zdań lub wierszy) oraz słowo klucz. Jeśli słowo klucz wystąpi w tekście, usuń całą część od **pierwszego wystąpienia** tego słowa do końca tekstu. Jeśli słowo klucz nie występuje, wypisz tekst bez zmian.
---
--- ### Wejście
---
--- Dwie części:
---
--- 1. Tekst (może mieć wiele wierszy)
--- 2. W osobnej linii: `klucz`
---
--- ### Wyjście
---
--- Zmodyfikowany tekst.
---
--- ### Przykład
---
+Otrzymujesz tekst (wiele zdań lub wierszy) oraz słowo klucz. Jeśli słowo klucz wystąpi w tekście, usuń całą część od **pierwszego wystąpienia** tego słowa do końca tekstu. Jeśli słowo klucz nie występuje, wypisz tekst bez zmian.
 
--- * (jak w treści zadania — długi tekst)*
+### Wejście
 
+Dwie części:
+
+1. Tekst (może mieć wiele wierszy)
+2. W osobnej linii: `klucz`
+
+### Wyjście
+
+Zmodyfikowany tekst.
+
+### Przykład
+
+*(jak w treści zadania — długi tekst)*
+
+-}
 main :: IO ()
 main = pure ()

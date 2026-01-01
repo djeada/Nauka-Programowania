@@ -1,60 +1,49 @@
--- ZAD-01 — Warunek kończący pętlę
---
+{-
+ZAD-01 — Warunek kończący pętlę
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `while`, `break`, `I/O`
 
--- ** Tagi:** `while`, `break`, `I/O`
+### Treść
 
---
--- ### Treść
---
--- Wczytuj kolejne liczby naturalne, dopóki nie pojawi się liczba `7`.
--- Po wczytaniu liczby `7` program kończy działanie **bez wypisywania czegokolwiek**.
---
--- ### Wejście
---
--- Dowolna liczba liczb naturalnych (każda w osobnej linii).
---
--- ### Ograniczenia / gwarancje
---
+Wczytuj kolejne liczby naturalne, dopóki nie pojawi się liczba `7`.
+Po wczytaniu liczby `7` program kończy działanie **bez wypisywania czegokolwiek**.
 
--- * W danych wejściowych na pewno pojawi się co najmniej jedna liczba `7`.
+### Wejście
 
---
--- ### Wyjście
---
--- Brak.
---
--- ### Przykład
---
+Dowolna liczba liczb naturalnych (każda w osobnej linii).
 
--- ** Wejście:**
+### Ograniczenia / gwarancje
 
---
--- ```
--- 3
--- 10
--- 5
--- 7
--- ```
---
+* W danych wejściowych na pewno pojawi się co najmniej jedna liczba `7`.
 
--- ** Wyjście:**
+### Wyjście
 
---
--- ```
--- ```
---
+Brak.
 
--- * (brak danych wyjściowych)*
+### Przykład
 
---
--- ### Uwagi o formatowaniu
---
+**Wejście:**
 
--- * Nie wypisuj żadnych komunikatów typu „Podaj liczbę”.
+```
+3
+10
+5
+7
+```
 
--- * Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana.
+**Wyjście:**
 
+```
+```
+
+*(brak danych wyjściowych)*
+
+### Uwagi o formatowaniu
+
+* Nie wypisuj żadnych komunikatów typu „Podaj liczbę”.
+* Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana.
+
+-}
 main :: IO ()
 main = pure ()

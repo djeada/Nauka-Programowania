@@ -1,46 +1,37 @@
--- ZAD-02 — Policz wystąpienia znaku
---
+{-
+ZAD-02 — Policz wystąpienia znaku
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `count`
 
--- ** Tagi:** `string`, `count`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj napis oraz jeden znak. Wypisz, ile razy ten znak występuje w napisie.
---
--- ### Wejście
---
+Wczytaj napis oraz jeden znak. Wypisz, ile razy ten znak występuje w napisie.
 
--- * 1. linia: napis
+### Wejście
 
--- * 2. linia: pojedynczy znak
+* 1. linia: napis
+* 2. linia: pojedynczy znak
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1. linia: liczba wystąpień
+* 1. linia: liczba wystąpień
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- klamra
--- a
--- ```
---
+```
+klamra
+a
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 2
--- ```
+```
+2
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,49 +1,40 @@
--- ZAD-09 — N pierwszych liczb pierwszych
---
+{-
+ZAD-09 — N pierwszych liczb pierwszych
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `pętle`, `pierwszość`, `wydajność`
 
--- ** Tagi:** `pętle`, `pierwszość`, `wydajność`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `N` (`N ≥ 1`) i wypisz pierwsze `N` liczb pierwszych w **jednej linii**, oddzielone pojedynczą spacją.
---
--- ### Wejście
---
+Wczytaj liczbę naturalną `N` (`N ≥ 1`) i wypisz pierwsze `N` liczb pierwszych w **jednej linii**, oddzielone pojedynczą spacją.
 
--- * 1. linia: `N` (`N ≥ 1`)
+### Wejście
 
---
--- ### Wyjście
---
--- Jedna linia: `N` liczb pierwszych oddzielonych spacjami.
---
--- ### Przykład
---
+* 1. linia: `N` (`N ≥ 1`)
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- 5
--- ```
---
+Jedna linia: `N` liczb pierwszych oddzielonych spacjami.
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- 2 3 5 7 11
--- ```
---
--- ### Uwagi o formatowaniu
---
+**Wejście:**
 
--- * Nie dodawaj spacji na końcu linii.
+```
+5
+```
 
--- * Do sprawdzania pierwszości wystarczy test dzielnikami do `⌊sqrt(x)⌋`.
+**Wyjście:**
 
+```
+2 3 5 7 11
+```
+
+### Uwagi o formatowaniu
+
+* Nie dodawaj spacji na końcu linii.
+* Do sprawdzania pierwszości wystarczy test dzielnikami do `⌊sqrt(x)⌋`.
+
+-}
 main :: IO ()
 main = pure ()

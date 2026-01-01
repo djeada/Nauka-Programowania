@@ -1,74 +1,58 @@
--- ZAD-08 — Obliczanie liczby kur i owiec na farmie
---
+{-
+ZAD-08 — Obliczanie liczby kur i owiec na farmie
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `układ równań`, `arytmetyka`
 
--- ** Tagi:** `układ równań`, `arytmetyka`
+### Treść
 
---
--- ### Treść
---
--- Na farmie są kury i owce. Wiadomo, że:
---
+Na farmie są kury i owce. Wiadomo, że:
 
--- * łączna liczba głów wynosi `a`,
+* łączna liczba głów wynosi `a`,
+* łączna liczba nóg wynosi `b`,
+* kura ma 2 nogi, owca ma 4 nogi,
+* każda ma dokładnie 1 głowę.
 
--- * łączna liczba nóg wynosi `b`,
+Oblicz liczbę kur oraz liczbę owiec.
 
--- * kura ma 2 nogi, owca ma 4 nogi,
+### Wejście
 
--- * każda ma dokładnie 1 głowę.
+Dwie liczby naturalne:
 
---
--- Oblicz liczbę kur oraz liczbę owiec.
---
--- ### Wejście
---
--- Dwie liczby naturalne:
---
+* 1. linia: `a` — liczba głów (`a ≥ 0`)
+* 2. linia: `b` — liczba nóg (`b ≥ 0`)
 
--- * 1. linia: `a` — liczba głów (`a ≥ 0`)
+### Ograniczenia / gwarancje
 
--- * 2. linia: `b` — liczba nóg (`b ≥ 0`)
+* Istnieje rozwiązanie w liczbach całkowitych nieujemnych.
 
---
--- ### Ograniczenia / gwarancje
---
+### Wyjście
 
--- * Istnieje rozwiązanie w liczbach całkowitych nieujemnych.
+Dwie liczby naturalne, każda w oddzielnej linii:
 
---
--- ### Wyjście
---
--- Dwie liczby naturalne, każda w oddzielnej linii:
---
--- 1. liczba kur
--- 2. liczba owiec
---
--- ### Przykład
---
+1. liczba kur
+2. liczba owiec
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 40
--- 100
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+40
+100
+```
 
---
--- ```
--- 30
--- 10
--- ```
---
--- ### Uwagi o formatowaniu
---
+**Wyjście:**
 
--- * Nie wypisuj dodatkowych opisów — tylko liczby.
+```
+30
+10
+```
 
+### Uwagi o formatowaniu
+
+* Nie wypisuj dodatkowych opisów — tylko liczby.
+
+-}
 main :: IO ()
 main = pure ()

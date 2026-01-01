@@ -47,17 +47,29 @@ def localize_delimited_comment(content, start_delimiter, end_delimiter):
     """
     start_index = None
     end_index = None
+    first_non_empty = None
+
     for i, line in enumerate(content):
-        if start_index is not None and end_index is not None:
+        if line.strip():
+            first_non_empty = i
             break
-        elif start_index is None and line.strip().startswith(start_delimiter):
-            start_index = i
-            if len(line.strip()) > len(start_delimiter) and line.strip()[
-                len(start_delimiter) :
-            ].endswith(end_delimiter):
+
+    if first_non_empty is None:
+        return None
+
+    if not content[first_non_empty].strip().startswith(start_delimiter):
+        return None
+
+    start_index = first_non_empty
+    if len(content[start_index].strip()) > len(start_delimiter) and content[
+        start_index
+    ].strip().endswith(end_delimiter):
+        end_index = start_index
+    else:
+        for i in range(start_index + 1, len(content)):
+            if content[i].strip().endswith(end_delimiter):
                 end_index = i
-        elif start_index is not None and line.strip().endswith(end_delimiter):
-            end_index = i
+                break
 
     if start_index is None or end_index is None:
         print(
@@ -65,7 +77,6 @@ def localize_delimited_comment(content, start_delimiter, end_delimiter):
         )
         return None
 
-    comment_content = content[start_index + 1 : end_index]
     del content[start_index : end_index + 1]
     return content
 
@@ -81,21 +92,32 @@ def localize_line_by_line_comment(content, delimiter):
     Returns:
         Modified content with comments removed, or None if no changes
     """
-    modified_content = []
-    removing_comments = False
-    for line in content:
-        if not removing_comments and line.strip().startswith(delimiter):
-            removing_comments = True
-        elif removing_comments and not line.strip().startswith(delimiter):
-            removing_comments = False
-
-        if not removing_comments:
-            modified_content.append(line)
-
-    if len(modified_content) == len(content):
+    if not content:
         return None
-    else:
-        return modified_content
+
+    index = 0
+    if delimiter == "#" and content[0].startswith("#!"):
+        index = 1
+
+    while index < len(content) and not content[index].strip():
+        index += 1
+
+    start_index = index
+    if index < len(content) and content[index].lstrip().startswith(delimiter):
+        index += 1
+        while index < len(content):
+            if content[index].lstrip().startswith(delimiter):
+                index += 1
+                continue
+            if not content[index].strip():
+                index += 1
+                continue
+            break
+
+    if index == start_index:
+        return None
+
+    return content[:start_index] + content[index:]
 
 
 def localize_top_comment(file_path, comment_style, start_delimiter, end_delimiter=None):
@@ -300,7 +322,7 @@ def update_descriptions(input_dir: str, output_dir: str, file_extension: str) ->
         "py": CommentInfo(delimited=('"""', '"""'), line_by_line="#"),
         "rs": CommentInfo(delimited=("/*", "*/"), line_by_line="//"),
         "sh": CommentInfo(line_by_line="#"),
-        "hs": CommentInfo(line_by_line="--"),
+        "hs": CommentInfo(delimited=("{-", "-}"), line_by_line="--"),
     }
 
     if file_extension not in file_extension_comment_map:
@@ -384,21 +406,42 @@ def update_descriptions(input_dir: str, output_dir: str, file_extension: str) ->
                 )
                 return
 
-            if comment_info.delimited is not None:
-                comment_style = CommentStyle.DELIMITED
-                start_delimiter, end_delimiter = comment_info.delimited
-            elif comment_info.line_by_line is not None:
-                comment_style = CommentStyle.LINE_BY_LINE
-                start_delimiter, end_delimiter = comment_info.line_by_line, None
-            else:
-                print("Invalid comment information.", file=sys.stderr)
-                return
-
             try:
-                localize_top_comment(file, comment_style, start_delimiter, end_delimiter)
-                insert_top_comment(
-                    file, comment_style, start_delimiter, end_delimiter, task
-                )
+                if comment_info.line_by_line is not None:
+                    localize_top_comment(
+                        file, CommentStyle.LINE_BY_LINE, comment_info.line_by_line
+                    )
+                if comment_info.delimited is not None:
+                    start_delimiter, end_delimiter = comment_info.delimited
+                    localize_top_comment(
+                        file, CommentStyle.DELIMITED, start_delimiter, end_delimiter
+                    )
+                if comment_info.line_by_line is not None:
+                    localize_top_comment(
+                        file, CommentStyle.LINE_BY_LINE, comment_info.line_by_line
+                    )
+
+                if comment_info.delimited is not None:
+                    start_delimiter, end_delimiter = comment_info.delimited
+                    insert_top_comment(
+                        file,
+                        CommentStyle.DELIMITED,
+                        start_delimiter,
+                        end_delimiter,
+                        task,
+                    )
+                elif comment_info.line_by_line is not None:
+                    insert_top_comment(
+                        file,
+                        CommentStyle.LINE_BY_LINE,
+                        comment_info.line_by_line,
+                        None,
+                        task,
+                    )
+                else:
+                    print("Invalid comment information.", file=sys.stderr)
+                    return
+
                 print(f"  Updated: {file}")
             except Exception as e:
                 print(f"Error processing {file}: {e}", file=sys.stderr)

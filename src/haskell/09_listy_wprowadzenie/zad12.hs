@@ -1,70 +1,56 @@
--- ZAD-12 — Rotacja w lewo / prawo
---
+{-
+ZAD-12 — Rotacja w lewo / prawo
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `listy`, `rotacja`, `modulo`
 
--- ** Tagi:** `listy`, `rotacja`, `modulo`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych, a następnie:
---
+Wczytaj listę liczb całkowitych, a następnie:
 
--- * `kierunek = 0` → rotacja w lewo,
+* `kierunek = 0` → rotacja w lewo,
+* `kierunek = 1` → rotacja w prawo,
 
--- * `kierunek = 1` → rotacja w prawo,
+o `K` pozycji (gdzie `K ≥ 0`). Wypisz listę po rotacji, przecinkami bez spacji.
 
---
--- o `K` pozycji (gdzie `K ≥ 0`). Wypisz listę po rotacji, przecinkami bez spacji.
---
--- ### Wejście
---
+### Wejście
 
--- * 1. linia: `N` (`N ≥ 1`)
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+* kolejna linia: `kierunek` (0 lub 1)
+* ostatnia linia: `K` (`K ≥ 0`)
 
--- * kolejne `N` linii: liczby całkowite
+### Wyjście
 
--- * kolejna linia: `kierunek` (0 lub 1)
+Jedna linia: lista po rotacji, elementy oddzielone przecinkami.
 
--- * ostatnia linia: `K` (`K ≥ 0`)
+### Przykład
 
---
--- ### Wyjście
---
--- Jedna linia: lista po rotacji, elementy oddzielone przecinkami.
---
--- ### Przykład
---
+**Wejście:**
 
--- ** Wejście:**
+```
+7
+5
+27
+6
+2
+1
+10
+8
+0
+2
+```
 
---
--- ```
--- 7
--- 5
--- 27
--- 6
--- 2
--- 1
--- 10
--- 8
--- 0
--- 2
--- ```
---
+**Wyjście:**
 
--- ** Wyjście:**
+```
+6,2,1,10,8,5,27
+```
 
---
--- ```
--- 6,2,1,10,8,5,27
--- ```
---
--- ### Uwagi
---
+### Uwagi
 
--- * Zredukuj `K` przez `K % N`.
+* Zredukuj `K` przez `K % N`.
 
+-}
 main :: IO ()
 main = pure ()

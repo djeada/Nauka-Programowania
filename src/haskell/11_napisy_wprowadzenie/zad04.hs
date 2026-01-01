@@ -1,43 +1,35 @@
--- ZAD-04 — Zamień wszystkie małe litery na duże
---
+{-
+ZAD-04 — Zamień wszystkie małe litery na duże
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `upper`
 
--- ** Tagi:** `string`, `upper`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj napis i zamień wszystkie litery na wielkie.
---
--- ### Wejście
---
+Wczytaj napis i zamień wszystkie litery na wielkie.
 
--- * 1. linia: napis
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: napis
 
--- * 1. linia: napis po konwersji
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: napis po konwersji
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- Rumcajs
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+Rumcajs
+```
 
---
--- ```
--- RUMCAJS
--- ```
+**Wyjście:**
+
+```
+RUMCAJS
+```
+
+-}
 main :: IO ()
 main = pure ()

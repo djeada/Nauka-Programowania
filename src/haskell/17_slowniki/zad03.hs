@@ -1,65 +1,54 @@
--- ZAD-03 — Biblioteka: baza wypożyczeń
---
+{-
+ZAD-03 — Biblioteka: baza wypożyczeń
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `list`, `pętle`, `string`
 
--- ** Tagi:** `dict`, `list`, `pętle`, `string`
+### Treść
 
---
--- ### Treść
---
--- Utrzymuj słownik: `imię -> lista wypożyczonych książek`.
--- Obsługuj komendy (każda w osobnej linii) aż do `koniec`:
---
+Utrzymuj słownik: `imię -> lista wypożyczonych książek`.
+Obsługuj komendy (każda w osobnej linii) aż do `koniec`:
 
--- * `dodaj [imię] [tytuł]`
+* `dodaj [imię] [tytuł]`
+* `zwróć [imię] [tytuł]`
+* `lista [imię]`
 
--- * `zwróć [imię] [tytuł]`
+Po `lista [imię]` wypisz:
 
--- * `lista [imię]`
+* jeśli lista niepusta: `Książki wypożyczone przez [imię]: t1, t2, ...`
+* jeśli brak książek (lub brak czytelnika): `Książki wypożyczone przez [imię]: brak`
 
---
--- Po `lista [imię]` wypisz:
---
+### Wejście
 
--- * jeśli lista niepusta: `Książki wypożyczone przez [imię]: t1, t2, ...`
+Wiele linii z komendami, koniec po słowie `koniec`.
 
--- * jeśli brak książek (lub brak czytelnika): `Książki wypożyczone przez [imię]: brak`
+### Wyjście
 
---
--- ### Wejście
---
--- Wiele linii z komendami, koniec po słowie `koniec`.
---
--- ### Wyjście
---
--- Tylko po komendach `lista ...`.
---
--- ### Przykład
---
+Tylko po komendach `lista ...`.
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- dodaj Jan Hobbit
--- dodaj Anna "Duma i uprzedzenie"
--- dodaj Jan "Władca Pierścieni"
--- lista Jan
--- zwróć Jan Hobbit
--- lista Jan
--- lista Anna
--- koniec
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+dodaj Jan Hobbit
+dodaj Anna "Duma i uprzedzenie"
+dodaj Jan "Władca Pierścieni"
+lista Jan
+zwróć Jan Hobbit
+lista Jan
+lista Anna
+koniec
+```
 
---
--- ```
--- Książki wypożyczone przez Jan: Hobbit, Władca Pierścieni
--- Książki wypożyczone przez Jan: Władca Pierścieni
--- Książki wypożyczone przez Anna: Duma i uprzedzenie
--- ```
+**Wyjście:**
+
+```
+Książki wypożyczone przez Jan: Hobbit, Władca Pierścieni
+Książki wypożyczone przez Jan: Władca Pierścieni
+Książki wypożyczone przez Anna: Duma i uprzedzenie
+```
+
+-}
 main :: IO ()
 main = pure ()

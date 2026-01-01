@@ -1,42 +1,38 @@
--- ZAD-06 — Maksimum z czterech liczb
---
+{-
+ZAD-06 — Maksimum z czterech liczb
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `max`, `if`, `porównania`
 
--- ** Tagi:** `max`, `if`, `porównania`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj cztery liczby naturalne i wypisz największą z nich.
---
--- ### Wejście
---
--- 4 linie: `a`, `b`, `c`, `d` (całkowite, każda `≥ 0`)
---
--- ### Wyjście
---
--- Jedna linia: największa liczba.
---
--- ### Przykład
---
+Wczytaj cztery liczby naturalne i wypisz największą z nich.
 
--- ** Wejście:**
+### Wejście
 
---
--- ```
--- 2
--- 5
--- 1
--- 4
--- ```
---
+4 linie: `a`, `b`, `c`, `d` (całkowite, każda `≥ 0`)
 
--- ** Wyjście:**
+### Wyjście
 
---
--- ```
--- 5
--- ```
+Jedna linia: największa liczba.
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+5
+1
+4
+```
+
+**Wyjście:**
+
+```
+5
+```
+
+-}
 main :: IO ()
 main = pure ()

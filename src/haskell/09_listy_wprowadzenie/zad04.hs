@@ -1,61 +1,52 @@
--- ZAD-04 — Minimum oraz maksimum
---
+{-
+ZAD-04 — Minimum oraz maksimum
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `min`, `max`
 
--- ** Tagi:** `listy`, `min`, `max`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `N` liczb całkowitych. Wypisz:
---
--- 1. największą liczbę w liście
--- 2. najmniejszą liczbę w liście
---
--- w jednej linii, oddzielone pojedynczą spacją.
---
--- ### Wejście
---
+Wczytaj `N` liczb całkowitych. Wypisz:
 
--- * 1. linia: `N` (`N ≥ 1`)
+1. największą liczbę w liście
+2. najmniejszą liczbę w liście
 
--- * kolejne `N` linii: liczby całkowite
+w jednej linii, oddzielone pojedynczą spacją.
 
---
--- ### Wyjście
---
--- Jedna linia:
---
+### Wejście
 
--- * `max min`
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedna linia:
 
---
--- ```
--- 9
--- 4
--- -7
--- 8
--- 5
--- 6
--- -9
--- 10
--- 2
--- -8
--- ```
---
+* `max min`
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- 10 -9
--- ```
+**Wejście:**
+
+```
+9
+4
+-7
+8
+5
+6
+-9
+10
+2
+-8
+```
+
+**Wyjście:**
+
+```
+10 -9
+```
+
+-}
 main :: IO ()
 main = pure ()

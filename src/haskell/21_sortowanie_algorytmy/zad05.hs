@@ -1,61 +1,50 @@
--- ZAD-05 — Sortowanie szybkie
---
+{-
+ZAD-05 — Sortowanie szybkie
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `quick-sort`, `recursion`
 
--- ** Tagi:** `sorting`, `quick-sort`, `recursion`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **Quick Sort**:
---
--- 1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.
--- 2. Wybierz **pivot** (np. pierwszy element).
--- 3. Podziel elementy na trzy grupy:
---
---    * mniejsze od pivota,
---    * równe pivotowi,
---    * większe od pivota.
--- 4. Rekurencyjnie posortuj część mniejszych i większych.
--- 5. Sklej wynik: `mniejsze + równe + większe`.
---
--- ### Wejście
---
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **Quick Sort**:
 
--- * 1 linia: lista liczb całkowitych
+1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.
+2. Wybierz **pivot** (np. pierwszy element).
+3. Podziel elementy na trzy grupy:
 
---
--- ### Wyjście
---
+   * mniejsze od pivota,
+   * równe pivotowi,
+   * większe od pivota.
+4. Rekurencyjnie posortuj część mniejszych i większych.
+5. Sklej wynik: `mniejsze + równe + większe`.
 
--- * 1 linia: posortowana lista rosnąco
+### Wejście
 
---
--- ### Przykład
---
+* 1 linia: lista liczb całkowitych
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- [6, 2, 1, 4, 27]
--- ```
---
+* 1 linia: posortowana lista rosnąco
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- [1, 2, 4, 6, 27]
--- ```
---
--- ### Uwagi o algorytmie
---
+**Wejście:**
 
--- * Średnio: `O(n log n)`, w pesymistycznym przypadku: `O(n^2)`.
+```
+[6, 2, 1, 4, 27]
+```
 
--- * Wybór pivota ma wpływ na wydajność.
+**Wyjście:**
 
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Średnio: `O(n log n)`, w pesymistycznym przypadku: `O(n^2)`.
+* Wybór pivota ma wpływ na wydajność.
+
+-}
 main :: IO ()
 main = pure ()

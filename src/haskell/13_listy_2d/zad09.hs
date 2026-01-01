@@ -1,55 +1,46 @@
--- ZAD-09 — Klepsydra o największej sumie
---
+{-
+ZAD-09 — Klepsydra o największej sumie
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `macierze`, `przeszukiwanie`
 
--- ** Tagi:** `macierze`, `przeszukiwanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj macierz `n×m` (n,m ≥ 3). Znajdź maksymalną sumę „klepsydry” (7 pól):
---
--- ```
--- a b c
---   d
--- e f g
--- ```
---
--- ### Wejście
---
+Wczytaj macierz `n×m` (n,m ≥ 3). Znajdź maksymalną sumę „klepsydry” (7 pól):
 
--- * 1. linia: `n m`
+```
+a b c
+  d
+e f g
+```
 
--- * następnie `n` wierszy po `m` liczb całkowitych
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: `n m`
+* następnie `n` wierszy po `m` liczb całkowitych
 
--- * 1 linia: maksymalna suma klepsydry
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: maksymalna suma klepsydry
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 4 4
--- 7 4 2 0
--- 4 8 10 8
--- 3 6 7 6
--- 3 9 19 14
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+4 4
+7 4 2 0
+4 8 10 8
+3 6 7 6
+3 9 19 14
+```
 
---
--- ```
--- 75
--- ```
+**Wyjście:**
+
+```
+75
+```
+
+-}
 main :: IO ()
 main = pure ()

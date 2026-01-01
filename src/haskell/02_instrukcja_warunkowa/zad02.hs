@@ -1,67 +1,56 @@
--- ZAD-02 — Porównanie dwóch liczb
---
+{-
+ZAD-02 — Porównanie dwóch liczb
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if-else`, `równość`, `string`
 
--- ** Tagi:** `if-else`, `równość`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie liczby naturalne `a` i `b`.
--- Jeśli są równe, wypisz:
--- `Liczby są identyczne.`
--- W przeciwnym razie wypisz:
--- `Liczby są różne.`
---
--- ### Wejście
---
+Wczytaj dwie liczby naturalne `a` i `b`.
+Jeśli są równe, wypisz:
+`Liczby są identyczne.`
+W przeciwnym razie wypisz:
+`Liczby są różne.`
 
--- * 1 linia: `a` (całkowita, `a ≥ 0`)
+### Wejście
 
--- * 2 linia: `b` (całkowita, `b ≥ 0`)
+* 1 linia: `a` (całkowita, `a ≥ 0`)
+* 2 linia: `b` (całkowita, `b ≥ 0`)
 
---
--- ### Wyjście
---
--- Jedna linia — dokładnie jeden z komunikatów.
---
--- ### Przykład 1
---
+### Wyjście
 
--- ** Wejście:**
+Jedna linia — dokładnie jeden z komunikatów.
 
---
--- ```
--- 7
--- 4
--- ```
---
+### Przykład 1
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- Liczby są różne.
--- ```
---
--- ### Przykład 2
---
+```
+7
+4
+```
 
--- ** Wejście:**
+**Wyjście:**
 
---
--- ```
--- 5
--- 5
--- ```
---
+```
+Liczby są różne.
+```
 
--- ** Wyjście:**
+### Przykład 2
 
---
--- ```
--- Liczby są identyczne.
--- ```
+**Wejście:**
+
+```
+5
+5
+```
+
+**Wyjście:**
+
+```
+Liczby są identyczne.
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,63 +1,55 @@
--- ZAD-06 — Sumowanie elementów ciągu
---
+{-
+ZAD-06 — Sumowanie elementów ciągu
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `ciągi`, `sumowanie`, `pętle`
 
--- ** Tagi:** `ciągi`, `sumowanie`, `pętle`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n` (`n ≥ 1`) i oblicz:
---
--- a) ( \sum_{k=1}^{n} (k^2 + k + 1) )
---
--- b) ( \sum_{k=1}^{n} (k^2 + 5k) )
---
--- c) ( \sum_{k=1}^{n} (k + 2k) )  (czyli ( \sum_{k=1}^{n} 3k ))
---
--- Wypisz trzy sumy w kolejności a), b), c).
---
--- ### Wejście
---
--- Jedna liczba naturalna:
---
+Wczytaj liczbę naturalną `n` (`n ≥ 1`) i oblicz:
 
--- * 1. linia: `n` (`n ≥ 1`)
+a) ( \sum_{k=1}^{n} (k^2 + k + 1) )
 
---
--- ### Wyjście
---
--- Trzy liczby naturalne — każda w oddzielnej linii:
---
--- 1. suma dla (a)
--- 2. suma dla (b)
--- 3. suma dla (c)
---
--- ### Przykład
---
+b) ( \sum_{k=1}^{n} (k^2 + 5k) )
 
--- ** Wejście:**
+c) ( \sum_{k=1}^{n} (k + 2k) )  (czyli ( \sum_{k=1}^{n} 3k ))
 
---
--- ```
--- 2
--- ```
---
+Wypisz trzy sumy w kolejności a), b), c).
 
--- ** Wyjście:**
+### Wejście
 
---
--- ```
--- 10
--- 16
--- 9
--- ```
---
--- ### Uwagi o formatowaniu
---
+Jedna liczba naturalna:
 
--- * Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania.
+* 1. linia: `n` (`n ≥ 1`)
 
+### Wyjście
+
+Trzy liczby naturalne — każda w oddzielnej linii:
+
+1. suma dla (a)
+2. suma dla (b)
+3. suma dla (c)
+
+### Przykład
+
+**Wejście:**
+
+```
+2
+```
+
+**Wyjście:**
+
+```
+10
+16
+9
+```
+
+### Uwagi o formatowaniu
+
+* Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania.
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,47 +1,38 @@
--- ZAD-09 — Najdłuższy wspólny podnapis
---
+{-
+ZAD-09 — Najdłuższy wspólny podnapis
 
--- ** Poziom:** ★★★
+**Poziom:** ★★★
+**Tagi:** `string`, `dp`, `substring`
 
--- ** Tagi:** `string`, `dp`, `substring`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz dwa napisy. Znajdź **najdłuższy wspólny podnapis** (ciągły fragment), który występuje w obu napisach.
---
--- ### Wejście
---
+Otrzymujesz dwa napisy. Znajdź **najdłuższy wspólny podnapis** (ciągły fragment), który występuje w obu napisach.
 
--- * 1 linia: napis `A`
+### Wejście
 
--- * 2 linia: napis `B`
+* 1 linia: napis `A`
+* 2 linia: napis `B`
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1 linia: najdłuższy wspólny podnapis
+* 1 linia: najdłuższy wspólny podnapis
+  (jeśli jest kilka o tej samej długości — wybierz ten, który występuje **najwcześniej w A**; jeśli nadal remis, najwcześniej w B)
 
---   (jeśli jest kilka o tej samej długości — wybierz ten, który występuje **najwcześniej w A**; jeśli nadal remis, najwcześniej w B)
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- ijkabcdl
--- xxxxabcd
--- ```
---
+```
+ijkabcdl
+xxxxabcd
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- abcd
--- ```
+```
+abcd
+```
+
+-}
 main :: IO ()
 main = pure ()

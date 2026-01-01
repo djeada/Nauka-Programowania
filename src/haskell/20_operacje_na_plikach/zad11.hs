@@ -1,48 +1,37 @@
--- ZAD-11 — Zamień miejscami treści dwóch plików
---
+{-
+ZAD-11 — Zamień miejscami treści dwóch plików
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `files`, `swap`, `read/write`
 
--- ** Tagi:** `files`, `swap`, `read/write`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz ścieżki do dwóch plików. Zamień ich treści miejscami:
---
+Otrzymujesz ścieżki do dwóch plików. Zamień ich treści miejscami:
 
--- * plik A ma mieć dawną treść pliku B,
+* plik A ma mieć dawną treść pliku B,
+* plik B ma mieć dawną treść pliku A.
 
--- * plik B ma mieć dawną treść pliku A.
+### Wejście
 
---
--- ### Wejście
---
+* 1 linia: `file_A`
+* 2 linia: `file_B`
 
--- * 1 linia: `file_A`
+### Wyjście
 
--- * 2 linia: `file_B`
+Brak.
 
---
--- ### Wyjście
---
--- Brak.
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- C:\Users\Username\Documents\plik1.txt
--- C:\Users\Username\Documents\plik2.txt
--- ```
---
+```
+C:\Users\Username\Documents\plik1.txt
+C:\Users\Username\Documents\plik2.txt
+```
 
--- ** Wyjście:**
+**Wyjście:**
+*(brak)*
 
--- * (brak)*
-
+-}
 main :: IO ()
 main = pure ()

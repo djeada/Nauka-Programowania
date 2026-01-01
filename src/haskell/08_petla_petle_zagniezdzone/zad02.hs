@@ -1,51 +1,42 @@
--- ZAD-02 — Trójkąt prostokątny (rosnący)
---
+{-
+ZAD-02 — Trójkąt prostokątny (rosnący)
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `print`, `string`
 
--- ** Tagi:** `pętle`, `print`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt o wysokości `n`, gdzie w wierszu `i` jest `i` gwiazdek (`i = 1..n`).
---
--- ### Wejście
---
+Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt o wysokości `n`, gdzie w wierszu `i` jest `i` gwiazdek (`i = 1..n`).
 
--- * 1. linia: `n` (`n ≥ 1`)
+### Wejście
 
---
--- ### Wyjście
---
--- `n` linii:
---
+* 1. linia: `n` (`n ≥ 1`)
 
--- * 1. linia: `*`
+### Wyjście
 
--- * 2. linia: `**`
+`n` linii:
 
--- * …
+* 1. linia: `*`
+* 2. linia: `**`
+* …
+* `n`-ta linia: `n` gwiazdek
 
--- * `n`-ta linia: `n` gwiazdek
+### Przykład
 
---
--- ### Przykład
---
+**Wejście:**
 
--- ** Wejście:**
+```
+3
+```
 
---
--- ```
--- 3
--- ```
---
+**Wyjście:**
 
--- ** Wyjście:**
+```
+*
+**
+***
+```
 
---
--- ```
-
--- ```
+-}
 main :: IO ()
 main = pure ()

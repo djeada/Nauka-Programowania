@@ -1,100 +1,80 @@
--- ZAD-09 — Kalkulator kredytowy (rata annuitetowa)
---
-
--- ** Poziom:** ★★☆
-
--- ** Tagi:** `finanse`, `float`, `formatowanie`
-
---
--- ### Treść
---
--- Wczytaj:
---
-
--- * roczną stopę procentową `R` (w %),
-
--- * okres spłaty `Y` (w latach),
-
--- * kwotę kredytu `P`.
-
---
--- Oblicz miesięczną ratę `M` oraz całkowity koszt `C = M * n`, gdzie `n = 12 * Y`.
---
--- Dla `R > 0` użyj wzoru:
--- [
--- M = P \cdot \frac{r(1+r)^n}{(1+r)^n-1}
--- ]
--- gdzie `r = R / (12*100)`.
---
--- Dla `R = 0` przyjmij:
---
-
--- * `M = P / n`.
-
---
--- ### Wejście
---
--- 3 liczby (w osobnych liniach):
---
--- 1. `R` (float, `R ≥ 0`)
--- 2. `Y` (int, `Y > 0`)
--- 3. `P` (float, `P > 0`)
---
--- ### Wyjście
---
--- Dwie linie (do **2 miejsc po przecinku**):
---
--- 1. miesięczna rata `M`
--- 2. całkowity koszt `C`
---
--- ### Przykład
---
-
--- ** Wejście:**
-
---
--- ```
--- 3.5
--- 8
--- 12000
--- ```
---
-
--- ** Wyjście:**
-
---
--- ```
--- 143.50
--- 13776.00
--- ```
 {-
-Tytul: Kalkulator kredytowy
+ZAD-09 — Kalkulator kredytowy (rata annuitetowa)
 
-Tresc: Pobierz roczna stope procentowa, liczbe lat na splacenie kredytu oraz wysokosc udzielonego kredytu. Oblicz miesieczna rate oraz calkowity koszt kredytu.
+**Poziom:** ★★☆
+**Tagi:** `finanse`, `float`, `formatowanie`
 
-Dane wejsciowe: Trzy liczby naturalne.
+### Treść
 
-Dane wyjsciowe: Dwie liczby naturalne.
+Wczytaj:
 
-Przyklad:
+* roczną stopę procentową `R` (w %),
+* okres spłaty `Y` (w latach),
+* kwotę kredytu `P`.
 
-Dla pobranych liczb: 3.5 (roczna stopa procentowa), 8 (liczba lat) oraz 12000 (wysokosc kredytu), powinny zostac wypisane liczby 143.5 (miesieczna rata) oraz 13776 (calkowity koszt kredytu). Waluta jest umowna.
+Oblicz miesięczną ratę `M` oraz całkowity koszt `C = M * n`, gdzie `n = 12 * Y`.
+
+Dla `R > 0` użyj wzoru:
+[
+M = P \cdot \frac{r(1+r)^n}{(1+r)^n-1}
+]
+gdzie `r = R / (12*100)`.
+
+Dla `R = 0` przyjmij:
+
+* `M = P / n`.
+
+### Wejście
+
+3 liczby (w osobnych liniach):
+
+1. `R` (float, `R ≥ 0`)
+2. `Y` (int, `Y > 0`)
+3. `P` (float, `P > 0`)
+
+### Wyjście
+
+Dwie linie (do **2 miejsc po przecinku**):
+
+1. miesięczna rata `M`
+2. całkowity koszt `C`
+
+### Przykład
+
+**Wejście:**
+
+```
+3.5
+8
+12000
+```
+
+**Wyjście:**
+
+```
+143.50
+13776.00
+```
+
 -}
+
+
+import Text.Printf (printf)
 
 main :: IO ()
 main = do
-  putStrLn "Podaj roczna stope procentowa:"
-  annualInterestRate <- readLn :: IO Double
-  putStrLn "Podaj liczbe lat na splacenie kredytu:"
-  numberOfYears <- readLn :: IO Int
-  putStrLn "Podaj wysokosc udzielonego kredytu:"
-  loanAmount <- readLn :: IO Double
+  annualRate <- readLn :: IO Double
+  years <- readLn :: IO Int
+  principal <- readLn :: IO Double
 
-  let monthlyInterestRate = annualInterestRate / 100 / 12
-  let numberOfPayments = fromIntegral (numberOfYears * 12)
-  let ratePlusOne = 1 + monthlyInterestRate
-  let monthlyPayment = loanAmount * (monthlyInterestRate * (ratePlusOne ** numberOfPayments)) / ((ratePlusOne ** numberOfPayments) - 1)
-  let totalCost = monthlyPayment * numberOfPayments
+  let n = fromIntegral (years * 12) :: Double
+  let monthly =
+        if abs annualRate < 1e-12
+          then principal / n
+          else
+            let r = annualRate / (12 * 100)
+             in principal * (r * (1 + r) ** n) / ((1 + r) ** n - 1)
+  let total = monthly * n
 
-  putStrLn $ "Miesieczna rata: " ++ show monthlyPayment
-  putStrLn $ "Calkowity koszt kredytu: " ++ show totalCost
+  printf "%.2f\n" monthly
+  printf "%.2f\n" total

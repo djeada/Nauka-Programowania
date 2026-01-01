@@ -1,53 +1,42 @@
--- ZAD-02 — Słownik z dwóch list (klucze i wartości)
---
+{-
+ZAD-02 — Słownik z dwóch list (klucze i wartości)
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `listy`
 
--- ** Tagi:** `dict`, `listy`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie listy. Jeśli mają tę samą długość, utwórz słownik: klucz z pierwszej listy → wartość z drugiej listy.
--- Jeśli długości są różne, wypisz pusty słownik `{}`.
---
--- ### Wejście
---
+Wczytaj dwie listy. Jeśli mają tę samą długość, utwórz słownik: klucz z pierwszej listy → wartość z drugiej listy.
+Jeśli długości są różne, wypisz pusty słownik `{}`.
 
--- * 1 linia: `n`
+### Wejście
 
--- * 2 linia: `m`
+* 1 linia: `n`
+* 2 linia: `m`
+* następnie `n` liczb (pierwsza lista)
+* następnie `m` liczb (druga lista)
 
--- * następnie `n` liczb (pierwsza lista)
+### Wyjście
 
--- * następnie `m` liczb (druga lista)
+* Słownik albo `{}`
 
---
--- ### Wyjście
---
+### Przykład
 
--- * Słownik albo `{}`
+**Wejście:**
 
---
--- ### Przykład
---
+```
+3
+3
+3 5 8
+1 2 -1
+```
 
--- ** Wejście:**
+**Wyjście:**
 
---
--- ```
--- 3
--- 3
--- 3 5 8
--- 1 2 -1
--- ```
---
+```
+{3: 1, 5: 2, 8: -1}
+```
 
--- ** Wyjście:**
-
---
--- ```
--- {3: 1, 5: 2, 8: -1}
--- ```
+-}
 main :: IO ()
 main = pure ()

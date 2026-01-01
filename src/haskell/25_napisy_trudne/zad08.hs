@@ -1,48 +1,39 @@
--- ZAD-08 — Najdłuższy wspólny przedrostek
---
+{-
+ZAD-08 — Najdłuższy wspólny przedrostek
 
--- ** Poziom:** ★★★
+**Poziom:** ★★★
+**Tagi:** `string`, `prefix`, `list`
 
--- ** Tagi:** `string`, `prefix`, `list`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę napisów (w kolejnych liniach). Znajdź najdłuższy przedrostek wspólny dla wszystkich.
---
--- ### Wejście
---
+Otrzymujesz listę napisów (w kolejnych liniach). Znajdź najdłuższy przedrostek wspólny dla wszystkich.
 
--- * 1 linia: `n` — liczba napisów
+### Wejście
 
--- * kolejne `n` linii: napisy
+* 1 linia: `n` — liczba napisów
+* kolejne `n` linii: napisy
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1 linia: najdłuższy wspólny przedrostek (może być pusty)
+* 1 linia: najdłuższy wspólny przedrostek (może być pusty)
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 3
--- Remolada
--- Remux
--- Remmy
--- ```
---
+```
+3
+Remolada
+Remux
+Remmy
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Rem
--- ```
+```
+Rem
+```
+
+-}
 main :: IO ()
 main = pure ()

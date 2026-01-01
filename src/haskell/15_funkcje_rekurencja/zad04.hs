@@ -1,50 +1,41 @@
--- ZAD-04 — Mnożenie wielomianów
---
+{-
+ZAD-04 — Mnożenie wielomianów
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `wielomiany`, `konwolucja`, `I/O`
 
--- ** Tagi:** `wielomiany`, `konwolucja`, `I/O`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich iloczynem.
---
--- ### Wejście
---
+Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich iloczynem.
 
--- * 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
+### Wejście
 
--- * 2. linia: `n+1` liczb: `a_n ... a_0`
+* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb: `a_n ... a_0`
+* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
+* 4. linia: `m+1` liczb: `b_m ... b_0`
 
--- * 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
+### Wyjście
 
--- * 4. linia: `m+1` liczb: `b_m ... b_0`
+Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
 
---
--- ### Wyjście
---
--- Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 3
--- 5 0 10 6
--- 2
--- 1 2 4
--- ```
---
+```
+3
+5 0 10 6
+2
+1 2 4
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 5 10 30 26 52 24
--- ```
+```
+5 10 30 26 52 24
+```
+
+-}
 main :: IO ()
 main = pure ()

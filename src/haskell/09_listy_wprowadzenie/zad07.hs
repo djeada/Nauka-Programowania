@@ -1,49 +1,42 @@
--- ZAD-07 — Średnia dwóch największych liczb
---
+{-
+ZAD-07 — Średnia dwóch największych liczb
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `max`, `sortowanie`, `float`
 
--- ** Tagi:** `listy`, `max`, `sortowanie`, `float`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `N` liczb naturalnych (`N ≥ 2`). Znajdź największą i drugą największą wartość, a następnie wypisz ich średnią arytmetyczną jako liczbę zmiennoprzecinkową z dokładnością do **jednego** miejsca po przecinku.
---
--- ### Wejście
---
+Wczytaj `N` liczb naturalnych (`N ≥ 2`). Znajdź największą i drugą największą wartość, a następnie wypisz ich średnią arytmetyczną jako liczbę zmiennoprzecinkową z dokładnością do **jednego** miejsca po przecinku.
 
--- * 1. linia: `N` (`N ≥ 2`)
+### Wejście
 
--- * kolejne `N` linii: liczby naturalne
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby naturalne
 
---
--- ### Wyjście
---
--- Jedna liczba zmiennoprzecinkowa w formacie `%.1f`.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedna liczba zmiennoprzecinkowa w formacie `%.1f`.
 
---
--- ```
--- 6
--- 9
--- 2
--- 3
--- 2
--- 1
--- 7
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 8.0
--- ```
+```
+6
+9
+2
+3
+2
+1
+7
+```
+
+**Wyjście:**
+
+```
+8.0
+```
+
+-}
 main :: IO ()
 main = pure ()

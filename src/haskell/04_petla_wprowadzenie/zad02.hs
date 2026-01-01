@@ -1,50 +1,42 @@
--- ZAD-02 — Wypisywanie liczb mniejszych od podanej
---
+{-
+ZAD-02 — Wypisywanie liczb mniejszych od podanej
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `for`, `while`, `pętle`
 
--- ** Tagi:** `for`, `while`, `pętle`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n` (`n > 0`) i wypisz wszystkie liczby naturalne mniejsze od `n`, zaczynając od `n - 1` i kończąc na `1`.
---
--- ### Wejście
---
--- Jedna liczba naturalna:
---
+Wczytaj liczbę naturalną `n` (`n > 0`) i wypisz wszystkie liczby naturalne mniejsze od `n`, zaczynając od `n - 1` i kończąc na `1`.
 
--- * 1. linia: `n` (`n > 0`)
+### Wejście
 
---
--- ### Wyjście
---
--- Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności malejącej.
---
--- ### Przykład
---
+Jedna liczba naturalna:
 
--- ** Wejście:**
+* 1. linia: `n` (`n > 0`)
 
---
--- ```
--- 3
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności malejącej.
 
---
--- ```
--- 2
--- 1
--- ```
---
--- ### Uwagi o formatowaniu
---
+### Przykład
 
--- * Jeśli `n = 1`, nie wypisuj nic.
+**Wejście:**
 
+```
+3
+```
+
+**Wyjście:**
+
+```
+2
+1
+```
+
+### Uwagi o formatowaniu
+
+* Jeśli `n = 1`, nie wypisuj nic.
+
+-}
 main :: IO ()
 main = pure ()

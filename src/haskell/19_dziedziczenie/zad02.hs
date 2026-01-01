@@ -1,84 +1,62 @@
--- ZAD-02 — Klasa Kształt oraz klasy Koło i Kwadrat
---
+{-
+ZAD-02 — Klasa Kształt oraz klasy Koło i Kwadrat
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `dziedziczenie`, `polimorfizm`, `math`
 
--- ** Tagi:** `dziedziczenie`, `polimorfizm`, `math`
+### Treść
 
---
--- ### Treść
---
--- Zaprojektuj hierarchię klas:
---
+Zaprojektuj hierarchię klas:
 
--- * **Kształt** — klasa bazowa (ogólna) dla kształtów.
+* **Kształt** — klasa bazowa (ogólna) dla kształtów.
+* **Koło** — dziedziczy po `Kształt`.
+* **Kwadrat** — dziedziczy po `Kształt`.
 
--- * **Koło** — dziedziczy po `Kształt`.
+Każda klasa ma mieć:
 
--- * **Kwadrat** — dziedziczy po `Kształt`.
+* metodę obliczającą **pole**,
+* metodę wypisującą informacje o obiekcie: typ, parametry i pole.
 
---
--- Każda klasa ma mieć:
---
+Program:
 
--- * metodę obliczającą **pole**,
+* wczytuje promień `r` koła oraz bok `a` kwadratu,
+* tworzy obiekty `Koło(r)` i `Kwadrat(a)`,
+* wypisuje informacje o obu.
 
--- * metodę wypisującą informacje o obiekcie: typ, parametry i pole.
+**Uwaga do formatowania:**
+*Pole koła wypisz do 4 miejsc po przecinku.*
+*Pole kwadratu wypisz bez wymuszania miejsc po przecinku (jak w przykładzie).*
 
---
--- Program:
---
+### Wejście
 
--- * wczytuje promień `r` koła oraz bok `a` kwadratu,
+* 1 linia: `r` (liczba rzeczywista)
+* 2 linia: `a` (liczba rzeczywista)
 
--- * tworzy obiekty `Koło(r)` i `Kwadrat(a)`,
+### Wyjście
 
--- * wypisuje informacje o obu.
+Blok informacji o kole, pusta linia, blok informacji o kwadracie.
 
---
+### Przykład
 
--- ** Uwaga do formatowania:**
+**Wejście:**
 
--- * Pole koła wypisz do 4 miejsc po przecinku.*
+```
+5
+4
+```
 
--- * Pole kwadratu wypisz bez wymuszania miejsc po przecinku (jak w przykładzie).*
+**Wyjście:**
 
---
--- ### Wejście
---
+```
+Kształt: Koło
+Promień: 5
+Pole powierzchni: 78.5398
 
--- * 1 linia: `r` (liczba rzeczywista)
+Kształt: Kwadrat
+Długość boku: 4
+Pole powierzchni: 16
+```
 
--- * 2 linia: `a` (liczba rzeczywista)
-
---
--- ### Wyjście
---
--- Blok informacji o kole, pusta linia, blok informacji o kwadracie.
---
--- ### Przykład
---
-
--- ** Wejście:**
-
---
--- ```
--- 5
--- 4
--- ```
---
-
--- ** Wyjście:**
-
---
--- ```
--- Kształt: Koło
--- Promień: 5
--- Pole powierzchni: 78.5398
---
--- Kształt: Kwadrat
--- Długość boku: 4
--- Pole powierzchni: 16
--- ```
+-}
 main :: IO ()
 main = pure ()

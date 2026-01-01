@@ -1,52 +1,40 @@
--- ZAD-07 — Różnica między dwoma listami
---
+{-
+ZAD-07 — Różnica między dwoma listami
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `set`
 
--- ** Tagi:** `list`, `set`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **tylko w jednej** z list (różnica symetryczna).
---
+Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **tylko w jednej** z list (różnica symetryczna).
 
--- * Kolejność elementów w wyniku może być **dowolna**.
+* Kolejność elementów w wyniku może być **dowolna**.
+* Jeśli wszystkie elementy są wspólne — wypisz `[]`.
 
--- * Jeśli wszystkie elementy są wspólne — wypisz `[]`.
+### Wejście
 
---
--- ### Wejście
---
+* 1 linia: lista 1
+* 2 linia: lista 2
 
--- * 1 linia: lista 1
+### Wyjście
 
--- * 2 linia: lista 2
+* 1 linia: lista elementów niewspólnych
 
---
--- ### Wyjście
---
+### Przykład
 
--- * 1 linia: lista elementów niewspólnych
+**Wejście:**
 
---
--- ### Przykład
---
+```
+[9, 2, 5, 4]
+[4, 2, 1]
+```
 
--- ** Wejście:**
+**Wyjście (jedna z poprawnych odpowiedzi):**
 
---
--- ```
--- [9, 2, 5, 4]
--- [4, 2, 1]
--- ```
---
+```
+[9, 5, 1]
+```
 
--- ** Wyjście (jedna z poprawnych odpowiedzi):**
-
---
--- ```
--- [9, 5, 1]
--- ```
+-}
 main :: IO ()
 main = pure ()

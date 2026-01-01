@@ -1,95 +1,76 @@
--- ZAD-03A — Mnożenie przy pomocy dodawania
---
+{-
+ZAD-03A — Mnożenie przy pomocy dodawania
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `dodawanie`, `mnożenie`
 
--- ** Tagi:** `pętle`, `dodawanie`, `mnożenie`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję `iloczyn(a, b)`, która oblicza `a * b` używając **tylko dodawania** i pętli.
---
--- ### Wejście
---
--- Dwa argumenty funkcji:
---
+Napisz funkcję `iloczyn(a, b)`, która oblicza `a * b` używając **tylko dodawania** i pętli.
 
--- * `a` (liczba naturalna, `a ≥ 0`)
+### Wejście
 
--- * `b` (liczba naturalna, `b ≥ 0`)
+Dwa argumenty funkcji:
 
---
--- ### Wyjście
---
--- Funkcja zwraca jedną liczbę naturalną — `a * b`.
---
--- ### Przykład
---
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna, `b ≥ 0`)
 
--- ** Wywołanie funkcji:**
+### Wyjście
 
---
--- ```python
--- print(iloczyn(3, 2))
--- ```
---
+Funkcja zwraca jedną liczbę naturalną — `a * b`.
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- 6
--- ```
---
--- ZAD-03B — Dzielenie całkowite przy pomocy odejmowania
---
+**Wywołanie funkcji:**
 
--- ** Poziom:** ★☆☆
+```python
+print(iloczyn(3, 2))
+```
 
--- ** Tagi:** `pętle`, `odejmowanie`, `dzielenie`
+**Wyjście:**
 
---
--- ### Treść
---
--- Napisz funkcję `iloraz(a, b)`, która oblicza `a // b` używając **tylko odejmowania** i pętli.
---
--- ### Wejście
---
--- Dwa argumenty funkcji:
---
+```
+6
+```
 
--- * `a` (liczba naturalna, `a ≥ 0`)
+ZAD-03B — Dzielenie całkowite przy pomocy odejmowania
 
--- * `b` (liczba naturalna)
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `odejmowanie`, `dzielenie`
 
---
--- ### Ograniczenia / gwarancje
---
+### Treść
 
--- * `b > 0`
+Napisz funkcję `iloraz(a, b)`, która oblicza `a // b` używając **tylko odejmowania** i pętli.
 
---
--- ### Wyjście
---
--- Funkcja zwraca jedną liczbę naturalną — `a // b`.
---
--- ### Przykład
---
+### Wejście
 
--- ** Wywołanie funkcji:**
+Dwa argumenty funkcji:
 
---
--- ```python
--- print(iloraz(3, 2))
--- ```
---
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna)
 
--- ** Wyjście:**
+### Ograniczenia / gwarancje
 
---
--- ```
--- 1
--- ```
+* `b > 0`
+
+### Wyjście
+
+Funkcja zwraca jedną liczbę naturalną — `a // b`.
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(iloraz(3, 2))
+```
+
+**Wyjście:**
+
+```
+1
+```
+
+-}
 main :: IO ()
 main = pure ()

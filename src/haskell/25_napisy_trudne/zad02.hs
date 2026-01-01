@@ -1,51 +1,42 @@
--- ZAD-02 — Usuń podnapis
---
+{-
+ZAD-02 — Usuń podnapis
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `string`, `replace`, `substring`
 
--- ** Tagi:** `string`, `replace`, `substring`
+### Treść
 
---
--- ### Treść
---
--- Dostajesz dwa napisy:
---
--- 1. Napis główny,
--- 2. Podnapis do usunięcia.
---
--- Usuń **wszystkie wystąpienia** podnapisu z napisu głównego.
---
--- ### Wejście
---
+Dostajesz dwa napisy:
 
--- * 1 linia: napis `S`
+1. Napis główny,
+2. Podnapis do usunięcia.
 
--- * 2 linia: napis `T` (do usunięcia)
+Usuń **wszystkie wystąpienia** podnapisu z napisu głównego.
 
---
--- ### Wyjście
---
+### Wejście
 
--- * 1 linia: wynikowy napis po usunięciu wszystkich wystąpień
+* 1 linia: napis `S`
+* 2 linia: napis `T` (do usunięcia)
 
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+* 1 linia: wynikowy napis po usunięciu wszystkich wystąpień
 
---
--- ```
--- Lezy jezy na wiezy
--- zy
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- Le je na wie
--- ```
+```
+Lezy jezy na wiezy
+zy
+```
+
+**Wyjście:**
+
+```
+Le je na wie
+```
+
+-}
 main :: IO ()
 main = pure ()

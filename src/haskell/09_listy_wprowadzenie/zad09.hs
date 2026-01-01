@@ -1,49 +1,42 @@
--- ZAD-09 — Usuń duplikaty (z zachowaniem kolejności)
---
+{-
+ZAD-09 — Usuń duplikaty (z zachowaniem kolejności)
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `duplikaty`, `set`
 
--- ** Tagi:** `listy`, `duplikaty`, `set`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb naturalnych i usuń duplikaty tak, aby każda liczba występowała tylko raz — **zachowując kolejność pierwszego wystąpienia**.
---
--- ### Wejście
---
+Wczytaj listę liczb naturalnych i usuń duplikaty tak, aby każda liczba występowała tylko raz — **zachowując kolejność pierwszego wystąpienia**.
 
--- * 1. linia: `N` (`N ≥ 1`)
+### Wejście
 
--- * kolejne `N` linii: liczby naturalne
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby naturalne
 
---
--- ### Wyjście
---
--- Jedna linia: lista bez duplikatów, elementy oddzielone przecinkami.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedna linia: lista bez duplikatów, elementy oddzielone przecinkami.
 
---
--- ```
--- 6
--- 3
--- 2
--- 1
--- 3
--- 2
--- 2
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 3,2,1
--- ```
+```
+6
+3
+2
+1
+3
+2
+2
+```
+
+**Wyjście:**
+
+```
+3,2,1
+```
+
+-}
 main :: IO ()
 main = pure ()

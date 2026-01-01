@@ -1,39 +1,32 @@
--- ZAD-09 — Usuń pliki większe niż 10 kB (rekurencyjnie)
---
+{-
+ZAD-09 — Usuń pliki większe niż 10 kB (rekurencyjnie)
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `files`, `delete`, `size`, `recursive`
 
--- ** Tagi:** `files`, `delete`, `size`, `recursive`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz ścieżkę do folderu. Usuń wszystkie pliki o rozmiarze **> 10240 bajtów** w tym folderze i jego podfolderach.
---
--- ### Wejście
---
+Otrzymujesz ścieżkę do folderu. Usuń wszystkie pliki o rozmiarze **> 10240 bajtów** w tym folderze i jego podfolderach.
 
--- * 1 linia: `folder_path`
+### Wejście
 
---
--- ### Wyjście
---
--- Brak.
---
--- ### Przykład
---
+* 1 linia: `folder_path`
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- C:\Users\Username\Documents\DoUsunięcia
--- ```
---
+Brak.
 
--- ** Wyjście:**
+### Przykład
 
--- * (brak)*
+**Wejście:**
 
+```
+C:\Users\Username\Documents\DoUsunięcia
+```
+
+**Wyjście:**
+*(brak)*
+
+-}
 main :: IO ()
 main = pure ()

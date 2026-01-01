@@ -1,43 +1,35 @@
--- ZAD-04 — Wczytaj i wypisz treść pliku
---
+{-
+ZAD-04 — Wczytaj i wypisz treść pliku
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `files`, `read`, `encoding`
 
--- ** Tagi:** `files`, `read`, `encoding`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz ścieżkę do pliku tekstowego. Wczytaj zawartość pliku i wypisz ją.
---
--- ### Wejście
---
+Otrzymujesz ścieżkę do pliku tekstowego. Wczytaj zawartość pliku i wypisz ją.
 
--- * 1 linia: `file_path`
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: `file_path`
 
--- * treść pliku (dokładnie taka jak w pliku)
+### Wyjście
 
---
--- ### Przykład
---
+* treść pliku (dokładnie taka jak w pliku)
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- C:\Users\Username\Documents\wiadomość.txt
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+C:\Users\Username\Documents\wiadomość.txt
+```
 
---
--- ```
--- Witaj! To jest przykładowa treść pliku tekstowego.
--- ```
+**Wyjście:**
+
+```
+Witaj! To jest przykładowa treść pliku tekstowego.
+```
+
+-}
 main :: IO ()
 main = pure ()

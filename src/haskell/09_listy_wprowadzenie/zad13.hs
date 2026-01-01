@@ -1,47 +1,40 @@
--- ZAD-13 — Brakujący element w ciągu arytmetycznym
---
+{-
+ZAD-13 — Brakujący element w ciągu arytmetycznym
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sortowanie`, `ciąg arytmetyczny`, `listy`
 
--- ** Tagi:** `sortowanie`, `ciąg arytmetyczny`, `listy`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `N` liczb naturalnych. Lista jest fragmentem ciągu arytmetycznego z **jednym brakującym elementem**. Znajdź i wypisz brakującą wartość.
---
--- ### Wejście
---
+Wczytaj `N` liczb naturalnych. Lista jest fragmentem ciągu arytmetycznego z **jednym brakującym elementem**. Znajdź i wypisz brakującą wartość.
 
--- * 1. linia: `N` (`N ≥ 2`)
+### Wejście
 
--- * kolejne `N` linii: liczby naturalne
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby naturalne
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna — brakujący element.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedna liczba naturalna — brakujący element.
 
---
--- ```
--- 4
--- 5
--- 2
--- 1
--- 3
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 4
--- ```
+```
+4
+5
+2
+1
+3
+```
+
+**Wyjście:**
+
+```
+4
+```
+
+-}
 main :: IO ()
 main = pure ()

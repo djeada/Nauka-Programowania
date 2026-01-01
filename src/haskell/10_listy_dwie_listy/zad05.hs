@@ -1,57 +1,45 @@
--- ZAD-05 — Obliczenie średniej ważonej
---
+{-
+ZAD-05 — Obliczenie średniej ważonej
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `float`
 
--- ** Tagi:** `list`, `float`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie listy liczb zmiennoprzecinkowych tej samej długości:
---
+Wczytaj dwie listy liczb zmiennoprzecinkowych tej samej długości:
 
--- * lista wartości,
+* lista wartości,
+* lista wag.
 
--- * lista wag.
+Oblicz średnią ważoną:
+[
+\frac{\sum (wartość_i \cdot waga_i)}{\sum waga_i}
+]
 
---
--- Oblicz średnią ważoną:
--- [
--- \frac{\sum (wartość_i \cdot waga_i)}{\sum waga_i}
--- ]
---
--- ### Wejście
---
+### Wejście
 
--- * 1 linia: lista wartości (float)
+* 1 linia: lista wartości (float)
+* 2 linia: lista wag (float)
 
--- * 2 linia: lista wag (float)
+### Wyjście
 
---
--- ### Wyjście
---
+* 1 linia: jedna liczba zmiennoprzecinkowa — średnia ważona **z dokładnością do 2 miejsc po przecinku**
 
--- * 1 linia: jedna liczba zmiennoprzecinkowa — średnia ważona **z dokładnością do 2 miejsc po przecinku**
+### Przykład
 
---
--- ### Przykład
---
+**Wejście:**
 
--- ** Wejście:**
+```
+[0.2, 0.4, 0.1, 0.2, 0.1]
+[2.0, 5.0, 0.0, 2.0, 1.0]
+```
 
---
--- ```
--- [0.2, 0.4, 0.1, 0.2, 0.1]
--- [2.0, 5.0, 0.0, 2.0, 1.0]
--- ```
---
+**Wyjście:**
 
--- ** Wyjście:**
+```
+0.29
+```
 
---
--- ```
--- 0.29
--- ```
+-}
 main :: IO ()
 main = pure ()

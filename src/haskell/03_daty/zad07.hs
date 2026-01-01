@@ -1,49 +1,43 @@
--- ZAD-07 — Dzień roku (liczba dni od 1 stycznia, włącznie)
---
+{-
+ZAD-07 — Dzień roku (liczba dni od 1 stycznia, włącznie)
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sumowanie`, `tablice`, `przestępny`
 
--- ** Tagi:** `sumowanie`, `tablice`, `przestępny`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj datę `d, m, y` i oblicz numer dnia w roku, tzn. ile dni minęło od 1 stycznia do tej daty **włącznie**.
---
--- ### Wejście
---
--- 3 liczby całkowite (w osobnych liniach): `d`, `m`, `y`
---
--- ### Wyjście
---
--- Jedna liczba całkowita: numer dnia w roku.
---
--- ### Ograniczenia / gwarancje
---
+Wczytaj datę `d, m, y` i oblicz numer dnia w roku, tzn. ile dni minęło od 1 stycznia do tej daty **włącznie**.
 
--- * Podana data jest poprawna (nie musisz jej sprawdzać), **albo** możesz jawnie napisać: „jeśli data jest niepoprawna, zachowanie nieokreślone”.
+### Wejście
 
---
---   * (Najczyściej: dać gwarancję poprawności.)
---
--- ### Przykład
---
+3 liczby całkowite (w osobnych liniach): `d`, `m`, `y`
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- 14
--- 2
--- 1482
--- ```
---
+Jedna liczba całkowita: numer dnia w roku.
 
--- ** Wyjście:**
+### Ograniczenia / gwarancje
 
---
--- ```
--- 45
--- ```
+* Podana data jest poprawna (nie musisz jej sprawdzać), **albo** możesz jawnie napisać: „jeśli data jest niepoprawna, zachowanie nieokreślone”.
+
+  * (Najczyściej: dać gwarancję poprawności.)
+
+### Przykład
+
+**Wejście:**
+
+```
+14
+2
+1482
+```
+
+**Wyjście:**
+
+```
+45
+```
+
+-}
 main :: IO ()
 main = pure ()

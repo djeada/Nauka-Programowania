@@ -1,43 +1,35 @@
--- ZAD-18 — Odwróć słowa w zdaniu
---
+{-
+ZAD-18 — Odwróć słowa w zdaniu
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `split`, `string`, `pętle`
 
--- ** Tagi:** `split`, `string`, `pętle`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj zdanie i odwróć litery **w każdym słowie osobno**, zachowując kolejność słów.
---
--- ### Wejście
---
+Wczytaj zdanie i odwróć litery **w każdym słowie osobno**, zachowując kolejność słów.
 
--- * 1. linia: zdanie
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: zdanie
 
--- * 1. linia: zdanie z odwróconymi słowami
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: zdanie z odwróconymi słowami
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- Ala ma kota
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+Ala ma kota
+```
 
---
--- ```
--- alA am atok
--- ```
+**Wyjście:**
+
+```
+alA am atok
+```
+
+-}
 main :: IO ()
 main = pure ()

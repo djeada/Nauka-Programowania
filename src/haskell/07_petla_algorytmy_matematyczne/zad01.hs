@@ -1,64 +1,53 @@
--- ZAD-01 — Obliczanie średniej z n liczb
---
+{-
+ZAD-01 — Obliczanie średniej z n liczb
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `suma`, `średnia`, `float`
 
--- ** Tagi:** `pętle`, `suma`, `średnia`, `float`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję `oblicz_srednia()`, która:
---
--- 1. Wczytuje liczbę naturalną `n` (`n ≥ 1`).
--- 2. Wczytuje następnie `n` liczb (całkowitych lub zmiennoprzecinkowych).
--- 3. Zwraca ich średnią arytmetyczną.
---
--- ### Wejście
---
+Napisz funkcję `oblicz_srednia()`, która:
 
--- * 1. linia: `n` (`n ≥ 1`)
+1. Wczytuje liczbę naturalną `n` (`n ≥ 1`).
+2. Wczytuje następnie `n` liczb (całkowitych lub zmiennoprzecinkowych).
+3. Zwraca ich średnią arytmetyczną.
 
--- * kolejne `n` linii: liczby (int lub float)
+### Wejście
 
---
--- ### Wyjście
---
--- Funkcja zwraca jedną liczbę zmiennoprzecinkową — średnią arytmetyczną.
---
--- ### Przykład
---
+* 1. linia: `n` (`n ≥ 1`)
+* kolejne `n` linii: liczby (int lub float)
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- 2
--- 4
--- 6
--- ```
---
+Funkcja zwraca jedną liczbę zmiennoprzecinkową — średnią arytmetyczną.
 
--- ** Wywołanie funkcji:**
+### Przykład
 
---
--- ```python
--- wynik = oblicz_srednia()
--- print(wynik)
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+2
+4
+6
+```
 
---
--- ```
--- 5.0
--- ```
---
--- ### Uwagi o formatowaniu
---
+**Wywołanie funkcji:**
 
--- * Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`).
+```python
+wynik = oblicz_srednia()
+print(wynik)
+```
 
+**Wyjście:**
+
+```
+5.0
+```
+
+### Uwagi o formatowaniu
+
+* Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`).
+
+-}
 main :: IO ()
 main = pure ()

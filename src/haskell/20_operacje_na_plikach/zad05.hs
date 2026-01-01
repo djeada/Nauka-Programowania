@@ -1,43 +1,35 @@
--- ZAD-05 — Posortuj adresy IP z pliku
---
+{-
+ZAD-05 — Posortuj adresy IP z pliku
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `files`, `sort`, `list`
 
--- ** Tagi:** `files`, `sort`, `list`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz ścieżkę do pliku tekstowego, w którym w każdej linii znajduje się jeden adres IP. Wczytaj wszystkie adresy, posortuj je **alfabetycznie** i wypisz jako listę.
---
--- ### Wejście
---
+Otrzymujesz ścieżkę do pliku tekstowego, w którym w każdej linii znajduje się jeden adres IP. Wczytaj wszystkie adresy, posortuj je **alfabetycznie** i wypisz jako listę.
 
--- * 1 linia: `file_path`
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: `file_path`
 
--- * 1 linia: lista adresów IP jako napisy, np. `['10.0.0.1', ...]`
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: lista adresów IP jako napisy, np. `['10.0.0.1', ...]`
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- C:\Users\Username\Documents\adresy_ip.txt
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+C:\Users\Username\Documents\adresy_ip.txt
+```
 
---
--- ```
--- ['10.0.0.1', '172.16.0.5', '192.168.1.10', '192.168.1.2']
--- ```
+**Wyjście:**
+
+```
+['10.0.0.1', '172.16.0.5', '192.168.1.10', '192.168.1.2']
+```
+
+-}
 main :: IO ()
 main = pure ()

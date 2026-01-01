@@ -1,42 +1,34 @@
--- ZAD-07 — Dodaj wiersz na początku pliku
---
+{-
+ZAD-07 — Dodaj wiersz na początku pliku
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `files`, `write`, `prepend`
 
--- ** Tagi:** `files`, `write`, `prepend`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz ścieżkę do pliku tekstowego i wiersz tekstu. Dodaj ten wiersz na **początku** pliku.
---
--- ### Wejście
---
+Otrzymujesz ścieżkę do pliku tekstowego i wiersz tekstu. Dodaj ten wiersz na **początku** pliku.
 
--- * 1 linia: `file_path`
+### Wejście
 
--- * 2 linia: `line_to_add` (może zawierać spacje)
+* 1 linia: `file_path`
+* 2 linia: `line_to_add` (może zawierać spacje)
 
---
--- ### Wyjście
---
--- Brak.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Brak.
 
---
--- ```
--- C:\Users\Username\Documents\notatki.txt
--- To jest nowy wiersz dodany na początku pliku.
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
--- * (brak)*
+```
+C:\Users\Username\Documents\notatki.txt
+To jest nowy wiersz dodany na początku pliku.
+```
 
+**Wyjście:**
+*(brak)*
+
+-}
 main :: IO ()
 main = pure ()

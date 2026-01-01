@@ -1,71 +1,57 @@
--- ZAD-05 — Liczby z przedziału
---
+{-
+ZAD-05 — Liczby z przedziału
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `przedziały`, `modulo`
 
--- ** Tagi:** `pętle`, `przedziały`, `modulo`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie liczby naturalne `a` i `b`. Najpierw ustal:
---
+Wczytaj dwie liczby naturalne `a` i `b`. Najpierw ustal:
 
--- * `lo = min(a, b)`
+* `lo = min(a, b)`
+* `hi = max(a, b)`
 
--- * `hi = max(a, b)`
+Następnie:
 
---
--- Następnie:
---
--- a) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` (każda w osobnej linii).
---
--- b) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` oraz `x` jest podzielne przez `3` (każda w osobnej linii).
---
--- ### Wejście
---
--- Dwie liczby naturalne:
---
+a) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` (każda w osobnej linii).
 
--- * 1. linia: `a`
+b) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` oraz `x` jest podzielne przez `3` (każda w osobnej linii).
 
--- * 2. linia: `b`
+### Wejście
 
---
--- ### Wyjście
---
--- Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobnej linii.
---
--- ### Przykład
---
+Dwie liczby naturalne:
 
--- ** Wejście:**
+* 1. linia: `a`
+* 2. linia: `b`
 
---
--- ```
--- 9
--- 5
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobnej linii.
 
---
--- ```
--- 6
--- 7
--- 8
--- 6
--- ```
---
--- ### Uwagi o formatowaniu
---
+### Przykład
 
--- * Nie wypisuj nagłówków typu „a)” i „b)”.
+**Wejście:**
 
--- * Jeśli w którymś podpunkcie nie ma liczb do wypisania, w tej części nie wypisuj nic.
+```
+9
+5
+```
 
--- * Nie dodawaj pustej linii między podpunktami.
+**Wyjście:**
 
+```
+6
+7
+8
+6
+```
+
+### Uwagi o formatowaniu
+
+* Nie wypisuj nagłówków typu „a)” i „b)”.
+* Jeśli w którymś podpunkcie nie ma liczb do wypisania, w tej części nie wypisuj nic.
+* Nie dodawaj pustej linii między podpunktami.
+
+-}
 main :: IO ()
 main = pure ()

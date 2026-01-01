@@ -1,56 +1,45 @@
--- ZAD-03 — Suma wielomianów
---
+{-
+ZAD-03 — Suma wielomianów
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `wielomiany`, `wyrównanie stopni`, `I/O`
 
--- ** Tagi:** `wielomiany`, `wyrównanie stopni`, `I/O`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich sumą.
---
--- ### Wejście
---
+Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich sumą.
 
--- * 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
+### Wejście
 
--- * 2. linia: `n+1` liczb: `a_n ... a_0`
+* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb: `a_n ... a_0`
+* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
+* 4. linia: `m+1` liczb: `b_m ... b_0`
 
--- * 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
+### Wyjście
 
--- * 4. linia: `m+1` liczb: `b_m ... b_0`
+Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
 
---
--- ### Wyjście
---
--- Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 2
--- 3 5 2
--- 2
--- 2 -8 1
--- ```
---
+```
+2
+3 5 2
+2
+2 -8 1
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 5 -3 3
--- ```
---
--- ### Uwagi o formatowaniu
---
+```
+5 -3 3
+```
 
--- * Jeśli stopnie są różne, wyrównaj listy „od końca” (od wyrazu wolnego), dopisując zera na początku krótszej.
+### Uwagi o formatowaniu
 
+* Jeśli stopnie są różne, wyrównaj listy „od końca” (od wyrazu wolnego), dopisując zera na początku krótszej.
+
+-}
 main :: IO ()
 main = pure ()

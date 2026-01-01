@@ -1,43 +1,35 @@
--- ZAD-06 — Histogram znaków w słowie
---
+{-
+ZAD-06 — Histogram znaków w słowie
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
 
--- ** Tagi:** `dict`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj napis. Zwróć słownik: znak → liczba wystąpień.
---
--- ### Wejście
---
+Wczytaj napis. Zwróć słownik: znak → liczba wystąpień.
 
--- * 1 linia: napis
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: napis
 
--- * Słownik, np. `{'k': 1, 'l': 1, 'a': 2, 's': 1}`
+### Wyjście
 
---
--- ### Przykład
---
+* Słownik, np. `{'k': 1, 'l': 1, 'a': 2, 's': 1}`
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- klasa
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+klasa
+```
 
---
--- ```
--- {'k': 1, 'l': 1, 'a': 2, 's': 1}
--- ```
+**Wyjście:**
+
+```
+{'k': 1, 'l': 1, 'a': 2, 's': 1}
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,48 +1,38 @@
--- ZAD-12 — Przenieś wszystkie pliki CSV do jednego folderu (rekurencyjnie)
---
+{-
+ZAD-12 — Przenieś wszystkie pliki CSV do jednego folderu (rekurencyjnie)
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `files`, `move`, `csv`, `recursive`
 
--- ** Tagi:** `files`, `move`, `csv`, `recursive`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz ścieżkę folderu źródłowego i docelowego. Przenieś wszystkie pliki `.csv` z folderu źródłowego **i wszystkich jego podfolderów** do folderu docelowego.
---
--- ### Wejście
---
+Otrzymujesz ścieżkę folderu źródłowego i docelowego. Przenieś wszystkie pliki `.csv` z folderu źródłowego **i wszystkich jego podfolderów** do folderu docelowego.
 
--- * 1 linia: `src_folder`
+### Wejście
 
--- * 2 linia: `dst_folder`
+* 1 linia: `src_folder`
+* 2 linia: `dst_folder`
 
---
--- ### Wyjście
---
--- Brak.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Brak.
 
---
--- ```
--- C:\Users\Username\Projekty
--- D:\Dane\CSV
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
--- * (brak)*
+```
+C:\Users\Username\Projekty
+D:\Dane\CSV
+```
 
---
--- ### Uwagi
---
+**Wyjście:**
+*(brak)*
 
--- * Jeśli w folderze docelowym istnieje już plik o tej samej nazwie, zadanie wymaga zdefiniowania zachowania (np. zmiana nazwy / pominięcie) — jeśli sprawdzarka tego nie doprecyzowuje, przyjmij jedną spójną strategię w całym rozwiązaniu.
+### Uwagi
 
+* Jeśli w folderze docelowym istnieje już plik o tej samej nazwie, zadanie wymaga zdefiniowania zachowania (np. zmiana nazwy / pominięcie) — jeśli sprawdzarka tego nie doprecyzowuje, przyjmij jedną spójną strategię w całym rozwiązaniu.
+
+-}
 main :: IO ()
 main = pure ()

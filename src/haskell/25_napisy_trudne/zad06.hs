@@ -1,46 +1,37 @@
--- ZAD-06 — Rotacje napisów
---
+{-
+ZAD-06 — Rotacje napisów
 
--- ** Poziom:** ★★★
+**Poziom:** ★★★
+**Tagi:** `string`, `rotation`, `substring`
 
--- ** Tagi:** `string`, `rotation`, `substring`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz dwa napisy `A` i `B`. Sprawdź, czy jeden z nich jest **rotacją** drugiego (mają tę samą długość i da się uzyskać jeden przez przesunięcie cykliczne drugiego).
---
--- ### Wejście
---
+Otrzymujesz dwa napisy `A` i `B`. Sprawdź, czy jeden z nich jest **rotacją** drugiego (mają tę samą długość i da się uzyskać jeden przez przesunięcie cykliczne drugiego).
 
--- * 1 linia: napis `A`
+### Wejście
 
--- * 2 linia: napis `B`
+* 1 linia: napis `A`
+* 2 linia: napis `B`
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1 linia: `Prawda` albo `Fałsz`
+* 1 linia: `Prawda` albo `Fałsz`
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- malpka
--- pkamal
--- ```
---
+```
+malpka
+pkamal
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Prawda
--- ```
+```
+Prawda
+```
+
+-}
 main :: IO ()
 main = pure ()

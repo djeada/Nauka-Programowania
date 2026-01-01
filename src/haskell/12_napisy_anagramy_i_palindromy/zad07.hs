@@ -1,53 +1,42 @@
--- ZAD-07 — Minimalna liczba usunięć, aby uzyskać anagramy
---
+{-
+ZAD-07 — Minimalna liczba usunięć, aby uzyskać anagramy
 
--- ** Poziom:** ★★★
+**Poziom:** ★★★
+**Tagi:** `anagram`, `zliczanie`, `greedy`
 
--- ** Tagi:** `anagram`, `zliczanie`, `greedy`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwa słowa. Jeśli mają różne długości, wypisz `-1`.
--- W przeciwnym razie oblicz minimalną liczbę znaków, które trzeba usunąć (łącznie z obu słów), aby pozostałe napisy były anagramami.
---
--- ### Wejście
---
+Wczytaj dwa słowa. Jeśli mają różne długości, wypisz `-1`.
+W przeciwnym razie oblicz minimalną liczbę znaków, które trzeba usunąć (łącznie z obu słów), aby pozostałe napisy były anagramami.
 
--- * 1. linia: słowo `s1`
+### Wejście
 
--- * 2. linia: słowo `s2`
+* 1. linia: słowo `s1`
+* 2. linia: słowo `s2`
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * jedna liczba całkowita: minimalna liczba usunięć lub `-1`
+* jedna liczba całkowita: minimalna liczba usunięć lub `-1`
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- grazyna
--- razynax
--- ```
---
+```
+grazyna
+razynax
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 2
--- ```
---
--- ### Uwagi
---
+```
+2
+```
 
--- * Dla tej samej długości: policz zliczenia liter i zsumuj wartości `abs(c1[lit] - c2[lit])`, a wynik wypisz jako tę sumę. (To jest łączna liczba usunięć.)
+### Uwagi
 
+* Dla tej samej długości: policz zliczenia liter i zsumuj wartości `abs(c1[lit] - c2[lit])`, a wynik wypisz jako tę sumę. (To jest łączna liczba usunięć.)
+
+-}
 main :: IO ()
 main = pure ()

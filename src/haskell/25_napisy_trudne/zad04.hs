@@ -1,43 +1,35 @@
--- ZAD-04 — Usuń powtórzenia znaków
---
+{-
+ZAD-04 — Usuń powtórzenia znaków
 
--- ** Poziom:** ★★★
+**Poziom:** ★★★
+**Tagi:** `string`, `set`, `unique`, `kolejność`
 
--- ** Tagi:** `string`, `set`, `unique`, `kolejność`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz napis. Usuń wszystkie powtórzenia znaków tak, aby **każdy znak wystąpił tylko raz**, zachowując **kolejność pierwszych wystąpień**.
---
--- ### Wejście
---
+Otrzymujesz napis. Usuń wszystkie powtórzenia znaków tak, aby **każdy znak wystąpił tylko raz**, zachowując **kolejność pierwszych wystąpień**.
 
--- * 1 linia: napis `S`
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: napis `S`
 
--- * 1 linia: napis z unikalnymi znakami
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: napis z unikalnymi znakami
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- AAAAAAAAAABBBBBBBBA
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+AAAAAAAAAABBBBBBBBA
+```
 
---
--- ```
--- AB
--- ```
+**Wyjście:**
+
+```
+AB
+```
+
+-}
 main :: IO ()
 main = pure ()

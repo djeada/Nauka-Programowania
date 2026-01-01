@@ -1,51 +1,42 @@
--- ZAD-10 — Najdłuższe i najkrótsze słowo
---
+{-
+ZAD-10 — Najdłuższe i najkrótsze słowo
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `min/max`, `len`
 
--- ** Tagi:** `string`, `min/max`, `len`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj zdanie i znajdź:
---
--- a) najdłuższe słowo,
--- b) najkrótsze słowo.
---
--- Jeśli jest remis, wybierz słowo, które występuje wcześniej.
---
--- ### Wejście
---
+Wczytaj zdanie i znajdź:
 
--- * 1. linia: zdanie
+a) najdłuższe słowo,
+b) najkrótsze słowo.
 
---
--- ### Wyjście
---
+Jeśli jest remis, wybierz słowo, które występuje wcześniej.
 
--- * 1. linia: najdłuższe słowo
+### Wejście
 
--- * 2. linia: najkrótsze słowo
+* 1. linia: zdanie
 
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+* 1. linia: najdłuższe słowo
+* 2. linia: najkrótsze słowo
 
---
--- ```
--- Kaczka lubi wiosnę.
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- Kaczka
--- lubi
--- ```
+```
+Kaczka lubi wiosnę.
+```
+
+**Wyjście:**
+
+```
+Kaczka
+lubi
+```
+
+-}
 main :: IO ()
 main = pure ()

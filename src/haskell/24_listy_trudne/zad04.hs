@@ -1,46 +1,37 @@
--- ZAD-04 — Wspólny podciąg o największej długości (równe sumy)
---
+{-
+ZAD-04 — Wspólny podciąg o największej długości (równe sumy)
 
--- ** Poziom:** ★★★
+**Poziom:** ★★★
+**Tagi:** `list`, `prefix`, `hashmap`, `podciąg`
 
--- ** Tagi:** `list`, `prefix`, `hashmap`, `podciąg`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz dwie listy binarne `A` i `B` (zera i jedynki) o tej samej długości. Znajdź **maksymalną długość** podciągu (ciągłych elementów), dla którego suma elementów w podciągu z `A` jest równa sumie elementów w odpowiadającym podciągu z `B` (ten sam zakres indeksów).
---
--- ### Wejście
---
+Otrzymujesz dwie listy binarne `A` i `B` (zera i jedynki) o tej samej długości. Znajdź **maksymalną długość** podciągu (ciągłych elementów), dla którego suma elementów w podciągu z `A` jest równa sumie elementów w odpowiadającym podciągu z `B` (ten sam zakres indeksów).
 
--- * 1 linia: lista binarna `A`
+### Wejście
 
--- * 2 linia: lista binarna `B` (tej samej długości)
+* 1 linia: lista binarna `A`
+* 2 linia: lista binarna `B` (tej samej długości)
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1 linia: maksymalna długość (liczba naturalna)
+* 1 linia: maksymalna długość (liczba naturalna)
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- [0, 0, 1, 1, 1, 1]
--- [0, 1, 1, 0, 1, 0]
--- ```
---
+```
+[0, 0, 1, 1, 1, 1]
+[0, 1, 1, 0, 1, 0]
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 5
--- ```
+```
+5
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,47 +1,41 @@
--- ZAD-04 — Sprawdź, czy słowo występuje w zdaniu jako osobne słowo
---
+{-
+ZAD-04 — Sprawdź, czy słowo występuje w zdaniu jako osobne słowo
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
 
--- ** Tagi:** `regex`, `string`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz dwa napisy: zdanie oraz słowo. Sprawdź, czy słowo występuje w zdaniu jako samodzielne słowo (nie jako fragment innego słowa).
---
--- ### Wejście
---
--- Dwie linie:
---
--- 1. `zdanie`
--- 2. `slowo`
---
--- ### Wyjście
---
--- Jedna linia:
---
+Otrzymujesz dwa napisy: zdanie oraz słowo. Sprawdź, czy słowo występuje w zdaniu jako samodzielne słowo (nie jako fragment innego słowa).
 
--- * `Prawda` albo `Fałsz`
+### Wejście
 
---
--- ### Przykład
---
+Dwie linie:
 
--- ** Wejście:**
+1. `zdanie`
+2. `slowo`
 
---
--- ```
--- Siała baba mak.
--- babcia
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Jedna linia:
 
---
--- ```
--- Fałsz
--- ```
+* `Prawda` albo `Fałsz`
+
+### Przykład
+
+**Wejście:**
+
+```
+Siała baba mak.
+babcia
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
+
+-}
 main :: IO ()
 main = pure ()

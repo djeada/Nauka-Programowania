@@ -1,49 +1,40 @@
--- ZAD-01 — Wypisanie elementów dwóch list na przemian
---
+{-
+ZAD-01 — Wypisanie elementów dwóch list na przemian
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `iteracja`
 
--- ** Tagi:** `list`, `iteracja`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie listy liczb całkowitych i wypisz ich elementy **na przemian**:
--- pierwszy z listy 1, pierwszy z listy 2, drugi z listy 1, drugi z listy 2, itd.
---
--- Jeśli listy mają różne długości, po wyczerpaniu krótszej listy dopisz pozostałe elementy dłuższej listy w tej samej kolejności.
---
--- ### Wejście
---
+Wczytaj dwie listy liczb całkowitych i wypisz ich elementy **na przemian**:
+pierwszy z listy 1, pierwszy z listy 2, drugi z listy 1, drugi z listy 2, itd.
 
--- * 1 linia: lista 1
+Jeśli listy mają różne długości, po wyczerpaniu krótszej listy dopisz pozostałe elementy dłuższej listy w tej samej kolejności.
 
--- * 2 linia: lista 2
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: lista 1
+* 2 linia: lista 2
 
--- * 1 linia: elementy obu list wypisane na przemian, oddzielone przecinkami **bez spacji**
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: elementy obu list wypisane na przemian, oddzielone przecinkami **bez spacji**
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- [5, 3, 7, 2]
--- [1, -2, 3]
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+[5, 3, 7, 2]
+[1, -2, 3]
+```
 
---
--- ```
--- 5,1,3,-2,7,3,2
--- ```
+**Wyjście:**
+
+```
+5,1,3,-2,7,3,2
+```
+
+-}
 main :: IO ()
 main = pure ()

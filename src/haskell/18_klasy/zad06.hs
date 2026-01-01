@@ -1,59 +1,48 @@
--- ZAD-06 — Klasa LiczbaZespolona
---
+{-
+ZAD-06 — Klasa LiczbaZespolona
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `class`, `operacje`, `math`
 
--- ** Tagi:** `class`, `operacje`, `math`
+### Treść
 
---
--- ### Treść
---
--- Zaprojektuj klasę **LiczbaZespolona**:
---
+Zaprojektuj klasę **LiczbaZespolona**:
 
--- * konstruktor `(re=0, im=0)`,
+* konstruktor `(re=0, im=0)`,
+* dodawanie, odejmowanie, mnożenie, dzielenie,
+* porównania,
+* moduł,
+* wypisywanie w formacie `a + bi` lub `a - bi` (z zachowaniem znaku).
 
--- * dodawanie, odejmowanie, mnożenie, dzielenie,
+Program tworzy:
 
--- * porównania,
+* A = 9 + 12i
+* B = -3 - 3i
 
--- * moduł,
+Wypisuje A, B oraz: sumę, różnicę A-B, iloczyn i iloraz A/B.
 
--- * wypisywanie w formacie `a + bi` lub `a - bi` (z zachowaniem znaku).
+### Wejście
 
---
--- Program tworzy:
---
+Brak.
 
--- * A = 9 + 12i
+### Wyjście
 
--- * B = -3 - 3i
+Jak w przykładzie.
 
---
--- Wypisuje A, B oraz: sumę, różnicę A-B, iloczyn i iloraz A/B.
---
--- ### Wejście
---
--- Brak.
---
--- ### Wyjście
---
--- Jak w przykładzie.
---
--- ### Przykład
---
+### Przykład
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Liczba A: 9 + 12i
--- Liczba B: -3 - 3i
---
--- Suma: 6 + 9i
--- Różnica A - B: 12 + 15i
--- Iloczyn: 27 + 63i
--- Iloraz A / B: -3.5 + 0.5i
--- ```
+```
+Liczba A: 9 + 12i
+Liczba B: -3 - 3i
+
+Suma: 6 + 9i
+Różnica A - B: 12 + 15i
+Iloczyn: 27 + 63i
+Iloraz A / B: -3.5 + 0.5i
+```
+
+-}
 main :: IO ()
 main = pure ()

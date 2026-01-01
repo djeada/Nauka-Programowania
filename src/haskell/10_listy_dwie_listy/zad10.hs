@@ -1,55 +1,43 @@
--- ZAD-10 — Mediana dwóch posortowanych list
---
+{-
+ZAD-10 — Mediana dwóch posortowanych list
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `list`, `median`, `sort`
 
--- ** Tagi:** `list`, `median`, `sort`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie listy liczb całkowitych:
---
+Wczytaj dwie listy liczb całkowitych:
 
--- * obie są posortowane rosnąco,
+* obie są posortowane rosnąco,
+* obie mają tę samą, niezerową długość.
 
--- * obie mają tę samą, niezerową długość.
+Znajdź medianę zbioru wszystkich elementów z obu list (czyli medianę po „złączeniu” obu list).
 
---
--- Znajdź medianę zbioru wszystkich elementów z obu list (czyli medianę po „złączeniu” obu list).
---
--- ### Wejście
---
+### Wejście
 
--- * 1 linia: lista 1 (posortowana rosnąco)
+* 1 linia: lista 1 (posortowana rosnąco)
+* 2 linia: lista 2 (posortowana rosnąco)
 
--- * 2 linia: lista 2 (posortowana rosnąco)
+### Wyjście
 
---
--- ### Wyjście
---
+* 1 linia: mediana jako liczba zmiennoprzecinkowa
+  (jeśli mediana jest całkowita, wypisz ją z `.0`, np. `4.0`)
 
--- * 1 linia: mediana jako liczba zmiennoprzecinkowa
+### Przykład
 
---   (jeśli mediana jest całkowita, wypisz ją z `.0`, np. `4.0`)
---
--- ### Przykład
---
+**Wejście:**
 
--- ** Wejście:**
+```
+[2, 4, 7]
+[3, 5, 9]
+```
 
---
--- ```
--- [2, 4, 7]
--- [3, 5, 9]
--- ```
---
+**Wyjście:**
 
--- ** Wyjście:**
+```
+4.5
+```
 
---
--- ```
--- 4.5
--- ```
+-}
 main :: IO ()
 main = pure ()

@@ -1,46 +1,37 @@
--- ZAD-08 — Maksymalny zysk ze sprzedaży sznurka
---
+{-
+ZAD-08 — Maksymalny zysk ze sprzedaży sznurka
 
--- ** Poziom:** ★★★
+**Poziom:** ★★★
+**Tagi:** `dp`, `rod cutting`, `optymalizacja`
 
--- ** Tagi:** `dp`, `rod cutting`, `optymalizacja`
+### Treść
 
---
--- ### Treść
---
--- Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`. Możesz pociąć sznurek na kawałki o całkowitych długościach. Znajdź maksymalny zysk.
---
--- ### Wejście
---
+Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`. Możesz pociąć sznurek na kawałki o całkowitych długościach. Znajdź maksymalny zysk.
 
--- * 1 linia: lista `prices` (długości 1..n)
+### Wejście
 
--- * 2 linia: `n` (liczba naturalna)
+* 1 linia: lista `prices` (długości 1..n)
+* 2 linia: `n` (liczba naturalna)
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1 linia: maksymalny zysk (liczba całkowita)
+* 1 linia: maksymalny zysk (liczba całkowita)
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- [1, 5, 8, 9, 10, 17, 17, 20]
--- 4
--- ```
---
+```
+[1, 5, 8, 9, 10, 17, 17, 20]
+4
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 10
--- ```
+```
+10
+```
+
+-}
 main :: IO ()
 main = pure ()

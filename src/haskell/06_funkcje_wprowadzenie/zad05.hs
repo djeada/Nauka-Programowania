@@ -1,48 +1,41 @@
--- ZAD-05 — Zamiana wartości miejscami
---
+{-
+ZAD-05 — Zamiana wartości miejscami
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `krotka`, `zmienne`
 
--- ** Tagi:** `funkcje`, `krotka`, `zmienne`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję `zamien_wartosci(a, b)`, która zamienia wartości miejscami i zwraca je jako parę `(b, a)`.
---
--- ### Wejście
---
--- Dwa argumenty: `a`, `b` (liczby naturalne)
---
--- ### Wyjście
---
--- Dwie liczby naturalne zwrócone jako krotka / para:
---
+Napisz funkcję `zamien_wartosci(a, b)`, która zamienia wartości miejscami i zwraca je jako parę `(b, a)`.
 
--- * najpierw nowa wartość `a` (czyli stare `b`)
+### Wejście
 
--- * potem nowa wartość `b` (czyli stare `a`)
+Dwa argumenty: `a`, `b` (liczby naturalne)
 
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wywołanie funkcji:**
+Dwie liczby naturalne zwrócone jako krotka / para:
 
---
--- ```python
--- a, b = zamien_wartosci(8, 5)
--- print("a =", a)
--- print("b =", b)
--- ```
---
+* najpierw nowa wartość `a` (czyli stare `b`)
+* potem nowa wartość `b` (czyli stare `a`)
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- a = 5
--- b = 8
--- ```
+**Wywołanie funkcji:**
+
+```python
+a, b = zamien_wartosci(8, 5)
+print("a =", a)
+print("b =", b)
+```
+
+**Wyjście:**
+
+```
+a = 5
+b = 8
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,50 +1,43 @@
--- ZAD-14 — Element bez pary
---
+{-
+ZAD-14 — Element bez pary
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `XOR`, `listy`, `zliczanie`
 
--- ** Tagi:** `XOR`, `listy`, `zliczanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych o nieparzystej długości: wszystkie liczby poza jedną występują dokładnie dwa razy. Znajdź liczbę bez pary.
---
--- ### Wejście
---
+Wczytaj listę liczb całkowitych o nieparzystej długości: wszystkie liczby poza jedną występują dokładnie dwa razy. Znajdź liczbę bez pary.
 
--- * 1. linia: `N` (nieparzyste, `N ≥ 1`)
+### Wejście
 
--- * kolejne `N` linii: liczby całkowite
+* 1. linia: `N` (nieparzyste, `N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
---
--- ### Wyjście
---
--- Jedna liczba całkowita — element bez pary.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedna liczba całkowita — element bez pary.
 
---
--- ```
--- 7
--- 1
--- 3
--- 1
--- 7
--- 3
--- 1
--- 1
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 7
--- ```
+```
+7
+1
+3
+1
+7
+3
+1
+1
+```
+
+**Wyjście:**
+
+```
+7
+```
+
+-}
 main :: IO ()
 main = pure ()

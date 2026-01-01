@@ -1,54 +1,45 @@
--- ZAD-04 — Palindromy w zdaniu
---
+{-
+ZAD-04 — Palindromy w zdaniu
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `string`, `tokenizacja`, `palindrom`
 
--- ** Tagi:** `string`, `tokenizacja`, `palindrom`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj zdanie i wypisz wszystkie słowa, które są palindromami.
--- Ignoruj wielkość liter przy sprawdzaniu.
---
--- ### Wejście
---
+Wczytaj zdanie i wypisz wszystkie słowa, które są palindromami.
+Ignoruj wielkość liter przy sprawdzaniu.
 
--- * 1. linia: zdanie (może zawierać spacje i znaki interpunkcyjne)
+### Wejście
 
---
--- ### Wyjście
---
--- Każdy znaleziony palindrom w osobnej linii, w kolejności występowania w zdaniu.
---
--- ### Przykład
---
+* 1. linia: zdanie (może zawierać spacje i znaki interpunkcyjne)
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- Tata zabrał kajak na wycieczkę i uderzył się w oko
--- ```
---
+Każdy znaleziony palindrom w osobnej linii, w kolejności występowania w zdaniu.
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- Tata
--- kajak
--- i
--- w
--- oko
--- ```
---
--- ### Uwagi o formatowaniu
---
+**Wejście:**
 
--- * Traktuj „słowo” jako ciąg liter/cyfr po usunięciu interpunkcji z brzegów (np. `kara.` → `kara`).
+```
+Tata zabrał kajak na wycieczkę i uderzył się w oko
+```
 
--- * Porównuj w wersji `lower()`, ale wypisz w oryginalnym brzmieniu z wejścia (tak jak w przykładzie).
+**Wyjście:**
 
+```
+Tata
+kajak
+i
+w
+oko
+```
+
+### Uwagi o formatowaniu
+
+* Traktuj „słowo” jako ciąg liter/cyfr po usunięciu interpunkcji z brzegów (np. `kara.` → `kara`).
+* Porównuj w wersji `lower()`, ale wypisz w oryginalnym brzmieniu z wejścia (tak jak w przykładzie).
+
+-}
 main :: IO ()
 main = pure ()

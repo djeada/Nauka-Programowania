@@ -1,93 +1,74 @@
--- ZAD-05A — Minimum bez instrukcji warunkowych
---
+{-
+ZAD-05A — Minimum bez instrukcji warunkowych
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `bit-trick`, `min/max`, `bez if`
 
--- ** Tagi:** `bit-trick`, `min/max`, `bez if`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, `?:`) i bez bibliotek.
---
--- ### Wejście
---
+Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, `?:`) i bez bibliotek.
 
--- * 1. linia: `a`
+### Wejście
 
--- * 2. linia: `b`
+* 1. linia: `a`
+* 2. linia: `b`
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna: `min(a, b)`.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedna liczba naturalna: `min(a, b)`.
 
---
--- ```
--- 3
--- 2
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 2
--- ```
---
--- ### Uwagi
---
+```
+3
+2
+```
 
--- * Dopuszczalne są operacje arytmetyczne i bitowe.
+**Wyjście:**
 
---
--- ZAD-05B — Maksimum bez instrukcji warunkowych
---
+```
+2
+```
 
--- ** Poziom:** ★★☆
+### Uwagi
 
--- ** Tagi:** `bit-trick`, `min/max`, `bez if`
+* Dopuszczalne są operacje arytmetyczne i bitowe.
 
---
--- ### Treść
---
--- Wczytaj `a` i `b`. Wypisz większą z nich **bez użycia instrukcji warunkowych** i bez bibliotek.
---
--- ### Wejście
---
+ZAD-05B — Maksimum bez instrukcji warunkowych
 
--- * 1. linia: `a`
+**Poziom:** ★★☆
+**Tagi:** `bit-trick`, `min/max`, `bez if`
 
--- * 2. linia: `b`
+### Treść
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna: `max(a, b)`.
---
--- ### Przykład
---
+Wczytaj `a` i `b`. Wypisz większą z nich **bez użycia instrukcji warunkowych** i bez bibliotek.
 
--- ** Wejście:**
+### Wejście
 
---
--- ```
--- 3
--- 2
--- ```
---
+* 1. linia: `a`
+* 2. linia: `b`
 
--- ** Wyjście:**
+### Wyjście
 
---
--- ```
--- 3
--- ```
+Jedna liczba naturalna: `max(a, b)`.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+2
+```
+
+**Wyjście:**
+
+```
+3
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,55 +1,43 @@
--- ZAD-08 — Indeks klucza w cyklicznie posortowanej liście
---
+{-
+ZAD-08 — Indeks klucza w cyklicznie posortowanej liście
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `binary search`, `rotacja`, `list`
 
--- ** Tagi:** `binary search`, `rotacja`, `list`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosnąca, ale została przesunięta) oraz klucz. Znajdź indeks **pierwszego** wystąpienia klucza. Jeśli klucza nie ma — wypisz `-1`.
---
--- ### Wejście
---
+Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosnąca, ale została przesunięta) oraz klucz. Znajdź indeks **pierwszego** wystąpienia klucza. Jeśli klucza nie ma — wypisz `-1`.
 
--- * 1 linia: liczba naturalna `N`
+### Wejście
 
--- * 2 linia: `N` liczb całkowitych oddzielonych spacjami
+* 1 linia: liczba naturalna `N`
+* 2 linia: `N` liczb całkowitych oddzielonych spacjami
+* 3 linia: liczba całkowita `x` (szukany klucz)
 
--- * 3 linia: liczba całkowita `x` (szukany klucz)
+### Wyjście
 
---
--- ### Wyjście
---
+* 1 linia: indeks pierwszego wystąpienia `x` albo `-1`
 
--- * 1 linia: indeks pierwszego wystąpienia `x` albo `-1`
+### Przykład
 
---
--- ### Przykład
---
+**Wejście:**
 
--- ** Wejście:**
+```
+6
+3 4 5 6 1 2
+4
+```
 
---
--- ```
--- 6
--- 3 4 5 6 1 2
--- 4
--- ```
---
+**Wyjście:**
 
--- ** Wyjście:**
+```
+1
+```
 
---
--- ```
--- 1
--- ```
---
--- ### Ograniczenia / gwarancje
---
+### Ograniczenia / gwarancje
 
--- * Lista jest wynikiem rotacji listy posortowanej niemalejąco (mogą wystąpić duplikaty).
+* Lista jest wynikiem rotacji listy posortowanej niemalejąco (mogą wystąpić duplikaty).
 
+-}
 main :: IO ()
 main = pure ()

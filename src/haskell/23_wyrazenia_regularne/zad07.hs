@@ -1,44 +1,38 @@
--- ZAD-07 — Podziel tekst względem znaków interpunkcyjnych
---
+{-
+ZAD-07 — Podziel tekst względem znaków interpunkcyjnych
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
 
--- ** Tagi:** `regex`, `string`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz napis (jedno lub kilka zdań). Podziel tekst na fragmenty w miejscach występowania znaków interpunkcyjnych (np. `, . ! ? ; :`). Usuń spacje na początku i końcu każdego fragmentu.
---
--- ### Wejście
---
--- Jedna linia:
---
+Otrzymujesz napis (jedno lub kilka zdań). Podziel tekst na fragmenty w miejscach występowania znaków interpunkcyjnych (np. `, . ! ? ; :`). Usuń spacje na początku i końcu każdego fragmentu.
 
--- * `tekst`
+### Wejście
 
---
--- ### Wyjście
---
--- Każdy fragment w osobnej linii.
---
--- ### Przykład
---
+Jedna linia:
 
--- ** Wejście:**
+* `tekst`
 
---
--- ```
--- Ani nie poszedł do kina, ani nie wybrał się do teatru.
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Każdy fragment w osobnej linii.
 
---
--- ```
--- Ani nie poszedł do kina
--- ani nie wybrał się do teatru
--- ```
+### Przykład
+
+**Wejście:**
+
+```
+Ani nie poszedł do kina, ani nie wybrał się do teatru.
+```
+
+**Wyjście:**
+
+```
+Ani nie poszedł do kina
+ani nie wybrał się do teatru
+```
+
+-}
 main :: IO ()
 main = pure ()

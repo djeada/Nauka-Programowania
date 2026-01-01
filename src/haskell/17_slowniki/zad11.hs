@@ -1,54 +1,44 @@
--- ZAD-11 — Sortowanie „słownika” po kluczach i po wartościach
---
+{-
+ZAD-11 — Sortowanie „słownika” po kluczach i po wartościach
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `dict`
 
--- ** Tagi:** `sort`, `dict`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `n` par `klucz wartość`.
--- a) Wypisz listę par posortowaną rosnąco po kluczach.
--- b) Wypisz listę par posortowaną rosnąco po wartościach.
---
--- ### Wejście
---
+Wczytaj `n` par `klucz wartość`.
+a) Wypisz listę par posortowaną rosnąco po kluczach.
+b) Wypisz listę par posortowaną rosnąco po wartościach.
 
--- * 1 linia: `n`
+### Wejście
 
--- * następnie `n` linii: `klucz wartość`
+* 1 linia: `n`
+* następnie `n` linii: `klucz wartość`
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1 linia: lista par dla a)
+* 1 linia: lista par dla a)
+* 2 linia: lista par dla b)
 
--- * 2 linia: lista par dla b)
+### Przykład
 
---
--- ### Przykład
---
+**Wejście:**
 
--- ** Wejście:**
+```
+4
+c 3
+x 5
+a -2
+b 4
+```
 
---
--- ```
--- 4
--- c 3
--- x 5
--- a -2
--- b 4
--- ```
---
+**Wyjście:**
 
--- ** Wyjście:**
+```
+[('a', -2), ('b', 4), ('c', 3), ('x', 5)]
+[('a', -2), ('c', 3), ('b', 4), ('x', 5)]
+```
 
---
--- ```
--- [('a', -2), ('b', 4), ('c', 3), ('x', 5)]
--- [('a', -2), ('c', 3), ('b', 4), ('x', 5)]
--- ```
+-}
 main :: IO ()
 main = pure ()

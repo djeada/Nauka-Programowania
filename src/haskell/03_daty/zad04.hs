@@ -1,52 +1,46 @@
--- ZAD-04 — Dzień tygodnia z numeru
---
+{-
+ZAD-04 — Dzień tygodnia z numeru
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if-elif-else`, `mapowanie`, `string`
 
--- ** Tagi:** `if-elif-else`, `mapowanie`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę `n`. Jeśli `n` jest w zakresie 1–7, wypisz nazwę dnia tygodnia:
---
--- 1. Poniedziałek
--- 2. Wtorek
--- 3. Środa
--- 4. Czwartek
--- 5. Piątek
--- 6. Sobota
--- 7. Niedziela
---
--- W przeciwnym razie wypisz:
--- `Niepoprawny numer dnia tygodnia.`
---
--- ### Wejście
---
+Wczytaj liczbę `n`. Jeśli `n` jest w zakresie 1–7, wypisz nazwę dnia tygodnia:
 
--- * 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+1. Poniedziałek
+2. Wtorek
+3. Środa
+4. Czwartek
+5. Piątek
+6. Sobota
+7. Niedziela
 
---
--- ### Wyjście
---
--- Jedna linia: nazwa dnia lub komunikat o błędzie.
---
--- ### Przykład
---
+W przeciwnym razie wypisz:
+`Niepoprawny numer dnia tygodnia.`
 
--- ** Wejście:**
+### Wejście
 
---
--- ```
--- 8
--- ```
---
+* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
 
--- ** Wyjście:**
+### Wyjście
 
---
--- ```
--- Niepoprawny numer dnia tygodnia.
--- ```
+Jedna linia: nazwa dnia lub komunikat o błędzie.
+
+### Przykład
+
+**Wejście:**
+
+```
+8
+```
+
+**Wyjście:**
+
+```
+Niepoprawny numer dnia tygodnia.
+```
+
+-}
 main :: IO ()
 main = pure ()

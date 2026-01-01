@@ -1,44 +1,37 @@
--- ZAD-10 — Ile bitów trzeba odwrócić (A → B)
---
+{-
+ZAD-10 — Ile bitów trzeba odwrócić (A → B)
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `XOR`, `popcount`, `bitwise`
 
--- ** Tagi:** `XOR`, `popcount`, `bitwise`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w `A`, aby otrzymać `B`.
---
--- ### Wejście
---
+Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w `A`, aby otrzymać `B`.
 
--- * 1. linia: `A`
+### Wejście
 
--- * 2. linia: `B`
+* 1. linia: `A`
+* 2. linia: `B`
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna: liczba różniących się bitów.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedna liczba naturalna: liczba różniących się bitów.
 
---
--- ```
--- 34
--- 73
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 5
--- ```
+```
+34
+73
+```
+
+**Wyjście:**
+
+```
+5
+```
+
+-}
 main :: IO ()
 main = pure ()

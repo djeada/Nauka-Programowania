@@ -1,51 +1,43 @@
--- ZAD-04 — Sumowanie liczb mniejszych od podanej
---
+{-
+ZAD-04 — Sumowanie liczb mniejszych od podanej
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `sumowanie`, `pętle`, `arytmetyka`
 
--- ** Tagi:** `sumowanie`, `pętle`, `arytmetyka`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n` (`n ≥ 1`). Oblicz sumę wszystkich liczb naturalnych mniejszych od `n`, czyli:
--- `1 + 2 + ... + (n - 1)`
--- Następnie wypisz wynik.
---
--- ### Wejście
---
--- Jedna liczba naturalna:
---
+Wczytaj liczbę naturalną `n` (`n ≥ 1`). Oblicz sumę wszystkich liczb naturalnych mniejszych od `n`, czyli:
+`1 + 2 + ... + (n - 1)`
+Następnie wypisz wynik.
 
--- * 1. linia: `n` (`n ≥ 1`)
+### Wejście
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
---
--- ### Przykład
---
+Jedna liczba naturalna:
 
--- ** Wejście:**
+* 1. linia: `n` (`n ≥ 1`)
 
---
--- ```
--- 5
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 
---
--- ```
--- 10
--- ```
---
--- ### Uwagi o formatowaniu
---
+### Przykład
 
--- * Dla `n = 1` wynik to `0`.
+**Wejście:**
 
+```
+5
+```
+
+**Wyjście:**
+
+```
+10
+```
+
+### Uwagi o formatowaniu
+
+* Dla `n = 1` wynik to `0`.
+
+-}
 main :: IO ()
 main = pure ()

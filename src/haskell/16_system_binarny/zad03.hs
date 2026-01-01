@@ -1,185 +1,144 @@
--- ZAD-03A — Dodawanie bitowe
---
+{-
+ZAD-03A — Dodawanie bitowe
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `XOR`, `AND`
 
--- ** Tagi:** `bitwise`, `XOR`, `AND`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie liczby naturalne `a` i `b`. Oblicz `a + b` używając wyłącznie operatorów bitowych (i przesunięć).
---
--- ### Wejście
---
+Wczytaj dwie liczby naturalne `a` i `b`. Oblicz `a + b` używając wyłącznie operatorów bitowych (i przesunięć).
 
--- * 1. linia: `a`
+### Wejście
 
--- * 2. linia: `b`
+* 1. linia: `a`
+* 2. linia: `b`
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna: `a + b`.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedna liczba naturalna: `a + b`.
 
---
--- ```
--- 2
--- 3
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 5
--- ```
---
--- ZAD-03B — Odejmowanie bitowe
---
+```
+2
+3
+```
 
--- ** Poziom:** ★☆☆
+**Wyjście:**
 
--- ** Tagi:** `bitwise`, `pożyczki`, `XOR`
+```
+5
+```
 
---
--- ### Treść
---
--- Wczytaj `a` i `b`. Oblicz `a - b` używając wyłącznie operatorów bitowych.
---
--- ### Wejście
---
+ZAD-03B — Odejmowanie bitowe
 
--- * 1. linia: `a`
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `pożyczki`, `XOR`
 
--- * 2. linia: `b`
+### Treść
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna: `a - b`.
---
--- ### Ograniczenia / gwarancje
---
+Wczytaj `a` i `b`. Oblicz `a - b` używając wyłącznie operatorów bitowych.
 
--- * Zakładamy, że `a ≥ b` (wynik jest naturalny).
+### Wejście
 
---
--- ### Przykład
---
+* 1. linia: `a`
+* 2. linia: `b`
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- 7
--- 5
--- ```
---
+Jedna liczba naturalna: `a - b`.
 
--- ** Wyjście:**
+### Ograniczenia / gwarancje
 
---
--- ```
--- 2
--- ```
---
--- ZAD-03C — Mnożenie bitowe
---
+* Zakładamy, że `a ≥ b` (wynik jest naturalny).
 
--- ** Poziom:** ★☆☆
+### Przykład
 
--- ** Tagi:** `bitwise`, `shift`, `pętle`
+**Wejście:**
 
---
--- ### Treść
---
--- Wczytaj `a` i `b`. Oblicz `a * b` używając wyłącznie operatorów bitowych (np. metoda „shift-and-add”).
---
--- ### Wejście
---
+```
+7
+5
+```
 
--- * 1. linia: `a`
+**Wyjście:**
 
--- * 2. linia: `b`
+```
+2
+```
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna: `a * b`.
---
--- ### Przykład
---
+ZAD-03C — Mnożenie bitowe
 
--- ** Wejście:**
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `shift`, `pętle`
 
---
--- ```
--- 4
--- 4
--- ```
---
+### Treść
 
--- ** Wyjście:**
+Wczytaj `a` i `b`. Oblicz `a * b` używając wyłącznie operatorów bitowych (np. metoda „shift-and-add”).
 
---
--- ```
--- 16
--- ```
---
--- ZAD-03D — Dzielenie całkowite bitowe
---
+### Wejście
 
--- ** Poziom:** ★☆☆
+* 1. linia: `a`
+* 2. linia: `b`
 
--- ** Tagi:** `bitwise`, `dzielenie`, `shift`
+### Wyjście
 
---
--- ### Treść
---
--- Wczytaj `a` i `b`. Oblicz `a // b` używając wyłącznie operatorów bitowych.
---
--- ### Wejście
---
+Jedna liczba naturalna: `a * b`.
 
--- * 1. linia: `a`
+### Przykład
 
--- * 2. linia: `b`
+**Wejście:**
 
---
--- ### Ograniczenia / gwarancje
---
+```
+4
+4
+```
 
--- * `b > 0`
+**Wyjście:**
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna: `a // b`.
---
--- ### Przykład
---
+```
+16
+```
 
--- ** Wejście:**
+ZAD-03D — Dzielenie całkowite bitowe
 
---
--- ```
--- 9
--- 3
--- ```
---
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `dzielenie`, `shift`
 
--- ** Wyjście:**
+### Treść
 
---
--- ```
--- 3
--- ```
+Wczytaj `a` i `b`. Oblicz `a // b` używając wyłącznie operatorów bitowych.
+
+### Wejście
+
+* 1. linia: `a`
+* 2. linia: `b`
+
+### Ograniczenia / gwarancje
+
+* `b > 0`
+
+### Wyjście
+
+Jedna liczba naturalna: `a // b`.
+
+### Przykład
+
+**Wejście:**
+
+```
+9
+3
+```
+
+**Wyjście:**
+
+```
+3
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,68 +1,53 @@
--- ZAD-08 — Czy można zbudować trójkąt?
---
+{-
+ZAD-08 — Czy można zbudować trójkąt?
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if`, `geometria`, `warunek trójkąta`
 
--- ** Tagi:** `if`, `geometria`, `warunek trójkąta`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj trzy dodatnie długości odcinków `a`, `b`, `c`.
--- Sprawdź, czy można z nich zbudować trójkąt.
---
--- Wypisz:
---
+Wczytaj trzy dodatnie długości odcinków `a`, `b`, `c`.
+Sprawdź, czy można z nich zbudować trójkąt.
 
--- * jeśli tak: `Trójkąt można zbudować z podanych boków.`
+Wypisz:
 
--- * jeśli nie: `Trójkąta nie można zbudować z podanych boków.`
+* jeśli tak: `Trójkąt można zbudować z podanych boków.`
+* jeśli nie: `Trójkąta nie można zbudować z podanych boków.`
 
---
--- ### Wejście
---
+### Wejście
 
--- * 1 linia: `a` (całkowita, `a > 0`)
+* 1 linia: `a` (całkowita, `a > 0`)
+* 2 linia: `b` (całkowita, `b > 0`)
+* 3 linia: `c` (całkowita, `c > 0`)
 
--- * 2 linia: `b` (całkowita, `b > 0`)
+### Wyjście
 
--- * 3 linia: `c` (całkowita, `c > 0`)
+Jedna linia — dokładnie jeden z komunikatów.
 
---
--- ### Wyjście
---
--- Jedna linia — dokładnie jeden z komunikatów.
---
--- ### Ograniczenia / warunek
---
--- Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są wszystkie:
---
+### Ograniczenia / warunek
 
--- * `a + b > c`
+Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są wszystkie:
 
--- * `a + c > b`
+* `a + b > c`
+* `a + c > b`
+* `b + c > a`
 
--- * `b + c > a`
+### Przykład
 
---
--- ### Przykład
---
+**Wejście:**
 
--- ** Wejście:**
+```
+3
+4
+5
+```
 
---
--- ```
--- 3
--- 4
--- 5
--- ```
---
+**Wyjście:**
 
--- ** Wyjście:**
+```
+Trójkąt można zbudować z podanych boków.
+```
 
---
--- ```
--- Trójkąt można zbudować z podanych boków.
--- ```
+-}
 main :: IO ()
 main = pure ()

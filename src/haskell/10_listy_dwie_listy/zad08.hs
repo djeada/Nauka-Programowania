@@ -1,52 +1,40 @@
--- ZAD-08 — Połącz posortowane listy w posortowaną listę bez duplikatów
---
+{-
+ZAD-08 — Połącz posortowane listy w posortowaną listę bez duplikatów
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `list`, `merge`, `sort`
 
--- ** Tagi:** `list`, `merge`, `sort`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie listy liczb całkowitych, każda **posortowana rosnąco**. Połącz je w jedną listę:
---
+Wczytaj dwie listy liczb całkowitych, każda **posortowana rosnąco**. Połącz je w jedną listę:
 
--- * wynik ma być posortowany rosnąco,
+* wynik ma być posortowany rosnąco,
+* wynik ma zawierać **unikalne** elementy (bez duplikatów).
 
--- * wynik ma zawierać **unikalne** elementy (bez duplikatów).
+### Wejście
 
---
--- ### Wejście
---
+* 1 linia: lista 1 (posortowana rosnąco)
+* 2 linia: lista 2 (posortowana rosnąco)
 
--- * 1 linia: lista 1 (posortowana rosnąco)
+### Wyjście
 
--- * 2 linia: lista 2 (posortowana rosnąco)
+* 1 linia: jedna posortowana lista bez duplikatów
 
---
--- ### Wyjście
---
+### Przykład
 
--- * 1 linia: jedna posortowana lista bez duplikatów
+**Wejście:**
 
---
--- ### Przykład
---
+```
+[2, 4, 7]
+[3, 5, 9]
+```
 
--- ** Wejście:**
+**Wyjście:**
 
---
--- ```
--- [2, 4, 7]
--- [3, 5, 9]
--- ```
---
+```
+[2, 3, 4, 5, 7, 9]
+```
 
--- ** Wyjście:**
-
---
--- ```
--- [2, 3, 4, 5, 7, 9]
--- ```
+-}
 main :: IO ()
 main = pure ()

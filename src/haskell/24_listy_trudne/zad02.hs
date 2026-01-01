@@ -1,43 +1,35 @@
--- ZAD-02 — Przesuń zera na koniec listy
---
+{-
+ZAD-02 — Przesuń zera na koniec listy
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `list`, `stabilność`, `przekształcenie`
 
--- ** Tagi:** `list`, `stabilność`, `przekształcenie`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę liczb całkowitych. Przenieś wszystkie zera na koniec listy, **zachowując kolejność** pozostałych elementów.
---
--- ### Wejście
---
+Otrzymujesz listę liczb całkowitych. Przenieś wszystkie zera na koniec listy, **zachowując kolejność** pozostałych elementów.
 
--- * 1 linia: lista liczb całkowitych `A`
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: lista liczb całkowitych `A`
 
--- * 1 linia: lista po przekształceniu
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: lista po przekształceniu
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- [0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0]
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+[0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0]
+```
 
---
--- ```
--- [1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0]
--- ```
+**Wyjście:**
+
+```
+[1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0]
+```
+
+-}
 main :: IO ()
 main = pure ()

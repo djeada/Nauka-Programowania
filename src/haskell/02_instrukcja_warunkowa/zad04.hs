@@ -1,64 +1,53 @@
--- ZAD-04 — Maksimum i minimum z dwóch liczb
---
+{-
+ZAD-04 — Maksimum i minimum z dwóch liczb
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `max`, `min`, `if`, `formatowanie`
 
--- ** Tagi:** `max`, `min`, `if`, `formatowanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie liczby naturalne `a` i `b`.
--- Wypisz je w jednej linii w kolejności: **większa, potem mniejsza**, oddzielone pojedynczą spacją.
--- Jeśli `a = b`, wypisz `a b` (czyli dwie takie same liczby).
---
--- ### Wejście
---
+Wczytaj dwie liczby naturalne `a` i `b`.
+Wypisz je w jednej linii w kolejności: **większa, potem mniejsza**, oddzielone pojedynczą spacją.
+Jeśli `a = b`, wypisz `a b` (czyli dwie takie same liczby).
 
--- * 1 linia: `a` (całkowita, `a ≥ 0`)
+### Wejście
 
--- * 2 linia: `b` (całkowita, `b ≥ 0`)
+* 1 linia: `a` (całkowita, `a ≥ 0`)
+* 2 linia: `b` (całkowita, `b ≥ 0`)
 
---
--- ### Wyjście
---
--- Jedna linia:
--- `max(a, b) min(a, b)`
---
--- ### Przykłady
---
+### Wyjście
 
--- ** Wejście:**
+Jedna linia:
+`max(a, b) min(a, b)`
 
---
--- ```
--- 1
--- 4
--- ```
---
+### Przykłady
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 4 1
--- ```
---
+```
+1
+4
+```
 
--- ** Wejście:**
+**Wyjście:**
 
---
--- ```
--- 5
--- 5
--- ```
---
+```
+4 1
+```
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 5 5
--- ```
+```
+5
+5
+```
+
+**Wyjście:**
+
+```
+5 5
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,51 +1,43 @@
--- ZAD-03 — Trójkąt prostokątny (malejący)
---
+{-
+ZAD-03 — Trójkąt prostokątny (malejący)
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `print`, `string`
 
--- ** Tagi:** `pętle`, `print`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `n` (`n ≥ 1`) i wypisz odwrócony trójkąt o wysokości `n`, zaczynając od `n` gwiazdek i kończąc na `1`.
---
--- ### Wejście
---
+Wczytaj `n` (`n ≥ 1`) i wypisz odwrócony trójkąt o wysokości `n`, zaczynając od `n` gwiazdek i kończąc na `1`.
 
--- * 1. linia: `n` (`n ≥ 1`)
+### Wejście
 
---
--- ### Wyjście
---
--- `n` linii:
---
+* 1. linia: `n` (`n ≥ 1`)
 
--- * 1. linia: `n` gwiazdek
+### Wyjście
 
--- * 2. linia: `n-1` gwiazdek
+`n` linii:
 
--- * …
+* 1. linia: `n` gwiazdek
+* 2. linia: `n-1` gwiazdek
+* …
+* ostatnia linia: `*`
 
--- * ostatnia linia: `*`
+### Przykład
 
---
--- ### Przykład
---
+**Wejście:**
 
--- ** Wejście:**
+```
+4
+```
 
---
--- ```
--- 4
--- ```
---
+**Wyjście:**
 
--- ** Wyjście:**
+```
+****
+***
+**
+*
+```
 
---
--- ```
-
--- ```
+-}
 main :: IO ()
 main = pure ()

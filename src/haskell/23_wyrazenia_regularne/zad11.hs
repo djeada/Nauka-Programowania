@@ -1,49 +1,41 @@
--- ZAD-11 — Nazwa pliku bez rozszerzenia
---
+{-
+ZAD-11 — Nazwa pliku bez rozszerzenia
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `ścieżki`
 
--- ** Tagi:** `regex`, `string`, `ścieżki`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz napis reprezentujący pełną ścieżkę do pliku. Wyodrębnij nazwę pliku (bez katalogów) i usuń rozszerzenie (część po ostatniej kropce). Zwróć samą nazwę bez rozszerzenia.
---
--- Ścieżka może zawierać separator `\` lub `/`.
---
--- ### Wejście
---
--- Jedna linia:
---
+Otrzymujesz napis reprezentujący pełną ścieżkę do pliku. Wyodrębnij nazwę pliku (bez katalogów) i usuń rozszerzenie (część po ostatniej kropce). Zwróć samą nazwę bez rozszerzenia.
 
--- * `sciezka`
+Ścieżka może zawierać separator `\` lub `/`.
 
---
--- ### Wyjście
---
--- Jedna linia:
---
+### Wejście
 
--- * `nazwa_pliku_bez_rozszerzenia`
+Jedna linia:
 
---
--- ### Przykład
---
+* `sciezka`
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- C:\my-long\path_directory\file.html
--- ```
---
+Jedna linia:
 
--- ** Wyjście:**
+* `nazwa_pliku_bez_rozszerzenia`
 
---
--- ```
--- file
--- ```
+### Przykład
+
+**Wejście:**
+
+```
+C:\my-long\path_directory\file.html
+```
+
+**Wyjście:**
+
+```
+file
+```
+
+-}
 main :: IO ()
 main = pure ()

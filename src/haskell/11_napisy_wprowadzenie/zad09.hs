@@ -1,69 +1,54 @@
--- ZAD-09 — Rozdziel informacje o pracowniku
---
+{-
+ZAD-09 — Rozdziel informacje o pracowniku
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `split`, `formatowanie`
 
--- ** Tagi:** `split`, `formatowanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj linię z danymi pracownika rozdzielonymi średnikami `;`:
---
--- 1. Imię, 2) Nazwisko, 3) Miejsce urodzenia, 4) Stanowisko, 5) Zarobki
---
--- Wypisz każdą informację w osobnej linii z etykietą.
---
--- ### Wejście
---
+Wczytaj linię z danymi pracownika rozdzielonymi średnikami `;`:
 
--- * 1. linia: dane w formacie `Imię; Nazwisko; Miasto; Zawód; Zarobki;`
+1. Imię, 2) Nazwisko, 3) Miejsce urodzenia, 4) Stanowisko, 5) Zarobki
 
---
--- ### Wyjście
---
--- Pięć linii w formacie:
---
+Wypisz każdą informację w osobnej linii z etykietą.
 
--- * `Imię: ...`
+### Wejście
 
--- * `Nazwisko: ...`
+* 1. linia: dane w formacie `Imię; Nazwisko; Miasto; Zawód; Zarobki;`
 
--- * `Miejsce urodzenia: ...`
+### Wyjście
 
--- * `Zawód: ...`
+Pięć linii w formacie:
 
--- * `Zarobki: ...`
+* `Imię: ...`
+* `Nazwisko: ...`
+* `Miejsce urodzenia: ...`
+* `Zawód: ...`
+* `Zarobki: ...`
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- Jan; Kowalski; Warszawa; Programista; 1000;
--- ```
---
+```
+Jan; Kowalski; Warszawa; Programista; 1000;
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Imię: Jan
--- Nazwisko: Kowalski
--- Miejsce urodzenia: Warszawa
--- Zawód: Programista
--- Zarobki: 1000
--- ```
---
--- ### Uwagi
---
+```
+Imię: Jan
+Nazwisko: Kowalski
+Miejsce urodzenia: Warszawa
+Zawód: Programista
+Zarobki: 1000
+```
 
--- * Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).
+### Uwagi
 
--- * Ostatni średnik może powodować pusty element na końcu — zignoruj go.
+* Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).
+* Ostatni średnik może powodować pusty element na końcu — zignoruj go.
 
+-}
 main :: IO ()
 main = pure ()

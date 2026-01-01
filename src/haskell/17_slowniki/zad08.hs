@@ -1,44 +1,36 @@
--- ZAD-08 — Najczęstsza litera w zdaniu
---
+{-
+ZAD-08 — Najczęstsza litera w zdaniu
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
 
--- ** Tagi:** `dict`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj zdanie. Zignoruj spacje i znaki interpunkcyjne. Znajdź literę występującą najczęściej.
--- Jeśli jest kilka, wybierz tę, która **pojawia się jako pierwsza w zdaniu**.
---
--- ### Wejście
---
+Wczytaj zdanie. Zignoruj spacje i znaki interpunkcyjne. Znajdź literę występującą najczęściej.
+Jeśli jest kilka, wybierz tę, która **pojawia się jako pierwsza w zdaniu**.
 
--- * 1 linia: zdanie
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: zdanie
 
--- * 1 znak
+### Wyjście
 
---
--- ### Przykład
---
+* 1 znak
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- lezy jerzy na wiezy
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+lezy jerzy na wiezy
+```
 
---
--- ```
--- e
--- ```
+**Wyjście:**
+
+```
+e
+```
+
+-}
 main :: IO ()
 main = pure ()

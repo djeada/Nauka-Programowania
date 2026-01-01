@@ -1,51 +1,42 @@
--- ZAD-03 — Czy napis A jest początkiem napisu B?
---
+{-
+ZAD-03 — Czy napis A jest początkiem napisu B?
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `string`, `prefix`
 
--- ** Tagi:** `string`, `prefix`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz dwa napisy:
---
--- 1. Napis `A` — potencjalny przedrostek,
--- 2. Napis `B` — napis testowany.
---
--- Sprawdź, czy `B` **zaczyna się** od `A`.
---
--- ### Wejście
---
+Otrzymujesz dwa napisy:
 
--- * 1 linia: `A`
+1. Napis `A` — potencjalny przedrostek,
+2. Napis `B` — napis testowany.
 
--- * 2 linia: `B`
+Sprawdź, czy `B` **zaczyna się** od `A`.
 
---
--- ### Wyjście
---
+### Wejście
 
--- * 1 linia: `Prawda` albo `Fałsz`
+* 1 linia: `A`
+* 2 linia: `B`
 
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+* 1 linia: `Prawda` albo `Fałsz`
 
---
--- ```
--- Dino
--- Dinozaur jest zly
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- Prawda
--- ```
+```
+Dino
+Dinozaur jest zly
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
+
+-}
 main :: IO ()
 main = pure ()

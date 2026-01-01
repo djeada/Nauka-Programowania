@@ -1,48 +1,39 @@
--- ZAD-05 — Czy macierz jest magiczna?
---
+{-
+ZAD-05 — Czy macierz jest magiczna?
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `macierze`, `suma`, `warunki`
 
--- ** Tagi:** `macierze`, `suma`, `warunki`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami naturalnymi. Sprawdź, czy to **kwadrat magiczny**: suma każdego wiersza, każdej kolumny oraz obu przekątnych jest taka sama.
---
--- ### Wejście
---
+Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami naturalnymi. Sprawdź, czy to **kwadrat magiczny**: suma każdego wiersza, każdej kolumny oraz obu przekątnych jest taka sama.
 
--- * 1. linia: `n`
+### Wejście
 
--- * następnie `n` wierszy po `n` liczb
+* 1. linia: `n`
+* następnie `n` wierszy po `n` liczb
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * `Prawda` albo `Fałsz`
+* `Prawda` albo `Fałsz`
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 3
--- 6 7 2
--- 1 5 9
--- 8 3 4
--- ```
---
+```
+3
+6 7 2
+1 5 9
+8 3 4
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Prawda
--- ```
+```
+Prawda
+```
+
+-}
 main :: IO ()
 main = pure ()

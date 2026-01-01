@@ -1,46 +1,40 @@
--- ZAD-08 — Cyfry w słowach
---
+{-
+ZAD-08 — Cyfry w słowach
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`
 
--- ** Tagi:** `regex`, `string`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz zdanie. Wyodrębnij wszystkie ciągi cyfr, które są częścią słów (czyli są bezpośrednio połączone z literami). Nie uwzględniaj cyfr oddzielonych od liter spacjami.
---
--- ### Wejście
---
--- Jedna linia:
---
+Otrzymujesz zdanie. Wyodrębnij wszystkie ciągi cyfr, które są częścią słów (czyli są bezpośrednio połączone z literami). Nie uwzględniaj cyfr oddzielonych od liter spacjami.
 
--- * `zdanie`
+### Wejście
 
---
--- ### Wyjście
---
--- Każdy znaleziony ciąg cyfr w osobnej linii (w kolejności występowania).
---
--- ### Przykład
---
+Jedna linia:
 
--- ** Wejście:**
+* `zdanie`
 
---
--- ```
--- Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Każdy znaleziony ciąg cyfr w osobnej linii (w kolejności występowania).
 
---
--- ```
--- 29
--- 37
--- 3
--- 91
--- ```
+### Przykład
+
+**Wejście:**
+
+```
+Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
+```
+
+**Wyjście:**
+
+```
+29
+37
+3
+91
+```
+
+-}
 main :: IO ()
 main = pure ()

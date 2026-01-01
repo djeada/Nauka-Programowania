@@ -1,58 +1,48 @@
--- ZAD-12 — Porównanie dwóch słowników z listami (kolejność list bez znaczenia)
---
+{-
+ZAD-12 — Porównanie dwóch słowników z listami (kolejność list bez znaczenia)
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `dict`, `porównanie`, `list`
 
--- ** Tagi:** `dict`, `porównanie`, `list`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwa „słowniki” (opis w wejściu). Dla każdego klucza wartościami są listy liczb całkowitych, ale **kolejność w listach nie ma znaczenia**.
--- Wypisz `Prawda` jeśli słowniki są identyczne (te same klucze i te same wielozbiory wartości), w przeciwnym razie `Fałsz`.
---
--- ### Wejście
---
+Wczytaj dwa „słowniki” (opis w wejściu). Dla każdego klucza wartościami są listy liczb całkowitych, ale **kolejność w listach nie ma znaczenia**.
+Wypisz `Prawda` jeśli słowniki są identyczne (te same klucze i te same wielozbiory wartości), w przeciwnym razie `Fałsz`.
 
--- * Najpierw:
+### Wejście
 
---
---   * 1 linia: `n`
---   * następnie `n` linii: `klucz v1 v2 v3 ...` (co najmniej jedna wartość)
+* Najpierw:
 
--- * Potem:
+  * 1 linia: `n`
+  * następnie `n` linii: `klucz v1 v2 v3 ...` (co najmniej jedna wartość)
+* Potem:
 
---
---   * 1 linia: `m`
---   * następnie `m` linii: `klucz v1 v2 v3 ...`
---
--- ### Wyjście
---
+  * 1 linia: `m`
+  * następnie `m` linii: `klucz v1 v2 v3 ...`
 
--- * `Prawda` lub `Fałsz`
+### Wyjście
 
---
--- ### Przykład
---
+* `Prawda` lub `Fałsz`
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 2
--- a 1 2 3
--- b 4 5
--- 2
--- a 3 2 1
--- b 5 4
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+2
+a 1 2 3
+b 4 5
+2
+a 3 2 1
+b 5 4
+```
 
---
--- ```
--- Prawda
--- ```
+**Wyjście:**
+
+```
+Prawda
+```
+
+-}
 main :: IO ()
 main = pure ()

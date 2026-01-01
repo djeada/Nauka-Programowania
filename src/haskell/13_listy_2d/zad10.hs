@@ -1,50 +1,41 @@
--- ZAD-10 — Obróć macierz o 90° w prawo
---
+{-
+ZAD-10 — Obróć macierz o 90° w prawo
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `macierze`, `transpozycja`
 
--- ** Tagi:** `macierze`, `transpozycja`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruchem wskazówek zegara.
---
--- ### Wejście
---
+Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruchem wskazówek zegara.
 
--- * 1. linia: `n`
+### Wejście
 
--- * następnie `n` wierszy po `n` liczb
+* 1. linia: `n`
+* następnie `n` wierszy po `n` liczb
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * `n` wierszy obróconej macierzy
+* `n` wierszy obróconej macierzy
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 3
--- 1 2 3
--- 4 5 6
--- 7 8 9
--- ```
---
+```
+3
+1 2 3
+4 5 6
+7 8 9
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 7 4 1
--- 8 5 2
--- 9 6 3
--- ```
+```
+7 4 1
+8 5 2
+9 6 3
+```
+
+-}
 main :: IO ()
 main = pure ()

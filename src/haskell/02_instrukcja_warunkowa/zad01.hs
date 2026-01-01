@@ -1,60 +1,47 @@
--- ZAD-01 — Liczba większa od 5
---
+{-
+ZAD-01 — Liczba większa od 5
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if`, `porównania`, `I/O`
 
--- ** Tagi:** `if`, `porównania`, `I/O`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj jedną liczbę naturalną `n`.
--- Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
---
--- ### Wejście
---
+Wczytaj jedną liczbę naturalną `n`.
+Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 
--- * 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
 
--- * Jeśli `n > 5`: jedna linia z liczbą `n`
+### Wyjście
 
--- * Jeśli `n ≤ 5`: brak wyjścia
+* Jeśli `n > 5`: jedna linia z liczbą `n`
+* Jeśli `n ≤ 5`: brak wyjścia
 
---
--- ### Przykład 1
---
+### Przykład 1
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 10
--- ```
---
+```
+10
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 10
--- ```
---
--- ### Przykład 2
---
+```
+10
+```
 
--- ** Wejście:**
+### Przykład 2
 
---
--- ```
--- 3
--- ```
---
+**Wejście:**
 
--- ** Wyjście:** *(brak)*
+```
+3
+```
 
+**Wyjście:** *(brak)*
+
+-}
 main :: IO ()
 main = pure ()

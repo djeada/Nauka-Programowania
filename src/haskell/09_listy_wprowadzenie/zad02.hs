@@ -1,60 +1,53 @@
--- ZAD-02 — Wczytaj, zmodyfikuj i wypisz
---
+{-
+ZAD-02 — Wczytaj, zmodyfikuj i wypisz
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `indeksy`, `modyfikacja`
 
--- ** Tagi:** `listy`, `indeksy`, `modyfikacja`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj `N` oraz `N` liczb całkowitych do listy. Następnie:
---
--- a) Zwiększ każdy element o `1`.
--- b) Pomnóż każdy element przez jego indeks (indeksy od `0`).
--- c) Zastąp wszystkie elementy wartością pierwszego elementu.
---
--- Po każdym podpunkcie wypisz wynikową listę w **jednej** linii, elementy oddzielone przecinkami.
---
--- ### Wejście
---
+Wczytaj `N` oraz `N` liczb całkowitych do listy. Następnie:
 
--- * 1. linia: `N` (`N ≥ 1`)
+a) Zwiększ każdy element o `1`.
+b) Pomnóż każdy element przez jego indeks (indeksy od `0`).
+c) Zastąp wszystkie elementy wartością pierwszego elementu.
 
--- * kolejne `N` linii: liczby całkowite
+Po każdym podpunkcie wypisz wynikową listę w **jednej** linii, elementy oddzielone przecinkami.
 
---
--- ### Wyjście
---
--- Trzy linie:
---
--- 1. wynik po (a)
--- 2. wynik po (b)
--- 3. wynik po (c)
---
--- Elementy w linii oddzielone przecinkami (bez spacji).
---
--- ### Przykład
---
+### Wejście
 
--- ** Wejście:**
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
 
---
--- ```
--- 3
--- 3
--- 9
--- 7
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Trzy linie:
 
---
--- ```
--- 4,10,8
--- 0,9,14
--- 3,3,3
--- ```
+1. wynik po (a)
+2. wynik po (b)
+3. wynik po (c)
+
+Elementy w linii oddzielone przecinkami (bez spacji).
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+3
+9
+7
+```
+
+**Wyjście:**
+
+```
+4,10,8
+0,9,14
+3,3,3
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,57 +1,48 @@
--- ZAD-04 — Dodawanie i odejmowanie macierzy
---
+{-
+ZAD-04 — Dodawanie i odejmowanie macierzy
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `macierze`, `arytmetyka`
 
--- ** Tagi:** `macierze`, `arytmetyka`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie macierze `n×m`.
--- a) Wypisz ich sumę.
--- b) Wypisz różnicę: (pierwsza − druga).
---
--- ### Wejście
---
+Wczytaj dwie macierze `n×m`.
+a) Wypisz ich sumę.
+b) Wypisz różnicę: (pierwsza − druga).
 
--- * 1. linia: `n`
+### Wejście
 
--- * 2. linia: `m`
+* 1. linia: `n`
+* 2. linia: `m`
+* potem `n` wierszy pierwszej macierzy (po `m` liczb)
+* potem `n` wierszy drugiej macierzy (po `m` liczb)
 
--- * potem `n` wierszy pierwszej macierzy (po `m` liczb)
+### Wyjście
 
--- * potem `n` wierszy drugiej macierzy (po `m` liczb)
+Najpierw `n` wierszy sumy, potem `n` wierszy różnicy (bez dodatkowych napisów).
 
---
--- ### Wyjście
---
--- Najpierw `n` wierszy sumy, potem `n` wierszy różnicy (bez dodatkowych napisów).
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 2
--- 2
--- 1 2
--- -2 0
--- 5 -3
--- 1 7
--- ```
---
+```
+2
+2
+1 2
+-2 0
+5 -3
+1 7
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 6 -1
--- -1 7
--- -4 5
--- -3 -7
--- ```
+```
+6 -1
+-1 7
+-4 5
+-3 -7
+```
+
+-}
 main :: IO ()
 main = pure ()

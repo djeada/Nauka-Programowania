@@ -1,56 +1,44 @@
--- ZAD-03 — Czy dwa słowa są anagramami?
---
+{-
+ZAD-03 — Czy dwa słowa są anagramami?
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `anagram`, `sortowanie`, `zliczanie`
 
--- ** Tagi:** `anagram`, `sortowanie`, `zliczanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwa słowa i sprawdź, czy są anagramami (czy da się utworzyć jedno przez przestawienie liter drugiego).
---
--- ### Wejście
---
+Wczytaj dwa słowa i sprawdź, czy są anagramami (czy da się utworzyć jedno przez przestawienie liter drugiego).
 
--- * 1. linia: słowo `s1`
+### Wejście
 
--- * 2. linia: słowo `s2`
+* 1. linia: słowo `s1`
+* 2. linia: słowo `s2`
 
---
--- ### Wyjście
---
--- Jedna linia:
---
+### Wyjście
 
--- * `Prawda` — jeśli anagramy
+Jedna linia:
 
--- * `Fałsz` — jeśli nie
+* `Prawda` — jeśli anagramy
+* `Fałsz` — jeśli nie
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- ula
--- lua
--- ```
---
+```
+ula
+lua
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Prawda
--- ```
---
--- ### Uwagi
---
+```
+Prawda
+```
 
--- * Najprościej: porównaj posortowane litery albo słowniki zliczeń znaków.
+### Uwagi
 
+* Najprościej: porównaj posortowane litery albo słowniki zliczeń znaków.
+
+-}
 main :: IO ()
 main = pure ()

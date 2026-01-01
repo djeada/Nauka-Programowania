@@ -1,54 +1,44 @@
--- ZAD-04 — Sortowanie przez scalanie
---
+{-
+ZAD-04 — Sortowanie przez scalanie
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `merge-sort`, `recursion`
 
--- ** Tagi:** `sorting`, `merge-sort`, `recursion`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez scalanie**:
---
--- 1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.
--- 2. Podziel listę na dwie (w miarę) równe części.
--- 3. Rekurencyjnie posortuj obie części.
--- 4. **Scal** dwie posortowane listy w jedną posortowaną.
---
--- ### Wejście
---
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez scalanie**:
 
--- * 1 linia: lista liczb całkowitych
+1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.
+2. Podziel listę na dwie (w miarę) równe części.
+3. Rekurencyjnie posortuj obie części.
+4. **Scal** dwie posortowane listy w jedną posortowaną.
 
---
--- ### Wyjście
---
+### Wejście
 
--- * 1 linia: posortowana lista rosnąco
+* 1 linia: lista liczb całkowitych
 
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+* 1 linia: posortowana lista rosnąco
 
---
--- ```
--- [6, 2, 1, 4, 27]
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- [1, 2, 4, 6, 27]
--- ```
---
--- ### Uwagi o algorytmie
---
+```
+[6, 2, 1, 4, 27]
+```
 
--- * Złożoność czasowa: `O(n log n)`.
+**Wyjście:**
 
+```
+[1, 2, 4, 6, 27]
+```
+
+### Uwagi o algorytmie
+
+* Złożoność czasowa: `O(n log n)`.
+
+-}
 main :: IO ()
 main = pure ()

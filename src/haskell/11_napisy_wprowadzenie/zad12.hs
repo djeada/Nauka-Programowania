@@ -1,43 +1,35 @@
--- ZAD-12 — Usuń spacje ze zdania
---
+{-
+ZAD-12 — Usuń spacje ze zdania
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `replace`, `string`
 
--- ** Tagi:** `replace`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj zdanie i usuń z niego wszystkie spacje.
---
--- ### Wejście
---
+Wczytaj zdanie i usuń z niego wszystkie spacje.
 
--- * 1. linia: zdanie
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: zdanie
 
--- * 1. linia: zdanie bez spacji
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: zdanie bez spacji
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- Ala ma kota
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+Ala ma kota
+```
 
---
--- ```
--- Alamakota
--- ```
+**Wyjście:**
+
+```
+Alamakota
+```
+
+-}
 main :: IO ()
 main = pure ()

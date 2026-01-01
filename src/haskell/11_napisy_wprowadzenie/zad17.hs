@@ -1,49 +1,39 @@
--- ZAD-17 — Konwersja listy na napis
---
+{-
+ZAD-17 — Konwersja listy na napis
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `string`
 
--- ** Tagi:** `list`, `string`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę liczb naturalnych w zapisie tekstowym (np. `[2, 4, 7]`). Połącz liczby bez separatorów i wypisz jako napis.
---
--- ### Wejście
---
+Otrzymujesz listę liczb naturalnych w zapisie tekstowym (np. `[2, 4, 7]`). Połącz liczby bez separatorów i wypisz jako napis.
 
--- * 1. linia: lista w formacie podobnym do Pythona, np. `[2, 4, 7]`
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: lista w formacie podobnym do Pythona, np. `[2, 4, 7]`
 
--- * 1. linia: napis z połączonych liczb, np. `247`
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: napis z połączonych liczb, np. `247`
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- [2, 4, 7]
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+[2, 4, 7]
+```
 
---
--- ```
--- 247
--- ```
---
--- ### Uwagi
---
+**Wyjście:**
 
--- * Najprościej: usuń nawiasy `[` `]`, rozdziel po przecinkach, `strip()`, potem sklej.
+```
+247
+```
 
+### Uwagi
+
+* Najprościej: usuń nawiasy `[` `]`, rozdziel po przecinkach, `strip()`, potem sklej.
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,54 +1,41 @@
--- ZAD-06 — Znalezienie elementów wspólnych dwóch list
---
+{-
+ZAD-06 — Znalezienie elementów wspólnych dwóch list
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `list`, `set`
 
--- ** Tagi:** `list`, `set`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występują w obu listach:
---
+Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występują w obu listach:
 
--- * zachowaj **kolejność występowania w pierwszej liście**,
+* zachowaj **kolejność występowania w pierwszej liście**,
+* jeśli element z pierwszej listy występuje w drugiej liście, dodaj go do wyniku,
+* jeśli nie ma elementów wspólnych — wypisz `[]`.
 
--- * jeśli element z pierwszej listy występuje w drugiej liście, dodaj go do wyniku,
+### Wejście
 
--- * jeśli nie ma elementów wspólnych — wypisz `[]`.
+* 1 linia: lista 1
+* 2 linia: lista 2
 
---
--- ### Wejście
---
+### Wyjście
 
--- * 1 linia: lista 1
+* 1 linia: lista elementów wspólnych
 
--- * 2 linia: lista 2
+### Przykład
 
---
--- ### Wyjście
---
+**Wejście:**
 
--- * 1 linia: lista elementów wspólnych
+```
+[9, 2, 5, 4]
+[4, 2, 1]
+```
 
---
--- ### Przykład
---
+**Wyjście:**
 
--- ** Wejście:**
+```
+[2, 4]
+```
 
---
--- ```
--- [9, 2, 5, 4]
--- [4, 2, 1]
--- ```
---
-
--- ** Wyjście:**
-
---
--- ```
--- [2, 4]
--- ```
+-}
 main :: IO ()
 main = pure ()

@@ -1,41 +1,35 @@
--- ZAD-07 — Zliczanie instancji klasy
---
+{-
+ZAD-07 — Zliczanie instancji klasy
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `class`, `static`
 
--- ** Tagi:** `class`, `static`
+### Treść
 
---
--- ### Treść
---
--- Zaprojektuj klasę **MojaKlasa**, która zlicza ile instancji utworzono:
---
+Zaprojektuj klasę **MojaKlasa**, która zlicza ile instancji utworzono:
 
--- * prywatne pole statyczne licznik,
+* prywatne pole statyczne licznik,
+* konstruktor zwiększa licznik,
+* metoda statyczna zwraca licznik.
 
--- * konstruktor zwiększa licznik,
+Program tworzy np. 3 obiekty i wypisuje liczbę instancji.
 
--- * metoda statyczna zwraca licznik.
+### Wejście
 
---
--- Program tworzy np. 3 obiekty i wypisuje liczbę instancji.
---
--- ### Wejście
---
--- Brak.
---
--- ### Wyjście
---
--- Jedna linia.
---
--- ### Przykład
---
+Brak.
 
--- ** Wyjście:**
+### Wyjście
 
---
--- ```
--- Liczba utworzonych instancji: 3
--- ```
+Jedna linia.
+
+### Przykład
+
+**Wyjście:**
+
+```
+Liczba utworzonych instancji: 3
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,53 +1,43 @@
--- ZAD-03 — Znajdź wszystkie ścieżki plików o danej nazwie (rekurencyjnie)
---
+{-
+ZAD-03 — Znajdź wszystkie ścieżki plików o danej nazwie (rekurencyjnie)
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `files`, `walk`, `recursive`, `pathlib`
 
--- ** Tagi:** `files`, `walk`, `recursive`, `pathlib`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz nazwę pliku (np. `raport.docx`). Przeszukaj cały system plików i znajdź wszystkie pliki o tej nazwie. Wypisz listę pełnych ścieżek do znalezionych plików.
---
--- ### Wejście
---
+Otrzymujesz nazwę pliku (np. `raport.docx`). Przeszukaj cały system plików i znajdź wszystkie pliki o tej nazwie. Wypisz listę pełnych ścieżek do znalezionych plików.
 
--- * 1 linia: `filename` (np. `raport.docx`)
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: `filename` (np. `raport.docx`)
 
--- * 1 linia: lista pełnych ścieżek (napisy)
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: lista pełnych ścieżek (napisy)
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- raport.docx
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+raport.docx
+```
 
---
--- ```
--- [
---   'C:\Users\Username\Documents\raport.docx',
---   'D:\Projekty\Raporty\raport.docx',
---   'E:\Backup\raport.docx'
--- ]
--- ```
---
--- ### Uwagi
---
+**Wyjście:**
 
--- * W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów — program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca).
+```
+[
+  'C:\Users\Username\Documents\raport.docx',
+  'D:\Projekty\Raporty\raport.docx',
+  'E:\Backup\raport.docx'
+]
+```
 
+### Uwagi
+
+* W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów — program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca).
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,43 +1,35 @@
--- ZAD-06 — Zamień litery „a” na „?”
---
+{-
+ZAD-06 — Zamień litery „a” na „?”
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `replace`
 
--- ** Tagi:** `string`, `replace`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj napis i zamień wszystkie wystąpienia litery `a` na znak `?`.
---
--- ### Wejście
---
+Wczytaj napis i zamień wszystkie wystąpienia litery `a` na znak `?`.
 
--- * 1. linia: napis
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: napis
 
--- * 1. linia: napis po zamianie
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: napis po zamianie
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- Latarnik
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+Latarnik
+```
 
---
--- ```
--- L?t?rnik
--- ```
+**Wyjście:**
+
+```
+L?t?rnik
+```
+
+-}
 main :: IO ()
 main = pure ()

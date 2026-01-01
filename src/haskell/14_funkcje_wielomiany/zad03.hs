@@ -1,38 +1,31 @@
--- ZAD-03 — Suma wielomianów
---
+{-
+ZAD-03 — Suma wielomianów
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `wielomiany`, `listy`
 
--- ** Tagi:** `funkcje`, `wielomiany`, `listy`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` i `b` (mogą mieć różne stopnie) i zwraca współczynniki wielomianu będącego ich sumą.
---
--- ### Wejście (argumenty funkcji)
---
+Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` i `b` (mogą mieć różne stopnie) i zwraca współczynniki wielomianu będącego ich sumą.
 
--- * `a` — lista `[a_n, ..., a_0]`
+### Wejście (argumenty funkcji)
 
--- * `b` — lista `[b_m, ..., b_0]`
+* `a` — lista `[a_n, ..., a_0]`
+* `b` — lista `[b_m, ..., b_0]`
 
---
--- ### Wyjście (zwracana wartość)
---
+### Wyjście (zwracana wartość)
 
--- * lista współczynników `a + b` w tej samej konwencji
+* lista współczynników `a + b` w tej samej konwencji
 
---
--- ### Przykład
---
--- Dla `a = [3, 5, 2]` i `b = [2, -8, 1]` funkcja zwraca:
--- `[5, -3, 3]`
---
--- ### Uwagi
---
+### Przykład
 
--- * Jeśli listy mają różne długości, wyrównaj je od końca (od wyrazu wolnego).
+Dla `a = [3, 5, 2]` i `b = [2, -8, 1]` funkcja zwraca:
+`[5, -3, 3]`
 
+### Uwagi
+
+* Jeśli listy mają różne długości, wyrównaj je od końca (od wyrazu wolnego).
+
+-}
 main :: IO ()
 main = pure ()

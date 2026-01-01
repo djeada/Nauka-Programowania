@@ -1,51 +1,40 @@
--- ZAD-07 — Weryfikacja nazwy użytkownika i hasła
---
+{-
+ZAD-07 — Weryfikacja nazwy użytkownika i hasła
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `while`, `string`, `porównania`
 
--- ** Tagi:** `funkcje`, `while`, `string`, `porównania`
+### Treść
 
---
--- ### Treść
---
--- Napisz dwie funkcje:
---
--- 1. `pobierz_dane()` — pobiera od użytkownika nazwę użytkownika i hasło i zwraca je (np. jako parę).
--- 2. `sprawdz_dane(poprawny_login, poprawne_haslo)` — w pętli wczytuje login i hasło aż będą identyczne z przekazanymi. Po poprawnym wczytaniu wypisuje:
---    `Dane poprawne. Dostęp przyznany.`
---
--- ### Wejście
---
+Napisz dwie funkcje:
 
--- * `pobierz_dane()` wczytuje dwie linie:
+1. `pobierz_dane()` — pobiera od użytkownika nazwę użytkownika i hasło i zwraca je (np. jako parę).
+2. `sprawdz_dane(poprawny_login, poprawne_haslo)` — w pętli wczytuje login i hasło aż będą identyczne z przekazanymi. Po poprawnym wczytaniu wypisuje:
+   `Dane poprawne. Dostęp przyznany.`
 
---
---   1. login
---   2. hasło
+### Wejście
 
--- * `sprawdz_dane(...)` wczytuje kolejne pary (login, hasło), po dwie linie na próbę.
+* `pobierz_dane()` wczytuje dwie linie:
 
---
--- ### Wyjście
---
--- Jedna linia (tylko raz, po poprawnym dopasowaniu):
---
+  1. login
+  2. hasło
+* `sprawdz_dane(...)` wczytuje kolejne pary (login, hasło), po dwie linie na próbę.
 
--- * `Dane poprawne. Dostęp przyznany.`
+### Wyjście
 
---
--- ### Ograniczenia / gwarancje
---
+Jedna linia (tylko raz, po poprawnym dopasowaniu):
 
--- * W pewnym momencie użytkownik poda poprawne dane.
+* `Dane poprawne. Dostęp przyznany.`
 
---
--- ### Uwagi o formatowaniu
---
+### Ograniczenia / gwarancje
 
--- * **Nie wypisuj promptów** typu „Podaj nazwę użytkownika:”.
+* W pewnym momencie użytkownik poda poprawne dane.
 
--- * Porównanie jest czułe na wielkość liter.
+### Uwagi o formatowaniu
 
+* **Nie wypisuj promptów** typu „Podaj nazwę użytkownika:”.
+* Porównanie jest czułe na wielkość liter.
+
+-}
 main :: IO ()
 main = pure ()

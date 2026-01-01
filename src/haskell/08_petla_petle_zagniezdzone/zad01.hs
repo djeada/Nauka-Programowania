@@ -1,44 +1,39 @@
--- ZAD-01 — Kwadrat
---
+{-
+ZAD-01 — Kwadrat
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle zagnieżdżone`, `print`, `string`
 
--- ** Tagi:** `pętle zagnieżdżone`, `print`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n` (`n ≥ 1`) i wypisz kwadrat `n × n` zbudowany z gwiazdek `*`.
--- Każdy wiersz ma zawierać dokładnie `n` gwiazdek (bez spacji).
---
--- ### Wejście
---
--- Jedna liczba naturalna:
---
+Wczytaj liczbę naturalną `n` (`n ≥ 1`) i wypisz kwadrat `n × n` zbudowany z gwiazdek `*`.
+Każdy wiersz ma zawierać dokładnie `n` gwiazdek (bez spacji).
 
--- * 1. linia: `n` (`n ≥ 1`)
+### Wejście
 
---
--- ### Wyjście
---
--- `n` linii, w każdej dokładnie `n` znaków `*`.
---
--- ### Przykład
---
+Jedna liczba naturalna:
 
--- ** Wejście:**
+* 1. linia: `n` (`n ≥ 1`)
 
---
--- ```
--- 2
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+`n` linii, w każdej dokładnie `n` znaków `*`.
 
---
--- ```
+### Przykład
 
--- ```
+**Wejście:**
+
+```
+2
+```
+
+**Wyjście:**
+
+```
+**
+**
+```
+
+-}
 main :: IO ()
 main = pure ()

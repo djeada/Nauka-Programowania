@@ -1,52 +1,44 @@
--- ZAD-04 — Tabliczka mnożenia N × N
---
+{-
+ZAD-04 — Tabliczka mnożenia N × N
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `pętle zagnieżdżone`, `formatowanie`, `arytmetyka`
 
--- ** Tagi:** `pętle zagnieżdżone`, `formatowanie`, `arytmetyka`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `N` (`N ≥ 1`) i wypisz tabliczkę mnożenia `N × N`.
---
--- W wierszu `i` i kolumnie `j` (licząc od 1) ma znaleźć się wartość `i*j`.
--- Liczby w jednym wierszu oddzielaj pojedynczą spacją.
---
--- ### Wejście
---
+Wczytaj liczbę naturalną `N` (`N ≥ 1`) i wypisz tabliczkę mnożenia `N × N`.
 
--- * 1. linia: `N` (`N ≥ 1`)
+W wierszu `i` i kolumnie `j` (licząc od 1) ma znaleźć się wartość `i*j`.
+Liczby w jednym wierszu oddzielaj pojedynczą spacją.
 
---
--- ### Wyjście
---
--- `N` linii, w każdej `N` liczb.
---
--- ### Przykład
---
+### Wejście
 
--- ** Wejście:**
+* 1. linia: `N` (`N ≥ 1`)
 
---
--- ```
--- 3
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+`N` linii, w każdej `N` liczb.
 
---
--- ```
--- 1 2 3
--- 2 4 6
--- 3 6 9
--- ```
---
--- ### Uwagi o formatowaniu
---
+### Przykład
 
--- * Nie dodawaj spacji na końcu wiersza.
+**Wejście:**
 
+```
+3
+```
+
+**Wyjście:**
+
+```
+1 2 3
+2 4 6
+3 6 9
+```
+
+### Uwagi o formatowaniu
+
+* Nie dodawaj spacji na końcu wiersza.
+
+-}
 main :: IO ()
 main = pure ()

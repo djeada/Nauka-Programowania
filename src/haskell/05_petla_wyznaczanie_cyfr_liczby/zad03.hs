@@ -1,49 +1,41 @@
--- ZAD-03 — Sumowanie cyfr liczby
---
+{-
+ZAD-03 — Sumowanie cyfr liczby
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
 
--- ** Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n` i oblicz sumę jej cyfr. Następnie wypisz wynik.
---
--- ### Wejście
---
--- Jedna liczba naturalna:
---
+Wczytaj liczbę naturalną `n` i oblicz sumę jej cyfr. Następnie wypisz wynik.
 
--- * 1. linia: `n` (`n ≥ 0`)
+### Wejście
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna — suma cyfr liczby `n`.
---
--- ### Przykład
---
+Jedna liczba naturalna:
 
--- ** Wejście:**
+* 1. linia: `n` (`n ≥ 0`)
 
---
--- ```
--- 129
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Jedna liczba naturalna — suma cyfr liczby `n`.
 
---
--- ```
--- 12
--- ```
---
--- ### Uwagi o formatowaniu
---
+### Przykład
 
--- * Dla `n = 0` suma cyfr wynosi `0`.
+**Wejście:**
 
+```
+129
+```
+
+**Wyjście:**
+
+```
+12
+```
+
+### Uwagi o formatowaniu
+
+* Dla `n = 0` suma cyfr wynosi `0`.
+
+-}
 main :: IO ()
 main = pure ()

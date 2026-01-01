@@ -1,78 +1,59 @@
--- ZAD-04 — Klasy Wektor2D i Wektor3D
---
+{-
+ZAD-04 — Klasy Wektor2D i Wektor3D
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `class`, `operatory`, `math`
 
--- ** Tagi:** `class`, `operatory`, `math`
+### Treść
 
---
--- ### Treść
---
--- Zaprojektuj klasy **Wektor2D** i **Wektor3D**:
---
--- Wspólne:
---
+Zaprojektuj klasy **Wektor2D** i **Wektor3D**:
 
--- * konstruktor z domyślnymi współrzędnymi 0,
+Wspólne:
 
--- * dodawanie, odejmowanie,
+* konstruktor z domyślnymi współrzędnymi 0,
+* dodawanie, odejmowanie,
+* iloczyn skalarny,
+* porównania `==` i `!=`,
+* moduł (długość),
+* metoda wypisująca wektor.
 
--- * iloczyn skalarny,
+Dodatkowo dla **Wektor3D**:
 
--- * porównania `==` i `!=`,
+* iloczyn wektorowy.
 
--- * moduł (długość),
+Program tworzy:
 
--- * metoda wypisująca wektor.
+* A = (-3, -3, -3)
+* B = (5, 5, 5)
 
---
--- Dodatkowo dla **Wektor3D**:
---
+Wypisuje A, B oraz:
 
--- * iloczyn wektorowy.
+* A + B
+* A - B
+* A · B
+* A × B
 
---
--- Program tworzy:
---
+### Wejście
 
--- * A = (-3, -3, -3)
+Brak.
 
--- * B = (5, 5, 5)
+### Wyjście
 
---
--- Wypisuje A, B oraz:
---
+Jak w przykładzie.
 
--- * A + B
+### Przykład
 
--- * A - B
+**Wyjście:**
 
--- * A · B
+```
+Wektor A: (-3, -3, -3)
+Wektor B: (5, 5, 5)
+Suma wektorów: (2, 2, 2)
+Różnica wektorów A - B: (-8, -8, -8)
+Iloczyn skalarny: -45
+Iloczyn wektorowy: (0, 0, 0)
+```
 
--- * A × B
-
---
--- ### Wejście
---
--- Brak.
---
--- ### Wyjście
---
--- Jak w przykładzie.
---
--- ### Przykład
---
-
--- ** Wyjście:**
-
---
--- ```
--- Wektor A: (-3, -3, -3)
--- Wektor B: (5, 5, 5)
--- Suma wektorów: (2, 2, 2)
--- Różnica wektorów A - B: (-8, -8, -8)
--- Iloczyn skalarny: -45
--- Iloczyn wektorowy: (0, 0, 0)
--- ```
+-}
 main :: IO ()
 main = pure ()

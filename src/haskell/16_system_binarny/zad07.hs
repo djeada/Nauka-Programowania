@@ -1,59 +1,46 @@
--- ZAD-07 — Zamiana sąsiadujących bitów
---
+{-
+ZAD-07 — Zamiana sąsiadujących bitów
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `maski`, `swap bits`
 
--- ** Tagi:** `bitwise`, `maski`, `swap bits`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n`. Zamień miejscami każdą parę sąsiadujących bitów w jej zapisie binarnym:
---
+Wczytaj liczbę naturalną `n`. Zamień miejscami każdą parę sąsiadujących bitów w jej zapisie binarnym:
 
--- * bit 0 z bitem 1,
+* bit 0 z bitem 1,
+* bit 2 z bitem 3,
+* bit 4 z bitem 5,
+* itd.
 
--- * bit 2 z bitem 3,
+Następnie wypisz wynik w systemie dziesiętnym.
 
--- * bit 4 z bitem 5,
+### Wejście
 
--- * itd.
+* 1. linia: `n`
 
---
--- Następnie wypisz wynik w systemie dziesiętnym.
---
--- ### Wejście
---
+### Wyjście
 
--- * 1. linia: `n`
+Jedna liczba naturalna: wynik po zamianie bitów.
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna: wynik po zamianie bitów.
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 9131
--- ```
---
+```
+9131
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 4951
--- ```
---
--- ### Uwagi
---
+```
+4951
+```
 
--- * Jeśli liczba ma nieparzystą liczbę bitów, najwyższy (samotny) bit pozostaje bez zmian.
+### Uwagi
 
+* Jeśli liczba ma nieparzystą liczbę bitów, najwyższy (samotny) bit pozostaje bez zmian.
+
+-}
 main :: IO ()
 main = pure ()

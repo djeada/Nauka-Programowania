@@ -1,52 +1,44 @@
--- ZAD-02 — Wszystkie permutacje słowa
---
+{-
+ZAD-02 — Wszystkie permutacje słowa
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `rekurencja`, `permutacje`, `backtracking`
 
--- ** Tagi:** `rekurencja`, `permutacje`, `backtracking`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj słowo z **unikalnych liter** i wypisz wszystkie jego permutacje — każdą w osobnej linii.
---
--- ### Wejście
---
+Wczytaj słowo z **unikalnych liter** i wypisz wszystkie jego permutacje — każdą w osobnej linii.
 
--- * 1. linia: słowo (litery nie powtarzają się)
+### Wejście
 
---
--- ### Wyjście
---
--- Wiele linii — wszystkie permutacje słowa, każda w osobnej linii.
---
--- ### Przykład
---
+* 1. linia: słowo (litery nie powtarzają się)
 
--- ** Wejście:**
+### Wyjście
 
---
--- ```
--- abc
--- ```
---
+Wiele linii — wszystkie permutacje słowa, każda w osobnej linii.
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- abc
--- acb
--- bac
--- bca
--- cab
--- cba
--- ```
---
--- ### Uwagi o formatowaniu
---
+**Wejście:**
 
--- * Kolejność wypisywania permutacji nie musi być dokładnie taka jak w przykładzie, o ile są wszystkie i bez powtórzeń.
+```
+abc
+```
 
+**Wyjście:**
+
+```
+abc
+acb
+bac
+bca
+cab
+cba
+```
+
+### Uwagi o formatowaniu
+
+* Kolejność wypisywania permutacji nie musi być dokładnie taka jak w przykładzie, o ile są wszystkie i bez powtórzeń.
+
+-}
 main :: IO ()
 main = pure ()

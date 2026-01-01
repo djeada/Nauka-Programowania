@@ -1,87 +1,65 @@
--- ZAD-08 — Dzień tygodnia dla daty (Zeller)
---
+{-
+ZAD-08 — Dzień tygodnia dla daty (Zeller)
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `algorytmy`, `Zeller`, `mapowanie`, `daty`
 
--- ** Tagi:** `algorytmy`, `Zeller`, `mapowanie`, `daty`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj datę `d, m, y` i wyznacz nazwę dnia tygodnia, używając **kongruencji Zellera** dla kalendarza gregoriańskiego.
---
--- Kroki:
---
--- 1. Jeśli `m <= 2`, to:
---
+Wczytaj datę `d, m, y` i wyznacz nazwę dnia tygodnia, używając **kongruencji Zellera** dla kalendarza gregoriańskiego.
 
--- * `m = m + 12`
+Kroki:
 
--- * `y = y - 1`
+1. Jeśli `m <= 2`, to:
 
---
--- 2. Oblicz:
---
+* `m = m + 12`
+* `y = y - 1`
 
--- * `K = y % 100`
+2. Oblicz:
 
--- * `J = y // 100`
+* `K = y % 100`
+* `J = y // 100`
+* `h = (d + (13*(m+1))//5 + K + K//4 + J//4 + 5*J) % 7`
 
--- * `h = (d + (13*(m+1))//5 + K + K//4 + J//4 + 5*J) % 7`
+3. Zmapuj `h` na dzień tygodnia:
 
---
--- 3. Zmapuj `h` na dzień tygodnia:
---
+* 0 → `Sobota`
+* 1 → `Niedziela`
+* 2 → `Poniedziałek`
+* 3 → `Wtorek`
+* 4 → `Środa`
+* 5 → `Czwartek`
+* 6 → `Piątek`
 
--- * 0 → `Sobota`
+### Wejście
 
--- * 1 → `Niedziela`
+3 liczby całkowite (w osobnych liniach): `d`, `m`, `y`
 
--- * 2 → `Poniedziałek`
+### Wyjście
 
--- * 3 → `Wtorek`
+Jedna linia: nazwa dnia tygodnia (dokładnie jedna z: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota, Niedziela).
 
--- * 4 → `Środa`
+### Ograniczenia / gwarancje
 
--- * 5 → `Czwartek`
+* Data wejściowa jest poprawna (zalecane; inaczej dopisz, co robić dla błędnej).
+* Kalendarz gregoriański.
 
--- * 6 → `Piątek`
+### Przykład
 
---
--- ### Wejście
---
--- 3 liczby całkowite (w osobnych liniach): `d`, `m`, `y`
---
--- ### Wyjście
---
--- Jedna linia: nazwa dnia tygodnia (dokładnie jedna z: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota, Niedziela).
---
--- ### Ograniczenia / gwarancje
---
+**Wejście:**
 
--- * Data wejściowa jest poprawna (zalecane; inaczej dopisz, co robić dla błędnej).
+```
+9
+10
+2020
+```
 
--- * Kalendarz gregoriański.
+**Wyjście:**
 
---
--- ### Przykład
---
+```
+Piątek
+```
 
--- ** Wejście:**
-
---
--- ```
--- 9
--- 10
--- 2020
--- ```
---
-
--- ** Wyjście:**
-
---
--- ```
--- Piątek
--- ```
+-}
 main :: IO ()
 main = pure ()

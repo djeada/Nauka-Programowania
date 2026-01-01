@@ -1,43 +1,35 @@
--- ZAD-07 — Pojemność wody między słupkami
---
+{-
+ZAD-07 — Pojemność wody między słupkami
 
--- ** Poziom:** ★★★
+**Poziom:** ★★★
+**Tagi:** `two pointers`, `prefix`, `trapping rain water`
 
--- ** Tagi:** `two pointers`, `prefix`, `trapping rain water`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę liczb naturalnych — wysokości słupków. Oblicz, ile jednostek wody może się zatrzymać pomiędzy słupkami po deszczu.
---
--- ### Wejście
---
+Otrzymujesz listę liczb naturalnych — wysokości słupków. Oblicz, ile jednostek wody może się zatrzymać pomiędzy słupkami po deszczu.
 
--- * 1 linia: lista wysokości `H`
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: lista wysokości `H`
 
--- * 1 linia: jedna liczba naturalna — ilość wody
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: jedna liczba naturalna — ilość wody
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- [3, 0, 1, 0, 2]
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+[3, 0, 1, 0, 2]
+```
 
---
--- ```
--- 5
--- ```
+**Wyjście:**
+
+```
+5
+```
+
+-}
 main :: IO ()
 main = pure ()

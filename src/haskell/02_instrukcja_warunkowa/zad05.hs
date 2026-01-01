@@ -1,53 +1,43 @@
--- ZAD-05 — Sortowanie trzech liczb
---
+{-
+ZAD-05 — Sortowanie trzech liczb
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sort`, `warunki`, `porządkowanie`
 
--- ** Tagi:** `sort`, `warunki`, `porządkowanie`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności rosnącej.
---
--- ### Wejście
---
+Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności rosnącej.
 
--- * 1 linia: `a` (całkowita, `a ≥ 0`)
+### Wejście
 
--- * 2 linia: `b` (całkowita, `b ≥ 0`)
+* 1 linia: `a` (całkowita, `a ≥ 0`)
+* 2 linia: `b` (całkowita, `b ≥ 0`)
+* 3 linia: `c` (całkowita, `c ≥ 0`)
 
--- * 3 linia: `c` (całkowita, `c ≥ 0`)
+### Wyjście
 
---
--- ### Wyjście
---
--- Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
---
--- ### Przykład
---
+Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 2
--- 1
--- 4
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+2
+1
+4
+```
 
---
--- ```
--- 1 2 4
--- ```
---
--- ### Uwagi
---
+**Wyjście:**
 
--- * Możesz użyć wbudowanego sortowania, ale da się też rozwiązać czystymi warunkami.
+```
+1 2 4
+```
 
+### Uwagi
+
+* Możesz użyć wbudowanego sortowania, ale da się też rozwiązać czystymi warunkami.
+
+-}
 main :: IO ()
 main = pure ()

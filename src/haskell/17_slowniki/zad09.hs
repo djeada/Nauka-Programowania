@@ -1,43 +1,35 @@
--- ZAD-09 — Znaki występujące co najmniej dwa razy
---
+{-
+ZAD-09 — Znaki występujące co najmniej dwa razy
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `string`
 
--- ** Tagi:** `dict`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj napis. Wypisz napis złożony z **unikalnych** znaków, które występują co najmniej 2 razy, w kolejności pierwszego pojawienia się w wejściu.
---
--- ### Wejście
---
+Wczytaj napis. Wypisz napis złożony z **unikalnych** znaków, które występują co najmniej 2 razy, w kolejności pierwszego pojawienia się w wejściu.
 
--- * 1 linia: napis
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: napis
 
--- * 1 linia: wynikowy napis
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: wynikowy napis
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- aaabbbccc
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+aaabbbccc
+```
 
---
--- ```
--- abc
--- ```
+**Wyjście:**
+
+```
+abc
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,49 +1,39 @@
--- ZAD-13 — Znaki na indeksach będących liczbami pierwszymi
---
+{-
+ZAD-13 — Znaki na indeksach będących liczbami pierwszymi
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `liczby pierwsze`, `indeksy`, `string`
 
--- ** Tagi:** `liczby pierwsze`, `indeksy`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj napis. Zbierz znaki, których **indeksy (od 0)** są liczbami pierwszymi (2, 3, 5, 7, ...). Wypisz wynik jako listę w stylu Pythona.
---
--- ### Wejście
---
+Wczytaj napis. Zbierz znaki, których **indeksy (od 0)** są liczbami pierwszymi (2, 3, 5, 7, ...). Wypisz wynik jako listę w stylu Pythona.
 
--- * 1. linia: napis
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: napis
 
--- * 1. linia: lista znaków, np. `['o', 'ń']`
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: lista znaków, np. `['o', 'ń']`
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- Słoń
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+Słoń
+```
 
---
--- ```
--- ['o', 'ń']
--- ```
---
--- ### Uwagi
---
+**Wyjście:**
 
--- * Indeksy: `S(0) ł(1) o(2) ń(3)` → bierz 2 i 3.
+```
+['o', 'ń']
+```
 
+### Uwagi
+
+* Indeksy: `S(0) ł(1) o(2) ń(3)` → bierz 2 i 3.
+
+-}
 main :: IO ()
 main = pure ()

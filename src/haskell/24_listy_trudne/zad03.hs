@@ -1,45 +1,37 @@
--- ZAD-03 — Minimalny iloczyn trzech liczb
---
+{-
+ZAD-03 — Minimalny iloczyn trzech liczb
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `list`, `min`, `math`
 
--- ** Tagi:** `list`, `min`, `math`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę liczb całkowitych. Znajdź **najmniejszy możliwy iloczyn trzech liczb** wybranych z tej listy.
---
--- Jeśli lista zawiera mniej niż 3 liczby — wypisz iloczyn wszystkich elementów listy.
---
--- ### Wejście
---
+Otrzymujesz listę liczb całkowitych. Znajdź **najmniejszy możliwy iloczyn trzech liczb** wybranych z tej listy.
 
--- * 1 linia: lista liczb całkowitych `A`
+Jeśli lista zawiera mniej niż 3 liczby — wypisz iloczyn wszystkich elementów listy.
 
---
--- ### Wyjście
---
+### Wejście
 
--- * 1 linia: jedna liczba całkowita
+* 1 linia: lista liczb całkowitych `A`
 
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+* 1 linia: jedna liczba całkowita
 
---
--- ```
--- [3, -1, -3, 2, 9, 4]
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- -108
--- ```
+```
+[3, -1, -3, 2, 9, 4]
+```
+
+**Wyjście:**
+
+```
+-108
+```
+
+-}
 main :: IO ()
 main = pure ()

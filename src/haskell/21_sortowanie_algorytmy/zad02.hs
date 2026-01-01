@@ -1,50 +1,40 @@
--- ZAD-02 — Sortowanie przez wybieranie
---
+{-
+ZAD-02 — Sortowanie przez wybieranie
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `selection-sort`, `list`
 
--- ** Tagi:** `sorting`, `selection-sort`, `list`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wybieranie**.
--- Dla każdej pozycji `i` znajdź najmniejszy element w zakresie `i..koniec` i zamień go z elementem na pozycji `i`.
---
--- ### Wejście
---
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wybieranie**.
+Dla każdej pozycji `i` znajdź najmniejszy element w zakresie `i..koniec` i zamień go z elementem na pozycji `i`.
 
--- * 1 linia: lista liczb całkowitych
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: lista liczb całkowitych
 
--- * 1 linia: posortowana lista rosnąco
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: posortowana lista rosnąco
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- [6, 2, 1, 4, 27]
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+[6, 2, 1, 4, 27]
+```
 
---
--- ```
--- [1, 2, 4, 6, 27]
--- ```
---
--- ### Uwagi o algorytmie
---
+**Wyjście:**
 
--- * Złożoność czasowa: `O(n^2)`.
+```
+[1, 2, 4, 6, 27]
+```
 
+### Uwagi o algorytmie
+
+* Złożoność czasowa: `O(n^2)`.
+
+-}
 main :: IO ()
 main = pure ()

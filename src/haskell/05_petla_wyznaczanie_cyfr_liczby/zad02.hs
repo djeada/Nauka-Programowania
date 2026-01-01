@@ -1,52 +1,44 @@
--- ZAD-02 — Wypisywanie cyfr liczby w odwrotnej kolejności
---
+{-
+ZAD-02 — Wypisywanie cyfr liczby w odwrotnej kolejności
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
 
--- ** Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n` i wypisz jej cyfry w kolejności od cyfry jedności (czyli w odwrotnej kolejności niż w zapisie liczby). Każdą cyfrę wypisz w osobnej linii.
---
--- ### Wejście
---
--- Jedna liczba naturalna:
---
+Wczytaj liczbę naturalną `n` i wypisz jej cyfry w kolejności od cyfry jedności (czyli w odwrotnej kolejności niż w zapisie liczby). Każdą cyfrę wypisz w osobnej linii.
 
--- * 1. linia: `n` (`n ≥ 0`)
+### Wejście
 
---
--- ### Wyjście
---
--- Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
---
--- ### Przykład
---
+Jedna liczba naturalna:
 
--- ** Wejście:**
+* 1. linia: `n` (`n ≥ 0`)
 
---
--- ```
--- 8214
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
 
---
--- ```
--- 4
--- 1
--- 2
--- 8
--- ```
---
--- ### Uwagi o formatowaniu
---
+### Przykład
 
--- * Dla `n = 0` wypisz jedną linię z `0`.
+**Wejście:**
 
+```
+8214
+```
+
+**Wyjście:**
+
+```
+4
+1
+2
+8
+```
+
+### Uwagi o formatowaniu
+
+* Dla `n = 0` wypisz jedną linię z `0`.
+
+-}
 main :: IO ()
 main = pure ()

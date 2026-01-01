@@ -1,56 +1,48 @@
--- ZAD-17 — Wszystkie pary o sumie x (wartości)
---
+{-
+ZAD-17 — Wszystkie pary o sumie x (wartości)
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `listy`, `2-sum`, `pary`
 
--- ** Tagi:** `listy`, `2-sum`, `pary`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych oraz `x`. Wypisz wszystkie pary **wartości** `(a, b)` z listy (nie indeksy), takie że `a + b == x`. Każdą parę wypisz w osobnej linii jako:
--- `a b`
---
--- Każdą parę wypisz tylko raz (nie dubluj `(a,b)` i `(b,a)`).
---
--- ### Wejście
---
+Wczytaj listę liczb całkowitych oraz `x`. Wypisz wszystkie pary **wartości** `(a, b)` z listy (nie indeksy), takie że `a + b == x`. Każdą parę wypisz w osobnej linii jako:
+`a b`
 
--- * 1. linia: `N` (`N ≥ 2`)
+Każdą parę wypisz tylko raz (nie dubluj `(a,b)` i `(b,a)`).
 
--- * kolejne `N` linii: liczby całkowite
+### Wejście
 
--- * ostatnia linia: `x` (liczba całkowita)
+* 1. linia: `N` (`N ≥ 2`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `x` (liczba całkowita)
 
---
--- ### Wyjście
---
--- Wiele linii — po jednej parze na linię.
--- Jeśli brak par — brak wyjścia.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Wiele linii — po jednej parze na linię.
+Jeśli brak par — brak wyjścia.
 
---
--- ```
--- 5
--- 1
--- 2
--- 4
--- 3
--- 7
--- 5
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 1 4
--- 2 3
--- ```
+```
+5
+1
+2
+4
+3
+7
+5
+```
+
+**Wyjście:**
+
+```
+1 4
+2 3
+```
+
+-}
 main :: IO ()
 main = pure ()

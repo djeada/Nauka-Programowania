@@ -1,51 +1,42 @@
--- ZAD-08 — Iloraz w dół bez / i %
---
+{-
+ZAD-08 — Iloraz w dół bez / i %
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `pętle`, `odejmowanie`
 
--- ** Tagi:** `funkcje`, `pętle`, `odejmowanie`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję `zaokraglij_w_dol(a, b)`, która zwraca wartość `a // b`, ale **nie używa** operatorów `/` ani `%`.
---
--- ### Wejście
---
--- Dwa argumenty:
---
+Napisz funkcję `zaokraglij_w_dol(a, b)`, która zwraca wartość `a // b`, ale **nie używa** operatorów `/` ani `%`.
 
--- * `a` (liczba naturalna, `a ≥ 0`)
+### Wejście
 
--- * `b` (liczba naturalna)
+Dwa argumenty:
 
---
--- ### Ograniczenia / gwarancje
---
+* `a` (liczba naturalna, `a ≥ 0`)
+* `b` (liczba naturalna)
 
--- * `b > 0`
+### Ograniczenia / gwarancje
 
---
--- ### Wyjście
---
--- Funkcja zwraca liczbę naturalną — iloraz `a` przez `b` zaokrąglony w dół.
---
--- ### Przykład
---
+* `b > 0`
 
--- ** Wywołanie funkcji:**
+### Wyjście
 
---
--- ```python
--- print(zaokraglij_w_dol(7, 2))
--- ```
---
+Funkcja zwraca liczbę naturalną — iloraz `a` przez `b` zaokrąglony w dół.
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- 3
--- ```
+**Wywołanie funkcji:**
+
+```python
+print(zaokraglij_w_dol(7, 2))
+```
+
+**Wyjście:**
+
+```
+3
+```
+
+-}
 main :: IO ()
 main = pure ()

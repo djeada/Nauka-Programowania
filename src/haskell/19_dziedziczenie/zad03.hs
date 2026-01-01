@@ -1,52 +1,42 @@
--- ZAD-03 — Polimorfizm: Zwierz, Pies i Kot
---
+{-
+ZAD-03 — Polimorfizm: Zwierz, Pies i Kot
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `dziedziczenie`, `polimorfizm`, `override`
 
--- ** Tagi:** `dziedziczenie`, `polimorfizm`, `override`
+### Treść
 
---
--- ### Treść
---
--- Zaprojektuj klasy:
---
+Zaprojektuj klasy:
 
--- * **Zwierz** — metoda `odglos()` zwraca/drukuje ogólny dźwięk.
+* **Zwierz** — metoda `odglos()` zwraca/drukuje ogólny dźwięk.
+* **Pies** — dziedziczy po `Zwierz` i nadpisuje `odglos()`.
+* **Kot** — dziedziczy po `Zwierz` i nadpisuje `odglos()`.
 
--- * **Pies** — dziedziczy po `Zwierz` i nadpisuje `odglos()`.
+Program testowy:
 
--- * **Kot** — dziedziczy po `Zwierz` i nadpisuje `odglos()`.
+* tworzy obiekty: `Zwierz`, `Pies`, `Kot`,
+* umieszcza je w jednej kolekcji,
+* iteruje i dla każdego wypisuje linię w formacie:
+  `NazwaKlasy wydaje odgłos: ...`
 
---
--- Program testowy:
---
+### Wejście
 
--- * tworzy obiekty: `Zwierz`, `Pies`, `Kot`,
+Brak.
 
--- * umieszcza je w jednej kolekcji,
+### Wyjście
 
--- * iteruje i dla każdego wypisuje linię w formacie:
+Trzy linie, po jednej dla każdego obiektu.
 
---   `NazwaKlasy wydaje odgłos: ...`
---
--- ### Wejście
---
--- Brak.
---
--- ### Wyjście
---
--- Trzy linie, po jednej dla każdego obiektu.
---
--- ### Przykład
---
+### Przykład
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Zwierz wydaje odgłos: ...
--- Pies wydaje odgłos: Hau!
--- Kot wydaje odgłos: Miau!
--- ```
+```
+Zwierz wydaje odgłos: ...
+Pies wydaje odgłos: Hau!
+Kot wydaje odgłos: Miau!
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,52 +1,44 @@
--- ZAD-03 — Pierwsze wystąpienie klucza
---
+{-
+ZAD-03 — Pierwsze wystąpienie klucza
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `wyszukiwanie`, `indeksy`
 
--- ** Tagi:** `listy`, `wyszukiwanie`, `indeksy`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych oraz liczbę `klucz`. Wypisz indeks pierwszego wystąpienia `klucz` w liście.
--- Jeśli `klucz` nie występuje — wypisz `-1`.
---
--- ### Wejście
---
+Wczytaj listę liczb całkowitych oraz liczbę `klucz`. Wypisz indeks pierwszego wystąpienia `klucz` w liście.
+Jeśli `klucz` nie występuje — wypisz `-1`.
 
--- * 1. linia: `N` (`N ≥ 1`)
+### Wejście
 
--- * kolejne `N` linii: liczby całkowite
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+* ostatnia linia: `klucz` (liczba całkowita)
 
--- * ostatnia linia: `klucz` (liczba całkowita)
+### Wyjście
 
---
--- ### Wyjście
---
--- Jedna liczba całkowita — indeks (od `0`) lub `-1`.
---
--- ### Przykład
---
+Jedna liczba całkowita — indeks (od `0`) lub `-1`.
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 5
--- 2
--- 9
--- -1
--- 3
--- 8
--- -1
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+5
+2
+9
+-1
+3
+8
+-1
+```
 
---
--- ```
--- 2
--- ```
+**Wyjście:**
+
+```
+2
+```
+
+-}
 main :: IO ()
 main = pure ()

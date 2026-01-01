@@ -1,43 +1,35 @@
--- ZAD-05 — Usuń powtórzenia sąsiadujących znaków
---
+{-
+ZAD-05 — Usuń powtórzenia sąsiadujących znaków
 
--- ** Poziom:** ★★★
+**Poziom:** ★★★
+**Tagi:** `string`, `compress`, `run-length`
 
--- ** Tagi:** `string`, `compress`, `run-length`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz napis. Usuń powtórzenia znaków występujących **bezpośrednio obok siebie**, pozostawiając jedno wystąpienie z każdej „serii”.
---
--- ### Wejście
---
+Otrzymujesz napis. Usuń powtórzenia znaków występujących **bezpośrednio obok siebie**, pozostawiając jedno wystąpienie z każdej „serii”.
 
--- * 1 linia: napis `S`
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: napis `S`
 
--- * 1 linia: napis po redukcji sąsiadów
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: napis po redukcji sąsiadów
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- AAAAAAAAAABBBBBBBBA
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+AAAAAAAAAABBBBBBBBA
+```
 
---
--- ```
--- ABA
--- ```
+**Wyjście:**
+
+```
+ABA
+```
+
+-}
 main :: IO ()
 main = pure ()

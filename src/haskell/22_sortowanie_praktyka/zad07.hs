@@ -1,46 +1,37 @@
--- ZAD-07 — Sortowanie listy 0/1/2
---
+{-
+ZAD-07 — Sortowanie listy 0/1/2
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sort`, `counting`
 
--- ** Tagi:** `sort`, `counting`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj ją rosnąco.
---
--- ### Wejście
---
+Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj ją rosnąco.
 
--- * 1 linia: liczba naturalna `N`
+### Wejście
 
--- * 2 linia: `N` liczb (0/1/2) oddzielonych spacjami
+* 1 linia: liczba naturalna `N`
+* 2 linia: `N` liczb (0/1/2) oddzielonych spacjami
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1 linia: posortowana lista w formacie jak w przykładzie
+* 1 linia: posortowana lista w formacie jak w przykładzie
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 7
--- 1 0 1 2 2 0 1
--- ```
---
+```
+7
+1 0 1 2 2 0 1
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- [0, 0, 1, 1, 1, 2, 2]
--- ```
+```
+[0, 0, 1, 1, 1, 2, 2]
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,50 +1,40 @@
--- ZAD-03 — Sortowanie przez wstawianie
---
+{-
+ZAD-03 — Sortowanie przez wstawianie
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sorting`, `insertion-sort`, `list`
 
--- ** Tagi:** `sorting`, `insertion-sort`, `list`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wstawianie**.
--- Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w odpowiednie miejsce, przesuwając większe elementy w prawo.
---
--- ### Wejście
---
+Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wstawianie**.
+Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w odpowiednie miejsce, przesuwając większe elementy w prawo.
 
--- * 1 linia: lista liczb całkowitych
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: lista liczb całkowitych
 
--- * 1 linia: posortowana lista rosnąco
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: posortowana lista rosnąco
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- [6, 2, 1, 4, 27]
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+[6, 2, 1, 4, 27]
+```
 
---
--- ```
--- [1, 2, 4, 6, 27]
--- ```
---
--- ### Uwagi o algorytmie
---
+**Wyjście:**
 
--- * Działa bardzo dobrze dla danych prawie posortowanych.
+```
+[1, 2, 4, 6, 27]
+```
 
+### Uwagi o algorytmie
+
+* Działa bardzo dobrze dla danych prawie posortowanych.
+
+-}
 main :: IO ()
 main = pure ()

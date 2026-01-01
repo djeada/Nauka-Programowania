@@ -1,169 +1,136 @@
--- ZAD-04A — Minimum z dwóch liczb
---
+{-
+ZAD-04A — Minimum z dwóch liczb
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `min`
 
--- ** Tagi:** `funkcje`, `min`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję `min_z_dwoch(a, b)`, która zwraca mniejszą z dwóch liczb naturalnych.
---
--- ### Wejście
---
--- Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)
---
--- ### Wyjście
---
--- Funkcja zwraca:
---
+Napisz funkcję `min_z_dwoch(a, b)`, która zwraca mniejszą z dwóch liczb naturalnych.
 
--- * `min(a, b)`
+### Wejście
 
---
--- ### Przykład
---
+Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)
 
--- ** Wywołanie funkcji:**
+### Wyjście
 
---
--- ```python
--- print(min_z_dwoch(3, 1))
--- ```
---
+Funkcja zwraca:
 
--- ** Wyjście:**
+* `min(a, b)`
 
---
--- ```
--- 1
--- ```
---
--- ZAD-04B — Maksimum z dwóch liczb
---
+### Przykład
 
--- ** Poziom:** ★☆☆
+**Wywołanie funkcji:**
 
--- ** Tagi:** `funkcje`, `max`
+```python
+print(min_z_dwoch(3, 1))
+```
 
---
--- ### Treść
---
--- Napisz funkcję `max_z_dwoch(a, b)`, która zwraca większą z dwóch liczb naturalnych.
---
--- ### Wejście
---
--- Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)
---
--- ### Wyjście
---
--- Funkcja zwraca:
---
+**Wyjście:**
 
--- * `max(a, b)`
+```
+1
+```
 
---
--- ### Przykład
---
+ZAD-04B — Maksimum z dwóch liczb
 
--- ** Wywołanie funkcji:**
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `max`
 
---
--- ```python
--- print(max_z_dwoch(3, 1))
--- ```
---
+### Treść
 
--- ** Wyjście:**
+Napisz funkcję `max_z_dwoch(a, b)`, która zwraca większą z dwóch liczb naturalnych.
 
---
--- ```
--- 3
--- ```
---
--- ZAD-04C — Minimum z trzech liczb
---
+### Wejście
 
--- ** Poziom:** ★☆☆
+Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)
 
--- ** Tagi:** `funkcje`, `min`
+### Wyjście
 
---
--- ### Treść
---
--- Napisz funkcję `min_z_trzech(a, b, c)`, która zwraca najmniejszą z trzech liczb naturalnych.
---
--- ### Wejście
---
--- Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)
---
--- ### Wyjście
---
--- Funkcja zwraca:
---
+Funkcja zwraca:
 
--- * `min(a, b, c)`
+* `max(a, b)`
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wywołanie funkcji:**
+**Wywołanie funkcji:**
 
---
--- ```python
--- print(min_z_trzech(3, 2, 1))
--- ```
---
+```python
+print(max_z_dwoch(3, 1))
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- 1
--- ```
---
--- ZAD-04D — Maksimum z trzech liczb
---
+```
+3
+```
 
--- ** Poziom:** ★☆☆
+ZAD-04C — Minimum z trzech liczb
 
--- ** Tagi:** `funkcje`, `max`
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `min`
 
---
--- ### Treść
---
--- Napisz funkcję `max_z_trzech(a, b, c)`, która zwraca największą z trzech liczb naturalnych.
---
--- ### Wejście
---
--- Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)
---
--- ### Wyjście
---
--- Funkcja zwraca:
---
+### Treść
 
--- * `max(a, b, c)`
+Napisz funkcję `min_z_trzech(a, b, c)`, która zwraca najmniejszą z trzech liczb naturalnych.
 
---
--- ### Przykład
---
+### Wejście
 
--- ** Wywołanie funkcji:**
+Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)
 
---
--- ```python
--- print(max_z_trzech(3, 2, 1))
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Funkcja zwraca:
 
---
--- ```
--- 3
--- ```
+* `min(a, b, c)`
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(min_z_trzech(3, 2, 1))
+```
+
+**Wyjście:**
+
+```
+1
+```
+
+ZAD-04D — Maksimum z trzech liczb
+
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `max`
+
+### Treść
+
+Napisz funkcję `max_z_trzech(a, b, c)`, która zwraca największą z trzech liczb naturalnych.
+
+### Wejście
+
+Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)
+
+### Wyjście
+
+Funkcja zwraca:
+
+* `max(a, b, c)`
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(max_z_trzech(3, 2, 1))
+```
+
+**Wyjście:**
+
+```
+3
+```
+
+-}
 main :: IO ()
 main = pure ()

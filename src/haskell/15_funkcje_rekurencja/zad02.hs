@@ -1,47 +1,39 @@
--- ZAD-02 — Iloczyn wielomianu przez skalar
---
+{-
+ZAD-02 — Iloczyn wielomianu przez skalar
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `wielomiany`, `listy`, `I/O`
 
--- ** Tagi:** `wielomiany`, `listy`, `I/O`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj współczynniki wielomianu oraz liczbę `k`. Wypisz współczynniki wielomianu powstałego przez pomnożenie każdego współczynnika przez `k`.
---
--- ### Wejście
---
+Wczytaj współczynniki wielomianu oraz liczbę `k`. Wypisz współczynniki wielomianu powstałego przez pomnożenie każdego współczynnika przez `k`.
 
--- * 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+### Wejście
 
--- * 2. linia: `n+1` liczb całkowitych: `a_n ... a_0`
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb całkowitych: `a_n ... a_0`
+* 3. linia: `k` — liczba całkowita (skalar)
 
--- * 3. linia: `k` — liczba całkowita (skalar)
+### Wyjście
 
---
--- ### Wyjście
---
--- Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielonych spacją.
---
--- ### Przykład
---
+Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielonych spacją.
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 2
--- 4 -3 2
--- -2
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+2
+4 -3 2
+-2
+```
 
---
--- ```
--- -8 6 -4
--- ```
+**Wyjście:**
+
+```
+-8 6 -4
+```
+
+-}
 main :: IO ()
 main = pure ()

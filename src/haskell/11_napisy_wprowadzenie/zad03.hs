@@ -1,49 +1,39 @@
--- ZAD-03 — Z ilu słów składa się zdanie?
---
+{-
+ZAD-03 — Z ilu słów składa się zdanie?
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `split`
 
--- ** Tagi:** `string`, `split`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj zdanie i policz, z ilu słów się składa. Znaki interpunkcyjne nie są słowami.
---
--- ### Wejście
---
+Wczytaj zdanie i policz, z ilu słów się składa. Znaki interpunkcyjne nie są słowami.
 
--- * 1. linia: zdanie
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: zdanie
 
--- * 1. linia: liczba słów
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: liczba słów
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- gram na pianinie.
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+gram na pianinie.
+```
 
---
--- ```
--- 3
--- ```
---
--- ### Uwagi o formatowaniu
---
+**Wyjście:**
 
--- * Najprościej: podziel po białych znakach, a z końców słów usuń interpunkcję.
+```
+3
+```
 
+### Uwagi o formatowaniu
+
+* Najprościej: podziel po białych znakach, a z końców słów usuń interpunkcję.
+
+-}
 main :: IO ()
 main = pure ()

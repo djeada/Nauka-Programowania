@@ -1,48 +1,41 @@
--- ZAD-15 — Element dominujący
---
+{-
+ZAD-15 — Element dominujący
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `zliczanie`, `dict`, `majority`
 
--- ** Tagi:** `zliczanie`, `dict`, `majority`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj listę liczb naturalnych. Jeśli istnieje liczba, która występuje **więcej niż N/2 razy**, wypisz ją. W przeciwnym razie wypisz `-1`.
---
--- ### Wejście
---
+Wczytaj listę liczb naturalnych. Jeśli istnieje liczba, która występuje **więcej niż N/2 razy**, wypisz ją. W przeciwnym razie wypisz `-1`.
 
--- * 1. linia: `N` (`N ≥ 1`)
+### Wejście
 
--- * kolejne `N` linii: liczby naturalne
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby naturalne
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna — element dominujący lub `-1`.
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+Jedna liczba naturalna — element dominujący lub `-1`.
 
---
--- ```
--- 5
--- 4
--- 7
--- 4
--- 4
--- 2
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- 4
--- ```
+```
+5
+4
+7
+4
+4
+2
+```
+
+**Wyjście:**
+
+```
+4
+```
+
+-}
 main :: IO ()
 main = pure ()

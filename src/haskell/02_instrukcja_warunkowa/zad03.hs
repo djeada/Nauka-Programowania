@@ -1,81 +1,63 @@
--- ZAD-03 — Określanie znaku liczby
---
+{-
+ZAD-03 — Określanie znaku liczby
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `if-elif-else`, `porównania`, `string`
 
--- ** Tagi:** `if-elif-else`, `porównania`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę całkowitą `x` i wypisz jeden z komunikatów:
---
+Wczytaj liczbę całkowitą `x` i wypisz jeden z komunikatów:
 
--- * dla `x < 0`: `Liczba jest ujemna.`
+* dla `x < 0`: `Liczba jest ujemna.`
+* dla `x > 0`: `Liczba jest dodatnia.`
+* dla `x = 0`: `Liczba jest zerem.`
 
--- * dla `x > 0`: `Liczba jest dodatnia.`
+### Wejście
 
--- * dla `x = 0`: `Liczba jest zerem.`
+* 1 linia: `x` (liczba całkowita)
 
---
--- ### Wejście
---
+### Wyjście
 
--- * 1 linia: `x` (liczba całkowita)
+Jedna linia — dokładnie jeden komunikat.
 
---
--- ### Wyjście
---
--- Jedna linia — dokładnie jeden komunikat.
---
--- ### Przykłady
---
+### Przykłady
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- -5
--- ```
---
+```
+-5
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Liczba jest ujemna.
--- ```
---
+```
+Liczba jest ujemna.
+```
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 0
--- ```
---
+```
+0
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Liczba jest zerem.
--- ```
---
+```
+Liczba jest zerem.
+```
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 2
--- ```
---
+```
+2
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- Liczba jest dodatnia.
--- ```
+```
+Liczba jest dodatnia.
+```
+
+-}
 main :: IO ()
 main = pure ()

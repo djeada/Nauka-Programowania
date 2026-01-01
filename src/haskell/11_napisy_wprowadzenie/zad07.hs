@@ -1,43 +1,35 @@
--- ZAD-07 — Zamień znaki na kody ASCII
---
+{-
+ZAD-07 — Zamień znaki na kody ASCII
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `ASCII`, `ord`, `string`
 
--- ** Tagi:** `ASCII`, `ord`, `string`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj napis i wypisz kody ASCII wszystkich jego znaków, oddzielone przecinkiem i spacją `", "`.
---
--- ### Wejście
---
+Wczytaj napis i wypisz kody ASCII wszystkich jego znaków, oddzielone przecinkiem i spacją `", "`.
 
--- * 1. linia: napis
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: napis
 
--- * 1. linia: kody ASCII oddzielone `, `
+### Wyjście
 
---
--- ### Przykład
---
+* 1. linia: kody ASCII oddzielone `, `
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- Robot
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+Robot
+```
 
---
--- ```
--- 82, 111, 98, 111, 116
--- ```
+**Wyjście:**
+
+```
+82, 111, 98, 111, 116
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,73 +1,59 @@
--- ZAD-01 — Sprawdź poprawność adresu e-mail
---
+{-
+ZAD-01 — Sprawdź poprawność adresu e-mail
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `regex`, `string`, `walidacja`
 
--- ** Tagi:** `regex`, `string`, `walidacja`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz napis reprezentujący adres e-mail. Sprawdź, czy jest poprawny zgodnie z regułami:
---
+Otrzymujesz napis reprezentujący adres e-mail. Sprawdź, czy jest poprawny zgodnie z regułami:
 
--- * Adres e-mail składa się z identyfikatora użytkownika, znaku `@` oraz nazwy domeny.
+* Adres e-mail składa się z identyfikatora użytkownika, znaku `@` oraz nazwy domeny.
+* **Identyfikator użytkownika** może zawierać wyłącznie:
 
--- * **Identyfikator użytkownika** może zawierać wyłącznie:
+  * litery `a–z`, `A–Z`,
+  * cyfry `0–9`,
+  * znaki specjalne: `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`,
+  * kropki `.`, ale:
 
---
---   * litery `a–z`, `A–Z`,
---   * cyfry `0–9`,
---   * znaki specjalne: `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`,
---   * kropki `.`, ale:
---
---     * nie może być pierwszym ani ostatnim znakiem,
---     * nie może wystąpić dwukrotnie po sobie.
+    * nie może być pierwszym ani ostatnim znakiem,
+    * nie może wystąpić dwukrotnie po sobie.
+* **Nazwa domeny** może zawierać wyłącznie:
 
--- * **Nazwa domeny** może zawierać wyłącznie:
+  * litery `a–z`, `A–Z`,
+  * cyfry `0–9`,
+  * kropki `.` oraz myślniki `-`, ale:
 
---
---   * litery `a–z`, `A–Z`,
---   * cyfry `0–9`,
---   * kropki `.` oraz myślniki `-`, ale:
---
---     * nie mogą być pierwszym ani ostatnim znakiem,
---     * nie mogą wystąpić dwukrotnie po sobie.
---
--- ### Wejście
---
--- Jedna linia:
---
+    * nie mogą być pierwszym ani ostatnim znakiem,
+    * nie mogą wystąpić dwukrotnie po sobie.
 
--- * `email`
+### Wejście
 
---
--- ### Wyjście
---
--- Jedna linia:
---
+Jedna linia:
 
--- * `Prawda` — jeśli e-mail jest poprawny
+* `email`
 
--- * `Fałsz` — w przeciwnym razie
+### Wyjście
 
---
--- ### Przykład
---
+Jedna linia:
 
--- ** Wejście:**
+* `Prawda` — jeśli e-mail jest poprawny
+* `Fałsz` — w przeciwnym razie
 
---
--- ```
--- adam@gmail.com
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- Prawda
--- ```
+```
+adam@gmail.com
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
+
+-}
 main :: IO ()
 main = pure ()

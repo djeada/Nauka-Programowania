@@ -1,46 +1,37 @@
--- ZAD-06 — Sortowanie listy binarnej (0/1)
---
+{-
+ZAD-06 — Sortowanie listy binarnej (0/1)
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `sort`, `counting`
 
--- ** Tagi:** `sort`, `counting`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Posortuj ją rosnąco.
---
--- ### Wejście
---
+Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Posortuj ją rosnąco.
 
--- * 1 linia: liczba naturalna `N`
+### Wejście
 
--- * 2 linia: `N` liczb (0/1) oddzielonych spacjami
+* 1 linia: liczba naturalna `N`
+* 2 linia: `N` liczb (0/1) oddzielonych spacjami
 
---
--- ### Wyjście
---
+### Wyjście
 
--- * 1 linia: posortowana lista w formacie jak w przykładzie
+* 1 linia: posortowana lista w formacie jak w przykładzie
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- 6
--- 1 0 1 0 1 1
--- ```
---
+```
+6
+1 0 1 0 1 1
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- [0, 0, 1, 1, 1, 1]
--- ```
+```
+[0, 0, 1, 1, 1, 1]
+```
+
+-}
 main :: IO ()
 main = pure ()

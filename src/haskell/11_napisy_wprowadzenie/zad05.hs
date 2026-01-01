@@ -1,60 +1,48 @@
--- ZAD-05 — Co k-ty znak poziomo i pionowo
---
+{-
+ZAD-05 — Co k-ty znak poziomo i pionowo
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `string`, `slicing`, `pętle`
 
--- ** Tagi:** `string`, `slicing`, `pętle`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj napis i liczbę `k`.
---
--- a) Wypisz co `k`-ty znak w jednym wierszu, oddzielając znaki spacjami.
--- b) Wypisz co `k`-ty znak pionowo (każdy w osobnej linii).
---
--- ### Wejście
---
+Wczytaj napis i liczbę `k`.
 
--- * 1. linia: napis
+a) Wypisz co `k`-ty znak w jednym wierszu, oddzielając znaki spacjami.
+b) Wypisz co `k`-ty znak pionowo (każdy w osobnej linii).
 
--- * 2. linia: liczba naturalna `k` (k ≥ 1)
+### Wejście
 
---
--- ### Wyjście
---
+* 1. linia: napis
+* 2. linia: liczba naturalna `k` (k ≥ 1)
 
--- * (a) 1 linia: znaki oddzielone spacjami
+### Wyjście
 
--- * (b) wiele linii: każdy znak osobno
+* (a) 1 linia: znaki oddzielone spacjami
+* (b) wiele linii: każdy znak osobno
 
---
--- ### Przykład
---
+### Przykład
 
--- ** Wejście:**
+**Wejście:**
 
---
--- ```
--- Grzechotnik
--- 3
--- ```
---
+```
+Grzechotnik
+3
+```
 
--- ** Wyjście:**
+**Wyjście:**
 
---
--- ```
--- z h n
--- z
--- h
--- n
--- ```
---
--- ### Uwagi o formatowaniu
---
+```
+z h n
+z
+h
+n
+```
 
--- * Dokładnie jedna spacja między znakami w punkcie (a), bez spacji na końcu linii.
+### Uwagi o formatowaniu
 
+* Dokładnie jedna spacja między znakami w punkcie (a), bez spacji na końcu linii.
+
+-}
 main :: IO ()
 main = pure ()

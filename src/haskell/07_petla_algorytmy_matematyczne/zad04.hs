@@ -1,44 +1,38 @@
--- ZAD-04 — Obliczanie silni liczby
---
+{-
+ZAD-04 — Obliczanie silni liczby
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `silnia`, `mnożenie`
 
--- ** Tagi:** `pętle`, `silnia`, `mnożenie`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję `silnia(n)`, która zwraca `n!` obliczone przy użyciu pętli.
--- Przyjmij, że `0! = 1`.
---
--- ### Wejście
---
--- Jeden argument funkcji:
---
+Napisz funkcję `silnia(n)`, która zwraca `n!` obliczone przy użyciu pętli.
+Przyjmij, że `0! = 1`.
 
--- * `n` (liczba naturalna, `n ≥ 0`)
+### Wejście
 
---
--- ### Wyjście
---
--- Funkcja zwraca jedną liczbę naturalną — `n!`.
---
--- ### Przykład
---
+Jeden argument funkcji:
 
--- ** Wywołanie funkcji:**
+* `n` (liczba naturalna, `n ≥ 0`)
 
---
--- ```python
--- print(silnia(3))
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Funkcja zwraca jedną liczbę naturalną — `n!`.
 
---
--- ```
--- 6
--- ```
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(silnia(3))
+```
+
+**Wyjście:**
+
+```
+6
+```
+
+-}
 main :: IO ()
 main = pure ()

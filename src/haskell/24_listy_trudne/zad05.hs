@@ -1,51 +1,41 @@
--- ZAD-05 — Zbiór potęgowy listy
---
+{-
+ZAD-05 — Zbiór potęgowy listy
 
--- ** Poziom:** ★★★
+**Poziom:** ★★★
+**Tagi:** `list`, `subsets`, `combinatorics`
 
--- ** Tagi:** `list`, `subsets`, `combinatorics`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę liczb naturalnych (mogą występować powtórzenia). Wygeneruj zbiór wszystkich możliwych podzbiorów tej listy.
---
--- Wynik ma zawierać wszystkie podzbiory (włącznie z pustym).
---
--- ### Wejście
---
+Otrzymujesz listę liczb naturalnych (mogą występować powtórzenia). Wygeneruj zbiór wszystkich możliwych podzbiorów tej listy.
 
--- * 1 linia: lista liczb naturalnych `A`
+Wynik ma zawierać wszystkie podzbiory (włącznie z pustym).
 
---
--- ### Wyjście
---
+### Wejście
 
--- * 1 linia: lista list (wszystkie podzbiory)
+* 1 linia: lista liczb naturalnych `A`
 
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wejście:**
+* 1 linia: lista list (wszystkie podzbiory)
 
---
--- ```
--- [1, 2, 1]
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- [[], [1], [2], [1, 2], [1, 1], [2, 1], [1, 1, 2], [1, 2, 1]]
--- ```
---
--- ### Uwagi
---
+```
+[1, 2, 1]
+```
 
--- * Jeśli sprawdzarka wymaga konkretnej kolejności podzbiorów, musi być ona opisana w treści — w przeciwnym razie dopuszczalna może być dowolna. (Jeśli chcesz, mogę dopisać sztywną konwencję kolejności, ale bez rozwiązań.)
+**Wyjście:**
 
+```
+[[], [1], [2], [1, 2], [1, 1], [2, 1], [1, 1, 2], [1, 2, 1]]
+```
+
+### Uwagi
+
+* Jeśli sprawdzarka wymaga konkretnej kolejności podzbiorów, musi być ona opisana w treści — w przeciwnym razie dopuszczalna może być dowolna. (Jeśli chcesz, mogę dopisać sztywną konwencję kolejności, ale bez rozwiązań.)
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,59 +1,47 @@
--- ZAD-03 — Rok przestępny
---
+{-
+ZAD-03 — Rok przestępny
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `modulo`, `if`, `kalendarz`
 
--- ** Tagi:** `modulo`, `if`, `kalendarz`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj rok `y` i sprawdź, czy jest przestępny w kalendarzu gregoriańskim.
---
--- Wypisz:
---
+Wczytaj rok `y` i sprawdź, czy jest przestępny w kalendarzu gregoriańskim.
 
--- * `Rok jest przestępny.`
+Wypisz:
 
--- * `Rok nie jest przestępny.`
+* `Rok jest przestępny.`
+* `Rok nie jest przestępny.`
 
---
--- ### Wejście
---
+### Wejście
 
--- * 1 linia: `y` (liczba całkowita, `y ≥ 0`)
+* 1 linia: `y` (liczba całkowita, `y ≥ 0`)
 
---
--- ### Wyjście
---
--- Jedna linia — odpowiedni komunikat.
---
--- ### Definicja
---
--- Rok jest przestępny, gdy:
---
+### Wyjście
 
--- * jest podzielny przez 400 **lub**
+Jedna linia — odpowiedni komunikat.
 
--- * jest podzielny przez 4 i **nie** jest podzielny przez 100.
+### Definicja
 
---
--- ### Przykład
---
+Rok jest przestępny, gdy:
 
--- ** Wejście:**
+* jest podzielny przez 400 **lub**
+* jest podzielny przez 4 i **nie** jest podzielny przez 100.
 
---
--- ```
--- 2100
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- Rok nie jest przestępny.
--- ```
+```
+2100
+```
+
+**Wyjście:**
+
+```
+Rok nie jest przestępny.
+```
+
+-}
 main :: IO ()
 main = pure ()

@@ -1,43 +1,35 @@
--- ZAD-01 — Słownik: liczby i ich kwadraty
---
+{-
+ZAD-01 — Słownik: liczby i ich kwadraty
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `dict`, `pętla`
 
--- ** Tagi:** `dict`, `pętla`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę `n`. Utwórz słownik, gdzie klucze to liczby od `1` do `n-1`, a wartości to ich kwadraty.
---
--- ### Wejście
---
+Wczytaj liczbę `n`. Utwórz słownik, gdzie klucze to liczby od `1` do `n-1`, a wartości to ich kwadraty.
 
--- * 1 linia: `n` (n ≥ 1)
+### Wejście
 
---
--- ### Wyjście
---
+* 1 linia: `n` (n ≥ 1)
 
--- * Słownik w postaci: `{1: 1, 2: 4, ...}`
+### Wyjście
 
---
--- ### Przykład
---
+* Słownik w postaci: `{1: 1, 2: 4, ...}`
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 5
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+5
+```
 
---
--- ```
--- {1: 1, 2: 4, 3: 9, 4: 16}
--- ```
+**Wyjście:**
+
+```
+{1: 1, 2: 4, 3: 9, 4: 16}
+```
+
+-}
 main :: IO ()
 main = pure ()

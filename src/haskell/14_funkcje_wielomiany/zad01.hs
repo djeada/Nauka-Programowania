@@ -1,38 +1,31 @@
--- ZAD-01 — Wartość wielomianu w punkcie
---
+{-
+ZAD-01 — Wartość wielomianu w punkcie
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `wielomiany`, `Horner`
 
--- ** Tagi:** `funkcje`, `wielomiany`, `Horner`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `x`, a następnie zwraca wartość wielomianu w punkcie `x`.
---
--- ### Wejście (argumenty funkcji)
---
+Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `x`, a następnie zwraca wartość wielomianu w punkcie `x`.
 
--- * `a` — lista współczynników `[a_n, ..., a_0]`
+### Wejście (argumenty funkcji)
 
--- * `x` — liczba naturalna (lub całkowita)
+* `a` — lista współczynników `[a_n, ..., a_0]`
+* `x` — liczba naturalna (lub całkowita)
 
---
--- ### Wyjście (zwracana wartość)
---
+### Wyjście (zwracana wartość)
 
--- * jedna liczba (całkowita)
+* jedna liczba (całkowita)
 
---
--- ### Przykład
---
--- Dla `a = [3, 2, 1]` i `x = 1` funkcja zwraca:
--- `6`
---
--- ### Uwagi
---
+### Przykład
 
--- * Najprościej użyć schematu Hornera.
+Dla `a = [3, 2, 1]` i `x = 1` funkcja zwraca:
+`6`
 
+### Uwagi
+
+* Najprościej użyć schematu Hornera.
+
+-}
 main :: IO ()
 main = pure ()

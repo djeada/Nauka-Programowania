@@ -1,49 +1,40 @@
--- ZAD-03 — Sprawdź, czy napis składa się wyłącznie z cyfr
---
+{-
+ZAD-03 — Sprawdź, czy napis składa się wyłącznie z cyfr
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `regex`, `string`
 
--- ** Tagi:** `regex`, `string`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz napis. Sprawdź, czy składa się wyłącznie z cyfr (`0–9`).
---
--- ### Wejście
---
--- Jedna linia:
---
+Otrzymujesz napis. Sprawdź, czy składa się wyłącznie z cyfr (`0–9`).
 
--- * `s`
+### Wejście
 
---
--- ### Wyjście
---
--- Jedna linia:
---
+Jedna linia:
 
--- * `Prawda` — jeśli napis zawiera tylko cyfry
+* `s`
 
--- * `Fałsz` — w przeciwnym razie
+### Wyjście
 
---
--- ### Przykład
---
+Jedna linia:
 
--- ** Wejście:**
+* `Prawda` — jeśli napis zawiera tylko cyfry
+* `Fałsz` — w przeciwnym razie
 
---
--- ```
--- 1234
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wejście:**
 
---
--- ```
--- Prawda
--- ```
+```
+1234
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
+
+-}
 main :: IO ()
 main = pure ()

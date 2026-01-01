@@ -1,57 +1,46 @@
--- ZAD-08 — Naiwny test pierwszości liczby
---
+{-
+ZAD-08 — Naiwny test pierwszości liczby
 
--- ** Poziom:** ★★☆
+**Poziom:** ★★☆
+**Tagi:** `pierwszość`, `pętle`, `dzielniki`
 
--- ** Tagi:** `pierwszość`, `pętle`, `dzielniki`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.
---
--- ### Wejście
---
--- Jeden argument funkcji:
---
+Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.
 
--- * `n` (liczba naturalna, `n ≥ 2`)
+### Wejście
 
---
--- ### Wyjście
---
--- Funkcja zwraca wartość logiczną:
---
+Jeden argument funkcji:
 
--- * `True` lub `False`
+* `n` (liczba naturalna, `n ≥ 2`)
 
---
--- ### Przykład
---
+### Wyjście
 
--- ** Wywołanie funkcji:**
+Funkcja zwraca wartość logiczną:
 
---
--- ```python
--- print(czy_pierwsza(7))
--- print(czy_pierwsza(4))
--- ```
---
+* `True` lub `False`
 
--- ** Wyjście:**
+### Przykład
 
---
--- ```
--- True
--- False
--- ```
---
--- ### Uwagi
---
+**Wywołanie funkcji:**
 
--- * Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.
+```python
+print(czy_pierwsza(7))
+print(czy_pierwsza(4))
+```
 
--- * Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`.
+**Wyjście:**
 
+```
+True
+False
+```
+
+### Uwagi
+
+* Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.
+* Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`.
+
+-}
 main :: IO ()
 main = pure ()

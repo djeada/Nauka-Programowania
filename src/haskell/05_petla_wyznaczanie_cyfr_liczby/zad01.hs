@@ -1,55 +1,45 @@
--- ZAD-01 — Liczenie cyfr w liczbie
---
+{-
+ZAD-01 — Liczenie cyfr w liczbie
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
 
--- ** Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
+### Treść
 
---
--- ### Treść
---
--- Wczytaj liczbę naturalną `n` i wypisz, z ilu cyfr składa się jej zapis dziesiętny.
---
--- ### Wejście
---
--- Jedna liczba naturalna:
---
+Wczytaj liczbę naturalną `n` i wypisz, z ilu cyfr składa się jej zapis dziesiętny.
 
--- * 1. linia: `n` (`n ≥ 0`)
+### Wejście
 
---
--- ### Wyjście
---
--- Jedna liczba naturalna — liczba cyfr w `n`.
---
--- ### Przykład
---
+Jedna liczba naturalna:
 
--- ** Wejście:**
+* 1. linia: `n` (`n ≥ 0`)
 
---
--- ```
--- 342
--- ```
---
+### Wyjście
 
--- ** Wyjście:**
+Jedna liczba naturalna — liczba cyfr w `n`.
 
---
--- ```
--- 3
--- ```
---
--- ### Ograniczenia / gwarancje
---
+### Przykład
 
--- * `n` mieści się w typowym zakresie liczb całkowitych.
+**Wejście:**
 
---
--- ### Uwagi o formatowaniu
---
+```
+342
+```
 
--- * Dla `n = 0` poprawna odpowiedź to `1` (liczba „0” ma jedną cyfrę).
+**Wyjście:**
 
+```
+3
+```
+
+### Ograniczenia / gwarancje
+
+* `n` mieści się w typowym zakresie liczb całkowitych.
+
+### Uwagi o formatowaniu
+
+* Dla `n = 0` poprawna odpowiedź to `1` (liczba „0” ma jedną cyfrę).
+
+-}
 main :: IO ()
 main = pure ()

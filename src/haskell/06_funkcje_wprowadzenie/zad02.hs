@@ -1,229 +1,180 @@
--- ZAD-02A — Suma dwóch liczb
---
+{-
+ZAD-02A — Suma dwóch liczb
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `arytmetyka`
 
--- ** Tagi:** `funkcje`, `arytmetyka`
+### Treść
 
---
--- ### Treść
---
--- Napisz funkcję `suma(a, b)`, która zwraca sumę dwóch liczb całkowitych.
---
--- ### Wejście
---
--- Dwa argumenty funkcji:
---
+Napisz funkcję `suma(a, b)`, która zwraca sumę dwóch liczb całkowitych.
 
--- * `a` (liczba całkowita)
+### Wejście
 
--- * `b` (liczba całkowita)
+Dwa argumenty funkcji:
 
---
--- ### Wyjście
---
--- Funkcja zwraca:
---
+* `a` (liczba całkowita)
+* `b` (liczba całkowita)
 
--- * `a + b`
+### Wyjście
 
---
--- ### Przykład
---
+Funkcja zwraca:
 
--- ** Wywołanie funkcji:**
+* `a + b`
 
---
--- ```python
--- print(suma(3, 5))
--- ```
---
+### Przykład
 
--- ** Wyjście:**
+**Wywołanie funkcji:**
 
---
--- ```
--- 8
--- ```
---
--- ZAD-02B — Różnica: b − a
---
+```python
+print(suma(3, 5))
+```
 
--- ** Poziom:** ★☆☆
+**Wyjście:**
 
--- ** Tagi:** `funkcje`, `arytmetyka`
+```
+8
+```
 
---
--- ### Treść
---
--- Napisz funkcję `roznica(a, b)`, która zwraca różnicę: `b - a`.
---
--- ### Wejście
---
--- Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
---
--- ### Wyjście
---
--- Funkcja zwraca:
---
+ZAD-02B — Różnica: b − a
 
--- * `b - a`
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `arytmetyka`
 
---
--- ### Przykład
---
+### Treść
 
--- ** Wywołanie funkcji:**
+Napisz funkcję `roznica(a, b)`, która zwraca różnicę: `b - a`.
 
---
--- ```python
--- print(roznica(3, 5))
--- ```
---
+### Wejście
 
--- ** Wyjście:**
+Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
 
---
--- ```
--- 2
--- ```
---
--- ZAD-02C — Iloczyn dwóch liczb
---
+### Wyjście
 
--- ** Poziom:** ★☆☆
+Funkcja zwraca:
 
--- ** Tagi:** `funkcje`, `arytmetyka`
+* `b - a`
 
---
--- ### Treść
---
--- Napisz funkcję `iloczyn(a, b)`, która zwraca iloczyn `a * b`.
---
--- ### Wejście
---
--- Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
---
--- ### Wyjście
---
--- Funkcja zwraca:
---
+### Przykład
 
--- * `a * b`
+**Wywołanie funkcji:**
 
---
--- ### Przykład
---
+```python
+print(roznica(3, 5))
+```
 
--- ** Wywołanie funkcji:**
+**Wyjście:**
 
---
--- ```python
--- print(iloczyn(3, 5))
--- ```
---
+```
+2
+```
 
--- ** Wyjście:**
+ZAD-02C — Iloczyn dwóch liczb
 
---
--- ```
--- 15
--- ```
---
--- ZAD-02D — Iloraz całkowity: a // b
---
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `arytmetyka`
 
--- ** Poziom:** ★☆☆
+### Treść
 
--- ** Tagi:** `funkcje`, `dzielenie`, `//`
+Napisz funkcję `iloczyn(a, b)`, która zwraca iloczyn `a * b`.
 
---
--- ### Treść
---
--- Napisz funkcję `iloraz(a, b)`, która zwraca iloraz całkowity `a // b`.
---
--- ### Wejście
---
--- Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
---
--- ### Ograniczenia / gwarancje
---
+### Wejście
 
--- * `b ≠ 0`
+Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
 
---
--- ### Wyjście
---
--- Funkcja zwraca:
---
+### Wyjście
 
--- * `a // b`
+Funkcja zwraca:
 
---
--- ### Przykład
---
+* `a * b`
 
--- ** Wywołanie funkcji:**
+### Przykład
 
---
--- ```python
--- print(iloraz(3, 5))
--- ```
---
+**Wywołanie funkcji:**
 
--- ** Wyjście:**
+```python
+print(iloczyn(3, 5))
+```
 
---
--- ```
--- 0
--- ```
---
--- ZAD-02E — Reszta z dzielenia: a % b
---
+**Wyjście:**
 
--- ** Poziom:** ★☆☆
+```
+15
+```
 
--- ** Tagi:** `funkcje`, `modulo`, `%`
+ZAD-02D — Iloraz całkowity: a // b
 
---
--- ### Treść
---
--- Napisz funkcję `reszta(a, b)`, która zwraca resztę z dzielenia `a % b`.
---
--- ### Wejście
---
--- Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
---
--- ### Ograniczenia / gwarancje
---
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `dzielenie`, `//`
 
--- * `b ≠ 0`
+### Treść
 
---
--- ### Wyjście
---
--- Funkcja zwraca:
---
+Napisz funkcję `iloraz(a, b)`, która zwraca iloraz całkowity `a // b`.
 
--- * `a % b`
+### Wejście
 
---
--- ### Przykład
---
+Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
 
--- ** Wywołanie funkcji:**
+### Ograniczenia / gwarancje
 
---
--- ```python
--- print(reszta(3, 5))
--- ```
---
+* `b ≠ 0`
 
--- ** Wyjście:**
+### Wyjście
 
---
--- ```
--- 3
--- ```
+Funkcja zwraca:
+
+* `a // b`
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(iloraz(3, 5))
+```
+
+**Wyjście:**
+
+```
+0
+```
+
+ZAD-02E — Reszta z dzielenia: a % b
+
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `modulo`, `%`
+
+### Treść
+
+Napisz funkcję `reszta(a, b)`, która zwraca resztę z dzielenia `a % b`.
+
+### Wejście
+
+Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
+
+### Ograniczenia / gwarancje
+
+* `b ≠ 0`
+
+### Wyjście
+
+Funkcja zwraca:
+
+* `a % b`
+
+### Przykład
+
+**Wywołanie funkcji:**
+
+```python
+print(reszta(3, 5))
+```
+
+**Wyjście:**
+
+```
+3
+```
+
+-}
 main :: IO ()
 main = pure ()

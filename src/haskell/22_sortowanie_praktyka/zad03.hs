@@ -1,56 +1,46 @@
--- ZAD-03 — Sortowanie listy par względem kryterium
---
+{-
+ZAD-03 — Sortowanie listy par względem kryterium
 
--- ** Poziom:** ★☆☆
+**Poziom:** ★☆☆
+**Tagi:** `sort`, `tuple`, `list`
 
--- ** Tagi:** `sort`, `tuple`, `list`
+### Treść
 
---
--- ### Treść
---
--- Otrzymujesz listę par `(napis, liczba)`.
---
--- a) Posortuj pary rosnąco po liczbie.
--- b) Posortuj pary rosnąco po długości napisu.
---
--- Wypisz wyniki dla a) i b) w osobnych liniach.
---
--- ### Wejście
---
+Otrzymujesz listę par `(napis, liczba)`.
 
--- * 1 linia: liczba naturalna `N`
+a) Posortuj pary rosnąco po liczbie.
+b) Posortuj pary rosnąco po długości napisu.
 
--- * następnie `N` linii: `napis liczba` (napis bez spacji)
+Wypisz wyniki dla a) i b) w osobnych liniach.
 
---
--- ### Wyjście
---
+### Wejście
 
--- * 1 linia: lista par posortowana jak w podpunkcie a)
+* 1 linia: liczba naturalna `N`
+* następnie `N` linii: `napis liczba` (napis bez spacji)
 
--- * 2 linia: lista par posortowana jak w podpunkcie b)
+### Wyjście
 
---
--- ### Przykład
---
+* 1 linia: lista par posortowana jak w podpunkcie a)
+* 2 linia: lista par posortowana jak w podpunkcie b)
 
--- ** Wejście:**
+### Przykład
 
---
--- ```
--- 3
--- ab 3
--- bca 1
--- c 2
--- ```
---
+**Wejście:**
 
--- ** Wyjście:**
+```
+3
+ab 3
+bca 1
+c 2
+```
 
---
--- ```
--- [('bca', 1), ('c', 2), ('ab', 3)]
--- [('c', 2), ('ab', 3), ('bca', 1)]
--- ```
+**Wyjście:**
+
+```
+[('bca', 1), ('c', 2), ('ab', 3)]
+[('c', 2), ('ab', 3), ('bca', 1)]
+```
+
+-}
 main :: IO ()
 main = pure ()
