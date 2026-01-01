@@ -64,6 +64,8 @@ public class Main {
   // Otrzymujesz liczbe, zamien ja na jej binarny odpowiednik jesli:
 
   // a) jest liczba parzysta.
+  // Zlozonosc Czasowa: O(log n)
+  // Zlozonosc Pamieciowa: O(log n)
   public static String naBin(int liczba) {
 
     String bin = "";

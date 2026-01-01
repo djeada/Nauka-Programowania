@@ -31,7 +31,6 @@ abc
 ```
 
 */
-package test;
 
 import java.util.*;
 import java.util.stream.Collectors;

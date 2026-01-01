@@ -70,6 +70,8 @@ import java.util.*;
 
 public class Main {
 
+  // Zlozonosc Czasowa: O(log n)
+  // Zlozonosc Pamieciowa: O(1)
   public static int zera(int n) {
     int licznik = 0;
     while (n > 0) {

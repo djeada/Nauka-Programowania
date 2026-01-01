@@ -70,6 +70,8 @@ public class Main {
 
   // Otrzymujesz liczbe, zamien ja na:
   // a) jej odpowiednik w systemie binarnym.
+  // Zlozonosc Czasowa: O(n), gdzie n to dlugosc napisu
+  // Zlozonosc Pamieciowa: O(1)
   public static int naDec(String liczba) {
     int dec = 0;
     int n = liczba.length();
@@ -81,6 +83,8 @@ public class Main {
   }
 
   // b) jej odpowiednik w systemie dziesietnym.
+  // Zlozonosc Czasowa: O(log n), gdzie n to wartosc liczby
+  // Zlozonosc Pamieciowa: O(log n)
   public static String naBin(int liczba) {
 
     String bin = "";

@@ -19,6 +19,8 @@ public class Main {
     return czyElfickieSlowoV1(slowo, "elf", 0);
   }
 
+  // Zlozonosc Czasowa: O(n)
+  // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu
   public static boolean czyElfickieSlowoV1(String slowo, String elf, int i) {
 
     if (i >= slowo.length()) {

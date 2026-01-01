@@ -115,7 +115,7 @@ public class Main {
 		ArrayList<ArrayList<String>> wynik = new ArrayList<ArrayList<String>> (Arrays.asList(
 			new ArrayList<String> (Arrays.asList("absurd", "brudas")),
 			new ArrayList<String> (Arrays.asList("tyran", "narty")),
-			new ArrayList<String> (Arrays.asList("bandzior", "zbrodnia")), n ew ArrayList<String> (Arrays.asList("burza", "arbuz")),
+			new ArrayList<String> (Arrays.asList("bandzior", "zbrodnia")), new ArrayList<String> (Arrays.asList("burza", "arbuz")),
 			new ArrayList<String> (Arrays.asList("galeria", "alergia"))));
 
 		assert wynik.equals(znajdzAnagramy(slowo));
