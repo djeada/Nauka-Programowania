@@ -96,15 +96,17 @@ const lista = wczytajNliczbDoListy(N);
 const pierwszaWartosc = lista[0];
 
 // a) Dodaj 1 do kazdego elementu
-const listaA = dodajJedynkeDoListy([...lista]);
+const listaA = [...lista];
+dodajJedynkeDoListy(listaA);
 wypiszListe(listaA);
 
-// b) Pomnoz kazdy element przez jego indeks (na oryginalnej liscie + 1)
-const listaB = lista.map(x => x + 1);
-const listaB2 = pomnozElementyListy(listaB);
-wypiszListe(listaB2);
+// b) Pomnoz kazdy element przez jego indeks (na liscie po dodaniu 1)
+const listaB = [...listaA];
+pomnozElementyListy(listaB);
+wypiszListe(listaB);
 
 // c) Zastap wszystkie elementy wartoscia pierwszego elementu (z oryginalnej listy)
-const listaC = new Array(N).fill(pierwszaWartosc);
+const listaC = [...lista];
+zastapElementyListy(listaC);
 wypiszListe(listaC);
 
