@@ -56,10 +56,8 @@ const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 
 // Porownanie ze zmienna
 if (liczba_a > liczba_b) {
-  console.log(liczba_a);
-  console.log(liczba_b);
+  console.log(liczba_a + " " + liczba_b);
 } else {
-  console.log(liczba_b);
-  console.log(liczba_a);
+  console.log(liczba_b + " " + liczba_a);
 }
 

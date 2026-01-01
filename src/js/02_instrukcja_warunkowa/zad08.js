@@ -57,8 +57,8 @@ const bok_c = parseInt(prompt("Podaj dlugosc boku c:"));
 
 // Warunek trojkata
 if (bok_a + bok_b > bok_c && bok_a + bok_c > bok_b && bok_b + bok_c > bok_a) {
-  console.log("Mozna zbudowac trojkat z podanych bokow.");
+  console.log("Trójkąt można zbudować z podanych boków.");
 } else {
-  console.log("Nie mozna zbudowac trojkata z podanych bokow.");
+  console.log("Trójkąta nie można zbudować z podanych boków.");
 }
 
