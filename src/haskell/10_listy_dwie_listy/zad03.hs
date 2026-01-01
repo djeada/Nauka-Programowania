@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Suma elementów dwóch list
 
-**Poziom:** ★☆☆
-**Tagi:** `list`, `iteracja`
+\**Poziom:** ★☆☆
+\**Tagi:** `list`, `iteracja`
 
 ### Treść
 
@@ -11,23 +11,23 @@ Jeśli któraś lista jest krótsza, brakujące elementy traktuj jako `0`.
 
 ### Wejście
 
-* 1 linia: lista 1
-* 2 linia: lista 2
+\* 1 linia: lista 1
+\* 2 linia: lista 2
 
 ### Wyjście
 
-* 1 linia: lista sum
+\* 1 linia: lista sum
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [3, 1, 2, 5]
 [2, 8, 6, 5]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [5, 9, 8, 10]

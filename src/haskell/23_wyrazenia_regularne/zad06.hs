@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Wiersze kończące się określonym napisem
 
-**Poziom:** ★☆☆
-**Tagi:** `regex`, `string`, `linijki`
+\**Poziom:** ★☆☆
+\**Tagi:** `regex`, `string`, `linijki`
 
 ### Treść
 
@@ -20,7 +20,7 @@ Dwie części:
 1. Tekst (wiele wierszy)
 2. W osobnej linii: `koncowka`
 
-*(Sposób wczytania tekstu wielowierszowego zależy od platformy — przyjmij, że tekst jest podany w całości jako wejście, a ostatnia linia to `koncowka`.)*
+\*(Sposób wczytania tekstu wielowierszowego zależy od platformy — przyjmij, że tekst jest podany w całości jako wejście, a ostatnia linia to `koncowka`.)*
 
 ### Wyjście
 
@@ -28,7 +28,7 @@ Wiersze spełniające warunek, każdy w osobnej linii, w kolejności występowan
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Folgujmy paniom nie sobie, ma rada;
@@ -38,7 +38,7 @@ Miłości pragną nie pragną tu złota.
 da
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Folgujmy paniom nie sobie, ma rada;

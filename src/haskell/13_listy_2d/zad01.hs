@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Macierz z identycznymi wierszami 0..b
 
-**Poziom:** ★☆☆
-**Tagi:** `macierze`, `pętle`, `print`
+\**Poziom:** ★☆☆
+\**Tagi:** `macierze`, `pętle`, `print`
 
 ### Treść
 
@@ -10,23 +10,23 @@ Wczytaj `a` i `b`. Wypisz macierz składającą się z `a` identycznych wierszy,
 
 ### Wejście
 
-* 1. linia: `a`
-* 2. linia: `b`
+\* 1. linia: `a`
+\* 2. linia: `b`
 
 ### Wyjście
 
-* `a` wierszy, w każdym: `0 1 2 ... b`
+\* `a` wierszy, w każdym: `0 1 2 ... b`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 0 1 2

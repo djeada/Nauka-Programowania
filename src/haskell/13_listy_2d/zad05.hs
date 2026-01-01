@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Czy macierz jest magiczna?
 
-**Poziom:** ★★☆
-**Tagi:** `macierze`, `suma`, `warunki`
+\**Poziom:** ★★☆
+\**Tagi:** `macierze`, `suma`, `warunki`
 
 ### Treść
 
@@ -10,16 +10,16 @@ Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami naturalnymi. Sprawdź, c
 
 ### Wejście
 
-* 1. linia: `n`
-* następnie `n` wierszy po `n` liczb
+\* 1. linia: `n`
+\* następnie `n` wierszy po `n` liczb
 
 ### Wyjście
 
-* `Prawda` albo `Fałsz`
+\* `Prawda` albo `Fałsz`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -28,7 +28,7 @@ Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami naturalnymi. Sprawdź, c
 8 3 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Prawda

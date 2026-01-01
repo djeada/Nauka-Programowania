@@ -1,8 +1,8 @@
 {-
 ZAD-15 — Słowa jako lista
 
-**Poziom:** ★☆☆
-**Tagi:** `split`, `list`
+\**Poziom:** ★☆☆
+\**Tagi:** `split`, `list`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj zdanie i wypisz listę słów w formacie `["Ala", "ma", "kota"]`.
 
 ### Wejście
 
-* 1. linia: zdanie
+\* 1. linia: zdanie
 
 ### Wyjście
 
-* 1. linia: lista słów (jak w przykładzie)
+\* 1. linia: lista słów (jak w przykładzie)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Ala ma kota
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 ["Ala", "ma", "kota"]

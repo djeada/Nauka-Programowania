@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Sprawdź, czy słowo występuje w zdaniu jako osobne słowo
 
-**Poziom:** ★☆☆
-**Tagi:** `regex`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `regex`, `string`
 
 ### Treść
 
@@ -19,18 +19,18 @@ Dwie linie:
 
 Jedna linia:
 
-* `Prawda` albo `Fałsz`
+\* `Prawda` albo `Fałsz`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Siała baba mak.
 babcia
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Fałsz

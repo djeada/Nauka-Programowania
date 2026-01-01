@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Klasa Koło
 
-**Poziom:** ★★☆
-**Tagi:** `class`, `metody`, `float`, `math`
+\**Poziom:** ★★☆
+\**Tagi:** `class`, `metody`, `float`, `math`
 
 ### Treść
 
@@ -17,7 +17,7 @@ Program ma utworzyć koło o promieniu wczytanym z wejścia (np. 3) i wypisać i
 
 ### Wejście
 
-* 1 linia: `r` (liczba rzeczywista)
+\* 1 linia: `r` (liczba rzeczywista)
 
 ### Wyjście
 
@@ -25,13 +25,13 @@ Trzy linie jak w przykładzie (obwód i pole do 4 miejsc po przecinku).
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Koło o promieniu: 3

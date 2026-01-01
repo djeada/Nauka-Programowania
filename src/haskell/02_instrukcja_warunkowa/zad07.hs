@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Prawa logiki (p i q)
 
-**Poziom:** ★★☆
-**Tagi:** `bool`, `logika`, `tabele prawdy`, `formatowanie`
+\**Poziom:** ★★☆
+\**Tagi:** `bool`, `logika`, `tabele prawdy`, `formatowanie`
 
 ### Treść
 
@@ -25,8 +25,8 @@ Brak.
 
 Dla każdego z 6 praw wypisz:
 
-* nazwę prawa w jednej linii,
-* następnie w osobnych liniach wynik dla każdej kombinacji `p, q` w kolejności:
+\* nazwę prawa w jednej linii,
+\* następnie w osobnych liniach wynik dla każdej kombinacji `p, q` w kolejności:
 
   1. `p=False, q=False`
   2. `p=False, q=True`
@@ -50,7 +50,7 @@ p=True q=True L=True R=True EQ=True
 
 ### Uwagi o formatowaniu
 
-* Dokładne nazwy praw (nagłówki) użyj jak poniżej:
+\* Dokładne nazwy praw (nagłówki) użyj jak poniżej:
 
   1. `Prawo wyłączonego środka:`
   2. `Prawo niesprzeczności:`
@@ -58,7 +58,7 @@ p=True q=True L=True R=True EQ=True
   4. `Przemienność alternatywy:`
   5. `Pierwsze prawo de Morgana:`
   6. `Drugie prawo de Morgana:`
-* Między blokami praw możesz wstawić **jedną pustą linię** (zalecane), ale nie więcej.
+\* Między blokami praw możesz wstawić **jedną pustą linię** (zalecane), ale nie więcej.
 
 -}
 main :: IO ()

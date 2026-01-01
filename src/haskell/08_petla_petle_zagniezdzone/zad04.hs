@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Tabliczka mnożenia N × N
 
-**Poziom:** ★★☆
-**Tagi:** `pętle zagnieżdżone`, `formatowanie`, `arytmetyka`
+\**Poziom:** ★★☆
+\**Tagi:** `pętle zagnieżdżone`, `formatowanie`, `arytmetyka`
 
 ### Treść
 
@@ -13,7 +13,7 @@ Liczby w jednym wierszu oddzielaj pojedynczą spacją.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
+\* 1. linia: `N` (`N ≥ 1`)
 
 ### Wyjście
 
@@ -21,13 +21,13 @@ Liczby w jednym wierszu oddzielaj pojedynczą spacją.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 1 2 3
@@ -37,7 +37,7 @@ Liczby w jednym wierszu oddzielaj pojedynczą spacją.
 
 ### Uwagi o formatowaniu
 
-* Nie dodawaj spacji na końcu wiersza.
+\* Nie dodawaj spacji na końcu wiersza.
 
 -}
 main :: IO ()

@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Sortowanie przez scalanie
 
-**Poziom:** ★★☆
-**Tagi:** `sorting`, `merge-sort`, `recursion`
+\**Poziom:** ★★☆
+\**Tagi:** `sorting`, `merge-sort`, `recursion`
 
 ### Treść
 
@@ -15,21 +15,21 @@ Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowani
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych
+\* 1 linia: lista liczb całkowitych
 
 ### Wyjście
 
-* 1 linia: posortowana lista rosnąco
+\* 1 linia: posortowana lista rosnąco
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [6, 2, 1, 4, 27]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [1, 2, 4, 6, 27]
@@ -37,7 +37,7 @@ Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowani
 
 ### Uwagi o algorytmie
 
-* Złożoność czasowa: `O(n log n)`.
+\* Złożoność czasowa: `O(n log n)`.
 
 -}
 main :: IO ()

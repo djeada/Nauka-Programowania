@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Podmiana słowa w zdaniu
 
-**Poziom:** ★★☆
-**Tagi:** `string`, `replace`, `substring`
+\**Poziom:** ★★☆
+\**Tagi:** `string`, `replace`, `substring`
 
 ### Treść
 
@@ -18,17 +18,17 @@ Zamień **wszystkie wystąpienia** słowa/podnapisu **A** na **B** w podanym zda
 
 ### Wejście
 
-* 1 linia: zdanie `S`
-* 2 linia: napis `A`
-* 3 linia: napis `B`
+\* 1 linia: zdanie `S`
+\* 2 linia: napis `A`
+\* 3 linia: napis `B`
 
 ### Wyjście
 
-* 1 linia: zdanie po zamianie
+\* 1 linia: zdanie po zamianie
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Lezy jezy na wiezy
@@ -36,7 +36,7 @@ zy
 rzy
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Lerzy jerzy na wierzy

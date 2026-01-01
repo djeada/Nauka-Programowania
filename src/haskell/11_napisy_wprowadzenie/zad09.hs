@@ -1,8 +1,8 @@
 {-
 ZAD-09 — Rozdziel informacje o pracowniku
 
-**Poziom:** ★☆☆
-**Tagi:** `split`, `formatowanie`
+\**Poziom:** ★☆☆
+\**Tagi:** `split`, `formatowanie`
 
 ### Treść
 
@@ -14,27 +14,27 @@ Wypisz każdą informację w osobnej linii z etykietą.
 
 ### Wejście
 
-* 1. linia: dane w formacie `Imię; Nazwisko; Miasto; Zawód; Zarobki;`
+\* 1. linia: dane w formacie `Imię; Nazwisko; Miasto; Zawód; Zarobki;`
 
 ### Wyjście
 
 Pięć linii w formacie:
 
-* `Imię: ...`
-* `Nazwisko: ...`
-* `Miejsce urodzenia: ...`
-* `Zawód: ...`
-* `Zarobki: ...`
+\* `Imię: ...`
+\* `Nazwisko: ...`
+\* `Miejsce urodzenia: ...`
+\* `Zawód: ...`
+\* `Zarobki: ...`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Jan; Kowalski; Warszawa; Programista; 1000;
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Imię: Jan
@@ -46,8 +46,8 @@ Zarobki: 1000
 
 ### Uwagi
 
-* Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).
-* Ostatni średnik może powodować pusty element na końcu — zignoruj go.
+\* Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).
+\* Ostatni średnik może powodować pusty element na końcu — zignoruj go.
 
 -}
 main :: IO ()

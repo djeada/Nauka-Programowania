@@ -1,20 +1,20 @@
 {-
 ZAD-03 — Określanie znaku liczby
 
-**Poziom:** ★☆☆
-**Tagi:** `if-elif-else`, `porównania`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `if-elif-else`, `porównania`, `string`
 
 ### Treść
 
 Wczytaj liczbę całkowitą `x` i wypisz jeden z komunikatów:
 
-* dla `x < 0`: `Liczba jest ujemna.`
-* dla `x > 0`: `Liczba jest dodatnia.`
-* dla `x = 0`: `Liczba jest zerem.`
+\* dla `x < 0`: `Liczba jest ujemna.`
+\* dla `x > 0`: `Liczba jest dodatnia.`
+\* dla `x = 0`: `Liczba jest zerem.`
 
 ### Wejście
 
-* 1 linia: `x` (liczba całkowita)
+\* 1 linia: `x` (liczba całkowita)
 
 ### Wyjście
 
@@ -22,37 +22,37 @@ Jedna linia — dokładnie jeden komunikat.
 
 ### Przykłady
 
-**Wejście:**
+\**Wejście:**
 
 ```
 -5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Liczba jest ujemna.
 ```
 
-**Wejście:**
+\**Wejście:**
 
 ```
 0
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Liczba jest zerem.
 ```
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Liczba jest dodatnia.

@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Konwersja między dowolnymi systemami (2..36)
 
-**Poziom:** ★★☆
-**Tagi:** `konwersja`, `base`, `string`
+\**Poziom:** ★★☆
+\**Tagi:** `konwersja`, `base`, `string`
 
 ### Treść
 
@@ -28,7 +28,7 @@ Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 4301
@@ -36,7 +36,7 @@ Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`)
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 1003031
@@ -44,8 +44,8 @@ Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`)
 
 ### Uwagi o formacie
 
-* `X` może być duże — traktuj jako napis, a nie typ int „na wejściu”.
-* Dla wartości 10..35 stosuj `A..Z`.
+\* `X` może być duże — traktuj jako napis, a nie typ int „na wejściu”.
+\* Dla wartości 10..35 stosuj `A..Z`.
 
 -}
 main :: IO ()

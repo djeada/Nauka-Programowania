@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Obliczanie silni liczby
 
-**Poziom:** ★☆☆
-**Tagi:** `pętle`, `silnia`, `mnożenie`
+\**Poziom:** ★☆☆
+\**Tagi:** `pętle`, `silnia`, `mnożenie`
 
 ### Treść
 
@@ -13,7 +13,7 @@ Przyjmij, że `0! = 1`.
 
 Jeden argument funkcji:
 
-* `n` (liczba naturalna, `n ≥ 0`)
+\* `n` (liczba naturalna, `n ≥ 0`)
 
 ### Wyjście
 
@@ -21,13 +21,13 @@ Funkcja zwraca jedną liczbę naturalną — `n!`.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(silnia(3))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 6

@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Usuń podnapis
 
-**Poziom:** ★★☆
-**Tagi:** `string`, `replace`, `substring`
+\**Poziom:** ★★☆
+\**Tagi:** `string`, `replace`, `substring`
 
 ### Treść
 
@@ -15,23 +15,23 @@ Usuń **wszystkie wystąpienia** podnapisu z napisu głównego.
 
 ### Wejście
 
-* 1 linia: napis `S`
-* 2 linia: napis `T` (do usunięcia)
+\* 1 linia: napis `S`
+\* 2 linia: napis `T` (do usunięcia)
 
 ### Wyjście
 
-* 1 linia: wynikowy napis po usunięciu wszystkich wystąpień
+\* 1 linia: wynikowy napis po usunięciu wszystkich wystąpień
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Lezy jezy na wiezy
 zy
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Le je na wie

@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Słownik: liczby i ich kwadraty
 
-**Poziom:** ★☆☆
-**Tagi:** `dict`, `pętla`
+\**Poziom:** ★☆☆
+\**Tagi:** `dict`, `pętla`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj liczbę `n`. Utwórz słownik, gdzie klucze to liczby od `1` do `n-1`, a
 
 ### Wejście
 
-* 1 linia: `n` (n ≥ 1)
+\* 1 linia: `n` (n ≥ 1)
 
 ### Wyjście
 
-* Słownik w postaci: `{1: 1, 2: 4, ...}`
+\* Słownik w postaci: `{1: 1, 2: 4, ...}`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 {1: 1, 2: 4, 3: 9, 4: 16}

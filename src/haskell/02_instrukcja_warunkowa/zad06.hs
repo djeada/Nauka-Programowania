@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Maksimum z czterech liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `max`, `if`, `porównania`
+\**Poziom:** ★☆☆
+\**Tagi:** `max`, `if`, `porównania`
 
 ### Treść
 
@@ -18,7 +18,7 @@ Jedna linia: największa liczba.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
@@ -27,7 +27,7 @@ Jedna linia: największa liczba.
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 5

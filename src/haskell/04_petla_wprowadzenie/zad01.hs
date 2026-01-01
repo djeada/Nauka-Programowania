@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Warunek kończący pętlę
 
-**Poziom:** ★☆☆
-**Tagi:** `while`, `break`, `I/O`
+\**Poziom:** ★☆☆
+\**Tagi:** `while`, `break`, `I/O`
 
 ### Treść
 
@@ -15,7 +15,7 @@ Dowolna liczba liczb naturalnych (każda w osobnej linii).
 
 ### Ograniczenia / gwarancje
 
-* W danych wejściowych na pewno pojawi się co najmniej jedna liczba `7`.
+\* W danych wejściowych na pewno pojawi się co najmniej jedna liczba `7`.
 
 ### Wyjście
 
@@ -23,7 +23,7 @@ Brak.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -32,17 +32,17 @@ Brak.
 7
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 ```
 
-*(brak danych wyjściowych)*
+\*(brak danych wyjściowych)*
 
 ### Uwagi o formatowaniu
 
-* Nie wypisuj żadnych komunikatów typu „Podaj liczbę”.
-* Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana.
+\* Nie wypisuj żadnych komunikatów typu „Podaj liczbę”.
+\* Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana.
 
 -}
 main :: IO ()

@@ -1,8 +1,8 @@
 {-
 ZAD-09 — Usuń fragment napisu od pierwszego wystąpienia słowa klucz
 
-**Poziom:** ★★☆
-**Tagi:** `regex`, `string`
+\**Poziom:** ★★☆
+\**Tagi:** `regex`, `string`
 
 ### Treść
 
@@ -21,7 +21,7 @@ Zmodyfikowany tekst.
 
 ### Przykład
 
-*(jak w treści zadania — długi tekst)*
+\*(jak w treści zadania — długi tekst)*
 
 -}
 main :: IO ()

@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Powtarzające się podnapisy
 
-**Poziom:** ★★★
-**Tagi:** `string`, `substrings`, `count`
+\**Poziom:** ★★★
+\**Tagi:** `string`, `substrings`, `count`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Otrzymujesz napis. Znajdź wszystkie **podnapisy**, które występują w nim **w
 
 ### Wejście
 
-* 1 linia: napis `S`
+\* 1 linia: napis `S`
 
 ### Wyjście
 
-* 1 linia: lista napisów — wszystkie powtarzające się podnapisy
+\* 1 linia: lista napisów — wszystkie powtarzające się podnapisy
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 pythonpython
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 ['python']
@@ -32,7 +32,7 @@ pythonpython
 
 ### Uwagi
 
-* Jeśli sprawdzarka wymaga konkretnej kolejności (np. rosnąco po długości/alfabetycznie) — musi to być opisane. W przeciwnym razie dopuszczalna może być dowolna kolejność.
+\* Jeśli sprawdzarka wymaga konkretnej kolejności (np. rosnąco po długości/alfabetycznie) — musi to być opisane. W przeciwnym razie dopuszczalna może być dowolna kolejność.
 
 -}
 main :: IO ()

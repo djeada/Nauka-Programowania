@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Sortowanie bąbelkowe
 
-**Poziom:** ★☆☆
-**Tagi:** `sorting`, `bubble-sort`, `list`
+\**Poziom:** ★☆☆
+\**Tagi:** `sorting`, `bubble-sort`, `list`
 
 ### Treść
 
@@ -11,21 +11,21 @@ Algorytm polega na wielokrotnym porównywaniu sąsiednich elementów i zamianie 
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych, np. `[6, 2, 1, 4, 27]`
+\* 1 linia: lista liczb całkowitych, np. `[6, 2, 1, 4, 27]`
 
 ### Wyjście
 
-* 1 linia: posortowana lista rosnąco
+\* 1 linia: posortowana lista rosnąco
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [6, 2, 1, 4, 27]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [1, 2, 4, 6, 27]
@@ -33,8 +33,8 @@ Algorytm polega na wielokrotnym porównywaniu sąsiednich elementów i zamianie 
 
 ### Uwagi o algorytmie
 
-* Po każdym pełnym przebiegu największy element „wypływa” na koniec.
-* W kolejnych przebiegach możesz zmniejszać zakres sprawdzania o 1.
+\* Po każdym pełnym przebiegu największy element „wypływa” na koniec.
+\* W kolejnych przebiegach możesz zmniejszać zakres sprawdzania o 1.
 
 -}
 main :: IO ()

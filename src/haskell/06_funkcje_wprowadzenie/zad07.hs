@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Weryfikacja nazwy użytkownika i hasła
 
-**Poziom:** ★★☆
-**Tagi:** `funkcje`, `while`, `string`, `porównania`
+\**Poziom:** ★★☆
+\**Tagi:** `funkcje`, `while`, `string`, `porównania`
 
 ### Treść
 
@@ -14,26 +14,26 @@ Napisz dwie funkcje:
 
 ### Wejście
 
-* `pobierz_dane()` wczytuje dwie linie:
+\* `pobierz_dane()` wczytuje dwie linie:
 
   1. login
   2. hasło
-* `sprawdz_dane(...)` wczytuje kolejne pary (login, hasło), po dwie linie na próbę.
+\* `sprawdz_dane(...)` wczytuje kolejne pary (login, hasło), po dwie linie na próbę.
 
 ### Wyjście
 
 Jedna linia (tylko raz, po poprawnym dopasowaniu):
 
-* `Dane poprawne. Dostęp przyznany.`
+\* `Dane poprawne. Dostęp przyznany.`
 
 ### Ograniczenia / gwarancje
 
-* W pewnym momencie użytkownik poda poprawne dane.
+\* W pewnym momencie użytkownik poda poprawne dane.
 
 ### Uwagi o formatowaniu
 
-* **Nie wypisuj promptów** typu „Podaj nazwę użytkownika:”.
-* Porównanie jest czułe na wielkość liter.
+\* **Nie wypisuj promptów** typu „Podaj nazwę użytkownika:”.
+\* Porównanie jest czułe na wielkość liter.
 
 -}
 main :: IO ()

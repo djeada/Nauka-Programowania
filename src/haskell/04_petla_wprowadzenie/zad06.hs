@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Sumowanie elementów ciągu
 
-**Poziom:** ★☆☆
-**Tagi:** `ciągi`, `sumowanie`, `pętle`
+\**Poziom:** ★☆☆
+\**Tagi:** `ciągi`, `sumowanie`, `pętle`
 
 ### Treść
 
@@ -20,7 +20,7 @@ Wypisz trzy sumy w kolejności a), b), c).
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 1`)
+\* 1. linia: `n` (`n ≥ 1`)
 
 ### Wyjście
 
@@ -32,13 +32,13 @@ Trzy liczby naturalne — każda w oddzielnej linii:
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 10
@@ -48,7 +48,7 @@ Trzy liczby naturalne — każda w oddzielnej linii:
 
 ### Uwagi o formatowaniu
 
-* Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania.
+\* Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania.
 
 -}
 main :: IO ()

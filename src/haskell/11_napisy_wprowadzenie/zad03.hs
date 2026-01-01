@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Z ilu słów składa się zdanie?
 
-**Poziom:** ★☆☆
-**Tagi:** `string`, `split`
+\**Poziom:** ★☆☆
+\**Tagi:** `string`, `split`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj zdanie i policz, z ilu słów się składa. Znaki interpunkcyjne nie są
 
 ### Wejście
 
-* 1. linia: zdanie
+\* 1. linia: zdanie
 
 ### Wyjście
 
-* 1. linia: liczba słów
+\* 1. linia: liczba słów
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 gram na pianinie.
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 3
@@ -32,7 +32,7 @@ gram na pianinie.
 
 ### Uwagi o formatowaniu
 
-* Najprościej: podziel po białych znakach, a z końców słów usuń interpunkcję.
+\* Najprościej: podziel po białych znakach, a z końców słów usuń interpunkcję.
 
 -}
 main :: IO ()

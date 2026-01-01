@@ -1,8 +1,8 @@
 {-
 ZAD-11 — Palindrom w systemie binarnym
 
-**Poziom:** ★★☆
-**Tagi:** `binarne`, `palindrom`, `string`
+\**Poziom:** ★★☆
+\**Tagi:** `binarne`, `palindrom`, `string`
 
 ### Treść
 
@@ -10,12 +10,12 @@ Wczytaj liczbę naturalną `n`. Sprawdź, czy jej reprezentacja binarna (bez wio
 
 Wypisz:
 
-* `Prawda` — jeśli tak,
-* `Fałsz` — jeśli nie.
+\* `Prawda` — jeśli tak,
+\* `Fałsz` — jeśli nie.
 
 ### Wejście
 
-* 1. linia: `n`
+\* 1. linia: `n`
 
 ### Wyjście
 
@@ -23,13 +23,13 @@ Jedno słowo: `Prawda` lub `Fałsz`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 26
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Fałsz
@@ -37,7 +37,7 @@ Fałsz
 
 ### Uwagi (ważne)
 
-* `26` ma zapis binarny `11010`, który **nie** jest palindromem.
+\* `26` ma zapis binarny `11010`, który **nie** jest palindromem.
   (W Twoim wcześniejszym przykładzie było to opisane błędnie — tu trzymamy się definicji palindromu 1:1.)
 
 -}

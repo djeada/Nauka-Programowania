@@ -1,22 +1,22 @@
 {-
 ZAD-03 — Biblioteka: baza wypożyczeń
 
-**Poziom:** ★☆☆
-**Tagi:** `dict`, `list`, `pętle`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `dict`, `list`, `pętle`, `string`
 
 ### Treść
 
 Utrzymuj słownik: `imię -> lista wypożyczonych książek`.
 Obsługuj komendy (każda w osobnej linii) aż do `koniec`:
 
-* `dodaj [imię] [tytuł]`
-* `zwróć [imię] [tytuł]`
-* `lista [imię]`
+\* `dodaj [imię] [tytuł]`
+\* `zwróć [imię] [tytuł]`
+\* `lista [imię]`
 
 Po `lista [imię]` wypisz:
 
-* jeśli lista niepusta: `Książki wypożyczone przez [imię]: t1, t2, ...`
-* jeśli brak książek (lub brak czytelnika): `Książki wypożyczone przez [imię]: brak`
+\* jeśli lista niepusta: `Książki wypożyczone przez [imię]: t1, t2, ...`
+\* jeśli brak książek (lub brak czytelnika): `Książki wypożyczone przez [imię]: brak`
 
 ### Wejście
 
@@ -28,7 +28,7 @@ Tylko po komendach `lista ...`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 dodaj Jan Hobbit
@@ -41,7 +41,7 @@ lista Anna
 koniec
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Książki wypożyczone przez Jan: Hobbit, Władca Pierścieni

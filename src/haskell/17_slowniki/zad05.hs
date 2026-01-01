@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Pracownik z największym sumarycznym zyskiem
 
-**Poziom:** ★☆☆
-**Tagi:** `dict`, `sumowanie`
+\**Poziom:** ★☆☆
+\**Tagi:** `dict`, `sumowanie`
 
 ### Treść
 
@@ -11,16 +11,16 @@ Wczytaj `n` wpisów: `pracownik zysk`. Zsumuj zyski per pracownik i wypisz nazw�
 
 ### Wejście
 
-* 1 linia: `n`
-* następnie `n` linii: `imie_i_nazwisko zysk`
+\* 1 linia: `n`
+\* następnie `n` linii: `imie_i_nazwisko zysk`
 
 ### Wyjście
 
-* Jedna linia: `imie_i_nazwisko`
+\* Jedna linia: `imie_i_nazwisko`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
@@ -31,7 +31,7 @@ Barnaba_Barabash 200
 Bob_Marley 110
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Barnaba_Barabash

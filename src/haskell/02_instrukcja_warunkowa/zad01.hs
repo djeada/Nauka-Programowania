@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Liczba większa od 5
 
-**Poziom:** ★☆☆
-**Tagi:** `if`, `porównania`, `I/O`
+\**Poziom:** ★☆☆
+\**Tagi:** `if`, `porównania`, `I/O`
 
 ### Treść
 
@@ -11,22 +11,22 @@ Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 
 ### Wejście
 
-* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+\* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
 
 ### Wyjście
 
-* Jeśli `n > 5`: jedna linia z liczbą `n`
-* Jeśli `n ≤ 5`: brak wyjścia
+\* Jeśli `n > 5`: jedna linia z liczbą `n`
+\* Jeśli `n ≤ 5`: brak wyjścia
 
 ### Przykład 1
 
-**Wejście:**
+\**Wejście:**
 
 ```
 10
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 10
@@ -34,13 +34,13 @@ Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 
 ### Przykład 2
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:** *(brak)*
+\**Wyjście:** *(brak)*
 
 -}
 main :: IO ()

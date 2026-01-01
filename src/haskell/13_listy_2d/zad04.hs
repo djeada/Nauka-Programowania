@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Dodawanie i odejmowanie macierzy
 
-**Poziom:** ★☆☆
-**Tagi:** `macierze`, `arytmetyka`
+\**Poziom:** ★☆☆
+\**Tagi:** `macierze`, `arytmetyka`
 
 ### Treść
 
@@ -12,10 +12,10 @@ b) Wypisz różnicę: (pierwsza − druga).
 
 ### Wejście
 
-* 1. linia: `n`
-* 2. linia: `m`
-* potem `n` wierszy pierwszej macierzy (po `m` liczb)
-* potem `n` wierszy drugiej macierzy (po `m` liczb)
+\* 1. linia: `n`
+\* 2. linia: `m`
+\* potem `n` wierszy pierwszej macierzy (po `m` liczb)
+\* potem `n` wierszy drugiej macierzy (po `m` liczb)
 
 ### Wyjście
 
@@ -23,7 +23,7 @@ Najpierw `n` wierszy sumy, potem `n` wierszy różnicy (bez dodatkowych napisów
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
@@ -34,7 +34,7 @@ Najpierw `n` wierszy sumy, potem `n` wierszy różnicy (bez dodatkowych napisów
 1 7
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 6 -1

@@ -1,16 +1,16 @@
 {-
 ZAD-09 — Kalkulator kredytowy (rata annuitetowa)
 
-**Poziom:** ★★☆
-**Tagi:** `finanse`, `float`, `formatowanie`
+\**Poziom:** ★★☆
+\**Tagi:** `finanse`, `float`, `formatowanie`
 
 ### Treść
 
 Wczytaj:
 
-* roczną stopę procentową `R` (w %),
-* okres spłaty `Y` (w latach),
-* kwotę kredytu `P`.
+\* roczną stopę procentową `R` (w %),
+\* okres spłaty `Y` (w latach),
+\* kwotę kredytu `P`.
 
 Oblicz miesięczną ratę `M` oraz całkowity koszt `C = M * n`, gdzie `n = 12 * Y`.
 
@@ -22,7 +22,7 @@ gdzie `r = R / (12*100)`.
 
 Dla `R = 0` przyjmij:
 
-* `M = P / n`.
+\* `M = P / n`.
 
 ### Wejście
 
@@ -41,7 +41,7 @@ Dwie linie (do **2 miejsc po przecinku**):
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3.5
@@ -49,7 +49,7 @@ Dwie linie (do **2 miejsc po przecinku**):
 12000
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 143.50
@@ -57,7 +57,6 @@ Dwie linie (do **2 miejsc po przecinku**):
 ```
 
 -}
-
 
 import Text.Printf (printf)
 

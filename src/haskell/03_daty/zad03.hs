@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Rok przestępny
 
-**Poziom:** ★☆☆
-**Tagi:** `modulo`, `if`, `kalendarz`
+\**Poziom:** ★☆☆
+\**Tagi:** `modulo`, `if`, `kalendarz`
 
 ### Treść
 
@@ -10,12 +10,12 @@ Wczytaj rok `y` i sprawdź, czy jest przestępny w kalendarzu gregoriańskim.
 
 Wypisz:
 
-* `Rok jest przestępny.`
-* `Rok nie jest przestępny.`
+\* `Rok jest przestępny.`
+\* `Rok nie jest przestępny.`
 
 ### Wejście
 
-* 1 linia: `y` (liczba całkowita, `y ≥ 0`)
+\* 1 linia: `y` (liczba całkowita, `y ≥ 0`)
 
 ### Wyjście
 
@@ -25,18 +25,18 @@ Jedna linia — odpowiedni komunikat.
 
 Rok jest przestępny, gdy:
 
-* jest podzielny przez 400 **lub**
-* jest podzielny przez 4 i **nie** jest podzielny przez 100.
+\* jest podzielny przez 400 **lub**
+\* jest podzielny przez 4 i **nie** jest podzielny przez 100.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2100
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Rok nie jest przestępny.

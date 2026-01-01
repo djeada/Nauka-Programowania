@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Wypisanie elementów macierzy spiralnie
 
-**Poziom:** ★★☆
-**Tagi:** `macierze`, `spirala`
+\**Poziom:** ★★☆
+\**Tagi:** `macierze`, `spirala`
 
 ### Treść
 
@@ -10,16 +10,16 @@ Wczytaj macierz `n×m` i wypisz jej elementy spiralnie (zgodnie z ruchem wskazó
 
 ### Wejście
 
-* 1. linia: `n m`
-* następnie `n` wierszy po `m` liczb
+\* 1. linia: `n m`
+\* następnie `n` wierszy po `m` liczb
 
 ### Wyjście
 
-* 1 linia: elementy spiralnie, oddzielone spacjami
+\* 1 linia: elementy spiralnie, oddzielone spacjami
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3 3
@@ -28,7 +28,7 @@ Wczytaj macierz `n×m` i wypisz jej elementy spiralnie (zgodnie z ruchem wskazó
 7 8 9
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 1 2 3 6 9 8 7 4 5

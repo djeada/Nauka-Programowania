@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Sortowanie słów w zdaniu
 
-**Poziom:** ★★☆
-**Tagi:** `sort`, `string`, `split`
+\**Poziom:** ★★☆
+\**Tagi:** `sort`, `string`, `split`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Otrzymujesz zdanie. Podziel je na słowa, traktując znaki interpunkcyjne jako s
 
 ### Wejście
 
-* 1 linia: napis `zdanie`
+\* 1 linia: napis `zdanie`
 
 ### Wyjście
 
-* 1 linia: lista słów w formacie jak w przykładzie, np. `['Ala', 'kota', 'ma']`
+\* 1 linia: lista słów w formacie jak w przykładzie, np. `['Ala', 'kota', 'ma']`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Lemur wygina śmiało ciało
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 ['Lemur', 'ciało', 'wygina', 'śmiało']
@@ -32,8 +32,8 @@ Lemur wygina śmiało ciało
 
 ### Uwagi o formatowaniu
 
-* Ignoruj znaki interpunkcyjne (np. `.,!?;:`) — nie są częścią słów.
-* Wielkość liter pozostaje bez zmian (nie zamieniaj na małe/duże), sortujesz to, co w tekście.
+\* Ignoruj znaki interpunkcyjne (np. `.,!?;:`) — nie są częścią słów.
+\* Wielkość liter pozostaje bez zmian (nie zamieniaj na małe/duże), sortujesz to, co w tekście.
 
 -}
 main :: IO ()

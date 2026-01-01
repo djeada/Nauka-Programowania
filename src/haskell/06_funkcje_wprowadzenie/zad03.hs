@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Sprawdzanie warunków logicznych
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `bool`, `warunki`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `bool`, `warunki`
 
 ### Treść
 
@@ -17,8 +17,8 @@ d) Czy `max(a, b) < a^2`?
 
 Dwa argumenty funkcji:
 
-* `a` (liczba całkowita, `a ≥ 0`)
-* `b` (liczba całkowita, `b ≥ 0`)
+\* `a` (liczba całkowita, `a ≥ 0`)
+\* `b` (liczba całkowita, `b ≥ 0`)
 
 ### Wyjście
 
@@ -26,7 +26,7 @@ Cztery wartości logiczne w kolejności a), b), c), d).
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 A, B, C, D = sprawdz_warunki(3, 2)
@@ -36,7 +36,7 @@ print(C)
 print(D)
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 True

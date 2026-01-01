@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Dzień tygodnia z numeru
 
-**Poziom:** ★☆☆
-**Tagi:** `if-elif-else`, `mapowanie`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `if-elif-else`, `mapowanie`, `string`
 
 ### Treść
 
@@ -21,7 +21,7 @@ W przeciwnym razie wypisz:
 
 ### Wejście
 
-* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+\* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
 
 ### Wyjście
 
@@ -29,13 +29,13 @@ Jedna linia: nazwa dnia lub komunikat o błędzie.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 8
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Niepoprawny numer dnia tygodnia.

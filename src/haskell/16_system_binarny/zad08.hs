@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Najbliższa potęga dwójki (>= n)
 
-**Poziom:** ★☆☆
-**Tagi:** `potęgi 2`, `bitwise`, `pętle`
+\**Poziom:** ★☆☆
+\**Tagi:** `potęgi 2`, `bitwise`, `pętle`
 
 ### Treść
 
@@ -10,7 +10,7 @@ Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która je
 
 ### Wejście
 
-* 1. linia: `n`
+\* 1. linia: `n`
 
 ### Wyjście
 
@@ -18,13 +18,13 @@ Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 111
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 128
@@ -32,7 +32,7 @@ Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
 
 ### Uwagi
 
-* Dla `n = 0` przyjmij wynik `1`.
+\* Dla `n = 0` przyjmij wynik `1`.
 
 -}
 main :: IO ()

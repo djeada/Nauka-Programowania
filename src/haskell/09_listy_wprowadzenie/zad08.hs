@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Usuń klucz
 
-**Poziom:** ★☆☆
-**Tagi:** `listy`, `remove`, `wyszukiwanie`
+\**Poziom:** ★☆☆
+\**Tagi:** `listy`, `remove`, `wyszukiwanie`
 
 ### Treść
 
@@ -10,9 +10,9 @@ Wczytaj listę liczb całkowitych oraz `klucz`. Usuń **pierwsze** wystąpienie 
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
-* ostatnia linia: `klucz` (liczba całkowita)
+\* 1. linia: `N` (`N ≥ 1`)
+\* kolejne `N` linii: liczby całkowite
+\* ostatnia linia: `klucz` (liczba całkowita)
 
 ### Wyjście
 
@@ -20,7 +20,7 @@ Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
@@ -32,7 +32,7 @@ Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 6,2,1,27
@@ -40,7 +40,7 @@ Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
 
 ### Uwagi
 
-* Jeśli `klucz` nie występuje, wypisz listę bez zmian.
+\* Jeśli `klucz` nie występuje, wypisz listę bez zmian.
 
 -}
 main :: IO ()

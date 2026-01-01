@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Podziel tekst względem znaków interpunkcyjnych
 
-**Poziom:** ★☆☆
-**Tagi:** `regex`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `regex`, `string`
 
 ### Treść
 
@@ -12,7 +12,7 @@ Otrzymujesz napis (jedno lub kilka zdań). Podziel tekst na fragmenty w miejscac
 
 Jedna linia:
 
-* `tekst`
+\* `tekst`
 
 ### Wyjście
 
@@ -20,13 +20,13 @@ Każdy fragment w osobnej linii.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Ani nie poszedł do kina, ani nie wybrał się do teatru.
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Ani nie poszedł do kina

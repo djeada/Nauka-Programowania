@@ -1,15 +1,15 @@
 {-
 ZAD-05 — Sortowanie listy miast
 
-**Poziom:** ★☆☆
-**Tagi:** `class`, `sort`, `obiekty`
+\**Poziom:** ★☆☆
+\**Tagi:** `class`, `sort`, `obiekty`
 
 ### Treść
 
 Masz klasę `Miasto` z polami:
 
-* `nazwa` (napis),
-* `liczba_mieszkancow` (liczba naturalna).
+\* `nazwa` (napis),
+\* `liczba_mieszkancow` (liczba naturalna).
 
 Otrzymujesz listę miast.
 
@@ -20,17 +20,17 @@ Wypisz wyniki w dwóch liniach jako listy w formacie jak w przykładzie.
 
 ### Wejście
 
-* 1 linia: liczba naturalna `N`
-* następnie `N` linii: `nazwa liczba_mieszkancow` (nazwa bez spacji)
+\* 1 linia: liczba naturalna `N`
+\* następnie `N` linii: `nazwa liczba_mieszkancow` (nazwa bez spacji)
 
 ### Wyjście
 
-* 1 linia: lista miast po sortowaniu a)
-* 2 linia: lista miast po sortowaniu b)
+\* 1 linia: lista miast po sortowaniu a)
+\* 2 linia: lista miast po sortowaniu b)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -39,7 +39,7 @@ Berlin 3800000
 New_York 8400000
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [Miasto("Berlin", 3800000), Miasto("New_York", 8400000), Miasto("Paris", 2150000)]
@@ -48,7 +48,7 @@ New_York 8400000
 
 ### Uwagi o formatowaniu
 
-* Wydruk obiektów ma mieć dokładnie format: `Miasto("NAZWA", LICZBA)`.
+\* Wydruk obiektów ma mieć dokładnie format: `Miasto("NAZWA", LICZBA)`.
 
 -}
 main :: IO ()

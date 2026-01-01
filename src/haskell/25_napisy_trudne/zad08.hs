@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Najdłuższy wspólny przedrostek
 
-**Poziom:** ★★★
-**Tagi:** `string`, `prefix`, `list`
+\**Poziom:** ★★★
+\**Tagi:** `string`, `prefix`, `list`
 
 ### Treść
 
@@ -10,16 +10,16 @@ Otrzymujesz listę napisów (w kolejnych liniach). Znajdź najdłuższy przedros
 
 ### Wejście
 
-* 1 linia: `n` — liczba napisów
-* kolejne `n` linii: napisy
+\* 1 linia: `n` — liczba napisów
+\* kolejne `n` linii: napisy
 
 ### Wyjście
 
-* 1 linia: najdłuższy wspólny przedrostek (może być pusty)
+\* 1 linia: najdłuższy wspólny przedrostek (może być pusty)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -28,7 +28,7 @@ Remux
 Remmy
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Rem

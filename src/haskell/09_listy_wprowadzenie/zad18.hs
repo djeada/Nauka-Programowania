@@ -1,8 +1,8 @@
 {-
 ZAD-18 — Indeks najmniejszego elementu w przesuniętej liście
 
-**Poziom:** ★★☆
-**Tagi:** `binarne`, `rotacja`, `minimum`
+\**Poziom:** ★★☆
+\**Tagi:** `binarne`, `rotacja`, `minimum`
 
 ### Treść
 
@@ -10,8 +10,8 @@ Wczytaj listę liczb całkowitych, która była posortowana rosnąco i została 
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+\* 1. linia: `N` (`N ≥ 1`)
+\* kolejne `N` linii: liczby całkowite
 
 ### Wyjście
 
@@ -19,7 +19,7 @@ Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
@@ -30,7 +30,7 @@ Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2

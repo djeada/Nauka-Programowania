@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Czy średnia elementów znajduje się w liście?
 
-**Poziom:** ★☆☆
-**Tagi:** `listy`, `średnia`, `wyszukiwanie`
+\**Poziom:** ★☆☆
+\**Tagi:** `listy`, `średnia`, `wyszukiwanie`
 
 ### Treść
 
@@ -10,13 +10,13 @@ Wczytaj listę liczb całkowitych. Oblicz średnią arytmetyczną elementów i s
 
 Wypisz:
 
-* `Tak` — jeśli średnia występuje w liście,
-* `Nie` — w przeciwnym razie.
+\* `Tak` — jeśli średnia występuje w liście,
+\* `Nie` — w przeciwnym razie.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+\* 1. linia: `N` (`N ≥ 1`)
+\* kolejne `N` linii: liczby całkowite
 
 ### Wyjście
 
@@ -24,7 +24,7 @@ Jedno słowo: `Tak` lub `Nie`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
@@ -35,7 +35,7 @@ Jedno słowo: `Tak` lub `Nie`.
 27
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Nie
@@ -43,7 +43,7 @@ Nie
 
 ### Uwagi
 
-* Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb całkowitych.
+\* Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb całkowitych.
 
 -}
 main :: IO ()

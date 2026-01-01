@@ -1,8 +1,8 @@
 {-
 ZAD-09 — Znaki występujące co najmniej dwa razy
 
-**Poziom:** ★☆☆
-**Tagi:** `dict`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `dict`, `string`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj napis. Wypisz napis złożony z **unikalnych** znaków, które występuj
 
 ### Wejście
 
-* 1 linia: napis
+\* 1 linia: napis
 
 ### Wyjście
 
-* 1 linia: wynikowy napis
+\* 1 linia: wynikowy napis
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 aaabbbccc
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 abc

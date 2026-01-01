@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Usuń powtórzenia znaków
 
-**Poziom:** ★★★
-**Tagi:** `string`, `set`, `unique`, `kolejność`
+\**Poziom:** ★★★
+\**Tagi:** `string`, `set`, `unique`, `kolejność`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Otrzymujesz napis. Usuń wszystkie powtórzenia znaków tak, aby **każdy znak w
 
 ### Wejście
 
-* 1 linia: napis `S`
+\* 1 linia: napis `S`
 
 ### Wyjście
 
-* 1 linia: napis z unikalnymi znakami
+\* 1 linia: napis z unikalnymi znakami
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 AAAAAAAAAABBBBBBBBA
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 AB

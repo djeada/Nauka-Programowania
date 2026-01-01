@@ -1,8 +1,8 @@
 {-
 ZAD-07A — Pole trójkąta
 
-**Poziom:** ★☆☆
-**Tagi:** `geometria`, `float`
+\**Poziom:** ★☆☆
+\**Tagi:** `geometria`, `float`
 
 ### Treść
 
@@ -11,23 +11,23 @@ Oblicz pole trójkąta ze wzoru:
 
 ### Wejście
 
-* 1 linia: `a`
-* 2 linia: `h`
+\* 1 linia: `a`
+\* 2 linia: `h`
 
 ### Wyjście
 
-* 1 linia: `P` do **3 miejsc po przecinku**
+\* 1 linia: `P` do **3 miejsc po przecinku**
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 6
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 12.000
@@ -35,8 +35,8 @@ Oblicz pole trójkąta ze wzoru:
 
 ZAD-07B — Pole prostokąta
 
-**Poziom:** ★☆☆
-**Tagi:** `geometria`, `float`
+\**Poziom:** ★☆☆
+\**Tagi:** `geometria`, `float`
 
 ### Treść
 
@@ -45,23 +45,23 @@ Oblicz pole prostokąta:
 
 ### Wejście
 
-* 1 linia: `a`
-* 2 linia: `b`
+\* 1 linia: `a`
+\* 2 linia: `b`
 
 ### Wyjście
 
-* 1 linia: `P` do **3 miejsc po przecinku**
+\* 1 linia: `P` do **3 miejsc po przecinku**
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2.5
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 10.000
@@ -69,8 +69,8 @@ Oblicz pole prostokąta:
 
 ZAD-07C — Pole rombu
 
-**Poziom:** ★☆☆
-**Tagi:** `geometria`, `float`
+\**Poziom:** ★☆☆
+\**Tagi:** `geometria`, `float`
 
 ### Treść
 
@@ -79,23 +79,23 @@ Oblicz pole rombu z przekątnych:
 
 ### Wejście
 
-* 1 linia: `d1`
-* 2 linia: `d2`
+\* 1 linia: `d1`
+\* 2 linia: `d2`
 
 ### Wyjście
 
-* 1 linia: `P` do **3 miejsc po przecinku**
+\* 1 linia: `P` do **3 miejsc po przecinku**
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 10
 6
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 30.000
@@ -103,8 +103,8 @@ Oblicz pole rombu z przekątnych:
 
 ZAD-07D — Objętość kuli
 
-**Poziom:** ★★☆
-**Tagi:** `geometria`, `pi`, `float`
+\**Poziom:** ★★☆
+\**Tagi:** `geometria`, `pi`, `float`
 
 ### Treść
 
@@ -113,21 +113,21 @@ Oblicz objętość kuli:
 
 ### Wejście
 
-* 1 linia: `r`
+\* 1 linia: `r`
 
 ### Wyjście
 
-* 1 linia: `V` do **3 miejsc po przecinku**
+\* 1 linia: `V` do **3 miejsc po przecinku**
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 1
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 4.189
@@ -135,8 +135,8 @@ Oblicz objętość kuli:
 
 ZAD-07E — Objętość stożka
 
-**Poziom:** ★★☆
-**Tagi:** `geometria`, `pi`, `float`
+\**Poziom:** ★★☆
+\**Tagi:** `geometria`, `pi`, `float`
 
 ### Treść
 
@@ -145,23 +145,23 @@ Oblicz objętość stożka:
 
 ### Wejście
 
-* 1 linia: `r`
-* 2 linia: `h`
+\* 1 linia: `r`
+\* 2 linia: `h`
 
 ### Wyjście
 
-* 1 linia: `V` do **3 miejsc po przecinku**
+\* 1 linia: `V` do **3 miejsc po przecinku**
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 12.566
@@ -169,8 +169,8 @@ Oblicz objętość stożka:
 
 ZAD-07F — Objętość prostopadłościanu
 
-**Poziom:** ★☆☆
-**Tagi:** `geometria`, `float`
+\**Poziom:** ★☆☆
+\**Tagi:** `geometria`, `float`
 
 ### Treść
 
@@ -179,17 +179,17 @@ Oblicz objętość prostopadłościanu:
 
 ### Wejście
 
-* 1 linia: `a`
-* 2 linia: `b`
-* 3 linia: `c`
+\* 1 linia: `a`
+\* 2 linia: `b`
+\* 3 linia: `c`
 
 ### Wyjście
 
-* 1 linia: `V` do **3 miejsc po przecinku**
+\* 1 linia: `V` do **3 miejsc po przecinku**
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
@@ -197,14 +197,13 @@ Oblicz objętość prostopadłościanu:
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 24.000
 ```
 
 -}
-
 
 import Text.Printf (printf)
 

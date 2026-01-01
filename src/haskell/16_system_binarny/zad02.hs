@@ -1,8 +1,8 @@
 {-
 ZAD-02A — Wypisz binarnie tylko gdy liczba parzysta
 
-**Poziom:** ★☆☆
-**Tagi:** `warunki`, `parzystość`, `binarne`
+\**Poziom:** ★☆☆
+\**Tagi:** `warunki`, `parzystość`, `binarne`
 
 ### Treść
 
@@ -10,27 +10,27 @@ Wczytaj liczbę naturalną `n`. Jeśli `n` jest parzysta — wypisz jej zapis bi
 
 ### Wejście
 
-* 1. linia: `n` (liczba naturalna)
+\* 1. linia: `n` (liczba naturalna)
 
 ### Wyjście
 
-* Jeśli `n % 2 == 0`: jedna linia z zapisem binarnym `n`
-* W przeciwnym razie: brak wyjścia
+\* Jeśli `n % 2 == 0`: jedna linia z zapisem binarnym `n`
+\* W przeciwnym razie: brak wyjścia
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 7
 ```
 
-**Wyjście:** *(brak)*
+\**Wyjście:** *(brak)*
 
 ZAD-02B — Wypisz binarnie tylko gdy liczba pierwsza
 
-**Poziom:** ★☆☆
-**Tagi:** `pierwszość`, `warunki`, `binarne`
+\**Poziom:** ★☆☆
+\**Tagi:** `pierwszość`, `warunki`, `binarne`
 
 ### Treść
 
@@ -38,22 +38,22 @@ Wczytaj liczbę naturalną `n`. Jeśli `n` jest liczbą pierwszą — wypisz jej
 
 ### Wejście
 
-* 1. linia: `n` (liczba naturalna)
+\* 1. linia: `n` (liczba naturalna)
 
 ### Wyjście
 
-* Jeśli `n` jest pierwsza: jedna linia z zapisem binarnym `n`
-* W przeciwnym razie: brak wyjścia
+\* Jeśli `n` jest pierwsza: jedna linia z zapisem binarnym `n`
+\* W przeciwnym razie: brak wyjścia
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 7
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 111

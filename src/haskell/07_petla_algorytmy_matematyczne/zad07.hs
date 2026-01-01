@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Pierwiastek metodą Newtona (Herona)
 
-**Poziom:** ★★☆
-**Tagi:** `Newton`, `float`, `pętle`, `dokładność`
+\**Poziom:** ★★☆
+\**Tagi:** `Newton`, `float`, `pętle`, `dokładność`
 
 ### Treść
 
@@ -14,14 +14,14 @@ x_{k+1} = \frac{1}{2}\left(x_k + \frac{n}{x_k}\right)
 
 Iteruj do momentu, aż:
 [
-|x_{k+1} - x_k| < 0.0001
+\|x_{k+1} - x_k| < 0.0001
 ]
 
 ### Wejście
 
 Jeden argument funkcji:
 
-* `n` (liczba naturalna, `n ≥ 0`)
+\* `n` (liczba naturalna, `n ≥ 0`)
 
 ### Wyjście
 
@@ -29,13 +29,13 @@ Funkcja zwraca jedną liczbę zmiennoprzecinkową — przybliżony pierwiastek z
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(pierwiastek(16))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 4.0
@@ -43,7 +43,7 @@ print(pierwiastek(16))
 
 ### Ograniczenia / gwarancje
 
-* Dla `n = 0` funkcja ma zwrócić `0.0`.
+\* Dla `n = 0` funkcja ma zwrócić `0.0`.
 
 -}
 main :: IO ()

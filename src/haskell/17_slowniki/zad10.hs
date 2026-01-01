@@ -1,8 +1,8 @@
 {-
 ZAD-10 — Znalezienie anagramów w tekście (grupy)
 
-**Poziom:** ★★☆
-**Tagi:** `dict`, `anagramy`, `string`
+\**Poziom:** ★★☆
+\**Tagi:** `dict`, `anagramy`, `string`
 
 ### Treść
 
@@ -12,11 +12,11 @@ Do grup wypisuj tylko te klucze, które mają co najmniej 2 słowa.
 
 ### Wejście
 
-* 1 linia: tekst
+\* 1 linia: tekst
 
 ### Wyjście
 
-* Lista list słów
+\* Lista list słów
 
 ### Przykład
 

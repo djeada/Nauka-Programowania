@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Sprawdź poprawność hasła
 
-**Poziom:** ★★☆
-**Tagi:** `regex`, `string`, `walidacja`
+\**Poziom:** ★★☆
+\**Tagi:** `regex`, `string`, `walidacja`
 
 ### Treść
 
@@ -20,23 +20,23 @@ Otrzymujesz napis reprezentujący hasło. Sprawdź, czy hasło spełnia wszystki
 
 Jedna linia:
 
-* `haslo`
+\* `haslo`
 
 ### Wyjście
 
 Jedna linia:
 
-* `Prawda` albo `Fałsz`
+\* `Prawda` albo `Fałsz`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 abc1234
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Fałsz

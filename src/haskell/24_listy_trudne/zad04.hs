@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Wspólny podciąg o największej długości (równe sumy)
 
-**Poziom:** ★★★
-**Tagi:** `list`, `prefix`, `hashmap`, `podciąg`
+\**Poziom:** ★★★
+\**Tagi:** `list`, `prefix`, `hashmap`, `podciąg`
 
 ### Treść
 
@@ -10,23 +10,23 @@ Otrzymujesz dwie listy binarne `A` i `B` (zera i jedynki) o tej samej długości
 
 ### Wejście
 
-* 1 linia: lista binarna `A`
-* 2 linia: lista binarna `B` (tej samej długości)
+\* 1 linia: lista binarna `A`
+\* 2 linia: lista binarna `B` (tej samej długości)
 
 ### Wyjście
 
-* 1 linia: maksymalna długość (liczba naturalna)
+\* 1 linia: maksymalna długość (liczba naturalna)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [0, 0, 1, 1, 1, 1]
 [0, 1, 1, 0, 1, 0]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 5

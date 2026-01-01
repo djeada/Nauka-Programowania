@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Indeks klucza w cyklicznie posortowanej liście
 
-**Poziom:** ★★☆
-**Tagi:** `binary search`, `rotacja`, `list`
+\**Poziom:** ★★☆
+\**Tagi:** `binary search`, `rotacja`, `list`
 
 ### Treść
 
@@ -10,17 +10,17 @@ Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosn�
 
 ### Wejście
 
-* 1 linia: liczba naturalna `N`
-* 2 linia: `N` liczb całkowitych oddzielonych spacjami
-* 3 linia: liczba całkowita `x` (szukany klucz)
+\* 1 linia: liczba naturalna `N`
+\* 2 linia: `N` liczb całkowitych oddzielonych spacjami
+\* 3 linia: liczba całkowita `x` (szukany klucz)
 
 ### Wyjście
 
-* 1 linia: indeks pierwszego wystąpienia `x` albo `-1`
+\* 1 linia: indeks pierwszego wystąpienia `x` albo `-1`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 6
@@ -28,7 +28,7 @@ Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosn�
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 1
@@ -36,7 +36,7 @@ Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosn�
 
 ### Ograniczenia / gwarancje
 
-* Lista jest wynikiem rotacji listy posortowanej niemalejąco (mogą wystąpić duplikaty).
+\* Lista jest wynikiem rotacji listy posortowanej niemalejąco (mogą wystąpić duplikaty).
 
 -}
 main :: IO ()

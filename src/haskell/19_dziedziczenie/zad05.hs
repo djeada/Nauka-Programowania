@@ -1,30 +1,30 @@
 {-
 ZAD-05 — Dziedziczenie wielokrotne: Ptak
 
-**Poziom:** ★★☆
-**Tagi:** `multiple inheritance`, `dziedziczenie`, `metody`
+\**Poziom:** ★★☆
+\**Tagi:** `multiple inheritance`, `dziedziczenie`, `metody`
 
 ### Treść
 
 Zaprojektuj klasy:
 
-* **Zwierz** — metody:
+\* **Zwierz** — metody:
 
   * `jedz()` → wypisuje `Ptak je.`
   * `spij()` → wypisuje `Ptak śpi.`
   * `wydaj_dzwiek()` → wypisuje `Ptak wydaje dźwięk.`
 
-* **ObiektLatajacy** — metody:
+\* **ObiektLatajacy** — metody:
 
   * `lec()` → wypisuje `Ptak leci.`
   * `wyladuj()` → wypisuje `Ptak ląduje.`
 
-* **Ptak** — dziedziczy po `Zwierz` oraz `ObiektLatajacy`.
+\* **Ptak** — dziedziczy po `Zwierz` oraz `ObiektLatajacy`.
 
 Program testowy:
 
-* tworzy obiekt `Ptak`,
-* wywołuje metody w kolejności: `jedz`, `spij`, `wydaj_dzwiek`, `lec`, `wyladuj`.
+\* tworzy obiekt `Ptak`,
+\* wywołuje metody w kolejności: `jedz`, `spij`, `wydaj_dzwiek`, `lec`, `wyladuj`.
 
 ### Wejście
 
@@ -36,7 +36,7 @@ Pięć linii jak w przykładzie.
 
 ### Przykład
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Ptak je.

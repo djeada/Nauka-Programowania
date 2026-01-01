@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Pierwsze wystąpienie klucza
 
-**Poziom:** ★☆☆
-**Tagi:** `listy`, `wyszukiwanie`, `indeksy`
+\**Poziom:** ★☆☆
+\**Tagi:** `listy`, `wyszukiwanie`, `indeksy`
 
 ### Treść
 
@@ -11,9 +11,9 @@ Jeśli `klucz` nie występuje — wypisz `-1`.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
-* ostatnia linia: `klucz` (liczba całkowita)
+\* 1. linia: `N` (`N ≥ 1`)
+\* kolejne `N` linii: liczby całkowite
+\* ostatnia linia: `klucz` (liczba całkowita)
 
 ### Wyjście
 
@@ -21,7 +21,7 @@ Jedna liczba całkowita — indeks (od `0`) lub `-1`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
@@ -33,7 +33,7 @@ Jedna liczba całkowita — indeks (od `0`) lub `-1`.
 -1
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2

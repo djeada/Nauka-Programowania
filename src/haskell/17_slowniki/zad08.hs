@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Najczęstsza litera w zdaniu
 
-**Poziom:** ★☆☆
-**Tagi:** `dict`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `dict`, `string`
 
 ### Treść
 
@@ -11,21 +11,21 @@ Jeśli jest kilka, wybierz tę, która **pojawia się jako pierwsza w zdaniu**.
 
 ### Wejście
 
-* 1 linia: zdanie
+\* 1 linia: zdanie
 
 ### Wyjście
 
-* 1 znak
+\* 1 znak
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 lezy jerzy na wiezy
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 e

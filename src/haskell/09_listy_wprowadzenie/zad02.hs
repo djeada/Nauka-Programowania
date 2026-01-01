@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Wczytaj, zmodyfikuj i wypisz
 
-**Poziom:** ★☆☆
-**Tagi:** `listy`, `indeksy`, `modyfikacja`
+\**Poziom:** ★☆☆
+\**Tagi:** `listy`, `indeksy`, `modyfikacja`
 
 ### Treść
 
@@ -16,8 +16,8 @@ Po każdym podpunkcie wypisz wynikową listę w **jednej** linii, elementy oddzi
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+\* 1. linia: `N` (`N ≥ 1`)
+\* kolejne `N` linii: liczby całkowite
 
 ### Wyjście
 
@@ -31,7 +31,7 @@ Elementy w linii oddzielone przecinkami (bez spacji).
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -40,7 +40,7 @@ Elementy w linii oddzielone przecinkami (bez spacji).
 7
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 4,10,8

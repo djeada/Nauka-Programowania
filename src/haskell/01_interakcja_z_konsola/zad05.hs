@@ -1,8 +1,8 @@
 {-
 ZAD-05A — Funkcja liniowa: y = 3x + 10
 
-**Poziom:** ★★☆
-**Tagi:** `arytmetyka`, `float`, `formatowanie`
+\**Poziom:** ★★☆
+\**Tagi:** `arytmetyka`, `float`, `formatowanie`
 
 ### Wejście
 
@@ -14,13 +14,13 @@ ZAD-05A — Funkcja liniowa: y = 3x + 10
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 19.000
@@ -28,8 +28,8 @@ ZAD-05A — Funkcja liniowa: y = 3x + 10
 
 ZAD-05B — Funkcja liniowa: y = ax + b
 
-**Poziom:** ★★☆
-**Tagi:** `arytmetyka`, `float`
+\**Poziom:** ★★☆
+\**Tagi:** `arytmetyka`, `float`
 
 ### Wejście
 
@@ -41,7 +41,7 @@ ZAD-05B — Funkcja liniowa: y = ax + b
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 1
@@ -49,7 +49,7 @@ ZAD-05B — Funkcja liniowa: y = ax + b
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 5.000
@@ -57,8 +57,8 @@ ZAD-05B — Funkcja liniowa: y = ax + b
 
 ZAD-05C — Funkcja sześcienna: y = x³ + 2
 
-**Poziom:** ★★☆
-**Tagi:** `potęgi`, `float`
+\**Poziom:** ★★☆
+\**Tagi:** `potęgi`, `float`
 
 ### Treść
 
@@ -74,13 +74,13 @@ Oblicz: `y = x^3 + 22 - 20`, czyli równoważnie `y = x^3 + 2`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 127.000
@@ -88,8 +88,8 @@ Oblicz: `y = x^3 + 22 - 20`, czyli równoważnie `y = x^3 + 2`.
 
 ZAD-05D — Wielomian z potęgami: y = a·x^m + b·x^n + c − a
 
-**Poziom:** ★★☆
-**Tagi:** `potęgi`, `float`
+\**Poziom:** ★★☆
+\**Tagi:** `potęgi`, `float`
 
 ### Wejście
 
@@ -101,11 +101,11 @@ ZAD-05D — Wielomian z potęgami: y = a·x^m + b·x^n + c − a
 
 ### Ograniczenia / gwarancje
 
-* `m` i `n` są liczbami całkowitymi (np. nieujemnymi), aby potęgowanie było jednoznaczne w typowych językach.
+\* `m` i `n` są liczbami całkowitymi (np. nieujemnymi), aby potęgowanie było jednoznaczne w typowych językach.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 1
@@ -116,7 +116,7 @@ ZAD-05D — Wielomian z potęgami: y = a·x^m + b·x^n + c − a
 1
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2.000
@@ -124,8 +124,8 @@ ZAD-05D — Wielomian z potęgami: y = a·x^m + b·x^n + c − a
 
 ZAD-05E — Funkcja z trygonometrią, wykładniczą i logarytmem
 
-**Poziom:** ★★★☆
-**Tagi:** `math`, `trygonometria`, `log`, `exp`, `float`
+\**Poziom:** ★★★☆
+\**Tagi:** `math`, `trygonometria`, `log`, `exp`, `float`
 
 ### Treść
 
@@ -144,19 +144,19 @@ y=\sin^3(x)\cdot\cos^2(x)+e^{x^2}+\ln(x^3+2x^2-x-3)
 
 ### Ograniczenia / gwarancje
 
-* Dane testowe spełniają warunek dziedziny logarytmu:
+\* Dane testowe spełniają warunek dziedziny logarytmu:
 
   * (x^3+2x^2-x-3 > 0)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 57.179

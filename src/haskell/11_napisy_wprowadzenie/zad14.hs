@@ -1,8 +1,8 @@
 {-
 ZAD-14 — Napis z liczb od 1 do n
 
-**Poziom:** ★☆☆
-**Tagi:** `pętle`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `pętle`, `string`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separato
 
 ### Wejście
 
-* 1. linia: liczba naturalna `n` (n ≥ 1)
+\* 1. linia: liczba naturalna `n` (n ≥ 1)
 
 ### Wyjście
 
-* 1. linia: ciąg `1..n` bez spacji
+\* 1. linia: ciąg `1..n` bez spacji
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 123

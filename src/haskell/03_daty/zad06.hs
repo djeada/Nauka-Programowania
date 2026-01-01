@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Sprawdzanie poprawności daty
 
-**Poziom:** ★★☆
-**Tagi:** `walidacja`, `przestępny`, `if`
+\**Poziom:** ★★☆
+\**Tagi:** `walidacja`, `przestępny`, `if`
 
 ### Treść
 
@@ -10,8 +10,8 @@ Wczytaj `d, m, y` i sprawdź, czy jest to poprawna data w kalendarzu gregoriańs
 
 Wypisz:
 
-* `Data jest poprawna.`
-* `Data jest niepoprawna.`
+\* `Data jest poprawna.`
+\* `Data jest niepoprawna.`
 
 ### Wejście
 
@@ -27,7 +27,7 @@ Jedna linia — komunikat.
 
 ### Ograniczenia / gwarancje
 
-* `y ≥ 0` (lub `y ≥ 1`, jeśli tak chcesz przyjąć — ważne, by było spójnie w całym zbiorze)
+\* `y ≥ 0` (lub `y ≥ 1`, jeśli tak chcesz przyjąć — ważne, by było spójnie w całym zbiorze)
 
 ### Reguły walidacji
 
@@ -41,7 +41,7 @@ Jedna linia — komunikat.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 31
@@ -49,7 +49,7 @@ Jedna linia — komunikat.
 2021
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Data jest niepoprawna.

@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Sortowanie przez wybieranie
 
-**Poziom:** ★★☆
-**Tagi:** `sorting`, `selection-sort`, `list`
+\**Poziom:** ★★☆
+\**Tagi:** `sorting`, `selection-sort`, `list`
 
 ### Treść
 
@@ -11,21 +11,21 @@ Dla każdej pozycji `i` znajdź najmniejszy element w zakresie `i..koniec` i zam
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych
+\* 1 linia: lista liczb całkowitych
 
 ### Wyjście
 
-* 1 linia: posortowana lista rosnąco
+\* 1 linia: posortowana lista rosnąco
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [6, 2, 1, 4, 27]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [1, 2, 4, 6, 27]
@@ -33,7 +33,7 @@ Dla każdej pozycji `i` znajdź najmniejszy element w zakresie `i..koniec` i zam
 
 ### Uwagi o algorytmie
 
-* Złożoność czasowa: `O(n^2)`.
+\* Złożoność czasowa: `O(n^2)`.
 
 -}
 main :: IO ()

@@ -1,8 +1,8 @@
 {-
 ZAD-11 — Gra w statki (projekt konsolowy)
 
-**Poziom:** ★★★
-**Tagi:** `macierze`, `losowanie`, `gra`, `pętle`
+\**Poziom:** ★★★
+\**Tagi:** `macierze`, `losowanie`, `gra`, `pętle`
 
 ### Treść
 
@@ -31,16 +31,16 @@ Zaimplementuj grę w statki na planszy 10×10:
 
 Wielokrotnie:
 
-* `r c` (w jednej linii)
+\* `r c` (w jednej linii)
 
 ### Wyjście
 
-* plansza i komunikaty w trakcie,
-* na końcu komunikat o wygranej/przegranej.
+\* plansza i komunikaty w trakcie,
+\* na końcu komunikat o wygranej/przegranej.
 
 ### Uwagi praktyczne
 
-* To zadanie jest **większym projektem** — format wyjścia bywa sprawdzany „ręcznie” (nie zawsze automatycznie), więc trzymaj się spójnego stylu wypisywania planszy.
+\* To zadanie jest **większym projektem** — format wyjścia bywa sprawdzany „ręcznie” (nie zawsze automatycznie), więc trzymaj się spójnego stylu wypisywania planszy.
 
 -}
 main :: IO ()

@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Porównanie dwóch liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `if-else`, `równość`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `if-else`, `równość`, `string`
 
 ### Treść
 
@@ -14,8 +14,8 @@ W przeciwnym razie wypisz:
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a ≥ 0`)
-* 2 linia: `b` (całkowita, `b ≥ 0`)
+\* 1 linia: `a` (całkowita, `a ≥ 0`)
+\* 2 linia: `b` (całkowita, `b ≥ 0`)
 
 ### Wyjście
 
@@ -23,14 +23,14 @@ Jedna linia — dokładnie jeden z komunikatów.
 
 ### Przykład 1
 
-**Wejście:**
+\**Wejście:**
 
 ```
 7
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Liczby są różne.
@@ -38,14 +38,14 @@ Liczby są różne.
 
 ### Przykład 2
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Liczby są identyczne.

@@ -1,8 +1,8 @@
 {-
 ZAD-13 — Znaki na indeksach będących liczbami pierwszymi
 
-**Poziom:** ★☆☆
-**Tagi:** `liczby pierwsze`, `indeksy`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `liczby pierwsze`, `indeksy`, `string`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj napis. Zbierz znaki, których **indeksy (od 0)** są liczbami pierwszymi
 
 ### Wejście
 
-* 1. linia: napis
+\* 1. linia: napis
 
 ### Wyjście
 
-* 1. linia: lista znaków, np. `['o', 'ń']`
+\* 1. linia: lista znaków, np. `['o', 'ń']`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Słoń
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 ['o', 'ń']
@@ -32,7 +32,7 @@ Słoń
 
 ### Uwagi
 
-* Indeksy: `S(0) ł(1) o(2) ń(3)` → bierz 2 i 3.
+\* Indeksy: `S(0) ł(1) o(2) ń(3)` → bierz 2 i 3.
 
 -}
 main :: IO ()

@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Minimalna liczba usunięć, aby uzyskać anagramy
 
-**Poziom:** ★★★
-**Tagi:** `anagram`, `zliczanie`, `greedy`
+\**Poziom:** ★★★
+\**Tagi:** `anagram`, `zliczanie`, `greedy`
 
 ### Treść
 
@@ -11,23 +11,23 @@ W przeciwnym razie oblicz minimalną liczbę znaków, które trzeba usunąć (ł
 
 ### Wejście
 
-* 1. linia: słowo `s1`
-* 2. linia: słowo `s2`
+\* 1. linia: słowo `s1`
+\* 2. linia: słowo `s2`
 
 ### Wyjście
 
-* jedna liczba całkowita: minimalna liczba usunięć lub `-1`
+\* jedna liczba całkowita: minimalna liczba usunięć lub `-1`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 grazyna
 razynax
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2
@@ -35,7 +35,7 @@ razynax
 
 ### Uwagi
 
-* Dla tej samej długości: policz zliczenia liter i zsumuj wartości `abs(c1[lit] - c2[lit])`, a wynik wypisz jako tę sumę. (To jest łączna liczba usunięć.)
+\* Dla tej samej długości: policz zliczenia liter i zsumuj wartości `abs(c1[lit] - c2[lit])`, a wynik wypisz jako tę sumę. (To jest łączna liczba usunięć.)
 
 -}
 main :: IO ()

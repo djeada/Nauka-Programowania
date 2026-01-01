@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Pełnoletność (18 lat)
 
-**Poziom:** ★☆☆
-**Tagi:** `daty`, `porównywanie`, `if`
+\**Poziom:** ★☆☆
+\**Tagi:** `daty`, `porównywanie`, `if`
 
 ### Treść
 
@@ -10,8 +10,8 @@ Wczytaj datę urodzenia oraz datę „dzisiaj” i sprawdź, czy osoba ma **uko�
 
 Wypisz:
 
-* `Osoba jest pełnoletnia.` — jeśli ma ≥ 18 lat,
-* `Osoba nie jest pełnoletnia.` — w przeciwnym razie.
+\* `Osoba jest pełnoletnia.` — jeśli ma ≥ 18 lat,
+\* `Osoba nie jest pełnoletnia.` — w przeciwnym razie.
 
 ### Wejście
 
@@ -30,8 +30,8 @@ Jedna linia — jeden z komunikatów.
 
 ### Ograniczenia / gwarancje
 
-* Obie daty są poprawne (nie musisz walidować).
-* Pełnoletność jest osiągana **dokładnie w dniu 18. urodzin**.
+\* Obie daty są poprawne (nie musisz walidować).
+\* Pełnoletność jest osiągana **dokładnie w dniu 18. urodzin**.
 
 ### Uwagi (jak to porównać)
 
@@ -39,7 +39,7 @@ Osoba jest pełnoletnia wtedy, gdy data `y1+18, m1, d1` jest **nie późniejsza*
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
@@ -50,7 +50,7 @@ Osoba jest pełnoletnia wtedy, gdy data `y1+18, m1, d1` jest **nie późniejsza*
 2020
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Osoba jest pełnoletnia.

@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Usuń pary ze słownika na podstawie wartości
 
-**Poziom:** ★☆☆
-**Tagi:** `dict`, `filtrowanie`
+\**Poziom:** ★☆☆
+\**Tagi:** `dict`, `filtrowanie`
 
 ### Treść
 
@@ -10,17 +10,17 @@ Wczytaj słownik (`n` par: klucz-napis, wartość-liczba) oraz liczbę `k`. Usu�
 
 ### Wejście
 
-* 1 linia: `n`
-* następnie `n` linii: `klucz wartość`
-* ostatnia linia: `k`
+\* 1 linia: `n`
+\* następnie `n` linii: `klucz wartość`
+\* ostatnia linia: `k`
 
 ### Wyjście
 
-* Słownik po usunięciu par
+\* Słownik po usunięciu par
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 4
@@ -31,7 +31,7 @@ cba 3
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 {'abc': 1, 'cba': 3}

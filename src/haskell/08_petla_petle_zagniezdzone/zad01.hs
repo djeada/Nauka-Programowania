@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Kwadrat
 
-**Poziom:** ★☆☆
-**Tagi:** `pętle zagnieżdżone`, `print`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `pętle zagnieżdżone`, `print`, `string`
 
 ### Treść
 
@@ -13,7 +13,7 @@ Każdy wiersz ma zawierać dokładnie `n` gwiazdek (bez spacji).
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 1`)
+\* 1. linia: `n` (`n ≥ 1`)
 
 ### Wyjście
 
@@ -21,17 +21,17 @@ Jedna liczba naturalna:
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
-**
-**
+\**
+\**
 ```
 
 -}

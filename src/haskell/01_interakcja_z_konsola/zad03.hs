@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Rysowanie kształtów znakami
 
-**Poziom:** ★☆☆
-**Tagi:** `print`, `formatowanie`, `pętle`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `print`, `formatowanie`, `pętle`, `string`
 
 ### Treść
 
@@ -22,11 +22,11 @@ Brak.
 
 Dokładnie:
 
-* 2 linie kwadratu,
-* pusta linia,
-* 3 linie trójkąta,
-* pusta linia,
-* 5 linii rombu.
+\* 2 linie kwadratu,
+\* pusta linia,
+\* 3 linie trójkąta,
+\* pusta linia,
+\* 5 linii rombu.
 
 ### Przykład (oczekiwane wyjście)
 
@@ -47,11 +47,10 @@ xx
 
 ### Uwagi o formatowaniu
 
-* W rombie spacje na początku linii są istotne.
-* Nie dodawaj dodatkowych pustych linii na początku; jedna na końcu jest zwykle akceptowalna, ale trzymaj się przykładu.
+\* W rombie spacje na początku linii są istotne.
+\* Nie dodawaj dodatkowych pustych linii na początku; jedna na końcu jest zwykle akceptowalna, ale trzymaj się przykładu.
 
 -}
-
 
 main :: IO ()
 main = do

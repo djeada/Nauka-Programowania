@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Czy dwa słowa są anagramami?
 
-**Poziom:** ★☆☆
-**Tagi:** `anagram`, `sortowanie`, `zliczanie`
+\**Poziom:** ★☆☆
+\**Tagi:** `anagram`, `sortowanie`, `zliczanie`
 
 ### Treść
 
@@ -10,26 +10,26 @@ Wczytaj dwa słowa i sprawdź, czy są anagramami (czy da się utworzyć jedno p
 
 ### Wejście
 
-* 1. linia: słowo `s1`
-* 2. linia: słowo `s2`
+\* 1. linia: słowo `s1`
+\* 2. linia: słowo `s2`
 
 ### Wyjście
 
 Jedna linia:
 
-* `Prawda` — jeśli anagramy
-* `Fałsz` — jeśli nie
+\* `Prawda` — jeśli anagramy
+\* `Fałsz` — jeśli nie
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 ula
 lua
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Prawda
@@ -37,7 +37,7 @@ Prawda
 
 ### Uwagi
 
-* Najprościej: porównaj posortowane litery albo słowniki zliczeń znaków.
+\* Najprościej: porównaj posortowane litery albo słowniki zliczeń znaków.
 
 -}
 main :: IO ()

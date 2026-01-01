@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Wszystkie permutacje słowa
 
-**Poziom:** ★★☆
-**Tagi:** `rekurencja`, `permutacje`, `backtracking`
+\**Poziom:** ★★☆
+\**Tagi:** `rekurencja`, `permutacje`, `backtracking`
 
 ### Treść
 
@@ -10,7 +10,7 @@ Wczytaj słowo z **unikalnych liter** i wypisz wszystkie jego permutacje — ka�
 
 ### Wejście
 
-* 1. linia: słowo (litery nie powtarzają się)
+\* 1. linia: słowo (litery nie powtarzają się)
 
 ### Wyjście
 
@@ -18,13 +18,13 @@ Wiele linii — wszystkie permutacje słowa, każda w osobnej linii.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 abc
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 abc
@@ -37,7 +37,7 @@ cba
 
 ### Uwagi o formatowaniu
 
-* Kolejność wypisywania permutacji nie musi być dokładnie taka jak w przykładzie, o ile są wszystkie i bez powtórzeń.
+\* Kolejność wypisywania permutacji nie musi być dokładnie taka jak w przykładzie, o ile są wszystkie i bez powtórzeń.
 
 -}
 main :: IO ()

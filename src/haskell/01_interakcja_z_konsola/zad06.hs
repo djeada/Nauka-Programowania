@@ -1,8 +1,8 @@
 {-
 ZAD-06A — Kilogramy → gramy
 
-**Poziom:** ★☆☆
-**Tagi:** `konwersje`
+\**Poziom:** ★☆☆
+\**Tagi:** `konwersje`
 
 ### Treść
 
@@ -10,26 +10,26 @@ Wczytaj wartość w kilogramach `kg` i przelicz na gramy.
 
 ### Wejście
 
-* 1 linia: `kg`
+\* 1 linia: `kg`
 
 ### Wyjście
 
-* 1 linia: `g` jako **liczba całkowita**, gdzie:
+\* 1 linia: `g` jako **liczba całkowita**, gdzie:
   `g = kg * 1000`
 
 ### Gwarancje
 
-* `kg` jest liczbą całkowitą **lub** taką, że wynik w gramach jest całkowity.
+\* `kg` jest liczbą całkowitą **lub** taką, że wynik w gramach jest całkowity.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2.5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2500
@@ -37,8 +37,8 @@ Wczytaj wartość w kilogramach `kg` i przelicz na gramy.
 
 ZAD-06B — Cale → centymetry
 
-**Poziom:** ★☆☆
-**Tagi:** `konwersje`, `float`
+\**Poziom:** ★☆☆
+\**Tagi:** `konwersje`, `float`
 
 ### Treść
 
@@ -46,21 +46,21 @@ Wczytaj liczbę cali `inch` i przelicz na centymetry.
 
 ### Wejście
 
-* 1 linia: `inch`
+\* 1 linia: `inch`
 
 ### Wyjście
 
-* 1 linia: `cm = inch * 2.54` wypisane do **2 miejsc po przecinku**
+\* 1 linia: `cm = inch * 2.54` wypisane do **2 miejsc po przecinku**
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 10
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 25.40
@@ -68,8 +68,8 @@ Wczytaj liczbę cali `inch` i przelicz na centymetry.
 
 ZAD-06C — Sekundy → pełne godziny
 
-**Poziom:** ★☆☆
-**Tagi:** `dzielenie całkowite`
+\**Poziom:** ★☆☆
+\**Tagi:** `dzielenie całkowite`
 
 ### Treść
 
@@ -77,21 +77,21 @@ Wczytaj liczbę sekund `s` i wypisz liczbę **pełnych godzin**.
 
 ### Wejście
 
-* 1 linia: `s` (liczba całkowita, `s ≥ 0`)
+\* 1 linia: `s` (liczba całkowita, `s ≥ 0`)
 
 ### Wyjście
 
-* 1 linia: `s // 3600`
+\* 1 linia: `s // 3600`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 8639
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2
@@ -99,8 +99,8 @@ Wczytaj liczbę sekund `s` i wypisz liczbę **pełnych godzin**.
 
 ZAD-06D — Euro → złotówki (kurs stały)
 
-**Poziom:** ★☆☆
-**Tagi:** `konwersje`, `float`
+\**Poziom:** ★☆☆
+\**Tagi:** `konwersje`, `float`
 
 ### Treść
 
@@ -108,21 +108,21 @@ Wczytaj kwotę w euro `eur` i przelicz na złotówki przy stałym kursie.
 
 ### Wejście
 
-* 1 linia: `eur`
+\* 1 linia: `eur`
 
 ### Wyjście
 
-* 1 linia: `pln = eur * 4.4` do **2 miejsc po przecinku**
+\* 1 linia: `pln = eur * 4.4` do **2 miejsc po przecinku**
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 13.20
@@ -130,8 +130,8 @@ Wczytaj kwotę w euro `eur` i przelicz na złotówki przy stałym kursie.
 
 ZAD-06E — Stopnie → radiany
 
-**Poziom:** ★☆☆
-**Tagi:** `pi`, `float`
+\**Poziom:** ★☆☆
+\**Tagi:** `pi`, `float`
 
 ### Treść
 
@@ -139,21 +139,21 @@ Wczytaj kąt w stopniach `deg` i przelicz na radiany.
 
 ### Wejście
 
-* 1 linia: `deg`
+\* 1 linia: `deg`
 
 ### Wyjście
 
-* 1 linia: `rad = deg * π / 180` do **3 miejsc po przecinku**
+\* 1 linia: `rad = deg * π / 180` do **3 miejsc po przecinku**
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 180
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 3.142
@@ -161,8 +161,8 @@ Wczytaj kąt w stopniach `deg` i przelicz na radiany.
 
 ZAD-06F — Fahrenheit → Celsius i Kelviny
 
-**Poziom:** ★☆☆
-**Tagi:** `konwersje`, `float`
+\**Poziom:** ★☆☆
+\**Tagi:** `konwersje`, `float`
 
 ### Treść
 
@@ -170,7 +170,7 @@ Wczytaj temperaturę w stopniach Fahrenheita `F`. Oblicz temperaturę w Celsjusz
 
 ### Wejście
 
-* 1 linia: `F`
+\* 1 linia: `F`
 
 ### Wyjście
 
@@ -181,13 +181,13 @@ Dwie linie:
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 32
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 0.000
@@ -195,7 +195,6 @@ Dwie linie:
 ```
 
 -}
-
 
 import Text.Printf (printf)
 

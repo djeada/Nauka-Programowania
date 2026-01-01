@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Zamiana wartości miejscami
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `krotka`, `zmienne`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `krotka`, `zmienne`
 
 ### Treść
 
@@ -16,12 +16,12 @@ Dwa argumenty: `a`, `b` (liczby naturalne)
 
 Dwie liczby naturalne zwrócone jako krotka / para:
 
-* najpierw nowa wartość `a` (czyli stare `b`)
-* potem nowa wartość `b` (czyli stare `a`)
+\* najpierw nowa wartość `a` (czyli stare `b`)
+\* potem nowa wartość `b` (czyli stare `a`)
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 a, b = zamien_wartosci(8, 5)
@@ -29,7 +29,7 @@ print("a =", a)
 print("b =", b)
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 a = 5

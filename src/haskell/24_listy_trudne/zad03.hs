@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Minimalny iloczyn trzech liczb
 
-**Poziom:** ★★☆
-**Tagi:** `list`, `min`, `math`
+\**Poziom:** ★★☆
+\**Tagi:** `list`, `min`, `math`
 
 ### Treść
 
@@ -12,21 +12,21 @@ Jeśli lista zawiera mniej niż 3 liczby — wypisz iloczyn wszystkich elementó
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych `A`
+\* 1 linia: lista liczb całkowitych `A`
 
 ### Wyjście
 
-* 1 linia: jedna liczba całkowita
+\* 1 linia: jedna liczba całkowita
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [3, -1, -3, 2, 9, 4]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 -108

@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Dzień roku (liczba dni od 1 stycznia, włącznie)
 
-**Poziom:** ★★☆
-**Tagi:** `sumowanie`, `tablice`, `przestępny`
+\**Poziom:** ★★☆
+\**Tagi:** `sumowanie`, `tablice`, `przestępny`
 
 ### Treść
 
@@ -18,13 +18,13 @@ Jedna liczba całkowita: numer dnia w roku.
 
 ### Ograniczenia / gwarancje
 
-* Podana data jest poprawna (nie musisz jej sprawdzać), **albo** możesz jawnie napisać: „jeśli data jest niepoprawna, zachowanie nieokreślone”.
+\* Podana data jest poprawna (nie musisz jej sprawdzać), **albo** możesz jawnie napisać: „jeśli data jest niepoprawna, zachowanie nieokreślone”.
 
   * (Najczyściej: dać gwarancję poprawności.)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 14
@@ -32,7 +32,7 @@ Jedna liczba całkowita: numer dnia w roku.
 1482
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 45

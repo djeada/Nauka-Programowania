@@ -1,8 +1,8 @@
 {-
 ZAD-10 — Czy punkty mogą być wierzchołkami trójkąta?
 
-**Poziom:** ★★☆
-**Tagi:** `geometria`, `warunki`, `listy`
+\**Poziom:** ★★☆
+\**Tagi:** `geometria`, `warunki`, `listy`
 
 ### Treść
 
@@ -26,7 +26,7 @@ Jedno słowo: `Tak` lub `Nie`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 -3
@@ -37,7 +37,7 @@ Jedno słowo: `Tak` lub `Nie`.
 0
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Nie
@@ -45,7 +45,7 @@ Nie
 
 ### Uwagi
 
-* Sprawdź pole trójkąta: jeśli równe `0`, punkty są współliniowe.
+\* Sprawdź pole trójkąta: jeśli równe `0`, punkty są współliniowe.
 
 -}
 main :: IO ()

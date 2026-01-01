@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Macierz n×n: iloczyn indeksów
 
-**Poziom:** ★☆☆
-**Tagi:** `macierze`, `pętle zagnieżdżone`
+\**Poziom:** ★☆☆
+\**Tagi:** `macierze`, `pętle zagnieżdżone`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od
 
 ### Wejście
 
-* 1. linia: `n`
+\* 1. linia: `n`
 
 ### Wyjście
 
-* `n` wierszy po `n` liczb
+\* `n` wierszy po `n` liczb
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 0 0 0

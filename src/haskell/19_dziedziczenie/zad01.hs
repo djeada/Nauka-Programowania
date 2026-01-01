@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Wywołanie metody klasy bazowej w klasie potomnej
 
-**Poziom:** ★☆☆
-**Tagi:** `dziedziczenie`, `override`, `super`
+\**Poziom:** ★☆☆
+\**Tagi:** `dziedziczenie`, `override`, `super`
 
 ### Treść
 
@@ -16,8 +16,8 @@ Zaprojektuj dwie klasy:
 
 Program testowy:
 
-* tworzy obiekt klasy potomnej,
-* wywołuje metodę `przedstaw_sie()`.
+\* tworzy obiekt klasy potomnej,
+\* wywołuje metodę `przedstaw_sie()`.
 
 ### Wejście
 
@@ -29,7 +29,7 @@ Dwie linie, pokazujące najpierw komunikat klasy bazowej, a potem potomnej.
 
 ### Przykład
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Jestem klasą bazową.

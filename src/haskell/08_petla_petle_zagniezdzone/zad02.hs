@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Trójkąt prostokątny (rosnący)
 
-**Poziom:** ★☆☆
-**Tagi:** `pętle`, `print`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `pętle`, `print`, `string`
 
 ### Treść
 
@@ -10,31 +10,31 @@ Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt o wysokości `n`, gdzie w wierszu `i`
 
 ### Wejście
 
-* 1. linia: `n` (`n ≥ 1`)
+\* 1. linia: `n` (`n ≥ 1`)
 
 ### Wyjście
 
 `n` linii:
 
-* 1. linia: `*`
-* 2. linia: `**`
-* …
-* `n`-ta linia: `n` gwiazdek
+\* 1. linia: `*`
+\* 2. linia: `**`
+\* …
+\* `n`-ta linia: `n` gwiazdek
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
-*
-**
-***
+\*
+\**
+\***
 ```
 
 -}

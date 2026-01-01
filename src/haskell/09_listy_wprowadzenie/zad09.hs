@@ -1,8 +1,8 @@
 {-
 ZAD-09 — Usuń duplikaty (z zachowaniem kolejności)
 
-**Poziom:** ★☆☆
-**Tagi:** `listy`, `duplikaty`, `set`
+\**Poziom:** ★☆☆
+\**Tagi:** `listy`, `duplikaty`, `set`
 
 ### Treść
 
@@ -10,8 +10,8 @@ Wczytaj listę liczb naturalnych i usuń duplikaty tak, aby każda liczba wystę
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby naturalne
+\* 1. linia: `N` (`N ≥ 1`)
+\* kolejne `N` linii: liczby naturalne
 
 ### Wyjście
 
@@ -19,7 +19,7 @@ Jedna linia: lista bez duplikatów, elementy oddzielone przecinkami.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 6
@@ -31,7 +31,7 @@ Jedna linia: lista bez duplikatów, elementy oddzielone przecinkami.
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 3,2,1

@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Cyfry w słowach
 
-**Poziom:** ★★☆
-**Tagi:** `regex`, `string`
+\**Poziom:** ★★☆
+\**Tagi:** `regex`, `string`
 
 ### Treść
 
@@ -12,7 +12,7 @@ Otrzymujesz zdanie. Wyodrębnij wszystkie ciągi cyfr, które są częścią sł
 
 Jedna linia:
 
-* `zdanie`
+\* `zdanie`
 
 ### Wyjście
 
@@ -20,13 +20,13 @@ Każdy znaleziony ciąg cyfr w osobnej linii (w kolejności występowania).
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 29

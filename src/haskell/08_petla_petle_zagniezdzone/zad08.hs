@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Trójkąt Pascala
 
-**Poziom:** ★★☆
-**Tagi:** `pętle zagnieżdżone`, `listy`, `kombinatoryka`
+\**Poziom:** ★★☆
+\**Tagi:** `pętle zagnieżdżone`, `listy`, `kombinatoryka`
 
 ### Treść
 
@@ -17,7 +17,7 @@ Liczby w wierszu oddzielaj pojedynczą spacją.
 
 ### Wejście
 
-* 1. linia: `n` (`n ≥ 1`)
+\* 1. linia: `n` (`n ≥ 1`)
 
 ### Wyjście
 
@@ -25,13 +25,13 @@ Liczby w wierszu oddzielaj pojedynczą spacją.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 1
@@ -41,7 +41,7 @@ Liczby w wierszu oddzielaj pojedynczą spacją.
 
 ### Uwagi o formatowaniu
 
-* Nie dodawaj spacji na końcu wiersza.
+\* Nie dodawaj spacji na końcu wiersza.
 
 -}
 main :: IO ()

@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Czy można zbudować trójkąt?
 
-**Poziom:** ★☆☆
-**Tagi:** `if`, `geometria`, `warunek trójkąta`
+\**Poziom:** ★☆☆
+\**Tagi:** `if`, `geometria`, `warunek trójkąta`
 
 ### Treść
 
@@ -11,14 +11,14 @@ Sprawdź, czy można z nich zbudować trójkąt.
 
 Wypisz:
 
-* jeśli tak: `Trójkąt można zbudować z podanych boków.`
-* jeśli nie: `Trójkąta nie można zbudować z podanych boków.`
+\* jeśli tak: `Trójkąt można zbudować z podanych boków.`
+\* jeśli nie: `Trójkąta nie można zbudować z podanych boków.`
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a > 0`)
-* 2 linia: `b` (całkowita, `b > 0`)
-* 3 linia: `c` (całkowita, `c > 0`)
+\* 1 linia: `a` (całkowita, `a > 0`)
+\* 2 linia: `b` (całkowita, `b > 0`)
+\* 3 linia: `c` (całkowita, `c > 0`)
 
 ### Wyjście
 
@@ -28,13 +28,13 @@ Jedna linia — dokładnie jeden z komunikatów.
 
 Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są wszystkie:
 
-* `a + b > c`
-* `a + c > b`
-* `b + c > a`
+\* `a + b > c`
+\* `a + c > b`
+\* `b + c > a`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -42,7 +42,7 @@ Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są wszystkie:
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Trójkąt można zbudować z podanych boków.

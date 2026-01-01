@@ -1,8 +1,8 @@
 {-
 ZAD-11 — Sortowanie „słownika” po kluczach i po wartościach
 
-**Poziom:** ★☆☆
-**Tagi:** `sort`, `dict`
+\**Poziom:** ★☆☆
+\**Tagi:** `sort`, `dict`
 
 ### Treść
 
@@ -12,17 +12,17 @@ b) Wypisz listę par posortowaną rosnąco po wartościach.
 
 ### Wejście
 
-* 1 linia: `n`
-* następnie `n` linii: `klucz wartość`
+\* 1 linia: `n`
+\* następnie `n` linii: `klucz wartość`
 
 ### Wyjście
 
-* 1 linia: lista par dla a)
-* 2 linia: lista par dla b)
+\* 1 linia: lista par dla a)
+\* 2 linia: lista par dla b)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 4
@@ -32,7 +32,7 @@ a -2
 b 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [('a', -2), ('b', 4), ('c', 3), ('x', 5)]

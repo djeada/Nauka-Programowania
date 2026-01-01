@@ -1,36 +1,36 @@
 {-
 ZAD-02 — Połączenie dwóch list
 
-**Poziom:** ★☆☆
-**Tagi:** `list`, `indeksy`, `concat`
+\**Poziom:** ★☆☆
+\**Tagi:** `list`, `indeksy`, `concat`
 
 ### Treść
 
 Wczytaj dwie listy liczb całkowitych i wykonaj niezależnie:
 
-**a)** Połącz listy, doklejając drugą listę na koniec pierwszej.
-**b)** W pierwszej liście **podmień** elementy o parzystych indeksach (0, 2, 4, …) elementami z drugiej listy o tych samych indeksach — o ile taki indeks istnieje w obu listach.
+\**a)** Połącz listy, doklejając drugą listę na koniec pierwszej.
+\**b)** W pierwszej liście **podmień** elementy o parzystych indeksach (0, 2, 4, …) elementami z drugiej listy o tych samych indeksach — o ile taki indeks istnieje w obu listach.
 
 ### Wejście
 
-* 1 linia: lista 1
-* 2 linia: lista 2
+\* 1 linia: lista 1
+\* 2 linia: lista 2
 
 ### Wyjście
 
-* 1 linia: wynik dla **a)** jako lista
-* 2 linia: wynik dla **b)** jako lista
+\* 1 linia: wynik dla **a)** jako lista
+\* 2 linia: wynik dla **b)** jako lista
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [1, 2, 3]
 [4, 5, 6]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [1, 2, 3, 4, 5, 6]

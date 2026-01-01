@@ -1,8 +1,8 @@
 {-
 ZAD-05 — k-ta pochodna wielomianu
 
-**Poziom:** ★★☆
-**Tagi:** `pochodna`, `wielomiany`, `I/O`
+\**Poziom:** ★★☆
+\**Tagi:** `pochodna`, `wielomiany`, `I/O`
 
 ### Treść
 
@@ -10,18 +10,18 @@ Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomian
 
 ### Wejście
 
-* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
-* 2. linia: `n+1` liczb: `a_n ... a_0`
-* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)
+\* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+\* 2. linia: `n+1` liczb: `a_n ... a_0`
+\* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)
 
 ### Wyjście
 
-* Jeśli po zróżniczkowaniu `k` razy zostaje wielomian niezerowy: wypisz jego współczynniki w jednej linii (spacje).
-* Jeśli wielomian „znika” (stopień < k): wypisz dokładnie `[]`.
+\* Jeśli po zróżniczkowaniu `k` razy zostaje wielomian niezerowy: wypisz jego współczynniki w jednej linii (spacje).
+\* Jeśli wielomian „znika” (stopień < k): wypisz dokładnie `[]`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
@@ -29,7 +29,7 @@ Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomian
 1
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 8 -3
@@ -37,7 +37,7 @@ Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomian
 
 ### Uwagi o formatowaniu
 
-* Pochodna: jeśli aktualne współczynniki to `[c_d, c_{d-1}, ..., c_0]`, to pochodna ma współczynniki:
+\* Pochodna: jeśli aktualne współczynniki to `[c_d, c_{d-1}, ..., c_0]`, to pochodna ma współczynniki:
   `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]`.
 
 -}

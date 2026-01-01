@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Miejsca zerowe równania kwadratowego (rzeczywiste)
 
-**Poziom:** ★★☆
-**Tagi:** `funkcje`, `delta`, `pierwiastki`
+\**Poziom:** ★★☆
+\**Tagi:** `funkcje`, `delta`, `pierwiastki`
 
 ### Treść
 
@@ -10,11 +10,11 @@ Napisz funkcję, która otrzymuje listę współczynników równania kwadratoweg
 
 ### Wejście (argumenty funkcji)
 
-* `coef` — lista trzech liczb `[a, b, c]`
+\* `coef` — lista trzech liczb `[a, b, c]`
 
 ### Wyjście (zwracana wartość)
 
-* lista liczb zmiennoprzecinkowych:
+\* lista liczb zmiennoprzecinkowych:
 
   * jeśli `Δ < 0` → pusta lista `[]`
   * jeśli `Δ = 0` → dwa jednakowe pierwiastki `[x, x]`
@@ -27,12 +27,12 @@ Dla `[1, 2, 1]` funkcja zwraca:
 
 ### Ograniczenia / gwarancje
 
-* Zakładamy `a ≠ 0` (to naprawdę równanie kwadratowe).
+\* Zakładamy `a ≠ 0` (to naprawdę równanie kwadratowe).
 
 ### Uwagi
 
-* Licz `Δ = b^2 - 4ac`.
-* Pierwiastki: `(-b ± sqrt(Δ)) / (2a)`.
+\* Licz `Δ = b^2 - 4ac`.
+\* Pierwiastki: `(-b ± sqrt(Δ)) / (2a)`.
 
 -}
 main :: IO ()

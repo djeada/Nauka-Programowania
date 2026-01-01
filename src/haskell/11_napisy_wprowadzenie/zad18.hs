@@ -1,8 +1,8 @@
 {-
 ZAD-18 — Odwróć słowa w zdaniu
 
-**Poziom:** ★★☆
-**Tagi:** `split`, `string`, `pętle`
+\**Poziom:** ★★☆
+\**Tagi:** `split`, `string`, `pętle`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj zdanie i odwróć litery **w każdym słowie osobno**, zachowując kolej
 
 ### Wejście
 
-* 1. linia: zdanie
+\* 1. linia: zdanie
 
 ### Wyjście
 
-* 1. linia: zdanie z odwróconymi słowami
+\* 1. linia: zdanie z odwróconymi słowami
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Ala ma kota
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 alA am atok

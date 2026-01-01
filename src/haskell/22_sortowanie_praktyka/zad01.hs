@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Sortowanie znaków w napisie
 
-**Poziom:** ★☆☆
-**Tagi:** `sort`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `sort`, `string`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Otrzymujesz napis. Posortuj alfabetycznie wszystkie jego znaki i wypisz wynikowy
 
 ### Wejście
 
-* 1 linia: napis `s`
+\* 1 linia: napis `s`
 
 ### Wyjście
 
-* 1 linia: napis `s` po posortowaniu znaków rosnąco (porównanie znaków jak w Pythonie / Unicode)
+\* 1 linia: napis `s` po posortowaniu znaków rosnąco (porównanie znaków jak w Pythonie / Unicode)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Ala ma kota
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
  Aaaaklmot
@@ -32,7 +32,7 @@ Ala ma kota
 
 ### Uwagi o formatowaniu
 
-* Spacje też są znakami i biorą udział w sortowaniu (dlatego w przykładzie wyjście zaczyna się od spacji).
+\* Spacje też są znakami i biorą udział w sortowaniu (dlatego w przykładzie wyjście zaczyna się od spacji).
 
 -}
 main :: IO ()

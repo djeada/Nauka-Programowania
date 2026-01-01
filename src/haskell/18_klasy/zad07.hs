@@ -1,16 +1,16 @@
 {-
 ZAD-07 — Zliczanie instancji klasy
 
-**Poziom:** ★☆☆
-**Tagi:** `class`, `static`
+\**Poziom:** ★☆☆
+\**Tagi:** `class`, `static`
 
 ### Treść
 
 Zaprojektuj klasę **MojaKlasa**, która zlicza ile instancji utworzono:
 
-* prywatne pole statyczne licznik,
-* konstruktor zwiększa licznik,
-* metoda statyczna zwraca licznik.
+\* prywatne pole statyczne licznik,
+\* konstruktor zwiększa licznik,
+\* metoda statyczna zwraca licznik.
 
 Program tworzy np. 3 obiekty i wypisuje liczbę instancji.
 
@@ -24,7 +24,7 @@ Jedna linia.
 
 ### Przykład
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Liczba utworzonych instancji: 3

@@ -1,15 +1,15 @@
 {-
 ZAD-03 — Pole nałożenia się dwóch prostokątów
 
-**Poziom:** ★★☆
-**Tagi:** `class`, `static`, `geometria`
+\**Poziom:** ★★☆
+\**Tagi:** `class`, `static`, `geometria`
 
 ### Treść
 
 Zaprojektuj klasę **Prostokąt** opisaną przez dwa przeciwległe wierzchołki:
 
-* lewy dolny `(x1, y1)`
-* prawy górny `(x2, y2)`
+\* lewy dolny `(x1, y1)`
+\* prawy górny `(x2, y2)`
   Boki równoległe do osi.
 
 Klasa ma mieć:
@@ -20,8 +20,8 @@ Klasa ma mieć:
 
 Program tworzy:
 
-* A: (3, 4) i (9, 6)
-* B: (2, 2) i (7, 5)
+\* A: (3, 4) i (9, 6)
+\* B: (2, 2) i (7, 5)
 
 Wypisuje oba i pole części wspólnej.
 
@@ -35,7 +35,7 @@ Jak w przykładzie.
 
 ### Przykład
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Prostokąt A: lewy dolny (3, 4), prawy górny (9, 6)

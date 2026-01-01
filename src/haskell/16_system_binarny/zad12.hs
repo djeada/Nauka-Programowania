@@ -1,8 +1,8 @@
 {-
 ZAD-12 — Najdłuższy ciąg zer otoczony jedynkami
 
-**Poziom:** ★★★
-**Tagi:** `binarne`, `binary gap`, `pętle`
+\**Poziom:** ★★★
+\**Tagi:** `binarne`, `binary gap`, `pętle`
 
 ### Treść
 
@@ -12,7 +12,7 @@ Jeśli nie ma takiego ciągu — wypisz `0`.
 
 ### Wejście
 
-* 1. linia: `n`
+\* 1. linia: `n`
 
 ### Wyjście
 
@@ -20,13 +20,13 @@ Jedna liczba naturalna: długość najdłuższego „gapu”.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 14
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 0
@@ -34,7 +34,7 @@ Jedna liczba naturalna: długość najdłuższego „gapu”.
 
 ### Uwagi (ważne)
 
-* `14` ma zapis `1110` — zero na końcu **nie jest otoczone jedynkami z prawej**, więc wynik to `0`.
+\* `14` ma zapis `1110` — zero na końcu **nie jest otoczone jedynkami z prawej**, więc wynik to `0`.
   Dla przykładu `20` (`10100`) najdłuższy gap ma długość `1` (między `1` i `1`).
 
 -}

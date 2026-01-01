@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Naiwny test pierwszości liczby
 
-**Poziom:** ★★☆
-**Tagi:** `pierwszość`, `pętle`, `dzielniki`
+\**Poziom:** ★★☆
+\**Tagi:** `pierwszość`, `pętle`, `dzielniki`
 
 ### Treść
 
@@ -12,24 +12,24 @@ Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą
 
 Jeden argument funkcji:
 
-* `n` (liczba naturalna, `n ≥ 2`)
+\* `n` (liczba naturalna, `n ≥ 2`)
 
 ### Wyjście
 
 Funkcja zwraca wartość logiczną:
 
-* `True` lub `False`
+\* `True` lub `False`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(czy_pierwsza(7))
 print(czy_pierwsza(4))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 True
@@ -38,8 +38,8 @@ False
 
 ### Uwagi
 
-* Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.
-* Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`.
+\* Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.
+\* Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`.
 
 -}
 main :: IO ()

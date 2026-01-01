@@ -1,8 +1,8 @@
 {-
 ZAD-17 — Wszystkie pary o sumie x (wartości)
 
-**Poziom:** ★★☆
-**Tagi:** `listy`, `2-sum`, `pary`
+\**Poziom:** ★★☆
+\**Tagi:** `listy`, `2-sum`, `pary`
 
 ### Treść
 
@@ -13,9 +13,9 @@ Każdą parę wypisz tylko raz (nie dubluj `(a,b)` i `(b,a)`).
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 2`)
-* kolejne `N` linii: liczby całkowite
-* ostatnia linia: `x` (liczba całkowita)
+\* 1. linia: `N` (`N ≥ 2`)
+\* kolejne `N` linii: liczby całkowite
+\* ostatnia linia: `x` (liczba całkowita)
 
 ### Wyjście
 
@@ -24,7 +24,7 @@ Jeśli brak par — brak wyjścia.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
@@ -36,7 +36,7 @@ Jeśli brak par — brak wyjścia.
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 1 4

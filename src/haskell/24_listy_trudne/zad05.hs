@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Zbiór potęgowy listy
 
-**Poziom:** ★★★
-**Tagi:** `list`, `subsets`, `combinatorics`
+\**Poziom:** ★★★
+\**Tagi:** `list`, `subsets`, `combinatorics`
 
 ### Treść
 
@@ -12,21 +12,21 @@ Wynik ma zawierać wszystkie podzbiory (włącznie z pustym).
 
 ### Wejście
 
-* 1 linia: lista liczb naturalnych `A`
+\* 1 linia: lista liczb naturalnych `A`
 
 ### Wyjście
 
-* 1 linia: lista list (wszystkie podzbiory)
+\* 1 linia: lista list (wszystkie podzbiory)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [1, 2, 1]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [[], [1], [2], [1, 2], [1, 1], [2, 1], [1, 1, 2], [1, 2, 1]]
@@ -34,7 +34,7 @@ Wynik ma zawierać wszystkie podzbiory (włącznie z pustym).
 
 ### Uwagi
 
-* Jeśli sprawdzarka wymaga konkretnej kolejności podzbiorów, musi być ona opisana w treści — w przeciwnym razie dopuszczalna może być dowolna. (Jeśli chcesz, mogę dopisać sztywną konwencję kolejności, ale bez rozwiązań.)
+\* Jeśli sprawdzarka wymaga konkretnej kolejności podzbiorów, musi być ona opisana w treści — w przeciwnym razie dopuszczalna może być dowolna. (Jeśli chcesz, mogę dopisać sztywną konwencję kolejności, ale bez rozwiązań.)
 
 -}
 main :: IO ()

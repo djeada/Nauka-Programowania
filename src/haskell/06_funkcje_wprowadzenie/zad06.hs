@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Suma cyfr liczby (funkcja)
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `pętle`, `modulo`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `pętle`, `modulo`
 
 ### Treść
 
@@ -18,13 +18,13 @@ Funkcja zwraca sumę cyfr.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(suma_cyfr(13231))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 10
@@ -32,7 +32,7 @@ print(suma_cyfr(13231))
 
 ### Uwagi
 
-* Dla `n = 0` suma cyfr to `0`.
+\* Dla `n = 0` suma cyfr to `0`.
 
 -}
 main :: IO ()

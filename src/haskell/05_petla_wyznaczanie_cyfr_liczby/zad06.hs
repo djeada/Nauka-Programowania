@@ -1,8 +1,8 @@
 {-
 ZAD-06A — Liczby mniejsze od n o sumie cyfr równej 10
 
-**Poziom:** ★★☆
-**Tagi:** `pętle`, `suma cyfr`, `warunki`
+\**Poziom:** ★★☆
+\**Tagi:** `pętle`, `suma cyfr`, `warunki`
 
 ### Treść
 
@@ -12,7 +12,7 @@ Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby naturalne `x` takie, że
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 0`)
+\* 1. linia: `n` (`n ≥ 0`)
 
 ### Wyjście
 
@@ -21,8 +21,8 @@ Jeśli brak — brak wyjścia.
 
 ZAD-06B — Dwucyfrowe większe od n
 
-**Poziom:** ★★☆
-**Tagi:** `pętle`, `przedziały`
+\**Poziom:** ★★☆
+\**Tagi:** `pętle`, `przedziały`
 
 ### Treść
 
@@ -32,7 +32,7 @@ Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby **dwucyfrowe** większe 
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 0`)
+\* 1. linia: `n` (`n ≥ 0`)
 
 ### Wyjście
 
@@ -41,13 +41,13 @@ Jeśli brak — brak wyjścia.
 
 ### Przykład (dla n = 95)
 
-**Wejście:**
+\**Wejście:**
 
 ```
 95
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 96
@@ -58,8 +58,8 @@ Jeśli brak — brak wyjścia.
 
 ZAD-06C — Trzycyfrowe o sumie cyfr równej n
 
-**Poziom:** ★★☆
-**Tagi:** `pętle`, `suma cyfr`, `warunki`
+\**Poziom:** ★★☆
+\**Tagi:** `pętle`, `suma cyfr`, `warunki`
 
 ### Treść
 
@@ -69,7 +69,7 @@ Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby trzycyfrowe `x` (100–9
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 0`)
+\* 1. linia: `n` (`n ≥ 0`)
 
 ### Wyjście
 
@@ -78,8 +78,8 @@ Jeśli brak — brak wyjścia.
 
 ZAD-06D — Trzycyfrowe podzielne przez sumę cyfr liczby n
 
-**Poziom:** ★★☆
-**Tagi:** `pętle`, `dzielenie`, `suma cyfr`
+\**Poziom:** ★★☆
+\**Tagi:** `pętle`, `dzielenie`, `suma cyfr`
 
 ### Treść
 
@@ -89,11 +89,11 @@ Wczytaj liczbę naturalną `n`. Oblicz sumę cyfr liczby `n` i oznacz ją jako `
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 0`)
+\* 1. linia: `n` (`n ≥ 0`)
 
 ### Ograniczenia / gwarancje
 
-* Suma cyfr `n` jest większa od zera (czyli `n ≠ 0`), aby dzielenie było poprawne.
+\* Suma cyfr `n` jest większa od zera (czyli `n ≠ 0`), aby dzielenie było poprawne.
 
 ### Wyjście
 
@@ -101,8 +101,8 @@ Liczby trzycyfrowe podzielne przez `s`, każda w nowej linii.
 
 ZAD-06E — Mniejsze od n złożone wyłącznie z parzystych cyfr
 
-**Poziom:** ★★☆
-**Tagi:** `pętle`, `warunki`, `cyfry`
+\**Poziom:** ★★☆
+\**Tagi:** `pętle`, `warunki`, `cyfry`
 
 ### Treść
 
@@ -112,7 +112,7 @@ Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby naturalne `x` takie, że
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 0`)
+\* 1. linia: `n` (`n ≥ 0`)
 
 ### Wyjście
 
@@ -121,13 +121,13 @@ Jeśli brak — brak wyjścia.
 
 ### Przykład (dla n = 95)
 
-**Wejście:**
+\**Wejście:**
 
 ```
 95
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2
@@ -154,7 +154,7 @@ Jeśli brak — brak wyjścia.
 
 ### Uwagi o formatowaniu
 
-* W tym zadaniu `0` też składa się wyłącznie z parzystych cyfr. Jeśli chcesz je uwzględniać, dopisz to jako regułę w treści (tu: pomijamy `0`, bo w przykładzie go nie ma).
+\* W tym zadaniu `0` też składa się wyłącznie z parzystych cyfr. Jeśli chcesz je uwzględniać, dopisz to jako regułę w treści (tu: pomijamy `0`, bo w przykładzie go nie ma).
 
 -}
 main :: IO ()

@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Histogram słów w tekście (ignoruj wielkość liter)
 
-**Poziom:** ★☆☆
-**Tagi:** `dict`, `string`, `tekst`
+\**Poziom:** ★☆☆
+\**Tagi:** `dict`, `string`, `tekst`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj tekst. Policz częstość występowania słów (tylko litery), ignorują
 
 ### Wejście
 
-* 1 linia: tekst
+\* 1 linia: tekst
 
 ### Wyjście
 
-* Słownik
+\* Słownik
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Ala ma kota. Ala lubi koty.
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 {'ala': 2, 'ma': 1, 'kota': 1, 'lubi': 1, 'koty': 1}

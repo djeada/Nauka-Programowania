@@ -1,8 +1,8 @@
 {-
 ZAD-11 — Nazwa pliku bez rozszerzenia
 
-**Poziom:** ★★☆
-**Tagi:** `regex`, `string`, `ścieżki`
+\**Poziom:** ★★☆
+\**Tagi:** `regex`, `string`, `ścieżki`
 
 ### Treść
 
@@ -14,23 +14,23 @@ Otrzymujesz napis reprezentujący pełną ścieżkę do pliku. Wyodrębnij nazw�
 
 Jedna linia:
 
-* `sciezka`
+\* `sciezka`
 
 ### Wyjście
 
 Jedna linia:
 
-* `nazwa_pliku_bez_rozszerzenia`
+\* `nazwa_pliku_bez_rozszerzenia`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 C:\my-long\path_directory\file.html
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 file

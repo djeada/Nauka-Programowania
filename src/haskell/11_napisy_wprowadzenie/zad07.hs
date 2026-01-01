@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Zamień znaki na kody ASCII
 
-**Poziom:** ★☆☆
-**Tagi:** `ASCII`, `ord`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `ASCII`, `ord`, `string`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj napis i wypisz kody ASCII wszystkich jego znaków, oddzielone przecinkie
 
 ### Wejście
 
-* 1. linia: napis
+\* 1. linia: napis
 
 ### Wyjście
 
-* 1. linia: kody ASCII oddzielone `, `
+\* 1. linia: kody ASCII oddzielone `, `
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Robot
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 82, 111, 98, 111, 116

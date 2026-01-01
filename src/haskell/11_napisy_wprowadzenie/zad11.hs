@@ -1,8 +1,8 @@
 {-
 ZAD-11 — Średnia długość słów
 
-**Poziom:** ★☆☆
-**Tagi:** `string`, `arytmetyka`
+\**Poziom:** ★☆☆
+\**Tagi:** `string`, `arytmetyka`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj zdanie i oblicz średnią długość słów. Wynik ma być liczbą całk
 
 ### Wejście
 
-* 1. linia: zdanie
+\* 1. linia: zdanie
 
 ### Wyjście
 
-* 1. linia: średnia długość słów (liczba całkowita)
+\* 1. linia: średnia długość słów (liczba całkowita)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Zepsuty rower.
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 6
@@ -32,7 +32,7 @@ Zepsuty rower.
 
 ### Uwagi
 
-* Licz jako: `suma_dlugosci // liczba_slow` (dzielenie całkowite).
+\* Licz jako: `suma_dlugosci // liczba_slow` (dzielenie całkowite).
 
 -}
 main :: IO ()

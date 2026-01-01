@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Najdłuższy ciąg jedynek
 
-**Poziom:** ★★☆
-**Tagi:** `list`, `0/1`, `analiza`, `indeksy`
+\**Poziom:** ★★☆
+\**Tagi:** `list`, `0/1`, `analiza`, `indeksy`
 
 ### Treść
 
@@ -12,21 +12,21 @@ Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — w
 
 ### Wejście
 
-* 1 linia: lista `A` (tylko `0` i `1`)
+\* 1 linia: lista `A` (tylko `0` i `1`)
 
 ### Wyjście
 
-* 1 linia: indeks (liczba całkowita) albo `-1`
+\* 1 linia: indeks (liczba całkowita) albo `-1`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 7
@@ -34,7 +34,7 @@ Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — w
 
 ### Uwagi
 
-* Jeśli kilka zer daje ten sam maksymalny wynik — wybierz to o **najmniejszym indeksie** (jeśli nie określono inaczej w testach).
+\* Jeśli kilka zer daje ten sam maksymalny wynik — wybierz to o **najmniejszym indeksie** (jeśli nie określono inaczej w testach).
 
 -}
 main :: IO ()

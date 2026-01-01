@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Co k-ty znak poziomo i pionowo
 
-**Poziom:** ★☆☆
-**Tagi:** `string`, `slicing`, `pętle`
+\**Poziom:** ★☆☆
+\**Tagi:** `string`, `slicing`, `pętle`
 
 ### Treść
 
@@ -13,24 +13,24 @@ b) Wypisz co `k`-ty znak pionowo (każdy w osobnej linii).
 
 ### Wejście
 
-* 1. linia: napis
-* 2. linia: liczba naturalna `k` (k ≥ 1)
+\* 1. linia: napis
+\* 2. linia: liczba naturalna `k` (k ≥ 1)
 
 ### Wyjście
 
-* (a) 1 linia: znaki oddzielone spacjami
-* (b) wiele linii: każdy znak osobno
+\* (a) 1 linia: znaki oddzielone spacjami
+\* (b) wiele linii: każdy znak osobno
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Grzechotnik
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 z h n
@@ -41,7 +41,7 @@ n
 
 ### Uwagi o formatowaniu
 
-* Dokładnie jedna spacja między znakami w punkcie (a), bez spacji na końcu linii.
+\* Dokładnie jedna spacja między znakami w punkcie (a), bez spacji na końcu linii.
 
 -}
 main :: IO ()

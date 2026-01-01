@@ -1,8 +1,8 @@
 {-
 ZAD-04A — Cyfry parzyste
 
-**Poziom:** ★☆☆
-**Tagi:** `pętle`, `modulo`, `warunki`
+\**Poziom:** ★☆☆
+\**Tagi:** `pętle`, `modulo`, `warunki`
 
 ### Treść
 
@@ -14,7 +14,7 @@ Cyfry analizuj od końca (od jedności), czyli w tej samej kolejności, co w zad
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 0`)
+\* 1. linia: `n` (`n ≥ 0`)
 
 ### Wyjście
 
@@ -23,13 +23,13 @@ Jeśli nie ma takich cyfr — brak wyjścia.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 932
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2
@@ -37,8 +37,8 @@ Jeśli nie ma takich cyfr — brak wyjścia.
 
 ZAD-04B — Cyfry mniejsze niż 5
 
-**Poziom:** ★☆☆
-**Tagi:** `pętle`, `modulo`, `warunki`
+\**Poziom:** ★☆☆
+\**Tagi:** `pętle`, `modulo`, `warunki`
 
 ### Treść
 
@@ -50,7 +50,7 @@ Cyfry analizuj od końca (od jedności).
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 0`)
+\* 1. linia: `n` (`n ≥ 0`)
 
 ### Wyjście
 
@@ -59,13 +59,13 @@ Jeśli brak — brak wyjścia.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 101
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 1
@@ -75,8 +75,8 @@ Jeśli brak — brak wyjścia.
 
 ZAD-04C — Cyfry różne od zera
 
-**Poziom:** ★☆☆
-**Tagi:** `pętle`, `modulo`, `warunki`
+\**Poziom:** ★☆☆
+\**Tagi:** `pętle`, `modulo`, `warunki`
 
 ### Treść
 
@@ -88,7 +88,7 @@ Cyfry analizuj od końca (od jedności).
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 0`)
+\* 1. linia: `n` (`n ≥ 0`)
 
 ### Wyjście
 
@@ -97,13 +97,13 @@ Jeśli brak — brak wyjścia.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 650
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 5
@@ -112,7 +112,7 @@ Jeśli brak — brak wyjścia.
 
 ### Uwagi o formatowaniu
 
-* W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`.
+\* W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`.
 
 -}
 main :: IO ()

@@ -1,8 +1,8 @@
 {-
 ZAD-04A — Minimum z dwóch liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `min`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `min`
 
 ### Treść
 
@@ -16,17 +16,17 @@ Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)
 
 Funkcja zwraca:
 
-* `min(a, b)`
+\* `min(a, b)`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(min_z_dwoch(3, 1))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 1
@@ -34,8 +34,8 @@ print(min_z_dwoch(3, 1))
 
 ZAD-04B — Maksimum z dwóch liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `max`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `max`
 
 ### Treść
 
@@ -49,17 +49,17 @@ Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)
 
 Funkcja zwraca:
 
-* `max(a, b)`
+\* `max(a, b)`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(max_z_dwoch(3, 1))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 3
@@ -67,8 +67,8 @@ print(max_z_dwoch(3, 1))
 
 ZAD-04C — Minimum z trzech liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `min`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `min`
 
 ### Treść
 
@@ -82,17 +82,17 @@ Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)
 
 Funkcja zwraca:
 
-* `min(a, b, c)`
+\* `min(a, b, c)`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(min_z_trzech(3, 2, 1))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 1
@@ -100,8 +100,8 @@ print(min_z_trzech(3, 2, 1))
 
 ZAD-04D — Maksimum z trzech liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `max`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `max`
 
 ### Treść
 
@@ -115,17 +115,17 @@ Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)
 
 Funkcja zwraca:
 
-* `max(a, b, c)`
+\* `max(a, b, c)`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(max_z_trzech(3, 2, 1))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 3

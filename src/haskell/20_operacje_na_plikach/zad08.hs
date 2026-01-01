@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Modyfikacja plików spełniających warunek (rekurencyjnie)
 
-**Poziom:** ★★☆
-**Tagi:** `files`, `recursive`, `txt`, `csv`
+\**Poziom:** ★★☆
+\**Tagi:** `files`, `recursive`, `txt`, `csv`
 
 ### Treść
 
@@ -14,7 +14,7 @@ b) usuń **środkowy wiersz** z każdego pliku `.csv` w folderze i podfolderach
 
 ### Wejście
 
-* 1 linia: `folder_path`
+\* 1 linia: `folder_path`
 
 ### Wyjście
 
@@ -22,14 +22,14 @@ Brak.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 C:\Users\Username\Documents\Projekt
 ```
 
-**Wyjście:**
-*(brak)*
+\**Wyjście:**
+\*(brak)*
 
 -}
 main :: IO ()

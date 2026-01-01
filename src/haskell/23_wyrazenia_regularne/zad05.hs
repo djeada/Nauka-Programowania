@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Wyodrębnij cyfry z tekstu
 
-**Poziom:** ★☆☆
-**Tagi:** `regex`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `regex`, `string`
 
 ### Treść
 
@@ -12,23 +12,23 @@ Otrzymujesz napis zawierający różne znaki. Wyodrębnij wszystkie cyfry i wypi
 
 Jedna linia:
 
-* `tekst`
+\* `tekst`
 
 ### Wyjście
 
 Jedna linia:
 
-* napis złożony tylko z cyfr z tekstu wejściowego
+\* napis złożony tylko z cyfr z tekstu wejściowego
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Terminator2001
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2001

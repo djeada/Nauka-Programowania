@@ -1,8 +1,8 @@
 {-
 ZAD-03A — Dodawanie bitowe
 
-**Poziom:** ★☆☆
-**Tagi:** `bitwise`, `XOR`, `AND`
+\**Poziom:** ★☆☆
+\**Tagi:** `bitwise`, `XOR`, `AND`
 
 ### Treść
 
@@ -10,8 +10,8 @@ Wczytaj dwie liczby naturalne `a` i `b`. Oblicz `a + b` używając wyłącznie o
 
 ### Wejście
 
-* 1. linia: `a`
-* 2. linia: `b`
+\* 1. linia: `a`
+\* 2. linia: `b`
 
 ### Wyjście
 
@@ -19,14 +19,14 @@ Jedna liczba naturalna: `a + b`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 5
@@ -34,8 +34,8 @@ Jedna liczba naturalna: `a + b`.
 
 ZAD-03B — Odejmowanie bitowe
 
-**Poziom:** ★☆☆
-**Tagi:** `bitwise`, `pożyczki`, `XOR`
+\**Poziom:** ★☆☆
+\**Tagi:** `bitwise`, `pożyczki`, `XOR`
 
 ### Treść
 
@@ -43,8 +43,8 @@ Wczytaj `a` i `b`. Oblicz `a - b` używając wyłącznie operatorów bitowych.
 
 ### Wejście
 
-* 1. linia: `a`
-* 2. linia: `b`
+\* 1. linia: `a`
+\* 2. linia: `b`
 
 ### Wyjście
 
@@ -52,18 +52,18 @@ Jedna liczba naturalna: `a - b`.
 
 ### Ograniczenia / gwarancje
 
-* Zakładamy, że `a ≥ b` (wynik jest naturalny).
+\* Zakładamy, że `a ≥ b` (wynik jest naturalny).
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 7
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2
@@ -71,8 +71,8 @@ Jedna liczba naturalna: `a - b`.
 
 ZAD-03C — Mnożenie bitowe
 
-**Poziom:** ★☆☆
-**Tagi:** `bitwise`, `shift`, `pętle`
+\**Poziom:** ★☆☆
+\**Tagi:** `bitwise`, `shift`, `pętle`
 
 ### Treść
 
@@ -80,8 +80,8 @@ Wczytaj `a` i `b`. Oblicz `a * b` używając wyłącznie operatorów bitowych (n
 
 ### Wejście
 
-* 1. linia: `a`
-* 2. linia: `b`
+\* 1. linia: `a`
+\* 2. linia: `b`
 
 ### Wyjście
 
@@ -89,14 +89,14 @@ Jedna liczba naturalna: `a * b`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 4
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 16
@@ -104,8 +104,8 @@ Jedna liczba naturalna: `a * b`.
 
 ZAD-03D — Dzielenie całkowite bitowe
 
-**Poziom:** ★☆☆
-**Tagi:** `bitwise`, `dzielenie`, `shift`
+\**Poziom:** ★☆☆
+\**Tagi:** `bitwise`, `dzielenie`, `shift`
 
 ### Treść
 
@@ -113,12 +113,12 @@ Wczytaj `a` i `b`. Oblicz `a // b` używając wyłącznie operatorów bitowych.
 
 ### Wejście
 
-* 1. linia: `a`
-* 2. linia: `b`
+\* 1. linia: `a`
+\* 2. linia: `b`
 
 ### Ograniczenia / gwarancje
 
-* `b > 0`
+\* `b > 0`
 
 ### Wyjście
 
@@ -126,14 +126,14 @@ Jedna liczba naturalna: `a // b`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 9
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 3

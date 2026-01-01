@@ -1,8 +1,8 @@
 {-
 ZAD-09 — Najdłuższy wspólny podnapis
 
-**Poziom:** ★★★
-**Tagi:** `string`, `dp`, `substring`
+\**Poziom:** ★★★
+\**Tagi:** `string`, `dp`, `substring`
 
 ### Treść
 
@@ -10,24 +10,24 @@ Otrzymujesz dwa napisy. Znajdź **najdłuższy wspólny podnapis** (ciągły fra
 
 ### Wejście
 
-* 1 linia: napis `A`
-* 2 linia: napis `B`
+\* 1 linia: napis `A`
+\* 2 linia: napis `B`
 
 ### Wyjście
 
-* 1 linia: najdłuższy wspólny podnapis
+\* 1 linia: najdłuższy wspólny podnapis
   (jeśli jest kilka o tej samej długości — wybierz ten, który występuje **najwcześniej w A**; jeśli nadal remis, najwcześniej w B)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 ijkabcdl
 xxxxabcd
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 abcd

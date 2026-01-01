@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Iloczyn wielomianu przez skalar
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `wielomiany`, `skalar`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `wielomiany`, `skalar`
 
 ### Treść
 
@@ -10,12 +10,12 @@ Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz l
 
 ### Wejście (argumenty funkcji)
 
-* `a` — lista współczynników `[a_n, ..., a_0]`
-* `k` — liczba (całkowita)
+\* `a` — lista współczynników `[a_n, ..., a_0]`
+\* `k` — liczba (całkowita)
 
 ### Wyjście (zwracana wartość)
 
-* lista współczynników wielomianu `k * P(x)`
+\* lista współczynników wielomianu `k * P(x)`
 
 ### Przykład
 

@@ -1,23 +1,23 @@
 {-
 ZAD-06 — Klasa LiczbaZespolona
 
-**Poziom:** ★★☆
-**Tagi:** `class`, `operacje`, `math`
+\**Poziom:** ★★☆
+\**Tagi:** `class`, `operacje`, `math`
 
 ### Treść
 
 Zaprojektuj klasę **LiczbaZespolona**:
 
-* konstruktor `(re=0, im=0)`,
-* dodawanie, odejmowanie, mnożenie, dzielenie,
-* porównania,
-* moduł,
-* wypisywanie w formacie `a + bi` lub `a - bi` (z zachowaniem znaku).
+\* konstruktor `(re=0, im=0)`,
+\* dodawanie, odejmowanie, mnożenie, dzielenie,
+\* porównania,
+\* moduł,
+\* wypisywanie w formacie `a + bi` lub `a - bi` (z zachowaniem znaku).
 
 Program tworzy:
 
-* A = 9 + 12i
-* B = -3 - 3i
+\* A = 9 + 12i
+\* B = -3 - 3i
 
 Wypisuje A, B oraz: sumę, różnicę A-B, iloczyn i iloraz A/B.
 
@@ -31,7 +31,7 @@ Jak w przykładzie.
 
 ### Przykład
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Liczba A: 9 + 12i

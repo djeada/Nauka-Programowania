@@ -1,8 +1,8 @@
 {-
 ZAD-09 — Klepsydra o największej sumie
 
-**Poziom:** ★★☆
-**Tagi:** `macierze`, `przeszukiwanie`
+\**Poziom:** ★★☆
+\**Tagi:** `macierze`, `przeszukiwanie`
 
 ### Treść
 
@@ -16,16 +16,16 @@ e f g
 
 ### Wejście
 
-* 1. linia: `n m`
-* następnie `n` wierszy po `m` liczb całkowitych
+\* 1. linia: `n m`
+\* następnie `n` wierszy po `m` liczb całkowitych
 
 ### Wyjście
 
-* 1 linia: maksymalna suma klepsydry
+\* 1 linia: maksymalna suma klepsydry
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 4 4
@@ -35,7 +35,7 @@ e f g
 3 9 19 14
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 75

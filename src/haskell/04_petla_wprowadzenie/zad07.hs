@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Potęgowanie liczby π
 
-**Poziom:** ★☆☆
-**Tagi:** `math.pi`, `potęgi`, `formatowanie`
+\**Poziom:** ★☆☆
+\**Tagi:** `math.pi`, `potęgi`, `formatowanie`
 
 ### Treść
 
@@ -12,7 +12,7 @@ Wczytaj liczbę naturalną `n` (`n ≥ 0`), oblicz wartość ( \pi^n ) i wypisz 
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 0`)
+\* 1. linia: `n` (`n ≥ 0`)
 
 ### Wyjście
 
@@ -20,13 +20,13 @@ Jedna liczba zmiennoprzecinkowa — ( \pi^n ) z dokładnością do dwóch miejsc
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 9.87
@@ -34,7 +34,7 @@ Jedna liczba zmiennoprzecinkowa — ( \pi^n ) z dokładnością do dwóch miejsc
 
 ### Uwagi o formatowaniu
 
-* Dla `n = 0` wypisz `1.00`.
+\* Dla `n = 0` wypisz `1.00`.
 
 -}
 main :: IO ()

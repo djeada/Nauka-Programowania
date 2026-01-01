@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Wczytaj i wypisz
 
-**Poziom:** ★☆☆
-**Tagi:** `listy`, `I/O`, `odwracanie`
+\**Poziom:** ★☆☆
+\**Tagi:** `listy`, `I/O`, `odwracanie`
 
 ### Treść
 
@@ -13,8 +13,8 @@ b) Wypisz elementy listy od końca do początku — w **jednej** linii, oddzielo
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+\* 1. linia: `N` (`N ≥ 1`)
+\* kolejne `N` linii: liczby całkowite
 
 ### Wyjście
 
@@ -23,7 +23,7 @@ b) 1 linia — elementy w kolejności odwrotnej, oddzielone przecinkami.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -32,7 +32,7 @@ b) 1 linia — elementy w kolejności odwrotnej, oddzielone przecinkami.
 7
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 8
@@ -43,7 +43,7 @@ b) 1 linia — elementy w kolejności odwrotnej, oddzielone przecinkami.
 
 ### Uwagi o formatowaniu
 
-* W podpunkcie (b) nie dodawaj przecinka na końcu.
+\* W podpunkcie (b) nie dodawaj przecinka na końcu.
 
 -}
 main :: IO ()

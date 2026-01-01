@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Klasa Macierz
 
-**Poziom:** ★★☆
-**Tagi:** `class`, `macierze`, `operacje`
+\**Poziom:** ★★☆
+\**Tagi:** `class`, `macierze`, `operacje`
 
 ### Treść
 
@@ -17,8 +17,8 @@ Zaprojektuj klasę **Macierz**:
 
 Program tworzy:
 
-* A = [[1, 3], [4, 2]]
-* B = [[5, 0], [1, 3]]
+\* A = [[1, 3], [4, 2]]
+\* B = [[5, 0], [1, 3]]
 
 Wypisuje A, B, a potem A+B, A-B, A*B.
 
@@ -32,7 +32,7 @@ Jak w przykładzie.
 
 ### Przykład
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Macierz A:

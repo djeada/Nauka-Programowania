@@ -1,8 +1,8 @@
 {-
 ZAD-07 — Zerowanie macierzy
 
-**Poziom:** ★★☆
-**Tagi:** `macierze`, `indeksy`
+\**Poziom:** ★★☆
+\**Tagi:** `macierze`, `indeksy`
 
 ### Treść
 
@@ -10,16 +10,16 @@ Wczytaj macierz `n×m`. Jeśli w macierzy występuje `0`, to **cały wiersz i ca
 
 ### Wejście
 
-* 1. linia: `n m`
-* następnie `n` wierszy po `m` liczb
+\* 1. linia: `n m`
+\* następnie `n` wierszy po `m` liczb
 
 ### Wyjście
 
-* `n` wierszy zmodyfikowanej macierzy
+\* `n` wierszy zmodyfikowanej macierzy
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3 3
@@ -28,7 +28,7 @@ Wczytaj macierz `n×m`. Jeśli w macierzy występuje `0`, to **cały wiersz i ca
 7 8 9
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 1 0 3

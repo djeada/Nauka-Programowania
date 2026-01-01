@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Maksymalny zysk ze sprzedaży sznurka
 
-**Poziom:** ★★★
-**Tagi:** `dp`, `rod cutting`, `optymalizacja`
+\**Poziom:** ★★★
+\**Tagi:** `dp`, `rod cutting`, `optymalizacja`
 
 ### Treść
 
@@ -10,23 +10,23 @@ Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`
 
 ### Wejście
 
-* 1 linia: lista `prices` (długości 1..n)
-* 2 linia: `n` (liczba naturalna)
+\* 1 linia: lista `prices` (długości 1..n)
+\* 2 linia: `n` (liczba naturalna)
 
 ### Wyjście
 
-* 1 linia: maksymalny zysk (liczba całkowita)
+\* 1 linia: maksymalny zysk (liczba całkowita)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [1, 5, 8, 9, 10, 17, 17, 20]
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 10

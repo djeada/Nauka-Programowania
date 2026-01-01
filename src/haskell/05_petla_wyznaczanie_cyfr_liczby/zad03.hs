@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Sumowanie cyfr liczby
 
-**Poziom:** ★☆☆
-**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
+\**Poziom:** ★☆☆
+\**Tagi:** `pętle`, `modulo`, `dzielenie całkowite`
 
 ### Treść
 
@@ -12,7 +12,7 @@ Wczytaj liczbę naturalną `n` i oblicz sumę jej cyfr. Następnie wypisz wynik.
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 0`)
+\* 1. linia: `n` (`n ≥ 0`)
 
 ### Wyjście
 
@@ -20,13 +20,13 @@ Jedna liczba naturalna — suma cyfr liczby `n`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 129
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 12
@@ -34,7 +34,7 @@ Jedna liczba naturalna — suma cyfr liczby `n`.
 
 ### Uwagi o formatowaniu
 
-* Dla `n = 0` suma cyfr wynosi `0`.
+\* Dla `n = 0` suma cyfr wynosi `0`.
 
 -}
 main :: IO ()

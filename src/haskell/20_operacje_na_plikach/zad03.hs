@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Znajdź wszystkie ścieżki plików o danej nazwie (rekurencyjnie)
 
-**Poziom:** ★★☆
-**Tagi:** `files`, `walk`, `recursive`, `pathlib`
+\**Poziom:** ★★☆
+\**Tagi:** `files`, `walk`, `recursive`, `pathlib`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Otrzymujesz nazwę pliku (np. `raport.docx`). Przeszukaj cały system plików i 
 
 ### Wejście
 
-* 1 linia: `filename` (np. `raport.docx`)
+\* 1 linia: `filename` (np. `raport.docx`)
 
 ### Wyjście
 
-* 1 linia: lista pełnych ścieżek (napisy)
+\* 1 linia: lista pełnych ścieżek (napisy)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 raport.docx
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [
@@ -36,7 +36,7 @@ raport.docx
 
 ### Uwagi
 
-* W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów — program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca).
+\* W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów — program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca).
 
 -}
 main :: IO ()

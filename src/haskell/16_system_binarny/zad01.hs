@@ -1,8 +1,8 @@
 {-
 ZAD-01A — Dziesiętny → binarny
 
-**Poziom:** ★☆☆
-**Tagi:** `konwersja`, `binarne`, `pętle`
+\**Poziom:** ★☆☆
+\**Tagi:** `konwersja`, `binarne`, `pętle`
 
 ### Treść
 
@@ -10,7 +10,7 @@ Wczytaj liczbę naturalną w systemie dziesiętnym i wypisz jej reprezentację b
 
 ### Wejście
 
-* 1. linia: `n` (liczba naturalna)
+\* 1. linia: `n` (liczba naturalna)
 
 ### Wyjście
 
@@ -18,13 +18,13 @@ Jedna linia: zapis binarny `n`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 11
@@ -32,12 +32,12 @@ Jedna linia: zapis binarny `n`.
 
 ### Uwagi o formacie
 
-* Dla `n = 0` wypisz `0`.
+\* Dla `n = 0` wypisz `0`.
 
 ZAD-01B — Binarny → dziesiętny
 
-**Poziom:** ★☆☆
-**Tagi:** `konwersja`, `string`, `binarne`
+\**Poziom:** ★☆☆
+\**Tagi:** `konwersja`, `string`, `binarne`
 
 ### Treść
 
@@ -45,7 +45,7 @@ Wczytaj liczbę naturalną w systemie binarnym (ciąg `0/1`) i wypisz jej warto�
 
 ### Wejście
 
-* 1. linia: `b` (ciąg znaków `0` i `1`)
+\* 1. linia: `b` (ciąg znaków `0` i `1`)
 
 ### Wyjście
 
@@ -53,13 +53,13 @@ Jedna linia: liczba w systemie dziesiętnym.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 101
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 5

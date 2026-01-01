@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Wypisywanie liczby π z określoną dokładnością
 
-**Poziom:** ★☆☆
-**Tagi:** `math.pi`, `formatowanie`, `pętle`
+\**Poziom:** ★☆☆
+\**Tagi:** `math.pi`, `formatowanie`, `pętle`
 
 ### Treść
 
@@ -14,7 +14,7 @@ ZAD-03 — Wypisywanie liczby π z określoną dokładnością
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n > 0`)
+\* 1. linia: `n` (`n > 0`)
 
 ### Wyjście
 
@@ -22,13 +22,13 @@ Jedna liczba naturalna:
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 3.14
@@ -37,8 +37,8 @@ Jedna liczba naturalna:
 
 ### Uwagi o formatowaniu
 
-* Liczba miejsc po przecinku ma być **dokładnie** równa `n` (np. dla `n=1` wypisz `3.1`).
-* Stosuj standardowe zaokrąglanie przy formatowaniu.
+\* Liczba miejsc po przecinku ma być **dokładnie** równa `n` (np. dla `n=1` wypisz `3.1`).
+\* Stosuj standardowe zaokrąglanie przy formatowaniu.
 
 -}
 main :: IO ()

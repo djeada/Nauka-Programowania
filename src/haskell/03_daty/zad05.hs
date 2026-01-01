@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Liczba dni w miesiącu (rok nieprzestępny)
 
-**Poziom:** ★☆☆
-**Tagi:** `if`, `tablice`, `walidacja`
+\**Poziom:** ★☆☆
+\**Tagi:** `if`, `tablice`, `walidacja`
 
 ### Treść
 
@@ -12,22 +12,22 @@ Jeśli `m` nie jest w zakresie 1–12, wypisz:
 
 ### Wejście
 
-* 1 linia: `m` (liczba całkowita, `m ≥ 0`)
+\* 1 linia: `m` (liczba całkowita, `m ≥ 0`)
 
 ### Wyjście
 
-* liczba dni (jedna linia) **albo**
-* komunikat o błędzie (jedna linia)
+\* liczba dni (jedna linia) **albo**
+\* komunikat o błędzie (jedna linia)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 28

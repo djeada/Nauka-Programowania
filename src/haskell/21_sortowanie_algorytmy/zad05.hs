@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Sortowanie szybkie
 
-**Poziom:** ★★☆
-**Tagi:** `sorting`, `quick-sort`, `recursion`
+\**Poziom:** ★★☆
+\**Tagi:** `sorting`, `quick-sort`, `recursion`
 
 ### Treść
 
@@ -20,21 +20,21 @@ Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **Quick Sor
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych
+\* 1 linia: lista liczb całkowitych
 
 ### Wyjście
 
-* 1 linia: posortowana lista rosnąco
+\* 1 linia: posortowana lista rosnąco
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [6, 2, 1, 4, 27]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [1, 2, 4, 6, 27]
@@ -42,8 +42,8 @@ Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **Quick Sor
 
 ### Uwagi o algorytmie
 
-* Średnio: `O(n log n)`, w pesymistycznym przypadku: `O(n^2)`.
-* Wybór pivota ma wpływ na wydajność.
+\* Średnio: `O(n log n)`, w pesymistycznym przypadku: `O(n^2)`.
+\* Wybór pivota ma wpływ na wydajność.
 
 -}
 main :: IO ()

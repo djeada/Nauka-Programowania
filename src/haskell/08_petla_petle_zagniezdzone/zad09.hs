@@ -1,8 +1,8 @@
 {-
 ZAD-09 — N pierwszych liczb pierwszych
 
-**Poziom:** ★★☆
-**Tagi:** `pętle`, `pierwszość`, `wydajność`
+\**Poziom:** ★★☆
+\**Tagi:** `pętle`, `pierwszość`, `wydajność`
 
 ### Treść
 
@@ -10,7 +10,7 @@ Wczytaj liczbę naturalną `N` (`N ≥ 1`) i wypisz pierwsze `N` liczb pierwszyc
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
+\* 1. linia: `N` (`N ≥ 1`)
 
 ### Wyjście
 
@@ -18,13 +18,13 @@ Jedna linia: `N` liczb pierwszych oddzielonych spacjami.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2 3 5 7 11
@@ -32,8 +32,8 @@ Jedna linia: `N` liczb pierwszych oddzielonych spacjami.
 
 ### Uwagi o formatowaniu
 
-* Nie dodawaj spacji na końcu linii.
-* Do sprawdzania pierwszości wystarczy test dzielnikami do `⌊sqrt(x)⌋`.
+\* Nie dodawaj spacji na końcu linii.
+\* Do sprawdzania pierwszości wystarczy test dzielnikami do `⌊sqrt(x)⌋`.
 
 -}
 main :: IO ()

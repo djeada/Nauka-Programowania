@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Miejsca zerowe równania kwadratowego (rzeczywiste)
 
-**Poziom:** ★★☆
-**Tagi:** `delta`, `pierwiastki`, `I/O`
+\**Poziom:** ★★☆
+\**Tagi:** `delta`, `pierwiastki`, `I/O`
 
 ### Treść
 
@@ -10,27 +10,27 @@ Wczytaj współczynniki równania kwadratowego ( ax^2 + bx + c = 0 ). Wypisz wsz
 
 ### Wejście
 
-* 1. linia: trzy liczby całkowite: `a b c` (oddzielone spacją)
+\* 1. linia: trzy liczby całkowite: `a b c` (oddzielone spacją)
 
 ### Wyjście
 
-* Jeśli brak rzeczywistych pierwiastków: wypisz `[]`
-* Jeśli jeden pierwiastek (delta = 0): wypisz go raz w formacie listy: `[x]`
-* Jeśli dwa pierwiastki: wypisz w formacie listy: `[x1, x2]` gdzie `x1 ≤ x2`
+\* Jeśli brak rzeczywistych pierwiastków: wypisz `[]`
+\* Jeśli jeden pierwiastek (delta = 0): wypisz go raz w formacie listy: `[x]`
+\* Jeśli dwa pierwiastki: wypisz w formacie listy: `[x1, x2]` gdzie `x1 ≤ x2`
 
-**Format liczb:**
+\**Format liczb:**
 
-* wypisuj jako liczby zmiennoprzecinkowe (np. `-1.0`, `2.5`)
+\* wypisuj jako liczby zmiennoprzecinkowe (np. `-1.0`, `2.5`)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 1 2 1
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [-1.0]
@@ -38,9 +38,9 @@ Wczytaj współczynniki równania kwadratowego ( ax^2 + bx + c = 0 ). Wypisz wsz
 
 ### Uwagi o formatowaniu
 
-* Licz deltę: `Δ = b*b - 4*a*c`.
-* Dla `Δ > 0`: policz oba pierwiastki i posortuj rosnąco.
-* Zakładamy `a ≠ 0`.
+\* Licz deltę: `Δ = b*b - 4*a*c`.
+\* Dla `Δ > 0`: policz oba pierwiastki i posortuj rosnąco.
+\* Zakładamy `a ≠ 0`.
 
 -}
 main :: IO ()

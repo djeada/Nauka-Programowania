@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Zamiana kolejności liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `I/O`, `zmienne`
+\**Poziom:** ★☆☆
+\**Tagi:** `I/O`, `zmienne`
 
 ### Treść
 
@@ -12,30 +12,30 @@ Wczytaj dwie liczby całkowite i wypisz je w odwrotnej kolejności (każda w oso
 
 Dwie liczby całkowite:
 
-* 1. linia: `a`
-* 2. linia: `b`
+\* 1. linia: `a`
+\* 2. linia: `b`
 
 ### Wyjście
 
 Dwie linie:
 
-* 1. linia: `b`
-* 2. linia: `a`
+\* 1. linia: `b`
+\* 2. linia: `a`
 
 ### Ograniczenia / gwarancje
 
-* `a`, `b` mieszczą się w typowym zakresie int (np. 32-bit).
+\* `a`, `b` mieszczą się w typowym zakresie int (np. 32-bit).
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 -7
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 4
@@ -43,7 +43,6 @@ Dwie linie:
 ```
 
 -}
-
 
 main :: IO ()
 main = do

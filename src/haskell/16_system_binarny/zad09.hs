@@ -1,8 +1,8 @@
 {-
 ZAD-09A — Wielkie → małe (bitowo)
 
-**Poziom:** ★★☆
-**Tagi:** `ASCII`, `bitwise`, `string`
+\**Poziom:** ★★☆
+\**Tagi:** `ASCII`, `bitwise`, `string`
 
 ### Treść
 
@@ -10,7 +10,7 @@ Wczytaj napis z liter alfabetu łacińskiego. Zamień wszystkie wielkie litery n
 
 ### Wejście
 
-* 1. linia: napis
+\* 1. linia: napis
 
 ### Wyjście
 
@@ -18,13 +18,13 @@ Jedna linia: napis po konwersji.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Test
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 test
@@ -32,8 +32,8 @@ test
 
 ZAD-09B — Małe → wielkie (bitowo)
 
-**Poziom:** ★★☆
-**Tagi:** `ASCII`, `bitwise`, `string`
+\**Poziom:** ★★☆
+\**Tagi:** `ASCII`, `bitwise`, `string`
 
 ### Treść
 
@@ -41,7 +41,7 @@ Wczytaj napis. Zamień wszystkie małe litery na wielkie, używając operacji bi
 
 ### Wejście
 
-* 1. linia: napis
+\* 1. linia: napis
 
 ### Wyjście
 
@@ -49,13 +49,13 @@ Jedna linia: napis po konwersji.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Test
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 TEST
@@ -63,8 +63,8 @@ TEST
 
 ZAD-09C — Odwróć wielkość liter (bitowo)
 
-**Poziom:** ★★☆
-**Tagi:** `ASCII`, `bitwise`, `toggle case`
+\**Poziom:** ★★☆
+\**Tagi:** `ASCII`, `bitwise`, `toggle case`
 
 ### Treść
 
@@ -72,7 +72,7 @@ Wczytaj napis. Zamień wielkość każdej litery na przeciwną (mała↔wielka) 
 
 ### Wejście
 
-* 1. linia: napis
+\* 1. linia: napis
 
 ### Wyjście
 
@@ -80,13 +80,13 @@ Jedna linia: napis po zmianie.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Test
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 tEST

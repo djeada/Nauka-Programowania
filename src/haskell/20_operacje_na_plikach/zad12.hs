@@ -1,8 +1,8 @@
 {-
 ZAD-12 — Przenieś wszystkie pliki CSV do jednego folderu (rekurencyjnie)
 
-**Poziom:** ★★☆
-**Tagi:** `files`, `move`, `csv`, `recursive`
+\**Poziom:** ★★☆
+\**Tagi:** `files`, `move`, `csv`, `recursive`
 
 ### Treść
 
@@ -10,8 +10,8 @@ Otrzymujesz ścieżkę folderu źródłowego i docelowego. Przenieś wszystkie p
 
 ### Wejście
 
-* 1 linia: `src_folder`
-* 2 linia: `dst_folder`
+\* 1 linia: `src_folder`
+\* 2 linia: `dst_folder`
 
 ### Wyjście
 
@@ -19,19 +19,19 @@ Brak.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 C:\Users\Username\Projekty
 D:\Dane\CSV
 ```
 
-**Wyjście:**
-*(brak)*
+\**Wyjście:**
+\*(brak)*
 
 ### Uwagi
 
-* Jeśli w folderze docelowym istnieje już plik o tej samej nazwie, zadanie wymaga zdefiniowania zachowania (np. zmiana nazwy / pominięcie) — jeśli sprawdzarka tego nie doprecyzowuje, przyjmij jedną spójną strategię w całym rozwiązaniu.
+\* Jeśli w folderze docelowym istnieje już plik o tej samej nazwie, zadanie wymaga zdefiniowania zachowania (np. zmiana nazwy / pominięcie) — jeśli sprawdzarka tego nie doprecyzowuje, przyjmij jedną spójną strategię w całym rozwiązaniu.
 
 -}
 main :: IO ()

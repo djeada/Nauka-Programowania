@@ -1,8 +1,8 @@
 {-
 ZAD-09 — Najdłuższy naprzemienny podciąg
 
-**Poziom:** ★★★
-**Tagi:** `dp`, `subsequence`, `naprzemienny`
+\**Poziom:** ★★★
+\**Tagi:** `dp`, `subsequence`, `naprzemienny`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienn
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych `A`
+\* 1 linia: lista liczb całkowitych `A`
 
 ### Wyjście
 
-* 1 linia: lista liczb — najdłuższy naprzemienny podciąg
+\* 1 linia: lista liczb — najdłuższy naprzemienny podciąg
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [1, -2, 6, 4, -3, 2, -4, -3]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [1, -2, 6, -3, 2, -4]
@@ -32,7 +32,7 @@ Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienn
 
 ### Uwagi
 
-* Jeśli istnieje kilka podciągów o tej samej maksymalnej długości — wybierz ten, który pojawia się „najwcześniej” (najmniejszy możliwy indeks startu), o ile sprawdzarka tego wymaga.
+\* Jeśli istnieje kilka podciągów o tej samej maksymalnej długości — wybierz ten, który pojawia się „najwcześniej” (najmniejszy możliwy indeks startu), o ile sprawdzarka tego wymaga.
 
 -}
 main :: IO ()

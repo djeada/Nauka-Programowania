@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Obliczanie średniej z n liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `pętle`, `suma`, `średnia`, `float`
+\**Poziom:** ★☆☆
+\**Tagi:** `pętle`, `suma`, `średnia`, `float`
 
 ### Treść
 
@@ -14,8 +14,8 @@ Napisz funkcję `oblicz_srednia()`, która:
 
 ### Wejście
 
-* 1. linia: `n` (`n ≥ 1`)
-* kolejne `n` linii: liczby (int lub float)
+\* 1. linia: `n` (`n ≥ 1`)
+\* kolejne `n` linii: liczby (int lub float)
 
 ### Wyjście
 
@@ -23,7 +23,7 @@ Funkcja zwraca jedną liczbę zmiennoprzecinkową — średnią arytmetyczną.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
@@ -31,14 +31,14 @@ Funkcja zwraca jedną liczbę zmiennoprzecinkową — średnią arytmetyczną.
 6
 ```
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 wynik = oblicz_srednia()
 print(wynik)
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 5.0
@@ -46,7 +46,7 @@ print(wynik)
 
 ### Uwagi o formatowaniu
 
-* Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`).
+\* Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`).
 
 -}
 main :: IO ()

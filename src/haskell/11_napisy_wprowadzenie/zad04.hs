@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Zamień wszystkie małe litery na duże
 
-**Poziom:** ★☆☆
-**Tagi:** `string`, `upper`
+\**Poziom:** ★☆☆
+\**Tagi:** `string`, `upper`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj napis i zamień wszystkie litery na wielkie.
 
 ### Wejście
 
-* 1. linia: napis
+\* 1. linia: napis
 
 ### Wyjście
 
-* 1. linia: napis po konwersji
+\* 1. linia: napis po konwersji
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Rumcajs
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 RUMCAJS

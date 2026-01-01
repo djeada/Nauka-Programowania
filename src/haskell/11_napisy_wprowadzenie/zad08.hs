@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Wypisz pionowo słowa ze zdania
 
-**Poziom:** ★☆☆
-**Tagi:** `split`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `split`, `string`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Wczytaj zdanie, podziel na słowa i wypisz każde słowo w osobnej linii. Interp
 
 ### Wejście
 
-* 1. linia: zdanie
+\* 1. linia: zdanie
 
 ### Wyjście
 
-* wiele linii: słowa w kolejności występowania
+\* wiele linii: słowa w kolejności występowania
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Ala ma kota
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Ala

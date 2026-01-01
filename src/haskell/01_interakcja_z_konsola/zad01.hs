@@ -1,8 +1,8 @@
 {-
 ZAD-01 — Wypisywanie tekstu na ekran
 
-**Poziom:** ★☆☆
-**Tagi:** `I/O`, `print`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `I/O`, `print`, `string`
 
 ### Treść
 
@@ -17,11 +17,11 @@ Brak.
 
 Jedna linia:
 
-* `Witaj, świecie!`
+\* `Witaj, świecie!`
 
 ### Przykład
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Witaj, świecie!
@@ -29,10 +29,9 @@ Witaj, świecie!
 
 ### Uwagi o formatowaniu
 
-* Tekst musi być identyczny (łącznie z przecinkiem, spacją i wykrzyknikiem).
+\* Tekst musi być identyczny (łącznie z przecinkiem, spacją i wykrzyknikiem).
 
 -}
-
 
 main :: IO ()
 main = putStrLn "Witaj, świecie!"

@@ -1,17 +1,17 @@
 {-
 ZAD-08 — Koszt pokrycia podłogi płytkami
 
-**Poziom:** ★★☆
-**Tagi:** `ceil`, `arytmetyka`, `formatowanie`, `geometria`
+\**Poziom:** ★★☆
+\**Tagi:** `ceil`, `arytmetyka`, `formatowanie`, `geometria`
 
 ### Treść
 
 Dane są:
 
-* cena jednej płytki `p`,
-* bok płytki `t` (płytka kwadratowa),
-* długość podłogi `L`,
-* szerokość podłogi `W`.
+\* cena jednej płytki `p`,
+\* bok płytki `t` (płytka kwadratowa),
+\* długość podłogi `L`,
+\* szerokość podłogi `W`.
 
 Oblicz liczbę płytek potrzebnych do pokrycia całej podłogi, zakładając układ bez docinania „na styk” (czyli wzdłuż każdego wymiaru zaokrąglasz w górę), a następnie podaj koszt całkowity.
 
@@ -25,17 +25,17 @@ Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
 
 ### Ograniczenia / gwarancje
 
-* `p > 0`, `t > 0`, `L > 0`, `W > 0`
-* Liczba płytek:
+\* `p > 0`, `t > 0`, `L > 0`, `W > 0`
+\* Liczba płytek:
 
   * `nL = ceil(L / t)`
   * `nW = ceil(W / t)`
   * `n = nL * nW`
-* Koszt: `n * p`
+\* Koszt: `n * p`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 2
@@ -44,14 +44,13 @@ Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
 40
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 196.00
 ```
 
 -}
-
 
 import Text.Printf (printf)
 

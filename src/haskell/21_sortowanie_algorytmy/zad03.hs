@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Sortowanie przez wstawianie
 
-**Poziom:** ★★☆
-**Tagi:** `sorting`, `insertion-sort`, `list`
+\**Poziom:** ★★☆
+\**Tagi:** `sorting`, `insertion-sort`, `list`
 
 ### Treść
 
@@ -11,21 +11,21 @@ Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych
+\* 1 linia: lista liczb całkowitych
 
 ### Wyjście
 
-* 1 linia: posortowana lista rosnąco
+\* 1 linia: posortowana lista rosnąco
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 [6, 2, 1, 4, 27]
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [1, 2, 4, 6, 27]
@@ -33,7 +33,7 @@ Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w
 
 ### Uwagi o algorytmie
 
-* Działa bardzo dobrze dla danych prawie posortowanych.
+\* Działa bardzo dobrze dla danych prawie posortowanych.
 
 -}
 main :: IO ()

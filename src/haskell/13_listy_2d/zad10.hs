@@ -1,8 +1,8 @@
 {-
 ZAD-10 — Obróć macierz o 90° w prawo
 
-**Poziom:** ★★☆
-**Tagi:** `macierze`, `transpozycja`
+\**Poziom:** ★★☆
+\**Tagi:** `macierze`, `transpozycja`
 
 ### Treść
 
@@ -10,16 +10,16 @@ Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruch
 
 ### Wejście
 
-* 1. linia: `n`
-* następnie `n` wierszy po `n` liczb
+\* 1. linia: `n`
+\* następnie `n` wierszy po `n` liczb
 
 ### Wyjście
 
-* `n` wierszy obróconej macierzy
+\* `n` wierszy obróconej macierzy
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -28,7 +28,7 @@ Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruch
 7 8 9
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 7 4 1

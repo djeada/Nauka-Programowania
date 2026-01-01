@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Potęgowanie liczby przy pomocy pętli
 
-**Poziom:** ★☆☆
-**Tagi:** `pętle`, `potęgowanie`, `mnożenie`
+\**Poziom:** ★☆☆
+\**Tagi:** `pętle`, `potęgowanie`, `mnożenie`
 
 ### Treść
 
@@ -12,8 +12,8 @@ Napisz funkcję `potega(a, b)`, która oblicza `a^b` przy użyciu pętli (bez op
 
 Dwa argumenty funkcji:
 
-* `a` (liczba naturalna, `a ≥ 0`)
-* `b` (liczba naturalna, `b ≥ 0`)
+\* `a` (liczba naturalna, `a ≥ 0`)
+\* `b` (liczba naturalna, `b ≥ 0`)
 
 ### Wyjście
 
@@ -21,13 +21,13 @@ Funkcja zwraca jedną liczbę naturalną — wartość `a^b`.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(potega(3, 5))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 243
@@ -35,7 +35,7 @@ print(potega(3, 5))
 
 ### Uwagi o formatowaniu
 
-* Dla `b = 0` wynik ma wynosić `1`.
+\* Dla `b = 0` wynik ma wynosić `1`.
 
 -}
 main :: IO ()

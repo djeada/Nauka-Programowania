@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Pliki o danym rozszerzeniu w folderze (bez podfolderów)
 
-**Poziom:** ★★☆
-**Tagi:** `files`, `dir`, `listdir`, `pathlib`
+\**Poziom:** ★★☆
+\**Tagi:** `files`, `dir`, `listdir`, `pathlib`
 
 ### Treść
 
@@ -10,23 +10,23 @@ Otrzymujesz ścieżkę do folderu i rozszerzenie (np. `.txt`). Znajdź wszystkie
 
 ### Wejście
 
-* 1 linia: `folder_path`
-* 2 linia: `ext` (np. `.txt`)
+\* 1 linia: `folder_path`
+\* 2 linia: `ext` (np. `.txt`)
 
 ### Wyjście
 
-* 1 linia: lista nazw plików w formacie `['a.txt', 'b.txt']`
+\* 1 linia: lista nazw plików w formacie `['a.txt', 'b.txt']`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 C:\Users\Username\Documents
 .txt
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 ['dokument1.txt', 'notatki.txt', 'lista_zakupów.txt']
@@ -34,7 +34,7 @@ C:\Users\Username\Documents
 
 ### Uwagi o formatowaniu
 
-* Porównuj rozszerzenia **bez względu na wielkość liter** (np. `.TXT` też pasuje do `.txt`).
+\* Porównuj rozszerzenia **bez względu na wielkość liter** (np. `.TXT` też pasuje do `.txt`).
 
 -}
 main :: IO ()

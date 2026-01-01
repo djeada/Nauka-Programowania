@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Rotacje napisów
 
-**Poziom:** ★★★
-**Tagi:** `string`, `rotation`, `substring`
+\**Poziom:** ★★★
+\**Tagi:** `string`, `rotation`, `substring`
 
 ### Treść
 
@@ -10,23 +10,23 @@ Otrzymujesz dwa napisy `A` i `B`. Sprawdź, czy jeden z nich jest **rotacją** d
 
 ### Wejście
 
-* 1 linia: napis `A`
-* 2 linia: napis `B`
+\* 1 linia: napis `A`
+\* 2 linia: napis `B`
 
 ### Wyjście
 
-* 1 linia: `Prawda` albo `Fałsz`
+\* 1 linia: `Prawda` albo `Fałsz`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 malpka
 pkamal
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Prawda

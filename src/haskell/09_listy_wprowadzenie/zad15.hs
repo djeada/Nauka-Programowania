@@ -1,8 +1,8 @@
 {-
 ZAD-15 — Element dominujący
 
-**Poziom:** ★★☆
-**Tagi:** `zliczanie`, `dict`, `majority`
+\**Poziom:** ★★☆
+\**Tagi:** `zliczanie`, `dict`, `majority`
 
 ### Treść
 
@@ -10,8 +10,8 @@ Wczytaj listę liczb naturalnych. Jeśli istnieje liczba, która występuje **wi
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby naturalne
+\* 1. linia: `N` (`N ≥ 1`)
+\* kolejne `N` linii: liczby naturalne
 
 ### Wyjście
 
@@ -19,7 +19,7 @@ Jedna liczba naturalna — element dominujący lub `-1`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
@@ -30,7 +30,7 @@ Jedna liczba naturalna — element dominujący lub `-1`.
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 4

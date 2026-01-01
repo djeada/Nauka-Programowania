@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Największy wspólny dzielnik (NWD)
 
-**Poziom:** ★☆☆
-**Tagi:** `Euklides`, `modulo`, `pętle`
+\**Poziom:** ★☆☆
+\**Tagi:** `Euklides`, `modulo`, `pętle`
 
 ### Treść
 
@@ -12,8 +12,8 @@ Napisz funkcję `nwd(a, b)`, która zwraca największy wspólny dzielnik dwóch 
 
 Dwa argumenty funkcji:
 
-* `a` (liczba naturalna, `a > 0`)
-* `b` (liczba naturalna, `b > 0`)
+\* `a` (liczba naturalna, `a > 0`)
+\* `b` (liczba naturalna, `b > 0`)
 
 ### Wyjście
 
@@ -21,13 +21,13 @@ Funkcja zwraca jedną liczbę naturalną — `NWD(a, b)`.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(nwd(60, 45))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 15

@@ -1,8 +1,8 @@
 {-
 ZAD-14 — Element bez pary
 
-**Poziom:** ★★☆
-**Tagi:** `XOR`, `listy`, `zliczanie`
+\**Poziom:** ★★☆
+\**Tagi:** `XOR`, `listy`, `zliczanie`
 
 ### Treść
 
@@ -10,8 +10,8 @@ Wczytaj listę liczb całkowitych o nieparzystej długości: wszystkie liczby po
 
 ### Wejście
 
-* 1. linia: `N` (nieparzyste, `N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+\* 1. linia: `N` (nieparzyste, `N ≥ 1`)
+\* kolejne `N` linii: liczby całkowite
 
 ### Wyjście
 
@@ -19,7 +19,7 @@ Jedna liczba całkowita — element bez pary.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 7
@@ -32,7 +32,7 @@ Jedna liczba całkowita — element bez pary.
 1
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 7

@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Klasy Wektor2D i Wektor3D
 
-**Poziom:** ★★☆
-**Tagi:** `class`, `operatory`, `math`
+\**Poziom:** ★★☆
+\**Tagi:** `class`, `operatory`, `math`
 
 ### Treść
 
@@ -10,28 +10,28 @@ Zaprojektuj klasy **Wektor2D** i **Wektor3D**:
 
 Wspólne:
 
-* konstruktor z domyślnymi współrzędnymi 0,
-* dodawanie, odejmowanie,
-* iloczyn skalarny,
-* porównania `==` i `!=`,
-* moduł (długość),
-* metoda wypisująca wektor.
+\* konstruktor z domyślnymi współrzędnymi 0,
+\* dodawanie, odejmowanie,
+\* iloczyn skalarny,
+\* porównania `==` i `!=`,
+\* moduł (długość),
+\* metoda wypisująca wektor.
 
 Dodatkowo dla **Wektor3D**:
 
-* iloczyn wektorowy.
+\* iloczyn wektorowy.
 
 Program tworzy:
 
-* A = (-3, -3, -3)
-* B = (5, 5, 5)
+\* A = (-3, -3, -3)
+\* B = (5, 5, 5)
 
 Wypisuje A, B oraz:
 
-* A + B
-* A - B
-* A · B
-* A × B
+\* A + B
+\* A - B
+\* A · B
+\* A × B
 
 ### Wejście
 
@@ -43,7 +43,7 @@ Jak w przykładzie.
 
 ### Przykład
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Wektor A: (-3, -3, -3)

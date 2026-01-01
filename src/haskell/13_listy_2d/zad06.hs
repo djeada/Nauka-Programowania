@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Scalanie przedziałów
 
-**Poziom:** ★★☆
-**Tagi:** `sortowanie`, `przedziały`, `algorytmy`
+\**Poziom:** ★★☆
+\**Tagi:** `sortowanie`, `przedziały`, `algorytmy`
 
 ### Treść
 
@@ -10,16 +10,16 @@ Wczytaj `n` przedziałów `[a_i, b_i]` (a_i ≤ b_i). Scal przedziały nachodzą
 
 ### Wejście
 
-* 1. linia: `n`
-* następnie `n` linii: `a_i b_i`
+\* 1. linia: `n`
+\* następnie `n` linii: `a_i b_i`
 
 ### Wyjście
 
-* Każdy scalony przedział w osobnej linii: `a b`
+\* Każdy scalony przedział w osobnej linii: `a b`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 7
@@ -32,7 +32,7 @@ Wczytaj `n` przedziałów `[a_i, b_i]` (a_i ≤ b_i). Scal przedziały nachodzą
 42 45
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 10 22
@@ -41,7 +41,7 @@ Wczytaj `n` przedziałów `[a_i, b_i]` (a_i ≤ b_i). Scal przedziały nachodzą
 
 ### Uwagi
 
-* Przedziały uznajemy za nachodzące, gdy `next_start <= current_end`.
+\* Przedziały uznajemy za nachodzące, gdy `next_start <= current_end`.
 
 -}
 main :: IO ()

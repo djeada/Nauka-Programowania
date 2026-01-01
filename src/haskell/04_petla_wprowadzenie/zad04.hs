@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Sumowanie liczb mniejszych od podanej
 
-**Poziom:** ★☆☆
-**Tagi:** `sumowanie`, `pętle`, `arytmetyka`
+\**Poziom:** ★☆☆
+\**Tagi:** `sumowanie`, `pętle`, `arytmetyka`
 
 ### Treść
 
@@ -14,7 +14,7 @@ Następnie wypisz wynik.
 
 Jedna liczba naturalna:
 
-* 1. linia: `n` (`n ≥ 1`)
+\* 1. linia: `n` (`n ≥ 1`)
 
 ### Wyjście
 
@@ -22,13 +22,13 @@ Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 10
@@ -36,7 +36,7 @@ Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 
 ### Uwagi o formatowaniu
 
-* Dla `n = 1` wynik to `0`.
+\* Dla `n = 1` wynik to `0`.
 
 -}
 main :: IO ()

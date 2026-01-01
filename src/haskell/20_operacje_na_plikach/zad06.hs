@@ -1,8 +1,8 @@
 {-
 ZAD-06 — Statystyki pliku tekstowego
 
-**Poziom:** ★★☆
-**Tagi:** `files`, `stats`, `dict`, `regex`
+\**Poziom:** ★★☆
+\**Tagi:** `files`, `stats`, `dict`, `regex`
 
 ### Treść
 
@@ -16,7 +16,7 @@ e) częstość występowania słów (słownik).
 
 ### Wejście
 
-* 1 linia: `file_path`
+\* 1 linia: `file_path`
 
 ### Wyjście
 
@@ -32,13 +32,13 @@ Każdy element wypisz w osobnej linii.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 C:\Users\Username\Documents\tekst.txt
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 4
@@ -50,8 +50,8 @@ C:\Users\Username\Documents\tekst.txt
 
 ### Uwagi o formatowaniu
 
-* Jeżeli ujednolicisz wielkość liter — w słowniku używaj małych liter (jak w przykładzie).
-* Interpunkcję traktuj jako separator (usuń ją przy wyznaczaniu słów).
+\* Jeżeli ujednolicisz wielkość liter — w słowniku używaj małych liter (jak w przykładzie).
+\* Interpunkcję traktuj jako separator (usuń ją przy wyznaczaniu słów).
 
 -}
 main :: IO ()

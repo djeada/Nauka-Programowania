@@ -1,8 +1,8 @@
 {-
 ZAD-10 — Ile bitów trzeba odwrócić (A → B)
 
-**Poziom:** ★★☆
-**Tagi:** `XOR`, `popcount`, `bitwise`
+\**Poziom:** ★★☆
+\**Tagi:** `XOR`, `popcount`, `bitwise`
 
 ### Treść
 
@@ -10,8 +10,8 @@ Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w 
 
 ### Wejście
 
-* 1. linia: `A`
-* 2. linia: `B`
+\* 1. linia: `A`
+\* 2. linia: `B`
 
 ### Wyjście
 
@@ -19,14 +19,14 @@ Jedna liczba naturalna: liczba różniących się bitów.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 34
 73
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 5

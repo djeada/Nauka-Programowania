@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Mnożenie wielomianów
 
-**Poziom:** ★★☆
-**Tagi:** `funkcje`, `wielomiany`, `konwolucja`
+\**Poziom:** ★★☆
+\**Tagi:** `funkcje`, `wielomiany`, `konwolucja`
 
 ### Treść
 
@@ -10,12 +10,12 @@ Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` 
 
 ### Wejście (argumenty funkcji)
 
-* `a` — lista `[a_n, ..., a_0]`
-* `b` — lista `[b_m, ..., b_0]`
+\* `a` — lista `[a_n, ..., a_0]`
+\* `b` — lista `[b_m, ..., b_0]`
 
 ### Wyjście (zwracana wartość)
 
-* lista współczynników wielomianu `a * b` (długość `len(a)+len(b)-1`)
+\* lista współczynników wielomianu `a * b` (długość `len(a)+len(b)-1`)
 
 ### Przykład
 

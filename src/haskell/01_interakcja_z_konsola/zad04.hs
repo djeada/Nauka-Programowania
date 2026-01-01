@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Podstawowe operacje arytmetyczne
 
-**Poziom:** ★☆☆
-**Tagi:** `arytmetyka`, `I/O`
+\**Poziom:** ★☆☆
+\**Tagi:** `arytmetyka`, `I/O`
 
 ### Treść
 
@@ -17,8 +17,8 @@ Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:
 
 ### Wejście
 
-* 1. linia: `a` (liczba całkowita)
-* 2. linia: `b` (liczba całkowita)
+\* 1. linia: `a` (liczba całkowita)
+\* 2. linia: `b` (liczba całkowita)
 
 ### Wyjście
 
@@ -26,19 +26,19 @@ Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:
 
 ### Ograniczenia / gwarancje
 
-* `a ≥ 0`
-* `b > 0` (żeby dzielenie i modulo były poprawne)
+\* `a ≥ 0`
+\* `b > 0` (żeby dzielenie i modulo były poprawne)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 5
@@ -50,7 +50,6 @@ Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:
 ```
 
 -}
-
 
 main :: IO ()
 main = do

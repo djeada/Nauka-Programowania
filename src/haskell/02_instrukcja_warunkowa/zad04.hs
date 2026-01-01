@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Maksimum i minimum z dwóch liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `max`, `min`, `if`, `formatowanie`
+\**Poziom:** ★☆☆
+\**Tagi:** `max`, `min`, `if`, `formatowanie`
 
 ### Treść
 
@@ -12,8 +12,8 @@ Jeśli `a = b`, wypisz `a b` (czyli dwie takie same liczby).
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a ≥ 0`)
-* 2 linia: `b` (całkowita, `b ≥ 0`)
+\* 1 linia: `a` (całkowita, `a ≥ 0`)
+\* 2 linia: `b` (całkowita, `b ≥ 0`)
 
 ### Wyjście
 
@@ -22,27 +22,27 @@ Jedna linia:
 
 ### Przykłady
 
-**Wejście:**
+\**Wejście:**
 
 ```
 1
 4
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 4 1
 ```
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 5 5

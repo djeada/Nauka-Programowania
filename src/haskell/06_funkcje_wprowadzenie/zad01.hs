@@ -1,8 +1,8 @@
 {-
 ZAD-01A — Zwracanie stałej wartości: liczba 3
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `return`, `int`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `return`, `int`
 
 ### Treść
 
@@ -16,18 +16,18 @@ Brak.
 
 Funkcja ma zwrócić:
 
-* `3`
+\* `3`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 wynik = zwroc_liczbe()
 print(wynik)
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 3
@@ -35,8 +35,8 @@ print(wynik)
 
 ZAD-01B — Zwracanie stałej wartości: napis „Tak”
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `return`, `string`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `return`, `string`
 
 ### Treść
 
@@ -50,18 +50,18 @@ Brak.
 
 Funkcja ma zwrócić:
 
-* `Tak`
+\* `Tak`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 wynik = zwroc_napis()
 print(wynik)
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Tak
@@ -69,8 +69,8 @@ Tak
 
 ZAD-01C — Zwracanie stałej wartości: True
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `return`, `bool`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `return`, `bool`
 
 ### Treść
 
@@ -84,18 +84,18 @@ Brak.
 
 Funkcja ma zwrócić:
 
-* `True`
+\* `True`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 wynik = zwroc_prawda()
 print(wynik)
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 True

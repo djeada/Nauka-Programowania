@@ -1,8 +1,8 @@
 {-
 ZAD-16 — Indeksy pierwszej pary o sumie x
 
-**Poziom:** ★★☆
-**Tagi:** `hashmap`, `indeksy`, `2-sum`
+\**Poziom:** ★★☆
+\**Tagi:** `hashmap`, `indeksy`, `2-sum`
 
 ### Treść
 
@@ -12,9 +12,9 @@ Jeśli nie istnieje taka para — wypisz `-1 -1`.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 2`)
-* kolejne `N` linii: liczby całkowite
-* ostatnia linia: `x` (liczba całkowita)
+\* 1. linia: `N` (`N ≥ 2`)
+\* kolejne `N` linii: liczby całkowite
+\* ostatnia linia: `x` (liczba całkowita)
 
 ### Wyjście
 
@@ -22,7 +22,7 @@ Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
@@ -34,7 +34,7 @@ Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
 5
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 0 2

@@ -1,8 +1,8 @@
 {-
 ZAD-10 — Najdłuższe i najkrótsze słowo
 
-**Poziom:** ★☆☆
-**Tagi:** `string`, `min/max`, `len`
+\**Poziom:** ★☆☆
+\**Tagi:** `string`, `min/max`, `len`
 
 ### Treść
 
@@ -15,22 +15,22 @@ Jeśli jest remis, wybierz słowo, które występuje wcześniej.
 
 ### Wejście
 
-* 1. linia: zdanie
+\* 1. linia: zdanie
 
 ### Wyjście
 
-* 1. linia: najdłuższe słowo
-* 2. linia: najkrótsze słowo
+\* 1. linia: najdłuższe słowo
+\* 2. linia: najkrótsze słowo
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Kaczka lubi wiosnę.
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Kaczka

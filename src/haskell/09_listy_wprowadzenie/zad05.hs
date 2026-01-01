@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Zmodyfikuj elementy spełniające warunek
 
-**Poziom:** ★☆☆
-**Tagi:** `listy`, `warunki`, `liczby pierwsze`
+\**Poziom:** ★☆☆
+\**Tagi:** `listy`, `warunki`, `liczby pierwsze`
 
 ### Treść
 
@@ -16,8 +16,8 @@ e) Zamień każdy element na **iloczyn wszystkich pozostałych elementów** list
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+\* 1. linia: `N` (`N ≥ 1`)
+\* kolejne `N` linii: liczby całkowite
 
 ### Wyjście
 
@@ -25,7 +25,7 @@ Pięć linii (po kolei: a, b, c, d, e), w każdej lista oddzielona przecinkami.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 5
@@ -36,7 +36,7 @@ Pięć linii (po kolei: a, b, c, d, e), w każdej lista oddzielona przecinkami.
 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 6,7,10,4,3
@@ -48,9 +48,9 @@ Pięć linii (po kolei: a, b, c, d, e), w każdej lista oddzielona przecinkami.
 
 ### Uwagi o formatowaniu
 
-* W podpunkcie (d) indeks 0 i 1 nie są pierwsze.
-* W podpunkcie (e) jeśli w liście jest `0`, to wiele wyników będzie `0` — to normalne.
-* Nie dodawaj przecinków na końcu linii.
+\* W podpunkcie (d) indeks 0 i 1 nie są pierwsze.
+\* W podpunkcie (e) jeśli w liście jest `0`, to wiele wyników będzie `0` — to normalne.
+\* Nie dodawaj przecinków na końcu linii.
 
 -}
 main :: IO ()

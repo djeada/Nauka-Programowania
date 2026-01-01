@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Klasa Punkt
 
-**Poziom:** ★★☆
-**Tagi:** `class`, `static`, `porównania`, `math`
+\**Poziom:** ★★☆
+\**Tagi:** `class`, `static`, `porównania`, `math`
 
 ### Treść
 
@@ -15,8 +15,8 @@ Zaprojektuj klasę **Punkt**:
 
 Program tworzy:
 
-* A = (5, 5)
-* B = (-3, -3)
+\* A = (5, 5)
+\* B = (-3, -3)
 
 Wypisuje oba punkty i odległość między nimi (4 miejsca po przecinku).
 
@@ -30,7 +30,7 @@ Jak w przykładzie.
 
 ### Przykład
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Punkt A: (5, 5)

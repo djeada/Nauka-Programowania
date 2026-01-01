@@ -1,8 +1,8 @@
 {-
 ZAD-02A — Suma dwóch liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `arytmetyka`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `arytmetyka`
 
 ### Treść
 
@@ -12,24 +12,24 @@ Napisz funkcję `suma(a, b)`, która zwraca sumę dwóch liczb całkowitych.
 
 Dwa argumenty funkcji:
 
-* `a` (liczba całkowita)
-* `b` (liczba całkowita)
+\* `a` (liczba całkowita)
+\* `b` (liczba całkowita)
 
 ### Wyjście
 
 Funkcja zwraca:
 
-* `a + b`
+\* `a + b`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(suma(3, 5))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 8
@@ -37,8 +37,8 @@ print(suma(3, 5))
 
 ZAD-02B — Różnica: b − a
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `arytmetyka`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `arytmetyka`
 
 ### Treść
 
@@ -52,17 +52,17 @@ Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
 
 Funkcja zwraca:
 
-* `b - a`
+\* `b - a`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(roznica(3, 5))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2
@@ -70,8 +70,8 @@ print(roznica(3, 5))
 
 ZAD-02C — Iloczyn dwóch liczb
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `arytmetyka`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `arytmetyka`
 
 ### Treść
 
@@ -85,17 +85,17 @@ Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
 
 Funkcja zwraca:
 
-* `a * b`
+\* `a * b`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(iloczyn(3, 5))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 15
@@ -103,8 +103,8 @@ print(iloczyn(3, 5))
 
 ZAD-02D — Iloraz całkowity: a // b
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `dzielenie`, `//`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `dzielenie`, `//`
 
 ### Treść
 
@@ -116,23 +116,23 @@ Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
 
 ### Ograniczenia / gwarancje
 
-* `b ≠ 0`
+\* `b ≠ 0`
 
 ### Wyjście
 
 Funkcja zwraca:
 
-* `a // b`
+\* `a // b`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(iloraz(3, 5))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 0
@@ -140,8 +140,8 @@ print(iloraz(3, 5))
 
 ZAD-02E — Reszta z dzielenia: a % b
 
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `modulo`, `%`
+\**Poziom:** ★☆☆
+\**Tagi:** `funkcje`, `modulo`, `%`
 
 ### Treść
 
@@ -153,23 +153,23 @@ Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
 
 ### Ograniczenia / gwarancje
 
-* `b ≠ 0`
+\* `b ≠ 0`
 
 ### Wyjście
 
 Funkcja zwraca:
 
-* `a % b`
+\* `a % b`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+\**Wywołanie funkcji:**
 
 ```python
 print(reszta(3, 5))
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 3

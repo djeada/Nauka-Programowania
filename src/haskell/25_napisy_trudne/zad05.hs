@@ -1,8 +1,8 @@
 {-
 ZAD-05 — Usuń powtórzenia sąsiadujących znaków
 
-**Poziom:** ★★★
-**Tagi:** `string`, `compress`, `run-length`
+\**Poziom:** ★★★
+\**Tagi:** `string`, `compress`, `run-length`
 
 ### Treść
 
@@ -10,21 +10,21 @@ Otrzymujesz napis. Usuń powtórzenia znaków występujących **bezpośrednio ob
 
 ### Wejście
 
-* 1 linia: napis `S`
+\* 1 linia: napis `S`
 
 ### Wyjście
 
-* 1 linia: napis po redukcji sąsiadów
+\* 1 linia: napis po redukcji sąsiadów
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 AAAAAAAAAABBBBBBBBA
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 ABA

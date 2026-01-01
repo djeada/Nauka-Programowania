@@ -1,8 +1,8 @@
 {-
 ZAD-08 — Wyjątkowe palindromy (podciągi bez zmiany kolejności)
 
-**Poziom:** ★★★
-**Tagi:** `substring`, `palindrom`, `unikalność`
+\**Poziom:** ★★★
+\**Tagi:** `substring`, `palindrom`, `unikalność`
 
 ### Treść
 
@@ -15,7 +15,7 @@ Pojedynczy znak też jest wyjątkowym palindromem.
 
 ### Wejście
 
-* 1. linia: słowo (litery)
+\* 1. linia: słowo (litery)
 
 ### Wyjście
 
@@ -24,13 +24,13 @@ Jeśli nic poza pojedynczymi znakami nie pasuje, wypisz tylko te unikalne znaki 
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 xxyxx
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 x
@@ -43,8 +43,8 @@ yxy
 
 ### Uwagi o formatowaniu
 
-* Usuń duplikaty w wyniku (np. ten sam palindrom znaleziony w kilku miejscach wypisz raz).
-* Kolejność wypisywania może być zgodna z pierwszym pojawieniem się w tekście (łatwe i czytelne): wypisuj przy pierwszym znalezieniu danego palindromu.
+\* Usuń duplikaty w wyniku (np. ten sam palindrom znaleziony w kilku miejscach wypisz raz).
+\* Kolejność wypisywania może być zgodna z pierwszym pojawieniem się w tekście (łatwe i czytelne): wypisuj przy pierwszym znalezieniu danego palindromu.
 
 -}
 main :: IO ()

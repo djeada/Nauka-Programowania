@@ -1,8 +1,8 @@
 {-
 ZAD-04 — Minimum oraz maksimum
 
-**Poziom:** ★☆☆
-**Tagi:** `listy`, `min`, `max`
+\**Poziom:** ★☆☆
+\**Tagi:** `listy`, `min`, `max`
 
 ### Treść
 
@@ -15,18 +15,18 @@ w jednej linii, oddzielone pojedynczą spacją.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+\* 1. linia: `N` (`N ≥ 1`)
+\* kolejne `N` linii: liczby całkowite
 
 ### Wyjście
 
 Jedna linia:
 
-* `max min`
+\* `max min`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 9
@@ -41,7 +41,7 @@ Jedna linia:
 -8
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 10 -9

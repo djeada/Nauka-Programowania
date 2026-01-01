@@ -1,8 +1,8 @@
 {-
 ZAD-04A — Liczba zer w zapisie binarnym
 
-**Poziom:** ★☆☆
-**Tagi:** `binarne`, `zliczanie`
+\**Poziom:** ★☆☆
+\**Tagi:** `binarne`, `zliczanie`
 
 ### Treść
 
@@ -10,7 +10,7 @@ Wczytaj liczbę naturalną `n`. Policz, ile znaków `0` zawiera jej binarna repr
 
 ### Wejście
 
-* 1. linia: `n`
+\* 1. linia: `n`
 
 ### Wyjście
 
@@ -18,13 +18,13 @@ Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 0
@@ -32,12 +32,12 @@ Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.
 
 ### Uwagi
 
-* Dla `n = 0` binarnie to `0`, więc liczba zer wynosi `1`.
+\* Dla `n = 0` binarnie to `0`, więc liczba zer wynosi `1`.
 
 ZAD-04B — Liczba jedynek w zapisie binarnym
 
-**Poziom:** ★☆☆
-**Tagi:** `popcount`, `binarne`
+\**Poziom:** ★☆☆
+\**Tagi:** `popcount`, `binarne`
 
 ### Treść
 
@@ -45,7 +45,7 @@ Wczytaj `n`. Policz, ile bitów `1` ma liczba w zapisie binarnym.
 
 ### Wejście
 
-* 1. linia: `n`
+\* 1. linia: `n`
 
 ### Wyjście
 
@@ -53,13 +53,13 @@ Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 2

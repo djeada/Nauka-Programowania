@@ -1,8 +1,8 @@
 {-
 ZAD-13 — Brakujący element w ciągu arytmetycznym
 
-**Poziom:** ★★☆
-**Tagi:** `sortowanie`, `ciąg arytmetyczny`, `listy`
+\**Poziom:** ★★☆
+\**Tagi:** `sortowanie`, `ciąg arytmetyczny`, `listy`
 
 ### Treść
 
@@ -10,8 +10,8 @@ Wczytaj `N` liczb naturalnych. Lista jest fragmentem ciągu arytmetycznego z **j
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 2`)
-* kolejne `N` linii: liczby naturalne
+\* 1. linia: `N` (`N ≥ 2`)
+\* kolejne `N` linii: liczby naturalne
 
 ### Wyjście
 
@@ -19,7 +19,7 @@ Jedna liczba naturalna — brakujący element.
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 4
@@ -29,7 +29,7 @@ Jedna liczba naturalna — brakujący element.
 3
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 4

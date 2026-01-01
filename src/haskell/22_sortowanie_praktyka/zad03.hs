@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Sortowanie listy par względem kryterium
 
-**Poziom:** ★☆☆
-**Tagi:** `sort`, `tuple`, `list`
+\**Poziom:** ★☆☆
+\**Tagi:** `sort`, `tuple`, `list`
 
 ### Treść
 
@@ -15,17 +15,17 @@ Wypisz wyniki dla a) i b) w osobnych liniach.
 
 ### Wejście
 
-* 1 linia: liczba naturalna `N`
-* następnie `N` linii: `napis liczba` (napis bez spacji)
+\* 1 linia: liczba naturalna `N`
+\* następnie `N` linii: `napis liczba` (napis bez spacji)
 
 ### Wyjście
 
-* 1 linia: lista par posortowana jak w podpunkcie a)
-* 2 linia: lista par posortowana jak w podpunkcie b)
+\* 1 linia: lista par posortowana jak w podpunkcie a)
+\* 2 linia: lista par posortowana jak w podpunkcie b)
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -34,7 +34,7 @@ bca 1
 c 2
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 [('bca', 1), ('c', 2), ('ab', 3)]

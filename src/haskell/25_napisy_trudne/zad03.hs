@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Czy napis A jest początkiem napisu B?
 
-**Poziom:** ★★☆
-**Tagi:** `string`, `prefix`
+\**Poziom:** ★★☆
+\**Tagi:** `string`, `prefix`
 
 ### Treść
 
@@ -15,23 +15,23 @@ Sprawdź, czy `B` **zaczyna się** od `A`.
 
 ### Wejście
 
-* 1 linia: `A`
-* 2 linia: `B`
+\* 1 linia: `A`
+\* 2 linia: `B`
 
 ### Wyjście
 
-* 1 linia: `Prawda` albo `Fałsz`
+\* 1 linia: `Prawda` albo `Fałsz`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 Dino
 Dinozaur jest zly
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 Prawda

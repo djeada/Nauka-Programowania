@@ -1,8 +1,8 @@
 {-
 ZAD-02 — Słownik z dwóch list (klucze i wartości)
 
-**Poziom:** ★☆☆
-**Tagi:** `dict`, `listy`
+\**Poziom:** ★☆☆
+\**Tagi:** `dict`, `listy`
 
 ### Treść
 
@@ -11,18 +11,18 @@ Jeśli długości są różne, wypisz pusty słownik `{}`.
 
 ### Wejście
 
-* 1 linia: `n`
-* 2 linia: `m`
-* następnie `n` liczb (pierwsza lista)
-* następnie `m` liczb (druga lista)
+\* 1 linia: `n`
+\* 2 linia: `m`
+\* następnie `n` liczb (pierwsza lista)
+\* następnie `m` liczb (druga lista)
 
 ### Wyjście
 
-* Słownik albo `{}`
+\* Słownik albo `{}`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -31,7 +31,7 @@ Jeśli długości są różne, wypisz pusty słownik `{}`.
 1 2 -1
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 {3: 1, 5: 2, 8: -1}

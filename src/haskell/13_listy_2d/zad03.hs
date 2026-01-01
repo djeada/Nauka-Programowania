@@ -1,8 +1,8 @@
 {-
 ZAD-03 — Macierz 2-kolumnowa z dwóch list
 
-**Poziom:** ★☆☆
-**Tagi:** `listy`, `macierze`
+\**Poziom:** ★☆☆
+\**Tagi:** `listy`, `macierze`
 
 ### Treść
 
@@ -11,19 +11,19 @@ Jeśli długości są różne, wypisz: `Pusta macierz`
 
 ### Wejście
 
-* 1. linia: `n`
-* 2. linia: `m`
-* następnie `n` liczb (pierwsza lista)
-* następnie `m` liczb (druga lista)
+\* 1. linia: `n`
+\* 2. linia: `m`
+\* następnie `n` liczb (pierwsza lista)
+\* następnie `m` liczb (druga lista)
 
 ### Wyjście
 
-* Jeśli `n = m`: `n` wierszy `x y`
-* Jeśli `n ≠ m`: jedna linia `Pusta macierz`
+\* Jeśli `n = m`: `n` wierszy `x y`
+\* Jeśli `n ≠ m`: jedna linia `Pusta macierz`
 
 ### Przykład
 
-**Wejście:**
+\**Wejście:**
 
 ```
 3
@@ -36,7 +36,7 @@ Jeśli długości są różne, wypisz: `Pusta macierz`
 1
 ```
 
-**Wyjście:**
+\**Wyjście:**
 
 ```
 3 2
