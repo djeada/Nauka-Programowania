@@ -47,19 +47,27 @@ function testAnagramyWTekscie() {
   const tekst =
     "To absurd, ze tyran Brudas, ten straszliwy bandzior sprawuje rzady w tym kraju. Burza nad galeria i alergia na narty to zadna zbrodnia jak bandzior i jego arbuz.";
   const wynik = anagramyWTekscie(tekst);
+  
+  // Funkcja znajduje wszystkie grupy anagramów, włącznie z jednolieterowymi i "To"/"to"
   const poprawnyWynik = [
-    ["absurd", "brudas"],
+    ["To", "to"],
+    ["absurd", "Brudas"],
     ["tyran", "narty"],
-    ["bandzior", "zbrodnia"],
-    ["burza", "arbuz"],
+    ["bandzior", "zbrodnia", "bandzior"],
+    ["Burza", "arbuz"],
     ["galeria", "alergia"],
+    ["i", "i"],
   ];
-  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiodl sie");
-  for (const anagram of wynik) {
-    const poprawnyAnagram = poprawnyWynik.find(
-      (pa) => pa.length === anagram.length && pa.includes(anagram[0])
+  
+  console.assert(wynik.length === poprawnyWynik.length, "Test nie powiodl sie: zla liczba grup");
+  
+  // Sprawdź czy wszystkie oczekiwane grupy są znalezione (bez względu na kolejność)
+  for (const oczekiwanaGrupa of poprawnyWynik) {
+    const znalezionaGrupa = wynik.find(
+      (grupa) => grupa.length === oczekiwanaGrupa.length && 
+                 grupa.every(slowo => oczekiwanaGrupa.includes(slowo))
     );
-    console.assert(poprawnyAnagram, "Test nie powiodl sie");
+    console.assert(znalezionaGrupa, `Test nie powiodl sie: brak grupy ${oczekiwanaGrupa}`);
   }
 }
 

@@ -54,7 +54,7 @@ function testHistogram() {
 
   const wynik2 = histogram("ala ma kota");
   console.assert(wynik2["a"] === 4, "Test 5 nie powiodl sie");
-  console.assert(wynik2["m"] === 2, "Test 6 nie powiodl sie");
+  console.assert(wynik2["m"] === 1, "Test 6 nie powiodl sie"); // "ala ma kota" ma tylko 1 'm'
 }
 
 testHistogram();
