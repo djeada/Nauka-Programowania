@@ -47,15 +47,19 @@
 # **Wyjście:**
 #
 # ```
-# Kształt: Koło
-# Promień: 5
-# Pole powierzchni: 78.5398
-#
-# Kształt: Kwadrat
-# Długość boku: 4
-# Pole powierzchni: 16
-# ```
+
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(1)
+# Zlozonosc pamieciowa: O(1)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    # Bash nie ma natywnego wsparcia dla dziedziczenia klas
+    # Mozna symulowac przez zagniezdzone funkcje lub композycję
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
+}
+
 main() {
+    funkcja_glowna
 }
 
 main "$@"

@@ -47,75 +47,19 @@
 # 7. miejsce urodzenia
 # 8. zawód
 # 9. numer albumu (int)
-# 10. kierunek studiów
-#
-# **Dane dla StudentFizyki:**
-# 11. imię
-# 12. nazwisko
-# 13. miejsce urodzenia
-# 14. zawód
-# 15. numer albumu (int)
-# 16. kierunek studiów
-# 17. średnia z laboratoriów (float)
-# 18. średnia z wykładów (float)
-#
-# ### Wyjście
-#
-# Trzy bloki jak w przykładzie, oddzielone pustą linią.
-#
-# ### Przykład
-#
-# **Wejście:**
-#
-# ```
-# Jan
-# Kowalski
-# Kraków
-# Inżynier
-# Anna
-# Nowak
-# Warszawa
-# Student
-# 12345
-# Informatyka
-# Piotr
-# Wiśniewski
-# Gdańsk
-# Student
-# 54321
-# Fizyka
-# 4.5
-# 4.0
-# ```
-#
-# **Wyjście:**
-#
-# ```
-# Człowiek:
-# Imię: Jan
-# Nazwisko: Kowalski
-# Miejsce urodzenia: Kraków
-# Zawód: Inżynier
-#
-# Student:
-# Imię: Anna
-# Nazwisko: Nowak
-# Miejsce urodzenia: Warszawa
-# Zawód: Student
-# Numer albumu: 12345
-# Kierunek studiów: Informatyka
-#
-# Student Fizyki:
-# Imię: Piotr
-# Nazwisko: Wiśniewski
-# Miejsce urodzenia: Gdańsk
-# Zawód: Student
-# Numer albumu: 54321
-# Kierunek studiów: Fizyka
-# Średnia z laboratoriów: 4.5
-# Średnia z wykładów: 4.0
-# ```
+
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(1)
+# Zlozonosc pamieciowa: O(1)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    # Bash nie ma natywnego wsparcia dla dziedziczenia klas
+    # Mozna symulowac przez zagniezdzone funkcje lub композycję
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
+}
+
 main() {
+    funkcja_glowna
 }
 
 main "$@"
