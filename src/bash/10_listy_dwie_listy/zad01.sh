@@ -53,7 +53,6 @@ wypisz() {
         echo -n "${lista_b[$i]}, "
     done
 
-    echo
 }
 
 main() {

@@ -61,27 +61,27 @@ wypisz_od_poczatku() {
 }
 
 wypisz_od_konca() {
-
     local n=$((${#lista[@]} - 1))
-
+    
+    # Wypisz w jednej linii z przecinkami
     for ((i = n; i >= 0; i--)); do
-        echo "${lista[$i]}"
+        echo -n "${lista[$i]}"
+        if [[ $i -gt 0 ]]; then
+            echo -n ","
+        fi
     done
+    echo ""
 }
 
 main() {
 
     declare -a lista
-    echo "podaj liczbe n:"
     read n
 
-    echo "podaj $n liczb:"
     wczytaj $n
 
-    echo -e "\nliczby w kolejnosci wczytania:"
     wypisz_od_poczatku
 
-    echo -e "\nliczby wypisane od konca:"
     wypisz_od_konca
 
 }
