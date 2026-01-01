@@ -35,4 +35,24 @@ gram na pianinie.
 * Najprościej: podziel po białych znakach, a z końców słów usuń interpunkcję.
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja licząca słowa w zdaniu (ignoruje interpunkcję)
+// Złożoność czasowa: O(n), gdzie n to długość zdania
+// Złożoność pamięciowa: O(m), gdzie m to liczba słów
+fn policz_slowa(zdanie: &str) -> usize {
+    zdanie
+        .split_whitespace()
+        .map(|slowo| slowo.trim_matches(|c: char| !c.is_alphanumeric()))
+        .filter(|slowo| !slowo.is_empty())
+        .count()
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let zdanie = input.trim();
+    
+    println!("{}", policz_slowa(zdanie));
+}

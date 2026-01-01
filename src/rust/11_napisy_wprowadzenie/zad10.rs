@@ -38,4 +38,44 @@ lubi
 ```
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja znajdująca najdłuższe i najkrótsze słowo
+// Złożoność czasowa: O(n*m), gdzie n to liczba słów, m to średnia długość słowa
+// Złożoność pamięciowa: O(n*m)
+fn znajdz_najdluzsze_i_najkrotsze(zdanie: &str) -> (String, String) {
+    let slowa: Vec<String> = zdanie
+        .split_whitespace()
+        .map(|s| s.trim_matches(|c: char| !c.is_alphanumeric()).to_string())
+        .filter(|s| !s.is_empty())
+        .collect();
+    
+    if slowa.is_empty() {
+        return (String::new(), String::new());
+    }
+    
+    let mut najdluzsze = &slowa[0];
+    let mut najkrotsze = &slowa[0];
+    
+    for slowo in &slowa {
+        if slowo.chars().count() > najdluzsze.chars().count() {
+            najdluzsze = slowo;
+        }
+        if slowo.chars().count() < najkrotsze.chars().count() {
+            najkrotsze = slowo;
+        }
+    }
+    
+    (najdluzsze.clone(), najkrotsze.clone())
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let zdanie = input.trim();
+    
+    let (najdluzsze, najkrotsze) = znajdz_najdluzsze_i_najkrotsze(zdanie);
+    println!("{}", najdluzsze);
+    println!("{}", najkrotsze);
+}
