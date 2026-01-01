@@ -206,34 +206,34 @@ Oblicz objętość prostopadłościanu:
 */
 
 // a) Pobierz dlugosci podstawy i wysokosci trojkata i wypisz jego pole.
-const base = parseInt(prompt("Podaj dlugosc podstawy trojkata:"));
-const wysokosc_trojkata = parseInt(prompt("Podaj wysokosc trojkata:"));
-console.log((base * wysokosc_trojkata) / 2);
+const base = parseFloat(prompt("Podaj dlugosc podstawy trojkata:"));
+const wysokosc_trojkata = parseFloat(prompt("Podaj wysokosc trojkata:"));
+console.log(((base * wysokosc_trojkata) / 2).toFixed(3));
 
 // b) Pobierz dlugosci bokow prostokata i wypisz jego pole.
-const side_a = parseInt(prompt("Podaj dlugosc boku a prostokata:"));
-const side_b = parseInt(prompt("Podaj dlugosc boku b prostokata:"));
-console.log(side_a * side_b);
+const side_a = parseFloat(prompt("Podaj dlugosc boku a prostokata:"));
+const side_b = parseFloat(prompt("Podaj dlugosc boku b prostokata:"));
+console.log((side_a * side_b).toFixed(3));
 
 // c) Pobierz dlugosci przekatnych rombu i wypisz jego pole.
-const diagonal_a = parseInt(prompt("Podaj dlugosc przekatnej a rombu:"));
-const diagonal_b = parseInt(prompt("Podaj dlugosc przekatnej b rombu:"));
-console.log((diagonal_a * diagonal_b) / 2);
+const diagonal_a = parseFloat(prompt("Podaj dlugosc przekatnej a rombu:"));
+const diagonal_b = parseFloat(prompt("Podaj dlugosc przekatnej b rombu:"));
+console.log(((diagonal_a * diagonal_b) / 2).toFixed(3));
 
 // d) Pobierz promien kuli i wypisz jej objetosc.
-const radius = parseInt(prompt("Podaj promien kuli:"));
-console.log((4 / 3) * Math.PI * radius ** 3);
+const radius = parseFloat(prompt("Podaj promien kuli:"));
+console.log(((4 / 3) * Math.PI * radius ** 3).toFixed(3));
 
 // e) Pobierz promien podstawy i wysokosc stozka i wypisz jego objetosc.
-const base_radius = parseInt(prompt("Podaj promien podstawy stozka:"));
-const wysokosc_stozka = parseInt(prompt("Podaj wysokosc stozka:"));
-console.log((Math.PI * base_radius ** 2 * wysokosc_stozka) / 3);
+const base_radius = parseFloat(prompt("Podaj promien podstawy stozka:"));
+const wysokosc_stozka = parseFloat(prompt("Podaj wysokosc stozka:"));
+console.log(((Math.PI * base_radius ** 2 * wysokosc_stozka) / 3).toFixed(3));
 
 // f) Pobierz dlugosc, szerokosc i wysokosc graniastoslupa i wypisz jego objetosc.
-const length = parseInt(prompt("Podaj dlugosc graniastoslupa:"));
-const width = parseInt(prompt("Podaj szerokosc graniastoslupa:"));
-const wysokosc_graniastoslupa = parseInt(
+const length = parseFloat(prompt("Podaj dlugosc graniastoslupa:"));
+const width = parseFloat(prompt("Podaj szerokosc graniastoslupa:"));
+const wysokosc_graniastoslupa = parseFloat(
   prompt("Podaj wysokosc graniastoslupa:")
 );
-console.log(length * width * wysokosc_graniastoslupa);
+console.log((length * width * wysokosc_graniastoslupa).toFixed(3));
 

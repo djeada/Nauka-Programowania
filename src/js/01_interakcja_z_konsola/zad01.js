@@ -33,6 +33,5 @@ Witaj, świecie!
 
 */
 
-console.info("A.D.");
-console.info("Witaj swiecie");
+console.log("Witaj, świecie!");
 
