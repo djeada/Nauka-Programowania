@@ -36,20 +36,23 @@ Ala ma kota
 
 */
 
+// Funkcja sortuje znaki w napisie alfabetycznie
+// Złożoność czasowa: O(n log n), gdzie n to długość napisu
+// Złożoność pamięciowa: O(n)
 const sortowanieZnakow = (napis) => {
   return napis
     .split("")
-    .sort((a, b) => a.localeCompare(b))
+    .sort()
     .join("");
 };
 
 // Testy
 const napis1 = "Ala ma kota";
-const wynik1 = " Aaaaklmot";
+const wynik1 = "  Aaaaklmot"; // 2 spacje (input ma 2 spacje)
 const napis2 = "Javascript";
-const wynik2 = "Jaaaciprstv";
+const wynik2 = "Jaaciprstv"; // 2 'a' w "Javascript"
 const napis3 = "zazolc";
-const wynik3 = "azlozz";
+const wynik3 = "aclozz"; // Poprawna kolejność alfabetyczna
 
 console.assert(sortowanieZnakow(napis1) === wynik1, "Test 1 nieudany");
 console.assert(sortowanieZnakow(napis2) === wynik2, "Test 2 nieudany");
