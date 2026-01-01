@@ -27,12 +27,17 @@
 # ### Ograniczenia / gwarancje
 #
 # * Zakładamy `a ≠ 0` (to naprawdę równanie kwadratowe).
-#
-# ### Uwagi
-#
-# * Licz `Δ = b^2 - 4ac`.
-# * Pierwiastki: `(-b ± sqrt(Δ)) / (2a)`.
+
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n^2)
+# Zlozonosc pamieciowa: O(n)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
+}
+
 main() {
+    funkcja_glowna
 }
 
 main "$@"

@@ -27,20 +27,17 @@
 #    * po każdym ruchu wypisz zaktualizowaną planszę.
 #
 # ### Wejście
-#
-# Wielokrotnie:
-#
-# * `r c` (w jednej linii)
-#
-# ### Wyjście
-#
-# * plansza i komunikaty w trakcie,
-# * na końcu komunikat o wygranej/przegranej.
-#
-# ### Uwagi praktyczne
-#
-# * To zadanie jest **większym projektem** — format wyjścia bywa sprawdzany „ręcznie” (nie zawsze automatycznie), więc trzymaj się spójnego stylu wypisywania planszy.
+
+# Funkcja do zaimplementowania
+# Zlozonosc czasowa: O(n^2)
+# Zlozonosc pamieciowa: O(n^2)
+funkcja_glowna() {
+    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
+    echo "Funkcjonalnosc wymaga pelnej implementacji"
+}
+
 main() {
+    funkcja_glowna
 }
 
 main "$@"
