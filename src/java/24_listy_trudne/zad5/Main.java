@@ -41,6 +41,9 @@ import java.util.*;
 
 public class Main {
 
+  // Generuje zbiór potęgowy - wszystkie możliwe podzbiory listy
+  // Złożoność czasowa: O(2^n * n) gdzie n to długość listy
+  // Złożoność pamięciowa: O(2^n * n) - przechowuje wszystkie podzbiory
   public static ArrayList<ArrayList<Integer>> zbiorPotegowy(ArrayList<Integer> lista) {
     int N = (int) Math.pow(2, lista.size());
     ArrayList<ArrayList<Integer>> zbiorPotegowy = new ArrayList<ArrayList<Integer>>();

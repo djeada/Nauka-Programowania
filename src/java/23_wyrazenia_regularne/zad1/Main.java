@@ -58,16 +58,25 @@ Prawda
 import java.util.*;
 
 public class Main {
+  // Sprawdza poprawność identyfikatora w adresie email
+  // Złożoność czasowa: O(n) gdzie n to długość napisu
+  // Złożoność pamięciowa: O(1)
   public static boolean poprawnyIdentyfikator(String napis) {
     String wzorzec = "^[^.][a-zA-Z0-9!#$%&'*+-/=?^_`{|}~\\.]*[a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+[^.]$";
     return napis.matches(wzorzec);
   }
 
+  // Sprawdza poprawność nazwy domenowej
+  // Złożoność czasowa: O(n) gdzie n to długość napisu
+  // Złożoność pamięciowa: O(1)
   public static boolean poprawnaNazwaDomenowa(String napis) {
     String wzorzec = "[a-zA-Z0-9]+[-a-zA-Z0-9\\.]*\\.[-a-zA-Z0-9\\.]*[a-zA-Z0-9]+";
     return napis.matches(wzorzec);
   }
 
+  // Sprawdza poprawność całego adresu email
+  // Złożoność czasowa: O(n) gdzie n to długość adresu
+  // Złożoność pamięciowa: O(n)
   public static boolean poprawnyEmail(String napis) {
     if (napis.indexOf('@') != 1) return false;
 

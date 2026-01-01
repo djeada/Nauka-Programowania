@@ -37,6 +37,9 @@ import java.util.*;
 
 public class Main {
 
+  // Znajduje maksymalny przychód z podzielenia sznurka - programowanie dynamiczne
+  // Złożoność czasowa: O(n²) gdzie n to długość sznurka
+  // Złożoność pamięciowa: O(n)
   public static int podzielSznurekV1(List<Integer> ceny, int n) {
     if (ceny.size() < n)
       throw new IllegalArgumentException(

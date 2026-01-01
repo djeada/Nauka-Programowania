@@ -39,6 +39,9 @@ import java.util.*;
 
 public class Main {
 
+  // Wyodrębnia wszystkie cyfry z tekstu - usuwa znaki niecyfrowe
+  // Złożoność czasowa: O(n) gdzie n to długość napisu
+  // Złożoność pamięciowa: O(n)
   public static String odfiltrujCyfryV1(String napis) {
     return napis.replaceAll("[^0-9]", "");
   }

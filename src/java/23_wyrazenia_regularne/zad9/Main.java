@@ -28,6 +28,9 @@ import java.util.*;
 
 public class Main {
 
+  // Usuwa fragment tekstu od pierwszego wystąpienia słowa klucz do końca wiersza
+  // Złożoność czasowa: O(n*m) gdzie n to liczba wierszy, m to długość klucza
+  // Złożoność pamięciowa: O(n)
   public static String wczyscTekstV1(String tekst, String napis) {
     String wynik = "";
     String wzorzec = napis + "(.*)";

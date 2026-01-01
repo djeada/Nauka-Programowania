@@ -38,6 +38,9 @@ Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienn
 import java.util.*;
 
 public class Main {
+  // Znajduje najdłuższy naprzemiennie rosnący/malejący podciąg
+  // Złożoność czasowa: O(n) gdzie n to długość listy
+  // Złożoność pamięciowa: O(n)
   public static ArrayList<Integer> najdluzszyNaprzemiennyPodciagV1(ArrayList<Integer> lista) {
     if (lista.isEmpty()) return new ArrayList<Integer>();
 

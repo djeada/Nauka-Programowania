@@ -42,6 +42,9 @@ import java.util.*;
 
 public class Main {
 
+  // Sprawdza czy napis2 jest początkiem napis1
+  // Złożoność czasowa: O(m) gdzie m to długość napis2
+  // Złożoność pamięciowa: O(m)
   public static boolean czyPoczatek(String napis1, String napis2) {
     if (napis1.length() < napis2.length()) return false;
 

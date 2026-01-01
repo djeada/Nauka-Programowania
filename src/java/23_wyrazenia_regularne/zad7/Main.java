@@ -37,6 +37,9 @@ ani nie wybrał się do teatru
 import java.util.*;
 
 public class Main {
+  // Dzieli napis na słowa, pomijając znaki interpunkcyjne
+  // Złożoność czasowa: O(n) gdzie n to długość napisu
+  // Złożoność pamięciowa: O(m) gdzie m to liczba słów
   public static ArrayList<String> podzielNapisV1(String napis) {
     String[] tablica = napis.split("\\p{Punct}+");
     ArrayList<String> lista = new ArrayList<String>();

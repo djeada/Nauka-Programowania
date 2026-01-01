@@ -51,6 +51,9 @@ public class Main {
     }
   }
 
+  // Scala k posortowanych list w jedną posortowaną listę używając kopca
+  // Złożoność czasowa: O(n log k) gdzie n to łączna liczba elementów, k to liczba list
+  // Złożoność pamięciowa: O(n + k)
   public static ArrayList<Integer> polaczListyV1(ArrayList<ArrayList<Integer>> lista) {
     ArrayList<Integer> wynik = new ArrayList<Integer>();
     PriorityQueue<Wezel> kolejka = new PriorityQueue<Wezel>();

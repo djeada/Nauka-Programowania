@@ -37,6 +37,9 @@ import java.util.*;
 
 public class Main {
 
+  // Znajduje długość najdłuższego podciągu gdzie sumy list A i B są równe
+  // Złożoność czasowa: O(n) gdzie n to długość list
+  // Złożoność pamięciowa: O(n) - słownik różnic sum
   public static int znajdzPodciagV1(ArrayList<Integer> listaA, ArrayList<Integer> listaB) {
 
     if (listaA.size() != listaB.size())

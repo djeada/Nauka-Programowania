@@ -34,6 +34,9 @@ import java.util.*;
 
 public class Main {
   
+  // Podmienia słowa z listaA na odpowiadające słowa z listaB
+  // Złożoność czasowa: O(n*m) gdzie n to długość napisu, m to liczba zamian
+  // Złożoność pamięciowa: O(n)
   public static void podmien(String napis, List<String> listaA, List<String> listaB) {
     if (listaA.size() != listaB.size())
       return;

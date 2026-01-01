@@ -47,6 +47,9 @@ import java.util.*;
 
 public class Main {
 
+  // Sprawdza czy hasło spełnia wszystkie wymagania bezpieczeństwa
+  // Złożoność czasowa: O(n) gdzie n to długość hasła
+  // Złożoność pamięciowa: O(1)
   public static boolean poprawneHaslo(String haslo) {
     if (haslo.matches("[a-z]+") && haslo.matches("[A-Z]+")) {
       if (haslo.matches("[0-9]+") && haslo.matches("[!#$%&'*+-/=?^_`{|}~]+"))

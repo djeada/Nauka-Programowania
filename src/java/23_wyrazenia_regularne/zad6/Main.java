@@ -50,6 +50,9 @@ import java.util.*;
 import java.util.regex.Pattern;
 
 public class Main {
+  // Znajduje wiersze kończące się podanym podnapisem - metoda iteracyjna
+  // Złożoność czasowa: O(n*m) gdzie n to liczba wierszy, m to długość podnapisu
+  // Złożoność pamięciowa: O(k) gdzie k to liczba znalezionych wierszy
   public static ArrayList<String> znajdzWierszeV1(String napis, String podnapis) {
     ArrayList<String> wynik = new ArrayList<String>();
     String[] tablica = napis.split("\n");
@@ -61,6 +64,9 @@ public class Main {
     return wynik;
   }
 
+  // Znajduje wiersze kończące się podanym podnapisem - używając regex
+  // Złożoność czasowa: O(n*m) gdzie n to liczba wierszy, m to długość podnapisu
+  // Złożoność pamięciowa: O(k) gdzie k to liczba znalezionych wierszy
   public static ArrayList<String> znajdzWierszeV2(String napis, String podnapis) {
     // using regex
     ArrayList<String> wynik = new ArrayList<String>();

@@ -39,6 +39,9 @@ Prawda
 
 public class Main {
 
+  // Sprawdza czy napis zawiera wyłącznie cyfry - iteracja przez znaki
+  // Złożoność czasowa: O(n) gdzie n to długość napisu
+  // Złożoność pamięciowa: O(n) - konwersja na tablicę znaków
   public static boolean tylkoCyfryV1(String slowo) {
 
     for (char ch : slowo.toCharArray()) {
@@ -48,6 +51,9 @@ public class Main {
     return true;
   }
 
+  // Sprawdza czy napis zawiera wyłącznie cyfry - używając regex
+  // Złożoność czasowa: O(n) gdzie n to długość napisu
+  // Złożoność pamięciowa: O(1)
   public static boolean tylkoCyfryV2(String slowo) {
     return slowo.matches("[0-9]+");
   }

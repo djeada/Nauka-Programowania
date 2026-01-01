@@ -42,6 +42,9 @@ import java.util.*;
 
 public class Main {
 
+  // Usuwa wszystkie wystąpienia napis2 z napis1
+  // Złożoność czasowa: O(n*m*k) gdzie n to długość napis1, m to długość napis2, k to liczba wystąpień
+  // Złożoność pamięciowa: O(n)
   public static String usunWystapienia(String napis1, String napis2) {
     String wynik = napis1;
 

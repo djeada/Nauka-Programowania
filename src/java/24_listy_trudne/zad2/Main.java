@@ -35,6 +35,9 @@ import java.util.*;
 
 public class Main {
 
+  // Przenosi wszystkie zera na koniec listy zachowując kolejność pozostałych elementów
+  // Złożoność czasowa: O(n²) gdzie n to długość listy
+  // Złożoność pamięciowa: O(1) - modyfikuje listę w miejscu
   public static void zeraV1(ArrayList<Integer> lista) {
     int N = lista.size();
 

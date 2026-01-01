@@ -35,6 +35,9 @@ import java.util.*;
 
 public class Main {
 
+  // Usuwa powtarzające się znaki zachowując pierwsze wystąpienie
+  // Złożoność czasowa: O(n²) ze względu na contains
+  // Złożoność pamięciowa: O(n)
   public static String usunPowtorzeniaV1(String napis) {
     String wynik = "";
 

@@ -46,6 +46,9 @@ Lerzy jerzy na wierzy
 import java.util.*;
 
 public class Main {
+  // Podmienia wszystkie wystąpienia słowaA na słowoB w napisie
+  // Złożoność czasowa: O(n*m) gdzie n to długość napisu, m to długość słowa
+  // Złożoność pamięciowa: O(n)
   public static String podmienNapis(String napis, String slowoA, String slowoB) {
     String wynik = napis.replaceAll(slowoA, slowoB);
     return wynik;

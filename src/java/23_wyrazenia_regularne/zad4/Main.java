@@ -41,10 +41,16 @@ import java.util.regex.Pattern;
 
 public class Main {
 
+  // Sprawdza czy podnapis występuje w napisie (ignorując wielkość liter) - regex
+  // Złożoność czasowa: O(n*m) gdzie n to długość napisu, m to długość podnapisu
+  // Złożoność pamięciowa: O(m)
   public static boolean czyNalezyV1(String napis, String podnapis) {
     return napis.matches("(?i).*" + Pattern.quote(podnapis) + ".*");
   }
 
+  // Sprawdza czy podnapis występuje w napisie - używając indexOf
+  // Złożoność czasowa: O(n*m) gdzie n to długość napisu, m to długość podnapisu
+  // Złożoność pamięciowa: O(1)
   public static boolean czyNalezyV2(String napis, String podnapis) {
     return napis.indexOf(podnapis) != -1;
   }
