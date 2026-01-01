@@ -47,7 +47,20 @@ Suma wysokości wszystkich trójkątów, czyli `1 + 2 + ... + N` linii.
 * Nie dodawaj pustych linii między trójkątami.
 
 */
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = Integer.parseInt(s.nextLine());
+        
+        for (int triangle = 1; triangle <= n; triangle++) {
+            for (int row = 1; row <= triangle; row++) {
+                for (int star = 0; star < row; star++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
     }
 }

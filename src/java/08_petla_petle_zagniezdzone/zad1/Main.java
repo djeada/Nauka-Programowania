@@ -35,7 +35,18 @@ Jedna liczba naturalna:
 ```
 
 */
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = Integer.parseInt(s.nextLine());
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
