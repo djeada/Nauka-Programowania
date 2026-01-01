@@ -53,5 +53,5 @@ function test_wielomian() {
 }
 
 test_wielomian();
-console.log("Wszystkie testy zakonczone sukcesem");
+console.log("Wszystkie testy zakończone sukcesem");
 
