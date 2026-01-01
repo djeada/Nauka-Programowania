@@ -49,8 +49,7 @@ import Data.Maybe (fromMaybe)
 
 main :: IO ()
 main = do
-    nStr <- getLine
-    let n = read nStr :: Int
+    _ <- getLine  -- Read N but don't use it (list length is implicit)
     numsLine <- getLine
     let nums = map read (words numsLine) :: [Int]
     keyStr <- getLine
