@@ -63,7 +63,6 @@ Liczba jest dodatnia.
 use ::std::*;
 
 fn main() {
-    println!("Podaj liczbe: ");
     let mut liczba = String::new();
     std::io::stdin()
         .read_line(&mut liczba)
@@ -71,10 +70,10 @@ fn main() {
     let liczba: i32 = liczba.trim().parse().expect("Blad parsowania");
 
     if liczba < 0 {
-        println!("Liczba jest ujemna");
+        println!("Liczba jest ujemna.");
     } else if liczba > 0 {
-        println!("Liczba jest dodatnia");
+        println!("Liczba jest dodatnia.");
     } else {
-        println!("Liczba jest zerem");
+        println!("Liczba jest zerem.");
     }
 }

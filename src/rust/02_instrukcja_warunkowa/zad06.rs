@@ -38,16 +38,32 @@ Jedna linia: największa liczba.
 use ::std::*;
 
 fn main() {
+    let mut a = String::new();
+    std::io::stdin().read_line(&mut a).expect("Blad odczytu");
+    let a: i32 = a.trim().parse().unwrap();
+    
+    let mut b = String::new();
+    std::io::stdin().read_line(&mut b).expect("Blad odczytu");
+    let b: i32 = b.trim().parse().unwrap();
+    
+    let mut c = String::new();
+    std::io::stdin().read_line(&mut c).expect("Blad odczytu");
+    let c: i32 = c.trim().parse().unwrap();
+    
+    let mut d = String::new();
+    std::io::stdin().read_line(&mut d).expect("Blad odczytu");
+    let d: i32 = d.trim().parse().unwrap();
 
-	println!("Podaj cztery liczby oddzielone spacjami:");
-	let mut wiersz = String::new();
-	std::io::stdin().read_line(&mut wiersz).expect("Blad odczytu");
-	let liczby: Vec<i32> = wiersz.trim().split_whitespace().map(|x| x.parse().unwrap()).collect();
-
-	let mut maks_1 = liczby[0] > liczby[1] ? liczby[0] : liczby[1];
-	let mut maks_2 = liczby[2] > liczby[3] ? liczby[2] : liczby[3];
-	let mut maks = maks_1 > maks_2 ? maks_1 : maks_2;
-	
-	println!("Najwieksza liczba to: {}", maks);
+    let mut maks = a;
+    if b > maks {
+        maks = b;
+    }
+    if c > maks {
+        maks = c;
+    }
+    if d > maks {
+        maks = d;
+    }
+    
+    println!("{}", maks);
 }
-

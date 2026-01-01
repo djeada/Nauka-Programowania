@@ -53,24 +53,27 @@ Trójkąt można zbudować z podanych boków.
 use ::std::*;
 
 fn main() {
-    println!("Podaj trzy boki trojkata oddzielone spacjami: ");
-    let mut wiersz = String::new();
+    let mut a = String::new();
     std::io::stdin()
-        .read_line(&mut wiersz)
+        .read_line(&mut a)
         .expect("Blad odczytu");
-    let liczby: Vec<i32> = wiersz
-        .trim()
-        .split_whitespace()
-        .map(|x| x.parse().unwrap())
-        .collect();
+    let a: i32 = a.trim().parse().unwrap();
+    
+    let mut b = String::new();
+    std::io::stdin()
+        .read_line(&mut b)
+        .expect("Blad odczytu");
+    let b: i32 = b.trim().parse().unwrap();
+    
+    let mut c = String::new();
+    std::io::stdin()
+        .read_line(&mut c)
+        .expect("Blad odczytu");
+    let c: i32 = c.trim().parse().unwrap();
 
-    let bok_a = liczby[0];
-    let bok_b = liczby[1];
-    let bok_c = liczby[2];
-
-    if bok_a + bok_b > bok_c && bok_a + bok_c > bok_b && bok_b + bok_c > bok_a {
-        println!("Mozna zbudowac trojkat z podanych bokow.");
+    if a + b > c && a + c > b && b + c > a {
+        println!("Trójkąt można zbudować z podanych boków.");
     } else {
-        println!("Nie mozna zbudowac trojkata z podanych bokow.");
+        println!("Trójkąta nie można zbudować z podanych boków.");
     }
 }
