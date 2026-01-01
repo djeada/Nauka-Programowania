@@ -38,5 +38,14 @@ print(nww(7, 9))
 \* Możesz użyć zależności: `NWW(a, b) = (a * b) // NWD(a, b)`.
 
 -}
+nwd :: Int -> Int -> Int
+nwd a b
+  | b == 0 = a
+  | otherwise = nwd b (a `mod` b)
+
+nww :: Int -> Int -> Int
+nww a b = (a * b) `div` nwd a b
+
 main :: IO ()
-main = pure ()
+main = do
+  print $ nww 7 9

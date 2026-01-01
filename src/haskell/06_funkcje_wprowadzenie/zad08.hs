@@ -38,5 +38,9 @@ print(zaokraglij_w_dol(7, 2))
 ```
 
 -}
+zaokraglij_w_dol :: Int -> Int -> Int
+zaokraglij_w_dol a b = length $ takeWhile (<= a) [b, 2*b ..]
+
 main :: IO ()
-main = pure ()
+main = do
+  print $ zaokraglij_w_dol 7 2

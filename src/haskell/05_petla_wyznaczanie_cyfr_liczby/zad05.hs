@@ -41,4 +41,9 @@ Liczba jest palindromem.
 
 -}
 main :: IO ()
-main = pure ()
+main = do
+  n <- readLn :: IO Int
+  let str = show n
+  if str == reverse str
+    then putStrLn "Liczba jest palindromem."
+    else putStrLn "Liczba nie jest palindromem."

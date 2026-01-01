@@ -102,5 +102,20 @@ True
 ```
 
 -}
+-- ZAD-01A: Zwracanie stałej wartości: liczba 3
+zwrocLiczbe :: Int
+zwrocLiczbe = 3
+
+-- ZAD-01B: Zwracanie stałej wartości: napis "Tak"
+zwrocNapis :: String
+zwrocNapis = "Tak"
+
+-- ZAD-01C: Zwracanie stałej wartości: True
+zwrocPrawda :: Bool
+zwrocPrawda = True
+
 main :: IO ()
-main = pure ()
+main = do
+  print zwrocLiczbe
+  putStrLn zwrocNapis
+  print zwrocPrawda

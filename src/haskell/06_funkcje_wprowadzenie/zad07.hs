@@ -36,5 +36,22 @@ Jedna linia (tylko raz, po poprawnym dopasowaniu):
 \* Porównanie jest czułe na wielkość liter.
 
 -}
+pobierzDane :: IO (String, String)
+pobierzDane = do
+  login <- getLine
+  haslo <- getLine
+  return (login, haslo)
+
+sprawdzDane :: String -> String -> IO ()
+sprawdzDane poprawnyLogin poprawneHaslo = do
+  let loop = do
+        (login, haslo) <- pobierzDane
+        if login == poprawnyLogin && haslo == poprawneHaslo
+          then putStrLn "Dane poprawne. Dostęp przyznany."
+          else loop
+  loop
+
 main :: IO ()
-main = pure ()
+main = do
+  (poprawnyLogin, poprawneHaslo) <- pobierzDane
+  sprawdzDane poprawnyLogin poprawneHaslo
