@@ -50,7 +50,7 @@ fn lista_na_napis(lista_str: &str) -> String {
         .split(',')
         .map(|s| s.trim())
         .filter(|s| !s.is_empty())
-        .collect()
+        .collect::<String>()
 }
 
 fn main() {
