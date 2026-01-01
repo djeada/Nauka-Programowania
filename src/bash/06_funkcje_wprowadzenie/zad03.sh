@@ -91,18 +91,14 @@ czyWiekszaNizKwad() {
 }
 
 main() {
-    echo "Podaj dwie liczby: "
     read a
     read b
 
     wynik=$(czyWieksza $a $b)
-    echo "Pierwsza liczba jest wieksza od drugiej: $wynik"
 
     wynik=$(czySumaMniejsza $a $b)
-    echo "Suma liczb jest mniejsza od 10: $wynik"
 
     wynik=$(czyObieNieparzyste $a $b)
-    echo "Obie liczby nieparzyste: $wynik"
 
     wynik=$(czyWiekszaNizKwad $a $b)
     echo "Wieksza liczba jest mniejsza od pierwszej podniesionej do kwadratu $wynik"

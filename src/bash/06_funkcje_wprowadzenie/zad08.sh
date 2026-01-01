@@ -80,13 +80,11 @@ podziel() {
 }
 
 main() {
-    echo "Podaj dwie liczby: "
     read a
     read b
 
     podziel $a $b
     wynik=$?
-    echo "iloraz pierwszej przez druga: $wynik"
 
 }
 

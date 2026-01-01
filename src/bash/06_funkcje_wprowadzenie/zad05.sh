@@ -41,13 +41,11 @@ swapV1() {
 }
 
 main() {
-    echo "Podaj dwie liczby: "
     read a
     read b
 
     swapV1 a b
 
-    echo "Liczby zamienione miejscami: $a $b"
 
 }
 

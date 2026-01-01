@@ -63,12 +63,9 @@ srednia() {
 }
 
 main() {
-    echo "Podaj liczbe n: "
     read n
 
-    echo "Wprowadz $n liczb: "
     wynik=$(srednia $n)
-    echo "srednia arytmetyczna z podanych liczb: $wynik"
 }
 
 main "$@"
