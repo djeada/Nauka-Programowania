@@ -34,4 +34,28 @@ ani nie wybrał się do teatru
 ```
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja dzieląca tekst względem znaków interpunkcyjnych
+// Złożoność czasowa: O(n), gdzie n to długość tekstu
+// Złożoność pamięciowa: O(n)
+fn podziel_po_interpunkcji(tekst: &str) -> Vec<String> {
+    tekst
+        .split(|c: char| matches!(c, ',' | '.' | '!' | '?' | ';' | ':'))
+        .map(|fragment| fragment.trim().to_string())
+        .filter(|fragment| !fragment.is_empty())
+        .collect()
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let tekst = input.trim();
+    
+    let fragmenty = podziel_po_interpunkcji(tekst);
+    
+    for fragment in fragmenty {
+        println!("{}", fragment);
+    }
+}

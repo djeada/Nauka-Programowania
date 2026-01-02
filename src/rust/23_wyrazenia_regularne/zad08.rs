@@ -36,4 +36,61 @@ Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
 ```
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja wyodrębniająca cyfry będące częścią słów
+// Złożoność czasowa: O(n), gdzie n to długość zdania
+// Złożoność pamięciowa: O(n)
+fn wyodrebnij_cyfry_w_slowach(zdanie: &str) -> Vec<String> {
+    let mut wynik = Vec::new();
+    let mut biezacy_ciag = String::new();
+    let mut w_slowie = false;
+    
+    for (i, c) in zdanie.chars().enumerate() {
+        if c.is_alphanumeric() {
+            if c.is_digit(10) {
+                // Sprawdź czy jesteśmy w słowie (czy poprzedni/następny znak to litera)
+                let poprzedni_litera = i > 0 && zdanie.chars().nth(i - 1).map(|ch| ch.is_alphabetic()).unwrap_or(false);
+                let nastepny_litera = zdanie.chars().nth(i + 1).map(|ch| ch.is_alphabetic()).unwrap_or(false);
+                
+                if poprzedni_litera || nastepny_litera || w_slowie {
+                    biezacy_ciag.push(c);
+                    w_slowie = true;
+                }
+            } else {
+                // To litera
+                if !biezacy_ciag.is_empty() {
+                    wynik.push(biezacy_ciag.clone());
+                    biezacy_ciag.clear();
+                }
+                w_slowie = true;
+            }
+        } else {
+            // Koniec słowa
+            if !biezacy_ciag.is_empty() {
+                wynik.push(biezacy_ciag.clone());
+                biezacy_ciag.clear();
+            }
+            w_slowie = false;
+        }
+    }
+    
+    if !biezacy_ciag.is_empty() {
+        wynik.push(biezacy_ciag);
+    }
+    
+    wynik
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let zdanie = input.trim();
+    
+    let cyfry = wyodrebnij_cyfry_w_slowach(zdanie);
+    
+    for ciag in cyfry {
+        println!("{}", ciag);
+    }
+}

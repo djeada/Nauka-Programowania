@@ -35,4 +35,22 @@ Terminator2001
 ```
 
 */
-fn main() {}
+
+use std::io;
+
+// Funkcja wyodrębniająca cyfry z tekstu
+// Złożoność czasowa: O(n), gdzie n to długość tekstu
+// Złożoność pamięciowa: O(n)
+fn wyodrebnij_cyfry(tekst: &str) -> String {
+    tekst.chars()
+        .filter(|c| c.is_digit(10))
+        .collect()
+}
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+    let tekst = input.trim();
+    
+    println!("{}", wyodrebnij_cyfry(tekst));
+}
