@@ -32,10 +32,16 @@ Dla `a = [3, 2, 1]` i `x = 1` funkcja zwraca:
 def wartosc_wielomianu_w_punkcie(wspolczynniki, x):
     """
     Funkcja zwraca wartosc wielomianu w punkcie x.
+    Współczynniki w formacie [a_n, ..., a_0] (najwyższy stopień pierwszy).
+    
+    Złożoność czasowa: O(n), gdzie n to stopień wielomianu
+    Złożoność pamięciowa: O(1)
     """
     wynik = 0
-    for i in range(len(wspolczynniki)):
-        wynik += wspolczynniki[i] * x**i
+    n = len(wspolczynniki)
+    for i in range(n):
+        # wspolczynniki[i] to współczynnik przy x^(n-1-i)
+        wynik += wspolczynniki[i] * (x ** (n - 1 - i))
     return wynik
 
 
@@ -45,4 +51,15 @@ def test_wartosc_wielomianu_w_punkcie():
 
 
 if __name__ == "__main__":
-    test_wartosc_wielomianu_w_punkcie()
+    # Wczytanie współczynników wielomianu jako listy
+    wspolczynniki = eval(input().strip())
+    # Wczytanie punktu x
+    x = int(input().strip())
+    
+    # Obliczenie wartości wielomianu
+    # Złożoność czasowa: O(n)
+    # Złożoność pamięciowa: O(1)
+    wynik = wartosc_wielomianu_w_punkcie(wspolczynniki, x)
+    
+    # Wypisanie wyniku
+    print(wynik)
