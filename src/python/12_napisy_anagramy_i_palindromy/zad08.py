@@ -64,7 +64,14 @@ def czy_wyjatkowy_palindrom(s):
         return False
     
     # Przypadek 1: wszystkie znaki identyczne
-    if len(set(s)) == 1:
+    # Sprawdzenie bez tworzenia zbioru (O(1) pamięci)
+    wszystkie_takie_same = True
+    for znak in s:
+        if znak != s[0]:
+            wszystkie_takie_same = False
+            break
+    
+    if wszystkie_takie_same:
         return True
     
     # Przypadek 2: wszystkie znaki poza środkowym identyczne
@@ -72,10 +79,18 @@ def czy_wyjatkowy_palindrom(s):
     if len(s) >= 3 and len(s) % 2 == 1:
         srodek = len(s) // 2
         # Sprawdzenie czy wszystkie znaki poza środkowym są takie same
-        znaki_bez_srodka = s[:srodek] + s[srodek+1:]
-        if len(set(znaki_bez_srodka)) == 1:
-            # Dodatkowo musi być palindromem
-            return s == s[::-1]
+        # Porównanie bez tworzenia zbioru
+        if s != s[::-1]:  # Musi być palindromem
+            return False
+        
+        wszystkie_inne_takie_same = True
+        for i in range(len(s)):
+            if i != srodek and s[i] != s[0]:
+                wszystkie_inne_takie_same = False
+                break
+        
+        if wszystkie_inne_takie_same:
+            return True
     
     return False
 

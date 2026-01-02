@@ -46,7 +46,7 @@ def minimalne_usuniecia(slowo1, slowo2):
     """
     Oblicza minimalną liczbę znaków do usunięcia, aby słowa były anagramami.
     
-    Złożoność czasowa: O(n), gdzie n to długość słowa (zakładając n = m)
+    Złożoność czasowa: O(n + m), gdzie n i m to długości słów
     Złożoność pamięciowa: O(k), gdzie k to liczba unikalnych znaków
     """
     # Jeśli słowa mają różne długości, zwróć -1

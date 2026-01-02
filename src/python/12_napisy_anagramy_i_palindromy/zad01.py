@@ -45,7 +45,7 @@ def czy_palindrom(slowo):
     Sprawdza czy słowo jest palindromem.
     
     Złożoność czasowa: O(n), gdzie n to długość słowa
-    Złożoność pamięciowa: O(1) - porównanie bez tworzenia nowych struktur
+    Złożoność pamięciowa: O(n) - tworzenie odwróconej wersji słowa
     """
     # Konwersja na małe litery dla porównania bez uwzględniania wielkości liter
     slowo_male = slowo.lower()
