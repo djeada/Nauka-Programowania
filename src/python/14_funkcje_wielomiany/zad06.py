@@ -71,7 +71,7 @@ if __name__ == "__main__":
     # Wczytanie współczynników jako listy lub osobno
     try:
         # Próba wczytania jako lista
-        wspolczynniki = eval(input().strip())
+        wspolczynniki = __import__("ast").literal_eval(input().strip())
     except:
         # Wczytanie jako trzy oddzielne liczby
         line = input().strip().split()

@@ -52,7 +52,7 @@ def test_wartosc_wielomianu_w_punkcie():
 
 if __name__ == "__main__":
     # Wczytanie współczynników wielomianu jako listy
-    wspolczynniki = eval(input().strip())
+    wspolczynniki = __import__("ast").literal_eval(input().strip())
     # Wczytanie punktu x
     x = int(input().strip())
     

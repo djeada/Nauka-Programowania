@@ -46,8 +46,6 @@ Jeśli długości są różne, wypisz: `Pusta macierz`
 
 """
 
-import string
-
 
 def polacz_listy_w_macierz(lista_a, lista_b):
     """
@@ -55,8 +53,8 @@ def polacz_listy_w_macierz(lista_a, lista_b):
     elementow pierwszej listy, a druga kolumna elementow drugiej listy.
     Jesli otrzymane listy nie sa rownej dlugosci zwroc pusta macierz.
     
-    Złożoność czasowa: O(n), gdzie n to długość list
-    Złożoność pamięciowa: O(n) dla wynikowej macierzy
+    Złożoność czasowa: O(min(n, m)), gdzie n i m to długości list
+    Złożoność pamięciowa: O(min(n, m)) dla wynikowej macierzy
     """
     if len(lista_a) != len(lista_b):
         return []

@@ -69,8 +69,8 @@ def test_suma_wielomianow():
 
 if __name__ == "__main__":
     # Wczytanie dwóch wielomianów jako listy
-    wielomian_a = eval(input().strip())
-    wielomian_b = eval(input().strip())
+    wielomian_a = __import__("ast").literal_eval(input().strip())
+    wielomian_b = __import__("ast").literal_eval(input().strip())
     
     # Suma wielomianów
     # Złożoność czasowa: O(max(n, m))

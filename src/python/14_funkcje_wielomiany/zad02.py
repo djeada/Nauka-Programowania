@@ -41,7 +41,7 @@ def test_mnozenie_wielomianu():
 
 if __name__ == "__main__":
     # Wczytanie współczynników wielomianu jako listy
-    wspolczynniki = eval(input().strip())
+    wspolczynniki = __import__("ast").literal_eval(input().strip())
     # Wczytanie skalara
     k = int(input().strip())
     

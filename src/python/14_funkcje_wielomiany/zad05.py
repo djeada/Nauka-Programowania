@@ -62,7 +62,7 @@ def test_pochodna():
 
 if __name__ == "__main__":
     # Wczytanie wielomianu jako listy
-    wielomian = eval(input().strip())
+    wielomian = __import__("ast").literal_eval(input().strip())
     # Wczytanie stopnia pochodnej
     k = int(input().strip())
     
