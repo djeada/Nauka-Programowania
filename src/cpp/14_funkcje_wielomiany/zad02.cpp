@@ -29,6 +29,8 @@ Dla `a = [4, -3, 2]` i `k = -2` funkcja zwraca:
 #include <cmath>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 std::vector<int> iloczyn(std::vector<int> &wielomian, int x) {
   /**
    * Funkcja zwraca wielomian bedacy wynikiem mnozenia otrzymanego wielomianu

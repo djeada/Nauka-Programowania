@@ -32,6 +32,8 @@ Dla `a = [3, 2, 1]` i `x = 1` funkcja zwraca:
 #include <cmath>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 int wartoscWielomianu(std::vector<int> &wielomian, int x) {
   /**
    * Funkcja zwraca wartosc wielomianu w punkcie x.

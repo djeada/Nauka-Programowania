@@ -38,9 +38,12 @@ Dla `[1, 2, 1]` funkcja zwraca:
 */
 #include <cassert>
 #include <cmath>
+#include <stdexcept>
 #include <utility>
 #include <vector>
 
+// Zlozonosc Czasowa: O(1)
+// Zlozonosc Pamieciowa: O(1)
 std::pair<double, double> pierwiastki(std::vector<int> &wspolczynniki) {
   /**
    * Funkcja zwraca liste miejsc zerowych rownania kwadratowego.
