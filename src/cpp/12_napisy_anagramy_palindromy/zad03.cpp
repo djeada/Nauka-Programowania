@@ -10,8 +10,8 @@ zwrocona wartosc logiczna: Prawda.
 #include <cassert>
 #include <string>
 
-// Zlozonosc czasowa O(n)
-// Zlozonosc pamieciowa O(1)
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 bool anagram(std::string s1, std::string s2) {
   int N = s1.length();
   int M = s2.length();

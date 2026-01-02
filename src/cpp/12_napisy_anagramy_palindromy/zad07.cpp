@@ -13,8 +13,13 @@ liczba: 2.
 #include <cassert>
 #include <string>
 #include <unordered_map>
+#include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 int liczbaZnakow(const std::string &slowoA, const std::string &slowoB) {
+  if (slowoA.length() != slowoB.length()) return -1;
+  
   std::vector<int> pom(256, 0);
 
   for (auto znak : slowoA) pom[znak - 'a']++;

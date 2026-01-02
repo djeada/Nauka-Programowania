@@ -10,6 +10,8 @@ Dla otrzymanego napisu: “taco”, powinna zostac zwrocona lista: ["taco", "toc
 #include <string>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 bool palindrom(std::string &slowo) {
   int N = slowo.length() - 1;
   for (int i = 0; i <= N / 2; i++) {
@@ -19,6 +21,8 @@ bool palindrom(std::string &slowo) {
   return true;
 }
 
+// Zlozonosc Czasowa: O(n!)
+// Zlozonosc Pamieciowa: O(n!)
 void permutacja(std::string &slowoWej, std::string &slowoWyj,
                 std::vector<std::string> &wynik) {
   if (slowoWej.empty() && palindrom(slowoWyj) &&
@@ -36,6 +40,8 @@ void permutacja(std::string &slowoWej, std::string &slowoWyj,
   }
 }
 
+// Zlozonosc Czasowa: O(n!)
+// Zlozonosc Pamieciowa: O(n!)
 std::vector<std::string> permutacje(std::string &slowoWej) {
   std::vector<std::string> wynik;
 
@@ -45,6 +51,8 @@ std::vector<std::string> permutacje(std::string &slowoWej) {
   return wynik;
 }
 
+// Zlozonosc Czasowa: O(n log n)
+// Zlozonosc Pamieciowa: O(1)
 bool wektoryRowne(std::vector<std::string> v1, std::vector<std::string> v2) {
   sort(v1.begin(), v1.end());
   sort(v2.begin(), v2.end());

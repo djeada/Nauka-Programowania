@@ -10,6 +10,8 @@ otrzymanego napisu: “kajak”, powinna zostac zwrocona wartosc logiczna: Prawd
 #include <cassert>
 #include <string>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 bool palindrom(std::string &slowo) {
   int N = slowo.length() - 1;
   for (int i = 0; i <= N / 2; i++) {

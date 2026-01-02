@@ -11,6 +11,8 @@ otrzymanego napisu: “abc”, powinna zostac zwrocona lista: [“abc”, “bac
 #include <string>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n!)
+// Zlozonosc Pamieciowa: O(n!)
 void permutacja(std::string &slowoWej, std::string &slowoWyj,
                 std::vector<std::string> &wynik) {
   if (slowoWej.empty()) {
@@ -27,6 +29,8 @@ void permutacja(std::string &slowoWej, std::string &slowoWyj,
   }
 }
 
+// Zlozonosc Czasowa: O(n!)
+// Zlozonosc Pamieciowa: O(n!)
 std::vector<std::string> permutacje(std::string &slowoWej) {
   std::vector<std::string> wynik;
 

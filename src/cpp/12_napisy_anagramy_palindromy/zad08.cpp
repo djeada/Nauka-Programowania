@@ -20,6 +20,8 @@ Dla otrzymanego napisu: “xxxx”, powinna zostac zwrocona lista: [“x”, “
 #include <string>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n^2)
+// Zlozonosc Pamieciowa: O(n)
 std::set<std::string> wyjatkowePalindromy(const std::string slowo) {
   std::set<std::string> wynik;
 
