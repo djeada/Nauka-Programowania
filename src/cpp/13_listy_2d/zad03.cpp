@@ -50,6 +50,8 @@ macierz`
 #include <utility>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 std::vector<std::pair<int, int>> macierz(std::vector<int> listaA,
                                          std::vector<int> listaB) {
   /**

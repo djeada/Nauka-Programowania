@@ -39,6 +39,8 @@ Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
 */
 #include <cassert>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n) - przez stos rekurencji
 int silniaV1(int n) {
   /**
    *

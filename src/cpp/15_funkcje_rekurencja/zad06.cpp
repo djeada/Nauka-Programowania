@@ -46,6 +46,8 @@ wszystkie **rzeczywiste** miejsca zerowe w kolejności rosnącej.
 */
 #include <cassert>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n) - przez stos rekurencji
 int ciagV1(int n) {
   /**
    *

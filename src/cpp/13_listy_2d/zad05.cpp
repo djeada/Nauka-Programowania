@@ -41,6 +41,8 @@ Prawda
 #include <utility>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 bool macierzKwadratowa(const std::vector<std::vector<int>> &macierz) {
   /**
    *
@@ -54,6 +56,8 @@ bool macierzKwadratowa(const std::vector<std::vector<int>> &macierz) {
   return true;
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 std::pair<int, int> przekatne(const std::vector<std::vector<int>> &macierz) {
   /**
    *
@@ -69,6 +73,8 @@ std::pair<int, int> przekatne(const std::vector<std::vector<int>> &macierz) {
   return std::make_pair(sumaPrzekatnej1, sumaPrzekatnej2);
 }
 
+// Zlozonosc Czasowa: O(n^2)
+// Zlozonosc Pamieciowa: O(n)
 std::vector<int> wiersze(const std::vector<std::vector<int>> &macierz) {
   /**
    *
@@ -86,6 +92,8 @@ std::vector<int> wiersze(const std::vector<std::vector<int>> &macierz) {
   return wynik;
 }
 
+// Zlozonosc Czasowa: O(n^2)
+// Zlozonosc Pamieciowa: O(n)
 std::vector<int> kolumny(const std::vector<std::vector<int>> &macierz) {
   /**
    *
@@ -104,6 +112,8 @@ std::vector<int> kolumny(const std::vector<std::vector<int>> &macierz) {
   return wynik;
 }
 
+// Zlozonosc Czasowa: O(n^2)
+// Zlozonosc Pamieciowa: O(n)
 bool magicznyKwadrat(const std::vector<std::vector<int>> &macierz) {
   /**
    *

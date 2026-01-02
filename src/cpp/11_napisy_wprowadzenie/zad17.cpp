@@ -42,6 +42,8 @@ sklej.
 #include <string>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n * log10(max_element))
+// Zlozonosc Pamieciowa: O(n * log10(max_element))
 std::string liczby(const std::vector<int> &lista) {
   std::string wynik = "";
 

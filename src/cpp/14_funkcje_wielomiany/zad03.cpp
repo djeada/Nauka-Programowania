@@ -32,6 +32,8 @@ Dla `a = [3, 5, 2]` i `b = [2, -8, 1]` funkcja zwraca:
 #include <cmath>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n + m)
+// Zlozonosc Pamieciowa: O(max(n, m))
 std::vector<int> sumaWielomianow(std::vector<int> &wielomianA,
                                  std::vector<int> &wielomianB) {
   /**

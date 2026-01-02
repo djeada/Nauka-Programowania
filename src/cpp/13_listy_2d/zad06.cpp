@@ -50,6 +50,8 @@ siebie i wypisz wynik w kolejności rosnącej po początku.
 #include <utility>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n log n)
+// Zlozonosc Pamieciowa: O(n)
 std::vector<std::pair<int, int>> polaczPrzedzialyV1(
     std::vector<std::pair<int, int>> &lista) {
   /**

@@ -41,16 +41,22 @@ Słoń
 #include <string>
 #include <vector>
 
+// Zlozonosc Czasowa: O(sqrt(n))
+// Zlozonosc Pamieciowa: O(1)
 bool czyPierwsza(int n) {
-  if (!(n % 2) && n < 2) return false;
+  if (n < 2) return false;
+  if (n == 2) return true;
+  if (n % 2 == 0) return false;
 
   for (int i = 3; i <= sqrt((double)n); i += 2) {
-    if (!(n % i)) return false;
+    if (n % i == 0) return false;
   }
 
   return true;
 }
 
+// Zlozonosc Czasowa: O(n * sqrt(n))
+// Zlozonosc Pamieciowa: O(n)
 std::vector<char> znaki(const std::string &napis) {
   std::vector<char> znaki;
 

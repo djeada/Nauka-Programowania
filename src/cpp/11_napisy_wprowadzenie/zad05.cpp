@@ -47,13 +47,21 @@ linii.
 */
 #include <iostream>
 
+// Zlozonosc Czasowa: O(n/k) gdzie n to dlugosc napisu
+// Zlozonosc Pamieciowa: O(1)
 void wypiszPoziomo(const std::string &napis, int k) {
-  for (unsigned int i = 0; i < napis.size(); i += k)
-    std::cout << napis[i] << ", ";
-
+  bool pierwszy = true;
+  for (unsigned int i = 0; i < napis.size(); i += k) {
+    if (!pierwszy)
+      std::cout << " ";
+    std::cout << napis[i];
+    pierwszy = false;
+  }
   std::cout << std::endl;
 }
 
+// Zlozonosc Czasowa: O(n/k) gdzie n to dlugosc napisu
+// Zlozonosc Pamieciowa: O(1)
 void wypiszPionowo(const std::string &napis, int k) {
   for (unsigned int i = 0; i < napis.size(); i += k)
     std::cout << napis[i] << std::endl;

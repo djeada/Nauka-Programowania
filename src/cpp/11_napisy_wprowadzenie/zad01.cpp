@@ -35,8 +35,8 @@ zczsrab
 #include <cassert>
 #include <string>
 
-// Zlozonosc Czasowa O(n)
-// Zlozonosc Pamieciowa O(1)
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void odwrocNapisV1(std::string &slowo) {
   int j = slowo.length() - 1;
 
@@ -47,8 +47,8 @@ void odwrocNapisV1(std::string &slowo) {
   }
 }
 
-// Zlozonosc Czasowa O(n)
-// Zlozonosc Pamieciowa O(1)
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void odwrocNapisV2(std::string &slowo) { reverse(slowo.begin(), slowo.end()); }
 
 void test1() {

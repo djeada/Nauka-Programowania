@@ -36,6 +36,8 @@ Robot
 #include <cassert>
 #include <string>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 void zamienV1(std::string &napis) {
   if (napis.empty()) return;
 

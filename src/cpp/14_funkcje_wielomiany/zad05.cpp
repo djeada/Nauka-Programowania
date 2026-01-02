@@ -32,6 +32,8 @@ Dla `a = [4, -3, 2]` oraz `k = 1` funkcja zwraca:
 #include <cassert>
 #include <vector>
 
+// Zlozonosc Czasowa: O(k * n)
+// Zlozonosc Pamieciowa: O(n)
 std::vector<int> pochodna(std::vector<int> &wielomian, int k) {
   /**
    * Funkcja oblicza k-ta pochodna wielomianu.

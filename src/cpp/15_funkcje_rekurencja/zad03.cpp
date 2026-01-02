@@ -44,6 +44,8 @@ dopisując zera na początku krótszej.
 */
 #include <cassert>
 
+// Zlozonosc Czasowa: O(b)
+// Zlozonosc Pamieciowa: O(b) - przez stos rekurencji
 int potegaV1(int a, int b) {
   /**
    *

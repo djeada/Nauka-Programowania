@@ -43,22 +43,26 @@ lubi
 #include <string>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
 
   while (it != napis.end()) {
     if (ispunct(*it))
-      napis.erase(it);
+      it = napis.erase(it);
     else
       it++;
   }
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 std::string najdluzsze(std::string &napis) {
   std::string wynik;
-  unsigned int dlugosc = 0;
-  unsigned int pocz = 0;
-  unsigned int konc = 0;
+  size_t dlugosc = 0;
+  size_t pocz = 0;
+  size_t konc = 0;
   while ((konc = napis.find(' ', pocz)) != std::string::npos) {
     if (konc != pocz) {
       auto slowo = napis.substr(pocz, konc - pocz);
@@ -71,7 +75,7 @@ std::string najdluzsze(std::string &napis) {
     }
     pocz = konc + 1;
   }
-  if (konc != pocz) {
+  if (pocz < napis.size()) {
     auto slowo = napis.substr(pocz);
     wyczysc(slowo);
     if (slowo.size() > dlugosc) {
@@ -83,11 +87,13 @@ std::string najdluzsze(std::string &napis) {
   return wynik;
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 std::string najkrotsze(std::string &napis) {
   std::string wynik;
-  unsigned int dlugosc = napis.size();
-  unsigned int pocz = 0;
-  unsigned int konc = 0;
+  size_t dlugosc = napis.size();
+  size_t pocz = 0;
+  size_t konc = 0;
   while ((konc = napis.find(' ', pocz)) != std::string::npos) {
     if (konc != pocz) {
       auto slowo = napis.substr(pocz, konc - pocz);
@@ -100,7 +106,7 @@ std::string najkrotsze(std::string &napis) {
     }
     pocz = konc + 1;
   }
-  if (konc != pocz) {
+  if (pocz < napis.size()) {
     auto slowo = napis.substr(pocz);
     wyczysc(slowo);
     if (slowo.size() < dlugosc) {

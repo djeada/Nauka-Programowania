@@ -28,6 +28,8 @@ Dla `a = [5, 0, 10, 6]` oraz `b = [1, 2, 4]` funkcja zwraca:
 #include <cmath>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n * m)
+// Zlozonosc Pamieciowa: O(n + m)
 std::vector<int> iloczyn(std::vector<int> &wielomianA,
                          std::vector<int> &wielomianB) {
   /**

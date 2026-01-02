@@ -37,8 +37,8 @@ alA am atok
 #include <string>
 #include <vector>
 
-// Zlozonosc Czasowa O(n)
-// Zlozonosc Pamieciowa O(1)
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void odwrocNapis(std::string &slowo, int pocz, int koniec) {
   int j = koniec;
 
@@ -49,19 +49,25 @@ void odwrocNapis(std::string &slowo, int pocz, int koniec) {
   }
 }
 
-// Zlozonosc Czasowa O(n^2)
-// Zlozonosc Pamieciowa O(1)
+// Zlozonosc Czasowa: O(n^2)
+// Zlozonosc Pamieciowa: O(1)
 void odwrocNapisy(std::string &zdanie) {
   unsigned int N = zdanie.length();
   unsigned int pocz = 0;
   unsigned int koniec;
 
   for (unsigned int i = 0; i < N; i++) {
-    if (zdanie[i] == ' ' || zdanie[i] == '\0') {
+    if (zdanie[i] == ' ') {
       koniec = i - 1;
       odwrocNapis(zdanie, pocz, koniec);
       pocz = i + 1;
     }
+  }
+  
+  // Odwroc ostatnie slowo
+  if (pocz < N) {
+    koniec = N - 1;
+    odwrocNapis(zdanie, pocz, koniec);
   }
 }
 

@@ -41,6 +41,8 @@ kolumna** tego zera mają zostać ustawione na `0` (dla wszystkich zer naraz).
 #include <cassert>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n * m)
+// Zlozonosc Pamieciowa: O(n + m)
 void wyzerujV1(std::vector<std::vector<int>> &macierz) {
   /**
    *

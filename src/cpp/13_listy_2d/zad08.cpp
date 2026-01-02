@@ -40,6 +40,8 @@ wskazówek zegara), startując z lewego górnego rogu.
 #include <cassert>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n * m)
+// Zlozonosc Pamieciowa: O(n * m)
 std::vector<int> spiralaV1(std::vector<std::vector<int>> &macierz) {
   /**
    *

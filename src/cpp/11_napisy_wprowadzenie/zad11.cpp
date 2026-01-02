@@ -39,22 +39,26 @@ Zepsuty rower.
 #include <cassert>
 #include <string>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
 
   while (it != napis.end()) {
     if (ispunct(*it))
-      napis.erase(it);
+      it = napis.erase(it);
     else
       it++;
   }
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 int srednia(const std::string &napis) {
-  unsigned int calk_dlugosc = 0;
-  unsigned int n = 0;
-  unsigned int pocz = 0;
-  unsigned int konc = 0;
+  size_t calk_dlugosc = 0;
+  size_t n = 0;
+  size_t pocz = 0;
+  size_t konc = 0;
   while ((konc = napis.find(' ', pocz)) != std::string::npos) {
     if (konc != pocz) {
       auto slowo = napis.substr(pocz, konc - pocz);
@@ -66,7 +70,7 @@ int srednia(const std::string &napis) {
     }
     pocz = konc + 1;
   }
-  if (konc != pocz) {
+  if (pocz < napis.size()) {
     auto slowo = napis.substr(pocz);
     wyczysc(slowo);
     if (!slowo.empty()) {
