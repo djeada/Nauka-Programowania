@@ -47,12 +47,14 @@ fn wyodrebnij_cyfry_w_slowach(zdanie: &str) -> Vec<String> {
     let mut biezacy_ciag = String::new();
     let mut w_slowie = false;
     
-    for (i, c) in zdanie.chars().enumerate() {
+    let chars: Vec<char> = zdanie.chars().collect();
+    
+    for (i, &c) in chars.iter().enumerate() {
         if c.is_alphanumeric() {
             if c.is_digit(10) {
                 // Sprawdź czy jesteśmy w słowie (czy poprzedni/następny znak to litera)
-                let poprzedni_litera = i > 0 && zdanie.chars().nth(i - 1).map(|ch| ch.is_alphabetic()).unwrap_or(false);
-                let nastepny_litera = zdanie.chars().nth(i + 1).map(|ch| ch.is_alphabetic()).unwrap_or(false);
+                let poprzedni_litera = i > 0 && chars[i - 1].is_alphabetic();
+                let nastepny_litera = i + 1 < chars.len() && chars[i + 1].is_alphabetic();
                 
                 if poprzedni_litera || nastepny_litera || w_slowie {
                     biezacy_ciag.push(c);
