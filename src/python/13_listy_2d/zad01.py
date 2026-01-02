@@ -39,8 +39,11 @@ Wczytaj `a` i `b`. Wypisz macierz składającą się z `a` identycznych wierszy,
 
 def stworz_macierz(a, b):
     """
-    Funkcja tworzy macierz o wymiarach a x b.
-    Kazdy wiersz sklada sie z liczb od 0 do b.
+    Funkcja tworzy macierz o wymiarach a x (b+1).
+    Kazdy wiersz sklada sie z liczb od 0 do b włącznie.
+    
+    Złożoność czasowa: O(a * b)
+    Złożoność pamięciowa: O(a * b)
     """
     macierz = []
     for i in range(a):
@@ -56,5 +59,15 @@ def test_stworz_macierz():
 
 
 if __name__ == "__main__":
-
-    test_stworz_macierz()
+    # Wczytanie wartości a i b z wejścia
+    a = int(input().strip())
+    b = int(input().strip())
+    
+    # Utworzenie macierzy
+    # Złożoność czasowa: O(a * b), gdzie a to liczba wierszy, b to liczba elementów w wierszu
+    # Złożoność pamięciowa: O(a * b) dla przechowania macierzy
+    macierz = stworz_macierz(a, b)
+    
+    # Wypisanie macierzy
+    for wiersz in macierz:
+        print(' '.join(map(str, wiersz)))

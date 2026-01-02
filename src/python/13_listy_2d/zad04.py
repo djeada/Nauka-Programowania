@@ -49,6 +49,9 @@ Najpierw `n` wierszy sumy, potem `n` wierszy różnicy (bez dodatkowych napisów
 def suma_macierzy(macierz_a, macierz_b):
     """
     Funkcja sumuje dwie macierze o rownych wymiarach i zwraca wynik.
+    
+    Złożoność czasowa: O(n * m), gdzie n to liczba wierszy, m to liczba kolumn
+    Złożoność pamięciowa: O(n * m) dla wynikowej macierzy
     """
 
     if len(macierz_a) != len(macierz_b):
@@ -63,7 +66,10 @@ def suma_macierzy(macierz_a, macierz_b):
 
 def roznica_macierzy(macierz_a, macierz_b):
     """
-    Funkcja odejmuje macierz_a od macierz_b i zwraca wynik.
+    Funkcja odejmuje macierz_b od macierz_a i zwraca wynik.
+    
+    Złożoność czasowa: O(n * m)
+    Złożoność pamięciowa: O(n * m)
     """
 
     if len(macierz_a) != len(macierz_b):
@@ -91,4 +97,32 @@ def test_roznica_macierzy():
 
 
 if __name__ == "__main__":
-    test_roznica_macierzy()
+    # Wczytanie wymiarów macierzy
+    n = int(input().strip())
+    m = int(input().strip())
+    
+    # Wczytanie pierwszej macierzy
+    macierz_a = []
+    for _ in range(n):
+        wiersz = list(map(int, input().strip().split()))
+        macierz_a.append(wiersz)
+    
+    # Wczytanie drugiej macierzy
+    macierz_b = []
+    for _ in range(n):
+        wiersz = list(map(int, input().strip().split()))
+        macierz_b.append(wiersz)
+    
+    # Obliczenie sumy i różnicy
+    # Złożoność czasowa: O(n * m)
+    # Złożoność pamięciowa: O(n * m)
+    suma = suma_macierzy(macierz_a, macierz_b)
+    roznica = roznica_macierzy(macierz_a, macierz_b)
+    
+    # Wypisanie sumy
+    for wiersz in suma:
+        print(' '.join(map(str, wiersz)))
+    
+    # Wypisanie różnicy
+    for wiersz in roznica:
+        print(' '.join(map(str, wiersz)))
