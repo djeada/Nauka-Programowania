@@ -56,17 +56,17 @@ fn test_1() {
 
 fn test_2() {
     let napis: String = "eDedCBcbAaa".to_owned();
-    let wynik = "ABCDabcdeae".to_owned();
+    let wynik = "ABCDaabcdee".to_owned();
     assert_eq!(sortuj_znaki(napis), wynik);
 }
 
 fn main() {
+    test_1();
+    test_2();
+    
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let napis = input.trim().to_string();
     
     println!("{}", sortuj_znaki(napis));
-}
-    test_1();
-    test_2();
 }
