@@ -38,7 +38,10 @@ Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od
 def stworz_macierz(n):
     """
     Funkcja tworzy macierz o wymiarach n x n, dla ktorej kazdy
-    element jest rowny iloczynowi wspolrzednych.
+    element jest rowny iloczynowi wspolrzednych (indeksów).
+    
+    Złożoność czasowa: O(n²)
+    Złożoność pamięciowa: O(n²)
     """
     macierz = []
     for i in range(n):
@@ -54,5 +57,14 @@ def test_stworz_macierz():
 
 
 if __name__ == "__main__":
-
-    test_stworz_macierz()
+    # Wczytanie wartości n z wejścia
+    n = int(input().strip())
+    
+    # Utworzenie macierzy
+    # Złożoność czasowa: O(n²)
+    # Złożoność pamięciowa: O(n²)
+    macierz = stworz_macierz(n)
+    
+    # Wypisanie macierzy
+    for wiersz in macierz:
+        print(' '.join(map(str, wiersz)))

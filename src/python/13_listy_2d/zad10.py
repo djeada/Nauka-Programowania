@@ -41,7 +41,10 @@ Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruch
 
 def obroc_o_90(macierz):
     """
-    Funkcja obraca macierz o 90 stopni.
+    Funkcja obraca macierz o 90 stopni zgodnie z ruchem wskazówek zegara.
+    
+    Złożoność czasowa: O(n²), gdzie n to rozmiar macierzy
+    Złożoność pamięciowa: O(1) - obrót in-place
     """
 
     if len(macierz) != len(macierz[0]):
@@ -49,21 +52,15 @@ def obroc_o_90(macierz):
 
     n = len(macierz)
 
-    for i in range(n // 2 + 1):
-        ostatni = n - 1 - i
-
-        for j in range(i + 1, ostatni):
-            pom = macierz[i][j]
-            macierz[i][j] = macierz[n - 1 - j][i]
-            macierz[n - 1 - j][i] = macierz[n - 1 - i][n - 1 - j]
-            macierz[n - 1 - i][n - 1 - j] = macierz[j][n - 1 - i]
-            macierz[j][n - 1 - i] = pom
-
-        pom = macierz[i][i]
-        macierz[i][i] = macierz[n - 1 - i][i]
-        macierz[n - 1 - i][i] = macierz[n - 1 - i][n - 1 - i]
-        macierz[n - 1 - i][n - 1 - i] = macierz[i][n - 1 - i]
-        macierz[i][n - 1 - i] = pom
+    # Obrót o 90 stopni w prawo: transpozycja + odwrócenie wierszy
+    # Najpierw transpozycja
+    for i in range(n):
+        for j in range(i + 1, n):
+            macierz[i][j], macierz[j][i] = macierz[j][i], macierz[i][j]
+    
+    # Potem odwrócenie każdego wiersza
+    for i in range(n):
+        macierz[i].reverse()
 
     return macierz
 
@@ -75,5 +72,20 @@ def test_obroc_o_90():
 
 
 if __name__ == "__main__":
-
-    test_obroc_o_90()
+    # Wczytanie rozmiaru macierzy
+    n = int(input().strip())
+    
+    # Wczytanie macierzy
+    macierz = []
+    for _ in range(n):
+        wiersz = list(map(int, input().strip().split()))
+        macierz.append(wiersz)
+    
+    # Obrót macierzy o 90 stopni
+    # Złożoność czasowa: O(n²)
+    # Złożoność pamięciowa: O(1)
+    obroc_o_90(macierz)
+    
+    # Wypisanie wyniku
+    for wiersz in macierz:
+        print(' '.join(map(str, wiersz)))

@@ -41,5 +41,33 @@ Prawda
 
 """
 
+
+def czy_anagramy(slowo1, slowo2):
+    """
+    Sprawdza czy dwa słowa są anagramami.
+    
+    Złożoność czasowa: O(n log n), gdzie n to długość słowa (sortowanie)
+    Złożoność pamięciowa: O(n) dla posortowanych kopii słów
+    """
+    # Ignorowanie wielkości liter
+    slowo1_male = slowo1.lower()
+    slowo2_male = slowo2.lower()
+    
+    # Anagramy muszą mieć tę samą długość
+    if len(slowo1_male) != len(slowo2_male):
+        return False
+    
+    # Porównanie posortowanych liter
+    return sorted(slowo1_male) == sorted(slowo2_male)
+
+
 if __name__ == "__main__":
-    pass
+    # Wczytanie dwóch słów z wejścia
+    slowo1 = input().strip()
+    slowo2 = input().strip()
+    
+    # Sprawdzenie czy słowa są anagramami
+    if czy_anagramy(slowo1, slowo2):
+        print("Prawda")
+    else:
+        print("Fałsz")

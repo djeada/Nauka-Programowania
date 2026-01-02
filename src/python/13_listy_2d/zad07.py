@@ -43,13 +43,32 @@ def wyzeruj_macierz(macierz):
     """
     Funkcja zamienia wszystkie elementy w kolumnach i wierszach na zera
     jesli jeden z elementow jest rowny zero.
+    
+    Złożoność czasowa: O(n * m), gdzie n to liczba wierszy, m to liczba kolumn
+    Złożoność pamięciowa: O(n + m) dla zbiorów wierszy i kolumn do wyzerowania
     """
+    if not macierz or not macierz[0]:
+        return macierz
+    
+    # Znajdź wszystkie pozycje zer
+    wiersze_do_wyzerowania = set()
+    kolumny_do_wyzerowania = set()
+    
     for i in range(len(macierz)):
         for j in range(len(macierz[i])):
             if macierz[i][j] == 0:
-                for k in range(len(macierz)):
-                    macierz[i][k] = 0
-                    macierz[k][j] = 0
+                wiersze_do_wyzerowania.add(i)
+                kolumny_do_wyzerowania.add(j)
+    
+    # Wyzeruj odpowiednie wiersze i kolumny
+    for i in wiersze_do_wyzerowania:
+        for j in range(len(macierz[i])):
+            macierz[i][j] = 0
+    
+    for j in kolumny_do_wyzerowania:
+        for i in range(len(macierz)):
+            macierz[i][j] = 0
+    
     return macierz
 
 
@@ -67,5 +86,20 @@ def test_wyzeruj_macierz():
 
 
 if __name__ == "__main__":
-
-    test_wyzeruj_macierz()
+    # Wczytanie wymiarów macierzy
+    n, m = map(int, input().strip().split())
+    
+    # Wczytanie macierzy
+    macierz = []
+    for _ in range(n):
+        wiersz = list(map(int, input().strip().split()))
+        macierz.append(wiersz)
+    
+    # Wyzerowanie macierzy
+    # Złożoność czasowa: O(n * m)
+    # Złożoność pamięciowa: O(n + m)
+    wyzeruj_macierz(macierz)
+    
+    # Wypisanie wyniku
+    for wiersz in macierz:
+        print(' '.join(map(str, wiersz)))

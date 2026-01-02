@@ -32,18 +32,27 @@ Dla `a = [4, -3, 2]` oraz `k = 1` funkcja zwraca:
 def pochodna(wielomian, k):
     """
     Funkcja oblicza k-ta pochodna wielomianu.
+    
+    Złożoność czasowa: O(k * n), gdzie n to stopień wielomianu
+    Złożoność pamięciowa: O(n) dla wyniku
     """
-    wynik = []
-    kopia = wielomian[:]
-
-    for i in range(k):
-        wynik = []
-        n = len(kopia)
+    if not wielomian or k < 0:
+        return [0]
+    
+    wynik = wielomian[:]
+    
+    for _ in range(k):
+        if len(wynik) <= 1:
+            wynik = [0]
+            break
+        
+        nowy_wynik = []
+        n = len(wynik)
         for i in range(n - 1):
-            wynik.append(kopia[i] * (n - i - 1))
-        kopia = wynik[:]
-
-    return wynik
+            nowy_wynik.append(wynik[i] * (n - i - 1))
+        wynik = nowy_wynik
+    
+    return wynik if wynik else [0]
 
 
 def test_pochodna():
@@ -52,5 +61,15 @@ def test_pochodna():
 
 
 if __name__ == "__main__":
-
-    test_pochodna()
+    # Wczytanie wielomianu jako listy
+    wielomian = __import__("ast").literal_eval(input().strip())
+    # Wczytanie stopnia pochodnej
+    k = int(input().strip())
+    
+    # Obliczenie k-tej pochodnej
+    # Złożoność czasowa: O(k * n)
+    # Złożoność pamięciowa: O(n)
+    wynik = pochodna(wielomian, k)
+    
+    # Wypisanie wyniku jako lista
+    print(str(wynik))
