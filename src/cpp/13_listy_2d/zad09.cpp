@@ -46,6 +46,8 @@ e f g
 #include <limits>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n^2)
+// Zlozonosc Pamieciowa: O(1)
 int klepsydraV1(std::vector<std::vector<int>> &macierz) {
   /**
    *

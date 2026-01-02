@@ -39,6 +39,8 @@ gdzie każdy wiersz to liczby od `0` do `b` włącznie.
 #include <cassert>
 #include <vector>
 
+// Zlozonosc Czasowa: O(a * b)
+// Zlozonosc Pamieciowa: O(a * b)
 std::vector<std::vector<int>> macierz(int a, int b) {
   /**
    *

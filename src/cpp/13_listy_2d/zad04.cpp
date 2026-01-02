@@ -47,6 +47,8 @@ Najpierw `n` wierszy sumy, potem `n` wierszy różnicy (bez dodatkowych napisów
 #include <cassert>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n * m)
+// Zlozonosc Pamieciowa: O(1)
 bool wymiaryRowne(std::vector<std::vector<int>> macierzA,
                   std::vector<std::vector<int>> macierzB) {
   /**
@@ -61,6 +63,8 @@ bool wymiaryRowne(std::vector<std::vector<int>> macierzA,
   return true;
 }
 
+// Zlozonosc Czasowa: O(n * m)
+// Zlozonosc Pamieciowa: O(n * m)
 std::vector<std::vector<int>> dodaj(std::vector<std::vector<int>> macierzA,
                                     std::vector<std::vector<int>> macierzB) {
   /**
@@ -80,6 +84,8 @@ std::vector<std::vector<int>> dodaj(std::vector<std::vector<int>> macierzA,
   return wynik;
 }
 
+// Zlozonosc Czasowa: O(n * m)
+// Zlozonosc Pamieciowa: O(n * m)
 std::vector<std::vector<int>> odejmij(std::vector<std::vector<int>> macierzA,
                                       std::vector<std::vector<int>> macierzB) {
   /**

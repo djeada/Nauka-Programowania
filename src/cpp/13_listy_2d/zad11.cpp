@@ -48,6 +48,8 @@ wypisywania planszy.
 #include <cassert>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n^2)
+// Zlozonosc Pamieciowa: O(1)
 void obroc(std::vector<std::vector<int>> &macierz) {
   int N = macierz.size();
 

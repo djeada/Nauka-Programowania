@@ -38,6 +38,8 @@ Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od
 #include <utility>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n^2)
+// Zlozonosc Pamieciowa: O(n^2)
 std::vector<std::vector<int>> macierz(int n) {
   /**
    *
