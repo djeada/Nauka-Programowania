@@ -40,19 +40,40 @@ Wczytaj macierz `n×m` i wypisz jej elementy spiralnie (zgodnie z ruchem wskazó
 def spirala(macierz):
     """
     Zwraca liste elementow z macierzy zebranych spiralnie.
+    
+    Złożoność czasowa: O(n * m), gdzie n to liczba wierszy, m to liczba kolumn
+    Złożoność pamięciowa: O(n * m) dla wyniku
     """
+    if not macierz or not macierz[0]:
+        return []
+    
     lista = []
-    k = 0
-    while k < len(macierz):
-        for i in range(k, len(macierz) - k):
-            lista.append(macierz[k][i])
-        for i in range(k + 1, len(macierz) - k):
-            lista.append(macierz[i][len(macierz) - k - 1])
-        for i in range(len(macierz) - k - 2, k - 1, -1):
-            lista.append(macierz[len(macierz) - k - 1][i])
-        for i in range(len(macierz) - k - 2, k, -1):
-            lista.append(macierz[i][k])
-        k += 1
+    gora, dol = 0, len(macierz) - 1
+    lewo, prawo = 0, len(macierz[0]) - 1
+    
+    while gora <= dol and lewo <= prawo:
+        # Przejdź w prawo po górnym wierszu
+        for j in range(lewo, prawo + 1):
+            lista.append(macierz[gora][j])
+        gora += 1
+        
+        # Przejdź w dół po prawej kolumnie
+        for i in range(gora, dol + 1):
+            lista.append(macierz[i][prawo])
+        prawo -= 1
+        
+        # Przejdź w lewo po dolnym wierszu (jeśli jeszcze istnieje)
+        if gora <= dol:
+            for j in range(prawo, lewo - 1, -1):
+                lista.append(macierz[dol][j])
+            dol -= 1
+        
+        # Przejdź w górę po lewej kolumnie (jeśli jeszcze istnieje)
+        if lewo <= prawo:
+            for i in range(dol, gora - 1, -1):
+                lista.append(macierz[i][lewo])
+            lewo += 1
+    
     return lista
 
 
@@ -95,5 +116,19 @@ def test_spirala():
 
 
 if __name__ == "__main__":
-
-    test_spirala()
+    # Wczytanie wymiarów macierzy
+    n, m = map(int, input().strip().split())
+    
+    # Wczytanie macierzy
+    macierz = []
+    for _ in range(n):
+        wiersz = list(map(int, input().strip().split()))
+        macierz.append(wiersz)
+    
+    # Spiralne przejście
+    # Złożoność czasowa: O(n * m)
+    # Złożoność pamięciowa: O(n * m)
+    wynik = spirala(macierz)
+    
+    # Wypisanie wyniku
+    print(' '.join(map(str, wynik)))
