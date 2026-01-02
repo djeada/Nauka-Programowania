@@ -1,47 +1,62 @@
 /*
-ZAD-02 — Wszystkie permutacje słowa
-
-**Poziom:** ★★☆
-**Tagi:** `rekurencja`, `permutacje`, `backtracking`
-
-### Treść
-
-Wczytaj słowo z **unikalnych liter** i wypisz wszystkie jego permutacje — każdą
-w osobnej linii.
-
-### Wejście
-
-* 1. linia: słowo (litery nie powtarzają się)
-
-### Wyjście
-
-Wiele linii — wszystkie permutacje słowa, każda w osobnej linii.
-
-### Przykład
-
-**Wejście:**
-
-```
-abc
-```
-
-**Wyjście:**
-
-```
-abc
-acb
-bac
-bca
-cab
-cba
-```
-
-### Uwagi o formatowaniu
-
-* Kolejność wypisywania permutacji nie musi być dokładnie taka jak w
-przykładzie, o ile są wszystkie i bez powtórzeń.
+Tytul: Znalezienie wszystkich permutacji slowa.
+Tresc: Napisz program, ktory dla otrzymanego napisu znajdzie jego wszystkie
+permutacje. Dane wejsciowe: Napis. Dane wyjsciowe: Lista napisow. Przyklad: Dla
+otrzymanego napisu: “abc”, powinna zostac zwrocona lista: [“abc”, “bac”, “cab”,
+“acb”, “bca”, “cba”].
 
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <string>
+#include <vector>
 
-int main() { return 0; }
+// Zlozonosc Czasowa: O(n!)
+// Zlozonosc Pamieciowa: O(n!)
+void permutacja(std::string &slowoWej, std::string &slowoWyj,
+                std::vector<std::string> &wynik) {
+  if (slowoWej.empty()) {
+    wynik.push_back(slowoWyj);
+    return;
+  }
+
+  for (unsigned int i = 0; i < slowoWej.length(); ++i) {
+    std::string noweSlowoWej = slowoWej;
+    std::string noweSlowoWyj = slowoWyj;
+    noweSlowoWej.erase(i, 1);
+    noweSlowoWyj += slowoWej.at(i);
+    permutacja(noweSlowoWej, noweSlowoWyj, wynik);
+  }
+}
+
+// Zlozonosc Czasowa: O(n!)
+// Zlozonosc Pamieciowa: O(n!)
+std::vector<std::string> permutacje(std::string &slowoWej) {
+  std::vector<std::string> wynik;
+
+  std::string slowoWyj;
+  permutacja(slowoWej, slowoWyj, wynik);
+
+  return wynik;
+}
+
+void test1() {
+  std::string slowo = "Dora";
+
+  std::vector<std::string> listaPermutacji = permutacje(slowo);
+
+  std::vector<std::string> wynik{
+      "Droa", "Daor", "aDor", "aroD", "aDro", "aorD", "raDo", "roDa",
+      "rDoa", "raoD", "aoDr", "arDo", "oraD", "oaDr", "orDa", "rDao",
+      "oDar", "roaD", "oarD", "oDra", "Dora", "Daro", "Doar", "Drao"};
+
+  sort(listaPermutacji.begin(), listaPermutacji.end());
+  sort(wynik.begin(), wynik.end());
+  assert(listaPermutacji == wynik);
+}
+
+int main() {
+  test1();
+
+  return 0;
+}
