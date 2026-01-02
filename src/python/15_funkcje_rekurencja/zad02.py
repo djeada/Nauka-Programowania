@@ -37,25 +37,33 @@ Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielony
 """
 
 
-def suma_liczb_mniejszych_niz_n(n):
+def mnoz_przez_skalar_rek(wspolczynniki, k):
     """
-    Funkcja oblicza sume liczb mniejszych od podanej liczby n.
+    Mnoży współczynniki wielomianu przez skalar (rekurencyjnie).
+    
+    Złożoność czasowa: O(n), gdzie n to liczba współczynników
+    Złożoność pamięciowa: O(n) ze względu na rekurencję
     """
-
-    if n < 1:
-        return 0
-
-    if n == 1:
-        return 1
-
-    return n + suma_liczb_mniejszych_niz_n(n - 1)
-
-
-def test_suma_liczb_mniejszych_niz_n():
-
-    assert suma_liczb_mniejszych_niz_n(1) == 1
+    if not wspolczynniki:
+        return []
+    
+    return [wspolczynniki[0] * k] + mnoz_przez_skalar_rek(wspolczynniki[1:], k)
 
 
 if __name__ == "__main__":
-
-    test_suma_liczb_mniejszych_niz_n()
+    # Wczytanie stopnia wielomianu
+    n = int(input().strip())
+    
+    # Wczytanie współczynników
+    wspolczynniki = list(map(int, input().strip().split()))
+    
+    # Wczytanie skalara
+    k = int(input().strip())
+    
+    # Mnożenie przez skalar
+    # Złożoność czasowa: O(n)
+    # Złożoność pamięciowa: O(n)
+    wynik = mnoz_przez_skalar_rek(wspolczynniki, k)
+    
+    # Wypisanie wyniku
+    print(' '.join(map(str, wynik)))
