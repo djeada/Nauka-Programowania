@@ -45,7 +45,7 @@ use std::io;
 // Funkcja szukająca klucza w cyklicznie posortowanej liście
 // Złożoność czasowa: O(n) - w najgorszym przypadku z duplikatami
 // Złożoność pamięciowa: O(1)
-fn znajdz_klucz_w_cyklicznej(lista: &Vec<i32>, klucz: i32) -> i32 {
+fn znajdz_klucz_w_cyklicznej(lista: &[i32], klucz: i32) -> i32 {
     // Szukamy pierwszego wystąpienia klucza
     for (i, &val) in lista.iter().enumerate() {
         if val == klucz {
