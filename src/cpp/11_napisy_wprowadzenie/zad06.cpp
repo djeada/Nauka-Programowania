@@ -35,12 +35,16 @@ L?t?rnik
 #include <cassert>
 #include <string>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void zamienV1(std::string &napis) {
   for (auto &znak : napis) {
     if (znak == 'a') znak = '?';
   }
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void zamienV2(std::string &napis) {
   replace(napis.begin(), napis.end(), 'a', '?');
 }

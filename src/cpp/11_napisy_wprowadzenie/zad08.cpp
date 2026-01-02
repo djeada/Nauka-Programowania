@@ -39,6 +39,8 @@ kota
 #include <iostream>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
 
@@ -50,6 +52,8 @@ void wyczysc(std::string &napis) {
   }
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 void wypiszSlowa(std::string &napis) {
   unsigned int pocz = 0;
   unsigned int konc = 0;

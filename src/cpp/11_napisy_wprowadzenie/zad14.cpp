@@ -36,6 +36,8 @@ separatorów.
 #include <cassert>
 #include <string>
 
+// Zlozonosc Czasowa: O(n * log10(n))
+// Zlozonosc Pamieciowa: O(n * log10(n))
 std::string liczby(int n) {
   std::string wynik = "";
 

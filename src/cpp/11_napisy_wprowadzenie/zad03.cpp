@@ -40,8 +40,8 @@ gram na pianinie.
 #include <cassert>
 #include <string>
 
-// Zlozonosc Czasowa O(n)
-// Zlozonosc Pamieciowa O(1)
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 int policzSlowaV1(std::string &slowo) {
   bool spacja = true;
   int licznik = 0;

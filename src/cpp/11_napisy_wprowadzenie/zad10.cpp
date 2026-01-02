@@ -43,6 +43,8 @@ lubi
 #include <string>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
 
@@ -54,6 +56,8 @@ void wyczysc(std::string &napis) {
   }
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 std::string najdluzsze(std::string &napis) {
   std::string wynik;
   unsigned int dlugosc = 0;
@@ -83,6 +87,8 @@ std::string najdluzsze(std::string &napis) {
   return wynik;
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 std::string najkrotsze(std::string &napis) {
   std::string wynik;
   unsigned int dlugosc = napis.size();

@@ -55,6 +55,8 @@ Zarobki: 1000
 #include <sstream>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 std::vector<std::string> dane(std::string &napis) {
   std::vector<std::string> wynik;
   std::stringstream ss(napis);
@@ -69,6 +71,8 @@ std::vector<std::string> dane(std::string &napis) {
   return wynik;
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 void wypiszDane(std::string &napis) {
   std::vector<std::string> wynik = dane(napis);
   assert(wynik.size() == 5);

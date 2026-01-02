@@ -38,6 +38,8 @@ axam
 #include <cassert>
 #include <string>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 int odlegloscHammingaV1(const std::string &napisA, const std::string &napisB) {
   if (napisA.size() != napisB.size()) return -1;
 

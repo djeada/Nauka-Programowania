@@ -37,8 +37,8 @@ a
 #include <cassert>
 #include <string>
 
-// Zlozonosc Czasowa O(n)
-// Zlozonosc Pamieciowa O(1)
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 int policzZnakV1(const std::string &slowo, const char &znak) {
   int licznik = 0;
 

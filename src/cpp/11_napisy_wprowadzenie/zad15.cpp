@@ -36,6 +36,8 @@ Ala ma kota
 #include <string>
 #include <vector>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
 
@@ -47,6 +49,8 @@ void wyczysc(std::string &napis) {
   }
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 std::vector<std::string> slowaV1(std::string &napis) {
   std::vector<std::string> wynik;
   unsigned int pocz = 0;

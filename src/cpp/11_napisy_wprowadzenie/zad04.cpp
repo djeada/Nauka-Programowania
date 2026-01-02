@@ -35,24 +35,24 @@ RUMCAJS
 #include <cassert>
 #include <string>
 
-// Zlozonosc Czasowa O(n)
-// Zlozonosc Pamieciowa O(1)
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void naWielkieV1(std::string &slowo) {
   for (auto &znak : slowo) {
     if (znak >= 97 && znak <= 122) znak -= 32;
   }
 }
 
-// Zlozonosc Czasowa O(n)
-// Zlozonosc Pamieciowa O(1)
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void naWielkieV2(std::string &slowo) {
   for (auto &znak : slowo) {
     if (islower(znak)) znak = toupper(znak);
   }
 }
 
-// Zlozonosc Czasowa O(n)
-// Zlozonosc Pamieciowa O(1)
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void naWielkieV3(std::string &slowo) {
   transform(slowo.begin(), slowo.end(), slowo.begin(), ::toupper);
 }

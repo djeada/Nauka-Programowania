@@ -39,6 +39,8 @@ Zepsuty rower.
 #include <cassert>
 #include <string>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(1)
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
 
@@ -50,6 +52,8 @@ void wyczysc(std::string &napis) {
   }
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n)
 int srednia(const std::string &napis) {
   unsigned int calk_dlugosc = 0;
   unsigned int n = 0;
