@@ -39,5 +39,27 @@ Prawda
 
 """
 
+
+def czy_palindrom(slowo):
+    """
+    Sprawdza czy słowo jest palindromem.
+    
+    Złożoność czasowa: O(n), gdzie n to długość słowa
+    Złożoność pamięciowa: O(1) - porównanie bez tworzenia nowych struktur
+    """
+    # Konwersja na małe litery dla porównania bez uwzględniania wielkości liter
+    slowo_male = slowo.lower()
+    
+    # Porównanie słowa z jego odwróconą wersją
+    return slowo_male == slowo_male[::-1]
+
+
 if __name__ == "__main__":
-    pass
+    # Wczytanie słowa z wejścia
+    slowo = input().strip()
+    
+    # Sprawdzenie czy słowo jest palindromem
+    if czy_palindrom(slowo):
+        print("Prawda")
+    else:
+        print("Fałsz")
