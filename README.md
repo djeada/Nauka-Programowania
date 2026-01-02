@@ -4611,27 +4611,6 @@ Po ukończeniu tego kursu masz wiele opcji:
 | **Project Euler** | 🟡 Średni | Matematyka + programowanie | [projecteuler.net](https://projecteuler.net) |
 | **Exercism** | 🟢 Początkujący | Mentorship | [exercism.io](https://exercism.io) |
 
-### 🎥 Kursy wideo (polskie)
-
-- **Pasja Informatyki** - YouTube
-- **Overment** - Kursy web development
-- **Samuraj Programowania** - Kompleksowe kursy
-- **Code with Chris** - Mobile development
-
-### 📱 Aplikacje mobilne
-
-- **SoloLearn** - Nauka w drodze
-- **Mimo** - Gamifikacja nauki
-- **Grasshopper** - JavaScript dla początkujących
-- **Programming Hub** - Wielojęzyczne
-
-### 🌍 Społeczności polskojęzyczne
-
-- **Programista.pl** - Forum
-- **4programmers.net** - Społeczność
-- **Stack Overflow PL** - Q&A
-- **Discord: Programowanie** - Chat
-
 ---
 
 ## 🙏 Podziękowania
