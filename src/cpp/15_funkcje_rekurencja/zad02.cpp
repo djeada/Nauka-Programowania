@@ -39,6 +39,8 @@ spacją.
 */
 #include <cassert>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n) - przez stos rekurencji
 int sumaV1(int N) {
   /**
    * Funkcja zwraca wielomian bedacy wynikiem mnozenia otrzymanego wielomianu

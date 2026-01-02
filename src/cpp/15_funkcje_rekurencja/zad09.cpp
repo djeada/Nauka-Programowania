@@ -11,6 +11,8 @@ powinna zostac zwrocona wartosc logiczna: Prawda.
 #include <cassert>
 #include <string>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n) - przez stos rekurencji
 int znajdz(std::string slowo, char znak, unsigned int pozycja = 0) {
   /**
    * Funkcja zwraca indeks pierwszego wystapienia litera w slowie.
@@ -22,6 +24,8 @@ int znajdz(std::string slowo, char znak, unsigned int pozycja = 0) {
   return znajdz(slowo, znak, pozycja + 1);
 }
 
+// Zlozonosc Czasowa: O(n * m) gdzie n to dlugosc slowa, m to dlugosc "elf"
+// Zlozonosc Pamieciowa: O(n + m) - przez stos rekurencji i kopie stringow
 bool czySlowoElfickie(std::string slowo, std::string elf = "elf") {
   /**
    * Funkcja sprawdza czy wszystkie litery slowa elf wystepuja w napisie.

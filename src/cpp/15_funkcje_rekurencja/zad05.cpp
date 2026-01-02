@@ -46,6 +46,8 @@ pochodna ma współczynniki:
 */
 #include <cassert>
 
+// Zlozonosc Czasowa: O(2^n)
+// Zlozonosc Pamieciowa: O(n) - przez stos rekurencji
 int fibonnaciV1(int n) {
   /**
    *
@@ -55,6 +57,8 @@ int fibonnaciV1(int n) {
   return fibonnaciV1(n - 1) + fibonnaciV1(n - 2);
 }
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n) - przez tablice memoizacji
 int fibonnaciV2(int n) {
   static int pom[100] = {0};
 

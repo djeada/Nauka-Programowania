@@ -43,6 +43,8 @@ Jedna liczba całkowita — wartość wielomianu w punkcie `x`.
 #include <cassert>
 #include <iostream>
 
+// Zlozonosc Czasowa: O(n)
+// Zlozonosc Pamieciowa: O(n) - przez rekurencje i string concatenation
 std::string mniejszeLiczby(int n) {
   /**
    *
@@ -51,7 +53,7 @@ std::string mniejszeLiczby(int n) {
 
   if (n == 1) return std::to_string(n);
 
-  return std::to_string(n) + ", " + mniejszeLiczbyV1(n - 1);
+  return std::to_string(n) + ", " + mniejszeLiczby(n - 1);
 }
 
 void testMniejszeLiczby() {

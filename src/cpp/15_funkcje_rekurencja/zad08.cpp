@@ -11,15 +11,20 @@ wejsciowe: Liczba naturalna N. Dane wyjsciowe: Lista par znakow. Przyklad: Dla N
 
 */
 #include <cassert>
+#include <functional>
 #include <utility>
 #include <vector>
 
+// Zlozonosc Czasowa: O(2^n)
+// Zlozonosc Pamieciowa: O(n) - przez stos rekurencji
 std::vector<std::pair<char, char>> hanoi(int n) {
   /**
    *
    */
-  auto hanoiWew = [&](int n, char a, char b, char c,
-                      std::vector<std::pair<char, char>> &wynik) {
+  std::vector<std::pair<char, char>> wynik;
+  
+  std::function<void(int, char, char, char)> hanoiWew = 
+      [&](int n, char a, char b, char c) {
     /**
      *
      */
@@ -28,13 +33,12 @@ std::vector<std::pair<char, char>> hanoi(int n) {
       return;
     }
 
-    hanoiWew(n - 1, a, c, b, wynik);
+    hanoiWew(n - 1, a, c, b);
     wynik.emplace_back(a, b);
-    hanoiWew(n - 1, c, b, a, wynik);
+    hanoiWew(n - 1, c, b, a);
   };
 
-  std::vector<std::pair<char, char>> wynik;
-  hanoiWew(n, 'A', 'B', 'C', wynik);
+  hanoiWew(n, 'A', 'B', 'C');
   return wynik;
 }
 
