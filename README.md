@@ -2859,97 +2859,97 @@ Po ukończeniu tego kursu masz wiele opcji:
         <tr>
             <td>1</td>
             <td>Czy słowo jest palindromem?</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_palindromy/zad01.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_palindromy/zad01.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad1">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad01.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad01.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad01.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad01.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_i_palindromy/zad01.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_i_palindromy/zad01.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_i_palindromy/zad1">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_i_palindromy/zad01.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_i_palindromy/zad01.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_i_palindromy/zad01.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_i_palindromy/zad01.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
             <td>2</td>
             <td>Wszystkie permutacje słowa.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_palindromy/zad02.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_palindromy/zad02.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad2">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad02.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad02.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad02.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad02.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_i_palindromy/zad02.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_i_palindromy/zad02.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_i_palindromy/zad2">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_i_palindromy/zad02.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_i_palindromy/zad02.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_i_palindromy/zad02.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_i_palindromy/zad02.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
             <td>3</td>
             <td>Czy słowa są swoimi anagramami?</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_palindromy/zad03.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_palindromy/zad03.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad3">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad03.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad03.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad03.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad03.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_i_palindromy/zad03.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_i_palindromy/zad03.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_i_palindromy/zad3">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_i_palindromy/zad03.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_i_palindromy/zad03.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_i_palindromy/zad03.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_i_palindromy/zad03.rs">Rust</a></td>
             <td>★☆☆</td>
         </tr>
         <tr>
             <td>4</td>
             <td>Wszystkie palindromy w zdaniu.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_palindromy/zad04.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_palindromy/zad04.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad4">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad04.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad04.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad04.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad04.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_i_palindromy/zad04.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_i_palindromy/zad04.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_i_palindromy/zad4">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_i_palindromy/zad04.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_i_palindromy/zad04.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_i_palindromy/zad04.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_i_palindromy/zad04.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
             <td>5</td>
             <td>Znajdź anagramy w zdaniu.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_palindromy/zad05.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_palindromy/zad05.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad5">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad05.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad05.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad05.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad05.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_i_palindromy/zad05.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_i_palindromy/zad05.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_i_palindromy/zad5">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_i_palindromy/zad05.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_i_palindromy/zad05.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_i_palindromy/zad05.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_i_palindromy/zad05.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
             <td>6</td>
             <td>Permutacja będąca palindromem.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_palindromy/zad06.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_palindromy/zad06.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad6">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad06.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad06.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad06.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad06.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_i_palindromy/zad06.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_i_palindromy/zad06.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_i_palindromy/zad6">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_i_palindromy/zad06.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_i_palindromy/zad06.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_i_palindromy/zad06.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_i_palindromy/zad06.rs">Rust</a></td>
             <td>★★☆</td>
         </tr>
         <tr>
             <td>7</td>
             <td>Najmniej usunięć do anagramów</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_palindromy/zad07.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_palindromy/zad07.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad7">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad07.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad07.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad07.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad07.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_i_palindromy/zad07.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_i_palindromy/zad07.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_i_palindromy/zad7">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_i_palindromy/zad07.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_i_palindromy/zad07.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_i_palindromy/zad07.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_i_palindromy/zad07.rs">Rust</a></td>
             <td>★★★</td>
         </tr>
         <tr>
             <td>8</td>
             <td>Wyjątkowe palindromy.</td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_palindromy/zad08.py">Python</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_palindromy/zad08.cpp">Cpp</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_palindromy/zad8">Java</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_palindromy/zad08.js">JavaScript</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_palindromy/zad08.sh">Bash</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_palindromy/zad08.hs">Haskell</a></td>
-            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_palindromy/zad08.rs">Rust</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/python/12_napisy_anagramy_i_palindromy/zad08.py">Python</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/cpp/12_napisy_anagramy_i_palindromy/zad08.cpp">Cpp</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/java/12_napisy_anagramy_i_palindromy/zad8">Java</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/js/12_napisy_anagramy_i_palindromy/zad08.js">JavaScript</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/bash/12_napisy_anagramy_i_palindromy/zad08.sh">Bash</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/haskell/12_napisy_anagramy_i_palindromy/zad08.hs">Haskell</a></td>
+            <td><a href="https://github.com/djeada/Nauka-programowania/blob/master/src/rust/12_napisy_anagramy_i_palindromy/zad08.rs">Rust</a></td>
             <td>★★★</td>
         </tr>
     </tbody>
