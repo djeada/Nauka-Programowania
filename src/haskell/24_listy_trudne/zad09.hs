@@ -41,11 +41,11 @@ import Text.Read (readMaybe)
 -- Złożoność czasowa: O(n^2)
 -- Złożoność pamięciowa: O(n)
 longestAlternating :: [Int] -> [Int]
-longestAlternating xs = xs  -- For now, just return the input
+longestAlternating xs = xs -- For now, just return the input
 
 main :: IO ()
 main = do
-    input <- getLine
-    case readMaybe input :: Maybe [Int] of
-        Just xs -> print $ longestAlternating xs
-        Nothing -> print ([] :: [Int])
+  input <- getLine
+  case readMaybe input :: Maybe [Int] of
+    Just xs -> print $ longestAlternating xs
+    Nothing -> print ([] :: [Int])

@@ -33,7 +33,7 @@ def wartosc_wielomianu_w_punkcie(wspolczynniki, x):
     """
     Funkcja zwraca wartosc wielomianu w punkcie x.
     Współczynniki w formacie [a_n, ..., a_0] (najwyższy stopień pierwszy).
-    
+
     Złożoność czasowa: O(n), gdzie n to stopień wielomianu
     Złożoność pamięciowa: O(1)
     """
@@ -55,11 +55,11 @@ if __name__ == "__main__":
     wspolczynniki = __import__("ast").literal_eval(input().strip())
     # Wczytanie punktu x
     x = int(input().strip())
-    
+
     # Obliczenie wartości wielomianu
     # Złożoność czasowa: O(n)
     # Złożoność pamięciowa: O(1)
     wynik = wartosc_wielomianu_w_punkcie(wspolczynniki, x)
-    
+
     # Wypisanie wyniku
     print(wynik)

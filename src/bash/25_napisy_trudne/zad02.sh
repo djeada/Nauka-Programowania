@@ -35,7 +35,6 @@
 # ```
 # Le je na wie
 # ```
-
 source ../assert.sh
 
 # Usuwa wszystkie wystąpienia podnapisu z napisu głównego.
@@ -44,7 +43,7 @@ source ../assert.sh
 usun_podnapis() {
     local napis="$1"
     local podnapis="$2"
-    
+
     echo "${napis//$podnapis/}"
 }
 

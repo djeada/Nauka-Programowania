@@ -45,7 +45,6 @@ Lerzy jerzy na wierzy
 """
 
 
-# Wersja 1
 def zamien_wszystkoV1(zdanie, napis_a, napis_b):
     return zdanie.replace(napis_a, napis_b)
 

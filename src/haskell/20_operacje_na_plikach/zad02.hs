@@ -38,21 +38,21 @@ C:\Users\Username\Documents
 
 -}
 
-import System.Directory (listDirectory, doesDirectoryExist)
-import System.FilePath (takeExtension)
 import Data.List (isSuffixOf)
+import System.Directory (doesDirectoryExist, listDirectory)
+import System.FilePath (takeExtension)
 
 -- Znajduje pliki o danym rozszerzeniu w folderze
 -- Złożoność czasowa: O(n), gdzie n to liczba plików
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    folderPath <- getLine
-    ext <- getLine
-    exists <- doesDirectoryExist folderPath
-    if exists
-        then do
-            files <- listDirectory folderPath
-            let matching = filter (isSuffixOf ext) files
-            print matching
-        else print ([] :: [String])
+  folderPath <- getLine
+  ext <- getLine
+  exists <- doesDirectoryExist folderPath
+  if exists
+    then do
+      files <- listDirectory folderPath
+      let matching = filter (isSuffixOf ext) files
+      print matching
+    else print ([] :: [String])

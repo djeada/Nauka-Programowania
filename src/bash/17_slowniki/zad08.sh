@@ -29,7 +29,6 @@
 # ```
 # e
 # ```
-
 source ../assert.sh
 
 najczesciej_wystepujaca_litera() {

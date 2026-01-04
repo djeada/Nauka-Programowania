@@ -44,7 +44,6 @@ Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Porownanie ze stala

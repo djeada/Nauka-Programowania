@@ -40,7 +40,7 @@ Dla `[1, 2, 1]` funkcja zwraca:
 def miesca_zerowe(wspolczynniki):
     """
     Funkcja zwraca liste miejsc zerowych rownania kwadratowego.
-    
+
     Złożoność czasowa: O(1)
     Złożoność pamięciowa: O(1)
     """
@@ -48,7 +48,7 @@ def miesca_zerowe(wspolczynniki):
     b = wspolczynniki[1]
     c = wspolczynniki[2]
     delta = b**2 - 4 * a * c
-    
+
     if delta < 0:
         return []
     elif delta == 0:
@@ -56,6 +56,7 @@ def miesca_zerowe(wspolczynniki):
         return [x, x]  # Dwa jednakowe pierwiastki
     else:
         import math
+
         x1 = (-b + math.sqrt(delta)) / (2 * a)
         x2 = (-b - math.sqrt(delta)) / (2 * a)
         return [x1, x2]
@@ -76,11 +77,11 @@ if __name__ == "__main__":
         # Wczytanie jako trzy oddzielne liczby
         line = input().strip().split()
         wspolczynniki = [float(x) for x in line]
-    
+
     # Obliczenie miejsc zerowych
     # Złożoność czasowa: O(1)
     # Złożoność pamięciowa: O(1)
     wynik = miesca_zerowe(wspolczynniki)
-    
+
     # Wypisanie wyniku jako lista
     print(str(wynik))

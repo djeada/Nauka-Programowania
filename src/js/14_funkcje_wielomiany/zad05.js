@@ -28,10 +28,6 @@ Dla `a = [4, -3, 2]` oraz `k = 1` funkcja zwraca:
 
 */
 
-// Funkcja oblicza k-tą pochodną wielomianu
-// Współczynniki podane od najwyższej potęgi do najniższej: [a_n, ..., a_0]
-// Złożoność czasowa: O(k*n), gdzie n to stopień wielomianu, k to rząd pochodnej
-// Złożoność pamięciowa: O(n)
 function pochodnaWielomianu(wspolczynniki, k) {
   // Tworzymy kopię tablicy aby nie modyfikować oryginału
   let wynik = [...wspolczynniki];

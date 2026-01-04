@@ -45,9 +45,6 @@ n
 
 */
 
-// Funkcja zwraca co k-ty znak w poziomie (oddzielone spacjami)
-// Złożoność czasowa: O(n/k), gdzie n to długość napisu
-// Złożoność pamięciowa: O(n/k)
 function coKtyPoziomo(napis, k) {
   let wynik = "";
   for (let i = k - 1; i < napis.length; i += k) {

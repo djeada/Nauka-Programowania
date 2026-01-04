@@ -37,8 +37,8 @@ Lemur wygina śmiało ciało
 
 -}
 
-import Data.List (sort, intercalate)
 import Data.Char (isAlpha)
+import Data.List (intercalate, sort)
 
 -- Sortowanie słów w zdaniu
 -- Złożoność czasowa: O(n log n)
@@ -53,8 +53,8 @@ formatList xs = "[" ++ intercalate ", " (map (\x -> "'" ++ x ++ "'") xs) ++ "]"
 
 main :: IO ()
 main = do
-    zdanie <- getLine
-    let slowa = words zdanie
-    let czysteSlowa = filter (not . null) $ map filterWord slowa
-    let posortowane = sort czysteSlowa
-    putStrLn $ formatList posortowane
+  zdanie <- getLine
+  let slowa = words zdanie
+  let czysteSlowa = filter (not . null) $ map filterWord slowa
+  let posortowane = sort czysteSlowa
+  putStrLn $ formatList posortowane

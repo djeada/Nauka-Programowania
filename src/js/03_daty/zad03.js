@@ -44,7 +44,6 @@ Rok nie jest przestępny.
 
 */
 
-// Pobieranie danych od uzytkownika
 const rok = parseInt(prompt("Podaj rok:"));
 
 // Sprawdzenie, czy rok jest przestepny

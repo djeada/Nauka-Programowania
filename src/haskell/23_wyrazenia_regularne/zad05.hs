@@ -46,5 +46,5 @@ extractDigits = filter isDigit
 
 main :: IO ()
 main = do
-    text <- getLine
-    putStrLn $ extractDigits text
+  text <- getLine
+  putStrLn $ extractDigits text

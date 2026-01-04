@@ -45,6 +45,6 @@ import Data.List (isPrefixOf)
 -- Złożoność pamięciowa: O(1)
 main :: IO ()
 main = do
-    a <- getLine
-    b <- getLine
-    putStrLn $ if a `isPrefixOf` b then "Prawda" else "Fałsz"
+  a <- getLine
+  b <- getLine
+  putStrLn $ if a `isPrefixOf` b then "Prawda" else "Fałsz"

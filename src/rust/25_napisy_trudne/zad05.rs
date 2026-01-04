@@ -40,14 +40,14 @@ use std::io;
 fn usun_sasiadow(napis: &str) -> String {
     let mut wynik = String::new();
     let mut poprzedni: Option<char> = None;
-    
+
     for c in napis.chars() {
         if Some(c) != poprzedni {
             wynik.push(c);
             poprzedni = Some(c);
         }
     }
-    
+
     wynik
 }
 
@@ -55,6 +55,6 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let napis = input.trim();
-    
+
     println!("{}", usun_sasiadow(napis));
 }

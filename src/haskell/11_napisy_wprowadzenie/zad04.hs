@@ -39,5 +39,5 @@ import Data.Char (toUpper)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    napis <- getLine
-    putStrLn $ map toUpper napis
+  napis <- getLine
+  putStrLn $ map toUpper napis

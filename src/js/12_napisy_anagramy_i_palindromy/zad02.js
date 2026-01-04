@@ -41,9 +41,6 @@ cba
 
 */
 
-// Funkcja generuje wszystkie permutacje słowa (rekurencyjnie)
-// Złożoność czasowa: O(n!), gdzie n to długość słowa
-// Złożoność pamięciowa: O(n!) dla przechowania wszystkich permutacji
 function permutacje(slowo) {
   if (slowo.length <= 1) {
     return [slowo];

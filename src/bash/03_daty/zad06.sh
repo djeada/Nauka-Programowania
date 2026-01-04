@@ -53,7 +53,6 @@
 # ```
 # Data jest niepoprawna.
 # ```
-
 main() {
     read dzien
     read miesiac
@@ -70,9 +69,9 @@ main() {
         maxDni=31
     elif [[ $miesiac -eq 4 ]] || [[ $miesiac -eq 6 ]] || [[ $miesiac -eq 9 ]] || [[ $miesiac -eq 11 ]]; then
         maxDni=30
-    else  # luty
+    else # luty
         # Sprawdź czy rok przestępny
-        if [[ $(($rok % 400)) -eq 0 ]] || ( [[ $(($rok % 4)) -eq 0 ]] && [[ $(($rok % 100)) -ne 0 ]] ); then
+        if [[ $(($rok % 400)) -eq 0 ]] || ([[ $(($rok % 4)) -eq 0 ]] && [[ $(($rok % 100)) -ne 0 ]]); then
             maxDni=29
         else
             maxDni=28

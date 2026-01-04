@@ -35,9 +35,6 @@ Otrzymujesz dwie listy binarne `A` i `B` (zera i jedynki) o tej samej długości
 """
 
 
-# Wersja 1
-# Zlozonosc czasowa O(n)
-# Zlozonosc pamieciowa O(n)
 def znajdz_podciag_v1(lista_a, lista_b):
 
     if len(lista_a) != len(lista_b):

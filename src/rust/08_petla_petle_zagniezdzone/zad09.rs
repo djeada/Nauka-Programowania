@@ -40,7 +40,7 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: usize = n.trim().parse().unwrap();
-    
+
     fn czy_pierwsza(num: i32) -> bool {
         if num < 2 {
             return false;
@@ -60,11 +60,11 @@ fn main() {
         }
         true
     }
-    
+
     let mut count = 0;
     let mut candidate = 2;
     let mut pierwsze = Vec::new();
-    
+
     while count < n {
         if czy_pierwsza(candidate) {
             pierwsze.push(candidate);
@@ -72,7 +72,7 @@ fn main() {
         }
         candidate += 1;
     }
-    
+
     for (i, p) in pierwsze.iter().enumerate() {
         if i > 0 {
             print!(" ");

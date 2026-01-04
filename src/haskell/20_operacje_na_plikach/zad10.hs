@@ -31,17 +31,17 @@ D:\Backup\Obrazy
 
 -}
 
-import System.Directory (listDirectory, doesDirectoryExist)
+import System.Directory (doesDirectoryExist, listDirectory)
 
 -- Listuje pliki w folderze
 -- Złożoność czasowa: O(n), gdzie n to liczba plików
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    folderPath <- getLine
-    exists <- doesDirectoryExist folderPath
-    if exists
-        then do
-            files <- listDirectory folderPath
-            print files
-        else print ([] :: [String])
+  folderPath <- getLine
+  exists <- doesDirectoryExist folderPath
+  if exists
+    then do
+      files <- listDirectory folderPath
+      print files
+    else print ([] :: [String])

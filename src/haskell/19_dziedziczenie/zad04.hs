@@ -119,36 +119,33 @@ Kierunek studiów: Fizyka
 
 -}
 
--- Hierarchia klas: Człowiek → Student → StudentFizyki
--- Złożoność pamięciowa: O(1)
-
-data Czlowiek = Czlowiek {
-    imie :: String,
+data Czlowiek = Czlowiek
+  { imie :: String,
     nazwisko :: String,
     miejsceUrodzenia :: String,
     zawod :: String
-}
+  }
 
-data Student = Student {
-    daneOsoby :: Czlowiek,
+data Student = Student
+  { daneOsoby :: Czlowiek,
     numerAlbumu :: String,
     kierunek :: String
-}
+  }
 
-data StudentFizyki = StudentFizyki {
-    daneStudenta :: Student,
+data StudentFizyki = StudentFizyki
+  { daneStudenta :: Student,
     sredniaLab :: Double
-}
+  }
 
 wypiszStudentaFizyki :: StudentFizyki -> IO ()
 wypiszStudentaFizyki (StudentFizyki (Student (Czlowiek i n m z) nr kier) sr) = do
-    putStrLn $ "Student fizyki: " ++ i ++ " " ++ n
-    putStrLn $ "Numer albumu: " ++ nr
-    putStrLn $ "Średnia z laboratoriów: " ++ show sr
+  putStrLn $ "Student fizyki: " ++ i ++ " " ++ n
+  putStrLn $ "Numer albumu: " ++ nr
+  putStrLn $ "Średnia z laboratoriów: " ++ show sr
 
 main :: IO ()
 main = do
-    let czlowiek = Czlowiek "Jan" "Kowalski" "Warszawa" "student"
-    let student = Student czlowiek "12345" "Fizyka"
-    let studentFiz = StudentFizyki student 4.5
-    wypiszStudentaFizyki studentFiz
+  let czlowiek = Czlowiek "Jan" "Kowalski" "Warszawa" "student"
+  let student = Student czlowiek "12345" "Fizyka"
+  let studentFiz = StudentFizyki student 4.5
+  wypiszStudentaFizyki studentFiz

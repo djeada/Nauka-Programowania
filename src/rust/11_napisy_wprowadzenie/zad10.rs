@@ -50,14 +50,14 @@ fn znajdz_najdluzsze_i_najkrotsze(zdanie: &str) -> (String, String) {
         .map(|s| s.trim_matches(|c: char| !c.is_alphanumeric()).to_string())
         .filter(|s| !s.is_empty())
         .collect();
-    
+
     if slowa.is_empty() {
         return (String::new(), String::new());
     }
-    
+
     let mut najdluzsze = &slowa[0];
     let mut najkrotsze = &slowa[0];
-    
+
     for slowo in &slowa {
         if slowo.chars().count() > najdluzsze.chars().count() {
             najdluzsze = slowo;
@@ -66,7 +66,7 @@ fn znajdz_najdluzsze_i_najkrotsze(zdanie: &str) -> (String, String) {
             najkrotsze = slowo;
         }
     }
-    
+
     (najdluzsze.clone(), najkrotsze.clone())
 }
 
@@ -74,7 +74,7 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let zdanie = input.trim();
-    
+
     let (najdluzsze, najkrotsze) = znajdz_najdluzsze_i_najkrotsze(zdanie);
     println!("{}", najdluzsze);
     println!("{}", najkrotsze);

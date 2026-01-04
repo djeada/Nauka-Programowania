@@ -51,7 +51,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Nie wypisuj dodatkowych opisów — tylko liczby.
-
 main() {
     read a
     read b
@@ -64,10 +63,10 @@ main() {
     # 2*a - 2*owce + 4*owce = b
     # 2*a + 2*owce = b
     # owce = (b - 2*a) / 2
-    
-    owce=$(( ($b - 2 * $a) / 2 ))
-    kury=$(( $a - $owce ))
-    
+
+    owce=$((($b - 2 * $a) / 2))
+    kury=$(($a - $owce))
+
     echo "$kury"
     echo "$owce"
 }

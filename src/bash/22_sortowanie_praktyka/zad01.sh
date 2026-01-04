@@ -32,7 +32,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Spacje też są znakami i biorą udział w sortowaniu (dlatego w przykładzie wyjście zaczyna się od spacji).
-
 source ../assert.sh
 
 # Sortuje wszystkie znaki w napisie alfabetycznie.

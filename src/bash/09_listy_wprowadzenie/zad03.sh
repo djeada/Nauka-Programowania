@@ -37,7 +37,6 @@
 # ```
 # 2
 # ```
-
 source ../assert.sh
 
 znajdz_klucz_v1() {

@@ -44,13 +44,13 @@ import Text.Read (readMaybe)
 -- Złożoność pamięciowa: O(2^n * n)
 powerSet :: [a] -> [[a]]
 powerSet [] = [[]]
-powerSet (x:xs) = 
-    let ps = powerSet xs
-    in ps ++ map (x:) ps
+powerSet (x : xs) =
+  let ps = powerSet xs
+   in ps ++ map (x :) ps
 
 main :: IO ()
 main = do
-    input <- getLine
-    case readMaybe input :: Maybe [Int] of
-        Just xs -> print $ powerSet xs
-        Nothing -> print ([] :: [[Int]])
+  input <- getLine
+  case readMaybe input :: Maybe [Int] of
+    Just xs -> print $ powerSet xs
+    Nothing -> print ([] :: [[Int]])

@@ -133,7 +133,6 @@ print(max_z_trzech(3, 2, 1))
 
 */
 
-// Funkcja zwracajaca mniejsza liczbe
 function zwracajMniejszaLiczbe(liczba_a, liczba_b) {
   if (liczba_a < liczba_b) {
     return liczba_a;

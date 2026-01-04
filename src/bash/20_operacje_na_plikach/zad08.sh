@@ -29,7 +29,6 @@
 #
 # **Wyjście:**
 # *(brak)*
-
 source ../assert.sh
 
 dodaj_inicjaly_do_plikow_w_folderze() {

@@ -47,10 +47,13 @@
 # [5, 5]
 #
 # Różnica macierzy A - B:
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(1)
-# Zlozonosc pamieciowa: O(1)
+# [-4, 3]
+# [3, -1]
+#
+# Iloczyn macierzy A * B:
+# [8, 9]
+# [22, 12]
+# ```
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     # Bash nie ma natywnego wsparcia dla klas obiektowych

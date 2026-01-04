@@ -76,7 +76,7 @@ fn dziesietny_na_binarny(n: u32) -> String {
     if n == 0 {
         return "0".to_string();
     }
-    
+
     format!("{:b}", n)
 }
 
@@ -92,9 +92,9 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let n: u32 = input.trim().parse().unwrap_or(0);
-    
+
     println!("{}", dziesietny_na_binarny(n));
-    
+
     // ZAD-01B: Binarny → dziesiętny (opcjonalnie, jeśli jest drugi input)
     // Można odkomentować poniższy kod dla ZAD-01B
     /*

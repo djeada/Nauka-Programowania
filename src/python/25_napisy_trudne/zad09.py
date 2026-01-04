@@ -36,7 +36,6 @@ abcd
 """
 
 
-# Wersja 1
 def najdluzszy_podnapis_v1(slowo_a, slowo_b):
 
     m = len(slowo_a)

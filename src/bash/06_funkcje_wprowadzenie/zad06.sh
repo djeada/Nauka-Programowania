@@ -32,7 +32,6 @@
 # ### Uwagi
 #
 # * Dla `n = 0` suma cyfr to `0`.
-
 sumaCyfr() {
 
     a=$1
@@ -51,7 +50,6 @@ main() {
 
     sumaCyfr $a
     wynik=$?
-
 
 }
 

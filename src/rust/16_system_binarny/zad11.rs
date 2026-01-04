@@ -57,7 +57,7 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let n: u32 = input.trim().parse().unwrap_or(0);
-    
+
     if czy_palindrom_binarny(n) {
         println!("Prawda");
     } else {

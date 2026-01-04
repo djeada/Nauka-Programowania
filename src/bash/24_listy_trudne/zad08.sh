@@ -30,7 +30,6 @@
 # ```
 # 10
 # ```
-
 source ../assert.sh
 
 # Oblicza maksymalny zysk z cięcia sznurka.
@@ -39,23 +38,23 @@ source ../assert.sh
 maksymalny_zysk_sznurek() {
     local -n _ceny_ref=$1
     local n=$2
-    
+
     # dp[i] = maksymalny zysk dla sznurka długości i
     local dp=()
     dp[0]=0
-    
-    for ((i=1; i<=n; i++)); do
+
+    for ((i = 1; i <= n; i++)); do
         local max_val=0
-        for ((j=1; j<=i && j<=${#_ceny_ref[@]}; j++)); do
-            local cena_idx=$((j-1))
+        for ((j = 1; j <= i && j <= ${#_ceny_ref[@]}; j++)); do
+            local cena_idx=$((j - 1))
             if [ $cena_idx -lt ${#_ceny_ref[@]} ]; then
-                local val=$((${_ceny_ref[$cena_idx]} + ${dp[$((i-j))]}))
+                local val=$((${_ceny_ref[$cena_idx]} + ${dp[$((i - j))]}))
                 [ $val -gt $max_val ] && max_val=$val
             fi
         done
         dp[$i]=$max_val
     done
-    
+
     echo ${dp[$n]}
 }
 

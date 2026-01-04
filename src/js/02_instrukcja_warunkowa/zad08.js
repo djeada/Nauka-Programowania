@@ -50,7 +50,6 @@ Trójkąt można zbudować z podanych boków.
 
 */
 
-// Pobieranie danych od uzytkownika
 const bok_a = parseInt(prompt("Podaj dlugosc boku a:"));
 const bok_b = parseInt(prompt("Podaj dlugosc boku b:"));
 const bok_c = parseInt(prompt("Podaj dlugosc boku c:"));

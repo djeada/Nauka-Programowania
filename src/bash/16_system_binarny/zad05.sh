@@ -47,10 +47,26 @@
 # ### Wejście
 #
 # * 1. linia: `a`
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(n)
-# Zlozonosc pamieciowa: O(1)
+# * 2. linia: `b`
+#
+# ### Wyjście
+#
+# Jedna liczba naturalna: `max(a, b)`.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 3
+# 2
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 3
+# ```
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"

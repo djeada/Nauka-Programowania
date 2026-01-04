@@ -38,19 +38,19 @@ baab
 
 */
 
-use std::io;
 use std::collections::{HashMap, HashSet};
+use std::io;
 
 // Funkcja sprawdzająca czy można utworzyć palindrom z liter
 // Złożoność czasowa: O(n), gdzie n to długość słowa
 // Złożoność pamięciowa: O(k), gdzie k to liczba unikalnych znaków
 fn mozna_utworzyc_palindrom(slowo: &str) -> bool {
     let mut liczniki: HashMap<char, usize> = HashMap::new();
-    
+
     for c in slowo.chars() {
         *liczniki.entry(c).or_insert(0) += 1;
     }
-    
+
     let nieparzystych = liczniki.values().filter(|&&v| v % 2 == 1).count();
     nieparzystych <= 1
 }
@@ -62,15 +62,15 @@ fn generuj_palindromy(slowo: &str) -> Vec<String> {
     if !mozna_utworzyc_palindrom(slowo) {
         return Vec::new();
     }
-    
+
     let mut liczniki: HashMap<char, usize> = HashMap::new();
     for c in slowo.chars() {
         *liczniki.entry(c).or_insert(0) += 1;
     }
-    
+
     let mut polowa = Vec::new();
     let mut srodek = None;
-    
+
     for (c, count) in liczniki.iter() {
         if count % 2 == 1 {
             srodek = Some(*c);
@@ -79,11 +79,11 @@ fn generuj_palindromy(slowo: &str) -> Vec<String> {
             polowa.push(*c);
         }
     }
-    
+
     let mut wynik = HashSet::new();
     let mut temp = Vec::new();
     generuj_permutacje_palindromow(&mut polowa, 0, &mut temp, srodek, &mut wynik);
-    
+
     wynik.into_iter().collect()
 }
 
@@ -104,14 +104,14 @@ fn generuj_permutacje_palindromow(
         wynik.insert(palindrom.iter().collect());
         return;
     }
-    
+
     let mut uzyte = HashSet::new();
     for i in index..chars.len() {
         if uzyte.contains(&chars[i]) {
             continue;
         }
         uzyte.insert(chars[i]);
-        
+
         chars.swap(index, i);
         temp.push(chars[index]);
         generuj_permutacje_palindromow(chars, index + 1, temp, srodek, wynik);
@@ -124,7 +124,7 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let slowo = input.trim();
-    
+
     let palindromy = generuj_palindromy(slowo);
     for palindrom in palindromy {
         println!("{}", palindrom);

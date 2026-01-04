@@ -34,10 +34,6 @@
 # ```
 # 5 10 30 26 52 24
 # ```
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(n)
-# Zlozonosc pamieciowa: O(n)
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"

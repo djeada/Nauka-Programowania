@@ -58,8 +58,6 @@ Iloczyn macierzy A * B:
 
 */
 
-// Struktura reprezentująca macierz
-// Złożoność pamięciowa: O(n*m), gdzie n to liczba wierszy, m to liczba kolumn
 #[derive(Debug, Clone, PartialEq)]
 struct Macierz {
     dane: Vec<Vec<i32>>,
@@ -70,7 +68,7 @@ impl Macierz {
     fn new(dane: Vec<Vec<i32>>) -> Self {
         Macierz { dane }
     }
-    
+
     // Dodawanie macierzy
     // Złożoność czasowa: O(n*m)
     fn dodaj(&self, other: &Macierz) -> Macierz {
@@ -84,7 +82,7 @@ impl Macierz {
         }
         Macierz::new(wynik)
     }
-    
+
     // Odejmowanie macierzy
     // Złożoność czasowa: O(n*m)
     fn odejmij(&self, other: &Macierz) -> Macierz {
@@ -98,16 +96,16 @@ impl Macierz {
         }
         Macierz::new(wynik)
     }
-    
+
     // Mnożenie macierzy
     // Złożoność czasowa: O(n*m*p)
     fn mnoz(&self, other: &Macierz) -> Macierz {
         let n = self.dane.len();
         let m = other.dane[0].len();
         let p = self.dane[0].len();
-        
+
         let mut wynik = vec![vec![0; m]; n];
-        
+
         for i in 0..n {
             for j in 0..m {
                 for k in 0..p {
@@ -115,10 +113,10 @@ impl Macierz {
                 }
             }
         }
-        
+
         Macierz::new(wynik)
     }
-    
+
     // Metoda wypisująca macierz
     fn wypisz(&self, nazwa: &str) {
         if !nazwa.is_empty() {
@@ -141,18 +139,18 @@ impl Macierz {
 fn main() {
     let a = Macierz::new(vec![vec![1, 3], vec![4, 2]]);
     let b = Macierz::new(vec![vec![5, 0], vec![1, 3]]);
-    
+
     a.wypisz("A");
     b.wypisz("B");
-    
+
     let suma = a.dodaj(&b);
     println!("Suma macierzy:");
     suma.wypisz("");
-    
+
     let roznica = a.odejmij(&b);
     println!("Różnica macierzy A - B:");
     roznica.wypisz("");
-    
+
     let iloczyn = a.mnoz(&b);
     println!("Iloczyn macierzy A * B:");
     iloczyn.wypisz("");

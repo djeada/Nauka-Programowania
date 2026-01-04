@@ -102,7 +102,6 @@ True
 ```
 
 -}
--- ZAD-01A: Zwracanie stałej wartości: liczba 3
 zwrocLiczbe :: Int
 zwrocLiczbe = 3
 

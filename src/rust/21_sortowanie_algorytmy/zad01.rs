@@ -100,10 +100,10 @@ fn test_2() {
 fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
-    
+
     let mut lista = parsuj_liste(&input);
     sort_v2(&mut lista);
-    
+
     print!("[");
     for (i, &val) in lista.iter().enumerate() {
         if i > 0 {

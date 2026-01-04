@@ -6,11 +6,11 @@ dyspozycji N punktow. Dane wejsciowe: Liczba naturalna N. Dane wyjsciowe: Liczba
 naturalna. Przyklad: Dla N = 20, powinna zostac zwrocona liczba: 4.
 
 */
+#include <algorithm>
 #include <cassert>
+#include <functional>
 #include <string>
 #include <vector>
-#include <algorithm>
-#include <functional>
 
 // Zlozonosc Czasowa: O(3^n)
 // Zlozonosc Pamieciowa: O(n) - przez stos rekurencji
@@ -24,7 +24,7 @@ int gra(int n) {
 
   std::vector<std::vector<int>> listaWynikow;
 
-  std::function<int(int, std::vector<int>)> _gra = 
+  std::function<int(int, std::vector<int>)> _gra =
       [&](int n, std::vector<int> wynik) -> int {
     if (n < 0) return 0;
 

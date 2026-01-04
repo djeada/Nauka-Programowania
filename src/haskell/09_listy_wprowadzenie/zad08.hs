@@ -46,17 +46,17 @@ Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
 main :: IO ()
 main = do
   n <- readLn :: IO Int
-  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
+  nums <- mapM (\_ -> readLn :: IO Int) [1 .. n]
   klucz <- readLn :: IO Int
-  
+
   let removeFirst _ [] = []
-      removeFirst k (x:xs)
+      removeFirst k (x : xs)
         | x == k = xs
         | otherwise = x : removeFirst k xs
-  
+
   let result = removeFirst klucz nums
   let intercalate sep [] = ""
       intercalate sep [x] = x
-      intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs
-  
+      intercalate sep (x : xs) = x ++ sep ++ intercalate sep xs
+
   putStrLn $ intercalate "," $ map show result

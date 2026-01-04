@@ -40,8 +40,8 @@ import Data.List (intercalate)
 
 main :: IO ()
 main = do
-    a <- readLn :: IO Int
-    b <- readLn :: IO Int
-    let wiersz = [0..b]
-    let macierz = replicate a wiersz
-    mapM_ (putStrLn . intercalate " " . map show) macierz
+  a <- readLn :: IO Int
+  b <- readLn :: IO Int
+  let wiersz = [0 .. b]
+  let macierz = replicate a wiersz
+  mapM_ (putStrLn . intercalate " " . map show) macierz

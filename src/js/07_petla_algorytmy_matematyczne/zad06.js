@@ -39,7 +39,6 @@ print(nww(7, 9))
 
 */
 
-// Funkcja zwracajaca NWW
 function zwracajNWW(liczba_a, liczba_b) {
   var nww = 1;
   var i = 1;

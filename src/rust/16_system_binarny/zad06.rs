@@ -57,25 +57,25 @@ use std::io;
 fn konwertuj_podstawe(x_str: &str, p: u32, q: u32) -> String {
     // Konwertuj z podstawy p do dziesiętnej
     let mut dziesietna: u64 = 0;
-    
+
     for c in x_str.chars() {
         let cyfra = if c.is_digit(10) {
             c.to_digit(10).unwrap()
         } else {
             c.to_uppercase().next().unwrap() as u32 - 'A' as u32 + 10
         };
-        
+
         dziesietna = dziesietna * p as u64 + cyfra as u64;
     }
-    
+
     // Konwertuj z dziesiętnej do podstawy q
     if dziesietna == 0 {
         return "0".to_string();
     }
-    
+
     let mut wynik = String::new();
     let mut n = dziesietna;
-    
+
     while n > 0 {
         let reszta = (n % q as u64) as u32;
         let znak = if reszta < 10 {
@@ -86,7 +86,7 @@ fn konwertuj_podstawe(x_str: &str, p: u32, q: u32) -> String {
         wynik.insert(0, znak);
         n /= q as u64;
     }
-    
+
     wynik
 }
 
@@ -94,14 +94,14 @@ fn main() {
     let mut x_str = String::new();
     let mut p_str = String::new();
     let mut q_str = String::new();
-    
+
     io::stdin().read_line(&mut x_str).expect("Błąd wczytywania");
     io::stdin().read_line(&mut p_str).expect("Błąd wczytywania");
     io::stdin().read_line(&mut q_str).expect("Błąd wczytywania");
-    
+
     let x = x_str.trim();
     let p: u32 = p_str.trim().parse().unwrap_or(10);
     let q: u32 = q_str.trim().parse().unwrap_or(10);
-    
+
     println!("{}", konwertuj_podstawe(x, p, q));
 }

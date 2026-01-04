@@ -39,7 +39,6 @@
 # [('bca', 1), ('c', 2), ('ab', 3)]
 # [('c', 2), ('ab', 3), ('bca', 1)]
 # ```
-
 source ../assert.sh
 
 # Sortuje listę par względem napisów (pierwszej części pary).

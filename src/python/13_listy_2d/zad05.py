@@ -40,7 +40,7 @@ Prawda
 def czy_kwadrat_magiczny(macierz):
     """
     Sprawdza czy macierz jest kwadratem magicznym.
-    
+
     Złożoność czasowa: O(n²), gdzie n to rozmiar macierzy
     Złożoność pamięciowa: O(1)
     """
@@ -89,13 +89,13 @@ def test_czy_kwadrat_magiczny():
 if __name__ == "__main__":
     # Wczytanie rozmiaru macierzy
     n = int(input().strip())
-    
+
     # Wczytanie macierzy
     macierz = []
     for _ in range(n):
         wiersz = list(map(int, input().strip().split()))
         macierz.append(wiersz)
-    
+
     # Sprawdzenie czy macierz jest kwadratem magicznym
     # Złożoność czasowa: O(n²)
     # Złożoność pamięciowa: O(1)

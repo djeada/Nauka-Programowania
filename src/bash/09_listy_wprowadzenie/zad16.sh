@@ -38,7 +38,6 @@
 # ```
 # 0 2
 # ```
-
 source ../assert.sh
 
 znajdz_pary() {

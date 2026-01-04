@@ -51,9 +51,6 @@ Zarobki: 1000
 
 */
 
-// Funkcja rozdziela informacje o pracowniku zapisane w jednej linii
-// Złożoność czasowa: O(n), gdzie n to długość stringu rekord
-// Złożoność pamięciowa: O(n) dla przechowania tablicy danych i wyniku
 function rozdzielRekord(rekord) {
   let dane = rekord.split(";");
   let imie = dane[0].trim();

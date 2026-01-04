@@ -77,9 +77,9 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let napis = input.trim();
-    
+
     let wynik = znaki_na_indeksach_pierwszych(napis);
-    
+
     // Formatowanie jako lista w stylu Pythona
     print!("[");
     for (i, c) in wynik.iter().enumerate() {

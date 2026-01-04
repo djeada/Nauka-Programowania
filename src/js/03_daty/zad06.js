@@ -57,7 +57,6 @@ Data jest niepoprawna.
 
 */
 
-// Pobieranie danych od uzytkownika
 const dzien = parseInt(prompt("Podaj dzien:"));
 const miesiac = parseInt(prompt("Podaj miesiac:"));
 const rok = parseInt(prompt("Podaj rok:"));

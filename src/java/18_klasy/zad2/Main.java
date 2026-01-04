@@ -1,12 +1,12 @@
 /*
-ZAD-02 — Klasa Main
+ZAD-02 — Klasa Punkt
 
 **Poziom:** ★★☆
 **Tagi:** `class`, `static`, `porównania`, `math`
 
 ### Treść
 
-Zaprojektuj klasę **Main**:
+Zaprojektuj klasę **Punkt**:
 
 1. Konstruktor `(x=0, y=0)`.
 2. Metoda statyczna `odleglosc(p1, p2)` licząca odległość.
@@ -33,8 +33,8 @@ Jak w przykładzie.
 **Wyjście:**
 
 ```
-Main A: (5, 5)
-Main B: (-3, -3)
+Punkt A: (5, 5)
+Punkt B: (-3, -3)
 Odległość między punktami A i B: 11.3137
 ```
 

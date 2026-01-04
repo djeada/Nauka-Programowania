@@ -31,7 +31,6 @@
 # ```
 # 6
 # ```
-
 source ../assert.sh
 
 silnia() {

@@ -39,7 +39,6 @@ Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności ma
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Petla

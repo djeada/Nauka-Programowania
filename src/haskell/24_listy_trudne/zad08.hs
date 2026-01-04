@@ -40,14 +40,14 @@ import Text.Read (readMaybe)
 -- Złożoność pamięciowa: O(n)
 maxProfit :: [Int] -> Int -> Int
 maxProfit prices n
-    | n == 0 = 0
-    | n < 0 = 0
-    | otherwise = maximum [prices !! (i-1) + maxProfit prices (n - i) | i <- [1..min n (length prices)]]
+  | n == 0 = 0
+  | n < 0 = 0
+  | otherwise = maximum [prices !! (i - 1) + maxProfit prices (n - i) | i <- [1 .. min n (length prices)]]
 
 main :: IO ()
 main = do
-    pricesInput <- getLine
-    nInput <- getLine
-    case (readMaybe pricesInput :: Maybe [Int], readMaybe nInput :: Maybe Int) of
-        (Just prices, Just n) -> print $ maxProfit prices n
-        _ -> print (0 :: Int)
+  pricesInput <- getLine
+  nInput <- getLine
+  case (readMaybe pricesInput :: Maybe [Int], readMaybe nInput :: Maybe Int) of
+    (Just prices, Just n) -> print $ maxProfit prices n
+    _ -> print (0 :: Int)

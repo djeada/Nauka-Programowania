@@ -48,4 +48,4 @@ main = do
   n <- readLn :: IO Int
   let pi_val = pi :: Double
   let formatStr = "%." ++ show n ++ "f\n"
-  mapM_ (\_ -> printf formatStr pi_val) [1..n]
+  mapM_ (\_ -> printf formatStr pi_val) [1 .. n]

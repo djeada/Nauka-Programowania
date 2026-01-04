@@ -44,9 +44,6 @@ Wielokrotnie:
 
 */
 
-// Funkcja zwraca nową, pustą planszę o wymiarach 10x10
-// Złożoność czasowa: O(1) - stała wielkość planszy
-// Złożoność pamięciowa: O(1)
 function nowaPlansza() {
   const plansza = [];
 

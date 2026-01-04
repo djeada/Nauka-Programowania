@@ -40,7 +40,6 @@ Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Petla

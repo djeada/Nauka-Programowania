@@ -43,5 +43,5 @@ import Data.List (sort)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    napis <- getLine
-    putStrLn $ sort napis
+  napis <- getLine
+  putStrLn $ sort napis

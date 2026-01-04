@@ -37,7 +37,6 @@ Jeśli listy mają różne długości, po wyczerpaniu krótszej listy dopisz poz
 
 */
 
-// Funkcja wypisujaca elementy dwoch list na przemian
 function wypiszElementyNaPrzemian(lista1, lista2) {
   const wynik = [];
   const maxLength = Math.max(lista1.length, lista2.length);

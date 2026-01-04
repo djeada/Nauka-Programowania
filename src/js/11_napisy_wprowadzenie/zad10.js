@@ -39,9 +39,6 @@ lubi
 
 */
 
-// Funkcja znajduje najdłuższe i najkrótsze słowo w napisie
-// Złożoność czasowa: O(n), gdzie n to długość napisu
-// Złożoność pamięciowa: O(m), gdzie m to liczba słów
 function znajdzNajdluzszeISkrotszeSlowo(napis) {
   let slowa = napis.split(/[^\w]+/).filter(s => s.length > 0);
   

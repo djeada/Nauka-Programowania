@@ -35,7 +35,6 @@
 # ```
 # 8.0
 # ```
-
 source ../assert.sh
 
 wieksza() {

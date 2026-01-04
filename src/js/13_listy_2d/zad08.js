@@ -36,9 +36,6 @@ Wczytaj macierz `n×m` i wypisz jej elementy spiralnie (zgodnie z ruchem wskazó
 
 */
 
-// Funkcja przechodzi przez macierz spiralnie i zwraca elementy w kolejności odwiedzin
-// Złożoność czasowa: O(m*n), gdzie m to liczba wierszy, n to liczba kolumn
-// Złożoność pamięciowa: O(m*n) dla wyniku
 function spiralnie(macierz) {
   const wynik = [];
   let m = macierz.length;

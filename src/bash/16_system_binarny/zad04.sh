@@ -47,10 +47,22 @@
 # * 1. linia: `n`
 #
 # ### Wyjście
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(n)
-# Zlozonosc pamieciowa: O(1)
+#
+# Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# 3
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 2
+# ```
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"

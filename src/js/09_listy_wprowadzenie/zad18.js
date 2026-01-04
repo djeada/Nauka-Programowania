@@ -38,7 +38,6 @@ Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
 
 */
 
-// Funkcja znajdujaca indeks najmniejszego elementu w posortowanej i przesunietej w prawo liscie
 function znajdzIndeksNajmniejszegoElementu(lista) {
   let indeksNajmniejszego = 0;
 

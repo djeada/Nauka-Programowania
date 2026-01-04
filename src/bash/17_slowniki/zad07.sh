@@ -28,7 +28,6 @@
 # ```
 # {'ala': 2, 'ma': 1, 'kota': 1, 'lubi': 1, 'koty': 1}
 # ```
-
 source ../assert.sh
 
 wypisz_slowa() {

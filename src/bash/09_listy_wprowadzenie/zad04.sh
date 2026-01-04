@@ -45,7 +45,6 @@
 # ```
 # 10 -9
 # ```
-
 source ../assert.sh
 
 maks_v1() {

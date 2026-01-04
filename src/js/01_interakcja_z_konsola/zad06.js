@@ -196,7 +196,6 @@ Dwie linie:
 
 */
 
-// a) Pobierz wielkosc w kilogramach i wypisz, ile gramow odpowiada.
 const kg = parseFloat(prompt("Podaj liczbe w kilogramach:"));
 console.log(Math.floor(kg * 1000));
 

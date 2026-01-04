@@ -40,7 +40,6 @@ Znajdź medianę zbioru wszystkich elementów z obu list (czyli medianę po „z
 
 */
 
-// Funkcja zwracajaca mediane dwoch posortowanych list
 function znajdzMediane(lista1, lista2) {
   let wynik = [];
   let maxLength = Math.max(lista1.length, lista2.length);

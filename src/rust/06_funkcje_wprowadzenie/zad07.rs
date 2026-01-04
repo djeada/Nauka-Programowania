@@ -41,11 +41,11 @@ fn pobierz_dane() -> (String, String) {
     let mut login = String::new();
     std::io::stdin().read_line(&mut login).unwrap();
     let login = login.trim().to_string();
-    
+
     let mut haslo = String::new();
     std::io::stdin().read_line(&mut haslo).unwrap();
     let haslo = haslo.trim().to_string();
-    
+
     (login, haslo)
 }
 

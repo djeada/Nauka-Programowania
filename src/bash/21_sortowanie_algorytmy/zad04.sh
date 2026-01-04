@@ -37,7 +37,6 @@
 # ### Uwagi o algorytmie
 #
 # * Złożoność czasowa: `O(n log n)`.
-
 source ../assert.sh
 
 scalaj() {

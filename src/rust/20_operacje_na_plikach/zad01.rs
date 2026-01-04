@@ -46,7 +46,7 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let sciezka = input.trim();
-    
+
     if czy_sciezka_istnieje(sciezka) {
         println!("Prawda");
     } else {

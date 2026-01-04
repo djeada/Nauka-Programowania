@@ -177,7 +177,6 @@ print(reszta(3, 5))
 
 */
 
-// Funkcja zwracajaca sume
 function zwracajSuma(liczba_a, liczba_b) {
   return liczba_a + liczba_b;
 }

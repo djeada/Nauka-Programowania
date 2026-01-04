@@ -70,8 +70,8 @@ więcej.
 std::string bool_to_str(bool b) { return b ? "True" : "False"; }
 
 void test_law(const std::string &name, bool p, bool q, bool left, bool right) {
-  std::cout << "p=" << bool_to_str(p) << " q=" << bool_to_str(q) << " L="
-            << bool_to_str(left) << " R=" << bool_to_str(right)
+  std::cout << "p=" << bool_to_str(p) << " q=" << bool_to_str(q)
+            << " L=" << bool_to_str(left) << " R=" << bool_to_str(right)
             << " EQ=" << bool_to_str(left == right) << std::endl;
 }
 

@@ -37,10 +37,7 @@
 # ### Uwagi o formatowaniu
 #
 # * Pochodna: jeśli aktualne współczynniki to `[c_d, c_{d-1}, ..., c_0]`, to pochodna ma współczynniki:
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(n)
-# Zlozonosc pamieciowa: O(n)
+#   `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]`.
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"

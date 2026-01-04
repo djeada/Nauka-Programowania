@@ -140,7 +140,7 @@ impl Czlowiek {
             zawod,
         }
     }
-    
+
     fn wypisz(&self) {
         println!("Imię: {}", self.imie);
         println!("Nazwisko: {}", self.nazwisko);
@@ -158,15 +158,21 @@ struct Student {
 }
 
 impl Student {
-    fn new(imie: String, nazwisko: String, miejsce_urodzenia: String, 
-           zawod: String, numer_albumu: i32, kierunek: String) -> Self {
+    fn new(
+        imie: String,
+        nazwisko: String,
+        miejsce_urodzenia: String,
+        zawod: String,
+        numer_albumu: i32,
+        kierunek: String,
+    ) -> Self {
         Student {
             czlowiek: Czlowiek::new(imie, nazwisko, miejsce_urodzenia, zawod),
             numer_albumu,
             kierunek,
         }
     }
-    
+
     fn wypisz(&self) {
         self.czlowiek.wypisz();
         println!("Numer albumu: {}", self.numer_albumu);
@@ -183,16 +189,30 @@ struct StudentFizyki {
 }
 
 impl StudentFizyki {
-    fn new(imie: String, nazwisko: String, miejsce_urodzenia: String,
-           zawod: String, numer_albumu: i32, kierunek: String,
-           srednia_lab: f64, srednia_wyklady: f64) -> Self {
+    fn new(
+        imie: String,
+        nazwisko: String,
+        miejsce_urodzenia: String,
+        zawod: String,
+        numer_albumu: i32,
+        kierunek: String,
+        srednia_lab: f64,
+        srednia_wyklady: f64,
+    ) -> Self {
         StudentFizyki {
-            student: Student::new(imie, nazwisko, miejsce_urodzenia, zawod, numer_albumu, kierunek),
+            student: Student::new(
+                imie,
+                nazwisko,
+                miejsce_urodzenia,
+                zawod,
+                numer_albumu,
+                kierunek,
+            ),
             srednia_lab,
             srednia_wyklady,
         }
     }
-    
+
     fn wypisz(&self) {
         self.student.wypisz();
         println!("Średnia z laboratoriów: {}", self.srednia_lab);
@@ -212,7 +232,7 @@ fn main() {
     let c_nazwisko = wczytaj_linie();
     let c_miejsce = wczytaj_linie();
     let c_zawod = wczytaj_linie();
-    
+
     // Wczytaj dane dla Student
     let s_imie = wczytaj_linie();
     let s_nazwisko = wczytaj_linie();
@@ -220,7 +240,7 @@ fn main() {
     let s_zawod = wczytaj_linie();
     let s_album: i32 = wczytaj_linie().parse().unwrap_or(0);
     let s_kierunek = wczytaj_linie();
-    
+
     // Wczytaj dane dla StudentFizyki
     let sf_imie = wczytaj_linie();
     let sf_nazwisko = wczytaj_linie();
@@ -230,17 +250,25 @@ fn main() {
     let sf_kierunek = wczytaj_linie();
     let sf_lab: f64 = wczytaj_linie().parse().unwrap_or(0.0);
     let sf_wyklady: f64 = wczytaj_linie().parse().unwrap_or(0.0);
-    
+
     // Twórz obiekty i wypisuj
     let czlowiek = Czlowiek::new(c_imie, c_nazwisko, c_miejsce, c_zawod);
     czlowiek.wypisz();
     println!();
-    
+
     let student = Student::new(s_imie, s_nazwisko, s_miejsce, s_zawod, s_album, s_kierunek);
     student.wypisz();
     println!();
-    
-    let student_fizyki = StudentFizyki::new(sf_imie, sf_nazwisko, sf_miejsce, sf_zawod, 
-                                            sf_album, sf_kierunek, sf_lab, sf_wyklady);
+
+    let student_fizyki = StudentFizyki::new(
+        sf_imie,
+        sf_nazwisko,
+        sf_miejsce,
+        sf_zawod,
+        sf_album,
+        sf_kierunek,
+        sf_lab,
+        sf_wyklady,
+    );
     student_fizyki.wypisz();
 }

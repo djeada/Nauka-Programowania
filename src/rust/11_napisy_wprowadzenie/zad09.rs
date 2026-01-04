@@ -63,7 +63,7 @@ fn rozdziel_dane_pracownika(linia: &str) {
         .map(|s| s.trim())
         .filter(|s| !s.is_empty())
         .collect();
-    
+
     for (i, etykieta) in etykiety.iter().enumerate() {
         if i < dane.len() {
             println!("{}: {}", etykieta, dane[i]);
@@ -75,6 +75,6 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let linia = input.trim();
-    
+
     rozdziel_dane_pracownika(linia);
 }

@@ -34,7 +34,6 @@
 # ### Uwagi
 #
 # * Jeśli sprawdzarka wymaga konkretnej kolejności podzbiorów, musi być ona opisana w treści — w przeciwnym razie dopuszczalna może być dowolna. (Jeśli chcesz, mogę dopisać sztywną konwencję kolejności, ale bez rozwiązań.)
-
 source ../assert.sh
 
 # Generuje wszystkie podzbiory listy.
@@ -44,17 +43,17 @@ zbior_potegowy() {
     local -n _lista_ref=$1
     local n=${#_lista_ref[@]}
     local wynik=()
-    
+
     # Dla każdej maski bitowej od 0 do 2^n-1
-    for ((mask=0; mask<(1<<n); mask++)); do
+    for ((mask = 0; mask < (1 << n); mask++)); do
         local podzbior=()
-        for ((i=0; i<n; i++)); do
+        for ((i = 0; i < n; i++)); do
             # Sprawdź czy i-ty bit jest ustawiony
-            if (( (mask >> i) & 1 )); then
+            if (((mask >> i) & 1)); then
                 podzbior+=("${_lista_ref[$i]}")
             fi
         done
-        
+
         # Dodaj podzbior do wyniku
         if [ ${#podzbior[@]} -eq 0 ]; then
             wynik+=("[]")
@@ -62,7 +61,7 @@ zbior_potegowy() {
             wynik+=("[${podzbior[*]}]")
         fi
     done
-    
+
     echo "${wynik[@]}"
 }
 

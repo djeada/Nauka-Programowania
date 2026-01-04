@@ -48,18 +48,15 @@ Ptak ląduje.
 
 */
 
-// W Rust nie ma wielokrotnego dziedziczenia, ale możemy użyć kompozycji i trait'ów
-
-// Trait Zwierz
 trait Zwierze {
     fn jedz(&self) {
         println!("Ptak je.");
     }
-    
+
     fn spij(&self) {
         println!("Ptak śpi.");
     }
-    
+
     fn wydaj_dzwiek(&self) {
         println!("Ptak wydaje dźwięk.");
     }
@@ -70,7 +67,7 @@ trait ObiektLatajacy {
     fn lec(&self) {
         println!("Ptak leci.");
     }
-    
+
     fn wyladuj(&self) {
         println!("Ptak ląduje.");
     }
@@ -92,7 +89,7 @@ impl ObiektLatajacy for Ptak {}
 
 fn main() {
     let ptak = Ptak::new();
-    
+
     ptak.jedz();
     ptak.spij();
     ptak.wydaj_dzwiek();

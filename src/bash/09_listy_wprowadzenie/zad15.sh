@@ -34,7 +34,6 @@
 # ```
 # 4
 # ```
-
 source ../assert.sh
 
 element_dominujacy() {

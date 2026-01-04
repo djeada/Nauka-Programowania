@@ -35,7 +35,6 @@ Jeśli któraś lista jest krótsza, brakujące elementy traktuj jako `0`.
 
 */
 
-// Funkcja zwracajaca liste, ktorej elementy sa suma odpowiadajacych sobie elementow obu list
 function sumaElementowList(lista1, lista2) {
   let wynik = [];
   let maxLength = Math.max(lista1.length, lista2.length);

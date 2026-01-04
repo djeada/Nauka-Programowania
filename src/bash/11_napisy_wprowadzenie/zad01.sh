@@ -28,7 +28,6 @@
 # ```
 # zczsrab
 # ```
-
 source ../assert.sh
 
 # Funkcja odwracajaca napis za pomoca petli

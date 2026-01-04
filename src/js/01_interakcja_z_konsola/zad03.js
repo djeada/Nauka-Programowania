@@ -52,7 +52,6 @@ xx
 
 */
 
-// Wyswietlenie kwadratu
 console.log("xx");
 console.log("xx");
 console.log("");

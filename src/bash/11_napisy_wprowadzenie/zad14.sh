@@ -28,7 +28,6 @@
 # ```
 # 123
 # ```
-
 source ../assert.sh
 
 # Funkcja tworzaca napis z liczb od 1 do n

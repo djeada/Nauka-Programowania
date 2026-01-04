@@ -38,16 +38,18 @@ Wczytaj macierz `n×m`. Jeśli w macierzy występuje `0`, to **cały wiersz i ca
 
 */
 
-use std::io;
 use std::collections::HashSet;
+use std::io;
 
 // Funkcja wczytująca macierz
 fn wczytaj_macierz(n: usize, m: usize) -> Vec<Vec<i32>> {
     let mut macierz = Vec::new();
-    
+
     for _ in 0..n {
         let mut wiersz = String::new();
-        io::stdin().read_line(&mut wiersz).expect("Błąd wczytywania");
+        io::stdin()
+            .read_line(&mut wiersz)
+            .expect("Błąd wczytywania");
         let liczby: Vec<i32> = wiersz
             .trim()
             .split_whitespace()
@@ -55,7 +57,7 @@ fn wczytaj_macierz(n: usize, m: usize) -> Vec<Vec<i32>> {
             .collect();
         macierz.push(liczby);
     }
-    
+
     macierz
 }
 
@@ -65,10 +67,10 @@ fn wczytaj_macierz(n: usize, m: usize) -> Vec<Vec<i32>> {
 fn zeruj_macierz(macierz: &mut Vec<Vec<i32>>) {
     let n = macierz.len();
     let m = macierz[0].len();
-    
+
     let mut wiersze_do_wyzerowania = HashSet::new();
     let mut kolumny_do_wyzerowania = HashSet::new();
-    
+
     // Znajdź pozycje zer
     for i in 0..n {
         for j in 0..m {
@@ -78,14 +80,14 @@ fn zeruj_macierz(macierz: &mut Vec<Vec<i32>>) {
             }
         }
     }
-    
+
     // Wyzeruj odpowiednie wiersze
     for &i in &wiersze_do_wyzerowania {
         for j in 0..m {
             macierz[i][j] = 0;
         }
     }
-    
+
     // Wyzeruj odpowiednie kolumny
     for &j in &kolumny_do_wyzerowania {
         for i in 0..n {
@@ -102,13 +104,13 @@ fn main() {
         .split_whitespace()
         .map(|s| s.parse().expect("Nieprawidłowa liczba"))
         .collect();
-    
+
     let n = wymiary[0];
     let m = wymiary[1];
-    
+
     let mut macierz = wczytaj_macierz(n, m);
     zeruj_macierz(&mut macierz);
-    
+
     for wiersz in macierz {
         for (i, val) in wiersz.iter().enumerate() {
             if i > 0 {

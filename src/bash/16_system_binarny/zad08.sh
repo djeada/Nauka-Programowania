@@ -32,10 +32,6 @@
 # ### Uwagi
 #
 # * Dla `n = 0` przyjmij wynik `1`.
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(n)
-# Zlozonosc pamieciowa: O(1)
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"

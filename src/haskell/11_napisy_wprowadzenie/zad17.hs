@@ -43,9 +43,9 @@ import Data.Char (isDigit)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    linia <- getLine
-    -- Usuń nawiasy i podziel po przecinkach
-    let bezNawiasow = filter (\c -> c /= '[' && c /= ']') linia
-    let liczbyStr = map (filter isDigit) $ words $ map (\c -> if c == ',' then ' ' else c) bezNawiasow
-    let wynik = concat liczbyStr
-    putStrLn wynik
+  linia <- getLine
+  -- Usuń nawiasy i podziel po przecinkach
+  let bezNawiasow = filter (\c -> c /= '[' && c /= ']') linia
+  let liczbyStr = map (filter isDigit) $ words $ map (\c -> if c == ',' then ' ' else c) bezNawiasow
+  let wynik = concat liczbyStr
+  putStrLn wynik

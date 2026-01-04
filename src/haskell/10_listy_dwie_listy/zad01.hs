@@ -40,17 +40,17 @@ main :: IO ()
 main = do
   list1Str <- getLine
   list2Str <- getLine
-  
+
   let parseList str = read str :: [Int]
   let list1 = parseList list1Str
   let list2 = parseList list2Str
-  
+
   let intercalate sep [] = ""
       intercalate sep [x] = x
-      intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs
-  
+      intercalate sep (x : xs) = x ++ sep ++ intercalate sep xs
+
   let interleave [] ys = ys
       interleave xs [] = xs
-      interleave (x:xs) (y:ys) = x : y : interleave xs ys
-  
+      interleave (x : xs) (y : ys) = x : y : interleave xs ys
+
   putStrLn $ intercalate "," $ map show $ interleave list1 list2

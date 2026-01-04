@@ -30,7 +30,6 @@
 # ```
 # Prawda
 # ```
-
 source ../assert.sh
 
 # Sprawdza, czy jeden napis jest rotacją drugiego.
@@ -39,13 +38,13 @@ source ../assert.sh
 czy_rotacja() {
     local napis_a="$1"
     local napis_b="$2"
-    
+
     # Jeśli długości różne, nie może być rotacją
     if [ ${#napis_a} -ne ${#napis_b} ]; then
         echo "Fałsz"
         return
     fi
-    
+
     # Jeśli A jest rotacją B, to A jest podnapisem B+B
     local podwojony="${napis_b}${napis_b}"
     if [[ "$podwojony" == *"$napis_a"* ]]; then
@@ -58,7 +57,7 @@ czy_rotacja() {
 test_czy_rotacja() {
     local wynik=$(czy_rotacja "malpka" "pkamal")
     assertEqual "$wynik" "Prawda" $LINENO
-    
+
     local wynik2=$(czy_rotacja "abc" "xyz")
     assertEqual "$wynik2" "Fałsz" $LINENO
 }

@@ -32,7 +32,6 @@
 # ### Uwagi
 #
 # * Jeśli sprawdzarka wymaga konkretnej kolejności (np. rosnąco po długości/alfabetycznie) — musi to być opisane. W przeciwnym razie dopuszczalna może być dowolna kolejność.
-
 source ../assert.sh
 
 # Znajduje wszystkie powtarzające się podnapisy.
@@ -43,11 +42,11 @@ powtarzajace_podnapisy() {
     local n=${#napis}
     declare -A widziane
     declare -A powtorzone
-    
+
     # Generuj wszystkie podnapisy
-    for ((i=0; i<n; i++)); do
-        for ((j=i+1; j<=n; j++)); do
-            local podnapis="${napis:$i:$((j-i))}"
+    for ((i = 0; i < n; i++)); do
+        for ((j = i + 1; j <= n; j++)); do
+            local podnapis="${napis:$i:$((j - i))}"
             if [ -n "$podnapis" ]; then
                 if [ "${widziane[$podnapis]}" = "1" ]; then
                     powtorzone[$podnapis]=1
@@ -57,7 +56,7 @@ powtarzajace_podnapisy() {
             fi
         done
     done
-    
+
     # Wypisz unikalne powtarzające się podnapisy
     echo "${!powtorzone[@]}"
 }

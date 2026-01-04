@@ -39,9 +39,6 @@ Prawda
 
 */
 
-// Funkcja sprawdza czy słowo jest palindromem (ignorując wielkość liter)
-// Złożoność czasowa: O(n), gdzie n to długość słowa
-// Złożoność pamięciowa: O(n) dla przechowania odwróconego słowa
 function czyPalindrom(slowo) {
   const slowoMale = slowo.toLowerCase();
   const odwrocone = slowoMale.split("").reverse().join("");

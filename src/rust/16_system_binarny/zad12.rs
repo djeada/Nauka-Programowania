@@ -49,7 +49,7 @@ fn najdluzszy_binary_gap(n: u32) -> usize {
     let mut max_gap = 0;
     let mut obecny_gap = 0;
     let mut w_gap = false;
-    
+
     for c in binarny.chars() {
         if c == '1' {
             if w_gap {
@@ -61,7 +61,7 @@ fn najdluzszy_binary_gap(n: u32) -> usize {
             obecny_gap += 1;
         }
     }
-    
+
     max_gap
 }
 
@@ -69,6 +69,6 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let n: u32 = input.trim().parse().unwrap_or(0);
-    
+
     println!("{}", najdluzszy_binary_gap(n));
 }

@@ -46,7 +46,7 @@ use std::io;
 fn zbior_potegowy(lista: &[i32]) -> Vec<Vec<i32>> {
     let n = lista.len();
     let mut wynik = Vec::new();
-    
+
     // Generujemy wszystkie 2^n podzbiorów
     for i in 0..(1 << n) {
         let mut podzbior = Vec::new();
@@ -57,25 +57,23 @@ fn zbior_potegowy(lista: &[i32]) -> Vec<Vec<i32>> {
         }
         wynik.push(podzbior);
     }
-    
+
     wynik
 }
 
 fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
-    
-    let lista_str = input.trim()
-        .trim_start_matches('[')
-        .trim_end_matches(']');
-    
+
+    let lista_str = input.trim().trim_start_matches('[').trim_end_matches(']');
+
     let lista: Vec<i32> = lista_str
         .split(',')
         .filter_map(|s| s.trim().parse().ok())
         .collect();
-    
+
     let podzbiory = zbior_potegowy(&lista);
-    
+
     // Wypisz wynik
     print!("[");
     for (i, podzbior) in podzbiory.iter().enumerate() {

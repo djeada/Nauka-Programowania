@@ -34,7 +34,6 @@
 # ```
 # [2, 4]
 # ```
-
 source ../assert.sh
 
 czesc_wspolna_v1() {

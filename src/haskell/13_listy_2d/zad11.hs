@@ -44,7 +44,6 @@ Wielokrotnie:
 
 -}
 
--- Gra w statki - uproszczona wersja demonstracyjna
 main :: IO ()
 main = putStrLn "Gra w statki - implementacja wymaga bardziej rozbudowanej logiki"
 main = pure ()

@@ -38,9 +38,6 @@ Fałsz
 
 */
 
-// Funkcja sprawdza czy słowo występuje jako samodzielne słowo w zdaniu
-// Złożoność czasowa: O(n), gdzie n to długość zdania
-// Złożoność pamięciowa: O(m), gdzie m to długość słowa (dla regex)
 function czy_wystepuje_jako_slowo(zdanie, slowo) {
   // Escape special regex characters in the word
   const escapedSlowo = slowo.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

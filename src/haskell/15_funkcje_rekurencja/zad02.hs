@@ -47,7 +47,7 @@ multiplyByScalar coeffs k = map (* k) coeffs
 -- Iloczyn wielomianu przez skalar (z I/O)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    coeffs <- map read . words <$> getLine :: IO [Int]
-    k <- readLn :: IO Int
-    putStrLn $ intercalate " " $ map show $ multiplyByScalar coeffs k
+  n <- readLn :: IO Int
+  coeffs <- map read . words <$> getLine :: IO [Int]
+  k <- readLn :: IO Int
+  putStrLn $ intercalate " " $ map show $ multiplyByScalar coeffs k

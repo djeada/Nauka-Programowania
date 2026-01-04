@@ -57,7 +57,7 @@ int main() {
 
   int max_val = (a > b) ? a : b;
   int min_val = (a < b) ? a : b;
-  
+
   std::cout << max_val << " " << min_val << std::endl;
 
   return 0;

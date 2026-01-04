@@ -36,7 +36,6 @@ print(suma_cyfr(13231))
 
 */
 
-// Funkcja zwracajaca sume cyfr liczby
 function sumaCyfrLiczby(liczba) {
   var suma = 0;
   var liczbaTekst = liczba.toString();

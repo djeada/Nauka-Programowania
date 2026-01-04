@@ -30,7 +30,6 @@
 #
 # **Wyjście:**
 # *(brak)*
-
 source ../assert.sh
 
 podmien_tresci() {

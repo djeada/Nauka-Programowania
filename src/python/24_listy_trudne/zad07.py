@@ -33,10 +33,6 @@ Otrzymujesz listę liczb naturalnych — wysokości słupków. Oblicz, ile jedno
 """
 
 
-# Zlozonosc czasowa O(n)
-# Zlozonosc pamieciowa O(n)
-# Znajdz najwyzsze graniczne slupki
-# Ilosc wody rowna sie mniejszemu z dwoch granicznych slupkow minus wysokosci aktualnego
 def ile_wody_v1(slupki):
 
     n = len(slupki)

@@ -43,7 +43,6 @@
 # ### Uwagi
 #
 # * Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb całkowitych.
-
 source ../assert.sh
 
 srednia() {

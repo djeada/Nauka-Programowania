@@ -35,7 +35,6 @@
 # ```
 # Prawda
 # ```
-
 source ../assert.sh
 
 # Sprawdza, czy napis B zaczyna się od napisu A.
@@ -44,7 +43,7 @@ source ../assert.sh
 czy_prefix() {
     local napis_a="$1"
     local napis_b="$2"
-    
+
     if [[ "$napis_b" == "$napis_a"* ]]; then
         echo "Prawda"
     else
@@ -55,7 +54,7 @@ czy_prefix() {
 test_czy_prefix() {
     local wynik=$(czy_prefix "Dino" "Dinozaur jest zly")
     assertEqual "$wynik" "Prawda" $LINENO
-    
+
     local wynik2=$(czy_prefix "ABC" "XYZ")
     assertEqual "$wynik2" "Fałsz" $LINENO
 }

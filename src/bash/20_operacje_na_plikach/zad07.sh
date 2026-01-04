@@ -27,7 +27,6 @@
 #
 # **Wyjście:**
 # *(brak)*
-
 source ../assert.sh
 
 wstaw_na_poczatek_pliku() {

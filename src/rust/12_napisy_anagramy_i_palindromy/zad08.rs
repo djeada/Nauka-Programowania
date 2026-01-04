@@ -48,8 +48,8 @@ yxy
 
 */
 
-use std::io;
 use std::collections::HashSet;
+use std::io;
 
 // Funkcja sprawdzająca czy palindrom jest "wyjątkowy"
 // Złożoność czasowa: O(n), gdzie n to długość podciągu
@@ -57,31 +57,31 @@ use std::collections::HashSet;
 fn czy_wyjatkowy_palindrom(s: &str) -> bool {
     let chars: Vec<char> = s.chars().collect();
     let len = chars.len();
-    
+
     // Sprawdź czy jest palindromem
     for i in 0..len / 2 {
         if chars[i] != chars[len - 1 - i] {
             return false;
         }
     }
-    
+
     // Sprawdź warunek wyjątkowości
     if len == 1 {
         return true;
     }
-    
+
     let unikalne: HashSet<char> = chars.iter().cloned().collect();
-    
+
     if unikalne.len() == 1 {
         // Wszystkie znaki identyczne
         return true;
     }
-    
+
     if len % 2 == 1 {
         // Nieparzysta długość - sprawdź czy wszystkie poza środkowym są identyczne
         let srodek = len / 2;
         let pierwszy = chars[0];
-        
+
         for i in 0..len {
             if i != srodek && chars[i] != pierwszy {
                 return false;
@@ -89,7 +89,7 @@ fn czy_wyjatkowy_palindrom(s: &str) -> bool {
         }
         return true;
     }
-    
+
     false
 }
 
@@ -99,16 +99,16 @@ fn czy_wyjatkowy_palindrom(s: &str) -> bool {
 fn znajdz_wyjatkowe_palindromy(slowo: &str) -> Vec<String> {
     let mut znalezione: HashSet<String> = HashSet::new();
     let len = slowo.len();
-    
+
     for i in 0..len {
-        for j in i+1..=len {
+        for j in i + 1..=len {
             let podciag = &slowo[i..j];
             if czy_wyjatkowy_palindrom(podciag) {
                 znalezione.insert(podciag.to_string());
             }
         }
     }
-    
+
     let mut wynik: Vec<String> = znalezione.into_iter().collect();
     // Sortuj według długości, a następnie leksykograficznie dla determinizmu
     wynik.sort_by(|a, b| a.len().cmp(&b.len()).then_with(|| a.cmp(b)));
@@ -119,7 +119,7 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let slowo = input.trim();
-    
+
     let palindromy = znajdz_wyjatkowe_palindromy(slowo);
     for palindrom in palindromy {
         println!("{}", palindrom);

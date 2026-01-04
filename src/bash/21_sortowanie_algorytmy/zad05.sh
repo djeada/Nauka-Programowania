@@ -43,7 +43,6 @@
 #
 # * Średnio: `O(n log n)`, w pesymistycznym przypadku: `O(n^2)`.
 # * Wybór pivota ma wpływ na wydajność.
-
 source ../assert.sh
 
 partycja() {

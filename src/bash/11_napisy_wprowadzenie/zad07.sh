@@ -28,7 +28,6 @@
 # ```
 # 82, 111, 98, 111, 116
 # ```
-
 source ../assert.sh
 
 # Funkcja pomocnicza konwertujaca znak na kod ASCII

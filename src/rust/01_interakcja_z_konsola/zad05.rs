@@ -216,6 +216,8 @@ fn main() {
     let mut x = String::new();
     std::io::stdin().read_line(&mut x).expect("Blad odczytu");
     let x: f64 = x.trim().parse().expect("Blad parsowania");
-    let y = x.sin().powi(3) * x.cos().powi(2) + (x * x).exp() + (x.powi(3) + 2.0 * x.powi(2) - x - 3.0).ln();
+    let y = x.sin().powi(3) * x.cos().powi(2)
+        + (x * x).exp()
+        + (x.powi(3) + 2.0 * x.powi(2) - x - 3.0).ln();
     println!("{:.3}", y);
 }

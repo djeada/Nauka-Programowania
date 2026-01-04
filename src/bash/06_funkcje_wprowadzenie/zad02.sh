@@ -173,13 +173,6 @@
 # ```
 # 3
 # ```
-
-# ZAD-02A — Suma dwóch liczb
-# ZAD-02B — Różnica: b − a
-# ZAD-02C — Iloczyn dwóch liczb
-# ZAD-02D — Iloraz całkowity: a // b
-# ZAD-02E — Reszta z dzielenia: a % b
-
 suma() {
     echo $(($1 + $2))
 }

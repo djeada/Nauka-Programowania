@@ -41,4 +41,4 @@ Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności ma
 main :: IO ()
 main = do
   n <- readLn :: IO Int
-  mapM_ print [n-1, n-2 .. 1]
+  mapM_ print [n - 1, n - 2 .. 1]

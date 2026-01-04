@@ -42,7 +42,7 @@ Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruch
 def obroc_o_90(macierz):
     """
     Funkcja obraca macierz o 90 stopni zgodnie z ruchem wskazówek zegara.
-    
+
     Złożoność czasowa: O(n²), gdzie n to rozmiar macierzy
     Złożoność pamięciowa: O(1) - obrót in-place
     """
@@ -57,7 +57,7 @@ def obroc_o_90(macierz):
     for i in range(n):
         for j in range(i + 1, n):
             macierz[i][j], macierz[j][i] = macierz[j][i], macierz[i][j]
-    
+
     # Potem odwrócenie każdego wiersza
     for i in range(n):
         macierz[i].reverse()
@@ -74,18 +74,18 @@ def test_obroc_o_90():
 if __name__ == "__main__":
     # Wczytanie rozmiaru macierzy
     n = int(input().strip())
-    
+
     # Wczytanie macierzy
     macierz = []
     for _ in range(n):
         wiersz = list(map(int, input().strip().split()))
         macierz.append(wiersz)
-    
+
     # Obrót macierzy o 90 stopni
     # Złożoność czasowa: O(n²)
     # Złożoność pamięciowa: O(1)
     obroc_o_90(macierz)
-    
+
     # Wypisanie wyniku
     for wiersz in macierz:
-        print(' '.join(map(str, wiersz)))
+        print(" ".join(map(str, wiersz)))

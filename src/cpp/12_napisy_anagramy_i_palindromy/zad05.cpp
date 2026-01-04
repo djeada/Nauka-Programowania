@@ -1,10 +1,43 @@
 /*
-Tytul: Znalezienie anagramow slowa w zdaniu.
-Tresc: Napisz program, ktory otrzymuje napis reprezentujacy zdanie oraz slowo.
-Twoim zadaniem jest znalezienie wszystkich anagramow otrzymanego slowa w zdaniu.
-Roznice miedzy wielkimi i malymi literami powinny byc zignorowane. Dane
-wejsciowe: Dwa napisy. Dane wyjsciowe: Lista napisow. Przyklad: Dla otrzymanych
-napisow: “Sroga kara.” oraz “arak”, powinna zostac zwrocona lista: [“kara”].
+ZAD-05 — Anagramy słowa w zdaniu
+
+**Poziom:** ★★☆
+**Tagi:** `anagram`, `string`, `zliczanie`
+
+### Treść
+
+Wczytaj zdanie oraz słowo-klucz. Wypisz wszystkie słowa ze zdania, które są
+anagramami słowa-klucza (ignoruj wielkość liter).
+
+### Wejście
+
+* 1. linia: zdanie
+* 2. linia: słowo-klucz `k`
+
+### Wyjście
+
+Każde słowo ze zdania będące anagramem `k` — w osobnej linii (w kolejności
+występowania).
+
+### Przykład
+
+**Wejście:**
+
+```
+Sroga kara.
+arak
+```
+
+**Wyjście:**
+
+```
+kara
+```
+
+### Uwagi
+
+* Tak jak wyżej: usuń interpunkcję z brzegów słów.
+* Porównuj np. posortowane litery w `lower()`.
 
 */
 #include <algorithm>

@@ -35,7 +35,7 @@ print(silnia(3))
 
 -}
 silnia :: Int -> Int
-silnia n = product [1..n]
+silnia n = product [1 .. n]
 
 main :: IO ()
 main = do

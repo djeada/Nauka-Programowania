@@ -40,8 +40,8 @@ raport.docx
 
 */
 
-use std::io;
 use std::fs;
+use std::io;
 use std::path::PathBuf;
 
 // Funkcja rekurencyjnie znajdująca pliki o danej nazwie
@@ -58,7 +58,7 @@ fn znajdz_pliki_helper(sciezka: &str, nazwa_pliku: &str, wynik: &mut Vec<String>
         for entry in entries.flatten() {
             if let Ok(file_type) = entry.file_type() {
                 let path = entry.path();
-                
+
                 if file_type.is_file() {
                     if let Some(nazwa) = path.file_name() {
                         if nazwa == nazwa_pliku {
@@ -81,10 +81,10 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let nazwa_pliku = input.trim();
-    
+
     // Szukaj od bieżącego katalogu (w praktyce można użyć "/"  lub "C:\" w systemach Windows)
     let pliki = znajdz_pliki_rekurencyjnie(".", nazwa_pliku);
-    
+
     println!("[");
     for (i, plik) in pliki.iter().enumerate() {
         if i > 0 {

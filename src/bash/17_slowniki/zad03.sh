@@ -47,7 +47,6 @@
 # Książki wypożyczone przez Jan: Władca Pierścieni
 # Książki wypożyczone przez Anna: Duma i uprzedzenie
 # ```
-
 source ../assert.sh
 
 dodaj_ksiazke_do_czytelnika() {

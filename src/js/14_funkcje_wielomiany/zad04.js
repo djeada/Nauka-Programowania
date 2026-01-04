@@ -24,9 +24,6 @@ Dla `a = [5, 0, 10, 6]` oraz `b = [1, 2, 4]` funkcja zwraca:
 
 */
 
-// Funkcja mnoży dwa wielomiany (splat konwolucji współczynników)
-// Złożoność czasowa: O(n*m), gdzie n i m to stopnie wielomianów
-// Złożoność pamięciowa: O(n+m)
 function mnozenieWielomianow(wielomian1, wielomian2) {
   const wynik = new Array(wielomian1.length + wielomian2.length - 1).fill(0);
 

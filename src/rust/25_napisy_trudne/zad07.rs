@@ -36,8 +36,8 @@ pythonpython
 
 */
 
-use std::io;
 use std::collections::HashMap;
+use std::io;
 
 // Funkcja znajdująca powtarzające się podnapisy
 // Złożoność czasowa: O(n^2), gdzie n to długość napisu
@@ -45,7 +45,7 @@ use std::collections::HashMap;
 fn powtarzajace_podnapisy(napis: &str) -> Vec<String> {
     let mut mapa: HashMap<String, usize> = HashMap::new();
     let n = napis.len();
-    
+
     // Generuj wszystkie podnapisy
     for i in 0..n {
         for j in (i + 1)..=n {
@@ -53,13 +53,14 @@ fn powtarzajace_podnapisy(napis: &str) -> Vec<String> {
             *mapa.entry(podnapis).or_insert(0) += 1;
         }
     }
-    
+
     // Zbierz te, które występują więcej niż raz
-    let mut wynik: Vec<String> = mapa.iter()
+    let mut wynik: Vec<String> = mapa
+        .iter()
         .filter(|(_, &count)| count > 1)
         .map(|(s, _)| s.clone())
         .collect();
-    
+
     // Sortuj dla spójności
     wynik.sort();
     wynik
@@ -69,9 +70,9 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let napis = input.trim();
-    
+
     let wynik = powtarzajace_podnapisy(napis);
-    
+
     // Wypisz wynik
     print!("[");
     for (i, s) in wynik.iter().enumerate() {

@@ -50,7 +50,6 @@ print(wynik)
 
 */
 
-// Funkcja zwracajaca srednia arytmetyczna n liczb
 function sredniaArytmetycznaNLiczb(n) {
   var suma = 0;
   for (var i = 0; i < n; i++) {

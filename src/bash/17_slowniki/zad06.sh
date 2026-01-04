@@ -28,7 +28,6 @@
 # ```
 # {'k': 1, 'l': 1, 'a': 2, 's': 1}
 # ```
-
 source ../assert.sh
 
 histogram_znakow() {

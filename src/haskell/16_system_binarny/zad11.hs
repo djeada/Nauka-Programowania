@@ -49,8 +49,8 @@ import Data.Bits (complement, xor)
 -- Złożoność pamięciowa: O(1)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    let onesComplement = complement n
-    let twosComplement = onesComplement + 1
-    putStrLn $ "Ones complement: " ++ show onesComplement
-    putStrLn $ "Twos complement: " ++ show twosComplement
+  n <- readLn :: IO Int
+  let onesComplement = complement n
+  let twosComplement = onesComplement + 1
+  putStrLn $ "Ones complement: " ++ show onesComplement
+  putStrLn $ "Twos complement: " ++ show twosComplement

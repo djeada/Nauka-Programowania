@@ -45,13 +45,13 @@ def wartosc_wielomianu_horner(wspolczynniki, x, indeks=0, akumulator=0):
     """
     Oblicza wartość wielomianu w punkcie x używając schematu Hornera (rekurencyjnie).
     Współczynniki w formacie [a_n, ..., a_0].
-    
+
     Złożoność czasowa: O(n), gdzie n to stopień wielomianu
     Złożoność pamięciowa: O(n) ze względu na rekurencję
     """
     if indeks >= len(wspolczynniki):
         return akumulator
-    
+
     # Schemat Hornera: wynik = wynik * x + a_i
     nowy_akumulator = akumulator * x + wspolczynniki[indeks]
     return wartosc_wielomianu_horner(wspolczynniki, x, indeks + 1, nowy_akumulator)
@@ -60,17 +60,17 @@ def wartosc_wielomianu_horner(wspolczynniki, x, indeks=0, akumulator=0):
 if __name__ == "__main__":
     # Wczytanie stopnia wielomianu
     n = int(input().strip())
-    
+
     # Wczytanie współczynników
     wspolczynniki = list(map(int, input().strip().split()))
-    
+
     # Wczytanie punktu x
     x = int(input().strip())
-    
+
     # Obliczenie wartości wielomianu
     # Złożoność czasowa: O(n)
     # Złożoność pamięciowa: O(n)
     wynik = wartosc_wielomianu_horner(wspolczynniki, x)
-    
+
     # Wypisanie wyniku
     print(wynik)

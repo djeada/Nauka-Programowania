@@ -39,7 +39,6 @@ ABABB
 
 */
 
-// Funkcja liczaca ile razy samochody mijaja sie na drodze
 function liczbaMijajacychSieSamochodow(listaSamochodow) {
   var samochodyA = 0;
   var liczbaMijajacych = 0;

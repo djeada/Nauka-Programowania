@@ -52,9 +52,9 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let tekst = input.trim();
-    
+
     let fragmenty = podziel_po_interpunkcji(tekst);
-    
+
     for fragment in fragmenty {
         println!("{}", fragment);
     }

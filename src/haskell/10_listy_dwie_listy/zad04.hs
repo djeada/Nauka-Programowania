@@ -40,11 +40,11 @@ main :: IO ()
 main = do
   listAStr <- getLine
   listBStr <- getLine
-  
+
   let parseList str = read str :: [Int]
   let listA = parseList listAStr
   let listB = parseList listBStr
-  
+
   let dotProduct = sum $ zipWith (*) listA listB
-  
+
   print dotProduct

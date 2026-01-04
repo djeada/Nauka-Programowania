@@ -45,7 +45,6 @@ Jeśli brak par — brak wyjścia.
 
 */
 
-// Funkcja znajdujaca wszystkie pary elementow o sumie rownej podanej liczbie
 function znajdzWszystkieParySumujaceDo(lista, x) {
   const mapaIndeksow = new Map();
   const pary = [];

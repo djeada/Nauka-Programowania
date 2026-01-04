@@ -49,7 +49,7 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: usize = n.trim().parse().unwrap();
-    
+
     for i in 0..n {
         for j in 0..n {
             if i == 0 || i == n - 1 || j == n - 1 - i {

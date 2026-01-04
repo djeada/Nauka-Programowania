@@ -46,8 +46,8 @@ import Data.Char (toLower)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    slowo <- getLine
-    let slowo_lower = map toLower slowo
-    if slowo_lower == reverse slowo_lower
-        then putStrLn "Prawda"
-        else putStrLn "Fałsz"
+  slowo <- getLine
+  let slowo_lower = map toLower slowo
+  if slowo_lower == reverse slowo_lower
+    then putStrLn "Prawda"
+    else putStrLn "Fałsz"

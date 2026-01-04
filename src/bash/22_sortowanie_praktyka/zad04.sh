@@ -33,7 +33,6 @@
 # ```
 # ['a', 'ab', 'abc', 'abcd']
 # ```
-
 source ../assert.sh
 
 # Sortuje listę napisów względem ich długości.

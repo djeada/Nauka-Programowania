@@ -53,7 +53,7 @@ fn sprawdz_warunki(a: i32, b: i32) -> (bool, bool, bool, bool) {
     let cond_c = a % 2 != 0 && b % 2 != 0;
     let max_val = if a > b { a } else { b };
     let cond_d = max_val < a * a;
-    
+
     (cond_a, cond_b, cond_c, cond_d)
 }
 

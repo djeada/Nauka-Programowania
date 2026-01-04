@@ -47,7 +47,7 @@ fn sortuj_binarna(lista: &mut Vec<u32>) {
             liczba_zer += 1;
         }
     }
-    
+
     // Wypełniamy listę: najpierw zera, potem jedynki
     for i in 0..lista.len() {
         if i < liczba_zer {
@@ -62,18 +62,20 @@ fn main() {
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
     let _n: usize = n_str.trim().parse().unwrap_or(0);
-    
+
     let mut lista_str = String::new();
-    io::stdin().read_line(&mut lista_str).expect("Błąd wczytywania");
-    
+    io::stdin()
+        .read_line(&mut lista_str)
+        .expect("Błąd wczytywania");
+
     let mut lista: Vec<u32> = lista_str
         .trim()
         .split_whitespace()
         .filter_map(|s| s.parse().ok())
         .collect();
-    
+
     sortuj_binarna(&mut lista);
-    
+
     print!("[");
     for (i, x) in lista.iter().enumerate() {
         if i > 0 {

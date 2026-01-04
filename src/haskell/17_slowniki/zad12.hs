@@ -53,4 +53,4 @@ import qualified Data.Map as Map
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    putStrLn "Placeholder - głębokie scalanie słowników"
+  putStrLn "Placeholder - głębokie scalanie słowników"

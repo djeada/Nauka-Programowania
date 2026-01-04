@@ -40,7 +40,6 @@
 # ### Uwagi
 #
 # * Jeśli `klucz` nie występuje, wypisz listę bez zmian.
-
 source ../assert.sh
 
 usun() {

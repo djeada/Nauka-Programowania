@@ -103,7 +103,6 @@ True
 
 */
 
-// Funkcja zwracajaca liczbe 3
 function zwracajLiczbe() {
   return 3;
 }

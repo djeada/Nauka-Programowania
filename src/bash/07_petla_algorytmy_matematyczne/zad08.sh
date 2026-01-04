@@ -39,7 +39,6 @@
 # 
 # * Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.
 # * Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`.
-
 source ../assert.sh
 
 czyPierwsza() {

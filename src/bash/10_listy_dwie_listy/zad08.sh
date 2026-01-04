@@ -33,7 +33,6 @@
 # ```
 # [2, 3, 4, 5, 7, 9]
 # ```
-
 source ../assert.sh
 
 polacz_v1() {

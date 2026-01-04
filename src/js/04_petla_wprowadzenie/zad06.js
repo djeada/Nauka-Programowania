@@ -52,7 +52,6 @@ Trzy liczby naturalne — każda w oddzielnej linii:
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Petla $$a_n = n^2 + n + 1$$

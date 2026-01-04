@@ -28,7 +28,6 @@
 # ```
 # Prawda
 # ```
-
 source ../assert.sh
 
 czy_sciezka_pliku() {

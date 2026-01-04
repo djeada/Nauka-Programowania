@@ -28,7 +28,6 @@
 # ```
 # AB
 # ```
-
 source ../assert.sh
 
 # Usuwa powtórzenia znaków, zachowując pierwsze wystąpienia.
@@ -38,22 +37,22 @@ usun_powtorzenia() {
     local napis="$1"
     local wynik=""
     local i
-    
-    for ((i=0; i<${#napis}; i++)); do
+
+    for ((i = 0; i < ${#napis}; i++)); do
         local znak="${napis:$i:1}"
         # Sprawdź czy znak już jest w wyniku
         if [[ "$wynik" != *"$znak"* ]]; then
             wynik="$wynik$znak"
         fi
     done
-    
+
     echo "$wynik"
 }
 
 test_usun_powtorzenia() {
     local wynik=$(usun_powtorzenia "AAAAAAAAAABBBBBBBBA")
     assertEqual "$wynik" "AB" $LINENO
-    
+
     local wynik2=$(usun_powtorzenia "ABCABC")
     assertEqual "$wynik2" "ABC" $LINENO
 }

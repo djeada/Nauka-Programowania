@@ -45,10 +45,6 @@
 #
 # * `X` może być duże — traktuj jako napis, a nie typ int „na wejściu”.
 # * Dla wartości 10..35 stosuj `A..Z`.
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(n)
-# Zlozonosc pamieciowa: O(1)
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"

@@ -48,34 +48,31 @@ Ptak ląduje.
 
 -}
 
--- Symulacja dziedziczenia wielokrotnego w Haskell
--- Złożoność pamięciowa: O(1)
-
 class Zwierz a where
-    jedz :: a -> IO ()
-    spij :: a -> IO ()
-    wydajDzwiek :: a -> IO ()
+  jedz :: a -> IO ()
+  spij :: a -> IO ()
+  wydajDzwiek :: a -> IO ()
 
 class ObiektLatajacy a where
-    lec :: a -> IO ()
-    wyladuj :: a -> IO ()
+  lec :: a -> IO ()
+  wyladuj :: a -> IO ()
 
 data Ptak = Ptak
 
 instance Zwierz Ptak where
-    jedz _ = putStrLn "Ptak je."
-    spij _ = putStrLn "Ptak śpi."
-    wydajDzwiek _ = putStrLn "Ptak wydaje dźwięk."
+  jedz _ = putStrLn "Ptak je."
+  spij _ = putStrLn "Ptak śpi."
+  wydajDzwiek _ = putStrLn "Ptak wydaje dźwięk."
 
 instance ObiektLatajacy Ptak where
-    lec _ = putStrLn "Ptak leci."
-    wyladuj _ = putStrLn "Ptak ląduje."
+  lec _ = putStrLn "Ptak leci."
+  wyladuj _ = putStrLn "Ptak ląduje."
 
 main :: IO ()
 main = do
-    let ptak = Ptak
-    jedz ptak
-    wydajDzwiek ptak
-    lec ptak
-    wyladuj ptak
-    spij ptak
+  let ptak = Ptak
+  jedz ptak
+  wydajDzwiek ptak
+  lec ptak
+  wyladuj ptak
+  spij ptak

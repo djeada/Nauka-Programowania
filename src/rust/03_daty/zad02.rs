@@ -61,27 +61,27 @@ fn main() {
     let mut d1 = String::new();
     std::io::stdin().read_line(&mut d1).unwrap();
     let d1: i32 = d1.trim().parse().unwrap();
-    
+
     let mut m1 = String::new();
     std::io::stdin().read_line(&mut m1).unwrap();
     let m1: i32 = m1.trim().parse().unwrap();
-    
+
     let mut y1 = String::new();
     std::io::stdin().read_line(&mut y1).unwrap();
     let y1: i32 = y1.trim().parse().unwrap();
-    
+
     let mut d2 = String::new();
     std::io::stdin().read_line(&mut d2).unwrap();
     let d2: i32 = d2.trim().parse().unwrap();
-    
+
     let mut m2 = String::new();
     std::io::stdin().read_line(&mut m2).unwrap();
     let m2: i32 = m2.trim().parse().unwrap();
-    
+
     let mut y2 = String::new();
     std::io::stdin().read_line(&mut y2).unwrap();
     let y2: i32 = y2.trim().parse().unwrap();
-    
+
     // Sprawdz czy osoba ma 18 lat
     let mut pelnoletni = false;
     if y2 > y1 + 18 {
@@ -93,7 +93,7 @@ fn main() {
             pelnoletni = true;
         }
     }
-    
+
     if pelnoletni {
         println!("Osoba jest pełnoletnia.");
     } else {

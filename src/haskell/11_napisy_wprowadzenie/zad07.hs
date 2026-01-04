@@ -40,6 +40,6 @@ import Data.List (intercalate)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    napis <- getLine
-    let kody = map (show . ord) napis
-    putStrLn $ intercalate ", " kody
+  napis <- getLine
+  let kody = map (show . ord) napis
+  putStrLn $ intercalate ", " kody

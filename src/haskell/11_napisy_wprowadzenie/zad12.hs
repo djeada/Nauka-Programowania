@@ -32,11 +32,8 @@ Alamakota
 
 -}
 
--- Usuwa wszystkie spacje z napisu
--- Złożoność czasowa: O(n), gdzie n to długość napisu
--- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    zdanie <- getLine
-    let bezSpacji = filter (/= ' ') zdanie
-    putStrLn bezSpacji
+  zdanie <- getLine
+  let bezSpacji = filter (/= ' ') zdanie
+  putStrLn bezSpacji

@@ -37,14 +37,14 @@ import Text.Read (readMaybe)
 -- Złożoność czasowa: O(n)
 -- Złożoność pamięciowa: O(n)
 moveZerosToEnd :: [Int] -> [Int]
-moveZerosToEnd xs = 
-    let nonZeros = filter (/= 0) xs
-        zeros = replicate (length xs - length nonZeros) 0
-    in nonZeros ++ zeros
+moveZerosToEnd xs =
+  let nonZeros = filter (/= 0) xs
+      zeros = replicate (length xs - length nonZeros) 0
+   in nonZeros ++ zeros
 
 main :: IO ()
 main = do
-    input <- getLine
-    case readMaybe input :: Maybe [Int] of
-        Just xs -> print $ moveZerosToEnd xs
-        Nothing -> print ([] :: [Int])
+  input <- getLine
+  case readMaybe input :: Maybe [Int] of
+    Just xs -> print $ moveZerosToEnd xs
+    Nothing -> print ([] :: [Int])

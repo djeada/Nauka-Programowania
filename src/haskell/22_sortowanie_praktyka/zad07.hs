@@ -34,7 +34,7 @@ Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj j
 
 -}
 
-import Data.List (sort, intercalate)
+import Data.List (intercalate, sort)
 
 -- Sortowanie listy 0/1/2
 -- Złożoność czasowa: O(n log n) lub O(n) przy counting sort
@@ -46,9 +46,9 @@ formatList xs = "[" ++ intercalate ", " (map show xs) ++ "]"
 
 main :: IO ()
 main = do
-    nStr <- getLine
-    let n = read nStr :: Int
-    numsLine <- getLine
-    let nums = map read (words numsLine) :: [Int]
-    let sorted = sort nums
-    putStrLn $ formatList sorted
+  nStr <- getLine
+  let n = read nStr :: Int
+  numsLine <- getLine
+  let nums = map read (words numsLine) :: [Int]
+  let sorted = sort nums
+  putStrLn $ formatList sorted

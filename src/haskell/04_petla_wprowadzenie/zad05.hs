@@ -59,9 +59,9 @@ main = do
   b <- readLn :: IO Int
   let lo = min a b
   let hi = max a b
-  
+
   -- Part a: all numbers between lo and hi (exclusive)
-  mapM_ print [lo+1..hi-1]
-  
+  mapM_ print [lo + 1 .. hi - 1]
+
   -- Part b: numbers divisible by 3
-  mapM_ print $ filter (\x -> x `mod` 3 == 0) [lo+1..hi-1]
+  mapM_ print $ filter (\x -> x `mod` 3 == 0) [lo + 1 .. hi - 1]

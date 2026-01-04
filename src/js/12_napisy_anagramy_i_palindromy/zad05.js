@@ -39,9 +39,6 @@ kara
 
 */
 
-// Funkcja sprawdza czy dwa słowa są anagramami (porównując posortowane litery)
-// Złożoność czasowa: O(n log n), gdzie n to długość słowa
-// Złożoność pamięciowa: O(n)
 function czyAnagramy(slowo1, slowo2) {
   const slowo1Male = slowo1.toLowerCase();
   const slowo2Male = slowo2.toLowerCase();

@@ -45,7 +45,6 @@
 # ### Uwagi
 #
 # * Sprawdź pole trójkąta: jeśli równe `0`, punkty są współliniowe.
-
 source ../assert.sh
 
 odleglosc() {

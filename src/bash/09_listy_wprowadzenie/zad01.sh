@@ -43,7 +43,6 @@
 # ### Uwagi o formatowaniu
 #
 # * W podpunkcie (b) nie dodawaj przecinka na końcu.
-
 wczytaj() {
 
     for ((i = 0; i < $1; i++)); do
@@ -62,7 +61,7 @@ wypisz_od_poczatku() {
 
 wypisz_od_konca() {
     local n=$((${#lista[@]} - 1))
-    
+
     # Wypisz w jednej linii z przecinkami
     for ((i = n; i >= 0; i--)); do
         echo -n "${lista[$i]}"

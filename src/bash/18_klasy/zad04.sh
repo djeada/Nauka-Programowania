@@ -47,10 +47,11 @@
 # ```
 # Wektor A: (-3, -3, -3)
 # Wektor B: (5, 5, 5)
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(1)
-# Zlozonosc pamieciowa: O(1)
+# Suma wektorów: (2, 2, 2)
+# Różnica wektorów A - B: (-8, -8, -8)
+# Iloczyn skalarny: -45
+# Iloczyn wektorowy: (0, 0, 0)
+# ```
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     # Bash nie ma natywnego wsparcia dla klas obiektowych

@@ -31,17 +31,14 @@ ABA
 ```
 
 -}
--- Usuń powtórzenia bezpośrednio obok siebie
--- Złożoność czasowa: O(n)
--- Złożoność pamięciowa: O(n)
 removeConsecutiveDuplicates :: String -> String
 removeConsecutiveDuplicates [] = []
 removeConsecutiveDuplicates [x] = [x]
-removeConsecutiveDuplicates (x:y:xs)
-    | x == y = removeConsecutiveDuplicates (x:xs)
-    | otherwise = x : removeConsecutiveDuplicates (y:xs)
+removeConsecutiveDuplicates (x : y : xs)
+  | x == y = removeConsecutiveDuplicates (x : xs)
+  | otherwise = x : removeConsecutiveDuplicates (y : xs)
 
 main :: IO ()
 main = do
-    text <- getLine
-    putStrLn $ removeConsecutiveDuplicates text
+  text <- getLine
+  putStrLn $ removeConsecutiveDuplicates text

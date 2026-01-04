@@ -28,7 +28,6 @@
 # ```
 # RUMCAJS
 # ```
-
 source ../assert.sh
 
 # Funkcja zamieniajaca male litery na wielkie (wersja z awk)

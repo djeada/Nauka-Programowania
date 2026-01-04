@@ -52,7 +52,7 @@ evaluatePolynomial coeffs x = foldl (\acc c -> acc * x + c) 0 coeffs
 -- Wartość wielomianu w punkcie (z I/O)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    coeffs <- map read . words <$> getLine :: IO [Int]
-    x <- readLn :: IO Int
-    print $ evaluatePolynomial coeffs x
+  n <- readLn :: IO Int
+  coeffs <- map read . words <$> getLine :: IO [Int]
+  x <- readLn :: IO Int
+  print $ evaluatePolynomial coeffs x

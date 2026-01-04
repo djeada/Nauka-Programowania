@@ -46,16 +46,16 @@ fn wyodrebnij_cyfry_w_slowach(zdanie: &str) -> Vec<String> {
     let mut wynik = Vec::new();
     let mut biezacy_ciag = String::new();
     let mut w_slowie = false;
-    
+
     let chars: Vec<char> = zdanie.chars().collect();
-    
+
     for (i, &c) in chars.iter().enumerate() {
         if c.is_alphanumeric() {
             if c.is_digit(10) {
                 // Sprawdź czy jesteśmy w słowie (czy poprzedni/następny znak to litera)
                 let poprzedni_litera = i > 0 && chars[i - 1].is_alphabetic();
                 let nastepny_litera = i + 1 < chars.len() && chars[i + 1].is_alphabetic();
-                
+
                 if poprzedni_litera || nastepny_litera || w_slowie {
                     biezacy_ciag.push(c);
                     w_slowie = true;
@@ -77,11 +77,11 @@ fn wyodrebnij_cyfry_w_slowach(zdanie: &str) -> Vec<String> {
             w_slowie = false;
         }
     }
-    
+
     if !biezacy_ciag.is_empty() {
         wynik.push(biezacy_ciag);
     }
-    
+
     wynik
 }
 
@@ -89,9 +89,9 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let zdanie = input.trim();
-    
+
     let cyfry = wyodrebnij_cyfry_w_slowach(zdanie);
-    
+
     for ciag in cyfry {
         println!("{}", ciag);
     }

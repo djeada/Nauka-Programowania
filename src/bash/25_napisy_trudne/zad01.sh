@@ -40,7 +40,6 @@
 # ```
 # Lerzy jerzy na wierzy
 # ```
-
 source ../assert.sh
 
 # Zamienia wszystkie wystąpienia podnapisu A na B w zdaniu.
@@ -50,7 +49,7 @@ podmien_slowo() {
     local zdanie="$1"
     local slowo_a="$2"
     local slowo_b="$3"
-    
+
     echo "${zdanie//$slowo_a/$slowo_b}"
 }
 

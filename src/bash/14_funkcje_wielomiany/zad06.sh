@@ -27,10 +27,11 @@
 # ### Ograniczenia / gwarancje
 #
 # * Zakładamy `a ≠ 0` (to naprawdę równanie kwadratowe).
-
-# Funkcja do zaimplementowania
-# Złożoność czasowa: O(n^2)
-# Złożoność pamieciowa: O(n)
+#
+# ### Uwagi
+#
+# * Licz `Δ = b^2 - 4ac`.
+# * Pierwiastki: `(-b ± sqrt(Δ)) / (2a)`.
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"

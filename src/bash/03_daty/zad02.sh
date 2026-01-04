@@ -54,7 +54,6 @@
 # ```
 # Osoba jest pełnoletnia.
 # ```
-
 main() {
     read dzien
     read miesiac

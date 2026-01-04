@@ -28,7 +28,6 @@
 # ```
 # ABA
 # ```
-
 source ../assert.sh
 
 # Usuwa powtórzenia sąsiadujących znaków.
@@ -39,22 +38,22 @@ usun_sasiadow() {
     local wynik=""
     local poprzedni=""
     local i
-    
-    for ((i=0; i<${#napis}; i++)); do
+
+    for ((i = 0; i < ${#napis}; i++)); do
         local znak="${napis:$i:1}"
         if [ "$znak" != "$poprzedni" ]; then
             wynik="$wynik$znak"
             poprzedni="$znak"
         fi
     done
-    
+
     echo "$wynik"
 }
 
 test_usun_sasiadow() {
     local wynik=$(usun_sasiadow "AAAAAAAAAABBBBBBBBA")
     assertEqual "$wynik" "ABA" $LINENO
-    
+
     local wynik2=$(usun_sasiadow "AABBCCDD")
     assertEqual "$wynik2" "ABCD" $LINENO
 }

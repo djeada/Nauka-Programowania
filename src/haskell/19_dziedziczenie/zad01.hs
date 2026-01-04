@@ -38,25 +38,22 @@ A ja jestem klasą potomną.
 
 -}
 
--- W Haskell używamy type classes do symulacji dziedziczenia
--- Złożoność pamięciowa: O(1)
-
 class Bazowa a where
-    przedstawSie :: a -> IO ()
+  przedstawSie :: a -> IO ()
 
 data KlasaBazowa = KlasaBazowa
 
 instance Bazowa KlasaBazowa where
-    przedstawSie _ = putStrLn "Jestem klasą bazową."
+  przedstawSie _ = putStrLn "Jestem klasą bazową."
 
 data KlasaPotomna = KlasaPotomna
 
 instance Bazowa KlasaPotomna where
-    przedstawSie _ = do
-        przedstawSie KlasaBazowa  -- Wywołanie metody z klasy bazowej
-        putStrLn "A ja jestem klasą potomną."
+  przedstawSie _ = do
+    przedstawSie KlasaBazowa -- Wywołanie metody z klasy bazowej
+    putStrLn "A ja jestem klasą potomną."
 
 main :: IO ()
 main = do
-    let obj = KlasaPotomna
-    przedstawSie obj
+  let obj = KlasaPotomna
+  przedstawSie obj

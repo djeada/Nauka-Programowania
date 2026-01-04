@@ -133,14 +133,21 @@ print(max_z_trzech(3, 2, 1))
 
 */
 
-// Podpunkt a) minimum z dwóch liczb
 fn min_z_dwoch(a: i32, b: i32) -> i32 {
-    if a < b { a } else { b }
+    if a < b {
+        a
+    } else {
+        b
+    }
 }
 
 // Podpunkt b) maksimum z dwóch liczb
 fn max_z_dwoch(a: i32, b: i32) -> i32 {
-    if a > b { a } else { b }
+    if a > b {
+        a
+    } else {
+        b
+    }
 }
 
 // Podpunkt c) minimum z trzech liczb

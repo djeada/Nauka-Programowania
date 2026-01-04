@@ -47,10 +47,10 @@ use std::io;
 fn czy_anagramy(s1: &str, s2: &str) -> bool {
     let mut chars1: Vec<char> = s1.to_lowercase().chars().collect();
     let mut chars2: Vec<char> = s2.to_lowercase().chars().collect();
-    
+
     chars1.sort();
     chars2.sort();
-    
+
     chars1 == chars2
 }
 
@@ -60,7 +60,11 @@ fn czy_anagramy(s1: &str, s2: &str) -> bool {
 fn znajdz_anagramy(zdanie: &str, klucz: &str) -> Vec<String> {
     zdanie
         .split_whitespace()
-        .map(|slowo| slowo.trim_matches(|c: char| !c.is_alphanumeric()).to_string())
+        .map(|slowo| {
+            slowo
+                .trim_matches(|c: char| !c.is_alphanumeric())
+                .to_string()
+        })
         .filter(|slowo| !slowo.is_empty() && czy_anagramy(slowo, klucz))
         .collect()
 }
@@ -68,13 +72,15 @@ fn znajdz_anagramy(zdanie: &str, klucz: &str) -> Vec<String> {
 fn main() {
     let mut zdanie = String::new();
     let mut klucz = String::new();
-    
-    io::stdin().read_line(&mut zdanie).expect("Błąd wczytywania");
+
+    io::stdin()
+        .read_line(&mut zdanie)
+        .expect("Błąd wczytywania");
     io::stdin().read_line(&mut klucz).expect("Błąd wczytywania");
-    
+
     let zdanie = zdanie.trim();
     let klucz = klucz.trim();
-    
+
     let anagramy = znajdz_anagramy(zdanie, klucz);
     for anagram in anagramy {
         println!("{}", anagram);

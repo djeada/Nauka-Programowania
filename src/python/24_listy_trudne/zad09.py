@@ -37,8 +37,6 @@ Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienn
 """
 
 
-# Zlozonosc czasowa: O(n)
-# Zlozonosc pamieciowa: O(1)
 def najdluzszy_naprzemienny_podciag_v1(lista):
 
     dlugosc_maks = 1

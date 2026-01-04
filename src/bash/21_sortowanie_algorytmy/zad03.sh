@@ -33,7 +33,6 @@
 # ### Uwagi o algorytmie
 #
 # * Działa bardzo dobrze dla danych prawie posortowanych.
-
 source ../assert.sh
 
 sortuj() {

@@ -52,8 +52,6 @@ Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
 
 */
 
-// Pobieranie danych od uzytkownika
-
 const cena_plytki = parseFloat(prompt("Podaj cene plytki:"));
 const dlugosc_boku_plytki = parseFloat(prompt("Podaj dlugosc boku plytki:"));
 const dlugosc_podlogi = parseFloat(prompt("Podaj dlugosc podlogi:"));

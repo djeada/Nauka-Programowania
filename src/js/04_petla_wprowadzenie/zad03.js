@@ -42,7 +42,6 @@ Jedna liczba naturalna:
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Petla

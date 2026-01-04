@@ -45,7 +45,7 @@ import Text.Printf (printf)
 
 -- Typ danych reprezentujący koło
 -- Złożoność pamięciowa: O(1)
-data Kolo = Kolo { promien :: Double }
+data Kolo = Kolo {promien :: Double}
 
 -- Oblicza obwód koła
 -- Złożoność czasowa: O(1)
@@ -60,12 +60,12 @@ pole (Kolo r) = pi * r * r
 -- Wypisuje informacje o kole
 wypisz :: Kolo -> IO ()
 wypisz k@(Kolo r) = do
-    printf "Koło o promieniu: %.0f\n" r
-    printf "Obwód koła: %.4f\n" (obwod k)
-    printf "Pole koła: %.4f\n" (pole k)
+  printf "Koło o promieniu: %.0f\n" r
+  printf "Obwód koła: %.4f\n" (obwod k)
+  printf "Pole koła: %.4f\n" (pole k)
 
 main :: IO ()
 main = do
-    r <- readLn :: IO Double
-    let kolo = Kolo r
-    wypisz kolo
+  r <- readLn :: IO Double
+  let kolo = Kolo r
+  wypisz kolo

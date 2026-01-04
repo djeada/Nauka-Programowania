@@ -58,7 +58,6 @@ Osoba jest pełnoletnia.
 
 */
 
-// Pobieranie danych od uzytkownika
 const dzien_urodzenia = parseInt(prompt("Podaj dzien urodzenia:"));
 const miesiac_urodzenia = parseInt(prompt("Podaj miesiac urodzenia:"));
 const rok_urodzenia = parseInt(prompt("Podaj rok urodzenia:"));

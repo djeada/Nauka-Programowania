@@ -38,7 +38,6 @@ Dla każdej pozycji `i` znajdź najmniejszy element w zakresie `i..koniec` i zam
 """
 
 
-# Zlozonosc czasowa O(n^2)
 def sortuj_v1(tablica):
 
     for i in range(len(tablica)):

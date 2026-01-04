@@ -50,26 +50,28 @@ import Data.List (sort)
 -- Złożoność czasowa: O(1)
 -- Złożoność pamięciowa: O(1)
 quadraticRoots :: Double -> Double -> Double -> [Double]
-quadraticRoots a b c = 
-    let delta = b * b - 4 * a * c
-    in if delta < 0
-       then []
-       else if delta == 0
+quadraticRoots a b c =
+  let delta = b * b - 4 * a * c
+   in if delta < 0
+        then []
+        else
+          if delta == 0
             then [-b / (2 * a)]
-            else let sqrtDelta = sqrt delta
-                     x1 = (-b + sqrtDelta) / (2 * a)
-                     x2 = (-b - sqrtDelta) / (2 * a)
-                 in sort [x1, x2]
+            else
+              let sqrtDelta = sqrt delta
+                  x1 = (-b + sqrtDelta) / (2 * a)
+                  x2 = (-b - sqrtDelta) / (2 * a)
+               in sort [x1, x2]
 
 -- Formatuje listę pierwiastków
 formatRoots :: [Double] -> String
 formatRoots [] = "[]"
 formatRoots [x] = "[" ++ show x ++ "]"
-formatRoots xs = "[" ++ concatMap (\(i, x) -> if i == 0 then show x else ", " ++ show x) (zip [0..] xs) ++ "]"
+formatRoots xs = "[" ++ concatMap (\(i, x) -> if i == 0 then show x else ", " ++ show x) (zip [0 ..] xs) ++ "]"
 
 -- Miejsca zerowe równania kwadratowego (z I/O)
 main :: IO ()
 main = do
-    line <- getLine
-    let [a, b, c] = map (read :: String -> Double) $ words line
-    putStrLn $ formatRoots $ quadraticRoots a b c
+  line <- getLine
+  let [a, b, c] = map (read :: String -> Double) $ words line
+  putStrLn $ formatRoots $ quadraticRoots a b c

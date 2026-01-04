@@ -39,7 +39,7 @@ main = do
   m <- readLn :: IO Int
   let daysInMonth = case m of
         1 -> 31
-        2 -> 28  -- non-leap year
+        2 -> 28 -- non-leap year
         3 -> 31
         4 -> 30
         5 -> 31

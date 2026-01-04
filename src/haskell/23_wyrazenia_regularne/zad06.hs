@@ -64,9 +64,9 @@ endsWithPattern line pattern = pattern `isSuffixOf` stripTrailingPunctuation lin
 
 main :: IO ()
 main = do
-    content <- getContents
-    let allLines = lines content
-        ending = last allLines
-        textLines = init allLines
-        matchingLines = filter (`endsWithPattern` ending) textLines
-    mapM_ putStrLn matchingLines
+  content <- getContents
+  let allLines = lines content
+      ending = last allLines
+      textLines = init allLines
+      matchingLines = filter (`endsWithPattern` ending) textLines
+  mapM_ putStrLn matchingLines

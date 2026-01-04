@@ -41,10 +41,12 @@ use std::io;
 // Funkcja wczytująca macierz
 fn wczytaj_macierz(n: usize, m: usize) -> Vec<Vec<i32>> {
     let mut macierz = Vec::new();
-    
+
     for _ in 0..n {
         let mut wiersz = String::new();
-        io::stdin().read_line(&mut wiersz).expect("Błąd wczytywania");
+        io::stdin()
+            .read_line(&mut wiersz)
+            .expect("Błąd wczytywania");
         let liczby: Vec<i32> = wiersz
             .trim()
             .split_whitespace()
@@ -52,7 +54,7 @@ fn wczytaj_macierz(n: usize, m: usize) -> Vec<Vec<i32>> {
             .collect();
         macierz.push(liczby);
     }
-    
+
     macierz
 }
 
@@ -65,26 +67,26 @@ fn wypisz_spiralnie(macierz: &Vec<Vec<i32>>) -> Vec<i32> {
         return Vec::new();
     }
     let m = macierz[0].len();
-    
+
     let mut wynik = Vec::new();
     let mut gora = 0;
     let mut dol = n;
     let mut lewo = 0;
     let mut prawo = m;
-    
+
     while gora < dol && lewo < prawo {
         // Przejdź w prawo po górnym wierszu
         for j in lewo..prawo {
             wynik.push(macierz[gora][j]);
         }
         gora += 1;
-        
+
         // Przejdź w dół po prawej kolumnie
         for i in gora..dol {
             wynik.push(macierz[i][prawo - 1]);
         }
         prawo -= 1;
-        
+
         // Przejdź w lewo po dolnym wierszu (jeśli istnieje)
         if gora < dol {
             for j in (lewo..prawo).rev() {
@@ -92,7 +94,7 @@ fn wypisz_spiralnie(macierz: &Vec<Vec<i32>>) -> Vec<i32> {
             }
             dol -= 1;
         }
-        
+
         // Przejdź w górę po lewej kolumnie (jeśli istnieje)
         if lewo < prawo {
             for i in (gora..dol).rev() {
@@ -101,7 +103,7 @@ fn wypisz_spiralnie(macierz: &Vec<Vec<i32>>) -> Vec<i32> {
             lewo += 1;
         }
     }
-    
+
     wynik
 }
 
@@ -113,13 +115,13 @@ fn main() {
         .split_whitespace()
         .map(|s| s.parse().expect("Nieprawidłowa liczba"))
         .collect();
-    
+
     let n = wymiary[0];
     let m = wymiary[1];
-    
+
     let macierz = wczytaj_macierz(n, m);
     let spirala = wypisz_spiralnie(&macierz);
-    
+
     for (i, val) in spirala.iter().enumerate() {
         if i > 0 {
             print!(" ");

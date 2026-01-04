@@ -40,7 +40,6 @@ Prawda
 """
 
 
-# Wersja 1
 def usun_wszystkie_v1(zdanie, slowo):
     return zdanie.replace(slowo, "")
 

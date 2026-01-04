@@ -36,9 +36,6 @@ Słoń
 
 */
 
-// Funkcja sprawdza czy liczba jest pierwsza
-// Złożoność czasowa: O(√n), gdzie n to wartość liczby
-// Złożoność pamięciowa: O(1)
 function czyLiczbaPierwsza(n) {
   if (n < 2) {
     return false;

@@ -34,7 +34,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Dla `n = 0` suma cyfr wynosi `0`.
-
 main() {
     read a
 

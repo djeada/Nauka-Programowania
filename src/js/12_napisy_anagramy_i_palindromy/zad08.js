@@ -48,9 +48,6 @@ yxy
 
 */
 
-// Funkcja sprawdza czy podciąg jest wyjątkowym palindromem
-// Złożoność czasowa: O(n), gdzie n to długość podciągu
-// Złożoność pamięciowa: O(1)
 function czyWyjatkowyPalindrom(podciag) {
   if (podciag.length === 0) return false;
   if (podciag.length === 1) return true;

@@ -46,9 +46,6 @@ Jeśli długości są różne, wypisz: `Pusta macierz`
 
 */
 
-// Funkcja tworzy macierz z dwóch list - każdy wiersz to para [listA[i], listB[i]]
-// Złożoność czasowa: O(n), gdzie n to długość list
-// Złożoność pamięciowa: O(n)
 function utworzMacierzZList(listA, listB) {
   const macierz = [];
   if (listA.length !== listB.length) {

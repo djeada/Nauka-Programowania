@@ -1,38 +1,37 @@
 # ZAD-11 — Średnia długość słów
-# 
+#
 # **Poziom:** ★☆☆
 # **Tagi:** `string`, `arytmetyka`
-# 
+#
 # ### Treść
-# 
+#
 # Wczytaj zdanie i oblicz średnią długość słów. Wynik ma być liczbą całkowitą.
-# 
+#
 # ### Wejście
-# 
+#
 # * 1. linia: zdanie
-# 
+#
 # ### Wyjście
-# 
+#
 # * 1. linia: średnia długość słów (liczba całkowita)
-# 
+#
 # ### Przykład
-# 
+#
 # **Wejście:**
-# 
+#
 # ```
 # Zepsuty rower.
 # ```
-# 
+#
 # **Wyjście:**
-# 
+#
 # ```
 # 6
 # ```
-# 
+#
 # ### Uwagi
-# 
+#
 # * Licz jako: `suma_dlugosci // liczba_slow` (dzielenie całkowite).
-
 source ../assert.sh
 
 # Funkcja obliczajaca srednia dlugosc slow w zdaniu
@@ -56,13 +55,13 @@ srednia_dlugosc() {
         # Sprawdzenie czy slowo zawiera tylko znaki alfanumeryczne i nie jest liczba
         if [[ "$slowo" =~ ^[[:alnum:]]+$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
             local licznik=$((licznik + 1))
-            local calkowita_dlugosc=$(( calkowita_dlugosc + ${#slowo} ))
+            local calkowita_dlugosc=$((calkowita_dlugosc + ${#slowo}))
         fi
     done
 
     # Obliczenie sredniej dlugosci (dzielenie calkowite)
     if [ $licznik -gt 0 ]; then
-        echo $(bc -l <<< "scale=0; $calkowita_dlugosc/$licznik")
+        echo $(bc -l <<<"scale=0; $calkowita_dlugosc/$licznik")
     else
         echo 0
     fi
@@ -86,4 +85,3 @@ main() {
 }
 
 main "$@"
-

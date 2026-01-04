@@ -43,18 +43,18 @@ import Text.Read (readMaybe)
 -- Sortowanie bąbelkowe
 -- Złożoność czasowa: O(n^2)
 -- Złożoność pamięciowa: O(n)
-bubbleSort :: Ord a => [a] -> [a]
+bubbleSort :: (Ord a) => [a] -> [a]
 bubbleSort [] = []
 bubbleSort xs = bubbleSort' xs (length xs)
-    where
-        bubbleSort' ys 0 = ys
-        bubbleSort' ys n = bubbleSort' (bubble ys) (n - 1)
-        
-        bubble [] = []
-        bubble [x] = [x]
-        bubble (x:y:rest)
-            | x > y = y : bubble (x:rest)
-            | otherwise = x : bubble (y:rest)
+  where
+    bubbleSort' ys 0 = ys
+    bubbleSort' ys n = bubbleSort' (bubble ys) (n - 1)
+
+    bubble [] = []
+    bubble [x] = [x]
+    bubble (x : y : rest)
+      | x > y = y : bubble (x : rest)
+      | otherwise = x : bubble (y : rest)
 
 -- Parse listy Haskell-style
 parseList :: String -> Maybe [Int]
@@ -62,7 +62,7 @@ parseList s = readMaybe s
 
 main :: IO ()
 main = do
-    input <- getLine
-    case parseList input of
-        Just xs -> print $ bubbleSort xs
-        Nothing -> print ([] :: [Int])
+  input <- getLine
+  case parseList input of
+    Just xs -> print $ bubbleSort xs
+    Nothing -> print ([] :: [Int])

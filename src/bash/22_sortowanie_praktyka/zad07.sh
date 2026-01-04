@@ -30,7 +30,6 @@
 # ```
 # [0, 0, 1, 1, 1, 2, 2]
 # ```
-
 source ../assert.sh
 
 # Sortuje listę składającą się z 0, 1, 2 metodą zliczania.

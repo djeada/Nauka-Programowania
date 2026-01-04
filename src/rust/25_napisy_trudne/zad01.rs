@@ -55,16 +55,18 @@ fn podmien_slowo(zdanie: &str, stary: &str, nowy: &str) -> String {
 
 fn main() {
     let mut zdanie_str = String::new();
-    io::stdin().read_line(&mut zdanie_str).expect("Błąd wczytywania");
+    io::stdin()
+        .read_line(&mut zdanie_str)
+        .expect("Błąd wczytywania");
     let zdanie = zdanie_str.trim();
-    
+
     let mut a_str = String::new();
     io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
     let a = a_str.trim();
-    
+
     let mut b_str = String::new();
     io::stdin().read_line(&mut b_str).expect("Błąd wczytywania");
     let b = b_str.trim();
-    
+
     println!("{}", podmien_slowo(zdanie, a, b));
 }

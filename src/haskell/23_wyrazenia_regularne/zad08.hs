@@ -37,7 +37,7 @@ Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
 
 -}
 
-import Data.Char (isDigit, isAlpha)
+import Data.Char (isAlpha, isDigit)
 
 -- Cyfry w słowach (cyfry połączone z literami)
 -- Złożoność czasowa: O(n)
@@ -50,16 +50,16 @@ hasLetterAndDigit w = any isAlpha w && any isDigit w
 -- Wyodrębnij ciągi cyfr z słowa
 extractDigitsFromWord :: String -> [String]
 extractDigitsFromWord [] = []
-extractDigitsFromWord text = 
-    case dropWhile (not . isDigit) text of
-        [] -> []
-        rest -> 
-            let (num, remaining) = span isDigit rest
-            in num : extractDigitsFromWord remaining
+extractDigitsFromWord text =
+  case dropWhile (not . isDigit) text of
+    [] -> []
+    rest ->
+      let (num, remaining) = span isDigit rest
+       in num : extractDigitsFromWord remaining
 
 main :: IO ()
 main = do
-    sentence <- getLine
-    let wordsWithDigits = filter hasLetterAndDigit (words sentence)
-        allDigits = concatMap extractDigitsFromWord wordsWithDigits
-    mapM_ putStrLn allDigits
+  sentence <- getLine
+  let wordsWithDigits = filter hasLetterAndDigit (words sentence)
+      allDigits = concatMap extractDigitsFromWord wordsWithDigits
+  mapM_ putStrLn allDigits

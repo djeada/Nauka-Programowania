@@ -48,21 +48,23 @@ fn mnoz_przez_skalar(wspolczynniki: &[i32], k: i32) -> Vec<i32> {
 fn main() {
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
-    
+
     let mut wspolczynniki_str = String::new();
-    io::stdin().read_line(&mut wspolczynniki_str).expect("Błąd wczytywania");
+    io::stdin()
+        .read_line(&mut wspolczynniki_str)
+        .expect("Błąd wczytywania");
     let wspolczynniki: Vec<i32> = wspolczynniki_str
         .trim()
         .split_whitespace()
         .map(|s| s.parse().expect("Nieprawidłowa liczba"))
         .collect();
-    
+
     let mut k_str = String::new();
     io::stdin().read_line(&mut k_str).expect("Błąd wczytywania");
     let k: i32 = k_str.trim().parse().expect("Nieprawidłowa liczba");
-    
+
     let wynik = mnoz_przez_skalar(&wspolczynniki, k);
-    
+
     for (i, &w) in wynik.iter().enumerate() {
         if i > 0 {
             print!(" ");

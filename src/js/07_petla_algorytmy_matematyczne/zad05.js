@@ -35,7 +35,6 @@ print(nwd(60, 45))
 
 */
 
-// Funkcja zwracajaca NWD
 function zwracajNWD(liczba_a, liczba_b) {
   var dzielnik = 1;
   for (var i = 1; i <= liczba_a; i++) {

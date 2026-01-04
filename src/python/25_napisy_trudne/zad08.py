@@ -37,8 +37,6 @@ Rem
 """
 
 
-# Wersja 1
-# Zlozonosc czasowa O(n^2)
 def najdluzszy_przedrostek_v1(slowa):
 
     wynik = ""

@@ -57,19 +57,19 @@ fn main() {
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).unwrap();
     let a: i32 = a.trim().parse().unwrap();
-    
+
     let mut b = String::new();
     std::io::stdin().read_line(&mut b).unwrap();
     let b: i32 = b.trim().parse().unwrap();
-    
+
     let lo = if a < b { a } else { b };
     let hi = if a > b { a } else { b };
-    
+
     // Podpunkt a) wszystkie liczby miedzy lo i hi
     for x in (lo + 1)..hi {
         println!("{}", x);
     }
-    
+
     // Podpunkt b) liczby podzielne przez 3
     for x in (lo + 1)..hi {
         if x % 3 == 0 {

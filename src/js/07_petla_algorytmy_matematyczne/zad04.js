@@ -35,7 +35,6 @@ print(silnia(3))
 
 */
 
-// Funkcja zwracajaca silnie liczby
 function silnia(liczba) {
   var wynik = 1;
   for (var i = 1; i <= liczba; i++) {

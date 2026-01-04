@@ -49,6 +49,6 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let zdanie = input.trim();
-    
+
     println!("{}", odwroc_slowa(zdanie));
 }

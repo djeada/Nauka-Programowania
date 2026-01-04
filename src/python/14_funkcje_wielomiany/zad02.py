@@ -28,7 +28,7 @@ Dla `a = [4, -3, 2]` i `k = -2` funkcja zwraca:
 def mnozenie_wielomianu(wspolczynniki, x):
     """
     Funkcja zwraca wielomian bedacy wynikiem mnozenia otrzymanego wielomianu przez liczbe x.
-    
+
     Złożoność czasowa: O(n), gdzie n to liczba współczynników
     Złożoność pamięciowa: O(n) dla wyniku
     """
@@ -44,11 +44,11 @@ if __name__ == "__main__":
     wspolczynniki = __import__("ast").literal_eval(input().strip())
     # Wczytanie skalara
     k = int(input().strip())
-    
+
     # Mnożenie wielomianu przez skalar
     # Złożoność czasowa: O(n)
     # Złożoność pamięciowa: O(n)
     wynik = mnozenie_wielomianu(wspolczynniki, k)
-    
+
     # Wypisanie wyniku jako lista
     print(str(wynik))

@@ -50,29 +50,29 @@ use std::io;
 fn dodaj_wielomiany(a: &[i32], b: &[i32]) -> Vec<i32> {
     let max_len = a.len().max(b.len());
     let mut wynik = vec![0; max_len];
-    
+
     let offset_a = max_len - a.len();
     for (i, &val) in a.iter().enumerate() {
         wynik[offset_a + i] += val;
     }
-    
+
     let offset_b = max_len - b.len();
     for (i, &val) in b.iter().enumerate() {
         wynik[offset_b + i] += val;
     }
-    
+
     // Usuń wiodące zera
     while wynik.len() > 1 && wynik[0] == 0 {
         wynik.remove(0);
     }
-    
+
     wynik
 }
 
 fn main() {
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
-    
+
     let mut a_str = String::new();
     io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
     let a: Vec<i32> = a_str
@@ -80,10 +80,10 @@ fn main() {
         .split_whitespace()
         .map(|s| s.parse().expect("Nieprawidłowa liczba"))
         .collect();
-    
+
     let mut m_str = String::new();
     io::stdin().read_line(&mut m_str).expect("Błąd wczytywania");
-    
+
     let mut b_str = String::new();
     io::stdin().read_line(&mut b_str).expect("Błąd wczytywania");
     let b: Vec<i32> = b_str
@@ -91,9 +91,9 @@ fn main() {
         .split_whitespace()
         .map(|s| s.parse().expect("Nieprawidłowa liczba"))
         .collect();
-    
+
     let wynik = dodaj_wielomiany(&a, &b);
-    
+
     for (i, &w) in wynik.iter().enumerate() {
         if i > 0 {
             print!(" ");

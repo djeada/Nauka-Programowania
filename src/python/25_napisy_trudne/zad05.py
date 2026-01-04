@@ -33,7 +33,6 @@ ABA
 """
 
 
-# Wersja 1
 def usun_powtarzajacych_sie_sasiadow_v1(napis):
     nowy_napis = ""
     ostatni_usuniety_znak = ""

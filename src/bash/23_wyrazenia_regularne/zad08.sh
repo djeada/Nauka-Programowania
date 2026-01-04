@@ -33,7 +33,6 @@
 # 3
 # 91
 # ```
-
 source ../assert.sh
 
 # Wyciąga cyfry będące częścią słów (słowa zawierające litery i cyfry).

@@ -71,11 +71,8 @@ Jedna liczba naturalna: `max(a, b)`.
 
 -}
 
--- Dzielenie całkowite
--- Złożoność czasowa: O(1)
--- Złożoność pamięciowa: O(1)
 main :: IO ()
 main = do
-    a <- readLn :: IO Int
-    b <- readLn :: IO Int
-    print $ a `div` b
+  a <- readLn :: IO Int
+  b <- readLn :: IO Int
+  print $ a `div` b

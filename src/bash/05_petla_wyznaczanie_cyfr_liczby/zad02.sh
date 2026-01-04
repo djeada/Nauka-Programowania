@@ -37,7 +37,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Dla `n = 0` wypisz jedną linię z `0`.
-
 main() {
     read a
 

@@ -46,15 +46,15 @@ use std::io;
 fn znajdz_zero_do_zamiany(lista: &[i32]) -> i32 {
     let mut max_dlugosc = 0;
     let mut najlepszy_indeks = -1;
-    
+
     // Sprawdź czy lista zawiera przynajmniej jedno zero i przynajmniej jedną jedynkę
     let ma_zero = lista.iter().any(|&x| x == 0);
     let ma_jedynke = lista.iter().any(|&x| x == 1);
-    
+
     if !ma_zero || !ma_jedynke {
         return -1;
     }
-    
+
     // Dla każdego zera sprawdź długość ciągu po zamianie
     for (i, &val) in lista.iter().enumerate() {
         if val == 0 {
@@ -67,7 +67,7 @@ fn znajdz_zero_do_zamiany(lista: &[i32]) -> i32 {
                     break;
                 }
             }
-            
+
             // Policz jedynki po zerze
             let mut prawo = 0;
             for j in (i + 1)..lista.len() {
@@ -77,7 +77,7 @@ fn znajdz_zero_do_zamiany(lista: &[i32]) -> i32 {
                     break;
                 }
             }
-            
+
             let dlugosc = lewo + prawo + 1;
             if dlugosc > max_dlugosc {
                 max_dlugosc = dlugosc;
@@ -85,23 +85,21 @@ fn znajdz_zero_do_zamiany(lista: &[i32]) -> i32 {
             }
         }
     }
-    
+
     najlepszy_indeks
 }
 
 fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
-    
+
     // Parsuj listę z formatu [0, 0, 1, 0, ...]
-    let lista_str = input.trim()
-        .trim_start_matches('[')
-        .trim_end_matches(']');
-    
+    let lista_str = input.trim().trim_start_matches('[').trim_end_matches(']');
+
     let lista: Vec<i32> = lista_str
         .split(',')
         .filter_map(|s| s.trim().parse().ok())
         .collect();
-    
+
     println!("{}", znajdz_zero_do_zamiany(&lista));
 }

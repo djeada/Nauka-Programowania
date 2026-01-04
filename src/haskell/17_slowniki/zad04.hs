@@ -47,4 +47,4 @@ import qualified Data.Map as Map
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    putStrLn "Placeholder - filtrowanie słownika"
+  putStrLn "Placeholder - filtrowanie słownika"

@@ -52,7 +52,7 @@ print(wynik)
 obliczSrednia :: IO Double
 obliczSrednia = do
   n <- readLn :: IO Int
-  nums <- mapM (\_ -> readLn :: IO Double) [1..n]
+  nums <- mapM (\_ -> readLn :: IO Double) [1 .. n]
   return $ sum nums / fromIntegral n
 
 main :: IO ()

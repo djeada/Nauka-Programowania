@@ -28,7 +28,6 @@
 # ```
 # Alamakota
 # ```
-
 source ../assert.sh
 
 # Funkcja usuwajaca spacje ze zdania (wersja z petla)

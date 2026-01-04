@@ -32,24 +32,21 @@ AB
 
 */
 
-use std::io;
 use std::collections::HashSet;
+use std::io;
 
 // Funkcja usuwająca powtórzenia znaków
 // Złożoność czasowa: O(n), gdzie n to długość napisu
 // Złożoność pamięciowa: O(n)
 fn usun_powtorzenia(napis: &str) -> String {
     let mut widziane = HashSet::new();
-    napis
-        .chars()
-        .filter(|&c| widziane.insert(c))
-        .collect()
+    napis.chars().filter(|&c| widziane.insert(c)).collect()
 }
 
 fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let napis = input.trim();
-    
+
     println!("{}", usun_powtorzenia(napis));
 }

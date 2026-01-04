@@ -56,7 +56,6 @@
 # ```
 # Liczba jest dodatnia.
 # ```
-
 main() {
     read x
 

@@ -49,10 +49,10 @@ import Data.Maybe (fromMaybe)
 
 main :: IO ()
 main = do
-    _ <- getLine  -- Read N but don't use it (list length is implicit)
-    numsLine <- getLine
-    let nums = map read (words numsLine) :: [Int]
-    keyStr <- getLine
-    let key = read keyStr :: Int
-    let index = fromMaybe (-1) (elemIndex key nums)
-    print index
+  _ <- getLine -- Read N but don't use it (list length is implicit)
+  numsLine <- getLine
+  let nums = map read (words numsLine) :: [Int]
+  keyStr <- getLine
+  let key = read keyStr :: Int
+  let index = fromMaybe (-1) (elemIndex key nums)
+  print index

@@ -47,7 +47,6 @@ b) 1 linia — elementy w kolejności odwrotnej, oddzielone przecinkami.
 
 */
 
-// Funkcja wczytujaca N liczb calkowitych do listy
 function wczytajNliczbDoListy(N) {
   var lista = [];
   for (var i = 0; i < N; i++) {

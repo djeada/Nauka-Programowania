@@ -41,7 +41,7 @@ use std::io;
 // Złożoność pamięciowa: O(n)
 fn maksymalny_zysk_sznurek(ceny: &[i32], n: usize) -> i32 {
     let mut dp = vec![0; n + 1];
-    
+
     for i in 1..=n {
         let mut max_zysk = i32::MIN;
         for j in 1..=i {
@@ -51,26 +51,29 @@ fn maksymalny_zysk_sznurek(ceny: &[i32], n: usize) -> i32 {
         }
         dp[i] = max_zysk;
     }
-    
+
     dp[n]
 }
 
 fn main() {
     let mut ceny_str = String::new();
-    io::stdin().read_line(&mut ceny_str).expect("Błąd wczytywania");
-    
-    let lista_str = ceny_str.trim()
+    io::stdin()
+        .read_line(&mut ceny_str)
+        .expect("Błąd wczytywania");
+
+    let lista_str = ceny_str
+        .trim()
         .trim_start_matches('[')
         .trim_end_matches(']');
-    
+
     let ceny: Vec<i32> = lista_str
         .split(',')
         .filter_map(|s| s.trim().parse().ok())
         .collect();
-    
+
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
     let n: usize = n_str.trim().parse().unwrap_or(0);
-    
+
     println!("{}", maksymalny_zysk_sznurek(&ceny, n));
 }

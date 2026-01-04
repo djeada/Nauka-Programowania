@@ -73,7 +73,7 @@ fn podziel(lista: &mut [i32], dol: usize, gora: usize) -> usize {
     let piwot = lista[indeks];
     let mut i = dol;
     let mut j = gora;
-    
+
     loop {
         while lista[i] < piwot {
             i += 1;
@@ -84,11 +84,11 @@ fn podziel(lista: &mut [i32], dol: usize, gora: usize) -> usize {
             }
             j -= 1;
         }
-        
+
         if i >= j {
             return j;
         }
-        
+
         lista.swap(i, j);
         i += 1;
         if j > 0 {
@@ -116,10 +116,10 @@ fn test_1() {
 fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
-    
+
     let mut lista = parsuj_liste(&input);
     sort_v1(&mut lista);
-    
+
     print!("[");
     for (i, &val) in lista.iter().enumerate() {
         if i > 0 {

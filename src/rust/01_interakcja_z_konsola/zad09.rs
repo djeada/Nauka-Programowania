@@ -61,27 +61,27 @@ fn main() {
     let mut r_str = String::new();
     std::io::stdin().read_line(&mut r_str).unwrap();
     let r_annual: f64 = r_str.trim().parse().unwrap();
-    
+
     let mut y_str = String::new();
     std::io::stdin().read_line(&mut y_str).unwrap();
     let y: i32 = y_str.trim().parse().unwrap();
-    
+
     let mut p_str = String::new();
     std::io::stdin().read_line(&mut p_str).unwrap();
     let p: f64 = p_str.trim().parse().unwrap();
-    
+
     let n = 12 * y;
     let m: f64;
-    
+
     if r_annual == 0.0 {
         m = p / (n as f64);
     } else {
         let r = r_annual / (12.0 * 100.0);
         m = p * (r * (1.0 + r).powi(n)) / ((1.0 + r).powi(n) - 1.0);
     }
-    
+
     let c = m * (n as f64);
-    
+
     println!("{:.2}", m);
     println!("{:.2}", c);
 }

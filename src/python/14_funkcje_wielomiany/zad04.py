@@ -28,7 +28,7 @@ Dla `a = [5, 0, 10, 6]` oraz `b = [1, 2, 4]` funkcja zwraca:
 def iloczyn_wielomianow(wielomian_a, wielomian_b):
     """
     Funkcja zwraca wspolczynniki wielomianu bedacego iloczynem wielomianow a i b.
-    
+
     Złożoność czasowa: O(n * m), gdzie n i m to długości wielomianów
     Złożoność pamięciowa: O(n + m) dla wyniku
     """
@@ -50,11 +50,11 @@ if __name__ == "__main__":
     # Wczytanie dwóch wielomianów jako listy
     wielomian_a = __import__("ast").literal_eval(input().strip())
     wielomian_b = __import__("ast").literal_eval(input().strip())
-    
+
     # Iloczyn wielomianów
     # Złożoność czasowa: O(n * m)
     # Złożoność pamięciowa: O(n + m)
     wynik = iloczyn_wielomianow(wielomian_a, wielomian_b)
-    
+
     # Wypisanie wyniku jako lista
     print(str(wynik))

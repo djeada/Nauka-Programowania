@@ -40,7 +40,6 @@
 # ```
 # Fałsz
 # ```
-
 source ../assert.sh
 
 # Sprawdza, czy hasło spełnia wszystkie wymagane warunki.

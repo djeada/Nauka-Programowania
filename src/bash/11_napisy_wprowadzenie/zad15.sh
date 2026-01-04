@@ -1,34 +1,33 @@
 # ZAD-15 — Słowa jako lista
-# 
+#
 # **Poziom:** ★☆☆
 # **Tagi:** `split`, `list`
-# 
+#
 # ### Treść
-# 
+#
 # Wczytaj zdanie i wypisz listę słów w formacie `["Ala", "ma", "kota"]`.
-# 
+#
 # ### Wejście
-# 
+#
 # * 1. linia: zdanie
-# 
+#
 # ### Wyjście
-# 
+#
 # * 1. linia: lista słów (jak w przykładzie)
-# 
+#
 # ### Przykład
-# 
+#
 # **Wejście:**
-# 
+#
 # ```
 # Ala ma kota
 # ```
-# 
+#
 # **Wyjście:**
-# 
+#
 # ```
 # ["Ala", "ma", "kota"]
 # ```
-
 source ../assert.sh
 
 # Funkcja wypisujaca slowa jako liste w formacie JSON
@@ -36,15 +35,15 @@ source ../assert.sh
 # Zlozonosc pamieciowa: O(n) dla tablicy slow
 wypisz_slowa_jako_liste() {
     local zdanie="$1"
-    
+
     # Usuniecie znakow interpunkcyjnych
     zdanie=$(echo "$zdanie" | sed -r 's/[.,:;!?]+/ /g')
-    
+
     read -ra lista_slow <<<"$zdanie"
-    
+
     local wynik="["
     local pierwszy=1
-    
+
     # Iteracja przez wszystkie slowa
     for slowo in "${lista_slow[@]}"; do
         # Sprawdzenie czy slowo zawiera tylko znaki alfanumeryczne i nie jest liczba
@@ -57,7 +56,7 @@ wypisz_slowa_jako_liste() {
             fi
         fi
     done
-    
+
     wynik="${wynik}]"
     echo "$wynik"
 }
@@ -87,4 +86,3 @@ main() {
 }
 
 main "$@"
-

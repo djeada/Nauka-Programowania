@@ -96,15 +96,15 @@ fn main() {
     // ZAD-05A: Minimum bez instrukcji warunkowych
     let mut a_str = String::new();
     let mut b_str = String::new();
-    
+
     io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
     io::stdin().read_line(&mut b_str).expect("Błąd wczytywania");
-    
+
     let a: u32 = a_str.trim().parse().unwrap_or(0);
     let b: u32 = b_str.trim().parse().unwrap_or(0);
-    
+
     println!("{}", min_bez_if(a, b));
-    
+
     // ZAD-05B: Maksimum bez instrukcji warunkowych (opcjonalnie)
     // println!("{}", max_bez_if(a, b));
 }

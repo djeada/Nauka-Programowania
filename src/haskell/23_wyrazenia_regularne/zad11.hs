@@ -38,29 +38,24 @@ file
 
 -}
 
--- Nazwa pliku bez rozszerzenia
--- Złożoność czasowa: O(n)
--- Złożoność pamięciowa: O(n)
-
--- Wyodrębnij nazwę pliku z pełnej ścieżki
 getFilename :: String -> String
-getFilename path = 
-    let afterSlash = reverse $ takeWhile (\c -> c /= '/' && c /= '\\') (reverse path)
-    in afterSlash
+getFilename path =
+  let afterSlash = reverse $ takeWhile (\c -> c /= '/' && c /= '\\') (reverse path)
+   in afterSlash
 
 -- Usuń rozszerzenie (część po ostatniej kropce)
 removeExtension :: String -> String
 removeExtension filename =
-    case break (== '.') filename of
-        (name, '.':rest) -> 
-            if '.' `elem` rest 
-            then name ++ "." ++ removeExtension rest
-            else name
-        _ -> filename
+  case break (== '.') filename of
+    (name, '.' : rest) ->
+      if '.' `elem` rest
+        then name ++ "." ++ removeExtension rest
+        else name
+    _ -> filename
 
 main :: IO ()
 main = do
-    path <- getLine
-    let filename = getFilename path
-        nameWithoutExt = removeExtension filename
-    putStrLn nameWithoutExt
+  path <- getLine
+  let filename = getFilename path
+      nameWithoutExt = removeExtension filename
+  putStrLn nameWithoutExt

@@ -45,11 +45,11 @@ fn najblizsza_potega_dwojki(n: u32) -> u32 {
     if n == 0 {
         return 1;
     }
-    
+
     if n.is_power_of_two() {
         return n;
     }
-    
+
     n.next_power_of_two()
 }
 
@@ -57,6 +57,6 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let n: u32 = input.trim().parse().unwrap_or(0);
-    
+
     println!("{}", najblizsza_potega_dwojki(n));
 }

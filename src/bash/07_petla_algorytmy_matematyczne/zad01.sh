@@ -46,7 +46,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`).
-
 srednia() {
 
     n=$1

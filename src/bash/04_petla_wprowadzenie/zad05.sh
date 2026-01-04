@@ -50,7 +50,6 @@
 # * Nie wypisuj nagłówków typu „a)” i „b)”.
 # * Jeśli w którymś podpunkcie nie ma liczb do wypisania, w tej części nie wypisuj nic.
 # * Nie dodawaj pustej linii między podpunktami.
-
 main() {
     read a
     read b
@@ -77,7 +76,7 @@ main() {
             suma=$(($suma + $i))
         fi
     done
-    
+
     # Wypisz sumę liczb podzielnych przez 3
     echo "$suma"
 }

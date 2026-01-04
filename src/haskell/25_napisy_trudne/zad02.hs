@@ -46,11 +46,11 @@ import Data.List (isPrefixOf)
 removeAll :: String -> String -> String
 removeAll _ [] = []
 removeAll pattern text
-    | pattern `isPrefixOf` text = removeAll pattern (drop (length pattern) text)
-    | otherwise = head text : removeAll pattern (tail text)
+  | pattern `isPrefixOf` text = removeAll pattern (drop (length pattern) text)
+  | otherwise = head text : removeAll pattern (tail text)
 
 main :: IO ()
 main = do
-    mainStr <- getLine
-    subStr <- getLine
-    putStrLn $ removeAll subStr mainStr
+  mainStr <- getLine
+  subStr <- getLine
+  putStrLn $ removeAll subStr mainStr

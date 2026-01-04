@@ -43,7 +43,6 @@
 # Folgujmy paniom nie sobie, ma rada;
 # Milujmy wiernie nie jest w nich przysada.
 # ```
-
 source ../assert.sh
 
 # Znajduje wiersze kończące się podanym napisem.

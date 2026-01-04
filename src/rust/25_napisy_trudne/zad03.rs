@@ -52,11 +52,11 @@ fn main() {
     let mut a_str = String::new();
     io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
     let a = a_str.trim();
-    
+
     let mut b_str = String::new();
     io::stdin().read_line(&mut b_str).expect("Błąd wczytywania");
     let b = b_str.trim();
-    
+
     if czy_przedrostek(a, b) {
         println!("Prawda");
     } else {

@@ -41,7 +41,6 @@
 # 1 4
 # 2 3
 # ```
-
 source ../assert.sh
 
 suma_dwoch() {

@@ -31,7 +31,6 @@
 # ```
 # abcd
 # ```
-
 source ../assert.sh
 
 # Znajduje najdłuższy wspólny podnapis.
@@ -42,22 +41,22 @@ najdluzszy_wspolny_podnapis() {
     local napis_b="$2"
     local len_a=${#napis_a}
     local len_b=${#napis_b}
-    
+
     local max_len=0
     local end_pos=0
-    
+
     # DP approach: dp[i][j] = długość wspólnego podnapisu kończącego się na i w A i j w B
-    for ((i=0; i<len_a; i++)); do
-        for ((j=0; j<len_b; j++)); do
+    for ((i = 0; i < len_a; i++)); do
+        for ((j = 0; j < len_b; j++)); do
             if [ "${napis_a:$i:1}" = "${napis_b:$j:1}" ]; then
                 # Zlicz długość wspólnego ciągu
                 local len=1
                 local k=1
-                while [ $((i+k)) -lt $len_a ] && [ $((j+k)) -lt $len_b ] && [ "${napis_a:$((i+k)):1}" = "${napis_b:$((j+k)):1}" ]; do
+                while [ $((i + k)) -lt $len_a ] && [ $((j + k)) -lt $len_b ] && [ "${napis_a:$((i + k)):1}" = "${napis_b:$((j + k)):1}" ]; do
                     ((len++))
                     ((k++))
                 done
-                
+
                 if [ $len -gt $max_len ]; then
                     max_len=$len
                     end_pos=$i
@@ -65,7 +64,7 @@ najdluzszy_wspolny_podnapis() {
             fi
         done
     done
-    
+
     if [ $max_len -gt 0 ]; then
         echo "${napis_a:$end_pos:$max_len}"
     else

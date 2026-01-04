@@ -28,9 +28,6 @@ Dla `a = [3, 5, 2]` i `b = [2, -8, 1]` funkcja zwraca:
 
 */
 
-// Funkcja dodaje dwa wielomiany (sumuje współczynniki przy tych samych potęgach)
-// Złożoność czasowa: O(max(n, m)), gdzie n i m to stopnie wielomianów
-// Złożoność pamięciowa: O(max(n, m))
 function dodawanieWielomianow(wielomian1, wielomian2) {
   const dlugosc = Math.max(wielomian1.length, wielomian2.length);
   const wynik = [];

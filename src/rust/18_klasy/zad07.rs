@@ -49,7 +49,7 @@ impl MojaKlasa {
         LICZNIK_INSTANCJI.fetch_add(1, Ordering::SeqCst);
         MojaKlasa { _marker: () }
     }
-    
+
     // Metoda statyczna zwracająca licznik
     fn ile_instancji() -> usize {
         LICZNIK_INSTANCJI.load(Ordering::SeqCst)
@@ -61,6 +61,9 @@ fn main() {
     let _obj1 = MojaKlasa::new();
     let _obj2 = MojaKlasa::new();
     let _obj3 = MojaKlasa::new();
-    
-    println!("Liczba utworzonych instancji: {}", MojaKlasa::ile_instancji());
+
+    println!(
+        "Liczba utworzonych instancji: {}",
+        MojaKlasa::ile_instancji()
+    );
 }

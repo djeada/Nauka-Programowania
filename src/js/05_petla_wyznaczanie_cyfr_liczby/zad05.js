@@ -41,7 +41,6 @@ Liczba jest palindromem.
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Petla

@@ -42,7 +42,6 @@
 # ```
 #
 # **Wyjście:** *(brak)*
-
 main() {
     read a
 

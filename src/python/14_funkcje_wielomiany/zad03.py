@@ -33,7 +33,7 @@ def suma_wielomianow(wielomian_a, wielomian_b):
     """
     Funkcja sumuje dwie listy wielomianow.
     Współczynniki w formacie [a_n, ..., a_0] (najwyższy stopień pierwszy).
-    
+
     Złożoność czasowa: O(max(n, m)), gdzie n i m to długości wielomianów
     Złożoność pamięciowa: O(max(n, m)) dla wyniku
     """
@@ -41,24 +41,24 @@ def suma_wielomianow(wielomian_a, wielomian_b):
     len_a = len(wielomian_a)
     len_b = len(wielomian_b)
     max_len = max(len_a, len_b)
-    
+
     # Stworzenie wynikowej listy
     wynik = []
-    
+
     # Dodawanie od końca (wyrazy wolne)
     for i in range(max_len):
         # Indeks od końca
         idx_a = len_a - 1 - i
         idx_b = len_b - 1 - i
-        
+
         val_a = wielomian_a[idx_a] if idx_a >= 0 else 0
         val_b = wielomian_b[idx_b] if idx_b >= 0 else 0
-        
+
         wynik.append(val_a + val_b)
-    
+
     # Odwrócenie wyniku (aby był w formacie [a_n, ..., a_0])
     wynik.reverse()
-    
+
     return wynik
 
 
@@ -71,11 +71,11 @@ if __name__ == "__main__":
     # Wczytanie dwóch wielomianów jako listy
     wielomian_a = __import__("ast").literal_eval(input().strip())
     wielomian_b = __import__("ast").literal_eval(input().strip())
-    
+
     # Suma wielomianów
     # Złożoność czasowa: O(max(n, m))
     # Złożoność pamięciowa: O(max(n, m))
     wynik = suma_wielomianow(wielomian_a, wielomian_b)
-    
+
     # Wypisanie wyniku jako lista
     print(str(wynik))

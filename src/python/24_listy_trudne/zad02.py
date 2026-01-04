@@ -33,7 +33,6 @@ Otrzymujesz listę liczb całkowitych. Przenieś wszystkie zera na koniec listy,
 """
 
 
-# Wersja 1
 def przesun_zera(lista):
     pierwotna_dlugosc = len(lista)
     lista = list(filter(lambda x: x != 0, lista))

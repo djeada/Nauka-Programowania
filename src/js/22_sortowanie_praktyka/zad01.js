@@ -36,9 +36,6 @@ Ala ma kota
 
 */
 
-// Funkcja sortuje znaki w napisie alfabetycznie
-// Złożoność czasowa: O(n log n), gdzie n to długość napisu
-// Złożoność pamięciowa: O(n)
 const sortowanieZnakow = (napis) => {
   return napis
     .split("")

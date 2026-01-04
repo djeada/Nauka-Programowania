@@ -39,9 +39,9 @@ Barnaba_Barabash
 
 -}
 
+import Data.List (sortBy)
 import Data.Map (Map)
 import qualified Data.Map as Map
-import Data.List (sortBy)
 import Data.Ord (comparing)
 
 -- Sortowanie słownika po wartościach
@@ -49,4 +49,4 @@ import Data.Ord (comparing)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    putStrLn "Placeholder - sortowanie słownika po wartościach"
+  putStrLn "Placeholder - sortowanie słownika po wartościach"

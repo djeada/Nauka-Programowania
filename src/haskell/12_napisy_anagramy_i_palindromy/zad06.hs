@@ -38,7 +38,7 @@ baab
 
 -}
 
-import Data.List (group, sort, nub, permutations)
+import Data.List (group, nub, permutations, sort)
 
 countChars :: String -> [(Char, Int)]
 countChars s = [(head g, length g) | g <- group (sort s)]
@@ -48,14 +48,14 @@ canMakePalindrome counts = length (filter (odd . snd) counts) <= 1
 
 generatePalindromes :: String -> [String]
 generatePalindromes s
-    | not (canMakePalindrome counts) = []
-    | otherwise = nub $ filter isPalindrome $ permutations s
-    where
-        counts = countChars s
-        isPalindrome str = str == reverse str
+  | not (canMakePalindrome counts) = []
+  | otherwise = nub $ filter isPalindrome $ permutations s
+  where
+    counts = countChars s
+    isPalindrome str = str == reverse str
 
 main :: IO ()
 main = do
-    slowo <- getLine
-    let palindromy = generatePalindromes slowo
-    mapM_ putStrLn palindromy
+  slowo <- getLine
+  let palindromy = generatePalindromes slowo
+  mapM_ putStrLn palindromy

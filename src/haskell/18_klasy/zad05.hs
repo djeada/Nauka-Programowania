@@ -58,9 +58,7 @@ Iloczyn macierzy A * B:
 
 -}
 
--- Typ danych reprezentujący macierz
--- Złożoność pamięciowa: O(n*m)
-data Macierz = Macierz { dane :: [[Int]] } deriving (Eq)
+data Macierz = Macierz {dane :: [[Int]]} deriving (Eq)
 
 -- Dodawanie macierzy
 -- Złożoność czasowa: O(n*m)
@@ -73,11 +71,11 @@ wypiszMacierz (Macierz rows) = mapM_ print rows
 
 main :: IO ()
 main = do
-    let a = Macierz [[1, 3], [4, 2]]
-    let b = Macierz [[2, 1], [0, 5]]
-    putStrLn "Macierz A:"
-    wypiszMacierz a
-    putStrLn "Macierz B:"
-    wypiszMacierz b
-    putStrLn "Suma A + B:"
-    wypiszMacierz (dodajMacierz a b)
+  let a = Macierz [[1, 3], [4, 2]]
+  let b = Macierz [[2, 1], [0, 5]]
+  putStrLn "Macierz A:"
+  wypiszMacierz a
+  putStrLn "Macierz B:"
+  wypiszMacierz b
+  putStrLn "Suma A + B:"
+  wypiszMacierz (dodajMacierz a b)

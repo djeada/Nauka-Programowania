@@ -43,13 +43,13 @@ Jedna liczba naturalna: wynik po zamianie bitów.
 
 -}
 
-import Numeric (showIntAtBase, showOct)
 import Data.Char (intToDigit)
+import Numeric (showIntAtBase, showOct)
 
 -- Konwersja na system ósemkowy
 -- Złożoność czasowa: O(log n)
 -- Złożoność pamięciowa: O(log n)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    putStrLn $ showOct n ""
+  n <- readLn :: IO Int
+  putStrLn $ showOct n ""

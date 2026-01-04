@@ -42,7 +42,6 @@
 #
 # * Nie wypisuj żadnych komunikatów typu „Podaj liczbę”.
 # * Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana.
-
 main() {
     a=0
 

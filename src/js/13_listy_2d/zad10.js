@@ -37,9 +37,6 @@ Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruch
 ```
 
 */
-// Funkcja obraca macierz kwadratową o 90° zgodnie z ruchem wskazówek zegara
-// Złożoność czasowa: O(n²), gdzie n to rozmiar macierzy
-// Złożoność pamięciowa: O(1) - modyfikacja in-place
 function obrocMacierz(macierz) {
   const n = macierz.length;
 

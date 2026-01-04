@@ -39,7 +39,6 @@ Jedna liczba naturalna: długość najdłuższego „gapu”.
 
 */
 
-// Funkcja obliczajaca najdluzszy ciag zer w liczbie binarnej
 function najdluzszyCiagZer(liczba) {
   let binarna = liczba.toString(2);
   let najdluzszyCiag = 0;

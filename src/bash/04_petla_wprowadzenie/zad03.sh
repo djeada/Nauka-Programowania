@@ -38,15 +38,14 @@
 #
 # * Liczba miejsc po przecinku ma być **dokładnie** równa `n` (np. dla `n=1` wypisz `3.1`).
 # * Stosuj standardowe zaokrąglanie przy formatowaniu.
-
 main() {
     read n
 
     # Oblicz pi z odpowiednią dokładnością
     pi=$(echo "scale=$n; 4*a(1)" | bc -l)
-    
+
     # Wypisz pi n razy
-    for ((i=0; i<n; i++)); do
+    for ((i = 0; i < n; i++)); do
         printf "%.${n}f\n" "$pi"
     done
 }

@@ -65,6 +65,7 @@ main = do
   let x = read input :: Int
   if x < 0
     then putStrLn "Liczba jest ujemna."
-    else if x > 0
-      then putStrLn "Liczba jest dodatnia."
-      else putStrLn "Liczba jest zerem."
+    else
+      if x > 0
+        then putStrLn "Liczba jest dodatnia."
+        else putStrLn "Liczba jest zerem."

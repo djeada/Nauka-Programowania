@@ -34,7 +34,6 @@
 #
 # * Po każdym pełnym przebiegu największy element „wypływa” na koniec.
 # * W kolejnych przebiegach możesz zmniejszać zakres sprawdzania o 1.
-
 source ../assert.sh
 
 sortuj() {
@@ -45,10 +44,10 @@ sortuj() {
     while [ "$swapped" = true ]; do
         swapped=false
         for ((i = 0; i < n - 1; i++)); do
-            if [[ ${_tablica_ref[i]} -gt ${_tablica_ref[i+1]} ]]; then
+            if [[ ${_tablica_ref[i]} -gt ${_tablica_ref[i + 1]} ]]; then
                 local tmp=${_tablica_ref[i]}
-                _tablica_ref[i]=${_tablica_ref[i+1]}
-                _tablica_ref[i+1]=$tmp
+                _tablica_ref[i]=${_tablica_ref[i + 1]}
+                _tablica_ref[i + 1]=$tmp
                 swapped=true
             fi
         done

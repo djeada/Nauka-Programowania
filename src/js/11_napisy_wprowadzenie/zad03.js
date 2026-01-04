@@ -35,9 +35,6 @@ gram na pianinie.
 * Najprościej: podziel po białych znakach, a z końców słów usuń interpunkcję.
 
 */
-// Funkcja liczy słowa w zdaniu (interpunkcja nie jest słowem)
-// Złożoność czasowa: O(n), gdzie n to długość napisu
-// Złożoność pamięciowa: O(m), gdzie m to liczba słów
 function policzSlowa(zdanie) {
   let slowa = zdanie.split(" ");
   let liczbaSlow = 0;

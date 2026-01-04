@@ -42,19 +42,19 @@ main :: IO ()
 main = do
   list1Str <- getLine
   list2Str <- getLine
-  
+
   let parseList str = read str :: [Int]
   let list1 = parseList list1Str
   let list2 = parseList list2Str
-  
+
   let intercalate sep [] = ""
       intercalate sep [x] = x
-      intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs
-  
+      intercalate sep (x : xs) = x ++ sep ++ intercalate sep xs
+
   -- a) Połącz listy
   putStrLn $ intercalate "," $ map show $ list1 ++ list2
-  
+
   -- b) Podmień elementy o parzystych indeksach
-  let replace = zipWith3 (\i x y -> if even i then y else x) [0..] list1 (list2 ++ repeat 0)
+  let replace = zipWith3 (\i x y -> if even i then y else x) [0 ..] list1 (list2 ++ repeat 0)
   let result = take (length list1) replace
   putStrLn $ intercalate "," $ map show result

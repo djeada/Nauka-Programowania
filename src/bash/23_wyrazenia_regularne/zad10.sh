@@ -27,7 +27,6 @@
 # ### Przykład
 #
 # *(jak w treści — z listami A/B)*
-
 source ../assert.sh
 
 # Podmienia napisy z listy A na odpowiadające im napisy z listy B.

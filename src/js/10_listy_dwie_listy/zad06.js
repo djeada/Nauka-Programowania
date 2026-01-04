@@ -38,7 +38,6 @@ Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występu
 
 */
 
-// Funkcja zwracajaca liste elementow wystepujacych zarowno w pierwszej, jak i w drugiej liscie
 function znajdzElementyWspolne(lista1, lista2) {
   let wynik = [];
   let maxLength = Math.max(lista1.length, lista2.length);

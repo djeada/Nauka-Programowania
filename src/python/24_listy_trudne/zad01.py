@@ -39,9 +39,6 @@ Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — w
 """
 
 
-# Wersja 1
-# Zlozonosc czasowa O(n)
-# Zlozonosc pamieciowa O(1)
 def znajdz_zero_do_podmiany_v1(lista):
     licznik_jedynek = 0
     indeks_zera = -1

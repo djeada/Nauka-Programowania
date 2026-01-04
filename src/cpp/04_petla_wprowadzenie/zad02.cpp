@@ -46,8 +46,7 @@ int main() {
   int a;
   std::cin >> a;
 
-  for (int i = a - 1; i >= 1; i--) 
-    std::cout << i << std::endl;
+  for (int i = a - 1; i >= 1; i--) std::cout << i << std::endl;
 
   return 0;
 }

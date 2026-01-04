@@ -72,7 +72,6 @@ print(iloraz(3, 2))
 ```
 
 -}
--- ZAD-03A: Mnożenie przy pomocy dodawania
 iloczyn :: Int -> Int -> Int
 iloczyn a b = sum $ replicate b a
 

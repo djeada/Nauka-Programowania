@@ -32,15 +32,15 @@ abc
 
 -}
 
+import Data.List (intercalate)
 import Data.Map (Map)
 import qualified Data.Map as Map
-import Data.List (intercalate)
 
 -- Histogram częstości znaków
 -- Złożoność czasowa: O(n log n)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    napis <- getLine
-    let freq = Map.fromListWith (+) [(c, 1) | c <- napis]
-    putStrLn $ "{" ++ intercalate ", " ["'" ++ [k] ++ "': " ++ show v | (k, v) <- Map.toList freq] ++ "}"
+  napis <- getLine
+  let freq = Map.fromListWith (+) [(c, 1) | c <- napis]
+  putStrLn $ "{" ++ intercalate ", " ["'" ++ [k] ++ "': " ++ show v | (k, v) <- Map.toList freq] ++ "}"

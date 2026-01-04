@@ -33,7 +33,6 @@
 # ```
 # Prawda
 # ```
-
 source ../assert.sh
 
 # Sprawdza, czy napis składa się wyłącznie z cyfr.

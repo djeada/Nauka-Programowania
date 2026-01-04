@@ -49,16 +49,16 @@ import Data.List (intercalate)
 -- Złożoność pamięciowa: O(max(n, m))
 addPolynomials :: [Int] -> [Int] -> [Int]
 addPolynomials a b = zipWith (+) a' b'
-    where
-        maxLen = max (length a) (length b)
-        a' = replicate (maxLen - length a) 0 ++ a
-        b' = replicate (maxLen - length b) 0 ++ b
+  where
+    maxLen = max (length a) (length b)
+    a' = replicate (maxLen - length a) 0 ++ a
+    b' = replicate (maxLen - length b) 0 ++ b
 
 -- Suma wielomianów (z I/O)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    coeffsA <- map read . words <$> getLine :: IO [Int]
-    m <- readLn :: IO Int
-    coeffsB <- map read . words <$> getLine :: IO [Int]
-    putStrLn $ intercalate " " $ map show $ addPolynomials coeffsA coeffsB
+  n <- readLn :: IO Int
+  coeffsA <- map read . words <$> getLine :: IO [Int]
+  m <- readLn :: IO Int
+  coeffsB <- map read . words <$> getLine :: IO [Int]
+  putStrLn $ intercalate " " $ map show $ addPolynomials coeffsA coeffsB

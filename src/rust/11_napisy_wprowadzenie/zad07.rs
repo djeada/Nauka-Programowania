@@ -49,6 +49,6 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let napis = input.trim();
-    
+
     println!("{}", zamien_na_ascii(napis));
 }

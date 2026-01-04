@@ -205,7 +205,6 @@ Oblicz objętość prostopadłościanu:
 
 */
 
-// a) Pobierz dlugosci podstawy i wysokosci trojkata i wypisz jego pole.
 const base = parseFloat(prompt("Podaj dlugosc podstawy trojkata:"));
 const wysokosc_trojkata = parseFloat(prompt("Podaj wysokosc trojkata:"));
 console.log(((base * wysokosc_trojkata) / 2).toFixed(3));

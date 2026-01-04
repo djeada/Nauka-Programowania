@@ -44,18 +44,18 @@ import Text.Read (readMaybe)
 -- Złożoność pamięciowa: O(1)
 findBestZeroToFlip :: [Int] -> Int
 findBestZeroToFlip xs
-    | all (== 0) xs || all (== 1) xs = -1
-    | otherwise = snd $ maximum [(consecutiveOnes i, i) | (i, x) <- zip [0..] xs, x == 0]
-    where
-        consecutiveOnes idx =
-            let (before, _:after) = splitAt idx xs
-                countBack = length $ takeWhile (== 1) (reverse before)
-                countForward = length $ takeWhile (== 1) after
-            in countBack + countForward + 1
+  | all (== 0) xs || all (== 1) xs = -1
+  | otherwise = snd $ maximum [(consecutiveOnes i, i) | (i, x) <- zip [0 ..] xs, x == 0]
+  where
+    consecutiveOnes idx =
+      let (before, _ : after) = splitAt idx xs
+          countBack = length $ takeWhile (== 1) (reverse before)
+          countForward = length $ takeWhile (== 1) after
+       in countBack + countForward + 1
 
 main :: IO ()
 main = do
-    input <- getLine
-    case readMaybe input :: Maybe [Int] of
-        Just xs -> print $ findBestZeroToFlip xs
-        Nothing -> print (-1 :: Int)
+  input <- getLine
+  case readMaybe input :: Maybe [Int] of
+    Just xs -> print $ findBestZeroToFlip xs
+    Nothing -> print (-1 :: Int)

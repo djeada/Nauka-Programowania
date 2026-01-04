@@ -197,33 +197,28 @@ int main() {
 
   // ZAD-06A: Liczby < n o sumie cyfr równej 10
   for (int x = 0; x < n; x++) {
-    if (suma_cyfr(x) == 10) 
-      std::cout << x << std::endl;
+    if (suma_cyfr(x) == 10) std::cout << x << std::endl;
   }
 
   // ZAD-06B: Dwucyfrowe większe od n
   for (int x = 10; x < 100; x++) {
-    if (x > n) 
-      std::cout << x << std::endl;
+    if (x > n) std::cout << x << std::endl;
   }
 
   // ZAD-06C: Trzycyfrowe o sumie cyfr równej n
   for (int x = 100; x < 1000; x++) {
-    if (suma_cyfr(x) == n) 
-      std::cout << x << std::endl;
+    if (suma_cyfr(x) == n) std::cout << x << std::endl;
   }
 
   // ZAD-06D: Trzycyfrowe podzielne przez sumę cyfr n
   int s = suma_cyfr(n);
   for (int x = 100; x < 1000; x++) {
-    if (x % s == 0) 
-      std::cout << x << std::endl;
+    if (x % s == 0) std::cout << x << std::endl;
   }
 
   // ZAD-06E: Mniejsze od n złożone wyłącznie z parzystych cyfr
   for (int x = 2; x < n; x++) {
-    if (wszystkie_parzyste(x)) 
-      std::cout << x << std::endl;
+    if (wszystkie_parzyste(x)) std::cout << x << std::endl;
   }
 
   return 0;

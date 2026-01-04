@@ -48,7 +48,6 @@
 # ```
 # 196.00
 # ```
-
 main() {
     read p
     read t
@@ -59,7 +58,7 @@ main() {
     # Using epsilon (0.000001) to handle floating-point precision before division
     nL=$(echo "scale=0; ($L + $t - 0.000001) / $t" | bc | cut -d'.' -f1)
     nW=$(echo "scale=0; ($W + $t - 0.000001) / $t" | bc | cut -d'.' -f1)
-    
+
     # Calculate total cost
     result=$(echo "scale=2; $nL * $nW * $p" | bc)
     printf "%.2f\n" "$result"

@@ -44,7 +44,6 @@ Dwie linie:
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
 const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 

@@ -47,13 +47,13 @@ countChars s = Map.fromListWith (+) [(c, 1) | c <- s]
 
 main :: IO ()
 main = do
-    s1 <- getLine
-    s2 <- getLine
-    if length s1 /= length s2
-        then print (-1)
-        else do
-            let counts1 = countChars s1
-            let counts2 = countChars s2
-            let allChars = Map.keys (Map.union counts1 counts2)
-            let diffs = [abs (Map.findWithDefault 0 c counts1 - Map.findWithDefault 0 c counts2) | c <- allChars]
-            print $ sum diffs
+  s1 <- getLine
+  s2 <- getLine
+  if length s1 /= length s2
+    then print (-1)
+    else do
+      let counts1 = countChars s1
+      let counts2 = countChars s2
+      let allChars = Map.keys (Map.union counts1 counts2)
+      let diffs = [abs (Map.findWithDefault 0 c counts1 - Map.findWithDefault 0 c counts2) | c <- allChars]
+      print $ sum diffs

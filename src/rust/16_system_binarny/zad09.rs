@@ -135,9 +135,9 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let napis = input.trim();
-    
+
     println!("{}", wielkie_na_male_bitowo(napis));
-    
+
     // ZAD-09B: Małe → wielkie (bitowo) (opcjonalnie)
     // println!("{}", male_na_wielkie_bitowo(napis));
 }

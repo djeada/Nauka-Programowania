@@ -51,7 +51,7 @@ use std::io;
 // Złożoność pamięciowa: O(1)
 fn miejsca_zerowe_kwadratowe(a: f64, b: f64, c: f64) -> Vec<f64> {
     let delta = b * b - 4.0 * a * c;
-    
+
     if delta < 0.0 {
         Vec::new()
     } else if delta == 0.0 {
@@ -73,9 +73,9 @@ fn main() {
         .split_whitespace()
         .map(|s| s.parse().expect("Nieprawidłowa liczba"))
         .collect();
-    
+
     let wynik = miejsca_zerowe_kwadratowe(coeffs[0], coeffs[1], coeffs[2]);
-    
+
     if wynik.is_empty() {
         println!("[]");
     } else if wynik.len() == 1 {

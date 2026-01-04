@@ -44,16 +44,18 @@ import Data.List (intercalate)
 -- Złożoność czasowa: O(n*m), gdzie n, m to stopnie wielomianów
 -- Złożoność pamięciowa: O(n+m)
 multiplyPolynomials :: [Int] -> [Int] -> [Int]
-multiplyPolynomials a b = [sum [a !! i * b !! j | i <- [0..length a - 1], 
-                                                     j <- [0..length b - 1], 
-                                                     i + j == k] 
-                            | k <- [0..length a + length b - 2]]
+multiplyPolynomials a b =
+  [ sum
+      [ a !! i * b !! j | i <- [0 .. length a - 1], j <- [0 .. length b - 1], i + j == k
+      ]
+    | k <- [0 .. length a + length b - 2]
+  ]
 
 -- Mnożenie wielomianów (z I/O)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    coeffsA <- map read . words <$> getLine :: IO [Int]
-    m <- readLn :: IO Int
-    coeffsB <- map read . words <$> getLine :: IO [Int]
-    putStrLn $ intercalate " " $ map show $ multiplyPolynomials coeffsA coeffsB
+  n <- readLn :: IO Int
+  coeffsA <- map read . words <$> getLine :: IO [Int]
+  m <- readLn :: IO Int
+  coeffsB <- map read . words <$> getLine :: IO [Int]
+  putStrLn $ intercalate " " $ map show $ multiplyPolynomials coeffsA coeffsB

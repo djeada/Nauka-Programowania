@@ -51,19 +51,23 @@ import Data.Ord (comparing)
 mergeIntervals :: [(Int, Int)] -> [(Int, Int)]
 mergeIntervals [] = []
 mergeIntervals intervals = reverse $ foldl merge [head sorted] (tail sorted)
-    where
-        sorted = sortBy (comparing fst) intervals
-        merge [] interval = [interval]
-        merge ((a, b):rest) (c, d)
-            | c <= b = (a, max b d):rest
-            | otherwise = (c, d):(a, b):rest
+  where
+    sorted = sortBy (comparing fst) intervals
+    merge [] interval = [interval]
+    merge ((a, b) : rest) (c, d)
+      | c <= b = (a, max b d) : rest
+      | otherwise = (c, d) : (a, b) : rest
 
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    intervals <- sequence [do
-        line <- getLine
-        let [a, b] = map read (words line)
-        return (a, b) | _ <- [1..n]]
-    let merged = mergeIntervals intervals
-    mapM_ (\(a, b) -> putStrLn $ show a ++ " " ++ show b) merged
+  n <- readLn :: IO Int
+  intervals <-
+    sequence
+      [ do
+          line <- getLine
+          let [a, b] = map read (words line)
+          return (a, b)
+        | _ <- [1 .. n]
+      ]
+  let merged = mergeIntervals intervals
+  mapM_ (\(a, b) -> putStrLn $ show a ++ " " ++ show b) merged

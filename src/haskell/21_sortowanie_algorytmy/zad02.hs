@@ -37,29 +37,29 @@ Dla każdej pozycji `i` znajdź najmniejszy element w zakresie `i..koniec` i zam
 
 -}
 
-import Text.Read (readMaybe)
 import Data.List (minimumBy)
 import Data.Ord (comparing)
+import Text.Read (readMaybe)
 
 -- Sortowanie przez wybieranie
 -- Złożoność czasowa: O(n^2)
 -- Złożoność pamięciowa: O(n)
-selectionSort :: Ord a => [a] -> [a]
+selectionSort :: (Ord a) => [a] -> [a]
 selectionSort [] = []
 selectionSort xs = minElem : selectionSort (remove minElem xs)
-    where
-        minElem = minimum xs
-        remove _ [] = []
-        remove y (z:zs)
-            | y == z = zs
-            | otherwise = z : remove y zs
+  where
+    minElem = minimum xs
+    remove _ [] = []
+    remove y (z : zs)
+      | y == z = zs
+      | otherwise = z : remove y zs
 
 parseList :: String -> Maybe [Int]
 parseList s = readMaybe s
 
 main :: IO ()
 main = do
-    input <- getLine
-    case parseList input of
-        Just xs -> print $ selectionSort xs
-        Nothing -> print ([] :: [Int])
+  input <- getLine
+  case parseList input of
+    Just xs -> print $ selectionSort xs
+    Nothing -> print ([] :: [Int])

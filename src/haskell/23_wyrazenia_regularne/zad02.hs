@@ -44,21 +44,21 @@ Fałsz
 
 -}
 
-import Data.Char (isUpper, isLower, isDigit)
+import Data.Char (isDigit, isLower, isUpper)
 
 -- Walidacja hasła
 -- Złożoność czasowa: O(n)
 -- Złożoność pamięciowa: O(1)
 validatePassword :: String -> Bool
-validatePassword pwd = 
-    length pwd >= 8 &&
-    length pwd <= 20 &&
-    any isUpper pwd &&
-    any isLower pwd &&
-    any isDigit pwd &&
-    any (`elem` "!#$%&'*+-/=?^_`{|}~") pwd
+validatePassword pwd =
+  length pwd >= 8
+    && length pwd <= 20
+    && any isUpper pwd
+    && any isLower pwd
+    && any isDigit pwd
+    && any (`elem` "!#$%&'*+-/=?^_`{|}~") pwd
 
 main :: IO ()
 main = do
-    password <- getLine
-    putStrLn $ if validatePassword password then "Prawda" else "Fałsz"
+  password <- getLine
+  putStrLn $ if validatePassword password then "Prawda" else "Fałsz"

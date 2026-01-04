@@ -45,17 +45,17 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let mut n: i32 = n.trim().parse().unwrap();
-    
+
     if n == 0 {
         println!("1");
         return;
     }
-    
+
     let mut count = 0;
     while n > 0 {
         count += 1;
         n /= 10;
     }
-    
+
     println!("{}", count);
 }

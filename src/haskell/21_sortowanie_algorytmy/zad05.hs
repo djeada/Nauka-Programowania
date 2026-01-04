@@ -52,25 +52,25 @@ import Text.Read (readMaybe)
 -- Mergesort
 -- Złożoność czasowa: O(n log n)
 -- Złożoność pamięciowa: O(n)
-mergesort :: Ord a => [a] -> [a]
+mergesort :: (Ord a) => [a] -> [a]
 mergesort [] = []
 mergesort [x] = [x]
 mergesort xs = merge (mergesort left) (mergesort right)
-    where
-        (left, right) = splitAt (length xs `div` 2) xs
-        
-        merge [] ys = ys
-        merge xs [] = xs
-        merge (x:xs) (y:ys)
-            | x <= y = x : merge xs (y:ys)
-            | otherwise = y : merge (x:xs) ys
+  where
+    (left, right) = splitAt (length xs `div` 2) xs
+
+    merge [] ys = ys
+    merge xs [] = xs
+    merge (x : xs) (y : ys)
+      | x <= y = x : merge xs (y : ys)
+      | otherwise = y : merge (x : xs) ys
 
 parseList :: String -> Maybe [Int]
 parseList s = readMaybe s
 
 main :: IO ()
 main = do
-    input <- getLine
-    case parseList input of
-        Just xs -> print $ mergesort xs
-        Nothing -> print ([] :: [Int])
+  input <- getLine
+  case parseList input of
+    Just xs -> print $ mergesort xs
+    Nothing -> print ([] :: [Int])

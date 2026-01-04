@@ -69,7 +69,6 @@
 # ```
 # 1
 # ```
-
 source ../assert.sh
 
 mnozenie() {

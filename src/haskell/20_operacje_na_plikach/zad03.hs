@@ -40,11 +40,8 @@ raport.docx
 
 -}
 
--- Rekurencyjne wyszukiwanie plików (uproszczona wersja)
--- Złożoność czasowa: O(n), gdzie n to liczba plików w systemie
--- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    filename <- getLine
-    putStrLn "Rekurencyjne wyszukiwanie plików wymaga bardziej zaawansowanej implementacji"
-    print ([] :: [String])
+  filename <- getLine
+  putStrLn "Rekurencyjne wyszukiwanie plików wymaga bardziej zaawansowanej implementacji"
+  print ([] :: [String])

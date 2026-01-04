@@ -50,17 +50,17 @@ fn main() {
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
     let n: usize = n_str.trim().parse().unwrap_or(0);
-    
+
     let mut napisy = Vec::new();
-    
+
     for _ in 0..n {
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Błąd wczytywania");
         napisy.push(input.trim().to_string());
     }
-    
+
     sortuj_po_dlugosci(&mut napisy);
-    
+
     print!("[");
     for (i, napis) in napisy.iter().enumerate() {
         if i > 0 {

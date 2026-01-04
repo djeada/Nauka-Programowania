@@ -47,7 +47,6 @@ print(pierwiastek(16))
 
 */
 
-// Funkcja zwracajaca pierwiastek z liczby
 function pierwiastekLiczby(liczba) {
   var pierwiastek = liczba;
   while (pierwiastek * pierwiastek > liczba) {

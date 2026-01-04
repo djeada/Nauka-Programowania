@@ -33,7 +33,6 @@
 # ```
 # [9, 5, 1]
 # ```
-
 source ../assert.sh
 
 roznica_v1() {

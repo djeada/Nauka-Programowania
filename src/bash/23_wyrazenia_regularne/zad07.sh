@@ -31,7 +31,6 @@
 # Ani nie poszedł do kina
 # ani nie wybrał się do teatru
 # ```
-
 source ../assert.sh
 
 # Dzieli zdanie na słowa, usuwając znaki interpunkcyjne.

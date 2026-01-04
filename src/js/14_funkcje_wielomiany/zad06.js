@@ -36,9 +36,6 @@ Dla `[1, 2, 1]` funkcja zwraca:
 
 */
 
-// Funkcja znajduje miejsca zerowe równania kwadratowego ax^2 + bx + c = 0
-// Złożoność czasowa: O(1)
-// Złożoność pamięciowa: O(1)
 function miejscaZeroweRownaniaKwadratowego(wspolczynniki) {
   const [a, b, c] = wspolczynniki;
   const delta = b * b - 4 * a * c;

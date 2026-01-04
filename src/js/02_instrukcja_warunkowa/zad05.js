@@ -40,7 +40,6 @@ Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
 const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 const liczba_c = parseInt(prompt("Podaj trzecia liczbe:"));

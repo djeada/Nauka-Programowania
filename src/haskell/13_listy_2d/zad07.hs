@@ -42,24 +42,27 @@ import Data.List (intercalate)
 import qualified Data.Set as Set
 
 readMatrix :: Int -> Int -> IO [[Int]]
-readMatrix n m = sequence [map read . words <$> getLine | _ <- [1..n]]
+readMatrix n m = sequence [map read . words <$> getLine | _ <- [1 .. n]]
 
 findZeros :: [[Int]] -> [(Int, Int)]
-findZeros m = [(i, j) | i <- [0..length m - 1], j <- [0..length (head m) - 1], m !! i !! j == 0]
+findZeros m = [(i, j) | i <- [0 .. length m - 1], j <- [0 .. length (head m) - 1], m !! i !! j == 0]
 
 zeroMatrix :: [[Int]] -> [[Int]]
-zeroMatrix m = [[if i `Set.member` zeroRows || j `Set.member` zeroCols then 0 else m !! i !! j 
-                  | j <- [0..length (head m) - 1]] 
-                 | i <- [0..length m - 1]]
-    where
-        zeros = findZeros m
-        zeroRows = Set.fromList [i | (i, _) <- zeros]
-        zeroCols = Set.fromList [j | (_, j) <- zeros]
+zeroMatrix m =
+  [ [ if i `Set.member` zeroRows || j `Set.member` zeroCols then 0 else m !! i !! j
+      | j <- [0 .. length (head m) - 1]
+    ]
+    | i <- [0 .. length m - 1]
+  ]
+  where
+    zeros = findZeros m
+    zeroRows = Set.fromList [i | (i, _) <- zeros]
+    zeroCols = Set.fromList [j | (_, j) <- zeros]
 
 main :: IO ()
 main = do
-    line <- getLine
-    let [n, m] = map read (words line)
-    macierz <- readMatrix n m
-    let zeroed = zeroMatrix macierz
-    mapM_ (putStrLn . intercalate " " . map show) zeroed
+  line <- getLine
+  let [n, m] = map read (words line)
+  macierz <- readMatrix n m
+  let zeroed = zeroMatrix macierz
+  mapM_ (putStrLn . intercalate " " . map show) zeroed

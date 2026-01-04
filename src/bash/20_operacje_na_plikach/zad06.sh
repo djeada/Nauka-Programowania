@@ -1,18 +1,56 @@
 # ZAD-06 — Statystyki pliku tekstowego
-# 
+#
 # **Poziom:** ★★☆
 # **Tagi:** `files`, `stats`, `dict`, `regex`
-# 
+#
 # ### Treść
-# 
+#
 # Otrzymujesz ścieżkę do pliku tekstowego. Oblicz:
-# 
+#
 # a) liczbę wierszy,
 # b) łączną liczbę słów (słowa = ciągi liter),
 # c) średnią długość wiersza (w znakach),
 # d) średnią liczbę słów na wiersz,
 # e) częstość występowania słów (słownik).
-
+#
+# ### Wejście
+#
+# * 1 linia: `file_path`
+#
+# ### Wyjście
+#
+# 5 elementów w tej kolejności:
+#
+# 1. liczba wierszy
+# 2. liczba słów
+# 3. średnia długość wiersza
+# 4. średnia liczba słów na wiersz
+# 5. słownik częstości słów
+#
+# Każdy element wypisz w osobnej linii.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# C:\Users\Username\Documents\tekst.txt
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# 4
+# 12
+# 17.75
+# 3.0
+# {'ala': 2, 'ma': 2, 'kota': 1, 'kot': 1, 'na': 1, 'imię': 1, 'filemon': 1, 'filemona': 1, 'lubi': 2, 'mleko': 1}
+# ```
+#
+# ### Uwagi o formatowaniu
+#
+# * Jeżeli ujednolicisz wielkość liter — w słowniku używaj małych liter (jak w przykładzie).
+# * Interpunkcję traktuj jako separator (usuń ją przy wyznaczaniu słów).
 source ../assert.sh
 
 # Funkcja wczytujaca plik
@@ -23,7 +61,7 @@ wczytaj_plik() {
     local lista=()
     while read -r wiersz; do
         lista+=("$wiersz")
-    done < "$plik"
+    done <"$plik"
     printf '%s\n' "${lista[@]}"
 }
 
@@ -32,7 +70,7 @@ wczytaj_plik() {
 # Zlozonosc pamieciowa: O(1)
 liczba_wierszy() {
     local plik="$1"
-    wc -l < "$plik"
+    wc -l <"$plik"
 }
 
 # Funkcja rozdzielająca zdanie na slowa
@@ -46,7 +84,7 @@ podziel_zdanie_na_slowa() {
     zdanie=$(echo "$zdanie" | sed -r 's/[''".,:;!?\\@\<\>\/]+/ /g' | tr -s ' ')
     zdanie=$(echo "$zdanie" | sed -r 's/[-]+//g')
     lista_slow=($zdanie)
-    
+
     for slowo in "${lista_slow[@]}"; do
         # Sprawdzenie czy slowo zawiera tylko znaki alfanumeryczne i nie jest liczba
         if [[ "$slowo" =~ ^[[:alnum:]]+$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
@@ -66,7 +104,7 @@ liczba_slow() {
     local licznik=0
     for wiersz in "${tresc[@]}"; do
         slowa=($(podziel_zdanie_na_slowa "$wiersz"))
-        licznik=$((licznik+${#slowa[@]}))
+        licznik=$((licznik + ${#slowa[@]}))
     done
     echo "$licznik"
 }
@@ -112,7 +150,7 @@ test_statystyki() {
     local plik='test/test.txt'
     touch "$plik"
 
-    echo -e 'Hej \nThis is an example of a simple ASCII text file stored on a Web server. Note that it has a file\nextension of \".txt\".\n\nAlthough such files may contains some basic layout formatting, such as paragraphs, there is no\nsupport for the text to have attributes, such as bolding.\n\nText files can contain Hypertext Mark-up codes but these will not be interpreted by the \nbrowser. For example, if the following characters <strong>hello</strong> were typed into an\n"html" file then the word "hello" would be shown in bold.' > 'test/test.txt'
+    echo -e 'Hej \nThis is an example of a simple ASCII text file stored on a Web server. Note that it has a file\nextension of \".txt\".\n\nAlthough such files may contains some basic layout formatting, such as paragraphs, there is no\nsupport for the text to have attributes, such as bolding.\n\nText files can contain Hypertext Mark-up codes but these will not be interpreted by the \nbrowser. For example, if the following characters <strong>hello</strong> were typed into an\n"html" file then the word "hello" would be shown in bold.' >'test/test.txt'
 
     assertEqual "$(liczba_wierszy "$plik")" "10" $LINENO
     assertEqual "$(liczba_slow "$plik")" "92" $LINENO

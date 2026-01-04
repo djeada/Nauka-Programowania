@@ -53,7 +53,6 @@ Jedna linia: lista po rotacji, elementy oddzielone przecinkami.
 
 */
 
-// Funkcja rotujaca elementy listy o podana liczbe miejsc
 function rotacjaListy(lista, kierunek, przesuniecie) {
   przesuniecie %= lista.length;
 

@@ -45,9 +45,6 @@ Wczytaj `n` przedziałów `[a_i, b_i]` (a_i ≤ b_i). Scal przedziały nachodzą
 
 */
 
-// Funkcja scala nakładające się przedziały w jeden
-// Złożoność czasowa: O(n log n), gdzie n to liczba przedziałów (przez sortowanie)
-// Złożoność pamięciowa: O(n)
 function scalPrzedzialy(przedzialy) {
   przedzialy.sort((a, b) => a[0] - b[0]); // sortujemy przedzialy po poczatku
 

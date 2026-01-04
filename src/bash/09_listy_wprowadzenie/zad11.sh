@@ -35,7 +35,6 @@
 # ```
 # 5
 # ```
-
 source ../assert.sh
 
 policz_samochody() {

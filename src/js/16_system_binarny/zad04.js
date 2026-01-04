@@ -67,7 +67,6 @@ Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
 
 */
 
-// Funkcja obliczajaca ilosc zer w reprezentacji binarnej liczby
 function iloscZerLiczby(liczba) {
   let binarna = liczba.toString(2);
   let iloscZer = 0;

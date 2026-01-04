@@ -51,21 +51,21 @@ kthDerivative :: [Int] -> Int -> [Int]
 kthDerivative coeffs 0 = coeffs
 kthDerivative [] _ = []
 kthDerivative coeffs k
-    | k < 0 = coeffs
-    | k >= length coeffs = []
-    | otherwise = kthDerivative (derivative coeffs) (k - 1)
-    where
-        derivative [] = []
-        derivative [_] = []
-        derivative cs = zipWith (*) [length cs - 1, length cs - 2 .. 1] (init cs)
+  | k < 0 = coeffs
+  | k >= length coeffs = []
+  | otherwise = kthDerivative (derivative coeffs) (k - 1)
+  where
+    derivative [] = []
+    derivative [_] = []
+    derivative cs = zipWith (*) [length cs - 1, length cs - 2 .. 1] (init cs)
 
 -- k-ta pochodna wielomianu (z I/O)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    coeffs <- map read . words <$> getLine :: IO [Int]
-    k <- readLn :: IO Int
-    let result = kthDerivative coeffs k
-    if null result
-        then putStrLn "[]"
-        else putStrLn $ intercalate " " $ map show result
+  n <- readLn :: IO Int
+  coeffs <- map read . words <$> getLine :: IO [Int]
+  k <- readLn :: IO Int
+  let result = kthDerivative coeffs k
+  if null result
+    then putStrLn "[]"
+    else putStrLn $ intercalate " " $ map show result

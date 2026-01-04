@@ -55,7 +55,6 @@ Dwie liczby naturalne, każda w oddzielnej linii:
 
 */
 
-// Pobieranie danych od uzytkownika
 const a = parseInt(prompt("Podaj liczbe glow:"));
 const b = parseInt(prompt("Podaj liczbe nog:"));
 

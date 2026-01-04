@@ -35,7 +35,6 @@
 # ```
 # {3: 1, 5: 2, 8: -1}
 # ```
-
 source ../assert.sh
 
 zbuduj_slownik() {

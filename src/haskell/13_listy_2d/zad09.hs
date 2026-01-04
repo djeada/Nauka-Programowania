@@ -44,22 +44,29 @@ e f g
 -}
 
 readMatrix :: Int -> Int -> IO [[Int]]
-readMatrix n m = sequence [map read . words <$> getLine | _ <- [1..n]]
+readMatrix n m = sequence [map read . words <$> getLine | _ <- [1 .. n]]
 
 hourglassSum :: [[Int]] -> Int -> Int -> Int
-hourglassSum m i j = sum [m !! i !! j, m !! i !! (j+1), m !! i !! (j+2),
-                           m !! (i+1) !! (j+1),
-                           m !! (i+2) !! j, m !! (i+2) !! (j+1), m !! (i+2) !! (j+2)]
+hourglassSum m i j =
+  sum
+    [ m !! i !! j,
+      m !! i !! (j + 1),
+      m !! i !! (j + 2),
+      m !! (i + 1) !! (j + 1),
+      m !! (i + 2) !! j,
+      m !! (i + 2) !! (j + 1),
+      m !! (i + 2) !! (j + 2)
+    ]
 
 maxHourglassSum :: [[Int]] -> Int
-maxHourglassSum m = maximum [hourglassSum m i j | i <- [0..n-3], j <- [0..m'-3]]
-    where
-        n = length m
-        m' = length (head m)
+maxHourglassSum m = maximum [hourglassSum m i j | i <- [0 .. n - 3], j <- [0 .. m' - 3]]
+  where
+    n = length m
+    m' = length (head m)
 
 main :: IO ()
 main = do
-    line <- getLine
-    let [n, m'] = map read (words line)
-    macierz <- readMatrix n m'
-    print $ maxHourglassSum macierz
+  line <- getLine
+  let [n, m'] = map read (words line)
+  macierz <- readMatrix n m'
+  print $ maxHourglassSum macierz

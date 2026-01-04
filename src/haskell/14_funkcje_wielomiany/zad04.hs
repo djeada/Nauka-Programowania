@@ -25,13 +25,15 @@ Dla `a = [5, 0, 10, 6]` oraz `b = [1, 2, 4]` funkcja zwraca:
 -}
 
 multiplyPolynomials :: [Int] -> [Int] -> [Int]
-multiplyPolynomials a b = [sum [a !! i * b !! j | i <- [0..length a - 1], 
-                                                     j <- [0..length b - 1], 
-                                                     i + j == k] 
-                            | k <- [0..length a + length b - 2]]
+multiplyPolynomials a b =
+  [ sum
+      [ a !! i * b !! j | i <- [0 .. length a - 1], j <- [0 .. length b - 1], i + j == k
+      ]
+    | k <- [0 .. length a + length b - 2]
+  ]
 
 main :: IO ()
 main = do
-    let a = [5, 0, 10, 6]
-    let b = [1, 2, 4]
-    print $ multiplyPolynomials a b
+  let a = [5, 0, 10, 6]
+  let b = [1, 2, 4]
+  print $ multiplyPolynomials a b

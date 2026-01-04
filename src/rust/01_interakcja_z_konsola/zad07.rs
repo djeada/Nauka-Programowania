@@ -209,7 +209,7 @@ use ::std::*;
 
 fn main() {
     let pi = std::f64::consts::PI;
-    
+
     // Podpunkt a) Pole trojkata
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");

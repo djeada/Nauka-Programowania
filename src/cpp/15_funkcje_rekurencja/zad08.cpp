@@ -22,9 +22,9 @@ std::vector<std::pair<char, char>> hanoi(int n) {
    *
    */
   std::vector<std::pair<char, char>> wynik;
-  
-  std::function<void(int, char, char, char)> hanoiWew = 
-      [&](int n, char a, char b, char c) {
+
+  std::function<void(int, char, char, char)> hanoiWew = [&](int n, char a,
+                                                            char b, char c) {
     /**
      *
      */

@@ -59,7 +59,7 @@ fn permutuj(chars: &mut Vec<char>, index: usize, wynik: &mut Vec<String>) {
         wynik.push(chars.iter().collect());
         return;
     }
-    
+
     for i in index..chars.len() {
         chars.swap(index, i);
         permutuj(chars, index + 1, wynik);
@@ -71,7 +71,7 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let slowo = input.trim();
-    
+
     let permutacje = generuj_permutacje(slowo);
     for perm in permutacje {
         println!("{}", perm);

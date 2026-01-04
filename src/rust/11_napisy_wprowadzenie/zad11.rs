@@ -47,11 +47,11 @@ fn srednia_dlugosc_slow(zdanie: &str) -> usize {
         .map(|s| s.trim_matches(|c: char| !c.is_alphanumeric()).to_string())
         .filter(|s| !s.is_empty())
         .collect();
-    
+
     if slowa.is_empty() {
         return 0;
     }
-    
+
     let suma: usize = slowa.iter().map(|s| s.chars().count()).sum();
     suma / slowa.len()
 }
@@ -60,6 +60,6 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let zdanie = input.trim();
-    
+
     println!("{}", srednia_dlugosc_slow(zdanie));
 }

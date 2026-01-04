@@ -28,10 +28,6 @@ Dla `a = [3, 2, 1]` i `x = 1` funkcja zwraca:
 
 */
 
-// Funkcja oblicza wartość wielomianu w punkcie x
-// Współczynniki podane od najwyższej potęgi do najniższej: [a_n, ..., a_0]
-// Złożoność czasowa: O(n), gdzie n to stopień wielomianu
-// Złożoność pamięciowa: O(1)
 function wielomian(wspolczynniki, x) {
   let suma = 0;
   const n = wspolczynniki.length;

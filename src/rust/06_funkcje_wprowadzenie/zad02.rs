@@ -177,7 +177,6 @@ print(reszta(3, 5))
 
 */
 
-// Podpunkt a) suma dwóch liczb
 fn suma(a: i32, b: i32) -> i32 {
     a + b
 }

@@ -39,7 +39,6 @@ Algorytm polega na wielokrotnym porównywaniu sąsiednich elementów i zamianie 
 """
 
 
-# Zlozonosc czasowa O(n^2)
 def sortuj_v1(tablica):
 
     n = len(tablica)

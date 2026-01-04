@@ -129,8 +129,7 @@ int main() {
   int temp = liczba;
   while (temp > 0) {
     int cyfra = temp % 10;
-    if (cyfra % 2 == 0) 
-      std::cout << cyfra << std::endl;
+    if (cyfra % 2 == 0) std::cout << cyfra << std::endl;
     temp /= 10;
   }
 
@@ -138,8 +137,7 @@ int main() {
   temp = liczba;
   while (temp > 0) {
     int cyfra = temp % 10;
-    if (cyfra < 5) 
-      std::cout << cyfra << std::endl;
+    if (cyfra < 5) std::cout << cyfra << std::endl;
     temp /= 10;
   }
 
@@ -147,8 +145,7 @@ int main() {
   temp = liczba;
   while (temp > 0) {
     int cyfra = temp % 10;
-    if (cyfra != 0) 
-      std::cout << cyfra << std::endl;
+    if (cyfra != 0) std::cout << cyfra << std::endl;
     temp /= 10;
   }
 

@@ -30,7 +30,6 @@
 # ```
 # [0, 0, 1, 1, 1, 1]
 # ```
-
 source ../assert.sh
 
 # Sortuje listę binarną (0/1) metodą zliczania.

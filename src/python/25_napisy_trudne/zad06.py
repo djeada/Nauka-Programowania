@@ -35,7 +35,6 @@ Prawda
 """
 
 
-# Wersja 1
 def czy_rotacja_v1(slowo_a, slowo_b):
 
     if len(slowo_a) != len(slowo_b):

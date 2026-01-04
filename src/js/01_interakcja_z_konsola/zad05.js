@@ -163,7 +163,6 @@ y=\sin^3(x)\cdot\cos^2(x)+e^{x^2}+\ln(x^3+2x^2-x-3)
 ```
 
 */
-// a) Otrzymujesz wspolrzedna $x$. Wyznacz wartosc funkcji $y = 3x + 10$ w tym punkcie.
 const x1 = parseFloat(prompt("Podaj wspolrzedna x:"));
 console.log((3 * x1 + 10).toFixed(3));
 

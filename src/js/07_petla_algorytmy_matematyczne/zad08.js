@@ -43,7 +43,6 @@ False
 
 */
 
-// Funkcja zwracajaca wartosc logiczna, czy liczba jest pierwsza
 function czyPierwsza(liczba) {
   if (liczba < 2) {
     return false;

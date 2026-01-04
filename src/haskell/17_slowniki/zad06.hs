@@ -32,15 +32,15 @@ klasa
 
 -}
 
+import Data.List (group, intercalate, sort)
 import Data.Map (Map)
 import qualified Data.Map as Map
-import Data.List (group, sort, intercalate)
 
 -- Histogram znaków w słowie
 -- Złożoność czasowa: O(n log n)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    napis <- getLine
-    let histogram = Map.fromListWith (+) [(c, 1) | c <- napis]
-    putStrLn $ "{" ++ intercalate ", " ["'" ++ [k] ++ "': " ++ show v | (k, v) <- Map.toList histogram] ++ "}"
+  napis <- getLine
+  let histogram = Map.fromListWith (+) [(c, 1) | c <- napis]
+  putStrLn $ "{" ++ intercalate ", " ["'" ++ [k] ++ "': " ++ show v | (k, v) <- Map.toList histogram] ++ "}"

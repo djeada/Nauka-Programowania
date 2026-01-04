@@ -112,7 +112,6 @@
 # ### Uwagi o formatowaniu
 #
 # * W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`.
-
 main() {
     read a
 

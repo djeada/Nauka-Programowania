@@ -50,7 +50,6 @@ Elementy w linii oddzielone przecinkami (bez spacji).
 
 */
 
-// Funkcja wczytujaca N liczb calkowitych do listy
 function wczytajNliczbDoListy(N) {
   var lista = [];
   for (var i = 0; i < N; i++) {

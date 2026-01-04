@@ -68,8 +68,6 @@ Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
 """
 
 
-# Zlozonosc czasowa O(n)
-# Zlozonosc pamieciowa O(1)
 def przygotuj_tablice():
     """
     Funkcja zwraca tablice zawierajaca ilosc ustawionych bitow dla kazdej liczby w zakresie 0-255.

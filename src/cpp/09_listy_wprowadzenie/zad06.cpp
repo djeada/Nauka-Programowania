@@ -1,5 +1,52 @@
 /*
-ZAD-06 — Średnia w liście
+ZAD-06 — Czy średnia elementów znajduje się w liście?
+
+**Poziom:** ★☆☆
+**Tagi:** `listy`, `średnia`, `wyszukiwanie`
+
+### Treść
+
+Wczytaj listę liczb całkowitych. Oblicz średnią arytmetyczną elementów i
+sprawdź, czy ta średnia jest **dokładnie** jednym z elementów listy.
+
+Wypisz:
+
+* `Tak` — jeśli średnia występuje w liście,
+* `Nie` — w przeciwnym razie.
+
+### Wejście
+
+* 1. linia: `N` (`N ≥ 1`)
+* kolejne `N` linii: liczby całkowite
+
+### Wyjście
+
+Jedno słowo: `Tak` lub `Nie`.
+
+### Przykład
+
+**Wejście:**
+
+```
+5
+6
+2
+1
+4
+27
+```
+
+**Wyjście:**
+
+```
+Nie
+```
+
+### Uwagi
+
+* Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb
+całkowitych.
+
 */
 #include <iostream>
 #include <vector>
@@ -7,7 +54,7 @@ ZAD-06 — Średnia w liście
 int main() {
   int n;
   std::cin >> n;
-  
+
   std::vector<int> lista;
   int suma = 0;
   for (int i = 0; i < n; i++) {
@@ -16,9 +63,9 @@ int main() {
     lista.push_back(liczba);
     suma += liczba;
   }
-  
+
   double srednia = (double)suma / n;
-  
+
   bool znaleziono = false;
   for (int i = 0; i < n; i++) {
     if (lista[i] == srednia) {
@@ -26,7 +73,7 @@ int main() {
       break;
     }
   }
-  
+
   std::cout << (znaleziono ? "Tak" : "Nie") << std::endl;
 
   return 0;

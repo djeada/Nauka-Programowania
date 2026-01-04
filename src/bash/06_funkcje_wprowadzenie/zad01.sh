@@ -99,11 +99,6 @@
 # ```
 # True
 # ```
-
-# ZAD-01A — Zwracanie stałej wartości: liczba 3
-# ZAD-01B — Zwracanie stałej wartości: napis „Tak"
-# ZAD-01C — Zwracanie stałej wartości: True
-
 funkcja1() {
     return 3
 }

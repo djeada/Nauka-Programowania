@@ -32,20 +32,23 @@ C:\Users\Username\Documents\adresy_ip.txt
 
 -}
 
-import System.IO (readFile)
+import Control.Exception (IOException, catch)
 import Data.List (sort)
-import Control.Exception (catch, IOException)
+import System.IO (readFile)
 
 -- Sortuje adresy IP z pliku
 -- Złożoność czasowa: O(n log n), gdzie n to liczba adresów
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    filePath <- getLine
-    contents <- catch (readFile filePath)
-                      (\e -> do
-                          let _ = (e :: IOException)
-                          return "")
-    let ips = lines contents
-    let sorted = sort ips
-    print sorted
+  filePath <- getLine
+  contents <-
+    catch
+      (readFile filePath)
+      ( \e -> do
+          let _ = (e :: IOException)
+          return ""
+      )
+  let ips = lines contents
+  let sorted = sort ips
+  print sorted

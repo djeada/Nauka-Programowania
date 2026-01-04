@@ -47,14 +47,10 @@
 #
 # * Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).
 # * Ostatni średnik może powodować pusty element na końcu — zignoruj go.
-
-# Funkcja wypisujaca dane pracownika w sformatowany sposob
-# Zlozonosc czasowa: O(1)
-# Zlozonosc pamieciowa: O(n) dla tablicy wynikowej, gdzie n to liczba pol
 wypisz_dane() {
     # Podzial danych po sredniku i spacji
     IFS='; ' read -ra wynik <<<"$1"
-    
+
     # Wypisanie danych z etykietami
     echo "Imie: ${wynik[0]}"
     echo "Nazwisko: ${wynik[1]}"

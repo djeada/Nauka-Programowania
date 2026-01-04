@@ -39,7 +39,7 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: usize = n.trim().parse().unwrap();
-    
+
     for _ in 0..n {
         for _ in 0..n {
             print!("*");

@@ -29,7 +29,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Tekst musi być identyczny (łącznie z przecinkiem, spacją i wykrzyknikiem).
-
 main() {
     echo "Witaj, świecie!"
 }

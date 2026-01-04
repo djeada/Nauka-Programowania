@@ -43,7 +43,6 @@
 # ### Ograniczenia / gwarancje
 # 
 # * Dla `n = 0` funkcja ma zwrócić `0.0`.
-
 source ../assert.sh
 
 pierwiastek() {

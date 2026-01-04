@@ -35,7 +35,6 @@ Jeśli `m` nie jest w zakresie 1–12, wypisz:
 
 */
 
-// Pobieranie danych od uzytkownika
 const miesiac = parseInt(prompt("Podaj miesiac:"));
 
 // Sprawdzenie, czy liczba jest poprawna

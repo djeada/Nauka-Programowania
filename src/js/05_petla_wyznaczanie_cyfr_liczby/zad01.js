@@ -42,7 +42,6 @@ Jedna liczba naturalna — liczba cyfr w `n`.
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Petla

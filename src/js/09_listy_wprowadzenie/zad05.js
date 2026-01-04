@@ -53,7 +53,6 @@ Pięć linii (po kolei: a, b, c, d, e), w każdej lista oddzielona przecinkami.
 * Nie dodawaj przecinków na końcu linii.
 
 */
-// a) Zwieksz o 1 wszystkie elementy o parzystych indeksach (indeksy zaczynaja sie od 0).
 function zwiekszElementyOParzystychIndeksach(lista) {
   return lista.map((element, indeks) => {
     if (indeks % 2 === 0) {

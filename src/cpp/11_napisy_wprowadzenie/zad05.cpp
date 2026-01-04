@@ -52,8 +52,7 @@ linii.
 void wypiszPoziomo(const std::string &napis, int k) {
   bool pierwszy = true;
   for (unsigned int i = 0; i < napis.size(); i += k) {
-    if (!pierwszy)
-      std::cout << " ";
+    if (!pierwszy) std::cout << " ";
     std::cout << napis[i];
     pierwszy = false;
   }

@@ -34,7 +34,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Porównuj rozszerzenia **bez względu na wielkość liter** (np. `.TXT` też pasuje do `.txt`).
-
 source ../assert.sh
 
 znajdz_pliki_z_rozszerzeniem() {

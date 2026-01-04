@@ -38,9 +38,6 @@ Wczytaj macierz `n×m`. Jeśli w macierzy występuje `0`, to **cały wiersz i ca
 
 */
 
-// Funkcja zeruje wszystkie wiersze i kolumny zawierające 0
-// Złożoność czasowa: O(m*n), gdzie m to liczba wierszy, n to liczba kolumn
-// Złożoność pamięciowa: O(m+n) dla zbiorów wierszy i kolumn do zerowania
 function zerujMacierz(macierz) {
   const m = macierz.length;
   const n = macierz[0].length;

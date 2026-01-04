@@ -60,7 +60,6 @@ Liczba jest dodatnia.
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Porownanie ze stala

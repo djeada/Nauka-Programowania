@@ -45,10 +45,10 @@ fn najdluzszy_wspolny_przedrostek(napisy: &[String]) -> String {
     if napisy.is_empty() {
         return String::new();
     }
-    
+
     let pierwszy = &napisy[0];
     let mut przedrostek = String::new();
-    
+
     for (i, c) in pierwszy.chars().enumerate() {
         // Sprawdź czy wszystkie napisy mają ten znak na pozycji i
         if napisy.iter().all(|s| s.chars().nth(i) == Some(c)) {
@@ -57,7 +57,7 @@ fn najdluzszy_wspolny_przedrostek(napisy: &[String]) -> String {
             break;
         }
     }
-    
+
     przedrostek
 }
 
@@ -65,13 +65,13 @@ fn main() {
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
     let n: usize = n_str.trim().parse().unwrap_or(0);
-    
+
     let mut napisy = Vec::new();
     for _ in 0..n {
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Błąd wczytywania");
         napisy.push(input.trim().to_string());
     }
-    
+
     println!("{}", najdluzszy_wspolny_przedrostek(&napisy));
 }

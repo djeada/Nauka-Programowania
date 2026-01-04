@@ -56,7 +56,7 @@ fn utworz_macierz_2_kolumnowa(n: usize, m: usize, lista1: Vec<i32>, lista2: Vec<
         println!("Pusta macierz");
         return;
     }
-    
+
     for i in 0..n {
         println!("{} {}", lista1[i], lista2[i]);
     }
@@ -65,29 +65,29 @@ fn utworz_macierz_2_kolumnowa(n: usize, m: usize, lista1: Vec<i32>, lista2: Vec<
 fn main() {
     let mut n_str = String::new();
     let mut m_str = String::new();
-    
+
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
     io::stdin().read_line(&mut m_str).expect("Błąd wczytywania");
-    
+
     let n: usize = n_str.trim().parse().expect("Nieprawidłowa liczba");
     let m: usize = m_str.trim().parse().expect("Nieprawidłowa liczba");
-    
+
     let mut lista1 = Vec::new();
     let mut lista2 = Vec::new();
-    
+
     for _ in 0..n {
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Błąd wczytywania");
         let liczba: i32 = input.trim().parse().expect("Nieprawidłowa liczba");
         lista1.push(liczba);
     }
-    
+
     for _ in 0..m {
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Błąd wczytywania");
         let liczba: i32 = input.trim().parse().expect("Nieprawidłowa liczba");
         lista2.push(liczba);
     }
-    
+
     utworz_macierz_2_kolumnowa(n, m, lista1, lista2);
 }

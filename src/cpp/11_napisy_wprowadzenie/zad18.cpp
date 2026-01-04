@@ -63,7 +63,7 @@ void odwrocNapisy(std::string &zdanie) {
       pocz = i + 1;
     }
   }
-  
+
   // Odwroc ostatnie slowo
   if (pocz < N) {
     koniec = N - 1;

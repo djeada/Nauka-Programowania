@@ -29,6 +29,6 @@ multiplyByScalar coeffs k = map (* k) coeffs
 
 main :: IO ()
 main = do
-    let coeffs = [4, -3, 2]
-    let k = -2
-    print $ multiplyByScalar coeffs k
+  let coeffs = [4, -3, 2]
+  let k = -2
+  print $ multiplyByScalar coeffs k

@@ -43,7 +43,6 @@ Niepoprawny numer dnia tygodnia.
 
 */
 
-// Pobieranie danych od uzytkownika
 const dzien_tygodnia = parseInt(prompt("Podaj dzien tygodnia:"));
 
 // Sprawdzenie, czy liczba jest poprawna

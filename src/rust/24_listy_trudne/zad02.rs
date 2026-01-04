@@ -39,7 +39,7 @@ use std::io;
 // Złożoność pamięciowa: O(1) - modyfikacja in-place
 fn przesun_zera_na_koniec(lista: &mut Vec<i32>) {
     let mut poz_zapisu = 0;
-    
+
     // Pierwsza faza: przenieś wszystkie niezerowe elementy na początek
     for i in 0..lista.len() {
         if lista[i] != 0 {
@@ -47,7 +47,7 @@ fn przesun_zera_na_koniec(lista: &mut Vec<i32>) {
             poz_zapisu += 1;
         }
     }
-    
+
     // Druga faza: wypełnij resztę zerami
     for i in poz_zapisu..lista.len() {
         lista[i] = 0;
@@ -57,19 +57,17 @@ fn przesun_zera_na_koniec(lista: &mut Vec<i32>) {
 fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
-    
+
     // Parsuj listę z formatu [0, 1, 3, ...]
-    let lista_str = input.trim()
-        .trim_start_matches('[')
-        .trim_end_matches(']');
-    
+    let lista_str = input.trim().trim_start_matches('[').trim_end_matches(']');
+
     let mut lista: Vec<i32> = lista_str
         .split(',')
         .filter_map(|s| s.trim().parse().ok())
         .collect();
-    
+
     przesun_zera_na_koniec(&mut lista);
-    
+
     // Wypisz wynik
     print!("[");
     for (i, val) in lista.iter().enumerate() {

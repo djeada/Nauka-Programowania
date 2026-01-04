@@ -36,9 +36,6 @@ Zepsuty rower.
 
 */
 
-// Funkcja oblicza średnią długość słów w napisie
-// Złożoność czasowa: O(n), gdzie n to długość napisu
-// Złożoność pamięciowa: O(m), gdzie m to liczba słów
 function sredniaDlugoscSlow(napis) {
   let slowa = napis.split(/[^\w]+/).filter(s => s.length > 0);
   

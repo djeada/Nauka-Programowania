@@ -81,7 +81,7 @@ fn czy_pierwsza(n: u32) -> bool {
     if n % 2 == 0 {
         return false;
     }
-    
+
     let mut i = 3;
     while i * i <= n {
         if n % i == 0 {
@@ -97,11 +97,11 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let n: u32 = input.trim().parse().unwrap_or(0);
-    
+
     if czy_parzysta(n) {
         println!("{:b}", n);
     }
-    
+
     // ZAD-02B: Wypisz binarnie tylko gdy liczba pierwsza (opcjonalnie)
     // Odkomentować poniższy kod dla ZAD-02B
     /*

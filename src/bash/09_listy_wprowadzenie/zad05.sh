@@ -50,7 +50,6 @@
 # * W podpunkcie (d) indeks 0 i 1 nie są pierwsze.
 # * W podpunkcie (e) jeśli w liście jest `0`, to wiele wyników będzie `0` — to normalne.
 # * Nie dodawaj przecinków na końcu linii.
-
 source ../assert.sh
 
 zwieksz() {

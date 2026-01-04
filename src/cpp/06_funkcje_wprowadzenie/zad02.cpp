@@ -179,34 +179,24 @@ print(reszta(3, 5))
 #include <iostream>
 
 // ZAD-02A: Suma dwóch liczb
-int suma(int a, int b) {
-  return a + b;
-}
+int suma(int a, int b) { return a + b; }
 
 // ZAD-02B: Różnica: b − a
-int roznica(int a, int b) {
-  return b - a;
-}
+int roznica(int a, int b) { return b - a; }
 
 // ZAD-02C: Iloczyn dwóch liczb
-int iloczyn(int a, int b) {
-  return a * b;
-}
+int iloczyn(int a, int b) { return a * b; }
 
 // ZAD-02D: Iloraz całkowity: a // b
-int iloraz(int a, int b) {
-  return a / b;
-}
+int iloraz(int a, int b) { return a / b; }
 
 // ZAD-02E: Reszta z dzielenia: a % b
-int reszta(int a, int b) {
-  return a % b;
-}
+int reszta(int a, int b) { return a % b; }
 
 int main() {
   int a, b;
   std::cin >> a >> b;
-  
+
   std::cout << suma(a, b) << std::endl;
   std::cout << roznica(a, b) << std::endl;
   std::cout << iloczyn(a, b) << std::endl;

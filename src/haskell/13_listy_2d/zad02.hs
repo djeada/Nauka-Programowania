@@ -38,6 +38,6 @@ import Data.List (intercalate)
 
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    let macierz = [[i * j | j <- [0..n-1]] | i <- [0..n-1]]
-    mapM_ (putStrLn . intercalate " " . map show) macierz
+  n <- readLn :: IO Int
+  let macierz = [[i * j | j <- [0 .. n - 1]] | i <- [0 .. n - 1]]
+  mapM_ (putStrLn . intercalate " " . map show) macierz

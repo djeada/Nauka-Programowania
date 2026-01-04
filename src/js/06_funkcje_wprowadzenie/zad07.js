@@ -37,7 +37,6 @@ Jedna linia (tylko raz, po poprawnym dopasowaniu):
 
 */
 
-// Funkcja prosi o podanie nazwy uzytkownika i hasla, a nastepnie zwraca te dane
 const pobierzDaneUzytkownika = () => {
   const nazwaUzytkownika = prompt("Podaj nazwe uzytkownika:");
   const haslo = prompt("Podaj haslo:");

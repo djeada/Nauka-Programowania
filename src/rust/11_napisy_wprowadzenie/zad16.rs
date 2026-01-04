@@ -49,12 +49,12 @@ fn odleglosc_hamminga(s1: &str, s2: &str) -> usize {
 fn main() {
     let mut s1 = String::new();
     let mut s2 = String::new();
-    
+
     io::stdin().read_line(&mut s1).expect("Błąd wczytywania");
     io::stdin().read_line(&mut s2).expect("Błąd wczytywania");
-    
+
     let s1 = s1.trim();
     let s2 = s2.trim();
-    
+
     println!("{}", odleglosc_hamminga(s1, s2));
 }

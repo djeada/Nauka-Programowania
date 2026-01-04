@@ -58,8 +58,6 @@ Pole powierzchni: 16
 ```
 
 */
-// Zaprojektuj klase Ksztalt oraz klasy pochodne Kolo oraz Kwadrat.
-
 import java.util.Scanner;
 
 public class Main {

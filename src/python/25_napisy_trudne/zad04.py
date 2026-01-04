@@ -33,7 +33,6 @@ AB
 """
 
 
-# Wersja 1
 def usun_powtorzenia_v1(napis):
     nowy_napis = ""
     for znak in napis:

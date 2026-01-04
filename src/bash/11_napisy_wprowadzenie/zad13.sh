@@ -1,38 +1,37 @@
 # ZAD-13 — Znaki na indeksach będących liczbami pierwszymi
-# 
+#
 # **Poziom:** ★☆☆
 # **Tagi:** `liczby pierwsze`, `indeksy`, `string`
-# 
+#
 # ### Treść
-# 
+#
 # Wczytaj napis. Zbierz znaki, których **indeksy (od 0)** są liczbami pierwszymi (2, 3, 5, 7, ...). Wypisz wynik jako listę w stylu Pythona.
-# 
+#
 # ### Wejście
-# 
+#
 # * 1. linia: napis
-# 
+#
 # ### Wyjście
-# 
+#
 # * 1. linia: lista znaków, np. `['o', 'ń']`
-# 
+#
 # ### Przykład
-# 
+#
 # **Wejście:**
-# 
+#
 # ```
 # Słoń
 # ```
-# 
+#
 # **Wyjście:**
-# 
+#
 # ```
 # ['o', 'ń']
 # ```
-# 
+#
 # ### Uwagi
-# 
+#
 # * Indeksy: `S(0) ł(1) o(2) ń(3)` → bierz 2 i 3.
-
 source ../assert.sh
 
 # Funkcja pomocnicza sprawdzajaca czy liczba jest pierwsza
@@ -40,22 +39,22 @@ source ../assert.sh
 # Zlozonosc pamieciowa: O(1)
 czy_pierwsza() {
     local n=$1
-    
+
     if [ $n -lt 2 ]; then
         return 1
     fi
-    
+
     if [ $n -eq 2 ]; then
         return 0
     fi
-    
+
     local j
     for ((j = 2; j * j <= n; j++)); do
         if [ $((n % j)) -eq 0 ]; then
             return 1
         fi
     done
-    
+
     return 0
 }
 
@@ -67,7 +66,7 @@ znaki_na_indeksach_pierwszych() {
     local n=${#napis}
     local wynik="["
     local pierwszy=1
-    
+
     # Iteracja przez wszystkie indeksy
     local i
     for ((i = 0; i < n; i++)); do
@@ -81,7 +80,7 @@ znaki_na_indeksach_pierwszych() {
             fi
         fi
     done
-    
+
     wynik="${wynik}]"
     echo "$wynik"
 }
@@ -104,4 +103,3 @@ main() {
 }
 
 main "$@"
-

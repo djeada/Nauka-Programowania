@@ -51,17 +51,17 @@ import Data.List (intercalate)
 -- Złożoność czasowa: O(n/k), gdzie n to długość napisu
 -- Złożoność pamięciowa: O(n/k)
 coKtyZnak :: String -> Int -> String
-coKtyZnak napis k = [napis !! i | i <- [k-1, k-1+k .. length napis - 1]]
+coKtyZnak napis k = [napis !! i | i <- [k - 1, k - 1 + k .. length napis - 1]]
 
 -- Wypisuje co k-ty znak poziomo i pionowo
 -- Złożoność czasowa: O(n), gdzie n to długość napisu
 -- Złożoność pamięciowa: O(n/k)
 main :: IO ()
 main = do
-    napis <- getLine
-    k <- readLn :: IO Int
-    let znaki = coKtyZnak napis k
-    -- Wypisz poziomo z spacjami
-    putStrLn $ intercalate " " $ map (:[]) znaki
-    -- Wypisz pionowo
-    mapM_ putStrLn $ map (:[]) znaki
+  napis <- getLine
+  k <- readLn :: IO Int
+  let znaki = coKtyZnak napis k
+  -- Wypisz poziomo z spacjami
+  putStrLn $ intercalate " " $ map (: []) znaki
+  -- Wypisz pionowo
+  mapM_ putStrLn $ map (: []) znaki

@@ -67,7 +67,6 @@ Jedna linia: liczba w systemie dziesiętnym.
 
 */
 
-// a) Konwersja liczby dziesietnej na binarna
 function dziesietnaNaBinarna(dziesietna) {
   let binarna = "";
   while (dziesietna > 0) {

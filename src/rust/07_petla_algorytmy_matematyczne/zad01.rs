@@ -54,7 +54,7 @@ fn oblicz_srednia() -> f64 {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: i32 = n.trim().parse().unwrap();
-    
+
     let mut suma = 0.0;
     for _ in 0..n {
         let mut liczba = String::new();
@@ -62,7 +62,7 @@ fn oblicz_srednia() -> f64 {
         let liczba: f64 = liczba.trim().parse().unwrap();
         suma += liczba;
     }
-    
+
     suma / (n as f64)
 }
 

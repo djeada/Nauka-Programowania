@@ -38,7 +38,6 @@ b = 8
 
 */
 
-// Funkcja zamieniajaca wartosci zmiennych
 function zamienWartosciMiejscami(liczba_a, liczba_b) {
   let a = liczba_a;
   let b = liczba_b;

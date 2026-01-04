@@ -33,7 +33,6 @@
 #
 # * Ignoruj znaki interpunkcyjne (np. `.,!?;:`) — nie są częścią słów.
 # * Wielkość liter pozostaje bez zmian (nie zamieniaj na małe/duże), sortujesz to, co w tekście.
-
 source ../assert.sh
 
 # Sortuje słowa w zdaniu alfabetycznie, usuwając znaki interpunkcyjne.

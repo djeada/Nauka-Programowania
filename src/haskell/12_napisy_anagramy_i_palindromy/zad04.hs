@@ -51,12 +51,13 @@ stripPunctuation = reverse . dropWhile isPunctuation . reverse . dropWhile isPun
 -- Sprawdza czy słowo jest palindromem
 isPalindrome :: String -> Bool
 isPalindrome s = s_lower == reverse s_lower
-    where s_lower = map toLower s
+  where
+    s_lower = map toLower s
 
 -- Znajduje wszystkie palindromy w zdaniu
 main :: IO ()
 main = do
-    zdanie <- getLine
-    let slowa = map stripPunctuation $ words zdanie
-    let palindromy = filter (\w -> not (null w) && isPalindrome w) slowa
-    mapM_ putStrLn palindromy
+  zdanie <- getLine
+  let slowa = map stripPunctuation $ words zdanie
+  let palindromy = filter (\w -> not (null w) && isPalindrome w) slowa
+  mapM_ putStrLn palindromy

@@ -73,7 +73,6 @@ print(iloraz(3, 2))
 
 */
 
-// Podpunkt a) mnożenie przy pomocy dodawania
 fn iloczyn(a: i32, b: i32) -> i32 {
     let mut wynik = 0;
     for _ in 0..b {

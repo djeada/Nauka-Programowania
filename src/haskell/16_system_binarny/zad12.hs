@@ -39,12 +39,10 @@ Jedna liczba naturalna: długość najdłuższego „gapu”.
 
 -}
 
--- Reprezentacja zmiennoprzecinkowa (IEEE 754 - uproszczona)
--- Złożoność czasowa: O(1)
--- Złożoność pamięciowa: O(1)
 main :: IO ()
 main = do
-    x <- readLn :: IO Double
-    putStrLn $ "Float representation (approximation): " ++ show x
-    putStrLn $ "Sign: " ++ show (if x < 0 then 1 else 0)
-    -- Uproszczona reprezentacja
+  x <- readLn :: IO Double
+  putStrLn $ "Float representation (approximation): " ++ show x
+  putStrLn $ "Sign: " ++ show (if x < 0 then 1 else 0)
+
+-- Uproszczona reprezentacja

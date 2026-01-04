@@ -39,22 +39,22 @@ Jeśli długości są różne, wypisz pusty słownik `{}`.
 
 -}
 
+import Data.List (intercalate)
 import Data.Map (Map)
 import qualified Data.Map as Map
-import Data.List (intercalate)
 
 -- Tworzy słownik z dwóch list
 -- Złożoność czasowa: O(n log n)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    m <- readLn :: IO Int
-    keys <- map read . words <$> getLine :: IO [Int]
-    values <- map read . words <$> getLine :: IO [Int]
-    
-    if n /= m
-        then putStrLn "{}"
-        else do
-            let dict = Map.fromList $ zip keys values
-            putStrLn $ "{" ++ intercalate ", " [show k ++ ": " ++ show v | (k, v) <- Map.toList dict] ++ "}"
+  n <- readLn :: IO Int
+  m <- readLn :: IO Int
+  keys <- map read . words <$> getLine :: IO [Int]
+  values <- map read . words <$> getLine :: IO [Int]
+
+  if n /= m
+    then putStrLn "{}"
+    else do
+      let dict = Map.fromList $ zip keys values
+      putStrLn $ "{" ++ intercalate ", " [show k ++ ": " ++ show v | (k, v) <- Map.toList dict] ++ "}"

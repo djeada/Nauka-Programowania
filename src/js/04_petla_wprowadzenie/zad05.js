@@ -54,7 +54,6 @@ Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobn
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
 const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 

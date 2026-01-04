@@ -38,7 +38,6 @@ Jedna liczba naturalna — suma cyfr liczby `n`.
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Petla

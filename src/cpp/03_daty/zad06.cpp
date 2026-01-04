@@ -65,7 +65,7 @@ int main() {
   std::cin >> dzien >> miesiac >> rok;
 
   bool poprawna = false;
-  
+
   if (miesiac < 1 || miesiac > 12) {
     poprawna = false;
   } else {

@@ -51,7 +51,6 @@ Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba_a = parseInt(prompt("Podaj pierwsza liczbe:"));
 const liczba_b = parseInt(prompt("Podaj druga liczbe:"));
 

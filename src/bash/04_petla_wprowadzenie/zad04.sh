@@ -36,7 +36,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Dla `n = 1` wynik to `0`.
-
 main() {
     read a
     suma=0

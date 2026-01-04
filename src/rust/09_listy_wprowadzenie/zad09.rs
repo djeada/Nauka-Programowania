@@ -42,7 +42,7 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: usize = n.trim().parse().unwrap();
-    
+
     let mut lista = Vec::new();
     for _ in 0..n {
         let mut num = String::new();
@@ -50,16 +50,18 @@ fn main() {
         let num: i32 = num.trim().parse().unwrap();
         lista.push(num);
     }
-    
+
     let mut wynik = Vec::new();
     for num in lista {
         if !wynik.contains(&num) {
             wynik.push(num);
         }
     }
-    
+
     for (i, num) in wynik.iter().enumerate() {
-        if i > 0 { print!(","); }
+        if i > 0 {
+            print!(",");
+        }
         print!("{}", num);
     }
     println!();

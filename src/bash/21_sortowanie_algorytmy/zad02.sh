@@ -33,7 +33,6 @@
 # ### Uwagi o algorytmie
 #
 # * Złożoność czasowa: `O(n^2)`.
-
 source ../assert.sh
 
 sortuj() {

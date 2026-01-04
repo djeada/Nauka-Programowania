@@ -40,7 +40,6 @@
 # ```
 # Rok nie jest przestępny.
 # ```
-
 main() {
     read rok
 

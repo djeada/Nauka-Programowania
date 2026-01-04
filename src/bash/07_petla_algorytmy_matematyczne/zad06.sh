@@ -35,7 +35,6 @@
 # ### Ograniczenia / gwarancje
 # 
 # * Możesz użyć zależności: `NWW(a, b) = (a * b) // NWD(a, b)`.
-
 source ../assert.sh
 
 nwd() {

@@ -36,7 +36,6 @@
 # ### Uwagi
 #
 # * W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów — program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca).
-
 source ../assert.sh
 
 znajdz_pliki_o_nazwie() {

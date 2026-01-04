@@ -31,7 +31,6 @@
 # ```
 # 5
 # ```
-
 main() {
     read a
     read b

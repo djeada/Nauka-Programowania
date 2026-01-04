@@ -46,12 +46,12 @@ fn policz_wystapienia(napis: &str, znak: char) -> usize {
 fn main() {
     let mut napis = String::new();
     let mut znak = String::new();
-    
+
     io::stdin().read_line(&mut napis).expect("Błąd wczytywania");
     io::stdin().read_line(&mut znak).expect("Błąd wczytywania");
-    
+
     let napis = napis.trim();
     let znak = znak.trim().chars().next().unwrap_or(' ');
-    
+
     println!("{}", policz_wystapienia(napis, znak));
 }

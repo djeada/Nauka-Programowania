@@ -47,7 +47,7 @@ e f g
 def znajdz_klepsydry(macierz):
     """
     Przejdz przez macierz i znajdz wszystkie klepsydry.
-    
+
     Złożoność czasowa: O(n * m), gdzie n to liczba wierszy, m to liczba kolumn
     Złożoność pamięciowa: O((n-2) * (m-2)) dla wyników
     """
@@ -79,7 +79,7 @@ def znajdz_klepsydry(macierz):
 def najwieksza_klepsydra(macierz):
     """
     Zwraca największą sumę klepsydry w macierzy.
-    
+
     Złożoność czasowa: O(n * m)
     Złożoność pamięciowa: O((n-2) * (m-2))
     """
@@ -101,17 +101,17 @@ def test_najwieksza_klepsydra():
 if __name__ == "__main__":
     # Wczytanie wymiarów macierzy
     n, m = map(int, input().strip().split())
-    
+
     # Wczytanie macierzy
     macierz = []
     for _ in range(n):
         wiersz = list(map(int, input().strip().split()))
         macierz.append(wiersz)
-    
+
     # Znalezienie największej klepsydry
     # Złożoność czasowa: O(n * m)
     # Złożoność pamięciowa: O((n-2) * (m-2))
     wynik = najwieksza_klepsydra(macierz)
-    
+
     # Wypisanie wyniku
     print(wynik)

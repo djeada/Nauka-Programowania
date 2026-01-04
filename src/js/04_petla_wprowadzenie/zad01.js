@@ -46,7 +46,6 @@ Brak.
 
 */
 
-// Pobieranie danych od uzytkownika
 let liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Warunek konczacy petle

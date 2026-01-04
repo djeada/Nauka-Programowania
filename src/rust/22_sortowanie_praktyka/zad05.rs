@@ -52,8 +52,8 @@ New_York 8400000
 
 */
 
-use std::io;
 use std::fmt;
+use std::io;
 
 // Struktura reprezentująca miasto
 #[derive(Clone, Debug)]
@@ -86,25 +86,28 @@ fn main() {
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
     let n: usize = n_str.trim().parse().unwrap_or(0);
-    
+
     let mut miasta = Vec::new();
-    
+
     for _ in 0..n {
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Błąd wczytywania");
         let czesci: Vec<&str> = input.trim().split_whitespace().collect();
-        
+
         if czesci.len() >= 2 {
             let nazwa = czesci[0].to_string();
             let liczba_mieszkancow: u32 = czesci[1].parse().unwrap_or(0);
-            miasta.push(Miasto { nazwa, liczba_mieszkancow });
+            miasta.push(Miasto {
+                nazwa,
+                liczba_mieszkancow,
+            });
         }
     }
-    
+
     // Sortowanie po nazwie
     let mut miasta_a = miasta.clone();
     sortuj_po_nazwie(&mut miasta_a);
-    
+
     print!("[");
     for (i, miasto) in miasta_a.iter().enumerate() {
         if i > 0 {
@@ -113,11 +116,11 @@ fn main() {
         print!("{}", miasto);
     }
     println!("]");
-    
+
     // Sortowanie po liczbie mieszkańców
     let mut miasta_b = miasta.clone();
     sortuj_po_liczbie_mieszkancow(&mut miasta_b);
-    
+
     print!("[");
     for (i, miasto) in miasta_b.iter().enumerate() {
         if i > 0 {

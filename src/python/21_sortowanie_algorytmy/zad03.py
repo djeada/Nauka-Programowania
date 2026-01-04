@@ -38,7 +38,6 @@ Buduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w
 """
 
 
-# Zlozonosc czasowa O(n^2)
 def sortuj_v1(tablica):
 
     for i in range(1, len(tablica)):

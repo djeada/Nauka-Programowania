@@ -42,7 +42,6 @@ Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
 
 */
 
-// Funkcja znajdujaca indeksy pierwszej pary elementow o sumie rownej podanej liczbie
 function znajdzPareSumujacaDo(lista, x) {
   const mapaIndeksow = new Map();
 

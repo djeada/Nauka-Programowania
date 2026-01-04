@@ -41,7 +41,6 @@ Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Petla

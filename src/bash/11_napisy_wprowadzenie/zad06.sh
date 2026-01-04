@@ -28,7 +28,6 @@
 # ```
 # L?t?rnik
 # ```
-
 source ../assert.sh
 
 # Zamiana wszystkich wystapien litery 'a' na znak '?'

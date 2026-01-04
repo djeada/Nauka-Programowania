@@ -40,14 +40,15 @@ import qualified Data.Map as Map
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    let dict = Map.fromList [(i, i*i) | i <- [1..n-1]]
-    putStrLn $ formatMap dict
+  n <- readLn :: IO Int
+  let dict = Map.fromList [(i, i * i) | i <- [1 .. n - 1]]
+  putStrLn $ formatMap dict
 
 -- Formatuje mapę w stylu Pythona
 formatMap :: (Show k, Show v) => Map k v -> String
 formatMap m = "{" ++ intercalate ", " [show k ++ ": " ++ show v | (k, v) <- Map.toList m] ++ "}"
-    where intercalate sep = concat . intersperse sep
-          intersperse _ [] = []
-          intersperse _ [x] = [x]
-          intersperse sep (x:xs) = x : sep : intersperse sep xs
+  where
+    intercalate sep = concat . intersperse sep
+    intersperse _ [] = []
+    intersperse _ [x] = [x]
+    intersperse sep (x : xs) = x : sep : intersperse sep xs

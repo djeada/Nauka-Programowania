@@ -41,12 +41,12 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let mut n: i32 = n.trim().parse().unwrap();
-    
+
     let mut suma = 0;
     while n > 0 {
         suma += n % 10;
         n /= 10;
     }
-    
+
     println!("{}", suma);
 }

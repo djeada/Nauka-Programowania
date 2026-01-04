@@ -70,7 +70,7 @@ main = do
   printLaw1 True False
   printLaw1 True True
   putStrLn ""
-  
+
   -- Law 2: Non-contradiction - NOT (p AND (NOT p))
   putStrLn "Prawo niesprzeczności:"
   printLaw2 False False
@@ -78,7 +78,7 @@ main = do
   printLaw2 True False
   printLaw2 True True
   putStrLn ""
-  
+
   -- Law 3: Commutativity of AND - p AND q vs q AND p
   putStrLn "Przemienność koniunkcji:"
   printLaw3 False False
@@ -86,7 +86,7 @@ main = do
   printLaw3 True False
   printLaw3 True True
   putStrLn ""
-  
+
   -- Law 4: Commutativity of OR - p OR q vs q OR p
   putStrLn "Przemienność alternatywy:"
   printLaw4 False False
@@ -94,7 +94,7 @@ main = do
   printLaw4 True False
   printLaw4 True True
   putStrLn ""
-  
+
   -- Law 5: De Morgan's 1 - NOT (p AND q) vs (NOT p) OR (NOT q)
   putStrLn "Pierwsze prawo de Morgana:"
   printLaw5 False False
@@ -102,7 +102,7 @@ main = do
   printLaw5 True False
   printLaw5 True True
   putStrLn ""
-  
+
   -- Law 6: De Morgan's 2 - NOT (p OR q) vs (NOT p) AND (NOT q)
   putStrLn "Drugie prawo de Morgana:"
   printLaw6 False False
@@ -113,13 +113,13 @@ main = do
 printLaw1 :: Bool -> Bool -> IO ()
 printLaw1 p q = do
   let l = p || not p
-  let r = True  -- This law doesn't compare two sides, just evaluates one
+  let r = True -- This law doesn't compare two sides, just evaluates one
   putStrLn $ "p=" ++ show p ++ " q=" ++ show q ++ " L=" ++ show l ++ " R=" ++ show r ++ " EQ=" ++ show (l == r)
 
 printLaw2 :: Bool -> Bool -> IO ()
 printLaw2 p q = do
   let l = not (p && not p)
-  let r = True  -- This law doesn't compare two sides, just evaluates one
+  let r = True -- This law doesn't compare two sides, just evaluates one
   putStrLn $ "p=" ++ show p ++ " q=" ++ show q ++ " L=" ++ show l ++ " R=" ++ show r ++ " EQ=" ++ show (l == r)
 
 printLaw3 :: Bool -> Bool -> IO ()

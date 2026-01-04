@@ -48,6 +48,6 @@ import Data.List (permutations)
 -- Złożoność pamięciowa: O(n!)
 main :: IO ()
 main = do
-    slowo <- getLine
-    let perms = permutations slowo
-    mapM_ putStrLn perms
+  slowo <- getLine
+  let perms = permutations slowo
+  mapM_ putStrLn perms

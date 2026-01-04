@@ -33,7 +33,6 @@
 # ```
 # 11
 # ```
-
 source ../assert.sh
 
 mnozenie_skalarne() {

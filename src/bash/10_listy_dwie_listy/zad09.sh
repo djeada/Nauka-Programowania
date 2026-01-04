@@ -33,7 +33,6 @@
 # ```
 # [9, 5]
 # ```
-
 source ../assert.sh
 
 usun_czesc_wspolna_v1() {

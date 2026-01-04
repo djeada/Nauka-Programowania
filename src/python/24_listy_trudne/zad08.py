@@ -35,8 +35,6 @@ Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`
 """
 
 
-# Zlozonosc czasowa: O(n^n)
-# Zlozonosc pamieciowa: O(1)
 def podziel_sznurek_v1(ceny, n):
 
     if len(ceny) < n:

@@ -28,7 +28,6 @@
 # ```
 # Witaj! To jest przykładowa treść pliku tekstowego.
 # ```
-
 source ../assert.sh
 
 wypisz_plik() {

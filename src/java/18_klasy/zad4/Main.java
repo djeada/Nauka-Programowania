@@ -46,8 +46,8 @@ Jak w przykładzie.
 **Wyjście:**
 
 ```
-Main A: (-3, -3, -3)
-Main B: (5, 5, 5)
+Wektor A: (-3, -3, -3)
+Wektor B: (5, 5, 5)
 Suma wektorów: (2, 2, 2)
 Różnica wektorów A - B: (-8, -8, -8)
 Iloczyn skalarny: -45

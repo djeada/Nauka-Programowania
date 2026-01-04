@@ -35,7 +35,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Jeśli `n = 1`, nie wypisuj nic.
-
 main() {
     read a
 

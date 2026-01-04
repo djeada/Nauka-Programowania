@@ -64,40 +64,43 @@ use std::io;
 fn czy_poprawny_email(email: &str) -> bool {
     // Podstawowa walidacja bez pełnych regex
     let czesci: Vec<&str> = email.split('@').collect();
-    
+
     if czesci.len() != 2 {
         return false;
     }
-    
+
     let uzytkownik = czesci[0];
     let domena = czesci[1];
-    
+
     // Sprawdź czy użytkownik niepusty
     if uzytkownik.is_empty() || domena.is_empty() {
         return false;
     }
-    
+
     // Sprawdź czy nie zaczyna/kończy się kropką
     if uzytkownik.starts_with('.') || uzytkownik.ends_with('.') {
         return false;
     }
-    
+
     // Sprawdź czy domena zawiera kropkę
     if !domena.contains('.') {
         return false;
     }
-    
+
     // Sprawdź podwójne kropki
     if uzytkownik.contains("..") || domena.contains("..") {
         return false;
     }
-    
+
     // Sprawdź czy domena nie zaczyna/kończy się kropką lub myślnikiem
-    if domena.starts_with('.') || domena.ends_with('.') || 
-       domena.starts_with('-') || domena.ends_with('-') {
+    if domena.starts_with('.')
+        || domena.ends_with('.')
+        || domena.starts_with('-')
+        || domena.ends_with('-')
+    {
         return false;
     }
-    
+
     true
 }
 
@@ -105,7 +108,7 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let email = input.trim();
-    
+
     if czy_poprawny_email(email) {
         println!("Prawda");
     } else {

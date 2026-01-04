@@ -34,9 +34,6 @@ kota
 
 */
 
-// Funkcja wypisuje słowa ze zdania pionowo (jedno słowo w linii)
-// Złożoność czasowa: O(n), gdzie n to długość napisu
-// Złożoność pamięciowa: O(n) dla przechowania tablicy słów
 function wypiszSlowa(napis) {
   let slowa = napis.split(/[^\w]+/);
   for (let i = 0; i < slowa.length; i++) {

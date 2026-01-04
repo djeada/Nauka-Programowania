@@ -32,10 +32,7 @@ zczsrab
 
 -}
 
--- Odwraca podany napis
--- Złożoność czasowa: O(n), gdzie n to długość napisu
--- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    napis <- getLine
-    putStrLn (reverse napis)
+  napis <- getLine
+  putStrLn (reverse napis)

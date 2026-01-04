@@ -49,7 +49,6 @@ Nie
 
 */
 
-// Funkcja sprawdzajaca, czy punkty moga stanowic wierzcholki trojkata
 function czyTrojkat(punkty) {
   var xA = punkty[0];
   var yA = punkty[1];

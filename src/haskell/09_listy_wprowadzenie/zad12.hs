@@ -55,16 +55,16 @@ Jedna linia: lista po rotacji, elementy oddzielone przecinkami.
 main :: IO ()
 main = do
   n <- readLn :: IO Int
-  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
+  nums <- mapM (\_ -> readLn :: IO Int) [1 .. n]
   kierunek <- readLn :: IO Int
   k <- readLn :: IO Int
-  
+
   let intercalate sep [] = ""
       intercalate sep [x] = x
-      intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs
+      intercalate sep (x : xs) = x ++ sep ++ intercalate sep xs
   let k' = k `mod` n
-  let result = if kierunek == 0
-               then drop k' nums ++ take k' nums  -- lewo
-               else drop (n - k') nums ++ take (n - k') nums  -- prawo
-  
+  let result =
+        if kierunek == 0
+          then drop k' nums ++ take k' nums -- lewo
+          else drop (n - k') nums ++ take (n - k') nums -- prawo
   putStrLn $ intercalate "," $ map show result

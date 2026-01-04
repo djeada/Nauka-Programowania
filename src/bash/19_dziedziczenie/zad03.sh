@@ -35,10 +35,6 @@
 # Pies wydaje odgłos: Hau!
 # Kot wydaje odgłos: Miau!
 # ```
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(1)
-# Zlozonosc pamieciowa: O(1)
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     # Bash nie ma natywnego wsparcia dla dziedziczenia klas

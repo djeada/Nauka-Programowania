@@ -49,4 +49,4 @@ import qualified Data.Map as Map
 -- Złożoność pamięciowa: O(n * m)
 main :: IO ()
 main = do
-    putStrLn "Placeholder - transpozycja słownika list"
+  putStrLn "Placeholder - transpozycja słownika list"

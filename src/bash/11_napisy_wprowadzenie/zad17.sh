@@ -32,7 +32,6 @@
 # ### Uwagi
 #
 # * Najprościej: usuń nawiasy `[` `]`, rozdziel po przecinkach, `strip()`, potem sklej.
-
 source ../assert.sh
 
 # Funkcja laczaca liczby z tablicy w napis

@@ -24,22 +24,18 @@
 # ### Uwagi
 #
 # * Najprościej użyć schematu Hornera.
-
-# Funkcja obliczajaca wartosc wielomianu w punkcie (schemat Hornera)
-# Zlozonosc czasowa: O(n), gdzie n to stopien wielomianu
-# Zlozonosc pamieciowa: O(1)
 wartosc_wielomianu() {
     local x=$1
     shift
     local wspolczynniki=("$@")
     local n=${#wspolczynniki[@]}
-    
+
     # Schemat Hornera: W(x) = (...((a_n * x + a_(n-1)) * x + a_(n-2))... + a_0)
     local wynik=${wspolczynniki[0]}
     for ((i = 1; i < n; i++)); do
         wynik=$((wynik * x + wspolczynniki[i]))
     done
-    
+
     echo $wynik
 }
 

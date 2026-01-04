@@ -38,7 +38,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Dla `n = 0` poprawna odpowiedź to `1` (liczba „0” ma jedną cyfrę).
-
 main() {
     read a
 

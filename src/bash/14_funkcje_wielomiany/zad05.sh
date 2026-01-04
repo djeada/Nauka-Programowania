@@ -24,10 +24,6 @@
 # ### Uwagi
 #
 # * Jeśli `k` jest większe niż stopień wielomianu, wynikiem jest wielomian zerowy: `[0]`.
-
-# Funkcja do zaimplementowania
-# Złożoność czasowa: O(n^2)
-# Złożoność pamieciowa: O(n)
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"

@@ -52,8 +52,7 @@ int main() {
 
   std::cout << std::fixed << std::setprecision(n);
 
-  for (int i = 0; i < n; i++) 
-    std::cout << M_PI << std::endl;
+  for (int i = 0; i < n; i++) std::cout << M_PI << std::endl;
 
   return 0;
 }

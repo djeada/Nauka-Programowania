@@ -42,13 +42,13 @@ main :: IO ()
 main = do
   n <- readLn :: IO Int
   str <- getLine
-  
+
   let countPairs = go 0 0 str
         where
           go count aCount [] = count
-          go count aCount (c:cs)
+          go count aCount (c : cs)
             | c == 'A' = go count (aCount + 1) cs
             | c == 'B' = go (count + aCount) aCount cs
             | otherwise = go count aCount cs
-  
+
   print countPairs

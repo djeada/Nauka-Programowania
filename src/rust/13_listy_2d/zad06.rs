@@ -61,13 +61,13 @@ fn scal_przedzialy(mut przedzialy: Vec<Przedzial>) -> Vec<Przedzial> {
     if przedzialy.is_empty() {
         return Vec::new();
     }
-    
+
     // Sortuj według początku przedziałów
     przedzialy.sort_by_key(|p| p.poczatek);
-    
+
     let mut wynik = Vec::new();
     let mut aktualny = przedzialy[0];
-    
+
     for i in 1..przedzialy.len() {
         if przedzialy[i].poczatek <= aktualny.koniec {
             // Przedziały nachodzą na siebie - scal
@@ -78,7 +78,7 @@ fn scal_przedzialy(mut przedzialy: Vec<Przedzial>) -> Vec<Przedzial> {
             aktualny = przedzialy[i];
         }
     }
-    
+
     wynik.push(aktualny);
     wynik
 }
@@ -87,9 +87,9 @@ fn main() {
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
     let n: usize = n_str.trim().parse().expect("Nieprawidłowa liczba");
-    
+
     let mut przedzialy = Vec::new();
-    
+
     for _ in 0..n {
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Błąd wczytywania");
@@ -98,15 +98,15 @@ fn main() {
             .split_whitespace()
             .map(|s| s.parse().expect("Nieprawidłowa liczba"))
             .collect();
-        
+
         przedzialy.push(Przedzial {
             poczatek: liczby[0],
             koniec: liczby[1],
         });
     }
-    
+
     let scalone = scal_przedzialy(przedzialy);
-    
+
     for p in scalone {
         println!("{} {}", p.poczatek, p.koniec);
     }

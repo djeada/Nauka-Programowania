@@ -42,12 +42,12 @@ Jedna liczba całkowita — element bez pary.
 main :: IO ()
 main = do
   n <- readLn :: IO Int
-  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
-  
+  nums <- mapM (\_ -> readLn :: IO Int) [1 .. n]
+
   -- Znajdź element, który występuje tylko raz
   let findSingle [] = 0
       findSingle [x] = x
-      findSingle (x:xs) = if count x nums == 1 then x else findSingle xs
+      findSingle (x : xs) = if count x nums == 1 then x else findSingle xs
       count x = length . filter (== x)
-  
+
   print $ findSingle nums

@@ -39,7 +39,7 @@ fn silnia(n: i32) -> i32 {
     if n == 0 {
         return 1;
     }
-    
+
     let mut wynik = 1;
     for i in 1..=n {
         wynik *= i;

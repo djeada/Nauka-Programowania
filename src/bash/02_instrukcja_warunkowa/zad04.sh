@@ -46,7 +46,6 @@
 # ```
 # 5 5
 # ```
-
 main() {
     read x
     read y

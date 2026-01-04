@@ -39,8 +39,8 @@ razynax
 
 */
 
-use std::io;
 use std::collections::HashMap;
+use std::io;
 
 // Funkcja obliczająca minimalną liczbę usunięć do uzyskania anagramów
 // Złożoność czasowa: O(n), gdzie n to długość słów
@@ -49,20 +49,20 @@ fn min_usuniec_do_anagramow(s1: &str, s2: &str) -> i32 {
     if s1.len() != s2.len() {
         return -1;
     }
-    
+
     let mut liczniki1: HashMap<char, i32> = HashMap::new();
     let mut liczniki2: HashMap<char, i32> = HashMap::new();
-    
+
     for c in s1.chars() {
         *liczniki1.entry(c).or_insert(0) += 1;
     }
-    
+
     for c in s2.chars() {
         *liczniki2.entry(c).or_insert(0) += 1;
     }
-    
+
     let mut suma = 0;
-    
+
     // Zbierz wszystkie unikalne znaki z obu słów
     let mut wszystkie_znaki: std::collections::HashSet<char> = std::collections::HashSet::new();
     for c in s1.chars() {
@@ -71,25 +71,25 @@ fn min_usuniec_do_anagramow(s1: &str, s2: &str) -> i32 {
     for c in s2.chars() {
         wszystkie_znaki.insert(c);
     }
-    
+
     for c in wszystkie_znaki {
         let count1 = *liczniki1.get(&c).unwrap_or(&0);
         let count2 = *liczniki2.get(&c).unwrap_or(&0);
         suma += (count1 - count2).abs();
     }
-    
+
     suma
 }
 
 fn main() {
     let mut s1 = String::new();
     let mut s2 = String::new();
-    
+
     io::stdin().read_line(&mut s1).expect("Błąd wczytywania");
     io::stdin().read_line(&mut s2).expect("Błąd wczytywania");
-    
+
     let s1 = s1.trim();
     let s2 = s2.trim();
-    
+
     println!("{}", min_usuniec_do_anagramow(s1, s2));
 }

@@ -47,7 +47,7 @@ fn main() {
     let mut y = String::new();
     std::io::stdin().read_line(&mut y).unwrap();
     let y: i32 = y.trim().parse().unwrap();
-    
+
     if (y % 400 == 0) || (y % 4 == 0 && y % 100 != 0) {
         println!("Rok jest przestępny.");
     } else {

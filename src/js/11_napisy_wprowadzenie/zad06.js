@@ -32,9 +32,6 @@ L?t?rnik
 
 */
 
-// Funkcja zamienia wszystkie litery 'a' na znak '?'
-// Złożoność czasowa: O(n), gdzie n to długość napisu
-// Złożoność pamięciowa: O(n) dla przechowania wyniku
 function zamienLitery(napis) {
   return napis.replace(/a/g, "?");
 }

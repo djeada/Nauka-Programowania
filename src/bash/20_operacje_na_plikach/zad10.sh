@@ -27,7 +27,6 @@
 #
 # **Wyjście:**
 # *(brak)*
-
 source ../assert.sh
 
 kopiuj_pliki_png() {

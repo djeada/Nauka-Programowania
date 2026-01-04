@@ -41,7 +41,7 @@ import qualified Data.Map as Map
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    text <- getLine
-    let words' = words text
-    let wordCount = Map.fromListWith (+) [(w, 1) | w <- words']
-    print wordCount
+  text <- getLine
+  let words' = words text
+  let wordCount = Map.fromListWith (+) [(w, 1) | w <- words']
+  print wordCount

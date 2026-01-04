@@ -43,10 +43,10 @@ import Data.Char (isDigit)
 -- Złożoność czasowa: O(n)
 -- Złożoność pamięciowa: O(1)
 isAllDigits :: String -> Bool
-isAllDigits [] = False  -- Empty string is not all digits
+isAllDigits [] = False -- Empty string is not all digits
 isAllDigits s = all isDigit s
 
 main :: IO ()
 main = do
-    s <- getLine
-    putStrLn $ if isAllDigits s then "Prawda" else "Fałsz"
+  s <- getLine
+  putStrLn $ if isAllDigits s then "Prawda" else "Fałsz"

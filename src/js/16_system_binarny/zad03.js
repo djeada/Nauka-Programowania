@@ -141,7 +141,6 @@ Jedna liczba naturalna: `a // b`.
 
 */
 
-// Dodawanie
 function dodaj(a, b) {
   while (b != 0) {
     let carry = a & b;

@@ -49,7 +49,6 @@ Jedna linia:
 
 */
 
-// Funkcja zwracajaca najwiekszy i najmniejszy element listy
 function znajdzMinMax(lista) {
   var min = lista[0];
   var max = lista[0];

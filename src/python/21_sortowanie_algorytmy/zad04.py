@@ -42,7 +42,6 @@ Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowani
 """
 
 
-# Zlozonosc czasowa O(n^2)
 def sortuj_v1(tablica):
     def scalaj(tablica_a, tablica_b):
         wynik = list()

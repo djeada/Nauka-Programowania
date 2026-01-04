@@ -56,12 +56,12 @@ fn generuj_macierz(a: usize, b: usize) {
 fn main() {
     let mut a_str = String::new();
     let mut b_str = String::new();
-    
+
     io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
     io::stdin().read_line(&mut b_str).expect("Błąd wczytywania");
-    
+
     let a: usize = a_str.trim().parse().expect("Nieprawidłowa liczba");
     let b: usize = b_str.trim().parse().expect("Nieprawidłowa liczba");
-    
+
     generuj_macierz(a, b);
 }

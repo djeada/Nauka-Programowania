@@ -48,8 +48,8 @@ import Data.List (sort)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    s1 <- getLine
-    s2 <- getLine
-    if sort s1 == sort s2
-        then putStrLn "Prawda"
-        else putStrLn "Fałsz"
+  s1 <- getLine
+  s2 <- getLine
+  if sort s1 == sort s2
+    then putStrLn "Prawda"
+    else putStrLn "Fałsz"

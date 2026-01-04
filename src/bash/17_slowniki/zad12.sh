@@ -41,7 +41,6 @@
 # ```
 # Prawda
 # ```
-
 source ../assert.sh
 
 czy_slowniki_identyczne() {

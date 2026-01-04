@@ -35,9 +35,6 @@ Jeśli lista zawiera mniej niż 3 liczby — wypisz iloczyn wszystkich elementó
 """
 
 
-# Wersja 1
-# Zlozonosc czasowa O(nlogn)
-# Zlozonosc pamieciowa O(1)
 def min_iloczyn_v1(lista):
 
     n = len(lista)

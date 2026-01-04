@@ -40,7 +40,6 @@
 # 4
 # -7
 # ```
-
 main() {
     read a
     read b

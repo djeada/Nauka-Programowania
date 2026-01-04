@@ -30,7 +30,6 @@
 # ```
 # 1
 # ```
-
 source ../assert.sh
 
 # Funkcja obliczajaca odleglosc Hamminga miedzy dwoma napisami

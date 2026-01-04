@@ -38,7 +38,6 @@ Jedna liczba naturalna — element dominujący lub `-1`.
 
 */
 
-// Funkcja znajdujaca element dominujacy w liscie liczb naturalnych
 function znajdzElementDominujacy(lista) {
   let kandydat = null;
   let licznik = 0;

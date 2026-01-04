@@ -33,7 +33,6 @@
 # ```
 # 4
 # ```
-
 source ../assert.sh
 
 znajdz_maks() {

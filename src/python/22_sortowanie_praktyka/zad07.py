@@ -35,8 +35,6 @@ Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj j
 """
 
 
-# Zlozonosc czasowa O(n)
-# Zlozonosc pamieciowa O(1)
 def sortuj_liste(lista):
     """
     Funkcja sortujaca liste liczb z zakresu 0-2.

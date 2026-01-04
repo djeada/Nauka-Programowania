@@ -33,7 +33,6 @@
 #
 # * **Nie wypisuj promptów** typu „Podaj nazwę użytkownika:”.
 # * Porównanie jest czułe na wielkość liter.
-
 inicjalizacjaDanych() {
     echo "podaj nazwe oraz haslo do zapamietania"
     read nazwaTemp

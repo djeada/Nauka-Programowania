@@ -24,7 +24,6 @@
 # ```
 # [["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]]
 # ```
-
 source ../assert.sh
 
 wypisz_slowa() {

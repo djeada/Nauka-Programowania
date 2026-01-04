@@ -40,8 +40,8 @@ Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
 warunkami.
 
 */
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 
 int main() {
   int a, b, c;

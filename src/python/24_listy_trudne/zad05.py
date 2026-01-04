@@ -39,7 +39,6 @@ Wynik ma zawierać wszystkie podzbiory (włącznie z pustym).
 """
 
 
-# Zlozonosc O(n.2^n)
 def zbior_potegowy(lista):
     # wymaga sortowania O(nlogn)
     lista.sort()

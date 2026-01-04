@@ -73,7 +73,6 @@ print(iloraz(3, 2))
 
 */
 
-// Funkcja zwracajaca iloczyn dwoch liczb
 function zwracajIloczynLiczb(liczba_a, liczba_b) {
   var wynik = 0;
   for (var i = 0; i < liczba_b; i++) {

@@ -34,7 +34,6 @@
 # ```
 # file
 # ```
-
 source ../assert.sh
 
 # Wyciąga nazwę pliku ze ścieżki (bez rozszerzenia i ścieżki).

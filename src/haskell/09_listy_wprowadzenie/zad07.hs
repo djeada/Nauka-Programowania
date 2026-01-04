@@ -43,15 +43,15 @@ import Text.Printf
 main :: IO ()
 main = do
   n <- readLn :: IO Int
-  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
-  
+  nums <- mapM (\_ -> readLn :: IO Int) [1 .. n]
+
   let sorted = reverse $ take 2 $ reverse $ map fromIntegral $ sort nums :: [Double]
   let avg = sum sorted / 2
-  
+
   printf "%.1f\n" avg
   where
     sort [] = []
-    sort (x:xs) = sort smaller ++ [x] ++ sort larger
+    sort (x : xs) = sort smaller ++ [x] ++ sort larger
       where
         smaller = [a | a <- xs, a <= x]
         larger = [a | a <- xs, a > x]

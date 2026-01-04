@@ -42,43 +42,41 @@ fn pojemnosc_wody(wysokosci: &[i32]) -> i32 {
     if n == 0 {
         return 0;
     }
-    
+
     // Dla każdej pozycji znajdujemy maksimum z lewej i z prawej
     let mut max_lewo = vec![0; n];
     let mut max_prawo = vec![0; n];
-    
+
     max_lewo[0] = wysokosci[0];
     for i in 1..n {
         max_lewo[i] = max_lewo[i - 1].max(wysokosci[i]);
     }
-    
+
     max_prawo[n - 1] = wysokosci[n - 1];
     for i in (0..n - 1).rev() {
         max_prawo[i] = max_prawo[i + 1].max(wysokosci[i]);
     }
-    
+
     // Oblicz wodę
     let mut woda = 0;
     for i in 0..n {
         let poziom = max_lewo[i].min(max_prawo[i]);
         woda += (poziom - wysokosci[i]).max(0);
     }
-    
+
     woda
 }
 
 fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
-    
-    let lista_str = input.trim()
-        .trim_start_matches('[')
-        .trim_end_matches(']');
-    
+
+    let lista_str = input.trim().trim_start_matches('[').trim_end_matches(']');
+
     let wysokosci: Vec<i32> = lista_str
         .split(',')
         .filter_map(|s| s.trim().parse().ok())
         .collect();
-    
+
     println!("{}", pojemnosc_wody(&wysokosci));
 }

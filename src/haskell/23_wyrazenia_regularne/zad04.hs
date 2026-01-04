@@ -45,11 +45,11 @@ import Data.Char (isAlphaNum)
 -- Złożoność pamięciowa: O(n)
 containsWholeWord :: String -> String -> Bool
 containsWholeWord sentence word = word `elem` words (map replaceNonAlnum sentence)
-    where
-        replaceNonAlnum c = if isAlphaNum c then c else ' '
+  where
+    replaceNonAlnum c = if isAlphaNum c then c else ' '
 
 main :: IO ()
 main = do
-    sentence <- getLine
-    word <- getLine
-    putStrLn $ if containsWholeWord sentence word then "Prawda" else "Fałsz"
+  sentence <- getLine
+  word <- getLine
+  putStrLn $ if containsWholeWord sentence word then "Prawda" else "Fałsz"

@@ -28,13 +28,12 @@ Dla `a = [3, 2, 1]` i `x = 1` funkcja zwraca:
 
 -}
 
--- Oblicza wartość wielomianu w punkcie x używając schematu Hornera
 evaluatePolynomial :: [Int] -> Int -> Int
 evaluatePolynomial [] _ = 0
 evaluatePolynomial coeffs x = foldl (\acc c -> acc * x + c) 0 coeffs
 
 main :: IO ()
 main = do
-    let coeffs = [3, 2, 1]
-    let x = 1
-    print $ evaluatePolynomial coeffs x
+  let coeffs = [3, 2, 1]
+  let x = 1
+  print $ evaluatePolynomial coeffs x

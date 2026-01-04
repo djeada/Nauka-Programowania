@@ -70,13 +70,11 @@ int main() {
   }
 
   // Podpunkt a) - wszystkie liczby między a i b
-  for (int i = a + 1; i < b; i++) 
-    std::cout << i << std::endl;
+  for (int i = a + 1; i < b; i++) std::cout << i << std::endl;
 
   // Podpunkt b) - liczby podzielne przez 3
   for (int i = a + 1; i < b; i++) {
-    if (i % 3 == 0) 
-      std::cout << i << std::endl;
+    if (i % 3 == 0) std::cout << i << std::endl;
   }
 
   return 0;

@@ -51,19 +51,19 @@ use std::io;
 // Złożoność pamięciowa: O(1)
 fn czy_poprawne_haslo(haslo: &str) -> bool {
     let dlugosc = haslo.len();
-    
+
     // Sprawdź długość
     if dlugosc < 8 || dlugosc > 20 {
         return false;
     }
-    
+
     let mut ma_mala = false;
     let mut ma_wielka = false;
     let mut ma_cyfre = false;
     let mut ma_specjalny = false;
-    
+
     let znaki_specjalne = "!#$%&'*+-/=?^_`{|}~";
-    
+
     for c in haslo.chars() {
         if c.is_lowercase() {
             ma_mala = true;
@@ -75,7 +75,7 @@ fn czy_poprawne_haslo(haslo: &str) -> bool {
             ma_specjalny = true;
         }
     }
-    
+
     ma_mala && ma_wielka && ma_cyfre && ma_specjalny
 }
 
@@ -83,7 +83,7 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let haslo = input.trim();
-    
+
     if czy_poprawne_haslo(haslo) {
         println!("Prawda");
     } else {

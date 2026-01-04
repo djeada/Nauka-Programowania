@@ -1,12 +1,43 @@
 /*
-Tytul: Minimalna ilosc usunietych znakow, aby uzyskac anagramy.
-Tresc: Napisz program, ktory dla dwoch slow zwroci minimalna ilosc znakow, ktore
-trzeba usunac, aby uzyskac anagramy. Jesli slowa sa roznej dlugosci, zwroc -1.
-Dane wejsciowe: Dwa napisy.
-Dane wyjsciowe: Liczba naturalna.
-Przyklad:
-Dla otrzymanych napisow: “grazyna” oraz “razynax”, powinna zostac zwrocona
-liczba: 2.
+ZAD-07 — Minimalna liczba usunięć, aby uzyskać anagramy
+
+**Poziom:** ★★★
+**Tagi:** `anagram`, `zliczanie`, `greedy`
+
+### Treść
+
+Wczytaj dwa słowa. Jeśli mają różne długości, wypisz `-1`.
+W przeciwnym razie oblicz minimalną liczbę znaków, które trzeba usunąć (łącznie
+z obu słów), aby pozostałe napisy były anagramami.
+
+### Wejście
+
+* 1. linia: słowo `s1`
+* 2. linia: słowo `s2`
+
+### Wyjście
+
+* jedna liczba całkowita: minimalna liczba usunięć lub `-1`
+
+### Przykład
+
+**Wejście:**
+
+```
+grazyna
+razynax
+```
+
+**Wyjście:**
+
+```
+2
+```
+
+### Uwagi
+
+* Dla tej samej długości: policz zliczenia liter i zsumuj wartości `abs(c1[lit]
+- c2[lit])`, a wynik wypisz jako tę sumę. (To jest łączna liczba usunięć.)
 
 */
 #include <algorithm>
@@ -19,7 +50,7 @@ liczba: 2.
 // Zlozonosc Pamieciowa: O(1)
 int liczbaZnakow(const std::string &slowoA, const std::string &slowoB) {
   if (slowoA.length() != slowoB.length()) return -1;
-  
+
   std::vector<int> pom(256, 0);
 
   for (auto znak : slowoA) pom[znak - 'a']++;

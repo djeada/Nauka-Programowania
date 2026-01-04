@@ -63,10 +63,10 @@ fn test_2() {
 fn main() {
     test_1();
     test_2();
-    
+
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let napis = input.trim().to_string();
-    
+
     println!("{}", sortuj_znaki(napis));
 }

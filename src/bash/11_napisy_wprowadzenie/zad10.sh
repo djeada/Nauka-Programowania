@@ -1,41 +1,40 @@
 # ZAD-10 — Najdłuższe i najkrótsze słowo
-# 
+#
 # **Poziom:** ★☆☆
 # **Tagi:** `string`, `min/max`, `len`
-# 
+#
 # ### Treść
-# 
+#
 # Wczytaj zdanie i znajdź:
-# 
+#
 # a) najdłuższe słowo,
 # b) najkrótsze słowo.
-# 
+#
 # Jeśli jest remis, wybierz słowo, które występuje wcześniej.
-# 
+#
 # ### Wejście
-# 
+#
 # * 1. linia: zdanie
-# 
+#
 # ### Wyjście
-# 
+#
 # * 1. linia: najdłuższe słowo
 # * 2. linia: najkrótsze słowo
-# 
+#
 # ### Przykład
-# 
+#
 # **Wejście:**
-# 
+#
 # ```
 # Kaczka lubi wiosnę.
 # ```
-# 
+#
 # **Wyjście:**
-# 
+#
 # ```
 # Kaczka
 # lubi
 # ```
-
 source ../assert.sh
 
 # Funkcja pomocnicza wypisujaca slowa ze zdania
@@ -67,7 +66,7 @@ wypisz_slowa() {
 # Zlozonosc pamieciowa: O(n) dla wyniku wypisz_slowa
 najdluzsze() {
     local zdanie="$1"
-    awk 'length > maks_dlugosc { maks_dlugosc = length; najdluzsze = $0 } END { print najdluzsze }' <<< $(wypisz_slowa "$zdanie")
+    awk 'length > maks_dlugosc { maks_dlugosc = length; najdluzsze = $0 } END { print najdluzsze }' <<<$(wypisz_slowa "$zdanie")
 }
 
 # Funkcja znajdujaca najkrotsze slowo w zdaniu
@@ -76,7 +75,7 @@ najdluzsze() {
 najkrotsze() {
     local zdanie="$1"
     local n=${#zdanie}
-    awk -v n=$n 'BEGIN { min_dlugosc = n } length < min_dlugosc { min_dlugosc = length; najkrotsze = $0 } END { print najkrotsze }' <<< $(wypisz_slowa "$zdanie")
+    awk -v n=$n 'BEGIN { min_dlugosc = n } length < min_dlugosc { min_dlugosc = length; najkrotsze = $0 } END { print najkrotsze }' <<<$(wypisz_slowa "$zdanie")
 }
 
 test1() {
@@ -97,4 +96,3 @@ main() {
 }
 
 main "$@"
-

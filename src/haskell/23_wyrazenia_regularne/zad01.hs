@@ -63,30 +63,33 @@ import Data.List (isInfixOf)
 -- Złożoność czasowa: O(n), gdzie n to długość adresu
 -- Złożoność pamięciowa: O(1)
 validateEmail :: String -> Bool
-validateEmail email = 
-    case break (== '@') email of
-        ([], _) -> False
-        (_, []) -> False
-        (username, '@':domain) -> 
-            validUsername username && validDomain domain
-        _ -> False
-    where
-        validUsername [] = False
-        validUsername u = not (head u == '.' || last u == '.') && 
-                          not (".." `isInfixOf` u) &&
-                          all validUserChar u
-        
-        validUserChar c = isAlphaNum c || c `elem` "!#$%&'*+-/=?^_`{|}~."
-        
-        validDomain [] = False
-        validDomain d = not (head d == '.' || last d == '.' || head d == '-' || last d == '-') &&
-                        not (".." `isInfixOf` d) && not ("--" `isInfixOf` d) &&
-                        all validDomainChar d &&
-                        '.' `elem` d
-        
-        validDomainChar c = isAlphaNum c || c `elem` ".-"
+validateEmail email =
+  case break (== '@') email of
+    ([], _) -> False
+    (_, []) -> False
+    (username, '@' : domain) ->
+      validUsername username && validDomain domain
+    _ -> False
+  where
+    validUsername [] = False
+    validUsername u =
+      not (head u == '.' || last u == '.')
+        && not (".." `isInfixOf` u)
+        && all validUserChar u
+
+    validUserChar c = isAlphaNum c || c `elem` "!#$%&'*+-/=?^_`{|}~."
+
+    validDomain [] = False
+    validDomain d =
+      not (head d == '.' || last d == '.' || head d == '-' || last d == '-')
+        && not (".." `isInfixOf` d)
+        && not ("--" `isInfixOf` d)
+        && all validDomainChar d
+        && '.' `elem` d
+
+    validDomainChar c = isAlphaNum c || c `elem` ".-"
 
 main :: IO ()
 main = do
-    email <- getLine
-    putStrLn $ if validateEmail email then "Prawda" else "Fałsz"
+  email <- getLine
+  putStrLn $ if validateEmail email then "Prawda" else "Fałsz"

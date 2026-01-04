@@ -21,7 +21,6 @@
 # ### Przykład
 #
 # *(jak w treści zadania — długi tekst)*
-
 source ../assert.sh
 
 # Usuwa zakazane słowo z wierszy tekstu (usuwa część od zakazanego słowa do końca wiersza).

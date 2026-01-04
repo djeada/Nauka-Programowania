@@ -42,7 +42,7 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: usize = n.trim().parse().unwrap();
-    
+
     let mut lista = Vec::new();
     for _ in 0..n {
         let mut num = String::new();
@@ -50,13 +50,13 @@ fn main() {
         let num: i32 = num.trim().parse().unwrap();
         lista.push(num);
     }
-    
+
     let mut sorted = lista.clone();
     sorted.sort_by(|a, b| b.cmp(a)); // Sortuj malejąco
-    
+
     let max1 = sorted[0];
     let max2 = sorted[1];
-    
+
     let srednia = (max1 + max2) as f64 / 2.0;
     println!("{:.1}", srednia);
 }

@@ -46,19 +46,19 @@ import Text.Read (readMaybe)
 -- Quicksort
 -- Złożoność czasowa: O(n log n) średnio, O(n^2) najgorszy przypadek
 -- Złożoność pamięciowa: O(n)
-quicksort :: Ord a => [a] -> [a]
+quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
-quicksort (pivot:xs) = quicksort smaller ++ [pivot] ++ quicksort larger
-    where
-        smaller = [x | x <- xs, x <= pivot]
-        larger = [x | x <- xs, x > pivot]
+quicksort (pivot : xs) = quicksort smaller ++ [pivot] ++ quicksort larger
+  where
+    smaller = [x | x <- xs, x <= pivot]
+    larger = [x | x <- xs, x > pivot]
 
 parseList :: String -> Maybe [Int]
 parseList s = readMaybe s
 
 main :: IO ()
 main = do
-    input <- getLine
-    case parseList input of
-        Just xs -> print $ quicksort xs
-        Nothing -> print ([] :: [Int])
+  input <- getLine
+  case parseList input of
+    Just xs -> print $ quicksort xs
+    Nothing -> print ([] :: [Int])

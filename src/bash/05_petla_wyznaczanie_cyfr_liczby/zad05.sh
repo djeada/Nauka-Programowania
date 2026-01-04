@@ -37,7 +37,6 @@
 # ### Uwagi o formatowaniu
 #
 # * `0` jest palindromem.
-
 main() {
     read a
 

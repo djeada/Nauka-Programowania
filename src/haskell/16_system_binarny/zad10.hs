@@ -41,7 +41,7 @@ import Data.Bits (shiftL, shiftR)
 -- Złożoność pamięciowa: O(1)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    k <- readLn :: IO Int
-    putStrLn $ "Left shift: " ++ show (n `shiftL` k)
-    putStrLn $ "Right shift: " ++ show (n `shiftR` k)
+  n <- readLn :: IO Int
+  k <- readLn :: IO Int
+  putStrLn $ "Left shift: " ++ show (n `shiftL` k)
+  putStrLn $ "Right shift: " ++ show (n `shiftR` k)

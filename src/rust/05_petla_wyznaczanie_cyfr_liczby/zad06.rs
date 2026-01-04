@@ -161,7 +161,7 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: i32 = n.trim().parse().unwrap();
-    
+
     // Funkcja pomocnicza do obliczania sumy cyfr
     fn suma_cyfr(mut x: i32) -> i32 {
         let mut suma = 0;
@@ -171,28 +171,28 @@ fn main() {
         }
         suma
     }
-    
+
     // Podpunkt a) liczby mniejsze od n o sumie cyfr równej 10
     for x in 0..n {
         if suma_cyfr(x) == 10 {
             println!("{}", x);
         }
     }
-    
+
     // Podpunkt b) dwucyfrowe większe od n
     for x in 10..=99 {
         if x > n {
             println!("{}", x);
         }
     }
-    
+
     // Podpunkt c) trzycyfrowe o sumie cyfr równej n
     for x in 100..=999 {
         if suma_cyfr(x) == n {
             println!("{}", x);
         }
     }
-    
+
     // Podpunkt d) trzycyfrowe podzielne przez sumę cyfr liczby n
     let s = suma_cyfr(n);
     if s > 0 {

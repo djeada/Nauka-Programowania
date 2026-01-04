@@ -49,20 +49,20 @@ Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`)
 
 -}
 
-import Numeric (showIntAtBase, readInt)
-import Data.Char (intToDigit, digitToInt, isHexDigit, toUpper, ord, chr)
+import Data.Char (chr, digitToInt, intToDigit, isHexDigit, ord, toUpper)
+import Numeric (readInt, showIntAtBase)
 
 -- Konwertuje liczbę z systemu o podstawie p na dziesiętną
 -- Złożoność czasowa: O(n), gdzie n to długość napisu
 -- Złożoność pamięciowa: O(1)
 fromBase :: Int -> String -> Int
 fromBase base = foldl (\acc c -> acc * base + charToDigit c) 0
-    where
-        charToDigit c
-            | c >= '0' && c <= '9' = ord c - ord '0'
-            | c >= 'A' && c <= 'Z' = ord c - ord 'A' + 10
-            | c >= 'a' && c <= 'z' = ord c - ord 'a' + 10
-            | otherwise = 0
+  where
+    charToDigit c
+      | c >= '0' && c <= '9' = ord c - ord '0'
+      | c >= 'A' && c <= 'Z' = ord c - ord 'A' + 10
+      | c >= 'a' && c <= 'z' = ord c - ord 'a' + 10
+      | otherwise = 0
 
 -- Konwertuje liczbę dziesiętną na system o podstawie q
 -- Złożoność czasowa: O(log_q n)
@@ -70,18 +70,18 @@ fromBase base = foldl (\acc c -> acc * base + charToDigit c) 0
 toBase :: Int -> Int -> String
 toBase _ 0 = "0"
 toBase base n = reverse $ go n
-    where
-        go 0 = ""
-        go x = digitToChar (x `mod` base) : go (x `div` base)
-        digitToChar d
-            | d < 10 = chr (ord '0' + d)
-            | otherwise = chr (ord 'A' + d - 10)
+  where
+    go 0 = ""
+    go x = digitToChar (x `mod` base) : go (x `div` base)
+    digitToChar d
+      | d < 10 = chr (ord '0' + d)
+      | otherwise = chr (ord 'A' + d - 10)
 
 -- Konwersja między dowolnymi systemami (2..36)
 main :: IO ()
 main = do
-    x <- getLine
-    p <- readLn :: IO Int
-    q <- readLn :: IO Int
-    let decimal = fromBase p x
-    putStrLn $ toBase q decimal
+  x <- getLine
+  p <- readLn :: IO Int
+  q <- readLn :: IO Int
+  let decimal = fromBase p x
+  putStrLn $ toBase q decimal

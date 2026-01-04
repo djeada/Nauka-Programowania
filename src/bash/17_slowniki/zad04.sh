@@ -35,7 +35,6 @@
 # ```
 # {'abc': 1, 'cba': 3}
 # ```
-
 source ../assert.sh
 
 usun_ze_slownika() {

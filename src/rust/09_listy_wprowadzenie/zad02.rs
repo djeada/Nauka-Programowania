@@ -53,7 +53,7 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: usize = n.trim().parse().unwrap();
-    
+
     let mut lista = Vec::new();
     for _ in 0..n {
         let mut num = String::new();
@@ -61,7 +61,7 @@ fn main() {
         let num: i32 = num.trim().parse().unwrap();
         lista.push(num);
     }
-    
+
     // Podpunkt a) zwiększ każdy o 1
     let mut lista_a: Vec<i32> = lista.iter().map(|x| x + 1).collect();
     for (i, num) in lista_a.iter().enumerate() {
@@ -71,9 +71,13 @@ fn main() {
         print!("{}", num);
     }
     println!();
-    
+
     // Podpunkt b) pomnóż każdy przez jego indeks
-    let lista_b: Vec<i32> = lista_a.iter().enumerate().map(|(i, x)| x * i as i32).collect();
+    let lista_b: Vec<i32> = lista_a
+        .iter()
+        .enumerate()
+        .map(|(i, x)| x * i as i32)
+        .collect();
     for (i, num) in lista_b.iter().enumerate() {
         if i > 0 {
             print!(",");
@@ -81,7 +85,7 @@ fn main() {
         print!("{}", num);
     }
     println!();
-    
+
     // Podpunkt c) zastąp wszystkie wartością pierwszego
     if let Some(&first) = lista.first() {
         for i in 0..lista.len() {

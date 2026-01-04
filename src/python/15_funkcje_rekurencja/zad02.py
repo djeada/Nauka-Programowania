@@ -40,30 +40,30 @@ Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielony
 def mnoz_przez_skalar_rek(wspolczynniki, k):
     """
     Mnoży współczynniki wielomianu przez skalar (rekurencyjnie).
-    
+
     Złożoność czasowa: O(n), gdzie n to liczba współczynników
     Złożoność pamięciowa: O(n) ze względu na rekurencję
     """
     if not wspolczynniki:
         return []
-    
+
     return [wspolczynniki[0] * k] + mnoz_przez_skalar_rek(wspolczynniki[1:], k)
 
 
 if __name__ == "__main__":
     # Wczytanie stopnia wielomianu
     n = int(input().strip())
-    
+
     # Wczytanie współczynników
     wspolczynniki = list(map(int, input().strip().split()))
-    
+
     # Wczytanie skalara
     k = int(input().strip())
-    
+
     # Mnożenie przez skalar
     # Złożoność czasowa: O(n)
     # Złożoność pamięciowa: O(n)
     wynik = mnoz_przez_skalar_rek(wspolczynniki, k)
-    
+
     # Wypisanie wyniku
-    print(' '.join(map(str, wynik)))
+    print(" ".join(map(str, wynik)))

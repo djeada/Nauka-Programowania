@@ -59,8 +59,8 @@ Pole powierzchni: 16
 
 */
 
-use std::io;
 use std::f64::consts::PI;
+use std::io;
 
 // Trait reprezentujący kształt (interfejs polimorficzny)
 trait Ksztalt {
@@ -85,7 +85,7 @@ impl Ksztalt for Kolo {
     fn pole(&self) -> f64 {
         PI * self.promien * self.promien
     }
-    
+
     fn wypisz_info(&self) {
         println!("Kształt: Koło");
         println!("Promień: {}", self.promien);
@@ -110,7 +110,7 @@ impl Ksztalt for Kwadrat {
     fn pole(&self) -> f64 {
         self.bok * self.bok
     }
-    
+
     fn wypisz_info(&self) {
         println!("Kształt: Kwadrat");
         println!("Długość boku: {}", self.bok);
@@ -121,16 +121,16 @@ impl Ksztalt for Kwadrat {
 fn main() {
     let mut r_str = String::new();
     let mut a_str = String::new();
-    
+
     io::stdin().read_line(&mut r_str).expect("Błąd wczytywania");
     io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
-    
+
     let r: f64 = r_str.trim().parse().unwrap_or(1.0);
     let a: f64 = a_str.trim().parse().unwrap_or(1.0);
-    
+
     let kolo = Kolo::new(r);
     let kwadrat = Kwadrat::new(a);
-    
+
     kolo.wypisz_info();
     println!();
     kwadrat.wypisz_info();

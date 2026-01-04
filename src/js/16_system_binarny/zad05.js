@@ -71,7 +71,6 @@ Jedna liczba naturalna: `max(a, b)`.
 
 */
 
-// Funkcja zwracajaca mniejsza z dwoch liczb
 function minimum(a, b) {
   return (a + b - Math.abs(a - b)) / 2;
 }

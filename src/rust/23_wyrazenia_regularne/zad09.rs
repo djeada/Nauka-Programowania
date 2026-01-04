@@ -40,10 +40,8 @@ fn usun_od_klucza(tekst: &str, klucz: &str) -> String {
 
 fn main() {
     let stdin = io::stdin();
-    let wiersze: Vec<String> = stdin.lock().lines()
-        .filter_map(|line| line.ok())
-        .collect();
-    
+    let wiersze: Vec<String> = stdin.lock().lines().filter_map(|line| line.ok()).collect();
+
     if let Some(klucz) = wiersze.last() {
         let tekst = wiersze[..wiersze.len() - 1].join("\n");
         let wynik = usun_od_klucza(&tekst, klucz);

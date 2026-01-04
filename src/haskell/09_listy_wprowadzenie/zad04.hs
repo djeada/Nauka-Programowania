@@ -51,8 +51,8 @@ Jedna linia:
 main :: IO ()
 main = do
   n <- readLn :: IO Int
-  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
-  
+  nums <- mapM (\_ -> readLn :: IO Int) [1 .. n]
+
   let maxVal = maximum nums
   let minVal = minimum nums
   putStrLn $ show maxVal ++ " " ++ show minVal

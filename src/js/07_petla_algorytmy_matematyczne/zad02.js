@@ -39,7 +39,6 @@ print(potega(3, 5))
 
 */
 
-// Funkcja zwracajaca a podniesione do b
 function podniesDoPotegi(a, b) {
   var wynik = 1;
   for (var i = 0; i < b; i++) {

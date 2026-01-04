@@ -38,7 +38,6 @@
 # ```
 # 0.29
 # ```
-
 source ../assert.sh
 
 srednia_wazona() {

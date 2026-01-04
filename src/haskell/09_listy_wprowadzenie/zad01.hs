@@ -49,14 +49,14 @@ b) 1 linia — elementy w kolejności odwrotnej, oddzielone przecinkami.
 main :: IO ()
 main = do
   n <- readLn :: IO Int
-  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
-  
+  nums <- mapM (\_ -> readLn :: IO Int) [1 .. n]
+
   -- a) Wypisz elementy od początku do końca
   mapM_ print nums
-  
+
   -- b) Wypisz elementy od końca do początku, oddzielone przecinkami
   putStrLn $ intercalate "," $ map show $ reverse nums
   where
     intercalate sep [] = ""
     intercalate sep [x] = x
-    intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs
+    intercalate sep (x : xs) = x ++ sep ++ intercalate sep xs

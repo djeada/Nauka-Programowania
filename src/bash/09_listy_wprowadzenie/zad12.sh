@@ -49,7 +49,6 @@
 # ### Uwagi
 #
 # * Zredukuj `K` przez `K % N`.
-
 source ../assert.sh
 
 rotacja() {

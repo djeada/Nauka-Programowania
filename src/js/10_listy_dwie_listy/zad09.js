@@ -37,7 +37,6 @@ Wczytaj dwie listy liczb całkowitych. Usuń z pierwszej listy wszystkie element
 
 */
 
-// Funkcja zwracajaca liste elementow, ktore nie sa czescia wspolna obu list
 function usunCzescWspolna(lista1, lista2) {
   let wynik = [];
   let maxLength = Math.max(lista1.length, lista2.length);

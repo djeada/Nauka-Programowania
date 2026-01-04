@@ -42,4 +42,4 @@ Wczytaj `n` (`n ≥ 1`) i wypisz odwrócony trójkąt o wysokości `n`, zaczynaj
 main :: IO ()
 main = do
   n <- readLn :: IO Int
-  mapM_ (putStrLn . flip replicate '*') [n, n-1..1]
+  mapM_ (putStrLn . flip replicate '*') [n, n - 1 .. 1]

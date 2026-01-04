@@ -47,12 +47,12 @@ fn ile_bitow_do_odwrocenia(a: u32, b: u32) -> u32 {
 fn main() {
     let mut a_str = String::new();
     let mut b_str = String::new();
-    
+
     io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
     io::stdin().read_line(&mut b_str).expect("Błąd wczytywania");
-    
+
     let a: u32 = a_str.trim().parse().unwrap_or(0);
     let b: u32 = b_str.trim().parse().unwrap_or(0);
-    
+
     println!("{}", ile_bitow_do_odwrocenia(a, b));
 }

@@ -39,7 +39,6 @@ print(zaokraglij_w_dol(7, 2))
 
 */
 
-// Funkcja zaokraglajaca iloraz dwoch liczb naturalnych do najblizszej liczby calkowitej w dol
 const podziel = (liczba1, liczba2) => {
   if (liczba2 === 0) return NaN;
 

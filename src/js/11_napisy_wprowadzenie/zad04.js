@@ -32,9 +32,6 @@ RUMCAJS
 
 */
 
-// Funkcja zamienia wszystkie małe litery na wielkie
-// Złożoność czasowa: O(n), gdzie n to długość napisu
-// Złożoność pamięciowa: O(n) dla przechowania wyniku
 function zamienNaDuze(napis) {
   return napis.toUpperCase();
 }

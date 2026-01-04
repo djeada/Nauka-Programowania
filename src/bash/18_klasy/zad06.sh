@@ -41,10 +41,6 @@
 # Iloczyn: 27 + 63i
 # Iloraz A / B: -3.5 + 0.5i
 # ```
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(1)
-# Zlozonosc pamieciowa: O(1)
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     # Bash nie ma natywnego wsparcia dla klas obiektowych

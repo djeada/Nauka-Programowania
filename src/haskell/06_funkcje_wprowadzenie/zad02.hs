@@ -176,7 +176,6 @@ print(reszta(3, 5))
 ```
 
 -}
--- ZAD-02A: Suma dwóch liczb
 suma :: Int -> Int -> Int
 suma a b = a + b
 

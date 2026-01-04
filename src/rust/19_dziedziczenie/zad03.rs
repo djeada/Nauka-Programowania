@@ -39,7 +39,6 @@ Kot wydaje odgłos: Miau!
 
 */
 
-// Trait reprezentujący zwierzę (polimorfizm)
 trait Zwierze {
     fn odglos(&self) -> &str;
     fn nazwa_klasy(&self) -> &str;
@@ -53,7 +52,7 @@ impl Zwierze for ZwierzBazowy {
     fn odglos(&self) -> &str {
         "..."
     }
-    
+
     fn nazwa_klasy(&self) -> &str {
         "Zwierz"
     }
@@ -67,7 +66,7 @@ impl Zwierze for Pies {
     fn odglos(&self) -> &str {
         "Hau!"
     }
-    
+
     fn nazwa_klasy(&self) -> &str {
         "Pies"
     }
@@ -81,7 +80,7 @@ impl Zwierze for Kot {
     fn odglos(&self) -> &str {
         "Miau!"
     }
-    
+
     fn nazwa_klasy(&self) -> &str {
         "Kot"
     }
@@ -89,14 +88,15 @@ impl Zwierze for Kot {
 
 fn main() {
     // Tworzymy kolekcję zwierząt używając Box<dyn Zwierze> dla polimorfizmu
-    let zwierzeta: Vec<Box<dyn Zwierze>> = vec![
-        Box::new(ZwierzBazowy),
-        Box::new(Pies),
-        Box::new(Kot),
-    ];
-    
+    let zwierzeta: Vec<Box<dyn Zwierze>> =
+        vec![Box::new(ZwierzBazowy), Box::new(Pies), Box::new(Kot)];
+
     // Iterujemy i wypisujemy odgłosy
     for zwierze in zwierzeta.iter() {
-        println!("{} wydaje odgłos: {}", zwierze.nazwa_klasy(), zwierze.odglos());
+        println!(
+            "{} wydaje odgłos: {}",
+            zwierze.nazwa_klasy(),
+            zwierze.odglos()
+        );
     }
 }

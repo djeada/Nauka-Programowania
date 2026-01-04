@@ -51,7 +51,7 @@ fn pierwiastek(n: f64) -> f64 {
     if n == 0.0 {
         return 0.0;
     }
-    
+
     let mut x = n;
     loop {
         let x_next = 0.5 * (x + n / x);

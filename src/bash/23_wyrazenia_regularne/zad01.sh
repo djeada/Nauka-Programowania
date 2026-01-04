@@ -52,7 +52,6 @@
 # ```
 # Prawda
 # ```
-
 source ../assert.sh
 
 # Sprawdza, czy identyfikator użytkownika w adresie email jest poprawny.

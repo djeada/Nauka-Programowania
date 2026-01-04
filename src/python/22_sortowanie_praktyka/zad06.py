@@ -35,8 +35,6 @@ Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Posortuj ją rosn
 """
 
 
-# Zlozonosc czasowa O(n)
-# Zlozonosc pamieciowa O(1)
 def sortuj_tablice_binarna(lista):
     """
     Funkcja sortuje liste binarna.

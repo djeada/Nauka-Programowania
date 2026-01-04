@@ -57,6 +57,6 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let lista_str = input.trim();
-    
+
     println!("{}", lista_na_napis(lista_str));
 }

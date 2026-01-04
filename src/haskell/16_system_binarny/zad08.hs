@@ -43,6 +43,7 @@ import Numeric (showHex)
 -- Złożoność pamięciowa: O(log n)
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    putStrLn $ map toUpper $ showHex n ""
-    where toUpper c = if c >= 'a' && c <= 'z' then toEnum (fromEnum c - 32) else c
+  n <- readLn :: IO Int
+  putStrLn $ map toUpper $ showHex n ""
+  where
+    toUpper c = if c >= 'a' && c <= 'z' then toEnum (fromEnum c - 32) else c

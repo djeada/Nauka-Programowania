@@ -201,7 +201,6 @@
 # ```
 # 24.000
 # ```
-
 main() {
     # ZAD-07A: Pole trójkąta P = 0.5 * a * h
     read a

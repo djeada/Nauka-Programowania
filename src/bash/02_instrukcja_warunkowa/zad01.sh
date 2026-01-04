@@ -40,7 +40,6 @@
 # ```
 #
 # **Wyjście:** *(brak)*
-
 main() {
     read x
 

@@ -35,7 +35,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Dla `b = 0` wynik ma wynosić `1`.
-
 source ../assert.sh
 
 potega() {

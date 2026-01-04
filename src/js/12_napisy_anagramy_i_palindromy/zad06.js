@@ -38,9 +38,6 @@ baab
 
 */
 
-// Funkcja sprawdza czy można utworzyć palindrom z liter słowa
-// Złożoność czasowa: O(n), gdzie n to długość słowa
-// Złożoność pamięciowa: O(k), gdzie k to liczba unikalnych znaków
 function moznaUtworzyPalindrom(slowo) {
   const licznikZnakow = {};
 

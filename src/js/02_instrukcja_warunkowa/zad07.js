@@ -62,7 +62,6 @@ p=True q=True L=True R=True EQ=True
 
 */
 
-// Helper function to convert boolean to string
 function boolToStr(val) {
   return val ? "True" : "False";
 }

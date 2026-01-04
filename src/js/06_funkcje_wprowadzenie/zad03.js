@@ -47,7 +47,6 @@ True
 
 */
 
-// Funkcja sprawdzajaca czy pierwsza liczba jest wieksza od drugiej
 function czyPierwszaWiekszaOdDrugiej(liczba_a, liczba_b) {
   return liczba_a > liczba_b;
 }

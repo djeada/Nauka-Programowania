@@ -32,9 +32,6 @@ alA am atok
 
 */
 
-// Funkcja dzieli napis na słowa (bez interpunkcji)
-// Złożoność czasowa: O(n), gdzie n to długość napisu
-// Złożoność pamięciowa: O(m), gdzie m to liczba słów
 function rozbijNaSlowa(napis) {
   return napis.split(/[^\w]+/);
 }

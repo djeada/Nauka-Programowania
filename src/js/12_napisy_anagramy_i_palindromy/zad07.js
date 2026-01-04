@@ -39,9 +39,6 @@ razynax
 
 */
 
-// Funkcja oblicza minimalną liczbę usunięć aby uzyskać anagramy
-// Złożoność czasowa: O(n), gdzie n to długość słów
-// Złożoność pamięciowa: O(k), gdzie k to liczba unikalnych znaków
 function minUsunieciaDoAnagramow(slowo1, slowo2) {
   if (slowo1.length !== slowo2.length) {
     return -1;

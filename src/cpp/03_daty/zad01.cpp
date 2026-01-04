@@ -52,8 +52,7 @@ int main() {
   int a;
   std::cin >> a;
 
-  if (a >= 1 && a <= 12)
-    std::cout << a << std::endl;
+  if (a >= 1 && a <= 12) std::cout << a << std::endl;
 
   return 0;
 }

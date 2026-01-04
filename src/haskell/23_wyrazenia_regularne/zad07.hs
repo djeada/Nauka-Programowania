@@ -35,28 +35,23 @@ ani nie wybrał się do teatru
 
 -}
 
--- Podziel tekst względem znaków interpunkcyjnych
--- Złożoność czasowa: O(n)
--- Złożoność pamięciowa: O(n)
-
--- Sprawdź czy znak jest interpunkcyjny
 isPunctuation :: Char -> Bool
 isPunctuation c = c `elem` ",.!?;:"
 
 -- Podziel tekst według interpunkcji i usuń białe znaki z brzegów
 splitByPunctuation :: String -> [String]
 splitByPunctuation text = filter (not . null) $ map trim $ split text
-    where
-        split [] = [""]
-        split (c:cs)
-            | isPunctuation c = "" : split cs
-            | otherwise = case split cs of
-                (x:xs) -> (c:x):xs
-                [] -> [[c]]
-        
-        trim = dropWhile (== ' ') . reverse . dropWhile (== ' ') . reverse
+  where
+    split [] = [""]
+    split (c : cs)
+      | isPunctuation c = "" : split cs
+      | otherwise = case split cs of
+          (x : xs) -> (c : x) : xs
+          [] -> [[c]]
+
+    trim = dropWhile (== ' ') . reverse . dropWhile (== ' ') . reverse
 
 main :: IO ()
 main = do
-    text <- getLine
-    mapM_ putStrLn $ splitByPunctuation text
+  text <- getLine
+  mapM_ putStrLn $ splitByPunctuation text

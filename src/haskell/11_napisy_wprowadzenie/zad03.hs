@@ -49,6 +49,6 @@ stripPunctuation = reverse . dropWhile isPunctuation . reverse . dropWhile isPun
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    zdanie <- getLine
-    let slowa = filter (not . null) $ map stripPunctuation $ words zdanie
-    print $ length slowa
+  zdanie <- getLine
+  let slowa = filter (not . null) $ map stripPunctuation $ words zdanie
+  print $ length slowa

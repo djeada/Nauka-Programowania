@@ -30,7 +30,6 @@
 # ```
 # 2
 # ```
-
 source ../assert.sh
 
 # Funkcja liczaca wystapienia znaku w napisie (wersja z petla)

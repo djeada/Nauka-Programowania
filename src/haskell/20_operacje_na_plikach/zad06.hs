@@ -62,7 +62,7 @@ import System.IO (writeFile)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    filePath <- getLine
-    content <- getLine
-    writeFile filePath content
-    putStrLn "Zapisano do pliku"
+  filePath <- getLine
+  content <- getLine
+  writeFile filePath content
+  putStrLn "Zapisano do pliku"

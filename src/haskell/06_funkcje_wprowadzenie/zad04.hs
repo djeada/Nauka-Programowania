@@ -132,7 +132,6 @@ print(max_z_trzech(3, 2, 1))
 ```
 
 -}
--- ZAD-04A: Minimum z dwóch liczb
 minZDwoch :: Int -> Int -> Int
 minZDwoch = min
 

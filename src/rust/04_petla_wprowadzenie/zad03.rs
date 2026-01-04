@@ -45,9 +45,9 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: usize = n.trim().parse().unwrap();
-    
+
     let pi = std::f64::consts::PI;
-    
+
     for _ in 0..n {
         println!("{:.prec$}", pi, prec = n);
     }

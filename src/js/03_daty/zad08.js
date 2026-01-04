@@ -62,7 +62,6 @@ Piątek
 
 */
 
-// Pobieranie danych od uzytkownika
 let dzien = parseInt(prompt("Podaj dzien:"));
 let miesiac = parseInt(prompt("Podaj miesiac:"));
 let rok = parseInt(prompt("Podaj rok:"));

@@ -40,7 +40,6 @@ Jedna liczba całkowita — element bez pary.
 
 */
 
-// Funkcja znajdujaca element bez pary w liscie liczb calkowitych
 function znajdzElementBezPary(lista) {
   let bezPary = 0;
   for (let liczba of lista) {

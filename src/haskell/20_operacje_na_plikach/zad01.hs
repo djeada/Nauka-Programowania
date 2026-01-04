@@ -39,6 +39,6 @@ import System.Directory (doesPathExist)
 -- Złożoność pamięciowa: O(1)
 main :: IO ()
 main = do
-    path <- getLine
-    exists <- doesPathExist path
-    putStrLn $ if exists then "Prawda" else "Fałsz"
+  path <- getLine
+  exists <- doesPathExist path
+  putStrLn $ if exists then "Prawda" else "Fałsz"

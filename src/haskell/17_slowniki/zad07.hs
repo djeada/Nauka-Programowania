@@ -40,4 +40,4 @@ import qualified Data.Map as Map
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    putStrLn "Placeholder - grupowanie po długości"
+  putStrLn "Placeholder - grupowanie po długości"

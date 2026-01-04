@@ -59,7 +59,11 @@ fn czy_palindrom(slowo: &str) -> bool {
 fn znajdz_palindromy(zdanie: &str) -> Vec<String> {
     zdanie
         .split_whitespace()
-        .map(|slowo| slowo.trim_matches(|c: char| !c.is_alphanumeric()).to_string())
+        .map(|slowo| {
+            slowo
+                .trim_matches(|c: char| !c.is_alphanumeric())
+                .to_string()
+        })
         .filter(|slowo| !slowo.is_empty() && czy_palindrom(slowo))
         .collect()
 }
@@ -68,7 +72,7 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let zdanie = input.trim();
-    
+
     let palindromy = znajdz_palindromy(zdanie);
     for palindrom in palindromy {
         println!("{}", palindrom);

@@ -37,9 +37,6 @@ Lemur wygina śmiało ciało
 
 */
 
-// Funkcja sortuje słowa w zdaniu alfabetycznie
-// Złożoność czasowa: O(n log n), gdzie n to liczba słów
-// Złożoność pamięciowa: O(n)
 const sortowanieSlow = (napis) => {
   return napis.split(" ").sort();
 };

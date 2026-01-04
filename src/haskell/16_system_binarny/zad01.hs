@@ -67,8 +67,8 @@ Jedna linia: liczba w systemie dziesiętnym.
 
 -}
 
-import Numeric (showIntAtBase, readInt)
-import Data.Char (intToDigit, digitToInt, isDigit, isHexDigit, toUpper)
+import Data.Char (digitToInt, intToDigit, isDigit, isHexDigit, toUpper)
+import Numeric (readInt, showIntAtBase)
 
 -- Konwertuje liczbę dziesiętną na binarną
 -- Złożoność czasowa: O(log n)
@@ -87,8 +87,8 @@ binaryToDecimal = foldl (\acc c -> acc * 2 + digitToInt c) 0
 -- ZAD-01B: Binarny → dziesiętny
 main :: IO ()
 main = do
-    input <- getLine
-    -- Próbujemy określić czy wejście to liczba binarna czy dziesiętna
-    if all (`elem` "01") input && not (null input)
-        then print $ binaryToDecimal input  -- Binarne → Dziesiętne
-        else putStrLn $ decimalToBinary (read input :: Int)  -- Dziesiętne → Binarne
+  input <- getLine
+  -- Próbujemy określić czy wejście to liczba binarna czy dziesiętna
+  if all (`elem` "01") input && not (null input)
+    then print $ binaryToDecimal input -- Binarne → Dziesiętne
+    else putStrLn $ decimalToBinary (read input :: Int) -- Dziesiętne → Binarne

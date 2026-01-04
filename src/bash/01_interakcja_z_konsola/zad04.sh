@@ -47,7 +47,6 @@
 # 1
 # 9
 # ```
-
 main() {
     read a
     read b

@@ -36,7 +36,6 @@
 # ```
 # 4.5
 # ```
-
 source ../assert.sh
 
 mediana() {

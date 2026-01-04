@@ -51,12 +51,12 @@ import Data.List (isPrefixOf)
 replaceAll :: String -> String -> String -> String
 replaceAll _ _ [] = []
 replaceAll pattern replacement text
-    | pattern `isPrefixOf` text = replacement ++ replaceAll pattern replacement (drop (length pattern) text)
-    | otherwise = head text : replaceAll pattern replacement (tail text)
+  | pattern `isPrefixOf` text = replacement ++ replaceAll pattern replacement (drop (length pattern) text)
+  | otherwise = head text : replaceAll pattern replacement (tail text)
 
 main :: IO ()
 main = do
-    sentence <- getLine
-    wordA <- getLine
-    wordB <- getLine
-    putStrLn $ replaceAll wordA wordB sentence
+  sentence <- getLine
+  wordA <- getLine
+  wordB <- getLine
+  putStrLn $ replaceAll wordA wordB sentence

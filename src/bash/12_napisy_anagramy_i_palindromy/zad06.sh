@@ -1,10 +1,39 @@
-# Tytul: Permutacje slowa, ktore sa palindromami.
-# Tresc: Napisz program, ktory znajdzie permutacje danego slowa, ktore sa palindromami.
-# Dane wejsciowe: Napis.
-# Dane wyjsciowe: Lista napisow.
-# Przyklad:
-# Dla otrzymanego napisu: "taco", powinna zostać zwrocona lista: ["taco", "toca"].
-
+# ZAD-06 — Permutacje słowa, które są palindromami
+#
+# **Poziom:** ★★☆
+# **Tagi:** `palindrom`, `permutacje`, `multiset`
+#
+# ### Treść
+#
+# Wczytaj słowo i wypisz wszystkie **unikalne** palindromy, które są jego permutacjami.
+#
+# ### Wejście
+#
+# * 1. linia: słowo (litery mogą się powtarzać)
+#
+# ### Wyjście
+#
+# Każdy unikalny palindrom w osobnej linii. Jeśli nie istnieje żaden — puste wyjście.
+#
+# ### Przykład
+#
+# **Wejście:**
+#
+# ```
+# aabb
+# ```
+#
+# **Wyjście:**
+#
+# ```
+# abba
+# baab
+# ```
+#
+# ### Uwagi
+#
+# * Najpierw sprawdź warunek istnienia palindromu z liter: co najwyżej jeden znak może mieć nieparzystą liczbę wystąpień.
+# * Generuj palindromy z połówek (bez wypisywania duplikatów).
 source ../assert.sh
 
 # Funkcja generujaca wszystkie permutacje napisu (rekurencyjnie)
@@ -12,7 +41,7 @@ source ../assert.sh
 # Zlozonosc pamieciowa: O(n!)
 permutacje() {
     local napis=$1
-    
+
     if [ ${#napis} -eq 1 ]; then
         echo "$napis"
         return
@@ -51,7 +80,7 @@ czy_palindrom() {
 permutacje_palindromy() {
     local napis="$1"
     local wszystkie_permutacje=$(permutacje "$napis")
-    
+
     for permutacja in $wszystkie_permutacje; do
         if [ "$(czy_palindrom "$permutacja")" == "true" ]; then
             echo "$permutacja"

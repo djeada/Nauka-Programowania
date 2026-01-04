@@ -43,7 +43,7 @@ c 2
 
 -}
 
-import Data.List (sortBy, intercalate)
+import Data.List (intercalate, sortBy)
 import Data.Ord (comparing)
 
 -- Sortowanie listy par względem kryterium
@@ -60,22 +60,22 @@ formatList xs = "[" ++ intercalate ", " (map formatPair xs) ++ "]"
 
 main :: IO ()
 main = do
-    nStr <- getLine
-    let n = read nStr :: Int
-    pairs <- readPairs n
-    -- a) Sortowanie po liczbie
-    let sortedByNumber = sortBy (comparing snd) pairs
-    putStrLn $ formatList sortedByNumber
-    -- b) Sortowanie po długości napisu
-    let sortedByLength = sortBy (comparing (length . fst)) pairs
-    putStrLn $ formatList sortedByLength
+  nStr <- getLine
+  let n = read nStr :: Int
+  pairs <- readPairs n
+  -- a) Sortowanie po liczbie
+  let sortedByNumber = sortBy (comparing snd) pairs
+  putStrLn $ formatList sortedByNumber
+  -- b) Sortowanie po długości napisu
+  let sortedByLength = sortBy (comparing (length . fst)) pairs
+  putStrLn $ formatList sortedByLength
 
 -- Funkcja pomocnicza do wczytania N par
 readPairs :: Int -> IO [(String, Int)]
 readPairs 0 = return []
 readPairs n = do
-    line <- getLine
-    let [str, numStr] = words line
-    let num = read numStr :: Int
-    rest <- readPairs (n - 1)
-    return ((str, num) : rest)
+  line <- getLine
+  let [str, numStr] = words line
+  let num = read numStr :: Int
+  rest <- readPairs (n - 1)
+  return ((str, num) : rest)

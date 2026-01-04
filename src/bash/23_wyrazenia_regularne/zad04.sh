@@ -34,7 +34,6 @@
 # ```
 # Fałsz
 # ```
-
 source ../assert.sh
 
 # Sprawdza, czy słowo (napis_b) występuje jako fragment w zdaniu (napis_a).

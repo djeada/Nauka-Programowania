@@ -37,7 +37,6 @@ Jedna liczba naturalna — brakujący element.
 
 */
 
-// Funkcja znajdujaca brakujacy element w ciagu arytmetycznym
 function znajdzBrakujacyElement(lista) {
   const n = lista.length + 1;
   const sumaKolejnychLiczb = (n * (n + 1)) / 2;

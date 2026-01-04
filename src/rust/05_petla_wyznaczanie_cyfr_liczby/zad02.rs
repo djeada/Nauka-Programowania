@@ -44,12 +44,12 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let mut n: i32 = n.trim().parse().unwrap();
-    
+
     if n == 0 {
         println!("0");
         return;
     }
-    
+
     while n > 0 {
         println!("{}", n % 10);
         n /= 10;

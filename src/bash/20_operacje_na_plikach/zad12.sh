@@ -31,7 +31,6 @@
 # ### Uwagi
 #
 # * Jeśli w folderze docelowym istnieje już plik o tej samej nazwie, zadanie wymaga zdefiniowania zachowania (np. zmiana nazwy / pominięcie) — jeśli sprawdzarka tego nie doprecyzowuje, przyjmij jedną spójną strategię w całym rozwiązaniu.
-
 source ../assert.sh
 
 przenies_pliki() {

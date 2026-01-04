@@ -35,14 +35,14 @@ D:\Dane\CSV
 
 -}
 
-import System.FilePath ((</>), takeFileName, takeDirectory, takeExtension)
+import System.FilePath (takeDirectory, takeExtension, takeFileName, (</>))
 
 -- Operacje na ścieżkach
 -- Złożoność czasowa: O(n), gdzie n to długość ścieżki
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    path <- getLine
-    putStrLn $ "Nazwa pliku: " ++ takeFileName path
-    putStrLn $ "Katalog: " ++ takeDirectory path
-    putStrLn $ "Rozszerzenie: " ++ takeExtension path
+  path <- getLine
+  putStrLn $ "Nazwa pliku: " ++ takeFileName path
+  putStrLn $ "Katalog: " ++ takeDirectory path
+  putStrLn $ "Rozszerzenie: " ++ takeExtension path

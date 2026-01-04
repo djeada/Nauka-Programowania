@@ -51,34 +51,34 @@ fn pochodna_wielomianu(wspolczynniki: &[i32], k: usize) -> Option<Vec<i32>> {
     if k == 0 {
         return Some(wspolczynniki.to_vec());
     }
-    
+
     if wspolczynniki.is_empty() {
         return None;
     }
-    
+
     if wspolczynniki.len() <= k {
         return None;
     }
-    
+
     let mut wynik = wspolczynniki.to_vec();
-    
+
     for _ in 0..k {
         if wynik.len() <= 1 {
             return None;
         }
-        
+
         let mut nowa = Vec::new();
         let stopien = wynik.len() - 1;
-        
+
         for (i, &w) in wynik.iter().enumerate() {
             if i < wynik.len() - 1 {
                 nowa.push(w * (stopien - i) as i32);
             }
         }
-        
+
         wynik = nowa;
     }
-    
+
     if wynik.is_empty() {
         None
     } else {
@@ -89,19 +89,21 @@ fn pochodna_wielomianu(wspolczynniki: &[i32], k: usize) -> Option<Vec<i32>> {
 fn main() {
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
-    
+
     let mut wspolczynniki_str = String::new();
-    io::stdin().read_line(&mut wspolczynniki_str).expect("Błąd wczytywania");
+    io::stdin()
+        .read_line(&mut wspolczynniki_str)
+        .expect("Błąd wczytywania");
     let wspolczynniki: Vec<i32> = wspolczynniki_str
         .trim()
         .split_whitespace()
         .map(|s| s.parse().expect("Nieprawidłowa liczba"))
         .collect();
-    
+
     let mut k_str = String::new();
     io::stdin().read_line(&mut k_str).expect("Błąd wczytywania");
     let k: usize = k_str.trim().parse().expect("Nieprawidłowa liczba");
-    
+
     match pochodna_wielomianu(&wspolczynniki, k) {
         Some(wynik) => {
             for (i, &w) in wynik.iter().enumerate() {

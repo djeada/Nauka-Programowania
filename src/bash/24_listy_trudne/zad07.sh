@@ -28,7 +28,6 @@
 # ```
 # 5
 # ```
-
 source ../assert.sh
 
 # Oblicza ilość wody zatrzymanej między słupkami.
@@ -37,46 +36,46 @@ source ../assert.sh
 pojemnosc_wody() {
     local -n _wysokosci_ref=$1
     local n=${#_wysokosci_ref[@]}
-    
+
     if [ $n -le 2 ]; then
         echo 0
         return
     fi
-    
+
     # Znajdź maksymalne wysokości z lewej dla każdego słupka
     local lewy_max=()
     lewy_max[0]=${_wysokosci_ref[0]}
-    for ((i=1; i<n; i++)); do
-        if [ ${_wysokosci_ref[$i]} -gt ${lewy_max[$((i-1))]} ]; then
+    for ((i = 1; i < n; i++)); do
+        if [ ${_wysokosci_ref[$i]} -gt ${lewy_max[$((i - 1))]} ]; then
             lewy_max[$i]=${_wysokosci_ref[$i]}
         else
-            lewy_max[$i]=${lewy_max[$((i-1))]}
+            lewy_max[$i]=${lewy_max[$((i - 1))]}
         fi
     done
-    
+
     # Znajdź maksymalne wysokości z prawej dla każdego słupka
     local prawy_max=()
-    prawy_max[$((n-1))]=${_wysokosci_ref[$((n-1))]}
-    for ((i=n-2; i>=0; i--)); do
-        if [ ${_wysokosci_ref[$i]} -gt ${prawy_max[$((i+1))]} ]; then
+    prawy_max[$((n - 1))]=${_wysokosci_ref[$((n - 1))]}
+    for ((i = n - 2; i >= 0; i--)); do
+        if [ ${_wysokosci_ref[$i]} -gt ${prawy_max[$((i + 1))]} ]; then
             prawy_max[$i]=${_wysokosci_ref[$i]}
         else
-            prawy_max[$i]=${prawy_max[$((i+1))]}
+            prawy_max[$i]=${prawy_max[$((i + 1))]}
         fi
     done
-    
+
     # Oblicz wodę
     local woda=0
-    for ((i=0; i<n; i++)); do
+    for ((i = 0; i < n; i++)); do
         local min_wysokosc=${lewy_max[$i]}
         [ ${prawy_max[$i]} -lt $min_wysokosc ] && min_wysokosc=${prawy_max[$i]}
-        
+
         local woda_tutaj=$((min_wysokosc - ${_wysokosci_ref[$i]}))
         # Upewnij się że woda nie jest ujemna
         [ $woda_tutaj -lt 0 ] && woda_tutaj=0
         woda=$((woda + woda_tutaj))
     done
-    
+
     echo $woda
 }
 

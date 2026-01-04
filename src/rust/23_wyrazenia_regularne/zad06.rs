@@ -66,14 +66,12 @@ fn znajdz_wiersze_z_koncowka(wiersze: &[String], koncowka: &str) -> Vec<String> 
 
 fn main() {
     let stdin = io::stdin();
-    let wiersze: Vec<String> = stdin.lock().lines()
-        .filter_map(|line| line.ok())
-        .collect();
-    
+    let wiersze: Vec<String> = stdin.lock().lines().filter_map(|line| line.ok()).collect();
+
     if let Some(koncowka) = wiersze.last() {
         let tekst_wiersze = &wiersze[..wiersze.len() - 1];
         let wynik = znajdz_wiersze_z_koncowka(tekst_wiersze, koncowka);
-        
+
         for wiersz in wynik {
             println!("{}", wiersz);
         }

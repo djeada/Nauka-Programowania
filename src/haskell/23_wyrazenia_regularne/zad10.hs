@@ -40,20 +40,20 @@ import Data.Char (isAlphaNum)
 -- Zamień słowa w tekście według map
 replaceWords :: [(String, String)] -> String -> String
 replaceWords replacements text = unwords $ map replaceWord (words (map wordBoundary text))
-    where
-        wordBoundary c = if isAlphaNum c then c else ' '
-        replaceWord w = case lookup w replacements of
-            Just replacement -> replacement
-            Nothing -> w
+  where
+    wordBoundary c = if isAlphaNum c then c else ' '
+    replaceWord w = case lookup w replacements of
+      Just replacement -> replacement
+      Nothing -> w
 
 main :: IO ()
 main = do
-    content <- getContents
-    let allLines = lines content
-        text = head allLines
-        n = read (allLines !! 1) :: Int
-        listA = take n (drop 2 allLines)
-        listB = take n (drop (2 + n) allLines)
-        replacements = zip listA listB
-        result = replaceWords replacements text
-    putStrLn result
+  content <- getContents
+  let allLines = lines content
+      text = head allLines
+      n = read (allLines !! 1) :: Int
+      listA = take n (drop 2 allLines)
+      listB = take n (drop (2 + n) allLines)
+      replacements = zip listA listB
+      result = replaceWords replacements text
+  putStrLn result

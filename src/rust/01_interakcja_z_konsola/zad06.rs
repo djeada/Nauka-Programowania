@@ -201,7 +201,7 @@ use ::std::*;
 fn main() {
     const KELVIN_OFFSET: f64 = 273.15;
     const PI: f64 = std::f64::consts::PI;
-    
+
     // Podpunkt a) kg -> g
     let mut kg = String::new();
     std::io::stdin().read_line(&mut kg).expect("Blad odczytu");

@@ -31,7 +31,6 @@
 # ```
 # 15
 # ```
-
 source ../assert.sh
 
 nwdV1() {

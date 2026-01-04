@@ -27,10 +27,13 @@
 # 7 8 9
 # ```
 #
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(n^2)
-# Zlozonosc pamieciowa: O(n^2)
+# **Wyjście:**
+#
+# ```
+# 1 0 3
+# 0 0 0
+# 7 0 9
+# ```
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"

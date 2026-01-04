@@ -37,19 +37,21 @@ Dla `[1, 2, 1]` funkcja zwraca:
 -}
 
 quadraticRoots :: [Double] -> [Double]
-quadraticRoots [a, b, c] = 
-    let delta = b * b - 4 * a * c
-    in if delta < 0
-       then []
-       else if delta == 0
+quadraticRoots [a, b, c] =
+  let delta = b * b - 4 * a * c
+   in if delta < 0
+        then []
+        else
+          if delta == 0
             then let x = -b / (2 * a) in [x, x]
-            else let sqrtDelta = sqrt delta
-                     x1 = (-b + sqrtDelta) / (2 * a)
-                     x2 = (-b - sqrtDelta) / (2 * a)
-                 in [x1, x2]
+            else
+              let sqrtDelta = sqrt delta
+                  x1 = (-b + sqrtDelta) / (2 * a)
+                  x2 = (-b - sqrtDelta) / (2 * a)
+               in [x1, x2]
 quadraticRoots _ = []
 
 main :: IO ()
 main = do
-    let coeffs = [1, 2, 1]
-    print $ quadraticRoots coeffs
+  let coeffs = [1, 2, 1]
+  print $ quadraticRoots coeffs

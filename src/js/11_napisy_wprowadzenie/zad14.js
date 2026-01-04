@@ -32,9 +32,6 @@ Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separato
 
 */
 
-// Funkcja tworzy napis z kolejnych liczb od 1 do n
-// Złożoność czasowa: O(n), gdzie n to podana liczba
-// Złożoność pamięciowa: O(n) dla przechowania wyniku
 function napisOd1DoN(n) {
   let wynik = "";
   for (let i = 1; i <= n; i++) {

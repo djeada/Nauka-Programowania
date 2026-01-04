@@ -36,7 +36,6 @@
 # ```
 # 7
 # ```
-
 source ../assert.sh
 
 element_bez_pary() {

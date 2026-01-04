@@ -38,5 +38,5 @@ import Data.List (nub)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    text <- getLine
-    putStrLn $ nub text
+  text <- getLine
+  putStrLn $ nub text

@@ -43,6 +43,6 @@ isRotation a b = length a == length b && a `isInfixOf` (b ++ b)
 
 main :: IO ()
 main = do
-    a <- getLine
-    b <- getLine
-    putStrLn $ if isRotation a b then "Prawda" else "Fałsz"
+  a <- getLine
+  b <- getLine
+  putStrLn $ if isRotation a b then "Prawda" else "Fałsz"

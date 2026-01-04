@@ -43,7 +43,7 @@ fn potega(a: i32, b: i32) -> i32 {
     if b == 0 {
         return 1;
     }
-    
+
     let mut wynik = 1;
     for _ in 0..b {
         wynik *= a;

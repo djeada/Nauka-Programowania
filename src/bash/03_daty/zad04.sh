@@ -39,7 +39,6 @@
 # ```
 # Niepoprawny numer dnia tygodnia.
 # ```
-
 main() {
     read dzien
 

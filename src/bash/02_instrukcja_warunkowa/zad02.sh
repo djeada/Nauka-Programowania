@@ -49,7 +49,6 @@
 # ```
 # Liczby są identyczne.
 # ```
-
 main() {
     read x
     read y

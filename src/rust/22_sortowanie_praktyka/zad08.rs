@@ -59,20 +59,24 @@ fn main() {
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
     let _n: usize = n_str.trim().parse().unwrap_or(0);
-    
+
     let mut lista_str = String::new();
-    io::stdin().read_line(&mut lista_str).expect("Błąd wczytywania");
-    
+    io::stdin()
+        .read_line(&mut lista_str)
+        .expect("Błąd wczytywania");
+
     let lista: Vec<i32> = lista_str
         .trim()
         .split_whitespace()
         .filter_map(|s| s.parse().ok())
         .collect();
-    
+
     let mut klucz_str = String::new();
-    io::stdin().read_line(&mut klucz_str).expect("Błąd wczytywania");
+    io::stdin()
+        .read_line(&mut klucz_str)
+        .expect("Błąd wczytywania");
     let klucz: i32 = klucz_str.trim().parse().unwrap_or(0);
-    
+
     let wynik = znajdz_klucz_w_cyklicznej(&lista, klucz);
     println!("{}", wynik);
 }

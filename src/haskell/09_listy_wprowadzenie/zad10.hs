@@ -56,10 +56,10 @@ main = do
   yB <- readLn :: IO Int
   xC <- readLn :: IO Int
   yC <- readLn :: IO Int
-  
+
   -- Punkty są współliniowe jeśli (yB-yA)*(xC-xA) == (yC-yA)*(xB-xA)
   let collinear = (yB - yA) * (xC - xA) == (yC - yA) * (xB - xA)
-  
+
   if not collinear
     then putStrLn "Tak"
     else putStrLn "Nie"

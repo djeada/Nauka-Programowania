@@ -48,7 +48,7 @@ fn sortuj_slowa(zdanie: &str) -> Vec<String> {
         .filter(|s| !s.is_empty())
         .map(|s| s.to_string())
         .collect();
-    
+
     slowa.sort();
     slowa
 }
@@ -57,9 +57,9 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let zdanie = input.trim();
-    
+
     let slowa = sortuj_slowa(zdanie);
-    
+
     print!("[");
     for (i, slowo) in slowa.iter().enumerate() {
         if i > 0 {

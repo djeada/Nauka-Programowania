@@ -103,7 +103,6 @@ True
 
 */
 
-// Podpunkt a) zwraca liczbę 3
 fn zwroc_liczbe() -> i32 {
     3
 }

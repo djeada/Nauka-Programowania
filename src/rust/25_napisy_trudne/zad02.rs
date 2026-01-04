@@ -52,10 +52,10 @@ fn main() {
     let mut s_str = String::new();
     io::stdin().read_line(&mut s_str).expect("Błąd wczytywania");
     let s = s_str.trim();
-    
+
     let mut t_str = String::new();
     io::stdin().read_line(&mut t_str).expect("Błąd wczytywania");
     let t = t_str.trim();
-    
+
     println!("{}", usun_podnapis(s, t));
 }

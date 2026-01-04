@@ -47,7 +47,7 @@ fn sortuj_trojwartosciowa(lista: &mut Vec<u32>) {
             licznik[x as usize] += 1;
         }
     }
-    
+
     // Wypełniamy listę: najpierw zera, potem jedynki, na końcu dwójki
     let mut idx = 0;
     for wartosc in 0..3 {
@@ -62,18 +62,20 @@ fn main() {
     let mut n_str = String::new();
     io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
     let _n: usize = n_str.trim().parse().unwrap_or(0);
-    
+
     let mut lista_str = String::new();
-    io::stdin().read_line(&mut lista_str).expect("Błąd wczytywania");
-    
+    io::stdin()
+        .read_line(&mut lista_str)
+        .expect("Błąd wczytywania");
+
     let mut lista: Vec<u32> = lista_str
         .trim()
         .split_whitespace()
         .filter_map(|s| s.parse().ok())
         .collect();
-    
+
     sortuj_trojwartosciowa(&mut lista);
-    
+
     print!("[");
     for (i, x) in lista.iter().enumerate() {
         if i > 0 {

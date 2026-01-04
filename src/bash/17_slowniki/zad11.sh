@@ -37,7 +37,6 @@
 # [('a', -2), ('b', 4), ('c', 3), ('x', 5)]
 # [('a', -2), ('c', 3), ('b', 4), ('x', 5)]
 # ```
-
 source ../assert.sh
 
 posortuj_wzgledem_napisow() {

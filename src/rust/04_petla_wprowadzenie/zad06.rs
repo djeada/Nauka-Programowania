@@ -55,21 +55,21 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: i32 = n.trim().parse().unwrap();
-    
+
     // Podpunkt a) suma k^2 + k + 1
     let mut suma_a = 0;
     for k in 1..=n {
         suma_a += k * k + k + 1;
     }
     println!("{}", suma_a);
-    
+
     // Podpunkt b) suma k^2 + 5k
     let mut suma_b = 0;
     for k in 1..=n {
         suma_b += k * k + 5 * k;
     }
     println!("{}", suma_b);
-    
+
     // Podpunkt c) suma 3k
     let mut suma_c = 0;
     for k in 1..=n {

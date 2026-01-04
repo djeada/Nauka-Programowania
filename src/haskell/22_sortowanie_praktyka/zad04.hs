@@ -37,7 +37,7 @@ abc
 
 -}
 
-import Data.List (sortBy, intercalate)
+import Data.List (intercalate, sortBy)
 import Data.Ord (comparing)
 
 -- Sortowanie napisów według długości
@@ -50,16 +50,16 @@ formatList xs = "[" ++ intercalate ", " (map (\x -> "'" ++ x ++ "'") xs) ++ "]"
 
 main :: IO ()
 main = do
-    nStr <- getLine
-    let n = read nStr :: Int
-    napisy <- readLines n
-    let posortowane = sortBy (comparing length) napisy
-    putStrLn $ formatList posortowane
+  nStr <- getLine
+  let n = read nStr :: Int
+  napisy <- readLines n
+  let posortowane = sortBy (comparing length) napisy
+  putStrLn $ formatList posortowane
 
 -- Funkcja pomocnicza do wczytania N napisów
 readLines :: Int -> IO [String]
 readLines 0 = return []
 readLines n = do
-    line <- getLine
-    rest <- readLines (n - 1)
-    return (line : rest)
+  line <- getLine
+  rest <- readLines (n - 1)
+  return (line : rest)

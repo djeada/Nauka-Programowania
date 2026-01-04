@@ -46,7 +46,6 @@
 # ```
 # Trójkąt można zbudować z podanych boków.
 # ```
-
 main() {
     read a
     read b

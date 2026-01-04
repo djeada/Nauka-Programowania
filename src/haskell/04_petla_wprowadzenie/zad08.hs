@@ -56,16 +56,16 @@ Dwie liczby naturalne, każda w oddzielnej linii:
 -}
 main :: IO ()
 main = do
-  a <- readLn :: IO Int  -- total heads
-  b <- readLn :: IO Int  -- total legs
-  
+  a <- readLn :: IO Int -- total heads
+  b <- readLn :: IO Int -- total legs
+
   -- System of equations:
   -- chickens + sheep = a
   -- 2*chickens + 4*sheep = b
   -- Solving: chickens = 2*a - b/2, sheep = b/2 - a
-  
+
   let sheep = (b - 2 * a) `div` 2
   let chickens = a - sheep
-  
+
   print chickens
   print sheep

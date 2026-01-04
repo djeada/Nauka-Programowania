@@ -48,10 +48,10 @@ Jeśli długości są różne, wypisz: `Pusta macierz`
 
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    m <- readLn :: IO Int
-    lista1 <- sequence [readLn :: IO Int | _ <- [1..n]]
-    lista2 <- sequence [readLn :: IO Int | _ <- [1..m]]
-    if n /= m
-        then putStrLn "Pusta macierz"
-        else mapM_ (\(x, y) -> putStrLn $ show x ++ " " ++ show y) $ zip lista1 lista2
+  n <- readLn :: IO Int
+  m <- readLn :: IO Int
+  lista1 <- sequence [readLn :: IO Int | _ <- [1 .. n]]
+  lista2 <- sequence [readLn :: IO Int | _ <- [1 .. m]]
+  if n /= m
+    then putStrLn "Pusta macierz"
+    else mapM_ (\(x, y) -> putStrLn $ show x ++ " " ++ show y) $ zip lista1 lista2

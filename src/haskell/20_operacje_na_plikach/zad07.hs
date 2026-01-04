@@ -38,7 +38,7 @@ import System.IO (appendFile)
 -- Złożoność pamięciowa: O(n)
 main :: IO ()
 main = do
-    filePath <- getLine
-    content <- getLine
-    appendFile filePath content
-    putStrLn "Dopisano do pliku"
+  filePath <- getLine
+  content <- getLine
+  appendFile filePath content
+  putStrLn "Dopisano do pliku"

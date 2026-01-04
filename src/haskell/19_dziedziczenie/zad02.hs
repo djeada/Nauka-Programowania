@@ -64,30 +64,30 @@ import Text.Printf (printf)
 -- Type class dla kształtów
 -- Złożoność pamięciowa: O(1)
 class Ksztalt a where
-    pole :: a -> Double
-    wypisz :: a -> IO ()
+  pole :: a -> Double
+  wypisz :: a -> IO ()
 
-data Kolo = Kolo { promienK :: Double }
+data Kolo = Kolo {promienK :: Double}
 
 instance Ksztalt Kolo where
-    pole (Kolo r) = pi * r * r
-    wypisz k@(Kolo r) = do
-        printf "Koło o promieniu %.1f\n" r
-        printf "Pole: %.2f\n" (pole k)
+  pole (Kolo r) = pi * r * r
+  wypisz k@(Kolo r) = do
+    printf "Koło o promieniu %.1f\n" r
+    printf "Pole: %.2f\n" (pole k)
 
-data Kwadrat = Kwadrat { bok :: Double }
+data Kwadrat = Kwadrat {bok :: Double}
 
 instance Ksztalt Kwadrat where
-    pole (Kwadrat a) = a * a
-    wypisz k@(Kwadrat a) = do
-        printf "Kwadrat o boku %.1f\n" a
-        printf "Pole: %.2f\n" (pole k)
+  pole (Kwadrat a) = a * a
+  wypisz k@(Kwadrat a) = do
+    printf "Kwadrat o boku %.1f\n" a
+    printf "Pole: %.2f\n" (pole k)
 
 main :: IO ()
 main = do
-    r <- readLn :: IO Double
-    a <- readLn :: IO Double
-    let kolo = Kolo r
-    let kwadrat = Kwadrat a
-    wypisz kolo
-    wypisz kwadrat
+  r <- readLn :: IO Double
+  a <- readLn :: IO Double
+  let kolo = Kolo r
+  let kwadrat = Kwadrat a
+  wypisz kolo
+  wypisz kwadrat

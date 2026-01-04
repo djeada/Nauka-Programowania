@@ -56,18 +56,18 @@ fn main() {
         let coord: i32 = line.trim().parse().unwrap();
         coords.push(coord);
     }
-    
+
     let xa = coords[0];
     let ya = coords[1];
     let xb = coords[2];
     let yb = coords[3];
     let xc = coords[4];
     let yc = coords[5];
-    
+
     // Punkty są współliniowe jeśli wyznacznik jest 0
     // det = (xb - xa) * (yc - ya) - (xc - xa) * (yb - ya)
     let det = (xb - xa) * (yc - ya) - (xc - xa) * (yb - ya);
-    
+
     if det != 0 {
         println!("Tak");
     } else {

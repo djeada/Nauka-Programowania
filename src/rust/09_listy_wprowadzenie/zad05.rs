@@ -57,7 +57,7 @@ fn main() {
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).unwrap();
     let n: usize = n.trim().parse().unwrap();
-    
+
     let mut lista = Vec::new();
     for _ in 0..n {
         let mut num = String::new();
@@ -65,34 +65,44 @@ fn main() {
         let num: i32 = num.trim().parse().unwrap();
         lista.push(num);
     }
-    
+
     fn czy_pierwsza(num: usize) -> bool {
-        if num < 2 { return false; }
-        if num == 2 { return true; }
-        if num % 2 == 0 { return false; }
+        if num < 2 {
+            return false;
+        }
+        if num == 2 {
+            return true;
+        }
+        if num % 2 == 0 {
+            return false;
+        }
         let mut i = 3;
         while i * i <= num {
-            if num % i == 0 { return false; }
+            if num % i == 0 {
+                return false;
+            }
             i += 2;
         }
         true
     }
-    
+
     fn wypisz_liste(lista: &[i32]) {
         for (i, num) in lista.iter().enumerate() {
-            if i > 0 { print!(","); }
+            if i > 0 {
+                print!(",");
+            }
             print!("{}", num);
         }
         println!();
     }
-    
+
     // a) Zwiększ o 1 elementy o parzystych indeksach
     let mut lista_a = lista.clone();
     for i in (0..lista_a.len()).step_by(2) {
         lista_a[i] += 1;
     }
     wypisz_liste(&lista_a);
-    
+
     // b) Ustaw na 0 elementy będące wielokrotnością 3
     let mut lista_b = lista_a.clone();
     for i in 0..lista_b.len() {
@@ -101,7 +111,7 @@ fn main() {
         }
     }
     wypisz_liste(&lista_b);
-    
+
     // c) Podnieś do kwadratu elementy mniejsze niż 10
     let mut lista_c = lista_b.clone();
     for i in 0..lista_c.len() {
@@ -110,7 +120,7 @@ fn main() {
         }
     }
     wypisz_liste(&lista_c);
-    
+
     // d) Oblicz sumę i wstaw na indeksach pierwszych
     let mut lista_d = lista_c.clone();
     let suma: i32 = lista_d.iter().sum();
@@ -120,7 +130,7 @@ fn main() {
         }
     }
     wypisz_liste(&lista_d);
-    
+
     // e) Zamień każdy na iloczyn wszystkich pozostałych
     let mut lista_e = vec![0; lista_d.len()];
     for i in 0..lista_d.len() {

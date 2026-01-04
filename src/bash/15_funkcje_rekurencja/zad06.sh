@@ -37,10 +37,9 @@
 #
 # ### Uwagi o formatowaniu
 #
-
-# Funkcja do zaimplementowania
-# Zlozonosc czasowa: O(n)
-# Zlozonosc pamieciowa: O(n)
+# * Licz deltę: `Δ = b*b - 4*a*c`.
+# * Dla `Δ > 0`: policz oba pierwiastki i posortuj rosnąco.
+# * Zakładamy `a ≠ 0`.
 funkcja_glowna() {
     # TODO: Implementacja funkcjonalnosci opisanej w docstringu
     echo "Funkcjonalnosc wymaga pelnej implementacji"

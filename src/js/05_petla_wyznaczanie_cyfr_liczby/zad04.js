@@ -116,7 +116,6 @@ Jeśli brak — brak wyjścia.
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // a) Petla dla liczb parzystych

@@ -68,7 +68,7 @@ int main() {
   // 2*glowy - 2o + 4o = nogi
   // 2o = nogi - 2*glowy
   // o = (nogi - 2*glowy) / 2
-  
+
   int owce = (nogi - 2 * glowy) / 2;
   int kury = glowy - owce;
 

@@ -32,38 +32,36 @@ Otrzymujesz listę zawierającą `M` posortowanych list liczb naturalnych. Poł�
 
 */
 
-use std::io;
 use std::collections::BTreeSet;
+use std::io;
 
 // Funkcja łącząca posortowane listy w jedną bez duplikatów
 // Złożoność czasowa: O(n log n), gdzie n to suma wszystkich elementów
 // Złożoność pamięciowa: O(n)
 fn polacz_listy(listy: &[Vec<i32>]) -> Vec<i32> {
     let mut zbior = BTreeSet::new();
-    
+
     for lista in listy {
         for &element in lista {
             zbior.insert(element);
         }
     }
-    
+
     zbior.into_iter().collect()
 }
 
 fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
-    
+
     // Parsuj listę list
-    let dane = input.trim()
-        .trim_start_matches('[')
-        .trim_end_matches(']');
-    
+    let dane = input.trim().trim_start_matches('[').trim_end_matches(']');
+
     let mut listy = Vec::new();
     let mut obecna_lista = Vec::new();
     let mut w_liscie = false;
     let mut buffer = String::new();
-    
+
     for c in dane.chars() {
         if c == '[' {
             w_liscie = true;
@@ -88,9 +86,9 @@ fn main() {
             buffer.push(c);
         }
     }
-    
+
     let wynik = polacz_listy(&listy);
-    
+
     // Wypisz wynik
     print!("[");
     for (i, val) in wynik.iter().enumerate() {

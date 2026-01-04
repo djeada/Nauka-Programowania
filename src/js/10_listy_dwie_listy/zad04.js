@@ -37,7 +37,6 @@ A_xB_x + A_yB_y + A_zB_z
 
 */
 
-// Funkcja mnozaca wektory
 function mnozWektory(lista1, lista2) {
   let wynik = 0;
   for (let i = 0; i < 3; i++) {

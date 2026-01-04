@@ -41,11 +41,11 @@ main :: IO ()
 main = do
   list1Str <- getLine
   list2Str <- getLine
-  
+
   let parseList str = read str :: [Int]
   let list1 = parseList list1Str
   let list2 = parseList list2Str
-  
+
   let common = [x | x <- list1, x `elem` list2]
-  
+
   print common

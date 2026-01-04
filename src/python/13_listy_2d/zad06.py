@@ -49,13 +49,13 @@ Wczytaj `n` przedziałów `[a_i, b_i]` (a_i ≤ b_i). Scal przedziały nachodzą
 def polacz_pokrywajace_sie_przedzialy(lista_przedzialow):
     """
     Funkcja zwraca liste niepokrywajacych sie przedzialow.
-    
+
     Złożoność czasowa: O(n log n), gdzie n to liczba przedziałów (sortowanie)
     Złożoność pamięciowa: O(n) dla wyniku
     """
     if not lista_przedzialow:
         return []
-    
+
     # sortujemy liste przedzialow
     lista_przedzialow.sort()
 
@@ -93,18 +93,18 @@ def test_polacz_pokrywajace_sie_przedzialy():
 if __name__ == "__main__":
     # Wczytanie liczby przedziałów
     n = int(input().strip())
-    
+
     # Wczytanie przedziałów
     przedzialy = []
     for _ in range(n):
         a, b = map(int, input().strip().split())
         przedzialy.append([a, b])
-    
+
     # Scalenie przedziałów
     # Złożoność czasowa: O(n log n)
     # Złożoność pamięciowa: O(n)
     scalone = polacz_pokrywajace_sie_przedzialy(przedzialy)
-    
+
     # Wypisanie wyniku
     for przedzial in scalone:
         print(f"{przedzial[0]} {przedzial[1]}")

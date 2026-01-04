@@ -55,6 +55,6 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Błąd wczytywania");
     let n: usize = input.trim().parse().expect("Nieprawidłowa liczba");
-    
+
     generuj_macierz_iloczynow(n);
 }

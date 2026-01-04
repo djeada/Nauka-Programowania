@@ -41,14 +41,14 @@ Jedna linia: lista bez duplikatów, elementy oddzielone przecinkami.
 main :: IO ()
 main = do
   n <- readLn :: IO Int
-  nums <- mapM (\_ -> readLn :: IO Int) [1..n]
-  
+  nums <- mapM (\_ -> readLn :: IO Int) [1 .. n]
+
   let nub [] = []
-      nub (x:xs) = x : nub (filter (/= x) xs)
-  
+      nub (x : xs) = x : nub (filter (/= x) xs)
+
   let result = nub nums
   let intercalate sep [] = ""
       intercalate sep [x] = x
-      intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs
-  
+      intercalate sep (x : xs) = x ++ sep ++ intercalate sep xs
+
   putStrLn $ intercalate "," $ map show result

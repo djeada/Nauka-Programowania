@@ -48,7 +48,6 @@
 # ### Uwagi o formatowaniu
 #
 # * Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania.
-
 main() {
     read n
 

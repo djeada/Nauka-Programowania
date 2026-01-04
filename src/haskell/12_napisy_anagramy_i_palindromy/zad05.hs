@@ -50,8 +50,8 @@ isAnagram s1 s2 = sort (map toLower s1) == sort (map toLower s2)
 
 main :: IO ()
 main = do
-    zdanie <- getLine
-    klucz <- getLine
-    let slowa = map stripPunctuation $ words zdanie
-    let anagramy = filter (\w -> not (null w) && isAnagram w klucz) slowa
-    mapM_ putStrLn anagramy
+  zdanie <- getLine
+  klucz <- getLine
+  let slowa = map stripPunctuation $ words zdanie
+  let anagramy = filter (\w -> not (null w) && isAnagram w klucz) slowa
+  mapM_ putStrLn anagramy

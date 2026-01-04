@@ -45,8 +45,7 @@ int main() {
   std::cin >> n;
 
   int suma = 0;
-  for (int i = 1; i < n; i++) 
-    suma += i;
+  for (int i = 1; i < n; i++) suma += i;
 
   std::cout << suma << std::endl;
 

@@ -41,15 +41,15 @@ fn main() {
     let mut a = String::new();
     std::io::stdin().read_line(&mut a).expect("Blad odczytu");
     let a: i32 = a.trim().parse().unwrap();
-    
+
     let mut b = String::new();
     std::io::stdin().read_line(&mut b).expect("Blad odczytu");
     let b: i32 = b.trim().parse().unwrap();
-    
+
     let mut c = String::new();
     std::io::stdin().read_line(&mut c).expect("Blad odczytu");
     let c: i32 = c.trim().parse().unwrap();
-    
+
     let mut d = String::new();
     std::io::stdin().read_line(&mut d).expect("Blad odczytu");
     let d: i32 = d.trim().parse().unwrap();
@@ -64,6 +64,6 @@ fn main() {
     if d > maks {
         maks = d;
     }
-    
+
     println!("{}", maks);
 }

@@ -158,7 +158,6 @@ Jeśli brak — brak wyjścia.
 
 */
 
-// Pobieranie danych od uzytkownika
 const liczba = parseInt(prompt("Podaj liczbe:"));
 
 // Obliczanie sumy cyfr pobranej liczby (dla zad d)

@@ -49,29 +49,29 @@ import Text.Printf (printf)
 
 -- Typ danych reprezentujący prostokąt
 -- Złożoność pamięciowa: O(1)
-data Prostokat = Prostokat { x1 :: Int, y1 :: Int, x2 :: Int, y2 :: Int }
+data Prostokat = Prostokat {x1 :: Int, y1 :: Int, x2 :: Int, y2 :: Int}
 
 -- Oblicza pole części wspólnej dwóch prostokątów
 -- Złożoność czasowa: O(1)
 poleWspolne :: Prostokat -> Prostokat -> Int
 poleWspolne (Prostokat x1a y1a x2a y2a) (Prostokat x1b y1b x2b y2b) =
-    let xLeft = max x1a x1b
-        yBottom = max y1a y1b
-        xRight = min x2a x2b
-        yTop = min y2a y2b
-        width = max 0 (xRight - xLeft)
-        height = max 0 (yTop - yBottom)
-    in width * height
+  let xLeft = max x1a x1b
+      yBottom = max y1a y1b
+      xRight = min x2a x2b
+      yTop = min y2a y2b
+      width = max 0 (xRight - xLeft)
+      height = max 0 (yTop - yBottom)
+   in width * height
 
 -- Wypisuje informacje o prostokącie
 wypisz :: String -> Prostokat -> IO ()
 wypisz nazwa (Prostokat x1 y1 x2 y2) =
-    printf "Prostokąt %s: lewy dolny (%d, %d), prawy górny (%d, %d)\n" nazwa x1 y1 x2 y2
+  printf "Prostokąt %s: lewy dolny (%d, %d), prawy górny (%d, %d)\n" nazwa x1 y1 x2 y2
 
 main :: IO ()
 main = do
-    let a = Prostokat 3 4 9 6
-    let b = Prostokat 2 2 7 5
-    wypisz "A" a
-    wypisz "B" b
-    printf "Pole części wspólnej: %d\n" (poleWspolne a b)
+  let a = Prostokat 3 4 9 6
+  let b = Prostokat 2 2 7 5
+  wypisz "A" a
+  wypisz "B" b
+  printf "Pole części wspólnej: %d\n" (poleWspolne a b)

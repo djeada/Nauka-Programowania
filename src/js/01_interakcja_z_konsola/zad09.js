@@ -58,7 +58,6 @@ Dwie linie (do **2 miejsc po przecinku**):
 
 */
 
-// Pobieranie danych od uzytkownika
 const roczna_stopa_procentowa = parseFloat(
   prompt("Podaj roczna stope procentowa:")
 );
