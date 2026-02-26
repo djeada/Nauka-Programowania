@@ -300,14 +300,14 @@ print(nww(7, 9))
 
 Napisz funkcję `pierwiastek(n)`, która dla `n ≥ 0` zwraca przybliżenie `sqrt(n)` metodą Newtona:
 
-[
+$$
 x_{k+1} = \frac{1}{2}\left(x_k + \frac{n}{x_k}\right)
-]
+$$
 
 Iteruj do momentu, aż:
-[
+$$
 |x_{k+1} - x_k| < 0.0001
-]
+$$
 
 ### Wejście
 
