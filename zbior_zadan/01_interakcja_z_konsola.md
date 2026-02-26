@@ -836,7 +836,7 @@ Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
 
 ---
 
-## ZAD-09 — Kalkulator kredytowy (rata annuitetowa)
+## ZAD-09 — Kalkulator kredytowy
 
 **Poziom:** ★★☆
 **Tagi:** `finanse`, `float`, `formatowanie`
@@ -852,9 +852,11 @@ Wczytaj:
 Oblicz miesięczną ratę `M` oraz całkowity koszt `C = M * n`, gdzie `n = 12 * Y`.
 
 Dla `R > 0` użyj wzoru:
-[
+
+$$
 M = P \cdot \frac{r(1+r)^n}{(1+r)^n-1}
-]
+$$
+
 gdzie `r = R / (12*100)`.
 
 Dla `R = 0` przyjmij:
