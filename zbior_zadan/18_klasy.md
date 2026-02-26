@@ -21,8 +21,8 @@ Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** 
 Zaprojektuj klasę **Koło**:
 
 1. Konstruktor przyjmuje promień `r` (domyślnie 1).
-2. Metoda licząca **obwód**: ( 2\pi r )
-3. Metoda licząca **pole**: ( \pi r^2 )
+2. Metoda licząca **obwód**: $2\pi r$
+3. Metoda licząca **pole**: $\pi r^2$
 4. Metoda wypisująca informacje: promień, obwód i pole.
 
 Program ma utworzyć koło o promieniu wczytanym z wejścia (np. 3) i wypisać informacje.

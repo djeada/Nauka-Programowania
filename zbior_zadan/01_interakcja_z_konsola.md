@@ -334,9 +334,9 @@ Oblicz: `y = x^3 + 22 - 20`, czyli równoważnie `y = x^3 + 2`.
 ### Treść
 
 Dla `x` (w radianach) oblicz:
-[
+$$
 y=\sin^3(x)\cdot\cos^2(x)+e^{x^2}+\ln(x^3+2x^2-x-3)
-]
+$$
 
 ### Wejście
 
@@ -577,7 +577,7 @@ Dwie linie:
 ### Treść
 
 Oblicz pole trójkąta ze wzoru:
-( P = \frac{1}{2} a h )
+$P = \frac{1}{2} a h$
 
 ### Wejście
 
@@ -649,7 +649,7 @@ Oblicz pole prostokąta:
 ### Treść
 
 Oblicz pole rombu z przekątnych:
-( P = \frac{1}{2} d_1 d_2 )
+$P = \frac{1}{2} d_1 d_2$
 
 ### Wejście
 
@@ -685,7 +685,7 @@ Oblicz pole rombu z przekątnych:
 ### Treść
 
 Oblicz objętość kuli:
-( V = \frac{4}{3}\pi r^3 )
+$V = \frac{4}{3}\pi r^3$
 
 ### Wejście
 
@@ -719,7 +719,7 @@ Oblicz objętość kuli:
 ### Treść
 
 Oblicz objętość stożka:
-( V = \frac{1}{3}\pi r^2 h )
+$V = \frac{1}{3}\pi r^2 h$
 
 ### Wejście
 

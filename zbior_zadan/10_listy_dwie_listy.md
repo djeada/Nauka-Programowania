@@ -134,9 +134,9 @@ Jeśli któraś lista jest krótsza, brakujące elementy traktuj jako `0`.
 ### Treść
 
 Wczytaj dwie listy długości 3 (wektory 3D) i oblicz ich **iloczyn skalarny**:
-[
+$$
 A_xB_x + A_yB_y + A_zB_z
-]
+$$
 
 ### Wejście
 
@@ -177,9 +177,9 @@ Wczytaj dwie listy liczb zmiennoprzecinkowych tej samej długości:
 * lista wag.
 
 Oblicz średnią ważoną:
-[
+$$
 \frac{\sum (wartość_i \cdot waga_i)}{\sum waga_i}
-]
+$$
 
 ### Wejście
 

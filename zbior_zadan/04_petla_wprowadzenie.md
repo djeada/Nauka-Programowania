@@ -247,11 +247,11 @@ Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobn
 
 Wczytaj liczbę naturalną `n` (`n ≥ 1`) i oblicz:
 
-a) ( \sum_{k=1}^{n} (k^2 + k + 1) )
+a) $\sum_{k=1}^{n} (k^2 + k + 1)$
 
-b) ( \sum_{k=1}^{n} (k^2 + 5k) )
+b) $\sum_{k=1}^{n} (k^2 + 5k)$
 
-c) ( \sum_{k=1}^{n} (k + 2k) )  (czyli ( \sum_{k=1}^{n} 3k ))
+c) $\sum_{k=1}^{n} (k + 2k)$  (czyli $\sum_{k=1}^{n} 3k$)
 
 Wypisz trzy sumy w kolejności a), b), c).
 
@@ -298,7 +298,7 @@ Trzy liczby naturalne — każda w oddzielnej linii:
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` (`n ≥ 0`), oblicz wartość ( \pi^n ) i wypisz wynik z dokładnością do **dwóch miejsc po przecinku**.
+Wczytaj liczbę naturalną `n` (`n ≥ 0`), oblicz wartość $\pi^n$ i wypisz wynik z dokładnością do **dwóch miejsc po przecinku**.
 
 ### Wejście
 
@@ -308,7 +308,7 @@ Jedna liczba naturalna:
 
 ### Wyjście
 
-Jedna liczba zmiennoprzecinkowa — ( \pi^n ) z dokładnością do dwóch miejsc po przecinku.
+Jedna liczba zmiennoprzecinkowa — $\pi^n$ z dokładnością do dwóch miejsc po przecinku.
 
 ### Przykład
 
