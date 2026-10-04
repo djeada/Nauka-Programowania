@@ -1,25 +1,27 @@
-# Rozdział: Napisy — palindromy, anagramy, permutacje (stdin/stdout)
+# Rozdział 12: Napisy — anagramy i palindromy
 
-Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
-**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem.**
+Zadania w tym rozdziale dotyczą palindromów (napisów czytanych tak samo od przodu i od tyłu), anagramów (napisów złożonych z tych samych liter w innej kolejności) oraz permutacji liter słowa.
 
 **Konwencje wspólne:**
 
-* Napis wczytuj jako całą linię (może zawierać spacje tylko tam, gdzie jest to powiedziane).
-* Jeśli w wyjściu jest „każde słowo w osobnej linii” — wypisuj dokładnie po jednej pozycji na linię.
-* W zadaniach „ignoruj wielkość liter” — porównuj w wersji np. `lower()`, ale wypisuj słowa **w oryginalnej postaci z wejścia**, chyba że treść mówi inaczej.
-* Jeśli wynikiem ma być „lista” i nic nie znaleziono — nie wypisuj nic (puste wyjście), o ile nie ma wprost formatu `[]`.
+* Każde zadanie jest osobnym programem: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.
+* Program nie wypisuje komunikatów typu „Podaj słowo:”.
+* Napis wczytuj jako całą linię. Spacje mogą w nim wystąpić tylko tam, gdzie treść mówi o zdaniu.
+* **Słowo** w zdaniu to fragment oddzielony od innych spacjami. Znaki interpunkcyjne (np. `.` `,` `!` `?` `;` `:` `-`) stojące na początku lub końcu fragmentu nie należą do słowa (`kara.` → `kara`), a fragment złożony wyłącznie z interpunkcji nie jest słowem. W Pythonie: `fragment.strip(string.punctuation)` dla każdego fragmentu z `zdanie.split()`.
+* Gdy zadanie każe ignorować wielkość liter, porównuj napisy np. po zamianie na małe litery (`lower()`), ale słowa wypisuj **w postaci z wejścia** (bez interpunkcji z brzegów).
+* Gdy wynikiem jest kilka napisów, wypisz każdy w osobnej linii. Jeśli nie ma żadnego — program nic nie wypisuje.
 
 ---
 
 ## ZAD-01 — Czy słowo jest palindromem?
 
 **Poziom:** ★☆☆
-**Tagi:** `string`, `palindrom`, `I/O`
+**Tagi:** `napisy`, `palindrom`
 
 ### Treść
 
-Wczytaj jedno słowo i sprawdź, czy jest palindromem (czytane od lewej do prawej i od prawej do lewej jest takie samo).
+Wczytaj jedno słowo i sprawdź, czy jest palindromem, czyli czy czytane od lewej do prawej i od prawej do lewej jest takie samo.
+Wielkość liter nie ma znaczenia — `Kajak` też jest palindromem.
 
 ### Wejście
 
@@ -29,10 +31,10 @@ Wczytaj jedno słowo i sprawdź, czy jest palindromem (czytane od lewej do prawe
 
 Jedna linia:
 
-* `Prawda` — jeśli słowo jest palindromem
-* `Fałsz` — w przeciwnym razie
+* `Prawda` — jeśli słowo jest palindromem,
+* `Fałsz` — w przeciwnym razie.
 
-### Przykład
+### Przykład 1
 
 **Wejście:**
 
@@ -46,30 +48,44 @@ kajak
 Prawda
 ```
 
-### Uwagi o formatowaniu
+### Przykład 2
 
-* Jeśli chcesz ignorować wielkość liter, porównuj wersje `lower()`.
+**Wejście:**
+
+```
+Kotek
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
 
 ---
 
 ## ZAD-02 — Wszystkie permutacje słowa
 
 **Poziom:** ★★☆
-**Tagi:** `rekurencja`, `permutacje`, `backtracking`
+**Tagi:** `napisy`, `permutacje`, `itertools`
 
 ### Treść
 
-Wczytaj słowo z **unikalnych liter** i wypisz wszystkie jego permutacje — każdą w osobnej linii.
+Wczytaj słowo złożone z **niepowtarzających się** liter i wypisz wszystkie jego permutacje (wszystkie słowa, które można ułożyć z jego liter, używając każdej dokładnie raz) — każdą w osobnej linii, w **kolejności alfabetycznej**.
 
 ### Wejście
 
-* 1. linia: słowo (litery nie powtarzają się)
+* 1. linia: słowo złożone z małych liter alfabetu angielskiego (`a`–`z`), litery nie powtarzają się
 
 ### Wyjście
 
-Wiele linii — wszystkie permutacje słowa, każda w osobnej linii.
+Wszystkie permutacje słowa w kolejności alfabetycznej, każda w osobnej linii. Słowo o długości $n$ ma $n!$ permutacji.
 
-### Przykład
+### Ograniczenia
+
+* Długość słowa: od 1 do 6.
+
+### Przykład 1
 
 **Wejście:**
 
@@ -88,20 +104,47 @@ cab
 cba
 ```
 
-### Uwagi o formatowaniu
+### Przykład 2
 
-* Kolejność wypisywania permutacji nie musi być dokładnie taka jak w przykładzie, o ile są wszystkie i bez powtórzeń.
+**Wejście:**
+
+```
+on
+```
+
+**Wyjście:**
+
+```
+no
+on
+```
+
+### Uwagi
+
+* Permutacje wygeneruje za Ciebie funkcja `permutations` z modułu `itertools` (biblioteka standardowa Pythona). Zwraca ona kolejne permutacje jako **krotki** liter — krotka to niezmienna lista zapisywana w nawiasach okrągłych:
+
+  ```python
+  from itertools import permutations
+
+  for krotka in permutations("ab"):
+      print(krotka)            # ('a', 'b'), a potem ('b', 'a')
+      print("".join(krotka))   # ab, a potem ba
+  ```
+
+* `permutations` zachowuje kolejność liter z podanego ciągu, więc jeśli podasz mu litery posortowane alfabetycznie (`sorted(slowo)`), permutacje powstaną od razu w kolejności alfabetycznej. Możesz też posortować gotową listę wyników.
+* Samodzielne generowanie permutacji (rekurencją) przećwiczysz w rozdziale o rekurencji.
 
 ---
 
 ## ZAD-03 — Czy dwa słowa są anagramami?
 
 **Poziom:** ★☆☆
-**Tagi:** `anagram`, `sortowanie`, `zliczanie`
+**Tagi:** `napisy`, `anagram`, `sortowanie`
 
 ### Treść
 
-Wczytaj dwa słowa i sprawdź, czy są anagramami (czy da się utworzyć jedno przez przestawienie liter drugiego).
+Wczytaj dwa słowa i sprawdź, czy są anagramami, czyli czy jedno da się utworzyć przez przestawienie liter drugiego (każda litera musi wystąpić w obu słowach tyle samo razy).
+Wielkość liter nie ma znaczenia. Słowo jest też anagramem samego siebie.
 
 ### Wejście
 
@@ -112,8 +155,8 @@ Wczytaj dwa słowa i sprawdź, czy są anagramami (czy da się utworzyć jedno p
 
 Jedna linia:
 
-* `Prawda` — jeśli anagramy
-* `Fałsz` — jeśli nie
+* `Prawda` — jeśli słowa są anagramami,
+* `Fałsz` — w przeciwnym razie.
 
 ### Przykład
 
@@ -132,61 +175,69 @@ Prawda
 
 ### Uwagi
 
-* Najprościej: porównaj posortowane litery albo słowniki zliczeń znaków.
+* Najprościej porównać posortowane litery obu słów (np. `sorted(s1.lower())`) albo liczbę wystąpień każdej litery.
 
 ---
 
 ## ZAD-04 — Palindromy w zdaniu
 
 **Poziom:** ★★☆
-**Tagi:** `string`, `tokenizacja`, `palindrom`
+**Tagi:** `napisy`, `palindrom`, `słowa`
 
 ### Treść
 
-Wczytaj zdanie i wypisz wszystkie słowa, które są palindromami.
-Ignoruj wielkość liter przy sprawdzaniu.
+Wczytaj zdanie i wypisz wszystkie jego słowa, które są palindromami. Przy sprawdzaniu ignoruj wielkość liter.
+Słowa wyznaczaj zgodnie z konwencją rozdziału (bez interpunkcji z brzegów). Pojedyncza litera też jest palindromem.
 
 ### Wejście
 
-* 1. linia: zdanie (może zawierać spacje i znaki interpunkcyjne)
+* 1. linia: zdanie (może zawierać znaki interpunkcyjne)
 
 ### Wyjście
 
-Każdy znaleziony palindrom w osobnej linii, w kolejności występowania w zdaniu.
+Każde słowo będące palindromem w osobnej linii, w kolejności występowania w zdaniu i w postaci z wejścia (bez interpunkcji z brzegów). Słowo, które powtarza się w zdaniu, wypisz tyle razy, ile razy występuje. Jeśli w zdaniu nie ma palindromów, program nic nie wypisuje.
 
-### Przykład
+### Przykład 1
 
 **Wejście:**
 
 ```
-Tata zabrał kajak na wycieczkę i uderzył się w oko
+Anna zabrała kajak na wycieczkę i uderzyła się w oko.
 ```
 
 **Wyjście:**
 
 ```
-Tata
+Anna
 kajak
 i
 w
 oko
 ```
 
-### Uwagi o formatowaniu
+`Anna` jest palindromem, bo po zamianie na małe litery daje `anna`; z `oko.` usuwamy kropkę.
 
-* Traktuj „słowo” jako ciąg liter/cyfr po usunięciu interpunkcji z brzegów (np. `kara.` → `kara`).
-* Porównuj w wersji `lower()`, ale wypisz w oryginalnym brzmieniu z wejścia (tak jak w przykładzie).
+### Przykład 2
+
+**Wejście:**
+
+```
+Hello world
+```
+
+**Wyjście:** *(brak)*
 
 ---
 
 ## ZAD-05 — Anagramy słowa w zdaniu
 
 **Poziom:** ★★☆
-**Tagi:** `anagram`, `string`, `zliczanie`
+**Tagi:** `napisy`, `anagram`, `słowa`
 
 ### Treść
 
-Wczytaj zdanie oraz słowo-klucz. Wypisz wszystkie słowa ze zdania, które są anagramami słowa-klucza (ignoruj wielkość liter).
+Wczytaj zdanie oraz słowo-klucz `k`. Wypisz wszystkie słowa zdania, które są anagramami słowa `k` (także samo słowo `k`). Przy porównywaniu ignoruj wielkość liter.
+Słowa wyznaczaj zgodnie z konwencją rozdziału (bez interpunkcji z brzegów).
 
 ### Wejście
 
@@ -195,14 +246,14 @@ Wczytaj zdanie oraz słowo-klucz. Wypisz wszystkie słowa ze zdania, które są 
 
 ### Wyjście
 
-Każde słowo ze zdania będące anagramem `k` — w osobnej linii (w kolejności występowania).
+Każde słowo zdania będące anagramem `k` w osobnej linii, w kolejności występowania i w postaci z wejścia. Jeśli takich słów nie ma, program nic nie wypisuje.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-Sroga kara.
+Sroga kara, a potem raka.
 arak
 ```
 
@@ -210,33 +261,37 @@ arak
 
 ```
 kara
+raka
 ```
 
 ### Uwagi
 
-* Tak jak wyżej: usuń interpunkcję z brzegów słów.
-* Porównuj np. posortowane litery w `lower()`.
+* Wykorzystaj rozwiązanie zadania ZAD-03: porównuj posortowane litery słów zapisanych małymi literami.
 
 ---
 
 ## ZAD-06 — Permutacje słowa, które są palindromami
 
 **Poziom:** ★★☆
-**Tagi:** `palindrom`, `permutacje`, `multiset`
+**Tagi:** `napisy`, `palindrom`, `permutacje`
 
 ### Treść
 
-Wczytaj słowo i wypisz wszystkie **unikalne** palindromy, które są jego permutacjami.
+Wczytaj słowo i wypisz wszystkie **różne** palindromy, które można ułożyć z jego liter (używając każdej litery dokładnie tyle razy, ile razy występuje w słowie).
 
 ### Wejście
 
-* 1. linia: słowo (litery mogą się powtarzać)
+* 1. linia: słowo złożone z małych liter alfabetu angielskiego (`a`–`z`); litery mogą się powtarzać
 
 ### Wyjście
 
-Każdy unikalny palindrom w osobnej linii. Jeśli nie istnieje żaden — puste wyjście.
+Każdy palindrom w osobnej linii, bez powtórzeń, w **kolejności alfabetycznej**. Jeśli z liter słowa nie da się ułożyć żadnego palindromu, program nic nie wypisuje.
 
-### Przykład
+### Ograniczenia
+
+* Długość słowa: od 1 do 10.
+
+### Przykład 1
 
 **Wejście:**
 
@@ -251,33 +306,42 @@ abba
 baab
 ```
 
+### Przykład 2
+
+**Wejście:**
+
+```
+abc
+```
+
+**Wyjście:** *(brak)*
+
 ### Uwagi
 
-* Najpierw sprawdź warunek istnienia palindromu z liter: co najwyżej jeden znak może mieć nieparzystą liczbę wystąpień.
-* Generuj palindromy z połówek (bez wypisywania duplikatów).
+* Palindrom da się ułożyć tylko wtedy, gdy co najwyżej jedna litera występuje nieparzystą liczbę razy (ta litera trafia na środek).
+* Wystarczy wygenerować permutacje „połówki” palindromu (po połowie wystąpień każdej litery, np. funkcją `permutations` z zadania ZAD-02) i do każdej dokleić środek oraz odwróconą połówkę. Gdy litery się powtarzają, `permutations` zwraca te same układy wielokrotnie — powtórzenia usuniesz, zbierając wyniki w zbiorze (`set`).
 
 ---
 
 ## ZAD-07 — Minimalna liczba usunięć, aby uzyskać anagramy
 
-**Poziom:** ★★★
-**Tagi:** `anagram`, `zliczanie`, `greedy`
+**Poziom:** ★★☆
+**Tagi:** `napisy`, `anagram`, `zliczanie`
 
 ### Treść
 
-Wczytaj dwa słowa. Jeśli mają różne długości, wypisz `-1`.
-W przeciwnym razie oblicz minimalną liczbę znaków, które trzeba usunąć (łącznie z obu słów), aby pozostałe napisy były anagramami.
+Wczytaj dwa słowa (mogą mieć różne długości). Oblicz, ile **łącznie** znaków trzeba co najmniej usunąć z obu słów, aby pozostałe napisy były anagramami (pozostałe napisy mogą też być puste).
 
 ### Wejście
 
-* 1. linia: słowo `s1`
-* 2. linia: słowo `s2`
+* 1. linia: słowo `s1` (małe litery)
+* 2. linia: słowo `s2` (małe litery)
 
 ### Wyjście
 
-* jedna liczba całkowita: minimalna liczba usunięć lub `-1`
+Jedna linia: minimalna łączna liczba usuniętych znaków.
 
-### Przykład
+### Przykład 1
 
 **Wejście:**
 
@@ -292,34 +356,52 @@ razynax
 2
 ```
 
+Z pierwszego słowa usuwamy `g`, z drugiego `x` — zostają anagramy `razyna` i `razyna`.
+
+### Przykład 2
+
+**Wejście:**
+
+```
+kajak
+ak
+```
+
+**Wyjście:**
+
+```
+3
+```
+
+Z `kajak` usuwamy `k`, `j` i `a` — zostaje `ka`, które jest anagramem `ak`. Z `ak` nic nie usuwamy.
+
 ### Uwagi
 
-* Dla tej samej długości: policz zliczenia liter i zsumuj wartości `abs(c1[lit] - c2[lit])`, a wynik wypisz jako tę sumę. (To jest łączna liczba usunięć.)
+* Dla każdej litery policz, ile razy występuje w `s1` (np. `s1.count(litera)`) i ile w `s2`. Nadmiarowe wystąpienia trzeba usunąć, więc wynik to suma wartości $|c_1 - c_2|$ po wszystkich literach występujących w którymkolwiek słowie (np. po literach zbioru `set(s1 + s2)`).
 
 ---
 
 ## ZAD-08 — Wyjątkowe palindromy (podciągi bez zmiany kolejności)
 
 **Poziom:** ★★★
-**Tagi:** `substring`, `palindrom`, `unikalność`
+**Tagi:** `napisy`, `palindrom`, `podnapisy`
 
 ### Treść
 
-Wczytaj słowo i znajdź wszystkie **unikalne** palindromy, które można z niego utworzyć jako **spójne podciągi** (substringi), bez zmiany kolejności znaków, spełniające warunek „wyjątkowości”:
+Wczytaj słowo i znajdź wszystkie **różne** wyjątkowe palindromy, które są jego **spójnymi fragmentami** (podnapisami, czyli kolejnymi znakami słowa, np. `slowo[i:j]`).
 
-1. wszystkie znaki są identyczne (np. `aaa`), **albo**
-2. wszystkie znaki poza środkowym są identyczne (np. `cbc`).
+Fragment jest **wyjątkowym palindromem**, jeśli:
 
-Pojedynczy znak też jest wyjątkowym palindromem.
+1. wszystkie jego znaki są identyczne (np. `a`, `aaa`), **albo**
+2. ma nieparzystą długość, a wszystkie jego znaki poza środkowym są identyczne (np. `cbc`, `aabaa`).
 
 ### Wejście
 
-* 1. linia: słowo (litery)
+* 1. linia: słowo złożone z małych liter
 
 ### Wyjście
 
-Każdy unikalny wyjątkowy palindrom w osobnej linii.
-Jeśli nic poza pojedynczymi znakami nie pasuje, wypisz tylko te unikalne znaki (po jednej linii na znak).
+Każdy wyjątkowy palindrom w osobnej linii, bez powtórzeń. Kolejność: od najkrótszych do najdłuższych, a palindromy tej samej długości — alfabetycznie.
 
 ### Przykład
 
@@ -333,14 +415,15 @@ xxyxx
 
 ```
 x
-xx
-xxx
-xxyxx
 y
-yxy
+xx
+xyx
+xxyxx
 ```
 
-### Uwagi o formatowaniu
+Fragmenty `xxy`, `xyxx` itp. nie są wyjątkowymi palindromami. Palindrom `xx` występuje w słowie dwa razy, ale wypisujemy go raz.
 
-* Usuń duplikaty w wyniku (np. ten sam palindrom znaleziony w kilku miejscach wypisz raz).
-* Kolejność wypisywania może być zgodna z pierwszym pojawieniem się w tekście (łatwe i czytelne): wypisuj przy pierwszym znalezieniu danego palindromu.
+### Uwagi
+
+* Sprawdź wszystkie fragmenty `slowo[i:j]`, a pasujące zbierz w zbiorze (`set`), żeby usunąć powtórzenia.
+* Wymaganą kolejność uzyskasz, przechodząc po długościach od 1 do długości słowa i dla każdej długości wypisując alfabetycznie (`sorted`) znalezione palindromy tej długości.

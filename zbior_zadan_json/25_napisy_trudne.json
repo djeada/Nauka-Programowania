@@ -1,7 +1,7 @@
 {
   "file": "25_napisy_trudne.md",
-  "chapter_title": "Rozdział: Napisy — zadania dodatkowe",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli wejściem jest „napis” — wczytaj całą linię (razem ze spacjami), o ile zadanie nie mówi inaczej.\n* Wypisuj dokładnie to, co wynika z polecenia: jeden napis / `Prawda` / `Fałsz` / lista.\n* Wielkość liter ma znaczenie, jeśli nie napisano inaczej.\n* Dla list w wyjściu przyjmujemy zapis w stylu Pythona, np. `['a', 'b']`, jeśli zadanie mówi „lista”.",
+  "chapter_title": "Rozdział 25: Napisy — zadania dodatkowe",
+  "chapter_description": "Trudniejsze zadania na napisach: samodzielna zamiana i usuwanie fragmentów, przedrostki, kodowanie RLE, rotacje, szukanie najdłuższych powtórzeń i wspólnych fragmentów (programowanie dynamiczne) oraz sprawdzanie nawiasów za pomocą stosu. Spróbuj rozwiązywać je własnymi pętlami, bez gotowych metod w rodzaju `replace` czy `startswith` — właśnie o to w nich chodzi.\n\n**Konwencje wspólne:**\n\n* Każde zadanie to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.\n* Program nie wypisuje komunikatów typu „Podaj napis:”. Tekst podany w `input(\"…\")` jest ignorowany przez sprawdzarkę.\n* Każdy napis zajmuje jedną całą linię wejścia, razem ze spacjami — wczytuj go przez `input()`, bez `strip()` i `split()`.\n* Wielkość liter ma znaczenie (`A` i `a` to różne znaki), a spacja też jest znakiem.\n* **Podnapis** to ciągły fragment napisu, np. `kot` jest podnapisem `kotlet`, a `ket` — nie.\n* Pozycje znaków (indeksy) liczymy od `0`, tak jak w Pythonie.\n* Odpowiedzi logiczne wypisuj jako `Prawda` albo `Fałsz` (o ile zadanie nie mówi inaczej).",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -14,27 +14,57 @@
         "replace",
         "substring"
       ],
-      "description": "Masz trzy napisy:\n\n1. Zdanie (tekst do modyfikacji),\n2. Słowo A (podnapis do znalezienia),\n3. Słowo B (podnapis zastępujący).\n\nZamień **wszystkie wystąpienia** słowa/podnapisu **A** na **B** w podanym zdaniu.\n\n> Uwaga: A może być częścią innych słów — zamiana dotyczy **każdego wystąpienia podnapisu**.",
-      "input": "* 1 linia: zdanie `S`\n* 2 linia: napis `A`\n* 3 linia: napis `B`",
-      "output": "* 1 linia: zdanie po zamianie",
+      "description": "Otrzymujesz zdanie `S` oraz dwa napisy `A` i `B`. Zamień **wszystkie wystąpienia** napisu `A` w zdaniu na napis `B`. `A` może być częścią dłuższych słów — zamieniamy każde wystąpienie podnapisu.\n\nWystąpienia szukamy od lewej do prawej. Po każdej zamianie szukanie trwa dalej **za zamienionym fragmentem**, więc wystąpienia nie nakładają się na siebie, a wstawiony napis `B` nie jest ponownie przeszukiwany. Na przykład w `aaa` zamiana `aa` na `b` daje `ba`, a w `ab` zamiana `a` na `aa` daje `aab`.",
+      "input": "* 1. linia: zdanie `S`\n* 2. linia: napis `A` (szukany)\n* 3. linia: napis `B` (wstawiany)",
+      "output": "Jedna linia: zdanie po zamianie.",
       "examples": [
         {
           "input": "Lezy jezy na wiezy\nzy\nrzy",
-          "output": "Lerzy jerzy na wierzy"
+          "output": "Lerzy jerzy na wierzy",
+          "explanation": ""
         }
       ],
       "testcases": [
+        {
+          "input": "kot ma kotlet\nkot\npies",
+          "output": "pies ma pieslet"
+        },
         {
           "input": "hello hello\nlo\nX",
           "output": "helX helX"
         },
         {
-          "input": "abc ab abc\nab\nX",
-          "output": "Xc X Xc"
+          "input": "aaaa\naa\nb",
+          "output": "bb"
+        },
+        {
+          "input": "aaa\naa\nb",
+          "output": "ba"
+        },
+        {
+          "input": "ab\na\naa",
+          "output": "aab"
+        },
+        {
+          "input": "Kot i kot\nkot\npies",
+          "output": "Kot i pies"
+        },
+        {
+          "input": "abc\nx\ny",
+          "output": "abc"
+        },
+        {
+          "input": "abc\nabc\nXYZ",
+          "output": "XYZ"
+        },
+        {
+          "input": "ala ma kota\na m\n_",
+          "output": "al_a kota"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ |S| ≤ 1000`\n* `1 ≤ |A|, |B| ≤ 100` (żaden z napisów nie jest pusty)",
+      "notes": "* Spróbuj nie używać metody `replace`: przechodź po zdaniu indeksem `i` i sprawdzaj, czy w tym miejscu zaczyna się `A` (np. porównując wycinek `S[i:i + len(A)]` z `A`). Jeśli tak — dopisz do wyniku `B` i przeskocz o `len(A)` znaków; jeśli nie — dopisz bieżący znak i przejdź o jeden dalej.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -47,13 +77,14 @@
         "replace",
         "substring"
       ],
-      "description": "Dostajesz dwa napisy:\n\n1. Napis główny,\n2. Podnapis do usunięcia.\n\nUsuń **wszystkie wystąpienia** podnapisu z napisu głównego.",
-      "input": "* 1 linia: napis `S`\n* 2 linia: napis `T` (do usunięcia)",
-      "output": "* 1 linia: wynikowy napis po usunięciu wszystkich wystąpień",
+      "description": "Otrzymujesz napis `S` i napis `T`. Usuń z `S` **wszystkie wystąpienia** podnapisu `T`.\n\nWystąpienia szukamy od lewej do prawej, a usuwanie wykonujemy **jednokrotnie** (jednym przejściem): fragmenty, które dopiero po usunięciu „skleją się” w nowe wystąpienie `T`, zostają. Na przykład usunięcie `ab` z `aabb` daje `ab`, a usunięcie `aa` z `aaa` daje `a`.",
+      "input": "* 1. linia: napis `S`\n* 2. linia: napis `T` (do usunięcia)",
+      "output": "Jedna linia: napis po usunięciu wszystkich wystąpień `T`. Jeśli nic nie zostało, wypisz pustą linię.",
       "examples": [
         {
           "input": "Lezy jezy na wiezy\nzy",
-          "output": "Le je na wie"
+          "output": "Le je na wie",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -64,28 +95,50 @@
         {
           "input": "aaaa\naa",
           "output": ""
+        },
+        {
+          "input": "aabb\nab",
+          "output": "ab"
+        },
+        {
+          "input": "aaa\naa",
+          "output": "a"
+        },
+        {
+          "input": "Ala ma kota\nxyz",
+          "output": "Ala ma kota"
+        },
+        {
+          "input": "Kot kot KOT\nkot",
+          "output": "Kot  KOT"
+        },
+        {
+          "input": "abcabcab\nabc",
+          "output": "ab"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ |S| ≤ 1000`\n* `1 ≤ |T| ≤ 100`",
+      "notes": "* To samo przejście co w poprzednim zadaniu, tylko zamiast wstawiać nowy napis — po prostu przeskakujesz znalezione wystąpienie.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-03",
       "slug": "25_napisy_trudne/ZAD-03",
       "title": "Czy napis A jest początkiem napisu B?",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
         "string",
         "prefix"
       ],
-      "description": "Otrzymujesz dwa napisy:\n\n1. Napis `A` — potencjalny przedrostek,\n2. Napis `B` — napis testowany.\n\nSprawdź, czy `B` **zaczyna się** od `A`.",
-      "input": "* 1 linia: `A`\n* 2 linia: `B`",
-      "output": "* 1 linia: `Prawda` albo `Fałsz`",
+      "description": "Otrzymujesz napisy `A` i `B`. Sprawdź, czy `B` **zaczyna się** od `A`, czyli czy `A` jest przedrostkiem `B`. Każdy napis jest swoim własnym przedrostkiem, a napis dłuższy od `B` nie może być jego przedrostkiem.",
+      "input": "* 1. linia: napis `A`\n* 2. linia: napis `B`",
+      "output": "`Prawda`, jeśli `B` zaczyna się od `A`, w przeciwnym razie `Fałsz`.",
       "examples": [
         {
           "input": "Dino\nDinozaur jest zly",
-          "output": "Prawda"
+          "output": "Prawda",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -96,96 +149,114 @@
         {
           "input": "abc\nab",
           "output": "Fałsz"
-        }
-      ],
-      "constraints": "",
-      "notes": ""
-    },
-    {
-      "id": "ZAD-04",
-      "slug": "25_napisy_trudne/ZAD-04",
-      "title": "Usuń powtórzenia znaków",
-      "difficulty": 3,
-      "difficulty_display": "★★★",
-      "tags": [
-        "string",
-        "set",
-        "unique",
-        "kolejność"
-      ],
-      "description": "Otrzymujesz napis. Usuń wszystkie powtórzenia znaków tak, aby **każdy znak wystąpił tylko raz**, zachowując **kolejność pierwszych wystąpień**.",
-      "input": "* 1 linia: napis `S`",
-      "output": "* 1 linia: napis z unikalnymi znakami",
-      "examples": [
-        {
-          "input": "AAAAAAAAAABBBBBBBBA",
-          "output": "AB"
-        }
-      ],
-      "testcases": [
-        {
-          "input": "abac",
-          "output": "abc"
         },
         {
-          "input": "aaaa",
-          "output": "a"
+          "input": "kot\nkot",
+          "output": "Prawda"
+        },
+        {
+          "input": "dino\nDinozaur",
+          "output": "Fałsz"
+        },
+        {
+          "input": "Ala m\nAla ma kota",
+          "output": "Prawda"
+        },
+        {
+          "input": "abd\nabcde",
+          "output": "Fałsz"
+        },
+        {
+          "input": "zaur\nDinozaur",
+          "output": "Fałsz"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ |A|, |B| ≤ 1000`",
+      "notes": "* Spróbuj porównywać znaki w pętli, bez metody `startswith`. Pamiętaj, żeby najpierw sprawdzić długości — inaczej przy `A` dłuższym od `B` wyjdziesz poza zakres napisu.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05",
       "slug": "25_napisy_trudne/ZAD-05",
-      "title": "Usuń powtórzenia sąsiadujących znaków",
-      "difficulty": 3,
-      "difficulty_display": "★★★",
+      "title": "Kodowanie długości serii (RLE)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
       "tags": [
         "string",
         "compress",
         "run-length"
       ],
-      "description": "Otrzymujesz napis. Usuń powtórzenia znaków występujących **bezpośrednio obok siebie**, pozostawiając jedno wystąpienie z każdej „serii”.",
-      "input": "* 1 linia: napis `S`",
-      "output": "* 1 linia: napis po redukcji sąsiadów",
+      "description": "**Kodowanie długości serii** (ang. *run-length encoding*, RLE) to prosta metoda kompresji. Każdą **serię** jednakowych znaków stojących bezpośrednio obok siebie zapisujemy jako ten znak, a zaraz po nim liczbę jego powtórzeń (w zapisie dziesiętnym, więc może mieć kilka cyfr). Na przykład `aaabcc` koduje się jako `a3b1c2`, a dwanaście liter `x` pod rząd — jako `x12`.\n\nZakoduj podany napis metodą RLE. Ten sam znak może tworzyć kilka oddzielnych serii — każdą kodujemy osobno.",
+      "input": "Jedna linia: napis `S` złożony wyłącznie z liter alfabetu angielskiego (wielkość liter ma znaczenie).",
+      "output": "Jedna linia: zakodowany napis.",
       "examples": [
         {
           "input": "AAAAAAAAAABBBBBBBBA",
-          "output": "ABA"
+          "output": "A10B8A1",
+          "explanation": "Napis składa się z trzech serii: dziesięciu liter `A`, ośmiu liter `B` i jednej litery `A`."
         }
       ],
       "testcases": [
         {
           "input": "aaabbbcca",
-          "output": "abca"
+          "output": "a3b3c2a1"
         },
         {
-          "input": "ab",
-          "output": "ab"
+          "input": "x",
+          "output": "x1"
+        },
+        {
+          "input": "zzzzzz",
+          "output": "z6"
+        },
+        {
+          "input": "abc",
+          "output": "a1b1c1"
+        },
+        {
+          "input": "Mississippi",
+          "output": "M1i1s2i1s2i1p2i1"
+        },
+        {
+          "input": "aAaA",
+          "output": "a1A1a1A1"
+        },
+        {
+          "input": "abba",
+          "output": "a1b2a1"
+        },
+        {
+          "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+          "output": "a120b1"
+        },
+        {
+          "input": "bcccccaaaaccccccaaaaaabbbbaaabbaaacaccbbaaaaabccaaaccaaaaccccccccaaaabbbbaaaaaaaaaacbcccccccccbbcaaaabbbbcbbbcccccbbaaaaaacccacccaaaaacccccccbaaaccccaaabbcccaacccbaaaacccaaacbbbbbbbbbcbbbbbcccbbbbcbbabbbbaabbbaaaabbbbbbbccccccaaaacccccccaa",
+          "output": "b1c5a4c6a6b4a3b2a3c1a1c2b2a5b1c2a3c2a4c8a4b4a10c1b1c9b2c1a4b4c1b3c5b2a6c3a1c3a5c7b1a3c4a3b2c3a2c3b1a4c3a3c1b9c1b5c3b4c1b2a1b4a2b3a4b7c6a4c7a2"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ |S| ≤ 1000`",
+      "notes": "* Przechodź po napisie i licz, ile razy z rzędu powtarza się bieżący znak. Gdy seria się kończy (następny znak jest inny albo napis się skończył), dopisz do wyniku znak i licznik zamieniony na napis (`str(licznik)`).",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06",
       "slug": "25_napisy_trudne/ZAD-06",
       "title": "Rotacje napisów",
-      "difficulty": 3,
-      "difficulty_display": "★★★",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
       "tags": [
         "string",
         "rotation",
         "substring"
       ],
-      "description": "Otrzymujesz dwa napisy `A` i `B`. Sprawdź, czy jeden z nich jest **rotacją** drugiego (mają tę samą długość i da się uzyskać jeden przez przesunięcie cykliczne drugiego).",
-      "input": "* 1 linia: napis `A`\n* 2 linia: napis `B`",
-      "output": "* 1 linia: `Prawda` albo `Fałsz`",
+      "description": "Otrzymujesz dwa napisy `A` i `B`. Sprawdź, czy `B` jest **rotacją** (przesunięciem cyklicznym) napisu `A`, czyli czy da się go otrzymać, przenosząc pewną liczbę początkowych znaków `A` (być może zero) na koniec. Na przykład rotacjami napisu `abcd` są `abcd`, `bcda`, `cdab` i `dabc`.\n\nNapisy różnej długości nigdy nie są swoimi rotacjami, a każdy napis jest rotacją samego siebie.",
+      "input": "* 1. linia: napis `A`\n* 2. linia: napis `B`",
+      "output": "`Prawda`, jeśli `B` jest rotacją `A`, w przeciwnym razie `Fałsz`.",
       "examples": [
         {
           "input": "malpka\npkamal",
-          "output": "Prawda"
+          "output": "Prawda",
+          "explanation": "`pkamal` powstaje z `malpka` przez przeniesienie początkowych `mal` na koniec."
         }
       ],
       "testcases": [
@@ -196,43 +267,115 @@
         {
           "input": "abcd\nacbd",
           "output": "Fałsz"
+        },
+        {
+          "input": "abc\nabcd",
+          "output": "Fałsz"
+        },
+        {
+          "input": "aaaa\naaaa",
+          "output": "Prawda"
+        },
+        {
+          "input": "kot\nkot",
+          "output": "Prawda"
+        },
+        {
+          "input": "abab\nbaba",
+          "output": "Prawda"
+        },
+        {
+          "input": "aab\nabb",
+          "output": "Fałsz"
+        },
+        {
+          "input": "Kajak\nkKaja",
+          "output": "Prawda"
+        },
+        {
+          "input": "Kajak\nkajak",
+          "output": "Fałsz"
+        },
+        {
+          "input": "baabaabababbbbbaaaabaaababaabaabbaabbbaabbbbabaaaababaabaaaaabbabbaaabbaaaabbbababbabaaabaaaaaaabbaababbbbbbaaaababaababaabaaabaaaabbbaabbbaaaaaabbaabaabaaaaaababaabbaabbbbababbabbababaabbaabbbbbbbaaaaabbabbbbbbabbbaaaababaabababbababaabbaababaababaaabbbbbababaaabbbbbababbabaabbaaaaabbaaababbabbaaaabbaabaabaaabbbbbbaabbaabbbbaaabbabbbbaaabaaaababaaababbbabaabaaabbababbaabaaaabbaaaabaaababaaabbaaabbaaababababbbaaaabbbbaaabaaabbbaabbbaababbbbbabbaabababaababbbababbaaaabababbbbaaaaaabbabbbbaabbabaabaaabababbbabbbababaabaaaababababbbbabababaaabaababbaabaaaaabaababbabbbbbbbabbaabaabbaaaabaabaabababbabbbaabaaabaaabbbaaabbababbaaaabbabbbbabaabaabbabbaababbbbbaaababaabaabaabbbabbbbbbabaabbababbbababbbabbbabaaaabaaabaaabbabaaaaabbbaababbbababbabbbaabbbbabbabaabababbaabababbbaababbbbbbbbaaababbaaaba\nabaabaaaababababbbbabababaaabaababbaabaaaaabaababbabbbbbbbabbaabaabbaaaabaabaabababbabbbaabaaabaaabbbaaabbababbaaaabbabbbbabaabaabbabbaababbbbbaaababaabaabaabbbabbbbbbabaabbababbbababbbabbbabaaaabaaabaaabbabaaaaabbbaababbbababbabbbaabbbbabbabaabababbaabababbbaababbbbbbbbaaababbaaababaabaabababbbbbaaaabaaababaabaabbaabbbaabbbbabaaaababaabaaaaabbabbaaabbaaaabbbababbabaaabaaaaaaabbaababbbbbbaaaababaababaabaaabaaaabbbaabbbaaaaaabbaabaabaaaaaababaabbaabbbbababbabbababaabbaabbbbbbbaaaaabbabbbbbbabbbaaaababaabababbababaabbaababaababaaabbbbbababaaabbbbbababbabaabbaaaaabbaaababbabbaaaabbaabaabaaabbbbbbaabbaabbbbaaabbabbbbaaabaaaababaaababbbabaabaaabbababbaabaaaabbaaaabaaababaaabbaaabbaaababababbbaaaabbbbaaabaaabbbaabbbaababbbbbabbaabababaababbbababbaaaabababbbbaaaaaabbabbbbaabbabaabaaabababbbabbbab",
+          "output": "Prawda"
+        },
+        {
+          "input": "baabaabababbbbbaaaabaaababaabaabbaabbbaabbbbabaaaababaabaaaaabbabbaaabbaaaabbbababbabaaabaaaaaaabbaababbbbbbaaaababaababaabaaabaaaabbbaabbbaaaaaabbaabaabaaaaaababaabbaabbbbababbabbababaabbaabbbbbbbaaaaabbabbbbbbabbbaaaababaabababbababaabbaababaababaaabbbbbababaaabbbbbababbabaabbaaaaabbaaababbabbaaaabbaabaabaaabbbbbbaabbaabbbbaaabbabbbbaaabaaaababaaababbbabaabaaabbababbaabaaaabbaaaabaaababaaabbaaabbaaababababbbaaaabbbbaaabaaabbbaabbbaababbbbbabbaabababaababbbababbaaaabababbbbaaaaaabbabbbbaabbabaabaaabababbbabbbababaabaaaababababbbbabababaaabaababbaabaaaaabaababbabbbbbbbabbaabaabbaaaabaabaabababbabbbaabaaabaaabbbaaabbababbaaaabbabbbbabaabaabbabbaababbbbbaaababaabaabaabbbabbbbbbabaabbababbbababbbabbbabaaaabaaabaaabbabaaaaabbbaababbbababbabbbaabbbbabbabaabababbaabababbbaababbbbbbbbaaababbaaaba\nabaabaaaababababbbbabababaaabaababbaabaaaaabaababbabbbbbbbabbaabaabbaaaabaabaabababbabbbaabaaabaaabbbaaabbababbaaaabbabbbbabaabaabbabbaababbbbbaaababaabaabaabbbabbbbbbabaabbababbbababbbabbbabaaaabaaabaaabbabaaaaabbbaababbbababbabbbaabbbbabbabaabababbaabababbbaababbbbbbbbaaababbaaababaabaabababbbbbaababaaababaabaabbaabbbaabbbbabaaaababaabaaaaabbabbaaabbaaaabbbababbabaaabaaaaaaabbaababbbbbbaaaababaababaabaaabaaaabbbaabbbaaaaaabbaabaabaaaaaababaabbaabbbbababbabbababaabbaabbbbbbbaaaaabbabbbbbbabbbaaaababaabababbababaabbaababaababaaabbbbbababaaabbbbbababbabaabbaaaaabbaaababbabbaaaabbaabaabaaabbbbbbaabbaabbbbaaabbabbbbaaabaaaababaaababbbabaabaaabbababbaabaaaabbaaaabaaababaaabbaaabbaaababababbbaaaabbbbaaabaaabbbaabbbaababbbbbabbaabababaababbbababbaaaabababbbbaaaaaabbabbbbaabbabaabaaabababbbabbbab",
+          "output": "Fałsz"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ |A|, |B| ≤ 1000`",
+      "notes": "* Każda rotacja `A` jest podnapisem napisu `A + A`. Wystarczy więc porównać długości i sprawdzić, czy `B` występuje w `A + A`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07",
       "slug": "25_napisy_trudne/ZAD-07",
-      "title": "Powtarzające się podnapisy",
+      "title": "Najdłuższy powtarzający się podnapis",
       "difficulty": 3,
       "difficulty_display": "★★★",
       "tags": [
         "string",
         "substrings",
-        "count"
+        "dp"
       ],
-      "description": "Otrzymujesz napis. Znajdź wszystkie **podnapisy**, które występują w nim **więcej niż jeden raz**.",
-      "input": "* 1 linia: napis `S`",
-      "output": "* 1 linia: lista napisów — wszystkie powtarzające się podnapisy",
+      "description": "Otrzymujesz napis. Znajdź **najdłuższy podnapis, który występuje w nim co najmniej dwa razy**. Wystąpienia mogą na siebie nachodzić — na przykład w napisie `aaaa` podnapis `aaa` występuje dwa razy (od indeksu 0 i od indeksu 1).\n\n* Jeśli kilka różnych podnapisów ma tę samą, maksymalną długość — wypisz ten, którego **pierwsze wystąpienie zaczyna się najwcześniej**.\n* Jeśli żaden znak się nie powtarza (nie ma powtarzającego się podnapisu) — wypisz pustą linię.",
+      "input": "Jedna linia: napis `S`.",
+      "output": "Jedna linia: najdłuższy powtarzający się podnapis albo pusta linia.",
       "examples": [
         {
           "input": "pythonpython",
-          "output": "['python']"
+          "output": "python",
+          "explanation": ""
+        },
+        {
+          "input": "cdabxabycd",
+          "output": "cd",
+          "explanation": "Podnapisy `cd` i `ab` powtarzają się i oba mają długość 2, ale `cd` występuje po raz pierwszy wcześniej (od indeksu 0), a `ab` — dopiero od indeksu 2."
         }
       ],
       "testcases": [
         {
-          "input": "aa",
-          "output": "['a']"
+          "input": "abcdef",
+          "output": ""
         },
         {
-          "input": "abca",
-          "output": "['a']"
+          "input": "aaaa",
+          "output": "aaa"
+        },
+        {
+          "input": "abcabcabc",
+          "output": "abcabc"
+        },
+        {
+          "input": "98432934021742343230",
+          "output": "432"
+        },
+        {
+          "input": "Arnold i Arnold",
+          "output": "Arnold"
+        },
+        {
+          "input": "efcdcdef",
+          "output": "ef"
+        },
+        {
+          "input": "x",
+          "output": ""
+        },
+        {
+          "input": "aa",
+          "output": "a"
+        },
+        {
+          "input": "bbbbbbabbbbbbaabbbabaabaaababbabaaabbaababbbbbabbabbaababbbaabbbbaababbaababbbabaaabbbaaaabbaabaababbbaaaababaabbaabaabbabbbbaabaabaabbabaabbaaabbbbbbaaabaabaaababaaaaaabbbabaabbababbbbaaaababaabaabaaaaabaaabbbbbbbbabbbaaaaabababbaaabbaaababaaaaabbbbabbbabbababbbbbaabbabaabaaabbabaaababaaaabbabaababaabbbbbaababbaaaaaabaabaaabaaaaababbabababaaaabababbaabbaababaaabaaaabbbabbbbbaaabbbbaaaaaababaaaabbbabaabbabbaabbbabaabaaaaaabaabbaabbbbbaaababbaaabbaaabbbaabaabbaabababbbabbbaaabbaaaababbaababbbbbabbaabbbabbabbaaaabbaaabbbbbaaabbabbaababaaaaaaaaabababaaabaaaaabaaaabaaabaaaaaaabbabbaababbababbabbbbabbbbabaabaaaaaababbababaabbbaaabbbbabbbbaaabaaaaababbbaababaaaabaaabbbbbbbaaaaaabbbababbbabababbabb",
+          "output": "abbaababbbbbabba"
         }
       ],
-      "constraints": "",
-      "notes": "* Jeśli sprawdzarka wymaga konkretnej kolejności (np. rosnąco po długości/alfabetycznie) — musi to być opisane. W przeciwnym razie dopuszczalna może być dowolna kolejność."
+      "constraints": "* `1 ≤ |S| ≤ 1000`",
+      "notes": "* Programowanie dynamiczne: niech `w[i][j]` (dla `i < j`) oznacza długość najdłuższego wspólnego początku fragmentów `S[i:]` i `S[j:]`. Jeśli `S[i] == S[j]`, to `w[i][j] = w[i + 1][j + 1] + 1`, w przeciwnym razie `0`. Wynikiem jest największa wartość w tablicy. Jeśli przeglądasz pary `(i, j)` w kolejności rosnącego `i` i zmieniasz wynik tylko na ściśle dłuższy, remisy rozstrzygną się same. Czas $O(n^2)$.\n* Sprawdzanie każdego podnapisu (jest ich około $n^2/2$) z osobnym wyszukiwaniem w całym napisie daje czas $O(n^3)$ — przy długich napisach to za dużo.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-08",
@@ -245,13 +388,14 @@
         "prefix",
         "list"
       ],
-      "description": "Otrzymujesz listę napisów (w kolejnych liniach). Znajdź najdłuższy przedrostek wspólny dla wszystkich.",
-      "input": "* 1 linia: `n` — liczba napisów\n* kolejne `n` linii: napisy",
-      "output": "* 1 linia: najdłuższy wspólny przedrostek (może być pusty)",
+      "description": "Otrzymujesz `n` napisów. Znajdź ich **najdłuższy wspólny przedrostek**, czyli najdłuższy napis, od którego zaczynają się wszystkie podane napisy. Jeśli napisy nie mają wspólnego przedrostka (np. zaczynają się od różnych liter), wynikiem jest napis pusty — wypisz wtedy pustą linię.",
+      "input": "* 1. linia: `n` — liczba napisów\n* kolejne `n` linii: napisy (każdy w osobnej linii)",
+      "output": "Jedna linia: najdłuższy wspólny przedrostek (albo pusta linia).",
       "examples": [
         {
           "input": "3\nRemolada\nRemux\nRemmy",
-          "output": "Rem"
+          "output": "Rem",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -262,10 +406,39 @@
         {
           "input": "2\ndog\nrace",
           "output": ""
+        },
+        {
+          "input": "1\nsamotny",
+          "output": "samotny"
+        },
+        {
+          "input": "3\ninternet\ninter\ninterval",
+          "output": "inter"
+        },
+        {
+          "input": "4\nabc\nabc\nabc\nabc",
+          "output": "abc"
+        },
+        {
+          "input": "2\nAbc\nabc",
+          "output": ""
+        },
+        {
+          "input": "3\nprogramowanie\nprogram\nprogramista",
+          "output": "program"
+        },
+        {
+          "input": "3\nab\na\nabc",
+          "output": "a"
+        },
+        {
+          "input": "40\nzaawansowane_programowanie_x\nzaawansowane_programowanie_yzxyz\nzaawansowane_programowanie_xyx\nzaawansowane_programowanie_xz\nzaawansowane_programowanie_yzz\nzaawansowane_programowanie_xx\nzaawansowane_programowanie_yyyzyy\nzaawansowane_programowanie_yzxy\nzaawansowane_programowanie_x\nzaawansowane_programowanie_xyxxx\nzaawansowane_programowanie_xyz\nzaawansowane_programowanie_\nzaawansowane_programowanie_yyxz\nzaawansowane_programowanie_\nzaawansowane_programowanie_\nzaawansowane_programowanie_yxxz\nzaawansowane_programowanie_x\nzaawansowane_programowanie\nzaawansowane_programowanie_yxz\nzaawansowane_programowanie_zxzzzz\nzaawansowane_programowanie_y\nzaawansowane_programowanie_zzy\nzaawansowane_programowanie_zx\nzaawansowane_programowanie_zzy\nzaawansowane_programowanie_\nzaawansowane_programowanie_zzyxx\nzaawansowane_programowanie_\nzaawansowane_programowanie_z\nzaawansowane_programowanie_\nzaawansowane_programowanie_x\nzaawansowane_programowanie_xyy\nzaawansowane_programowanie_y\nzaawansowane_programowanie_xyx\nzaawansowane_programowanie_yyxxxx\nzaawansowane_programowanie_\nzaawansowane_programowanie_zzxz\nzaawansowane_programowanie_xx\nzaawansowane_programowanie_yyyyx\nzaawansowane_programowanie_\nzaawansowane_programowanie_x",
+          "output": "zaawansowane_programowanie"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 100`\n* każdy napis ma od 1 do 100 znaków",
+      "notes": "* Przy jednym napisie wynikiem jest cały ten napis.\n* Wygodnie jest zacząć od pierwszego napisu jako kandydata i skracać go, porównując po kolei z każdym kolejnym napisem.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-09",
@@ -278,13 +451,19 @@
         "dp",
         "substring"
       ],
-      "description": "Otrzymujesz dwa napisy. Znajdź **najdłuższy wspólny podnapis** (ciągły fragment), który występuje w obu napisach.",
-      "input": "* 1 linia: napis `A`\n* 2 linia: napis `B`",
-      "output": "* 1 linia: najdłuższy wspólny podnapis\n  (jeśli jest kilka o tej samej długości — wybierz ten, który występuje **najwcześniej w A**; jeśli nadal remis, najwcześniej w B)",
+      "description": "Otrzymujesz dwa napisy `A` i `B`. Znajdź ich **najdłuższy wspólny podnapis**, czyli najdłuższy ciągły fragment, który występuje zarówno w `A`, jak i w `B`.\n\n* Jeśli kilka różnych podnapisów ma tę samą, maksymalną długość — wypisz ten, który w napisie `A` **zaczyna się najwcześniej**.\n* Jeśli napisy nie mają ani jednego wspólnego znaku — wypisz pustą linię.",
+      "input": "* 1. linia: napis `A`\n* 2. linia: napis `B`",
+      "output": "Jedna linia: najdłuższy wspólny podnapis albo pusta linia.",
       "examples": [
         {
           "input": "ijkabcdl\nxxxxabcd",
-          "output": "abcd"
+          "output": "abcd",
+          "explanation": ""
+        },
+        {
+          "input": "xyab\nabxy",
+          "output": "xy",
+          "explanation": "Oba podnapisy `xy` i `ab` mają długość 2; w `A` wcześniej zaczyna się `xy`."
         }
       ],
       "testcases": [
@@ -295,10 +474,140 @@
         {
           "input": "hello\nyellow",
           "output": "ello"
+        },
+        {
+          "input": "abc\nxyz",
+          "output": ""
+        },
+        {
+          "input": "aaaa\naa",
+          "output": "aa"
+        },
+        {
+          "input": "kot\nkot",
+          "output": "kot"
+        },
+        {
+          "input": "pqrsXYZabc\nabc-XYZ-pqr",
+          "output": "pqr"
+        },
+        {
+          "input": "ABC\nabc",
+          "output": ""
+        },
+        {
+          "input": "abc\ncde",
+          "output": "c"
+        },
+        {
+          "input": "abcccccccbcaaaccccaccbbccabaabbbabcabbaaccbcccbccacaabbcabacacaacabccabccbbbabcbbccacacccbaccaccaacbaacbacbcbaaacacabcaaabcaabbacabcbaababaacabcbaabaacbabcbaaacbaabbcbccaacacacbbbbbabbbbbabbaacbcccbaccbaacccacaabbaccbbaabbccaabcaabcccacaacbacccccbcccababccacabbbaccacbababbababbbcaabcbbcbcbaacaccccbaccaccbcacacbababbcbaacbbccccbbbabcccccbbbaaacbbaabccccbaccabbcabcbccabcbabaacacbaababaababaacabccbbaabcabccbacbabccbabbbaacbccbbbabaabaacccaccacbabcabcabbbcacabcaabbccbabccbaaccacaabbbbcabbbbcabcbaacb\ncbcccaababccacbccbcabcaccbbacccccabbcbaccbcabacbaabcccaabcaabababbbacbbccabacccbaaacbbbabbaaacaaaacaaabaabccbbbacaccaaccacbbccbcbaababcbbaccaaacaacbaacbcbcbbaccabcbcaaacccacabacaccbbbbabbbcbcaccaababcbabcccacababacbcbbaababacbcaaaaabababaccbccbbcccaabbbabbbabbaabaacaccbbababbbababbbbbaccaaacabaccabcabcccacaabbabababcbcacbcbacbbbbacaaabbaccbaccbbaacbcbacccccaaabccaabaabbaabccbccacaabcbbbababcbcccccacaaabcabbccabacbabccbaacacabbbcbccbcbaaccacaacabaabbbbabacacacccacbbcabacbabacbaaabcbcabcbababaacab",
+          "output": "ccbccacaab"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ |A|, |B| ≤ 1000`",
+      "notes": "* Programowanie dynamiczne: niech `d[i][j]` oznacza długość najdłuższego wspólnego fragmentu **kończącego się** na znakach `A[i - 1]` i `B[j - 1]`. Jeśli te znaki są równe, `d[i][j] = d[i - 1][j - 1] + 1`, w przeciwnym razie `0`. Największa wartość w tablicy to długość wyniku. Czas $O(|A| \\cdot |B|)$.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "25_napisy_trudne/ZAD-10",
+      "title": "Poprawność nawiasów",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "string",
+        "stack",
+        "nawiasy"
+      ],
+      "description": "Otrzymujesz napis, który oprócz dowolnych innych znaków może zawierać nawiasy trzech rodzajów: okrągłe `()`, kwadratowe `[]` i klamrowe `{}`. Pozostałe znaki pomijamy. Nawiasy są **poprawne**, jeśli każdy nawias zamykający zamyka nawias otwierający tego samego rodzaju, który został otwarty najpóźniej i jeszcze nie jest zamknięty, a na końcu napisu żaden nawias nie zostaje otwarty. Na przykład `{[()()]}` i `a(b)[c]` są poprawne, a `([)]`, `(()` i `())` — nie.\n\nSprawdź napis, czytając go od lewej do prawej:\n\n* jeśli trafisz na nawias zamykający, dla którego nie ma żadnego otwartego nawiasu albo ostatnio otwarty nawias jest innego rodzaju — **błąd jest na pozycji tego nawiasu zamykającego** (dalszej części napisu już nie sprawdzamy),\n* jeśli dojdziesz do końca bez takiego błędu, ale niektóre nawiasy pozostały otwarte — **błąd jest na pozycji pierwszego (najbardziej na lewo) niezamkniętego nawiasu otwierającego**.",
+      "input": "Jedna linia: napis `S`.",
+      "output": "`Tak`, jeśli nawiasy są poprawne; w przeciwnym razie pozycja (indeks liczony od `0`) pierwszego błędu.",
+      "examples": [
+        {
+          "input": "a(b[c]{d}e)f",
+          "output": "Tak",
+          "explanation": ""
+        },
+        {
+          "input": "(a[b)c]",
+          "output": "4",
+          "explanation": "Nawias `)` na pozycji 4 zamyka ostatnio otwarty nawias `[`, czyli nawias innego rodzaju."
+        },
+        {
+          "input": "((x)(",
+          "output": "0",
+          "explanation": "Na końcu otwarte zostają nawiasy z pozycji 0 i 4 — pierwszy z nich jest na pozycji 0."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "abc",
+          "output": "Tak"
+        },
+        {
+          "input": ")",
+          "output": "0"
+        },
+        {
+          "input": "(",
+          "output": "0"
+        },
+        {
+          "input": "(()",
+          "output": "0"
+        },
+        {
+          "input": "())",
+          "output": "2"
+        },
+        {
+          "input": "([)]",
+          "output": "2"
+        },
+        {
+          "input": "{[()()]}",
+          "output": "Tak"
+        },
+        {
+          "input": "((]",
+          "output": "2"
+        },
+        {
+          "input": "{}((",
+          "output": "2"
+        },
+        {
+          "input": "(()(",
+          "output": "0"
+        },
+        {
+          "input": "[(])",
+          "output": "2"
+        },
+        {
+          "input": "x = (a + b] * c",
+          "output": "10"
+        },
+        {
+          "input": "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))",
+          "output": "Tak"
+        },
+        {
+          "input": "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))",
+          "output": "0"
+        },
+        {
+          "input": "([[(-[*[]={=}] {()(bb-a+b--)}bxy)-]=])()( +( +- {{(y[**+= *b]-++)+y}{()*a{[x+x* -=+b**]a[ax -*y-y x](-)+(*){xx *b *axy-=}x}({+}){[ x] +(b)+=x}{y}}({{-=}(**-+a=bx=yxx==+**a-xbx= x*)*b}+x[]= a((-)*[ x*=x](  -=)(+ ){}{=a=x}[+]) []((*xbx-bb=-a)(-y+ )(yy)())a{[](aya)x(a a)()(aax-x)}*=)yb[((yy+-a){** +ayb=-}*y== )*][[( -+)]{}]})aa )(b)([+b]*)()(a[]+*)(x)()(+)()(a)( y(-{}){})()({})([]+*{})(+[a-(*a)*(y[[(a=*== +-==byby=-xby==== x)]]({y}()){})[b{(){(*)[*=][+-xx--](ax )}()[b()(a=+yab-=+=x*yy)()()-{y}( )+b {+ y +}[+bba+]]}-{y()ax{(=xxb=+)+{= -+a* }{b}{xa}(b**a-b-a)[yx]{bb*a+}a}(b)}(=[{**bb*}{-y}[ay *](+x= ) x[*xx * -=ya= *]{=ax-a+-a }(x  )a])]]{})(([xx{(ba a*(y*)b-{})a}[{}=]](x()*y[](=){=*}{}+=[xb([+==-]b){y{a+ +ax-=x=*a}}[a()+{x = *x}{x + -=y-yy --=*}]{x[*y =ab-]*(a-x-=     +*)}b])=)b)()(y)()(a)()(*{y[{{}{}[]([]{-++babayxby*}[=-]*( *){ *b}[y])[{++=-+y-}]={bb[y*y+a +x*a-xya=-x-x=]{}[](a )y}bxb }]-+})(-b+)(-)(=())()()(b )()([-]y)()()([*]x=[]y)()()()(*-*() )({} *)(*)(={}+(=[]))()(=-)(bbx)()({({(={bax*}a)})}{})(y)(+(({-[{a}(+y-)[]]{[*+ba*]*x=-[]+(x+a)x[==*y]}[[]={+y= y}bb-()( + a+--x+b)a(*=-xya*=)y(){==xb*yx-b}x(xay-)[yy+-bxby][ =]a]}[yb]+)))()()()()()([*-][][x =*b+ ]({ }))()(+)()()()()()(bb(y-){{a[x(bx[b--=ax=b-=*][-+b]-[a](y)[-*+*-a](- xxy*+xb ) ) [](){( x-a=xbx byby*==- a+)(+=)[-](x+=)[xyy -y]{=*}=}({}=[bb]( xy- ){a-bxx-xxa}{}*[aax] *+ya{ya-by+x**xyy  + *y-})({}){y{ay} x*}[]]-}a[({[]+[-yb]}=b+{y(+b){}(++ *+ +-)})]{}y }b)",
+          "output": "Tak"
+        },
+        {
+          "input": "([[(-[*[]={=}] {()(bb-a+b--)}bxy)-]=])()( +( +- {{(y[**+= *b]-++)+y}{()*a{[x+x* -=+b**]a[ax -*y-y x](-)+(*){xx *b *axy-=}x}({+}){[ x] +(b)+=x}{y}}({{-=}(**-+a=bx=yxx==+**a-xbx= x*)*b}+x[]= a((-)*[ x*=x](  -=)(+ ){}{=a=x}[+]) []((*xbx-bb=-a)(-y+ )(yy)())a{[](aya)x(a a)()(aax-x)}*=)yb[((yy+-a){** +ayb=-}*y== )*][[( -+)]{}]})aa )(b)([+b]*)()(a[]+*)(x)()(+)()(a)( y(-{}){})()({})([]+*{})(+[a-(*a)*(y[[(a=*== +-==byby=-xby==== x)]]({y}()){})[b{(){(*)[*=][+-xx--](ax )}()[b()(a=+yab-=+=x*yy)()()-{y}( )+b {+ y +}[+bba+]]}-{y()ax{(=xxb=+)+{= -+a* }{b}{xa}(b**a-b-a)[yx]{bb*a+}a}(b)}(=[{**bb*}{-y}[ay *](+x= ) x[*xx * -=ya= *]{=ax-a+-a }(x  )a])]]{})(([xx{(ba a*(y*)b-{})a}[{}=]](x()*y[](=){=*}{}+=[xb([+==-]b){y{a+ +ax-=x=*a}}[a()+{x = *x}{x + -=y-yy --=*}]{x[*y =ab-]*(a-x-=     +*)}b])=)b)()(y)()(a)()(*{y[{{}{}[]([]{-++babayxby*}[=-]*( *){ *b}[y])[{++=-+y-}]={bb[y*y+a +x*a-xya=-x-x=]{}[](a )y}bxb }]-+})(-b+)(-)(=())()()(b )()([-]y)()()([*]x=[]y)()()()(*-*() )({} *)(*)(={}+(=[]))()(=-)(bbx)()({({(={bax*}a)})}{})(y)(+(({-[{a}(+y-)[]]{[*+ba*]*x=-[]+(x+a)x[==*y]}[[]={+y= y}bb-()( + a+--x+b)a(*=-xya*=)y(){==xb*yx-b}x(xay-)[yy+-bxby][ =]a]}[yb]+)))()()()()()([*-][][x =*b+ ]({ }))()(+)()()()()()(bb(y-){{a[x(bx[b--=ax=b-=*][-+b]-[a](y)[-*+*-a](- xxy*+xb ) ) [](){( x-a=xbx byby*==- a+)(+=)[-](x+=)[xyy -y]{=*}=}({}=[bb]( xy- ){a-bxx-xxa}{}*[aax] *+ya{ya-by+x**xyy  + *y-})({}){y{ay} x*}[]]-}a[({[]+[-yb]}=b+{y(+b){}(++ *+ +-)})]{}y }b]",
+          "output": "1432"
+        }
+      ],
+      "constraints": "* `1 ≤ |S| ≤ 1000`",
+      "notes": "* Do tego zadania służy **stos**: struktura, do której dokładamy elementy na wierzch i zdejmujemy je z wierzchu (ostatni włożony wychodzi pierwszy). W Pythonie stosem jest zwykła lista: `append` kładzie element na wierzch, `stos[-1]` podgląda wierzch, a `pop()` go zdejmuje:\n\n  ```python\n  stos = []\n  stos.append(3)   # stos: [3]\n  stos.append(7)   # stos: [3, 7]\n  print(stos[-1])  # 7 — wierzch stosu\n  stos.pop()       # zdejmuje 7, stos: [3]\n  print(len(stos)) # 1\n  ```\n\n* Każdy nawias otwierający odkładaj na stos (najlepiej jego **indeks** — przyda się do zgłoszenia błędu). Przy nawiasie zamykającym sprawdź, czy stos nie jest pusty i czy na wierzchu leży nawias pasującego rodzaju; jeśli tak — zdejmij go. Pary nawiasów wygodnie trzymać w słowniku, np. `{\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}`.\n* Po przejściu całego napisu niezamknięte nawiasy zostają na stosie — pierwszy z nich leży na samym dole (`stos[0]`).",
+      "starter_code": "def pierwszy_blad(napis):\n    # Zwróć indeks pierwszego błędu albo -1, jeśli nawiasy są poprawne.\n    return -1\n\n\nnapis = input()\nblad = pierwszy_blad(napis)\nif blad == -1:\n    print(\"Tak\")\nelse:\n    print(blad)\n"
     }
   ]
 }

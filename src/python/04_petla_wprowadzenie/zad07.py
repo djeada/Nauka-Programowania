@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-07 — Potęgowanie liczby π
 
 **Poziom:** ★☆☆
@@ -6,17 +6,19 @@ ZAD-07 — Potęgowanie liczby π
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` (`n ≥ 0`), oblicz wartość ( \pi^n ) i wypisz wynik z dokładnością do **dwóch miejsc po przecinku**.
+Wczytaj liczbę naturalną `n` i oblicz $\pi^n$, mnożąc w pętli liczbę $\pi$ przez siebie. Wypisz wynik z dokładnością do **dwóch miejsc po przecinku**.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Jedna liczba zmiennoprzecinkowa — ( \pi^n ) z dokładnością do dwóch miejsc po przecinku.
+Jedna liczba — $\pi^n$ zaokrąglona do dwóch miejsc po przecinku.
+
+### Ograniczenia
+
+* `0 ≤ n ≤ 20`
 
 ### Przykład
 
@@ -32,21 +34,22 @@ Jedna liczba zmiennoprzecinkowa — ( \pi^n ) z dokładnością do dwóch miejsc
 9.87
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Dla `n = 0` wypisz `1.00`.
+* $\pi^0 = 1$, więc dla `n = 0` wypisz `1.00`.
 
 """
 
 from math import pi
 
+
+def potega_pi(n):
+    wynik = 1.0
+    for _ in range(n):
+        wynik *= pi
+    return wynik
+
+
 if __name__ == "__main__":
-
-    print("Podaj liczbe: ")
-    liczba = int(input())
-
-    wynik = 1
-    for i in range(liczba):
-        wynik = wynik * pi
-
-    print("Wynik: ", round(wynik, 2))
+    n = int(input())
+    print(f"{potega_pi(n):.2f}")

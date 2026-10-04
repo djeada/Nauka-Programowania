@@ -2,21 +2,41 @@
   "ZAD-01": [
     {
       "input": "7",
-      "output": ""
+      "output": "0"
     },
     {
-      "input": "3\n10\n7",
-      "output": ""
+      "input": "1\n2\n3\n4\n5\n6\n7",
+      "output": "6"
+    },
+    {
+      "input": "17\n70\n77\n7\n8\n9",
+      "output": "3"
+    },
+    {
+      "input": "0\n7\n7\n7",
+      "output": "1"
+    },
+    {
+      "input": "8\n8\n8\n8\n8\n7\n1\n2",
+      "output": "5"
     }
   ],
   "ZAD-02": [
+    {
+      "input": "1",
+      "output": ""
+    },
+    {
+      "input": "2",
+      "output": "1"
+    },
     {
       "input": "5",
       "output": "4\n3\n2\n1"
     },
     {
-      "input": "1",
-      "output": ""
+      "input": "10",
+      "output": "9\n8\n7\n6\n5\n4\n3\n2\n1"
     }
   ],
   "ZAD-03": [
@@ -25,8 +45,20 @@
       "output": "3.1"
     },
     {
-      "input": "3",
-      "output": "3.142\n3.142\n3.142"
+      "input": "2",
+      "output": "3.1\n3.14"
+    },
+    {
+      "input": "5",
+      "output": "3.1\n3.14\n3.142\n3.1416\n3.14159"
+    },
+    {
+      "input": "8",
+      "output": "3.1\n3.14\n3.142\n3.1416\n3.14159\n3.141593\n3.1415927\n3.14159265"
+    },
+    {
+      "input": "15",
+      "output": "3.1\n3.14\n3.142\n3.1416\n3.14159\n3.141593\n3.1415927\n3.14159265\n3.141592654\n3.1415926536\n3.14159265359\n3.141592653590\n3.1415926535898\n3.14159265358979\n3.141592653589793"
     }
   ],
   "ZAD-04": [
@@ -35,8 +67,16 @@
       "output": "0"
     },
     {
+      "input": "2",
+      "output": "1"
+    },
+    {
       "input": "10",
       "output": "45"
+    },
+    {
+      "input": "100",
+      "output": "4950"
     }
   ],
   "ZAD-05": [
@@ -47,9 +87,29 @@
     {
       "input": "1\n4",
       "output": "2\n3\n3"
+    },
+    {
+      "input": "5\n5",
+      "output": ""
+    },
+    {
+      "input": "3\n5",
+      "output": "4"
+    },
+    {
+      "input": "20\n10",
+      "output": "11\n12\n13\n14\n15\n16\n17\n18\n19\n12\n15\n18"
+    },
+    {
+      "input": "0\n2",
+      "output": "1"
     }
   ],
   "ZAD-06": [
+    {
+      "input": "1",
+      "output": "3\n6\n3"
+    },
     {
       "input": "3",
       "output": "23\n44\n18"
@@ -57,6 +117,10 @@
     {
       "input": "5",
       "output": "75\n130\n45"
+    },
+    {
+      "input": "10",
+      "output": "450\n660\n165"
     }
   ],
   "ZAD-07": [
@@ -65,8 +129,20 @@
       "output": "1.00"
     },
     {
+      "input": "1",
+      "output": "3.14"
+    },
+    {
       "input": "3",
       "output": "31.01"
+    },
+    {
+      "input": "5",
+      "output": "306.02"
+    },
+    {
+      "input": "10",
+      "output": "93648.05"
     }
   ],
   "ZAD-08": [
@@ -77,6 +153,62 @@
     {
       "input": "0\n0",
       "output": "0\n0"
+    },
+    {
+      "input": "5\n10",
+      "output": "5\n0"
+    },
+    {
+      "input": "4\n16",
+      "output": "0\n4"
+    },
+    {
+      "input": "35\n94",
+      "output": "23\n12"
+    }
+  ],
+  "ZAD-09": [
+    {
+      "input": "1",
+      "output": "0\n1"
+    },
+    {
+      "input": "2",
+      "output": "1\n2"
+    },
+    {
+      "input": "7",
+      "output": "16\n52"
+    },
+    {
+      "input": "16",
+      "output": "4\n16"
+    },
+    {
+      "input": "27",
+      "output": "111\n9232"
+    }
+  ],
+  "ZAD-10": [
+    {
+      "input": "7",
+      "output": "Przyjęto: 7"
+    },
+    {
+      "input": "0\n101\n100",
+      "output": "Liczba spoza zakresu.\nLiczba spoza zakresu.\nPrzyjęto: 100"
+    },
+    {
+      "input": "-5\n1\n50",
+      "output": "Liczba spoza zakresu.\nPrzyjęto: 1"
+    },
+    {
+      "input": "dziesięć\n\n2.0\n10",
+      "output": "To nie jest liczba całkowita.\nTo nie jest liczba całkowita.\nTo nie jest liczba całkowita.\nPrzyjęto: 10"
+    },
+    {
+      "input": "1000\nx\n-1\n99\nabc",
+      "output": "Liczba spoza zakresu.\nTo nie jest liczba całkowita.\nLiczba spoza zakresu.\nPrzyjęto: 99"
     }
   ]
 }

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-07 — Sortowanie listy 0/1/2
 
 **Poziom:** ★★☆
@@ -6,16 +6,20 @@ ZAD-07 — Sortowanie listy 0/1/2
 
 ### Treść
 
-Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj ją rosnąco.
+Wczytaj listę składającą się wyłącznie z liczb `0`, `1` i `2` i posortuj ją rosnąco.
 
 ### Wejście
 
-* 1 linia: liczba naturalna `N`
-* 2 linia: `N` liczb (0/1/2) oddzielonych spacjami
+* 1. linia: liczba elementów $N$
+* 2. linia: $N$ liczb (każda to `0`, `1` albo `2`) oddzielonych spacjami
 
 ### Wyjście
 
-* 1 linia: posortowana lista w formacie jak w przykładzie
+* 1. linia: posortowana lista — liczby oddzielone pojedynczymi spacjami
+
+### Ograniczenia
+
+* $1 \le N \le 1000$
 
 ### Przykład
 
@@ -29,59 +33,34 @@ Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj j
 **Wyjście:**
 
 ```
-[0, 0, 1, 1, 1, 2, 2]
+0 0 1 1 1 2 2
 ```
+
+### Uwagi
+
+* Zadanie da się rozwiązać w czasie $O(N)$, bez sortowania. Najprościej policzyć zera, jedynki i dwójki, a potem wypisać odpowiednio wiele zer, jedynek i dwójek (to sortowanie przez zliczanie z rozdziału 21).
+* Ambitniejszy wariant działa w miejscu, w jednym przejściu po liście: trzymaj trzy indeksy — koniec obszaru zer, bieżący element i początek obszaru dwójek — i zamieniaj elementy miejscami (tzw. problem flagi holenderskiej).
 
 """
 
 
-def sortuj_liste(lista):
-    """
-    Funkcja sortujaca liste liczb z zakresu 0-2.
-    """
-    start, srodek = 0, 0
-    koniec = len(lista) - 1
-    piwot = 1
-
+def sortuj_liste_012(lista):
+    """Sortuje listę w miejscu w jednym przejściu (problem flagi holenderskiej)."""
+    poczatek, srodek, koniec = 0, 0, len(lista) - 1
     while srodek <= koniec:
-        # lista[srodek] == 0
-        if lista[srodek] < piwot:
-            lista[start], lista[srodek] = lista[srodek], lista[start]
-            start += 1
+        if lista[srodek] == 0:
+            lista[poczatek], lista[srodek] = lista[srodek], lista[poczatek]
+            poczatek += 1
             srodek += 1
-
-        # lista[srodek] == 2
-        elif lista[srodek] > piwot:
-            lista[koniec], lista[srodek] = lista[srodek], lista[koniec]
+        elif lista[srodek] == 2:
+            lista[srodek], lista[koniec] = lista[koniec], lista[srodek]
             koniec -= 1
-
-        # lista[srodek] == 1
         else:
             srodek += 1
-
     return lista
 
 
-def test_sortuj_liste():
-    lista = [0, 2, 2, 0, 1, 1, 2, 2, 1, 1]
-    wynik = [0, 0, 1, 1, 1, 1, 2, 2, 2, 2]
-
-    assert sortuj_liste(lista) == wynik
-
-
-def test_sortuj_liste():
-    lista = [1, 1, 1, 1, 2, 1, 1, 1]
-    wynik = [1, 1, 1, 1, 1, 1, 1, 2]
-
-    assert sortuj_liste(lista) == wynik
-
-
-def test_sortuj_liste():
-    lista = [2, 0, 0, 1, 1, 1, 1, 1]
-    wynik = [0, 0, 1, 1, 1, 1, 1, 2]
-
-    assert sortuj_liste(lista) == wynik
-
-
 if __name__ == "__main__":
-    test_sortuj_liste()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    print(" ".join(str(x) for x in sortuj_liste_012(lista)))

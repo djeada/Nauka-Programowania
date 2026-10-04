@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Modyfikacja plików spełniających warunek (rekurencyjnie)
 
 **Poziom:** ★★☆
@@ -6,146 +6,146 @@ ZAD-08 — Modyfikacja plików spełniających warunek (rekurencyjnie)
 
 ### Treść
 
-Otrzymujesz ścieżkę do folderu. Wykonaj:
+Wczytaj ścieżkę folderu i inicjały (np. `A.D.`). W tym folderze **i wszystkich jego podfolderach**:
 
-a) dopisz swoje inicjały na końcu każdego pliku `.txt` w folderze i podfolderach,
-b) usuń **środkowy wiersz** z każdego pliku `.csv` w folderze i podfolderach
-(jeśli liczba wierszy jest parzysta — usuń **dolny z dwóch środkowych**).
+a) do każdego pliku `.txt` dopisz inicjały jako nowy, **ostatni wiersz**,
+
+b) z każdego pliku `.csv` usuń **środkowy wiersz** — gdy liczba wierszy jest parzysta, usuń **dolny** z dwóch środkowych.
+
+Pozostałych plików nie zmieniaj. Na koniec wypisz ścieżki wszystkich zmienionych plików.
+
+Szczegóły:
+
+* Wiersze liczymy jak w `str.splitlines()`: znak nowej linii na końcu pliku nie tworzy dodatkowego, pustego wiersza.
+* Inicjały trafiają bezpośrednio pod dotychczasowy ostatni wiersz, bez pustego wiersza pomiędzy — także wtedy, gdy plik nie kończy się znakiem nowej linii. Pusty plik `.txt` po zmianie zawiera tylko inicjały.
+* W pliku `.csv` o $n$ wierszach usuwamy wiersz numer $\lfloor n/2 \rfloor + 1$ (licząc od 1): przy 3 wierszach — 2., przy 4 — 3., przy 1 — jedyny wiersz.
 
 ### Wejście
 
-* 1 linia: `folder_path`
+* 1. linia: ścieżka folderu
+* 2. linia: inicjały
 
 ### Wyjście
 
-Brak.
+* Ścieżki zmienionych plików względem podanego folderu, każda w osobnej linii, posortowane rosnąco.
+* `Brak plików.` — jeśli nie ma żadnego pliku `.txt` ani `.csv`.
+* `Folder nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego folderu.
+
+### Ograniczenia
+
+* Każdy plik `.csv` ma co najmniej jeden wiersz.
 
 ### Przykład
+
+**Pliki przed:**
+
+```
+projekt/opis.txt
+| Projekt X
+projekt/dane.csv
+| a,1
+| b,2
+| c,3
+projekt/main.py
+| print("Projekt X")
+projekt/2024/raport.txt
+| Raport roczny
+projekt/2024/wyniki.csv
+| x,1
+| y,2
+| z,3
+| w,4
+```
 
 **Wejście:**
 
 ```
-C:\Users\Username\Documents\Projekt
+projekt
+A.D.
 ```
 
 **Wyjście:**
-*(brak)*
+
+```
+2024/raport.txt
+2024/wyniki.csv
+dane.csv
+opis.txt
+```
+
+**Pliki po:**
+
+```
+projekt/opis.txt
+| Projekt X
+| A.D.
+projekt/dane.csv
+| a,1
+| c,3
+projekt/main.py
+| print("Projekt X")
+projekt/2024/raport.txt
+| Raport roczny
+| A.D.
+projekt/2024/wyniki.csv
+| x,1
+| y,2
+| w,4
+```
+
+`dane.csv` ma 3 wiersze, więc traci 2. wiersz; `wyniki.csv` ma 4 wiersze, więc traci 3. wiersz. Plik `main.py` się nie zmienia.
+
+### Uwagi
+
+* Najpierw zbierz listę wszystkich plików (np. `sorted(Path(folder).rglob("*"))`), a dopiero potem je zmieniaj.
 
 """
-import pathlib
+
+from pathlib import Path
 
 
-def znajdz_pliki_z_rozszerzeniem(sciezka, rozszerzenie):
-    """
-    Funkcja zwraca liste plikow o podanym rozszerzeniu.
-    """
-    lista_plikow = []
-    for plik in pathlib.Path(sciezka).glob("**/*." + rozszerzenie):
-        lista_plikow.append(str(plik.relative_to(pathlib.Path(sciezka).parent)))
-    return lista_plikow
-
-
-def dodaj_inicjaly(sciezka, inicjaly):
-    """
-    Funkcja dodaje inicjaly na koniec pliku tekstowego.
-    """
-
-    plik = pathlib.Path(sciezka)
-    if plik.exists():
-        plik.write_text(plik.read_text() + inicjaly + "\n")
-
-
-def dodaj_inicjaly_do_plikow_w_folderze(sciezka, inicjaly):
-    """
-    Funkcja dodaje inicjaly na koniec kazdego pliku tekstowego w folderze.
-    """
-
-    for plik in znajdz_pliki_z_rozszerzeniem(sciezka, "txt"):
-        dodaj_inicjaly(plik, inicjaly)
+def dopisz_inicjaly(sciezka, inicjaly):
+    """Dopisuje inicjały jako nowy, ostatni wiersz pliku."""
+    tresc = sciezka.read_text(encoding="utf-8")
+    if tresc and not tresc.endswith("\n"):
+        tresc += "\n"
+    sciezka.write_text(tresc + inicjaly + "\n", encoding="utf-8")
 
 
 def usun_srodkowy_wiersz(sciezka):
-    """
-    Funkcja usuwa srodkowy wiersz z pliku.
-    """
-    plik = pathlib.Path(sciezka)
-    if plik.exists():
-        tresc = plik.read_text().split("\n")
-        plik.write_text(
-            "\n".join(tresc[: len(tresc) // 2] + tresc[len(tresc) // 2 + 1 :]) + "\n"
-        )
+    """Usuwa środkowy wiersz (przy parzystej liczbie wierszy — dolny z dwóch środkowych)."""
+    wiersze = sciezka.read_text(encoding="utf-8").splitlines()
+    del wiersze[len(wiersze) // 2]
+    sciezka.write_text("".join(wiersz + "\n" for wiersz in wiersze), encoding="utf-8")
 
 
-def usun_srodkowy_wiersz_z_plikow_w_folderze(sciezka):
-    """
-    Funkcja usuwa srodkowy wiersz z kazdego pliku csv w folderze.
-    """
-
-    for plik in znajdz_pliki_z_rozszerzeniem(sciezka, "csv"):
-        usun_srodkowy_wiersz(plik)
-
-
-def test_dodaj_inicjaly_do_plikow_w_folderze():
-
-    # stworz folder testowy
-    pathlib.Path("test").mkdir()
-    pathlib.Path("test/test1").mkdir()
-
-    # stworz pliki testowe
-    plik1 = pathlib.Path("test/test1/test1.txt")
-    plik1.touch()
-    plik1.write_text("test1\n")
-
-    plik2 = pathlib.Path("test/test1/test2.txt")
-    plik2.touch()
-    plik2.write_text("test2\n")
-
-    # dodaj inicjaly
-    inicjaly = "A.D."
-    dodaj_inicjaly_do_plikow_w_folderze("test", inicjaly)
-
-    # sprawdz czy pliki zostaly zmodyfikowane
-    assert plik1.read_text().splitlines()[-1] == inicjaly
-    assert plik2.read_text().splitlines()[-1] == inicjaly
-
-    # usun folder testowy
-    import shutil
-
-    shutil.rmtree("test")
-
-
-def test_usun_srodkowy_wiersz_z_plikow_w_folderze():
-
-    # stworz folder testowy
-    pathlib.Path("test").mkdir()
-    pathlib.Path("test/test1").mkdir()
-
-    # stworz pliki testowe
-    plik1 = pathlib.Path("test/test1/test1.csv")
-    plik1.touch()
-    plik1.write_text("\n".join(["test1; test1", "test2; test2", "test3; test3"]))
-
-    plik2 = pathlib.Path("test/test1/test2.csv")
-    plik2.touch()
-    plik2.write_text("\n".join(["test1; test1", "test2; test2", "test3; test3"]))
-
-    # usun srodkowy wiersz z plikow
-    usun_srodkowy_wiersz_z_plikow_w_folderze("test")
-
-    # sprawdz czy pliki zostaly zmodyfikowane
-    assert plik1.read_text().splitlines()[0] == "test1; test1"
-    assert plik1.read_text().splitlines()[1] == "test3; test3"
-
-    assert plik2.read_text().splitlines()[0] == "test1; test1"
-    assert plik2.read_text().splitlines()[1] == "test3; test3"
-
-    # usun folder testowy
-    import shutil
-
-    shutil.rmtree("test")
+def modyfikuj_pliki(folder, inicjaly):
+    """Zmienia pliki .txt i .csv w folderze i podfolderach; zwraca ich posortowane ścieżki."""
+    baza = Path(folder)
+    zmienione = []
+    for sciezka in sorted(baza.rglob("*")):
+        if not sciezka.is_file():
+            continue
+        rozszerzenie = sciezka.suffix.lower()
+        if rozszerzenie == ".txt":
+            dopisz_inicjaly(sciezka, inicjaly)
+        elif rozszerzenie == ".csv":
+            usun_srodkowy_wiersz(sciezka)
+        else:
+            continue
+        zmienione.append(sciezka.relative_to(baza).as_posix())
+    return sorted(zmienione)
 
 
 if __name__ == "__main__":
+    folder = input()
+    inicjaly = input()
 
-    test_dodaj_inicjaly_do_plikow_w_folderze()
-    test_usun_srodkowy_wiersz_z_plikow_w_folderze()
+    if not Path(folder).is_dir():
+        print("Folder nie istnieje.")
+    else:
+        zmienione = modyfikuj_pliki(folder, inicjaly)
+        if zmienione:
+            print("\n".join(zmienione))
+        else:
+            print("Brak plików.")

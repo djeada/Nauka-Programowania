@@ -1,7 +1,7 @@
 {
   "file": "17_slowniki.md",
-  "chapter_title": "Rozdział: Słowniki (stdin/stdout)",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych liczby/napisy są w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wejściowych w jednej linii jest kilka wartości — rozbij linię po spacjach.\n* Wypisuj wynik dokładnie w formacie z treści (np. słownik w postaci `{...}`, listy jak `[...]`).",
+  "chapter_title": "Rozdział 17: Słowniki",
+  "chapter_description": "Zadania w tym rozdziale ćwiczą pracę ze **słownikami** (`dict`): tworzenie, dodawanie i usuwanie par, zliczanie wystąpień oraz grupowanie danych według klucza.\n**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem**: czyta **standardowe wejście** (stdin) i wypisuje wynik na **standardowe wyjście** (stdout).\n\n**Konwencje wspólne:**\n\n* Dane wczytuj dokładnie w kolejności podanej w sekcji **Wejście**; jeśli w jednej linii jest kilka wartości — rozbij ją po spacjach.\n* Jeśli wynikiem jest słownik, wypisz go tak, jak robi to `print(slownik)` w Pythonie: `{klucz: wartość, klucz: wartość}` — pary oddzielone przecinkiem i spacją, po dwukropku spacja, klucze i wartości napisowe w apostrofach (np. `{'ala': 2, 'ma': 1}`), liczby bez apostrofów (np. `{1: 1, 2: 4}`), pusty słownik to `{}`.\n* Kolejność par w wypisanym słowniku to kolejność, w jakiej klucze były do niego **dodawane** (tak zachowuje się słownik w Pythonie).\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -13,27 +13,41 @@
         "dict",
         "pętla"
       ],
-      "description": "Wczytaj liczbę `n`. Utwórz słownik, gdzie klucze to liczby od `1` do `n-1`, a wartości to ich kwadraty.",
-      "input": "* 1 linia: `n` (n ≥ 1)",
-      "output": "* Słownik w postaci: `{1: 1, 2: 4, ...}`",
+      "description": "Wczytaj liczbę `n`. Utwórz słownik, w którym kluczami są liczby od `1` do `n - 1`, a wartościami ich kwadraty, i wypisz go.",
+      "input": "* 1. linia: `n`",
+      "output": "Słownik w postaci `{1: 1, 2: 4, …}` (klucze rosnąco). Dla `n = 1` słownik jest pusty: `{}`.",
       "examples": [
         {
           "input": "5",
-          "output": "{1: 1, 2: 4, 3: 9, 4: 16}"
+          "output": "{1: 1, 2: 4, 3: 9, 4: 16}",
+          "explanation": ""
         }
       ],
       "testcases": [
+        {
+          "input": "1",
+          "output": "{}"
+        },
+        {
+          "input": "2",
+          "output": "{1: 1}"
+        },
         {
           "input": "4",
           "output": "{1: 1, 2: 4, 3: 9}"
         },
         {
-          "input": "1",
-          "output": "{}"
+          "input": "10",
+          "output": "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}"
+        },
+        {
+          "input": "7",
+          "output": "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36}"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 30`",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -45,13 +59,14 @@
         "dict",
         "listy"
       ],
-      "description": "Wczytaj dwie listy. Jeśli mają tę samą długość, utwórz słownik: klucz z pierwszej listy → wartość z drugiej listy.\nJeśli długości są różne, wypisz pusty słownik `{}`.",
-      "input": "* 1 linia: `n`\n* 2 linia: `m`\n* następnie `n` liczb (pierwsza lista)\n* następnie `m` liczb (druga lista)",
-      "output": "* Słownik albo `{}`",
+      "description": "Wczytaj dwie listy liczb całkowitych. Jeśli mają tę samą długość, utwórz słownik, w którym `i`-ty element pierwszej listy jest kluczem, a `i`-ty element drugiej listy — jego wartością. Jeśli długości są różne, wynikiem jest pusty słownik.",
+      "input": "* 1. linia: `n` — długość pierwszej listy\n* 2. linia: `m` — długość drugiej listy\n* 3. linia: `n` liczb całkowitych oddzielonych spacjami (klucze)\n* 4. linia: `m` liczb całkowitych oddzielonych spacjami (wartości)",
+      "output": "Słownik w postaci `{klucz: wartość, …}` z kluczami w kolejności z wejścia albo `{}`, gdy `n ≠ m`.",
       "examples": [
         {
           "input": "3\n3\n3 5 8\n1 2 -1",
-          "output": "{3: 1, 5: 2, 8: -1}"
+          "output": "{3: 1, 5: 2, 8: -1}",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -62,10 +77,27 @@
         {
           "input": "2\n3\n1 2\n3 4 5",
           "output": "{}"
+        },
+        {
+          "input": "1\n1\n0\n0",
+          "output": "{0: 0}"
+        },
+        {
+          "input": "3\n3\n1 2 1\n5 6 7",
+          "output": "{1: 7, 2: 6}"
+        },
+        {
+          "input": "4\n4\n-1 10 7 3\n2 -20 0 9",
+          "output": "{-1: 2, 10: -20, 7: 0, 3: 9}"
+        },
+        {
+          "input": "3\n2\n1 2 3\n1 2",
+          "output": "{}"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n, m ≤ 20`",
+      "notes": "* Jeśli klucz powtarza się w pierwszej liście, obowiązuje jego **ostatnia** wartość, a klucz zostaje na miejscu swojego pierwszego wystąpienia — tak działa kolejne przypisanie `slownik[klucz] = wartość`. Na przykład klucze `1 2 1` i wartości `5 6 7` dają `{1: 7, 2: 6}`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-03",
@@ -79,13 +111,14 @@
         "pętle",
         "string"
       ],
-      "description": "Utrzymuj słownik: `imię -> lista wypożyczonych książek`.\nObsługuj komendy (każda w osobnej linii) aż do `koniec`:\n\n* `dodaj [imię] [tytuł]`\n* `zwróć [imię] [tytuł]`\n* `lista [imię]`\n\nPo `lista [imię]` wypisz:\n\n* jeśli lista niepusta: `Książki wypożyczone przez [imię]: t1, t2, ...`\n* jeśli brak książek (lub brak czytelnika): `Książki wypożyczone przez [imię]: brak`",
-      "input": "Wiele linii z komendami, koniec po słowie `koniec`.",
-      "output": "Tylko po komendach `lista ...`.",
+      "description": "Prowadź bazę wypożyczeń biblioteki jako słownik `imię → lista wypożyczonych tytułów`. Wczytuj komendy (każda w osobnej linii), aż do komendy `koniec`:\n\n* `dodaj IMIĘ TYTUŁ` — czytelnik `IMIĘ` wypożycza książkę `TYTUŁ` (dopisz ją na koniec jego listy),\n* `zwróć IMIĘ TYTUŁ` — czytelnik oddaje książkę (usuń ją z jego listy; jeśli jej tam nie ma, nic się nie dzieje),\n* `lista IMIĘ` — wypisz książki wypożyczone przez czytelnika.\n\nPo komendzie `lista IMIĘ` wypisz jedną linię:\n\n* `Książki wypożyczone przez IMIĘ: t1, t2, …` — tytuły w kolejności wypożyczenia, oddzielone przecinkiem i spacją,\n* `Książki wypożyczone przez IMIĘ: brak` — jeśli czytelnik nie ma żadnej książki albo nie występuje w bazie.",
+      "input": "Kolejne linie z komendami; ostatnia linia to `koniec`.\n\n* `IMIĘ` to jedno słowo (bez spacji).\n* `TYTUŁ` to cała reszta linii po imieniu — może zawierać spacje (bez cudzysłowów).",
+      "output": "Po jednej linii dla każdej komendy `lista`; pozostałe komendy niczego nie wypisują.",
       "examples": [
         {
-          "input": "dodaj Jan Hobbit\ndodaj Anna \"Duma i uprzedzenie\"\ndodaj Jan \"Władca Pierścieni\"\nlista Jan\nzwróć Jan Hobbit\nlista Jan\nlista Anna\nkoniec",
-          "output": "Książki wypożyczone przez Jan: Hobbit, Władca Pierścieni\nKsiążki wypożyczone przez Jan: Władca Pierścieni\nKsiążki wypożyczone przez Anna: Duma i uprzedzenie"
+          "input": "dodaj Jan Hobbit\ndodaj Anna Duma i uprzedzenie\ndodaj Jan Władca Pierścieni\nlista Jan\nzwróć Jan Hobbit\nlista Jan\nlista Anna\nkoniec",
+          "output": "Książki wypożyczone przez Jan: Hobbit, Władca Pierścieni\nKsiążki wypożyczone przez Jan: Władca Pierścieni\nKsiążki wypożyczone przez Anna: Duma i uprzedzenie",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -96,10 +129,27 @@
         {
           "input": "lista Anna\ndodaj Anna Solaris\nlista Anna\nkoniec",
           "output": "Książki wypożyczone przez Anna: brak\nKsiążki wypożyczone przez Anna: Solaris"
+        },
+        {
+          "input": "dodaj Ola Pan Tadeusz\nzwróć Ola Lalka\nlista Ola\nzwróć Ola Pan Tadeusz\nlista Ola\nkoniec",
+          "output": "Książki wypożyczone przez Ola: Pan Tadeusz\nKsiążki wypożyczone przez Ola: brak"
+        },
+        {
+          "input": "koniec",
+          "output": ""
+        },
+        {
+          "input": "dodaj Jan Hobbit\ndodaj Jan Dune\ndodaj Jan Hobbit\nzwróć Jan Hobbit\nlista Jan\nlista Ewa\nzwróć Ewa Dune\nkoniec",
+          "output": "Książki wypożyczone przez Jan: Dune, Hobbit\nKsiążki wypożyczone przez Ewa: brak"
+        },
+        {
+          "input": "dodaj Ala Lalka\ndodaj Bartek Quo vadis\ndodaj Ala Ferdydurke\nzwróć Bartek Lalka\nlista Bartek\nlista Ala\nkoniec",
+          "output": "Książki wypożyczone przez Bartek: Quo vadis\nKsiążki wypożyczone przez Ala: Lalka, Ferdydurke"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* co najwyżej 100 komend",
+      "notes": "* Linię komendy rozbij na co najwyżej trzy części: `linia.split(maxsplit=2)`.\n* Czytelnik może wypożyczyć kilka egzemplarzy tego samego tytułu — wtedy tytuł występuje na liście kilka razy, a `zwróć` usuwa tylko jeden egzemplarz (pierwsze wystąpienie).",
+      "starter_code": ""
     },
     {
       "id": "ZAD-04",
@@ -111,13 +161,14 @@
         "dict",
         "filtrowanie"
       ],
-      "description": "Wczytaj słownik (`n` par: klucz-napis, wartość-liczba) oraz liczbę `k`. Usuń wszystkie pary, gdzie wartość == `k`. Wypisz wynikowy słownik.",
-      "input": "* 1 linia: `n`\n* następnie `n` linii: `klucz wartość`\n* ostatnia linia: `k`",
-      "output": "* Słownik po usunięciu par",
+      "description": "Wczytaj słownik złożony z `n` par (klucz — słowo, wartość — liczba całkowita) oraz liczbę `k`. Usuń ze słownika wszystkie pary, których wartość jest równa `k`, i wypisz wynikowy słownik.",
+      "input": "* 1. linia: `n`\n* następnie `n` linii: `klucz wartość` (klucze są różne i składają się z małych liter)\n* ostatnia linia: `k`",
+      "output": "Słownik po usunięciu par, w postaci `{'klucz': wartość, …}`, z parami w kolejności z wejścia; jeśli usunięto wszystkie pary — `{}`.",
       "examples": [
         {
           "input": "4\naaa 5\nabc 1\nxxx 5\ncba 3\n5",
-          "output": "{'abc': 1, 'cba': 3}"
+          "output": "{'abc': 1, 'cba': 3}",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -128,10 +179,23 @@
         {
           "input": "2\nx 9\ny 8\n5",
           "output": "{'x': 9, 'y': 8}"
+        },
+        {
+          "input": "2\nkot 4\npies 4\n4",
+          "output": "{}"
+        },
+        {
+          "input": "1\nzero 0\n1",
+          "output": "{'zero': 0}"
+        },
+        {
+          "input": "5\nab -1\ncd 2\nef -1\ngh 3\nij -1\n-1",
+          "output": "{'cd': 2, 'gh': 3}"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 50`",
+      "notes": "* Nie usuwaj elementów ze słownika, po którym właśnie iterujesz — przejdź po kopii kluczy (`list(slownik)`) albo zbuduj nowy słownik.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05",
@@ -143,13 +207,14 @@
         "dict",
         "sumowanie"
       ],
-      "description": "Wczytaj `n` wpisów: `pracownik zysk`. Zsumuj zyski per pracownik i wypisz nazwę pracownika z największą sumą.\n(Jeśli remis, wybierz tego, który pierwszy osiągnął tę maksymalną sumę podczas przetwarzania.)",
-      "input": "* 1 linia: `n`\n* następnie `n` linii: `imie_i_nazwisko zysk`",
-      "output": "* Jedna linia: `imie_i_nazwisko`",
+      "description": "Wczytaj `n` wpisów postaci `pracownik zysk`. Ten sam pracownik może mieć wiele wpisów. Zsumuj zyski każdego pracownika i wypisz pracownika z największą sumą.",
+      "input": "* 1. linia: `n`\n* następnie `n` linii: `imie_i_nazwisko zysk` — identyfikator pracownika bez spacji (np. `Jon_Snow`) i liczba całkowita (może być ujemna — strata)",
+      "output": "Jedna linia: identyfikator pracownika z największym sumarycznym zyskiem.",
       "examples": [
         {
           "input": "5\nBarnaba_Barabash 120\nJon_Snow 100\nKira_Summer 300\nBarnaba_Barabash 200\nBob_Marley 110",
-          "output": "Barnaba_Barabash"
+          "output": "Barnaba_Barabash",
+          "explanation": "Barnaba_Barabash ma łącznie $120 + 200 = 320$, czyli więcej niż Kira_Summer (300)."
         }
       ],
       "testcases": [
@@ -160,10 +225,27 @@
         {
           "input": "3\nA 1\nB 5\nA 5",
           "output": "A"
+        },
+        {
+          "input": "1\nSolo 0",
+          "output": "Solo"
+        },
+        {
+          "input": "4\nX -5\nY -3\nX 4\nZ -10",
+          "output": "X"
+        },
+        {
+          "input": "4\nAda 3\nBen 5\nCel 5\nAda 2",
+          "output": "Ada"
+        },
+        {
+          "input": "6\nJan_Kowalski 100\nAnna_Nowak 250\nJan_Kowalski 100\nPiotr_Zielinski 50\nJan_Kowalski 100\nAnna_Nowak -20",
+          "output": "Jan_Kowalski"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 100`",
+      "notes": "* Przy remisie wypisz tego pracownika, który **wcześniej pojawił się na wejściu** (jego pierwszy wpis jest wcześniej).",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06",
@@ -175,13 +257,14 @@
         "dict",
         "string"
       ],
-      "description": "Wczytaj napis. Zwróć słownik: znak → liczba wystąpień.",
-      "input": "* 1 linia: napis",
-      "output": "* Słownik, np. `{'k': 1, 'l': 1, 'a': 2, 's': 1}`",
+      "description": "Wczytaj napis. Utwórz słownik, w którym kluczami są znaki napisu, a wartościami liczby ich wystąpień, i wypisz go.",
+      "input": "* 1. linia: napis",
+      "output": "Słownik w postaci `{'znak': liczba, …}` — znaki w kolejności pierwszego wystąpienia w napisie.",
       "examples": [
         {
           "input": "klasa",
-          "output": "{'k': 1, 'l': 1, 'a': 2, 's': 1}"
+          "output": "{'k': 1, 'l': 1, 'a': 2, 's': 1}",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -192,10 +275,27 @@
         {
           "input": "abBA",
           "output": "{'a': 1, 'b': 1, 'B': 1, 'A': 1}"
+        },
+        {
+          "input": "x",
+          "output": "{'x': 1}"
+        },
+        {
+          "input": "ala ma kota",
+          "output": "{'a': 4, 'l': 1, ' ': 2, 'm': 1, 'k': 1, 'o': 1, 't': 1}"
+        },
+        {
+          "input": "mississippi",
+          "output": "{'m': 1, 'i': 4, 's': 4, 'p': 2}"
+        },
+        {
+          "input": "2024!",
+          "output": "{'2': 2, '0': 1, '4': 1, '!': 1}"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* napis ma od 1 do 100 znaków, nie zaczyna się ani nie kończy spacją i nie zawiera apostrofów, cudzysłowów ani znaku `\\`",
+      "notes": "* Liczą się wszystkie znaki, także spacje (klucz `' '`) i cyfry.\n* Wielkość liter ma znaczenie: `a` i `A` to różne znaki.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07",
@@ -208,13 +308,14 @@
         "string",
         "tekst"
       ],
-      "description": "Wczytaj tekst. Policz częstość występowania słów (tylko litery), ignorując wielkość liter. Wypisz słownik: słowo (małe litery) → liczba wystąpień.",
-      "input": "* 1 linia: tekst",
-      "output": "* Słownik",
+      "description": "Wczytaj tekst. Policz, ile razy występuje w nim każde słowo, nie rozróżniając wielkości liter. Wypisz słownik: słowo (małymi literami) → liczba wystąpień.",
+      "input": "* 1. linia: tekst",
+      "output": "Słownik w postaci `{'słowo': liczba, …}` — słowa zapisane małymi literami, w kolejności pierwszego wystąpienia w tekście. Jeśli w tekście nie ma żadnego słowa — `{}`.",
       "examples": [
         {
           "input": "Ala ma kota. Ala lubi koty.",
-          "output": "{'ala': 2, 'ma': 1, 'kota': 1, 'lubi': 1, 'koty': 1}"
+          "output": "{'ala': 2, 'ma': 1, 'kota': 1, 'lubi': 1, 'koty': 1}",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -225,10 +326,27 @@
         {
           "input": "One two two.",
           "output": "{'one': 1, 'two': 2}"
+        },
+        {
+          "input": "Kot, KOT, kot!",
+          "output": "{'kot': 3}"
+        },
+        {
+          "input": "123 ... !!!",
+          "output": "{}"
+        },
+        {
+          "input": "Żółw ŻÓŁW żółw-2 gęś",
+          "output": "{'żółw': 3, 'gęś': 1}"
+        },
+        {
+          "input": "e-mail to mail",
+          "output": "{'e': 1, 'mail': 2, 'to': 1}"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* tekst ma od 1 do 300 znaków",
+      "notes": "* **Słowo** to najdłuższy ciąg kolejnych liter (także polskich, np. `ż`, `ó`). Wszystkie inne znaki — spacje, cyfry, znaki interpunkcyjne — rozdzielają słowa.\n* `Kot`, `KOT` i `kot` to to samo słowo `kot`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-08",
@@ -240,13 +358,14 @@
         "dict",
         "string"
       ],
-      "description": "Wczytaj zdanie. Zignoruj spacje i znaki interpunkcyjne. Znajdź literę występującą najczęściej.\nJeśli jest kilka, wybierz tę, która **pojawia się jako pierwsza w zdaniu**.",
-      "input": "* 1 linia: zdanie",
-      "output": "* 1 znak",
+      "description": "Wczytaj zdanie. Policz wystąpienia liter, pomijając spacje, cyfry i znaki interpunkcyjne oraz nie rozróżniając wielkości liter. Wypisz literę, która występuje najczęściej.\nJeśli kilka liter występuje tyle samo razy, wybierz tę, która **pojawia się w zdaniu jako pierwsza**.",
+      "input": "* 1. linia: zdanie (zawiera co najmniej jedną literę)",
+      "output": "Jedna linia: najczęstsza litera, zapisana jako mała litera.",
       "examples": [
         {
           "input": "lezy jerzy na wiezy",
-          "output": "e"
+          "output": "e",
+          "explanation": "Litery `e`, `z` i `y` występują po 3 razy; najwcześniej w zdaniu pojawia się `e`."
         }
       ],
       "testcases": [
@@ -257,10 +376,31 @@
         {
           "input": "Hello!",
           "output": "l"
+        },
+        {
+          "input": "Zebra ZOO zoo",
+          "output": "o"
+        },
+        {
+          "input": "x",
+          "output": "x"
+        },
+        {
+          "input": "Mississippi!",
+          "output": "i"
+        },
+        {
+          "input": "Ala ma Asa",
+          "output": "a"
+        },
+        {
+          "input": "2 + 2 = 4, Q.E.D.",
+          "output": "q"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* zdanie ma od 1 do 300 znaków",
+      "notes": "* `A` i `a` to ta sama litera — w zdaniu `Ala ma Asa` litera `a` występuje 5 razy.\n* Zliczanie można powierzyć klasie `Counter` z modułu `collections` (`from collections import Counter`). `Counter` to słownik element → liczba wystąpień, np. `Counter(\"abca\")` daje `Counter({'a': 2, 'b': 1, 'c': 1})`, a metoda `most_common(1)` zwraca listę z jedną parą `(element, liczba)` o największej liczbie wystąpień: `Counter(\"abca\").most_common(1)` to `[('a', 2)]`.\n* Przy remisie `most_common` zachowuje kolejność pierwszego wystąpienia, więc spełnia regułę z treści: `Counter(\"baab\").most_common(1)` to `[('b', 2)]`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-09",
@@ -272,13 +412,14 @@
         "dict",
         "string"
       ],
-      "description": "Wczytaj napis. Wypisz napis złożony z **unikalnych** znaków, które występują co najmniej 2 razy, w kolejności pierwszego pojawienia się w wejściu.",
-      "input": "* 1 linia: napis",
-      "output": "* 1 linia: wynikowy napis",
+      "description": "Wczytaj napis. Wypisz napis złożony z tych znaków, które występują w nim **co najmniej 2 razy** — każdy taki znak tylko raz, w kolejności pierwszego wystąpienia w napisie.",
+      "input": "* 1. linia: napis bez spacji",
+      "output": "Jedna linia: wynikowy napis. Jeśli żaden znak się nie powtarza — pusta linia (albo brak wyjścia).",
       "examples": [
         {
           "input": "aaabbbccc",
-          "output": "abc"
+          "output": "abc",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -289,10 +430,27 @@
         {
           "input": "abc",
           "output": ""
+        },
+        {
+          "input": "abcabc",
+          "output": "abc"
+        },
+        {
+          "input": "programowanie",
+          "output": "roa"
+        },
+        {
+          "input": "AaBbAa",
+          "output": "Aa"
+        },
+        {
+          "input": "1122!!?",
+          "output": "12!"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* napis ma od 1 do 100 znaków",
+      "notes": "* Wielkość liter ma znaczenie: `A` i `a` to różne znaki.\n* Policz wystąpienia znaków w słowniku — kolejność kluczy w słowniku to kolejność pierwszego wystąpienia.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-10",
@@ -305,27 +463,49 @@
         "anagramy",
         "string"
       ],
-      "description": "Wczytaj tekst. Znajdź grupy słów będących anagramami (ignoruj wielkość liter, słowa to tylko litery).\nWypisz wynik jako listę list, np. `[['absurd', 'brudas'], ...]`.\nDo grup wypisuj tylko te klucze, które mają co najmniej 2 słowa.",
-      "input": "* 1 linia: tekst",
-      "output": "* Lista list słów",
+      "description": "Wczytaj tekst. Znajdź grupy różnych słów, które są swoimi **anagramami** (składają się z tych samych liter w tej samej liczbie, np. `absurd` i `brudas`), nie rozróżniając wielkości liter. Wypisz każdą grupę, która zawiera co najmniej dwa różne słowa.",
+      "input": "* 1. linia: tekst",
+      "output": "* Każda grupa w osobnej linii: słowa małymi literami, oddzielone pojedynczą spacją, w kolejności pierwszego wystąpienia w tekście.\n* Grupy w kolejności pierwszego wystąpienia ich pierwszego słowa.\n* Jeśli nie ma żadnej grupy — jedna linia `Brak anagramów`.",
       "examples": [
         {
-          "input": "",
-          "output": "[[\"absurd\", \"brudas\"], [\"tyran\", \"narty\"], [\"bandzior\", \"zbrodnia\"], [\"burza\", \"arbuz\"], [\"galeria\", \"alergia\"]]"
+          "input": "Tyran Brudas kupił narty. To absurd! Arbuz i burza.",
+          "output": "tyran narty\nbrudas absurd\narbuz burza",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
           "input": "rat tar art dog",
-          "output": "[[\"rat\", \"tar\", \"art\"]]"
+          "output": "rat tar art"
         },
         {
           "input": "listen silent enlist inlets cat",
-          "output": "[[\"listen\", \"silent\", \"enlist\", \"inlets\"]]"
+          "output": "listen silent enlist inlets"
+        },
+        {
+          "input": "Ala ma kota",
+          "output": "Brak anagramów"
+        },
+        {
+          "input": "Kot kot KOT tok",
+          "output": "kot tok"
+        },
+        {
+          "input": "kot kot",
+          "output": "Brak anagramów"
+        },
+        {
+          "input": "Ewa i kot, Wea? Tok! Aew i ok.",
+          "output": "ewa wea aew\nkot tok"
+        },
+        {
+          "input": "To absurd, że tyran Brudas, ten straszliwy bandzior, sprawuje rządy w tym kraju. Burza nad galeria i alergia na narty to żadna zbrodnia, jak bandzior i jego arbuz.",
+          "output": "absurd brudas\ntyran narty\nbandzior zbrodnia\nburza arbuz\ngaleria alergia"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* tekst ma od 1 do 300 znaków",
+      "notes": "* **Słowo** to najdłuższy ciąg kolejnych liter; pozostałe znaki rozdzielają słowa. Wielkość liter nie ma znaczenia (`Tyran` to `tyran`).\n* Słowo powtórzone w tekście liczy się raz — `kot kot` nie jest grupą anagramów.\n* Wskazówka: użyj słownika, w którym kluczem są posortowane litery słowa (`\"\".join(sorted(slowo))`), a wartością lista słów.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-11",
@@ -337,27 +517,45 @@
         "sort",
         "dict"
       ],
-      "description": "Wczytaj `n` par `klucz wartość`.\na) Wypisz listę par posortowaną rosnąco po kluczach.\nb) Wypisz listę par posortowaną rosnąco po wartościach.",
-      "input": "* 1 linia: `n`\n* następnie `n` linii: `klucz wartość`",
-      "output": "* 1 linia: lista par dla a)\n* 2 linia: lista par dla b)",
+      "description": "Wczytaj `n` par `klucz wartość` do słownika.\n\na) Wypisz pary posortowane rosnąco według kluczy.\n\nb) Wypisz pary posortowane rosnąco według wartości; pary o równych wartościach uporządkuj rosnąco według kluczy.",
+      "input": "* 1. linia: `n`\n* następnie `n` linii: `klucz wartość` — klucz to słowo z małych liter (klucze są różne), wartość to liczba całkowita",
+      "output": "* 1. linia: pary dla a)\n* 2. linia: pary dla b)\n\nKażdą parę wypisz jako `klucz:wartość` (bez spacji wokół dwukropka), a pary oddziel pojedynczą spacją.",
       "examples": [
         {
           "input": "4\nc 3\nx 5\na -2\nb 4",
-          "output": "[('a', -2), ('b', 4), ('c', 3), ('x', 5)]\n[('a', -2), ('c', 3), ('b', 4), ('x', 5)]"
+          "output": "a:-2 b:4 c:3 x:5\na:-2 c:3 b:4 x:5",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
           "input": "3\nb 2\na 3\nc 1",
-          "output": "[('a', 3), ('b', 2), ('c', 1)]\n[('c', 1), ('b', 2), ('a', 3)]"
+          "output": "a:3 b:2 c:1\nc:1 b:2 a:3"
         },
         {
           "input": "3\nc 10\nb 5\na 7",
-          "output": "[('a', 7), ('b', 5), ('c', 10)]\n[('b', 5), ('a', 7), ('c', 10)]"
+          "output": "a:7 b:5 c:10\nb:5 a:7 c:10"
+        },
+        {
+          "input": "1\nz 0",
+          "output": "z:0\nz:0"
+        },
+        {
+          "input": "4\nd 1\nb 1\nc 0\na 1",
+          "output": "a:1 b:1 c:0 d:1\nc:0 a:1 b:1 d:1"
+        },
+        {
+          "input": "3\nb 2\nab 5\nba -2",
+          "output": "ab:5 b:2 ba:-2\nba:-2 b:2 ab:5"
+        },
+        {
+          "input": "5\nkiwi 30\nbanan 12\njablko 30\ngruszka -4\nananas 12",
+          "output": "ananas:12 banan:12 gruszka:-4 jablko:30 kiwi:30\ngruszka:-4 ananas:12 banan:12 jablko:30 kiwi:30"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 50`",
+      "notes": "* Klucze porównujemy jak napisy (alfabetycznie), np. `ab` jest przed `b`.\n* `sorted(slownik.items())` sortuje pary według kluczy — pary (krotki) porównywane są najpierw po pierwszym elemencie.\n* Aby sortować według czegoś innego, przekaż w parametrze `key` **nazwę funkcji** (bez nawiasów). `sorted` wywoła tę funkcję dla każdego elementu i ułoży elementy rosnąco według zwróconych wartości:\n\n  ```python\n  def dlugosc_napisu(napis):\n      return len(napis)\n\n  print(sorted([\"kot\", \"żyrafa\", \"pies\"], key=dlugosc_napisu))  # ['kot', 'pies', 'żyrafa']\n  ```\n\n* Funkcja klucza może zwracać krotkę. Krotki porównywane są element po elemencie, więc dla pary `(klucz, wartość)` zwrócenie `(wartość, klucz)` sortuje po wartości, a przy równych wartościach — po kluczu.",
+      "starter_code": "def wartosc_potem_klucz(para):\n    # para to krotka (klucz, wartość) — zwróć to, według czego sortować\n    pass\n\n\ndef wypisz_pary(pary):\n    print(\" \".join(f\"{klucz}:{wartosc}\" for klucz, wartosc in pary))\n\n\nn = int(input())\nslownik = {}\nfor _ in range(n):\n    klucz, wartosc = input().split()\n    slownik[klucz] = int(wartosc)\n\npo_kluczach = []  # TODO: posortuj pary według kluczy\npo_wartosciach = []  # TODO: posortuj pary, używając key=wartosc_potem_klucz\n\nwypisz_pary(po_kluczach)\nwypisz_pary(po_wartosciach)\n"
     },
     {
       "id": "ZAD-12",
@@ -370,27 +568,215 @@
         "porównanie",
         "list"
       ],
-      "description": "Wczytaj dwa „słowniki” (opis w wejściu). Dla każdego klucza wartościami są listy liczb całkowitych, ale **kolejność w listach nie ma znaczenia**.\nWypisz `Prawda` jeśli słowniki są identyczne (te same klucze i te same wielozbiory wartości), w przeciwnym razie `Fałsz`.",
-      "input": "* Najpierw:\n\n  * 1 linia: `n`\n  * następnie `n` linii: `klucz v1 v2 v3 ...` (co najmniej jedna wartość)\n* Potem:\n\n  * 1 linia: `m`\n  * następnie `m` linii: `klucz v1 v2 v3 ...`",
-      "output": "* `Prawda` lub `Fałsz`",
+      "description": "Wczytaj dwa słowniki, w których kluczami są słowa, a wartościami listy liczb całkowitych. Sprawdź, czy słowniki są identyczne, przy czym **kolejność liczb w listach nie ma znaczenia**: oba słowniki muszą mieć ten sam zbiór kluczy, a pod każdym kluczem te same liczby, występujące tyle samo razy.",
+      "input": "* 1. linia: `n` — liczba kluczy pierwszego słownika\n* następnie `n` linii: `klucz v1 v2 v3 …` (co najmniej jedna liczba)\n* następnie linia z `m` — liczbą kluczy drugiego słownika\n* następnie `m` linii: `klucz v1 v2 v3 …`\n\nW obrębie jednego słownika klucze są różne.",
+      "output": "Jedno słowo: `Prawda`, jeśli słowniki są identyczne, w przeciwnym razie `Fałsz`.",
       "examples": [
         {
           "input": "2\na 1 2 3\nb 4 5\n2\na 3 2 1\nb 5 4",
-          "output": "Prawda"
+          "output": "Prawda",
+          "explanation": ""
+        },
+        {
+          "input": "1\na 1 2\n1\na 2 1 1",
+          "output": "Fałsz",
+          "explanation": "Lista `2 1 1` zawiera liczbę `1` dwa razy, a lista `1 2` — tylko raz."
         }
       ],
       "testcases": [
         {
-          "input": "2\na 1 2 3\nb 4 5\n2\na 3 2 1\nb 5 4",
+          "input": "2\na 1 2 3\nb 4 5\n2\nb 5 4\na 2 3 1",
           "output": "Prawda"
         },
         {
           "input": "1\na 1 2\n1\na 1 2 2",
           "output": "Fałsz"
+        },
+        {
+          "input": "1\nx 7\n1\ny 7",
+          "output": "Fałsz"
+        },
+        {
+          "input": "1\nk 5\n2\nk 5\nm 1",
+          "output": "Fałsz"
+        },
+        {
+          "input": "2\na 1 1 2\nb 3\n2\na 1 2 2\nb 3",
+          "output": "Fałsz"
+        },
+        {
+          "input": "1\nliczby -1 0 -1\n1\nliczby 0 -1 -1",
+          "output": "Prawda"
+        },
+        {
+          "input": "3\na 1\nb 2\nc 3\n2\na 1\nb 2",
+          "output": "Fałsz"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n, m ≤ 20`\n* każda lista ma od 1 do 20 liczb",
+      "notes": "* Kolejność kluczy na wejściu też nie ma znaczenia.\n* Porównanie zbiorów (`set`) nie wystarczy, bo gubi powtórzenia — porównaj posortowane listy.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-13",
+      "slug": "17_slowniki/ZAD-13",
+      "title": "Odwrócenie słownika",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dict",
+        "setdefault",
+        "wyrażenie słownikowe"
+      ],
+      "description": "Wczytaj `n` par `osoba miasto` — słownik, który każdej osobie przypisuje miasto, w którym mieszka. „Odwróć” go: zbuduj słownik `miasto → lista osób` mieszkających w tym mieście.\n\nWypisz:\n\n1. dla każdego miasta (w kolejności alfabetycznej) linię `miasto: osoba1, osoba2, …` z osobami posortowanymi alfabetycznie,\n2. w ostatniej linii słownik `{miasto: liczba osób}` z miastami w kolejności alfabetycznej, zbudowany **wyrażeniem słownikowym** i wypisany przez `print(slownik)`.",
+      "input": "* 1. linia: `n`\n* następnie `n` linii: `osoba miasto` — dwa słowa oddzielone spacją",
+      "output": "* Po jednej linii dla każdego miasta: nazwa miasta, dwukropek, spacja i osoby oddzielone przecinkiem ze spacją.\n* Ostatnia linia: słownik w postaci `{'Miasto': liczba, …}`.",
+      "examples": [
+        {
+          "input": "5\nAnna Warszawa\nJan Lublin\nEwa Warszawa\nAdam Gdynia\nBartek Lublin",
+          "output": "Gdynia: Adam\nLublin: Bartek, Jan\nWarszawa: Anna, Ewa\n{'Gdynia': 1, 'Lublin': 2, 'Warszawa': 2}",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\nOla Sopot",
+          "output": "Sopot: Ola\n{'Sopot': 1}"
+        },
+        {
+          "input": "3\nZenon Radom\nAda Radom\nMarek Radom",
+          "output": "Radom: Ada, Marek, Zenon\n{'Radom': 3}"
+        },
+        {
+          "input": "4\nKasia Opole\nTomek Kielce\nBeata Lublin\nPiotr Gdynia",
+          "output": "Gdynia: Piotr\nKielce: Tomek\nLublin: Beata\nOpole: Kasia\n{'Gdynia': 1, 'Kielce': 1, 'Lublin': 1, 'Opole': 1}"
+        },
+        {
+          "input": "6\nIgor Warszawa\nHanna Gdynia\nGrzegorz Warszawa\nFilip Gdynia\nEla Warszawa\nDarek Sopot",
+          "output": "Gdynia: Filip, Hanna\nSopot: Darek\nWarszawa: Ela, Grzegorz, Igor\n{'Gdynia': 2, 'Sopot': 1, 'Warszawa': 3}"
+        }
+      ],
+      "constraints": "* `1 ≤ n ≤ 50`\n* osoby są różne; imiona i nazwy miast składają się z liter alfabetu łacińskiego bez polskich znaków i zaczynają się wielką literą",
+      "notes": "* `slownik.setdefault(klucz, domyslna)` zwraca wartość dla klucza, a jeśli klucza jeszcze nie ma — najpierw wstawia `domyslna` i zwraca ją. Dzięki temu dopisanie osoby do listy miasta to jedna linia:\n\n  ```python\n  miasta = {}\n  miasta.setdefault(\"Lublin\", []).append(\"Jan\")\n  miasta.setdefault(\"Lublin\", []).append(\"Bartek\")\n  print(miasta)  # {'Lublin': ['Jan', 'Bartek']}\n  ```\n\n* **Wyrażenie słownikowe** (*dict comprehension*) buduje słownik w jednej linii, podobnie jak wyrażenie listowe buduje listę: `{x: x * x for x in range(1, 4)}` daje `{1: 1, 2: 4, 3: 9}`.\n* `sorted(slownik)` zwraca posortowaną listę kluczy słownika.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-14",
+      "slug": "17_slowniki/ZAD-14",
+      "title": "Para o danej sumie — szybko",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "dict",
+        "2-sum",
+        "złożoność"
+      ],
+      "description": "Wczytaj listę `n` liczb całkowitych oraz liczbę `x`. Znajdź indeksy `i`, `j` (gdzie $i < j$) takie, że `lista[i] + lista[j] == x`.\n\nJeśli takich par jest kilka, wybierz tę o najmniejszym `i`, a przy równym `i` — o najmniejszym `j`. Jeśli nie ma żadnej — wypisz `-1 -1`.\n\nTo samo zadanie rozwiązywaliśmy w rozdziale o listach (ZAD-16), ale tym razem lista może mieć nawet $2 \\cdot 10^5$ elementów, więc sprawdzanie wszystkich par dwiema pętlami (około $2 \\cdot 10^{10}$ porównań) jest zbyt wolne. Użyj słownika, który pozwala w jednym kroku sprawdzić, czy i gdzie w liście wystąpiła potrzebna wartość.",
+      "input": "* 1. linia: liczba elementów `n`\n* 2. linia: `n` liczb całkowitych oddzielonych spacjami\n* 3. linia: liczba całkowita `x`",
+      "output": "Jedna linia: dwie liczby `i j` oddzielone spacją albo `-1 -1`.",
+      "examples": [
+        {
+          "input": "4\n3 1 4 2\n5",
+          "output": "0 3",
+          "explanation": "Sumę $5$ dają pary indeksów $(0, 3)$: $3 + 2$ oraz $(1, 2)$: $1 + 4$. Para $(1, 2)$ kończy się wcześniej, ale wybieramy $(0, 3)$, bo ma mniejsze `i`."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\n2 7 11 15\n9",
+          "output": "0 1"
+        },
+        {
+          "input": "3\n1 2 3\n7",
+          "output": "-1 -1"
+        },
+        {
+          "input": "3\n2 2 2\n4",
+          "output": "0 1"
+        },
+        {
+          "input": "3\n5 1 9\n10",
+          "output": "1 2"
+        },
+        {
+          "input": "4\n-3 7 0 3\n0",
+          "output": "0 3"
+        },
+        {
+          "input": "3\n1000000000 -1000000000 5\n0",
+          "output": "0 1"
+        },
+        {
+          "input": "6\n1 4 2 6 3 2\n4",
+          "output": "0 4"
+        },
+        {
+          "input": "5\n4 1 4 3 1\n2",
+          "output": "1 4"
+        },
+        {
+          "input": "400\n1 4 7 10 13 16 19 22 25 28 31 34 37 40 43 46 49 52 55 58 61 64 67 70 73 76 79 82 85 88 91 94 97 100 103 106 109 112 115 118 121 124 127 130 133 136 139 142 145 148 151 154 157 160 163 166 169 172 175 178 181 184 187 190 193 196 199 202 205 208 211 214 217 220 223 226 229 232 235 238 241 244 247 250 253 256 259 262 265 268 271 274 277 280 283 286 289 292 295 298 301 304 307 310 313 316 319 322 325 328 331 334 337 340 343 346 349 352 355 358 361 364 367 370 373 376 379 382 385 388 391 394 397 400 403 406 409 412 415 418 421 424 427 430 433 436 439 442 445 448 451 454 457 460 463 466 469 472 475 478 481 484 487 490 493 496 499 502 505 508 511 514 517 520 523 526 529 532 535 538 541 544 547 550 553 556 559 562 565 568 571 574 577 580 583 586 589 592 595 598 601 604 607 610 613 616 619 622 625 628 631 634 637 640 643 646 649 652 655 658 661 664 667 670 673 676 679 682 685 688 691 694 697 700 703 706 709 712 715 718 721 724 727 730 733 736 739 742 745 748 751 754 757 760 763 766 769 772 775 778 781 784 787 790 793 796 799 802 805 808 811 814 817 820 823 826 829 832 835 838 841 844 847 850 853 856 859 862 865 868 871 874 877 880 883 886 889 892 895 898 901 904 907 910 913 916 919 922 925 928 931 934 937 940 943 946 949 952 955 958 961 964 967 970 973 976 979 982 985 988 991 994 997 1000 1003 1006 1009 1012 1015 1018 1021 1024 1027 1030 1033 1036 1039 1042 1045 1048 1051 1054 1057 1060 1063 1066 1069 1072 1075 1078 1081 1084 1087 1090 1093 1096 1099 1102 1105 1108 1111 1114 1117 1120 1123 1126 1129 1132 1135 1138 1141 1144 1147 1150 1153 1156 1159 1162 1165 1168 1171 1174 1177 1180 1183 1186 1189 1192 1195 1198\n2393",
+          "output": "398 399"
+        }
+      ],
+      "constraints": "* $2 \\le n \\le 2 \\cdot 10^5$\n* $-10^9 \\le$ `lista[i]`, `x` $\\le 10^9$",
+      "notes": "* Para składa się z dwóch **różnych** pozycji w liście — elementu nie można dodać do samego siebie, ale dwie równe liczby na różnych pozycjach już tak.\n* Wskazówka: przechodź po liście indeksem `j` i trzymaj słownik `wartość → indeks jej pierwszego wystąpienia` dla elementów przed `j`. Wtedy najmniejsze `i` do pary z `j` to `slownik[x - lista[j]]` (o ile taki klucz istnieje). Spośród znalezionych par zapamiętaj tę o najmniejszym `i`.\n* Uważaj: pierwsza znaleziona w ten sposób para ma najmniejsze `j`, a niekoniecznie najmniejsze `i` (patrz przykład).",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-15",
+      "slug": "17_slowniki/ZAD-15",
+      "title": "Robot na siatce",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "dict",
+        "krotki",
+        "zbiory"
+      ],
+      "description": "Robot stoi na polu $(0, 0)$ nieskończonej kratkowanej płaszczyzny i wykonuje ciąg ruchów:\n\n* `N` — o jedno pole na północ: $y$ rośnie o 1,\n* `S` — na południe: $y$ maleje o 1,\n* `E` — na wschód: $x$ rośnie o 1,\n* `W` — na zachód: $x$ maleje o 1.\n\nPole startowe liczy się jako odwiedzone raz, a każdy ruch to jedno odwiedzenie pola, na które robot wchodzi. Wypisz:\n\n1. liczbę różnych odwiedzonych pól (razem z polem startowym),\n2. najczęściej odwiedzane pole i liczbę jego odwiedzin; przy remisie — to z nich, które robot odwiedził po raz pierwszy najwcześniej,\n3. `Tak`, jeśli po wykonaniu wszystkich ruchów robot stoi na polu startowym, w przeciwnym razie `Nie`.",
+      "input": "* 1. linia: ciąg ruchów złożony z liter `N`, `S`, `E`, `W` (bez spacji)",
+      "output": "* 1. linia: liczba różnych odwiedzonych pól\n* 2. linia: `x y k` — współrzędne najczęściej odwiedzanego pola i liczba jego odwiedzin\n* 3. linia: `Tak` albo `Nie`",
+      "examples": [
+        {
+          "input": "NESW",
+          "output": "4\n0 0 2\nTak",
+          "explanation": "Robot odwiedza kolejno pola $(0, 0)$, $(0, 1)$, $(1, 1)$, $(1, 0)$ i znowu $(0, 0)$ — to pole odwiedził dwa razy."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "N",
+          "output": "2\n0 0 1\nNie"
+        },
+        {
+          "input": "NNSS",
+          "output": "3\n0 0 2\nTak"
+        },
+        {
+          "input": "EEWWEE",
+          "output": "3\n1 0 3\nNie"
+        },
+        {
+          "input": "SSWWNNEE",
+          "output": "8\n0 0 2\nTak"
+        },
+        {
+          "input": "SSSNN",
+          "output": "4\n0 -1 2\nNie"
+        },
+        {
+          "input": "NWWEE",
+          "output": "4\n0 1 2\nNie"
+        },
+        {
+          "input": "NNEESSWWNE",
+          "output": "9\n0 0 2\nNie"
+        }
+      ],
+      "constraints": "* ciąg ma od 1 do 1000 ruchów",
+      "notes": "* Pozycję trzymaj jako krotkę `(x, y)`. Krotki — w przeciwieństwie do list — mogą być kluczami słownika i elementami zbioru, np. `odwiedziny[(0, 0)] = 1`.\n* Krotkę łatwo „rozpakować” do zmiennych: `x, y = pozycja`. Przesunięcia też można trzymać w słowniku: `RUCHY = {\"N\": (0, 1), \"S\": (0, -1), \"E\": (1, 0), \"W\": (-1, 0)}`, a potem `dx, dy = RUCHY[ruch]`.\n* Liczba różnych pól to liczba kluczy słownika odwiedzin — albo rozmiar zbioru (`set`) odwiedzonych pozycji.\n* Kolejność kluczy w słowniku to kolejność pierwszego wstawienia, co ułatwia rozstrzygnięcie remisu.",
+      "starter_code": ""
     }
   ]
 }

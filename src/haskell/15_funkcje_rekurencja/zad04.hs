@@ -1,61 +1,72 @@
 {-
-ZAD-04 — Mnożenie wielomianów
+ZAD-04 — Silnia
 
-\**Poziom:** ★★☆
-\**Tagi:** `wielomiany`, `konwolucja`, `I/O`
+**Poziom:** ★☆☆
+**Tagi:** `rekurencja`, `silnia`
 
 ### Treść
 
-Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich iloczynem.
+Napisz rekurencyjną funkcję `silnia(n)`, która zwraca $n! = 1 \cdot 2 \cdot \ldots \cdot n$, korzystając z zależności $0! = 1$ oraz $n! = n \cdot (n-1)!$ dla $n \ge 1$.
+
+Program wczytuje $N$ i wypisuje $N!$.
 
 ### Wejście
 
-\* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
-\* 2. linia: `n+1` liczb: `a_n ... a_0`
-\* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
-\* 4. linia: `m+1` liczb: `b_m ... b_0`
+Jedna liczba naturalna `N`.
 
 ### Wyjście
 
-Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
+Jedna liczba naturalna — wartość $N!$.
+
+### Ograniczenia
+
+* `0 ≤ N ≤ 20`
 
 ### Przykład
 
-\**Wejście:**
+**Wejście:**
 
 ```
 3
-5 0 10 6
-2
-1 2 4
 ```
 
-\**Wyjście:**
+**Wyjście:**
 
 ```
-5 10 30 26 52 24
+6
+```
+
+$3! = 3 \cdot 2 \cdot 1 = 6$.
+
+### Kod startowy
+
+```python
+def silnia(n):
+    pass
+
+
+n = int(input())
+print(silnia(n))
 ```
 
 -}
 
-import Data.List (intercalate)
+import Control.Monad (unless)
 
--- Mnoży dwa wielomiany (konwolucja)
--- Złożoność czasowa: O(n*m), gdzie n, m to stopnie wielomianów
--- Złożoność pamięciowa: O(n+m)
-multiplyPolynomials :: [Int] -> [Int] -> [Int]
-multiplyPolynomials a b =
-  [ sum
-      [ a !! i * b !! j | i <- [0 .. length a - 1], j <- [0 .. length b - 1], i + j == k
-      ]
-    | k <- [0 .. length a + length b - 2]
-  ]
+-- Zwraca n! dla n >= 0.
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n) - przez stos rekurencji
+silnia :: Integer -> Integer
+silnia 0 = 1
+silnia n = n * silnia (n - 1)
 
--- Mnożenie wielomianów (z I/O)
 main :: IO ()
 main = do
-  n <- readLn :: IO Int
-  coeffsA <- map read . words <$> getLine :: IO [Int]
-  m <- readLn :: IO Int
-  coeffsB <- map read . words <$> getLine :: IO [Int]
-  putStrLn $ intercalate " " $ map show $ multiplyPolynomials coeffsA coeffsB
+  let testy =
+        [ silnia 0 == 1,
+          silnia 3 == 6,
+          silnia 10 == 3628800,
+          silnia 20 == 2432902008176640000
+        ]
+  unless (and testy) $ error "Test nie przeszedl"
+  putStrLn "Wszystkie testy zakonczone sukcesem"

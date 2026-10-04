@@ -1,0 +1,4 @@
+# Zależności tylko dla scripts/generate_pdf.py.
+# Pozostałe skrypty (md_to_json, run_tests, generate_readme, judge_harness) używają wyłącznie biblioteki standardowej.
+markdown2>=2.4
+weasyprint>=60

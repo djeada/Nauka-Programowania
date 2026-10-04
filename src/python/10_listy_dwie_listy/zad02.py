@@ -1,33 +1,35 @@
-"""
+r"""
 ZAD-02 — Połączenie dwóch list
 
 **Poziom:** ★☆☆
-**Tagi:** `list`, `indeksy`, `concat`
+**Tagi:** `listy`, `indeksy`, `łączenie`
 
 ### Treść
 
-Wczytaj dwie listy liczb całkowitych i wykonaj niezależnie:
+Wczytaj dwie listy liczb całkowitych i utwórz z nich dwie nowe listy:
 
-**a)** Połącz listy, doklejając drugą listę na koniec pierwszej.
-**b)** W pierwszej liście **podmień** elementy o parzystych indeksach (0, 2, 4, …) elementami z drugiej listy o tych samych indeksach — o ile taki indeks istnieje w obu listach.
+a) Listę powstałą przez doklejenie listy 2 na koniec listy 1.
+b) Kopię listy 1, w której elementy o **parzystych indeksach** (0, 2, 4, …) zastąpiono elementami listy 2 o tych samych indeksach. Element zastępujesz tylko wtedy, gdy indeks istnieje w obu listach — pozostałe elementy listy 1 zostają bez zmian.
+
+Oba podpunkty wykonaj na **oryginalnych** listach z wejścia.
 
 ### Wejście
 
-* 1 linia: lista 1
-* 2 linia: lista 2
+* 1. linia: lista 1 — liczby całkowite oddzielone spacjami
+* 2. linia: lista 2 — liczby całkowite oddzielone spacjami
 
 ### Wyjście
 
-* 1 linia: wynik dla **a)** jako lista
-* 2 linia: wynik dla **b)** jako lista
+* 1. linia: wynik podpunktu a) jako lista, np. `[1, 2, 3, 4, 5, 6]`
+* 2. linia: wynik podpunktu b) jako lista
 
-### Przykład
+### Przykład 1
 
 **Wejście:**
 
 ```
-[1, 2, 3]
-[4, 5, 6]
+1 2 3
+4 5 6
 ```
 
 **Wyjście:**
@@ -37,31 +39,41 @@ Wczytaj dwie listy liczb całkowitych i wykonaj niezależnie:
 [4, 2, 6]
 ```
 
+### Przykład 2
+
+**Wejście:**
+
+```
+-2 8 3 6
+7 5 0
+```
+
+**Wyjście:**
+
+```
+[-2, 8, 3, 6, 7, 5, 0]
+[7, 8, 0, 6]
+```
+
+Indeksy parzyste listy 1 to 0 i 2 — ich wartości (`-2` i `3`) zastępujemy wartościami `7` i `0` z listy 2.
+
 """
 
 
-def dostawienie_na_koniec(lista_a, lista_b):
-    lista_a.extend(lista_b)
-    return lista_a
+def dostaw_na_koniec(lista_a, lista_b):
+    return lista_a + lista_b
 
 
-def wstawianie_parzystych_indeksow(lista_a, lista_b):
-    for i in range(len(lista_a)):
-        if i % 2 == 0:
-            del lista_a[i]
-            lista_a.insert(i, lista_b[i])
-    return lista_a
-
-
-def test_dostawienie_na_koniec():
-    assert dostawienie_na_koniec([1, 2, 3], [4, 5, 6]) == [1, 2, 3, 4, 5, 6]
-
-
-def test_wstawianie_parzystych_indeksow():
-    assert wstawianie_parzystych_indeksow([1, 1, 1], [4, 5, 6]) == [4, 1, 6]
+def podmien_parzyste_indeksy(lista_a, lista_b):
+    wynik = lista_a[:]
+    for i in range(0, min(len(lista_a), len(lista_b)), 2):
+        wynik[i] = lista_b[i]
+    return wynik
 
 
 if __name__ == "__main__":
+    lista_a = [int(x) for x in input().split()]
+    lista_b = [int(x) for x in input().split()]
 
-    test_dostawienie_na_koniec()
-    test_wstawianie_parzystych_indeksow()
+    print(dostaw_na_koniec(lista_a, lista_b))
+    print(podmien_parzyste_indeksy(lista_a, lista_b))

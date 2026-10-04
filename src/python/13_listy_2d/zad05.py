@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Czy macierz jest magiczna?
 
 **Poziom:** ★★☆
@@ -6,16 +6,20 @@ ZAD-05 — Czy macierz jest magiczna?
 
 ### Treść
 
-Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami naturalnymi. Sprawdź, czy to **kwadrat magiczny**: suma każdego wiersza, każdej kolumny oraz obu przekątnych jest taka sama.
+Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami całkowitymi. Sprawdź, czy jest **kwadratem magicznym**, czyli czy suma każdego wiersza, każdej kolumny oraz obu przekątnych jest taka sama.
 
 ### Wejście
 
 * 1. linia: `n`
-* następnie `n` wierszy po `n` liczb
+* następnie `n` linii po `n` liczb oddzielonych spacjami
 
 ### Wyjście
 
-* `Prawda` albo `Fałsz`
+Jedno słowo: `Prawda`, jeśli macierz jest kwadratem magicznym, w przeciwnym razie `Fałsz`.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 10`
 
 ### Przykład
 
@@ -34,71 +38,47 @@ Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami naturalnymi. Sprawdź, c
 Prawda
 ```
 
+### Uwagi
+
+* Sprawdzamy wyłącznie sumy — liczby w macierzy **nie muszą** być różne (np. macierz `2×2` z samymi dwójkami jest kwadratem magicznym).
+* Pamiętaj o drugiej przekątnej (od prawego górnego do lewego dolnego rogu) — macierz może mieć równe sumy wierszy, kolumn i jednej przekątnej, a mimo to nie być magiczna.
+* Macierz `1×1` jest kwadratem magicznym.
+
 """
 
 
 def czy_kwadrat_magiczny(macierz):
     """
-    Sprawdza czy macierz jest kwadratem magicznym.
-
-    Złożoność czasowa: O(n²), gdzie n to rozmiar macierzy
-    Złożoność pamięciowa: O(1)
+    Sprawdza, czy sumy wszystkich wierszy, wszystkich kolumn
+    oraz obu przekątnych macierzy kwadratowej są równe.
     """
-    # sprawdzenie, czy macierz jest kwadratem
-    if len(macierz) != len(macierz[0]):
-        return False
-
-    # sprawdz czy suma elementow w kazdym wierszu jest taka sama
-    suma_wiersz = sum(macierz[0])
+    n = len(macierz)
+    wzorzec = sum(macierz[0])
 
     for wiersz in macierz:
-        if suma_wiersz != sum(wiersz):
+        if sum(wiersz) != wzorzec:
             return False
 
-    # sprawdz czy suma elementow w kazdej kolumnie jest taka sama i rowna sumie elementow w kazdym wierszu
-    for kolumna in range(len(macierz[0])):
-        suma_kolumna = 0
-        for wiersz in macierz:
-            suma_kolumna += wiersz[kolumna]
-        if suma_kolumna != suma_wiersz:
+    for kolumna in range(n):
+        suma_kolumny = 0
+        for wiersz in range(n):
+            suma_kolumny += macierz[wiersz][kolumna]
+        if suma_kolumny != wzorzec:
             return False
 
-    # sprawdz czy suma elementow na obu przekatnych jest taka sama i rowna sumie elementow w kazdym wierszu
-    suma_przekatna = 0
-    for i in range(len(macierz)):
-        suma_przekatna += macierz[i][i]
-    if suma_przekatna != suma_wiersz:
-        return False
+    przekatna = 0
+    antyprzekatna = 0
+    for i in range(n):
+        przekatna += macierz[i][i]
+        antyprzekatna += macierz[i][n - 1 - i]
 
-    suma_przekatna = 0
-    for i in range(len(macierz)):
-        suma_przekatna += macierz[i][len(macierz) - 1 - i]
-    if suma_przekatna != suma_wiersz:
-        return False
-
-    return True
-
-
-def test_czy_kwadrat_magiczny():
-
-    assert czy_kwadrat_magiczny([[4, 9, 2], [3, 5, 7], [8, 1, 6]])
-    assert not czy_kwadrat_magiczny([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-    assert czy_kwadrat_magiczny([[2, 7, 6], [9, 5, 1], [4, 3, 8]])
+    return przekatna == wzorzec and antyprzekatna == wzorzec
 
 
 if __name__ == "__main__":
-    # Wczytanie rozmiaru macierzy
-    n = int(input().strip())
+    n = int(input())
+    macierz = [[int(x) for x in input().split()] for _ in range(n)]
 
-    # Wczytanie macierzy
-    macierz = []
-    for _ in range(n):
-        wiersz = list(map(int, input().strip().split()))
-        macierz.append(wiersz)
-
-    # Sprawdzenie czy macierz jest kwadratem magicznym
-    # Złożoność czasowa: O(n²)
-    # Złożoność pamięciowa: O(1)
     if czy_kwadrat_magiczny(macierz):
         print("Prawda")
     else:

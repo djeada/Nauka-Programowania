@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Czy ścieżka istnieje?
 
 **Poziom:** ★☆☆
@@ -6,78 +6,103 @@ ZAD-01 — Czy ścieżka istnieje?
 
 ### Treść
 
-Otrzymujesz ścieżkę w systemie plików. Sprawdź, czy odnosi się do istniejącego **pliku lub folderu**.
+Wczytaj ścieżkę i sprawdź, co się pod nią znajduje w katalogu roboczym. Wypisz:
+
+* `plik` — jeśli ścieżka wskazuje istniejący plik,
+* `folder` — jeśli ścieżka wskazuje istniejący folder,
+* `brak` — jeśli pod tą ścieżką nic nie ma.
 
 ### Wejście
 
-* 1 linia: `path` (napis — ścieżka)
+* 1. linia: ścieżka (względna, z `/` jako separatorem; może zawierać spacje)
 
 ### Wyjście
 
-* 1 linia: `Prawda` jeśli ścieżka istnieje, w przeciwnym razie `Fałsz`
+Jedno słowo: `plik`, `folder` albo `brak`.
 
 ### Przykład
+
+**Pliki przed:**
+
+```
+dane/raport.txt
+| Raport kwartalny
+```
 
 **Wejście:**
 
 ```
-C:\Users\Username\Documents\plik.txt
+dane/raport.txt
 ```
 
 **Wyjście:**
 
 ```
-Prawda
+plik
 ```
+
+### Przykład 2
+
+**Pliki przed:**
+
+```
+dane/raport.txt
+| Raport kwartalny
+```
+
+**Wejście:**
+
+```
+dane
+```
+
+**Wyjście:**
+
+```
+folder
+```
+
+### Przykład 3
+
+**Pliki przed:**
+
+```
+dane/raport.txt
+| Raport kwartalny
+```
+
+**Wejście:**
+
+```
+raport.txt
+```
+
+**Wyjście:**
+
+```
+brak
+```
+
+Plik `raport.txt` leży w folderze `dane`, a nie bezpośrednio w katalogu roboczym.
+
+### Uwagi
+
+* Przydatne funkcje: `os.path.isfile()` i `os.path.isdir()` albo metody `Path.is_file()` i `Path.is_dir()` z modułu `pathlib`.
 
 """
 
-import pathlib
+import os
 
 
-def czy_sciezka_pliku(sciezka):
-    """
-    Funkcja zwraca True jesli podana sciezka jest sciezka pliku,
-    False w przeciwnym wypadku.
-    """
-    return pathlib.Path(sciezka).is_file()
-
-
-def czy_sciezka_folderu(sciezka):
-    """
-    Funkcja zwraca True jesli podana sciezka jest sciezka folderu,
-    False w przeciwnym wypadku.
-    """
-    return pathlib.Path(sciezka).is_dir()
-
-
-def test_czy_sciezka_pliku():
-    # stworz folder testowy
-    pathlib.Path("test").mkdir()
-
-    # stworz plik testowy
-    pathlib.Path("test/test.txt").touch()
-
-    assert czy_sciezka_pliku("test/test.txt")
-    assert not czy_sciezka_pliku("test")
-
-    # usun folder testowy
-    import shutil
-
-    shutil.rmtree("test", ignore_errors=True)
-
-
-def test_czy_sciezka_folderu():
-    # stworz folder testowy
-    pathlib.Path("test").mkdir()
-
-    assert czy_sciezka_folderu("test")
-
-    # usun folder testowy
-    import shutil
-
-    shutil.rmtree("test", ignore_errors=True)
+def rodzaj_sciezki(sciezka):
+    """Zwraca 'plik', 'folder' albo 'brak' w zależności od tego, co jest pod ścieżką."""
+    if os.path.isfile(sciezka):
+        return "plik"
+    if os.path.isdir(sciezka):
+        return "folder"
+    return "brak"
 
 
 if __name__ == "__main__":
-    test_czy_sciezka_pliku()
+    sciezka = input()
+    print(rodzaj_sciezki(sciezka))

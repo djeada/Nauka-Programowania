@@ -1,23 +1,26 @@
 /*
-ZAD-04 — Mnożenie wielomianów
+ZAD-04 — Silnia
 
-**Poziom:** ★★☆
-**Tagi:** `wielomiany`, `konwolucja`, `I/O`
+**Poziom:** ★☆☆
+**Tagi:** `rekurencja`, `silnia`
 
 ### Treść
 
-Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich iloczynem.
+Napisz rekurencyjną funkcję `silnia(n)`, która zwraca $n! = 1 \cdot 2 \cdot \ldots \cdot n$, korzystając z zależności $0! = 1$ oraz $n! = n \cdot (n-1)!$ dla $n \ge 1$.
+
+Program wczytuje $N$ i wypisuje $N!$.
 
 ### Wejście
 
-* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
-* 2. linia: `n+1` liczb: `a_n ... a_0`
-* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
-* 4. linia: `m+1` liczb: `b_m ... b_0`
+Jedna liczba naturalna `N`.
 
 ### Wyjście
 
-Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
+Jedna liczba naturalna — wartość $N!$.
+
+### Ograniczenia
+
+* `0 ≤ N ≤ 20`
 
 ### Przykład
 
@@ -25,36 +28,45 @@ Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
 
 ```
 3
-5 0 10 6
-2
-1 2 4
 ```
 
 **Wyjście:**
 
 ```
-5 10 30 26 52 24
+6
+```
+
+$3! = 3 \cdot 2 \cdot 1 = 6$.
+
+### Kod startowy
+
+```python
+def silnia(n):
+    pass
+
+
+n = int(input())
+print(silnia(n))
 ```
 
 */
+
 #include <cassert>
 
 // Zlozonosc Czasowa: O(n)
 // Zlozonosc Pamieciowa: O(n) - przez stos rekurencji
-int silniaV1(int n) {
-  /**
-   *
-   */
-  if (n == 0 || n == 1) return 1;
+long long silnia(int n) {
+  // Zwraca n! dla n >= 0.
+  if (n == 0) return 1;
 
-  return n * silniaV1(n - 1);
+  return n * silnia(n - 1);
 }
 
 void test1() {
-  int n = 3;
-  int wynik = 6;
-
-  assert(silniaV1(n) == wynik);
+  assert(silnia(0) == 1);
+  assert(silnia(3) == 6);
+  assert(silnia(10) == 3628800);
+  assert(silnia(20) == 2432902008176640000LL);
 }
 
 int main() {

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Przesuń zera na koniec listy
 
 **Poziom:** ★★☆
@@ -10,63 +10,56 @@ Otrzymujesz listę liczb całkowitych. Przenieś wszystkie zera na koniec listy,
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych `A`
+* 1. linia: `n` — długość listy
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-* 1 linia: lista po przekształceniu
+Jedna linia: `n` liczb listy po przekształceniu, oddzielonych spacjami.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 1000`
+* elementy listy są z przedziału $[-10^6, 10^6]$
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0]
+11
+0 1 3 0 8 12 0 4 0 7 0
 ```
 
 **Wyjście:**
 
 ```
-[1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0]
+1 3 8 12 4 7 0 0 0 0 0
 ```
+
+### Uwagi
+
+* Spróbuj przekształcić listę **w miejscu**, bez tworzenia nowej listy: przepisuj kolejne niezerowe elementy na początek listy, a resztę wypełnij zerami. Takie rozwiązanie działa w czasie $O(n)$.
 
 """
 
 
 def przesun_zera(lista):
-    pierwotna_dlugosc = len(lista)
-    lista = list(filter(lambda x: x != 0, lista))
-    lista.extend([0] * (pierwotna_dlugosc - len(lista)))
+    """Przenosi zera na koniec listy (w miejscu), zachowując kolejność pozostałych."""
+    pozycja = 0
+
+    for x in lista:
+        if x != 0:
+            lista[pozycja] = x
+            pozycja += 1
+
+    for i in range(pozycja, len(lista)):
+        lista[i] = 0
+
     return lista
 
 
-# Testy Poprawnosci
-def test_1():
-    lista = [0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0]
-    wynik = [1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0]
-
-    assert przesun_zera(lista) == wynik
-
-
-def test_2():
-    lista = [0, 0, 0, 0]
-    wynik = [0, 0, 0, 0]
-
-    assert przesun_zera(lista) == wynik
-
-
-def test_3():
-    lista = [1, 2, 3, 4, 5, 6]
-    wynik = [1, 2, 3, 4, 5, 6]
-
-    assert przesun_zera(lista) == wynik
-
-
-def main():
-    test_1()
-    test_2()
-    test_3()
-
-
 if __name__ == "__main__":
-    main()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    print(" ".join(str(x) for x in przesun_zera(lista)))

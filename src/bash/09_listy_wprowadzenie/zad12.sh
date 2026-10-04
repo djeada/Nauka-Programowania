@@ -51,25 +51,23 @@
 # * Zredukuj `K` przez `K % N`.
 source ../assert.sh
 
+# Obraca globalną tablicę `lista` o `liczba` pozycji w podanym kierunku.
 rotacja() {
     local kierunek=$1
     local liczba=$2
-    local n=$(($((${#lista[@]})) - 1))
+    local n=${#lista[@]}
 
-    if [[ $kierunek == "prawo" ]]; then
-        for ((i = 0; i < liczba; i++)); do
-            lista=(${lista[$n]} "${lista[@]}")
-            lista=(${lista[$n]} "${lista[@]}")
-            lista=("${lista[@]:0:n+1}")
-        done
-    else
-        for ((i = 0; i < liczba; i++)); do
-            lista=("${lista[@]}" ${lista[0]})
-            lista=("${lista[@]}" ${lista[0]})
-            lista=("${lista[@]:1}")
-        done
+    if ((n == 0)); then
+        return
     fi
 
+    for ((i = 0; i < liczba % n; i++)); do
+        if [[ $kierunek == "prawo" ]]; then
+            lista=("${lista[n - 1]}" "${lista[@]:0:n-1}")
+        else
+            lista=("${lista[@]:1}" "${lista[0]}")
+        fi
+    done
 }
 
 test1() {
@@ -90,9 +88,17 @@ test2() {
     assertArrayEqual lista wynik $LINENO
 }
 
+test3() {
+    local lista=(1 2 3)
+    local wynik=(3 1 2)
+    rotacja prawo 4
+    assertArrayEqual lista wynik $LINENO
+}
+
 main() {
     test1
     test2
+    test3
 }
 
 main "$@"

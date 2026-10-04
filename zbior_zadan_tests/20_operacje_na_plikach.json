@@ -1,122 +1,1111 @@
 {
   "ZAD-01": [
     {
-      "input": "/tmp/np/exist",
-      "output": "Prawda"
+      "input": "dokumenty/umowa.pdf",
+      "output": "plik",
+      "files": {
+        "dokumenty/umowa.pdf": "PDF"
+      }
     },
     {
-      "input": "/tmp/np/missing",
-      "output": "Fałsz"
+      "input": "dokumenty",
+      "output": "folder",
+      "files": {
+        "dokumenty/umowa.pdf": "PDF"
+      }
+    },
+    {
+      "input": "main.py",
+      "output": "brak",
+      "files": {
+        "projekt/src/main.py": "print(1)"
+      }
+    },
+    {
+      "input": "projekt/src",
+      "output": "folder",
+      "files": {
+        "projekt/src/main.py": "print(1)"
+      }
+    },
+    {
+      "input": "puste",
+      "output": "folder",
+      "files": {
+        "puste/": ""
+      }
+    },
+    {
+      "input": "moje dokumenty/lista zakupów.txt",
+      "output": "plik",
+      "files": {
+        "moje dokumenty/lista zakupów.txt": "mleko"
+      }
+    },
+    {
+      "input": "dane",
+      "output": "brak",
+      "files": {}
+    },
+    {
+      "input": "dokumenty/umowa",
+      "output": "brak",
+      "files": {
+        "dokumenty/umowa.pdf": "PDF"
+      }
     }
   ],
   "ZAD-02": [
     {
-      "input": "/tmp/np/docs\n.txt",
-      "output": "['a.txt', 'b.txt']"
+      "input": "raporty\n.txt",
+      "output": "q1.txt\nq2.txt",
+      "files": {
+        "raporty/q2.txt": "a",
+        "raporty/q1.txt": "b",
+        "raporty/wykres.png": "c",
+        "raporty/2023/q4.txt": "d"
+      }
     },
     {
-      "input": "/tmp/np/empty\n.txt",
-      "output": "[]"
+      "input": "dane\n.txt",
+      "output": "RAPORT.TXT\na.Txt\nd.txt",
+      "files": {
+        "dane/RAPORT.TXT": "1",
+        "dane/a.Txt": "2",
+        "dane/b.txt.bak": "3",
+        "dane/c.csv": "4",
+        "dane/d.txt": "5"
+      }
+    },
+    {
+      "input": "projekt\n.py",
+      "output": "main.py\nutils.py",
+      "files": {
+        "projekt/main.py": "",
+        "projekt/modul.py/__init__.py": "",
+        "projekt/test.pyc": "",
+        "projekt/utils.py": ""
+      }
+    },
+    {
+      "input": "a/b\n.md",
+      "output": "c.md\nd.md\nf.MD",
+      "files": {
+        "a/b/c.md": "",
+        "a/b/d.md": "",
+        "a/b/f.MD": "",
+        "a/e.md": ""
+      }
+    },
+    {
+      "input": "moje pliki\n.jpg",
+      "output": "zdjęcie 1.jpg\nzdjęcie 2.JPG",
+      "files": {
+        "moje pliki/zdjęcie 1.jpg": "",
+        "moje pliki/zdjęcie 2.JPG": "",
+        "moje pliki/film.mp4": ""
+      }
+    },
+    {
+      "input": "puste\n.txt",
+      "output": "Brak plików.",
+      "files": {
+        "puste/": ""
+      }
+    },
+    {
+      "input": "dane\n.txt",
+      "output": "Brak plików.",
+      "files": {
+        "dane/a.csv": "x",
+        "dane/b.txt/c.csv": "y"
+      }
+    },
+    {
+      "input": "dokumenty\n.txt",
+      "output": "Folder nie istnieje.",
+      "files": {
+        "dane/a.txt": "x"
+      }
+    },
+    {
+      "input": "raport.txt\n.txt",
+      "output": "Folder nie istnieje.",
+      "files": {
+        "raport.txt": "x"
+      }
     }
   ],
   "ZAD-03": [
     {
-      "input": "report.txt",
-      "output": "['/tmp/np/a/report.txt', '/tmp/np/b/report.txt']"
+      "input": ".\nnotatki.md",
+      "output": "notatki.md\nprojekty/notatki.md\nprojekty/web/notatki.md",
+      "files": {
+        "notatki.md": "a",
+        "projekty/notatki.md": "b",
+        "projekty/web/notatki.md": "c",
+        "projekty/web/notatki.txt": "d",
+        "inne/Notatki.md": "e"
+      }
     },
     {
-      "input": "missing.txt",
-      "output": "[]"
+      "input": "projekty\nnotatki.md",
+      "output": "notatki.md\nweb/notatki.md",
+      "files": {
+        "notatki.md": "a",
+        "projekty/notatki.md": "b",
+        "projekty/web/notatki.md": "c",
+        "projekty/web/notatki.txt": "d",
+        "inne/Notatki.md": "e"
+      }
+    },
+    {
+      "input": ".\nraport.md",
+      "output": "Nie znaleziono.",
+      "files": {
+        "notatki.md": "a",
+        "projekty/notatki.md": "b",
+        "projekty/web/notatki.md": "c",
+        "projekty/web/notatki.txt": "d",
+        "inne/Notatki.md": "e"
+      }
+    },
+    {
+      "input": "a/b\ncel.bin",
+      "output": "c/d/e/cel.bin\nx/cel.bin",
+      "files": {
+        "a/b/c/d/e/cel.bin": "",
+        "a/cel.bin": "",
+        "a/b/x/cel.bin": ""
+      }
+    },
+    {
+      "input": "kopie\nraport.txt",
+      "output": "raport.txt/raport.txt",
+      "files": {
+        "kopie/raport.txt/raport.txt": "x",
+        "kopie/raport.txt/inny.txt": "y"
+      }
+    },
+    {
+      "input": "puste\nraport.txt",
+      "output": "Nie znaleziono.",
+      "files": {
+        "puste/": ""
+      }
+    },
+    {
+      "input": "kopie\na.txt",
+      "output": "Folder nie istnieje.",
+      "files": {
+        "dane/a.txt": ""
+      }
     }
   ],
   "ZAD-04": [
     {
-      "input": "/tmp/np/hello.txt",
-      "output": "Hello"
+      "input": "wiadomosc.txt",
+      "output": "Cześć!\nTo jest wiadomość testowa.",
+      "files": {
+        "wiadomosc.txt": "Cześć!\nTo jest wiadomość testowa.\n"
+      }
     },
     {
-      "input": "/tmp/np/two_lines.txt",
-      "output": "Line1\nLine2"
+      "input": "dane/wiersz.txt",
+      "output": "Litwo! Ojczyzno moja!\nty jesteś jak zdrowie.\n\nIle cię trzeba cenić,\nten tylko się dowie,",
+      "files": {
+        "dane/wiersz.txt": "Litwo! Ojczyzno moja!\nty jesteś jak zdrowie.\n\nIle cię trzeba cenić,\nten tylko się dowie,"
+      }
+    },
+    {
+      "input": "moje notatki/zakupy.txt",
+      "output": "mleko\nchleb\nmasło",
+      "files": {
+        "moje notatki/zakupy.txt": "mleko\nchleb\nmasło"
+      }
+    },
+    {
+      "input": "kod.py",
+      "output": "def f():\n    return 42",
+      "files": {
+        "kod.py": "def f():\n    return 42\n"
+      }
+    },
+    {
+      "input": "pusty.txt",
+      "output": "",
+      "files": {
+        "pusty.txt": ""
+      }
+    },
+    {
+      "input": "a.txt",
+      "output": "Plik nie istnieje.",
+      "files": {
+        "dane/a.txt": "x"
+      }
+    },
+    {
+      "input": "dane",
+      "output": "Plik nie istnieje.",
+      "files": {
+        "dane/a.txt": "x"
+      }
     }
   ],
   "ZAD-05": [
     {
-      "input": "/tmp/np/ips.txt",
-      "output": "['10.0.0.1', '192.168.1.2']"
+      "input": "logi/ip.txt",
+      "output": "1.0.0.1\n1.1.1.1\n8.8.4.4\n8.8.8.8",
+      "files": {
+        "logi/ip.txt": "8.8.8.8\n1.1.1.1\n8.8.4.4\n1.0.0.1\n"
+      }
     },
     {
-      "input": "/tmp/np/ips2.txt",
-      "output": "['1.1.1.1', '8.8.8.8']"
+      "input": "serwery.txt",
+      "output": "2.0.0.0\n10.0.0.3\n10.0.0.20\n10.0.0.100\n10.0.1.1",
+      "files": {
+        "serwery.txt": "10.0.0.20\n10.0.0.3\n10.0.1.1\n2.0.0.0\n10.0.0.100\n"
+      }
+    },
+    {
+      "input": "ip.txt",
+      "output": "9.255.255.255\n100.2.3.4\n100.2.3.4\n100.10.0.0",
+      "files": {
+        "ip.txt": "100.2.3.4\n\n9.255.255.255\n100.2.3.4\n100.10.0.0\n"
+      }
+    },
+    {
+      "input": "jeden.txt",
+      "output": "127.0.0.1",
+      "files": {
+        "jeden.txt": "127.0.0.1"
+      }
+    },
+    {
+      "input": "puste.txt",
+      "output": "Brak adresów.",
+      "files": {
+        "puste.txt": ""
+      }
+    },
+    {
+      "input": "puste wiersze.txt",
+      "output": "Brak adresów.",
+      "files": {
+        "puste wiersze.txt": "\n\n"
+      }
+    },
+    {
+      "input": "ip.txt",
+      "output": "Plik nie istnieje.",
+      "files": {
+        "adresy.txt": "1.2.3.4"
+      }
     }
   ],
   "ZAD-06": [
     {
-      "input": "/tmp/np/text1.txt",
-      "output": "2\n6\n10.5\n3.0\n{'ala': 2, 'ma': 2, 'kota': 1, 'psa': 1}"
+      "input": "kot.txt",
+      "output": "2\n10\n20.00\n5.00\nala: 2\nma: 2\nkota: 1\na: 1\nkot: 1\nalę: 1\nlubi: 1\nkoty: 1",
+      "files": {
+        "kot.txt": "Ala ma kota, a kot ma Alę.\nAla lubi koty.\n"
+      }
     },
     {
-      "input": "/tmp/np/text2.txt",
-      "output": "2\n3\n6.0\n1.5\n{'one': 1, 'two': 1, 'three': 1}"
+      "input": "dane/zdania.txt",
+      "output": "2\n6\n15.00\n3.00\nmark: 1\nup: 1\nr: 1\nto: 1\nsłowa: 1\ntak: 1",
+      "files": {
+        "dane/zdania.txt": "Mark-up 2024r. to 3 słowa?\nTak!"
+      }
+    },
+    {
+      "input": "odstep.txt",
+      "output": "3\n4\n9.33\n1.33\npierwszy: 1\nwiersz: 2\ntrzeci: 1",
+      "files": {
+        "odstep.txt": "Pierwszy wiersz\n\nTrzeci wiersz\n"
+      }
+    },
+    {
+      "input": "jeden.txt",
+      "output": "1\n3\n17.00\n3.00\nzażółć: 1\ngęślą: 1\njaźń: 1",
+      "files": {
+        "jeden.txt": "Zażółć gęślą jaźń"
+      }
+    },
+    {
+      "input": "wielkie.txt",
+      "output": "1\n4\n15.00\n4.00\nala: 4",
+      "files": {
+        "wielkie.txt": "ALA Ala ala aLa"
+      }
+    },
+    {
+      "input": "liczby.txt",
+      "output": "2\n0\n5.00\n0.00",
+      "files": {
+        "liczby.txt": "123 456\n!!!\n"
+      }
+    },
+    {
+      "input": "pusty.txt",
+      "output": "Plik jest pusty.",
+      "files": {
+        "pusty.txt": ""
+      }
+    },
+    {
+      "input": "tekst.txt",
+      "output": "Plik nie istnieje.",
+      "files": {
+        "dane/tekst.txt": "Ala ma kota."
+      }
     }
   ],
   "ZAD-07": [
     {
-      "input": "/tmp/np/note.txt\nHEADER",
-      "output": ""
+      "input": "plan.txt\nPoniedziałek:",
+      "output": "",
+      "files": {
+        "plan.txt": "zakupy\nsprzątanie\n"
+      },
+      "expected_files": {
+        "plan.txt": "Poniedziałek:\nzakupy\nsprzątanie\n"
+      }
     },
     {
-      "input": "/tmp/np/note2.txt\nSTART",
-      "output": ""
+      "input": "dane/log.txt\n=== Początek logu ===",
+      "output": "",
+      "files": {
+        "dane/log.txt": "linia 1\nlinia 2"
+      },
+      "expected_files": {
+        "dane/log.txt": "=== Początek logu ===\nlinia 1\nlinia 2"
+      }
+    },
+    {
+      "input": "pusty.txt\nPierwszy wiersz",
+      "output": "",
+      "files": {
+        "pusty.txt": ""
+      },
+      "expected_files": {
+        "pusty.txt": "Pierwszy wiersz"
+      }
+    },
+    {
+      "input": "b.txt\nnowy początek",
+      "output": "",
+      "files": {
+        "a.txt": "a",
+        "b.txt": "b\nbb"
+      },
+      "expected_files": {
+        "a.txt": "a",
+        "b.txt": "nowy początek\nb\nbb"
+      }
+    },
+    {
+      "input": "moje pliki/lista.txt\nZakupy:",
+      "output": "",
+      "files": {
+        "moje pliki/lista.txt": "\njajka\n"
+      },
+      "expected_files": {
+        "moje pliki/lista.txt": "Zakupy:\n\njajka\n"
+      }
+    },
+    {
+      "input": "log.txt\nABC",
+      "output": "Plik nie istnieje.",
+      "files": {
+        "dane/log.txt": "x"
+      },
+      "expected_files": {
+        "log.txt": null,
+        "dane/log.txt": "x"
+      }
     }
   ],
   "ZAD-08": [
     {
-      "input": "/tmp/np/project",
-      "output": ""
+      "input": "praca\nJ.K.",
+      "output": "dane.csv\nopis.txt\nrozdzial1/tabela.csv\nrozdzial1/tekst.txt",
+      "files": {
+        "praca/opis.txt": "Opis pracy",
+        "praca/dane.csv": "id,wynik\n1,10\n2,20\n",
+        "praca/skrypt.py": "print(1)",
+        "praca/rozdzial1/tekst.txt": "Wstęp\nTreść\n",
+        "praca/rozdzial1/tabela.csv": "a\nb\nc\nd\ne\nf\n"
+      },
+      "expected_files": {
+        "praca/opis.txt": "Opis pracy\nJ.K.",
+        "praca/dane.csv": "id,wynik\n2,20",
+        "praca/skrypt.py": "print(1)",
+        "praca/rozdzial1/tekst.txt": "Wstęp\nTreść\nJ.K.",
+        "praca/rozdzial1/tabela.csv": "a\nb\nc\ne\nf"
+      }
     },
     {
-      "input": "/tmp/np/project2",
-      "output": ""
+      "input": "f\nX",
+      "output": "dwa.csv\njeden.csv\npusty.txt",
+      "files": {
+        "f/pusty.txt": "",
+        "f/jeden.csv": "tylko,ten\n",
+        "f/dwa.csv": "pierwszy\ndrugi"
+      },
+      "expected_files": {
+        "f/pusty.txt": "X",
+        "f/jeden.csv": "",
+        "f/dwa.csv": "pierwszy"
+      }
+    },
+    {
+      "input": "dok\nA.N.",
+      "output": "RAPORT.TXT\ndane.CSV",
+      "files": {
+        "dok/RAPORT.TXT": "Raport",
+        "dok/notatki.txt.bak": "kopia",
+        "dok/dane.CSV": "1\n2\n3\n4\n5",
+        "dok/arkusz.xlsx": "bin"
+      },
+      "expected_files": {
+        "dok/RAPORT.TXT": "Raport\nA.N.",
+        "dok/notatki.txt.bak": "kopia",
+        "dok/dane.CSV": "1\n2\n4\n5",
+        "dok/arkusz.xlsx": "bin"
+      }
+    },
+    {
+      "input": "w\nZ.Z.",
+      "output": "y.txt",
+      "files": {
+        "x.txt": "poza",
+        "w/y.txt": "w środku\n"
+      },
+      "expected_files": {
+        "x.txt": "poza",
+        "w/y.txt": "w środku\nZ.Z."
+      }
+    },
+    {
+      "input": "kod\nA.D.",
+      "output": "Brak plików.",
+      "files": {
+        "kod/main.py": "x",
+        "kod/lib/util.py": "y"
+      },
+      "expected_files": {
+        "kod/main.py": "x",
+        "kod/lib/util.py": "y"
+      }
+    },
+    {
+      "input": "projekty\nA.D.",
+      "output": "Folder nie istnieje.",
+      "files": {
+        "projekt/a.txt": "a"
+      },
+      "expected_files": {
+        "projekt/a.txt": "a"
+      }
     }
   ],
   "ZAD-09": [
     {
-      "input": "/tmp/np/to_delete",
-      "output": ""
+      "input": "dane",
+      "output": "duzy.bin\nobrazy/zdjecie.jpg",
+      "files": {
+        "dane/duzy.bin": {
+          "repeat": "x",
+          "times": 12000
+        },
+        "dane/maly.txt": "abc",
+        "dane/obrazy/zdjecie.jpg": {
+          "repeat": "x",
+          "times": 20000
+        },
+        "dane/obrazy/ikona.png": {
+          "repeat": "x",
+          "times": 500
+        },
+        "inny.bin": {
+          "repeat": "x",
+          "times": 30000
+        }
+      },
+      "expected_files": {
+        "dane/duzy.bin": null,
+        "dane/obrazy/zdjecie.jpg": null,
+        "dane/maly.txt": "abc",
+        "dane/obrazy/ikona.png": {
+          "repeat": "x",
+          "times": 500
+        },
+        "inny.bin": {
+          "repeat": "x",
+          "times": 30000
+        }
+      }
     },
     {
-      "input": "/tmp/np/to_delete2",
-      "output": ""
+      "input": "pliki",
+      "output": "o_jeden_wiecej.txt",
+      "files": {
+        "pliki/dokladnie.txt": {
+          "repeat": "x",
+          "times": 10240
+        },
+        "pliki/o_jeden_wiecej.txt": {
+          "repeat": "x",
+          "times": 10241
+        }
+      },
+      "expected_files": {
+        "pliki/dokladnie.txt": {
+          "repeat": "x",
+          "times": 10240
+        },
+        "pliki/o_jeden_wiecej.txt": null
+      }
+    },
+    {
+      "input": "tekst",
+      "output": "polski.txt",
+      "files": {
+        "tekst/polski.txt": {
+          "repeat": "ą",
+          "times": 5121
+        },
+        "tekst/krotki.txt": {
+          "repeat": "ą",
+          "times": 5120
+        },
+        "tekst/ascii.txt": {
+          "repeat": "a",
+          "times": 6000
+        }
+      },
+      "expected_files": {
+        "tekst/polski.txt": null,
+        "tekst/krotki.txt": {
+          "repeat": "ą",
+          "times": 5120
+        },
+        "tekst/ascii.txt": {
+          "repeat": "a",
+          "times": 6000
+        }
+      }
+    },
+    {
+      "input": "a/b",
+      "output": "c/d/stary_log.txt",
+      "files": {
+        "a/b/c/d/stary_log.txt": {
+          "repeat": "x",
+          "times": 50000
+        },
+        "a/b/nowy_log.txt": {
+          "repeat": "x",
+          "times": 10000
+        },
+        "a/duzy.bin": {
+          "repeat": "x",
+          "times": 11000
+        }
+      },
+      "expected_files": {
+        "a/b/c/d/stary_log.txt": null,
+        "a/b/nowy_log.txt": {
+          "repeat": "x",
+          "times": 10000
+        },
+        "a/duzy.bin": {
+          "repeat": "x",
+          "times": 11000
+        }
+      }
+    },
+    {
+      "input": "male",
+      "output": "Brak plików.",
+      "files": {
+        "male/a.txt": "a",
+        "male/b/c.txt": {
+          "repeat": "x",
+          "times": 10240
+        }
+      },
+      "expected_files": {
+        "male/a.txt": "a",
+        "male/b/c.txt": {
+          "repeat": "x",
+          "times": 10240
+        }
+      }
+    },
+    {
+      "input": "puste",
+      "output": "Brak plików.",
+      "files": {
+        "puste/": ""
+      }
+    },
+    {
+      "input": "inne",
+      "output": "Folder nie istnieje.",
+      "files": {
+        "dane/a.txt": {
+          "repeat": "x",
+          "times": 20000
+        }
+      },
+      "expected_files": {
+        "dane/a.txt": {
+          "repeat": "x",
+          "times": 20000
+        }
+      }
     }
   ],
   "ZAD-10": [
     {
-      "input": "/tmp/np/src\n/tmp/np/dst",
-      "output": ""
+      "input": "grafiki\neksport",
+      "output": "baner.png\nlogo.png",
+      "files": {
+        "grafiki/logo.png": "LOGO",
+        "grafiki/baner.png": "BANER",
+        "grafiki/opis.txt": "opis",
+        "grafiki/stare/ikona.png": "IKONA",
+        "eksport/": ""
+      },
+      "expected_files": {
+        "eksport/logo.png": "LOGO",
+        "eksport/baner.png": "BANER",
+        "eksport/opis.txt": null,
+        "eksport/ikona.png": null,
+        "eksport/stare/ikona.png": null,
+        "grafiki/logo.png": "LOGO",
+        "grafiki/baner.png": "BANER"
+      }
     },
     {
-      "input": "/tmp/np/src2\n/tmp/np/dst2",
-      "output": ""
+      "input": "zdjecia\nbackup/2024/zdjecia",
+      "output": "A.PNG\nb.png",
+      "files": {
+        "zdjecia/A.PNG": "a",
+        "zdjecia/b.png": "b",
+        "zdjecia/c.jpg": "c"
+      },
+      "expected_files": {
+        "backup/2024/zdjecia/A.PNG": "a",
+        "backup/2024/zdjecia/b.png": "b",
+        "backup/2024/zdjecia/c.jpg": null,
+        "zdjecia/A.PNG": "a",
+        "zdjecia/b.png": "b"
+      }
+    },
+    {
+      "input": "src\ndst",
+      "output": "logo.png",
+      "files": {
+        "src/logo.png": "nowe logo",
+        "dst/logo.png": "stare logo",
+        "dst/inne.png": "inne"
+      },
+      "expected_files": {
+        "dst/logo.png": "nowe logo",
+        "dst/inne.png": "inne",
+        "src/logo.png": "nowe logo"
+      }
+    },
+    {
+      "input": "moje zdjęcia\nkopia zapasowa",
+      "output": "wakacje 1.png\nwakacje 2.png",
+      "files": {
+        "moje zdjęcia/wakacje 1.png": "w1",
+        "moje zdjęcia/wakacje 2.png": "w2"
+      },
+      "expected_files": {
+        "kopia zapasowa/wakacje 1.png": "w1",
+        "kopia zapasowa/wakacje 2.png": "w2"
+      }
+    },
+    {
+      "input": "obrazy\nkopia",
+      "output": "Brak plików.",
+      "files": {
+        "obrazy/a.jpg": "x",
+        "obrazy/b.png.txt": "y",
+        "obrazy/c.png/d.txt": "z"
+      },
+      "expected_files": {
+        "kopia/a.jpg": null,
+        "kopia/b.png.txt": null,
+        "kopia/d.txt": null,
+        "kopia/c.png/d.txt": null
+      }
+    },
+    {
+      "input": "zdjecia\nkopia",
+      "output": "Folder nie istnieje.",
+      "files": {
+        "obrazy/a.png": "x"
+      },
+      "expected_files": {
+        "kopia/a.png": null,
+        "obrazy/a.png": "x"
+      }
     }
   ],
   "ZAD-11": [
     {
-      "input": "/tmp/np/a.txt\n/tmp/np/b.txt",
-      "output": ""
+      "input": "a.txt\nb.txt",
+      "output": "",
+      "files": {
+        "a.txt": "Pierwszy plik",
+        "b.txt": "Drugi plik"
+      },
+      "expected_files": {
+        "a.txt": "Drugi plik",
+        "b.txt": "Pierwszy plik"
+      }
     },
     {
-      "input": "/tmp/np/c.txt\n/tmp/np/d.txt",
-      "output": ""
+      "input": "dane/a.txt\nkopie/b.txt",
+      "output": "",
+      "files": {
+        "dane/a.txt": "pierwszy\nplik\n",
+        "kopie/b.txt": ""
+      },
+      "expected_files": {
+        "dane/a.txt": "",
+        "kopie/b.txt": "pierwszy\nplik\n"
+      }
+    },
+    {
+      "input": "moje pliki/ą.txt\nmoje pliki/ę.txt",
+      "output": "",
+      "files": {
+        "moje pliki/ą.txt": "zażółć\ngęślą",
+        "moje pliki/ę.txt": "jaźń"
+      },
+      "expected_files": {
+        "moje pliki/ą.txt": "jaźń",
+        "moje pliki/ę.txt": "zażółć\ngęślą"
+      }
+    },
+    {
+      "input": "x.txt\nx.txt",
+      "output": "",
+      "files": {
+        "x.txt": "jeden\ndwa"
+      },
+      "expected_files": {
+        "x.txt": "jeden\ndwa"
+      }
+    },
+    {
+      "input": "a.txt\nb.txt",
+      "output": "Plik nie istnieje.",
+      "files": {
+        "a.txt": "A"
+      },
+      "expected_files": {
+        "a.txt": "A",
+        "b.txt": null
+      }
+    },
+    {
+      "input": "a.txt\nb.txt",
+      "output": "Plik nie istnieje.",
+      "files": {
+        "b.txt": "B"
+      },
+      "expected_files": {
+        "a.txt": null,
+        "b.txt": "B"
+      }
     }
   ],
   "ZAD-12": [
     {
-      "input": "/tmp/np/src_csv\n/tmp/np/dst_csv",
-      "output": ""
+      "input": "dane\ncsv",
+      "output": "2023/styczen.csv\n2024/q1/luty.CSV\nsprzedaz.csv",
+      "files": {
+        "dane/sprzedaz.csv": "a,b",
+        "dane/2023/styczen.csv": "1,2",
+        "dane/2023/opis.txt": "opis",
+        "dane/2024/q1/luty.CSV": "3,4",
+        "csv/": ""
+      },
+      "expected_files": {
+        "csv/sprzedaz.csv": "a,b",
+        "csv/styczen.csv": "1,2",
+        "csv/luty.CSV": "3,4",
+        "dane/sprzedaz.csv": null,
+        "dane/2023/styczen.csv": null,
+        "dane/2024/q1/luty.CSV": null,
+        "dane/2023/opis.txt": "opis",
+        "csv/opis.txt": null
+      }
     },
     {
-      "input": "/tmp/np/src_csv2\n/tmp/np/dst_csv2",
-      "output": ""
+      "input": "src\nwyniki/csv",
+      "output": "a.csv\nb.csv",
+      "files": {
+        "src/a.csv": "x",
+        "src/b.csv": "y"
+      },
+      "expected_files": {
+        "wyniki/csv/a.csv": "x",
+        "wyniki/csv/b.csv": "y",
+        "src/a.csv": null,
+        "src/b.csv": null
+      }
+    },
+    {
+      "input": "src\ndst",
+      "output": "x/nowy.csv",
+      "files": {
+        "src/x/nowy.csv": "n",
+        "dst/stary.csv": "s"
+      },
+      "expected_files": {
+        "dst/nowy.csv": "n",
+        "dst/stary.csv": "s",
+        "src/x/nowy.csv": null
+      }
+    },
+    {
+      "input": "a\nb",
+      "output": "plik.csv",
+      "files": {
+        "a/plik.csv": "1",
+        "b/plik2.csv": "2"
+      },
+      "expected_files": {
+        "b/plik.csv": "1",
+        "b/plik2.csv": "2",
+        "a/plik.csv": null
+      }
+    },
+    {
+      "input": "dane\ncsv",
+      "output": "Brak plików.",
+      "files": {
+        "dane/a.txt": "x",
+        "dane/b.csv.bak": "y",
+        "dane/c.csv/plik.txt": "z"
+      },
+      "expected_files": {
+        "dane/a.txt": "x",
+        "dane/b.csv.bak": "y",
+        "dane/c.csv/plik.txt": "z",
+        "csv/b.csv.bak": null,
+        "csv/c.csv/plik.txt": null
+      }
+    },
+    {
+      "input": "projekty\ncsv",
+      "output": "Folder nie istnieje.",
+      "files": {
+        "dane/a.csv": "x"
+      },
+      "expected_files": {
+        "dane/a.csv": "x",
+        "csv/a.csv": null
+      }
+    }
+  ],
+  "ZAD-13": [
+    {
+      "input": "klasa.csv",
+      "output": "Bartek: 2.50\nKasia: 4.33",
+      "files": {
+        "klasa.csv": "imie,przedmiot,ocena\nKasia,polski,4.5\nKasia,matematyka,5\nBartek,polski,3\nKasia,angielski,3.5\nBartek,chemia,2\n"
+      }
+    },
+    {
+      "input": "oceny.csv",
+      "output": "Adam: 4.50\nZofia: 6.00",
+      "files": {
+        "oceny.csv": "imie,przedmiot,ocena\nAdam,\"WOS, rozszerzony\",5\nAdam,historia,4\nZofia,\"język polski, poziom podstawowy\",6\n"
+      }
+    },
+    {
+      "input": "moja klasa/oceny 2024.csv",
+      "output": "Adam: 4.50\nMarta: 5.75\nZenon: 3.50",
+      "files": {
+        "moja klasa/oceny 2024.csv": "imie,przedmiot,ocena\nZenon,fizyka,2\nAdam,fizyka,3\nMarta,fizyka,6\nAdam,chemia,6\nZenon,chemia,5\nMarta,chemia,5.5\n"
+      }
+    },
+    {
+      "input": "dane/2b.csv",
+      "output": "Żaneta: 1.00",
+      "files": {
+        "dane/2b.csv": "imie,przedmiot,ocena\nŻaneta,biologia,1\n"
+      }
+    },
+    {
+      "input": "o.csv",
+      "output": "Ola: 4.50\nola: 2.00",
+      "files": {
+        "o.csv": "imie,przedmiot,ocena\nola,plastyka,2\nOla,plastyka,4\nOla,muzyka,5\n"
+      }
+    },
+    {
+      "input": "puste.csv",
+      "output": "Brak danych.",
+      "files": {
+        "puste.csv": "imie,przedmiot,ocena\n"
+      }
+    },
+    {
+      "input": "klasa.csv",
+      "output": "Plik nie istnieje.",
+      "files": {
+        "oceny.csv": "imie,przedmiot,ocena\nAdam,fizyka,5\n"
+      }
+    }
+  ],
+  "ZAD-14": [
+    {
+      "input": "serwer.json\nserwer.port\n8080",
+      "output": "80",
+      "files": {
+        "serwer.json": "{\"serwer\": {\"adres\": \"0.0.0.0\", \"port\": 80}, \"debug\": true}"
+      },
+      "expected_files": {
+        "serwer.json": "{\n  \"serwer\": {\n    \"adres\": \"0.0.0.0\",\n    \"port\": 8080\n  },\n  \"debug\": true\n}"
+      }
+    },
+    {
+      "input": "ustawienia.json\nmotyw\njasny",
+      "output": "ciemny",
+      "files": {
+        "ustawienia.json": "{\n  \"jezyk\": \"pl\",\n  \"motyw\": \"ciemny\"\n}\n"
+      },
+      "expected_files": {
+        "ustawienia.json": "{\n  \"jezyk\": \"pl\",\n  \"motyw\": \"jasny\"\n}"
+      }
+    },
+    {
+      "input": "czujnik.json\ntemperatura.min\n-5",
+      "output": "0",
+      "files": {
+        "czujnik.json": "{\"nazwa\": \"termometr\", \"temperatura\": {\"min\": 0, \"max\": 30}}"
+      },
+      "expected_files": {
+        "czujnik.json": "{\n  \"nazwa\": \"termometr\",\n  \"temperatura\": {\n    \"min\": -5,\n    \"max\": 30\n  }\n}"
+      }
+    },
+    {
+      "input": "app.json\nwersja\n3.5",
+      "output": "3.4",
+      "files": {
+        "app.json": "{\"wersja\": \"3.4\", \"autor\": \"Ola\"}"
+      },
+      "expected_files": {
+        "app.json": "{\n  \"wersja\": \"3.5\",\n  \"autor\": \"Ola\"\n}"
+      }
+    },
+    {
+      "input": "profil.json\nautor.imię\nŻaneta",
+      "output": "Łukasz",
+      "files": {
+        "profil.json": "{\"powitanie\": \"Cześć\", \"autor\": {\"imię\": \"Łukasz\", \"tagi\": [\"a\", \"b\"]}}"
+      },
+      "expected_files": {
+        "profil.json": "{\n  \"powitanie\": \"Cześć\",\n  \"autor\": {\n    \"imię\": \"Żaneta\",\n    \"tagi\": [\n      \"a\",\n      \"b\"\n    ]\n  }\n}"
+      }
+    },
+    {
+      "input": "gra.json\npoziomy.latwy.czas\nbrak",
+      "output": "120",
+      "files": {
+        "gra.json": "{\"poziomy\": {\"latwy\": {\"wrogowie\": 3, \"czas\": 120}}, \"dzwiek\": null}"
+      },
+      "expected_files": {
+        "gra.json": "{\n  \"poziomy\": {\n    \"latwy\": {\n      \"wrogowie\": 3,\n      \"czas\": \"brak\"\n    }\n  },\n  \"dzwiek\": null\n}"
+      }
+    },
+    {
+      "input": "config.json\nbaza.uzytkownik\nadmin",
+      "output": "Brak klucza: baza.uzytkownik",
+      "files": {
+        "config.json": "{\"baza\": {\"host\": \"localhost\"}}"
+      },
+      "expected_files": {
+        "config.json": "{\"baza\": {\"host\": \"localhost\"}}"
+      }
+    },
+    {
+      "input": "config.json\nbaza.port.numer\n1",
+      "output": "Brak klucza: baza.port.numer",
+      "files": {
+        "config.json": "{\"baza\": {\"port\": 5432}}"
+      },
+      "expected_files": {
+        "config.json": "{\"baza\": {\"port\": 5432}}"
+      }
+    },
+    {
+      "input": "config.json\nbaza\n1",
+      "output": "Plik nie istnieje.",
+      "files": {
+        "inne.json": "{}"
+      },
+      "expected_files": {
+        "config.json": null
+      }
+    }
+  ],
+  "ZAD-15": [
+    {
+      "input": "4\na.txt\nb.txt\nc.txt\nd.txt",
+      "output": "3\n0\n1\n2",
+      "files": {
+        "a.txt": "jeden\ndwa\ntrzy\n",
+        "b.txt": "",
+        "c.txt": "bez nowej linii",
+        "d.txt": "\n\n"
+      }
+    },
+    {
+      "input": "4\nlogi\nlogi/2024\nlogi/2024/styczen.log\nlogi/2023/grudzien.log",
+      "output": "To jest folder: logi\nTo jest folder: logi/2024\n2\nBrak pliku: logi/2023/grudzien.log",
+      "files": {
+        "logi/2024/styczen.log": "x\ny\n",
+        "logi/2024/luty.log": "z"
+      }
+    },
+    {
+      "input": "2\nmoje notatki/lista zakupów.txt\nmoje notatki/lista.txt",
+      "output": "4\nBrak pliku: moje notatki/lista.txt",
+      "files": {
+        "moje notatki/lista zakupów.txt": "mleko\nchleb\n\nmasło\n"
+      }
+    },
+    {
+      "input": "3\nraport.txt\nraport.txt\nraport",
+      "output": "2\n2\nBrak pliku: raport",
+      "files": {
+        "raport.txt": "a\nb\n"
+      }
+    },
+    {
+      "input": "2\npuste\npuste/nic.txt",
+      "output": "To jest folder: puste\nBrak pliku: puste/nic.txt",
+      "files": {
+        "puste/": ""
+      }
+    },
+    {
+      "input": "1\n.",
+      "output": "To jest folder: .",
+      "files": {}
     }
   ]
 }

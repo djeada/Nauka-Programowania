@@ -49,32 +49,30 @@ czy_sciezka_folderu() {
 test_czy_sciezka_pliku() {
 
     mkdir 'test'
-    mkdir 'test'
 
     touch 'test/test.txt'
-    touch 'test/test.txt'
 
-    assertTrue "$(czy_sciezka_pliku test/test.txt)" $LINENO
     assertTrue "$(czy_sciezka_pliku test/test.txt)" $LINENO
     assertFalse "$(czy_sciezka_pliku test)" $LINENO
 
-    rm -rf 'test'
     rm -rf 'test'
 }
 
 test_czy_sciezka_folderu() {
 
     mkdir 'test'
-    mkdir 'test'
 
     assertTrue "$(czy_sciezka_folderu test)" $LINENO
-    assertTrue "$(czy_sciezka_folderu test)" $LINENO
 
-    rm -rf 'test'
     rm -rf 'test'
 }
 
 main() {
+    # Testy tworzą i usuwają pliki — pracuj w katalogu tymczasowym, nie w repozytorium.
+    local katalog_roboczy
+    katalog_roboczy=$(mktemp -d)
+    trap 'rm -rf "$katalog_roboczy"' EXIT
+    cd "$katalog_roboczy" || exit 1
     test_czy_sciezka_pliku
     test_czy_sciezka_folderu
 }

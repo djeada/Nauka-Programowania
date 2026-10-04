@@ -1,7 +1,7 @@
 {
   "file": "10_listy_dwie_listy.md",
-  "chapter_title": "Rozdział: Listy — Dwie listy (stdin/stdout)",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Listy w wejściu są podane w **jednej linii** w zapisie z nawiasami kwadratowymi, np. `[5, 3, 7, 2]`.\n* Jeśli w danych są dwie listy — wczytaj je w kolejnych liniach: najpierw lista 1, potem lista 2.\n* Gdy wynikiem jest lista — wypisz ją w formacie jak w przykładach, np. `[1, 2, 3]`.\n* Jeśli wynik ma być w jednej linii z elementami oddzielonymi przecinkami **bez spacji**, trzymaj się dokładnie tego formatu.",
+  "chapter_title": "Rozdział 10: Dwie listy i zbiory",
+  "chapter_description": "Zadania w tym rozdziale ćwiczą jednoczesną pracę na dwóch listach (lub dwóch napisach traktowanych jak ciągi znaków): łączenie, porównywanie, przechodzenie po indeksach i scalanie list posortowanych. Pod koniec rozdziału poznasz **zbiory** (`set`) — kolekcje bez powtórzeń, które pozwalają jednym działaniem wyznaczyć część wspólną, sumę czy różnicę dwóch list — oraz funkcje `zip` i `enumerate`, ułatwiające przechodzenie po dwóch ciągach naraz.\n\n**Konwencje wspólne:**\n\n* Każde zadanie jest osobnym programem: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.\n* Program nie wypisuje komunikatów typu „Podaj listę:”.\n* Każda lista zajmuje na wejściu **jedną linię**, a jej elementy są oddzielone pojedynczymi spacjami, np. `5 3 7 2`. Najpierw podana jest lista 1, w następnej linii lista 2. Każda lista ma co najmniej jeden element.\n* Listę liczb całkowitych wczytasz tak: `lista = [int(x) for x in input().split()]` (dla liczb zmiennoprzecinkowych użyj `float` zamiast `int`).\n* Gdy wynikiem jest lista, wypisz ją tak, jak robi to `print(lista)` w Pythonie: w nawiasach kwadratowych, elementy oddzielone przecinkiem i spacją, np. `[1, 2, 3]`. Pusta lista to `[]`.\n* Gdy treść mówi o elementach „oddzielonych przecinkami bez spacji”, wypisz je w jednej linii, np. `5,1,3`, bez przecinka na końcu — np. `print(*lista, sep=\",\")`.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -10,30 +10,45 @@
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
-        "list",
-        "iteracja"
+        "listy",
+        "iteracja",
+        "indeksy"
       ],
-      "description": "Wczytaj dwie listy liczb całkowitych i wypisz ich elementy **na przemian**:\npierwszy z listy 1, pierwszy z listy 2, drugi z listy 1, drugi z listy 2, itd.\n\nJeśli listy mają różne długości, po wyczerpaniu krótszej listy dopisz pozostałe elementy dłuższej listy w tej samej kolejności.",
-      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
-      "output": "* 1 linia: elementy obu list wypisane na przemian, oddzielone przecinkami **bez spacji**",
+      "description": "Wczytaj dwie listy liczb całkowitych i wypisz ich elementy **na przemian**:\npierwszy element listy 1, pierwszy element listy 2, drugi element listy 1, drugi element listy 2 itd.\n\nJeśli listy mają różne długości, po wyczerpaniu krótszej listy wypisz pozostałe elementy dłuższej listy w ich kolejności.",
+      "input": "* 1. linia: lista 1 — liczby całkowite oddzielone spacjami\n* 2. linia: lista 2 — liczby całkowite oddzielone spacjami",
+      "output": "Jedna linia: elementy obu list wypisane na przemian, oddzielone przecinkami **bez spacji**.",
       "examples": [
         {
-          "input": "[5, 3, 7, 2]\n[1, -2, 3]",
-          "output": "5,1,3,-2,7,3,2"
+          "input": "5 3 7 2\n1 -2 3",
+          "output": "5,1,3,-2,7,3,2",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "[1, 2, 3]\n[10, 20]",
+          "input": "1 2 3\n10 20",
           "output": "1,10,2,20,3"
         },
         {
-          "input": "[5]\n[7, 8, 9]",
+          "input": "5\n7 8 9",
           "output": "5,7,8,9"
+        },
+        {
+          "input": "4\n-6",
+          "output": "4,-6"
+        },
+        {
+          "input": "0 -1 -2 -3\n9 8 7 6",
+          "output": "0,9,-1,8,-2,7,-3,6"
+        },
+        {
+          "input": "1 1 1\n2",
+          "output": "1,2,1,1"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -42,31 +57,50 @@
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
-        "list",
+        "listy",
         "indeksy",
-        "concat"
+        "łączenie"
       ],
-      "description": "Wczytaj dwie listy liczb całkowitych i wykonaj niezależnie:\n\n**a)** Połącz listy, doklejając drugą listę na koniec pierwszej.\n**b)** W pierwszej liście **podmień** elementy o parzystych indeksach (0, 2, 4, …) elementami z drugiej listy o tych samych indeksach — o ile taki indeks istnieje w obu listach.",
-      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
-      "output": "* 1 linia: wynik dla **a)** jako lista\n* 2 linia: wynik dla **b)** jako lista",
+      "description": "Wczytaj dwie listy liczb całkowitych i utwórz z nich dwie nowe listy:\n\na) Listę powstałą przez doklejenie listy 2 na koniec listy 1.\nb) Kopię listy 1, w której elementy o **parzystych indeksach** (0, 2, 4, …) zastąpiono elementami listy 2 o tych samych indeksach. Element zastępujesz tylko wtedy, gdy indeks istnieje w obu listach — pozostałe elementy listy 1 zostają bez zmian.\n\nOba podpunkty wykonaj na **oryginalnych** listach z wejścia.",
+      "input": "* 1. linia: lista 1 — liczby całkowite oddzielone spacjami\n* 2. linia: lista 2 — liczby całkowite oddzielone spacjami",
+      "output": "* 1. linia: wynik podpunktu a) jako lista, np. `[1, 2, 3, 4, 5, 6]`\n* 2. linia: wynik podpunktu b) jako lista",
       "examples": [
         {
-          "input": "[1, 2, 3]\n[4, 5, 6]",
-          "output": "[1, 2, 3, 4, 5, 6]\n[4, 2, 6]"
+          "input": "1 2 3\n4 5 6",
+          "output": "[1, 2, 3, 4, 5, 6]\n[4, 2, 6]",
+          "explanation": ""
+        },
+        {
+          "input": "-2 8 3 6\n7 5 0",
+          "output": "[-2, 8, 3, 6, 7, 5, 0]\n[7, 8, 0, 6]",
+          "explanation": "Indeksy parzyste listy 1 to 0 i 2 — ich wartości (`-2` i `3`) zastępujemy wartościami `7` i `0` z listy 2."
         }
       ],
       "testcases": [
         {
-          "input": "[0, 1, 2, 3]\n[9, 8]",
+          "input": "0 1 2 3\n9 8",
           "output": "[0, 1, 2, 3, 9, 8]\n[9, 1, 2, 3]"
         },
         {
-          "input": "[5]\n[7, 8, 9]",
+          "input": "5\n7 8 9",
           "output": "[5, 7, 8, 9]\n[7]"
+        },
+        {
+          "input": "1 2 3 4 5\n10 20 30 40 50",
+          "output": "[1, 2, 3, 4, 5, 10, 20, 30, 40, 50]\n[10, 2, 30, 4, 50]"
+        },
+        {
+          "input": "4 4\n-1 -2 -3 -4",
+          "output": "[4, 4, -1, -2, -3, -4]\n[-1, 4]"
+        },
+        {
+          "input": "1 2 3 4 5 6\n0 0 0",
+          "output": "[1, 2, 3, 4, 5, 6, 0, 0, 0]\n[0, 2, 0, 4, 5, 6]"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-03",
@@ -75,30 +109,45 @@
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
-        "list",
-        "iteracja"
+        "listy",
+        "iteracja",
+        "indeksy"
       ],
-      "description": "Wczytaj dwie listy liczb całkowitych i zwróć listę, w której element o indeksie `i` jest sumą elementów o indeksie `i` z obu list.\nJeśli któraś lista jest krótsza, brakujące elementy traktuj jako `0`.",
-      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
-      "output": "* 1 linia: lista sum",
+      "description": "Wczytaj dwie listy liczb całkowitych i utwórz listę, w której element o indeksie `i` jest sumą elementów o indeksie `i` z obu list.\nJeśli któraś lista jest krótsza, jej brakujące elementy traktuj jak `0` (wynik ma więc długość dłuższej listy).",
+      "input": "* 1. linia: lista 1 — liczby całkowite oddzielone spacjami\n* 2. linia: lista 2 — liczby całkowite oddzielone spacjami",
+      "output": "Jedna linia: lista sum, np. `[5, 9, 8, 10]`.",
       "examples": [
         {
-          "input": "[3, 1, 2, 5]\n[2, 8, 6, 5]",
-          "output": "[5, 9, 8, 10]"
+          "input": "3 1 2 5\n2 8 6 5",
+          "output": "[5, 9, 8, 10]",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "[1, 2, 3]\n[4]",
+          "input": "1 2 3\n4",
           "output": "[5, 2, 3]"
         },
         {
-          "input": "[0, 0]\n[5, 6, 7]",
+          "input": "0 0\n5 6 7",
           "output": "[5, 6, 7]"
+        },
+        {
+          "input": "-1 -2 -3\n1 2 3",
+          "output": "[0, 0, 0]"
+        },
+        {
+          "input": "10\n-4",
+          "output": "[6]"
+        },
+        {
+          "input": "7 0 -5 12\n3 3 3 3",
+          "output": "[10, 3, -2, 15]"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-04",
@@ -107,31 +156,49 @@
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
-        "list",
+        "listy",
         "wektory",
-        "math"
+        "matematyka"
       ],
-      "description": "Wczytaj dwie listy długości 3 (wektory 3D) i oblicz ich **iloczyn skalarny**:\n[\nA_xB_x + A_yB_y + A_zB_z\n]",
-      "input": "* 1 linia: wektor A (lista 3 liczb całkowitych)\n* 2 linia: wektor B (lista 3 liczb całkowitych)",
-      "output": "* 1 linia: jedna liczba całkowita — iloczyn skalarny",
+      "description": "Wczytaj dwa wektory w przestrzeni trójwymiarowej, $A = [A_x, A_y, A_z]$ oraz $B = [B_x, B_y, B_z]$, i oblicz ich **iloczyn skalarny**:\n$A \\cdot B = A_x B_x + A_y B_y + A_z B_z$.",
+      "input": "* 1. linia: wektor $A$ — trzy liczby całkowite oddzielone spacjami\n* 2. linia: wektor $B$ — trzy liczby całkowite oddzielone spacjami",
+      "output": "Jedna linia: iloczyn skalarny (liczba całkowita).",
       "examples": [
         {
-          "input": "[1, 2, 3]\n[3, 1, 2]",
-          "output": "11"
+          "input": "1 2 3\n3 1 2",
+          "output": "11",
+          "explanation": "$1 \\cdot 3 + 2 \\cdot 1 + 3 \\cdot 2 = 11$."
         }
       ],
       "testcases": [
         {
-          "input": "[1, 0, -1]\n[2, 3, 4]",
+          "input": "1 0 -1\n2 3 4",
           "output": "-2"
         },
         {
-          "input": "[3, 5, 7]\n[2, -1, 0]",
+          "input": "3 5 7\n2 -1 0",
           "output": "1"
+        },
+        {
+          "input": "0 0 0\n5 -7 9",
+          "output": "0"
+        },
+        {
+          "input": "2 3 4\n5 6 7",
+          "output": "56"
+        },
+        {
+          "input": "-2 -3 -4\n-1 -1 -1",
+          "output": "9"
+        },
+        {
+          "input": "10 20 30\n4 5 6",
+          "output": "320"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05",
@@ -140,30 +207,53 @@
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
-        "list",
-        "float"
+        "listy",
+        "float",
+        "średnia"
       ],
-      "description": "Wczytaj dwie listy liczb zmiennoprzecinkowych tej samej długości:\n\n* lista wartości,\n* lista wag.\n\nOblicz średnią ważoną:\n[\n\\frac{\\sum (wartość_i \\cdot waga_i)}{\\sum waga_i}\n]",
-      "input": "* 1 linia: lista wartości (float)\n* 2 linia: lista wag (float)",
-      "output": "* 1 linia: jedna liczba zmiennoprzecinkowa — średnia ważona **z dokładnością do 2 miejsc po przecinku**",
+      "description": "Wczytaj dwie listy liczb zmiennoprzecinkowych tej samej długości: listę wartości $x_1, x_2, \\ldots, x_n$ oraz listę odpowiadających im wag $w_1, w_2, \\ldots, w_n$.\nOblicz średnią ważoną wartości:\n$\\frac{x_1 w_1 + x_2 w_2 + \\ldots + x_n w_n}{w_1 + w_2 + \\ldots + w_n}$.",
+      "input": "* 1. linia: wartości — liczby zmiennoprzecinkowe oddzielone spacjami\n* 2. linia: wagi — liczby zmiennoprzecinkowe oddzielone spacjami (tyle samo co wartości)",
+      "output": "Jedna linia: średnia ważona zaokrąglona do **2 miejsc po przecinku** (np. `0.29`, `7.50`).",
       "examples": [
         {
-          "input": "[0.2, 0.4, 0.1, 0.2, 0.1]\n[2.0, 5.0, 0.0, 2.0, 1.0]",
-          "output": "0.29"
+          "input": "0.2 0.4 0.1 0.2 0.1\n2.0 5.0 0.0 2.0 1.0",
+          "output": "0.29",
+          "explanation": "$\\frac{0.2 \\cdot 2 + 0.4 \\cdot 5 + 0.1 \\cdot 0 + 0.2 \\cdot 2 + 0.1 \\cdot 1}{2 + 5 + 0 + 2 + 1} = \\frac{2.9}{10} = 0.29$."
         }
       ],
       "testcases": [
         {
-          "input": "[1.0, 2.0, 3.0]\n[1.0, 1.0, 2.0]",
+          "input": "1.0 2.0 3.0\n1.0 1.0 2.0",
           "output": "2.25"
         },
         {
-          "input": "[10.0, 0.0]\n[3.0, 1.0]",
+          "input": "10.0 0.0\n3.0 1.0",
           "output": "7.50"
+        },
+        {
+          "input": "5.5\n2.0",
+          "output": "5.50"
+        },
+        {
+          "input": "3 4 5\n1 1 1",
+          "output": "4.00"
+        },
+        {
+          "input": "1.0 2.0\n1.0 2.0",
+          "output": "1.67"
+        },
+        {
+          "input": "-3.0 1.0\n2.0 1.0",
+          "output": "-1.67"
+        },
+        {
+          "input": "-2.0 4.0 1.0\n1.0 0.0 3.0",
+          "output": "0.25"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* Wagi są nieujemne, a ich suma jest większa od zera.",
+      "notes": "* Wynik sformatujesz np. tak: `print(f\"{wynik:.2f}\")`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06",
@@ -172,30 +262,44 @@
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
-        "list",
-        "set"
+        "listy",
+        "część wspólna"
       ],
-      "description": "Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występują w obu listach:\n\n* zachowaj **kolejność występowania w pierwszej liście**,\n* jeśli element z pierwszej listy występuje w drugiej liście, dodaj go do wyniku,\n* jeśli nie ma elementów wspólnych — wypisz `[]`.",
-      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
-      "output": "* 1 linia: lista elementów wspólnych",
+      "description": "Wczytaj dwie listy liczb całkowitych i utwórz listę elementów, które występują **w obu** listach.\n\n* Elementy wyniku ustaw w kolejności ich pierwszego wystąpienia w liście 1.\n* Każdy element wspólny umieść w wyniku **tylko raz**, nawet jeśli w listach się powtarza.\n* Jeśli listy nie mają elementów wspólnych, wypisz `[]`.",
+      "input": "* 1. linia: lista 1 — liczby całkowite oddzielone spacjami\n* 2. linia: lista 2 — liczby całkowite oddzielone spacjami",
+      "output": "Jedna linia: lista elementów wspólnych.",
       "examples": [
         {
-          "input": "[9, 2, 5, 4]\n[4, 2, 1]",
-          "output": "[2, 4]"
+          "input": "9 2 5 4\n4 2 1",
+          "output": "[2, 4]",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "[3, 1, 4]\n[1, 5]",
+          "input": "3 1 4\n1 5",
           "output": "[1]"
         },
         {
-          "input": "[1, 3, 5]\n[2, 4, 6]",
+          "input": "1 3 5\n2 4 6",
           "output": "[]"
+        },
+        {
+          "input": "2 2 3 2\n2 3",
+          "output": "[2, 3]"
+        },
+        {
+          "input": "7 -1 0 8\n8 0 7 -1",
+          "output": "[7, -1, 0, 8]"
+        },
+        {
+          "input": "5 5 5\n5",
+          "output": "[5]"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07",
@@ -204,25 +308,44 @@
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
-        "list",
-        "set"
+        "listy",
+        "różnica symetryczna"
       ],
-      "description": "Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **tylko w jednej** z list (różnica symetryczna).\n\n* Kolejność elementów w wyniku może być **dowolna**.\n* Jeśli wszystkie elementy są wspólne — wypisz `[]`.",
-      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
-      "output": "* 1 linia: lista elementów niewspólnych",
-      "examples": [],
+      "description": "Wczytaj dwie listy liczb całkowitych i utwórz listę elementów, które występują **tylko w jednej** z list (tzw. różnica symetryczna).\n\n* Najpierw umieść elementy listy 1, których nie ma w liście 2 (w kolejności z listy 1), a potem elementy listy 2, których nie ma w liście 1 (w kolejności z listy 2).\n* Każdy element umieść w wyniku **tylko raz**, nawet jeśli w liście się powtarza.\n* Jeśli takich elementów nie ma, wypisz `[]`.",
+      "input": "* 1. linia: lista 1 — liczby całkowite oddzielone spacjami\n* 2. linia: lista 2 — liczby całkowite oddzielone spacjami",
+      "output": "Jedna linia: lista elementów występujących tylko w jednej z list.",
+      "examples": [
+        {
+          "input": "9 2 5 4\n4 2 1",
+          "output": "[9, 5, 1]",
+          "explanation": ""
+        }
+      ],
       "testcases": [
         {
-          "input": "[1, 2, 3]\n[3, 4]",
+          "input": "1 2 3\n3 4",
           "output": "[1, 2, 4]"
         },
         {
-          "input": "[5, 5]\n[5]",
+          "input": "5 5\n5",
           "output": "[]"
+        },
+        {
+          "input": "1 1 2\n2 3 3",
+          "output": "[1, 3]"
+        },
+        {
+          "input": "-1 0 1\n4 5",
+          "output": "[-1, 0, 1, 4, 5]"
+        },
+        {
+          "input": "4 8 15 16\n16 23 42 4",
+          "output": "[8, 15, 23, 42]"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-08",
@@ -231,31 +354,49 @@
       "difficulty": 2,
       "difficulty_display": "★★☆",
       "tags": [
-        "list",
-        "merge",
-        "sort"
+        "listy",
+        "scalanie",
+        "sortowanie"
       ],
-      "description": "Wczytaj dwie listy liczb całkowitych, każda **posortowana rosnąco**. Połącz je w jedną listę:\n\n* wynik ma być posortowany rosnąco,\n* wynik ma zawierać **unikalne** elementy (bez duplikatów).",
-      "input": "* 1 linia: lista 1 (posortowana rosnąco)\n* 2 linia: lista 2 (posortowana rosnąco)",
-      "output": "* 1 linia: jedna posortowana lista bez duplikatów",
+      "description": "Wczytaj dwie listy liczb całkowitych, każdą **posortowaną niemalejąco**, i scal je w jedną listę, która:\n\n* jest posortowana rosnąco,\n* zawiera każdą wartość **tylko raz** (bez duplikatów — także tych, które powtarzają się w obrębie jednej listy).\n\nWykorzystaj to, że listy wejściowe są już posortowane: przechodź jednocześnie po obu listach i za każdym razem dobieraj mniejszy z dwóch bieżących elementów.",
+      "input": "* 1. linia: lista 1 (posortowana niemalejąco) — liczby całkowite oddzielone spacjami\n* 2. linia: lista 2 (posortowana niemalejąco) — liczby całkowite oddzielone spacjami",
+      "output": "Jedna linia: scalona, posortowana lista bez duplikatów.",
       "examples": [
         {
-          "input": "[2, 4, 7]\n[3, 5, 9]",
-          "output": "[2, 3, 4, 5, 7, 9]"
+          "input": "2 4 7\n3 5 9",
+          "output": "[2, 3, 4, 5, 7, 9]",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "[1, 3, 5]\n[2, 3, 4]",
+          "input": "1 3 5\n2 3 4",
           "output": "[1, 2, 3, 4, 5]"
         },
         {
-          "input": "[0, 2, 2]\n[2, 2, 3]",
+          "input": "0 2 2\n2 2 3",
           "output": "[0, 2, 3]"
+        },
+        {
+          "input": "-5 -1\n10 20",
+          "output": "[-5, -1, 10, 20]"
+        },
+        {
+          "input": "7\n7",
+          "output": "[7]"
+        },
+        {
+          "input": "1 1 1\n1 2 2 3",
+          "output": "[1, 2, 3]"
+        },
+        {
+          "input": "4 8 9\n1 2 3",
+          "output": "[1, 2, 3, 4, 8, 9]"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-09",
@@ -264,30 +405,44 @@
       "difficulty": 2,
       "difficulty_display": "★★☆",
       "tags": [
-        "list",
-        "filter"
+        "listy",
+        "filtrowanie"
       ],
-      "description": "Wczytaj dwie listy liczb całkowitych. Usuń z pierwszej listy wszystkie elementy, które występują również w drugiej liście.\n\n* Zachowaj kolejność pozostałych elementów z pierwszej listy.\n* Jeśli wszystko zostanie usunięte — wypisz `[]`.",
-      "input": "* 1 linia: lista 1\n* 2 linia: lista 2",
-      "output": "* 1 linia: lista 1 po usunięciu elementów wspólnych",
+      "description": "Wczytaj dwie listy liczb całkowitych. Usuń z listy 1 **wszystkie** elementy (także powtórzenia), które występują w liście 2.\n\n* Zachowaj kolejność pozostałych elementów listy 1.\n* Jeśli usunięte zostaną wszystkie elementy, wypisz `[]`.",
+      "input": "* 1. linia: lista 1 — liczby całkowite oddzielone spacjami\n* 2. linia: lista 2 — liczby całkowite oddzielone spacjami",
+      "output": "Jedna linia: lista 1 po usunięciu elementów występujących w liście 2.",
       "examples": [
         {
-          "input": "[9, 2, 5, 4]\n[4, 2, 1]",
-          "output": "[9, 5]"
+          "input": "9 2 5 4\n4 2 1",
+          "output": "[9, 5]",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "[1, 2, 3, 2, 4]\n[2, 5]",
+          "input": "1 2 3 2 4\n2 5",
           "output": "[1, 3, 4]"
         },
         {
-          "input": "[1, 1]\n[1]",
+          "input": "1 1\n1",
           "output": "[]"
+        },
+        {
+          "input": "4 5 6\n7 8",
+          "output": "[4, 5, 6]"
+        },
+        {
+          "input": "3 3 3 1 3\n3",
+          "output": "[1]"
+        },
+        {
+          "input": "-2 -1 0 1 2\n0 -2",
+          "output": "[-1, 1, 2]"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Uważaj na usuwanie elementów z listy podczas przechodzenia po niej pętlą `for` — łatwo wtedy pominąć element. Bezpieczniej zbudować nową listę z elementów, które zostają.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-10",
@@ -296,31 +451,228 @@
       "difficulty": 2,
       "difficulty_display": "★★☆",
       "tags": [
-        "list",
-        "median",
-        "sort"
+        "listy",
+        "mediana",
+        "scalanie"
       ],
-      "description": "Wczytaj dwie listy liczb całkowitych:\n\n* obie są posortowane rosnąco,\n* obie mają tę samą, niezerową długość.\n\nZnajdź medianę zbioru wszystkich elementów z obu list (czyli medianę po „złączeniu” obu list).",
-      "input": "* 1 linia: lista 1 (posortowana rosnąco)\n* 2 linia: lista 2 (posortowana rosnąco)",
-      "output": "* 1 linia: mediana jako liczba zmiennoprzecinkowa\n  (jeśli mediana jest całkowita, wypisz ją z `.0`, np. `4.0`)",
+      "description": "Wczytaj dwie listy liczb całkowitych. Obie są posortowane niemalejąco i mają **tę samą** długość $n \\ge 1$.\n\nZnajdź medianę wszystkich $2n$ liczb z obu list. Ponieważ liczb jest parzyście wiele, mediana to średnia arytmetyczna dwóch środkowych wartości po ustawieniu wszystkich liczb w kolejności niemalejącej.",
+      "input": "* 1. linia: lista 1 (posortowana niemalejąco) — liczby całkowite oddzielone spacjami\n* 2. linia: lista 2 (posortowana niemalejąco, tej samej długości) — liczby całkowite oddzielone spacjami",
+      "output": "Jedna linia: mediana jako liczba zmiennoprzecinkowa, np. `4.5`. Jeśli mediana jest liczbą całkowitą, wypisz ją z `.0`, np. `4.0`.",
       "examples": [
         {
-          "input": "[2, 4, 7]\n[3, 5, 9]",
-          "output": "4.5"
+          "input": "2 4 7\n3 5 9",
+          "output": "4.5",
+          "explanation": "Po scaleniu otrzymujemy `[2, 3, 4, 5, 7, 9]`; dwie środkowe wartości to `4` i `5`, więc mediana wynosi $\\frac{4 + 5}{2} = 4.5$."
         }
       ],
       "testcases": [
         {
-          "input": "[1, 3, 5]\n[2, 4, 6]",
+          "input": "1 3 5\n2 4 6",
           "output": "3.5"
         },
         {
-          "input": "[1, 2]\n[2, 3]",
+          "input": "1 2\n2 3",
           "output": "2.0"
+        },
+        {
+          "input": "5\n10",
+          "output": "7.5"
+        },
+        {
+          "input": "1 2 3\n10 11 12",
+          "output": "6.5"
+        },
+        {
+          "input": "-5 -3 -1\n-4 -2 0",
+          "output": "-2.5"
+        },
+        {
+          "input": "1 1 1 1\n1 1 1 1",
+          "output": "1.0"
+        },
+        {
+          "input": "0 10 20 30\n5 15 25 35",
+          "output": "17.5"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-11",
+      "slug": "10_listy_dwie_listy/ZAD-11",
+      "title": "Operacje na zbiorach",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "zbiory",
+        "set",
+        "listy"
+      ],
+      "description": "Wczytaj dwie listy liczb całkowitych i zamień każdą z nich na zbiór: $A$ (z listy 1) i $B$ (z listy 2). Powtórzenia elementów w listach znikają, bo zbiór przechowuje każdą wartość tylko raz.\n\nWypisz:\n\n1. sumę zbiorów $A \\cup B$ (elementy należące do $A$ lub do $B$),\n2. część wspólną $A \\cap B$ (elementy należące do $A$ i do $B$),\n3. różnicę $A \\setminus B$ (elementy $A$, których nie ma w $B$),\n4. różnicę symetryczną (elementy należące do dokładnie jednego ze zbiorów),\n5. odpowiedź na pytanie, czy $A$ jest podzbiorem $B$ (czy każdy element $A$ należy do $B$).",
+      "input": "* 1. linia: lista 1 — liczby całkowite oddzielone spacjami\n* 2. linia: lista 2 — liczby całkowite oddzielone spacjami",
+      "output": "Pięć linii:\n\n* linie 1–4: wyniki działań 1–4 jako listy posortowane rosnąco, wypisane przez `print(sorted(...))`, np. `[1, 2, 5]`; pusty wynik to `[]`,\n* linia 5: `Tak`, jeśli $A$ jest podzbiorem $B$, w przeciwnym razie `Nie`.",
+      "examples": [
+        {
+          "input": "1 2 3 4 2\n3 4 5",
+          "output": "[1, 2, 3, 4, 5]\n[3, 4]\n[1, 2]\n[1, 2, 5]\nNie",
+          "explanation": ""
+        },
+        {
+          "input": "2 2 1\n1 2 3",
+          "output": "[1, 2, 3]\n[1, 2]\n[]\n[3]\nTak",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n5",
+          "output": "[5]\n[5]\n[]\n[]\nTak"
+        },
+        {
+          "input": "1 2\n3 4",
+          "output": "[1, 2, 3, 4]\n[]\n[1, 2]\n[1, 2, 3, 4]\nNie"
+        },
+        {
+          "input": "3 1 2\n2 3 1",
+          "output": "[1, 2, 3]\n[1, 2, 3]\n[]\n[]\nTak"
+        },
+        {
+          "input": "-1 0 7 7 -1\n0 8 -5",
+          "output": "[-5, -1, 0, 7, 8]\n[0]\n[-1, 7]\n[-5, -1, 7, 8]\nNie"
+        },
+        {
+          "input": "4 6\n1 2 3 4 5 6 7",
+          "output": "[1, 2, 3, 4, 5, 6, 7]\n[4, 6]\n[]\n[1, 2, 3, 5, 7]\nTak"
+        },
+        {
+          "input": "1 2 3 4 5 6 7\n4 6",
+          "output": "[1, 2, 3, 4, 5, 6, 7]\n[4, 6]\n[1, 2, 3, 5, 7]\n[1, 2, 3, 5, 7]\nNie"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Zbiór tworzysz z listy funkcją `set`, np. `set([2, 2, 1])` to zbiór `{1, 2}`.\n* Działania na zbiorach w Pythonie: `A | B` (suma), `A & B` (część wspólna), `A - B` (różnica), `A ^ B` (różnica symetryczna), `A <= B` (czy $A$ jest podzbiorem $B$ — wynik `True` lub `False`).\n* Zbiór nie pamięta kolejności elementów, dlatego przed wypisaniem zamień go na posortowaną listę: `sorted(A | B)`.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-12",
+      "slug": "10_listy_dwie_listy/ZAD-12",
+      "title": "Sprawdzanie testu (zip, enumerate)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "zip",
+        "enumerate",
+        "napisy"
+      ],
+      "description": "Uczeń rozwiązał test wyboru. Wczytaj klucz poprawnych odpowiedzi oraz odpowiedzi ucznia — oba jako napisy, w których znak na pozycji `i` to odpowiedź na pytanie `i + 1` (np. `ABCDA` oznacza: pytanie 1 — `A`, pytanie 2 — `B` itd.).\n\nDla każdego pytania wypisz, czy uczeń odpowiedział poprawnie, a na końcu podsumuj wynik.",
+      "input": "* 1. linia: klucz odpowiedzi — napis z wielkich liter `A`–`E`, bez spacji\n* 2. linia: odpowiedzi ucznia — napis tej samej długości co klucz, z wielkich liter `A`–`E`",
+      "output": "* Dla każdego pytania (numerowanych od 1) jedna linia:\n  * `nr: OK` — gdy odpowiedź jest poprawna,\n  * `nr: źle (poprawna: X)` — gdy jest błędna, gdzie `X` to poprawna odpowiedź z klucza.\n* Ostatnia linia: `Wynik: p/n (q%)`, gdzie `p` to liczba poprawnych odpowiedzi, `n` — liczba pytań, a `q` — procent poprawnych odpowiedzi z **jedną cyfrą po przecinku** (np. `80.0`, `66.7`).",
+      "examples": [
+        {
+          "input": "ABCDA\nACCDA",
+          "output": "1: OK\n2: źle (poprawna: B)\n3: OK\n4: OK\n5: OK\nWynik: 4/5 (80.0%)",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "A\nA",
+          "output": "1: OK\nWynik: 1/1 (100.0%)"
+        },
+        {
+          "input": "A\nB",
+          "output": "1: źle (poprawna: A)\nWynik: 0/1 (0.0%)"
+        },
+        {
+          "input": "ABC\nCBA",
+          "output": "1: źle (poprawna: A)\n2: OK\n3: źle (poprawna: C)\nWynik: 1/3 (33.3%)"
+        },
+        {
+          "input": "DDDD\nDDDD",
+          "output": "1: OK\n2: OK\n3: OK\n4: OK\nWynik: 4/4 (100.0%)"
+        },
+        {
+          "input": "ABCDABCD\nABCDDCBA",
+          "output": "1: OK\n2: OK\n3: OK\n4: OK\n5: źle (poprawna: A)\n6: źle (poprawna: B)\n7: źle (poprawna: C)\n8: źle (poprawna: D)\nWynik: 4/8 (50.0%)"
+        },
+        {
+          "input": "BCA\nBCB",
+          "output": "1: OK\n2: OK\n3: źle (poprawna: A)\nWynik: 2/3 (66.7%)"
+        }
+      ],
+      "constraints": "",
+      "notes": "* `zip(a, b)` łączy dwa ciągi w pary kolejnych elementów: `zip(\"AB\", \"AC\")` daje pary `(\"A\", \"A\")` i `(\"B\", \"C\")`.\n* `enumerate(ciag, start=1)` dodaje do każdego elementu jego numer, licząc od 1: `enumerate(\"XY\", start=1)` daje pary `(1, \"X\")` i `(2, \"Y\")`.\n* Razem:\n\n  ```python\n  for nr, (poprawna, udzielona) in enumerate(zip(klucz, odpowiedzi), start=1):\n      ...\n  ```\n\n* Procent sformatujesz tak: `f\"{procent:.1f}\"`.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-13",
+      "slug": "10_listy_dwie_listy/ZAD-13",
+      "title": "Poprawność numeru PESEL",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "zip",
+        "cyfra kontrolna",
+        "napisy"
+      ],
+      "description": "Numer PESEL składa się z 11 cyfr $c_1 c_2 \\ldots c_{11}$. Ostatnia cyfra $c_{11}$ jest **cyfrą kontrolną**: mnożymy pierwsze 10 cyfr przez wagi `1 3 7 9 1 3 7 9 1 3`, sumujemy iloczyny, a cyfra kontrolna to\n\n$c_{11} = (10 - S \\bmod 10) \\bmod 10$, gdzie $S = 1 \\cdot c_1 + 3 \\cdot c_2 + 7 \\cdot c_3 + 9 \\cdot c_4 + 1 \\cdot c_5 + 3 \\cdot c_6 + 7 \\cdot c_7 + 9 \\cdot c_8 + 1 \\cdot c_9 + 3 \\cdot c_{10}$.\n\nDziesiąta cyfra $c_{10}$ oznacza płeć: parzysta — kobieta, nieparzysta — mężczyzna.\n\nWczytaj napis i sprawdź, czy jest poprawnym numerem PESEL, czyli czy:\n\n* ma dokładnie 11 znaków,\n* każdy znak jest cyfrą,\n* cyfra kontrolna zgadza się z wyliczoną ze wzoru.\n\nDla poprawnego numeru wypisz dodatkowo płeć. **Nie sprawdzaj** poprawności daty urodzenia zapisanej w numerze (cyfry 1–6).",
+      "input": "* 1. linia: napis bez spacji (może zawierać znaki niebędące cyframi i mieć dowolną długość)",
+      "output": "* Dla poprawnego numeru dwie linie: `Poprawny`, a w drugiej `kobieta` lub `mężczyzna`.\n* W przeciwnym razie jedna linia: `Niepoprawny`.",
+      "examples": [
+        {
+          "input": "44051401359",
+          "output": "Poprawny\nmężczyzna",
+          "explanation": "$S = 1 \\cdot 4 + 3 \\cdot 4 + 7 \\cdot 0 + 9 \\cdot 5 + 1 \\cdot 1 + 3 \\cdot 4 + 7 \\cdot 0 + 9 \\cdot 1 + 1 \\cdot 3 + 3 \\cdot 5 = 101$, więc cyfra kontrolna to $(10 - 1) \\bmod 10 = 9$ — zgadza się. Dziesiąta cyfra `5` jest nieparzysta."
+        },
+        {
+          "input": "44051401358",
+          "output": "Niepoprawny",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "02070803628",
+          "output": "Poprawny\nkobieta"
+        },
+        {
+          "input": "12345678910",
+          "output": "Poprawny\nmężczyzna"
+        },
+        {
+          "input": "00000000000",
+          "output": "Poprawny\nkobieta"
+        },
+        {
+          "input": "12345678903",
+          "output": "Poprawny\nkobieta"
+        },
+        {
+          "input": "12345678904",
+          "output": "Niepoprawny"
+        },
+        {
+          "input": "4405140135",
+          "output": "Niepoprawny"
+        },
+        {
+          "input": "440514013590",
+          "output": "Niepoprawny"
+        },
+        {
+          "input": "4405140135X",
+          "output": "Niepoprawny"
+        },
+        {
+          "input": "abcdefghijk",
+          "output": "Niepoprawny"
+        }
+      ],
+      "constraints": "",
+      "notes": "* To, czy znak jest cyfrą, sprawdzisz warunkiem `znak in \"0123456789\"`, a cyfrę zamienisz na liczbę przez `int(znak)`.\n* Wagi zapisz w liście `[1, 3, 7, 9, 1, 3, 7, 9, 1, 3]` i przejdź po parach (cyfra, waga) za pomocą `zip(numer, wagi)` — `zip` kończy na krótszym ciągu, więc weźmie tylko 10 pierwszych cyfr.",
+      "starter_code": ""
     }
   ]
 }

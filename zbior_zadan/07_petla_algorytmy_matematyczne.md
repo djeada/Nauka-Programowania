@@ -1,65 +1,64 @@
-# Rozdział: Pętla — Algorytmy Matematyczne
+# Rozdział 7: Pętle — algorytmy matematyczne
 
-Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
-**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem / ćwiczeniem funkcji.**
+Zadania w tym rozdziale łączą pętle z funkcjami: implementujesz klasyczne algorytmy matematyczne (potęgowanie, silnia, NWD, NWW, pierwiastek, test pierwszości) bez gotowych funkcji bibliotecznych.
 
 **Konwencje wspólne:**
 
-* Jeśli zadanie mówi „napisz funkcję” — implementujesz funkcję o podanej nazwie i zwracasz wynik przez `return`.
-* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
-* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.
-* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem.
+* Każde zadanie (i każdy podpunkt) to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.
+* Program nie wypisuje komunikatów typu „Podaj liczbę:”. Tekst podany w `input("…")` jest ignorowany przez sprawdzarkę.
+* Jeśli zadanie mówi „napisz funkcję”, zaimplementuj funkcję o podanej nazwie, która zwraca wynik przez `return`. Program wczytuje dane, wywołuje funkcję i wypisuje wynik — gotowy szkielet znajdziesz w sekcji **Kod startowy**.
+* Dane wejściowe wczytuj dokładnie w podanej kolejności, każdą wartość z osobnej linii.
 
 ---
 
-## ZAD-01 — Obliczanie średniej z n liczb
+## ZAD-01 — Średnia, minimum i maksimum z n liczb
 
 **Poziom:** ★☆☆
-**Tagi:** `pętle`, `suma`, `średnia`, `float`
+**Tagi:** `pętle`, `suma`, `średnia`, `minimum`, `maksimum`
 
 ### Treść
 
-Napisz funkcję `oblicz_srednia()`, która:
+Wczytaj liczbę `n`, a następnie w pętli `n` liczb (każdą z osobnej linii). Wypisz ich średnią arytmetyczną, najmniejszą i największą z nich.
 
-1. Wczytuje liczbę naturalną `n` (`n ≥ 1`).
-2. Wczytuje następnie `n` liczb (całkowitych lub zmiennoprzecinkowych).
-3. Zwraca ich średnią arytmetyczną.
+Nie zapamiętuj wszystkich liczb — wystarczą trzy zmienne aktualizowane w każdym obrocie pętli (tzw. **akumulatory**): bieżąca suma, bieżące minimum i bieżące maksimum.
 
 ### Wejście
 
-* 1. linia: `n` (`n ≥ 1`)
-* kolejne `n` linii: liczby (int lub float)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
+* kolejne `n` linii: liczby rzeczywiste (całkowite lub z kropką dziesiętną, np. `2.5`; mogą być ujemne)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę zmiennoprzecinkową — średnią arytmetyczną.
+Trzy liczby, każda w osobnej linii i z dokładnością do **dwóch miejsc po przecinku**:
+
+1. średnia arytmetyczna,
+2. najmniejsza liczba,
+3. największa liczba.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-2
+3
 4
+-1
 6
-```
-
-**Wywołanie funkcji:**
-
-```python
-wynik = oblicz_srednia()
-print(wynik)
 ```
 
 **Wyjście:**
 
 ```
-5.0
+3.00
+-1.00
+6.00
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`).
+* Wczytuj liczby funkcją `float()`, bo mogą mieć część ułamkową.
+* Minimum i maksimum najprościej zainicjować pierwszą wczytaną liczbą, a potem w pętli porównywać z nimi kolejne liczby.
+* Możesz napisać pomocniczą funkcję, np. `formatuj(x)` zwracającą `f"{x:.2f}"`, ale wczytywanie danych zostaw w programie głównym.
 
 ---
 
@@ -70,25 +69,26 @@ print(wynik)
 
 ### Treść
 
-Napisz funkcję `potega(a, b)`, która oblicza `a^b` przy użyciu pętli (bez operatora potęgowania).
+Napisz funkcję `potega(a, b)`, która zwraca $a^b$ obliczone przy użyciu pętli — **bez** operatora `**` i funkcji `pow()`.
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Dwa argumenty funkcji:
-
-* `a` (liczba naturalna, `a ≥ 0`)
-* `b` (liczba naturalna, `b ≥ 0`)
+* 1. linia: `a` — liczba naturalna (`a ≥ 0`)
+* 2. linia: `b` — liczba naturalna (`b ≥ 0`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę naturalną — wartość `a^b`.
+Jedna liczba całkowita — wartość $a^b$.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(potega(3, 5))
+```
+3
+5
 ```
 
 **Wyjście:**
@@ -97,9 +97,22 @@ print(potega(3, 5))
 243
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Dla `b = 0` wynik ma wynosić `1`.
+* Dla `b = 0` wynik wynosi `1` (przyjmujemy też $0^0 = 1$).
+
+### Kod startowy
+
+```python
+def potega(a, b):
+    # Oblicz a do potęgi b, mnożąc w pętli.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(potega(a, b))
+```
 
 ---
 
@@ -110,31 +123,47 @@ print(potega(3, 5))
 
 ### Treść
 
-Napisz funkcję `iloczyn(a, b)`, która oblicza `a * b` używając **tylko dodawania** i pętli.
+Napisz funkcję `iloczyn(a, b)`, która zwraca $a \cdot b$ obliczone przy użyciu **tylko dodawania** i pętli (bez operatora `*`).
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Dwa argumenty funkcji:
-
-* `a` (liczba naturalna, `a ≥ 0`)
-* `b` (liczba naturalna, `b ≥ 0`)
+* 1. linia: `a` — liczba naturalna (`a ≥ 0`)
+* 2. linia: `b` — liczba naturalna (`b ≥ 0`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę naturalną — `a * b`.
+Jedna liczba całkowita — iloczyn $a \cdot b$.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(iloczyn(3, 2))
+```
+3
+2
 ```
 
 **Wyjście:**
 
 ```
 6
+```
+
+$3 \cdot 2 = 2 + 2 + 2 = 6$.
+
+### Kod startowy
+
+```python
+def iloczyn(a, b):
+    # Oblicz a * b, dodając w pętli.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(iloczyn(a, b))
 ```
 
 ---
@@ -146,35 +175,51 @@ print(iloczyn(3, 2))
 
 ### Treść
 
-Napisz funkcję `iloraz(a, b)`, która oblicza `a // b` używając **tylko odejmowania** i pętli.
+Napisz funkcję `iloraz(a, b)`, która zwraca wynik dzielenia całkowitego `a // b` obliczony przy użyciu **tylko odejmowania** i pętli (bez operatorów `/`, `//` i `%`).
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Dwa argumenty funkcji:
-
-* `a` (liczba naturalna, `a ≥ 0`)
-* `b` (liczba naturalna)
-
-### Ograniczenia / gwarancje
-
-* `b > 0`
+* 1. linia: `a` — liczba naturalna (`a ≥ 0`)
+* 2. linia: `b` — liczba naturalna (`b ≥ 1`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę naturalną — `a // b`.
+Jedna liczba całkowita — wynik dzielenia całkowitego `a // b`.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(iloraz(3, 2))
+```
+17
+5
 ```
 
 **Wyjście:**
 
 ```
-1
+3
+```
+
+Od `17` można trzy razy odjąć `5` (zostaje reszta `2`), więc wynik to `3`.
+
+### Uwagi
+
+* Gdy `a < b`, wynik wynosi `0`.
+
+### Kod startowy
+
+```python
+def iloraz(a, b):
+    # Odejmuj b od a w pętli i licz, ile razy się udało.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(iloraz(a, b))
 ```
 
 ---
@@ -186,31 +231,46 @@ print(iloraz(3, 2))
 
 ### Treść
 
-Napisz funkcję `silnia(n)`, która zwraca `n!` obliczone przy użyciu pętli.
-Przyjmij, że `0! = 1`.
+Napisz funkcję `silnia(n)`, która zwraca $n! = 1 \cdot 2 \cdot \ldots \cdot n$ obliczone przy użyciu pętli. Przyjmij, że $0! = 1$.
+
+Program wczytuje `n`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Jeden argument funkcji:
-
-* `n` (liczba naturalna, `n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę naturalną — `n!`.
+Jedna liczba całkowita — wartość $n!$.
+
+### Ograniczenia
+
+* `0 ≤ n ≤ 20`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(silnia(3))
+```
+3
 ```
 
 **Wyjście:**
 
 ```
 6
+```
+
+### Kod startowy
+
+```python
+def silnia(n):
+    # Oblicz n! w pętli.
+    pass
+
+
+n = int(input())
+print(silnia(n))
 ```
 
 ---
@@ -222,31 +282,49 @@ print(silnia(3))
 
 ### Treść
 
-Napisz funkcję `nwd(a, b)`, która zwraca największy wspólny dzielnik dwóch liczb naturalnych.
+Napisz funkcję `nwd(a, b)`, która zwraca największy wspólny dzielnik liczb `a` i `b`. Użyj pętli (np. algorytmu Euklidesa), a nie funkcji `math.gcd()`.
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Dwa argumenty funkcji:
-
-* `a` (liczba naturalna, `a > 0`)
-* `b` (liczba naturalna, `b > 0`)
+* 1. linia: `a` — liczba naturalna (`a ≥ 1`)
+* 2. linia: `b` — liczba naturalna (`b ≥ 1`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę naturalną — `NWD(a, b)`.
+Jedna liczba całkowita — $\text{NWD}(a, b)$.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(nwd(60, 45))
+```
+60
+45
 ```
 
 **Wyjście:**
 
 ```
 15
+```
+
+### Uwagi
+
+* Algorytm Euklidesa: dopóki $b \neq 0$, zastępuj parę $(a, b)$ parą $(b, a \bmod b)$. Na końcu wynikiem jest $a$.
+
+### Kod startowy
+
+```python
+def nwd(a, b):
+    # Oblicz NWD algorytmem Euklidesa.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(nwd(a, b))
 ```
 
 ---
@@ -260,23 +338,24 @@ print(nwd(60, 45))
 
 Napisz funkcję `nww(a, b)`, która zwraca najmniejszą wspólną wielokrotność liczb `a` i `b`.
 
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
+
 ### Wejście
 
-Dwa argumenty funkcji:
-
-* `a` (liczba naturalna, `a > 0`)
-* `b` (liczba naturalna, `b > 0`)
+* 1. linia: `a` — liczba naturalna (`a ≥ 1`)
+* 2. linia: `b` — liczba naturalna (`b ≥ 1`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę naturalną — `NWW(a, b)`.
+Jedna liczba całkowita — $\text{NWW}(a, b)$.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(nww(7, 9))
+```
+7
+9
 ```
 
 **Wyjście:**
@@ -285,9 +364,28 @@ print(nww(7, 9))
 63
 ```
 
-### Ograniczenia / gwarancje
+### Uwagi
 
-* Możesz użyć zależności: `NWW(a, b) = (a * b) // NWD(a, b)`.
+* Możesz skorzystać z funkcji `nwd` z poprzedniego zadania i zależności $\text{NWW}(a, b) = \frac{a \cdot b}{\text{NWD}(a, b)}$.
+* Wynik jest liczbą całkowitą — użyj dzielenia całkowitego `//`.
+
+### Kod startowy
+
+```python
+def nwd(a, b):
+    # Oblicz NWD algorytmem Euklidesa.
+    pass
+
+
+def nww(a, b):
+    # Oblicz NWW, korzystając z funkcji nwd.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(nww(a, b))
+```
 
 ---
 
@@ -298,44 +396,50 @@ print(nww(7, 9))
 
 ### Treść
 
-Napisz funkcję `pierwiastek(n)`, która dla `n ≥ 0` zwraca przybliżenie `sqrt(n)` metodą Newtona:
+Napisz funkcję `pierwiastek(n)`, która zwraca przybliżenie $\sqrt{n}$ obliczone metodą Newtona (Herona), bez użycia `math.sqrt()` ani potęgowania.
 
-$$
-x_{k+1} = \frac{1}{2}\left(x_k + \frac{n}{x_k}\right)
-$$
+Zacznij od $x_0 = n$ i obliczaj kolejne przybliżenia ze wzoru $x_{k+1} = \frac{1}{2}\left(x_k + \frac{n}{x_k}\right)$, aż dwa kolejne przybliżenia będą różnić się o mniej niż $0.0001$, czyli $|x_{k+1} - x_k| < 0.0001$. Zwróć ostatnie obliczone przybliżenie $x_{k+1}$.
 
-Iteruj do momentu, aż:
-$$
-|x_{k+1} - x_k| < 0.0001
-$$
+Program wczytuje `n`, wywołuje funkcję i wypisuje wynik z dokładnością do **czterech miejsc po przecinku**.
 
 ### Wejście
 
-Jeden argument funkcji:
-
-* `n` (liczba naturalna, `n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę zmiennoprzecinkową — przybliżony pierwiastek z `n`.
+Jedna liczba — przybliżenie $\sqrt{n}$ zaokrąglone do czterech miejsc po przecinku.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(pierwiastek(16))
+```
+16
 ```
 
 **Wyjście:**
 
 ```
-4.0
+4.0000
 ```
 
-### Ograniczenia / gwarancje
+### Uwagi
 
-* Dla `n = 0` funkcja ma zwrócić `0.0`.
+* Dla `n = 0` funkcja ma zwrócić `0.0` (wzór wymagałby dzielenia przez zero).
+* Wartość bezwzględną obliczysz funkcją `abs()`.
+
+### Kod startowy
+
+```python
+def pierwiastek(n):
+    # Oblicz przybliżenie pierwiastka z n metodą Newtona.
+    pass
+
+
+n = int(input())
+print(f"{pierwiastek(n):.4f}")
+```
 
 ---
 
@@ -346,37 +450,121 @@ print(pierwiastek(16))
 
 ### Treść
 
-Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.
+Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, a w przeciwnym razie `False`.
+
+Liczba pierwsza to liczba naturalna większa od `1`, której jedynymi dzielnikami są `1` i ona sama.
+
+Program wczytuje `n`, wywołuje funkcję i wypisuje zwróconą wartość logiczną (`print(czy_pierwsza(n))`).
 
 ### Wejście
 
-Jeden argument funkcji:
-
-* `n` (liczba naturalna, `n ≥ 2`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-Funkcja zwraca wartość logiczną:
-
-* `True` lub `False`
+Jedno słowo: `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(czy_pierwsza(7))
-print(czy_pierwsza(4))
+```
+7
 ```
 
 **Wyjście:**
 
 ```
 True
+```
+
+### Przykład 2
+
+**Wejście:**
+
+```
+4
+```
+
+**Wyjście:**
+
+```
 False
 ```
 
 ### Uwagi
 
-* Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.
-* Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`.
+* `1` nie jest liczbą pierwszą.
+* W prostym rozwiązaniu sprawdzasz dzielniki od `2` do `n - 1`. Wystarczy jednak sprawdzać dzielniki `d` spełniające $d \cdot d \leq n$, czyli do $\lfloor \sqrt{n} \rfloor$.
+
+### Kod startowy
+
+```python
+def czy_pierwsza(n):
+    # Zwróć True, jeśli n jest liczbą pierwszą, w przeciwnym razie False.
+    pass
+
+
+n = int(input())
+print(czy_pierwsza(n))
+```
+
+---
+
+## ZAD-09 — Rozkład na czynniki pierwsze
+
+**Poziom:** ★★☆
+**Tagi:** `pętle`, `pierwszość`, `dzielniki`, `złożoność`
+
+### Treść
+
+Napisz funkcję `wypisz_rozklad(n)`, która wypisuje rozkład liczby `n` na czynniki pierwsze: czynniki w kolejności niemalejącej, oddzielone znakiem `*`, bez spacji. Każdy czynnik powtarzamy tyle razy, ile razy dzieli `n`.
+
+Program wczytuje `n` i wywołuje funkcję.
+
+### Wejście
+
+* 1. linia: `n` — liczba naturalna (`n ≥ 2`)
+
+### Wyjście
+
+Jedna linia: czynniki pierwsze liczby `n` oddzielone znakiem `*`. Jeśli `n` jest liczbą pierwszą, wypisz samo `n`.
+
+### Ograniczenia
+
+* $2 \leq n \leq 10^{10}$
+
+### Przykład
+
+**Wejście:**
+
+```
+60
+```
+
+**Wyjście:**
+
+```
+2*2*3*5
+```
+
+$60 = 2 \cdot 2 \cdot 3 \cdot 5$.
+
+### Uwagi
+
+* Sprawdzaj kolejne dzielniki `d = 2, 3, 4, …`. Dopóki `d` dzieli `n`, wypisz `d` i podziel `n` przez `d`. Złożone `d` (np. `4`) nigdy nie podzielą `n`, bo ich czynniki pierwsze zostały już wcześniej „wydzielone”.
+* **Wystarczy sprawdzać dzielniki `d`, dla których $d \cdot d \leq n$.** Gdyby liczba `n` była złożona, czyli $n = a \cdot b$ dla $2 \leq a \leq b$, to $a \cdot a \leq a \cdot b = n$ — miałaby więc dzielnik nie większy niż $\sqrt{n}$. Jeśli po zakończeniu pętli zostało `n > 1`, to pozostała liczba jest pierwsza i jest ostatnim czynnikiem.
+* To ważna oszczędność: dla liczby pierwszej rzędu $10^{10}$ pętla aż do `n` wykonałaby ok. $10^{10}$ obrotów (zbyt długo), a pętla do $\sqrt{n}$ — tylko ok. $10^5$.
+* Aby wypisać czynniki w jednej linii, użyj `print(d, end="")`, a znak `*` wypisuj przed każdym czynnikiem poza pierwszym.
+
+### Kod startowy
+
+```python
+def wypisz_rozklad(n):
+    # Wypisz czynniki pierwsze liczby n oddzielone znakiem *.
+    pass
+
+
+n = int(input())
+wypisz_rozklad(n)
+```

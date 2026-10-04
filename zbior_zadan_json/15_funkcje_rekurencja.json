@@ -1,205 +1,641 @@
 {
   "file": "15_funkcje_rekurencja.md",
-  "chapter_title": "Rozdział: Funkcje — wielomiany (stdin/stdout)",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Wielomian jest podany jako lista współczynników w kolejności: `[a_n, a_{n-1}, ..., a_0]`.\n* Liczby całkowite mogą być ujemne.\n* Jeśli w wyjściu jest „lista” — wypisz współczynniki w **jednej linii**, oddzielone pojedynczą spacją.\n  *Wyjątek:* jeśli lista ma być pusta, wypisz dokładnie: `[]`.\n* Nie wypisuj żadnych dodatkowych opisów ani nawiasów (poza `[]` dla pustej listy).",
+  "chapter_title": "Rozdział 15: Funkcje — rekurencja",
+  "chapter_description": "Poniższe zadania uczą **rekurencji**: funkcja rozwiązuje problem, wywołując samą siebie dla mniejszych danych, aż dojdzie do **przypadku bazowego**, w którym odpowiedź jest znana od razu (np. $0! = 1$).\n\n**Konwencje wspólne:**\n\n* Każde zadanie to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**. Program wczytuje dane, wywołuje funkcję opisaną w treści i wypisuje wynik (gotowy szkielet znajdziesz w sekcji „Kod startowy”).\n* **Rozwiązanie musi być rekurencyjne.** Właściwe obliczenia wykonuje funkcja, która wywołuje samą siebie. Nie używaj w niej pętli `for` ani `while`, ani gotowych narzędzi, które wykonają całą pracę za Ciebie (np. `sum()`, `pow()`, operatora `**`, `math.factorial()`, `list.index()`). Sprawdzarka porównuje tylko wynik, ale celem zadań jest ćwiczenie rekurencji.\n* Każda funkcja rekurencyjna potrzebuje przypadku bazowego (kiedy przestajemy się wywoływać) i kroku rekurencyjnego (wywołania dla mniejszego problemu). Bez przypadku bazowego program przerwie działanie błędem `RecursionError`.\n* Python ogranicza głębokość rekurencji (domyślnie do około 1000 zagnieżdżonych wywołań), dlatego dane w zadaniach są małe.\n* Liczby naturalne liczymy od zera: $0, 1, 2, \\dots$\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”.",
   "exercises": [
     {
       "id": "ZAD-01",
       "slug": "15_funkcje_rekurencja/ZAD-01",
-      "title": "Wartość wielomianu w punkcie",
+      "title": "Liczby naturalne mniejsze od N",
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
-        "wielomiany",
-        "Horner",
-        "I/O"
+        "rekurencja",
+        "napisy"
       ],
-      "description": "Wczytaj współczynniki wielomianu ( a_nx^n + a_{n-1}x^{n-1} + \\dots + a_0 ) oraz liczbę ( x ). Oblicz wartość wielomianu w punkcie ( x ).",
-      "input": "* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)\n* 2. linia: `n+1` liczb całkowitych: `a_n a_{n-1} ... a_0`\n* 3. linia: `x` — liczba całkowita",
-      "output": "Jedna liczba całkowita — wartość wielomianu w punkcie `x`.",
+      "description": "Napisz rekurencyjną funkcję `liczby_mniejsze(n)`, która zwraca napis złożony ze wszystkich liczb naturalnych mniejszych od $n$, od największej do najmniejszej, oddzielonych przecinkiem i spacją.\n\nProgram wczytuje $N$ i wypisuje wynik funkcji.",
+      "input": "Jedna liczba naturalna `N`.",
+      "output": "Jedna linia: liczby `N-1, N-2, ..., 1, 0` oddzielone przecinkiem i spacją (`, `). Po ostatniej liczbie nie ma przecinka. Dla `N = 1` wynikiem jest samo `0`.",
       "examples": [
         {
-          "input": "2\n3 2 1\n1",
-          "output": "6"
+          "input": "10",
+          "output": "9, 8, 7, 6, 5, 4, 3, 2, 1, 0",
+          "explanation": "Liczba `10` nie jest mniejsza od `10`, więc napis zaczyna się od `9`."
         }
       ],
       "testcases": [
         {
-          "input": "2\n3 2 1\n2",
-          "output": "17"
+          "input": "1",
+          "output": "0"
         },
         {
-          "input": "0\n5\n10",
-          "output": "5"
+          "input": "2",
+          "output": "1, 0"
+        },
+        {
+          "input": "5",
+          "output": "4, 3, 2, 1, 0"
+        },
+        {
+          "input": "12",
+          "output": "11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0"
         }
       ],
-      "constraints": "",
-      "notes": "* Użyj schematu Hornera (jest najprostszy i najszybszy)."
+      "constraints": "* `1 ≤ N ≤ 100`",
+      "notes": "* Przypadek bazowy: dla $n = 1$ jedyną mniejszą liczbą naturalną jest `0`. W kroku rekurencyjnym dopisz $n-1$ przed wynikiem wywołania dla $n-1$.",
+      "starter_code": "def liczby_mniejsze(n):\n    # Uzupełnij funkcję rekurencyjną: zwróć napis \"n-1, n-2, ..., 0\".\n    pass\n\n\nn = int(input())\nprint(liczby_mniejsze(n))\n"
     },
     {
       "id": "ZAD-02",
       "slug": "15_funkcje_rekurencja/ZAD-02",
-      "title": "Iloczyn wielomianu przez skalar",
+      "title": "Suma liczb naturalnych mniejszych od N",
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
-        "wielomiany",
-        "listy",
-        "I/O"
+        "rekurencja",
+        "suma"
       ],
-      "description": "Wczytaj współczynniki wielomianu oraz liczbę `k`. Wypisz współczynniki wielomianu powstałego przez pomnożenie każdego współczynnika przez `k`.",
-      "input": "* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)\n* 2. linia: `n+1` liczb całkowitych: `a_n ... a_0`\n* 3. linia: `k` — liczba całkowita (skalar)",
-      "output": "Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielonych spacją.",
+      "description": "Napisz rekurencyjną funkcję `suma_mniejszych(n)`, która zwraca sumę wszystkich liczb naturalnych mniejszych od $n$, czyli $0 + 1 + 2 + \\dots + (n-1)$.\n\nProgram wczytuje $N$ i wypisuje wynik funkcji.",
+      "input": "Jedna liczba naturalna `N`.",
+      "output": "Jedna liczba naturalna — suma liczb naturalnych mniejszych od `N`. Dla `N = 0` nie ma takich liczb, więc suma wynosi `0`.",
       "examples": [
         {
-          "input": "2\n4 -3 2\n-2",
-          "output": "-8 6 -4"
+          "input": "10",
+          "output": "45",
+          "explanation": "$0 + 1 + 2 + \\dots + 9 = 45$ (liczba `10` nie jest mniejsza od `10`)."
         }
       ],
       "testcases": [
         {
-          "input": "2\n4 -3 2\n-2",
-          "output": "-8 6 -4"
+          "input": "0",
+          "output": "0"
         },
         {
-          "input": "0\n7\n3",
-          "output": "21"
+          "input": "1",
+          "output": "0"
+        },
+        {
+          "input": "2",
+          "output": "1"
+        },
+        {
+          "input": "5",
+          "output": "10"
+        },
+        {
+          "input": "100",
+          "output": "4950"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `0 ≤ N ≤ 100`",
+      "notes": "* Suma liczb mniejszych od $n$ to $(n-1)$ plus suma liczb mniejszych od $n-1$.",
+      "starter_code": "def suma_mniejszych(n):\n    # Uzupełnij funkcję rekurencyjną.\n    pass\n\n\nn = int(input())\nprint(suma_mniejszych(n))\n"
     },
     {
       "id": "ZAD-03",
       "slug": "15_funkcje_rekurencja/ZAD-03",
-      "title": "Suma wielomianów",
+      "title": "Potęga",
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
-        "wielomiany",
-        "wyrównanie stopni",
-        "I/O"
+        "rekurencja",
+        "potęgowanie"
       ],
-      "description": "Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich sumą.",
-      "input": "* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)\n* 2. linia: `n+1` liczb: `a_n ... a_0`\n* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)\n* 4. linia: `m+1` liczb: `b_m ... b_0`",
-      "output": "Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.",
+      "description": "Napisz rekurencyjną funkcję `potega(a, b)`, która zwraca $a^b$, korzystając z zależności $a^0 = 1$ oraz $a^b = a \\cdot a^{b-1}$ dla $b \\ge 1$.\n\nProgram wczytuje $a$ i $b$, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: `a` — liczba całkowita (podstawa)\n* 2. linia: `b` — liczba naturalna (wykładnik)",
+      "output": "Jedna liczba całkowita — wartość $a^b$. Przyjmujemy, że $0^0 = 1$.",
       "examples": [
         {
-          "input": "2\n3 5 2\n2\n2 -8 1",
-          "output": "5 -3 3"
+          "input": "2\n3",
+          "output": "8",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "2\n3 5 2\n1\n1 2",
-          "output": "3 6 4"
+          "input": "5\n0",
+          "output": "1"
         },
         {
-          "input": "0\n5\n2\n1 0 -1",
-          "output": "1 0 4"
+          "input": "0\n5",
+          "output": "0"
+        },
+        {
+          "input": "-2\n5",
+          "output": "-32"
+        },
+        {
+          "input": "-3\n4",
+          "output": "81"
+        },
+        {
+          "input": "10\n9",
+          "output": "1000000000"
+        },
+        {
+          "input": "1\n18",
+          "output": "1"
         }
       ],
-      "constraints": "",
-      "notes": "* Jeśli stopnie są różne, wyrównaj listy „od końca” (od wyrazu wolnego), dopisując zera na początku krótszej."
+      "constraints": "* `-10 ≤ a ≤ 10`\n* `0 ≤ b ≤ 18`",
+      "notes": "* Nie używaj operatora `**` ani funkcji `pow()` — potęgę ma obliczyć Twoja funkcja.",
+      "starter_code": "def potega(a, b):\n    # Uzupełnij funkcję rekurencyjną.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(potega(a, b))\n"
     },
     {
       "id": "ZAD-04",
       "slug": "15_funkcje_rekurencja/ZAD-04",
-      "title": "Mnożenie wielomianów",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "title": "Silnia",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
-        "wielomiany",
-        "konwolucja",
-        "I/O"
+        "rekurencja",
+        "silnia"
       ],
-      "description": "Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich iloczynem.",
-      "input": "* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)\n* 2. linia: `n+1` liczb: `a_n ... a_0`\n* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)\n* 4. linia: `m+1` liczb: `b_m ... b_0`",
-      "output": "Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.",
+      "description": "Napisz rekurencyjną funkcję `silnia(n)`, która zwraca $n! = 1 \\cdot 2 \\cdot \\ldots \\cdot n$, korzystając z zależności $0! = 1$ oraz $n! = n \\cdot (n-1)!$ dla $n \\ge 1$.\n\nProgram wczytuje $N$ i wypisuje $N!$.",
+      "input": "Jedna liczba naturalna `N`.",
+      "output": "Jedna liczba naturalna — wartość $N!$.",
       "examples": [
         {
-          "input": "3\n5 0 10 6\n2\n1 2 4",
-          "output": "5 10 30 26 52 24"
+          "input": "3",
+          "output": "6",
+          "explanation": "$3! = 3 \\cdot 2 \\cdot 1 = 6$."
         }
       ],
       "testcases": [
         {
-          "input": "1\n1 2\n1\n3 4",
-          "output": "3 10 8"
+          "input": "0",
+          "output": "1"
         },
         {
-          "input": "0\n5\n2\n1 0 -1",
-          "output": "5 0 -5"
+          "input": "1",
+          "output": "1"
+        },
+        {
+          "input": "5",
+          "output": "120"
+        },
+        {
+          "input": "10",
+          "output": "3628800"
+        },
+        {
+          "input": "20",
+          "output": "2432902008176640000"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `0 ≤ N ≤ 20`",
+      "notes": "",
+      "starter_code": "def silnia(n):\n    # Uzupełnij funkcję rekurencyjną.\n    pass\n\n\nn = int(input())\nprint(silnia(n))\n"
     },
     {
       "id": "ZAD-05",
       "slug": "15_funkcje_rekurencja/ZAD-05",
-      "title": "k-ta pochodna wielomianu",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "title": "Liczba Fibonacciego",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
-        "pochodna",
-        "wielomiany",
-        "I/O"
+        "rekurencja",
+        "Fibonacci"
       ],
-      "description": "Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomianu będącego `k`-tą pochodną.",
-      "input": "* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)\n* 2. linia: `n+1` liczb: `a_n ... a_0`\n* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)",
-      "output": "* Jeśli po zróżniczkowaniu `k` razy zostaje wielomian niezerowy: wypisz jego współczynniki w jednej linii (spacje).\n* Jeśli wielomian „znika” (stopień < k): wypisz dokładnie `[]`.",
+      "description": "Napisz rekurencyjną funkcję `fibonacci(n)`, która zwraca $n$-ty wyraz ciągu Fibonacciego, zdefiniowanego następująco:\n\n* $F_0 = 0$,\n* $F_1 = 1$,\n* $F_n = F_{n-1} + F_{n-2}$ dla $n \\ge 2$.\n\nProgram wczytuje $N$ i wypisuje $F_N$.",
+      "input": "Jedna liczba naturalna `N`.",
+      "output": "Jedna liczba naturalna — wartość $F_N$.",
       "examples": [
         {
-          "input": "2\n4 -3 2\n1",
-          "output": "8 -3"
+          "input": "7",
+          "output": "13",
+          "explanation": "Kolejne wyrazy ciągu to `0, 1, 1, 2, 3, 5, 8, 13, …`, a wyraz o numerze `7` (licząc od zera) to `13`."
         }
       ],
       "testcases": [
         {
-          "input": "3\n2 0 -1 3\n1",
-          "output": "6 0 -1"
+          "input": "0",
+          "output": "0"
         },
         {
-          "input": "1\n5 4\n2",
-          "output": "[]"
+          "input": "1",
+          "output": "1"
+        },
+        {
+          "input": "2",
+          "output": "1"
+        },
+        {
+          "input": "10",
+          "output": "55"
+        },
+        {
+          "input": "20",
+          "output": "6765"
+        },
+        {
+          "input": "25",
+          "output": "75025"
         }
       ],
-      "constraints": "",
-      "notes": "* Pochodna: jeśli aktualne współczynniki to `[c_d, c_{d-1}, ..., c_0]`, to pochodna ma współczynniki:\n  `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]`."
+      "constraints": "* `0 ≤ N ≤ 25`",
+      "notes": "* Funkcja ma dwa przypadki bazowe ($n = 0$ i $n = 1$) i wywołuje samą siebie dwa razy.\n* Ta prosta wersja wykonuje bardzo dużo powtórzonych obliczeń (liczba wywołań rośnie wykładniczo), ale dla $N \\le 25$ działa wystarczająco szybko.",
+      "starter_code": "def fibonacci(n):\n    # Uzupełnij funkcję rekurencyjną.\n    pass\n\n\nn = int(input())\nprint(fibonacci(n))\n"
     },
     {
       "id": "ZAD-06",
       "slug": "15_funkcje_rekurencja/ZAD-06",
-      "title": "Miejsca zerowe równania kwadratowego (rzeczywiste)",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "title": "N-ty wyraz ciągu danego wzorem rekurencyjnym",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
-        "delta",
-        "pierwiastki",
-        "I/O"
+        "rekurencja",
+        "ciągi"
       ],
-      "description": "Wczytaj współczynniki równania kwadratowego ( ax^2 + bx + c = 0 ). Wypisz wszystkie **rzeczywiste** miejsca zerowe w kolejności rosnącej.",
-      "input": "* 1. linia: trzy liczby całkowite: `a b c` (oddzielone spacją)",
-      "output": "* Jeśli brak rzeczywistych pierwiastków: wypisz `[]`\n* Jeśli jeden pierwiastek (delta = 0): wypisz go raz w formacie listy: `[x]`\n* Jeśli dwa pierwiastki: wypisz w formacie listy: `[x1, x2]` gdzie `x1 ≤ x2`\n\n**Format liczb:**\n\n* wypisuj jako liczby zmiennoprzecinkowe (np. `-1.0`, `2.5`)",
+      "description": "Ciąg jest zdefiniowany wzorem rekurencyjnym:\n\n* $a_1 = 1$,\n* $a_n = 1 + 2 \\cdot a_{n-1}$ dla $n \\ge 2$.\n\nNapisz rekurencyjną funkcję `wyraz_ciagu(n)`, która zwraca $a_n$. Program wczytuje $N$ i wypisuje $a_N$.",
+      "input": "Jedna liczba naturalna `N` (`N ≥ 1`).",
+      "output": "Jedna liczba naturalna — wartość $a_N$.",
       "examples": [
         {
-          "input": "1 2 1",
-          "output": "[-1.0]"
+          "input": "5",
+          "output": "31",
+          "explanation": "Kolejne wyrazy: $a_1 = 1$, $a_2 = 3$, $a_3 = 7$, $a_4 = 15$, $a_5 = 31$."
         }
       ],
       "testcases": [
         {
-          "input": "1 -3 2",
-          "output": "[1.0, 2.0]"
+          "input": "1",
+          "output": "1"
         },
         {
-          "input": "1 2 1",
-          "output": "[-1.0]"
+          "input": "2",
+          "output": "3"
+        },
+        {
+          "input": "3",
+          "output": "7"
+        },
+        {
+          "input": "10",
+          "output": "1023"
+        },
+        {
+          "input": "30",
+          "output": "1073741823"
         }
       ],
-      "constraints": "",
-      "notes": "* Licz deltę: `Δ = b*b - 4*a*c`.\n* Dla `Δ > 0`: policz oba pierwiastki i posortuj rosnąco.\n* Zakładamy `a ≠ 0`."
+      "constraints": "* `1 ≤ N ≤ 30`",
+      "notes": "",
+      "starter_code": "def wyraz_ciagu(n):\n    # Uzupełnij funkcję rekurencyjną.\n    pass\n\n\nn = int(input())\nprint(wyraz_ciagu(n))\n"
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "15_funkcje_rekurencja/ZAD-07",
+      "title": "Wyszukiwanie liniowe rekurencyjnie",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "rekurencja",
+        "listy",
+        "wyszukiwanie"
+      ],
+      "description": "Napisz rekurencyjną funkcję `wyszukaj(lista, klucz, indeks=0)`, która zwraca indeks **pierwszego** wystąpienia liczby `klucz` w liście, sprawdzając kolejne elementy od pozycji `indeks`. Jeśli klucz nie występuje w liście, funkcja zwraca `-1`.\n\nProgram wczytuje listę i klucz, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: `n` — liczba elementów listy\n* 2. linia: `n` liczb całkowitych oddzielonych spacjami\n* 3. linia: `klucz` — liczba całkowita",
+      "output": "Jedna liczba całkowita — indeks pierwszego wystąpienia klucza (indeksy liczymy od `0`) albo `-1`, jeśli klucza nie ma w liście.",
+      "examples": [
+        {
+          "input": "3\n1 2 2\n2",
+          "output": "1",
+          "explanation": "Liczba `2` występuje na pozycjach `1` i `2` — wypisujemy pierwszą z nich."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n4 8 15 16 23\n4",
+          "output": "0"
+        },
+        {
+          "input": "5\n4 8 15 16 23\n23",
+          "output": "4"
+        },
+        {
+          "input": "6\n3 1 4 1 5 1\n1",
+          "output": "1"
+        },
+        {
+          "input": "3\n10 20 30\n25",
+          "output": "-1"
+        },
+        {
+          "input": "1\n42\n7",
+          "output": "-1"
+        },
+        {
+          "input": "4\n7 0 -5 -5\n-5",
+          "output": "2"
+        }
+      ],
+      "constraints": "* `1 ≤ n ≤ 100`\n* elementy listy i klucz są z zakresu `-1000 … 1000`",
+      "notes": "* Przypadki bazowe: `indeks` wyszedł poza listę (klucza nie ma) albo `lista[indeks]` jest równe kluczowi. W przeciwnym razie szukaj dalej od pozycji `indeks + 1`.",
+      "starter_code": "def wyszukaj(lista, klucz, indeks=0):\n    # Uzupełnij funkcję rekurencyjną: zwróć indeks pierwszego wystąpienia klucza albo -1.\n    pass\n\n\nn = int(input())\nlista = [int(x) for x in input().split()]\nklucz = int(input())\nprint(wyszukaj(lista, klucz))\n"
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "15_funkcje_rekurencja/ZAD-08",
+      "title": "Wieża Hanoi",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "rekurencja",
+        "Hanoi"
+      ],
+      "description": "Na słupku `A` leży `N` krążków o różnych średnicach: na dole największy, a każdy kolejny jest mniejszy od poprzedniego. Słupki `B` i `C` są puste. Należy przenieść wszystkie krążki na słupek `B`, korzystając ze słupka `C` jako pomocniczego. Obowiązują zasady:\n\n* w jednym ruchu przenosimy dokładnie jeden krążek — górny krążek z jednego słupka na inny,\n* nie wolno położyć większego krążka na mniejszym.\n\nNapisz rekurencyjną funkcję `hanoi(n, skad, dokad, pomocniczy)`, która wypisuje ruchy przenoszące `n` krążków ze słupka `skad` na słupek `dokad`. Program wczytuje `N` i wypisuje **najkrótszą** sekwencję ruchów (ma ona $2^N - 1$ ruchów i jest wyznaczona jednoznacznie).",
+      "input": "Jedna liczba naturalna `N`.",
+      "output": "$2^N - 1$ linii — kolejne ruchy w formacie `X -> Y`, gdzie `X` to słupek, z którego zdejmujemy krążek, a `Y` to słupek, na który go kładziemy.",
+      "examples": [
+        {
+          "input": "3",
+          "output": "A -> B\nA -> C\nB -> C\nA -> B\nC -> A\nC -> B\nA -> B",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "A -> B"
+        },
+        {
+          "input": "2",
+          "output": "A -> C\nA -> B\nC -> B"
+        },
+        {
+          "input": "4",
+          "output": "A -> C\nA -> B\nC -> B\nA -> C\nB -> A\nB -> C\nA -> C\nA -> B\nC -> B\nC -> A\nB -> A\nC -> B\nA -> C\nA -> B\nC -> B"
+        },
+        {
+          "input": "5",
+          "output": "A -> B\nA -> C\nB -> C\nA -> B\nC -> A\nC -> B\nA -> B\nA -> C\nB -> C\nB -> A\nC -> A\nB -> C\nA -> B\nA -> C\nB -> C\nA -> B\nC -> A\nC -> B\nA -> B\nC -> A\nB -> C\nB -> A\nC -> A\nC -> B\nA -> B\nA -> C\nB -> C\nA -> B\nC -> A\nC -> B\nA -> B"
+        }
+      ],
+      "constraints": "* `1 ≤ N ≤ 10`",
+      "notes": "* Aby przenieść `n` krążków ze słupka `skad` na `dokad`: przenieś `n-1` górnych krążków na słupek `pomocniczy`, przenieś największy krążek na `dokad`, a na koniec przenieś `n-1` krążków ze słupka `pomocniczy` na `dokad`. Przypadek bazowy: jeden krążek (albo zero krążków — wtedy nic nie robimy).",
+      "starter_code": "def hanoi(n, skad, dokad, pomocniczy):\n    # Uzupełnij funkcję rekurencyjną: wypisz ruchy w formacie \"X -> Y\".\n    pass\n\n\nn = int(input())\nhanoi(n, \"A\", \"B\", \"C\")\n"
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "15_funkcje_rekurencja/ZAD-09",
+      "title": "Słowa elfickie",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "rekurencja",
+        "napisy"
+      ],
+      "description": "**Słowem elfickim** nazywamy napis, w którym każda z liter słowa `elf` (czyli `e`, `l` i `f`) występuje co najmniej raz, w dowolnej kolejności i na dowolnych pozycjach.\n\nNapisz rekurencyjną funkcję `czy_elfickie(slowo, litery=\"elf\")`, która sprawdza, czy każda litera z napisu `litery` występuje w napisie `slowo`. Program wczytuje słowo i wypisuje wynik sprawdzenia.",
+      "input": "Jedna linia: słowo złożone z małych liter alfabetu łacińskiego (`a`–`z`).",
+      "output": "`Prawda`, jeśli słowo jest elfickie, w przeciwnym razie `Fałsz`.",
+      "examples": [
+        {
+          "input": "reflektor",
+          "output": "Prawda",
+          "explanation": "W słowie `reflektor` występują litery `e`, `l` i `f`."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "elf",
+          "output": "Prawda"
+        },
+        {
+          "input": "elzbieta",
+          "output": "Fałsz"
+        },
+        {
+          "input": "flet",
+          "output": "Prawda"
+        },
+        {
+          "input": "kalafior",
+          "output": "Fałsz"
+        },
+        {
+          "input": "a",
+          "output": "Fałsz"
+        },
+        {
+          "input": "felieton",
+          "output": "Prawda"
+        },
+        {
+          "input": "lew",
+          "output": "Fałsz"
+        }
+      ],
+      "constraints": "* długość słowa: od 1 do 100 znaków",
+      "notes": "* Sprawdź, czy w słowie występuje pierwsza litera z `litery`, i wywołaj funkcję dla pozostałych liter (`litery[1:]`). Gdy `litery` jest pusty, wszystkie litery zostały znalezione.\n* Samo szukanie litery w słowie też możesz zapisać rekurencyjnie: litera występuje w słowie, jeśli jest jego pierwszym znakiem albo występuje w reszcie słowa.",
+      "starter_code": "def czy_elfickie(slowo, litery=\"elf\"):\n    # Uzupełnij funkcję rekurencyjną: zwróć True albo False.\n    pass\n\n\nslowo = input().strip()\nprint(\"Prawda\" if czy_elfickie(slowo) else \"Fałsz\")\n"
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "15_funkcje_rekurencja/ZAD-10",
+      "title": "Gra",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "rekurencja",
+        "kombinatoryka"
+      ],
+      "description": "W grze w każdym ruchu gracz zdobywa `3`, `5` albo `10` punktów. Gracz wygrywa, gdy uzbiera **dokładnie** `N` punktów.\n\nNapisz rekurencyjną funkcję `liczba_sposobow(n, ruchy)`, która zwraca, na ile sposobów można uzbierać dokładnie `n` punktów, używając ruchów o wartościach z listy `ruchy`. Sposoby różniące się tylko kolejnością ruchów traktujemy jako ten sam sposób — liczy się tylko, ile razy gracz zdobył `3`, ile razy `5`, a ile razy `10` punktów.\n\nProgram wczytuje `N` i wypisuje liczbę sposobów wygrania gry.",
+      "input": "Jedna liczba naturalna `N` (`N ≥ 1`).",
+      "output": "Jedna liczba naturalna — liczba sposobów (może wynosić `0`).",
+      "examples": [
+        {
+          "input": "20",
+          "output": "4",
+          "explanation": "Sposoby: $10 + 10$, $10 + 5 + 5$, $5 + 5 + 5 + 5$ oraz $5 + 3 + 3 + 3 + 3 + 3$."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "0"
+        },
+        {
+          "input": "3",
+          "output": "1"
+        },
+        {
+          "input": "7",
+          "output": "0"
+        },
+        {
+          "input": "10",
+          "output": "2"
+        },
+        {
+          "input": "13",
+          "output": "2"
+        },
+        {
+          "input": "50",
+          "output": "14"
+        },
+        {
+          "input": "100",
+          "output": "44"
+        }
+      ],
+      "constraints": "* `1 ≤ N ≤ 100`",
+      "notes": "* Rozbij problem na dwa mniejsze: sposoby, w których **co najmniej raz** użyjemy pierwszego ruchu z listy (wtedy zostaje `n - ruchy[0]` punktów, a lista ruchów się nie zmienia), oraz sposoby, w których tego ruchu **nie użyjemy wcale** (te same `n` punktów, lista `ruchy[1:]`). Wynik to suma obu liczb.\n* Przypadki bazowe: `n == 0` — znaleźliśmy jeden sposób; `n < 0` albo pusta lista ruchów — żadnego sposobu.",
+      "starter_code": "def liczba_sposobow(n, ruchy):\n    # Uzupełnij funkcję rekurencyjną.\n    pass\n\n\nn = int(input())\nprint(liczba_sposobow(n, [10, 5, 3]))\n"
+    },
+    {
+      "id": "ZAD-11",
+      "slug": "15_funkcje_rekurencja/ZAD-11",
+      "title": "Fibonacci z zapamiętywaniem",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "rekurencja",
+        "Fibonacci",
+        "memoizacja"
+      ],
+      "description": "Oblicz $F_N$ — $N$-ty wyraz ciągu Fibonacciego ($F_0 = 0$, $F_1 = 1$, $F_n = F_{n-1} + F_{n-2}$), ale tym razem dla $N$ aż do $90$. Prosta rekurencja z ZAD-05 nie zdąży: dla $N = 90$ wykonałaby około $10^{19}$ wywołań.\n\nNapisz rekurencyjną funkcję `fibonacci(n, pamiec)`, która **zapamiętuje** obliczone wyniki (memoizacja): `pamiec` to lista, w której `pamiec[k]` jest równe `None`, dopóki $F_k$ nie zostało obliczone, a potem przechowuje jego wartość. Każdy wyraz ciągu jest wtedy liczony tylko raz.",
+      "input": "Jedna liczba naturalna `N`.",
+      "output": "Jedna liczba naturalna — wartość $F_N$.",
+      "examples": [
+        {
+          "input": "40",
+          "output": "102334155",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "0"
+        },
+        {
+          "input": "1",
+          "output": "1"
+        },
+        {
+          "input": "2",
+          "output": "1"
+        },
+        {
+          "input": "50",
+          "output": "12586269025"
+        },
+        {
+          "input": "70",
+          "output": "190392490709135"
+        },
+        {
+          "input": "90",
+          "output": "2880067194370816120"
+        }
+      ],
+      "constraints": "* `0 ≤ N ≤ 90`",
+      "notes": "* Funkcja: jeśli $n < 2$, zwróć $n$. Jeśli `pamiec[n]` nie jest `None`, zwróć zapamiętaną wartość. W przeciwnym razie oblicz `fibonacci(n - 1, pamiec) + fibonacci(n - 2, pamiec)`, zapisz wynik w `pamiec[n]` i zwróć go.\n* Porównanie liczby wywołań: wersja bez pamięci liczy te same wyrazy wielokrotnie — dla $N$ wykonuje $2F_{N+1} - 1$ wywołań, czyli liczba wywołań rośnie **wykładniczo** (dla $N = 40$ to już ponad 300 milionów). Wersja z pamięcią oblicza każdy wyraz raz, więc wykonuje mniej niż $2N$ wywołań — liczba wywołań rośnie **liniowo**.\n* Dla chętnych: Python ma gotowy mechanizm zapamiętywania. Dekorator `@lru_cache` z modułu `functools`, dopisany nad definicją funkcji, sam zapamiętuje wyniki dla każdego argumentu:\n\n  ```python\n  from functools import lru_cache\n\n  @lru_cache(maxsize=None)\n  def fib(n):\n      if n < 2:\n          return n\n      return fib(n - 1) + fib(n - 2)\n  ```",
+      "starter_code": "def fibonacci(n, pamiec):\n    # Uzupełnij funkcję rekurencyjną: pamiec[k] to zapamiętane F_k albo None.\n    pass\n\n\nn = int(input())\npamiec = [None] * (n + 1)\nprint(fibonacci(n, pamiec))\n"
+    },
+    {
+      "id": "ZAD-12",
+      "slug": "15_funkcje_rekurencja/ZAD-12",
+      "title": "Szybkie potęgowanie modulo",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "rekurencja",
+        "potęgowanie",
+        "modulo"
+      ],
+      "description": "Oblicz $a^b \\bmod m$, czyli resztę z dzielenia $a^b$ przez $m$, dla wykładnika $b$ nawet rzędu $10^{18}$.\n\nNapisz rekurencyjną funkcję `potega_modulo(a, b, m)`, która **połowi wykładnik**:\n\n* $a^0 = 1$,\n* jeśli $b$ jest parzyste: $a^b = \\left(a^{b/2}\\right)^2$,\n* jeśli $b$ jest nieparzyste: $a^b = a \\cdot \\left(a^{(b-1)/2}\\right)^2$,\n\na po każdym mnożeniu bierze resztę z dzielenia przez $m$.",
+      "input": "Jedna linia: trzy liczby całkowite `a b m` oddzielone spacjami.",
+      "output": "Jedna liczba całkowita — wartość $a^b \\bmod m$ (z zakresu `0 … m-1`). Przyjmujemy $a^0 = 1$, także dla $a = 0$.",
+      "examples": [
+        {
+          "input": "2 10 1000",
+          "output": "24",
+          "explanation": "$2^{10} = 1024$, a $1024 \\bmod 1000 = 24$."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3 0 7",
+          "output": "1"
+        },
+        {
+          "input": "5 3 1",
+          "output": "0"
+        },
+        {
+          "input": "0 5 7",
+          "output": "0"
+        },
+        {
+          "input": "7 13 1000",
+          "output": "407"
+        },
+        {
+          "input": "123456789 987654321 1000000000",
+          "output": "974933589"
+        },
+        {
+          "input": "2 1000000000000000000 1000000007",
+          "output": "719476260"
+        },
+        {
+          "input": "1000000000 999999999999999999 999999937",
+          "output": "115968790"
+        }
+      ],
+      "constraints": "* `0 ≤ a ≤ 10^9`\n* `0 ≤ b ≤ 10^18`\n* `1 ≤ m ≤ 10^9`",
+      "notes": "* Nie używaj `pow(a, b, m)`, `pow(a, b)` ani operatora `**` — potęgowanie ma wykonać Twoja funkcja.\n* W ZAD-03 wykładnik malał o 1, więc potrzeba było $b$ wywołań — dla $b = 10^{18}$ to niewykonalne (a głębokość rekurencji przekroczyłaby limit). Połowienie wykładnika daje tylko około $\\log_2 b$ wywołań: dla $b = 10^{18}$ to około $60$.\n* Wywołaj funkcję dla połowy wykładnika **raz**, zapisz wynik w zmiennej i dopiero ją podnieś do kwadratu (`x * x`). Dwa osobne wywołania dla tej samej połowy znów dałyby około $b$ wywołań.\n* Reszta z iloczynu nie zmieni się, jeśli czynniki wcześniej zastąpimy ich resztami: $(x \\cdot y) \\bmod m = ((x \\bmod m) \\cdot (y \\bmod m)) \\bmod m$. Dzięki temu liczby w obliczeniach pozostają małe.\n* Pamiętaj o przypadku $m = 1$: każda liczba daje resztę `0`, więc dla $b = 0$ wynikiem jest `1 % m`, a nie `1`.",
+      "starter_code": "def potega_modulo(a, b, m):\n    # Uzupełnij funkcję rekurencyjną: zwróć a^b mod m.\n    pass\n\n\na, b, m = [int(s) for s in input().split()]\nprint(potega_modulo(a, b, m))\n"
+    },
+    {
+      "id": "ZAD-13",
+      "slug": "15_funkcje_rekurencja/ZAD-13",
+      "title": "Ciągi binarne bez sąsiednich jedynek",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "rekurencja",
+        "backtracking",
+        "napisy"
+      ],
+      "description": "Ciąg binarny to napis złożony ze znaków `0` i `1`. Wypisz wszystkie ciągi binarne długości `n`, w których **żadne dwie jedynki nie stoją obok siebie** (np. `1010` jest poprawny, a `0110` nie), w kolejności leksykograficznej (słownikowej), a na końcu ich liczbę.\n\nNapisz rekurencyjną funkcję `generuj(n, ciag)`, która wypisuje wszystkie poprawne ciągi długości `n` zaczynające się od napisu `ciag` i zwraca ich liczbę. Program wywołuje `generuj(n, \"\")` i wypisuje zwróconą liczbę.",
+      "input": "Jedna liczba naturalna `n`.",
+      "output": "Najpierw wszystkie poprawne ciągi, każdy w osobnej linii, w kolejności leksykograficznej. W ostatniej linii — liczba tych ciągów.",
+      "examples": [
+        {
+          "input": "3",
+          "output": "000\n001\n010\n100\n101\n5",
+          "explanation": "Pozostałe ciągi długości 3 (`011`, `110`, `111`) mają dwie sąsiednie jedynki."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1",
+          "output": "0\n1\n2"
+        },
+        {
+          "input": "2",
+          "output": "00\n01\n10\n3"
+        },
+        {
+          "input": "4",
+          "output": "0000\n0001\n0010\n0100\n0101\n1000\n1001\n1010\n8"
+        },
+        {
+          "input": "6",
+          "output": "000000\n000001\n000010\n000100\n000101\n001000\n001001\n001010\n010000\n010001\n010010\n010100\n010101\n100000\n100001\n100010\n100100\n100101\n101000\n101001\n101010\n21"
+        },
+        {
+          "input": "11",
+          "output": "00000000000\n00000000001\n00000000010\n00000000100\n00000000101\n00000001000\n00000001001\n00000001010\n00000010000\n00000010001\n00000010010\n00000010100\n00000010101\n00000100000\n00000100001\n00000100010\n00000100100\n00000100101\n00000101000\n00000101001\n00000101010\n00001000000\n00001000001\n00001000010\n00001000100\n00001000101\n00001001000\n00001001001\n00001001010\n00001010000\n00001010001\n00001010010\n00001010100\n00001010101\n00010000000\n00010000001\n00010000010\n00010000100\n00010000101\n00010001000\n00010001001\n00010001010\n00010010000\n00010010001\n00010010010\n00010010100\n00010010101\n00010100000\n00010100001\n00010100010\n00010100100\n00010100101\n00010101000\n00010101001\n00010101010\n00100000000\n00100000001\n00100000010\n00100000100\n00100000101\n00100001000\n00100001001\n00100001010\n00100010000\n00100010001\n00100010010\n00100010100\n00100010101\n00100100000\n00100100001\n00100100010\n00100100100\n00100100101\n00100101000\n00100101001\n00100101010\n00101000000\n00101000001\n00101000010\n00101000100\n00101000101\n00101001000\n00101001001\n00101001010\n00101010000\n00101010001\n00101010010\n00101010100\n00101010101\n01000000000\n01000000001\n01000000010\n01000000100\n01000000101\n01000001000\n01000001001\n01000001010\n01000010000\n01000010001\n01000010010\n01000010100\n01000010101\n01000100000\n01000100001\n01000100010\n01000100100\n01000100101\n01000101000\n01000101001\n01000101010\n01001000000\n01001000001\n01001000010\n01001000100\n01001000101\n01001001000\n01001001001\n01001001010\n01001010000\n01001010001\n01001010010\n01001010100\n01001010101\n01010000000\n01010000001\n01010000010\n01010000100\n01010000101\n01010001000\n01010001001\n01010001010\n01010010000\n01010010001\n01010010010\n01010010100\n01010010101\n01010100000\n01010100001\n01010100010\n01010100100\n01010100101\n01010101000\n01010101001\n01010101010\n10000000000\n10000000001\n10000000010\n10000000100\n10000000101\n10000001000\n10000001001\n10000001010\n10000010000\n10000010001\n10000010010\n10000010100\n10000010101\n10000100000\n10000100001\n10000100010\n10000100100\n10000100101\n10000101000\n10000101001\n10000101010\n10001000000\n10001000001\n10001000010\n10001000100\n10001000101\n10001001000\n10001001001\n10001001010\n10001010000\n10001010001\n10001010010\n10001010100\n10001010101\n10010000000\n10010000001\n10010000010\n10010000100\n10010000101\n10010001000\n10010001001\n10010001010\n10010010000\n10010010001\n10010010010\n10010010100\n10010010101\n10010100000\n10010100001\n10010100010\n10010100100\n10010100101\n10010101000\n10010101001\n10010101010\n10100000000\n10100000001\n10100000010\n10100000100\n10100000101\n10100001000\n10100001001\n10100001010\n10100010000\n10100010001\n10100010010\n10100010100\n10100010101\n10100100000\n10100100001\n10100100010\n10100100100\n10100100101\n10100101000\n10100101001\n10100101010\n10101000000\n10101000001\n10101000010\n10101000100\n10101000101\n10101001000\n10101001001\n10101001010\n10101010000\n10101010001\n10101010010\n10101010100\n10101010101\n233"
+        }
+      ],
+      "constraints": "* `1 ≤ n ≤ 12`",
+      "notes": "* To przykład **przeszukiwania z nawrotami** (ang. *backtracking*): budujemy ciąg znak po znaku. W każdym kroku najpierw próbujemy dopisać `0` (zawsze wolno), a potem `1` — ale tylko wtedy, gdy `ciag` jest pusty albo kończy się na `0`. Gdy `ciag` ma już długość `n`, wypisujemy go i zwracamy `1`.\n* Próbowanie `0` przed `1` sprawia, że ciągi pojawiają się od razu w kolejności leksykograficznej — nie trzeba ich sortować.\n* Ciekawostka: liczba takich ciągów to kolejne liczby Fibonacciego ($2, 3, 5, 8, 13, \\dots$).",
+      "starter_code": "def generuj(n, ciag):\n    # Uzupełnij funkcję rekurencyjną: wypisz wszystkie poprawne ciągi długości n\n    # zaczynające się od ciag i zwróć ich liczbę.\n    pass\n\n\nn = int(input())\nprint(generuj(n, \"\"))\n"
     }
   ]
 }

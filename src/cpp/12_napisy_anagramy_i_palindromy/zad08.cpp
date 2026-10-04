@@ -52,43 +52,59 @@ wypisz raz).
 (łatwe i czytelne): wypisuj przy pierwszym znalezieniu danego palindromu.
 
 */
-#include <algorithm>
 #include <cassert>
 #include <set>
 #include <string>
-#include <vector>
 
+// Zwraca wszystkie unikalne "wyjatkowe" palindromy bedace spojnymi
+// podciagami slowa: takie, w ktorych wszystkie znaki sa identyczne (np. "aaa")
+// albo wszystkie znaki poza srodkowym sa identyczne (np. "aabaa").
 // Zlozonosc Czasowa: O(n^2)
-// Zlozonosc Pamieciowa: O(n)
-std::set<std::string> wyjatkowePalindromy(const std::string slowo) {
+// Zlozonosc Pamieciowa: O(n^2)
+std::set<std::string> wyjatkowePalindromy(const std::string &slowo) {
   std::set<std::string> wynik;
+  const std::size_t n = slowo.size();
 
-  for (unsigned int i = 0; i < slowo.size(); i++) {
-    wynik.insert(std::string(1, slowo[i]));
+  // 1. Podciagi zlozone z jednego, powtarzajacego sie znaku.
+  for (std::size_t i = 0; i < n;) {
+    std::size_t j = i;
+    while (j < n && slowo[j] == slowo[i]) j++;
 
-    unsigned int j = i + 1;
-    unsigned int k = 0;
-    while (j < slowo.size() && slowo[i] == slowo[j]) j++;
+    for (std::size_t dlugosc = 1; dlugosc <= j - i; dlugosc++)
+      wynik.insert(std::string(dlugosc, slowo[i]));
 
-    if (j > i + 1) wynik.insert(slowo.substr(i, i - j));
+    i = j;
+  }
 
-    if (j + 1 < slowo.size() && slowo[i] == slowo[j + 1]) k = j + 1;
+  // 2. Podciagi postaci c..c x c..c, gdzie srodkowy znak x jest inny niz c.
+  for (std::size_t srodek = 1; srodek + 1 < n; srodek++) {
+    const char znak = slowo[srodek - 1];
+    if (slowo[srodek] == znak || slowo[srodek + 1] != znak) continue;
 
-    while (k > i && slowo[i] == slowo[k]) k--;
-
-    if (i + 1 == k) wynik.insert(slowo.substr(i, 2 * (j - i) + 1));
+    std::size_t k = 1;
+    while (k <= srodek && srodek + k < n && slowo[srodek - k] == znak &&
+           slowo[srodek + k] == znak) {
+      wynik.insert(slowo.substr(srodek - k, 2 * k + 1));
+      k++;
+    }
   }
 
   return wynik;
 }
 
 void testWyjatkowePalindromy() {
-  assert(wyjatkowePalindromy("xxx") ==
-         std::set<std::string>{"x", "xx", "xxx", "xxxx"});
-  assert(wyjatkowePalindromy("ccdcc") ==
-         std::set<std::string>{"cc", "d", "ccdcc", "c", "cdc"});
-  assert(wyjatkowePalindromy("abc") == std::set<std::string>{"a", "b", "c"});
-  assert(wyjatkowePalindromy("") == std::set<std::string>());
+  assert((wyjatkowePalindromy("xxx") ==
+          std::set<std::string>{"x", "xx", "xxx"}));
+  assert((wyjatkowePalindromy("ccdcc") ==
+          std::set<std::string>{"cc", "d", "ccdcc", "c", "cdc"}));
+  assert((wyjatkowePalindromy("abc") == std::set<std::string>{"a", "b", "c"}));
+  assert((wyjatkowePalindromy("xxyxx") ==
+          std::set<std::string>{"x", "xx", "y", "xyx", "xxyxx"}));
+  assert((wyjatkowePalindromy("aabaaa") ==
+          std::set<std::string>{"a", "aa", "aaa", "b", "aba", "aabaa"}));
+  assert((wyjatkowePalindromy("abcb") ==
+          std::set<std::string>{"a", "b", "c", "bcb"}));
+  assert(wyjatkowePalindromy("").empty());
 }
 
 int main() {

@@ -1,52 +1,140 @@
 {
   "ZAD-01": [
     {
-      "input": "",
-      "output": "Jestem klasą bazową.\nA ja jestem klasą potomną."
+      "input": "1\npotomna Tomek",
+      "output": "Jestem klasą bazową. Nazywam się Tomek.\nA ja jestem klasą potomną."
     },
     {
-      "input": "",
-      "output": "Jestem klasą bazową.\nA ja jestem klasą potomną."
+      "input": "1\nbazowa Zosia",
+      "output": "Jestem klasą bazową. Nazywam się Zosia."
+    },
+    {
+      "input": "2\npotomna Kuba\npotomna Basia",
+      "output": "Jestem klasą bazową. Nazywam się Kuba.\nA ja jestem klasą potomną.\nJestem klasą bazową. Nazywam się Basia.\nA ja jestem klasą potomną."
+    },
+    {
+      "input": "4\nbazowa X\nbazowa Y\npotomna Z\nbazowa W",
+      "output": "Jestem klasą bazową. Nazywam się X.\nJestem klasą bazową. Nazywam się Y.\nJestem klasą bazową. Nazywam się Z.\nA ja jestem klasą potomną.\nJestem klasą bazową. Nazywam się W."
     }
   ],
   "ZAD-02": [
     {
-      "input": "5\n4",
-      "output": "Kształt: Koło\nPromień: 5\nPole powierzchni: 78.5398\n\nKształt: Kwadrat\nDługość boku: 4\nPole powierzchni: 16"
+      "input": "1\nkwadrat 1",
+      "output": "Kształt: Kwadrat\nDługość boku: 1.00\nPole powierzchni: 1.00\n\nSuma pól: 1.00"
     },
     {
-      "input": "2.5\n3",
-      "output": "Kształt: Koło\nPromień: 2.5\nPole powierzchni: 19.6350\n\nKształt: Kwadrat\nDługość boku: 3\nPole powierzchni: 9"
+      "input": "1\nkolo 1",
+      "output": "Kształt: Koło\nPromień: 1.00\nPole powierzchni: 3.14\n\nSuma pól: 3.14"
+    },
+    {
+      "input": "3\nkwadrat 2.5\nkolo 0.5\nkwadrat 10",
+      "output": "Kształt: Kwadrat\nDługość boku: 2.50\nPole powierzchni: 6.25\n\nKształt: Koło\nPromień: 0.50\nPole powierzchni: 0.79\n\nKształt: Kwadrat\nDługość boku: 10.00\nPole powierzchni: 100.00\n\nSuma pól: 107.04"
+    },
+    {
+      "input": "2\nkolo 2\nkolo 3",
+      "output": "Kształt: Koło\nPromień: 2.00\nPole powierzchni: 12.57\n\nKształt: Koło\nPromień: 3.00\nPole powierzchni: 28.27\n\nSuma pól: 40.84"
+    },
+    {
+      "input": "4\nkwadrat 3\nkwadrat 0.1\nkolo 10\nkwadrat 7",
+      "output": "Kształt: Kwadrat\nDługość boku: 3.00\nPole powierzchni: 9.00\n\nKształt: Kwadrat\nDługość boku: 0.10\nPole powierzchni: 0.01\n\nKształt: Koło\nPromień: 10.00\nPole powierzchni: 314.16\n\nKształt: Kwadrat\nDługość boku: 7.00\nPole powierzchni: 49.00\n\nSuma pól: 372.17"
     }
   ],
   "ZAD-03": [
     {
-      "input": "",
-      "output": "Zwierz wydaje odgłos: ...\nPies wydaje odgłos: Hau!\nKot wydaje odgłos: Miau!"
+      "input": "1\nkot Filemon",
+      "output": "Kot Filemon wydaje odgłos: Miau!"
     },
     {
-      "input": "",
-      "output": "Zwierz wydaje odgłos: ...\nPies wydaje odgłos: Hau!\nKot wydaje odgłos: Miau!"
+      "input": "1\nzwierz Nemo",
+      "output": "Zwierz Nemo wydaje odgłos: ..."
+    },
+    {
+      "input": "4\npies Azor\npies Reksio\nkot Tom\nzwierz Gucio",
+      "output": "Pies Azor wydaje odgłos: Hau!\nPies Reksio wydaje odgłos: Hau!\nKot Tom wydaje odgłos: Miau!\nZwierz Gucio wydaje odgłos: ..."
+    },
+    {
+      "input": "3\nkot Bonifacy\npies Szarik\nkot Garfield",
+      "output": "Kot Bonifacy wydaje odgłos: Miau!\nPies Szarik wydaje odgłos: Hau!\nKot Garfield wydaje odgłos: Miau!"
     }
   ],
   "ZAD-04": [
     {
-      "input": "Jan\nKowalski\nKrakow\nInzynier\nAnna\nNowak\nWarszawa\nStudent\n12345\nInformatyka\nPiotr\nWisniewski\nGdansk\nStudent\n54321\nFizyka\n4.5\n4.0",
-      "output": "Człowiek:\nImię: Jan\nNazwisko: Kowalski\nMiejsce urodzenia: Krakow\nZawód: Inzynier\n\nStudent:\nImię: Anna\nNazwisko: Nowak\nMiejsce urodzenia: Warszawa\nZawód: Student\nNumer albumu: 12345\nKierunek studiów: Informatyka\n\nStudent Fizyki:\nImię: Piotr\nNazwisko: Wisniewski\nMiejsce urodzenia: Gdansk\nZawód: Student\nNumer albumu: 54321\nKierunek studiów: Fizyka\nŚrednia z laboratoriów: 4.5\nŚrednia z wykładów: 4.0"
+      "input": "1\nczlowiek\nAla\nZielińska\nŁódź\nLekarka",
+      "output": "Człowiek:\nImię: Ala\nNazwisko: Zielińska\nMiejsce urodzenia: Łódź\nZawód: Lekarka"
     },
     {
-      "input": "Ala\nZielinska\nLodz\nLekarz\nBob\nSmith\nLondon\nStudent\n111\nMath\nEve\nStone\nParis\nStudent\n222\nPhysics\n3.2\n4.8",
-      "output": "Człowiek:\nImię: Ala\nNazwisko: Zielinska\nMiejsce urodzenia: Lodz\nZawód: Lekarz\n\nStudent:\nImię: Bob\nNazwisko: Smith\nMiejsce urodzenia: London\nZawód: Student\nNumer albumu: 111\nKierunek studiów: Math\n\nStudent Fizyki:\nImię: Eve\nNazwisko: Stone\nMiejsce urodzenia: Paris\nZawód: Student\nNumer albumu: 222\nKierunek studiów: Physics\nŚrednia z laboratoriów: 3.2\nŚrednia z wykładów: 4.8"
+      "input": "1\nstudent_fizyki\nEwa\nKamińska\nToruń\nStudentka\n222\nFizyka techniczna\n3.25\n4.8",
+      "output": "Student Fizyki:\nImię: Ewa\nNazwisko: Kamińska\nMiejsce urodzenia: Toruń\nZawód: Studentka\nNumer albumu: 222\nKierunek studiów: Fizyka techniczna\nŚrednia z laboratoriów: 3.25\nŚrednia z wykładów: 4.80"
+    },
+    {
+      "input": "2\nstudent\nBartosz\nLis\nPoznań\nStudent\n111\nMatematyka\nczlowiek\nOla\nMróz\nZielona Góra\nNauczycielka",
+      "output": "Student:\nImię: Bartosz\nNazwisko: Lis\nMiejsce urodzenia: Poznań\nZawód: Student\nNumer albumu: 111\nKierunek studiów: Matematyka\n\nCzłowiek:\nImię: Ola\nNazwisko: Mróz\nMiejsce urodzenia: Zielona Góra\nZawód: Nauczycielka"
+    },
+    {
+      "input": "3\nstudent_fizyki\nMaria\nSkłodowska\nWarszawa\nFizyk\n1867\nFizyka\n5\n5\nstudent\nMikołaj\nKopernik\nToruń\nAstronom\n1473\nAstronomia\nstudent_fizyki\nJan\nNowak\nOpole\nStudent\n999\nFizyka medyczna\n3.5\n2.75",
+      "output": "Student Fizyki:\nImię: Maria\nNazwisko: Skłodowska\nMiejsce urodzenia: Warszawa\nZawód: Fizyk\nNumer albumu: 1867\nKierunek studiów: Fizyka\nŚrednia z laboratoriów: 5.00\nŚrednia z wykładów: 5.00\n\nStudent:\nImię: Mikołaj\nNazwisko: Kopernik\nMiejsce urodzenia: Toruń\nZawód: Astronom\nNumer albumu: 1473\nKierunek studiów: Astronomia\n\nStudent Fizyki:\nImię: Jan\nNazwisko: Nowak\nMiejsce urodzenia: Opole\nZawód: Student\nNumer albumu: 999\nKierunek studiów: Fizyka medyczna\nŚrednia z laboratoriów: 3.50\nŚrednia z wykładów: 2.75"
     }
   ],
   "ZAD-05": [
     {
-      "input": "",
-      "output": "Ptak je.\nPtak śpi.\nPtak wydaje dźwięk.\nPtak leci.\nPtak ląduje."
+      "input": "Kos\n4\nlec\nlec\nwyladuj\nwyladuj",
+      "output": "Kos leci.\nKos już leci.\nKos ląduje.\nKos jest już na ziemi."
     },
     {
-      "input": "",
-      "output": "Ptak je.\nPtak śpi.\nPtak wydaje dźwięk.\nPtak leci.\nPtak ląduje."
+      "input": "Wróbel\n1\nwyladuj",
+      "output": "Wróbel jest już na ziemi."
+    },
+    {
+      "input": "Sowa\n6\nlec\njedz\nwyladuj\nspij\nwydaj_dzwiek\nlec",
+      "output": "Sowa leci.\nSowa je.\nSowa ląduje.\nSowa śpi.\nSowa wydaje dźwięk.\nSowa leci."
+    },
+    {
+      "input": "Bocian Wojtek\n2\nwydaj_dzwiek\njedz",
+      "output": "Bocian Wojtek wydaje dźwięk.\nBocian Wojtek je."
+    }
+  ],
+  "ZAD-06": [
+    {
+      "input": "1\nstazysta Ewa",
+      "output": "Ewa (stażysta): 1500.00\nSuma wypłat: 1500.00"
+    },
+    {
+      "input": "1\ngodzinowy Filip 30 160",
+      "output": "Filip (godzinowy): 4800.00\nSuma wypłat: 4800.00"
+    },
+    {
+      "input": "2\ngodzinowy Gosia 50 161\netatowy Henryk 4321.50",
+      "output": "Gosia (godzinowy): 8075.00\nHenryk (etatowy): 4321.50\nSuma wypłat: 12396.50"
+    },
+    {
+      "input": "3\ngodzinowy Igor 28.40 0\nstazysta Jola\netatowy Kamil 7000",
+      "output": "Igor (godzinowy): 0.00\nJola (stażysta): 1500.00\nKamil (etatowy): 7000.00\nSuma wypłat: 8500.00"
+    },
+    {
+      "input": "3\ngodzinowy Lena 22.5 200\ngodzinowy Marek 22.5 150\nstazysta Nina",
+      "output": "Lena (godzinowy): 4950.00\nMarek (godzinowy): 3375.00\nNina (stażysta): 1500.00\nSuma wypłat: 9825.00"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "1\n00:00",
+      "output": "00:00 -> 0"
+    },
+    {
+      "input": "2\nab:cd\n12-30",
+      "output": "ab:cd -> BladFormatu: oczekiwano formatu GG:MM\n12-30 -> BladFormatu: oczekiwano formatu GG:MM"
+    },
+    {
+      "input": "3\n99:99\n12:345\n00:59",
+      "output": "99:99 -> BladZakresu: godzina spoza zakresu 0-23\n12:345 -> BladFormatu: oczekiwano formatu GG:MM\n00:59 -> 59"
+    },
+    {
+      "input": "4\n13:05\n1305\n23:60\n:1234",
+      "output": "13:05 -> 785\n1305 -> BladFormatu: oczekiwano formatu GG:MM\n23:60 -> BladZakresu: minuty spoza zakresu 0-59\n:1234 -> BladFormatu: oczekiwano formatu GG:MM"
+    },
+    {
+      "input": "2\n12:3a\n18:45",
+      "output": "12:3a -> BladFormatu: oczekiwano formatu GG:MM\n18:45 -> 1125"
     }
   ]
 }

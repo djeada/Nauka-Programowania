@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-12 — Rotacja w lewo / prawo
 
 **Poziom:** ★★☆
@@ -6,23 +6,28 @@ ZAD-12 — Rotacja w lewo / prawo
 
 ### Treść
 
-Wczytaj listę liczb całkowitych, a następnie:
+Wczytaj listę `n` liczb całkowitych, kierunek rotacji oraz liczbę `k`. Przesuń cyklicznie elementy listy o `k` pozycji:
 
-* `kierunek = 0` → rotacja w lewo,
-* `kierunek = 1` → rotacja w prawo,
+* `kierunek = 0` — w lewo (pierwszy element trafia na koniec),
+* `kierunek = 1` — w prawo (ostatni element trafia na początek).
 
-o `K` pozycji (gdzie `K ≥ 0`). Wypisz listę po rotacji, przecinkami bez spacji.
+Wypisz listę po rotacji.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
-* kolejna linia: `kierunek` (0 lub 1)
-* ostatnia linia: `K` (`K ≥ 0`)
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
+* 3. linia: `kierunek` (`0` albo `1`)
+* 4. linia: liczba przesunięć `k`
 
 ### Wyjście
 
-Jedna linia: lista po rotacji, elementy oddzielone przecinkami.
+Jedna linia: lista po rotacji, w formacie `print(lista)`.
+
+### Ograniczenia
+
+* $n \ge 1$
+* $k \ge 0$ (`k` może być większe od `n`)
 
 ### Przykład
 
@@ -30,13 +35,7 @@ Jedna linia: lista po rotacji, elementy oddzielone przecinkami.
 
 ```
 7
-5
-27
-6
-2
-1
-10
-8
+5 27 6 2 1 10 8
 0
 2
 ```
@@ -44,33 +43,31 @@ Jedna linia: lista po rotacji, elementy oddzielone przecinkami.
 **Wyjście:**
 
 ```
-6,2,1,10,8,5,27
+[6, 2, 1, 10, 8, 5, 27]
 ```
 
 ### Uwagi
 
-* Zredukuj `K` przez `K % N`.
+* Rotacja o `n` pozycji nie zmienia listy, więc wystarczy przesunąć ją o $k \bmod n$ pozycji.
 
 """
 
 
-def rotacja(lista, kierunek, miejsce):
+def rotacja_w_lewo(lista, k):
+    k = k % len(lista)
+    return lista[k:] + lista[:k]
+
+
+def rotacja(lista, kierunek, k):
+    """Przesuwa cyklicznie listę o k pozycji: 0 - w lewo, 1 - w prawo."""
     if kierunek == 1:
-        for _ in range(miejsce):
-            lista.insert(0, lista.pop())
-    else:
-        for _ in range(miejsce):
-            lista.append(lista.pop(0))
-
-    return lista
-
-
-def test_rotacja():
-    assert rotacja([1, 2, 3, 4, 5], 1, 2) == [4, 5, 1, 2, 3]
-    assert rotacja([5, 27, 6, 2, 1, 10, 8], 0, 2) == [6, 2, 1, 10, 8, 5, 27]
-    assert rotacja([9, 9, 42, 47, 5, 6, 19, 7], 1, 3) == [6, 19, 7, 9, 9, 42, 47, 5]
+        k = len(lista) - k % len(lista)
+    return rotacja_w_lewo(lista, k)
 
 
 if __name__ == "__main__":
-
-    test_rotacja()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    kierunek = int(input())
+    k = int(input())
+    print(rotacja(lista, kierunek, k))

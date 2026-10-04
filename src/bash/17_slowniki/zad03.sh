@@ -47,46 +47,126 @@
 # Książki wypożyczone przez Jan: Władca Pierścieni
 # Książki wypożyczone przez Anna: Duma i uprzedzenie
 # ```
-source ../assert.sh
 
-dodaj_ksiazke_do_czytelnika() {
-    local czytelnik=$1
-    local ksiazka=$2
-    baza_danych[$czytelnik]="${baza_danych[$czytelnik]} $ksiazka;"
+# Uzycie:
+#   bash zad03.sh                     - uruchamia testy
+#   bash zad03.sh --stdin < dane.txt  - rozwiazuje zadanie dla danych ze stdin
+
+# SC2178: shellcheck bledne zglasza namerefy (local -n) wskazujace tablice
+# shellcheck shell=bash source=../assert.sh disable=SC2178
+source "$(dirname "${BASH_SOURCE[0]}")/../assert.sh"
+
+# Baza to tablica asocjacyjna: imie -> lista tytulow. Bash nie ma list
+# zagniezdzonych w tablicach, wiec liste tytulow trzymamy jako napis, w ktorym
+# tytuly sa oddzielone znakiem nowej linii (tytul jest jedna linia wejscia).
+
+# Dopisuje tytul $3 na koniec listy czytelnika $2 w bazie o nazwie $1.
+dodaj_ksiazke() {
+    local -n _baza=$1
+    if [[ -n ${_baza[$2]:-} ]]; then
+        _baza[$2]+=$'\n'"$3"
+    else
+        _baza[$2]=$3
+    fi
 }
 
-zwroc_ksiazke_czytelnika() {
-    local czytelnik=$1
-    local ksiazka=$2
-
-    baza_danych[$czytelnik]=${baza_danych[$czytelnik]//" $ksiazka;"/}
+# Usuwa pierwsze wystapienie tytulu $3 z listy czytelnika $2 (jesli jest).
+zwroc_ksiazke() {
+    local -n _baza=$1
+    local tytul usunieto=0 wynik=""
+    local -a tytuly
+    if [[ -z ${_baza[$2]:-} ]]; then
+        return
+    fi
+    mapfile -t tytuly <<<"${_baza[$2]}"
+    for tytul in "${tytuly[@]}"; do
+        if ((!usunieto)) && [[ $tytul == "$3" ]]; then
+            usunieto=1
+            continue
+        fi
+        wynik+=$tytul$'\n'
+    done
+    _baza[$2]=${wynik%$'\n'}
 }
 
-wypisz_liste_wypozyczonych_ksiazek() {
-    local czytelnik=$1
+# Wypisuje linie z ksiazkami czytelnika $2 (albo "brak").
+wypisz_liste() {
+    local -n _baza=$1
+    local -a tytuly
+    local lista
+    if [[ -z ${_baza[$2]:-} ]]; then
+        echo "Książki wypożyczone przez $2: brak"
+        return
+    fi
+    mapfile -t tytuly <<<"${_baza[$2]}"
+    printf -v lista '%s, ' "${tytuly[@]}"
+    echo "Książki wypożyczone przez $2: ${lista%, }"
+}
 
-    echo "Czytelnik: $czytelnik wypozyczyl nastepujace ksiazki:"
-    for ksiazka in "${baza_danych[$czytelnik]}"; do
-        echo "$ksiazka"
+# Wczytuje komendy az do "koniec". Linie dzielimy na najwyzej 3 czesci:
+# read przypisuje ostatniej zmiennej (tytul) cala reszte linii.
+program() {
+    local komenda imie tytul
+    # shellcheck disable=SC2034 # uzywana przez nameref w funkcjach bazy
+    local -A baza=()
+    while read -r komenda imie tytul; do
+        case $komenda in
+            koniec) break ;;
+            dodaj) dodaj_ksiazke baza "$imie" "$tytul" ;;
+            zwróć) zwroc_ksiazke baza "$imie" "$tytul" ;;
+            lista) wypisz_liste baza "$imie" ;;
+        esac
     done
 }
 
+# Uruchamia funkcje $1 z wejsciem $2 i porownuje jej wyjscie (dokladnie, wraz
+# z koncowym znakiem nowej linii) z $3. ${x@Q} wymusza porownanie napisow.
+sprawdz() {
+    local funkcja=$1 wejscie=$2 oczekiwane=$3 linia=$4 wynik
+    wynik=$("$funkcja" <<<"$wejscie"; printf x)
+    wynik=${wynik%x}
+    if [[ -n $oczekiwane ]]; then
+        oczekiwane+=$'\n'
+    fi
+    assertEqual "${wynik@Q}" "${oczekiwane@Q}" "$linia"
+}
+
+test_program() {
+    sprawdz program "dodaj Jan Hobbit
+dodaj Anna Duma i uprzedzenie
+dodaj Jan Władca Pierścieni
+lista Jan
+zwróć Jan Hobbit
+lista Jan
+lista Anna
+koniec" "Książki wypożyczone przez Jan: Hobbit, Władca Pierścieni
+Książki wypożyczone przez Jan: Władca Pierścieni
+Książki wypożyczone przez Anna: Duma i uprzedzenie" $LINENO
+    # Kilka egzemplarzy - "zwróć" usuwa tylko jeden; nieznany czytelnik i
+    # zwrot niewypozyczonej ksiazki niczego nie psuja
+    sprawdz program "dodaj Ola Lalka
+dodaj Ola Potop
+dodaj Ola Lalka
+zwróć Ola Lalka
+zwróć Ola Quo vadis
+lista Ola
+lista Ewa
+zwróć Ewa Potop
+zwróć Ola Potop
+zwróć Ola Lalka
+lista Ola
+koniec
+lista Ola" "Książki wypożyczone przez Ola: Potop, Lalka
+Książki wypożyczone przez Ewa: brak
+Książki wypożyczone przez Ola: brak" $LINENO
+}
+
 main() {
-
-    declare -A baza_danych
-    dodaj_ksiazke_do_czytelnika "Jan Kowalski" "Opowiesci z Narnii"
-    dodaj_ksiazke_do_czytelnika "Jan Kowalski" "Robinson Crusoe"
-    dodaj_ksiazke_do_czytelnika "Ewa Nowak" "Opowiesci z Narnii"
-    dodaj_ksiazke_do_czytelnika "Ewa Nowak" "Ogniem i mieczem"
-    dodaj_ksiazke_do_czytelnika "Tymon Nowak" "Wladca Pierscieni"
-
-    wypisz_liste_wypozyczonych_ksiazek "Jan Kowalski"
-    wypisz_liste_wypozyczonych_ksiazek "Ewa Nowak"
-    wypisz_liste_wypozyczonych_ksiazek "Tymon Nowak"
-
-    zwroc_ksiazke_czytelnika "Jan Kowalski" "Opowiesci z Narnii"
-    wypisz_liste_wypozyczonych_ksiazek "Jan Kowalski"
-
+    if [[ ${1:-} == --stdin ]]; then
+        program
+    else
+        test_program
+    fi
 }
 
 main "$@"

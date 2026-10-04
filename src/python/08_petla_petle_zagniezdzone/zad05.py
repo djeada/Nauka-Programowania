@@ -1,25 +1,22 @@
-"""
-ZAD-05 — Litera „X”
+r"""
+ZAD-05 — Litera X
 
 **Poziom:** ★★☆
 **Tagi:** `pętle zagnieżdżone`, `warunki`, `ASCII-art`
 
 ### Treść
 
-Wczytaj `n` (`n ≥ 3`) i wypisz literę `X` o wysokości `n`, zbudowaną z `*` na obu przekątnych.
+Wczytaj liczbę naturalną `n` i wypisz literę `X` o wysokości i szerokości `n`, zbudowaną z gwiazdek leżących na obu przekątnych kwadratu.
 
-W wierszu `i` i kolumnie `j` (indeksy od 0):
-
-* wypisz `*`, gdy `j == i` **lub** `j == n - 1 - i`,
-* w przeciwnym razie wypisz spację.
+W wierszu `i` i kolumnie `j` (numerowanych od `0` do `n - 1`) wypisz `*`, gdy `j == i` **lub** `j == n - 1 - i`. W przeciwnym razie wypisz spację.
 
 ### Wejście
 
-* 1. linia: `n` (`n ≥ 3`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 3`)
 
 ### Wyjście
 
-`n` linii po `n` znaków (`*` lub spacja).
+`n` linii z gwiazdkami i spacjami tworzących literę `X`.
 
 ### Przykład
 
@@ -39,7 +36,24 @@ W wierszu `i` i kolumnie `j` (indeksy od 0):
 *   *
 ```
 
+### Uwagi
+
+* Dla parzystego `n` przekątne nie przecinają się w jednym punkcie — w dwóch środkowych wierszach gwiazdki stoją obok siebie.
+
 """
 
+
+def litera_x(n):
+    for i in range(n):
+        wiersz = ""
+        for j in range(n):
+            if j == i or j == n - 1 - i:
+                wiersz += "*"
+            else:
+                wiersz += " "
+        print(wiersz.rstrip())
+
+
 if __name__ == "__main__":
-    pass
+    n = int(input())
+    litera_x(n)

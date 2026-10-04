@@ -45,10 +45,11 @@ std::string najdluzszyPodnapisV1(const std::string &slowoA,
   auto m = slowoA.length();
   auto n = slowoB.length();
 
-  std::vector<std::vector<int>> pom(m, vector<int>(n));
+  std::vector<std::vector<std::size_t>> pom(m + 1,
+                                            std::vector<std::size_t>(n + 1));
 
-  for (auto i = 1; i <= m; i++) {
-    for (auto j = 1; j <= n; j++) {
+  for (std::size_t i = 1; i <= m; i++) {
+    for (std::size_t j = 1; j <= n; j++) {
       if (slowoA[i - 1] == slowoB[j - 1])
         pom[i][j] = pom[i - 1][j - 1] + 1;
       else
@@ -57,10 +58,10 @@ std::string najdluzszyPodnapisV1(const std::string &slowoA,
   }
 
   std::string wynik = "";
-  for (auto i = 1; i <= m; i++) {
-    for (auto j = 1; j <= n; j++) {
+  for (std::size_t i = 1; i <= m; i++) {
+    for (std::size_t j = 1; j <= n; j++) {
       if (pom[i][j] > wynik.length())
-        wynik = slowoA.substr((i - pom[i][j] + 1) - 1, pom[i][j]);
+        wynik = slowoA.substr(i - pom[i][j], pom[i][j]);
     }
   }
   return wynik;

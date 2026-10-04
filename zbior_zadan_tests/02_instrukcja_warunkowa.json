@@ -7,6 +7,22 @@
     {
       "input": "5",
       "output": ""
+    },
+    {
+      "input": "0",
+      "output": ""
+    },
+    {
+      "input": "100",
+      "output": "100"
+    },
+    {
+      "input": "7",
+      "output": "7"
+    },
+    {
+      "input": "1000000000",
+      "output": "1000000000"
     }
   ],
   "ZAD-02": [
@@ -17,20 +33,44 @@
     {
       "input": "0\n7",
       "output": "Liczby są różne."
+    },
+    {
+      "input": "0\n0",
+      "output": "Liczby są identyczne."
+    },
+    {
+      "input": "12\n21",
+      "output": "Liczby są różne."
+    },
+    {
+      "input": "1000\n999",
+      "output": "Liczby są różne."
+    },
+    {
+      "input": "1000000000\n1000000000",
+      "output": "Liczby są identyczne."
     }
   ],
   "ZAD-03": [
-    {
-      "input": "-1",
-      "output": "Liczba jest ujemna."
-    },
     {
       "input": "0",
       "output": "Liczba jest zerem."
     },
     {
-      "input": "12",
+      "input": "-1",
+      "output": "Liczba jest ujemna."
+    },
+    {
+      "input": "1",
       "output": "Liczba jest dodatnia."
+    },
+    {
+      "input": "123",
+      "output": "Liczba jest dodatnia."
+    },
+    {
+      "input": "-1000000000",
+      "output": "Liczba jest ujemna."
     }
   ],
   "ZAD-04": [
@@ -45,6 +85,18 @@
     {
       "input": "4\n4",
       "output": "4 4"
+    },
+    {
+      "input": "0\n0",
+      "output": "0 0"
+    },
+    {
+      "input": "0\n7",
+      "output": "7 0"
+    },
+    {
+      "input": "100\n99",
+      "output": "100 99"
     }
   ],
   "ZAD-05": [
@@ -55,6 +107,34 @@
     {
       "input": "5\n5\n1",
       "output": "1 5 5"
+    },
+    {
+      "input": "9\n8\n7",
+      "output": "7 8 9"
+    },
+    {
+      "input": "4\n6\n8",
+      "output": "4 6 8"
+    },
+    {
+      "input": "0\n0\n0",
+      "output": "0 0 0"
+    },
+    {
+      "input": "10\n0\n10",
+      "output": "0 10 10"
+    },
+    {
+      "input": "2\n7\n1",
+      "output": "1 2 7"
+    },
+    {
+      "input": "6\n3\n9",
+      "output": "3 6 9"
+    },
+    {
+      "input": "1\n9\n5",
+      "output": "1 5 9"
     }
   ],
   "ZAD-06": [
@@ -65,16 +145,52 @@
     {
       "input": "0\n0\n0\n0",
       "output": "0"
+    },
+    {
+      "input": "8\n2\n3\n1",
+      "output": "8"
+    },
+    {
+      "input": "1\n2\n3\n4",
+      "output": "4"
+    },
+    {
+      "input": "3\n3\n6\n6",
+      "output": "6"
+    },
+    {
+      "input": "15\n4\n27\n9",
+      "output": "27"
     }
   ],
   "ZAD-07": [
     {
-      "input": "",
-      "output": "Prawo wyłączonego środka:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrawo niesprzeczności:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność koniunkcji:\np=False q=False L=False R=False EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność alternatywy:\np=False q=False L=False R=False EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPierwsze prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=False R=False EQ=True\n\nDrugie prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=False R=False EQ=True"
+      "input": "False\nFalse\nFalse",
+      "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=False R=False -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=True R=True -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=False R=False -> równoważne"
     },
     {
-      "input": "",
-      "output": "Prawo wyłączonego środka:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrawo niesprzeczności:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność koniunkcji:\np=False q=False L=False R=False EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność alternatywy:\np=False q=False L=False R=False EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPierwsze prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=False R=False EQ=True\n\nDrugie prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=False R=False EQ=True"
+      "input": "False\nFalse\nTrue",
+      "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=False R=False -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=True R=True -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=False R=False -> równoważne"
+    },
+    {
+      "input": "False\nTrue\nTrue",
+      "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=True R=True -> równoważne"
+    },
+    {
+      "input": "True\nFalse\nFalse",
+      "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=True R=True -> równoważne"
+    },
+    {
+      "input": "True\nFalse\nTrue",
+      "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=True R=True -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=True R=True -> równoważne"
+    },
+    {
+      "input": "True\nTrue\nFalse",
+      "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=True R=True -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=False R=False -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=True R=True -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=True R=True -> równoważne"
+    },
+    {
+      "input": "True\nTrue\nTrue",
+      "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=True R=True -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=False R=False -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=True R=True -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=True R=True -> równoważne"
     }
   ],
   "ZAD-08": [
@@ -85,6 +201,110 @@
     {
       "input": "1\n2\n3",
       "output": "Trójkąta nie można zbudować z podanych boków."
+    },
+    {
+      "input": "1\n1\n1",
+      "output": "Trójkąt można zbudować z podanych boków."
+    },
+    {
+      "input": "10\n2\n3",
+      "output": "Trójkąta nie można zbudować z podanych boków."
+    },
+    {
+      "input": "1\n5\n1",
+      "output": "Trójkąta nie można zbudować z podanych boków."
+    },
+    {
+      "input": "7\n10\n5",
+      "output": "Trójkąt można zbudować z podanych boków."
+    },
+    {
+      "input": "2\n2\n4",
+      "output": "Trójkąta nie można zbudować z podanych boków."
+    },
+    {
+      "input": "1000000000\n1000000000\n1",
+      "output": "Trójkąt można zbudować z podanych boków."
+    }
+  ],
+  "ZAD-09": [
+    {
+      "input": "0",
+      "output": "2"
+    },
+    {
+      "input": "49",
+      "output": "2"
+    },
+    {
+      "input": "50",
+      "output": "3"
+    },
+    {
+      "input": "69",
+      "output": "3"
+    },
+    {
+      "input": "70",
+      "output": "4"
+    },
+    {
+      "input": "84",
+      "output": "4"
+    },
+    {
+      "input": "85",
+      "output": "5"
+    },
+    {
+      "input": "100",
+      "output": "5"
+    },
+    {
+      "input": "101",
+      "output": "Niepoprawna liczba punktów."
+    },
+    {
+      "input": "-1",
+      "output": "Niepoprawna liczba punktów."
+    }
+  ],
+  "ZAD-10": [
+    {
+      "input": "2\n+\n3",
+      "output": "5.00"
+    },
+    {
+      "input": "1.5\n-\n4",
+      "output": "-2.50"
+    },
+    {
+      "input": "-3\n*\n2.5",
+      "output": "-7.50"
+    },
+    {
+      "input": "10\n/\n3",
+      "output": "3.33"
+    },
+    {
+      "input": "0\n/\n0",
+      "output": "Nie można dzielić przez zero."
+    },
+    {
+      "input": "8\n%\n3",
+      "output": "Nieznany operator."
+    },
+    {
+      "input": "4\n^\n0",
+      "output": "Nieznany operator."
+    },
+    {
+      "input": "-7.25\n/\n-0.5",
+      "output": "14.50"
+    },
+    {
+      "input": "1000000\n*\n1000000",
+      "output": "1000000000000.00"
     }
   ]
 }

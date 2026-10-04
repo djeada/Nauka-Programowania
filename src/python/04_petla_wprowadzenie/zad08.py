@@ -1,37 +1,29 @@
-"""
+r"""
 ZAD-08 — Obliczanie liczby kur i owiec na farmie
 
 **Poziom:** ★★☆
-**Tagi:** `układ równań`, `arytmetyka`
+**Tagi:** `pętle`, `układ równań`, `arytmetyka`
 
 ### Treść
 
-Na farmie są kury i owce. Wiadomo, że:
-
-* łączna liczba głów wynosi `a`,
-* łączna liczba nóg wynosi `b`,
-* kura ma 2 nogi, owca ma 4 nogi,
-* każda ma dokładnie 1 głowę.
-
-Oblicz liczbę kur oraz liczbę owiec.
+Na farmie są wyłącznie kury i owce. Każde zwierzę ma jedną głowę, kura ma 2 nogi, a owca 4 nogi.
+Znając łączną liczbę głów `a` i łączną liczbę nóg `b`, oblicz, ile jest kur, a ile owiec.
 
 ### Wejście
-
-Dwie liczby naturalne:
 
 * 1. linia: `a` — liczba głów (`a ≥ 0`)
 * 2. linia: `b` — liczba nóg (`b ≥ 0`)
 
-### Ograniczenia / gwarancje
-
-* Istnieje rozwiązanie w liczbach całkowitych nieujemnych.
-
 ### Wyjście
 
-Dwie liczby naturalne, każda w oddzielnej linii:
+Dwie liczby całkowite, każda w osobnej linii:
 
-1. liczba kur
-2. liczba owiec
+1. liczba kur,
+2. liczba owiec.
+
+### Ograniczenia
+
+* Dane są poprawne: istnieje dokładnie jedno rozwiązanie w liczbach całkowitych nieujemnych.
 
 ### Przykład
 
@@ -49,23 +41,28 @@ Dwie liczby naturalne, każda w oddzielnej linii:
 10
 ```
 
-### Uwagi o formatowaniu
+30 kur ma 60 nóg, a 10 owiec ma 40 nóg — razem 40 głów i 100 nóg.
 
-* Nie wypisuj dodatkowych opisów — tylko liczby.
+### Uwagi
+
+* Możesz sprawdzać w pętli kolejne możliwe liczby kur (od `0` do `a`) i szukać tej, dla której zgadza się liczba nóg.
 
 """
 
+
+def kury_i_owce(glowy, nogi):
+    """Zwraca parę (kury, owce) pasującą do podanej liczby głów i nóg."""
+    for kury in range(glowy + 1):
+        owce = glowy - kury
+        if 2 * kury + 4 * owce == nogi:
+            return kury, owce
+    return None
+
+
 if __name__ == "__main__":
+    glowy = int(input())
+    nogi = int(input())
 
-    glowy = int(input("Podaj liczbe glow: "))
-    nogi = int(input("Podaj liczbe nog: "))
-
-    kury = 0
-    owieczki = 0
-
-    for i in range(glowy):
-        owieczki = glowy - i
-        if 2 * i + 4 * owieczki == nogi:
-            print("Liczba kur: ", i)
-            print("Liczba owieczek: ", owieczki)
-            break
+    kury, owce = kury_i_owce(glowy, nogi)
+    print(kury)
+    print(owce)

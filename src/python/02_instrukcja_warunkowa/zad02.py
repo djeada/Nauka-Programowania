@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Porównanie dwóch liczb
 
 **Poziom:** ★☆☆
@@ -14,8 +14,8 @@ W przeciwnym razie wypisz:
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a ≥ 0`)
-* 2 linia: `b` (całkowita, `b ≥ 0`)
+* 1 linia: `a` — liczba całkowita, $0 \le a \le 10^9$
+* 2 linia: `b` — liczba całkowita, $0 \le b \le 10^9$
 
 ### Wyjście
 
@@ -53,14 +53,15 @@ Liczby są identyczne.
 
 """
 
+
+def porownaj(a, b):
+    if a == b:
+        return "Liczby są identyczne."
+    else:
+        return "Liczby są różne."
+
+
 if __name__ == "__main__":
-
-    print("podaj dwie liczby")
-
     a = int(input())
     b = int(input())
-
-    if a == b:
-        print("liczby sa jednakowe")
-    else:
-        print("liczby sa rozne")
+    print(porownaj(a, b))

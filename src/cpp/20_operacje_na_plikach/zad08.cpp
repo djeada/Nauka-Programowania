@@ -35,13 +35,14 @@ C:\Users\Username\Documents\Projekt
 */
 #include <cassert>
 #include <cstring>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <string>
 #include <vector>
 
-namespace filesys = std::experimental::filesystem;
+namespace filesys = std::filesystem;
 
 std::string znajdzRozszerzenie(std::string sciezka) {
   filesys::path obiekt(sciezka);
@@ -82,23 +83,15 @@ void dodajInicjaly(const std::string &sciezkaFolderu, const std::string &dane) {
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
   std::vector<std::string> tresc;
-  try {
-    std::string wiersz;
-    std::ifstream plik(sciezka);
-    plik.exceptions(std::ifstream::eofbit | std::ifstream::failbit |
-                    std::ifstream::badbit);
+  std::ifstream plik(sciezka);
 
-    while (plik) {
-      getline(plik, wiersz);
-      tresc.push_back(wiersz);
-    }
-
-    plik.close();
+  if (!plik.is_open()) {
+    std::cout << "Error : nie mozna otworzyc pliku " << sciezka << std::endl;
+    return tresc;
   }
 
-  catch (std::exception const &e) {
-    std::cout << "Error : " << e.what() << std::endl;
-  }
+  std::string wiersz;
+  while (std::getline(plik, wiersz)) tresc.push_back(wiersz);
 
   return tresc;
 }
@@ -106,6 +99,7 @@ std::vector<std::string> wczytajPlik(const std::string &sciezka) {
 void usunSrodkowy(const std::string &sciezkaFolderu) {
   auto _usunSrodkowy = [](const std::string &sciezka) {
     auto trescPliku = wczytajPlik(sciezka);
+    if (trescPliku.empty()) return;
 
     try {
       std::string wiersz;
@@ -171,8 +165,8 @@ void testUsunSrodkowy() {
   usunSrodkowy(sciezka);
 
   // sprawdz czy plik zostal zmieniony
-  std::vector<std::string> wynik = {"test1; test2; test3\n",
-                                    "test7; test8; test9\n"};
+  std::vector<std::string> wynik = {"test1; test2; test3",
+                                    "test7; test8; test9"};
   assert(wczytajPlik((sciezka / plikCsv).string()) == wynik);
 
   // usun folder temp_dir

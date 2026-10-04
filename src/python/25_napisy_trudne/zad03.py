@@ -1,26 +1,25 @@
-"""
+r"""
 ZAD-03 — Czy napis A jest początkiem napisu B?
 
-**Poziom:** ★★☆
+**Poziom:** ★☆☆
 **Tagi:** `string`, `prefix`
 
 ### Treść
 
-Otrzymujesz dwa napisy:
-
-1. Napis `A` — potencjalny przedrostek,
-2. Napis `B` — napis testowany.
-
-Sprawdź, czy `B` **zaczyna się** od `A`.
+Otrzymujesz napisy `A` i `B`. Sprawdź, czy `B` **zaczyna się** od `A`, czyli czy `A` jest przedrostkiem `B`. Każdy napis jest swoim własnym przedrostkiem, a napis dłuższy od `B` nie może być jego przedrostkiem.
 
 ### Wejście
 
-* 1 linia: `A`
-* 2 linia: `B`
+* 1. linia: napis `A`
+* 2. linia: napis `B`
 
 ### Wyjście
 
-* 1 linia: `Prawda` albo `Fałsz`
+`Prawda`, jeśli `B` zaczyna się od `A`, w przeciwnym razie `Fałsz`.
+
+### Ograniczenia
+
+* `1 ≤ |A|, |B| ≤ 1000`
 
 ### Przykład
 
@@ -37,25 +36,26 @@ Dinozaur jest zly
 Prawda
 ```
 
+### Uwagi
+
+* Spróbuj porównywać znaki w pętli, bez metody `startswith`. Pamiętaj, żeby najpierw sprawdzić długości — inaczej przy `A` dłuższym od `B` wyjdziesz poza zakres napisu.
+
 """
 
 
-def usun_wszystkie_v1(zdanie, slowo):
-    return zdanie.replace(slowo, "")
+def czy_przedrostek(przedrostek, napis):
+    """Sprawdza znak po znaku, czy napis zaczyna się od przedrostka."""
+    if len(przedrostek) > len(napis):
+        return False
 
+    for i in range(len(przedrostek)):
+        if przedrostek[i] != napis[i]:
+            return False
 
-# Testy Poprawnosci
-def test_1():
-    zdanie = "Lezy jezy na wiezy"
-    slowo = "zy"
-    wynik = "Le je na wie"
-
-    assert usun_wszystkie_v1(zdanie, slowo) == wynik
-
-
-def main():
-    test_1()
+    return True
 
 
 if __name__ == "__main__":
-    main()
+    przedrostek = input()
+    napis = input()
+    print("Prawda" if czy_przedrostek(przedrostek, napis) else "Fałsz")

@@ -1,14 +1,14 @@
-# Rozdział: Cyfry w liczbie (dzielenie przez 10, modulo)
+# Rozdział 5: Pętle — cyfry liczby (dzielenie przez 10, modulo)
 
-Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
-**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
+Zadania w tym rozdziale ćwiczą wyznaczanie cyfr liczby w pętli: ostatnią cyfrę liczby `n` daje `n % 10`, a dzielenie całkowite `n // 10` usuwa ją z liczby.
 
 **Konwencje wspólne:**
 
-* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
-* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.
-* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem.
-* Jeżeli zadanie wymaga „brak danych wyjściowych”, program nie wypisuje nic (nawet pustej linii).
+* Każde zadanie (i każdy podpunkt) to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.
+* Program nie wypisuje komunikatów typu „Podaj liczbę:”. Tekst podany w `input("…")` jest ignorowany przez sprawdzarkę.
+* „Cyfry od końca” oznacza kolejność od cyfry jedności do najwyższej cyfry (tak, jak wyznacza je `n % 10` i `n // 10`).
+* Liczba `0` ma jedną cyfrę: `0`.
+* Jeśli zadanie mówi, że w danym przypadku nic nie trzeba wypisywać, program nie wypisuje nic (nawet pustej linii).
 
 ---
 
@@ -23,13 +23,11 @@ Wczytaj liczbę naturalną `n` i wypisz, z ilu cyfr składa się jej zapis dzies
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Jedna liczba naturalna — liczba cyfr w `n`.
+Jedna liczba całkowita — liczba cyfr liczby `n`.
 
 ### Przykład
 
@@ -45,13 +43,10 @@ Jedna liczba naturalna — liczba cyfr w `n`.
 3
 ```
 
-### Ograniczenia / gwarancje
+### Uwagi
 
-* `n` mieści się w typowym zakresie liczb całkowitych.
-
-### Uwagi o formatowaniu
-
-* Dla `n = 0` poprawna odpowiedź to `1` (liczba „0” ma jedną cyfrę).
+* Dla `n = 0` poprawna odpowiedź to `1`.
+* Licz cyfry w pętli, dzieląc liczbę przez `10`.
 
 ---
 
@@ -62,17 +57,15 @@ Jedna liczba naturalna — liczba cyfr w `n`.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` i wypisz jej cyfry w kolejności od cyfry jedności (czyli w odwrotnej kolejności niż w zapisie liczby). Każdą cyfrę wypisz w osobnej linii.
+Wczytaj liczbę naturalną `n` i wypisz jej cyfry od końca — zaczynając od cyfry jedności, a kończąc na najwyższej cyfrze.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
+Cyfry liczby `n` od końca, każda w osobnej linii.
 
 ### Przykład
 
@@ -91,9 +84,10 @@ Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
 8
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Dla `n = 0` wypisz jedną linię z `0`.
+* Dla `n = 0` wypisz jedną linię: `0`.
+* Zera w środku i na końcu liczby też są cyframi — np. dla `120` wypisz `0`, `2`, `1`.
 
 ---
 
@@ -104,17 +98,15 @@ Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` i oblicz sumę jej cyfr. Następnie wypisz wynik.
+Wczytaj liczbę naturalną `n`, oblicz sumę jej cyfr i wypisz wynik.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Jedna liczba naturalna — suma cyfr liczby `n`.
+Jedna liczba całkowita — suma cyfr liczby `n`.
 
 ### Przykład
 
@@ -130,7 +122,9 @@ Jedna liczba naturalna — suma cyfr liczby `n`.
 12
 ```
 
-### Uwagi o formatowaniu
+$1 + 2 + 9 = 12$.
+
+### Uwagi
 
 * Dla `n = 0` suma cyfr wynosi `0`.
 
@@ -143,20 +137,16 @@ Jedna liczba naturalna — suma cyfr liczby `n`.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **parzyste**. Każdą cyfrę wypisz w osobnej linii.
-
-Cyfry analizuj od końca (od jedności), czyli w tej samej kolejności, co w zadaniu o wypisywaniu cyfr w odwrotnej kolejności.
+Wczytaj liczbę naturalną `n` i wypisz od końca wszystkie jej cyfry, które są **parzyste**.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Cyfry parzyste liczby `n`, każda w nowej linii (w kolejności od jedności do najwyższej cyfry).
-Jeśli nie ma takich cyfr — brak wyjścia.
+Parzyste cyfry liczby `n` od końca, każda w osobnej linii.
+Jeśli `n` nie ma parzystych cyfr, nie wypisuj nic.
 
 ### Przykład
 
@@ -172,6 +162,11 @@ Jeśli nie ma takich cyfr — brak wyjścia.
 2
 ```
 
+### Uwagi
+
+* `0` jest cyfrą parzystą, więc dla `n = 0` wypisz `0`.
+* Każde wystąpienie cyfry wypisz osobno — np. dla `4004` wypisz `4`, `0`, `0`, `4`.
+
 ---
 
 ## ZAD-04B — Cyfry mniejsze niż 5
@@ -181,20 +176,16 @@ Jeśli nie ma takich cyfr — brak wyjścia.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **mniejsze niż 5**. Każdą cyfrę wypisz w osobnej linii.
-
-Cyfry analizuj od końca (od jedności).
+Wczytaj liczbę naturalną `n` i wypisz od końca wszystkie jej cyfry, które są **mniejsze niż 5**.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Cyfry < 5, każda w nowej linii.
-Jeśli brak — brak wyjścia.
+Cyfry liczby `n` mniejsze niż `5`, od końca, każda w osobnej linii.
+Jeśli takich cyfr nie ma, nie wypisuj nic.
 
 ### Przykład
 
@@ -212,6 +203,11 @@ Jeśli brak — brak wyjścia.
 1
 ```
 
+### Uwagi
+
+* Cyfra `5` nie jest mniejsza niż `5`.
+* Dla `n = 0` wypisz `0`.
+
 ---
 
 ## ZAD-04C — Cyfry różne od zera
@@ -221,20 +217,16 @@ Jeśli brak — brak wyjścia.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` i wypisz wszystkie jej cyfry, które są **różne od zera**. Każdą cyfrę wypisz w osobnej linii.
-
-Cyfry analizuj od końca (od jedności).
+Wczytaj liczbę naturalną `n` i wypisz od końca wszystkie jej cyfry, które są **różne od zera**.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Cyfry ≠ 0, każda w nowej linii.
-Jeśli brak — brak wyjścia.
+Niezerowe cyfry liczby `n` od końca, każda w osobnej linii.
+Jeśli takich cyfr nie ma (czyli `n = 0`), nie wypisuj nic.
 
 ### Przykład
 
@@ -251,33 +243,29 @@ Jeśli brak — brak wyjścia.
 6
 ```
 
-### Uwagi o formatowaniu
-
-* W przykładzie widać kolejność od jedności: najpierw `5`, potem `6`.
+Ostatnia cyfra `0` jest pomijana, potem wypisujemy `5` i `6`.
 
 ---
 
 ## ZAD-05 — Sprawdzanie, czy liczba jest palindromem
 
 **Poziom:** ★★☆
-**Tagi:** `string`, `pętle`, `odwracanie`
+**Tagi:** `pętle`, `modulo`, `palindrom`
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Sprawdź, czy jest palindromem (czyli czy po odwróceniu cyfr pozostaje taka sama). Wypisz odpowiedni komunikat:
-
-* `Liczba jest palindromem.`
-* `Liczba nie jest palindromem.`
+Wczytaj liczbę naturalną `n` i sprawdź, czy jest palindromem, czyli czy czytana od końca jest taka sama (np. `1221`, `7`). Wypisz odpowiedni komunikat.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Jeden komunikat tekstowy (dokładnie jeden z powyższych).
+Dokładnie jeden z komunikatów:
+
+* `Liczba jest palindromem.`
+* `Liczba nie jest palindromem.`
 
 ### Przykład
 
@@ -293,9 +281,25 @@ Jeden komunikat tekstowy (dokładnie jeden z powyższych).
 Liczba jest palindromem.
 ```
 
-### Uwagi o formatowaniu
+### Przykład 2
 
-* `0` jest palindromem.
+**Wejście:**
+
+```
+1231
+```
+
+**Wyjście:**
+
+```
+Liczba nie jest palindromem.
+```
+
+### Uwagi
+
+* Każda liczba jednocyfrowa (także `0`) jest palindromem.
+* Liczba zakończona zerem (np. `10`, `120`) nie jest palindromem, bo zapis liczby nie zaczyna się od `0`.
+* Wskazówka: zbuduj w pętli liczbę o odwróconych cyfrach i porównaj ją z `n`.
 
 ---
 
@@ -306,57 +310,37 @@ Liczba jest palindromem.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby naturalne `x` takie, że `0 ≤ x < n` oraz suma cyfr liczby `x` wynosi `10`. Każdą liczbę wypisz w osobnej linii.
+Wczytaj liczbę naturalną `n`. Wypisz w kolejności rosnącej wszystkie liczby naturalne `x` takie, że `x < n` i suma cyfr liczby `x` wynosi `10`.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Liczby spełniające warunek, każda w nowej linii.
-Jeśli brak — brak wyjścia.
+Liczby spełniające warunek, każda w osobnej linii.
+Jeśli takich liczb nie ma, nie wypisuj nic.
 
----
-
-## ZAD-06B — Dwucyfrowe większe od n
-
-**Poziom:** ★★☆
-**Tagi:** `pętle`, `przedziały`
-
-### Treść
-
-Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby **dwucyfrowe** większe od `n` (czyli z zakresu 10–99), każdą w osobnej linii.
-
-### Wejście
-
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
-
-### Wyjście
-
-Liczby dwucyfrowe `x` takie, że `x > n`, każda w nowej linii.
-Jeśli brak — brak wyjścia.
-
-### Przykład (dla n = 95)
+### Przykład
 
 **Wejście:**
 
 ```
-95
+50
 ```
 
 **Wyjście:**
 
 ```
-96
-97
-98
-99
+19
+28
+37
+46
 ```
+
+### Uwagi
+
+* Nierówność jest ostra: samej liczby `n` nie wypisujemy, nawet jeśli suma jej cyfr wynosi `10`.
 
 ---
 
@@ -367,18 +351,39 @@ Jeśli brak — brak wyjścia.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby trzycyfrowe `x` (100–999), których suma cyfr jest równa `n`. Każdą liczbę wypisz w osobnej linii.
+Wczytaj liczbę naturalną `n`. Wypisz w kolejności rosnącej wszystkie liczby trzycyfrowe (od `100` do `999`), których suma cyfr jest równa `n`.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Liczby trzycyfrowe spełniające warunek, każda w nowej linii.
-Jeśli brak — brak wyjścia.
+Liczby trzycyfrowe spełniające warunek, każda w osobnej linii.
+Jeśli takich liczb nie ma, nie wypisuj nic.
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+102
+111
+120
+201
+210
+300
+```
+
+### Uwagi
+
+* Suma cyfr liczby trzycyfrowej wynosi od `1` do `27`, więc dla innych `n` wynik jest pusty.
 
 ---
 
@@ -389,21 +394,49 @@ Jeśli brak — brak wyjścia.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Oblicz sumę cyfr liczby `n` i oznacz ją jako `s`. Następnie wypisz wszystkie liczby trzycyfrowe `x` (100–999), które są podzielne przez `s`. Każdą liczbę wypisz w osobnej linii.
+Wczytaj liczbę naturalną `n` i oblicz sumę jej cyfr `s`. Następnie wypisz w kolejności rosnącej wszystkie liczby trzycyfrowe (od `100` do `999`), które są podzielne przez `s`.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
-
-### Ograniczenia / gwarancje
-
-* Suma cyfr `n` jest większa od zera (czyli `n ≠ 0`), aby dzielenie było poprawne.
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-Liczby trzycyfrowe podzielne przez `s`, każda w nowej linii.
+Liczby trzycyfrowe podzielne przez `s`, każda w osobnej linii.
+Jeśli takich liczb nie ma, nie wypisuj nic.
+
+### Ograniczenia
+
+* `n ≥ 1`, więc `s ≥ 1` i dzielenie jest zawsze wykonalne.
+
+### Przykład
+
+**Wejście:**
+
+```
+9999999
+```
+
+**Wyjście:**
+
+```
+126
+189
+252
+315
+378
+441
+504
+567
+630
+693
+756
+819
+882
+945
+```
+
+Suma cyfr to $s = 7 \cdot 9 = 63$, a wypisane liczby to kolejne trzycyfrowe wielokrotności `63`.
 
 ---
 
@@ -414,25 +447,23 @@ Liczby trzycyfrowe podzielne przez `s`, każda w nowej linii.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Wypisz wszystkie liczby naturalne `x` takie, że `0 ≤ x < n` oraz każda cyfra w zapisie dziesiętnym `x` jest parzysta. Każdą liczbę wypisz w osobnej linii.
+Wczytaj liczbę naturalną `n`. Wypisz w kolejności rosnącej wszystkie liczby naturalne `x` takie, że `1 ≤ x < n` i **każda** cyfra liczby `x` jest parzysta.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Liczby spełniające warunek, każda w nowej linii.
-Jeśli brak — brak wyjścia.
+Liczby spełniające warunek, każda w osobnej linii.
+Jeśli takich liczb nie ma, nie wypisuj nic.
 
-### Przykład (dla n = 95)
+### Przykład
 
 **Wejście:**
 
 ```
-95
+50
 ```
 
 **Wyjście:**
@@ -442,24 +473,80 @@ Jeśli brak — brak wyjścia.
 4
 6
 8
+20
 22
 24
 26
 28
+40
 42
 44
 46
 48
-62
-64
-66
-68
-82
-84
-86
-88
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* W tym zadaniu `0` też składa się wyłącznie z parzystych cyfr. Jeśli chcesz je uwzględniać, dopisz to jako regułę w treści (tu: pomijamy `0`, bo w przykładzie go nie ma).
+* `0` jest cyfrą parzystą, więc np. `20` i `40` spełniają warunek.
+* Samą liczbę `0` pomijamy (zaczynamy od `x = 1`).
+
+---
+
+## ZAD-07 — Algorytm Luhna (numer karty)
+
+**Poziom:** ★★☆
+**Tagi:** `pętle`, `modulo`, `suma kontrolna`
+
+### Treść
+
+Numery kart płatniczych mają ostatnią cyfrę kontrolną, dzięki której łatwo wykryć literówkę. Sprawdza się ją **algorytmem Luhna**:
+
+1. Numeruj cyfry od prawej strony, zaczynając od `1` (ostatnia cyfra ma pozycję `1`, przedostatnia `2` itd.).
+2. Każdą cyfrę na pozycji parzystej (`2`, `4`, `6`, …) pomnóż przez `2`. Jeśli wynik jest większy niż `9`, odejmij od niego `9`.
+3. Zsumuj wszystkie otrzymane wartości: zmienione cyfry z pozycji parzystych i niezmienione cyfry z pozycji nieparzystych.
+4. Numer jest poprawny, jeśli suma jest podzielna przez `10`.
+
+Wczytaj numer jako liczbę całkowitą i sprawdź go algorytmem Luhna, wyznaczając cyfry za pomocą `% 10` i `// 10`.
+
+### Wejście
+
+* 1. linia: `n` — numer karty, liczba naturalna mająca od `1` do `19` cyfr
+
+### Wyjście
+
+Jedno słowo: `Poprawny`, jeśli numer przechodzi test Luhna, w przeciwnym razie `Niepoprawny`.
+
+### Przykład
+
+**Wejście:**
+
+```
+79927398713
+```
+
+**Wyjście:**
+
+```
+Poprawny
+```
+
+Cyfry od prawej: `3 1 7 8 9 3 7 2 9 9 7`. Cyfry z pozycji parzystych (`1`, `8`, `3`, `2`, `9`) po podwojeniu i ewentualnym odjęciu `9` dają `2`, `7`, `6`, `4`, `9` (suma `28`). Pozostałe cyfry (`3`, `7`, `9`, `7`, `9`, `7`) sumują się do `42`. Razem $28 + 42 = 70$, a `70` dzieli się przez `10`.
+
+### Przykład 2
+
+**Wejście:**
+
+```
+79927398710
+```
+
+**Wyjście:**
+
+```
+Niepoprawny
+```
+
+### Uwagi
+
+* W każdym obrocie pętli weź ostatnią cyfrę (`n % 10`), a potem usuń ją z liczby (`n //= 10`). Dodatkowy licznik (albo zmienna przełączana na zmianę) powie Ci, czy bieżąca cyfra stoi na pozycji parzystej.
+* Odjęcie `9` od podwojonej cyfry to to samo, co zsumowanie cyfr wyniku, np. $2 \cdot 8 = 16$, a $16 - 9 = 7 = 1 + 6$.

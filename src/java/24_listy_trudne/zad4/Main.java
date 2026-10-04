@@ -52,7 +52,7 @@ public class Main {
     int sumaA = 0;
     int sumaB = 0;
 
-    for (int i = 0; i <= listaA.size(); i++) {
+    for (int i = 0; i < listaA.size(); i++) {
       sumaA += listaA.get(i);
       sumaB += listaB.get(i);
 

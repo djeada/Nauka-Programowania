@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Najdłuższy wspólny przedrostek
 
 **Poziom:** ★★★
@@ -6,16 +6,21 @@ ZAD-08 — Najdłuższy wspólny przedrostek
 
 ### Treść
 
-Otrzymujesz listę napisów (w kolejnych liniach). Znajdź najdłuższy przedrostek wspólny dla wszystkich.
+Otrzymujesz `n` napisów. Znajdź ich **najdłuższy wspólny przedrostek**, czyli najdłuższy napis, od którego zaczynają się wszystkie podane napisy. Jeśli napisy nie mają wspólnego przedrostka (np. zaczynają się od różnych liter), wynikiem jest napis pusty — wypisz wtedy pustą linię.
 
 ### Wejście
 
-* 1 linia: `n` — liczba napisów
-* kolejne `n` linii: napisy
+* 1. linia: `n` — liczba napisów
+* kolejne `n` linii: napisy (każdy w osobnej linii)
 
 ### Wyjście
 
-* 1 linia: najdłuższy wspólny przedrostek (może być pusty)
+Jedna linia: najdłuższy wspólny przedrostek (albo pusta linia).
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 100`
+* każdy napis ma od 1 do 100 znaków
 
 ### Przykład
 
@@ -34,57 +39,32 @@ Remmy
 Rem
 ```
 
+### Uwagi
+
+* Przy jednym napisie wynikiem jest cały ten napis.
+* Wygodnie jest zacząć od pierwszego napisu jako kandydata i skracać go, porównując po kolei z każdym kolejnym napisem.
+
 """
 
 
-def najdluzszy_przedrostek_v1(slowa):
+def najdluzszy_wspolny_przedrostek(napisy):
+    """Zwraca najdłuższy przedrostek wspólny dla wszystkich napisów."""
+    przedrostek = napisy[0]
 
-    wynik = ""
-    n = len(slowa)
-    j = float("inf")
+    for napis in napisy[1:]:
+        dlugosc = 0
+        while (
+            dlugosc < len(przedrostek)
+            and dlugosc < len(napis)
+            and przedrostek[dlugosc] == napis[dlugosc]
+        ):
+            dlugosc += 1
+        przedrostek = przedrostek[:dlugosc]
 
-    for slowo in slowa:
-        s = len(slowo)
-        if j > s:
-            j = s
-
-    for i in range(j):
-        pom = slowa[0][i]
-        k = 1
-        while k < n:
-            if pom == slowa[k][i]:
-                k += 1
-            else:
-                return wynik
-        wynik += pom
-
-    return wynik
-
-
-# Testy Poprawnosci
-def test_1():
-    slowa = ["abcdefgh", "abcefgh", "abcd"]
-    wynik = "abc"
-    assert najdluzszy_przedrostek_v1(slowa) == wynik
-
-
-def test_2():
-    slowa = ["flower", "flow", "flight", "flix"]
-    wynik = "fl"
-    assert najdluzszy_przedrostek_v1(slowa) == wynik
-
-
-def test_3():
-    slowa = ["student", "studio", "stress", "lol"]
-    wynik = ""
-    assert najdluzszy_przedrostek_v1(slowa) == wynik
-
-
-def main():
-    test_1()
-    test_2()
-    test_3()
+    return przedrostek
 
 
 if __name__ == "__main__":
-    main()
+    n = int(input())
+    napisy = [input() for _ in range(n)]
+    print(najdluzszy_wspolny_przedrostek(napisy))

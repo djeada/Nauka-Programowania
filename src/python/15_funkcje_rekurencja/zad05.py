@@ -1,76 +1,73 @@
-"""
-ZAD-05 — k-ta pochodna wielomianu
+r"""
+ZAD-05 — Liczba Fibonacciego
 
-**Poziom:** ★★☆
-**Tagi:** `pochodna`, `wielomiany`, `I/O`
+**Poziom:** ★☆☆
+**Tagi:** `rekurencja`, `Fibonacci`
 
 ### Treść
 
-Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomianu będącego `k`-tą pochodną.
+Napisz rekurencyjną funkcję `fibonacci(n)`, która zwraca $n$-ty wyraz ciągu Fibonacciego, zdefiniowanego następująco:
+
+* $F_0 = 0$,
+* $F_1 = 1$,
+* $F_n = F_{n-1} + F_{n-2}$ dla $n \ge 2$.
+
+Program wczytuje $N$ i wypisuje $F_N$.
 
 ### Wejście
 
-* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
-* 2. linia: `n+1` liczb: `a_n ... a_0`
-* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)
+Jedna liczba naturalna `N`.
 
 ### Wyjście
 
-* Jeśli po zróżniczkowaniu `k` razy zostaje wielomian niezerowy: wypisz jego współczynniki w jednej linii (spacje).
-* Jeśli wielomian „znika” (stopień < k): wypisz dokładnie `[]`.
+Jedna liczba naturalna — wartość $F_N$.
+
+### Ograniczenia
+
+* `0 ≤ N ≤ 25`
 
 ### Przykład
 
 **Wejście:**
 
 ```
-2
-4 -3 2
-1
+7
 ```
 
 **Wyjście:**
 
 ```
-8 -3
+13
 ```
 
-### Uwagi o formatowaniu
+Kolejne wyrazy ciągu to `0, 1, 1, 2, 3, 5, 8, 13, …`, a wyraz o numerze `7` (licząc od zera) to `13`.
 
-* Pochodna: jeśli aktualne współczynniki to `[c_d, c_{d-1}, ..., c_0]`, to pochodna ma współczynniki:
-  `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]`.
+### Uwagi
+
+* Funkcja ma dwa przypadki bazowe ($n = 0$ i $n = 1$) i wywołuje samą siebie dwa razy.
+* Ta prosta wersja wykonuje bardzo dużo powtórzonych obliczeń (liczba wywołań rośnie wykładniczo), ale dla $N \le 25$ działa wystarczająco szybko.
+
+### Kod startowy
+
+```python
+def fibonacci(n):
+    pass
+
+
+n = int(input())
+print(fibonacci(n))
+```
 
 """
 
 
-def pochodna_rek(wspolczynniki, k):
-    """
-    Oblicza k-tą pochodną wielomianu rekurencyjnie.
-
-    Złożoność czasowa: O(k * n)
-    Złożoność pamięciowa: O(k * n)
-    """
-    if k == 0:
-        return wspolczynniki
-    if not wspolczynniki or len(wspolczynniki) == 1:
-        return []
-
-    # Pierwsza pochodna
-    n = len(wspolczynniki)
-    pochodna1 = []
-    for i in range(n - 1):
-        pochodna1.append(wspolczynniki[i] * (n - 1 - i))
-
-    # Rekurencyjnie dla k-1
-    return pochodna_rek(pochodna1, k - 1)
+def fibonacci(n):
+    """Zwraca n-ty wyraz ciągu Fibonacciego (F_0 = 0, F_1 = 1)."""
+    if n < 2:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 if __name__ == "__main__":
-    n = int(input().strip())
-    wspolczynniki = list(map(int, input().strip().split()))
-    k = int(input().strip())
-    wynik = pochodna_rek(wspolczynniki, k)
-    if not wynik:
-        print("[]")
-    else:
-        print(" ".join(map(str, wynik)))
+    n = int(input())
+    print(fibonacci(n))

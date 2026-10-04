@@ -1,50 +1,80 @@
-"""
-Tytul: Slowa elfickie.
-Tresc: Otrzymujesz napis. Przy uzyciu rekurencji sprawdz czy otrzymane slowo jest slowem elfickim. Przez slowo elfickie rozumiemy taki napis, w ktorym co najmniej raz wystepuje kazda z liter slowa elf.
-Dane wejsciowe: Napis.
-Dane wyjsciowe: Wartosc logiczna.
-Przyklad:
-Dla otrzymanego napisu: "reflektor", powinna zostac zwrocona wartosc logiczna: Prawda.
+r"""
+ZAD-09 — Słowa elfickie
+
+**Poziom:** ★★☆
+**Tagi:** `rekurencja`, `napisy`
+
+### Treść
+
+**Słowem elfickim** nazywamy napis, w którym każda z liter słowa `elf` (czyli `e`, `l` i `f`) występuje co najmniej raz, w dowolnej kolejności i na dowolnych pozycjach.
+
+Napisz rekurencyjną funkcję `czy_elfickie(slowo, litery="elf")`, która sprawdza, czy każda litera z napisu `litery` występuje w napisie `slowo`. Program wczytuje słowo i wypisuje wynik sprawdzenia.
+
+### Wejście
+
+Jedna linia: słowo złożone z małych liter alfabetu łacińskiego (`a`–`z`).
+
+### Wyjście
+
+`Prawda`, jeśli słowo jest elfickie, w przeciwnym razie `Fałsz`.
+
+### Ograniczenia
+
+* długość słowa: od 1 do 100 znaków
+
+### Przykład
+
+**Wejście:**
+
+```
+reflektor
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
+
+W słowie `reflektor` występują litery `e`, `l` i `f`.
+
+### Uwagi
+
+* Sprawdź, czy w słowie występuje pierwsza litera z `litery`, i wywołaj funkcję dla pozostałych liter (`litery[1:]`). Gdy `litery` jest pusty, wszystkie litery zostały znalezione.
+* Samo szukanie litery w słowie też możesz zapisać rekurencyjnie: litera występuje w słowie, jeśli jest jego pierwszym znakiem albo występuje w reszcie słowa.
+
+### Kod startowy
+
+```python
+def czy_elfickie(slowo, litery="elf"):
+    pass
+
+
+slowo = input().strip()
+print("Prawda" if czy_elfickie(slowo) else "Fałsz")
+```
 
 """
 
 
-def znajdz(slowo, litera, pozycja=0):
-    """
-    Funkcja zwraca indeks pierwszego wystapienia litera w slowie.
-    """
-    if len(slowo) <= pozycja:
-        return -1
-    if slowo[pozycja] == litera:
-        return pozycja
-    return znajdz(slowo, litera, pozycja + 1)
-
-
-def czy_slowo_elfickie(napis, elf="elf"):
-    """
-    Funkcja sprawdza czy wszystkie litery slowa elf wystepuja w napisie.
-    """
-
-    if len(elf) == 0:
+def zawiera(slowo, litera):
+    """Sprawdza rekurencyjnie, czy litera występuje w słowie."""
+    if slowo == "":
+        return False
+    if slowo[0] == litera:
         return True
+    return zawiera(slowo[1:], litera)
 
-    if len(napis) == 0:
+
+def czy_elfickie(slowo, litery="elf"):
+    """Sprawdza, czy każda litera z napisu litery występuje w słowie."""
+    if litery == "":
+        return True
+    if not zawiera(slowo, litery[0]):
         return False
-
-    pozycja = znajdz(napis, elf[0])
-
-    if pozycja == -1:
-        return False
-
-    return czy_slowo_elfickie(napis[:pozycja] + napis[pozycja + 1 :], elf[1:])
-
-
-def test_czy_slowo_elfickie():
-    assert czy_slowo_elfickie("elf")
-    assert czy_slowo_elfickie("reflektor")
-    assert not czy_slowo_elfickie("elzbieta")
+    return czy_elfickie(slowo, litery[1:])
 
 
 if __name__ == "__main__":
-
-    test_czy_slowo_elfickie()
+    slowo = input().strip()
+    print("Prawda" if czy_elfickie(slowo) else "Fałsz")

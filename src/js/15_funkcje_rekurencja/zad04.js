@@ -1,23 +1,26 @@
 /*
-ZAD-04 — Mnożenie wielomianów
+ZAD-04 — Silnia
 
-**Poziom:** ★★☆
-**Tagi:** `wielomiany`, `konwolucja`, `I/O`
+**Poziom:** ★☆☆
+**Tagi:** `rekurencja`, `silnia`
 
 ### Treść
 
-Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich iloczynem.
+Napisz rekurencyjną funkcję `silnia(n)`, która zwraca $n! = 1 \cdot 2 \cdot \ldots \cdot n$, korzystając z zależności $0! = 1$ oraz $n! = n \cdot (n-1)!$ dla $n \ge 1$.
+
+Program wczytuje $N$ i wypisuje $N!$.
 
 ### Wejście
 
-* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
-* 2. linia: `n+1` liczb: `a_n ... a_0`
-* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
-* 4. linia: `m+1` liczb: `b_m ... b_0`
+Jedna liczba naturalna `N`.
 
 ### Wyjście
 
-Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
+Jedna liczba naturalna — wartość $N!$.
+
+### Ograniczenia
+
+* `0 ≤ N ≤ 20`
 
 ### Przykład
 
@@ -25,15 +28,25 @@ Jedna linia: współczynniki iloczynu (długość `n+m+1`), oddzielone spacją.
 
 ```
 3
-5 0 10 6
-2
-1 2 4
 ```
 
 **Wyjście:**
 
 ```
-5 10 30 26 52 24
+6
+```
+
+$3! = 3 \cdot 2 \cdot 1 = 6$.
+
+### Kod startowy
+
+```python
+def silnia(n):
+    pass
+
+
+n = int(input())
+print(silnia(n))
 ```
 
 */

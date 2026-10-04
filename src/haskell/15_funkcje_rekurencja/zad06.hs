@@ -1,77 +1,75 @@
 {-
-ZAD-06 — Miejsca zerowe równania kwadratowego (rzeczywiste)
+ZAD-06 — N-ty wyraz ciągu danego wzorem rekurencyjnym
 
-\**Poziom:** ★★☆
-\**Tagi:** `delta`, `pierwiastki`, `I/O`
+**Poziom:** ★☆☆
+**Tagi:** `rekurencja`, `ciągi`
 
 ### Treść
 
-Wczytaj współczynniki równania kwadratowego ( ax^2 + bx + c = 0 ). Wypisz wszystkie **rzeczywiste** miejsca zerowe w kolejności rosnącej.
+Ciąg jest zdefiniowany wzorem rekurencyjnym:
+
+* $a_1 = 1$,
+* $a_n = 1 + 2 \cdot a_{n-1}$ dla $n \ge 2$.
+
+Napisz rekurencyjną funkcję `wyraz_ciagu(n)`, która zwraca $a_n$. Program wczytuje $N$ i wypisuje $a_N$.
 
 ### Wejście
 
-\* 1. linia: trzy liczby całkowite: `a b c` (oddzielone spacją)
+Jedna liczba naturalna `N` (`N ≥ 1`).
 
 ### Wyjście
 
-\* Jeśli brak rzeczywistych pierwiastków: wypisz `[]`
-\* Jeśli jeden pierwiastek (delta = 0): wypisz go raz w formacie listy: `[x]`
-\* Jeśli dwa pierwiastki: wypisz w formacie listy: `[x1, x2]` gdzie `x1 ≤ x2`
+Jedna liczba naturalna — wartość $a_N$.
 
-\**Format liczb:**
+### Ograniczenia
 
-\* wypisuj jako liczby zmiennoprzecinkowe (np. `-1.0`, `2.5`)
+* `1 ≤ N ≤ 30`
 
 ### Przykład
 
-\**Wejście:**
+**Wejście:**
 
 ```
-1 2 1
+5
 ```
 
-\**Wyjście:**
+**Wyjście:**
 
 ```
-[-1.0]
+31
 ```
 
-### Uwagi o formatowaniu
+Kolejne wyrazy: $a_1 = 1$, $a_2 = 3$, $a_3 = 7$, $a_4 = 15$, $a_5 = 31$.
 
-\* Licz deltę: `Δ = b*b - 4*a*c`.
-\* Dla `Δ > 0`: policz oba pierwiastki i posortuj rosnąco.
-\* Zakładamy `a ≠ 0`.
+### Kod startowy
+
+```python
+def wyraz_ciagu(n):
+    pass
+
+
+n = int(input())
+print(wyraz_ciagu(n))
+```
 
 -}
 
-import Data.List (sort)
+import Control.Monad (unless)
 
--- Znajduje rzeczywiste miejsca zerowe równania kwadratowego
--- Złożoność czasowa: O(1)
--- Złożoność pamięciowa: O(1)
-quadraticRoots :: Double -> Double -> Double -> [Double]
-quadraticRoots a b c =
-  let delta = b * b - 4 * a * c
-   in if delta < 0
-        then []
-        else
-          if delta == 0
-            then [-b / (2 * a)]
-            else
-              let sqrtDelta = sqrt delta
-                  x1 = (-b + sqrtDelta) / (2 * a)
-                  x2 = (-b - sqrtDelta) / (2 * a)
-               in sort [x1, x2]
+-- a_1 = 1, a_n = 1 + 2 * a_(n-1)
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n) - przez stos rekurencji
+wyrazCiagu :: Int -> Integer
+wyrazCiagu 1 = 1
+wyrazCiagu n = 1 + 2 * wyrazCiagu (n - 1)
 
--- Formatuje listę pierwiastków
-formatRoots :: [Double] -> String
-formatRoots [] = "[]"
-formatRoots [x] = "[" ++ show x ++ "]"
-formatRoots xs = "[" ++ concatMap (\(i, x) -> if i == 0 then show x else ", " ++ show x) (zip [0 ..] xs) ++ "]"
-
--- Miejsca zerowe równania kwadratowego (z I/O)
 main :: IO ()
 main = do
-  line <- getLine
-  let [a, b, c] = map (read :: String -> Double) $ words line
-  putStrLn $ formatRoots $ quadraticRoots a b c
+  let testy =
+        [ wyrazCiagu 1 == 1,
+          wyrazCiagu 5 == 31,
+          wyrazCiagu 10 == 1023,
+          wyrazCiagu 30 == 1073741823
+        ]
+  unless (and testy) $ error "Test nie przeszedl"
+  putStrLn "Wszystkie testy zakonczone sukcesem"

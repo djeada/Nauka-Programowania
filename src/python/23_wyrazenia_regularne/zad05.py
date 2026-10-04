@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Wyodrębnij cyfry z tekstu
 
 **Poziom:** ★☆☆
@@ -6,19 +6,16 @@ ZAD-05 — Wyodrębnij cyfry z tekstu
 
 ### Treść
 
-Otrzymujesz napis zawierający różne znaki. Wyodrębnij wszystkie cyfry i wypisz je jako jeden napis (z zachowaniem kolejności).
+Wczytaj tekst i wypisz wszystkie występujące w nim cyfry `0–9` sklejone w jeden napis, w kolejności występowania. Pozostałe znaki (także kropki i minusy w liczbach) pomiń.
 
 ### Wejście
 
-Jedna linia:
-
-* `tekst`
+* 1. linia: tekst
 
 ### Wyjście
 
-Jedna linia:
-
-* napis złożony tylko z cyfr z tekstu wejściowego
+* Jedna linia: cyfry z tekstu (z zachowaniem kolejności i zer na początku),
+* `Brak cyfr.` — jeśli w tekście nie ma żadnej cyfry.
 
 ### Przykład
 
@@ -34,18 +31,20 @@ Terminator2001
 2001
 ```
 
+### Uwagi
+
+* Przydadzą się `re.findall(r"[0-9]", tekst)` albo `re.sub(r"[^0-9]", "", tekst)`.
+
 """
 
 import re
 
 
-def odfiltruj_cyfry(slowo):
-    return re.sub("[^\d]", "", slowo)
-
-
-def test_odfiltruj_cyfry():
-    assert odfiltruj_cyfry("numer 32.19 wyzej niz 31.17") == "32193117"
+def wyodrebnij_cyfry(tekst):
+    return re.sub(r"[^0-9]", "", tekst)
 
 
 if __name__ == "__main__":
-    test_odfiltruj_cyfry()
+    tekst = input()
+    cyfry = wyodrebnij_cyfry(tekst)
+    print(cyfry if cyfry else "Brak cyfr.")

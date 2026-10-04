@@ -7,6 +7,22 @@
     {
       "input": "hello world",
       "output": "dlrow olleh"
+    },
+    {
+      "input": "x",
+      "output": "x"
+    },
+    {
+      "input": "kajak",
+      "output": "kajak"
+    },
+    {
+      "input": "Zażółć gęślą jaźń",
+      "output": "ńźaj ąlśęg ćłóżaZ"
+    },
+    {
+      "input": "12 + 34 = 46",
+      "output": "64 = 43 + 21"
     }
   ],
   "ZAD-02": [
@@ -17,6 +33,18 @@
     {
       "input": "Mississippi\ns",
       "output": "4"
+    },
+    {
+      "input": "Ala ma kota\nA",
+      "output": "1"
+    },
+    {
+      "input": "Ala ma kota\nx",
+      "output": "0"
+    },
+    {
+      "input": "Ala ma kota, a kot ma Alę.\na",
+      "output": "5"
     }
   ],
   "ZAD-03": [
@@ -25,8 +53,20 @@
       "output": "2"
     },
     {
-      "input": "One, two, three!",
+      "input": "One, two, three, four!",
+      "output": "4"
+    },
+    {
+      "input": "Słowo",
+      "output": "1"
+    },
+    {
+      "input": "  Ala   ma    kota  ",
       "output": "3"
+    },
+    {
+      "input": "Raz, dwa, trzy - cztery; pięć: sześć.",
+      "output": "6"
     }
   ],
   "ZAD-04": [
@@ -37,6 +77,18 @@
     {
       "input": "xyz",
       "output": "XYZ"
+    },
+    {
+      "input": "zażółć gęślą jaźń",
+      "output": "ZAŻÓŁĆ GĘŚLĄ JAŹŃ"
+    },
+    {
+      "input": "JUŻ DUŻE 123!",
+      "output": "JUŻ DUŻE 123!"
+    },
+    {
+      "input": "Python 3.12 jest super.",
+      "output": "PYTHON 3.12 JEST SUPER."
     }
   ],
   "ZAD-05": [
@@ -47,6 +99,22 @@
     {
       "input": "hello\n1",
       "output": "h e l l o\nh\ne\nl\nl\no"
+    },
+    {
+      "input": "abc\n3",
+      "output": "c\nc"
+    },
+    {
+      "input": "programowanie\n4",
+      "output": "g o i\ng\no\ni"
+    },
+    {
+      "input": "Konstantynopol\n5",
+      "output": "t n\nt\nn"
+    },
+    {
+      "input": "xy\n2",
+      "output": "y\ny"
     }
   ],
   "ZAD-06": [
@@ -57,6 +125,22 @@
     {
       "input": "xyz",
       "output": "xyz"
+    },
+    {
+      "input": "Ala ma kota",
+      "output": "Al? m? kot?"
+    },
+    {
+      "input": "Ananas",
+      "output": "An?n?s"
+    },
+    {
+      "input": "aaa a",
+      "output": "??? ?"
+    },
+    {
+      "input": "ARKA",
+      "output": "ARKA"
     }
   ],
   "ZAD-07": [
@@ -67,6 +151,18 @@
     {
       "input": "a z",
       "output": "97, 32, 122"
+    },
+    {
+      "input": "!",
+      "output": "33"
+    },
+    {
+      "input": "Hi 5",
+      "output": "72, 105, 32, 53"
+    },
+    {
+      "input": "0~",
+      "output": "48, 126"
     }
   ],
   "ZAD-08": [
@@ -77,6 +173,22 @@
     {
       "input": "Hello, world!",
       "output": "Hello\nworld"
+    },
+    {
+      "input": "Samotny",
+      "output": "Samotny"
+    },
+    {
+      "input": "  Raz   dwa  ",
+      "output": "Raz\ndwa"
+    },
+    {
+      "input": "Tak - albo nie?",
+      "output": "Tak\nalbo\nnie"
+    },
+    {
+      "input": "(Uwaga) koniec.",
+      "output": "Uwaga\nkoniec"
     }
   ],
   "ZAD-09": [
@@ -87,6 +199,18 @@
     {
       "input": "Ala;Nowak;Gdansk;Manager;1234;",
       "output": "Imię: Ala\nNazwisko: Nowak\nMiejsce urodzenia: Gdansk\nZawód: Manager\nZarobki: 1234"
+    },
+    {
+      "input": "Anna; Wiśniewska; Nowy Sącz; Lekarka; 7500;",
+      "output": "Imię: Anna\nNazwisko: Wiśniewska\nMiejsce urodzenia: Nowy Sącz\nZawód: Lekarka\nZarobki: 7500"
+    },
+    {
+      "input": "Piotr;Zieliński; Łódź ;Kierowca;3200;",
+      "output": "Imię: Piotr\nNazwisko: Zieliński\nMiejsce urodzenia: Łódź\nZawód: Kierowca\nZarobki: 3200"
+    },
+    {
+      "input": "Ewa; Kowalczyk-Nowak; Bielsko-Biała; Analityk danych; 12000;",
+      "output": "Imię: Ewa\nNazwisko: Kowalczyk-Nowak\nMiejsce urodzenia: Bielsko-Biała\nZawód: Analityk danych\nZarobki: 12000"
     }
   ],
   "ZAD-10": [
@@ -97,6 +221,22 @@
     {
       "input": "aa bbb cc",
       "output": "bbb\naa"
+    },
+    {
+      "input": "Słowo",
+      "output": "Słowo\nSłowo"
+    },
+    {
+      "input": "kot pies mysz",
+      "output": "pies\nkot"
+    },
+    {
+      "input": "Ala ma bardzo, bardzo dużego psa!",
+      "output": "bardzo\nma"
+    },
+    {
+      "input": "Hej, ty!",
+      "output": "Hej\nty"
     }
   ],
   "ZAD-11": [
@@ -105,18 +245,46 @@
       "output": "3"
     },
     {
-      "input": "one two three",
-      "output": "3"
+      "input": "a b c",
+      "output": "1"
+    },
+    {
+      "input": "Ala i kot.",
+      "output": "2"
+    },
+    {
+      "input": "Konstantynopolitańczykowianeczka",
+      "output": "32"
+    },
+    {
+      "input": "Kaczka lubi wiosnę.",
+      "output": "5"
+    },
+    {
+      "input": "Programowanie, czyli zabawa!",
+      "output": "8"
     }
   ],
   "ZAD-12": [
     {
-      "input": "Ala ma kota",
-      "output": "Alamakota"
-    },
-    {
       "input": "a b c",
       "output": "abc"
+    },
+    {
+      "input": "bezspacji",
+      "output": "bezspacji"
+    },
+    {
+      "input": "  dużo   spacji  ",
+      "output": "dużospacji"
+    },
+    {
+      "input": "Ala ma kota, a kot ma Alę.",
+      "output": "Alamakota,akotmaAlę."
+    },
+    {
+      "input": "1 2 3 4",
+      "output": "1234"
     }
   ],
   "ZAD-13": [
@@ -127,6 +295,18 @@
     {
       "input": "hi",
       "output": "[]"
+    },
+    {
+      "input": "abc",
+      "output": "['c']"
+    },
+    {
+      "input": "Kaczka lubi wiosnę.",
+      "output": "['c', 'z', 'a', 'l', ' ', 'i', 'ę']"
+    },
+    {
+      "input": "0123456789012345678901234",
+      "output": "['2', '3', '5', '7', '1', '3', '7', '9', '3']"
     }
   ],
   "ZAD-14": [
@@ -137,16 +317,18 @@
     {
       "input": "12",
       "output": "123456789101112"
-    }
-  ],
-  "ZAD-15": [
-    {
-      "input": "Ala ma kota",
-      "output": "[\"Ala\", \"ma\", \"kota\"]"
     },
     {
-      "input": "one two",
-      "output": "[\"one\", \"two\"]"
+      "input": "1",
+      "output": "1"
+    },
+    {
+      "input": "3",
+      "output": "123"
+    },
+    {
+      "input": "20",
+      "output": "1234567891011121314151617181920"
     }
   ],
   "ZAD-16": [
@@ -157,26 +339,114 @@
     {
       "input": "1010\n0101",
       "output": "4"
+    },
+    {
+      "input": "kot\nkot",
+      "output": "0"
+    },
+    {
+      "input": "Ala\nala",
+      "output": "1"
+    },
+    {
+      "input": "kotek\nkubek",
+      "output": "2"
+    },
+    {
+      "input": "abcdef\nfedcba",
+      "output": "6"
     }
   ],
   "ZAD-17": [
     {
-      "input": "[2, 4, 7]",
-      "output": "247"
+      "input": "10 0 3",
+      "output": "1003"
     },
     {
-      "input": "[10, 0, 3]",
-      "output": "1003"
+      "input": "5",
+      "output": "5"
+    },
+    {
+      "input": "1 2 3 4 5 6 7 8 9 10",
+      "output": "12345678910"
+    },
+    {
+      "input": "100 20 3",
+      "output": "100203"
+    },
+    {
+      "input": "42 42",
+      "output": "4242"
     }
   ],
   "ZAD-18": [
     {
-      "input": "Ala ma kota",
-      "output": "alA am atok"
-    },
-    {
       "input": "hello world",
       "output": "olleh dlrow"
+    },
+    {
+      "input": "Python",
+      "output": "nohtyP"
+    },
+    {
+      "input": "Kto pyta, nie błądzi!",
+      "output": "otK atyp, ein izdąłb!"
+    },
+    {
+      "input": "a b c",
+      "output": "a b c"
+    },
+    {
+      "input": "(Uwaga) to test.",
+      "output": "(agawU) ot tset."
+    }
+  ],
+  "ZAD-19": [
+    {
+      "input": "1\nxyz XYZ",
+      "output": "yza YZA"
+    },
+    {
+      "input": "26\nHello",
+      "output": "Hello"
+    },
+    {
+      "input": "-3\nDod pd nrwd!",
+      "output": "Ala ma kota!"
+    },
+    {
+      "input": "29\nabc",
+      "output": "def"
+    },
+    {
+      "input": "13\nZażółć gęślą jaźń.",
+      "output": "Mnżółć tęśyą wnźń."
+    },
+    {
+      "input": "-27\nPython 3.12",
+      "output": "Oxsgnm 3.12"
+    }
+  ],
+  "ZAD-20": [
+    {
+      "input": "jeden",
+      "output": "  1 | jeden\nWierszy: 1, niepustych: 1"
+    },
+    {
+      "input": "",
+      "output": "Wierszy: 0, niepustych: 0"
+    },
+    {
+      "input": "a\n\n\nb",
+      "output": "  1 | a\n  4 | b\nWierszy: 4, niepustych: 2"
+    },
+    {
+      "input": "w1\nw2\n\nw4\nw5\nw6\nw7\nw8\nw9\nw10\n   \nw12",
+      "output": "  1 | w1\n  2 | w2\n  4 | w4\n  5 | w5\n  6 | w6\n  7 | w7\n  8 | w8\n  9 | w9\n 10 | w10\n 12 | w12\nWierszy: 12, niepustych: 10"
+    },
+    {
+      "input": "  wcięty wiersz\nkoniec",
+      "output": "  1 |   wcięty wiersz\n  2 | koniec\nWierszy: 2, niepustych: 2"
     }
   ]
 }

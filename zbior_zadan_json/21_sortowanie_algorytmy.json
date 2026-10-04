@@ -1,7 +1,7 @@
 {
   "file": "21_sortowanie_algorytmy.md",
-  "chapter_title": "Rozdział: Sortowanie — Algorytmy (stdin/stdout)",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* W każdej wersji zadania wczytaj **jedną linię** z listą w formacie jak w przykładzie, np. `[6, 2, 1, 4, 27]`.\n* Wypisz wynik jako listę w **tym samym formacie**, np. `[1, 2, 4, 6, 27]`.\n* Zakładamy, że wejście jest poprawne (lista liczb całkowitych w notacji Pythona).",
+  "chapter_title": "Rozdział 21: Sortowanie i wyszukiwanie — algorytmy",
+  "chapter_description": "Zadania w tym rozdziale polegają na samodzielnym zaimplementowaniu klasycznych algorytmów sortowania i wyszukiwania. Żeby było widać, że program naprawdę wykonuje dany algorytm, w każdym zadaniu wypisujesz **stany pośrednie** — listę po kolejnych krokach algorytmu albo kolejno sprawdzane pozycje.\n\n**Konwencje wspólne:**\n\n* Każde zadanie to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.\n* Wejście ma zawsze tę samą postać: w 1. linii liczba elementów $n$, w 2. linii $n$ liczb całkowitych oddzielonych spacjami. Jeśli algorytm potrzebuje dodatkowej wartości (np. szukanego klucza), znajduje się ona w 3. linii.\n* Listę wypisuj w formacie Pythona — dokładnie tak, jak robi to `print(lista)`, np. `[1, 2, 4, 6, 27]`.\n* Sortujemy zawsze **rosnąco** (niemalejąco — liczby mogą się powtarzać).\n* **Zaimplementuj algorytm samodzielnie.** Nie używaj `sorted()`, `list.sort()`, `list.index()`, operatora `in` na liście ani innych gotowych funkcji sortujących i wyszukujących.\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -14,27 +14,45 @@
         "bubble-sort",
         "list"
       ],
-      "description": "Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania bąbelkowego**.\nAlgorytm polega na wielokrotnym porównywaniu sąsiednich elementów i zamianie ich miejscami, jeśli są w złej kolejności. Powtarzaj przebiegi, aż w całym przebiegu nie zajdzie żadna zamiana.",
-      "input": "* 1 linia: lista liczb całkowitych, np. `[6, 2, 1, 4, 27]`",
-      "output": "* 1 linia: posortowana lista rosnąco",
+      "description": "Napisz funkcję `sortowanie_babelkowe(lista)`, która sortuje listę rosnąco (w miejscu) algorytmem **sortowania bąbelkowego**.\n\nAlgorytm wykonuje kolejne **przebiegi**. W jednym przebiegu porównuje kolejne pary sąsiednich elementów — na pozycjach $(0, 1)$, $(1, 2)$, $(2, 3)$, … — i zamienia je miejscami, jeśli lewy element jest **większy** od prawego. Przebiegi powtarza tak długo, aż w całym przebiegu nie zajdzie żadna zamiana — wtedy lista jest posortowana i algorytm się kończy.\n\nPo każdym przebiegu (także po ostatnim, w którym nie było już żadnej zamiany) funkcja wypisuje aktualny stan listy.",
+      "input": "* 1. linia: liczba całkowita $n$ — liczba elementów\n* 2. linia: $n$ liczb całkowitych oddzielonych spacjami",
+      "output": "Stan listy po każdym przebiegu — każdy w osobnej linii, w formacie listy Pythona. Ostatnia linia to lista posortowana.",
       "examples": [
         {
-          "input": "[6, 2, 1, 4, 27]",
-          "output": "[1, 2, 4, 6, 27]"
+          "input": "5\n6 2 1 4 27",
+          "output": "[2, 1, 4, 6, 27]\n[1, 2, 4, 6, 27]\n[1, 2, 4, 6, 27]",
+          "explanation": "W 1. przebiegu zamieniane są pary $(6, 2)$, $(6, 1)$ i $(6, 4)$; w 2. przebiegu para $(2, 1)$; w 3. przebiegu nie ma żadnej zamiany, więc algorytm się kończy."
         }
       ],
       "testcases": [
         {
-          "input": "[3, 1, 2]",
-          "output": "[1, 2, 3]"
+          "input": "2\n2 1",
+          "output": "[1, 2]\n[1, 2]"
         },
         {
-          "input": "[5, -1, 0, 5]",
-          "output": "[-1, 0, 5, 5]"
+          "input": "5\n1 2 3 4 5",
+          "output": "[1, 2, 3, 4, 5]"
+        },
+        {
+          "input": "6\n6 5 4 3 2 1",
+          "output": "[5, 4, 3, 2, 1, 6]\n[4, 3, 2, 1, 5, 6]\n[3, 2, 1, 4, 5, 6]\n[2, 1, 3, 4, 5, 6]\n[1, 2, 3, 4, 5, 6]\n[1, 2, 3, 4, 5, 6]"
+        },
+        {
+          "input": "7\n3 -1 3 0 -5 2 -1",
+          "output": "[-1, 3, 0, -5, 2, -1, 3]\n[-1, 0, -5, 2, -1, 3, 3]\n[-1, -5, 0, -1, 2, 3, 3]\n[-5, -1, -1, 0, 2, 3, 3]\n[-5, -1, -1, 0, 2, 3, 3]"
+        },
+        {
+          "input": "4\n7 7 7 7",
+          "output": "[7, 7, 7, 7]"
+        },
+        {
+          "input": "6\n2 3 4 5 6 1",
+          "output": "[2, 3, 4, 5, 1, 6]\n[2, 3, 4, 1, 5, 6]\n[2, 3, 1, 4, 5, 6]\n[2, 1, 3, 4, 5, 6]\n[1, 2, 3, 4, 5, 6]\n[1, 2, 3, 4, 5, 6]"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $2 \\le n \\le 20$\n* Elementy są liczbami całkowitymi z przedziału $[-1000, 1000]$.",
+      "notes": "**Uwagi o algorytmie:**\n\n* Po każdym przebiegu największy z nieposortowanych elementów „wypływa” na swoje miejsce na końcu listy, dlatego w kolejnych przebiegach możesz zmniejszać zakres sprawdzania o 1 — nie zmienia to wypisywanych stanów.\n* Złożoność czasowa: $O(n^2)$, a dla listy już posortowanej — tylko jeden przebieg, czyli $O(n)$.",
+      "starter_code": "def sortowanie_babelkowe(lista):\n    # Uzupełnij: sortuj listę w miejscu; po każdym przebiegu wypisz print(lista).\n    pass\n\n\nn = int(input())\nlista = [int(x) for x in input().split()]\nsortowanie_babelkowe(lista)\n"
     },
     {
       "id": "ZAD-02",
@@ -47,27 +65,45 @@
         "selection-sort",
         "list"
       ],
-      "description": "Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wybieranie**.\nDla każdej pozycji `i` znajdź najmniejszy element w zakresie `i..koniec` i zamień go z elementem na pozycji `i`.",
-      "input": "* 1 linia: lista liczb całkowitych",
-      "output": "* 1 linia: posortowana lista rosnąco",
+      "description": "Napisz funkcję `sortowanie_przez_wybieranie(lista)`, która sortuje listę rosnąco (w miejscu) algorytmem **sortowania przez wybieranie**.\n\nDla każdej pozycji $i = 0, 1, \\dots, n-2$:\n\n1. znajdź najmniejszy element we fragmencie od pozycji $i$ do końca listy — jeśli najmniejsza wartość występuje w nim kilka razy, wybierz jej **pierwsze** wystąpienie (o najmniejszym indeksie),\n2. zamień ten element z elementem na pozycji $i$ (jeśli to ta sama pozycja, lista się nie zmienia),\n3. wypisz aktualny stan listy.",
+      "input": "* 1. linia: liczba całkowita $n$ — liczba elementów\n* 2. linia: $n$ liczb całkowitych oddzielonych spacjami",
+      "output": "$n - 1$ linii: stan listy po każdym kroku $i$, w formacie listy Pythona. Ostatnia linia to lista posortowana.",
       "examples": [
         {
-          "input": "[6, 2, 1, 4, 27]",
-          "output": "[1, 2, 4, 6, 27]"
+          "input": "5\n6 2 1 4 27",
+          "output": "[1, 2, 6, 4, 27]\n[1, 2, 6, 4, 27]\n[1, 2, 4, 6, 27]\n[1, 2, 4, 6, 27]",
+          "explanation": "Krok $i = 0$: najmniejszy element to `1` — zamieniamy go z `6`. Krok $i = 1$: najmniejszy z `[2, 6, 4, 27]` to `2`, stoi już na swoim miejscu. Krok $i = 2$: zamieniamy `4` z `6`."
         }
       ],
       "testcases": [
         {
-          "input": "[9, 7, 8]",
-          "output": "[7, 8, 9]"
+          "input": "2\n2 1",
+          "output": "[1, 2]"
         },
         {
-          "input": "[2, 2, 1]",
-          "output": "[1, 2, 2]"
+          "input": "5\n1 2 3 4 5",
+          "output": "[1, 2, 3, 4, 5]\n[1, 2, 3, 4, 5]\n[1, 2, 3, 4, 5]\n[1, 2, 3, 4, 5]"
+        },
+        {
+          "input": "6\n6 5 4 3 2 1",
+          "output": "[1, 5, 4, 3, 2, 6]\n[1, 2, 4, 3, 5, 6]\n[1, 2, 3, 4, 5, 6]\n[1, 2, 3, 4, 5, 6]\n[1, 2, 3, 4, 5, 6]"
+        },
+        {
+          "input": "7\n3 -1 3 0 -5 2 -1",
+          "output": "[-5, -1, 3, 0, 3, 2, -1]\n[-5, -1, 3, 0, 3, 2, -1]\n[-5, -1, -1, 0, 3, 2, 3]\n[-5, -1, -1, 0, 3, 2, 3]\n[-5, -1, -1, 0, 2, 3, 3]\n[-5, -1, -1, 0, 2, 3, 3]"
+        },
+        {
+          "input": "4\n7 7 7 7",
+          "output": "[7, 7, 7, 7]\n[7, 7, 7, 7]\n[7, 7, 7, 7]"
+        },
+        {
+          "input": "4\n3 1 2 1",
+          "output": "[1, 3, 2, 1]\n[1, 1, 2, 3]\n[1, 1, 2, 3]"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $2 \\le n \\le 20$\n* Elementy są liczbami całkowitymi z przedziału $[-1000, 1000]$.",
+      "notes": "**Uwagi o algorytmie:**\n\n* Po kroku $i$ na pozycjach $0, \\dots, i$ stoją już najmniejsze elementy listy w kolejności rosnącej.\n* Złożoność czasowa: $O(n^2)$ — niezależnie od danych.",
+      "starter_code": "def sortowanie_przez_wybieranie(lista):\n    # Uzupełnij: sortuj listę w miejscu; po każdym kroku wypisz print(lista).\n    pass\n\n\nn = int(input())\nlista = [int(x) for x in input().split()]\nsortowanie_przez_wybieranie(lista)\n"
     },
     {
       "id": "ZAD-03",
@@ -80,27 +116,45 @@
         "insertion-sort",
         "list"
       ],
-      "description": "Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez wstawianie**.\nBuduj posortowany fragment od lewej strony: każdy kolejny element „wstaw” w odpowiednie miejsce, przesuwając większe elementy w prawo.",
-      "input": "* 1 linia: lista liczb całkowitych",
-      "output": "* 1 linia: posortowana lista rosnąco",
+      "description": "Napisz funkcję `sortowanie_przez_wstawianie(lista)`, która sortuje listę rosnąco (w miejscu) algorytmem **sortowania przez wstawianie**.\n\nAlgorytm buduje posortowany fragment od lewej strony. Dla każdej pozycji $i = 1, 2, \\dots, n-1$:\n\n1. zapamiętaj element `lista[i]` (klucz),\n2. przesuwaj o jedną pozycję w prawo te elementy posortowanego fragmentu `lista[0..i-1]`, które są **większe** od klucza (idąc od prawej strony),\n3. wstaw klucz na zwolnione miejsce,\n4. wypisz aktualny stan listy.",
+      "input": "* 1. linia: liczba całkowita $n$ — liczba elementów\n* 2. linia: $n$ liczb całkowitych oddzielonych spacjami",
+      "output": "$n - 1$ linii: stan listy po wstawieniu każdego kolejnego elementu, w formacie listy Pythona. Ostatnia linia to lista posortowana.",
       "examples": [
         {
-          "input": "[6, 2, 1, 4, 27]",
-          "output": "[1, 2, 4, 6, 27]"
+          "input": "5\n6 2 1 4 27",
+          "output": "[2, 6, 1, 4, 27]\n[1, 2, 6, 4, 27]\n[1, 2, 4, 6, 27]\n[1, 2, 4, 6, 27]",
+          "explanation": "Najpierw `2` trafia przed `6`, potem `1` przed `2`, potem `4` między `2` a `6`; `27` zostaje na swoim miejscu."
         }
       ],
       "testcases": [
         {
-          "input": "[4, 3, 2, 1]",
-          "output": "[1, 2, 3, 4]"
+          "input": "2\n2 1",
+          "output": "[1, 2]"
         },
         {
-          "input": "[1, 3, 2]",
-          "output": "[1, 2, 3]"
+          "input": "5\n1 2 3 4 5",
+          "output": "[1, 2, 3, 4, 5]\n[1, 2, 3, 4, 5]\n[1, 2, 3, 4, 5]\n[1, 2, 3, 4, 5]"
+        },
+        {
+          "input": "6\n6 5 4 3 2 1",
+          "output": "[5, 6, 4, 3, 2, 1]\n[4, 5, 6, 3, 2, 1]\n[3, 4, 5, 6, 2, 1]\n[2, 3, 4, 5, 6, 1]\n[1, 2, 3, 4, 5, 6]"
+        },
+        {
+          "input": "7\n3 -1 3 0 -5 2 -1",
+          "output": "[-1, 3, 3, 0, -5, 2, -1]\n[-1, 3, 3, 0, -5, 2, -1]\n[-1, 0, 3, 3, -5, 2, -1]\n[-5, -1, 0, 3, 3, 2, -1]\n[-5, -1, 0, 2, 3, 3, -1]\n[-5, -1, -1, 0, 2, 3, 3]"
+        },
+        {
+          "input": "4\n7 7 7 7",
+          "output": "[7, 7, 7, 7]\n[7, 7, 7, 7]\n[7, 7, 7, 7]"
+        },
+        {
+          "input": "6\n2 3 4 5 6 1",
+          "output": "[2, 3, 4, 5, 6, 1]\n[2, 3, 4, 5, 6, 1]\n[2, 3, 4, 5, 6, 1]\n[2, 3, 4, 5, 6, 1]\n[1, 2, 3, 4, 5, 6]"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $2 \\le n \\le 20$\n* Elementy są liczbami całkowitymi z przedziału $[-1000, 1000]$.",
+      "notes": "**Uwagi o algorytmie:**\n\n* Po kroku $i$ fragment `lista[0..i]` jest posortowany, a reszta listy jest jeszcze nieruszona.\n* Algorytm działa bardzo szybko dla danych prawie posortowanych; w najgorszym przypadku ma złożoność $O(n^2)$.",
+      "starter_code": "def sortowanie_przez_wstawianie(lista):\n    # Uzupełnij: sortuj listę w miejscu; po każdym wstawieniu wypisz print(lista).\n    pass\n\n\nn = int(input())\nlista = [int(x) for x in input().split()]\nsortowanie_przez_wstawianie(lista)\n"
     },
     {
       "id": "ZAD-04",
@@ -113,27 +167,45 @@
         "merge-sort",
         "recursion"
       ],
-      "description": "Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez scalanie**:\n\n1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.\n2. Podziel listę na dwie (w miarę) równe części.\n3. Rekurencyjnie posortuj obie części.\n4. **Scal** dwie posortowane listy w jedną posortowaną.",
-      "input": "* 1 linia: lista liczb całkowitych",
-      "output": "* 1 linia: posortowana lista rosnąco",
+      "description": "Napisz rekurencyjną funkcję `sortowanie_przez_scalanie(lista)`, która zwraca nową, posortowaną rosnąco listę, korzystając z algorytmu **sortowania przez scalanie**:\n\n1. Jeśli lista ma mniej niż 2 elementy — jest posortowana, zwróć ją.\n2. Podziel listę na dwie części: lewa to pierwsze $\\lfloor n/2 \\rfloor$ elementów (`lista[:n // 2]`), prawa — pozostałe.\n3. Rekurencyjnie posortuj najpierw lewą, a potem prawą część.\n4. **Scal** obie posortowane części w jedną posortowaną listę (pomocnicza funkcja `scal(lewa, prawa)`), **wypisz** wynik scalenia i go zwróć.\n\nScalanie: dopóki obie listy mają elementy, porównuj ich pierwsze (najmniejsze) nieużyte elementy i dopisuj do wyniku mniejszy z nich; na koniec dopisz pozostałe elementy.",
+      "input": "* 1. linia: liczba całkowita $n$ — liczba elementów\n* 2. linia: $n$ liczb całkowitych oddzielonych spacjami",
+      "output": "$n - 1$ linii: wynik każdego scalenia, w kolejności wykonywania, w formacie listy Pythona. Ostatnie scalenie daje całą posortowaną listę.",
       "examples": [
         {
-          "input": "[6, 2, 1, 4, 27]",
-          "output": "[1, 2, 4, 6, 27]"
+          "input": "5\n6 2 1 4 27",
+          "output": "[2, 6]\n[4, 27]\n[1, 4, 27]\n[1, 2, 4, 6, 27]",
+          "explanation": "Lista dzieli się na `[6, 2]` i `[1, 4, 27]`. Lewa część daje scalenie `[6]` + `[2]` → `[2, 6]`. Prawa dzieli się na `[1]` i `[4, 27]`; najpierw scalane są `[4]` + `[27]`, potem `[1]` + `[4, 27]`. Na końcu scalane są obie połowy."
         }
       ],
       "testcases": [
         {
-          "input": "[6, 2, 1, 4]",
-          "output": "[1, 2, 4, 6]"
+          "input": "2\n2 1",
+          "output": "[1, 2]"
         },
         {
-          "input": "[0, -2, 5, 3]",
-          "output": "[-2, 0, 3, 5]"
+          "input": "3\n3 1 2",
+          "output": "[1, 2]\n[1, 2, 3]"
+        },
+        {
+          "input": "6\n6 5 4 3 2 1",
+          "output": "[4, 5]\n[4, 5, 6]\n[1, 2]\n[1, 2, 3]\n[1, 2, 3, 4, 5, 6]"
+        },
+        {
+          "input": "7\n3 -1 3 0 -5 2 -1",
+          "output": "[-1, 3]\n[-1, 3, 3]\n[-5, 0]\n[-1, 2]\n[-5, -1, 0, 2]\n[-5, -1, -1, 0, 2, 3, 3]"
+        },
+        {
+          "input": "4\n7 7 7 7",
+          "output": "[7, 7]\n[7, 7]\n[7, 7, 7, 7]"
+        },
+        {
+          "input": "8\n5 1 4 2 8 0 2 9",
+          "output": "[1, 5]\n[2, 4]\n[1, 2, 4, 5]\n[0, 8]\n[2, 9]\n[0, 2, 8, 9]\n[0, 1, 2, 2, 4, 5, 8, 9]"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $2 \\le n \\le 20$\n* Elementy są liczbami całkowitymi z przedziału $[-1000, 1000]$.",
+      "notes": "**Uwagi o algorytmie:**\n\n* Złożoność czasowa: $O(n \\log n)$.",
+      "starter_code": "def scal(lewa, prawa):\n    # Uzupełnij: zwróć jedną posortowaną listę z dwóch posortowanych list.\n    pass\n\n\ndef sortowanie_przez_scalanie(lista):\n    # Uzupełnij: podziel listę, posortuj obie części rekurencyjnie,\n    # scal je, wypisz wynik scalenia i go zwróć.\n    pass\n\n\nn = int(input())\nlista = [int(x) for x in input().split()]\nsortowanie_przez_scalanie(lista)\n"
     },
     {
       "id": "ZAD-05",
@@ -146,27 +218,143 @@
         "quick-sort",
         "recursion"
       ],
-      "description": "Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **Quick Sort**:\n\n1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.\n2. Wybierz **pivot** (np. pierwszy element).\n3. Podziel elementy na trzy grupy:\n\n   * mniejsze od pivota,\n   * równe pivotowi,\n   * większe od pivota.\n4. Rekurencyjnie posortuj część mniejszych i większych.\n5. Sklej wynik: `mniejsze + równe + większe`.",
-      "input": "* 1 linia: lista liczb całkowitych",
-      "output": "* 1 linia: posortowana lista rosnąco",
+      "description": "Napisz rekurencyjną funkcję `sortowanie_szybkie(lista)`, która zwraca nową, posortowaną rosnąco listę, korzystając z algorytmu **Quick Sort**:\n\n1. Jeśli lista ma mniej niż 2 elementy — jest posortowana, zwróć ją.\n2. Jako **pivot** wybierz **pierwszy** element listy.\n3. Podziel elementy listy na trzy grupy (zachowując ich kolejność z listy):\n   * `mniejsze` — mniejsze od pivota,\n   * `rowne` — równe pivotowi (w tym sam pivot),\n   * `wieksze` — większe od pivota.\n4. **Wypisz** trzy grupy w jednej linii: `print(mniejsze, rowne, wieksze)`.\n5. Rekurencyjnie posortuj najpierw grupę `mniejsze`, a potem `wieksze`.\n6. Zwróć sklejony wynik: posortowane `mniejsze` + `rowne` + posortowane `wieksze`.\n\nProgram wczytuje listę, sortuje ją i na końcu wypisuje posortowaną listę.",
+      "input": "* 1. linia: liczba całkowita $n$ — liczba elementów\n* 2. linia: $n$ liczb całkowitych oddzielonych spacjami",
+      "output": "* Dla każdego podziału (w kolejności wykonywania) jedna linia z trzema listami oddzielonymi spacją, np. `[2, 1, 4] [6] [27]`. Pusta grupa to `[]`.\n* Ostatnia linia: posortowana lista w formacie listy Pythona.",
       "examples": [
         {
-          "input": "[6, 2, 1, 4, 27]",
-          "output": "[1, 2, 4, 6, 27]"
+          "input": "5\n6 2 1 4 27",
+          "output": "[2, 1, 4] [6] [27]\n[1] [2] [4]\n[1, 2, 4, 6, 27]",
+          "explanation": "Pierwszy podział (pivot `6`) daje grupy `[2, 1, 4]`, `[6]`, `[27]`. Grupa `[2, 1, 4]` jest dzielona dalej (pivot `2`). Grupy jednoelementowe są już posortowane, więc nie są dzielone."
         }
       ],
       "testcases": [
         {
-          "input": "[10, 7, 8, 9, 1, 5]",
-          "output": "[1, 5, 7, 8, 9, 10]"
+          "input": "2\n2 1",
+          "output": "[1] [2] []\n[1, 2]"
         },
         {
-          "input": "[3, 3, 2, 1]",
-          "output": "[1, 2, 3, 3]"
+          "input": "2\n1 2",
+          "output": "[] [1] [2]\n[1, 2]"
+        },
+        {
+          "input": "5\n1 2 3 4 5",
+          "output": "[] [1] [2, 3, 4, 5]\n[] [2] [3, 4, 5]\n[] [3] [4, 5]\n[] [4] [5]\n[1, 2, 3, 4, 5]"
+        },
+        {
+          "input": "7\n3 -1 3 0 -5 2 -1",
+          "output": "[-1, 0, -5, 2, -1] [3, 3] []\n[-5] [-1, -1] [0, 2]\n[] [0] [2]\n[-5, -1, -1, 0, 2, 3, 3]"
+        },
+        {
+          "input": "4\n7 7 7 7",
+          "output": "[] [7, 7, 7, 7] []\n[7, 7, 7, 7]"
+        },
+        {
+          "input": "8\n5 1 4 2 8 0 2 9",
+          "output": "[1, 4, 2, 0, 2] [5] [8, 9]\n[0] [1] [4, 2, 2]\n[2, 2] [4] []\n[] [2, 2] []\n[] [8] [9]\n[0, 1, 2, 2, 4, 5, 8, 9]"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $2 \\le n \\le 20$\n* Elementy są liczbami całkowitymi z przedziału $[-1000, 1000]$.",
+      "notes": "**Uwagi o algorytmie:**\n\n* Średnio: $O(n \\log n)$, w pesymistycznym przypadku (np. lista już posortowana przy pivocie z początku): $O(n^2)$.\n* Wybór pivota ma wpływ na wydajność.",
+      "starter_code": "def sortowanie_szybkie(lista):\n    # Uzupełnij: podziel listę względem pivota, wypisz grupy,\n    # posortuj rekurencyjnie grupy mniejsze i większe, zwróć wynik.\n    pass\n\n\nn = int(input())\nlista = [int(x) for x in input().split()]\nprint(sortowanie_szybkie(lista))\n"
+    },
+    {
+      "id": "ZAD-06",
+      "slug": "21_sortowanie_algorytmy/ZAD-06",
+      "title": "Wyszukiwanie binarne",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "searching",
+        "binary-search",
+        "list"
+      ],
+      "description": "Napisz funkcję `wyszukiwanie_binarne(lista, klucz)`, która w liście posortowanej rosnąco znajduje indeks elementu równego `klucz` algorytmem **wyszukiwania binarnego**:\n\n1. Ustaw granice przeszukiwanego fragmentu: `lo = 0`, `hi = n - 1`.\n2. Dopóki `lo <= hi`:\n   * wyznacz środek `mid = (lo + hi) // 2` i zapamiętaj go na liście sprawdzonych indeksów,\n   * jeśli `lista[mid] == klucz` — klucz znaleziony, wynikiem jest `mid`,\n   * jeśli `lista[mid] < klucz` — klucz może być tylko na prawo od środka: `lo = mid + 1`,\n   * w przeciwnym razie — tylko na lewo od środka: `hi = mid - 1`.\n3. Jeśli fragment stał się pusty (`lo > hi`), klucza nie ma w liście — wynikiem jest `-1`.\n\nFunkcja wypisuje listę sprawdzonych indeksów i zwraca wynik, który program wypisuje w następnej linii.",
+      "input": "* 1. linia: liczba elementów $n$\n* 2. linia: $n$ różnych liczb całkowitych posortowanych rosnąco, oddzielonych spacjami\n* 3. linia: liczba całkowita $x$ — szukany klucz",
+      "output": "* 1. linia: kolejno sprawdzane indeksy `mid` w formacie listy Pythona, np. `[3, 5]`\n* 2. linia: indeks elementu równego $x$ albo `-1`, jeśli takiego elementu nie ma",
+      "examples": [
+        {
+          "input": "8\n1 3 5 7 9 11 13 15\n11",
+          "output": "[3, 5]\n5",
+          "explanation": "Najpierw sprawdzamy `mid = (0 + 7) // 2 = 3`: `lista[3] = 7 < 11`, więc `lo = 4`. Potem `mid = (4 + 7) // 2 = 5`: `lista[5] = 11` — znaleziono."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n5\n5",
+          "output": "[0]\n0"
+        },
+        {
+          "input": "1\n5\n7",
+          "output": "[0]\n-1"
+        },
+        {
+          "input": "7\n-10 -4 0 3 8 12 20\n-10",
+          "output": "[3, 1, 0]\n0"
+        },
+        {
+          "input": "7\n-10 -4 0 3 8 12 20\n21",
+          "output": "[3, 5, 6]\n-1"
+        },
+        {
+          "input": "10\n2 4 6 8 10 12 14 16 18 20\n9",
+          "output": "[4, 1, 2, 3]\n-1"
+        },
+        {
+          "input": "6\n1 4 9 16 25 36\n36",
+          "output": "[2, 4, 5]\n5"
+        }
+      ],
+      "constraints": "* $1 \\le n \\le 1000$\n* Elementy listy są różne i są liczbami całkowitymi z przedziału $[-10^6, 10^6]$.",
+      "notes": "**Uwagi o algorytmie:**\n\n* Każde sprawdzenie zmniejsza przeszukiwany fragment mniej więcej o połowę, dlatego liczba sprawdzeń nie przekracza $\\lfloor \\log_2 n \\rfloor + 1$ — dla $n = 1000$ to najwyżej 10 sprawdzeń, a dla miliona elementów najwyżej 20. Złożoność czasowa: $O(\\log n)$.\n* Wyszukiwanie binarne działa tylko na liście **posortowanej**.",
+      "starter_code": "def wyszukiwanie_binarne(lista, klucz):\n    # Uzupełnij: zapisuj sprawdzane indeksy na liście, wypisz ją\n    # i zwróć indeks klucza albo -1.\n    pass\n\n\nn = int(input())\nlista = [int(x) for x in input().split()]\nklucz = int(input())\nprint(wyszukiwanie_binarne(lista, klucz))\n"
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "21_sortowanie_algorytmy/ZAD-07",
+      "title": "Sortowanie przez zliczanie",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "sorting",
+        "counting-sort",
+        "list"
+      ],
+      "description": "Napisz funkcję `sortowanie_przez_zliczanie(lista, k)`, która sortuje rosnąco listę liczb całkowitych z przedziału $[0, k]$ algorytmem **sortowania przez zliczanie**:\n\n1. Utwórz listę liczności `licznosci` długości $k + 1$ wypełnioną zerami.\n2. Przejdź po liście i dla każdego elementu $x$ zwiększ `licznosci[x]` o 1. Po tym kroku `licznosci[v]` to liczba wystąpień wartości $v$.\n3. **Wypisz** listę liczności.\n4. Zbuduj wynik: dla kolejnych wartości $v = 0, 1, \\dots, k$ dopisz do niego $v$ dokładnie `licznosci[v]` razy. Zwróć wynik.\n\nAlgorytm w ogóle nie porównuje elementów ze sobą.",
+      "input": "* 1. linia: liczba elementów $n$\n* 2. linia: $n$ liczb całkowitych z przedziału $[0, k]$ oddzielonych spacjami\n* 3. linia: liczba całkowita $k$ — największa możliwa wartość",
+      "output": "* 1. linia: lista liczności (długości $k + 1$) w formacie listy Pythona\n* 2. linia: posortowana lista w formacie listy Pythona",
+      "examples": [
+        {
+          "input": "8\n3 0 5 3 1 0 3 5\n5",
+          "output": "[2, 1, 0, 3, 0, 2]\n[0, 0, 1, 3, 3, 3, 5, 5]",
+          "explanation": "Wartość `0` występuje 2 razy, `1` — raz, `2` — ani razu, `3` — 3 razy, `4` — ani razu, `5` — 2 razy."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n0\n0",
+          "output": "[1]\n[0]"
+        },
+        {
+          "input": "3\n4 4 4\n4",
+          "output": "[0, 0, 0, 0, 3]\n[4, 4, 4]"
+        },
+        {
+          "input": "5\n9 0 9 0 5\n9",
+          "output": "[2, 0, 0, 0, 0, 1, 0, 0, 0, 2]\n[0, 0, 5, 9, 9]"
+        },
+        {
+          "input": "6\n1 2 3 2 1 0\n3",
+          "output": "[1, 2, 2, 1]\n[0, 1, 1, 2, 2, 3]"
+        },
+        {
+          "input": "4\n7 3 10 1\n10",
+          "output": "[0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1]\n[1, 3, 7, 10]"
+        }
+      ],
+      "constraints": "* $1 \\le n \\le 100$\n* $0 \\le k \\le 100$",
+      "notes": "**Uwagi o algorytmie:**\n\n* Złożoność czasowa: $O(n + k)$ — dla małych wartości $k$ to szybciej niż $O(n \\log n)$ najlepszych algorytmów opartych na porównaniach.\n* Algorytm nadaje się tylko do sortowania liczb całkowitych z niewielkiego zakresu (lista liczności ma $k + 1$ elementów).",
+      "starter_code": "def sortowanie_przez_zliczanie(lista, k):\n    # Uzupełnij: policz wystąpienia wartości 0..k, wypisz listę liczności\n    # i zwróć posortowaną listę.\n    pass\n\n\nn = int(input())\nlista = [int(x) for x in input().split()]\nk = int(input())\nprint(sortowanie_przez_zliczanie(lista, k))\n"
     }
   ]
 }

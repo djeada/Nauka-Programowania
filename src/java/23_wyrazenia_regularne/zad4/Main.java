@@ -66,9 +66,9 @@ public class Main {
   public static void test2() {
     String napis = "Lezy jerzy na wiezy";
     String podnapis = "nan";
-    boolean oczekiwane = true;
-    boolean wynik = czyNalezyV1(napis, podnapis);
-    assert wynik == oczekiwane;
+    boolean oczekiwane = false;
+    assert czyNalezyV1(napis, podnapis) == oczekiwane;
+    assert czyNalezyV2(napis, podnapis) == oczekiwane;
   }
 
   public static void main(String[] args) {

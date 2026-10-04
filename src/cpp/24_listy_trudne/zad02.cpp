@@ -33,18 +33,20 @@ Otrzymujesz listę liczb całkowitych. Przenieś wszystkie zera na koniec listy,
 
 */
 #include <cassert>
+#include <utility>
 #include <vector>
 
+// Przesuwa niezerowe elementy na poczatek (zachowujac ich kolejnosc),
+// a zera na koniec listy.
+// Zlozonosc czasowa: O(n)
+// Zlozonosc pamieciowa: O(1)
 void zeraV1(std::vector<int> &lista) {
-  auto N = lista.size();
+  std::size_t pozycja = 0;
 
-  for (unsigned int i = 0; i < N; i++) {
-    if (lista[i] == 0) {
-      auto j = i + 1;
-
-      while (lista[j] == 0 && j < N) j++;
-
-      std::iter_swap(lista.begin() + i, lista.begin() + j);
+  for (std::size_t i = 0; i < lista.size(); i++) {
+    if (lista[i] != 0) {
+      std::swap(lista[pozycja], lista[i]);
+      pozycja++;
     }
   }
 }

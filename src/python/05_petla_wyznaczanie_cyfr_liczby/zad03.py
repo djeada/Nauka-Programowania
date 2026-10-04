@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-03 — Sumowanie cyfr liczby
 
 **Poziom:** ★☆☆
@@ -6,17 +6,15 @@ ZAD-03 — Sumowanie cyfr liczby
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` i oblicz sumę jej cyfr. Następnie wypisz wynik.
+Wczytaj liczbę naturalną `n`, oblicz sumę jej cyfr i wypisz wynik.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Jedna liczba naturalna — suma cyfr liczby `n`.
+Jedna liczba całkowita — suma cyfr liczby `n`.
 
 ### Przykład
 
@@ -32,19 +30,23 @@ Jedna liczba naturalna — suma cyfr liczby `n`.
 12
 ```
 
-### Uwagi o formatowaniu
+$1 + 2 + 9 = 12$.
+
+### Uwagi
 
 * Dla `n = 0` suma cyfr wynosi `0`.
 
 """
 
-if __name__ == "__main__":
 
-    liczba = int(input("Podaj liczbe: "))
-
+def suma_cyfr(n):
     suma = 0
-    while liczba > 0:
-        suma += liczba % 10
-        liczba //= 10
+    while n > 0:
+        suma += n % 10
+        n //= 10
+    return suma
 
-    print(f"Suma cyfr wynosi: {suma}")
+
+if __name__ == "__main__":
+    n = int(input())
+    print(suma_cyfr(n))

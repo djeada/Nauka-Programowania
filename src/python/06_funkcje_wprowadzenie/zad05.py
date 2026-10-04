@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Zamiana wartości miejscami
 
 **Poziom:** ★☆☆
@@ -6,27 +6,33 @@ ZAD-05 — Zamiana wartości miejscami
 
 ### Treść
 
-Napisz funkcję `zamien_wartosci(a, b)`, która zamienia wartości miejscami i zwraca je jako parę `(b, a)`.
+Napisz funkcję `zamien_wartosci(a, b)`, która zwraca dwie otrzymane wartości w odwróconej kolejności, czyli parę `(b, a)`.
+
+Program wczytuje `a` i `b`, zamienia ich wartości instrukcją `a, b = zamien_wartosci(a, b)` i wypisuje nowe wartości zmiennych.
 
 ### Wejście
 
-Dwa argumenty: `a`, `b` (liczby naturalne)
+* 1. linia: liczba naturalna `a`
+* 2. linia: liczba naturalna `b`
 
 ### Wyjście
 
-Dwie liczby naturalne zwrócone jako krotka / para:
+Dwie linie w formacie:
 
-* najpierw nowa wartość `a` (czyli stare `b`)
-* potem nowa wartość `b` (czyli stare `a`)
+```
+a = <nowa wartość a>
+b = <nowa wartość b>
+```
+
+Nowa wartość `a` to stara wartość `b` i odwrotnie.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-a, b = zamien_wartosci(8, 5)
-print("a =", a)
-print("b =", b)
+```
+8
+5
 ```
 
 **Wyjście:**
@@ -36,21 +42,31 @@ a = 5
 b = 8
 ```
 
+### Kod startowy
+
+```python
+def zamien_wartosci(a, b):
+    pass
+
+
+a = int(input())
+b = int(input())
+a, b = zamien_wartosci(a, b)
+print("a =", a)
+print("b =", b)
+```
+
 """
 
 
-def swap(pierwsza_liczba, druga_liczba):
-    """
-    Funkcja zamienia wartosci miejscami.
-    """
-    return druga_liczba, pierwsza_liczba
-
-
-def test_swap():
-    a, b = 1, 2
-    a, b = swap(a, b)
-    assert a == 2 and b == 1
+def zamien_wartosci(a, b):
+    """Zwraca otrzymane wartości w odwróconej kolejności."""
+    return b, a
 
 
 if __name__ == "__main__":
-    test_swap()
+    a = int(input())
+    b = int(input())
+    a, b = zamien_wartosci(a, b)
+    print("a =", a)
+    print("b =", b)

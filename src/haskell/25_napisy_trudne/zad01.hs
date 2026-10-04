@@ -48,11 +48,13 @@ import Data.List (isPrefixOf)
 -- Podmiana słowa w zdaniu
 -- Złożoność czasowa: O(n*m)
 -- Złożoność pamięciowa: O(n)
+-- Pusty wzorzec nie zmienia tekstu (inaczej rekurencja nigdy by się nie skończyła).
 replaceAll :: String -> String -> String -> String
+replaceAll [] _ text = text
 replaceAll _ _ [] = []
-replaceAll pattern replacement text
+replaceAll pattern replacement text@(c : rest)
   | pattern `isPrefixOf` text = replacement ++ replaceAll pattern replacement (drop (length pattern) text)
-  | otherwise = head text : replaceAll pattern replacement (tail text)
+  | otherwise = c : replaceAll pattern replacement rest
 
 main :: IO ()
 main = do

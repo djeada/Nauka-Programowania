@@ -1,65 +1,76 @@
-"""
-ZAD-01 — Obliczanie średniej z n liczb
+r"""
+ZAD-01 — Średnia, minimum i maksimum z n liczb
 
 **Poziom:** ★☆☆
-**Tagi:** `pętle`, `suma`, `średnia`, `float`
+**Tagi:** `pętle`, `suma`, `średnia`, `minimum`, `maksimum`
 
 ### Treść
 
-Napisz funkcję `oblicz_srednia()`, która:
+Wczytaj liczbę `n`, a następnie w pętli `n` liczb (każdą z osobnej linii). Wypisz ich średnią arytmetyczną, najmniejszą i największą z nich.
 
-1. Wczytuje liczbę naturalną `n` (`n ≥ 1`).
-2. Wczytuje następnie `n` liczb (całkowitych lub zmiennoprzecinkowych).
-3. Zwraca ich średnią arytmetyczną.
+Nie zapamiętuj wszystkich liczb — wystarczą trzy zmienne aktualizowane w każdym obrocie pętli (tzw. **akumulatory**): bieżąca suma, bieżące minimum i bieżące maksimum.
 
 ### Wejście
 
-* 1. linia: `n` (`n ≥ 1`)
-* kolejne `n` linii: liczby (int lub float)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
+* kolejne `n` linii: liczby rzeczywiste (całkowite lub z kropką dziesiętną, np. `2.5`; mogą być ujemne)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę zmiennoprzecinkową — średnią arytmetyczną.
+Trzy liczby, każda w osobnej linii i z dokładnością do **dwóch miejsc po przecinku**:
+
+1. średnia arytmetyczna,
+2. najmniejsza liczba,
+3. największa liczba.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-2
+3
 4
+-1
 6
-```
-
-**Wywołanie funkcji:**
-
-```python
-wynik = oblicz_srednia()
-print(wynik)
 ```
 
 **Wyjście:**
 
 ```
-5.0
+3.00
+-1.00
+6.00
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`).
+* Wczytuj liczby funkcją `float()`, bo mogą mieć część ułamkową.
+* Minimum i maksimum najprościej zainicjować pierwszą wczytaną liczbą, a potem w pętli porównywać z nimi kolejne liczby.
+* Możesz napisać pomocniczą funkcję, np. `formatuj(x)` zwracającą `f"{x:.2f}"`, ale wczytywanie danych zostaw w programie głównym.
 
 """
 
 
-def srednia_arytmetyczna(n):
-    suma = 0
-    for i in range(n):
-        liczba = int(input("Podaj liczbe: "))
-        suma += liczba
-    return suma / n
+def formatuj(liczba):
+    return f"{liczba:.2f}"
 
 
 if __name__ == "__main__":
+    n = int(input())
 
-    n = int(input("Podaj liczbe: "))
-    print(srednia_arytmetyczna(n))
+    pierwsza = float(input())
+    suma = pierwsza
+    najmniejsza = pierwsza
+    najwieksza = pierwsza
+
+    for _ in range(n - 1):
+        liczba = float(input())
+        suma += liczba
+        if liczba < najmniejsza:
+            najmniejsza = liczba
+        if liczba > najwieksza:
+            najwieksza = liczba
+
+    print(formatuj(suma / n))
+    print(formatuj(najmniejsza))
+    print(formatuj(najwieksza))

@@ -37,6 +37,7 @@ kota
 #include <algorithm>
 #include <cassert>
 #include <iostream>
+#include <string>
 #include <vector>
 
 // Zlozonosc Czasowa: O(n)

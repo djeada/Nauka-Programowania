@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-06 — Czy średnia elementów znajduje się w liście?
 
 **Poziom:** ★☆☆
@@ -6,21 +6,20 @@ ZAD-06 — Czy średnia elementów znajduje się w liście?
 
 ### Treść
 
-Wczytaj listę liczb całkowitych. Oblicz średnią arytmetyczną elementów i sprawdź, czy ta średnia jest **dokładnie** jednym z elementów listy.
-
-Wypisz:
-
-* `Tak` — jeśli średnia występuje w liście,
-* `Nie` — w przeciwnym razie.
+Wczytaj listę `n` liczb całkowitych. Oblicz średnią arytmetyczną jej elementów i sprawdź, czy ta średnia jest **dokładnie** równa któremuś z elementów listy.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-Jedno słowo: `Tak` lub `Nie`.
+Jedno słowo: `Tak`, jeśli średnia występuje w liście, albo `Nie` w przeciwnym razie.
+
+### Ograniczenia
+
+* $n \ge 1$
 
 ### Przykład
 
@@ -28,11 +27,7 @@ Jedno słowo: `Tak` lub `Nie`.
 
 ```
 5
-6
-2
-1
-4
-27
+6 2 1 4 27
 ```
 
 **Wyjście:**
@@ -41,32 +36,21 @@ Jedno słowo: `Tak` lub `Nie`.
 Nie
 ```
 
+Średnia wynosi $\frac{40}{5} = 8$, a liczby $8$ nie ma w liście.
+
 ### Uwagi
 
-* Średnia może być ułamkiem — wtedy na pewno nie znajduje się w liście liczb całkowitych.
+* Średnia może być ułamkiem (np. $1.5$) — wtedy na pewno nie jest elementem listy liczb całkowitych. Nie zaokrąglaj jej.
 
 """
 
 
 def czy_srednia_w_liscie(lista):
-
-    if not lista:
-        return False
-
     srednia = sum(lista) / len(lista)
-
-    if srednia.is_integer():
-        return srednia in lista
-    else:
-        return round(srednia, 0) in lista
-
-
-def test_czy_srednia_w_liscie_dla_pustej_listy():
-    assert not czy_srednia_w_liscie([])
-    assert czy_srednia_w_liscie([1, 2, 3])
-    assert czy_srednia_w_liscie([-5, 7, 2, 3, -1, 4])
+    return srednia in lista
 
 
 if __name__ == "__main__":
-
-    test_czy_srednia_w_liscie_dla_pustej_listy()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    print("Tak" if czy_srednia_w_liscie(lista) else "Nie")

@@ -1,12 +1,13 @@
-"""
+r"""
 ZAD-03 — Czy dwa słowa są anagramami?
 
 **Poziom:** ★☆☆
-**Tagi:** `anagram`, `sortowanie`, `zliczanie`
+**Tagi:** `napisy`, `anagram`, `sortowanie`
 
 ### Treść
 
-Wczytaj dwa słowa i sprawdź, czy są anagramami (czy da się utworzyć jedno przez przestawienie liter drugiego).
+Wczytaj dwa słowa i sprawdź, czy są anagramami, czyli czy jedno da się utworzyć przez przestawienie liter drugiego (każda litera musi wystąpić w obu słowach tyle samo razy).
+Wielkość liter nie ma znaczenia. Słowo jest też anagramem samego siebie.
 
 ### Wejście
 
@@ -17,8 +18,8 @@ Wczytaj dwa słowa i sprawdź, czy są anagramami (czy da się utworzyć jedno p
 
 Jedna linia:
 
-* `Prawda` — jeśli anagramy
-* `Fałsz` — jeśli nie
+* `Prawda` — jeśli słowa są anagramami,
+* `Fałsz` — w przeciwnym razie.
 
 ### Przykład
 
@@ -37,7 +38,7 @@ Prawda
 
 ### Uwagi
 
-* Najprościej: porównaj posortowane litery albo słowniki zliczeń znaków.
+* Najprościej porównać posortowane litery obu słów (np. `sorted(s1.lower())`) albo liczbę wystąpień każdej litery.
 
 """
 

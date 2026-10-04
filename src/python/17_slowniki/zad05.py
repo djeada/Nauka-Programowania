@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Pracownik z największym sumarycznym zyskiem
 
 **Poziom:** ★☆☆
@@ -6,17 +6,20 @@ ZAD-05 — Pracownik z największym sumarycznym zyskiem
 
 ### Treść
 
-Wczytaj `n` wpisów: `pracownik zysk`. Zsumuj zyski per pracownik i wypisz nazwę pracownika z największą sumą.
-(Jeśli remis, wybierz tego, który pierwszy osiągnął tę maksymalną sumę podczas przetwarzania.)
+Wczytaj `n` wpisów postaci `pracownik zysk`. Ten sam pracownik może mieć wiele wpisów. Zsumuj zyski każdego pracownika i wypisz pracownika z największą sumą.
 
 ### Wejście
 
-* 1 linia: `n`
-* następnie `n` linii: `imie_i_nazwisko zysk`
+* 1. linia: `n`
+* następnie `n` linii: `imie_i_nazwisko zysk` — identyfikator pracownika bez spacji (np. `Jon_Snow`) i liczba całkowita (może być ujemna — strata)
 
 ### Wyjście
 
-* Jedna linia: `imie_i_nazwisko`
+Jedna linia: identyfikator pracownika z największym sumarycznym zyskiem.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 100`
 
 ### Przykład
 
@@ -37,41 +40,36 @@ Bob_Marley 110
 Barnaba_Barabash
 ```
 
+Barnaba_Barabash ma łącznie $120 + 200 = 320$, czyli więcej niż Kira_Summer (300).
+
+### Uwagi
+
+* Przy remisie wypisz tego pracownika, który **wcześniej pojawił się na wejściu** (jego pierwszy wpis jest wcześniej).
+
 """
 
 
-def pracownik_z_najwiekszym_zyskiem(lista_par):
+def pracownik_z_najwiekszym_zyskiem(wpisy):
     """
-    Funkcja zwraca napis reprezentujacy imie i nazwisko pracownika, ktory
-    przyniosl firmie najwiecej zysku.
+    Sumuje zyski każdego pracownika i zwraca tego z największą sumą.
+    Przy remisie wygrywa pracownik, który wcześniej pojawił się w danych.
     """
-
     zyski = {}
-    for para in lista_par:
-        if para[0] in zyski:
-            zyski[para[0]] += para[1]
-        else:
-            zyski[para[0]] = para[1]
+    for pracownik, zysk in wpisy:
+        zyski[pracownik] = zyski.get(pracownik, 0) + zysk
 
-    return max(zyski, key=zyski.get)
-
-
-def test_pracownik_z_najwiekszym_zyskiem():
-
-    assert (
-        pracownik_z_najwiekszym_zyskiem(
-            [
-                ("Barnaba Barabash", 120),
-                ("Jon Snow", 100),
-                ("Kira Summer", 300),
-                ("Barnaba Barabash", 200),
-                ("Bob Marley", 110),
-            ]
-        )
-        == "Barnaba Barabash"
-    )
+    najlepszy = None
+    for pracownik in zyski:  # kolejność pierwszego pojawienia się
+        if najlepszy is None or zyski[pracownik] > zyski[najlepszy]:
+            najlepszy = pracownik
+    return najlepszy
 
 
 if __name__ == "__main__":
+    n = int(input())
+    wpisy = []
+    for _ in range(n):
+        pracownik, zysk = input().split()
+        wpisy.append((pracownik, int(zysk)))
 
-    test_pracownik_z_najwiekszym_zyskiem()
+    print(pracownik_z_najwiekszym_zyskiem(wpisy))

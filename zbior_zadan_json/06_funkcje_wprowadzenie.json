@@ -1,7 +1,7 @@
 {
   "file": "06_funkcje_wprowadzenie.md",
-  "chapter_title": "Rozdział: Funkcje — Wprowadzenie",
-  "chapter_description": "Poniższe zadania dotyczą pisania **funkcji**.\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem / ćwiczeniem funkcji.**\n**Konwencje wspólne:**\n* Jeśli zadanie mówi „funkcja zwraca” — chodzi o użycie instrukcji `return`.\n* Jeśli zadanie zawiera kilka podpunktów (a, b, c…) — każdy podpunkt to **osobna funkcja**.\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.",
+  "chapter_title": "Rozdział 6: Funkcje — wprowadzenie",
+  "chapter_description": "Zadania w tym rozdziale uczą pisania **funkcji**: definiowania ich instrukcją `def`, przekazywania argumentów i zwracania wyniku instrukcją `return`.\n\n**Konwencje wspólne:**\n\n* Każde zadanie (i każdy podpunkt a, b, c…) to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.\n* Treść mówi, jaką funkcję napisać (nazwa, parametry, zwracana wartość). Program wczytuje dane, **wywołuje funkcję** i wypisuje zwrócony przez nią wynik.\n* „Funkcja zwraca” oznacza użycie instrukcji `return`. Funkcja nie wczytuje danych i nie wypisuje wyniku sama — robi to reszta programu (chyba że treść zadania mówi inaczej).\n* Sekcja „Kod startowy” zawiera gotowy szkielet: nagłówek funkcji oraz linie, które wczytują dane i wypisują wynik. Wystarczy uzupełnić ciało funkcji.\n* Liczby na wejściu podane są w osobnych liniach — wczytuj je dokładnie w podanej kolejności.\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”.",
   "exercises": [
     {
       "id": "ZAD-01A",
@@ -14,27 +14,25 @@
         "return",
         "int"
       ],
-      "description": "Napisz funkcję (bez argumentów), która zwraca liczbę całkowitą `3`.",
+      "description": "Napisz bezargumentową funkcję `zwroc_liczbe()`, która zwraca liczbę całkowitą `3`.\n\nProgram wywołuje funkcję i wypisuje zwrócony wynik.",
       "input": "Brak.",
-      "output": "Funkcja ma zwrócić:\n\n* `3`",
+      "output": "Jedna linia: wartość zwrócona przez funkcję, czyli `3`.",
       "examples": [
         {
           "input": "",
-          "output": "wynik = zwroc_liczbe()\nprint(wynik)"
+          "output": "3",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
           "input": "",
           "output": "3"
-        },
-        {
-          "input": "",
-          "output": "3"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": "def zwroc_liczbe():\n    # Uzupełnij funkcję.\n    pass\n\n\nprint(zwroc_liczbe())\n"
     },
     {
       "id": "ZAD-01B",
@@ -47,27 +45,25 @@
         "return",
         "string"
       ],
-      "description": "Napisz funkcję (bez argumentów), która zwraca napis `Tak`.",
+      "description": "Napisz bezargumentową funkcję `zwroc_napis()`, która zwraca napis `Tak`.\n\nProgram wywołuje funkcję i wypisuje zwrócony wynik.",
       "input": "Brak.",
-      "output": "Funkcja ma zwrócić:\n\n* `Tak`",
+      "output": "Jedna linia: napis zwrócony przez funkcję, czyli `Tak`.",
       "examples": [
         {
           "input": "",
-          "output": "wynik = zwroc_napis()\nprint(wynik)"
+          "output": "Tak",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
           "input": "",
           "output": "Tak"
-        },
-        {
-          "input": "",
-          "output": "Tak"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": "def zwroc_napis():\n    # Uzupełnij funkcję.\n    pass\n\n\nprint(zwroc_napis())\n"
     },
     {
       "id": "ZAD-01C",
@@ -80,27 +76,25 @@
         "return",
         "bool"
       ],
-      "description": "Napisz funkcję (bez argumentów), która zwraca wartość logiczną `True`.",
+      "description": "Napisz bezargumentową funkcję `zwroc_prawda()`, która zwraca wartość logiczną `True`.\n\nProgram wywołuje funkcję i wypisuje zwrócony wynik.",
       "input": "Brak.",
-      "output": "Funkcja ma zwrócić:\n\n* `True`",
+      "output": "Jedna linia: wartość zwrócona przez funkcję, czyli `True`.",
       "examples": [
         {
           "input": "",
-          "output": "wynik = zwroc_prawda()\nprint(wynik)"
+          "output": "True",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
           "input": "",
           "output": "True"
-        },
-        {
-          "input": "",
-          "output": "True"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Funkcja ma zwrócić wartość logiczną `True`, a nie napis `\"True\"`. Po wypisaniu wyglądają tak samo, ale to różne typy danych.",
+      "starter_code": "def zwroc_prawda():\n    # Uzupełnij funkcję.\n    pass\n\n\nprint(zwroc_prawda())\n"
     },
     {
       "id": "ZAD-02A",
@@ -112,13 +106,14 @@
         "funkcje",
         "arytmetyka"
       ],
-      "description": "Napisz funkcję `suma(a, b)`, która zwraca sumę dwóch liczb całkowitych.",
-      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba całkowita)\n* `b` (liczba całkowita)",
-      "output": "Funkcja zwraca:\n\n* `a + b`",
+      "description": "Napisz funkcję `suma(a, b)`, która zwraca sumę $a + b$ dwóch liczb całkowitych.\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: liczba całkowita `a`\n* 2. linia: liczba całkowita `b`",
+      "output": "Jedna liczba całkowita: $a + b$.",
       "examples": [
         {
-          "input": "",
-          "output": "print(suma(3, 5))"
+          "input": "3\n5",
+          "output": "8",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -129,10 +124,23 @@
         {
           "input": "0\n0",
           "output": "0"
+        },
+        {
+          "input": "-5\n-8",
+          "output": "-13"
+        },
+        {
+          "input": "123\n877",
+          "output": "1000"
+        },
+        {
+          "input": "-10\n4",
+          "output": "-6"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": "def suma(a, b):\n    # Uzupełnij funkcję.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(suma(a, b))\n"
     },
     {
       "id": "ZAD-02B",
@@ -144,13 +152,14 @@
         "funkcje",
         "arytmetyka"
       ],
-      "description": "Napisz funkcję `roznica(a, b)`, która zwraca różnicę: `b - a`.",
-      "input": "Dwa argumenty funkcji: `a`, `b` (liczby całkowite)",
-      "output": "Funkcja zwraca:\n\n* `b - a`",
+      "description": "Napisz funkcję `roznica(a, b)`, która zwraca różnicę $b - a$ (od **drugiej** liczby odejmujemy pierwszą).\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: liczba całkowita `a`\n* 2. linia: liczba całkowita `b`",
+      "output": "Jedna liczba całkowita: $b - a$.",
       "examples": [
         {
-          "input": "",
-          "output": "print(roznica(3, 5))"
+          "input": "3\n5",
+          "output": "2",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -161,10 +170,23 @@
         {
           "input": "3\n10",
           "output": "7"
+        },
+        {
+          "input": "0\n0",
+          "output": "0"
+        },
+        {
+          "input": "-4\n6",
+          "output": "10"
+        },
+        {
+          "input": "12\n5",
+          "output": "-7"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": "def roznica(a, b):\n    # Uzupełnij funkcję.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(roznica(a, b))\n"
     },
     {
       "id": "ZAD-02C",
@@ -176,13 +198,14 @@
         "funkcje",
         "arytmetyka"
       ],
-      "description": "Napisz funkcję `iloczyn(a, b)`, która zwraca iloczyn `a * b`.",
-      "input": "Dwa argumenty funkcji: `a`, `b` (liczby całkowite)",
-      "output": "Funkcja zwraca:\n\n* `a * b`",
+      "description": "Napisz funkcję `iloczyn(a, b)`, która zwraca iloczyn $a \\cdot b$.\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: liczba całkowita `a`\n* 2. linia: liczba całkowita `b`",
+      "output": "Jedna liczba całkowita: $a \\cdot b$.",
       "examples": [
         {
-          "input": "",
-          "output": "print(iloczyn(3, 5))"
+          "input": "3\n5",
+          "output": "15",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -193,10 +216,23 @@
         {
           "input": "0\n9",
           "output": "0"
+        },
+        {
+          "input": "-6\n-7",
+          "output": "42"
+        },
+        {
+          "input": "1\n-1",
+          "output": "-1"
+        },
+        {
+          "input": "25\n4",
+          "output": "100"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": "def iloczyn(a, b):\n    # Uzupełnij funkcję.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(iloczyn(a, b))\n"
     },
     {
       "id": "ZAD-02D",
@@ -209,13 +245,14 @@
         "dzielenie",
         "//"
       ],
-      "description": "Napisz funkcję `iloraz(a, b)`, która zwraca iloraz całkowity `a // b`.",
-      "input": "Dwa argumenty funkcji: `a`, `b` (liczby całkowite)",
-      "output": "Funkcja zwraca:\n\n* `a // b`",
+      "description": "Napisz funkcję `iloraz(a, b)`, która zwraca iloraz całkowity `a // b`.\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: liczba całkowita `a`\n* 2. linia: liczba całkowita `b`",
+      "output": "Jedna liczba całkowita: `a // b`.",
       "examples": [
         {
-          "input": "",
-          "output": "print(iloraz(3, 5))"
+          "input": "3\n5",
+          "output": "0",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -224,12 +261,25 @@
           "output": "3"
         },
         {
-          "input": "9\n3",
-          "output": "3"
+          "input": "20\n4",
+          "output": "5"
+        },
+        {
+          "input": "0\n5",
+          "output": "0"
+        },
+        {
+          "input": "-7\n2",
+          "output": "-4"
+        },
+        {
+          "input": "100\n7",
+          "output": "14"
         }
       ],
-      "constraints": "* `b ≠ 0`",
-      "notes": ""
+      "constraints": "* $b \\neq 0$",
+      "notes": "* Operator `//` zaokrągla wynik dzielenia **w dół**, także dla liczb ujemnych, np. `-7 // 2` daje `-4`.",
+      "starter_code": "def iloraz(a, b):\n    # Uzupełnij funkcję.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(iloraz(a, b))\n"
     },
     {
       "id": "ZAD-02E",
@@ -242,13 +292,14 @@
         "modulo",
         "%"
       ],
-      "description": "Napisz funkcję `reszta(a, b)`, która zwraca resztę z dzielenia `a % b`.",
-      "input": "Dwa argumenty funkcji: `a`, `b` (liczby całkowite)",
-      "output": "Funkcja zwraca:\n\n* `a % b`",
+      "description": "Napisz funkcję `reszta(a, b)`, która zwraca resztę z dzielenia `a % b`.\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: liczba całkowita `a`\n* 2. linia: liczba całkowita `b`",
+      "output": "Jedna liczba całkowita: `a % b`.",
       "examples": [
         {
-          "input": "",
-          "output": "print(reszta(3, 5))"
+          "input": "3\n5",
+          "output": "3",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -259,10 +310,23 @@
         {
           "input": "9\n3",
           "output": "0"
+        },
+        {
+          "input": "17\n5",
+          "output": "2"
+        },
+        {
+          "input": "-7\n3",
+          "output": "2"
+        },
+        {
+          "input": "29\n6",
+          "output": "5"
         }
       ],
-      "constraints": "* `b ≠ 0`",
-      "notes": ""
+      "constraints": "* $b \\neq 0$",
+      "notes": "* W Pythonie wynik `a % b` ma ten sam znak co `b`, np. `-7 % 3` daje `2`.",
+      "starter_code": "def reszta(a, b):\n    # Uzupełnij funkcję.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(reszta(a, b))\n"
     },
     {
       "id": "ZAD-03",
@@ -275,27 +339,41 @@
         "bool",
         "warunki"
       ],
-      "description": "Napisz funkcję `sprawdz_warunki(a, b)`, która dla dwóch liczb naturalnych zwraca cztery wartości logiczne (np. jako krotkę) odpowiadające warunkom:\n\na) Czy `a > b`?\nb) Czy `a + b < 10`?\nc) Czy obie liczby są nieparzyste?\nd) Czy `max(a, b) < a^2`?",
-      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba całkowita, `a ≥ 0`)\n* `b` (liczba całkowita, `b ≥ 0`)",
-      "output": "Cztery wartości logiczne w kolejności a), b), c), d).",
+      "description": "Napisz funkcję `sprawdz_warunki(a, b)`, która dla dwóch liczb naturalnych zwraca **krotkę** czterech wartości logicznych, odpowiadających kolejno pytaniom:\n\na) Czy $a > b$?\nb) Czy $a + b < 10$?\nc) Czy obie liczby są nieparzyste?\nd) Czy większa z liczb jest mniejsza od kwadratu `a`, czyli czy $\\max(a, b) < a^2$?\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje cztery zwrócone wartości.",
+      "input": "* 1. linia: liczba naturalna `a`\n* 2. linia: liczba naturalna `b`",
+      "output": "Cztery linie z wartościami `True` albo `False` — odpowiedzi na pytania a), b), c), d) w tej kolejności.",
       "examples": [
         {
-          "input": "",
-          "output": "A, B, C, D = sprawdz_warunki(3, 2)\nprint(A)\nprint(B)\nprint(C)\nprint(D)"
+          "input": "3\n2",
+          "output": "True\nTrue\nFalse\nTrue",
+          "explanation": "$3 > 2$, $3 + 2 = 5 < 10$, liczba $2$ jest parzysta, $\\max(3, 2) = 3 < 9$."
         }
       ],
       "testcases": [
         {
-          "input": "3\n2",
-          "output": "True\nTrue\nFalse\nTrue"
-        },
-        {
           "input": "1\n1",
           "output": "False\nTrue\nTrue\nFalse"
+        },
+        {
+          "input": "0\n0",
+          "output": "False\nTrue\nFalse\nFalse"
+        },
+        {
+          "input": "7\n5",
+          "output": "True\nFalse\nTrue\nTrue"
+        },
+        {
+          "input": "2\n9",
+          "output": "False\nFalse\nFalse\nFalse"
+        },
+        {
+          "input": "5\n3",
+          "output": "True\nTrue\nTrue\nTrue"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $a \\ge 0$, $b \\ge 0$",
+      "notes": "* Kilka wartości zwrócisz naraz instrukcją `return w1, w2, w3, w4` — Python spakuje je w krotkę.",
+      "starter_code": "def sprawdz_warunki(a, b):\n    # Uzupełnij funkcję: zwróć cztery wartości logiczne.\n    pass\n\n\na = int(input())\nb = int(input())\nw1, w2, w3, w4 = sprawdz_warunki(a, b)\nprint(w1)\nprint(w2)\nprint(w3)\nprint(w4)\n"
     },
     {
       "id": "ZAD-04A",
@@ -307,13 +385,14 @@
         "funkcje",
         "min"
       ],
-      "description": "Napisz funkcję `min_z_dwoch(a, b)`, która zwraca mniejszą z dwóch liczb naturalnych.",
-      "input": "Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)",
-      "output": "Funkcja zwraca:\n\n* `min(a, b)`",
+      "description": "Napisz funkcję `min_z_dwoch(a, b)`, która zwraca mniejszą z dwóch liczb naturalnych.\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: liczba naturalna `a`\n* 2. linia: liczba naturalna `b`",
+      "output": "Jedna liczba naturalna: mniejsza z liczb `a` i `b`.",
       "examples": [
         {
-          "input": "",
-          "output": "print(min_z_dwoch(3, 1))"
+          "input": "3\n1",
+          "output": "1",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -324,74 +403,23 @@
         {
           "input": "0\n7",
           "output": "0"
-        }
-      ],
-      "constraints": "",
-      "notes": ""
-    },
-    {
-      "id": "ZAD-04B",
-      "slug": "06_funkcje_wprowadzenie/ZAD-04B",
-      "title": "Maksimum z dwóch liczb",
-      "difficulty": 1,
-      "difficulty_display": "★☆☆",
-      "tags": [
-        "funkcje",
-        "max"
-      ],
-      "description": "Napisz funkcję `max_z_dwoch(a, b)`, która zwraca większą z dwóch liczb naturalnych.",
-      "input": "Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)",
-      "output": "Funkcja zwraca:\n\n* `max(a, b)`",
-      "examples": [
-        {
-          "input": "",
-          "output": "print(max_z_dwoch(3, 1))"
-        }
-      ],
-      "testcases": [
-        {
-          "input": "5\n2",
-          "output": "5"
         },
         {
-          "input": "0\n7",
-          "output": "7"
-        }
-      ],
-      "constraints": "",
-      "notes": ""
-    },
-    {
-      "id": "ZAD-04C",
-      "slug": "06_funkcje_wprowadzenie/ZAD-04C",
-      "title": "Minimum z trzech liczb",
-      "difficulty": 1,
-      "difficulty_display": "★☆☆",
-      "tags": [
-        "funkcje",
-        "min"
-      ],
-      "description": "Napisz funkcję `min_z_trzech(a, b, c)`, która zwraca najmniejszą z trzech liczb naturalnych.",
-      "input": "Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)",
-      "output": "Funkcja zwraca:\n\n* `min(a, b, c)`",
-      "examples": [
-        {
-          "input": "",
-          "output": "print(min_z_trzech(3, 2, 1))"
-        }
-      ],
-      "testcases": [
-        {
-          "input": "5\n2\n9",
-          "output": "2"
+          "input": "4\n4",
+          "output": "4"
         },
         {
-          "input": "0\n7\n3",
-          "output": "0"
+          "input": "12\n30",
+          "output": "12"
+        },
+        {
+          "input": "100\n99",
+          "output": "99"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $a \\ge 0$, $b \\ge 0$",
+      "notes": "* Spróbuj napisać funkcję bez wbudowanej funkcji `min` — porównaj liczby instrukcją `if`.\n* Jeśli liczby są równe, zwróć dowolną z nich.",
+      "starter_code": "def min_z_dwoch(a, b):\n    # Uzupełnij funkcję.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(min_z_dwoch(a, b))\n"
     },
     {
       "id": "ZAD-04D",
@@ -403,13 +431,14 @@
         "funkcje",
         "max"
       ],
-      "description": "Napisz funkcję `max_z_trzech(a, b, c)`, która zwraca największą z trzech liczb naturalnych.",
-      "input": "Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)",
-      "output": "Funkcja zwraca:\n\n* `max(a, b, c)`",
+      "description": "Napisz funkcję `max_z_trzech(a, b, c)`, która zwraca największą z trzech liczb naturalnych.\n\nProgram wczytuje `a`, `b` i `c`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: liczba naturalna `a`\n* 2. linia: liczba naturalna `b`\n* 3. linia: liczba naturalna `c`",
+      "output": "Jedna liczba naturalna: największa z liczb `a`, `b`, `c`.",
       "examples": [
         {
-          "input": "",
-          "output": "print(max_z_trzech(3, 2, 1))"
+          "input": "3\n2\n1",
+          "output": "3",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -420,10 +449,23 @@
         {
           "input": "0\n7\n3",
           "output": "7"
+        },
+        {
+          "input": "8\n8\n4",
+          "output": "8"
+        },
+        {
+          "input": "2\n6\n6",
+          "output": "6"
+        },
+        {
+          "input": "0\n0\n0",
+          "output": "0"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $a \\ge 0$, $b \\ge 0$, $c \\ge 0$",
+      "notes": "* Pamiętaj o przypadku, gdy dwie lub trzy liczby są równe.\n* Wewnątrz funkcji możesz wywołać inną funkcję. Napisz najpierw pomocniczą funkcję `max_z_dwoch(a, b)` (analogiczną do `min_z_dwoch` z zadania ZAD-04A) i wywołaj ją dwa razy.",
+      "starter_code": "def max_z_trzech(a, b, c):\n    # Uzupełnij funkcję.\n    pass\n\n\na = int(input())\nb = int(input())\nc = int(input())\nprint(max_z_trzech(a, b, c))\n"
     },
     {
       "id": "ZAD-05",
@@ -436,27 +478,41 @@
         "krotka",
         "zmienne"
       ],
-      "description": "Napisz funkcję `zamien_wartosci(a, b)`, która zamienia wartości miejscami i zwraca je jako parę `(b, a)`.",
-      "input": "Dwa argumenty: `a`, `b` (liczby naturalne)",
-      "output": "Dwie liczby naturalne zwrócone jako krotka / para:\n\n* najpierw nowa wartość `a` (czyli stare `b`)\n* potem nowa wartość `b` (czyli stare `a`)",
+      "description": "Napisz funkcję `zamien_wartosci(a, b)`, która zwraca dwie otrzymane wartości w odwróconej kolejności, czyli parę `(b, a)`.\n\nProgram wczytuje `a` i `b`, zamienia ich wartości instrukcją `a, b = zamien_wartosci(a, b)` i wypisuje nowe wartości zmiennych.",
+      "input": "* 1. linia: liczba naturalna `a`\n* 2. linia: liczba naturalna `b`",
+      "output": "Dwie linie w formacie:\n\n```\na = <nowa wartość a>\nb = <nowa wartość b>\n```\n\nNowa wartość `a` to stara wartość `b` i odwrotnie.",
       "examples": [
         {
-          "input": "",
-          "output": "a, b = zamien_wartosci(8, 5)\nprint(\"a =\", a)\nprint(\"b =\", b)"
+          "input": "8\n5",
+          "output": "a = 5\nb = 8",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "8\n5",
-          "output": "5\n8"
+          "input": "0\n7",
+          "output": "a = 7\nb = 0"
         },
         {
-          "input": "0\n7",
-          "output": "7\n0"
+          "input": "3\n3",
+          "output": "a = 3\nb = 3"
+        },
+        {
+          "input": "1\n100",
+          "output": "a = 100\nb = 1"
+        },
+        {
+          "input": "42\n0",
+          "output": "a = 0\nb = 42"
+        },
+        {
+          "input": "12\n21",
+          "output": "a = 21\nb = 12"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": "def zamien_wartosci(a, b):\n    # Uzupełnij funkcję: zwróć parę (b, a).\n    pass\n\n\na = int(input())\nb = int(input())\na, b = zamien_wartosci(a, b)\nprint(\"a =\", a)\nprint(\"b =\", b)\n"
     },
     {
       "id": "ZAD-06",
@@ -469,27 +525,41 @@
         "pętle",
         "modulo"
       ],
-      "description": "Napisz funkcję `suma_cyfr(n)`, która zwraca sumę cyfr liczby naturalnej `n`.",
-      "input": "Jeden argument: `n` (`n ≥ 0`)",
-      "output": "Funkcja zwraca sumę cyfr.",
+      "description": "Napisz funkcję `suma_cyfr(n)`, która zwraca sumę cyfr liczby naturalnej `n`.\n\nProgram wczytuje `n`, wywołuje funkcję i wypisuje wynik.",
+      "input": "Jedna liczba naturalna `n`.",
+      "output": "Jedna liczba naturalna: suma cyfr liczby `n`.",
       "examples": [
         {
-          "input": "",
-          "output": "print(suma_cyfr(13231))"
+          "input": "13231",
+          "output": "10",
+          "explanation": "$1 + 3 + 2 + 3 + 1 = 10$."
         }
       ],
       "testcases": [
         {
-          "input": "13231",
-          "output": "10"
-        },
-        {
           "input": "0",
           "output": "0"
+        },
+        {
+          "input": "7",
+          "output": "7"
+        },
+        {
+          "input": "1000",
+          "output": "1"
+        },
+        {
+          "input": "99999",
+          "output": "45"
+        },
+        {
+          "input": "908172",
+          "output": "27"
         }
       ],
-      "constraints": "",
-      "notes": "* Dla `n = 0` suma cyfr to `0`."
+      "constraints": "* $n \\ge 0$",
+      "notes": "* Dla $n = 0$ suma cyfr wynosi `0`.\n* Ostatnią cyfrę liczby otrzymasz jako `n % 10`, a liczbę bez ostatniej cyfry jako `n // 10`.",
+      "starter_code": "def suma_cyfr(n):\n    # Uzupełnij funkcję.\n    pass\n\n\nn = int(input())\nprint(suma_cyfr(n))\n"
     },
     {
       "id": "ZAD-07",
@@ -503,55 +573,185 @@
         "string",
         "porównania"
       ],
-      "description": "Napisz dwie funkcje:\n\n1. `pobierz_dane()` — pobiera od użytkownika nazwę użytkownika i hasło i zwraca je (np. jako parę).\n2. `sprawdz_dane(poprawny_login, poprawne_haslo)` — w pętli wczytuje login i hasło aż będą identyczne z przekazanymi. Po poprawnym wczytaniu wypisuje:\n   `Dane poprawne. Dostęp przyznany.`",
-      "input": "* `pobierz_dane()` wczytuje dwie linie:\n\n  1. login\n  2. hasło\n* `sprawdz_dane(...)` wczytuje kolejne pary (login, hasło), po dwie linie na próbę.",
-      "output": "Jedna linia (tylko raz, po poprawnym dopasowaniu):\n\n* `Dane poprawne. Dostęp przyznany.`",
-      "examples": [],
-      "testcases": [
+      "description": "Napisz dwie funkcje:\n\n1. `pobierz_dane()` — wczytuje nazwę użytkownika (login) i hasło, po czym zwraca je jako parę `(login, haslo)`.\n2. `sprawdz_dane(poprawny_login, poprawne_haslo)` — w pętli wczytuje kolejne próby logowania (login i hasło), dopóki nie będą identyczne z przekazanymi danymi.\n   Po każdej nieudanej próbie wypisuje `Błędne dane. Spróbuj ponownie.`, a po udanej — `Dane poprawne. Dostęp przyznany.` i kończy działanie.\n\nProgram najpierw wywołuje `pobierz_dane()`, aby ustalić poprawne dane, a potem przekazuje je do `sprawdz_dane(...)`.\n\nW tym zadaniu funkcje same wczytują dane (`input()`), a `sprawdz_dane` sama wypisuje komunikaty.",
+      "input": "* 1. linia: poprawny login\n* 2. linia: poprawne hasło\n* kolejne linie: próby logowania — po dwie linie na próbę (login, potem hasło)",
+      "output": "Dla każdej nieudanej próby linia:\n\n```\nBłędne dane. Spróbuj ponownie.\n```\n\na na końcu (po pierwszej udanej próbie) linia:\n\n```\nDane poprawne. Dostęp przyznany.\n```",
+      "examples": [
         {
           "input": "admin\n1234\nroot\npass\nadmin\n1234",
+          "output": "Błędne dane. Spróbuj ponownie.\nDane poprawne. Dostęp przyznany.",
+          "explanation": "Poprawne dane to `admin` / `1234`. Pierwsza próba (`root` / `pass`) jest błędna, druga — poprawna."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "user\npass\nuser\npass",
           "output": "Dane poprawne. Dostęp przyznany."
         },
         {
-          "input": "alice\nqwerty\nalice\n123\nalice\nqwerty",
-          "output": "Dane poprawne. Dostęp przyznany."
+          "input": "alice\nqwerty\nalice\n123\nAlice\nqwerty\nalice\nqwerty",
+          "output": "Błędne dane. Spróbuj ponownie.\nBłędne dane. Spróbuj ponownie.\nDane poprawne. Dostęp przyznany."
+        },
+        {
+          "input": "jan\nkot\nkot\njan\njan\nkot",
+          "output": "Błędne dane. Spróbuj ponownie.\nDane poprawne. Dostęp przyznany."
+        },
+        {
+          "input": "ola\nhaslo1\nola\nhaslo\nola\nhaslo2\nola\nHASLO1\nola\nhaslo1",
+          "output": "Błędne dane. Spróbuj ponownie.\nBłędne dane. Spróbuj ponownie.\nBłędne dane. Spróbuj ponownie.\nDane poprawne. Dostęp przyznany."
         }
       ],
-      "constraints": "* W pewnym momencie użytkownik poda poprawne dane.",
-      "notes": "* **Nie wypisuj promptów** typu „Podaj nazwę użytkownika:”.\n* Porównanie jest czułe na wielkość liter."
+      "constraints": "* Jedna z prób jest poprawna — program nie musi obsługiwać końca danych bez udanej próby.",
+      "notes": "* Próba jest udana tylko wtedy, gdy zgadzają się **oba** pola: login i hasło.\n* Porównanie uwzględnia wielkość liter (`Admin` to nie to samo co `admin`).",
+      "starter_code": "def pobierz_dane():\n    # Wczytaj login i hasło, a następnie zwróć je jako parę.\n    pass\n\n\ndef sprawdz_dane(poprawny_login, poprawne_haslo):\n    # W pętli wczytuj login i hasło, dopóki nie będą poprawne.\n    pass\n\n\nlogin, haslo = pobierz_dane()\nsprawdz_dane(login, haslo)\n"
     },
     {
-      "id": "ZAD-08",
-      "slug": "06_funkcje_wprowadzenie/ZAD-08",
-      "title": "Iloraz w dół bez / i %",
+      "id": "ZAD-09",
+      "slug": "06_funkcje_wprowadzenie/ZAD-09",
+      "title": "Cena końcowa (argumenty domyślne i nazwane)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "argumenty domyślne",
+        "argumenty nazwane",
+        "float"
+      ],
+      "description": "Napisz funkcję `cena_koncowa(netto, vat=23, rabat=0)`, która zwraca cenę brutto towaru po rabacie:\n\n* najpierw od ceny `netto` odejmujemy rabat — `rabat` procent ceny netto,\n* potem do tak obniżonej ceny doliczamy podatek VAT — `vat` procent.\n\nCzyli funkcja zwraca $\\text{netto} \\cdot \\left(1 - \\frac{\\text{rabat}}{100}\\right) \\cdot \\left(1 + \\frac{\\text{vat}}{100}\\right)$ — bez zaokrąglania.\n\nParametry `vat` i `rabat` mają **wartości domyślne** (23 i 0), więc przy wywołaniu można je pominąć.\n\nProgram wczytuje cenę netto oraz rabat i wywołuje funkcję czterema sposobami:\n\n1. `cena_koncowa(netto)` — domyślny VAT 23% i brak rabatu,\n2. `cena_koncowa(netto, 8)` — VAT 8% (drugi argument trafia do parametru `vat`), brak rabatu,\n3. `cena_koncowa(netto, rabat=rabat)` — domyślny VAT 23% i wczytany rabat,\n4. `cena_koncowa(netto, rabat=rabat, vat=5)` — VAT 5% i wczytany rabat.",
+      "input": "* 1. linia: cena netto — liczba rzeczywista\n* 2. linia: rabat w procentach — liczba całkowita",
+      "output": "Cztery linie — wyniki wywołań 1–4 w tej kolejności, każdy z dokładnością do **dwóch** miejsc po przecinku.",
+      "examples": [
+        {
+          "input": "100\n10",
+          "output": "123.00\n108.00\n110.70\n94.50",
+          "explanation": "Np. trzecie wywołanie: $100 \\cdot 0.9 = 90$, a $90 \\cdot 1.23 = 110.7$."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0\n50",
+          "output": "0.00\n0.00\n0.00\n0.00"
+        },
+        {
+          "input": "50\n0",
+          "output": "61.50\n54.00\n61.50\n52.50"
+        },
+        {
+          "input": "19.99\n15",
+          "output": "24.59\n21.59\n20.90\n17.84"
+        },
+        {
+          "input": "250\n100",
+          "output": "307.50\n270.00\n0.00\n0.00"
+        },
+        {
+          "input": "39.9\n25",
+          "output": "49.08\n43.09\n36.81\n31.42"
+        }
+      ],
+      "constraints": "* $\\text{netto} \\ge 0$\n* $0 \\le \\text{rabat} \\le 100$",
+      "notes": "* **Argument domyślny** to wartość parametru podana w nagłówku funkcji (`vat=23`). Jeśli przy wywołaniu nie podasz tego argumentu, parametr dostanie wartość domyślną.\n* **Argument nazwany** podajesz w postaci `nazwa=wartość`, np. `cena_koncowa(100, rabat=10)`. Dzięki temu możesz pominąć `vat`, a ustawić `rabat`. Kolejność argumentów nazwanych jest dowolna: `cena_koncowa(100, rabat=10, vat=5)` to to samo co `cena_koncowa(100, vat=5, rabat=10)`.\n* Argumenty podane bez nazwy (pozycyjne) trafiają do parametrów po kolei: w `cena_koncowa(100, 8)` liczba `8` to `vat`.",
+      "starter_code": "def cena_koncowa(netto, vat=23, rabat=0):\n    # Uzupełnij funkcję: zwróć cenę brutto po rabacie.\n    pass\n\n\nnetto = float(input())\nrabat = int(input())\nprint(f\"{cena_koncowa(netto):.2f}\")\nprint(f\"{cena_koncowa(netto, 8):.2f}\")\nprint(f\"{cena_koncowa(netto, rabat=rabat):.2f}\")\nprint(f\"{cena_koncowa(netto, rabat=rabat, vat=5):.2f}\")\n"
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "06_funkcje_wprowadzenie/ZAD-10",
+      "title": "Średnia z dowolnej liczby argumentów",
       "difficulty": 2,
       "difficulty_display": "★★☆",
       "tags": [
         "funkcje",
-        "pętle",
-        "odejmowanie"
+        "*args",
+        "krotka",
+        "float"
       ],
-      "description": "Napisz funkcję `zaokraglij_w_dol(a, b)`, która zwraca wartość `a // b`, ale **nie używa** operatorów `/` ani `%`.",
-      "input": "Dwa argumenty:\n\n* `a` (liczba naturalna, `a ≥ 0`)\n* `b` (liczba naturalna)",
-      "output": "Funkcja zwraca liczbę naturalną — iloraz `a` przez `b` zaokrąglony w dół.",
+      "description": "Napisz funkcję `srednia(*liczby)`, którą można wywołać z **dowolną liczbą argumentów** — np. `srednia(2, 4)`, `srednia(1, 2, 3, 4, 5)` albo `srednia()`. Funkcja zwraca średnią arytmetyczną otrzymanych liczb, a jeśli nie dostała żadnego argumentu — zwraca `None`.\n\nProgram wczytuje linię z liczbami, przekazuje je do funkcji jako osobne argumenty (`srednia(*liczby)`) i wypisuje wynik.",
+      "input": "Jedna linia: zero lub więcej liczb rzeczywistych oddzielonych spacjami. Pusta linia oznacza brak liczb.",
+      "output": "Jedna linia:\n\n* średnia z dokładnością do **dwóch** miejsc po przecinku albo\n* `Brak danych`, jeśli funkcja zwróciła `None`.",
       "examples": [
         {
-          "input": "",
-          "output": "print(zaokraglij_w_dol(7, 2))"
+          "input": "2 4 9",
+          "output": "5.00",
+          "explanation": "$\\frac{2 + 4 + 9}{3} = 5$."
         }
       ],
       "testcases": [
         {
-          "input": "9\n2",
-          "output": "4"
+          "input": "\n",
+          "output": "Brak danych"
         },
         {
-          "input": "0\n5",
-          "output": "0"
+          "input": "7",
+          "output": "7.00"
+        },
+        {
+          "input": "1 2",
+          "output": "1.50"
+        },
+        {
+          "input": "-3 -1 4 10 0",
+          "output": "2.00"
+        },
+        {
+          "input": "1.5 2.25 3",
+          "output": "2.25"
+        },
+        {
+          "input": "10 20 30 40 50 60",
+          "output": "35.00"
         }
       ],
-      "constraints": "* `b > 0`",
-      "notes": ""
+      "constraints": "",
+      "notes": "* Gwiazdka w nagłówku `def srednia(*liczby):` sprawia, że wszystkie argumenty wywołania trafiają do jednej **krotki** `liczby`. Np. po wywołaniu `srednia(2, 4, 9)` zmienna `liczby` to `(2, 4, 9)`, a po `srednia()` — pusta krotka `()`.\n* Po krotce przejdziesz pętlą `for x in liczby:`, a liczbę jej elementów poda `len(liczby)`.\n* Gwiazdka przy wywołaniu działa odwrotnie: `srednia(*liczby)` „rozpakowuje” listę `liczby` na osobne argumenty.\n* Linia `liczby = [float(x) for x in input().split()]` w kodzie startowym zamienia wczytaną linię na listę liczb — listy poznasz dokładnie w rozdziale 9.\n* `None` to specjalna wartość oznaczająca „brak wyniku”. Sprawdzamy ją warunkiem `wynik is None`.",
+      "starter_code": "def srednia(*liczby):\n    # Uzupełnij funkcję: zwróć średnią albo None.\n    pass\n\n\nliczby = [float(x) for x in input().split()]\nwynik = srednia(*liczby)\nif wynik is None:\n    print(\"Brak danych\")\nelse:\n    print(f\"{wynik:.2f}\")\n"
+    },
+    {
+      "id": "ZAD-11",
+      "slug": "06_funkcje_wprowadzenie/ZAD-11",
+      "title": "Funkcja sprawdzona testami (assert)",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "assert",
+        "testy",
+        "bool"
+      ],
+      "description": "Napisz funkcję `czy_przestepny(rok)`, która zwraca `True`, jeśli `rok` jest przestępny, a `False` w przeciwnym razie.\n\nRok jest przestępny, jeśli jest podzielny przez 4, ale nie przez 100 — albo jeśli jest podzielny przez 400.\n\nKod startowy zawiera pięć **testów** funkcji zapisanych instrukcją `assert`. Są wykonywane, zanim program zacznie wczytywać dane. Następnie program wczytuje `n` lat i dla każdego wypisuje `Tak` (rok przestępny) albo `Nie`.",
+      "input": "* 1. linia: liczba lat `n`\n* kolejne `n` linii: lata — po jednej liczbie naturalnej w linii",
+      "output": "`n` linii — dla każdego roku `Tak` albo `Nie`.",
+      "examples": [
+        {
+          "input": "3\n2024\n1900\n2000",
+          "output": "Tak\nNie\nTak",
+          "explanation": "Rok 1900 jest podzielny przez 100, ale nie przez 400, więc nie jest przestępny."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n2023",
+          "output": "Nie"
+        },
+        {
+          "input": "1\n2400",
+          "output": "Tak"
+        },
+        {
+          "input": "4\n1996\n2100\n1600\n2001",
+          "output": "Tak\nNie\nTak\nNie"
+        },
+        {
+          "input": "2\n4\n100",
+          "output": "Tak\nNie"
+        },
+        {
+          "input": "5\n2020\n2021\n2022\n2023\n2024",
+          "output": "Tak\nNie\nNie\nNie\nTak"
+        }
+      ],
+      "constraints": "* $n \\ge 1$\n* $1 \\le \\text{rok} \\le 10000$",
+      "notes": "* `assert warunek` nie robi nic, jeśli warunek jest prawdziwy. Jeśli jest fałszywy, program **natychmiast się zatrzymuje** z błędem `AssertionError`. Dzięki temu od razu widać, że funkcja działa źle.\n* Gdy test się nie powiedzie, zobaczysz komunikat w rodzaju:\n\n  ```\n  Traceback (most recent call last):\n    File \"main.py\", line 9, in <module>\n      assert czy_przestepny(1900) == False\n  AssertionError\n  ```\n\n  Czytaj go od dołu: `AssertionError` mówi, że nie powiódł się test, a linia nad nim (i jej numer, zależny od Twojego kodu) pokazuje, który — tutaj funkcja zwróciła złą odpowiedź dla roku 1900. Popraw funkcję i uruchom program ponownie.\n* Do testu możesz dopisać komunikat, który pojawi się przy błędzie: `assert czy_przestepny(1900) == False, \"1900 nie jest przestępny\"`.\n* Nie usuwaj testów — możesz za to dopisać własne.",
+      "starter_code": "def czy_przestepny(rok):\n    # Uzupełnij funkcję: zwróć True albo False.\n    pass\n\n\n# Testy funkcji: jeśli któryś się nie powiedzie, program zatrzyma się z błędem AssertionError.\nassert czy_przestepny(2024) == True\nassert czy_przestepny(2023) == False\nassert czy_przestepny(1900) == False\nassert czy_przestepny(2000) == True\nassert czy_przestepny(2100) == False\n\nn = int(input())\nfor _ in range(n):\n    rok = int(input())\n    if czy_przestepny(rok):\n        print(\"Tak\")\n    else:\n        print(\"Nie\")\n"
     }
   ]
 }

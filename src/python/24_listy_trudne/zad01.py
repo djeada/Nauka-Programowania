@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Najdłuższy ciąg jedynek
 
 **Poziom:** ★★☆
@@ -6,24 +6,31 @@ ZAD-01 — Najdłuższy ciąg jedynek
 
 ### Treść
 
-Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Znajdź **indeks zera**, które po zamianie na `1` da **najdłuższy ciąg kolejnych jedynek**.
+Otrzymujesz listę składającą się wyłącznie z zer i jedynek. Znajdź **indeks zera**, którego zamiana na `1` da **najdłuższy nieprzerwany ciąg jedynek**.
 
-Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — wypisz `-1`.
+* Jeśli kilka zer daje ciąg o tej samej, maksymalnej długości — wybierz zero o **najmniejszym indeksie**.
+* Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — wypisz `-1`.
 
 ### Wejście
 
-* 1 linia: lista `A` (tylko `0` i `1`)
+* 1. linia: `n` — długość listy
+* 2. linia: `n` liczb `0` lub `1` oddzielonych spacjami
 
 ### Wyjście
 
-* 1 linia: indeks (liczba całkowita) albo `-1`
+Jedna liczba całkowita: indeks szukanego zera albo `-1`.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 1000`
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
+10
+0 0 1 0 1 1 1 0 1 1
 ```
 
 **Wyjście:**
@@ -32,63 +39,39 @@ Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — w
 7
 ```
 
+Zamiana zera o indeksie `7` daje sześć jedynek pod rząd (indeksy 4–9). Zamiana zera o indeksie `3` dałaby tylko pięć jedynek (indeksy 2–6).
+
 ### Uwagi
 
-* Jeśli kilka zer daje ten sam maksymalny wynik — wybierz to o **najmniejszym indeksie** (jeśli nie określono inaczej w testach).
+* Po zamianie zera łączą się jedynki stojące bezpośrednio przed nim i za nim — wystarczy więc znać pozycje sąsiednich zer. Da się to policzyć w jednym przejściu po liście, w czasie $O(n)$.
 
 """
 
 
-def znajdz_zero_do_podmiany_v1(lista):
-    licznik_jedynek = 0
-    indeks_zera = -1
+def indeks_zera_do_zamiany(lista):
+    """Zwraca indeks zera, którego zamiana na 1 daje najdłuższy ciąg jedynek (albo -1)."""
+    zera = [i for i, x in enumerate(lista) if x == 0]
 
-    licznik_zer = 0
-    poprzedni_indeks_zera = -1
+    if len(zera) == 0 or len(zera) == len(lista):
+        return -1
 
-    for i in range(len(lista)):
+    # Strażnicy: „zero” przed początkiem i za końcem listy.
+    granice = [-1] + zera + [len(lista)]
 
-        if lista[i] == 1:
-            licznik_zer += 1
+    najlepszy_indeks = -1
+    najlepsza_dlugosc = 0
 
-        else:
-            licznik_zer = i - poprzedni_indeks_zera
-            poprzedni_indeks_zera = i
+    # Po zamianie k-tego zera łączą się jedynki między sąsiednimi zerami.
+    for k in range(1, len(granice) - 1):
+        dlugosc = granice[k + 1] - granice[k - 1] - 1
+        if dlugosc > najlepsza_dlugosc:
+            najlepsza_dlugosc = dlugosc
+            najlepszy_indeks = granice[k]
 
-        if licznik_zer > licznik_jedynek:
-            licznik_jedynek = licznik_zer
-            indeks_zera = poprzedni_indeks_zera
-
-    return indeks_zera
-
-
-# Testy Poprawnosci
-def test_1():
-    lista = [0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
-    wynik = 7
-
-    assert znajdz_zero_do_podmiany_v1(lista) == wynik
-
-
-def test_2():
-    lista = [1, 1, 1, 1, 1, 1, 1, 1]
-    wynik = -1
-
-    assert znajdz_zero_do_podmiany_v1(lista) == wynik
-
-
-def test_3():
-    lista = [1, 0, 1, 1, 1, 1, 1, 1]
-    wynik = 1
-
-    assert znajdz_zero_do_podmiany_v1(lista) == wynik
-
-
-def main():
-    test_1()
-    test_2()
-    test_3()
+    return najlepszy_indeks
 
 
 if __name__ == "__main__":
-    main()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    print(indeks_zera_do_zamiany(lista))

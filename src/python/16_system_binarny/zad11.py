@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-11 — Palindrom w systemie binarnym
 
 **Poziom:** ★★☆
@@ -6,12 +6,7 @@ ZAD-11 — Palindrom w systemie binarnym
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Sprawdź, czy jej reprezentacja binarna (bez wiodących zer) jest palindromem.
-
-Wypisz:
-
-* `Prawda` — jeśli tak,
-* `Fałsz` — jeśli nie.
+Wczytaj liczbę naturalną `n`. Sprawdź, czy jej zapis binarny (bez zer wiodących) jest palindromem, czyli czy czytany od końca jest taki sam.
 
 ### Wejście
 
@@ -19,7 +14,11 @@ Wypisz:
 
 ### Wyjście
 
-Jedno słowo: `Prawda` lub `Fałsz`.
+Jedno słowo: `Prawda`, jeśli zapis binarny `n` jest palindromem, w przeciwnym razie `Fałsz`.
+
+### Ograniczenia
+
+* $0 \le n \le 10^9$
 
 ### Przykład
 
@@ -35,37 +34,28 @@ Jedno słowo: `Prawda` lub `Fałsz`.
 Fałsz
 ```
 
-### Uwagi (ważne)
+`26` ma zapis binarny `11010`, który czytany od końca daje `01011` — to nie jest palindrom.
 
-* `26` ma zapis binarny `11010`, który **nie** jest palindromem.
-  (W Twoim wcześniejszym przykładzie było to opisane błędnie — tu trzymamy się definicji palindromu 1:1.)
+### Uwagi
+
+* Zapis binarny `0` to `0`, a `1` to `1` — oba są palindromami.
 
 """
 
 
-def czy_palindrom(liczba):
-    """
-    Funkcja sprawdza czy podana liczba jest palindromem.
-    """
-
+def czy_palindrom_binarny(n):
+    """Sprawdza, czy zapis binarny n (bez zer wiodących) czytany od końca jest taki sam."""
     odwrocona = 0
-
-    k = liczba
-    while k > 0:
-        odwrocona = (odwrocona << 1) | (k & 1)
-        k >>= 1
-
-    return odwrocona == liczba
-
-
-def test_czy_palindrom():
-
-    assert czy_palindrom(0)
-    assert czy_palindrom(27)
-    assert not czy_palindrom(2)
-    assert not czy_palindrom(77)
+    reszta = n
+    while reszta > 0:
+        odwrocona = (odwrocona << 1) | (reszta & 1)
+        reszta >>= 1
+    return odwrocona == n
 
 
 if __name__ == "__main__":
-
-    test_czy_palindrom()
+    n = int(input())
+    if czy_palindrom_binarny(n):
+        print("Prawda")
+    else:
+        print("Fałsz")

@@ -1,12 +1,24 @@
 {
   "ZAD-01": [
     {
+      "input": "1",
+      "output": "{}"
+    },
+    {
+      "input": "2",
+      "output": "{1: 1}"
+    },
+    {
       "input": "4",
       "output": "{1: 1, 2: 4, 3: 9}"
     },
     {
-      "input": "1",
-      "output": "{}"
+      "input": "10",
+      "output": "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}"
+    },
+    {
+      "input": "7",
+      "output": "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36}"
     }
   ],
   "ZAD-02": [
@@ -16,6 +28,22 @@
     },
     {
       "input": "2\n3\n1 2\n3 4 5",
+      "output": "{}"
+    },
+    {
+      "input": "1\n1\n0\n0",
+      "output": "{0: 0}"
+    },
+    {
+      "input": "3\n3\n1 2 1\n5 6 7",
+      "output": "{1: 7, 2: 6}"
+    },
+    {
+      "input": "4\n4\n-1 10 7 3\n2 -20 0 9",
+      "output": "{-1: 2, 10: -20, 7: 0, 3: 9}"
+    },
+    {
+      "input": "3\n2\n1 2 3\n1 2",
       "output": "{}"
     }
   ],
@@ -27,6 +55,22 @@
     {
       "input": "lista Anna\ndodaj Anna Solaris\nlista Anna\nkoniec",
       "output": "Książki wypożyczone przez Anna: brak\nKsiążki wypożyczone przez Anna: Solaris"
+    },
+    {
+      "input": "dodaj Ola Pan Tadeusz\nzwróć Ola Lalka\nlista Ola\nzwróć Ola Pan Tadeusz\nlista Ola\nkoniec",
+      "output": "Książki wypożyczone przez Ola: Pan Tadeusz\nKsiążki wypożyczone przez Ola: brak"
+    },
+    {
+      "input": "koniec",
+      "output": ""
+    },
+    {
+      "input": "dodaj Jan Hobbit\ndodaj Jan Dune\ndodaj Jan Hobbit\nzwróć Jan Hobbit\nlista Jan\nlista Ewa\nzwróć Ewa Dune\nkoniec",
+      "output": "Książki wypożyczone przez Jan: Dune, Hobbit\nKsiążki wypożyczone przez Ewa: brak"
+    },
+    {
+      "input": "dodaj Ala Lalka\ndodaj Bartek Quo vadis\ndodaj Ala Ferdydurke\nzwróć Bartek Lalka\nlista Bartek\nlista Ala\nkoniec",
+      "output": "Książki wypożyczone przez Bartek: Quo vadis\nKsiążki wypożyczone przez Ala: Lalka, Ferdydurke"
     }
   ],
   "ZAD-04": [
@@ -37,6 +81,18 @@
     {
       "input": "2\nx 9\ny 8\n5",
       "output": "{'x': 9, 'y': 8}"
+    },
+    {
+      "input": "2\nkot 4\npies 4\n4",
+      "output": "{}"
+    },
+    {
+      "input": "1\nzero 0\n1",
+      "output": "{'zero': 0}"
+    },
+    {
+      "input": "5\nab -1\ncd 2\nef -1\ngh 3\nij -1\n-1",
+      "output": "{'cd': 2, 'gh': 3}"
     }
   ],
   "ZAD-05": [
@@ -47,6 +103,22 @@
     {
       "input": "3\nA 1\nB 5\nA 5",
       "output": "A"
+    },
+    {
+      "input": "1\nSolo 0",
+      "output": "Solo"
+    },
+    {
+      "input": "4\nX -5\nY -3\nX 4\nZ -10",
+      "output": "X"
+    },
+    {
+      "input": "4\nAda 3\nBen 5\nCel 5\nAda 2",
+      "output": "Ada"
+    },
+    {
+      "input": "6\nJan_Kowalski 100\nAnna_Nowak 250\nJan_Kowalski 100\nPiotr_Zielinski 50\nJan_Kowalski 100\nAnna_Nowak -20",
+      "output": "Jan_Kowalski"
     }
   ],
   "ZAD-06": [
@@ -57,6 +129,22 @@
     {
       "input": "abBA",
       "output": "{'a': 1, 'b': 1, 'B': 1, 'A': 1}"
+    },
+    {
+      "input": "x",
+      "output": "{'x': 1}"
+    },
+    {
+      "input": "ala ma kota",
+      "output": "{'a': 4, 'l': 1, ' ': 2, 'm': 1, 'k': 1, 'o': 1, 't': 1}"
+    },
+    {
+      "input": "mississippi",
+      "output": "{'m': 1, 'i': 4, 's': 4, 'p': 2}"
+    },
+    {
+      "input": "2024!",
+      "output": "{'2': 2, '0': 1, '4': 1, '!': 1}"
     }
   ],
   "ZAD-07": [
@@ -67,6 +155,22 @@
     {
       "input": "One two two.",
       "output": "{'one': 1, 'two': 2}"
+    },
+    {
+      "input": "Kot, KOT, kot!",
+      "output": "{'kot': 3}"
+    },
+    {
+      "input": "123 ... !!!",
+      "output": "{}"
+    },
+    {
+      "input": "Żółw ŻÓŁW żółw-2 gęś",
+      "output": "{'żółw': 3, 'gęś': 1}"
+    },
+    {
+      "input": "e-mail to mail",
+      "output": "{'e': 1, 'mail': 2, 'to': 1}"
     }
   ],
   "ZAD-08": [
@@ -77,6 +181,26 @@
     {
       "input": "Hello!",
       "output": "l"
+    },
+    {
+      "input": "Zebra ZOO zoo",
+      "output": "o"
+    },
+    {
+      "input": "x",
+      "output": "x"
+    },
+    {
+      "input": "Mississippi!",
+      "output": "i"
+    },
+    {
+      "input": "Ala ma Asa",
+      "output": "a"
+    },
+    {
+      "input": "2 + 2 = 4, Q.E.D.",
+      "output": "q"
     }
   ],
   "ZAD-09": [
@@ -87,36 +211,194 @@
     {
       "input": "abc",
       "output": ""
+    },
+    {
+      "input": "abcabc",
+      "output": "abc"
+    },
+    {
+      "input": "programowanie",
+      "output": "roa"
+    },
+    {
+      "input": "AaBbAa",
+      "output": "Aa"
+    },
+    {
+      "input": "1122!!?",
+      "output": "12!"
     }
   ],
   "ZAD-10": [
     {
       "input": "rat tar art dog",
-      "output": "[[\"rat\", \"tar\", \"art\"]]"
+      "output": "rat tar art"
     },
     {
       "input": "listen silent enlist inlets cat",
-      "output": "[[\"listen\", \"silent\", \"enlist\", \"inlets\"]]"
+      "output": "listen silent enlist inlets"
+    },
+    {
+      "input": "Ala ma kota",
+      "output": "Brak anagramów"
+    },
+    {
+      "input": "Kot kot KOT tok",
+      "output": "kot tok"
+    },
+    {
+      "input": "kot kot",
+      "output": "Brak anagramów"
+    },
+    {
+      "input": "Ewa i kot, Wea? Tok! Aew i ok.",
+      "output": "ewa wea aew\nkot tok"
+    },
+    {
+      "input": "To absurd, że tyran Brudas, ten straszliwy bandzior, sprawuje rządy w tym kraju. Burza nad galeria i alergia na narty to żadna zbrodnia, jak bandzior i jego arbuz.",
+      "output": "absurd brudas\ntyran narty\nbandzior zbrodnia\nburza arbuz\ngaleria alergia"
     }
   ],
   "ZAD-11": [
     {
       "input": "3\nb 2\na 3\nc 1",
-      "output": "[('a', 3), ('b', 2), ('c', 1)]\n[('c', 1), ('b', 2), ('a', 3)]"
+      "output": "a:3 b:2 c:1\nc:1 b:2 a:3"
     },
     {
       "input": "3\nc 10\nb 5\na 7",
-      "output": "[('a', 7), ('b', 5), ('c', 10)]\n[('b', 5), ('a', 7), ('c', 10)]"
+      "output": "a:7 b:5 c:10\nb:5 a:7 c:10"
+    },
+    {
+      "input": "1\nz 0",
+      "output": "z:0\nz:0"
+    },
+    {
+      "input": "4\nd 1\nb 1\nc 0\na 1",
+      "output": "a:1 b:1 c:0 d:1\nc:0 a:1 b:1 d:1"
+    },
+    {
+      "input": "3\nb 2\nab 5\nba -2",
+      "output": "ab:5 b:2 ba:-2\nba:-2 b:2 ab:5"
+    },
+    {
+      "input": "5\nkiwi 30\nbanan 12\njablko 30\ngruszka -4\nananas 12",
+      "output": "ananas:12 banan:12 gruszka:-4 jablko:30 kiwi:30\ngruszka:-4 ananas:12 banan:12 jablko:30 kiwi:30"
     }
   ],
   "ZAD-12": [
     {
-      "input": "2\na 1 2 3\nb 4 5\n2\na 3 2 1\nb 5 4",
+      "input": "2\na 1 2 3\nb 4 5\n2\nb 5 4\na 2 3 1",
       "output": "Prawda"
     },
     {
       "input": "1\na 1 2\n1\na 1 2 2",
       "output": "Fałsz"
+    },
+    {
+      "input": "1\nx 7\n1\ny 7",
+      "output": "Fałsz"
+    },
+    {
+      "input": "1\nk 5\n2\nk 5\nm 1",
+      "output": "Fałsz"
+    },
+    {
+      "input": "2\na 1 1 2\nb 3\n2\na 1 2 2\nb 3",
+      "output": "Fałsz"
+    },
+    {
+      "input": "1\nliczby -1 0 -1\n1\nliczby 0 -1 -1",
+      "output": "Prawda"
+    },
+    {
+      "input": "3\na 1\nb 2\nc 3\n2\na 1\nb 2",
+      "output": "Fałsz"
+    }
+  ],
+  "ZAD-13": [
+    {
+      "input": "1\nOla Sopot",
+      "output": "Sopot: Ola\n{'Sopot': 1}"
+    },
+    {
+      "input": "3\nZenon Radom\nAda Radom\nMarek Radom",
+      "output": "Radom: Ada, Marek, Zenon\n{'Radom': 3}"
+    },
+    {
+      "input": "4\nKasia Opole\nTomek Kielce\nBeata Lublin\nPiotr Gdynia",
+      "output": "Gdynia: Piotr\nKielce: Tomek\nLublin: Beata\nOpole: Kasia\n{'Gdynia': 1, 'Kielce': 1, 'Lublin': 1, 'Opole': 1}"
+    },
+    {
+      "input": "6\nIgor Warszawa\nHanna Gdynia\nGrzegorz Warszawa\nFilip Gdynia\nEla Warszawa\nDarek Sopot",
+      "output": "Gdynia: Filip, Hanna\nSopot: Darek\nWarszawa: Ela, Grzegorz, Igor\n{'Gdynia': 2, 'Sopot': 1, 'Warszawa': 3}"
+    }
+  ],
+  "ZAD-14": [
+    {
+      "input": "4\n2 7 11 15\n9",
+      "output": "0 1"
+    },
+    {
+      "input": "3\n1 2 3\n7",
+      "output": "-1 -1"
+    },
+    {
+      "input": "3\n2 2 2\n4",
+      "output": "0 1"
+    },
+    {
+      "input": "3\n5 1 9\n10",
+      "output": "1 2"
+    },
+    {
+      "input": "4\n-3 7 0 3\n0",
+      "output": "0 3"
+    },
+    {
+      "input": "3\n1000000000 -1000000000 5\n0",
+      "output": "0 1"
+    },
+    {
+      "input": "6\n1 4 2 6 3 2\n4",
+      "output": "0 4"
+    },
+    {
+      "input": "5\n4 1 4 3 1\n2",
+      "output": "1 4"
+    },
+    {
+      "input": "400\n1 4 7 10 13 16 19 22 25 28 31 34 37 40 43 46 49 52 55 58 61 64 67 70 73 76 79 82 85 88 91 94 97 100 103 106 109 112 115 118 121 124 127 130 133 136 139 142 145 148 151 154 157 160 163 166 169 172 175 178 181 184 187 190 193 196 199 202 205 208 211 214 217 220 223 226 229 232 235 238 241 244 247 250 253 256 259 262 265 268 271 274 277 280 283 286 289 292 295 298 301 304 307 310 313 316 319 322 325 328 331 334 337 340 343 346 349 352 355 358 361 364 367 370 373 376 379 382 385 388 391 394 397 400 403 406 409 412 415 418 421 424 427 430 433 436 439 442 445 448 451 454 457 460 463 466 469 472 475 478 481 484 487 490 493 496 499 502 505 508 511 514 517 520 523 526 529 532 535 538 541 544 547 550 553 556 559 562 565 568 571 574 577 580 583 586 589 592 595 598 601 604 607 610 613 616 619 622 625 628 631 634 637 640 643 646 649 652 655 658 661 664 667 670 673 676 679 682 685 688 691 694 697 700 703 706 709 712 715 718 721 724 727 730 733 736 739 742 745 748 751 754 757 760 763 766 769 772 775 778 781 784 787 790 793 796 799 802 805 808 811 814 817 820 823 826 829 832 835 838 841 844 847 850 853 856 859 862 865 868 871 874 877 880 883 886 889 892 895 898 901 904 907 910 913 916 919 922 925 928 931 934 937 940 943 946 949 952 955 958 961 964 967 970 973 976 979 982 985 988 991 994 997 1000 1003 1006 1009 1012 1015 1018 1021 1024 1027 1030 1033 1036 1039 1042 1045 1048 1051 1054 1057 1060 1063 1066 1069 1072 1075 1078 1081 1084 1087 1090 1093 1096 1099 1102 1105 1108 1111 1114 1117 1120 1123 1126 1129 1132 1135 1138 1141 1144 1147 1150 1153 1156 1159 1162 1165 1168 1171 1174 1177 1180 1183 1186 1189 1192 1195 1198\n2393",
+      "output": "398 399"
+    }
+  ],
+  "ZAD-15": [
+    {
+      "input": "N",
+      "output": "2\n0 0 1\nNie"
+    },
+    {
+      "input": "NNSS",
+      "output": "3\n0 0 2\nTak"
+    },
+    {
+      "input": "EEWWEE",
+      "output": "3\n1 0 3\nNie"
+    },
+    {
+      "input": "SSWWNNEE",
+      "output": "8\n0 0 2\nTak"
+    },
+    {
+      "input": "SSSNN",
+      "output": "4\n0 -1 2\nNie"
+    },
+    {
+      "input": "NWWEE",
+      "output": "4\n0 1 2\nNie"
+    },
+    {
+      "input": "NNEESSWWNE",
+      "output": "9\n0 0 2\nNie"
     }
   ]
 }

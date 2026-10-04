@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Numer dnia tygodnia lub miesiąca
 
 **Poziom:** ★☆☆
@@ -6,23 +6,21 @@ ZAD-01 — Numer dnia tygodnia lub miesiąca
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Wypisz `n` **tylko wtedy**, gdy jest poprawnym numerem:
+Wczytaj liczbę całkowitą `n` i sprawdź, czy może być numerem dnia tygodnia (1–7) i czy może być numerem miesiąca (1–12). Wypisz:
 
-* dnia tygodnia (1–7) **lub**
-* miesiąca (1–12).
-
-W praktyce oznacza to: wypisz `n` tylko wtedy, gdy `1 ≤ n ≤ 12`.
+* `Liczba jest numerem dnia tygodnia i numerem miesiąca.` — gdy $1 \le n \le 7$,
+* `Liczba jest tylko numerem miesiąca.` — gdy $8 \le n \le 12$,
+* `Liczba nie jest numerem dnia tygodnia ani miesiąca.` — w pozostałych przypadkach.
 
 ### Wejście
 
-* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+* 1 linia: `n` — liczba całkowita, $-1000 \le n \le 1000$
 
 ### Wyjście
 
-* Jeśli `1 ≤ n ≤ 12`: wypisz `n` w osobnej linii
-* W przeciwnym razie: brak wyjścia
+Jedna linia — dokładnie jeden z trzech komunikatów.
 
-### Przykłady
+### Przykład 1
 
 **Wejście:**
 
@@ -33,8 +31,10 @@ W praktyce oznacza to: wypisz `n` tylko wtedy, gdy `1 ≤ n ≤ 12`.
 **Wyjście:**
 
 ```
-5
+Liczba jest numerem dnia tygodnia i numerem miesiąca.
 ```
+
+### Przykład 2
 
 **Wejście:**
 
@@ -42,23 +42,24 @@ W praktyce oznacza to: wypisz `n` tylko wtedy, gdy `1 ≤ n ≤ 12`.
 15
 ```
 
-**Wyjście:** *(brak)*
+**Wyjście:**
+
+```
+Liczba nie jest numerem dnia tygodnia ani miesiąca.
+```
 
 """
 
+
+def opis_numeru(n):
+    if 1 <= n <= 7:
+        return "Liczba jest numerem dnia tygodnia i numerem miesiąca."
+    elif 8 <= n <= 12:
+        return "Liczba jest tylko numerem miesiąca."
+    else:
+        return "Liczba nie jest numerem dnia tygodnia ani miesiąca."
+
+
 if __name__ == "__main__":
-
-    print("Podaj liczbe:")
-
-    a = int(input())
-    b = int(input())
-
-    if a >= 1 and a <= 7:
-        print("Liczba jest poprawnym numerem tygodnia.")
-    else:
-        print("Liczba nie jest poprawnym numerem tygodnia.")
-
-    if b >= 1 and b <= 12:
-        print("Liczba jest poprawnym numerem miesiaca.")
-    else:
-        print("Liczba nie jest poprawnym numerem miesiaca.")
+    n = int(input())
+    print(opis_numeru(n))

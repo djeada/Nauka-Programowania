@@ -1,27 +1,27 @@
-"""
+r"""
 ZAD-08 — Wypisz pionowo słowa ze zdania
 
 **Poziom:** ★☆☆
-**Tagi:** `split`, `string`
+**Tagi:** `napisy`, `split`, `słowa`
 
 ### Treść
 
-Wczytaj zdanie, podziel na słowa i wypisz każde słowo w osobnej linii. Interpunkcja nie jest słowem.
+Wczytaj zdanie, podziel je na słowa (zgodnie z konwencją rozdziału — bez interpunkcji) i wypisz każde słowo w osobnej linii.
 
 ### Wejście
 
-* 1. linia: zdanie
+* 1. linia: zdanie (zawiera co najmniej jedno słowo)
 
 ### Wyjście
 
-* wiele linii: słowa w kolejności występowania
+Słowa w kolejności występowania, każde w osobnej linii.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-Ala ma kota
+Ala ma kota, a kot ma Alę.
 ```
 
 **Wyjście:**
@@ -30,6 +30,10 @@ Ala ma kota
 Ala
 ma
 kota
+a
+kot
+ma
+Alę
 ```
 
 """
@@ -37,15 +41,16 @@ kota
 import string
 
 
-def podziel_zdanie_na_slowa(zdanie):
-    return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
-
-
-def wypisz_pionowo(zdanie):
-    for slowo in podziel_zdanie_na_slowa(zdanie):
-        print(slowo)
+def podziel_na_slowa(zdanie):
+    slowa = []
+    for fragment in zdanie.split():
+        slowo = fragment.strip(string.punctuation)
+        if slowo:
+            slowa.append(slowo)
+    return slowa
 
 
 if __name__ == "__main__":
-    zdanie = "Ala ma kota, a kot ma Ale."
-    wypisz_pionowo(zdanie)
+    zdanie = input()
+    for slowo in podziel_na_slowa(zdanie):
+        print(slowo)

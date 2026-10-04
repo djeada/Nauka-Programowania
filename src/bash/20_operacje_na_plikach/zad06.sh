@@ -76,23 +76,11 @@ liczba_wierszy() {
 # Funkcja rozdzielająca zdanie na slowa
 # Zlozonosc czasowa: O(n), gdzie n to liczba znakow
 # Zlozonosc pamieciowa: O(m), gdzie m to liczba slow
+# Slowa to ciagi liter - wszystkie pozostale znaki (interpunkcja, cyfry,
+# spacje) sa separatorami.
 podziel_zdanie_na_slowa() {
     local zdanie="$1"
-    local lista=()
-
-    # Usuniecie interpunkcji i normalizacja
-    zdanie=$(echo "$zdanie" | sed -r 's/[''".,:;!?\\@\<\>\/]+/ /g' | tr -s ' ')
-    zdanie=$(echo "$zdanie" | sed -r 's/[-]+//g')
-    lista_slow=($zdanie)
-
-    for slowo in "${lista_slow[@]}"; do
-        # Sprawdzenie czy slowo zawiera tylko znaki alfanumeryczne i nie jest liczba
-        if [[ "$slowo" =~ ^[[:alnum:]]+$ ]] && [[ ! "$slowo" =~ ^[[:digit:]]+$ ]]; then
-            lista+=("$slowo")
-        fi
-    done
-
-    printf '%s\n' "${lista[@]}"
+    echo "$zdanie" | grep -oE '[[:alpha:]]+'
 }
 
 # Funkcja liczaca slowa w pliku
@@ -153,10 +141,17 @@ test_statystyki() {
     echo -e 'Hej \nThis is an example of a simple ASCII text file stored on a Web server. Note that it has a file\nextension of \".txt\".\n\nAlthough such files may contains some basic layout formatting, such as paragraphs, there is no\nsupport for the text to have attributes, such as bolding.\n\nText files can contain Hypertext Mark-up codes but these will not be interpreted by the \nbrowser. For example, if the following characters <strong>hello</strong> were typed into an\n"html" file then the word "hello" would be shown in bold.' >'test/test.txt'
 
     assertEqual "$(liczba_wierszy "$plik")" "10" $LINENO
-    assertEqual "$(liczba_slow "$plik")" "92" $LINENO
+    # "Mark-up" to dwa slowa, a "<strong>hello</strong>" - trzy
+    assertEqual "$(liczba_slow "$plik")" "91" $LINENO
+    assertEqual "$(podziel_zdanie_na_slowa "Ala, ma kota! 123 x-y")" "$(printf 'Ala\nma\nkota\nx\ny')" $LINENO
 }
 
 main() {
+    # Testy tworzą i usuwają pliki — pracuj w katalogu tymczasowym, nie w repozytorium.
+    local katalog_roboczy
+    katalog_roboczy=$(mktemp -d)
+    trap 'rm -rf "$katalog_roboczy"' EXIT
+    cd "$katalog_roboczy" || exit 1
     test_statystyki
 }
 

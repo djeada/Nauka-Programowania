@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-13 — Brakujący element w ciągu arytmetycznym
 
 **Poziom:** ★★☆
@@ -6,16 +6,23 @@ ZAD-13 — Brakujący element w ciągu arytmetycznym
 
 ### Treść
 
-Wczytaj `N` liczb naturalnych. Lista jest fragmentem ciągu arytmetycznego z **jednym brakującym elementem**. Znajdź i wypisz brakującą wartość.
+Wczytaj listę `n` liczb naturalnych. Po uzupełnieniu o **jeden brakujący wyraz** i uporządkowaniu rosnąco elementy listy tworzą ciąg arytmetyczny. Znajdź i wypisz brakujący wyraz.
+
+Brakujący wyraz nie jest ani pierwszym, ani ostatnim wyrazem ciągu (leży między najmniejszym a największym elementem listy). Elementy listy mogą być podane w dowolnej kolejności.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 2`)
-* kolejne `N` linii: liczby naturalne
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` różnych liczb naturalnych oddzielonych spacjami
 
 ### Wyjście
 
-Jedna liczba naturalna — brakujący element.
+Jedna liczba naturalna: brakujący wyraz ciągu.
+
+### Ograniczenia
+
+* $n \ge 2$
+* Różnica ciągu jest dodatnia (elementy są różne).
 
 ### Przykład
 
@@ -23,10 +30,7 @@ Jedna liczba naturalna — brakujący element.
 
 ```
 4
-5
-2
-1
-3
+5 2 1 3
 ```
 
 **Wyjście:**
@@ -35,32 +39,23 @@ Jedna liczba naturalna — brakujący element.
 4
 ```
 
+Po uzupełnieniu i uporządkowaniu otrzymujemy ciąg $1, 2, 3, 4, 5$.
+
+### Uwagi
+
+* Pełny ciąg ma $n + 1$ wyrazów, od najmniejszego do największego elementu listy. Suma wyrazów ciągu arytmetycznego to $\frac{(a_1 + a_{n+1})(n + 1)}{2}$.
+
 """
 
 
-def suma_ciag_aryt(lista):
-    return (len(lista) + 1) * (min(lista) + max(lista)) // 2
-
-
 def brakujacy_element(lista):
-
-    suma_przedzialu = suma_ciag_aryt(lista)
-    suma_listy = sum(lista)
-
-    wynik = suma_przedzialu - suma_listy
-
-    if wynik not in lista:
-        return wynik
-
-    return 0
-
-
-def test_brakujacy_element():
-    assert brakujacy_element([6, 8, 4, 10, 14, 2]) == 12
-    assert brakujacy_element([1, 2, 4, 5, 6]) == 3
-    assert brakujacy_element([1, 2, 3]) == 0
+    """Zwraca brakujący wyraz ciągu arytmetycznego (n + 1 wyrazów, jeden brakuje)."""
+    liczba_wyrazow = len(lista) + 1
+    suma_ciagu = (min(lista) + max(lista)) * liczba_wyrazow // 2
+    return suma_ciagu - sum(lista)
 
 
 if __name__ == "__main__":
-
-    test_brakujacy_element()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    print(brakujacy_element(lista))

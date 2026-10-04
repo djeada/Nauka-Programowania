@@ -1,22 +1,22 @@
-"""
+r"""
 ZAD-03 — Z ilu słów składa się zdanie?
 
 **Poziom:** ★☆☆
-**Tagi:** `string`, `split`
+**Tagi:** `napisy`, `split`, `słowa`
 
 ### Treść
 
-Wczytaj zdanie i policz, z ilu słów się składa. Znaki interpunkcyjne nie są słowami.
+Wczytaj zdanie i policz, z ilu słów się składa. Słowa wyznaczaj zgodnie z konwencją rozdziału: znaki interpunkcyjne nie są słowami.
 
 ### Wejście
 
-* 1. linia: zdanie
+* 1. linia: zdanie (zawiera co najmniej jedno słowo; słowa mogą być oddzielone kilkoma spacjami)
 
 ### Wyjście
 
-* 1. linia: liczba słów
+Jedna linia: liczba słów.
 
-### Przykład
+### Przykład 1
 
 **Wejście:**
 
@@ -30,27 +30,40 @@ gram na pianinie.
 3
 ```
 
-### Uwagi o formatowaniu
+### Przykład 2
 
-* Najprościej: podziel po białych znakach, a z końców słów usuń interpunkcję.
+**Wejście:**
+
+```
+Ala - jak co dzień - gra.
+```
+
+**Wyjście:**
+
+```
+5
+```
+
+Samotne myślniki nie są słowami, więc słowa to: `Ala`, `jak`, `co`, `dzień`, `gra`.
 
 """
 
 import string
 
 
-def podziel_zdanie_na_slowa(zdanie):
-    return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
+def podziel_na_slowa(zdanie):
+    slowa = []
+    for fragment in zdanie.split():
+        slowo = fragment.strip(string.punctuation)
+        if slowo:
+            slowa.append(slowo)
+    return slowa
 
 
-def liczba_slow_w_zdaniu(zdanie):
-    return len(podziel_zdanie_na_slowa(zdanie))
-
-
-def test_liczba_slow_w_zdaniu():
-    assert liczba_slow_w_zdaniu("Ala ma kota.") == 3
-    assert liczba_slow_w_zdaniu("Ala ma kota, a kot ma Ale.") == 7
+def liczba_slow(zdanie):
+    return len(podziel_na_slowa(zdanie))
 
 
 if __name__ == "__main__":
-    test_liczba_slow_w_zdaniu()
+    zdanie = input()
+    print(liczba_slow(zdanie))

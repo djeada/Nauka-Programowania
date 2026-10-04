@@ -60,17 +60,16 @@ fn sort_v1(lista: &mut [i32]) {
 
 fn szybkie(lista: &mut [i32], dol: usize, gora: usize) {
     if dol < gora {
-        let piwot = podziel(lista, dol, gora);
-        if piwot > 0 {
-            szybkie(lista, dol, piwot - 1);
-        }
-        szybkie(lista, piwot + 1, gora);
+        let podzial = podziel(lista, dol, gora);
+        szybkie(lista, dol, podzial);
+        szybkie(lista, podzial + 1, gora);
     }
 }
 
+// Podział Hoare'a: zwraca indeks p (dol <= p < gora) taki, że każdy element
+// z lista[dol..=p] jest nie większy niż każdy element z lista[p+1..=gora].
 fn podziel(lista: &mut [i32], dol: usize, gora: usize) -> usize {
-    let indeks = (dol + gora) / 2;
-    let piwot = lista[indeks];
+    let piwot = lista[dol + (gora - dol) / 2];
     let mut i = dol;
     let mut j = gora;
 
@@ -79,9 +78,6 @@ fn podziel(lista: &mut [i32], dol: usize, gora: usize) -> usize {
             i += 1;
         }
         while lista[j] > piwot {
-            if j == 0 {
-                break;
-            }
             j -= 1;
         }
 
@@ -91,9 +87,7 @@ fn podziel(lista: &mut [i32], dol: usize, gora: usize) -> usize {
 
         lista.swap(i, j);
         i += 1;
-        if j > 0 {
-            j -= 1;
-        }
+        j -= 1;
     }
 }
 
@@ -128,8 +122,4 @@ fn main() {
         print!("{}", val);
     }
     println!("]");
-}
-
-fn main() {
-    test_1();
 }

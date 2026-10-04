@@ -52,4 +52,3 @@ main = do
   macierz <- readMatrix n
   let obrocona = rotate90 macierz
   mapM_ (putStrLn . intercalate " " . map show) obrocona
-main = pure ()

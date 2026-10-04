@@ -41,18 +41,23 @@ public class Main {
   // Złożoność pamięciowa: O(1) - sortowanie w miejscu
   public static void sortuj(ArrayList<Integer> lista) {
     int zera = 0;
+    int jedynki = 0;
     for (int i = 0; i < lista.size(); i++) {
       if (lista.get(i) == 0) {
         zera++;
+      } else if (lista.get(i) == 1) {
+        jedynki++;
       }
     }
 
-    for (int i = 0; i < zera; i++) {
-      lista.set(i, 0);
-    }
-
-    for (int i = zera; i < lista.size(); i++) {
-      lista.set(i, 1);
+    for (int i = 0; i < lista.size(); i++) {
+      if (i < zera) {
+        lista.set(i, 0);
+      } else if (i < zera + jedynki) {
+        lista.set(i, 1);
+      } else {
+        lista.set(i, 2);
+      }
     }
   }
 

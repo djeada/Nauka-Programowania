@@ -60,6 +60,7 @@ Iloczyn macierzy A * B:
 */
 
 #include <iostream>
+#include <stdexcept>
 #include <vector>
 
 class Macierz {

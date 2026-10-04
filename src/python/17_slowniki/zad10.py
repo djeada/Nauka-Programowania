@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-10 — Znalezienie anagramów w tekście (grupy)
 
 **Poziom:** ★★☆
@@ -6,117 +6,82 @@ ZAD-10 — Znalezienie anagramów w tekście (grupy)
 
 ### Treść
 
-Wczytaj tekst. Znajdź grupy słów będących anagramami (ignoruj wielkość liter, słowa to tylko litery).
-Wypisz wynik jako listę list, np. `[['absurd', 'brudas'], ...]`.
-Do grup wypisuj tylko te klucze, które mają co najmniej 2 słowa.
+Wczytaj tekst. Znajdź grupy różnych słów, które są swoimi **anagramami** (składają się z tych samych liter w tej samej liczbie, np. `absurd` i `brudas`), nie rozróżniając wielkości liter. Wypisz każdą grupę, która zawiera co najmniej dwa różne słowa.
 
 ### Wejście
 
-* 1 linia: tekst
+* 1. linia: tekst
 
 ### Wyjście
 
-* Lista list słów
+* Każda grupa w osobnej linii: słowa małymi literami, oddzielone pojedynczą spacją, w kolejności pierwszego wystąpienia w tekście.
+* Grupy w kolejności pierwszego wystąpienia ich pierwszego słowa.
+* Jeśli nie ma żadnej grupy — jedna linia `Brak anagramów`.
+
+### Ograniczenia
+
+* tekst ma od 1 do 300 znaków
 
 ### Przykład
 
-Wejście jak w treści zadania → wyjście:
+**Wejście:**
 
 ```
-[["absurd", "brudas"], ["tyran", "narty"], ["bandzior", "zbrodnia"], ["burza", "arbuz"], ["galeria", "alergia"]]
+Tyran Brudas kupił narty. To absurd! Arbuz i burza.
 ```
+
+**Wyjście:**
+
+```
+tyran narty
+brudas absurd
+arbuz burza
+```
+
+### Uwagi
+
+* **Słowo** to najdłuższy ciąg kolejnych liter; pozostałe znaki rozdzielają słowa. Wielkość liter nie ma znaczenia (`Tyran` to `tyran`).
+* Słowo powtórzone w tekście liczy się raz — `kot kot` nie jest grupą anagramów.
+* Wskazówka: użyj słownika, w którym kluczem są posortowane litery słowa (`"".join(sorted(slowo))`), a wartością lista słów.
 
 """
 
-import string
 
-
-def podziel_zdanie_na_slowa(zdanie):
-    """
-    Funkcja zwraca liste slow ze zdania.
-    """
-    return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
-
-
-def na_male_litery(slowa):
-    """
-    Funkcja zamienia wielkie litery ze slow z listy slowa na male litery.
-    """
-    return [slowo.lower() for slowo in slowa]
-
-
-def histogram(napis):
-    """
-    Funkcja zwraca slownik zawierajacy wszystkie litery w napisie oraz czestosc ich wystepowania.
-    """
-    histogram = {}
-    for znak in napis:
-        if znak in histogram:
-            histogram[znak] += 1
+def podziel_na_slowa(tekst):
+    """Zwraca listę słów (ciągów liter) zapisanych małymi literami."""
+    bez_innych_znakow = ""
+    for znak in tekst:
+        if znak.isalpha():
+            bez_innych_znakow += znak.lower()
         else:
-            histogram[znak] = 1
-    return histogram
+            bez_innych_znakow += " "
+    return bez_innych_znakow.split()
 
 
-def znajdz_wszystkie_anagramy_w_tekscie(napis):
+def grupy_anagramow(tekst):
     """
-    Funkcja zwraca liste wszystkich anagramow w napisie.
+    Zwraca listę grup anagramów (co najmniej dwa różne słowa w grupie).
+    Kluczem słownika są posortowane litery słowa — wszystkie anagramy
+    mają ten sam klucz.
     """
-    slowa = podziel_zdanie_na_slowa(napis)
-    slowa = na_male_litery(slowa)
-    slowa = list(set(slowa))
+    grupy = {}
+    for slowo in podziel_na_slowa(tekst):
+        klucz = "".join(sorted(slowo))
+        if klucz not in grupy:
+            grupy[klucz] = []
+        if slowo not in grupy[klucz]:
+            grupy[klucz].append(slowo)
 
     wynik = []
-    i = 0
-    while i < len(slowa):
-        slowo = slowa[i]
-        histogram_dla_slowa = histogram(slowo)
-        wynik.append([slowo])
-        slowa.remove(slowo)
-        j = 0
-        while j < len(slowa):
-            inne_slowo = slowa[j]
-            if inne_slowo != slowo:
-                histogram_dla_innego_slowa = histogram(inne_slowo)
-                if histogram_dla_slowa == histogram_dla_innego_slowa:
-                    wynik[-1].append(inne_slowo)
-
-            j += 1
-
-        if len(wynik[-1]) == 1:
-            wynik.pop()
-
-        i += 1
-
+    for grupa in grupy.values():
+        if len(grupa) >= 2:
+            wynik.append(grupa)
     return wynik
 
 
-def czy_listy_list_rowne(lista_a, lista_b):
-    """
-    Funkcja zwraca True jesli lista_a i lista_b skladaja sie z list, ktore maja taka sama ilosc elementow i elementy w tych listach sa takie same.
-    """
-    _lista_a = [tuple(sorted(x)) for x in lista_a]
-    _lista_b = [tuple(sorted(x)) for x in lista_b]
-
-    return set(_lista_a) == set(_lista_b)
-
-
-def test_znajdz_wszystkie_anagramy_w_tekscie():
-    assert znajdz_wszystkie_anagramy_w_tekscie("Ala ma kota") == []
-    assert czy_listy_list_rowne(
-        znajdz_wszystkie_anagramy_w_tekscie(
-            "To absurd, ze tyran Brudas, ten straszliwy bandzior sprawuje rzady w tym kraju. Burza nad galeria i alergia na narty to zadna zbrodnia, jak bandzior i jego arbuz."
-        ),
-        [
-            ["absurd", "brudas"],
-            ["tyran", "narty"],
-            ["bandzior", "zbrodnia"],
-            ["burza", "arbuz"],
-            ["galeria", "alergia"],
-        ],
-    )
-
-
 if __name__ == "__main__":
-
-    test_znajdz_wszystkie_anagramy_w_tekscie()
+    grupy = grupy_anagramow(input())
+    if not grupy:
+        print("Brak anagramów")
+    for grupa in grupy:
+        print(" ".join(grupa))

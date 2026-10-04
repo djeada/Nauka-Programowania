@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-03 — Sprawdź, czy napis składa się wyłącznie z cyfr
 
 **Poziom:** ★☆☆
@@ -6,20 +6,20 @@ ZAD-03 — Sprawdź, czy napis składa się wyłącznie z cyfr
 
 ### Treść
 
-Otrzymujesz napis. Sprawdź, czy składa się wyłącznie z cyfr (`0–9`).
+Wczytaj napis i sprawdź, czy składa się **wyłącznie** z cyfr `0–9`. Każdy inny znak — spacja, minus, kropka, litera — sprawia, że odpowiedź to `Fałsz`.
 
 ### Wejście
 
-Jedna linia:
-
-* `s`
+* 1. linia: napis
 
 ### Wyjście
 
-Jedna linia:
+* `Prawda` — jeśli napis zawiera tylko cyfry `0–9`,
+* `Fałsz` — w przeciwnym razie.
 
-* `Prawda` — jeśli napis zawiera tylko cyfry
-* `Fałsz` — w przeciwnym razie
+### Ograniczenia
+
+* Napis ma od 1 do 100 znaków.
 
 ### Przykład
 
@@ -35,43 +35,35 @@ Jedna linia:
 Prawda
 ```
 
+### Przykład 2
+
+**Wejście:**
+
+```
+12a
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
+
+### Uwagi
+
+* Użyj `re.fullmatch()` — `re.match()` sprawdza tylko początek napisu.
+* W Pythonie `\d` dopasowuje także cyfry innych pism, np. arabskie `٣` albo cyfry pełnej szerokości `３`. Aby dopuścić tylko `0–9`, użyj klasy `[0-9]` (albo flagi `re.ASCII`).
+
 """
 
 import re
 
 
-def czy_numeryczny_v1(napis):
-    """
-    Funkcja sprawdza, czy napis sklada sie wylacznie z cyfr.
-    """
-    if not napis:
-        return False
-
-    for znak in napis:
-        if znak not in "0123456789":
-            return False
-    return True
-
-
-def czy_numeryczny_v2(napis):
-    """
-    Funkcja sprawdza, czy napis sklada sie wylacznie z cyfr.
-    """
-    return re.match(r"^[0-9]+$", napis) is not None
-
-
-def test_czy_numeryczny_v1():
-    assert czy_numeryczny_v1("123")
-    assert not czy_numeryczny_v1("123a")
-    assert not czy_numeryczny_v1("")
-
-
-def test_czy_numeryczny_v2():
-    assert czy_numeryczny_v2("123")
-    assert not czy_numeryczny_v2("123a")
-    assert not czy_numeryczny_v2("")
+def czy_same_cyfry(napis):
+    # [0-9], a nie \d: \d pasuje też do cyfr innych pism, np. '٣'.
+    return re.fullmatch(r"[0-9]+", napis) is not None
 
 
 if __name__ == "__main__":
-    test_czy_numeryczny_v1()
-    test_czy_numeryczny_v2()
+    napis = input()
+    print("Prawda" if czy_same_cyfry(napis) else "Fałsz")

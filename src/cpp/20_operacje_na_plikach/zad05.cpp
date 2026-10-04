@@ -35,13 +35,15 @@ C:\Users\Username\Documents\adresy_ip.txt
 */
 #include <algorithm>
 #include <cassert>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
+#include <string>
+#include <vector>
 
-namespace filesys = std::experimental::filesystem;
+namespace filesys = std::filesystem;
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
   std::vector<std::string> tresc;

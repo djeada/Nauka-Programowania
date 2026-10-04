@@ -63,7 +63,8 @@ public class Main {
       throw new IllegalArgumentException(
           "Dlugosc sznurka do sprzedazy nie moze byc " + "wieksza od liczby elementow listy ceny.");
 
-    List<Integer> pom = new ArrayList<>(n + 1);
+    // pom.get(k) - maksymalny przychód ze sznurka o długości k
+    List<Integer> pom = new ArrayList<>(Collections.nCopies(n + 1, 0));
 
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < i + 1; j++)

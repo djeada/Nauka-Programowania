@@ -1,25 +1,20 @@
-"""
+r"""
 ZAD-02 — Trójkąt prostokątny (rosnący)
 
 **Poziom:** ★☆☆
-**Tagi:** `pętle`, `print`, `string`
+**Tagi:** `pętle zagnieżdżone`, `print`, `string`
 
 ### Treść
 
-Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt o wysokości `n`, gdzie w wierszu `i` jest `i` gwiazdek (`i = 1..n`).
+Wczytaj liczbę naturalną `n` i wypisz trójkąt o wysokości `n`: w wierszu numer `i` (licząc od `1`) ma być `i` gwiazdek.
 
 ### Wejście
 
-* 1. linia: `n` (`n ≥ 1`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-`n` linii:
-
-* 1. linia: `*`
-* 2. linia: `**`
-* …
-* `n`-ta linia: `n` gwiazdek
+`n` linii: w pierwszej `1` gwiazdka, w drugiej `2` gwiazdki, …, w ostatniej `n` gwiazdek.
 
 ### Przykład
 
@@ -39,5 +34,14 @@ Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt o wysokości `n`, gdzie w wierszu `i`
 
 """
 
+
+def trojkat_rosnacy(n):
+    for i in range(1, n + 1):
+        for _ in range(i):
+            print("*", end="")
+        print()
+
+
 if __name__ == "__main__":
-    pass
+    n = int(input())
+    trojkat_rosnacy(n)

@@ -40,10 +40,9 @@ razynax
 - c2[lit])`, a wynik wypisz jako tę sumę. (To jest łączna liczba usunięć.)
 
 */
-#include <algorithm>
 #include <cassert>
+#include <cstdlib>
 #include <string>
-#include <unordered_map>
 #include <vector>
 
 // Zlozonosc Czasowa: O(n)
@@ -51,15 +50,16 @@ razynax
 int liczbaZnakow(const std::string &slowoA, const std::string &slowoB) {
   if (slowoA.length() != slowoB.length()) return -1;
 
+  // Licznik dla kazdej mozliwej wartosci bajtu (nie tylko liter a-z).
   std::vector<int> pom(256, 0);
 
-  for (auto znak : slowoA) pom[znak - 'a']++;
+  for (unsigned char znak : slowoA) pom[znak]++;
 
-  for (auto znak : slowoB) pom[znak - 'a']--;
+  for (unsigned char znak : slowoB) pom[znak]--;
 
-  long wynik = 0;
+  int wynik = 0;
 
-  for (auto liczba : pom) wynik += abs(liczba);
+  for (auto liczba : pom) wynik += std::abs(liczba);
 
   return wynik;
 }

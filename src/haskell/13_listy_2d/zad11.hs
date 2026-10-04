@@ -46,4 +46,3 @@ Wielokrotnie:
 
 main :: IO ()
 main = putStrLn "Gra w statki - implementacja wymaga bardziej rozbudowanej logiki"
-main = pure ()

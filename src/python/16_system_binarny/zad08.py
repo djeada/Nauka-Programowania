@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Najbliższa potęga dwójki (>= n)
 
 **Poziom:** ★☆☆
@@ -6,7 +6,7 @@ ZAD-08 — Najbliższa potęga dwójki (>= n)
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która jest **większa lub równa** `n`.
+Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która jest **większa lub równa** `n`, czyli najmniejsze $2^k \ge n$ dla całkowitego $k \ge 0$.
 
 ### Wejście
 
@@ -14,7 +14,11 @@ Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która je
 
 ### Wyjście
 
-Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
+Jedna liczba naturalna: najmniejsza potęga dwójki nie mniejsza od `n`.
+
+### Ograniczenia
+
+* $0 \le n \le 10^9$
 
 ### Przykład
 
@@ -32,63 +36,21 @@ Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
 
 ### Uwagi
 
-* Dla `n = 0` przyjmij wynik `1`.
+* $2^0 = 1$, więc dla `n = 0` i `n = 1` wynik to `1`.
+* Jeśli `n` jest potęgą dwójki, wynikiem jest samo `n`.
+* Kolejne potęgi dwójki otrzymasz przesunięciem `potega << 1`.
 
 """
 
 
-def nastepna_potega_dwojki_v1(liczba):
-    """
-    Funkcja zwraca nastepna potege dwojki wieksza badz rowna liczbie.
-    Zasada dzialania opiera sie na zmniejszaniu liczby, az liczba bedzie podzielna przez 2.
-    """
-
-    if liczba <= 0:
-        return 0
-
-    if liczba == 1:
-        return 2
-
-    liczba -= 1
-
-    while liczba & liczba - 1:
-        liczba &= liczba - 1
-
-    return liczba << 1
-
-
-def nastepna_potega_dwojki_v2(liczba):
-    """
-    Funkcja zwraca nastepna potege dwojki wieksza badz rowna liczbie.
-    Zasada dzialania opiera sie na obliczeniu nastepnych poteg dwojki,
-    az otrzymamy liczbe wieksza lub rowna podanej liczbie.
-    """
-
-    if liczba <= 0:
-        return 0
-
-    potega = 2
-
-    while liczba > 2:
-        liczba >>= 1
+def najblizsza_potega_dwojki(n):
+    """Zwraca najmniejszą potęgę dwójki większą lub równą n (dla n <= 1 jest to 1)."""
+    potega = 1
+    while potega < n:
         potega <<= 1
-
     return potega
 
 
-def test_nastepna_potega_dwojki_v1():
-    assert nastepna_potega_dwojki_v1(111) == 128
-    assert nastepna_potega_dwojki_v1(-30) == 0
-    assert nastepna_potega_dwojki_v1(1) == 2
-
-
-def test_nastepna_potega_dwojki_v2():
-
-    assert nastepna_potega_dwojki_v2(111) == 128
-    assert nastepna_potega_dwojki_v2(-30) == 0
-    assert nastepna_potega_dwojki_v2(1) == 2
-
-
 if __name__ == "__main__":
-    test_nastepna_potega_dwojki_v1()
-    test_nastepna_potega_dwojki_v2()
+    n = int(input())
+    print(najblizsza_potega_dwojki(n))

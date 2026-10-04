@@ -1,82 +1,232 @@
 {
   "ZAD-01": [
     {
+      "input": "cba",
+      "output": "abc"
+    },
+    {
       "input": "b a",
       "output": " ab"
     },
     {
-      "input": "cba",
-      "output": "abc"
+      "input": "zebra",
+      "output": "aberz"
+    },
+    {
+      "input": "Python 3",
+      "output": " 3Phnoty"
+    },
+    {
+      "input": "a",
+      "output": "a"
+    },
+    {
+      "input": "żółw",
+      "output": "wółż"
+    },
+    {
+      "input": "BaAb",
+      "output": "ABab"
     }
   ],
   "ZAD-02": [
     {
       "input": "Bob, Ala pies.",
-      "output": "['Ala', 'Bob', 'pies']"
+      "output": "Ala Bob pies"
     },
     {
       "input": "zoo! ala? kot.",
-      "output": "['ala', 'kot', 'zoo']"
+      "output": "ala kot zoo"
+    },
+    {
+      "input": "kot,pies;mysz",
+      "output": "kot mysz pies"
+    },
+    {
+      "input": "słowo",
+      "output": "słowo"
+    },
+    {
+      "input": "Zebra zebra ZEBRA",
+      "output": "ZEBRA Zebra zebra"
+    },
+    {
+      "input": "Czy to: koniec? Nie! To dopiero początek.",
+      "output": "Czy Nie To dopiero koniec początek to"
     }
   ],
   "ZAD-03": [
     {
-      "input": "3\nab 3\nbca 1\nc 2",
-      "output": "[('bca', 1), ('c', 2), ('ab', 3)]\n[('c', 2), ('ab', 3), ('bca', 1)]"
+      "input": "1\nx 0",
+      "output": "[('x', 0)]\n[('x', 0)]"
     },
     {
       "input": "2\nxx 5\na 1",
       "output": "[('a', 1), ('xx', 5)]\n[('a', 1), ('xx', 5)]"
+    },
+    {
+      "input": "4\nkot 2\npies 1\nmysz 2\nos 1",
+      "output": "[('pies', 1), ('os', 1), ('kot', 2), ('mysz', 2)]\n[('os', 1), ('kot', 2), ('pies', 1), ('mysz', 2)]"
+    },
+    {
+      "input": "3\nabc -5\nab 10\na -7",
+      "output": "[('a', -7), ('abc', -5), ('ab', 10)]\n[('a', -7), ('ab', 10), ('abc', -5)]"
+    },
+    {
+      "input": "5\ndlugi 3\nb 3\ncc 3\nddd 0\ne -1",
+      "output": "[('e', -1), ('ddd', 0), ('dlugi', 3), ('b', 3), ('cc', 3)]\n[('b', 3), ('e', -1), ('cc', 3), ('ddd', 0), ('dlugi', 3)]"
     }
   ],
   "ZAD-04": [
     {
-      "input": "4\nabcd\nab\na\nabc",
-      "output": "['a', 'ab', 'abc', 'abcd']"
+      "input": "3\nzz\nx\nyy",
+      "output": "x zz yy"
     },
     {
-      "input": "3\nzz\nx\nyy",
-      "output": "['x', 'zz', 'yy']"
+      "input": "1\nslowo",
+      "output": "slowo"
+    },
+    {
+      "input": "5\nkot\nmysz\npies\nos\nslon",
+      "output": "os kot mysz pies slon"
+    },
+    {
+      "input": "4\nbbb\naaa\ncc\nd",
+      "output": "d cc bbb aaa"
+    },
+    {
+      "input": "6\nprogramowanie\nPython\nto\nfrajda\ni\nnauka",
+      "output": "i to nauka Python frajda programowanie"
     }
   ],
   "ZAD-05": [
     {
-      "input": "3\nParis 2150000\nBerlin 3800000\nNew_York 8400000",
-      "output": "[Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000), Miasto(\"Paris\", 2150000)]\n[Miasto(\"Paris\", 2150000), Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000)]"
+      "input": "1\nKrakow 800000",
+      "output": "[Miasto(\"Krakow\", 800000)]\n[Miasto(\"Krakow\", 800000)]"
     },
     {
-      "input": "2\nGdansk 470000\nWarszawa 1800000",
+      "input": "2\nWarszawa 1800000\nGdansk 470000",
       "output": "[Miasto(\"Gdansk\", 470000), Miasto(\"Warszawa\", 1800000)]\n[Miasto(\"Gdansk\", 470000), Miasto(\"Warszawa\", 1800000)]"
-    }
-  ],
-  "ZAD-06": [
-    {
-      "input": "6\n1 0 1 0 1 1",
-      "output": "[0, 0, 1, 1, 1, 1]"
     },
     {
-      "input": "4\n0 0 0 1",
-      "output": "[0, 0, 0, 1]"
+      "input": "4\nTorun 200000\nOpole 127000\nRadom 200000\nElk 61000",
+      "output": "[Miasto(\"Elk\", 61000), Miasto(\"Opole\", 127000), Miasto(\"Radom\", 200000), Miasto(\"Torun\", 200000)]\n[Miasto(\"Elk\", 61000), Miasto(\"Opole\", 127000), Miasto(\"Torun\", 200000), Miasto(\"Radom\", 200000)]"
+    },
+    {
+      "input": "3\nzakopane 27000\nZabrze 170000\nAugustow 30000",
+      "output": "[Miasto(\"Augustow\", 30000), Miasto(\"Zabrze\", 170000), Miasto(\"zakopane\", 27000)]\n[Miasto(\"zakopane\", 27000), Miasto(\"Augustow\", 30000), Miasto(\"Zabrze\", 170000)]"
+    },
+    {
+      "input": "3\nLodz 650000\nKielce 190000\nBialystok 290000",
+      "output": "[Miasto(\"Bialystok\", 290000), Miasto(\"Kielce\", 190000), Miasto(\"Lodz\", 650000)]\n[Miasto(\"Kielce\", 190000), Miasto(\"Bialystok\", 290000), Miasto(\"Lodz\", 650000)]"
     }
   ],
   "ZAD-07": [
     {
-      "input": "7\n1 0 1 2 2 0 1",
-      "output": "[0, 0, 1, 1, 1, 2, 2]"
+      "input": "1\n2",
+      "output": "2"
     },
     {
       "input": "5\n2 2 2 1 0",
-      "output": "[0, 1, 2, 2, 2]"
+      "output": "0 1 2 2 2"
+    },
+    {
+      "input": "3\n0 0 0",
+      "output": "0 0 0"
+    },
+    {
+      "input": "6\n2 1 0 2 1 0",
+      "output": "0 0 1 1 2 2"
+    },
+    {
+      "input": "10\n0 2 2 0 1 1 2 2 1 1",
+      "output": "0 0 1 1 1 1 2 2 2 2"
+    },
+    {
+      "input": "4\n1 2 1 1",
+      "output": "1 1 1 2"
     }
   ],
   "ZAD-08": [
     {
-      "input": "6\n3 4 5 6 1 2\n4",
+      "input": "5\n4 5 6 1 2\n3",
+      "output": "-1"
+    },
+    {
+      "input": "1\n7\n7",
+      "output": "0"
+    },
+    {
+      "input": "1\n7\n3",
+      "output": "-1"
+    },
+    {
+      "input": "8\n27 31 32 3 5 9 10 15\n31",
       "output": "1"
     },
     {
-      "input": "5\n4 5 6 1 2\n3",
+      "input": "9\n4 7 12 32 51 90 100 1 2\n-5",
       "output": "-1"
+    },
+    {
+      "input": "6\n1 2 3 4 5 6\n6",
+      "output": "5"
+    },
+    {
+      "input": "7\n10 20 30 40 50 -5 0\n-5",
+      "output": "5"
+    },
+    {
+      "input": "4\n9 1 3 5\n9",
+      "output": "0"
+    },
+    {
+      "input": "6\n3 4 5 6 1 2\n2",
+      "output": "5"
+    }
+  ],
+  "ZAD-09": [
+    {
+      "input": "1\nSolo 0 0",
+      "output": "1. Solo 0 0"
+    },
+    {
+      "input": "3\nC 10 100\nB 10 100\nA 10 100",
+      "output": "1. A 10 100\n1. B 10 100\n1. C 10 100"
+    },
+    {
+      "input": "4\nZenon 50 200\nAnia 50 200\nbartek 50 199\nCyryl 60 500",
+      "output": "1. Cyryl 60 500\n2. bartek 50 199\n3. Ania 50 200\n3. Zenon 50 200"
+    },
+    {
+      "input": "6\nP1 5 10\nP2 7 10\nP3 5 9\nP4 7 10\nP5 5 10\nP6 1 1",
+      "output": "1. P2 7 10\n1. P4 7 10\n3. P3 5 9\n4. P1 5 10\n4. P5 5 10\n6. P6 1 1"
+    },
+    {
+      "input": "3\nmarek 10 50\nMarek 10 50\nłukasz 10 50",
+      "output": "1. Marek 10 50\n1. marek 10 50\n1. łukasz 10 50"
+    }
+  ],
+  "ZAD-10": [
+    {
+      "input": "1\nsłowo",
+      "output": "słowo 1"
+    },
+    {
+      "input": "5\nTo be, or not to be",
+      "output": "be 2\nto 2\nnot 1\nor 1"
+    },
+    {
+      "input": "2\nKot KOT kot! kOt? pies PIES",
+      "output": "kot 4\npies 2"
+    },
+    {
+      "input": "3\nżaba zebra żaba ąb zebra aa",
+      "output": "zebra 2\nżaba 2\naa 1"
+    },
+    {
+      "input": "2\nR2D2 i C3PO to roboty, a R2 to robot",
+      "output": "r 2\nto 2"
     }
   ]
 }

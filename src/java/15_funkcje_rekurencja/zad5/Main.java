@@ -1,84 +1,105 @@
 /*
-ZAD-05 — k-ta pochodna wielomianu
+ZAD-05 — Liczba Fibonacciego
 
-**Poziom:** ★★☆
-**Tagi:** `pochodna`, `wielomiany`, `I/O`
+**Poziom:** ★☆☆
+**Tagi:** `rekurencja`, `Fibonacci`
 
 ### Treść
 
-Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomianu będącego `k`-tą pochodną.
+Napisz rekurencyjną funkcję `fibonacci(n)`, która zwraca $n$-ty wyraz ciągu Fibonacciego, zdefiniowanego następująco:
+
+* $F_0 = 0$,
+* $F_1 = 1$,
+* $F_n = F_{n-1} + F_{n-2}$ dla $n \ge 2$.
+
+Program wczytuje $N$ i wypisuje $F_N$.
 
 ### Wejście
 
-* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
-* 2. linia: `n+1` liczb: `a_n ... a_0`
-* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)
+Jedna liczba naturalna `N`.
 
 ### Wyjście
 
-* Jeśli po zróżniczkowaniu `k` razy zostaje wielomian niezerowy: wypisz jego współczynniki w jednej linii (spacje).
-* Jeśli wielomian „znika” (stopień < k): wypisz dokładnie `[]`.
+Jedna liczba naturalna — wartość $F_N$.
+
+### Ograniczenia
+
+* `0 ≤ N ≤ 25`
 
 ### Przykład
 
 **Wejście:**
 
 ```
-2
-4 -3 2
-1
+7
 ```
 
 **Wyjście:**
 
 ```
-8 -3
+13
 ```
 
-### Uwagi o formatowaniu
+Kolejne wyrazy ciągu to `0, 1, 1, 2, 3, 5, 8, 13, …`, a wyraz o numerze `7` (licząc od zera) to `13`.
 
-* Pochodna: jeśli aktualne współczynniki to `[c_d, c_{d-1}, ..., c_0]`, to pochodna ma współczynniki:
-  `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]`.
+### Uwagi
+
+* Funkcja ma dwa przypadki bazowe ($n = 0$ i $n = 1$) i wywołuje samą siebie dwa razy.
+* Ta prosta wersja wykonuje bardzo dużo powtórzonych obliczeń (liczba wywołań rośnie wykładniczo), ale dla $N \le 25$ działa wystarczająco szybko.
+
+### Kod startowy
+
+```python
+def fibonacci(n):
+    pass
+
+
+n = int(input())
+print(fibonacci(n))
+```
 
 */
+
 public class Main {
-  // Liczba Fibonacciego.
 
   // Zlozonosc Czasowa: O(2^n) - bez memoizacji
   // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu
-  public static int fibonnaciV1(int n) {
+  public static int fibonacciV1(int n) {
 
     if (n == 0 || n == 1) {
       return n;
     }
 
-    return fibonnaciV1(n - 1) + fibonnaciV1(n - 2);
+    return fibonacciV1(n - 1) + fibonacciV1(n - 2);
   }
 
-  public static int[] fibonnaciV2_pom = new int[256];
+  public static int[] fibonacciV2Pom = new int[256];
 
-  public static int fibonnaciV2(int n) {
-
-    if (fibonnaciV2_pom[n] != 0) {
-      return fibonnaciV2_pom[n];
-    }
+  // Zlozonosc Czasowa: O(n) - z memoizacja
+  // Zlozonosc Pamieciowa: O(n)
+  public static int fibonacciV2(int n) {
 
     if (n == 0 || n == 1) {
-      fibonnaciV2_pom[n] = n;
-      return fibonnaciV2_pom[n];
+      return n;
     }
 
-    fibonnaciV2_pom[n] = fibonnaciV2(n - 1) + fibonnaciV2(n - 2);
+    if (fibonacciV2Pom[n] != 0) {
+      return fibonacciV2Pom[n];
+    }
 
-    return fibonnaciV2_pom[n];
+    fibonacciV2Pom[n] = fibonacciV2(n - 1) + fibonacciV2(n - 2);
+
+    return fibonacciV2Pom[n];
   }
 
   public static void test1() {
-    int n = 7;
-    int wynik = 13;
+    assert fibonacciV1(0) == 0;
+    assert fibonacciV1(1) == 1;
+    assert fibonacciV1(7) == 13;
+    assert fibonacciV1(20) == 6765;
 
-    assert fibonnaciV1(n) == wynik;
-    assert fibonnaciV2(n) == wynik;
+    assert fibonacciV2(7) == 13;
+    assert fibonacciV2(25) == 75025;
   }
 
   public static void main(String[] args) {
@@ -86,4 +107,3 @@ public class Main {
     test1();
   }
 }
-

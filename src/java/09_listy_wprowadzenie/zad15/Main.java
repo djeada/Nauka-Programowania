@@ -51,7 +51,7 @@ public class Main {
     for (int i = 0; i <= n / 2; i++) {
       int licznik = 1;
       for (int j = i + 1; j < n; j++) {
-        if (lista.get(j) == lista.get(i)) {
+        if (lista.get(j).equals(lista.get(i))) {
           licznik++;
         }
       }

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Cyfry w słowach
 
 **Poziom:** ★★☆
@@ -6,17 +6,18 @@ ZAD-08 — Cyfry w słowach
 
 ### Treść
 
-Otrzymujesz zdanie. Wyodrębnij wszystkie ciągi cyfr, które są częścią słów (czyli są bezpośrednio połączone z literami). Nie uwzględniaj cyfr oddzielonych od liter spacjami.
+Wczytaj zdanie i wypisz wszystkie ciągi cyfr, które są „przyklejone” do liter. Chodzi o najdłuższe ciągi kolejnych cyfr `0–9`, bezpośrednio przed którymi **lub** bezpośrednio po których stoi litera (także polska).
+
+Cyfry oddzielone od liter spacją, interpunkcją czy myślnikiem się nie liczą. Na przykład w `s3łuchali91` są dwa ciągi: `3` i `91`, w `3.5kg` tylko `5`, a samodzielna liczba `22` nie jest wynikiem.
 
 ### Wejście
 
-Jedna linia:
-
-* `zdanie`
+* 1. linia: zdanie
 
 ### Wyjście
 
-Każdy znaleziony ciąg cyfr w osobnej linii (w kolejności występowania).
+* Znalezione ciągi cyfr, każdy w osobnej linii, w kolejności występowania (z zerami na początku, jeśli są),
+* `Brak ciągów cyfr.` — jeśli nie ma żadnego takiego ciągu.
 
 ### Przykład
 
@@ -35,28 +36,26 @@ Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
 91
 ```
 
+### Uwagi
+
+* Przydadzą się asercje: `(?<=...)` sprawdza, co stoi tuż przed dopasowaniem, a `(?=...)` — co stoi tuż po nim. Dowolną literę (także polską) opisuje klasa `[^\W\d_]` („znak słowa, który nie jest cyfrą ani `_`”).
+
 """
 
 import re
 
-
-def cyfry_w_slowach(tekst):
-    """
-    Funkcja zwraca liste cyfr w slowach w tekscie.
-    """
-    return [
-        re.sub("[^\d]", "", e) for e in tekst.split() if re.search(r"\B[0-9]+\B", e)
-    ]
+LITERA = r"[^\W\d_]"  # znak słowa, który nie jest cyfrą ani '_' — czyli litera
+CYFRY_PRZY_LITERZE = rf"(?<={LITERA})[0-9]+|[0-9]+(?={LITERA})"
 
 
-def test_cyfry_w_slowach():
-    assert cyfry_w_slowach("jerzy29 i an37a s3uc8ali91 lekcji jezyka polki3go") == [
-        "29",
-        "37",
-        "3891",
-        "3",
-    ]
+def cyfry_w_slowach(zdanie):
+    return re.findall(CYFRY_PRZY_LITERZE, zdanie)
 
 
 if __name__ == "__main__":
-    test_cyfry_w_slowach()
+    zdanie = input()
+    wynik = cyfry_w_slowach(zdanie)
+    if wynik:
+        print("\n".join(wynik))
+    else:
+        print("Brak ciągów cyfr.")

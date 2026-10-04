@@ -1,85 +1,96 @@
-"""
+r"""
 ZAD-05 — Zbiór potęgowy listy
 
 **Poziom:** ★★★
-**Tagi:** `list`, `subsets`, `combinatorics`
+**Tagi:** `list`, `subsets`, `combinatorics`, `rekurencja`
 
 ### Treść
 
-Otrzymujesz listę liczb naturalnych (mogą występować powtórzenia). Wygeneruj zbiór wszystkich możliwych podzbiorów tej listy.
+Otrzymujesz listę liczb całkowitych (mogą się powtarzać). Wypisz **wszystkie różne podzbiory** tej listy, łącznie ze zbiorem pustym i całą listą.
 
-Wynik ma zawierać wszystkie podzbiory (włącznie z pustym).
+Kolejność elementów w podzbiorze nie ma znaczenia: z listy `1 2 1` podzbiór złożony z `1` i `2` powstaje na dwa sposoby, ale wypisujemy go **tylko raz**.
 
 ### Wejście
 
-* 1 linia: lista liczb naturalnych `A`
+* 1. linia: `n` — długość listy
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-* 1 linia: lista list (wszystkie podzbiory)
+Każdy podzbiór w osobnej linii, zapisany jak lista w Pythonie (tak wypisuje ją `print(lista)`):
+
+* elementy podzbioru w kolejności niemalejącej, w nawiasach kwadratowych, oddzielone przecinkiem i spacją, np. `[1, 1, 2]`; pusty podzbiór to `[]`,
+* podzbiory uporządkowane **leksykograficznie**: porównujemy pierwsze elementy (jako liczby, więc `9` jest przed `10`), przy remisie drugie itd.; podzbiór, który jest początkiem dłuższego, stoi przed nim (np. `[1]` przed `[1, 1]`). Tak porównuje listy Python, więc `sorted()` na liście list daje dokładnie tę kolejność.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 10`
+* elementy listy są z przedziału $[-100, 100]$
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[1, 2, 1]
+3
+1 2 1
 ```
 
 **Wyjście:**
 
 ```
-[[], [1], [2], [1, 2], [1, 1], [2, 1], [1, 1, 2], [1, 2, 1]]
+[]
+[1]
+[1, 1]
+[1, 1, 2]
+[1, 2]
+[2]
 ```
 
 ### Uwagi
 
-* Jeśli sprawdzarka wymaga konkretnej kolejności podzbiorów, musi być ona opisana w treści — w przeciwnym razie dopuszczalna może być dowolna. (Jeśli chcesz, mogę dopisać sztywną konwencję kolejności, ale bez rozwiązań.)
+* Wygodnie jest najpierw posortować listę, a potem generować podzbiory rekurencyjnie (dla każdego elementu: bierzemy go albo nie). Aby uniknąć powtórzeń, na danym poziomie rekurencji pomijaj element równy poprzedniemu.
+
+### Kod startowy
+
+```python
+def podzbiory(liczby):
+    wynik = []
+    return wynik
+
+
+n = int(input())
+liczby = [int(x) for x in input().split()]
+for podzbior in podzbiory(liczby):
+    print(podzbior)
+```
 
 """
 
 
-def zbior_potegowy(lista):
-    # wymaga sortowania O(nlogn)
-    lista.sort()
+def podzbiory(liczby):
+    """Zwraca wszystkie różne podzbiory (posortowane listy) w kolejności leksykograficznej."""
+    liczby = sorted(liczby)
+    wynik = []
+    obecny = []
 
-    N = int(pow(2, len(lista)))
-    zbior_potegowy = set()
+    def generuj(start):
+        wynik.append(list(obecny))
 
-    for i in range(N):
-        subset = [lista[j] for j in range(len(lista)) if i & (1 << j)]
-        zbior_potegowy.add(tuple(subset))
+        for i in range(start, len(liczby)):
+            # Ta sama wartość na tym samym poziomie dałaby powtórzony podzbiór.
+            if i > start and liczby[i] == liczby[i - 1]:
+                continue
+            obecny.append(liczby[i])
+            generuj(i + 1)
+            obecny.pop()
 
-    return zbior_potegowy
-
-
-# Testy Poprawnosci
-def test_1():
-    lista = [1, 2, 1]
-    wynik = {(1, 2), (1,), (2,), (1, 1, 2), (), (1, 1)}
-
-    assert sorted(zbior_potegowy(lista)) == sorted(wynik)
-
-
-def test_2():
-    lista = [5, 3]
-    wynik = {(), (3,), (3, 5), (5,)}
-
-    assert sorted(zbior_potegowy(lista)) == sorted(wynik)
-
-
-def test_3():
-    lista = []
-    wynik = {()}
-
-    assert zbior_potegowy(lista) == wynik
-
-
-def main():
-    test_1()
-    test_2()
-    test_3()
+    generuj(0)
+    return wynik
 
 
 if __name__ == "__main__":
-    main()
+    n = int(input())
+    liczby = [int(x) for x in input().split()]
+    for podzbior in podzbiory(liczby):
+        print(podzbior)

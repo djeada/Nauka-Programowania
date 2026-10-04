@@ -32,42 +32,39 @@ source ../assert.sh
 wstaw_na_poczatek_pliku() {
     local plik="$1"
     local wiersz="$2"
+    local plik_tymczasowy="$plik.tmp"
 
-    local tresc_pliku=$(cat "$plik")
-    local tresc_pliku=$(cat "$plik")
-
-    echo "$wiersz" >"$plik"
-    echo "$wiersz" >"$plik"
-
-    echo "$tresc_pliku" >>"$plik"
-    echo "$tresc_pliku" >>"$plik"
+    {
+        echo "$wiersz"
+        cat "$plik"
+    } >"$plik_tymczasowy" && mv "$plik_tymczasowy" "$plik"
 }
 
 test_wstaw_na_poczatek_pliku() {
 
     mkdir -p 'test'
-    mkdir -p 'test'
 
     local plik='test/plik.txt'
-    local plik='test/plik.txt'
-    touch $plik
     local tresc_pliku='testowy plik'
-    echo $tresc_pliku >$plik
+    echo "$tresc_pliku" >"$plik"
 
     local wiersz='testowy wiersz'
-    local wiersz='testowy wiersz'
-    wstaw_na_poczatek_pliku $plik $wiersz
+    wstaw_na_poczatek_pliku "$plik" "$wiersz"
 
-    IFS=$'\n' tresc_pliku=($(cat $plik))
-    IFS=$'\n' tresc_pliku=($(cat $plik))
-    oczekiwane=($wiersz $tresc_pliku)
-    assertArrayEqual tresc_pliku oczekiwane $LINENO
+    local wynik
+    mapfile -t wynik <"$plik"
+    local oczekiwane=("$wiersz" "$tresc_pliku")
+    assertArrayEqual wynik oczekiwane $LINENO
 
-    rm -rf 'test'
     rm -rf 'test'
 }
 
 main() {
+    # Testy tworzą i usuwają pliki — pracuj w katalogu tymczasowym, nie w repozytorium.
+    local katalog_roboczy
+    katalog_roboczy=$(mktemp -d)
+    trap 'rm -rf "$katalog_roboczy"' EXIT
+    cd "$katalog_roboczy" || exit 1
     test_wstaw_na_poczatek_pliku
 }
 

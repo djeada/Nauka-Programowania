@@ -1,50 +1,45 @@
-"""
+r"""
 ZAD-14 — Napis z liczb od 1 do n
 
 **Poziom:** ★☆☆
-**Tagi:** `pętle`, `string`
+**Tagi:** `napisy`, `pętle`, `konkatenacja`
 
 ### Treść
 
-Wczytaj `n` i wypisz napis złożony z kolejnych liczb od 1 do `n`, bez separatorów.
+Wczytaj liczbę `n` i zbuduj napis złożony z kolejnych liczb od 1 do `n` zapisanych jedna za drugą, bez separatorów. Wypisz ten napis.
 
 ### Wejście
 
-* 1. linia: liczba naturalna `n` (n ≥ 1)
+* 1. linia: liczba naturalna `n` ($n \ge 1$)
 
 ### Wyjście
 
-* 1. linia: ciąg `1..n` bez spacji
+Jedna linia: napis `123…n`.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-3
+11
 ```
 
 **Wyjście:**
 
 ```
-123
+1234567891011
 ```
 
 """
 
 
-def liczby(n):
+def napis_z_liczb(n):
     napis = ""
-    for i in range(1, n + 1):
-        napis += str(i) + ", "
-    return napis[:-2]
-
-
-def test_liczby():
-    assert liczby(-1) == ""
-    assert liczby(5) == "1, 2, 3, 4, 5"
+    for liczba in range(1, n + 1):
+        napis += str(liczba)
+    return napis
 
 
 if __name__ == "__main__":
-
-    test_liczby()
+    n = int(input())
+    print(napis_z_liczb(n))

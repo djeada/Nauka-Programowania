@@ -39,14 +39,15 @@ Jerzy29 i An37a s3łuchali91 lekcji 22 z języka polskiego
 import java.util.*;
 
 public class Main {
-  // Wyodrębnia ciągi cyfr z tekstu
+  // Wyodrębnia cyfry ze słów, które zawierają zarówno cyfry, jak i inne znaki
+  // (samodzielne liczby oddzielone spacjami są pomijane)
   // Złożoność czasowa: O(n) gdzie n to długość napisu
   // Złożoność pamięciowa: O(m) gdzie m to liczba znalezionych ciągów cyfr
   public static List<String> cyfryV1(String napis) {
-    String[] tablica = napis.split("\\p{Punct}+");
+    String[] tablica = napis.trim().split("\\s+");
     List<String> lista = new ArrayList<String>();
     for (String slowo : tablica) {
-      if (slowo.matches("[0-9]+") && !slowo.matches("[^0-9]+")) {
+      if (slowo.matches(".*[0-9].*") && !slowo.matches("[0-9]+")) {
         lista.add(slowo.replaceAll("[^0-9]", ""));
       }
     }

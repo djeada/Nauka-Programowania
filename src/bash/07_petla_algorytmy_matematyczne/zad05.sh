@@ -35,8 +35,8 @@ source ../assert.sh
 
 nwdV1() {
 
-    a=$1
-    b=$2
+    local a=$1
+    local b=$2
 
     if (( $a % $b == 0)); then
         echo $b
@@ -47,8 +47,9 @@ nwdV1() {
 
 nwdV2() {
 
-    a=$1
-    b=$2
+    local a=$1
+    local b=$2
+    local c
 
     while [ $b -ne $(($a % $b)) ]; do
         c=$b
@@ -64,24 +65,32 @@ nwdV2() {
 }
 
 test1() {
-    test1() {
-        a=14
-        b=21
-        wynik=7
-        assert "$wynik -eq $(nwdV1 $a $b)" $LINENO
-    }
+    a=14
+    b=21
+    wynik=7
+    assert "$wynik -eq $(nwdV1 $a $b)" $LINENO
+}
 
-    test2() {
-        a=14
-        b=21
-        wynik=7
-        assert "$wynik -eq $(nwdV2 $a $b)" $LINENO
-    }
+test2() {
+    a=14
+    b=21
+    wynik=7
+    assert "$wynik -eq $(nwdV2 $a $b)" $LINENO
+}
 
-    main() {
-        test1
-        test2
-    }
+test3() {
+    a=60
+    b=45
+    wynik=15
+    assert "$wynik -eq $(nwdV1 $a $b)" $LINENO
+    assert "$wynik -eq $(nwdV2 $a $b)" $LINENO
+}
 
-    main "$@"
+main() {
+    test1
+    test2
+    test3
+}
+
+main "$@"
 

@@ -1,7 +1,7 @@
 {
   "file": "20_operacje_na_plikach.md",
-  "chapter_title": "Rozdział: Operacje na plikach (stdin/stdout)",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Ścieżki wczytuj jako całe linie (mogą zawierać spacje).\n* Rozszerzenia podawane są **z kropką**, np. `.txt`.\n* Jeśli zadanie wymaga wypisania listy lub słownika — wypisz je w formacie jak w przykładach (np. `['a', 'b']`, `{ 'a': 1 }`).\n* W zadaniach „modyfikujących pliki” w **wyjściu może nie być nic** — liczy się wykonana operacja (jeśli środowisko testujące to sprawdza).",
+  "chapter_title": "Rozdział 20: Operacje na plikach",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin), wykonywaniu operacji na plikach i folderach oraz wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie jest osobnym, niezależnym programem.**\n\n**Konwencje wspólne:**\n\n* Program działa na plikach w **katalogu roboczym**, czyli w folderze, w którym jest uruchamiany. Wszystkie ścieżki na wejściu są **względne** wobec katalogu roboczego i używają `/` jako separatora, np. `dane/raport.txt`. Ścieżki wczytuj jako całe linie — mogą zawierać spacje.\n* Sprawdzarka przed każdym testem tworzy nowy katalog roboczy z plikami opisanymi w teście, uruchamia program, a potem sprawdza zarówno wypisany tekst, jak i zawartość plików.\n* W przykładach **Pliki przed:** pokazuje zawartość katalogu roboczego przed uruchomieniem programu, a **Pliki po:** — stan wybranych plików po jego zakończeniu. Każda linia to ścieżka pliku, a linie zaczynające się od `| ` to kolejne wiersze jego treści. Ścieżka zakończona `/` to pusty folder, `(rozmiar: N B)` oznacza plik o rozmiarze N bajtów, a `(usunięty)` — plik, którego po zakończeniu programu ma już nie być.\n* Pliki tekstowe są zapisane w kodowaniu UTF-8 — otwieraj je przez `open(sciezka, encoding=\"utf-8\")`.\n* **Rozszerzenie** to końcówka nazwy pliku od ostatniej kropki (razem z nią), np. `archiwum.tar.gz` ma rozszerzenie `.gz`. Rozszerzenia porównuj **bez względu na wielkość liter** (`.TXT` to też `.txt`).\n* Listy plików wypisuj po jednym w linii, jako ścieżki **względem podanego folderu** z separatorem `/` (np. `2024/raport.txt`), posortowane rosnąco tak, jak sortuje napisy funkcja `sorted()`. Na Windowsie ścieżki mają separator `\\` — zamień go na `/` (np. metodą `Path.as_posix()`).\n* Komunikaty dla przypadków brzegowych wypisuj dokładnie w podanej postaci, np. `Folder nie istnieje.`, `Plik nie istnieje.`, `Brak plików.`\n* Program nie wypisuje komunikatów typu „Podaj ścieżkę:”. Tekst podany w `input(\"…\")` jest ignorowany przez sprawdzarkę.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -15,27 +15,94 @@
         "os",
         "pathlib"
       ],
-      "description": "Otrzymujesz ścieżkę w systemie plików. Sprawdź, czy odnosi się do istniejącego **pliku lub folderu**.",
-      "input": "* 1 linia: `path` (napis — ścieżka)",
-      "output": "* 1 linia: `Prawda` jeśli ścieżka istnieje, w przeciwnym razie `Fałsz`",
+      "description": "Wczytaj ścieżkę i sprawdź, co się pod nią znajduje w katalogu roboczym. Wypisz:\n\n* `plik` — jeśli ścieżka wskazuje istniejący plik,\n* `folder` — jeśli ścieżka wskazuje istniejący folder,\n* `brak` — jeśli pod tą ścieżką nic nie ma.",
+      "input": "* 1. linia: ścieżka (względna, z `/` jako separatorem; może zawierać spacje)",
+      "output": "Jedno słowo: `plik`, `folder` albo `brak`.",
       "examples": [
         {
-          "input": "C:\\Users\\Username\\Documents\\plik.txt",
-          "output": "Prawda"
+          "input": "dane/raport.txt",
+          "output": "plik",
+          "explanation": "",
+          "files": {
+            "dane/raport.txt": "Raport kwartalny\n"
+          }
+        },
+        {
+          "input": "dane",
+          "output": "folder",
+          "explanation": "",
+          "files": {
+            "dane/raport.txt": "Raport kwartalny\n"
+          }
+        },
+        {
+          "input": "raport.txt",
+          "output": "brak",
+          "explanation": "Plik `raport.txt` leży w folderze `dane`, a nie bezpośrednio w katalogu roboczym.",
+          "files": {
+            "dane/raport.txt": "Raport kwartalny\n"
+          }
         }
       ],
       "testcases": [
         {
-          "input": "/tmp/np/exist",
-          "output": "Prawda"
+          "input": "dokumenty/umowa.pdf",
+          "output": "plik",
+          "files": {
+            "dokumenty/umowa.pdf": "PDF"
+          }
         },
         {
-          "input": "/tmp/np/missing",
-          "output": "Fałsz"
+          "input": "dokumenty",
+          "output": "folder",
+          "files": {
+            "dokumenty/umowa.pdf": "PDF"
+          }
+        },
+        {
+          "input": "main.py",
+          "output": "brak",
+          "files": {
+            "projekt/src/main.py": "print(1)"
+          }
+        },
+        {
+          "input": "projekt/src",
+          "output": "folder",
+          "files": {
+            "projekt/src/main.py": "print(1)"
+          }
+        },
+        {
+          "input": "puste",
+          "output": "folder",
+          "files": {
+            "puste/": ""
+          }
+        },
+        {
+          "input": "moje dokumenty/lista zakupów.txt",
+          "output": "plik",
+          "files": {
+            "moje dokumenty/lista zakupów.txt": "mleko"
+          }
+        },
+        {
+          "input": "dane",
+          "output": "brak",
+          "files": {}
+        },
+        {
+          "input": "dokumenty/umowa",
+          "output": "brak",
+          "files": {
+            "dokumenty/umowa.pdf": "PDF"
+          }
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Przydatne funkcje: `os.path.isfile()` i `os.path.isdir()` albo metody `Path.is_file()` i `Path.is_dir()` z modułu `pathlib`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -49,27 +116,112 @@
         "listdir",
         "pathlib"
       ],
-      "description": "Otrzymujesz ścieżkę do folderu i rozszerzenie (np. `.txt`). Znajdź wszystkie pliki o tym rozszerzeniu znajdujące się **bezpośrednio** w tym folderze (bez przeszukiwania podfolderów). Zwróć listę nazw plików.",
-      "input": "* 1 linia: `folder_path`\n* 2 linia: `ext` (np. `.txt`)",
-      "output": "* 1 linia: lista nazw plików w formacie `['a.txt', 'b.txt']`",
+      "description": "Wczytaj ścieżkę folderu i rozszerzenie (np. `.txt`). Wypisz nazwy wszystkich **plików** o tym rozszerzeniu, które leżą **bezpośrednio** w tym folderze. Nie zaglądaj do podfolderów. Foldery pomijaj, nawet jeśli ich nazwa wygląda jak nazwa pliku (np. folder `stare.txt`).\n\nRozszerzenia porównuj bez względu na wielkość liter, ale nazwy wypisuj dokładnie tak, jak są zapisane.",
+      "input": "* 1. linia: ścieżka folderu\n* 2. linia: rozszerzenie z kropką, np. `.txt`",
+      "output": "* Nazwy pasujących plików (same nazwy, bez ścieżki folderu), każda w osobnej linii, posortowane rosnąco.\n* `Brak plików.` — jeśli w folderze nie ma żadnego pasującego pliku.\n* `Folder nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego folderu.",
       "examples": [
         {
-          "input": "C:\\Users\\Username\\Documents\n.txt",
-          "output": "['dokument1.txt', 'notatki.txt', 'lista_zakupów.txt']"
+          "input": "dokumenty\n.txt",
+          "output": "lista zakupów.txt\nnotatki.TXT",
+          "explanation": "Plik `stare/archiwum.txt` leży w podfolderze, więc go pomijamy.",
+          "files": {
+            "dokumenty/lista zakupów.txt": "mleko\nchleb\n",
+            "dokumenty/notatki.TXT": "Zadzwonić do Ani.\n",
+            "dokumenty/zdjęcie.png": "",
+            "dokumenty/stare/archiwum.txt": ""
+          }
+        },
+        {
+          "input": "zdjecia\n.png",
+          "output": "Folder nie istnieje.",
+          "explanation": "",
+          "files": {}
         }
       ],
       "testcases": [
         {
-          "input": "/tmp/np/docs\n.txt",
-          "output": "['a.txt', 'b.txt']"
+          "input": "raporty\n.txt",
+          "output": "q1.txt\nq2.txt",
+          "files": {
+            "raporty/q2.txt": "a",
+            "raporty/q1.txt": "b",
+            "raporty/wykres.png": "c",
+            "raporty/2023/q4.txt": "d"
+          }
         },
         {
-          "input": "/tmp/np/empty\n.txt",
-          "output": "[]"
+          "input": "dane\n.txt",
+          "output": "RAPORT.TXT\na.Txt\nd.txt",
+          "files": {
+            "dane/RAPORT.TXT": "1",
+            "dane/a.Txt": "2",
+            "dane/b.txt.bak": "3",
+            "dane/c.csv": "4",
+            "dane/d.txt": "5"
+          }
+        },
+        {
+          "input": "projekt\n.py",
+          "output": "main.py\nutils.py",
+          "files": {
+            "projekt/main.py": "",
+            "projekt/modul.py/__init__.py": "",
+            "projekt/test.pyc": "",
+            "projekt/utils.py": ""
+          }
+        },
+        {
+          "input": "a/b\n.md",
+          "output": "c.md\nd.md\nf.MD",
+          "files": {
+            "a/b/c.md": "",
+            "a/b/d.md": "",
+            "a/b/f.MD": "",
+            "a/e.md": ""
+          }
+        },
+        {
+          "input": "moje pliki\n.jpg",
+          "output": "zdjęcie 1.jpg\nzdjęcie 2.JPG",
+          "files": {
+            "moje pliki/zdjęcie 1.jpg": "",
+            "moje pliki/zdjęcie 2.JPG": "",
+            "moje pliki/film.mp4": ""
+          }
+        },
+        {
+          "input": "puste\n.txt",
+          "output": "Brak plików.",
+          "files": {
+            "puste/": ""
+          }
+        },
+        {
+          "input": "dane\n.txt",
+          "output": "Brak plików.",
+          "files": {
+            "dane/a.csv": "x",
+            "dane/b.txt/c.csv": "y"
+          }
+        },
+        {
+          "input": "dokumenty\n.txt",
+          "output": "Folder nie istnieje.",
+          "files": {
+            "dane/a.txt": "x"
+          }
+        },
+        {
+          "input": "raport.txt\n.txt",
+          "output": "Folder nie istnieje.",
+          "files": {
+            "raport.txt": "x"
+          }
         }
       ],
       "constraints": "",
-      "notes": "* Porównuj rozszerzenia **bez względu na wielkość liter** (np. `.TXT` też pasuje do `.txt`)."
+      "notes": "* Zawartość folderu zwraca `os.listdir()` albo `Path.iterdir()`. Rozszerzenie pliku poda `os.path.splitext()` albo `Path.suffix`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-03",
@@ -83,27 +235,104 @@
         "recursive",
         "pathlib"
       ],
-      "description": "Otrzymujesz nazwę pliku (np. `raport.docx`). Przeszukaj cały system plików i znajdź wszystkie pliki o tej nazwie. Wypisz listę pełnych ścieżek do znalezionych plików.",
-      "input": "* 1 linia: `filename` (np. `raport.docx`)",
-      "output": "* 1 linia: lista pełnych ścieżek (napisy)",
+      "description": "Wczytaj ścieżkę folderu i nazwę pliku (np. `raport.txt`). Przeszukaj ten folder **i wszystkie jego podfoldery** (na dowolnej głębokości) i wypisz ścieżki wszystkich plików o dokładnie takiej nazwie.\n\n* Nazwy porównuj dokładnie — wielkość liter ma znaczenie (`Raport.txt` to inna nazwa niż `raport.txt`).\n* Wypisuj tylko pliki. Folder o szukanej nazwie nie jest wynikiem, ale jego wnętrze też przeszukaj.\n* Ścieżki wypisuj względem podanego folderu. Folder `.` oznacza cały katalog roboczy.",
+      "input": "* 1. linia: ścieżka folderu, w którym zaczynasz szukanie (`.` = cały katalog roboczy)\n* 2. linia: nazwa pliku",
+      "output": "* Ścieżki znalezionych plików względem podanego folderu, każda w osobnej linii, posortowane rosnąco.\n* `Nie znaleziono.` — jeśli nie ma żadnego pliku o tej nazwie.\n* `Folder nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego folderu.",
       "examples": [
         {
-          "input": "raport.docx",
-          "output": "[\n  'C:\\Users\\Username\\Documents\\raport.docx',\n  'D:\\Projekty\\Raporty\\raport.docx',\n  'E:\\Backup\\raport.docx'\n]"
+          "input": ".\nraport.txt",
+          "output": "2023/raport.txt\n2023/styczeń/raport.txt\nraport.txt",
+          "explanation": "`2024/Raport.txt` ma inną nazwę (wielka litera), a `2023/raport.docx` — inne rozszerzenie.",
+          "files": {
+            "raport.txt": "",
+            "2023/raport.txt": "",
+            "2023/raport.docx": "",
+            "2023/styczeń/raport.txt": "",
+            "2024/Raport.txt": ""
+          }
+        },
+        {
+          "input": "2023\nraport.txt",
+          "output": "raport.txt\nstyczeń/raport.txt",
+          "explanation": "Ścieżki są podane względem folderu `2023`.",
+          "files": {
+            "raport.txt": "",
+            "2023/raport.txt": "",
+            "2023/raport.docx": "",
+            "2023/styczeń/raport.txt": "",
+            "2024/Raport.txt": ""
+          }
         }
       ],
       "testcases": [
         {
-          "input": "report.txt",
-          "output": "['/tmp/np/a/report.txt', '/tmp/np/b/report.txt']"
+          "input": ".\nnotatki.md",
+          "output": "notatki.md\nprojekty/notatki.md\nprojekty/web/notatki.md",
+          "files": {
+            "notatki.md": "a",
+            "projekty/notatki.md": "b",
+            "projekty/web/notatki.md": "c",
+            "projekty/web/notatki.txt": "d",
+            "inne/Notatki.md": "e"
+          }
         },
         {
-          "input": "missing.txt",
-          "output": "[]"
+          "input": "projekty\nnotatki.md",
+          "output": "notatki.md\nweb/notatki.md",
+          "files": {
+            "notatki.md": "a",
+            "projekty/notatki.md": "b",
+            "projekty/web/notatki.md": "c",
+            "projekty/web/notatki.txt": "d",
+            "inne/Notatki.md": "e"
+          }
+        },
+        {
+          "input": ".\nraport.md",
+          "output": "Nie znaleziono.",
+          "files": {
+            "notatki.md": "a",
+            "projekty/notatki.md": "b",
+            "projekty/web/notatki.md": "c",
+            "projekty/web/notatki.txt": "d",
+            "inne/Notatki.md": "e"
+          }
+        },
+        {
+          "input": "a/b\ncel.bin",
+          "output": "c/d/e/cel.bin\nx/cel.bin",
+          "files": {
+            "a/b/c/d/e/cel.bin": "",
+            "a/cel.bin": "",
+            "a/b/x/cel.bin": ""
+          }
+        },
+        {
+          "input": "kopie\nraport.txt",
+          "output": "raport.txt/raport.txt",
+          "files": {
+            "kopie/raport.txt/raport.txt": "x",
+            "kopie/raport.txt/inny.txt": "y"
+          }
+        },
+        {
+          "input": "puste\nraport.txt",
+          "output": "Nie znaleziono.",
+          "files": {
+            "puste/": ""
+          }
+        },
+        {
+          "input": "kopie\na.txt",
+          "output": "Folder nie istnieje.",
+          "files": {
+            "dane/a.txt": ""
+          }
         }
       ],
       "constraints": "",
-      "notes": "* W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów — program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca)."
+      "notes": "* Wszystkie pliki w folderze i jego podfolderach zwraca `os.walk()` albo `Path.rglob(\"*\")`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-04",
@@ -116,27 +345,81 @@
         "read",
         "encoding"
       ],
-      "description": "Otrzymujesz ścieżkę do pliku tekstowego. Wczytaj zawartość pliku i wypisz ją.",
-      "input": "* 1 linia: `file_path`",
-      "output": "* treść pliku (dokładnie taka jak w pliku)",
+      "description": "Wczytaj ścieżkę pliku tekstowego i wypisz jego treść dokładnie tak, jak jest zapisana w pliku (wiersz po wierszu, razem z pustymi wierszami w środku).",
+      "input": "* 1. linia: ścieżka pliku",
+      "output": "* Treść pliku. Pusty plik — nic nie wypisuj.\n* `Plik nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego pliku (np. wskazuje folder albo nic).",
       "examples": [
         {
-          "input": "C:\\Users\\Username\\Documents\\wiadomość.txt",
-          "output": "Witaj! To jest przykładowa treść pliku tekstowego."
+          "input": "wiadomość.txt",
+          "output": "Witaj!\nTo jest przykładowa treść pliku tekstowego.",
+          "explanation": "",
+          "files": {
+            "wiadomość.txt": "Witaj!\nTo jest przykładowa treść pliku tekstowego.\n"
+          }
+        },
+        {
+          "input": "list.txt",
+          "output": "Plik nie istnieje.",
+          "explanation": "",
+          "files": {
+            "wiadomość.txt": "Witaj!\n"
+          }
         }
       ],
       "testcases": [
         {
-          "input": "/tmp/np/hello.txt",
-          "output": "Hello"
+          "input": "wiadomosc.txt",
+          "output": "Cześć!\nTo jest wiadomość testowa.",
+          "files": {
+            "wiadomosc.txt": "Cześć!\nTo jest wiadomość testowa.\n"
+          }
         },
         {
-          "input": "/tmp/np/two_lines.txt",
-          "output": "Line1\nLine2"
+          "input": "dane/wiersz.txt",
+          "output": "Litwo! Ojczyzno moja!\nty jesteś jak zdrowie.\n\nIle cię trzeba cenić,\nten tylko się dowie,",
+          "files": {
+            "dane/wiersz.txt": "Litwo! Ojczyzno moja!\nty jesteś jak zdrowie.\n\nIle cię trzeba cenić,\nten tylko się dowie,"
+          }
+        },
+        {
+          "input": "moje notatki/zakupy.txt",
+          "output": "mleko\nchleb\nmasło",
+          "files": {
+            "moje notatki/zakupy.txt": "mleko\nchleb\nmasło"
+          }
+        },
+        {
+          "input": "kod.py",
+          "output": "def f():\n    return 42",
+          "files": {
+            "kod.py": "def f():\n    return 42\n"
+          }
+        },
+        {
+          "input": "pusty.txt",
+          "output": "",
+          "files": {
+            "pusty.txt": ""
+          }
+        },
+        {
+          "input": "a.txt",
+          "output": "Plik nie istnieje.",
+          "files": {
+            "dane/a.txt": "x"
+          }
+        },
+        {
+          "input": "dane",
+          "output": "Plik nie istnieje.",
+          "files": {
+            "dane/a.txt": "x"
+          }
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Sprawdzarka ignoruje końcowe spacje w wierszach i puste wiersze na samym końcu wyjścia, więc nie musisz się przejmować tym, czy plik kończy się znakiem nowej linii.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05",
@@ -149,27 +432,73 @@
         "sort",
         "list"
       ],
-      "description": "Otrzymujesz ścieżkę do pliku tekstowego, w którym w każdej linii znajduje się jeden adres IP. Wczytaj wszystkie adresy, posortuj je **alfabetycznie** i wypisz jako listę.",
-      "input": "* 1 linia: `file_path`",
-      "output": "* 1 linia: lista adresów IP jako napisy, np. `['10.0.0.1', ...]`",
+      "description": "Wczytaj ścieżkę pliku tekstowego, w którym każdy niepusty wiersz zawiera jeden adres IPv4 — cztery liczby od 0 do 255 oddzielone kropkami, np. `192.168.1.10`. Wypisz wszystkie adresy posortowane **rosnąco według wartości liczbowych**: najpierw według pierwszej liczby, przy równych — według drugiej, potem trzeciej i czwartej.\n\nZwykłe porównywanie napisów da złą kolejność: `\"192.168.1.10\" < \"192.168.1.2\"`, chociaż $10 > 2$.",
+      "input": "* 1. linia: ścieżka pliku z adresami",
+      "output": "* Adresy w kolejności rosnącej, każdy w osobnej linii. Powtarzające się adresy wypisz tyle razy, ile razy występują w pliku.\n* `Brak adresów.` — jeśli plik nie zawiera żadnego adresu.\n* `Plik nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego pliku.",
       "examples": [
         {
-          "input": "C:\\Users\\Username\\Documents\\adresy_ip.txt",
-          "output": "['10.0.0.1', '172.16.0.5', '192.168.1.10', '192.168.1.2']"
+          "input": "adresy_ip.txt",
+          "output": "10.0.0.1\n172.16.0.5\n192.168.1.2\n192.168.1.10",
+          "explanation": "",
+          "files": {
+            "adresy_ip.txt": "192.168.1.10\n10.0.0.1\n192.168.1.2\n172.16.0.5\n"
+          }
         }
       ],
       "testcases": [
         {
-          "input": "/tmp/np/ips.txt",
-          "output": "['10.0.0.1', '192.168.1.2']"
+          "input": "logi/ip.txt",
+          "output": "1.0.0.1\n1.1.1.1\n8.8.4.4\n8.8.8.8",
+          "files": {
+            "logi/ip.txt": "8.8.8.8\n1.1.1.1\n8.8.4.4\n1.0.0.1\n"
+          }
         },
         {
-          "input": "/tmp/np/ips2.txt",
-          "output": "['1.1.1.1', '8.8.8.8']"
+          "input": "serwery.txt",
+          "output": "2.0.0.0\n10.0.0.3\n10.0.0.20\n10.0.0.100\n10.0.1.1",
+          "files": {
+            "serwery.txt": "10.0.0.20\n10.0.0.3\n10.0.1.1\n2.0.0.0\n10.0.0.100\n"
+          }
+        },
+        {
+          "input": "ip.txt",
+          "output": "9.255.255.255\n100.2.3.4\n100.2.3.4\n100.10.0.0",
+          "files": {
+            "ip.txt": "100.2.3.4\n\n9.255.255.255\n100.2.3.4\n100.10.0.0\n"
+          }
+        },
+        {
+          "input": "jeden.txt",
+          "output": "127.0.0.1",
+          "files": {
+            "jeden.txt": "127.0.0.1"
+          }
+        },
+        {
+          "input": "puste.txt",
+          "output": "Brak adresów.",
+          "files": {
+            "puste.txt": ""
+          }
+        },
+        {
+          "input": "puste wiersze.txt",
+          "output": "Brak adresów.",
+          "files": {
+            "puste wiersze.txt": "\n\n"
+          }
+        },
+        {
+          "input": "ip.txt",
+          "output": "Plik nie istnieje.",
+          "files": {
+            "adresy.txt": "1.2.3.4"
+          }
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* Puste wiersze pomiń. Wiersze z adresami nie zawierają spacji ani innych znaków.",
+      "notes": "* Wygodnie jest sortować z kluczem: `sorted(adresy, key=...)`, gdzie klucz zamienia adres na krotkę czterech liczb całkowitych.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06",
@@ -180,30 +509,82 @@
       "tags": [
         "files",
         "stats",
-        "dict",
-        "regex"
+        "dict"
       ],
-      "description": "Otrzymujesz ścieżkę do pliku tekstowego. Oblicz:\n\na) liczbę wierszy,\nb) łączną liczbę słów (słowa = ciągi liter),\nc) średnią długość wiersza (w znakach),\nd) średnią liczbę słów na wiersz,\ne) częstość występowania słów (słownik).",
-      "input": "* 1 linia: `file_path`",
-      "output": "5 elementów w tej kolejności:\n\n1. liczba wierszy\n2. liczba słów\n3. średnia długość wiersza\n4. średnia liczba słów na wiersz\n5. słownik częstości słów\n\nKażdy element wypisz w osobnej linii.",
+      "description": "Wczytaj ścieżkę pliku tekstowego i oblicz:\n\n1. liczbę wierszy,\n2. łączną liczbę słów,\n3. średnią długość wiersza (w znakach),\n4. średnią liczbę słów w wierszu,\n5. ile razy występuje każde słowo.\n\nDefinicje:\n\n* **Wiersze** to fragmenty tekstu rozdzielone znakami nowej linii. Znak nowej linii na samym końcu pliku nie tworzy dodatkowego, pustego wiersza (tak działa `str.splitlines()`), ale puste wiersze w środku pliku się liczą.\n* **Długość wiersza** to liczba jego znaków (bez znaku nowej linii), łącznie ze spacjami i interpunkcją.\n* **Słowo** to najdłuższy ciąg kolejnych liter (także polskich). Wszystkie inne znaki — spacje, cyfry, interpunkcja, myślniki — rozdzielają słowa, np. `Mark-up 2024r.` zawiera słowa `Mark`, `up` i `r`.\n* Licząc wystąpienia, nie rozróżniaj wielkości liter: `Ala` i `ala` to to samo słowo.",
+      "input": "* 1. linia: ścieżka pliku",
+      "output": "* 1. linia: liczba wierszy,\n* 2. linia: liczba słów,\n* 3. linia: średnia długość wiersza z dokładnie 2 miejscami po przecinku,\n* 4. linia: średnia liczba słów w wierszu z dokładnie 2 miejscami po przecinku,\n* dalej: dla każdego różnego słowa jedna linia `słowo: liczba` — słowo małymi literami, w kolejności pierwszego wystąpienia w pliku. Jeśli plik nie zawiera słów, ta część jest pusta.\n\nPrzypadki szczególne (wypisz tylko komunikat):\n\n* `Plik jest pusty.` — jeśli plik nie zawiera żadnego znaku,\n* `Plik nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego pliku.",
       "examples": [
         {
-          "input": "C:\\Users\\Username\\Documents\\tekst.txt",
-          "output": "4\n12\n17.75\n3.0\n{'ala': 2, 'ma': 2, 'kota': 1, 'kot': 1, 'na': 1, 'imię': 1, 'filemon': 1, 'filemona': 1, 'lubi': 2, 'mleko': 1}"
+          "input": "tekst.txt",
+          "output": "4\n15\n19.25\n3.75\nala: 2\nma: 2\nkota: 2\nkot: 1\nna: 1\nimię: 1\nfilemon: 2\nlubi: 2\nmleko: 1\nfilemona: 1",
+          "explanation": "Wiersze mają 12, 23, 28 i 14 znaków, więc średnia długość to $\\frac{77}{4} = 19.25$, a średnia liczba słów to $\\frac{15}{4} = 3.75$.",
+          "files": {
+            "tekst.txt": "Ala ma kota.\nKot ma na imię Filemon.\nFilemon lubi mleko, Ala lubi\nkota Filemona!\n"
+          }
         }
       ],
       "testcases": [
         {
-          "input": "/tmp/np/text1.txt",
-          "output": "2\n6\n10.5\n3.0\n{'ala': 2, 'ma': 2, 'kota': 1, 'psa': 1}"
+          "input": "kot.txt",
+          "output": "2\n10\n20.00\n5.00\nala: 2\nma: 2\nkota: 1\na: 1\nkot: 1\nalę: 1\nlubi: 1\nkoty: 1",
+          "files": {
+            "kot.txt": "Ala ma kota, a kot ma Alę.\nAla lubi koty.\n"
+          }
         },
         {
-          "input": "/tmp/np/text2.txt",
-          "output": "2\n3\n6.0\n1.5\n{'one': 1, 'two': 1, 'three': 1}"
+          "input": "dane/zdania.txt",
+          "output": "2\n6\n15.00\n3.00\nmark: 1\nup: 1\nr: 1\nto: 1\nsłowa: 1\ntak: 1",
+          "files": {
+            "dane/zdania.txt": "Mark-up 2024r. to 3 słowa?\nTak!"
+          }
+        },
+        {
+          "input": "odstep.txt",
+          "output": "3\n4\n9.33\n1.33\npierwszy: 1\nwiersz: 2\ntrzeci: 1",
+          "files": {
+            "odstep.txt": "Pierwszy wiersz\n\nTrzeci wiersz\n"
+          }
+        },
+        {
+          "input": "jeden.txt",
+          "output": "1\n3\n17.00\n3.00\nzażółć: 1\ngęślą: 1\njaźń: 1",
+          "files": {
+            "jeden.txt": "Zażółć gęślą jaźń"
+          }
+        },
+        {
+          "input": "wielkie.txt",
+          "output": "1\n4\n15.00\n4.00\nala: 4",
+          "files": {
+            "wielkie.txt": "ALA Ala ala aLa"
+          }
+        },
+        {
+          "input": "liczby.txt",
+          "output": "2\n0\n5.00\n0.00",
+          "files": {
+            "liczby.txt": "123 456\n!!!\n"
+          }
+        },
+        {
+          "input": "pusty.txt",
+          "output": "Plik jest pusty.",
+          "files": {
+            "pusty.txt": ""
+          }
+        },
+        {
+          "input": "tekst.txt",
+          "output": "Plik nie istnieje.",
+          "files": {
+            "dane/tekst.txt": "Ala ma kota."
+          }
         }
       ],
       "constraints": "",
-      "notes": "* Jeżeli ujednolicisz wielkość liter — w słowniku używaj małych liter (jak w przykładzie).\n* Interpunkcję traktuj jako separator (usuń ją przy wyznaczaniu słów)."
+      "notes": "* Słowa łatwo wyodrębnić, zamieniając każdy znak, który nie jest literą (`znak.isalpha()`), na spację, a potem dzieląc wiersz metodą `split()`.\n* Słownik w Pythonie pamięta kolejność dodawania kluczy.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07",
@@ -216,22 +597,99 @@
         "write",
         "prepend"
       ],
-      "description": "Otrzymujesz ścieżkę do pliku tekstowego i wiersz tekstu. Dodaj ten wiersz na **początku** pliku.",
-      "input": "* 1 linia: `file_path`\n* 2 linia: `line_to_add` (może zawierać spacje)",
-      "output": "Brak.",
-      "examples": [],
-      "testcases": [
+      "description": "Wczytaj ścieżkę pliku tekstowego i wiersz tekstu. Dopisz ten wiersz na **początku** pliku — jako nowy, pierwszy wiersz. Dotychczasowa treść pliku ma pozostać bez zmian pod nowym wierszem. Pusty plik po zmianie zawiera tylko nowy wiersz.",
+      "input": "* 1. linia: ścieżka pliku\n* 2. linia: wiersz do dodania (może zawierać spacje)",
+      "output": "* Gdy plik istnieje — nic (wynikiem jest zmieniony plik).\n* `Plik nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego pliku. Wtedy nie twórz żadnego pliku.",
+      "examples": [
         {
-          "input": "/tmp/np/note.txt\nHEADER",
-          "output": ""
+          "input": "notatki.txt\nTODO:",
+          "output": "",
+          "explanation": "",
+          "files": {
+            "notatki.txt": "kupić mleko\nzadzwonić do babci\n"
+          },
+          "expected_files": {
+            "notatki.txt": "TODO:\nkupić mleko\nzadzwonić do babci\n"
+          }
         },
         {
-          "input": "/tmp/np/note2.txt\nSTART",
-          "output": ""
+          "input": "notatki.txt\nTo jest nowy wiersz dodany na początku pliku.",
+          "output": "Plik nie istnieje.",
+          "explanation": "Pliku nie było, więc program niczego nie tworzy.",
+          "files": {},
+          "expected_files": {
+            "notatki.txt": null
+          }
+        }
+      ],
+      "testcases": [
+        {
+          "input": "plan.txt\nPoniedziałek:",
+          "output": "",
+          "files": {
+            "plan.txt": "zakupy\nsprzątanie\n"
+          },
+          "expected_files": {
+            "plan.txt": "Poniedziałek:\nzakupy\nsprzątanie\n"
+          }
+        },
+        {
+          "input": "dane/log.txt\n=== Początek logu ===",
+          "output": "",
+          "files": {
+            "dane/log.txt": "linia 1\nlinia 2"
+          },
+          "expected_files": {
+            "dane/log.txt": "=== Początek logu ===\nlinia 1\nlinia 2"
+          }
+        },
+        {
+          "input": "pusty.txt\nPierwszy wiersz",
+          "output": "",
+          "files": {
+            "pusty.txt": ""
+          },
+          "expected_files": {
+            "pusty.txt": "Pierwszy wiersz"
+          }
+        },
+        {
+          "input": "b.txt\nnowy początek",
+          "output": "",
+          "files": {
+            "a.txt": "a",
+            "b.txt": "b\nbb"
+          },
+          "expected_files": {
+            "a.txt": "a",
+            "b.txt": "nowy początek\nb\nbb"
+          }
+        },
+        {
+          "input": "moje pliki/lista.txt\nZakupy:",
+          "output": "",
+          "files": {
+            "moje pliki/lista.txt": "\njajka\n"
+          },
+          "expected_files": {
+            "moje pliki/lista.txt": "Zakupy:\n\njajka\n"
+          }
+        },
+        {
+          "input": "log.txt\nABC",
+          "output": "Plik nie istnieje.",
+          "files": {
+            "dane/log.txt": "x"
+          },
+          "expected_files": {
+            "log.txt": null,
+            "dane/log.txt": "x"
+          }
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Do pliku nie da się „dopisać na początku” — wczytaj całą treść, a potem zapisz plik od nowa: najpierw nowy wiersz, potem starą treść.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-08",
@@ -245,22 +703,117 @@
         "txt",
         "csv"
       ],
-      "description": "Otrzymujesz ścieżkę do folderu. Wykonaj:\n\na) dopisz swoje inicjały na końcu każdego pliku `.txt` w folderze i podfolderach,\nb) usuń **środkowy wiersz** z każdego pliku `.csv` w folderze i podfolderach\n(jeśli liczba wierszy jest parzysta — usuń **dolny z dwóch środkowych**).",
-      "input": "* 1 linia: `folder_path`",
-      "output": "Brak.",
-      "examples": [],
-      "testcases": [
+      "description": "Wczytaj ścieżkę folderu i inicjały (np. `A.D.`). W tym folderze **i wszystkich jego podfolderach**:\n\na) do każdego pliku `.txt` dopisz inicjały jako nowy, **ostatni wiersz**,\n\nb) z każdego pliku `.csv` usuń **środkowy wiersz** — gdy liczba wierszy jest parzysta, usuń **dolny** z dwóch środkowych.\n\nPozostałych plików nie zmieniaj. Na koniec wypisz ścieżki wszystkich zmienionych plików.\n\nSzczegóły:\n\n* Wiersze liczymy jak w `str.splitlines()`: znak nowej linii na końcu pliku nie tworzy dodatkowego, pustego wiersza.\n* Inicjały trafiają bezpośrednio pod dotychczasowy ostatni wiersz, bez pustego wiersza pomiędzy — także wtedy, gdy plik nie kończy się znakiem nowej linii. Pusty plik `.txt` po zmianie zawiera tylko inicjały.\n* W pliku `.csv` o $n$ wierszach usuwamy wiersz numer $\\lfloor n/2 \\rfloor + 1$ (licząc od 1): przy 3 wierszach — 2., przy 4 — 3., przy 1 — jedyny wiersz.",
+      "input": "* 1. linia: ścieżka folderu\n* 2. linia: inicjały",
+      "output": "* Ścieżki zmienionych plików względem podanego folderu, każda w osobnej linii, posortowane rosnąco.\n* `Brak plików.` — jeśli nie ma żadnego pliku `.txt` ani `.csv`.\n* `Folder nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego folderu.",
+      "examples": [
         {
-          "input": "/tmp/np/project",
-          "output": ""
-        },
-        {
-          "input": "/tmp/np/project2",
-          "output": ""
+          "input": "projekt\nA.D.",
+          "output": "2024/raport.txt\n2024/wyniki.csv\ndane.csv\nopis.txt",
+          "explanation": "`dane.csv` ma 3 wiersze, więc traci 2. wiersz; `wyniki.csv` ma 4 wiersze, więc traci 3. wiersz. Plik `main.py` się nie zmienia.",
+          "files": {
+            "projekt/opis.txt": "Projekt X\n",
+            "projekt/dane.csv": "a,1\nb,2\nc,3\n",
+            "projekt/main.py": "print(\"Projekt X\")\n",
+            "projekt/2024/raport.txt": "Raport roczny\n",
+            "projekt/2024/wyniki.csv": "x,1\ny,2\nz,3\nw,4\n"
+          },
+          "expected_files": {
+            "projekt/opis.txt": "Projekt X\nA.D.\n",
+            "projekt/dane.csv": "a,1\nc,3\n",
+            "projekt/main.py": "print(\"Projekt X\")\n",
+            "projekt/2024/raport.txt": "Raport roczny\nA.D.\n",
+            "projekt/2024/wyniki.csv": "x,1\ny,2\nw,4\n"
+          }
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "testcases": [
+        {
+          "input": "praca\nJ.K.",
+          "output": "dane.csv\nopis.txt\nrozdzial1/tabela.csv\nrozdzial1/tekst.txt",
+          "files": {
+            "praca/opis.txt": "Opis pracy",
+            "praca/dane.csv": "id,wynik\n1,10\n2,20\n",
+            "praca/skrypt.py": "print(1)",
+            "praca/rozdzial1/tekst.txt": "Wstęp\nTreść\n",
+            "praca/rozdzial1/tabela.csv": "a\nb\nc\nd\ne\nf\n"
+          },
+          "expected_files": {
+            "praca/opis.txt": "Opis pracy\nJ.K.",
+            "praca/dane.csv": "id,wynik\n2,20",
+            "praca/skrypt.py": "print(1)",
+            "praca/rozdzial1/tekst.txt": "Wstęp\nTreść\nJ.K.",
+            "praca/rozdzial1/tabela.csv": "a\nb\nc\ne\nf"
+          }
+        },
+        {
+          "input": "f\nX",
+          "output": "dwa.csv\njeden.csv\npusty.txt",
+          "files": {
+            "f/pusty.txt": "",
+            "f/jeden.csv": "tylko,ten\n",
+            "f/dwa.csv": "pierwszy\ndrugi"
+          },
+          "expected_files": {
+            "f/pusty.txt": "X",
+            "f/jeden.csv": "",
+            "f/dwa.csv": "pierwszy"
+          }
+        },
+        {
+          "input": "dok\nA.N.",
+          "output": "RAPORT.TXT\ndane.CSV",
+          "files": {
+            "dok/RAPORT.TXT": "Raport",
+            "dok/notatki.txt.bak": "kopia",
+            "dok/dane.CSV": "1\n2\n3\n4\n5",
+            "dok/arkusz.xlsx": "bin"
+          },
+          "expected_files": {
+            "dok/RAPORT.TXT": "Raport\nA.N.",
+            "dok/notatki.txt.bak": "kopia",
+            "dok/dane.CSV": "1\n2\n4\n5",
+            "dok/arkusz.xlsx": "bin"
+          }
+        },
+        {
+          "input": "w\nZ.Z.",
+          "output": "y.txt",
+          "files": {
+            "x.txt": "poza",
+            "w/y.txt": "w środku\n"
+          },
+          "expected_files": {
+            "x.txt": "poza",
+            "w/y.txt": "w środku\nZ.Z."
+          }
+        },
+        {
+          "input": "kod\nA.D.",
+          "output": "Brak plików.",
+          "files": {
+            "kod/main.py": "x",
+            "kod/lib/util.py": "y"
+          },
+          "expected_files": {
+            "kod/main.py": "x",
+            "kod/lib/util.py": "y"
+          }
+        },
+        {
+          "input": "projekty\nA.D.",
+          "output": "Folder nie istnieje.",
+          "files": {
+            "projekt/a.txt": "a"
+          },
+          "expected_files": {
+            "projekt/a.txt": "a"
+          }
+        }
+      ],
+      "constraints": "* Każdy plik `.csv` ma co najmniej jeden wiersz.",
+      "notes": "* Najpierw zbierz listę wszystkich plików (np. `sorted(Path(folder).rglob(\"*\"))`), a dopiero potem je zmieniaj.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-09",
@@ -274,22 +827,207 @@
         "size",
         "recursive"
       ],
-      "description": "Otrzymujesz ścieżkę do folderu. Usuń wszystkie pliki o rozmiarze **> 10240 bajtów** w tym folderze i jego podfolderach.",
-      "input": "* 1 linia: `folder_path`",
-      "output": "Brak.",
-      "examples": [],
+      "description": "Wczytaj ścieżkę folderu. Usuń wszystkie pliki większe niż **10 kB**, czyli o rozmiarze **większym niż 10240 bajtów**, z tego folderu **i wszystkich jego podfolderów**. Pliki o rozmiarze dokładnie 10240 bajtów zostają. Foldery zostają, nawet jeśli staną się puste.\n\nRozmiar to liczba bajtów na dysku, a nie liczba znaków w pliku — w kodowaniu UTF-8 litera `ą` zajmuje 2 bajty.",
+      "input": "* 1. linia: ścieżka folderu",
+      "output": "* Ścieżki usuniętych plików względem podanego folderu, każda w osobnej linii, posortowane rosnąco.\n* `Brak plików.` — jeśli żaden plik nie został usunięty.\n* `Folder nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego folderu.",
+      "examples": [
+        {
+          "input": "pobrane",
+          "output": "film.mp4\nobrazy/duże.png",
+          "explanation": "`ikona.png` ma dokładnie 10240 bajtów, więc zostaje.",
+          "files": {
+            "pobrane/film.mp4": {
+              "repeat": "x",
+              "times": 50000
+            },
+            "pobrane/notatka.txt": {
+              "repeat": "x",
+              "times": 300
+            },
+            "pobrane/obrazy/duże.png": {
+              "repeat": "x",
+              "times": 10241
+            },
+            "pobrane/obrazy/ikona.png": {
+              "repeat": "x",
+              "times": 10240
+            }
+          },
+          "expected_files": {
+            "pobrane/film.mp4": null,
+            "pobrane/notatka.txt": {
+              "repeat": "x",
+              "times": 300
+            },
+            "pobrane/obrazy/duże.png": null,
+            "pobrane/obrazy/ikona.png": {
+              "repeat": "x",
+              "times": 10240
+            }
+          }
+        }
+      ],
       "testcases": [
         {
-          "input": "/tmp/np/to_delete",
-          "output": ""
+          "input": "dane",
+          "output": "duzy.bin\nobrazy/zdjecie.jpg",
+          "files": {
+            "dane/duzy.bin": {
+              "repeat": "x",
+              "times": 12000
+            },
+            "dane/maly.txt": "abc",
+            "dane/obrazy/zdjecie.jpg": {
+              "repeat": "x",
+              "times": 20000
+            },
+            "dane/obrazy/ikona.png": {
+              "repeat": "x",
+              "times": 500
+            },
+            "inny.bin": {
+              "repeat": "x",
+              "times": 30000
+            }
+          },
+          "expected_files": {
+            "dane/duzy.bin": null,
+            "dane/obrazy/zdjecie.jpg": null,
+            "dane/maly.txt": "abc",
+            "dane/obrazy/ikona.png": {
+              "repeat": "x",
+              "times": 500
+            },
+            "inny.bin": {
+              "repeat": "x",
+              "times": 30000
+            }
+          }
         },
         {
-          "input": "/tmp/np/to_delete2",
-          "output": ""
+          "input": "pliki",
+          "output": "o_jeden_wiecej.txt",
+          "files": {
+            "pliki/dokladnie.txt": {
+              "repeat": "x",
+              "times": 10240
+            },
+            "pliki/o_jeden_wiecej.txt": {
+              "repeat": "x",
+              "times": 10241
+            }
+          },
+          "expected_files": {
+            "pliki/dokladnie.txt": {
+              "repeat": "x",
+              "times": 10240
+            },
+            "pliki/o_jeden_wiecej.txt": null
+          }
+        },
+        {
+          "input": "tekst",
+          "output": "polski.txt",
+          "files": {
+            "tekst/polski.txt": {
+              "repeat": "ą",
+              "times": 5121
+            },
+            "tekst/krotki.txt": {
+              "repeat": "ą",
+              "times": 5120
+            },
+            "tekst/ascii.txt": {
+              "repeat": "a",
+              "times": 6000
+            }
+          },
+          "expected_files": {
+            "tekst/polski.txt": null,
+            "tekst/krotki.txt": {
+              "repeat": "ą",
+              "times": 5120
+            },
+            "tekst/ascii.txt": {
+              "repeat": "a",
+              "times": 6000
+            }
+          }
+        },
+        {
+          "input": "a/b",
+          "output": "c/d/stary_log.txt",
+          "files": {
+            "a/b/c/d/stary_log.txt": {
+              "repeat": "x",
+              "times": 50000
+            },
+            "a/b/nowy_log.txt": {
+              "repeat": "x",
+              "times": 10000
+            },
+            "a/duzy.bin": {
+              "repeat": "x",
+              "times": 11000
+            }
+          },
+          "expected_files": {
+            "a/b/c/d/stary_log.txt": null,
+            "a/b/nowy_log.txt": {
+              "repeat": "x",
+              "times": 10000
+            },
+            "a/duzy.bin": {
+              "repeat": "x",
+              "times": 11000
+            }
+          }
+        },
+        {
+          "input": "male",
+          "output": "Brak plików.",
+          "files": {
+            "male/a.txt": "a",
+            "male/b/c.txt": {
+              "repeat": "x",
+              "times": 10240
+            }
+          },
+          "expected_files": {
+            "male/a.txt": "a",
+            "male/b/c.txt": {
+              "repeat": "x",
+              "times": 10240
+            }
+          }
+        },
+        {
+          "input": "puste",
+          "output": "Brak plików.",
+          "files": {
+            "puste/": ""
+          }
+        },
+        {
+          "input": "inne",
+          "output": "Folder nie istnieje.",
+          "files": {
+            "dane/a.txt": {
+              "repeat": "x",
+              "times": 20000
+            }
+          },
+          "expected_files": {
+            "dane/a.txt": {
+              "repeat": "x",
+              "times": 20000
+            }
+          }
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Rozmiar pliku w bajtach zwraca `os.path.getsize()` albo `Path.stat().st_size`, a plik usuwa `os.remove()` albo `Path.unlink()`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-10",
@@ -303,22 +1041,123 @@
         "png",
         "shutil"
       ],
-      "description": "Otrzymujesz ścieżkę folderu źródłowego i docelowego. Skopiuj wszystkie pliki `.png` znajdujące się **bezpośrednio** w folderze źródłowym do folderu docelowego.",
-      "input": "* 1 linia: `src_folder`\n* 2 linia: `dst_folder`",
-      "output": "Brak.",
-      "examples": [],
+      "description": "Wczytaj ścieżkę folderu źródłowego i docelowego. Skopiuj do folderu docelowego wszystkie pliki z rozszerzeniem `.png` (bez względu na wielkość liter), które leżą **bezpośrednio** w folderze źródłowym. Pliki w podfolderach pomiń.\n\n* Pliki w folderze źródłowym zostają na miejscu.\n* Jeśli folder docelowy nie istnieje, utwórz go (razem z brakującymi folderami nadrzędnymi). Gdy nie ma czego kopiować, nie ma znaczenia, czy go utworzysz.\n* Jeśli w folderze docelowym jest już plik o tej samej nazwie, nadpisz go.",
+      "input": "* 1. linia: ścieżka folderu źródłowego\n* 2. linia: ścieżka folderu docelowego",
+      "output": "* Nazwy skopiowanych plików, każda w osobnej linii, posortowane rosnąco.\n* `Brak plików.` — jeśli w folderze źródłowym nie ma żadnego pliku `.png`.\n* `Folder nie istnieje.` — jeśli folder źródłowy nie istnieje. Wtedy niczego nie twórz.",
+      "examples": [
+        {
+          "input": "obrazy\nkopia/obrazy",
+          "output": "kot.png\npies.PNG",
+          "explanation": "Program utworzył folder `kopia/obrazy`. Pliku `wakacje/morze.png` nie kopiujemy, bo leży w podfolderze.",
+          "files": {
+            "obrazy/kot.png": "(obraz kota)\n",
+            "obrazy/pies.PNG": "(obraz psa)\n",
+            "obrazy/opis.txt": "Zdjęcia zwierząt\n",
+            "obrazy/wakacje/morze.png": "(obraz morza)\n"
+          },
+          "expected_files": {
+            "kopia/obrazy/kot.png": "(obraz kota)\n",
+            "kopia/obrazy/pies.PNG": "(obraz psa)\n",
+            "kopia/obrazy/opis.txt": null,
+            "kopia/obrazy/morze.png": null,
+            "obrazy/kot.png": "(obraz kota)\n",
+            "obrazy/pies.PNG": "(obraz psa)\n"
+          }
+        }
+      ],
       "testcases": [
         {
-          "input": "/tmp/np/src\n/tmp/np/dst",
-          "output": ""
+          "input": "grafiki\neksport",
+          "output": "baner.png\nlogo.png",
+          "files": {
+            "grafiki/logo.png": "LOGO",
+            "grafiki/baner.png": "BANER",
+            "grafiki/opis.txt": "opis",
+            "grafiki/stare/ikona.png": "IKONA",
+            "eksport/": ""
+          },
+          "expected_files": {
+            "eksport/logo.png": "LOGO",
+            "eksport/baner.png": "BANER",
+            "eksport/opis.txt": null,
+            "eksport/ikona.png": null,
+            "eksport/stare/ikona.png": null,
+            "grafiki/logo.png": "LOGO",
+            "grafiki/baner.png": "BANER"
+          }
         },
         {
-          "input": "/tmp/np/src2\n/tmp/np/dst2",
-          "output": ""
+          "input": "zdjecia\nbackup/2024/zdjecia",
+          "output": "A.PNG\nb.png",
+          "files": {
+            "zdjecia/A.PNG": "a",
+            "zdjecia/b.png": "b",
+            "zdjecia/c.jpg": "c"
+          },
+          "expected_files": {
+            "backup/2024/zdjecia/A.PNG": "a",
+            "backup/2024/zdjecia/b.png": "b",
+            "backup/2024/zdjecia/c.jpg": null,
+            "zdjecia/A.PNG": "a",
+            "zdjecia/b.png": "b"
+          }
+        },
+        {
+          "input": "src\ndst",
+          "output": "logo.png",
+          "files": {
+            "src/logo.png": "nowe logo",
+            "dst/logo.png": "stare logo",
+            "dst/inne.png": "inne"
+          },
+          "expected_files": {
+            "dst/logo.png": "nowe logo",
+            "dst/inne.png": "inne",
+            "src/logo.png": "nowe logo"
+          }
+        },
+        {
+          "input": "moje zdjęcia\nkopia zapasowa",
+          "output": "wakacje 1.png\nwakacje 2.png",
+          "files": {
+            "moje zdjęcia/wakacje 1.png": "w1",
+            "moje zdjęcia/wakacje 2.png": "w2"
+          },
+          "expected_files": {
+            "kopia zapasowa/wakacje 1.png": "w1",
+            "kopia zapasowa/wakacje 2.png": "w2"
+          }
+        },
+        {
+          "input": "obrazy\nkopia",
+          "output": "Brak plików.",
+          "files": {
+            "obrazy/a.jpg": "x",
+            "obrazy/b.png.txt": "y",
+            "obrazy/c.png/d.txt": "z"
+          },
+          "expected_files": {
+            "kopia/a.jpg": null,
+            "kopia/b.png.txt": null,
+            "kopia/d.txt": null,
+            "kopia/c.png/d.txt": null
+          }
+        },
+        {
+          "input": "zdjecia\nkopia",
+          "output": "Folder nie istnieje.",
+          "files": {
+            "obrazy/a.png": "x"
+          },
+          "expected_files": {
+            "kopia/a.png": null,
+            "obrazy/a.png": "x"
+          }
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Kopiowanie: `shutil.copy(zrodlo, cel)`. Folder razem z folderami nadrzędnymi tworzy `os.makedirs(sciezka, exist_ok=True)`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-11",
@@ -331,22 +1170,109 @@
         "swap",
         "read/write"
       ],
-      "description": "Otrzymujesz ścieżki do dwóch plików. Zamień ich treści miejscami:\n\n* plik A ma mieć dawną treść pliku B,\n* plik B ma mieć dawną treść pliku A.",
-      "input": "* 1 linia: `file_A`\n* 2 linia: `file_B`",
-      "output": "Brak.",
-      "examples": [],
-      "testcases": [
+      "description": "Wczytaj ścieżki dwóch plików A i B. Zamień ich treści miejscami:\n\n* plik A ma mieć dawną treść pliku B,\n* plik B ma mieć dawną treść pliku A.\n\nNazwy plików się nie zmieniają. Jeśli obie ścieżki są takie same, plik pozostaje bez zmian.",
+      "input": "* 1. linia: ścieżka pliku A\n* 2. linia: ścieżka pliku B",
+      "output": "* Gdy oba pliki istnieją — nic (wynikiem są zmienione pliki).\n* `Plik nie istnieje.` — jeśli którakolwiek ścieżka nie wskazuje istniejącego pliku. Wtedy niczego nie zmieniaj i nie twórz.",
+      "examples": [
         {
-          "input": "/tmp/np/a.txt\n/tmp/np/b.txt",
-          "output": ""
+          "input": "plik1.txt\ndane/plik2.txt",
+          "output": "",
+          "explanation": "",
+          "files": {
+            "plik1.txt": "Ala ma kota\n",
+            "dane/plik2.txt": "Kot ma Alę\ni mysz.\n"
+          },
+          "expected_files": {
+            "plik1.txt": "Kot ma Alę\ni mysz.\n",
+            "dane/plik2.txt": "Ala ma kota\n"
+          }
         },
         {
-          "input": "/tmp/np/c.txt\n/tmp/np/d.txt",
-          "output": ""
+          "input": "plik1.txt\nplik2.txt",
+          "output": "Plik nie istnieje.",
+          "explanation": "",
+          "files": {
+            "plik1.txt": "Ala ma kota\n"
+          },
+          "expected_files": {
+            "plik1.txt": "Ala ma kota\n",
+            "plik2.txt": null
+          }
+        }
+      ],
+      "testcases": [
+        {
+          "input": "a.txt\nb.txt",
+          "output": "",
+          "files": {
+            "a.txt": "Pierwszy plik",
+            "b.txt": "Drugi plik"
+          },
+          "expected_files": {
+            "a.txt": "Drugi plik",
+            "b.txt": "Pierwszy plik"
+          }
+        },
+        {
+          "input": "dane/a.txt\nkopie/b.txt",
+          "output": "",
+          "files": {
+            "dane/a.txt": "pierwszy\nplik\n",
+            "kopie/b.txt": ""
+          },
+          "expected_files": {
+            "dane/a.txt": "",
+            "kopie/b.txt": "pierwszy\nplik\n"
+          }
+        },
+        {
+          "input": "moje pliki/ą.txt\nmoje pliki/ę.txt",
+          "output": "",
+          "files": {
+            "moje pliki/ą.txt": "zażółć\ngęślą",
+            "moje pliki/ę.txt": "jaźń"
+          },
+          "expected_files": {
+            "moje pliki/ą.txt": "jaźń",
+            "moje pliki/ę.txt": "zażółć\ngęślą"
+          }
+        },
+        {
+          "input": "x.txt\nx.txt",
+          "output": "",
+          "files": {
+            "x.txt": "jeden\ndwa"
+          },
+          "expected_files": {
+            "x.txt": "jeden\ndwa"
+          }
+        },
+        {
+          "input": "a.txt\nb.txt",
+          "output": "Plik nie istnieje.",
+          "files": {
+            "a.txt": "A"
+          },
+          "expected_files": {
+            "a.txt": "A",
+            "b.txt": null
+          }
+        },
+        {
+          "input": "a.txt\nb.txt",
+          "output": "Plik nie istnieje.",
+          "files": {
+            "b.txt": "B"
+          },
+          "expected_files": {
+            "a.txt": null,
+            "b.txt": "B"
+          }
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Najprościej wczytać obie treści do zmiennych, a dopiero potem zapisać każdy plik od nowa.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-12",
@@ -360,22 +1286,412 @@
         "csv",
         "recursive"
       ],
-      "description": "Otrzymujesz ścieżkę folderu źródłowego i docelowego. Przenieś wszystkie pliki `.csv` z folderu źródłowego **i wszystkich jego podfolderów** do folderu docelowego.",
-      "input": "* 1 linia: `src_folder`\n* 2 linia: `dst_folder`",
-      "output": "Brak.",
-      "examples": [],
-      "testcases": [
+      "description": "Wczytaj ścieżkę folderu źródłowego i docelowego. Przenieś wszystkie pliki z rozszerzeniem `.csv` (bez względu na wielkość liter) z folderu źródłowego **i wszystkich jego podfolderów** bezpośrednio do folderu docelowego, zachowując ich nazwy.\n\n* Po przeniesieniu pliku nie ma już w starym miejscu. Foldery zostają, nawet jeśli staną się puste.\n* Jeśli folder docelowy nie istnieje, utwórz go (razem z brakującymi folderami nadrzędnymi). Gdy nie ma czego przenosić, nie ma znaczenia, czy go utworzysz.",
+      "input": "* 1. linia: ścieżka folderu źródłowego\n* 2. linia: ścieżka folderu docelowego",
+      "output": "* Dawne ścieżki przeniesionych plików względem folderu źródłowego, każda w osobnej linii, posortowane rosnąco.\n* `Brak plików.` — jeśli nie ma żadnego pliku `.csv`.\n* `Folder nie istnieje.` — jeśli folder źródłowy nie istnieje. Wtedy niczego nie twórz.",
+      "examples": [
         {
-          "input": "/tmp/np/src_csv\n/tmp/np/dst_csv",
-          "output": ""
-        },
-        {
-          "input": "/tmp/np/src_csv2\n/tmp/np/dst_csv2",
-          "output": ""
+          "input": "projekt\nwyniki/csv",
+          "output": "2023/q1/luty.CSV\n2023/styczeń.csv\ndane.csv",
+          "explanation": "Program utworzył folder `wyniki/csv` i przeniósł do niego trzy pliki; `opis.txt` został na miejscu.",
+          "files": {
+            "projekt/dane.csv": "id,wartość\n1,10\n",
+            "projekt/opis.txt": "Dane sprzedaży\n",
+            "projekt/2023/styczeń.csv": "1,120\n",
+            "projekt/2023/q1/luty.CSV": "2,95\n"
+          },
+          "expected_files": {
+            "wyniki/csv/dane.csv": "id,wartość\n1,10\n",
+            "wyniki/csv/styczeń.csv": "1,120\n",
+            "wyniki/csv/luty.CSV": "2,95\n",
+            "projekt/dane.csv": null,
+            "projekt/2023/styczeń.csv": null,
+            "projekt/2023/q1/luty.CSV": null,
+            "projekt/opis.txt": "Dane sprzedaży\n"
+          }
         }
       ],
-      "constraints": "",
-      "notes": "* Jeśli w folderze docelowym istnieje już plik o tej samej nazwie, zadanie wymaga zdefiniowania zachowania (np. zmiana nazwy / pominięcie) — jeśli sprawdzarka tego nie doprecyzowuje, przyjmij jedną spójną strategię w całym rozwiązaniu."
+      "testcases": [
+        {
+          "input": "dane\ncsv",
+          "output": "2023/styczen.csv\n2024/q1/luty.CSV\nsprzedaz.csv",
+          "files": {
+            "dane/sprzedaz.csv": "a,b",
+            "dane/2023/styczen.csv": "1,2",
+            "dane/2023/opis.txt": "opis",
+            "dane/2024/q1/luty.CSV": "3,4",
+            "csv/": ""
+          },
+          "expected_files": {
+            "csv/sprzedaz.csv": "a,b",
+            "csv/styczen.csv": "1,2",
+            "csv/luty.CSV": "3,4",
+            "dane/sprzedaz.csv": null,
+            "dane/2023/styczen.csv": null,
+            "dane/2024/q1/luty.CSV": null,
+            "dane/2023/opis.txt": "opis",
+            "csv/opis.txt": null
+          }
+        },
+        {
+          "input": "src\nwyniki/csv",
+          "output": "a.csv\nb.csv",
+          "files": {
+            "src/a.csv": "x",
+            "src/b.csv": "y"
+          },
+          "expected_files": {
+            "wyniki/csv/a.csv": "x",
+            "wyniki/csv/b.csv": "y",
+            "src/a.csv": null,
+            "src/b.csv": null
+          }
+        },
+        {
+          "input": "src\ndst",
+          "output": "x/nowy.csv",
+          "files": {
+            "src/x/nowy.csv": "n",
+            "dst/stary.csv": "s"
+          },
+          "expected_files": {
+            "dst/nowy.csv": "n",
+            "dst/stary.csv": "s",
+            "src/x/nowy.csv": null
+          }
+        },
+        {
+          "input": "a\nb",
+          "output": "plik.csv",
+          "files": {
+            "a/plik.csv": "1",
+            "b/plik2.csv": "2"
+          },
+          "expected_files": {
+            "b/plik.csv": "1",
+            "b/plik2.csv": "2",
+            "a/plik.csv": null
+          }
+        },
+        {
+          "input": "dane\ncsv",
+          "output": "Brak plików.",
+          "files": {
+            "dane/a.txt": "x",
+            "dane/b.csv.bak": "y",
+            "dane/c.csv/plik.txt": "z"
+          },
+          "expected_files": {
+            "dane/a.txt": "x",
+            "dane/b.csv.bak": "y",
+            "dane/c.csv/plik.txt": "z",
+            "csv/b.csv.bak": null,
+            "csv/c.csv/plik.txt": null
+          }
+        },
+        {
+          "input": "projekty\ncsv",
+          "output": "Folder nie istnieje.",
+          "files": {
+            "dane/a.csv": "x"
+          },
+          "expected_files": {
+            "dane/a.csv": "x",
+            "csv/a.csv": null
+          }
+        }
+      ],
+      "constraints": "* Nazwy plików `.csv` w całym folderze źródłowym są różne, a w folderze docelowym nie ma plików o takich nazwach.\n* Folder docelowy nie leży wewnątrz folderu źródłowego.",
+      "notes": "* Plik przenosi `shutil.move(zrodlo, cel)` albo `Path.rename(cel)`.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-13",
+      "slug": "20_operacje_na_plikach/ZAD-13",
+      "title": "Raport z pliku CSV",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "files",
+        "csv",
+        "dict"
+      ],
+      "description": "Wczytaj ścieżkę pliku CSV z ocenami uczniów. Pierwszy wiersz pliku to nagłówek `imie,przedmiot,ocena`, a każdy kolejny wiersz opisuje jedną ocenę: imię ucznia, przedmiot i ocenę. Pola są oddzielone przecinkami, a pole zawierające przecinek jest ujęte w cudzysłów, np. `Adam,\"WOS, rozszerzony\",5`.\n\nDla każdego ucznia oblicz średnią wszystkich jego ocen (ze wszystkich przedmiotów razem) i wypisz wyniki uczniów w kolejności alfabetycznej imion.",
+      "input": "* 1. linia: ścieżka pliku CSV",
+      "output": "* Dla każdego ucznia jedna linia `imię: średnia`, średnia z dokładnie 2 miejscami po przecinku. Uczniowie posortowani rosnąco po imieniu (tak jak sortuje `sorted()`).\n* `Brak danych.` — jeśli plik zawiera tylko nagłówek.\n* `Plik nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego pliku.",
+      "examples": [
+        {
+          "input": "oceny.csv",
+          "output": "Ewa: 6.00\nJan: 3.50\nOla: 4.50",
+          "explanation": "Ola ma oceny 5 i 4, więc jej średnia to $\\frac{5 + 4}{2} = 4.5$.",
+          "files": {
+            "oceny.csv": "imie,przedmiot,ocena\nOla,matematyka,5\nJan,fizyka,3\nOla,\"WOS, rozszerzony\",4\nJan,matematyka,4\nEwa,historia,6\n"
+          }
+        }
+      ],
+      "testcases": [
+        {
+          "input": "klasa.csv",
+          "output": "Bartek: 2.50\nKasia: 4.33",
+          "files": {
+            "klasa.csv": "imie,przedmiot,ocena\nKasia,polski,4.5\nKasia,matematyka,5\nBartek,polski,3\nKasia,angielski,3.5\nBartek,chemia,2\n"
+          }
+        },
+        {
+          "input": "oceny.csv",
+          "output": "Adam: 4.50\nZofia: 6.00",
+          "files": {
+            "oceny.csv": "imie,przedmiot,ocena\nAdam,\"WOS, rozszerzony\",5\nAdam,historia,4\nZofia,\"język polski, poziom podstawowy\",6\n"
+          }
+        },
+        {
+          "input": "moja klasa/oceny 2024.csv",
+          "output": "Adam: 4.50\nMarta: 5.75\nZenon: 3.50",
+          "files": {
+            "moja klasa/oceny 2024.csv": "imie,przedmiot,ocena\nZenon,fizyka,2\nAdam,fizyka,3\nMarta,fizyka,6\nAdam,chemia,6\nZenon,chemia,5\nMarta,chemia,5.5\n"
+          }
+        },
+        {
+          "input": "dane/2b.csv",
+          "output": "Żaneta: 1.00",
+          "files": {
+            "dane/2b.csv": "imie,przedmiot,ocena\nŻaneta,biologia,1\n"
+          }
+        },
+        {
+          "input": "o.csv",
+          "output": "Ola: 4.50\nola: 2.00",
+          "files": {
+            "o.csv": "imie,przedmiot,ocena\nola,plastyka,2\nOla,plastyka,4\nOla,muzyka,5\n"
+          }
+        },
+        {
+          "input": "puste.csv",
+          "output": "Brak danych.",
+          "files": {
+            "puste.csv": "imie,przedmiot,ocena\n"
+          }
+        },
+        {
+          "input": "klasa.csv",
+          "output": "Plik nie istnieje.",
+          "files": {
+            "oceny.csv": "imie,przedmiot,ocena\nAdam,fizyka,5\n"
+          }
+        }
+      ],
+      "constraints": "* Oceny to liczby od 1 do 6, całkowite albo z kropką dziesiętną (np. `4.5`).\n* Plik nie zawiera pustych wierszy. Imiona porównujemy dokładnie — wielkość liter ma znaczenie.",
+      "notes": "* Moduł `csv` dzieli wiersze na pola za Ciebie i poprawnie obsługuje cudzysłowy — zwykłe `split(\",\")` rozbiłoby `\"WOS, rozszerzony\"` na dwa pola. `csv.DictReader` pomija nagłówek i zwraca każdy kolejny wiersz jako słownik `{nazwa kolumny: wartość}`:\n\n```python\nimport csv\n\nwith open(\"oceny.csv\", encoding=\"utf-8\", newline=\"\") as plik:\n    for wiersz in csv.DictReader(plik):\n        print(wiersz[\"imie\"], wiersz[\"przedmiot\"], wiersz[\"ocena\"])\n```\n\n* Wartości z pliku CSV są napisami — ocenę zamień na liczbę przez `float()`. Sumy i liczby ocen zbieraj w słownikach, których kluczem jest imię.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-14",
+      "slug": "20_operacje_na_plikach/ZAD-14",
+      "title": "Edycja konfiguracji JSON",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "files",
+        "json",
+        "dict"
+      ],
+      "description": "Plik konfiguracyjny w formacie JSON zawiera obiekt (w Pythonie: słownik), w którym mogą być zagnieżdżone kolejne obiekty. Wczytaj ścieżkę pliku, klucz i nową wartość. Klucz jest zapisany w **notacji kropkowej**: `baza.port` oznacza klucz `port` wewnątrz obiektu zapisanego pod kluczem `baza`.\n\nKlucz **istnieje**, jeśli każda jego część poza ostatnią prowadzi do obiektu, a ostatnia część jest kluczem w tym obiekcie. Jeśli klucz istnieje:\n\n1. wypisz jego dotychczasową wartość,\n2. ustaw nową wartość — jako **liczbę całkowitą**, jeśli wczytany napis składa się z samych cyfr, ewentualnie poprzedzonych znakiem `-` (np. `8080`, `-5`); w przeciwnym razie jako **napis** (np. `3.5`, `true`, `localhost`),\n3. zapisz cały plik od nowa poleceniem `json.dump(dane, plik, indent=2, ensure_ascii=False)`.\n\nDzięki takiemu zapisowi plik ma wcięcia po 2 spacje, klucze zostają w dotychczasowej kolejności, a polskie litery nie są zamieniane na kody `\\u…`. Sprawdzarka porównuje plik po zmianie dokładnie z tym formatem (ignoruje tylko końcowe spacje i puste wiersze).",
+      "input": "* 1. linia: ścieżka pliku\n* 2. linia: klucz w notacji kropkowej\n* 3. linia: nowa wartość",
+      "output": "* Dotychczasowa wartość klucza: napis bez cudzysłowów, liczba jako liczba.\n* `Brak klucza: K` — gdzie `K` to wczytany klucz — jeśli klucz nie istnieje. Plik pozostaje wtedy bez zmian.\n* `Plik nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego pliku.",
+      "examples": [
+        {
+          "input": "config.json\nbaza.port\n6543",
+          "output": "5432",
+          "explanation": "",
+          "files": {
+            "config.json": "{\n  \"nazwa\": \"Sklep\",\n  \"baza\": {\n    \"host\": \"localhost\",\n    \"port\": 5432\n  },\n  \"wersja\": \"1.0\"\n}\n"
+          },
+          "expected_files": {
+            "config.json": "{\n  \"nazwa\": \"Sklep\",\n  \"baza\": {\n    \"host\": \"localhost\",\n    \"port\": 6543\n  },\n  \"wersja\": \"1.0\"\n}\n"
+          }
+        },
+        {
+          "input": "config.json\nbaza.port\n6543",
+          "output": "Brak klucza: baza.port",
+          "explanation": "W obiekcie `baza` nie ma klucza `port`, więc plik się nie zmienia.",
+          "files": {
+            "config.json": "{\"nazwa\": \"Sklep\", \"baza\": {\"host\": \"localhost\"}}\n"
+          },
+          "expected_files": {
+            "config.json": "{\"nazwa\": \"Sklep\", \"baza\": {\"host\": \"localhost\"}}\n"
+          }
+        }
+      ],
+      "testcases": [
+        {
+          "input": "serwer.json\nserwer.port\n8080",
+          "output": "80",
+          "files": {
+            "serwer.json": "{\"serwer\": {\"adres\": \"0.0.0.0\", \"port\": 80}, \"debug\": true}"
+          },
+          "expected_files": {
+            "serwer.json": "{\n  \"serwer\": {\n    \"adres\": \"0.0.0.0\",\n    \"port\": 8080\n  },\n  \"debug\": true\n}"
+          }
+        },
+        {
+          "input": "ustawienia.json\nmotyw\njasny",
+          "output": "ciemny",
+          "files": {
+            "ustawienia.json": "{\n  \"jezyk\": \"pl\",\n  \"motyw\": \"ciemny\"\n}\n"
+          },
+          "expected_files": {
+            "ustawienia.json": "{\n  \"jezyk\": \"pl\",\n  \"motyw\": \"jasny\"\n}"
+          }
+        },
+        {
+          "input": "czujnik.json\ntemperatura.min\n-5",
+          "output": "0",
+          "files": {
+            "czujnik.json": "{\"nazwa\": \"termometr\", \"temperatura\": {\"min\": 0, \"max\": 30}}"
+          },
+          "expected_files": {
+            "czujnik.json": "{\n  \"nazwa\": \"termometr\",\n  \"temperatura\": {\n    \"min\": -5,\n    \"max\": 30\n  }\n}"
+          }
+        },
+        {
+          "input": "app.json\nwersja\n3.5",
+          "output": "3.4",
+          "files": {
+            "app.json": "{\"wersja\": \"3.4\", \"autor\": \"Ola\"}"
+          },
+          "expected_files": {
+            "app.json": "{\n  \"wersja\": \"3.5\",\n  \"autor\": \"Ola\"\n}"
+          }
+        },
+        {
+          "input": "profil.json\nautor.imię\nŻaneta",
+          "output": "Łukasz",
+          "files": {
+            "profil.json": "{\"powitanie\": \"Cześć\", \"autor\": {\"imię\": \"Łukasz\", \"tagi\": [\"a\", \"b\"]}}"
+          },
+          "expected_files": {
+            "profil.json": "{\n  \"powitanie\": \"Cześć\",\n  \"autor\": {\n    \"imię\": \"Żaneta\",\n    \"tagi\": [\n      \"a\",\n      \"b\"\n    ]\n  }\n}"
+          }
+        },
+        {
+          "input": "gra.json\npoziomy.latwy.czas\nbrak",
+          "output": "120",
+          "files": {
+            "gra.json": "{\"poziomy\": {\"latwy\": {\"wrogowie\": 3, \"czas\": 120}}, \"dzwiek\": null}"
+          },
+          "expected_files": {
+            "gra.json": "{\n  \"poziomy\": {\n    \"latwy\": {\n      \"wrogowie\": 3,\n      \"czas\": \"brak\"\n    }\n  },\n  \"dzwiek\": null\n}"
+          }
+        },
+        {
+          "input": "config.json\nbaza.uzytkownik\nadmin",
+          "output": "Brak klucza: baza.uzytkownik",
+          "files": {
+            "config.json": "{\"baza\": {\"host\": \"localhost\"}}"
+          },
+          "expected_files": {
+            "config.json": "{\"baza\": {\"host\": \"localhost\"}}"
+          }
+        },
+        {
+          "input": "config.json\nbaza.port.numer\n1",
+          "output": "Brak klucza: baza.port.numer",
+          "files": {
+            "config.json": "{\"baza\": {\"port\": 5432}}"
+          },
+          "expected_files": {
+            "config.json": "{\"baza\": {\"port\": 5432}}"
+          }
+        },
+        {
+          "input": "config.json\nbaza\n1",
+          "output": "Plik nie istnieje.",
+          "files": {
+            "inne.json": "{}"
+          },
+          "expected_files": {
+            "config.json": null
+          }
+        }
+      ],
+      "constraints": "* Plik zawiera poprawny JSON, którego główną wartością jest obiekt.\n* Wartość pod istniejącym kluczem jest napisem albo liczbą całkowitą. Pozostałe wartości w pliku mogą być dowolne (listy, `true`, `null` …).\n* Części klucza nie zawierają kropek.",
+      "notes": "* Moduł `json` zamienia tekst JSON na słowniki, listy, napisy i liczby Pythona i z powrotem:\n\n```python\nimport json\n\nwith open(\"config.json\", encoding=\"utf-8\") as plik:\n    dane = json.load(plik)          # np. {\"baza\": {\"port\": 5432}}\n\ndane[\"baza\"][\"port\"] = 6543\n\nwith open(\"config.json\", \"w\", encoding=\"utf-8\") as plik:\n    json.dump(dane, plik, indent=2, ensure_ascii=False)\n```\n\n* Do zagnieżdżonego obiektu dojdziesz pętlą po `klucz.split(\".\")`: w każdym kroku sprawdź, czy bieżąca wartość jest słownikiem (`isinstance(obiekt, dict)`) i czy zawiera kolejną część klucza.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-15",
+      "slug": "20_operacje_na_plikach/ZAD-15",
+      "title": "Liczba wierszy z obsługą błędów",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "files",
+        "exceptions",
+        "try/except"
+      ],
+      "description": "Wczytaj `k` ścieżek. Dla każdej z nich wypisz w osobnej linii:\n\n* liczbę wierszy pliku — jeśli ścieżka wskazuje istniejący plik,\n* `To jest folder: X` — jeśli ścieżka wskazuje folder,\n* `Brak pliku: X` — jeśli pod ścieżką nic nie ma,\n\ngdzie `X` to ścieżka dokładnie w takiej postaci, w jakiej ją wczytano.\n\nWiersze liczymy jak w `str.splitlines()`: pusty plik ma 0 wierszy, a znak nowej linii na końcu pliku nie tworzy dodatkowego wiersza.\n\nRozwiąż zadanie w stylu „najpierw spróbuj, potem obsłuż błąd”: otwórz plik w bloku `try` i przechwyć wyjątki zgłaszane przez `open()` (zob. Uwagi).",
+      "input": "* 1. linia: `k` — liczba ścieżek\n* kolejne `k` linii: ścieżki",
+      "output": "`k` linii — wynik dla każdej ścieżki, w kolejności wczytywania.",
+      "examples": [
+        {
+          "input": "3\nnotatki.txt\ndane\nraport.txt",
+          "output": "2\nTo jest folder: dane\nBrak pliku: raport.txt",
+          "explanation": "",
+          "files": {
+            "notatki.txt": "kupić mleko\nzadzwonić do babci\n",
+            "dane/": ""
+          }
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4\na.txt\nb.txt\nc.txt\nd.txt",
+          "output": "3\n0\n1\n2",
+          "files": {
+            "a.txt": "jeden\ndwa\ntrzy\n",
+            "b.txt": "",
+            "c.txt": "bez nowej linii",
+            "d.txt": "\n\n"
+          }
+        },
+        {
+          "input": "4\nlogi\nlogi/2024\nlogi/2024/styczen.log\nlogi/2023/grudzien.log",
+          "output": "To jest folder: logi\nTo jest folder: logi/2024\n2\nBrak pliku: logi/2023/grudzien.log",
+          "files": {
+            "logi/2024/styczen.log": "x\ny\n",
+            "logi/2024/luty.log": "z"
+          }
+        },
+        {
+          "input": "2\nmoje notatki/lista zakupów.txt\nmoje notatki/lista.txt",
+          "output": "4\nBrak pliku: moje notatki/lista.txt",
+          "files": {
+            "moje notatki/lista zakupów.txt": "mleko\nchleb\n\nmasło\n"
+          }
+        },
+        {
+          "input": "3\nraport.txt\nraport.txt\nraport",
+          "output": "2\n2\nBrak pliku: raport",
+          "files": {
+            "raport.txt": "a\nb\n"
+          }
+        },
+        {
+          "input": "2\npuste\npuste/nic.txt",
+          "output": "To jest folder: puste\nBrak pliku: puste/nic.txt",
+          "files": {
+            "puste/": ""
+          }
+        },
+        {
+          "input": "1\n.",
+          "output": "To jest folder: .",
+          "files": {}
+        }
+      ],
+      "constraints": "* $1 \\le k \\le 20$\n* Żadna ścieżka nie prowadzi „przez” plik (np. `notatki.txt/a`).",
+      "notes": "* Gdy coś pójdzie nie tak, `open()` zgłasza **wyjątek**: `FileNotFoundError`, gdy pliku nie ma, i `IsADirectoryError`, gdy ścieżka wskazuje folder (na Windowsie zamiast niego pojawia się `PermissionError`). Wyjątek przechwytuje blok `try`/`except`:\n\n```python\ntry:\n    with open(sciezka, encoding=\"utf-8\") as plik:\n        tresc = plik.read()\nexcept FileNotFoundError:\n    print(\"Brak pliku:\", sciezka)\n```\n\n* W ZAD-01 najpierw sprawdzaliśmy, co jest pod ścieżką (`os.path.isfile()`), a dopiero potem działaliśmy — to styl LBYL („patrz, zanim skoczysz”). Tutaj od razu próbujemy otworzyć plik i obsługujemy ewentualny błąd — to styl EAFP („łatwiej prosić o wybaczenie niż o pozwolenie”), typowy dla Pythona. Jest odporny na sytuację, w której plik zniknie między sprawdzeniem a otwarciem.",
+      "starter_code": ""
     }
   ]
 }

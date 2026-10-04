@@ -86,7 +86,7 @@ sortuj() {
 
 test_sortuj() {
     local tablica=(4 2 5 3 1)
-    local wynik=($(sortuj ${tablica[@]}))
+    local wynik=($(sortuj "${tablica[@]}"))
     local oczekiwane=(1 2 3 4 5)
     assertArrayEqual wynik oczekiwane $LINENO
 }

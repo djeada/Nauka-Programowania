@@ -32,13 +32,14 @@ To jest nowy wiersz dodany na początku pliku.
 
 */
 #include <cassert>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <string>
 #include <vector>
 
-namespace filesys = std::experimental::filesystem;
+namespace filesys = std::filesystem;
 
 std::vector<std::string> wczytajPlik(const std::string &sciezka) {
   std::vector<std::string> tresc;

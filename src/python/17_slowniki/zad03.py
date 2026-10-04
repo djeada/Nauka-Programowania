@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-03 — Biblioteka: baza wypożyczeń
 
 **Poziom:** ★☆☆
@@ -6,25 +6,31 @@ ZAD-03 — Biblioteka: baza wypożyczeń
 
 ### Treść
 
-Utrzymuj słownik: `imię -> lista wypożyczonych książek`.
-Obsługuj komendy (każda w osobnej linii) aż do `koniec`:
+Prowadź bazę wypożyczeń biblioteki jako słownik `imię → lista wypożyczonych tytułów`. Wczytuj komendy (każda w osobnej linii), aż do komendy `koniec`:
 
-* `dodaj [imię] [tytuł]`
-* `zwróć [imię] [tytuł]`
-* `lista [imię]`
+* `dodaj IMIĘ TYTUŁ` — czytelnik `IMIĘ` wypożycza książkę `TYTUŁ` (dopisz ją na koniec jego listy),
+* `zwróć IMIĘ TYTUŁ` — czytelnik oddaje książkę (usuń ją z jego listy; jeśli jej tam nie ma, nic się nie dzieje),
+* `lista IMIĘ` — wypisz książki wypożyczone przez czytelnika.
 
-Po `lista [imię]` wypisz:
+Po komendzie `lista IMIĘ` wypisz jedną linię:
 
-* jeśli lista niepusta: `Książki wypożyczone przez [imię]: t1, t2, ...`
-* jeśli brak książek (lub brak czytelnika): `Książki wypożyczone przez [imię]: brak`
+* `Książki wypożyczone przez IMIĘ: t1, t2, …` — tytuły w kolejności wypożyczenia, oddzielone przecinkiem i spacją,
+* `Książki wypożyczone przez IMIĘ: brak` — jeśli czytelnik nie ma żadnej książki albo nie występuje w bazie.
 
 ### Wejście
 
-Wiele linii z komendami, koniec po słowie `koniec`.
+Kolejne linie z komendami; ostatnia linia to `koniec`.
+
+* `IMIĘ` to jedno słowo (bez spacji).
+* `TYTUŁ` to cała reszta linii po imieniu — może zawierać spacje (bez cudzysłowów).
 
 ### Wyjście
 
-Tylko po komendach `lista ...`.
+Po jednej linii dla każdej komendy `lista`; pozostałe komendy niczego nie wypisują.
+
+### Ograniczenia
+
+* co najwyżej 100 komend
 
 ### Przykład
 
@@ -32,8 +38,8 @@ Tylko po komendach `lista ...`.
 
 ```
 dodaj Jan Hobbit
-dodaj Anna "Duma i uprzedzenie"
-dodaj Jan "Władca Pierścieni"
+dodaj Anna Duma i uprzedzenie
+dodaj Jan Władca Pierścieni
 lista Jan
 zwróć Jan Hobbit
 lista Jan
@@ -49,61 +55,47 @@ Książki wypożyczone przez Jan: Władca Pierścieni
 Książki wypożyczone przez Anna: Duma i uprzedzenie
 ```
 
+### Uwagi
+
+* Linię komendy rozbij na co najwyżej trzy części: `linia.split(maxsplit=2)`.
+* Czytelnik może wypożyczyć kilka egzemplarzy tego samego tytułu — wtedy tytuł występuje na liście kilka razy, a `zwróć` usuwa tylko jeden egzemplarz (pierwsze wystąpienie).
+
 """
 
 
-def dodaj_ksiazke_do_czytelnika(baza_danych, czytelnik, ksiazka):
-    """
-    Funkcja dodaje ksiazke do listy ksiazek wypozyczonych przez czytelnika w bazie danych.
-    """
-    if czytelnik in baza_danych:
-        baza_danych[czytelnik].add(ksiazka)
+def dodaj(baza, czytelnik, tytul):
+    """Zapisuje wypożyczenie książki przez czytelnika."""
+    if czytelnik not in baza:
+        baza[czytelnik] = []
+    baza[czytelnik].append(tytul)
+
+
+def zwroc(baza, czytelnik, tytul):
+    """Usuwa jeden egzemplarz książki z listy czytelnika (jeśli go ma)."""
+    if czytelnik in baza and tytul in baza[czytelnik]:
+        baza[czytelnik].remove(tytul)
+
+
+def opis_wypozyczen(baza, czytelnik):
+    ksiazki = baza.get(czytelnik, [])
+    if ksiazki:
+        lista = ", ".join(ksiazki)
     else:
-        baza_danych[czytelnik] = {ksiazka}
-
-    return baza_danych
-
-
-def zwroc_ksiazke_czytelnika(baza_danych, czytelnik, ksiazka):
-    """
-    Funkcja usuwa ksiazke z listy ksiazek wypozyczonych przez czytelnika w bazie danych.
-    """
-    if czytelnik in baza_danych:
-        baza_danych[czytelnik].remove(ksiazka)
-
-    return baza_danych
-
-
-def wypisz_liste_wypozyczonych_ksiazek(baza_danych, czytelnik):
-    """
-    Funkcja wypisuje liste wypozyczonych ksiazek dla danego czytelnika.
-    """
-    if czytelnik in baza_danych:
-        print(f"Czytelnik {czytelnik} wypozyczyl nastepujace ksiazki:")
-        for ksiazka in baza_danych[czytelnik]:
-            print(ksiazka)
-    else:
-        print("Nie ma takiego czytelnika w bazie danych")
-
-
-def test_dodaj_ksiazke_do_czytelnika():
-    assert dodaj_ksiazke_do_czytelnika(
-        {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Jan", "Ksiazka3"
-    ) == {"Jan": {"Ksiazka1", "Ksiazka2", "Ksiazka3"}}
-    assert dodaj_ksiazke_do_czytelnika(
-        {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Adam", "Ksiazka3"
-    ) == {"Jan": {"Ksiazka1", "Ksiazka2"}, "Adam": {"Ksiazka3"}}
-    assert dodaj_ksiazke_do_czytelnika(
-        {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Jan", "Ksiazka1"
-    ) == {"Jan": {"Ksiazka1", "Ksiazka2"}}
-
-
-def test_zwroc_ksiazke_czytelnika():
-    assert zwroc_ksiazke_czytelnika(
-        {"Jan": {"Ksiazka1", "Ksiazka2"}}, "Jan", "Ksiazka1"
-    ) == {"Jan": {"Ksiazka2"}}
+        lista = "brak"
+    return f"Książki wypożyczone przez {czytelnik}: {lista}"
 
 
 if __name__ == "__main__":
-    test_dodaj_ksiazke_do_czytelnika()
-    test_zwroc_ksiazke_czytelnika()
+    baza = {}
+    while True:
+        linia = input().strip()
+        if linia == "koniec":
+            break
+        czesci = linia.split(maxsplit=2)
+        komenda = czesci[0]
+        if komenda == "dodaj":
+            dodaj(baza, czesci[1], czesci[2])
+        elif komenda == "zwróć":
+            zwroc(baza, czesci[1], czesci[2])
+        elif komenda == "lista":
+            print(opis_wypozyczen(baza, czesci[1]))

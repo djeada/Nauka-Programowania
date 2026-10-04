@@ -42,16 +42,15 @@ public class Main {
   // Złożoność czasowa: O(n*m) gdzie n to liczba napisów, m to długość przedrostka
   // Złożoność pamięciowa: O(m)
   public static String najdluzszyPrzedrostek(List<String> napisy) {
-    String wynik = "";
-    String wynik_tmp = "";
+    if (napisy.isEmpty()) return "";
 
-    for (int i = 0; i < napisy.size(); i++) {
-      wynik_tmp = "";
-      for (int j = 0; j < napisy.get(i).length(); j++) {
-        wynik_tmp += napisy.get(i).charAt(j);
-        if (wynik_tmp.length() > wynik.length()) {
-          wynik = wynik_tmp;
-        }
+    // Skracamy przedrostek (początkowo cały pierwszy napis), dopóki nie jest
+    // przedrostkiem każdego z pozostałych napisów.
+    String wynik = napisy.get(0);
+
+    for (String napis : napisy) {
+      while (!napis.startsWith(wynik)) {
+        wynik = wynik.substring(0, wynik.length() - 1);
       }
     }
 

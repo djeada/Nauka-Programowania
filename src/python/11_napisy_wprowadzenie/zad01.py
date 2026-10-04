@@ -1,22 +1,22 @@
-"""
+r"""
 ZAD-01 — Odwróć napis
 
 **Poziom:** ★☆☆
-**Tagi:** `string`, `I/O`
+**Tagi:** `napisy`, `wycinanie`
 
 ### Treść
 
-Wczytaj napis i wypisz go od tyłu.
+Wczytaj napis i wypisz go od tyłu — znak po znaku, od ostatniego do pierwszego.
 
 ### Wejście
 
-* 1. linia: napis
+* 1. linia: napis (może zawierać spacje)
 
 ### Wyjście
 
-* 1. linia: odwrócony napis
+Jedna linia: odwrócony napis.
 
-### Przykład
+### Przykład 1
 
 **Wejście:**
 
@@ -30,37 +30,32 @@ barszcz
 zczsrab
 ```
 
+### Przykład 2
+
+**Wejście:**
+
+```
+Ala ma kota
+```
+
+**Wyjście:**
+
+```
+atok am alA
+```
+
+Odwracamy kolejność wszystkich znaków (także spacji), a nie tylko kolejność słów.
+
 """
 
 
-def odwroc_v1(napis):
-    return napis[::-1]
-
-
-def odwroc_v2(napis):
-    nowy_napis = ""
-    i = len(napis) - 1
-    while i >= 0:
-        nowy_napis += napis[i]
-        i -= 1
-    return nowy_napis
-
-
-def test_odwroc_v1():
-    assert odwroc_v1("ala ma kota") == "kota ma ala"
-    assert odwroc_v1("") == ""
-    assert odwroc_v1("ala") == "ala"
-    assert odwroc_v1("kot") == "tko"
-
-
-def test_odwroc_v2():
-    assert odwroc_v2("ala ma kota") == "kota ma ala"
-    assert odwroc_v2("") == ""
-    assert odwroc_v2("ala") == "ala"
-    assert odwroc_v2("kot") == "tko"
+def odwroc(napis):
+    odwrocony = ""
+    for znak in napis:
+        odwrocony = znak + odwrocony
+    return odwrocony
 
 
 if __name__ == "__main__":
-
-    test_odwroc_v1()
-    test_odwroc_v2()
+    napis = input()
+    print(odwroc(napis))

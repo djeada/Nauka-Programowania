@@ -57,7 +57,9 @@ public class Main {
     ArrayList<String> wynik = new ArrayList<String>();
     String[] tablica = napis.split("\n");
     for (String wiersz : tablica) {
-      if (wiersz.endsWith(podnapis)) {
+      // wiersz może kończyć się znakiem interpunkcyjnym
+      String bezInterpunkcji = wiersz.replaceAll("[;,!?.]$", "");
+      if (bezInterpunkcji.endsWith(podnapis)) {
         wynik.add(wiersz);
       }
     }
@@ -70,7 +72,7 @@ public class Main {
   public static ArrayList<String> znajdzWierszeV2(String napis, String podnapis) {
     // using regex
     ArrayList<String> wynik = new ArrayList<String>();
-    String regex = ".*" + Pattern.quote(podnapis) + ".*";
+    String regex = ".*" + Pattern.quote(podnapis) + "[;,!?.]?";
     String[] tablica = napis.split("\n");
     for (String wiersz : tablica) {
       if (wiersz.matches(regex)) {

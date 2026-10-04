@@ -1,21 +1,67 @@
 /*
-Tytul: Gra.	
+ZAD-10 — Gra
 
-Tresc: W grze, w kazdym ruchu gracz moze zdobyc 3, 5 lub 10 punktow. Oblicz przy uzyciu rekurencji, ile sposobow istnieje, aby gracz wygral gre, gdy ma do dyspozycji N punktow.
+**Poziom:** ★★☆
+**Tagi:** `rekurencja`, `kombinatoryka`
 
-Dane wejsciowe: Liczba naturalna N.
+### Treść
 
-Dane wyjsciowe: Liczba naturalna.
+W grze w każdym ruchu gracz zdobywa `3`, `5` albo `10` punktów. Gracz wygrywa, gdy uzbiera **dokładnie** `N` punktów.
 
-Przyklad:
-Dla N = 20, powinna zostac zwrocona liczba: 4.
+Napisz rekurencyjną funkcję `liczba_sposobow(n, ruchy)`, która zwraca, na ile sposobów można uzbierać dokładnie `n` punktów, używając ruchów o wartościach z listy `ruchy`. Sposoby różniące się tylko kolejnością ruchów traktujemy jako ten sam sposób — liczy się tylko, ile razy gracz zdobył `3`, ile razy `5`, a ile razy `10` punktów.
+
+Program wczytuje `N` i wypisuje liczbę sposobów wygrania gry.
+
+### Wejście
+
+Jedna liczba naturalna `N` (`N ≥ 1`).
+
+### Wyjście
+
+Jedna liczba naturalna — liczba sposobów (może wynosić `0`).
+
+### Ograniczenia
+
+* `1 ≤ N ≤ 100`
+
+### Przykład
+
+**Wejście:**
+
+```
+20
+```
+
+**Wyjście:**
+
+```
+4
+```
+
+Sposoby: $10 + 10$, $10 + 5 + 5$, $5 + 5 + 5 + 5$ oraz $5 + 3 + 3 + 3 + 3 + 3$.
+
+### Uwagi
+
+* Rozbij problem na dwa mniejsze: sposoby, w których **co najmniej raz** użyjemy pierwszego ruchu z listy (wtedy zostaje `n - ruchy[0]` punktów, a lista ruchów się nie zmienia), oraz sposoby, w których tego ruchu **nie użyjemy wcale** (te same `n` punktów, lista `ruchy[1:]`). Wynik to suma obu liczb.
+* Przypadki bazowe: `n == 0` — znaleźliśmy jeden sposób; `n < 0` albo pusta lista ruchów — żadnego sposobu.
+
+### Kod startowy
+
+```python
+def liczba_sposobow(n, ruchy):
+    pass
+
+
+n = int(input())
+print(liczba_sposobow(n, [10, 5, 3]))
+```
 
 */
 
-// Funkcja oblicza liczbę sposobów (nieuporządkowanych) osiągnięcia n punktów
-// Złożoność czasowa: O(n) z memoizacją
-// Złożoność pamięciowa: O(n)
 function liczbaSposobowWygranej(n, minRuch = 3, memo = {}) {
+  // Funkcja oblicza liczbę sposobów (nieuporządkowanych) osiągnięcia n punktów
+  // Złożoność czasowa: O(n) z memoizacją
+  // Złożoność pamięciowa: O(n)
   if (n === 0) return 1;
   if (n < 0) return 0;
   

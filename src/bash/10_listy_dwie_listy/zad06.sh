@@ -49,7 +49,7 @@ czesc_wspolna_v1() {
 }
 
 czesc_wspolna_v2() {
-    wynik=($(echo -n $(echo ${lista_a[@]} ${lista_b[@]} | sed 's/ /\n/g' | sort | uniq -d)))
+    wynik=($(echo -n $(echo "${lista_a[@]}" "${lista_b[@]}" | sed 's/ /\n/g' | sort | uniq -d)))
 }
 
 test1() {

@@ -52,7 +52,7 @@ permutacje() {
     for ((i = 0; i < ${#napis}; i++)); do
         for permutacja in $(permutacje ${napis:0:$i}${napis:$((i + 1)):${#napis}}); do
             local permutacja="${napis:$i:1}$permutacja"
-            if [[ ! " ${permutacje[@]} " =~ " $permutacja " ]] && [ ${#permutacja} -eq ${#napis} ]; then
+            if [[ ! " ${permutacje[*]} " =~ " $permutacja " ]] && [ ${#permutacja} -eq ${#napis} ]; then
                 permutacje+=("$permutacja")
             fi
         done
@@ -89,13 +89,19 @@ permutacje_palindromy() {
 }
 
 test_permutacje_palindromy() {
+    local wynik=($(permutacje_palindromy "aabb"))
+    local oczekiwane=(abba baab)
+    assertSetsEqual wynik oczekiwane $LINENO
+}
+
+test_brak_palindromow() {
     local wynik=($(permutacje_palindromy "taco"))
-    local oczekiwane=(taco toca)
-    assertArrayEqual wynik oczekiwane $LINENO
+    assertEqual ${#wynik[@]} 0 $LINENO
 }
 
 main() {
     test_permutacje_palindromy
+    test_brak_palindromow
 }
 
 main "$@"

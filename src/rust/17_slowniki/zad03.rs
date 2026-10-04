@@ -63,47 +63,40 @@ fn main() {
 
     loop {
         let mut input = String::new();
-        io::stdin().read_line(&mut input).expect("Błąd wczytywania");
+        let wczytane = io::stdin()
+            .read_line(&mut input)
+            .expect("Błąd wczytywania");
         let linia = input.trim();
 
-        if linia == "koniec" {
+        if wczytane == 0 || linia == "koniec" {
             break;
         }
 
         let czesci: Vec<&str> = linia.splitn(3, ' ').collect();
 
-        if czesci.len() < 3 {
-            continue;
-        }
-
-        let komenda = czesci[0];
-        let imie = czesci[1].to_string();
-        let tytul = czesci[2].trim_matches('"').to_string();
-
-        match komenda {
-            "dodaj" => {
-                biblioteka.entry(imie).or_insert_with(Vec::new).push(tytul);
+        match czesci.as_slice() {
+            ["dodaj", imie, tytul] => {
+                biblioteka
+                    .entry(imie.to_string())
+                    .or_insert_with(Vec::new)
+                    .push(tytul.trim_matches('"').to_string());
             }
-            "zwróć" => {
-                if let Some(ksiazki) = biblioteka.get_mut(&imie) {
-                    ksiazki.retain(|k| k != &tytul);
+            ["zwróć", imie, tytul] => {
+                let tytul = tytul.trim_matches('"');
+                if let Some(ksiazki) = biblioteka.get_mut(*imie) {
+                    ksiazki.retain(|k| k != tytul);
                 }
             }
-            "lista" => {
-                if let Some(ksiazki) = biblioteka.get(&czesci[1]) {
-                    if ksiazki.is_empty() {
-                        println!("Książki wypożyczone przez {}: brak", czesci[1]);
-                    } else {
-                        println!(
-                            "Książki wypożyczone przez {}: {}",
-                            czesci[1],
-                            ksiazki.join(", ")
-                        );
-                    }
-                } else {
-                    println!("Książki wypożyczone przez {}: brak", czesci[1]);
+            ["lista", imie, ..] => match biblioteka.get(*imie) {
+                Some(ksiazki) if !ksiazki.is_empty() => {
+                    println!(
+                        "Książki wypożyczone przez {}: {}",
+                        imie,
+                        ksiazki.join(", ")
+                    );
                 }
-            }
+                _ => println!("Książki wypożyczone przez {}: brak", imie),
+            },
             _ => {}
         }
     }

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Maksymalny zysk ze sprzedaży sznurka
 
 **Poziom:** ★★★
@@ -6,24 +6,29 @@ ZAD-08 — Maksymalny zysk ze sprzedaży sznurka
 
 ### Treść
 
-Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`. Możesz pociąć sznurek na kawałki o całkowitych długościach. Znajdź maksymalny zysk.
+Masz sznurek o długości `n` i cennik: $c_d$ to cena kawałka o długości `d` (dla `d = 1, 2, …, n`). Ceny nie muszą rosnąć razem z długością. Możesz pociąć sznurek na dowolną liczbę kawałków o całkowitych długościach (albo nie ciąć go wcale) i sprzedać wszystkie kawałki. Oblicz **maksymalny możliwy zysk**.
 
 ### Wejście
 
-* 1 linia: lista `prices` (długości 1..n)
-* 2 linia: `n` (liczba naturalna)
+* 1. linia: `n` — długość sznurka
+* 2. linia: `n` nieujemnych liczb całkowitych $c_1, c_2, \ldots, c_n$ oddzielonych spacjami
 
 ### Wyjście
 
-* 1 linia: maksymalny zysk (liczba całkowita)
+Jedna liczba całkowita — maksymalny zysk.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 500`
+* $0 \le c_d \le 10^4$
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[1, 5, 8, 9, 10, 17, 17, 20]
 4
+1 5 8 9
 ```
 
 **Wyjście:**
@@ -32,85 +37,47 @@ Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`
 10
 ```
 
+Najlepiej pociąć sznurek na dwa kawałki o długości 2: $5 + 5 = 10$.
+
+### Przykład 2
+
+**Wejście:**
+
+```
+8
+1 5 8 9 10 17 17 20
+```
+
+**Wyjście:**
+
+```
+22
+```
+
+Kawałki o długościach 2 i 6: $5 + 17 = 22$.
+
+### Uwagi
+
+* Sprawdzanie wszystkich sposobów pocięcia (jest ich $2^{n-1}$) jest zdecydowanie za wolne — w testach `n` sięga kilkuset. Użyj programowania dynamicznego: najlepszy zysk dla długości `d` to maksimum z $c_k + \text{najlepszy}(d - k)$ po wszystkich długościach pierwszego kawałka `k`. Daje to czas $O(n^2)$.
+
 """
 
 
-def podziel_sznurek_v1(ceny, n):
+def maks_zysk(ceny, n):
+    """Maksymalny zysk ze sprzedaży sznurka długości n (programowanie dynamiczne)."""
+    # najlepszy[d] — maksymalny zysk ze sznurka długości d
+    najlepszy = [0] * (n + 1)
 
-    if len(ceny) < n:
-        raise ValueError(
-            "Dlugosc sznurka do sprzedazy nie moze byc wieksza od liczby elementow listy ceny."
-        )
+    for dlugosc in range(1, n + 1):
+        for kawalek in range(1, dlugosc + 1):
+            zysk = ceny[kawalek - 1] + najlepszy[dlugosc - kawalek]
+            if zysk > najlepszy[dlugosc]:
+                najlepszy[dlugosc] = zysk
 
-    if n == 0:
-        return 0
-
-    maks = 0
-
-    for i in range(n):
-
-        cena = ceny[i] + podziel_sznurek_v1(ceny, n - i - 1)
-
-        if cena > maks:
-            maks = cena
-
-    return maks
-
-
-# Zlozonosc czasowa: O(n^2)
-# Zlozonosc pamieciowa: O(n)
-def podziel_sznurek_v2(ceny, n):
-
-    if len(ceny) < n:
-        raise ValueError(
-            "Dlugosc sznurka do sprzedazy nie moze byc wieksza od liczby elementow listy ceny."
-        )
-
-    pom = [0] * (n + 1)
-
-    for i in range(n):
-        for j in range(i + 1):
-            pom[i + 1] = max(pom[i + 1], ceny[j] + pom[i - j])
-
-    return pom[n]
-
-
-# Testy Poprawnosci
-def test_1():
-    ceny = [1, 5, 8, 9, 10, 17, 17, 20]
-    n = 4
-    wynik = 10
-
-    assert podziel_sznurek_v1(ceny, n) == wynik
-    assert podziel_sznurek_v2(ceny, n) == wynik
-
-
-def test_2():
-    ceny = [3, 9, 10, 20]
-    n = 5
-
-    for funkcja in [podziel_sznurek_v1, podziel_sznurek_v2]:
-        try:
-            funkcja(ceny, n)()
-            assert False
-        except ValueError:
-            assert True
-
-
-def test_3():
-    ceny = [5]
-    n = 1
-    wynik = 5
-
-    assert podziel_sznurek_v1(ceny, n) == wynik
-    assert podziel_sznurek_v2(ceny, n) == wynik
-
-
-def main():
-    test_1()
-    test_2()
-    test_3()
+    return najlepszy[n]
 
 
 if __name__ == "__main__":
-    main()
+    n = int(input())
+    ceny = [int(x) for x in input().split()]
+    print(maks_zysk(ceny, n))

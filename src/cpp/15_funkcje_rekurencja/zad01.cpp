@@ -1,64 +1,76 @@
 /*
-ZAD-01 — Wartość wielomianu w punkcie
+ZAD-01 — Liczby naturalne mniejsze od N
 
 **Poziom:** ★☆☆
-**Tagi:** `wielomiany`, `Horner`, `I/O`
+**Tagi:** `rekurencja`, `napisy`
 
 ### Treść
 
-Wczytaj współczynniki wielomianu ( a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 ) oraz
-liczbę ( x ). Oblicz wartość wielomianu w punkcie ( x ).
+Napisz rekurencyjną funkcję `liczby_mniejsze(n)`, która zwraca napis złożony ze wszystkich liczb naturalnych mniejszych od $n$, od największej do najmniejszej, oddzielonych przecinkiem i spacją.
+
+Program wczytuje $N$ i wypisuje wynik funkcji.
 
 ### Wejście
 
-* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
-* 2. linia: `n+1` liczb całkowitych: `a_n a_{n-1} ... a_0`
-* 3. linia: `x` — liczba całkowita
+Jedna liczba naturalna `N`.
 
 ### Wyjście
 
-Jedna liczba całkowita — wartość wielomianu w punkcie `x`.
+Jedna linia: liczby `N-1, N-2, ..., 1, 0` oddzielone przecinkiem i spacją (`, `). Po ostatniej liczbie nie ma przecinka. Dla `N = 1` wynikiem jest samo `0`.
+
+### Ograniczenia
+
+* `1 ≤ N ≤ 100`
 
 ### Przykład
 
 **Wejście:**
 
 ```
-2
-3 2 1
-1
+10
 ```
 
 **Wyjście:**
 
 ```
-6
+9, 8, 7, 6, 5, 4, 3, 2, 1, 0
 ```
 
-### Uwagi o formatowaniu
+Liczba `10` nie jest mniejsza od `10`, więc napis zaczyna się od `9`.
 
-* Użyj schematu Hornera (jest najprostszy i najszybszy).
+### Uwagi
+
+* Przypadek bazowy: dla $n = 1$ jedyną mniejszą liczbą naturalną jest `0`. W kroku rekurencyjnym dopisz $n-1$ przed wynikiem wywołania dla $n-1$.
+
+### Kod startowy
+
+```python
+def liczby_mniejsze(n):
+    pass
+
+
+n = int(input())
+print(liczby_mniejsze(n))
+```
 
 */
+
 #include <cassert>
-#include <iostream>
+#include <string>
 
-// Zlozonosc Czasowa: O(n)
-// Zlozonosc Pamieciowa: O(n) - przez rekurencje i string concatenation
+// Zlozonosc Czasowa: O(n^2) - kazde wywolanie skleja napisy
+// Zlozonosc Pamieciowa: O(n) - przez stos rekurencji
 std::string mniejszeLiczby(int n) {
-  /**
-   *
-   */
-  if (n <= 0) return "";
+  // Zwraca napis "n-1, n-2, ..., 0" (dla n >= 1).
+  if (n <= 1) return "0";
 
-  if (n == 1) return std::to_string(n);
-
-  return std::to_string(n) + ", " + mniejszeLiczby(n - 1);
+  return std::to_string(n - 1) + ", " + mniejszeLiczby(n - 1);
 }
 
 void testMniejszeLiczby() {
-  assert(mniejszeLiczby(0) == "");
-  assert(mniejszeLiczby(10) == "10, 9, 8, 7, 6, 5, 4, 3, 2, 1");
+  assert(mniejszeLiczby(1) == "0");
+  assert(mniejszeLiczby(2) == "1, 0");
+  assert(mniejszeLiczby(10) == "9, 8, 7, 6, 5, 4, 3, 2, 1, 0");
 }
 
 int main() {

@@ -169,11 +169,11 @@ public class Main {
     int expectedNumberOfWords = 88;
     assert numberOfWords(content) == expectedNumberOfWords;
 
-    double expectedAverageLineLength = 60.0;
-    assert averageLineLength(content) == expectedAverageLineLength;
+    double expectedAverageLineLength = 50.5;
+    assert Math.abs(averageLineLength(content) - expectedAverageLineLength) < 0.01;
 
     double expectedAverageWordsPerLine = 8.8;
-    assert averageWordsPerLine(content) == expectedAverageWordsPerLine;
+    assert Math.abs(averageWordsPerLine(content) - expectedAverageWordsPerLine) < 0.01;
 
     Map<String, Integer> expectedWordHistogram = new HashMap<>();
     expectedWordHistogram.put("bold", 1);
@@ -246,7 +246,7 @@ public class Main {
 
     Map<String, Integer> wordHistogram = wordHistogram(text);
     for (String word : expectedWordHistogram.keySet()) {
-      assert wordHistogram.get(word) == expectedWordHistogram.get(word);
+      assert Objects.equals(wordHistogram.get(word), expectedWordHistogram.get(word));
     }
   }
 

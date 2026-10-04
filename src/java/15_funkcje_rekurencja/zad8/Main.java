@@ -1,73 +1,106 @@
 /*
-Tytul: Wieza Hanoi.
-Tresc: N krazkow o roznych srednicach ulozonych jest na jednym z trzech slupkow (A, B lub C). Na dole znajduje sie krazek o najwiekszej srednicy. Kazdy nastepny jest mniejszy od poprzedniego. Znajdz sposob na przelozenie wszystkich krazkow na inny slupek. Pamietaj, ze nie wolno klasc krazka o wiekszej srednicy na krazek o mniejszej srednicy, ani przekladac kilku krazkow jednoczesnie.
-Dane wejsciowe: Liczba naturalna N.
-Dane wyjsciowe: Lista par znakow.
-Przyklad:
-Dla N = 3, powinna zostac zwrocona lista: [('A', 'B'), ('A', 'C'), ('B', 'C'), ('A', 'B'), ('C', 'A'), ('C', 'B'), ('A', 'B')]
+ZAD-08 — Wieża Hanoi
+
+**Poziom:** ★★☆
+**Tagi:** `rekurencja`, `Hanoi`
+
+### Treść
+
+Na słupku `A` leży `N` krążków o różnych średnicach: na dole największy, a każdy kolejny jest mniejszy od poprzedniego. Słupki `B` i `C` są puste. Należy przenieść wszystkie krążki na słupek `B`, korzystając ze słupka `C` jako pomocniczego. Obowiązują zasady:
+
+* w jednym ruchu przenosimy dokładnie jeden krążek — górny krążek z jednego słupka na inny,
+* nie wolno położyć większego krążka na mniejszym.
+
+Napisz rekurencyjną funkcję `hanoi(n, skad, dokad, pomocniczy)`, która wypisuje ruchy przenoszące `n` krążków ze słupka `skad` na słupek `dokad`. Program wczytuje `N` i wypisuje **najkrótszą** sekwencję ruchów (ma ona $2^N - 1$ ruchów i jest wyznaczona jednoznacznie).
+
+### Wejście
+
+Jedna liczba naturalna `N`.
+
+### Wyjście
+
+$2^N - 1$ linii — kolejne ruchy w formacie `X -> Y`, gdzie `X` to słupek, z którego zdejmujemy krążek, a `Y` to słupek, na który go kładziemy.
+
+### Ograniczenia
+
+* `1 ≤ N ≤ 10`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+A -> B
+A -> C
+B -> C
+A -> B
+C -> A
+C -> B
+A -> B
+```
+
+### Uwagi
+
+* Aby przenieść `n` krążków ze słupka `skad` na `dokad`: przenieś `n-1` górnych krążków na słupek `pomocniczy`, przenieś największy krążek na `dokad`, a na koniec przenieś `n-1` krążków ze słupka `pomocniczy` na `dokad`. Przypadek bazowy: jeden krążek (albo zero krążków — wtedy nic nie robimy).
+
+### Kod startowy
+
+```python
+def hanoi(n, skad, dokad, pomocniczy):
+    pass
+
+
+n = int(input())
+hanoi(n, "A", "B", "C")
+```
 
 */
+
 import java.util.*;
 
 public class Main {
-  // Wieza Hanoi.
-  private static class Pair<T1, T2> {
-    public T1 first;
-    public T2 second;
 
-    public Pair(T1 firstValue, T2 secondValue) {
-      first = firstValue;
-      second = secondValue;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-      return (o instanceof Pair)
-          && (this.first == ((Pair) o).first)
-          && (this.second == ((Pair) o).second);
-    }
-  }
-
-  public static void hanoiWew(
-      int n, char a, char b, char c, ArrayList<Pair<Character, Character>> wynik) {
-
-    if (n == 1) {
-      wynik.add(new Pair<Character, Character>(a, b));
+  // Zlozonosc Czasowa: O(2^n)
+  // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu (plus O(2^n) na wynik)
+  public static void hanoi(
+      int n, char skad, char dokad, char pomocniczy, List<String> ruchy) {
+    // Dopisuje ruchy "X -> Y" przenoszace n krazkow ze slupka skad na dokad.
+    if (n == 0) {
       return;
     }
 
-    hanoiWew(n - 1, a, c, b, wynik);
-    wynik.add(new Pair<Character, Character>(a, b));
-    hanoiWew(n - 1, c, b, a, wynik);
+    hanoi(n - 1, skad, pomocniczy, dokad, ruchy);
+    ruchy.add(skad + " -> " + dokad);
+    hanoi(n - 1, pomocniczy, dokad, skad, ruchy);
   }
 
-  // Zlozonosc Czasowa: O(2^n)
-  // Zlozonosc Pamieciowa: O(n) - rekurencja uzywa stosu
-  public static ArrayList<Pair<Character, Character>> hanoi(int n) {
-    ArrayList<Pair<Character, Character>> wynik = new ArrayList<Pair<Character, Character>>();
-    hanoiWew(n, 'A', 'B', 'C', wynik);
-    return new ArrayList<Pair<Character, Character>>(wynik);
+  public static List<String> hanoi(int n) {
+    List<String> ruchy = new ArrayList<>();
+    hanoi(n, 'A', 'B', 'C', ruchy);
+    return ruchy;
   }
 
   public static void test1() {
-    int n = 3;
-    ArrayList<Pair<Character, Character>> wynik =
-        new ArrayList<Pair<Character, Character>>(
-            Arrays.asList(
-                new Pair<Character, Character>('A', 'B'),
-                new Pair<Character, Character>('A', 'C'),
-                new Pair<Character, Character>('B', 'C'),
-                new Pair<Character, Character>('A', 'B'),
-                new Pair<Character, Character>('C', 'A'),
-                new Pair<Character, Character>('C', 'B'),
-                new Pair<Character, Character>('A', 'B')));
+    List<String> wynik =
+        Arrays.asList("A -> B", "A -> C", "B -> C", "A -> B", "C -> A", "C -> B", "A -> B");
 
-    assert wynik.equals(hanoi(n));
+    assert wynik.equals(hanoi(3));
+  }
+
+  public static void test2() {
+    assert Arrays.asList("A -> C", "A -> B", "C -> B").equals(hanoi(2));
+    assert hanoi(10).size() == 1023;
   }
 
   public static void main(String[] args) {
 
     test1();
+    test2();
   }
 }
-

@@ -135,18 +135,18 @@ public class Main {
 
     Pair<Integer, Integer> sumaPrzekatnych = przekatne(macierz);
 
-    if (sumaPrzekatnych.first != sumaPrzekatnych.second) {
+    if (!sumaPrzekatnych.first.equals(sumaPrzekatnych.second)) {
       return false;
     }
 
     for (var sumaWiersz : wiersze(macierz)) {
-      if (sumaWiersz != sumaPrzekatnych.first) {
+      if (!sumaWiersz.equals(sumaPrzekatnych.first)) {
         return false;
       }
     }
 
     for (var sumaKolumna : kolumny(macierz)) {
-      if (sumaKolumna != sumaPrzekatnych.first) {
+      if (!sumaKolumna.equals(sumaPrzekatnych.first)) {
         return false;
       }
     }

@@ -1,37 +1,35 @@
-"""
+r"""
 ZAD-05 — Obliczenie średniej ważonej
 
 **Poziom:** ★☆☆
-**Tagi:** `list`, `float`
+**Tagi:** `listy`, `float`, `średnia`
 
 ### Treść
 
-Wczytaj dwie listy liczb zmiennoprzecinkowych tej samej długości:
-
-* lista wartości,
-* lista wag.
-
-Oblicz średnią ważoną:
-[
-\frac{\sum (wartość_i \cdot waga_i)}{\sum waga_i}
-]
+Wczytaj dwie listy liczb zmiennoprzecinkowych tej samej długości: listę wartości $x_1, x_2, \ldots, x_n$ oraz listę odpowiadających im wag $w_1, w_2, \ldots, w_n$.
+Oblicz średnią ważoną wartości:
+$\frac{x_1 w_1 + x_2 w_2 + \ldots + x_n w_n}{w_1 + w_2 + \ldots + w_n}$.
 
 ### Wejście
 
-* 1 linia: lista wartości (float)
-* 2 linia: lista wag (float)
+* 1. linia: wartości — liczby zmiennoprzecinkowe oddzielone spacjami
+* 2. linia: wagi — liczby zmiennoprzecinkowe oddzielone spacjami (tyle samo co wartości)
 
 ### Wyjście
 
-* 1 linia: jedna liczba zmiennoprzecinkowa — średnia ważona **z dokładnością do 2 miejsc po przecinku**
+Jedna linia: średnia ważona zaokrąglona do **2 miejsc po przecinku** (np. `0.29`, `7.50`).
+
+### Ograniczenia
+
+* Wagi są nieujemne, a ich suma jest większa od zera.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[0.2, 0.4, 0.1, 0.2, 0.1]
-[2.0, 5.0, 0.0, 2.0, 1.0]
+0.2 0.4 0.1 0.2 0.1
+2.0 5.0 0.0 2.0 1.0
 ```
 
 **Wyjście:**
@@ -40,25 +38,24 @@ Oblicz średnią ważoną:
 0.29
 ```
 
+$\frac{0.2 \cdot 2 + 0.4 \cdot 5 + 0.1 \cdot 0 + 0.2 \cdot 2 + 0.1 \cdot 1}{2 + 5 + 0 + 2 + 1} = \frac{2.9}{10} = 0.29$.
+
+### Uwagi
+
+* Wynik sformatujesz np. tak: `print(f"{wynik:.2f}")`.
+
 """
 
 
 def srednia_wazona(wartosci, wagi):
-
-    if len(wartosci) != len(wagi):
-        raise ValueError("Listy roznej dlugosci")
-
-    suma = 0
-    for waga, wartosc in zip(wagi, wartosci):
-        suma += waga * wartosc
-
-    return suma / sum(wartosci)
-
-
-def test_srednia_wazona():
-    assert srednia_wazona([1, 2, 3], [1, 1, 1]) == 1
-    assert srednia_wazona([0, -23, -5, 2, -3, 4, 9], [1, 2, 3, 4, 5, 6, 7]) == -1.1875
+    suma_iloczynow = 0
+    for wartosc, waga in zip(wartosci, wagi):
+        suma_iloczynow += wartosc * waga
+    return suma_iloczynow / sum(wagi)
 
 
 if __name__ == "__main__":
-    test_srednia_wazona()
+    wartosci = [float(x) for x in input().split()]
+    wagi = [float(x) for x in input().split()]
+
+    print(f"{srednia_wazona(wartosci, wagi):.2f}")

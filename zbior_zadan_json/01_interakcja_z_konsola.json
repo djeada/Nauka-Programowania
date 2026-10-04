@@ -1,7 +1,7 @@
 {
   "file": "01_interakcja_z_konsola.md",
-  "chapter_title": "Rozdział 1: Interakcja z konsolą (stdin/stdout)",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.\n* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem (np. `%.3f`, `format(x, \".3f\")`).",
+  "chapter_title": "Rozdział 1: Interakcja z konsolą",
+  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych, np. ZAD-05A … ZAD-05E) jest osobnym, niezależnym programem.**\n\n**Konwencje wspólne:**\n\n* Każda wartość wejściowa znajduje się w osobnej linii — wczytuj je dokładnie w podanej kolejności (np. `float(input())`).\n* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.\n* „Do 3 miejsc po przecinku” oznacza wypisanie liczby z **dokładnie** trzema cyframi po kropce, np. `f\"{y:.3f}\"` (`19.000`, `-2.500`). Analogicznie dla 2 miejsc.\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”. Tekst podany w `input(\"…\")` jest ignorowany przez sprawdzarkę.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -16,20 +16,23 @@
       ],
       "description": "Napisz program, który wypisze dokładnie:\n`Witaj, świecie!`",
       "input": "Brak.",
-      "output": "Jedna linia:\n\n* `Witaj, świecie!`",
-      "examples": [],
-      "testcases": [
+      "output": "Jedna linia: `Witaj, świecie!`",
+      "examples": [
         {
           "input": "",
-          "output": "Witaj, świecie!"
-        },
+          "output": "Witaj, świecie!",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
         {
           "input": "",
           "output": "Witaj, świecie!"
         }
       ],
       "constraints": "",
-      "notes": "* Tekst musi być identyczny (łącznie z przecinkiem, spacją i wykrzyknikiem)."
+      "notes": "* Tekst musi być identyczny (łącznie z polskimi znakami, przecinkiem, spacją i wykrzyknikiem).",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -41,13 +44,14 @@
         "I/O",
         "zmienne"
       ],
-      "description": "Wczytaj dwie liczby całkowite i wypisz je w odwrotnej kolejności (każda w osobnej linii).",
-      "input": "Dwie liczby całkowite:\n\n* 1. linia: `a`\n* 2. linia: `b`",
+      "description": "Wczytaj dwie liczby całkowite i wypisz je w odwrotnej kolejności (każdą w osobnej linii).",
+      "input": "* 1. linia: `a` — liczba całkowita\n* 2. linia: `b` — liczba całkowita",
       "output": "Dwie linie:\n\n* 1. linia: `b`\n* 2. linia: `a`",
       "examples": [
         {
           "input": "-7\n4",
-          "output": "4\n-7"
+          "output": "4\n-7",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -58,10 +62,23 @@
         {
           "input": "0\n5",
           "output": "5\n0"
+        },
+        {
+          "input": "8\n8",
+          "output": "8\n8"
+        },
+        {
+          "input": "-100\n-200",
+          "output": "-200\n-100"
+        },
+        {
+          "input": "1000000000\n-1000000000",
+          "output": "-1000000000\n1000000000"
         }
       ],
-      "constraints": "* `a`, `b` mieszczą się w typowym zakresie int (np. 32-bit).",
-      "notes": ""
+      "constraints": "* $-10^9 \\le a, b \\le 10^9$",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-03",
@@ -72,30 +89,27 @@
       "tags": [
         "print",
         "formatowanie",
-        "pętle",
         "string"
       ],
-      "description": "Wypisz na wyjście trzy kształty:\n\n1. **Kwadrat 2×2** z liter `x`\n2. **Trójkąt liczbowy** z 3 linii: w linii `i` wypisz `i` razy cyfrę `i` (dla i=1..3)\n3. **Romb z jedynek** o maksymalnej szerokości 5 znaków\n\nKażdy kształt ma być oddzielony **jedną pustą linią**.",
+      "description": "Wypisz na wyjście trzy kształty:\n\n1. **Kwadrat 2×2** z liter `x`.\n2. **Trójkąt liczbowy** z 3 linii: w linii numer `i` wypisz `i` razy cyfrę `i` (dla `i` = 1, 2, 3).\n3. **Romb z jedynek** o maksymalnej szerokości 5 znaków.\n\nKształty oddziel **dokładnie jedną pustą linią**.",
       "input": "Brak.",
-      "output": "Dokładnie:\n\n* 2 linie kwadratu,\n* pusta linia,\n* 3 linie trójkąta,\n* pusta linia,\n* 5 linii rombu.",
+      "output": "Dokładnie 12 linii:\n\n* 2 linie kwadratu,\n* pusta linia,\n* 3 linie trójkąta,\n* pusta linia,\n* 5 linii rombu.",
       "examples": [
         {
           "input": "",
-          "output": "xx\nxx\n\n1\n22\n333\n\n  1\n 111\n11111\n 111\n  1"
+          "output": "xx\nxx\n\n1\n22\n333\n\n  1\n 111\n11111\n 111\n  1",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
           "input": "",
           "output": "xx\nxx\n\n1\n22\n333\n\n  1\n 111\n11111\n 111\n  1"
-        },
-        {
-          "input": "",
-          "output": "xx\nxx\n\n1\n22\n333\n\n  1\n 111\n11111\n 111\n  1"
         }
       ],
       "constraints": "",
-      "notes": "* W rombie spacje na początku linii są istotne.\n* Nie dodawaj dodatkowych pustych linii na początku; jedna na końcu jest zwykle akceptowalna, ale trzymaj się przykładu."
+      "notes": "* W rombie spacje na **początku** linii są istotne (spacje na końcu linii są ignorowane).\n* Nie dodawaj pustych linii na początku wyjścia.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-04",
@@ -107,13 +121,14 @@
         "arytmetyka",
         "I/O"
       ],
-      "description": "Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:\n\n1. `a + b`\n2. `a - b`\n3. `a * b`\n4. `a // b` (dzielenie całkowite)\n5. `a % b`\n6. `a^b`",
-      "input": "* 1. linia: `a` (liczba całkowita)\n* 2. linia: `b` (liczba całkowita)",
-      "output": "6 linii — wyniki działań w kolejności 1–6.",
+      "description": "Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:\n\n1. sumę $a + b$,\n2. różnicę $a - b$,\n3. iloczyn $a \\cdot b$,\n4. iloraz całkowity $\\lfloor a / b \\rfloor$ (w Pythonie `a // b`),\n5. resztę z dzielenia `a` przez `b` (w Pythonie `a % b`),\n6. potęgę $a^b$ (w Pythonie `a ** b`).",
+      "input": "* 1. linia: `a` — liczba całkowita\n* 2. linia: `b` — liczba całkowita",
+      "output": "6 linii — wyniki działań w kolejności 1–6, każdy jako liczba całkowita.",
       "examples": [
         {
           "input": "3\n2",
-          "output": "5\n1\n6\n1\n1\n9"
+          "output": "5\n1\n6\n1\n1\n9",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -124,29 +139,47 @@
         {
           "input": "7\n1",
           "output": "8\n6\n7\n7\n0\n7"
+        },
+        {
+          "input": "0\n5",
+          "output": "5\n-5\n0\n0\n0\n0"
+        },
+        {
+          "input": "2\n10",
+          "output": "12\n-8\n20\n0\n2\n1024"
+        },
+        {
+          "input": "17\n4",
+          "output": "21\n13\n68\n4\n1\n83521"
+        },
+        {
+          "input": "1000\n6",
+          "output": "1006\n994\n6000\n166\n4\n1000000000000000000"
         }
       ],
-      "constraints": "* `a ≥ 0`\n* `b > 0` (żeby dzielenie i modulo były poprawne)",
-      "notes": ""
+      "constraints": "* $0 \\le a \\le 1000$\n* $1 \\le b \\le 10$ (dzięki temu dzielenie i reszta są zawsze poprawne)\n* $a^b \\le 10^{18}$",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05A",
       "slug": "01_interakcja_z_konsola/ZAD-05A",
       "title": "Funkcja liniowa: y = 3x + 10",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
         "arytmetyka",
         "float",
         "formatowanie"
       ],
-      "description": "",
-      "input": "1 liczba: `x` (może być całkowita lub zmiennoprzecinkowa)",
-      "output": "1 liczba: `y` wypisana z dokładnością do **3 miejsc po przecinku**.",
+      "description": "Wczytaj liczbę rzeczywistą $x$ i oblicz wartość funkcji $y = 3x + 10$.",
+      "input": "* 1 linia: `x` — liczba całkowita lub zmiennoprzecinkowa",
+      "output": "Jedna linia: `y` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "3",
-          "output": "19.000"
+          "output": "19.000",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -157,28 +190,46 @@
         {
           "input": "-2.5",
           "output": "2.500"
+        },
+        {
+          "input": "1.5",
+          "output": "14.500"
+        },
+        {
+          "input": "-10",
+          "output": "-20.000"
+        },
+        {
+          "input": "0.001",
+          "output": "10.003"
+        },
+        {
+          "input": "1000",
+          "output": "3010.000"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $-1000 \\le x \\le 1000$",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05B",
       "slug": "01_interakcja_z_konsola/ZAD-05B",
       "title": "Funkcja liniowa: y = ax + b",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
         "arytmetyka",
         "float"
       ],
-      "description": "",
-      "input": "3 liczby (każda w osobnej linii): `a`, `b`, `x`",
-      "output": "`y` do 3 miejsc po przecinku.",
+      "description": "Wczytaj współczynniki $a$, $b$ oraz argument $x$ i oblicz wartość funkcji liniowej $y = ax + b$.",
+      "input": "3 liczby rzeczywiste, każda w osobnej linii:\n\n* 1. linia: `a`\n* 2. linia: `b`\n* 3. linia: `x`",
+      "output": "Jedna linia: `y` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "1\n2\n3",
-          "output": "5.000"
+          "output": "5.000",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -189,28 +240,42 @@
         {
           "input": "-1.5\n2\n8",
           "output": "-10.000"
+        },
+        {
+          "input": "0\n7\n100",
+          "output": "7.000"
+        },
+        {
+          "input": "0.5\n-1\n0",
+          "output": "-1.000"
+        },
+        {
+          "input": "3\n0\n-2.5",
+          "output": "-7.500"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $-1000 \\le a, b, x \\le 1000$",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05C",
       "slug": "01_interakcja_z_konsola/ZAD-05C",
       "title": "Funkcja sześcienna: y = x³ + 2",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
         "potęgi",
         "float"
       ],
-      "description": "Oblicz: `y = x^3 + 22 - 20`, czyli równoważnie `y = x^3 + 2`.",
-      "input": "1 liczba: `x`",
-      "output": "`y` do 3 miejsc po przecinku.",
+      "description": "Wczytaj liczbę rzeczywistą $x$ i oblicz $y = x^3 + 2$.",
+      "input": "* 1 linia: `x` — liczba rzeczywista",
+      "output": "Jedna linia: `y` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "5",
-          "output": "127.000"
+          "output": "127.000",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -221,28 +286,46 @@
         {
           "input": "-3",
           "output": "-25.000"
+        },
+        {
+          "input": "1.5",
+          "output": "5.375"
+        },
+        {
+          "input": "-1",
+          "output": "1.000"
+        },
+        {
+          "input": "10",
+          "output": "1002.000"
+        },
+        {
+          "input": "0.1",
+          "output": "2.001"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $-100 \\le x \\le 100$",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05D",
       "slug": "01_interakcja_z_konsola/ZAD-05D",
       "title": "Wielomian z potęgami: y = a·x^m + b·x^n + c − a",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
         "potęgi",
         "float"
       ],
-      "description": "",
-      "input": "6 liczb (w osobnych liniach): `a`, `b`, `c`, `m`, `n`, `x`",
-      "output": "`y` do 3 miejsc po przecinku.",
+      "description": "Wczytaj współczynniki $a$, $b$, $c$, wykładniki $m$, $n$ oraz argument $x$ i oblicz:\n\n$y = a \\cdot x^m + b \\cdot x^n + c - a$",
+      "input": "6 liczb, każda w osobnej linii:\n\n* 1. linia: `a` — liczba rzeczywista\n* 2. linia: `b` — liczba rzeczywista\n* 3. linia: `c` — liczba rzeczywista\n* 4. linia: `m` — liczba całkowita nieujemna\n* 5. linia: `n` — liczba całkowita nieujemna\n* 6. linia: `x` — liczba rzeczywista",
+      "output": "Jedna linia: `y` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "1\n1\n1\n1\n1\n1",
-          "output": "2.000"
+          "output": "2.000",
+          "explanation": "Dla $a = b = c = m = n = x = 1$: $y = 1 \\cdot 1^1 + 1 \\cdot 1^1 + 1 - 1 = 2$."
         }
       ],
       "testcases": [
@@ -253,17 +336,34 @@
         {
           "input": "1\n-1\n0\n3\n2\n2",
           "output": "3.000"
+        },
+        {
+          "input": "1.5\n2\n-3\n0\n0\n7",
+          "output": "-1.000"
+        },
+        {
+          "input": "0.5\n0\n10\n2\n5\n-3",
+          "output": "14.000"
+        },
+        {
+          "input": "-2\n1\n0.5\n3\n4\n1.2",
+          "output": "1.118"
+        },
+        {
+          "input": "4\n-2\n1\n5\n1\n0",
+          "output": "-3.000"
         }
       ],
-      "constraints": "* `m` i `n` są liczbami całkowitymi (np. nieujemnymi), aby potęgowanie było jednoznaczne w typowych językach.",
-      "notes": ""
+      "constraints": "* $-100 \\le a, b, c, x \\le 100$\n* $0 \\le m, n \\le 5$ (liczby całkowite)\n* Jeśli $x = 0$, to $m, n \\ge 1$ (nie pojawia się wyrażenie $0^0$).",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05E",
       "slug": "01_interakcja_z_konsola/ZAD-05E",
       "title": "Funkcja z trygonometrią, wykładniczą i logarytmem",
-      "difficulty": 3,
-      "difficulty_display": "★★★☆",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
       "tags": [
         "math",
         "trygonometria",
@@ -271,13 +371,14 @@
         "exp",
         "float"
       ],
-      "description": "Dla `x` (w radianach) oblicz:\n[\ny=\\sin^3(x)\\cdot\\cos^2(x)+e^{x^2}+\\ln(x^3+2x^2-x-3)\n]",
-      "input": "1 liczba zmiennoprzecinkowa: `x` (w radianach)",
-      "output": "`y` do 3 miejsc po przecinku.",
+      "description": "Wczytaj liczbę rzeczywistą $x$ (kąt w radianach) i oblicz:\n\n$y = \\sin^3(x) \\cdot \\cos^2(x) + e^{x^2} + \\ln(x^3 + 2x^2 - x - 3)$\n\ngdzie $\\ln$ oznacza logarytm naturalny, a $e$ — podstawę logarytmu naturalnego.",
+      "input": "* 1 linia: `x` — liczba zmiennoprzecinkowa (w radianach)",
+      "output": "Jedna linia: `y` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "2",
-          "output": "57.179"
+          "output": "57.126",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -288,10 +389,23 @@
         {
           "input": "2.5",
           "output": "521.269"
+        },
+        {
+          "input": "1.2",
+          "output": "3.431"
+        },
+        {
+          "input": "3",
+          "output": "8106.750"
+        },
+        {
+          "input": "1.75",
+          "output": "23.318"
         }
       ],
-      "constraints": "* Dane testowe spełniają warunek dziedziny logarytmu:\n\n  * (x^3+2x^2-x-3 > 0)",
-      "notes": ""
+      "constraints": "* $1.2 \\le x \\le 3$, więc spełniony jest warunek dziedziny logarytmu $x^3 + 2x^2 - x - 3 > 0$.",
+      "notes": "* Skorzystaj z modułu `math`: `math.sin`, `math.cos`, `math.exp`, `math.log` (logarytm naturalny).",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06A",
@@ -302,13 +416,14 @@
       "tags": [
         "konwersje"
       ],
-      "description": "Wczytaj wartość w kilogramach `kg` i przelicz na gramy.",
-      "input": "* 1 linia: `kg`",
-      "output": "* 1 linia: `g` jako **liczba całkowita**, gdzie:\n  `g = kg * 1000`",
+      "description": "Wczytaj masę w kilogramach `kg` i przelicz ją na gramy: $g = kg \\cdot 1000$.",
+      "input": "* 1 linia: `kg` — liczba całkowita lub zmiennoprzecinkowa",
+      "output": "Jedna linia: `g` jako **liczba całkowita** (bez części ułamkowej).",
       "examples": [
         {
           "input": "2.5",
-          "output": "2500"
+          "output": "2500",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -319,10 +434,31 @@
         {
           "input": "7",
           "output": "7000"
+        },
+        {
+          "input": "0",
+          "output": "0"
+        },
+        {
+          "input": "0.001",
+          "output": "1"
+        },
+        {
+          "input": "2.01",
+          "output": "2010"
+        },
+        {
+          "input": "12.345",
+          "output": "12345"
+        },
+        {
+          "input": "1000000",
+          "output": "1000000000"
         }
       ],
-      "constraints": "* `kg` jest liczbą całkowitą **lub** taką, że wynik w gramach jest całkowity.",
-      "notes": ""
+      "constraints": "* $0 \\le kg \\le 10^6$\n* `kg` ma co najwyżej 3 cyfry po przecinku, więc wynik w gramach jest całkowity.",
+      "notes": "* Uwaga na błędy zaokrągleń liczb zmiennoprzecinkowych: np. `1.001 * 1000` daje w Pythonie `1000.9999999999999`, więc `int(...)` zwróciłoby `1000`. Zamiast obcinać, zaokrąglij wynik: `round(kg * 1000)`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06B",
@@ -334,13 +470,14 @@
         "konwersje",
         "float"
       ],
-      "description": "Wczytaj liczbę cali `inch` i przelicz na centymetry.",
-      "input": "* 1 linia: `inch`",
-      "output": "* 1 linia: `cm = inch * 2.54` wypisane do **2 miejsc po przecinku**",
+      "description": "Wczytaj długość w calach `inch` i przelicz ją na centymetry: $cm = inch \\cdot 2.54$.",
+      "input": "* 1 linia: `inch` — liczba rzeczywista, $inch \\ge 0$",
+      "output": "Jedna linia: `cm` do **2 miejsc po przecinku**.",
       "examples": [
         {
           "input": "10",
-          "output": "25.40"
+          "output": "25.40",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -351,10 +488,27 @@
         {
           "input": "12",
           "output": "30.48"
+        },
+        {
+          "input": "0",
+          "output": "0.00"
+        },
+        {
+          "input": "1",
+          "output": "2.54"
+        },
+        {
+          "input": "100",
+          "output": "254.00"
+        },
+        {
+          "input": "0.5",
+          "output": "1.27"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06C",
@@ -365,13 +519,14 @@
       "tags": [
         "dzielenie całkowite"
       ],
-      "description": "Wczytaj liczbę sekund `s` i wypisz liczbę **pełnych godzin**.",
-      "input": "* 1 linia: `s` (liczba całkowita, `s ≥ 0`)",
-      "output": "* 1 linia: `s // 3600`",
+      "description": "Wczytaj liczbę sekund `s` i wypisz, ile **pełnych godzin** się w niej mieści (godzina ma 3600 sekund).",
+      "input": "* 1 linia: `s` — liczba całkowita, $0 \\le s \\le 10^9$",
+      "output": "Jedna linia: liczba pełnych godzin, czyli $\\lfloor s / 3600 \\rfloor$ (w Pythonie `s // 3600`).",
       "examples": [
         {
           "input": "8639",
-          "output": "2"
+          "output": "2",
+          "explanation": "8639 sekund to 2 godziny i 1439 sekund, więc pełne godziny są 2."
         }
       ],
       "testcases": [
@@ -382,10 +537,27 @@
         {
           "input": "7200",
           "output": "2"
+        },
+        {
+          "input": "3599",
+          "output": "0"
+        },
+        {
+          "input": "3600",
+          "output": "1"
+        },
+        {
+          "input": "86399",
+          "output": "23"
+        },
+        {
+          "input": "1000000000",
+          "output": "277777"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06D",
@@ -397,13 +569,14 @@
         "konwersje",
         "float"
       ],
-      "description": "Wczytaj kwotę w euro `eur` i przelicz na złotówki przy stałym kursie.",
-      "input": "* 1 linia: `eur`",
-      "output": "* 1 linia: `pln = eur * 4.4` do **2 miejsc po przecinku**",
+      "description": "Wczytaj kwotę w euro `eur` i przelicz ją na złotówki przy stałym kursie 4,40 zł za 1 euro: $pln = eur \\cdot 4.4$.",
+      "input": "* 1 linia: `eur` — liczba rzeczywista, $eur \\ge 0$",
+      "output": "Jedna linia: `pln` do **2 miejsc po przecinku**.",
       "examples": [
         {
           "input": "3",
-          "output": "13.20"
+          "output": "13.20",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -414,10 +587,27 @@
         {
           "input": "7.35",
           "output": "32.34"
+        },
+        {
+          "input": "0",
+          "output": "0.00"
+        },
+        {
+          "input": "1",
+          "output": "4.40"
+        },
+        {
+          "input": "1000",
+          "output": "4400.00"
+        },
+        {
+          "input": "0.1",
+          "output": "0.44"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06E",
@@ -429,13 +619,14 @@
         "pi",
         "float"
       ],
-      "description": "Wczytaj kąt w stopniach `deg` i przelicz na radiany.",
-      "input": "* 1 linia: `deg`",
-      "output": "* 1 linia: `rad = deg * π / 180` do **3 miejsc po przecinku**",
+      "description": "Wczytaj kąt w stopniach `deg` i przelicz go na radiany: $rad = \\frac{deg \\cdot \\pi}{180}$.",
+      "input": "* 1 linia: `deg` — liczba rzeczywista",
+      "output": "Jedna linia: `rad` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "180",
-          "output": "3.142"
+          "output": "3.142",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -446,10 +637,27 @@
         {
           "input": "45",
           "output": "0.785"
+        },
+        {
+          "input": "0",
+          "output": "0.000"
+        },
+        {
+          "input": "360",
+          "output": "6.283"
+        },
+        {
+          "input": "-30",
+          "output": "-0.524"
+        },
+        {
+          "input": "57.3",
+          "output": "1.000"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Wartość $\\pi$ weź z modułu `math` (`math.pi`).",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06F",
@@ -461,13 +669,14 @@
         "konwersje",
         "float"
       ],
-      "description": "Wczytaj temperaturę w stopniach Fahrenheita `F`. Oblicz temperaturę w Celsjuszach oraz Kelvinach.",
-      "input": "* 1 linia: `F`",
-      "output": "Dwie linie:\n\n1. `C = (5/9) * (F - 32)` do **3 miejsc**\n2. `K = C + 273.15` do **3 miejsc**",
+      "description": "Wczytaj temperaturę w stopniach Fahrenheita $F$. Oblicz temperaturę w stopniach Celsjusza oraz w kelwinach:\n\n* $C = \\frac{5}{9} (F - 32)$\n* $K = C + 273.15$",
+      "input": "* 1 linia: `F` — liczba rzeczywista",
+      "output": "Dwie linie:\n\n1. `C` do **3 miejsc po przecinku**,\n2. `K` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "32",
-          "output": "0.000\n273.150"
+          "output": "0.000\n273.150",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -478,10 +687,23 @@
         {
           "input": "0",
           "output": "-17.778\n255.372"
+        },
+        {
+          "input": "-40",
+          "output": "-40.000\n233.150"
+        },
+        {
+          "input": "98.6",
+          "output": "37.000\n310.150"
+        },
+        {
+          "input": "451",
+          "output": "232.778\n505.928"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* `K` obliczaj z niezaokrąglonej wartości `C` — zaokrąglaj dopiero przy wypisywaniu.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07A",
@@ -493,13 +715,14 @@
         "geometria",
         "float"
       ],
-      "description": "Oblicz pole trójkąta ze wzoru:\n( P = \\frac{1}{2} a h )",
-      "input": "* 1 linia: `a`\n* 2 linia: `h`",
-      "output": "* 1 linia: `P` do **3 miejsc po przecinku**",
+      "description": "Wczytaj długość podstawy $a$ i wysokość $h$ trójkąta i oblicz jego pole ze wzoru $P = \\frac{1}{2} a h$.",
+      "input": "* 1. linia: `a` — liczba rzeczywista, $a > 0$\n* 2. linia: `h` — liczba rzeczywista, $h > 0$",
+      "output": "Jedna linia: `P` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "6\n4",
-          "output": "12.000"
+          "output": "12.000",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -510,10 +733,27 @@
         {
           "input": "5.5\n2",
           "output": "5.500"
+        },
+        {
+          "input": "1\n1",
+          "output": "0.500"
+        },
+        {
+          "input": "0.3\n0.7",
+          "output": "0.105"
+        },
+        {
+          "input": "10\n0.25",
+          "output": "1.250"
+        },
+        {
+          "input": "7\n3",
+          "output": "10.500"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07B",
@@ -525,13 +765,14 @@
         "geometria",
         "float"
       ],
-      "description": "Oblicz pole prostokąta:\n( P = ab )",
-      "input": "* 1 linia: `a`\n* 2 linia: `b`",
-      "output": "* 1 linia: `P` do **3 miejsc po przecinku**",
+      "description": "Wczytaj długości boków prostokąta $a$ i $b$ i oblicz jego pole ze wzoru $P = a b$.",
+      "input": "* 1. linia: `a` — liczba rzeczywista, $a > 0$\n* 2. linia: `b` — liczba rzeczywista, $b > 0$",
+      "output": "Jedna linia: `P` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "2.5\n4",
-          "output": "10.000"
+          "output": "10.000",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -542,10 +783,23 @@
         {
           "input": "0.5\n0.2",
           "output": "0.100"
+        },
+        {
+          "input": "1\n1",
+          "output": "1.000"
+        },
+        {
+          "input": "12.5\n8",
+          "output": "100.000"
+        },
+        {
+          "input": "0.333\n3",
+          "output": "0.999"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07C",
@@ -557,13 +811,14 @@
         "geometria",
         "float"
       ],
-      "description": "Oblicz pole rombu z przekątnych:\n( P = \\frac{1}{2} d_1 d_2 )",
-      "input": "* 1 linia: `d1`\n* 2 linia: `d2`",
-      "output": "* 1 linia: `P` do **3 miejsc po przecinku**",
+      "description": "Wczytaj długości przekątnych rombu $d_1$ i $d_2$ i oblicz jego pole ze wzoru $P = \\frac{1}{2} d_1 d_2$.",
+      "input": "* 1. linia: `d1` — liczba rzeczywista, $d_1 > 0$\n* 2. linia: `d2` — liczba rzeczywista, $d_2 > 0$",
+      "output": "Jedna linia: `P` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "10\n6",
-          "output": "30.000"
+          "output": "30.000",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -574,29 +829,43 @@
         {
           "input": "3.3\n4",
           "output": "6.600"
+        },
+        {
+          "input": "1\n1",
+          "output": "0.500"
+        },
+        {
+          "input": "2.5\n1.5",
+          "output": "1.875"
+        },
+        {
+          "input": "100\n0.03",
+          "output": "1.500"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07D",
       "slug": "01_interakcja_z_konsola/ZAD-07D",
       "title": "Objętość kuli",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
         "geometria",
         "pi",
         "float"
       ],
-      "description": "Oblicz objętość kuli:\n( V = \\frac{4}{3}\\pi r^3 )",
-      "input": "* 1 linia: `r`",
-      "output": "* 1 linia: `V` do **3 miejsc po przecinku**",
+      "description": "Wczytaj promień kuli $r$ i oblicz jej objętość ze wzoru $V = \\frac{4}{3}\\pi r^3$.",
+      "input": "* 1 linia: `r` — liczba rzeczywista, $r > 0$",
+      "output": "Jedna linia: `V` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "1",
-          "output": "4.189"
+          "output": "4.189",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -607,29 +876,43 @@
         {
           "input": "0.5",
           "output": "0.524"
+        },
+        {
+          "input": "3",
+          "output": "113.097"
+        },
+        {
+          "input": "10",
+          "output": "4188.790"
+        },
+        {
+          "input": "0.1",
+          "output": "0.004"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07E",
       "slug": "01_interakcja_z_konsola/ZAD-07E",
       "title": "Objętość stożka",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
         "geometria",
         "pi",
         "float"
       ],
-      "description": "Oblicz objętość stożka:\n( V = \\frac{1}{3}\\pi r^2 h )",
-      "input": "* 1 linia: `r`\n* 2 linia: `h`",
-      "output": "* 1 linia: `V` do **3 miejsc po przecinku**",
+      "description": "Wczytaj promień podstawy $r$ i wysokość $h$ stożka i oblicz jego objętość ze wzoru $V = \\frac{1}{3}\\pi r^2 h$.",
+      "input": "* 1. linia: `r` — liczba rzeczywista, $r > 0$\n* 2. linia: `h` — liczba rzeczywista, $h > 0$",
+      "output": "Jedna linia: `V` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "2\n3",
-          "output": "12.566"
+          "output": "12.566",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -640,10 +923,23 @@
         {
           "input": "1.5\n2",
           "output": "4.712"
+        },
+        {
+          "input": "1\n1",
+          "output": "1.047"
+        },
+        {
+          "input": "3\n10",
+          "output": "94.248"
+        },
+        {
+          "input": "0.5\n6",
+          "output": "1.571"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07F",
@@ -655,13 +951,14 @@
         "geometria",
         "float"
       ],
-      "description": "Oblicz objętość prostopadłościanu:\n( V = abc )",
-      "input": "* 1 linia: `a`\n* 2 linia: `b`\n* 3 linia: `c`",
-      "output": "* 1 linia: `V` do **3 miejsc po przecinku**",
+      "description": "Wczytaj długości krawędzi prostopadłościanu $a$, $b$, $c$ i oblicz jego objętość ze wzoru $V = a b c$.",
+      "input": "* 1. linia: `a` — liczba rzeczywista, $a > 0$\n* 2. linia: `b` — liczba rzeczywista, $b > 0$\n* 3. linia: `c` — liczba rzeczywista, $c > 0$",
+      "output": "Jedna linia: `V` do **3 miejsc po przecinku**.",
       "examples": [
         {
           "input": "2\n3\n4",
-          "output": "24.000"
+          "output": "24.000",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -672,10 +969,23 @@
         {
           "input": "2.2\n3.3\n4.4",
           "output": "31.944"
+        },
+        {
+          "input": "1\n1\n1",
+          "output": "1.000"
+        },
+        {
+          "input": "0.1\n0.2\n0.3",
+          "output": "0.006"
+        },
+        {
+          "input": "5\n6\n7",
+          "output": "210.000"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-08",
@@ -689,32 +999,50 @@
         "formatowanie",
         "geometria"
       ],
-      "description": "Dane są:\n\n* cena jednej płytki `p`,\n* bok płytki `t` (płytka kwadratowa),\n* długość podłogi `L`,\n* szerokość podłogi `W`.\n\nOblicz liczbę płytek potrzebnych do pokrycia całej podłogi, zakładając układ bez docinania „na styk” (czyli wzdłuż każdego wymiaru zaokrąglasz w górę), a następnie podaj koszt całkowity.",
-      "input": "4 liczby (każda w osobnej linii): `p`, `t`, `L`, `W`",
-      "output": "Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.",
+      "description": "Dane są:\n\n* cena jednej płytki `p` (w złotych),\n* bok kwadratowej płytki `t` (w centymetrach),\n* długość podłogi `L` (w centymetrach),\n* szerokość podłogi `W` (w centymetrach).\n\nPłytki układamy w prostokątną siatkę równolegle do ścian. Wzdłuż każdego wymiaru liczbę płytek zaokrąglamy **w górę** (ostatnią płytkę w rzędzie się docina, ale trzeba ją kupić w całości):\n\n* $n_L = \\lceil L / t \\rceil$\n* $n_W = \\lceil W / t \\rceil$\n* liczba płytek: $n = n_L \\cdot n_W$\n\nOblicz całkowity koszt zakupu płytek: $n \\cdot p$.",
+      "input": "4 liczby, każda w osobnej linii:\n\n* 1. linia: `p` — liczba rzeczywista\n* 2. linia: `t` — liczba całkowita\n* 3. linia: `L` — liczba całkowita\n* 4. linia: `W` — liczba całkowita",
+      "output": "Jedna linia: całkowity koszt do **2 miejsc po przecinku**.",
       "examples": [
         {
           "input": "2\n3\n20\n40",
-          "output": "196.00"
+          "output": "196.00",
+          "explanation": "$n_L = \\lceil 20 / 3 \\rceil = 7$, $n_W = \\lceil 40 / 3 \\rceil = 14$, więc potrzeba $7 \\cdot 14 = 98$ płytek, które kosztują $98 \\cdot 2 = 196$ zł."
         }
       ],
       "testcases": [
         {
-          "input": "2.5\n0.3\n1.2\n0.8",
+          "input": "2.5\n30\n120\n80",
           "output": "30.00"
         },
         {
-          "input": "1.99\n0.5\n2.1\n2.1",
+          "input": "1.99\n50\n210\n210",
           "output": "49.75"
+        },
+        {
+          "input": "10\n20\n100\n60",
+          "output": "150.00"
+        },
+        {
+          "input": "3.5\n100\n1\n1",
+          "output": "3.50"
+        },
+        {
+          "input": "0.75\n25\n101\n99",
+          "output": "15.00"
+        },
+        {
+          "input": "4\n33\n100\n200",
+          "output": "112.00"
         }
       ],
-      "constraints": "* `p > 0`, `t > 0`, `L > 0`, `W > 0`\n* Liczba płytek:\n\n  * `nL = ceil(L / t)`\n  * `nW = ceil(W / t)`\n  * `n = nL * nW`\n* Koszt: `n * p`",
-      "notes": ""
+      "constraints": "* $0 < p \\le 1000$\n* $1 \\le t, L, W \\le 10^4$",
+      "notes": "* Zaokrąglenie w górę daje funkcja `math.ceil`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-09",
       "slug": "01_interakcja_z_konsola/ZAD-09",
-      "title": "Kalkulator kredytowy (rata annuitetowa)",
+      "title": "Kalkulator kredytowy",
       "difficulty": 2,
       "difficulty_display": "★★☆",
       "tags": [
@@ -722,13 +1050,14 @@
         "float",
         "formatowanie"
       ],
-      "description": "Wczytaj:\n\n* roczną stopę procentową `R` (w %),\n* okres spłaty `Y` (w latach),\n* kwotę kredytu `P`.\n\nOblicz miesięczną ratę `M` oraz całkowity koszt `C = M * n`, gdzie `n = 12 * Y`.\n\nDla `R > 0` użyj wzoru:\n[\nM = P \\cdot \\frac{r(1+r)^n}{(1+r)^n-1}\n]\ngdzie `r = R / (12*100)`.\n\nDla `R = 0` przyjmij:\n\n* `M = P / n`.",
-      "input": "3 liczby (w osobnych liniach):\n\n1. `R` (float, `R ≥ 0`)\n2. `Y` (int, `Y > 0`)\n3. `P` (float, `P > 0`)",
-      "output": "Dwie linie (do **2 miejsc po przecinku**):\n\n1. miesięczna rata `M`\n2. całkowity koszt `C`",
+      "description": "Wczytaj:\n\n* roczną stopę procentową $R$ (w procentach),\n* okres spłaty $Y$ (w latach),\n* kwotę kredytu $P$.\n\nOblicz miesięczną ratę $M$ oraz całkowity koszt kredytu $C = M \\cdot n$, gdzie $n = 12 \\cdot Y$ to liczba rat.\n\nDla $R > 0$ użyj wzoru na ratę stałą (annuitetową):\n\n$M = P \\cdot \\frac{r(1+r)^n}{(1+r)^n - 1}$\n\ngdzie $r = \\frac{R}{12 \\cdot 100}$ to miesięczna stopa procentowa.\n\nDla $R = 0$ przyjmij $M = \\frac{P}{n}$.",
+      "input": "3 liczby, każda w osobnej linii:\n\n* 1. linia: `R` — liczba rzeczywista, $R \\ge 0$\n* 2. linia: `Y` — liczba całkowita, $Y > 0$\n* 3. linia: `P` — liczba rzeczywista, $P > 0$",
+      "output": "Dwie linie, obie do **2 miejsc po przecinku**:\n\n1. miesięczna rata `M`,\n2. całkowity koszt `C`.",
       "examples": [
         {
           "input": "3.5\n8\n12000",
-          "output": "143.50\n13776.00"
+          "output": "143.50\n13775.68",
+          "explanation": "Niezaokrąglona rata to $M \\approx 143.4966$, więc $C = 96 \\cdot 143.4966\\ldots \\approx 13775.68$."
         }
       ],
       "testcases": [
@@ -739,10 +1068,90 @@
         {
           "input": "0\n3\n15000",
           "output": "416.67\n15000.00"
+        },
+        {
+          "input": "12\n2\n5000",
+          "output": "235.37\n5648.82"
+        },
+        {
+          "input": "0\n1\n1200",
+          "output": "100.00\n1200.00"
+        },
+        {
+          "input": "7.25\n30\n350000",
+          "output": "2387.62\n859542.11"
+        },
+        {
+          "input": "1\n10\n100000",
+          "output": "876.04\n105124.95"
+        }
+      ],
+      "constraints": "* $0 \\le R \\le 30$\n* $1 \\le Y \\le 40$\n* $0 < P \\le 10^7$",
+      "notes": "* Koszt `C` obliczaj z **niezaokrąglonej** raty `M` (nie z wartości `143.50`). Zaokrąglaj dopiero przy wypisywaniu.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "01_interakcja_z_konsola/ZAD-10",
+      "title": "Sekundy → format GG:MM:SS",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "dzielenie całkowite",
+        "modulo",
+        "formatowanie"
+      ],
+      "description": "Wczytaj liczbę sekund `s` i zapisz ją jako czas w formacie `GG:MM:SS`: pełne godziny, pozostałe pełne minuty (0–59) i pozostałe sekundy (0–59). Każdą część wypisz jako **dwie cyfry** — w razie potrzeby z zerem wiodącym (np. `07`).",
+      "input": "* 1 linia: `s` — liczba całkowita, $0 \\le s < 360000$",
+      "output": "Jedna linia: czas w formacie `GG:MM:SS`.",
+      "examples": [
+        {
+          "input": "3725",
+          "output": "01:02:05",
+          "explanation": "$3725 = 1 \\cdot 3600 + 2 \\cdot 60 + 5$, czyli 1 godzina, 2 minuty i 5 sekund."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "00:00:00"
+        },
+        {
+          "input": "59",
+          "output": "00:00:59"
+        },
+        {
+          "input": "60",
+          "output": "00:01:00"
+        },
+        {
+          "input": "3599",
+          "output": "00:59:59"
+        },
+        {
+          "input": "3600",
+          "output": "01:00:00"
+        },
+        {
+          "input": "86399",
+          "output": "23:59:59"
+        },
+        {
+          "input": "45296",
+          "output": "12:34:56"
+        },
+        {
+          "input": "359999",
+          "output": "99:59:59"
+        },
+        {
+          "input": "36000",
+          "output": "10:00:00"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Wbudowana funkcja `divmod(a, b)` zwraca naraz iloraz całkowity i resztę z dzielenia: `godziny, reszta = divmod(s, 3600)` daje to samo co `godziny = s // 3600` oraz `reszta = s % 3600`.\n* Liczbę z zerem wiodącym wypiszesz formatowaniem `:02d`, np. `f\"{5:02d}\"` daje `05`, a `f\"{12:02d}\"` daje `12`.\n* Ograniczenie $s < 360000$ gwarantuje, że godzin jest co najwyżej 99, czyli zawsze wystarczą dwie cyfry.",
+      "starter_code": ""
     }
   ]
 }

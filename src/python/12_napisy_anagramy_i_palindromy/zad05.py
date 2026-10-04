@@ -1,12 +1,13 @@
-"""
+r"""
 ZAD-05 — Anagramy słowa w zdaniu
 
 **Poziom:** ★★☆
-**Tagi:** `anagram`, `string`, `zliczanie`
+**Tagi:** `napisy`, `anagram`, `słowa`
 
 ### Treść
 
-Wczytaj zdanie oraz słowo-klucz. Wypisz wszystkie słowa ze zdania, które są anagramami słowa-klucza (ignoruj wielkość liter).
+Wczytaj zdanie oraz słowo-klucz `k`. Wypisz wszystkie słowa zdania, które są anagramami słowa `k` (także samo słowo `k`). Przy porównywaniu ignoruj wielkość liter.
+Słowa wyznaczaj zgodnie z konwencją rozdziału (bez interpunkcji z brzegów).
 
 ### Wejście
 
@@ -15,14 +16,14 @@ Wczytaj zdanie oraz słowo-klucz. Wypisz wszystkie słowa ze zdania, które są 
 
 ### Wyjście
 
-Każde słowo ze zdania będące anagramem `k` — w osobnej linii (w kolejności występowania).
+Każde słowo zdania będące anagramem `k` w osobnej linii, w kolejności występowania i w postaci z wejścia. Jeśli takich słów nie ma, program nic nie wypisuje.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-Sroga kara.
+Sroga kara, a potem raka.
 arak
 ```
 
@@ -30,62 +31,37 @@ arak
 
 ```
 kara
+raka
 ```
 
 ### Uwagi
 
-* Tak jak wyżej: usuń interpunkcję z brzegów słów.
-* Porównuj np. posortowane litery w `lower()`.
+* Wykorzystaj rozwiązanie zadania ZAD-03: porównuj posortowane litery słów zapisanych małymi literami.
 
 """
 
+import string
+
 
 def czy_anagramy(slowo1, slowo2):
-    """
-    Sprawdza czy dwa słowa są anagramami (ignorując wielkość liter).
-
-    Złożoność czasowa: O(n log n), gdzie n to długość słowa
-    Złożoność pamięciowa: O(n) dla posortowanych kopii
-    """
-    slowo1_male = slowo1.lower()
-    slowo2_male = slowo2.lower()
-
-    return sorted(slowo1_male) == sorted(slowo2_male)
+    """Sprawdza, czy słowa są anagramami, ignorując wielkość liter."""
+    return sorted(slowo1.lower()) == sorted(slowo2.lower())
 
 
-def wyczysc_slowo(slowo):
-    """
-    Usuwa interpunkcję z brzegów słowa.
-
-    Złożoność czasowa: O(n), gdzie n to długość słowa
-    Złożoność pamięciowa: O(n) dla wyniku
-    """
-    poczatek = 0
-    koniec = len(slowo) - 1
-
-    while poczatek <= koniec and not slowo[poczatek].isalnum():
-        poczatek += 1
-
-    while koniec >= poczatek and not slowo[koniec].isalnum():
-        koniec -= 1
-
-    return slowo[poczatek : koniec + 1]
+def podziel_na_slowa(zdanie):
+    """Dzieli zdanie na słowa i usuwa interpunkcję z ich brzegów."""
+    slowa = []
+    for fragment in zdanie.split():
+        slowo = fragment.strip(string.punctuation)
+        if slowo:
+            slowa.append(slowo)
+    return slowa
 
 
 if __name__ == "__main__":
-    # Wczytanie zdania i słowa-klucza z wejścia
-    zdanie = input().strip()
+    zdanie = input()
     klucz = input().strip()
 
-    # Podział zdania na słowa
-    slowa = zdanie.split()
-
-    # Złożoność całkowita: O(m * n log n), gdzie m to liczba słów, n to średnia długość słowa
-    # Przetwarzanie każdego słowa
-    for slowo in slowa:
-        # Usunięcie interpunkcji z brzegów
-        slowo_czyste = wyczysc_slowo(slowo)
-
-        # Sprawdzenie czy słowo jest anagramem klucza
-        if slowo_czyste and czy_anagramy(slowo_czyste, klucz):
-            print(slowo_czyste)
+    for slowo in podziel_na_slowa(zdanie):
+        if czy_anagramy(slowo, klucz):
+            print(slowo)

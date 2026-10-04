@@ -75,7 +75,9 @@ test_czy_anagramy() {
 
     assertTrue $(czy_anagramy "kajak" "kajak") $LINENO
     assertFalse $(czy_anagramy "kajak" "kjakk") $LINENO
-    assertFalse $(czy_anagramy "adam" "mada") $LINENO
+    assertTrue $(czy_anagramy "adam" "mada") $LINENO
+    assertFalse $(czy_anagramy "kot" "pies") $LINENO
+    assertFalse $(czy_anagramy "kota" "kata") $LINENO
 
 }
 

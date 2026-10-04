@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Słownik z dwóch list (klucze i wartości)
 
 **Poziom:** ★☆☆
@@ -6,19 +6,22 @@ ZAD-02 — Słownik z dwóch list (klucze i wartości)
 
 ### Treść
 
-Wczytaj dwie listy. Jeśli mają tę samą długość, utwórz słownik: klucz z pierwszej listy → wartość z drugiej listy.
-Jeśli długości są różne, wypisz pusty słownik `{}`.
+Wczytaj dwie listy liczb całkowitych. Jeśli mają tę samą długość, utwórz słownik, w którym `i`-ty element pierwszej listy jest kluczem, a `i`-ty element drugiej listy — jego wartością. Jeśli długości są różne, wynikiem jest pusty słownik.
 
 ### Wejście
 
-* 1 linia: `n`
-* 2 linia: `m`
-* następnie `n` liczb (pierwsza lista)
-* następnie `m` liczb (druga lista)
+* 1. linia: `n` — długość pierwszej listy
+* 2. linia: `m` — długość drugiej listy
+* 3. linia: `n` liczb całkowitych oddzielonych spacjami (klucze)
+* 4. linia: `m` liczb całkowitych oddzielonych spacjami (wartości)
 
 ### Wyjście
 
-* Słownik albo `{}`
+Słownik w postaci `{klucz: wartość, …}` z kluczami w kolejności z wejścia albo `{}`, gdy `n ≠ m`.
+
+### Ograniczenia
+
+* `1 ≤ n, m ≤ 20`
 
 ### Przykład
 
@@ -37,26 +40,29 @@ Jeśli długości są różne, wypisz pusty słownik `{}`.
 {3: 1, 5: 2, 8: -1}
 ```
 
+### Uwagi
+
+* Jeśli klucz powtarza się w pierwszej liście, obowiązuje jego **ostatnia** wartość, a klucz zostaje na miejscu swojego pierwszego wystąpienia — tak działa kolejne przypisanie `slownik[klucz] = wartość`. Na przykład klucze `1 2 1` i wartości `5 6 7` dają `{1: 7, 2: 6}`.
+
 """
 
 
-def stworz_slownik(lista_a, lista_b):
+def stworz_slownik(klucze, wartosci):
     """
-    Funkcja tworzy slownik zawierajacy klucze bedace elementami
-    pierwszej listy i wartosci bedace elementami drugiej listy.
+    Zwraca słownik, w którym klucze[i] odpowiada wartosci[i].
+    Dla list różnej długości zwraca pusty słownik.
     """
-
-    if len(lista_a) != len(lista_b):
+    if len(klucze) != len(wartosci):
         return {}
-
-    return dict(zip(lista_a, lista_b))
-
-
-def test_stworz_slownik():
-    assert stworz_slownik([1, 2, 3], [4, 5, 6]) == {1: 4, 2: 5, 3: 6}
-    assert stworz_slownik([1, 2, 3], [4, 5]) == {}
+    slownik = {}
+    for i in range(len(klucze)):
+        slownik[klucze[i]] = wartosci[i]
+    return slownik
 
 
 if __name__ == "__main__":
-
-    test_stworz_slownik()
+    n = int(input())
+    m = int(input())
+    klucze = [int(x) for x in input().split()]
+    wartosci = [int(x) for x in input().split()]
+    print(stworz_slownik(klucze, wartosci))

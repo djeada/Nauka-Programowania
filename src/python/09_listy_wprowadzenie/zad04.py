@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-04 — Minimum oraz maksimum
 
 **Poziom:** ★☆☆
@@ -6,23 +6,20 @@ ZAD-04 — Minimum oraz maksimum
 
 ### Treść
 
-Wczytaj `N` liczb całkowitych. Wypisz:
-
-1. największą liczbę w liście
-2. najmniejszą liczbę w liście
-
-w jednej linii, oddzielone pojedynczą spacją.
+Wczytaj listę `n` liczb całkowitych. Wypisz największą, a po niej najmniejszą liczbę z listy.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-Jedna linia:
+Jedna linia: największa i najmniejsza liczba, oddzielone spacją.
 
-* `max min`
+### Ograniczenia
+
+* $n \ge 1$
 
 ### Przykład
 
@@ -30,15 +27,7 @@ Jedna linia:
 
 ```
 9
-4
--7
-8
-5
-6
--9
-10
-2
--8
+4 -7 8 5 6 -9 10 2 -8
 ```
 
 **Wyjście:**
@@ -47,36 +36,30 @@ Jedna linia:
 10 -9
 ```
 
+### Uwagi
+
+* Spróbuj znaleźć obie wartości samodzielnie, w pętli, bez funkcji `max` i `min`.
+
 """
 
 
 def znajdz_maks(lista):
     maks = lista[0]
-    for i in lista:
-        if i > maks:
-            maks = i
+    for element in lista:
+        if element > maks:
+            maks = element
     return maks
 
 
 def znajdz_min(lista):
-    min = lista[0]
-    for i in lista:
-        if i < min:
-            min = i
-    return min
-
-
-def test_znajdz_maks():
-    assert znajdz_maks([5, 4, 3, 2, 1]) == 5
-    assert znajdz_maks([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 10
-
-
-def test_znajdz_min():
-    assert znajdz_min([5, 4, 3, 2, 1]) == 1
-    assert znajdz_min([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 1
+    minimum = lista[0]
+    for element in lista:
+        if element < minimum:
+            minimum = element
+    return minimum
 
 
 if __name__ == "__main__":
-
-    test_znajdz_maks()
-    test_znajdz_min()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    print(znajdz_maks(lista), znajdz_min(lista))

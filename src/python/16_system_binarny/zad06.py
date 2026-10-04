@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-06 — Konwersja między dowolnymi systemami (2..36)
 
 **Poziom:** ★★☆
@@ -6,25 +6,22 @@ ZAD-06 — Konwersja między dowolnymi systemami (2..36)
 
 ### Treść
 
-Wczytaj:
-
-1. liczbę `X` zapisaną w systemie o podstawie `p`
-2. podstawę `p` (2..36)
-3. podstawę docelową `q` (2..36)
-
-i wypisz reprezentację `X` w systemie o podstawie `q`.
+Wczytaj zapis liczby naturalnej `X` w systemie o podstawie `p` oraz podstawę docelową `q`. Wypisz zapis tej samej liczby w systemie o podstawie `q`.
 
 ### Wejście
 
-Trzy linie:
-
-1. `X` (zapis liczby; dla podstaw >10 może zawierać litery `A-Z`)
-2. `p` (2..36)
-3. `q` (2..36)
+* 1. linia: `X` — zapis liczby w systemie o podstawie `p` (cyfry `0–9` i wielkie litery `A–Z`, gdzie `A` = 10, `B` = 11, …, `Z` = 35)
+* 2. linia: `p` — podstawa systemu, w którym zapisano `X`
+* 3. linia: `q` — podstawa systemu docelowego
 
 ### Wyjście
 
-Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`).
+Jedna linia: zapis liczby w systemie o podstawie `q`, bez zer wiodących (cyfry `0–9` i wielkie litery `A–Z`).
+
+### Ograniczenia
+
+* `2 ≤ p, q ≤ 36`
+* `X` ma od 1 do 20 znaków, każda cyfra jest mniejsza od `p`; `X` może zaczynać się od zer
 
 ### Przykład
 
@@ -42,70 +39,42 @@ Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`)
 1003031
 ```
 
-### Uwagi o formacie
+### Uwagi
 
-* `X` może być duże — traktuj jako napis, a nie typ int „na wejściu”.
-* Dla wartości 10..35 stosuj `A..Z`.
+* Najpierw zamień `X` na liczbę (przechodząc po cyfrach od lewej: wynik = wynik · `p` + cyfra), a potem zamień ją na system `q` (reszty z dzielenia przez `q`).
+* Spróbuj obejść się bez `int(X, p)` — zaimplementuj obie zamiany samodzielnie.
+* Liczba `0` w każdym systemie to `0`.
 
 """
 
-import math
+CYFRY = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
-def na_dziesietny(liczba, stara_podstawa):
-    """
-    Funkcja zamienia liczbe z reprezentacji w systemie stara_podstawa na reprezentacje w systemie dziesietnym.
-    """
-    reprezentacja_dziesietna = 0
-
-    for i in range(len(liczba) - 1, -1, -1):
-
-        if liczba[i] >= "A" and liczba[i] < "Z":
-            reprezentacja_dziesietna += (ord(liczba[i]) - ord("A") + 10) * math.pow(
-                stara_podstawa, (len(liczba) - 1 - i)
-            )
-        else:
-            reprezentacja_dziesietna += (ord(liczba[i]) - ord("0")) * math.pow(
-                stara_podstawa, (len(liczba) - 1 - i)
-            )
-
-    return int(reprezentacja_dziesietna)
+def na_dziesietny(zapis, podstawa):
+    """Zwraca wartość liczby zapisanej w systemie o podanej podstawie."""
+    wartosc = 0
+    for znak in zapis:
+        wartosc = wartosc * podstawa + CYFRY.index(znak)
+    return wartosc
 
 
-def zmien_podstawe(liczba, stara_podstawa, nowa_podstawa):
-    """
-    Funkcja zamienia liczbe z reprezentacji w systemie stara_podstaw na
-    reprezentacje w systemie nowa_podstawa.
-    """
-
-    if stara_podstawa > (10 + ord("Z") - ord("A")):
-        raise ValueError("Stara podstawa jest za duza")
-
-    reprezentacja_dziesietna = na_dziesietny(liczba, stara_podstawa)
-    liczba = ""
-    podstawa = nowa_podstawa
-
-    while reprezentacja_dziesietna > 0:
-        reszta = reprezentacja_dziesietna % podstawa
-        reprezentacja_dziesietna //= podstawa
-
-        nowy_znak = chr(ord("0") + reszta)
-
-        if nowy_znak > "9":
-            nowy_znak = "A" + (nowy_znak - "9") - 1
-
-        liczba += nowy_znak
-
-    return liczba[::-1]
+def z_dziesietnego(wartosc, podstawa):
+    """Zwraca zapis liczby naturalnej w systemie o podanej podstawie."""
+    if wartosc == 0:
+        return "0"
+    zapis = ""
+    while wartosc > 0:
+        zapis = CYFRY[wartosc % podstawa] + zapis
+        wartosc //= podstawa
+    return zapis
 
 
-def test_zmien_podstawe():
-    assert zmien_podstawe("101", 2, 10) == "5"
-    assert zmien_podstawe("101", 2, 16) == "5"
-    assert zmien_podstawe("101", 10, 2) == "1100101"
-    assert zmien_podstawe("101", 10, 16) == "65"
-    assert zmien_podstawe("4301", 10, 4) == "1003031"
+def zmien_podstawe(zapis, stara_podstawa, nowa_podstawa):
+    return z_dziesietnego(na_dziesietny(zapis, stara_podstawa), nowa_podstawa)
 
 
 if __name__ == "__main__":
-    test_zmien_podstawe()
+    zapis = input().strip().upper()
+    p = int(input())
+    q = int(input())
+    print(zmien_podstawe(zapis, p, q))

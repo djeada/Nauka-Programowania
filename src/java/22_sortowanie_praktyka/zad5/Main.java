@@ -83,6 +83,23 @@ public class Main {
         return 0;
       }
     }
+
+    @Override
+    public boolean equals(final Object obiekt) {
+      if (this == obiekt) {
+        return true;
+      }
+      if (!(obiekt instanceof Miasto)) {
+        return false;
+      }
+      Miasto inne = (Miasto) obiekt;
+      return liczba_mieszkancow == inne.liczba_mieszkancow && nazwa.equals(inne.nazwa);
+    }
+
+    @Override
+    public int hashCode() {
+      return Objects.hash(nazwa, liczba_mieszkancow);
+    }
   }
 
   public static void sortujWzgledemNazwy(ArrayList<Miasto> lista) {
@@ -102,7 +119,7 @@ public class Main {
         new Comparator<Miasto>() {
           @Override
           public int compare(final Miasto o1, final Miasto o2) {
-            return o1.liczba_mieszkancow - o2.liczba_mieszkancow;
+            return Integer.compare(o1.liczba_mieszkancow, o2.liczba_mieszkancow);
           }
         });
   }

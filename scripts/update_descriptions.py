@@ -36,12 +36,12 @@ class CommentInfo:
 def localize_delimited_comment(content, start_delimiter, end_delimiter):
     """
     Locate and remove a delimited comment block from the content.
-    
+
     Args:
         content: List of lines from the file
         start_delimiter: Starting delimiter (e.g., '/*')
         end_delimiter: Ending delimiter (e.g., '*/')
-    
+
     Returns:
         Modified content with the comment removed, or None if not found
     """
@@ -84,11 +84,11 @@ def localize_delimited_comment(content, start_delimiter, end_delimiter):
 def localize_line_by_line_comment(content, delimiter):
     """
     Locate and remove line-by-line comments from the content.
-    
+
     Args:
         content: List of lines from the file
         delimiter: Comment delimiter (e.g., '#', '//')
-    
+
     Returns:
         Modified content with comments removed, or None if no changes
     """
@@ -123,7 +123,7 @@ def localize_line_by_line_comment(content, delimiter):
 def localize_top_comment(file_path, comment_style, start_delimiter, end_delimiter=None):
     """
     Locate and remove the top comment from a file.
-    
+
     Args:
         file_path: Path to the file
         comment_style: CommentStyle enum (DELIMITED or LINE_BY_LINE)
@@ -155,13 +155,13 @@ def localize_top_comment(file_path, comment_style, start_delimiter, end_delimite
 def insert_delimited_comment(content, start_delimiter, end_delimiter, comment_content):
     """
     Insert a delimited comment at the beginning of the content.
-    
+
     Args:
         content: List of lines from the file
         start_delimiter: Starting delimiter (e.g., '/*')
         end_delimiter: Ending delimiter (e.g., '*/')
         comment_content: The comment text to insert
-    
+
     Returns:
         Modified content with the comment inserted
     """
@@ -176,12 +176,12 @@ def insert_delimited_comment(content, start_delimiter, end_delimiter, comment_co
 def insert_line_by_line_comment(content, delimiter, comment_content):
     """
     Insert line-by-line comments at the beginning of the content.
-    
+
     Args:
         content: List of lines from the file
         delimiter: Comment delimiter (e.g., '#', '//')
         comment_content: The comment text to insert
-    
+
     Returns:
         Modified content with comments inserted
     """
@@ -194,7 +194,7 @@ def insert_top_comment(
 ):
     """
     Insert a comment at the top of a file.
-    
+
     Args:
         file_path: Path to the file
         comment_style: CommentStyle enum (DELIMITED or LINE_BY_LINE)
@@ -236,7 +236,7 @@ def create_stub_file(file_path: Path, file_extension: str) -> None:
     elif file_extension == "rs":
         content = "fn main() {}\n"
     elif file_extension == "sh":
-        content = "main() {\n}\n\nmain \"$@\"\n"
+        content = 'main() {\n}\n\nmain "$@"\n'
     elif file_extension == "hs":
         content = "main :: IO ()\nmain = pure ()\n"
     else:
@@ -244,13 +244,14 @@ def create_stub_file(file_path: Path, file_extension: str) -> None:
     file_path.write_text(content, encoding="utf-8")
 
 
-def parse_tasks(input_str) -> Dict[str, List[str]]:
+def parse_tasks(input_str, split_subtasks: bool = False) -> Dict[str, List[str]]:
     """
     Parse tasks from a markdown file content.
-    
+
     Args:
         input_str: Content of the markdown file
-    
+        split_subtasks: Keep ZAD-05A and ZAD-05B separate (one file per subtask)
+
     Returns:
         Dictionary mapping task IDs to task content
     """
@@ -284,7 +285,7 @@ def parse_tasks(input_str) -> Dict[str, List[str]]:
             header_text = base_id + letter
             if title:
                 header_text += f" — {title}"
-            current_key = base_id
+            current_key = base_id + letter if split_subtasks else base_id
             current_header = header_text
             continue
 
@@ -309,7 +310,9 @@ def update_descriptions(input_dir: str, output_dir: str, file_extension: str) ->
     # Validate output directory
     output_path = Path(output_dir)
     if not output_path.exists():
-        print(f"Error: Output directory '{output_dir}' does not exist.", file=sys.stderr)
+        print(
+            f"Error: Output directory '{output_dir}' does not exist.", file=sys.stderr
+        )
         return
     if not output_path.is_dir():
         print(f"Error: Output path '{output_dir}' is not a directory.", file=sys.stderr)
@@ -319,7 +322,8 @@ def update_descriptions(input_dir: str, output_dir: str, file_extension: str) ->
         "cpp": CommentInfo(delimited=("/*", "*/"), line_by_line="//"),
         "java": CommentInfo(delimited=("/*", "*/"), line_by_line="//"),
         "js": CommentInfo(delimited=("/*", "*/"), line_by_line="//"),
-        "py": CommentInfo(delimited=('"""', '"""'), line_by_line="#"),
+        # Raw docstring: opisy zawierają odwrotne ukośniki (LaTeX, ścieżki Windows).
+        "py": CommentInfo(delimited=('r"""', '"""'), line_by_line="#"),
         "rs": CommentInfo(delimited=("/*", "*/"), line_by_line="//"),
         "sh": CommentInfo(line_by_line="#"),
         "hs": CommentInfo(delimited=("{-", "-}"), line_by_line="--"),
@@ -344,7 +348,10 @@ def update_descriptions(input_dir: str, output_dir: str, file_extension: str) ->
         )
     else:
         if input_path.suffix != ".md":
-            print(f"Error: Input file '{input_dir}' is not a markdown file.", file=sys.stderr)
+            print(
+                f"Error: Input file '{input_dir}' is not a markdown file.",
+                file=sys.stderr,
+            )
             return
         input_files = [input_path]
 
@@ -370,19 +377,21 @@ def update_descriptions(input_dir: str, output_dir: str, file_extension: str) ->
             print(f"Error reading {input_file}: {e}", file=sys.stderr)
             continue
 
-        tasks = parse_tasks(file_content)
+        # Python jest językiem wzorcowym dla sędziego: każdy podpunkt to osobny program.
+        tasks = parse_tasks(file_content, split_subtasks=file_extension == "py")
 
         for task_key in sorted(tasks.keys()):
-            match = re.search(r"(\d+)", task_key)
+            match = re.search(r"(\d+)([A-Z]?)$", task_key)
             if not match:
                 print(f"Warning: Can't parse task id from {task_key}", file=sys.stderr)
                 continue
             task_num = int(match.group(1))
+            letter = match.group(2).lower()
             if file_extension == "java":
                 dir_name = f"zad{task_num}"
                 file = output_dir_path / dir_name / "Main.java"
             else:
-                file = output_dir_path / f"zad{task_num:02d}.{file_extension}"
+                file = output_dir_path / f"zad{task_num:02d}{letter}.{file_extension}"
 
             if not file.exists():
                 create_stub_file(file, file_extension)
@@ -416,6 +425,8 @@ def update_descriptions(input_dir: str, output_dir: str, file_extension: str) ->
                     localize_top_comment(
                         file, CommentStyle.DELIMITED, start_delimiter, end_delimiter
                     )
+                    if start_delimiter == 'r"""':
+                        localize_top_comment(file, CommentStyle.DELIMITED, '"""', '"""')
                 if comment_info.line_by_line is not None:
                     localize_top_comment(
                         file, CommentStyle.LINE_BY_LINE, comment_info.line_by_line
@@ -470,7 +481,9 @@ Example usage:
         return
 
     if args.input_dir or args.output_dir or args.file_extension:
-        parser.error("the following arguments are required: input_dir, output_dir, file_extension")
+        parser.error(
+            "the following arguments are required: input_dir, output_dir, file_extension"
+        )
 
     defaults = [
         ("src/python", "py"),

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Sortowanie listy miast
 
 **Poziom:** ★☆☆
@@ -6,27 +6,34 @@ ZAD-05 — Sortowanie listy miast
 
 ### Treść
 
-Masz klasę `Miasto` z polami:
+Klasa `Miasto` ma atrybuty:
 
 * `nazwa` (napis),
 * `liczba_mieszkancow` (liczba naturalna).
 
-Otrzymujesz listę miast.
+Uzupełnij metodę `__repr__`, tak aby obiekt był wypisywany w postaci `Miasto("NAZWA", LICZBA)`, np. `Miasto("Berlin", 3800000)`. Dzięki temu `print(lista_miast)` wypisze całą listę w czytelnej postaci.
 
-a) Posortuj miasta alfabetycznie po nazwie.
-b) Posortuj miasta rosnąco po liczbie mieszkańców.
+Wczytaj listę miast, a następnie:
 
-Wypisz wyniki w dwóch liniach jako listy w formacie jak w przykładzie.
+a) posortuj miasta alfabetycznie według nazwy,
+b) posortuj miasta rosnąco według liczby mieszkańców (miasta o tej samej liczbie mieszkańców zachowują kolejność z wejścia).
 
 ### Wejście
 
-* 1 linia: liczba naturalna `N`
-* następnie `N` linii: `nazwa liczba_mieszkancow` (nazwa bez spacji)
+* 1. linia: liczba miast $N$
+* kolejne $N$ linii: nazwa miasta (bez spacji) i liczba mieszkańców, oddzielone spacją
 
 ### Wyjście
 
-* 1 linia: lista miast po sortowaniu a)
-* 2 linia: lista miast po sortowaniu b)
+* 1. linia: lista miast posortowana według podpunktu a)
+* 2. linia: lista miast posortowana według podpunktu b)
+
+Każdą listę wypisz przez `print(lista)` — w formacie `[Miasto("NAZWA", LICZBA), Miasto("NAZWA", LICZBA), …]`.
+
+### Ograniczenia
+
+* $1 \le N \le 20$
+* Nazwy miast są różne.
 
 ### Przykład
 
@@ -46,9 +53,25 @@ New_York 8400000
 [Miasto("Paris", 2150000), Miasto("Berlin", 3800000), Miasto("New_York", 8400000)]
 ```
 
-### Uwagi o formatowaniu
+### Kod startowy
 
-* Wydruk obiektów ma mieć dokładnie format: `Miasto("NAZWA", LICZBA)`.
+```python
+class Miasto:
+    def __init__(self, nazwa, liczba_mieszkancow):
+        self.nazwa = nazwa
+        self.liczba_mieszkancow = liczba_mieszkancow
+
+    def __repr__(self):
+        pass
+
+
+n = int(input())
+miasta = []
+for _ in range(n):
+    nazwa, liczba = input().split()
+    miasta.append(Miasto(nazwa, int(liczba)))
+
+```
 
 """
 
@@ -59,49 +82,23 @@ class Miasto:
         self.liczba_mieszkancow = liczba_mieszkancow
 
     def __repr__(self):
-        return self.nazwa + " : " + str(self.liczba_mieszkancow)
+        return f'Miasto("{self.nazwa}", {self.liczba_mieszkancow})'
 
 
-def sortuj_liste_miast_wzgledem_nazwy(lista_miast):
-    return sorted(lista_miast, key=lambda x: x.nazwa)
+def sortuj_wedlug_nazwy(miasta):
+    return sorted(miasta, key=lambda miasto: miasto.nazwa)
 
 
-def sortuj_liste_miast_wzgledem_liczby_mieszkancow(lista_miast):
-    return sorted(lista_miast, key=lambda x: x.liczba_mieszkancow)
-
-
-def test_sortuj_liste_miast_wzgledem_nazwy():
-    miasta = [
-        Miasto("New York", 8400000),
-        Miasto("Paris", 2150000),
-        Miasto("Berlin", 3800000),
-    ]
-
-    oczekiwana = [
-        Miasto("Berlin", 3800000),
-        Miasto("New York", 8400000),
-        Miasto("Paris", 2150000),
-    ]
-
-    assert sortuj_liste_miast_wzgledem_nazwy(miasta) == oczekiwana
-
-
-def test_sortuj_liste_miast_wzgledem_liczby_mieszkancow():
-    miasta = [
-        Miasto("New York", 8400000),
-        Miasto("Paris", 2150000),
-        Miasto("Berlin", 3800000),
-    ]
-
-    oczekiwana = [
-        Miasto("New York", 8400000),
-        Miasto("Paris", 2150000),
-        Miasto("Berlin", 3800000),
-    ]
-
-    assert sortuj_liste_miast_wzgledem_liczby_mieszkancow(miasta) == oczekiwana
+def sortuj_wedlug_liczby_mieszkancow(miasta):
+    return sorted(miasta, key=lambda miasto: miasto.liczba_mieszkancow)
 
 
 if __name__ == "__main__":
-    test_sortuj_liste_miast_wzgledem_nazwy()
-    test_sortuj_liste_miast_wzgledem_liczby_mieszkancow()
+    n = int(input())
+    miasta = []
+    for _ in range(n):
+        nazwa, liczba = input().split()
+        miasta.append(Miasto(nazwa, int(liczba)))
+
+    print(sortuj_wedlug_nazwy(miasta))
+    print(sortuj_wedlug_liczby_mieszkancow(miasta))

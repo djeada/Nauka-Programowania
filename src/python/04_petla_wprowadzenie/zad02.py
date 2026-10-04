@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Wypisywanie liczb mniejszych od podanej
 
 **Poziom:** ★☆☆
@@ -6,17 +6,15 @@ ZAD-02 — Wypisywanie liczb mniejszych od podanej
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` (`n > 0`) i wypisz wszystkie liczby naturalne mniejsze od `n`, zaczynając od `n - 1` i kończąc na `1`.
+Wczytaj liczbę naturalną `n` i wypisz wszystkie liczby naturalne dodatnie mniejsze od `n` w kolejności malejącej — od `n - 1` do `1`.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n > 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności malejącej.
+Liczby `n - 1`, `n - 2`, …, `1`, każda w osobnej linii.
 
 ### Przykład
 
@@ -33,16 +31,18 @@ Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności ma
 1
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Jeśli `n = 1`, nie wypisuj nic.
+* Dla `n = 1` nie wypisuj nic.
 
 """
 
+
+def wypisz_mniejsze(n):
+    for liczba in range(n - 1, 0, -1):
+        print(liczba)
+
+
 if __name__ == "__main__":
-
-    print("Podaj liczbe: ")
-    liczba = int(input())
-
-    for i in range(1, liczba):
-        print(i)
+    n = int(input())
+    wypisz_mniejsze(n)

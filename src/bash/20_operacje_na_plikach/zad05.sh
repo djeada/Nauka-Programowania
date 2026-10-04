@@ -37,9 +37,7 @@ sortuj_adresy_ip() {
 test_sortuj_adresy_ip() {
 
     mkdir -p 'test'
-    mkdir -p 'test'
 
-    local plik='test/test.txt'
     local plik='test/test.txt'
     touch $plik
     echo "123.4.245.23" >$plik
@@ -50,18 +48,20 @@ test_sortuj_adresy_ip() {
     echo "104.244.4.1" >>$plik
 
     IFS=$'\n'
-    IFS=$'\n'
     wynik=($(sortuj_adresy_ip 'test/test.txt'))
 
-    local oczekiwane=(1.198.3.93 32.183.93.40 104.30.244.2 104.244.4.1 104.244.253.29 123.4.245.23)
     local oczekiwane=(1.198.3.93 32.183.93.40 104.30.244.2 104.244.4.1 104.244.253.29 123.4.245.23)
     assertArrayEqual wynik oczekiwane $LINENO
 
     rm -rf 'test'
-    rm -rf 'test'
 }
 
 main() {
+    # Testy tworzą i usuwają pliki — pracuj w katalogu tymczasowym, nie w repozytorium.
+    local katalog_roboczy
+    katalog_roboczy=$(mktemp -d)
+    trap 'rm -rf "$katalog_roboczy"' EXIT
+    cd "$katalog_roboczy" || exit 1
     test_sortuj_adresy_ip
 }
 

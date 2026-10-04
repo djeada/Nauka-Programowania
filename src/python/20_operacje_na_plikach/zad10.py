@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-10 — Skopiuj pliki PNG do innego folderu (bez podfolderów)
 
 **Poziom:** ★☆☆
@@ -6,71 +6,100 @@ ZAD-10 — Skopiuj pliki PNG do innego folderu (bez podfolderów)
 
 ### Treść
 
-Otrzymujesz ścieżkę folderu źródłowego i docelowego. Skopiuj wszystkie pliki `.png` znajdujące się **bezpośrednio** w folderze źródłowym do folderu docelowego.
+Wczytaj ścieżkę folderu źródłowego i docelowego. Skopiuj do folderu docelowego wszystkie pliki z rozszerzeniem `.png` (bez względu na wielkość liter), które leżą **bezpośrednio** w folderze źródłowym. Pliki w podfolderach pomiń.
+
+* Pliki w folderze źródłowym zostają na miejscu.
+* Jeśli folder docelowy nie istnieje, utwórz go (razem z brakującymi folderami nadrzędnymi). Gdy nie ma czego kopiować, nie ma znaczenia, czy go utworzysz.
+* Jeśli w folderze docelowym jest już plik o tej samej nazwie, nadpisz go.
 
 ### Wejście
 
-* 1 linia: `src_folder`
-* 2 linia: `dst_folder`
+* 1. linia: ścieżka folderu źródłowego
+* 2. linia: ścieżka folderu docelowego
 
 ### Wyjście
 
-Brak.
+* Nazwy skopiowanych plików, każda w osobnej linii, posortowane rosnąco.
+* `Brak plików.` — jeśli w folderze źródłowym nie ma żadnego pliku `.png`.
+* `Folder nie istnieje.` — jeśli folder źródłowy nie istnieje. Wtedy niczego nie twórz.
 
 ### Przykład
+
+**Pliki przed:**
+
+```
+obrazy/kot.png
+| (obraz kota)
+obrazy/pies.PNG
+| (obraz psa)
+obrazy/opis.txt
+| Zdjęcia zwierząt
+obrazy/wakacje/morze.png
+| (obraz morza)
+```
 
 **Wejście:**
 
 ```
-C:\Users\Username\Obrazy
-D:\Backup\Obrazy
+obrazy
+kopia/obrazy
 ```
 
 **Wyjście:**
-*(brak)*
+
+```
+kot.png
+pies.PNG
+```
+
+**Pliki po:**
+
+```
+kopia/obrazy/kot.png
+| (obraz kota)
+kopia/obrazy/pies.PNG
+| (obraz psa)
+kopia/obrazy/opis.txt (usunięty)
+kopia/obrazy/morze.png (usunięty)
+obrazy/kot.png
+| (obraz kota)
+obrazy/pies.PNG
+| (obraz psa)
+```
+
+Program utworzył folder `kopia/obrazy`. Pliku `wakacje/morze.png` nie kopiujemy, bo leży w podfolderze.
+
+### Uwagi
+
+* Kopiowanie: `shutil.copy(zrodlo, cel)`. Folder razem z folderami nadrzędnymi tworzy `os.makedirs(sciezka, exist_ok=True)`.
 
 """
 
-import pathlib
+import os
 import shutil
 
 
-def skopiuj_pliki_png(sciezka_1, sciezka_2):
-    """
-    Funkcja kopiuje wszystkie pliki .png z folderu sciezka_1 do folderu sciezka_2.
-    """
-
-    folder_1 = pathlib.Path(sciezka_1)
-    folder_2 = pathlib.Path(sciezka_2)
-
-    for plik in folder_1.glob("**/*.png"):
-        shutil.copy(str(plik), str(folder_2))
-
-
-def test_skopiuj_pliki_png():
-
-    # stworz foldery testowe
-    pathlib.Path("test_1").mkdir(parents=True, exist_ok=True)
-    pathlib.Path("test_2").mkdir(parents=True, exist_ok=True)
-
-    # stworz pliki testowe
-    pathlib.Path("test_1/test_1.png").touch()
-    pathlib.Path("test_1/test_2.png").touch()
-
-    # skopiuj pliki
-    skopiuj_pliki_png("test_1", "test_2")
-
-    # sprawdz czy pliki zostaly skopiowane
-    assert pathlib.Path("test_2/test_1.png").exists()
-    assert pathlib.Path("test_2/test_2.png").exists()
-    assert pathlib.Path("test_1/test_1.png").exists()
-    assert pathlib.Path("test_1/test_2.png").exists()
-
-    # usun foldery testowe
-    shutil.rmtree("test_1")
-    shutil.rmtree("test_2")
+def skopiuj_pliki_png(zrodlo, cel):
+    """Kopiuje pliki .png leżące bezpośrednio w folderze zrodlo do folderu cel."""
+    os.makedirs(cel, exist_ok=True)
+    skopiowane = []
+    for nazwa in sorted(os.listdir(zrodlo)):
+        sciezka = os.path.join(zrodlo, nazwa)
+        if os.path.isfile(sciezka) and os.path.splitext(nazwa)[1].lower() == ".png":
+            shutil.copy(sciezka, os.path.join(cel, nazwa))
+            skopiowane.append(nazwa)
+    return skopiowane
 
 
 if __name__ == "__main__":
+    zrodlo = input()
+    cel = input()
 
-    test_skopiuj_pliki_png()
+    if not os.path.isdir(zrodlo):
+        print("Folder nie istnieje.")
+    else:
+        skopiowane = skopiuj_pliki_png(zrodlo, cel)
+        if skopiowane:
+            print("\n".join(skopiowane))
+        else:
+            print("Brak plików.")

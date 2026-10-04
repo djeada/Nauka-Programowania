@@ -348,3 +348,9 @@ dist-newstyle/
 cabal.project.local
 .ghc.environment.*
 
+
+# Wygenerowany zbiór zadań w PDF (scripts/generate_pdf.py)
+Nauka_Programowania_Zbior_Zadan.pdf
+
+# Artefakty samotestów (pliki tymczasowe nie powinny trafiać do repozytorium)
+temp_dir/

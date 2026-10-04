@@ -1,12 +1,40 @@
 {
   "ZAD-01": [
     {
+      "input": "kot ma kotlet\nkot\npies",
+      "output": "pies ma pieslet"
+    },
+    {
       "input": "hello hello\nlo\nX",
       "output": "helX helX"
     },
     {
-      "input": "abc ab abc\nab\nX",
-      "output": "Xc X Xc"
+      "input": "aaaa\naa\nb",
+      "output": "bb"
+    },
+    {
+      "input": "aaa\naa\nb",
+      "output": "ba"
+    },
+    {
+      "input": "ab\na\naa",
+      "output": "aab"
+    },
+    {
+      "input": "Kot i kot\nkot\npies",
+      "output": "Kot i pies"
+    },
+    {
+      "input": "abc\nx\ny",
+      "output": "abc"
+    },
+    {
+      "input": "abc\nabc\nXYZ",
+      "output": "XYZ"
+    },
+    {
+      "input": "ala ma kota\na m\n_",
+      "output": "al_a kota"
     }
   ],
   "ZAD-02": [
@@ -17,6 +45,26 @@
     {
       "input": "aaaa\naa",
       "output": ""
+    },
+    {
+      "input": "aabb\nab",
+      "output": "ab"
+    },
+    {
+      "input": "aaa\naa",
+      "output": "a"
+    },
+    {
+      "input": "Ala ma kota\nxyz",
+      "output": "Ala ma kota"
+    },
+    {
+      "input": "Kot kot KOT\nkot",
+      "output": "Kot  KOT"
+    },
+    {
+      "input": "abcabcab\nabc",
+      "output": "ab"
     }
   ],
   "ZAD-03": [
@@ -27,26 +75,64 @@
     {
       "input": "abc\nab",
       "output": "Fałsz"
-    }
-  ],
-  "ZAD-04": [
-    {
-      "input": "abac",
-      "output": "abc"
     },
     {
-      "input": "aaaa",
-      "output": "a"
+      "input": "kot\nkot",
+      "output": "Prawda"
+    },
+    {
+      "input": "dino\nDinozaur",
+      "output": "Fałsz"
+    },
+    {
+      "input": "Ala m\nAla ma kota",
+      "output": "Prawda"
+    },
+    {
+      "input": "abd\nabcde",
+      "output": "Fałsz"
+    },
+    {
+      "input": "zaur\nDinozaur",
+      "output": "Fałsz"
     }
   ],
   "ZAD-05": [
     {
       "input": "aaabbbcca",
-      "output": "abca"
+      "output": "a3b3c2a1"
     },
     {
-      "input": "ab",
-      "output": "ab"
+      "input": "x",
+      "output": "x1"
+    },
+    {
+      "input": "zzzzzz",
+      "output": "z6"
+    },
+    {
+      "input": "abc",
+      "output": "a1b1c1"
+    },
+    {
+      "input": "Mississippi",
+      "output": "M1i1s2i1s2i1p2i1"
+    },
+    {
+      "input": "aAaA",
+      "output": "a1A1a1A1"
+    },
+    {
+      "input": "abba",
+      "output": "a1b2a1"
+    },
+    {
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+      "output": "a120b1"
+    },
+    {
+      "input": "bcccccaaaaccccccaaaaaabbbbaaabbaaacaccbbaaaaabccaaaccaaaaccccccccaaaabbbbaaaaaaaaaacbcccccccccbbcaaaabbbbcbbbcccccbbaaaaaacccacccaaaaacccccccbaaaccccaaabbcccaacccbaaaacccaaacbbbbbbbbbcbbbbbcccbbbbcbbabbbbaabbbaaaabbbbbbbccccccaaaacccccccaa",
+      "output": "b1c5a4c6a6b4a3b2a3c1a1c2b2a5b1c2a3c2a4c8a4b4a10c1b1c9b2c1a4b4c1b3c5b2a6c3a1c3a5c7b1a3c4a3b2c3a2c3b1a4c3a3c1b9c1b5c3b4c1b2a1b4a2b3a4b7c6a4c7a2"
     }
   ],
   "ZAD-06": [
@@ -57,16 +143,80 @@
     {
       "input": "abcd\nacbd",
       "output": "Fałsz"
+    },
+    {
+      "input": "abc\nabcd",
+      "output": "Fałsz"
+    },
+    {
+      "input": "aaaa\naaaa",
+      "output": "Prawda"
+    },
+    {
+      "input": "kot\nkot",
+      "output": "Prawda"
+    },
+    {
+      "input": "abab\nbaba",
+      "output": "Prawda"
+    },
+    {
+      "input": "aab\nabb",
+      "output": "Fałsz"
+    },
+    {
+      "input": "Kajak\nkKaja",
+      "output": "Prawda"
+    },
+    {
+      "input": "Kajak\nkajak",
+      "output": "Fałsz"
+    },
+    {
+      "input": "baabaabababbbbbaaaabaaababaabaabbaabbbaabbbbabaaaababaabaaaaabbabbaaabbaaaabbbababbabaaabaaaaaaabbaababbbbbbaaaababaababaabaaabaaaabbbaabbbaaaaaabbaabaabaaaaaababaabbaabbbbababbabbababaabbaabbbbbbbaaaaabbabbbbbbabbbaaaababaabababbababaabbaababaababaaabbbbbababaaabbbbbababbabaabbaaaaabbaaababbabbaaaabbaabaabaaabbbbbbaabbaabbbbaaabbabbbbaaabaaaababaaababbbabaabaaabbababbaabaaaabbaaaabaaababaaabbaaabbaaababababbbaaaabbbbaaabaaabbbaabbbaababbbbbabbaabababaababbbababbaaaabababbbbaaaaaabbabbbbaabbabaabaaabababbbabbbababaabaaaababababbbbabababaaabaababbaabaaaaabaababbabbbbbbbabbaabaabbaaaabaabaabababbabbbaabaaabaaabbbaaabbababbaaaabbabbbbabaabaabbabbaababbbbbaaababaabaabaabbbabbbbbbabaabbababbbababbbabbbabaaaabaaabaaabbabaaaaabbbaababbbababbabbbaabbbbabbabaabababbaabababbbaababbbbbbbbaaababbaaaba\nabaabaaaababababbbbabababaaabaababbaabaaaaabaababbabbbbbbbabbaabaabbaaaabaabaabababbabbbaabaaabaaabbbaaabbababbaaaabbabbbbabaabaabbabbaababbbbbaaababaabaabaabbbabbbbbbabaabbababbbababbbabbbabaaaabaaabaaabbabaaaaabbbaababbbababbabbbaabbbbabbabaabababbaabababbbaababbbbbbbbaaababbaaababaabaabababbbbbaaaabaaababaabaabbaabbbaabbbbabaaaababaabaaaaabbabbaaabbaaaabbbababbabaaabaaaaaaabbaababbbbbbaaaababaababaabaaabaaaabbbaabbbaaaaaabbaabaabaaaaaababaabbaabbbbababbabbababaabbaabbbbbbbaaaaabbabbbbbbabbbaaaababaabababbababaabbaababaababaaabbbbbababaaabbbbbababbabaabbaaaaabbaaababbabbaaaabbaabaabaaabbbbbbaabbaabbbbaaabbabbbbaaabaaaababaaababbbabaabaaabbababbaabaaaabbaaaabaaababaaabbaaabbaaababababbbaaaabbbbaaabaaabbbaabbbaababbbbbabbaabababaababbbababbaaaabababbbbaaaaaabbabbbbaabbabaabaaabababbbabbbab",
+      "output": "Prawda"
+    },
+    {
+      "input": "baabaabababbbbbaaaabaaababaabaabbaabbbaabbbbabaaaababaabaaaaabbabbaaabbaaaabbbababbabaaabaaaaaaabbaababbbbbbaaaababaababaabaaabaaaabbbaabbbaaaaaabbaabaabaaaaaababaabbaabbbbababbabbababaabbaabbbbbbbaaaaabbabbbbbbabbbaaaababaabababbababaabbaababaababaaabbbbbababaaabbbbbababbabaabbaaaaabbaaababbabbaaaabbaabaabaaabbbbbbaabbaabbbbaaabbabbbbaaabaaaababaaababbbabaabaaabbababbaabaaaabbaaaabaaababaaabbaaabbaaababababbbaaaabbbbaaabaaabbbaabbbaababbbbbabbaabababaababbbababbaaaabababbbbaaaaaabbabbbbaabbabaabaaabababbbabbbababaabaaaababababbbbabababaaabaababbaabaaaaabaababbabbbbbbbabbaabaabbaaaabaabaabababbabbbaabaaabaaabbbaaabbababbaaaabbabbbbabaabaabbabbaababbbbbaaababaabaabaabbbabbbbbbabaabbababbbababbbabbbabaaaabaaabaaabbabaaaaabbbaababbbababbabbbaabbbbabbabaabababbaabababbbaababbbbbbbbaaababbaaaba\nabaabaaaababababbbbabababaaabaababbaabaaaaabaababbabbbbbbbabbaabaabbaaaabaabaabababbabbbaabaaabaaabbbaaabbababbaaaabbabbbbabaabaabbabbaababbbbbaaababaabaabaabbbabbbbbbabaabbababbbababbbabbbabaaaabaaabaaabbabaaaaabbbaababbbababbabbbaabbbbabbabaabababbaabababbbaababbbbbbbbaaababbaaababaabaabababbbbbaababaaababaabaabbaabbbaabbbbabaaaababaabaaaaabbabbaaabbaaaabbbababbabaaabaaaaaaabbaababbbbbbaaaababaababaabaaabaaaabbbaabbbaaaaaabbaabaabaaaaaababaabbaabbbbababbabbababaabbaabbbbbbbaaaaabbabbbbbbabbbaaaababaabababbababaabbaababaababaaabbbbbababaaabbbbbababbabaabbaaaaabbaaababbabbaaaabbaabaabaaabbbbbbaabbaabbbbaaabbabbbbaaabaaaababaaababbbabaabaaabbababbaabaaaabbaaaabaaababaaabbaaabbaaababababbbaaaabbbbaaabaaabbbaabbbaababbbbbabbaabababaababbbababbaaaabababbbbaaaaaabbabbbbaabbabaabaaabababbbabbbab",
+      "output": "Fałsz"
     }
   ],
   "ZAD-07": [
     {
-      "input": "aa",
-      "output": "['a']"
+      "input": "abcdef",
+      "output": ""
     },
     {
-      "input": "abca",
-      "output": "['a']"
+      "input": "aaaa",
+      "output": "aaa"
+    },
+    {
+      "input": "abcabcabc",
+      "output": "abcabc"
+    },
+    {
+      "input": "98432934021742343230",
+      "output": "432"
+    },
+    {
+      "input": "Arnold i Arnold",
+      "output": "Arnold"
+    },
+    {
+      "input": "efcdcdef",
+      "output": "ef"
+    },
+    {
+      "input": "x",
+      "output": ""
+    },
+    {
+      "input": "aa",
+      "output": "a"
+    },
+    {
+      "input": "bbbbbbabbbbbbaabbbabaabaaababbabaaabbaababbbbbabbabbaababbbaabbbbaababbaababbbabaaabbbaaaabbaabaababbbaaaababaabbaabaabbabbbbaabaabaabbabaabbaaabbbbbbaaabaabaaababaaaaaabbbabaabbababbbbaaaababaabaabaaaaabaaabbbbbbbbabbbaaaaabababbaaabbaaababaaaaabbbbabbbabbababbbbbaabbabaabaaabbabaaababaaaabbabaababaabbbbbaababbaaaaaabaabaaabaaaaababbabababaaaabababbaabbaababaaabaaaabbbabbbbbaaabbbbaaaaaababaaaabbbabaabbabbaabbbabaabaaaaaabaabbaabbbbbaaababbaaabbaaabbbaabaabbaabababbbabbbaaabbaaaababbaababbbbbabbaabbbabbabbaaaabbaaabbbbbaaabbabbaababaaaaaaaaabababaaabaaaaabaaaabaaabaaaaaaabbabbaababbababbabbbbabbbbabaabaaaaaababbababaabbbaaabbbbabbbbaaabaaaaababbbaababaaaabaaabbbbbbbaaaaaabbbababbbabababbabb",
+      "output": "abbaababbbbbabba"
     }
   ],
   "ZAD-08": [
@@ -77,6 +227,34 @@
     {
       "input": "2\ndog\nrace",
       "output": ""
+    },
+    {
+      "input": "1\nsamotny",
+      "output": "samotny"
+    },
+    {
+      "input": "3\ninternet\ninter\ninterval",
+      "output": "inter"
+    },
+    {
+      "input": "4\nabc\nabc\nabc\nabc",
+      "output": "abc"
+    },
+    {
+      "input": "2\nAbc\nabc",
+      "output": ""
+    },
+    {
+      "input": "3\nprogramowanie\nprogram\nprogramista",
+      "output": "program"
+    },
+    {
+      "input": "3\nab\na\nabc",
+      "output": "a"
+    },
+    {
+      "input": "40\nzaawansowane_programowanie_x\nzaawansowane_programowanie_yzxyz\nzaawansowane_programowanie_xyx\nzaawansowane_programowanie_xz\nzaawansowane_programowanie_yzz\nzaawansowane_programowanie_xx\nzaawansowane_programowanie_yyyzyy\nzaawansowane_programowanie_yzxy\nzaawansowane_programowanie_x\nzaawansowane_programowanie_xyxxx\nzaawansowane_programowanie_xyz\nzaawansowane_programowanie_\nzaawansowane_programowanie_yyxz\nzaawansowane_programowanie_\nzaawansowane_programowanie_\nzaawansowane_programowanie_yxxz\nzaawansowane_programowanie_x\nzaawansowane_programowanie\nzaawansowane_programowanie_yxz\nzaawansowane_programowanie_zxzzzz\nzaawansowane_programowanie_y\nzaawansowane_programowanie_zzy\nzaawansowane_programowanie_zx\nzaawansowane_programowanie_zzy\nzaawansowane_programowanie_\nzaawansowane_programowanie_zzyxx\nzaawansowane_programowanie_\nzaawansowane_programowanie_z\nzaawansowane_programowanie_\nzaawansowane_programowanie_x\nzaawansowane_programowanie_xyy\nzaawansowane_programowanie_y\nzaawansowane_programowanie_xyx\nzaawansowane_programowanie_yyxxxx\nzaawansowane_programowanie_\nzaawansowane_programowanie_zzxz\nzaawansowane_programowanie_xx\nzaawansowane_programowanie_yyyyx\nzaawansowane_programowanie_\nzaawansowane_programowanie_x",
+      "output": "zaawansowane_programowanie"
     }
   ],
   "ZAD-09": [
@@ -87,6 +265,100 @@
     {
       "input": "hello\nyellow",
       "output": "ello"
+    },
+    {
+      "input": "abc\nxyz",
+      "output": ""
+    },
+    {
+      "input": "aaaa\naa",
+      "output": "aa"
+    },
+    {
+      "input": "kot\nkot",
+      "output": "kot"
+    },
+    {
+      "input": "pqrsXYZabc\nabc-XYZ-pqr",
+      "output": "pqr"
+    },
+    {
+      "input": "ABC\nabc",
+      "output": ""
+    },
+    {
+      "input": "abc\ncde",
+      "output": "c"
+    },
+    {
+      "input": "abcccccccbcaaaccccaccbbccabaabbbabcabbaaccbcccbccacaabbcabacacaacabccabccbbbabcbbccacacccbaccaccaacbaacbacbcbaaacacabcaaabcaabbacabcbaababaacabcbaabaacbabcbaaacbaabbcbccaacacacbbbbbabbbbbabbaacbcccbaccbaacccacaabbaccbbaabbccaabcaabcccacaacbacccccbcccababccacabbbaccacbababbababbbcaabcbbcbcbaacaccccbaccaccbcacacbababbcbaacbbccccbbbabcccccbbbaaacbbaabccccbaccabbcabcbccabcbabaacacbaababaababaacabccbbaabcabccbacbabccbabbbaacbccbbbabaabaacccaccacbabcabcabbbcacabcaabbccbabccbaaccacaabbbbcabbbbcabcbaacb\ncbcccaababccacbccbcabcaccbbacccccabbcbaccbcabacbaabcccaabcaabababbbacbbccabacccbaaacbbbabbaaacaaaacaaabaabccbbbacaccaaccacbbccbcbaababcbbaccaaacaacbaacbcbcbbaccabcbcaaacccacabacaccbbbbabbbcbcaccaababcbabcccacababacbcbbaababacbcaaaaabababaccbccbbcccaabbbabbbabbaabaacaccbbababbbababbbbbaccaaacabaccabcabcccacaabbabababcbcacbcbacbbbbacaaabbaccbaccbbaacbcbacccccaaabccaabaabbaabccbccacaabcbbbababcbcccccacaaabcabbccabacbabccbaacacabbbcbccbcbaaccacaacabaabbbbabacacacccacbbcabacbabacbaaabcbcabcbababaacab",
+      "output": "ccbccacaab"
+    }
+  ],
+  "ZAD-10": [
+    {
+      "input": "abc",
+      "output": "Tak"
+    },
+    {
+      "input": ")",
+      "output": "0"
+    },
+    {
+      "input": "(",
+      "output": "0"
+    },
+    {
+      "input": "(()",
+      "output": "0"
+    },
+    {
+      "input": "())",
+      "output": "2"
+    },
+    {
+      "input": "([)]",
+      "output": "2"
+    },
+    {
+      "input": "{[()()]}",
+      "output": "Tak"
+    },
+    {
+      "input": "((]",
+      "output": "2"
+    },
+    {
+      "input": "{}((",
+      "output": "2"
+    },
+    {
+      "input": "(()(",
+      "output": "0"
+    },
+    {
+      "input": "[(])",
+      "output": "2"
+    },
+    {
+      "input": "x = (a + b] * c",
+      "output": "10"
+    },
+    {
+      "input": "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))",
+      "output": "Tak"
+    },
+    {
+      "input": "(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))",
+      "output": "0"
+    },
+    {
+      "input": "([[(-[*[]={=}] {()(bb-a+b--)}bxy)-]=])()( +( +- {{(y[**+= *b]-++)+y}{()*a{[x+x* -=+b**]a[ax -*y-y x](-)+(*){xx *b *axy-=}x}({+}){[ x] +(b)+=x}{y}}({{-=}(**-+a=bx=yxx==+**a-xbx= x*)*b}+x[]= a((-)*[ x*=x](  -=)(+ ){}{=a=x}[+]) []((*xbx-bb=-a)(-y+ )(yy)())a{[](aya)x(a a)()(aax-x)}*=)yb[((yy+-a){** +ayb=-}*y== )*][[( -+)]{}]})aa )(b)([+b]*)()(a[]+*)(x)()(+)()(a)( y(-{}){})()({})([]+*{})(+[a-(*a)*(y[[(a=*== +-==byby=-xby==== x)]]({y}()){})[b{(){(*)[*=][+-xx--](ax )}()[b()(a=+yab-=+=x*yy)()()-{y}( )+b {+ y +}[+bba+]]}-{y()ax{(=xxb=+)+{= -+a* }{b}{xa}(b**a-b-a)[yx]{bb*a+}a}(b)}(=[{**bb*}{-y}[ay *](+x= ) x[*xx * -=ya= *]{=ax-a+-a }(x  )a])]]{})(([xx{(ba a*(y*)b-{})a}[{}=]](x()*y[](=){=*}{}+=[xb([+==-]b){y{a+ +ax-=x=*a}}[a()+{x = *x}{x + -=y-yy --=*}]{x[*y =ab-]*(a-x-=     +*)}b])=)b)()(y)()(a)()(*{y[{{}{}[]([]{-++babayxby*}[=-]*( *){ *b}[y])[{++=-+y-}]={bb[y*y+a +x*a-xya=-x-x=]{}[](a )y}bxb }]-+})(-b+)(-)(=())()()(b )()([-]y)()()([*]x=[]y)()()()(*-*() )({} *)(*)(={}+(=[]))()(=-)(bbx)()({({(={bax*}a)})}{})(y)(+(({-[{a}(+y-)[]]{[*+ba*]*x=-[]+(x+a)x[==*y]}[[]={+y= y}bb-()( + a+--x+b)a(*=-xya*=)y(){==xb*yx-b}x(xay-)[yy+-bxby][ =]a]}[yb]+)))()()()()()([*-][][x =*b+ ]({ }))()(+)()()()()()(bb(y-){{a[x(bx[b--=ax=b-=*][-+b]-[a](y)[-*+*-a](- xxy*+xb ) ) [](){( x-a=xbx byby*==- a+)(+=)[-](x+=)[xyy -y]{=*}=}({}=[bb]( xy- ){a-bxx-xxa}{}*[aax] *+ya{ya-by+x**xyy  + *y-})({}){y{ay} x*}[]]-}a[({[]+[-yb]}=b+{y(+b){}(++ *+ +-)})]{}y }b)",
+      "output": "Tak"
+    },
+    {
+      "input": "([[(-[*[]={=}] {()(bb-a+b--)}bxy)-]=])()( +( +- {{(y[**+= *b]-++)+y}{()*a{[x+x* -=+b**]a[ax -*y-y x](-)+(*){xx *b *axy-=}x}({+}){[ x] +(b)+=x}{y}}({{-=}(**-+a=bx=yxx==+**a-xbx= x*)*b}+x[]= a((-)*[ x*=x](  -=)(+ ){}{=a=x}[+]) []((*xbx-bb=-a)(-y+ )(yy)())a{[](aya)x(a a)()(aax-x)}*=)yb[((yy+-a){** +ayb=-}*y== )*][[( -+)]{}]})aa )(b)([+b]*)()(a[]+*)(x)()(+)()(a)( y(-{}){})()({})([]+*{})(+[a-(*a)*(y[[(a=*== +-==byby=-xby==== x)]]({y}()){})[b{(){(*)[*=][+-xx--](ax )}()[b()(a=+yab-=+=x*yy)()()-{y}( )+b {+ y +}[+bba+]]}-{y()ax{(=xxb=+)+{= -+a* }{b}{xa}(b**a-b-a)[yx]{bb*a+}a}(b)}(=[{**bb*}{-y}[ay *](+x= ) x[*xx * -=ya= *]{=ax-a+-a }(x  )a])]]{})(([xx{(ba a*(y*)b-{})a}[{}=]](x()*y[](=){=*}{}+=[xb([+==-]b){y{a+ +ax-=x=*a}}[a()+{x = *x}{x + -=y-yy --=*}]{x[*y =ab-]*(a-x-=     +*)}b])=)b)()(y)()(a)()(*{y[{{}{}[]([]{-++babayxby*}[=-]*( *){ *b}[y])[{++=-+y-}]={bb[y*y+a +x*a-xya=-x-x=]{}[](a )y}bxb }]-+})(-b+)(-)(=())()()(b )()([-]y)()()([*]x=[]y)()()()(*-*() )({} *)(*)(={}+(=[]))()(=-)(bbx)()({({(={bax*}a)})}{})(y)(+(({-[{a}(+y-)[]]{[*+ba*]*x=-[]+(x+a)x[==*y]}[[]={+y= y}bb-()( + a+--x+b)a(*=-xya*=)y(){==xb*yx-b}x(xay-)[yy+-bxby][ =]a]}[yb]+)))()()()()()([*-][][x =*b+ ]({ }))()(+)()()()()()(bb(y-){{a[x(bx[b--=ax=b-=*][-+b]-[a](y)[-*+*-a](- xxy*+xb ) ) [](){( x-a=xbx byby*==- a+)(+=)[-](x+=)[xyy -y]{=*}=}({}=[bb]( xy- ){a-bxx-xxa}{}*[aax] *+ya{ya-by+x**xyy  + *y-})({}){y{ay} x*}[]]-}a[({[]+[-yb]}=b+{y(+b){}(++ *+ +-)})]{}y }b]",
+      "output": "1432"
     }
   ]
 }

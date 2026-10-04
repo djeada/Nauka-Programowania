@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-09 — Klepsydra o największej sumie
 
 **Poziom:** ★★☆
@@ -6,7 +6,7 @@ ZAD-09 — Klepsydra o największej sumie
 
 ### Treść
 
-Wczytaj macierz `n×m` (n,m ≥ 3). Znajdź maksymalną sumę „klepsydry” (7 pól):
+Wczytaj macierz `n×m`. **Klepsydra** to 7 pól wyciętych z dowolnego kwadratu `3×3` macierzy: cały górny wiersz, środkowe pole i cały dolny wiersz.
 
 ```
 a b c
@@ -14,14 +14,20 @@ a b c
 e f g
 ```
 
+Suma klepsydry to $a + b + c + d + e + f + g$. Wypisz największą sumę spośród wszystkich klepsydr w macierzy.
+
 ### Wejście
 
-* 1. linia: `n m`
-* następnie `n` wierszy po `m` liczb całkowitych
+* 1. linia: `n m` — liczba wierszy i kolumn (w jednej linii)
+* następnie `n` linii po `m` liczb całkowitych (mogą być ujemne)
 
 ### Wyjście
 
-* 1 linia: maksymalna suma klepsydry
+Jedna liczba całkowita: największa suma klepsydry.
+
+### Ograniczenia
+
+* `3 ≤ n, m ≤ 20`
 
 ### Przykład
 
@@ -41,77 +47,46 @@ e f g
 75
 ```
 
+Największą sumę ma klepsydra ze środkiem w polu o wartości `7`: $8 + 10 + 8 + 7 + 9 + 19 + 14 = 75$.
+
+### Uwagi
+
+* Gdy wszystkie liczby są ujemne, wynik też jest ujemny — nie zaczynaj szukania maksimum od `0`.
+
 """
 
 
-def znajdz_klepsydry(macierz):
-    """
-    Przejdz przez macierz i znajdz wszystkie klepsydry.
-
-    Złożoność czasowa: O(n * m), gdzie n to liczba wierszy, m to liczba kolumn
-    Złożoność pamięciowa: O((n-2) * (m-2)) dla wyników
-    """
-    n = len(macierz)
-    m = len(macierz[0])
-
-    klepsydry = []
-    # Klepsydra potrzebuje 3x3, więc iterujemy od 1 do n-2 i m-2
-    for wiersz in range(1, n - 1):
-        for kolumna in range(1, m - 1):
-            # Suma klepsydry:
-            # wiersz-1: kolumna-1, kolumna, kolumna+1
-            # wiersz: kolumna
-            # wiersz+1: kolumna-1, kolumna, kolumna+1
-            suma = (
-                macierz[wiersz - 1][kolumna - 1]
-                + macierz[wiersz - 1][kolumna]
-                + macierz[wiersz - 1][kolumna + 1]
-                + macierz[wiersz][kolumna]
-                + macierz[wiersz + 1][kolumna - 1]
-                + macierz[wiersz + 1][kolumna]
-                + macierz[wiersz + 1][kolumna + 1]
-            )
-            klepsydry.append(suma)
-
-    return klepsydry
+def suma_klepsydry(macierz, wiersz, kolumna):
+    """Zwraca sumę klepsydry, której lewy górny róg leży w polu [wiersz][kolumna]."""
+    gora = (
+        macierz[wiersz][kolumna]
+        + macierz[wiersz][kolumna + 1]
+        + macierz[wiersz][kolumna + 2]
+    )
+    srodek = macierz[wiersz + 1][kolumna + 1]
+    dol = (
+        macierz[wiersz + 2][kolumna]
+        + macierz[wiersz + 2][kolumna + 1]
+        + macierz[wiersz + 2][kolumna + 2]
+    )
+    return gora + srodek + dol
 
 
 def najwieksza_klepsydra(macierz):
-    """
-    Zwraca największą sumę klepsydry w macierzy.
-
-    Złożoność czasowa: O(n * m)
-    Złożoność pamięciowa: O((n-2) * (m-2))
-    """
-    return max(znajdz_klepsydry(macierz))
-
-
-def test_najwieksza_klepsydra():
-
-    macierz = [
-        [10, 99, 28, 21, 78],
-        [35, 78, 31, 56, 24],
-        [7, 18, 2, 50, 87],
-        [59, 67, 9, 82, 53],
-        [23, 26, 76, 62, 36],
-    ]
-    assert najwieksza_klepsydra(macierz) == 395
+    """Zwraca największą sumę klepsydry w macierzy (co najmniej 3×3)."""
+    n = len(macierz)
+    m = len(macierz[0])
+    najwieksza = suma_klepsydry(macierz, 0, 0)
+    for wiersz in range(n - 2):
+        for kolumna in range(m - 2):
+            suma = suma_klepsydry(macierz, wiersz, kolumna)
+            if suma > najwieksza:
+                najwieksza = suma
+    return najwieksza
 
 
 if __name__ == "__main__":
-    # Wczytanie wymiarów macierzy
-    n, m = map(int, input().strip().split())
+    n, m = [int(x) for x in input().split()]
+    macierz = [[int(x) for x in input().split()] for _ in range(n)]
 
-    # Wczytanie macierzy
-    macierz = []
-    for _ in range(n):
-        wiersz = list(map(int, input().strip().split()))
-        macierz.append(wiersz)
-
-    # Znalezienie największej klepsydry
-    # Złożoność czasowa: O(n * m)
-    # Złożoność pamięciowa: O((n-2) * (m-2))
-    wynik = najwieksza_klepsydra(macierz)
-
-    # Wypisanie wyniku
-    print(wynik)
+    print(najwieksza_klepsydra(macierz))

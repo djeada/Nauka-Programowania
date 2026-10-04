@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Indeks klucza w cyklicznie posortowanej liście
 
 **Poziom:** ★★☆
@@ -6,17 +6,23 @@ ZAD-08 — Indeks klucza w cyklicznie posortowanej liście
 
 ### Treść
 
-Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosnąca, ale została przesunięta) oraz klucz. Znajdź indeks **pierwszego** wystąpienia klucza. Jeśli klucza nie ma — wypisz `-1`.
+Lista liczb całkowitych była posortowana rosnąco, a następnie została **cyklicznie przesunięta** (jej początkowy fragment przeniesiono na koniec), np. `1 2 3 4 5 6` → `3 4 5 6 1 2`. Znajdź indeks (liczony od 0), pod którym w tej liście znajduje się podany klucz. Jeśli klucza nie ma w liście, wypisz `-1`.
 
 ### Wejście
 
-* 1 linia: liczba naturalna `N`
-* 2 linia: `N` liczb całkowitych oddzielonych spacjami
-* 3 linia: liczba całkowita `x` (szukany klucz)
+* 1. linia: liczba elementów $N$
+* 2. linia: $N$ liczb całkowitych oddzielonych spacjami — cyklicznie przesunięta lista rosnąca
+* 3. linia: liczba całkowita $x$ — szukany klucz
 
 ### Wyjście
 
-* 1 linia: indeks pierwszego wystąpienia `x` albo `-1`
+* 1. linia: indeks elementu równego $x$ albo `-1`
+
+### Ograniczenia
+
+* $1 \le N \le 1000$
+* Wszystkie elementy listy są różne.
+* Przesunięcie może wynosić 0 (lista jest wtedy po prostu posortowana).
 
 ### Przykład
 
@@ -34,54 +40,37 @@ Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosn�
 1
 ```
 
-### Ograniczenia / gwarancje
+### Uwagi
 
-* Lista jest wynikiem rotacji listy posortowanej niemalejąco (mogą wystąpić duplikaty).
+* Zadanie da się rozwiązać w czasie $O(\log N)$ zmodyfikowanym wyszukiwaniem binarnym: po podziale przedziału na pół **co najmniej jedna** z połówek jest posortowana rosnąco — sprawdź, czy klucz mieści się w jej zakresie, i na tej podstawie wybierz połowę do dalszego przeszukiwania.
+* To rozwinięcie zwykłego wyszukiwania binarnego — zob. zadanie „Wyszukiwanie binarne” z rozdziału 21.
 
 """
 
 
-def znajdz_klucz_v1(lista, klucz):
-
-    lewo = 0
-    prawo = len(lista) - 1
-
+def znajdz_klucz(lista, klucz):
+    lewo, prawo = 0, len(lista) - 1
     while lewo <= prawo:
-
-        sr = (lewo + prawo) // 2
-
-        if klucz == lista[sr]:
-            return sr
-
-        if lista[sr] <= lista[prawo]:
-
-            if lista[sr] < klucz and klucz <= lista[prawo]:
-                lewo = sr + 1
-
+        srodek = (lewo + prawo) // 2
+        if lista[srodek] == klucz:
+            return srodek
+        if lista[lewo] <= lista[srodek]:
+            # lewa połowa lista[lewo..srodek] jest posortowana
+            if lista[lewo] <= klucz < lista[srodek]:
+                prawo = srodek - 1
             else:
-                prawo = sr - 1
-
+                lewo = srodek + 1
         else:
-
-            if lista[lewo] <= klucz and klucz < lista[sr]:
-                prawo = sr - 1
-
+            # prawa połowa lista[srodek..prawo] jest posortowana
+            if lista[srodek] < klucz <= lista[prawo]:
+                lewo = srodek + 1
             else:
-                lewo = sr + 1
-
+                prawo = srodek - 1
     return -1
 
 
 if __name__ == "__main__":
-
-    lista = [27, 31, 32, 3, 5, 9, 10, 15]
-    klucz = 31
-    wynik = 1
-
-    assert znajdz_klucz_v1(lista, klucz) == wynik
-
-    lista = [4, 7, 12, 32, 51, 90, 100, 1, 2]
-    klucz = -5
-    wynik = -1
-
-    assert znajdz_klucz_v1(lista, klucz) == wynik
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    klucz = int(input())
+    print(znajdz_klucz(lista, klucz))

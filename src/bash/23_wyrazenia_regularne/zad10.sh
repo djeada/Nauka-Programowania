@@ -29,14 +29,19 @@
 # *(jak w treści — z listami A/B)*
 source ../assert.sh
 
-# Podmienia napisy z listy A na odpowiadające im napisy z listy B.
+# Podmienia całe słowa z listy A na odpowiadające im słowa z listy B
+# (fragmenty innych słów, np. "or" w "nor", pozostają bez zmian).
 # Złożoność czasowa: O(n*m*k), gdzie n to długość tekstu, m to liczba podmian, k to długość napisu do podmiany
 # Złożoność pamięciowa: O(n)
 podmien_napisy() {
     local tekst="$1"
+    local i wzorzec zamiana
 
     for i in "${!lista_a[@]}"; do
-        tekst="${tekst//${lista_a[$i]}/${lista_b[$i]}}"
+        # znaki specjalne wyrażeń regularnych i sed traktujemy dosłownie
+        wzorzec=$(printf '%s' "${lista_a[$i]}" | sed 's/[][\.*^$+?(){}|/]/\\&/g')
+        zamiana=$(printf '%s' "${lista_b[$i]}" | sed 's/[\/&]/\\&/g')
+        tekst=$(printf '%s\n' "$tekst" | sed -E "s/\\b${wzorzec}\\b/${zamiana}/g")
     done
 
     echo "$tekst"
@@ -62,7 +67,7 @@ test_podmien_napisy() {
     Same park bore on off.
     Warmth his law design say are person.
     Pronounce suspected in belonging conveying ye repulsive.'
-    assertEqual "$wynik" "$oczekiwane"
+    assertEqual "$wynik" "$oczekiwane" $LINENO
 }
 
 main() {

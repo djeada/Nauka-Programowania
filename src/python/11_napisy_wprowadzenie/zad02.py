@@ -1,21 +1,22 @@
-"""
+r"""
 ZAD-02 — Policz wystąpienia znaku
 
 **Poziom:** ★☆☆
-**Tagi:** `string`, `count`
+**Tagi:** `napisy`, `zliczanie`
 
 ### Treść
 
 Wczytaj napis oraz jeden znak. Wypisz, ile razy ten znak występuje w napisie.
+Wielkość liter ma znaczenie: `A` i `a` to różne znaki.
 
 ### Wejście
 
-* 1. linia: napis
-* 2. linia: pojedynczy znak
+* 1. linia: napis (może zawierać spacje)
+* 2. linia: jeden znak (różny od spacji)
 
 ### Wyjście
 
-* 1. linia: liczba wystąpień
+Jedna linia: liczba wystąpień znaku (może być `0`).
 
 ### Przykład
 
@@ -35,15 +36,15 @@ a
 """
 
 
-def liczba_wystapien(napis, znak):
-    return napis.count(znak)
-
-
-def test_liczba_wystapien():
-    assert liczba_wystapien("ala ma kota", "a") == 3
-    assert liczba_wystapien("ala ma kota", "k") == 1
+def liczba_wystapien(napis, szukany):
+    licznik = 0
+    for znak in napis:
+        if znak == szukany:
+            licznik += 1
+    return licznik
 
 
 if __name__ == "__main__":
-
-    test_liczba_wystapien()
+    napis = input()
+    szukany = input()
+    print(liczba_wystapien(napis, szukany))

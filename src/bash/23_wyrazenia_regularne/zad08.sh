@@ -48,7 +48,7 @@ cyfry_bedace_czescia_slow() {
         fi
     done
 
-    echo ${cyfry[@]}
+    echo "${cyfry[@]}"
 }
 
 test_cyfry_bedace_czescia_slow() {

@@ -48,17 +48,19 @@ source ../assert.sh
 # Znajduje wiersze kończące się podanym napisem.
 # Złożoność czasowa: O(n*m), gdzie n to liczba wierszy, m to długość wiersza
 # Złożoność pamięciowa: O(n)
+# Wiersz może kończyć się znakiem interpunkcyjnym; białe znaki na początku
+# wiersza są pomijane.
 wiersze_konczace_sie_napisem() {
     local tekst=$1
     local koniec=$2
+    local wiersz
 
-    for wiersz in $tekst; do
-        if [[ $wiersz == *$koniec ]]; then
-            echo $wiersz
+    while IFS= read -r wiersz; do
+        wiersz="${wiersz#"${wiersz%%[![:space:]]*}"}"
+        if [[ ${wiersz%[;,.!?:]} == *"$koniec" ]]; then
+            echo "$wiersz"
         fi
-    done
-
-    echo "$tekst" | grep -E ".*$koniec"
+    done <<<"$tekst"
 }
 
 test_wiersze_konczace_sie_napisem() {
@@ -67,7 +69,8 @@ test_wiersze_konczace_sie_napisem() {
     Godnosci trzeba nie za nic tu cnota,
     Milosci pragna nie pragna tu zlota."
     local koniec="da"
-    local wynik=($(wiersze_konczace_sie_napisem "$tekst" "$koniec"))
+    local wynik
+    mapfile -t wynik < <(wiersze_konczace_sie_napisem "$tekst" "$koniec")
     local oczekiwane=('Folgujmy paniom nie sobie, ma rada;' 'Milujmy wiernie nie jest w nich przysada.')
 
     assertArrayEqual wynik oczekiwane $LINENO

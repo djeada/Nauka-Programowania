@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Wypisanie elementów macierzy spiralnie
 
 **Poziom:** ★★☆
@@ -6,16 +6,20 @@ ZAD-08 — Wypisanie elementów macierzy spiralnie
 
 ### Treść
 
-Wczytaj macierz `n×m` i wypisz jej elementy spiralnie (zgodnie z ruchem wskazówek zegara), startując z lewego górnego rogu.
+Wczytaj macierz `n×m` i wypisz jej elementy spiralnie, zgodnie z ruchem wskazówek zegara: zacznij od lewego górnego rogu, idź w prawo po pierwszym wierszu, potem w dół po ostatniej kolumnie, w lewo po ostatnim wierszu, w górę po pierwszej kolumnie i tak dalej, aż do odczytania wszystkich elementów.
 
 ### Wejście
 
-* 1. linia: `n m`
-* następnie `n` wierszy po `m` liczb
+* 1. linia: `n m` — liczba wierszy i kolumn (w jednej linii)
+* następnie `n` linii po `m` liczb całkowitych
 
 ### Wyjście
 
-* 1 linia: elementy spiralnie, oddzielone spacjami
+Jedna linia: wszystkie elementy w kolejności spiralnej, oddzielone spacjami.
+
+### Ograniczenia
+
+* `1 ≤ n, m ≤ 20`
 
 ### Przykład
 
@@ -34,101 +38,47 @@ Wczytaj macierz `n×m` i wypisz jej elementy spiralnie (zgodnie z ruchem wskazó
 1 2 3 6 9 8 7 4 5
 ```
 
+### Uwagi
+
+* Macierz nie musi być kwadratowa — sprawdź swój program także dla jednego wiersza i dla jednej kolumny.
+
 """
 
 
 def spirala(macierz):
-    """
-    Zwraca liste elementow z macierzy zebranych spiralnie.
-
-    Złożoność czasowa: O(n * m), gdzie n to liczba wierszy, m to liczba kolumn
-    Złożoność pamięciowa: O(n * m) dla wyniku
-    """
-    if not macierz or not macierz[0]:
-        return []
-
-    lista = []
+    """Zwraca listę elementów macierzy odczytanych spiralnie, zgodnie z ruchem wskazówek zegara."""
+    wynik = []
     gora, dol = 0, len(macierz) - 1
     lewo, prawo = 0, len(macierz[0]) - 1
 
     while gora <= dol and lewo <= prawo:
-        # Przejdź w prawo po górnym wierszu
+        # w prawo po górnym wierszu
         for j in range(lewo, prawo + 1):
-            lista.append(macierz[gora][j])
+            wynik.append(macierz[gora][j])
         gora += 1
 
-        # Przejdź w dół po prawej kolumnie
+        # w dół po prawej kolumnie
         for i in range(gora, dol + 1):
-            lista.append(macierz[i][prawo])
+            wynik.append(macierz[i][prawo])
         prawo -= 1
 
-        # Przejdź w lewo po dolnym wierszu (jeśli jeszcze istnieje)
+        # w lewo po dolnym wierszu (jeśli jeszcze został)
         if gora <= dol:
             for j in range(prawo, lewo - 1, -1):
-                lista.append(macierz[dol][j])
+                wynik.append(macierz[dol][j])
             dol -= 1
 
-        # Przejdź w górę po lewej kolumnie (jeśli jeszcze istnieje)
+        # w górę po lewej kolumnie (jeśli jeszcze została)
         if lewo <= prawo:
             for i in range(dol, gora - 1, -1):
-                lista.append(macierz[i][lewo])
+                wynik.append(macierz[i][lewo])
             lewo += 1
 
-    return lista
-
-
-def test_spirala():
-    macierz = [
-        [1, 2, 3, 4, 5],
-        [16, 17, 18, 19, 6],
-        [15, 24, 25, 20, 7],
-        [14, 23, 22, 21, 8],
-        [13, 12, 11, 10, 9],
-    ]
-    wynik = [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-    ]
-    assert spirala(macierz) == wynik
+    return wynik
 
 
 if __name__ == "__main__":
-    # Wczytanie wymiarów macierzy
-    n, m = map(int, input().strip().split())
+    n, m = [int(x) for x in input().split()]
+    macierz = [[int(x) for x in input().split()] for _ in range(n)]
 
-    # Wczytanie macierzy
-    macierz = []
-    for _ in range(n):
-        wiersz = list(map(int, input().strip().split()))
-        macierz.append(wiersz)
-
-    # Spiralne przejście
-    # Złożoność czasowa: O(n * m)
-    # Złożoność pamięciowa: O(n * m)
-    wynik = spirala(macierz)
-
-    # Wypisanie wyniku
-    print(" ".join(map(str, wynik)))
+    print(" ".join(str(x) for x in spirala(macierz)))

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-06 — Wiersze kończące się określonym napisem
 
 **Poziom:** ★☆☆
@@ -6,31 +6,31 @@ ZAD-06 — Wiersze kończące się określonym napisem
 
 ### Treść
 
-Otrzymujesz dwa napisy:
+Wczytaj tekst wielowierszowy i końcówkę (np. `da`). Wypisz wszystkie wiersze tekstu, które **kończą się** podaną końcówką. Wiersz może mieć po końcówce znaki interpunkcyjne `.` `,` `;` `:` `!` `?` oraz spacje — w dowolnej liczbie — i nadal się liczy.
 
-1. tekst wielowierszowy,
-2. słowo lub fragment.
-
-Znajdź wszystkie wiersze, które kończą się podanym napisem (wiersz może kończyć się znakiem interpunkcyjnym).
+Końcówka nie musi być całym słowem: wiersz `Folgujmy paniom nie sobie, ma rada;` kończy się na `da`. Wielkość liter ma znaczenie. Wiersze wypisuj w niezmienionej postaci (razem z interpunkcją).
 
 ### Wejście
 
-Dwie części:
-
-1. Tekst (wiele wierszy)
-2. W osobnej linii: `koncowka`
-
-*(Sposób wczytania tekstu wielowierszowego zależy od platformy — przyjmij, że tekst jest podany w całości jako wejście, a ostatnia linia to `koncowka`.)*
+* 1. linia: `n` — liczba wierszy tekstu
+* kolejne `n` linii: tekst
+* ostatnia linia: końcówka (same litery)
 
 ### Wyjście
 
-Wiersze spełniające warunek, każdy w osobnej linii, w kolejności występowania.
+* Pasujące wiersze, każdy w osobnej linii, w kolejności występowania w tekście,
+* `Brak wierszy.` — jeśli żaden wiersz nie pasuje.
+
+### Ograniczenia
+
+* $1 \le n \le 100$
 
 ### Przykład
 
 **Wejście:**
 
 ```
+4
 Folgujmy paniom nie sobie, ma rada;
 Milujmy wiernie nie jest w nich przysada.
 Godności trzeba nie za nic tu cnota,
@@ -45,32 +45,28 @@ Folgujmy paniom nie sobie, ma rada;
 Milujmy wiernie nie jest w nich przysada.
 ```
 
+### Uwagi
+
+* Kotwica `$` oznacza koniec napisu, np. wzorzec `da[.,;:!? ]*$` pasuje do `rada;` i `przysada.`, ale nie do `dama`. Pamiętaj o `re.escape()` dla wczytanej końcówki.
+
 """
 
 import re
 
 
-def wiersze_konczace_sie_napisem(tekst, koniec):
-    """
-    Zwraca wszystkie wiersze konczace sie napisem koniec.
-    """
-    wiersze = re.split("\n|\.|\?|\!|\;|\:", tekst)
-    return [wiersz for wiersz in wiersze if wiersz.endswith(koniec)]
-
-
-def test_wiersze_konczace_sie_napisem():
-    tekst = """Folgujmy paniom nie sobie, ma rada;
-Milujmy wiernie nie jest w nich przysada.
-Godnosci trzeba nie za nic tu cnota,
-Milosci pragna nie pragna tu zlota."""
-    napis = "da"
-    oczekiwane = [
-        "Folgujmy paniom nie sobie, ma rada",
-        "Milujmy wiernie nie jest w nich przysada",
-    ]
-
-    assert wiersze_konczace_sie_napisem(tekst, napis) == oczekiwane
+def wiersze_konczace_sie(wiersze, koncowka):
+    """Zwraca wiersze kończące się końcówką (po niej może być interpunkcja i spacje)."""
+    wzorzec = re.escape(koncowka) + r"[.,;:!? ]*$"
+    return [wiersz for wiersz in wiersze if re.search(wzorzec, wiersz)]
 
 
 if __name__ == "__main__":
-    test_wiersze_konczace_sie_napisem()
+    n = int(input())
+    wiersze = [input() for _ in range(n)]
+    koncowka = input()
+
+    wynik = wiersze_konczace_sie(wiersze, koncowka)
+    if wynik:
+        print("\n".join(wynik))
+    else:
+        print("Brak wierszy.")

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Największy wspólny dzielnik (NWD)
 
 **Poziom:** ★☆☆
@@ -6,25 +6,26 @@ ZAD-05 — Największy wspólny dzielnik (NWD)
 
 ### Treść
 
-Napisz funkcję `nwd(a, b)`, która zwraca największy wspólny dzielnik dwóch liczb naturalnych.
+Napisz funkcję `nwd(a, b)`, która zwraca największy wspólny dzielnik liczb `a` i `b`. Użyj pętli (np. algorytmu Euklidesa), a nie funkcji `math.gcd()`.
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Dwa argumenty funkcji:
-
-* `a` (liczba naturalna, `a > 0`)
-* `b` (liczba naturalna, `b > 0`)
+* 1. linia: `a` — liczba naturalna (`a ≥ 1`)
+* 2. linia: `b` — liczba naturalna (`b ≥ 1`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę naturalną — `NWD(a, b)`.
+Jedna liczba całkowita — $\text{NWD}(a, b)$.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(nwd(60, 45))
+```
+60
+45
 ```
 
 **Wyjście:**
@@ -33,21 +34,32 @@ print(nwd(60, 45))
 15
 ```
 
+### Uwagi
+
+* Algorytm Euklidesa: dopóki $b \neq 0$, zastępuj parę $(a, b)$ parą $(b, a \bmod b)$. Na końcu wynikiem jest $a$.
+
+### Kod startowy
+
+```python
+def nwd(a, b):
+    pass
+
+
+a = int(input())
+b = int(input())
+print(nwd(a, b))
+```
+
 """
 
 
 def nwd(a, b):
-    while b:
+    while b != 0:
         a, b = b, a % b
     return a
 
 
-def test_nwd():
-    assert nwd(12, 15) == 3
-    assert nwd(15, 12) == 3
-    assert nwd(9, 6) == 3
-    assert nwd(6, 9) == 3
-
-
 if __name__ == "__main__":
-    test_nwd()
+    a = int(input())
+    b = int(input())
+    print(nwd(a, b))

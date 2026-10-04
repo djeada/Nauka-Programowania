@@ -87,7 +87,7 @@ void test2() {
   Prostokat prostokatB(-4.5, 2.3, 3.8, -3.3);
   double wynik = 12.24;
 
-  assert(abs(prostokatA.poleCzesciWspolnej(prostokatB) - wynik) < 0.01);
+  assert(std::fabs(prostokatA.poleCzesciWspolnej(prostokatB) - wynik) < 0.01);
 }
 
 int main() {

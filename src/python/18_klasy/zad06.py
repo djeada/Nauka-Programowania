@@ -1,46 +1,126 @@
-"""
+r"""
 ZAD-06 — Klasa LiczbaZespolona
 
 **Poziom:** ★★☆
-**Tagi:** `class`, `operacje`, `math`
+**Tagi:** `class`, `operatory`, `math`
 
 ### Treść
 
-Zaprojektuj klasę **LiczbaZespolona**:
+Zaprojektuj klasę `LiczbaZespolona` opisującą liczbę zespoloną $a + bi$:
 
-* konstruktor `(re=0, im=0)`,
-* dodawanie, odejmowanie, mnożenie, dzielenie,
-* porównania,
-* moduł,
-* wypisywanie w formacie `a + bi` lub `a - bi` (z zachowaniem znaku).
+* konstruktor `__init__(self, re=0, im=0)` — część rzeczywista i urojona,
+* operatory `+`, `-`, `*`, `/` (metody `__add__`, `__sub__`, `__mul__`, `__truediv__`) zwracające nową liczbę zespoloną:
+  * $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$,
+  * $\frac{a + bi}{c + di} = \frac{ac + bd}{c^2 + d^2} + \frac{bc - ad}{c^2 + d^2}i$ (dzielnik jest różny od zera),
+* porównanie `==` (metoda `__eq__`) — liczby są równe, gdy mają równe części rzeczywiste i urojone,
+* metodę `modul()` zwracającą moduł liczby: $|a + bi| = \sqrt{a^2 + b^2}$,
+* metodę `__str__()` zwracającą napis `a + bi` albo `a - bi` (gdy część urojona jest ujemna, wypisz minus i jej wartość bezwzględną). Obie części wypisz z dokładnością do 2 miejsc po przecinku, np. `9.00 + 12.00i`, `-3.00 - 3.00i`.
 
-Program tworzy:
-
-* A = 9 + 12i
-* B = -3 - 3i
-
-Wypisuje A, B oraz: sumę, różnicę A-B, iloczyn i iloraz A/B.
+Program wczytuje liczby $A$ i $B$ i wypisuje wyniki działań.
 
 ### Wejście
 
-Brak.
+* 1. linia: dwie liczby całkowite — część rzeczywista i urojona liczby $A$
+* 2. linia: dwie liczby całkowite — część rzeczywista i urojona liczby $B$
 
 ### Wyjście
 
-Jak w przykładzie.
+Osiem linii:
+
+```
+Liczba A: <A>
+Liczba B: <B>
+Suma: <A + B>
+Różnica A - B: <A - B>
+Iloczyn: <A * B>
+Iloraz A / B: <A / B>
+Moduł liczby A: <|A|>
+Liczby są równe.
+```
+
+* Jeśli $B = 0 + 0i$, zamiast ilorazu wypisz `Iloraz A / B: nie można dzielić przez zero`.
+* Moduł wypisz z dokładnością do 2 miejsc po przecinku.
+* W ostatniej linii wypisz `Liczby są równe.` albo `Liczby są różne.`
+
+### Ograniczenia
+
+* Części rzeczywiste i urojone są liczbami całkowitymi z przedziału $[-100, 100]$.
 
 ### Przykład
+
+**Wejście:**
+
+```
+9 12
+-3 -3
+```
 
 **Wyjście:**
 
 ```
-Liczba A: 9 + 12i
-Liczba B: -3 - 3i
+Liczba A: 9.00 + 12.00i
+Liczba B: -3.00 - 3.00i
+Suma: 6.00 + 9.00i
+Różnica A - B: 12.00 + 15.00i
+Iloczyn: 9.00 - 63.00i
+Iloraz A / B: -3.50 - 0.50i
+Moduł liczby A: 15.00
+Liczby są różne.
+```
 
-Suma: 6 + 9i
-Różnica A - B: 12 + 15i
-Iloczyn: 27 + 63i
-Iloraz A / B: -3.5 + 0.5i
+Iloczyn: $(9 + 12i)(-3 - 3i) = (-27 + 36) + (-27 - 36)i = 9 - 63i$.
+
+### Kod startowy
+
+```python
+import math
+
+
+class LiczbaZespolona:
+    def __init__(self, re=0, im=0):
+        pass
+
+    def __add__(self, other):
+        pass
+
+    def __sub__(self, other):
+        pass
+
+    def __mul__(self, other):
+        pass
+
+    def __truediv__(self, other):
+        pass
+
+    def __eq__(self, other):
+        pass
+
+    def modul(self):
+        pass
+
+    def __str__(self):
+        pass
+
+
+re, im = input().split()
+a = LiczbaZespolona(int(re), int(im))
+re, im = input().split()
+b = LiczbaZespolona(int(re), int(im))
+
+print(f"Liczba A: {a}")
+print(f"Liczba B: {b}")
+print(f"Suma: {a + b}")
+print(f"Różnica A - B: {a - b}")
+print(f"Iloczyn: {a * b}")
+if b == LiczbaZespolona(0, 0):
+    print("Iloraz A / B: nie można dzielić przez zero")
+else:
+    print(f"Iloraz A / B: {a / b}")
+print(f"Moduł liczby A: {a.modul():.2f}")
+if a == b:
+    print("Liczby są równe.")
+else:
+    print("Liczby są różne.")
 ```
 
 """
@@ -48,59 +128,59 @@ Iloraz A / B: -3.5 + 0.5i
 import math
 
 
-class Zespolona:
-    def __init__(self, rzeczywista=0, urojona=0):
-        self.rzeczywista = rzeczywista
-        self.urojona = urojona
+class LiczbaZespolona:
+    def __init__(self, re=0, im=0):
+        self.re = re
+        self.im = im
 
     def __add__(self, other):
-        return Zespolona(
-            self.rzeczywista + other.rzeczywista, self.urojona + other.urojona
-        )
+        return LiczbaZespolona(self.re + other.re, self.im + other.im)
 
     def __sub__(self, other):
-        return Zespolona(
-            self.rzeczywista - other.rzeczywista, self.urojona - other.urojona
-        )
+        return LiczbaZespolona(self.re - other.re, self.im - other.im)
 
     def __mul__(self, other):
-        return Zespolona(
-            self.rzeczywista * other.rzeczywista - self.urojona * other.urojona,
-            self.rzeczywista * other.urojona + self.urojona * other.rzeczywista,
+        return LiczbaZespolona(
+            self.re * other.re - self.im * other.im,
+            self.re * other.im + self.im * other.re,
         )
 
     def __truediv__(self, other):
-        return Zespolona(
-            (self.rzeczywista * other.rzeczywista + self.urojona * other.urojona)
-            / (other.rzeczywista**2 + other.urojona**2),
-            (self.urojona * other.rzeczywista - self.rzeczywista * other.urojona)
-            / (other.rzeczywista**2 + other.urojona**2),
+        mianownik = other.re**2 + other.im**2
+        return LiczbaZespolona(
+            (self.re * other.re + self.im * other.im) / mianownik,
+            (self.im * other.re - self.re * other.im) / mianownik,
         )
 
-    def __str__(self):
-        return f"{self.rzeczywista:.2f} + {self.urojona:.2f}i"
-
     def __eq__(self, other):
-        return self.rzeczywista == other.rzeczywista and self.urojona == other.urojona
-
-    def __ne__(self, other):
-        return self.rzeczywista != other.rzeczywista or self.urojona != other.urojona
+        return self.re == other.re and self.im == other.im
 
     def modul(self):
-        return math.sqrt(self.rzeczywista**2 + self.urojona**2)
+        return math.sqrt(self.re**2 + self.im**2)
+
+    def __str__(self):
+        if self.im < 0:
+            return f"{self.re:.2f} - {-self.im:.2f}i"
+        return f"{self.re:.2f} + {self.im:.2f}i"
 
 
 if __name__ == "__main__":
+    re, im = input().split()
+    a = LiczbaZespolona(int(re), int(im))
+    re, im = input().split()
+    b = LiczbaZespolona(int(re), int(im))
 
-    zespolona_a = Zespolona(9, 12)
-    zespolona_b = Zespolona(-3, -3)
-
-    print(f"Liczba zespolona A: {zespolona_a}")
-    print(f"Liczba zespolona B: {zespolona_b}")
-    print(f"Suma liczb zespolonych A i B: {zespolona_a + zespolona_b}")
-    print(f"Roznica liczb zespolonych A i B: {zespolona_a - zespolona_b}")
-    print(f"Iloczyn liczb zespolonych A i B: {zespolona_a * zespolona_b}")
-    print(f"Iloraz liczb zespolonych A i B: {zespolona_a / zespolona_b}")
-    print(f"Modul liczby zespolonej A: {zespolona_a.modul()}")
-    print(f"A == B: {zespolona_a == zespolona_b}")
-    print(f"A != B: {zespolona_a != zespolona_b}")
+    print(f"Liczba A: {a}")
+    print(f"Liczba B: {b}")
+    print(f"Suma: {a + b}")
+    print(f"Różnica A - B: {a - b}")
+    print(f"Iloczyn: {a * b}")
+    if b == LiczbaZespolona(0, 0):
+        print("Iloraz A / B: nie można dzielić przez zero")
+    else:
+        print(f"Iloraz A / B: {a / b}")
+    print(f"Moduł liczby A: {a.modul():.2f}")
+    if a == b:
+        print("Liczby są równe.")
+    else:
+        print("Liczby są różne.")

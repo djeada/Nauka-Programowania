@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Wczytaj, zmodyfikuj i wypisz
 
 **Poziom:** ★☆☆
@@ -6,28 +6,24 @@ ZAD-02 — Wczytaj, zmodyfikuj i wypisz
 
 ### Treść
 
-Wczytaj `N` oraz `N` liczb całkowitych do listy. Następnie:
+Wczytaj listę `n` liczb całkowitych. Następnie utwórz i wypisz trzy nowe listy, każdą na podstawie **wczytanej** (oryginalnej) listy:
 
-a) Zwiększ każdy element o `1`.
-b) Pomnóż każdy element przez jego indeks (indeksy od `0`).
-c) Zastąp wszystkie elementy wartością pierwszego elementu.
-
-Po każdym podpunkcie wypisz wynikową listę w **jednej** linii, elementy oddzielone przecinkami.
+a) każdy element zwiększony o `1`,
+b) każdy element pomnożony przez swój indeks,
+c) wszystkie elementy zastąpione wartością pierwszego elementu.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-Trzy linie:
+Trzy linie — listy z podpunktów a), b), c) w tej kolejności, w formacie `print(lista)`.
 
-1. wynik po (a)
-2. wynik po (b)
-3. wynik po (c)
+### Ograniczenia
 
-Elementy w linii oddzielone przecinkami (bez spacji).
+* $n \ge 1$
 
 ### Przykład
 
@@ -35,18 +31,18 @@ Elementy w linii oddzielone przecinkami (bez spacji).
 
 ```
 3
-3
-9
-7
+3 9 7
 ```
 
 **Wyjście:**
 
 ```
-4,10,8
-0,9,14
-3,3,3
+[4, 10, 8]
+[0, 9, 14]
+[3, 3, 3]
 ```
+
+W podpunkcie b): $3 \cdot 0 = 0$, $9 \cdot 1 = 9$, $7 \cdot 2 = 14$.
 
 """
 
@@ -60,25 +56,12 @@ def pomnoz_przez_indeks(lista):
 
 
 def zastap_pierwszym(lista):
-    return [lista[0] for element in lista]
+    return [lista[0] for _ in lista]
 
 
 if __name__ == "__main__":
-
-    print("Podaj liczbe elementow listy: ")
     n = int(input())
-
-    lista = []
-    for i in range(n):
-        print(f"Podaj element {i+1} listy: ", end="")
-        lista.append(int(input()))
-
-    print(f"Lista przed modyfikacja: {lista}")
-
-    print(f"Lista po dodaniu 1 do kazdego elementu: {dodaj_1(lista)}")
-    print(
-        f"Lista po pomnozeniu kazdego elementu przez indeks: {pomnoz_przez_indeks(lista)}"
-    )
-    print(
-        f"Lista po zastapieniu kazdego elementu wartoscia pierwszego elementu: {zastap_pierwszym(lista)}"
-    )
+    lista = [int(x) for x in input().split()]
+    print(dodaj_1(lista))
+    print(pomnoz_przez_indeks(lista))
+    print(zastap_pierwszym(lista))

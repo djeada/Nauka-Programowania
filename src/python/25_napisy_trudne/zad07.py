@@ -1,20 +1,27 @@
-"""
-ZAD-07 — Powtarzające się podnapisy
+r"""
+ZAD-07 — Najdłuższy powtarzający się podnapis
 
 **Poziom:** ★★★
-**Tagi:** `string`, `substrings`, `count`
+**Tagi:** `string`, `substrings`, `dp`
 
 ### Treść
 
-Otrzymujesz napis. Znajdź wszystkie **podnapisy**, które występują w nim **więcej niż jeden raz**.
+Otrzymujesz napis. Znajdź **najdłuższy podnapis, który występuje w nim co najmniej dwa razy**. Wystąpienia mogą na siebie nachodzić — na przykład w napisie `aaaa` podnapis `aaa` występuje dwa razy (od indeksu 0 i od indeksu 1).
+
+* Jeśli kilka różnych podnapisów ma tę samą, maksymalną długość — wypisz ten, którego **pierwsze wystąpienie zaczyna się najwcześniej**.
+* Jeśli żaden znak się nie powtarza (nie ma powtarzającego się podnapisu) — wypisz pustą linię.
 
 ### Wejście
 
-* 1 linia: napis `S`
+Jedna linia: napis `S`.
 
 ### Wyjście
 
-* 1 linia: lista napisów — wszystkie powtarzające się podnapisy
+Jedna linia: najdłuższy powtarzający się podnapis albo pusta linia.
+
+### Ograniczenia
+
+* `1 ≤ |S| ≤ 1000`
 
 ### Przykład
 
@@ -27,60 +34,57 @@ pythonpython
 **Wyjście:**
 
 ```
-['python']
+python
 ```
+
+### Przykład 2
+
+**Wejście:**
+
+```
+cdabxabycd
+```
+
+**Wyjście:**
+
+```
+cd
+```
+
+Podnapisy `cd` i `ab` powtarzają się i oba mają długość 2, ale `cd` występuje po raz pierwszy wcześniej (od indeksu 0), a `ab` — dopiero od indeksu 2.
 
 ### Uwagi
 
-* Jeśli sprawdzarka wymaga konkretnej kolejności (np. rosnąco po długości/alfabetycznie) — musi to być opisane. W przeciwnym razie dopuszczalna może być dowolna kolejność.
+* Programowanie dynamiczne: niech `w[i][j]` (dla `i < j`) oznacza długość najdłuższego wspólnego początku fragmentów `S[i:]` i `S[j:]`. Jeśli `S[i] == S[j]`, to `w[i][j] = w[i + 1][j + 1] + 1`, w przeciwnym razie `0`. Wynikiem jest największa wartość w tablicy. Jeśli przeglądasz pary `(i, j)` w kolejności rosnącego `i` i zmieniasz wynik tylko na ściśle dłuższy, remisy rozstrzygną się same. Czas $O(n^2)$.
+* Sprawdzanie każdego podnapisu (jest ich około $n^2/2$) z osobnym wyszukiwaniem w całym napisie daje czas $O(n^3)$ — przy długich napisach to za dużo.
 
 """
 
-from collections import deque
 
+def najdluzsze_powtorzenie(napis):
+    """Najdłuższy podnapis występujący co najmniej dwa razy (wystąpienia mogą się nakładać).
 
-# Wersja 1
-def najdluzsze_powtorzenie_v1(slowo):
-    lista = list(slowo)
-    kolejka = deque(slowo[1:])
-    powtorzenia = list()
-    wynik = list()
-    while kolejka:
-        for i, elem in enumerate(kolejka):
-            if lista[i] == elem:
-                powtorzenia.append(elem)
-            else:
-                if len(wynik) < len(powtorzenia):
-                    wynik = powtorzenia
-                powtorzenia = list()
-        kolejka.popleft()
-    return "".join(wynik)
+    Przy remisie wybiera podnapis, którego pierwsze wystąpienie zaczyna się najwcześniej.
+    """
+    n = len(napis)
+    # wspolne[i][j] — długość najdłuższego wspólnego początku napis[i:] i napis[j:]
+    wspolne = [[0] * (n + 1) for _ in range(n + 1)]
 
+    for i in range(n - 1, -1, -1):
+        for j in range(n - 1, i, -1):
+            if napis[i] == napis[j]:
+                wspolne[i][j] = wspolne[i + 1][j + 1] + 1
 
-# Testy Poprawnosci
-def test_1():
-    slowo = "98432934021742343230"
-    wynik = "432"
-    assert najdluzsze_powtorzenie_v1(slowo) == wynik
+    najlepszy_start, najlepsza_dlugosc = 0, 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            if wspolne[i][j] > najlepsza_dlugosc:
+                najlepsza_dlugosc = wspolne[i][j]
+                najlepszy_start = i
 
-
-def test_2():
-    slowo = "abcdef"
-    wynik = ""
-    assert najdluzsze_powtorzenie_v1(slowo) == wynik
-
-
-def test_3():
-    slowo = "Arnold i Arnold"
-    wynik = "Arnold"
-    assert najdluzsze_powtorzenie_v1(slowo) == wynik
-
-
-def main():
-    test_1()
-    test_2()
-    test_3()
+    return napis[najlepszy_start : najlepszy_start + najlepsza_dlugosc]
 
 
 if __name__ == "__main__":
-    main()
+    napis = input()
+    print(najdluzsze_powtorzenie(napis))

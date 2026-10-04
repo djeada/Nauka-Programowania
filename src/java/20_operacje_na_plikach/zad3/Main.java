@@ -93,7 +93,7 @@ public class Main {
             @Override
             public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
               if (file.getFileName().toString().equals(szukanyPlik)) {
-                listaSciezek.add(file.toString());
+                listaSciezek.add(file.toAbsolutePath().normalize().toString());
               }
               return FileVisitResult.CONTINUE;
             }
@@ -125,7 +125,7 @@ public class Main {
   public static void test1() throws IOException {
     String szukanyPlik = "test.txt";
 
-    Path sciezka = Paths.get("temp_dir");
+    Path sciezka = Files.createTempDirectory("zad3");
     Files.createDirectories(sciezka);
     Files.createDirectories(sciezka.resolve(sciezka));
 
@@ -140,7 +140,11 @@ public class Main {
       writer2.close();
     }
 
-    List<String> wynik = sciezkiWSystemie(szukanyPlik);
+    // Przeszukujemy tylko folder tymczasowy, aby test nie zależał od zawartości
+    // katalogu domowego (ani od tego, czy bieżący katalog się w nim znajduje).
+    List<String> wynik = plikiWFolderze(sciezka.toString(), szukanyPlik);
+
+    assert wynik.size() == 2;
 
     assert wynik.contains(sciezka.resolve(szukanyPlik).toAbsolutePath().normalize().toString());
     assert wynik.contains(

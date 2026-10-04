@@ -1,14 +1,16 @@
-# Rozdział: Bity i systemy liczbowe
+# Rozdział 16: Bity i systemy liczbowe
 
-Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
-**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
+Zadania w tym rozdziale ćwiczą zamianę liczb między systemami liczbowymi oraz operatory bitowe: `&` (AND), `|` (OR), `^` (XOR), `~` (NOT) i przesunięcia `<<`, `>>`.
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem**: czyta **standardowe wejście** (stdin) i wypisuje wynik na **standardowe wyjście** (stdout).
 
 **Konwencje wspólne:**
 
-* Jeśli zadanie mówi „nie wypisuj nic” — nie drukuj nawet pustej linii.
-* Reprezentacje binarne wypisuj jako ciąg znaków `0` i `1` **bez spacji**.
-* Dla systemów o podstawie `> 10` używaj cyfr `0–9` oraz liter `A–Z` (wielkie).
-* Nie wypisuj promptów typu „Podaj liczbę”.
+* Każda liczba na wejściu jest w osobnej linii, w kolejności podanej w sekcji **Wejście**.
+* Liczby na wejściu są **nieujemne** (`0` jest dozwolone), chyba że zadanie wprost mówi inaczej.
+* Zapis binarny wypisuj jako ciąg znaków `0` i `1` **bez spacji, bez prefiksu `0b` i bez zer wiodących**; zapis binarny liczby `0` to `0`.
+* Dla systemów o podstawie większej niż 10 używaj cyfr `0–9` oraz wielkich liter `A–Z`.
+* Jeśli zadanie mówi „nie wypisuj nic” — program nie wypisuje nawet pustej linii.
+* Program nie wypisuje komunikatów typu „Podaj liczbę:”.
 
 ---
 
@@ -19,15 +21,19 @@ Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** 
 
 ### Treść
 
-Wczytaj liczbę naturalną w systemie dziesiętnym i wypisz jej reprezentację binarną.
+Wczytaj liczbę naturalną `n` zapisaną w systemie dziesiętnym i wypisz jej zapis w systemie binarnym.
 
 ### Wejście
 
-* 1. linia: `n` (liczba naturalna)
+* 1. linia: `n` — liczba naturalna
 
 ### Wyjście
 
-Jedna linia: zapis binarny `n`.
+Jedna linia: zapis binarny liczby `n`.
+
+### Ograniczenia
+
+* $0 \le n \le 10^9$
 
 ### Przykład
 
@@ -43,9 +49,10 @@ Jedna linia: zapis binarny `n`.
 11
 ```
 
-### Uwagi o formacie
+### Uwagi
 
 * Dla `n = 0` wypisz `0`.
+* Spróbuj obejść się bez wbudowanej funkcji `bin()`: kolejne cyfry binarne to reszty z dzielenia przez 2 (od najmniej znaczącej).
 
 ---
 
@@ -56,15 +63,19 @@ Jedna linia: zapis binarny `n`.
 
 ### Treść
 
-Wczytaj liczbę naturalną w systemie binarnym (ciąg `0/1`) i wypisz jej wartość w systemie dziesiętnym.
+Wczytaj liczbę naturalną zapisaną w systemie binarnym (ciąg znaków `0` i `1`) i wypisz jej wartość w systemie dziesiętnym.
 
 ### Wejście
 
-* 1. linia: `b` (ciąg znaków `0` i `1`)
+* 1. linia: `b` — niepusty ciąg znaków `0` i `1` (może zaczynać się od zer)
 
 ### Wyjście
 
-Jedna linia: liczba w systemie dziesiętnym.
+Jedna linia: wartość liczby w systemie dziesiętnym.
+
+### Ograniczenia
+
+* długość `b` od 1 do 30 znaków
 
 ### Przykład
 
@@ -80,80 +91,21 @@ Jedna linia: liczba w systemie dziesiętnym.
 5
 ```
 
----
+### Uwagi
 
-## ZAD-02A — Wypisz binarnie tylko gdy liczba parzysta
-
-**Poziom:** ★☆☆
-**Tagi:** `warunki`, `parzystość`, `binarne`
-
-### Treść
-
-Wczytaj liczbę naturalną `n`. Jeśli `n` jest parzysta — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
-
-### Wejście
-
-* 1. linia: `n` (liczba naturalna)
-
-### Wyjście
-
-* Jeśli `n % 2 == 0`: jedna linia z zapisem binarnym `n`
-* W przeciwnym razie: brak wyjścia
-
-### Przykład
-
-**Wejście:**
-
-```
-7
-```
-
-**Wyjście:** *(brak)*
-
----
-
-## ZAD-02B — Wypisz binarnie tylko gdy liczba pierwsza
-
-**Poziom:** ★☆☆
-**Tagi:** `pierwszość`, `warunki`, `binarne`
-
-### Treść
-
-Wczytaj liczbę naturalną `n`. Jeśli `n` jest liczbą pierwszą — wypisz jej zapis binarny. W przeciwnym razie nie wypisuj nic.
-
-### Wejście
-
-* 1. linia: `n` (liczba naturalna)
-
-### Wyjście
-
-* Jeśli `n` jest pierwsza: jedna linia z zapisem binarnym `n`
-* W przeciwnym razie: brak wyjścia
-
-### Przykład
-
-**Wejście:**
-
-```
-7
-```
-
-**Wyjście:**
-
-```
-111
-```
+* Zera wiodące nie zmieniają wartości: `0010` to `2`.
+* Spróbuj obejść się bez `int(b, 2)`: przechodząc po cyfrach od lewej, mnóż dotychczasowy wynik przez 2 i dodawaj kolejną cyfrę.
 
 ---
 
 ## ZAD-03A — Dodawanie bitowe
 
-**Poziom:** ★☆☆
+**Poziom:** ★★☆
 **Tagi:** `bitwise`, `XOR`, `AND`
 
 ### Treść
 
-Wczytaj dwie liczby naturalne `a` i `b`. Oblicz `a + b` używając wyłącznie operatorów bitowych (i przesunięć).
+Wczytaj dwie liczby naturalne `a` i `b`. Oblicz $a + b$, używając wyłącznie operatorów bitowych i przesunięć.
 
 ### Wejście
 
@@ -162,7 +114,11 @@ Wczytaj dwie liczby naturalne `a` i `b`. Oblicz `a + b` używając wyłącznie o
 
 ### Wyjście
 
-Jedna liczba naturalna: `a + b`.
+Jedna liczba naturalna: $a + b$.
+
+### Ograniczenia
+
+* $0 \le a, b \le 10^9$ (liczby ujemne nie występują)
 
 ### Przykład
 
@@ -179,16 +135,21 @@ Jedna liczba naturalna: `a + b`.
 5
 ```
 
+### Uwagi
+
+* Do obliczenia wyniku nie używaj `+`, `-`, `*`, `/`, `//`, `%` — tylko `&`, `|`, `^`, `~`, `<<`, `>>` i porównań.
+* `a ^ b` to suma bez przeniesień, a `(a & b) << 1` to przeniesienia. Powtarzaj, dopóki przeniesienia są niezerowe.
+
 ---
 
 ## ZAD-03B — Odejmowanie bitowe
 
-**Poziom:** ★☆☆
+**Poziom:** ★★☆
 **Tagi:** `bitwise`, `pożyczki`, `XOR`
 
 ### Treść
 
-Wczytaj `a` i `b`. Oblicz `a - b` używając wyłącznie operatorów bitowych.
+Wczytaj dwie liczby naturalne `a` i `b`. Oblicz $a - b$, używając wyłącznie operatorów bitowych i przesunięć.
 
 ### Wejście
 
@@ -197,11 +158,11 @@ Wczytaj `a` i `b`. Oblicz `a - b` używając wyłącznie operatorów bitowych.
 
 ### Wyjście
 
-Jedna liczba naturalna: `a - b`.
+Jedna liczba naturalna: $a - b$.
 
-### Ograniczenia / gwarancje
+### Ograniczenia
 
-* Zakładamy, że `a ≥ b` (wynik jest naturalny).
+* $0 \le b \le a \le 10^9$ — wynik nigdy nie jest ujemny
 
 ### Przykład
 
@@ -218,16 +179,21 @@ Jedna liczba naturalna: `a - b`.
 2
 ```
 
+### Uwagi
+
+* Do obliczenia wyniku nie używaj `+`, `-`, `*`, `/`, `//`, `%` — tylko `&`, `|`, `^`, `~`, `<<`, `>>` i porównań.
+* `a ^ b` to różnica bez pożyczek, a `(~a & b) << 1` to pożyczki. Powtarzaj, dopóki pożyczki są niezerowe.
+
 ---
 
 ## ZAD-03C — Mnożenie bitowe
 
-**Poziom:** ★☆☆
+**Poziom:** ★★☆
 **Tagi:** `bitwise`, `shift`, `pętle`
 
 ### Treść
 
-Wczytaj `a` i `b`. Oblicz `a * b` używając wyłącznie operatorów bitowych (np. metoda „shift-and-add”).
+Wczytaj dwie liczby naturalne `a` i `b`. Oblicz $a \cdot b$, używając wyłącznie operatorów bitowych i przesunięć (metoda „przesuń i dodaj”).
 
 ### Wejście
 
@@ -236,7 +202,11 @@ Wczytaj `a` i `b`. Oblicz `a * b` używając wyłącznie operatorów bitowych (n
 
 ### Wyjście
 
-Jedna liczba naturalna: `a * b`.
+Jedna liczba naturalna: $a \cdot b$.
+
+### Ograniczenia
+
+* $0 \le a, b \le 10^6$ (liczby ujemne nie występują)
 
 ### Przykład
 
@@ -253,29 +223,35 @@ Jedna liczba naturalna: `a * b`.
 16
 ```
 
+### Uwagi
+
+* Do obliczenia wyniku nie używaj `+`, `-`, `*`, `/`, `//`, `%` — tylko `&`, `|`, `^`, `~`, `<<`, `>>` i porównań.
+* Dla każdego ustawionego bitu `k` liczby `b` dodaj do wyniku `a << k`. Dodawanie wykonaj bitowo, tak jak w ZAD-03A.
+
 ---
 
 ## ZAD-03D — Dzielenie całkowite bitowe
 
-**Poziom:** ★☆☆
+**Poziom:** ★★★
 **Tagi:** `bitwise`, `dzielenie`, `shift`
 
 ### Treść
 
-Wczytaj `a` i `b`. Oblicz `a // b` używając wyłącznie operatorów bitowych.
+Wczytaj dwie liczby naturalne `a` i `b`. Oblicz iloraz całkowity $\lfloor a / b \rfloor$ (w Pythonie `a // b`), używając wyłącznie operatorów bitowych i przesunięć.
 
 ### Wejście
 
 * 1. linia: `a`
 * 2. linia: `b`
 
-### Ograniczenia / gwarancje
-
-* `b > 0`
-
 ### Wyjście
 
-Jedna liczba naturalna: `a // b`.
+Jedna liczba naturalna: iloraz całkowity `a` przez `b`.
+
+### Ograniczenia
+
+* $0 \le a \le 10^9$
+* $1 \le b \le 10^9$ (dzielenie przez zero nie występuje)
 
 ### Przykład
 
@@ -292,6 +268,11 @@ Jedna liczba naturalna: `a // b`.
 3
 ```
 
+### Uwagi
+
+* Do obliczenia wyniku nie używaj `+`, `-`, `*`, `/`, `//`, `%` — tylko `&`, `|`, `^`, `~`, `<<`, `>>` i porównań.
+* Postępuj jak w dzieleniu pisemnym: znajdź największe `b << k` nie większe od `a`, a potem dla kolejnych `k` (malejąco) odejmuj `b << k` od `a`, jeśli się mieści, i ustawiaj bit `k` ilorazu. Odejmowanie wykonaj bitowo, tak jak w ZAD-03B.
+
 ---
 
 ## ZAD-04A — Liczba zer w zapisie binarnym
@@ -301,7 +282,7 @@ Jedna liczba naturalna: `a // b`.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Policz, ile znaków `0` zawiera jej binarna reprezentacja (bez wiodących zer).
+Wczytaj liczbę naturalną `n`. Policz, ile cyfr `0` ma jej zapis binarny (bez zer wiodących).
 
 ### Wejście
 
@@ -310,6 +291,10 @@ Wczytaj liczbę naturalną `n`. Policz, ile znaków `0` zawiera jej binarna repr
 ### Wyjście
 
 Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.
+
+### Ograniczenia
+
+* $0 \le n \le 10^9$
 
 ### Przykład
 
@@ -327,7 +312,7 @@ Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.
 
 ### Uwagi
 
-* Dla `n = 0` binarnie to `0`, więc liczba zer wynosi `1`.
+* Zapis binarny `0` to `0`, więc dla `n = 0` wynik to `1`.
 
 ---
 
@@ -338,7 +323,7 @@ Jedna liczba naturalna: liczba zer w zapisie binarnym `n`.
 
 ### Treść
 
-Wczytaj `n`. Policz, ile bitów `1` ma liczba w zapisie binarnym.
+Wczytaj liczbę naturalną `n`. Policz, ile bitów równych `1` ma jej zapis binarny.
 
 ### Wejście
 
@@ -347,6 +332,10 @@ Wczytaj `n`. Policz, ile bitów `1` ma liczba w zapisie binarnym.
 ### Wyjście
 
 Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
+
+### Ograniczenia
+
+* $0 \le n \le 10^9$
 
 ### Przykład
 
@@ -362,6 +351,10 @@ Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
 2
 ```
 
+### Uwagi
+
+* Najmłodszy bit to `n & 1`, a `n >> 1` usuwa go z liczby. Dla `n = 0` wynik to `0`.
+
 ---
 
 ## ZAD-05A — Minimum bez instrukcji warunkowych
@@ -371,7 +364,7 @@ Jedna liczba naturalna: liczba jedynek w zapisie binarnym `n`.
 
 ### Treść
 
-Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, `?:`) i bez bibliotek.
+Wczytaj dwie liczby całkowite `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, wyrażenia `x if warunek else y`) i bez funkcji `min`, `max`, `abs`, `sorted`.
 
 ### Wejście
 
@@ -380,7 +373,11 @@ Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia i
 
 ### Wyjście
 
-Jedna liczba naturalna: `min(a, b)`.
+Jedna liczba całkowita: mniejsza z liczb `a` i `b` (gdy są równe — ich wspólna wartość).
+
+### Ograniczenia
+
+* $-10^9 \le a, b \le 10^9$ — w tym zadaniu liczby **mogą być ujemne**
 
 ### Przykład
 
@@ -400,41 +397,8 @@ Jedna liczba naturalna: `min(a, b)`.
 ### Uwagi
 
 * Dopuszczalne są operacje arytmetyczne i bitowe.
-
----
-
-## ZAD-05B — Maksimum bez instrukcji warunkowych
-
-**Poziom:** ★★☆
-**Tagi:** `bit-trick`, `min/max`, `bez if`
-
-### Treść
-
-Wczytaj `a` i `b`. Wypisz większą z nich **bez użycia instrukcji warunkowych** i bez bibliotek.
-
-### Wejście
-
-* 1. linia: `a`
-* 2. linia: `b`
-
-### Wyjście
-
-Jedna liczba naturalna: `max(a, b)`.
-
-### Przykład
-
-**Wejście:**
-
-```
-3
-2
-```
-
-**Wyjście:**
-
-```
-3
-```
+* Wskazówka: dla `d = a - b` wyrażenie `d >> 63` daje `-1` (same jedynki w zapisie binarnym), gdy `d < 0`, oraz `0`, gdy `d ≥ 0`. Wtedy `d & (d >> 63)` jest równe `d` albo `0`.
+* Tą samą sztuczką otrzymasz maksimum: `a - (d & (d >> 63))`.
 
 ---
 
@@ -445,25 +409,22 @@ Jedna liczba naturalna: `max(a, b)`.
 
 ### Treść
 
-Wczytaj:
-
-1. liczbę `X` zapisaną w systemie o podstawie `p`
-2. podstawę `p` (2..36)
-3. podstawę docelową `q` (2..36)
-
-i wypisz reprezentację `X` w systemie o podstawie `q`.
+Wczytaj zapis liczby naturalnej `X` w systemie o podstawie `p` oraz podstawę docelową `q`. Wypisz zapis tej samej liczby w systemie o podstawie `q`.
 
 ### Wejście
 
-Trzy linie:
-
-1. `X` (zapis liczby; dla podstaw >10 może zawierać litery `A-Z`)
-2. `p` (2..36)
-3. `q` (2..36)
+* 1. linia: `X` — zapis liczby w systemie o podstawie `p` (cyfry `0–9` i wielkie litery `A–Z`, gdzie `A` = 10, `B` = 11, …, `Z` = 35)
+* 2. linia: `p` — podstawa systemu, w którym zapisano `X`
+* 3. linia: `q` — podstawa systemu docelowego
 
 ### Wyjście
 
-Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`).
+Jedna linia: zapis liczby w systemie o podstawie `q`, bez zer wiodących (cyfry `0–9` i wielkie litery `A–Z`).
+
+### Ograniczenia
+
+* `2 ≤ p, q ≤ 36`
+* `X` ma od 1 do 20 znaków, każda cyfra jest mniejsza od `p`; `X` może zaczynać się od zer
 
 ### Przykład
 
@@ -481,10 +442,11 @@ Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`)
 1003031
 ```
 
-### Uwagi o formacie
+### Uwagi
 
-* `X` może być duże — traktuj jako napis, a nie typ int „na wejściu”.
-* Dla wartości 10..35 stosuj `A..Z`.
+* Najpierw zamień `X` na liczbę (przechodząc po cyfrach od lewej: wynik = wynik · `p` + cyfra), a potem zamień ją na system `q` (reszty z dzielenia przez `q`).
+* Spróbuj obejść się bez `int(X, p)` — zaimplementuj obie zamiany samodzielnie.
+* Liczba `0` w każdym systemie to `0`.
 
 ---
 
@@ -495,14 +457,14 @@ Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`)
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Zamień miejscami każdą parę sąsiadujących bitów w jej zapisie binarnym:
+Wczytaj liczbę naturalną `n`. Zamień miejscami każdą parę sąsiadujących bitów jej zapisu binarnego (bity numerujemy od `0` — najmłodszy, czyli skrajnie prawy):
 
 * bit 0 z bitem 1,
 * bit 2 z bitem 3,
 * bit 4 z bitem 5,
 * itd.
 
-Następnie wypisz wynik w systemie dziesiętnym.
+Wypisz otrzymaną liczbę w systemie dziesiętnym.
 
 ### Wejście
 
@@ -511,6 +473,10 @@ Następnie wypisz wynik w systemie dziesiętnym.
 ### Wyjście
 
 Jedna liczba naturalna: wynik po zamianie bitów.
+
+### Ograniczenia
+
+* $0 \le n \le 10^9$
 
 ### Przykład
 
@@ -526,9 +492,12 @@ Jedna liczba naturalna: wynik po zamianie bitów.
 4951
 ```
 
+`9131` to binarnie `10001110101011`, a po zamianie par bitów otrzymujemy `01001101010111`, czyli `4951`.
+
 ### Uwagi
 
-* Jeśli liczba ma nieparzystą liczbę bitów, najwyższy (samotny) bit pozostaje bez zmian.
+* Brakujące bity na początku zapisu traktujemy jak zera. Na przykład `4` to `100`: bit 2 (jedynka) zamienia się z bitem 3 (zerem), więc wynik to `1000`, czyli `8`.
+* Maska `0x55555555` (`…0101`) wybiera bity o numerach parzystych, a `0xAAAAAAAA` (`…1010`) — o numerach nieparzystych.
 
 ---
 
@@ -539,7 +508,7 @@ Jedna liczba naturalna: wynik po zamianie bitów.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która jest **większa lub równa** `n`.
+Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która jest **większa lub równa** `n`, czyli najmniejsze $2^k \ge n$ dla całkowitego $k \ge 0$.
 
 ### Wejście
 
@@ -547,7 +516,11 @@ Wczytaj liczbę naturalną `n`. Wypisz najmniejszą potęgę liczby 2, która je
 
 ### Wyjście
 
-Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
+Jedna liczba naturalna: najmniejsza potęga dwójki nie mniejsza od `n`.
+
+### Ograniczenia
+
+* $0 \le n \le 10^9$
 
 ### Przykład
 
@@ -565,7 +538,9 @@ Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
 
 ### Uwagi
 
-* Dla `n = 0` przyjmij wynik `1`.
+* $2^0 = 1$, więc dla `n = 0` i `n = 1` wynik to `1`.
+* Jeśli `n` jest potęgą dwójki, wynikiem jest samo `n`.
+* Kolejne potęgi dwójki otrzymasz przesunięciem `potega << 1`.
 
 ---
 
@@ -576,15 +551,19 @@ Jedna liczba naturalna: najmniejsze `2^k ≥ n`.
 
 ### Treść
 
-Wczytaj napis z liter alfabetu łacińskiego. Zamień wszystkie wielkie litery na małe, używając operacji bitowych na kodach ASCII.
+Wczytaj napis. Zamień wszystkie wielkie litery alfabetu łacińskiego (`A–Z`) na małe, używając operacji bitowych na kodach ASCII. Pozostałe znaki pozostaw bez zmian.
 
 ### Wejście
 
-* 1. linia: napis
+* 1. linia: napis (może zawierać spacje, cyfry i znaki interpunkcyjne)
 
 ### Wyjście
 
-Jedna linia: napis po konwersji.
+Jedna linia: napis po zamianie.
+
+### Ograniczenia
+
+* napis ma od 1 do 100 znaków i składa się wyłącznie ze znaków ASCII (bez polskich liter)
 
 ### Przykład
 
@@ -600,38 +579,11 @@ Test
 test
 ```
 
----
+### Uwagi
 
-## ZAD-09B — Małe → wielkie (bitowo)
-
-**Poziom:** ★★☆
-**Tagi:** `ASCII`, `bitwise`, `string`
-
-### Treść
-
-Wczytaj napis. Zamień wszystkie małe litery na wielkie, używając operacji bitowych na ASCII.
-
-### Wejście
-
-* 1. linia: napis
-
-### Wyjście
-
-Jedna linia: napis po konwersji.
-
-### Przykład
-
-**Wejście:**
-
-```
-Test
-```
-
-**Wyjście:**
-
-```
-TEST
-```
+* Kody wielkiej i małej litery różnią się tylko bitem o wartości 32 (`0b100000`): `ord("A")` to `65`, a `ord("a")` to `97`. Ustawienie tego bitu: `ord(znak) | 32`.
+* Zmieniaj tylko litery `A–Z` — np. `@` i `[` sąsiadują w tablicy ASCII z literami, ale mają pozostać bez zmian.
+* Odwrotną zamianę (małe → wielkie) daje wyzerowanie tego bitu: `ord(znak) & ~32`.
 
 ---
 
@@ -642,15 +594,19 @@ TEST
 
 ### Treść
 
-Wczytaj napis. Zamień wielkość każdej litery na przeciwną (mała↔wielka) używając operacji bitowych na ASCII.
+Wczytaj napis. Zamień wielkość każdej litery alfabetu łacińskiego na przeciwną (mała ↔ wielka), używając operacji bitowych na kodach ASCII. Pozostałe znaki pozostaw bez zmian.
 
 ### Wejście
 
-* 1. linia: napis
+* 1. linia: napis (może zawierać spacje, cyfry i znaki interpunkcyjne)
 
 ### Wyjście
 
 Jedna linia: napis po zmianie.
+
+### Ograniczenia
+
+* napis ma od 1 do 100 znaków i składa się wyłącznie ze znaków ASCII (bez polskich liter)
 
 ### Przykład
 
@@ -666,6 +622,10 @@ Test
 tEST
 ```
 
+### Uwagi
+
+* Odwrócenie bitu o wartości 32: `ord(znak) ^ 32`. Stosuj je tylko do liter `a–z` i `A–Z`.
+
 ---
 
 ## ZAD-10 — Ile bitów trzeba odwrócić (A → B)
@@ -675,7 +635,7 @@ tEST
 
 ### Treść
 
-Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w `A`, aby otrzymać `B`.
+Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w liczbie `A`, aby otrzymać `B`, czyli na ilu pozycjach ich zapisy binarne się różnią.
 
 ### Wejście
 
@@ -685,6 +645,10 @@ Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w 
 ### Wyjście
 
 Jedna liczba naturalna: liczba różniących się bitów.
+
+### Ograniczenia
+
+* $0 \le A, B \le 10^9$
 
 ### Przykład
 
@@ -701,6 +665,13 @@ Jedna liczba naturalna: liczba różniących się bitów.
 5
 ```
 
+`34` = `0100010`, `73` = `1001001` — różnią się na 5 pozycjach.
+
+### Uwagi
+
+* Krótszy zapis uzupełniamy zerami z lewej strony.
+* `A ^ B` ma jedynki dokładnie na pozycjach, na których bity `A` i `B` są różne.
+
 ---
 
 ## ZAD-11 — Palindrom w systemie binarnym
@@ -710,12 +681,7 @@ Jedna liczba naturalna: liczba różniących się bitów.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Sprawdź, czy jej reprezentacja binarna (bez wiodących zer) jest palindromem.
-
-Wypisz:
-
-* `Prawda` — jeśli tak,
-* `Fałsz` — jeśli nie.
+Wczytaj liczbę naturalną `n`. Sprawdź, czy jej zapis binarny (bez zer wiodących) jest palindromem, czyli czy czytany od końca jest taki sam.
 
 ### Wejście
 
@@ -723,7 +689,11 @@ Wypisz:
 
 ### Wyjście
 
-Jedno słowo: `Prawda` lub `Fałsz`.
+Jedno słowo: `Prawda`, jeśli zapis binarny `n` jest palindromem, w przeciwnym razie `Fałsz`.
+
+### Ograniczenia
+
+* $0 \le n \le 10^9$
 
 ### Przykład
 
@@ -739,10 +709,11 @@ Jedno słowo: `Prawda` lub `Fałsz`.
 Fałsz
 ```
 
-### Uwagi (ważne)
+`26` ma zapis binarny `11010`, który czytany od końca daje `01011` — to nie jest palindrom.
 
-* `26` ma zapis binarny `11010`, który **nie** jest palindromem.
-  (W Twoim wcześniejszym przykładzie było to opisane błędnie — tu trzymamy się definicji palindromu 1:1.)
+### Uwagi
+
+* Zapis binarny `0` to `0`, a `1` to `1` — oba są palindromami.
 
 ---
 
@@ -753,9 +724,7 @@ Fałsz
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. W jej reprezentacji binarnej znajdź długość najdłuższego ciągu kolejnych zer, który jest **z obu stron otoczony jedynkami** (tzw. *binary gap*).
-
-Jeśli nie ma takiego ciągu — wypisz `0`.
+Wczytaj liczbę naturalną `n`. W jej zapisie binarnym znajdź długość najdłuższego ciągu kolejnych zer, który jest **z obu stron otoczony jedynkami** (tzw. *binary gap*). Jeśli takiego ciągu nie ma, wypisz `0`.
 
 ### Wejście
 
@@ -763,7 +732,11 @@ Jeśli nie ma takiego ciągu — wypisz `0`.
 
 ### Wyjście
 
-Jedna liczba naturalna: długość najdłuższego „gapu”.
+Jedna liczba naturalna: długość najdłuższego takiego ciągu zer.
+
+### Ograniczenia
+
+* $0 \le n \le 10^9$
 
 ### Przykład
 
@@ -779,7 +752,24 @@ Jedna liczba naturalna: długość najdłuższego „gapu”.
 0
 ```
 
-### Uwagi (ważne)
+`14` ma zapis `1110` — zero na końcu nie ma jedynki po prawej stronie, więc wynik to `0`.
 
-* `14` ma zapis `1110` — zero na końcu **nie jest otoczone jedynkami z prawej**, więc wynik to `0`.
-  Dla przykładu `20` (`10100`) najdłuższy gap ma długość `1` (między `1` i `1`).
+### Przykład 2
+
+**Wejście:**
+
+```
+20
+```
+
+**Wyjście:**
+
+```
+1
+```
+
+`20` ma zapis `10100` — zero między jedynkami tworzy ciąg długości `1`, a końcowe `00` się nie liczy.
+
+### Uwagi
+
+* Dla `n = 0` (zapis `0`) wynik to `0`.

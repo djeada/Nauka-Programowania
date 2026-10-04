@@ -54,6 +54,7 @@ Książki wypożyczone przez Anna: Duma i uprzedzenie
 #include <algorithm>
 #include <cassert>
 #include <iostream>
+#include <string>
 #include <unordered_map>
 #include <vector>
 

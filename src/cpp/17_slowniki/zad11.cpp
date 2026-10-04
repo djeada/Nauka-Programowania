@@ -42,6 +42,7 @@ b 4
 */
 #include <algorithm>
 #include <cassert>
+#include <string>
 #include <unordered_map>
 #include <utility>
 #include <vector>

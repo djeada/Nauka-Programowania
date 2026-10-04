@@ -51,29 +51,29 @@ znajdz_pliki_z_rozszerzeniem() {
 test_znajdz_pliki_z_rozszerzeniem() {
 
     mkdir -p 'test/test1'
-    mkdir -p 'test/test1'
     mkdir -p 'test/test2'
 
-    touch 'test/test1/test1.txt'
     touch 'test/test1/test1.txt'
     touch 'test/test1/test2.txt'
     touch 'test/test2/test1.txt'
     touch 'test/test2/test2.txt'
 
     IFS=' ' read -r -a wynik <<<$(znajdz_pliki_z_rozszerzeniem 'test' 'txt')
-    IFS=' ' read -r -a wynik <<<$(znajdz_pliki_z_rozszerzeniem 'test' 'txt')
 
-    assert_array_contains wynik 'test/test1/test1.txt' $LINENO
     assert_array_contains wynik 'test/test1/test1.txt' $LINENO
     assert_array_contains wynik 'test/test1/test2.txt' $LINENO
     assert_array_contains wynik 'test/test2/test1.txt' $LINENO
     assert_array_contains wynik 'test/test2/test2.txt' $LINENO
 
     rm -rf 'test'
-    rm -rf 'test'
 }
 
 main() {
+    # Testy tworzą i usuwają pliki — pracuj w katalogu tymczasowym, nie w repozytorium.
+    local katalog_roboczy
+    katalog_roboczy=$(mktemp -d)
+    trap 'rm -rf "$katalog_roboczy"' EXIT
+    cd "$katalog_roboczy" || exit 1
     test_znajdz_pliki_z_rozszerzeniem
 }
 

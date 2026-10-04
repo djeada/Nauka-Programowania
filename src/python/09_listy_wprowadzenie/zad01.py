@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Wczytaj i wypisz
 
 **Poziom:** ★☆☆
@@ -6,20 +6,23 @@ ZAD-01 — Wczytaj i wypisz
 
 ### Treść
 
-Wczytaj `N`, następnie `N` liczb całkowitych do listy.
+Wczytaj listę `n` liczb całkowitych, a następnie:
 
-a) Wypisz elementy listy od początku do końca — każdy w osobnej linii.
-b) Wypisz elementy listy od końca do początku — w **jednej** linii, oddzielone przecinkami (bez spacji).
+a) wypisz elementy listy od początku do końca — każdy w osobnej linii,
+b) utwórz nową listę z tymi samymi elementami w odwrotnej kolejności i wypisz ją w **jednej** linii.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-a) `N` linii — elementy w kolejności wczytania.
-b) 1 linia — elementy w kolejności odwrotnej, oddzielone przecinkami.
+Najpierw `n` linii z elementami w kolejności wczytania (podpunkt a), a potem jedna linia z odwróconą listą, w formacie `print(lista)` (podpunkt b).
+
+### Ograniczenia
+
+* $n \ge 1$
 
 ### Przykład
 
@@ -27,9 +30,7 @@ b) 1 linia — elementy w kolejności odwrotnej, oddzielone przecinkami.
 
 ```
 3
-8
-12
-7
+8 12 7
 ```
 
 **Wyjście:**
@@ -38,39 +39,28 @@ b) 1 linia — elementy w kolejności odwrotnej, oddzielone przecinkami.
 8
 12
 7
-7,12,8
+[7, 12, 8]
 ```
-
-### Uwagi o formatowaniu
-
-* W podpunkcie (b) nie dodawaj przecinka na końcu.
 
 """
 
 
 def wypisz_od_poczatku(lista):
+    """Wypisuje elementy listy, każdy w osobnej linii."""
     for element in lista:
         print(element)
 
 
-def wypisz_od_konca(lista):
-    for element in reversed(lista):
-        print(f"{element}, ", end=", ")
-    print()
+def odwroc(lista):
+    """Zwraca nową listę z elementami w odwrotnej kolejności."""
+    odwrocona = []
+    for i in range(len(lista) - 1, -1, -1):
+        odwrocona.append(lista[i])
+    return odwrocona
 
 
 if __name__ == "__main__":
-
-    print("Podaj liczbe elementow listy: ", end="")
     n = int(input())
-
-    lista = []
-    for i in range(n):
-        print(f"Podaj element {i+1} listy: ", end="")
-        lista.append(int(input()))
-
-    print("\nLista od poczatku: ")
+    lista = [int(x) for x in input().split()]
     wypisz_od_poczatku(lista)
-
-    print("\nLista od konca: ")
-    wypisz_od_konca(lista)
+    print(odwroc(lista))

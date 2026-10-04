@@ -74,6 +74,23 @@ public class Main {
         return napis.compareTo(o.napis);
       }
     }
+
+    @Override
+    public boolean equals(final Object obiekt) {
+      if (this == obiekt) {
+        return true;
+      }
+      if (!(obiekt instanceof Para)) {
+        return false;
+      }
+      Para inna = (Para) obiekt;
+      return liczba == inna.liczba && napis.equals(inna.napis);
+    }
+
+    @Override
+    public int hashCode() {
+      return Objects.hash(napis, liczba);
+    }
   }
 
   public static void sortujWzgledemLiczb(ArrayList<Para> lista) {
@@ -82,7 +99,7 @@ public class Main {
         new Comparator<Para>() {
           @Override
           public int compare(final Para o1, final Para o2) {
-            return o1.liczba - o2.liczba;
+            return Integer.compare(o1.liczba, o2.liczba);
           }
         });
   }
@@ -93,7 +110,7 @@ public class Main {
         new Comparator<Para>() {
           @Override
           public int compare(final Para o1, final Para o2) {
-            return o1.napis.length() - o2.napis.length();
+            return Integer.compare(o1.napis.length(), o2.napis.length());
           }
         });
   }

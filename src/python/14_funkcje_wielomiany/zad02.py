@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Iloczyn wielomianu przez skalar
 
 **Poziom:** ★☆☆
@@ -6,49 +6,64 @@ ZAD-02 — Iloczyn wielomianu przez skalar
 
 ### Treść
 
-Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `k`, a następnie zwraca współczynniki wielomianu powstałego z pomnożenia każdego współczynnika przez `k`.
+Napisz funkcję `pomnoz_przez_skalar(wspolczynniki, k)`, która zwraca **nową** listę współczynników wielomianu $k \cdot W(x)$, czyli wielomianu powstałego przez pomnożenie każdego współczynnika przez liczbę $k$.
 
-### Wejście (argumenty funkcji)
+Program wczytuje wielomian i liczbę $k$, wywołuje funkcję i wypisuje współczynniki wyniku.
 
-* `a` — lista współczynników `[a_n, ..., a_0]`
-* `k` — liczba (całkowita)
+### Wejście
 
-### Wyjście (zwracana wartość)
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb całkowitych `a_n ... a_0`
+* 3. linia: `k` — liczba całkowita (skalar)
 
-* lista współczynników wielomianu `k * P(x)`
+### Wyjście
+
+Jedna linia: `n+1` liczb całkowitych — współczynniki po pomnożeniu, oddzielone spacją. Liczba współczynników się nie zmienia (także dla `k = 0`).
+
+### Ograniczenia
+
+* `0 ≤ n ≤ 10`
+* `-100 ≤ a_i ≤ 100`, `-100 ≤ k ≤ 100`
 
 ### Przykład
 
-Dla `a = [4, -3, 2]` i `k = -2` funkcja zwraca:
-`[-8, 6, -4]`
+**Wejście:**
+
+```
+2
+4 -3 2
+-2
+```
+
+**Wyjście:**
+
+```
+-8 6 -4
+```
+
+### Kod startowy
+
+```python
+def pomnoz_przez_skalar(wspolczynniki, k):
+    pass
+
+
+n = int(input())
+wspolczynniki = [int(s) for s in input().split()]
+k = int(input())
+print(*pomnoz_przez_skalar(wspolczynniki, k))
+```
 
 """
 
 
-def mnozenie_wielomianu(wspolczynniki, x):
-    """
-    Funkcja zwraca wielomian bedacy wynikiem mnozenia otrzymanego wielomianu przez liczbe x.
-
-    Złożoność czasowa: O(n), gdzie n to liczba współczynników
-    Złożoność pamięciowa: O(n) dla wyniku
-    """
-    return [wspolczynnik * x for wspolczynnik in wspolczynniki]
-
-
-def test_mnozenie_wielomianu():
-    assert mnozenie_wielomianu([1, 2, 3, 4], 2) == [2, 4, 6, 8]
+def pomnoz_przez_skalar(wspolczynniki, k):
+    """Zwraca nową listę współczynników wielomianu pomnożonego przez k."""
+    return [a * k for a in wspolczynniki]
 
 
 if __name__ == "__main__":
-    # Wczytanie współczynników wielomianu jako listy
-    wspolczynniki = __import__("ast").literal_eval(input().strip())
-    # Wczytanie skalara
-    k = int(input().strip())
-
-    # Mnożenie wielomianu przez skalar
-    # Złożoność czasowa: O(n)
-    # Złożoność pamięciowa: O(n)
-    wynik = mnozenie_wielomianu(wspolczynniki, k)
-
-    # Wypisanie wyniku jako lista
-    print(str(wynik))
+    n = int(input())
+    wspolczynniki = [int(s) for s in input().split()]
+    k = int(input())
+    print(*pomnoz_przez_skalar(wspolczynniki, k))

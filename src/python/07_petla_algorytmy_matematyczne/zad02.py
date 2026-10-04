@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Potęgowanie liczby przy pomocy pętli
 
 **Poziom:** ★☆☆
@@ -6,25 +6,26 @@ ZAD-02 — Potęgowanie liczby przy pomocy pętli
 
 ### Treść
 
-Napisz funkcję `potega(a, b)`, która oblicza `a^b` przy użyciu pętli (bez operatora potęgowania).
+Napisz funkcję `potega(a, b)`, która zwraca $a^b$ obliczone przy użyciu pętli — **bez** operatora `**` i funkcji `pow()`.
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Dwa argumenty funkcji:
-
-* `a` (liczba naturalna, `a ≥ 0`)
-* `b` (liczba naturalna, `b ≥ 0`)
+* 1. linia: `a` — liczba naturalna (`a ≥ 0`)
+* 2. linia: `b` — liczba naturalna (`b ≥ 0`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę naturalną — wartość `a^b`.
+Jedna liczba całkowita — wartość $a^b$.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(potega(3, 5))
+```
+3
+5
 ```
 
 **Wyjście:**
@@ -33,30 +34,33 @@ print(potega(3, 5))
 243
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Dla `b = 0` wynik ma wynosić `1`.
+* Dla `b = 0` wynik wynosi `1` (przyjmujemy też $0^0 = 1$).
+
+### Kod startowy
+
+```python
+def potega(a, b):
+    pass
+
+
+a = int(input())
+b = int(input())
+print(potega(a, b))
+```
 
 """
 
 
-def potega(podstawa, wykladnik):
+def potega(a, b):
     wynik = 1
-    for i in range(wykladnik):
-        wynik *= podstawa
+    for _ in range(b):
+        wynik *= a
     return wynik
 
 
-def test_potega():
-    assert potega(2, 3) == 8
-    assert potega(3, 2) == 9
-    assert potega(4, 4) == 256
-    assert potega(5, 3) == 125
-    assert potega(6, 0) == 1
-    assert potega(7, 1) == 7
-    assert potega(0, 2) == 0
-
-
 if __name__ == "__main__":
-
-    test_potega()
+    a = int(input())
+    b = int(input())
+    print(potega(a, b))

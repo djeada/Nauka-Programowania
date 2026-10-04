@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Liczenie cyfr w liczbie
 
 **Poziom:** ★☆☆
@@ -10,13 +10,11 @@ Wczytaj liczbę naturalną `n` i wypisz, z ilu cyfr składa się jej zapis dzies
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Jedna liczba naturalna — liczba cyfr w `n`.
+Jedna liczba całkowita — liczba cyfr liczby `n`.
 
 ### Przykład
 
@@ -32,24 +30,23 @@ Jedna liczba naturalna — liczba cyfr w `n`.
 3
 ```
 
-### Ograniczenia / gwarancje
+### Uwagi
 
-* `n` mieści się w typowym zakresie liczb całkowitych.
-
-### Uwagi o formatowaniu
-
-* Dla `n = 0` poprawna odpowiedź to `1` (liczba „0” ma jedną cyfrę).
+* Dla `n = 0` poprawna odpowiedź to `1`.
+* Licz cyfry w pętli, dzieląc liczbę przez `10`.
 
 """
 
+
+def liczba_cyfr(n):
+    licznik = 1
+    n //= 10
+    while n > 0:
+        licznik += 1
+        n //= 10
+    return licznik
+
+
 if __name__ == "__main__":
-
-    print("Podaj liczbe: ")
-    liczba = int(input())
-
-    cyfry = 0
-    while liczba > 0:
-        cyfry += 1
-        liczba //= 10
-
-    print("Liczba cyfr: ", cyfry)
+    n = int(input())
+    print(liczba_cyfr(n))

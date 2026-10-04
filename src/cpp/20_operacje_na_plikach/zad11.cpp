@@ -34,32 +34,26 @@ C:\Users\Username\Documents\plik2.txt
 
 */
 #include <cassert>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <string>
+#include <vector>
 
-namespace filesys = std::experimental::filesystem;
+namespace filesys = std::filesystem;
 
-td::vector<std::string> wczytajPlik(const std::string &sciezka) {
+std::vector<std::string> wczytajPlik(const std::string &sciezka) {
   std::vector<std::string> tresc;
-  try {
-    std::string wiersz;
-    std::ifstream plik(sciezka);
-    plik.exceptions(std::ifstream::eofbit | std::ifstream::failbit |
-                    std::ifstream::badbit);
+  std::ifstream plik(sciezka);
 
-    while (plik) {
-      getline(plik, wiersz);
-      tresc.push_back(wiersz);
-    }
-
-    plik.close();
+  if (!plik.is_open()) {
+    std::cout << "Error : nie mozna otworzyc pliku " << sciezka << std::endl;
+    return tresc;
   }
 
-  catch (std::exception const &e) {
-    std::cout << "Error : " << e.what() << std::endl;
-  }
+  std::string wiersz;
+  while (std::getline(plik, wiersz)) tresc.push_back(wiersz);
 
   return tresc;
 }
@@ -77,10 +71,11 @@ void skopiujPlik(const std::string &sciezka,
 void zamienPliki(const std::string &sciezkaA, const std::string &sciezkaB) {
   std::string tempSciezka(sciezkaB);
 
-  while (filesys::exists(tempSciezka))
-    tempSciezka = std::string(filesys::path(tempSciezka).parent_path()) +
-                  filesys::path::preferred_separator + "x" +
-                  std::string(filesys::path(tempSciezka).filename());
+  while (filesys::exists(tempSciezka)) {
+    filesys::path sciezka(tempSciezka);
+    tempSciezka =
+        (sciezka.parent_path() / ("x" + sciezka.filename().string())).string();
+  }
 
   skopiujPlik(sciezkaA, tempSciezka);
   skopiujPlik(sciezkaB, sciezkaA);
@@ -112,17 +107,15 @@ void testZamienPliki() {
 
   zamienPliki(sciezkaA, sciezkaB);
 
-  assert(wczytajPlik(sciezkaA)[0] == tekstB);
-  assert(wczytajPlik(sciezkaB)[0] == tekstA);
+  assert(wczytajPlik(sciezkaA) == std::vector<std::string>{tekstB});
+  assert(wczytajPlik(sciezkaB) == std::vector<std::string>{tekstA});
 
   // usun folder test
   filesys::remove_all(sciezkaTest);
 }
 
 int main() {
-  const std::string sciezkaA = "folder/test.txt";
-  const std::string sciezkaB = "folder2/test2.txt";
-  zamienPliki(sciezkaA, sciezkaB);
+  testZamienPliki();
 
   return 0;
 }

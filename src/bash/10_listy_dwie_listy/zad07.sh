@@ -67,8 +67,8 @@ roznica_v1() {
 
 roznica_v2() {
     wynik=(
-        $(echo ${lista_a[@]} ${lista_b[@]} | sed 's/ /\n/g' | sort | uniq -d | xargs echo ${lista_b[@]} | sed 's/ /\n/g' | sort | uniq -u)
-        $(echo ${lista_a[@]} ${lista_b[@]} | sed 's/ /\n/g' | sort | uniq -d | xargs echo ${lista_a[@]} | sed 's/ /\n/g' | sort | uniq -u)
+        $(echo "${lista_a[@]}" "${lista_b[@]}" | sed 's/ /\n/g' | sort | uniq -d | xargs echo "${lista_b[@]}" | sed 's/ /\n/g' | sort | uniq -u)
+        $(echo "${lista_a[@]}" "${lista_b[@]}" | sed 's/ /\n/g' | sort | uniq -d | xargs echo "${lista_a[@]}" | sed 's/ /\n/g' | sort | uniq -u)
     )
 }
 

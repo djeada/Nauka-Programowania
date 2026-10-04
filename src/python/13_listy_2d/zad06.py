@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-06 — Scalanie przedziałów
 
 **Poziom:** ★★☆
@@ -6,16 +6,21 @@ ZAD-06 — Scalanie przedziałów
 
 ### Treść
 
-Wczytaj `n` przedziałów `[a_i, b_i]` (a_i ≤ b_i). Scal przedziały nachodzące na siebie i wypisz wynik w kolejności rosnącej po początku.
+Wczytaj `n` przedziałów domkniętych $[a_i, b_i]$. Scal wszystkie przedziały, które na siebie nachodzą, i wypisz otrzymane rozłączne przedziały w kolejności rosnącej według początku.
 
 ### Wejście
 
 * 1. linia: `n`
-* następnie `n` linii: `a_i b_i`
+* następnie `n` linii, w każdej dwie liczby całkowite `a_i b_i` (`a_i ≤ b_i`)
 
 ### Wyjście
 
-* Każdy scalony przedział w osobnej linii: `a b`
+Każdy scalony przedział w osobnej linii w postaci `a b`, posortowane rosnąco według `a`.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 1000`
+* $-10^6 \le a_i \le b_i \le 10^6$
 
 ### Przykład
 
@@ -41,70 +46,33 @@ Wczytaj `n` przedziałów `[a_i, b_i]` (a_i ≤ b_i). Scal przedziały nachodzą
 
 ### Uwagi
 
-* Przedziały uznajemy za nachodzące, gdy `next_start <= current_end`.
+* Przedziały na wejściu mogą być podane w dowolnej kolejności — najpierw je posortuj.
+* Dwa przedziały (po posortowaniu) nachodzą na siebie, gdy początek następnego jest **mniejszy lub równy** końcowi bieżącego. Przedziały stykające się końcami, np. `1 3` i `3 5`, scalamy w `1 5`, natomiast `10 22` i `23 88` pozostają osobno.
 
 """
 
 
-def polacz_pokrywajace_sie_przedzialy(lista_przedzialow):
+def scal_przedzialy(przedzialy):
     """
-    Funkcja zwraca liste niepokrywajacych sie przedzialow.
-
-    Złożoność czasowa: O(n log n), gdzie n to liczba przedziałów (sortowanie)
-    Złożoność pamięciowa: O(n) dla wyniku
+    Scala nachodzące na siebie przedziały [a, b] i zwraca listę rozłącznych
+    przedziałów posortowaną rosnąco po początku. Przedziały stykające się
+    końcami (np. [1, 3] i [3, 5]) również są scalane.
     """
-    if not lista_przedzialow:
-        return []
-
-    # sortujemy liste przedzialow
-    lista_przedzialow.sort()
-
-    lista_napotkanych_przedzialow = []
-    lista_napotkanych_przedzialow.append(lista_przedzialow[0])
-
-    # przechodzimy po wszystkich przedzialach i sprawdzamy czy nie nachodza na siebie
-    # jesli nie to dodajemy do listy napotkanych przedzialow
-    # jesli tak to zmieniamy koniec przedzialu na maksimum z konca obecnego i poprzedniego
-
-    for przedzial in lista_przedzialow[1:]:
-        if przedzial[0] <= lista_napotkanych_przedzialow[-1][1]:
-            lista_napotkanych_przedzialow[-1][1] = max(
-                przedzial[1], lista_napotkanych_przedzialow[-1][1]
-            )
+    wynik = []
+    for poczatek, koniec in sorted(przedzialy):
+        if wynik and poczatek <= wynik[-1][1]:
+            wynik[-1][1] = max(wynik[-1][1], koniec)
         else:
-            lista_napotkanych_przedzialow.append(przedzial)
-    return lista_napotkanych_przedzialow
-
-
-def test_polacz_pokrywajace_sie_przedzialy():
-    lista_przedzialow = [
-        [23, 67],
-        [23, 53],
-        [45, 88],
-        [77, 88],
-        [10, 22],
-        [11, 12],
-        [42, 45],
-    ]
-    wynik = [[10, 22], [23, 88]]
-    assert polacz_pokrywajace_sie_przedzialy(lista_przedzialow) == wynik
+            wynik.append([poczatek, koniec])
+    return wynik
 
 
 if __name__ == "__main__":
-    # Wczytanie liczby przedziałów
-    n = int(input().strip())
-
-    # Wczytanie przedziałów
+    n = int(input())
     przedzialy = []
     for _ in range(n):
-        a, b = map(int, input().strip().split())
-        przedzialy.append([a, b])
+        a, b = input().split()
+        przedzialy.append([int(a), int(b)])
 
-    # Scalenie przedziałów
-    # Złożoność czasowa: O(n log n)
-    # Złożoność pamięciowa: O(n)
-    scalone = polacz_pokrywajace_sie_przedzialy(przedzialy)
-
-    # Wypisanie wyniku
-    for przedzial in scalone:
-        print(f"{przedzial[0]} {przedzial[1]}")
+    for poczatek, koniec in scal_przedzialy(przedzialy):
+        print(poczatek, koniec)

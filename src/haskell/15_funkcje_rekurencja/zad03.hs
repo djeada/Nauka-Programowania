@@ -1,64 +1,78 @@
 {-
-ZAD-03 — Suma wielomianów
+ZAD-03 — Potęga
 
-\**Poziom:** ★☆☆
-\**Tagi:** `wielomiany`, `wyrównanie stopni`, `I/O`
+**Poziom:** ★☆☆
+**Tagi:** `rekurencja`, `potęgowanie`
 
 ### Treść
 
-Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich sumą.
+Napisz rekurencyjną funkcję `potega(a, b)`, która zwraca $a^b$, korzystając z zależności $a^0 = 1$ oraz $a^b = a \cdot a^{b-1}$ dla $b \ge 1$.
+
+Program wczytuje $a$ i $b$, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-\* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
-\* 2. linia: `n+1` liczb: `a_n ... a_0`
-\* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
-\* 4. linia: `m+1` liczb: `b_m ... b_0`
+* 1. linia: `a` — liczba całkowita (podstawa)
+* 2. linia: `b` — liczba naturalna (wykładnik)
 
 ### Wyjście
 
-Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
+Jedna liczba całkowita — wartość $a^b$. Przyjmujemy, że $0^0 = 1$.
+
+### Ograniczenia
+
+* `-10 ≤ a ≤ 10`
+* `0 ≤ b ≤ 18`
 
 ### Przykład
 
-\**Wejście:**
+**Wejście:**
 
 ```
 2
-3 5 2
-2
-2 -8 1
+3
 ```
 
-\**Wyjście:**
+**Wyjście:**
 
 ```
-5 -3 3
+8
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-\* Jeśli stopnie są różne, wyrównaj listy „od końca” (od wyrazu wolnego), dopisując zera na początku krótszej.
+* Nie używaj operatora `**` ani funkcji `pow()` — potęgę ma obliczyć Twoja funkcja.
+
+### Kod startowy
+
+```python
+def potega(a, b):
+    pass
+
+
+a = int(input())
+b = int(input())
+print(potega(a, b))
+```
 
 -}
 
-import Data.List (intercalate)
+import Control.Monad (unless)
 
--- Dodaje dwa wielomiany
--- Złożoność czasowa: O(max(n, m)), gdzie n, m to stopnie wielomianów
--- Złożoność pamięciowa: O(max(n, m))
-addPolynomials :: [Int] -> [Int] -> [Int]
-addPolynomials a b = zipWith (+) a' b'
-  where
-    maxLen = max (length a) (length b)
-    a' = replicate (maxLen - length a) 0 ++ a
-    b' = replicate (maxLen - length b) 0 ++ b
+-- Zwraca a^b dla b >= 0.
+-- Złożoność czasowa: O(b)
+-- Złożoność pamięciowa: O(b) - przez stos rekurencji
+potega :: Integer -> Int -> Integer
+potega _ 0 = 1
+potega a b = a * potega a (b - 1)
 
--- Suma wielomianów (z I/O)
 main :: IO ()
 main = do
-  n <- readLn :: IO Int
-  coeffsA <- map read . words <$> getLine :: IO [Int]
-  m <- readLn :: IO Int
-  coeffsB <- map read . words <$> getLine :: IO [Int]
-  putStrLn $ intercalate " " $ map show $ addPolynomials coeffsA coeffsB
+  let testy =
+        [ potega 2 3 == 8,
+          potega 5 0 == 1,
+          potega 0 5 == 0,
+          potega (-2) 5 == (-32)
+        ]
+  unless (and testy) $ error "Test nie przeszedl"
+  putStrLn "Wszystkie testy zakonczone sukcesem"

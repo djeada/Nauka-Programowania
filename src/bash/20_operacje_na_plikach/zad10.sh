@@ -39,28 +39,28 @@ kopiuj_pliki_png() {
 test_kopiuj_pliki_png() {
 
     mkdir -p 'test/test1'
-    mkdir -p 'test/test1'
     mkdir -p 'test/test2'
 
-    touch 'test/test1/plik1.png'
     touch 'test/test1/plik1.png'
     touch 'test/test1/plik2.png'
 
     kopiuj_pliki_png 'test/test1' 'test/test2'
-    kopiuj_pliki_png 'test/test1' 'test/test2'
 
-    assertTrue $(if [[ -f 'test/test2/plik1.png' ]]; then echo 'true'; else echo 'false'; fi) $LINENO
     assertTrue $(if [[ -f 'test/test2/plik1.png' ]]; then echo 'true'; else echo 'false'; fi) $LINENO
     assertTrue $(if [[ -f 'test/test2/plik2.png' ]]; then echo 'true'; else echo 'false'; fi) $LINENO
     assertTrue $(if [[ -f 'test/test1/plik1.png' ]]; then echo 'true'; else echo 'false'; fi) $LINENO
     assertTrue $(if [[ -f 'test/test1/plik2.png' ]]; then echo 'true'; else echo 'false'; fi) $LINENO
 
     rm -rf 'test'
-    rm -rf 'test'
 
 }
 
 main() {
+    # Testy tworzą i usuwają pliki — pracuj w katalogu tymczasowym, nie w repozytorium.
+    local katalog_roboczy
+    katalog_roboczy=$(mktemp -d)
+    trap 'rm -rf "$katalog_roboczy"' EXIT
+    cd "$katalog_roboczy" || exit 1
     test_kopiuj_pliki_png
 }
 

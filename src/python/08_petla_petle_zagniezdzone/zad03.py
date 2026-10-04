@@ -1,25 +1,20 @@
-"""
+r"""
 ZAD-03 — Trójkąt prostokątny (malejący)
 
 **Poziom:** ★☆☆
-**Tagi:** `pętle`, `print`, `string`
+**Tagi:** `pętle zagnieżdżone`, `print`, `string`
 
 ### Treść
 
-Wczytaj `n` (`n ≥ 1`) i wypisz odwrócony trójkąt o wysokości `n`, zaczynając od `n` gwiazdek i kończąc na `1`.
+Wczytaj liczbę naturalną `n` i wypisz odwrócony trójkąt o wysokości `n`: w pierwszym wierszu `n` gwiazdek, w każdym kolejnym o jedną mniej.
 
 ### Wejście
 
-* 1. linia: `n` (`n ≥ 1`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-`n` linii:
-
-* 1. linia: `n` gwiazdek
-* 2. linia: `n-1` gwiazdek
-* …
-* ostatnia linia: `*`
+`n` linii: w pierwszej `n` gwiazdek, w drugiej `n - 1`, …, w ostatniej `1` gwiazdka.
 
 ### Przykład
 
@@ -40,5 +35,14 @@ Wczytaj `n` (`n ≥ 1`) i wypisz odwrócony trójkąt o wysokości `n`, zaczynaj
 
 """
 
+
+def trojkat_malejacy(n):
+    for i in range(n, 0, -1):
+        for _ in range(i):
+            print("*", end="")
+        print()
+
+
 if __name__ == "__main__":
-    pass
+    n = int(input())
+    trojkat_malejacy(n)

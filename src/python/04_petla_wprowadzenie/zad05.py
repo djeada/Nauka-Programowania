@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Liczby z przedziału
 
 **Poziom:** ★☆☆
@@ -6,27 +6,20 @@ ZAD-05 — Liczby z przedziału
 
 ### Treść
 
-Wczytaj dwie liczby naturalne `a` i `b`. Najpierw ustal:
+Wczytaj dwie liczby naturalne `a` i `b`. Niech `lo` będzie mniejszą, a `hi` większą z nich.
 
-* `lo = min(a, b)`
-* `hi = max(a, b)`
+a) Wypisz w kolejności rosnącej wszystkie liczby naturalne `x` takie, że `lo < x < hi`.
 
-Następnie:
-
-a) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` (każda w osobnej linii).
-
-b) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` oraz `x` jest podzielne przez `3` (każda w osobnej linii).
+b) Następnie wypisz w kolejności rosnącej te z nich, które są podzielne przez `3`.
 
 ### Wejście
 
-Dwie liczby naturalne:
-
-* 1. linia: `a`
-* 2. linia: `b`
+* 1. linia: `a` — liczba naturalna
+* 2. linia: `b` — liczba naturalna
 
 ### Wyjście
 
-Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobnej linii.
+Najpierw liczby z podpunktu a), potem liczby z podpunktu b) — każda w osobnej linii.
 
 ### Przykład
 
@@ -46,40 +39,34 @@ Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobn
 6
 ```
 
-### Uwagi o formatowaniu
+Między `5` a `9` leżą liczby `6`, `7`, `8` (podpunkt a); spośród nich przez `3` dzieli się tylko `6` (podpunkt b).
 
-* Nie wypisuj nagłówków typu „a)” i „b)”.
-* Jeśli w którymś podpunkcie nie ma liczb do wypisania, w tej części nie wypisuj nic.
-* Nie dodawaj pustej linii między podpunktami.
+### Uwagi
+
+* Liczby `a` i `b` nie należą do przedziału (nierówności są ostre).
+* Nie wypisuj nagłówków typu „a)” i „b)” ani pustej linii między podpunktami.
+* Jeśli w którymś podpunkcie nie ma liczb do wypisania, ta część wyjścia jest pusta.
 
 """
 
+
+def wypisz_przedzial(lo, hi):
+    for x in range(lo + 1, hi):
+        print(x)
+
+
+def wypisz_podzielne_przez_3(lo, hi):
+    for x in range(lo + 1, hi):
+        if x % 3 == 0:
+            print(x)
+
+
 if __name__ == "__main__":
+    a = int(input())
+    b = int(input())
 
-    print("Podaj dwie liczby: ")
-    pierwsza_liczba = int(input())
-    druga_liczba = int(input())
+    lo = min(a, b)
+    hi = max(a, b)
 
-    print(
-        "Liczby naturalne wieksze od mniejszej pobranej liczby i jednoczesnie mniejsze od wiekszej pobranej liczby:"
-    )
-    if pierwsza_liczba > druga_liczba:
-        for i in range(druga_liczba, pierwsza_liczba + 1):
-            print(i)
-    else:
-        for i in range(pierwsza_liczba, druga_liczba + 1):
-            print(i)
-
-    print("\n")
-    print(
-        "Liczby naturalne podzielne przez 3 wieksze od mniejszej pobranej liczby i jednoczesnie mniejsze od wiekszej pobranej liczby:"
-    )
-
-    if pierwsza_liczba > druga_liczba:
-        for i in range(druga_liczba, pierwsza_liczba + 1):
-            if i % 3 == 0:
-                print(i)
-    else:
-        for i in range(pierwsza_liczba, druga_liczba + 1):
-            if i % 3 == 0:
-                print(i)
+    wypisz_przedzial(lo, hi)
+    wypisz_podzielne_przez_3(lo, hi)

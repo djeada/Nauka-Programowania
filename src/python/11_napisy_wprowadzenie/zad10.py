@@ -1,21 +1,21 @@
-"""
+r"""
 ZAD-10 — Najdłuższe i najkrótsze słowo
 
 **Poziom:** ★☆☆
-**Tagi:** `string`, `min/max`, `len`
+**Tagi:** `napisy`, `słowa`, `min/max`
 
 ### Treść
 
-Wczytaj zdanie i znajdź:
+Wczytaj zdanie i znajdź w nim (zgodnie z konwencją rozdziału — bez interpunkcji):
 
 a) najdłuższe słowo,
 b) najkrótsze słowo.
 
-Jeśli jest remis, wybierz słowo, które występuje wcześniej.
+Jeśli kilka słów ma tę samą długość, wybierz to, które występuje w zdaniu **wcześniej**.
 
 ### Wejście
 
-* 1. linia: zdanie
+* 1. linia: zdanie (zawiera co najmniej jedno słowo)
 
 ### Wyjście
 
@@ -37,34 +37,39 @@ Kaczka
 lubi
 ```
 
+Słowa `Kaczka` i `wiosnę` mają po 6 liter — wygrywa wcześniejsze `Kaczka`.
+
 """
 
 import string
 
 
-def podziel_zdanie_na_slowa(zdanie):
-    return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
+def podziel_na_slowa(zdanie):
+    slowa = []
+    for fragment in zdanie.split():
+        slowo = fragment.strip(string.punctuation)
+        if slowo:
+            slowa.append(slowo)
+    return slowa
 
 
-def najdluzsze_slowo(zdanie):
-    slowa = podziel_zdanie_na_slowa(zdanie)
-    return max(slowa, key=len)
+def najdluzsze_slowo(slowa):
+    najdluzsze = slowa[0]
+    for slowo in slowa:
+        if len(slowo) > len(najdluzsze):
+            najdluzsze = slowo
+    return najdluzsze
 
 
-def najkrotsze_slowo(zdanie):
-    slowa = podziel_zdanie_na_slowa(zdanie)
-    return min(slowa, key=len)
-
-
-def test_najdluzsze_slowo():
-    assert najdluzsze_slowo("Ala ma kota.") == "kota"
-
-
-def test_najkrotsze_slowo():
-    assert najkrotsze_slowo("Ala ma kota.") == "ma"
+def najkrotsze_slowo(slowa):
+    najkrotsze = slowa[0]
+    for slowo in slowa:
+        if len(slowo) < len(najkrotsze):
+            najkrotsze = slowo
+    return najkrotsze
 
 
 if __name__ == "__main__":
-
-    test_najdluzsze_slowo()
-    test_najkrotsze_slowo()
+    slowa = podziel_na_slowa(input())
+    print(najdluzsze_slowo(slowa))
+    print(najkrotsze_slowo(slowa))

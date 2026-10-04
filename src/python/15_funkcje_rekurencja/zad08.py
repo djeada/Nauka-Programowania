@@ -1,51 +1,77 @@
-"""
-Tytul: Wieza Hanoi.
-Tresc: N krazkow o roznych srednicach ulozonych jest na jednym z trzech slupkow (A, B lub C). Na dole znajduje sie krazek o najwiekszej srednicy. Kazdy nastepny jest mniejszy od poprzedniego. Znajdz sposob na przelozenie wszystkich krazkow na inny slupek. Pamietaj, ze nie wolno klasc krazka o wiekszej srednicy na krazek o mniejszej srednicy, ani przekladac kilku krazkow jednoczesnie.
-Dane wejsciowe: Liczba naturalna N.
-Dane wyjsciowe: Lista par znakow.
-Przyklad:
-Dla N = 3, powinna zostac zwrocona lista: [('A', 'B'), ('A', 'C'), ('B', 'C'), ('A', 'B'), ('C', 'A'), ('C', 'B'), ('A', 'B')]
+r"""
+ZAD-08 — Wieża Hanoi
+
+**Poziom:** ★★☆
+**Tagi:** `rekurencja`, `Hanoi`
+
+### Treść
+
+Na słupku `A` leży `N` krążków o różnych średnicach: na dole największy, a każdy kolejny jest mniejszy od poprzedniego. Słupki `B` i `C` są puste. Należy przenieść wszystkie krążki na słupek `B`, korzystając ze słupka `C` jako pomocniczego. Obowiązują zasady:
+
+* w jednym ruchu przenosimy dokładnie jeden krążek — górny krążek z jednego słupka na inny,
+* nie wolno położyć większego krążka na mniejszym.
+
+Napisz rekurencyjną funkcję `hanoi(n, skad, dokad, pomocniczy)`, która wypisuje ruchy przenoszące `n` krążków ze słupka `skad` na słupek `dokad`. Program wczytuje `N` i wypisuje **najkrótszą** sekwencję ruchów (ma ona $2^N - 1$ ruchów i jest wyznaczona jednoznacznie).
+
+### Wejście
+
+Jedna liczba naturalna `N`.
+
+### Wyjście
+
+$2^N - 1$ linii — kolejne ruchy w formacie `X -> Y`, gdzie `X` to słupek, z którego zdejmujemy krążek, a `Y` to słupek, na który go kładziemy.
+
+### Ograniczenia
+
+* `1 ≤ N ≤ 10`
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+```
+
+**Wyjście:**
+
+```
+A -> B
+A -> C
+B -> C
+A -> B
+C -> A
+C -> B
+A -> B
+```
+
+### Uwagi
+
+* Aby przenieść `n` krążków ze słupka `skad` na `dokad`: przenieś `n-1` górnych krążków na słupek `pomocniczy`, przenieś największy krążek na `dokad`, a na koniec przenieś `n-1` krążków ze słupka `pomocniczy` na `dokad`. Przypadek bazowy: jeden krążek (albo zero krążków — wtedy nic nie robimy).
+
+### Kod startowy
+
+```python
+def hanoi(n, skad, dokad, pomocniczy):
+    pass
+
+
+n = int(input())
+hanoi(n, "A", "B", "C")
+```
 
 """
 
 
-def hanoi(n):
-    """
-    Funkcja zwraca liste ruchow, ktore powinny byc wykonane, aby
-    przelozyc n krazkow ze slupka A na slupek B. Slupek C jest
-    slupkiem pomocniczym.
-    """
-
-    def hanoi_rek(n, from_tower, to_tower, aux_tower, wynik):
-        """
-        Rekurencyjna funkcja wewnetrzna.
-        """
-        if n == 1:
-            wynik.append((from_tower, to_tower))
-        else:
-            hanoi_rek(n - 1, from_tower, aux_tower, to_tower, wynik)
-            hanoi_rek(1, from_tower, to_tower, aux_tower, wynik)
-            hanoi_rek(n - 1, aux_tower, to_tower, from_tower, wynik)
-        return wynik
-
-    wynik = list()
-    hanoi_rek(n, "A", "B", "C", wynik)
-    return wynik
-
-
-def test_hanoi():
-    assert hanoi(1) == [("A", "B")]
-    assert hanoi(2) == [("A", "C"), ("A", "B"), ("C", "B")]
-    assert hanoi(3) == [
-        ("A", "B"),
-        ("A", "C"),
-        ("B", "C"),
-        ("A", "B"),
-        ("C", "A"),
-        ("C", "B"),
-        ("A", "B"),
-    ]
+def hanoi(n, skad, dokad, pomocniczy):
+    """Wypisuje ruchy przenoszące n krążków ze słupka skad na słupek dokad."""
+    if n == 0:
+        return
+    hanoi(n - 1, skad, pomocniczy, dokad)
+    print(f"{skad} -> {dokad}")
+    hanoi(n - 1, pomocniczy, dokad, skad)
 
 
 if __name__ == "__main__":
-    test_hanoi()
+    n = int(input())
+    hanoi(n, "A", "B", "C")

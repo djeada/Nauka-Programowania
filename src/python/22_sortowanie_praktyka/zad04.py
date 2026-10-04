@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-04 — Sortowanie napisów według długości
 
 **Poziom:** ★☆☆
@@ -6,16 +6,20 @@ ZAD-04 — Sortowanie napisów według długości
 
 ### Treść
 
-Otrzymujesz listę napisów. Posortuj ją rosnąco według długości napisów.
+Wczytaj listę napisów i posortuj ją rosnąco według długości napisów. Napisy o tej samej długości zachowują kolejność z wejścia.
 
 ### Wejście
 
-* 1 linia: liczba naturalna `N`
-* następnie `N` linii: napis (bez spacji)
+* 1. linia: liczba napisów $N$
+* kolejne $N$ linii: napis (bez spacji)
 
 ### Wyjście
 
-* 1 linia: lista napisów posortowana jak w przykładzie
+* 1. linia: posortowane napisy oddzielone pojedynczymi spacjami
+
+### Ograniczenia
+
+* $1 \le N \le 50$
 
 ### Przykład
 
@@ -32,24 +36,21 @@ abc
 **Wyjście:**
 
 ```
-['a', 'ab', 'abc', 'abcd']
+a ab abc abcd
 ```
+
+### Uwagi
+
+* Wystarczy `sorted(napisy, key=len)`.
 
 """
 
 
-def posortuj_liste_wzgledem_dlugosci_napisow(lista_napisow):
-    """
-    Funkcja sortuje liste napisow wzgledem dlugosci napisow.
-    """
-    return sorted(lista_napisow, key=len)
-
-
-def test_posortuj_liste_wzgledem_dlugosci_napisow():
-    assert posortuj_liste_wzgledem_dlugosci_napisow(
-        ["Ala", "ma", "kota", "a", "kot", "ma", "Ale"]
-    ) == ["a", "ma", "ma", "Ala", "kot", "Ale", "kota"]
+def sortuj_wedlug_dlugosci(napisy):
+    return sorted(napisy, key=len)
 
 
 if __name__ == "__main__":
-    test_posortuj_liste_wzgledem_dlugosci_napisow()
+    n = int(input())
+    napisy = [input() for _ in range(n)]
+    print(" ".join(sortuj_wedlug_dlugosci(napisy)))

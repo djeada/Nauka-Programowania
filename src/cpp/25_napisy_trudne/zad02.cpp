@@ -44,7 +44,7 @@ Le je na wie
 std::string usunWszystkieV1(std::string zdanie, const std::string &slowo) {
   auto k = zdanie.find(slowo);
 
-  while (k != string::npos) {
+  while (k != std::string::npos) {
     zdanie.erase(k, slowo.length());
     k = zdanie.find(slowo);
   }

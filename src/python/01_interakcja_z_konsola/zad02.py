@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Zamiana kolejności liczb
 
 **Poziom:** ★☆☆
@@ -6,14 +6,12 @@ ZAD-02 — Zamiana kolejności liczb
 
 ### Treść
 
-Wczytaj dwie liczby całkowite i wypisz je w odwrotnej kolejności (każda w osobnej linii).
+Wczytaj dwie liczby całkowite i wypisz je w odwrotnej kolejności (każdą w osobnej linii).
 
 ### Wejście
 
-Dwie liczby całkowite:
-
-* 1. linia: `a`
-* 2. linia: `b`
+* 1. linia: `a` — liczba całkowita
+* 2. linia: `b` — liczba całkowita
 
 ### Wyjście
 
@@ -22,9 +20,9 @@ Dwie linie:
 * 1. linia: `b`
 * 2. linia: `a`
 
-### Ograniczenia / gwarancje
+### Ograniczenia
 
-* `a`, `b` mieszczą się w typowym zakresie int (np. 32-bit).
+* $-10^9 \le a, b \le 10^9$
 
 ### Przykład
 
@@ -45,9 +43,8 @@ Dwie linie:
 """
 
 if __name__ == "__main__":
+    a = int(input())
+    b = int(input())
 
-    x = input()
-    y = input()
-
-    print(y)
-    print(x)
+    print(b)
+    print(a)

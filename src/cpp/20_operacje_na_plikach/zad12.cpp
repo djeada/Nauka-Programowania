@@ -40,12 +40,13 @@ rozwiązaniu.
 
 */
 #include <cassert>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
+#include <string>
 
-namespace filesys = std::experimental::filesystem;
+namespace filesys = std::filesystem;
 
 std::string nazwaPliku(const std::string &sciezka) {
   return filesys::path(sciezka).filename();

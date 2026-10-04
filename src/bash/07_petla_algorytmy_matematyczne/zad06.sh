@@ -39,8 +39,9 @@ source ../assert.sh
 
 nwd() {
 
-    a=$1
-    b=$2
+    local a=$1
+    local b=$2
+    local c
 
     while [ $b -ne $(($a % $b)) ]; do
         c=$b
@@ -56,21 +57,29 @@ nwd() {
 }
 
 nww() {
-    echo $(($a * $b / $(nwd $a $b)))
+    local a=$1
+    local b=$2
+    echo $((a * b / $(nwd $a $b)))
 }
 
 test1() {
-    test1() {
-        a=14
-        b=21
-        wynik=42
-        assert "$wynik -eq $(nww $a $b)" $LINENO
-    }
+    a=14
+    b=21
+    wynik=42
+    assert "$wynik -eq $(nww $a $b)" $LINENO
+}
 
-    main() {
-        test1
+test2() {
+    a=7
+    b=9
+    wynik=63
+    assert "$wynik -eq $(nww $a $b)" $LINENO
+}
 
-    }
+main() {
+    test1
+    test2
+}
 
-    main "$@"
+main "$@"
 

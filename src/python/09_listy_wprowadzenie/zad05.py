@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Zmodyfikuj elementy spełniające warunek
 
 **Poziom:** ★☆☆
@@ -6,161 +6,104 @@ ZAD-05 — Zmodyfikuj elementy spełniające warunek
 
 ### Treść
 
-Wczytaj listę liczb całkowitych. Dla każdego podpunktu utwórz **nową listę** na podstawie listy z poprzedniego podpunktu i wypisz ją w jednej linii (przecinki bez spacji):
+Wczytaj listę `n` liczb całkowitych. Wykonaj kolejno poniższe operacje — każda działa na liście **otrzymanej w poprzednim podpunkcie** (pierwsza na liście wczytanej). Po każdym podpunkcie wypisz aktualną listę.
 
-a) Zwiększ o 1 elementy o **parzystych indeksach** (0,2,4,...).
-b) Ustaw na `0` elementy będące **wielokrotnością 3**.
-c) Podnieś do kwadratu elementy **mniejsze niż 10**.
-d) Oblicz sumę wszystkich elementów listy i wstaw tę sumę na indeksy, które są **liczbami pierwszymi** (2,3,5,7,11,...) — tylko te, które mieszczą się w zakresie listy.
-e) Zamień każdy element na **iloczyn wszystkich pozostałych elementów** listy.
+a) Zwiększ o `1` elementy o **parzystych indeksach** ($0, 2, 4, \ldots$).
+b) Ustaw na `0` elementy, które są **wielokrotnościami liczby 3**.
+c) Podnieś do kwadratu elementy **mniejsze od 10**.
+d) Oblicz sumę wszystkich elementów listy i wpisz ją w miejsce elementów o indeksach będących **liczbami pierwszymi** ($2, 3, 5, 7, 11, \ldots$).
+e) Zamień każdy element na **iloczyn wszystkich pozostałych** elementów listy.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-Pięć linii (po kolei: a, b, c, d, e), w każdej lista oddzielona przecinkami.
+Pięć linii — lista po podpunktach a), b), c), d), e), w formacie `print(lista)`.
+
+### Ograniczenia
+
+* $n \ge 1$
 
 ### Przykład
 
 **Wejście:**
 
 ```
-5
-5
-7
-9
 4
-2
+1 4 2 5
 ```
 
 **Wyjście:**
 
 ```
-6,7,10,4,3
-6,7,0,4,3
-36,49,0,16,9
-36,49,36,36,9
-0,0,0,0,0
+[2, 4, 3, 5]
+[2, 4, 0, 5]
+[4, 16, 0, 25]
+[4, 16, 45, 45]
+[32400, 8100, 2880, 2880]
 ```
 
-### Uwagi o formatowaniu
+a) indeksy 0 i 2: `1 → 2`, `2 → 3`; b) `3 → 0`; c) wszystkie elementy są mniejsze od 10; d) suma $4 + 16 + 0 + 25 = 45$ trafia na indeksy 2 i 3; e) np. dla indeksu 0: $16 \cdot 45 \cdot 45 = 32400$.
 
-* W podpunkcie (d) indeks 0 i 1 nie są pierwsze.
-* W podpunkcie (e) jeśli w liście jest `0`, to wiele wyników będzie `0` — to normalne.
-* Nie dodawaj przecinków na końcu linii.
+### Uwagi
+
+* Indeksy `0` i `1` nie są liczbami pierwszymi.
+* `0` (także po podpunkcie b) jest wielokrotnością liczby 3, a liczby ujemne są mniejsze od 10.
+* Dla listy jednoelementowej iloczyn „pozostałych” elementów w podpunkcie e) wynosi `1` (iloczyn pustego zbioru).
+* Jeśli w liście jest `0`, wiele iloczynów w podpunkcie e) będzie równych `0` — to normalne.
 
 """
 
 
-def zwieksz_parzyste(lista):
-    for i in range(len(lista)):
-        if i % 2 == 0:
-            lista[i] += 1
-    return lista
+def zwieksz_parzyste_indeksy(lista):
+    return [element + 1 if i % 2 == 0 else element for i, element in enumerate(lista)]
 
 
 def wyzeruj_wielokrotnosci_3(lista):
-    for i in range(len(lista)):
-        if lista[i] % 3 == 0:
-            lista[i] = 0
-    return lista
+    return [0 if element % 3 == 0 else element for element in lista]
 
 
-def kwadrat_mniejsze_10(lista):
-    for i in range(len(lista)):
-        if lista[i] < 10:
-            lista[i] = lista[i] ** 2
-    return lista
+def kwadrat_mniejszych_od_10(lista):
+    return [element**2 if element < 10 else element for element in lista]
 
 
 def czy_pierwsza(n):
-
     if n < 2:
         return False
-
-    for i in range(2, n):
-        if n % i == 0:
+    for dzielnik in range(2, n):
+        if n % dzielnik == 0:
             return False
     return True
 
 
-def suma_wszystkich_na_pierwszych_indeksach(lista):
+def suma_na_pierwszych_indeksach(lista):
     suma = sum(lista)
-    for i in range(len(lista)):
-        if czy_pierwsza(i):
-            lista[i] = suma
-    return lista
+    return [suma if czy_pierwsza(i) else element for i, element in enumerate(lista)]
 
 
-def zamien_na_iloczyn_wszystkich_poza_soba(lista):
-    kopia = lista[:]
+def iloczyn_pozostalych(lista):
+    wynik = []
     for i in range(len(lista)):
         iloczyn = 1
         for j in range(len(lista)):
             if j != i:
                 iloczyn *= lista[j]
-        kopia[i] = iloczyn
-    return kopia
-
-
-def test_zwieksz_parzyste():
-    assert zwieksz_parzyste([1, 2, 3, 4, 5]) == [2, 2, 4, 4, 6]
-    assert zwieksz_parzyste([1, 2, 3, 4, 5, 6]) == [2, 2, 4, 4, 6, 6]
-    assert zwieksz_parzyste([1, 2, 3, 4, 5, 6, 7]) == [2, 2, 4, 4, 6, 6, 8]
-
-
-def test_wyzeruj_wielokrotnosci_3():
-    assert wyzeruj_wielokrotnosci_3([1, 2, 3, 4, 5]) == [1, 2, 0, 4, 5]
-    assert wyzeruj_wielokrotnosci_3([1, 2, 3, 4, 5, 6]) == [1, 2, 0, 4, 5, 0]
-    assert wyzeruj_wielokrotnosci_3([8, 6, 5, 3, 2, 0]) == [8, 0, 5, 0, 2, 0]
-
-
-def test_kwadrat_mniejsze_10():
-    assert kwadrat_mniejsze_10([1, 2, 3, 4, 5]) == [1, 4, 9, 16, 25]
-    assert kwadrat_mniejsze_10([1, 2, 3, 4, 5, 6]) == [1, 4, 9, 16, 25, 36]
-    assert kwadrat_mniejsze_10([1, 2, 3, 4, 5, 6, 7]) == [1, 4, 9, 16, 25, 36, 49]
-
-
-def test_suma_wszystkich_na_pierwszych_indeksach():
-    assert suma_wszystkich_na_pierwszych_indeksach([1, 2, 3, 4, 5]) == [1, 2, 15, 15, 5]
-    assert suma_wszystkich_na_pierwszych_indeksach([1, 2, 3, 4, 5, 6]) == [
-        1,
-        2,
-        21,
-        21,
-        5,
-        21,
-    ]
-    assert suma_wszystkich_na_pierwszych_indeksach([0, 0, 10, -5, -2]) == [
-        0,
-        0,
-        3,
-        3,
-        -2,
-    ]
-
-
-def test_zamien_na_iloczyn_wszystkich_poza_soba():
-    assert zamien_na_iloczyn_wszystkich_poza_soba([1, 2, 3]) == [6, 3, 2]
-    assert zamien_na_iloczyn_wszystkich_poza_soba([-1, 0, 3]) == [0, -3, 0]
-    assert zamien_na_iloczyn_wszystkich_poza_soba([3, 5, -7, 4, 9, -11, 2]) == [
-        27720,
-        16632,
-        -11880,
-        20790,
-        9240,
-        -7560,
-        41580,
-    ]
+        wynik.append(iloczyn)
+    return wynik
 
 
 if __name__ == "__main__":
-
-    test_zwieksz_parzyste()
-    test_wyzeruj_wielokrotnosci_3()
-    test_kwadrat_mniejsze_10()
-    test_suma_wszystkich_na_pierwszych_indeksach()
-    test_zamien_na_iloczyn_wszystkich_poza_soba()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    for operacja in (
+        zwieksz_parzyste_indeksy,
+        wyzeruj_wielokrotnosci_3,
+        kwadrat_mniejszych_od_10,
+        suma_na_pierwszych_indeksach,
+        iloczyn_pozostalych,
+    ):
+        lista = operacja(lista)
+        print(lista)

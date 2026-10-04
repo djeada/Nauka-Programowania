@@ -1,20 +1,20 @@
-"""
+r"""
 ZAD-07 — Zamień znaki na kody ASCII
 
 **Poziom:** ★☆☆
-**Tagi:** `ASCII`, `ord`, `string`
+**Tagi:** `napisy`, `ASCII`, `ord`
 
 ### Treść
 
-Wczytaj napis i wypisz kody ASCII wszystkich jego znaków, oddzielone przecinkiem i spacją `", "`.
+Wczytaj napis i wypisz kody ASCII wszystkich jego znaków (także spacji), w kolejności występowania.
 
 ### Wejście
 
-* 1. linia: napis
+* 1. linia: napis złożony ze znaków ASCII (bez polskich liter; może zawierać spacje)
 
 ### Wyjście
 
-* 1. linia: kody ASCII oddzielone `, `
+Jedna linia: kody ASCII oddzielone przecinkiem i spacją (`, `), bez separatora na końcu.
 
 ### Przykład
 
@@ -30,26 +30,20 @@ Robot
 82, 111, 98, 111, 116
 ```
 
+### Uwagi
+
+* Kod znaku zwraca funkcja `ord`, np. `ord("R")` to `82`.
+
 """
 
 
-def znaki_na_ascii(napis):
-
-    nowy_napis = ""
+def kody_ascii(napis):
+    kody = []
     for znak in napis:
-        nowy_napis += str(ord(znak)) + ", "
-
-    return nowy_napis[:-2]
-
-
-def test_znaki_na_ascii():
-    assert znaki_na_ascii("abcdef") == "97, 98, 99, 100, 101, 102"
-    assert (
-        znaki_na_ascii("ala ma kota")
-        == "97, 108, 97, 32, 109, 97, 32, 107, 111, 116, 97"
-    )
+        kody.append(str(ord(znak)))
+    return kody
 
 
 if __name__ == "__main__":
-
-    test_znaki_na_ascii()
+    napis = input()
+    print(", ".join(kody_ascii(napis)))
