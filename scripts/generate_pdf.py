@@ -24,7 +24,7 @@ def get_markdown_files(zbior_dir):
         if match:
             number = int(match.group(1))
             md_files.append((number, file))
-    
+
     # Sort by number
     md_files.sort(key=lambda x: x[0])
     return [f[1] for f in md_files]
@@ -60,7 +60,7 @@ def create_table_of_contents(md_files):
         <p class="toc-subtitle">Rozdziały uporządkowane rosnąco według numerów</p>
         <ul class="toc-list">
     """
-    
+
     for file in md_files:
         # Extract title from filename
         name = file.stem
@@ -69,7 +69,7 @@ def create_table_of_contents(md_files):
             number = match.group(1)
             title = match.group(2).replace("_", " ").title()
             toc_html += f'        <li class="toc-item"><span class="toc-number">{number}.</span> {title}</li>\n'
-    
+
     toc_html += """
         </ul>
     </div>
@@ -89,8 +89,8 @@ def process_markdown_content(content):
             "break-on-newline",
             "code-friendly",
             "cuddled-lists",
-            "header-ids"
-        ]
+            "header-ids",
+        ],
     )
     return html
 
@@ -440,11 +440,11 @@ def create_css():
 def generate_pdf(zbior_dir, output_file):
     """Generate a professional PDF from markdown files."""
     print("Starting PDF generation...")
-    
+
     # Get all markdown files
     md_files = get_markdown_files(zbior_dir)
     print(f"Found {len(md_files)} markdown files")
-    
+
     # Start building HTML content
     html_content = """
     <!DOCTYPE html>
@@ -455,40 +455,37 @@ def generate_pdf(zbior_dir, output_file):
     </head>
     <body>
     """
-    
+
     # Add title page
     html_content += create_title_page()
     print("Created title page")
-    
+
     # Add table of contents
     html_content += create_table_of_contents(md_files)
     print("Created table of contents")
-    
+
     # Process each markdown file
     for idx, md_file in enumerate(md_files, 1):
         print(f"Processing file {idx}/{len(md_files)}: {md_file.name}")
-        content = md_file.read_text(encoding='utf-8')
+        content = md_file.read_text(encoding="utf-8")
         html = process_markdown_content(content)
         html_content += f'<div class="chapter">\n{html}\n</div>\n'
-    
+
     # Close HTML
     html_content += """
     </body>
     </html>
     """
-    
+
     # Create CSS
     css = create_css()
-    
+
     # Generate PDF
     print(f"Generating PDF: {output_file}")
-    HTML(string=html_content).write_pdf(
-        output_file,
-        stylesheets=[CSS(string=css)]
-    )
-    
+    HTML(string=html_content).write_pdf(output_file, stylesheets=[CSS(string=css)])
+
     print(f"PDF generated successfully: {output_file}")
-    
+
     # Get file size
     size_mb = os.path.getsize(output_file) / (1024 * 1024)
     print(f"PDF size: {size_mb:.2f} MB")
@@ -501,18 +498,19 @@ def main():
     repo_dir = script_dir.parent
     zbior_dir = repo_dir / "zbior_zadan"
     output_file = repo_dir / "Nauka_Programowania_Zbior_Zadan.pdf"
-    
+
     # Validate directory exists
     if not zbior_dir.exists():
         print(f"Error: Directory {zbior_dir} does not exist!")
         return 1
-    
+
     try:
         generate_pdf(zbior_dir, output_file)
         return 0
     except Exception as e:
         print(f"Error generating PDF: {e}")
         import traceback
+
         traceback.print_exc()
         return 1
 

@@ -1,173 +1,106 @@
-# Scripts
+# Skrypty
 
-This directory contains utility scripts for the Nauka Programowania project.
+Wszystkie polecenia uruchamiaj z katalogu głównego repozytorium. Poza `generate_pdf.py`
+skrypty używają wyłącznie biblioteki standardowej Pythona (3.8+).
+
+| Skrypt | Co robi | W CI |
+|---|---|---|
+| `md_to_json.py` | Waliduje `zbior_zadan/*.md` + `zbior_zadan_tests/*.json` i generuje `zbior_zadan_json/*.json`. | `--check` |
+| `run_tests.py` | Uruchamia rozwiązania wzorcowe z `src/python` na testach i przykładach. | ✓ |
+| `run_tests_pyodide.mjs` | To samo co `run_tests.py`, ale w Pyodide (Python w WebAssembly), czyli w środowisku kursu online. | ✓ |
+| `judge_harness.py` | Sędzia: uruchomienie programu i porównanie wyniku. Wspólny dla CI i strony kursu. | (używany przez `run_tests.py`) |
+| `generate_readme.py` | Generuje indeks zadań i statystyki w `README.md`. | `--check` |
+| `check_sources.sh` | Kompilacja / sprawdzenie składni rozwiązań we wszystkich językach. | ✓ (`--lang …`) |
+| `update_descriptions.py` | Wstawia treść zadania jako komentarz na początku plików z rozwiązaniami. | — |
+| `format_all.sh` | Formatuje kod (black, clang-format, prettier, rustfmt, ormolu, shfmt). | — |
+| `generate_pdf.py` | Składa wszystkie treści w jeden PDF. | — |
+
+## Typowy przebieg pracy
+
+```bash
+# 1. edytuj zbior_zadan/NN_*.md, zbior_zadan_tests/NN_*.json, src/python/NN_*/
+python3 scripts/md_to_json.py --validate --chapters NN   # szybka walidacja jednego rozdziału
+python3 scripts/run_tests.py NN -v                         # rozwiązania wzorcowe na testach
+
+# 2. przed commitem
+python3 scripts/md_to_json.py          # regeneracja JSON
+python3 scripts/generate_readme.py     # regeneracja README
+python3 scripts/update_descriptions.py # odświeżenie opisów w plikach rozwiązań (opcjonalnie)
+bash scripts/check_sources.sh
+```
 
 ## md_to_json.py
 
-This script converts all markdown files from the `zbior_zadan` directory to JSON format suitable for consumption by external APIs and LeetCode-like websites.
+Format zadań opisuje [`zbior_zadan/szablon.md`](../zbior_zadan/szablon.md), a zasady
+[`CONTRIBUTING.md`](../CONTRIBUTING.md). Skrypt kończy się błędem, gdy:
 
-### Features
+* zadanie ma nieznaną sekcję, brak treści, wejścia, wyjścia lub przykładu,
+* przykład nie ma pary **Wejście:** / **Wyjście:** (np. używa „Wywołanie funkcji”),
+* zadanie nie ma testów lub ma ich mniej niż 4 (1 dla zadań bez wejścia), testy się powtarzają albo
+  powtarzają wejście z przykładu,
+* plik z testami zawiera klucz nieistniejącego zadania.
 
-- **Parses 25 markdown files** containing 270+ programming exercises
-- **Extracts structured data**:
-  - Chapter title and description
-  - Exercise ID, title, and difficulty level
-  - Tags for categorization
-  - Problem description
-  - Input/output specifications
-  - Example test cases
-  - Constraints and notes
-- **Generates JSON files**:
-  - Individual JSON file for each chapter (e.g., `01_interakcja_z_konsola.json`)
-- **Merges testcases** from per-chapter JSON maps in `zbior_zadan_tests`
-- **API-ready format**: JSON structure designed for easy integration with coding platforms
+Opcje: `--check` (CI: nie zapisuje, sprawdza aktualność plików), `--validate` (tylko walidacja),
+`--chapters 03 15` (z `--validate`), `--lenient` (raportuje, ale nie przerywa).
 
-### Requirements
-
-- Python 3.6 or higher (no external dependencies required)
-
-### Usage
-
-Run the script from the repository root:
-
-```bash
-python3 scripts/md_to_json.py
-```
-
-This will create a `zbior_zadan_json` directory containing:
-- 25 individual JSON files (one per chapter)
-If `zbior_zadan_tests` exists, testcases will be merged into each exercise.
-
-#### Command-line Options
-
-```bash
-python3 scripts/md_to_json.py --help
-```
-
-Available options:
-- `--input-dir DIR`: Input directory containing markdown files (default: `zbior_zadan`)
-- `--output-dir DIR`: Output directory for JSON files (default: `zbior_zadan_json`)
-- `--exclude FILE [FILE ...]`: Files to exclude from processing (default: `szablon.md`)
-- `--tests-dir DIR`: Directory containing per-chapter testcase maps (default: `zbior_zadan_tests`)
-
-Example with custom directories:
-```bash
-python3 scripts/md_to_json.py --input-dir custom_exercises --output-dir output/json
-```
-
-### JSON Schema
-
-Each generated JSON file follows this structure:
+### Schemat JSON
 
 ```json
 {
-  "file": "01_interakcja_z_konsola.md",
-  "chapter_title": "Rozdział 1: Interakcja z konsolą (stdin/stdout)",
-  "chapter_description": "...",
+  "file": "02_instrukcja_warunkowa.md",
+  "chapter_title": "Rozdział 2: Instrukcja warunkowa",
+  "chapter_description": "markdown",
   "exercises": [
     {
-      "id": "ZAD-01",
-      "slug": "01_interakcja_z_konsola/ZAD-01",
-      "title": "Wypisywanie tekstu na ekran",
+      "id": "ZAD-02",
+      "slug": "02_instrukcja_warunkowa/ZAD-02",
+      "title": "Porównanie dwóch liczb",
       "difficulty": 1,
       "difficulty_display": "★☆☆",
-      "tags": ["I/O", "print", "string"],
-      "description": "...",
-      "input": "...",
-      "output": "...",
-      "examples": [
-        {
-          "input": "...",
-          "output": "..."
-        }
-      ],
-      "testcases": [
-        {
-          "input": "...",
-          "output": "..."
-        }
-      ],
-      "constraints": "...",
-      "notes": "..."
+      "tags": ["if-else"],
+      "description": "markdown; wzory LaTeX w $...$",
+      "input": "markdown",
+      "output": "markdown",
+      "examples": [{"input": "7\n4", "output": "Liczby są różne.", "explanation": ""}],
+      "testcases": [{"input": "9\n9", "output": "Liczby są identyczne."}],
+      "constraints": "markdown",
+      "notes": "markdown",
+      "starter_code": "kod startowy w Pythonie albo pusty napis"
     }
   ]
 }
 ```
 
-### Difficulty Levels
+Przypadek testowy może mieć pola `files` i `expected_files` (zadania na plikach) — opis w
+`judge_harness.py`. Pusta lista `testcases` oznacza zadanie interaktywne.
 
-- `1` (★☆☆): Easy
-- `2` (★★☆): Medium
-- `3` (★★★): Hard
+**Stabilność API:** `slug` jest kluczem adresu zadania i postępu ucznia na stronie kursu —
+nie zmieniaj identyfikatorów istniejących zadań.
 
-### Output
+## judge_harness.py
 
-The script generates approximately 500KB of JSON data total, containing:
-- **25 chapters**
-- **270+ exercises**
-- Complete problem descriptions, examples, and constraints
-
-### Testcase Maps
-
-Place per-chapter testcase maps in `zbior_zadan_tests` with the same filename as
-the chapter, e.g. `zbior_zadan_tests/01_interakcja_z_konsola.json`.
-
-Each file should be a JSON map from exercise id or slug to an array of cases:
-
-```json
-{
-  "ZAD-01": [
-    {"input": "", "output": "Witaj, świecie!\n"}
-  ],
-  "01_interakcja_z_konsola/ZAD-02": [
-    {"input": "-7\n4\n", "output": "4\n-7\n"}
-  ]
-}
-```
+Zasady oceny (identyczne w CI i w przeglądarce): końcowe spacje i puste linie na końcu są
+ignorowane, liczba linii musi się zgadzać, tekst musi być identyczny, liczby mogą się różnić
+o 0,01 (lub względnie o 1e-9). Tekst przekazany do `input("…")` nie jest wypisywany.
+Strona kursu kopiuje ten plik bez zmian (`scripts/sync_course_tasks.py` w repozytorium Personal-Website),
+więc każda zmiana zasad oceny trafia tam przy następnej synchronizacji.
 
 ## generate_pdf.py
 
-This script generates a professional PDF document from all markdown files in the `zbior_zadan` directory.
-
-### Features
-
-- **Professional Layout**: Clean, modern design with gradient title page
-- **Table of Contents**: Auto-generated with all chapters listed
-- **Proper Formatting**: 
-  - Syntax-highlighted code blocks
-  - Well-formatted tables
-  - Mathematical formulas support
-  - Proper page breaks and margins
-- **Page Numbers**: Automatic page numbering with headers
-- **A4 Format**: Standard A4 page size with appropriate margins
-
-### Requirements
-
-Install the required Python packages:
+Składa wszystkie treści z `zbior_zadan` w jeden dokument A4 ze stroną tytułową i spisem treści.
 
 ```bash
-pip install weasyprint markdown2 pygments
+pip install -r scripts/requirements-pdf.txt
+python3 scripts/generate_pdf.py   # -> Nauka_Programowania_Zbior_Zadan.pdf (ignorowany przez git)
 ```
-
-### Usage
-
-Run the script from the repository root:
-
-```bash
-python3 scripts/generate_pdf.py
-```
-
-This will generate `Nauka_Programowania_Zbior_Zadan.pdf` in the repository root directory.
-
-### Output
-
-The generated PDF includes:
-1. **Title Page**: Professional cover with project name and year
-2. **Table of Contents**: List of all 25 chapters
-3. **All Exercises**: Complete zbior_zadan content in order (01-25)
-
-The PDF is approximately 0.6-0.7 MB in size and contains all exercise content in a clean, readable format suitable for printing or digital distribution.
 
 ## update_descriptions.py
 
-This script updates exercise descriptions in source code files based on markdown content from zbior_zadan.
+Wstawia treść zadania z `zbior_zadan` jako komentarz na początku każdego pliku z rozwiązaniem
+(w Pythonie jako surowy docstring `r"""…"""`). Dla Pythona każdy podpunkt (`ZAD-05A`) ma osobny
+plik `zad05a.py`; w pozostałych językach podpunkty dzielą plik `zad05.<ext>`.
+
+```bash
+python3 scripts/update_descriptions.py                       # wszystkie języki
+python3 scripts/update_descriptions.py zbior_zadan/ src/python/ py
+```

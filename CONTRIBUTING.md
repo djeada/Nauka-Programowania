@@ -1,96 +1,74 @@
-Jeśli chcesz dodać zmiany do swojego repozytorium, postępuj zgodnie z poniższą instrukcją:
+# Jak współtworzyć zbiór zadań
 
-## Jakie zmiany są mile widziane?
+Repozytorium ma trzy warstwy, które muszą być ze sobą zgodne:
 
-1. Nowe rozwiązanie do zadania, które jeszcze nie zostało rozwiązane.
-1. Alternatywna wersja rozwiązania, która redukuje złożoność czasową lub pamięciową.
-1. Alternatywna wersja rozwiązania, która zwiększa czytelność kodu, ale nie redukuje złożoności czasowej ani pamięciowej.
-1. Alternatywna wersja rozwiązania, która używa nowszej wersji składni, ale nie redukuje złożoności czasowej ani pamięciowej.
-1. Poprawki błędów składni, literówek lub błędów logicznych w istniejących rozwiązaniach.
+| Warstwa | Pliki | Rola |
+|---|---|---|
+| Treści zadań | `zbior_zadan/NN_*.md` | Źródło prawdy o treści, formacie wejścia/wyjścia i przykładach. |
+| Testy | `zbior_zadan_tests/NN_*.json` | Ukryte przypadki testowe dla każdego zadania. |
+| Rozwiązania | `src/<język>/NN_*/` | Rozwiązania w 7 językach; **Python jest rozwiązaniem wzorcowym**. |
 
-## Instrukcja techniczna
+`zbior_zadan_json/` jest generowany automatycznie (`scripts/md_to_json.py`) i stanowi publiczne API
+zbioru — korzysta z niego m.in. [kurs Pythona z automatyczną sprawdzarką](https://adamdjellouli.com/courses/kurs_podstaw_pythona/).
+Nie edytuj tych plików ręcznie.
 
-1. Utwórz "Fork" tego repozytorium na swoim koncie na stronie <a href="https://github.com">github.com</a>.
-2. Sklonuj ten projekt na swój komputer, używając następującej komendy:
-
-```bash
-git clone https://github.com/djeada/Nauka-programowania.git
-```
-
-3. Dodaj nową gałąź, np.:
+## Szybka ścieżka
 
 ```bash
-git checkout -b nazwa-galezi
+python3 scripts/md_to_json.py          # walidacja treści + regeneracja JSON
+python3 scripts/run_tests.py 07        # rozwiązania wzorcowe z rozdziału 07 na testach i przykładach
+python3 scripts/generate_readme.py     # odświeżenie tabel w README
+bash scripts/check_sources.sh          # kompilacja/składnia wszystkich języków
 ```
 
-4. Wprowadź zmiany i opisz je w wiadomości "commit". Przykład: "Dodano rozwiązanie do zadania 6 z wprowadzenia do list - java".
-5. Użyj komendy <i>git push</i>:
+CI uruchamia te same polecenia dla każdego pull requesta.
 
-```bash
-git add changed_file
-git commit -m "twoj komentarz do wprowadzanych zmian"
-git push origin nazwa-galezi
-```
-6. Zaloguj się na stronę <a href="https://github.com">github.com</a> i stwórz pull request w swoim repozytorium.
+## Zasady pisania zadań
 
-## Szablony
+Szablon zadania: [`zbior_zadan/szablon.md`](zbior_zadan/szablon.md).
 
-Oto przykładowy szablon dla plików z rozwiązaniami:
+1. **Każde zadanie to program stdin → stdout.** Także zadania o funkcjach: treść mówi, jaką funkcję
+   napisać, a program wczytuje dane, wywołuje funkcję i wypisuje wynik. Dzięki temu każde zadanie
+   da się sprawdzić automatycznie.
+2. **Wejście bez literałów Pythona.** Dane podajemy tak, by dało się je wczytać przez `input()`,
+   `int()` i `split()` (np. `3 2 1`, a nie `[3, 2, 1]`).
+3. **Wyjście jednoznaczne.** Opisz dokładnie format (separator, liczba miejsc po przecinku,
+   wielkość liter, komunikat dla przypadków brzegowych). Program nie wypisuje komunikatów typu
+   „Podaj liczbę:”.
+4. **Wzory w LaTeX-u** między `$…$`, np. `$\frac{1}{2} a h$`. Nie używaj zapisu `( … )`.
+5. **Przykład zgodny z testami.** Przykłady są sprawdzane tak samo jak testy.
+6. **Stabilne identyfikatory.** `ZAD-NN` jest częścią adresu zadania na stronie i kluczem postępu
+   ucznia — nie zmieniaj numeracji istniejących zadań.
 
+## Zasady pisania testów
 
-```python
-'''
-# Nazwa zadania
+Plik `zbior_zadan_tests/NN_*.json` to słownik `{"ZAD-NN": [{"input": "…", "output": "…"}, …]}`.
 
-## Tresc
+* Co najmniej **4 testy** na zadanie, wszystkie różne i różne od przykładu.
+* Testy obejmują przypadki brzegowe (0, 1, liczby ujemne, pusty napis, maksimum z ograniczeń…).
+* Testy mają różne oczekiwane wyjścia, żeby nie dało się ich zaliczyć wypisując stałą
+  (wyjątek: zadania, w których wynik z definicji jest stały, np. „Witaj, świecie!”).
+* Zadanie interaktywne (bez automatycznej oceny) ma pustą listę: `"ZAD-11": []`.
+* Zadania na plikach używają pól `files` (pliki przed uruchomieniem) i `expected_files`
+  (stan po uruchomieniu, `null` = plik ma nie istnieć). Szczegóły: `scripts/judge_harness.py`.
+  Przykłady w treści opisują pliki znacznikami `**Pliki przed:**` / `**Pliki po:**` (format w `szablon.md`).
 
-[Tutaj opisz problem i jego wymagania, np. wejście, wyjście i oczekiwane działanie.]
+Sposób porównywania wyników (identyczny w CI i na stronie): końcowe spacje i puste linie są
+ignorowane, liczba linii musi się zgadzać, tekst musi być identyczny, a liczby mogą różnić się
+o 0,01.
 
-## Wejście:
-[Tutaj opisz format wejścia danych, np. lista liczb, ciąg znaków itp.]
+## Rozwiązania
 
-## Wyjście:
-[Tutaj opisz format wyjścia danych, np. liczba, ciąg znaków itp.]
+* Python: `src/python/NN_*/zadNN.py`, a dla podpunktów `zadNNa.py`, `zadNNb.py`… Każdy plik czyta
+  stdin i przechodzi wszystkie testy (`scripts/run_tests.py`). Logikę umieść w funkcjach,
+  a wczytywanie danych w bloku `if __name__ == "__main__":`.
+* Pozostałe języki: `zadNN.<ext>` (Java: `zadN/Main.java`). Muszą się kompilować
+  (`scripts/check_sources.sh`).
+* Opis zadania na początku pliku generuje `scripts/update_descriptions.py` — nie edytuj go ręcznie.
 
-## Objaśnienie wyjścia:
-[Tutaj opisz, co oznaczają poszczególne elementy wyjścia.]
+## Pull request
 
----
-
-## Opis rozwiązania 1:
-[Tutaj opisz, jak działa Twoje rozwiązanie.]
-
-### Złożoność czasowa: O(X)
-### Złożoność pamięciowa: O(X)
-
-## Opis rozwiązania 2:
-[Tutaj opisz, jak działa drugie rozwiązanie (jeśli istnieje).]
-
-### Złożoność czasowa: O(X)
-### Złożoność pamięciowa: O(X)
-
-'''
-
-## Implementacja rozwiązania 1:
-
-def nazwa_rozwiazania_1(parametry):
-    pass
-
-## Implementacja rozwiązania 2:
-
-def nazwa_rozwiazania_2(parametry):
-    pass
-
-## Testy
-
-# Test 1
-dane_wejsciowe = [1,2,3]
-oczekiwany_wynik = 'wynik'
-wynik = nazwa_rozwiazania_1(dane_wejsciowe)
-assert wynik == oczekiwany_wynik
-# Test 2
-dane_wejsciowe = [1,2,3]
-oczekiwany_wynik = 'wynik'
-wynik = nazwa_rozwiazania_2(dane_wejsciowe)
-assert wynik == oczekiwany_wynik
-```
+1. Zrób fork i sklonuj repozytorium: `git clone https://github.com/djeada/Nauka-Programowania.git`.
+2. Utwórz gałąź: `git checkout -b moja-zmiana`.
+3. Uruchom polecenia z sekcji „Szybka ścieżka” i zacommituj także wygenerowane pliki.
+4. Otwórz pull request z krótkim opisem zmiany.

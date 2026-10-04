@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  zadania:
+    name: Zadania, testy i README
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Treści zadań są poprawne, a JSON aktualny
+        run: python3 scripts/md_to_json.py --check
+      - name: Rozwiązania wzorcowe przechodzą wszystkie testy i przykłady
+        run: python3 scripts/run_tests.py
+      - name: README jest aktualne
+        run: python3 scripts/generate_readme.py --check
+
+  pyodide:
+    name: Rozwiązania wzorcowe w Pyodide (środowisko kursu online)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # Ta sama wersja Pyodide, której używa sprawdzarka na stronie kursu.
+      - run: npm install --no-save pyodide@0.29.5
+      - run: node scripts/run_tests_pyodide.mjs
+
+  kompilacja:
+    name: Kompilacja (${{ matrix.lang }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        lang: [python, js, bash, cpp, java, rust, haskell]
+    steps:
+      - uses: actions/checkout@v4
+      - if: matrix.lang == 'python'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - if: matrix.lang == 'js'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - if: matrix.lang == 'java'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - if: matrix.lang == 'haskell'
+        uses: haskell-actions/setup@v2
+        with:
+          ghc-version: "9.6"
+      - name: Sprawdź pliki źródłowe
+        run: bash scripts/check_sources.sh --lang ${{ matrix.lang }}
