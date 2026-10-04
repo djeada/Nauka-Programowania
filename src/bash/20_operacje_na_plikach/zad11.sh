@@ -45,25 +45,25 @@ podmien_tresci() {
 test_podmien_tresci() {
 
     mkdir -p 'test'
-    mkdir -p 'test'
 
-    echo 'test1' >'test/plik_1'
     echo 'test1' >'test/plik_1'
     echo 'test2' >'test/plik_2'
 
     podmien_tresci 'test/plik_1' 'test/plik_2'
-    podmien_tresci 'test/plik_1' 'test/plik_2'
 
-    assertEqual $(cat 'test/plik_1') 'test2' $LINENO
     assertEqual $(cat 'test/plik_1') 'test2' $LINENO
     assertEqual $(cat 'test/plik_2') 'test1' $LINENO
 
-    rm -rf 'test'
     rm -rf 'test'
 
 }
 
 main() {
+    # Testy tworzą i usuwają pliki — pracuj w katalogu tymczasowym, nie w repozytorium.
+    local katalog_roboczy
+    katalog_roboczy=$(mktemp -d)
+    trap 'rm -rf "$katalog_roboczy"' EXIT
+    cd "$katalog_roboczy" || exit 1
     test_podmien_tresci
 }
 

@@ -77,26 +77,37 @@ czyPierwsza() {
 }
 
 test1() {
-    test1() {
-        a=7
-        assertTrue "$(czyPierwsza $a)" $LINENO
-    }
+    a=7
+    assertTrue "$(czyPierwsza $a)" $LINENO
+}
 
-    test2() {
-        a=4
-        assertFalse "$(czyPierwsza $a)" $LINENO
-    }
+test2() {
+    a=4
+    assertFalse "$(czyPierwsza $a)" $LINENO
+}
 
-    test3() {
-        a=1
-        assertTrue "$(czyPierwsza $a)" $LINENO
-    }
+test3() {
+    a=1
+    assertFalse "$(czyPierwsza $a)" $LINENO
+}
 
-    main() {
-        test1
-        test2
-        test3
-    }
+test4() {
+    a=25
+    assertFalse "$(czyPierwsza $a)" $LINENO
+}
 
-    main "$@"
+test5() {
+    a=97
+    assertTrue "$(czyPierwsza $a)" $LINENO
+}
+
+main() {
+    test1
+    test2
+    test3
+    test4
+    test5
+}
+
+main "$@"
 

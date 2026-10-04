@@ -1,63 +1,75 @@
-# ZAD-01 — Wartość wielomianu w punkcie
-#
+# ZAD-01 — Liczby naturalne mniejsze od N
+# 
 # **Poziom:** ★☆☆
-# **Tagi:** `wielomiany`, `Horner`, `I/O`
-#
+# **Tagi:** `rekurencja`, `napisy`
+# 
 # ### Treść
-#
-# Wczytaj współczynniki wielomianu ( a_nx^n + a_{n-1}x^{n-1} + \dots + a_0 ) oraz liczbę ( x ). Oblicz wartość wielomianu w punkcie ( x ).
-#
+# 
+# Napisz rekurencyjną funkcję `liczby_mniejsze(n)`, która zwraca napis złożony ze wszystkich liczb naturalnych mniejszych od $n$, od największej do najmniejszej, oddzielonych przecinkiem i spacją.
+# 
+# Program wczytuje $N$ i wypisuje wynik funkcji.
+# 
 # ### Wejście
-#
-# * 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
-# * 2. linia: `n+1` liczb całkowitych: `a_n a_{n-1} ... a_0`
-# * 3. linia: `x` — liczba całkowita
-#
+# 
+# Jedna liczba naturalna `N`.
+# 
 # ### Wyjście
-#
-# Jedna liczba całkowita — wartość wielomianu w punkcie `x`.
-#
+# 
+# Jedna linia: liczby `N-1, N-2, ..., 1, 0` oddzielone przecinkiem i spacją (`, `). Po ostatniej liczbie nie ma przecinka. Dla `N = 1` wynikiem jest samo `0`.
+# 
+# ### Ograniczenia
+# 
+# * `1 ≤ N ≤ 100`
+# 
 # ### Przykład
-#
+# 
 # **Wejście:**
-#
+# 
 # ```
-# 2
-# 3 2 1
-# 1
+# 10
 # ```
-#
+# 
 # **Wyjście:**
-#
+# 
 # ```
-# 6
+# 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
 # ```
-#
-# ### Uwagi o formatowaniu
-#
-# * Użyj schematu Hornera (jest najprostszy i najszybszy).
-wartosc_wielomianu() {
-    local x=$1
-    shift
-    local wspolczynniki=("$@")
-    local n=${#wspolczynniki[@]}
+# 
+# Liczba `10` nie jest mniejsza od `10`, więc napis zaczyna się od `9`.
+# 
+# ### Uwagi
+# 
+# * Przypadek bazowy: dla $n = 1$ jedyną mniejszą liczbą naturalną jest `0`. W kroku rekurencyjnym dopisz $n-1$ przed wynikiem wywołania dla $n-1$.
+# 
+# ### Kod startowy
+# 
+# ```python
+# def liczby_mniejsze(n):
+#     pass
+# 
+# 
+# n = int(input())
+# print(liczby_mniejsze(n))
+# ```
+source ../assert.sh
 
-    # Schemat Hornera: W(x) = (...((a_n * x + a_(n-1)) * x + a_(n-2))... + a_0)
-    local wynik=${wspolczynniki[0]}
-    for ((i = 1; i < n; i++)); do
-        wynik=$((wynik * x + wspolczynniki[i]))
-    done
+liczby_mniejsze() {
+    # Wypisuje napis "n-1, n-2, ..., 0" (dla n >= 1).
+    # Złożoność czasowa: O(n), złożoność pamięciowa: O(n) - przez stos rekurencji
+    local n=$1
 
-    echo $wynik
+    if ((n <= 1)); then
+        echo "0"
+        return
+    fi
+
+    echo "$((n - 1)), $(liczby_mniejsze $((n - 1)))"
 }
 
 main() {
-    # Przyklad: wielomian 3x^2 + 2x + 1 dla x=1
-    local stopien=2
-    local wspolczynniki=(3 2 1)
-    local x=1
-    local wynik=$(wartosc_wielomianu $x "${wspolczynniki[@]}")
-    echo "$wynik"
+    assertEqual "$(liczby_mniejsze 1)" "0" $LINENO
+    assertEqual "$(liczby_mniejsze 2)" "1, 0" $LINENO
+    assertEqual "$(liczby_mniejsze 10)" "9, 8, 7, 6, 5, 4, 3, 2, 1, 0" $LINENO
 }
 
 main "$@"

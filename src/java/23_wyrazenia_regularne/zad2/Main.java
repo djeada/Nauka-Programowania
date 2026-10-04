@@ -44,6 +44,7 @@ Fałsz
 
 */
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class Main {
 
@@ -51,12 +52,18 @@ public class Main {
   // Złożoność czasowa: O(n) gdzie n to długość hasła
   // Złożoność pamięciowa: O(1)
   public static boolean poprawneHaslo(String haslo) {
-    if (haslo.matches("[a-z]+") && haslo.matches("[A-Z]+")) {
-      if (haslo.matches("[0-9]+") && haslo.matches("[!#$%&'*+-/=?^_`{|}~]+"))
+    if (zawiera(haslo, "[a-z]") && zawiera(haslo, "[A-Z]")) {
+      if (zawiera(haslo, "[0-9]") && zawiera(haslo, "[!#$%&'*+\\-/=?^_`{|}~]"))
         return haslo.length() >= 8 && haslo.length() <= 20;
     }
 
     return false;
+  }
+
+  // Sprawdza, czy jakikolwiek fragment napisu pasuje do wzorca
+  // (String.matches wymagałby dopasowania całego napisu).
+  private static boolean zawiera(String napis, String wzorzec) {
+    return Pattern.compile(wzorzec).matcher(napis).find();
   }
 
   public static void test1() {

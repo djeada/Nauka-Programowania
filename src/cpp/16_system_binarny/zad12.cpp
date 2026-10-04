@@ -46,10 +46,13 @@ więc wynik to `0`. Dla przykładu `20` (`10100`) najdłuższy gap ma długość
 
 int najdluzszyCiagZer(int liczba) {
   /*
-   * Funkcja zwraca dlugosc najdluzszego ciagu zer w dziesietnej
-   * reprezentacji liczby binarnej.
+   * Funkcja zwraca dlugosc najdluzszego ciagu zer otoczonego z obu stron
+   * jedynkami w binarnej reprezentacji liczby.
    */
-  if (liczba == 0) return 1;
+  if (liczba <= 0) return 0;
+
+  // Zera na koncu liczby nie sa otoczone jedynkami z prawej strony.
+  while (liczba % 2 == 0) liczba /= 2;
 
   int wynik = 0;
   int pom = 0;
@@ -63,17 +66,21 @@ int najdluzszyCiagZer(int liczba) {
     } else
       pom++;
   }
-  return std::max(wynik, pom);
+  return wynik;
 }
 
 void testNajdluzszyCiagZer() {
   assert(najdluzszyCiagZer(111) == 1);
   assert(najdluzszyCiagZer(8219) == 8);
+  assert(najdluzszyCiagZer(14) == 0);
+  assert(najdluzszyCiagZer(20) == 1);
+  assert(najdluzszyCiagZer(9) == 2);
+  assert(najdluzszyCiagZer(1) == 0);
+  assert(najdluzszyCiagZer(0) == 0);
 }
 
 int main() {
-  test1();
-  test2();
+  testNajdluzszyCiagZer();
 
   return 0;
 }

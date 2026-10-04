@@ -96,7 +96,7 @@ wyjatkowe_palindromy() {
             local podnapis="${slowo:$i:$j}"
             if [ "$(wyjatkowy_palindrom "$podnapis")" == "true" ]; then
                 # Dodaj tylko jesli jeszcze nie ma w wyniku
-                if ! [[ " ${wynik[@]} " =~ " $podnapis " ]]; then
+                if ! [[ " ${wynik[*]} " =~ " $podnapis " ]]; then
                     wynik+=("$podnapis")
                 fi
             fi

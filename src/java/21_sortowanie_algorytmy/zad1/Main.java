@@ -40,18 +40,28 @@ Algorytm polega na wielokrotnym porównywaniu sąsiednich elementów i zamianie 
 import java.util.*;
 
 public class Main {
-  // Sortowanie bąbelkowe - porównuje sąsiednie elementy i zamienia je miejscami
-  // Złożoność czasowa: O(n²) - dwie zagnieżdżone pętle
+  // Sortowanie bąbelkowe - porównuje sąsiednie elementy i zamienia je miejscami;
+  // po każdym przebiegu największy element trafia na koniec. Kończy, gdy w
+  // przebiegu nie wykonano żadnej zamiany.
+  // Złożoność czasowa: O(n²) - dwie zagnieżdżone pętle, O(n) dla posortowanej listy
   // Złożoność pamięciowa: O(1) - sortowanie w miejscu
   public static void sortuj(ArrayList<Integer> lista) {
+    int n = lista.size();
 
-    for (int i = 0; i < lista.size(); i++) {
-      for (int j = i + 1; j < lista.size(); j++) {
-        if (lista.get(i) > lista.get(j)) {
-          var temp = lista.get(i);
-          lista.set(i, lista.get(j));
-          lista.set(j, temp);
+    for (int i = 0; i < n - 1; i++) {
+      boolean zamieniono = false;
+
+      for (int j = 0; j < n - 1 - i; j++) {
+        if (lista.get(j) > lista.get(j + 1)) {
+          var temp = lista.get(j);
+          lista.set(j, lista.get(j + 1));
+          lista.set(j + 1, temp);
+          zamieniono = true;
         }
+      }
+
+      if (!zamieniono) {
+        break;
       }
     }
   }
@@ -61,12 +71,25 @@ public class Main {
     ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
 
     sortuj(lista);
-    assert lista == wynik;
+    assert lista.equals(wynik);
+  }
+
+  public static void test2() {
+    ArrayList<Integer> lista = new ArrayList<Integer>(Arrays.asList(3, -1, 3, 0, -1, 7));
+    ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(-1, -1, 0, 3, 3, 7));
+
+    sortuj(lista);
+    assert lista.equals(wynik);
+
+    ArrayList<Integer> pusta = new ArrayList<Integer>();
+    sortuj(pusta);
+    assert pusta.isEmpty();
   }
 
   public static void main(String[] args) {
 
     test1();
+    test2();
   }
 }
 

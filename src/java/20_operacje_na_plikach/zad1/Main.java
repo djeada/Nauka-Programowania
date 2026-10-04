@@ -79,7 +79,7 @@ public class Main {
   }
 
   public static void test2() throws IOException {
-    String sciezkaFolderu = "temp_dir";
+    String sciezkaFolderu = Files.createTempDirectory("zad1").toString();
     try {
       Files.createDirectories(Paths.get(sciezkaFolderu));
     } catch (FileAlreadyExistsException ignored) {

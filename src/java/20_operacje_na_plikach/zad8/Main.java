@@ -78,9 +78,16 @@ public class Main {
     List<String> paths = filesInFolder(folderPath, ".txt");
 
     for (String path : paths) {
-      try (FileWriter fileWriter = new FileWriter(path, true);
-          BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
-        bufferedWriter.write("\n" + data);
+      try {
+        // Inicjały trafiają do nowej linii; jeśli plik nie kończy się znakiem
+        // nowej linii, najpierw go dopisujemy.
+        String content = Files.readString(Paths.get(path));
+        String prefix = !content.isEmpty() && !content.endsWith("\n") ? "\n" : "";
+
+        try (FileWriter fileWriter = new FileWriter(path, true);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+          bufferedWriter.write(prefix + data + "\n");
+        }
       } catch (IOException e) {
         System.out.println("Error: " + e.getMessage());
       }
@@ -123,7 +130,7 @@ public class Main {
   }
 
   public static void testAddInitials() throws IOException {
-    Path folderPath = Paths.get("temp_dir");
+    Path folderPath = Files.createTempDirectory("zad8");
     Files.createDirectories(folderPath);
 
     String txtFile = "temp.txt";
@@ -140,12 +147,21 @@ public class Main {
 
     assert readFile(folderPath.resolve(txtFile).toString()).equals(expectedResult);
 
+    // plik bez znaku nowej linii na końcu
+    try (BufferedWriter writer = Files.newBufferedWriter(folderPath.resolve(txtFile))) {
+      writer.write("example text");
+    }
+
+    addInitials(folderPath.toString(), data);
+
+    assert readFile(folderPath.resolve(txtFile).toString()).equals(expectedResult);
+
     Files.delete(folderPath.resolve(txtFile));
     Files.delete(folderPath);
   }
 
   public static void testRemoveMiddle() throws IOException {
-    Path folderPath = Paths.get("temp_dir");
+    Path folderPath = Files.createTempDirectory("zad8");
     Files.createDirectories(folderPath);
 
     String csvFile = "temp.csv";

@@ -58,15 +58,21 @@ pierwiastek() {
 }
 
 test1() {
-    test1() {
-        a=16
-        wynik=4
-        assert "$wynik -eq $(pierwiastek $a $b)" $LINENO
-    }
+    a=16
+    wynik=4
+    assert "$wynik -eq $(pierwiastek $a)" $LINENO
+}
 
-    main() {
-        test1
-    }
+test2() {
+    a=0
+    wynik=0
+    assert "$wynik -eq $(pierwiastek $a)" $LINENO
+}
 
-    main "$@"
+main() {
+    test1
+    test2
+}
+
+main "$@"
 

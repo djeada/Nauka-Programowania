@@ -35,34 +35,32 @@ source ../assert.sh
 
 silnia() {
 
-    a=$1
-    wynik=1
+    local a=$1
+    local wynik=1
 
     while [ $a -gt 0 ]; do
-        wynik=$(($wynik * $a))
-        a=$(($a - 1))
+        wynik=$((wynik * a))
+        a=$((a - 1))
     done
 
     echo $wynik
 }
 
 test1() {
-    test1() {
-        a=0
-        wynik=1
-        assert "$wynik -eq $(silnia $a $b)" $LINENO
-    }
+    a=0
+    wynik=1
+    assert "$wynik -eq $(silnia $a)" $LINENO
+}
 
-    test2() {
-        a=4
-        wynik=24
-        assert "$wynik -eq $(silnia $a $b)" $LINENO
-    }
+test2() {
+    a=4
+    wynik=24
+    assert "$wynik -eq $(silnia $a)" $LINENO
+}
 
-    main() {
-        test1
-        test2
-    }
+main() {
+    test1
+    test2
+}
 
-    main "$@"
-
+main "$@"

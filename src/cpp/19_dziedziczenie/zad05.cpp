@@ -50,6 +50,7 @@ Ptak ląduje.
 */
 
 #include <iostream>
+#include <string>
 
 class Zwierz {
  private:

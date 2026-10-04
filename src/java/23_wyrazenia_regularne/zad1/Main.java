@@ -78,14 +78,16 @@ public class Main {
   // Złożoność czasowa: O(n) gdzie n to długość adresu
   // Złożoność pamięciowa: O(n)
   public static boolean poprawnyEmail(String napis) {
-    if (napis.indexOf('@') != 1) return false;
+    // Adres musi zawierać dokładnie jeden znak '@'.
+    if (napis.chars().filter(znak -> znak == '@').count() != 1) return false;
 
-    napis = napis.replaceAll("\\.(?=\\.)", "x");
+    // Dwie kropki obok siebie są niedozwolone.
+    if (napis.contains("..")) return false;
 
-    int malpa = napis.indexOf('@') - napis.length();
+    int malpa = napis.indexOf('@');
 
     String identyfikator = napis.substring(0, malpa);
-    String nazwaDomenowa = napis.substring(++malpa, napis.length());
+    String nazwaDomenowa = napis.substring(malpa + 1);
 
     return poprawnyIdentyfikator(identyfikator) && poprawnaNazwaDomenowa(nazwaDomenowa);
   }

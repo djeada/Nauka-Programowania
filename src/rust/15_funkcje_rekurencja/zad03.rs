@@ -1,23 +1,28 @@
 /*
-ZAD-03 — Suma wielomianów
+ZAD-03 — Potęga
 
 **Poziom:** ★☆☆
-**Tagi:** `wielomiany`, `wyrównanie stopni`, `I/O`
+**Tagi:** `rekurencja`, `potęgowanie`
 
 ### Treść
 
-Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich sumą.
+Napisz rekurencyjną funkcję `potega(a, b)`, która zwraca $a^b$, korzystając z zależności $a^0 = 1$ oraz $a^b = a \cdot a^{b-1}$ dla $b \ge 1$.
+
+Program wczytuje $a$ i $b$, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
-* 2. linia: `n+1` liczb: `a_n ... a_0`
-* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
-* 4. linia: `m+1` liczb: `b_m ... b_0`
+* 1. linia: `a` — liczba całkowita (podstawa)
+* 2. linia: `b` — liczba naturalna (wykładnik)
 
 ### Wyjście
 
-Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
+Jedna liczba całkowita — wartość $a^b$. Przyjmujemy, że $0^0 = 1$.
+
+### Ograniczenia
+
+* `-10 ≤ a ≤ 10`
+* `0 ≤ b ≤ 18`
 
 ### Przykład
 
@@ -25,80 +30,52 @@ Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
 
 ```
 2
-3 5 2
-2
-2 -8 1
+3
 ```
 
 **Wyjście:**
 
 ```
-5 -3 3
+8
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Jeśli stopnie są różne, wyrównaj listy „od końca” (od wyrazu wolnego), dopisując zera na początku krótszej.
+* Nie używaj operatora `**` ani funkcji `pow()` — potęgę ma obliczyć Twoja funkcja.
+
+### Kod startowy
+
+```python
+def potega(a, b):
+    pass
+
+
+a = int(input())
+b = int(input())
+print(potega(a, b))
+```
 
 */
 
-use std::io;
-
-// Funkcja dodająca dwa wielomiany
-// Złożoność czasowa: O(max(n, m)), gdzie n i m to stopnie wielomianów
-// Złożoność pamięciowa: O(max(n, m))
-fn dodaj_wielomiany(a: &[i32], b: &[i32]) -> Vec<i32> {
-    let max_len = a.len().max(b.len());
-    let mut wynik = vec![0; max_len];
-
-    let offset_a = max_len - a.len();
-    for (i, &val) in a.iter().enumerate() {
-        wynik[offset_a + i] += val;
+fn potega(a: i64, b: u32) -> i64 {
+    // Zwraca a^b.
+    // Złożoność czasowa: O(b)
+    // Złożoność pamięciowa: O(b) - przez stos rekurencji
+    if b == 0 {
+        return 1;
     }
 
-    let offset_b = max_len - b.len();
-    for (i, &val) in b.iter().enumerate() {
-        wynik[offset_b + i] += val;
-    }
+    a * potega(a, b - 1)
+}
 
-    // Usuń wiodące zera
-    while wynik.len() > 1 && wynik[0] == 0 {
-        wynik.remove(0);
-    }
-
-    wynik
+fn test_potega() {
+    assert_eq!(potega(2, 3), 8);
+    assert_eq!(potega(5, 0), 1);
+    assert_eq!(potega(0, 5), 0);
+    assert_eq!(potega(-2, 5), -32);
+    assert_eq!(potega(10, 18), 1_000_000_000_000_000_000);
 }
 
 fn main() {
-    let mut n_str = String::new();
-    io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
-
-    let mut a_str = String::new();
-    io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
-    let a: Vec<i32> = a_str
-        .trim()
-        .split_whitespace()
-        .map(|s| s.parse().expect("Nieprawidłowa liczba"))
-        .collect();
-
-    let mut m_str = String::new();
-    io::stdin().read_line(&mut m_str).expect("Błąd wczytywania");
-
-    let mut b_str = String::new();
-    io::stdin().read_line(&mut b_str).expect("Błąd wczytywania");
-    let b: Vec<i32> = b_str
-        .trim()
-        .split_whitespace()
-        .map(|s| s.parse().expect("Nieprawidłowa liczba"))
-        .collect();
-
-    let wynik = dodaj_wielomiany(&a, &b);
-
-    for (i, &w) in wynik.iter().enumerate() {
-        if i > 0 {
-            print!(" ");
-        }
-        print!("{}", w);
-    }
-    println!();
+    test_potega();
 }

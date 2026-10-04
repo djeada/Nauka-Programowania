@@ -41,14 +41,22 @@ Algorytm polega na wielokrotnym porównywaniu sąsiednich elementów i zamianie 
 use std::io;
 
 // Sortowanie bąbelkowe - wersja 1 (prosta)
-// Złożoność czasowa: O(n^2) w najgorszym przypadku
+// Porównuje sąsiednie elementy i zamienia je miejscami; po każdym przebiegu
+// największy element trafia na koniec. Kończy, gdy przebieg nie wykonał zamian.
+// Złożoność czasowa: O(n^2) w najgorszym przypadku, O(n) dla posortowanej listy
 // Złożoność pamięciowa: O(1)
 fn sort_v1(lista: &mut [i32]) {
-    for i in 0..lista.len() {
-        for j in (i + 1)..lista.len() {
-            if lista[i] > lista[j] {
-                lista.swap(i, j);
+    let n = lista.len();
+    for i in 0..n {
+        let mut zamieniono = false;
+        for j in 0..n - 1 - i {
+            if lista[j] > lista[j + 1] {
+                lista.swap(j, j + 1);
+                zamieniono = true;
             }
+        }
+        if !zamieniono {
+            break;
         }
     }
 }

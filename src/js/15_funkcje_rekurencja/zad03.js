@@ -1,23 +1,28 @@
 /*
-ZAD-03 — Suma wielomianów
+ZAD-03 — Potęga
 
 **Poziom:** ★☆☆
-**Tagi:** `wielomiany`, `wyrównanie stopni`, `I/O`
+**Tagi:** `rekurencja`, `potęgowanie`
 
 ### Treść
 
-Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich sumą.
+Napisz rekurencyjną funkcję `potega(a, b)`, która zwraca $a^b$, korzystając z zależności $a^0 = 1$ oraz $a^b = a \cdot a^{b-1}$ dla $b \ge 1$.
+
+Program wczytuje $a$ i $b$, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
-* 2. linia: `n+1` liczb: `a_n ... a_0`
-* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
-* 4. linia: `m+1` liczb: `b_m ... b_0`
+* 1. linia: `a` — liczba całkowita (podstawa)
+* 2. linia: `b` — liczba naturalna (wykładnik)
 
 ### Wyjście
 
-Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
+Jedna liczba całkowita — wartość $a^b$. Przyjmujemy, że $0^0 = 1$.
+
+### Ograniczenia
+
+* `-10 ≤ a ≤ 10`
+* `0 ≤ b ≤ 18`
 
 ### Przykład
 
@@ -25,20 +30,30 @@ Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
 
 ```
 2
-3 5 2
-2
-2 -8 1
+3
 ```
 
 **Wyjście:**
 
 ```
-5 -3 3
+8
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Jeśli stopnie są różne, wyrównaj listy „od końca” (od wyrazu wolnego), dopisując zera na początku krótszej.
+* Nie używaj operatora `**` ani funkcji `pow()` — potęgę ma obliczyć Twoja funkcja.
+
+### Kod startowy
+
+```python
+def potega(a, b):
+    pass
+
+
+a = int(input())
+b = int(input())
+print(potega(a, b))
+```
 
 */
 

@@ -30,6 +30,8 @@ Zmodyfikowany tekst.
 *(jak w treści — z listami A/B)*
 
 */
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.*;
 
 public class Main {
@@ -37,16 +39,19 @@ public class Main {
   // Podmienia słowa z listaA na odpowiadające słowa z listaB
   // Złożoność czasowa: O(n*m) gdzie n to długość napisu, m to liczba zamian
   // Złożoność pamięciowa: O(n)
-  public static void podmien(String napis, List<String> listaA, List<String> listaB) {
+  // (napisy w Javie są niezmienne, więc wynik jest zwracany)
+  public static String podmien(String napis, List<String> listaA, List<String> listaB) {
     if (listaA.size() != listaB.size())
-      return;
+      throw new IllegalArgumentException("Listy muszą mieć tę samą długość.");
 
-    Iterator<String> itA = listaA.iterator();
-    Iterator<String> itB = listaB.iterator();
-
-    while (itA.hasNext() || itB.hasNext()) {
-      napis = napis.replaceAll("\\b" + itA.next() + "\\b", itB.next());
+    for (int i = 0; i < listaA.size(); i++) {
+      napis =
+          napis.replaceAll(
+              "\\b" + Pattern.quote(listaA.get(i)) + "\\b",
+              Matcher.quoteReplacement(listaB.get(i)));
     }
+
+    return napis;
   }
 
   public static void test1() {
@@ -67,9 +72,7 @@ public class Main {
         "off. Warmth his law design says she is a person. Pronunciation " +
         "suspected in belonging conveying ye repulsive.";
 
-    podmien(napis, listaA, listaB);
-
-    assert(napis.equals(oczekiwane));
+    assert podmien(napis, listaA, listaB).equals(oczekiwane);
   }
 
   public static void main(String[] args) {

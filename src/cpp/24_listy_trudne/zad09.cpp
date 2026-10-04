@@ -47,13 +47,13 @@ sprawdzarka tego wymaga.
 std::vector<int> najdluzszyNaprzemiennyPodciagV1(std::vector<int> &lista) {
   if (lista.empty()) return {};
 
-  auto n = lista.size();
+  const int n = static_cast<int>(lista.size());
 
-  auto dlugoscMaks = 1;
-  auto indeksKoncowy = 0;
-  auto dlugosc = 1;
+  int dlugoscMaks = 1;
+  int indeksKoncowy = 0;
+  int dlugosc = 1;
 
-  for (auto i = 0; i < n; i++) {
+  for (int i = 0; i + 1 < n; i++) {
     if (lista[i] * lista[i + 1] < 0) {
       dlugosc++;
 

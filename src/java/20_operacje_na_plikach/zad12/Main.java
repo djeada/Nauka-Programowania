@@ -37,6 +37,7 @@ D:\Dane\CSV
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
+import java.util.Comparator;
 
 public class Main {
 
@@ -89,25 +90,33 @@ public class Main {
             });
   }
 
+  // Usuwa folder razem z całą zawartością.
+  private static void usunRekurencyjnie(Path folder) throws IOException {
+    try (var sciezki = Files.walk(folder)) {
+      for (Path sciezka : sciezki.sorted(Comparator.reverseOrder()).toList()) {
+        Files.delete(sciezka);
+      }
+    }
+  }
+
   public static void testMoveFiles() throws IOException {
-    Files.createDirectory(Paths.get("test1"));
-    Files.createDirectory(Paths.get("test2"));
+    Path folderTymczasowy = Files.createTempDirectory("zad12");
+    Path test1 = folderTymczasowy.resolve("test1");
+    Path test2 = folderTymczasowy.resolve("test2");
+    Files.createDirectory(test1);
+    Files.createDirectory(test2);
 
-    String path1 = "test1/file1.csv";
-    String path2 = "test1/file2.csv";
+    Files.write(test1.resolve("file1.csv"), "test1; test2\n".getBytes(StandardCharsets.UTF_8));
+    Files.write(test1.resolve("file2.csv"), "test3; test4\n".getBytes(StandardCharsets.UTF_8));
 
-    Files.write(Paths.get(path1), "test1; test2\n".getBytes(StandardCharsets.UTF_8));
-    Files.write(Paths.get(path2), "test3; test4\n".getBytes(StandardCharsets.UTF_8));
+    moveFiles(test1.toString(), test2.toString());
 
-    moveFiles("test1", "test2");
+    assert Files.exists(test2.resolve("file1.csv"));
+    assert Files.exists(test2.resolve("file2.csv"));
+    assert !Files.exists(test1.resolve("file1.csv"));
+    assert !Files.exists(test1.resolve("file2.csv"));
 
-    assert Files.exists(Paths.get("test2/file1.csv"));
-    assert Files.exists(Paths.get("test2/file2.csv"));
-    assert !Files.exists(Paths.get("test1/file1.csv"));
-    assert !Files.exists(Paths.get("test1/file2.csv"));
-
-    Files.delete(Paths.get("test1"));
-    Files.delete(Paths.get("test2"));
+    usunRekurencyjnie(folderTymczasowy);
   }
 
   public static void main(String[] args) throws IOException {

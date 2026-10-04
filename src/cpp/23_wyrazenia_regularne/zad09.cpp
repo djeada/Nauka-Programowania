@@ -28,6 +28,7 @@ Zmodyfikowany tekst.
 */
 
 #include <cassert>
+#include <iterator>
 #include <regex>
 #include <sstream>
 #include <string>

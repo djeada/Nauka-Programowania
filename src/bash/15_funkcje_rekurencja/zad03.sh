@@ -1,50 +1,79 @@
-# ZAD-03 — Suma wielomianów
-#
+# ZAD-03 — Potęga
+# 
 # **Poziom:** ★☆☆
-# **Tagi:** `wielomiany`, `wyrównanie stopni`, `I/O`
-#
+# **Tagi:** `rekurencja`, `potęgowanie`
+# 
 # ### Treść
-#
-# Wczytaj dwa wielomiany i wypisz współczynniki wielomianu będącego ich sumą.
-#
+# 
+# Napisz rekurencyjną funkcję `potega(a, b)`, która zwraca $a^b$, korzystając z zależności $a^0 = 1$ oraz $a^b = a \cdot a^{b-1}$ dla $b \ge 1$.
+# 
+# Program wczytuje $a$ i $b$, wywołuje funkcję i wypisuje wynik.
+# 
 # ### Wejście
-#
-# * 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)
-# * 2. linia: `n+1` liczb: `a_n ... a_0`
-# * 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)
-# * 4. linia: `m+1` liczb: `b_m ... b_0`
-#
+# 
+# * 1. linia: `a` — liczba całkowita (podstawa)
+# * 2. linia: `b` — liczba naturalna (wykładnik)
+# 
 # ### Wyjście
-#
-# Jedna linia: współczynniki sumy od najwyższej potęgi, oddzielone spacją.
-#
+# 
+# Jedna liczba całkowita — wartość $a^b$. Przyjmujemy, że $0^0 = 1$.
+# 
+# ### Ograniczenia
+# 
+# * `-10 ≤ a ≤ 10`
+# * `0 ≤ b ≤ 18`
+# 
 # ### Przykład
-#
+# 
 # **Wejście:**
-#
+# 
 # ```
 # 2
-# 3 5 2
-# 2
-# 2 -8 1
+# 3
 # ```
-#
+# 
 # **Wyjście:**
-#
+# 
 # ```
-# 5 -3 3
+# 8
 # ```
-#
-# ### Uwagi o formatowaniu
-#
-# * Jeśli stopnie są różne, wyrównaj listy „od końca” (od wyrazu wolnego), dopisując zera na początku krótszej.
-funkcja_glowna() {
-    # TODO: Implementacja funkcjonalnosci opisanej w docstringu
-    echo "Funkcjonalnosc wymaga pelnej implementacji"
+# 
+# ### Uwagi
+# 
+# * Nie używaj operatora `**` ani funkcji `pow()` — potęgę ma obliczyć Twoja funkcja.
+# 
+# ### Kod startowy
+# 
+# ```python
+# def potega(a, b):
+#     pass
+# 
+# 
+# a = int(input())
+# b = int(input())
+# print(potega(a, b))
+# ```
+source ../assert.sh
+
+potega() {
+    # Wypisuje a^b dla b >= 0.
+    # Złożoność czasowa: O(b), złożoność pamięciowa: O(b) - przez stos rekurencji
+    local a=$1
+    local b=$2
+
+    if ((b == 0)); then
+        echo 1
+        return
+    fi
+
+    echo $((a * $(potega "$a" $((b - 1)))))
 }
 
 main() {
-    funkcja_glowna
+    assertEqual "$(potega 2 3)" 8 $LINENO
+    assertEqual "$(potega 5 0)" 1 $LINENO
+    assertEqual "$(potega 0 5)" 0 $LINENO
+    assertEqual "$(potega -2 5)" -32 $LINENO
 }
 
 main "$@"

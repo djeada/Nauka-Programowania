@@ -50,7 +50,7 @@ Jedna linia: zapis liczby w systemie o podstawie `q` (używaj `0–9` i `A–Z`)
 */
 #include <algorithm>
 #include <cassert>
-#include <cmath>
+#include <stdexcept>
 #include <string>
 
 int naDziesietny(std::string liczba, int staraPodstawa) {
@@ -61,14 +61,14 @@ int naDziesietny(std::string liczba, int staraPodstawa) {
 
   int reprezentacjaDziesietna = 0;
 
-  for (int i = liczba.size() - 1; i >= 0; i--) {
-    if (liczba[i] >= 'A' && liczba[i] < 'Z')
-      reprezentacjaDziesietna +=
-          (liczba[i] - 'A' + 10) * pow(staraPodstawa, (liczba.size() - 1 - i));
-
+  for (char znak : liczba) {
+    int cyfra;
+    if (znak >= 'A' && znak <= 'Z')
+      cyfra = znak - 'A' + 10;
     else
-      reprezentacjaDziesietna +=
-          (liczba[i] - '0') * pow(staraPodstawa, (liczba.size() - 1 - i));
+      cyfra = znak - '0';
+
+    reprezentacjaDziesietna = reprezentacjaDziesietna * staraPodstawa + cyfra;
   }
 
   return reprezentacjaDziesietna;
@@ -77,14 +77,21 @@ int naDziesietny(std::string liczba, int staraPodstawa) {
 void zmianaPodstawy(std::string &liczba, int staraPodstawa, int nowaPodstawa) {
   /*
    * Funkcja zamienia liczbe z reprezentacji w systemie stara_podstawa na
-   * reprezentacje w systemie dziesietnym.
+   * reprezentacje w systemie nowa_podstawa.
    */
-  if (staraPodstawa > (10 + 'Z' - 'A'))
-    throw std::invalid_argument("Podstawa systemu nie moze byc wieksza niz 36");
+  const int maksymalnaPodstawa = 10 + 'Z' - 'A' + 1;
+  if (staraPodstawa < 2 || staraPodstawa > maksymalnaPodstawa ||
+      nowaPodstawa < 2 || nowaPodstawa > maksymalnaPodstawa)
+    throw std::invalid_argument("Podstawa systemu musi byc z zakresu 2-36");
 
   int reprezentacjaDziesietna = naDziesietny(liczba, staraPodstawa);
   liczba = "";
-  podstawa = nowaPodstawa;
+  const int podstawa = nowaPodstawa;
+
+  if (reprezentacjaDziesietna == 0) {
+    liczba = "0";
+    return;
+  }
 
   while (reprezentacjaDziesietna > 0) {
     int reszta = reprezentacjaDziesietna % podstawa;
@@ -97,7 +104,7 @@ void zmianaPodstawy(std::string &liczba, int staraPodstawa, int nowaPodstawa) {
     liczba += nowyZnak;
   }
 
-  reverse(liczba.begin(), liczba.end());
+  std::reverse(liczba.begin(), liczba.end());
 }
 
 void testZmianaPodstawy() {
@@ -108,8 +115,27 @@ void testZmianaPodstawy() {
   assert(liczba == wynik);
 }
 
+void testZmianaPodstawyLitery() {
+  std::string liczba = "FF";
+  zmianaPodstawy(liczba, 16, 2);
+  assert(liczba == "11111111");
+
+  liczba = "35";
+  zmianaPodstawy(liczba, 10, 36);
+  assert(liczba == "Z");
+
+  liczba = "Z";
+  zmianaPodstawy(liczba, 36, 10);
+  assert(liczba == "35");
+
+  liczba = "0";
+  zmianaPodstawy(liczba, 10, 2);
+  assert(liczba == "0");
+}
+
 int main() {
   testZmianaPodstawy();
+  testZmianaPodstawyLitery();
 
   return 0;
 }

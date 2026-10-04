@@ -62,7 +62,7 @@ public class Main {
 
     sortuj(lista);
 
-    assert lista == wynik;
+    assert lista.equals(wynik);
   }
 
   public static void main(String[] args) {

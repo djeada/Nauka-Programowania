@@ -105,7 +105,7 @@ public class Main {
     ArrayList<Integer> wynik = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
 
     sortuj(lista);
-    assert lista == wynik;
+    assert lista.equals(wynik);
   }
 
   public static void main(String[] args) {

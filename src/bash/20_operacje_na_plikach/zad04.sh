@@ -36,17 +36,18 @@ wypisz_plik() {
 }
 
 main() {
+    # Testy tworzą i usuwają pliki — pracuj w katalogu tymczasowym, nie w repozytorium.
+    local katalog_roboczy
+    katalog_roboczy=$(mktemp -d)
+    trap 'rm -rf "$katalog_roboczy"' EXIT
+    cd "$katalog_roboczy" || exit 1
 
-    mkdir 'test'
     mkdir 'test'
 
     echo 'test' >'test/test.txt'
-    echo 'test' >'test/test.txt'
 
     wypisz_plik 'test/test.txt'
-    wypisz_plik 'test/test.txt'
 
-    rm -rf 'test'
     rm -rf 'test'
 }
 

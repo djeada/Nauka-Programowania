@@ -38,6 +38,7 @@ listy.
 #include <algorithm>
 #include <cassert>
 #include <climits>
+#include <stdexcept>
 #include <vector>
 
 // Zlozonosc czasowa O(nlogn)

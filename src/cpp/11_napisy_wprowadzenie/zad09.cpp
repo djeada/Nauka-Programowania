@@ -53,6 +53,7 @@ Zarobki: 1000
 #include <cassert>
 #include <iostream>
 #include <sstream>
+#include <string>
 #include <vector>
 
 // Zlozonosc Czasowa: O(n)

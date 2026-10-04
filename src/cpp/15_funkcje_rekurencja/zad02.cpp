@@ -1,61 +1,76 @@
 /*
-ZAD-02 — Iloczyn wielomianu przez skalar
+ZAD-02 — Suma liczb naturalnych mniejszych od N
 
 **Poziom:** ★☆☆
-**Tagi:** `wielomiany`, `listy`, `I/O`
+**Tagi:** `rekurencja`, `suma`
 
 ### Treść
 
-Wczytaj współczynniki wielomianu oraz liczbę `k`. Wypisz współczynniki
-wielomianu powstałego przez pomnożenie każdego współczynnika przez `k`.
+Napisz rekurencyjną funkcję `suma_mniejszych(n)`, która zwraca sumę wszystkich liczb naturalnych mniejszych od $n$, czyli $0 + 1 + 2 + \dots + (n-1)$.
+
+Program wczytuje $N$ i wypisuje wynik funkcji.
 
 ### Wejście
 
-* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
-* 2. linia: `n+1` liczb całkowitych: `a_n ... a_0`
-* 3. linia: `k` — liczba całkowita (skalar)
+Jedna liczba naturalna `N`.
 
 ### Wyjście
 
-Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielonych
-spacją.
+Jedna liczba naturalna — suma liczb naturalnych mniejszych od `N`. Dla `N = 0` nie ma takich liczb, więc suma wynosi `0`.
+
+### Ograniczenia
+
+* `0 ≤ N ≤ 100`
 
 ### Przykład
 
 **Wejście:**
 
 ```
-2
-4 -3 2
--2
+10
 ```
 
 **Wyjście:**
 
 ```
--8 6 -4
+45
+```
+
+$0 + 1 + 2 + \dots + 9 = 45$ (liczba `10` nie jest mniejsza od `10`).
+
+### Uwagi
+
+* Suma liczb mniejszych od $n$ to $(n-1)$ plus suma liczb mniejszych od $n-1$.
+
+### Kod startowy
+
+```python
+def suma_mniejszych(n):
+    pass
+
+
+n = int(input())
+print(suma_mniejszych(n))
 ```
 
 */
+
 #include <cassert>
 
 // Zlozonosc Czasowa: O(n)
 // Zlozonosc Pamieciowa: O(n) - przez stos rekurencji
-int sumaV1(int N) {
-  /**
-   * Funkcja zwraca wielomian bedacy wynikiem mnozenia otrzymanego wielomianu
-   * przez liczbe x.
-   */
-  if (N <= 0) return 0;
+int sumaMniejszych(int n) {
+  // Zwraca 0 + 1 + ... + (n - 1).
+  if (n <= 1) return 0;
 
-  return N + sumaV1(N - 1);
+  return (n - 1) + sumaMniejszych(n - 1);
 }
 
 void test1() {
-  int N = 10;
-  int wynik = 55;
-
-  assert(sumaV1(N) == wynik);
+  assert(sumaMniejszych(0) == 0);
+  assert(sumaMniejszych(1) == 0);
+  assert(sumaMniejszych(10) == 45);
+  assert(sumaMniejszych(100) == 4950);
 }
 
 int main() {

@@ -86,6 +86,11 @@ public class Main {
       maksimum = Math.max(maksimum, lista.get(i));
     }
 
+    // Listy były uzupełniane od końca - odwracamy je, aby element o indeksie i
+    // opisywał elementy położone na prawo od pozycji i.
+    Collections.reverse(minPrawo);
+    Collections.reverse(maksPrawo);
+
     int wynik = Integer.MAX_VALUE;
 
     for (int i = 0; i < n - 2; i++)

@@ -46,6 +46,7 @@ linii.
 
 */
 #include <iostream>
+#include <string>
 
 // Zlozonosc Czasowa: O(n/k) gdzie n to dlugosc napisu
 // Zlozonosc Pamieciowa: O(1)

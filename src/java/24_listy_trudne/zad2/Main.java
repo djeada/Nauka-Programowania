@@ -35,19 +35,17 @@ import java.util.*;
 
 public class Main {
 
-  // Przenosi wszystkie zera na koniec listy zachowując kolejność pozostałych elementów
-  // Złożoność czasowa: O(n²) gdzie n to długość listy
+  // Przenosi wszystkie zera na koniec listy zachowując kolejność pozostałych elementów:
+  // każdy niezerowy element zamieniamy z pierwszą wolną pozycją na początku listy
+  // Złożoność czasowa: O(n) gdzie n to długość listy
   // Złożoność pamięciowa: O(1) - modyfikuje listę w miejscu
   public static void zeraV1(ArrayList<Integer> lista) {
-    int N = lista.size();
+    int pozycja = 0;
 
-    for (int i = 0; i < N; i++) {
-      if (lista.get(i) == 0) {
-        int j = i + 1;
-
-        while (lista.get(j) == 0 && j < N) j++;
-
-        Collections.swap(lista, i, j);
+    for (int i = 0; i < lista.size(); i++) {
+      if (lista.get(i) != 0) {
+        Collections.swap(lista, pozycja, i);
+        pozycja++;
       }
     }
   }

@@ -49,11 +49,13 @@ program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca).
 #include <algorithm>
 #include <cassert>
 #include <cstdlib>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <string>
+#include <vector>
 
-namespace filesys = std::experimental::filesystem;
+namespace filesys = std::filesystem;
 
 std::string katalogDomowy() {
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
@@ -70,18 +72,23 @@ std::string katalogDomowy() {
   return "";
 }
 
+// Zwraca pelne (kanoniczne) sciezki wszystkich plikow o podanej nazwie
+// znajdujacych sie w folderze i jego podfolderach. Foldery bez uprawnien
+// do odczytu sa pomijane.
 std::vector<std::string> plikiWFolderze(const std::string &sciezkaFolderu,
                                         const std::string &szukanyPlik) {
   std::vector<std::string> listaSciezek;
   try {
-    for (auto &file : filesys::recursive_directory_iterator(sciezkaFolderu)) {
+    for (auto &file : filesys::recursive_directory_iterator(
+             sciezkaFolderu,
+             filesys::directory_options::skip_permission_denied)) {
       if (file.path().filename().string() == szukanyPlik)
-        listaSciezek.push_back(file.path());
+        listaSciezek.push_back(filesys::canonical(file.path()).string());
     }
   }
 
   catch (std::system_error &e) {
-    std::cerr << "Exception :: " << e.what();
+    std::cerr << "Exception :: " << e.what() << std::endl;
   }
 
   return listaSciezek;
@@ -111,13 +118,16 @@ void test1() {
     ofs2.close();
   }
 
-  auto wynik = sciezkiWSystemie(szukanyPlik);
+  // przeszukaj tylko folder tymczasowy, aby test nie zalezal od zawartosci
+  // katalogu domowego
+  auto wynik = plikiWFolderze(sciezka.string(), szukanyPlik);
+  assert(wynik.size() == 2);
 
   // sprawdz czy tymczasowe pliku znajduja sie w liscie znalezionych plikow
   assert(std::count(wynik.begin(), wynik.end(),
-                    filesys::canonical(sciezka / szukanyPlik)));
+                    filesys::canonical(sciezka / szukanyPlik).string()));
   assert(std::count(wynik.begin(), wynik.end(),
-                    filesys::canonical(sciezka / sciezka / szukanyPlik)));
+                    filesys::canonical(sciezka / sciezka / szukanyPlik).string()));
 
   filesys::remove_all(sciezka);
 }

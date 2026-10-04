@@ -40,13 +40,19 @@ Prawda
 */
 #include <algorithm>
 #include <cassert>
+#include <cctype>
 #include <string>
 
-bool jednakowyPoczatekV1(string slowoA, string slowoB) {
-  transform(slowoA.begin(), slowoA.end(), slowoA.begin(), ::tolower);
-  transform(slowoB.begin(), slowoB.end(), slowoB.begin(), ::tolower);
+// Sprawdza (bez rozrozniania wielkosci liter), czy slowoA zaczyna sie od
+// slowoB.
+bool jednakowyPoczatekV1(std::string slowoA, std::string slowoB) {
+  auto naMale = [](unsigned char znak) {
+    return static_cast<char>(std::tolower(znak));
+  };
+  std::transform(slowoA.begin(), slowoA.end(), slowoA.begin(), naMale);
+  std::transform(slowoB.begin(), slowoB.end(), slowoB.begin(), naMale);
 
-  return !slowoA.find(slowoB);
+  return slowoA.compare(0, slowoB.size(), slowoB) == 0;
 }
 
 // Testy Poprawnosci
@@ -64,9 +70,18 @@ void test2() {
   assert(!jednakowyPoczatekV1(slowoA, slowoB));
 }
 
+void test3() {
+  // slowoB wystepuje w slowoA, ale nie na poczatku
+  assert(!jednakowyPoczatekV1("Dinozaur jest zly", "jest"));
+  // slowoB dluzsze niz slowoA
+  assert(!jednakowyPoczatekV1("Dino", "Dinozaur"));
+  assert(jednakowyPoczatekV1("Dinozaur", ""));
+}
+
 int main() {
   test1();
   test2();
+  test3();
 
   return 0;
 }

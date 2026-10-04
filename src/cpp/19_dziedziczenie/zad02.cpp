@@ -105,14 +105,14 @@ class Kwadrat : public Ksztalt {
 
 void test1() {
   Kolo kolo(3);
-  assert(abs(kolo.obwod() - 18.85) < 0.01);
-  assert(abs(kolo.pole() - 28.27) < 0.01);
+  assert(std::fabs(kolo.obwod() - 18.85) < 0.01);
+  assert(std::fabs(kolo.pole() - 28.27) < 0.01);
 }
 
 void test2() {
   Kwadrat kwadrat(3);
-  assert(abs(kwadrat.obwod() - 12) < 0.01);
-  assert(abs(kwadrat.pole() - 9) < 0.01);
+  assert(std::fabs(kwadrat.obwod() - 12) < 0.01);
+  assert(std::fabs(kwadrat.pole() - 9) < 0.01);
 }
 
 int main() {

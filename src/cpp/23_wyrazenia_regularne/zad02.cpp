@@ -55,7 +55,7 @@ bool poprawneHaslo(std::string &haslo) {
   if (regex_search(haslo, std::regex("[a-z]")) &&
       regex_search(haslo, std::regex("[A-Z]"))) {
     if (regex_search(haslo, std::regex("[0-9]")) &&
-        regex_search(haslo, std::regex("[!#$%&'*+-/=?^_`{|}~]")))
+        regex_search(haslo, std::regex("[!#$%&'*+\\-/=?^_`{|}~]")))
       return haslo.size() >= 8 && haslo.size() <= 20;
   }
 

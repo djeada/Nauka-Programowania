@@ -41,25 +41,38 @@ import java.util.*;
 
 public class Main {
 
-  // Generuje zbiór potęgowy - wszystkie możliwe podzbiory listy
+  // Generuje zbiór potęgowy - wszystkie możliwe (różne) podzbiory listy.
+  // Elementy listy są najpierw sortowane, dzięki czemu podzbiory różniące się
+  // tylko kolejnością powtórzonych elementów (np. [1, 2] i [2, 1]) są takie same
+  // i trafiają do wyniku tylko raz.
   // Złożoność czasowa: O(2^n * n) gdzie n to długość listy
   // Złożoność pamięciowa: O(2^n * n) - przechowuje wszystkie podzbiory
   public static ArrayList<ArrayList<Integer>> zbiorPotegowy(ArrayList<Integer> lista) {
-    int N = (int) Math.pow(2, lista.size());
-    ArrayList<ArrayList<Integer>> zbiorPotegowy = new ArrayList<ArrayList<Integer>>();
+    ArrayList<Integer> posortowana = new ArrayList<Integer>(lista);
+    Collections.sort(posortowana);
+
+    int N = 1 << posortowana.size();
+    Set<ArrayList<Integer>> zbiorPotegowy = new LinkedHashSet<ArrayList<Integer>>();
 
     for (int i = 0; i < N; i++) {
       ArrayList<Integer> podzbior = new ArrayList<Integer>();
 
-      for (int j = 0; j < lista.size(); j++) {
+      for (int j = 0; j < posortowana.size(); j++) {
         if ((i & (1 << j)) != 0)
-          podzbior.add(lista.get(j));
+          podzbior.add(posortowana.get(j));
       }
 
       zbiorPotegowy.add(podzbior);
     }
 
-    return zbiorPotegowy;
+    return new ArrayList<ArrayList<Integer>>(zbiorPotegowy);
+  }
+
+  // Porównuje dwie kolekcje podzbiorów bez względu na ich kolejność.
+  private static boolean takieSamePodzbiory(
+      List<ArrayList<Integer>> wynik, List<ArrayList<Integer>> oczekiwane) {
+    return wynik.size() == oczekiwane.size()
+        && new HashSet<ArrayList<Integer>>(wynik).equals(new HashSet<ArrayList<Integer>>(oczekiwane));
   }
 
   public static void test1() {
@@ -76,7 +89,7 @@ public class Main {
     wynik.add(new ArrayList<Integer>(Arrays.asList()));
     wynik.add(new ArrayList<Integer>(Arrays.asList(1, 1)));
 
-    assert(zbiorPotegowy(lista).equals(wynik));
+    assert takieSamePodzbiory(zbiorPotegowy(lista), wynik);
   }
 
   public static void test2() {
@@ -90,7 +103,7 @@ public class Main {
     wynik.add(new ArrayList<Integer>(Arrays.asList(5)));
     wynik.add(new ArrayList<Integer>(Arrays.asList()));
 
-    assert(zbiorPotegowy(lista).equals(wynik));
+    assert takieSamePodzbiory(zbiorPotegowy(lista), wynik);
   }
 
   public static void test3() {
@@ -99,7 +112,7 @@ public class Main {
     ArrayList<ArrayList<Integer>> wynik = new ArrayList<ArrayList<Integer>>();
     wynik.add(new ArrayList<Integer>(Arrays.asList()));
 
-    assert(zbiorPotegowy(lista).equals(wynik));
+    assert takieSamePodzbiory(zbiorPotegowy(lista), wynik);
   }
 
   public static void main(String[] args) {

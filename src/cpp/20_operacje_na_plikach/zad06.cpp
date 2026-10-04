@@ -58,14 +58,17 @@ przykładzie).
 */
 #include <algorithm>
 #include <cassert>
-#include <experimental/filesystem>
+#include <cmath>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
+#include <string>
 #include <unordered_map>
+#include <vector>
 
-namespace filesys = std::experimental::filesystem;
+namespace filesys = std::filesystem;
 
 void wyczysc(std::string &napis) {
   auto it = napis.begin();
@@ -195,12 +198,12 @@ void test1() {
   int _liczbaSlow = 88;
   assert(liczbaSlow(trescPliku) == _liczbaSlow);
 
-  double _sredniaDlugoscWiersza = 50.6;
-  assert(abs(sredniaDlugoscWiersza(trescPliku) - _sredniaDlugoscWiersza) <
+  double _sredniaDlugoscWiersza = 50.5;
+  assert(std::fabs(sredniaDlugoscWiersza(trescPliku) - _sredniaDlugoscWiersza) <
          0.01);
 
   double _sredniaLiczbaSlow = 8.8;
-  assert(abs(sredniaLiczbaSlow(trescPliku) - _sredniaLiczbaSlow) < 0.01);
+  assert(std::fabs(sredniaLiczbaSlow(trescPliku) - _sredniaLiczbaSlow) < 0.01);
 
   std::unordered_map<std::string, int> _histogramSlow = {
       {"bold", 1},        {"in", 1},

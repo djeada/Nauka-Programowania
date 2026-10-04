@@ -72,53 +72,65 @@
 source ../assert.sh
 
 mnozenie() {
-    mnozenie() {
 
-        a=$1
-        b=$2
-        wynik=0
+    local a=$1
+    local b=$2
+    local wynik=0
 
-        for (( i=0; i<$b; i++ )); do
-            wynik=$(($wynik + $a))
-        done
+    for ((i = 0; i < b; i++)); do
+        wynik=$((wynik + a))
+    done
 
-        echo $wynik
-    }
+    echo $wynik
+}
 
-    dzielenie() {
-        dzielenie() {
-            a=$1
-            b=$2
-            wynik=0
+dzielenie() {
 
-            while [ $a -ge $b ]; do
-                a=$(($a - $b))
-                wynik=$(($wynik + 1))
-            done
+    local a=$1
+    local b=$2
+    local wynik=0
 
-            echo $wynik
-        }
+    while [ $a -ge $b ]; do
+        a=$((a - b))
+        wynik=$((wynik + 1))
+    done
 
-        test1() {
-            test1() {
-                a=2
-                b=3
-                wynik=6
-                assert "$wynik -eq $(mnozenie $a $b)" $LINENO
-            }
+    echo $wynik
+}
 
-            test2() {
-                a=30
-                b=6
-                wynik=5
-                assert "$wynik -eq $(dzielenie $a $b)" $LINENO
+test1() {
+    a=2
+    b=3
+    wynik=6
+    assert "$wynik -eq $(mnozenie $a $b)" $LINENO
+}
 
-            }
+test2() {
+    a=30
+    b=6
+    wynik=5
+    assert "$wynik -eq $(dzielenie $a $b)" $LINENO
+}
 
-            main() {
-                test1
-                test2
-            }
+test3() {
+    a=7
+    b=0
+    wynik=0
+    assert "$wynik -eq $(mnozenie $a $b)" $LINENO
+}
 
-            main "$@"
+test4() {
+    a=7
+    b=2
+    wynik=3
+    assert "$wynik -eq $(dzielenie $a $b)" $LINENO
+}
 
+main() {
+    test1
+    test2
+    test3
+    test4
+}
+
+main "$@"

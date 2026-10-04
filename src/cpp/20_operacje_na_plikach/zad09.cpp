@@ -30,11 +30,11 @@ C:\Users\Username\Documents\DoUsunięcia
 
 */
 #include <cassert>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <fstream>
 #include <string>
 
-namespace filesys = std::experimental::filesystem;
+namespace filesys = std::filesystem;
 
 int rozmiarPliku(const std::string &sciezka) {
   return filesys::file_size(filesys::path(sciezka));

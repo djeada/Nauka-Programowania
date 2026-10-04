@@ -152,7 +152,7 @@ test_czy_email_poprawny_pozytywne() {
 test_czy_email_poprawny_negatywne() {
 
     assertFalse $(czy_email_poprawny "plainaddress") $LINENO
-    assertFalse $(czy_email_poprawny "#@%^%#$@#$@#.com") $LINENO
+    assertFalse $(czy_email_poprawny '#@%^%#$@#$@#.com') $LINENO
     assertFalse $(czy_email_poprawny "@example.com") $LINENO
     assertFalse $(czy_email_poprawny "Joe Smith <email@example.com") $LINENO
     assertFalse $(czy_email_poprawny "email.example.com") $LINENO

@@ -1,121 +1,83 @@
 /*
-ZAD-05 — k-ta pochodna wielomianu
+ZAD-05 — Liczba Fibonacciego
 
-**Poziom:** ★★☆
-**Tagi:** `pochodna`, `wielomiany`, `I/O`
+**Poziom:** ★☆☆
+**Tagi:** `rekurencja`, `Fibonacci`
 
 ### Treść
 
-Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomianu będącego `k`-tą pochodną.
+Napisz rekurencyjną funkcję `fibonacci(n)`, która zwraca $n$-ty wyraz ciągu Fibonacciego, zdefiniowanego następująco:
+
+* $F_0 = 0$,
+* $F_1 = 1$,
+* $F_n = F_{n-1} + F_{n-2}$ dla $n \ge 2$.
+
+Program wczytuje $N$ i wypisuje $F_N$.
 
 ### Wejście
 
-* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
-* 2. linia: `n+1` liczb: `a_n ... a_0`
-* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)
+Jedna liczba naturalna `N`.
 
 ### Wyjście
 
-* Jeśli po zróżniczkowaniu `k` razy zostaje wielomian niezerowy: wypisz jego współczynniki w jednej linii (spacje).
-* Jeśli wielomian „znika” (stopień < k): wypisz dokładnie `[]`.
+Jedna liczba naturalna — wartość $F_N$.
+
+### Ograniczenia
+
+* `0 ≤ N ≤ 25`
 
 ### Przykład
 
 **Wejście:**
 
 ```
-2
-4 -3 2
-1
+7
 ```
 
 **Wyjście:**
 
 ```
-8 -3
+13
 ```
 
-### Uwagi o formatowaniu
+Kolejne wyrazy ciągu to `0, 1, 1, 2, 3, 5, 8, 13, …`, a wyraz o numerze `7` (licząc od zera) to `13`.
 
-* Pochodna: jeśli aktualne współczynniki to `[c_d, c_{d-1}, ..., c_0]`, to pochodna ma współczynniki:
-  `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]`.
+### Uwagi
+
+* Funkcja ma dwa przypadki bazowe ($n = 0$ i $n = 1$) i wywołuje samą siebie dwa razy.
+* Ta prosta wersja wykonuje bardzo dużo powtórzonych obliczeń (liczba wywołań rośnie wykładniczo), ale dla $N \le 25$ działa wystarczająco szybko.
+
+### Kod startowy
+
+```python
+def fibonacci(n):
+    pass
+
+
+n = int(input())
+print(fibonacci(n))
+```
 
 */
 
-use std::io;
-
-// Funkcja obliczająca k-tą pochodną wielomianu
-// Złożoność czasowa: O(n * k), gdzie n to stopień wielomianu
-// Złożoność pamięciowa: O(n)
-fn pochodna_wielomianu(wspolczynniki: &[i32], k: usize) -> Option<Vec<i32>> {
-    if k == 0 {
-        return Some(wspolczynniki.to_vec());
+fn fibonacci(n: u32) -> u64 {
+    // Zwraca n-ty wyraz ciągu Fibonacciego (F_0 = 0, F_1 = 1).
+    // Złożoność czasowa: O(2^n)
+    // Złożoność pamięciowa: O(n) - przez stos rekurencji
+    if n < 2 {
+        return n as u64;
     }
 
-    if wspolczynniki.is_empty() {
-        return None;
-    }
+    fibonacci(n - 1) + fibonacci(n - 2)
+}
 
-    if wspolczynniki.len() <= k {
-        return None;
-    }
-
-    let mut wynik = wspolczynniki.to_vec();
-
-    for _ in 0..k {
-        if wynik.len() <= 1 {
-            return None;
-        }
-
-        let mut nowa = Vec::new();
-        let stopien = wynik.len() - 1;
-
-        for (i, &w) in wynik.iter().enumerate() {
-            if i < wynik.len() - 1 {
-                nowa.push(w * (stopien - i) as i32);
-            }
-        }
-
-        wynik = nowa;
-    }
-
-    if wynik.is_empty() {
-        None
-    } else {
-        Some(wynik)
-    }
+fn test_fibonacci() {
+    assert_eq!(fibonacci(0), 0);
+    assert_eq!(fibonacci(1), 1);
+    assert_eq!(fibonacci(7), 13);
+    assert_eq!(fibonacci(25), 75025);
 }
 
 fn main() {
-    let mut n_str = String::new();
-    io::stdin().read_line(&mut n_str).expect("Błąd wczytywania");
-
-    let mut wspolczynniki_str = String::new();
-    io::stdin()
-        .read_line(&mut wspolczynniki_str)
-        .expect("Błąd wczytywania");
-    let wspolczynniki: Vec<i32> = wspolczynniki_str
-        .trim()
-        .split_whitespace()
-        .map(|s| s.parse().expect("Nieprawidłowa liczba"))
-        .collect();
-
-    let mut k_str = String::new();
-    io::stdin().read_line(&mut k_str).expect("Błąd wczytywania");
-    let k: usize = k_str.trim().parse().expect("Nieprawidłowa liczba");
-
-    match pochodna_wielomianu(&wspolczynniki, k) {
-        Some(wynik) => {
-            for (i, &w) in wynik.iter().enumerate() {
-                if i > 0 {
-                    print!(" ");
-                }
-                print!("{}", w);
-            }
-            println!();
-        }
-        None => {
-            println!("[]");
-        }
-    }
+    test_fibonacci();
 }

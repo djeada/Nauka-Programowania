@@ -35,20 +35,16 @@ ABA
 #include <cassert>
 #include <string>
 
+// Dopisuje znak tylko wtedy, gdy rozpoczyna nowa serie (jest pierwszy albo
+// rozni sie od poprzedniego znaku).
+// Zlozonosc czasowa: O(n)
+// Zlozonosc pamieciowa: O(n)
 std::string usunPowtorzeniaV1(const std::string &slowo) {
   std::string wynik;
-  char ostatniUsunietyZnak;
-  int n = slowo.size();
 
-  for (auto i = 0; i < n - 1; i++) {
-    if (slowo[i] != slowo[i + 1]) {
-      wynik += slowo[i];
-      ostatniUsunietyZnak = slowo[i];
-    }
+  for (std::size_t i = 0; i < slowo.size(); i++) {
+    if (i == 0 || slowo[i] != slowo[i - 1]) wynik += slowo[i];
   }
-
-  if (!slowo.empty() && slowo.back() != ostatniUsunietyZnak)
-    wynik += slowo.back();
 
   return wynik;
 }
@@ -99,4 +95,3 @@ int main() {
   return 0;
 }
 
-// Compiled with g++ -std=c++17 Zad1.cpp -lstdc++fs -o exe

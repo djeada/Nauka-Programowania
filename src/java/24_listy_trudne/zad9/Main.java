@@ -50,7 +50,7 @@ public class Main {
     int indeksKoncowy = 0;
     int dlugosc = 1;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i + 1 < n; i++) {
       if (lista.get(i) * lista.get(i + 1) < 0) {
         dlugosc++;
 

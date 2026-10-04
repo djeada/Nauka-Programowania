@@ -38,19 +38,28 @@ pythonpython
 import java.util.*;
 
 public class Main {
-  // Znajduje najdłuższy powtarzający się podnapis
-  // Złożoność czasowa: O(n²) gdzie n to długość napisu
+  // Zwraca długość najdłuższego wspólnego przedrostka sufiksów napisu
+  // zaczynających się na pozycjach i oraz j.
+  private static int wspolnyPrzedrostek(String napis, int i, int j) {
+    int dlugosc = 0;
+    while (j + dlugosc < napis.length() && napis.charAt(i + dlugosc) == napis.charAt(j + dlugosc)) {
+      dlugosc++;
+    }
+    return dlugosc;
+  }
+
+  // Znajduje najdłuższy podnapis występujący w napisie co najmniej dwa razy
+  // (wystąpienia mogą na siebie nachodzić): porównuje każdą parę sufiksów.
+  // Złożoność czasowa: O(n³) gdzie n to długość napisu
   // Złożoność pamięciowa: O(n)
   public static String najdluzszePowtorzenie(String napis) {
     String wynik = "";
-    String wynik_tmp = "";
 
     for (int i = 0; i < napis.length(); i++) {
-      wynik_tmp = "";
-      for (int j = i; j < napis.length(); j++) {
-        wynik_tmp += napis.charAt(j);
-        if (wynik_tmp.length() > wynik.length()) {
-          wynik = wynik_tmp;
+      for (int j = i + 1; j < napis.length(); j++) {
+        int dlugosc = wspolnyPrzedrostek(napis, i, j);
+        if (dlugosc > wynik.length()) {
+          wynik = napis.substring(i, i + dlugosc);
         }
       }
     }

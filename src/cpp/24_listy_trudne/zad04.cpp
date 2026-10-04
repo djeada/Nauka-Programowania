@@ -36,7 +36,9 @@ z `B` (ten sam zakres indeksów).
 ```
 
 */
+#include <algorithm>
 #include <cassert>
+#include <stdexcept>
 #include <unordered_map>
 #include <vector>
 
@@ -52,7 +54,7 @@ int znajdzPodciagV1(std::vector<int> &listaA, std::vector<int> &listaB) {
   int sumaA = 0;
   int sumaB = 0;
 
-  for (auto i = 0; i <= listaA.size(); i++) {
+  for (int i = 0; i < static_cast<int>(listaA.size()); i++) {
     sumaA += listaA[i];
     sumaB += listaB[i];
 

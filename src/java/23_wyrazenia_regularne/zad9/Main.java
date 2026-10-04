@@ -61,7 +61,7 @@ public class Main {
             + "sufficient in be un\nThe furnished she concluded depending procuring "
             + "conce\n";
 
-    assert (wczyscTekstV1(tekst, napis) == wynik);
+    assert wczyscTekstV1(tekst, napis).equals(wynik);
   }
 
   public static void main(String[] args) {

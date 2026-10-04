@@ -33,11 +33,12 @@ Prawda
 
 */
 #include <cassert>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <string>
 
-namespace filesys = std::experimental::filesystem;
+namespace filesys = std::filesystem;
 
 bool czyPlik(std::string sciezka) {
   try {
@@ -96,4 +97,4 @@ int main() {
   return 0;
 }
 
-// Compiling with g++ -std=c++17 Zad1.cpp -lstdc++fs -o exe
+// Kompilacja: g++ -std=c++17 zad01.cpp -o exe

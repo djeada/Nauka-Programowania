@@ -41,12 +41,12 @@ do `.txt`).
 
 */
 #include <cassert>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <fstream>
 #include <string>
 #include <vector>
 
-namespace filesys = std::experimental::filesystem;
+namespace filesys = std::filesystem;
 
 std::string znajdzRozszerzenie(std::string sciezka) {
   filesys::path obiekt(sciezka);

@@ -33,18 +33,20 @@
 # ```
 source ../assert.sh
 
-# Dzieli zdanie na słowa, usuwając znaki interpunkcyjne.
+# Dzieli zdanie na fragmenty w miejscach znaków interpunkcyjnych i usuwa
+# spacje z początku i końca każdego fragmentu (puste fragmenty są pomijane).
 # Złożoność czasowa: O(n), gdzie n to liczba znaków w zdaniu
 # Złożoność pamięciowa: O(n)
 podziel_na_slowa() {
     local zdanie="$1"
-    echo "$zdanie" | tr '[[:punct:]]' '\n' | awk '{$1=$1};1'
+    echo "$zdanie" | tr '[:punct:]' '\n' | awk 'NF {$1=$1; print}'
 }
 
 test_podziel_na_slowa() {
     local zdanie="hej, pan slimak! tak to ja. chodzcie to zaspiewam wam."
-    local wynik=($(podziel_na_slowa "$zdanie"))
-    local oczekiwane=(hej pan slimak tak to ja chodzcie zaspiewam wam)
+    local wynik
+    mapfile -t wynik < <(podziel_na_slowa "$zdanie")
+    local oczekiwane=("hej" "pan slimak" "tak to ja" "chodzcie to zaspiewam wam")
     assertArrayEqual wynik oczekiwane $LINENO
 }
 

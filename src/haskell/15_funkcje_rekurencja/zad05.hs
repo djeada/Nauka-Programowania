@@ -1,71 +1,82 @@
 {-
-ZAD-05 — k-ta pochodna wielomianu
+ZAD-05 — Liczba Fibonacciego
 
-\**Poziom:** ★★☆
-\**Tagi:** `pochodna`, `wielomiany`, `I/O`
+**Poziom:** ★☆☆
+**Tagi:** `rekurencja`, `Fibonacci`
 
 ### Treść
 
-Wczytaj wielomian stopnia `n` oraz liczbę `k`. Wypisz współczynniki wielomianu będącego `k`-tą pochodną.
+Napisz rekurencyjną funkcję `fibonacci(n)`, która zwraca $n$-ty wyraz ciągu Fibonacciego, zdefiniowanego następująco:
+
+* $F_0 = 0$,
+* $F_1 = 1$,
+* $F_n = F_{n-1} + F_{n-2}$ dla $n \ge 2$.
+
+Program wczytuje $N$ i wypisuje $F_N$.
 
 ### Wejście
 
-\* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
-\* 2. linia: `n+1` liczb: `a_n ... a_0`
-\* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)
+Jedna liczba naturalna `N`.
 
 ### Wyjście
 
-\* Jeśli po zróżniczkowaniu `k` razy zostaje wielomian niezerowy: wypisz jego współczynniki w jednej linii (spacje).
-\* Jeśli wielomian „znika” (stopień < k): wypisz dokładnie `[]`.
+Jedna liczba naturalna — wartość $F_N$.
+
+### Ograniczenia
+
+* `0 ≤ N ≤ 25`
 
 ### Przykład
 
-\**Wejście:**
+**Wejście:**
 
 ```
-2
-4 -3 2
-1
+7
 ```
 
-\**Wyjście:**
+**Wyjście:**
 
 ```
-8 -3
+13
 ```
 
-### Uwagi o formatowaniu
+Kolejne wyrazy ciągu to `0, 1, 1, 2, 3, 5, 8, 13, …`, a wyraz o numerze `7` (licząc od zera) to `13`.
 
-\* Pochodna: jeśli aktualne współczynniki to `[c_d, c_{d-1}, ..., c_0]`, to pochodna ma współczynniki:
-  `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]`.
+### Uwagi
+
+* Funkcja ma dwa przypadki bazowe ($n = 0$ i $n = 1$) i wywołuje samą siebie dwa razy.
+* Ta prosta wersja wykonuje bardzo dużo powtórzonych obliczeń (liczba wywołań rośnie wykładniczo), ale dla $N \le 25$ działa wystarczająco szybko.
+
+### Kod startowy
+
+```python
+def fibonacci(n):
+    pass
+
+
+n = int(input())
+print(fibonacci(n))
+```
 
 -}
 
-import Data.List (intercalate)
+import Control.Monad (unless)
 
--- Oblicza k-tą pochodną wielomianu
--- Złożoność czasowa: O(n*k), gdzie n to stopień wielomianu
--- Złożoność pamięciowa: O(n)
-kthDerivative :: [Int] -> Int -> [Int]
-kthDerivative coeffs 0 = coeffs
-kthDerivative [] _ = []
-kthDerivative coeffs k
-  | k < 0 = coeffs
-  | k >= length coeffs = []
-  | otherwise = kthDerivative (derivative coeffs) (k - 1)
-  where
-    derivative [] = []
-    derivative [_] = []
-    derivative cs = zipWith (*) [length cs - 1, length cs - 2 .. 1] (init cs)
+-- Zwraca n-ty wyraz ciągu Fibonacciego (F_0 = 0, F_1 = 1).
+-- Złożoność czasowa: O(2^n)
+-- Złożoność pamięciowa: O(n) - przez stos rekurencji
+fibonacci :: Int -> Integer
+fibonacci 0 = 0
+fibonacci 1 = 1
+fibonacci n = fibonacci (n - 1) + fibonacci (n - 2)
 
--- k-ta pochodna wielomianu (z I/O)
 main :: IO ()
 main = do
-  n <- readLn :: IO Int
-  coeffs <- map read . words <$> getLine :: IO [Int]
-  k <- readLn :: IO Int
-  let result = kthDerivative coeffs k
-  if null result
-    then putStrLn "[]"
-    else putStrLn $ intercalate " " $ map show result
+  let testy =
+        [ fibonacci 0 == 0,
+          fibonacci 1 == 1,
+          fibonacci 7 == 13,
+          fibonacci 20 == 6765
+        ]
+  unless (and testy) $ error "Test nie przeszedl"
+  putStrLn "Wszystkie testy zakonczone sukcesem"

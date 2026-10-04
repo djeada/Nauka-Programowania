@@ -1,53 +1,77 @@
 {-
-ZAD-02 — Iloczyn wielomianu przez skalar
+ZAD-02 — Suma liczb naturalnych mniejszych od N
 
-\**Poziom:** ★☆☆
-\**Tagi:** `wielomiany`, `listy`, `I/O`
+**Poziom:** ★☆☆
+**Tagi:** `rekurencja`, `suma`
 
 ### Treść
 
-Wczytaj współczynniki wielomianu oraz liczbę `k`. Wypisz współczynniki wielomianu powstałego przez pomnożenie każdego współczynnika przez `k`.
+Napisz rekurencyjną funkcję `suma_mniejszych(n)`, która zwraca sumę wszystkich liczb naturalnych mniejszych od $n$, czyli $0 + 1 + 2 + \dots + (n-1)$.
+
+Program wczytuje $N$ i wypisuje wynik funkcji.
 
 ### Wejście
 
-\* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
-\* 2. linia: `n+1` liczb całkowitych: `a_n ... a_0`
-\* 3. linia: `k` — liczba całkowita (skalar)
+Jedna liczba naturalna `N`.
 
 ### Wyjście
 
-Jedna linia: `n+1` liczb całkowitych (współczynniki po mnożeniu), oddzielonych spacją.
+Jedna liczba naturalna — suma liczb naturalnych mniejszych od `N`. Dla `N = 0` nie ma takich liczb, więc suma wynosi `0`.
+
+### Ograniczenia
+
+* `0 ≤ N ≤ 100`
 
 ### Przykład
 
-\**Wejście:**
+**Wejście:**
 
 ```
-2
-4 -3 2
--2
+10
 ```
 
-\**Wyjście:**
+**Wyjście:**
 
 ```
--8 6 -4
+45
+```
+
+$0 + 1 + 2 + \dots + 9 = 45$ (liczba `10` nie jest mniejsza od `10`).
+
+### Uwagi
+
+* Suma liczb mniejszych od $n$ to $(n-1)$ plus suma liczb mniejszych od $n-1$.
+
+### Kod startowy
+
+```python
+def suma_mniejszych(n):
+    pass
+
+
+n = int(input())
+print(suma_mniejszych(n))
 ```
 
 -}
 
-import Data.List (intercalate)
+import Control.Monad (unless)
 
--- Mnoży wielomian przez skalar
--- Złożoność czasowa: O(n), gdzie n to stopień wielomianu
--- Złożoność pamięciowa: O(n)
-multiplyByScalar :: [Int] -> Int -> [Int]
-multiplyByScalar coeffs k = map (* k) coeffs
+-- Zwraca 0 + 1 + ... + (n - 1).
+-- Złożoność czasowa: O(n)
+-- Złożoność pamięciowa: O(n) - przez stos rekurencji
+sumaMniejszych :: Integer -> Integer
+sumaMniejszych n
+  | n <= 1 = 0
+  | otherwise = (n - 1) + sumaMniejszych (n - 1)
 
--- Iloczyn wielomianu przez skalar (z I/O)
 main :: IO ()
 main = do
-  n <- readLn :: IO Int
-  coeffs <- map read . words <$> getLine :: IO [Int]
-  k <- readLn :: IO Int
-  putStrLn $ intercalate " " $ map show $ multiplyByScalar coeffs k
+  let testy =
+        [ sumaMniejszych 0 == 0,
+          sumaMniejszych 1 == 0,
+          sumaMniejszych 10 == 45,
+          sumaMniejszych 100 == 4950
+        ]
+  unless (and testy) $ error "Test nie przeszedl"
+  putStrLn "Wszystkie testy zakonczone sukcesem"

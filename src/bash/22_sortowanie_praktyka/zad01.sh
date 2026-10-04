@@ -39,7 +39,8 @@ source ../assert.sh
 # Złożoność pamięciowa: O(n)
 sortuj_napis() {
     local napis="$1"
-    echo "$napis" | grep -o . | sort | tr -d "\n"
+    # LC_ALL=C: porządek według kodów znaków (spacja < wielkie litery < małe)
+    echo "$napis" | grep -o . | LC_ALL=C sort | tr -d "\n"
     echo
 }
 

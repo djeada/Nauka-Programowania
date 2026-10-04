@@ -32,6 +32,7 @@ D:\Backup\Obrazy
 */
 import java.io.IOException;
 import java.nio.file.*;
+import java.util.Comparator;
 
 public class Main {
   // Zwraca nazwę pliku ze ścieżki
@@ -81,9 +82,19 @@ public class Main {
     }
   }
 
+  // Usuwa folder razem z całą zawartością.
+  private static void usunRekurencyjnie(Path folder) throws IOException {
+    try (var sciezki = Files.walk(folder)) {
+      for (Path sciezka : sciezki.sorted(Comparator.reverseOrder()).toList()) {
+        Files.delete(sciezka);
+      }
+    }
+  }
+
   public static void testCopyFiles() throws IOException {
-    String folderPath1 = "test1";
-    String folderPath2 = "test2";
+    Path folderTymczasowy = Files.createTempDirectory("zad10");
+    String folderPath1 = folderTymczasowy.resolve("test1").toString();
+    String folderPath2 = folderTymczasowy.resolve("test2").toString();
     Files.createDirectory(Paths.get(folderPath1));
     Files.createDirectory(Paths.get(folderPath2));
 
@@ -97,8 +108,7 @@ public class Main {
     assert Files.exists(Paths.get(folderPath2 + "/file1.png"));
     assert Files.exists(Paths.get(folderPath2 + "/file2.png"));
 
-    Files.delete(Paths.get(folderPath1));
-    Files.delete(Paths.get(folderPath2));
+    usunRekurencyjnie(folderTymczasowy);
   }
 
   public static void main(String[] args) throws IOException {

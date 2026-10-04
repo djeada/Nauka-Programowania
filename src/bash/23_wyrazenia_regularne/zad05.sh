@@ -38,14 +38,14 @@ source ../assert.sh
 # Złożoność czasowa: O(n), gdzie n to długość napisu
 # Złożoność pamięciowa: O(k), gdzie k to liczba cyfr
 odfiltruj_cyfry() {
-    echo "$1" | grep -o '[0-9]'
+    echo "${1//[^0-9]/}"
 }
 
 test_odfiltruj_cyfry() {
-    assertEqual $(odfiltruj_cyfry "abc123") "123"
-    assertEqual $(odfiltruj_cyfry "abc") ""
-    assertEqual $(odfiltruj_cyfry "123") "123"
-    assertEqual $(odfiltruj_cyfry "3d4jda2") "342"
+    assertEqual "$(odfiltruj_cyfry "abc123")" "123" $LINENO
+    assertEqual "$(odfiltruj_cyfry "abc")" "" $LINENO
+    assertEqual "$(odfiltruj_cyfry "123")" "123" $LINENO
+    assertEqual "$(odfiltruj_cyfry "3d4jda2")" "342" $LINENO
 }
 
 main() {

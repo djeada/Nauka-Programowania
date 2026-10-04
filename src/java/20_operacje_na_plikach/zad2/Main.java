@@ -101,7 +101,7 @@ public class Main {
   }
 
   public static void test1() throws IOException {
-    String sciezka = "temp_dir";
+    String sciezka = Files.createTempDirectory("zad2").toString();
     try {
       Files.createDirectories(Paths.get(sciezka));
     } catch (FileAlreadyExistsException ignored) {
