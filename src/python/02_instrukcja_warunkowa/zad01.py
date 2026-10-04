@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Liczba większa od 5
 
 **Poziom:** ★☆☆
@@ -7,16 +7,16 @@ ZAD-01 — Liczba większa od 5
 ### Treść
 
 Wczytaj jedną liczbę naturalną `n`.
-Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
+Jeśli $n > 5$, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 
 ### Wejście
 
-* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+* 1 linia: `n` — liczba całkowita, $0 \le n \le 10^9$
 
 ### Wyjście
 
-* Jeśli `n > 5`: jedna linia z liczbą `n`
-* Jeśli `n ≤ 5`: brak wyjścia
+* Jeśli $n > 5$: jedna linia z liczbą `n`.
+* Jeśli $n \le 5$: brak wyjścia.
 
 ### Przykład 1
 
@@ -45,10 +45,7 @@ Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 """
 
 if __name__ == "__main__":
+    n = int(input())
 
-    print("podaj liczbe:")
-
-    x = int(input())
-
-    if x > 5:
-        print(x)
+    if n > 5:
+        print(n)

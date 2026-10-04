@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-07 — Średnia dwóch największych liczb
 
 **Poziom:** ★☆☆
@@ -6,16 +6,20 @@ ZAD-07 — Średnia dwóch największych liczb
 
 ### Treść
 
-Wczytaj `N` liczb naturalnych (`N ≥ 2`). Znajdź największą i drugą największą wartość, a następnie wypisz ich średnią arytmetyczną jako liczbę zmiennoprzecinkową z dokładnością do **jednego** miejsca po przecinku.
+Wczytaj listę `n` liczb naturalnych. Znajdź dwa największe elementy listy i wypisz ich średnią arytmetyczną.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 2`)
-* kolejne `N` linii: liczby naturalne
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb naturalnych oddzielonych spacjami
 
 ### Wyjście
 
-Jedna liczba zmiennoprzecinkowa w formacie `%.1f`.
+Jedna liczba: średnia dwóch największych elementów, z dokładnością do **jednego** miejsca po przecinku (np. `8.0`, `5.5`).
+
+### Ograniczenia
+
+* $n \ge 2$
 
 ### Przykład
 
@@ -23,12 +27,7 @@ Jedna liczba zmiennoprzecinkowa w formacie `%.1f`.
 
 ```
 6
-9
-2
-3
-2
-1
-7
+9 2 3 2 1 7
 ```
 
 **Wyjście:**
@@ -37,32 +36,25 @@ Jedna liczba zmiennoprzecinkowa w formacie `%.1f`.
 8.0
 ```
 
+Dwa największe elementy to $9$ i $7$, a $\frac{9 + 7}{2} = 8$.
+
+### Uwagi
+
+* Jeśli największa wartość występuje w liście kilka razy, oba największe elementy mają tę samą wartość, np. dla `5 3 5` wynik to `5.0`.
+* Liczbę z jednym miejscem po przecinku wypiszesz np. tak: `print(f"{wynik:.1f}")`.
+
 """
 
 
 def srednia_dwoch_najwiekszych(lista):
-
-    if len(lista) < 2:
-        return 0.00
-
-    najwieksza = max(lista)
-    najwieksza_druga = max(lista[: lista.index(najwieksza)])
-    srednia = (najwieksza + najwieksza_druga) / 2
-    return srednia
-
-
-def test_srednia_dwoch_najwiekszych():
-
-    assert srednia_dwoch_najwiekszych([]) == 0.00
-    assert srednia_dwoch_najwiekszych([1]) == 0.00
-    assert srednia_dwoch_najwiekszych([1, 2]) == 1.50
-    assert srednia_dwoch_najwiekszych([3, 5, -7, 4, 9, -11, 2]) == 7.00
-    assert (
-        srednia_dwoch_najwiekszych([3, -2, 4, 9, -3, -40, 8, 5, -7, 4, 9, -11, 2])
-        == 6.5
-    )
+    kopia = list(lista)
+    najwieksza = max(kopia)
+    kopia.remove(najwieksza)
+    druga = max(kopia)
+    return (najwieksza + druga) / 2
 
 
 if __name__ == "__main__":
-
-    test_srednia_dwoch_najwiekszych()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    print(f"{srednia_dwoch_najwiekszych(lista):.1f}")

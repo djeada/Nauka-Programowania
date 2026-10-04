@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Kwadrat
 
 **Poziom:** ★☆☆
@@ -6,18 +6,15 @@ ZAD-01 — Kwadrat
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` (`n ≥ 1`) i wypisz kwadrat `n × n` zbudowany z gwiazdek `*`.
-Każdy wiersz ma zawierać dokładnie `n` gwiazdek (bez spacji).
+Wczytaj liczbę naturalną `n` i wypisz kwadrat o boku `n` zbudowany z gwiazdek `*`.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 1`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-`n` linii, w każdej dokładnie `n` znaków `*`.
+`n` linii, w każdej dokładnie `n` znaków `*` (bez spacji).
 
 ### Przykład
 
@@ -34,7 +31,20 @@ Jedna liczba naturalna:
 **
 ```
 
+### Uwagi
+
+* Spróbuj użyć dwóch pętli: zewnętrznej dla wierszy i wewnętrznej dla gwiazdek w wierszu (`print("*", end="")`).
+
 """
 
+
+def kwadrat(n):
+    for _ in range(n):
+        for _ in range(n):
+            print("*", end="")
+        print()
+
+
 if __name__ == "__main__":
-    pass
+    n = int(input())
+    kwadrat(n)

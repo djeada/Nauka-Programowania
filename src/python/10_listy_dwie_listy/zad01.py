@@ -1,32 +1,32 @@
-"""
+r"""
 ZAD-01 — Wypisanie elementów dwóch list na przemian
 
 **Poziom:** ★☆☆
-**Tagi:** `list`, `iteracja`
+**Tagi:** `listy`, `iteracja`, `indeksy`
 
 ### Treść
 
 Wczytaj dwie listy liczb całkowitych i wypisz ich elementy **na przemian**:
-pierwszy z listy 1, pierwszy z listy 2, drugi z listy 1, drugi z listy 2, itd.
+pierwszy element listy 1, pierwszy element listy 2, drugi element listy 1, drugi element listy 2 itd.
 
-Jeśli listy mają różne długości, po wyczerpaniu krótszej listy dopisz pozostałe elementy dłuższej listy w tej samej kolejności.
+Jeśli listy mają różne długości, po wyczerpaniu krótszej listy wypisz pozostałe elementy dłuższej listy w ich kolejności.
 
 ### Wejście
 
-* 1 linia: lista 1
-* 2 linia: lista 2
+* 1. linia: lista 1 — liczby całkowite oddzielone spacjami
+* 2. linia: lista 2 — liczby całkowite oddzielone spacjami
 
 ### Wyjście
 
-* 1 linia: elementy obu list wypisane na przemian, oddzielone przecinkami **bez spacji**
+Jedna linia: elementy obu list wypisane na przemian, oddzielone przecinkami **bez spacji**.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[5, 3, 7, 2]
-[1, -2, 3]
+5 3 7 2
+1 -2 3
 ```
 
 **Wyjście:**
@@ -38,34 +38,19 @@ Jeśli listy mają różne długości, po wyczerpaniu krótszej listy dopisz poz
 """
 
 
-def wypisz_na_przemian(lista_a, lista_b):
-
-    min_dlugosc = min(len(lista_a), len(lista_b))
-
-    for i in range(min_dlugosc):
-        print(f"{lista_a[i]}, {lista_b[i]}", end=", ")
-
-    for i in range(min_dlugosc, len(lista_a)):
-        print(f"{lista_a[i]}, 0", end=", ")
-
-    for i in range(min_dlugosc, len(lista_b)):
-        print(f"0, {lista_b[i]}", end=", ")
-
-    print()
+def na_przemian(lista_a, lista_b):
+    wynik = []
+    for i in range(max(len(lista_a), len(lista_b))):
+        if i < len(lista_a):
+            wynik.append(lista_a[i])
+        if i < len(lista_b):
+            wynik.append(lista_b[i])
+    return wynik
 
 
 if __name__ == "__main__":
+    lista_a = [int(x) for x in input().split()]
+    lista_b = [int(x) for x in input().split()]
 
-    print("Podaj dlugosc pierwszej listy")
-    dlugosc_a = int(input())
-
-    print(f"Podaj {dlugosc_a} elementow:")
-    lista_a = [int(input()) for i in range(dlugosc_a)]
-
-    print("Podaj dlugosc drugiej listy")
-    dlugosc_b = int(input())
-
-    print(f"Podaj {dlugosc_b} elementow:")
-    lista_b = [int(input()) for i in range(dlugosc_b)]
-
-    wypisz_na_przemian(lista_a, lista_b)
+    wynik = na_przemian(lista_a, lista_b)
+    print(*wynik, sep=",")

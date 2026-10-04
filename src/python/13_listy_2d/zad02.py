@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Macierz n×n: iloczyn indeksów
 
 **Poziom:** ★☆☆
@@ -6,7 +6,7 @@ ZAD-02 — Macierz n×n: iloczyn indeksów
 
 ### Treść
 
-Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od 0) ma wartość `i*j`.
+Wczytaj `n`. Utwórz macierz `n×n`, w której element w wierszu `i` i kolumnie `j` (indeksy od `0`) ma wartość $i \cdot j$, i wypisz ją.
 
 ### Wejście
 
@@ -14,7 +14,11 @@ Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od
 
 ### Wyjście
 
-* `n` wierszy po `n` liczb
+`n` linii po `n` liczb oddzielonych spacjami.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 20`
 
 ### Przykład
 
@@ -36,35 +40,21 @@ Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od
 
 
 def stworz_macierz(n):
-    """
-    Funkcja tworzy macierz o wymiarach n x n, dla ktorej kazdy
-    element jest rowny iloczynowi wspolrzednych (indeksów).
-
-    Złożoność czasowa: O(n²)
-    Złożoność pamięciowa: O(n²)
-    """
+    """Zwraca macierz n×n, w której element [i][j] jest równy i * j."""
     macierz = []
     for i in range(n):
-        macierz.append([])
+        wiersz = []
         for j in range(n):
-            macierz[i].append(i * j)
+            wiersz.append(i * j)
+        macierz.append(wiersz)
     return macierz
 
 
-def test_stworz_macierz():
-    assert stworz_macierz(3) == [[0, 0, 0], [0, 1, 2], [0, 2, 4]]
-    assert stworz_macierz(4) == [[0, 0, 0, 0], [0, 1, 2, 3], [0, 2, 4, 6], [0, 3, 6, 9]]
+def wypisz_macierz(macierz):
+    for wiersz in macierz:
+        print(" ".join(str(x) for x in wiersz))
 
 
 if __name__ == "__main__":
-    # Wczytanie wartości n z wejścia
-    n = int(input().strip())
-
-    # Utworzenie macierzy
-    # Złożoność czasowa: O(n²)
-    # Złożoność pamięciowa: O(n²)
-    macierz = stworz_macierz(n)
-
-    # Wypisanie macierzy
-    for wiersz in macierz:
-        print(" ".join(map(str, wiersz)))
+    n = int(input())
+    wypisz_macierz(stworz_macierz(n))

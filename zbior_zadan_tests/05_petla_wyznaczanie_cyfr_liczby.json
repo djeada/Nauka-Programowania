@@ -5,21 +5,53 @@
       "output": "1"
     },
     {
+      "input": "10",
+      "output": "2"
+    },
+    {
+      "input": "9999",
+      "output": "4"
+    },
+    {
       "input": "10000",
       "output": "5"
+    },
+    {
+      "input": "1234567890",
+      "output": "10"
     }
   ],
   "ZAD-02": [
+    {
+      "input": "0",
+      "output": "0"
+    },
+    {
+      "input": "7",
+      "output": "7"
+    },
     {
       "input": "12030",
       "output": "0\n3\n0\n2\n1"
     },
     {
-      "input": "0",
-      "output": "0"
+      "input": "100",
+      "output": "0\n0\n1"
+    },
+    {
+      "input": "987654321",
+      "output": "1\n2\n3\n4\n5\n6\n7\n8\n9"
     }
   ],
   "ZAD-03": [
+    {
+      "input": "0",
+      "output": "0"
+    },
+    {
+      "input": "7",
+      "output": "7"
+    },
     {
       "input": "999",
       "output": "27"
@@ -27,6 +59,10 @@
     {
       "input": "12345",
       "output": "15"
+    },
+    {
+      "input": "1000000",
+      "output": "1"
     }
   ],
   "ZAD-04A": [
@@ -37,6 +73,18 @@
     {
       "input": "135",
       "output": ""
+    },
+    {
+      "input": "0",
+      "output": "0"
+    },
+    {
+      "input": "2468",
+      "output": "8\n6\n4\n2"
+    },
+    {
+      "input": "1000",
+      "output": "0\n0\n0"
     }
   ],
   "ZAD-04B": [
@@ -47,6 +95,18 @@
     {
       "input": "777",
       "output": ""
+    },
+    {
+      "input": "0",
+      "output": "0"
+    },
+    {
+      "input": "12345",
+      "output": "4\n3\n2\n1"
+    },
+    {
+      "input": "50",
+      "output": "0"
     }
   ],
   "ZAD-04C": [
@@ -57,6 +117,18 @@
     {
       "input": "0",
       "output": ""
+    },
+    {
+      "input": "7",
+      "output": "7"
+    },
+    {
+      "input": "123",
+      "output": "3\n2\n1"
+    },
+    {
+      "input": "9090",
+      "output": "9\n9"
     }
   ],
   "ZAD-05": [
@@ -67,25 +139,47 @@
     {
       "input": "123",
       "output": "Liczba nie jest palindromem."
+    },
+    {
+      "input": "0",
+      "output": "Liczba jest palindromem."
+    },
+    {
+      "input": "10",
+      "output": "Liczba nie jest palindromem."
+    },
+    {
+      "input": "1221",
+      "output": "Liczba jest palindromem."
+    },
+    {
+      "input": "1000001",
+      "output": "Liczba jest palindromem."
+    },
+    {
+      "input": "12331",
+      "output": "Liczba nie jest palindromem."
     }
   ],
   "ZAD-06A": [
+    {
+      "input": "19",
+      "output": ""
+    },
+    {
+      "input": "20",
+      "output": "19"
+    },
     {
       "input": "30",
       "output": "19\n28"
     },
     {
-      "input": "12",
-      "output": ""
-    }
-  ],
-  "ZAD-06B": [
-    {
-      "input": "98",
-      "output": "99"
+      "input": "120",
+      "output": "19\n28\n37\n46\n55\n64\n73\n82\n91\n109\n118"
     },
     {
-      "input": "99",
+      "input": "0",
       "output": ""
     }
   ],
@@ -97,6 +191,22 @@
     {
       "input": "2",
       "output": "101\n110\n200"
+    },
+    {
+      "input": "26",
+      "output": "899\n989\n998"
+    },
+    {
+      "input": "27",
+      "output": "999"
+    },
+    {
+      "input": "0",
+      "output": ""
+    },
+    {
+      "input": "28",
+      "output": ""
     }
   ],
   "ZAD-06D": [
@@ -107,6 +217,18 @@
     {
       "input": "888888888",
       "output": "144\n216\n288\n360\n432\n504\n576\n648\n720\n792\n864\n936"
+    },
+    {
+      "input": "99999999999",
+      "output": "198\n297\n396\n495\n594\n693\n792\n891\n990"
+    },
+    {
+      "input": "9090909",
+      "output": "108\n144\n180\n216\n252\n288\n324\n360\n396\n432\n468\n504\n540\n576\n612\n648\n684\n720\n756\n792\n828\n864\n900\n936\n972"
+    },
+    {
+      "input": "77777",
+      "output": "105\n140\n175\n210\n245\n280\n315\n350\n385\n420\n455\n490\n525\n560\n595\n630\n665\n700\n735\n770\n805\n840\n875\n910\n945\n980"
     }
   ],
   "ZAD-06E": [
@@ -117,6 +239,52 @@
     {
       "input": "10",
       "output": "2\n4\n6\n8"
+    },
+    {
+      "input": "3",
+      "output": "2"
+    },
+    {
+      "input": "1",
+      "output": ""
+    },
+    {
+      "input": "210",
+      "output": "2\n4\n6\n8\n20\n22\n24\n26\n28\n40\n42\n44\n46\n48\n60\n62\n64\n66\n68\n80\n82\n84\n86\n88\n200\n202\n204\n206\n208"
+    }
+  ],
+  "ZAD-07": [
+    {
+      "input": "59",
+      "output": "Poprawny"
+    },
+    {
+      "input": "95",
+      "output": "Niepoprawny"
+    },
+    {
+      "input": "5",
+      "output": "Niepoprawny"
+    },
+    {
+      "input": "4111111111111111",
+      "output": "Poprawny"
+    },
+    {
+      "input": "4111111111111112",
+      "output": "Niepoprawny"
+    },
+    {
+      "input": "1234567812345670",
+      "output": "Poprawny"
+    },
+    {
+      "input": "1234567890123456785",
+      "output": "Poprawny"
+    },
+    {
+      "input": "1234567890123456789",
+      "output": "Niepoprawny"
     }
   ]
 }

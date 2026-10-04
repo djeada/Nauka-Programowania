@@ -1,7 +1,7 @@
 {
   "file": "24_listy_trudne.md",
-  "chapter_title": "Rozdział: Listy — zadania dodatkowe (stdin/stdout)",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli na wejściu jest „lista” — w testach będzie podana w jednej linii w formacie podobnym do Pythona, np. `[1, 0, 1]`.\n* Wypisuj wyniki dokładnie w formacie wymaganym w treści (liczba / lista / lista list).\n* Indeksy liczymy od `0`.",
+  "chapter_title": "Rozdział 24: Listy — zadania dodatkowe",
+  "chapter_description": "Trudniejsze zadania na listach: przekształcenia w miejscu, sumy prefiksowe, kopiec i programowanie dynamiczne. Liczy się nie tylko poprawny wynik, ale też dobry algorytm — w testach są także długie listy, na których rozwiązanie „sprawdzające wszystkie możliwości” nie zdąży się wykonać.\n\n**Konwencje wspólne:**\n\n* Każde zadanie to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”. Tekst podany w `input(\"…\")` jest ignorowany przez sprawdzarkę.\n* Lista liczb jest podawana w dwóch liniach: w pierwszej jest liczba elementów `n`, w drugiej `n` liczb całkowitych oddzielonych spacjami (o ile zadanie nie mówi inaczej).\n* Listę wynikową wypisuj w jednej linii, a jej elementy oddzielaj pojedynczą spacją (o ile zadanie nie mówi inaczej).\n* Indeksy liczymy od `0`.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -15,27 +15,61 @@
         "analiza",
         "indeksy"
       ],
-      "description": "Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Znajdź **indeks zera**, które po zamianie na `1` da **najdłuższy ciąg kolejnych jedynek**.\n\nJeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — wypisz `-1`.",
-      "input": "* 1 linia: lista `A` (tylko `0` i `1`)",
-      "output": "* 1 linia: indeks (liczba całkowita) albo `-1`",
+      "description": "Otrzymujesz listę składającą się wyłącznie z zer i jedynek. Znajdź **indeks zera**, którego zamiana na `1` da **najdłuższy nieprzerwany ciąg jedynek**.\n\n* Jeśli kilka zer daje ciąg o tej samej, maksymalnej długości — wybierz zero o **najmniejszym indeksie**.\n* Jeśli lista składa się wyłącznie z zer **albo** wyłącznie z jedynek — wypisz `-1`.",
+      "input": "* 1. linia: `n` — długość listy\n* 2. linia: `n` liczb `0` lub `1` oddzielonych spacjami",
+      "output": "Jedna liczba całkowita: indeks szukanego zera albo `-1`.",
       "examples": [
         {
-          "input": "[0, 0, 1, 0, 1, 1, 1, 0, 1, 1]",
-          "output": "7"
+          "input": "10\n0 0 1 0 1 1 1 0 1 1",
+          "output": "7",
+          "explanation": "Zamiana zera o indeksie `7` daje sześć jedynek pod rząd (indeksy 4–9). Zamiana zera o indeksie `3` dałaby tylko pięć jedynek (indeksy 2–6)."
         }
       ],
       "testcases": [
         {
-          "input": "[0, 1, 1, 0, 1]",
-          "output": "3"
+          "input": "1\n0",
+          "output": "-1"
         },
         {
-          "input": "[1, 1, 0, 1, 0, 0, 1]",
+          "input": "1\n1",
+          "output": "-1"
+        },
+        {
+          "input": "5\n1 1 1 1 1",
+          "output": "-1"
+        },
+        {
+          "input": "4\n0 0 0 0",
+          "output": "-1"
+        },
+        {
+          "input": "2\n1 0",
+          "output": "1"
+        },
+        {
+          "input": "4\n0 1 1 1",
+          "output": "0"
+        },
+        {
+          "input": "5\n1 0 1 0 1",
+          "output": "1"
+        },
+        {
+          "input": "7\n1 0 0 1 1 1 0",
           "output": "2"
+        },
+        {
+          "input": "6\n1 1 0 1 0 0",
+          "output": "2"
+        },
+        {
+          "input": "1000\n1 1 1 0 1 1 0 1 0 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 0 1 1 0 0 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 0 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 0 1 0 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 0 1 1 1 1 0 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 0 0 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 0 1 0 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1 0 1 0 1 1 1 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 0 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 0 0 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 0 1 1 0 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 0 1 1 1 0 1 1 1 1 0 1 1 1 0 1 0 0 1 1 0 1 0 1 1 1 0 1 0 0 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 0 1 0 1 0 0 1 1 1 1 0 0 0 1 0 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 0 1 0 1 0 1 1 1 1 1 1 1 1 1 0 1 0 0 1 0 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 0 0 0 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1",
+          "output": "37"
         }
       ],
-      "constraints": "",
-      "notes": "* Jeśli kilka zer daje ten sam maksymalny wynik — wybierz to o **najmniejszym indeksie** (jeśli nie określono inaczej w testach)."
+      "constraints": "* `1 ≤ n ≤ 1000`",
+      "notes": "* Po zamianie zera łączą się jedynki stojące bezpośrednio przed nim i za nim — wystarczy więc znać pozycje sąsiednich zer. Da się to policzyć w jednym przejściu po liście, w czasie $O(n)$.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -49,26 +83,48 @@
         "przekształcenie"
       ],
       "description": "Otrzymujesz listę liczb całkowitych. Przenieś wszystkie zera na koniec listy, **zachowując kolejność** pozostałych elementów.",
-      "input": "* 1 linia: lista liczb całkowitych `A`",
-      "output": "* 1 linia: lista po przekształceniu",
+      "input": "* 1. linia: `n` — długość listy\n* 2. linia: `n` liczb całkowitych oddzielonych spacjami",
+      "output": "Jedna linia: `n` liczb listy po przekształceniu, oddzielonych spacjami.",
       "examples": [
         {
-          "input": "[0, 1, 3, 0, 8, 12, 0, 4, 0, 7, 0]",
-          "output": "[1, 3, 8, 12, 4, 7, 0, 0, 0, 0, 0]"
+          "input": "11\n0 1 3 0 8 12 0 4 0 7 0",
+          "output": "1 3 8 12 4 7 0 0 0 0 0",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "[0, 1, 0, 3, 0, 5]",
-          "output": "[1, 3, 5, 0, 0, 0]"
+          "input": "1\n0",
+          "output": "0"
         },
         {
-          "input": "[1, 2, 3]",
-          "output": "[1, 2, 3]"
+          "input": "4\n0 0 0 0",
+          "output": "0 0 0 0"
+        },
+        {
+          "input": "3\n5 -2 7",
+          "output": "5 -2 7"
+        },
+        {
+          "input": "6\n0 1 0 3 0 5",
+          "output": "1 3 5 0 0 0"
+        },
+        {
+          "input": "6\n0 0 -1 0 2 -3",
+          "output": "-1 2 -3 0 0 0"
+        },
+        {
+          "input": "8\n4 0 4 0 3 0 4 9",
+          "output": "4 4 3 4 9 0 0 0"
+        },
+        {
+          "input": "30\n34 -6 -50 0 0 0 48 0 -33 -39 0 0 0 0 0 0 0 0 0 0 0 0 2 13 0 -44 2 36 0 17",
+          "output": "34 -6 -50 48 -33 -39 2 13 -44 2 36 17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 1000`\n* elementy listy są z przedziału $[-10^6, 10^6]$",
+      "notes": "* Spróbuj przekształcić listę **w miejscu**, bez tworzenia nowej listy: przepisuj kolejne niezerowe elementy na początek listy, a resztę wypełnij zerami. Takie rozwiązanie działa w czasie $O(n)$.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-03",
@@ -81,32 +137,66 @@
         "min",
         "math"
       ],
-      "description": "Otrzymujesz listę liczb całkowitych. Znajdź **najmniejszy możliwy iloczyn trzech liczb** wybranych z tej listy.\n\nJeśli lista zawiera mniej niż 3 liczby — wypisz iloczyn wszystkich elementów listy.",
-      "input": "* 1 linia: lista liczb całkowitych `A`",
-      "output": "* 1 linia: jedna liczba całkowita",
+      "description": "Otrzymujesz listę liczb całkowitych. Znajdź **najmniejszy możliwy iloczyn trzech elementów** tej listy (trzech elementów o różnych indeksach; wartości mogą się powtarzać).\n\nJeśli lista ma mniej niż 3 elementy — wypisz iloczyn wszystkich jej elementów.",
+      "input": "* 1. linia: `n` — długość listy\n* 2. linia: `n` liczb całkowitych oddzielonych spacjami",
+      "output": "Jedna liczba całkowita — najmniejszy iloczyn.",
       "examples": [
         {
-          "input": "[3, -1, -3, 2, 9, 4]",
-          "output": "-108"
+          "input": "6\n3 -1 -3 2 9 4",
+          "output": "-108",
+          "explanation": "Najmniejszy iloczyn daje trójka $-3 \\cdot 9 \\cdot 4 = -108$."
         }
       ],
       "testcases": [
         {
-          "input": "[3, -1, -3, 2, 9, 4]",
-          "output": "-108"
+          "input": "1\n-7",
+          "output": "-7"
         },
         {
-          "input": "[1, 2]",
-          "output": "2"
+          "input": "2\n4 -5",
+          "output": "-20"
+        },
+        {
+          "input": "3\n2 3 4",
+          "output": "24"
+        },
+        {
+          "input": "5\n3 2 1 7 8",
+          "output": "6"
+        },
+        {
+          "input": "4\n-1 -2 -3 -4",
+          "output": "-24"
+        },
+        {
+          "input": "6\n1 20 2 -2 -4 -3",
+          "output": "-160"
+        },
+        {
+          "input": "5\n0 5 3 0 2",
+          "output": "0"
+        },
+        {
+          "input": "4\n-3 -2 1 5",
+          "output": "-15"
+        },
+        {
+          "input": "5\n-2 -2 -2 1 1",
+          "output": "-8"
+        },
+        {
+          "input": "300\n274 163 -399 -817 608 -169 -916 784 916 130 -11 696 919 -957 -764 -370 -450 -437 -782 276 491 -631 -721 -557 -785 -687 806 947 -471 188 -454 -381 242 -680 420 195 -108 -435 -770 -321 -48 798 -751 -678 298 -402 -598 447 -496 900 -220 -579 -286 -256 -766 -548 -834 349 774 -32 970 269 655 824 540 740 -773 -341 -394 563 31 351 733 -800 597 665 58 420 435 786 -614 922 347 -20 -540 -586 -577 -213 828 71 77 -724 -136 943 135 -862 -216 -892 535 877 -488 -999 -808 -874 -144 61 -558 960 -991 -811 -779 941 779 -351 -934 -495 -960 -949 -172 -572 -801 806 954 51 -981 -370 462 418 778 -81 850 841 956 375 -269 -542 243 -193 -470 747 689 324 474 569 -667 -398 -649 -797 999 614 94 -518 -30 -917 -869 -789 122 -378 -69 -386 -946 -19 849 546 -979 -25 -171 -802 327 -485 -285 -296 661 -759 101 -363 -349 114 371 518 320 472 547 388 -418 774 -632 291 259 304 -440 47 -909 -261 -599 -734 798 697 -341 -439 -458 454 -977 -882 -406 -921 -574 -178 -98 -572 -551 127 -843 712 -853 634 -417 -189 -758 576 806 -500 -60 -403 424 988 322 -929 -240 -814 595 -984 946 546 -476 -474 860 -388 717 -544 -501 -21 -56 867 407 388 56 -811 -218 199 -953 -185 -118 -698 -58 851 249 -90 400 -640 25 -272 -479 -428 366 247 837 242 741 87 23 779 -394 -357 722 716 107 805 356 280 -360 -507 208 912 -251 -677 -875 453 480 120 -149 397 379 498 9 -779 931 999 -154 77",
+          "output": "-997002999"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 1000`\n* elementy listy są z przedziału $[-1000, 1000]$",
+      "notes": "* Uważaj na liczby ujemne: iloczyn dwóch ujemnych jest dodatni. Wystarczy porównać dwóch kandydatów: trzy najmniejsze liczby oraz najmniejszą liczbę razy dwie największe.\n* Sprawdzanie wszystkich trójek zajmuje czas $O(n^3)$ — przy $n = 1000$ to ponad $10^8$ trójek. Oczekiwane rozwiązanie działa w czasie $O(n \\log n)$ (sortowanie) albo $O(n)$.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-04",
       "slug": "24_listy_trudne/ZAD-04",
-      "title": "Wspólny podciąg o największej długości (równe sumy)",
+      "title": "Najdłuższy fragment o równych sumach",
       "difficulty": 3,
       "difficulty_display": "★★★",
       "tags": [
@@ -115,27 +205,53 @@
         "hashmap",
         "podciąg"
       ],
-      "description": "Otrzymujesz dwie listy binarne `A` i `B` (zera i jedynki) o tej samej długości. Znajdź **maksymalną długość** podciągu (ciągłych elementów), dla którego suma elementów w podciągu z `A` jest równa sumie elementów w odpowiadającym podciągu z `B` (ten sam zakres indeksów).",
-      "input": "* 1 linia: lista binarna `A`\n* 2 linia: lista binarna `B` (tej samej długości)",
-      "output": "* 1 linia: maksymalna długość (liczba naturalna)",
+      "description": "Otrzymujesz dwie listy binarne `A` i `B` (zera i jedynki) o tej samej długości `n`. Znajdź **największą długość** fragmentu (ciągłego zakresu indeksów od `i` do `j`), dla którego suma elementów `A` w tym zakresie jest równa sumie elementów `B` w tym samym zakresie, czyli $A_i + A_{i+1} + \\ldots + A_j = B_i + B_{i+1} + \\ldots + B_j$.\n\nJeśli taki fragment nie istnieje — wypisz `0`.",
+      "input": "* 1. linia: `n` — długość list\n* 2. linia: `n` liczb `0`/`1` — lista `A`\n* 3. linia: `n` liczb `0`/`1` — lista `B`",
+      "output": "Jedna liczba całkowita — największa długość fragmentu albo `0`.",
       "examples": [
         {
-          "input": "[0, 0, 1, 1, 1, 1]\n[0, 1, 1, 0, 1, 0]",
-          "output": "5"
+          "input": "6\n0 0 1 1 1 1\n0 1 1 0 1 0",
+          "output": "5",
+          "explanation": "Dla indeksów 0–4 obie sumy są równe 3, więc istnieje fragment długości 5. Dłuższego nie ma: dla całych list sumy wynoszą 4 i 3."
         }
       ],
       "testcases": [
         {
-          "input": "[0, 0, 1, 1, 1, 1]\n[0, 1, 1, 0, 1, 0]",
+          "input": "1\n1\n1",
+          "output": "1"
+        },
+        {
+          "input": "1\n0\n1",
+          "output": "0"
+        },
+        {
+          "input": "4\n1 0 1 0\n0 1 0 1",
+          "output": "4"
+        },
+        {
+          "input": "3\n1 1 1\n0 0 0",
+          "output": "0"
+        },
+        {
+          "input": "5\n0 0 0 0 0\n0 0 0 0 0",
           "output": "5"
         },
         {
-          "input": "[1, 0, 1, 0]\n[0, 1, 0, 1]",
-          "output": "4"
+          "input": "7\n1 1 0 0 1 0 1\n0 1 1 1 1 0 0",
+          "output": "7"
+        },
+        {
+          "input": "4\n1 1 1 0\n0 0 1 0",
+          "output": "2"
+        },
+        {
+          "input": "450\n0 0 0 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 0 0 1 0 0 1 1 1 0 0 1 0 1 1 1 1 1 0 0 0 0 1 0 0 0 0 1 0 1 1 1 1 1 1 1 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 1 0 1 1 0 1 1 1 1 1 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0 0 1 1 1 0 0 1 0 1 0 0 1 0 1 1 1 0 1 1 0 0 0 0 0 1 0 0 0 1 1 1 1 0 1 0 0 1 1 0 0 0 1 0 1 0 1 1 1 0 1 0 1 1 0 1 0 0 0 0 1 1 1 0 0 0 0 1 1 1 1 0 0 1 1 1 0 0 0 1 1 0 0 1 1 1 1 0 0 1 0 1 1 0 0 1 1 0 0 0 1 0 0 1 1 0 1 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 1 0 1 1 1 0 0 0 1 1 0 1 0 1 0 0 0 0 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 0 0 0 1 1 1 0 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 1 0 0 0 0 1 0 1 0 1 0 1 1 1 1 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 1 1 1 1 0 0 0 0 0 1 0 0 0 1 0 1 0 1 0 1 1 0 1 1 0 0 1 1 0 0 0 0 1 0 1 1 1 1 0 1 1 1 1 1 0 1 1 0 1 0 1 0 1 1 1 0 0 0 1 0 0 1 0 0 1 0 0 0 1 1 1 0 1 1 1 0 1 0 0 1 1 1 0 1 1 1 1 0 0 1 1 0 1 0 1 0 0 0 0 1 0 1 1 1 0 1 1 1 1 1 1 1 0 0 0 0 1 0 0 1 0 0 0 0 1 1 0 0 0 1\n1 1 1 0 0 0 0 1 1 0 0 0 0 0 1 0 1 1 1 1 0 1 1 0 1 0 1 0 0 1 0 1 0 1 1 0 0 1 1 1 0 1 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 1 0 0 1 1 1 0 1 0 0 0 0 0 0 1 1 0 0 0 1 1 0 1 0 0 1 0 0 0 0 1 0 1 0 0 0 0 1 1 1 0 1 1 0 0 1 1 0 1 0 0 1 1 0 1 1 1 0 1 1 0 0 0 1 0 0 0 1 1 1 1 0 0 0 0 1 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 1 0 0 1 1 1 1 0 0 1 1 0 1 0 1 1 0 0 1 1 1 1 1 1 0 0 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 1 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 1 0 0 1 1 1 0 0 0 0 0 1 0 1 1 0 0 0 1 0 1 1 0 0 0 0 0 1 1 1 0 1 0 0 1 0 1 0 0 0 0 0 0 1 1 0 1 1 0 0 0 0 0 1 1 1 0 1 0 1 0 0 1 0 1 1 1 1 0 1 1 0 1 0 0 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 1 1 0 0 1 0 0 1 1 0 1 1 0 1 0 0 1 0 1 0 0 0 1 0 1 0 0 1 0 0 0 1 1 0 0 0 1 1 0 0 1 1 1 0 1 1 0 0 1 0 1 0 1 0 0 0 1 1 1 0 0 0 0 0 0 0 0 1 0 1 1 0 1 1 1 0 1 1 0 1 1 1 0 0 0 0 0 1 0 0 1 0 1 1 1 1 1 0 0 1 1 1 1 1 1 0 0 0 1 1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 1 1",
+          "output": "280"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 1000`",
+      "notes": "* Suma `A` i `B` na fragmencie `i..j` jest równa wtedy, gdy różnica sum prefiksowych $\\sum A - \\sum B$ jest taka sama tuż przed indeksem `i` i na indeksie `j`. Zapamiętuj w słowniku, gdzie każda różnica pojawiła się po raz pierwszy — da to rozwiązanie w czasie $O(n)$.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05",
@@ -146,34 +262,57 @@
       "tags": [
         "list",
         "subsets",
-        "combinatorics"
+        "combinatorics",
+        "rekurencja"
       ],
-      "description": "Otrzymujesz listę liczb naturalnych (mogą występować powtórzenia). Wygeneruj zbiór wszystkich możliwych podzbiorów tej listy.\n\nWynik ma zawierać wszystkie podzbiory (włącznie z pustym).",
-      "input": "* 1 linia: lista liczb naturalnych `A`",
-      "output": "* 1 linia: lista list (wszystkie podzbiory)",
+      "description": "Otrzymujesz listę liczb całkowitych (mogą się powtarzać). Wypisz **wszystkie różne podzbiory** tej listy, łącznie ze zbiorem pustym i całą listą.\n\nKolejność elementów w podzbiorze nie ma znaczenia: z listy `1 2 1` podzbiór złożony z `1` i `2` powstaje na dwa sposoby, ale wypisujemy go **tylko raz**.",
+      "input": "* 1. linia: `n` — długość listy\n* 2. linia: `n` liczb całkowitych oddzielonych spacjami",
+      "output": "Każdy podzbiór w osobnej linii, zapisany jak lista w Pythonie (tak wypisuje ją `print(lista)`):\n\n* elementy podzbioru w kolejności niemalejącej, w nawiasach kwadratowych, oddzielone przecinkiem i spacją, np. `[1, 1, 2]`; pusty podzbiór to `[]`,\n* podzbiory uporządkowane **leksykograficznie**: porównujemy pierwsze elementy (jako liczby, więc `9` jest przed `10`), przy remisie drugie itd.; podzbiór, który jest początkiem dłuższego, stoi przed nim (np. `[1]` przed `[1, 1]`). Tak porównuje listy Python, więc `sorted()` na liście list daje dokładnie tę kolejność.",
       "examples": [
         {
-          "input": "[1, 2, 1]",
-          "output": "[[], [1], [2], [1, 2], [1, 1], [2, 1], [1, 1, 2], [1, 2, 1]]"
+          "input": "3\n1 2 1",
+          "output": "[]\n[1]\n[1, 1]\n[1, 1, 2]\n[1, 2]\n[2]",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "[1, 2]",
-          "output": "[[], [1], [2], [1, 2]]"
+          "input": "1\n7",
+          "output": "[]\n[7]"
         },
         {
-          "input": "[3]",
-          "output": "[[], [3]]"
+          "input": "2\n10 9",
+          "output": "[]\n[9]\n[9, 10]\n[10]"
+        },
+        {
+          "input": "3\n5 5 5",
+          "output": "[]\n[5]\n[5, 5]\n[5, 5, 5]"
+        },
+        {
+          "input": "3\n3 1 2",
+          "output": "[]\n[1]\n[1, 2]\n[1, 2, 3]\n[1, 3]\n[2]\n[2, 3]\n[3]"
+        },
+        {
+          "input": "4\n2 1 2 1",
+          "output": "[]\n[1]\n[1, 1]\n[1, 1, 2]\n[1, 1, 2, 2]\n[1, 2]\n[1, 2, 2]\n[2]\n[2, 2]"
+        },
+        {
+          "input": "5\n0 4 4 0 4",
+          "output": "[]\n[0]\n[0, 0]\n[0, 0, 4]\n[0, 0, 4, 4]\n[0, 0, 4, 4, 4]\n[0, 4]\n[0, 4, 4]\n[0, 4, 4, 4]\n[4]\n[4, 4]\n[4, 4, 4]"
+        },
+        {
+          "input": "10\n5 5 5 5 5 5 5 5 5 5",
+          "output": "[]\n[5]\n[5, 5]\n[5, 5, 5]\n[5, 5, 5, 5]\n[5, 5, 5, 5, 5]\n[5, 5, 5, 5, 5, 5]\n[5, 5, 5, 5, 5, 5, 5]\n[5, 5, 5, 5, 5, 5, 5, 5]\n[5, 5, 5, 5, 5, 5, 5, 5, 5]\n[5, 5, 5, 5, 5, 5, 5, 5, 5, 5]"
         }
       ],
-      "constraints": "",
-      "notes": "* Jeśli sprawdzarka wymaga konkretnej kolejności podzbiorów, musi być ona opisana w treści — w przeciwnym razie dopuszczalna może być dowolna. (Jeśli chcesz, mogę dopisać sztywną konwencję kolejności, ale bez rozwiązań.)"
+      "constraints": "* `1 ≤ n ≤ 10`\n* elementy listy są z przedziału $[-100, 100]$",
+      "notes": "* Wygodnie jest najpierw posortować listę, a potem generować podzbiory rekurencyjnie (dla każdego elementu: bierzemy go albo nie). Aby uniknąć powtórzeń, na danym poziomie rekurencji pomijaj element równy poprzedniemu.",
+      "starter_code": "def podzbiory(liczby):\n    wynik = []\n    # Uzupełnij: dodaj do wyniku wszystkie różne podzbiory\n    # (każdy jako posortowana lista) w kolejności leksykograficznej.\n    return wynik\n\n\nn = int(input())\nliczby = [int(x) for x in input().split()]\nfor podzbior in podzbiory(liczby):\n    print(podzbior)\n"
     },
     {
       "id": "ZAD-06",
       "slug": "24_listy_trudne/ZAD-06",
-      "title": "Połączenie posortowanych list (unikalne)",
+      "title": "Połączenie posortowanych list (bez powtórzeń)",
       "difficulty": 3,
       "difficulty_display": "★★★",
       "tags": [
@@ -182,27 +321,53 @@
         "unique",
         "sorted"
       ],
-      "description": "Otrzymujesz listę zawierającą `M` posortowanych list liczb naturalnych. Połącz je w jedną **posortowaną** listę zawierającą wszystkie elementy **bez powtórzeń**.",
-      "input": "* 1 linia: lista list (każda wewnętrzna lista jest posortowana)",
-      "output": "* 1 linia: jedna posortowana lista bez duplikatów",
+      "description": "Otrzymujesz `M` list liczb całkowitych, z których każda jest posortowana niemalejąco. Połącz je w jedną listę posortowaną **rosnąco** i zawierającą każdą wartość **tylko raz** (powtórzenia mogą występować zarówno w obrębie jednej listy, jak i między listami). Niektóre listy mogą być puste.",
+      "input": "* 1. linia: `M` — liczba list\n* kolejne `M` linii: opis jednej listy — najpierw jej długość `k`, a po niej `k` liczb posortowanych niemalejąco (wszystko oddzielone spacjami); pusta lista to linia zawierająca samo `0`",
+      "output": "Jedna linia: elementy połączonej listy oddzielone spacjami. Jeśli wszystkie listy są puste, wypisz pustą linię.",
       "examples": [
         {
-          "input": "[[-6, 23, 29, 33], [6, 22, 35, 71], [5, 19, 21, 37], [-12, -7, -3, 28]]",
-          "output": "[-12, -7, -6, -3, 5, 6, 19, 21, 22, 23, 28, 29, 33, 35, 37, 71]"
+          "input": "4\n4 -6 23 29 33\n4 6 22 35 71\n4 5 19 21 37\n4 -12 -7 -3 28",
+          "output": "-12 -7 -6 -3 5 6 19 21 22 23 28 29 33 35 37 71",
+          "explanation": "Pierwsza liczba w każdej linii to długość listy, a nie jej element."
         }
       ],
       "testcases": [
         {
-          "input": "[[-1, 0, 2], [0, 1, 3], [2, 2, 4]]",
-          "output": "[-1, 0, 1, 2, 3, 4]"
+          "input": "1\n0",
+          "output": ""
         },
         {
-          "input": "[[1, 1], [1, 2]]",
-          "output": "[1, 2]"
+          "input": "1\n5 1 1 2 2 3",
+          "output": "1 2 3"
+        },
+        {
+          "input": "3\n3 -1 0 2\n3 0 1 3\n3 2 2 4",
+          "output": "-1 0 1 2 3 4"
+        },
+        {
+          "input": "3\n0\n2 7 7\n0",
+          "output": "7"
+        },
+        {
+          "input": "2\n2 1 1\n2 1 2",
+          "output": "1 2"
+        },
+        {
+          "input": "4\n1 5\n1 5\n1 5\n1 5",
+          "output": "5"
+        },
+        {
+          "input": "3\n4 1 2 3 4\n0\n3 -10 100 1000",
+          "output": "-10 1 2 3 4 100 1000"
+        },
+        {
+          "input": "10\n14 -280 -197 -184 -65 -53 -13 -10 114 120 175 188 237 248 276\n13 -288 -247 -189 -179 -173 -169 -158 -57 -45 -39 30 130 139\n15 -290 -282 -239 -216 -186 -149 -119 -95 -29 -28 0 6 132 180 254\n0\n11 -278 -178 -158 -56 -18 16 56 136 177 261 293\n18 -292 -250 -239 -214 -190 -188 -168 -144 -130 -126 -48 -45 -15 10 19 19 44 280\n11 -270 -223 -154 -102 -29 -29 -17 18 90 121 277\n12 -125 -114 -23 -16 -4 25 39 85 100 101 103 141\n13 -295 -261 -258 -252 -192 -185 -170 -168 -83 95 144 174 299\n10 -234 -203 -162 -33 17 92 215 223 260 269",
+          "output": "-295 -292 -290 -288 -282 -280 -278 -270 -261 -258 -252 -250 -247 -239 -234 -223 -216 -214 -203 -197 -192 -190 -189 -188 -186 -185 -184 -179 -178 -173 -170 -169 -168 -162 -158 -154 -149 -144 -130 -126 -125 -119 -114 -102 -95 -83 -65 -57 -56 -53 -48 -45 -39 -33 -29 -28 -23 -18 -17 -16 -15 -13 -10 -4 0 6 10 16 17 18 19 25 30 39 44 56 85 90 92 95 100 101 103 114 120 121 130 132 136 139 141 144 174 175 177 180 188 215 223 237 248 254 260 261 269 276 277 280 293 299"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ M ≤ 100`\n* `0 ≤ k ≤ 100`\n* elementy list są z przedziału $[-10^6, 10^6]$",
+      "notes": "* Najmniejszy element wyniku to najmniejszy z **pierwszych** elementów list. Trzymaj w kopcu (`heapq`) po jednym „bieżącym” elemencie z każdej listy: zdejmuj najmniejszy, a na jego miejsce wkładaj następny element z tej samej listy. Dla $N$ elementów łącznie daje to czas $O(N \\log M)$.\n* Powtórzenia łatwo pominąć: wynik powstaje w kolejności rosnącej, więc wystarczy porównać nowy element z ostatnio dopisanym.",
+      "starter_code": "def polacz_listy(listy):\n    wynik = []\n    # Uzupełnij: scal posortowane listy w jedną rosnącą listę bez powtórzeń.\n    return wynik\n\n\nm = int(input())\nlisty = []\nfor _ in range(m):\n    dane = [int(x) for x in input().split()]\n    listy.append(dane[1:])  # pierwsza liczba to długość listy\nprint(\" \".join(str(x) for x in polacz_listy(listy)))\n"
     },
     {
       "id": "ZAD-07",
@@ -215,27 +380,61 @@
         "prefix",
         "trapping rain water"
       ],
-      "description": "Otrzymujesz listę liczb naturalnych — wysokości słupków. Oblicz, ile jednostek wody może się zatrzymać pomiędzy słupkami po deszczu.",
-      "input": "* 1 linia: lista wysokości `H`",
-      "output": "* 1 linia: jedna liczba naturalna — ilość wody",
+      "description": "Otrzymujesz wysokości `n` słupków stojących obok siebie; każdy słupek ma szerokość `1`. Oblicz, ile jednostek wody zatrzyma się pomiędzy słupkami po deszczu (woda spływa poza pierwszy i ostatni słupek).\n\nNad słupkiem o indeksie `i` zatrzyma się $\\min(L_i, P_i) - h_i$ jednostek wody, gdzie $L_i$ to najwyższy słupek na lewo od `i` (włącznie z nim), a $P_i$ — najwyższy słupek na prawo od `i` (włącznie z nim).",
+      "input": "* 1. linia: `n` — liczba słupków\n* 2. linia: `n` nieujemnych liczb całkowitych — wysokości słupków",
+      "output": "Jedna liczba całkowita — łączna ilość wody.",
       "examples": [
         {
-          "input": "[3, 0, 1, 0, 2]",
-          "output": "5"
+          "input": "5\n3 0 1 0 2",
+          "output": "5",
+          "explanation": "Nad słupkami o indeksach 1, 2 i 3 woda sięga wysokości $\\min(3, 2) = 2$, więc zatrzyma się tam odpowiednio $2 + 1 + 2 = 5$ jednostek."
         }
       ],
       "testcases": [
         {
-          "input": "[3, 0, 1, 0, 2]",
-          "output": "5"
+          "input": "1\n5",
+          "output": "0"
         },
         {
-          "input": "[2, 0, 2]",
+          "input": "2\n3 3",
+          "output": "0"
+        },
+        {
+          "input": "3\n2 0 2",
           "output": "2"
+        },
+        {
+          "input": "5\n1 2 3 4 5",
+          "output": "0"
+        },
+        {
+          "input": "5\n5 4 1 4 5",
+          "output": "6"
+        },
+        {
+          "input": "6\n9 2 3 9 0 2",
+          "output": "15"
+        },
+        {
+          "input": "12\n0 1 0 2 1 0 1 3 2 1 2 1",
+          "output": "6"
+        },
+        {
+          "input": "4\n0 0 0 0",
+          "output": "0"
+        },
+        {
+          "input": "5\n4 1 1 1 4",
+          "output": "9"
+        },
+        {
+          "input": "500\n98 67 92 29 65 13 80 19 35 97 87 81 91 55 88 78 92 16 41 77 66 3 1 75 40 22 40 29 58 84 61 57 89 55 79 34 73 99 87 62 58 17 18 90 91 40 53 85 36 23 99 9 77 37 59 99 96 5 51 70 53 16 35 50 51 58 58 42 23 62 68 67 68 28 3 92 16 63 73 44 88 43 48 27 6 48 18 54 56 38 73 88 45 63 23 82 3 90 39 46 56 68 3 35 94 79 35 43 84 86 34 22 24 4 18 46 28 10 93 60 5 13 49 37 88 30 42 92 15 94 16 83 66 42 26 9 66 87 32 82 13 47 90 26 23 9 88 99 68 95 1 82 66 71 69 27 22 86 73 6 43 27 57 21 8 1 82 3 57 82 31 66 40 64 15 13 75 21 61 69 18 27 0 73 55 93 25 32 3 24 67 8 7 77 27 74 2 82 46 71 76 25 84 34 14 21 12 44 33 11 58 66 22 48 70 41 33 51 36 24 45 22 55 98 75 97 57 11 45 28 31 59 71 17 92 48 98 63 20 80 68 15 66 54 59 90 35 41 60 56 6 82 3 26 83 16 54 38 98 96 2 60 92 54 72 11 87 5 8 78 38 58 84 35 12 69 64 80 84 42 35 93 99 11 36 42 23 80 2 48 61 13 61 6 27 10 53 44 27 46 9 47 41 96 28 63 91 37 38 44 93 27 63 34 48 31 34 38 83 82 35 42 77 59 15 70 90 11 12 34 25 72 65 97 44 64 52 22 16 6 92 0 29 65 33 69 84 70 96 67 86 50 22 20 77 51 13 70 63 59 72 88 9 39 98 94 72 51 16 48 38 75 54 15 96 77 78 34 17 59 10 49 49 12 33 86 39 78 43 86 53 74 92 49 3 6 88 92 76 57 6 37 24 73 11 57 7 55 9 43 17 83 52 80 33 68 22 86 16 68 81 30 2 63 86 92 68 76 8 36 19 1 39 53 54 87 59 34 82 73 68 90 75 32 69 59 43 2 1 15 85 26 65 81 6 87 96 27 26 80 66 57 17 58 44 2 91 36 63 5 70 75 39 5 17 52 3 83 7 24 81 14 18 5 4 56 27 39 19 84 78 55 73 54 55 72 83 43 44 95",
+          "output": "24048"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 1000`\n* $0 \\le h_i \\le 10^4$",
+      "notes": "* Liczenie $L_i$ i $P_i$ od nowa dla każdego słupka daje czas $O(n^2)$. Oczekiwane rozwiązanie działa w czasie $O(n)$: policz maksima prefiksowe i sufiksowe w dwóch przejściach albo użyj dwóch wskaźników idących od końców listy.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-08",
@@ -248,27 +447,58 @@
         "rod cutting",
         "optymalizacja"
       ],
-      "description": "Masz sznurek o długości `n` i cennik: ceny kawałków długości od `1` do `n`. Możesz pociąć sznurek na kawałki o całkowitych długościach. Znajdź maksymalny zysk.",
-      "input": "* 1 linia: lista `prices` (długości 1..n)\n* 2 linia: `n` (liczba naturalna)",
-      "output": "* 1 linia: maksymalny zysk (liczba całkowita)",
+      "description": "Masz sznurek o długości `n` i cennik: $c_d$ to cena kawałka o długości `d` (dla `d = 1, 2, …, n`). Ceny nie muszą rosnąć razem z długością. Możesz pociąć sznurek na dowolną liczbę kawałków o całkowitych długościach (albo nie ciąć go wcale) i sprzedać wszystkie kawałki. Oblicz **maksymalny możliwy zysk**.",
+      "input": "* 1. linia: `n` — długość sznurka\n* 2. linia: `n` nieujemnych liczb całkowitych $c_1, c_2, \\ldots, c_n$ oddzielonych spacjami",
+      "output": "Jedna liczba całkowita — maksymalny zysk.",
       "examples": [
         {
-          "input": "[1, 5, 8, 9, 10, 17, 17, 20]\n4",
-          "output": "10"
+          "input": "4\n1 5 8 9",
+          "output": "10",
+          "explanation": "Najlepiej pociąć sznurek na dwa kawałki o długości 2: $5 + 5 = 10$."
+        },
+        {
+          "input": "8\n1 5 8 9 10 17 17 20",
+          "output": "22",
+          "explanation": "Kawałki o długościach 2 i 6: $5 + 17 = 22$."
         }
       ],
       "testcases": [
         {
-          "input": "[1, 5, 8, 9, 10, 17, 17, 20]\n4",
+          "input": "1\n7",
+          "output": "7"
+        },
+        {
+          "input": "3\n1 1 10",
           "output": "10"
         },
         {
-          "input": "[2, 5, 7, 8]\n4",
+          "input": "4\n3 5 8 9",
+          "output": "12"
+        },
+        {
+          "input": "4\n2 5 7 8",
           "output": "10"
+        },
+        {
+          "input": "5\n0 0 0 0 0",
+          "output": "0"
+        },
+        {
+          "input": "10\n1 5 8 9 10 17 17 20 24 30",
+          "output": "30"
+        },
+        {
+          "input": "7\n0 3 0 0 0 0 0",
+          "output": "9"
+        },
+        {
+          "input": "150\n2 6 9 12 14 19 21 24 26 28 32 37 40 38 43 45 49 48 53 65 66 70 62 74 80 78 82 76 88 89 84 98 103 107 110 100 106 112 123 119 114 134 116 120 133 127 147 139 150 162 147 141 158 171 168 162 155 157 167 171 171 173 170 178 205 196 204 193 188 222 195 197 204 214 238 213 221 227 237 224 254 255 247 261 268 274 256 247 245 248 280 258 252 297 271 276 295 308 276 306 270 318 301 282 337 315 346 349 304 316 303 305 339 325 352 363 372 332 355 334 336 357 329 346 389 401 412 366 403 390 385 385 391 420 409 405 398 428 424 452 422 404 407 391 399 413 436 404 474 443",
+          "output": "487"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 500`\n* $0 \\le c_d \\le 10^4$",
+      "notes": "* Sprawdzanie wszystkich sposobów pocięcia (jest ich $2^{n-1}$) jest zdecydowanie za wolne — w testach `n` sięga kilkuset. Użyj programowania dynamicznego: najlepszy zysk dla długości `d` to maksimum z $c_k + \\text{najlepszy}(d - k)$ po wszystkich długościach pierwszego kawałka `k`. Daje to czas $O(n^2)$.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-09",
@@ -281,27 +511,126 @@
         "subsequence",
         "naprzemienny"
       ],
-      "description": "Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienny, w którym różnice między kolejnymi elementami zmieniają znak (raz dodatnia, raz ujemna, itd.).",
-      "input": "* 1 linia: lista liczb całkowitych `A`",
-      "output": "* 1 linia: lista liczb — najdłuższy naprzemienny podciąg",
+      "description": "Ciąg $x_1, x_2, \\ldots, x_k$ jest **naprzemienny** (zygzakowaty), jeśli różnice między kolejnymi elementami są na przemian dodatnie i ujemne, czyli $x_1 < x_2 > x_3 < x_4 > \\ldots$ albo $x_1 > x_2 < x_3 > x_4 < \\ldots$\n\nCiąg jednoelementowy też jest naprzemienny. Dwa równe sąsiednie elementy psują naprzemienność (różnica `0` nie jest ani dodatnia, ani ujemna).\n\nOtrzymujesz listę liczb całkowitych. Wyznacz **długość najdłuższego naprzemiennego podciągu** tej listy. Podciąg powstaje przez usunięcie z listy dowolnych elementów (być może żadnego) bez zmiany kolejności pozostałych — jego elementy nie muszą ze sobą sąsiadować na liście.",
+      "input": "* 1. linia: `n` — długość listy\n* 2. linia: `n` liczb całkowitych oddzielonych spacjami",
+      "output": "Jedna liczba całkowita — długość najdłuższego naprzemiennego podciągu.",
       "examples": [
         {
-          "input": "[1, -2, 6, 4, -3, 2, -4, -3]",
-          "output": "[1, -2, 6, -3, 2, -4]"
+          "input": "8\n1 -2 6 4 -3 2 -4 -3",
+          "output": "7",
+          "explanation": "Przykładowy najdłuższy podciąg naprzemienny (pominięto `4`): $1 > -2 < 6 > -3 < 2 > -4 < -3$."
         }
       ],
       "testcases": [
         {
-          "input": "[1, 3, 2, 4, 3]",
-          "output": "[1, 3, 2, 4, 3]"
+          "input": "1\n42",
+          "output": "1"
         },
         {
-          "input": "[5, 1, 4, 2]",
-          "output": "[5, 1, 4, 2]"
+          "input": "4\n5 5 5 5",
+          "output": "1"
+        },
+        {
+          "input": "5\n1 2 3 4 5",
+          "output": "2"
+        },
+        {
+          "input": "5\n1 3 2 4 3",
+          "output": "5"
+        },
+        {
+          "input": "7\n1 1 2 2 1 1 3",
+          "output": "4"
+        },
+        {
+          "input": "10\n1 17 5 10 13 15 10 5 16 8",
+          "output": "7"
+        },
+        {
+          "input": "2\n-3 4",
+          "output": "2"
+        },
+        {
+          "input": "600\n1 33 74 43 62 4 49 55 22 37 97 6 24 94 97 27 11 15 20 2 9 72 42 70 74 13 83 97 58 9 79 94 57 82 31 42 73 98 15 86 7 86 47 52 78 57 23 92 69 43 45 9 58 12 52 90 50 32 29 22 62 79 19 57 21 87 8 70 12 76 36 95 5 80 68 59 90 96 81 43 45 90 6 35 8 5 47 27 12 58 60 73 58 38 29 68 83 15 37 28 75 79 65 78 68 36 86 14 61 2 46 7 97 98 61 34 86 20 6 81 21 65 0 72 45 38 97 60 45 99 53 48 28 17 47 73 23 34 92 90 5 22 59 1 62 33 83 14 6 76 28 31 25 45 79 82 81 49 62 54 70 96 63 6 93 98 14 56 75 0 36 30 45 28 73 62 15 27 72 42 87 56 96 39 62 46 84 28 3 47 73 67 16 2 29 74 94 86 8 57 53 33 75 28 87 86 49 32 2 65 80 84 83 22 89 7 65 46 47 86 93 44 2 83 47 62 99 97 21 25 82 33 4 21 93 79 70 6 8 98 76 30 67 16 18 77 19 0 24 1 39 79 99 53 64 34 48 16 41 43 16 30 19 39 97 52 86 69 49 18 9 75 71 39 38 42 72 69 16 33 82 35 23 86 77 75 33 94 40 53 26 30 43 3 16 42 1 80 41 97 0 91 26 66 74 89 76 16 96 65 22 51 6 23 96 37 93 48 37 92 47 35 10 18 40 9 96 77 72 83 80 74 24 32 29 45 9 97 63 23 1 11 67 46 61 91 20 9 55 42 88 85 81 54 20 62 5 90 9 11 71 28 85 26 93 80 19 73 41 29 70 7 65 18 7 6 23 54 90 63 98 34 51 37 22 70 17 42 90 26 94 72 10 26 72 84 16 84 21 44 38 68 8 37 37 72 11 0 44 68 64 52 30 33 71 32 79 30 5 74 42 76 39 42 42 18 16 51 17 96 85 18 65 70 53 71 25 8 62 59 74 51 51 83 61 91 91 51 57 87 96 76 51 95 16 67 48 61 26 44 78 25 64 96 25 47 57 98 87 76 51 25 54 6 95 47 37 54 0 92 44 96 7 98 25 52 3 26 10 15 78 46 28 30 3 14 84 72 39 37 2 96 56 51 86 30 76 23 97 49 65 92 44 24 37 31 2 16 41 52 65 87 9 86 1 58 50 25 4 12 32 83 27 89 83 74 29 94 82 60 16 20 62 60 52 64 6 23 37 32 65 87 86 66 71 68 29 53 73 1 25 82 93 17 65 62 80 16 44 76 3 31 25 35 0 62 84 46 6 79 85 23 51 8 61 77 84 85 65 16 10 46 85 3 20 73 27 83 9 6",
+          "output": "397"
         }
       ],
-      "constraints": "",
-      "notes": "* Jeśli istnieje kilka podciągów o tej samej maksymalnej długości — wybierz ten, który pojawia się „najwcześniej” (najmniejszy możliwy indeks startu), o ile sprawdzarka tego wymaga."
+      "constraints": "* `1 ≤ n ≤ 1000`\n* elementy listy są z przedziału $[-10^6, 10^6]$",
+      "notes": "* Podciągów jest $2^n$, więc sprawdzanie wszystkich jest wykluczone — w testach są listy z setkami elementów.\n* Programowanie dynamiczne: idąc po liście, pamiętaj długość najdłuższego naprzemiennego podciągu kończącego się **wzrostem** i kończącego się **spadkiem**. Gdy bieżący element jest większy od poprzedniego, podciąg „kończący się spadkiem” można przedłużyć wzrostem (i odwrotnie). Daje to czas $O(n)$; rozwiązanie $O(n^2)$ też zdąży.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "24_listy_trudne/ZAD-10",
+      "title": "Maksymalna suma spójnego fragmentu (algorytm Kadane'a)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "list",
+        "kadane",
+        "dp",
+        "fragment"
+      ],
+      "description": "Otrzymujesz listę liczb całkowitych. Znajdź **niepusty spójny fragment** listy (kolejne elementy od indeksu `p` do indeksu `k` włącznie, $p \\le k$) o **największej sumie**. Wypisz tę sumę oraz indeksy początku i końca fragmentu.\n\n* Jeśli kilka fragmentów ma tę samą, największą sumę — wybierz ten o **najmniejszym indeksie początku** `p`, a jeśli nadal jest remis — **najkrótszy** (o najmniejszym `k`).\n* Fragment musi mieć co najmniej jeden element, więc gdy wszystkie liczby są ujemne, wynikiem jest największa z nich (pierwsze jej wystąpienie).",
+      "input": "* 1. linia: `n` — długość listy\n* 2. linia: `n` liczb całkowitych oddzielonych spacjami",
+      "output": "* 1. linia: największa suma\n* 2. linia: dwie liczby `p k` oddzielone spacją — indeksy (liczone od `0`) pierwszego i ostatniego elementu fragmentu",
+      "examples": [
+        {
+          "input": "9\n-2 1 -3 4 -1 2 1 -5 4",
+          "output": "6\n3 6",
+          "explanation": "Fragment od indeksu 3 do 6: $4 + (-1) + 2 + 1 = 6$."
+        },
+        {
+          "input": "5\n4 -4 1 3 -1",
+          "output": "4\n0 0",
+          "explanation": "Sumę 4 mają fragmenty `0..0`, `0..3` i `2..3`. Najwcześniej zaczynają się dwa pierwsze, a z nich krótszy jest `0..0`."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n-5",
+          "output": "-5\n0 0"
+        },
+        {
+          "input": "1\n7",
+          "output": "7\n0 0"
+        },
+        {
+          "input": "4\n-3 -1 -2 -1",
+          "output": "-1\n1 1"
+        },
+        {
+          "input": "3\n5 -5 5",
+          "output": "5\n0 0"
+        },
+        {
+          "input": "4\n0 0 0 0",
+          "output": "0\n0 0"
+        },
+        {
+          "input": "3\n-1 0 2",
+          "output": "2\n1 2"
+        },
+        {
+          "input": "5\n2 -1 2 -10 3",
+          "output": "3\n0 2"
+        },
+        {
+          "input": "6\n1 2 3 4 5 6",
+          "output": "21\n0 5"
+        },
+        {
+          "input": "5\n-1 3 -3 3 -1",
+          "output": "3\n1 1"
+        },
+        {
+          "input": "400\n-74 76 39 46 93 -62 52 57 -29 -13 94 42 -9 -9 -2 -80 -63 -61 74 -83 47 76 -70 66 89 33 54 27 -98 -10 -49 -55 -90 76 75 45 24 51 41 -86 -7 40 0 65 -92 32 56 22 78 -80 15 -58 -8 19 8 -42 -98 30 36 99 -14 35 -75 68 46 35 8 -91 -25 78 -59 74 -52 38 65 -10 -8 -24 1 76 6 1 65 6 42 -76 -5 4 -91 4 33 -27 56 83 74 -13 -42 -36 38 92 -68 -74 49 -62 -95 98 51 -18 -61 39 32 -13 -21 90 47 10 -84 -49 -7 43 3 23 -28 57 -72 -80 62 -37 78 -56 3 -63 9 -43 16 -66 -44 -1 94 -42 -3 -34 37 36 -48 -43 92 38 33 83 -6 10 -64 -96 -43 -64 -28 68 6 15 -98 79 9 19 94 78 -26 28 -78 -80 84 96 -18 -2 66 -70 5 92 -71 -68 -55 99 -39 -53 45 -80 -88 -41 -25 -38 -12 -93 -50 -87 64 -9 -84 -52 50 90 -83 58 -35 43 -76 10 80 -13 49 -29 -71 -50 30 70 -20 53 2 -78 -68 -59 49 86 99 42 -22 -55 -13 -9 33 8 55 48 84 20 38 3 8 77 -6 40 -88 -70 95 -42 25 18 45 47 -67 90 43 -60 6 -55 -87 -24 52 -71 -8 -32 -81 -11 70 -69 27 0 -56 54 -19 1 -56 60 -7 50 -56 39 -20 -8 53 -45 -68 -79 -13 39 -74 -42 -56 74 -55 25 -14 38 -51 -81 -43 -51 44 73 -74 -28 -91 48 39 -65 -9 -67 22 20 -54 -92 -37 89 -33 14 43 -89 1 -30 60 -70 35 -6 97 -59 -32 4 -25 95 51 -99 -51 72 43 80 72 88 81 18 -10 56 68 6 6 -89 57 22 14 -73 53 -33 -3 73 -76 -24 22 57 -8 -87 67 -2 16 -57 -93 18 -90 21 -27 -34 -44 69 31 8 43 -34 -78 -79 36 -7 -59 -39 -76 16 -85 51 -81 96 72 -61 84 -1 -50 6 1 -38 31 -35 -84 -96 89 22",
+          "output": "907\n1 115"
+        }
+      ],
+      "constraints": "* $1 \\le n \\le 10^5$\n* elementy listy są z przedziału $[-10^4, 10^4]$",
+      "notes": "* Sprawdzanie wszystkich fragmentów to około $n^2/2$ par `(p, k)` — przy $n = 10^5$ to miliardy działań. **Algorytm Kadane'a** robi to w jednym przejściu, w czasie $O(n)$: idąc po liście, pamiętaj sumę najlepszego fragmentu **kończącego się** na bieżącym elemencie oraz jego początek. Jeśli ta suma przed dołożeniem nowego elementu jest ujemna, opłaca się zacząć nowy fragment od bieżącego elementu; w przeciwnym razie przedłużasz dotychczasowy.\n* Remisy rozstrzygną się zgodnie z treścią, jeśli nowy fragment zaczniesz tylko przy sumie **ściśle ujemnej** (przy sumie `0` przedłużaj — początek zostaje wcześniejszy), a najlepszy wynik zmienisz tylko na **ściśle większy**.",
+      "starter_code": "def maks_fragment(liczby):\n    najlepsza, poczatek, koniec = liczby[0], 0, 0\n    # Uzupełnij: algorytm Kadane'a.\n    return najlepsza, poczatek, koniec\n\n\nn = int(input())\nliczby = [int(x) for x in input().split()]\nsuma, poczatek, koniec = maks_fragment(liczby)\nprint(suma)\nprint(poczatek, koniec)\n"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "file": "02_instrukcja_warunkowa.md",
   "chapter_title": "Rozdział 2: Instrukcja warunkowa (if / else)",
-  "chapter_description": "Zadania w tym rozdziale ćwiczą podejmowanie decyzji w programie na podstawie warunków.\n**Konwencje wspólne:**\n* Każde zadanie jest **osobnym programem**.\n* Dane wejściowe wczytuj dokładnie w podanej kolejności, każdą wartość z osobnej linii (o ile nie napisano inaczej).\n* Wyniki wypisuj dokładnie jak w specyfikacji (w tym wielkość liter, kropki, spacje).\n* Jeżeli zadanie mówi „nie wypisuj nic” — program ma zakończyć się bez żadnego outputu (bez spacji, bez pustej linii).",
+  "chapter_description": "Zadania w tym rozdziale ćwiczą podejmowanie decyzji w programie na podstawie warunków.\n\n**Konwencje wspólne:**\n\n* Każde zadanie jest **osobnym programem**: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.\n* Dane wejściowe wczytuj dokładnie w podanej kolejności, każdą wartość z osobnej linii (o ile nie napisano inaczej).\n* Wyniki wypisuj dokładnie jak w specyfikacji (w tym wielkość liter, polskie znaki, kropki, spacje).\n* Jeżeli zadanie mówi „nie wypisuj nic” — program ma zakończyć się bez żadnego wyjścia (bez spacji, bez pustej linii).\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”. Tekst podany w `input(\"…\")` jest ignorowany przez sprawdzarkę.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -14,13 +14,19 @@
         "porównania",
         "I/O"
       ],
-      "description": "Wczytaj jedną liczbę naturalną `n`.\nJeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.",
-      "input": "* 1 linia: `n` (liczba całkowita, `n ≥ 0`)",
-      "output": "* Jeśli `n > 5`: jedna linia z liczbą `n`\n* Jeśli `n ≤ 5`: brak wyjścia",
+      "description": "Wczytaj jedną liczbę naturalną `n`.\nJeśli $n > 5$, wypisz `n`. W przeciwnym razie nie wypisuj nic.",
+      "input": "* 1 linia: `n` — liczba całkowita, $0 \\le n \\le 10^9$",
+      "output": "* Jeśli $n > 5$: jedna linia z liczbą `n`.\n* Jeśli $n \\le 5$: brak wyjścia.",
       "examples": [
         {
           "input": "10",
-          "output": "10"
+          "output": "10",
+          "explanation": ""
+        },
+        {
+          "input": "3",
+          "output": "",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -31,10 +37,27 @@
         {
           "input": "5",
           "output": ""
+        },
+        {
+          "input": "0",
+          "output": ""
+        },
+        {
+          "input": "100",
+          "output": "100"
+        },
+        {
+          "input": "7",
+          "output": "7"
+        },
+        {
+          "input": "1000000000",
+          "output": "1000000000"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -48,16 +71,18 @@
         "string"
       ],
       "description": "Wczytaj dwie liczby naturalne `a` i `b`.\nJeśli są równe, wypisz:\n`Liczby są identyczne.`\nW przeciwnym razie wypisz:\n`Liczby są różne.`",
-      "input": "* 1 linia: `a` (całkowita, `a ≥ 0`)\n* 2 linia: `b` (całkowita, `b ≥ 0`)",
+      "input": "* 1 linia: `a` — liczba całkowita, $0 \\le a \\le 10^9$\n* 2 linia: `b` — liczba całkowita, $0 \\le b \\le 10^9$",
       "output": "Jedna linia — dokładnie jeden z komunikatów.",
       "examples": [
         {
           "input": "7\n4",
-          "output": "Liczby są różne."
+          "output": "Liczby są różne.",
+          "explanation": ""
         },
         {
           "input": "5\n5",
-          "output": "Liczby są identyczne."
+          "output": "Liczby są identyczne.",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -68,10 +93,27 @@
         {
           "input": "0\n7",
           "output": "Liczby są różne."
+        },
+        {
+          "input": "0\n0",
+          "output": "Liczby są identyczne."
+        },
+        {
+          "input": "12\n21",
+          "output": "Liczby są różne."
+        },
+        {
+          "input": "1000\n999",
+          "output": "Liczby są różne."
+        },
+        {
+          "input": "1000000000\n1000000000",
+          "output": "Liczby są identyczne."
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-03",
@@ -84,39 +126,46 @@
         "porównania",
         "string"
       ],
-      "description": "Wczytaj liczbę całkowitą `x` i wypisz jeden z komunikatów:\n\n* dla `x < 0`: `Liczba jest ujemna.`\n* dla `x > 0`: `Liczba jest dodatnia.`\n* dla `x = 0`: `Liczba jest zerem.`",
-      "input": "* 1 linia: `x` (liczba całkowita)",
+      "description": "Wczytaj liczbę całkowitą `x` i wypisz jeden z komunikatów:\n\n* dla $x < 0$: `Liczba jest ujemna.`\n* dla $x > 0$: `Liczba jest dodatnia.`\n* dla $x = 0$: `Liczba jest zerem.`",
+      "input": "* 1 linia: `x` — liczba całkowita, $-10^9 \\le x \\le 10^9$",
       "output": "Jedna linia — dokładnie jeden komunikat.",
       "examples": [
         {
           "input": "-5",
-          "output": "Liczba jest ujemna."
+          "output": "Liczba jest ujemna.",
+          "explanation": ""
         },
+        {
+          "input": "2",
+          "output": "Liczba jest dodatnia.",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
         {
           "input": "0",
           "output": "Liczba jest zerem."
         },
-        {
-          "input": "2",
-          "output": "Liczba jest dodatnia."
-        }
-      ],
-      "testcases": [
         {
           "input": "-1",
           "output": "Liczba jest ujemna."
         },
         {
-          "input": "0",
-          "output": "Liczba jest zerem."
+          "input": "1",
+          "output": "Liczba jest dodatnia."
         },
         {
-          "input": "12",
+          "input": "123",
           "output": "Liczba jest dodatnia."
+        },
+        {
+          "input": "-1000000000",
+          "output": "Liczba jest ujemna."
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-04",
@@ -130,17 +179,19 @@
         "if",
         "formatowanie"
       ],
-      "description": "Wczytaj dwie liczby naturalne `a` i `b`.\nWypisz je w jednej linii w kolejności: **większa, potem mniejsza**, oddzielone pojedynczą spacją.\nJeśli `a = b`, wypisz `a b` (czyli dwie takie same liczby).",
-      "input": "* 1 linia: `a` (całkowita, `a ≥ 0`)\n* 2 linia: `b` (całkowita, `b ≥ 0`)",
-      "output": "Jedna linia:\n`max(a, b) min(a, b)`",
+      "description": "Wczytaj dwie liczby naturalne `a` i `b`.\nWypisz je w jednej linii w kolejności: **najpierw większa, potem mniejsza**, oddzielone pojedynczą spacją.\nJeśli $a = b$, wypisz tę samą liczbę dwa razy.",
+      "input": "* 1 linia: `a` — liczba całkowita, $0 \\le a \\le 10^9$\n* 2 linia: `b` — liczba całkowita, $0 \\le b \\le 10^9$",
+      "output": "Jedna linia: większa liczba, spacja, mniejsza liczba.",
       "examples": [
         {
           "input": "1\n4",
-          "output": "4 1"
+          "output": "4 1",
+          "explanation": ""
         },
         {
           "input": "5\n5",
-          "output": "5 5"
+          "output": "5 5",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -155,10 +206,23 @@
         {
           "input": "4\n4",
           "output": "4 4"
+        },
+        {
+          "input": "0\n0",
+          "output": "0 0"
+        },
+        {
+          "input": "0\n7",
+          "output": "7 0"
+        },
+        {
+          "input": "100\n99",
+          "output": "100 99"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Spróbuj rozwiązać zadanie instrukcją `if`, bez wbudowanych funkcji `max` i `min`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05",
@@ -171,13 +235,14 @@
         "warunki",
         "porządkowanie"
       ],
-      "description": "Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności rosnącej.",
-      "input": "* 1 linia: `a` (całkowita, `a ≥ 0`)\n* 2 linia: `b` (całkowita, `b ≥ 0`)\n* 3 linia: `c` (całkowita, `c ≥ 0`)",
-      "output": "Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.",
+      "description": "Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności niemalejącej (od najmniejszej do największej).",
+      "input": "* 1 linia: `a` — liczba całkowita, $0 \\le a \\le 10^9$\n* 2 linia: `b` — liczba całkowita, $0 \\le b \\le 10^9$\n* 3 linia: `c` — liczba całkowita, $0 \\le c \\le 10^9$",
+      "output": "Jedna linia: trzy liczby w kolejności niemalejącej, oddzielone pojedynczymi spacjami.\nLiczby powtarzające się wypisz tyle razy, ile wystąpiły.",
       "examples": [
         {
           "input": "2\n1\n4",
-          "output": "1 2 4"
+          "output": "1 2 4",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -188,10 +253,39 @@
         {
           "input": "5\n5\n1",
           "output": "1 5 5"
+        },
+        {
+          "input": "9\n8\n7",
+          "output": "7 8 9"
+        },
+        {
+          "input": "4\n6\n8",
+          "output": "4 6 8"
+        },
+        {
+          "input": "0\n0\n0",
+          "output": "0 0 0"
+        },
+        {
+          "input": "10\n0\n10",
+          "output": "0 10 10"
+        },
+        {
+          "input": "2\n7\n1",
+          "output": "1 2 7"
+        },
+        {
+          "input": "6\n3\n9",
+          "output": "3 6 9"
+        },
+        {
+          "input": "1\n9\n5",
+          "output": "1 5 9"
         }
       ],
       "constraints": "",
-      "notes": "* Możesz użyć wbudowanego sortowania, ale da się też rozwiązać czystymi warunkami."
+      "notes": "* Możesz użyć wbudowanego sortowania, ale spróbuj rozwiązać zadanie samymi instrukcjami warunkowymi.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06",
@@ -205,12 +299,13 @@
         "porównania"
       ],
       "description": "Wczytaj cztery liczby naturalne i wypisz największą z nich.",
-      "input": "4 linie: `a`, `b`, `c`, `d` (całkowite, każda `≥ 0`)",
-      "output": "Jedna linia: największa liczba.",
+      "input": "4 linie: `a`, `b`, `c`, `d` — liczby całkowite z zakresu $0 \\dots 10^9$.",
+      "output": "Jedna linia: największa z czterech liczb.",
       "examples": [
         {
           "input": "2\n5\n1\n4",
-          "output": "5"
+          "output": "5",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -221,15 +316,32 @@
         {
           "input": "0\n0\n0\n0",
           "output": "0"
+        },
+        {
+          "input": "8\n2\n3\n1",
+          "output": "8"
+        },
+        {
+          "input": "1\n2\n3\n4",
+          "output": "4"
+        },
+        {
+          "input": "3\n3\n6\n6",
+          "output": "6"
+        },
+        {
+          "input": "15\n4\n27\n9",
+          "output": "27"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Spróbuj rozwiązać zadanie instrukcją `if`, bez wbudowanej funkcji `max`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07",
       "slug": "02_instrukcja_warunkowa/ZAD-07",
-      "title": "Prawa logiki (p i q)",
+      "title": "Prawa logiki (p, q, r)",
       "difficulty": 2,
       "difficulty_display": "★★☆",
       "tags": [
@@ -238,27 +350,49 @@
         "tabele prawdy",
         "formatowanie"
       ],
-      "description": "Dla wszystkich kombinacji wartości logicznych `p` i `q` (True/False) sprawdź poprawność praw:\n\n1. Wyłączony środek: `p OR (NOT p)`\n2. Niesprzeczność: `NOT (p AND (NOT p))`\n3. Przemienność AND: `p AND q` vs `q AND p`\n4. Przemienność OR: `p OR q` vs `q OR p`\n5. De Morgana 1: `NOT (p AND q)` vs `(NOT p) OR (NOT q)`\n6. De Morgana 2: `NOT (p OR q)` vs `(NOT p) AND (NOT q)`",
-      "input": "Brak.",
-      "output": "Żeby wynik był **jednoznaczny i łatwy do sprawdzenia**, zastosuj dokładnie ten format:\n\nDla każdego z 6 praw wypisz:\n\n* nazwę prawa w jednej linii,\n* następnie w osobnych liniach wynik dla każdej kombinacji `p, q` w kolejności:\n\n  1. `p=False, q=False`\n  2. `p=False, q=True`\n  3. `p=True, q=False`\n  4. `p=True, q=True`\n\nKażda linia kombinacji ma mieć format:\n`p=<...> q=<...> L=<...> R=<...> EQ=<...>`\n\nGdzie `<...>` to dosłownie `True` albo `False`.",
+      "description": "Wczytaj wartości logiczne `p`, `q` i `r` i sprawdź dla nich osiem praw logiki.\nKażde prawo to równoważność lewej strony `L` i prawej strony `R`:\n\n1. `Prawo wyłączonego środka` — `L = p or not p`, `R = True`\n2. `Prawo niesprzeczności` — `L = not (p and not p)`, `R = True`\n3. `Przemienność koniunkcji` — `L = p and q`, `R = q and p`\n4. `Przemienność alternatywy` — `L = p or q`, `R = q or p`\n5. `Pierwsze prawo de Morgana` — `L = not (p and q)`, `R = not p or not q`\n6. `Drugie prawo de Morgana` — `L = not (p or q)`, `R = not p and not q`\n7. `Rozdzielność koniunkcji względem alternatywy` — `L = p and (q or r)`, `R = (p and q) or (p and r)`\n8. `Rozdzielność alternatywy względem koniunkcji` — `L = p or (q and r)`, `R = (p or q) and (p or r)`\n\nDla każdego prawa oblicz `L` i `R` dla wczytanych wartości i sprawdź instrukcją `if`, czy są równe.",
+      "input": "* 1. linia: `p` — napis `True` albo `False`\n* 2. linia: `q` — napis `True` albo `False`\n* 3. linia: `r` — napis `True` albo `False`",
+      "output": "8 linii — po jednej dla każdego prawa, w kolejności z listy:\n\n`<nazwa prawa>: L=<L> R=<R> -> równoważne`\n\ngdy `L` jest równe `R`, albo `<nazwa prawa>: L=<L> R=<R> -> nierównoważne` w przeciwnym razie.\n`<L>` i `<R>` to dosłownie `True` albo `False`. (Wszystkie prawa z listy są prawdziwe, więc poprawny program zawsze wypisze `równoważne` — różnić się będą wartości `L` i `R`).",
       "examples": [
         {
-          "input": "",
-          "output": "Przemienność alternatywy:\np=False q=False L=False R=False EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True"
+          "input": "False\nTrue\nFalse",
+          "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=False R=False -> równoważne",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "",
-          "output": "Prawo wyłączonego środka:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrawo niesprzeczności:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność koniunkcji:\np=False q=False L=False R=False EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność alternatywy:\np=False q=False L=False R=False EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPierwsze prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=False R=False EQ=True\n\nDrugie prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=False R=False EQ=True"
+          "input": "False\nFalse\nFalse",
+          "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=False R=False -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=True R=True -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=False R=False -> równoważne"
         },
         {
-          "input": "",
-          "output": "Prawo wyłączonego środka:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrawo niesprzeczności:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność koniunkcji:\np=False q=False L=False R=False EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=True R=True EQ=True\n\nPrzemienność alternatywy:\np=False q=False L=False R=False EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=True R=True EQ=True\n\nPierwsze prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=True R=True EQ=True\np=True q=False L=True R=True EQ=True\np=True q=True L=False R=False EQ=True\n\nDrugie prawo de Morgana:\np=False q=False L=True R=True EQ=True\np=False q=True L=False R=False EQ=True\np=True q=False L=False R=False EQ=True\np=True q=True L=False R=False EQ=True"
+          "input": "False\nFalse\nTrue",
+          "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=False R=False -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=True R=True -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=False R=False -> równoważne"
+        },
+        {
+          "input": "False\nTrue\nTrue",
+          "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=True R=True -> równoważne"
+        },
+        {
+          "input": "True\nFalse\nFalse",
+          "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=True R=True -> równoważne"
+        },
+        {
+          "input": "True\nFalse\nTrue",
+          "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=False R=False -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=True R=True -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=True R=True -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=True R=True -> równoważne"
+        },
+        {
+          "input": "True\nTrue\nFalse",
+          "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=True R=True -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=False R=False -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=True R=True -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=True R=True -> równoważne"
+        },
+        {
+          "input": "True\nTrue\nTrue",
+          "output": "Prawo wyłączonego środka: L=True R=True -> równoważne\nPrawo niesprzeczności: L=True R=True -> równoważne\nPrzemienność koniunkcji: L=True R=True -> równoważne\nPrzemienność alternatywy: L=True R=True -> równoważne\nPierwsze prawo de Morgana: L=False R=False -> równoważne\nDrugie prawo de Morgana: L=False R=False -> równoważne\nRozdzielność koniunkcji względem alternatywy: L=True R=True -> równoważne\nRozdzielność alternatywy względem koniunkcji: L=True R=True -> równoważne"
         }
       ],
       "constraints": "",
-      "notes": "* Dokładne nazwy praw (nagłówki) użyj jak poniżej:\n\n  1. `Prawo wyłączonego środka:`\n  2. `Prawo niesprzeczności:`\n  3. `Przemienność koniunkcji:`\n  4. `Przemienność alternatywy:`\n  5. `Pierwsze prawo de Morgana:`\n  6. `Drugie prawo de Morgana:`\n* Między blokami praw możesz wstawić **jedną pustą linię** (zalecane), ale nie więcej."
+      "notes": "* `input()` zwraca **napis**. Nie zamieniaj go przez `bool(...)` — `bool(\"False\")` to `True` (każdy niepusty napis jest prawdziwy). Zamiast tego porównaj: `p = input() == \"True\"`.\n* f-string wstawia wartość logiczną jako tekst: `f\"L={True}\"` daje `L=True`.",
+      "starter_code": "p = input() == \"True\"\nq = input() == \"True\"\nr = input() == \"True\"\n\nL = p or not p\nR = True\nif L == R:\n    print(f\"Prawo wyłączonego środka: L={L} R={R} -> równoważne\")\nelse:\n    print(f\"Prawo wyłączonego środka: L={L} R={R} -> nierównoważne\")\n\n# Uzupełnij: w ten sam sposób oblicz i wypisz pozostałe siedem praw.\n"
     },
     {
       "id": "ZAD-08",
@@ -271,13 +405,19 @@
         "geometria",
         "warunek trójkąta"
       ],
-      "description": "Wczytaj trzy dodatnie długości odcinków `a`, `b`, `c`.\nSprawdź, czy można z nich zbudować trójkąt.\n\nWypisz:\n\n* jeśli tak: `Trójkąt można zbudować z podanych boków.`\n* jeśli nie: `Trójkąta nie można zbudować z podanych boków.`",
-      "input": "* 1 linia: `a` (całkowita, `a > 0`)\n* 2 linia: `b` (całkowita, `b > 0`)\n* 3 linia: `c` (całkowita, `c > 0`)",
+      "description": "Wczytaj trzy dodatnie długości odcinków `a`, `b`, `c`.\nSprawdź, czy można z nich zbudować trójkąt (niezdegenerowany).\n\nTrójkąt istnieje wtedy i tylko wtedy, gdy spełnione są **wszystkie** trzy nierówności:\n\n* $a + b > c$\n* $a + c > b$\n* $b + c > a$\n\nWypisz:\n\n* jeśli tak: `Trójkąt można zbudować z podanych boków.`\n* jeśli nie: `Trójkąta nie można zbudować z podanych boków.`",
+      "input": "* 1 linia: `a` — liczba całkowita\n* 2 linia: `b` — liczba całkowita\n* 3 linia: `c` — liczba całkowita",
       "output": "Jedna linia — dokładnie jeden z komunikatów.",
       "examples": [
         {
           "input": "3\n4\n5",
-          "output": "Trójkąt można zbudować z podanych boków."
+          "output": "Trójkąt można zbudować z podanych boków.",
+          "explanation": ""
+        },
+        {
+          "input": "1\n2\n5",
+          "output": "Trójkąta nie można zbudować z podanych boków.",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -288,10 +428,176 @@
         {
           "input": "1\n2\n3",
           "output": "Trójkąta nie można zbudować z podanych boków."
+        },
+        {
+          "input": "1\n1\n1",
+          "output": "Trójkąt można zbudować z podanych boków."
+        },
+        {
+          "input": "10\n2\n3",
+          "output": "Trójkąta nie można zbudować z podanych boków."
+        },
+        {
+          "input": "1\n5\n1",
+          "output": "Trójkąta nie można zbudować z podanych boków."
+        },
+        {
+          "input": "7\n10\n5",
+          "output": "Trójkąt można zbudować z podanych boków."
+        },
+        {
+          "input": "2\n2\n4",
+          "output": "Trójkąta nie można zbudować z podanych boków."
+        },
+        {
+          "input": "1000000000\n1000000000\n1",
+          "output": "Trójkąt można zbudować z podanych boków."
+        }
+      ],
+      "constraints": "* $1 \\le a, b, c \\le 10^9$",
+      "notes": "* Jeśli suma dwóch boków jest **równa** trzeciemu (np. 1, 2, 3), odcinki leżą na jednej prostej — taki „trójkąt” nie istnieje.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "02_instrukcja_warunkowa/ZAD-09",
+      "title": "Ocena z punktów",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "if-elif-else",
+        "porównania",
+        "zakresy"
+      ],
+      "description": "Wczytaj liczbę punktów zdobytych na sprawdzianie i wypisz ocenę według progów:\n\n* 0–49 punktów → `2`\n* 50–69 punktów → `3`\n* 70–84 punktów → `4`\n* 85–100 punktów → `5`\n\nJeśli liczba punktów jest spoza zakresu 0–100, wypisz:\n`Niepoprawna liczba punktów.`",
+      "input": "* 1 linia: `punkty` — liczba całkowita, $-1000 \\le punkty \\le 1000$",
+      "output": "Jedna linia: ocena (`2`, `3`, `4` albo `5`) lub komunikat o błędzie.",
+      "examples": [
+        {
+          "input": "77",
+          "output": "4",
+          "explanation": ""
+        },
+        {
+          "input": "120",
+          "output": "Niepoprawna liczba punktów.",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "2"
+        },
+        {
+          "input": "49",
+          "output": "2"
+        },
+        {
+          "input": "50",
+          "output": "3"
+        },
+        {
+          "input": "69",
+          "output": "3"
+        },
+        {
+          "input": "70",
+          "output": "4"
+        },
+        {
+          "input": "84",
+          "output": "4"
+        },
+        {
+          "input": "85",
+          "output": "5"
+        },
+        {
+          "input": "100",
+          "output": "5"
+        },
+        {
+          "input": "101",
+          "output": "Niepoprawna liczba punktów."
+        },
+        {
+          "input": "-1",
+          "output": "Niepoprawna liczba punktów."
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Najpierw obsłuż punkty spoza zakresu, a potem sprawdzaj progi po kolei w łańcuchu `if`/`elif` — każdy kolejny warunek może wtedy zakładać, że poprzednie nie zaszły.\n* Python pozwala łączyć porównania: `50 <= punkty <= 69` znaczy to samo co `50 <= punkty and punkty <= 69`.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "02_instrukcja_warunkowa/ZAD-10",
+      "title": "Prosty kalkulator",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "if-elif-else",
+        "arytmetyka",
+        "string",
+        "float"
+      ],
+      "description": "Wczytaj liczbę `a`, operator i liczbę `b`, a następnie wypisz wynik działania `a <operator> b`.\nObsługiwane operatory to: `+` (dodawanie), `-` (odejmowanie), `*` (mnożenie), `/` (dzielenie).\n\nPrzypadki szczególne:\n\n* jeśli operator to `/`, a $b = 0$, wypisz `Nie można dzielić przez zero.`\n* jeśli operator nie jest jednym z czterech powyższych, wypisz `Nieznany operator.` (niezależnie od wartości `b`).",
+      "input": "* 1. linia: `a` — liczba rzeczywista\n* 2. linia: operator — jeden znak\n* 3. linia: `b` — liczba rzeczywista",
+      "output": "Jedna linia: wynik do **2 miejsc po przecinku** (np. `f\"{wynik:.2f}\"`) albo jeden z komunikatów.",
+      "examples": [
+        {
+          "input": "7\n/\n2",
+          "output": "3.50",
+          "explanation": ""
+        },
+        {
+          "input": "5\n/\n0",
+          "output": "Nie można dzielić przez zero.",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2\n+\n3",
+          "output": "5.00"
+        },
+        {
+          "input": "1.5\n-\n4",
+          "output": "-2.50"
+        },
+        {
+          "input": "-3\n*\n2.5",
+          "output": "-7.50"
+        },
+        {
+          "input": "10\n/\n3",
+          "output": "3.33"
+        },
+        {
+          "input": "0\n/\n0",
+          "output": "Nie można dzielić przez zero."
+        },
+        {
+          "input": "8\n%\n3",
+          "output": "Nieznany operator."
+        },
+        {
+          "input": "4\n^\n0",
+          "output": "Nieznany operator."
+        },
+        {
+          "input": "-7.25\n/\n-0.5",
+          "output": "14.50"
+        },
+        {
+          "input": "1000000\n*\n1000000",
+          "output": "1000000000000.00"
+        }
+      ],
+      "constraints": "* $-10^6 \\le a, b \\le 10^6$",
+      "notes": "* Operator wczytaj jako napis (`dzialanie = input()`) i porównuj go z napisami, np. `if dzialanie == \"+\":`.",
+      "starter_code": ""
     }
   ]
 }

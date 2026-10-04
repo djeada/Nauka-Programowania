@@ -1,25 +1,29 @@
-"""
+r"""
 ZAD-05 — Co k-ty znak poziomo i pionowo
 
 **Poziom:** ★☆☆
-**Tagi:** `string`, `slicing`, `pętle`
+**Tagi:** `napisy`, `wycinanie`, `pętle`
 
 ### Treść
 
-Wczytaj napis i liczbę `k`.
+Wczytaj napis i liczbę `k`. Wybierz co `k`-ty znak napisu, czyli znaki na pozycjach $k, 2k, 3k, \ldots$ (pozycje liczymy od 1).
 
-a) Wypisz co `k`-ty znak w jednym wierszu, oddzielając znaki spacjami.
-b) Wypisz co `k`-ty znak pionowo (każdy w osobnej linii).
+a) Wypisz wybrane znaki w jednej linii, oddzielone pojedynczymi spacjami.
+b) Wypisz wybrane znaki pionowo — każdy w osobnej linii.
 
 ### Wejście
 
-* 1. linia: napis
-* 2. linia: liczba naturalna `k` (k ≥ 1)
+* 1. linia: napis bez spacji
+* 2. linia: liczba naturalna `k`
 
 ### Wyjście
 
-* (a) 1 linia: znaki oddzielone spacjami
-* (b) wiele linii: każdy znak osobno
+* 1. linia: wynik podpunktu a)
+* kolejne linie: wynik podpunktu b) — po jednym znaku w linii
+
+### Ograniczenia
+
+* $1 \le k \le$ długość napisu (wybrany zostanie więc co najmniej jeden znak).
 
 ### Przykład
 
@@ -39,33 +43,28 @@ h
 n
 ```
 
-### Uwagi o formatowaniu
+Znaki na pozycjach 3, 6 i 9 to `z`, `h` i `n`.
 
-* Dokładnie jedna spacja między znakami w punkcie (a), bez spacji na końcu linii.
+### Uwagi
+
+* Pozycja $k$ to indeks `k - 1` w Pythonie, więc wybrane znaki to `napis[k - 1::k]`.
 
 """
 
 
-def wypisz_poziomo(napis, k):
-    for i in range(len(napis)):
-        if i % k == 0:
-            print(napis[i], end=" ")
-    print()
-
-
-def wypisz_pionowo(napis, k):
-    for i in range(len(napis)):
-        if i % k == 0:
-            print(napis[i])
+def co_kty_znak(napis, k):
+    wybrane = []
+    for i in range(k - 1, len(napis), k):
+        wybrane.append(napis[i])
+    return wybrane
 
 
 if __name__ == "__main__":
+    napis = input()
+    k = int(input())
 
-    napis = input("Podaj napis: ")
-    k = int(input("Podaj liczbe k: "))
+    znaki = co_kty_znak(napis, k)
 
-    print("Napis wypisany poziomo: ")
-    wypisz_poziomo(napis, k)
-
-    print("Napis wypisany pionowo: ")
-    wypisz_pionowo(napis, k)
+    print(" ".join(znaki))
+    for znak in znaki:
+        print(znak)

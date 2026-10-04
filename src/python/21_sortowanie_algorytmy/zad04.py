@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-04 — Sortowanie przez scalanie
 
 **Poziom:** ★★☆
@@ -6,131 +6,99 @@ ZAD-04 — Sortowanie przez scalanie
 
 ### Treść
 
-Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **sortowania przez scalanie**:
+Napisz rekurencyjną funkcję `sortowanie_przez_scalanie(lista)`, która zwraca nową, posortowaną rosnąco listę, korzystając z algorytmu **sortowania przez scalanie**:
 
-1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.
-2. Podziel listę na dwie (w miarę) równe części.
-3. Rekurencyjnie posortuj obie części.
-4. **Scal** dwie posortowane listy w jedną posortowaną.
+1. Jeśli lista ma mniej niż 2 elementy — jest posortowana, zwróć ją.
+2. Podziel listę na dwie części: lewa to pierwsze $\lfloor n/2 \rfloor$ elementów (`lista[:n // 2]`), prawa — pozostałe.
+3. Rekurencyjnie posortuj najpierw lewą, a potem prawą część.
+4. **Scal** obie posortowane części w jedną posortowaną listę (pomocnicza funkcja `scal(lewa, prawa)`), **wypisz** wynik scalenia i go zwróć.
+
+Scalanie: dopóki obie listy mają elementy, porównuj ich pierwsze (najmniejsze) nieużyte elementy i dopisuj do wyniku mniejszy z nich; na koniec dopisz pozostałe elementy.
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych
+* 1. linia: liczba całkowita $n$ — liczba elementów
+* 2. linia: $n$ liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-* 1 linia: posortowana lista rosnąco
+$n - 1$ linii: wynik każdego scalenia, w kolejności wykonywania, w formacie listy Pythona. Ostatnie scalenie daje całą posortowaną listę.
+
+### Ograniczenia
+
+* $2 \le n \le 20$
+* Elementy są liczbami całkowitymi z przedziału $[-1000, 1000]$.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[6, 2, 1, 4, 27]
+5
+6 2 1 4 27
 ```
 
 **Wyjście:**
 
 ```
+[2, 6]
+[4, 27]
+[1, 4, 27]
 [1, 2, 4, 6, 27]
 ```
 
+Lista dzieli się na `[6, 2]` i `[1, 4, 27]`. Lewa część daje scalenie `[6]` + `[2]` → `[2, 6]`. Prawa dzieli się na `[1]` i `[4, 27]`; najpierw scalane są `[4]` + `[27]`, potem `[1]` + `[4, 27]`. Na końcu scalane są obie połowy.
+
 ### Uwagi o algorytmie
 
-* Złożoność czasowa: `O(n log n)`.
+* Złożoność czasowa: $O(n \log n)$.
+
+### Kod startowy
+
+```python
+def scal(lewa, prawa):
+    pass
+
+
+def sortowanie_przez_scalanie(lista):
+    pass
+
+
+n = int(input())
+lista = [int(x) for x in input().split()]
+sortowanie_przez_scalanie(lista)
+```
 
 """
 
 
-def sortuj_v1(tablica):
-    def scalaj(tablica_a, tablica_b):
-        wynik = list()
-
-        while len(tablica_a) + len(tablica_b) > 0:
-
-            if len(tablica_b) == 0 or (
-                len(tablica_a) > 0 and tablica_a[0] < tablica_b[0]
-            ):
-                wynik.append(tablica_a[0])
-                tablica_a = tablica_a[1:]
-
-            else:
-                wynik.append(tablica_b[0])
-                tablica_b = tablica_b[1:]
-
-        return wynik
-
-    n = len(tablica)
-
-    if n < 2:
-        return tablica
-
-    return scalaj(sortuj_v1(tablica[: n // 2]), sortuj_v1(tablica[n // 2 :]))
+def scal(lewa, prawa):
+    wynik = []
+    i = j = 0
+    while i < len(lewa) and j < len(prawa):
+        if lewa[i] <= prawa[j]:
+            wynik.append(lewa[i])
+            i += 1
+        else:
+            wynik.append(prawa[j])
+            j += 1
+    wynik.extend(lewa[i:])
+    wynik.extend(prawa[j:])
+    return wynik
 
 
-# Zlozonosc czasowa O(nlogn)
-def sortuj_v2(tablica):
-    def scalaj(tablica_a, tablica_b):
-        wynik = list()
-        indeks_a = indeks_b = 0
-
-        while len(tablica_a) + len(tablica_b) > indeks_a + indeks_b:
-
-            if len(tablica_b) <= indeks_b or (
-                len(tablica_a) > indeks_a and tablica_a[indeks_a] < tablica_b[indeks_b]
-            ):
-                wynik.append(tablica_a[indeks_a])
-                indeks_a += 1
-
-            else:
-                wynik.append(tablica_b[indeks_b])
-                indeks_b += 1
-
-        return wynik
-
-    n = len(tablica)
-
-    if n < 2:
-        return tablica
-
-    return scalaj(sortuj_v2(tablica[: n // 2]), sortuj_v2(tablica[n // 2 :]))
-
-
-# Testy Poprawnosci
-def test_1():
-    tablica = [4, 2, 5, 3, 1]
-    wynik = [1, 2, 3, 4, 5]
-
-    assert sortuj_v1(tablica) == wynik
-
-
-def test_2():
-    tablica = [6, 5, 1, 2, 3, 1, 4, 3, 5, 2, 3]
-    wynik = [1, 1, 2, 2, 3, 3, 3, 4, 5, 5, 6]
-
-    assert sortuj_v1(tablica) == wynik
-
-
-def test_3():
-    tablica = [4, 2, 5, 3, 1]
-    wynik = [1, 2, 3, 4, 5]
-
-    assert sortuj_v2(tablica) == wynik
-
-
-def test_4():
-    tablica = [6, 5, 1, 2, 3, 1, 4, 3, 5, 2, 3]
-    wynik = [1, 1, 2, 2, 3, 3, 3, 4, 5, 5, 6]
-
-    assert sortuj_v2(tablica) == wynik
-
-
-def main():
-    test_1()
-    test_2()
-    test_3()
-    test_4()
+def sortowanie_przez_scalanie(lista):
+    if len(lista) < 2:
+        return lista
+    srodek = len(lista) // 2
+    lewa = sortowanie_przez_scalanie(lista[:srodek])
+    prawa = sortowanie_przez_scalanie(lista[srodek:])
+    wynik = scal(lewa, prawa)
+    print(wynik)
+    return wynik
 
 
 if __name__ == "__main__":
-    main()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    sortowanie_przez_scalanie(lista)

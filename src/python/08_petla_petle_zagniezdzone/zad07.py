@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-07 — Choinka z N trójkątów
 
 **Poziom:** ★★☆
@@ -6,22 +6,17 @@ ZAD-07 — Choinka z N trójkątów
 
 ### Treść
 
-Wczytaj liczbę naturalną `N` (`N ≥ 1`). Wypisz choinkę składającą się z `N` trójkątów ustawionych jeden pod drugim:
+Wczytaj liczbę naturalną `N` i wypisz choinkę złożoną z `N` trójkątów ustawionych jeden pod drugim. Pierwszy trójkąt ma wysokość `1`, drugi `2`, …, ostatni `N`.
 
-* 1. trójkąt ma wysokość 1,
-* 2. trójkąt ma wysokość 2,
-* …
-* `N`-ty trójkąt ma wysokość `N`.
-
-Każdy trójkąt jest „rosnący” (jak w ZAD-02): w jego wierszu `i` wypisz `i` gwiazdek.
+Każdy trójkąt jest rosnący (jak w ZAD-02): w jego `i`-tym wierszu jest `i` gwiazdek.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
+* 1. linia: `N` — liczba naturalna (`N ≥ 1`)
 
 ### Wyjście
 
-Suma wysokości wszystkich trójkątów, czyli `1 + 2 + ... + N` linii.
+$1 + 2 + \ldots + N$ linii — kolejne trójkąty, bez pustych linii między nimi.
 
 ### Przykład
 
@@ -42,11 +37,21 @@ Suma wysokości wszystkich trójkątów, czyli `1 + 2 + ... + N` linii.
 ***
 ```
 
-### Uwagi o formatowaniu
-
-* Nie dodawaj pustych linii między trójkątami.
-
 """
 
+
+def trojkat(wysokosc):
+    for i in range(1, wysokosc + 1):
+        for _ in range(i):
+            print("*", end="")
+        print()
+
+
+def choinka(n):
+    for wysokosc in range(1, n + 1):
+        trojkat(wysokosc)
+
+
 if __name__ == "__main__":
-    pass
+    n = int(input())
+    choinka(n)

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-03 — Sprawdzanie warunków logicznych
 
 **Poziom:** ★☆☆
@@ -6,34 +6,35 @@ ZAD-03 — Sprawdzanie warunków logicznych
 
 ### Treść
 
-Napisz funkcję `sprawdz_warunki(a, b)`, która dla dwóch liczb naturalnych zwraca cztery wartości logiczne (np. jako krotkę) odpowiadające warunkom:
+Napisz funkcję `sprawdz_warunki(a, b)`, która dla dwóch liczb naturalnych zwraca **krotkę** czterech wartości logicznych, odpowiadających kolejno pytaniom:
 
-a) Czy `a > b`?
-b) Czy `a + b < 10`?
+a) Czy $a > b$?
+b) Czy $a + b < 10$?
 c) Czy obie liczby są nieparzyste?
-d) Czy `max(a, b) < a^2`?
+d) Czy większa z liczb jest mniejsza od kwadratu `a`, czyli czy $\max(a, b) < a^2$?
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje cztery zwrócone wartości.
 
 ### Wejście
 
-Dwa argumenty funkcji:
-
-* `a` (liczba całkowita, `a ≥ 0`)
-* `b` (liczba całkowita, `b ≥ 0`)
+* 1. linia: liczba naturalna `a`
+* 2. linia: liczba naturalna `b`
 
 ### Wyjście
 
-Cztery wartości logiczne w kolejności a), b), c), d).
+Cztery linie z wartościami `True` albo `False` — odpowiedzi na pytania a), b), c), d) w tej kolejności.
+
+### Ograniczenia
+
+* $a \ge 0$, $b \ge 0$
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-A, B, C, D = sprawdz_warunki(3, 2)
-print(A)
-print(B)
-print(C)
-print(D)
+```
+3
+2
 ```
 
 **Wyjście:**
@@ -45,62 +46,50 @@ False
 True
 ```
 
+$3 > 2$, $3 + 2 = 5 < 10$, liczba $2$ jest parzysta, $\max(3, 2) = 3 < 9$.
+
+### Uwagi
+
+* Kilka wartości zwrócisz naraz instrukcją `return w1, w2, w3, w4` — Python spakuje je w krotkę.
+
+### Kod startowy
+
+```python
+def sprawdz_warunki(a, b):
+    pass
+
+
+a = int(input())
+b = int(input())
+w1, w2, w3, w4 = sprawdz_warunki(a, b)
+print(w1)
+print(w2)
+print(w3)
+print(w4)
+```
+
 """
 
 
-def pierwsza_wieksza(pierwsza_liczba, druga_liczba):
-    """
-    Funkcja sprawdza czy pierwsza liczba jest wieksza od drugiej liczby.
-    """
-    return pierwsza_liczba > druga_liczba
-
-
-def suma_mniejsza_10(pierwsza_liczba, druga_liczba):
-    """
-    Funkcja sprawdza czy suma liczb jest mniejsza niz 10.
-    """
-    return pierwsza_liczba + druga_liczba < 10
-
-
-def obie_nieparzyste(pierwsza_liczba, druga_liczba):
-    """
-    Funkcja sprawdza czy obie liczby sa nieparzyste.
-    """
-    return pierwsza_liczba % 2 != 0 and druga_liczba % 2 != 0
-
-
-def wieksza_mniejsza_pierwsza_kwadrat(pierwsza_liczba, druga_liczba):
-    """
-    Funkcja sprawdza czy wieksza liczba jest mniejsza od pierwszej liczby podniesionej do kwadratu.
-    """
-    return max(pierwsza_liczba, druga_liczba) < pierwsza_liczba**2
-
-
-def test_pierwsza_wieksza():
-    assert not pierwsza_wieksza(1, 2)
-    assert pierwsza_wieksza(2, 1)
-
-
-def test_suma_mniejsza_10():
-    assert suma_mniejsza_10(1, 2)
-    assert not suma_mniejsza_10(2, 1)
-
-
-def test_obie_nieparzyste():
-    assert obie_nieparzyste(1, 2)
-    assert obie_nieparzyste(2, 1)
-    assert not obie_nieparzyste(2, 2)
-
-
-def test_wieksza_mniejsza_pierwsza_kwadrat():
-    assert wieksza_mniejsza_pierwsza_kwadrat(1, 2)
-    assert not wieksza_mniejsza_pierwsza_kwadrat(2, 1)
-    assert not wieksza_mniejsza_pierwsza_kwadrat(2, 2)
+def sprawdz_warunki(a, b):
+    """Zwraca krotkę czterech wartości logicznych opisanych w treści zadania."""
+    pierwsza_wieksza = a > b
+    suma_mniejsza_od_10 = a + b < 10
+    obie_nieparzyste = a % 2 == 1 and b % 2 == 1
+    wieksza_mniejsza_od_kwadratu_a = max(a, b) < a**2
+    return (
+        pierwsza_wieksza,
+        suma_mniejsza_od_10,
+        obie_nieparzyste,
+        wieksza_mniejsza_od_kwadratu_a,
+    )
 
 
 if __name__ == "__main__":
-
-    test_pierwsza_wieksza()
-    test_suma_mniejsza_10()
-    test_obie_nieparzyste()
-    test_wieksza_mniejsza_pierwsza_kwadrat()
+    a = int(input())
+    b = int(input())
+    w1, w2, w3, w4 = sprawdz_warunki(a, b)
+    print(w1)
+    print(w2)
+    print(w3)
+    print(w4)

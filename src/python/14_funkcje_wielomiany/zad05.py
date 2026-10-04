@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — k-ta pochodna wielomianu
 
 **Poziom:** ★★☆
@@ -6,70 +6,82 @@ ZAD-05 — k-ta pochodna wielomianu
 
 ### Treść
 
-Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę naturalną `k` i zwraca współczynniki wielomianu będącego **k-tą pochodną**.
+Napisz funkcję `pochodna(wspolczynniki, k)`, która zwraca listę współczynników wielomianu będącego `k`-tą pochodną danego wielomianu (czyli wielomianu zróżniczkowanego `k` razy).
 
-### Wejście (argumenty funkcji)
+Program wczytuje wielomian i liczbę `k`, wywołuje funkcję i wypisuje współczynniki wyniku.
 
-* `a` — lista `[a_n, ..., a_0]`
-* `k` — liczba naturalna
+### Wejście
 
-### Wyjście (zwracana wartość)
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb całkowitych `a_n ... a_0`
+* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)
 
-* lista współczynników wielomianu po zróżniczkowaniu `k` razy
+### Wyjście
+
+Jedna linia: współczynniki `k`-tej pochodnej od najwyższej potęgi, oddzielone spacją. Jeśli `k > n`, pochodna jest wielomianem zerowym — wypisz wtedy `0`.
+
+### Ograniczenia
+
+* `0 ≤ n ≤ 10`, `1 ≤ k ≤ 12`
+* `-100 ≤ a_i ≤ 100`
 
 ### Przykład
 
-Dla `a = [4, -3, 2]` oraz `k = 1` funkcja zwraca:
-`[8, -3]`
+**Wejście:**
+
+```
+2
+4 -3 2
+1
+```
+
+**Wyjście:**
+
+```
+8 -3
+```
+
+$(4x^2 - 3x + 2)' = 8x - 3$.
 
 ### Uwagi
 
-* Jeśli `k` jest większe niż stopień wielomianu, wynikiem jest wielomian zerowy: `[0]`.
+* Pochodna jednomianu: $(a x^d)' = d \cdot a x^{d-1}$, a pochodna stałej to $0$. Jeśli współczynniki to `[c_d, c_{d-1}, ..., c_1, c_0]`, to pierwsza pochodna ma współczynniki `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]` (o jeden mniej).
+* `k`-tą pochodną otrzymasz, licząc pierwszą pochodną `k` razy.
+
+### Kod startowy
+
+```python
+def pochodna(wspolczynniki, k):
+    pass
+
+
+n = int(input())
+wspolczynniki = [int(s) for s in input().split()]
+k = int(input())
+print(*pochodna(wspolczynniki, k))
+```
 
 """
 
 
-def pochodna(wielomian, k):
-    """
-    Funkcja oblicza k-ta pochodna wielomianu.
-
-    Złożoność czasowa: O(k * n), gdzie n to stopień wielomianu
-    Złożoność pamięciowa: O(n) dla wyniku
-    """
-    if not wielomian or k < 0:
+def pierwsza_pochodna(wspolczynniki):
+    """Zwraca współczynniki pierwszej pochodnej wielomianu."""
+    stopien = len(wspolczynniki) - 1
+    if stopien == 0:
         return [0]
+    return [wspolczynniki[i] * (stopien - i) for i in range(stopien)]
 
-    wynik = wielomian[:]
 
+def pochodna(wspolczynniki, k):
+    """Zwraca współczynniki k-tej pochodnej wielomianu ([0] dla wielomianu zerowego)."""
+    wynik = wspolczynniki
     for _ in range(k):
-        if len(wynik) <= 1:
-            wynik = [0]
-            break
-
-        nowy_wynik = []
-        n = len(wynik)
-        for i in range(n - 1):
-            nowy_wynik.append(wynik[i] * (n - i - 1))
-        wynik = nowy_wynik
-
-    return wynik if wynik else [0]
-
-
-def test_pochodna():
-    assert pochodna([4, -3, 2], 1) == [8, -3]
-    assert pochodna([13, -6, 0, -1, -1], 2) == [156, -36, 0]
+        wynik = pierwsza_pochodna(wynik)
+    return wynik
 
 
 if __name__ == "__main__":
-    # Wczytanie wielomianu jako listy
-    wielomian = __import__("ast").literal_eval(input().strip())
-    # Wczytanie stopnia pochodnej
-    k = int(input().strip())
-
-    # Obliczenie k-tej pochodnej
-    # Złożoność czasowa: O(k * n)
-    # Złożoność pamięciowa: O(n)
-    wynik = pochodna(wielomian, k)
-
-    # Wypisanie wyniku jako lista
-    print(str(wynik))
+    n = int(input())
+    wspolczynniki = [int(s) for s in input().split()]
+    k = int(input())
+    print(*pochodna(wspolczynniki, k))

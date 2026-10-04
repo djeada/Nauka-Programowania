@@ -1,13 +1,16 @@
-# Rozdział 1: Interakcja z konsolą (stdin/stdout)
+# Rozdział 1: Interakcja z konsolą
 
 Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
-**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
+**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych, np. ZAD-05A … ZAD-05E) jest osobnym, niezależnym programem.**
 
 **Konwencje wspólne:**
 
-* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
+* Każda wartość wejściowa znajduje się w osobnej linii — wczytuj je dokładnie w podanej kolejności (np. `float(input())`).
 * Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.
-* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem (np. `%.3f`, `format(x, ".3f")`).
+* „Do 3 miejsc po przecinku” oznacza wypisanie liczby z **dokładnie** trzema cyframi po kropce, np. `f"{y:.3f}"` (`19.000`, `-2.500`). Analogicznie dla 2 miejsc.
+* Program nie wypisuje komunikatów typu „Podaj liczbę:”. Tekst podany w `input("…")` jest ignorowany przez sprawdzarkę.
+
+---
 
 ## ZAD-01 — Wypisywanie tekstu na ekran
 
@@ -25,11 +28,11 @@ Brak.
 
 ### Wyjście
 
-Jedna linia:
-
-* `Witaj, świecie!`
+Jedna linia: `Witaj, świecie!`
 
 ### Przykład
+
+**Wejście:** *(brak)*
 
 **Wyjście:**
 
@@ -37,9 +40,9 @@ Jedna linia:
 Witaj, świecie!
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Tekst musi być identyczny (łącznie z przecinkiem, spacją i wykrzyknikiem).
+* Tekst musi być identyczny (łącznie z polskimi znakami, przecinkiem, spacją i wykrzyknikiem).
 
 ---
 
@@ -50,14 +53,12 @@ Witaj, świecie!
 
 ### Treść
 
-Wczytaj dwie liczby całkowite i wypisz je w odwrotnej kolejności (każda w osobnej linii).
+Wczytaj dwie liczby całkowite i wypisz je w odwrotnej kolejności (każdą w osobnej linii).
 
 ### Wejście
 
-Dwie liczby całkowite:
-
-* 1. linia: `a`
-* 2. linia: `b`
+* 1. linia: `a` — liczba całkowita
+* 2. linia: `b` — liczba całkowita
 
 ### Wyjście
 
@@ -66,9 +67,9 @@ Dwie linie:
 * 1. linia: `b`
 * 2. linia: `a`
 
-### Ograniczenia / gwarancje
+### Ograniczenia
 
-* `a`, `b` mieszczą się w typowym zakresie int (np. 32-bit).
+* $-10^9 \le a, b \le 10^9$
 
 ### Przykład
 
@@ -91,17 +92,17 @@ Dwie linie:
 ## ZAD-03 — Rysowanie kształtów znakami
 
 **Poziom:** ★☆☆
-**Tagi:** `print`, `formatowanie`, `pętle`, `string`
+**Tagi:** `print`, `formatowanie`, `string`
 
 ### Treść
 
 Wypisz na wyjście trzy kształty:
 
-1. **Kwadrat 2×2** z liter `x`
-2. **Trójkąt liczbowy** z 3 linii: w linii `i` wypisz `i` razy cyfrę `i` (dla i=1..3)
-3. **Romb z jedynek** o maksymalnej szerokości 5 znaków
+1. **Kwadrat 2×2** z liter `x`.
+2. **Trójkąt liczbowy** z 3 linii: w linii numer `i` wypisz `i` razy cyfrę `i` (dla `i` = 1, 2, 3).
+3. **Romb z jedynek** o maksymalnej szerokości 5 znaków.
 
-Każdy kształt ma być oddzielony **jedną pustą linią**.
+Kształty oddziel **dokładnie jedną pustą linią**.
 
 ### Wejście
 
@@ -109,7 +110,7 @@ Brak.
 
 ### Wyjście
 
-Dokładnie:
+Dokładnie 12 linii:
 
 * 2 linie kwadratu,
 * pusta linia,
@@ -117,7 +118,11 @@ Dokładnie:
 * pusta linia,
 * 5 linii rombu.
 
-### Przykład (oczekiwane wyjście)
+### Przykład
+
+**Wejście:** *(brak)*
+
+**Wyjście:**
 
 ```
 xx
@@ -134,10 +139,10 @@ xx
   1
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* W rombie spacje na początku linii są istotne.
-* Nie dodawaj dodatkowych pustych linii na początku; jedna na końcu jest zwykle akceptowalna, ale trzymaj się przykładu.
+* W rombie spacje na **początku** linii są istotne (spacje na końcu linii są ignorowane).
+* Nie dodawaj pustych linii na początku wyjścia.
 
 ---
 
@@ -150,26 +155,27 @@ xx
 
 Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:
 
-1. `a + b`
-2. `a - b`
-3. `a * b`
-4. `a // b` (dzielenie całkowite)
-5. `a % b`
-6. `a^b`
+1. sumę $a + b$,
+2. różnicę $a - b$,
+3. iloczyn $a \cdot b$,
+4. iloraz całkowity $\lfloor a / b \rfloor$ (w Pythonie `a // b`),
+5. resztę z dzielenia `a` przez `b` (w Pythonie `a % b`),
+6. potęgę $a^b$ (w Pythonie `a ** b`).
 
 ### Wejście
 
-* 1. linia: `a` (liczba całkowita)
-* 2. linia: `b` (liczba całkowita)
+* 1. linia: `a` — liczba całkowita
+* 2. linia: `b` — liczba całkowita
 
 ### Wyjście
 
-6 linii — wyniki działań w kolejności 1–6.
+6 linii — wyniki działań w kolejności 1–6, każdy jako liczba całkowita.
 
-### Ograniczenia / gwarancje
+### Ograniczenia
 
-* `a ≥ 0`
-* `b > 0` (żeby dzielenie i modulo były poprawne)
+* $0 \le a \le 1000$
+* $1 \le b \le 10$ (dzięki temu dzielenie i reszta są zawsze poprawne)
+* $a^b \le 10^{18}$
 
 ### Przykład
 
@@ -193,20 +199,26 @@ Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:
 
 ---
 
-# Funkcje — zadania niezależne (ZAD-05A … ZAD-05E)
-
 ## ZAD-05A — Funkcja liniowa: y = 3x + 10
 
-**Poziom:** ★★☆
+**Poziom:** ★☆☆
 **Tagi:** `arytmetyka`, `float`, `formatowanie`
+
+### Treść
+
+Wczytaj liczbę rzeczywistą $x$ i oblicz wartość funkcji $y = 3x + 10$.
 
 ### Wejście
 
-1 liczba: `x` (może być całkowita lub zmiennoprzecinkowa)
+* 1 linia: `x` — liczba całkowita lub zmiennoprzecinkowa
 
 ### Wyjście
 
-1 liczba: `y` wypisana z dokładnością do **3 miejsc po przecinku**.
+Jedna linia: `y` do **3 miejsc po przecinku**.
+
+### Ograniczenia
+
+* $-1000 \le x \le 1000$
 
 ### Przykład
 
@@ -226,16 +238,28 @@ Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:
 
 ## ZAD-05B — Funkcja liniowa: y = ax + b
 
-**Poziom:** ★★☆
+**Poziom:** ★☆☆
 **Tagi:** `arytmetyka`, `float`
+
+### Treść
+
+Wczytaj współczynniki $a$, $b$ oraz argument $x$ i oblicz wartość funkcji liniowej $y = ax + b$.
 
 ### Wejście
 
-3 liczby (każda w osobnej linii): `a`, `b`, `x`
+3 liczby rzeczywiste, każda w osobnej linii:
+
+* 1. linia: `a`
+* 2. linia: `b`
+* 3. linia: `x`
 
 ### Wyjście
 
-`y` do 3 miejsc po przecinku.
+Jedna linia: `y` do **3 miejsc po przecinku**.
+
+### Ograniczenia
+
+* $-1000 \le a, b, x \le 1000$
 
 ### Przykład
 
@@ -257,20 +281,24 @@ Wczytaj dwie liczby naturalne `a` i `b` i wypisz kolejno:
 
 ## ZAD-05C — Funkcja sześcienna: y = x³ + 2
 
-**Poziom:** ★★☆
+**Poziom:** ★☆☆
 **Tagi:** `potęgi`, `float`
 
 ### Treść
 
-Oblicz: `y = x^3 + 22 - 20`, czyli równoważnie `y = x^3 + 2`.
+Wczytaj liczbę rzeczywistą $x$ i oblicz $y = x^3 + 2$.
 
 ### Wejście
 
-1 liczba: `x`
+* 1 linia: `x` — liczba rzeczywista
 
 ### Wyjście
 
-`y` do 3 miejsc po przecinku.
+Jedna linia: `y` do **3 miejsc po przecinku**.
+
+### Ograniczenia
+
+* $-100 \le x \le 100$
 
 ### Przykład
 
@@ -290,20 +318,35 @@ Oblicz: `y = x^3 + 22 - 20`, czyli równoważnie `y = x^3 + 2`.
 
 ## ZAD-05D — Wielomian z potęgami: y = a·x^m + b·x^n + c − a
 
-**Poziom:** ★★☆
+**Poziom:** ★☆☆
 **Tagi:** `potęgi`, `float`
+
+### Treść
+
+Wczytaj współczynniki $a$, $b$, $c$, wykładniki $m$, $n$ oraz argument $x$ i oblicz:
+
+$y = a \cdot x^m + b \cdot x^n + c - a$
 
 ### Wejście
 
-6 liczb (w osobnych liniach): `a`, `b`, `c`, `m`, `n`, `x`
+6 liczb, każda w osobnej linii:
+
+* 1. linia: `a` — liczba rzeczywista
+* 2. linia: `b` — liczba rzeczywista
+* 3. linia: `c` — liczba rzeczywista
+* 4. linia: `m` — liczba całkowita nieujemna
+* 5. linia: `n` — liczba całkowita nieujemna
+* 6. linia: `x` — liczba rzeczywista
 
 ### Wyjście
 
-`y` do 3 miejsc po przecinku.
+Jedna linia: `y` do **3 miejsc po przecinku**.
 
-### Ograniczenia / gwarancje
+### Ograniczenia
 
-* `m` i `n` są liczbami całkowitymi (np. nieujemnymi), aby potęgowanie było jednoznaczne w typowych językach.
+* $-100 \le a, b, c, x \le 100$
+* $0 \le m, n \le 5$ (liczby całkowite)
+* Jeśli $x = 0$, to $m, n \ge 1$ (nie pojawia się wyrażenie $0^0$).
 
 ### Przykład
 
@@ -324,33 +367,34 @@ Oblicz: `y = x^3 + 22 - 20`, czyli równoważnie `y = x^3 + 2`.
 2.000
 ```
 
+Dla $a = b = c = m = n = x = 1$: $y = 1 \cdot 1^1 + 1 \cdot 1^1 + 1 - 1 = 2$.
+
 ---
 
 ## ZAD-05E — Funkcja z trygonometrią, wykładniczą i logarytmem
 
-**Poziom:** ★★★☆
+**Poziom:** ★★☆
 **Tagi:** `math`, `trygonometria`, `log`, `exp`, `float`
 
 ### Treść
 
-Dla `x` (w radianach) oblicz:
-$$
-y=\sin^3(x)\cdot\cos^2(x)+e^{x^2}+\ln(x^3+2x^2-x-3)
-$$
+Wczytaj liczbę rzeczywistą $x$ (kąt w radianach) i oblicz:
+
+$y = \sin^3(x) \cdot \cos^2(x) + e^{x^2} + \ln(x^3 + 2x^2 - x - 3)$
+
+gdzie $\ln$ oznacza logarytm naturalny, a $e$ — podstawę logarytmu naturalnego.
 
 ### Wejście
 
-1 liczba zmiennoprzecinkowa: `x` (w radianach)
+* 1 linia: `x` — liczba zmiennoprzecinkowa (w radianach)
 
 ### Wyjście
 
-`y` do 3 miejsc po przecinku.
+Jedna linia: `y` do **3 miejsc po przecinku**.
 
-### Ograniczenia / gwarancje
+### Ograniczenia
 
-* Dane testowe spełniają warunek dziedziny logarytmu:
-
-  * (x^3+2x^2-x-3 > 0)
+* $1.2 \le x \le 3$, więc spełniony jest warunek dziedziny logarytmu $x^3 + 2x^2 - x - 3 > 0$.
 
 ### Przykład
 
@@ -363,8 +407,14 @@ $$
 **Wyjście:**
 
 ```
-57.179
+57.126
 ```
+
+### Uwagi
+
+* Skorzystaj z modułu `math`: `math.sin`, `math.cos`, `math.exp`, `math.log` (logarytm naturalny).
+
+---
 
 ## ZAD-06A — Kilogramy → gramy
 
@@ -373,20 +423,20 @@ $$
 
 ### Treść
 
-Wczytaj wartość w kilogramach `kg` i przelicz na gramy.
+Wczytaj masę w kilogramach `kg` i przelicz ją na gramy: $g = kg \cdot 1000$.
 
 ### Wejście
 
-* 1 linia: `kg`
+* 1 linia: `kg` — liczba całkowita lub zmiennoprzecinkowa
 
 ### Wyjście
 
-* 1 linia: `g` jako **liczba całkowita**, gdzie:
-  `g = kg * 1000`
+Jedna linia: `g` jako **liczba całkowita** (bez części ułamkowej).
 
-### Gwarancje
+### Ograniczenia
 
-* `kg` jest liczbą całkowitą **lub** taką, że wynik w gramach jest całkowity.
+* $0 \le kg \le 10^6$
+* `kg` ma co najwyżej 3 cyfry po przecinku, więc wynik w gramach jest całkowity.
 
 ### Przykład
 
@@ -402,6 +452,10 @@ Wczytaj wartość w kilogramach `kg` i przelicz na gramy.
 2500
 ```
 
+### Uwagi
+
+* Uwaga na błędy zaokrągleń liczb zmiennoprzecinkowych: np. `1.001 * 1000` daje w Pythonie `1000.9999999999999`, więc `int(...)` zwróciłoby `1000`. Zamiast obcinać, zaokrąglij wynik: `round(kg * 1000)`.
+
 ---
 
 ## ZAD-06B — Cale → centymetry
@@ -411,15 +465,15 @@ Wczytaj wartość w kilogramach `kg` i przelicz na gramy.
 
 ### Treść
 
-Wczytaj liczbę cali `inch` i przelicz na centymetry.
+Wczytaj długość w calach `inch` i przelicz ją na centymetry: $cm = inch \cdot 2.54$.
 
 ### Wejście
 
-* 1 linia: `inch`
+* 1 linia: `inch` — liczba rzeczywista, $inch \ge 0$
 
 ### Wyjście
 
-* 1 linia: `cm = inch * 2.54` wypisane do **2 miejsc po przecinku**
+Jedna linia: `cm` do **2 miejsc po przecinku**.
 
 ### Przykład
 
@@ -444,15 +498,15 @@ Wczytaj liczbę cali `inch` i przelicz na centymetry.
 
 ### Treść
 
-Wczytaj liczbę sekund `s` i wypisz liczbę **pełnych godzin**.
+Wczytaj liczbę sekund `s` i wypisz, ile **pełnych godzin** się w niej mieści (godzina ma 3600 sekund).
 
 ### Wejście
 
-* 1 linia: `s` (liczba całkowita, `s ≥ 0`)
+* 1 linia: `s` — liczba całkowita, $0 \le s \le 10^9$
 
 ### Wyjście
 
-* 1 linia: `s // 3600`
+Jedna linia: liczba pełnych godzin, czyli $\lfloor s / 3600 \rfloor$ (w Pythonie `s // 3600`).
 
 ### Przykład
 
@@ -468,6 +522,8 @@ Wczytaj liczbę sekund `s` i wypisz liczbę **pełnych godzin**.
 2
 ```
 
+8639 sekund to 2 godziny i 1439 sekund, więc pełne godziny są 2.
+
 ---
 
 ## ZAD-06D — Euro → złotówki (kurs stały)
@@ -477,15 +533,15 @@ Wczytaj liczbę sekund `s` i wypisz liczbę **pełnych godzin**.
 
 ### Treść
 
-Wczytaj kwotę w euro `eur` i przelicz na złotówki przy stałym kursie.
+Wczytaj kwotę w euro `eur` i przelicz ją na złotówki przy stałym kursie 4,40 zł za 1 euro: $pln = eur \cdot 4.4$.
 
 ### Wejście
 
-* 1 linia: `eur`
+* 1 linia: `eur` — liczba rzeczywista, $eur \ge 0$
 
 ### Wyjście
 
-* 1 linia: `pln = eur * 4.4` do **2 miejsc po przecinku**
+Jedna linia: `pln` do **2 miejsc po przecinku**.
 
 ### Przykład
 
@@ -510,15 +566,15 @@ Wczytaj kwotę w euro `eur` i przelicz na złotówki przy stałym kursie.
 
 ### Treść
 
-Wczytaj kąt w stopniach `deg` i przelicz na radiany.
+Wczytaj kąt w stopniach `deg` i przelicz go na radiany: $rad = \frac{deg \cdot \pi}{180}$.
 
 ### Wejście
 
-* 1 linia: `deg`
+* 1 linia: `deg` — liczba rzeczywista
 
 ### Wyjście
 
-* 1 linia: `rad = deg * π / 180` do **3 miejsc po przecinku**
+Jedna linia: `rad` do **3 miejsc po przecinku**.
 
 ### Przykład
 
@@ -534,6 +590,12 @@ Wczytaj kąt w stopniach `deg` i przelicz na radiany.
 3.142
 ```
 
+### Uwagi
+
+* Wartość $\pi$ weź z modułu `math` (`math.pi`).
+
+---
+
 ## ZAD-06F — Fahrenheit → Celsius i Kelviny
 
 **Poziom:** ★☆☆
@@ -541,18 +603,21 @@ Wczytaj kąt w stopniach `deg` i przelicz na radiany.
 
 ### Treść
 
-Wczytaj temperaturę w stopniach Fahrenheita `F`. Oblicz temperaturę w Celsjuszach oraz Kelvinach.
+Wczytaj temperaturę w stopniach Fahrenheita $F$. Oblicz temperaturę w stopniach Celsjusza oraz w kelwinach:
+
+* $C = \frac{5}{9} (F - 32)$
+* $K = C + 273.15$
 
 ### Wejście
 
-* 1 linia: `F`
+* 1 linia: `F` — liczba rzeczywista
 
 ### Wyjście
 
 Dwie linie:
 
-1. `C = (5/9) * (F - 32)` do **3 miejsc**
-2. `K = C + 273.15` do **3 miejsc**
+1. `C` do **3 miejsc po przecinku**,
+2. `K` do **3 miejsc po przecinku**.
 
 ### Przykład
 
@@ -569,6 +634,12 @@ Dwie linie:
 273.150
 ```
 
+### Uwagi
+
+* `K` obliczaj z niezaokrąglonej wartości `C` — zaokrąglaj dopiero przy wypisywaniu.
+
+---
+
 ## ZAD-07A — Pole trójkąta
 
 **Poziom:** ★☆☆
@@ -576,17 +647,16 @@ Dwie linie:
 
 ### Treść
 
-Oblicz pole trójkąta ze wzoru:
-$P = \frac{1}{2} a h$
+Wczytaj długość podstawy $a$ i wysokość $h$ trójkąta i oblicz jego pole ze wzoru $P = \frac{1}{2} a h$.
 
 ### Wejście
 
-* 1 linia: `a`
-* 2 linia: `h`
+* 1. linia: `a` — liczba rzeczywista, $a > 0$
+* 2. linia: `h` — liczba rzeczywista, $h > 0$
 
 ### Wyjście
 
-* 1 linia: `P` do **3 miejsc po przecinku**
+Jedna linia: `P` do **3 miejsc po przecinku**.
 
 ### Przykład
 
@@ -612,17 +682,16 @@ $P = \frac{1}{2} a h$
 
 ### Treść
 
-Oblicz pole prostokąta:
-( P = ab )
+Wczytaj długości boków prostokąta $a$ i $b$ i oblicz jego pole ze wzoru $P = a b$.
 
 ### Wejście
 
-* 1 linia: `a`
-* 2 linia: `b`
+* 1. linia: `a` — liczba rzeczywista, $a > 0$
+* 2. linia: `b` — liczba rzeczywista, $b > 0$
 
 ### Wyjście
 
-* 1 linia: `P` do **3 miejsc po przecinku**
+Jedna linia: `P` do **3 miejsc po przecinku**.
 
 ### Przykład
 
@@ -648,17 +717,16 @@ Oblicz pole prostokąta:
 
 ### Treść
 
-Oblicz pole rombu z przekątnych:
-$P = \frac{1}{2} d_1 d_2$
+Wczytaj długości przekątnych rombu $d_1$ i $d_2$ i oblicz jego pole ze wzoru $P = \frac{1}{2} d_1 d_2$.
 
 ### Wejście
 
-* 1 linia: `d1`
-* 2 linia: `d2`
+* 1. linia: `d1` — liczba rzeczywista, $d_1 > 0$
+* 2. linia: `d2` — liczba rzeczywista, $d_2 > 0$
 
 ### Wyjście
 
-* 1 linia: `P` do **3 miejsc po przecinku**
+Jedna linia: `P` do **3 miejsc po przecinku**.
 
 ### Przykład
 
@@ -679,21 +747,20 @@ $P = \frac{1}{2} d_1 d_2$
 
 ## ZAD-07D — Objętość kuli
 
-**Poziom:** ★★☆
+**Poziom:** ★☆☆
 **Tagi:** `geometria`, `pi`, `float`
 
 ### Treść
 
-Oblicz objętość kuli:
-$V = \frac{4}{3}\pi r^3$
+Wczytaj promień kuli $r$ i oblicz jej objętość ze wzoru $V = \frac{4}{3}\pi r^3$.
 
 ### Wejście
 
-* 1 linia: `r`
+* 1 linia: `r` — liczba rzeczywista, $r > 0$
 
 ### Wyjście
 
-* 1 linia: `V` do **3 miejsc po przecinku**
+Jedna linia: `V` do **3 miejsc po przecinku**.
 
 ### Przykład
 
@@ -713,22 +780,21 @@ $V = \frac{4}{3}\pi r^3$
 
 ## ZAD-07E — Objętość stożka
 
-**Poziom:** ★★☆
+**Poziom:** ★☆☆
 **Tagi:** `geometria`, `pi`, `float`
 
 ### Treść
 
-Oblicz objętość stożka:
-$V = \frac{1}{3}\pi r^2 h$
+Wczytaj promień podstawy $r$ i wysokość $h$ stożka i oblicz jego objętość ze wzoru $V = \frac{1}{3}\pi r^2 h$.
 
 ### Wejście
 
-* 1 linia: `r`
-* 2 linia: `h`
+* 1. linia: `r` — liczba rzeczywista, $r > 0$
+* 2. linia: `h` — liczba rzeczywista, $h > 0$
 
 ### Wyjście
 
-* 1 linia: `V` do **3 miejsc po przecinku**
+Jedna linia: `V` do **3 miejsc po przecinku**.
 
 ### Przykład
 
@@ -754,18 +820,17 @@ $V = \frac{1}{3}\pi r^2 h$
 
 ### Treść
 
-Oblicz objętość prostopadłościanu:
-( V = abc )
+Wczytaj długości krawędzi prostopadłościanu $a$, $b$, $c$ i oblicz jego objętość ze wzoru $V = a b c$.
 
 ### Wejście
 
-* 1 linia: `a`
-* 2 linia: `b`
-* 3 linia: `c`
+* 1. linia: `a` — liczba rzeczywista, $a > 0$
+* 2. linia: `b` — liczba rzeczywista, $b > 0$
+* 3. linia: `c` — liczba rzeczywista, $c > 0$
 
 ### Wyjście
 
-* 1 linia: `V` do **3 miejsc po przecinku**
+Jedna linia: `V` do **3 miejsc po przecinku**.
 
 ### Przykład
 
@@ -783,6 +848,8 @@ Oblicz objętość prostopadłościanu:
 24.000
 ```
 
+---
+
 ## ZAD-08 — Koszt pokrycia podłogi płytkami
 
 **Poziom:** ★★☆
@@ -792,30 +859,36 @@ Oblicz objętość prostopadłościanu:
 
 Dane są:
 
-* cena jednej płytki `p`,
-* bok płytki `t` (płytka kwadratowa),
-* długość podłogi `L`,
-* szerokość podłogi `W`.
+* cena jednej płytki `p` (w złotych),
+* bok kwadratowej płytki `t` (w centymetrach),
+* długość podłogi `L` (w centymetrach),
+* szerokość podłogi `W` (w centymetrach).
 
-Oblicz liczbę płytek potrzebnych do pokrycia całej podłogi, zakładając układ bez docinania „na styk” (czyli wzdłuż każdego wymiaru zaokrąglasz w górę), a następnie podaj koszt całkowity.
+Płytki układamy w prostokątną siatkę równolegle do ścian. Wzdłuż każdego wymiaru liczbę płytek zaokrąglamy **w górę** (ostatnią płytkę w rzędzie się docina, ale trzeba ją kupić w całości):
+
+* $n_L = \lceil L / t \rceil$
+* $n_W = \lceil W / t \rceil$
+* liczba płytek: $n = n_L \cdot n_W$
+
+Oblicz całkowity koszt zakupu płytek: $n \cdot p$.
 
 ### Wejście
 
-4 liczby (każda w osobnej linii): `p`, `t`, `L`, `W`
+4 liczby, każda w osobnej linii:
+
+* 1. linia: `p` — liczba rzeczywista
+* 2. linia: `t` — liczba całkowita
+* 3. linia: `L` — liczba całkowita
+* 4. linia: `W` — liczba całkowita
 
 ### Wyjście
 
-Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
+Jedna linia: całkowity koszt do **2 miejsc po przecinku**.
 
-### Ograniczenia / gwarancje
+### Ograniczenia
 
-* `p > 0`, `t > 0`, `L > 0`, `W > 0`
-* Liczba płytek:
-
-  * `nL = ceil(L / t)`
-  * `nW = ceil(W / t)`
-  * `n = nL * nW`
-* Koszt: `n * p`
+* $0 < p \le 1000$
+* $1 \le t, L, W \le 10^4$
 
 ### Przykład
 
@@ -834,6 +907,12 @@ Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
 196.00
 ```
 
+$n_L = \lceil 20 / 3 \rceil = 7$, $n_W = \lceil 40 / 3 \rceil = 14$, więc potrzeba $7 \cdot 14 = 98$ płytek, które kosztują $98 \cdot 2 = 196$ zł.
+
+### Uwagi
+
+* Zaokrąglenie w górę daje funkcja `math.ceil`.
+
 ---
 
 ## ZAD-09 — Kalkulator kredytowy
@@ -845,38 +924,40 @@ Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
 
 Wczytaj:
 
-* roczną stopę procentową `R` (w %),
-* okres spłaty `Y` (w latach),
-* kwotę kredytu `P`.
+* roczną stopę procentową $R$ (w procentach),
+* okres spłaty $Y$ (w latach),
+* kwotę kredytu $P$.
 
-Oblicz miesięczną ratę `M` oraz całkowity koszt `C = M * n`, gdzie `n = 12 * Y`.
+Oblicz miesięczną ratę $M$ oraz całkowity koszt kredytu $C = M \cdot n$, gdzie $n = 12 \cdot Y$ to liczba rat.
 
-Dla `R > 0` użyj wzoru:
+Dla $R > 0$ użyj wzoru na ratę stałą (annuitetową):
 
-$$
-M = P \cdot \frac{r(1+r)^n}{(1+r)^n-1}
-$$
+$M = P \cdot \frac{r(1+r)^n}{(1+r)^n - 1}$
 
-gdzie `r = R / (12*100)`.
+gdzie $r = \frac{R}{12 \cdot 100}$ to miesięczna stopa procentowa.
 
-Dla `R = 0` przyjmij:
-
-* `M = P / n`.
+Dla $R = 0$ przyjmij $M = \frac{P}{n}$.
 
 ### Wejście
 
-3 liczby (w osobnych liniach):
+3 liczby, każda w osobnej linii:
 
-1. `R` (float, `R ≥ 0`)
-2. `Y` (int, `Y > 0`)
-3. `P` (float, `P > 0`)
+* 1. linia: `R` — liczba rzeczywista, $R \ge 0$
+* 2. linia: `Y` — liczba całkowita, $Y > 0$
+* 3. linia: `P` — liczba rzeczywista, $P > 0$
 
 ### Wyjście
 
-Dwie linie (do **2 miejsc po przecinku**):
+Dwie linie, obie do **2 miejsc po przecinku**:
 
-1. miesięczna rata `M`
-2. całkowity koszt `C`
+1. miesięczna rata `M`,
+2. całkowity koszt `C`.
+
+### Ograniczenia
+
+* $0 \le R \le 30$
+* $1 \le Y \le 40$
+* $0 < P \le 10^7$
 
 ### Przykład
 
@@ -892,5 +973,52 @@ Dwie linie (do **2 miejsc po przecinku**):
 
 ```
 143.50
-13776.00
+13775.68
 ```
+
+Niezaokrąglona rata to $M \approx 143.4966$, więc $C = 96 \cdot 143.4966\ldots \approx 13775.68$.
+
+### Uwagi
+
+* Koszt `C` obliczaj z **niezaokrąglonej** raty `M` (nie z wartości `143.50`). Zaokrąglaj dopiero przy wypisywaniu.
+
+---
+
+## ZAD-10 — Sekundy → format GG:MM:SS
+
+**Poziom:** ★☆☆
+**Tagi:** `dzielenie całkowite`, `modulo`, `formatowanie`
+
+### Treść
+
+Wczytaj liczbę sekund `s` i zapisz ją jako czas w formacie `GG:MM:SS`: pełne godziny, pozostałe pełne minuty (0–59) i pozostałe sekundy (0–59). Każdą część wypisz jako **dwie cyfry** — w razie potrzeby z zerem wiodącym (np. `07`).
+
+### Wejście
+
+* 1 linia: `s` — liczba całkowita, $0 \le s < 360000$
+
+### Wyjście
+
+Jedna linia: czas w formacie `GG:MM:SS`.
+
+### Przykład
+
+**Wejście:**
+
+```
+3725
+```
+
+**Wyjście:**
+
+```
+01:02:05
+```
+
+$3725 = 1 \cdot 3600 + 2 \cdot 60 + 5$, czyli 1 godzina, 2 minuty i 5 sekund.
+
+### Uwagi
+
+* Wbudowana funkcja `divmod(a, b)` zwraca naraz iloraz całkowity i resztę z dzielenia: `godziny, reszta = divmod(s, 3600)` daje to samo co `godziny = s // 3600` oraz `reszta = s % 3600`.
+* Liczbę z zerem wiodącym wypiszesz formatowaniem `:02d`, np. `f"{5:02d}"` daje `05`, a `f"{12:02d}"` daje `12`.
+* Ograniczenie $s < 360000$ gwarantuje, że godzin jest co najwyżej 99, czyli zawsze wystarczą dwie cyfry.

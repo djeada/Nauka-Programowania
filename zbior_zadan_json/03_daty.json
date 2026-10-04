@@ -1,7 +1,7 @@
 {
   "file": "03_daty.md",
-  "chapter_title": "Rozdział: Daty (warunki + kalendarz)",
-  "chapter_description": "Zadania w tym rozdziale dotyczą walidacji i obliczeń na datach w kalendarzu gregoriańskim.\n**Konwencje wspólne:**\n* Każde zadanie to **osobny program**.\n* Liczby wczytuj z osobnych linii, w kolejności z opisu.\n* Komunikaty wypisuj **dokładnie** jak w treści (kropki, polskie znaki, spacje).\n* Jeśli zadanie mówi „nie wypisuj nic” — program kończy się bez żadnego wyjścia.",
+  "chapter_title": "Rozdział 3: Daty (warunki + kalendarz)",
+  "chapter_description": "Zadania w tym rozdziale dotyczą walidacji i obliczeń na datach w kalendarzu gregoriańskim.\n\n**Konwencje wspólne:**\n\n* Każde zadanie to **osobny program**: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.\n* Liczby wczytuj z osobnych linii, w kolejności z opisu. Data jest zawsze podawana jako trzy liczby: dzień, miesiąc, rok.\n* Komunikaty wypisuj **dokładnie** jak w treści (kropki, polskie znaki, wielkość liter, spacje).\n* Jeśli zadanie mówi „nie wypisuj nic” — program kończy się bez żadnego wyjścia.\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”. Tekst podany w `input(\"…\")` jest ignorowany przez sprawdzarkę.\n* We wszystkich zadaniach obowiązuje kalendarz gregoriański (także dla lat sprzed 1582 roku). Rok jest **przestępny**, gdy jest podzielny przez 4 i nie jest podzielny przez 100, albo gdy jest podzielny przez 400 (np. 2024 i 2000 są przestępne, a 2023 i 1900 — nie). Luty ma w roku przestępnym 29 dni, a w nieprzestępnym 28.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -14,27 +14,58 @@
         "zakresy",
         "I/O"
       ],
-      "description": "Wczytaj liczbę naturalną `n`. Wypisz `n` **tylko wtedy**, gdy jest poprawnym numerem:\n\n* dnia tygodnia (1–7) **lub**\n* miesiąca (1–12).\n\nW praktyce oznacza to: wypisz `n` tylko wtedy, gdy `1 ≤ n ≤ 12`.",
-      "input": "* 1 linia: `n` (liczba całkowita, `n ≥ 0`)",
-      "output": "* Jeśli `1 ≤ n ≤ 12`: wypisz `n` w osobnej linii\n* W przeciwnym razie: brak wyjścia",
+      "description": "Wczytaj liczbę całkowitą `n` i sprawdź, czy może być numerem dnia tygodnia (1–7) i czy może być numerem miesiąca (1–12). Wypisz:\n\n* `Liczba jest numerem dnia tygodnia i numerem miesiąca.` — gdy $1 \\le n \\le 7$,\n* `Liczba jest tylko numerem miesiąca.` — gdy $8 \\le n \\le 12$,\n* `Liczba nie jest numerem dnia tygodnia ani miesiąca.` — w pozostałych przypadkach.",
+      "input": "* 1 linia: `n` — liczba całkowita, $-1000 \\le n \\le 1000$",
+      "output": "Jedna linia — dokładnie jeden z trzech komunikatów.",
       "examples": [
         {
           "input": "5",
-          "output": "5"
+          "output": "Liczba jest numerem dnia tygodnia i numerem miesiąca.",
+          "explanation": ""
+        },
+        {
+          "input": "15",
+          "output": "Liczba nie jest numerem dnia tygodnia ani miesiąca.",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
+          "input": "1",
+          "output": "Liczba jest numerem dnia tygodnia i numerem miesiąca."
+        },
+        {
+          "input": "7",
+          "output": "Liczba jest numerem dnia tygodnia i numerem miesiąca."
+        },
+        {
+          "input": "8",
+          "output": "Liczba jest tylko numerem miesiąca."
+        },
+        {
           "input": "12",
-          "output": "12"
+          "output": "Liczba jest tylko numerem miesiąca."
         },
         {
           "input": "0",
-          "output": ""
+          "output": "Liczba nie jest numerem dnia tygodnia ani miesiąca."
+        },
+        {
+          "input": "13",
+          "output": "Liczba nie jest numerem dnia tygodnia ani miesiąca."
+        },
+        {
+          "input": "-3",
+          "output": "Liczba nie jest numerem dnia tygodnia ani miesiąca."
+        },
+        {
+          "input": "10",
+          "output": "Liczba jest tylko numerem miesiąca."
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -47,13 +78,14 @@
         "porównywanie",
         "if"
       ],
-      "description": "Wczytaj datę urodzenia oraz datę „dzisiaj” i sprawdź, czy osoba ma **ukończone 18 lat** w dniu daty aktualnej.\n\nWypisz:\n\n* `Osoba jest pełnoletnia.` — jeśli ma ≥ 18 lat,\n* `Osoba nie jest pełnoletnia.` — w przeciwnym razie.",
-      "input": "6 liczb całkowitych (każda w osobnej linii):\n\n1. `d1` — dzień urodzenia\n2. `m1` — miesiąc urodzenia\n3. `y1` — rok urodzenia\n4. `d2` — aktualny dzień\n5. `m2` — aktualny miesiąc\n6. `y2` — aktualny rok",
+      "description": "Wczytaj datę urodzenia oraz datę „dzisiejszą” i sprawdź, czy osoba ma **ukończone 18 lat** w dniu daty dzisiejszej.\n\nPełnoletność osiąga się **w dniu 18. urodzin**. Osoba jest więc pełnoletnia wtedy, gdy data (`d1`, `m1`, `y1 + 18`) jest **nie późniejsza** niż data dzisiejsza (`d2`, `m2`, `y2`). Daty porównuj najpierw po roku, przy równych latach po miesiącu, a przy równych miesiącach po dniu.\n\nWypisz:\n\n* `Osoba jest pełnoletnia.` — jeśli ma ukończone 18 lat,\n* `Osoba nie jest pełnoletnia.` — w przeciwnym razie.",
+      "input": "6 liczb całkowitych, każda w osobnej linii:\n\n1. `d1` — dzień urodzenia\n2. `m1` — miesiąc urodzenia\n3. `y1` — rok urodzenia\n4. `d2` — dzisiejszy dzień\n5. `m2` — dzisiejszy miesiąc\n6. `y2` — dzisiejszy rok",
       "output": "Jedna linia — jeden z komunikatów.",
       "examples": [
         {
           "input": "5\n12\n1999\n20\n11\n2020",
-          "output": "Osoba jest pełnoletnia."
+          "output": "Osoba jest pełnoletnia.",
+          "explanation": "Osiemnaste urodziny wypadły 5.12.2017, a więc przed 20.11.2020."
         }
       ],
       "testcases": [
@@ -64,10 +96,35 @@
         {
           "input": "21\n11\n2006\n20\n11\n2024",
           "output": "Osoba nie jest pełnoletnia."
+        },
+        {
+          "input": "29\n2\n2004\n28\n2\n2022",
+          "output": "Osoba nie jest pełnoletnia."
+        },
+        {
+          "input": "29\n2\n2004\n1\n3\n2022",
+          "output": "Osoba jest pełnoletnia."
+        },
+        {
+          "input": "1\n3\n2006\n29\n2\n2024",
+          "output": "Osoba nie jest pełnoletnia."
+        },
+        {
+          "input": "15\n6\n2010\n1\n1\n2020",
+          "output": "Osoba nie jest pełnoletnia."
+        },
+        {
+          "input": "31\n12\n1980\n1\n1\n2000",
+          "output": "Osoba jest pełnoletnia."
+        },
+        {
+          "input": "1\n12\n2000\n30\n11\n2018",
+          "output": "Osoba nie jest pełnoletnia."
         }
       ],
-      "constraints": "* Obie daty są poprawne (nie musisz walidować).\n* Pełnoletność jest osiągana **dokładnie w dniu 18. urodzin**.",
-      "notes": ""
+      "constraints": "* Obie daty są poprawne (nie musisz ich sprawdzać), $1 \\le y1, y2 \\le 9999$.\n* Data urodzenia nie jest późniejsza niż data dzisiejsza.",
+      "notes": "* Porównujesz same liczby, więc data (`d1`, `m1`, `y1 + 18`) nie musi istnieć w kalendarzu. Osoba urodzona 29 lutego obchodzi 18. urodziny w roku nieprzestępnym (np. urodzona 29.02.2004 — w 2022 roku), więc zgodnie z regułą 28 lutego jest jeszcze niepełnoletnia, a pełnoletnia staje się 1 marca.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-03",
@@ -80,13 +137,14 @@
         "if",
         "kalendarz"
       ],
-      "description": "Wczytaj rok `y` i sprawdź, czy jest przestępny w kalendarzu gregoriańskim.\n\nWypisz:\n\n* `Rok jest przestępny.`\n* `Rok nie jest przestępny.`",
-      "input": "* 1 linia: `y` (liczba całkowita, `y ≥ 0`)",
+      "description": "Wczytaj rok `y` i sprawdź, czy jest przestępny w kalendarzu gregoriańskim.\n\nRok jest przestępny, gdy:\n\n* jest podzielny przez 400 **lub**\n* jest podzielny przez 4 i **nie** jest podzielny przez 100.\n\nWypisz:\n\n* `Rok jest przestępny.` — jeśli rok jest przestępny,\n* `Rok nie jest przestępny.` — w przeciwnym razie.",
+      "input": "* 1 linia: `y` — liczba całkowita, $1 \\le y \\le 9999$",
       "output": "Jedna linia — odpowiedni komunikat.",
       "examples": [
         {
           "input": "2100",
-          "output": "Rok nie jest przestępny."
+          "output": "Rok nie jest przestępny.",
+          "explanation": "Rok 2100 jest podzielny przez 4 i przez 100, ale nie przez 400."
         }
       ],
       "testcases": [
@@ -97,10 +155,35 @@
         {
           "input": "1900",
           "output": "Rok nie jest przestępny."
+        },
+        {
+          "input": "2024",
+          "output": "Rok jest przestępny."
+        },
+        {
+          "input": "2023",
+          "output": "Rok nie jest przestępny."
+        },
+        {
+          "input": "1600",
+          "output": "Rok jest przestępny."
+        },
+        {
+          "input": "1",
+          "output": "Rok nie jest przestępny."
+        },
+        {
+          "input": "4",
+          "output": "Rok jest przestępny."
+        },
+        {
+          "input": "9996",
+          "output": "Rok jest przestępny."
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-04",
@@ -113,27 +196,58 @@
         "mapowanie",
         "string"
       ],
-      "description": "Wczytaj liczbę `n`. Jeśli `n` jest w zakresie 1–7, wypisz nazwę dnia tygodnia:\n\n1. Poniedziałek\n2. Wtorek\n3. Środa\n4. Czwartek\n5. Piątek\n6. Sobota\n7. Niedziela\n\nW przeciwnym razie wypisz:\n`Niepoprawny numer dnia tygodnia.`",
-      "input": "* 1 linia: `n` (liczba całkowita, `n ≥ 0`)",
-      "output": "Jedna linia: nazwa dnia lub komunikat o błędzie.",
+      "description": "Wczytaj liczbę `n`. Jeśli `n` jest w zakresie 1–7, wypisz nazwę dnia tygodnia:\n\n1. `Poniedziałek`\n2. `Wtorek`\n3. `Środa`\n4. `Czwartek`\n5. `Piątek`\n6. `Sobota`\n7. `Niedziela`\n\nW przeciwnym razie wypisz:\n`Niepoprawny numer dnia tygodnia.`",
+      "input": "* 1 linia: `n` — liczba całkowita, $0 \\le n \\le 1000$",
+      "output": "Jedna linia: nazwa dnia (wielką literą, z polskimi znakami) lub komunikat o błędzie.",
       "examples": [
         {
+          "input": "5",
+          "output": "Piątek",
+          "explanation": ""
+        },
+        {
           "input": "8",
-          "output": "Niepoprawny numer dnia tygodnia."
+          "output": "Niepoprawny numer dnia tygodnia.",
+          "explanation": ""
         }
       ],
       "testcases": [
+        {
+          "input": "1",
+          "output": "Poniedziałek"
+        },
         {
           "input": "3",
           "output": "Środa"
         },
         {
-          "input": "8",
+          "input": "7",
+          "output": "Niedziela"
+        },
+        {
+          "input": "0",
+          "output": "Niepoprawny numer dnia tygodnia."
+        },
+        {
+          "input": "6",
+          "output": "Sobota"
+        },
+        {
+          "input": "2",
+          "output": "Wtorek"
+        },
+        {
+          "input": "4",
+          "output": "Czwartek"
+        },
+        {
+          "input": "10",
           "output": "Niepoprawny numer dnia tygodnia."
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05",
@@ -146,13 +260,14 @@
         "tablice",
         "walidacja"
       ],
-      "description": "Wczytaj numer miesiąca `m`. Zakładając rok **nieprzestępny**, wypisz liczbę dni w tym miesiącu.\nJeśli `m` nie jest w zakresie 1–12, wypisz:\n`Niepoprawny numer miesiąca.`",
-      "input": "* 1 linia: `m` (liczba całkowita, `m ≥ 0`)",
-      "output": "* liczba dni (jedna linia) **albo**\n* komunikat o błędzie (jedna linia)",
+      "description": "Wczytaj numer miesiąca `m`. Zakładając rok **nieprzestępny**, wypisz liczbę dni w tym miesiącu:\n\n* 31 dni: styczeń (1), marzec (3), maj (5), lipiec (7), sierpień (8), październik (10), grudzień (12),\n* 30 dni: kwiecień (4), czerwiec (6), wrzesień (9), listopad (11),\n* 28 dni: luty (2).\n\nJeśli `m` nie jest w zakresie 1–12, wypisz:\n`Niepoprawny numer miesiąca.`",
+      "input": "* 1 linia: `m` — liczba całkowita, $0 \\le m \\le 1000$",
+      "output": "Jedna linia: liczba dni **albo** komunikat o błędzie.",
       "examples": [
         {
           "input": "2",
-          "output": "28"
+          "output": "28",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -161,16 +276,41 @@
           "output": "31"
         },
         {
-          "input": "2",
-          "output": "28"
-        },
-        {
           "input": "13",
           "output": "Niepoprawny numer miesiąca."
+        },
+        {
+          "input": "4",
+          "output": "30"
+        },
+        {
+          "input": "12",
+          "output": "31"
+        },
+        {
+          "input": "0",
+          "output": "Niepoprawny numer miesiąca."
+        },
+        {
+          "input": "9",
+          "output": "30"
+        },
+        {
+          "input": "11",
+          "output": "30"
+        },
+        {
+          "input": "7",
+          "output": "31"
+        },
+        {
+          "input": "8",
+          "output": "31"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06",
@@ -183,13 +323,19 @@
         "przestępny",
         "if"
       ],
-      "description": "Wczytaj `d, m, y` i sprawdź, czy jest to poprawna data w kalendarzu gregoriańskim.\n\nWypisz:\n\n* `Data jest poprawna.`\n* `Data jest niepoprawna.`",
-      "input": "3 liczby całkowite (w osobnych liniach):\n\n1. `d` — dzień\n2. `m` — miesiąc\n3. `y` — rok",
+      "description": "Wczytaj `d`, `m`, `y` i sprawdź, czy jest to poprawna data w kalendarzu gregoriańskim.\n\nData jest poprawna, gdy:\n\n1. miesiąc `m` jest w zakresie 1–12,\n2. dzień `d` jest w zakresie od 1 do liczby dni w miesiącu `m`:\n   * 31 dni: miesiące 1, 3, 5, 7, 8, 10, 12,\n   * 30 dni: miesiące 4, 6, 9, 11,\n   * luty (2): 29 dni w roku przestępnym, 28 w nieprzestępnym (zob. konwencje rozdziału).\n\nWypisz:\n\n* `Data jest poprawna.`\n* `Data jest niepoprawna.`",
+      "input": "3 liczby całkowite, każda w osobnej linii:\n\n1. `d` — dzień\n2. `m` — miesiąc\n3. `y` — rok",
       "output": "Jedna linia — komunikat.",
       "examples": [
         {
           "input": "31\n4\n2021",
-          "output": "Data jest niepoprawna."
+          "output": "Data jest niepoprawna.",
+          "explanation": "Kwiecień ma tylko 30 dni."
+        },
+        {
+          "input": "29\n2\n2024",
+          "output": "Data jest poprawna.",
+          "explanation": "Rok 2024 jest przestępny, więc luty ma 29 dni."
         }
       ],
       "testcases": [
@@ -200,10 +346,59 @@
         {
           "input": "29\n2\n2019",
           "output": "Data jest niepoprawna."
+        },
+        {
+          "input": "29\n2\n1900",
+          "output": "Data jest niepoprawna."
+        },
+        {
+          "input": "29\n2\n2000",
+          "output": "Data jest poprawna."
+        },
+        {
+          "input": "31\n12\n2021",
+          "output": "Data jest poprawna."
+        },
+        {
+          "input": "0\n5\n2021",
+          "output": "Data jest niepoprawna."
+        },
+        {
+          "input": "15\n13\n2021",
+          "output": "Data jest niepoprawna."
+        },
+        {
+          "input": "31\n6\n2023",
+          "output": "Data jest niepoprawna."
+        },
+        {
+          "input": "30\n6\n2023",
+          "output": "Data jest poprawna."
+        },
+        {
+          "input": "1\n0\n2020",
+          "output": "Data jest niepoprawna."
+        },
+        {
+          "input": "32\n1\n2020",
+          "output": "Data jest niepoprawna."
+        },
+        {
+          "input": "-1\n3\n2020",
+          "output": "Data jest niepoprawna."
+        },
+        {
+          "input": "28\n2\n1900",
+          "output": "Data jest poprawna."
+        },
+        {
+          "input": "30\n2\n2000",
+          "output": "Data jest niepoprawna."
         }
       ],
-      "constraints": "* `y ≥ 0` (lub `y ≥ 1`, jeśli tak chcesz przyjąć — ważne, by było spójnie w całym zbiorze)",
-      "notes": ""
+      "constraints": "* $-100 \\le d, m \\le 100$ (dzień i miesiąc mogą być spoza poprawnego zakresu, także zerowe lub ujemne)\n* $1 \\le y \\le 9999$ (rok zawsze jest poprawny)",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07",
@@ -216,13 +411,14 @@
         "tablice",
         "przestępny"
       ],
-      "description": "Wczytaj datę `d, m, y` i oblicz numer dnia w roku, tzn. ile dni minęło od 1 stycznia do tej daty **włącznie**.",
-      "input": "3 liczby całkowite (w osobnych liniach): `d`, `m`, `y`",
+      "description": "Wczytaj datę `d`, `m`, `y` i oblicz numer dnia w roku, tzn. ile dni minęło od 1 stycznia do tej daty **włącznie** (1 stycznia to dzień 1, 31 grudnia to dzień 365 albo 366 w roku przestępnym).",
+      "input": "3 liczby całkowite, każda w osobnej linii: `d`, `m`, `y`.",
       "output": "Jedna liczba całkowita: numer dnia w roku.",
       "examples": [
         {
           "input": "14\n2\n1482",
-          "output": "45"
+          "output": "45",
+          "explanation": "31 dni stycznia + 14 dni lutego = 45."
         }
       ],
       "testcases": [
@@ -233,10 +429,35 @@
         {
           "input": "31\n12\n2021",
           "output": "365"
+        },
+        {
+          "input": "31\n12\n2020",
+          "output": "366"
+        },
+        {
+          "input": "1\n1\n2023",
+          "output": "1"
+        },
+        {
+          "input": "1\n3\n1900",
+          "output": "60"
+        },
+        {
+          "input": "1\n3\n2000",
+          "output": "61"
+        },
+        {
+          "input": "15\n8\n2024",
+          "output": "228"
+        },
+        {
+          "input": "28\n2\n2024",
+          "output": "59"
         }
       ],
-      "constraints": "* Podana data jest poprawna (nie musisz jej sprawdzać), **albo** możesz jawnie napisać: „jeśli data jest niepoprawna, zachowanie nieokreślone”.\n\n  * (Najczyściej: dać gwarancję poprawności.)",
-      "notes": ""
+      "constraints": "* Podana data jest poprawna (nie musisz jej sprawdzać).\n* $1 \\le y \\le 9999$",
+      "notes": "* Wygodnie jest skorzystać z łańcucha `if`/`elif`, w którym dla każdego miesiąca zapisujesz, ile dni roku nieprzestępnego upłynęło **przed** jego początkiem: styczeń 0, luty 31, marzec 59, kwiecień 90, maj 120, czerwiec 151, lipiec 181, sierpień 212, wrzesień 243, październik 273, listopad 304, grudzień 334. Do tej liczby dodaj `d`.\n* W roku przestępnym luty ma 29 dni, więc dla dat od 1 marca dodaj jeszcze 1.\n* Po rozdziale o pętlach możesz te sumy obliczać w pętli, dodając długości kolejnych miesięcy.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-08",
@@ -250,13 +471,14 @@
         "mapowanie",
         "daty"
       ],
-      "description": "Wczytaj datę `d, m, y` i wyznacz nazwę dnia tygodnia, używając **kongruencji Zellera** dla kalendarza gregoriańskiego.\n\nKroki:\n\n1. Jeśli `m <= 2`, to:\n\n* `m = m + 12`\n* `y = y - 1`\n\n2. Oblicz:\n\n* `K = y % 100`\n* `J = y // 100`\n* `h = (d + (13*(m+1))//5 + K + K//4 + J//4 + 5*J) % 7`\n\n3. Zmapuj `h` na dzień tygodnia:\n\n* 0 → `Sobota`\n* 1 → `Niedziela`\n* 2 → `Poniedziałek`\n* 3 → `Wtorek`\n* 4 → `Środa`\n* 5 → `Czwartek`\n* 6 → `Piątek`",
-      "input": "3 liczby całkowite (w osobnych liniach): `d`, `m`, `y`",
-      "output": "Jedna linia: nazwa dnia tygodnia (dokładnie jedna z: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota, Niedziela).",
+      "description": "Wczytaj datę `d`, `m`, `y` i wyznacz nazwę dnia tygodnia, używając **kongruencji Zellera** dla kalendarza gregoriańskiego.\n\nKroki:\n\n1. Jeśli $m \\le 2$, potraktuj styczeń i luty jako 13. i 14. miesiąc poprzedniego roku: $m = m + 12$, $y = y - 1$.\n2. Oblicz:\n   * $K = y \\bmod 100$ (rok w stuleciu),\n   * $J = \\lfloor y / 100 \\rfloor$ (stulecie),\n   * $h = \\left(d + \\left\\lfloor \\frac{13(m+1)}{5} \\right\\rfloor + K + \\left\\lfloor \\frac{K}{4} \\right\\rfloor + \\left\\lfloor \\frac{J}{4} \\right\\rfloor + 5J\\right) \\bmod 7$.\n3. Zamień `h` na dzień tygodnia:\n   * 0 → `Sobota`\n   * 1 → `Niedziela`\n   * 2 → `Poniedziałek`\n   * 3 → `Wtorek`\n   * 4 → `Środa`\n   * 5 → `Czwartek`\n   * 6 → `Piątek`",
+      "input": "3 liczby całkowite, każda w osobnej linii: `d`, `m`, `y`.",
+      "output": "Jedna linia: nazwa dnia tygodnia — dokładnie jedna z: `Poniedziałek`, `Wtorek`, `Środa`, `Czwartek`, `Piątek`, `Sobota`, `Niedziela`.",
       "examples": [
         {
           "input": "9\n10\n2020",
-          "output": "Piątek"
+          "output": "Piątek",
+          "explanation": "$m = 10$, $y = 2020$, więc $K = 20$, $J = 20$, $h = (9 + 28 + 20 + 5 + 5 + 100) \\bmod 7 = 167 \\bmod 7 = 6$, czyli piątek."
         }
       ],
       "testcases": [
@@ -267,10 +489,94 @@
         {
           "input": "4\n7\n2023",
           "output": "Wtorek"
+        },
+        {
+          "input": "1\n1\n2000",
+          "output": "Sobota"
+        },
+        {
+          "input": "1\n1\n1900",
+          "output": "Poniedziałek"
+        },
+        {
+          "input": "1\n1\n2023",
+          "output": "Niedziela"
+        },
+        {
+          "input": "1\n3\n2000",
+          "output": "Środa"
+        },
+        {
+          "input": "25\n12\n2025",
+          "output": "Czwartek"
+        },
+        {
+          "input": "31\n1\n2024",
+          "output": "Środa"
         }
       ],
-      "constraints": "* Data wejściowa jest poprawna (zalecane; inaczej dopisz, co robić dla błędnej).\n* Kalendarz gregoriański.",
-      "notes": ""
+      "constraints": "* Podana data jest poprawna (nie musisz jej sprawdzać).\n* $1 \\le y \\le 9999$",
+      "notes": "* W Pythonie $\\lfloor a / b \\rfloor$ to `a // b`, a $a \\bmod b$ to `a % b`.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "03_daty/ZAD-09",
+      "title": "Dni między datami (moduł datetime)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "datetime",
+        "daty",
+        "biblioteka standardowa"
+      ],
+      "description": "Wczytaj dwie daty i za pomocą modułu `datetime` z biblioteki standardowej Pythona oblicz:\n\n1. liczbę dni między tymi datami — jako wartość bezwzględną różnicy, więc kolejność dat nie ma znaczenia,\n2. nazwę dnia tygodnia **pierwszej** daty.",
+      "input": "6 liczb całkowitych, każda w osobnej linii:\n\n1. `d1` — dzień pierwszej daty\n2. `m1` — miesiąc pierwszej daty\n3. `y1` — rok pierwszej daty\n4. `d2` — dzień drugiej daty\n5. `m2` — miesiąc drugiej daty\n6. `y2` — rok drugiej daty",
+      "output": "Dwie linie:\n\n1. liczba dni między datami (liczba całkowita, $\\ge 0$),\n2. nazwa dnia tygodnia pierwszej daty — dokładnie jedna z: `Poniedziałek`, `Wtorek`, `Środa`, `Czwartek`, `Piątek`, `Sobota`, `Niedziela`.",
+      "examples": [
+        {
+          "input": "9\n10\n2020\n1\n1\n2021",
+          "output": "84\nPiątek",
+          "explanation": "Od 9 października 2020 do 1 stycznia 2021 mijają 84 dni: 22 do końca października, 30 w listopadzie, 31 w grudniu i 1 w styczniu."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n1\n2000\n1\n1\n2000",
+          "output": "0\nSobota"
+        },
+        {
+          "input": "28\n2\n2024\n1\n3\n2024",
+          "output": "2\nŚroda"
+        },
+        {
+          "input": "28\n2\n2023\n1\n3\n2023",
+          "output": "1\nWtorek"
+        },
+        {
+          "input": "1\n1\n2001\n1\n1\n2000",
+          "output": "366\nPoniedziałek"
+        },
+        {
+          "input": "1\n1\n1900\n1\n1\n2000",
+          "output": "36524\nPoniedziałek"
+        },
+        {
+          "input": "25\n12\n2025\n1\n1\n2026",
+          "output": "7\nCzwartek"
+        },
+        {
+          "input": "4\n10\n2026\n31\n12\n2026",
+          "output": "88\nNiedziela"
+        },
+        {
+          "input": "1\n1\n1\n31\n12\n9999",
+          "output": "3652058\nPoniedziałek"
+        }
+      ],
+      "constraints": "* Obie daty są poprawne (nie musisz ich sprawdzać).\n* $1 \\le y1, y2 \\le 9999$",
+      "notes": "* Moduł `datetime` udostępnia typ `date`, który reprezentuje jedną datę. Tworząc ją, podaj kolejno **rok, miesiąc, dzień**:\n\n  ```python\n  from datetime import date\n\n  pierwsza = date(2020, 10, 9)\n  druga = date(2021, 1, 1)\n  print((druga - pierwsza).days)   # 84\n  print((pierwsza - druga).days)   # -84\n  print(pierwsza.weekday())        # 4\n  ```\n\n* Różnica dwóch dat to odcinek czasu (`timedelta`); liczbę dni odczytasz z jego pola `.days`. Może być ujemna, więc użyj `abs(...)`.\n* Metoda `weekday()` zwraca 0 dla poniedziałku, 1 dla wtorku, …, 6 dla niedzieli — to inna numeracja niż `h` w kongruencji Zellera z ZAD-08 (tam 0 oznacza sobotę).\n* Moduł sam uwzględnia lata przestępne. Porównaj go z ZAD-07 i ZAD-08: `(data - date(rok, 1, 1)).days + 1` to numer dnia w roku, a `weekday()` zastępuje wzór Zellera — dobry sposób na sprawdzenie swoich wcześniejszych rozwiązań.",
+      "starter_code": "from datetime import date\n\nd1 = int(input())\nm1 = int(input())\ny1 = int(input())\nd2 = int(input())\nm2 = int(input())\ny2 = int(input())\n\n# Uzupełnij: utwórz obiekty date, oblicz liczbę dni między nimi\n# i wypisz nazwę dnia tygodnia pierwszej daty.\n"
     }
   ]
 }

@@ -1,30 +1,25 @@
-"""
-ZAD-06 — Litera „Z”
+r"""
+ZAD-06 — Litera Z
 
 **Poziom:** ★★☆
 **Tagi:** `pętle zagnieżdżone`, `warunki`, `ASCII-art`
 
 ### Treść
 
-Wczytaj `n` (`n ≥ 3`) i wypisz literę `Z` o wysokości `n`:
+Wczytaj liczbę naturalną `n` i wypisz literę `Z` o wysokości i szerokości `n`:
 
-* pierwszy wiersz: `n` gwiazdek,
-* ostatni wiersz: `n` gwiazdek,
-* w środku: jedna gwiazdka na przekątnej od prawej do lewej.
+* pierwszy i ostatni wiersz składają się z `n` gwiazdek,
+* w pozostałych wierszach jest jedna gwiazdka leżąca na przekątnej biegnącej z prawego górnego do lewego dolnego rogu.
 
-W wierszu `i` (0..n-1) i kolumnie `j`:
-
-* jeśli `i == 0` lub `i == n-1` → `*`
-* else jeśli `j == n-1-i` → `*`
-* else → spacja
+W wierszu `i` i kolumnie `j` (numerowanych od `0` do `n - 1`) wypisz `*`, gdy `i == 0`, `i == n - 1` lub `j == n - 1 - i`. W przeciwnym razie wypisz spację.
 
 ### Wejście
 
-* 1. linia: `n` (`n ≥ 3`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 3`)
 
 ### Wyjście
 
-`n` linii po `n` znaków.
+`n` linii z gwiazdkami i spacjami tworzących literę `Z`.
 
 ### Przykład
 
@@ -46,5 +41,18 @@ W wierszu `i` (0..n-1) i kolumnie `j`:
 
 """
 
+
+def litera_z(n):
+    for i in range(n):
+        wiersz = ""
+        for j in range(n):
+            if i == 0 or i == n - 1 or j == n - 1 - i:
+                wiersz += "*"
+            else:
+                wiersz += " "
+        print(wiersz.rstrip())
+
+
 if __name__ == "__main__":
-    pass
+    n = int(input())
+    litera_z(n)

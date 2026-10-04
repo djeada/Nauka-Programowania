@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Wypisywanie tekstu na ekran
 
 **Poziom:** ★☆☆
@@ -15,11 +15,11 @@ Brak.
 
 ### Wyjście
 
-Jedna linia:
-
-* `Witaj, świecie!`
+Jedna linia: `Witaj, świecie!`
 
 ### Przykład
+
+**Wejście:** *(brak)*
 
 **Wyjście:**
 
@@ -27,9 +27,9 @@ Jedna linia:
 Witaj, świecie!
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Tekst musi być identyczny (łącznie z przecinkiem, spacją i wykrzyknikiem).
+* Tekst musi być identyczny (łącznie z polskimi znakami, przecinkiem, spacją i wykrzyknikiem).
 
 """
 

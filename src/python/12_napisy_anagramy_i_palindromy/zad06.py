@@ -1,22 +1,26 @@
-"""
+r"""
 ZAD-06 — Permutacje słowa, które są palindromami
 
 **Poziom:** ★★☆
-**Tagi:** `palindrom`, `permutacje`, `multiset`
+**Tagi:** `napisy`, `palindrom`, `permutacje`
 
 ### Treść
 
-Wczytaj słowo i wypisz wszystkie **unikalne** palindromy, które są jego permutacjami.
+Wczytaj słowo i wypisz wszystkie **różne** palindromy, które można ułożyć z jego liter (używając każdej litery dokładnie tyle razy, ile razy występuje w słowie).
 
 ### Wejście
 
-* 1. linia: słowo (litery mogą się powtarzać)
+* 1. linia: słowo złożone z małych liter alfabetu angielskiego (`a`–`z`); litery mogą się powtarzać
 
 ### Wyjście
 
-Każdy unikalny palindrom w osobnej linii. Jeśli nie istnieje żaden — puste wyjście.
+Każdy palindrom w osobnej linii, bez powtórzeń, w **kolejności alfabetycznej**. Jeśli z liter słowa nie da się ułożyć żadnego palindromu, program nic nie wypisuje.
 
-### Przykład
+### Ograniczenia
+
+* Długość słowa: od 1 do 10.
+
+### Przykład 1
 
 **Wejście:**
 
@@ -31,79 +35,47 @@ abba
 baab
 ```
 
+### Przykład 2
+
+**Wejście:**
+
+```
+abc
+```
+
+**Wyjście:** *(brak)*
+
 ### Uwagi
 
-* Najpierw sprawdź warunek istnienia palindromu z liter: co najwyżej jeden znak może mieć nieparzystą liczbę wystąpień.
-* Generuj palindromy z połówek (bez wypisywania duplikatów).
+* Palindrom da się ułożyć tylko wtedy, gdy co najwyżej jedna litera występuje nieparzystą liczbę razy (ta litera trafia na środek).
+* Wystarczy wygenerować permutacje „połówki” palindromu (po połowie wystąpień każdej litery, np. funkcją `permutations` z zadania ZAD-02) i do każdej dokleić środek oraz odwróconą połówkę. Gdy litery się powtarzają, `permutations` zwraca te same układy wielokrotnie — powtórzenia usuniesz, zbierając wyniki w zbiorze (`set`).
 
 """
 
-from collections import Counter
+from itertools import permutations
 
 
-def generuj_palindromy(slowo):
-    """
-    Generuje wszystkie unikalne palindromy będące permutacjami słowa.
-
-    Złożoność czasowa: O((n/2)! * n), gdzie n to długość słowa
-    Złożoność pamięciowa: O((n/2)! * n) dla przechowania wyników
-    """
-    # Zliczenie wystąpień każdej litery
-    licznik = Counter(slowo)
-
-    # Sprawdzenie warunku istnienia palindromu
-    # Co najwyżej jeden znak może mieć nieparzystą liczbę wystąpień
-    nieparzysty_znak = None
-    liczba_nieparzystych = 0
-
-    for znak, liczba in licznik.items():
+def palindromy_z_liter(slowo):
+    """Zwraca posortowaną listę różnych palindromów ułożonych z liter słowa."""
+    srodek = ""
+    polowka = ""
+    for litera in sorted(set(slowo)):
+        liczba = slowo.count(litera)
         if liczba % 2 == 1:
-            nieparzysty_znak = znak
-            liczba_nieparzystych += 1
+            if srodek:
+                return []  # więcej niż jedna litera o nieparzystej liczbie wystąpień
+            srodek = litera
+        polowka += litera * (liczba // 2)
 
-    # Jeśli więcej niż jeden znak ma nieparzystą liczbę wystąpień,
-    # nie można utworzyć palindromu
-    if liczba_nieparzystych > 1:
-        return []
-
-    # Utworzenie połówki palindromu (po połowie z każdego znaku)
-    polowka_liter = []
-    for znak, liczba in licznik.items():
-        polowka_liter.extend([znak] * (liczba // 2))
-
-    # Generowanie wszystkich unikalnych permutacji połówki
     wynik = set()
-
-    def generuj_permutacje(elementy, obecna_permutacja):
-        """Rekurencyjnie generuje wszystkie permutacje."""
-        if not elementy:
-            # Utworzenie palindromu z połówki
-            polowka = "".join(obecna_permutacja)
-            srodek = nieparzysty_znak if nieparzysty_znak else ""
-            palindrom = polowka + srodek + polowka[::-1]
-            wynik.add(palindrom)
-            return
-
-        # Użycie zbioru do uniknięcia duplikatów na tym poziomie
-        uzyto = set()
-        for i in range(len(elementy)):
-            if elementy[i] not in uzyto:
-                uzyto.add(elementy[i])
-                generuj_permutacje(
-                    elementy[:i] + elementy[i + 1 :], obecna_permutacja + [elementy[i]]
-                )
-
-    generuj_permutacje(polowka_liter, [])
+    for krotka in permutations(polowka):
+        lewa = "".join(krotka)
+        wynik.add(lewa + srodek + lewa[::-1])
     return sorted(wynik)
 
 
 if __name__ == "__main__":
-    # Wczytanie słowa z wejścia
     slowo = input().strip()
 
-    # Wygenerowanie wszystkich unikalnych palindromów
-    palindromy = generuj_palindromy(slowo)
-
-    # Wypisanie każdego palindromu w osobnej linii
-    for palindrom in palindromy:
+    for palindrom in palindromy_z_liter(slowo):
         print(palindrom)

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-03 — Sortowanie listy par względem kryterium
 
 **Poziom:** ★☆☆
@@ -6,22 +6,28 @@ ZAD-03 — Sortowanie listy par względem kryterium
 
 ### Treść
 
-Otrzymujesz listę par `(napis, liczba)`.
+Wczytaj listę par `(napis, liczba)` i zapisz je jako krotki.
 
-a) Posortuj pary rosnąco po liczbie.
-b) Posortuj pary rosnąco po długości napisu.
+a) Posortuj pary rosnąco według liczby.
+b) Posortuj pary rosnąco według długości napisu.
 
-Wypisz wyniki dla a) i b) w osobnych liniach.
+Przy remisie (ta sama liczba w a), ta sama długość napisu w b)) pary zachowują kolejność z wejścia.
 
 ### Wejście
 
-* 1 linia: liczba naturalna `N`
-* następnie `N` linii: `napis liczba` (napis bez spacji)
+* 1. linia: liczba par $N$
+* kolejne $N$ linii: napis (bez spacji) i liczba całkowita, oddzielone spacją
 
 ### Wyjście
 
-* 1 linia: lista par posortowana jak w podpunkcie a)
-* 2 linia: lista par posortowana jak w podpunkcie b)
+* 1. linia: lista par posortowana według podpunktu a)
+* 2. linia: lista par posortowana według podpunktu b)
+
+Listy wypisz w formacie Pythona — tak, jak robi to `print(lista)` dla listy krotek, np. `[('bca', 1), ('c', 2), ('ab', 3)]`.
+
+### Ograniczenia
+
+* $1 \le N \le 20$
 
 ### Przykład
 
@@ -41,37 +47,27 @@ c 2
 [('c', 2), ('ab', 3), ('bca', 1)]
 ```
 
+### Uwagi
+
+* Kryterium sortowania podaj w parametrze `key`, np. `sorted(pary, key=lambda para: para[1])`.
+
 """
 
 
-def posortuj_liste_wzgledem_liczb(lista):
-    """
-    Funkcja zwraca liste par napisow i liczb posortowanych wzgledem liczb.
-    """
-    return sorted(lista, key=lambda x: x[1])
+def sortuj_wedlug_liczby(pary):
+    return sorted(pary, key=lambda para: para[1])
 
 
-def posortuj_liste_wzgledem_dlugosci_napisow(lista):
-    """
-    Funkcja zwraca liste par napisow i liczb posortowanych wzgledem dlugosci napisow.
-    """
-    return sorted(lista, key=lambda x: len(x[0]))
-
-
-def test_posortuj_liste_wzgledem_liczb():
-    assert posortuj_liste_wzgledem_liczb([("c", 3), ("b", 2), ("a", 1)]) == [
-        ("a", 1),
-        ("b", 2),
-        ("c", 3),
-    ]
-
-
-def test_posortuj_liste_wzgledem_dlugosci_napisow():
-    assert posortuj_liste_wzgledem_dlugosci_napisow(
-        [("ccc", 3), ("z", 1), ("xx", 2)]
-    ) == [("z", 1), ("xx", 2), ("ccc", 3)]
+def sortuj_wedlug_dlugosci_napisu(pary):
+    return sorted(pary, key=lambda para: len(para[0]))
 
 
 if __name__ == "__main__":
-    test_posortuj_liste_wzgledem_liczb()
-    test_posortuj_liste_wzgledem_dlugosci_napisow()
+    n = int(input())
+    pary = []
+    for _ in range(n):
+        napis, liczba = input().split()
+        pary.append((napis, int(liczba)))
+
+    print(sortuj_wedlug_liczby(pary))
+    print(sortuj_wedlug_dlugosci_napisu(pary))

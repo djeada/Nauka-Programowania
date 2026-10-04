@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Usuń podnapis
 
 **Poziom:** ★★☆
@@ -6,21 +6,23 @@ ZAD-02 — Usuń podnapis
 
 ### Treść
 
-Dostajesz dwa napisy:
+Otrzymujesz napis `S` i napis `T`. Usuń z `S` **wszystkie wystąpienia** podnapisu `T`.
 
-1. Napis główny,
-2. Podnapis do usunięcia.
-
-Usuń **wszystkie wystąpienia** podnapisu z napisu głównego.
+Wystąpienia szukamy od lewej do prawej, a usuwanie wykonujemy **jednokrotnie** (jednym przejściem): fragmenty, które dopiero po usunięciu „skleją się” w nowe wystąpienie `T`, zostają. Na przykład usunięcie `ab` z `aabb` daje `ab`, a usunięcie `aa` z `aaa` daje `a`.
 
 ### Wejście
 
-* 1 linia: napis `S`
-* 2 linia: napis `T` (do usunięcia)
+* 1. linia: napis `S`
+* 2. linia: napis `T` (do usunięcia)
 
 ### Wyjście
 
-* 1 linia: wynikowy napis po usunięciu wszystkich wystąpień
+Jedna linia: napis po usunięciu wszystkich wystąpień `T`. Jeśli nic nie zostało, wypisz pustą linię.
+
+### Ograniczenia
+
+* `1 ≤ |S| ≤ 1000`
+* `1 ≤ |T| ≤ 100`
 
 ### Przykład
 
@@ -37,25 +39,29 @@ zy
 Le je na wie
 ```
 
+### Uwagi
+
+* To samo przejście co w poprzednim zadaniu, tylko zamiast wstawiać nowy napis — po prostu przeskakujesz znalezione wystąpienie.
+
 """
 
 
-def usun_wszystkie_v1(zdanie, slowo):
-    return zdanie.replace(slowo, "")
+def usun_wszystkie(napis, fragment):
+    """Usuwa wszystkie (nienakładające się) wystąpienia fragmentu w jednym przejściu."""
+    wynik = []
+    i = 0
 
+    while i < len(napis):
+        if napis[i : i + len(fragment)] == fragment:
+            i += len(fragment)
+        else:
+            wynik.append(napis[i])
+            i += 1
 
-# Testy Poprawnosci
-def test_1():
-    zdanie = "Lezy jezy na wiezy"
-    slowo = "zy"
-    wynik = "Le je na wie"
-
-    assert usun_wszystkie_v1(zdanie, slowo) == wynik
-
-
-def main():
-    test_1()
+    return "".join(wynik)
 
 
 if __name__ == "__main__":
-    main()
+    napis = input()
+    fragment = input()
+    print(usun_wszystkie(napis, fragment))

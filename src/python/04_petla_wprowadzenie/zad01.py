@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Warunek kończący pętlę
 
 **Poziom:** ★☆☆
@@ -6,20 +6,23 @@ ZAD-01 — Warunek kończący pętlę
 
 ### Treść
 
-Wczytuj kolejne liczby naturalne, dopóki nie pojawi się liczba `7`.
-Po wczytaniu liczby `7` program kończy działanie **bez wypisywania czegokolwiek**.
+Wczytuj kolejne liczby naturalne (każdą z osobnej linii), dopóki nie wczytasz liczby `7`.
+Siódemka kończy wczytywanie — po niej program nie wczytuje już żadnych danych.
+
+Na koniec wypisz, ile liczb wczytano **przed** pierwszą siódemką (samej siódemki nie liczymy).
 
 ### Wejście
 
-Dowolna liczba liczb naturalnych (każda w osobnej linii).
-
-### Ograniczenia / gwarancje
-
-* W danych wejściowych na pewno pojawi się co najmniej jedna liczba `7`.
+Kolejne liczby naturalne, każda w osobnej linii.
 
 ### Wyjście
 
-Brak.
+Jedna liczba całkowita — liczba wczytanych liczb poprzedzających pierwszą siódemkę.
+
+### Ograniczenia
+
+* Wśród danych na pewno jest co najmniej jedna liczba `7`.
+* Po pierwszej siódemce mogą występować kolejne linie — program ma je pominąć.
 
 ### Przykład
 
@@ -35,20 +38,28 @@ Brak.
 **Wyjście:**
 
 ```
+3
 ```
 
-*(brak danych wyjściowych)*
+Przed siódemką wczytano trzy liczby: `3`, `10` i `5`.
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Nie wypisuj żadnych komunikatów typu „Podaj liczbę”.
-* Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana.
+* Jeśli pierwszą wczytaną liczbą jest `7`, wypisz `0`.
+* Liczby takie jak `17` czy `70` nie kończą wczytywania — liczy się tylko liczba równa `7`.
 
 """
 
-if __name__ == "__main__":
 
-    liczba = 0
-
+def policz_przed_siodemka():
+    """Wczytuje liczby aż do pierwszej siódemki i zwraca, ile ich było przed nią."""
+    licznik = 0
+    liczba = int(input())
     while liczba != 7:
-        liczba = int(input("Podaj liczbe: "))
+        licznik += 1
+        liczba = int(input())
+    return licznik
+
+
+if __name__ == "__main__":
+    print(policz_przed_siodemka())

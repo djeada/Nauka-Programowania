@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Sprawdź poprawność hasła
 
 **Poziom:** ★★☆
@@ -6,27 +6,25 @@ ZAD-02 — Sprawdź poprawność hasła
 
 ### Treść
 
-Otrzymujesz napis reprezentujący hasło. Sprawdź, czy hasło spełnia wszystkie warunki:
+Wczytaj hasło i sprawdź, czy spełnia **wszystkie** warunki:
 
-1. Zawiera co najmniej jedną małą literę `[a–z]`.
-2. Zawiera co najmniej jedną wielką literę `[A–Z]`.
-3. Zawiera co najmniej jedną cyfrę `[0–9]`.
-4. Zawiera co najmniej jeden znak specjalny spośród:
-   `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`.
-5. Ma długość co najmniej 8 znaków.
-6. Ma długość nie większą niż 20 znaków.
+1. ma od 8 do 20 znaków (włącznie),
+2. zawiera co najmniej jedną małą literę `a–z`,
+3. zawiera co najmniej jedną wielką literę `A–Z`,
+4. zawiera co najmniej jedną cyfrę `0–9`,
+5. zawiera co najmniej jeden znak specjalny spośród:
+   `!` `#` `$` `%` `&` `'` `*` `+` `-` `/` `=` `?` `^` `_` `` ` `` `{` `|` `}` `~`.
+
+Hasło może zawierać także inne znaki (np. spację, `@` albo `ą`). Są one dozwolone, ale nie liczą się do warunków 2–5: `ą` nie jest literą z zakresu `a–z`, a `@` nie należy do listy znaków specjalnych.
 
 ### Wejście
 
-Jedna linia:
-
-* `haslo`
+* 1. linia: hasło
 
 ### Wyjście
 
-Jedna linia:
-
-* `Prawda` albo `Fałsz`
+* `Prawda` — jeśli hasło spełnia wszystkie warunki,
+* `Fałsz` — w przeciwnym razie.
 
 ### Przykład
 
@@ -42,41 +40,43 @@ abc1234
 Fałsz
 ```
 
+Hasło jest za krótkie, nie ma wielkiej litery ani znaku specjalnego.
+
+### Przykład 2
+
+**Wejście:**
+
+```
+Tajne_Haslo7
+```
+
+**Wyjście:**
+
+```
+Prawda
+```
+
+### Uwagi
+
+* Każdy z warunków 2–5 sprawdzisz osobnym `re.search()`, np. `re.search(r"[a-z]", haslo)`.
+
 """
 
 import re
 
+WARUNKI = [
+    r"^.{8,20}$",  # długość od 8 do 20 znaków
+    r"[a-z]",  # mała litera
+    r"[A-Z]",  # wielka litera
+    r"[0-9]",  # cyfra
+    r"[!#$%&'*+/=?^_`{|}~-]",  # znak specjalny
+]
+
 
 def czy_haslo_poprawne(haslo):
-    """
-    Sprawdza czy haslo jest poprawne.
-    """
-    if len(haslo) < 8 or len(haslo) > 20:
-        return False
-    if re.search(r"[a-z]", haslo) is None:
-        return False
-    if re.search(r"[A-Z]", haslo) is None:
-        return False
-    if re.search(r"[0-9]", haslo) is None:
-        return False
-    if re.search(r"[! # $ % & \' * + - / = ? ^ _ ` { | } ~]", haslo) is None:
-        return False
-    return True
-
-
-def test_czy_haslo_poprawne():
-    assert not czy_haslo_poprawne("Ab1!")
-    assert not czy_haslo_poprawne("haslo")
-    assert not czy_haslo_poprawne("HASLO")
-    assert not czy_haslo_poprawne("HASLO123!@#")
-    assert not czy_haslo_poprawne("12345678")
-    assert not czy_haslo_poprawne("proste_haslo")
-    assert not czy_haslo_poprawne("Haslo123")
-    assert czy_haslo_poprawne("Haslo123!")
-    assert czy_haslo_poprawne("Haslo123!#")
-    assert czy_haslo_poprawne("Haslo123!#$")
-    assert czy_haslo_poprawne("Haslo123!#$%&*")
+    return all(re.search(wzorzec, haslo) for wzorzec in WARUNKI)
 
 
 if __name__ == "__main__":
-    test_czy_haslo_poprawne()
+    haslo = input()
+    print("Prawda" if czy_haslo_poprawne(haslo) else "Fałsz")

@@ -1,7 +1,7 @@
 {
   "file": "14_funkcje_wielomiany.md",
-  "chapter_title": "Rozdział: Funkcje — wielomiany",
-  "chapter_description": "Poniższe zadania dotyczą implementacji **funkcji** operujących na wielomianach zapisanych jako lista współczynników w kolejności od najwyższej potęgi do wyrazu wolnego:\n`[a_n, a_{n-1}, ..., a_0]` oznacza wielomian `a_n x^n + a_{n-1} x^{n-1} + ... + a_0`.\n**Konwencje wspólne:**\n* Każdy podpunkt to osobna funkcja (możesz też robić osobne programy testujące – ale zadanie dotyczy funkcji).\n* Współczynniki mogą być ujemne (czyli w praktyce: liczby całkowite).\n* Dla wyniku jako listy: zwracaj listę współczynników w tym samym formacie (od najwyższej potęgi).\n* Jeśli wynikowy wielomian ma wiodące zera, można je usuwać, ale **zostaw przynajmniej jedno zero**, jeśli cały wielomian jest zerowy (np. `[0]`).",
+  "chapter_title": "Rozdział 14: Funkcje — wielomiany",
+  "chapter_description": "Poniższe zadania dotyczą pisania **funkcji** operujących na wielomianach. Wielomian zapisujemy jako listę jego współczynników od najwyższej potęgi do wyrazu wolnego: lista `[a_n, a_{n-1}, ..., a_1, a_0]` oznacza wielomian $a_n x^n + a_{n-1} x^{n-1} + \\dots + a_1 x + a_0$.\n\n**Konwencje wspólne:**\n\n* Każde zadanie to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**. Główną pracę wykonuje funkcja opisana w treści zadania — program tylko wczytuje dane, wywołuje funkcję i wypisuje wynik (gotowy szkielet znajdziesz w sekcji „Kod startowy”).\n* Wielomian stopnia `n` jest podawany w dwóch liniach: najpierw liczba `n`, a w następnej linii `n+1` liczb całkowitych `a_n a_{n-1} ... a_0` oddzielonych spacjami.\n* Współczynniki są liczbami całkowitymi (mogą być ujemne). Dla `n ≥ 1` współczynnik `a_n` jest różny od zera.\n* Gdy wynikiem jest wielomian, wypisz jego współczynniki od najwyższej potęgi w **jednej linii**, oddzielone pojedynczą spacją, bez nawiasów i przecinków.\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -14,22 +14,41 @@
         "wielomiany",
         "Horner"
       ],
-      "description": "Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `x`, a następnie zwraca wartość wielomianu w punkcie `x`.",
-      "input": "",
-      "output": "",
-      "examples": [],
+      "description": "Napisz funkcję `wartosc_wielomianu(wspolczynniki, x)`, która otrzymuje listę współczynników wielomianu $W(x) = a_n x^n + a_{n-1} x^{n-1} + \\dots + a_0$ oraz liczbę $x$ i zwraca wartość $W(x)$.\n\nProgram wczytuje wielomian i liczbę $x$, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)\n* 2. linia: `n+1` liczb całkowitych `a_n a_{n-1} ... a_0`\n* 3. linia: `x` — liczba całkowita",
+      "output": "Jedna liczba całkowita — wartość wielomianu w punkcie `x`.",
+      "examples": [
+        {
+          "input": "2\n3 2 1\n1",
+          "output": "6",
+          "explanation": "Wielomian to $3x^2 + 2x + 1$, a $3 \\cdot 1^2 + 2 \\cdot 1 + 1 = 6$."
+        }
+      ],
       "testcases": [
         {
-          "input": "[3, 2, 1]\n2",
+          "input": "2\n3 2 1\n2",
           "output": "17"
         },
         {
-          "input": "[1, 0, -1]\n3",
-          "output": "8"
+          "input": "0\n5\n10",
+          "output": "5"
+        },
+        {
+          "input": "3\n1 0 -2 4\n-3",
+          "output": "-17"
+        },
+        {
+          "input": "1\n2 -7\n0",
+          "output": "-7"
+        },
+        {
+          "input": "4\n1 1 1 1 1\n2",
+          "output": "31"
         }
       ],
-      "constraints": "",
-      "notes": "* Najprościej użyć schematu Hornera."
+      "constraints": "* `0 ≤ n ≤ 10`\n* `-100 ≤ a_i ≤ 100`, `-10 ≤ x ≤ 10`",
+      "notes": "* Najprościej skorzystać ze **schematu Hornera**: $W(x) = (\\dots((a_n x + a_{n-1}) x + a_{n-2}) x + \\dots) x + a_0$. Zacznij od wyniku równego `0` i dla każdego kolejnego współczynnika `a` wykonaj `wynik = wynik * x + a`.",
+      "starter_code": "def wartosc_wielomianu(wspolczynniki, x):\n    # Uzupełnij funkcję: zwróć wartość wielomianu w punkcie x.\n    pass\n\n\nn = int(input())\nwspolczynniki = [int(s) for s in input().split()]\nx = int(input())\nprint(wartosc_wielomianu(wspolczynniki, x))\n"
     },
     {
       "id": "ZAD-02",
@@ -42,22 +61,41 @@
         "wielomiany",
         "skalar"
       ],
-      "description": "Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `k`, a następnie zwraca współczynniki wielomianu powstałego z pomnożenia każdego współczynnika przez `k`.",
-      "input": "",
-      "output": "",
-      "examples": [],
-      "testcases": [
+      "description": "Napisz funkcję `pomnoz_przez_skalar(wspolczynniki, k)`, która zwraca **nową** listę współczynników wielomianu $k \\cdot W(x)$, czyli wielomianu powstałego przez pomnożenie każdego współczynnika przez liczbę $k$.\n\nProgram wczytuje wielomian i liczbę $k$, wywołuje funkcję i wypisuje współczynniki wyniku.",
+      "input": "* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)\n* 2. linia: `n+1` liczb całkowitych `a_n ... a_0`\n* 3. linia: `k` — liczba całkowita (skalar)",
+      "output": "Jedna linia: `n+1` liczb całkowitych — współczynniki po pomnożeniu, oddzielone spacją. Liczba współczynników się nie zmienia (także dla `k = 0`).",
+      "examples": [
         {
-          "input": "[4, -3, 2]\n-2",
-          "output": "[-8, 6, -4]"
-        },
-        {
-          "input": "[0, 5]\n3",
-          "output": "[0, 15]"
+          "input": "2\n4 -3 2\n-2",
+          "output": "-8 6 -4",
+          "explanation": ""
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "testcases": [
+        {
+          "input": "0\n7\n3",
+          "output": "21"
+        },
+        {
+          "input": "3\n1 2 3 4\n2",
+          "output": "2 4 6 8"
+        },
+        {
+          "input": "2\n5 -1 3\n0",
+          "output": "0 0 0"
+        },
+        {
+          "input": "1\n-3 6\n1",
+          "output": "-3 6"
+        },
+        {
+          "input": "4\n1 0 -2 0 5\n-3",
+          "output": "-3 0 6 0 -15"
+        }
+      ],
+      "constraints": "* `0 ≤ n ≤ 10`\n* `-100 ≤ a_i ≤ 100`, `-100 ≤ k ≤ 100`",
+      "notes": "",
+      "starter_code": "def pomnoz_przez_skalar(wspolczynniki, k):\n    # Uzupełnij funkcję: zwróć nową listę współczynników.\n    pass\n\n\nn = int(input())\nwspolczynniki = [int(s) for s in input().split()]\nk = int(input())\nprint(*pomnoz_przez_skalar(wspolczynniki, k))\n"
     },
     {
       "id": "ZAD-03",
@@ -70,22 +108,41 @@
         "wielomiany",
         "listy"
       ],
-      "description": "Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` i `b` (mogą mieć różne stopnie) i zwraca współczynniki wielomianu będącego ich sumą.",
-      "input": "",
-      "output": "",
-      "examples": [],
-      "testcases": [
+      "description": "Napisz funkcję `suma_wielomianow(a, b)`, która otrzymuje listy współczynników dwóch wielomianów (mogą mieć różne stopnie) i zwraca listę współczynników ich sumy.\n\nProgram wczytuje oba wielomiany, wywołuje funkcję i wypisuje współczynniki wyniku.",
+      "input": "* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)\n* 2. linia: `n+1` liczb całkowitych `a_n ... a_0`\n* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)\n* 4. linia: `m+1` liczb całkowitych `b_m ... b_0`",
+      "output": "Jedna linia: dokładnie `max(n, m) + 1` liczb całkowitych — współczynniki sumy od najwyższej potęgi, oddzielone spacją. Nie usuwaj zer z początku wyniku (np. gdy najwyższe potęgi się zredukują).",
+      "examples": [
         {
-          "input": "[3, 5, 2]\n[2, -8, 1]",
-          "output": "[5, -3, 3]"
-        },
-        {
-          "input": "[1, 2, 3, 4]\n[5, 6]",
-          "output": "[1, 2, 8, 10]"
+          "input": "2\n3 5 2\n2\n2 -8 1",
+          "output": "5 -3 3",
+          "explanation": "$(3x^2 + 5x + 2) + (2x^2 - 8x + 1) = 5x^2 - 3x + 3$."
         }
       ],
-      "constraints": "",
-      "notes": "* Jeśli listy mają różne długości, wyrównaj je od końca (od wyrazu wolnego)."
+      "testcases": [
+        {
+          "input": "2\n3 5 2\n1\n1 2",
+          "output": "3 6 4"
+        },
+        {
+          "input": "0\n5\n2\n1 0 -1",
+          "output": "1 0 4"
+        },
+        {
+          "input": "3\n1 2 3 4\n1\n5 6",
+          "output": "1 2 8 10"
+        },
+        {
+          "input": "2\n3 5 2\n2\n-3 1 1",
+          "output": "0 6 3"
+        },
+        {
+          "input": "0\n4\n0\n-4",
+          "output": "0"
+        }
+      ],
+      "constraints": "* `0 ≤ n, m ≤ 10`\n* `-100 ≤ a_i, b_i ≤ 100`",
+      "notes": "* Jeśli stopnie są różne, wyrównaj listy „od końca” (od wyrazu wolnego), dopisując zera na początku krótszej listy. Np. `1 2 3 4` + `5 6` = `1 2 8 10`.",
+      "starter_code": "def suma_wielomianow(a, b):\n    # Uzupełnij funkcję: zwróć listę współczynników sumy.\n    pass\n\n\nn = int(input())\na = [int(s) for s in input().split()]\nm = int(input())\nb = [int(s) for s in input().split()]\nprint(*suma_wielomianow(a, b))\n"
     },
     {
       "id": "ZAD-04",
@@ -98,22 +155,41 @@
         "wielomiany",
         "konwolucja"
       ],
-      "description": "Napisz funkcję, która otrzymuje dwie listy współczynników wielomianów `a` i `b` i zwraca listę współczynników wielomianu będącego ich iloczynem.",
-      "input": "",
-      "output": "",
-      "examples": [],
-      "testcases": [
+      "description": "Napisz funkcję `iloczyn_wielomianow(a, b)`, która otrzymuje listy współczynników dwóch wielomianów i zwraca listę współczynników ich iloczynu.\n\nProgram wczytuje oba wielomiany, wywołuje funkcję i wypisuje współczynniki wyniku.",
+      "input": "* 1. linia: `n` — stopień pierwszego wielomianu (`n ≥ 0`)\n* 2. linia: `n+1` liczb całkowitych `a_n ... a_0`\n* 3. linia: `m` — stopień drugiego wielomianu (`m ≥ 0`)\n* 4. linia: `m+1` liczb całkowitych `b_m ... b_0`",
+      "output": "Jedna linia: dokładnie `n + m + 1` liczb całkowitych — współczynniki iloczynu od najwyższej potęgi, oddzielone spacją.",
+      "examples": [
         {
-          "input": "[1, 2]\n[3, 4]",
-          "output": "[3, 10, 8]"
-        },
-        {
-          "input": "[2, 0, 1]\n[1, 1]",
-          "output": "[2, 2, 1, 1]"
+          "input": "3\n5 0 10 6\n2\n1 2 4",
+          "output": "5 10 30 26 52 24",
+          "explanation": "$(5x^3 + 10x + 6)(x^2 + 2x + 4) = 5x^5 + 10x^4 + 30x^3 + 26x^2 + 52x + 24$."
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "testcases": [
+        {
+          "input": "1\n1 2\n1\n3 4",
+          "output": "3 10 8"
+        },
+        {
+          "input": "0\n5\n2\n1 0 -1",
+          "output": "5 0 -5"
+        },
+        {
+          "input": "1\n1 -1\n1\n1 1",
+          "output": "1 0 -1"
+        },
+        {
+          "input": "2\n2 0 1\n1\n1 1",
+          "output": "2 2 1 1"
+        },
+        {
+          "input": "0\n-2\n0\n3",
+          "output": "-6"
+        }
+      ],
+      "constraints": "* `0 ≤ n, m ≤ 10`\n* `-100 ≤ a_i, b_i ≤ 100`",
+      "notes": "* Każdy wyraz pierwszego wielomianu mnożymy przez każdy wyraz drugiego: $a_i x^i \\cdot b_j x^j = a_i b_j x^{i+j}$. Utwórz listę `n + m + 1` zer i dla każdej pary pozycji `i` (w liście `a`) oraz `j` (w liście `b`) dodaj `a[i] * b[j]` do pozycji `i + j` wyniku.",
+      "starter_code": "def iloczyn_wielomianow(a, b):\n    # Uzupełnij funkcję: zwróć listę współczynników iloczynu.\n    pass\n\n\nn = int(input())\na = [int(s) for s in input().split()]\nm = int(input())\nb = [int(s) for s in input().split()]\nprint(*iloczyn_wielomianow(a, b))\n"
     },
     {
       "id": "ZAD-05",
@@ -126,22 +202,45 @@
         "pochodna",
         "wielomiany"
       ],
-      "description": "Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę naturalną `k` i zwraca współczynniki wielomianu będącego **k-tą pochodną**.",
-      "input": "",
-      "output": "",
-      "examples": [],
-      "testcases": [
+      "description": "Napisz funkcję `pochodna(wspolczynniki, k)`, która zwraca listę współczynników wielomianu będącego `k`-tą pochodną danego wielomianu (czyli wielomianu zróżniczkowanego `k` razy).\n\nProgram wczytuje wielomian i liczbę `k`, wywołuje funkcję i wypisuje współczynniki wyniku.",
+      "input": "* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)\n* 2. linia: `n+1` liczb całkowitych `a_n ... a_0`\n* 3. linia: `k` — rząd pochodnej (`k ≥ 1`)",
+      "output": "Jedna linia: współczynniki `k`-tej pochodnej od najwyższej potęgi, oddzielone spacją. Jeśli `k > n`, pochodna jest wielomianem zerowym — wypisz wtedy `0`.",
+      "examples": [
         {
-          "input": "[4, -3, 2]\n1",
-          "output": "[8, -3]"
-        },
-        {
-          "input": "[5, 0, 0]\n3",
-          "output": "[0]"
+          "input": "2\n4 -3 2\n1",
+          "output": "8 -3",
+          "explanation": "$(4x^2 - 3x + 2)' = 8x - 3$."
         }
       ],
-      "constraints": "",
-      "notes": "* Jeśli `k` jest większe niż stopień wielomianu, wynikiem jest wielomian zerowy: `[0]`."
+      "testcases": [
+        {
+          "input": "3\n2 0 -1 3\n1",
+          "output": "6 0 -1"
+        },
+        {
+          "input": "1\n5 4\n2",
+          "output": "0"
+        },
+        {
+          "input": "2\n4 -3 2\n2",
+          "output": "8"
+        },
+        {
+          "input": "4\n1 2 3 4 5\n2",
+          "output": "12 12 6"
+        },
+        {
+          "input": "0\n7\n1",
+          "output": "0"
+        },
+        {
+          "input": "3\n1 0 0 0\n3",
+          "output": "6"
+        }
+      ],
+      "constraints": "* `0 ≤ n ≤ 10`, `1 ≤ k ≤ 12`\n* `-100 ≤ a_i ≤ 100`",
+      "notes": "* Pochodna jednomianu: $(a x^d)' = d \\cdot a x^{d-1}$, a pochodna stałej to $0$. Jeśli współczynniki to `[c_d, c_{d-1}, ..., c_1, c_0]`, to pierwsza pochodna ma współczynniki `[d*c_d, (d-1)*c_{d-1}, ..., 1*c_1]` (o jeden mniej).\n* `k`-tą pochodną otrzymasz, licząc pierwszą pochodną `k` razy.",
+      "starter_code": "def pochodna(wspolczynniki, k):\n    # Uzupełnij funkcję: zwróć listę współczynników k-tej pochodnej\n    # (dla wielomianu zerowego zwróć [0]).\n    pass\n\n\nn = int(input())\nwspolczynniki = [int(s) for s in input().split()]\nk = int(input())\nprint(*pochodna(wspolczynniki, k))\n"
     },
     {
       "id": "ZAD-06",
@@ -154,22 +253,106 @@
         "delta",
         "pierwiastki"
       ],
-      "description": "Napisz funkcję, która otrzymuje listę współczynników równania kwadratowego `[a, b, c]` dla `a x^2 + b x + c` i zwraca listę **rzeczywistych** miejsc zerowych.",
-      "input": "",
-      "output": "",
-      "examples": [],
-      "testcases": [
+      "description": "Napisz funkcję `miejsca_zerowe(a, b, c)`, która zwraca listę wszystkich **rzeczywistych** rozwiązań równania $ax^2 + bx + c = 0$, posortowaną rosnąco. Pierwiastek podwójny umieść na liście tylko raz.\n\nProgram wczytuje współczynniki, wywołuje funkcję i wypisuje wynik.",
+      "input": "Jedna linia: trzy liczby całkowite `a b c` oddzielone spacją (`a ≠ 0`).",
+      "output": "* Jeśli równanie ma rozwiązania rzeczywiste: jedna linia z rozwiązaniami w kolejności rosnącej, oddzielonymi spacją, każde z dokładnością do **2 miejsc po przecinku** (np. `-1.62 0.62`). Pierwiastek podwójny wypisz raz.\n* Jeśli równanie nie ma rozwiązań rzeczywistych: dokładnie `Brak miejsc zerowych`.",
+      "examples": [
         {
-          "input": "[1, 2, 1]",
-          "output": "[-1.0, -1.0]"
+          "input": "1 2 1",
+          "output": "-1.00",
+          "explanation": "$\\Delta = 2^2 - 4 \\cdot 1 \\cdot 1 = 0$, więc jest jeden (podwójny) pierwiastek $x = -1$."
         },
         {
-          "input": "[1, 0, 1]",
-          "output": "[]"
+          "input": "1 0 1",
+          "output": "Brak miejsc zerowych",
+          "explanation": ""
         }
       ],
-      "constraints": "* Zakładamy `a ≠ 0` (to naprawdę równanie kwadratowe).",
-      "notes": "* Licz `Δ = b^2 - 4ac`.\n* Pierwiastki: `(-b ± sqrt(Δ)) / (2a)`."
+      "testcases": [
+        {
+          "input": "1 -3 2",
+          "output": "1.00 2.00"
+        },
+        {
+          "input": "2 0 -8",
+          "output": "-2.00 2.00"
+        },
+        {
+          "input": "-1 2 3",
+          "output": "-1.00 3.00"
+        },
+        {
+          "input": "1 1 -1",
+          "output": "-1.62 0.62"
+        },
+        {
+          "input": "4 4 1",
+          "output": "-0.50"
+        },
+        {
+          "input": "1 -5 0",
+          "output": "0.00 5.00"
+        },
+        {
+          "input": "2 1 5",
+          "output": "Brak miejsc zerowych"
+        }
+      ],
+      "constraints": "* `-100 ≤ a, b, c ≤ 100`, `a ≠ 0`",
+      "notes": "* Oblicz $\\Delta = b^2 - 4ac$. Dla $\\Delta < 0$ brak rozwiązań, dla $\\Delta = 0$ jest jedno: $x = \\frac{-b}{2a}$, a dla $\\Delta > 0$ dwa: $x_{1,2} = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}$.\n* Uważaj na kolejność: gdy $a < 0$, wzór z „$+$” daje **mniejszy** pierwiastek — posortuj wynik.",
+      "starter_code": "import math\n\n\ndef miejsca_zerowe(a, b, c):\n    # Uzupełnij funkcję: zwróć posortowaną listę rzeczywistych pierwiastków.\n    pass\n\n\na, b, c = [int(s) for s in input().split()]\npierwiastki = miejsca_zerowe(a, b, c)\nif pierwiastki:\n    print(\" \".join(f\"{x:.2f}\" for x in pierwiastki))\nelse:\n    print(\"Brak miejsc zerowych\")\n"
+    },
+    {
+      "id": "ZAD-07",
+      "slug": "14_funkcje_wielomiany/ZAD-07",
+      "title": "Upraszczanie bez skutków ubocznych",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "wielomiany",
+        "listy",
+        "skutki uboczne"
+      ],
+      "description": "Zapis wielomianu może zaczynać się od zbędnych zer, np. lista `[0, 0, 3, 0, 1]` oznacza ten sam wielomian co `[3, 0, 1]`, czyli $3x^2 + 1$. W tym zadaniu (wyjątkowo) dane mogą więc zaczynać się od zer.\n\nNapisz funkcję `uprosc(w)`, która zwraca **nową** listę współczynników bez zer wiodących. Wielomian zerowy (same zera) upraszczamy do listy `[0]`. Funkcja **nie może zmieniać** otrzymanej listy `w` — program po wywołaniu funkcji wypisuje także oryginalną listę, żeby to sprawdzić.",
+      "input": "* 1. linia: `k` — liczba współczynników (`k ≥ 1`)\n* 2. linia: `k` liczb całkowitych — współczynniki od najwyższej potęgi (mogą zaczynać się od zer)",
+      "output": "Dwie linie, liczby oddzielone spacją:\n\n* 1. linia: współczynniki uproszczonego wielomianu (dla wielomianu zerowego: `0`),\n* 2. linia: oryginalna lista po wywołaniu funkcji — musi być identyczna z wczytaną.",
+      "examples": [
+        {
+          "input": "5\n0 0 3 0 1",
+          "output": "3 0 1\n0 0 3 0 1",
+          "explanation": "Usuwamy tylko zera z początku — zero w środku zapisu (przy $x^1$) zostaje."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "3\n0 0 0",
+          "output": "0\n0 0 0"
+        },
+        {
+          "input": "1\n7",
+          "output": "7\n7"
+        },
+        {
+          "input": "1\n0",
+          "output": "0\n0"
+        },
+        {
+          "input": "4\n2 0 0 5",
+          "output": "2 0 0 5\n2 0 0 5"
+        },
+        {
+          "input": "4\n0 -1 0 0",
+          "output": "-1 0 0\n0 -1 0 0"
+        },
+        {
+          "input": "6\n0 0 0 0 0 4",
+          "output": "4\n0 0 0 0 0 4"
+        }
+      ],
+      "constraints": "* `1 ≤ k ≤ 20`\n* `-100 ≤ a_i ≤ 100`",
+      "notes": "* Funkcja **czysta** tylko oblicza i zwraca wynik. Funkcja ze **skutkiem ubocznym** zmienia coś poza sobą — np. listę, którą dostała jako argument.\n* Lista przekazana do funkcji **nie jest kopiowana**: parametr `w` i zmienna `wspolczynniki` w programie to ta sama lista. Dlatego poniższa funkcja zwraca dobry wynik, ale psuje listę wywołującego (druga linia wyjścia byłaby `3 0 1`):\n\n  ```python\n  def uprosc_zle(w):\n      while len(w) > 1 and w[0] == 0:\n          w.pop(0)  # usuwa element z ORYGINALNEJ listy!\n      return w\n  ```\n\n* Zamiast usuwać elementy, znajdź indeks `i` pierwszego niezerowego współczynnika i zwróć wycinek `w[i:]` — wycinek to nowa lista, a oryginał zostaje nietknięty.",
+      "starter_code": "def uprosc(w):\n    # Uzupełnij funkcję: zwróć NOWĄ listę bez zer wiodących\n    # (dla wielomianu zerowego [0]). Nie zmieniaj listy w!\n    pass\n\n\nk = int(input())\nwspolczynniki = [int(s) for s in input().split()]\nwynik = uprosc(wspolczynniki)\nprint(*wynik)\nprint(*wspolczynniki)\n"
     }
   ]
 }

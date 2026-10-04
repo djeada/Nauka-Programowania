@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-06 — Maksimum z czterech liczb
 
 **Poziom:** ★☆☆
@@ -10,11 +10,11 @@ Wczytaj cztery liczby naturalne i wypisz największą z nich.
 
 ### Wejście
 
-4 linie: `a`, `b`, `c`, `d` (całkowite, każda `≥ 0`)
+4 linie: `a`, `b`, `c`, `d` — liczby całkowite z zakresu $0 \dots 10^9$.
 
 ### Wyjście
 
-Jedna linia: największa liczba.
+Jedna linia: największa z czterech liczb.
 
 ### Przykład
 
@@ -33,19 +33,27 @@ Jedna linia: największa liczba.
 5
 ```
 
+### Uwagi
+
+* Spróbuj rozwiązać zadanie instrukcją `if`, bez wbudowanej funkcji `max`.
+
 """
 
-if __name__ == "__main__":
 
+def wieksza(x, y):
+    if x > y:
+        return x
+    else:
+        return y
+
+
+def maksimum_z_czterech(a, b, c, d):
+    return wieksza(wieksza(a, b), wieksza(c, d))
+
+
+if __name__ == "__main__":
     a = int(input())
     b = int(input())
     c = int(input())
     d = int(input())
-
-    maks_ab = a if a > b else b
-
-    maks_cd = c if c > d else d
-
-    maks = maks_ab if maks_ab > maks_cd else maks_cd
-
-    print(maks)
+    print(maksimum_z_czterech(a, b, c, d))

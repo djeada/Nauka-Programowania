@@ -1,27 +1,33 @@
-"""
+r"""
 ZAD-08 — Trójkąt Pascala
 
 **Poziom:** ★★☆
-**Tagi:** `pętle zagnieżdżone`, `listy`, `kombinatoryka`
+**Tagi:** `pętle zagnieżdżone`, `kombinatoryka`
 
 ### Treść
 
-Wczytaj `n` (`n ≥ 1`) i wypisz trójkąt Pascala o wysokości `n`.
+Wczytaj liczbę naturalną `n` i wypisz `n` pierwszych wierszy trójkąta Pascala.
 
-Wiersz 1: `1`
-Wiersz 2: `1 1`
-Wiersz 3: `1 2 1`
-itd.
+Każdy wiersz zaczyna się i kończy liczbą `1`, a każda liczba w środku wiersza jest sumą dwóch liczb stojących nad nią w poprzednim wierszu:
 
-Liczby w wierszu oddzielaj pojedynczą spacją.
+```
+1
+1 1
+1 2 1
+1 3 3 1
+```
 
 ### Wejście
 
-* 1. linia: `n` (`n ≥ 1`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-`n` linii, w `i`-tej linii jest `i` liczb.
+`n` linii; w `i`-tej linii jest `i` liczb oddzielonych pojedynczą spacją.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 30`
 
 ### Przykład
 
@@ -39,11 +45,24 @@ Liczby w wierszu oddzielaj pojedynczą spacją.
 1 2 1
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Nie dodawaj spacji na końcu wiersza.
+* Liczby w wierszu numer $r$ (licząc od $0$) to symbole Newtona $\binom{r}{0}, \binom{r}{1}, \ldots, \binom{r}{r}$. Kolejną liczbę w wierszu można obliczyć z poprzedniej: $\binom{r}{k+1} = \binom{r}{k} \cdot \frac{r - k}{k + 1}$ — wtedy nie potrzebujesz zapamiętywać poprzedniego wiersza.
 
 """
 
+
+def trojkat_pascala(n):
+    for r in range(n):
+        wartosc = 1
+        for k in range(r + 1):
+            if k > 0:
+                print(" ", end="")
+            print(wartosc, end="")
+            wartosc = wartosc * (r - k) // (k + 1)
+        print()
+
+
 if __name__ == "__main__":
-    pass
+    n = int(input())
+    trojkat_pascala(n)

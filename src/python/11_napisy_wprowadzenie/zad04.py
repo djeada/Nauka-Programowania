@@ -1,20 +1,20 @@
-"""
+r"""
 ZAD-04 — Zamień wszystkie małe litery na duże
 
 **Poziom:** ★☆☆
-**Tagi:** `string`, `upper`
+**Tagi:** `napisy`, `upper`
 
 ### Treść
 
-Wczytaj napis i zamień wszystkie litery na wielkie.
+Wczytaj napis i zamień w nim wszystkie małe litery (także polskie, np. `ż` → `Ż`) na wielkie. Pozostałe znaki pozostaw bez zmian.
 
 ### Wejście
 
-* 1. linia: napis
+* 1. linia: napis (może zawierać spacje)
 
 ### Wyjście
 
-* 1. linia: napis po konwersji
+Jedna linia: napis po zamianie.
 
 ### Przykład
 
@@ -33,15 +33,10 @@ RUMCAJS
 """
 
 
-def na_male(napis):
-    return napis.lower()
-
-
-def test_na_male():
-    assert na_male("test") == "test"
-    assert na_male("Test") == "test"
-    assert na_male("TEST") == "test"
+def na_wielkie(napis):
+    return napis.upper()
 
 
 if __name__ == "__main__":
-    test_na_male()
+    napis = input()
+    print(na_wielkie(napis))

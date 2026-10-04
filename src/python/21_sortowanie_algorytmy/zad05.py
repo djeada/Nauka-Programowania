@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Sortowanie szybkie
 
 **Poziom:** ★★☆
@@ -6,162 +6,86 @@ ZAD-05 — Sortowanie szybkie
 
 ### Treść
 
-Wczytaj listę liczb całkowitych i posortuj ją rosnąco algorytmem **Quick Sort**:
+Napisz rekurencyjną funkcję `sortowanie_szybkie(lista)`, która zwraca nową, posortowaną rosnąco listę, korzystając z algorytmu **Quick Sort**:
 
-1. Jeśli lista ma mniej niż 2 elementy — jest posortowana.
-2. Wybierz **pivot** (np. pierwszy element).
-3. Podziel elementy na trzy grupy:
+1. Jeśli lista ma mniej niż 2 elementy — jest posortowana, zwróć ją.
+2. Jako **pivot** wybierz **pierwszy** element listy.
+3. Podziel elementy listy na trzy grupy (zachowując ich kolejność z listy):
+   * `mniejsze` — mniejsze od pivota,
+   * `rowne` — równe pivotowi (w tym sam pivot),
+   * `wieksze` — większe od pivota.
+4. **Wypisz** trzy grupy w jednej linii: `print(mniejsze, rowne, wieksze)`.
+5. Rekurencyjnie posortuj najpierw grupę `mniejsze`, a potem `wieksze`.
+6. Zwróć sklejony wynik: posortowane `mniejsze` + `rowne` + posortowane `wieksze`.
 
-   * mniejsze od pivota,
-   * równe pivotowi,
-   * większe od pivota.
-4. Rekurencyjnie posortuj część mniejszych i większych.
-5. Sklej wynik: `mniejsze + równe + większe`.
+Program wczytuje listę, sortuje ją i na końcu wypisuje posortowaną listę.
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych
+* 1. linia: liczba całkowita $n$ — liczba elementów
+* 2. linia: $n$ liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-* 1 linia: posortowana lista rosnąco
+* Dla każdego podziału (w kolejności wykonywania) jedna linia z trzema listami oddzielonymi spacją, np. `[2, 1, 4] [6] [27]`. Pusta grupa to `[]`.
+* Ostatnia linia: posortowana lista w formacie listy Pythona.
+
+### Ograniczenia
+
+* $2 \le n \le 20$
+* Elementy są liczbami całkowitymi z przedziału $[-1000, 1000]$.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[6, 2, 1, 4, 27]
+5
+6 2 1 4 27
 ```
 
 **Wyjście:**
 
 ```
+[2, 1, 4] [6] [27]
+[1] [2] [4]
 [1, 2, 4, 6, 27]
 ```
 
+Pierwszy podział (pivot `6`) daje grupy `[2, 1, 4]`, `[6]`, `[27]`. Grupa `[2, 1, 4]` jest dzielona dalej (pivot `2`). Grupy jednoelementowe są już posortowane, więc nie są dzielone.
+
 ### Uwagi o algorytmie
 
-* Średnio: `O(n log n)`, w pesymistycznym przypadku: `O(n^2)`.
+* Średnio: $O(n \log n)$, w pesymistycznym przypadku (np. lista już posortowana przy pivocie z początku): $O(n^2)$.
 * Wybór pivota ma wpływ na wydajność.
+
+### Kod startowy
+
+```python
+def sortowanie_szybkie(lista):
+    pass
+
+
+n = int(input())
+lista = [int(x) for x in input().split()]
+print(sortowanie_szybkie(lista))
+```
 
 """
 
-import random
 
-
-# Zlozonosc czasowa O(nlogn)
-def sortuj_v1(tablica):
-    def _sortuj(tablica, start, stop):
-
-        if stop - start < 2:
-            return
-
-        i = random.randint(start, stop - 1)
-        tablica[i], tablica[stop - 1] = tablica[stop - 1], tablica[i]
-        i = partycja(tablica, start, stop)
-        _sortuj(tablica, start, i)
-        _sortuj(tablica, i + 1, stop)
-
-    def partycja(tablica, start, stop):
-        i = start
-        j = stop - 2
-        klucz = tablica[stop - 1]
-
-        while i <= j:
-            if tablica[i] <= klucz:
-                i += 1
-            elif tablica[j] >= klucz:
-                j -= 1
-            else:
-                tablica[i], tablica[j] = tablica[j], tablica[i]
-                i += 1
-                j -= 1
-        tablica[i], tablica[stop - 1] = tablica[stop - 1], tablica[i]
-        return i
-
-    _sortuj(tablica, 0, len(tablica))
-
-
-# Zlozonosc czasowa O(nlogn)
-def sortuj_v2(tablica):
-    def _sortuj(tablica, start, stop):
-
-        if stop - start < 2:
-            return
-
-        klucz = tablica[random.randint(start, stop - 1)]
-        indeks_1 = indeks_2 = start
-        indeks_3 = stop
-
-        while indeks_2 < indeks_3:
-            if tablica[indeks_2] < klucz:
-                tablica[indeks_2], tablica[indeks_1] = (
-                    tablica[indeks_1],
-                    tablica[indeks_2],
-                )
-                indeks_1 += 1
-                indeks_2 += 1
-
-            elif tablica[indeks_2] == klucz:
-                indeks_2 += 1
-
-            else:
-                indeks_3 -= 1
-                tablica[indeks_2], tablica[indeks_3] = (
-                    tablica[indeks_3],
-                    tablica[indeks_2],
-                )
-
-        _sortuj(tablica, start, indeks_1)
-        _sortuj(tablica, indeks_3, stop)
-
-    _sortuj(tablica, 0, len(tablica))
-
-
-# Testy Poprawnosci
-def test_1():
-    tablica = [4, 2, 5, 3, 1]
-    wynik = [1, 2, 3, 4, 5]
-
-    sortuj_v1(tablica)
-
-    assert tablica == wynik
-
-
-def test_2():
-    tablica = [6, 5, 1, 2, 3, 1, 4, 3, 5, 2, 3]
-    wynik = [1, 1, 2, 2, 3, 3, 3, 4, 5, 5, 6]
-
-    sortuj_v1(tablica)
-
-    assert tablica == wynik
-
-
-def test_3():
-    tablica = [4, 2, 5, 3, 1]
-    wynik = [1, 2, 3, 4, 5]
-
-    sortuj_v2(tablica)
-
-    assert tablica == wynik
-
-
-def test_4():
-    tablica = [6, 5, 1, 2, 3, 1, 4, 3, 5, 2, 3]
-    wynik = [1, 1, 2, 2, 3, 3, 3, 4, 5, 5, 6]
-
-    sortuj_v2(tablica)
-
-    assert tablica == wynik
-
-
-def main():
-    test_1()
-    test_2()
-    test_3()
-    test_4()
+def sortowanie_szybkie(lista):
+    if len(lista) < 2:
+        return lista
+    pivot = lista[0]
+    mniejsze = [x for x in lista if x < pivot]
+    rowne = [x for x in lista if x == pivot]
+    wieksze = [x for x in lista if x > pivot]
+    print(mniejsze, rowne, wieksze)
+    return sortowanie_szybkie(mniejsze) + rowne + sortowanie_szybkie(wieksze)
 
 
 if __name__ == "__main__":
-    main()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    print(sortowanie_szybkie(lista))

@@ -1,7 +1,7 @@
 {
   "file": "22_sortowanie_praktyka.md",
-  "chapter_title": "Rozdział: Sortowanie — praktyka (stdin/stdout)",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych jest napis — wczytaj go jako całą linię (łącznie ze spacjami).\n* Jeśli w danych wejściowych jest lista — w zadaniach poniżej lista jest podana jako:\n  * najpierw `N` (liczba elementów),\n  * potem `N` elementów (w jednej linii lub w wielu — zależnie od opisu w zadaniu).\n* Jeśli w wyjściu jest lista Pythonowa (np. `['a', 'b']`) — wypisz ją dokładnie w takim formacie jak w przykładzie.\n* Nie dopisuj dodatkowych spacji ani pustych linii (chyba że przykład je zawiera).",
+  "chapter_title": "Rozdział 22: Sortowanie — praktyka",
+  "chapter_description": "Zadania w tym rozdziale pokazują, jak sortować w praktyce: napisy, słowa, pary, obiekty — często według własnego kryterium. Tutaj **wolno** (a nawet warto) korzystać z wbudowanych narzędzi Pythona: `sorted()`, `list.sort()` i parametru `key=`.\n\n**Konwencje wspólne:**\n\n* Każde zadanie to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.\n* Jeśli wejściem jest napis — wczytaj całą linię (łącznie ze spacjami).\n* Jeśli wejściem jest lista — najpierw podana jest liczba elementów $N$, a potem elementy (w jednej linii albo w kolejnych liniach — zależnie od zadania).\n* Napisy porównujemy tak jak Python, czyli według kodów znaków Unicode: wielkie litery są „mniejsze” od małych (`'Z' < 'a'`), a polskie litery są „większe” od wszystkich liter alfabetu łacińskiego (`'z' < 'ą'`).\n* Sortowanie w Pythonie (`sorted()`, `list.sort()`) jest **stabilne**: elementy równe według kryterium sortowania zachowują kolejność z wejścia. Korzystają z tego zadania, w których mogą wystąpić remisy.\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -13,27 +13,49 @@
         "sort",
         "string"
       ],
-      "description": "Otrzymujesz napis. Posortuj alfabetycznie wszystkie jego znaki i wypisz wynikowy napis.",
-      "input": "* 1 linia: napis `s`",
-      "output": "* 1 linia: napis `s` po posortowaniu znaków rosnąco (porównanie znaków jak w Pythonie / Unicode)",
+      "description": "Wczytaj napis, posortuj rosnąco wszystkie jego znaki i wypisz napis złożony z posortowanych znaków.",
+      "input": "* 1. linia: napis $s$ (co najmniej jeden znak)",
+      "output": "* 1. linia: znaki napisu $s$ posortowane rosnąco według kodów Unicode, sklejone w jeden napis",
       "examples": [
         {
           "input": "Ala ma kota",
-          "output": " Aaaaklmot"
+          "output": "  Aaaaklmot",
+          "explanation": ""
         }
       ],
       "testcases": [
+        {
+          "input": "cba",
+          "output": "abc"
+        },
         {
           "input": "b a",
           "output": " ab"
         },
         {
-          "input": "cba",
-          "output": "abc"
+          "input": "zebra",
+          "output": "aberz"
+        },
+        {
+          "input": "Python 3",
+          "output": " 3Phnoty"
+        },
+        {
+          "input": "a",
+          "output": "a"
+        },
+        {
+          "input": "żółw",
+          "output": "wółż"
+        },
+        {
+          "input": "BaAb",
+          "output": "ABab"
         }
       ],
-      "constraints": "",
-      "notes": "* Spacje też są znakami i biorą udział w sortowaniu (dlatego w przykładzie wyjście zaczyna się od spacji)."
+      "constraints": "* $1 \\le |s| \\le 100$",
+      "notes": "* Spacje też są znakami i biorą udział w sortowaniu. Spacja ma mniejszy kod niż litery i cyfry, dlatego w przykładzie wynik zaczyna się od **dwóch** spacji (napis `Ala ma kota` zawiera dwie spacje).\n* `sorted(napis)` zwraca listę znaków — połącz ją w napis metodą `\"\".join(…)`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -46,27 +68,50 @@
         "string",
         "split"
       ],
-      "description": "Otrzymujesz zdanie. Podziel je na słowa, traktując znaki interpunkcyjne jako separatory, a następnie posortuj słowa alfabetycznie i wypisz listę.",
-      "input": "* 1 linia: napis `zdanie`",
-      "output": "* 1 linia: lista słów w formacie jak w przykładzie, np. `['Ala', 'kota', 'ma']`",
+      "description": "Wczytaj zdanie i podziel je na słowa. Słowa oddzielają od siebie spacje oraz znaki interpunkcyjne: `.` `,` `!` `?` `;` `:` — te znaki nie należą do słów. Posortuj słowa rosnąco (według kodów Unicode, bez zmiany wielkości liter) i wypisz je.",
+      "input": "* 1. linia: zdanie (zawiera co najmniej jedno słowo)",
+      "output": "* 1. linia: posortowane słowa oddzielone pojedynczymi spacjami\n\nJeśli słowo występuje w zdaniu kilka razy, wypisz je tyle samo razy.",
       "examples": [
         {
           "input": "Lemur wygina śmiało ciało",
-          "output": "['Lemur', 'ciało', 'wygina', 'śmiało']"
+          "output": "Lemur ciało wygina śmiało",
+          "explanation": ""
+        },
+        {
+          "input": "Ala ma kota, a kot ma Alę.",
+          "output": "Ala Alę a kot kota ma ma",
+          "explanation": "Wielkie litery są przed małymi, a `Ala` jest przed `Alę`, bo `'a' < 'ę'`."
         }
       ],
       "testcases": [
         {
           "input": "Bob, Ala pies.",
-          "output": "['Ala', 'Bob', 'pies']"
+          "output": "Ala Bob pies"
         },
         {
           "input": "zoo! ala? kot.",
-          "output": "['ala', 'kot', 'zoo']"
+          "output": "ala kot zoo"
+        },
+        {
+          "input": "kot,pies;mysz",
+          "output": "kot mysz pies"
+        },
+        {
+          "input": "słowo",
+          "output": "słowo"
+        },
+        {
+          "input": "Zebra zebra ZEBRA",
+          "output": "ZEBRA Zebra zebra"
+        },
+        {
+          "input": "Czy to: koniec? Nie! To dopiero początek.",
+          "output": "Czy Nie To dopiero koniec początek to"
         }
       ],
-      "constraints": "",
-      "notes": "* Ignoruj znaki interpunkcyjne (np. `.,!?;:`) — nie są częścią słów.\n* Wielkość liter pozostaje bez zmian (nie zamieniaj na małe/duże), sortujesz to, co w tekście."
+      "constraints": "* Zdanie ma co najwyżej 200 znaków.",
+      "notes": "* Najprościej zamienić każdy znak interpunkcyjny na spację (`napis.replace(\".\", \" \")` itd.), a potem użyć `split()`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-03",
@@ -79,27 +124,41 @@
         "tuple",
         "list"
       ],
-      "description": "Otrzymujesz listę par `(napis, liczba)`.\n\na) Posortuj pary rosnąco po liczbie.\nb) Posortuj pary rosnąco po długości napisu.\n\nWypisz wyniki dla a) i b) w osobnych liniach.",
-      "input": "* 1 linia: liczba naturalna `N`\n* następnie `N` linii: `napis liczba` (napis bez spacji)",
-      "output": "* 1 linia: lista par posortowana jak w podpunkcie a)\n* 2 linia: lista par posortowana jak w podpunkcie b)",
+      "description": "Wczytaj listę par `(napis, liczba)` i zapisz je jako krotki.\n\na) Posortuj pary rosnąco według liczby.\nb) Posortuj pary rosnąco według długości napisu.\n\nPrzy remisie (ta sama liczba w a), ta sama długość napisu w b)) pary zachowują kolejność z wejścia.",
+      "input": "* 1. linia: liczba par $N$\n* kolejne $N$ linii: napis (bez spacji) i liczba całkowita, oddzielone spacją",
+      "output": "* 1. linia: lista par posortowana według podpunktu a)\n* 2. linia: lista par posortowana według podpunktu b)\n\nListy wypisz w formacie Pythona — tak, jak robi to `print(lista)` dla listy krotek, np. `[('bca', 1), ('c', 2), ('ab', 3)]`.",
       "examples": [
         {
           "input": "3\nab 3\nbca 1\nc 2",
-          "output": "[('bca', 1), ('c', 2), ('ab', 3)]\n[('c', 2), ('ab', 3), ('bca', 1)]"
+          "output": "[('bca', 1), ('c', 2), ('ab', 3)]\n[('c', 2), ('ab', 3), ('bca', 1)]",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "3\nab 3\nbca 1\nc 2",
-          "output": "[('bca', 1), ('c', 2), ('ab', 3)]\n[('c', 2), ('ab', 3), ('bca', 1)]"
+          "input": "1\nx 0",
+          "output": "[('x', 0)]\n[('x', 0)]"
         },
         {
           "input": "2\nxx 5\na 1",
           "output": "[('a', 1), ('xx', 5)]\n[('a', 1), ('xx', 5)]"
+        },
+        {
+          "input": "4\nkot 2\npies 1\nmysz 2\nos 1",
+          "output": "[('pies', 1), ('os', 1), ('kot', 2), ('mysz', 2)]\n[('os', 1), ('kot', 2), ('pies', 1), ('mysz', 2)]"
+        },
+        {
+          "input": "3\nabc -5\nab 10\na -7",
+          "output": "[('a', -7), ('abc', -5), ('ab', 10)]\n[('a', -7), ('ab', 10), ('abc', -5)]"
+        },
+        {
+          "input": "5\ndlugi 3\nb 3\ncc 3\nddd 0\ne -1",
+          "output": "[('e', -1), ('ddd', 0), ('dlugi', 3), ('b', 3), ('cc', 3)]\n[('b', 3), ('e', -1), ('cc', 3), ('ddd', 0), ('dlugi', 3)]"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $1 \\le N \\le 20$",
+      "notes": "* Kryterium sortowania podaj w parametrze `key`, np. `sorted(pary, key=lambda para: para[1])`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-04",
@@ -112,27 +171,41 @@
         "string",
         "list"
       ],
-      "description": "Otrzymujesz listę napisów. Posortuj ją rosnąco według długości napisów.",
-      "input": "* 1 linia: liczba naturalna `N`\n* następnie `N` linii: napis (bez spacji)",
-      "output": "* 1 linia: lista napisów posortowana jak w przykładzie",
+      "description": "Wczytaj listę napisów i posortuj ją rosnąco według długości napisów. Napisy o tej samej długości zachowują kolejność z wejścia.",
+      "input": "* 1. linia: liczba napisów $N$\n* kolejne $N$ linii: napis (bez spacji)",
+      "output": "* 1. linia: posortowane napisy oddzielone pojedynczymi spacjami",
       "examples": [
         {
           "input": "4\nabcd\nab\na\nabc",
-          "output": "['a', 'ab', 'abc', 'abcd']"
+          "output": "a ab abc abcd",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "4\nabcd\nab\na\nabc",
-          "output": "['a', 'ab', 'abc', 'abcd']"
+          "input": "3\nzz\nx\nyy",
+          "output": "x zz yy"
         },
         {
-          "input": "3\nzz\nx\nyy",
-          "output": "['x', 'zz', 'yy']"
+          "input": "1\nslowo",
+          "output": "slowo"
+        },
+        {
+          "input": "5\nkot\nmysz\npies\nos\nslon",
+          "output": "os kot mysz pies slon"
+        },
+        {
+          "input": "4\nbbb\naaa\ncc\nd",
+          "output": "d cc bbb aaa"
+        },
+        {
+          "input": "6\nprogramowanie\nPython\nto\nfrajda\ni\nnauka",
+          "output": "i to nauka Python frajda programowanie"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $1 \\le N \\le 50$",
+      "notes": "* Wystarczy `sorted(napisy, key=len)`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05",
@@ -145,59 +218,41 @@
         "sort",
         "obiekty"
       ],
-      "description": "Masz klasę `Miasto` z polami:\n\n* `nazwa` (napis),\n* `liczba_mieszkancow` (liczba naturalna).\n\nOtrzymujesz listę miast.\n\na) Posortuj miasta alfabetycznie po nazwie.\nb) Posortuj miasta rosnąco po liczbie mieszkańców.\n\nWypisz wyniki w dwóch liniach jako listy w formacie jak w przykładzie.",
-      "input": "* 1 linia: liczba naturalna `N`\n* następnie `N` linii: `nazwa liczba_mieszkancow` (nazwa bez spacji)",
-      "output": "* 1 linia: lista miast po sortowaniu a)\n* 2 linia: lista miast po sortowaniu b)",
+      "description": "Klasa `Miasto` ma atrybuty:\n\n* `nazwa` (napis),\n* `liczba_mieszkancow` (liczba naturalna).\n\nUzupełnij metodę `__repr__`, tak aby obiekt był wypisywany w postaci `Miasto(\"NAZWA\", LICZBA)`, np. `Miasto(\"Berlin\", 3800000)`. Dzięki temu `print(lista_miast)` wypisze całą listę w czytelnej postaci.\n\nWczytaj listę miast, a następnie:\n\na) posortuj miasta alfabetycznie według nazwy,\nb) posortuj miasta rosnąco według liczby mieszkańców (miasta o tej samej liczbie mieszkańców zachowują kolejność z wejścia).",
+      "input": "* 1. linia: liczba miast $N$\n* kolejne $N$ linii: nazwa miasta (bez spacji) i liczba mieszkańców, oddzielone spacją",
+      "output": "* 1. linia: lista miast posortowana według podpunktu a)\n* 2. linia: lista miast posortowana według podpunktu b)\n\nKażdą listę wypisz przez `print(lista)` — w formacie `[Miasto(\"NAZWA\", LICZBA), Miasto(\"NAZWA\", LICZBA), …]`.",
       "examples": [
         {
           "input": "3\nParis 2150000\nBerlin 3800000\nNew_York 8400000",
-          "output": "[Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000), Miasto(\"Paris\", 2150000)]\n[Miasto(\"Paris\", 2150000), Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000)]"
+          "output": "[Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000), Miasto(\"Paris\", 2150000)]\n[Miasto(\"Paris\", 2150000), Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000)]",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "3\nParis 2150000\nBerlin 3800000\nNew_York 8400000",
-          "output": "[Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000), Miasto(\"Paris\", 2150000)]\n[Miasto(\"Paris\", 2150000), Miasto(\"Berlin\", 3800000), Miasto(\"New_York\", 8400000)]"
+          "input": "1\nKrakow 800000",
+          "output": "[Miasto(\"Krakow\", 800000)]\n[Miasto(\"Krakow\", 800000)]"
         },
         {
-          "input": "2\nGdansk 470000\nWarszawa 1800000",
+          "input": "2\nWarszawa 1800000\nGdansk 470000",
           "output": "[Miasto(\"Gdansk\", 470000), Miasto(\"Warszawa\", 1800000)]\n[Miasto(\"Gdansk\", 470000), Miasto(\"Warszawa\", 1800000)]"
-        }
-      ],
-      "constraints": "",
-      "notes": "* Wydruk obiektów ma mieć dokładnie format: `Miasto(\"NAZWA\", LICZBA)`."
-    },
-    {
-      "id": "ZAD-06",
-      "slug": "22_sortowanie_praktyka/ZAD-06",
-      "title": "Sortowanie listy binarnej (0/1)",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
-      "tags": [
-        "sort",
-        "counting"
-      ],
-      "description": "Otrzymujesz listę składającą się wyłącznie z `0` i `1`. Posortuj ją rosnąco.",
-      "input": "* 1 linia: liczba naturalna `N`\n* 2 linia: `N` liczb (0/1) oddzielonych spacjami",
-      "output": "* 1 linia: posortowana lista w formacie jak w przykładzie",
-      "examples": [
-        {
-          "input": "6\n1 0 1 0 1 1",
-          "output": "[0, 0, 1, 1, 1, 1]"
-        }
-      ],
-      "testcases": [
-        {
-          "input": "6\n1 0 1 0 1 1",
-          "output": "[0, 0, 1, 1, 1, 1]"
         },
         {
-          "input": "4\n0 0 0 1",
-          "output": "[0, 0, 0, 1]"
+          "input": "4\nTorun 200000\nOpole 127000\nRadom 200000\nElk 61000",
+          "output": "[Miasto(\"Elk\", 61000), Miasto(\"Opole\", 127000), Miasto(\"Radom\", 200000), Miasto(\"Torun\", 200000)]\n[Miasto(\"Elk\", 61000), Miasto(\"Opole\", 127000), Miasto(\"Torun\", 200000), Miasto(\"Radom\", 200000)]"
+        },
+        {
+          "input": "3\nzakopane 27000\nZabrze 170000\nAugustow 30000",
+          "output": "[Miasto(\"Augustow\", 30000), Miasto(\"Zabrze\", 170000), Miasto(\"zakopane\", 27000)]\n[Miasto(\"zakopane\", 27000), Miasto(\"Augustow\", 30000), Miasto(\"Zabrze\", 170000)]"
+        },
+        {
+          "input": "3\nLodz 650000\nKielce 190000\nBialystok 290000",
+          "output": "[Miasto(\"Bialystok\", 290000), Miasto(\"Kielce\", 190000), Miasto(\"Lodz\", 650000)]\n[Miasto(\"Kielce\", 190000), Miasto(\"Bialystok\", 290000), Miasto(\"Lodz\", 650000)]"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $1 \\le N \\le 20$\n* Nazwy miast są różne.",
+      "notes": "",
+      "starter_code": "class Miasto:\n    def __init__(self, nazwa, liczba_mieszkancow):\n        self.nazwa = nazwa\n        self.liczba_mieszkancow = liczba_mieszkancow\n\n    def __repr__(self):\n        # Uzupełnij: zwróć napis w postaci Miasto(\"NAZWA\", LICZBA).\n        pass\n\n\nn = int(input())\nmiasta = []\nfor _ in range(n):\n    nazwa, liczba = input().split()\n    miasta.append(Miasto(nazwa, int(liczba)))\n\n# Uzupełnij: wypisz listę miast posortowaną według nazwy,\n# a potem według liczby mieszkańców.\n"
     },
     {
       "id": "ZAD-07",
@@ -209,27 +264,45 @@
         "sort",
         "counting"
       ],
-      "description": "Otrzymujesz listę składającą się wyłącznie z `0`, `1` lub `2`. Posortuj ją rosnąco.",
-      "input": "* 1 linia: liczba naturalna `N`\n* 2 linia: `N` liczb (0/1/2) oddzielonych spacjami",
-      "output": "* 1 linia: posortowana lista w formacie jak w przykładzie",
+      "description": "Wczytaj listę składającą się wyłącznie z liczb `0`, `1` i `2` i posortuj ją rosnąco.",
+      "input": "* 1. linia: liczba elementów $N$\n* 2. linia: $N$ liczb (każda to `0`, `1` albo `2`) oddzielonych spacjami",
+      "output": "* 1. linia: posortowana lista — liczby oddzielone pojedynczymi spacjami",
       "examples": [
         {
           "input": "7\n1 0 1 2 2 0 1",
-          "output": "[0, 0, 1, 1, 1, 2, 2]"
+          "output": "0 0 1 1 1 2 2",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "7\n1 0 1 2 2 0 1",
-          "output": "[0, 0, 1, 1, 1, 2, 2]"
+          "input": "1\n2",
+          "output": "2"
         },
         {
           "input": "5\n2 2 2 1 0",
-          "output": "[0, 1, 2, 2, 2]"
+          "output": "0 1 2 2 2"
+        },
+        {
+          "input": "3\n0 0 0",
+          "output": "0 0 0"
+        },
+        {
+          "input": "6\n2 1 0 2 1 0",
+          "output": "0 0 1 1 2 2"
+        },
+        {
+          "input": "10\n0 2 2 0 1 1 2 2 1 1",
+          "output": "0 0 1 1 1 1 2 2 2 2"
+        },
+        {
+          "input": "4\n1 2 1 1",
+          "output": "1 1 1 2"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $1 \\le N \\le 1000$",
+      "notes": "* Zadanie da się rozwiązać w czasie $O(N)$, bez sortowania. Najprościej policzyć zera, jedynki i dwójki, a potem wypisać odpowiednio wiele zer, jedynek i dwójek (to sortowanie przez zliczanie z rozdziału 21).\n* Ambitniejszy wariant działa w miejscu, w jednym przejściu po liście: trzymaj trzy indeksy — koniec obszaru zer, bieżący element i początek obszaru dwójek — i zamieniaj elementy miejscami (tzw. problem flagi holenderskiej).",
+      "starter_code": ""
     },
     {
       "id": "ZAD-08",
@@ -242,27 +315,153 @@
         "rotacja",
         "list"
       ],
-      "description": "Otrzymujesz cyklicznie posortowaną listę liczb całkowitych (lista była rosnąca, ale została przesunięta) oraz klucz. Znajdź indeks **pierwszego** wystąpienia klucza. Jeśli klucza nie ma — wypisz `-1`.",
-      "input": "* 1 linia: liczba naturalna `N`\n* 2 linia: `N` liczb całkowitych oddzielonych spacjami\n* 3 linia: liczba całkowita `x` (szukany klucz)",
-      "output": "* 1 linia: indeks pierwszego wystąpienia `x` albo `-1`",
+      "description": "Lista liczb całkowitych była posortowana rosnąco, a następnie została **cyklicznie przesunięta** (jej początkowy fragment przeniesiono na koniec), np. `1 2 3 4 5 6` → `3 4 5 6 1 2`. Znajdź indeks (liczony od 0), pod którym w tej liście znajduje się podany klucz. Jeśli klucza nie ma w liście, wypisz `-1`.",
+      "input": "* 1. linia: liczba elementów $N$\n* 2. linia: $N$ liczb całkowitych oddzielonych spacjami — cyklicznie przesunięta lista rosnąca\n* 3. linia: liczba całkowita $x$ — szukany klucz",
+      "output": "* 1. linia: indeks elementu równego $x$ albo `-1`",
       "examples": [
         {
           "input": "6\n3 4 5 6 1 2\n4",
-          "output": "1"
+          "output": "1",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "6\n3 4 5 6 1 2\n4",
+          "input": "5\n4 5 6 1 2\n3",
+          "output": "-1"
+        },
+        {
+          "input": "1\n7\n7",
+          "output": "0"
+        },
+        {
+          "input": "1\n7\n3",
+          "output": "-1"
+        },
+        {
+          "input": "8\n27 31 32 3 5 9 10 15\n31",
           "output": "1"
         },
         {
-          "input": "5\n4 5 6 1 2\n3",
+          "input": "9\n4 7 12 32 51 90 100 1 2\n-5",
           "output": "-1"
+        },
+        {
+          "input": "6\n1 2 3 4 5 6\n6",
+          "output": "5"
+        },
+        {
+          "input": "7\n10 20 30 40 50 -5 0\n-5",
+          "output": "5"
+        },
+        {
+          "input": "4\n9 1 3 5\n9",
+          "output": "0"
+        },
+        {
+          "input": "6\n3 4 5 6 1 2\n2",
+          "output": "5"
         }
       ],
-      "constraints": "* Lista jest wynikiem rotacji listy posortowanej niemalejąco (mogą wystąpić duplikaty).",
-      "notes": ""
+      "constraints": "* $1 \\le N \\le 1000$\n* Wszystkie elementy listy są różne.\n* Przesunięcie może wynosić 0 (lista jest wtedy po prostu posortowana).",
+      "notes": "* Zadanie da się rozwiązać w czasie $O(\\log N)$ zmodyfikowanym wyszukiwaniem binarnym: po podziale przedziału na pół **co najmniej jedna** z połówek jest posortowana rosnąco — sprawdź, czy klucz mieści się w jej zakresie, i na tej podstawie wybierz połowę do dalszego przeszukiwania.\n* To rozwinięcie zwykłego wyszukiwania binarnego — zob. zadanie „Wyszukiwanie binarne” z rozdziału 21.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "22_sortowanie_praktyka/ZAD-09",
+      "title": "Ranking zawodników",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sort",
+        "key",
+        "lambda",
+        "tuple"
+      ],
+      "description": "Wczytaj wyniki zawodów: dla każdego zawodnika jego imię, liczbę zdobytych punktów i czas (w sekundach). Ułóż ranking według następujących zasad:\n\n1. więcej punktów — wyższe miejsce (punkty **malejąco**),\n2. przy równej liczbie punktów: krótszy czas — wyższe miejsce (czas **rosnąco**),\n3. przy równych punktach i czasie zawodnicy dzielą miejsce, a w rankingu wypisujemy ich alfabetycznie według imienia (imię **rosnąco**).\n\nZawodnicy, którzy mają te same punkty i ten sam czas, zajmują **to samo miejsce**, a kolejne miejsca są pomijane — tak jak w sporcie: np. `1, 2, 2, 4`. Miejsce zawodnika to $1 +$ liczba zawodników, którzy mają od niego lepszy wynik.",
+      "input": "* 1. linia: liczba zawodników $N$\n* kolejne $N$ linii: `imię punkty czas` — imię (jedno słowo), punkty i czas (liczby całkowite $\\ge 0$), oddzielone spacjami",
+      "output": "$N$ linii w kolejności rankingu, każda w postaci:\n\n```\n<miejsce>. <imię> <punkty> <czas>\n```",
+      "examples": [
+        {
+          "input": "5\nOla 90 300\nAdam 95 320\nEwa 90 300\nKuba 90 280\nZosia 70 250",
+          "output": "1. Adam 95 320\n2. Kuba 90 280\n3. Ewa 90 300\n3. Ola 90 300\n5. Zosia 70 250",
+          "explanation": "Ewa i Ola mają te same punkty i ten sam czas, więc dzielą 3. miejsce (wypisujemy je alfabetycznie), a następna zawodniczka zajmuje miejsce 5."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\nSolo 0 0",
+          "output": "1. Solo 0 0"
+        },
+        {
+          "input": "3\nC 10 100\nB 10 100\nA 10 100",
+          "output": "1. A 10 100\n1. B 10 100\n1. C 10 100"
+        },
+        {
+          "input": "4\nZenon 50 200\nAnia 50 200\nbartek 50 199\nCyryl 60 500",
+          "output": "1. Cyryl 60 500\n2. bartek 50 199\n3. Ania 50 200\n3. Zenon 50 200"
+        },
+        {
+          "input": "6\nP1 5 10\nP2 7 10\nP3 5 9\nP4 7 10\nP5 5 10\nP6 1 1",
+          "output": "1. P2 7 10\n1. P4 7 10\n3. P3 5 9\n4. P1 5 10\n4. P5 5 10\n6. P6 1 1"
+        },
+        {
+          "input": "3\nmarek 10 50\nMarek 10 50\nłukasz 10 50",
+          "output": "1. Marek 10 50\n1. marek 10 50\n1. łukasz 10 50"
+        }
+      ],
+      "constraints": "* $1 \\le N \\le 100$\n* Imiona są różne.",
+      "notes": "* Kilka kryteriów naraz zapiszesz jako **krotkę** zwracaną przez funkcję `key` — Python porównuje krotki element po elemencie: najpierw pierwsze elementy, a przy remisie kolejne.\n* Żeby posortować liczby **malejąco** w kluczu, który poza tym sortuje rosnąco, wystarczy je zanegować:\n  `sorted(zawodnicy, key=lambda z: (-z[1], z[2], z[0]))` (dla krotek `(imię, punkty, czas)`).\n* Po posortowaniu miejsce zawodnika jest równe miejscu poprzednika, jeśli ma on te same punkty i czas, a w przeciwnym razie — jego pozycji w rankingu (licząc od 1).",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "22_sortowanie_praktyka/ZAD-10",
+      "title": "k najczęstszych słów",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sort",
+        "Counter",
+        "lambda",
+        "string"
+      ],
+      "description": "Wczytaj liczbę $k$ i tekst. Znajdź $k$ słów, które występują w tekście najczęściej.\n\nSłowa wyznaczamy tak:\n\n* wielkość liter nie ma znaczenia — cały tekst zamień na małe litery,\n* słowo to ciąg kolejnych **liter** (znaków, dla których `znak.isalpha()` jest prawdą, także polskich); wszystkie inne znaki — spacje, cyfry, znaki interpunkcyjne — rozdzielają słowa.\n\nSłowa uporządkuj według liczby wystąpień **malejąco**, a przy równej liczbie wystąpień — alfabetycznie (rosnąco, według kodów Unicode). Wypisz pierwsze $k$ słów z tej kolejności. Jeśli różnych słów jest mniej niż $k$, wypisz wszystkie.",
+      "input": "* 1. linia: liczba całkowita $k$\n* 2. linia: tekst (zawiera co najmniej jedno słowo)",
+      "output": "Co najwyżej $k$ linii, każda w postaci `<słowo> <liczba wystąpień>`.",
+      "examples": [
+        {
+          "input": "3\nAla ma kota, a kot ma Alę. Ala ma też psa!",
+          "output": "ma 3\nala 2\na 1",
+          "explanation": "Słowo `ma` występuje 3 razy, `ala` — 2 razy, a sześć słów występuje po razie: `a`, `alę`, `kot`, `kota`, `psa`, `też`. Spośród nich alfabetycznie pierwsze jest `a`."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\nsłowo",
+          "output": "słowo 1"
+        },
+        {
+          "input": "5\nTo be, or not to be",
+          "output": "be 2\nto 2\nnot 1\nor 1"
+        },
+        {
+          "input": "2\nKot KOT kot! kOt? pies PIES",
+          "output": "kot 4\npies 2"
+        },
+        {
+          "input": "3\nżaba zebra żaba ąb zebra aa",
+          "output": "zebra 2\nżaba 2\naa 1"
+        },
+        {
+          "input": "2\nR2D2 i C3PO to roboty, a R2 to robot",
+          "output": "r 2\nto 2"
+        }
+      ],
+      "constraints": "* $1 \\le k \\le 50$\n* Tekst ma co najwyżej 1000 znaków.",
+      "notes": "* Słowa wydzielisz bez wyrażeń regularnych: zamień każdy znak, który nie jest literą, na spację, a potem użyj `split()`.\n* `Counter` z modułu `collections` zlicza wystąpienia: `Counter([\"a\", \"b\", \"a\"])` daje `Counter({'a': 2, 'b': 1})`, a `.items()` zwraca pary `(słowo, liczba)`.\n* Metoda `most_common()` przy remisie zachowuje kolejność pierwszego wystąpienia, a nie alfabetyczną — dlatego posortuj pary samodzielnie: `sorted(licznik.items(), key=lambda p: (-p[1], p[0]))`.",
+      "starter_code": ""
     }
   ]
 }

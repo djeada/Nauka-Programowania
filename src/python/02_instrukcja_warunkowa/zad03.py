@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-03 — Określanie znaku liczby
 
 **Poziom:** ★☆☆
@@ -8,19 +8,19 @@ ZAD-03 — Określanie znaku liczby
 
 Wczytaj liczbę całkowitą `x` i wypisz jeden z komunikatów:
 
-* dla `x < 0`: `Liczba jest ujemna.`
-* dla `x > 0`: `Liczba jest dodatnia.`
-* dla `x = 0`: `Liczba jest zerem.`
+* dla $x < 0$: `Liczba jest ujemna.`
+* dla $x > 0$: `Liczba jest dodatnia.`
+* dla $x = 0$: `Liczba jest zerem.`
 
 ### Wejście
 
-* 1 linia: `x` (liczba całkowita)
+* 1 linia: `x` — liczba całkowita, $-10^9 \le x \le 10^9$
 
 ### Wyjście
 
 Jedna linia — dokładnie jeden komunikat.
 
-### Przykłady
+### Przykład 1
 
 **Wejście:**
 
@@ -34,17 +34,7 @@ Jedna linia — dokładnie jeden komunikat.
 Liczba jest ujemna.
 ```
 
-**Wejście:**
-
-```
-0
-```
-
-**Wyjście:**
-
-```
-Liczba jest zerem.
-```
+### Przykład 2
 
 **Wejście:**
 
@@ -60,14 +50,16 @@ Liczba jest dodatnia.
 
 """
 
-if __name__ == "__main__":
-    print("podaj liczbe")
 
-    a = int(input())
-
-    if a < 0:
-        print("libczba jest ujemna")
-    elif a > 0:
-        print("liczba jest dodatnia")
+def znak_liczby(x):
+    if x < 0:
+        return "Liczba jest ujemna."
+    elif x > 0:
+        return "Liczba jest dodatnia."
     else:
-        print("liczba jest zerem")
+        return "Liczba jest zerem."
+
+
+if __name__ == "__main__":
+    x = int(input())
+    print(znak_liczby(x))

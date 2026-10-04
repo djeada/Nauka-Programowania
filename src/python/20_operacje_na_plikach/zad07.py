@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-07 — Dodaj wiersz na początku pliku
 
 **Poziom:** ★☆☆
@@ -6,69 +6,93 @@ ZAD-07 — Dodaj wiersz na początku pliku
 
 ### Treść
 
-Otrzymujesz ścieżkę do pliku tekstowego i wiersz tekstu. Dodaj ten wiersz na **początku** pliku.
+Wczytaj ścieżkę pliku tekstowego i wiersz tekstu. Dopisz ten wiersz na **początku** pliku — jako nowy, pierwszy wiersz. Dotychczasowa treść pliku ma pozostać bez zmian pod nowym wierszem. Pusty plik po zmianie zawiera tylko nowy wiersz.
 
 ### Wejście
 
-* 1 linia: `file_path`
-* 2 linia: `line_to_add` (może zawierać spacje)
+* 1. linia: ścieżka pliku
+* 2. linia: wiersz do dodania (może zawierać spacje)
 
 ### Wyjście
 
-Brak.
+* Gdy plik istnieje — nic (wynikiem jest zmieniony plik).
+* `Plik nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego pliku. Wtedy nie twórz żadnego pliku.
 
 ### Przykład
+
+**Pliki przed:**
+
+```
+notatki.txt
+| kupić mleko
+| zadzwonić do babci
+```
 
 **Wejście:**
 
 ```
-C:\Users\Username\Documents\notatki.txt
+notatki.txt
+TODO:
+```
+
+**Wyjście:** *(brak)*
+
+**Pliki po:**
+
+```
+notatki.txt
+| TODO:
+| kupić mleko
+| zadzwonić do babci
+```
+
+### Przykład 2
+
+**Pliki przed:** *(brak)*
+
+**Wejście:**
+
+```
+notatki.txt
 To jest nowy wiersz dodany na początku pliku.
 ```
 
 **Wyjście:**
-*(brak)*
+
+```
+Plik nie istnieje.
+```
+
+**Pliki po:**
+
+```
+notatki.txt (usunięty)
+```
+
+Pliku nie było, więc program niczego nie tworzy.
+
+### Uwagi
+
+* Do pliku nie da się „dopisać na początku” — wczytaj całą treść, a potem zapisz plik od nowa: najpierw nowy wiersz, potem starą treść.
 
 """
 
-import pathlib
+import os
 
 
-def dostaw_wiersz(sciezka, wiersz):
-    """
-    Funkcja dostawia wiersz na poczatek pliku tekstowego.
-    """
-    with open(sciezka, "r") as plik:
-        linie = plik.readlines()
-    with open(sciezka, "w") as plik:
-        plik.write(wiersz + "\n")
-        for linia in linie:
-            plik.write(linia)
-
-
-def test_dostaw_wiersz():
-
-    # stworz folder testowy
-    pathlib.Path("test").mkdir(parents=True, exist_ok=True)
-
-    # utworz plik testowy
-    sciezka = "test/test.txt"
-    pathlib.Path(sciezka).touch()
-    pathlib.Path(sciezka).write_text("test 1\n")
-
-    # dostaw wiersz na poczatek pliku
-    wiersz = "test 2"
-    dostaw_wiersz(sciezka, wiersz)
-
-    # sprawdz czy plik zawiera wiersz
-    assert pathlib.Path(sciezka).read_text().splitlines()[0] == wiersz
-
-    # usun folder testowy
-    import shutil
-
-    shutil.rmtree("test")
+def dodaj_wiersz_na_poczatku(sciezka, wiersz):
+    """Zapisuje plik od nowa: najpierw nowy wiersz, potem dotychczasowa treść."""
+    with open(sciezka, encoding="utf-8") as plik:
+        tresc = plik.read()
+    with open(sciezka, "w", encoding="utf-8") as plik:
+        plik.write(wiersz + "\n" + tresc)
 
 
 if __name__ == "__main__":
+    sciezka = input()
+    wiersz = input()
 
-    test_dostaw_wiersz()
+    if os.path.isfile(sciezka):
+        dodaj_wiersz_na_poczatku(sciezka, wiersz)
+    else:
+        print("Plik nie istnieje.")

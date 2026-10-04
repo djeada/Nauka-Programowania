@@ -1,41 +1,60 @@
 {
   "file": "07_petla_algorytmy_matematyczne.md",
-  "chapter_title": "Rozdział: Pętla — Algorytmy Matematyczne",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem / ćwiczeniem funkcji.**\n**Konwencje wspólne:**\n* Jeśli zadanie mówi „napisz funkcję” — implementujesz funkcję o podanej nazwie i zwracasz wynik przez `return`.\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.\n* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem.",
+  "chapter_title": "Rozdział 7: Pętle — algorytmy matematyczne",
+  "chapter_description": "Zadania w tym rozdziale łączą pętle z funkcjami: implementujesz klasyczne algorytmy matematyczne (potęgowanie, silnia, NWD, NWW, pierwiastek, test pierwszości) bez gotowych funkcji bibliotecznych.\n\n**Konwencje wspólne:**\n\n* Każde zadanie (i każdy podpunkt) to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”. Tekst podany w `input(\"…\")` jest ignorowany przez sprawdzarkę.\n* Jeśli zadanie mówi „napisz funkcję”, zaimplementuj funkcję o podanej nazwie, która zwraca wynik przez `return`. Program wczytuje dane, wywołuje funkcję i wypisuje wynik — gotowy szkielet znajdziesz w sekcji **Kod startowy**.\n* Dane wejściowe wczytuj dokładnie w podanej kolejności, każdą wartość z osobnej linii.",
   "exercises": [
     {
       "id": "ZAD-01",
       "slug": "07_petla_algorytmy_matematyczne/ZAD-01",
-      "title": "Obliczanie średniej z n liczb",
+      "title": "Średnia, minimum i maksimum z n liczb",
       "difficulty": 1,
       "difficulty_display": "★☆☆",
       "tags": [
         "pętle",
         "suma",
         "średnia",
-        "float"
+        "minimum",
+        "maksimum"
       ],
-      "description": "Napisz funkcję `oblicz_srednia()`, która:\n\n1. Wczytuje liczbę naturalną `n` (`n ≥ 1`).\n2. Wczytuje następnie `n` liczb (całkowitych lub zmiennoprzecinkowych).\n3. Zwraca ich średnią arytmetyczną.",
-      "input": "* 1. linia: `n` (`n ≥ 1`)\n* kolejne `n` linii: liczby (int lub float)",
-      "output": "Funkcja zwraca jedną liczbę zmiennoprzecinkową — średnią arytmetyczną.",
+      "description": "Wczytaj liczbę `n`, a następnie w pętli `n` liczb (każdą z osobnej linii). Wypisz ich średnią arytmetyczną, najmniejszą i największą z nich.\n\nNie zapamiętuj wszystkich liczb — wystarczą trzy zmienne aktualizowane w każdym obrocie pętli (tzw. **akumulatory**): bieżąca suma, bieżące minimum i bieżące maksimum.",
+      "input": "* 1. linia: `n` — liczba naturalna (`n ≥ 1`)\n* kolejne `n` linii: liczby rzeczywiste (całkowite lub z kropką dziesiętną, np. `2.5`; mogą być ujemne)",
+      "output": "Trzy liczby, każda w osobnej linii i z dokładnością do **dwóch miejsc po przecinku**:\n\n1. średnia arytmetyczna,\n2. najmniejsza liczba,\n3. największa liczba.",
       "examples": [
         {
-          "input": "wynik = oblicz_srednia()\nprint(wynik)",
-          "output": "5.0"
+          "input": "3\n4\n-1\n6",
+          "output": "3.00\n-1.00\n6.00",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "3\n1\n2\n3",
-          "output": "2.0"
+          "input": "1\n-7",
+          "output": "-7.00\n-7.00\n-7.00"
         },
         {
           "input": "4\n1.5\n2.5\n3.0\n4.0",
-          "output": "2.75"
+          "output": "2.75\n1.50\n4.00"
+        },
+        {
+          "input": "3\n1\n2\n2",
+          "output": "1.67\n1.00\n2.00"
+        },
+        {
+          "input": "5\n10\n-10\n0.5\n0\n4",
+          "output": "0.90\n-10.00\n10.00"
+        },
+        {
+          "input": "3\n5\n5\n5",
+          "output": "5.00\n5.00\n5.00"
+        },
+        {
+          "input": "4\n-3\n-8\n-1\n-4",
+          "output": "-4.00\n-8.00\n-1.00"
         }
       ],
       "constraints": "",
-      "notes": "* Nie narzucamy liczby miejsc po przecinku — wypisz wynik w domyślnym formacie języka (lub jako `float`)."
+      "notes": "* Wczytuj liczby funkcją `float()`, bo mogą mieć część ułamkową.\n* Minimum i maksimum najprościej zainicjować pierwszą wczytaną liczbą, a potem w pętli porównywać z nimi kolejne liczby.\n* Możesz napisać pomocniczą funkcję, np. `formatuj(x)` zwracającą `f\"{x:.2f}\"`, ale wczytywanie danych zostaw w programie głównym.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -48,27 +67,45 @@
         "potęgowanie",
         "mnożenie"
       ],
-      "description": "Napisz funkcję `potega(a, b)`, która oblicza `a^b` przy użyciu pętli (bez operatora potęgowania).",
-      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba naturalna, `a ≥ 0`)\n* `b` (liczba naturalna, `b ≥ 0`)",
-      "output": "Funkcja zwraca jedną liczbę naturalną — wartość `a^b`.",
+      "description": "Napisz funkcję `potega(a, b)`, która zwraca $a^b$ obliczone przy użyciu pętli — **bez** operatora `**` i funkcji `pow()`.\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: `a` — liczba naturalna (`a ≥ 0`)\n* 2. linia: `b` — liczba naturalna (`b ≥ 0`)",
+      "output": "Jedna liczba całkowita — wartość $a^b$.",
       "examples": [
         {
-          "input": "",
-          "output": "print(potega(3, 5))"
+          "input": "3\n5",
+          "output": "243",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "2\n0",
-          "output": "1"
+          "input": "2\n10",
+          "output": "1024"
         },
         {
           "input": "5\n3",
           "output": "125"
+        },
+        {
+          "input": "0\n5",
+          "output": "0"
+        },
+        {
+          "input": "7\n1",
+          "output": "7"
+        },
+        {
+          "input": "10\n0",
+          "output": "1"
+        },
+        {
+          "input": "0\n0",
+          "output": "1"
         }
       ],
       "constraints": "",
-      "notes": "* Dla `b = 0` wynik ma wynosić `1`."
+      "notes": "* Dla `b = 0` wynik wynosi `1` (przyjmujemy też $0^0 = 1$).",
+      "starter_code": "def potega(a, b):\n    # Oblicz a do potęgi b, mnożąc w pętli.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(potega(a, b))\n"
     },
     {
       "id": "ZAD-03A",
@@ -81,13 +118,14 @@
         "dodawanie",
         "mnożenie"
       ],
-      "description": "Napisz funkcję `iloczyn(a, b)`, która oblicza `a * b` używając **tylko dodawania** i pętli.",
-      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba naturalna, `a ≥ 0`)\n* `b` (liczba naturalna, `b ≥ 0`)",
-      "output": "Funkcja zwraca jedną liczbę naturalną — `a * b`.",
+      "description": "Napisz funkcję `iloczyn(a, b)`, która zwraca $a \\cdot b$ obliczone przy użyciu **tylko dodawania** i pętli (bez operatora `*`).\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: `a` — liczba naturalna (`a ≥ 0`)\n* 2. linia: `b` — liczba naturalna (`b ≥ 0`)",
+      "output": "Jedna liczba całkowita — iloczyn $a \\cdot b$.",
       "examples": [
         {
-          "input": "",
-          "output": "print(iloczyn(3, 2))"
+          "input": "3\n2",
+          "output": "6",
+          "explanation": "$3 \\cdot 2 = 2 + 2 + 2 = 6$."
         }
       ],
       "testcases": [
@@ -96,12 +134,25 @@
           "output": "0"
         },
         {
+          "input": "0\n9",
+          "output": "0"
+        },
+        {
           "input": "6\n7",
           "output": "42"
+        },
+        {
+          "input": "1\n13",
+          "output": "13"
+        },
+        {
+          "input": "12\n12",
+          "output": "144"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "",
+      "starter_code": "def iloczyn(a, b):\n    # Oblicz a * b, dodając w pętli.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(iloczyn(a, b))\n"
     },
     {
       "id": "ZAD-03B",
@@ -114,13 +165,14 @@
         "odejmowanie",
         "dzielenie"
       ],
-      "description": "Napisz funkcję `iloraz(a, b)`, która oblicza `a // b` używając **tylko odejmowania** i pętli.",
-      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba naturalna, `a ≥ 0`)\n* `b` (liczba naturalna)",
-      "output": "Funkcja zwraca jedną liczbę naturalną — `a // b`.",
+      "description": "Napisz funkcję `iloraz(a, b)`, która zwraca wynik dzielenia całkowitego `a // b` obliczony przy użyciu **tylko odejmowania** i pętli (bez operatorów `/`, `//` i `%`).\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: `a` — liczba naturalna (`a ≥ 0`)\n* 2. linia: `b` — liczba naturalna (`b ≥ 1`)",
+      "output": "Jedna liczba całkowita — wynik dzielenia całkowitego `a // b`.",
       "examples": [
         {
-          "input": "",
-          "output": "print(iloraz(3, 2))"
+          "input": "17\n5",
+          "output": "3",
+          "explanation": "Od `17` można trzy razy odjąć `5` (zostaje reszta `2`), więc wynik to `3`."
         }
       ],
       "testcases": [
@@ -129,12 +181,29 @@
           "output": "3"
         },
         {
-          "input": "9\n3",
-          "output": "3"
+          "input": "0\n5",
+          "output": "0"
+        },
+        {
+          "input": "20\n4",
+          "output": "5"
+        },
+        {
+          "input": "100\n7",
+          "output": "14"
+        },
+        {
+          "input": "5\n5",
+          "output": "1"
+        },
+        {
+          "input": "13\n1",
+          "output": "13"
         }
       ],
-      "constraints": "* `b > 0`",
-      "notes": ""
+      "constraints": "",
+      "notes": "* Gdy `a < b`, wynik wynosi `0`.",
+      "starter_code": "def iloraz(a, b):\n    # Odejmuj b od a w pętli i licz, ile razy się udało.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(iloraz(a, b))\n"
     },
     {
       "id": "ZAD-04",
@@ -147,13 +216,14 @@
         "silnia",
         "mnożenie"
       ],
-      "description": "Napisz funkcję `silnia(n)`, która zwraca `n!` obliczone przy użyciu pętli.\nPrzyjmij, że `0! = 1`.",
-      "input": "Jeden argument funkcji:\n\n* `n` (liczba naturalna, `n ≥ 0`)",
-      "output": "Funkcja zwraca jedną liczbę naturalną — `n!`.",
+      "description": "Napisz funkcję `silnia(n)`, która zwraca $n! = 1 \\cdot 2 \\cdot \\ldots \\cdot n$ obliczone przy użyciu pętli. Przyjmij, że $0! = 1$.\n\nProgram wczytuje `n`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: `n` — liczba naturalna (`n ≥ 0`)",
+      "output": "Jedna liczba całkowita — wartość $n!$.",
       "examples": [
         {
-          "input": "",
-          "output": "print(silnia(3))"
+          "input": "3",
+          "output": "6",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -162,12 +232,25 @@
           "output": "1"
         },
         {
+          "input": "1",
+          "output": "1"
+        },
+        {
           "input": "5",
           "output": "120"
+        },
+        {
+          "input": "10",
+          "output": "3628800"
+        },
+        {
+          "input": "20",
+          "output": "2432902008176640000"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `0 ≤ n ≤ 20`",
+      "notes": "",
+      "starter_code": "def silnia(n):\n    # Oblicz n! w pętli.\n    pass\n\n\nn = int(input())\nprint(silnia(n))\n"
     },
     {
       "id": "ZAD-05",
@@ -180,13 +263,14 @@
         "modulo",
         "pętle"
       ],
-      "description": "Napisz funkcję `nwd(a, b)`, która zwraca największy wspólny dzielnik dwóch liczb naturalnych.",
-      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba naturalna, `a > 0`)\n* `b` (liczba naturalna, `b > 0`)",
-      "output": "Funkcja zwraca jedną liczbę naturalną — `NWD(a, b)`.",
+      "description": "Napisz funkcję `nwd(a, b)`, która zwraca największy wspólny dzielnik liczb `a` i `b`. Użyj pętli (np. algorytmu Euklidesa), a nie funkcji `math.gcd()`.\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: `a` — liczba naturalna (`a ≥ 1`)\n* 2. linia: `b` — liczba naturalna (`b ≥ 1`)",
+      "output": "Jedna liczba całkowita — $\\text{NWD}(a, b)$.",
       "examples": [
         {
-          "input": "",
-          "output": "print(nwd(60, 45))"
+          "input": "60\n45",
+          "output": "15",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -197,10 +281,23 @@
         {
           "input": "21\n14",
           "output": "7"
+        },
+        {
+          "input": "17\n5",
+          "output": "1"
+        },
+        {
+          "input": "12\n12",
+          "output": "12"
+        },
+        {
+          "input": "25\n100",
+          "output": "25"
         }
       ],
       "constraints": "",
-      "notes": ""
+      "notes": "* Algorytm Euklidesa: dopóki $b \\neq 0$, zastępuj parę $(a, b)$ parą $(b, a \\bmod b)$. Na końcu wynikiem jest $a$.",
+      "starter_code": "def nwd(a, b):\n    # Oblicz NWD algorytmem Euklidesa.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(nwd(a, b))\n"
     },
     {
       "id": "ZAD-06",
@@ -213,13 +310,14 @@
         "nwd",
         "arytmetyka"
       ],
-      "description": "Napisz funkcję `nww(a, b)`, która zwraca najmniejszą wspólną wielokrotność liczb `a` i `b`.",
-      "input": "Dwa argumenty funkcji:\n\n* `a` (liczba naturalna, `a > 0`)\n* `b` (liczba naturalna, `b > 0`)",
-      "output": "Funkcja zwraca jedną liczbę naturalną — `NWW(a, b)`.",
+      "description": "Napisz funkcję `nww(a, b)`, która zwraca najmniejszą wspólną wielokrotność liczb `a` i `b`.\n\nProgram wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: `a` — liczba naturalna (`a ≥ 1`)\n* 2. linia: `b` — liczba naturalna (`b ≥ 1`)",
+      "output": "Jedna liczba całkowita — $\\text{NWW}(a, b)$.",
       "examples": [
         {
-          "input": "",
-          "output": "print(nww(7, 9))"
+          "input": "7\n9",
+          "output": "63",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -230,10 +328,27 @@
         {
           "input": "9\n6",
           "output": "18"
+        },
+        {
+          "input": "1\n1",
+          "output": "1"
+        },
+        {
+          "input": "3\n9",
+          "output": "9"
+        },
+        {
+          "input": "13\n17",
+          "output": "221"
+        },
+        {
+          "input": "21\n6",
+          "output": "42"
         }
       ],
-      "constraints": "* Możesz użyć zależności: `NWW(a, b) = (a * b) // NWD(a, b)`.",
-      "notes": ""
+      "constraints": "",
+      "notes": "* Możesz skorzystać z funkcji `nwd` z poprzedniego zadania i zależności $\\text{NWW}(a, b) = \\frac{a \\cdot b}{\\text{NWD}(a, b)}$.\n* Wynik jest liczbą całkowitą — użyj dzielenia całkowitego `//`.",
+      "starter_code": "def nwd(a, b):\n    # Oblicz NWD algorytmem Euklidesa.\n    pass\n\n\ndef nww(a, b):\n    # Oblicz NWW, korzystając z funkcji nwd.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(nww(a, b))\n"
     },
     {
       "id": "ZAD-07",
@@ -247,27 +362,45 @@
         "pętle",
         "dokładność"
       ],
-      "description": "Napisz funkcję `pierwiastek(n)`, która dla `n ≥ 0` zwraca przybliżenie `sqrt(n)` metodą Newtona:\n\n[\nx_{k+1} = \\frac{1}{2}\\left(x_k + \\frac{n}{x_k}\\right)\n]\n\nIteruj do momentu, aż:\n[\n|x_{k+1} - x_k| < 0.0001\n]",
-      "input": "Jeden argument funkcji:\n\n* `n` (liczba naturalna, `n ≥ 0`)",
-      "output": "Funkcja zwraca jedną liczbę zmiennoprzecinkową — przybliżony pierwiastek z `n`.",
+      "description": "Napisz funkcję `pierwiastek(n)`, która zwraca przybliżenie $\\sqrt{n}$ obliczone metodą Newtona (Herona), bez użycia `math.sqrt()` ani potęgowania.\n\nZacznij od $x_0 = n$ i obliczaj kolejne przybliżenia ze wzoru $x_{k+1} = \\frac{1}{2}\\left(x_k + \\frac{n}{x_k}\\right)$, aż dwa kolejne przybliżenia będą różnić się o mniej niż $0.0001$, czyli $|x_{k+1} - x_k| < 0.0001$. Zwróć ostatnie obliczone przybliżenie $x_{k+1}$.\n\nProgram wczytuje `n`, wywołuje funkcję i wypisuje wynik z dokładnością do **czterech miejsc po przecinku**.",
+      "input": "* 1. linia: `n` — liczba naturalna (`n ≥ 0`)",
+      "output": "Jedna liczba — przybliżenie $\\sqrt{n}$ zaokrąglone do czterech miejsc po przecinku.",
       "examples": [
         {
-          "input": "",
-          "output": "print(pierwiastek(16))"
+          "input": "16",
+          "output": "4.0000",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
+          "input": "0",
+          "output": "0.0000"
+        },
+        {
+          "input": "1",
+          "output": "1.0000"
+        },
+        {
           "input": "2",
-          "output": "1.4142135623746899"
+          "output": "1.4142"
         },
         {
           "input": "10",
-          "output": "3.162277660168379"
+          "output": "3.1623"
+        },
+        {
+          "input": "50",
+          "output": "7.0711"
+        },
+        {
+          "input": "1000000",
+          "output": "1000.0000"
         }
       ],
-      "constraints": "* Dla `n = 0` funkcja ma zwrócić `0.0`.",
-      "notes": ""
+      "constraints": "",
+      "notes": "* Dla `n = 0` funkcja ma zwrócić `0.0` (wzór wymagałby dzielenia przez zero).\n* Wartość bezwzględną obliczysz funkcją `abs()`.",
+      "starter_code": "def pierwiastek(n):\n    # Oblicz przybliżenie pierwiastka z n metodą Newtona.\n    pass\n\n\nn = int(input())\nprint(f\"{pierwiastek(n):.4f}\")\n"
     },
     {
       "id": "ZAD-08",
@@ -280,16 +413,26 @@
         "pętle",
         "dzielniki"
       ],
-      "description": "Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.",
-      "input": "Jeden argument funkcji:\n\n* `n` (liczba naturalna, `n ≥ 2`)",
-      "output": "Funkcja zwraca wartość logiczną:\n\n* `True` lub `False`",
+      "description": "Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, a w przeciwnym razie `False`.\n\nLiczba pierwsza to liczba naturalna większa od `1`, której jedynymi dzielnikami są `1` i ona sama.\n\nProgram wczytuje `n`, wywołuje funkcję i wypisuje zwróconą wartość logiczną (`print(czy_pierwsza(n))`).",
+      "input": "* 1. linia: `n` — liczba naturalna (`n ≥ 1`)",
+      "output": "Jedno słowo: `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.",
       "examples": [
         {
-          "input": "",
-          "output": "print(czy_pierwsza(7))\nprint(czy_pierwsza(4))"
+          "input": "7",
+          "output": "True",
+          "explanation": ""
+        },
+        {
+          "input": "4",
+          "output": "False",
+          "explanation": ""
         }
       ],
       "testcases": [
+        {
+          "input": "1",
+          "output": "False"
+        },
         {
           "input": "2",
           "output": "True"
@@ -297,10 +440,79 @@
         {
           "input": "9",
           "output": "False"
+        },
+        {
+          "input": "25",
+          "output": "False"
+        },
+        {
+          "input": "97",
+          "output": "True"
+        },
+        {
+          "input": "7919",
+          "output": "True"
         }
       ],
       "constraints": "",
-      "notes": "* Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.\n* Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`."
+      "notes": "* `1` nie jest liczbą pierwszą.\n* W prostym rozwiązaniu sprawdzasz dzielniki od `2` do `n - 1`. Wystarczy jednak sprawdzać dzielniki `d` spełniające $d \\cdot d \\leq n$, czyli do $\\lfloor \\sqrt{n} \\rfloor$.",
+      "starter_code": "def czy_pierwsza(n):\n    # Zwróć True, jeśli n jest liczbą pierwszą, w przeciwnym razie False.\n    pass\n\n\nn = int(input())\nprint(czy_pierwsza(n))\n"
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "07_petla_algorytmy_matematyczne/ZAD-09",
+      "title": "Rozkład na czynniki pierwsze",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle",
+        "pierwszość",
+        "dzielniki",
+        "złożoność"
+      ],
+      "description": "Napisz funkcję `wypisz_rozklad(n)`, która wypisuje rozkład liczby `n` na czynniki pierwsze: czynniki w kolejności niemalejącej, oddzielone znakiem `*`, bez spacji. Każdy czynnik powtarzamy tyle razy, ile razy dzieli `n`.\n\nProgram wczytuje `n` i wywołuje funkcję.",
+      "input": "* 1. linia: `n` — liczba naturalna (`n ≥ 2`)",
+      "output": "Jedna linia: czynniki pierwsze liczby `n` oddzielone znakiem `*`. Jeśli `n` jest liczbą pierwszą, wypisz samo `n`.",
+      "examples": [
+        {
+          "input": "60",
+          "output": "2*2*3*5",
+          "explanation": "$60 = 2 \\cdot 2 \\cdot 3 \\cdot 5$."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2",
+          "output": "2"
+        },
+        {
+          "input": "97",
+          "output": "97"
+        },
+        {
+          "input": "1024",
+          "output": "2*2*2*2*2*2*2*2*2*2"
+        },
+        {
+          "input": "360",
+          "output": "2*2*2*3*3*5"
+        },
+        {
+          "input": "9999999967",
+          "output": "9999999967"
+        },
+        {
+          "input": "9998000099",
+          "output": "99989*99991"
+        },
+        {
+          "input": "10000000000",
+          "output": "2*2*2*2*2*2*2*2*2*2*5*5*5*5*5*5*5*5*5*5"
+        }
+      ],
+      "constraints": "* $2 \\leq n \\leq 10^{10}$",
+      "notes": "* Sprawdzaj kolejne dzielniki `d = 2, 3, 4, …`. Dopóki `d` dzieli `n`, wypisz `d` i podziel `n` przez `d`. Złożone `d` (np. `4`) nigdy nie podzielą `n`, bo ich czynniki pierwsze zostały już wcześniej „wydzielone”.\n* **Wystarczy sprawdzać dzielniki `d`, dla których $d \\cdot d \\leq n$.** Gdyby liczba `n` była złożona, czyli $n = a \\cdot b$ dla $2 \\leq a \\leq b$, to $a \\cdot a \\leq a \\cdot b = n$ — miałaby więc dzielnik nie większy niż $\\sqrt{n}$. Jeśli po zakończeniu pętli zostało `n > 1`, to pozostała liczba jest pierwsza i jest ostatnim czynnikiem.\n* To ważna oszczędność: dla liczby pierwszej rzędu $10^{10}$ pętla aż do `n` wykonałaby ok. $10^{10}$ obrotów (zbyt długo), a pętla do $\\sqrt{n}$ — tylko ok. $10^5$.\n* Aby wypisać czynniki w jednej linii, użyj `print(d, end=\"\")`, a znak `*` wypisuj przed każdym czynnikiem poza pierwszym.",
+      "starter_code": "def wypisz_rozklad(n):\n    # Wypisz czynniki pierwsze liczby n oddzielone znakiem *.\n    pass\n\n\nn = int(input())\nwypisz_rozklad(n)\n"
     }
   ]
 }

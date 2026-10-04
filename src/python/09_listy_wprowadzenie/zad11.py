@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-11 — Samochody jadące w przeciwnych kierunkach
 
 **Poziom:** ★★☆
@@ -6,21 +6,25 @@ ZAD-11 — Samochody jadące w przeciwnych kierunkach
 
 ### Treść
 
-Wczytaj `N` oraz napis długości `N` złożony z liter `A` i `B`:
+Wczytaj `n` oraz napis długości `n` złożony z liter `A` i `B`, opisujący samochody na drodze:
 
 * `A` oznacza samochód jadący na wschód,
 * `B` oznacza samochód jadący na zachód.
 
-Policz, ile par samochodów minie się, gdy uznamy, że para mija się wtedy, gdy `A` stoi **przed** `B` w ciągu.
+Para samochodów minie się, jeśli samochód `A` stoi w napisie **przed** samochodem `B` (niekoniecznie bezpośrednio). Policz wszystkie takie pary.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* 2. linia: napis długości `N`, tylko `A` i `B` (bez spacji)
+* 1. linia: liczba samochodów `n`
+* 2. linia: napis długości `n` złożony tylko z liter `A` i `B` (bez spacji)
 
 ### Wyjście
 
-Jedna liczba naturalna — liczba mijających się par.
+Jedna liczba naturalna: liczba mijających się par.
+
+### Ograniczenia
+
+* $n \ge 1$
 
 ### Przykład
 
@@ -37,29 +41,23 @@ ABABB
 5
 ```
 
+Pierwszy samochód `A` minie trzy samochody `B`, a drugi `A` — dwa: $3 + 2 = 5$.
+
 """
 
 
-def policz_samchody(lista):
+def policz_mijajace_sie(samochody):
     licznik = 0
-    pom = 0
-    for samochod in lista:
+    jadace_na_wschod = 0
+    for samochod in samochody:
         if samochod == "A":
-            pom += 1
-        elif samochod == "B":
-            licznik += pom
-
+            jadace_na_wschod += 1
+        else:
+            licznik += jadace_na_wschod
     return licznik
 
 
-def test_policz_samochody():
-    assert policz_samchody(["A", "B", "A", "B", "B"]) == 5
-    assert (
-        policz_samchody(["A", "A", "A", "B", "B", "A", "B", "A", "B", "A", "A", "A"])
-        == 15
-    )
-
-
 if __name__ == "__main__":
-
-    test_policz_samochody()
+    n = int(input())
+    samochody = input().strip()
+    print(policz_mijajace_sie(samochody))

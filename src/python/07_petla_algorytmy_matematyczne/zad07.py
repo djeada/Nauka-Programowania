@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-07 — Pierwiastek metodą Newtona (Herona)
 
 **Poziom:** ★★☆
@@ -6,66 +6,67 @@ ZAD-07 — Pierwiastek metodą Newtona (Herona)
 
 ### Treść
 
-Napisz funkcję `pierwiastek(n)`, która dla `n ≥ 0` zwraca przybliżenie `sqrt(n)` metodą Newtona:
+Napisz funkcję `pierwiastek(n)`, która zwraca przybliżenie $\sqrt{n}$ obliczone metodą Newtona (Herona), bez użycia `math.sqrt()` ani potęgowania.
 
-[
-x_{k+1} = \frac{1}{2}\left(x_k + \frac{n}{x_k}\right)
-]
+Zacznij od $x_0 = n$ i obliczaj kolejne przybliżenia ze wzoru $x_{k+1} = \frac{1}{2}\left(x_k + \frac{n}{x_k}\right)$, aż dwa kolejne przybliżenia będą różnić się o mniej niż $0.0001$, czyli $|x_{k+1} - x_k| < 0.0001$. Zwróć ostatnie obliczone przybliżenie $x_{k+1}$.
 
-Iteruj do momentu, aż:
-[
-|x_{k+1} - x_k| < 0.0001
-]
+Program wczytuje `n`, wywołuje funkcję i wypisuje wynik z dokładnością do **czterech miejsc po przecinku**.
 
 ### Wejście
 
-Jeden argument funkcji:
-
-* `n` (liczba naturalna, `n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę zmiennoprzecinkową — przybliżony pierwiastek z `n`.
+Jedna liczba — przybliżenie $\sqrt{n}$ zaokrąglone do czterech miejsc po przecinku.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(pierwiastek(16))
+```
+16
 ```
 
 **Wyjście:**
 
 ```
-4.0
+4.0000
 ```
 
-### Ograniczenia / gwarancje
+### Uwagi
 
-* Dla `n = 0` funkcja ma zwrócić `0.0`.
+* Dla `n = 0` funkcja ma zwrócić `0.0` (wzór wymagałby dzielenia przez zero).
+* Wartość bezwzględną obliczysz funkcją `abs()`.
+
+### Kod startowy
+
+```python
+def pierwiastek(n):
+    pass
+
+
+n = int(input())
+print(f"{pierwiastek(n):.4f}")
+```
 
 """
 
-dokladnosc = 0.0001
+DOKLADNOSC = 0.0001
 
 
-def pierwiastek(liczba):
+def pierwiastek(n):
+    if n == 0:
+        return 0.0
 
-    wynik = liczba
-
-    while abs(liczba - wynik * wynik) > dokladnosc:
-        wynik = (wynik + liczba / wynik) / 2
-
-    return wynik
-
-
-def test_pierwiastek():
-    assert abs(pierwiastek(1) - 1) < dokladnosc
-    assert abs(pierwiastek(4) - 2) < dokladnosc
-    assert abs(pierwiastek(9) - 3) < dokladnosc
+    x = n
+    while True:
+        nastepne = (x + n / x) / 2
+        if abs(nastepne - x) < DOKLADNOSC:
+            return nastepne
+        x = nastepne
 
 
 if __name__ == "__main__":
-
-    test_pierwiastek()
+    n = int(input())
+    print(f"{pierwiastek(n):.4f}")

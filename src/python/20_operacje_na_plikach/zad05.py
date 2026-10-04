@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Posortuj adresy IP z pliku
 
 **Poziom:** ★☆☆
@@ -6,90 +6,83 @@ ZAD-05 — Posortuj adresy IP z pliku
 
 ### Treść
 
-Otrzymujesz ścieżkę do pliku tekstowego, w którym w każdej linii znajduje się jeden adres IP. Wczytaj wszystkie adresy, posortuj je **alfabetycznie** i wypisz jako listę.
+Wczytaj ścieżkę pliku tekstowego, w którym każdy niepusty wiersz zawiera jeden adres IPv4 — cztery liczby od 0 do 255 oddzielone kropkami, np. `192.168.1.10`. Wypisz wszystkie adresy posortowane **rosnąco według wartości liczbowych**: najpierw według pierwszej liczby, przy równych — według drugiej, potem trzeciej i czwartej.
+
+Zwykłe porównywanie napisów da złą kolejność: `"192.168.1.10" < "192.168.1.2"`, chociaż $10 > 2$.
 
 ### Wejście
 
-* 1 linia: `file_path`
+* 1. linia: ścieżka pliku z adresami
 
 ### Wyjście
 
-* 1 linia: lista adresów IP jako napisy, np. `['10.0.0.1', ...]`
+* Adresy w kolejności rosnącej, każdy w osobnej linii. Powtarzające się adresy wypisz tyle razy, ile razy występują w pliku.
+* `Brak adresów.` — jeśli plik nie zawiera żadnego adresu.
+* `Plik nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego pliku.
+
+### Ograniczenia
+
+* Puste wiersze pomiń. Wiersze z adresami nie zawierają spacji ani innych znaków.
 
 ### Przykład
+
+**Pliki przed:**
+
+```
+adresy_ip.txt
+| 192.168.1.10
+| 10.0.0.1
+| 192.168.1.2
+| 172.16.0.5
+```
 
 **Wejście:**
 
 ```
-C:\Users\Username\Documents\adresy_ip.txt
+adresy_ip.txt
 ```
 
 **Wyjście:**
 
 ```
-['10.0.0.1', '172.16.0.5', '192.168.1.10', '192.168.1.2']
+10.0.0.1
+172.16.0.5
+192.168.1.2
+192.168.1.10
 ```
+
+### Uwagi
+
+* Wygodnie jest sortować z kluczem: `sorted(adresy, key=...)`, gdzie klucz zamienia adres na krotkę czterech liczb całkowitych.
 
 """
 
-import pathlib
+import os
 
 
-def wczytaj_plik(sciezka):
-    """
-    Funkcja wczytujaca plik tekstowy
-    """
-    return pathlib.Path(sciezka).read_text().splitlines()
+def wczytaj_adresy(sciezka):
+    """Zwraca listę adresów IP z pliku (puste wiersze są pomijane)."""
+    with open(sciezka, encoding="utf-8") as plik:
+        return [wiersz.strip() for wiersz in plik if wiersz.strip()]
 
 
-def sortuj_adresy_ip(lista):
-    """
-    Funkcja sortujaca liste adresow ip. Adresy ip dane sa
-    w postaci napisow. Przyklad: '123.4.245.23'
-    """
-    lista = [ip.split(".") for ip in lista]
-    lista = [[int(i) for i in ip] for ip in lista]
-    lista = sorted(lista, key=lambda x: (x[0], x[1], x[2], x[3]))
-    lista = [".".join([str(i) for i in ip]) for ip in lista]
-    return lista
+def klucz_adresu(adres):
+    """Zamienia adres '192.168.1.10' na krotkę (192, 168, 1, 10)."""
+    return tuple(int(liczba) for liczba in adres.split("."))
 
 
-def test_sortuj_adresy_ip():
-
-    # stworz folder testowy
-    pathlib.Path("test").mkdir()
-
-    # utworz plik testowy
-    plik = pathlib.Path("test/test.txt")
-    plik.write_text(
-        "\n".join(
-            [
-                "123.4.245.23",
-                "104.244.253.29",
-                "1.198.3.93",
-                "32.183.93.40",
-                "104.30.244.2",
-                "104.244.4.1",
-            ]
-        )
-    )
-
-    print(sortuj_adresy_ip(wczytaj_plik(plik)))
-    assert sortuj_adresy_ip(wczytaj_plik(plik)) == [
-        "1.198.3.93",
-        "32.183.93.40",
-        "104.30.244.2",
-        "104.244.4.1",
-        "104.244.253.29",
-        "123.4.245.23",
-    ]
-
-    # usun folder testowy
-    import shutil
-
-    shutil.rmtree("test")
+def sortuj_adresy_ip(adresy):
+    return sorted(adresy, key=klucz_adresu)
 
 
 if __name__ == "__main__":
+    sciezka = input()
 
-    test_sortuj_adresy_ip()
+    if not os.path.isfile(sciezka):
+        print("Plik nie istnieje.")
+    else:
+        adresy = sortuj_adresy_ip(wczytaj_adresy(sciezka))
+        if adresy:
+            print("\n".join(adresy))
+        else:
+            print("Brak adresów.")

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-05 — Sortowanie trzech liczb
 
 **Poziom:** ★★☆
@@ -6,17 +6,18 @@ ZAD-05 — Sortowanie trzech liczb
 
 ### Treść
 
-Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności rosnącej.
+Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności niemalejącej (od najmniejszej do największej).
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a ≥ 0`)
-* 2 linia: `b` (całkowita, `b ≥ 0`)
-* 3 linia: `c` (całkowita, `c ≥ 0`)
+* 1 linia: `a` — liczba całkowita, $0 \le a \le 10^9$
+* 2 linia: `b` — liczba całkowita, $0 \le b \le 10^9$
+* 3 linia: `c` — liczba całkowita, $0 \le c \le 10^9$
 
 ### Wyjście
 
-Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
+Jedna linia: trzy liczby w kolejności niemalejącej, oddzielone pojedynczymi spacjami.
+Liczby powtarzające się wypisz tyle razy, ile wystąpiły.
 
 ### Przykład
 
@@ -36,32 +37,23 @@ Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
 
 ### Uwagi
 
-* Możesz użyć wbudowanego sortowania, ale da się też rozwiązać czystymi warunkami.
+* Możesz użyć wbudowanego sortowania, ale spróbuj rozwiązać zadanie samymi instrukcjami warunkowymi.
 
 """
 
+
+def posortuj_trzy(a, b, c):
+    if a > b:
+        a, b = b, a
+    if b > c:
+        b, c = c, b
+    if a > b:
+        a, b = b, a
+    return f"{a} {b} {c}"
+
+
 if __name__ == "__main__":
-
-    print("podaj trzy liczby")
-
     a = int(input())
     b = int(input())
     c = int(input())
-
-    if a >= b and a >= c:
-        if b >= c:
-            print(c, b, a)
-        else:
-            print(b, c, a)
-
-    elif c >= b and c >= a:
-        if a >= b:
-            print(b, a, c)
-        else:
-            print(a, b, c)
-
-    else:
-        if a >= c:
-            print(c, a, b)
-        else:
-            print(a, c, b)
+    print(posortuj_trzy(a, b, c))

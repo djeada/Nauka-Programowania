@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-03 — Pierwsze wystąpienie klucza
 
 **Poziom:** ★☆☆
@@ -6,18 +6,22 @@ ZAD-03 — Pierwsze wystąpienie klucza
 
 ### Treść
 
-Wczytaj listę liczb całkowitych oraz liczbę `klucz`. Wypisz indeks pierwszego wystąpienia `klucz` w liście.
-Jeśli `klucz` nie występuje — wypisz `-1`.
+Wczytaj listę `n` liczb całkowitych oraz liczbę `klucz`. Wypisz indeks pierwszego wystąpienia liczby `klucz` w liście.
+Jeśli `klucz` nie występuje w liście — wypisz `-1`.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
-* ostatnia linia: `klucz` (liczba całkowita)
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
+* 3. linia: liczba całkowita `klucz`
 
 ### Wyjście
 
-Jedna liczba całkowita — indeks (od `0`) lub `-1`.
+Jedna liczba całkowita: indeks pierwszego wystąpienia klucza albo `-1`.
+
+### Ograniczenia
+
+* $n \ge 1$
 
 ### Przykład
 
@@ -25,11 +29,7 @@ Jedna liczba całkowita — indeks (od `0`) lub `-1`.
 
 ```
 5
-2
-9
--1
-3
-8
+2 9 -1 3 8
 -1
 ```
 
@@ -43,18 +43,15 @@ Jedna liczba całkowita — indeks (od `0`) lub `-1`.
 
 
 def znajdz_klucz(lista, klucz):
-
+    """Zwraca indeks pierwszego wystąpienia klucza albo -1."""
     for i in range(len(lista)):
         if lista[i] == klucz:
             return i
     return -1
 
 
-def test_znajdz_klucz():
-    assert znajdz_klucz([1, 2, 3, 4, 5], 5) == 4
-    assert znajdz_klucz([1, 2, 3, 4, 5], 6) == -1
-
-
 if __name__ == "__main__":
-
-    test_znajdz_klucz()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    klucz = int(input())
+    print(znajdz_klucz(lista, klucz))

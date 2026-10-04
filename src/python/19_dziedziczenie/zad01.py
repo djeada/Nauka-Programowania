@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Wywołanie metody klasy bazowej w klasie potomnej
 
 **Poziom:** ★☆☆
@@ -8,60 +8,104 @@ ZAD-01 — Wywołanie metody klasy bazowej w klasie potomnej
 
 Zaprojektuj dwie klasy:
 
-1. **Bazowa** — posiada metodę `przedstaw_sie()`, która wypisuje komunikat o klasie bazowej.
-2. **Potomna** — dziedziczy po **Bazowej** i **nadpisuje** metodę `przedstaw_sie()`, ale w swojej implementacji:
+1. `Bazowa` — konstruktor `__init__(self, nazwa)` zapamiętuje nazwę obiektu, a metoda `przedstaw_sie()` wypisuje linię
+   `Jestem klasą bazową. Nazywam się <nazwa>.`
+2. `Potomna` — dziedziczy po `Bazowa` i **nadpisuje** metodę `przedstaw_sie()`. Nowa wersja:
+   * najpierw **wywołuje** wersję metody z klasy bazowej (przez `super()`),
+   * potem wypisuje linię `A ja jestem klasą potomną.`
 
-   * najpierw **wywołuje** wersję metody z klasy bazowej,
-   * potem dopisuje własny komunikat.
+Klasa `Potomna` nie potrzebuje własnego konstruktora — dziedziczy go po `Bazowa`.
 
-Program testowy:
-
-* tworzy obiekt klasy potomnej,
-* wywołuje metodę `przedstaw_sie()`.
+Program wczytuje opis kilku obiektów, tworzy je, a następnie dla każdego z nich (w kolejności z wejścia) wywołuje metodę `przedstaw_sie()`.
 
 ### Wejście
 
-Brak.
+* 1. linia: liczba obiektów $n$
+* kolejne $n$ linii: rodzaj obiektu (`bazowa` albo `potomna`) i jego nazwa (jedno słowo), oddzielone spacją
 
 ### Wyjście
 
-Dwie linie, pokazujące najpierw komunikat klasy bazowej, a potem potomnej.
+Komunikaty wypisane przez kolejne wywołania `przedstaw_sie()`: jedna linia dla obiektu klasy `Bazowa` i dwie linie dla obiektu klasy `Potomna`.
+
+### Ograniczenia
+
+* $1 \le n \le 20$
 
 ### Przykład
+
+**Wejście:**
+
+```
+3
+bazowa Ala
+potomna Ola
+bazowa Jan
+```
 
 **Wyjście:**
 
 ```
-Jestem klasą bazową.
+Jestem klasą bazową. Nazywam się Ala.
+Jestem klasą bazową. Nazywam się Ola.
 A ja jestem klasą potomną.
+Jestem klasą bazową. Nazywam się Jan.
+```
+
+### Kod startowy
+
+```python
+class Bazowa:
+    def __init__(self, nazwa):
+        pass
+
+    def przedstaw_sie(self):
+        pass
+
+
+class Potomna(Bazowa):
+    def przedstaw_sie(self):
+        pass
+
+
+n = int(input())
+obiekty = []
+for _ in range(n):
+    rodzaj, nazwa = input().split()
+    if rodzaj == "bazowa":
+        obiekty.append(Bazowa(nazwa))
+    else:
+        obiekty.append(Potomna(nazwa))
+
+for obiekt in obiekty:
+    obiekt.przedstaw_sie()
 ```
 
 """
 
 
-class Rodzic:
-    def __init__(self):
-        print("Jestem rodzicem")
+class Bazowa:
+    def __init__(self, nazwa):
+        self.nazwa = nazwa
+
+    def przedstaw_sie(self):
+        print(f"Jestem klasą bazową. Nazywam się {self.nazwa}.")
 
 
-class DzieckoA(Rodzic):
-    def __init__(self):
-        print("Jestem dzieckiem A")
-
-
-class DzieckoB(Rodzic):
-    def __init__(self):
-        print("Jestem dzieckiem B")
-        super().__init__()
+class Potomna(Bazowa):
+    def przedstaw_sie(self):
+        super().przedstaw_sie()
+        print("A ja jestem klasą potomną.")
 
 
 if __name__ == "__main__":
+    n = int(input())
+    obiekty = []
+    for _ in range(n):
+        rodzaj, nazwa = input().split()
+        if rodzaj == "bazowa":
+            obiekty.append(Bazowa(nazwa))
+        else:
+            obiekty.append(Potomna(nazwa))
 
-    print("Tworze obiekt klasy Rodzic:")
-    rodzic = Rodzic()
-
-    print("\nTworze obiekt klasy DzieckoA:")
-    dziecko_a = DzieckoA()
-
-    print("\nTworze obiekt klasy DzieckoB:")
-    dziecko_b = DzieckoB()
+    for obiekt in obiekty:
+        obiekt.przedstaw_sie()

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Sprawdź poprawność adresu e-mail
 
 **Poziom:** ★★☆
@@ -6,39 +6,28 @@ ZAD-01 — Sprawdź poprawność adresu e-mail
 
 ### Treść
 
-Otrzymujesz napis reprezentujący adres e-mail. Sprawdź, czy jest poprawny zgodnie z regułami:
+Wczytaj napis i sprawdź, czy jest poprawnym adresem e-mail według poniższych (uproszczonych) reguł.
 
-* Adres e-mail składa się z identyfikatora użytkownika, znaku `@` oraz nazwy domeny.
-* **Identyfikator użytkownika** może zawierać wyłącznie:
-
-  * litery `a–z`, `A–Z`,
-  * cyfry `0–9`,
-  * znaki specjalne: `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `-`, `/`, `=`, `?`, `^`, `_`, `` ` ``, `{`, `|`, `}`, `~`,
-  * kropki `.`, ale:
-
-    * nie może być pierwszym ani ostatnim znakiem,
-    * nie może wystąpić dwukrotnie po sobie.
-* **Nazwa domeny** może zawierać wyłącznie:
-
-  * litery `a–z`, `A–Z`,
-  * cyfry `0–9`,
-  * kropki `.` oraz myślniki `-`, ale:
-
-    * nie mogą być pierwszym ani ostatnim znakiem,
-    * nie mogą wystąpić dwukrotnie po sobie.
+* Adres ma postać `identyfikator@domena`: zawiera **dokładnie jeden** znak `@`, a identyfikator i domena są niepuste.
+* **Identyfikator** składa się wyłącznie z:
+  * liter `a–z` i `A–Z` (bez polskich znaków),
+  * cyfr `0–9`,
+  * znaków specjalnych `!` `#` `$` `%` `&` `'` `*` `+` `-` `/` `=` `?` `^` `_` `` ` `` `{` `|` `}` `~`,
+  * kropek `.` — ale kropka nie może być pierwszym ani ostatnim znakiem identyfikatora i nie mogą stać dwie kropki obok siebie.
+* **Domena** składa się wyłącznie z liter `a–z` i `A–Z`, cyfr `0–9`, kropek `.` i myślników `-`, przy czym:
+  * zawiera co najmniej jedną kropkę,
+  * nie zaczyna się ani nie kończy kropką ani myślnikiem,
+  * żadne dwa znaki spośród `.` i `-` nie stoją obok siebie (niedozwolone są np. `..`, `--`, `.-`, `-.`).
+* Żadne inne znaki (np. spacje) nie mogą wystąpić w adresie.
 
 ### Wejście
 
-Jedna linia:
-
-* `email`
+* 1. linia: napis do sprawdzenia
 
 ### Wyjście
 
-Jedna linia:
-
-* `Prawda` — jeśli e-mail jest poprawny
-* `Fałsz` — w przeciwnym razie
+* `Prawda` — jeśli napis jest poprawnym adresem e-mail,
+* `Fałsz` — w przeciwnym razie.
 
 ### Przykład
 
@@ -54,106 +43,48 @@ adam@gmail.com
 Prawda
 ```
 
+### Przykład 2
+
+**Wejście:**
+
+```
+jan..nowak@poczta.pl
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
+
+W identyfikatorze stoją obok siebie dwie kropki.
+
+### Uwagi
+
+* Do sprawdzenia, czy **cały** napis pasuje do wzorca, służy `re.fullmatch(wzorzec, napis)`.
+* Fragment „ciąg znaków bez kropek, a potem dowolnie wiele razy: kropka i znowu ciąg znaków” zapiszesz jako `X+(\.X+)*`, gdzie `X` to klasa dozwolonych znaków.
+* W klasie znaków `[...]` myślnik umieść na końcu albo poprzedź go `\`, inaczej oznacza zakres (np. `+-/` to zakres od `+` do `/`).
+
 """
 
 import re
 
+# Identyfikator: ciągi dozwolonych znaków rozdzielone pojedynczymi kropkami.
+ZNAK_IDENTYFIKATORA = r"[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]"
+IDENTYFIKATOR = ZNAK_IDENTYFIKATORA + r"+(?:\." + ZNAK_IDENTYFIKATORA + r"+)*"
 
-def poprawny_identyfikator(identyfikator):
-    """
-    Sprawdza poprawnosc identyfikatora.
-    """
-    # Identyfikator uzytkownika sklada sie jedynie z:
-    # a) Malych (a-z) i wielkich (A-Z) liter.
-    # b) Cyfr (0-9).
-    # c) Znakow  ! # $ % & ' * + - / = ? ^ _ ` { | } ~.
-    # d) Kropki . pod warunkiem, ze nie jest pierwszym badz ostatnim znakiem
-    # i nie wystepuje dwukrotnie po sobie.
-    if identyfikator.startswith(".") or identyfikator.endswith("."):
-        return False
+# Domena: co najmniej dwie etykiety rozdzielone kropkami; etykieta to ciągi
+# liter i cyfr rozdzielone pojedynczymi myślnikami.
+ETYKIETA = r"[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*"
+DOMENA = ETYKIETA + r"(?:\." + ETYKIETA + r")+"
 
-    if re.search(r"[.]{2,}", identyfikator):
-        return False
-
-    return re.match(
-        r"^[a-zA-Z0-9!#$%&'*+-/=?^_`{|}~.]+[a-zA-Z0-9!#$%&'*+-/=?^_`{|}~.]*$",
-        identyfikator,
-    )
-
-
-def poprawna_nazwa_domenowa(nazwa_domenowa):
-    """
-    Sprawdza poprawnosc nazwy domenowej.
-    """
-    # Nazwa domenowa sklada sie jedynie z:
-    # a) Malych (a-z) i wielkich (A-Z) liter.
-    # b) Cyfr (0-9).
-    # c) Kropki . oraz myslnika - pod warunkiem, ze nie sa pierwszym badz ostatnim znakiem
-    # i nie wystepuja dwukrotnie po sobie.
-    if (
-        nazwa_domenowa.startswith(".")
-        or nazwa_domenowa.startswith("-")
-        or nazwa_domenowa.endswith(".")
-        or nazwa_domenowa.endswith("-")
-    ):
-        return False
-
-    if re.search(r"[-.]{2,}", nazwa_domenowa) or nazwa_domenowa.count(".") == 0:
-        return False
-
-    return re.match(r"^[-a-zA-Z0-9.]+[-a-zA-Z0-9.]*$", nazwa_domenowa)
+EMAIL = IDENTYFIKATOR + "@" + DOMENA
 
 
 def czy_email_poprawny(email):
-    """
-    Sprawdza poprawnosc adresu email.
-    """
-    # sprawdz czy malpa wystepuje w adresie dokladnie jeden raz
-    if email.count("@") != 1:
-        return False
-
-    # sprawdz czy adres sklada sie z identyfikatora i nazwy domenowej
-    identyfikator, nazwa_domenowa = email.split("@")
-    if not poprawny_identyfikator(identyfikator) or not poprawna_nazwa_domenowa(
-        nazwa_domenowa
-    ):
-        return False
-
-    return True
-
-
-def test_czy_email_poprawny_pozytywne():
-    assert czy_email_poprawny("email@example.com")
-    assert czy_email_poprawny("firstname.lastname@example.com")
-    assert czy_email_poprawny("email@subdomain.example.com")
-    assert czy_email_poprawny("firstname+lastname@example.com")
-    assert czy_email_poprawny("email@123.123.123.123")
-    assert czy_email_poprawny("1234567890@example.com")
-    assert czy_email_poprawny("email@example-one.com")
-    assert czy_email_poprawny("_______@example.com")
-    assert czy_email_poprawny("email@example.name")
-    assert czy_email_poprawny("email@example.museum")
-    assert czy_email_poprawny("email@example.co.jp")
-    assert czy_email_poprawny("firstname-lastname@example.com")
-
-
-def test_czy_email_poprawny_negatywne():
-    assert not czy_email_poprawny("plainaddress")
-    assert not czy_email_poprawny("#@%^%#$@#$@#.com")
-    assert not czy_email_poprawny("@example.com")
-    assert not czy_email_poprawny("Joe Smith <email@example.com")
-    assert not czy_email_poprawny("email.example.com")
-    assert not czy_email_poprawny("email@example@example.com")
-    assert not czy_email_poprawny(".email@example.com")
-    assert not czy_email_poprawny("email..email@example.com")
-    assert not czy_email_poprawny("あいうえお@example.com")
-    assert not czy_email_poprawny("email@example.com (Joe Smith)")
-    assert not czy_email_poprawny("email@example")
-    assert not czy_email_poprawny("email@-example.com")
-    assert not czy_email_poprawny("email@example..com")
-    assert not czy_email_poprawny("Abc..123@example.com")
+    return re.fullmatch(EMAIL, email) is not None
 
 
 if __name__ == "__main__":
-    test_czy_email_poprawny_pozytywne()
-    test_czy_email_poprawny_negatywne()
+    email = input()
+    print("Prawda" if czy_email_poprawny(email) else "Fałsz")

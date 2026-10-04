@@ -1,41 +1,55 @@
 {
   "file": "18_klasy.md",
-  "chapter_title": "Rozdział: Klasy (stdin/stdout)",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli format wyjścia zawiera kilka linii — wypisz je w tej samej kolejności.\n* Dla liczb zmiennoprzecinkowych trzymaj stałą liczbę miejsc po przecinku (jak w przykładach).",
+  "chapter_title": "Rozdział 18: Klasy",
+  "chapter_description": "Zadania w tym rozdziale uczą projektowania **klas**: konstruktora `__init__`, atrybutów, metod, metod statycznych (`@staticmethod`) oraz metod specjalnych, dzięki którym obiekty można wypisywać (`__str__`), porównywać (`__eq__`) i łączyć operatorami (`__add__`, `__sub__`, `__mul__`, …). Ostatnie zadania wprowadzają też wyjątki (`raise`, `try`/`except`), klasy danych (`@dataclass`) i generatory (`yield`).\n\n**Konwencje wspólne:**\n\n* Każde zadanie to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.\n* W każdym zadaniu dostajesz **kod startowy** ze szkieletem klasy, a zwykle także z gotowym wczytywaniem danych i wypisywaniem wyników. Twoim zadaniem jest przede wszystkim uzupełnienie metod klasy — wynik programu zależy od tego, jak działa Twoja klasa.\n* Nazwy klas i metod podane w treści są obowiązkowe (kod startowy z nich korzysta). Nazwy w kodzie piszemy bez polskich znaków, np. `Kolo`, `Prostokat`.\n* „Z dokładnością do 2 miejsc po przecinku” oznacza dokładnie dwie cyfry po kropce, np. `f\"{x:.2f}\"` (`3.00`, `-0.50`).\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”.",
   "exercises": [
     {
       "id": "ZAD-01",
       "slug": "18_klasy/ZAD-01",
       "title": "Klasa Koło",
-      "difficulty": 2,
-      "difficulty_display": "★★☆",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
       "tags": [
         "class",
         "metody",
         "float",
         "math"
       ],
-      "description": "Zaprojektuj klasę **Koło**:\n\n1. Konstruktor przyjmuje promień `r` (domyślnie 1).\n2. Metoda licząca **obwód**: ( 2\\pi r )\n3. Metoda licząca **pole**: ( \\pi r^2 )\n4. Metoda wypisująca informacje: promień, obwód i pole.\n\nProgram ma utworzyć koło o promieniu wczytanym z wejścia (np. 3) i wypisać informacje.",
-      "input": "* 1 linia: `r` (liczba rzeczywista)",
-      "output": "Trzy linie jak w przykładzie (obwód i pole do 4 miejsc po przecinku).",
+      "description": "Zaprojektuj klasę `Kolo` opisującą koło:\n\n1. Konstruktor `__init__(self, r=1)` zapamiętuje promień `r` (domyślnie 1).\n2. Metoda `obwod()` zwraca obwód koła: $2\\pi r$.\n3. Metoda `pole()` zwraca pole koła: $\\pi r^2$.\n4. Metoda `wypisz()` wypisuje informacje o kole: promień, obwód i pole (format poniżej). Do obliczeń użyj metod `obwod()` i `pole()`.\n\nProgram wczytuje promień, tworzy obiekt `Kolo` i wywołuje jego metodę `wypisz()`.",
+      "input": "* 1. linia: $r$ — liczba rzeczywista dodatnia (promień koła)",
+      "output": "Trzy linie:\n\n```\nKoło o promieniu: <r>\nObwód koła: <obwód>\nPole koła: <pole>\n```\n\nWszystkie liczby wypisz z dokładnością do 2 miejsc po przecinku.",
       "examples": [
         {
           "input": "3",
-          "output": "Koło o promieniu: 3\nObwód koła: 18.8496\nPole koła: 28.2743"
+          "output": "Koło o promieniu: 3.00\nObwód koła: 18.85\nPole koła: 28.27",
+          "explanation": "Obwód: $2 \\cdot \\pi \\cdot 3 \\approx 18.8496$, pole: $\\pi \\cdot 3^2 \\approx 28.2743$."
         }
       ],
       "testcases": [
         {
-          "input": "3",
-          "output": "Koło o promieniu: 3\nObwód koła: 18.8496\nPole koła: 28.2743"
+          "input": "1",
+          "output": "Koło o promieniu: 1.00\nObwód koła: 6.28\nPole koła: 3.14"
         },
         {
-          "input": "1.5",
-          "output": "Koło o promieniu: 1.5\nObwód koła: 9.4248\nPole koła: 7.0686"
+          "input": "0.5",
+          "output": "Koło o promieniu: 0.50\nObwód koła: 3.14\nPole koła: 0.79"
+        },
+        {
+          "input": "10",
+          "output": "Koło o promieniu: 10.00\nObwód koła: 62.83\nPole koła: 314.16"
+        },
+        {
+          "input": "2.25",
+          "output": "Koło o promieniu: 2.25\nObwód koła: 14.14\nPole koła: 15.90"
+        },
+        {
+          "input": "100",
+          "output": "Koło o promieniu: 100.00\nObwód koła: 628.32\nPole koła: 31415.93"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* $0 < r \\le 1000$",
+      "notes": "* Wartość $\\pi$ znajdziesz w module `math` jako `math.pi`.",
+      "starter_code": "import math\n\n\nclass Kolo:\n    def __init__(self, r=1):\n        # Uzupełnij: zapamiętaj promień w atrybucie obiektu.\n        pass\n\n    def obwod(self):\n        # Uzupełnij: zwróć obwód koła.\n        pass\n\n    def pole(self):\n        # Uzupełnij: zwróć pole koła.\n        pass\n\n    def wypisz(self):\n        # Uzupełnij: wypisz trzy linie z informacjami o kole.\n        pass\n\n\nr = float(input())\nkolo = Kolo(r)\nkolo.wypisz()\n"
     },
     {
       "id": "ZAD-02",
@@ -49,22 +63,41 @@
         "porównania",
         "math"
       ],
-      "description": "Zaprojektuj klasę **Punkt**:\n\n1. Konstruktor `(x=0, y=0)`.\n2. Metoda statyczna `odleglosc(p1, p2)` licząca odległość.\n3. Metoda wypisująca współrzędne.\n4. Porównania `==` i `!=` (równe, gdy oba współrzędne identyczne).\n\nProgram tworzy:\n\n* A = (5, 5)\n* B = (-3, -3)\n\nWypisuje oba punkty i odległość między nimi (4 miejsca po przecinku).",
-      "input": "Brak.",
-      "output": "Jak w przykładzie.",
-      "examples": [],
-      "testcases": [
+      "description": "Zaprojektuj klasę `Punkt` opisującą punkt na płaszczyźnie:\n\n1. Konstruktor `__init__(self, x=0, y=0)` zapamiętuje współrzędne.\n2. Metoda statyczna `odleglosc(p1, p2)` zwraca odległość między punktami `p1` i `p2`:\n   $\\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$.\n3. Metoda `__str__()` zwraca napis z współrzędnymi w postaci `(x, y)`, np. `(5, -3)`.\n4. Metoda `__eq__(other)` sprawdza, czy dwa punkty są równe (obie współrzędne identyczne). Operator `!=` Python wyznaczy wtedy sam.\n\nProgram wczytuje współrzędne punktów $A$ i $B$, tworzy dwa obiekty `Punkt`, wypisuje je, podaje odległość między nimi i informuje, czy punkty są równe.",
+      "input": "* 1. linia: dwie liczby całkowite $x_A$ i $y_A$ oddzielone spacją\n* 2. linia: dwie liczby całkowite $x_B$ i $y_B$ oddzielone spacją",
+      "output": "Cztery linie:\n\n```\nPunkt A: (xA, yA)\nPunkt B: (xB, yB)\nOdległość między punktami A i B: <odległość>\nPunkty są równe.\n```\n\nOdległość wypisz z dokładnością do 2 miejsc po przecinku. W ostatniej linii wypisz `Punkty są równe.` albo `Punkty są różne.`",
+      "examples": [
         {
-          "input": "",
-          "output": "Punkt A: (5, 5)\nPunkt B: (-3, -3)\nOdległość między punktami A i B: 11.3137"
-        },
-        {
-          "input": "",
-          "output": "Punkt A: (5, 5)\nPunkt B: (-3, -3)\nOdległość między punktami A i B: 11.3137"
+          "input": "5 5\n-3 -3",
+          "output": "Punkt A: (5, 5)\nPunkt B: (-3, -3)\nOdległość między punktami A i B: 11.31\nPunkty są różne.",
+          "explanation": "$\\sqrt{8^2 + 8^2} = \\sqrt{128} \\approx 11.3137$."
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "testcases": [
+        {
+          "input": "0 0\n3 4",
+          "output": "Punkt A: (0, 0)\nPunkt B: (3, 4)\nOdległość między punktami A i B: 5.00\nPunkty są różne."
+        },
+        {
+          "input": "1 2\n1 2",
+          "output": "Punkt A: (1, 2)\nPunkt B: (1, 2)\nOdległość między punktami A i B: 0.00\nPunkty są równe."
+        },
+        {
+          "input": "-2 1\n4 -7",
+          "output": "Punkt A: (-2, 1)\nPunkt B: (4, -7)\nOdległość między punktami A i B: 10.00\nPunkty są różne."
+        },
+        {
+          "input": "2 3\n3 2",
+          "output": "Punkt A: (2, 3)\nPunkt B: (3, 2)\nOdległość między punktami A i B: 1.41\nPunkty są różne."
+        },
+        {
+          "input": "7 -3\n7 5",
+          "output": "Punkt A: (7, -3)\nPunkt B: (7, 5)\nOdległość między punktami A i B: 8.00\nPunkty są różne."
+        }
+      ],
+      "constraints": "* $-1000 \\le x, y \\le 1000$",
+      "notes": "",
+      "starter_code": "import math\n\n\nclass Punkt:\n    def __init__(self, x=0, y=0):\n        # Uzupełnij: zapamiętaj współrzędne.\n        pass\n\n    @staticmethod\n    def odleglosc(p1, p2):\n        # Uzupełnij: zwróć odległość między punktami p1 i p2.\n        pass\n\n    def __str__(self):\n        # Uzupełnij: zwróć napis w postaci \"(x, y)\".\n        pass\n\n    def __eq__(self, other):\n        # Uzupełnij: punkty są równe, gdy mają te same współrzędne.\n        pass\n\n\nx, y = input().split()\na = Punkt(int(x), int(y))\nx, y = input().split()\nb = Punkt(int(x), int(y))\n\nprint(f\"Punkt A: {a}\")\nprint(f\"Punkt B: {b}\")\nprint(f\"Odległość między punktami A i B: {Punkt.odleglosc(a, b):.2f}\")\nif a == b:\n    print(\"Punkty są równe.\")\nelse:\n    print(\"Punkty są różne.\")\n"
     },
     {
       "id": "ZAD-03",
@@ -77,22 +110,41 @@
         "static",
         "geometria"
       ],
-      "description": "Zaprojektuj klasę **Prostokąt** opisaną przez dwa przeciwległe wierzchołki:\n\n* lewy dolny `(x1, y1)`\n* prawy górny `(x2, y2)`\n  Boki równoległe do osi.\n\nKlasa ma mieć:\n\n1. Konstruktor `(x1, y1, x2, y2)`\n2. Metodę statyczną `pole_wspolne(A, B)` zwracającą pole części wspólnej (albo 0).\n3. Metodę wypisującą informacje o prostokącie.\n\nProgram tworzy:\n\n* A: (3, 4) i (9, 6)\n* B: (2, 2) i (7, 5)\n\nWypisuje oba i pole części wspólnej.",
-      "input": "Brak.",
-      "output": "Jak w przykładzie.",
-      "examples": [],
-      "testcases": [
+      "description": "Zaprojektuj klasę `Prostokat` opisującą prostokąt o bokach równoległych do osi układu współrzędnych. Prostokąt jest wyznaczony przez dwa przeciwległe wierzchołki: lewy dolny $(x_1, y_1)$ i prawy górny $(x_2, y_2)$.\n\nKlasa ma mieć:\n\n1. Konstruktor `__init__(self, x1, y1, x2, y2)`.\n2. Metodę `__str__()` zwracającą napis `lewy dolny (x1, y1), prawy górny (x2, y2)`.\n3. Metodę statyczną `pole_wspolne(a, b)` zwracającą pole części wspólnej prostokątów `a` i `b`. Jeśli prostokąty nie nachodzą na siebie (albo stykają się tylko bokiem lub wierzchołkiem), pole części wspólnej wynosi `0`.\n\nProgram wczytuje dwa prostokąty $A$ i $B$, wypisuje je i podaje pole ich części wspólnej.",
+      "input": "* 1. linia: cztery liczby całkowite $x_1$, $y_1$, $x_2$, $y_2$ — prostokąt $A$\n* 2. linia: cztery liczby całkowite $x_1$, $y_1$, $x_2$, $y_2$ — prostokąt $B$",
+      "output": "Trzy linie:\n\n```\nProstokąt A: lewy dolny (x1, y1), prawy górny (x2, y2)\nProstokąt B: lewy dolny (x1, y1), prawy górny (x2, y2)\nPole części wspólnej: <pole>\n```\n\nPole jest liczbą całkowitą.",
+      "examples": [
         {
-          "input": "",
-          "output": "Prostokąt A: lewy dolny (3, 4), prawy górny (9, 6)\nProstokąt B: lewy dolny (2, 2), prawy górny (7, 5)\nPole części wspólnej: 6"
-        },
-        {
-          "input": "",
-          "output": "Prostokąt A: lewy dolny (3, 4), prawy górny (9, 6)\nProstokąt B: lewy dolny (2, 2), prawy górny (7, 5)\nPole części wspólnej: 6"
+          "input": "3 4 9 6\n2 2 7 5",
+          "output": "Prostokąt A: lewy dolny (3, 4), prawy górny (9, 6)\nProstokąt B: lewy dolny (2, 2), prawy górny (7, 5)\nPole części wspólnej: 4",
+          "explanation": "Częścią wspólną jest prostokąt o wierzchołkach $(3, 4)$ i $(7, 5)$, czyli o wymiarach $4 \\times 1$."
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "testcases": [
+        {
+          "input": "0 0 2 2\n5 5 7 8",
+          "output": "Prostokąt A: lewy dolny (0, 0), prawy górny (2, 2)\nProstokąt B: lewy dolny (5, 5), prawy górny (7, 8)\nPole części wspólnej: 0"
+        },
+        {
+          "input": "0 0 2 2\n2 0 4 2",
+          "output": "Prostokąt A: lewy dolny (0, 0), prawy górny (2, 2)\nProstokąt B: lewy dolny (2, 0), prawy górny (4, 2)\nPole części wspólnej: 0"
+        },
+        {
+          "input": "0 0 10 10\n2 3 5 7",
+          "output": "Prostokąt A: lewy dolny (0, 0), prawy górny (10, 10)\nProstokąt B: lewy dolny (2, 3), prawy górny (5, 7)\nPole części wspólnej: 12"
+        },
+        {
+          "input": "-3 -2 1 2\n-3 -2 1 2",
+          "output": "Prostokąt A: lewy dolny (-3, -2), prawy górny (1, 2)\nProstokąt B: lewy dolny (-3, -2), prawy górny (1, 2)\nPole części wspólnej: 16"
+        },
+        {
+          "input": "0 1 8 3\n2 -1 5 6",
+          "output": "Prostokąt A: lewy dolny (0, 1), prawy górny (8, 3)\nProstokąt B: lewy dolny (2, -1), prawy górny (5, 6)\nPole części wspólnej: 6"
+        }
+      ],
+      "constraints": "* $-1000 \\le x_1 < x_2 \\le 1000$, $-1000 \\le y_1 < y_2 \\le 1000$",
+      "notes": "* Część wspólna (jeśli istnieje) też jest prostokątem. Jej lewa krawędź leży na $\\max$ z lewych krawędzi obu prostokątów, a prawa na $\\min$ z prawych krawędzi — analogicznie w pionie.",
+      "starter_code": "class Prostokat:\n    def __init__(self, x1, y1, x2, y2):\n        # Uzupełnij: zapamiętaj współrzędne wierzchołków.\n        pass\n\n    def __str__(self):\n        # Uzupełnij: zwróć opis \"lewy dolny (x1, y1), prawy górny (x2, y2)\".\n        pass\n\n    @staticmethod\n    def pole_wspolne(a, b):\n        # Uzupełnij: zwróć pole części wspólnej prostokątów a i b.\n        pass\n\n\nx1, y1, x2, y2 = [int(x) for x in input().split()]\na = Prostokat(x1, y1, x2, y2)\nx1, y1, x2, y2 = [int(x) for x in input().split()]\nb = Prostokat(x1, y1, x2, y2)\n\nprint(f\"Prostokąt A: {a}\")\nprint(f\"Prostokąt B: {b}\")\nprint(f\"Pole części wspólnej: {Prostokat.pole_wspolne(a, b)}\")\n"
     },
     {
       "id": "ZAD-04",
@@ -105,22 +157,50 @@
         "operatory",
         "math"
       ],
-      "description": "Zaprojektuj klasy **Wektor2D** i **Wektor3D**:\n\nWspólne:\n\n* konstruktor z domyślnymi współrzędnymi 0,\n* dodawanie, odejmowanie,\n* iloczyn skalarny,\n* porównania `==` i `!=`,\n* moduł (długość),\n* metoda wypisująca wektor.\n\nDodatkowo dla **Wektor3D**:\n\n* iloczyn wektorowy.\n\nProgram tworzy:\n\n* A = (-3, -3, -3)\n* B = (5, 5, 5)\n\nWypisuje A, B oraz:\n\n* A + B\n* A - B\n* A · B\n* A × B",
-      "input": "Brak.",
-      "output": "Jak w przykładzie.",
-      "examples": [],
-      "testcases": [
+      "description": "Zaprojektuj klasy `Wektor2D` (wektor na płaszczyźnie) i `Wektor3D` (wektor w przestrzeni).\n\nObie klasy mają mieć:\n\n* konstruktor z domyślnymi współrzędnymi równymi 0: `Wektor2D(x=0, y=0)`, `Wektor3D(x=0, y=0, z=0)`,\n* dodawanie i odejmowanie wektorów operatorami `+` i `-` (metody `__add__` i `__sub__`) — wynikiem jest nowy wektor tej samej klasy,\n* metodę `iloczyn_skalarny(other)` — np. dla 3D: $x_A x_B + y_A y_B + z_A z_B$,\n* metodę `dlugosc()` zwracającą długość (moduł) wektora — np. dla 3D: $\\sqrt{x^2 + y^2 + z^2}$,\n* porównanie `==` (metoda `__eq__`) — wektory są równe, gdy wszystkie współrzędne są równe,\n* metodę `__str__()` zwracającą współrzędne w nawiasach, np. `(1, -2)` albo `(1, -2, 3)`.\n\nDodatkowo klasa `Wektor3D` ma metodę `iloczyn_wektorowy(other)`, która zwraca nowy obiekt `Wektor3D`:\n$A \\times B = (y_A z_B - z_A y_B,\\ z_A x_B - x_A z_B,\\ x_A y_B - y_A x_B)$.\n\nProgram wczytuje dwa wektory. Jeśli linia zawiera dwie liczby, tworzony jest `Wektor2D`, a jeśli trzy — `Wektor3D`. Następnie wypisuje wyniki działań.",
+      "input": "* 1. linia: współrzędne wektora $A$ — dwie albo trzy liczby całkowite oddzielone spacjami\n* 2. linia: współrzędne wektora $B$ — tyle samo liczb całkowitych co dla $A$",
+      "output": "Kolejne linie:\n\n```\nWektor A: <A>\nWektor B: <B>\nSuma wektorów: <A + B>\nRóżnica wektorów A - B: <A - B>\nIloczyn skalarny: <A · B>\nIloczyn wektorowy: <A × B>\nDługość wektora A: <|A|>\nWektory są równe.\n```\n\n* Linię `Iloczyn wektorowy: …` wypisz **tylko** dla wektorów trójwymiarowych.\n* Długość wypisz z dokładnością do 2 miejsc po przecinku.\n* W ostatniej linii wypisz `Wektory są równe.` albo `Wektory są różne.`",
+      "examples": [
         {
-          "input": "",
-          "output": "Wektor A: (-3, -3, -3)\nWektor B: (5, 5, 5)\nSuma wektorów: (2, 2, 2)\nRóżnica wektorów A - B: (-8, -8, -8)\nIloczyn skalarny: -45\nIloczyn wektorowy: (0, 0, 0)"
+          "input": "-3 -3 -3\n5 5 5",
+          "output": "Wektor A: (-3, -3, -3)\nWektor B: (5, 5, 5)\nSuma wektorów: (2, 2, 2)\nRóżnica wektorów A - B: (-8, -8, -8)\nIloczyn skalarny: -45\nIloczyn wektorowy: (0, 0, 0)\nDługość wektora A: 5.20\nWektory są różne.",
+          "explanation": ""
         },
         {
-          "input": "",
-          "output": "Wektor A: (-3, -3, -3)\nWektor B: (5, 5, 5)\nSuma wektorów: (2, 2, 2)\nRóżnica wektorów A - B: (-8, -8, -8)\nIloczyn skalarny: -45\nIloczyn wektorowy: (0, 0, 0)"
+          "input": "3 4\n1 -2",
+          "output": "Wektor A: (3, 4)\nWektor B: (1, -2)\nSuma wektorów: (4, 2)\nRóżnica wektorów A - B: (2, 6)\nIloczyn skalarny: -5\nDługość wektora A: 5.00\nWektory są różne.",
+          "explanation": ""
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "testcases": [
+        {
+          "input": "0 0\n0 0",
+          "output": "Wektor A: (0, 0)\nWektor B: (0, 0)\nSuma wektorów: (0, 0)\nRóżnica wektorów A - B: (0, 0)\nIloczyn skalarny: 0\nDługość wektora A: 0.00\nWektory są równe."
+        },
+        {
+          "input": "1 0 0\n0 1 0",
+          "output": "Wektor A: (1, 0, 0)\nWektor B: (0, 1, 0)\nSuma wektorów: (1, 1, 0)\nRóżnica wektorów A - B: (1, -1, 0)\nIloczyn skalarny: 0\nIloczyn wektorowy: (0, 0, 1)\nDługość wektora A: 1.00\nWektory są różne."
+        },
+        {
+          "input": "2 3 4\n5 6 7",
+          "output": "Wektor A: (2, 3, 4)\nWektor B: (5, 6, 7)\nSuma wektorów: (7, 9, 11)\nRóżnica wektorów A - B: (-3, -3, -3)\nIloczyn skalarny: 56\nIloczyn wektorowy: (-3, 6, -3)\nDługość wektora A: 5.39\nWektory są różne."
+        },
+        {
+          "input": "-2 5\n-2 5",
+          "output": "Wektor A: (-2, 5)\nWektor B: (-2, 5)\nSuma wektorów: (-4, 10)\nRóżnica wektorów A - B: (0, 0)\nIloczyn skalarny: 29\nDługość wektora A: 5.39\nWektory są równe."
+        },
+        {
+          "input": "1 -2 2\n1 -2 2",
+          "output": "Wektor A: (1, -2, 2)\nWektor B: (1, -2, 2)\nSuma wektorów: (2, -4, 4)\nRóżnica wektorów A - B: (0, 0, 0)\nIloczyn skalarny: 9\nIloczyn wektorowy: (0, 0, 0)\nDługość wektora A: 3.00\nWektory są równe."
+        },
+        {
+          "input": "6 -8\n-1 3",
+          "output": "Wektor A: (6, -8)\nWektor B: (-1, 3)\nSuma wektorów: (5, -5)\nRóżnica wektorów A - B: (7, -11)\nIloczyn skalarny: -30\nDługość wektora A: 10.00\nWektory są różne."
+        }
+      ],
+      "constraints": "* Współrzędne są liczbami całkowitymi z przedziału $[-100, 100]$.",
+      "notes": "",
+      "starter_code": "import math\n\n\nclass Wektor2D:\n    def __init__(self, x=0, y=0):\n        # Uzupełnij.\n        pass\n\n    def __add__(self, other):\n        # Uzupełnij: zwróć nowy Wektor2D.\n        pass\n\n    def __sub__(self, other):\n        # Uzupełnij: zwróć nowy Wektor2D.\n        pass\n\n    def iloczyn_skalarny(self, other):\n        # Uzupełnij.\n        pass\n\n    def dlugosc(self):\n        # Uzupełnij.\n        pass\n\n    def __eq__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __str__(self):\n        # Uzupełnij: zwróć napis \"(x, y)\".\n        pass\n\n\nclass Wektor3D:\n    def __init__(self, x=0, y=0, z=0):\n        # Uzupełnij.\n        pass\n\n    def __add__(self, other):\n        # Uzupełnij: zwróć nowy Wektor3D.\n        pass\n\n    def __sub__(self, other):\n        # Uzupełnij: zwróć nowy Wektor3D.\n        pass\n\n    def iloczyn_skalarny(self, other):\n        # Uzupełnij.\n        pass\n\n    def iloczyn_wektorowy(self, other):\n        # Uzupełnij: zwróć nowy Wektor3D.\n        pass\n\n    def dlugosc(self):\n        # Uzupełnij.\n        pass\n\n    def __eq__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __str__(self):\n        # Uzupełnij: zwróć napis \"(x, y, z)\".\n        pass\n\n\ndef wczytaj_wektor():\n    liczby = [int(x) for x in input().split()]\n    if len(liczby) == 2:\n        return Wektor2D(liczby[0], liczby[1])\n    return Wektor3D(liczby[0], liczby[1], liczby[2])\n\n\na = wczytaj_wektor()\nb = wczytaj_wektor()\n\nprint(f\"Wektor A: {a}\")\nprint(f\"Wektor B: {b}\")\nprint(f\"Suma wektorów: {a + b}\")\nprint(f\"Różnica wektorów A - B: {a - b}\")\nprint(f\"Iloczyn skalarny: {a.iloczyn_skalarny(b)}\")\nif isinstance(a, Wektor3D):\n    print(f\"Iloczyn wektorowy: {a.iloczyn_wektorowy(b)}\")\nprint(f\"Długość wektora A: {a.dlugosc():.2f}\")\nif a == b:\n    print(\"Wektory są równe.\")\nelse:\n    print(\"Wektory są różne.\")\n"
     },
     {
       "id": "ZAD-05",
@@ -131,24 +211,52 @@
       "tags": [
         "class",
         "macierze",
-        "operacje"
+        "operatory"
       ],
-      "description": "Zaprojektuj klasę **Macierz**:\n\n1. Konstruktor przyjmuje listę list (domyślnie pusta).\n2. Operacje: dodawanie, odejmowanie, mnożenie.\n3. Metoda wypisująca macierz (wierszami).\n4. Porównania `==` i `!=`.\n\n(Operację odwracania możesz pominąć w tym zadaniu, jeśli nie jest wymagana w sprawdzarce; najczęściej w podstawowych zadaniach nie ma testów na odwracanie.)\n\nProgram tworzy:\n\n* A = [[1, 3], [4, 2]]\n* B = [[5, 0], [1, 3]]\n\nWypisuje A, B, a potem A+B, A-B, A*B.",
-      "input": "Brak.",
-      "output": "Jak w przykładzie.",
-      "examples": [],
-      "testcases": [
+      "description": "Zaprojektuj klasę `Macierz`:\n\n1. Konstruktor `__init__(self, wiersze)` przyjmuje listę wierszy (listę list liczb).\n2. Operatory `+`, `-` i `*` (metody `__add__`, `__sub__`, `__mul__`) zwracają **nową** macierz — sumę, różnicę i iloczyn macierzy. Jeśli działania nie da się wykonać, metoda zwraca `None`:\n   * dodawanie i odejmowanie wymagają macierzy o tych samych wymiarach,\n   * iloczyn $A \\cdot B$ wymaga, by liczba kolumn $A$ była równa liczbie wierszy $B$. Element wyniku to $c_{ij} = \\sum_k a_{ik} b_{kj}$.\n3. Porównanie `==` (metoda `__eq__`) — macierze są równe, gdy mają te same wymiary i te same elementy.\n4. Metoda `__str__()` zwraca macierz jako napis: kolejne wiersze w osobnych liniach, elementy wiersza oddzielone pojedynczą spacją.\n\nProgram wczytuje macierze $A$ i $B$, wypisuje je, a potem wypisuje $A + B$, $A - B$, $A \\cdot B$ i informację, czy macierze są równe.",
+      "input": "* 1. linia: liczby $n$ i $m$ — liczba wierszy i kolumn macierzy $A$\n* kolejne $n$ linii: wiersze macierzy $A$ ($m$ liczb całkowitych oddzielonych spacjami)\n* następna linia: liczby $p$ i $q$ — liczba wierszy i kolumn macierzy $B$\n* kolejne $p$ linii: wiersze macierzy $B$ ($q$ liczb całkowitych oddzielonych spacjami)",
+      "output": "Pięć bloków, każdy zakończony pustą linią, a po nich jedna linia z wynikiem porównania:\n\n```\nMacierz A:\n<A>\n\nMacierz B:\n<B>\n\nSuma macierzy:\n<A + B>\n\nRóżnica macierzy A - B:\n<A - B>\n\nIloczyn macierzy A * B:\n<A * B>\n\nMacierze A i B są równe.\n```\n\n* Jeśli działania nie da się wykonać, zamiast macierzy wypisz w bloku jedną linię: `Niezgodne wymiary.`\n* W ostatniej linii wypisz `Macierze A i B są równe.` albo `Macierze A i B są różne.`",
+      "examples": [
         {
-          "input": "",
-          "output": "Macierz A:\n[1, 3]\n[4, 2]\n\nMacierz B:\n[5, 0]\n[1, 3]\n\nSuma macierzy:\n[6, 3]\n[5, 5]\n\nRóżnica macierzy A - B:\n[-4, 3]\n[3, -1]\n\nIloczyn macierzy A * B:\n[8, 9]\n[22, 12]"
+          "input": "2 2\n1 3\n4 2\n2 2\n5 0\n1 3",
+          "output": "Macierz A:\n1 3\n4 2\n\nMacierz B:\n5 0\n1 3\n\nSuma macierzy:\n6 3\n5 5\n\nRóżnica macierzy A - B:\n-4 3\n3 -1\n\nIloczyn macierzy A * B:\n8 9\n22 6\n\nMacierze A i B są różne.",
+          "explanation": "Na przykład element w drugim wierszu i drugiej kolumnie iloczynu to $4 \\cdot 0 + 2 \\cdot 3 = 6$."
         },
         {
-          "input": "",
-          "output": "Macierz A:\n[1, 3]\n[4, 2]\n\nMacierz B:\n[5, 0]\n[1, 3]\n\nSuma macierzy:\n[6, 3]\n[5, 5]\n\nRóżnica macierzy A - B:\n[-4, 3]\n[3, -1]\n\nIloczyn macierzy A * B:\n[8, 9]\n[22, 12]"
+          "input": "1 2\n1 2\n1 2\n3 4",
+          "output": "Macierz A:\n1 2\n\nMacierz B:\n3 4\n\nSuma macierzy:\n4 6\n\nRóżnica macierzy A - B:\n-2 -2\n\nIloczyn macierzy A * B:\nNiezgodne wymiary.\n\nMacierze A i B są różne.",
+          "explanation": "Macierz $1 \\times 2$ można pomnożyć tylko przez macierz o 2 wierszach."
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "testcases": [
+        {
+          "input": "1 1\n7\n1 1\n-3",
+          "output": "Macierz A:\n7\n\nMacierz B:\n-3\n\nSuma macierzy:\n4\n\nRóżnica macierzy A - B:\n10\n\nIloczyn macierzy A * B:\n-21\n\nMacierze A i B są różne."
+        },
+        {
+          "input": "2 3\n1 2 3\n4 5 6\n2 3\n1 1 1\n0 0 0",
+          "output": "Macierz A:\n1 2 3\n4 5 6\n\nMacierz B:\n1 1 1\n0 0 0\n\nSuma macierzy:\n2 3 4\n4 5 6\n\nRóżnica macierzy A - B:\n0 1 2\n4 5 6\n\nIloczyn macierzy A * B:\nNiezgodne wymiary.\n\nMacierze A i B są różne."
+        },
+        {
+          "input": "2 3\n1 0 2\n-1 3 1\n3 2\n3 1\n2 1\n1 0",
+          "output": "Macierz A:\n1 0 2\n-1 3 1\n\nMacierz B:\n3 1\n2 1\n1 0\n\nSuma macierzy:\nNiezgodne wymiary.\n\nRóżnica macierzy A - B:\nNiezgodne wymiary.\n\nIloczyn macierzy A * B:\n5 1\n4 2\n\nMacierze A i B są różne."
+        },
+        {
+          "input": "2 2\n2 -1\n0 4\n2 2\n2 -1\n0 4",
+          "output": "Macierz A:\n2 -1\n0 4\n\nMacierz B:\n2 -1\n0 4\n\nSuma macierzy:\n4 -2\n0 8\n\nRóżnica macierzy A - B:\n0 0\n0 0\n\nIloczyn macierzy A * B:\n4 -6\n0 16\n\nMacierze A i B są równe."
+        },
+        {
+          "input": "1 3\n1 2 3\n3 1\n4\n5\n6",
+          "output": "Macierz A:\n1 2 3\n\nMacierz B:\n4\n5\n6\n\nSuma macierzy:\nNiezgodne wymiary.\n\nRóżnica macierzy A - B:\nNiezgodne wymiary.\n\nIloczyn macierzy A * B:\n32\n\nMacierze A i B są różne."
+        },
+        {
+          "input": "3 3\n1 0 0\n0 1 0\n0 0 1\n3 3\n1 2 3\n4 5 6\n7 8 9",
+          "output": "Macierz A:\n1 0 0\n0 1 0\n0 0 1\n\nMacierz B:\n1 2 3\n4 5 6\n7 8 9\n\nSuma macierzy:\n2 2 3\n4 6 6\n7 8 10\n\nRóżnica macierzy A - B:\n0 -2 -3\n-4 -4 -6\n-7 -8 -8\n\nIloczyn macierzy A * B:\n1 2 3\n4 5 6\n7 8 9\n\nMacierze A i B są różne."
+        }
+      ],
+      "constraints": "* $1 \\le n, m, p, q \\le 5$\n* Elementy macierzy są liczbami całkowitymi z przedziału $[-100, 100]$.",
+      "notes": "",
+      "starter_code": "class Macierz:\n    def __init__(self, wiersze):\n        # Uzupełnij: zapamiętaj wiersze (listę list liczb).\n        pass\n\n    def __add__(self, other):\n        # Uzupełnij: zwróć nową Macierz albo None przy niezgodnych wymiarach.\n        pass\n\n    def __sub__(self, other):\n        # Uzupełnij: zwróć nową Macierz albo None przy niezgodnych wymiarach.\n        pass\n\n    def __mul__(self, other):\n        # Uzupełnij: zwróć nową Macierz albo None przy niezgodnych wymiarach.\n        pass\n\n    def __eq__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __str__(self):\n        # Uzupełnij: wiersze w osobnych liniach, elementy oddzielone spacją.\n        pass\n\n\ndef wczytaj_macierz():\n    n, m = [int(x) for x in input().split()]\n    wiersze = []\n    for _ in range(n):\n        wiersze.append([int(x) for x in input().split()])\n    return Macierz(wiersze)\n\n\ndef wypisz_blok(naglowek, macierz):\n    print(naglowek)\n    if macierz is None:\n        print(\"Niezgodne wymiary.\")\n    else:\n        print(macierz)\n    print()\n\n\na = wczytaj_macierz()\nb = wczytaj_macierz()\n\nwypisz_blok(\"Macierz A:\", a)\nwypisz_blok(\"Macierz B:\", b)\nwypisz_blok(\"Suma macierzy:\", a + b)\nwypisz_blok(\"Różnica macierzy A - B:\", a - b)\nwypisz_blok(\"Iloczyn macierzy A * B:\", a * b)\nif a == b:\n    print(\"Macierze A i B są równe.\")\nelse:\n    print(\"Macierze A i B są różne.\")\n"
     },
     {
       "id": "ZAD-06",
@@ -158,25 +266,44 @@
       "difficulty_display": "★★☆",
       "tags": [
         "class",
-        "operacje",
+        "operatory",
         "math"
       ],
-      "description": "Zaprojektuj klasę **LiczbaZespolona**:\n\n* konstruktor `(re=0, im=0)`,\n* dodawanie, odejmowanie, mnożenie, dzielenie,\n* porównania,\n* moduł,\n* wypisywanie w formacie `a + bi` lub `a - bi` (z zachowaniem znaku).\n\nProgram tworzy:\n\n* A = 9 + 12i\n* B = -3 - 3i\n\nWypisuje A, B oraz: sumę, różnicę A-B, iloczyn i iloraz A/B.",
-      "input": "Brak.",
-      "output": "Jak w przykładzie.",
-      "examples": [],
-      "testcases": [
+      "description": "Zaprojektuj klasę `LiczbaZespolona` opisującą liczbę zespoloną $a + bi$:\n\n* konstruktor `__init__(self, re=0, im=0)` — część rzeczywista i urojona,\n* operatory `+`, `-`, `*`, `/` (metody `__add__`, `__sub__`, `__mul__`, `__truediv__`) zwracające nową liczbę zespoloną:\n  * $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$,\n  * $\\frac{a + bi}{c + di} = \\frac{ac + bd}{c^2 + d^2} + \\frac{bc - ad}{c^2 + d^2}i$ (dzielnik jest różny od zera),\n* porównanie `==` (metoda `__eq__`) — liczby są równe, gdy mają równe części rzeczywiste i urojone,\n* metodę `modul()` zwracającą moduł liczby: $|a + bi| = \\sqrt{a^2 + b^2}$,\n* metodę `__str__()` zwracającą napis `a + bi` albo `a - bi` (gdy część urojona jest ujemna, wypisz minus i jej wartość bezwzględną). Obie części wypisz z dokładnością do 2 miejsc po przecinku, np. `9.00 + 12.00i`, `-3.00 - 3.00i`.\n\nProgram wczytuje liczby $A$ i $B$ i wypisuje wyniki działań.",
+      "input": "* 1. linia: dwie liczby całkowite — część rzeczywista i urojona liczby $A$\n* 2. linia: dwie liczby całkowite — część rzeczywista i urojona liczby $B$",
+      "output": "Osiem linii:\n\n```\nLiczba A: <A>\nLiczba B: <B>\nSuma: <A + B>\nRóżnica A - B: <A - B>\nIloczyn: <A * B>\nIloraz A / B: <A / B>\nModuł liczby A: <|A|>\nLiczby są równe.\n```\n\n* Jeśli $B = 0 + 0i$, zamiast ilorazu wypisz `Iloraz A / B: nie można dzielić przez zero`.\n* Moduł wypisz z dokładnością do 2 miejsc po przecinku.\n* W ostatniej linii wypisz `Liczby są równe.` albo `Liczby są różne.`",
+      "examples": [
         {
-          "input": "",
-          "output": "Liczba A: 9 + 12i\nLiczba B: -3 - 3i\n\nSuma: 6 + 9i\nRóżnica A - B: 12 + 15i\nIloczyn: 27 + 63i\nIloraz A / B: -3.5 + 0.5i"
-        },
-        {
-          "input": "",
-          "output": "Liczba A: 9 + 12i\nLiczba B: -3 - 3i\n\nSuma: 6 + 9i\nRóżnica A - B: 12 + 15i\nIloczyn: 27 + 63i\nIloraz A / B: -3.5 + 0.5i"
+          "input": "9 12\n-3 -3",
+          "output": "Liczba A: 9.00 + 12.00i\nLiczba B: -3.00 - 3.00i\nSuma: 6.00 + 9.00i\nRóżnica A - B: 12.00 + 15.00i\nIloczyn: 9.00 - 63.00i\nIloraz A / B: -3.50 - 0.50i\nModuł liczby A: 15.00\nLiczby są różne.",
+          "explanation": "Iloczyn: $(9 + 12i)(-3 - 3i) = (-27 + 36) + (-27 - 36)i = 9 - 63i$."
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "testcases": [
+        {
+          "input": "1 1\n1 1",
+          "output": "Liczba A: 1.00 + 1.00i\nLiczba B: 1.00 + 1.00i\nSuma: 2.00 + 2.00i\nRóżnica A - B: 0.00 + 0.00i\nIloczyn: 0.00 + 2.00i\nIloraz A / B: 1.00 + 0.00i\nModuł liczby A: 1.41\nLiczby są równe."
+        },
+        {
+          "input": "3 4\n0 0",
+          "output": "Liczba A: 3.00 + 4.00i\nLiczba B: 0.00 + 0.00i\nSuma: 3.00 + 4.00i\nRóżnica A - B: 3.00 + 4.00i\nIloczyn: 0.00 + 0.00i\nIloraz A / B: nie można dzielić przez zero\nModuł liczby A: 5.00\nLiczby są różne."
+        },
+        {
+          "input": "0 0\n2 -1",
+          "output": "Liczba A: 0.00 + 0.00i\nLiczba B: 2.00 - 1.00i\nSuma: 2.00 - 1.00i\nRóżnica A - B: -2.00 + 1.00i\nIloczyn: 0.00 + 0.00i\nIloraz A / B: 0.00 + 0.00i\nModuł liczby A: 0.00\nLiczby są różne."
+        },
+        {
+          "input": "5 -2\n-1 3",
+          "output": "Liczba A: 5.00 - 2.00i\nLiczba B: -1.00 + 3.00i\nSuma: 4.00 + 1.00i\nRóżnica A - B: 6.00 - 5.00i\nIloczyn: 1.00 + 17.00i\nIloraz A / B: -1.10 - 1.30i\nModuł liczby A: 5.39\nLiczby są różne."
+        },
+        {
+          "input": "-4 0\n0 2",
+          "output": "Liczba A: -4.00 + 0.00i\nLiczba B: 0.00 + 2.00i\nSuma: -4.00 + 2.00i\nRóżnica A - B: -4.00 - 2.00i\nIloczyn: 0.00 - 8.00i\nIloraz A / B: 0.00 + 2.00i\nModuł liczby A: 4.00\nLiczby są różne."
+        }
+      ],
+      "constraints": "* Części rzeczywiste i urojone są liczbami całkowitymi z przedziału $[-100, 100]$.",
+      "notes": "",
+      "starter_code": "import math\n\n\nclass LiczbaZespolona:\n    def __init__(self, re=0, im=0):\n        # Uzupełnij.\n        pass\n\n    def __add__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __sub__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __mul__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __truediv__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __eq__(self, other):\n        # Uzupełnij.\n        pass\n\n    def modul(self):\n        # Uzupełnij.\n        pass\n\n    def __str__(self):\n        # Uzupełnij: zwróć napis \"a + bi\" albo \"a - bi\".\n        pass\n\n\nre, im = input().split()\na = LiczbaZespolona(int(re), int(im))\nre, im = input().split()\nb = LiczbaZespolona(int(re), int(im))\n\nprint(f\"Liczba A: {a}\")\nprint(f\"Liczba B: {b}\")\nprint(f\"Suma: {a + b}\")\nprint(f\"Różnica A - B: {a - b}\")\nprint(f\"Iloczyn: {a * b}\")\nif b == LiczbaZespolona(0, 0):\n    print(\"Iloraz A / B: nie można dzielić przez zero\")\nelse:\n    print(f\"Iloraz A / B: {a / b}\")\nprint(f\"Moduł liczby A: {a.modul():.2f}\")\nif a == b:\n    print(\"Liczby są równe.\")\nelse:\n    print(\"Liczby są różne.\")\n"
     },
     {
       "id": "ZAD-07",
@@ -188,22 +315,231 @@
         "class",
         "static"
       ],
-      "description": "Zaprojektuj klasę **MojaKlasa**, która zlicza ile instancji utworzono:\n\n* prywatne pole statyczne licznik,\n* konstruktor zwiększa licznik,\n* metoda statyczna zwraca licznik.\n\nProgram tworzy np. 3 obiekty i wypisuje liczbę instancji.",
-      "input": "Brak.",
-      "output": "Jedna linia.",
-      "examples": [],
-      "testcases": [
+      "description": "Zaprojektuj klasę `MojaKlasa`, która sama zlicza, ile jej obiektów (instancji) utworzono:\n\n* atrybut klasy (wspólny dla wszystkich obiektów) `_licznik`, początkowo równy 0 — podkreślenie na początku nazwy oznacza, że jest to pole „prywatne”, którego nie należy zmieniać spoza klasy,\n* konstruktor zwiększa licznik o 1 i zapisuje w atrybucie obiektu `numer` numer nowego obiektu (pierwszy utworzony obiekt ma numer 1),\n* metoda statyczna `liczba_instancji()` zwraca liczbę dotychczas utworzonych obiektów.\n\nProgram wykonuje polecenia:\n\n* `nowy` — tworzy nowy obiekt `MojaKlasa` i wypisuje `Utworzono obiekt nr <numer>.`\n* `ile` — wypisuje `Liczba utworzonych instancji: <liczba>`",
+      "input": "* 1. linia: liczba poleceń $n$\n* kolejne $n$ linii: polecenie `nowy` albo `ile`",
+      "output": "Po jednej linii dla każdego polecenia, w formacie opisanym w treści.",
+      "examples": [
         {
-          "input": "",
-          "output": "Liczba utworzonych instancji: 3"
-        },
-        {
-          "input": "",
-          "output": "Liczba utworzonych instancji: 3"
+          "input": "5\nnowy\nnowy\nile\nnowy\nile",
+          "output": "Utworzono obiekt nr 1.\nUtworzono obiekt nr 2.\nLiczba utworzonych instancji: 2\nUtworzono obiekt nr 3.\nLiczba utworzonych instancji: 3",
+          "explanation": ""
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "testcases": [
+        {
+          "input": "1\nile",
+          "output": "Liczba utworzonych instancji: 0"
+        },
+        {
+          "input": "1\nnowy",
+          "output": "Utworzono obiekt nr 1."
+        },
+        {
+          "input": "4\nnowy\nnowy\nnowy\nile",
+          "output": "Utworzono obiekt nr 1.\nUtworzono obiekt nr 2.\nUtworzono obiekt nr 3.\nLiczba utworzonych instancji: 3"
+        },
+        {
+          "input": "6\nile\nnowy\nile\nnowy\nnowy\nile",
+          "output": "Liczba utworzonych instancji: 0\nUtworzono obiekt nr 1.\nLiczba utworzonych instancji: 1\nUtworzono obiekt nr 2.\nUtworzono obiekt nr 3.\nLiczba utworzonych instancji: 3"
+        },
+        {
+          "input": "3\nnowy\nile\nile",
+          "output": "Utworzono obiekt nr 1.\nLiczba utworzonych instancji: 1\nLiczba utworzonych instancji: 1"
+        }
+      ],
+      "constraints": "* $1 \\le n \\le 100$",
+      "notes": "* Do atrybutu klasy odwołuj się przez nazwę klasy: `MojaKlasa._licznik`. Zapis `self._licznik += 1` utworzyłby osobny atrybut w każdym obiekcie i licznik nie byłby wspólny.",
+      "starter_code": "class MojaKlasa:\n    _licznik = 0\n\n    def __init__(self):\n        # Uzupełnij: zwiększ licznik klasy i zapamiętaj numer obiektu w self.numer.\n        pass\n\n    @staticmethod\n    def liczba_instancji():\n        # Uzupełnij: zwróć liczbę utworzonych obiektów.\n        pass\n\n\nn = int(input())\nobiekty = []\nfor _ in range(n):\n    polecenie = input()\n    if polecenie == \"nowy\":\n        obiekt = MojaKlasa()\n        obiekty.append(obiekt)\n        print(f\"Utworzono obiekt nr {obiekt.numer}.\")\n    elif polecenie == \"ile\":\n        print(f\"Liczba utworzonych instancji: {MojaKlasa.liczba_instancji()}\")\n"
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "18_klasy/ZAD-08",
+      "title": "Konto bankowe",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "class",
+        "wyjątki",
+        "try-except"
+      ],
+      "description": "Zaprojektuj klasę `KontoBankowe`:\n\n* konstruktor `__init__(self, saldo=0)` zapamiętuje saldo początkowe w atrybucie `saldo`,\n* metoda `wplac(kwota)` zwiększa saldo o `kwota`. Jeśli $kwota \\le 0$, metoda zgłasza wyjątek `ValueError(\"Kwota musi być dodatnia.\")` i nie zmienia salda,\n* metoda `wyplac(kwota)` zmniejsza saldo o `kwota`. Najpierw sprawdza, czy $kwota \\le 0$ — wtedy zgłasza `ValueError(\"Kwota musi być dodatnia.\")`, a następnie, czy kwota nie przekracza salda — jeśli przekracza, zgłasza `ValueError(\"Brak środków na koncie.\")`. W obu przypadkach saldo się nie zmienia.\n\nMetody **nie wypisują** komunikatów o błędach — tylko zgłaszają wyjątki. Wyjątki przechwytuje program główny (`try`/`except`) i wypisuje komunikat błędu.\n\nProgram tworzy konto z podanym saldem początkowym i wykonuje kolejne polecenia:\n\n* `wplac K` — wpłaca kwotę $K$ i wypisuje `Wpłacono K. Saldo: S`,\n* `wyplac K` — wypłaca kwotę $K$ i wypisuje `Wypłacono K. Saldo: S`,\n* `saldo` — wypisuje `Saldo: S`,\n\ngdzie $S$ to saldo po wykonaniu polecenia. Jeśli metoda zgłosi wyjątek, program zamiast tego wypisuje `Błąd: <komunikat wyjątku>`.",
+      "input": "* 1. linia: saldo początkowe — liczba całkowita $\\ge 0$\n* 2. linia: liczba poleceń $n$\n* kolejne $n$ linii: polecenie `wplac K`, `wyplac K` albo `saldo` ($K$ — liczba całkowita, może być ujemna lub równa 0)",
+      "output": "$n$ linii — po jednej dla każdego polecenia, w formacie opisanym w treści.",
+      "examples": [
+        {
+          "input": "100\n5\nwplac 50\nwyplac 30\nwyplac 500\nwplac -20\nsaldo",
+          "output": "Wpłacono 50. Saldo: 150\nWypłacono 30. Saldo: 120\nBłąd: Brak środków na koncie.\nBłąd: Kwota musi być dodatnia.\nSaldo: 120",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0\n1\nsaldo",
+          "output": "Saldo: 0"
+        },
+        {
+          "input": "0\n2\nwyplac 1\nwplac 0",
+          "output": "Błąd: Brak środków na koncie.\nBłąd: Kwota musi być dodatnia."
+        },
+        {
+          "input": "50\n3\nwyplac 50\nsaldo\nwyplac 0",
+          "output": "Wypłacono 50. Saldo: 0\nSaldo: 0\nBłąd: Kwota musi być dodatnia."
+        },
+        {
+          "input": "1000\n6\nwplac 250\nwyplac 1250\nwyplac 1\nwplac 1\nwyplac -5\nsaldo",
+          "output": "Wpłacono 250. Saldo: 1250\nWypłacono 1250. Saldo: 0\nBłąd: Brak środków na koncie.\nWpłacono 1. Saldo: 1\nBłąd: Kwota musi być dodatnia.\nSaldo: 1"
+        },
+        {
+          "input": "20\n4\nwyplac 25\nwplac 5\nwyplac 25\nsaldo",
+          "output": "Błąd: Brak środków na koncie.\nWpłacono 5. Saldo: 25\nWypłacono 25. Saldo: 0\nSaldo: 0"
+        }
+      ],
+      "constraints": "* $1 \\le n \\le 100$\n* $-10^6 \\le K \\le 10^6$, saldo początkowe nie przekracza $10^6$",
+      "notes": "* Instrukcja `raise` zgłasza wyjątek i natychmiast przerywa działanie metody. Kod, który wywołał metodę, może wyjątek przechwycić w bloku `try`/`except`; zapis `except ValueError as e` daje dostęp do obiektu wyjątku, a `str(e)` (lub `{e}` w f-stringu) to jego komunikat:\n\n  ```python\n  def pierwiastek(x):\n      if x < 0:\n          raise ValueError(\"Liczba nie może być ujemna.\")\n      return x ** 0.5\n\n  try:\n      print(pierwiastek(-4))\n  except ValueError as e:\n      print(f\"Błąd: {e}\")      # Błąd: Liczba nie może być ujemna.\n  ```\n\n* Dzięki temu klasa tylko **sygnalizuje** problem, a o tym, co z nim zrobić (wypisać komunikat, zapytać ponownie, przerwać program), decyduje kod, który z niej korzysta.",
+      "starter_code": "class KontoBankowe:\n    def __init__(self, saldo=0):\n        # Uzupełnij.\n        pass\n\n    def wplac(self, kwota):\n        # Uzupełnij: dla kwoty <= 0 zgłoś ValueError(\"Kwota musi być dodatnia.\").\n        pass\n\n    def wyplac(self, kwota):\n        # Uzupełnij: zgłoś ValueError przy kwocie <= 0 albo przy braku środków.\n        pass\n\n\nkonto = KontoBankowe(int(input()))\nn = int(input())\nfor _ in range(n):\n    czesci = input().split()\n    polecenie = czesci[0]\n    # Uzupełnij: wykonaj polecenie i wypisz wynik.\n    # Wywołania wplac/wyplac umieść w bloku try, a błąd obsłuż w except ValueError.\n"
+    },
+    {
+      "id": "ZAD-09",
+      "slug": "18_klasy/ZAD-09",
+      "title": "Klasa Ułamek",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "class",
+        "operatory",
+        "NWD",
+        "sortowanie"
+      ],
+      "description": "Zaprojektuj klasę `Ulamek` opisującą ułamek zwykły $\\frac{a}{b}$:\n\n* Konstruktor `__init__(self, licznik, mianownik=1)` od razu **normalizuje** ułamek:\n  * skraca go przez $\\text{NWD}(|a|, |b|)$ (funkcja `math.gcd`),\n  * przenosi znak do licznika — mianownik jest zawsze dodatni (np. $\\frac{3}{-6}$ zapisujemy jako $-\\frac{1}{2}$),\n  * zero zapisujemy jako $\\frac{0}{1}$.\n* Operatory `+`, `-`, `*`, `/` (metody `__add__`, `__sub__`, `__mul__`, `__truediv__`) zwracają nowy, znormalizowany ułamek (dzielnik w `/` jest różny od zera):\n  $\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + cb}{bd}$, $\\frac{a}{b} \\cdot \\frac{c}{d} = \\frac{ac}{bd}$, $\\frac{a}{b} : \\frac{c}{d} = \\frac{ad}{bc}$.\n* Porównania `==` (`__eq__`) i `<` (`__lt__`): $\\frac{a}{b} < \\frac{c}{d}$ wtedy i tylko wtedy, gdy $ad < cb$ (mianowniki są dodatnie).\n* Metoda `__str__()` zwraca `a/b`, np. `-3/4`, a gdy mianownik jest równy 1 — samą liczbę całkowitą, np. `3`, `-2`, `0`.\n\nProgram wczytuje listę ułamków i wypisuje:\n\n1. ułamki posortowane rosnąco (`sorted()` porównuje elementy operatorem `<`, czyli Twoją metodą `__lt__`),\n2. ich sumę,\n3. ich iloczyn,\n4. ich średnią arytmetyczną (sumę podzieloną przez `Ulamek(n)`),\n5. różnicę między największym a najmniejszym ułamkiem,\n6. liczbę różnych wartości (operator `in` porównuje elementy operatorem `==`, czyli Twoją metodą `__eq__`).",
+      "input": "* 1. linia: liczba ułamków $n$\n* 2. linia: $n$ ułamków w postaci `a/b` oddzielonych spacjami ($a$, $b$ — liczby całkowite, $b \\ne 0$, mogą być ujemne)",
+      "output": "Sześć linii:\n\n```\nPosortowane: <ułamki oddzielone spacjami>\nSuma: <suma>\nIloczyn: <iloczyn>\nŚrednia: <średnia>\nNajwiększy - najmniejszy: <różnica>\nLiczba różnych wartości: <liczba>\n```\n\nWszystkie ułamki wypisz w postaci znormalizowanej (jak w metodzie `__str__`).",
+      "examples": [
+        {
+          "input": "5\n1/2 3/4 -2/8 6/4 2/4",
+          "output": "Posortowane: -1/4 1/2 1/2 3/4 3/2\nSuma: 3\nIloczyn: -9/128\nŚrednia: 3/5\nNajwiększy - najmniejszy: 7/4\nLiczba różnych wartości: 4",
+          "explanation": "Po normalizacji ułamki to $\\frac{1}{2}, \\frac{3}{4}, -\\frac{1}{4}, \\frac{3}{2}, \\frac{1}{2}$. Ich suma to $3$, a średnia $\\frac{3}{5}$. Ułamki $\\frac{1}{2}$ i $\\frac{2}{4}$ są równe, więc różnych wartości są 4."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n4/8",
+          "output": "Posortowane: 1/2\nSuma: 1/2\nIloczyn: 1/2\nŚrednia: 1/2\nNajwiększy - najmniejszy: 0\nLiczba różnych wartości: 1"
+        },
+        {
+          "input": "2\n3/-6 0/5",
+          "output": "Posortowane: -1/2 0\nSuma: -1/2\nIloczyn: 0\nŚrednia: -1/4\nNajwiększy - najmniejszy: 1/2\nLiczba różnych wartości: 2"
+        },
+        {
+          "input": "3\n2/3 4/6 -6/-9",
+          "output": "Posortowane: 2/3 2/3 2/3\nSuma: 2\nIloczyn: 8/27\nŚrednia: 2/3\nNajwiększy - najmniejszy: 0\nLiczba różnych wartości: 1"
+        },
+        {
+          "input": "4\n7/1 -5/2 1/3 -1/6",
+          "output": "Posortowane: -5/2 -1/6 1/3 7\nSuma: 14/3\nIloczyn: 35/36\nŚrednia: 7/6\nNajwiększy - najmniejszy: 19/2\nLiczba różnych wartości: 4"
+        },
+        {
+          "input": "6\n1/2 1/3 1/6 -1/2 -1/3 -1/6",
+          "output": "Posortowane: -1/2 -1/3 -1/6 1/6 1/3 1/2\nSuma: 0\nIloczyn: -1/1296\nŚrednia: 0\nNajwiększy - najmniejszy: 1\nLiczba różnych wartości: 6"
+        }
+      ],
+      "constraints": "* $1 \\le n \\le 10$\n* $-100 \\le a, b \\le 100$, $b \\ne 0$",
+      "notes": "* `math.gcd(a, b)` zwraca NWD wartości bezwzględnych argumentów, np. `math.gcd(-6, 9) == 3`, `math.gcd(0, 5) == 5`.\n* Używaj dzielenia całkowitego `//` — licznik i mianownik mają pozostać liczbami całkowitymi.",
+      "starter_code": "import math\n\n\nclass Ulamek:\n    def __init__(self, licznik, mianownik=1):\n        # Uzupełnij: zapamiętaj ułamek w postaci znormalizowanej.\n        pass\n\n    def __add__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __sub__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __mul__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __truediv__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __eq__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __lt__(self, other):\n        # Uzupełnij.\n        pass\n\n    def __str__(self):\n        # Uzupełnij: \"a/b\" albo sama liczba całkowita, gdy mianownik == 1.\n        pass\n\n\nn = int(input())\nulamki = []\nfor tekst in input().split():\n    a, b = tekst.split(\"/\")\n    ulamki.append(Ulamek(int(a), int(b)))\n\nposortowane = sorted(ulamki)\nsuma = Ulamek(0)\niloczyn = Ulamek(1)\nfor u in ulamki:\n    suma = suma + u\n    iloczyn = iloczyn * u\nrozne = []\nfor u in ulamki:\n    if u not in rozne:\n        rozne.append(u)\n\nprint(\"Posortowane:\", \" \".join(str(u) for u in posortowane))\nprint(f\"Suma: {suma}\")\nprint(f\"Iloczyn: {iloczyn}\")\nprint(f\"Średnia: {suma / Ulamek(n)}\")\nprint(f\"Największy - najmniejszy: {posortowane[-1] - posortowane[0]}\")\nprint(f\"Liczba różnych wartości: {len(rozne)}\")\n"
+    },
+    {
+      "id": "ZAD-10",
+      "slug": "18_klasy/ZAD-10",
+      "title": "Koszyk zakupów (dataclass)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "dataclass",
+        "class",
+        "formatowanie"
+      ],
+      "description": "Zaprojektuj dwie **klasy danych** (`@dataclass`):\n\n* `Produkt` z polami `nazwa: str`, `cena: float`, `ilosc: int` oraz metodą `wartosc()`, która zwraca $cena \\cdot ilosc$.\n* `Koszyk` z polem `produkty: list`, które domyślnie jest pustą listą (`field(default_factory=list)`), oraz metodami:\n  * `dodaj(produkt)` — jeśli w koszyku jest już produkt o tej samej nazwie, zwiększa jego ilość o `produkt.ilosc`; w przeciwnym razie dopisuje produkt na koniec listy,\n  * `suma()` — zwraca łączną wartość wszystkich produktów,\n  * `wypisz_paragon()` — wypisuje paragon (format poniżej).\n\nProgram wczytuje kolejne pozycje zakupów, dodaje je do koszyka i wypisuje paragon.",
+      "input": "* 1. linia: liczba pozycji $n$\n* kolejne $n$ linii: `nazwa cena ilosc` — nazwa produktu (bez spacji), cena (liczba rzeczywista z co najwyżej 2 miejscami po przecinku) i ilość (liczba całkowita), oddzielone spacjami",
+      "output": "* Dla każdego produktu w koszyku (w kolejności pierwszego pojawienia się na wejściu) jedna linia, w której kolejno:\n  * nazwa wyrównana do **lewej** w polu o szerokości 10 znaków,\n  * spacja i ilość wyrównana do **prawej** w polu o szerokości 3,\n  * ` x ` i cena z 2 miejscami po przecinku, wyrównana do prawej w polu o szerokości 7,\n  * ` = ` i wartość z 2 miejscami po przecinku, wyrównana do prawej w polu o szerokości 8.\n* Linia złożona z 35 znaków `-`.\n* Linia `Razem: <suma>` (suma z 2 miejscami po przecinku).",
+      "examples": [
+        {
+          "input": "5\nchleb 3.50 2\nmleko 2.99 3\nser 12.00 1\nchleb 3.50 1\njajka 0.89 10",
+          "output": "chleb        3 x    3.50 =    10.50\nmleko        3 x    2.99 =     8.97\nser          1 x   12.00 =    12.00\njajka       10 x    0.89 =     8.90\n-----------------------------------\nRazem: 40.37",
+          "explanation": "Dwie pozycje `chleb` zostały scalone w jedną (2 + 1 = 3 sztuki)."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\nwoda 1.99 1",
+          "output": "woda         1 x    1.99 =     1.99\n-----------------------------------\nRazem: 1.99"
+        },
+        {
+          "input": "3\nkawa 24.99 1\nkawa 24.99 2\nkawa 24.99 3",
+          "output": "kawa         6 x   24.99 =   149.94\n-----------------------------------\nRazem: 149.94"
+        },
+        {
+          "input": "4\nbanan 0.50 6\njablko 0.75 4\nbanan 0.50 6\ngruszka 1.20 5",
+          "output": "banan       12 x    0.50 =     6.00\njablko       4 x    0.75 =     3.00\ngruszka      5 x    1.20 =     6.00\n-----------------------------------\nRazem: 15.00"
+        },
+        {
+          "input": "3\nczekolada 4.49 2\nmasło 7.99 1\nczekolada 4.49 1",
+          "output": "czekolada    3 x    4.49 =    13.47\nmasło        1 x    7.99 =     7.99\n-----------------------------------\nRazem: 21.46"
+        },
+        {
+          "input": "2\ntelewizor 999.99 99\nkabel 15.00 2",
+          "output": "telewizor   99 x  999.99 = 98999.01\nkabel        2 x   15.00 =    30.00\n-----------------------------------\nRazem: 99029.01"
+        }
+      ],
+      "constraints": "* $1 \\le n \\le 20$\n* Nazwa ma od 1 do 10 znaków. Produkty o tej samej nazwie mają zawsze tę samą cenę.\n* $0.01 \\le cena \\le 999.99$, $1 \\le ilosc$, a łączna ilość każdego produktu w koszyku nie przekracza 99.",
+      "notes": "* Dekorator `@dataclass` (z modułu `dataclasses`) sam tworzy konstruktor `__init__`, metodę `__repr__` i porównanie `__eq__` na podstawie pól zapisanych z adnotacją typu:\n\n  ```python\n  from dataclasses import dataclass\n\n  @dataclass\n  class Punkt:\n      x: int\n      y: int = 0\n\n  p = Punkt(3)\n  print(p)                  # Punkt(x=3, y=0)\n  print(p == Punkt(3, 0))   # True\n  ```\n\n* Pole z listą nie może mieć wartości domyślnej `[]` — taka jedna lista byłaby **wspólna** dla wszystkich obiektów klasy (dlatego `@dataclass` zgłasza wtedy błąd). `field(default_factory=list)` sprawia, że każdy nowy obiekt dostaje **własną**, nową pustą listę.\n* Szerokość pola i wyrównanie ustawisz w f-stringu: `f\"{tekst:<10}\"` (do lewej, 10 znaków), `f\"{liczba:>3}\"` (do prawej, 3 znaki), `f\"{x:>8.2f}\"` (do prawej, 8 znaków, 2 miejsca po przecinku).",
+      "starter_code": "from dataclasses import dataclass, field\n\n\n@dataclass\nclass Produkt:\n    nazwa: str\n    cena: float\n    ilosc: int\n\n    def wartosc(self):\n        # Uzupełnij.\n        pass\n\n\n@dataclass\nclass Koszyk:\n    produkty: list = field(default_factory=list)\n\n    def dodaj(self, produkt):\n        # Uzupełnij: scal z produktem o tej samej nazwie albo dopisz na koniec.\n        pass\n\n    def suma(self):\n        # Uzupełnij.\n        pass\n\n    def wypisz_paragon(self):\n        # Uzupełnij.\n        pass\n\n\nkoszyk = Koszyk()\nn = int(input())\nfor _ in range(n):\n    nazwa, cena, ilosc = input().split()\n    koszyk.dodaj(Produkt(nazwa, float(cena), int(ilosc)))\nkoszyk.wypisz_paragon()\n"
+    },
+    {
+      "id": "ZAD-11",
+      "slug": "18_klasy/ZAD-11",
+      "title": "Własny zakres iterowalny",
+      "difficulty": 3,
+      "difficulty_display": "★★★",
+      "tags": [
+        "class",
+        "iterator",
+        "generator",
+        "yield"
+      ],
+      "description": "Zaprojektuj klasę `Zakres` — własny odpowiednik wbudowanej funkcji `range()` — po której obiektach można iterować pętlą `for`:\n\n* Konstruktor `__init__(self, start, stop, krok=1)` zapamiętuje parametry. Jeśli `krok` jest równy 0, zgłasza wyjątek `ValueError(\"Krok nie może być równy 0.\")`.\n* Metoda `__iter__()` jest **generatorem** — kolejne elementy zwraca instrukcją `yield`:\n  * dla kroku dodatniego: $start, start + krok, start + 2 \\cdot krok, \\dots$ — dopóki element jest **mniejszy** od $stop$,\n  * dla kroku ujemnego: $start, start + krok, \\dots$ — dopóki element jest **większy** od $stop$.\n\nNie używaj w klasie wbudowanej funkcji `range()` — kolejne elementy wylicz samodzielnie.\n\nProgram dla każdego zapytania `start stop krok` tworzy obiekt `Zakres` i wypisuje jego elementy oraz ich sumę. Każde przejście pętlą `for` (a także wywołanie `sum()`) uruchamia generator od nowa, więc po jednym obiekcie można iterować wiele razy.",
+      "input": "* 1. linia: liczba zapytań $q$\n* kolejne $q$ linii: trzy liczby całkowite `start stop krok` oddzielone spacjami",
+      "output": "Dla każdego zapytania jedna linia:\n\n* `<elementy oddzielone spacjami> (suma: <suma>)`,\n* `pusty (suma: 0)` — jeśli zakres nie zawiera żadnego elementu,\n* `Błąd: Krok nie może być równy 0.` — jeśli konstruktor zgłosił wyjątek.",
+      "examples": [
+        {
+          "input": "4\n1 10 2\n10 0 -3\n5 5 1\n0 5 0",
+          "output": "1 3 5 7 9 (suma: 25)\n10 7 4 1 (suma: 22)\npusty (suma: 0)\nBłąd: Krok nie może być równy 0.",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n0 1 1",
+          "output": "0 (suma: 0)"
+        },
+        {
+          "input": "2\n-5 5 5\n3 -3 -2",
+          "output": "-5 0 (suma: -5)\n3 1 -1 (suma: 3)"
+        },
+        {
+          "input": "3\n1 5 -1\n7 7 -1\n0 -4 0",
+          "output": "pusty (suma: 0)\npusty (suma: 0)\nBłąd: Krok nie może być równy 0."
+        },
+        {
+          "input": "2\n0 20 7\n-1 -10 -4",
+          "output": "0 7 14 (suma: 21)\n-1 -5 -9 (suma: -15)"
+        },
+        {
+          "input": "1\n100 0 -25",
+          "output": "100 75 50 25 (suma: 250)"
+        }
+      ],
+      "constraints": "* $1 \\le q \\le 20$\n* $-1000 \\le start, stop, krok \\le 1000$",
+      "notes": "* Pętla `for x in obiekt:` wywołuje najpierw `iter(obiekt)`, czyli metodę `obiekt.__iter__()`, a potem pobiera z otrzymanego iteratora kolejne elementy.\n* Funkcja (lub metoda), która zawiera `yield`, jest **generatorem**: jej wywołanie nie wykonuje od razu kodu, tylko zwraca iterator. Każde `yield` „oddaje” jeden element i wstrzymuje funkcję do czasu, aż pętla poprosi o następny:\n\n  ```python\n  def odliczanie(n):\n      while n > 0:\n          yield n\n          n -= 1\n\n  for x in odliczanie(3):\n      print(x)        # 3, 2, 1 (w osobnych liniach)\n  ```\n\n* Wyjątek zgłoszony w konstruktorze przechwytuje program główny w bloku `try`/`except` (zob. zadanie „Konto bankowe”).",
+      "starter_code": "class Zakres:\n    def __init__(self, start, stop, krok=1):\n        # Uzupełnij: dla krok == 0 zgłoś ValueError(\"Krok nie może być równy 0.\").\n        pass\n\n    def __iter__(self):\n        # Uzupełnij: zwracaj kolejne elementy instrukcją yield.\n        pass\n\n\nq = int(input())\nfor _ in range(q):\n    start, stop, krok = [int(x) for x in input().split()]\n    try:\n        zakres = Zakres(start, stop, krok)\n    except ValueError as e:\n        print(f\"Błąd: {e}\")\n        continue\n    elementy = [str(x) for x in zakres]\n    if elementy:\n        tekst = \" \".join(elementy)\n    else:\n        tekst = \"pusty\"\n    print(f\"{tekst} (suma: {sum(zakres)})\")\n"
     }
   ]
 }

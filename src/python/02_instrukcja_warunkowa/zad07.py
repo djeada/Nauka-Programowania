@@ -1,265 +1,117 @@
-"""
-ZAD-07 — Prawa logiki (p i q)
+r"""
+ZAD-07 — Prawa logiki (p, q, r)
 
 **Poziom:** ★★☆
 **Tagi:** `bool`, `logika`, `tabele prawdy`, `formatowanie`
 
 ### Treść
 
-Dla wszystkich kombinacji wartości logicznych `p` i `q` (True/False) sprawdź poprawność praw:
+Wczytaj wartości logiczne `p`, `q` i `r` i sprawdź dla nich osiem praw logiki.
+Każde prawo to równoważność lewej strony `L` i prawej strony `R`:
 
-1. Wyłączony środek: `p OR (NOT p)`
-2. Niesprzeczność: `NOT (p AND (NOT p))`
-3. Przemienność AND: `p AND q` vs `q AND p`
-4. Przemienność OR: `p OR q` vs `q OR p`
-5. De Morgana 1: `NOT (p AND q)` vs `(NOT p) OR (NOT q)`
-6. De Morgana 2: `NOT (p OR q)` vs `(NOT p) AND (NOT q)`
+1. `Prawo wyłączonego środka` — `L = p or not p`, `R = True`
+2. `Prawo niesprzeczności` — `L = not (p and not p)`, `R = True`
+3. `Przemienność koniunkcji` — `L = p and q`, `R = q and p`
+4. `Przemienność alternatywy` — `L = p or q`, `R = q or p`
+5. `Pierwsze prawo de Morgana` — `L = not (p and q)`, `R = not p or not q`
+6. `Drugie prawo de Morgana` — `L = not (p or q)`, `R = not p and not q`
+7. `Rozdzielność koniunkcji względem alternatywy` — `L = p and (q or r)`, `R = (p and q) or (p and r)`
+8. `Rozdzielność alternatywy względem koniunkcji` — `L = p or (q and r)`, `R = (p or q) and (p or r)`
+
+Dla każdego prawa oblicz `L` i `R` dla wczytanych wartości i sprawdź instrukcją `if`, czy są równe.
 
 ### Wejście
 
-Brak.
+* 1. linia: `p` — napis `True` albo `False`
+* 2. linia: `q` — napis `True` albo `False`
+* 3. linia: `r` — napis `True` albo `False`
 
 ### Wyjście
 
-Żeby wynik był **jednoznaczny i łatwy do sprawdzenia**, zastosuj dokładnie ten format:
+8 linii — po jednej dla każdego prawa, w kolejności z listy:
 
-Dla każdego z 6 praw wypisz:
+`<nazwa prawa>: L=<L> R=<R> -> równoważne`
 
-* nazwę prawa w jednej linii,
-* następnie w osobnych liniach wynik dla każdej kombinacji `p, q` w kolejności:
+gdy `L` jest równe `R`, albo `<nazwa prawa>: L=<L> R=<R> -> nierównoważne` w przeciwnym razie.
+`<L>` i `<R>` to dosłownie `True` albo `False`. (Wszystkie prawa z listy są prawdziwe, więc poprawny program zawsze wypisze `równoważne` — różnić się będą wartości `L` i `R`).
 
-  1. `p=False, q=False`
-  2. `p=False, q=True`
-  3. `p=True, q=False`
-  4. `p=True, q=True`
+### Przykład
 
-Każda linia kombinacji ma mieć format:
-`p=<...> q=<...> L=<...> R=<...> EQ=<...>`
-
-Gdzie `<...>` to dosłownie `True` albo `False`.
-
-### Przykład fragmentu (dla jednego prawa)
+**Wejście:**
 
 ```
-Przemienność alternatywy:
-p=False q=False L=False R=False EQ=True
-p=False q=True L=True R=True EQ=True
-p=True q=False L=True R=True EQ=True
-p=True q=True L=True R=True EQ=True
+False
+True
+False
 ```
 
-### Uwagi o formatowaniu
+**Wyjście:**
 
-* Dokładne nazwy praw (nagłówki) użyj jak poniżej:
+```
+Prawo wyłączonego środka: L=True R=True -> równoważne
+Prawo niesprzeczności: L=True R=True -> równoważne
+Przemienność koniunkcji: L=False R=False -> równoważne
+Przemienność alternatywy: L=True R=True -> równoważne
+Pierwsze prawo de Morgana: L=True R=True -> równoważne
+Drugie prawo de Morgana: L=False R=False -> równoważne
+Rozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne
+Rozdzielność alternatywy względem koniunkcji: L=False R=False -> równoważne
+```
 
-  1. `Prawo wyłączonego środka:`
-  2. `Prawo niesprzeczności:`
-  3. `Przemienność koniunkcji:`
-  4. `Przemienność alternatywy:`
-  5. `Pierwsze prawo de Morgana:`
-  6. `Drugie prawo de Morgana:`
-* Między blokami praw możesz wstawić **jedną pustą linię** (zalecane), ale nie więcej.
+### Uwagi
+
+* `input()` zwraca **napis**. Nie zamieniaj go przez `bool(...)` — `bool("False")` to `True` (każdy niepusty napis jest prawdziwy). Zamiast tego porównaj: `p = input() == "True"`.
+* f-string wstawia wartość logiczną jako tekst: `f"L={True}"` daje `L=True`.
+
+### Kod startowy
+
+```python
+p = input() == "True"
+q = input() == "True"
+r = input() == "True"
+
+L = p or not p
+R = True
+if L == R:
+    print(f"Prawo wyłączonego środka: L={L} R={R} -> równoważne")
+else:
+    print(f"Prawo wyłączonego środka: L={L} R={R} -> nierównoważne")
+
+```
 
 """
 
+
+def wiersz(nazwa, lewa, prawa):
+    if lewa == prawa:
+        wynik = "równoważne"
+    else:
+        wynik = "nierównoważne"
+    return f"{nazwa}: L={lewa} R={prawa} -> {wynik}"
+
+
 if __name__ == "__main__":
+    p = input() == "True"
+    q = input() == "True"
+    r = input() == "True"
 
-    print("Prawo wylacznego srodka")
-    p = False
+    print(wiersz("Prawo wyłączonego środka", p or not p, True))
+    print(wiersz("Prawo niesprzeczności", not (p and not p), True))
+    print(wiersz("Przemienność koniunkcji", p and q, q and p))
+    print(wiersz("Przemienność alternatywy", p or q, q or p))
+    print(wiersz("Pierwsze prawo de Morgana", not (p and q), not p or not q))
+    print(wiersz("Drugie prawo de Morgana", not (p or q), not p and not q))
     print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " wyrazenie p v ~p ma wartosc logiczna",
-        p or not p,
+        wiersz(
+            "Rozdzielność koniunkcji względem alternatywy",
+            p and (q or r),
+            (p and q) or (p and r),
+        )
     )
-    p = True
     print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " wyrazenie p v ~p ma wartosc logiczna",
-        p or not p,
-    )
-
-    print("\nZasada niesprzecznosci")
-    p = False
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " wyrazenie ~(p Ʌ ~p) ma wartosc logiczna",
-        not (p and not p),
-    )
-    p = True
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " wyrazenie ~(p Ʌ ~p) ma wartosc logiczna",
-        not (p and not p),
-    )
-
-    print("\nPrzemiennosc koniunkcji")
-    p = False
-    q = False
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
-        (p and q) == (q and p),
-    )
-    p = True
-    q = False
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
-        (p and q) == (q and p),
-    )
-    p = False
-    q = True
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
-        (p and q) == (q and p),
-    )
-    p = True
-    q = True
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie (p Ʌ q) < = > (q Ʌ p) ma wartosc logiczna ",
-        (p and q) == (q and p),
-    )
-
-    print("\nPrzemiennosc alternatywy")
-    p = False
-    q = False
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
-        (p or q) == (q or p),
-    )
-    p = True
-    q = False
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
-        (p or q) == (q or p),
-    )
-    p = False
-    q = True
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
-        (p or q) == (q or p),
-    )
-    p = True
-    q = True
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie (p v q) < = > (q v p) ma wartosc logiczna ",
-        (p or q) == (q or p),
-    )
-
-    print("\nPierwsze prawo de Morgana")
-    p = False
-    q = False
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ",
-        (not (p and q)) == (not q or not p),
-    )
-    p = True
-    q = False
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        "wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ",
-        (not (p and q)) == (not q or not p),
-    )
-    p = False
-    q = True
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ",
-        (not (p and q)) == (not q or not p),
-    )
-    p = True
-    q = True
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie ~(p Ʌ q) < = > (~p v ~q) ma wartosc logiczna ",
-        (not (p and q)) == (not q or not p),
-    )
-
-    print("\nDrugie prawo de Morgana")
-    p = False
-    q = False
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
-        (not (p or q)) == (not q and not p),
-    )
-    p = True
-    q = False
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
-        (not (p or q)) == (not q and not p),
-    )
-    p = False
-    q = True
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
-        (not (p or q)) == (not q and not p),
-    )
-    p = True
-    q = True
-    print(
-        "dla p majacego wartosc logiczna ",
-        p,
-        " oraz q majacego wartosc logiczna ",
-        q,
-        " wyrazenie ~(p v q) < = > (~p Ʌ ~q) ma wartosc logiczna ",
-        (not (p or q)) == (not q and not p),
+        wiersz(
+            "Rozdzielność alternatywy względem koniunkcji",
+            p or (q and r),
+            (p or q) and (p or r),
+        )
     )

@@ -1,20 +1,26 @@
-"""
-ZAD-05 — Usuń powtórzenia sąsiadujących znaków
+r"""
+ZAD-05 — Kodowanie długości serii (RLE)
 
-**Poziom:** ★★★
+**Poziom:** ★★☆
 **Tagi:** `string`, `compress`, `run-length`
 
 ### Treść
 
-Otrzymujesz napis. Usuń powtórzenia znaków występujących **bezpośrednio obok siebie**, pozostawiając jedno wystąpienie z każdej „serii”.
+**Kodowanie długości serii** (ang. *run-length encoding*, RLE) to prosta metoda kompresji. Każdą **serię** jednakowych znaków stojących bezpośrednio obok siebie zapisujemy jako ten znak, a zaraz po nim liczbę jego powtórzeń (w zapisie dziesiętnym, więc może mieć kilka cyfr). Na przykład `aaabcc` koduje się jako `a3b1c2`, a dwanaście liter `x` pod rząd — jako `x12`.
+
+Zakoduj podany napis metodą RLE. Ten sam znak może tworzyć kilka oddzielnych serii — każdą kodujemy osobno.
 
 ### Wejście
 
-* 1 linia: napis `S`
+Jedna linia: napis `S` złożony wyłącznie z liter alfabetu angielskiego (wielkość liter ma znaczenie).
 
 ### Wyjście
 
-* 1 linia: napis po redukcji sąsiadów
+Jedna linia: zakodowany napis.
+
+### Ograniczenia
+
+* `1 ≤ |S| ≤ 1000`
 
 ### Przykład
 
@@ -27,65 +33,34 @@ AAAAAAAAAABBBBBBBBA
 **Wyjście:**
 
 ```
-ABA
+A10B8A1
 ```
+
+Napis składa się z trzech serii: dziesięciu liter `A`, ośmiu liter `B` i jednej litery `A`.
+
+### Uwagi
+
+* Przechodź po napisie i licz, ile razy z rzędu powtarza się bieżący znak. Gdy seria się kończy (następny znak jest inny albo napis się skończył), dopisz do wyniku znak i licznik zamieniony na napis (`str(licznik)`).
 
 """
 
 
-def usun_powtarzajacych_sie_sasiadow_v1(napis):
-    nowy_napis = ""
-    ostatni_usuniety_znak = ""
+def koduj_rle(napis):
+    """Koduje napis metodą RLE: każdą serię zapisuje jako znak i długość serii."""
+    wynik = []
+    i = 0
 
-    for i in range(len(napis) - 1):
-        if not napis[i] == napis[i + 1]:
-            nowy_napis += napis[i]
-            ostatni_usuniety_znak = napis[i]
+    while i < len(napis):
+        znak = napis[i]
+        dlugosc = 0
+        while i < len(napis) and napis[i] == znak:
+            dlugosc += 1
+            i += 1
+        wynik.append(znak + str(dlugosc))
 
-    if len(napis) and napis[-1] != ostatni_usuniety_znak:
-        nowy_napis += napis[-1]
-
-    return nowy_napis
-
-
-# Testy Poprawnosci
-def test_1():
-    napis = "AAAAAAAAAABBBBBBBBA"
-    wynik = "ABA"
-    assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
-
-
-def test_2():
-    napis = "XXXYYASFBY"
-    wynik = "XYASFBY"
-    assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
-
-
-def test_3():
-    napis = "CCCCCCCCCCCCCCCCCCCCCCCCCCCC"
-    wynik = "C"
-    assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
-
-
-def test_4():
-    napis = ""
-    wynik = ""
-    assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
-
-
-def test_5():
-    napis = "AAABB"
-    wynik = "AB"
-    assert usun_powtarzajacych_sie_sasiadow_v1(napis) == wynik
-
-
-def main():
-    test_1()
-    test_2()
-    test_3()
-    test_4()
-    test_5()
+    return "".join(wynik)
 
 
 if __name__ == "__main__":
-    main()
+    napis = input()
+    print(koduj_rle(napis))

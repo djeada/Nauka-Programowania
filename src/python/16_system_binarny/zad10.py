@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-10 — Ile bitów trzeba odwrócić (A → B)
 
 **Poziom:** ★★☆
@@ -6,7 +6,7 @@ ZAD-10 — Ile bitów trzeba odwrócić (A → B)
 
 ### Treść
 
-Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w `A`, aby otrzymać `B`.
+Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w liczbie `A`, aby otrzymać `B`, czyli na ilu pozycjach ich zapisy binarne się różnią.
 
 ### Wejście
 
@@ -16,6 +16,10 @@ Wczytaj dwie liczby naturalne `A` i `B`. Oblicz, ile bitów trzeba odwrócić w 
 ### Wyjście
 
 Jedna liczba naturalna: liczba różniących się bitów.
+
+### Ograniczenia
+
+* $0 \le A, B \le 10^9$
 
 ### Przykład
 
@@ -32,30 +36,33 @@ Jedna liczba naturalna: liczba różniących się bitów.
 5
 ```
 
+`34` = `0100010`, `73` = `1001001` — różnią się na 5 pozycjach.
+
+### Uwagi
+
+* Krótszy zapis uzupełniamy zerami z lewej strony.
+* `A ^ B` ma jedynki dokładnie na pozycjach, na których bity `A` i `B` są różne.
+
 """
 
 
-def bity_do_zmiany(liczba_a, liczba_b):
+def liczba_jedynek(n):
+    jedynki = 0
+    while n > 0:
+        jedynki += n & 1
+        n >>= 1
+    return jedynki
+
+
+def bity_do_zmiany(a, b):
     """
-    Funkcja zwraca ilosc bitow do zmiany liczby A w liczbe B.
+    Zwraca liczbę bitów, którymi różnią się a i b.
+    W a ^ b jedynki stoją dokładnie na pozycjach, na których bity są różne.
     """
-
-    n = liczba_a ^ liczba_b
-
-    licznik_jedynek = 0
-    while n:
-        n &= n - 1
-        licznik_jedynek += 1
-
-    return licznik_jedynek
-
-
-def test_bity_do_zmiany():
-    assert bity_do_zmiany(0, 0) == 0
-    assert bity_do_zmiany(1, 2) == 31
-    assert bity_do_zmiany(34, 73) == 5
+    return liczba_jedynek(a ^ b)
 
 
 if __name__ == "__main__":
-
-    test_bity_do_zmiany()
+    a = int(input())
+    b = int(input())
+    print(bity_do_zmiany(a, b))

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Pliki o danym rozszerzeniu w folderze (bez podfolderów)
 
 **Poziom:** ★★☆
@@ -6,73 +6,95 @@ ZAD-02 — Pliki o danym rozszerzeniu w folderze (bez podfolderów)
 
 ### Treść
 
-Otrzymujesz ścieżkę do folderu i rozszerzenie (np. `.txt`). Znajdź wszystkie pliki o tym rozszerzeniu znajdujące się **bezpośrednio** w tym folderze (bez przeszukiwania podfolderów). Zwróć listę nazw plików.
+Wczytaj ścieżkę folderu i rozszerzenie (np. `.txt`). Wypisz nazwy wszystkich **plików** o tym rozszerzeniu, które leżą **bezpośrednio** w tym folderze. Nie zaglądaj do podfolderów. Foldery pomijaj, nawet jeśli ich nazwa wygląda jak nazwa pliku (np. folder `stare.txt`).
+
+Rozszerzenia porównuj bez względu na wielkość liter, ale nazwy wypisuj dokładnie tak, jak są zapisane.
 
 ### Wejście
 
-* 1 linia: `folder_path`
-* 2 linia: `ext` (np. `.txt`)
+* 1. linia: ścieżka folderu
+* 2. linia: rozszerzenie z kropką, np. `.txt`
 
 ### Wyjście
 
-* 1 linia: lista nazw plików w formacie `['a.txt', 'b.txt']`
+* Nazwy pasujących plików (same nazwy, bez ścieżki folderu), każda w osobnej linii, posortowane rosnąco.
+* `Brak plików.` — jeśli w folderze nie ma żadnego pasującego pliku.
+* `Folder nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego folderu.
 
 ### Przykład
+
+**Pliki przed:**
+
+```
+dokumenty/lista zakupów.txt
+| mleko
+| chleb
+dokumenty/notatki.TXT
+| Zadzwonić do Ani.
+dokumenty/zdjęcie.png
+dokumenty/stare/archiwum.txt
+```
 
 **Wejście:**
 
 ```
-C:\Users\Username\Documents
+dokumenty
 .txt
 ```
 
 **Wyjście:**
 
 ```
-['dokument1.txt', 'notatki.txt', 'lista_zakupów.txt']
+lista zakupów.txt
+notatki.TXT
 ```
 
-### Uwagi o formatowaniu
+Plik `stare/archiwum.txt` leży w podfolderze, więc go pomijamy.
 
-* Porównuj rozszerzenia **bez względu na wielkość liter** (np. `.TXT` też pasuje do `.txt`).
+### Przykład 2
+
+**Pliki przed:** *(brak)*
+
+**Wejście:**
+
+```
+zdjecia
+.png
+```
+
+**Wyjście:**
+
+```
+Folder nie istnieje.
+```
+
+### Uwagi
+
+* Zawartość folderu zwraca `os.listdir()` albo `Path.iterdir()`. Rozszerzenie pliku poda `os.path.splitext()` albo `Path.suffix`.
 
 """
 
-import pathlib
+from pathlib import Path
 
 
-def znajdz_pliki_z_rozszerzeniem(sciezka, rozszerzenie):
-    """
-    Funkcja zwraca liste plikow o podanym rozszerzeniu.
-    """
-    lista_plikow = []
-    for plik in pathlib.Path(sciezka).glob("*." + rozszerzenie):
-        lista_plikow.append(str(plik.relative_to(pathlib.Path(sciezka).parent)))
-    return lista_plikow
-
-
-def test_znajdz_pliki_z_rozszerzeniem():
-
-    # stworz folder testowy
-    sciezka_folderu = "test"
-    pathlib.Path(sciezka_folderu).mkdir(parents=True, exist_ok=True)
-
-    # stworz pliki testowe
-    sciezka_pliku_1 = "test/plik.txt"
-    sciezka_pliku_2 = "test/plik2.txt"
-    pathlib.Path(sciezka_pliku_1).touch()
-    pathlib.Path(sciezka_pliku_2).touch()
-
-    assert set(
-        map(pathlib.Path, znajdz_pliki_z_rozszerzeniem(sciezka_folderu, "txt"))
-    ) == set(map(pathlib.Path, [sciezka_pliku_1, sciezka_pliku_2]))
-
-    # usun folder testowy
-    import shutil
-
-    shutil.rmtree(sciezka_folderu)
+def pliki_z_rozszerzeniem(folder, rozszerzenie):
+    """Zwraca posortowane nazwy plików o danym rozszerzeniu leżących bezpośrednio w folderze."""
+    nazwy = []
+    for sciezka in Path(folder).iterdir():
+        if sciezka.is_file() and sciezka.suffix.lower() == rozszerzenie.lower():
+            nazwy.append(sciezka.name)
+    return sorted(nazwy)
 
 
 if __name__ == "__main__":
+    folder = input()
+    rozszerzenie = input()
 
-    test_znajdz_pliki_z_rozszerzeniem()
+    if not Path(folder).is_dir():
+        print("Folder nie istnieje.")
+    else:
+        nazwy = pliki_z_rozszerzeniem(folder, rozszerzenie)
+        if nazwy:
+            print("\n".join(nazwy))
+        else:
+            print("Brak plików.")

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-12 — Najdłuższy ciąg zer otoczony jedynkami
 
 **Poziom:** ★★★
@@ -6,9 +6,7 @@ ZAD-12 — Najdłuższy ciąg zer otoczony jedynkami
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. W jej reprezentacji binarnej znajdź długość najdłuższego ciągu kolejnych zer, który jest **z obu stron otoczony jedynkami** (tzw. *binary gap*).
-
-Jeśli nie ma takiego ciągu — wypisz `0`.
+Wczytaj liczbę naturalną `n`. W jej zapisie binarnym znajdź długość najdłuższego ciągu kolejnych zer, który jest **z obu stron otoczony jedynkami** (tzw. *binary gap*). Jeśli takiego ciągu nie ma, wypisz `0`.
 
 ### Wejście
 
@@ -16,7 +14,11 @@ Jeśli nie ma takiego ciągu — wypisz `0`.
 
 ### Wyjście
 
-Jedna liczba naturalna: długość najdłuższego „gapu”.
+Jedna liczba naturalna: długość najdłuższego takiego ciągu zer.
+
+### Ograniczenia
+
+* $0 \le n \le 10^9$
 
 ### Przykład
 
@@ -32,32 +34,54 @@ Jedna liczba naturalna: długość najdłuższego „gapu”.
 0
 ```
 
-### Uwagi (ważne)
+`14` ma zapis `1110` — zero na końcu nie ma jedynki po prawej stronie, więc wynik to `0`.
 
-* `14` ma zapis `1110` — zero na końcu **nie jest otoczone jedynkami z prawej**, więc wynik to `0`.
-  Dla przykładu `20` (`10100`) najdłuższy gap ma długość `1` (między `1` i `1`).
+### Przykład 2
+
+**Wejście:**
+
+```
+20
+```
+
+**Wyjście:**
+
+```
+1
+```
+
+`20` ma zapis `10100` — zero między jedynkami tworzy ciąg długości `1`, a końcowe `00` się nie liczy.
+
+### Uwagi
+
+* Dla `n = 0` (zapis `0`) wynik to `0`.
 
 """
 
 
-def najdluzszy_ciag_zer(liczba):
+def najdluzsza_przerwa(n):
     """
-    Funkcja zwraca dlugosc najdluzszego ciagu zer w dziesietnej
-    reprezentacji liczby binarnej.
+    Zwraca długość najdłuższego ciągu zer otoczonego z obu stron jedynkami
+    w zapisie binarnym n.
     """
-    liczba_bin = bin(liczba)
-    liczba_bin = liczba_bin[2:]
-    liczba_bin = liczba_bin.split("1")
-    liczba_bin.sort(key=len)
-    return len(liczba_bin[-1])
+    if n == 0:
+        return 0
+    # Zera na końcu zapisu nie mają jedynki po prawej stronie — pomijamy je.
+    while n & 1 == 0:
+        n >>= 1
 
-
-def test_najdluzszy_ciag_zer():
-    assert najdluzszy_ciag_zer(0) == 1
-    assert najdluzszy_ciag_zer(111) == 1
-    assert najdluzszy_ciag_zer(8219) == 8
+    najdluzsza = 0
+    biezaca = 0
+    while n > 0:
+        if n & 1:
+            najdluzsza = max(najdluzsza, biezaca)
+            biezaca = 0
+        else:
+            biezaca += 1
+        n >>= 1
+    return najdluzsza
 
 
 if __name__ == "__main__":
-
-    test_najdluzszy_ciag_zer()
+    n = int(input())
+    print(najdluzsza_przerwa(n))

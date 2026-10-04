@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-04 — Dzień tygodnia z numeru
 
 **Poziom:** ★☆☆
@@ -8,26 +8,40 @@ ZAD-04 — Dzień tygodnia z numeru
 
 Wczytaj liczbę `n`. Jeśli `n` jest w zakresie 1–7, wypisz nazwę dnia tygodnia:
 
-1. Poniedziałek
-2. Wtorek
-3. Środa
-4. Czwartek
-5. Piątek
-6. Sobota
-7. Niedziela
+1. `Poniedziałek`
+2. `Wtorek`
+3. `Środa`
+4. `Czwartek`
+5. `Piątek`
+6. `Sobota`
+7. `Niedziela`
 
 W przeciwnym razie wypisz:
 `Niepoprawny numer dnia tygodnia.`
 
 ### Wejście
 
-* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+* 1 linia: `n` — liczba całkowita, $0 \le n \le 1000$
 
 ### Wyjście
 
-Jedna linia: nazwa dnia lub komunikat o błędzie.
+Jedna linia: nazwa dnia (wielką literą, z polskimi znakami) lub komunikat o błędzie.
 
-### Przykład
+### Przykład 1
+
+**Wejście:**
+
+```
+5
+```
+
+**Wyjście:**
+
+```
+Piątek
+```
+
+### Przykład 2
 
 **Wejście:**
 
@@ -43,24 +57,26 @@ Niepoprawny numer dnia tygodnia.
 
 """
 
+
+def nazwa_dnia(n):
+    if n == 1:
+        return "Poniedziałek"
+    elif n == 2:
+        return "Wtorek"
+    elif n == 3:
+        return "Środa"
+    elif n == 4:
+        return "Czwartek"
+    elif n == 5:
+        return "Piątek"
+    elif n == 6:
+        return "Sobota"
+    elif n == 7:
+        return "Niedziela"
+    else:
+        return "Niepoprawny numer dnia tygodnia."
+
+
 if __name__ == "__main__":
-
-    print("Podaj liczbe:")
-    liczba = int(input())
-
-    if liczba < 0 or liczba > 7:
-        print("Liczba niepoprawna")
-    elif liczba == 1:
-        print("Pierwszym dniem tygodnia jest poniedzialek.")
-    elif liczba == 2:
-        print("Drugim dniem tygodnia jest wtorek.")
-    elif liczba == 3:
-        print("Trzecim dniem tygodnia jest sroda.")
-    elif liczba == 4:
-        print("Czwartym dniem tygodnia jest czwartek.")
-    elif liczba == 5:
-        print("Piatym dniem tygodnia jest piatek.")
-    elif liczba == 6:
-        print("Szostym dniem tygodnia jest sobota.")
-    elif liczba == 7:
-        print("Siodmym dniem tygodnia jest niedziela.")
+    n = int(input())
+    print(nazwa_dnia(n))

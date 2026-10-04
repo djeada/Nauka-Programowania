@@ -4,10 +4,11 @@ Zadania w tym rozdziale ćwiczą podejmowanie decyzji w programie na podstawie w
 
 **Konwencje wspólne:**
 
-* Każde zadanie jest **osobnym programem**.
+* Każde zadanie jest **osobnym programem**: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.
 * Dane wejściowe wczytuj dokładnie w podanej kolejności, każdą wartość z osobnej linii (o ile nie napisano inaczej).
-* Wyniki wypisuj dokładnie jak w specyfikacji (w tym wielkość liter, kropki, spacje).
-* Jeżeli zadanie mówi „nie wypisuj nic” — program ma zakończyć się bez żadnego outputu (bez spacji, bez pustej linii).
+* Wyniki wypisuj dokładnie jak w specyfikacji (w tym wielkość liter, polskie znaki, kropki, spacje).
+* Jeżeli zadanie mówi „nie wypisuj nic” — program ma zakończyć się bez żadnego wyjścia (bez spacji, bez pustej linii).
+* Program nie wypisuje komunikatów typu „Podaj liczbę:”. Tekst podany w `input("…")` jest ignorowany przez sprawdzarkę.
 
 ---
 
@@ -19,16 +20,16 @@ Zadania w tym rozdziale ćwiczą podejmowanie decyzji w programie na podstawie w
 ### Treść
 
 Wczytaj jedną liczbę naturalną `n`.
-Jeśli `n > 5`, wypisz `n`. W przeciwnym razie nie wypisuj nic.
+Jeśli $n > 5$, wypisz `n`. W przeciwnym razie nie wypisuj nic.
 
 ### Wejście
 
-* 1 linia: `n` (liczba całkowita, `n ≥ 0`)
+* 1 linia: `n` — liczba całkowita, $0 \le n \le 10^9$
 
 ### Wyjście
 
-* Jeśli `n > 5`: jedna linia z liczbą `n`
-* Jeśli `n ≤ 5`: brak wyjścia
+* Jeśli $n > 5$: jedna linia z liczbą `n`.
+* Jeśli $n \le 5$: brak wyjścia.
 
 ### Przykład 1
 
@@ -71,8 +72,8 @@ W przeciwnym razie wypisz:
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a ≥ 0`)
-* 2 linia: `b` (całkowita, `b ≥ 0`)
+* 1 linia: `a` — liczba całkowita, $0 \le a \le 10^9$
+* 2 linia: `b` — liczba całkowita, $0 \le b \le 10^9$
 
 ### Wyjście
 
@@ -119,19 +120,19 @@ Liczby są identyczne.
 
 Wczytaj liczbę całkowitą `x` i wypisz jeden z komunikatów:
 
-* dla `x < 0`: `Liczba jest ujemna.`
-* dla `x > 0`: `Liczba jest dodatnia.`
-* dla `x = 0`: `Liczba jest zerem.`
+* dla $x < 0$: `Liczba jest ujemna.`
+* dla $x > 0$: `Liczba jest dodatnia.`
+* dla $x = 0$: `Liczba jest zerem.`
 
 ### Wejście
 
-* 1 linia: `x` (liczba całkowita)
+* 1 linia: `x` — liczba całkowita, $-10^9 \le x \le 10^9$
 
 ### Wyjście
 
 Jedna linia — dokładnie jeden komunikat.
 
-### Przykłady
+### Przykład 1
 
 **Wejście:**
 
@@ -145,17 +146,7 @@ Jedna linia — dokładnie jeden komunikat.
 Liczba jest ujemna.
 ```
 
-**Wejście:**
-
-```
-0
-```
-
-**Wyjście:**
-
-```
-Liczba jest zerem.
-```
+### Przykład 2
 
 **Wejście:**
 
@@ -179,20 +170,19 @@ Liczba jest dodatnia.
 ### Treść
 
 Wczytaj dwie liczby naturalne `a` i `b`.
-Wypisz je w jednej linii w kolejności: **większa, potem mniejsza**, oddzielone pojedynczą spacją.
-Jeśli `a = b`, wypisz `a b` (czyli dwie takie same liczby).
+Wypisz je w jednej linii w kolejności: **najpierw większa, potem mniejsza**, oddzielone pojedynczą spacją.
+Jeśli $a = b$, wypisz tę samą liczbę dwa razy.
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a ≥ 0`)
-* 2 linia: `b` (całkowita, `b ≥ 0`)
+* 1 linia: `a` — liczba całkowita, $0 \le a \le 10^9$
+* 2 linia: `b` — liczba całkowita, $0 \le b \le 10^9$
 
 ### Wyjście
 
-Jedna linia:
-`max(a, b) min(a, b)`
+Jedna linia: większa liczba, spacja, mniejsza liczba.
 
-### Przykłady
+### Przykład 1
 
 **Wejście:**
 
@@ -207,6 +197,8 @@ Jedna linia:
 4 1
 ```
 
+### Przykład 2
+
 **Wejście:**
 
 ```
@@ -220,6 +212,10 @@ Jedna linia:
 5 5
 ```
 
+### Uwagi
+
+* Spróbuj rozwiązać zadanie instrukcją `if`, bez wbudowanych funkcji `max` i `min`.
+
 ---
 
 ## ZAD-05 — Sortowanie trzech liczb
@@ -229,17 +225,18 @@ Jedna linia:
 
 ### Treść
 
-Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności rosnącej.
+Wczytaj trzy liczby naturalne `a`, `b`, `c` i wypisz je w kolejności niemalejącej (od najmniejszej do największej).
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a ≥ 0`)
-* 2 linia: `b` (całkowita, `b ≥ 0`)
-* 3 linia: `c` (całkowita, `c ≥ 0`)
+* 1 linia: `a` — liczba całkowita, $0 \le a \le 10^9$
+* 2 linia: `b` — liczba całkowita, $0 \le b \le 10^9$
+* 3 linia: `c` — liczba całkowita, $0 \le c \le 10^9$
 
 ### Wyjście
 
-Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
+Jedna linia: trzy liczby w kolejności niemalejącej, oddzielone pojedynczymi spacjami.
+Liczby powtarzające się wypisz tyle razy, ile wystąpiły.
 
 ### Przykład
 
@@ -259,7 +256,7 @@ Jedna linia: trzy liczby rosnąco, oddzielone pojedynczymi spacjami.
 
 ### Uwagi
 
-* Możesz użyć wbudowanego sortowania, ale da się też rozwiązać czystymi warunkami.
+* Możesz użyć wbudowanego sortowania, ale spróbuj rozwiązać zadanie samymi instrukcjami warunkowymi.
 
 ---
 
@@ -274,11 +271,11 @@ Wczytaj cztery liczby naturalne i wypisz największą z nich.
 
 ### Wejście
 
-4 linie: `a`, `b`, `c`, `d` (całkowite, każda `≥ 0`)
+4 linie: `a`, `b`, `c`, `d` — liczby całkowite z zakresu $0 \dots 10^9$.
 
 ### Wyjście
 
-Jedna linia: największa liczba.
+Jedna linia: największa z czterech liczb.
 
 ### Przykład
 
@@ -297,68 +294,94 @@ Jedna linia: największa liczba.
 5
 ```
 
+### Uwagi
+
+* Spróbuj rozwiązać zadanie instrukcją `if`, bez wbudowanej funkcji `max`.
+
 ---
 
-## ZAD-07 — Prawa logiki (p i q)
+## ZAD-07 — Prawa logiki (p, q, r)
 
 **Poziom:** ★★☆
 **Tagi:** `bool`, `logika`, `tabele prawdy`, `formatowanie`
 
 ### Treść
 
-Dla wszystkich kombinacji wartości logicznych `p` i `q` (True/False) sprawdź poprawność praw:
+Wczytaj wartości logiczne `p`, `q` i `r` i sprawdź dla nich osiem praw logiki.
+Każde prawo to równoważność lewej strony `L` i prawej strony `R`:
 
-1. Wyłączony środek: `p OR (NOT p)`
-2. Niesprzeczność: `NOT (p AND (NOT p))`
-3. Przemienność AND: `p AND q` vs `q AND p`
-4. Przemienność OR: `p OR q` vs `q OR p`
-5. De Morgana 1: `NOT (p AND q)` vs `(NOT p) OR (NOT q)`
-6. De Morgana 2: `NOT (p OR q)` vs `(NOT p) AND (NOT q)`
+1. `Prawo wyłączonego środka` — `L = p or not p`, `R = True`
+2. `Prawo niesprzeczności` — `L = not (p and not p)`, `R = True`
+3. `Przemienność koniunkcji` — `L = p and q`, `R = q and p`
+4. `Przemienność alternatywy` — `L = p or q`, `R = q or p`
+5. `Pierwsze prawo de Morgana` — `L = not (p and q)`, `R = not p or not q`
+6. `Drugie prawo de Morgana` — `L = not (p or q)`, `R = not p and not q`
+7. `Rozdzielność koniunkcji względem alternatywy` — `L = p and (q or r)`, `R = (p and q) or (p and r)`
+8. `Rozdzielność alternatywy względem koniunkcji` — `L = p or (q and r)`, `R = (p or q) and (p or r)`
+
+Dla każdego prawa oblicz `L` i `R` dla wczytanych wartości i sprawdź instrukcją `if`, czy są równe.
 
 ### Wejście
 
-Brak.
+* 1. linia: `p` — napis `True` albo `False`
+* 2. linia: `q` — napis `True` albo `False`
+* 3. linia: `r` — napis `True` albo `False`
 
 ### Wyjście
 
-Żeby wynik był **jednoznaczny i łatwy do sprawdzenia**, zastosuj dokładnie ten format:
+8 linii — po jednej dla każdego prawa, w kolejności z listy:
 
-Dla każdego z 6 praw wypisz:
+`<nazwa prawa>: L=<L> R=<R> -> równoważne`
 
-* nazwę prawa w jednej linii,
-* następnie w osobnych liniach wynik dla każdej kombinacji `p, q` w kolejności:
+gdy `L` jest równe `R`, albo `<nazwa prawa>: L=<L> R=<R> -> nierównoważne` w przeciwnym razie.
+`<L>` i `<R>` to dosłownie `True` albo `False`. (Wszystkie prawa z listy są prawdziwe, więc poprawny program zawsze wypisze `równoważne` — różnić się będą wartości `L` i `R`).
 
-  1. `p=False, q=False`
-  2. `p=False, q=True`
-  3. `p=True, q=False`
-  4. `p=True, q=True`
+### Przykład
 
-Każda linia kombinacji ma mieć format:
-`p=<...> q=<...> L=<...> R=<...> EQ=<...>`
-
-Gdzie `<...>` to dosłownie `True` albo `False`.
-
-### Przykład fragmentu (dla jednego prawa)
+**Wejście:**
 
 ```
-Przemienność alternatywy:
-p=False q=False L=False R=False EQ=True
-p=False q=True L=True R=True EQ=True
-p=True q=False L=True R=True EQ=True
-p=True q=True L=True R=True EQ=True
+False
+True
+False
 ```
 
-### Uwagi o formatowaniu
+**Wyjście:**
 
-* Dokładne nazwy praw (nagłówki) użyj jak poniżej:
+```
+Prawo wyłączonego środka: L=True R=True -> równoważne
+Prawo niesprzeczności: L=True R=True -> równoważne
+Przemienność koniunkcji: L=False R=False -> równoważne
+Przemienność alternatywy: L=True R=True -> równoważne
+Pierwsze prawo de Morgana: L=True R=True -> równoważne
+Drugie prawo de Morgana: L=False R=False -> równoważne
+Rozdzielność koniunkcji względem alternatywy: L=False R=False -> równoważne
+Rozdzielność alternatywy względem koniunkcji: L=False R=False -> równoważne
+```
 
-  1. `Prawo wyłączonego środka:`
-  2. `Prawo niesprzeczności:`
-  3. `Przemienność koniunkcji:`
-  4. `Przemienność alternatywy:`
-  5. `Pierwsze prawo de Morgana:`
-  6. `Drugie prawo de Morgana:`
-* Między blokami praw możesz wstawić **jedną pustą linię** (zalecane), ale nie więcej.
+### Uwagi
+
+* `input()` zwraca **napis**. Nie zamieniaj go przez `bool(...)` — `bool("False")` to `True` (każdy niepusty napis jest prawdziwy). Zamiast tego porównaj: `p = input() == "True"`.
+* f-string wstawia wartość logiczną jako tekst: `f"L={True}"` daje `L=True`.
+
+### Kod startowy
+
+```python
+p = input() == "True"
+q = input() == "True"
+r = input() == "True"
+
+L = p or not p
+R = True
+if L == R:
+    print(f"Prawo wyłączonego środka: L={L} R={R} -> równoważne")
+else:
+    print(f"Prawo wyłączonego środka: L={L} R={R} -> nierównoważne")
+
+# Uzupełnij: w ten sam sposób oblicz i wypisz pozostałe siedem praw.
+```
+
+---
 
 ## ZAD-08 — Czy można zbudować trójkąt?
 
@@ -368,7 +391,13 @@ p=True q=True L=True R=True EQ=True
 ### Treść
 
 Wczytaj trzy dodatnie długości odcinków `a`, `b`, `c`.
-Sprawdź, czy można z nich zbudować trójkąt.
+Sprawdź, czy można z nich zbudować trójkąt (niezdegenerowany).
+
+Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są **wszystkie** trzy nierówności:
+
+* $a + b > c$
+* $a + c > b$
+* $b + c > a$
 
 Wypisz:
 
@@ -377,23 +406,19 @@ Wypisz:
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a > 0`)
-* 2 linia: `b` (całkowita, `b > 0`)
-* 3 linia: `c` (całkowita, `c > 0`)
+* 1 linia: `a` — liczba całkowita
+* 2 linia: `b` — liczba całkowita
+* 3 linia: `c` — liczba całkowita
 
 ### Wyjście
 
 Jedna linia — dokładnie jeden z komunikatów.
 
-### Ograniczenia / warunek
+### Ograniczenia
 
-Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są wszystkie:
+* $1 \le a, b, c \le 10^9$
 
-* `a + b > c`
-* `a + c > b`
-* `b + c > a`
-
-### Przykład
+### Przykład 1
 
 **Wejście:**
 
@@ -408,3 +433,150 @@ Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są wszystkie:
 ```
 Trójkąt można zbudować z podanych boków.
 ```
+
+### Przykład 2
+
+**Wejście:**
+
+```
+1
+2
+5
+```
+
+**Wyjście:**
+
+```
+Trójkąta nie można zbudować z podanych boków.
+```
+
+### Uwagi
+
+* Jeśli suma dwóch boków jest **równa** trzeciemu (np. 1, 2, 3), odcinki leżą na jednej prostej — taki „trójkąt” nie istnieje.
+
+---
+
+## ZAD-09 — Ocena z punktów
+
+**Poziom:** ★☆☆
+**Tagi:** `if-elif-else`, `porównania`, `zakresy`
+
+### Treść
+
+Wczytaj liczbę punktów zdobytych na sprawdzianie i wypisz ocenę według progów:
+
+* 0–49 punktów → `2`
+* 50–69 punktów → `3`
+* 70–84 punktów → `4`
+* 85–100 punktów → `5`
+
+Jeśli liczba punktów jest spoza zakresu 0–100, wypisz:
+`Niepoprawna liczba punktów.`
+
+### Wejście
+
+* 1 linia: `punkty` — liczba całkowita, $-1000 \le punkty \le 1000$
+
+### Wyjście
+
+Jedna linia: ocena (`2`, `3`, `4` albo `5`) lub komunikat o błędzie.
+
+### Przykład 1
+
+**Wejście:**
+
+```
+77
+```
+
+**Wyjście:**
+
+```
+4
+```
+
+### Przykład 2
+
+**Wejście:**
+
+```
+120
+```
+
+**Wyjście:**
+
+```
+Niepoprawna liczba punktów.
+```
+
+### Uwagi
+
+* Najpierw obsłuż punkty spoza zakresu, a potem sprawdzaj progi po kolei w łańcuchu `if`/`elif` — każdy kolejny warunek może wtedy zakładać, że poprzednie nie zaszły.
+* Python pozwala łączyć porównania: `50 <= punkty <= 69` znaczy to samo co `50 <= punkty and punkty <= 69`.
+
+---
+
+## ZAD-10 — Prosty kalkulator
+
+**Poziom:** ★★☆
+**Tagi:** `if-elif-else`, `arytmetyka`, `string`, `float`
+
+### Treść
+
+Wczytaj liczbę `a`, operator i liczbę `b`, a następnie wypisz wynik działania `a <operator> b`.
+Obsługiwane operatory to: `+` (dodawanie), `-` (odejmowanie), `*` (mnożenie), `/` (dzielenie).
+
+Przypadki szczególne:
+
+* jeśli operator to `/`, a $b = 0$, wypisz `Nie można dzielić przez zero.`
+* jeśli operator nie jest jednym z czterech powyższych, wypisz `Nieznany operator.` (niezależnie od wartości `b`).
+
+### Wejście
+
+* 1. linia: `a` — liczba rzeczywista
+* 2. linia: operator — jeden znak
+* 3. linia: `b` — liczba rzeczywista
+
+### Wyjście
+
+Jedna linia: wynik do **2 miejsc po przecinku** (np. `f"{wynik:.2f}"`) albo jeden z komunikatów.
+
+### Ograniczenia
+
+* $-10^6 \le a, b \le 10^6$
+
+### Przykład 1
+
+**Wejście:**
+
+```
+7
+/
+2
+```
+
+**Wyjście:**
+
+```
+3.50
+```
+
+### Przykład 2
+
+**Wejście:**
+
+```
+5
+/
+0
+```
+
+**Wyjście:**
+
+```
+Nie można dzielić przez zero.
+```
+
+### Uwagi
+
+* Operator wczytaj jako napis (`dzialanie = input()`) i porównuj go z napisami, np. `if dzialanie == "+":`.

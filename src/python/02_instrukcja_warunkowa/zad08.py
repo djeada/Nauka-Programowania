@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Czy można zbudować trójkąt?
 
 **Poziom:** ★☆☆
@@ -7,7 +7,13 @@ ZAD-08 — Czy można zbudować trójkąt?
 ### Treść
 
 Wczytaj trzy dodatnie długości odcinków `a`, `b`, `c`.
-Sprawdź, czy można z nich zbudować trójkąt.
+Sprawdź, czy można z nich zbudować trójkąt (niezdegenerowany).
+
+Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są **wszystkie** trzy nierówności:
+
+* $a + b > c$
+* $a + c > b$
+* $b + c > a$
 
 Wypisz:
 
@@ -16,23 +22,19 @@ Wypisz:
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a > 0`)
-* 2 linia: `b` (całkowita, `b > 0`)
-* 3 linia: `c` (całkowita, `c > 0`)
+* 1 linia: `a` — liczba całkowita
+* 2 linia: `b` — liczba całkowita
+* 3 linia: `c` — liczba całkowita
 
 ### Wyjście
 
 Jedna linia — dokładnie jeden z komunikatów.
 
-### Ograniczenia / warunek
+### Ograniczenia
 
-Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są wszystkie:
+* $1 \le a, b, c \le 10^9$
 
-* `a + b > c`
-* `a + c > b`
-* `b + c > a`
-
-### Przykład
+### Przykład 1
 
 **Wejście:**
 
@@ -48,16 +50,39 @@ Trójkąt istnieje wtedy i tylko wtedy, gdy spełnione są wszystkie:
 Trójkąt można zbudować z podanych boków.
 ```
 
+### Przykład 2
+
+**Wejście:**
+
+```
+1
+2
+5
+```
+
+**Wyjście:**
+
+```
+Trójkąta nie można zbudować z podanych boków.
+```
+
+### Uwagi
+
+* Jeśli suma dwóch boków jest **równa** trzeciemu (np. 1, 2, 3), odcinki leżą na jednej prostej — taki „trójkąt” nie istnieje.
+
 """
 
-if __name__ == "__main__":
 
+def czy_trojkat(a, b, c):
+    return a + b > c and a + c > b and b + c > a
+
+
+if __name__ == "__main__":
     a = int(input())
     b = int(input())
     c = int(input())
 
-    if a + b > c and b + c > a and a + c > b:
-        print("z podanych bokow mozna zbudowac trojkat")
-
+    if czy_trojkat(a, b, c):
+        print("Trójkąt można zbudować z podanych boków.")
     else:
-        print("z podanych bokow nie mozna zbudowac trojkata")
+        print("Trójkąta nie można zbudować z podanych boków.")

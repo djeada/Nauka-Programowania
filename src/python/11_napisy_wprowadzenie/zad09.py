@@ -1,30 +1,34 @@
-"""
+r"""
 ZAD-09 — Rozdziel informacje o pracowniku
 
 **Poziom:** ★☆☆
-**Tagi:** `split`, `formatowanie`
+**Tagi:** `napisy`, `split`, `formatowanie`
 
 ### Treść
 
-Wczytaj linię z danymi pracownika rozdzielonymi średnikami `;`:
-
-1. Imię, 2) Nazwisko, 3) Miejsce urodzenia, 4) Stanowisko, 5) Zarobki
-
-Wypisz każdą informację w osobnej linii z etykietą.
+Wczytaj linię z danymi pracownika: imię, nazwisko, miejsce urodzenia, zawód i zarobki — w tej kolejności, oddzielone średnikami `;`.
+Wypisz każdą informację w osobnej linii, poprzedzoną etykietą.
 
 ### Wejście
 
-* 1. linia: dane w formacie `Imię; Nazwisko; Miasto; Zawód; Zarobki;`
+* 1. linia: dane w formacie `Imię; Nazwisko; Miejsce urodzenia; Zawód; Zarobki;`
+  * przed średnikiem i po nim mogą (ale nie muszą) stać spacje,
+  * linia zawsze kończy się średnikiem,
+  * pojedyncze pole może zawierać spacje (np. `Nowy Sącz`).
 
 ### Wyjście
 
 Pięć linii w formacie:
 
-* `Imię: ...`
-* `Nazwisko: ...`
-* `Miejsce urodzenia: ...`
-* `Zawód: ...`
-* `Zarobki: ...`
+```
+Imię: …
+Nazwisko: …
+Miejsce urodzenia: …
+Zawód: …
+Zarobki: …
+```
+
+Wartości wypisz bez spacji na początku i na końcu.
 
 ### Przykład
 
@@ -46,27 +50,25 @@ Zarobki: 1000
 
 ### Uwagi
 
-* Po `split(';')` usuń ewentualne spacje z brzegów pól (np. `strip()`).
-* Ostatni średnik może powodować pusty element na końcu — zignoruj go.
+* Po `split(";")` usuń spacje z brzegów każdego pola metodą `strip()`.
+* Końcowy średnik daje na końcu listy pusty element — pomiń go.
 
 """
 
-
-def rozdziel_informacje(napis):
-    lista = napis.split(";")
-    return lista
+ETYKIETY = ["Imię", "Nazwisko", "Miejsce urodzenia", "Zawód", "Zarobki"]
 
 
-def wypisz_informacje(napis):
-    informacje = rozdziel_informacje(napis)
-    print("Imie: {}".format(informacje[0]))
-    print("Nazwisko: {}".format(informacje[1]))
-    print("Miejsce urodzenia: {}".format(informacje[2]))
-    print("Stanowisko: {}".format(informacje[3]))
-    print("Zarobki: {}".format(informacje[4]))
+def rozdziel_informacje(linia):
+    pola = []
+    for pole in linia.split(";"):
+        pole = pole.strip()
+        if pole:
+            pola.append(pole)
+    return pola
 
 
 if __name__ == "__main__":
-
-    informacje = "Jan;Kowalski;Warszawa;kierownik;2000"
-    wypisz_informacje(informacje)
+    linia = input()
+    informacje = rozdziel_informacje(linia)
+    for etykieta, wartosc in zip(ETYKIETY, informacje):
+        print(f"{etykieta}: {wartosc}")

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-04 — Sumowanie liczb mniejszych od podanej
 
 **Poziom:** ★☆☆
@@ -6,19 +6,15 @@ ZAD-04 — Sumowanie liczb mniejszych od podanej
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` (`n ≥ 1`). Oblicz sumę wszystkich liczb naturalnych mniejszych od `n`, czyli:
-`1 + 2 + ... + (n - 1)`
-Następnie wypisz wynik.
+Wczytaj liczbę naturalną `n` i za pomocą pętli oblicz sumę wszystkich liczb naturalnych dodatnich mniejszych od `n`, czyli $1 + 2 + \ldots + (n - 1)$.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 1`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
+Jedna liczba całkowita — suma liczb od `1` do `n - 1`.
 
 ### Przykład
 
@@ -34,19 +30,22 @@ Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 10
 ```
 
-### Uwagi o formatowaniu
+$1 + 2 + 3 + 4 = 10$.
 
-* Dla `n = 1` wynik to `0`.
+### Uwagi
+
+* Dla `n = 1` suma jest pusta, więc wynik to `0`.
 
 """
 
-if __name__ == "__main__":
 
-    print("Podaj liczbe: ")
-    liczba = int(input())
-
+def suma_mniejszych(n):
     suma = 0
-    for i in range(1, liczba):
-        suma += i
+    for liczba in range(1, n):
+        suma += liczba
+    return suma
 
-    print("Suma wszystkich liczb mniejszych od podanej liczby wynosi: ", suma)
+
+if __name__ == "__main__":
+    n = int(input())
+    print(suma_mniejszych(n))

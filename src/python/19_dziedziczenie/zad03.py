@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-03 — Polimorfizm: Zwierz, Pies i Kot
 
 **Poziom:** ★★☆
@@ -8,33 +8,91 @@ ZAD-03 — Polimorfizm: Zwierz, Pies i Kot
 
 Zaprojektuj klasy:
 
-* **Zwierz** — metoda `odglos()` zwraca/drukuje ogólny dźwięk.
-* **Pies** — dziedziczy po `Zwierz` i nadpisuje `odglos()`.
-* **Kot** — dziedziczy po `Zwierz` i nadpisuje `odglos()`.
+* `Zwierz` — konstruktor `__init__(self, imie)` zapamiętuje imię zwierzęcia. Metoda `odglos()` zwraca napis `...` (ogólny, nieokreślony dźwięk). Metoda `przedstaw_sie()` wypisuje linię:
 
-Program testowy:
+  ```
+  <NazwaKlasy> <imię> wydaje odgłos: <odgłos>
+  ```
 
-* tworzy obiekty: `Zwierz`, `Pies`, `Kot`,
-* umieszcza je w jednej kolekcji,
-* iteruje i dla każdego wypisuje linię w formacie:
-  `NazwaKlasy wydaje odgłos: ...`
+  gdzie `<NazwaKlasy>` to nazwa klasy obiektu (`Zwierz`, `Pies` albo `Kot`), a `<odgłos>` to wynik metody `odglos()`.
+* `Pies` — dziedziczy po `Zwierz` i nadpisuje `odglos()`, która zwraca `Hau!`.
+* `Kot` — dziedziczy po `Zwierz` i nadpisuje `odglos()`, która zwraca `Miau!`.
+
+Klasy `Pies` i `Kot` **nie** definiują własnej metody `przedstaw_sie()` — korzystają z odziedziczonej. Dzięki polimorfizmowi wywołanie `self.odglos()` wewnątrz `przedstaw_sie()` uruchomi wersję metody właściwą dla klasy obiektu.
+
+Program wczytuje listę zwierząt, umieszcza je w jednej liście i dla każdego (w kolejności z wejścia) wywołuje `przedstaw_sie()`.
 
 ### Wejście
 
-Brak.
+* 1. linia: liczba zwierząt $n$
+* kolejne $n$ linii: rodzaj zwierzęcia (`zwierz`, `pies` albo `kot`) i jego imię (jedno słowo), oddzielone spacją
 
 ### Wyjście
 
-Trzy linie, po jednej dla każdego obiektu.
+$n$ linii — po jednej dla każdego zwierzęcia, w formacie podanym w treści.
+
+### Ograniczenia
+
+* $1 \le n \le 20$
 
 ### Przykład
+
+**Wejście:**
+
+```
+3
+zwierz Gucio
+pies Burek
+kot Mruczek
+```
 
 **Wyjście:**
 
 ```
-Zwierz wydaje odgłos: ...
-Pies wydaje odgłos: Hau!
-Kot wydaje odgłos: Miau!
+Zwierz Gucio wydaje odgłos: ...
+Pies Burek wydaje odgłos: Hau!
+Kot Mruczek wydaje odgłos: Miau!
+```
+
+### Uwagi
+
+* Nazwę klasy obiektu można odczytać wyrażeniem `type(self).__name__`.
+
+### Kod startowy
+
+```python
+class Zwierz:
+    def __init__(self, imie):
+        pass
+
+    def odglos(self):
+        pass
+
+    def przedstaw_sie(self):
+        pass
+
+
+class Pies(Zwierz):
+    pass
+
+
+class Kot(Zwierz):
+    pass
+
+
+n = int(input())
+zwierzeta = []
+for _ in range(n):
+    rodzaj, imie = input().split()
+    if rodzaj == "pies":
+        zwierzeta.append(Pies(imie))
+    elif rodzaj == "kot":
+        zwierzeta.append(Kot(imie))
+    else:
+        zwierzeta.append(Zwierz(imie))
+
+for zwierze in zwierzeta:
+    zwierze.przedstaw_sie()
 ```
 
 """
@@ -45,24 +103,34 @@ class Zwierz:
         self.imie = imie
 
     def odglos(self):
-        print("Odglos zwierzecia")
+        return "..."
 
-    def __str__(self):
-        return self.imie
+    def przedstaw_sie(self):
+        nazwa_klasy = type(self).__name__
+        print(f"{nazwa_klasy} {self.imie} wydaje odgłos: {self.odglos()}")
 
 
 class Pies(Zwierz):
     def odglos(self):
-        print("Hau hau")
+        return "Hau!"
 
 
 class Kot(Zwierz):
     def odglos(self):
-        print("Miau miau")
+        return "Miau!"
 
 
 if __name__ == "__main__":
-    zwierzeta = [Zwierz("Zwierz"), Pies("Piesek"), Kot("Kotek")]
+    n = int(input())
+    zwierzeta = []
+    for _ in range(n):
+        rodzaj, imie = input().split()
+        if rodzaj == "pies":
+            zwierzeta.append(Pies(imie))
+        elif rodzaj == "kot":
+            zwierzeta.append(Kot(imie))
+        else:
+            zwierzeta.append(Zwierz(imie))
+
     for zwierze in zwierzeta:
-        print(f"{zwierze} wydaje odglos:")
-        zwierze.odglos()
+        zwierze.przedstaw_sie()

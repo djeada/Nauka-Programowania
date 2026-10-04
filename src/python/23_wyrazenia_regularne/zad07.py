@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-07 — Podziel tekst względem znaków interpunkcyjnych
 
 **Poziom:** ★☆☆
@@ -6,17 +6,21 @@ ZAD-07 — Podziel tekst względem znaków interpunkcyjnych
 
 ### Treść
 
-Otrzymujesz napis (jedno lub kilka zdań). Podziel tekst na fragmenty w miejscach występowania znaków interpunkcyjnych (np. `, . ! ? ; :`). Usuń spacje na początku i końcu każdego fragmentu.
+Wczytaj tekst (jedno lub kilka zdań) i podziel go na fragmenty w miejscach występowania znaków interpunkcyjnych `,` `.` `!` `?` `;` `:`. Inne znaki (np. myślnik czy cudzysłów) nie dzielą tekstu.
+
+Z każdego fragmentu usuń spacje z początku i końca. Puste fragmenty (np. między `?` a `!` w `?!` albo po kropce na końcu tekstu) pomiń.
 
 ### Wejście
 
-Jedna linia:
-
-* `tekst`
+* 1. linia: tekst
 
 ### Wyjście
 
-Każdy fragment w osobnej linii.
+Każdy niepusty fragment w osobnej linii, w kolejności występowania.
+
+### Ograniczenia
+
+* Tekst zawiera co najmniej jedną literę, więc zawsze jest co najmniej jeden fragment.
 
 ### Przykład
 
@@ -33,20 +37,21 @@ Ani nie poszedł do kina
 ani nie wybrał się do teatru
 ```
 
+### Uwagi
+
+* Podział zrobi `re.split(r"[,.!?;:]", tekst)`.
+
 """
 
 import re
 
 
-def podziel_zdanie(zdanie):
-    return [elem for elem in re.split(r"[,.!?]", zdanie) if elem]
-
-
-def test_podziel_zdanie():
-    zdanie = "hej, pan slimak! tak to ja. chodzcie to zaspiewam wam."
-    oczekiwane = ["hej", " pan slimak", " tak to ja", " chodzcie to zaspiewam wam"]
-    assert podziel_zdanie(zdanie) == oczekiwane
+def podziel_tekst(tekst):
+    fragmenty = re.split(r"[,.!?;:]", tekst)
+    return [fragment.strip() for fragment in fragmenty if fragment.strip()]
 
 
 if __name__ == "__main__":
-    test_podziel_zdanie()
+    tekst = input()
+    for fragment in podziel_tekst(tekst):
+        print(fragment)

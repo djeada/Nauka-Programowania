@@ -1,26 +1,25 @@
-"""
+r"""
 ZAD-08 — Wyjątkowe palindromy (podciągi bez zmiany kolejności)
 
 **Poziom:** ★★★
-**Tagi:** `substring`, `palindrom`, `unikalność`
+**Tagi:** `napisy`, `palindrom`, `podnapisy`
 
 ### Treść
 
-Wczytaj słowo i znajdź wszystkie **unikalne** palindromy, które można z niego utworzyć jako **spójne podciągi** (substringi), bez zmiany kolejności znaków, spełniające warunek „wyjątkowości”:
+Wczytaj słowo i znajdź wszystkie **różne** wyjątkowe palindromy, które są jego **spójnymi fragmentami** (podnapisami, czyli kolejnymi znakami słowa, np. `slowo[i:j]`).
 
-1. wszystkie znaki są identyczne (np. `aaa`), **albo**
-2. wszystkie znaki poza środkowym są identyczne (np. `cbc`).
+Fragment jest **wyjątkowym palindromem**, jeśli:
 
-Pojedynczy znak też jest wyjątkowym palindromem.
+1. wszystkie jego znaki są identyczne (np. `a`, `aaa`), **albo**
+2. ma nieparzystą długość, a wszystkie jego znaki poza środkowym są identyczne (np. `cbc`, `aabaa`).
 
 ### Wejście
 
-* 1. linia: słowo (litery)
+* 1. linia: słowo złożone z małych liter
 
 ### Wyjście
 
-Każdy unikalny wyjątkowy palindrom w osobnej linii.
-Jeśli nic poza pojedynczymi znakami nie pasuje, wypisz tylko te unikalne znaki (po jednej linii na znak).
+Każdy wyjątkowy palindrom w osobnej linii, bez powtórzeń. Kolejność: od najkrótszych do najdłuższych, a palindromy tej samej długości — alfabetycznie.
 
 ### Przykład
 
@@ -34,96 +33,53 @@ xxyxx
 
 ```
 x
-xx
-xxx
-xxyxx
 y
-yxy
+xx
+xyx
+xxyxx
 ```
 
-### Uwagi o formatowaniu
+Fragmenty `xxy`, `xyxx` itp. nie są wyjątkowymi palindromami. Palindrom `xx` występuje w słowie dwa razy, ale wypisujemy go raz.
 
-* Usuń duplikaty w wyniku (np. ten sam palindrom znaleziony w kilku miejscach wypisz raz).
-* Kolejność wypisywania może być zgodna z pierwszym pojawieniem się w tekście (łatwe i czytelne): wypisuj przy pierwszym znalezieniu danego palindromu.
+### Uwagi
+
+* Sprawdź wszystkie fragmenty `slowo[i:j]`, a pasujące zbierz w zbiorze (`set`), żeby usunąć powtórzenia.
+* Wymaganą kolejność uzyskasz, przechodząc po długościach od 1 do długości słowa i dla każdej długości wypisując alfabetycznie (`sorted`) znalezione palindromy tej długości.
 
 """
 
 
-def czy_wyjatkowy_palindrom(s):
+def czy_wyjatkowy_palindrom(fragment):
     """
-    Sprawdza czy podciąg jest wyjątkowym palindromem.
-
-    Wyjątkowy palindrom to:
-    1. wszystkie znaki są identyczne (np. 'aaa'), lub
-    2. wszystkie znaki poza środkowym są identyczne (np. 'cbc')
-
-    Złożoność czasowa: O(n), gdzie n to długość podciągu
-    Złożoność pamięciowa: O(1)
+    Sprawdza, czy fragment jest wyjątkowym palindromem:
+    wszystkie znaki są identyczne albo (przy nieparzystej długości)
+    identyczne są wszystkie znaki poza środkowym.
     """
-    if len(s) == 0:
-        return False
+    srodek = len(fragment) // 2
+    bez_srodka = fragment[:srodek] + fragment[srodek + 1 :]
 
-    # Przypadek 1: wszystkie znaki identyczne
-    # Sprawdzenie bez tworzenia zbioru (O(1) pamięci)
-    wszystkie_takie_same = True
-    for znak in s:
-        if znak != s[0]:
-            wszystkie_takie_same = False
-            break
-
-    if wszystkie_takie_same:
+    if fragment == fragment[0] * len(fragment):
         return True
-
-    # Przypadek 2: wszystkie znaki poza środkowym identyczne
-    # (ma sens tylko dla nieparzystej długości >= 3)
-    if len(s) >= 3 and len(s) % 2 == 1:
-        srodek = len(s) // 2
-        # Sprawdzenie czy wszystkie znaki poza środkowym są takie same
-        # Porównanie bez tworzenia zbioru
-        if s != s[::-1]:  # Musi być palindromem
-            return False
-
-        wszystkie_inne_takie_same = True
-        for i in range(len(s)):
-            if i != srodek and s[i] != s[0]:
-                wszystkie_inne_takie_same = False
-                break
-
-        if wszystkie_inne_takie_same:
-            return True
-
+    if len(fragment) % 2 == 1 and bez_srodka == fragment[0] * len(bez_srodka):
+        return True
     return False
 
 
-def znajdz_wyjatkowe_palindromy(slowo):
-    """
-    Znajduje wszystkie unikalne wyjątkowe palindromy w słowie.
-
-    Złożoność czasowa: O(n^3), gdzie n to długość słowa
-    Złożoność pamięciowa: O(n^2) dla przechowania wyników
-    """
-    znalezione = set()
-
-    # Iteracja przez wszystkie możliwe podciągi
-    for i in range(len(slowo)):
-        for j in range(i + 1, len(slowo) + 1):
-            podciag = slowo[i:j]
-
-            # Sprawdzenie czy podciąg jest wyjątkowym palindromem
-            if czy_wyjatkowy_palindrom(podciag):
-                znalezione.add(podciag)
-
-    # Sortowanie wyników według długości, a następnie alfabetycznie
-    return sorted(znalezione, key=lambda x: (len(x), x))
+def wyjatkowe_palindromy(slowo):
+    """Zwraca różne wyjątkowe palindromy: od najkrótszych, a w obrębie długości alfabetycznie."""
+    wynik = []
+    for dlugosc in range(1, len(slowo) + 1):
+        znalezione = set()
+        for poczatek in range(len(slowo) - dlugosc + 1):
+            fragment = slowo[poczatek : poczatek + dlugosc]
+            if czy_wyjatkowy_palindrom(fragment):
+                znalezione.add(fragment)
+        wynik.extend(sorted(znalezione))
+    return wynik
 
 
 if __name__ == "__main__":
-    # Wczytanie słowa z wejścia
     slowo = input().strip()
 
-    # Znalezienie wszystkich wyjątkowych palindromów
-    palindromy = znajdz_wyjatkowe_palindromy(slowo)
-
-    # Wypisanie każdego palindromu w osobnej linii
-    for palindrom in palindromy:
+    for palindrom in wyjatkowe_palindromy(slowo):
         print(palindrom)

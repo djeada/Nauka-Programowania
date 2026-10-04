@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Macierz z identycznymi wierszami 0..b
 
 **Poziom:** ★☆☆
@@ -6,16 +6,21 @@ ZAD-01 — Macierz z identycznymi wierszami 0..b
 
 ### Treść
 
-Wczytaj `a` i `b`. Wypisz macierz składającą się z `a` identycznych wierszy, gdzie każdy wiersz to liczby od `0` do `b` włącznie.
+Wczytaj liczby `a` i `b`. Utwórz macierz złożoną z `a` identycznych wierszy, w których są kolejne liczby od `0` do `b` włącznie, i wypisz ją.
 
 ### Wejście
 
-* 1. linia: `a`
-* 2. linia: `b`
+* 1. linia: `a` — liczba wierszy
+* 2. linia: `b` — ostatnia liczba w wierszu
 
 ### Wyjście
 
-* `a` wierszy, w każdym: `0 1 2 ... b`
+`a` linii, w każdej liczby `0 1 2 … b` oddzielone spacjami.
+
+### Ograniczenia
+
+* `1 ≤ a ≤ 20`
+* `0 ≤ b ≤ 20`
 
 ### Przykład
 
@@ -38,36 +43,22 @@ Wczytaj `a` i `b`. Wypisz macierz składającą się z `a` identycznych wierszy,
 
 
 def stworz_macierz(a, b):
-    """
-    Funkcja tworzy macierz o wymiarach a x (b+1).
-    Kazdy wiersz sklada sie z liczb od 0 do b włącznie.
-
-    Złożoność czasowa: O(a * b)
-    Złożoność pamięciowa: O(a * b)
-    """
+    """Zwraca macierz złożoną z a wierszy, z których każdy to liczby 0, 1, ..., b."""
     macierz = []
-    for i in range(a):
-        macierz.append([])
+    for _ in range(a):
+        wiersz = []
         for j in range(b + 1):
-            macierz[i].append(j)
+            wiersz.append(j)
+        macierz.append(wiersz)
     return macierz
 
 
-def test_stworz_macierz():
-    assert stworz_macierz(2, 3) == [[0, 1, 2], [0, 1, 2]]
-    assert stworz_macierz(3, 2) == [[0, 1], [0, 1], [0, 1]]
+def wypisz_macierz(macierz):
+    for wiersz in macierz:
+        print(" ".join(str(x) for x in wiersz))
 
 
 if __name__ == "__main__":
-    # Wczytanie wartości a i b z wejścia
-    a = int(input().strip())
-    b = int(input().strip())
-
-    # Utworzenie macierzy
-    # Złożoność czasowa: O(a * b), gdzie a to liczba wierszy, b to liczba elementów w wierszu
-    # Złożoność pamięciowa: O(a * b) dla przechowania macierzy
-    macierz = stworz_macierz(a, b)
-
-    # Wypisanie macierzy
-    for wiersz in macierz:
-        print(" ".join(map(str, wiersz)))
+    a = int(input())
+    b = int(input())
+    wypisz_macierz(stworz_macierz(a, b))

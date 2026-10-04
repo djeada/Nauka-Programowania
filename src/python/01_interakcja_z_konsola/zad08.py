@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Koszt pokrycia podłogi płytkami
 
 **Poziom:** ★★☆
@@ -8,30 +8,36 @@ ZAD-08 — Koszt pokrycia podłogi płytkami
 
 Dane są:
 
-* cena jednej płytki `p`,
-* bok płytki `t` (płytka kwadratowa),
-* długość podłogi `L`,
-* szerokość podłogi `W`.
+* cena jednej płytki `p` (w złotych),
+* bok kwadratowej płytki `t` (w centymetrach),
+* długość podłogi `L` (w centymetrach),
+* szerokość podłogi `W` (w centymetrach).
 
-Oblicz liczbę płytek potrzebnych do pokrycia całej podłogi, zakładając układ bez docinania „na styk” (czyli wzdłuż każdego wymiaru zaokrąglasz w górę), a następnie podaj koszt całkowity.
+Płytki układamy w prostokątną siatkę równolegle do ścian. Wzdłuż każdego wymiaru liczbę płytek zaokrąglamy **w górę** (ostatnią płytkę w rzędzie się docina, ale trzeba ją kupić w całości):
+
+* $n_L = \lceil L / t \rceil$
+* $n_W = \lceil W / t \rceil$
+* liczba płytek: $n = n_L \cdot n_W$
+
+Oblicz całkowity koszt zakupu płytek: $n \cdot p$.
 
 ### Wejście
 
-4 liczby (każda w osobnej linii): `p`, `t`, `L`, `W`
+4 liczby, każda w osobnej linii:
+
+* 1. linia: `p` — liczba rzeczywista
+* 2. linia: `t` — liczba całkowita
+* 3. linia: `L` — liczba całkowita
+* 4. linia: `W` — liczba całkowita
 
 ### Wyjście
 
-Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
+Jedna linia: całkowity koszt do **2 miejsc po przecinku**.
 
-### Ograniczenia / gwarancje
+### Ograniczenia
 
-* `p > 0`, `t > 0`, `L > 0`, `W > 0`
-* Liczba płytek:
-
-  * `nL = ceil(L / t)`
-  * `nW = ceil(W / t)`
-  * `n = nL * nW`
-* Koszt: `n * p`
+* $0 < p \le 1000$
+* $1 \le t, L, W \le 10^4$
 
 ### Przykład
 
@@ -50,19 +56,26 @@ Jedna liczba: całkowity koszt do **2 miejsc po przecinku**.
 196.00
 ```
 
+$n_L = \lceil 20 / 3 \rceil = 7$, $n_W = \lceil 40 / 3 \rceil = 14$, więc potrzeba $7 \cdot 14 = 98$ płytek, które kosztują $98 \cdot 2 = 196$ zł.
+
+### Uwagi
+
+* Zaokrąglenie w górę daje funkcja `math.ceil`.
+
 """
 
 import math
 
 
+def koszt_plytek(cena, bok, dlugosc, szerokosc):
+    plytki_wzdluz = math.ceil(dlugosc / bok)
+    plytki_wszerz = math.ceil(szerokosc / bok)
+    return plytki_wzdluz * plytki_wszerz * cena
+
+
 if __name__ == "__main__":
-    p = float(input())
-    t = float(input())
-    l = float(input())
-    w = float(input())
-
-    n_l = math.ceil(l / t)
-    n_w = math.ceil(w / t)
-    total_cost = n_l * n_w * p
-
-    print(f"{total_cost:.2f}")
+    cena = float(input())
+    bok = int(input())
+    dlugosc = int(input())
+    szerokosc = int(input())
+    print(f"{koszt_plytek(cena, bok, dlugosc, szerokosc):.2f}")

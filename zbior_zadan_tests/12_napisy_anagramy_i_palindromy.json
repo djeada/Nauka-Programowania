@@ -7,6 +7,26 @@
     {
       "input": "hello",
       "output": "Fałsz"
+    },
+    {
+      "input": "a",
+      "output": "Prawda"
+    },
+    {
+      "input": "ab",
+      "output": "Fałsz"
+    },
+    {
+      "input": "Anna",
+      "output": "Prawda"
+    },
+    {
+      "input": "Radar",
+      "output": "Prawda"
+    },
+    {
+      "input": "kajaki",
+      "output": "Fałsz"
     }
   ],
   "ZAD-02": [
@@ -15,8 +35,20 @@
       "output": "a"
     },
     {
-      "input": "Z",
-      "output": "Z"
+      "input": "ba",
+      "output": "ab\nba"
+    },
+    {
+      "input": "dog",
+      "output": "dgo\ndog\ngdo\ngod\nodg\nogd"
+    },
+    {
+      "input": "kot",
+      "output": "kot\nkto\nokt\notk\ntko\ntok"
+    },
+    {
+      "input": "lato",
+      "output": "alot\nalto\naolt\naotl\natlo\natol\nlaot\nlato\nloat\nlota\nltao\nltoa\noalt\noatl\nolat\nolta\notal\notla\ntalo\ntaol\ntlao\ntloa\ntoal\ntola"
     }
   ],
   "ZAD-03": [
@@ -27,6 +59,22 @@
     {
       "input": "abc\nab",
       "output": "Fałsz"
+    },
+    {
+      "input": "Ola\nalo",
+      "output": "Prawda"
+    },
+    {
+      "input": "aab\nabb",
+      "output": "Fałsz"
+    },
+    {
+      "input": "kot\nkot",
+      "output": "Prawda"
+    },
+    {
+      "input": "rower\nrowery",
+      "output": "Fałsz"
     }
   ],
   "ZAD-04": [
@@ -35,8 +83,24 @@
       "output": "Ada\nBob\nala"
     },
     {
-      "input": "Hello world",
+      "input": "To nie jest palindrom",
       "output": ""
+    },
+    {
+      "input": "Oko za oko, ząb za ząb!",
+      "output": "Oko\noko"
+    },
+    {
+      "input": "Zakaz! Radar? Potop.",
+      "output": "Zakaz\nRadar\nPotop"
+    },
+    {
+      "input": "a - b",
+      "output": "a\nb"
+    },
+    {
+      "input": "Ile razy ma kajak?",
+      "output": "kajak"
     }
   ],
   "ZAD-05": [
@@ -47,6 +111,18 @@
     {
       "input": "pies kot\nmysz",
       "output": ""
+    },
+    {
+      "input": "Kot tok kto, Okt!\nkot",
+      "output": "Kot\ntok\nkto\nOkt"
+    },
+    {
+      "input": "Ala ma kota\nma",
+      "output": "ma"
+    },
+    {
+      "input": "Marta i Tamra, a nie Martyna.\ntrama",
+      "output": "Marta\nTamra"
     }
   ],
   "ZAD-06": [
@@ -55,8 +131,28 @@
       "output": "aaaa"
     },
     {
-      "input": "abc",
+      "input": "aab",
+      "output": "aba"
+    },
+    {
+      "input": "a",
+      "output": "a"
+    },
+    {
+      "input": "aabbc",
+      "output": "abcba\nbacab"
+    },
+    {
+      "input": "aabbcc",
+      "output": "abccba\nacbbca\nbaccab\nbcaacb\ncabbac\ncbaabc"
+    },
+    {
+      "input": "aaab",
       "output": ""
+    },
+    {
+      "input": "kajak",
+      "output": "akjka\nkajak"
     }
   ],
   "ZAD-07": [
@@ -66,7 +162,27 @@
     },
     {
       "input": "ab\nabc",
-      "output": "-1"
+      "output": "1"
+    },
+    {
+      "input": "abc\ncba",
+      "output": "0"
+    },
+    {
+      "input": "aaaa\nbbbb",
+      "output": "8"
+    },
+    {
+      "input": "kot\npies",
+      "output": "7"
+    },
+    {
+      "input": "kajak\nkotek",
+      "output": "6"
+    },
+    {
+      "input": "x\nyy",
+      "output": "3"
     }
   ],
   "ZAD-08": [
@@ -77,6 +193,26 @@
     {
       "input": "aba",
       "output": "a\nb\naba"
+    },
+    {
+      "input": "abc",
+      "output": "a\nb\nc"
+    },
+    {
+      "input": "mnonopoo",
+      "output": "m\nn\no\np\noo\nnon\nono\nopo"
+    },
+    {
+      "input": "aabaa",
+      "output": "a\nb\naa\naba\naabaa"
+    },
+    {
+      "input": "z",
+      "output": "z"
+    },
+    {
+      "input": "abcbaba",
+      "output": "a\nb\nc\naba\nbab\nbcb"
     }
   ]
 }

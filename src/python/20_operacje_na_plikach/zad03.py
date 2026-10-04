@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-03 — Znajdź wszystkie ścieżki plików o danej nazwie (rekurencyjnie)
 
 **Poziom:** ★★☆
@@ -6,83 +6,108 @@ ZAD-03 — Znajdź wszystkie ścieżki plików o danej nazwie (rekurencyjnie)
 
 ### Treść
 
-Otrzymujesz nazwę pliku (np. `raport.docx`). Przeszukaj cały system plików i znajdź wszystkie pliki o tej nazwie. Wypisz listę pełnych ścieżek do znalezionych plików.
+Wczytaj ścieżkę folderu i nazwę pliku (np. `raport.txt`). Przeszukaj ten folder **i wszystkie jego podfoldery** (na dowolnej głębokości) i wypisz ścieżki wszystkich plików o dokładnie takiej nazwie.
+
+* Nazwy porównuj dokładnie — wielkość liter ma znaczenie (`Raport.txt` to inna nazwa niż `raport.txt`).
+* Wypisuj tylko pliki. Folder o szukanej nazwie nie jest wynikiem, ale jego wnętrze też przeszukaj.
+* Ścieżki wypisuj względem podanego folderu. Folder `.` oznacza cały katalog roboczy.
 
 ### Wejście
 
-* 1 linia: `filename` (np. `raport.docx`)
+* 1. linia: ścieżka folderu, w którym zaczynasz szukanie (`.` = cały katalog roboczy)
+* 2. linia: nazwa pliku
 
 ### Wyjście
 
-* 1 linia: lista pełnych ścieżek (napisy)
+* Ścieżki znalezionych plików względem podanego folderu, każda w osobnej linii, posortowane rosnąco.
+* `Nie znaleziono.` — jeśli nie ma żadnego pliku o tej nazwie.
+* `Folder nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego folderu.
 
 ### Przykład
+
+**Pliki przed:**
+
+```
+raport.txt
+2023/raport.txt
+2023/raport.docx
+2023/styczeń/raport.txt
+2024/Raport.txt
+```
 
 **Wejście:**
 
 ```
-raport.docx
+.
+raport.txt
 ```
 
 **Wyjście:**
 
 ```
-[
-  'C:\Users\Username\Documents\raport.docx',
-  'D:\Projekty\Raporty\raport.docx',
-  'E:\Backup\raport.docx'
-]
+2023/raport.txt
+2023/styczeń/raport.txt
+raport.txt
 ```
+
+`2024/Raport.txt` ma inną nazwę (wielka litera), a `2023/raport.docx` — inne rozszerzenie.
+
+### Przykład 2
+
+**Pliki przed:**
+
+```
+raport.txt
+2023/raport.txt
+2023/raport.docx
+2023/styczeń/raport.txt
+2024/Raport.txt
+```
+
+**Wejście:**
+
+```
+2023
+raport.txt
+```
+
+**Wyjście:**
+
+```
+raport.txt
+styczeń/raport.txt
+```
+
+Ścieżki są podane względem folderu `2023`.
 
 ### Uwagi
 
-* W środowisku testowym możesz nie mieć uprawnień do wszystkich katalogów — program powinien to bezpiecznie obsłużyć (np. pomijać niedostępne miejsca).
+* Wszystkie pliki w folderze i jego podfolderach zwraca `os.walk()` albo `Path.rglob("*")`.
 
 """
 
-import pathlib
+from pathlib import Path
 
 
-def znajdz_sciezki(nazwa_pliku):
-    """
-    Funkcja zwraca liste sciezek do plikow o podanej nazwie.
-    """
+def znajdz_pliki(folder, nazwa_pliku):
+    """Zwraca posortowane ścieżki (względem folderu) plików o danej nazwie."""
+    baza = Path(folder)
     sciezki = []
-    for plik in pathlib.Path.home().glob("**/*"):
-        if plik.name == nazwa_pliku:
-            sciezki.append(str(plik.absolute()))
-    return sciezki
-
-
-def test_znajdz_sciezki():
-
-    # stworz foldery testowe
-    sciezka1 = "test"
-    sciezka2 = "test/test1"
-    sciezka3 = "test/test2"
-    pathlib.Path(sciezka1).mkdir()
-    pathlib.Path(sciezka2).mkdir()
-    pathlib.Path(sciezka3).mkdir()
-
-    # utworz pliki testowe
-    nazwa_pliku = "test.txt"
-    plik_1 = pathlib.Path(f"{sciezka1}/{nazwa_pliku}")
-    plik_1.touch()
-    plik_2 = pathlib.Path(f"{sciezka2}/{nazwa_pliku}")
-    plik_2.touch()
-    plik_3 = pathlib.Path(f"{sciezka3}/{nazwa_pliku}")
-    plik_3.touch()
-
-    wynik = znajdz_sciezki(nazwa_pliku)
-    assert str(plik_1.absolute()) in wynik
-    assert str(plik_2.absolute()) in wynik
-    assert str(plik_3.absolute()) in wynik
-
-    # usun foldery testowe
-    import shutil
-
-    shutil.rmtree(sciezka1)
+    for sciezka in baza.rglob("*"):
+        if sciezka.is_file() and sciezka.name == nazwa_pliku:
+            sciezki.append(sciezka.relative_to(baza).as_posix())
+    return sorted(sciezki)
 
 
 if __name__ == "__main__":
-    test_znajdz_sciezki()
+    folder = input()
+    nazwa_pliku = input()
+
+    if not Path(folder).is_dir():
+        print("Folder nie istnieje.")
+    else:
+        sciezki = znajdz_pliki(folder, nazwa_pliku)
+        if sciezki:
+            print("\n".join(sciezki))
+        else:
+            print("Nie znaleziono.")

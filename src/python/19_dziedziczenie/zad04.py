@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-04 — Dziedziczenie wielopoziomowe: Człowiek → Student → StudentFizyki
 
 **Poziom:** ★★☆
@@ -8,77 +8,77 @@ ZAD-04 — Dziedziczenie wielopoziomowe: Człowiek → Student → StudentFizyki
 
 Zaprojektuj hierarchię klas:
 
-1. **Człowiek** — pola:
+1. `Czlowiek` — atrybuty: imię, nazwisko, miejsce urodzenia, zawód.
+2. `Student` (dziedziczy po `Czlowiek`) — dodatkowo: numer albumu, kierunek studiów.
+3. `StudentFizyki` (dziedziczy po `Student`) — dodatkowo: średnia z laboratoriów, średnia z wykładów.
 
-   * imię
-   * nazwisko
-   * miejsce urodzenia
-   * zawód
+Każda klasa ma:
 
-2. **Student** (dziedziczy po `Człowiek`) — dodatkowo:
+* konstruktor, który atrybuty odziedziczone przekazuje do konstruktora klasy bazowej przez `super().__init__(…)`, a sam zapisuje tylko nowe atrybuty,
+* metodę `opis()`, która zwraca **listę linii** z danymi obiektu. Klasa potomna wywołuje `super().opis()` i dopisuje do wyniku linie ze swoimi nowymi atrybutami,
+* nagłówek: `Człowiek`, `Student` albo `Student Fizyki`.
 
-   * numer albumu
-   * kierunek studiów
+Metoda `wypisz()` (zdefiniowana tylko w klasie `Czlowiek`) wypisuje nagłówek z dwukropkiem, a pod nim kolejne linie z `opis()`.
 
-3. **StudentFizyki** (dziedziczy po `Student`) — dodatkowo:
-
-   * średnia z laboratoriów
-   * średnia z wykładów
-
-Program:
-
-* wczytuje dane dla trzech obiektów (Człowiek, Student, StudentFizyki),
-* tworzy obiekty,
-* wypisuje je w formacie jak w przykładzie.
-
-**Uwaga do wejścia:** wszystko w osobnych liniach, w podanej kolejności.
+Program wczytuje dane kilku osób, tworzy odpowiednie obiekty i wypisuje je w kolejności z wejścia.
 
 ### Wejście
 
-**Dane dla Człowiek:**
+* 1. linia: liczba osób $n$
+* następnie dane kolejnych osób; każda wartość w osobnej linii:
+  1. rodzaj: `czlowiek`, `student` albo `student_fizyki`
+  2. imię
+  3. nazwisko
+  4. miejsce urodzenia
+  5. zawód
+  6. numer albumu (liczba całkowita) — tylko dla `student` i `student_fizyki`
+  7. kierunek studiów — tylko dla `student` i `student_fizyki`
+  8. średnia z laboratoriów (liczba rzeczywista) — tylko dla `student_fizyki`
+  9. średnia z wykładów (liczba rzeczywista) — tylko dla `student_fizyki`
 
-1. imię
-2. nazwisko
-3. miejsce urodzenia
-4. zawód
-
-**Dane dla Student:**
-5. imię
-6. nazwisko
-7. miejsce urodzenia
-8. zawód
-9. numer albumu (int)
-10. kierunek studiów
-
-**Dane dla StudentFizyki:**
-11. imię
-12. nazwisko
-13. miejsce urodzenia
-14. zawód
-15. numer albumu (int)
-16. kierunek studiów
-17. średnia z laboratoriów (float)
-18. średnia z wykładów (float)
+Wartości tekstowe mogą zawierać spacje (np. `Zielona Góra`).
 
 ### Wyjście
 
-Trzy bloki jak w przykładzie, oddzielone pustą linią.
+Dla każdej osoby blok linii, bloki oddzielone pustą linią. Blok ma postać (linie z nawiasu kwadratowego występują tylko w odpowiednich klasach):
+
+```
+<Nagłówek>:
+Imię: <imię>
+Nazwisko: <nazwisko>
+Miejsce urodzenia: <miejsce>
+Zawód: <zawód>
+[Numer albumu: <numer>]
+[Kierunek studiów: <kierunek>]
+[Średnia z laboratoriów: <średnia>]
+[Średnia z wykładów: <średnia>]
+```
+
+Średnie wypisz z dokładnością do 2 miejsc po przecinku.
+
+### Ograniczenia
+
+* $1 \le n \le 10$
 
 ### Przykład
 
 **Wejście:**
 
 ```
+3
+czlowiek
 Jan
 Kowalski
 Kraków
 Inżynier
+student
 Anna
 Nowak
 Warszawa
 Student
 12345
 Informatyka
+student_fizyki
 Piotr
 Wiśniewski
 Gdańsk
@@ -113,100 +113,170 @@ Miejsce urodzenia: Gdańsk
 Zawód: Student
 Numer albumu: 54321
 Kierunek studiów: Fizyka
-Średnia z laboratoriów: 4.5
-Średnia z wykładów: 4.0
+Średnia z laboratoriów: 4.50
+Średnia z wykładów: 4.00
+```
+
+### Uwagi
+
+* Nagłówek wygodnie zapisać jako atrybut klasy, np. `naglowek = "Student"` — klasa potomna nadpisuje go własną wartością, a `wypisz()` odczytuje `self.naglowek`.
+
+### Kod startowy
+
+```python
+class Czlowiek:
+    naglowek = "Człowiek"
+
+    def __init__(self, imie, nazwisko, miejsce_urodzenia, zawod):
+        pass
+
+    def opis(self):
+        pass
+
+    def wypisz(self):
+        print(f"{self.naglowek}:")
+        for linia in self.opis():
+            print(linia)
+
+
+class Student(Czlowiek):
+    naglowek = "Student"
+
+    def __init__(self, imie, nazwisko, miejsce_urodzenia, zawod, numer_albumu, kierunek):
+        pass
+
+    def opis(self):
+        pass
+
+
+class StudentFizyki(Student):
+    naglowek = "Student Fizyki"
+
+    def __init__(self, imie, nazwisko, miejsce_urodzenia, zawod, numer_albumu, kierunek,
+                 srednia_lab, srednia_wyklad):
+        pass
+
+    def opis(self):
+        pass
+
+
+n = int(input())
+osoby = []
+for _ in range(n):
+    rodzaj = input()
+    imie = input()
+    nazwisko = input()
+    miejsce = input()
+    zawod = input()
+    if rodzaj == "czlowiek":
+        osoby.append(Czlowiek(imie, nazwisko, miejsce, zawod))
+        continue
+    numer = int(input())
+    kierunek = input()
+    if rodzaj == "student":
+        osoby.append(Student(imie, nazwisko, miejsce, zawod, numer, kierunek))
+    else:
+        lab = float(input())
+        wyklad = float(input())
+        osoby.append(StudentFizyki(imie, nazwisko, miejsce, zawod, numer, kierunek, lab, wyklad))
+
+for i, osoba in enumerate(osoby):
+    if i > 0:
+        print()
+    osoba.wypisz()
 ```
 
 """
 
 
 class Czlowiek:
+    naglowek = "Człowiek"
+
     def __init__(self, imie, nazwisko, miejsce_urodzenia, zawod):
         self.imie = imie
         self.nazwisko = nazwisko
         self.miejsce_urodzenia = miejsce_urodzenia
         self.zawod = zawod
 
-    def __str__(self):
-        return f"{self.imie} {self.nazwisko} {self.miejsce_urodzenia} {self.zawod}"
+    def opis(self):
+        return [
+            f"Imię: {self.imie}",
+            f"Nazwisko: {self.nazwisko}",
+            f"Miejsce urodzenia: {self.miejsce_urodzenia}",
+            f"Zawód: {self.zawod}",
+        ]
 
-    def __repr__(self):
-        return f"{self.imie} {self.nazwisko} {self.miejsce_urodzenia} {self.zawod}"
-
-    def __eq__(self, other):
-        return (
-            self.imie == other.imie
-            and self.nazwisko == other.nazwisko
-            and self.miejsce_urodzenia == other.miejsce_urodzenia
-            and self.zawod == other.zawod
-        )
-
-    def __ne__(self, other):
-        return not self.__eq__(other)
+    def wypisz(self):
+        print(f"{self.naglowek}:")
+        for linia in self.opis():
+            print(linia)
 
 
 class Student(Czlowiek):
+    naglowek = "Student"
+
     def __init__(
-        self, imie, nazwisko, miejsce_urodzenia, numer_albumu, kierunek_studiow
+        self, imie, nazwisko, miejsce_urodzenia, zawod, numer_albumu, kierunek
     ):
-        super().__init__(imie, nazwisko, miejsce_urodzenia, "student")
+        super().__init__(imie, nazwisko, miejsce_urodzenia, zawod)
         self.numer_albumu = numer_albumu
-        self.kierunek_studiow = kierunek_studiow
+        self.kierunek = kierunek
 
-    def __str__(self):
-        return f"{super().__str__()} {self.numer_albumu} {self.kierunek_studiow}"
-
-    def __repr__(self):
-        return f"{super().__repr__()} {self.numer_albumu} {self.kierunek_studiow}"
-
-    def __eq__(self, other):
-        return (
-            super().__eq__(other)
-            and self.numer_albumu == other.numer_albumu
-            and self.kierunek_studiow == other.kierunek_studiow
-        )
-
-    def __ne__(self, other):
-        return not self.__eq__(other)
+    def opis(self):
+        return super().opis() + [
+            f"Numer albumu: {self.numer_albumu}",
+            f"Kierunek studiów: {self.kierunek}",
+        ]
 
 
 class StudentFizyki(Student):
+    naglowek = "Student Fizyki"
+
     def __init__(
         self,
         imie,
         nazwisko,
         miejsce_urodzenia,
+        zawod,
         numer_albumu,
-        srednia_z_lab,
-        srednia_z_wykl,
+        kierunek,
+        srednia_lab,
+        srednia_wyklad,
     ):
-        super().__init__(imie, nazwisko, miejsce_urodzenia, numer_albumu, "Fizyka")
-        self.srednia_z_lab = srednia_z_lab
-        self.srednia_z_wykl = srednia_z_wykl
-
-    def __str__(self):
-        return f"{super().__str__()} {self.srednia_z_lab} {self.srednia_z_wykl}"
-
-    def __repr__(self):
-        return f"{super().__repr__()} {self.srednia_z_lab} {self.srednia_z_wykl}"
-
-    def __eq__(self, other):
-        return (
-            super().__eq__(other)
-            and self.srednia_z_lab == other.srednia_z_lab
-            and self.srednia_z_wykl == other.srednia_z_wykl
+        super().__init__(
+            imie, nazwisko, miejsce_urodzenia, zawod, numer_albumu, kierunek
         )
+        self.srednia_lab = srednia_lab
+        self.srednia_wyklad = srednia_wyklad
 
-    def __ne__(self, other):
-        return not self.__eq__(other)
+    def opis(self):
+        return super().opis() + [
+            f"Średnia z laboratoriów: {self.srednia_lab:.2f}",
+            f"Średnia z wykładów: {self.srednia_wyklad:.2f}",
+        ]
+
+
+def wczytaj_osobe():
+    rodzaj = input()
+    imie = input()
+    nazwisko = input()
+    miejsce = input()
+    zawod = input()
+    if rodzaj == "czlowiek":
+        return Czlowiek(imie, nazwisko, miejsce, zawod)
+    numer = int(input())
+    kierunek = input()
+    if rodzaj == "student":
+        return Student(imie, nazwisko, miejsce, zawod, numer, kierunek)
+    lab = float(input())
+    wyklad = float(input())
+    return StudentFizyki(imie, nazwisko, miejsce, zawod, numer, kierunek, lab, wyklad)
 
 
 if __name__ == "__main__":
-
-    czlowiek = Czlowiek("Jan", "Kowalski", "Warszawa", "programista")
-    student = Student("Jan", "Kowalski", "Warszawa", "123456789", "Informatyka")
-    student_fizyki = StudentFizyki("Jan", "Kowalski", "Warszawa", "123456789", 4.5, 5.0)
-
-    print(czlowiek)
-    print(student)
-    print(student_fizyki)
+    n = int(input())
+    osoby = [wczytaj_osobe() for _ in range(n)]
+    for i, osoba in enumerate(osoby):
+        if i > 0:
+            print()
+        osoba.wypisz()

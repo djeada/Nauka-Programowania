@@ -1,35 +1,36 @@
-"""
+r"""
 ZAD-07 — Różnica między dwoma listami
 
 **Poziom:** ★☆☆
-**Tagi:** `list`, `set`
+**Tagi:** `listy`, `różnica symetryczna`
 
 ### Treść
 
-Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **tylko w jednej** z list (różnica symetryczna).
+Wczytaj dwie listy liczb całkowitych i utwórz listę elementów, które występują **tylko w jednej** z list (tzw. różnica symetryczna).
 
-* Kolejność elementów w wyniku może być **dowolna**.
-* Jeśli wszystkie elementy są wspólne — wypisz `[]`.
+* Najpierw umieść elementy listy 1, których nie ma w liście 2 (w kolejności z listy 1), a potem elementy listy 2, których nie ma w liście 1 (w kolejności z listy 2).
+* Każdy element umieść w wyniku **tylko raz**, nawet jeśli w liście się powtarza.
+* Jeśli takich elementów nie ma, wypisz `[]`.
 
 ### Wejście
 
-* 1 linia: lista 1
-* 2 linia: lista 2
+* 1. linia: lista 1 — liczby całkowite oddzielone spacjami
+* 2. linia: lista 2 — liczby całkowite oddzielone spacjami
 
 ### Wyjście
 
-* 1 linia: lista elementów niewspólnych
+Jedna linia: lista elementów występujących tylko w jednej z list.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[9, 2, 5, 4]
-[4, 2, 1]
+9 2 5 4
+4 2 1
 ```
 
-**Wyjście (jedna z poprawnych odpowiedzi):**
+**Wyjście:**
 
 ```
 [9, 5, 1]
@@ -38,18 +39,19 @@ Wczytaj dwie listy liczb całkowitych i wypisz elementy, które występują **ty
 """
 
 
-def roznica_list(lista_a, lista_b):
-    return [x for x in lista_a if x not in lista_b] + [
-        x for x in lista_b if x not in lista_a
-    ]
-
-
-def test_roznica_list():
-    assert set(roznica_list([1, 2, 3, 4, 5], [2, 3, 4, 5, 6])) == set([1, 6])
-    assert set(roznica_list([9, 4, -2, -1], [9, 4, -2, -1])) == set()
-    assert set(roznica_list([2, 5, 9], [3, 5, 1])) == set([2, 9, 3, 1])
+def roznica_symetryczna(lista_a, lista_b):
+    wynik = []
+    for element in lista_a:
+        if element not in lista_b and element not in wynik:
+            wynik.append(element)
+    for element in lista_b:
+        if element not in lista_a and element not in wynik:
+            wynik.append(element)
+    return wynik
 
 
 if __name__ == "__main__":
+    lista_a = [int(x) for x in input().split()]
+    lista_b = [int(x) for x in input().split()]
 
-    test_roznica_list()
+    print(roznica_symetryczna(lista_a, lista_b))

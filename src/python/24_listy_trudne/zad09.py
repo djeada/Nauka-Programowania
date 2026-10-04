@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-09 — Najdłuższy naprzemienny podciąg
 
 **Poziom:** ★★★
@@ -6,91 +6,67 @@ ZAD-09 — Najdłuższy naprzemienny podciąg
 
 ### Treść
 
-Otrzymujesz listę liczb całkowitych. Znajdź najdłuższy podciąg naprzemienny, w którym różnice między kolejnymi elementami zmieniają znak (raz dodatnia, raz ujemna, itd.).
+Ciąg $x_1, x_2, \ldots, x_k$ jest **naprzemienny** (zygzakowaty), jeśli różnice między kolejnymi elementami są na przemian dodatnie i ujemne, czyli $x_1 < x_2 > x_3 < x_4 > \ldots$ albo $x_1 > x_2 < x_3 > x_4 < \ldots$
+
+Ciąg jednoelementowy też jest naprzemienny. Dwa równe sąsiednie elementy psują naprzemienność (różnica `0` nie jest ani dodatnia, ani ujemna).
+
+Otrzymujesz listę liczb całkowitych. Wyznacz **długość najdłuższego naprzemiennego podciągu** tej listy. Podciąg powstaje przez usunięcie z listy dowolnych elementów (być może żadnego) bez zmiany kolejności pozostałych — jego elementy nie muszą ze sobą sąsiadować na liście.
 
 ### Wejście
 
-* 1 linia: lista liczb całkowitych `A`
+* 1. linia: `n` — długość listy
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-* 1 linia: lista liczb — najdłuższy naprzemienny podciąg
+Jedna liczba całkowita — długość najdłuższego naprzemiennego podciągu.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 1000`
+* elementy listy są z przedziału $[-10^6, 10^6]$
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[1, -2, 6, 4, -3, 2, -4, -3]
+8
+1 -2 6 4 -3 2 -4 -3
 ```
 
 **Wyjście:**
 
 ```
-[1, -2, 6, -3, 2, -4]
+7
 ```
+
+Przykładowy najdłuższy podciąg naprzemienny (pominięto `4`): $1 > -2 < 6 > -3 < 2 > -4 < -3$.
 
 ### Uwagi
 
-* Jeśli istnieje kilka podciągów o tej samej maksymalnej długości — wybierz ten, który pojawia się „najwcześniej” (najmniejszy możliwy indeks startu), o ile sprawdzarka tego wymaga.
+* Podciągów jest $2^n$, więc sprawdzanie wszystkich jest wykluczone — w testach są listy z setkami elementów.
+* Programowanie dynamiczne: idąc po liście, pamiętaj długość najdłuższego naprzemiennego podciągu kończącego się **wzrostem** i kończącego się **spadkiem**. Gdy bieżący element jest większy od poprzedniego, podciąg „kończący się spadkiem” można przedłużyć wzrostem (i odwrotnie). Daje to czas $O(n)$; rozwiązanie $O(n^2)$ też zdąży.
 
 """
 
 
-def najdluzszy_naprzemienny_podciag_v1(lista):
+def najdluzszy_naprzemienny(liczby):
+    """Długość najdłuższego naprzemiennego (zygzakowatego) podciągu."""
+    # w_gore — najdłuższy podciąg (z dotychczasowych elementów) kończący się wzrostem,
+    # w_dol  — najdłuższy podciąg kończący się spadkiem.
+    w_gore, w_dol = 1, 1
 
-    dlugosc_maks = 1
-    indeks_koncowy = 0
-    dlugosc = 1
+    for i in range(1, len(liczby)):
+        if liczby[i] > liczby[i - 1]:
+            w_gore = w_dol + 1
+        elif liczby[i] < liczby[i - 1]:
+            w_dol = w_gore + 1
 
-    for i in range(len(lista) - 1):
-
-        if lista[i] * lista[i + 1] < 0:
-
-            dlugosc += 1
-
-            if dlugosc > dlugosc_maks:
-                dlugosc_maks = dlugosc
-                indeks_koncowy = i + 1
-
-        else:
-            dlugosc = 1
-
-    wynik = lista[indeks_koncowy - dlugosc_maks + 1 : indeks_koncowy + 1]
-
-    if len(wynik) > 1:
-        return wynik
-
-    return list()
-
-
-# Testy Poprawnosci
-def test_1():
-    lista = [1, -2, 6, 4, -3, 2, -4, -3]
-    wynik = [4, -3, 2, -4]
-
-    assert najdluzszy_naprzemienny_podciag_v1(lista) == wynik
-
-
-def test_2():
-    lista = [1, 2, 3, 4, 5]
-    wynik = []
-
-    assert najdluzszy_naprzemienny_podciag_v1(lista) == wynik
-
-
-def test_3():
-    lista = []
-    wynik = []
-
-    assert najdluzszy_naprzemienny_podciag_v1(lista) == wynik
-
-
-def main():
-    test_1()
-    test_2()
-    test_3()
+    return max(w_gore, w_dol)
 
 
 if __name__ == "__main__":
-    main()
+    n = int(input())
+    liczby = [int(x) for x in input().split()]
+    print(najdluzszy_naprzemienny(liczby))

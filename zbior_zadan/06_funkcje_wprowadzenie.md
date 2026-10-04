@@ -1,14 +1,15 @@
-# Rozdział: Funkcje — Wprowadzenie
+# Rozdział 6: Funkcje — wprowadzenie
 
-Poniższe zadania dotyczą pisania **funkcji**.
-**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem / ćwiczeniem funkcji.**
+Zadania w tym rozdziale uczą pisania **funkcji**: definiowania ich instrukcją `def`, przekazywania argumentów i zwracania wyniku instrukcją `return`.
 
 **Konwencje wspólne:**
 
-* Jeśli zadanie mówi „funkcja zwraca” — chodzi o użycie instrukcji `return`.
-* Jeśli zadanie zawiera kilka podpunktów (a, b, c…) — każdy podpunkt to **osobna funkcja**.
-* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
-* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.
+* Każde zadanie (i każdy podpunkt a, b, c…) to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.
+* Treść mówi, jaką funkcję napisać (nazwa, parametry, zwracana wartość). Program wczytuje dane, **wywołuje funkcję** i wypisuje zwrócony przez nią wynik.
+* „Funkcja zwraca” oznacza użycie instrukcji `return`. Funkcja nie wczytuje danych i nie wypisuje wyniku sama — robi to reszta programu (chyba że treść zadania mówi inaczej).
+* Sekcja „Kod startowy” zawiera gotowy szkielet: nagłówek funkcji oraz linie, które wczytują dane i wypisują wynik. Wystarczy uzupełnić ciało funkcji.
+* Liczby na wejściu podane są w osobnych liniach — wczytuj je dokładnie w podanej kolejności.
+* Program nie wypisuje komunikatów typu „Podaj liczbę:”.
 
 ---
 
@@ -19,7 +20,9 @@ Poniższe zadania dotyczą pisania **funkcji**.
 
 ### Treść
 
-Napisz funkcję (bez argumentów), która zwraca liczbę całkowitą `3`.
+Napisz bezargumentową funkcję `zwroc_liczbe()`, która zwraca liczbę całkowitą `3`.
+
+Program wywołuje funkcję i wypisuje zwrócony wynik.
 
 ### Wejście
 
@@ -27,23 +30,27 @@ Brak.
 
 ### Wyjście
 
-Funkcja ma zwrócić:
-
-* `3`
+Jedna linia: wartość zwrócona przez funkcję, czyli `3`.
 
 ### Przykład
 
-**Wywołanie funkcji:**
-
-```python
-wynik = zwroc_liczbe()
-print(wynik)
-```
+**Wejście:** *(brak)*
 
 **Wyjście:**
 
 ```
 3
+```
+
+### Kod startowy
+
+```python
+def zwroc_liczbe():
+    # Uzupełnij funkcję.
+    pass
+
+
+print(zwroc_liczbe())
 ```
 
 ---
@@ -55,7 +62,9 @@ print(wynik)
 
 ### Treść
 
-Napisz funkcję (bez argumentów), która zwraca napis `Tak`.
+Napisz bezargumentową funkcję `zwroc_napis()`, która zwraca napis `Tak`.
+
+Program wywołuje funkcję i wypisuje zwrócony wynik.
 
 ### Wejście
 
@@ -63,23 +72,27 @@ Brak.
 
 ### Wyjście
 
-Funkcja ma zwrócić:
-
-* `Tak`
+Jedna linia: napis zwrócony przez funkcję, czyli `Tak`.
 
 ### Przykład
 
-**Wywołanie funkcji:**
-
-```python
-wynik = zwroc_napis()
-print(wynik)
-```
+**Wejście:** *(brak)*
 
 **Wyjście:**
 
 ```
 Tak
+```
+
+### Kod startowy
+
+```python
+def zwroc_napis():
+    # Uzupełnij funkcję.
+    pass
+
+
+print(zwroc_napis())
 ```
 
 ---
@@ -91,7 +104,9 @@ Tak
 
 ### Treść
 
-Napisz funkcję (bez argumentów), która zwraca wartość logiczną `True`.
+Napisz bezargumentową funkcję `zwroc_prawda()`, która zwraca wartość logiczną `True`.
+
+Program wywołuje funkcję i wypisuje zwrócony wynik.
 
 ### Wejście
 
@@ -99,23 +114,31 @@ Brak.
 
 ### Wyjście
 
-Funkcja ma zwrócić:
-
-* `True`
+Jedna linia: wartość zwrócona przez funkcję, czyli `True`.
 
 ### Przykład
 
-**Wywołanie funkcji:**
-
-```python
-wynik = zwroc_prawda()
-print(wynik)
-```
+**Wejście:** *(brak)*
 
 **Wyjście:**
 
 ```
 True
+```
+
+### Uwagi
+
+* Funkcja ma zwrócić wartość logiczną `True`, a nie napis `"True"`. Po wypisaniu wyglądają tak samo, ale to różne typy danych.
+
+### Kod startowy
+
+```python
+def zwroc_prawda():
+    # Uzupełnij funkcję.
+    pass
+
+
+print(zwroc_prawda())
 ```
 
 ---
@@ -127,33 +150,45 @@ True
 
 ### Treść
 
-Napisz funkcję `suma(a, b)`, która zwraca sumę dwóch liczb całkowitych.
+Napisz funkcję `suma(a, b)`, która zwraca sumę $a + b$ dwóch liczb całkowitych.
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Dwa argumenty funkcji:
-
-* `a` (liczba całkowita)
-* `b` (liczba całkowita)
+* 1. linia: liczba całkowita `a`
+* 2. linia: liczba całkowita `b`
 
 ### Wyjście
 
-Funkcja zwraca:
-
-* `a + b`
+Jedna liczba całkowita: $a + b$.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(suma(3, 5))
+```
+3
+5
 ```
 
 **Wyjście:**
 
 ```
 8
+```
+
+### Kod startowy
+
+```python
+def suma(a, b):
+    # Uzupełnij funkcję.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(suma(a, b))
 ```
 
 ---
@@ -165,30 +200,45 @@ print(suma(3, 5))
 
 ### Treść
 
-Napisz funkcję `roznica(a, b)`, która zwraca różnicę: `b - a`.
+Napisz funkcję `roznica(a, b)`, która zwraca różnicę $b - a$ (od **drugiej** liczby odejmujemy pierwszą).
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
+* 1. linia: liczba całkowita `a`
+* 2. linia: liczba całkowita `b`
 
 ### Wyjście
 
-Funkcja zwraca:
-
-* `b - a`
+Jedna liczba całkowita: $b - a$.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(roznica(3, 5))
+```
+3
+5
 ```
 
 **Wyjście:**
 
 ```
 2
+```
+
+### Kod startowy
+
+```python
+def roznica(a, b):
+    # Uzupełnij funkcję.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(roznica(a, b))
 ```
 
 ---
@@ -200,30 +250,45 @@ print(roznica(3, 5))
 
 ### Treść
 
-Napisz funkcję `iloczyn(a, b)`, która zwraca iloczyn `a * b`.
+Napisz funkcję `iloczyn(a, b)`, która zwraca iloczyn $a \cdot b$.
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
+* 1. linia: liczba całkowita `a`
+* 2. linia: liczba całkowita `b`
 
 ### Wyjście
 
-Funkcja zwraca:
-
-* `a * b`
+Jedna liczba całkowita: $a \cdot b$.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(iloczyn(3, 5))
+```
+3
+5
 ```
 
 **Wyjście:**
 
 ```
 15
+```
+
+### Kod startowy
+
+```python
+def iloczyn(a, b):
+    # Uzupełnij funkcję.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(iloczyn(a, b))
 ```
 
 ---
@@ -237,32 +302,51 @@ print(iloczyn(3, 5))
 
 Napisz funkcję `iloraz(a, b)`, która zwraca iloraz całkowity `a // b`.
 
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
+
 ### Wejście
 
-Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
-
-### Ograniczenia / gwarancje
-
-* `b ≠ 0`
+* 1. linia: liczba całkowita `a`
+* 2. linia: liczba całkowita `b`
 
 ### Wyjście
 
-Funkcja zwraca:
+Jedna liczba całkowita: `a // b`.
 
-* `a // b`
+### Ograniczenia
+
+* $b \neq 0$
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(iloraz(3, 5))
+```
+3
+5
 ```
 
 **Wyjście:**
 
 ```
 0
+```
+
+### Uwagi
+
+* Operator `//` zaokrągla wynik dzielenia **w dół**, także dla liczb ujemnych, np. `-7 // 2` daje `-4`.
+
+### Kod startowy
+
+```python
+def iloraz(a, b):
+    # Uzupełnij funkcję.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(iloraz(a, b))
 ```
 
 ---
@@ -276,32 +360,51 @@ print(iloraz(3, 5))
 
 Napisz funkcję `reszta(a, b)`, która zwraca resztę z dzielenia `a % b`.
 
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
+
 ### Wejście
 
-Dwa argumenty funkcji: `a`, `b` (liczby całkowite)
-
-### Ograniczenia / gwarancje
-
-* `b ≠ 0`
+* 1. linia: liczba całkowita `a`
+* 2. linia: liczba całkowita `b`
 
 ### Wyjście
 
-Funkcja zwraca:
+Jedna liczba całkowita: `a % b`.
 
-* `a % b`
+### Ograniczenia
+
+* $b \neq 0$
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(reszta(3, 5))
+```
+3
+5
 ```
 
 **Wyjście:**
 
 ```
 3
+```
+
+### Uwagi
+
+* W Pythonie wynik `a % b` ma ten sam znak co `b`, np. `-7 % 3` daje `2`.
+
+### Kod startowy
+
+```python
+def reszta(a, b):
+    # Uzupełnij funkcję.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(reszta(a, b))
 ```
 
 ---
@@ -313,34 +416,35 @@ print(reszta(3, 5))
 
 ### Treść
 
-Napisz funkcję `sprawdz_warunki(a, b)`, która dla dwóch liczb naturalnych zwraca cztery wartości logiczne (np. jako krotkę) odpowiadające warunkom:
+Napisz funkcję `sprawdz_warunki(a, b)`, która dla dwóch liczb naturalnych zwraca **krotkę** czterech wartości logicznych, odpowiadających kolejno pytaniom:
 
-a) Czy `a > b`?
-b) Czy `a + b < 10`?
+a) Czy $a > b$?
+b) Czy $a + b < 10$?
 c) Czy obie liczby są nieparzyste?
-d) Czy `max(a, b) < a^2`?
+d) Czy większa z liczb jest mniejsza od kwadratu `a`, czyli czy $\max(a, b) < a^2$?
+
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje cztery zwrócone wartości.
 
 ### Wejście
 
-Dwa argumenty funkcji:
-
-* `a` (liczba całkowita, `a ≥ 0`)
-* `b` (liczba całkowita, `b ≥ 0`)
+* 1. linia: liczba naturalna `a`
+* 2. linia: liczba naturalna `b`
 
 ### Wyjście
 
-Cztery wartości logiczne w kolejności a), b), c), d).
+Cztery linie z wartościami `True` albo `False` — odpowiedzi na pytania a), b), c), d) w tej kolejności.
+
+### Ograniczenia
+
+* $a \ge 0$, $b \ge 0$
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-A, B, C, D = sprawdz_warunki(3, 2)
-print(A)
-print(B)
-print(C)
-print(D)
+```
+3
+2
 ```
 
 **Wyjście:**
@@ -350,6 +454,29 @@ True
 True
 False
 True
+```
+
+$3 > 2$, $3 + 2 = 5 < 10$, liczba $2$ jest parzysta, $\max(3, 2) = 3 < 9$.
+
+### Uwagi
+
+* Kilka wartości zwrócisz naraz instrukcją `return w1, w2, w3, w4` — Python spakuje je w krotkę.
+
+### Kod startowy
+
+```python
+def sprawdz_warunki(a, b):
+    # Uzupełnij funkcję: zwróć cztery wartości logiczne.
+    pass
+
+
+a = int(input())
+b = int(input())
+w1, w2, w3, w4 = sprawdz_warunki(a, b)
+print(w1)
+print(w2)
+print(w3)
+print(w4)
 ```
 
 ---
@@ -363,98 +490,52 @@ True
 
 Napisz funkcję `min_z_dwoch(a, b)`, która zwraca mniejszą z dwóch liczb naturalnych.
 
-### Wejście
-
-Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)
-
-### Wyjście
-
-Funkcja zwraca:
-
-* `min(a, b)`
-
-### Przykład
-
-**Wywołanie funkcji:**
-
-```python
-print(min_z_dwoch(3, 1))
-```
-
-**Wyjście:**
-
-```
-1
-```
-
----
-
-## ZAD-04B — Maksimum z dwóch liczb
-
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `max`
-
-### Treść
-
-Napisz funkcję `max_z_dwoch(a, b)`, która zwraca większą z dwóch liczb naturalnych.
+Program wczytuje `a` i `b`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Dwa argumenty: `a`, `b` (`a ≥ 0`, `b ≥ 0`)
+* 1. linia: liczba naturalna `a`
+* 2. linia: liczba naturalna `b`
 
 ### Wyjście
 
-Funkcja zwraca:
+Jedna liczba naturalna: mniejsza z liczb `a` i `b`.
 
-* `max(a, b)`
+### Ograniczenia
+
+* $a \ge 0$, $b \ge 0$
 
 ### Przykład
 
-**Wywołanie funkcji:**
-
-```python
-print(max_z_dwoch(3, 1))
-```
-
-**Wyjście:**
+**Wejście:**
 
 ```
 3
-```
-
----
-
-## ZAD-04C — Minimum z trzech liczb
-
-**Poziom:** ★☆☆
-**Tagi:** `funkcje`, `min`
-
-### Treść
-
-Napisz funkcję `min_z_trzech(a, b, c)`, która zwraca najmniejszą z trzech liczb naturalnych.
-
-### Wejście
-
-Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)
-
-### Wyjście
-
-Funkcja zwraca:
-
-* `min(a, b, c)`
-
-### Przykład
-
-**Wywołanie funkcji:**
-
-```python
-print(min_z_trzech(3, 2, 1))
+1
 ```
 
 **Wyjście:**
 
 ```
 1
+```
+
+### Uwagi
+
+* Spróbuj napisać funkcję bez wbudowanej funkcji `min` — porównaj liczby instrukcją `if`.
+* Jeśli liczby są równe, zwróć dowolną z nich.
+
+### Kod startowy
+
+```python
+def min_z_dwoch(a, b):
+    # Uzupełnij funkcję.
+    pass
+
+
+a = int(input())
+b = int(input())
+print(min_z_dwoch(a, b))
 ```
 
 ---
@@ -468,28 +549,55 @@ print(min_z_trzech(3, 2, 1))
 
 Napisz funkcję `max_z_trzech(a, b, c)`, która zwraca największą z trzech liczb naturalnych.
 
+Program wczytuje `a`, `b` i `c`, wywołuje funkcję i wypisuje wynik.
+
 ### Wejście
 
-Trzy argumenty: `a`, `b`, `c` (`a ≥ 0`, `b ≥ 0`, `c ≥ 0`)
+* 1. linia: liczba naturalna `a`
+* 2. linia: liczba naturalna `b`
+* 3. linia: liczba naturalna `c`
 
 ### Wyjście
 
-Funkcja zwraca:
+Jedna liczba naturalna: największa z liczb `a`, `b`, `c`.
 
-* `max(a, b, c)`
+### Ograniczenia
+
+* $a \ge 0$, $b \ge 0$, $c \ge 0$
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(max_z_trzech(3, 2, 1))
+```
+3
+2
+1
 ```
 
 **Wyjście:**
 
 ```
 3
+```
+
+### Uwagi
+
+* Pamiętaj o przypadku, gdy dwie lub trzy liczby są równe.
+* Wewnątrz funkcji możesz wywołać inną funkcję. Napisz najpierw pomocniczą funkcję `max_z_dwoch(a, b)` (analogiczną do `min_z_dwoch` z zadania ZAD-04A) i wywołaj ją dwa razy.
+
+### Kod startowy
+
+```python
+def max_z_trzech(a, b, c):
+    # Uzupełnij funkcję.
+    pass
+
+
+a = int(input())
+b = int(input())
+c = int(input())
+print(max_z_trzech(a, b, c))
 ```
 
 ---
@@ -501,27 +609,33 @@ print(max_z_trzech(3, 2, 1))
 
 ### Treść
 
-Napisz funkcję `zamien_wartosci(a, b)`, która zamienia wartości miejscami i zwraca je jako parę `(b, a)`.
+Napisz funkcję `zamien_wartosci(a, b)`, która zwraca dwie otrzymane wartości w odwróconej kolejności, czyli parę `(b, a)`.
+
+Program wczytuje `a` i `b`, zamienia ich wartości instrukcją `a, b = zamien_wartosci(a, b)` i wypisuje nowe wartości zmiennych.
 
 ### Wejście
 
-Dwa argumenty: `a`, `b` (liczby naturalne)
+* 1. linia: liczba naturalna `a`
+* 2. linia: liczba naturalna `b`
 
 ### Wyjście
 
-Dwie liczby naturalne zwrócone jako krotka / para:
+Dwie linie w formacie:
 
-* najpierw nowa wartość `a` (czyli stare `b`)
-* potem nowa wartość `b` (czyli stare `a`)
+```
+a = <nowa wartość a>
+b = <nowa wartość b>
+```
+
+Nowa wartość `a` to stara wartość `b` i odwrotnie.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-a, b = zamien_wartosci(8, 5)
-print("a =", a)
-print("b =", b)
+```
+8
+5
 ```
 
 **Wyjście:**
@@ -529,6 +643,21 @@ print("b =", b)
 ```
 a = 5
 b = 8
+```
+
+### Kod startowy
+
+```python
+def zamien_wartosci(a, b):
+    # Uzupełnij funkcję: zwróć parę (b, a).
+    pass
+
+
+a = int(input())
+b = int(input())
+a, b = zamien_wartosci(a, b)
+print("a =", a)
+print("b =", b)
 ```
 
 ---
@@ -542,20 +671,26 @@ b = 8
 
 Napisz funkcję `suma_cyfr(n)`, która zwraca sumę cyfr liczby naturalnej `n`.
 
+Program wczytuje `n`, wywołuje funkcję i wypisuje wynik.
+
 ### Wejście
 
-Jeden argument: `n` (`n ≥ 0`)
+Jedna liczba naturalna `n`.
 
 ### Wyjście
 
-Funkcja zwraca sumę cyfr.
+Jedna liczba naturalna: suma cyfr liczby `n`.
+
+### Ograniczenia
+
+* $n \ge 0$
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(suma_cyfr(13231))
+```
+13231
 ```
 
 **Wyjście:**
@@ -564,9 +699,24 @@ print(suma_cyfr(13231))
 10
 ```
 
+$1 + 3 + 2 + 3 + 1 = 10$.
+
 ### Uwagi
 
-* Dla `n = 0` suma cyfr to `0`.
+* Dla $n = 0$ suma cyfr wynosi `0`.
+* Ostatnią cyfrę liczby otrzymasz jako `n % 10`, a liczbę bez ostatniej cyfry jako `n // 10`.
+
+### Kod startowy
+
+```python
+def suma_cyfr(n):
+    # Uzupełnij funkcję.
+    pass
+
+
+n = int(input())
+print(suma_cyfr(n))
+```
 
 ---
 
@@ -579,69 +729,314 @@ print(suma_cyfr(13231))
 
 Napisz dwie funkcje:
 
-1. `pobierz_dane()` — pobiera od użytkownika nazwę użytkownika i hasło i zwraca je (np. jako parę).
-2. `sprawdz_dane(poprawny_login, poprawne_haslo)` — w pętli wczytuje login i hasło aż będą identyczne z przekazanymi. Po poprawnym wczytaniu wypisuje:
-   `Dane poprawne. Dostęp przyznany.`
+1. `pobierz_dane()` — wczytuje nazwę użytkownika (login) i hasło, po czym zwraca je jako parę `(login, haslo)`.
+2. `sprawdz_dane(poprawny_login, poprawne_haslo)` — w pętli wczytuje kolejne próby logowania (login i hasło), dopóki nie będą identyczne z przekazanymi danymi.
+   Po każdej nieudanej próbie wypisuje `Błędne dane. Spróbuj ponownie.`, a po udanej — `Dane poprawne. Dostęp przyznany.` i kończy działanie.
+
+Program najpierw wywołuje `pobierz_dane()`, aby ustalić poprawne dane, a potem przekazuje je do `sprawdz_dane(...)`.
+
+W tym zadaniu funkcje same wczytują dane (`input()`), a `sprawdz_dane` sama wypisuje komunikaty.
 
 ### Wejście
 
-* `pobierz_dane()` wczytuje dwie linie:
-
-  1. login
-  2. hasło
-* `sprawdz_dane(...)` wczytuje kolejne pary (login, hasło), po dwie linie na próbę.
+* 1. linia: poprawny login
+* 2. linia: poprawne hasło
+* kolejne linie: próby logowania — po dwie linie na próbę (login, potem hasło)
 
 ### Wyjście
 
-Jedna linia (tylko raz, po poprawnym dopasowaniu):
+Dla każdej nieudanej próby linia:
 
-* `Dane poprawne. Dostęp przyznany.`
+```
+Błędne dane. Spróbuj ponownie.
+```
 
-### Ograniczenia / gwarancje
+a na końcu (po pierwszej udanej próbie) linia:
 
-* W pewnym momencie użytkownik poda poprawne dane.
+```
+Dane poprawne. Dostęp przyznany.
+```
 
-### Uwagi o formatowaniu
+### Ograniczenia
 
-* **Nie wypisuj promptów** typu „Podaj nazwę użytkownika:”.
-* Porównanie jest czułe na wielkość liter.
-
----
-
-## ZAD-08 — Iloraz w dół bez / i %
-
-**Poziom:** ★★☆
-**Tagi:** `funkcje`, `pętle`, `odejmowanie`
-
-### Treść
-
-Napisz funkcję `zaokraglij_w_dol(a, b)`, która zwraca wartość `a // b`, ale **nie używa** operatorów `/` ani `%`.
-
-### Wejście
-
-Dwa argumenty:
-
-* `a` (liczba naturalna, `a ≥ 0`)
-* `b` (liczba naturalna)
-
-### Ograniczenia / gwarancje
-
-* `b > 0`
-
-### Wyjście
-
-Funkcja zwraca liczbę naturalną — iloraz `a` przez `b` zaokrąglony w dół.
+* Jedna z prób jest poprawna — program nie musi obsługiwać końca danych bez udanej próby.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(zaokraglij_w_dol(7, 2))
+```
+admin
+1234
+root
+pass
+admin
+1234
 ```
 
 **Wyjście:**
 
 ```
+Błędne dane. Spróbuj ponownie.
+Dane poprawne. Dostęp przyznany.
+```
+
+Poprawne dane to `admin` / `1234`. Pierwsza próba (`root` / `pass`) jest błędna, druga — poprawna.
+
+### Uwagi
+
+* Próba jest udana tylko wtedy, gdy zgadzają się **oba** pola: login i hasło.
+* Porównanie uwzględnia wielkość liter (`Admin` to nie to samo co `admin`).
+
+### Kod startowy
+
+```python
+def pobierz_dane():
+    # Wczytaj login i hasło, a następnie zwróć je jako parę.
+    pass
+
+
+def sprawdz_dane(poprawny_login, poprawne_haslo):
+    # W pętli wczytuj login i hasło, dopóki nie będą poprawne.
+    pass
+
+
+login, haslo = pobierz_dane()
+sprawdz_dane(login, haslo)
+```
+
+
+---
+
+## ZAD-09 — Cena końcowa (argumenty domyślne i nazwane)
+
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `argumenty domyślne`, `argumenty nazwane`, `float`
+
+### Treść
+
+Napisz funkcję `cena_koncowa(netto, vat=23, rabat=0)`, która zwraca cenę brutto towaru po rabacie:
+
+* najpierw od ceny `netto` odejmujemy rabat — `rabat` procent ceny netto,
+* potem do tak obniżonej ceny doliczamy podatek VAT — `vat` procent.
+
+Czyli funkcja zwraca $\text{netto} \cdot \left(1 - \frac{\text{rabat}}{100}\right) \cdot \left(1 + \frac{\text{vat}}{100}\right)$ — bez zaokrąglania.
+
+Parametry `vat` i `rabat` mają **wartości domyślne** (23 i 0), więc przy wywołaniu można je pominąć.
+
+Program wczytuje cenę netto oraz rabat i wywołuje funkcję czterema sposobami:
+
+1. `cena_koncowa(netto)` — domyślny VAT 23% i brak rabatu,
+2. `cena_koncowa(netto, 8)` — VAT 8% (drugi argument trafia do parametru `vat`), brak rabatu,
+3. `cena_koncowa(netto, rabat=rabat)` — domyślny VAT 23% i wczytany rabat,
+4. `cena_koncowa(netto, rabat=rabat, vat=5)` — VAT 5% i wczytany rabat.
+
+### Wejście
+
+* 1. linia: cena netto — liczba rzeczywista
+* 2. linia: rabat w procentach — liczba całkowita
+
+### Wyjście
+
+Cztery linie — wyniki wywołań 1–4 w tej kolejności, każdy z dokładnością do **dwóch** miejsc po przecinku.
+
+### Ograniczenia
+
+* $\text{netto} \ge 0$
+* $0 \le \text{rabat} \le 100$
+
+### Przykład
+
+**Wejście:**
+
+```
+100
+10
+```
+
+**Wyjście:**
+
+```
+123.00
+108.00
+110.70
+94.50
+```
+
+Np. trzecie wywołanie: $100 \cdot 0.9 = 90$, a $90 \cdot 1.23 = 110.7$.
+
+### Uwagi
+
+* **Argument domyślny** to wartość parametru podana w nagłówku funkcji (`vat=23`). Jeśli przy wywołaniu nie podasz tego argumentu, parametr dostanie wartość domyślną.
+* **Argument nazwany** podajesz w postaci `nazwa=wartość`, np. `cena_koncowa(100, rabat=10)`. Dzięki temu możesz pominąć `vat`, a ustawić `rabat`. Kolejność argumentów nazwanych jest dowolna: `cena_koncowa(100, rabat=10, vat=5)` to to samo co `cena_koncowa(100, vat=5, rabat=10)`.
+* Argumenty podane bez nazwy (pozycyjne) trafiają do parametrów po kolei: w `cena_koncowa(100, 8)` liczba `8` to `vat`.
+
+### Kod startowy
+
+```python
+def cena_koncowa(netto, vat=23, rabat=0):
+    # Uzupełnij funkcję: zwróć cenę brutto po rabacie.
+    pass
+
+
+netto = float(input())
+rabat = int(input())
+print(f"{cena_koncowa(netto):.2f}")
+print(f"{cena_koncowa(netto, 8):.2f}")
+print(f"{cena_koncowa(netto, rabat=rabat):.2f}")
+print(f"{cena_koncowa(netto, rabat=rabat, vat=5):.2f}")
+```
+
+---
+
+## ZAD-10 — Średnia z dowolnej liczby argumentów
+
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `*args`, `krotka`, `float`
+
+### Treść
+
+Napisz funkcję `srednia(*liczby)`, którą można wywołać z **dowolną liczbą argumentów** — np. `srednia(2, 4)`, `srednia(1, 2, 3, 4, 5)` albo `srednia()`. Funkcja zwraca średnią arytmetyczną otrzymanych liczb, a jeśli nie dostała żadnego argumentu — zwraca `None`.
+
+Program wczytuje linię z liczbami, przekazuje je do funkcji jako osobne argumenty (`srednia(*liczby)`) i wypisuje wynik.
+
+### Wejście
+
+Jedna linia: zero lub więcej liczb rzeczywistych oddzielonych spacjami. Pusta linia oznacza brak liczb.
+
+### Wyjście
+
+Jedna linia:
+
+* średnia z dokładnością do **dwóch** miejsc po przecinku albo
+* `Brak danych`, jeśli funkcja zwróciła `None`.
+
+### Przykład
+
+**Wejście:**
+
+```
+2 4 9
+```
+
+**Wyjście:**
+
+```
+5.00
+```
+
+$\frac{2 + 4 + 9}{3} = 5$.
+
+### Uwagi
+
+* Gwiazdka w nagłówku `def srednia(*liczby):` sprawia, że wszystkie argumenty wywołania trafiają do jednej **krotki** `liczby`. Np. po wywołaniu `srednia(2, 4, 9)` zmienna `liczby` to `(2, 4, 9)`, a po `srednia()` — pusta krotka `()`.
+* Po krotce przejdziesz pętlą `for x in liczby:`, a liczbę jej elementów poda `len(liczby)`.
+* Gwiazdka przy wywołaniu działa odwrotnie: `srednia(*liczby)` „rozpakowuje” listę `liczby` na osobne argumenty.
+* Linia `liczby = [float(x) for x in input().split()]` w kodzie startowym zamienia wczytaną linię na listę liczb — listy poznasz dokładnie w rozdziale 9.
+* `None` to specjalna wartość oznaczająca „brak wyniku”. Sprawdzamy ją warunkiem `wynik is None`.
+
+### Kod startowy
+
+```python
+def srednia(*liczby):
+    # Uzupełnij funkcję: zwróć średnią albo None.
+    pass
+
+
+liczby = [float(x) for x in input().split()]
+wynik = srednia(*liczby)
+if wynik is None:
+    print("Brak danych")
+else:
+    print(f"{wynik:.2f}")
+```
+
+---
+
+## ZAD-11 — Funkcja sprawdzona testami (assert)
+
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `assert`, `testy`, `bool`
+
+### Treść
+
+Napisz funkcję `czy_przestepny(rok)`, która zwraca `True`, jeśli `rok` jest przestępny, a `False` w przeciwnym razie.
+
+Rok jest przestępny, jeśli jest podzielny przez 4, ale nie przez 100 — albo jeśli jest podzielny przez 400.
+
+Kod startowy zawiera pięć **testów** funkcji zapisanych instrukcją `assert`. Są wykonywane, zanim program zacznie wczytywać dane. Następnie program wczytuje `n` lat i dla każdego wypisuje `Tak` (rok przestępny) albo `Nie`.
+
+### Wejście
+
+* 1. linia: liczba lat `n`
+* kolejne `n` linii: lata — po jednej liczbie naturalnej w linii
+
+### Wyjście
+
+`n` linii — dla każdego roku `Tak` albo `Nie`.
+
+### Ograniczenia
+
+* $n \ge 1$
+* $1 \le \text{rok} \le 10000$
+
+### Przykład
+
+**Wejście:**
+
+```
 3
+2024
+1900
+2000
+```
+
+**Wyjście:**
+
+```
+Tak
+Nie
+Tak
+```
+
+Rok 1900 jest podzielny przez 100, ale nie przez 400, więc nie jest przestępny.
+
+### Uwagi
+
+* `assert warunek` nie robi nic, jeśli warunek jest prawdziwy. Jeśli jest fałszywy, program **natychmiast się zatrzymuje** z błędem `AssertionError`. Dzięki temu od razu widać, że funkcja działa źle.
+* Gdy test się nie powiedzie, zobaczysz komunikat w rodzaju:
+
+  ```
+  Traceback (most recent call last):
+    File "main.py", line 9, in <module>
+      assert czy_przestepny(1900) == False
+  AssertionError
+  ```
+
+  Czytaj go od dołu: `AssertionError` mówi, że nie powiódł się test, a linia nad nim (i jej numer, zależny od Twojego kodu) pokazuje, który — tutaj funkcja zwróciła złą odpowiedź dla roku 1900. Popraw funkcję i uruchom program ponownie.
+* Do testu możesz dopisać komunikat, który pojawi się przy błędzie: `assert czy_przestepny(1900) == False, "1900 nie jest przestępny"`.
+* Nie usuwaj testów — możesz za to dopisać własne.
+
+### Kod startowy
+
+```python
+def czy_przestepny(rok):
+    # Uzupełnij funkcję: zwróć True albo False.
+    pass
+
+
+# Testy funkcji: jeśli któryś się nie powiedzie, program zatrzyma się z błędem AssertionError.
+assert czy_przestepny(2024) == True
+assert czy_przestepny(2023) == False
+assert czy_przestepny(1900) == False
+assert czy_przestepny(2000) == True
+assert czy_przestepny(2100) == False
+
+n = int(input())
+for _ in range(n):
+    rok = int(input())
+    if czy_przestepny(rok):
+        print("Tak")
+    else:
+        print("Nie")
 ```

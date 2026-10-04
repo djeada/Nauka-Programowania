@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Słownik: liczby i ich kwadraty
 
 **Poziom:** ★☆☆
@@ -6,15 +6,19 @@ ZAD-01 — Słownik: liczby i ich kwadraty
 
 ### Treść
 
-Wczytaj liczbę `n`. Utwórz słownik, gdzie klucze to liczby od `1` do `n-1`, a wartości to ich kwadraty.
+Wczytaj liczbę `n`. Utwórz słownik, w którym kluczami są liczby od `1` do `n - 1`, a wartościami ich kwadraty, i wypisz go.
 
 ### Wejście
 
-* 1 linia: `n` (n ≥ 1)
+* 1. linia: `n`
 
 ### Wyjście
 
-* Słownik w postaci: `{1: 1, 2: 4, ...}`
+Słownik w postaci `{1: 1, 2: 4, …}` (klucze rosnąco). Dla `n = 1` słownik jest pusty: `{}`.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 30`
 
 ### Przykład
 
@@ -33,24 +37,14 @@ Wczytaj liczbę `n`. Utwórz słownik, gdzie klucze to liczby od `1` do `n-1`, a
 """
 
 
-def stworz_slownik(n):
-    """
-    Funkcja tworzy slownik zawierajacy klucze bedace kolejnymi
-    liczbami naturalnymi mniejszymi od podanej liczby n
-    oraz wartosci bedacymi kwadratami kluczy.
-    """
-
+def slownik_kwadratow(n):
+    """Zwraca słownik {liczba: liczba²} dla liczb od 1 do n - 1."""
     slownik = {}
-    for i in range(n):
-        slownik[i] = i**2
+    for liczba in range(1, n):
+        slownik[liczba] = liczba**2
     return slownik
 
 
-def test_stworz_slownik():
-    assert stworz_slownik(5) == {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
-    assert stworz_slownik(0) == {}
-
-
 if __name__ == "__main__":
-
-    test_stworz_slownik()
+    n = int(input())
+    print(slownik_kwadratow(n))

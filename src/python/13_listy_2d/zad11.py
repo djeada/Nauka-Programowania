@@ -1,330 +1,192 @@
-"""
-ZAD-11 — Gra w statki (projekt konsolowy)
+r"""
+ZAD-11 — Gra w statki
 
 **Poziom:** ★★★
-**Tagi:** `macierze`, `losowanie`, `gra`, `pętle`
+**Tagi:** `macierze`, `gra`, `pętle`, `symulacja`
 
 ### Treść
 
-Zaimplementuj grę w statki na planszy 10×10:
+Wczytaj planszę `10×10` do gry w statki, a potem kolejne strzały gracza i rozstrzygnij każdy z nich.
 
-1. Plansza startowa: 10×10 wypełniona `.`
-2. Losowo rozmieść statki (poziomo/pionowo), bez stykania bokami ani rogami:
+Na planszy `.` oznacza wodę, a `#` pole statku. Każdy statek to poziomy albo pionowy odcinek złożony z jednego lub kilku pól `#`; statki nie stykają się ze sobą ani bokami, ani rogami.
 
-   * 1× długość 4
-   * 2× długość 3
-   * 3× długość 2
-   * 5× długość 1
-3. Pętla gry:
+Strzał to para `r c` — numer wiersza i numer kolumny, **liczone od 1** (lewy górny róg to `1 1`). Dla każdego strzału wypisz jedną linię:
 
-   * wypisz planszę,
-   * wczytaj `r c` (0..9),
-   * jeśli trafienie: wstaw `o`, wypisz komunikat o trafieniu,
-   * jeśli pudło: wstaw `x`, zwiększ licznik pudeł,
-   * gra kończy się, gdy:
+* `Niepoprawny strzał` — linia nie składa się z dokładnie dwóch liczb całkowitych z zakresu od 1 do 10,
+* `Pole już ostrzelane` — w to pole już wcześniej strzelano (niezależnie od wyniku tamtego strzału),
+* `Pudło` — w polu jest woda,
+* `Trafiony` — w polu jest statek, ale ma on jeszcze nietrafione pola,
+* `Trafiony, zatopiony` — trafiono ostatnie nietrafione pole statku.
 
-     * wszystkie pola statków trafione (wygrana), albo
-     * 10 pudeł (przegrana).
-   * po każdym ruchu wypisz zaktualizowaną planszę.
+Gdy zatopiony zostanie ostatni statek, wypisz dodatkowo `Wygrana po X strzałach` i zakończ program — pozostałe linie wejścia pomiń. `X` to liczba wczytanych linii ze strzałami aż do tego strzału włącznie (liczą się wszystkie strzały, także niepoprawne i powtórzone).
+
+Jeśli strzały się skończą, zanim wszystkie statki zostaną zatopione, wypisz na końcu `Pozostało statków: Y`, gdzie `Y` to liczba niezatopionych statków.
 
 ### Wejście
 
-Wielokrotnie:
-
-* `r c` (w jednej linii)
+* 10 linii po 10 znaków `.` lub `#` — plansza
+* następnie dowolnie wiele linii (także zero) — strzały `r c`, aż do końca danych
 
 ### Wyjście
 
-* plansza i komunikaty w trakcie,
-* na końcu komunikat o wygranej/przegranej.
+* Po jednej linii z wynikiem dla każdego rozpatrzonego strzału.
+* Na końcu `Wygrana po X strzałach` albo `Pozostało statków: Y`.
 
-### Uwagi praktyczne
+### Ograniczenia
 
-* To zadanie jest **większym projektem** — format wyjścia bywa sprawdzany „ręcznie” (nie zawsze automatycznie), więc trzymaj się spójnego stylu wypisywania planszy.
+* na planszy jest co najmniej jeden statek, a pól `#` jest łącznie co najmniej 2
+* co najwyżej 200 strzałów
+
+### Przykład
+
+**Wejście:**
+
+```
+#.........
+#.........
+..........
+....###...
+..........
+..........
+.........#
+..........
+.##.......
+..........
+1 1
+5 5
+2 1
+1 1
+11 3
+7 10
+```
+
+**Wyjście:**
+
+```
+Trafiony
+Pudło
+Trafiony, zatopiony
+Pole już ostrzelane
+Niepoprawny strzał
+Trafiony, zatopiony
+Pozostało statków: 2
+```
+
+Na planszy są 4 statki: pionowy w kolumnie 1 (wiersze 1–2), poziomy w wierszu 4 (kolumny 5–7), jednomasztowiec w polu `7 10` i poziomy w wierszu 9 (kolumny 2–3). Zatopiono dwa z nich.
+
+### Uwagi
+
+* Planszę trzymaj jako listę list znaków (`list(input())`) i zaznaczaj na niej strzały, np. `X` — trafione pole statku, `o` — pudło. Wtedy „pole już ostrzelane” to pole z `X` albo `o`.
+* Aby sprawdzić zatopienie, od trafionego pola idź w każdą z czterech stron, dopóki trafiasz na pola statku (`#` lub `X`). Statek jest zatopiony, gdy żadne z jego pól nie jest już `#`.
+* Liczbę statków na początku policzysz, zliczając pola statków, które nie mają pola statku ani nad sobą, ani po lewej stronie — każdy statek ma dokładnie jedno takie pole.
+* Kod startowy wczytuje wszystkie strzały do listy. Gdy dane wejściowe się skończą, `input()` zgłasza błąd `EOFError`; konstrukcja `try` / `except EOFError` przechwytuje go i kończy pętlę.
+
+### Kod startowy
+
+```python
+plansza = [list(input()) for _ in range(10)]
+
+strzaly = []
+while True:
+    try:
+        strzaly.append(input())
+    except EOFError:  # dane wejściowe się skończyły
+        break
+
+```
 
 """
 
-import enum
-import random
+ROZMIAR = 10
+KIERUNKI = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+
+# Znaki na planszy: "." woda, "#" nietrafione pole statku,
+# "X" trafione pole statku, "o" woda, w którą już strzelano.
 
 
-class Stale(enum.Enum):
-    """
-    Stale uzywane do reprezentacji stanu gry na planszy.
-    """
-
-    puste_pule = enum.auto()
-    statek = enum.auto()
-
-
-class Symbole:
-    """
-    Klasa definiujaca znaki wykorzystywane w grze.
-    """
-
-    puste_pule = "."
-    statek = "$"
-    chybiony_statek = "o"
-    zatopiony_statek = "x"
+def czy_statek(plansza, wiersz, kolumna):
+    return (
+        0 <= wiersz < ROZMIAR
+        and 0 <= kolumna < ROZMIAR
+        and plansza[wiersz][kolumna] in "#X"
+    )
 
 
-def inicjalizuj_plansze(znak, n=10):
-    """
-    Funkcja inicjalizujaca plansze gry.
-    """
-    plansza = []
-    for i in range(n):
-        plansza.append([])
-        for _ in range(n):
-            plansza[i].append(znak)
-    return plansza
+def pola_statku(plansza, wiersz, kolumna):
+    """Zwraca listę pól statku, do którego należy pole [wiersz][kolumna]."""
+    pola = [(wiersz, kolumna)]
+    for dw, dk in KIERUNKI:
+        w, k = wiersz + dw, kolumna + dk
+        while czy_statek(plansza, w, k):
+            pola.append((w, k))
+            w, k = w + dw, k + dk
+    return pola
 
 
-def rysuj_plansze(plansza_gracza):
-    """
-    Funkcja rysujaca plansze.
-    """
-    print("   ", end="")
-    for i in range(len(plansza_gracza)):
-        print(i, end=" ")
-    print()
-
-    for i in range(len(plansza_gracza)):
-        print(i, end=" ")
-        for j in range(len(plansza_gracza)):
-            print(plansza_gracza[i][j], end=" ")
-        print()
+def policz_statki(plansza):
+    """Każdy statek liczymy raz — po jego lewym górnym polu."""
+    liczba = 0
+    for w in range(ROZMIAR):
+        for k in range(ROZMIAR):
+            if (
+                czy_statek(plansza, w, k)
+                and not czy_statek(plansza, w - 1, k)
+                and not czy_statek(plansza, w, k - 1)
+            ):
+                liczba += 1
+    return liczba
 
 
-def rysuj_obie_plansze(plansza_gracza, widoczna_plansza_komputera):
-    """
-    Funkcja rysujaca plansze.
-    """
-
-    # on left side plasza_gracza
-    # on right side widoczna_plansza_komputera
-    # indices shown on the top and left side of the board
-
-    print("   ", end="")
-    for i in range(len(plansza_gracza)):
-        print(i, end=" ")
-    print()
-
-    for i in range(len(plansza_gracza)):
-        print(i, end=" ")
-        for j in range(len(plansza_gracza)):
-            print(plansza_gracza[i][j], end=" ")
-        print(widoczna_plansza_komputera[i], end=" ")
-        print()
+def odczytaj_strzal(linia):
+    """Zwraca indeksy (wiersz, kolumna) liczone od 0 albo None dla niepoprawnej linii."""
+    czesci = linia.split()
+    if len(czesci) != 2 or not czesci[0].isdigit() or not czesci[1].isdigit():
+        return None
+    wiersz, kolumna = int(czesci[0]), int(czesci[1])
+    if not (1 <= wiersz <= ROZMIAR and 1 <= kolumna <= ROZMIAR):
+        return None
+    return wiersz - 1, kolumna - 1
 
 
-def rozmiesc_statki_komputera(plansza):
-    """
-    Funkcja rozmieszczajaca statki na planszy.
-    """
+def rozegraj(plansza, strzaly):
+    pozostale_statki = policz_statki(plansza)
+    for numer, linia in enumerate(strzaly, start=1):
+        strzal = odczytaj_strzal(linia)
+        if strzal is None:
+            print("Niepoprawny strzał")
+            continue
 
-    def losuj_wspolrzedne(plansza, rozmiar_statku):
-        """
-        Funkcja losujaca wspolrzedne na planszy.
-        """
-        kierunek = random.randint(0, 1)
-
-        if kierunek == 0:
-            x = random.randint(0, len(plansza) - 1 - rozmiar_statku)
-            y = random.randint(0, len(plansza) - 1)
+        w, k = strzal
+        if plansza[w][k] in "Xo":
+            print("Pole już ostrzelane")
+        elif plansza[w][k] == ".":
+            plansza[w][k] = "o"
+            print("Pudło")
         else:
-            x = random.randint(0, len(plansza) - 1)
-            y = random.randint(0, len(plansza) - 1 - rozmiar_statku)
-
-        while plansza[x][y] != Stale.puste_pule:
-            # losujemy wspolrzedne zanim znajdziemy puste pole
-            # wspolrzedne musza byc w zakresie planszy
-            # wspolrzedne musza uwzglednic rozmiar statku
-            # jesli kierunek == 0 to statki musza sie rozmieszac w pionie i x musi byc w zakresie planszy - rozmiar statku
-            # jesli kierunek == 1 to statki musza sie rozmieszac w poziomie i y musi byc w zakresie planszy - rozmiar statku
-
-            if kierunek == 0:
-                x = random.randint(0, len(plansza) - 1 - rozmiar_statku)
-                y = random.randint(0, len(plansza) - 1)
+            plansza[w][k] = "X"
+            zatopiony = True
+            for a, b in pola_statku(plansza, w, k):
+                if plansza[a][b] == "#":
+                    zatopiony = False
+            if not zatopiony:
+                print("Trafiony")
             else:
-                x = random.randint(0, len(plansza) - 1)
-                y = random.randint(0, len(plansza) - 1 - rozmiar_statku)
-
-        if kierunek == 0:
-            for i in range(rozmiar_statku):
-                print(x + i, y, kierunek)
-                plansza[x + i][y] = Stale.statek
-        else:
-            for i in range(rozmiar_statku):
-                print(x, y + i, kierunek)
-                plansza[x][y + i] = Stale.statek
-
-    statki = {1: 5, 2: 3, 3: 2, 4: 1}
-    liczba_statkow_do_rozmieszczenia = sum(statki.values())
-
-    while liczba_statkow_do_rozmieszczenia > 0:
-        for rozmiar_statku in statki:
-            while statki[rozmiar_statku] > 0:
-                losuj_wspolrzedne(plansza, rozmiar_statku)
-                statki[rozmiar_statku] -= 1
-                liczba_statkow_do_rozmieszczenia -= 1
-
-    return plansza
-
-
-def rozmiesc_statki_gracza(plansza):
-    """
-    Funkcja realziujaca rozmieszczenie statkow gracza. Gracz pytany jest o podanie wspolrzednych dla swoich statkow.
-    """
-
-    def podaj_wspolrzedne(plansza, rozmiar_statku):
-        """
-        Funkcja pobierajaca wspolrzedne statku.
-        """
-        rysuj_plansze(plansza)
-        print(f"Masz do umieszczenia statki o rozmiarze: {rozmiar_statku}")
-        print("Pamietaj, nie mozna umieszczac statku na ukos.")
-
-        x_poczatkowe = int(input("Podaj wspolrzedna x poczatkowa: "))
-        y_poczatkowe = int(input("Podaj wspolrzedna y poczatkowa: "))
-
-        x_koncowe = (
-            int(input("Podaj wspolrzedna x koncowa: "))
-            if rozmiar_statku != 1
-            else x_poczatkowe
-        )
-        y_koncowe = (
-            int(input("Podaj wspolrzedna y koncowa: "))
-            if rozmiar_statku != 1
-            else y_poczatkowe
-        )
-
-        # napraw kolejnosc wspolrzednych
-        if x_poczatkowe > x_koncowe:
-            x_poczatkowe, x_koncowe = x_koncowe, x_poczatkowe
-        if y_poczatkowe > y_koncowe:
-            y_poczatkowe, y_koncowe = y_koncowe, y_poczatkowe
-
-        # sprawdz czy wspolrzedne wychodza poza plansze
-        if (
-            x_poczatkowe < 0
-            or y_poczatkowe < 0
-            or x_koncowe > len(plansza) - 1
-            or y_koncowe > len(plansza) - 1
-        ):
-            print("Podane wspolrzedne wychodza poza plansze.")
-            return False
-
-        # sprawdz czy wspolrzedne pasuja do rozmiaru statku
-        if not (
-            (
-                x_koncowe - x_poczatkowe + 1 == rozmiar_statku
-                and y_koncowe == y_poczatkowe
-            )
-            or (
-                y_koncowe - y_poczatkowe + 1 == rozmiar_statku
-                and x_koncowe == x_poczatkowe
-            )
-        ):
-            print("Wspolrzedne statku nie pasuja do rozmiaru statku.")
-            return False
-
-        # sprawdz czy wszystkie pola miedzy podanymi wspolrzednymi sa puste
-        for i in range(x_poczatkowe, x_koncowe + 1):
-            for j in range(y_poczatkowe, y_koncowe + 1):
-                if plansza[i][j] != Symbole.puste_pule:
-                    print("Jakis statek znajduje sie na podanych wspolrzednych.")
-                    return False
-
-        # zapis wspolrzednych statku
-        for i in range(x_poczatkowe, x_koncowe + 1):
-            for j in range(y_poczatkowe, y_koncowe + 1):
-                plansza[i][j] = Symbole.statek
-
-        return True
-
-    statki = {1: 5, 2: 3, 3: 2, 4: 1}
-    liczba_statkow_do_rozmieszczenia = sum(statki.values())
-
-    while liczba_statkow_do_rozmieszczenia > 0:
-        for rozmiar_statku in statki:
-            while statki[rozmiar_statku] > 0:
-                if podaj_wspolrzedne(plansza, rozmiar_statku):
-                    statki[rozmiar_statku] -= 1
-                    liczba_statkow_do_rozmieszczenia -= 1
-
-    return plansza
-
-
-def ruch_uzytkownika(widoczna_plansza_komputera, ukryta_plansza_komputera):
-    """
-    Funkcja wykonujaca ruch uzytkownika.
-    """
-    x = int(input("Podaj wiersz: "))
-    y = int(input("Podaj kolumne: "))
-    if ukryta_plansza_komputera[x][y] == Stale.statek:
-        widoczna_plansza_komputera[x][x] = Symbole.zatopiony_statek
-        print("Trafiony!")
-    else:
-        widoczna_plansza_komputera[x][y] = Symbole.chybiony_statek
-        print("Pudlo!")
-
-
-def ruch_komputera(plansza_gracza):
-    """
-    Funkcja wykonujaca ruch komputera.
-    """
-    x = random.randint(0, len(plansza_gracza) - 1)
-    y = random.randint(0, len(plansza_gracza) - 1)
-    if plansza_gracza[x][y] == Symbole.statek:
-        plansza_gracza[x][y] = Symbole.zatopiony_statek
-    else:
-        plansza_gracza[x][y] = Symbole.chybiony_statek
-
-
-def sprawdz_czy_gracz_wygral(widoczna_plansza_komputera, ukryta_plansza_komputera):
-    """
-    Funkcja sprawdzajaca czy wygral gracz.
-    """
-    return widoczna_plansza_komputera.count(
-        Symbole.zatopiony_statek
-    ) == ukryta_plansza_komputera.count(Stale.statek)
-
-
-def sprawdz_czy_komputer_wygral(plansza_gracza):
-    """
-    Funkcja sprawdzajaca czy wygral komputer.
-    """
-    return plansza_gracza.count(Symbole.statek) == 0
-
-
-def gra():
-    """
-    Funkcja rozpoczynajaca gre.
-    """
-    plansza_gracza = inicjalizuj_plansze(Symbole.puste_pule)
-    # plansza_gracza = rozmiesc_statki_gracza(plansza_gracza)
-
-    widoczna_plansza_komputera = inicjalizuj_plansze(Symbole.puste_pule)
-    ukryta_plansza_komputera = inicjalizuj_plansze(Stale.puste_pule)
-    ukryta_plansza_komputera = rozmiesc_statki_komputera(ukryta_plansza_komputera)
-
-    while not sprawdz_czy_komputer_wygral(
-        widoczna_plansza_komputera
-    ) and not sprawdz_czy_gracz_wygral(
-        widoczna_plansza_komputera, ukryta_plansza_komputera
-    ):
-        rysuj_obie_plansze(widoczna_plansza_komputera, ukryta_plansza_komputera)
-        ruch_uzytkownika(widoczna_plansza_komputera, ukryta_plansza_komputera)
-        ruch_komputera(plansza_gracza)
-
-    if sprawdz_czy_komputer_wygral(widoczna_plansza_komputera):
-        print("Wygral komputer!")
-
-    else:
-        print("Wygral gracz!")
+                print("Trafiony, zatopiony")
+                pozostale_statki -= 1
+                if pozostale_statki == 0:
+                    print(f"Wygrana po {numer} strzałach")
+                    return
+    print(f"Pozostało statków: {pozostale_statki}")
 
 
 if __name__ == "__main__":
+    plansza = [list(input()) for _ in range(ROZMIAR)]
 
-    gra()
+    strzaly = []
+    while True:
+        try:
+            strzaly.append(input())
+        except EOFError:  # dane wejściowe się skończyły
+            break
+
+    rozegraj(plansza, strzaly)

@@ -1,33 +1,33 @@
-"""
+r"""
 ZAD-06 — Znalezienie elementów wspólnych dwóch list
 
 **Poziom:** ★☆☆
-**Tagi:** `list`, `set`
+**Tagi:** `listy`, `część wspólna`
 
 ### Treść
 
-Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występują w obu listach:
+Wczytaj dwie listy liczb całkowitych i utwórz listę elementów, które występują **w obu** listach.
 
-* zachowaj **kolejność występowania w pierwszej liście**,
-* jeśli element z pierwszej listy występuje w drugiej liście, dodaj go do wyniku,
-* jeśli nie ma elementów wspólnych — wypisz `[]`.
+* Elementy wyniku ustaw w kolejności ich pierwszego wystąpienia w liście 1.
+* Każdy element wspólny umieść w wyniku **tylko raz**, nawet jeśli w listach się powtarza.
+* Jeśli listy nie mają elementów wspólnych, wypisz `[]`.
 
 ### Wejście
 
-* 1 linia: lista 1
-* 2 linia: lista 2
+* 1. linia: lista 1 — liczby całkowite oddzielone spacjami
+* 2. linia: lista 2 — liczby całkowite oddzielone spacjami
 
 ### Wyjście
 
-* 1 linia: lista elementów wspólnych
+Jedna linia: lista elementów wspólnych.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[9, 2, 5, 4]
-[4, 2, 1]
+9 2 5 4
+4 2 1
 ```
 
 **Wyjście:**
@@ -40,13 +40,15 @@ Wczytaj dwie listy liczb całkowitych. Wypisz listę elementów, które występu
 
 
 def czesc_wspolna(lista_a, lista_b):
-    return [x for x in lista_a if x in lista_b]
-
-
-def test_czesc_wspolna():
-    assert set(czesc_wspolna([3, 6, 2, 7, 9], [4, 2, 3, 5, 6])) == set([3, 6, 2])
-    assert set(czesc_wspolna([1, 2, 3, 4], [2, 3, 4, 5, 6])) == set([2, 3, 4])
+    wynik = []
+    for element in lista_a:
+        if element in lista_b and element not in wynik:
+            wynik.append(element)
+    return wynik
 
 
 if __name__ == "__main__":
-    test_czesc_wspolna()
+    lista_a = [int(x) for x in input().split()]
+    lista_b = [int(x) for x in input().split()]
+
+    print(czesc_wspolna(lista_a, lista_b))

@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Wypisywanie cyfr liczby w odwrotnej kolejności
 
 **Poziom:** ★☆☆
@@ -6,17 +6,15 @@ ZAD-02 — Wypisywanie cyfr liczby w odwrotnej kolejności
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` i wypisz jej cyfry w kolejności od cyfry jedności (czyli w odwrotnej kolejności niż w zapisie liczby). Każdą cyfrę wypisz w osobnej linii.
+Wczytaj liczbę naturalną `n` i wypisz jej cyfry od końca — zaczynając od cyfry jedności, a kończąc na najwyższej cyfrze.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
+Cyfry liczby `n` od końca, każda w osobnej linii.
 
 ### Przykład
 
@@ -35,17 +33,22 @@ Kolejne cyfry `n` w odwrotnej kolejności, każda w nowej linii.
 8
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Dla `n = 0` wypisz jedną linię z `0`.
+* Dla `n = 0` wypisz jedną linię: `0`.
+* Zera w środku i na końcu liczby też są cyframi — np. dla `120` wypisz `0`, `2`, `1`.
 
 """
 
+
+def wypisz_cyfry_od_konca(n):
+    print(n % 10)
+    n //= 10
+    while n > 0:
+        print(n % 10)
+        n //= 10
+
+
 if __name__ == "__main__":
-
-    print("Podaj liczbe: ")
-    liczba = int(input())
-
-    while liczba > 0:
-        print(liczba % 10)
-        liczba = liczba // 10
+    n = int(input())
+    wypisz_cyfry_od_konca(n)

@@ -1,12 +1,13 @@
-"""
+r"""
 ZAD-01 — Czy słowo jest palindromem?
 
 **Poziom:** ★☆☆
-**Tagi:** `string`, `palindrom`, `I/O`
+**Tagi:** `napisy`, `palindrom`
 
 ### Treść
 
-Wczytaj jedno słowo i sprawdź, czy jest palindromem (czytane od lewej do prawej i od prawej do lewej jest takie samo).
+Wczytaj jedno słowo i sprawdź, czy jest palindromem, czyli czy czytane od lewej do prawej i od prawej do lewej jest takie samo.
+Wielkość liter nie ma znaczenia — `Kajak` też jest palindromem.
 
 ### Wejście
 
@@ -16,10 +17,10 @@ Wczytaj jedno słowo i sprawdź, czy jest palindromem (czytane od lewej do prawe
 
 Jedna linia:
 
-* `Prawda` — jeśli słowo jest palindromem
-* `Fałsz` — w przeciwnym razie
+* `Prawda` — jeśli słowo jest palindromem,
+* `Fałsz` — w przeciwnym razie.
 
-### Przykład
+### Przykład 1
 
 **Wejście:**
 
@@ -33,9 +34,19 @@ kajak
 Prawda
 ```
 
-### Uwagi o formatowaniu
+### Przykład 2
 
-* Jeśli chcesz ignorować wielkość liter, porównuj wersje `lower()`.
+**Wejście:**
+
+```
+Kotek
+```
+
+**Wyjście:**
+
+```
+Fałsz
+```
 
 """
 

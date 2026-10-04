@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-06 — Miejsca zerowe równania kwadratowego (rzeczywiste)
 
 **Poziom:** ★★☆
@@ -6,82 +6,98 @@ ZAD-06 — Miejsca zerowe równania kwadratowego (rzeczywiste)
 
 ### Treść
 
-Napisz funkcję, która otrzymuje listę współczynników równania kwadratowego `[a, b, c]` dla `a x^2 + b x + c` i zwraca listę **rzeczywistych** miejsc zerowych.
+Napisz funkcję `miejsca_zerowe(a, b, c)`, która zwraca listę wszystkich **rzeczywistych** rozwiązań równania $ax^2 + bx + c = 0$, posortowaną rosnąco. Pierwiastek podwójny umieść na liście tylko raz.
 
-### Wejście (argumenty funkcji)
+Program wczytuje współczynniki, wywołuje funkcję i wypisuje wynik.
 
-* `coef` — lista trzech liczb `[a, b, c]`
+### Wejście
 
-### Wyjście (zwracana wartość)
+Jedna linia: trzy liczby całkowite `a b c` oddzielone spacją (`a ≠ 0`).
 
-* lista liczb zmiennoprzecinkowych:
+### Wyjście
 
-  * jeśli `Δ < 0` → pusta lista `[]`
-  * jeśli `Δ = 0` → dwa jednakowe pierwiastki `[x, x]`
-  * jeśli `Δ > 0` → dwa pierwiastki `[x1, x2]` (kolejność dowolna)
+* Jeśli równanie ma rozwiązania rzeczywiste: jedna linia z rozwiązaniami w kolejności rosnącej, oddzielonymi spacją, każde z dokładnością do **2 miejsc po przecinku** (np. `-1.62 0.62`). Pierwiastek podwójny wypisz raz.
+* Jeśli równanie nie ma rozwiązań rzeczywistych: dokładnie `Brak miejsc zerowych`.
+
+### Ograniczenia
+
+* `-100 ≤ a, b, c ≤ 100`, `a ≠ 0`
 
 ### Przykład
 
-Dla `[1, 2, 1]` funkcja zwraca:
-`[-1.0, -1.0]`
+**Wejście:**
 
-### Ograniczenia / gwarancje
+```
+1 2 1
+```
 
-* Zakładamy `a ≠ 0` (to naprawdę równanie kwadratowe).
+**Wyjście:**
+
+```
+-1.00
+```
+
+$\Delta = 2^2 - 4 \cdot 1 \cdot 1 = 0$, więc jest jeden (podwójny) pierwiastek $x = -1$.
+
+### Przykład 2
+
+**Wejście:**
+
+```
+1 0 1
+```
+
+**Wyjście:**
+
+```
+Brak miejsc zerowych
+```
 
 ### Uwagi
 
-* Licz `Δ = b^2 - 4ac`.
-* Pierwiastki: `(-b ± sqrt(Δ)) / (2a)`.
+* Oblicz $\Delta = b^2 - 4ac$. Dla $\Delta < 0$ brak rozwiązań, dla $\Delta = 0$ jest jedno: $x = \frac{-b}{2a}$, a dla $\Delta > 0$ dwa: $x_{1,2} = \frac{-b \pm \sqrt{\Delta}}{2a}$.
+* Uważaj na kolejność: gdy $a < 0$, wzór z „$+$” daje **mniejszy** pierwiastek — posortuj wynik.
+
+### Kod startowy
+
+```python
+import math
+
+
+def miejsca_zerowe(a, b, c):
+    pass
+
+
+a, b, c = [int(s) for s in input().split()]
+pierwiastki = miejsca_zerowe(a, b, c)
+if pierwiastki:
+    print(" ".join(f"{x:.2f}" for x in pierwiastki))
+else:
+    print("Brak miejsc zerowych")
+```
 
 """
 
+import math
 
-def miesca_zerowe(wspolczynniki):
-    """
-    Funkcja zwraca liste miejsc zerowych rownania kwadratowego.
 
-    Złożoność czasowa: O(1)
-    Złożoność pamięciowa: O(1)
-    """
-    a = wspolczynniki[0]
-    b = wspolczynniki[1]
-    c = wspolczynniki[2]
-    delta = b**2 - 4 * a * c
-
+def miejsca_zerowe(a, b, c):
+    """Zwraca posortowaną listę rzeczywistych pierwiastków równania ax^2 + bx + c = 0."""
+    delta = b * b - 4 * a * c
     if delta < 0:
         return []
-    elif delta == 0:
-        x = -b / (2 * a)
-        return [x, x]  # Dwa jednakowe pierwiastki
-    else:
-        import math
-
-        x1 = (-b + math.sqrt(delta)) / (2 * a)
-        x2 = (-b - math.sqrt(delta)) / (2 * a)
-        return [x1, x2]
-
-
-def test_miesca_zerowe():
-
-    assert miesca_zerowe([1, 2, 1]) == [-1.0, -1.0]
-    assert miesca_zerowe([1, 0, 1]) == []
+    if delta == 0:
+        return [-b / (2 * a) + 0.0]  # + 0.0 zamienia ewentualne -0.0 na 0.0
+    pierwiastek_delty = math.sqrt(delta)
+    x1 = (-b - pierwiastek_delty) / (2 * a)
+    x2 = (-b + pierwiastek_delty) / (2 * a)
+    return sorted([x1 + 0.0, x2 + 0.0])
 
 
 if __name__ == "__main__":
-    # Wczytanie współczynników jako listy lub osobno
-    try:
-        # Próba wczytania jako lista
-        wspolczynniki = __import__("ast").literal_eval(input().strip())
-    except:
-        # Wczytanie jako trzy oddzielne liczby
-        line = input().strip().split()
-        wspolczynniki = [float(x) for x in line]
-
-    # Obliczenie miejsc zerowych
-    # Złożoność czasowa: O(1)
-    # Złożoność pamięciowa: O(1)
-    wynik = miesca_zerowe(wspolczynniki)
-
-    # Wypisanie wyniku jako lista
-    print(str(wynik))
+    a, b, c = [int(s) for s in input().split()]
+    pierwiastki = miejsca_zerowe(a, b, c)
+    if pierwiastki:
+        print(" ".join(f"{x:.2f}" for x in pierwiastki))
+    else:
+        print("Brak miejsc zerowych")

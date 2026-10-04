@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-04 — Wczytaj i wypisz treść pliku
 
 **Poziom:** ★☆☆
@@ -6,54 +6,80 @@ ZAD-04 — Wczytaj i wypisz treść pliku
 
 ### Treść
 
-Otrzymujesz ścieżkę do pliku tekstowego. Wczytaj zawartość pliku i wypisz ją.
+Wczytaj ścieżkę pliku tekstowego i wypisz jego treść dokładnie tak, jak jest zapisana w pliku (wiersz po wierszu, razem z pustymi wierszami w środku).
 
 ### Wejście
 
-* 1 linia: `file_path`
+* 1. linia: ścieżka pliku
 
 ### Wyjście
 
-* treść pliku (dokładnie taka jak w pliku)
+* Treść pliku. Pusty plik — nic nie wypisuj.
+* `Plik nie istnieje.` — jeśli podana ścieżka nie wskazuje istniejącego pliku (np. wskazuje folder albo nic).
 
 ### Przykład
+
+**Pliki przed:**
+
+```
+wiadomość.txt
+| Witaj!
+| To jest przykładowa treść pliku tekstowego.
+```
 
 **Wejście:**
 
 ```
-C:\Users\Username\Documents\wiadomość.txt
+wiadomość.txt
 ```
 
 **Wyjście:**
 
 ```
-Witaj! To jest przykładowa treść pliku tekstowego.
+Witaj!
+To jest przykładowa treść pliku tekstowego.
 ```
 
+### Przykład 2
+
+**Pliki przed:**
+
+```
+wiadomość.txt
+| Witaj!
+```
+
+**Wejście:**
+
+```
+list.txt
+```
+
+**Wyjście:**
+
+```
+Plik nie istnieje.
+```
+
+### Uwagi
+
+* Sprawdzarka ignoruje końcowe spacje w wierszach i puste wiersze na samym końcu wyjścia, więc nie musisz się przejmować tym, czy plik kończy się znakiem nowej linii.
+
 """
-import pathlib
+
+import os
 
 
-def wypisz_plik(sciezka):
-
-    plik = pathlib.Path(sciezka)
-    if plik.is_file():
-        print(plik.read_text())
+def wczytaj_plik(sciezka):
+    """Zwraca całą treść pliku tekstowego."""
+    with open(sciezka, encoding="utf-8") as plik:
+        return plik.read()
 
 
 if __name__ == "__main__":
+    sciezka = input()
 
-    # stworz folder testowy
-    pathlib.Path("test").mkdir()
-
-    # stworz plik tekstowy
-    plik = pathlib.Path("test/test.txt")
-    plik.write_text("przykladowy tekst.\n")
-
-    # wypisz tresc pliku
-    wypisz_plik("test/test.txt")
-
-    # usun folder testowy
-    import shutil
-
-    shutil.rmtree("test")
+    if os.path.isfile(sciezka):
+        print(wczytaj_plik(sciezka), end="")
+    else:
+        print("Plik nie istnieje.")

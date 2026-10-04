@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-01 — Wartość wielomianu w punkcie
 
 **Poziom:** ★☆☆
@@ -6,60 +6,73 @@ ZAD-01 — Wartość wielomianu w punkcie
 
 ### Treść
 
-Napisz funkcję, która otrzymuje listę współczynników wielomianu `a` oraz liczbę `x`, a następnie zwraca wartość wielomianu w punkcie `x`.
+Napisz funkcję `wartosc_wielomianu(wspolczynniki, x)`, która otrzymuje listę współczynników wielomianu $W(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_0$ oraz liczbę $x$ i zwraca wartość $W(x)$.
 
-### Wejście (argumenty funkcji)
+Program wczytuje wielomian i liczbę $x$, wywołuje funkcję i wypisuje wynik.
 
-* `a` — lista współczynników `[a_n, ..., a_0]`
-* `x` — liczba naturalna (lub całkowita)
+### Wejście
 
-### Wyjście (zwracana wartość)
+* 1. linia: `n` — stopień wielomianu (`n ≥ 0`)
+* 2. linia: `n+1` liczb całkowitych `a_n a_{n-1} ... a_0`
+* 3. linia: `x` — liczba całkowita
 
-* jedna liczba (całkowita)
+### Wyjście
+
+Jedna liczba całkowita — wartość wielomianu w punkcie `x`.
+
+### Ograniczenia
+
+* `0 ≤ n ≤ 10`
+* `-100 ≤ a_i ≤ 100`, `-10 ≤ x ≤ 10`
 
 ### Przykład
 
-Dla `a = [3, 2, 1]` i `x = 1` funkcja zwraca:
-`6`
+**Wejście:**
+
+```
+2
+3 2 1
+1
+```
+
+**Wyjście:**
+
+```
+6
+```
+
+Wielomian to $3x^2 + 2x + 1$, a $3 \cdot 1^2 + 2 \cdot 1 + 1 = 6$.
 
 ### Uwagi
 
-* Najprościej użyć schematu Hornera.
+* Najprościej skorzystać ze **schematu Hornera**: $W(x) = (\dots((a_n x + a_{n-1}) x + a_{n-2}) x + \dots) x + a_0$. Zacznij od wyniku równego `0` i dla każdego kolejnego współczynnika `a` wykonaj `wynik = wynik * x + a`.
+
+### Kod startowy
+
+```python
+def wartosc_wielomianu(wspolczynniki, x):
+    pass
+
+
+n = int(input())
+wspolczynniki = [int(s) for s in input().split()]
+x = int(input())
+print(wartosc_wielomianu(wspolczynniki, x))
+```
 
 """
 
 
-def wartosc_wielomianu_w_punkcie(wspolczynniki, x):
-    """
-    Funkcja zwraca wartosc wielomianu w punkcie x.
-    Współczynniki w formacie [a_n, ..., a_0] (najwyższy stopień pierwszy).
-
-    Złożoność czasowa: O(n), gdzie n to stopień wielomianu
-    Złożoność pamięciowa: O(1)
-    """
+def wartosc_wielomianu(wspolczynniki, x):
+    """Zwraca wartość wielomianu w punkcie x (schemat Hornera)."""
     wynik = 0
-    n = len(wspolczynniki)
-    for i in range(n):
-        # wspolczynniki[i] to współczynnik przy x^(n-1-i)
-        wynik += wspolczynniki[i] * (x ** (n - 1 - i))
+    for a in wspolczynniki:
+        wynik = wynik * x + a
     return wynik
 
 
-def test_wartosc_wielomianu_w_punkcie():
-    assert wartosc_wielomianu_w_punkcie([1, 2, 3, 4], 2) == 49
-    assert wartosc_wielomianu_w_punkcie([1, 2, 3, 4], 3) == 142
-
-
 if __name__ == "__main__":
-    # Wczytanie współczynników wielomianu jako listy
-    wspolczynniki = __import__("ast").literal_eval(input().strip())
-    # Wczytanie punktu x
-    x = int(input().strip())
-
-    # Obliczenie wartości wielomianu
-    # Złożoność czasowa: O(n)
-    # Złożoność pamięciowa: O(1)
-    wynik = wartosc_wielomianu_w_punkcie(wspolczynniki, x)
-
-    # Wypisanie wyniku
-    print(wynik)
+    n = int(input())
+    wspolczynniki = [int(s) for s in input().split()]
+    x = int(input())
+    print(wartosc_wielomianu(wspolczynniki, x))

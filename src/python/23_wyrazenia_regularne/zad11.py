@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-11 — Nazwa pliku bez rozszerzenia
 
 **Poziom:** ★★☆
@@ -6,21 +6,17 @@ ZAD-11 — Nazwa pliku bez rozszerzenia
 
 ### Treść
 
-Otrzymujesz napis reprezentujący pełną ścieżkę do pliku. Wyodrębnij nazwę pliku (bez katalogów) i usuń rozszerzenie (część po ostatniej kropce). Zwróć samą nazwę bez rozszerzenia.
+Wczytaj ścieżkę do pliku. Wyodrębnij z niej nazwę pliku (część po ostatnim separatorze `/` lub `\`; ścieżka może mieszać oba separatory) i usuń z niej rozszerzenie.
 
-Ścieżka może zawierać separator `\` lub `/`.
+**Rozszerzenie** to ostatnia kropka w nazwie pliku razem ze wszystkimi znakami po niej — chyba że ta kropka jest pierwszym znakiem nazwy (np. `.bashrc` nie ma rozszerzenia). Kropki w nazwach folderów nie mają znaczenia. Nazwa bez kropki zostaje bez zmian.
 
 ### Wejście
 
-Jedna linia:
-
-* `sciezka`
+* 1. linia: ścieżka (nie kończy się separatorem)
 
 ### Wyjście
 
-Jedna linia:
-
-* `nazwa_pliku_bez_rozszerzenia`
+Jedna linia: nazwa pliku bez rozszerzenia.
 
 ### Przykład
 
@@ -36,29 +32,35 @@ C:\my-long\path_directory\file.html
 file
 ```
 
+### Przykład 2
+
+**Wejście:**
+
+```
+backup/archiwum.tar.gz
+```
+
+**Wyjście:**
+
+```
+archiwum.tar
+```
+
+### Uwagi
+
+* Nazwę pliku dopasuje wzorzec `[^\\/]+$` („znaki inne niż ukośniki aż do końca napisu”).
+
 """
 
 import re
 
 
-def nazwa_pliku(sciezka):
-    """
-    Funkcja zwraca nazwe pliku z podanej sciezki.
-    """
-    nazwa = re.search(r'[^\\/:*?"<>|]+$', sciezka).group(0)
-
-    # usun rozszerzenie pliku
-    while re.sub(r"\.[^.]+$", "", nazwa) is not nazwa:
-        nazwa = re.sub(r"\.[^.]+$", "", nazwa)
-    return nazwa
-
-
-def test_nazwa_pliku():
-    assert nazwa_pliku("C:\\Windows\\explorer.exe") == "explorer"
-    assert nazwa_pliku("/home/user/var/log/syslog") == "syslog"
-    assert nazwa_pliku("test.jpg.png.mp3.mp5.html.txt") == "test"
-    assert nazwa_pliku("test") == "test"
+def nazwa_bez_rozszerzenia(sciezka):
+    nazwa = re.search(r"[^\\/]+$", sciezka).group()
+    # Ostatnia kropka i wszystko po niej — o ile przed kropką jest jakiś znak.
+    return re.sub(r"(?<=.)\.[^.]*$", "", nazwa)
 
 
 if __name__ == "__main__":
-    test_nazwa_pliku()
+    sciezka = input()
+    print(nazwa_bez_rozszerzenia(sciezka))

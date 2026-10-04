@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Naiwny test pierwszości liczby
 
 **Poziom:** ★★☆
@@ -6,89 +6,79 @@ ZAD-08 — Naiwny test pierwszości liczby
 
 ### Treść
 
-Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.
+Napisz funkcję `czy_pierwsza(n)`, która zwraca `True`, jeśli `n` jest liczbą pierwszą, a w przeciwnym razie `False`.
+
+Liczba pierwsza to liczba naturalna większa od `1`, której jedynymi dzielnikami są `1` i ona sama.
+
+Program wczytuje `n`, wywołuje funkcję i wypisuje zwróconą wartość logiczną (`print(czy_pierwsza(n))`).
 
 ### Wejście
 
-Jeden argument funkcji:
-
-* `n` (liczba naturalna, `n ≥ 2`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-Funkcja zwraca wartość logiczną:
-
-* `True` lub `False`
+Jedno słowo: `True`, jeśli `n` jest liczbą pierwszą, w przeciwnym razie `False`.
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(czy_pierwsza(7))
-print(czy_pierwsza(4))
+```
+7
 ```
 
 **Wyjście:**
 
 ```
 True
+```
+
+### Przykład 2
+
+**Wejście:**
+
+```
+4
+```
+
+**Wyjście:**
+
+```
 False
 ```
 
 ### Uwagi
 
-* Dla prostego rozwiązania możesz sprawdzać dzielniki od `2` do `n-1`.
-* Dla szybszego rozwiązania możesz sprawdzać dzielniki do `⌊sqrt(n)⌋`.
+* `1` nie jest liczbą pierwszą.
+* W prostym rozwiązaniu sprawdzasz dzielniki od `2` do `n - 1`. Wystarczy jednak sprawdzać dzielniki `d` spełniające $d \cdot d \leq n$, czyli do $\lfloor \sqrt{n} \rfloor$.
+
+### Kod startowy
+
+```python
+def czy_pierwsza(n):
+    pass
+
+
+n = int(input())
+print(czy_pierwsza(n))
+```
 
 """
 
-import math
 
+def czy_pierwsza(n):
+    if n < 2:
+        return False
 
-def podziel(a, b):
-
-    znak = 1
-
-    if b == 0:
-        return float("nan")
-
-    if a == 0:
-        return 0
-
-    if a < 0:
-        znak = -1
-        a = -a
-
-    if b < 0:
-        znak *= -1
-        b = -b
-
-    if znak == 1:
-        licznik = 0
-        while a >= b:
-            a -= b
-            licznik += 1
-
-    else:
-        licznik = 1
-        while a > b:
-            a -= b
-            licznik += 1
-
-    return licznik * znak
-
-
-def test_podziel():
-    assert podziel(10, 2) == 5
-    assert podziel(10, 3) == 3
-    assert podziel(25, -5) == -5
-    assert podziel(-25, 5) == -5
-    assert podziel(-25, -5) == 5
-    assert podziel(0, 5) == 0
-    assert math.isnan(podziel(0, 0))
+    dzielnik = 2
+    while dzielnik * dzielnik <= n:
+        if n % dzielnik == 0:
+            return False
+        dzielnik += 1
+    return True
 
 
 if __name__ == "__main__":
-
-    test_podziel()
+    n = int(input())
+    print(czy_pierwsza(n))

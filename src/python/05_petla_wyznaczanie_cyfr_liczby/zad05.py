@@ -1,25 +1,23 @@
-"""
+r"""
 ZAD-05 — Sprawdzanie, czy liczba jest palindromem
 
 **Poziom:** ★★☆
-**Tagi:** `string`, `pętle`, `odwracanie`
+**Tagi:** `pętle`, `modulo`, `palindrom`
 
 ### Treść
 
-Wczytaj liczbę naturalną `n`. Sprawdź, czy jest palindromem (czyli czy po odwróceniu cyfr pozostaje taka sama). Wypisz odpowiedni komunikat:
-
-* `Liczba jest palindromem.`
-* `Liczba nie jest palindromem.`
+Wczytaj liczbę naturalną `n` i sprawdź, czy jest palindromem, czyli czy czytana od końca jest taka sama (np. `1221`, `7`). Wypisz odpowiedni komunikat.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Jeden komunikat tekstowy (dokładnie jeden z powyższych).
+Dokładnie jeden z komunikatów:
+
+* `Liczba jest palindromem.`
+* `Liczba nie jest palindromem.`
 
 ### Przykład
 
@@ -35,25 +33,45 @@ Jeden komunikat tekstowy (dokładnie jeden z powyższych).
 Liczba jest palindromem.
 ```
 
-### Uwagi o formatowaniu
+### Przykład 2
 
-* `0` jest palindromem.
+**Wejście:**
+
+```
+1231
+```
+
+**Wyjście:**
+
+```
+Liczba nie jest palindromem.
+```
+
+### Uwagi
+
+* Każda liczba jednocyfrowa (także `0`) jest palindromem.
+* Liczba zakończona zerem (np. `10`, `120`) nie jest palindromem, bo zapis liczby nie zaczyna się od `0`.
+* Wskazówka: zbuduj w pętli liczbę o odwróconych cyfrach i porównaj ją z `n`.
 
 """
 
-if __name__ == "__main__":
 
-    print("Podaj liczbe: ")
-    liczba = int(input())
-
-    liczba_pomocnicza = liczba
+def odwroc_liczbe(n):
     odwrocona = 0
+    while n > 0:
+        odwrocona = odwrocona * 10 + n % 10
+        n //= 10
+    return odwrocona
 
-    while liczba_pomocnicza > 0:
-        odwrocona = odwrocona * 10 + liczba_pomocnicza % 10
-        liczba_pomocnicza //= 10
 
-    if liczba == odwrocona:
+def czy_palindrom(n):
+    return n == odwroc_liczbe(n)
+
+
+if __name__ == "__main__":
+    n = int(input())
+
+    if czy_palindrom(n):
         print("Liczba jest palindromem.")
     else:
         print("Liczba nie jest palindromem.")

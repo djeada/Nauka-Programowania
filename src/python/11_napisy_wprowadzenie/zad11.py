@@ -1,20 +1,21 @@
-"""
+r"""
 ZAD-11 — Średnia długość słów
 
 **Poziom:** ★☆☆
-**Tagi:** `string`, `arytmetyka`
+**Tagi:** `napisy`, `słowa`, `arytmetyka`
 
 ### Treść
 
-Wczytaj zdanie i oblicz średnią długość słów. Wynik ma być liczbą całkowitą.
+Wczytaj zdanie i oblicz średnią długość jego słów (zgodnie z konwencją rozdziału — interpunkcja nie wlicza się do długości słowa).
+Wynikiem jest **część całkowita** średniej, czyli `suma_długości // liczba_słów`.
 
 ### Wejście
 
-* 1. linia: zdanie
+* 1. linia: zdanie (zawiera co najmniej jedno słowo)
 
 ### Wyjście
 
-* 1. linia: średnia długość słów (liczba całkowita)
+Jedna linia: część całkowita średniej długości słów.
 
 ### Przykład
 
@@ -30,29 +31,30 @@ Zepsuty rower.
 6
 ```
 
-### Uwagi
-
-* Licz jako: `suma_dlugosci // liczba_slow` (dzielenie całkowite).
+Słowa `Zepsuty` i `rower` mają razem $7 + 5 = 12$ liter, a `12 // 2` to `6`.
 
 """
 
 import string
 
 
-def podziel_zdanie_na_slowa(zdanie):
-    return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
+def podziel_na_slowa(zdanie):
+    slowa = []
+    for fragment in zdanie.split():
+        slowo = fragment.strip(string.punctuation)
+        if slowo:
+            slowa.append(slowo)
+    return slowa
 
 
 def srednia_dlugosc_slow(zdanie):
-    slowa = podziel_zdanie_na_slowa(zdanie)
-    wynik = sum(len(slowo) for slowo in slowa) / len(slowa)
-    return int(wynik)
-
-
-def test_srednia_dlugosc_slow():
-    assert srednia_dlugosc_slow("Kaczka lubi wiosne.") == 5
-    assert srednia_dlugosc_slow("Ile to   ma :  slow w swoim zdaniu na   koniec?") == 3
+    slowa = podziel_na_slowa(zdanie)
+    suma_dlugosci = 0
+    for slowo in slowa:
+        suma_dlugosci += len(slowo)
+    return suma_dlugosci // len(slowa)
 
 
 if __name__ == "__main__":
-    test_srednia_dlugosc_slow()
+    zdanie = input()
+    print(srednia_dlugosc_slow(zdanie))

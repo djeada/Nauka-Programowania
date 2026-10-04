@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Sortowanie słów w zdaniu
 
 **Poziom:** ★★☆
@@ -6,15 +6,21 @@ ZAD-02 — Sortowanie słów w zdaniu
 
 ### Treść
 
-Otrzymujesz zdanie. Podziel je na słowa, traktując znaki interpunkcyjne jako separatory, a następnie posortuj słowa alfabetycznie i wypisz listę.
+Wczytaj zdanie i podziel je na słowa. Słowa oddzielają od siebie spacje oraz znaki interpunkcyjne: `.` `,` `!` `?` `;` `:` — te znaki nie należą do słów. Posortuj słowa rosnąco (według kodów Unicode, bez zmiany wielkości liter) i wypisz je.
 
 ### Wejście
 
-* 1 linia: napis `zdanie`
+* 1. linia: zdanie (zawiera co najmniej jedno słowo)
 
 ### Wyjście
 
-* 1 linia: lista słów w formacie jak w przykładzie, np. `['Ala', 'kota', 'ma']`
+* 1. linia: posortowane słowa oddzielone pojedynczymi spacjami
+
+Jeśli słowo występuje w zdaniu kilka razy, wypisz je tyle samo razy.
+
+### Ograniczenia
+
+* Zdanie ma co najwyżej 200 znaków.
 
 ### Przykład
 
@@ -27,41 +33,44 @@ Lemur wygina śmiało ciało
 **Wyjście:**
 
 ```
-['Lemur', 'ciało', 'wygina', 'śmiało']
+Lemur ciało wygina śmiało
 ```
 
-### Uwagi o formatowaniu
+### Przykład 2
 
-* Ignoruj znaki interpunkcyjne (np. `.,!?;:`) — nie są częścią słów.
-* Wielkość liter pozostaje bez zmian (nie zamieniaj na małe/duże), sortujesz to, co w tekście.
+**Wejście:**
+
+```
+Ala ma kota, a kot ma Alę.
+```
+
+**Wyjście:**
+
+```
+Ala Alę a kot kota ma ma
+```
+
+Wielkie litery są przed małymi, a `Ala` jest przed `Alę`, bo `'a' < 'ę'`.
+
+### Uwagi
+
+* Najprościej zamienić każdy znak interpunkcyjny na spację (`napis.replace(".", " ")` itd.), a potem użyć `split()`.
 
 """
 
-import string
+SEPARATORY = ".,!?;:"
 
 
-def podziel_zdanie_na_slowa(zdanie):
-    """
-    Funkcja zwraca liste slow ze zdania.
-    """
-    return zdanie.translate(str.maketrans("", "", string.punctuation)).split()
+def podziel_na_slowa(zdanie):
+    for znak in SEPARATORY:
+        zdanie = zdanie.replace(znak, " ")
+    return zdanie.split()
 
 
-def sortuj_slowa_w_zdaniu(zdanie):
-    """
-    Funkcja zwraca posortowana liste slow ze zdania.
-    """
-    return sorted(podziel_zdanie_na_slowa(zdanie))
-
-
-def test_sortuj_slowa_w_zdaniu():
-    assert sortuj_slowa_w_zdaniu("Lemur wygina smialo cialo") == [
-        "Lemur",
-        "cialo",
-        "smialo",
-        "wygina",
-    ]
+def sortuj_slowa(zdanie):
+    return sorted(podziel_na_slowa(zdanie))
 
 
 if __name__ == "__main__":
-    test_sortuj_slowa_w_zdaniu()
+    zdanie = input()
+    print(" ".join(sortuj_slowa(zdanie)))

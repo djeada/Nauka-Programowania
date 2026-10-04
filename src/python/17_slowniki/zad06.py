@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-06 — Histogram znaków w słowie
 
 **Poziom:** ★☆☆
@@ -6,15 +6,19 @@ ZAD-06 — Histogram znaków w słowie
 
 ### Treść
 
-Wczytaj napis. Zwróć słownik: znak → liczba wystąpień.
+Wczytaj napis. Utwórz słownik, w którym kluczami są znaki napisu, a wartościami liczby ich wystąpień, i wypisz go.
 
 ### Wejście
 
-* 1 linia: napis
+* 1. linia: napis
 
 ### Wyjście
 
-* Słownik, np. `{'k': 1, 'l': 1, 'a': 2, 's': 1}`
+Słownik w postaci `{'znak': liczba, …}` — znaki w kolejności pierwszego wystąpienia w napisie.
+
+### Ograniczenia
+
+* napis ma od 1 do 100 znaków, nie zaczyna się ani nie kończy spacją i nie zawiera apostrofów, cudzysłowów ani znaku `\`
 
 ### Przykład
 
@@ -30,13 +34,16 @@ klasa
 {'k': 1, 'l': 1, 'a': 2, 's': 1}
 ```
 
+### Uwagi
+
+* Liczą się wszystkie znaki, także spacje (klucz `' '`) i cyfry.
+* Wielkość liter ma znaczenie: `a` i `A` to różne znaki.
+
 """
 
 
-def histogram(napis):
-    """
-    Funkcja zwraca slownik zawierajacy wszystkie litery w napisie oraz czestosc ich wystepowania.
-    """
+def histogram_znakow(napis):
+    """Zwraca słownik: znak -> liczba wystąpień (w kolejności pierwszego wystąpienia)."""
     histogram = {}
     for znak in napis:
         if znak in histogram:
@@ -46,19 +53,5 @@ def histogram(napis):
     return histogram
 
 
-def test_histogram():
-    assert histogram("") == {}
-    assert histogram("ala") == {"a": 2, "l": 1}
-    assert histogram("ala ma kota") == {
-        "a": 4,
-        " ": 2,
-        "k": 1,
-        "l": 1,
-        "m": 1,
-        "o": 1,
-        "t": 1,
-    }
-
-
 if __name__ == "__main__":
-    test_histogram()
+    print(histogram_znakow(input()))

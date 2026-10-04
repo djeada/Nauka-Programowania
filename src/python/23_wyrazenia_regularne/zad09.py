@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-09 — Usuń fragment napisu od pierwszego wystąpienia słowa klucz
 
 **Poziom:** ★★☆
@@ -6,73 +6,68 @@ ZAD-09 — Usuń fragment napisu od pierwszego wystąpienia słowa klucz
 
 ### Treść
 
-Otrzymujesz tekst (wiele zdań lub wierszy) oraz słowo klucz. Jeśli słowo klucz wystąpi w tekście, usuń całą część od **pierwszego wystąpienia** tego słowa do końca tekstu. Jeśli słowo klucz nie występuje, wypisz tekst bez zmian.
+Wczytaj tekst wielowierszowy i słowo klucz. Znajdź **pierwsze** wystąpienie słowa klucz w tekście jako **całego słowa** (zob. konwencje rozdziału; wielkość liter ma znaczenie). Usuń wszystko od początku tego wystąpienia do **końca tekstu** — także wszystkie dalsze wiersze — i wypisz to, co zostało.
+
+Jeśli słowo klucz nie występuje w tekście, wypisz tekst bez zmian. Jeśli słowo klucz jest pierwszym słowem tekstu, nic nie wypisuj.
 
 ### Wejście
 
-Dwie części:
-
-1. Tekst (może mieć wiele wierszy)
-2. W osobnej linii: `klucz`
+* 1. linia: `n` — liczba wierszy tekstu
+* kolejne `n` linii: tekst
+* ostatnia linia: słowo klucz (tylko litery i cyfry)
 
 ### Wyjście
 
-Zmodyfikowany tekst.
+Pozostała część tekstu: wiersze przed wierszem z wystąpieniem słowa klucz w całości, a z tego wiersza — tylko fragment przed słowem klucz.
+
+### Ograniczenia
+
+* $1 \le n \le 100$
 
 ### Przykład
 
-*(jak w treści zadania — długi tekst)*
+**Wejście:**
+
+```
+3
+Ala ma kota, a kot ma Alę.
+Kot lubi mleko i spać.
+Mleko jest białe.
+mleko
+```
+
+**Wyjście:**
+
+```
+Ala ma kota, a kot ma Alę.
+Kot lubi
+```
+
+Słowo `Mleko` w trzecim wierszu nie pasuje (wielka litera), a pierwsze `mleko` jest w drugim wierszu.
+
+### Uwagi
+
+* Złącz wiersze w jeden napis (`"\n".join(...)`) i znajdź wystąpienie przez `re.search()` — metoda `start()` dopasowania poda jego pozycję.
+* Sprawdzarka ignoruje spacje na końcu wierszy i puste wiersze na końcu wyjścia.
 
 """
 
 import re
 
 
-def usun_z_wiersza(tekst, zakazane_slowo):
-    """
-    Funkcja usuwa z tekstu czesci wierszy zawierajace zakazane slowo,
-    od wystapienia zakazanego slowa do konca.
-    """
-    return [re.sub(r"{0}.*".format(zakazane_slowo), "", e) for e in tekst.splitlines()]
-
-
-def test_usun_z_wiersza():
-    tekst = """Turned it up should no valley cousin he. 
-Speaking numerous ask did horrible packages set.
-Ashamed herself has distant can studied mrs. 
-Led therefore its middleton perpetual fulfilled provision frankness.
-Small he drawn after among every three no. 
-All having but you edward genius though remark one.
-Rooms oh fully taken by worse do.
-Points afraid but may end law lasted. 
-Was out laughter raptures returned outweigh.
-Luckily cheered colonel me do we attacks on highest enabled. 
-Tried law yet style child. 
-Bore of true of no be deal. 
-Frequently sufficient in be unaffected. 
-The furnished she concluded depending procuring concealed. 
-"""
-    napis_a = "a"
-
-    oczekiwane = [
-        "Turned it up should no v",
-        "Spe",
-        "Ash",
-        "Led therefore its middleton perpetu",
-        "Sm",
-        "All h",
-        "Rooms oh fully t",
-        "Points ",
-        "W",
-        "Luckily cheered colonel me do we ",
-        "Tried l",
-        "Bore of true of no be de",
-        "Frequently sufficient in be un",
-        "The furnished she concluded depending procuring conce",
-    ]
-
-    assert usun_z_wiersza(tekst, napis_a) == oczekiwane
+def usun_od_slowa(tekst, klucz):
+    """Zwraca tekst obcięty tuż przed pierwszym wystąpieniem słowa klucz."""
+    dopasowanie = re.search(r"\b" + re.escape(klucz) + r"\b", tekst)
+    if dopasowanie is None:
+        return tekst
+    return tekst[: dopasowanie.start()]
 
 
 if __name__ == "__main__":
-    test_usun_z_wiersza()
+    n = int(input())
+    tekst = "\n".join(input() for _ in range(n))
+    klucz = input()
+
+    wynik = usun_od_slowa(tekst, klucz)
+    if wynik:
+        print(wynik)

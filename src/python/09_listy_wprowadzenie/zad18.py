@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-18 — Indeks najmniejszego elementu w przesuniętej liście
 
 **Poziom:** ★★☆
@@ -6,16 +6,20 @@ ZAD-18 — Indeks najmniejszego elementu w przesuniętej liście
 
 ### Treść
 
-Wczytaj listę liczb całkowitych, która była posortowana rosnąco i została przesunięta w prawo o nieznaną liczbę miejsc. Znajdź indeks najmniejszego elementu.
+Wczytaj listę `n` różnych liczb całkowitych, która była posortowana rosnąco, a następnie została cyklicznie przesunięta w prawo o nieznaną liczbę miejsc (być może o zero). Znajdź indeks najmniejszego elementu.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` różnych liczb całkowitych oddzielonych spacjami
 
 ### Wyjście
 
-Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
+Jedna liczba całkowita: indeks najmniejszego elementu.
+
+### Ograniczenia
+
+* $n \ge 1$
 
 ### Przykład
 
@@ -23,11 +27,7 @@ Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
 
 ```
 5
-7
-8
--1
-4
-5
+7 8 -1 4 5
 ```
 
 **Wyjście:**
@@ -36,23 +36,21 @@ Jedna liczba całkowita — indeks najmniejszego elementu (od `0`).
 2
 ```
 
+### Uwagi
+
+* Najmniejszy element to jedyne miejsce, w którym kolejny element listy jest mniejszy od poprzedniego. Jeśli takiego miejsca nie ma, lista nie została przesunięta.
+
 """
 
 
-def znajdz_min_indeks(lista):
+def indeks_minimum(lista):
     for i in range(len(lista) - 1):
         if lista[i] > lista[i + 1]:
             return i + 1
-
     return 0
 
 
-def test_znajdz_min_indeks():
-    assert znajdz_min_indeks([7, 8, -1, 4, 5]) == 2
-    assert znajdz_min_indeks([2, 3, 4, 5, 6]) == 0
-    assert znajdz_min_indeks([8, 9, 10, 11, 1]) == 4
-
-
 if __name__ == "__main__":
-
-    test_znajdz_min_indeks()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    print(indeks_minimum(lista))

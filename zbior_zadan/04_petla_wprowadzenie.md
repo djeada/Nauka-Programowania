@@ -1,14 +1,14 @@
-# Rozdział: Pętle i proste obliczenia (while / for)
+# Rozdział 4: Pętle — wprowadzenie (while / for)
 
-Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).
-**Każde zadanie (oraz każdy podpunkt w zadaniach wieloczęściowych) jest osobnym, niezależnym programem.**
+Zadania w tym rozdziale ćwiczą powtarzanie instrukcji za pomocą pętli `while` i `for`: wczytywanie danych aż do spełnienia warunku, wypisywanie ciągów liczb, sumowanie i proste obliczenia.
 
 **Konwencje wspólne:**
 
-* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.
-* Jeśli w danych wyjściowych jest „każda w oddzielnej linii” — po każdym wyniku wypisz znak nowej linii.
-* Dla liczb zmiennoprzecinkowych stosuj formatowanie zgodne z poleceniem (np. `%.3f`, `format(x, ".3f")`).
-* Jeśli zadanie mówi „brak danych wyjściowych” — program nie wypisuje nic (nawet pustej linii).
+* Każde zadanie (i każdy podpunkt) to osobny program: czyta **standardowe wejście** i wypisuje wynik na **standardowe wyjście**.
+* Program nie wypisuje komunikatów typu „Podaj liczbę:”. Tekst podany w `input("…")` jest ignorowany przez sprawdzarkę.
+* Dane wejściowe wczytuj dokładnie w podanej kolejności, każdą wartość z osobnej linii (o ile nie napisano inaczej).
+* Jeśli wynik ma być „każdy w osobnej linii”, po każdej wartości wypisz znak nowej linii.
+* Jeśli zadanie mówi, że w danym przypadku nic nie trzeba wypisywać, program nie wypisuje nic (nawet pustej linii).
 
 ---
 
@@ -19,20 +19,23 @@ Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** 
 
 ### Treść
 
-Wczytuj kolejne liczby naturalne, dopóki nie pojawi się liczba `7`.
-Po wczytaniu liczby `7` program kończy działanie **bez wypisywania czegokolwiek**.
+Wczytuj kolejne liczby naturalne (każdą z osobnej linii), dopóki nie wczytasz liczby `7`.
+Siódemka kończy wczytywanie — po niej program nie wczytuje już żadnych danych.
+
+Na koniec wypisz, ile liczb wczytano **przed** pierwszą siódemką (samej siódemki nie liczymy).
 
 ### Wejście
 
-Dowolna liczba liczb naturalnych (każda w osobnej linii).
-
-### Ograniczenia / gwarancje
-
-* W danych wejściowych na pewno pojawi się co najmniej jedna liczba `7`.
+Kolejne liczby naturalne, każda w osobnej linii.
 
 ### Wyjście
 
-Brak.
+Jedna liczba całkowita — liczba wczytanych liczb poprzedzających pierwszą siódemkę.
+
+### Ograniczenia
+
+* Wśród danych na pewno jest co najmniej jedna liczba `7`.
+* Po pierwszej siódemce mogą występować kolejne linie — program ma je pominąć.
 
 ### Przykład
 
@@ -48,14 +51,15 @@ Brak.
 **Wyjście:**
 
 ```
+3
 ```
 
-*(brak danych wyjściowych)*
+Przed siódemką wczytano trzy liczby: `3`, `10` i `5`.
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Nie wypisuj żadnych komunikatów typu „Podaj liczbę”.
-* Liczba `7` kończy wczytywanie i nie jest dalej przetwarzana.
+* Jeśli pierwszą wczytaną liczbą jest `7`, wypisz `0`.
+* Liczby takie jak `17` czy `70` nie kończą wczytywania — liczy się tylko liczba równa `7`.
 
 ---
 
@@ -66,17 +70,15 @@ Brak.
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` (`n > 0`) i wypisz wszystkie liczby naturalne mniejsze od `n`, zaczynając od `n - 1` i kończąc na `1`.
+Wczytaj liczbę naturalną `n` i wypisz wszystkie liczby naturalne dodatnie mniejsze od `n` w kolejności malejącej — od `n - 1` do `1`.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n > 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności malejącej.
+Liczby `n - 1`, `n - 2`, …, `1`, każda w osobnej linii.
 
 ### Przykład
 
@@ -93,52 +95,55 @@ Kolejne liczby naturalne mniejsze od `n`, każda w nowej linii, w kolejności ma
 1
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Jeśli `n = 1`, nie wypisuj nic.
+* Dla `n = 1` nie wypisuj nic.
 
 ---
 
-## ZAD-03 — Wypisywanie liczby π z określoną dokładnością
+## ZAD-03 — Wypisywanie liczby π z rosnącą dokładnością
 
 **Poziom:** ★☆☆
 **Tagi:** `math.pi`, `formatowanie`, `pętle`
 
 ### Treść
 
-1. Wczytaj liczbę naturalną `n` (`n > 0`).
-2. Wypisz liczbę π dokładnie `n` razy.
-3. Każda wypisana wartość ma mieć **dokładnie `n` miejsc po przecinku**.
+Wczytaj liczbę naturalną `n` i wypisz liczbę $\pi$ w `n` liniach: w pierwszej z dokładnością do `1` miejsca po przecinku, w drugiej do `2` miejsc, …, w `n`-tej do `n` miejsc po przecinku.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n > 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-`n` wierszy, w każdym liczba π z dokładnością do `n` miejsc po przecinku.
+`n` linii; w `k`-tej linii liczba $\pi$ zaokrąglona do `k` miejsc po przecinku.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 15`
 
 ### Przykład
 
 **Wejście:**
 
 ```
-2
+3
 ```
 
 **Wyjście:**
 
 ```
+3.1
 3.14
-3.14
+3.142
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Liczba miejsc po przecinku ma być **dokładnie** równa `n` (np. dla `n=1` wypisz `3.1`).
-* Stosuj standardowe zaokrąglanie przy formatowaniu.
+* Wartość $\pi$ weź z modułu `math` (`math.pi`).
+* Liczbę miejsc po przecinku możesz podać w f-stringu jako zmienną: `f"{math.pi:.{k}f}"` wypisze $\pi$ z dokładnością do `k` miejsc.
+* Stosuj standardowe zaokrąglanie, np. przy `4` miejscach wypisz `3.1416`.
+* Liczby zmiennoprzecinkowe mają ograniczoną precyzję — `math.pi` jest dokładne mniej więcej do 15. miejsca po przecinku, dlatego `n ≤ 15`.
 
 ---
 
@@ -149,19 +154,15 @@ Jedna liczba naturalna:
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` (`n ≥ 1`). Oblicz sumę wszystkich liczb naturalnych mniejszych od `n`, czyli:
-`1 + 2 + ... + (n - 1)`
-Następnie wypisz wynik.
+Wczytaj liczbę naturalną `n` i za pomocą pętli oblicz sumę wszystkich liczb naturalnych dodatnich mniejszych od `n`, czyli $1 + 2 + \ldots + (n - 1)$.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 1`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
+Jedna liczba całkowita — suma liczb od `1` do `n - 1`.
 
 ### Przykład
 
@@ -177,9 +178,11 @@ Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 10
 ```
 
-### Uwagi o formatowaniu
+$1 + 2 + 3 + 4 = 10$.
 
-* Dla `n = 1` wynik to `0`.
+### Uwagi
+
+* Dla `n = 1` suma jest pusta, więc wynik to `0`.
 
 ---
 
@@ -190,27 +193,20 @@ Jedna liczba naturalna — suma liczb od `1` do `n - 1`.
 
 ### Treść
 
-Wczytaj dwie liczby naturalne `a` i `b`. Najpierw ustal:
+Wczytaj dwie liczby naturalne `a` i `b`. Niech `lo` będzie mniejszą, a `hi` większą z nich.
 
-* `lo = min(a, b)`
-* `hi = max(a, b)`
+a) Wypisz w kolejności rosnącej wszystkie liczby naturalne `x` takie, że `lo < x < hi`.
 
-Następnie:
-
-a) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` (każda w osobnej linii).
-
-b) Wypisz wszystkie liczby naturalne `x` takie, że `lo < x < hi` oraz `x` jest podzielne przez `3` (każda w osobnej linii).
+b) Następnie wypisz w kolejności rosnącej te z nich, które są podzielne przez `3`.
 
 ### Wejście
 
-Dwie liczby naturalne:
-
-* 1. linia: `a`
-* 2. linia: `b`
+* 1. linia: `a` — liczba naturalna
+* 2. linia: `b` — liczba naturalna
 
 ### Wyjście
 
-Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobnej linii.
+Najpierw liczby z podpunktu a), potem liczby z podpunktu b) — każda w osobnej linii.
 
 ### Przykład
 
@@ -230,11 +226,13 @@ Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobn
 6
 ```
 
-### Uwagi o formatowaniu
+Między `5` a `9` leżą liczby `6`, `7`, `8` (podpunkt a); spośród nich przez `3` dzieli się tylko `6` (podpunkt b).
 
-* Nie wypisuj nagłówków typu „a)” i „b)”.
-* Jeśli w którymś podpunkcie nie ma liczb do wypisania, w tej części nie wypisuj nic.
-* Nie dodawaj pustej linii między podpunktami.
+### Uwagi
+
+* Liczby `a` i `b` nie należą do przedziału (nierówności są ostre).
+* Nie wypisuj nagłówków typu „a)” i „b)” ani pustej linii między podpunktami.
+* Jeśli w którymś podpunkcie nie ma liczb do wypisania, ta część wyjścia jest pusta.
 
 ---
 
@@ -245,29 +243,21 @@ Najpierw wyniki podpunktu (a), potem wyniki podpunktu (b), każda liczba w osobn
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` (`n ≥ 1`) i oblicz:
+Wczytaj liczbę naturalną `n` i za pomocą pętli oblicz trzy sumy:
 
 a) $\sum_{k=1}^{n} (k^2 + k + 1)$
 
 b) $\sum_{k=1}^{n} (k^2 + 5k)$
 
-c) $\sum_{k=1}^{n} (k + 2k)$  (czyli $\sum_{k=1}^{n} 3k$)
-
-Wypisz trzy sumy w kolejności a), b), c).
+c) $\sum_{k=1}^{n} 3k$
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 1`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
 
 ### Wyjście
 
-Trzy liczby naturalne — każda w oddzielnej linii:
-
-1. suma dla (a)
-2. suma dla (b)
-3. suma dla (c)
+Trzy liczby całkowite, każda w osobnej linii: suma a), suma b) i suma c).
 
 ### Przykład
 
@@ -281,13 +271,11 @@ Trzy liczby naturalne — każda w oddzielnej linii:
 
 ```
 10
-16
+20
 9
 ```
 
-### Uwagi o formatowaniu
-
-* Wyniki są liczbami całkowitymi — nie stosuj żadnego dodatkowego zaokrąglania.
+Dla `n = 2`: a) $3 + 7 = 10$, b) $6 + 14 = 20$, c) $3 + 6 = 9$.
 
 ---
 
@@ -298,17 +286,19 @@ Trzy liczby naturalne — każda w oddzielnej linii:
 
 ### Treść
 
-Wczytaj liczbę naturalną `n` (`n ≥ 0`), oblicz wartość $\pi^n$ i wypisz wynik z dokładnością do **dwóch miejsc po przecinku**.
+Wczytaj liczbę naturalną `n` i oblicz $\pi^n$, mnożąc w pętli liczbę $\pi$ przez siebie. Wypisz wynik z dokładnością do **dwóch miejsc po przecinku**.
 
 ### Wejście
 
-Jedna liczba naturalna:
-
-* 1. linia: `n` (`n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Jedna liczba zmiennoprzecinkowa — $\pi^n$ z dokładnością do dwóch miejsc po przecinku.
+Jedna liczba — $\pi^n$ zaokrąglona do dwóch miejsc po przecinku.
+
+### Ograniczenia
+
+* `0 ≤ n ≤ 20`
 
 ### Przykład
 
@@ -324,45 +314,37 @@ Jedna liczba zmiennoprzecinkowa — $\pi^n$ z dokładnością do dwóch miejsc p
 9.87
 ```
 
-### Uwagi o formatowaniu
+### Uwagi
 
-* Dla `n = 0` wypisz `1.00`.
+* $\pi^0 = 1$, więc dla `n = 0` wypisz `1.00`.
 
 ---
 
 ## ZAD-08 — Obliczanie liczby kur i owiec na farmie
 
 **Poziom:** ★★☆
-**Tagi:** `układ równań`, `arytmetyka`
+**Tagi:** `pętle`, `układ równań`, `arytmetyka`
 
 ### Treść
 
-Na farmie są kury i owce. Wiadomo, że:
-
-* łączna liczba głów wynosi `a`,
-* łączna liczba nóg wynosi `b`,
-* kura ma 2 nogi, owca ma 4 nogi,
-* każda ma dokładnie 1 głowę.
-
-Oblicz liczbę kur oraz liczbę owiec.
+Na farmie są wyłącznie kury i owce. Każde zwierzę ma jedną głowę, kura ma 2 nogi, a owca 4 nogi.
+Znając łączną liczbę głów `a` i łączną liczbę nóg `b`, oblicz, ile jest kur, a ile owiec.
 
 ### Wejście
-
-Dwie liczby naturalne:
 
 * 1. linia: `a` — liczba głów (`a ≥ 0`)
 * 2. linia: `b` — liczba nóg (`b ≥ 0`)
 
-### Ograniczenia / gwarancje
-
-* Istnieje rozwiązanie w liczbach całkowitych nieujemnych.
-
 ### Wyjście
 
-Dwie liczby naturalne, każda w oddzielnej linii:
+Dwie liczby całkowite, każda w osobnej linii:
 
-1. liczba kur
-2. liczba owiec
+1. liczba kur,
+2. liczba owiec.
+
+### Ograniczenia
+
+* Dane są poprawne: istnieje dokładnie jedno rozwiązanie w liczbach całkowitych nieujemnych.
 
 ### Przykład
 
@@ -380,6 +362,150 @@ Dwie liczby naturalne, każda w oddzielnej linii:
 10
 ```
 
-### Uwagi o formatowaniu
+30 kur ma 60 nóg, a 10 owiec ma 40 nóg — razem 40 głów i 100 nóg.
 
-* Nie wypisuj dodatkowych opisów — tylko liczby.
+### Uwagi
+
+* Możesz sprawdzać w pętli kolejne możliwe liczby kur (od `0` do `a`) i szukać tej, dla której zgadza się liczba nóg.
+
+---
+
+## ZAD-09 — Ciąg Collatza
+
+**Poziom:** ★☆☆
+**Tagi:** `while`, `pętle`, `warunki`
+
+### Treść
+
+Ciąg Collatza zaczyna się od liczby `n`. Każdy kolejny wyraz powstaje z poprzedniego `x` według reguły:
+
+* jeśli `x` jest parzyste, następny wyraz to $\frac{x}{2}$,
+* jeśli `x` jest nieparzyste, następny wyraz to $3x + 1$.
+
+Ciąg kończy się, gdy osiągnie wartość `1`.
+
+Wczytaj `n` i wypisz, ile kroków (przejść do kolejnego wyrazu) potrzeba, aby dojść do `1`, oraz jaka jest największa wartość, która pojawiła się w ciągu (łącznie z samym `n`).
+
+### Wejście
+
+* 1. linia: `n` — liczba naturalna (`n ≥ 1`)
+
+### Wyjście
+
+Dwie liczby całkowite, każda w osobnej linii:
+
+1. liczba kroków potrzebnych do osiągnięcia `1`,
+2. największa wartość w ciągu.
+
+### Ograniczenia
+
+* `1 ≤ n ≤ 1000000`
+
+### Przykład
+
+**Wejście:**
+
+```
+6
+```
+
+**Wyjście:**
+
+```
+8
+16
+```
+
+Ciąg ma postać $6 \to 3 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$: to `8` kroków, a największy wyraz to `16`.
+
+### Uwagi
+
+* Nie wiadomo z góry, ile kroków wykona pętla — to typowe zastosowanie pętli `while`.
+* Dla `n = 1` ciąg od razu jest w `1`: wypisz `0` i `1`.
+* Do dzielenia używaj `//`, żeby wyrazy ciągu pozostały liczbami całkowitymi.
+* Nikt nie udowodnił, że ciąg Collatza zawsze dochodzi do `1` (to słynna hipoteza Collatza), ale sprawdzono to dla wszystkich liczb z zakresu zadania.
+
+---
+
+## ZAD-10 — Walidacja danych wejściowych
+
+**Poziom:** ★★☆
+**Tagi:** `while`, `break`, `continue`, `try/except`
+
+### Treść
+
+Program prosi o liczbę całkowitą z przedziału $[1, 100]$ i nie poddaje się, dopóki jej nie dostanie.
+
+Wczytuj kolejne linie. Dla każdej linii:
+
+* jeśli nie jest liczbą całkowitą — wypisz `To nie jest liczba całkowita.` i wczytaj następną linię,
+* jeśli jest liczbą całkowitą spoza przedziału $[1, 100]$ — wypisz `Liczba spoza zakresu.` i wczytaj następną linię,
+* jeśli jest liczbą całkowitą z przedziału $[1, 100]$ — zakończ wczytywanie i wypisz `Przyjęto: X`, gdzie `X` to ta liczba.
+
+Linia jest liczbą całkowitą, jeśli funkcja `int()` potrafi ją zamienić na liczbę (np. `42`, `-7`). Napisy takie jak `abc`, `3.5` czy pusta linia nie są liczbami całkowitymi.
+
+### Wejście
+
+Kolejne linie tekstu.
+
+### Wyjście
+
+Jeden komunikat o błędzie dla każdej niepoprawnej linii (w kolejności wczytywania), a na końcu linia `Przyjęto: X`.
+
+### Ograniczenia
+
+* Wśród danych na pewno jest co najmniej jedna poprawna liczba.
+* Po pierwszej poprawnej liczbie mogą występować kolejne linie — program ma je pominąć.
+
+### Przykład
+
+**Wejście:**
+
+```
+abc
+150
+3.5
+42
+```
+
+**Wyjście:**
+
+```
+To nie jest liczba całkowita.
+Liczba spoza zakresu.
+To nie jest liczba całkowita.
+Przyjęto: 42
+```
+
+### Uwagi
+
+* Wywołanie `int("abc")` kończy się błędem `ValueError`. Taki błąd można „złapać” konstrukcją `try`/`except`: Python wykonuje instrukcje z bloku `try`, a jeśli w którejś z nich wystąpi `ValueError`, zamiast przerywać program przechodzi do bloku `except ValueError:`.
+
+  ```python
+  try:
+      liczba = int("abc")
+      print("To się nie wykona.")
+  except ValueError:
+      print("Nie udało się zamienić napisu na liczbę.")
+  ```
+
+* `continue` przerywa bieżący obrót pętli i od razu przechodzi do następnego, a `break` kończy całą pętlę.
+* Pętla `while True:` kręci się „w nieskończoność” — kończy ją dopiero `break`.
+* Granice przedziału należą do niego: `1` i `100` są poprawne.
+
+### Kod startowy
+
+```python
+while True:
+    linia = input()
+    try:
+        liczba = int(linia)
+    except ValueError:
+        # Uzupełnij: wypisz komunikat i przejdź do kolejnej linii (continue).
+        pass
+
+    # Uzupełnij: jeśli liczba jest spoza przedziału [1, 100], wypisz komunikat
+    # i przejdź do kolejnej linii; w przeciwnym razie zakończ pętlę (break).
+
+print(f"Przyjęto: {liczba}")
+```

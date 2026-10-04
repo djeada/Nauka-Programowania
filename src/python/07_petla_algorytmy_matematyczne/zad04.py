@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-04 — Obliczanie silni liczby
 
 **Poziom:** ★☆☆
@@ -6,25 +6,28 @@ ZAD-04 — Obliczanie silni liczby
 
 ### Treść
 
-Napisz funkcję `silnia(n)`, która zwraca `n!` obliczone przy użyciu pętli.
-Przyjmij, że `0! = 1`.
+Napisz funkcję `silnia(n)`, która zwraca $n! = 1 \cdot 2 \cdot \ldots \cdot n$ obliczone przy użyciu pętli. Przyjmij, że $0! = 1$.
+
+Program wczytuje `n`, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-Jeden argument funkcji:
-
-* `n` (liczba naturalna, `n ≥ 0`)
+* 1. linia: `n` — liczba naturalna (`n ≥ 0`)
 
 ### Wyjście
 
-Funkcja zwraca jedną liczbę naturalną — `n!`.
+Jedna liczba całkowita — wartość $n!$.
+
+### Ograniczenia
+
+* `0 ≤ n ≤ 20`
 
 ### Przykład
 
-**Wywołanie funkcji:**
+**Wejście:**
 
-```python
-print(silnia(3))
+```
+3
 ```
 
 **Wyjście:**
@@ -33,25 +36,27 @@ print(silnia(3))
 6
 ```
 
+### Kod startowy
+
+```python
+def silnia(n):
+    pass
+
+
+n = int(input())
+print(silnia(n))
+```
+
 """
 
 
 def silnia(n):
     wynik = 1
-    for i in range(1, n + 1):
+    for i in range(2, n + 1):
         wynik *= i
     return wynik
 
 
-def test_silnia():
-    assert silnia(0) == 1
-    assert silnia(1) == 1
-    assert silnia(2) == 2
-    assert silnia(3) == 6
-    assert silnia(4) == 24
-    assert silnia(5) == 120
-
-
 if __name__ == "__main__":
-
-    test_silnia()
+    n = int(input())
+    print(silnia(n))

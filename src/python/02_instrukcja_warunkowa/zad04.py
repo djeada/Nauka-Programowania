@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-04 — Maksimum i minimum z dwóch liczb
 
 **Poziom:** ★☆☆
@@ -7,20 +7,19 @@ ZAD-04 — Maksimum i minimum z dwóch liczb
 ### Treść
 
 Wczytaj dwie liczby naturalne `a` i `b`.
-Wypisz je w jednej linii w kolejności: **większa, potem mniejsza**, oddzielone pojedynczą spacją.
-Jeśli `a = b`, wypisz `a b` (czyli dwie takie same liczby).
+Wypisz je w jednej linii w kolejności: **najpierw większa, potem mniejsza**, oddzielone pojedynczą spacją.
+Jeśli $a = b$, wypisz tę samą liczbę dwa razy.
 
 ### Wejście
 
-* 1 linia: `a` (całkowita, `a ≥ 0`)
-* 2 linia: `b` (całkowita, `b ≥ 0`)
+* 1 linia: `a` — liczba całkowita, $0 \le a \le 10^9$
+* 2 linia: `b` — liczba całkowita, $0 \le b \le 10^9$
 
 ### Wyjście
 
-Jedna linia:
-`max(a, b) min(a, b)`
+Jedna linia: większa liczba, spacja, mniejsza liczba.
 
-### Przykłady
+### Przykład 1
 
 **Wejście:**
 
@@ -35,6 +34,8 @@ Jedna linia:
 4 1
 ```
 
+### Przykład 2
+
 **Wejście:**
 
 ```
@@ -48,20 +49,21 @@ Jedna linia:
 5 5
 ```
 
+### Uwagi
+
+* Spróbuj rozwiązać zadanie instrukcją `if`, bez wbudowanych funkcji `max` i `min`.
+
 """
 
+
+def wieksza_i_mniejsza(a, b):
+    if a >= b:
+        return f"{a} {b}"
+    else:
+        return f"{b} {a}"
+
+
 if __name__ == "__main__":
-
-    print("podaj dwie liczby")
-
     a = int(input())
     b = int(input())
-
-    if a < b:
-        print(b)
-        print(a)
-        print(" druga liczba jest wieksza od pierwszej")
-    else:
-        print(a)
-        print(b)
-        print("druga liczba nie jest wieksza od pierwszej")
+    print(wieksza_i_mniejsza(a, b))

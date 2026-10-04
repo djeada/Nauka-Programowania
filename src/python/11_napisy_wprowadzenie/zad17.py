@@ -1,27 +1,29 @@
-"""
+r"""
 ZAD-17 — Konwersja listy na napis
 
 **Poziom:** ★☆☆
-**Tagi:** `list`, `string`
+**Tagi:** `napisy`, `listy`, `str`
 
 ### Treść
 
-Otrzymujesz listę liczb naturalnych w zapisie tekstowym (np. `[2, 4, 7]`). Połącz liczby bez separatorów i wypisz jako napis.
+Napisz funkcję `lista_na_napis(liczby)`, która otrzymuje listę liczb naturalnych i zwraca napis powstały przez zapisanie tych liczb jedna za drugą, bez separatorów (każdą liczbę zamień na napis funkcją `str`).
+
+Program wczytuje listę liczb, wywołuje funkcję i wypisuje wynik.
 
 ### Wejście
 
-* 1. linia: lista w formacie podobnym do Pythona, np. `[2, 4, 7]`
+* 1. linia: liczby naturalne oddzielone spacjami (co najmniej jedna)
 
 ### Wyjście
 
-* 1. linia: napis z połączonych liczb, np. `247`
+Jedna linia: napis z połączonych liczb.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[2, 4, 7]
+2 4 7
 ```
 
 **Wyjście:**
@@ -30,24 +32,27 @@ Otrzymujesz listę liczb naturalnych w zapisie tekstowym (np. `[2, 4, 7]`). Poł
 247
 ```
 
-### Uwagi
+### Kod startowy
 
-* Najprościej: usuń nawiasy `[` `]`, rozdziel po przecinkach, `strip()`, potem sklej.
+```python
+def lista_na_napis(liczby):
+    pass
+
+
+liczby = [int(x) for x in input().split()]
+print(lista_na_napis(liczby))
+```
 
 """
 
 
-def znamien_na_napis(lista):
+def lista_na_napis(liczby):
     napis = ""
-    for liczba in lista:
+    for liczba in liczby:
         napis += str(liczba)
     return napis
 
 
-def test_znamien_na_napis():
-    assert znamien_na_napis([1, 2, 3, 4, 5]) == "12345"
-
-
 if __name__ == "__main__":
-
-    test_znamien_na_napis()
+    liczby = [int(x) for x in input().split()]
+    print(lista_na_napis(liczby))

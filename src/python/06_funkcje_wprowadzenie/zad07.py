@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-07 — Weryfikacja nazwy użytkownika i hasła
 
 **Poziom:** ★★☆
@@ -8,61 +8,99 @@ ZAD-07 — Weryfikacja nazwy użytkownika i hasła
 
 Napisz dwie funkcje:
 
-1. `pobierz_dane()` — pobiera od użytkownika nazwę użytkownika i hasło i zwraca je (np. jako parę).
-2. `sprawdz_dane(poprawny_login, poprawne_haslo)` — w pętli wczytuje login i hasło aż będą identyczne z przekazanymi. Po poprawnym wczytaniu wypisuje:
-   `Dane poprawne. Dostęp przyznany.`
+1. `pobierz_dane()` — wczytuje nazwę użytkownika (login) i hasło, po czym zwraca je jako parę `(login, haslo)`.
+2. `sprawdz_dane(poprawny_login, poprawne_haslo)` — w pętli wczytuje kolejne próby logowania (login i hasło), dopóki nie będą identyczne z przekazanymi danymi.
+   Po każdej nieudanej próbie wypisuje `Błędne dane. Spróbuj ponownie.`, a po udanej — `Dane poprawne. Dostęp przyznany.` i kończy działanie.
+
+Program najpierw wywołuje `pobierz_dane()`, aby ustalić poprawne dane, a potem przekazuje je do `sprawdz_dane(...)`.
+
+W tym zadaniu funkcje same wczytują dane (`input()`), a `sprawdz_dane` sama wypisuje komunikaty.
 
 ### Wejście
 
-* `pobierz_dane()` wczytuje dwie linie:
-
-  1. login
-  2. hasło
-* `sprawdz_dane(...)` wczytuje kolejne pary (login, hasło), po dwie linie na próbę.
+* 1. linia: poprawny login
+* 2. linia: poprawne hasło
+* kolejne linie: próby logowania — po dwie linie na próbę (login, potem hasło)
 
 ### Wyjście
 
-Jedna linia (tylko raz, po poprawnym dopasowaniu):
+Dla każdej nieudanej próby linia:
 
-* `Dane poprawne. Dostęp przyznany.`
+```
+Błędne dane. Spróbuj ponownie.
+```
 
-### Ograniczenia / gwarancje
+a na końcu (po pierwszej udanej próbie) linia:
 
-* W pewnym momencie użytkownik poda poprawne dane.
+```
+Dane poprawne. Dostęp przyznany.
+```
 
-### Uwagi o formatowaniu
+### Ograniczenia
 
-* **Nie wypisuj promptów** typu „Podaj nazwę użytkownika:”.
-* Porównanie jest czułe na wielkość liter.
+* Jedna z prób jest poprawna — program nie musi obsługiwać końca danych bez udanej próby.
+
+### Przykład
+
+**Wejście:**
+
+```
+admin
+1234
+root
+pass
+admin
+1234
+```
+
+**Wyjście:**
+
+```
+Błędne dane. Spróbuj ponownie.
+Dane poprawne. Dostęp przyznany.
+```
+
+Poprawne dane to `admin` / `1234`. Pierwsza próba (`root` / `pass`) jest błędna, druga — poprawna.
+
+### Uwagi
+
+* Próba jest udana tylko wtedy, gdy zgadzają się **oba** pola: login i hasło.
+* Porównanie uwzględnia wielkość liter (`Admin` to nie to samo co `admin`).
+
+### Kod startowy
+
+```python
+def pobierz_dane():
+    pass
+
+
+def sprawdz_dane(poprawny_login, poprawne_haslo):
+    pass
+
+
+login, haslo = pobierz_dane()
+sprawdz_dane(login, haslo)
+```
 
 """
 
 
-def inicjalizacja_danych():
-    """
-    Funkcja inicjalizujaca dane.
-    """
-    nazwa = input("Podaj nazwe: ")
-    haslo = input("Podaj haslo: ")
-    return nazwa, haslo
+def pobierz_dane():
+    """Wczytuje login i hasło, zwraca je jako parę."""
+    login = input()
+    haslo = input()
+    return login, haslo
 
 
-def sprawdzenie_danych(nazwa, haslo):
-    """
-    Funkcja sprawdza czy dane, ktore zostaly podane przez
-    uzytkownika sa identyczne z danymi przekazanymi do funkcji.
-    """
-    nazwa2 = None
-    haslo2 = None
-
-    while not (nazwa == nazwa2 and haslo == haslo2):
-        nazwa2 = input("Podaj nazwe: ")
-        haslo2 = input("Podaj haslo: ")
-
-    print("Dane sa identyczne")
+def sprawdz_dane(poprawny_login, poprawne_haslo):
+    """Wczytuje kolejne próby logowania, dopóki dane nie będą poprawne."""
+    login, haslo = pobierz_dane()
+    while login != poprawny_login or haslo != poprawne_haslo:
+        print("Błędne dane. Spróbuj ponownie.")
+        login, haslo = pobierz_dane()
+    print("Dane poprawne. Dostęp przyznany.")
 
 
 if __name__ == "__main__":
-
-    nazwa, haslo = inicjalizacja_danych()
-    sprawdzenie_danych(nazwa, haslo)
+    login, haslo = pobierz_dane()
+    sprawdz_dane(login, haslo)

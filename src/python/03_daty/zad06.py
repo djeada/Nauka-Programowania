@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-06 — Sprawdzanie poprawności daty
 
 **Poziom:** ★★☆
@@ -6,7 +6,15 @@ ZAD-06 — Sprawdzanie poprawności daty
 
 ### Treść
 
-Wczytaj `d, m, y` i sprawdź, czy jest to poprawna data w kalendarzu gregoriańskim.
+Wczytaj `d`, `m`, `y` i sprawdź, czy jest to poprawna data w kalendarzu gregoriańskim.
+
+Data jest poprawna, gdy:
+
+1. miesiąc `m` jest w zakresie 1–12,
+2. dzień `d` jest w zakresie od 1 do liczby dni w miesiącu `m`:
+   * 31 dni: miesiące 1, 3, 5, 7, 8, 10, 12,
+   * 30 dni: miesiące 4, 6, 9, 11,
+   * luty (2): 29 dni w roku przestępnym, 28 w nieprzestępnym (zob. konwencje rozdziału).
 
 Wypisz:
 
@@ -15,7 +23,7 @@ Wypisz:
 
 ### Wejście
 
-3 liczby całkowite (w osobnych liniach):
+3 liczby całkowite, każda w osobnej linii:
 
 1. `d` — dzień
 2. `m` — miesiąc
@@ -25,21 +33,12 @@ Wypisz:
 
 Jedna linia — komunikat.
 
-### Ograniczenia / gwarancje
+### Ograniczenia
 
-* `y ≥ 0` (lub `y ≥ 1`, jeśli tak chcesz przyjąć — ważne, by było spójnie w całym zbiorze)
+* $-100 \le d, m \le 100$ (dzień i miesiąc mogą być spoza poprawnego zakresu, także zerowe lub ujemne)
+* $1 \le y \le 9999$ (rok zawsze jest poprawny)
 
-### Reguły walidacji
-
-1. `m` musi być w zakresie 1–12
-2. Ustal liczbę dni w miesiącu:
-
-   * 31: 1,3,5,7,8,10,12
-   * 30: 4,6,9,11
-   * luty: 28 lub 29 (zależnie od przestępności roku)
-3. `d` musi być w zakresie 1–dni_w_miesiącu
-
-### Przykład
+### Przykład 1
 
 **Wejście:**
 
@@ -55,22 +54,56 @@ Jedna linia — komunikat.
 Data jest niepoprawna.
 ```
 
+Kwiecień ma tylko 30 dni.
+
+### Przykład 2
+
+**Wejście:**
+
+```
+29
+2
+2024
+```
+
+**Wyjście:**
+
+```
+Data jest poprawna.
+```
+
+Rok 2024 jest przestępny, więc luty ma 29 dni.
+
 """
 
-if __name__ == "__main__":
 
-    print("Podaj trzy liczby:")
+def czy_przestepny(rok):
+    return rok % 400 == 0 or (rok % 4 == 0 and rok % 100 != 0)
+
+
+def dni_w_miesiacu(miesiac, rok):
+    if miesiac == 2:
+        if czy_przestepny(rok):
+            return 29
+        return 28
+    elif miesiac == 4 or miesiac == 6 or miesiac == 9 or miesiac == 11:
+        return 30
+    else:
+        return 31
+
+
+def czy_poprawna_data(dzien, miesiac, rok):
+    if miesiac < 1 or miesiac > 12:
+        return False
+    return 1 <= dzien <= dni_w_miesiacu(miesiac, rok)
+
+
+if __name__ == "__main__":
     dzien = int(input())
     miesiac = int(input())
     rok = int(input())
 
-    if dzien > 0 and dzien <= 31:
-        if miesiac > 0 and miesiac <= 12:
-            if rok > 0:
-                print("Data jest poprawna.")
-            else:
-                print("Rok jest niepoprawny.")
-        else:
-            print("Miesiac jest niepoprawny.")
+    if czy_poprawna_data(dzien, miesiac, rok):
+        print("Data jest poprawna.")
     else:
-        print("Dzien jest niepoprawny.")
+        print("Data jest niepoprawna.")

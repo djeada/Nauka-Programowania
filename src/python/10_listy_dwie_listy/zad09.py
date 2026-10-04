@@ -1,32 +1,32 @@
-"""
+r"""
 ZAD-09 — Usuń z pierwszej listy część wspólną obu list
 
 **Poziom:** ★★☆
-**Tagi:** `list`, `filter`
+**Tagi:** `listy`, `filtrowanie`
 
 ### Treść
 
-Wczytaj dwie listy liczb całkowitych. Usuń z pierwszej listy wszystkie elementy, które występują również w drugiej liście.
+Wczytaj dwie listy liczb całkowitych. Usuń z listy 1 **wszystkie** elementy (także powtórzenia), które występują w liście 2.
 
-* Zachowaj kolejność pozostałych elementów z pierwszej listy.
-* Jeśli wszystko zostanie usunięte — wypisz `[]`.
+* Zachowaj kolejność pozostałych elementów listy 1.
+* Jeśli usunięte zostaną wszystkie elementy, wypisz `[]`.
 
 ### Wejście
 
-* 1 linia: lista 1
-* 2 linia: lista 2
+* 1. linia: lista 1 — liczby całkowite oddzielone spacjami
+* 2. linia: lista 2 — liczby całkowite oddzielone spacjami
 
 ### Wyjście
 
-* 1 linia: lista 1 po usunięciu elementów wspólnych
+Jedna linia: lista 1 po usunięciu elementów występujących w liście 2.
 
 ### Przykład
 
 **Wejście:**
 
 ```
-[9, 2, 5, 4]
-[4, 2, 1]
+9 2 5 4
+4 2 1
 ```
 
 **Wyjście:**
@@ -35,22 +35,23 @@ Wczytaj dwie listy liczb całkowitych. Usuń z pierwszej listy wszystkie element
 [9, 5]
 ```
 
+### Uwagi
+
+* Uważaj na usuwanie elementów z listy podczas przechodzenia po niej pętlą `for` — łatwo wtedy pominąć element. Bezpieczniej zbudować nową listę z elementów, które zostają.
+
 """
 
 
 def usun_czesc_wspolna(lista_a, lista_b):
+    wynik = []
     for element in lista_a:
-        if element in lista_b:
-            lista_a.remove(element)
-    return lista_a
-
-
-def test_usun_czesc_wspolna():
-    assert usun_czesc_wspolna([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]) == []
-    assert usun_czesc_wspolna([1, 2, 3, 4, 5], [1, 2, 3, 4, 6]) == [5]
-    assert usun_czesc_wspolna([1, 2, 3, 4, 5], [1, 2, 3, 4, 6, 7]) == [5, 6, 7]
+        if element not in lista_b:
+            wynik.append(element)
+    return wynik
 
 
 if __name__ == "__main__":
+    lista_a = [int(x) for x in input().split()]
+    lista_b = [int(x) for x in input().split()]
 
-    test_usun_czesc_wspolna()
+    print(usun_czesc_wspolna(lista_a, lista_b))

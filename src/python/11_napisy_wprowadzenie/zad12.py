@@ -1,20 +1,20 @@
-"""
+r"""
 ZAD-12 — Usuń spacje ze zdania
 
 **Poziom:** ★☆☆
-**Tagi:** `replace`, `string`
+**Tagi:** `napisy`, `replace`
 
 ### Treść
 
-Wczytaj zdanie i usuń z niego wszystkie spacje.
+Wczytaj zdanie i usuń z niego wszystkie spacje. Pozostałe znaki (także interpunkcję) pozostaw bez zmian.
 
 ### Wejście
 
-* 1. linia: zdanie
+* 1. linia: zdanie (zawiera co najmniej jeden znak różny od spacji)
 
 ### Wyjście
 
-* 1. linia: zdanie bez spacji
+Jedna linia: zdanie bez spacji.
 
 ### Przykład
 
@@ -37,10 +37,6 @@ def usun_spacje(zdanie):
     return zdanie.replace(" ", "")
 
 
-def test_usun_spacje():
-    assert usun_spacje("Ala ma kota") == "Alamakota"
-
-
 if __name__ == "__main__":
-
-    test_usun_spacje()
+    zdanie = input()
+    print(usun_spacje(zdanie))

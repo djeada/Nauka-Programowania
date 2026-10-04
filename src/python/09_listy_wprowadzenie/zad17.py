@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-17 — Wszystkie pary o sumie x (wartości)
 
 **Poziom:** ★★☆
@@ -6,21 +6,23 @@ ZAD-17 — Wszystkie pary o sumie x (wartości)
 
 ### Treść
 
-Wczytaj listę liczb całkowitych oraz `x`. Wypisz wszystkie pary **wartości** `(a, b)` z listy (nie indeksy), takie że `a + b == x`. Każdą parę wypisz w osobnej linii jako:
-`a b`
+Wczytaj listę `n` liczb całkowitych oraz liczbę `x`. Wypisz wszystkie pary **wartości** `a b` (nie indeksów) takie, że $a + b = x$, gdzie `a` i `b` to elementy listy stojące na **różnych** pozycjach.
 
-Każdą parę wypisz tylko raz (nie dubluj `(a,b)` i `(b,a)`).
+Każdą parę wartości wypisz tylko raz, mniejszą liczbę jako pierwszą ($a \le b$). Pary uporządkuj rosnąco według `a`.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 2`)
-* kolejne `N` linii: liczby całkowite
-* ostatnia linia: `x` (liczba całkowita)
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
+* 3. linia: liczba całkowita `x`
 
 ### Wyjście
 
-Wiele linii — po jednej parze na linię.
-Jeśli brak par — brak wyjścia.
+Każda para w osobnej linii, w formacie `a b`. Jeśli nie ma żadnej pary — program nic nie wypisuje.
+
+### Ograniczenia
+
+* $n \ge 2$
 
 ### Przykład
 
@@ -28,11 +30,7 @@ Jeśli brak par — brak wyjścia.
 
 ```
 5
-1
-2
-4
-3
-7
+1 2 4 3 7
 5
 ```
 
@@ -43,28 +41,30 @@ Jeśli brak par — brak wyjścia.
 2 3
 ```
 
+### Uwagi
+
+* Para `a a` (dwie takie same wartości) jest poprawna tylko wtedy, gdy wartość `a` występuje w liście co najmniej dwa razy.
+* Jeśli jakaś wartość występuje w liście wielokrotnie, ta sama para wartości i tak jest wypisywana tylko raz.
+
 """
 
 
 def znajdz_pary(lista, x):
-    wynik = []
+    """Zwraca posortowaną listę różnych par wartości (a, b), a <= b, o sumie x."""
+    pary = []
     for i in range(len(lista)):
         for j in range(i + 1, len(lista)):
             if lista[i] + lista[j] == x:
-                wynik.append((i, j))
-    return wynik
-
-
-def test_znajdz_pary():
-    assert znajdz_pary([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10) == [
-        (0, 8),
-        (1, 7),
-        (2, 6),
-        (3, 5),
-    ]
-    assert znajdz_pary([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 20) == []
+                para = (min(lista[i], lista[j]), max(lista[i], lista[j]))
+                if para not in pary:
+                    pary.append(para)
+    pary.sort()
+    return pary
 
 
 if __name__ == "__main__":
-
-    test_znajdz_pary()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    x = int(input())
+    for a, b in znajdz_pary(lista, x):
+        print(a, b)

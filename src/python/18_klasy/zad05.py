@@ -1,159 +1,271 @@
-"""
+r"""
 ZAD-05 — Klasa Macierz
 
 **Poziom:** ★★☆
-**Tagi:** `class`, `macierze`, `operacje`
+**Tagi:** `class`, `macierze`, `operatory`
 
 ### Treść
 
-Zaprojektuj klasę **Macierz**:
+Zaprojektuj klasę `Macierz`:
 
-1. Konstruktor przyjmuje listę list (domyślnie pusta).
-2. Operacje: dodawanie, odejmowanie, mnożenie.
-3. Metoda wypisująca macierz (wierszami).
-4. Porównania `==` i `!=`.
+1. Konstruktor `__init__(self, wiersze)` przyjmuje listę wierszy (listę list liczb).
+2. Operatory `+`, `-` i `*` (metody `__add__`, `__sub__`, `__mul__`) zwracają **nową** macierz — sumę, różnicę i iloczyn macierzy. Jeśli działania nie da się wykonać, metoda zwraca `None`:
+   * dodawanie i odejmowanie wymagają macierzy o tych samych wymiarach,
+   * iloczyn $A \cdot B$ wymaga, by liczba kolumn $A$ była równa liczbie wierszy $B$. Element wyniku to $c_{ij} = \sum_k a_{ik} b_{kj}$.
+3. Porównanie `==` (metoda `__eq__`) — macierze są równe, gdy mają te same wymiary i te same elementy.
+4. Metoda `__str__()` zwraca macierz jako napis: kolejne wiersze w osobnych liniach, elementy wiersza oddzielone pojedynczą spacją.
 
-(Operację odwracania możesz pominąć w tym zadaniu, jeśli nie jest wymagana w sprawdzarce; najczęściej w podstawowych zadaniach nie ma testów na odwracanie.)
-
-Program tworzy:
-
-* A = [[1, 3], [4, 2]]
-* B = [[5, 0], [1, 3]]
-
-Wypisuje A, B, a potem A+B, A-B, A*B.
+Program wczytuje macierze $A$ i $B$, wypisuje je, a potem wypisuje $A + B$, $A - B$, $A \cdot B$ i informację, czy macierze są równe.
 
 ### Wejście
 
-Brak.
+* 1. linia: liczby $n$ i $m$ — liczba wierszy i kolumn macierzy $A$
+* kolejne $n$ linii: wiersze macierzy $A$ ($m$ liczb całkowitych oddzielonych spacjami)
+* następna linia: liczby $p$ i $q$ — liczba wierszy i kolumn macierzy $B$
+* kolejne $p$ linii: wiersze macierzy $B$ ($q$ liczb całkowitych oddzielonych spacjami)
 
 ### Wyjście
 
-Jak w przykładzie.
+Pięć bloków, każdy zakończony pustą linią, a po nich jedna linia z wynikiem porównania:
+
+```
+Macierz A:
+<A>
+
+Macierz B:
+<B>
+
+Suma macierzy:
+<A + B>
+
+Różnica macierzy A - B:
+<A - B>
+
+Iloczyn macierzy A * B:
+<A * B>
+
+Macierze A i B są równe.
+```
+
+* Jeśli działania nie da się wykonać, zamiast macierzy wypisz w bloku jedną linię: `Niezgodne wymiary.`
+* W ostatniej linii wypisz `Macierze A i B są równe.` albo `Macierze A i B są różne.`
+
+### Ograniczenia
+
+* $1 \le n, m, p, q \le 5$
+* Elementy macierzy są liczbami całkowitymi z przedziału $[-100, 100]$.
 
 ### Przykład
+
+**Wejście:**
+
+```
+2 2
+1 3
+4 2
+2 2
+5 0
+1 3
+```
 
 **Wyjście:**
 
 ```
 Macierz A:
-[1, 3]
-[4, 2]
+1 3
+4 2
 
 Macierz B:
-[5, 0]
-[1, 3]
+5 0
+1 3
 
 Suma macierzy:
-[6, 3]
-[5, 5]
+6 3
+5 5
 
 Różnica macierzy A - B:
-[-4, 3]
-[3, -1]
+-4 3
+3 -1
 
 Iloczyn macierzy A * B:
-[8, 9]
-[22, 12]
+8 9
+22 6
+
+Macierze A i B są różne.
+```
+
+Na przykład element w drugim wierszu i drugiej kolumnie iloczynu to $4 \cdot 0 + 2 \cdot 3 = 6$.
+
+### Przykład 2
+
+**Wejście:**
+
+```
+1 2
+1 2
+1 2
+3 4
+```
+
+**Wyjście:**
+
+```
+Macierz A:
+1 2
+
+Macierz B:
+3 4
+
+Suma macierzy:
+4 6
+
+Różnica macierzy A - B:
+-2 -2
+
+Iloczyn macierzy A * B:
+Niezgodne wymiary.
+
+Macierze A i B są różne.
+```
+
+Macierz $1 \times 2$ można pomnożyć tylko przez macierz o 2 wierszach.
+
+### Kod startowy
+
+```python
+class Macierz:
+    def __init__(self, wiersze):
+        pass
+
+    def __add__(self, other):
+        pass
+
+    def __sub__(self, other):
+        pass
+
+    def __mul__(self, other):
+        pass
+
+    def __eq__(self, other):
+        pass
+
+    def __str__(self):
+        pass
+
+
+def wczytaj_macierz():
+    n, m = [int(x) for x in input().split()]
+    wiersze = []
+    for _ in range(n):
+        wiersze.append([int(x) for x in input().split()])
+    return Macierz(wiersze)
+
+
+def wypisz_blok(naglowek, macierz):
+    print(naglowek)
+    if macierz is None:
+        print("Niezgodne wymiary.")
+    else:
+        print(macierz)
+    print()
+
+
+a = wczytaj_macierz()
+b = wczytaj_macierz()
+
+wypisz_blok("Macierz A:", a)
+wypisz_blok("Macierz B:", b)
+wypisz_blok("Suma macierzy:", a + b)
+wypisz_blok("Różnica macierzy A - B:", a - b)
+wypisz_blok("Iloczyn macierzy A * B:", a * b)
+if a == b:
+    print("Macierze A i B są równe.")
+else:
+    print("Macierze A i B są różne.")
 ```
 
 """
 
 
 class Macierz:
-    def __init__(self, macierz=[[]]):
-        self.macierz = macierz
+    def __init__(self, wiersze):
+        self.wiersze = wiersze
+        self.n = len(wiersze)
+        self.m = len(wiersze[0])
 
     def __add__(self, other):
-        if len(self.macierz) == len(other.macierz):
-            if len(self.macierz[0]) == len(other.macierz[0]):
-                suma = []
-                for i in range(len(self.macierz)):
-                    suma.append([])
-                    for j in range(len(self.macierz[0])):
-                        suma[i].append(self.macierz[i][j] + other.macierz[i][j])
-                return Macierz(suma)
-            else:
-                raise ValueError("Macierze maja rozne wymiary")
-        else:
-            raise ValueError("Macierze maja rozne wymiary")
+        if self.n != other.n or self.m != other.m:
+            return None
+        wynik = []
+        for i in range(self.n):
+            wiersz = []
+            for j in range(self.m):
+                wiersz.append(self.wiersze[i][j] + other.wiersze[i][j])
+            wynik.append(wiersz)
+        return Macierz(wynik)
 
     def __sub__(self, other):
-        if len(self.macierz) == len(other.macierz):
-            if len(self.macierz[0]) == len(other.macierz[0]):
-                roznica = []
-                for i in range(len(self.macierz)):
-                    roznica.append([])
-                    for j in range(len(self.macierz[0])):
-                        roznica[i].append(self.macierz[i][j] - other.macierz[i][j])
-                return Macierz(roznica)
-            else:
-                raise ValueError("Macierze maja rozne wymiary")
-        else:
-            raise ValueError("Macierze maja rozne wymiary")
+        if self.n != other.n or self.m != other.m:
+            return None
+        wynik = []
+        for i in range(self.n):
+            wiersz = []
+            for j in range(self.m):
+                wiersz.append(self.wiersze[i][j] - other.wiersze[i][j])
+            wynik.append(wiersz)
+        return Macierz(wynik)
 
     def __mul__(self, other):
-        if len(self.macierz[0]) == len(other.macierz):
-            iloczyn = []
-            for i in range(len(self.macierz)):
-                iloczyn.append([])
-                for j in range(len(other.macierz[0])):
-                    iloczyn[i].append(0)
-                    for k in range(len(other.macierz)):
-                        iloczyn[i][j] += self.macierz[i][k] * other.macierz[k][j]
-            return Macierz(iloczyn)
-
-        else:
-            raise ValueError("Macierze maja rozne wymiary")
-
-    def __str__(self):
-        return f"{self.macierz}"
+        if self.m != other.n:
+            return None
+        wynik = []
+        for i in range(self.n):
+            wiersz = []
+            for j in range(other.m):
+                suma = 0
+                for k in range(self.m):
+                    suma += self.wiersze[i][k] * other.wiersze[k][j]
+                wiersz.append(suma)
+            wynik.append(wiersz)
+        return Macierz(wynik)
 
     def __eq__(self, other):
-        if len(self.macierz) == len(other.macierz):
-            if len(self.macierz[0]) == len(other.macierz[0]):
-                for i in range(len(self.macierz)):
-                    for j in range(len(self.macierz[0])):
-                        if self.macierz[i][j] != other.macierz[i][j]:
-                            return False
-                return True
-            else:
-                return False
-        else:
-            return False
+        return self.wiersze == other.wiersze
 
-    def __ne__(self, other):
-        if len(self.macierz) == len(other.macierz):
-            if len(self.macierz[0]) == len(other.macierz[0]):
-                for i in range(len(self.macierz)):
-                    for j in range(len(self.macierz[0])):
-                        if self.macierz[i][j] != other.macierz[i][j]:
-                            return True
-                return False
-            else:
-                return True
-        else:
-            return True
+    def __str__(self):
+        linie = []
+        for wiersz in self.wiersze:
+            linie.append(" ".join(str(x) for x in wiersz))
+        return "\n".join(linie)
 
-    def transponuj(self):
-        transponowana = []
-        for i in range(len(self.macierz[0])):
-            transponowana.append([])
-            for j in range(len(self.macierz)):
-                transponowana[i].append(self.macierz[j][i])
-        return Macierz(transponowana)
+
+def wczytaj_macierz():
+    n, m = [int(x) for x in input().split()]
+    wiersze = []
+    for _ in range(n):
+        wiersze.append([int(x) for x in input().split()])
+    return Macierz(wiersze)
+
+
+def wypisz_blok(naglowek, macierz):
+    print(naglowek)
+    if macierz is None:
+        print("Niezgodne wymiary.")
+    else:
+        print(macierz)
+    print()
 
 
 if __name__ == "__main__":
-    macierz_a = Macierz([[1, 3], [4, 2]])
-    macierz_b = Macierz([[5, 0], [1, 3]])
+    a = wczytaj_macierz()
+    b = wczytaj_macierz()
 
-    print(f"Macierz A: {macierz_a.macierz}")
-    print(f"Macierz B: {macierz_b.macierz}")
-    print(f"Suma: {macierz_a + macierz_b}")
-    print(f"Roznica: {macierz_a - macierz_b}")
-    print(f"Iloczyn: {macierz_a * macierz_b}")
-    print(f"Transponowana macierz A: {macierz_a.transponuj()}")
-    print(f"Macierz A == Macierz B: {macierz_a == macierz_b}")
-    print(f"Macierz A != Macierz B: {macierz_a != macierz_b}")
-    print(f"Macierz A == Macierz A: {macierz_a == macierz_a}")
-    print(f"Macierz A != Macierz A: {macierz_a != macierz_a}")
+    wypisz_blok("Macierz A:", a)
+    wypisz_blok("Macierz B:", b)
+    wypisz_blok("Suma macierzy:", a + b)
+    wypisz_blok("Różnica macierzy A - B:", a - b)
+    wypisz_blok("Iloczyn macierzy A * B:", a * b)
+    if a == b:
+        print("Macierze A i B są równe.")
+    else:
+        print("Macierze A i B są różne.")

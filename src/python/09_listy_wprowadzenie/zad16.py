@@ -1,24 +1,28 @@
-"""
+r"""
 ZAD-16 — Indeksy pierwszej pary o sumie x
 
 **Poziom:** ★★☆
-**Tagi:** `hashmap`, `indeksy`, `2-sum`
+**Tagi:** `listy`, `indeksy`, `pętle zagnieżdżone`
 
 ### Treść
 
-Wczytaj listę liczb całkowitych oraz liczbę `x`. Znajdź indeksy **pierwszej** pary `(i, j)` (z `i < j`) takiej, że `lista[i] + lista[j] == x`.
+Wczytaj listę `n` liczb całkowitych oraz liczbę `x`. Znajdź indeksy `i`, `j` (gdzie $i < j$) takie, że `lista[i] + lista[j] == x`.
 
-Jeśli nie istnieje taka para — wypisz `-1 -1`.
+Jeśli takich par jest kilka, wybierz tę o najmniejszym `i`, a przy równym `i` — o najmniejszym `j`. Jeśli nie ma żadnej — wypisz `-1 -1`.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 2`)
-* kolejne `N` linii: liczby całkowite
-* ostatnia linia: `x` (liczba całkowita)
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
+* 3. linia: liczba całkowita `x`
 
 ### Wyjście
 
-Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
+Jedna linia: dwie liczby `i j` oddzielone spacją albo `-1 -1`.
+
+### Ograniczenia
+
+* $n \ge 2$
 
 ### Przykład
 
@@ -26,11 +30,7 @@ Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
 
 ```
 5
-1
-3
-4
-5
-2
+1 3 4 5 2
 5
 ```
 
@@ -39,6 +39,13 @@ Dwie liczby całkowite w jednej linii (oddzielone spacją): `i j` albo `-1 -1`.
 ```
 0 2
 ```
+
+Sumę $5$ dają pary indeksów $(0, 2)$: $1 + 4$ oraz $(1, 4)$: $3 + 2$. Pierwsza z nich ma mniejsze `i`.
+
+### Uwagi
+
+* Para składa się z dwóch **różnych** pozycji w liście — elementu nie można dodać do samego siebie.
+* Wystarczą dwie zagnieżdżone pętle: zewnętrzna po `i`, wewnętrzna po `j` od `i + 1` do końca listy. Szybszy sposób, ze słownikiem, poznasz w rozdziale 17.
 
 """
 
@@ -51,13 +58,9 @@ def znajdz_pare(lista, x):
     return -1, -1
 
 
-def test_znajdz_pare():
-    assert znajdz_pare([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10) == (0, 8)
-    assert znajdz_pare([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 22) == (-1, -1)
-    assert znajdz_pare([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 8) == (0, 6)
-    assert znajdz_pare([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 0) == (-1, -1)
-
-
 if __name__ == "__main__":
-
-    test_znajdz_pare()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    x = int(input())
+    i, j = znajdz_pare(lista, x)
+    print(i, j)

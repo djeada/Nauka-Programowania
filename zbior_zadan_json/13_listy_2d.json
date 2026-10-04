@@ -1,7 +1,7 @@
 {
   "file": "13_listy_2d.md",
-  "chapter_title": "Rozdział: Macierze i przedziały (stdin/stdout)",
-  "chapter_description": "Poniższe zadania polegają na wczytywaniu danych ze **standardowego wejścia** (stdin) i wypisywaniu wyniku na **standardowe wyjście** (stdout).\n**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem.**\n**Konwencje wspólne:**\n* Jeśli w danych wejściowych są liczby w osobnych liniach — wczytuj je dokładnie w tej kolejności.\n* Jeśli w wierszu macierzy są liczby oddzielone spacjami — wczytaj cały wiersz i rozbij go po spacjach.\n* W wyjściu macierzy: **każdy wiersz w osobnej linii**, elementy oddzielone **pojedynczą spacją**.",
+  "chapter_title": "Rozdział 13: Macierze i przedziały",
+  "chapter_description": "Zadania w tym rozdziale ćwiczą pracę z **listami dwuwymiarowymi** (macierzami): tworzenie, wczytywanie, przechodzenie po wierszach i kolumnach oraz przekształcanie.\n**Każde zadanie (oraz każdy podpunkt) jest osobnym, niezależnym programem**: czyta **standardowe wejście** (stdin) i wypisuje wynik na **standardowe wyjście** (stdout).\n\n**Konwencje wspólne:**\n\n* Dane wczytuj dokładnie w kolejności podanej w sekcji **Wejście**.\n* Wiersz macierzy na wejściu to jedna linia z liczbami oddzielonymi spacjami — wczytaj całą linię i rozbij ją po spacjach (`input().split()`).\n* W wyjściu macierzy: **każdy wiersz w osobnej linii**, elementy oddzielone **pojedynczą spacją**.\n* Program nie wypisuje komunikatów typu „Podaj liczbę:”.",
   "exercises": [
     {
       "id": "ZAD-01",
@@ -14,27 +14,41 @@
         "pętle",
         "print"
       ],
-      "description": "Wczytaj `a` i `b`. Wypisz macierz składającą się z `a` identycznych wierszy, gdzie każdy wiersz to liczby od `0` do `b` włącznie.",
-      "input": "* 1. linia: `a`\n* 2. linia: `b`",
-      "output": "* `a` wierszy, w każdym: `0 1 2 ... b`",
+      "description": "Wczytaj liczby `a` i `b`. Utwórz macierz złożoną z `a` identycznych wierszy, w których są kolejne liczby od `0` do `b` włącznie, i wypisz ją.",
+      "input": "* 1. linia: `a` — liczba wierszy\n* 2. linia: `b` — ostatnia liczba w wierszu",
+      "output": "`a` linii, w każdej liczby `0 1 2 … b` oddzielone spacjami.",
       "examples": [
         {
           "input": "3\n2",
-          "output": "0 1 2\n0 1 2\n0 1 2"
+          "output": "0 1 2\n0 1 2\n0 1 2",
+          "explanation": ""
         }
       ],
       "testcases": [
+        {
+          "input": "1\n0",
+          "output": "0"
+        },
         {
           "input": "2\n3",
           "output": "0 1 2 3\n0 1 2 3"
         },
         {
-          "input": "1\n0",
-          "output": "0"
+          "input": "4\n1",
+          "output": "0 1\n0 1\n0 1\n0 1"
+        },
+        {
+          "input": "1\n5",
+          "output": "0 1 2 3 4 5"
+        },
+        {
+          "input": "2\n0",
+          "output": "0\n0"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ a ≤ 20`\n* `0 ≤ b ≤ 20`",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-02",
@@ -46,16 +60,21 @@
         "macierze",
         "pętle zagnieżdżone"
       ],
-      "description": "Wczytaj `n`. Utwórz i wypisz macierz `n×n`, gdzie element `[i][j]` (indeksy od 0) ma wartość `i*j`.",
+      "description": "Wczytaj `n`. Utwórz macierz `n×n`, w której element w wierszu `i` i kolumnie `j` (indeksy od `0`) ma wartość $i \\cdot j$, i wypisz ją.",
       "input": "* 1. linia: `n`",
-      "output": "* `n` wierszy po `n` liczb",
+      "output": "`n` linii po `n` liczb oddzielonych spacjami.",
       "examples": [
         {
           "input": "3",
-          "output": "0 0 0\n0 1 2\n0 2 4"
+          "output": "0 0 0\n0 1 2\n0 2 4",
+          "explanation": ""
         }
       ],
       "testcases": [
+        {
+          "input": "1",
+          "output": "0"
+        },
         {
           "input": "2",
           "output": "0 0\n0 1"
@@ -63,10 +82,15 @@
         {
           "input": "4",
           "output": "0 0 0 0\n0 1 2 3\n0 2 4 6\n0 3 6 9"
+        },
+        {
+          "input": "5",
+          "output": "0 0 0 0 0\n0 1 2 3 4\n0 2 4 6 8\n0 3 6 9 12\n0 4 8 12 16"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 20`",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-03",
@@ -78,13 +102,14 @@
         "listy",
         "macierze"
       ],
-      "description": "Wczytaj dwie listy. Jeśli mają tę samą długość, wypisz macierz 2-kolumnową: wiersz `i` to `(lista1[i], lista2[i])`.\nJeśli długości są różne, wypisz: `Pusta macierz`",
-      "input": "* 1. linia: `n`\n* 2. linia: `m`\n* następnie `n` liczb (pierwsza lista)\n* następnie `m` liczb (druga lista)",
-      "output": "* Jeśli `n = m`: `n` wierszy `x y`\n* Jeśli `n ≠ m`: jedna linia `Pusta macierz`",
+      "description": "Wczytaj dwie listy liczb całkowitych. Jeśli mają tę samą długość, utwórz macierz o dwóch kolumnach, w której wiersz `i` to `lista1[i] lista2[i]`, i wypisz ją.\nJeśli długości list są różne, wypisz `Pusta macierz`.",
+      "input": "* 1. linia: `n` — długość pierwszej listy\n* 2. linia: `m` — długość drugiej listy\n* następnie `n` linii, w każdej jedna liczba całkowita (pierwsza lista)\n* następnie `m` linii, w każdej jedna liczba całkowita (druga lista)",
+      "output": "* Jeśli `n = m`: `n` linii postaci `x y`, gdzie `x` pochodzi z pierwszej listy, a `y` z drugiej.\n* Jeśli `n ≠ m`: jedna linia `Pusta macierz`.",
       "examples": [
         {
           "input": "3\n3\n3\n5\n2\n2\n8\n1",
-          "output": "3 2\n5 8\n2 1"
+          "output": "3 2\n5 8\n2 1",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -95,10 +120,23 @@
         {
           "input": "2\n3\n1\n2\n3\n4\n5",
           "output": "Pusta macierz"
+        },
+        {
+          "input": "1\n1\n-7\n0",
+          "output": "-7 0"
+        },
+        {
+          "input": "4\n4\n10\n20\n30\n40\n-1\n-2\n-3\n-4",
+          "output": "10 -1\n20 -2\n30 -3\n40 -4"
+        },
+        {
+          "input": "3\n1\n1\n2\n3\n9",
+          "output": "Pusta macierz"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n, m ≤ 100`",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-04",
@@ -110,13 +148,14 @@
         "macierze",
         "arytmetyka"
       ],
-      "description": "Wczytaj dwie macierze `n×m`.\na) Wypisz ich sumę.\nb) Wypisz różnicę: (pierwsza − druga).",
-      "input": "* 1. linia: `n`\n* 2. linia: `m`\n* potem `n` wierszy pierwszej macierzy (po `m` liczb)\n* potem `n` wierszy drugiej macierzy (po `m` liczb)",
-      "output": "Najpierw `n` wierszy sumy, potem `n` wierszy różnicy (bez dodatkowych napisów).",
+      "description": "Wczytaj dwie macierze `A` i `B` o wymiarach `n×m`.\n\na) Wypisz ich sumę $A + B$.\n\nb) Wypisz ich różnicę $A - B$ (pierwsza minus druga).\n\nElement wyniku w wierszu `i` i kolumnie `j` to odpowiednio $A_{ij} + B_{ij}$ oraz $A_{ij} - B_{ij}$.",
+      "input": "* 1. linia: `n` — liczba wierszy\n* 2. linia: `m` — liczba kolumn\n* następnie `n` linii macierzy `A` (po `m` liczb całkowitych)\n* następnie `n` linii macierzy `B` (po `m` liczb całkowitych)",
+      "output": "Najpierw `n` linii sumy, zaraz po nich `n` linii różnicy (bez pustej linii i dodatkowych napisów między nimi).",
       "examples": [
         {
           "input": "2\n2\n1 2\n-2 0\n5 -3\n1 7",
-          "output": "6 -1\n-1 7\n-4 5\n-3 -7"
+          "output": "6 -1\n-1 7\n-4 5\n-3 -7",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -127,10 +166,23 @@
         {
           "input": "1\n3\n0 -1 2\n3 0 -2",
           "output": "3 -1 0\n-3 -1 4"
+        },
+        {
+          "input": "1\n1\n5\n5",
+          "output": "10\n0"
+        },
+        {
+          "input": "3\n2\n1 0\n0 1\n2 2\n4 -1\n-3 5\n0 0",
+          "output": "5 -1\n-3 6\n2 2\n-3 1\n3 -4\n2 2"
+        },
+        {
+          "input": "2\n3\n10 20 30\n40 50 60\n1 2 3\n4 5 6",
+          "output": "11 22 33\n44 55 66\n9 18 27\n36 45 54"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n, m ≤ 20`",
+      "notes": "",
+      "starter_code": ""
     },
     {
       "id": "ZAD-05",
@@ -143,27 +195,49 @@
         "suma",
         "warunki"
       ],
-      "description": "Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami naturalnymi. Sprawdź, czy to **kwadrat magiczny**: suma każdego wiersza, każdej kolumny oraz obu przekątnych jest taka sama.",
-      "input": "* 1. linia: `n`\n* następnie `n` wierszy po `n` liczb",
-      "output": "* `Prawda` albo `Fałsz`",
+      "description": "Wczytaj macierz kwadratową `n×n` z dodatnimi liczbami całkowitymi. Sprawdź, czy jest **kwadratem magicznym**, czyli czy suma każdego wiersza, każdej kolumny oraz obu przekątnych jest taka sama.",
+      "input": "* 1. linia: `n`\n* następnie `n` linii po `n` liczb oddzielonych spacjami",
+      "output": "Jedno słowo: `Prawda`, jeśli macierz jest kwadratem magicznym, w przeciwnym razie `Fałsz`.",
       "examples": [
         {
           "input": "3\n6 7 2\n1 5 9\n8 3 4",
-          "output": "Prawda"
+          "output": "Prawda",
+          "explanation": ""
         }
       ],
       "testcases": [
         {
-          "input": "3\n6 7 2\n1 5 9\n8 3 4",
+          "input": "2\n1 2\n3 4",
+          "output": "Fałsz"
+        },
+        {
+          "input": "1\n5",
           "output": "Prawda"
         },
         {
-          "input": "2\n1 2\n3 4",
+          "input": "4\n16 3 2 13\n5 10 11 8\n9 6 7 12\n4 15 14 1",
+          "output": "Prawda"
+        },
+        {
+          "input": "3\n1 2 3\n2 3 1\n3 1 2",
           "output": "Fałsz"
+        },
+        {
+          "input": "2\n2 2\n2 2",
+          "output": "Prawda"
+        },
+        {
+          "input": "2\n1 5\n2 4",
+          "output": "Fałsz"
+        },
+        {
+          "input": "3\n2 7 6\n9 5 1\n4 3 8",
+          "output": "Prawda"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 10`",
+      "notes": "* Sprawdzamy wyłącznie sumy — liczby w macierzy **nie muszą** być różne (np. macierz `2×2` z samymi dwójkami jest kwadratem magicznym).\n* Pamiętaj o drugiej przekątnej (od prawego górnego do lewego dolnego rogu) — macierz może mieć równe sumy wierszy, kolumn i jednej przekątnej, a mimo to nie być magiczna.\n* Macierz `1×1` jest kwadratem magicznym.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-06",
@@ -176,13 +250,14 @@
         "przedziały",
         "algorytmy"
       ],
-      "description": "Wczytaj `n` przedziałów `[a_i, b_i]` (a_i ≤ b_i). Scal przedziały nachodzące na siebie i wypisz wynik w kolejności rosnącej po początku.",
-      "input": "* 1. linia: `n`\n* następnie `n` linii: `a_i b_i`",
-      "output": "* Każdy scalony przedział w osobnej linii: `a b`",
+      "description": "Wczytaj `n` przedziałów domkniętych $[a_i, b_i]$. Scal wszystkie przedziały, które na siebie nachodzą, i wypisz otrzymane rozłączne przedziały w kolejności rosnącej według początku.",
+      "input": "* 1. linia: `n`\n* następnie `n` linii, w każdej dwie liczby całkowite `a_i b_i` (`a_i ≤ b_i`)",
+      "output": "Każdy scalony przedział w osobnej linii w postaci `a b`, posortowane rosnąco według `a`.",
       "examples": [
         {
           "input": "7\n23 67\n23 53\n45 88\n77 88\n10 22\n11 12\n42 45",
-          "output": "10 22\n23 88"
+          "output": "10 22\n23 88",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -193,10 +268,27 @@
         {
           "input": "2\n5 7\n1 2",
           "output": "1 2\n5 7"
+        },
+        {
+          "input": "2\n1 3\n3 5",
+          "output": "1 5"
+        },
+        {
+          "input": "1\n4 4",
+          "output": "4 4"
+        },
+        {
+          "input": "3\n1 10\n2 3\n4 5",
+          "output": "1 10"
+        },
+        {
+          "input": "4\n-5 -1\n0 2\n-2 0\n6 9",
+          "output": "-5 2\n6 9"
         }
       ],
-      "constraints": "",
-      "notes": "* Przedziały uznajemy za nachodzące, gdy `next_start <= current_end`."
+      "constraints": "* `1 ≤ n ≤ 1000`\n* $-10^6 \\le a_i \\le b_i \\le 10^6$",
+      "notes": "* Przedziały na wejściu mogą być podane w dowolnej kolejności — najpierw je posortuj.\n* Dwa przedziały (po posortowaniu) nachodzą na siebie, gdy początek następnego jest **mniejszy lub równy** końcowi bieżącego. Przedziały stykające się końcami, np. `1 3` i `3 5`, scalamy w `1 5`, natomiast `10 22` i `23 88` pozostają osobno.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-07",
@@ -208,13 +300,14 @@
         "macierze",
         "indeksy"
       ],
-      "description": "Wczytaj macierz `n×m`. Jeśli w macierzy występuje `0`, to **cały wiersz i cała kolumna** tego zera mają zostać ustawione na `0` (dla wszystkich zer naraz).",
-      "input": "* 1. linia: `n m`\n* następnie `n` wierszy po `m` liczb",
-      "output": "* `n` wierszy zmodyfikowanej macierzy",
+      "description": "Wczytaj macierz `n×m`. Dla każdego zera w **wejściowej** macierzy wyzeruj cały jego wiersz i całą jego kolumnę. Zera powstałe w trakcie zerowania nie powodują dalszego zerowania.",
+      "input": "* 1. linia: `n m` — liczba wierszy i kolumn (w jednej linii)\n* następnie `n` linii po `m` liczb całkowitych",
+      "output": "`n` linii zmodyfikowanej macierzy.",
       "examples": [
         {
           "input": "3 3\n1 2 3\n4 0 6\n7 8 9",
-          "output": "1 0 3\n0 0 0\n7 0 9"
+          "output": "1 0 3\n0 0 0\n7 0 9",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -225,10 +318,27 @@
         {
           "input": "3 3\n1 2 3\n4 5 6\n7 0 9",
           "output": "1 0 3\n4 0 6\n0 0 0"
+        },
+        {
+          "input": "2 2\n1 2\n3 4",
+          "output": "1 2\n3 4"
+        },
+        {
+          "input": "1 1\n0",
+          "output": "0"
+        },
+        {
+          "input": "3 4\n0 1 2 3\n4 5 6 7\n8 9 0 1",
+          "output": "0 0 0 0\n0 5 0 7\n0 0 0 0"
+        },
+        {
+          "input": "1 4\n5 0 7 8",
+          "output": "0 0 0 0"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n, m ≤ 20`",
+      "notes": "* Najpierw zapamiętaj, które wiersze i kolumny zawierają zero, a dopiero potem zeruj — inaczej wyzerujesz całą macierz.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-08",
@@ -240,13 +350,14 @@
         "macierze",
         "spirala"
       ],
-      "description": "Wczytaj macierz `n×m` i wypisz jej elementy spiralnie (zgodnie z ruchem wskazówek zegara), startując z lewego górnego rogu.",
-      "input": "* 1. linia: `n m`\n* następnie `n` wierszy po `m` liczb",
-      "output": "* 1 linia: elementy spiralnie, oddzielone spacjami",
+      "description": "Wczytaj macierz `n×m` i wypisz jej elementy spiralnie, zgodnie z ruchem wskazówek zegara: zacznij od lewego górnego rogu, idź w prawo po pierwszym wierszu, potem w dół po ostatniej kolumnie, w lewo po ostatnim wierszu, w górę po pierwszej kolumnie i tak dalej, aż do odczytania wszystkich elementów.",
+      "input": "* 1. linia: `n m` — liczba wierszy i kolumn (w jednej linii)\n* następnie `n` linii po `m` liczb całkowitych",
+      "output": "Jedna linia: wszystkie elementy w kolejności spiralnej, oddzielone spacjami.",
       "examples": [
         {
           "input": "3 3\n1 2 3\n4 5 6\n7 8 9",
-          "output": "1 2 3 6 9 8 7 4 5"
+          "output": "1 2 3 6 9 8 7 4 5",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -257,10 +368,31 @@
         {
           "input": "3 2\n1 2\n3 4\n5 6",
           "output": "1 2 4 6 5 3"
+        },
+        {
+          "input": "1 1\n42",
+          "output": "42"
+        },
+        {
+          "input": "1 4\n1 2 3 4",
+          "output": "1 2 3 4"
+        },
+        {
+          "input": "4 1\n5\n6\n7\n8",
+          "output": "5 6 7 8"
+        },
+        {
+          "input": "3 4\n1 2 3 4\n5 6 7 8\n9 10 11 12",
+          "output": "1 2 3 4 8 12 11 10 9 5 6 7"
+        },
+        {
+          "input": "4 4\n1 2 3 4\n12 13 14 5\n11 16 15 6\n10 9 8 7",
+          "output": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n, m ≤ 20`",
+      "notes": "* Macierz nie musi być kwadratowa — sprawdź swój program także dla jednego wiersza i dla jednej kolumny.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-09",
@@ -272,13 +404,14 @@
         "macierze",
         "przeszukiwanie"
       ],
-      "description": "Wczytaj macierz `n×m` (n,m ≥ 3). Znajdź maksymalną sumę „klepsydry” (7 pól):\n\n```\na b c\n  d\ne f g\n```",
-      "input": "* 1. linia: `n m`\n* następnie `n` wierszy po `m` liczb całkowitych",
-      "output": "* 1 linia: maksymalna suma klepsydry",
+      "description": "Wczytaj macierz `n×m`. **Klepsydra** to 7 pól wyciętych z dowolnego kwadratu `3×3` macierzy: cały górny wiersz, środkowe pole i cały dolny wiersz.\n\n```\na b c\n  d\ne f g\n```\n\nSuma klepsydry to $a + b + c + d + e + f + g$. Wypisz największą sumę spośród wszystkich klepsydr w macierzy.",
+      "input": "* 1. linia: `n m` — liczba wierszy i kolumn (w jednej linii)\n* następnie `n` linii po `m` liczb całkowitych (mogą być ujemne)",
+      "output": "Jedna liczba całkowita: największa suma klepsydry.",
       "examples": [
         {
           "input": "4 4\n7 4 2 0\n4 8 10 8\n3 6 7 6\n3 9 19 14",
-          "output": "75"
+          "output": "75",
+          "explanation": "Największą sumę ma klepsydra ze środkiem w polu o wartości `7`: $8 + 10 + 8 + 7 + 9 + 19 + 14 = 75$."
         }
       ],
       "testcases": [
@@ -289,10 +422,23 @@
         {
           "input": "3 3\n1 2 3\n0 4 0\n7 6 5",
           "output": "28"
+        },
+        {
+          "input": "3 4\n-1 -2 -3 -4\n-5 -6 -7 -8\n-9 -10 -11 -12",
+          "output": "-42"
+        },
+        {
+          "input": "4 5\n1 1 1 0 0\n0 1 0 0 0\n1 1 1 0 0\n0 0 2 4 4",
+          "output": "10"
+        },
+        {
+          "input": "5 3\n1 2 3\n4 5 6\n7 8 9\n10 11 12\n13 14 15",
+          "output": "77"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `3 ≤ n, m ≤ 20`",
+      "notes": "* Gdy wszystkie liczby są ujemne, wynik też jest ujemny — nie zaczynaj szukania maksimum od `0`.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-10",
@@ -305,12 +451,13 @@
         "transpozycja"
       ],
       "description": "Wczytaj kwadratową macierz `n×n` i wypisz ją po obrocie o 90° zgodnie z ruchem wskazówek zegara.",
-      "input": "* 1. linia: `n`\n* następnie `n` wierszy po `n` liczb",
-      "output": "* `n` wierszy obróconej macierzy",
+      "input": "* 1. linia: `n`\n* następnie `n` linii po `n` liczb całkowitych",
+      "output": "`n` linii obróconej macierzy.",
       "examples": [
         {
           "input": "3\n1 2 3\n4 5 6\n7 8 9",
-          "output": "7 4 1\n8 5 2\n9 6 3"
+          "output": "7 4 1\n8 5 2\n9 6 3",
+          "explanation": ""
         }
       ],
       "testcases": [
@@ -321,30 +468,240 @@
         {
           "input": "3\n2 0 1\n3 4 5\n6 7 8",
           "output": "6 3 2\n7 4 0\n8 5 1"
+        },
+        {
+          "input": "1\n9",
+          "output": "9"
+        },
+        {
+          "input": "4\n1 2 3 4\n5 6 7 8\n9 10 11 12\n13 14 15 16",
+          "output": "13 9 5 1\n14 10 6 2\n15 11 7 3\n16 12 8 4"
+        },
+        {
+          "input": "2\n-1 0\n0 -1",
+          "output": "0 -1\n-1 0"
         }
       ],
-      "constraints": "",
-      "notes": ""
+      "constraints": "* `1 ≤ n ≤ 20`",
+      "notes": "* Pierwszy wiersz wyniku to pierwsza kolumna macierzy czytana od dołu do góry. Obrót można też uzyskać, transponując macierz i odwracając każdy jej wiersz.",
+      "starter_code": ""
     },
     {
       "id": "ZAD-11",
       "slug": "13_listy_2d/ZAD-11",
-      "title": "Gra w statki (projekt konsolowy)",
+      "title": "Gra w statki",
       "difficulty": 3,
       "difficulty_display": "★★★",
       "tags": [
         "macierze",
-        "losowanie",
         "gra",
-        "pętle"
+        "pętle",
+        "symulacja"
       ],
-      "description": "Zaimplementuj grę w statki na planszy 10×10:\n\n1. Plansza startowa: 10×10 wypełniona `.`\n2. Losowo rozmieść statki (poziomo/pionowo), bez stykania bokami ani rogami:\n\n   * 1× długość 4\n   * 2× długość 3\n   * 3× długość 2\n   * 5× długość 1\n3. Pętla gry:\n\n   * wypisz planszę,\n   * wczytaj `r c` (0..9),\n   * jeśli trafienie: wstaw `o`, wypisz komunikat o trafieniu,\n   * jeśli pudło: wstaw `x`, zwiększ licznik pudeł,\n   * gra kończy się, gdy:\n\n     * wszystkie pola statków trafione (wygrana), albo\n     * 10 pudeł (przegrana).\n   * po każdym ruchu wypisz zaktualizowaną planszę.",
-      "input": "Wielokrotnie:\n\n* `r c` (w jednej linii)",
-      "output": "* plansza i komunikaty w trakcie,\n* na końcu komunikat o wygranej/przegranej.",
-      "examples": [],
-      "testcases": [],
-      "constraints": "",
-      "notes": ""
+      "description": "Wczytaj planszę `10×10` do gry w statki, a potem kolejne strzały gracza i rozstrzygnij każdy z nich.\n\nNa planszy `.` oznacza wodę, a `#` pole statku. Każdy statek to poziomy albo pionowy odcinek złożony z jednego lub kilku pól `#`; statki nie stykają się ze sobą ani bokami, ani rogami.\n\nStrzał to para `r c` — numer wiersza i numer kolumny, **liczone od 1** (lewy górny róg to `1 1`). Dla każdego strzału wypisz jedną linię:\n\n* `Niepoprawny strzał` — linia nie składa się z dokładnie dwóch liczb całkowitych z zakresu od 1 do 10,\n* `Pole już ostrzelane` — w to pole już wcześniej strzelano (niezależnie od wyniku tamtego strzału),\n* `Pudło` — w polu jest woda,\n* `Trafiony` — w polu jest statek, ale ma on jeszcze nietrafione pola,\n* `Trafiony, zatopiony` — trafiono ostatnie nietrafione pole statku.\n\nGdy zatopiony zostanie ostatni statek, wypisz dodatkowo `Wygrana po X strzałach` i zakończ program — pozostałe linie wejścia pomiń. `X` to liczba wczytanych linii ze strzałami aż do tego strzału włącznie (liczą się wszystkie strzały, także niepoprawne i powtórzone).\n\nJeśli strzały się skończą, zanim wszystkie statki zostaną zatopione, wypisz na końcu `Pozostało statków: Y`, gdzie `Y` to liczba niezatopionych statków.",
+      "input": "* 10 linii po 10 znaków `.` lub `#` — plansza\n* następnie dowolnie wiele linii (także zero) — strzały `r c`, aż do końca danych",
+      "output": "* Po jednej linii z wynikiem dla każdego rozpatrzonego strzału.\n* Na końcu `Wygrana po X strzałach` albo `Pozostało statków: Y`.",
+      "examples": [
+        {
+          "input": "#.........\n#.........\n..........\n....###...\n..........\n..........\n.........#\n..........\n.##.......\n..........\n1 1\n5 5\n2 1\n1 1\n11 3\n7 10",
+          "output": "Trafiony\nPudło\nTrafiony, zatopiony\nPole już ostrzelane\nNiepoprawny strzał\nTrafiony, zatopiony\nPozostało statków: 2",
+          "explanation": "Na planszy są 4 statki: pionowy w kolumnie 1 (wiersze 1–2), poziomy w wierszu 4 (kolumny 5–7), jednomasztowiec w polu `7 10` i poziomy w wierszu 9 (kolumny 2–3). Zatopiono dwa z nich."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "..........\n.##.......\n..........\n..........\n......#...\n......#...\n......#...\n..........\n..........\n..........\n2 2\n2 3\n6 7\n1 1\n5 7\n7 7\n3 3",
+          "output": "Trafiony\nTrafiony, zatopiony\nTrafiony\nPudło\nTrafiony\nTrafiony, zatopiony\nWygrana po 6 strzałach"
+        },
+        {
+          "input": "#.#.#.....\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........",
+          "output": "Pozostało statków: 3"
+        },
+        {
+          "input": ".........#\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n......####\n0 5\n10 11\n3\na b\n1 2 3\n-1 4\n1 10\n10 10\n10 7",
+          "output": "Niepoprawny strzał\nNiepoprawny strzał\nNiepoprawny strzał\nNiepoprawny strzał\nNiepoprawny strzał\nNiepoprawny strzał\nTrafiony, zatopiony\nTrafiony\nTrafiony\nPozostało statków: 1"
+        },
+        {
+          "input": "..........\n..........\n...#......\n...#......\n..........\n........#.\n..........\n..........\n..........\n..........\n3 4\n3 4\n5 5\n5 5\nx\n4 4\n6 9",
+          "output": "Trafiony\nPole już ostrzelane\nPudło\nPole już ostrzelane\nNiepoprawny strzał\nTrafiony, zatopiony\nTrafiony, zatopiony\nWygrana po 7 strzałach"
+        },
+        {
+          "input": "..........\n.#........\n.#........\n.#........\n.#........\n..........\n..........\n...###....\n..........\n..........\n3 2\n8 5\n8 4\n8 6\n1 2\n6 2",
+          "output": "Trafiony\nTrafiony\nTrafiony\nTrafiony, zatopiony\nPudło\nPudło\nPozostało statków: 1"
+        }
+      ],
+      "constraints": "* na planszy jest co najmniej jeden statek, a pól `#` jest łącznie co najmniej 2\n* co najwyżej 200 strzałów",
+      "notes": "* Planszę trzymaj jako listę list znaków (`list(input())`) i zaznaczaj na niej strzały, np. `X` — trafione pole statku, `o` — pudło. Wtedy „pole już ostrzelane” to pole z `X` albo `o`.\n* Aby sprawdzić zatopienie, od trafionego pola idź w każdą z czterech stron, dopóki trafiasz na pola statku (`#` lub `X`). Statek jest zatopiony, gdy żadne z jego pól nie jest już `#`.\n* Liczbę statków na początku policzysz, zliczając pola statków, które nie mają pola statku ani nad sobą, ani po lewej stronie — każdy statek ma dokładnie jedno takie pole.\n* Kod startowy wczytuje wszystkie strzały do listy. Gdy dane wejściowe się skończą, `input()` zgłasza błąd `EOFError`; konstrukcja `try` / `except EOFError` przechwytuje go i kończy pętlę.",
+      "starter_code": "plansza = [list(input()) for _ in range(10)]\n\nstrzaly = []\nwhile True:\n    try:\n        strzaly.append(input())\n    except EOFError:  # dane wejściowe się skończyły\n        break\n\n# Uzupełnij: rozstrzygnij kolejne strzały z listy strzaly.\n"
+    },
+    {
+      "id": "ZAD-12",
+      "slug": "13_listy_2d/ZAD-12",
+      "title": "Transpozycja i mnożenie macierzy",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "macierze",
+        "pętle zagnieżdżone",
+        "algebra"
+      ],
+      "description": "Wczytaj macierz `A` o wymiarach `n×m` i macierz `B` o wymiarach `r×p`.\n\na) Wypisz macierz transponowaną $A^T$ o wymiarach `m×n`: jej wiersz `j` to kolumna `j` macierzy `A`, czyli $A^T_{ji} = A_{ij}$.\n\nb) Wypisz iloczyn $A \\cdot B$ o wymiarach `n×p`, w którym $(A \\cdot B)_{ij} = \\sum_{k} A_{ik} \\cdot B_{kj}$ — element w wierszu `i` i kolumnie `j` to suma iloczynów kolejnych elementów wiersza `i` macierzy `A` i kolumny `j` macierzy `B`. Iloczyn istnieje tylko wtedy, gdy liczba kolumn `A` jest równa liczbie wierszy `B` ($m = r$); w przeciwnym razie zamiast iloczynu wypisz `Niezgodne wymiary.`",
+      "input": "* 1. linia: `n m` — wymiary macierzy `A`\n* następnie `n` linii po `m` liczb całkowitych\n* następnie linia `r p` — wymiary macierzy `B`\n* następnie `r` linii po `p` liczb całkowitych",
+      "output": "Najpierw `m` linii macierzy $A^T$, zaraz po nich `n` linii iloczynu $A \\cdot B$ albo jedna linia `Niezgodne wymiary.` (bez pustych linii między częściami).",
+      "examples": [
+        {
+          "input": "2 3\n1 2 3\n4 5 6\n3 2\n7 8\n9 10\n11 12",
+          "output": "1 4\n2 5\n3 6\n58 64\n139 154",
+          "explanation": "Na przykład $58 = 1 \\cdot 7 + 2 \\cdot 9 + 3 \\cdot 11$ (pierwszy wiersz `A` i pierwsza kolumna `B`)."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1 1\n5\n1 1\n-3",
+          "output": "5\n-15"
+        },
+        {
+          "input": "1 3\n1 2 3\n3 1\n4\n5\n6",
+          "output": "1\n2\n3\n32"
+        },
+        {
+          "input": "3 1\n1\n2\n3\n1 3\n4 5 6",
+          "output": "1 2 3\n4 5 6\n8 10 12\n12 15 18"
+        },
+        {
+          "input": "2 2\n1 2\n3 4\n3 2\n1 0\n0 1\n1 1",
+          "output": "1 3\n2 4\nNiezgodne wymiary."
+        },
+        {
+          "input": "2 2\n2 -1\n0 3\n2 2\n1 0\n0 1",
+          "output": "2 0\n-1 3\n2 -1\n0 3"
+        },
+        {
+          "input": "2 3\n1 0 2\n-1 3 1\n3 2\n3 1\n2 1\n1 0",
+          "output": "1 -1\n0 3\n2 1\n5 1\n4 2"
+        },
+        {
+          "input": "1 2\n1 1\n1 2\n5 5",
+          "output": "1\n1\nNiezgodne wymiary."
+        }
+      ],
+      "constraints": "* `1 ≤ n, m, r, p ≤ 10`\n* elementy macierzy mają wartość bezwzględną nie większą niż 100",
+      "notes": "* Mnożenie macierzy wymaga trzech zagnieżdżonych pętli: po wierszach `A`, po kolumnach `B` i po sumowanych elementach.\n* Mnożenie macierzy nie jest przemienne — $A \\cdot B$ zwykle różni się od $B \\cdot A$, a jeden z tych iloczynów może w ogóle nie istnieć.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-13",
+      "slug": "13_listy_2d/ZAD-13",
+      "title": "Gra w życie: k pokoleń",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "macierze",
+        "symulacja",
+        "sąsiedzi"
+      ],
+      "description": "**Gra w życie** Conwaya to plansza komórek, z których każda jest żywa (`#`) albo martwa (`.`). Sąsiadami komórki jest 8 komórek stykających się z nią bokiem lub rogiem. W każdym kroku (pokoleniu) wszystkie komórki zmieniają się **jednocześnie** według reguł:\n\n* żywa komórka z 2 lub 3 żywymi sąsiadami przeżywa, w przeciwnym razie umiera,\n* martwa komórka z dokładnie 3 żywymi sąsiadami ożywa, w przeciwnym razie pozostaje martwa.\n\nKomórki poza planszą są zawsze martwe. Wczytaj planszę i liczbę `k`, a następnie wypisz stan planszy po `k` krokach.",
+      "input": "* 1. linia: `n m k` — liczba wierszy, liczba kolumn i liczba kroków\n* następnie `n` linii po `m` znaków `.` lub `#`",
+      "output": "`n` linii po `m` znaków `.` lub `#` — plansza po `k` krokach (bez spacji między znakami).",
+      "examples": [
+        {
+          "input": "5 5 1\n.....\n..#..\n..#..\n..#..\n.....",
+          "output": ".....\n.....\n.###.\n.....\n.....",
+          "explanation": "Środkowa komórka ma 2 żywych sąsiadów, więc przeżywa; skrajne komórki pionowej kreski mają po 1 sąsiedzie i umierają, a komórki obok środka mają po 3 żywych sąsiadów i ożywają."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "4 4 3\n....\n.##.\n.##.\n....",
+          "output": "....\n.##.\n.##.\n...."
+        },
+        {
+          "input": "5 5 2\n.....\n..#..\n..#..\n..#..\n.....",
+          "output": ".....\n..#..\n..#..\n..#..\n....."
+        },
+        {
+          "input": "3 3 1\n...\n.#.\n...",
+          "output": "...\n...\n..."
+        },
+        {
+          "input": "3 4 0\n#..#\n.##.\n#..#",
+          "output": "#..#\n.##.\n#..#"
+        },
+        {
+          "input": "6 6 4\n......\n.#....\n..#...\n###...\n......\n......",
+          "output": "......\n......\n..#...\n...#..\n.###..\n......"
+        },
+        {
+          "input": "1 1 1\n#",
+          "output": "."
+        },
+        {
+          "input": "3 3 1\n##.\n#..\n...",
+          "output": "##.\n##.\n..."
+        },
+        {
+          "input": "5 6 3\n#..#.#\n.##..#\n#...#.\n..##..\n#.#..#",
+          "output": "......\n....##\n....##\n....##\n......"
+        }
+      ],
+      "constraints": "* `1 ≤ n, m ≤ 20`\n* `0 ≤ k ≤ 10`",
+      "notes": "* W każdym kroku buduj **nową** macierz i wypełniaj ją na podstawie starej. Jeśli zmieniasz komórki w miejscu, kolejne komórki policzą sąsiadów z już zmienionej planszy i wynik będzie błędny.\n* Przy liczeniu sąsiadów sprawdzaj, czy indeksy mieszczą się w planszy (pamiętaj, że w Pythonie indeks `-1` oznacza ostatni element, a nie „poza planszą”).\n* Dla `k = 0` wypisz planszę bez zmian.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-14",
+      "slug": "13_listy_2d/ZAD-14",
+      "title": "Znajdź błąd: wspólne wiersze",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "macierze",
+        "debugowanie",
+        "listy"
+      ],
+      "description": "Program z sekcji **Kod startowy** miał tworzyć planszę `n×m` wypełnioną zerami, a następnie wpisywać `1` w `k` pól podanych na wejściu. Niestety wypisuje zły wynik. Dla przykładu poniżej zamiast oczekiwanej planszy wypisuje:\n\n```\n1 1 0\n1 1 0\n1 1 0\n```\n\nZnajdź błąd i popraw program tak, aby działał zgodnie z opisem.",
+      "input": "* 1. linia: `n m` — liczba wierszy i kolumn\n* 2. linia: `k` — liczba pól do zaznaczenia\n* następnie `k` linii: `r c` — numer wiersza i kolumny pola, **liczone od 0**",
+      "output": "`n` linii po `m` liczb `0` lub `1` oddzielonych spacjami — plansza po zaznaczeniu pól.",
+      "examples": [
+        {
+          "input": "3 3\n2\n0 0\n2 1",
+          "output": "1 0 0\n0 0 0\n0 1 0",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "2 2\n1\n0 1",
+          "output": "0 1\n0 0"
+        },
+        {
+          "input": "1 4\n2\n0 0\n0 3",
+          "output": "1 0 0 1"
+        },
+        {
+          "input": "3 2\n0",
+          "output": "0 0\n0 0\n0 0"
+        },
+        {
+          "input": "4 3\n3\n0 0\n1 1\n3 2",
+          "output": "1 0 0\n0 1 0\n0 0 0\n0 0 1"
+        },
+        {
+          "input": "2 3\n3\n1 2\n1 2\n0 0",
+          "output": "1 0 0\n0 0 1"
+        },
+        {
+          "input": "3 3\n3\n0 2\n1 2\n2 2",
+          "output": "0 0 1\n0 0 1\n0 0 1"
+        },
+        {
+          "input": "3 4\n2\n2 0\n0 3",
+          "output": "0 0 0 1\n0 0 0 0\n1 0 0 0"
+        }
+      ],
+      "constraints": "* `1 ≤ n, m ≤ 10`\n* `0 ≤ k ≤ 20`; to samo pole może zostać podane kilka razy",
+      "notes": "* Uruchom program i sprawdź, które pola zmieniają się po zaznaczeniu tylko jednego pola. Przyjrzyj się linii, która tworzy planszę.\n* Pomocne może być wypisanie `plansza[0] is plansza[1]` — operator `is` sprawdza, czy dwie nazwy wskazują na **ten sam** obiekt w pamięci.",
+      "starter_code": "n, m = [int(x) for x in input().split()]\nk = int(input())\n\nplansza = [[0] * m] * n\n\nfor _ in range(k):\n    r, c = [int(x) for x in input().split()]\n    plansza[r][c] = 1\n\nfor wiersz in plansza:\n    print(\" \".join(str(x) for x in wiersz))\n"
     }
   ]
 }

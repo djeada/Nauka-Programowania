@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-02 — Pełnoletność (18 lat)
 
 **Poziom:** ★☆☆
@@ -6,36 +6,34 @@ ZAD-02 — Pełnoletność (18 lat)
 
 ### Treść
 
-Wczytaj datę urodzenia oraz datę „dzisiaj” i sprawdź, czy osoba ma **ukończone 18 lat** w dniu daty aktualnej.
+Wczytaj datę urodzenia oraz datę „dzisiejszą” i sprawdź, czy osoba ma **ukończone 18 lat** w dniu daty dzisiejszej.
+
+Pełnoletność osiąga się **w dniu 18. urodzin**. Osoba jest więc pełnoletnia wtedy, gdy data (`d1`, `m1`, `y1 + 18`) jest **nie późniejsza** niż data dzisiejsza (`d2`, `m2`, `y2`). Daty porównuj najpierw po roku, przy równych latach po miesiącu, a przy równych miesiącach po dniu.
 
 Wypisz:
 
-* `Osoba jest pełnoletnia.` — jeśli ma ≥ 18 lat,
+* `Osoba jest pełnoletnia.` — jeśli ma ukończone 18 lat,
 * `Osoba nie jest pełnoletnia.` — w przeciwnym razie.
 
 ### Wejście
 
-6 liczb całkowitych (każda w osobnej linii):
+6 liczb całkowitych, każda w osobnej linii:
 
 1. `d1` — dzień urodzenia
 2. `m1` — miesiąc urodzenia
 3. `y1` — rok urodzenia
-4. `d2` — aktualny dzień
-5. `m2` — aktualny miesiąc
-6. `y2` — aktualny rok
+4. `d2` — dzisiejszy dzień
+5. `m2` — dzisiejszy miesiąc
+6. `y2` — dzisiejszy rok
 
 ### Wyjście
 
 Jedna linia — jeden z komunikatów.
 
-### Ograniczenia / gwarancje
+### Ograniczenia
 
-* Obie daty są poprawne (nie musisz walidować).
-* Pełnoletność jest osiągana **dokładnie w dniu 18. urodzin**.
-
-### Uwagi (jak to porównać)
-
-Osoba jest pełnoletnia wtedy, gdy data `y1+18, m1, d1` jest **nie późniejsza** niż data aktualna.
+* Obie daty są poprawne (nie musisz ich sprawdzać), $1 \le y1, y2 \le 9999$.
+* Data urodzenia nie jest późniejsza niż data dzisiejsza.
 
 ### Przykład
 
@@ -56,40 +54,33 @@ Osoba jest pełnoletnia wtedy, gdy data `y1+18, m1, d1` jest **nie późniejsza*
 Osoba jest pełnoletnia.
 ```
 
+Osiemnaste urodziny wypadły 5.12.2017, a więc przed 20.11.2020.
+
+### Uwagi
+
+* Porównujesz same liczby, więc data (`d1`, `m1`, `y1 + 18`) nie musi istnieć w kalendarzu. Osoba urodzona 29 lutego obchodzi 18. urodziny w roku nieprzestępnym (np. urodzona 29.02.2004 — w 2022 roku), więc zgodnie z regułą 28 lutego jest jeszcze niepełnoletnia, a pełnoletnia staje się 1 marca.
+
 """
 
+
+def czy_pelnoletnia(dzien_ur, miesiac_ur, rok_ur, dzien, miesiac, rok):
+    rok_18_urodzin = rok_ur + 18
+    if rok_18_urodzin != rok:
+        return rok_18_urodzin < rok
+    if miesiac_ur != miesiac:
+        return miesiac_ur < miesiac
+    return dzien_ur <= dzien
+
+
 if __name__ == "__main__":
+    dzien_ur = int(input())
+    miesiac_ur = int(input())
+    rok_ur = int(input())
+    dzien = int(input())
+    miesiac = int(input())
+    rok = int(input())
 
-    print("Podaj date urodzenia osoby (dzien, miesiac, rok):")
-    dzien_urodzenia = int(input())
-    miesiac_urodzenia = int(input())
-    rok_urodzenia = int(input())
-
-    print("Podaj aktualna date (dzien, miesiac, rok):")
-    aktualny_dzien = int(input())
-    aktualny_miesiac = int(input())
-    aktualny_rok = int(input())
-
-    roznica_lat = aktualny_rok - rok_urodzenia
-    roznica_miesiecy = aktualny_miesiac - miesiac_urodzenia
-    roznica_dni = aktualny_dzien - dzien_urodzenia
-
-    if roznica_lat > 18:
-        print("Osoba jest pelnoletnia.")
-
-    elif roznica_lat == 18:
-
-        if roznica_miesiecy > 0:
-            print("Osoba jest pelnoletnia.")
-
-        elif roznica_miesiecy == 0:
-
-            if roznica_dni >= 0:
-                print("Osoba jest pelnoletnia.")
-
-            else:
-                print("Osoba nie jest pelnoletnia.")
-        else:
-            print("Osoba nie jest pelnoletnia.")
+    if czy_pelnoletnia(dzien_ur, miesiac_ur, rok_ur, dzien, miesiac, rok):
+        print("Osoba jest pełnoletnia.")
     else:
-        print("Osoba nie jest pelnoletnia.")
+        print("Osoba nie jest pełnoletnia.")

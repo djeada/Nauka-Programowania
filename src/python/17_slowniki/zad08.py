@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Najczęstsza litera w zdaniu
 
 **Poziom:** ★☆☆
@@ -6,16 +6,20 @@ ZAD-08 — Najczęstsza litera w zdaniu
 
 ### Treść
 
-Wczytaj zdanie. Zignoruj spacje i znaki interpunkcyjne. Znajdź literę występującą najczęściej.
-Jeśli jest kilka, wybierz tę, która **pojawia się jako pierwsza w zdaniu**.
+Wczytaj zdanie. Policz wystąpienia liter, pomijając spacje, cyfry i znaki interpunkcyjne oraz nie rozróżniając wielkości liter. Wypisz literę, która występuje najczęściej.
+Jeśli kilka liter występuje tyle samo razy, wybierz tę, która **pojawia się w zdaniu jako pierwsza**.
 
 ### Wejście
 
-* 1 linia: zdanie
+* 1. linia: zdanie (zawiera co najmniej jedną literę)
 
 ### Wyjście
 
-* 1 znak
+Jedna linia: najczęstsza litera, zapisana jako mała litera.
+
+### Ograniczenia
+
+* zdanie ma od 1 do 300 znaków
 
 ### Przykład
 
@@ -31,27 +35,33 @@ lezy jerzy na wiezy
 e
 ```
 
+Litery `e`, `z` i `y` występują po 3 razy; najwcześniej w zdaniu pojawia się `e`.
+
+### Uwagi
+
+* `A` i `a` to ta sama litera — w zdaniu `Ala ma Asa` litera `a` występuje 5 razy.
+* Zliczanie można powierzyć klasie `Counter` z modułu `collections` (`from collections import Counter`). `Counter` to słownik element → liczba wystąpień, np. `Counter("abca")` daje `Counter({'a': 2, 'b': 1, 'c': 1})`, a metoda `most_common(1)` zwraca listę z jedną parą `(element, liczba)` o największej liczbie wystąpień: `Counter("abca").most_common(1)` to `[('a', 2)]`.
+* Przy remisie `most_common` zachowuje kolejność pierwszego wystąpienia, więc spełnia regułę z treści: `Counter("baab").most_common(1)` to `[('b', 2)]`.
+
 """
 
 
-def najczestsza_litera(napis):
+def najczestsza_litera(zdanie):
     """
-    Zwraca najczesciej wystepujaca litere w napisie.
+    Zwraca najczęściej występującą literę (małą), nie rozróżniając wielkości liter.
+    Przy remisie wygrywa litera, która pojawia się w zdaniu wcześniej.
     """
-    slownik = {}
-    for litera in napis:
-        if litera in slownik:
-            slownik[litera] += 1
-        else:
-            slownik[litera] = 1
-    return max(slownik, key=slownik.get)
+    licznik = {}
+    for znak in zdanie.lower():
+        if znak.isalpha():
+            licznik[znak] = licznik.get(znak, 0) + 1
 
-
-def test_najczestsza_litera():
-
-    assert najczestsza_litera("ala ma kota") == "a"
+    najczestsza = None
+    for litera in licznik:  # kolejność pierwszego wystąpienia
+        if najczestsza is None or licznik[litera] > licznik[najczestsza]:
+            najczestsza = litera
+    return najczestsza
 
 
 if __name__ == "__main__":
-
-    test_najczestsza_litera()
+    print(najczestsza_litera(input()))

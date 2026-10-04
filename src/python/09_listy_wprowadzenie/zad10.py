@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-10 — Czy punkty mogą być wierzchołkami trójkąta?
 
 **Poziom:** ★★☆
@@ -6,35 +6,29 @@ ZAD-10 — Czy punkty mogą być wierzchołkami trójkąta?
 
 ### Treść
 
-Wczytaj współrzędne trzech punktów `A(xA, yA)`, `B(xB, yB)`, `C(xC, yC)`.
-Wypisz `Tak`, jeśli punkty **nie są współliniowe** (mogą tworzyć trójkąt), w przeciwnym razie `Nie`.
+Wczytaj współrzędne trzech punktów $A(x_A, y_A)$, $B(x_B, y_B)$, $C(x_C, y_C)$.
+Wypisz `Tak`, jeśli punkty mogą być wierzchołkami trójkąta (czyli **nie leżą** na jednej prostej), a w przeciwnym razie `Nie`.
 
 ### Wejście
 
-Sześć liczb całkowitych (każda w osobnej linii):
+Trzy linie — w każdej dwie liczby całkowite `x y` oddzielone spacją:
 
-1. `xA`
-2. `yA`
-3. `xB`
-4. `yB`
-5. `xC`
-6. `yC`
+* 1. linia: współrzędne punktu `A`
+* 2. linia: współrzędne punktu `B`
+* 3. linia: współrzędne punktu `C`
 
 ### Wyjście
 
-Jedno słowo: `Tak` lub `Nie`.
+Jedno słowo: `Tak` albo `Nie`.
 
 ### Przykład
 
 **Wejście:**
 
 ```
--3
--2
--3
-1
--3
-0
+-3 -2
+-3 1
+-3 0
 ```
 
 **Wyjście:**
@@ -43,32 +37,27 @@ Jedno słowo: `Tak` lub `Nie`.
 Nie
 ```
 
+Wszystkie trzy punkty leżą na prostej $x = -3$.
+
 ### Uwagi
 
-* Sprawdź pole trójkąta: jeśli równe `0`, punkty są współliniowe.
+* Punkty leżą na jednej prostej wtedy i tylko wtedy, gdy $(x_B - x_A)(y_C - y_A) - (y_B - y_A)(x_C - x_A) = 0$ (to wyrażenie jest równe podwojonemu polu trójkąta $ABC$, z dokładnością do znaku).
+* Jeśli dwa punkty się pokrywają, trójkąta nie da się zbudować.
 
 """
 
 
-def czy_trojkat(lista):
-    xA, yA, xB, yB, xC, yC = lista
-
-    a = ((xB - xA) ** 2 + (yB - yA) ** 2) ** 0.5
-    b = ((xC - xB) ** 2 + (yC - yB) ** 2) ** 0.5
-    c = ((xA - xC) ** 2 + (yA - yC) ** 2) ** 0.5
-
-    if a + b > c and a + c > b and b + c > a:
-        return True
-
-    return False
-
-
-def test_czy_trojkat():
-    assert not czy_trojkat([1, 1, 1, 1, 1, 1])
-    assert not czy_trojkat([0, 0, 2, -2, 5, -5])
-    assert czy_trojkat([-2, 4, 7, 5, 8, -8])
+def czy_trojkat(a, b, c):
+    """Sprawdza, czy punkty a, b, c (listy [x, y]) nie leżą na jednej prostej."""
+    xA, yA = a
+    xB, yB = b
+    xC, yC = c
+    podwojone_pole = (xB - xA) * (yC - yA) - (yB - yA) * (xC - xA)
+    return podwojone_pole != 0
 
 
 if __name__ == "__main__":
-
-    test_czy_trojkat()
+    punkty = []
+    for _ in range(3):
+        punkty.append([int(x) for x in input().split()])
+    print("Tak" if czy_trojkat(*punkty) else "Nie")

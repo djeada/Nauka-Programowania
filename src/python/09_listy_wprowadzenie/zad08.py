@@ -1,4 +1,4 @@
-"""
+r"""
 ZAD-08 — Usuń klucz
 
 **Poziom:** ★☆☆
@@ -6,17 +6,21 @@ ZAD-08 — Usuń klucz
 
 ### Treść
 
-Wczytaj listę liczb całkowitych oraz `klucz`. Usuń **pierwsze** wystąpienie `klucz` (jeśli istnieje). Następnie wypisz listę po modyfikacji w jednej linii, elementy oddzielone przecinkami.
+Wczytaj listę `n` liczb całkowitych oraz liczbę `klucz`. Usuń z listy **pierwsze** wystąpienie liczby `klucz` (jeśli istnieje) i wypisz listę po tej zmianie.
 
 ### Wejście
 
-* 1. linia: `N` (`N ≥ 1`)
-* kolejne `N` linii: liczby całkowite
-* ostatnia linia: `klucz` (liczba całkowita)
+* 1. linia: liczba elementów `n`
+* 2. linia: `n` liczb całkowitych oddzielonych spacjami
+* 3. linia: liczba całkowita `klucz`
 
 ### Wyjście
 
-Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
+Jedna linia: lista po usunięciu klucza, w formacie `print(lista)`.
+
+### Ograniczenia
+
+* $n \ge 1$
 
 ### Przykład
 
@@ -24,43 +28,35 @@ Jedna linia: lista po usunięciu, elementy oddzielone przecinkami.
 
 ```
 5
-6
-2
-1
-4
-27
+6 2 1 4 27
 4
 ```
 
 **Wyjście:**
 
 ```
-6,2,1,27
+[6, 2, 1, 27]
 ```
 
 ### Uwagi
 
-* Jeśli `klucz` nie występuje, wypisz listę bez zmian.
+* Jeśli `klucz` nie występuje w liście, wypisz listę bez zmian.
+* Jeśli po usunięciu lista jest pusta, program wypisze `[]`.
 
 """
 
-from math import pow
-
 
 def usun_klucz(lista, klucz):
+    """Usuwa z listy pierwsze wystąpienie klucza (jeśli istnieje)."""
     for i in range(len(lista)):
         if lista[i] == klucz:
             lista.pop(i)
-            return lista
+            break
     return lista
 
 
-def test_usun_klucz():
-    assert usun_klucz([1, 2, 3, 3], 3) == [1, 2, 3]
-    assert usun_klucz([1, 2, 3, 3], 4) == [1, 2, 3, 3]
-    assert usun_klucz([1, 1, 1, 1], 1) == [1, 1, 1]
-
-
 if __name__ == "__main__":
-
-    test_usun_klucz()
+    n = int(input())
+    lista = [int(x) for x in input().split()]
+    klucz = int(input())
+    print(usun_klucz(lista, klucz))
