@@ -24,6 +24,8 @@ jobs:
         run: python3 scripts/run_tests.py
       - name: README jest aktualne
         run: python3 scripts/generate_readme.py --check
+      - name: Diagramy podręcznika (SVG) są zgodne ze źródłami TikZ
+        run: python3 scripts/build_diagrams.py --check
 
   pyodide:
     name: Rozwiązania wzorcowe w Pyodide (środowisko kursu online)
@@ -37,6 +39,29 @@ jobs:
       # Ta sama wersja Pyodide, której używa sprawdzarka na stronie kursu.
       - run: npm install --no-save pyodide@0.29.5
       - run: node scripts/run_tests_pyodide.mjs
+
+  pdf:
+    name: Zbiór zadań w PDF
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Zależności WeasyPrint i fonty
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 fonts-dejavu-core fonts-dejavu-extra
+      - run: pip install -r scripts/requirements-pdf.txt
+      - name: Składanie PDF (bez rozwiązań i z rozwiązaniami)
+        run: |
+          python3 scripts/generate_pdf.py --strict
+          python3 scripts/generate_pdf.py --strict --rozwiazania
+      - uses: actions/upload-artifact@v4
+        with:
+          name: zbior-zadan-pdf
+          path: Nauka_Programowania_Zbior_Zadan*.pdf
 
   kompilacja:
     name: Kompilacja (${{ matrix.lang }})

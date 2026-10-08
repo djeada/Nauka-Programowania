@@ -480,6 +480,18 @@ w 7 językach programowania
 <tr>
 <td colspan="2" align="center">
 
+**📄 Zbiór zadań w PDF**
+
+Cały zbiór jako książka do druku: każdy rozdział zaczyna się od wprowadzenia z teorią, wzorami<br/>
+i diagramami ([`podrecznik/`](podrecznik/)), potem karty zadań z przykładami Wejście | Wyjście.<br/>
+Opcjonalny dodatek z rozwiązaniami pokazuje przebieg każdego programu (tabela zmiennych / drzewo wywołań). Gotowe pliki są w artefaktach [CI](https://github.com/djeada/Nauka-Programowania/actions/workflows/ci.yml)
+(`zbior-zadan-pdf`), a lokalnie: `python3 scripts/generate_pdf.py [--rozwiazania]`
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+
 **▶️ Rozwiązuj online z automatyczną sprawdzarką**
 
 [![Kurs](https://img.shields.io/badge/Kurs-Podstaw_Pythona-orange?style=for-the-badge)](https://adamdjellouli.com/courses/kurs_podstaw_pythona/)

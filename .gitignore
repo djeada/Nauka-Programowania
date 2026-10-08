@@ -351,6 +351,7 @@ cabal.project.local
 
 # Wygenerowany zbiór zadań w PDF (scripts/generate_pdf.py)
 Nauka_Programowania_Zbior_Zadan.pdf
+Nauka_Programowania_Zbior_Zadan_z_rozwiazaniami.pdf
 
 # Artefakty samotestów (pliki tymczasowe nie powinny trafiać do repozytorium)
 temp_dir/
