@@ -6,7 +6,7 @@ ZAD-05A — Minimum bez instrukcji warunkowych
 
 ### Treść
 
-Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, `?:`) i bez bibliotek.
+Wczytaj dwie liczby całkowite `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, wyrażenia `x if warunek else y`) i bez funkcji `min`, `max`, `abs`, `sorted`.
 
 ### Wejście
 
@@ -15,7 +15,11 @@ Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia i
 
 ### Wyjście
 
-Jedna liczba naturalna: `min(a, b)`.
+Jedna liczba całkowita: mniejsza z liczb `a` i `b` (gdy są równe — ich wspólna wartość).
+
+### Ograniczenia
+
+* $-10^9 \le a, b \le 10^9$ — w tym zadaniu liczby **mogą być ujemne**
 
 ### Przykład
 
@@ -35,76 +39,85 @@ Jedna liczba naturalna: `min(a, b)`.
 ### Uwagi
 
 * Dopuszczalne są operacje arytmetyczne i bitowe.
+* Wskazówka: dla `d = a - b` wyrażenie `d >> 63` daje `-1` (same jedynki w zapisie binarnym), gdy `d < 0`, oraz `0`, gdy `d ≥ 0`. Wtedy `d & (d >> 63)` jest równe `d` albo `0`.
+* Tą samą sztuczką otrzymasz maksimum: `a - (d & (d >> 63))`.
 
-ZAD-05B — Maksimum bez instrukcji warunkowych
+ZAD-05B — Wartość bezwzględna bez instrukcji warunkowych
 
 **Poziom:** ★★☆
-**Tagi:** `bit-trick`, `min/max`, `bez if`
+**Tagi:** `bit-trick`, `maski`, `bez if`
 
 ### Treść
 
-Wczytaj `a` i `b`. Wypisz większą z nich **bez użycia instrukcji warunkowych** i bez bibliotek.
+Wczytaj liczbę całkowitą `x` i wypisz jej wartość bezwzględną $|x|$ **bez użycia instrukcji warunkowych** (`if`, wyrażenia `x if warunek else y`) i bez funkcji `abs`, `min`, `max`, `sorted`.
 
 ### Wejście
 
-* 1. linia: `a`
-* 2. linia: `b`
+* 1. linia: `x`
 
 ### Wyjście
 
-Jedna liczba naturalna: `max(a, b)`.
+Jedna liczba naturalna: $|x|$.
+
+### Ograniczenia
+
+* $-10^9 \le x \le 10^9$ — liczba **może być ujemna**
 
 ### Przykład
 
 **Wejście:**
 
 ```
-3
-2
+-12
 ```
 
 **Wyjście:**
 
 ```
-3
+12
 ```
 
+### Uwagi
+
+* Dopuszczalne są operacje arytmetyczne i bitowe; porównania (`<`, `>`) nie są potrzebne.
+* Tak jak w ZAD-05A, **maska znaku** `m = x >> 63` jest równa `-1` (same jedynki), gdy `x < 0`, oraz `0`, gdy `x ≥ 0`.
+* XOR z maską `0` nic nie zmienia, a XOR z maską `-1` odwraca wszystkie bity, czyli daje $-x - 1$ (tak liczby ujemne zapisuje kod uzupełnień do dwóch). Wystarczy więc obliczyć `(x ^ m) - m`.
+
 */
+use std::env;
+use std::io::{self, Read};
 
-use std::io;
-
-// Funkcja znajdująca minimum bez instrukcji warunkowych
+// ZAD-05A: minimum bez instrukcji warunkowych
 // Złożoność czasowa: O(1)
 // Złożoność pamięciowa: O(1)
-fn min_bez_if(a: u32, b: u32) -> u32 {
-    // Używamy różnicy i operacji bitowych
-    let diff = a as i32 - b as i32;
-    let znak = diff >> 31; // -1 jeśli a < b, 0 w przeciwnym razie
-    (a as i32 & znak | b as i32 & !znak) as u32
+fn min_bez_if(a: i64, b: i64) -> i64 {
+    let roznica = a - b;
+    let maska = roznica >> 63; // -1 jeśli a < b, 0 w przeciwnym razie
+    b + (roznica & maska)
 }
 
-// Funkcja znajdująca maksimum bez instrukcji warunkowych
+// ZAD-05B: wartość bezwzględna bez instrukcji warunkowych
+// maska = x >> 63 to -1 dla x < 0 i 0 dla x >= 0, więc (x ^ maska) - maska to x albo -x
 // Złożoność czasowa: O(1)
 // Złożoność pamięciowa: O(1)
-fn max_bez_if(a: u32, b: u32) -> u32 {
-    let diff = a as i32 - b as i32;
-    let znak = diff >> 31;
-    (b as i32 & znak | a as i32 & !znak) as u32
+fn wartosc_bezwzgledna(x: i64) -> i64 {
+    let maska = x >> 63;
+    (x ^ maska) - maska
 }
 
 fn main() {
-    // ZAD-05A: Minimum bez instrukcji warunkowych
-    let mut a_str = String::new();
-    let mut b_str = String::new();
+    let mut dane = String::new();
+    io::stdin()
+        .read_to_string(&mut dane)
+        .expect("Błąd wczytywania");
+    let liczby: Vec<i64> = dane
+        .split_whitespace()
+        .map(|x| x.parse().expect("Niepoprawna liczba"))
+        .collect();
 
-    io::stdin().read_line(&mut a_str).expect("Błąd wczytywania");
-    io::stdin().read_line(&mut b_str).expect("Błąd wczytywania");
-
-    let a: u32 = a_str.trim().parse().unwrap_or(0);
-    let b: u32 = b_str.trim().parse().unwrap_or(0);
-
-    println!("{}", min_bez_if(a, b));
-
-    // ZAD-05B: Maksimum bez instrukcji warunkowych (opcjonalnie)
-    // println!("{}", max_bez_if(a, b));
+    // Podpunkt wybierany argumentem: zad05 A|B < dane.txt (domyślnie A)
+    match env::args().nth(1).as_deref() {
+        Some("B") => println!("{}", wartosc_bezwzgledna(liczby[0])),
+        _ => println!("{}", min_bez_if(liczby[0], liczby[1])),
+    }
 }

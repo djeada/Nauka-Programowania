@@ -331,6 +331,36 @@
       "output": "1234567891011121314151617181920"
     }
   ],
+  "ZAD-15": [
+    {
+      "input": "Narodowy Bank Polski.",
+      "output": "NBP"
+    },
+    {
+      "input": "  wiele   spacji  między słowami ",
+      "output": "WSMS"
+    },
+    {
+      "input": "żółta łódź",
+      "output": "ŻŁ"
+    },
+    {
+      "input": "Ala, ma - kota!",
+      "output": "AMK"
+    },
+    {
+      "input": "a",
+      "output": "A"
+    },
+    {
+      "input": "(Unia Europejska)",
+      "output": "UE"
+    },
+    {
+      "input": "\"Polskie Koleje Państwowe\" - PKP",
+      "output": "PKPP"
+    }
+  ],
   "ZAD-16": [
     {
       "input": "abcd\nabxd",

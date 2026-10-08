@@ -540,6 +540,140 @@ print(min_z_dwoch(a, b))
 
 ---
 
+## ZAD-04B — Ograniczenie liczby do przedziału
+
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `min`, `max`
+
+### Treść
+
+Napisz funkcję `ogranicz(x, dolna, gorna)`, która „przycina” liczbę `x` do przedziału $[\text{dolna}, \text{gorna}]$ i zwraca:
+
+* `dolna`, jeśli $x < \text{dolna}$,
+* `gorna`, jeśli $x > \text{gorna}$,
+* samo `x` w pozostałych przypadkach (gdy $\text{dolna} \le x \le \text{gorna}$).
+
+Program wczytuje `x`, `dolna` i `gorna`, wywołuje funkcję i wypisuje wynik.
+
+### Wejście
+
+* 1. linia: liczba całkowita `x`
+* 2. linia: liczba całkowita `dolna` — lewy koniec przedziału
+* 3. linia: liczba całkowita `gorna` — prawy koniec przedziału
+
+### Wyjście
+
+Jedna liczba całkowita: wartość `x` ograniczona do przedziału $[\text{dolna}, \text{gorna}]$.
+
+### Ograniczenia
+
+* $\text{dolna} \le \text{gorna}$
+* $-10^9 \le x, \text{dolna}, \text{gorna} \le 10^9$
+
+### Przykład
+
+**Wejście:**
+
+```
+15
+0
+10
+```
+
+**Wyjście:**
+
+```
+10
+```
+
+Liczba $15$ wychodzi poza przedział $[0, 10]$ z prawej strony, więc zostaje zastąpiona prawym końcem — $10$.
+
+### Uwagi
+
+* Funkcja przydaje się np. w grach, gdy pozycja postaci nie może wyjść poza planszę, albo gdy głośność ma się mieścić w zakresie od $0$ do $100$.
+* Całe ciało funkcji da się zapisać jednym wyrażeniem złożonym z minimum i maksimum dwóch liczb: najpierw $\max(x, \text{dolna})$, a z tego wyniku $\min(\ldots, \text{gorna})$. Możesz skorzystać z funkcji `min_z_dwoch` z zadania ZAD-04A.
+
+### Kod startowy
+
+```python
+def ogranicz(x, dolna, gorna):
+    # Uzupełnij funkcję.
+    pass
+
+
+x = int(input())
+dolna = int(input())
+gorna = int(input())
+print(ogranicz(x, dolna, gorna))
+```
+
+---
+
+## ZAD-04C — Środkowa z trzech liczb
+
+**Poziom:** ★☆☆
+**Tagi:** `funkcje`, `min`, `max`, `warunki`
+
+### Treść
+
+Napisz funkcję `srodkowa_z_trzech(a, b, c)`, która zwraca **środkową** z trzech liczb naturalnych, czyli tę, która po ustawieniu liczb od najmniejszej do największej znajdzie się w środku (tzw. medianę trzech liczb).
+
+Program wczytuje `a`, `b` i `c`, wywołuje funkcję i wypisuje wynik.
+
+### Wejście
+
+* 1. linia: liczba naturalna `a`
+* 2. linia: liczba naturalna `b`
+* 3. linia: liczba naturalna `c`
+
+### Wyjście
+
+Jedna liczba naturalna: środkowa z liczb `a`, `b`, `c`.
+
+### Ograniczenia
+
+* $a \ge 0$, $b \ge 0$, $c \ge 0$
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+1
+2
+```
+
+**Wyjście:**
+
+```
+2
+```
+
+Po uporządkowaniu liczby tworzą ciąg $1, 2, 3$ — w środku stoi $2$.
+
+### Uwagi
+
+* Liczby mogą się powtarzać: dla `5`, `5`, `1` uporządkowany ciąg to $1, 5, 5$, więc wynikiem jest `5`.
+* Nie sortuj liczb — wystarczą porównania. Liczba `a` jest środkowa, jeśli $b \le a \le c$ albo $c \le a \le b$; podobnie sprawdzisz `b`, a jeśli żadna z nich nie jest środkowa, zostaje `c`.
+* Inny sposób: suma trzech liczb minus najmniejsza i minus największa z nich to właśnie liczba środkowa.
+
+### Kod startowy
+
+```python
+def srodkowa_z_trzech(a, b, c):
+    # Uzupełnij funkcję.
+    pass
+
+
+a = int(input())
+b = int(input())
+c = int(input())
+print(srodkowa_z_trzech(a, b, c))
+```
+
+---
+
 ## ZAD-04D — Maksimum z trzech liczb
 
 **Poziom:** ★☆☆
@@ -805,6 +939,93 @@ login, haslo = pobierz_dane()
 sprawdz_dane(login, haslo)
 ```
 
+
+---
+
+## ZAD-08 — Liczby doskonałe, obfite i deficytowe
+
+**Poziom:** ★★☆
+**Tagi:** `funkcje`, `pętle`, `dzielniki`
+
+### Treść
+
+**Dzielnik właściwy** liczby naturalnej `n` to jej dzielnik mniejszy od `n` — np. dzielnikami właściwymi liczby `12` są `1`, `2`, `3`, `4` i `6`. Porównując sumę dzielników właściwych z samą liczbą, dzielimy liczby na trzy rodzaje:
+
+* **doskonałe** — suma jest równa `n` (np. $6 = 1 + 2 + 3$),
+* **obfite** — suma jest większa od `n` (np. $1 + 2 + 3 + 4 + 6 = 16 > 12$),
+* **deficytowe** — suma jest mniejsza od `n` (np. dla `8`: $1 + 2 + 4 = 7 < 8$).
+
+Napisz dwie funkcje:
+
+1. `suma_dzielnikow(n)` — zwraca sumę dzielników właściwych liczby `n`,
+2. `rodzaj_liczby(n)` — **wywołuje** funkcję `suma_dzielnikow(n)` i na podstawie jej wyniku zwraca napis `doskonała`, `obfita` albo `deficytowa`.
+
+Program wczytuje `k` liczb i dla każdej wypisuje jej rodzaj.
+
+### Wejście
+
+* 1. linia: `k` — liczba liczb do sprawdzenia
+* kolejne `k` linii: liczby naturalne `n` — po jednej w linii
+
+### Wyjście
+
+`k` linii w formacie:
+
+```
+<n>: <rodzaj>
+```
+
+gdzie `<rodzaj>` to `doskonała`, `obfita` albo `deficytowa` (małymi literami, z polskimi znakami).
+
+### Ograniczenia
+
+* $1 \le k \le 100$
+* $1 \le n \le 10000$
+
+### Przykład
+
+**Wejście:**
+
+```
+3
+6
+12
+15
+```
+
+**Wyjście:**
+
+```
+6: doskonała
+12: obfita
+15: deficytowa
+```
+
+Dla `15` suma dzielników właściwych to $1 + 3 + 5 = 9 < 15$.
+
+### Uwagi
+
+* Liczba `1` nie ma dzielników właściwych, więc ich suma wynosi `0` — `1` jest liczbą deficytową.
+* Wydzielenie obliczeń do osobnej funkcji sprawia, że `rodzaj_liczby` jest krótka i czytelna, a `suma_dzielnikow` da się sprawdzić i wykorzystać niezależnie.
+
+### Kod startowy
+
+```python
+def suma_dzielnikow(n):
+    # Uzupełnij funkcję: zwróć sumę dzielników właściwych n.
+    pass
+
+
+def rodzaj_liczby(n):
+    # Uzupełnij funkcję: wywołaj suma_dzielnikow(n) i zwróć rodzaj liczby.
+    pass
+
+
+k = int(input())
+for _ in range(k):
+    n = int(input())
+    print(f"{n}: {rodzaj_liczby(n)}")
+```
 
 ---
 

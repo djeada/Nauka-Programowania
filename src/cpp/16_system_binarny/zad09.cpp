@@ -6,16 +6,19 @@ ZAD-09A — Wielkie → małe (bitowo)
 
 ### Treść
 
-Wczytaj napis z liter alfabetu łacińskiego. Zamień wszystkie wielkie litery na
-małe, używając operacji bitowych na kodach ASCII.
+Wczytaj napis. Zamień wszystkie wielkie litery alfabetu łacińskiego (`A–Z`) na małe, używając operacji bitowych na kodach ASCII. Pozostałe znaki pozostaw bez zmian.
 
 ### Wejście
 
-* 1. linia: napis
+* 1. linia: napis (może zawierać spacje, cyfry i znaki interpunkcyjne)
 
 ### Wyjście
 
-Jedna linia: napis po konwersji.
+Jedna linia: napis po zamianie.
+
+### Ograniczenia
+
+* napis ma od 1 do 100 znaków i składa się wyłącznie ze znaków ASCII (bez polskich liter)
 
 ### Przykład
 
@@ -31,37 +34,51 @@ Test
 test
 ```
 
-ZAD-09B — Małe → wielkie (bitowo)
+### Uwagi
+
+* Kody wielkiej i małej litery różnią się tylko bitem o wartości 32 (`0b100000`): `ord("A")` to `65`, a `ord("a")` to `97`. Ustawienie tego bitu: `ord(znak) | 32`.
+* Zmieniaj tylko litery `A–Z` — np. `@` i `[` sąsiadują w tablicy ASCII z literami, ale mają pozostać bez zmian.
+* Odwrotną zamianę (małe → wielkie) daje wyzerowanie tego bitu: `ord(znak) & ~32`.
+
+ZAD-09B — Numer litery w alfabecie (bitowo)
 
 **Poziom:** ★★☆
-**Tagi:** `ASCII`, `bitwise`, `string`
+**Tagi:** `ASCII`, `bitwise`, `maski`
 
 ### Treść
 
-Wczytaj napis. Zamień wszystkie małe litery na wielkie, używając operacji
-bitowych na ASCII.
+Wczytaj słowo złożone z liter alfabetu łacińskiego. Dla każdej litery wyznacz jej numer w alfabecie — `a` i `A` mają numer `1`, `b` i `B` numer `2`, …, `z` i `Z` numer `26` — używając operacji bitowej na kodzie ASCII zamiast porównań i odejmowania.
 
 ### Wejście
 
-* 1. linia: napis
+* 1. linia: słowo
 
 ### Wyjście
 
-Jedna linia: napis po konwersji.
+Jedna linia: numery kolejnych liter słowa oddzielone pojedynczymi spacjami.
+
+### Ograniczenia
+
+* słowo ma od 1 do 100 znaków i składa się wyłącznie z liter `a–z` i `A–Z`
 
 ### Przykład
 
 **Wejście:**
 
 ```
-Test
+Bit
 ```
 
 **Wyjście:**
 
 ```
-TEST
+2 9 20
 ```
+
+### Uwagi
+
+* Zapisz kody binarnie: `ord("A")` to $65 = 1000001_2$, a `ord("a")` to $97 = 1100001_2$. Pięć najniższych bitów kodu każdej litery to właśnie jej numer w alfabecie — i to niezależnie od wielkości litery.
+* Pięć najniższych bitów wydobędziesz **maską** $31 = 11111_2$: `ord(znak) & 31`. Operacja `&` z maską zeruje wszystkie bity poza tymi, które w masce są jedynkami.
 
 ZAD-09C — Odwróć wielkość liter (bitowo)
 
@@ -70,16 +87,19 @@ ZAD-09C — Odwróć wielkość liter (bitowo)
 
 ### Treść
 
-Wczytaj napis. Zamień wielkość każdej litery na przeciwną (mała↔wielka) używając
-operacji bitowych na ASCII.
+Wczytaj napis. Zamień wielkość każdej litery alfabetu łacińskiego na przeciwną (mała ↔ wielka), używając operacji bitowych na kodach ASCII. Pozostałe znaki pozostaw bez zmian.
 
 ### Wejście
 
-* 1. linia: napis
+* 1. linia: napis (może zawierać spacje, cyfry i znaki interpunkcyjne)
 
 ### Wyjście
 
 Jedna linia: napis po zmianie.
+
+### Ograniczenia
+
+* napis ma od 1 do 100 znaków i składa się wyłącznie ze znaków ASCII (bez polskich liter)
 
 ### Przykład
 
@@ -94,6 +114,10 @@ Test
 ```
 tEST
 ```
+
+### Uwagi
+
+* Odwrócenie bitu o wartości 32: `ord(znak) ^ 32`. Stosuj je tylko do liter `a–z` i `A–Z`.
 
 */
 #include <cassert>
@@ -110,13 +134,17 @@ std::string wielkieNaMale(std::string slowo) {
   return wynik;
 }
 
-std::string maleNaWielkie(std::string slowo) {
+std::string numeryLiter(const std::string &slowo) {
   /*
-   * Funkcja zamienia male litery na wielkie litery.
+   * Funkcja zwraca numery liter w alfabecie (1-26) oddzielone spacjami:
+   * piec najnizszych bitow kodu ASCII litery to jej numer.
    */
   std::string wynik = "";
 
-  for (const int &litera : slowo) wynik += (char)(litera & (int)'_');
+  for (std::size_t i = 0; i < slowo.size(); i++) {
+    if (i > 0) wynik += ' ';
+    wynik += std::to_string(slowo[i] & 0b11111);
+  }
 
   return wynik;
 }
@@ -149,11 +177,9 @@ void testWielkieNaMale() {
   assert(wielkieNaMale(slowo) == wynik);
 }
 
-void testMaleNaWielkie() {
-  std::string slowo = "piesek";
-  std::string wynik = "PIESEK";
-
-  assert(maleNaWielkie(slowo) == wynik);
+void testNumeryLiter() {
+  assert(numeryLiter("Bit") == "2 9 20");
+  assert(numeryLiter("zZaA") == "26 26 1 1");
 }
 
 void testOdwrocWielkoscLiter() {
@@ -165,7 +191,7 @@ void testOdwrocWielkoscLiter() {
 
 int main() {
   testWielkieNaMale();
-  testMaleNaWielkie();
+  testNumeryLiter();
   testOdwrocWielkoscLiter();
 
   return 0;

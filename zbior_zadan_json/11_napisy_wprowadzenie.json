@@ -691,6 +691,61 @@
       "starter_code": ""
     },
     {
+      "id": "ZAD-15",
+      "slug": "11_napisy_wprowadzenie/ZAD-15",
+      "title": "Akronim ze zdania",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "napisy",
+        "słowa",
+        "upper"
+      ],
+      "description": "**Akronim** to skrót utworzony z pierwszych liter kolejnych słów, np. „Polska Akademia Nauk” → `PAN`.\n\nWczytaj zdanie i wypisz jego akronim: pierwsze znaki wszystkich słów (zgodnie z konwencją rozdziału — bez interpunkcji), zapisane jeden za drugim **wielkimi** literami.",
+      "input": "* 1. linia: zdanie (zawiera co najmniej jedno słowo; może zawierać polskie litery)",
+      "output": "Jedna linia: akronim.",
+      "examples": [
+        {
+          "input": "Polska Akademia Nauk",
+          "output": "PAN",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "Narodowy Bank Polski.",
+          "output": "NBP"
+        },
+        {
+          "input": "  wiele   spacji  między słowami ",
+          "output": "WSMS"
+        },
+        {
+          "input": "żółta łódź",
+          "output": "ŻŁ"
+        },
+        {
+          "input": "Ala, ma - kota!",
+          "output": "AMK"
+        },
+        {
+          "input": "a",
+          "output": "A"
+        },
+        {
+          "input": "(Unia Europejska)",
+          "output": "UE"
+        },
+        {
+          "input": "\"Polskie Koleje Państwowe\" - PKP",
+          "output": "PKPP"
+        }
+      ],
+      "constraints": "",
+      "notes": "* Słowa mogą być rozdzielone kilkoma spacjami, a zdanie może zaczynać się lub kończyć spacjami — `split()` bez argumentu poradzi sobie z tym.\n* Interpunkcja nie należy do słowa: w zdaniu `(Unia Europejska)` słowami są `Unia` i `Europejska`, więc akronim to `UE`. Samotny myślnik `-` nie jest słowem.\n* Zamiana na wielką literę dotyczy także polskich liter: `żółta łódź` → `ŻŁ`.",
+      "starter_code": ""
+    },
+    {
       "id": "ZAD-16",
       "slug": "11_napisy_wprowadzenie/ZAD-16",
       "title": "Odległość Hamminga",

@@ -98,6 +98,72 @@ Jedna linia: wartość liczby w systemie dziesiętnym.
 
 ---
 
+## ZAD-02 — Operatory bitowe AND, OR i XOR
+
+**Poziom:** ★☆☆
+**Tagi:** `bitwise`, `AND`, `OR`, `XOR`
+
+### Treść
+
+Operatory bitowe działają na zapisie binarnym liczb — osobno na każdej pozycji (bicie). Liczby zapisujemy jedna pod drugą, wyrównane do prawej, a brakujące bity z lewej uzupełniamy zerami:
+
+* `a & b` (AND) — bit wyniku jest `1` tylko wtedy, gdy **oba** bity są równe `1`,
+* `a | b` (OR) — bit wyniku jest `1`, gdy **co najmniej jeden** z bitów jest równy `1`,
+* `a ^ b` (XOR) — bit wyniku jest `1`, gdy bity są **różne**.
+
+Wczytaj dwie liczby naturalne `a` i `b` i wypisz wyniki tych trzech operacji.
+
+### Wejście
+
+* 1. linia: `a`
+* 2. linia: `b`
+
+### Wyjście
+
+Trzy linie — w systemie dziesiętnym:
+
+* 1. linia: `a & b`
+* 2. linia: `a | b`
+* 3. linia: `a ^ b`
+
+### Ograniczenia
+
+* $0 \le a, b \le 10^9$
+
+### Przykład
+
+**Wejście:**
+
+```
+12
+10
+```
+
+**Wyjście:**
+
+```
+8
+14
+6
+```
+
+$12 = 1100_2$ i $10 = 1010_2$. Bit po bicie: AND daje $1000_2 = 8$, OR — $1110_2 = 14$, a XOR — $0110_2 = 6$.
+
+### Uwagi
+
+* Rachunek z przykładu zapisany w słupkach:
+
+  ```
+      1100      1100      1100
+    & 1010    | 1010    ^ 1010
+    ------    ------    ------
+      1000      1110      0110
+  ```
+
+* Zwróć uwagę na zależności: `a ^ a` to zawsze `0`, `a & 0` to `0`, a `a | 0` i `a ^ 0` to `a`. Zachodzi też równość `(a & b) + (a | b) == a + b` — możesz tak sprawdzić swój wynik.
+
+---
+
 ## ZAD-03A — Dodawanie bitowe
 
 **Poziom:** ★★☆
@@ -402,6 +468,49 @@ Jedna liczba całkowita: mniejsza z liczb `a` i `b` (gdy są równe — ich wsp�
 
 ---
 
+## ZAD-05B — Wartość bezwzględna bez instrukcji warunkowych
+
+**Poziom:** ★★☆
+**Tagi:** `bit-trick`, `maski`, `bez if`
+
+### Treść
+
+Wczytaj liczbę całkowitą `x` i wypisz jej wartość bezwzględną $|x|$ **bez użycia instrukcji warunkowych** (`if`, wyrażenia `x if warunek else y`) i bez funkcji `abs`, `min`, `max`, `sorted`.
+
+### Wejście
+
+* 1. linia: `x`
+
+### Wyjście
+
+Jedna liczba naturalna: $|x|$.
+
+### Ograniczenia
+
+* $-10^9 \le x \le 10^9$ — liczba **może być ujemna**
+
+### Przykład
+
+**Wejście:**
+
+```
+-12
+```
+
+**Wyjście:**
+
+```
+12
+```
+
+### Uwagi
+
+* Dopuszczalne są operacje arytmetyczne i bitowe; porównania (`<`, `>`) nie są potrzebne.
+* Tak jak w ZAD-05A, **maska znaku** `m = x >> 63` jest równa `-1` (same jedynki), gdy `x < 0`, oraz `0`, gdy `x ≥ 0`.
+* XOR z maską `0` nic nie zmienia, a XOR z maską `-1` odwraca wszystkie bity, czyli daje $-x - 1$ (tak liczby ujemne zapisuje kod uzupełnień do dwóch). Wystarczy więc obliczyć `(x ^ m) - m`.
+
+---
+
 ## ZAD-06 — Konwersja między dowolnymi systemami (2..36)
 
 **Poziom:** ★★☆
@@ -584,6 +693,48 @@ test
 * Kody wielkiej i małej litery różnią się tylko bitem o wartości 32 (`0b100000`): `ord("A")` to `65`, a `ord("a")` to `97`. Ustawienie tego bitu: `ord(znak) | 32`.
 * Zmieniaj tylko litery `A–Z` — np. `@` i `[` sąsiadują w tablicy ASCII z literami, ale mają pozostać bez zmian.
 * Odwrotną zamianę (małe → wielkie) daje wyzerowanie tego bitu: `ord(znak) & ~32`.
+
+---
+
+## ZAD-09B — Numer litery w alfabecie (bitowo)
+
+**Poziom:** ★★☆
+**Tagi:** `ASCII`, `bitwise`, `maski`
+
+### Treść
+
+Wczytaj słowo złożone z liter alfabetu łacińskiego. Dla każdej litery wyznacz jej numer w alfabecie — `a` i `A` mają numer `1`, `b` i `B` numer `2`, …, `z` i `Z` numer `26` — używając operacji bitowej na kodzie ASCII zamiast porównań i odejmowania.
+
+### Wejście
+
+* 1. linia: słowo
+
+### Wyjście
+
+Jedna linia: numery kolejnych liter słowa oddzielone pojedynczymi spacjami.
+
+### Ograniczenia
+
+* słowo ma od 1 do 100 znaków i składa się wyłącznie z liter `a–z` i `A–Z`
+
+### Przykład
+
+**Wejście:**
+
+```
+Bit
+```
+
+**Wyjście:**
+
+```
+2 9 20
+```
+
+### Uwagi
+
+* Zapisz kody binarnie: `ord("A")` to $65 = 1000001_2$, a `ord("a")` to $97 = 1100001_2$. Pięć najniższych bitów kodu każdej litery to właśnie jej numer w alfabecie — i to niezależnie od wielkości litery.
+* Pięć najniższych bitów wydobędziesz **maską** $31 = 11111_2$: `ord(znak) & 31`. Operacja `&` z maską zeruje wszystkie bity poza tymi, które w masce są jedynkami.
 
 ---
 

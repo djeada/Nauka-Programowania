@@ -5,7 +5,7 @@
 #
 # ### Treść
 #
-# Wczytaj dwie liczby naturalne `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, `?:`) i bez bibliotek.
+# Wczytaj dwie liczby całkowite `a` i `b`. Wypisz mniejszą z nich **bez użycia instrukcji warunkowych** (`if`, wyrażenia `x if warunek else y`) i bez funkcji `min`, `max`, `abs`, `sorted`.
 #
 # ### Wejście
 #
@@ -14,7 +14,11 @@
 #
 # ### Wyjście
 #
-# Jedna liczba naturalna: `min(a, b)`.
+# Jedna liczba całkowita: mniejsza z liczb `a` i `b` (gdy są równe — ich wspólna wartość).
+#
+# ### Ograniczenia
+#
+# * $-10^9 \le a, b \le 10^9$ — w tym zadaniu liczby **mogą być ujemne**
 #
 # ### Przykład
 #
@@ -34,43 +38,53 @@
 # ### Uwagi
 #
 # * Dopuszczalne są operacje arytmetyczne i bitowe.
+# * Wskazówka: dla `d = a - b` wyrażenie `d >> 63` daje `-1` (same jedynki w zapisie binarnym), gdy `d < 0`, oraz `0`, gdy `d ≥ 0`. Wtedy `d & (d >> 63)` jest równe `d` albo `0`.
+# * Tą samą sztuczką otrzymasz maksimum: `a - (d & (d >> 63))`.
 #
-# ZAD-05B — Maksimum bez instrukcji warunkowych
+# ZAD-05B — Wartość bezwzględna bez instrukcji warunkowych
 #
 # **Poziom:** ★★☆
-# **Tagi:** `bit-trick`, `min/max`, `bez if`
+# **Tagi:** `bit-trick`, `maski`, `bez if`
 #
 # ### Treść
 #
-# Wczytaj `a` i `b`. Wypisz większą z nich **bez użycia instrukcji warunkowych** i bez bibliotek.
+# Wczytaj liczbę całkowitą `x` i wypisz jej wartość bezwzględną $|x|$ **bez użycia instrukcji warunkowych** (`if`, wyrażenia `x if warunek else y`) i bez funkcji `abs`, `min`, `max`, `sorted`.
 #
 # ### Wejście
 #
-# * 1. linia: `a`
-# * 2. linia: `b`
+# * 1. linia: `x`
 #
 # ### Wyjście
 #
-# Jedna liczba naturalna: `max(a, b)`.
+# Jedna liczba naturalna: $|x|$.
+#
+# ### Ograniczenia
+#
+# * $-10^9 \le x \le 10^9$ — liczba **może być ujemna**
 #
 # ### Przykład
 #
 # **Wejście:**
 #
 # ```
-# 3
-# 2
+# -12
 # ```
 #
 # **Wyjście:**
 #
 # ```
-# 3
+# 12
 # ```
+#
+# ### Uwagi
+#
+# * Dopuszczalne są operacje arytmetyczne i bitowe; porównania (`<`, `>`) nie są potrzebne.
+# * Tak jak w ZAD-05A, **maska znaku** `m = x >> 63` jest równa `-1` (same jedynki), gdy `x < 0`, oraz `0`, gdy `x ≥ 0`.
+# * XOR z maską `0` nic nie zmienia, a XOR z maską `-1` odwraca wszystkie bity, czyli daje $-x - 1$ (tak liczby ujemne zapisuje kod uzupełnień do dwóch). Wystarczy więc obliczyć `(x ^ m) - m`.
 
 # Uzycie:
-#   bash zad05.sh                     - uruchamia testy
-#   bash zad05.sh --stdin < dane.txt  - rozwiazuje zadanie (ZAD-05A) dla danych ze stdin
+#   bash zad05.sh                        - uruchamia testy
+#   bash zad05.sh --stdin A|B < dane.txt - rozwiazuje podpunkt A albo B (domyslnie A)
 
 # shellcheck shell=bash source=../assert.sh
 source "$(dirname "${BASH_SOURCE[0]}")/../assert.sh"
@@ -90,11 +104,24 @@ minimum() {
 }
 
 # Wczytuje a i b (kazda w osobnej linii) i wypisuje mniejsza z nich.
+# Wartosc bezwzgledna: maska = x >> 63 to -1 dla x < 0 i 0 dla x >= 0
+wartosc_bezwzgledna() {
+    local x=$1
+    local maska=$((x >> 63))
+    echo "$(((x ^ maska) - maska))"
+}
+
 program() {
     local a b
     read -r a
     read -r b
     minimum "$a" "$b"
+}
+
+program_b() {
+    local x
+    read -r x
+    wartosc_bezwzgledna "$x"
 }
 
 # Uruchamia funkcje $1 z wejsciem $2 i porownuje jej wyjscie (dokladnie, wraz
@@ -119,11 +146,23 @@ test_minimum() {
     sprawdz program $'-7\n-7' "-7" $LINENO
 }
 
+test_wartosc_bezwzgledna() {
+    assertEqual "$(wartosc_bezwzgledna -12)" 12 $LINENO
+    assertEqual "$(wartosc_bezwzgledna 0)" 0 $LINENO
+    assertEqual "$(wartosc_bezwzgledna 7)" 7 $LINENO
+    assertEqual "$(wartosc_bezwzgledna -1000000000)" 1000000000 $LINENO
+    sprawdz program_b "-1" "1" $LINENO
+}
+
 main() {
     if [[ ${1:-} == --stdin ]]; then
-        program
+        case ${2:-A} in
+            B | b) program_b ;;
+            *) program ;;
+        esac
     else
         test_minimum
+        test_wartosc_bezwzgledna
     fi
 }
 
