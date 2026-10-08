@@ -1,0 +1,44 @@
+\begin{tikzpicture}[x=1cm, y=-0.8cm,
+    para/.style={rectangle, draw=akcent, fill=white, minimum height=6.2mm, minimum width=19mm, font=\ttfamily\footnotesize},
+    nowa/.style={para, draw=zielen, fill=zielenjasna},
+    zm/.style={para, draw=bursztyn, fill=bursztynjasny}]
+  \node[podpis] at (0,0.1) {krok};
+  \node[podpis] at (1.5,0.1) {\kod{g}};
+  \node[podpis, anchor=west] at (2.4,0.1) {\kod{licznik} po kroku};
+  \node[kod, text=szary] at (0,1) {1};
+  \node[komorka, minimum width=12mm, minimum height=6.2mm] at (1.5,1) {\footnotesize\ttfamily "kot"};
+  \draw[->, draw=szary] (2.15,1) -- (2.45,1);
+  \node[nowa] at (3.6,1) {"kot": 1};
+  \node[kod, text=szary] at (0,2) {2};
+  \node[komorka, minimum width=12mm, minimum height=6.2mm] at (1.5,2) {\footnotesize\ttfamily "pies"};
+  \draw[->, draw=szary] (2.15,2) -- (2.45,2);
+  \node[para] at (3.6,2) {"kot": 1};
+  \node[nowa] at (5.75,2) {"pies": 1};
+  \node[kod, text=szary] at (0,3) {3};
+  \node[komorka, minimum width=12mm, minimum height=6.2mm] at (1.5,3) {\footnotesize\ttfamily "kot"};
+  \draw[->, draw=szary] (2.15,3) -- (2.45,3);
+  \node[zm] at (3.6,3) {"kot": 2};
+  \node[para] at (5.75,3) {"pies": 1};
+  \node[kod, text=szary] at (0,4) {4};
+  \node[komorka, minimum width=12mm, minimum height=6.2mm] at (1.5,4) {\footnotesize\ttfamily "ryba"};
+  \draw[->, draw=szary] (2.15,4) -- (2.45,4);
+  \node[para] at (3.6,4) {"kot": 2};
+  \node[para] at (5.75,4) {"pies": 1};
+  \node[nowa] at (7.9,4) {"ryba": 1};
+  \node[kod, text=szary] at (0,5) {5};
+  \node[komorka, minimum width=12mm, minimum height=6.2mm] at (1.5,5) {\footnotesize\ttfamily "kot"};
+  \draw[->, draw=szary] (2.15,5) -- (2.45,5);
+  \node[zm] at (3.6,5) {"kot": 3};
+  \node[para] at (5.75,5) {"pies": 1};
+  \node[para] at (7.9,5) {"ryba": 1};
+  \node[kod, text=szary] at (0,6) {6};
+  \node[komorka, minimum width=12mm, minimum height=6.2mm] at (1.5,6) {\footnotesize\ttfamily "pies"};
+  \draw[->, draw=szary] (2.15,6) -- (2.45,6);
+  \node[para] at (3.6,6) {"kot": 3};
+  \node[zm] at (5.75,6) {"pies": 2};
+  \node[para] at (7.9,6) {"ryba": 1};
+  \node[notka, anchor=west, text width=56mm] at (9.4,2.0) {%
+    \tikz\node[nowa, minimum width=4mm, minimum height=3mm]{}; nowy klucz — \kod{get} zwrócił 0\\[4pt]
+    \tikz\node[zm, minimum width=4mm, minimum height=3mm]{}; klucz już był — wartość $+1$};
+  \node[notka, ramka, anchor=west, inner sep=5pt] at (9.4,4.5) {\kod{for g in glosy:}\\ \kod{\ \ \ \ licznik[g] = licznik.get(g, 0) + 1}};
+\end{tikzpicture}

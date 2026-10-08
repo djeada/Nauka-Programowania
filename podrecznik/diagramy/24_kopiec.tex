@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    wezel/.style={circle, draw=akcent, fill=white, minimum size=8.5mm, inner sep=0pt, font=\ttfamily\small},
+    el/.style={komorka, minimum width=9mm, minimum height=8mm}]
+  % drzewo
+  \node[wezel, fill=zielenjasna, draw=zielen] (t0) at (2.4,0) {1};
+  \node[wezel] (t1) at (1.0,-1.3) {3};
+  \node[wezel] (t2) at (3.8,-1.3) {2};
+  \node[wezel] (t3) at (0.3,-2.6) {5};
+  \node[wezel] (t4) at (1.7,-2.6) {9};
+  \node[wezel] (t5) at (3.1,-2.6) {8};
+  \draw[akcent, thick] (t0) -- (t1);  \draw[akcent, thick] (t0) -- (t2);
+  \draw[fiolet, thick] (t1) -- (t3);  \draw[fiolet, thick] (t1) -- (t4);
+  \draw[bursztyn, thick] (t2) -- (t5);
+  \foreach \i in {0,...,5} \node[indeks, right=0.3mm of t\i] {\i};
+  % lista
+  \begin{scope}[xshift=6.2cm, yshift=-2.2cm]
+    \foreach \v [count=\i from 0] in {1,3,2,5,9,8} {
+      \node[el] (a\i) at (\i*0.9,0) {\v};
+      \node[indeks, below=0.5mm of a\i] {\i};
+    }
+    \node[el, draw=zielen, fill=zielenjasna] at (a0) {1};
+    \foreach \p/\c/\cc in {0/1/akcent, 0/2/akcent, 1/3/fiolet, 1/4/fiolet, 2/5/bursztyn}
+      \draw[->, \cc, thick] ($(a\p.north)+(0.8mm,0)$) to[out=70, in=110] ($(a\c.north)+(-0.8mm,0)$);
+    \node[notka, anchor=south west, text width=58mm] at (-0.45,1.45) {dzieci elementu $i$: indeksy $2i+1$ i $2i+2$\\rodzic elementu $i$: indeks $\lfloor (i-1)/2 \rfloor$};
+    \node[notka, anchor=north west] at (-0.45,-0.75) {\kod{kopiec[0]} = minimum};
+  \end{scope}
+\end{tikzpicture}

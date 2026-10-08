@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+  % lewy panel: b = a (jedna lista, dwie nazwy)
+  \node[notka, anchor=north west] (k1) at (-0.3, 1.9) {%
+    \kod{a = [1, 2, 3]}\\ \kod{b = a}\\ \kod{b.append(4)}\\ \kod{print(a)\ \ \textcolor{szary}{\# [1, 2, 3, 4]}}};
+  \tablicabez{l}{2.4}{-0.9}{1,2,3,4}
+  \node[komorka ok] at (l-3) {4};
+  \node[ramka, draw=akcent, fill=none, fit=(l-0)(l-3), inner sep=3pt] (L) {};
+  \node[indeks, above=0mm of L.north east, anchor=south east] {obiekt listy};
+  \node[zmienna, minimum width=8mm] (a) at (0, -0.3) {a};
+  \node[zmienna, minimum width=8mm] (b) at (0, -1.5) {b};
+  \draw[strzalka, draw=akcent] (a.east) -- (L.west |- a.east);
+  \draw[strzalka, draw=akcent] (b.east) -- (L.west |- b.east);
+  \node[podpis, text width=58mm] at (2.1, -2.6) {\kod{b = a} \textbf{nie kopiuje} listy: obie nazwy\\ wskazują ten sam obiekt};
+  % prawy panel: c = a.copy() (dwie listy)
+  \begin{scope}[xshift=7.6cm]
+    \node[notka, anchor=north west] (k2) at (-0.3, 1.9) {%
+      \kod{a = [1, 2, 3]}\\ \kod{c = a.copy()}\\ \kod{c.append(4)}\\ \kod{print(a)\ \ \textcolor{szary}{\# [1, 2, 3]}}};
+    \tablicabez{p}{2.4}{-0.3}{1,2,3}
+    \tablicabez{q}{2.4}{-1.5}{1,2,3,4}
+    \node[komorka ok] at (q-3) {4};
+    \node[ramka, draw=akcent, fill=none, fit=(p-0)(p-2), inner sep=3pt] (P) {};
+    \node[ramka, draw=akcent, fill=none, fit=(q-0)(q-3), inner sep=3pt] (Q) {};
+    \node[zmienna, minimum width=8mm] (a2) at (0, -0.3) {a};
+    \node[zmienna, minimum width=8mm] (c2) at (0, -1.5) {c};
+    \draw[strzalka, draw=akcent] (a2.east) -- (P.west |- a2.east);
+    \draw[strzalka, draw=akcent] (c2.east) -- (Q.west |- c2.east);
+    \node[podpis, text width=58mm] at (2.1, -2.6) {\kod{copy()} (albo \kod{a[:]}) tworzy\\ \textbf{nową} listę z tymi samymi elementami};
+  \end{scope}
+\end{tikzpicture}

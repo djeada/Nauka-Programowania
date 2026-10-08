@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=25mm, y=1cm]
+  \node[podpis, anchor=east] at (-0.45,0) {\kod{w}};
+  \node[podpis, anchor=east] at (-0.45,-0.62) {indeks $i$};
+  \node[podpis, anchor=east] at (-0.45,-1.1) {potęga $k = n - i$};
+  \node[podpis, anchor=east] at (-0.45,-2.0) {znak};
+  \node[podpis, anchor=east] at (-0.45,-2.75) {\kod{jednomian}};
+  \foreach \v/\c/\z/\j [count=\i from 0] in {-1/akcent/{"-"}/{"x\textasciicircum4"}, 4/bursztyn/{" + "}/{"4x\textasciicircum3"},
+                                         0/szary/{}/{}, 1/fiolet/{" + "}/{"x"}, -7/zielen/{" - "}/{"7"}} {
+    \node[komorka, minimum width=10mm, draw=\c, fill=\c!12] (w\i) at (\i,0) {\v};
+    \node[indeks] at (\i,-0.62) {\i};
+    \pgfmathtruncatemacro{\k}{4-\i}
+    \node[font=\footnotesize, text=fiolet] at (\i,-1.1) {\k};
+    \ifnum\i=2
+      \node[podpis, text=czerwien, text width=20mm] at (\i,-2.4) {\kod{a == 0}\\ pomijamy};
+    \else
+      \node[kod, text=\c] (z\i) at (\i,-2.0) {\z};
+      \node[kod, text=\c] (j\i) at (\i,-2.75) {\j};
+      \draw[strzalka, draw=\c!70] (\i,-1.35) -- (z\i);
+    \fi
+  }
+  \draw[czerwien, thick] ($(w2.south west)+(2pt,2pt)$) -- ($(w2.north east)-(2pt,2pt)$);
+  % sklejony napis
+  \node[podpis, anchor=east] at (-0.45,-3.8) {\kod{napis}};
+  \node[kod, anchor=west, inner xsep=0pt, text=akcent] (s0) at (-0.3,-3.8) {"-x\textasciicircum4};
+  \node[kod, anchor=west, inner xsep=0pt, text=bursztyn] (s1) at (s0.east) {\ +\ 4x\textasciicircum3};
+  \node[kod, anchor=west, inner xsep=0pt, text=fiolet] (s3) at (s1.east) {\ +\ x};
+  \node[kod, anchor=west, inner xsep=0pt, text=zielen] (s4) at (s3.east) {\ -\ 7"};
+  \begin{scope}[on background layer]
+    \node[ramka, fit=(s0)(s4), inner sep=4pt] (box) {};
+  \end{scope}
+  \node[podpis, anchor=west] at ($(box.east)+(0.1,0)$) {pierwszy wyraz: sam minus, bez spacji;\\ współczynnik $\pm 1$ przy $x$ pomijamy};
+\end{tikzpicture}

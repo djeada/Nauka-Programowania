@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=5.2mm, y=-1cm,
+    zn/.style={komorka, minimum width=5.2mm, minimum height=7mm, font=\ttfamily\small},
+    g1/.style={zn, draw=akcent, fill=akcentjasny},
+    g2/.style={zn, draw=zielen, fill=zielenjasna},
+    g0/.style={zn, draw=bursztyn, fill=bursztynjasny}]
+  % wzorzec
+  \node[anchor=west, font=\small\bfseries] at (-0.5,-1.6) {wzorzec};
+  \node[anchor=west, font=\ttfamily] (w) at (4,-1.6) {\textcolor{akcent}{\textbf{(}[0-9]\{2\}\textbf{)}}:\textcolor{zielen}{\textbf{(}[0-9]\{2\}\textbf{)}}};
+  \node[font=\scriptsize\bfseries, text=akcent] at ($(w.north west)+(1.1mm,1mm)$) {1};
+  \node[font=\scriptsize\bfseries, text=zielen] at ($(w.north west)+(25.6mm,1mm)$) {2};
+  % tekst
+  \node[anchor=west, font=\small\bfseries] at (-0.5,-0.55) {tekst};
+  \foreach \z [count=\i from 0] in {P,o,c,i,ą,g,\ ,o,\ ,0,7,:,4,5,\ ,z,\ ,p,e,r,o,n,u,\ ,3,.} {
+    \ifnum\i<9 \def\s{zn}\else\ifnum\i<11 \def\s{g1}\else\ifnum\i=11 \def\s{g0}\else\ifnum\i<14 \def\s{g2}\else\def\s{zn}\fi\fi\fi\fi
+    \node[\s] (t\i) at (\i,0.4) {\z};
+    \node[indeks] at (\i,0.95) {\i};
+  }
+  % wyniki
+  \draw[klamra, decoration={mirror}] ($(t9.south west)+(0,-5.5mm)$) -- ($(t13.south east)+(0,-5.5mm)$);
+  \node[anchor=north west, align=left, font=\small] at (7.6,1.75) {%
+    \kod{m.group(0)} = \kod{"07:45"} \quad (\kod{m.start()} = 9, \kod{m.end()} = 14)\\[2pt]
+    \kod{m.group(1)} = \textcolor{akcent}{\kod{"07"}}\\[2pt]
+    \kod{m.group(2)} = \textcolor{zielen}{\kod{"45"}}};
+\end{tikzpicture}

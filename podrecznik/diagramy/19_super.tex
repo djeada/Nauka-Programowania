@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    lin/.style={font=\ttfamily\footnotesize, anchor=west, inner sep=1.5pt},
+    krok/.style={circle, fill=bursztyn, text=white, font=\footnotesize\bfseries, inner sep=1.5pt}]
+  \node[kod, font=\ttfamily\normalsize, anchor=west] at (0,1.25) {auto = Samochod("Fiat", "benzyna")};
+  % Samochod.__init__
+  \node[lin] (s1) at (0.15,0.45) {\textcolor{fiolet}{\textbf{Samochod.\_\_init\_\_}}(self, nazwa, paliwo)};
+  \node[lin] (s2) at (0.65,0.0) {super().\_\_init\_\_(nazwa, 4)};
+  \node[lin] (s3) at (0.65,-0.45) {self.paliwo = paliwo};
+  \begin{scope}[on background layer]
+    \node[draw=fiolet, fill=fiolet!10, rounded corners=2pt, fit=(s1)(s2)(s3), inner sep=4pt] (S) {};
+  \end{scope}
+  \node[krok] at (S.north west) {1};
+  % Pojazd.__init__
+  \node[lin] (p1) at (9.0,0.45) {\textcolor{akcent}{\textbf{Pojazd.\_\_init\_\_}}(self, nazwa, kola)};
+  \node[lin] (p2) at (9.5,0.0) {self.nazwa = nazwa};
+  \node[lin] (p3) at (9.5,-0.45) {self.kola = kola};
+  \begin{scope}[on background layer]
+    \node[draw=akcent, fill=akcent!10, rounded corners=2pt, fit=(p1)(p2)(p3), inner sep=4pt] (P) {};
+  \end{scope}
+  \node[krok] at (P.north west) {2};
+  \draw[strzalka, draw=akcent, thick] (s2.east) -- node[above, font=\footnotesize, text=akcent, pos=0.55] {woła} (P.west |- s2);
+  \draw[strzalka, draw=zielen, thick] (P.west |- s3) -- node[below, font=\footnotesize, text=zielen, pos=0.3] {wraca} (s3.east -| s2.east);
+  % stan obiektu
+  \node[rectangle, draw=zielen, fill=zielen!10, rounded corners=2pt, font=\ttfamily\footnotesize, align=left, inner sep=5pt, anchor=north west] (O) at (0,-1.25) {%
+    \textbf{obiekt auto}\\ nazwa\ \ = "Fiat"\ \ \ \ \ \ \textcolor{szary}{\# ustawił Pojazd}\\ kola\ \ \ = 4\ \ \ \ \ \ \ \ \ \ \ \textcolor{szary}{\# ustawił Pojazd}\\ paliwo = "benzyna"\ \ \ \textcolor{szary}{\# ustawił Samochod}};
+  \node[krok] at (O.north west) {3};
+  \node[notka, anchor=north west, text width=64mm] at (9.0,-1.25) {%
+    \kod{super()} oznacza „wersję z klasy bazowej” — wywołaną dla tego samego obiektu \kod{self}.
+    Klasa potomna nie powtarza kodu bazowego, tylko go \textbf{woła} i dopisuje swoją część.
+    Tak samo w zwykłej metodzie:\\[2pt]
+    \kod{return super().opis() + ...}};
+\end{tikzpicture}

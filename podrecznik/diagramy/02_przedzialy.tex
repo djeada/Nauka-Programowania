@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=1.5mm, y=1mm]
+  % oś wieku 0..90
+  \draw[->, draw=szary] (-2,0) -- (98,0) node[right, podpis] {wiek};
+  \foreach \t in {0,7,18,65,90} {
+    \draw[draw=szary] (\t,-1.5) -- (\t,1.5);
+    \node[indeks, below=1.5mm] at (\t,0) {\t};
+  }
+  \fill[zielenjasna] (0,3) rectangle (7,11);       \draw[zielen] (0,3) rectangle (7,11);
+  \fill[bursztynjasny] (7,3) rectangle (18,11);    \draw[bursztyn] (7,3) rectangle (18,11);
+  \fill[akcentjasny] (18,3) rectangle (65,11);     \draw[akcent] (18,3) rectangle (65,11);
+  \fill[bursztynjasny] (65,3) rectangle (95,11);   \draw[bursztyn] (65,3) rectangle (95,11);
+  \node[font=\footnotesize] at (3.5,7) {0 zł};
+  \node[font=\footnotesize] at (12.5,7) {ulgowy};
+  \node[font=\footnotesize] at (41.5,7) {normalny};
+  \node[font=\footnotesize] at (80,7) {ulgowy};
+  \node[kod, font=\ttfamily\scriptsize, text=zielen] at (3.5,16) {wiek < 7};
+  \node[kod, font=\ttfamily\scriptsize, text=bursztyn] at (12.5,20) {wiek < 18};
+  \node[kod, font=\ttfamily\scriptsize, text=akcent] at (41.5,16) {wiek < 65};
+  \node[kod, font=\ttfamily\scriptsize, text=bursztyn] at (80,16) {else};
+  \draw[szary, densely dotted] (12.5,17.5) -- (12.5,11);
+\end{tikzpicture}

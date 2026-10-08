@@ -1,0 +1,35 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    pud/.style={rectangle, draw=fiolet, fill=fioletjasny, rounded corners=2pt, font=\ttfamily\footnotesize, minimum width=30mm, minimum height=7mm, align=center},
+    obj/.style={rectangle, draw=akcent, fill=akcentjasny, rounded corners=2pt, font=\ttfamily\footnotesize, minimum width=30mm, minimum height=7mm},
+    ok/.style={font=\footnotesize\bfseries, text=zielen},
+    brak/.style={font=\footnotesize, text=czerwien}]
+  \foreach \x/\wyw/\a/\b/\c/\d/\e in {
+      0/{auto.opis()}/{}/{znaleziona}/{}/{}/{},
+      5.4/{auto.jedz(5)}/{}/{brak}/{znaleziona}/{}/{},
+      10.8/{auto.zadzwon()}/{}/{brak}/{brak}/{brak}/{AttributeError}} {
+    \node[kod, font=\ttfamily\small] at (\x,1.1) {\wyw};
+    \node[obj] (o) at (\x,0) {obiekt \textbf{auto}};
+    \node[pud] (s) at (\x,-1.4) {Samochod};
+    \node[pud] (p) at (\x,-2.8) {Pojazd};
+    \node[pud, draw=linia, fill=tlo] (ob) at (\x,-4.2) {object};
+    \draw[strzalka, draw=szary] (o) -- (s);
+    \draw[strzalka, draw=szary] (s) -- (p);
+    \draw[strzalka, draw=szary] (p) -- (ob);
+  }
+  % wyniki — auto.opis()
+  \node[ok, anchor=west] at (1.6,-1.4) {\checkmark\ jest};
+  \node[podpis, anchor=north] at (0,-4.7) {wersja z \kod{Samochod}\\ — dalej nie szukamy};
+  % auto.jedz(5)
+  \node[brak, anchor=west] at (7.0,-1.4) {nie ma};
+  \node[ok, anchor=west] at (7.0,-2.8) {\checkmark\ jest};
+  \node[podpis, anchor=north] at (5.4,-4.7) {metoda odziedziczona\\ po \kod{Pojazd}};
+  % auto.zadzwon()
+  \node[brak, anchor=west] at (12.4,-1.4) {nie ma};
+  \node[brak, anchor=west] at (12.4,-2.8) {nie ma};
+  \node[brak, anchor=west] at (12.4,-4.2) {nie ma};
+  \node[podpis, text=czerwien, anchor=north] at (10.8,-4.7) {\kod{AttributeError} — \kod{Rower}\\ nie leży na tej ścieżce};
+  \begin{scope}[on background layer]
+    \fill[zielenjasna] (-1.7,-1.85) rectangle (2.7,-0.95);
+    \fill[zielenjasna] (3.7,-3.25) rectangle (8.1,-2.35);
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=6.5mm]
+  \tikzset{zn/.style={komorka, minimum width=6.5mm, minimum height=7mm}}
+  % wejście
+  \foreach \c [count=\i from 0] in {a,l,a,_,M,A,_,k,o,t,A} {
+    \if\c_ \node[komorka szara, minimum width=6.5mm, minimum height=7mm] (t\i) at (\i+2, 0) {\textvisiblespace};
+    \else \node[zn] (t\i) at (\i+2, 0) {\c}; \fi
+  }
+  \node[kod, anchor=east] at (0.6, 0) {zdanie};
+  % trzy słowa — kolumny
+  \foreach \k/\x/\w/\pierwszy/\reszta/\P/\R/\wynik/\src in {0/1/ala/a/la/A/la/Ala/1, 1/6/MA/M/A/M/a/Ma/5, 2/11/kotA/k/otA/K/ota/Kota/9} {
+    \node[komorka, minimum width=15mm, minimum height=7mm] (w\k) at (\x+1.5, -1.5) {'\w'};
+    \draw[strzalka, draw=akcent] (t\src.south) -- (w\k.north);
+    \node[komorka wyr, minimum width=7mm, minimum height=7mm] (p\k) at (\x+0.4, -2.95) {\pierwszy};
+    \node[komorka, fill=akcentjasny, minimum width=12mm, minimum height=7mm] (r\k) at (\x+2.5, -2.95) {\reszta};
+    \node[indeks, above=0.3mm of p\k] {\kod{w[0]}};
+    \node[indeks, above=0.3mm of r\k] {\kod{w[1:]}};
+    \draw[->, draw=szary] (w\k.south) -- (p\k.north east);
+    \draw[->, draw=szary] (w\k.south) -- (r\k.north west);
+    \node[komorka wyr, minimum width=7mm, minimum height=7mm] (pp\k) at (\x+0.4, -4.3) {\P};
+    \node[komorka, fill=akcentjasny, minimum width=12mm, minimum height=7mm] (rr\k) at (\x+2.5, -4.3) {\R};
+    \draw[->, draw=bursztyn] (p\k) -- node[left, font=\tiny\ttfamily, text=bursztyn] {upper()} (pp\k);
+    \draw[->, draw=akcent] (r\k) -- node[right, font=\tiny\ttfamily, text=akcent] {lower()} (rr\k);
+    \node[font=\small] at ($(pp\k.east)!0.5!(rr\k.west)$) {+};
+    \node[komorka ok, minimum width=15mm, minimum height=7mm] (o\k) at (\x+1.5, -5.6) {'\wynik'};
+    \draw[->, draw=zielen] ($(pp\k.south)!0.5!(rr\k.south)$) -- (o\k.north);
+  }
+  \node[kod, anchor=east] at (0.6, -1.5) {slowa};
+  \node[kod, anchor=east] at (0.6, -5.6) {nowe};
+  % wynik
+  \foreach \c [count=\i from 0] in {A,l,a,_,M,a,_,K,o,t,a} {
+    \if\c_ \node[komorka szara, minimum width=6.5mm, minimum height=7mm] (z\i) at (\i+2, -7.0) {\textvisiblespace};
+    \else \node[komorka ok, minimum width=6.5mm, minimum height=7mm] (z\i) at (\i+2, -7.0) {\c}; \fi
+  }
+  \node[kod, anchor=east] at (0.6, -7.0) {wynik};
+  \draw[strzalka, draw=zielen] (o1.south) -- node[right, font=\scriptsize\ttfamily, text=zielen] {" ".join(nowe)} (z5.north);
+  \node[kod, font=\ttfamily\footnotesize, text=akcent, anchor=west] at (13.4, -0.75) {zdanie.split()};
+  \node[kod, font=\ttfamily\footnotesize, text=tusz, anchor=west, align=left] at (14.9, -3.6) {w[0].upper()\\+ w[1:].lower()};
+\end{tikzpicture}

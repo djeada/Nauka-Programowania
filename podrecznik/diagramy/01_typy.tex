@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+  % wiersz 1: napis
+  \node[font=\footnotesize\bfseries, anchor=west] at (-0.2,2.2) {\kod{s = input()}\quad \textmd{\textcolor{szary}{(użytkownik wpisał 7)}}};
+  \node[zmienna, minimum width=16mm] (s) at (0.8,1.1) {"7"};
+  \node[indeks, above=0.5mm of s] {s};
+  \node[font=\scriptsize, text=zielen, below=0.5mm of s] {typ \kod{str}};
+  \node[kod, anchor=west] (op1) at (2.4,1.1) {s + s};
+  \draw[strzalka] (op1.east) -- ++(8mm,0) node[right, zmienna, minimum width=16mm, draw=czerwien, fill=czerwienjasna] (r1) {"77"};
+  \node[notka, right=2mm of r1, text width=46mm] {dla napisów \kod{+} \textbf{skleja}: znak 7, potem znowu znak 7};
+  % konwersja
+  \draw[strzalka, draw=akcent, very thick] (s.south) ++(0,-6mm) -- ++(0,-10mm) node[midway, right, kod, font=\ttfamily\footnotesize, text=akcent] {n = int(s)};
+  % wiersz 2: liczba
+  \node[zmienna, minimum width=16mm] (n) at (0.8,-1.9) {7};
+  \node[indeks, above=0.5mm of n] {n};
+  \node[font=\scriptsize, text=akcent, below=0.5mm of n] {typ \kod{int}};
+  \node[kod, anchor=west] (op2) at (2.4,-1.9) {n + n};
+  \draw[strzalka] (op2.east) -- ++(8mm,0) node[right, zmienna, minimum width=16mm, draw=zielen, fill=zielenjasna] (r2) {14};
+  \node[notka, right=2mm of r2, text width=46mm] {dla liczb \kod{+} \textbf{dodaje}: $7 + 7 = 14$};
+  % ramka z innymi konwersjami
+  \node[ramka, anchor=north west, font=\footnotesize, inner sep=5pt] at (11.4,2.5) {%
+    \begin{tabular}{@{}l@{\;}c@{\;}l@{}}
+    \multicolumn{3}{@{}l}{\textbf{Zamiany typów}}\\[2pt]
+    \kod{int("42")} & $\to$ & \kod{42}\\
+    \kod{float("2.5")} & $\to$ & \kod{2.5}\\
+    \kod{float(3)} & $\to$ & \kod{3.0}\\
+    \kod{int(3.9)} & $\to$ & \kod{3}\\
+    \kod{str(42)} & $\to$ & \kod{"42"}\\
+    \kod{int("2.5")} & $\to$ & \textcolor{czerwien}{błąd}
+    \end{tabular}};
+\end{tikzpicture}

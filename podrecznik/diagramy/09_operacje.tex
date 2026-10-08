@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+  % kolejne stany tej samej listy po operacjach
+  \def\dy{1.35}
+  \foreach \r/\kodop/\vals in {0/{a = [3, 1, 4]}/{3,1,4}, 1/{a.append(5)}/{3,1,4,5}, 2/{a.insert(1, 9)}/{3,9,1,4,5},
+                              3/{a[3] = 8}/{3,9,1,8,5}, 4/{a.remove(1)}/{3,9,8,5}, 5/{x = a.pop()}/{3,9,8}} {
+    \node[kod, anchor=west, font=\ttfamily\small] at (0, -\r*\dy) {\kodop};
+    \foreach \v [count=\i from 0] in \vals {
+      \node[komorka] (r\r-\i) at (4.2+\i*0.8, -\r*\dy) {\v};
+      \node[indeks, below=0.4mm of r\r-\i] {\i};
+    }
+  }
+  \node[komorka ok] at (r1-3) {5};
+  \node[komorka ok] at (r2-1) {9};
+  \foreach \i in {2,3,4} \node[komorka, fill=akcentjasny] at (r2-\i) {\ifcase\i\or\or 1\or 4\or 5\fi};
+  \node[komorka wyr] at (r3-3) {8};
+  \foreach \i in {2,3} \node[komorka, fill=akcentjasny] at (r4-\i) {\ifcase\i\or\or 8\or 5\fi};
+  \node[zmienna, minimum width=8mm, draw=zielen, fill=zielenjasna] (x) at (7.9, -5*\dy) {5};
+  \node[kod, left=1mm of x] {x};
+  \foreach \r/\opis in {0/{nowa lista: 3 elementy, indeksy 0–2},
+                        1/{dopisuje element na \textbf{końcu}},
+                        2/{wstawia 9 na indeks 1; dalsze elementy\\przesuwają się o jedno miejsce w prawo},
+                        3/{zastępuje element o indeksie 3},
+                        4/{usuwa \textbf{pierwszą} wartość 1; dalsze\\elementy przesuwają się w lewo},
+                        5/{usuwa ostatni element i go zwraca}}
+    \node[notka, anchor=west] at (8.7, -\r*\dy) {\opis};
+\end{tikzpicture}

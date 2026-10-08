@@ -1,0 +1,47 @@
+\begin{tikzpicture}[x=1cm, y=1cm]
+  % ---------- (a) dodawanie ----------
+  \node[font=\bfseries\small] at (1.4,2.75) {suma — wyrównanie do prawej};
+  \foreach \k [count=\i from 0] in {3,2,1,0} \node[font=\footnotesize, text=fiolet] at (\i*0.9,2.15) {$x^{\k}$};
+  \node[podpis, anchor=east] at (-0.55,1.4) {\kod{a}};
+  \node[podpis, anchor=east] at (-0.55,0.5) {\kod{b}};
+  \node[podpis, anchor=east] at (-0.55,-0.6) {\kod{a + b}};
+  \foreach \v [count=\i from 0] in {1,-2,0,4} \node[komorka] at (\i*0.9,1.4) {\v};
+  \node[komorka szara] at (0,0.5) {0};
+  \node[komorka szara] at (0.9,0.5) {0};
+  \node[komorka] at (1.8,0.5) {3};
+  \node[komorka] at (2.7,0.5) {5};
+  \draw[szary] (-0.45,-0.05) -- (3.15,-0.05);
+  \foreach \v [count=\i from 0] in {1,-2,3,9} \node[komorka ok] at (\i*0.9,-0.6) {\v};
+  \node[podpis, text width=40mm] at (1.35,-1.55) {brakujące potęgi w krótszej\\ liście uzupełniamy zerami};
+  % ---------- (b) mnożenie ----------
+  \begin{scope}[xshift=7.6cm]
+    \node[font=\bfseries\small] at (1.6,2.75) {iloczyn $(x+2)(x^2-x+3)$};
+    \node[podpis] at (-1.05,2.05) {\kod{b[j]}\,$\to$};
+    \node[podpis] at (-1.05,1.45) {\kod{a[i]}\,$\downarrow$};
+    \foreach \v/\t [count=\j from 0] in {1/{$x^2$}, -1/{$-x$}, 3/{$3$}} {
+      \node[komorka szara, text=tusz] (b\j) at (\j*1.25,2.05) {\v};
+      \node[font=\footnotesize, text=szary] at (\j*1.25,1.45) {\t};
+    }
+    \foreach \v/\t [count=\i from 0] in {1/{$x$}, 2/{$2$}} {
+      \node[komorka szara, text=tusz] (a\i) at (-1.05,0.6-\i*1.25) {\v};
+      \node[font=\footnotesize, text=szary, anchor=east] at (-1.55,0.6-\i*1.25) {\t};
+    }
+    % komórki: wartość a[i]*b[j], kolor wg i+j
+    \foreach \i/\j/\v/\c/\p in {0/0/1/akcent/{x^3}, 0/1/-1/bursztyn/{x^2}, 0/2/3/fiolet/{x},
+                               1/0/2/bursztyn/{x^2}, 1/1/-2/fiolet/{x}, 1/2/6/zielen/{1}} {
+      \node[rectangle, draw=\c, fill=\c!14, minimum width=11mm, minimum height=11mm, font=\ttfamily\small]
+        (c\i\j) at (\j*1.25,0.6-\i*1.25) {\v};
+      \node[font=\scriptsize, text=\c, anchor=north east, inner sep=1.5pt] at (c\i\j.north east) {$\p$};
+    }
+    % wynik
+    \node[podpis, anchor=east] at (-0.55,-2.15) {wynik};
+    \foreach \v/\c [count=\k from 0] in {1/akcent, 1/bursztyn, 1/fiolet, 6/zielen} {
+      \node[rectangle, draw=\c, fill=\c!14, minimum width=8mm, minimum height=8mm, font=\ttfamily\small]
+        (r\k) at (\k*0.95,-2.15) {\v};
+      \node[indeks, below=0.4mm of r\k] {\k};
+    }
+    \node[notka, anchor=west, text width=39mm] at (4.05,0.0) {%
+      Iloczyn \kod{a[i]*b[j]} trafia\\ do \kod{wynik[i+j]}.\\[3pt]
+      Komórki o tym samym\\ $i + j$ (ten sam kolor)\\ leżą na jednej\\ przekątnej — sumujemy je.};
+  \end{scope}
+\end{tikzpicture}

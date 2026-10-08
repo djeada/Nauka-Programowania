@@ -1,0 +1,23 @@
+\begin{tikzpicture}[node distance=6mm and 9mm]
+  \node[decyzja] (d1) {warunek 1?};
+  \node[decyzja, below=of d1] (d2) {warunek 2?};
+  \node[decyzja, below=of d2] (d3) {warunek 3?};
+  \node[blok, right=of d1] (b1) {blok \kod{if}};
+  \node[blok, right=of d2] (b2) {blok 1.\ \kod{elif}};
+  \node[blok, right=of d3] (b3) {blok 2.\ \kod{elif}};
+  \node[blok, below=of d3, fill=tlo, draw=szary] (b4) {blok \kod{else}};
+  \coordinate (out) at ($(b3.east)+(10mm,0)$);
+  \node[start, below=6mm of out |- b4.south] (e) {dalej};
+  \draw[strzalka] ($(d1.north)+(0,6mm)$) -- (d1);
+  \draw[strzalka] (d1) -- node[tak, above] {tak} (b1);
+  \draw[strzalka] (d2) -- node[tak, above] {tak} (b2);
+  \draw[strzalka] (d3) -- node[tak, above] {tak} (b3);
+  \draw[strzalka] (d1) -- node[nie, left] {nie} (d2);
+  \draw[strzalka] (d2) -- node[nie, left] {nie} (d3);
+  \draw[strzalka] (d3) -- node[nie, left] {nie} (b4);
+  \foreach \b in {b1,b2,b3} \draw (\b.east) -- (\b.east -| out);
+  \draw (b1.east -| out) -- (out);
+  \draw[strzalka] (out) -- (e);
+  \draw[strzalka] (b4) |- (e);
+  \node[podpis, right=14mm of b2, text width=40mm, align=left] {Warunki są sprawdzane\\ \textbf{od góry}. Wykonuje się\\ \textbf{tylko pierwszy} blok,\\ którego warunek jest\\ prawdziwy.};
+\end{tikzpicture}

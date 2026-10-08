@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=9mm, y=9mm]
+  \tikzset{p/.style={komorka, minimum width=9mm, minimum height=9mm, draw=linia},
+           s/.style={komorka, minimum width=9mm, minimum height=9mm, fill=akcentjasny, font=\ttfamily\scriptsize}}
+  % lewa: komórka w środku planszy
+  \foreach \i in {0,...,4} \foreach \j in {0,...,4} \node[p] (l\i\j) at (\j, -\i) {};
+  \foreach \dr in {-1,0,1} \foreach \dc in {-1,0,1} {
+    \pgfmathtruncatemacro{\r}{2+\dr} \pgfmathtruncatemacro{\c}{2+\dc}
+    \node[s] at (\c, -\r) {\dr,\dc};
+  }
+  \node[komorka wyr, minimum width=9mm, minimum height=9mm, font=\ttfamily\scriptsize] at (2, -2) {(r, c)};
+  \foreach \i in {0,...,4} { \node[indeks] at (-0.7, -\i) {\i}; \node[indeks] at (\i, 0.68) {\i}; }
+  \node[podpis] at (2, -5.45) {8 sąsiadów: przesunięcia $(dr, dc)$, $dr, dc \in \{-1, 0, 1\}$};
+  % prawa: róg planszy
+  \begin{scope}[xshift=7.6*9mm]
+    \foreach \i in {0,...,3} \foreach \j in {0,...,3} \node[p] at (\j+1, -\i-1) {};
+    \foreach \i/\j in {-1/-1,-1/0,-1/1,0/-1,1/-1}
+      \node[komorka szara, densely dashed, minimum width=9mm, minimum height=9mm, font=\scriptsize] at (\j+1, -\i-1) {poza};
+    \foreach \i/\j in {0/1,1/0,1/1} \node[s] at (\j+1, -\i-1) {};
+    \node[komorka wyr, minimum width=9mm, minimum height=9mm, font=\ttfamily\scriptsize] at (1, -1) {(0, 0)};
+    \foreach \i in {0,...,3} { \node[indeks] at (4.7, -\i-1) {\i}; \node[indeks] at (\i+1, -4.65) {\i}; }
+    \node[podpis, text width=70mm] at (2.5, -5.45) {w rogu na planszy leżą tylko 3 sąsiedzi;\\ sprawdzaj \kod{0 <= rr < n and 0 <= cc < m}};
+  \end{scope}
+\end{tikzpicture}

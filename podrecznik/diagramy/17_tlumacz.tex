@@ -1,0 +1,43 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    sl/.style={rectangle, draw=akcent, fill=white, minimum height=7mm, minimum width=14mm, font=\ttfamily\footnotesize},
+    traf/.style={sl, draw=zielen, fill=zielenjasna},
+    brak/.style={sl, draw=bursztyn, fill=bursztynjasny}]
+  \node[podpis, anchor=east] at (-1.0,0) {wejście};
+  \node[podpis, anchor=east] at (-1.0,-1.1) {w słowniku?};
+  \node[podpis, anchor=east] at (-1.0,-2.2) {\kod{wynik}};
+  \node[sl] (w0) at (0.0,0) {ala};
+  \node[font=\footnotesize, text=bursztyn] at (0.0,-1.1) {nie};
+  \node[brak] (o0) at (0.0,-2.2) {ala};
+  \draw[strzalka, draw=bursztyn] (w0) -- (0.0,-0.88); \draw[strzalka, draw=bursztyn] (0.0,-1.32) -- (o0);
+  \node[sl] (w1) at (1.85,0) {ma};
+  \node[font=\footnotesize, text=zielen] at (1.85,-1.1) {tak};
+  \node[traf] (o1) at (1.85,-2.2) {has};
+  \draw[strzalka, draw=zielen] (w1) -- (1.85,-0.88); \draw[strzalka, draw=zielen] (1.85,-1.32) -- (o1);
+  \node[sl] (w2) at (3.70,0) {kota};
+  \node[font=\footnotesize, text=zielen] at (3.70,-1.1) {tak};
+  \node[traf] (o2) at (3.70,-2.2) {a cat};
+  \draw[strzalka, draw=zielen] (w2) -- (3.70,-0.88); \draw[strzalka, draw=zielen] (3.70,-1.32) -- (o2);
+  \node[sl] (w3) at (5.55,0) {i};
+  \node[font=\footnotesize, text=zielen] at (5.55,-1.1) {tak};
+  \node[traf] (o3) at (5.55,-2.2) {and};
+  \draw[strzalka, draw=zielen] (w3) -- (5.55,-0.88); \draw[strzalka, draw=zielen] (5.55,-1.32) -- (o3);
+  \node[sl] (w4) at (7.40,0) {ala};
+  \node[font=\footnotesize, text=bursztyn] at (7.40,-1.1) {nie};
+  \node[brak] (o4) at (7.40,-2.2) {ala};
+  \draw[strzalka, draw=bursztyn] (w4) -- (7.40,-0.88); \draw[strzalka, draw=bursztyn] (7.40,-1.32) -- (o4);
+  \node[sl] (w5) at (9.25,0) {ma};
+  \node[font=\footnotesize, text=zielen] at (9.25,-1.1) {tak};
+  \node[traf] (o5) at (9.25,-2.2) {has};
+  \draw[strzalka, draw=zielen] (w5) -- (9.25,-0.88); \draw[strzalka, draw=zielen] (9.25,-1.32) -- (o5);
+  \node[sl] (w6) at (11.10,0) {psa};
+  \node[font=\footnotesize, text=zielen] at (11.10,-1.1) {tak};
+  \node[traf] (o6) at (11.10,-2.2) {a dog};
+  \draw[strzalka, draw=zielen] (w6) -- (11.10,-0.88); \draw[strzalka, draw=zielen] (11.10,-1.32) -- (o6);
+  % słowniki
+  \node[notka, ramka, anchor=north west, inner sep=5pt] (S) at (-0.7,-3.1) {%
+    \kod{slownik = \{"ma": "has", "kota": "a cat",}\\
+    \kod{\ \ \ \ \ \ \ \ \ \ \ "psa": "a dog", "i": "and"\}}};
+  \node[notka, anchor=north west, text width=58mm] at (7.3,-3.05) {%
+    \textcolor{zielen}{tak} — do wyniku trafia \kod{slownik[slowo]}\\[2pt]
+    \textcolor{bursztyn}{nie} — słowo zostaje bez zmian\\ \hspace*{6mm}i trafia do licznika:\\ \hspace*{6mm}\kod{nieznane = \{"ala": 2\}}};
+\end{tikzpicture}

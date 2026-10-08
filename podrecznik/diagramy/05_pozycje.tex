@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=13mm, y=10mm]
+  \tikzset{duza/.style={komorka, minimum width=11mm, minimum height=11mm, font=\ttfamily\large}}
+  \foreach \c/\i [count=\k from 0] in {4/3,0/2,7/1,2/0} {
+    \ifnum\k<3 \node[duza, fill=akcentjasny] (c\k) at (\k,0) {\c}; \else \node[duza, draw=bursztyn, fill=bursztynjasny] (c\k) at (\k,0) {\c}; \fi
+    \node[indeks] at (\k,0.9) {$i = \i$};
+    \node[font=\footnotesize] at (\k,-0.95) {$10^{\i}$};
+    \node[font=\scriptsize, text=szary] at (\k,-1.35) {(\ifnum\i=3 1000\fi\ifnum\i=2 100\fi\ifnum\i=1 10\fi\ifnum\i=0 1\fi)};
+  }
+  \node[podpis, anchor=east] at (-0.6,0.9) {pozycja:};
+  \node[podpis, anchor=east] at (-0.6,0) {cyfra $c_i$:};
+  \node[podpis, anchor=east] at (-0.6,-1.15) {waga:};
+  \node[font=\footnotesize, anchor=west] at (-0.4,-2.1) {$4072 = 4 \cdot 1000 + 0 \cdot 100 + 7 \cdot 10 + 2 \cdot 1$};
+  % cięcie
+  \draw[draw=czerwien, very thick, densely dashed] (2.5,1.25) -- (2.5,-0.6);
+  \draw[klamra, draw=akcent] (-0.45,1.3) -- (2.42,1.3) node[midway, above=5pt, font=\ttfamily\footnotesize, text=akcent] {4072 // 10 = 407};
+  \draw[klamra, draw=bursztyn] (2.58,1.3) -- (3.45,1.3) node[midway, above=5pt, xshift=7mm, font=\ttfamily\footnotesize, text=bursztyn] {4072 \% 10 = 2};
+\end{tikzpicture}

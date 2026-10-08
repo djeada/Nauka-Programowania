@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+  % dwa wskaźniki: a = [1, 7, 12], b = [4, 9, 13]
+  \def\dy{1.05}
+  \node[font=\footnotesize\bfseries] at (0.8, 0.75) {\kod{a}};
+  \node[font=\footnotesize\bfseries] at (4.0, 0.75) {\kod{b}};
+  \node[font=\footnotesize\bfseries, anchor=west] at (5.6, 0.75) {para};
+  \node[font=\footnotesize\bfseries, anchor=west] at (7.6, 0.75) {różnica};
+  \node[font=\footnotesize\bfseries, anchor=west] at (9.3, 0.75) {najlepsza};
+  \node[font=\footnotesize\bfseries, anchor=west] at (11.0, 0.75) {ruch};
+  \foreach \r/\ia/\jb/\para/\roz/\best/\ruch in {
+      0/0/0/{1, 4}/3/3/{a[i] < b[j] → i += 1},
+      1/1/0/{7, 4}/3/3/{b[j] < a[i] → j += 1},
+      2/1/1/{7, 9}/2/2/{i += 1},
+      3/2/1/{12, 9}/3/2/{j += 1},
+      4/2/2/{12, 13}/1/1/{i += 1 → koniec a}} {
+    \node[indeks, anchor=east] at (-0.55, -\r*\dy) {krok \the\numexpr\r+1\relax};
+    \foreach \v [count=\k from 0] in {1,7,12} {
+      \ifnum\k<\ia \def\st{komorka szara}\else\ifnum\k=\ia \def\st{komorka wyr}\else \def\st{komorka}\fi\fi
+      \node[\st] at (\k*0.8, -\r*\dy) {\v};
+    }
+    \foreach \v [count=\k from 0] in {4,9,13} {
+      \ifnum\k<\jb \def\st{komorka szara}\else\ifnum\k=\jb \def\st{komorka wyr}\else \def\st{komorka}\fi\fi
+      \node[\st] at (3.2+\k*0.8, -\r*\dy) {\v};
+    }
+    \node[kod, anchor=west, font=\ttfamily\footnotesize] at (5.6, -\r*\dy) {(\para)};
+    \node[kod, anchor=west, font=\ttfamily\footnotesize] at (7.6, -\r*\dy) {\roz};
+    \node[kod, anchor=west, font=\ttfamily\footnotesize, text=zielen] at (9.3, -\r*\dy) {\best};
+    \node[kod, anchor=west, font=\ttfamily\scriptsize, text=szary] at (11.0, -\r*\dy) {\ruch};
+  }
+  \node[komorka ok] at (1.6, -4*\dy) {12};
+  \node[komorka ok] at (4.8, -4*\dy) {13};
+  \foreach \x/\st/\opis in {-1.6/komorka wyr/{bieżący element (\kod{a[i]}, \kod{b[j]})}, 3.7/komorka szara/{już rozpatrzony — nie da lepszej pary}, 10.0/komorka ok/{najbliższa para}} {
+    \node[\st, minimum width=4mm, minimum height=4mm] (lg) at (\x, -5.0) {};
+    \node[notka, anchor=west] at (lg.east) {\opis};
+  }
+\end{tikzpicture}

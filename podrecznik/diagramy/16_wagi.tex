@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=13mm, y=1cm]
+  \node[podpis, anchor=east] at (-0.6,1.35) {waga $2^k$};
+  \node[podpis, anchor=east] at (-0.6,0) {bity};
+  \node[podpis, anchor=east] at (-0.6,-0.72) {numer bitu $k$};
+  \foreach \b/\w [count=\i from 0] in {1/32, 0/16, 1/8, 1/4, 0/2, 1/1} {
+    \pgfmathtruncatemacro{\k}{5-\i}
+    \ifnum\b=1
+      \node[komorka ok, minimum width=10mm, minimum height=10mm, font=\ttfamily\normalsize] (b\i) at (\i,0) {1};
+      \node[font=\small, text=zielen] (w\i) at (\i,1.35) {\w};
+    \else
+      \node[komorka szara, minimum width=10mm, minimum height=10mm, font=\ttfamily\normalsize] (b\i) at (\i,0) {0};
+      \node[font=\small, text=szary] (w\i) at (\i,1.35) {\w};
+    \fi
+    \node[font=\scriptsize, text=fiolet] at (\i,0.78) {$2^{\k}$};
+    \node[indeks] at (\i,-0.72) {\k};
+  }
+  \draw[klamra] (b5.south east |- 0,-1.0) -- node[below=4pt, font=\footnotesize, text=szary] {najmłodszy (prawy)} ++(-1.0,0);
+  \node[font=\small, anchor=west] at (6.5,0.55) {$101101_2 = 32 + 8 + 4 + 1 = 45$};
+  \node[notka, anchor=west, text width=60mm] at (6.5,-0.35) {Każdy bit mówi, czy dana potęga\\ dwójki wchodzi do sumy (1) czy nie (0).};
+\end{tikzpicture}

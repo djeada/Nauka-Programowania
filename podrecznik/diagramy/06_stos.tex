@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+  \tikzset{zm/.style={zmienna, minimum width=16mm, font=\ttfamily\footnotesize, minimum height=6mm},
+           nazwa/.style={font=\ttfamily\scriptsize, anchor=east, text=szary},
+           tytul/.style={font=\footnotesize\bfseries, anchor=north west}}
+  % ramka 1: główna (dół)
+  \draw[draw=tusz, fill=tlo, rounded corners=2pt] (0,0) rectangle (10.6,1.5);
+  \node[tytul] at (0.1,1.45) {program główny};
+  \node[nazwa] at (1.9,0.55) {masa};     \node[zm] at (2.9,0.55) {85.0};
+  \node[nazwa] at (5.6,0.55) {wzrost};   \node[zm] at (6.6,0.55) {180.0};
+  \node[font=\ttfamily\scriptsize, text=szary, anchor=east] at (10.5,1.2) {czeka na: print(kategoria(...))};
+  % ramka 2: kategoria
+  \draw[draw=akcent, fill=akcentjasny, rounded corners=2pt] (0,1.7) rectangle (10.6,3.2);
+  \node[tytul, text=akcent] at (0.1,3.15) {\kod{kategoria}};
+  \node[nazwa] at (1.9,2.25) {masa};       \node[zm] at (2.9,2.25) {85.0};
+  \node[nazwa] at (5.6,2.25) {wzrost\_cm}; \node[zm] at (6.6,2.25) {180.0};
+  \node[nazwa] at (9.0,2.25) {wskaznik};   \node[zm, minimum width=12mm, draw=bursztyn] (wsk) at (9.75,2.25) {?};
+  \node[font=\ttfamily\scriptsize, text=szary, anchor=east] at (10.5,2.9) {czeka na: bmi(...)};
+  % ramka 3: bmi (góra)
+  \draw[draw=zielen, fill=zielenjasna, rounded corners=2pt, very thick] (0,3.4) rectangle (10.6,4.9);
+  \node[tytul, text=zielen] at (0.1,4.85) {\kod{bmi} — wykonuje się teraz};
+  \node[nazwa] at (1.9,3.95) {masa};       \node[zm] at (2.9,3.95) {85.0};
+  \node[nazwa] at (5.6,3.95) {wzrost\_cm}; \node[zm] at (6.6,3.95) {180.0};
+  \node[nazwa] at (9.0,3.95) {wzrost\_m};  \node[zm, minimum width=12mm] (wm) at (9.75,3.95) {1.8};
+  % powrót
+  \draw[strzalka, draw=bursztyn, very thick] (10.65,4.15) to[out=0, in=0, looseness=1.4] node[right, font=\scriptsize, text=bursztyn, align=left] {\kod{return}\\26.23...} (wsk.east);
+  % oś stosu
+  \draw[->, draw=szary, thick] (-0.5,0.2) -- node[left, font=\scriptsize, text=szary, align=right, pos=0.5] {kolejne\\wywołania} (-0.5,4.7);
+\end{tikzpicture}

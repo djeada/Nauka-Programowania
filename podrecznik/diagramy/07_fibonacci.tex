@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=8.5mm, y=8.5mm]
+  % nagłówek: ciąg
+  \foreach \v [count=\j from 0] in {0,1,1,2,3,5,8,13,21} {
+    \node[indeks] at (\j,0.75) {$F_{\j}$};
+  }
+  \foreach \v [count=\j from 0] in {0,1,1,2,3,5,8,13,21} {
+    \foreach \r in {0,...,6} {
+      \pgfmathtruncatemacro{\nast}{\r+1}
+      \ifnum\j=\r
+        \node[komorka, fill=akcentjasny, minimum width=7.5mm, minimum height=6.5mm] at (\j,-\r) {\v};
+      \else\ifnum\j=\nast
+        \node[komorka wyr, minimum width=7.5mm, minimum height=6.5mm] at (\j,-\r) {\v};
+      \else\ifnum\j<\r
+        \node[komorka szara, minimum width=7.5mm, minimum height=6.5mm] at (\j,-\r) {\v};
+      \else
+        \node[komorka szara, minimum width=7.5mm, minimum height=6.5mm, fill=white, draw=linia] at (\j,-\r) {};
+      \fi\fi\fi
+    }
+  }
+  % opisy wierszy
+  \foreach \lab/\a/\b [count=\r from 0] in {start/0/1, po 1. obrocie/1/1, po 2. obrocie/1/2, po 3. obrocie/2/3, po 4. obrocie/3/5, po 5. obrocie/5/8, po 6. obrocie/8/13} {
+    \node[podpis, anchor=east] at (-0.7,-\r) {\lab};
+    \node[font=\ttfamily\small, anchor=west] at (9.0,-\r) {a = \textcolor{akcent}{\a}, b = \textcolor{bursztyn}{\b}};
+  }
+  \node[font=\footnotesize\bfseries, anchor=west] at (9.0,0.75) {stan okna};
+  \node[notka, anchor=north west, text width=130mm] at (-0.4,-6.55) {\textcolor{akcent}{$\blacksquare$} \kod{a} = $F_k$ \quad \textcolor{bursztyn}{$\blacksquare$} \kod{b} = $F_{k+1}$ \quad szare: już niepotrzebne — program ich nie pamięta};
+\end{tikzpicture}

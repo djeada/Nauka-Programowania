@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=16mm, y=1mm]
+  % oś
+  \draw[->, draw=szary] (-3.6,0) -- (3.7,0) node[right, podpis] {$x$};
+  \foreach \t in {-3,...,3} {
+    \draw[draw=szary] (\t,-1.5) -- (\t,1.5);
+    \node[indeks, below=1.5mm] at (\t,0) {\t};
+  }
+  % punkty
+  \fill[czerwien] (2.7,0) circle (1.4pt);  \node[font=\scriptsize, text=czerwien, above=1mm] at (2.7,0.8) {2,7};
+  \fill[czerwien] (-2.7,0) circle (1.4pt); \node[font=\scriptsize, text=czerwien, above=1mm] at (-2.7,0.8) {$-2{,}7$};
+  % wiersze z wynikami: y poziomy
+  \foreach \y/\nazwa/\kol/\a/\b in {
+      -11/{int(x)}/szary/2/-2,
+      -19/{math.floor(x)}/akcent/2/-3,
+      -27/{math.ceil(x)}/bursztyn/3/-2,
+      -35/{round(x)}/zielen/3/-3} {
+    \draw[densely dotted, draw=linia] (-3.6,\y) -- (3.6,\y);
+    \node[kod, font=\ttfamily\footnotesize, text=\kol, anchor=east] at (-3.7,\y) {\nazwa};
+    \draw[->, draw=\kol, thick, shorten >=1.5pt] (2.7,\y) -- (\a,\y);
+    \fill[\kol] (\a,\y) circle (1.6pt);
+    \draw[->, draw=\kol, thick, shorten >=1.5pt] (-2.7,\y) -- (\b,\y);
+    \fill[\kol] (\b,\y) circle (1.6pt);
+    \node[font=\scriptsize, text=\kol, above=0.3mm] at (\a,\y) {\a};
+    \node[font=\scriptsize, text=\kol, above=0.3mm] at (\b,\y) {$\b$};
+  }
+  \foreach \x in {2.7,-2.7} \draw[densely dashed, draw=czerwien!50] (\x,-1) -- (\x,-37);
+  % opisy po prawej
+  \node[notka, anchor=west] at (3.9,-11) {w stronę zera (odcina ułamek)};
+  \node[notka, anchor=west] at (3.9,-19) {w dół: $\lfloor x \rfloor$};
+  \node[notka, anchor=west] at (3.9,-27) {w górę: $\lceil x \rceil$};
+  \node[notka, anchor=west] at (3.9,-35) {do najbliższej całkowitej};
+\end{tikzpicture}

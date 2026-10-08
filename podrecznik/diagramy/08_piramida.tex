@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=7mm, y=7.5mm]
+  % piramida dla n = 4: n - i spacji i 2i - 1 gwiazdek w wierszu i
+  \foreach \i in {1,...,4} {
+    \pgfmathtruncatemacro{\sp}{4-\i}
+    \pgfmathtruncatemacro{\st}{2*\i-1}
+    \pgfmathtruncatemacro{\last}{\sp+\st-1}
+    \node[indeks, anchor=east] at (-0.7, -\i) {i = \i};
+    \foreach \j in {0,...,\last} {
+      \ifnum\j<\sp
+        \node[komorka szara, minimum width=7mm, minimum height=7.5mm] at (\j, -\i) {\textvisiblespace};
+      \else
+        \node[komorka wyr, minimum width=7mm, minimum height=7.5mm] at (\j, -\i) {*};
+      \fi
+    }
+    \node[kod, anchor=west, font=\ttfamily\footnotesize] at (7.6, -\i) {\sp};
+    \node[kod, anchor=west, font=\ttfamily\footnotesize] at (10.6, -\i) {\st};
+    \node[kod, anchor=west, font=\ttfamily\footnotesize, text=szary] at (13.2, -\i) {"\ifnum\sp>0 \foreach \k in {1,...,\sp}{\textvisiblespace}\fi\foreach \k in {1,...,\st}{*}"};
+  }
+  \foreach \j in {0,...,6} \node[indeks] at (\j, -0.3) {\j};
+  \node[font=\footnotesize\bfseries, anchor=west] at (7.4, -0.3) {spacje};
+  \node[font=\footnotesize\bfseries, anchor=west] at (10.2, -0.3) {gwiazdki};
+  \node[font=\footnotesize\bfseries, anchor=west] at (13.2, -0.3) {wypisany wiersz};
+  \node[kod, anchor=west, font=\ttfamily\footnotesize, text=akcent] at (7.4, -4.85) {n - i};
+  \node[kod, anchor=west, font=\ttfamily\footnotesize, text=akcent] at (10.2, -4.85) {2*i - 1};
+  \draw[klamra] (6.4, -4.4) -- (-0.4, -4.4) node[midway, below=5pt, podpis] {szerokość podstawy: $2n - 1 = 7$};
+\end{tikzpicture}

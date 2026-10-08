@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=17mm, y=1cm]
+  % opisy wierszy
+  \node[podpis, anchor=east] at (-0.55,1.45) {wyraz};
+  \node[podpis, anchor=east] at (-0.55,0) {lista \kod{w}};
+  \node[podpis, anchor=east] at (-0.55,-0.75) {indeks $i$};
+  \node[podpis, anchor=east] at (-0.55,-1.3) {potęga $n-i$};
+  \foreach \v/\t [count=\i from 0] in {2/{$2x^3$}, 0/{$0x^2$}, -1/{$-1x^1$}, 5/{$5x^0$}} {
+    \node[komorka, minimum width=12mm] (w-\i) at (\i,0) {\v};
+    \node[indeks] at (\i,-0.75) {\i};
+    \pgfmathtruncatemacro{\k}{3-\i}
+    \node[font=\footnotesize, text=fiolet] at (\i,-1.3) {\k};
+    \node (t-\i) at (\i,1.45) {\t};
+    \draw[linia, densely dotted] (t-\i) -- (w-\i);
+  }
+  \node[komorka szara, minimum width=12mm] (w-1) at (1,0) {0};
+  \foreach \a/\b in {0/1, 1/2, 2/3} \node at ($(t-\a)!0.5!(t-\b)$) {$+$};
+  % notatki
+  \node[notka, anchor=west, text width=52mm] (n) at (3.55,0.15) {%
+    \kod{n = len(w) - 1} \quad (tu $n = 3$)\\[2pt]
+    \kod{w[0]} — współczynnik wiodący $a_n$\\[2pt]
+    \kod{w[-1]} — wyraz wolny $a_0$\\[2pt]
+    \kod{w[i]} stoi przy $x^{\,n-i}$};
+  \begin{scope}[on background layer]
+    \node[ramka, fit=(n), inner sep=4pt] {};
+  \end{scope}
+  \node[podpis] at (1.5,-1.95) {zero przy $x^2$ musi zostać w liście — trzyma miejsce potęgi};
+\end{tikzpicture}

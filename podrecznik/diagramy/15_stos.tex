@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    ramkaw/.style={rectangle, draw=akcent, fill=akcentjasny, rounded corners=2pt, minimum height=8mm,
+                   minimum width=50mm, align=left, font=\ttfamily\small, inner xsep=6pt},
+    baza/.style={ramkaw, draw=zielen, fill=zielenjasna}]
+  \node[ramkaw] (f1) at (0,0)     {suma\_cyfr(472)\ \ $\to$\ \ 2 + suma\_cyfr(47)};
+  \node[ramkaw] (f2) at (1.2,-1.5) {suma\_cyfr(47)\ \ $\to$\ \ 7 + suma\_cyfr(4)};
+  \node[baza]   (f3) at (2.4,-3.0) {suma\_cyfr(4)\ \ $\to$\ \ 4 \quad\normalfont\footnotesize(baza: $n < 10$)};
+  % wywołania w dół
+  \draw[strzalka, draw=akcent] ($(f1.south west)+(0.6,0)$) |- node[pos=0.25, left, font=\footnotesize, text=akcent] {wywołanie} ($(f2.west)$);
+  \draw[strzalka, draw=akcent] ($(f2.south west)+(0.6,0)$) |- node[pos=0.25, left, font=\footnotesize, text=akcent] {wywołanie} ($(f3.west)$);
+  % powroty w górę
+  \draw[strzalka, draw=zielen, thick] (3.3,-2.6) -- node[right, font=\footnotesize, text=zielen] {zwraca 4} (3.3,-1.9);
+  \draw[strzalka, draw=zielen, thick] (2.1,-1.1) -- node[right, font=\footnotesize, text=zielen] {zwraca $7 + 4 = 11$} (2.1,-0.4);
+  \draw[strzalka, draw=zielen, thick] (f1.north) -- ++(0,0.6) node[above, font=\footnotesize, text=zielen] {wynik: $2 + 11 = 13$};
+  % stos
+  \begin{scope}[xshift=10.4cm, yshift=-3.3cm]
+    \node[podpis] at (0.9,3.55) {stos wywołań\\ w najgłębszym\\ momencie};
+    \node[rectangle, draw=zielen, fill=zielenjasna, minimum width=24mm, minimum height=7mm, font=\ttfamily\footnotesize] (s3) at (0.9,2.1) {n = 4};
+    \node[rectangle, draw=akcent, fill=akcentjasny, minimum width=24mm, minimum height=7mm, font=\ttfamily\footnotesize] (s2) at (0.9,1.4) {n = 47};
+    \node[rectangle, draw=akcent, fill=akcentjasny, minimum width=24mm, minimum height=7mm, font=\ttfamily\footnotesize] (s1) at (0.9,0.7) {n = 472};
+    \draw[szary] (-0.4,2.5) -- (-0.4,0.3) -- (2.2,0.3) -- (2.2,2.5);
+    \node[notka, anchor=west] at (2.45,2.1) {szczyt};
+    \node[notka, anchor=west] at (2.45,0.7) {dno};
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\begin{tikzpicture}[node distance=7mm and 10mm]
+  \node[start] (s) {start};
+  \node[we, below=of s] (in) {wczytaj \kod{x}};
+  \node[decyzja, below=of in] (d) {$x \ge 0$?};
+  \node[blok, below left=8mm and 4mm of d] (t) {\kod{print("nieujemna")}};
+  \node[blok, below right=8mm and 4mm of d] (f) {\kod{print("ujemna")}};
+  \node[start, below=24mm of d] (e) {koniec};
+  \draw[strzalka] (s) -- (in);
+  \draw[strzalka] (in) -- (d);
+  \draw[strzalka] (d) -| node[tak, pos=0.25, above] {True} (t);
+  \draw[strzalka] (d) -| node[nie, pos=0.25, above] {False} (f);
+  \draw[strzalka] (t) |- (e);
+  \draw[strzalka] (f) |- (e);
+  \node[notka, anchor=west, text width=40mm] (code) at ($(f.east |- d)+(10mm,0)$) {%
+    \kod{x = int(input())}\\
+    \kod{\textcolor{fiolet}{if} x >= 0:}\\
+    \kod{\ \ \ \ print("nieujemna")}\\
+    \kod{\textcolor{fiolet}{else}:}\\
+    \kod{\ \ \ \ print("ujemna")}};
+  \begin{scope}[on background layer]
+    \node[ramka, fit=(code), inner sep=4pt] {};
+  \end{scope}
+\end{tikzpicture}

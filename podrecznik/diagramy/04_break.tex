@@ -1,0 +1,24 @@
+\begin{tikzpicture}[node distance=6mm and 10mm]
+  \node[start] (s) {\kod{suma = 0}};
+  \node[decyzja, below=of s] (w) {\kod{True}?};
+  \node[we, below=of w] (in) {\kod{x = int(input())}};
+  \node[decyzja, below=of in] (d1) {\kod{x == 0}?};
+  \node[decyzja, below=of d1] (d2) {\kod{x < 0}?};
+  \node[blok, below=of d2] (add) {\kod{suma += x}};
+  \node[blok, right=24mm of d1, fill=tlo, draw=tusz] (out) {\kod{print(suma)}};
+  \draw[strzalka] (s) -- (w);
+  \draw[strzalka] (w) -- node[tak, right] {zawsze} (in);
+  \draw[strzalka] (in) -- (d1);
+  \draw[strzalka] (d1) -- node[nie, right] {nie} (d2);
+  \draw[strzalka] (d2) -- node[nie, right] {nie} (add);
+  % break
+  \draw[strzalka, draw=czerwien, very thick] (d1) -- node[above, font=\footnotesize\ttfamily, text=czerwien] {break} node[below, tak] {tak} (out);
+  % continue
+  \draw[strzalka, draw=bursztyn, very thick] (d2.west) -- node[above, tak, pos=0.4] {tak} ++(-12mm,0) |- node[pos=0.3, sloped, above, font=\footnotesize\ttfamily, text=bursztyn] {continue} ($(s.south)!0.5!(w.north)$);
+  % normalny koniec obrotu
+  \draw[strzalka, draw=szary] (add.west) -- ++(-22mm,0) |- ($(s.south)!0.5!(w.north)$);
+  \node[font=\scriptsize, text=szary, anchor=north east] at ($(add.west)+(-2mm,-1mm)$) {koniec obrotu};
+  % opis
+  \node[notka, text width=52mm, below=6mm of out] {\textcolor{czerwien}{\textbf{break}} wyskakuje \textbf{z pętli} — dalej wykonuje się kod za nią.\\[3pt]
+    \textcolor{bursztyn}{\textbf{continue}} pomija resztę ciała (tu: \kod{suma += x}) i zaczyna \textbf{następny obrót}.};
+\end{tikzpicture}

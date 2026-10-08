@@ -1,0 +1,37 @@
+\begin{tikzpicture}
+  % argumenty
+  \node[komorka ok, minimum width=10mm] (a1) at (0,0.5) {3};
+  \node[komorka ok, minimum width=10mm] (a2) at (0,-0.8) {4};
+  \node[podpis, above=1mm of a1] {argumenty};
+  % skrzynka
+  \node[rectangle, draw=akcent, fill=akcentjasny, rounded corners=3pt, minimum width=50mm, minimum height=35mm] (f) at (4.6,-0.15) {};
+  \node[font=\ttfamily\small\bfseries, text=akcent, anchor=north] at (f.north) {pole\_prostokata};
+  \node[zmienna, minimum width=9mm] (pa) at (3.4,0.25) {3};
+  \node[indeks, above=0.2mm of pa] {a};
+  \node[zmienna, minimum width=9mm] (pb) at (3.4,-0.8) {4};
+  \node[indeks, above=0.2mm of pb] {b};
+  \node[kod, anchor=west] (ret) at (4.35,-0.25) {return a * b};
+  \node[podpis, anchor=south] at ($(f.south)+(0,1mm)$) {parametry = zmienne lokalne};
+  \draw[strzalka, draw=zielen, thick] (a1) -- (pa);
+  \draw[strzalka, draw=zielen, thick] (a2) -- (pb);
+  % wynik
+  \node[komorka wyr, minimum width=12mm] (w) at (9.4,-0.15) {12};
+  \node[podpis, above=1mm of w] {wartość zwracana};
+  \draw[strzalka, draw=bursztyn, very thick] (f.east) -- (w);
+  % wywołanie i nagłówek: kawałki kodu jako osobne węzły, żeby strzałki trafiały w znaki
+  \tikzset{k/.style={font=\ttfamily\small, inner sep=0pt, anchor=base west}}
+  \node[k] (c0) at (1.0,-2.8) {p\phantom{x}=\phantom{x}pole\_prostokata(};
+  \node[k, text=zielen] (c1) at (c0.base east) {3};
+  \node[k] (c2) at (c1.base east) {,\phantom{x}};
+  \node[k, text=zielen] (c3) at (c2.base east) {4};
+  \node[k] (c4) at (c3.base east) {)};
+  \node[k, anchor=base east] (d0) at (c0.base east |- 0,-3.8) {\textcolor{fiolet}{def}\phantom{x}pole\_prostokata(};
+  \node[k, text=akcent] (d1) at (d0.base east) {a};
+  \node[k] (d2) at (d1.base east) {,\phantom{x}};
+  \node[k, text=akcent] (d3) at (d2.base east) {b};
+  \node[k] (d4) at (d3.base east) {):};
+  \draw[->, draw=zielen, shorten <=2pt, shorten >=1pt] (c1.south) -- (d1.north);
+  \draw[->, draw=zielen, shorten <=2pt, shorten >=1pt] (c3.south) -- (d3.north);
+  \node[notka, anchor=base west] at (7.4,-2.8) {wywołanie: \textbf{argumenty}};
+  \node[notka, anchor=base west] at (7.4,-3.8) {nagłówek: \textbf{parametry}};
+\end{tikzpicture}

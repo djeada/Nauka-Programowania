@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+  \tablica{a}{0}{0}{7,3,9,4,6}
+  \foreach \i/\neg in {0/-5,1/-4,2/-3,3/-2,4/-1}
+    \node[indeks, text=fiolet, above=0.4mm of a-\i] {\neg};
+  \foreach \i in {1,2,3}
+    \node[komorka wyr] at (a-\i) {\ifcase\i\or 3\or 9\or 4\fi};
+  \node[indeks, anchor=east, text=fiolet] at (-0.6, 0.62) {indeks ujemny};
+  \node[indeks, anchor=east] at (-0.6, -0.62) {indeks};
+  \node[indeks, anchor=east, font=\ttfamily\small, text=tusz] at (-0.6, 0) {lista};
+  \draw[klamra, decoration={mirror}] ($(a-1.south west)+(0,-0.35)$) -- ($(a-3.south east)+(0,-0.35)$)
+    node[midway, below=6pt, font=\ttfamily\footnotesize, text=bursztyn] {lista[1:4]};
+  \node[notka, anchor=west] (n) at (4.4, 0) {%
+    \begin{tabular}{@{}l@{\ \ →\ \ }l@{}}
+    \kod{lista[0]} & \kod{7}\\
+    \kod{lista[-1]} & \kod{6}\ \ (to samo co \kod{lista[4]})\\
+    \kod{lista[1:4]} & \kod{[3, 9, 4]}\\
+    \kod{len(lista)} & \kod{5}\\
+    \kod{lista[5]} & \textcolor{czerwien}{\kod{IndexError}}
+    \end{tabular}};
+  \begin{scope}[on background layer]
+    \node[ramka, fit=(n), inner sep=3pt] {};
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=8mm, y=-8.5mm,
+    zn/.style={komorka, minimum width=8mm, minimum height=7mm},
+    zn2/.style={komorka, minimum width=8mm, minimum height=7mm, fill=tlo},
+    znsz/.style={komorka szara, minimum width=8mm, minimum height=7mm},
+    znok/.style={komorka ok, minimum width=8mm, minimum height=7mm}]
+  \node[anchor=east, font=\small] at (-0.8,0) {\kod{A + A}};
+  \foreach \z [count=\i from 0] in {l,a,t,o,l,a,t,o} {
+    \ifnum\i<4 \node[zn] at (\i,0) {\z}; \else \node[zn2] at (\i,0) {\z}; \fi
+    \node[indeks] at (\i,-0.62) {\i};
+  }
+  \draw[klamra] (-0.45,-0.85) -- (3.45,-0.85) node[midway, above=4pt, notka] {\kod{A}};
+  \draw[klamra] (3.55,-0.85) -- (7.45,-0.85) node[midway, above=4pt, notka] {\kod{A}};
+  \foreach \k/\r in {0/lato, 1/atol, 2/tola, 3/olat} {
+    \pgfmathsetmacro{\y}{\k+1.4}
+    \node[anchor=east, font=\footnotesize] at (-0.8,\y) {$k = \k$};
+    \foreach \z [count=\j from 0] in {l,a,t,o,l,a,t,o} {
+      \pgfmathtruncatemacro{\w}{(\j>=\k) && (\j<=\k+3)}
+      \ifnum\w=1 \node[znok] at (\j,\y) {\z}; \else \node[znsz] at (\j,\y) {\z}; \fi
+    }
+    \node[anchor=west, font=\footnotesize] at (8.1,\y) {$\text{rot}_{\k}$ = \kod{"\r"}};
+  }
+\end{tikzpicture}

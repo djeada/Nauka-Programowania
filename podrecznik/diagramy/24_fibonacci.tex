@@ -1,0 +1,38 @@
+\begin{tikzpicture}[
+    w/.style={rounded rectangle, draw=akcent, fill=white, font=\footnotesize, inner xsep=3pt, minimum height=5.5mm},
+    w3/.style={w, draw=bursztyn, fill=bursztynjasny},
+    w2/.style={w, draw=czerwien, fill=czerwienjasna},
+    wl/.style={w, draw=linia, fill=tlo, text=szary, font=\scriptsize, inner xsep=2pt},
+    level distance=10mm, edge from parent/.style={draw=szary},
+    level 1/.style={sibling distance=44mm},
+    level 2/.style={sibling distance=22mm},
+    level 3/.style={sibling distance=12mm},
+    level 4/.style={sibling distance=8.5mm}]
+  \node[w] (root) {F(5)}
+    child {node[w] {F(4)}
+      child {node[w3] {F(3)}
+        child {node[w2] {F(2)} child {node[wl] {F(1)}} child {node[wl] {F(0)}}}
+        child {node[wl] {F(1)}}}
+      child {node[w2] {F(2)} child {node[wl] {F(1)}} child {node[wl] {F(0)}}}}
+    child {node[w3] {F(3)}
+      child {node[w2] {F(2)} child {node[wl] {F(1)}} child {node[wl] {F(0)}}}
+      child {node[wl] {F(1)}}};
+  \node[notka, anchor=north west, text width=75mm] at (-4.6,-4.4) {\textcolor{bursztyn}{F(3)} liczone 2 razy, \textcolor{czerwien}{F(2)} — 3 razy;\\razem 15 wywołań, a dla $F(40)$ — ponad $3 \cdot 10^8$};
+  % tablica
+  \begin{scope}[xshift=50mm, yshift=-16mm]
+    \node[font=\small\bfseries, anchor=west] at (-0.45,1.45) {tablica \kod{f}};
+    \foreach \v [count=\i from 0] in {0,1,1,2,3,5} {
+      \node[komorka] (f\i) at (\i*0.9,0) {\v};
+      \node[indeks, below=0.5mm of f\i] {\i};
+    }
+    \node[komorka wyr] at (f3) {2};
+    \node[komorka wyr] at (f4) {3};
+    \node[komorka ok] at (f5) {5};
+    \node[komorka szara] at (f0) {0};
+    \node[komorka szara] at (f1) {1};
+    \draw[->, draw=zielen, thick] (f4.north) to[out=60, in=120] (f5.north);
+    \draw[->, draw=zielen, thick] (f3.north) to[out=55, in=125] (f5.north);
+    \node[notka, anchor=south] at ($(f0.north)!0.5!(f1.north)+(0,0.5mm)$) {baza};
+    \node[notka, anchor=north west, text width=56mm] at (-0.45,-0.85) {\kod{f[i] = f[i - 1] + f[i - 2]} — każda wartość liczona raz, $n$ kroków};
+  \end{scope}
+\end{tikzpicture}

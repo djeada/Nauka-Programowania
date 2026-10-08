@@ -1,0 +1,31 @@
+\begin{tikzpicture}[
+    wezel/.style={rectangle, rounded corners=2pt, draw=akcent, fill=akcentjasny, font=\small, minimum height=6.5mm, inner xsep=4pt},
+    lisc/.style={wezel, draw=zielen, fill=zielenjasna},
+    powt/.style={wezel, draw=bursztyn, fill=bursztynjasny},
+    wart/.style={font=\footnotesize\bfseries, text=zielen},
+    level distance=14mm,
+    level 1/.style={sibling distance=72mm},
+    level 2/.style={sibling distance=36mm},
+    level 3/.style={sibling distance=17mm},
+    edge from parent/.style={draw=szary, ->}]
+  \node[wezel] (r) {$C(4,2)$}
+    child {node[wezel] (a) {$C(3,1)$}
+      child {node[lisc] (a1) {$C(2,0)$}}
+      child {node[powt] (a2) {$C(2,1)$}
+        child {node[lisc] (a21) {$C(1,0)$}}
+        child {node[lisc] (a22) {$C(1,1)$}}}}
+    child {node[wezel] (b) {$C(3,2)$}
+      child {node[powt] (b1) {$C(2,1)$}
+        child {node[lisc] (b11) {$C(1,0)$}}
+        child {node[lisc] (b12) {$C(1,1)$}}}
+      child {node[lisc] (b2) {$C(2,2)$}}};
+  \foreach \n/\v in {r/6, a/3, b/3, a2/2, b1/2}
+    \node[wart, anchor=west] at (\n.east) {$\,=\,$\v};
+  \foreach \n in {a1, a21, a22, b11, b12, b2}
+    \node[wart, anchor=north] at (\n.south) {1};
+  % legenda
+  \node[notka, anchor=north west, text width=46mm] at (4.6,0.35) {%
+    \tikz\node[wezel, minimum height=3mm, minimum width=4mm]{}; krok rekurencyjny\\[2pt]
+    \tikz\node[lisc, minimum height=3mm, minimum width=4mm]{}; przypadek bazowy\\[2pt]
+    \tikz\node[powt, minimum height=3mm, minimum width=4mm]{}; to samo wywołanie liczone\\ \hspace*{6mm}drugi raz};
+\end{tikzpicture}

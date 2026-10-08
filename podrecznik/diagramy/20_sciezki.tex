@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=6mm, y=-6.2mm,
+    folder/.style={rectangle, rounded corners=1.5pt, draw=linia, fill=tlo, inner sep=2pt, font=\ttfamily\small, anchor=west},
+    plik/.style={inner sep=2pt, font=\ttfamily\small, anchor=west},
+    galaz/.style={draw=linia, line width=0.7pt}]
+  % drzewo: (poziom, wiersz)
+  \node[folder] (r)  at (0,0) {/};
+  \node[folder] (h)  at (1,1) {home/};
+  \node[folder] (o)  at (2,2) {ola/};
+  \node[folder, draw=bursztyn, fill=bursztynjasny, line width=0.8pt] (p) at (3,3) {projekt/};
+  \node[plik]   (m)  at (4,4) {main.py};
+  \node[folder] (d)  at (4,5) {dane/};
+  \node[folder] (y)  at (5,6) {2024/};
+  \node[plik, fill=zielenjasna, draw=zielen, rounded corners=1.5pt] (f) at (6,7) {raport.txt};
+  \node[plik]   (n)  at (5,8) {notatki.txt};
+  % gałęzie
+  \draw[galaz] ($(p.south west)+(2.5mm,0)$) |- (m.west);
+  \draw[galaz] ($(d.south west)+(2.5mm,0)$) |- (n.west);
+  \draw[akcent, line width=1.1pt] ($(r.south west)+(2.5mm,0)$) |- (h.west);
+  \draw[akcent, line width=1.1pt] ($(h.south west)+(2.5mm,0)$) |- (o.west);
+  \draw[akcent, line width=1.1pt] ($(o.south west)+(2.5mm,0)$) |- (p.west);
+  \draw[bursztyn, line width=1.1pt] ($(p.south west)+(2.5mm,0)$) |- (d.west);
+  \draw[bursztyn, line width=1.1pt] ($(d.south west)+(2.5mm,0)$) |- (y.west);
+  \draw[bursztyn, line width=1.1pt] ($(y.south west)+(2.5mm,0)$) |- (f.west);
+  % opis katalogu roboczego
+  \node[notka, anchor=west, text=bursztyn] at ($(p.east)+(2mm,0)$) {$\leftarrow$ katalog roboczy (\kod{.})};
+  % ścieżki
+  \node[anchor=west, font=\footnotesize\bfseries, text=akcent] (t1) at (11.5,1.2) {ścieżka bezwzględna — od korzenia};
+  \node[anchor=west, kod] (s1) at ($(t1.west)+(0,-6mm)$) {\textcolor{akcent}{/home/ola/projekt/}\textcolor{bursztyn}{dane/2024/raport.txt}};
+  \node[anchor=west, font=\footnotesize\bfseries, text=bursztyn] (t2) at (11.5,4.6) {ścieżka względna — od katalogu roboczego};
+  \node[anchor=west, kod] (s2) at ($(t2.west)+(0,-6mm)$) {\textcolor{bursztyn}{dane/2024/raport.txt}};
+  \node[anchor=west, notka, text width=72mm] at (11.5,8.0) {Z folderu \kod{dane/2024} ten sam plik to po prostu \kod{raport.txt}, a~\kod{notatki.txt} to \kod{../notatki.txt} (\kod{..} = folder o~poziom wyżej).};
+\end{tikzpicture}

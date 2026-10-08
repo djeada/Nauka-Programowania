@@ -1,0 +1,34 @@
+\begin{tikzpicture}[x=1cm, y=-1cm,
+    ob/.style={rectangle, draw=#1, fill=#1!12, rounded corners=2pt, font=\ttfamily\scriptsize, minimum height=6.5mm, minimum width=63mm, inner xsep=4pt},
+    met/.style={rectangle, draw=#1, fill=white, rounded corners=2pt, font=\ttfamily\scriptsize, minimum height=6.5mm, minimum width=29mm}]
+  \node[podpis] at (3.15,-0.65) {obiekt w liście \kod{bilety}};
+  \node[podpis] at (8.1,-0.65) {\kod{self.cena()} trafia do};
+  \node[podpis, anchor=west] at (10.05,-0.65) {obliczenie};
+  \node[podpis] at (15.4,-0.65) {wynik};
+  \node[ob=akcent] (o0) at (3.15,0.0) {Bilet("Kraków-Gdańsk", 120)};
+  \node[met=akcent] (m0) at (8.1,0.0) {Bilet.cena()};
+  \draw[strzalka, draw=akcent] (o0) -- (m0);
+  \node[font=\ttfamily\scriptsize, anchor=west] at (10.05,0.0) {\textcolor{akcent}{120}};
+  \node[font=\ttfamily\footnotesize\bfseries, text=zielen] at (15.4,0.0) {120.00 zł};
+  \node[ob=bursztyn] (o1) at (3.15,0.95) {BiletUlgowy("Kraków-Gdańsk", 120)};
+  \node[met=bursztyn] (m1) at (8.1,0.95) {BiletUlgowy.cena()};
+  \draw[strzalka, draw=bursztyn] (o1) -- (m1);
+  \node[font=\ttfamily\scriptsize, anchor=west] at (10.05,0.95) {\textcolor{akcent}{120} * 0.5};
+  \node[font=\ttfamily\footnotesize\bfseries, text=zielen] at (15.4,0.95) {60.00 zł};
+  \node[ob=fiolet] (o2) at (3.15,1.9) {BiletGrupowy("Łódź-Poznań", 50, 12)};
+  \node[met=fiolet] (m2) at (8.1,1.9) {BiletGrupowy.cena()};
+  \draw[strzalka, draw=fiolet] (o2) -- (m2);
+  \node[font=\ttfamily\scriptsize, anchor=west] at (10.05,1.9) {\textcolor{akcent}{50} * 12 * 0.8 \ \textcolor{szary}{(rabat)}};
+  \node[font=\ttfamily\footnotesize\bfseries, text=zielen] at (15.4,1.9) {480.00 zł};
+  \node[ob=fiolet] (o3) at (3.15,2.85) {BiletGrupowy("Wrocław-Opole", 40, 3)};
+  \node[met=fiolet] (m3) at (8.1,2.85) {BiletGrupowy.cena()};
+  \draw[strzalka, draw=fiolet] (o3) -- (m3);
+  \node[font=\ttfamily\scriptsize, anchor=west] at (10.05,2.85) {\textcolor{akcent}{40} * 3 * 1.0};
+  \node[font=\ttfamily\footnotesize\bfseries, text=zielen] at (15.4,2.85) {120.00 zł};
+  \draw[szary] (0,3.45) -- (16.1,3.45);
+  \node[font=\ttfamily\footnotesize, anchor=east] at (14.5,3.85) {suma:};
+  \node[font=\ttfamily\footnotesize\bfseries, text=zielen] at (15.4,3.85) {780.00 zł};
+  \node[notka, anchor=north west, text width=150mm] at (0,4.35) {%
+    \kod{opis()} jest napisana raz, w klasie \kod{Bilet}, ale \kod{self.cena()} wybiera wersję według \textbf{klasy obiektu}.\\
+    Wersje potomne wołają \kod{super().cena()}, czyli \kod{Bilet.cena()} — jej wynik zaznaczono na \textcolor{akcent}{niebiesko}.};
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=12mm, y=1cm,
+    el/.style={komorka, minimum width=12mm, minimum height=8mm},
+    elw/.style={komorka wyr, minimum width=12mm, minimum height=8mm},
+    pr/.style={komorka, draw=fiolet, minimum width=9mm, minimum height=7mm}]
+  % lista a
+  \node[anchor=east, font=\small] at (-1.15,0) {\kod{a}};
+  \foreach \v/\s [count=\i from 0] in {3/el, -1/elw, 4/elw, 1/elw, -5/elw, 9/el} {
+    \node[\s] (a\i) at (\i,0) {\v};
+    \node[indeks, below=0.5mm of a\i] {\i};
+  }
+  % sumy prefiksowe na granicach
+  \node[anchor=east, font=\small] at (-1.15,1.6) {\kod{P}};
+  \foreach \v [count=\i from 0] in {0,3,2,6,7,2,11} {
+    \pgfmathsetmacro{\x}{\i-0.5}
+    \node[pr] (p\i) at (\x,1.6) {\v};
+    \node[indeks, above=0.5mm of p\i] {$P_{\i}$};
+    \draw[linia, densely dotted] (p\i.south) -- (\x,0.4);
+  }
+  \node[pr, draw=czerwien, fill=czerwienjasna] at (p1) {3};
+  \node[pr, draw=zielen, fill=zielenjasna] at (p5) {2};
+  % klamra pod fragmentem
+  \draw[klamra, decoration={mirror}] (0.5,-0.95) -- (4.5,-0.95) node[midway, below=6pt, font=\small] {$a_1 + a_2 + a_3 + a_4 = -1 + 4 + 1 - 5 = -1$};
+  \node[anchor=west, font=\small, align=left] at (6.1,0.8) {$\textcolor{zielen}{P_5} - \textcolor{czerwien}{P_1}$\\$= 2 - 3 = -1$};
+  \node[notka, anchor=west, text width=30mm] at (6.1,-1.0) {$P_5$ = suma \kod{a[0..4]}\\$P_1$ = suma \kod{a[0..0]}};
+\end{tikzpicture}

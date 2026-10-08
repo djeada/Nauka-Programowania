@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    klasa/.style={rectangle split, rectangle split parts=3, draw=fiolet, rectangle split part fill={fiolet!25, fioletjasny, fioletjasny},
+                  font=\ttfamily\footnotesize, align=left, inner xsep=6pt, inner ysep=3pt},
+    dziedziczy/.style={draw=fiolet, -{Triangle[open, length=3mm, width=3mm]}}]
+  \node[rectangle, draw=linia, fill=tlo, font=\ttfamily\footnotesize, minimum height=6mm, inner xsep=6pt] (O) at (0,2.6) {object};
+  \node[klasa] (P) at (0,0) {%
+    \textbf{\normalsize Pojazd}
+    \nodepart{two} nazwa, kola
+    \nodepart{three} \_\_init\_\_(self, nazwa, kola)\\ opis(self)\\ jedz(self, km)};
+  \node[klasa, anchor=north] (S) at (-3.6,-2.4) {%
+    \textbf{\normalsize Samochod}
+    \nodepart{two} + paliwo
+    \nodepart{three} \textcolor{bursztyn}{\_\_init\_\_(self, nazwa, paliwo)}\\ \textcolor{bursztyn}{opis(self)}};
+  \node[klasa, anchor=north] (R) at (3.6,-2.4) {%
+    \textbf{\normalsize Rower}
+    \nodepart{two} \textcolor{szary}{(nic nowego)}
+    \nodepart{three} \textcolor{bursztyn}{\_\_init\_\_(self, nazwa)}\\ \textcolor{zielen}{zadzwon(self)}};
+  \draw[dziedziczy] (P.north) -- (O.south);
+  \coordinate (J) at ($(P.south)+(0,-0.7)$);
+  \draw[fiolet] (S.north) |- (J);
+  \draw[fiolet] (R.north) |- (J);
+  \draw[dziedziczy] (J) -- (P.south);
+  \node[podpis, anchor=west] at ($(P.south)+(0.15,-0.35)$) {dziedziczy po („jest rodzajem”)};
+  \node[podpis, anchor=west] at (P.east) {\ klasa bazowa};
+  % legenda
+  \node[notka, anchor=north west, text width=100mm] at (-4.6,-4.9) {%
+    \textcolor{bursztyn}{\rule{3mm}{2mm}} metoda \textbf{nadpisana} (zastępuje wersję z \kod{Pojazd})\\
+    \textcolor{zielen}{\rule{3mm}{2mm}} metoda \textbf{nowa} (tylko w tej klasie)\\
+    pozostałe metody są \textbf{dziedziczone} bez zmian};
+\end{tikzpicture}

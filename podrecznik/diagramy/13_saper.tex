@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=8.5mm, y=8.5mm]
+  \tikzset{p/.style={komorka, minimum width=8.5mm, minimum height=8.5mm}}
+  \foreach \row [count=\i from 0] in {{*,.,.,.,.},{.,.,*,.,.},{.,*,.,.,*},{.,.,.,*,.}} {
+    \node[indeks] at (-0.75, -\i) {\i};
+    \foreach \v [count=\j from 0] in \row {
+      \if\v* \node[komorka zla, minimum width=8.5mm, minimum height=8.5mm] (a\i\j) at (\j, -\i) {*};
+      \else \node[p] (a\i\j) at (\j, -\i) {.}; \fi
+    }
+  }
+  \foreach \j in {0,...,4} \node[indeks] at (\j, 0.7) {\j};
+  \node[podpis] at (2, -4.0) {plansza (wejście)};
+  \draw[draw=bursztyn, line width=1.6pt, rounded corners=2pt] ($(a00.north west)+(-0.04,0.04)$) rectangle ($(a22.south east)+(0.04,-0.04)$);
+  \draw[draw=zielen, line width=1.6pt, rounded corners=2pt, densely dashed] ($(a20.north west)+(-0.08,0.08)$) rectangle ($(a31.south east)+(0.08,-0.08)$);
+  \draw[strzalka, line width=0.8pt] (5.0, -1.5) -- node[above, font=\scriptsize] {licz \kod{*}} node[below, font=\scriptsize] {wokół pola} (6.6, -1.5);
+  \begin{scope}[xshift=7.6*8.5mm]
+    \foreach \row [count=\i from 0] in {{*,2,1,1,0},{2,3,*,2,1},{1,*,3,3,*},{1,1,2,*,2}} {
+      \node[indeks] at (-0.75, -\i) {\i};
+      \foreach \v [count=\j from 0] in \row {
+        \if\v* \node[komorka zla, minimum width=8.5mm, minimum height=8.5mm] (b\i\j) at (\j, -\i) {*};
+        \else \node[p] (b\i\j) at (\j, -\i) {\v}; \fi
+      }
+    }
+    \foreach \j in {0,...,4} \node[indeks] at (\j, 0.7) {\j};
+    \node[komorka wyr, minimum width=8.5mm, minimum height=8.5mm] at (b11) {3};
+    \node[komorka ok, minimum width=8.5mm, minimum height=8.5mm] at (b30) {1};
+    \node[podpis] at (2, -4.0) {wynik};
+  \end{scope}
+  \node[notka, anchor=north west, text width=150mm] at (-1.0, -4.6) {%
+    \textcolor{bursztyn}{\textbf{pole (1, 1)}}: w kwadracie $3 \times 3$ wokół niego są 3 miny → \kod{3}.\\
+    \textcolor{zielen}{\textbf{pole (3, 0)}}: na planszy leżą tylko 3 z jego 8 sąsiadów, mina jest 1 → \kod{1}.};
+\end{tikzpicture}

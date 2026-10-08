@@ -1,0 +1,37 @@
+\begin{tikzpicture}[x=1cm, y=-0.72cm,
+    bit/.style={rectangle, draw=linia, minimum width=6.4mm, minimum height=6.4mm, inner sep=0pt, font=\ttfamily\small},
+    jed/.style={bit, draw=zielen, fill=zielenjasna}]
+  % nagłówki
+  \node[podpis] at (0,-1.1) {\kod{maska}};
+  \node[podpis] at (1.4,-1.1) {bit 2};  \node[podpis] at (2.7,-1.1) {bit 1};  \node[podpis] at (4.0,-1.1) {bit 0};
+  \node[font=\scriptsize, text=fiolet] at (1.4,-0.55) {pieczarki};
+  \node[font=\scriptsize, text=fiolet] at (2.7,-0.55) {szynka};
+  \node[font=\scriptsize, text=fiolet] at (4.0,-0.55) {ser};
+  \node[podpis, anchor=west] at (4.6,-1.1) {wybrane dodatki};
+  \begin{scope}[on background layer]
+    \fill[bursztynjasny] (-0.5,4.5) rectangle (8.25,5.5);
+  \end{scope}
+  \foreach \m/\a/\b/\c/\t in {0/0/0/0/{—}, 1/0/0/1/{ser}, 2/0/1/0/{szynka}, 3/0/1/1/{ser, szynka},
+                              4/1/0/0/{pieczarki}, 5/1/0/1/{ser, pieczarki}, 6/1/1/0/{szynka, pieczarki},
+                              7/1/1/1/{ser, szynka, pieczarki}} {
+    \node[kod] at (0,\m) {\m};
+    \foreach \v/\x in {\a/1.4, \b/2.7, \c/4.0} {
+      \ifnum\v=1 \node[jed] at (\x,\m) {1}; \else \node[bit] at (\x,\m) {0}; \fi
+    }
+    \node[font=\footnotesize, anchor=west] at (4.6,\m) {\t};
+  }
+  % zbliżenie dla maski 5
+  \begin{scope}[xshift=9.1cm]
+    \node[font=\bfseries\small, anchor=west] at (0,0.2) {\kod{maska = 5} \;($101_2$)};
+    \foreach \i/\r/\e/\s in {0/1/ser/zielen, 1/0/szynka/czerwien, 2/1/pieczarki/zielen} {
+      \node[kod, anchor=west] at (0,1.6+\i*1.3) {(5 \textgreater{}\textgreater{} \i) \& 1 = \r};
+      \ifnum\r=1
+        \node[font=\footnotesize, text=zielen, anchor=west] at (4.05,1.6+\i*1.3) {bierzemy: \e};
+      \else
+        \node[font=\footnotesize, text=czerwien, anchor=west] at (4.05,1.6+\i*1.3) {pomijamy: \e};
+      \fi
+    }
+    \node[notka, anchor=west, text width=64mm] at (0,6.3) {Przesunięcie o $i$ w prawo sprowadza bit $i$\\ na pozycję $0$, a \kod{\& 1} odcina wszystkie inne.};
+  \end{scope}
+  \draw[->, draw=bursztyn, thick] (8.3,5) to[out=0, in=180] (8.95,2.9);
+\end{tikzpicture}

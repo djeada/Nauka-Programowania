@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=7mm]
+  \tikzset{zn/.style={komorka, minimum width=6.5mm, minimum height=7mm}}
+  % zdanie z wejścia
+  \foreach \c [count=\i from 0] in {K,o,b,y,ł,a,_,m,a,_,m,a,ł,y,_,b,o,k,.} {
+    \if\c_ \node[komorka szara, minimum width=6.5mm, minimum height=7mm] (z\i) at (\i, 0) {\textvisiblespace};
+    \else\if\c. \node[komorka szara, minimum width=6.5mm, minimum height=7mm] (z\i) at (\i, 0) {.};
+    \else \node[zn] (z\i) at (\i, 0) {\c}; \fi\fi
+  }
+  \node[kod, anchor=east] at (-0.7, 0) {zdanie};
+  \node[notka, anchor=west] at (18.7, 0) {spacje i kropka\\ — pomijamy};
+  % litery po oczyszczeniu
+  \foreach \c [count=\i from 0] in {k,o,b,y,ł,a,m,a,m,a,ł,y,b,o,k} {
+    \node[zn] (l\i) at (\i+2, -2.4) {\c};
+    \node[indeks, below=0.4mm of l\i] {\i};
+  }
+  \node[kod, anchor=east] at (-0.7, -2.4) {litery};
+  \draw[strzalka, draw=akcent] ($(z8.south)+(0,-0.15)$) -- node[right, font=\scriptsize\ttfamily, text=akcent, align=left] {isalpha()\\+ lower()} ($(l7.north)+(0,0.15)$);
+  % pary
+  \foreach \i [evaluate=\i as \j using int(14-\i)] in {0,...,6} {
+    \pgfmathsetmacro{\dd}{-0.62-0.27*(7-\i)}
+    \draw[draw=zielen] (l\i.south) ++(0,-0.33) -- ++(0,\dd+0.33) -| ($(l\j.south)+(0,-0.33)$);
+  }
+  \node[komorka szara] at (l7) {a};
+  \node[podpis, text=zielen] at (9, -5.75) {7 par $(i,\; 14 - i)$ zgodnych, środek \kod{litery[7]} bez pary → palindrom};
+\end{tikzpicture}

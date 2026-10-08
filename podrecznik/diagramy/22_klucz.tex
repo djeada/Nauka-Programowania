@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=1cm, y=-9mm,
+    slowo/.style={komorka, minimum width=17mm, font=\ttfamily\small},
+    klucz/.style={komorka wyr, minimum width=7mm}]
+  \node[font=\small\bfseries] at (0.6,-1) {lista};
+  \node[font=\small\bfseries] at (3.0,-1) {klucz \kod{len(x)}};
+  \node[font=\small\bfseries] at (7.4,-1) {\kod{sorted(owoce, key=len)}};
+  \foreach \w/\k/\o [count=\i from 0] in {banan/5/2, kiwi/4/1, jabłko/6/4, fig/3/0, melon/5/3} {
+    \node[slowo] (we\i) at (0.6,\i) {\w};
+    \node[klucz] (k\i) at (3.0,\i) {\k};
+    \draw[strzalka, draw=szary] (we\i) -- (k\i);
+    \node[klucz] (wk\i) at (6.4,\o) {\k};
+    \node[slowo, anchor=west] (wy\i) at ($(wk\i.east)+(0.6mm,0)$) {\w};
+    \draw[->, draw=bursztyn] (k\i.east) to[out=0, in=180] (wk\i.west);
+  }
+  \node[notka, anchor=west, text width=44mm] at (9.6,2.5) {\kod{banan} i \kod{melon} mają ten sam klucz~5 — zostają w~kolejności z~wejścia};
+  \draw[klamra] (9.45,2.1) -- (9.45,2.9);
+\end{tikzpicture}

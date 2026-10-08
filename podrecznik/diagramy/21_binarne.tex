@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=9mm, y=-1cm, wsk/.style={font=\scriptsize\ttfamily, inner sep=1pt}]
+  \newcommand{\wiersz}[3]{\foreach \v/\s [count=\i from 0] in {#3} \node[\s] (w#1-\i) at (\i,#2) {\v};}
+  \foreach \i in {0,...,9} \node[indeks] at (\i,-1.5) {\i};
+  % krok 1
+  \wiersz{1}{0}{2/komorka,5/komorka,8/komorka,12/komorka,16/komorka wyr,23/komorka,38/komorka,56/komorka,72/komorka,91/komorka}
+  % krok 2
+  \wiersz{2}{2.5}{2/komorka szara,5/komorka szara,8/komorka szara,12/komorka szara,16/komorka szara,23/komorka,38/komorka,56/komorka wyr,72/komorka,91/komorka}
+  % krok 3
+  \wiersz{3}{5.0}{2/komorka szara,5/komorka szara,8/komorka szara,12/komorka szara,16/komorka szara,23/komorka ok,38/komorka,56/komorka szara,72/komorka szara,91/komorka szara}
+  % wskaźniki lo, hi pod komórkami
+  \foreach \r/\lo/\hi in {1/0/9, 2/5/9, 3/5/6} {
+    \draw[wskaznik, draw=akcent] ($(w\r-\lo.south)+(0,-4.5mm)$) node[below, wsk, text=akcent] {lo} -- (w\r-\lo.south);
+    \draw[wskaznik, draw=akcent] ($(w\r-\hi.south)+(0,-4.5mm)$) node[below, wsk, text=akcent] {hi} -- (w\r-\hi.south);
+  }
+  \foreach \r/\m in {1/4, 2/7, 3/5}
+    \draw[wskaznik, draw=bursztyn] ($(w\r-\m.north)+(0,4mm)$) node[above, wsk, text=bursztyn] {mid} -- (w\r-\m.north);
+  \node[anchor=west, notka, text width=48mm] at (10.2,0)   {krok 1: $mid = \lfloor (0+9)/2 \rfloor = 4$\\$a_4 = 16 < 23 \Rightarrow lo = 5$};
+  \node[anchor=west, notka, text width=48mm] at (10.2,2.5) {krok 2: $mid = \lfloor (5+9)/2 \rfloor = 7$\\$a_7 = 56 > 23 \Rightarrow hi = 6$};
+  \node[anchor=west, notka, text width=48mm] at (10.2,5.0) {krok 3: $mid = \lfloor (5+6)/2 \rfloor = 5$\\$a_5 = 23$ — \textcolor{zielen}{znaleziono!}};
+\end{tikzpicture}

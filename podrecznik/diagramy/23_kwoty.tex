@@ -1,0 +1,28 @@
+\begin{tikzpicture}[
+    seg/.style={anchor=base west, inner xsep=0pt, inner ysep=3pt, font=\ttfamily\small},
+    traf/.style={seg, fill=bursztynjasny, draw=bursztyn, rounded corners=1.5pt, inner xsep=1pt},
+    pud/.style={rectangle, draw=linia, fill=tlo, rounded corners=2pt, font=\footnotesize, align=center, inner sep=3pt}]
+  \newcommand{\gj}[1]{\textcolor{akcent}{\textbf{#1}}}
+  \newcommand{\gd}[1]{\textcolor{zielen}{\textbf{#1}}}
+  \node[seg] (s0) at (0,0) {Chleb\phantom{x}};
+  \node[traf] (m1) at (s0.base east) {\gj{4},\gd{50} zł};
+  \node[seg] (s1) at (m1.base east) {,\phantom{x}mleko\phantom{x}};
+  \node[traf] (m2) at (s1.base east) {\gj{3},\gd{99} zł};
+  \node[seg] (s2) at (m2.base east) {,\phantom{x}woda\phantom{x}};
+  \node[seg] (x)  at (s2.base east) {2,5 zł};
+  \node[seg] (s3) at (x.base east) {\phantom{x}i bułka\phantom{x}};
+  \node[traf] (m3) at (s3.base east) {\gj{0},\gd{85} zł};
+  \node[seg] (s4) at (m3.base east) {.};
+  \draw[czerwien, densely dashed, thick] ($(x.south west)+(0,0.5mm)$) -- ($(x.south east)+(0,0.5mm)$);
+  % krotki z findall
+  \foreach \m/\z/\g/\w in {m1/4/50/450, m2/3/99/399, m3/0/85/85} {
+    \node[pud, below=7mm of \m] (k\m) {\kod{(\textcolor{akcent}{\textquotesingle\z\textquotesingle}, \textcolor{zielen}{\textquotesingle\g\textquotesingle})}\\[1pt]$\w$ gr};
+    \draw[->, draw=szary] (\m.south) -- (k\m.north);
+  }
+  \node[notka, text=czerwien, below=7mm of x, text width=24mm, align=center] (nx) {jedna cyfra groszy — nie pasuje};
+  \draw[->, draw=czerwien!60] (x.south) -- (nx.north);
+  % suma
+  \node[anchor=west, font=\small] (s) at ($(km1.south west)+(0,-8mm)$) {suma: $450 + 399 + 85 = 934$ gr $\;\to\;$ $\lfloor 934/100 \rfloor = 9$ zł, $\;934 \bmod 100 = 34$ gr $\;\to\;$ \kod{9,34 zł}};
+  % legenda
+  \node[anchor=west, notka] at ($(s4.east)+(4mm,0)$) {\textcolor{akcent}{\textbf{grupa 1}} — złote\\\textcolor{zielen}{\textbf{grupa 2}} — grosze};
+\end{tikzpicture}
