@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Wydanie z podręcznikiem PDF
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Zależności WeasyPrint i fonty
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 fonts-dejavu-core fonts-dejavu-extra
+      - run: pip install -r scripts/requirements-pdf.txt
+      - name: Składanie PDF (bez rozwiązań i z rozwiązaniami)
+        run: |
+          python3 scripts/generate_pdf.py --strict
+          python3 scripts/generate_pdf.py --strict --rozwiazania
+      - name: Publikacja wydania
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --title "$GITHUB_REF_NAME" \
+            --generate-notes \
+            Nauka_Programowania_Zbior_Zadan.pdf \
+            Nauka_Programowania_Zbior_Zadan_z_rozwiazaniami.pdf
