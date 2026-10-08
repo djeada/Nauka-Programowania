@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+  % A = {2, 4, 6, 8}, B = {3, 6, 9}
+  \def\A{(0,0) circle (1.05)}
+  \def\B{(1.25,0) circle (1.05)}
+  \foreach \k/\x/\tytul/\py in {0/0/{$A \cup B$}/{A | B}, 1/4.1/{$A \cap B$}/{A \& B}, 2/8.2/{$A \setminus B$}/{A - B}, 3/12.3/{$(A \setminus B) \cup (B \setminus A)$}/{A \textasciicircum{} B}} {
+    \begin{scope}[xshift=\x cm]
+      \ifcase\k
+        \fill[akcentjasny] \A; \fill[akcentjasny] \B;
+      \or
+        \begin{scope} \clip \A; \fill[akcentjasny] \B; \end{scope}
+      \or
+        \fill[akcentjasny] \A; \begin{scope} \clip \A; \fill[white] \B; \end{scope}
+      \or
+        \fill[akcentjasny, even odd rule] \A \B;
+      \fi
+      \draw[akcent] \A; \draw[akcent] \B;
+      \node[font=\small\bfseries, text=akcent] at (-0.85, 1.0) {A};
+      \node[font=\small\bfseries, text=akcent] at (2.1, 1.0) {B};
+      \node[font=\footnotesize\ttfamily, align=center] at (-0.35, 0) {2\\4\\8};
+      \node[font=\footnotesize\ttfamily] at (0.625, 0) {6};
+      \node[font=\footnotesize\ttfamily, align=center] at (1.6, 0) {3\\9};
+      \node at (0.625, -1.55) {\tytul};
+      \node[kod, font=\ttfamily\small, text=fiolet] at (0.625, -2.1) {\py};
+    \end{scope}
+  }
+  \node[podpis] at (0.625, -2.65) {\{2, 3, 4, 6, 8, 9\}};
+  \node[podpis] at (4.725, -2.65) {\{6\}};
+  \node[podpis] at (8.825, -2.65) {\{2, 4, 8\}};
+  \node[podpis] at (12.925, -2.65) {\{2, 3, 4, 8, 9\}};
+\end{tikzpicture}

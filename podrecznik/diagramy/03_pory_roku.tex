@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=12.5mm, y=1mm]
+  % pozycja dnia: miesiąc m, dzień d -> (m-1) + (d-1)/31 (w przybliżeniu)
+  \def\poz#1#2{(#1-1)+(#2-1)/31}
+  \fill[akcentjasny] (0,0) rectangle ({\poz{3}{21}},9);
+  \fill[zielenjasna] ({\poz{3}{21}},0) rectangle ({\poz{6}{22}},9);
+  \fill[bursztynjasny] ({\poz{6}{22}},0) rectangle ({\poz{9}{23}},9);
+  \fill[czerwienjasna] ({\poz{9}{23}},0) rectangle ({\poz{12}{22}},9);
+  \fill[akcentjasny] ({\poz{12}{22}},0) rectangle (12,9);
+  \draw[draw=linia] (0,0) rectangle (12,9);
+  \foreach \x in {{\poz{3}{21}},{\poz{6}{22}},{\poz{9}{23}},{\poz{12}{22}}} \draw[draw=tusz, thick] ({\x},-2) -- ({\x},11);
+  \node[font=\footnotesize, text=akcent] at ({\poz{2}{10}},4.5) {zima};
+  \node[font=\footnotesize, text=zielen] at ({\poz{5}{6}},4.5) {wiosna};
+  \node[font=\footnotesize, text=bursztyn] at ({\poz{8}{8}},4.5) {lato};
+  \node[font=\footnotesize, text=czerwien] at ({\poz{11}{7}},4.5) {jesień};
+  % miesiące
+  \foreach \nazwa [count=\i from 0] in {I,II,III,IV,V,VI,VII,VIII,IX,X,XI,XII} {
+    \draw[draw=szary] (\i,0) -- (\i,-1.5);
+    \node[indeks, below=0.3mm] at (\i+0.5,-1) {\nazwa};
+  }
+  \draw[draw=szary] (12,0) -- (12,-1.5);
+  % klucze graniczne
+  \foreach \x/\k in {{\poz{3}{21}}/321,{\poz{6}{22}}/622,{\poz{9}{23}}/923,{\poz{12}{22}}/1222}
+    \node[font=\ttfamily\footnotesize, fill=white, inner sep=1.5pt] at ({\x},14) {\k};
+  \node[font=\ttfamily\scriptsize, anchor=west] at (0,14) {101};
+  % warunki
+  \node[font=\ttfamily\scriptsize, text=akcent] at ({\poz{2}{10}},20) {klucz < 321};
+  \node[font=\ttfamily\scriptsize, text=zielen] at ({\poz{5}{6}},20) {klucz < 622};
+  \node[font=\ttfamily\scriptsize, text=bursztyn] at ({\poz{8}{8}},20) {klucz < 923};
+  \node[font=\ttfamily\scriptsize, text=czerwien] at ({\poz{11}{7}},20) {else};
+  \node[font=\ttfamily\scriptsize, text=akcent, anchor=east] at (12.2,26) {klucz >= 1222};
+  \draw[densely dotted, draw=akcent] ({\poz{12}{27}},23.5) -- ({\poz{12}{27}},9);
+  \node[podpis, anchor=east] at (-0.15,14) {klucz:};
+\end{tikzpicture}

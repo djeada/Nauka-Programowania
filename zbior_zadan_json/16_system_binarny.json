@@ -106,6 +106,62 @@
       "starter_code": ""
     },
     {
+      "id": "ZAD-02",
+      "slug": "16_system_binarny/ZAD-02",
+      "title": "Operatory bitowe AND, OR i XOR",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "bitwise",
+        "AND",
+        "OR",
+        "XOR"
+      ],
+      "description": "Operatory bitowe działają na zapisie binarnym liczb — osobno na każdej pozycji (bicie). Liczby zapisujemy jedna pod drugą, wyrównane do prawej, a brakujące bity z lewej uzupełniamy zerami:\n\n* `a & b` (AND) — bit wyniku jest `1` tylko wtedy, gdy **oba** bity są równe `1`,\n* `a | b` (OR) — bit wyniku jest `1`, gdy **co najmniej jeden** z bitów jest równy `1`,\n* `a ^ b` (XOR) — bit wyniku jest `1`, gdy bity są **różne**.\n\nWczytaj dwie liczby naturalne `a` i `b` i wypisz wyniki tych trzech operacji.",
+      "input": "* 1. linia: `a`\n* 2. linia: `b`",
+      "output": "Trzy linie — w systemie dziesiętnym:\n\n* 1. linia: `a & b`\n* 2. linia: `a | b`\n* 3. linia: `a ^ b`",
+      "examples": [
+        {
+          "input": "12\n10",
+          "output": "8\n14\n6",
+          "explanation": "$12 = 1100_2$ i $10 = 1010_2$. Bit po bicie: AND daje $1000_2 = 8$, OR — $1110_2 = 14$, a XOR — $0110_2 = 6$."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0\n0",
+          "output": "0\n0\n0"
+        },
+        {
+          "input": "5\n5",
+          "output": "5\n5\n0"
+        },
+        {
+          "input": "0\n7",
+          "output": "0\n7\n7"
+        },
+        {
+          "input": "8\n7",
+          "output": "0\n15\n15"
+        },
+        {
+          "input": "255\n256",
+          "output": "0\n511\n511"
+        },
+        {
+          "input": "1000000000\n999999999",
+          "output": "999999488\n1000000511\n1023"
+        },
+        {
+          "input": "6\n3",
+          "output": "2\n7\n5"
+        }
+      ],
+      "constraints": "* $0 \\le a, b \\le 10^9$",
+      "notes": "* Rachunek z przykładu zapisany w słupkach:\n\n  ```\n      1100      1100      1100\n    & 1010    | 1010    ^ 1010\n    ------    ------    ------\n      1000      1110      0110\n  ```\n\n* Zwróć uwagę na zależności: `a ^ a` to zawsze `0`, `a & 0` to `0`, a `a | 0` i `a ^ 0` to `a`. Zachodzi też równość `(a & b) + (a | b) == a + b` — możesz tak sprawdzić swój wynik.",
+      "starter_code": ""
+    },
+    {
       "id": "ZAD-03A",
       "slug": "16_system_binarny/ZAD-03A",
       "title": "Dodawanie bitowe",
@@ -465,6 +521,61 @@
       "starter_code": ""
     },
     {
+      "id": "ZAD-05B",
+      "slug": "16_system_binarny/ZAD-05B",
+      "title": "Wartość bezwzględna bez instrukcji warunkowych",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "bit-trick",
+        "maski",
+        "bez if"
+      ],
+      "description": "Wczytaj liczbę całkowitą `x` i wypisz jej wartość bezwzględną $|x|$ **bez użycia instrukcji warunkowych** (`if`, wyrażenia `x if warunek else y`) i bez funkcji `abs`, `min`, `max`, `sorted`.",
+      "input": "* 1. linia: `x`",
+      "output": "Jedna liczba naturalna: $|x|$.",
+      "examples": [
+        {
+          "input": "-12",
+          "output": "12",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "0"
+        },
+        {
+          "input": "7",
+          "output": "7"
+        },
+        {
+          "input": "-1",
+          "output": "1"
+        },
+        {
+          "input": "1000000000",
+          "output": "1000000000"
+        },
+        {
+          "input": "-1000000000",
+          "output": "1000000000"
+        },
+        {
+          "input": "-999999999",
+          "output": "999999999"
+        },
+        {
+          "input": "1",
+          "output": "1"
+        }
+      ],
+      "constraints": "* $-10^9 \\le x \\le 10^9$ — liczba **może być ujemna**",
+      "notes": "* Dopuszczalne są operacje arytmetyczne i bitowe; porównania (`<`, `>`) nie są potrzebne.\n* Tak jak w ZAD-05A, **maska znaku** `m = x >> 63` jest równa `-1` (same jedynki), gdy `x < 0`, oraz `0`, gdy `x ≥ 0`.\n* XOR z maską `0` nic nie zmienia, a XOR z maską `-1` odwraca wszystkie bity, czyli daje $-x - 1$ (tak liczby ujemne zapisuje kod uzupełnień do dwóch). Wystarczy więc obliczyć `(x ^ m) - m`.",
+      "starter_code": ""
+    },
+    {
       "id": "ZAD-06",
       "slug": "16_system_binarny/ZAD-06",
       "title": "Konwersja między dowolnymi systemami (2..36)",
@@ -686,6 +797,57 @@
       ],
       "constraints": "* napis ma od 1 do 100 znaków i składa się wyłącznie ze znaków ASCII (bez polskich liter)",
       "notes": "* Kody wielkiej i małej litery różnią się tylko bitem o wartości 32 (`0b100000`): `ord(\"A\")` to `65`, a `ord(\"a\")` to `97`. Ustawienie tego bitu: `ord(znak) | 32`.\n* Zmieniaj tylko litery `A–Z` — np. `@` i `[` sąsiadują w tablicy ASCII z literami, ale mają pozostać bez zmian.\n* Odwrotną zamianę (małe → wielkie) daje wyzerowanie tego bitu: `ord(znak) & ~32`.",
+      "starter_code": ""
+    },
+    {
+      "id": "ZAD-09B",
+      "slug": "16_system_binarny/ZAD-09B",
+      "title": "Numer litery w alfabecie (bitowo)",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "ASCII",
+        "bitwise",
+        "maski"
+      ],
+      "description": "Wczytaj słowo złożone z liter alfabetu łacińskiego. Dla każdej litery wyznacz jej numer w alfabecie — `a` i `A` mają numer `1`, `b` i `B` numer `2`, …, `z` i `Z` numer `26` — używając operacji bitowej na kodzie ASCII zamiast porównań i odejmowania.",
+      "input": "* 1. linia: słowo",
+      "output": "Jedna linia: numery kolejnych liter słowa oddzielone pojedynczymi spacjami.",
+      "examples": [
+        {
+          "input": "Bit",
+          "output": "2 9 20",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "a",
+          "output": "1"
+        },
+        {
+          "input": "Z",
+          "output": "26"
+        },
+        {
+          "input": "zZaA",
+          "output": "26 26 1 1"
+        },
+        {
+          "input": "Python",
+          "output": "16 25 20 8 15 14"
+        },
+        {
+          "input": "AbCdEfGhIjKlMnOpQrStUvWxYz",
+          "output": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26"
+        },
+        {
+          "input": "MmM",
+          "output": "13 13 13"
+        }
+      ],
+      "constraints": "* słowo ma od 1 do 100 znaków i składa się wyłącznie z liter `a–z` i `A–Z`",
+      "notes": "* Zapisz kody binarnie: `ord(\"A\")` to $65 = 1000001_2$, a `ord(\"a\")` to $97 = 1100001_2$. Pięć najniższych bitów kodu każdej litery to właśnie jej numer w alfabecie — i to niezależnie od wielkości litery.\n* Pięć najniższych bitów wydobędziesz **maską** $31 = 11111_2$: `ord(znak) & 31`. Operacja `&` z maską zeruje wszystkie bity poza tymi, które w masce są jedynkami.",
       "starter_code": ""
     },
     {

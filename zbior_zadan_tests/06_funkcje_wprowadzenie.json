@@ -171,6 +171,66 @@
       "output": "99"
     }
   ],
+  "ZAD-04B": [
+    {
+      "input": "5\n0\n10",
+      "output": "5"
+    },
+    {
+      "input": "-3\n0\n10",
+      "output": "0"
+    },
+    {
+      "input": "10\n0\n10",
+      "output": "10"
+    },
+    {
+      "input": "3\n5\n5",
+      "output": "5"
+    },
+    {
+      "input": "-100\n-50\n-20",
+      "output": "-50"
+    },
+    {
+      "input": "-30\n-50\n-20",
+      "output": "-30"
+    },
+    {
+      "input": "1000000000\n-1000000000\n999999999",
+      "output": "999999999"
+    }
+  ],
+  "ZAD-04C": [
+    {
+      "input": "1\n2\n3",
+      "output": "2"
+    },
+    {
+      "input": "10\n30\n20",
+      "output": "20"
+    },
+    {
+      "input": "5\n5\n1",
+      "output": "5"
+    },
+    {
+      "input": "4\n9\n9",
+      "output": "9"
+    },
+    {
+      "input": "0\n0\n0",
+      "output": "0"
+    },
+    {
+      "input": "100\n1\n50",
+      "output": "50"
+    },
+    {
+      "input": "7\n3\n7",
+      "output": "7"
+    }
+  ],
   "ZAD-04D": [
     {
       "input": "5\n2\n9",
@@ -253,6 +313,28 @@
     {
       "input": "ola\nhaslo1\nola\nhaslo\nola\nhaslo2\nola\nHASLO1\nola\nhaslo1",
       "output": "Błędne dane. Spróbuj ponownie.\nBłędne dane. Spróbuj ponownie.\nBłędne dane. Spróbuj ponownie.\nDane poprawne. Dostęp przyznany."
+    }
+  ],
+  "ZAD-08": [
+    {
+      "input": "1\n1",
+      "output": "1: deficytowa"
+    },
+    {
+      "input": "3\n28\n496\n8128",
+      "output": "28: doskonała\n496: doskonała\n8128: doskonała"
+    },
+    {
+      "input": "4\n2\n945\n9999\n10000",
+      "output": "2: deficytowa\n945: obfita\n9999: deficytowa\n10000: obfita"
+    },
+    {
+      "input": "5\n18\n20\n24\n30\n36",
+      "output": "18: obfita\n20: obfita\n24: obfita\n30: obfita\n36: obfita"
+    },
+    {
+      "input": "6\n8\n16\n25\n97\n12\n6",
+      "output": "8: deficytowa\n16: deficytowa\n25: deficytowa\n97: deficytowa\n12: obfita\n6: doskonała"
     }
   ],
   "ZAD-09": [

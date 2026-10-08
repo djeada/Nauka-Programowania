@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+  % siatka 3 x 4: kolejność odwiedzania par (i, j)
+  \foreach \j in {0,...,3}
+    \node[indeks] at (\j*1.9, 0.75) {j = \j};
+  \foreach \i in {0,1,2} {
+    \node[indeks, anchor=east] at (-0.95, -\i*1.4) {i = \i};
+    \foreach \j in {0,...,3} {
+      \pgfmathtruncatemacro{\k}{\i*4+\j+1}
+      \node[komorka, minimum width=15mm, minimum height=9mm] (c\i\j) at (\j*1.9, -\i*1.4) {(\i, \j)};
+      \node[font=\scriptsize\bfseries, text=bursztyn, anchor=north west, inner sep=1.5pt] at (c\i\j.north west) {\k};
+    }
+    \foreach \j [evaluate=\j as \jn using int(\j+1)] in {0,1,2}
+      \draw[strzalka, draw=akcent] (c\i\j.east) -- (c\i\jn.west);
+  }
+  \foreach \i [evaluate=\i as \in using int(\i+1)] in {0,1} {
+    \draw[->, draw=szary, densely dashed] (c\i3.south) -- ++(0,-0.25) -| (c\in0.north);
+  }
+  \node[font=\scriptsize, text=szary, fill=white, inner sep=1pt] at ($(c01.south)!0.5!(c02.south)+(0,-0.25)$) {\kod{print()} — nowy wiersz};
+  % kod
+  \node[notka, anchor=west, text width=58mm] (code) at (8.1,-1.4) {%
+    \kod{\textcolor{fiolet}{for} i \textcolor{fiolet}{in} range(3):}\\
+    \kod{\ \ \ \ \textcolor{fiolet}{for} j \textcolor{fiolet}{in} range(4):}\\
+    \kod{\ \ \ \ \ \ \ \ print(i, j, end="\ \ ")}\\
+    \kod{\ \ \ \ print()}\\[2mm]
+    {\small\color{tusz}\raggedright Pętla zewnętrzna (\kod{i}) wybiera wiersz, wewnętrzna (\kod{j}) przechodzi po \textbf{wszystkich} kolumnach, zanim \kod{i} zmieni się o~1.\par}};
+  \begin{scope}[on background layer]
+    \node[ramka, fit=(code), inner sep=4pt] {};
+  \end{scope}
+\end{tikzpicture}

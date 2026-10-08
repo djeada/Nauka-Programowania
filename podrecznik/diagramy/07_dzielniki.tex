@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=13mm]
+  \foreach \d [count=\i from 0] in {1,2,3,4,6,9,12,18,36} {
+    \ifnum\i<4 \node[komorka ok, minimum width=9mm] (d\i) at (\i,0) {\d};
+    \else\ifnum\i=4 \node[komorka wyr, minimum width=9mm] (d\i) at (\i,0) {\d};
+    \else \node[komorka szara, minimum width=9mm] (d\i) at (\i,0) {\d}; \fi\fi
+  }
+  \foreach \a/\b/\h/\t in {0/8/2.4/{1 \cdot 36}, 1/7/1.8/{2 \cdot 18}, 2/6/1.25/{3 \cdot 12}, 3/5/0.75/{4 \cdot 9}} {
+    \draw[draw=akcent, thick] (d\a.north) .. controls +(0,\h) and +(0,\h) .. (d\b.north)
+      node[pos=0.5, fill=white, inner sep=1pt, font=\scriptsize, text=akcent] {$\t$};
+  }
+  % oś pierwiastka
+  \draw[draw=czerwien, densely dashed] (4,-0.45) -- (4,-1.0);
+  \node[font=\footnotesize, text=czerwien, below] at (4,-0.95) {$\sqrt{36} = 6$ \ ($6 \cdot 6$)};
+  \draw[klamra, decoration={mirror}, draw=zielen] (-0.4,-0.5) -- (3.4,-0.5) node[midway, below=5pt, font=\footnotesize, text=zielen, align=center] {$d \le \sqrt{n}$: sprawdzamy w pętli};
+  \draw[klamra, decoration={mirror}, draw=szary] (4.6,-0.5) -- (8.4,-0.5) node[midway, below=5pt, font=\footnotesize, text=szary, align=center] {$n / d$: dostajemy „za darmo”};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=7.5mm]
+  % s = "informatyka"; każdy wiersz: które znaki wybiera wycinek
+  \tikzset{zn/.style={komorka, minimum width=7mm, minimum height=7mm}}
+  \foreach \c [count=\i from 0] in {i,n,f,o,r,m,a,t,y,k,a} {
+    \node[zn] (s\i) at (\i, 0) {\c};
+    \node[indeks, below=0.3mm of s\i] {\i};
+    \pgfmathtruncatemacro{\ng}{\i-11}
+    \node[indeks, text=fiolet, above=0.3mm of s\i] {\ng};
+  }
+  \node[kod, anchor=east] at (-0.8, 0) {s};
+  \foreach \r/\kodw/\wyn/\sel in {1/{s[2:6]}/{"form"}/{2,3,4,5}, 2/{s[:3]}/{"inf"}/{0,1,2}, 3/{s[-4:]}/{"tyka"}/{7,8,9,10},
+                                 4/{s[1:9:3]}/{"nrt"}/{1,4,7}, 5/{s[::-1]}/{"akytamrofni"}/{0,1,2,3,4,5,6,7,8,9,10}} {
+    \pgfmathsetmacro{\y}{-0.4-\r*0.95}
+    \node[kod, anchor=east, font=\ttfamily\small] at (-0.8, \y) {\kodw};
+    \foreach \c [count=\i from 0] in {i,n,f,o,r,m,a,t,y,k,a}
+      \node[komorka szara, minimum width=7mm, minimum height=6.5mm] (w\r-\i) at (\i, \y) {\c};
+    \foreach \i in \sel
+      \node[komorka wyr, minimum width=7mm, minimum height=6.5mm] at (\i, \y) {\ifcase\i i\or n\or f\or o\or r\or m\or a\or t\or y\or k\or a\fi};
+    \node[kod, anchor=west, font=\ttfamily\small, text=bursztyn] at (10.8, \y) {\wyn};
+  }
+  \draw[->, draw=czerwien, thick] ($(w5-10.north east)+(0,0.08)$) -- ($(w5-0.north west)+(0,0.08)$);
+  \node[indeks, text=czerwien, fill=white, inner sep=1pt] at ($(w5-5.north)+(0,0.08)$) {krok $-1$: od końca};
+  \node[notka, anchor=west, text width=40mm] at (11.0, -0.05) {\kod{s[a:b:k]}: indeksy\\ $a, a{+}k, a{+}2k, \ldots < b$};
+\end{tikzpicture}

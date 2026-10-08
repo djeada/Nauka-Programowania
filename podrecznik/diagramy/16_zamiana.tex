@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm, y=-0.78cm]
+  % ----- dziesiętny -> binarny -----
+  \node[font=\bfseries\small] at (1.4,-1.65) {$45 \to$ binarny: dziel przez 2};
+  \node[podpis] at (0,-0.8) {$n$};
+  \node[podpis] at (1.6,-0.8) {$n \,/\!/\, 2$};
+  \node[podpis] at (3.1,-0.8) {$n \,\%\, 2$};
+  \foreach \n/\q/\r [count=\i from 0] in {45/22/1, 22/11/0, 11/5/1, 5/2/1, 2/1/0, 1/0/1} {
+    \node[kod] (n\i) at (0,\i) {\n};
+    \node[kod, text=szary] at (1.6,\i) {\q};
+    \node[komorka ok, minimum width=7mm, minimum height=6.5mm] (r\i) at (3.1,\i) {\r};
+  }
+  \foreach \i [evaluate=\i as \j using int(\i+1)] in {0,...,4}
+    \draw[->, draw=szary, shorten >=1pt, shorten <=1pt] (1.6,\i+0.3) to[bend left=15] (0.25,\j-0.25);
+  \draw[strzalka, draw=zielen, thick] (3.85,5.3) -- node[right, font=\footnotesize, text=zielen, align=left] {czytaj reszty\\ od dołu:\\ \kod{101101}} (3.85,-0.3);
+  % ----- binarny -> dziesiętny -----
+  \begin{scope}[xshift=8.6cm]
+    \node[font=\bfseries\small] at (1.5,-1.65) {\kod{101101} $\to$ dziesiętny: Horner};
+    \node[podpis] at (0,-0.8) {bit};
+    \node[podpis] at (2.4,-0.8) {wynik $= 2 \cdot$ wynik $+$ bit};
+    \foreach \b/\w/\op [count=\i from 0] in {1/1/{2\cdot 0+1}, 0/2/{2\cdot 1+0}, 1/5/{2\cdot 2+1}, 1/11/{2\cdot 5+1}, 0/22/{2\cdot 11+0}, 1/45/{2\cdot 22+1}} {
+      \node[komorka, minimum width=7mm, minimum height=6.5mm] at (0,\i) {\b};
+      \node[font=\footnotesize, text=szary, anchor=east] at (2.6,\i) {$\op =$};
+      \node[kod, anchor=west] (h\i) at (2.65,\i) {\w};
+    }
+    \draw[strzalka, draw=akcent, thick] (-0.75,-0.3) -- node[left, font=\footnotesize, text=akcent, align=right] {bity\\ od lewej} (-0.75,5.3);
+  \end{scope}
+\end{tikzpicture}

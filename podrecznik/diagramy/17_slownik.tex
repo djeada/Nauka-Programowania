@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    klucz/.style={rectangle, draw=fiolet, fill=fioletjasny, minimum width=17mm, minimum height=7mm, font=\ttfamily\small},
+    wart/.style={rectangle, draw=akcent, fill=white, minimum width=10mm, minimum height=7mm, font=\ttfamily\small}]
+  \node[podpis] at (0,1.0) {klucze};
+  \node[podpis] at (2.4,1.0) {wartości};
+  \foreach \k/\v [count=\i from 0] in {"Ola"/5, "Jan"/3, "Ewa"/4} {
+    \node[klucz] (k\i) at (0,-\i*0.95) {\k};
+    \node[wart] (v\i) at (2.4,-\i*0.95) {\v};
+    \draw[strzalka, draw=fiolet] (k\i) -- (v\i);
+  }
+  \node[kod, anchor=east] at (-1.1,-0.95) {oceny};
+  \draw[szary, rounded corners=4pt] (-0.95,0.55) rectangle (3.05,-2.45);
+  % operacje
+  \node[notka, anchor=north west, text width=88mm, font=\footnotesize] at (3.7,0.75) {%
+    \begin{tabular}{@{}l@{\quad}l@{}}
+      \kod{oceny["Jan"]} & $\to$ \kod{3} \quad (szukamy po kluczu, nie po pozycji)\\[3pt]
+      \kod{oceny["Adam"]} & $\to$ błąd \kod{KeyError: \textquotesingle{}Adam\textquotesingle{}}\\[3pt]
+      \kod{oceny.get("Adam", 0)} & $\to$ \kod{0} \quad (wartość domyślna)\\[3pt]
+      \kod{"Ola" in oceny} & $\to$ \kod{True} \quad (\kod{in} sprawdza \textbf{klucze})\\[3pt]
+      \kod{oceny["Ewa"] = 5} & zmienia wartość istniejącego klucza\\[3pt]
+      \kod{oceny["Piotr"] = 4} & dodaje nową parę na końcu\\[3pt]
+      \kod{del oceny["Jan"]} & usuwa parę\\
+    \end{tabular}};
+\end{tikzpicture}

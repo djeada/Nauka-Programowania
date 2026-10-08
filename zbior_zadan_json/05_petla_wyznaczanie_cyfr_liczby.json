@@ -393,6 +393,57 @@
       "starter_code": ""
     },
     {
+      "id": "ZAD-06B",
+      "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-06B",
+      "title": "Dwucyfrowe większe od n o różnych cyfrach",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "pętle",
+        "cyfry",
+        "warunki"
+      ],
+      "description": "Wczytaj liczbę naturalną `n`. Wypisz w kolejności rosnącej wszystkie liczby dwucyfrowe `x` (od `10` do `99`) takie, że `x > n` i cyfra dziesiątek liczby `x` jest **różna** od jej cyfry jedności.",
+      "input": "* 1. linia: `n` — liczba naturalna (`n ≥ 0`)",
+      "output": "Liczby spełniające warunek, każda w osobnej linii.\nJeśli takich liczb nie ma, nie wypisuj nic.",
+      "examples": [
+        {
+          "input": "90",
+          "output": "91\n92\n93\n94\n95\n96\n97\n98",
+          "explanation": "Liczba `99` jest większa od `90`, ale ma dwie jednakowe cyfry, więc jej nie wypisujemy."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "0",
+          "output": "10\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98"
+        },
+        {
+          "input": "10",
+          "output": "12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98"
+        },
+        {
+          "input": "54",
+          "output": "56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98"
+        },
+        {
+          "input": "97",
+          "output": "98"
+        },
+        {
+          "input": "98",
+          "output": ""
+        },
+        {
+          "input": "1000",
+          "output": ""
+        }
+      ],
+      "constraints": "",
+      "notes": "* Cyfrę jedności liczby `x` daje `x % 10`, a cyfrę dziesiątek liczby dwucyfrowej — `x // 10`.\n* Nierówność jest ostra: samej liczby `n` nie wypisujemy.\n* Dla `n ≥ 98` żadna liczba nie spełnia warunku.",
+      "starter_code": ""
+    },
+    {
       "id": "ZAD-06C",
       "slug": "05_petla_wyznaczanie_cyfr_liczby/ZAD-06C",
       "title": "Trzycyfrowe o sumie cyfr równej n",

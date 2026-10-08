@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    klasa/.style={rectangle split, rectangle split parts=3, draw=fiolet, rectangle split part fill={fiolet!25, fioletjasny, fioletjasny},
+                  font=\ttfamily\footnotesize, align=left, inner xsep=6pt, inner ysep=4pt},
+    obiekt/.style={rectangle split, rectangle split parts=2, draw=akcent, rectangle split part fill={akcentjasny, white},
+                   rounded corners=2pt, font=\ttfamily\footnotesize, align=left, text width=34mm, inner xsep=6pt, inner ysep=4pt}]
+  \node[klasa] (K) at (0,0) {%
+    \textbf{\normalsize Uczen}
+    \nodepart{two} szkola = "SP nr 1"
+    \nodepart{three} \_\_init\_\_(self, imie, oceny)\\ srednia(self)\\ dodaj\_ocene(self, ocena)\\ czy\_poprawna(ocena) \textcolor{szary}{\textit{statyczna}}};
+  \node[podpis, anchor=south] at (K.north) {klasa — wzór (wspólne metody)};
+  \node[obiekt] (O1) at (7.0,1.1) {%
+    \textbf{obiekt klasy Uczen}
+    \nodepart{two} imie\ \ = "Ola"\\ oceny = [5, 4, 6]};
+  \node[obiekt] (O2) at (7.0,-1.3) {%
+    \textbf{obiekt klasy Uczen}
+    \nodepart{two} imie\ \ = "Jan"\\ oceny = [3]};
+  \node[podpis, anchor=south] at (O1.north) {obiekty (instancje) — własne atrybuty};
+  \draw[->, densely dashed, draw=fiolet] (O1.west) -- node[above, sloped, font=\scriptsize, text=fiolet] {klasa obiektu} ($(K.east)+(0,0.25)$);
+  \draw[->, densely dashed, draw=fiolet] (O2.west) -- node[below, sloped, font=\scriptsize, text=fiolet] {klasa obiektu} ($(K.east)+(0,-0.25)$);
+  \node[zmienna] (z1) at (11.6,1.1) {ola};
+  \node[zmienna] (z2) at (11.6,-1.3) {jan};
+  \draw[strzalka] (z1) -- (O1.east);
+  \draw[strzalka] (z2) -- (O2.east);
+  \node[podpis, anchor=south] at (z1.north) {zmienne};
+\end{tikzpicture}

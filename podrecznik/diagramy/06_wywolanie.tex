@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+  \tikzset{linia/.style={font=\ttfamily\small, anchor=west, inner sep=2pt},
+           krok/.style={circle, fill=czerwien, text=white, font=\scriptsize\bfseries, inner sep=1pt, minimum size=4mm}}
+  % funkcja (góra)
+  \node[linia] (d1) at (0,2.2) {\textcolor{fiolet}{def} pole\_prostokata(a, b):};
+  \node[linia] (d2) at (0,1.6) {\ \ \ \ \textcolor{fiolet}{return} a * b};
+  % program główny
+  \node[linia] (m1) at (0,0.2) {p = pole\_prostokata(3, 4)};
+  \node[linia] (m2) at (0,-0.4) {print(p)};
+  \begin{scope}[on background layer]
+    \node[ramka, fit={(d1)(d2)(5.6,2.2)}, inner sep=4pt] (F) {};
+    \node[ramka, fit={(m1)(m2)(5.6,0.2)}, inner sep=4pt] (M) {};
+  \end{scope}
+  \node[podpis, anchor=south west] at (F.north west) {definicja funkcji};
+  \node[podpis, anchor=south west] at (M.north west) {program główny};
+  % krok 2: skok do funkcji (prawa strona)
+  \draw[strzalka, draw=czerwien, thick] (m1.east) -- (6.5,0.2) |- (d1.east);
+  \node[krok] at (6.5,1.2) {2};
+  % krok 3: powrót (lewa strona)
+  \draw[strzalka, draw=bursztyn, thick] (d2.west) -- (-0.7,1.6) |- (m1.west);
+  \node[krok, fill=bursztyn] at (-0.7,0.9) {3};
+  % kroki 1 i 4
+  \node[krok, fill=szary] at (-0.7,2.2) {1};
+  \node[krok, fill=szary] at (-0.7,-0.4) {4};
+  % opis
+  \node[notka, anchor=north west, text width=60mm] at (7.2,2.45) {%
+    \textcolor{szary}{\textbf{1}} \kod{def} tylko zapamiętuje funkcję — nic jeszcze nie liczy.\\[3pt]
+    \textcolor{czerwien}{\textbf{2}} Wywołanie: argumenty trafiają do parametrów (\kod{a = 3}, \kod{b = 4}) i program skacze do ciała funkcji.\\[3pt]
+    \textcolor{bursztyn}{\textbf{3}} \kod{return} oblicza $3 \cdot 4 = 12$ i wraca: wywołanie zostaje zastąpione liczbą 12, więc \kod{p = 12}.\\[3pt]
+    \textcolor{szary}{\textbf{4}} Program idzie dalej: \kod{print(p)} wypisuje 12.};
+\end{tikzpicture}

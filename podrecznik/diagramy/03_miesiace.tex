@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=12.5mm, y=1mm]
+  \foreach \nazwa/\dni [count=\i from 0] in {sty/31,lut/28,mar/31,kwi/30,maj/31,cze/30,lip/31,sie/31,wrz/30,paź/31,lis/30,gru/31} {
+    \ifnum\dni=31 \def\kol{akcent}\def\tlokol{akcentjasny}\fi
+    \ifnum\dni=30 \def\kol{bursztyn}\def\tlokol{bursztynjasny}\fi
+    \ifnum\dni=28 \def\kol{fiolet}\def\tlokol{fioletjasny}\fi
+    \draw[draw=\kol, fill=\tlokol] (\i+0.04,0) rectangle (\i+0.96,9);
+    \node[font=\small\bfseries, text=\kol] at (\i+0.5,4.5) {\dni};
+    \node[font=\footnotesize] at (\i+0.5,13) {\nazwa};
+    \node[indeks] at (\i+0.5,17.5) {\the\numexpr\i+1\relax};
+  }
+  \node[font=\scriptsize, text=fiolet] at (1.5,-3) {(29)};
+  % oś sum częściowych
+  \draw[draw=szary] (0,-9) -- (12,-9);
+  \foreach \s [count=\i from 0] in {0,31,59,90,120,151,181,212,243,273,304,334,365} {
+    \draw[draw=szary] (\i,-7.5) -- (\i,-10.5);
+    \node[font=\scriptsize\ttfamily, below=0.5mm] at (\i,-10.5) {\s};
+  }
+  \node[podpis, anchor=east] at (-0.1,-9) {dni przed\\początkiem:};
+  \node[podpis, anchor=east] at (-0.1,4.5) {liczba dni:};
+  \node[podpis, anchor=east] at (-0.1,15.2) {miesiąc:};
+  % przykład: 10 kwietnia
+  \fill[czerwien] (3.29,-9) circle (1.6pt);
+  \draw[densely dotted, draw=czerwien] (3.29,-9) -- (3.29,0);
+  \draw[klamra, decoration={mirror, raise=5mm}] (0,-11) -- (3,-11) node[midway, below=8.5mm, font=\scriptsize, text=szary] {$31 + 28 + 31 = 90$ dni};
+  \node[font=\scriptsize, text=czerwien, anchor=west] at (3.35,-19.5) {10 kwietnia: $90 + 10 = 100$, czyli dzień nr 100};
+  \draw[draw=czerwien, densely dotted] (3.29,-12) -- (3.29,-19.5) -- (3.35,-19.5);
+\end{tikzpicture}

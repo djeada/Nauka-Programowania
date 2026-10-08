@@ -1,0 +1,34 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    obiekt/.style={rectangle split, rectangle split parts=2, draw=akcent, rectangle split part fill={akcentjasny, white},
+                   rounded corners=2pt, font=\ttfamily\footnotesize, align=left, text width=27mm, inner xsep=5pt, inner ysep=3pt},
+    nowy/.style={obiekt, draw=zielen, rectangle split part fill={zielenjasna, white}},
+    krok/.style={circle, fill=bursztyn, text=white, font=\footnotesize\bfseries, inner sep=1.5pt}]
+  % wyrażenie
+  \node[kod, font=\ttfamily\normalsize, anchor=west] (e1) at (0,2.3) {koniec = start + film};
+  \draw[->, double, draw=szary] ($(e1.east)+(0.2,0)$) -- node[above, podpis] {Python wywołuje} ++(2.0,0) coordinate (e);
+  \node[kod, font=\ttfamily\normalsize, anchor=west] (e2) at ($(e)+(0.15,0)$) {start.\_\_add\_\_(film)};
+  % krok 1: argumenty
+  \node[obiekt] (S) at (1.6,0.6) {\textbf{start} \textcolor{szary}{(self)} \nodepart{two} godziny = 22\\ minuty\ \ = 50};
+  \node[obiekt] (F) at (5.1,0.6) {\textbf{film} \textcolor{szary}{(other)} \nodepart{two} godziny = 2\\ minuty\ \ = 15};
+  \node[draw=szary, densely dashed, rounded corners=3pt, fit=(S)(F), inner sep=5pt] (SF) {};
+  \node[krok] at (SF.north west) {1};
+  % krok 2: nowy obiekt
+  \node[blok, font=\ttfamily\footnotesize, align=left, anchor=west] (C) at (8.4,0.6) {Czas(22 + 2, 50 + 15)\\ = Czas(24, 65)};
+  \node[krok] at (C.north west) {2};
+  \draw[strzalka] (SF.east) -- node[above, font=\scriptsize, text=szary] {\kod{\_\_add\_\_}} (C.west);
+  % krok 3: normalizacja
+  \node[notka, ramka, anchor=north west, text width=66mm, inner sep=5pt] (N) at (0,-1.0) {%
+    \textbf{\_\_init\_\_ normalizuje:}\\[2pt]
+    \kod{calosc\ \ = 24 * 60 + 65 = 1505}\\
+    \kod{godziny = 1505 // 60 \% 24 = 25 \% 24 = 1}\\
+    \kod{minuty\ \ = 1505 \% 60 = 5}};
+  \node[krok] at (N.north west) {3};
+  \draw[strzalka] (C.south) -- ++(0,-0.55) -| ($(N.north)+(1.5,0)$);
+  % krok 4: wynik
+  \node[nowy, anchor=west] (K) at ($(N.east)+(0.9,0)$) {\textbf{koniec} \nodepart{two} godziny = 1\\ minuty\ \ = 5};
+  \node[krok] at (K.north west) {4};
+  \draw[strzalka] (N.east) -- (K.west);
+  \node[kod, anchor=west] (P) at ($(K.east)+(0.5,0.25)$) {print(koniec)};
+  \node[kod, font=\ttfamily\normalsize, text=zielen, anchor=north] (W) at (P.south) {01:05};
+  \node[podpis, anchor=north] at (W.south) {(przez \kod{\_\_str\_\_})};
+\end{tikzpicture}

@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=8.5mm, y=-11mm, komorka por/.style={komorka, fill=akcentjasny}]
+  % \wiersz{y}{x0}{wartość/styl,...}
+  \newcommand{\wiersz}[3]{\foreach \v/\s [count=\i from 0] in {#3} \node[\s] (w#1-\i) at (#2+\i,#1) {\v};}
+  \node[font=\small\bfseries, anchor=west] at (-0.4,-0.9) {1.\ przebieg krok po kroku};
+  \wiersz{0}{0}{5/komorka wyr,3/komorka wyr,8/komorka,1/komorka,4/komorka}
+  \wiersz{1}{0}{3/komorka,5/komorka por,8/komorka por,1/komorka,4/komorka}
+  \wiersz{2}{0}{3/komorka,5/komorka,8/komorka wyr,1/komorka wyr,4/komorka}
+  \wiersz{3}{0}{3/komorka,5/komorka,1/komorka,8/komorka wyr,4/komorka wyr}
+  \wiersz{4}{0}{3/komorka,5/komorka,1/komorka,4/komorka,8/komorka ok}
+  \foreach \r/\a/\b in {0/0/1, 2/2/3, 3/3/4}
+    \draw[<->, czerwien, thick] (w\r-\a.north) to[bend left=50] (w\r-\b.north);
+  \node[notka, anchor=west] at (5,0) {$5 > 3$: zamiana};
+  \node[notka, anchor=west] at (5,1) {$5 \le 8$: bez zmian};
+  \node[notka, anchor=west] at (5,2) {$8 > 1$: zamiana};
+  \node[notka, anchor=west] at (5,3) {$8 > 4$: zamiana};
+  \node[notka, anchor=west, text=zielen] at (5,4) {8 na miejscu};
+  % kolejne przebiegi
+  \begin{scope}[xshift=96mm]
+    \node[font=\small\bfseries, anchor=west] at (-0.4,-0.9) {stan po kolejnych przebiegach};
+    \wiersz{0}{0}{5/komorka,3/komorka,8/komorka,1/komorka,4/komorka}
+    \wiersz{1}{0}{3/komorka,5/komorka,1/komorka,4/komorka,8/komorka ok}
+    \wiersz{2}{0}{3/komorka,1/komorka,4/komorka,5/komorka ok,8/komorka ok}
+    \wiersz{3}{0}{1/komorka,3/komorka,4/komorka ok,5/komorka ok,8/komorka ok}
+    \wiersz{4}{0}{1/komorka ok,3/komorka ok,4/komorka ok,5/komorka ok,8/komorka ok}
+    \foreach \r/\t in {0/start, 1/po 1., 2/po 2., 3/po 3., 4/po 4.}
+      \node[notka, anchor=east] at (-0.6,\r) {\t};
+    \node[notka, anchor=west] at (4.6,1) {3 zamiany};
+    \node[notka, anchor=west] at (4.6,2) {2 zamiany};
+    \node[notka, anchor=west] at (4.6,3) {1 zamiana};
+    \node[notka, anchor=west, text width=18mm] at (4.6,4) {0 zamian\\$\Rightarrow$ koniec};
+  \end{scope}
+\end{tikzpicture}

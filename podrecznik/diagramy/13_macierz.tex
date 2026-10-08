@@ -1,0 +1,39 @@
+\begin{tikzpicture}[x=9mm, y=9mm, rw/.style={komorka, fill=akcentjasny}]
+  % macierz 3 x 4 jako tabela
+  \foreach \row [count=\i from 0] in {{5,1,8,2},{3,9,4,7},{6,0,2,1}} {
+    \node[indeks] at (-0.75, -\i) {\i};
+    \foreach \v [count=\j from 0] in \row {
+      \ifnum\i=1 \def\st{rw}\else \def\st{komorka}\fi
+      \node[\st, minimum width=9mm, minimum height=9mm] (m\i\j) at (\j, -\i) {\v};
+    }
+  }
+  \node[komorka wyr, minimum width=9mm, minimum height=9mm] at (m12) {4};
+  \foreach \j in {0,...,3} \node[indeks] at (\j, 0.72) {\j};
+  \node[indeks, text=akcent] at (1.5, 1.2) {kolumna \kod{j}};
+  \node[indeks, text=akcent, rotate=90] at (-1.45, -1) {wiersz \kod{i}};
+  \node[font=\ttfamily\footnotesize, text=bursztyn, anchor=north] at ($(m22.south)+(0,-0.05)$) {A[1][2]};
+  \draw[->, draw=bursztyn] ($(m22.south)+(0,-0.12)$) ++(0,0) .. controls +(0.5,-0.1) and +(0.4,-0.3) .. (m12.south east);
+  % lista list
+  \begin{scope}[xshift=6.6*9mm]
+    \foreach \i in {0,1,2} {
+      \node[komorka, minimum width=8mm, minimum height=9mm] (o\i) at (0, -\i) {};
+      \fill[akcent] (o\i) circle (1.3pt);
+      \node[indeks, anchor=east] at ($(o\i.west)+(-0.05,0)$) {\i};
+    }
+    \node[kod, anchor=south] at ($(o0.north)+(0,0.05)$) {A};
+    \foreach \row [count=\i from 0] in {{5,1,8,2},{3,9,4,7},{6,0,2,1}} {
+      \foreach \v [count=\j from 0] in \row {
+        \ifnum\i=1 \def\st{rw}\else \def\st{komorka}\fi
+        \node[\st, minimum width=7mm, minimum height=7mm] (w\i\j) at (1.6+\j*0.78, -\i) {\v};
+      }
+      \draw[->, draw=akcent] (o\i.center) -- (w\i0.west);
+    }
+    \node[komorka wyr, minimum width=7mm, minimum height=7mm] at (w12) {4};
+  \end{scope}
+  \node[notka, anchor=north west] at (5.9, -2.65) {%
+    \begin{tabular}{@{}l@{\ \ →\ \ }l@{}}
+      \kod{A[1]} & \kod{[3, 9, 4, 7]} (cały wiersz)\\
+      \kod{A[1][2]} & \kod{4}\\
+      \kod{len(A)} & \kod{3} (wiersze), \ \kod{len(A[0])} → \kod{4} (kolumny)
+    \end{tabular}};
+\end{tikzpicture}

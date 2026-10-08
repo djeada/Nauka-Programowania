@@ -422,6 +422,117 @@
       "starter_code": "def min_z_dwoch(a, b):\n    # Uzupełnij funkcję.\n    pass\n\n\na = int(input())\nb = int(input())\nprint(min_z_dwoch(a, b))\n"
     },
     {
+      "id": "ZAD-04B",
+      "slug": "06_funkcje_wprowadzenie/ZAD-04B",
+      "title": "Ograniczenie liczby do przedziału",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "min",
+        "max"
+      ],
+      "description": "Napisz funkcję `ogranicz(x, dolna, gorna)`, która „przycina” liczbę `x` do przedziału $[\\text{dolna}, \\text{gorna}]$ i zwraca:\n\n* `dolna`, jeśli $x < \\text{dolna}$,\n* `gorna`, jeśli $x > \\text{gorna}$,\n* samo `x` w pozostałych przypadkach (gdy $\\text{dolna} \\le x \\le \\text{gorna}$).\n\nProgram wczytuje `x`, `dolna` i `gorna`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: liczba całkowita `x`\n* 2. linia: liczba całkowita `dolna` — lewy koniec przedziału\n* 3. linia: liczba całkowita `gorna` — prawy koniec przedziału",
+      "output": "Jedna liczba całkowita: wartość `x` ograniczona do przedziału $[\\text{dolna}, \\text{gorna}]$.",
+      "examples": [
+        {
+          "input": "15\n0\n10",
+          "output": "10",
+          "explanation": "Liczba $15$ wychodzi poza przedział $[0, 10]$ z prawej strony, więc zostaje zastąpiona prawym końcem — $10$."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "5\n0\n10",
+          "output": "5"
+        },
+        {
+          "input": "-3\n0\n10",
+          "output": "0"
+        },
+        {
+          "input": "10\n0\n10",
+          "output": "10"
+        },
+        {
+          "input": "3\n5\n5",
+          "output": "5"
+        },
+        {
+          "input": "-100\n-50\n-20",
+          "output": "-50"
+        },
+        {
+          "input": "-30\n-50\n-20",
+          "output": "-30"
+        },
+        {
+          "input": "1000000000\n-1000000000\n999999999",
+          "output": "999999999"
+        }
+      ],
+      "constraints": "* $\\text{dolna} \\le \\text{gorna}$\n* $-10^9 \\le x, \\text{dolna}, \\text{gorna} \\le 10^9$",
+      "notes": "* Funkcja przydaje się np. w grach, gdy pozycja postaci nie może wyjść poza planszę, albo gdy głośność ma się mieścić w zakresie od $0$ do $100$.\n* Całe ciało funkcji da się zapisać jednym wyrażeniem złożonym z minimum i maksimum dwóch liczb: najpierw $\\max(x, \\text{dolna})$, a z tego wyniku $\\min(\\ldots, \\text{gorna})$. Możesz skorzystać z funkcji `min_z_dwoch` z zadania ZAD-04A.",
+      "starter_code": "def ogranicz(x, dolna, gorna):\n    # Uzupełnij funkcję.\n    pass\n\n\nx = int(input())\ndolna = int(input())\ngorna = int(input())\nprint(ogranicz(x, dolna, gorna))\n"
+    },
+    {
+      "id": "ZAD-04C",
+      "slug": "06_funkcje_wprowadzenie/ZAD-04C",
+      "title": "Środkowa z trzech liczb",
+      "difficulty": 1,
+      "difficulty_display": "★☆☆",
+      "tags": [
+        "funkcje",
+        "min",
+        "max",
+        "warunki"
+      ],
+      "description": "Napisz funkcję `srodkowa_z_trzech(a, b, c)`, która zwraca **środkową** z trzech liczb naturalnych, czyli tę, która po ustawieniu liczb od najmniejszej do największej znajdzie się w środku (tzw. medianę trzech liczb).\n\nProgram wczytuje `a`, `b` i `c`, wywołuje funkcję i wypisuje wynik.",
+      "input": "* 1. linia: liczba naturalna `a`\n* 2. linia: liczba naturalna `b`\n* 3. linia: liczba naturalna `c`",
+      "output": "Jedna liczba naturalna: środkowa z liczb `a`, `b`, `c`.",
+      "examples": [
+        {
+          "input": "3\n1\n2",
+          "output": "2",
+          "explanation": "Po uporządkowaniu liczby tworzą ciąg $1, 2, 3$ — w środku stoi $2$."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n2\n3",
+          "output": "2"
+        },
+        {
+          "input": "10\n30\n20",
+          "output": "20"
+        },
+        {
+          "input": "5\n5\n1",
+          "output": "5"
+        },
+        {
+          "input": "4\n9\n9",
+          "output": "9"
+        },
+        {
+          "input": "0\n0\n0",
+          "output": "0"
+        },
+        {
+          "input": "100\n1\n50",
+          "output": "50"
+        },
+        {
+          "input": "7\n3\n7",
+          "output": "7"
+        }
+      ],
+      "constraints": "* $a \\ge 0$, $b \\ge 0$, $c \\ge 0$",
+      "notes": "* Liczby mogą się powtarzać: dla `5`, `5`, `1` uporządkowany ciąg to $1, 5, 5$, więc wynikiem jest `5`.\n* Nie sortuj liczb — wystarczą porównania. Liczba `a` jest środkowa, jeśli $b \\le a \\le c$ albo $c \\le a \\le b$; podobnie sprawdzisz `b`, a jeśli żadna z nich nie jest środkowa, zostaje `c`.\n* Inny sposób: suma trzech liczb minus najmniejsza i minus największa z nich to właśnie liczba środkowa.",
+      "starter_code": "def srodkowa_z_trzech(a, b, c):\n    # Uzupełnij funkcję.\n    pass\n\n\na = int(input())\nb = int(input())\nc = int(input())\nprint(srodkowa_z_trzech(a, b, c))\n"
+    },
+    {
       "id": "ZAD-04D",
       "slug": "06_funkcje_wprowadzenie/ZAD-04D",
       "title": "Maksimum z trzech liczb",
@@ -604,6 +715,53 @@
       "constraints": "* Jedna z prób jest poprawna — program nie musi obsługiwać końca danych bez udanej próby.",
       "notes": "* Próba jest udana tylko wtedy, gdy zgadzają się **oba** pola: login i hasło.\n* Porównanie uwzględnia wielkość liter (`Admin` to nie to samo co `admin`).",
       "starter_code": "def pobierz_dane():\n    # Wczytaj login i hasło, a następnie zwróć je jako parę.\n    pass\n\n\ndef sprawdz_dane(poprawny_login, poprawne_haslo):\n    # W pętli wczytuj login i hasło, dopóki nie będą poprawne.\n    pass\n\n\nlogin, haslo = pobierz_dane()\nsprawdz_dane(login, haslo)\n"
+    },
+    {
+      "id": "ZAD-08",
+      "slug": "06_funkcje_wprowadzenie/ZAD-08",
+      "title": "Liczby doskonałe, obfite i deficytowe",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "funkcje",
+        "pętle",
+        "dzielniki"
+      ],
+      "description": "**Dzielnik właściwy** liczby naturalnej `n` to jej dzielnik mniejszy od `n` — np. dzielnikami właściwymi liczby `12` są `1`, `2`, `3`, `4` i `6`. Porównując sumę dzielników właściwych z samą liczbą, dzielimy liczby na trzy rodzaje:\n\n* **doskonałe** — suma jest równa `n` (np. $6 = 1 + 2 + 3$),\n* **obfite** — suma jest większa od `n` (np. $1 + 2 + 3 + 4 + 6 = 16 > 12$),\n* **deficytowe** — suma jest mniejsza od `n` (np. dla `8`: $1 + 2 + 4 = 7 < 8$).\n\nNapisz dwie funkcje:\n\n1. `suma_dzielnikow(n)` — zwraca sumę dzielników właściwych liczby `n`,\n2. `rodzaj_liczby(n)` — **wywołuje** funkcję `suma_dzielnikow(n)` i na podstawie jej wyniku zwraca napis `doskonała`, `obfita` albo `deficytowa`.\n\nProgram wczytuje `k` liczb i dla każdej wypisuje jej rodzaj.",
+      "input": "* 1. linia: `k` — liczba liczb do sprawdzenia\n* kolejne `k` linii: liczby naturalne `n` — po jednej w linii",
+      "output": "`k` linii w formacie:\n\n```\n<n>: <rodzaj>\n```\n\ngdzie `<rodzaj>` to `doskonała`, `obfita` albo `deficytowa` (małymi literami, z polskimi znakami).",
+      "examples": [
+        {
+          "input": "3\n6\n12\n15",
+          "output": "6: doskonała\n12: obfita\n15: deficytowa",
+          "explanation": "Dla `15` suma dzielników właściwych to $1 + 3 + 5 = 9 < 15$."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n1",
+          "output": "1: deficytowa"
+        },
+        {
+          "input": "3\n28\n496\n8128",
+          "output": "28: doskonała\n496: doskonała\n8128: doskonała"
+        },
+        {
+          "input": "4\n2\n945\n9999\n10000",
+          "output": "2: deficytowa\n945: obfita\n9999: deficytowa\n10000: obfita"
+        },
+        {
+          "input": "5\n18\n20\n24\n30\n36",
+          "output": "18: obfita\n20: obfita\n24: obfita\n30: obfita\n36: obfita"
+        },
+        {
+          "input": "6\n8\n16\n25\n97\n12\n6",
+          "output": "8: deficytowa\n16: deficytowa\n25: deficytowa\n97: deficytowa\n12: obfita\n6: doskonała"
+        }
+      ],
+      "constraints": "* $1 \\le k \\le 100$\n* $1 \\le n \\le 10000$",
+      "notes": "* Liczba `1` nie ma dzielników właściwych, więc ich suma wynosi `0` — `1` jest liczbą deficytową.\n* Wydzielenie obliczeń do osobnej funkcji sprawia, że `rodzaj_liczby` jest krótka i czytelna, a `suma_dzielnikow` da się sprawdzić i wykorzystać niezależnie.",
+      "starter_code": "def suma_dzielnikow(n):\n    # Uzupełnij funkcję: zwróć sumę dzielników właściwych n.\n    pass\n\n\ndef rodzaj_liczby(n):\n    # Uzupełnij funkcję: wywołaj suma_dzielnikow(n) i zwróć rodzaj liczby.\n    pass\n\n\nk = int(input())\nfor _ in range(k):\n    n = int(input())\n    print(f\"{n}: {rodzaj_liczby(n)}\")\n"
     },
     {
       "id": "ZAD-09",

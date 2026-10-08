@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=1cm, y=-9mm,
+    para/.style={komorka, minimum width=24mm, font=\ttfamily\small}]
+  \node[font=\small\bfseries] at (0,-1) {wejście};
+  \node[font=\small\bfseries] at (6,-1) {\kod{sorted(uczniowie, key=lambda u: u[1])}};
+  \foreach \t/\o/\c [count=\i from 0] in {{("Ola", 5)}/3/zielen, {("Jan", 4)}/1/akcent, {("Ewa", 5)}/4/zielen, {("Adam", 3)}/0/fiolet, {("Iza", 4)}/2/akcent} {
+    \node[para, draw=\c] (we\i) at (0,\i) {\t};
+    \node[indeks, left=1mm of we\i] {\i};
+    \node[para, draw=\c] (wy\i) at (6,\o) {\t};
+    \draw[->, draw=\c, thick] (we\i.east) to[out=0, in=180] (wy\i.west);
+  }
+  \node[notka, anchor=west, text width=50mm] at (7.5,1.5) {remis (ocena 4): \kod{Jan} był przed \kod{Iza}, więc nadal jest przed nią};
+  \node[notka, anchor=west, text width=50mm] at (7.5,3.5) {remis (ocena 5): \kod{Ola} przed \kod{Ewa}};
+  \draw[klamra] (7.35,0.6) -- (7.35,2.4);
+  \draw[klamra] (7.35,2.6) -- (7.35,4.4);
+\end{tikzpicture}

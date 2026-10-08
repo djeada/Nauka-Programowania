@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=11mm, y=1mm]
+  \tikzset{wart/.style={circle, draw=akcent, fill=akcent, minimum size=2.4mm, inner sep=0pt},
+           stopp/.style={circle, draw=czerwien, fill=white, thick, minimum size=2.4mm, inner sep=0pt},
+           skok/.style={->, draw=bursztyn, thick, shorten <=1.5pt, shorten >=1.5pt}}
+  % oś 1
+  \node[kod, anchor=east] at (-0.5,24) {range(2, 11, 3)};
+  \draw[->, draw=szary] (-0.3,24) -- (12.6,24);
+  \foreach \t in {0,...,12} { \draw[draw=szary] (\t,22.8) -- (\t,25.2); \node[indeks, below=1.6mm] at (\t,24) {\t}; }
+  \foreach \t in {2,5,8} \node[wart] (a\t) at (\t,24) {};
+  \node[stopp] (a11) at (11,24) {};
+  \draw[skok] (a2) to[bend left=50] node[above, font=\scriptsize, text=bursztyn] {$+3$} (a5);
+  \draw[skok] (a5) to[bend left=50] node[above, font=\scriptsize, text=bursztyn] {$+3$} (a8);
+  \draw[skok, densely dashed, draw=czerwien] (a8) to[bend left=50] node[above, font=\scriptsize, text=czerwien] {$+3$} (a11);
+  \node[font=\scriptsize, text=akcent, anchor=north] at (2,19) {start};
+  \node[font=\scriptsize, text=czerwien, anchor=north] at (11,19) {stop (bez niego)};
+  % oś 2
+  \node[kod, anchor=east] at (-0.5,0) {range(5, 0, -2)};
+  \draw[->, draw=szary] (-0.3,0) -- (12.6,0);
+  \foreach \t in {0,...,12} { \draw[draw=szary] (\t,-1.2) -- (\t,1.2); \node[indeks, below=1.6mm] at (\t,0) {\t}; }
+  \foreach \t in {5,3,1} \node[wart] (b\t) at (\t,0) {};
+  \node[stopp] (b0) at (0,0) {};
+  \draw[skok] (b5) to[bend right=50] node[above, font=\scriptsize, text=bursztyn] {$-2$} (b3);
+  \draw[skok] (b3) to[bend right=50] node[above, font=\scriptsize, text=bursztyn] {$-2$} (b1);
+  \draw[skok, densely dashed, draw=czerwien] (b1) to[bend right=60] (b0);
+  \node[font=\scriptsize, text=akcent, anchor=north] at (5,-5) {start};
+  \node[font=\scriptsize, text=czerwien, anchor=north] at (0,-5) {stop};
+  % legenda
+  \node[wart] at (6.6,-11.5) {}; \node[font=\scriptsize, anchor=west] at (6.75,-11.5) {wartość zmiennej pętli};
+  \node[stopp] at (9.9,-11.5) {}; \node[font=\scriptsize, anchor=west] at (10.05,-11.5) {pierwsza liczba poza ciągiem};
+\end{tikzpicture}

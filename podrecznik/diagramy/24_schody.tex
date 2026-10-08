@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=14mm, y=1cm,
+    el/.style={komorka, minimum width=10mm, minimum height=6.5mm}]
+  \def\h{0.42}
+  % stopnie: i/koszt/wybrany
+  \foreach \i/\c/\w in {0/0/1, 1/2/1, 2/7/0, 3/1/1, 4/8/0, 5/2/1, 6/8/0, 7/1/1, 8/0/1} {
+    \pgfmathsetmacro{\y}{\i*\h}
+    \ifnum\w=1
+      \fill[zielenjasna] (\i-0.5,0) rectangle (\i+0.5,\y);
+    \else
+      \fill[tlo] (\i-0.5,0) rectangle (\i+0.5,\y);
+    \fi
+    \draw[szary] (\i-0.5,\y) -- (\i+0.5,\y);
+    \draw[linia] (\i+0.5,0) -- (\i+0.5,\y);
+    \coordinate (s\i) at (\i,\y);
+  }
+  \draw[szary] (-0.5,0) -- (8.5,0);
+  \foreach \i/\c in {1/2, 2/7, 3/1, 4/8, 5/2, 6/8, 7/1}
+    \node[font=\small\bfseries, text=bursztyn, above=0.5mm] at (s\i) {\c};
+  \node[notka, above=0.5mm] at (s0) {ziemia};
+  \node[notka, above=0.5mm] at (s8) {szczyt};
+  % skoki najtańszej ścieżki
+  \foreach \a/\b in {0/1, 1/3, 3/5, 5/7, 7/8}
+    \draw[->, zielen, thick] ($(s\a)+(0.12,0.45)$) to[out=70, in=110] ($(s\b)+(-0.12,0.45)$);
+  % tabela
+  \foreach \r/\t in {-0.75/$i$, -1.45/$c_i$, -2.25/$k_i$} \node[anchor=east, font=\small] at (-0.65,\r) {\t};
+  \foreach \i/\c/\k/\w in {0/0/0/1, 1/2/2/1, 2/7/7/0, 3/1/3/1, 4/8/11/0, 5/2/5/1, 6/8/13/0, 7/1/6/1, 8/0/6/1} {
+    \node[indeks, font=\small\ttfamily] at (\i,-0.75) {\i};
+    \node[el] at (\i,-1.45) {\c};
+    \ifnum\w=1 \node[komorka ok, minimum width=10mm, minimum height=6.5mm] (k\i) at (\i,-2.25) {\k};
+    \else \node[el] (k\i) at (\i,-2.25) {\k}; \fi
+  }
+  \node[notka, anchor=north west, text width=120mm] at (-0.5,-2.7) {np. $k_3 = c_3 + \min(k_2, k_1) = 1 + \min(7, 2) = 3$, \quad $k_8 = 0 + \min(k_7, k_6) = \min(6, 13) = 6$};
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+  \tikzset{zn/.style={komorka, minimum width=7mm, minimum height=7mm}}
+  \node[notka, anchor=north west] (code) at (-0.2, 1.3) {%
+    \kod{s = "kot"}\\[1mm]
+    \kod{s[0] = "K"}\ \ \textcolor{czerwien}{\kod{TypeError}}\\[1mm]
+    \kod{s = "K" + s[1:]}};
+  \begin{scope}[on background layer]
+    \node[ramka, fit=(code), inner sep=3pt] {};
+  \end{scope}
+  % stary obiekt
+  \foreach \c [count=\i from 0] in {k,o,t}
+    \node[komorka szara, minimum width=7mm, minimum height=7mm] (o\i) at (7.2+\i*0.7, 0.75) {\c};
+  % nowy obiekt
+  \foreach \c [count=\i from 0] in {K,o,t}
+    \node[zn] (n\i) at (7.2+\i*0.7, -0.75) {\c};
+  \node[komorka ok] at (n0) {K};
+  \node[zmienna, minimum width=8mm] (s) at (5.0, 0) {s};
+  \draw[->, draw=szary, densely dashed] (s.north east) to[out=40, in=180] node[above, font=\scriptsize, text=szary] {przed} (o0.west);
+  \draw[strzalka, draw=akcent] (s.south east) to[out=-40, in=180] node[below, font=\scriptsize, text=akcent] {po} (n0.west);
+  \node[notka, anchor=west] at (9.5, 0.75) {stary napis \textbf{się nie zmienił}};
+  \node[notka, anchor=west] at (9.5, -0.75) {\textbf{nowy} napis; \kod{s} wskazuje teraz na niego};
+\end{tikzpicture}

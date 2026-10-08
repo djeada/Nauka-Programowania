@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=8mm, y=8mm]
+  \tikzset{p/.style={komorka, minimum width=6.5mm, minimum height=6.5mm, draw=linia}}
+  % (a) wierszami
+  \foreach \i in {0,1,2} \foreach \j in {0,...,3} {
+    \pgfmathtruncatemacro{\k}{\i*4+\j+1}
+    \node[p] (a\i\j) at (\j, -\i) {\scriptsize\k};
+  }
+  \foreach \i in {0,1,2} \draw[->, draw=akcent, thick] ($(a\i0.center)+(0.2,0.22)$) -- ($(a\i3.center)+(0.25,0.22)$);
+  \foreach \i/\n in {0/1,1/2} \draw[->, draw=szary, densely dashed] ($(a\i3.center)+(0.25,0.15)$) -- ($(a\n0.center)+(0.05,0.3)$);
+  \node[podpis] at (1.5, -3.0) {wierszami};
+  \node[kod, font=\ttfamily\scriptsize, align=left] at (1.5, -3.75) {for i in range(n):\\ \ \ for j in range(m):};
+  % (b) kolumnami
+  \begin{scope}[xshift=6*8mm]
+    \foreach \i in {0,1,2} \foreach \j in {0,...,3} {
+      \pgfmathtruncatemacro{\k}{\j*3+\i+1}
+      \node[p] (b\i\j) at (\j, -\i) {\scriptsize\k};
+    }
+    \foreach \j in {0,...,3} \draw[->, draw=fiolet, thick] ($(b0\j.center)+(-0.22,0.2)$) -- ($(b2\j.center)+(-0.22,-0.25)$);
+    \foreach \j/\n in {0/1,1/2,2/3} \draw[->, draw=szary, densely dashed] ($(b2\j.center)+(-0.15,-0.25)$) -- ($(b0\n.center)+(-0.3,0.05)$);
+    \node[podpis] at (1.5, -3.0) {kolumnami};
+    \node[kod, font=\ttfamily\scriptsize, align=left] at (1.5, -3.75) {for j in range(m):\\ \ \ for i in range(n):};
+  \end{scope}
+  % (c) przekątne
+  \begin{scope}[xshift=12*8mm]
+    \foreach \i in {0,...,3} {
+      \node[indeks] at (-0.75, -\i) {\i};
+      \node[indeks] at (\i, 0.7) {\i};
+      \foreach \j in {0,...,3} {
+        \ifnum\i=\j \node[komorka wyr, minimum width=6.5mm, minimum height=6.5mm] at (\j, -\i) {};
+        \else \pgfmathtruncatemacro{\s}{\i+\j}\ifnum\s=3 \node[komorka, draw=fiolet, fill=fioletjasny, minimum width=6.5mm, minimum height=6.5mm] at (\j, -\i) {};
+        \else \node[p] at (\j, -\i) {}; \fi\fi
+      }
+    }
+    \node[kod, font=\ttfamily\scriptsize, text=bursztyn] at (1.5, -4.35) {i == j};
+    \node[kod, font=\ttfamily\scriptsize, text=fiolet] at (1.5, -4.8) {i + j == n - 1};
+    \node[podpis] at (1.5, -3.8) {przekątne ($n = 4$)};
+  \end{scope}
+\end{tikzpicture}

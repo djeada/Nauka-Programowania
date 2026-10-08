@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    obiekt/.style={rectangle, draw=akcent, fill=akcentjasny, rounded corners=2pt, font=\ttfamily\footnotesize,
+                   align=left, minimum width=30mm, minimum height=13mm, inner xsep=5pt},
+    krok/.style={circle, fill=bursztyn, text=white, font=\footnotesize\bfseries, inner sep=1.5pt}]
+  \node[kod, font=\ttfamily\normalsize] at (6.3,2.1) {ola = Uczen("Ola", [5, 4])};
+  % krok 1
+  \node[krok] (k1) at (0.3,1.0) {1};
+  \node[notka, anchor=west, text width=33mm] at (k1.east) {Python tworzy\\ pusty obiekt};
+  \node[obiekt] (A) at (1.6,-0.4) {\textcolor{szary}{(brak atrybutów)}};
+  % krok 2
+  \node[krok] (k2) at (4.9,1.0) {2};
+  \node[notka, anchor=west, text width=36mm] at (k2.east) {i wywołuje dla niego\\ \kod{\_\_init\_\_}};
+  \node[obiekt] (B) at (6.2,-0.4) {imie\ \ = "Ola"\\ oceny = [5, 4]};
+  \node[kod, font=\ttfamily\scriptsize, text=fiolet, align=center, anchor=north] at (6.2,-1.25) {Uczen.\_\_init\_\_(\textbf{obiekt}, "Ola", [5, 4])\\ \textcolor{szary}{wewnątrz: self = obiekt}};
+  % krok 3
+  \node[krok] (k3) at (9.3,1.0) {3};
+  \node[notka, anchor=west, text width=40mm] at (k3.east) {zmienna \kod{ola} wskazuje\\ na gotowy obiekt};
+  \node[zmienna] (z) at (9.7,-0.4) {ola};
+  \node[obiekt] (C) at (12.3,-0.4) {imie\ \ = "Ola"\\ oceny = [5, 4]};
+  \draw[strzalka] (z) -- (C);
+  \draw[->, draw=szary, thick] (A.east) -- (B.west);
+  \draw[->, draw=szary, thick] (B.east) -- (z.west);
+  % wywołanie metody
+  \begin{scope}[yshift=-3.3cm]
+    \node[kod, font=\ttfamily\normalsize, anchor=east] (m1) at (4.9,0) {ola.srednia()};
+    \node[podpis] at (6.05,0.32) {Python czyta to jako};
+    \draw[->, double, draw=szary] (5.1,0) -- (7.0,0);
+    \node[kod, font=\ttfamily\normalsize, anchor=west] (m2) at (7.2,0) {Uczen.srednia(\textcolor{akcent}{\textbf{ola}})};
+    \node[notka, anchor=north west] at (7.2,-0.35) {obiekt przed kropką trafia do parametru \kod{self}};
+  \end{scope}
+\end{tikzpicture}

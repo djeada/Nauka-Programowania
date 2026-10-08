@@ -1,0 +1,30 @@
+\begin{tikzpicture}[
+    el/.style={rectangle, draw, minimum height=9mm, inner xsep=3pt, font=\ttfamily, anchor=west},
+    gran/.style={el, draw=fiolet, fill=fioletjasny},
+    klasa/.style={el, draw=akcent, fill=akcentjasny},
+    kwant/.style={el, draw=bursztyn, fill=bursztynjasny},
+    dosl/.style={el, draw=tusz, fill=white},
+    opis/.style={font=\footnotesize, text=szary, align=center},
+    lin/.style={draw=linia}]
+  \node[gran]  (p1) at (0,0) {\textbackslash b};
+  \node[klasa] (p2) at (p1.east) {[0-9]};
+  \node[kwant] (p3) at (p2.east) {\{2\}};
+  \node[dosl]  (p4) at (p3.east) {-};
+  \node[klasa] (p5) at (p4.east) {[0-9]};
+  \node[kwant] (p6) at (p5.east) {\{3\}};
+  \node[gran]  (p7) at (p6.east) {\textbackslash b};
+  % opisy pod spodem, na dwóch wysokościach
+  \foreach \p/\t/\h in {p1/granica\\słowa/9, p2/jedna\\cyfra/17, p3/dokładnie\\2 razy/9, p4/dosłownie\\znak \kod{-}/17, p5/jedna\\cyfra/9, p6/dokładnie\\3 razy/17, p7/granica\\słowa/9} {
+    \draw[lin] (\p.south) -- ++(0,-\h mm+4mm) node[below, opis] {\t};
+  }
+  \draw[klamra] (p2.north west) -- (p3.north east) node[midway, above=5pt, opis, text=tusz] {dwie cyfry};
+  \draw[klamra] (p5.north west) -- (p6.north east) node[midway, above=5pt, opis, text=tusz] {trzy cyfry};
+  % przykłady
+  \begin{scope}[xshift=72mm, yshift=6mm]
+    \node[font=\small\bfseries, anchor=west] at (0,0.2) {\kod{re.search} w napisie:};
+    \foreach \t/\s/\o [count=\i] in {80-123/komorka ok/pasuje: \kod{80-123}, 80-1234/komorka zla/po 3 cyfrach stoi \kod{4} — brak granicy, 8-123/komorka zla/przed \kod{-} tylko jedna cyfra, a80-123/komorka zla/przed \kod{8} stoi litera — brak granicy} {
+      \node[\s, minimum width=18mm, anchor=west] (e\i) at (0,-\i*0.95+0.15) {\t};
+      \node[notka, anchor=west] at (e\i.east) {\o};
+    }
+  \end{scope}
+\end{tikzpicture}

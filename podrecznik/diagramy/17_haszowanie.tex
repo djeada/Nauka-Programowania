@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    klucz/.style={rectangle, draw=fiolet, fill=fioletjasny, minimum width=16mm, minimum height=7mm, font=\ttfamily\small},
+    fun/.style={rectangle, rounded corners=3pt, draw=bursztyn, fill=bursztynjasny, minimum height=7mm, font=\ttfamily\footnotesize, align=center},
+    kub/.style={rectangle, draw=linia, fill=tlo, minimum width=34mm, minimum height=5.6mm, font=\ttfamily\footnotesize, inner sep=1pt},
+    pelny/.style={kub, draw=akcent, fill=akcentjasny, text=tusz}]
+  % tablica kubełków
+  \foreach \i in {0,...,7} {
+    \node[kub] (b\i) at (7.6,-\i*0.56) {};
+    \node[indeks, anchor=east] at ($(b\i.west)+(-0.05,0)$) {\i};
+  }
+  \node[pelny] at (b1) {"Ewa" : 4};
+  \node[pelny] at (b4) {"Ola" : 5};
+  \node[pelny] at (b6) {"Jan" : 3};
+  \node[podpis] at (7.6,0.6) {tablica w pamięci};
+  % klucze
+  \foreach \k/\h/\b [count=\i from 0] in {"Ola"/4/b4, "Jan"/6/b6, "Ewa"/1/b1} {
+    \node[klucz] (k\i) at (0,-0.6-\i*1.2) {\k};
+    \node[fun] (f\i) at (3.0,-0.6-\i*1.2) {hash(\k) \% 8\\ = \h};
+    \draw[strzalka] (k\i) -- (f\i);
+    \draw[strzalka, draw=akcent] (f\i.east) -- (\b.west);
+  }
+  \node[podpis] at (0,0.6) {klucz};
+  \node[podpis] at (3.0,0.6) {funkcja skrótu};
+  \node[notka, anchor=north west, text width=150mm] at (-0.9,-4.45) {%
+    Słownik nie przegląda par po kolei: z klucza oblicza numer miejsca w tablicy i od razu tam zagląda.\\
+    Dlatego \kod{klucz in slownik} i \kod{slownik[klucz]} trwają średnio $O(1)$, a \kod{x in lista} — $O(n)$.\\
+    (Konkretne numery są tu przykładowe — dla napisów Python losuje je przy każdym uruchomieniu.)};
+\end{tikzpicture}

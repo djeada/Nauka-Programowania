@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+  % temperatury i różnice sąsiednich dni
+  \def\sx{1.5}
+  \foreach \v [count=\i from 0] in {12,15,14,14,18,21,19} {
+    \node[komorka, minimum width=9mm] (t\i) at (\i*\sx, 0) {\v};
+    \node[indeks, below=0.4mm of t\i] {\i};
+  }
+  \node[kod, anchor=east] at (-0.75, 0) {t};
+  \foreach \i/\d/\kol in {0/+3/zielen, 1/{-1}/czerwien, 2/0/szary, 3/+4/zielen, 4/+3/zielen, 5/{-2}/czerwien} {
+    \pgfmathtruncatemacro{\nx}{\i+1}
+    \draw[->, draw=\kol] (t\i.north) to[bend left=50] node[above, font=\footnotesize\ttfamily, text=\kol] {\d} (t\nx.north);
+  }
+  % lista różnic pod spodem, między parami
+  \foreach \d/\st [count=\i from 0] in {3/komorka ok, -1/komorka zla, 0/komorka szara, 4/komorka ok, 3/komorka ok, -2/komorka zla} {
+    \node[\st, minimum width=9mm] (r\i) at (\i*\sx+0.5*\sx, -1.9) {\d};
+    \node[indeks, below=0.4mm of r\i] {\i};
+  }
+  \node[kod, anchor=east] at (-0.75, -1.9) {roznice};
+  \draw[densely dotted, draw=szary] ($(t0.south)+(0,-0.4)$) -- (r0.north);
+  \draw[densely dotted, draw=szary] ($(t1.south)+(0,-0.4)$) -- (r0.north);
+  \node[notka, anchor=west] at ($(r5.east)+(0.4,0)$) {\kod{\textcolor{zielen}{wzrosty = 3}}\\(dodatnie różnice)};
+  \node[notka] at (4.5, -3.05) {\kod{roznice[i] = t[i + 1] - t[i]}\ \ dla \kod{i} od \kod{0} do \kod{n - 2}\ \ →\ \ $n - 1$ różnic};
+\end{tikzpicture}

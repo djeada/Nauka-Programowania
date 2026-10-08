@@ -13,7 +13,9 @@ skrypty używają wyłącznie biblioteki standardowej Pythona (3.8+).
 | `check_sources.sh` | Kompilacja / sprawdzenie składni rozwiązań we wszystkich językach. | ✓ (`--lang …`) |
 | `update_descriptions.py` | Wstawia treść zadania jako komentarz na początku plików z rozwiązaniami. | — |
 | `format_all.sh` | Formatuje kod (black, clang-format, prettier, rustfmt, ormolu, shfmt). | — |
-| `generate_pdf.py` | Składa wszystkie treści w jeden PDF. | — |
+| `generate_pdf.py` | Składa zbiór zadań w PDF (opcjonalnie z rozwiązaniami). | ✓ (`--strict`, artefakt) |
+| `build_diagrams.py` | Kompiluje diagramy TikZ z `podrecznik/diagramy/*.tex` do SVG. | `--check` |
+| `trace_solution.py` | Śledzi wykonanie rozwiązania (przebieg zmiennych, drzewo wywołań) dla PDF-u. | (używany przez `generate_pdf.py`) |
 
 ## Typowy przebieg pracy
 
@@ -87,11 +89,44 @@ więc każda zmiana zasad oceny trafia tam przy następnej synchronizacji.
 
 ## generate_pdf.py
 
-Składa wszystkie treści z `zbior_zadan` w jeden dokument A4 ze stroną tytułową i spisem treści.
+Składa zbiór zadań w jeden PDF (A4) gotowy do druku i do czytania na ekranie. Treści czyta
+parserem z `md_to_json.py`, więc PDF pokazuje dokładnie to, co trafia do JSON-ów i na stronę kursu.
+
+* okładka, strona „Jak korzystać z tego zbioru” (model wejście/wyjście, zasady sprawdzarki, legenda),
+* klikalny spis treści z numerami stron i zakładki PDF (rozdział → zadanie),
+* na początku rozdziału **wprowadzenie** z `podrecznik/<rozdział>.md`: teoria, wzory, diagramy TikZ
+  i rozwiązany przykład (zasady pisania: [`podrecznik/README.md`](../podrecznik/README.md)),
+* lista zadań rozdziału z poziomem i numerem strony,
+* karty zadań: przykłady w układzie Wejście | Wyjście, wzory `$...$` / `$$...$$` złożone jak w podręczniku
+  (własny konwerter podzbioru LaTeX-a — WeasyPrint nie uruchamia KaTeX-a), kod z kolorowaniem składni,
+* `--rozwiazania`: dodatek z rozwiązaniami wzorcowymi z `src/python` (kod z numerami linii)
+  i odsyłacze treść ↔ rozwiązanie. Pod każdym rozwiązaniem jest jego **wizualizacja** dla pierwszego
+  przykładu (`trace_solution.py`): tabela przebiegu (wykonane linie, stan zmiennych, zmiany wyróżnione,
+  wypisany tekst) albo — dla funkcji rekurencyjnych — drzewo wywołań z argumentami i wynikami.
 
 ```bash
-pip install -r scripts/requirements-pdf.txt
-python3 scripts/generate_pdf.py   # -> Nauka_Programowania_Zbior_Zadan.pdf (ignorowany przez git)
+pip install -r scripts/requirements-pdf.txt     # WeasyPrint potrzebuje też Pango (apt: libpango-1.0-0)
+python3 scripts/generate_pdf.py                 # -> Nauka_Programowania_Zbior_Zadan.pdf
+python3 scripts/generate_pdf.py --rozwiazania   # -> Nauka_Programowania_Zbior_Zadan_z_rozwiazaniami.pdf
+python3 scripts/generate_pdf.py --rozdzialy 07 -o probka.pdf   # szybki podgląd jednego rozdziału
+python3 scripts/generate_pdf.py --html podglad.html            # sam HTML, bez WeasyPrint
+```
+
+Oba pliki są ignorowane przez git; CI składa je przy każdej zmianie (`--strict`: błąd przy
+nieobsługiwanym poleceniu LaTeX-a) i udostępnia jako artefakt `zbior-zadan-pdf`. Gdy we wzorze
+pojawi się nowe polecenie (np. `\vec`), dopisz je do `LatexToHtml` w `generate_pdf.py`.
+
+## build_diagrams.py
+
+Diagramy z wprowadzeń są pisane w TikZ (`podrecznik/diagramy/NN_nazwa.tex`, jedno środowisko
+`tikzpicture`, wspólna preambuła `preambula.tex`). Skrypt kompiluje je `latex` + `dvisvgm --no-fonts`
+do `podrecznik/diagramy/svg/*.svg`. Pliki SVG są commitowane, więc do złożenia PDF-u TeX nie jest
+potrzebny; każdy SVG ma skrót źródła, a `--check` (CI) sprawdza bez kompilacji, czy jest aktualny.
+
+```bash
+python3 scripts/build_diagrams.py            # nowe i zmienione diagramy (wymaga TeX Live + dvisvgm)
+python3 scripts/build_diagrams.py 04_ 05_    # tylko wybrane rozdziały
+python3 scripts/build_diagrams.py --check    # CI
 ```
 
 ## update_descriptions.py

@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=6.5mm, y=-8.5mm,
+    zn/.style={komorka, minimum width=6.5mm, minimum height=7mm},
+    zn ok/.style={komorka ok, minimum width=6.5mm, minimum height=7mm},
+    zn wyr/.style={komorka zla, minimum width=6.5mm, minimum height=7mm}]
+  % porównanie napisów
+  \node[font=\small\bfseries, anchor=west] at (-0.5,-1.1) {zwykłe porównanie napisów — znak po znaku};
+  \foreach \z [count=\i from 0] in {r,o,z,d,z,i,a,l} {
+    \node[zn ok] at (\i,0) {\z};
+    \node[zn ok] at (\i,1) {\z};
+  }
+  \node[zn wyr] (a8) at (8,0) {2};
+  \node[zn wyr] (b8) at (8,1) {1};
+  \node[zn] at (9,1) {0};
+  \node[indeks, above=0.3mm of a8] {8};
+  \node[kod, anchor=east, font=\ttfamily\footnotesize] at (-0.7,0) {"rozdzial2"};
+  \node[kod, anchor=east, font=\ttfamily\footnotesize] at (-0.7,1) {"rozdzial10"};
+  \node[notka, anchor=west, text width=62mm] at (10,0.5) {pierwszy różny znak (indeks 8): \kod{"1"} (kod 49) $<$ \kod{"2"} (kod 50)\\$\Rightarrow$ \kod{"rozdzial10"} $<$ \kod{"rozdzial2"} \textcolor{czerwien}{— źle}};
+  % porównanie kluczy
+  \begin{scope}[yshift=-30mm]
+    \node[font=\small\bfseries, anchor=west] at (-0.5,-1.1) {porównanie kluczy — krotka po krotce};
+    \node[kod, anchor=east, font=\ttfamily\footnotesize] at (-0.7,0) {k("rozdzial2")};
+    \node[kod, anchor=east, font=\ttfamily\footnotesize] at (-0.7,1) {k("rozdzial10")};
+    \foreach \y/\l in {0/2, 1/10} {
+      \node[komorka ok, minimum width=6.5*8mm, minimum height=7mm, anchor=west] at (-0.5,\y) {"rozdzial"};
+      \node[komorka wyr, minimum width=13mm, minimum height=7mm, anchor=west] at (7.5,\y) {\l};
+    }
+    \node[notka, anchor=west, text width=62mm] at (10,0.5) {pierwsze elementy równe, więc o~kolejności decydują liczby: $2 < 10$\\$\Rightarrow$ \kod{rozdzial2} przed \kod{rozdzial10} \textcolor{zielen}{— dobrze}};
+  \end{scope}
+\end{tikzpicture}

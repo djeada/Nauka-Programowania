@@ -1,0 +1,19 @@
+\begin{tikzpicture}[node distance=6mm and 14mm]
+  % wejście
+  \node[rectangle, draw=zielen, fill=zielenjasna, rounded corners=2pt, minimum width=26mm, minimum height=16mm, align=center] (we) {\kod{2}\textcolor{szary}{\scriptsize\,$\hookleftarrow$}};
+  \node[font=\footnotesize\bfseries, text=zielen, above=1.5mm of we] {1. WEJŚCIE (stdin)};
+  % przetwarzanie
+  \node[rectangle, draw=akcent, fill=akcentjasny, rounded corners=2pt, minimum height=16mm, inner xsep=6pt, align=left, right=22mm of we] (pr) {%
+    \kod{r = float(...)}\\[1pt] \kod{pole = 3.14159 * r ** 2}};
+  \node[font=\footnotesize\bfseries, text=akcent, above=1.5mm of pr] {2. PRZETWARZANIE};
+  % wyjście
+  \node[rectangle, draw=tusz, fill=tlo, rounded corners=2pt, minimum width=26mm, minimum height=16mm, right=22mm of pr] (wy) {\kod{12.57}};
+  \node[font=\footnotesize\bfseries, text=tusz, above=1.5mm of wy] {3. WYJŚCIE (stdout)};
+  % strzałki
+  \draw[strzalka, very thick, draw=zielen] (we) -- node[above, kod, font=\ttfamily\footnotesize, text=tusz] {input()} node[below, font=\scriptsize, text=szary] {napis \kod{"2"}} (pr);
+  \draw[strzalka, very thick, draw=tusz] (pr) -- node[above, kod, font=\ttfamily\footnotesize] {print()} node[below, font=\scriptsize, text=szary] {napis} (wy);
+  % opisy
+  \node[notka, text width=34mm, below=3mm of we] {klawiatura albo plik ze sprawdzarki; jedno \kod{input()} = jedna linia};
+  \node[notka, text width=44mm, below=3mm of pr] {zmienne i działania; tu powstaje wynik, ale jeszcze nic nie widać na ekranie};
+  \node[notka, text width=34mm, below=3mm of wy] {ekran; każde \kod{print()} kończy się znakiem nowej linii};
+\end{tikzpicture}

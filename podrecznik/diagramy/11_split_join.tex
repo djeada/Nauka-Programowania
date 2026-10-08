@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=6.5mm]
+  \tikzset{zn/.style={komorka, minimum width=6.5mm, minimum height=7mm}, sp/.style={komorka szara, minimum width=6.5mm, minimum height=7mm}}
+  % wiersz 1: napis z nadmiarowymi spacjami
+  \foreach \c [count=\i from 0] in {_,A,l,a,_,_,m,a,_,k,o,t,a,_} {
+    \if\c_ \node[sp] (t\i) at (\i, 0) {\textvisiblespace};
+    \else \node[zn] (t\i) at (\i, 0) {\c}; \fi
+  }
+  \node[kod, anchor=east] at (-0.8, 0) {zdanie};
+  % wiersz 2: lista słów
+  \node[komorka, minimum width=14mm, minimum height=7mm] (w0) at (2.0, -2.0) {'Ala'};
+  \node[komorka, minimum width=12mm, minimum height=7mm] (w1) at (6.5, -2.0) {'ma'};
+  \node[komorka, minimum width=16mm, minimum height=7mm] (w2) at (11.0, -2.0) {'kota'};
+  \node[kod, anchor=east] at (-0.8, -2.0) {slowa};
+  \draw[strzalka, draw=akcent] (t2.south) -- (w0.north);
+  \draw[strzalka, draw=akcent] (t7.south) -- (w1.north);
+  \draw[strzalka, draw=akcent] (t10.south) -- (w2.north);
+  \node[kod, font=\ttfamily\footnotesize, text=akcent, anchor=west] at (14.6, -1.0) {slowa = zdanie.split()};
+  \node[notka, anchor=west] at (14.6, -1.5) {tnie po spacjach; kilka spacji\\obok siebie to jeden separator};
+  % wiersz 3: join
+  \foreach \c [count=\i from 0] in {A,l,a,-,m,a,-,k,o,t,a} {
+    \node[zn] (j\i) at (\i+1.5, -4.0) {\c};
+  }
+  \node[komorka wyr, minimum width=6.5mm, minimum height=7mm] at (j3) {-};
+  \node[komorka wyr, minimum width=6.5mm, minimum height=7mm] at (j6) {-};
+  \node[kod, anchor=east] at (-0.8, -4.0) {wynik};
+  \draw[strzalka, draw=fiolet] (w0.south) -- (j1.north);
+  \draw[strzalka, draw=fiolet] (w1.south) -- (j4.north);
+  \draw[strzalka, draw=fiolet] (w2.south) -- (j8.north);
+  \node[kod, font=\ttfamily\footnotesize, text=fiolet, anchor=west] at (14.6, -3.2) {wynik = "-".join(slowa)};
+  \node[notka, anchor=west] at (14.6, -3.7) {skleja elementy listy,\\wstawiając \kod{"-"} \textbf{między} nimi};
+\end{tikzpicture}

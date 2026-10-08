@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+  \def\R{1.9}
+  \foreach \nazwa [count=\i from 0] in {pn,wt,śr,cz,pt,so,nd} {
+    \pgfmathsetmacro{\kat}{90-\i*360/7}
+    \node[circle, draw=akcent, fill=white, minimum size=10mm, inner sep=0pt, font=\footnotesize] (d\i) at (\kat:\R) {\nazwa};
+    \node[indeks] at (\kat:\R-0.82) {\i};
+  }
+  \node[circle, draw=akcent, fill=akcentjasny, minimum size=10mm, inner sep=0pt, font=\footnotesize] at (d3) {cz};
+  \node[circle, draw=zielen, fill=zielenjasna, minimum size=10mm, inner sep=0pt, font=\footnotesize] at (d5) {so};
+  % strzałki kolejności
+  \foreach \i [evaluate=\i as \j using {int(mod(\i+1,7))}] in {0,...,6}
+    \draw[->, draw=linia, shorten <=1pt, shorten >=1pt] (d\i) to[bend left=18] (d\j);
+  % przesunięcie o 2 (po 14 pełnych okrążeniach)
+  \pgfmathsetmacro{\aa}{90-3*360/7}
+  \pgfmathsetmacro{\ab}{90-5*360/7}
+  \draw[->, draw=czerwien, very thick] (\aa-4:\R+0.62) arc[start angle=\aa-4, end angle=\ab+4, radius=\R+0.62];
+  \node[font=\footnotesize, text=czerwien] at (90-4*360/7:\R+0.98) {$+2$};
+  \node[font=\footnotesize, align=center] at (0,0) {mod 7};
+  % opis
+  \node[notka, anchor=west, text width=60mm] at (3.4,0.2) {%
+    Dziś: czwartek, $w = 3$.\\
+    Za $t = 100$ dni:\\[2pt]
+    $100 = 14 \cdot 7 + 2$ — czternaście pełnych tygodni niczego nie zmienia, liczy się tylko reszta $2$.\\[2pt]
+    $(3 + 100) \bmod 7 = 5$ $\Rightarrow$ \textbf{sobota}.\\[4pt]
+    Wstecz: \kod{(3 - 10) \% 7} daje \kod{0} — poniedziałek.};
+\end{tikzpicture}

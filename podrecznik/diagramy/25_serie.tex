@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=9mm, y=1cm,
+    s1/.style={komorka, minimum width=9mm, fill=akcentjasny},
+    s2/.style={komorka, minimum width=9mm, fill=bursztynjasny, draw=bursztyn}]
+  \foreach \z/\s [count=\i from 0] in {a/s1,a/s1,a/s1,b/s2,c/s1,c/s1,d/s2,d/s2,d/s2,d/s2} {
+    \node[\s] (c\i) at (\i,0) {\z};
+    \node[indeks, above=0.5mm of c\i] {\i};
+  }
+  \foreach \g in {3,4,6} {
+    \draw[czerwien, line width=1.6pt] (\g-0.5,-0.62) -- (\g-0.5,0.62);
+  }
+  \node[notka, text=czerwien, anchor=south] at (4.5,0.75) {$s_i \ne s_{i-1}$: nowa seria};
+  \draw[klamra, decoration={mirror}] (-0.45,-0.6) -- (2.45,-0.6) node[midway, below=5pt, font=\small] {\kod{a} $\times 3$};
+  \draw[klamra, decoration={mirror}] (2.55,-0.6) -- (3.45,-0.6) node[midway, below=5pt, font=\small] {\kod{b} $\times 1$};
+  \draw[klamra, decoration={mirror}] (3.55,-0.6) -- (5.45,-0.6) node[midway, below=5pt, font=\small] {\kod{c} $\times 2$};
+  \draw[klamra, decoration={mirror}] (5.55,-0.6) -- (9.45,-0.6) node[midway, below=5pt, font=\small] {\kod{d} $\times 4$};
+  \node[notka, anchor=west, text width=34mm] at (10.0,0) {ostatnia seria kończy się razem z~napisem — obsłuż ją po pętli};
+\end{tikzpicture}

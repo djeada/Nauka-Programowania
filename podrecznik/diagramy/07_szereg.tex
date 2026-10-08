@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=15mm, y=24mm]
+  % oś y od 1 do 2.8
+  \draw[->, draw=szary] (-0.3,1) -- (7.6,1) node[right, podpis] {$k$};
+  \draw[->, draw=szary] (-0.3,1) -- (-0.3,2.95);
+  \foreach \v in {1.0,1.5,2.0,2.5} { \draw[draw=szary] (-0.35,\v) -- (-0.25,\v); \node[indeks, anchor=east] at (-0.38,\v) {\v}; }
+  \draw[draw=czerwien, densely dashed] (-0.3,2.71828) -- (7.4,2.71828) node[right, font=\footnotesize, text=czerwien] {$e$};
+  \foreach \s/\w [count=\k from 0] in {1/1, 2/1, 2.5/0.5, 2.6667/0.1667, 2.7083/0.0417, 2.7167/0.0083, 2.7181/0.0014, 2.7183/0.0002} {
+    \node[indeks] at (\k,0.9) {\k};
+    \node[font=\scriptsize\ttfamily, text=bursztyn] at (\k,0.76) {\w};
+    \fill[akcent] (\k,\s) circle (1.6pt);
+    \ifnum\k<3 \node[font=\scriptsize, text=akcent, anchor=south east] at (\k,\s) {\s}; \fi \ifnum\k=3 \node[font=\scriptsize, text=akcent, anchor=north west] at (\k,\s) {\s}; \fi
+  }
+  \draw[draw=akcent] (0,1) -- (1,2) -- (2,2.5) -- (3,2.6667) -- (4,2.7083) -- (5,2.7167) -- (6,2.7181) -- (7,2.7183);
+  \node[podpis, anchor=east] at (-0.4,0.78) {wyraz $\frac{1}{k!}$:};
+  \node[podpis, anchor=east, align=right] at (-0.85,2.2) {suma\\$S_k$};
+  \node[notka, anchor=west, text width=46mm] at (3.2,1.9) {Każdy kolejny wyraz jest wielokrotnie mniejszy od poprzedniego, więc sumy częściowe $S_k$ szybko „przyklejają się” do $e \approx 2{,}71828$. Pętla kończy się, gdy wyraz spadnie poniżej $\varepsilon$.};
+\end{tikzpicture}

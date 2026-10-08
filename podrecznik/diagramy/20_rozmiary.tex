@@ -1,0 +1,37 @@
+\begin{tikzpicture}[x=6mm, y=-6.5mm,
+    el/.style={inner sep=1.8pt, font=\ttfamily\small, anchor=west, rounded corners=1.5pt},
+    rozm/.style={font=\ttfamily\footnotesize, anchor=east, inner sep=1.5pt},
+    galaz/.style={draw=linia, line width=0.7pt},
+    grupa/.style={rectangle, rounded corners=2pt, line width=0.8pt, minimum width=60mm, minimum height=9mm, align=left, text width=56mm, anchor=west}]
+  \node[el, draw=linia, fill=tlo] (k) at (0,0) {zdjecia/};
+  \node[el, draw=linia, fill=tlo] (a) at (1,1) {2024/};
+  \node[el] (a1) at (2,2) {morze.jpg};
+  \node[el] (a2) at (2,3) {opis.txt};
+  \node[el] (b)  at (1,4) {README};
+  \node[el] (c)  at (1,5) {kot.JPG};
+  \node[el] (d)  at (1,6) {plan.txt};
+  \coordinate (kk) at ($(k.south west)+(2.5mm,0)$);
+  \coordinate (aa) at ($(a.south west)+(2.5mm,0)$);
+  \draw[galaz] (kk) |- (d.west);
+  \foreach \n in {a,b,c} \draw[galaz] (kk |- \n.west) -- (\n.west);
+  \draw[galaz] (aa) |- (a2.west);
+  \draw[galaz] (aa |- a1.west) -- (a1.west);
+  % rozmiary
+  \node[rozm, text=akcent]  (r1) at (8.2,2) {5000 B};
+  \node[rozm, text=zielen]  (r2) at (8.2,3) {80 B};
+  \node[rozm, text=fiolet]  (r3) at (8.2,4) {40 B};
+  \node[rozm, text=akcent]  (r4) at (8.2,5) {3000 B};
+  \node[rozm, text=zielen]  (r5) at (8.2,6) {120 B};
+  \node[notka, anchor=west] at (3.6,1) {folder — pomijamy};
+  % grupy
+  \node[grupa, draw=fiolet, fill=fioletjasny] (g1) at (13.5,0.6) {\kod{"(brak)"}: \ $40 = 40$ B};
+  \node[grupa, draw=akcent, fill=akcentjasny] (g2) at (13.5,3.3) {\kod{".jpg"}: \ $5000 + 3000 = 8000$ B};
+  \node[grupa, draw=zielen, fill=zielenjasna] (g3) at (13.5,6.0) {\kod{".txt"}: \ $80 + 120 = 200$ B};
+  \draw[->, akcent]  (r1.east) to[out=0, in=180] ($(g2.west)+(0,1.5mm)$);
+  \draw[->, akcent]  (r4.east) to[out=0, in=180] ($(g2.west)+(0,-1.5mm)$);
+  \draw[->, zielen]  (r2.east) to[out=0, in=180] ($(g3.west)+(0,1.5mm)$);
+  \draw[->, zielen]  (r5.east) to[out=0, in=180] ($(g3.west)+(0,-1.5mm)$);
+  \draw[->, fiolet]  (r3.east) to[out=0, in=180] (g1.west);
+  \node[anchor=south, font=\small\bfseries] at ($(g1.north)+(0,1mm)$) {słownik \kod{rozmiary}};
+  \node[notka, anchor=north west, text width=100mm] at (0,7.0) {\kod{kot.JPG}: \kod{suffix} to \kod{".JPG"}, po \kod{lower()} $\to$ \kod{".jpg"}\\\kod{README}: \kod{suffix} to \kod{""}, więc grupa \kod{"(brak)"}};
+\end{tikzpicture}

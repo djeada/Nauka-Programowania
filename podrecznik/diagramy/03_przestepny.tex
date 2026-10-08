@@ -1,0 +1,21 @@
+\begin{tikzpicture}[node distance=7mm and 12mm]
+  \tikzset{lisc tak/.style={rectangle, rounded corners=2pt, draw=zielen, fill=zielenjasna, minimum height=7mm, inner xsep=6pt, align=center},
+           lisc nie/.style={rectangle, rounded corners=2pt, draw=czerwien, fill=czerwienjasna, minimum height=7mm, inner xsep=6pt, align=center}}
+  \node[start] (s) {rok \kod{y}};
+  \node[decyzja, below=6mm of s] (d1) {\kod{y \% 400 == 0}?};
+  \node[decyzja, below=of d1] (d2) {\kod{y \% 100 == 0}?};
+  \node[decyzja, below=of d2] (d3) {\kod{y \% 4 == 0}?};
+  \node[lisc tak, right=of d1] (l1) {przestępny\\[-1pt]{\scriptsize\textcolor{szary}{np. 2000, 2400}}};
+  \node[lisc nie, right=of d2] (l2) {nieprzestępny\\[-1pt]{\scriptsize\textcolor{szary}{np. 1900, 2100}}};
+  \node[lisc tak, right=of d3] (l3) {przestępny\\[-1pt]{\scriptsize\textcolor{szary}{np. 2024, 1996}}};
+  \node[lisc nie, below=of d3] (l4) {nieprzestępny\\[-1pt]{\scriptsize\textcolor{szary}{np. 2023, 2025}}};
+  \draw[strzalka] (s) -- (d1);
+  \draw[strzalka] (d1) -- node[tak, above] {tak} (l1);
+  \draw[strzalka] (d2) -- node[tak, above] {tak} (l2);
+  \draw[strzalka] (d3) -- node[tak, above] {tak} (l3);
+  \draw[strzalka] (d1) -- node[nie, left] {nie} (d2);
+  \draw[strzalka] (d2) -- node[nie, left] {nie} (d3);
+  \draw[strzalka] (d3) -- node[nie, left] {nie} (l4);
+  \node[notka, text width=52mm, right=10mm of l2] {Na drugie pytanie odpowiadamy tylko wtedy, gdy rok \textbf{nie} dzieli się przez 400 — dlatego pełne stulecie trafia tu do „nieprzestępnych”.\\[4pt]
+    Wzór: $(4 \mid y \land \neg(100 \mid y)) \lor 400 \mid y$};
+\end{tikzpicture}

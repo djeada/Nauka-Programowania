@@ -97,6 +97,40 @@
       "output": "Fałsz"
     }
   ],
+  "ZAD-04": [
+    {
+      "input": "aaaa\naa",
+      "output": "0 1 2"
+    },
+    {
+      "input": "Ala ma kota\na",
+      "output": "2 5 10"
+    },
+    {
+      "input": "kot\nkotlet",
+      "output": "Brak"
+    },
+    {
+      "input": "abc\nabc",
+      "output": "0"
+    },
+    {
+      "input": "Ala ma kota\n ",
+      "output": "3 6"
+    },
+    {
+      "input": "Ala ala\nala",
+      "output": "4"
+    },
+    {
+      "input": "ababab\naba",
+      "output": "0 2"
+    },
+    {
+      "input": "abcabc\ncab",
+      "output": "2"
+    }
+  ],
   "ZAD-05": [
     {
       "input": "aaabbbcca",

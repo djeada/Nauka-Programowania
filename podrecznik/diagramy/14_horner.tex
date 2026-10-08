@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=24mm, y=1cm]
+  \node[podpis, anchor=east] at (-0.5,1.2) {współczynnik $a$};
+  \node[podpis, anchor=east] at (-0.5,0) {wynik};
+  \node[zmienna, fill=tlo] (r0) at (-0.15,0) {0};
+  \foreach \a/\r/\op [count=\i from 1] in {2/2/{0\cdot 2+2}, 0/4/{2\cdot 2+0}, -1/7/{4\cdot 2-1}, 5/19/{7\cdot 2+5}} {
+    \node[komorka, minimum width=10mm] (a\i) at (\i,1.2) {\a};
+    \ifnum\i=4 \node[zmienna, draw=zielen, fill=zielenjasna, line width=1pt] (r\i) at (\i,0) {\r};
+    \else \node[zmienna] (r\i) at (\i,0) {\r}; \fi
+    \draw[strzalka, draw=akcent] (a\i) -- (r\i);
+    \pgfmathtruncatemacro{\p}{\i-1}
+    \draw[strzalka] (r\p) -- node[below=2mm, font=\footnotesize, text=szary] {$\op$} (r\i);
+  }
+  \node[podpis, anchor=west] at ($(r4.east)+(0.1,0)$) {$=W(2)$};
+  \node[notka, anchor=west, text width=135mm] at (-0.9,-1.25) {%
+    W każdym kroku: \kod{wynik = wynik * x + a} \quad dla $W(x) = 2x^3 + 0x^2 - x + 5$ i $x = 2$.\\
+    Sprawdzenie: $2 \cdot 8 + 0 \cdot 4 - 2 + 5 = 19$.};
+\end{tikzpicture}

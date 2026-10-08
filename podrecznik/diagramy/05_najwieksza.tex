@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=8mm, y=9.5mm]
+  \node[font=\footnotesize\bfseries] at (2,1) {\kod{n}};
+  \node[font=\footnotesize\bfseries] at (6,1) {\kod{c}};
+  \node[font=\footnotesize\bfseries] at (9.3,1) {porównanie};
+  \node[font=\footnotesize\bfseries] at (12.6,1) {\kod{maks}};
+  \node[font=\footnotesize\bfseries] at (14.4,1) {\kod{ile}};
+  \node[font=\footnotesize\bfseries] at (16.6,1) {\kod{n // 10}};
+  \node[font=\scriptsize, text=szary] at (12.6,0.55) {$-1$}; \node[font=\scriptsize, text=szary] at (14.4,0.55) {0};
+  \foreach \cyfry/\c/\por/\m/\ile/\reszta/\styl [count=\r from 0] in {
+      {5,9,3,9,5}/5/{$5 > -1$: nowa}/5/1/5939/ok,
+      {5,9,3,9}/9/{$9 > 5$: nowa}/9/1/593/ok,
+      {5,9,3}/3/{$3 < 9$}/9/1/59/n,
+      {5,9}/9/{$9 = 9$: ile + 1}/9/2/5/wyr,
+      {5}/5/{$5 < 9$}/9/2/0/n} {
+    \pgfmathsetmacro{\y}{-\r}
+    \pgfmathtruncatemacro{\dl}{5-\r}
+    \foreach \x [count=\k from 1] in \cyfry {
+      \ifnum\k=\dl \node[komorka wyr] at (\k-1+\r,\y) {\x}; \else \node[komorka] at (\k-1+\r,\y) {\x}; \fi
+    }
+    \node[komorka ok] at (6,\y) {\c};
+    \node[font=\footnotesize] at (9.3,\y) {\por};
+    \if\styl o
+      \node[font=\ttfamily\small\bfseries, text=zielen] at (12.6,\y) {\m};
+      \node[font=\ttfamily\small\bfseries, text=zielen] at (14.4,\y) {\ile};
+    \else\if\styl w
+      \node[font=\ttfamily\small] at (12.6,\y) {\m};
+      \node[font=\ttfamily\small\bfseries, text=bursztyn] at (14.4,\y) {\ile};
+    \else
+      \node[font=\ttfamily\small, text=szary] at (12.6,\y) {\m};
+      \node[font=\ttfamily\small, text=szary] at (14.4,\y) {\ile};
+    \fi\fi
+    \node[kod] at (16.6,\y) {\reszta};
+    \draw[draw=linia] (-0.5,\y-0.5) -- (17.6,\y-0.5);
+  }
+  \node[font=\footnotesize, text=czerwien, anchor=north east] at (17.6,-4.6) {\kod{n == 0} $\Rightarrow$ \kod{break}; wynik: \kod{maks = 9}, \kod{ile = 2}};
+\end{tikzpicture}

@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=15mm, y=1cm]
+  \foreach \v [count=\i from 0] in {3,5,1,4,2} {
+    \node[komorka, minimum width=13mm, minimum height=9mm] (a\i) at (\i,0) {\v};
+    \node[indeks, below=0.5mm of a\i] {\i};
+  }
+  % łuki inwersji: (i, j, kolor, przesunięcie końców)
+  \foreach \i/\j/\c/\di/\dj in {0/2/akcent/-1/-3.5, 0/4/akcent/3/-4, 1/2/fiolet/-4/3, 1/3/fiolet/0/-3, 1/4/fiolet/4/0, 3/4/bursztyn/3/4} {
+    \pgfmathsetmacro{\h}{0.45+0.42*(\j-\i)}
+    \draw[\c, thick, -{Stealth[length=1.8mm]}] ($(a\i.north)+(\di mm,0)$) .. controls +(0,\h) and +(0,\h) .. ($(a\j.north)+(\dj mm,0)$);
+  }
+  % liczniki
+  \node[notka, anchor=east] at (-0.45,-1.45) {mniejszych na prawo:};
+  \foreach \c/\k [count=\i from 0] in {akcent/2, fiolet/3, szary/0, bursztyn/1, szary/0}
+    \node[zmienna, minimum width=8mm, draw=\c, text=\c] (c\i) at (\i,-1.45) {\k};
+  \node[anchor=west] at (4.45,-1.45) {$\Rightarrow\ 2 + 3 + 0 + 1 + 0 = \mathbf{6}$};
+  \node[notka, anchor=west, text width=46mm] at (4.45,1.3) {łuk od $a_i$ do $a_j$: para $i < j$, w~której $a_i > a_j$};
+\end{tikzpicture}

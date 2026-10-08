@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=6mm, y=-6mm,
+    el/.style={inner sep=1.8pt, font=\ttfamily\small, anchor=west, rounded corners=1.5pt},
+    wybrany/.style={el, fill=akcentjasny, draw=akcent},
+    pominiety/.style={el, text=szary!70},
+    galaz/.style={draw=linia, line width=0.7pt}]
+  \foreach \dx/\tytul/\wyb in {0/{Path("zdjecia").iterdir()}/pominiety, 13/{Path("zdjecia").rglob("*")}/wybrany} {
+    \begin{scope}[xshift=\dx*6mm]
+      \node[anchor=west, font=\small\bfseries] at (0,-1.4) {\kod{\tytul}};
+      \node[el, draw=linia, fill=tlo] (k) at (0,0) {zdjecia/};
+      \node[wybrany] (a) at (1,1) {2024/};
+      \node[\wyb] (a1) at (2,2) {morze.jpg};
+      \node[\wyb] (a2) at (2,3) {opis.txt};
+      \node[wybrany] (b) at (1,4) {README};
+      \node[wybrany] (c) at (1,5) {kot.JPG};
+      \node[wybrany] (d) at (1,6) {plan.txt};
+      \coordinate (kk) at ($(k.south west)+(2.5mm,0)$);
+      \coordinate (aa) at ($(a.south west)+(2.5mm,0)$);
+      \draw[galaz] (kk) |- (d.west);
+      \foreach \n in {a,b,c} \draw[galaz] (kk |- \n.west) -- (\n.west);
+      \draw[galaz] (aa) |- (a2.west);
+      \draw[galaz] (aa |- a1.west) -- (a1.west);
+    \end{scope}
+  }
+  % opisy
+  \draw[klamra] (5.6,0.6) -- (5.6,6.4) node[midway, right=5pt, notka, text width=30mm] {tylko poziom 1:\\4~elementy\\(w~tym folder \kod{2024})};
+  \draw[klamra] (18.9,0.6) -- (18.9,6.4) node[midway, right=5pt, notka, text width=30mm] {wszystkie poziomy:\\6~elementów\\(też foldery!)};
+\end{tikzpicture}

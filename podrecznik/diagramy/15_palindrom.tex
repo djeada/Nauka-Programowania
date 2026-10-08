@@ -1,0 +1,39 @@
+\begin{tikzpicture}[x=1cm, y=1cm,
+    wywol/.style={font=\ttfamily\footnotesize, anchor=east},
+    ret/.style={strzalka, draw=zielen, thick},
+    retz/.style={strzalka, draw=czerwien, thick}]
+  % ---------------- potop ----------------
+  \node[font=\bfseries\small] at (1.6,1.85) {\kod{czy\_palindrom("potop")}};
+  % poziom 0
+  \foreach \z [count=\i from 0] in {p,o,t,o,p} \node[komorka] (a0-\i) at (\i*0.8,0) {\z};
+  \node[komorka ok] at (a0-0) {p}; \node[komorka ok] at (a0-4) {p};
+  \draw[zielen, <->, >=Stealth] (a0-0.south) to[bend right=25] node[below, font=\footnotesize] {\kod{p == p}} (a0-4.south);
+  % poziom 1
+  \foreach \z [count=\i from 1] in {o,t,o} \node[komorka] (a1-\i) at (\i*0.8,-1.9) {\z};
+  \node[komorka ok] at (a1-1) {o}; \node[komorka ok] at (a1-3) {o};
+  \draw[zielen, <->, >=Stealth] (a1-1.south) to[bend right=30] node[below, font=\footnotesize] {\kod{o == o}} (a1-3.south);
+  % poziom 2
+  \node[komorka ok] (a2-2) at (1.6,-3.8) {t};
+  \node[notka, anchor=west] at (2.1,-3.8) {\kod{len(s) <= 1}: baza};
+  % wywołania
+  \draw[strzalka, draw=akcent] (-0.55,-0.45) -- node[left, font=\footnotesize, text=akcent] {\kod{s[1:-1]}} (-0.55,-1.55);
+  \draw[strzalka, draw=akcent] (-0.55,-2.35) -- node[left, font=\footnotesize, text=akcent] {\kod{s[1:-1]}} (-0.55,-3.45);
+  % powroty
+  \draw[ret] (4.0,-3.6) -- node[right, font=\footnotesize] {\kod{True}} (4.0,-2.1);
+  \draw[ret] (4.0,-1.7) -- node[right, font=\footnotesize] {\kod{True}} (4.0,-0.2);
+  \draw[ret] (4.0,0.2) -- ++(0,0.5) node[above, font=\footnotesize] {wynik: \kod{True}};
+  % ---------------- kopak ----------------
+  \begin{scope}[xshift=8.6cm]
+    \node[font=\bfseries\small] at (1.6,1.85) {\kod{czy\_palindrom("kopak")}};
+    \foreach \z [count=\i from 0] in {k,o,p,a,k} \node[komorka] (b0-\i) at (\i*0.8,0) {\z};
+    \node[komorka ok] at (b0-0) {k}; \node[komorka ok] at (b0-4) {k};
+    \draw[zielen, <->, >=Stealth] (b0-0.south) to[bend right=25] node[below, font=\footnotesize] {\kod{k == k}} (b0-4.south);
+    \foreach \z [count=\i from 1] in {o,p,a} \node[komorka] (b1-\i) at (\i*0.8,-1.9) {\z};
+    \node[komorka zla] at (b1-1) {o}; \node[komorka zla] at (b1-3) {a};
+    \draw[czerwien, <->, >=Stealth] (b1-1.south) to[bend right=30] node[below, font=\footnotesize] {\kod{o != a}} (b1-3.south);
+    \node[notka, text=czerwien, anchor=north] at (1.6,-3.15) {koniec — bez dalszych wywołań};
+    \draw[strzalka, draw=akcent] (-0.55,-0.45) -- node[left, font=\footnotesize, text=akcent] {\kod{s[1:-1]}} (-0.55,-1.55);
+    \draw[retz] (4.0,-1.7) -- node[right, font=\footnotesize] {\kod{False}} (4.0,-0.2);
+    \draw[retz] (4.0,0.2) -- ++(0,0.5) node[above, font=\footnotesize] {wynik: \kod{False}};
+  \end{scope}
+\end{tikzpicture}

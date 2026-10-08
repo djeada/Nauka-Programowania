@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=8mm, y=10mm]
+  % nagłówki
+  \node[font=\footnotesize\bfseries] at (1.5,1) {\kod{n} na początku obrotu};
+  \node[font=\footnotesize\bfseries] at (6.4,1) {\kod{c = n \% 10}};
+  \node[font=\footnotesize\bfseries] at (10.6,1) {\kod{n = n // 10}};
+  \foreach \cyfry/\c/\reszta/\y in {{4,0,7,2}/2/407/0, {4,0,7}/7/40/-1, {4,0}/0/4/-2, {4}/4/0/-3} {
+    % policz długość
+    \def\dl{0}
+    \foreach \x in \cyfry {\xdef\dl{\the\numexpr\dl+1\relax}}
+    \foreach \x [count=\k from 1] in \cyfry {
+      \pgfmathtruncatemacro{\poz}{4-\dl+\k-1}
+      \ifnum\k=\dl
+        \node[komorka wyr] at (\poz,\y) {\x};
+      \else
+        \node[komorka] at (\poz,\y) {\x};
+      \fi
+    }
+    \draw[strzalka, draw=bursztyn] (4.6,\y) -- (5.7,\y);
+    \node[komorka ok] at (6.4,\y) {\c};
+    \draw[strzalka, draw=szary] (7.1,\y) -- (8.6,\y);
+    \node[kod, anchor=west] at (8.8,\y) {\reszta};
+  }
+  \node[font=\footnotesize, text=czerwien, anchor=west] at (10.4,-3) {$\Rightarrow$ \kod{n == 0}, koniec pętli};
+  \node[font=\scriptsize, text=zielen, align=center, below] at (6.4,-3.45) {cyfry od końca: 2, 7, 0, 4};
+\end{tikzpicture}

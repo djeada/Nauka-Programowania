@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+  % ramka główna
+  \node[font=\footnotesize\bfseries, anchor=west] at (0,2.1) {ramka główna (program)};
+  \node[zmienna] (a) at (1.2,1.1) {5};  \node[indeks, left=0.5mm of a] {a};
+  \node[zmienna] (b) at (1.2,-0.1) {6}; \node[indeks, left=0.5mm of b] {b};
+  \node[font=\scriptsize, text=szary, anchor=west] at (0.1,-0.95) {\kod{a} nadal równe 5};
+  \begin{scope}[on background layer]\draw[draw=linia, fill=tlo, rounded corners=3pt] (0,2.4) rectangle (3.0,-1.2);\end{scope}
+  % ramka funkcji
+  \node[font=\footnotesize\bfseries, anchor=west, text=akcent] at (7.0,2.1) {ramka wywołania \kod{zwieksz(a)}};
+  \node[zmienna, draw=akcent] (n) at (7.9,0.5) {6};
+  \node[indeks, below=0.5mm of n] {n};
+  \node[font=\ttfamily\small, text=szary] (stare) at (7.9,1.35) {5};
+  \draw[draw=czerwien] ($(stare.south west)+(1pt,2pt)$) -- ($(stare.north east)+(-1pt,-2pt)$);
+  \node[font=\scriptsize, text=szary, anchor=west] at (8.15,1.35) {(na początku)};
+  \node[kod, font=\ttfamily\footnotesize, anchor=west] at (8.8,0.5) {n = n + 1};
+  \draw[draw=akcent, dashed, rounded corners=3pt] (6.9,2.4) rectangle (12.0,-1.2);
+  \node[font=\scriptsize, text=akcent, anchor=south east] at (11.95,-1.15) {znika po \kod{return}};
+  % strzałki
+  \draw[strzalka, draw=zielen, thick] (a.east) -- node[above, font=\scriptsize, text=zielen, sloped] {kopia wartości: 5} ($(n.west)+(0,1mm)$);
+  \draw[strzalka, draw=bursztyn, thick] ($(n.west)+(0,-1mm)$) -- node[below, font=\scriptsize, text=bursztyn, sloped] {\kod{return n} $\to$ 6} (b.east);
+\end{tikzpicture}

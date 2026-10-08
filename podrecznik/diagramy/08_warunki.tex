@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=6.5mm, y=6.5mm]
+  % trzy siatki 5 x 5; komórka (i, j) wyróżniona, gdy warunek jest prawdziwy
+  \foreach \g/\x/\warunek in {0/0/{\j>=\i}, 1/7.5/{(\i==0)||(\i==4)||(\j==0)||(\j==4)}, 2/15/{mod(\i+\j,2)==0}} {
+    \foreach \j in {0,...,4}
+      \node[indeks] at (\x+\j, 0.75) {\j};
+    \foreach \i in {0,...,4} {
+      \node[indeks] at (\x-0.85, -\i) {\i};
+      \foreach \j in {0,...,4} {
+        \pgfmathtruncatemacro{\on}{(\warunek) ? 1 : 0}
+        \ifnum\on=1
+          \node[komorka wyr, minimum width=6.5mm, minimum height=6.5mm] at (\x+\j, -\i) {*};
+        \else
+          \node[komorka, draw=linia, minimum width=6.5mm, minimum height=6.5mm] at (\x+\j, -\i) {};
+        \fi
+      }
+    }
+    \node[indeks, text=akcent] at (\x+2, 1.35) {kolumna \kod{j}};
+    \node[indeks, text=akcent, rotate=90] at (\x-1.45, -2) {wiersz \kod{i}};
+  }
+  \node[kod, font=\ttfamily\footnotesize, align=center, anchor=north] at (2, -5.05) {j >= i};
+  \node[kod, font=\ttfamily\footnotesize, align=center, anchor=north] at (9.5, -5.05) {i == 0 or i == n - 1\\or j == 0 or j == n - 1};
+  \node[kod, font=\ttfamily\footnotesize, align=center, anchor=north] at (17, -5.05) {(i + j) \% 2 == 0};
+  \node[podpis] at (2, -6.6) {górny trójkąt};
+  \node[podpis] at (9.5, -6.6) {ramka};
+  \node[podpis] at (17, -6.6) {szachownica};
+\end{tikzpicture}

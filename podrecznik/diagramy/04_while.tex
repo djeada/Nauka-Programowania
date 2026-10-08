@@ -1,0 +1,29 @@
+\begin{tikzpicture}[node distance=6mm and 10mm]
+  \node[start] (s) {start};
+  \node[we, below=of s] (in) {wczytaj \kod{n}};
+  \node[blok, below=of in] (init) {\kod{kroki = 0}};
+  \node[decyzja, below=of init] (d) {\kod{n > 1}?};
+  \node[blok, below=8mm of d, fill=zielenjasna, draw=zielen] (body) {\kod{n = n // 2}\\\kod{kroki += 1}};
+  \node[blok, right=14mm of d] (out) {\kod{print(kroki)}};
+  \node[start, below=of out] (e) {koniec};
+  \draw[strzalka] (s) -- (in);
+  \draw[strzalka] (in) -- (init);
+  \draw[strzalka] (init) -- (d);
+  \draw[strzalka] (d) -- node[tak, right] {True} (body);
+  \draw[strzalka] (d) -- node[nie, above] {False} (out);
+  \draw[strzalka] (out) -- (e);
+  % powrót
+  \draw[strzalka, draw=bursztyn, thick] (body.west) -- ++(-10mm,0) |- node[pos=0.25, left, font=\footnotesize, text=bursztyn, align=right] {wróć do\\warunku} ($(init.south)!0.5!(d.north)$);
+  % kod
+  \node[notka, anchor=north west, text width=46mm] (code) at ($(out.east)+(8mm,22mm)$) {%
+    \kod{n = int(input())}\\
+    \kod{kroki = 0}\\
+    \kod{\textcolor{fiolet}{while} n > 1:}\\
+    \kod{\ \ \ \ \textcolor{zielen}{n = n // 2}}\\
+    \kod{\ \ \ \ \textcolor{zielen}{kroki += 1}}\\
+    \kod{print(kroki)}};
+  \begin{scope}[on background layer]
+    \node[ramka, fit=(code), inner sep=4pt] {};
+  \end{scope}
+  \node[podpis, below=4mm of code, text width=46mm] {Zielone linie (ciało pętli) wykonują się za każdym obrotem. Warunek jest sprawdzany \textbf{przed} każdym obrotem.};
+\end{tikzpicture}

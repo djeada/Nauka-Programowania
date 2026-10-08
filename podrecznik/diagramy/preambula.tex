@@ -1,0 +1,85 @@
+% Wspólna preambuła diagramów TikZ (scripts/build_diagrams.py dokleja ją do każdego pliku *.tex).
+% Kolory i style odpowiadają wyglądowi PDF-u (scripts/generate_pdf.py) — używaj ich zamiast
+% własnych kolorów, żeby wszystkie rysunki w książce wyglądały spójnie.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{arev}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{upquote}
+\usepackage{microtype}
+% W kodzie (\kod, \texttt) << >> -- ' ` mają zostać dosłowne, bez ligatur («, –, ’).
+\DisableLigatures[<,>,-,`,']{encoding = T1, family = tt*}
+% Znaki Unicode, które można wpisywać wprost w tekście diagramu.
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
+\DeclareUnicodeCharacter{2264}{\ensuremath{\leq}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{2190}{\ensuremath{\leftarrow}}
+\DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\DeclareUnicodeCharacter{221A}{\ensuremath{\surd}}
+\DeclareUnicodeCharacter{221E}{\ensuremath{\infty}}
+\DeclareUnicodeCharacter{03C0}{\ensuremath{\pi}}
+\DeclareUnicodeCharacter{2208}{\ensuremath{\in}}
+\DeclareUnicodeCharacter{2211}{\ensuremath{\sum}}
+\DeclareUnicodeCharacter{230A}{\ensuremath{\lfloor}}
+\DeclareUnicodeCharacter{230B}{\ensuremath{\rfloor}}
+\DeclareUnicodeCharacter{2308}{\ensuremath{\lceil}}
+\DeclareUnicodeCharacter{2309}{\ensuremath{\rceil}}
+\DeclareUnicodeCharacter{2713}{\ding{51}}
+\DeclareUnicodeCharacter{2717}{\ding{55}}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,shapes.misc,shapes.multipart,calc,fit,backgrounds,matrix,decorations.pathreplacing,trees}
+
+\definecolor{akcent}{HTML}{2563EB}       \definecolor{akcentjasny}{HTML}{DBEAFE}
+\definecolor{bursztyn}{HTML}{D97706}     \definecolor{bursztynjasny}{HTML}{FEF3C7}
+\definecolor{fiolet}{HTML}{7C3AED}       \definecolor{fioletjasny}{HTML}{EDE9FE}
+\definecolor{czerwien}{HTML}{DC2626}     \definecolor{czerwienjasna}{HTML}{FEE2E2}
+\definecolor{zielen}{HTML}{16A34A}       \definecolor{zielenjasna}{HTML}{DCFCE7}
+\definecolor{tusz}{HTML}{1E293B}         \definecolor{szary}{HTML}{64748B}
+\definecolor{linia}{HTML}{CBD5E1}        \definecolor{tlo}{HTML}{F1F5F9}
+
+\tikzset{
+  every picture/.style={>={Stealth[length=2.2mm]}, line width=0.6pt, font=\small, color=tusz},
+  % schematy blokowe
+  start/.style={rounded rectangle, draw=tusz, fill=tlo, minimum height=7mm, inner xsep=8pt},
+  blok/.style={rectangle, draw=akcent, fill=akcentjasny, rounded corners=2pt, minimum height=7mm, inner xsep=6pt, align=center},
+  decyzja/.style={diamond, aspect=2.2, draw=bursztyn, fill=bursztynjasny, inner sep=1.5pt, align=center},
+  we/.style={trapezium, trapezium left angle=72, trapezium right angle=108, trapezium stretches body,
+             draw=zielen, fill=zielenjasna, minimum height=7mm, inner xsep=4pt, align=center},
+  strzalka/.style={->, draw=tusz},
+  tak/.style={font=\footnotesize, text=zielen},
+  nie/.style={font=\footnotesize, text=czerwien},
+  % pamięć, listy, napisy
+  zmienna/.style={rectangle, draw=tusz, fill=white, minimum width=12mm, minimum height=7mm, font=\ttfamily\small},
+  komorka/.style={rectangle, draw=akcent, fill=white, minimum width=8mm, minimum height=8mm, inner sep=0pt, font=\ttfamily\small},
+  komorka wyr/.style={komorka, draw=bursztyn, fill=bursztynjasny},
+  komorka ok/.style={komorka, draw=zielen, fill=zielenjasna},
+  komorka zla/.style={komorka, draw=czerwien, fill=czerwienjasna},
+  komorka szara/.style={komorka, draw=linia, fill=tlo, text=szary},
+  indeks/.style={font=\scriptsize\ttfamily, text=szary},
+  wskaznik/.style={->, draw=czerwien, thick},
+  % opisy
+  kod/.style={font=\ttfamily\small},
+  podpis/.style={font=\footnotesize, text=szary, align=center},
+  notka/.style={font=\footnotesize, text=szary, align=left},
+  ramka/.style={draw=linia, fill=tlo, rounded corners=3pt},
+  klamra/.style={decorate, decoration={brace, amplitude=4pt, raise=2pt}, draw=szary},
+}
+
+\newcommand{\kod}[1]{\texttt{#1}}
+
+% \tablica{nazwa}{x}{y}{3,1,4} — komórki listy w punkcie (x,y) z indeksami pod spodem.
+% Komórki mają nazwy nazwa-0, nazwa-1, … (np. do strzałek i wyróżnień).
+\newcommand{\tablica}[4]{%
+  \foreach \wartosc [count=\i from 0] in {#4} {%
+    \node[komorka] (#1-\i) at (#2+\i*0.8, #3) {\wartosc};
+    \node[indeks, below=0.4mm of #1-\i] {\i};
+  }}
+% \tablicabez{nazwa}{x}{y}{…} — to samo bez indeksów.
+\newcommand{\tablicabez}[4]{%
+  \foreach \wartosc [count=\i from 0] in {#4} {%
+    \node[komorka] (#1-\i) at (#2+\i*0.8, #3) {\wartosc};
+  }}

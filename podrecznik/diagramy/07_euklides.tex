@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=0.46mm, y=0.46mm]
+  % kwadraty 105
+  \draw[draw=akcent, fill=akcentjasny] (0,0) rectangle (105,105);
+  \draw[draw=akcent, fill=akcentjasny] (105,0) rectangle (210,105);
+  \node[font=\small, text=akcent] at (52.5,52.5) {$105 \times 105$};
+  \node[font=\small, text=akcent] at (157.5,52.5) {$105 \times 105$};
+  % kwadraty 42
+  \draw[draw=bursztyn, fill=bursztynjasny] (210,0) rectangle (252,42);
+  \draw[draw=bursztyn, fill=bursztynjasny] (210,42) rectangle (252,84);
+  \node[font=\footnotesize, text=bursztyn] at (231,21) {$42^2$};
+  \node[font=\footnotesize, text=bursztyn] at (231,63) {$42^2$};
+  % kwadraty 21
+  \draw[draw=zielen, fill=zielenjasna, thick] (210,84) rectangle (231,105);
+  \draw[draw=zielen, fill=zielenjasna, thick] (231,84) rectangle (252,105);
+  \node[font=\scriptsize, text=zielen] at (220.5,94.5) {21};
+  \node[font=\scriptsize, text=zielen] at (241.5,94.5) {21};
+  % wymiary
+  \draw[klamra, decoration={mirror}] (0,0) -- (252,0) node[midway, below=5pt, font=\footnotesize] {252};
+  \draw[klamra] (0,0) -- (0,105) node[midway, left=5pt, font=\footnotesize] {105};
+  % opis kroków
+  \node[notka, anchor=north west, text width=52mm] at (262,108) {%
+    \textcolor{akcent}{\textbf{1.}} $252 = 2 \cdot 105 + 42$\\ \quad dwa kwadraty $105 \times 105$,\\ \quad zostaje pas $42 \times 105$\\[3pt]
+    \textcolor{bursztyn}{\textbf{2.}} $105 = 2 \cdot 42 + 21$\\ \quad dwa kwadraty $42 \times 42$,\\ \quad zostaje $42 \times 21$\\[3pt]
+    \textcolor{zielen}{\textbf{3.}} $42 = 2 \cdot 21 + 0$\\ \quad dwa kwadraty $21 \times 21$,\\ \quad nic nie zostaje\\[3pt]
+    $\Rightarrow$ \textbf{NWD(252, 105) = 21}};
+\end{tikzpicture}

@@ -1,0 +1,47 @@
+\begin{tikzpicture}[x=7mm, y=7mm,
+    bit/.style={rectangle, draw=linia, minimum width=6.4mm, minimum height=6.4mm, inner sep=0pt, font=\ttfamily\small},
+    jed/.style={bit, draw=zielen, fill=zielenjasna}]
+  % \wiersz{x}{y}{bity}{etykieta}
+  \newcommand{\wiersz}[4]{%
+    \foreach \b [count=\i from 0] in {#3} {
+      \ifnum\b=1 \node[jed] at (#1+\i,#2) {1}; \else \node[bit] at (#1+\i,#2) {0}; \fi
+    }
+    \node[font=\ttfamily\footnotesize, anchor=west, text=szary] at (#1+3.6,#2) {#4};
+  }
+  \node[font=\bfseries\small] at (0+1.9,1.25) {AND: oba 1};
+  \wiersz{0}{0}{1,1,0,1}{13}
+  \wiersz{0}{-1}{0,1,1,0}{6}
+  \node[font=\ttfamily\bfseries, text=akcent] at (0-0.85,-1) {\&};
+  \draw[tusz] (0-0.5,-1.6) -- (0+3.5,-1.6);
+  \wiersz{0}{-2.2}{0,1,0,0}{4}
+  \node[font=\bfseries\small] at (7+1.9,1.25) {OR: choć jeden 1};
+  \wiersz{7}{0}{1,1,0,1}{13}
+  \wiersz{7}{-1}{0,1,1,0}{6}
+  \node[font=\ttfamily\bfseries\large, text=akcent] at (7-0.85,-1) {|};
+  \draw[tusz] (7-0.5,-1.6) -- (7+3.5,-1.6);
+  \wiersz{7}{-2.2}{1,1,1,1}{15}
+  \node[font=\bfseries\small] at (14+1.9,1.25) {XOR: różne};
+  \wiersz{14}{0}{1,1,0,1}{13}
+  \wiersz{14}{-1}{0,1,1,0}{6}
+  \node[font=\ttfamily\bfseries, text=akcent] at (14-0.85,-1) {\textasciicircum};
+  \draw[tusz] (14-0.5,-1.6) -- (14+3.5,-1.6);
+  \wiersz{14}{-2.2}{1,0,1,1}{11}
+  % przesunięcia
+  \begin{scope}[yshift=-3.35cm]
+    \node[font=\bfseries\small, anchor=west] at (-1.2,0.9) {przesunięcia};
+    \node[kod, anchor=east] at (-0.7,0) {13};
+    \foreach \b [count=\i from 1] in {1,1,0,1} {\ifnum\b=1 \node[jed] (p\i) at (\i,0) {1}; \else \node[bit] (p\i) at (\i,0) {0}; \fi}
+    % << 1
+    \node[kod, anchor=east] at (-0.7,-1.4) {13 \textless{}\textless{} 1};
+    \foreach \b [count=\i from 0] in {1,1,0,1} {\ifnum\b=1 \node[jed] (q\i) at (\i,-1.4) {1}; \else \node[bit] (q\i) at (\i,-1.4) {0}; \fi}
+    \node[bit, draw=akcent, fill=akcentjasny] at (4,-1.4) {0};
+    \node[notka, anchor=west] at (4.7,-1.4) {$= 11010_2 = 26 = 13 \cdot 2$\quad (z prawej dochodzi zero)};
+    % >> 1
+    \node[kod, anchor=east] at (-0.7,-2.8) {13 \textgreater{}\textgreater{} 1};
+    \foreach \b [count=\i from 2] in {1,1,0} {\ifnum\b=1 \node[jed] at (\i,-2.8) {1}; \else \node[bit] at (\i,-2.8) {0}; \fi}
+    \node[bit, draw=czerwien, fill=czerwienjasna, text=czerwien, opacity=0.6] at (5,-2.8) {1};
+    \draw[czerwien] (4.7,-3.1) -- (5.3,-2.5);
+    \node[notka, anchor=west] at (5.7,-2.8) {$= 110_2 = 6 = \lfloor 13 / 2 \rfloor$\quad (najmłodszy bit wypada)};
+    \foreach \i in {1,...,4} \draw[->, draw=szary, densely dotted] (\i,-0.35) -- (\i-1,-1.05);
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=8mm]
+  % kajak: pary (i, n-1-i) zgodne; kotek: druga para niezgodna
+  \foreach \c [count=\i from 0] in {k,a,j,a,k} {
+    \node[komorka] (a\i) at (\i, 0) {\c};
+    \node[indeks, below=0.4mm of a\i] {\i};
+  }
+  \node[komorka szara] at (a2) {j};
+  \draw[<->, draw=zielen, thick] (a0.north) to[bend left=75] node[above, font=\scriptsize, text=zielen] {\kod{k = k}} (a4.north);
+  \draw[<->, draw=zielen, thick] (a1.north) to[bend left=60] node[above=-1pt, font=\scriptsize, text=zielen, inner sep=1pt] {\kod{a = a}} (a3.north);
+  \node[podpis, below=6mm of a2] {\kod{"kajak"}: palindrom};
+  \node[podpis, anchor=north, text width=30mm] at ($(a2.south)+(0,-1.25)$) {środek nie ma pary\\ — nie trzeba go sprawdzać};
+  \begin{scope}[xshift=6.5*8mm]
+    \foreach \c [count=\i from 0] in {k,o,t,e,k} {
+      \node[komorka] (b\i) at (\i, 0) {\c};
+      \node[indeks, below=0.4mm of b\i] {\i};
+    }
+    \node[komorka ok] at (b0) {k}; \node[komorka ok] at (b4) {k};
+    \node[komorka zla] at (b1) {o}; \node[komorka zla] at (b3) {e};
+    \draw[<->, draw=zielen, thick] (b0.north) to[bend left=75] node[above, font=\scriptsize, text=zielen] {\kod{k = k}} (b4.north);
+    \draw[<->, draw=czerwien, thick] (b1.north) to[bend left=60] node[above=-1pt, font=\scriptsize, text=czerwien, inner sep=1pt] {\kod{o} $\ne$ \kod{e}} (b3.north);
+    \node[podpis, below=6mm of b2] {\kod{"kotek"}: nie jest palindromem};
+    \node[podpis, anchor=north, text width=36mm] at ($(b2.south)+(0,-1.25)$) {pierwsza różnica kończy\\ sprawdzanie};
+  \end{scope}
+  \node[notka, anchor=west] at (12.3, 0.3) {\kod{i} od lewej, \kod{j} od prawej:\\[1mm] porównaj \kod{s[i]} z \kod{s[j]},\\ potem \kod{i += 1}, \kod{j -= 1},\\ dopóki \kod{i < j}};
+\end{tikzpicture}

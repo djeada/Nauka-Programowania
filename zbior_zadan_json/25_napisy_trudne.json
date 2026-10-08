@@ -176,6 +176,65 @@
       "starter_code": ""
     },
     {
+      "id": "ZAD-04",
+      "slug": "25_napisy_trudne/ZAD-04",
+      "title": "Wszystkie wystąpienia podnapisu",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "string",
+        "substring",
+        "find"
+      ],
+      "description": "Otrzymujesz napis `S` i napis `W` (wzorzec). Znajdź **wszystkie** pozycje w `S`, od których zaczyna się wystąpienie `W`, i wypisz je w kolejności rosnącej.\n\nWystąpienia mogą na siebie nachodzić: w napisie `aaaa` wzorzec `aa` zaczyna się na pozycjach `0`, `1` i `2`.",
+      "input": "* 1. linia: napis `S`\n* 2. linia: wzorzec `W`",
+      "output": "Jedna linia: indeksy początków wszystkich wystąpień `W` w `S`, oddzielone pojedynczymi spacjami.\nJeśli `W` nie występuje w `S`, wypisz `Brak`.",
+      "examples": [
+        {
+          "input": "abrakadabra\nabra",
+          "output": "0 7",
+          "explanation": ""
+        }
+      ],
+      "testcases": [
+        {
+          "input": "aaaa\naa",
+          "output": "0 1 2"
+        },
+        {
+          "input": "Ala ma kota\na",
+          "output": "2 5 10"
+        },
+        {
+          "input": "kot\nkotlet",
+          "output": "Brak"
+        },
+        {
+          "input": "abc\nabc",
+          "output": "0"
+        },
+        {
+          "input": "Ala ma kota\n ",
+          "output": "3 6"
+        },
+        {
+          "input": "Ala ala\nala",
+          "output": "4"
+        },
+        {
+          "input": "ababab\naba",
+          "output": "0 2"
+        },
+        {
+          "input": "abcabc\ncab",
+          "output": "2"
+        }
+      ],
+      "constraints": "* `1 ≤ |S| ≤ 1000`\n* `1 ≤ |W| ≤ 100`",
+      "notes": "* Spróbuj nie używać metod `find` ani `count`: dla każdej pozycji `i` od `0` do `len(S) - len(W)` sprawdź, czy od tego miejsca zaczyna się `W` — tak jak sprawdzałeś przedrostek w zadaniu ZAD-03.\n* W przeciwieństwie do zadań ZAD-01 i ZAD-02 po znalezieniu wystąpienia **nie przeskakujemy** go — kolejną sprawdzaną pozycją jest `i + 1`.",
+      "starter_code": ""
+    },
+    {
       "id": "ZAD-05",
       "slug": "25_napisy_trudne/ZAD-05",
       "title": "Kodowanie długości serii (RLE)",

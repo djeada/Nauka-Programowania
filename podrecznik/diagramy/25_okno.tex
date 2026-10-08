@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=7.5mm, y=-8.5mm,
+    zn/.style={komorka, minimum width=7.5mm, minimum height=7mm},
+    znsz/.style={komorka szara, minimum width=7.5mm, minimum height=7mm},
+    znok/.style={komorka ok, minimum width=7.5mm, minimum height=7mm},
+    znzle/.style={komorka wyr, minimum width=7.5mm, minimum height=7mm}]
+  \node[anchor=east, font=\small] at (-0.8,0) {\kod{S}};
+  \foreach \z [count=\i from 0] in {b,a,n,a,n,y} {
+    \node[zn] at (\i,0) {\z};
+    \node[indeks] at (\i,-0.62) {\i};
+  }
+  \node[anchor=west, font=\small] at (6.6,0) {wzorzec \kod{W = "an"}, \ $n = 6$, $m = 2$};
+  % kolejne położenia okna
+  \foreach \i/\ok/\okno in {0/0/ba, 1/1/an, 2/0/na, 3/1/an, 4/0/ny} {
+    \pgfmathsetmacro{\y}{\i+1.4}
+    \node[anchor=east, font=\footnotesize] at (-0.8,\y) {$i = \i$};
+    \foreach \z [count=\j from 0] in {b,a,n,a,n,y} {
+      \pgfmathtruncatemacro{\w}{(\j>=\i) && (\j<=\i+1)}
+      \ifnum\w=1
+        \ifnum\ok=1 \node[znok] at (\j,\y) {\z}; \else \node[znzle] at (\j,\y) {\z}; \fi
+      \else \node[znsz] at (\j,\y) {\z}; \fi
+    }
+    \ifnum\ok=1
+      \node[anchor=west, font=\footnotesize] at (6.6,\y) {\kod{S[\i:\the\numexpr\i+2\relax]} = \kod{"\okno"} $=$ \kod{W} — \textcolor{zielen}{pasuje}};
+    \else
+      \node[anchor=west, font=\footnotesize] at (6.6,\y) {\kod{S[\i:\the\numexpr\i+2\relax]} = \kod{"\okno"} $\ne$ \kod{W}};
+    \fi
+  }
+  \node[notka, anchor=west] at (6.6,6.6) {$n - m + 1 = 5$ położeń okna};
+\end{tikzpicture}

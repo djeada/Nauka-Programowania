@@ -255,6 +255,65 @@
       "starter_code": "class Miasto:\n    def __init__(self, nazwa, liczba_mieszkancow):\n        self.nazwa = nazwa\n        self.liczba_mieszkancow = liczba_mieszkancow\n\n    def __repr__(self):\n        # Uzupełnij: zwróć napis w postaci Miasto(\"NAZWA\", LICZBA).\n        pass\n\n\nn = int(input())\nmiasta = []\nfor _ in range(n):\n    nazwa, liczba = input().split()\n    miasta.append(Miasto(nazwa, int(liczba)))\n\n# Uzupełnij: wypisz listę miast posortowaną według nazwy,\n# a potem według liczby mieszkańców.\n"
     },
     {
+      "id": "ZAD-06",
+      "slug": "22_sortowanie_praktyka/ZAD-06",
+      "title": "Scalanie nakładających się przedziałów",
+      "difficulty": 2,
+      "difficulty_display": "★★☆",
+      "tags": [
+        "sort",
+        "przedziały",
+        "tuple"
+      ],
+      "description": "Wczytaj $N$ przedziałów domkniętych $[a, b]$ — np. godziny zajęcia sali przez kolejne rezerwacje. Scal wszystkie przedziały, które mają **co najmniej jeden wspólny punkt**, i wypisz otrzymane rozłączne przedziały w kolejności rosnącej.\n\nPrzedziały, które się tylko stykają (koniec jednego jest początkiem drugiego), też mają wspólny punkt: $[1, 3]$ i $[3, 5]$ scalamy w $[1, 5]$. Scalanie może łączyć całe łańcuchy przedziałów, a przedział zawarty w innym po prostu w nim „znika”.",
+      "input": "* 1. linia: liczba przedziałów $N$\n* kolejne $N$ linii: dwie liczby całkowite $a$ i $b$ oddzielone spacją — początek i koniec przedziału\n\nPrzedziały są podane w dowolnej kolejności.",
+      "output": "Scalone przedziały posortowane rosnąco według początku — każdy w osobnej linii, jako dwie liczby (początek i koniec) oddzielone spacją.",
+      "examples": [
+        {
+          "input": "4\n8 10\n1 3\n15 18\n2 6",
+          "output": "1 6\n8 10\n15 18",
+          "explanation": "Przedziały $[1, 3]$ i $[2, 6]$ mają część wspólną $[2, 3]$, więc tworzą przedział $[1, 6]$. Pozostałe przedziały są rozłączne z resztą."
+        }
+      ],
+      "testcases": [
+        {
+          "input": "1\n5 5",
+          "output": "5 5"
+        },
+        {
+          "input": "2\n1 3\n3 5",
+          "output": "1 5"
+        },
+        {
+          "input": "2\n1 2\n3 4",
+          "output": "1 2\n3 4"
+        },
+        {
+          "input": "3\n1 10\n2 3\n4 5",
+          "output": "1 10"
+        },
+        {
+          "input": "5\n7 9\n-5 -1\n0 2\n-3 0\n10 12",
+          "output": "-5 2\n7 9\n10 12"
+        },
+        {
+          "input": "3\n2 4\n2 4\n2 4",
+          "output": "2 4"
+        },
+        {
+          "input": "4\n1 2\n2 3\n3 4\n4 5",
+          "output": "1 5"
+        },
+        {
+          "input": "2\n-1000000000 0\n1 1000000000",
+          "output": "-1000000000 0\n1 1000000000"
+        }
+      ],
+      "constraints": "* $1 \\le N \\le 10^4$\n* $-10^9 \\le a \\le b \\le 10^9$",
+      "notes": "* Najpierw posortuj przedziały według początku (listę krotek `(a, b)` posortuje samo `sorted()`). Potem przejdź po nich raz: jeśli kolejny przedział zaczyna się nie później niż kończy się ostatni scalony, wydłuż ostatni scalony do $\\max$ obu końców; w przeciwnym razie zacznij nowy scalony przedział.\n* Przedziały $[1, 2]$ i $[3, 4]$ **nie** mają wspólnego punktu (choć są „sąsiadami” na osi liczb całkowitych), więc zostają osobno.\n* Bez sortowania trzeba by porównywać każdą parę przedziałów — sortowanie daje rozwiązanie w czasie $O(N \\log N)$.",
+      "starter_code": ""
+    },
+    {
       "id": "ZAD-07",
       "slug": "22_sortowanie_praktyka/ZAD-07",
       "title": "Sortowanie listy 0/1/2",

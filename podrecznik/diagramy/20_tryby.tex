@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=1mm, y=1mm,
+    plikbox/.style={draw=linia, fill=white, rounded corners=2pt},
+    linia kodu/.style={font=\ttfamily\footnotesize, anchor=west, inner sep=0pt},
+    kursor/.style={fill=czerwien}]
+  \newcommand{\kursor}[2]{\fill[kursor] (#1,#2+1.1) -- (#1+2,#2) -- (#1,#2-1.1) -- cycle;}
+  % etykiety wierszy
+  \node[notka, anchor=east, align=right] at (19,-8)  {plik\\przed};
+  \node[notka, anchor=east, align=right] at (19,-32) {po\\otwarciu};
+  \node[notka, anchor=east, align=right] at (19,-56) {po\\operacji};
+  \foreach \x/\tryb/\opis in {22/r/czytanie (domyślny), 68/w/zapis od nowa, 114/a/dopisywanie} {
+    \node[anchor=south, font=\small\bfseries] at (\x+19,1.5) {\kod{"\tryb"} — \opis};
+    \draw[plikbox] (\x,0) rectangle ++(38,-16);
+    \node[linia kodu] at (\x+5,-4) {jabłka};
+    \node[linia kodu] at (\x+5,-8.5) {gruszki};
+    \draw[strzalka] (\x+19,-16.5) -- node[right, font=\ttfamily\scriptsize] {open(p, "\tryb")} (\x+19,-23.5);
+    \draw[plikbox] (\x,-24) rectangle ++(38,-16);
+    \draw[plikbox] (\x,-48) rectangle ++(38,-16);
+  }
+  % wiersz 2: po otwarciu
+  \node[linia kodu] at (27,-28) {jabłka};  \node[linia kodu] at (27,-32.5) {gruszki};  \kursor{23}{-28}
+  \kursor{69}{-28}  \node[notka, anchor=west] at (74,-33) {(treść skasowana!)};
+  \node[linia kodu] at (119,-28) {jabłka}; \node[linia kodu] at (119,-32.5) {gruszki}; \kursor{115}{-37}
+  % strzałki do wiersza 3
+  \draw[strzalka] (41,-41) -- node[right, font=\ttfamily\scriptsize] {plik.read()} (41,-47);
+  \draw[strzalka] (87,-41) -- node[right, font=\ttfamily\scriptsize] {plik.write("śliwki\textbackslash n")} (87,-47);
+  \draw[strzalka] (133,-41) -- node[right, font=\ttfamily\scriptsize] {plik.write(...)} (133,-47);
+  % wiersz 3: po operacji
+  \node[linia kodu] at (27,-52) {jabłka};  \node[linia kodu] at (27,-56.5) {gruszki}; \kursor{23}{-61}
+  \node[linia kodu, text=zielen] at (73,-52) {śliwki};  \kursor{69}{-56.5}
+  \node[linia kodu] at (119,-52) {jabłka}; \node[linia kodu] at (119,-56.5) {gruszki};
+  \node[linia kodu, text=zielen] at (119,-61) {śliwki};
+  % podsumowania
+  \node[notka, anchor=north west, text width=40mm] at (22,-66) {plik bez zmian, \kod{read()} zwraca\\\kod{"jabłka\textbackslash ngruszki\textbackslash n"}\\[2pt]brak pliku: \textcolor{czerwien}{\kod{FileNotFoundError}}};
+  \node[notka, anchor=north west, text width=40mm] at (68,-66) {zostaje tylko nowa treść\\[2pt]brak pliku: tworzy nowy};
+  \node[notka, anchor=north west, text width=40mm] at (114,-66) {nowa treść trafia na koniec\\[2pt]brak pliku: tworzy nowy};
+\end{tikzpicture}
